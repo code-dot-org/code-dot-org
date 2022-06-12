@@ -1,12 +1,19 @@
-import React, {useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
+import {Editable, withReact, Slate} from 'slate-react';
+import {Editor, Transforms, createEditor, Element as SlateElement} from 'slate';
+import {serialize} from 'remark-slate';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
-import SlateTextarea from '@cdo/apps/templates/instructions/codeReviewV2/SlateTextarea';
+import '@cdo/apps/templates/instructions/codeReviewV2/codeReviewCommentEditor.scss';
 
 const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
+  const renderElement = useCallback(props => <Element {...props} />, []);
+  const renderLeaf = useCallback(props => <Leaf {...props} />, []);
+  const editor = useMemo(() => withReact(createEditor()), []);
   const [commentText, setCommentText] = useState('');
   const [displayAddCommentFailure, setDisplayAddCommentFailure] = useState(
     false
@@ -15,17 +22,25 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
     null
   );
 
+  const onChange = value => {
+    console.log(value);
+    const markdownValue = value.map(v => serialize(v)).join('');
+    console.log(markdownValue);
+    setCommentText(markdownValue);
+  };
+
   const handleSubmit = () => {
     addCodeReviewComment(commentText, onSubmitSuccess, onSubmitFailure);
   };
 
   const onSubmitSuccess = () => {
-    clearTextBox();
+    Transforms.delete(editor, {
+      at: {
+        anchor: Editor.start(editor, []),
+        focus: Editor.end(editor, [])
+      }
+    });
     setDisplayAddCommentFailure(false);
-  };
-
-  const clearTextBox = () => {
-    setCommentText('');
   };
 
   const onSubmitFailure = err => {
@@ -39,7 +54,30 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
 
   return (
     <>
-      <SlateTextarea handleChange={val => setCommentText(val)} />
+      <div style={styles.textareaWrapper}>
+        <Slate editor={editor} value={initialValue} onChange={onChange}>
+          <div style={styles.buttonsArea}>
+            <div
+              role="button"
+              style={styles.codeButton}
+              onMouseDown={event => {
+                event.preventDefault();
+                toggleBlock(editor, 'code_block');
+              }}
+            >
+              <FontAwesome icon="code" />
+            </div>
+          </div>
+          <Editable
+            renderElement={renderElement}
+            renderLeaf={renderLeaf}
+            placeholder={javalabMsg.addACommentToReview()}
+            className="editable-text-area"
+            spellCheck
+            autoFocus
+          />
+        </Slate>
+      </div>
       <div style={styles.submit}>
         {displayAddCommentFailure && (
           <CodeReviewError
@@ -59,6 +97,74 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
   );
 };
 
+const toggleBlock = (editor, format) => {
+  const isActive = isBlockActive(editor, format);
+
+  if (isActive) {
+    Transforms.unwrapNodes(editor, {
+      match: n => n.type === format,
+      split: true
+    });
+  } else {
+    Transforms.wrapNodes(editor, {
+      type: format,
+      children: []
+    });
+  }
+};
+
+const isBlockActive = (editor, format, blockType = 'type') => {
+  const {selection} = editor;
+  if (!selection) {
+    return false;
+  }
+
+  const [match] = Array.from(
+    Editor.nodes(editor, {
+      at: Editor.unhangRange(editor, selection),
+      match: n =>
+        !Editor.isEditor(n) &&
+        SlateElement.isElement(n) &&
+        n[blockType] === format
+    })
+  );
+
+  return !!match;
+};
+
+const Element = ({attributes, children, element}) => {
+  switch (element.type) {
+    case 'code_block':
+      return (
+        <pre {...attributes}>
+          <code>{children}</code>
+        </pre>
+      );
+    default:
+      return <p {...attributes}>{children}</p>;
+  }
+};
+Element.propTypes = {
+  attributes: PropTypes.object,
+  children: PropTypes.node,
+  element: PropTypes.object
+};
+
+const Leaf = ({attributes, children}) => {
+  return <span {...attributes}>{children}</span>;
+};
+Leaf.propTypes = {
+  attributes: PropTypes.object,
+  children: PropTypes.node
+};
+
+const initialValue = [
+  {
+    type: 'paragraph',
+    children: [{text: ''}]
+  }
+];
+
 CodeReviewCommentEditor.propTypes = {
   addCodeReviewComment: PropTypes.func.isRequired
 };
@@ -66,14 +172,16 @@ CodeReviewCommentEditor.propTypes = {
 export default CodeReviewCommentEditor;
 
 const styles = {
-  wrapper: {
-    border: `1px solid ${color.droplet_bright_blue}`,
-    borderRadius: '4px'
+  textareaWrapper: {
+    border: `1px solid ${color.light_teal}`,
+    borderRadius: '5px'
   },
-  textarea: {
-    width: '100%',
-    boxSizing: 'border-box',
-    resize: 'vertical'
+  codeButton: {
+    padding: '5px'
+  },
+  buttonsArea: {
+    borderBottom: `1px solid ${color.light_gray}`,
+    margin: '0 5px'
   },
   submit: {
     display: 'flex',
