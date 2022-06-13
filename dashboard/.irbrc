@@ -1,3 +1,5 @@
+require 'irb'
+
 app = Rails.application.class.name.split('::').first.downcase
 env = Rails.env
 
