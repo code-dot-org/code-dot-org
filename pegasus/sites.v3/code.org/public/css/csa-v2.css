@@ -31,22 +31,23 @@ section {
   align-items: center;
 }
 
-h2.callout {
+/* Top section */
+section.top h2 {
   color: dimgray;
+  font-size: 18px;
   font-family: 'Gotham 4r';
   line-height: 1.5;
   margin-top: 1em;
 }
 
-/* Top section */
 section.top h3 {
   line-height: 1.4;
   margin-bottom: 2em;
 }
   section.top img.ap-csa-endorsed-badge {
-    width: 115px;
+    width: 105px;
     display: block;
-    margin: 1em auto 2em;
+    margin: 0.5em auto 2em;
   }
 
   section.top .videothumbnail img {
@@ -333,6 +334,10 @@ details {
     }
 
   /* A new approach */
+  section.new-approach h1 {
+    margin-bottom: 1em;
+  }
+
   section.new-approach figure {
     margin-bottom: 2em;
   }
