@@ -24,9 +24,7 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
-    # Eventually, we want to simply call:
-    #config.load_defaults 6.0
-    config.active_record.belongs_to_required_by_default = true
+    config.load_defaults 6.0
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
@@ -155,6 +153,14 @@ module Dashboard
     # once a version of the gem is released which includes that change, we can get rid of
     # this line.
     config.autoload_paths.map!(&:to_s)
+
+    # Make sure some paths are always loaded up front in production environments.
+    # Paths here will also be validated by Zeitwerk
+    config.eager_load_paths += [
+      Rails.root.join('lib'),
+      Rails.root.join('app', 'models', 'levels'),
+      Rails.root.join('../lib/cdo/shared_constants'),
+    ].map!(&:to_s)
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
