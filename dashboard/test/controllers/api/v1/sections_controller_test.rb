@@ -21,34 +21,34 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   setup do
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @beta_unit_group = create(:unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
+    @beta_unit_group = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
     CourseOffering.add_course_offering(@beta_unit_group)
     @beta_unit_group.reload
     @section_with_unit_group = create(:section, user: @teacher, login_type: 'word', course_id: @beta_unit_group.id)
 
-    @script = create(:script, :is_course, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    @script = create(:script, :is_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     CourseOffering.add_course_offering(@script)
     @script.reload
 
-    @pl_unit = create(:script, :is_course, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    @pl_unit = create(:script, :is_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     CourseOffering.add_course_offering(@pl_unit)
     @pl_unit.reload
 
-    @script_in_preview_state = create(:script, :is_course, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    @script_in_preview_state = create(:script, :is_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     CourseOffering.add_course_offering(@script_in_preview_state)
     @script_in_preview_state.reload
 
     @section_with_script = create(:section, user: @teacher, script: @script_in_preview_state)
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
-    @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     CourseOffering.add_course_offering(@csp_unit_group)
     @csp_unit_group.reload
-    @csp_script = create(:script, name: 'csp1', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    @csp_script = create(:script, name: 'csp1', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
     @csp_script.reload
 
-    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     CourseOffering.add_course_offering(@csp_unit_group_soft_launched)
     @csp_unit_group.reload
 
@@ -245,7 +245,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test 'logged out cannot create a section' do
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
     }
     assert_response :forbidden
   end
@@ -254,7 +254,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @student
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
     }
     assert_response :forbidden
   end
@@ -263,7 +263,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
     }
     assert_response :success
     refute_nil returned_section
@@ -273,7 +273,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
     }
 
     # See section_test.rb for tests covering the shape of the section summary.
@@ -285,7 +285,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
     }
 
     assert_equal @teacher.name, returned_json['teacherName']
@@ -296,7 +296,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       user_id: (@teacher.id + 1),
     }
     assert_response :success
@@ -310,7 +310,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       name: 'Glulx',
     }
 
@@ -322,7 +322,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       name: '',
     }
 
@@ -334,7 +334,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       name: " \r\n\t",
     }
 
@@ -347,7 +347,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       sign_in @teacher
       post :create, params: {
         login_type: desired_type,
-        participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       }
 
       assert_equal desired_type, returned_json['login_type']
@@ -370,7 +370,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       sign_in @teacher
       post :create, params: {
         login_type: Section::LOGIN_TYPE_EMAIL,
-        participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
         grade: desired_grade,
       }
       assert_equal desired_grade, returned_section.grade
@@ -402,7 +402,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       grade: nil,
     }
     assert_nil returned_section.grade
@@ -420,7 +420,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       grade: '13',
     }
     assert_response :success
@@ -433,7 +433,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
     }
     assert_response :success
 
@@ -445,7 +445,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       code: 'ABCDEF', # Won't be generated, includes vowels
     }
     # TODO: Better to fail here?
@@ -459,7 +459,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     [true, false].each do |desired_value|
       post :create, params: {
         login_type: Section::LOGIN_TYPE_EMAIL,
-        participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
         lesson_extras: desired_value,
       }
 
@@ -472,7 +472,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
     }
 
     assert_equal false, returned_json['lesson_extras']
@@ -483,7 +483,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       lesson_extras: 'KREBF',
     }
     assert_response :success
@@ -498,7 +498,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     [true, false].each do |desired_value|
       post :create, params: {
         login_type: Section::LOGIN_TYPE_EMAIL,
-        participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
         pairing_allowed: desired_value,
       }
 
@@ -511,7 +511,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
     }
 
     assert_equal true, returned_json['pairing_allowed']
@@ -522,7 +522,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       pairing_allowed: 'KREBF',
     }
     assert_response :success
@@ -539,7 +539,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       sign_in @teacher
       post :create, params: {
         login_type: Section::LOGIN_TYPE_EMAIL,
-        participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
         course_version_id: existing_unit_group.course_version.id,
       }
 
@@ -554,7 +554,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: @beta_unit_group.course_version.id,
     }
     assert_response :forbidden
@@ -564,7 +564,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @facilitator
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: @pl_unit.course_version.id,
     }
     assert_response :forbidden
@@ -572,13 +572,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'pilot teacher can assign the pilot course' do
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(pilot_unit_group)
 
     sign_in pilot_teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: pilot_unit_group.course_version.id
     }
     assert_response :success
@@ -588,13 +588,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'non pilot teacher cannot assign the pilot course' do
-    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(pilot_unit_group)
 
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: pilot_unit_group.course_version.id
     }
     assert_response :forbidden
@@ -602,13 +602,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'pilot teacher can assign pilot script' do
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    pilot_script = create :script, :is_course, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    pilot_script = create :script, :is_course, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(pilot_script)
 
     sign_in pilot_teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: pilot_script.course_version.id
     }
     assert_response :success
@@ -618,13 +618,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'non pilot teacher cannot assign a pilot script' do
-    pilot_script = create :script, :is_course, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    pilot_script = create :script, :is_course, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(pilot_script)
 
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: pilot_script.course_version.id
     }
     assert_response :forbidden
@@ -634,7 +634,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: @script.course_version.id,
     }
     assert_response :success
@@ -649,7 +649,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: @beta_unit_group.course_version.id,
       unit_id: 'MALYON' # Script IDs are numeric
     }
@@ -660,7 +660,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: @csp_unit_group.course_version.id,
       unit_id: @csp_script.id,
     }
@@ -680,7 +680,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: @script.course_version.id,
     }
     assert_response :success
@@ -697,7 +697,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: @script.course_version.id,
     }
     assert_response :success
@@ -711,7 +711,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: @csp_unit_group.course_version.id,
     }
     assert_response :success
@@ -724,7 +724,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
     }
     assert_response :success
     assert_equal 0, @teacher.scripts.size
