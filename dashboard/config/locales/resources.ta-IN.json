@@ -1007,18 +1007,23 @@
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "என் ரோபோடிக் நண்பர்கள்",
           "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
         },
         "csf-mrf-symbol-key/coursec/2021": {
+          "name": "என் ரோபோடிக் நண்பர்கள்",
           "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "என் ரோபோடிக் நண்பர்கள்",
           "url": "https://youtu.be/xaW3PAzHxCU"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "என் ரோபோடிக் நண்பர்கள்",
           "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "என் ரோபோடிக் நண்பர்கள்",
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
         },
         "c2-maze-bridge/coursec/2021": {
@@ -1293,9 +1298,11 @@
           "type": "காணொளி"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "அட்டைகளுடன் நிபந்தனைகள்",
           "url": "https://youtu.be/UymN4lTL50s"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "அட்டைகளுடன் நிபந்தனைகள்",
           "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
@@ -1303,13 +1310,16 @@
           "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "அட்டைகளுடன் நிபந்தனைகள்",
           "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
           "type": "மதிப்பீடு"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "அட்டைகளுடன் நிபந்தனைகள்",
           "url": "https://youtu.be/TbUaEnAYPjI"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "அட்டைகளுடன் நிபந்தனைகள்",
           "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
@@ -1834,6 +1844,9 @@
           "name": "வீடியோ: பயிற்சி தரவு மற்றும் சார்பு",
           "type": "காணொளி"
         },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
+        },
         "make-a-recommendation-1/csd/2021": {
           "type": "ருபிரிக்"
         },
@@ -1888,6 +1901,9 @@
         "interactive-card-project-guide-2019/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
         },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
+        },
         "interactive_card/csd/2021": {
           "type": "ருபிரிக்"
         },
@@ -1923,6 +1939,9 @@
         "make-your-own-game/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
         },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
+        },
         "make_your_own_game/csd/2021": {
           "type": "ருபிரிக்"
         },
@@ -1937,6 +1956,9 @@
         },
         "what-do-computers-do/csd/2021": {
           "type": "காணொளி"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
         },
         "apps_and_problem_solving/csd/2021": {
           "type": "ருபிரிக்"
@@ -1957,6 +1979,9 @@
         },
         "html-web-page-1/csd/2021": {
           "type": "ருபிரிக்"
+        },
+        "html-web-page/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
         },
         "html-page/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
@@ -1979,6 +2004,9 @@
         "your-personal-style-1-2-3/csd/2021": {
           "type": "ருபிரிக்"
         },
+        "your-personal-style-1/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
+        },
         "your-personal-style/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
         },
@@ -1987,6 +2015,9 @@
         },
         "person-web-page-prepare/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
         },
         "person-web-page-reflect/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
@@ -2015,6 +2046,9 @@
         },
         "plan-a-multi-page-website/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
         },
         "website-for-a-purpose-reflect/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
