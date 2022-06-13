@@ -28,6 +28,7 @@
   "compilingProgram": "'प्रोग्रॅम कंपाईल करत आहे...",
   "console": "कन्सोल",
   "created": "तयार केले",
+  "delete": "हटवा",
   "deleteFileConfirmation": "तुम्हाला नक्की {filename} हटवायचे आहे का?",
   "duplicateProjectFilenameError": "फाइल चे नाव {filename} या प्रोजेक्ट मध्ये आधीपासूनच वापरात आहे. कृपया एखादे वेगळे नाव निवडा",
   "duplicateSupportFilenameError": "या लेव्हल सपोर्ट कोडमध्ये फाइलनाव {filename} आधीपासूनच वापरात आहे. कृपया वेगळे नाव निवडा",
