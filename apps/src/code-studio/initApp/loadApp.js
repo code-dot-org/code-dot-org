@@ -72,7 +72,10 @@ export function setupApp(appOptions) {
         const isTeacher =
           getStore().getState().currentUser?.userType === 'teacher';
         const isViewingStudent = !!queryParams('user_id');
-        if (project.isOwner() || (isTeacher && isViewingStudent)) {
+        if (
+          project.isOwner() ||
+          (isTeacher && isViewingStudent && appOptions.level.isStarted)
+        ) {
           $('#versions-header').show();
         }
       }
