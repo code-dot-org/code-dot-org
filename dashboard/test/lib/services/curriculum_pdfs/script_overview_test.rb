@@ -11,11 +11,11 @@ class Services::CurriculumPdfs::ScriptOverviewTest < ActiveSupport::TestCase
 
   test 'get_script_overview_url returns nil if we did not generate a pdf' do
     CDO.stubs(:rack_env).returns(:staging)
-    unit_with_lesson_plans = create(:script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, seeded_from: Time.at(1), name: "test-pdf-path1")
+    unit_with_lesson_plans = create(:script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, seeded_from: Time.at(1), name: "test-pdf-path1")
     lg_with_lps = create(:lesson_group, script: unit_with_lesson_plans)
     create(:lesson, script: unit_with_lesson_plans, lesson_group: lg_with_lps, has_lesson_plan: true)
 
-    unit_without_lesson_plans = create(:script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, seeded_from: Time.at(1), name: "test-pdf-path2")
+    unit_without_lesson_plans = create(:script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, seeded_from: Time.at(1), name: "test-pdf-path2")
     lg_without_lps = create(:lesson_group, script: unit_with_lesson_plans)
     create(:lesson, script: unit_without_lesson_plans, lesson_group: lg_without_lps, has_lesson_plan: false)
 
