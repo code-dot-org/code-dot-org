@@ -15,6 +15,14 @@ class ScriptTest < ActiveSupport::TestCase
     @unit_group = create(:unit_group)
     @unit_in_unit_group = create(:script, name: 'unit-in-unit-group', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
     create(:unit_group_unit, position: 1, unit_group: @unit_group, script: @unit_in_unit_group)
+    @unit_in_unit_group.reload
+    @unit_group.reload
+
+    @pl_unit_group = create(:unit_group)
+    @pl_unit_in_unit_group = create(:script, name: 'pl-unit-in-unit-group', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    create(:unit_group_unit, position: 1, unit_group: @pl_unit_group, script: @pl_unit_in_unit_group)
+    @pl_unit_in_unit_group.reload
+    @pl_unit_group.reload
 
     @unit_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
     @unit_2018 = create :script, name: 'script-2018', family_name: 'family-cache-test', version_year: '2018'
@@ -1668,6 +1676,43 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
+  test 'section_hidden_unit_info for instructor of pl course' do
+    facilitator = create :facilitator
+    section1 = create :section, user: facilitator
+    assert_equal({}, @pl_unit_in_unit_group.section_hidden_unit_info(facilitator))
+
+    create :section_hidden_script, section: section1, script: @pl_unit_in_unit_group
+    assert_equal({section1.id => [@pl_unit_in_unit_group.id]}, @pl_unit_in_unit_group.section_hidden_unit_info(facilitator))
+
+    # other unit has no effect
+    other_unit = create :script
+    create :section_hidden_script, section: section1, script: other_unit
+    assert_equal({section1.id => [@pl_unit_in_unit_group.id]}, @pl_unit_in_unit_group.section_hidden_unit_info(facilitator))
+
+    # other facilitator's sections have no effect
+    other_facilitator = create :facilitator
+    other_facilitator_section = create :section, user: other_facilitator
+    create :section_hidden_script, section: other_facilitator_section, script: @pl_unit_in_unit_group
+    assert_equal({section1.id => [@pl_unit_in_unit_group.id]}, @pl_unit_in_unit_group.section_hidden_unit_info(facilitator))
+
+    # other section for same facilitator hidden for same unit appears in list
+    section2 = create :section, user: facilitator
+    assert_equal({section1.id => [@pl_unit_in_unit_group.id]}, @pl_unit_in_unit_group.section_hidden_unit_info(facilitator))
+    create :section_hidden_script, section: section2, script: @pl_unit_in_unit_group
+    assert_equal(
+      {
+        section1.id => [@pl_unit_in_unit_group.id],
+        section2.id => [@pl_unit_in_unit_group.id]
+      },
+      @pl_unit_in_unit_group.section_hidden_unit_info(facilitator)
+    )
+  end
+
+  test 'section_hidden_unit_info returns empty object for participant of pl course' do
+    teacher = create :teacher
+    assert_equal({}, @pl_unit_in_unit_group.section_hidden_unit_info(teacher))
+  end
+
   test 'has pilot access' do
     unit = create :script
     pilot_unit = create :script, pilot_experiment: 'my-experiment'
@@ -2138,6 +2183,16 @@ class ScriptTest < ActiveSupport::TestCase
       refute_equal @standalone_unit.student_resources[0], cloned_unit.student_resources[0]
       assert_equal @unit_in_course.resources[0], cloned_unit.resources[0]
       assert_equal @unit_in_course.student_resources[0], cloned_unit.student_resources[0]
+    end
+
+    test 'can copy reference guides' do
+      Rails.application.config.stubs(:levelbuilder_mode).returns true
+      ReferenceGuide.any_instance.expects(:write_serialization).once
+      File.stubs(:write)
+      @unit_in_course.unit_group.course_version.reference_guides = [create(:reference_guide)]
+      cloned_unit = @unit_in_course.clone_migrated_unit('coursename3-2021', destination_unit_group_name: @unit_group.name)
+      assert_equal cloned_unit.unit_group, @unit_group
+      assert_equal 1, @unit_group.course_version.reference_guides.count
     end
 
     test 'can copy a script without a course version' do

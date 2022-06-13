@@ -13,10 +13,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
+    @facilitator = create :facilitator
     @levelbuilder = create(:levelbuilder)
     @project_validator = create :project_validator
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
+
+    @pl_section = create :section, user_id: @facilitator.id
+    Follower.create!(section_id: @pl_section.id, student_user_id: @teacher.id, user: @facilitator)
 
     @custom_script = create(:script, name: 'laurel', hideable_lessons: true)
     @custom_lesson_group = create(:lesson_group, script: @custom_script)
@@ -1730,7 +1734,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal expected, hidden
   end
 
-  def put_student_in_section(student, teacher, script)
+  def  put_participant_in_section(student, teacher, script)
     section = create :section, user_id: teacher.id, script_id: script.id
     Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
     section
@@ -1741,7 +1745,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, teacher, @custom_script)
+    section = put_participant_in_section(student, teacher, @custom_script)
     lesson1 = @custom_script.lessons[0]
     assert @custom_script.hideable_lessons
 
@@ -1771,7 +1775,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, teacher, @custom_script)
+    section = put_participant_in_section(student, teacher, @custom_script)
     assert @custom_script.hideable_lessons
 
     # start with no hidden scripts
@@ -1799,7 +1803,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, teacher, script)
+    section = put_participant_in_section(student, teacher, script)
     refute script.hideable_lessons
 
     post :toggle_hidden, params: {
@@ -1818,7 +1822,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, other_teacher, @custom_script)
+    section = put_participant_in_section(student, other_teacher, @custom_script)
     lesson1 = @custom_script.lessons[0]
     assert @custom_script.hideable_lessons
 
@@ -1851,7 +1855,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, other_teacher, @custom_script)
+    section = put_participant_in_section(student, other_teacher, @custom_script)
 
     post :toggle_hidden, params: {
       script_id: @custom_script.id,
@@ -2052,6 +2056,27 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     refute extras_data['bonusLevels'][0]['levels'][0]['perfect']
   end
 
+  test "lesson extras shows instructor no progress if no section and user id" do
+    sign_in @facilitator
+    pl_course = create(:script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    lesson_group = create(:lesson_group, script: pl_course)
+    lesson = create(:lesson, script: pl_course, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: pl_course
+    script_level.bonus = true
+    script_level.save!
+    create :user_level, user: @teacher, script: pl_course, level: script_level.level, best_result: 100
+    get :lesson_extras, params: {
+      script_id: script_level.script,
+      lesson_position: 1
+    }
+    assert_response :success
+    assert_select 'script[data-extras]', 1
+    extras_data = JSON.parse(
+      css_select('script[data-extras]').first.attribute('data-extras').to_s
+    )
+    refute extras_data['bonusLevels'][0]['levels'][0]['perfect']
+  end
+
   test "lesson extras shows teacher progress for student if section and user id" do
     sign_in @teacher
     script = create :script
@@ -2073,6 +2098,54 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       css_select('script[data-extras]').first.attribute('data-extras').to_s
     )
     assert extras_data['bonusLevels'][0]['levels'][0]['perfect']
+  end
+
+  test "lesson extras shows progress to instructor for participant if section and user id" do
+    sign_in @facilitator
+    pl_course = create(:script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    lesson_group = create(:lesson_group, script: pl_course)
+    lesson = create(:lesson, script: pl_course, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: pl_course
+    script_level.bonus = true
+    script_level.save!
+    create :user_level, user: @teacher, script: pl_course, level: script_level.level, best_result: 100
+    get :lesson_extras, params: {
+      script_id: script_level.script,
+      lesson_position: 1,
+      section_id: @pl_section.id,
+      user_id: @teacher.id
+    }
+    assert_response :success
+    assert_select 'script[data-extras]', 1
+    extras_data = JSON.parse(
+      css_select('script[data-extras]').first.attribute('data-extras').to_s
+    )
+    puts extras_data
+    assert extras_data['bonusLevels'][0]['levels'][0]['perfect']
+  end
+
+  test "lesson extras does not show teacher participant in pl course progress for participant even if section and user id" do
+    teacher2 = create :teacher
+    sign_in @teacher
+    pl_course = create(:script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    lesson_group = create(:lesson_group, script: pl_course)
+    lesson = create(:lesson, script: pl_course, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: pl_course
+    script_level.bonus = true
+    script_level.save!
+    create :user_level, user: teacher2, script: pl_course, level: script_level.level, best_result: 100
+    get :lesson_extras, params: {
+      script_id: script_level.script,
+      lesson_position: 1,
+      section_id: @pl_section.id,
+      user_id: teacher2.id
+    }
+    assert_response :success
+    assert_select 'script[data-extras]', 1
+    extras_data = JSON.parse(
+      css_select('script[data-extras]').first.attribute('data-extras').to_s
+    )
+    refute extras_data['bonusLevels'][0]['levels'][0]['perfect']
   end
 
   test "lesson extras shows no progress if no current user" do

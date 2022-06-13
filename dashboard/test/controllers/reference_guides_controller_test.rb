@@ -53,7 +53,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
 
     show_data = css_select('script[data-referenceguides]').first.attribute('data-referenceguides').to_s
 
-    assert_equal [@reference_guide.summarize_for_index, @reference_guide_subcategory.summarize_for_index].to_json, show_data
+    assert_equal @unit_group.course_version.reference_guides.map(&:summarize_for_index).to_json, show_data
   end
 
   test 'ref guide is updated through update route' do

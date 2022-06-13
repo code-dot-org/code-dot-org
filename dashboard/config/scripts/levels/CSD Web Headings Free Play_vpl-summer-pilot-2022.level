@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-04-01T20:30:33.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
@@ -16,13 +12,17 @@
     "bubble_choice_description": "Try using the new code you have learned to create your own HTML page. ",
     "encrypted_examples": "p2BCE8kUvDLCRVDLcmh4D4rkpkLvQhf9CqFk55CWKJyxWmkz6mzNPKrqLwsL\nC4mlRx+V8h6eSGu+4k5B4vFK9u/DrOcznocd9h3LfQ/RplNiXZl8nGzK32G2\nBor1DnypSNyyGEL0eyHXJh4gFCmL8Q==\n",
     "reference_links": [
-      "/docs/concepts/html/html-tags/"
+      "/courses/vpl-csd-summer-pilot-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-2022/guides/headings-and-paragraphs",
     "parent_level_id": 18845,
     "thumbnail_url": "https://images.code.org/43720c5e1c8367e30b7f1a2f8ef06af7-image-1562867963667.JPG",
     "name_suffix": "_vpl-summer-pilot-2022"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-04-01T20:30:33.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-01T20:30:33.500+00:00\",\"changed\":[\"cloned from \\\"CSD Web Headings Free Play_2022\\\"\"],\"cloned_from\":\"CSD Web Headings Free Play_2022\"}]"

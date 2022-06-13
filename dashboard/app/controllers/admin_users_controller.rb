@@ -194,6 +194,7 @@ class AdminUsersController < ApplicationController
     UserLevel.where(user_id: user_id, script_id: script_id).destroy_all
     ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
     TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
+    CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
 
     redirect_to user_progress_form_path({user_identifier: user_id}), notice: "Progress deleted."
   end
