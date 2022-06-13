@@ -59,7 +59,7 @@ class Script < ApplicationRecord
   has_many :user_scripts
   has_many :hint_view_requests
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
-  belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
+  belongs_to :wrapup_video, class_name: 'Video'
   belongs_to :user
   has_many :unit_group_units
   has_many :unit_groups, through: :unit_group_units
@@ -1608,7 +1608,7 @@ class Script < ApplicationRecord
   #   User#get_hidden_unit_ids, and satisfies the input format of
   #   initializeHiddenScripts in hiddenLessonRedux.js.
   def section_hidden_unit_info(user)
-    return {} unless user&.teacher?
+    return {} unless user && can_be_instructor?(user)
     hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
     hidden_section_ids.map {|section_id| [section_id, [id]]}.to_h
   end
@@ -2048,6 +2048,6 @@ class Script < ApplicationRecord
   # To help teachers have more control over the pacing of certain scripts, we
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
-    middle_high?
+    middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key)
   end
 end

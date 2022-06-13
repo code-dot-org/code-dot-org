@@ -24462,7 +24462,7 @@ en:
             For Loops:
               name: For Loops
             End of Course projects:
-              name: End of Course projects
+              name: End of Course Projects
             Reviewing your reflections:
               name: Reviewing your reflections
             Taking next steps:
@@ -24604,7 +24604,7 @@ en:
             lesson-3:
               name: Experiment with inputs and outputs
             lesson-4:
-              name: Engage with maker-based prototypes
+              name: Engage with prototypes
             lesson-5:
               name: Unit wrap up
           lesson_groups: {}
@@ -24662,6 +24662,8 @@ en:
               name: Level Updates
             Innovations in Computing:
               name: Innovations in Computing
+            lesson-3:
+              name: Crypto Playground
           lesson_groups: {}
           name: csd-playground
           title: CSD Playground

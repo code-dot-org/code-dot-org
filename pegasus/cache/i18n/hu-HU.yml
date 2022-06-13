@@ -25,6 +25,8 @@ hu-HU:
     anyagokat is!
   n_have_learned_an_hoc: "<h1>Próbálj ki egy</h1><h2>Kódolás óráját</h2><h3># ember
     már kipróbálta</h3>"
+  try_hoc_num_served: "<h1><h1>Próbáld ki a</h1><h2>Kódolás óráját,</h2><h3>%{num}személy
+    már kipróbálta</h3>"
   try_hoc_num_served_markdown: |-
     # Próbáld ki a
 
@@ -490,6 +492,16 @@ hu-HU:
   homepage_below_hero_announcement_text: Törődünk az adataid védelmével, és néhány
     frissítést végezünk az adatvédelmi irányelvünkben, mely május 25-től hatályos.
   homepage_below_hero_announcement_link_text: Tudj meg többet
+  homepage_higher_power_body: Alkoss egy táncos bulit, és akkor láthatód a zenekart
+    élőben.
+  homepage_thebadguys_body: 'Kódolj egy kalandot Ms.Tarantulával, Mr. Farkassal és
+    **A rossz fiúk** c. film többi szereplőjével!
+
+'
+  homepage_csa_subhead: Új megközelítés
+  homepage_csa_title: AP® Számítástechnika (a)
+  homepage_csa_body: A méltányosságra épülő tantervünk célja, hogy a diákok képesek
+    legyenek a való világhoz kapcsolódó kreatív projekteket készíteni.
   contact_form_topic_student: Diák vagyok
   contact_form_topic_parent: Szülő vagyok
   contact_form_topic_teacher: Tanár/Oktató vagyok
@@ -668,6 +680,8 @@ hu-HU:
   video_title_marco_belinelli: Kódolás Órája Marco Belinellivel
   video_title_chris_bosh: Chris Bosh a számítógéptechnikáról
   video_title_my_name_is_aracely: A nevem Aracely
+  video_title_change_face_of_cs: A számítástechnika arculatának megváltoztatása
+  video_title_latam_hoc: Lo Que Falta En Nuestras Escuelas
   video_1min: 1 perc
   video_2min: 2 perc
   video_3min: 3 perc
@@ -939,6 +953,8 @@ hu-HU:
   dashboard_progress_furthest_level_attempted: a legmagasabb szint megpróbálva
   dashboard_progress_submitted: elküldve
   dashboard_progress_view: 'Előrehaladás megtekintése itt:'
+  dashboard_progress_student_in_script: "%{student_name} tanuló előmenetele a(z) %{script_name}
+    tantárgyban"
   dashboard_progress_pair_programming: páros programozás
   dashboard_responses_view: 'Szöveges válaszok megtekintése:'
   dashboard_responses_none: A legtöbb osztályunk úgy van kialakítva, hogy a fiatalabb
@@ -1196,6 +1212,10 @@ hu-HU:
     az alkalmazásokat a számítógépre
   educator_notes: Oktatói jegyzetek
   teach_led_lesson_plans: Tanár által vezetett óratervek
+  learn_footer_all_tutorials: Lásd a <a href="https://code.org/learn">a Kódolás órája
+    gyakorlatok teljes listáját</a>. Ha a Kódolás órája gyakorlatokhoz kapcsolódó
+    kritériumokat és a feladatok beadásának szabályait akarod megismerni, <a href="https://hourofcode.com/activity-guidelines">kattints
+    ide.</a>
   how_to_teach_hoc: Hogyan tarthatsz Kódolás óráját
   more_resources_educators: További segédletek tanárok és oktatók részére
   beyond_submission: Szeretne bemutatni egy oktatóanyagot a Beyond an Hour programra
@@ -1301,6 +1321,7 @@ hu-HU:
   express-2020_name: Expressz tanfolyam (2020)
   pre-express-2020_name: Olvasó előtti expressz tanfolyam (2020)
   pre-express-2021_name: Olvasó előtti expressz tanfolyam (2021)
+  pre-express-2022_name: Előgyakorlat az expressz tanfolyamhoz (2022.)
   csd2_name: '2. egység: Webfejlesztés'
   csd3_name: '3. egység: Animáció és játékok'
   accelerated_name: Gyorsított tanfolyam
@@ -2166,6 +2187,9 @@ hu-HU:
     böngészőjét <a href='%{supported_browsers_url}', target='_blank'>egyik támogatott
     böngészőnkre</a>. Megpróbálhatja megtekinteni az oldalt, de elvárhatja, hogy a
     funkciók megszakadnak.
+  compatibility_unsupported_browser_markdown: A böngésződ nem támogatott. Frissítsd
+    böngészőt [a támogatott böngészők egyikére](%{supported_browsers_url}). Megtekintheted
+    az oldalt, de számolj azzal, hogy a funkciók nem működnek.
   flappy_shortcode: csapj
   header_home: Főmenü
   header_my_dashboard: Vezérlőpult
@@ -2502,6 +2526,10 @@ hu-HU:
   hoc2018_dance_video2: Tánc Party - Események
   hoc2018_dance_video3: Dance Party - Tulajdonságok
   hoc2018_dance_video4: Táncparti - Gratulálok
+  dance_box_higher_power_line_1: Kódolj egy táncot a Coldplay "Higher Power" című
+    dalára, és akkor élőben láthatod a zenekart!
+  dance_box_higher_power_line_2: További információk a <a href="%{path}">code.org/coldplay</a>
+    oldalon találhatók.
   page_not_found_title: Az oldal nem található
   page_not_found_header: '404: Az oldal nem található'
   page_not_found_description: A keresett oldal nem létezik ezen a címen. Ellenőrizze
@@ -2645,6 +2673,8 @@ hu-HU:
   ai_try_activity: Tevékenység kipróbálása
   outbreak_tile_subtitle: Egy vírus fertőzte meg a Szörnyek Városát! Kódolj egy járványszimulátort,
     és készíts előrejelzéseket arról, hogy mi fog történni a Szörnyek Városának szomszédaival.
+  outbreak_tile_alt: Szimuláció egy vírus terjedéséről egy lila szörnyekből álló csoportban.
+  footer_cookie_notice: Sütikre vonatkozó figyelmeztetés
   top_hoc_tutorial_applab_alt_text: Egy barna kéz, a mutatóujj egy érintőképernyős
     táblagéphez ér, csillagokat és fénysugarakat bocsát ki kék háttér előtt.
   minecraft_tile_alt: Két Minecraft karakter, Steve és Alex, egy Minecraft vizes jelenetet
