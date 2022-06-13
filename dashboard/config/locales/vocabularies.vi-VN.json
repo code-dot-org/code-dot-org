@@ -822,6 +822,9 @@
           "word": "Người dùng",
           "definition": "Cá nhân sử dụng một đối tượng, bao gồm cả phần mềm và phần cứng."
         },
+        "user_interface/csd/2021": {
+          "word": "Giao diện người dùng"
+        },
         "bug/csd/2021": {
           "word": "Lỗi",
           "definition": "Một phần của chương trình không hoạt động chính xác."
