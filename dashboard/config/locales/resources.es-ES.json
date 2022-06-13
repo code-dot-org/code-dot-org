@@ -3506,45 +3506,109 @@
           "type": "Recurso"
         },
         "websites-for-a-purpose-2020/csd/2021": {
-          "name": "Sitios Web por un Propósito"
+          "name": "Sitios Web por un Propósito",
+          "url": "https://docs.google.com/document/d/1JjaG3J0Jl2KZtqxCsqP-pMLb0tHSTSjni9NwgftBKNI/edit?usp=sharing"
         },
         "websites-for-a-purpose/csd/2021": {
-          "name": "Sitios Web por un Propósito"
+          "name": "Sitios Web por un Propósito",
+          "url": "https://docs.google.com/document/d/18UiOaX7ThahC5cfDeWVMNjCpEy_BKPNz5MDOjLlSkbU/edit"
+        },
+        "website-team-plan-2020/csd/2021": {
+          "name": "Plan de Equipo para el Sitio Web",
+          "url": "https://docs.google.com/document/d/1aiH8sJkWOupnPNC99pgCIUvC9Posjojbx8lrZy-7faM/edit?usp=sharing/edit?usp=sharing"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
           "name": "Vídeo: Gestionando los Desacuerdos",
+          "url": "https://youtu.be/6GgrUeVT-xs",
           "type": "Vídeo"
         },
         "how-teamwork-works/csd/2021": {
           "name": "Vídeo: Trabajo en Equipo",
+          "url": "https://youtu.be/qkw4pDV5Lec",
           "type": "Vídeo"
+        },
+        "website-team-plan/csd/2021": {
+          "name": "Plan de Equipo para el Sitio Web",
+          "url": "https://docs.google.com/document/d/1OchbcAqSQLvL0-ho3tOFTc3sd461KK-4Mz0qHI_6kHc/"
+        },
+        "links-and-research-1/csd/2021": {
+          "name": "Enlaces e Investigación",
+          "url": "https://docs.google.com/document/d/177bKYuaoKu4NsevOGUfvjCtXMVWiHBBZPEMfwT9KKiE"
+        },
+        "links-and-research/csd/2021": {
+          "name": "Enlaces e Investigación",
+          "url": "https://docs.google.com/document/d/1fx7eXn3778CUU2GHHagCj1AXY95ll_HJssfeZDbN4gk/edit"
         },
         "how-search-works-video/csd/2021": {
           "name": "Vídeo: Cómo Funciona la Búsqueda",
+          "url": "https://youtu.be/LVV_93mBfSU",
           "type": "Vídeo"
+        },
+        "internet-scavenger-hunt/csd/2021": {
+          "name": "Caza del Tesoro en Internet",
+          "url": "https://docs.google.com/document/d/1aDiUc0G3srj0CCaibxdWYfJNpuKK0MygpOz_NYsjKIQ/edit"
         },
         "classes/csd/2021": {
           "name": "Clases",
+          "url": "https://drive.google.com/file/d/14bipDHAQUc7Ni6jjx9_rooNVg-QmextP/view",
           "type": "Recurso"
         },
+        "project-guide-website-for-a-purpose-prepare-exemplar-2020/csd/2021": {
+          "name": "Guía de Proyecto - Sitio Web con un Propósito - Preparar",
+          "url": "https://docs.google.com/document/d/1EgfsYO_XPaTznzucxKttsEmuNPOhBnC_ynxDZ1SkN0w/view"
+        },
         "website-for-a-purpose-1/csd/2021": {
+          "name": "Sitio Web con un Propósito",
+          "url": "https://docs.google.com/document/d/19ObCznDrFTz93q15fq3SMUkURiVgTuchLbFninlj3ww/edit",
           "type": "Rúbrica"
         },
         "plan-a-multi-page-website/csd/2021": {
+          "name": "Planifica un Sitio Web Multipágina",
+          "url": "https://docs.google.com/document/d/1RlLpWsXEHX2GC6eVVsYrx7pAaZ_VUACKpgAQfkWUKKw",
           "type": "Guía de Proyecto"
+        },
+        "website_for_a_purpose_-_student_checklist/csd/2021": {
+          "name": "Sitio Web con un Propósito - Lista de Control del Alumno",
+          "url": "https://docs.google.com/document/d/1HA8nG3-qIb57id98VJfpYgVTx83vsri9C5ACLtvk8wA/edit"
         },
         "hyperlinks/csd/2021": {
           "name": "Hipervínculos",
+          "url": "https://drive.google.com/file/d/1x8rGBJ8EDZ07TasatQlu5wRM8Z7-M5e8/view",
           "type": "Recurso"
         },
         "practices-reflection-l21-exemplar-2020/csd/2021": {
-          "name": "Prácticas de Reflexión"
+          "name": "Prácticas de Reflexión",
+          "url": "https://docs.google.com/document/d/13svaYu3k7WwNYSr8uSgwqQaOIUPPWAzqkhphTP3bNAw/view"
+        },
+        "project-guide-website-for-a-purpose-reflect-exemplar-2020/csd/2021": {
+          "name": "Guía de Proyecto - Sitio Web con un Propósito - Reflexión",
+          "url": "https://docs.google.com/document/d/1yAw19zO5FfOx5P1inmgYApu9VXH_Bpo8WDlDjoW-RgA/view"
+        },
+        "peer-review-final-personal-website-exemplar-2020/csd/2021": {
+          "name": "Revisión por Pares - Sitio Web Personal Final",
+          "url": "https://docs.google.com/document/d/1fbZ7Ik_H0r39t5yHEkgrYa5mSbx5BCqfLpuH6G1pP6k/view"
         },
         "website-for-a-purpose/csd/2021": {
+          "name": "Sitio Web con un Propósito",
+          "url": "https://docs.google.com/document/d/1zcF1XGxdvmysJhYpv3f9mBljI2gbAN_4U0ctM3Ero5g/edit",
           "type": "Revisión por pares"
         },
         "website-for-a-purpose-reflect/csd/2021": {
+          "name": "Sitio Web con un Propósito - Reflexión",
+          "url": "https://docs.google.com/document/d/1aThUWcwpI-7KNFtWfbn0V2haHiOHbVzDaIYG6SfCiGs/edit",
           "type": "Guía de Proyecto"
+        },
+        "all_code_2/csd/2021": {
+          "url": "/s/csd2-2021/código"
+        },
+        "all_resources_3/csd/2021": {
+          "url": "/s/csd2-2021/recursos"
+        },
+        "all_standards_3/csd/2021": {
+          "url": "/s/csd2-2021/normas"
+        },
+        "all_vocabulary_3/csd/2021": {
+          "url": "/s/csd2-2021/vocabulario"
         },
         "lesson_plans/pre-express/2020": {
           "name": "Plan de estudio",

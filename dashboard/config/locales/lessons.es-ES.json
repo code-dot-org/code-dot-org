@@ -189,7 +189,8 @@
           "name": "Fiesta de baile - Ir más allá",
           "overview": "En esta lección, alumnos de todas las edades continúan su experiencia con la codificación y la informática en un entorno seguro y de apoyo. Esta lección ha sido diseñada para alumnos de todas las edades, pero requiere saber leer. Esta actividad necesita sonido, ya que la herramienta fue construida para responder a la música.",
           "preparation": "-   Revisa y completa tú mismo el tutorial online: [Dancy Party](https://hourofcode.com/us/how-to)\n\n-   Asegúrate de probarlo primero antes de pedir a tus alumnos que lo completen. \n\n-   Comprueba tu tecnología y decide si necesitas solucionar algún problema antes de la Hora del Código.",
-          "purpose": "Esta lección presenta los conceptos básicos de las ciencias de la computación para la codificación y la programación de eventos (con bloques)."
+          "purpose": "Esta lección presenta los conceptos básicos de las ciencias de la computación para la codificación y la programación de eventos (con bloques).",
+          "student_overview": "Estudiantes de todas las edades continúan con una experiencia introductoria a la codificación y la informática en un entorno seguro y de apoyo. "
         },
         "dance-2019/Dance Party": {
           "name": "Fiesta de baile (remix 2019)",
@@ -4055,7 +4056,9 @@
           "name": "Encuesta Fin de Curso de Descubrimientos de la Informática"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Prueba posterior al proyecto",
+          "overview": "**Pregunta del Día: ¿Cómo se utiliza la informática en el entretenimiento?**\n\nSe pide a los alumnos que tengan en cuenta los \"problemas\" del aburrimiento y la expresión personal, y que reflexionen sobre cómo abordan esos problemas en sus propias vidas. A partir de ahí, los alumnos explorarán cómo la informática en general, y la programación en particular, desempeña un papel en una forma específica de entretenimiento o como vehículo de expresión personal.",
+          "preparation": "-   Revisa los recursos de investigación enlazados en Code Studio\n-   Imprime una copia de la guía de actividad para cada grupo de tres estudiantes"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Trazar formas",
@@ -4343,28 +4346,47 @@
         },
         "csd2-2021/Team Problem Solving": {
           "name": "Resolución de problemas en equipo",
+          "overview": "**Pregunta del Día: ¿Cómo podemos trabajar juntos para formar un gran equipo?**\n\nLos alumnos trabajan juntos para establecer normas de grupo y hacer una lluvia de ideas sobre las características que les gustaría que tuvieran sus sitios web. La clase comienza pensando en algunos equipos populares de diferentes contextos, y luego reflexiona sobre lo que hace que los equipos tengan éxito. A continuación, se reúnen en sus propios equipos y elaboran un plan sobre cómo van a interactuar y alcanzar el éxito en sus propios proyectos. A continuación, los equipos comienzan a hacer una lluvia de ideas para su proyecto de sitio web.",
+          "purpose": "Esta lección aborda explícitamente los retos que los alumnos pueden encontrar al trabajar en grupo y les ayuda a elaborar un plan para superar estos retos.  Los alumnos deben consultar esta lección a lo largo de la unidad mientras trabajan en equipo para completar sus proyectos.",
           "student_overview": "**Pregunta del día: ¿Cómo podemos trabajar juntos para formar un gran equipo?**\n\nTrabajarás con un equipo para hacer una lluvia de ideas sobre las posibles características que te gustaría que tuvieran tus sitios web y debatirás cómo vas a interactuar con tu equipo para tener éxito. "
         },
         "csd2-2021/Sources and Research": {
           "name": "Fuentes e investigación",
+          "overview": "**Pregunta del Día: ¿Cómo podemos encontrar información relevante y fiable en Internet?**\n\nEsta lección anima a los alumnos a reflexionar sobre cómo encontrar información relevante y fiable en Internet. Después de ver y debatir un vídeo sobre el funcionamiento de los motores de búsqueda, los alumnos buscarán información relevante para su sitio. Tendrán que analizar la credibilidad de los sitios que encuentren para decidir cuáles son apropiados para utilizar en su propio sitio web.",
+          "preparation": "-   Imprime una copia de la guía de actividad de la Caza del Tesoro en Internet para cada pareja de estudiantes, o prepárate para proyectar las preguntas a la clase.\n-   Crea un póster en blanco titulado **Lista de Control de Fiabilidad** y colócalo en la pared.",
+          "purpose": "Mientras los alumnos terminan de crear sus propios sitios web, esta lección les anima a pensar también en sus responsabilidades como consumidores de información. Al final de esta lección, los alumnos deberían haber desarrollado estrategias para determinar qué sitios web son más fiables y vincular estas estrategias a su propio papel como productores de contenidos, buscando formas de hacer que sus propios sitios parezcan más fiables.",
           "student_overview": "**Pregunta del día: ¿Cómo podemos encontrar información relevante y fiable en Internet?**\n\n¡En esta lección descubrirás cómo encontrar información relevante y fidedigna en Internet!"
         },
         "csd2-2021/CSS Classes": {
-          "name": "Clases CSS"
+          "name": "Clases CSS",
+          "overview": "\\*\\*Pregunta del Día:  ¿Cómo podemos crear diferentes estilos para el mismo tipo de elemento?\n\nEsta lección amplía el CSS que los alumnos ya han aprendido introduciendo las clases, que permiten a los desarrolladores web tratar grupos de elementos que quieren que tengan un estilo diferente al de otros elementos del mismo tipo. Los alumnos primero investigan y modifican las clases en varias páginas, luego crean sus propias clases y las utilizan para controlar mejor la apariencia de sus páginas.  A continuación, reflexionan sobre cómo podrían utilizar estos conocimientos para mejorar los sitios web de sus equipos.",
+          "purpose": "Hasta este momento, el único estilo que los estudiantes han podido hacer es el estilo por elemento, lo que significa que cada elemento de una clase particular tiene el mismo estilo. Las clases permiten a los desarrolladores web agrupar un conjunto de elementos que quieren estilizar.  Esto significa que los estudiantes pueden seleccionar un elemento determinado que quieran estilizar o agrupar elementos de uno o más tipos de elementos. Una vez que los elementos están en una clase, la clase puede ser utilizada como un selector en una regla de estilo. \n\nNota: Los elementos individuales también pueden ser seleccionados por id, pero este tipo de selección es posible con una clase aplicada sólo a ese elemento individual. Dado que la selección por id no añade ninguna funcionalidad extra, no se enseña en este curso.",
+          "student_overview": "\\*\\*Pregunta del Día:  ¿Cómo podemos crear diferentes estilos para el mismo tipo de elemento?\n\nEn esta lección aprenderás sobre las clases CSS que te permitirán dar estilo a grupos de elementos de forma diferente a otros elementos del mismo tipo. "
         },
         "csd2-2021/Planning a Multi-page Website": {
-          "name": "Planificación de un Sitio Multi-página"
+          "name": "Planificación de un Sitio Multi-página",
+          "overview": "**Pregunta del Día:  ¿Cómo se planifica una página web en grupo?**\n\nLos alumnos trabajan en equipos para planificar sus sitios web y crear un boceto de cada página. A continuación, descargan los medios que necesitarán para sus sitios. Al final de la actividad, deciden cómo se distribuirá el trabajo entre los miembros del equipo y comunican si todo el grupo está de acuerdo con el plan.",
+          "purpose": "Esta lección da a los alumnos la oportunidad de planificar en equipo. Tendrán que tomar muchas decisiones en grupo y disponer de medios eficaces para resolver los desacuerdos. El plan que elaboren servirá de referencia en las próximas lecciones para construir sus sitios.",
+          "student_overview": "**Pregunta del Día:  ¿Cómo planificamos una página web en grupo?**\n\nHoy trabajaréis en equipo para planificar vuestras páginas web definitivas y decidir cómo se repartirá el trabajo entre vosotros.  "
         },
         "csd2-2021/Linking Pages": {
           "name": "Enlaces entre páginas",
+          "overview": "**Pregunta del Día: ¿Cómo podemos combinar varias páginas web diferentes en un solo sitio web?**\n\nLos alumnos comienzan la lección buscando en Internet la primera página web y debatiendo cómo el uso de enlaces fue lo que dio origen a la web. A continuación, pasan al Laboratorio Web, donde aprenden a crear sus propios enlaces, así como las buenas prácticas que facilitan la navegación de los usuarios en una página.  Por último, reflexionan sobre su proyecto de grupo y cuáles son sus objetivos personales para la recta final.",
+          "preparation": "-   Asegúrate de que los alumnos tengan acceso a sus planes de la página web de la lección anterior.",
+          "purpose": "Los enlaces son la característica que define a la web.  Aunque parezcan sencillos, son los que nos permiten movernos sin problemas por Internet. Esta lección permitirá a los alumnos practicar el uso de los enlaces e introducirles en las buenas prácticas de navegación para sus sitios.",
           "student_overview": "**Pregunta del día: ¿Cómo podemos combinar varias páginas web diferentes en un solo sitio web?**\n\nEn esta lección, aprenderás a utilizar los hipervínculos en una página web. "
         },
         "csd2-2021/Project - Website for a Purpose": {
           "name": "Proyecto - Sitio web para un propósito específico",
+          "overview": "**Pregunta del Día: ¿Qué conocimientos y prácticas nos ayudarán a trabajar juntos para hacer un gran sitio web?**\n\nLos equipos han pasado mucho tiempo a lo largo del capítulo planificando sus sitios web. En esta lección, por fin, pueden codificar sus páginas. Utilizando la guía del proyecto, el equipo trabaja en conjunto e individualmente para codificar todas las páginas, y luego pone todo el trabajo junto en un solo sitio.",
+          "purpose": "Este proyecto hace hincapié en muchas de las prácticas básicas de este curso. Los estudiantes necesitarán creatividad, capacidad para resolver problemas, persistencia, colaboración y comunicación para completar sus sitios web. ",
           "student_overview": "**Pregunta del día: ¿Qué habilidades y prácticas nos ayudarán a trabajar juntos para hacer un gran sitio web?**\n\n¡En esta lección, tu equipo finalmente codificará las páginas que habéis estado planeando!"
         },
         "csd2-2021/Peer Review and Final Touches": {
           "name": "Revisión de compañeros y ajustes finales",
+          "overview": "\\*\\*Pregunta del Día:  ¿Cómo podemos utilizar la opinión de los demás para mejorar nuestros sitios web?\n\nEsta lección se centra en el valor de los comentarios de los compañeros. Los alumnos reflexionan primero sobre lo que les enorgullece y sobre lo que les gustaría recibir comentarios. A continuación, los equipos trabajan con sus compañeros para obtener esa información mediante un proceso estructurado que incluye los criterios de la rúbrica del proyecto. Después, los estudiantes deciden cómo quieren responder a los comentarios y dar los últimos toques a sus sitios.  Tras una revisión final de la rúbrica, reflexionan sobre su proceso. Como colofón de la unidad, compartirán sus proyectos y también una visión general del proceso que han seguido para llegar a ese diseño final.",
+          "preparation": "-   Imprime una copia de la guía de revisión por pares para cada alumno.",
+          "purpose": "La revisión por pares anima a los alumnos a aprovechar a sus compañeros como recursos y a desarrollar capacidades de comunicación eficaces. La reflexión final y la presentación permiten a los estudiantes practicar la comunicación sobre su trabajo.",
           "student_overview": "\\*\\*Pregunta del día:  ¿Cómo podemos utilizar los comentarios para mejorar nuestras páginas web?\n\nEn esta lección, darás y recibirás comentarios sobre tu sitio web terminado."
         },
         "csd2-2021/lesson-1": {
