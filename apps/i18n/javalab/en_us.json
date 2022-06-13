@@ -45,6 +45,7 @@
   "displayThemeDarkMode": "dark mode",
   "displayThemeLightMode": "light mode",
   "editor": "Editor",
+  "editingDisabledUnderReview": "Editing is disabled while your project is under review.",
   "emptyBackpackMessage": "Files saved to your backpack will appear here.",
   "enablePeerReview": "Enable Peer Review",
   "errorJavabuilderConnectionGeneral": "We hit an error connecting to our server. Try again.",
