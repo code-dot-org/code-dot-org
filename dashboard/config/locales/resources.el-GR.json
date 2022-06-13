@@ -305,6 +305,9 @@
         "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Υποθέσεις με Κάρτες"
         },
+        "course-d-project-planning-guide-1/coursed/2021": {
+          "type": "Οδηγός Προγράμματος"
+        },
         "implementation_guide/coursed/2021": {
           "name": "Οδηγός εφαρμογής"
         },
@@ -320,11 +323,20 @@
         "variables_video/express/2021": {
           "name": "Μεταβλητές"
         },
+        "csf-express-end-of-course-project-planning-guide/express/2021": {
+          "type": "Οδηγός Προγράμματος"
+        },
         "pair-programming-vid/pre-express/2021": {
           "name": "Προγραμματισμός κατά ζεύγη"
         },
+        "designing_for_accessibility_1/coursee/2021": {
+          "name": "Σχεδιάζοντας για Προσβασιμότητα"
+        },
         "implementation_guide/coursee/2021": {
           "name": "Οδηγός εφαρμογής"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "Αντανάκλαση"
         },
         "design_mode/csd/2021": {
           "name": "Κατάσταση Σχεδίασης"
@@ -341,6 +353,12 @@
         "how_computers_word_hardware_software/csd/2021": {
           "name": "Πως λειτουργούν οι Υπολογιστές: Hardware & Software"
         },
+        "board_events/csd/2021": {
+          "name": "Γεγονότα Πίνακα"
+        },
+        "emoji-race-guide/csd/2021": {
+          "type": "Οδηγός Προγράμματος"
+        },
         "functions_2/csd/2021": {
           "name": "Συναρτήσεις"
         },
@@ -353,8 +371,17 @@
         "circuits-logic-video/csd/2021": {
           "name": "Πως λειτουργούν οι Υπολογιστές: Κυκλώματα και Λογική"
         },
+        "physical-prototyping-project/csd/2021": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "Οδηγός Προγράμματος"
+        },
         "video_machine_learning/csd/2021": {
           "name": "Βίντεο: Μηχανική Μάθηση"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "Οδηγός Προγράμματος"
         },
         "naming_variables/csd/2021": {
           "name": "Ορίζοντας Μεταβλητές"
@@ -383,11 +410,20 @@
         "if_else_statements/csd/2021": {
           "name": "Δηλώσεις Αν/Αλλιώς"
         },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "type": "Οδηγός Προγράμματος"
+        },
         "velocity_1/csd/2021": {
           "name": "Ταχύτητα"
         },
         "velocity_2/csd/2021": {
           "name": "Ταχύτητα"
+        },
+        "side-scroller/csd/2021": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "flyer-game/csd/2021": {
+          "type": "Οδηγός Προγράμματος"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "Συναρτήσεις"
@@ -395,8 +431,14 @@
         "functions_1/csd/2021": {
           "name": "Συναρτήσεις"
         },
+        "make-your-own-game/csd/2021": {
+          "type": "Οδηγός Προγράμματος"
+        },
         "headings_and_paragraphs/csd/2021": {
           "name": "Κεφαλίδες και Παράγραφοι"
+        },
+        "html-page/csd/2021": {
+          "type": "Οδηγός Προγράμματος"
         },
         "lists/csd/2021": {
           "name": "Λίστες"
@@ -407,11 +449,32 @@
         "intro_to_css_-_part_2/csd/2021": {
           "name": "Εισαγωγή στην CSS - μέρος 2"
         },
+        "your-personal-style/csd/2021": {
+          "type": "Οδηγός Προγράμματος"
+        },
         "layout-properties/csd/2021": {
           "name": "Ιδιότητες Διάταξης"
         },
+        "person-web-page-prepare/csd/2021": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "Δημοσιοποιώντας Τον Ιστότοπό Σας"
+        },
+        "how-teamwork-works/csd/2021": {
+          "name": "Βίντεο: Ομαδική εργασία"
+        },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "Οδηγός Προγράμματος"
+        },
         "hyperlinks/csd/2021": {
           "name": "Υπερσύνδεσμοι"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "Οδηγός Προγράμματος"
         },
         "lesson_plans/pre-express/2020": {
           "name": "Σχέδια μαθήματος"
