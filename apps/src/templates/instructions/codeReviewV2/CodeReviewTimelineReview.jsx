@@ -88,6 +88,9 @@ const CodeReviewTimelineReview = ({
               />
             );
           })}
+        {comments?.length === 0 && !isOpen && (
+          <span>{javalabMsg.noFeedbackGiven()}</span>
+        )}
         {isOpen && !viewingAsOwner && (
           <CodeReviewCommentEditor
             addCodeReviewComment={(commentText, onSuccess, onFailure) =>
