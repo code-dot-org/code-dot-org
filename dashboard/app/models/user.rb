@@ -884,7 +884,7 @@ class User < ApplicationRecord
   def update_with_password(params, *options)
     if encrypted_password.blank?
       params.delete(:current_password) # user does not have password so current password is irrelevant
-      update_attributes(params, *options)
+      update(params, *options)
     else
       super
     end
@@ -1294,7 +1294,7 @@ class User < ApplicationRecord
   # Is the provided script_level hidden, on account of the section(s) that this
   # user is enrolled in
   def script_level_hidden?(script_level)
-    return false if try(:teacher?)
+    return false if script_level.script.can_be_instructor?(self)
 
     sections = sections_as_student
     return false if sections.empty?
@@ -1320,7 +1320,7 @@ class User < ApplicationRecord
 
   # Is the given unit hidden for this user (based on the sections that they are in)
   def unit_hidden?(unit)
-    return false if try(:teacher?)
+    return false if unit.can_be_instructor?(self)
 
     return false if sections_as_student.empty?
 
@@ -1339,7 +1339,7 @@ class User < ApplicationRecord
     unit = Script.get_from_cache(unit_name)
     return [] if unit.nil?
 
-    teacher? ? get_instructor_hidden_ids(true) : get_participant_hidden_ids(unit.id, true)
+    unit.can_be_instructor?(self) ? get_instructor_hidden_ids(true) : get_participant_hidden_ids(unit.id, true)
   end
 
   # @return {Hash<string,number[]>|number[]}
@@ -1349,7 +1349,9 @@ class User < ApplicationRecord
   def get_hidden_unit_ids(unit_group = nil)
     return [] if !teacher? && unit_group.nil?
 
-    teacher? ? get_instructor_hidden_ids(false) : get_participant_hidden_ids(unit_group.id, false)
+    # If there isn't a unit_group then we are on the homepage and looking for all the hidden units for an instructor
+    return get_instructor_hidden_ids(false) if unit_group.nil?
+    unit_group.can_be_instructor?(self) ? get_instructor_hidden_ids(false) : get_participant_hidden_ids(unit_group.id, false)
   end
 
   def student?
@@ -2170,7 +2172,7 @@ class User < ApplicationRecord
 
   def lesson_extras_enabled?(unit)
     return false unless unit.lesson_extras_available?
-    return true if teacher?
+    return true if unit.can_be_instructor?(self)
 
     sections_as_student.any? do |section|
       section.script_id == unit.id && section.lesson_extras

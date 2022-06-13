@@ -46,12 +46,12 @@
     "parent_level_id": 27194,
     "name_suffix": "_2022",
     "reference_links": [
-      "/courses/self-paced-pl-csd3-2022/guides/changing-screens",
-      "/courses/self-paced-pl-csd3-2022/guides/responding-to-user-input",
-      "/courses/self-paced-pl-csd3-2022/guides/importing-screens",
-      "/courses/self-paced-pl-csd3-2022/guides/multi-screen-apps",
-      "/courses/self-paced-pl-csd3-2022/guides/design-mode",
-      "/courses/self-paced-pl-csd3-2022/guides/design-mode-elements"
+      "/courses/self-paced-pl-csd-2022/guides/changing-screens",
+      "/courses/self-paced-pl-csd-2022/guides/responding-to-user-input",
+      "/courses/self-paced-pl-csd-2022/guides/importing-screens",
+      "/courses/self-paced-pl-csd-2022/guides/multi-screen-apps",
+      "/courses/self-paced-pl-csd-2022/guides/design-mode",
+      "/courses/self-paced-pl-csd-2022/guides/design-mode-elements"
     ],
     "mini_rubric": "false",
     "encrypted": "false",

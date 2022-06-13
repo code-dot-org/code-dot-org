@@ -9,6 +9,11 @@ import TeacherContentToggle from '@cdo/apps/code-studio/components/TeacherConten
 import {getHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {renderTeacherPanel} from '@cdo/apps/code-studio/teacherPanelHelpers';
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
 
 $(document).ready(initPage);
 
@@ -26,6 +31,11 @@ function initPage() {
   // Lesson Extras fail to load with this
   if (!teacherPanelData.lesson_extra) {
     renderTeacherContentToggle(store);
+  }
+
+  if (teacherPanelData.is_instructor) {
+    store.dispatch(setViewType(ViewType.Instructor));
+    store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
   }
 
   renderTeacherPanel(
