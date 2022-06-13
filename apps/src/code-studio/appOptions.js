@@ -66,6 +66,8 @@
  * @property {?string} authenticityToken
  * @property {boolean} levelRequiresChannel
  * @property {boolean} reduceChannelUpdates
+ * @property {boolean} hasOpenCodeReview
+ * @property {boolean} isViewingOwnProject
  */
 
 /**

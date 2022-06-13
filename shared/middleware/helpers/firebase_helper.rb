@@ -52,7 +52,7 @@ class FirebaseHelper
   end
 
   def escape_table_name(table_name)
-    return CGI.escape(table_name).gsub('.', '%252E')
+    return URI.escape(table_name).gsub('.', '%252E')
   end
 
   def unescape_table_name(table_name)

@@ -9,10 +9,9 @@ style_min: true
 
 <%=view :solid_block_header, :title=>"AP® Computer Science A" %>
 
-<section class="new-approach">
-  <h2>A new approach to AP® Computer Science A</h2>
-  <div class="col-80">
-    <h3>Introduce students to software engineering and object-oriented design while they learn the Java programming language in this new curriculum for <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank">AP® Computer Science A (AP® CSA)</a>.</h3>
+<section class="top">
+  <div class="col-75">
+    <h2>Introduce students to software engineering and object-oriented design while they learn the Java programming language in this new curriculum for <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank">AP® Computer Science A (AP® CSA)</a>.</h2>
   </div>
   <figure class="col-20">
     <img class="ap-csa-endorsed-badge" src="/images/csa/ap-csa-endorsed-badge.png" alt="College Board AP CSA Endorsed badge"/>
@@ -39,21 +38,30 @@ style_min: true
 
 <hr>
 
-<section class="reimagine-cs">
-  <h1>Reimagine how computer science is taught</h1>
-  <p>In 2020, underrepresented racial/ethnic groups only made up 15% of <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank">AP® CSA exam</a> takers. Female students made up 25%. Code.org's CSA curriculum incorporates <a href="/images/csa/csa-culturally-responsive-pedagogy-and-equity.pdf" target="_blank">culturally responsive and equitable teaching strategies</a> designed to invite, engage, and empower a rich diversity of students.</p>
-  <div class="col-50">
-    <h2>With CSA from Code.org, students will:</h2>
-    <ul>
-      <li>Learn in a user-friendly and visually rich multimedia environment</li>
-      <li>Do software engineering work connected to the real world</li>
-      <li>Analyze open-source code</li>
-      <li>Collaboratively develop algorithms</li>
-      <li>Gain experience writing and making sense of documentation</li>
-    </ul>
+<section class="new-approach">
+  <h1>A new approach to AP® CSA</h1>
+  <div class="flex-container">
+    <p class="col-66">In 2020, underrepresented racial/ethnic groups only made up 15% of <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank">AP® CSA exam</a> takers. Female students made up 25%. Code.org's CSA curriculum incorporates <a href="/images/csa/csa-culturally-responsive-pedagogy-and-equity.pdf" target="_blank">culturally responsive and equitable teaching strategies</a> designed to invite, engage, and empower a rich diversity of students.</p>
+    <aside class="stat col-25">
+      <span>34%</span>
+      <p>increase in likelihood of students enrolling in college if they take AP® CSA</p>
+    </aside>
   </div>
-  <div class="col-45">
-    <img class="javalab-gif" src="/images/csa/csa-java-lab-demo.gif" alt="Gif animation showing a Java-Lab demo" />
+  <div style="clear: both"></div>
+  <div class="flex-container">
+    <figure class="col-45">
+      <img class="javalab-gif" src="/images/csa/csa-java-lab-demo.gif" alt="Gif animation showing a Java-Lab demo" />
+    </figure>
+    <div class="col-50 student-highlights">
+      <h2>With CSA from Code.org, students will:</h2>
+      <ul>
+        <li>Learn in a user-friendly and visually rich multimedia environment</li>
+        <li>Do software engineering work connected to the real world</li>
+        <li>Analyze open-source code</li>
+        <li>Collaboratively develop algorithms</li>
+        <li>Gain experience writing and making sense of documentation</li>
+      </ul>
+    </div>
   </div>
   <div style="clear: both"></div>
 </section>
@@ -102,25 +110,33 @@ style_min: true
 </section>
 <div style="clear: both"></div>
 
+<hr>
 
 <section class="cta-pl">
   <h2>View Professional Learning Opportunities</h2>
-  <p class="col-66">Our highly supportive Professional Learning Program helps you bring CSA to the students in your school with this <strong>no-cost curriculum</strong>. In-person and virtual workshops starting this summer.</p>
-  <img class="col-33" src="/images/csa/prof-learning-summit.jpg" alt="Teachers working together at a table on computers at a professional learning summit"/>
-  <a href="/educate/professional-learning/middle-high"><button>Learn more</button></a>
+  <div class="flex-container">
+    <div class="col-50">
+      <p>Our highly supportive Professional Learning Program helps you bring CSA to the students in your school with this <strong>no-cost curriculum</strong>. In-person and virtual workshops starting this summer.</p>
+      <a href="/educate/professional-learning/middle-high"><button>Learn more</button></a>
+    </div>
+    <figure class="col-45">
+      <img src="/images/csa/prof-learning-summit-02.jpg" alt="Two teachers talking and smiling at a professional learning workshop"/>
+    </figure>
+  </div>
 </section>
 <div style="clear: both"></div>
 
 
 <section class="fun-info">
-  <div class="testimonials col-66">
-    <h2>What teachers are saying about our AP® CSA curriculum:</h2>
-    <%=view :csa_testimonials %>
+  <div class="flex-container">
+    <figure class="col-45">
+      <img src="/images/csa/student-group.jpg" alt="A group of students "/>
+    </figure>
+    <div class="testimonials col-50">
+      <h2>What teachers are saying about our AP® CSA curriculum:</h2>
+      <%=view :csa_testimonials %>
+    </div>
   </div>
-  <aside class="stat col-25">
-    <h1>34%</h1>
-    <p>increase in likelihood of students enrolling in college if they take AP® CSA</p>
-  </aside>
   <div style="clear: both"></div>
 </section>
 <div style="clear: both"></div>
