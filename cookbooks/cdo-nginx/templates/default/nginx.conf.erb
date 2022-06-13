@@ -38,6 +38,7 @@ http {
     ~:pegasus$ "pegasus";
     # Select dashboard if 'dashboard' or 'studio' appear anywhere in the host.
     ~(dashboard|studio).*: "dashboard";
+    ~codeprojects.*: "dashboard";
     # Default to pegasus.
     default "pegasus";
   }
