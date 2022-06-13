@@ -167,6 +167,9 @@
         "courseb-2018/Programming in Ice Age": {
           "name": "Programování se Scratem"
         },
+        "courseb-2018/Copyright and Creativity": {
+          "name": "Tvoření a férová hra jsou super"
+        },
         "courseb-2018/Programming with Rey and BB-8": {
           "name": "Programování s Rey a BB-8"
         },
@@ -503,6 +506,9 @@
         "coursee-2018/Conditionals": {
           "name": "Podmínky s Farmářkou"
         },
+        "coursee-2018/Private and Personal Information": {
+          "name": "Soukromé a osobní informace"
+        },
         "coursee-2018/Build a Star Wars Game": {
           "name": "Vytvoř Star Wars hru"
         },
@@ -514,6 +520,9 @@
         },
         "coursee-2018/Functions in Harvester": {
           "name": "Funkce s farmářkou"
+        },
+        "coursee-2018/Copyright and Creativity": {
+          "name": "Digitální sdílení"
         },
         "coursee-2018/Functions in Artist": {
           "name": "Funkce s Artist"
@@ -608,6 +617,9 @@
         "pre-express-2018/Programming in Ice Age": {
           "name": "Programování se Scratem"
         },
+        "pre-express-2018/Copyright and Creativity": {
+          "name": "Tvoření a férová hra jsou super"
+        },
         "pre-express-2018/Programming with Rey and BB-8": {
           "name": "Programování s Rey a BB-8"
         },
@@ -641,8 +653,14 @@
         "csd3-2018/Conditionals": {
           "name": "Podmínky"
         },
+        "csd3-2018/Keyboard Input": {
+          "name": "Vstup z klávesnice"
+        },
         "csd3-2018/Velocity": {
           "name": "Rychlost"
+        },
+        "csd3-2018/Collisions": {
+          "name": "Kolize"
         },
         "csd3-2018/Functions": {
           "name": "Funkce"
@@ -653,6 +671,9 @@
         "csd6-2018/Board Events": {
           "name": "Události desky"
         },
+        "csd6-2018/Getting Properties": {
+          "name": "Načtení vlastností"
+        },
         "csd6-2018/Analog Input": {
           "name": "Analogový vstup"
         },
@@ -662,11 +683,26 @@
         "csd6-2018/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
         },
+        "csd5-2018/Representing Images": {
+          "name": "Reprezentace obrázků"
+        },
+        "csd5-2018/Keeping Data Secret": {
+          "name": "Udržování dat v tajnosti"
+        },
+        "csd5-2018/Combining Representations": {
+          "name": "Kombinování reprezentací"
+        },
         "csd5-2018/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
         },
+        "csd4-2018/Linking Screens": {
+          "name": "Propojení obrazovek"
+        },
         "csd4-2018/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd2-2018/Headings": {
+          "name": "Záhlaví"
         },
         "csd2-2018/Lists": {
           "name": "Seznamy"
@@ -845,6 +881,9 @@
         "coursef-2019/Crowdsourcing": {
           "name": "Crowdsourcing"
         },
+        "coursef-2019/Digital Sharing": {
+          "name": "Digitální sdílení"
+        },
         "coursef-2019/End of Course Project": {
           "name": "Projekt na zakončení kurzu"
         },
@@ -868,6 +907,9 @@
         },
         "coursee-2019/Alien Dance Party with Sprite Lab": {
           "name": "Taneční večírek vetřelců s Laboratoří sprajtů"
+        },
+        "coursee-2019/Private and Personal Information": {
+          "name": "Soukromé a osobní informace"
         },
         "coursee-2019/About Me": {
           "name": "O mě s Laboratoří sprajtů"
@@ -1070,8 +1112,14 @@
         "csd3-2019/Conditionals": {
           "name": "Podmínky"
         },
+        "csd3-2019/Keyboard Input": {
+          "name": "Vstup z klávesnice"
+        },
         "csd3-2019/Velocity": {
           "name": "Rychlost"
+        },
+        "csd3-2019/Collisions": {
+          "name": "Kolize"
         },
         "csd3-2019/Functions": {
           "name": "Funkce"
@@ -1079,11 +1127,29 @@
         "csd6-2019/Board Events": {
           "name": "Události desky"
         },
+        "csd6-2019/Getting Properties": {
+          "name": "Načtení vlastností"
+        },
         "csd6-2019/Analog Input": {
           "name": "Analogový vstup"
         },
         "csd6-2019/Functions with Parameters": {
           "name": "Funkce s Parametry"
+        },
+        "csd4-2019/Linking Screens": {
+          "name": "Propojení obrazovek"
+        },
+        "csd5-2019/Representing Images": {
+          "name": "Reprezentace obrázků"
+        },
+        "csd5-2019/Keeping Data Secret": {
+          "name": "Udržování dat v tajnosti"
+        },
+        "csd5-2019/Combining Representations": {
+          "name": "Kombinování reprezentací"
+        },
+        "csd2-2019/Headings": {
+          "name": "Záhlaví"
         },
         "csd2-2019/Lists": {
           "name": "Seznamy"
@@ -1565,8 +1631,14 @@
         "csd3-2017/Conditionals": {
           "name": "Podmínky"
         },
+        "csd3-2017/Keyboard Input": {
+          "name": "Vstup z klávesnice"
+        },
         "csd3-2017/Velocity": {
           "name": "Rychlost"
+        },
+        "csd3-2017/Collisions": {
+          "name": "Kolize"
         },
         "csd3-2017/Functions": {
           "name": "Funkce"
@@ -1574,14 +1646,32 @@
         "csd6-2017/Board Events_": {
           "name": "Události desky"
         },
+        "csd6-2017/Getting Properties_": {
+          "name": "Načtení vlastností"
+        },
         "csd6-2017/Analog Input_": {
           "name": "Analogový vstup"
         },
         "csd6-2017/Functions with Parameters_": {
           "name": "Funkce s Parametry"
         },
+        "csd2-2017/Headings": {
+          "name": "Záhlaví"
+        },
         "csd2-2017/Lists": {
           "name": "Seznamy"
+        },
+        "csd5-2017/Representing Images": {
+          "name": "Reprezentace obrázků"
+        },
+        "csd5-2017/Keeping Data Secret": {
+          "name": "Udržování dat v tajnosti"
+        },
+        "csd5-2017/Combining Representations": {
+          "name": "Kombinování reprezentací"
+        },
+        "csd4-2017/Linking Screens": {
+          "name": "Propojení obrazovek"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Nezapojené: Tangramy"
@@ -1846,6 +1936,7 @@
           "purpose": "Tato lekce je určena k posílení dovedností z předchozí lekce a seznámení studentů s programováním pomocí událostí. V průběhu celého kurzu budou události hlavním způsobem, jakým studenti mění chod svých programů v čase nebo v reakci na uživatele."
         },
         "coursef-2021/Virtual Pet": {
+          "name": "Miniprojekt: Virtuální zvířátko",
           "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Tato lekce umožňuje studentům aplikovat koncepty programování z předchozích lekcí v jiném tvůrčím kontextu. "
         },
@@ -1867,6 +1958,7 @@
           "purpose": "Proměnné se v tomto kurzu používají k ukládání a úpravě dat. V tomto okamžiku budou studenti pouze ukládat a načítat hodnoty, aniž by je měnili. V pozdějších lekcích budou studenti ukládat číselné hodnoty a měnit je v čase, aby mohli sledovat například skóre hráče ve hře."
         },
         "coursef-2021/lesson-11": {
+          "name": "Miniprojekt: Programy vstupu uživatele",
           "preparation": "-   Vytiskněte průvodce plánováním nebo každému studentovi dejte jeho digitální kopii. Projděte si ji předem pro případ, že byste ji chtěli upravit tak, aby vyhovovala vaší třídě.\n\n-   Předem si projděte možnosti v úrovni 3, abyste se seznámili s průběhem, který budou muset studenti dodržovat.\n\n-   Tato lekce může být rozvržena na více vyučovacích hodin. Předem zvažte důsledky pro rozvrhování.",
           "purpose": "Tato lekce nepředstavuje nové dovednosti nebo pojmy, ale dává studentům příležitost tvůrčím způsobem uplatnit to, co se naučili."
         },
@@ -2552,17 +2644,20 @@
           "student_overview": "Naučte se stát si za svým, když se setkáte s kybernetickou šikanou."
         },
         "coursee-2021/Private and Personal Information": {
+          "name": "Soukromé a osobní informace",
           "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTuto lekci původně vytvořila společnost Common Sense Education. [Více informací.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nV povaze našich studentů je sdílet věci a kontaktovat ostatní. Ale se sdílením online jsou spojena určitá rizika. Jak můžeme dětem pomoci budovat si silné, pozitivní a bezpečné vztahy online? Pomozte svým studentům naučit se poznat rozdíl mezi tím, o je osobní, a tím, co by mělo ideálně zůstat soukromé.",
           "preparation": "-   Projděte výukové materiály.\n-   Vytiskněte pro každého studenta leták (letáky).",
           "purpose": "Společnost Common Sense Education vytvořila tuto lekci, aby studenty poučila, jaké informace o nich lze sdílet na internetu.",
           "student_overview": "Internet je zábavný a vzrušující, ale důležité je také zůstávat v bezpečí. Tato lekce Vás naučí rozdíl mezi informacemi, které je bezpečné sdílet, a informacemi, které jsou soukromé."
         },
         "coursee-2021/About Me": {
+          "name": "Miniprojekt: Informace o mně",
           "overview": "V tomto **miniprojektu** studenti uplatní své znalosti o sdílení osobních a soukromých informací na webu vytvořením interaktivního plakátu.",
           "preparation": "-   (Volitelně) Vytiskněte kopie **\\*průvodce plánováním** pro studenty nebo rozdejte digitální kopie.\n-   Zvažte možnost, že byste sami vytvořili ukázkový projekt a podělili se o něj se třídou. \n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Tato lekce má studentům přiblížit předchozí lekci o osobních a soukromých informacích, které jsou pro ně osobně relevantní. S ohledem na příklady BEZPEČNÝCH (osobní) a NEBEZPEČNÝCH (soukromé) si studenti procvičí bezpečné sebevyjádření na webu a pomocí programu SpriteLab si vytvoří vlastní kostýmy sprajt a vygenerují text."
         },
         "coursee-2021/Digital Sharing": {
+          "name": "Digitální sdílení",
           "preparation": "-   Najděte **\\*Video se sdílením autorských práv** v „Odkazech“ níže.\n-   Stáhněte si a prohlédněte si kompletní **\\*Plán výuky sdílení digitálních dat** z webu Autorská práva a tvořivost\n-   Jako učitel vytvořte pro tuto lekci umělecké dílo (obrázek, píseň, prezentaci atd.). \n-   Ujistěte se, že každý student má deník reflexí.\n-   K replikaci sdílení tohoto předmětu budete potřebovat tablet nebo chytrý telefon.",
           "purpose": "Studenti budou brzy vytvářet projekty, které budou sdílet, z nichž většina bude obsahovat kód nebo obrázky, které studenti sami nevytvořili. Tato lekce má studentům ukázat, jak správně zacházet s použitím obsahu, který není jejich vlastní.",
           "student_overview": "V této lekci se dozvíte o výzvách a výhodách vlastnictví a autorských práv. "
@@ -2640,6 +2735,9 @@
         "csd6-2021/Board Events": {
           "name": "Události desky"
         },
+        "csd6-2021/Getting Properties": {
+          "name": "Načtení vlastností"
+        },
         "csd6-2021/Analog Input": {
           "name": "Analogový vstup"
         },
@@ -2648,6 +2746,15 @@
         },
         "csd6-2021/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd5-2021/Representing Images": {
+          "name": "Reprezentace obrázků"
+        },
+        "csd5-2021/Combining Representations": {
+          "name": "Kombinování reprezentací"
+        },
+        "csd5-2021/Keeping Data Secret": {
+          "name": "Udržování dat v tajnosti"
         },
         "csd5-2021/CS Discoveries Post-Course Survey": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
@@ -2670,14 +2777,26 @@
         "csd3-2021/Conditionals": {
           "name": "Podmínky"
         },
+        "csd3-2021/Keyboard Input": {
+          "name": "Vstup z klávesnice"
+        },
         "csd3-2021/Velocity": {
           "name": "Rychlost"
+        },
+        "csd3-2021/Collisions": {
+          "name": "Kolize"
         },
         "csd3-2021/Functions": {
           "name": "Funkce"
         },
         "csd3-2021/lesson-1": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd2-2021/Headings": {
+          "name": "Záhlaví"
+        },
+        "csd2-2021/Linking Pages": {
+          "name": "Propojení stránek"
         },
         "csd2-2021/lesson-1": {
           "name": "Objevujeme informatiku – Průzkum po kurzu"
@@ -2943,8 +3062,14 @@
         "coursee-2020/Alien Dance Party with Sprite Lab": {
           "name": "Taneční večírek vetřelců s Laboratoří sprajtů"
         },
+        "coursee-2020/Private and Personal Information": {
+          "name": "Soukromé a osobní informace"
+        },
         "coursee-2020/About Me": {
           "name": "O mě s Laboratoří sprajtů"
+        },
+        "coursee-2020/Digital Sharing": {
+          "name": "Digitální sdílení"
         },
         "coursee-2020/Nested Loops in Bee": {
           "name": "Vnořené cykly v bludišti"
