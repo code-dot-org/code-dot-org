@@ -208,8 +208,12 @@ module LevelsHelper
           !Gatekeeper.allows("updateChannelOnSave", where: {script_name: @script.name}, default: true) :
           false
       )
-      # readonly if viewing another user's channel or a code review is open for that project
-      readonly_view_options if @user || CodeReview.open_for_project?(channel: channel)
+
+      viewing_another_user = !!@user
+      code_review_open = CodeReview.open_for_project?(channel: channel)
+
+      view_options(is_viewing_own_project: !viewing_another_user, has_open_code_review: code_review_open)
+      readonly_view_options if viewing_another_user || code_review_open
     end
 
     view_options(
@@ -715,14 +719,14 @@ module LevelsHelper
     # These would ideally also go in _javascript_strings.html right now, but it can't
     # deal with params.
     {
-      thank_you: CGI.escape(I18n.t('footer.thank_you')),
+      thank_you: URI.escape(I18n.t('footer.thank_you')),
       help_from_html: I18n.t('footer.help_from_html'),
-      art_from_html: CGI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
-      code_from_html: CGI.escape(I18n.t('footer.code_from_html')),
+      art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+      code_from_html: URI.escape(I18n.t('footer.code_from_html')),
       powered_by_aws: I18n.t('footer.powered_by_aws'),
-      trademark: CGI.escape(I18n.t('footer.trademark', current_year: Time.now.year)),
+      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year)),
       built_on_github: I18n.t('footer.built_on_github'),
-      google_copyright: CGI.escape(I18n.t('footer.google_copyright'))
+      google_copyright: URI.escape(I18n.t('footer.google_copyright'))
     }
   end
 
