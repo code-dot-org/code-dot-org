@@ -2675,6 +2675,9 @@
         "csd3-2021/Sprites": {
           "name": "Personaggi"
         },
+        "csd3-2021/Sprite Properties": {
+          "name": "Proprietà del personaggio"
+        },
         "csd3-2021/Text": {
           "name": "Testo"
         },

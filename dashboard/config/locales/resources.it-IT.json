@@ -1943,6 +1943,9 @@
         "sprites_1/csd/2021": {
           "name": "Personaggi"
         },
+        "sprite_properties/csd/2021": {
+          "name": "Proprietà del personaggio"
+        },
         "youtube-flipbook/csd/2021": {
           "type": "Video"
         },

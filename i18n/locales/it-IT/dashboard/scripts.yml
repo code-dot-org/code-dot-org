@@ -6195,6 +6195,8 @@ it:
               name: Forme e Parametri
             Random Numbers:
               name: Numeri Casuali
+            Sprite Properties:
+              name: Proprietà del personaggio
         maddie-test:
           lessons:
             stage 1:
@@ -6704,6 +6706,8 @@ it:
               name: Variabili
             Random Numbers:
               name: Numeri Casuali
+            Sprite Properties:
+              name: Proprietà del personaggio
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
@@ -7379,6 +7383,8 @@ it:
               name: Numeri Casuali
             Sprites:
               name: Personaggi
+            Sprite Properties:
+              name: Proprietà del personaggio
             Text:
               name: Testo
             Conditionals:
@@ -7526,6 +7532,8 @@ it:
               name: Numeri Casuali
             Sprites:
               name: Personaggi
+            Sprite Properties:
+              name: Proprietà del personaggio
             Text:
               name: Testo
             Conditionals:
@@ -9800,6 +9808,8 @@ it:
               name: Numeri Casuali
             Sprites:
               name: Personaggi
+            Sprite Properties:
+              name: Proprietà del personaggio
             Text:
               name: Testo
             Conditionals:
