@@ -1066,6 +1066,7 @@ es:
         music: 'Música'
         art: 'Arte'
         other: "Otros:"
+        na: 'No aplicable'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1075,7 +1076,8 @@ es:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Otros:"
+        other: "Otros"
+        na: 'No aplicable'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1085,7 +1087,8 @@ es:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Otros:"
+        other: "Otros"
+        na: 'No aplicable'
       workshop_course:
         csf_af: 'Fundamentos de Ciencias de la Computación (cursos A-F)'
         csf_express: 'Fundamentos de Informática (Pre-Exprés o Exprés)'

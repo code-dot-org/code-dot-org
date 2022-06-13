@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_25_230111) do
+ActiveRecord::Schema.define(version: 2022_06_06_173510) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -340,7 +340,6 @@ ActiveRecord::Schema.define(version: 2022_05_25_230111) do
     t.integer "level_id", null: false
     t.integer "project_level_id", null: false
     t.string "project_version", null: false
-    t.datetime "project_version_expires_at"
     t.integer "storage_id", null: false
     t.datetime "closed_at"
     t.datetime "deleted_at"
@@ -473,6 +472,16 @@ ActiveRecord::Schema.define(version: 2022_05_25_230111) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_courses_on_name"
+  end
+
+  create_table "data_docs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "name"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["key"], name: "index_data_docs_on_key", unique: true
+    t.index ["name"], name: "index_data_docs_on_name"
   end
 
   create_table "donor_schools", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

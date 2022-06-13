@@ -4,6 +4,7 @@ pl:
       Actions: Działania
       Advanced: Zaawansowane
       Behaviors: Zachowanie
+      Boolean: Wartość logiczna
       Brushes: Pędzle
       Category: Kategoria
       Color: Kolor
@@ -25,9 +26,13 @@ pl:
       Logic: Logika
       Loops: Pętle
       Math: Matematyka
+      Number: Liczba
       Numbers: Liczby
+      Picker: Selektor
+      Prebuilt: Wcześniej zbudowany
       Properties: Właściwości
       Sprites: Duszki
+      String: Łańcuch
       Text: Tekst
       Variables: Zmienne
       'Variables ': 'Zmienne '

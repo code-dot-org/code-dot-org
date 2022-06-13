@@ -588,9 +588,24 @@ zh-TW:
         CSA-PL-debugging-temp: Java實驗室調試介紹 - 臨時
         csd_u6_circuit_playground: 實體運算
         csd_u6_input_output: 輸入與輸出
+        CSA-PL-for-loops: Java中的For循環
+        CSA-PL-variables: 在Java中創建變數
         PL_CS_Journeys_Overview: 計算機科學的旅程
+        CSA-PL-intro-to-java-lab: Java實驗室基礎
+        CSA-PL-first-program: 在Java中編寫程式
+        CSD_u6_variables_part1: 'CSD：變數'
+        csd_u6_if_statements: 'CSD：If语句'
+        csc-poem-art-intro: 簡介視訊
+        csc-poem-art-outro: 結尾視訊
+        csd_u6_call_define_functions: 'CSD：調用和定義函數'
         csp_applab_parameters: 函式帶參數
+        starquilts_intro_artist: 星星被子簡介
         CSA-PL-intro-to-arrays: 一維（1D）陣列
+        CSA-PL-1d-arrays-new-values: 在1維陣列中輸入值
+        CSA-PL-conditionals: Java中的條件語句
+        CSA-PL-two-way-selection: 雙向選擇
+        CSA-PL-Printing-in-Java: Java中的列印
+        CSA-PL-multi-selection-statements: 多重選擇語句
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

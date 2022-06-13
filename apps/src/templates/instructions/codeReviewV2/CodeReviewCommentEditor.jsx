@@ -1,25 +1,21 @@
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {Editor} from '@toast-ui/react-editor';
-import '@toast-ui/editor/dist/toastui-editor.css';
-import './codeReviewCommentEditor.scss';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 
 const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
-  const textArea = useRef(null);
+  const [commentText, setCommentText] = useState('');
   const [displayAddCommentFailure, setDisplayAddCommentFailure] = useState(
     false
   );
+  const [addCommentFailureMessage, setAddCommentFailureMessage] = useState(
+    null
+  );
 
   const handleSubmit = () => {
-    addCodeReviewComment(
-      textArea.current.editorInst.getMarkdown(),
-      onSubmitSuccess,
-      onSubmitFailure
-    );
+    addCodeReviewComment(commentText, onSubmitSuccess, onSubmitFailure);
   };
 
   const onSubmitSuccess = () => {
@@ -28,46 +24,41 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
   };
 
   const clearTextBox = () => {
-    textArea.current.editorInst.moveCursorToEnd();
-    const selectionEnd = textArea.current.editorInst.getSelection()[1];
-    textArea.current.editorInst.deleteSelection(0, selectionEnd);
+    setCommentText('');
   };
 
-  const onSubmitFailure = () => {
+  const onSubmitFailure = err => {
+    if (err.profanityFoundError) {
+      setAddCommentFailureMessage(err.profanityFoundError);
+    } else {
+      setAddCommentFailureMessage(null);
+    }
     setDisplayAddCommentFailure(true);
   };
 
   return (
     <>
-      <Editor
+      <textarea
         placeholder={javalabMsg.addACommentToReview()}
-        previewStyle="vertical"
-        height="auto"
-        minHeight="60px"
-        initialEditType="wysiwyg"
-        useCommandShortcut={true}
-        hideModeSwitch={true}
-        toolbarItems={[
-          [
-            {
-              name: 'codeblock',
-              className: 'code toastui-editor-toolbar-icons',
-              command: 'codeBlock',
-              tooltip: javalabMsg.insertCode(),
-              state: 'codeBlock'
-            }
-          ]
-        ]}
-        ref={textArea}
+        rows={3}
+        value={commentText}
+        onChange={e => setCommentText(e.target.value)}
+        style={styles.textarea}
       />
       <div style={styles.submit}>
+        {displayAddCommentFailure && (
+          <CodeReviewError
+            messageText={addCommentFailureMessage}
+            style={styles.error}
+          />
+        )}
         <Button
+          disabled={commentText.length === 0}
           onClick={handleSubmit}
           text={javalabMsg.submit()}
           color={Button.ButtonColor.orange}
           style={styles.submitButton}
         />
-        {displayAddCommentFailure && <CodeReviewError />}
       </div>
     </>
   );
@@ -84,6 +75,11 @@ const styles = {
     border: `1px solid ${color.droplet_bright_blue}`,
     borderRadius: '4px'
   },
+  textarea: {
+    width: '100%',
+    boxSizing: 'border-box',
+    resize: 'vertical'
+  },
   submit: {
     display: 'flex',
     alignItems: 'end',
@@ -91,5 +87,8 @@ const styles = {
   },
   submitButton: {
     marginTop: '10px'
+  },
+  error: {
+    marginTop: '8px'
   }
 };

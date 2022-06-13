@@ -384,5 +384,10 @@ ku:
       subjects:
         cs: زانستی كۆمپیوتەر
         math: بیرکاری
+        other: هی تر
+      resources:
+        other: هی تر
+      robotics:
+        other: هی تر
   cookie_banner:
     accept: من ڕازیم

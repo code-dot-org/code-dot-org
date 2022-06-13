@@ -88,7 +88,7 @@ fr:
     submit: Ajouter un indice
   appname: Code.org
   stage: étape
-  stage_number: Leçon %{number}
+  stage_number: 'Leçon %{number} '
   puzzle: Énigme
   trophies: trophées
   courses: Cours
@@ -1400,6 +1400,7 @@ fr:
         music: Musique
         art: Art
         other: 'Autre :'
+        na: Non applicable
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1408,7 +1409,8 @@ fr:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Autre :'
+        other: Autre
+        na: Non applicable
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1418,7 +1420,8 @@ fr:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Autre :'
+        other: Autre
+        na: Non applicable
       workshop_course:
         csf_af: Les Fondamentaux de l’Informatique (Cours A-F)
         csf_express: Les Fondamentaux de l’Informatique (Pré-Express ou Express)

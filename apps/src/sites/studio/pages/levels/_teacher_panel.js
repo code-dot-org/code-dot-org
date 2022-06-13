@@ -8,7 +8,12 @@ import ReactDOM from 'react-dom';
 import TeacherContentToggle from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import {getHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {renderTeacherPanel} from '@cdo/apps/code-studio/teacherPanelHelpers';
-import TeachersOnly from '@cdo/apps/code-studio/components/TeachersOnly';
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
 
 $(document).ready(initPage);
 
@@ -28,6 +33,11 @@ function initPage() {
     renderTeacherContentToggle(store);
   }
 
+  if (teacherPanelData.is_instructor) {
+    store.dispatch(setViewType(ViewType.Instructor));
+    store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+  }
+
   renderTeacherPanel(
     store,
     teacherPanelData.script_id,
@@ -45,9 +55,9 @@ function renderTeacherContentToggle(store) {
 
   ReactDOM.render(
     <Provider store={store}>
-      <TeachersOnly>
+      <InstructorsOnly>
         <TeacherContentToggle isBlocklyOrDroplet={isBlocklyOrDroplet} />
-      </TeachersOnly>
+      </InstructorsOnly>
     </Provider>,
     element
   );

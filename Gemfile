@@ -21,10 +21,7 @@ gem 'sprockets-rails'
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 3.0'
 
-# Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
-# breaks some firebase URIs. See
-# https://github.com/code-dot-org/code-dot-org/pull/31614
-gem 'sinatra', '2.0.2', require: 'sinatra/base'
+gem 'sinatra', '2.1.0', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
 
@@ -92,7 +89,7 @@ group :development, :test do
   # For UI testing.
   gem 'cucumber'
   gem 'eyes_selenium', '3.18.4'
-  gem 'minitest', '~> 5.5'
+  gem 'minitest', '~> 5.15'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'net-http-persistent'

@@ -1,9 +1,5 @@
 <StandaloneVideo>
   <config><![CDATA[{
-  "game_id": 54,
-  "created_at": "2022-05-25T16:07:05.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "encrypted": "false",
     "video_key": "csd_u6_if_statements",
@@ -14,6 +10,10 @@
     "parent_level_id": 20862,
     "name_suffix": "_2222"
   },
+  "level_num": "custom",
+  "game_id": 54,
+  "created_at": "2022-05-25T16:07:05.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-05-25T16:07:05.529+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables  - Vid3_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables  - Vid3_2222\"}]"

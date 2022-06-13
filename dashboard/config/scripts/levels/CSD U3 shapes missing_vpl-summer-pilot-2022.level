@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-04-01T20:45:03.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -55,7 +51,7 @@
     "long_instructions": "<img src=\"https://images.code.org/122ae9e48210f88c7e1a403ac49e6481-image-1586412828471.11.56 PM.png\" style=\"float: right; width: 150px;\">\r\n\r\n# Debug: Missing Shapes\r\n\r\nWhen the code below is run, nothing shows up. \r\n\r\n# Do This\r\n\r\n* Debug the code so that an image shows up.\r\n",
     "parent_level_id": 19159,
     "name_suffix": "_vpl-summer-pilot-2022",
-    "map_reference": " /docs/concepts/game-lab/shapes-and-parameters/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-2022/guides/shapes-and-parameters",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -68,11 +64,15 @@
     "libraries_enabled": "false",
     "encrypted_examples": "WKw235UVKYw9ARL2Xg6SEUJvcG6XO2iBleLfoBqdYzj5T4teGB4M1/prU9O0\n1B9R9hJ4jQaEteWIEYp4pRyHPg==\n",
     "reference_links": [
-      "/docs/concepts/game-lab/drawing-shapes/"
+      "/courses/vpl-csd-summer-pilot-2022/guides/drawing-shapes"
     ],
     "validation_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-04-01T20:45:03.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-01T20:45:03.119+00:00\",\"changed\":[\"cloned from \\\"CSD U3 shapes missing_2022\\\"\"],\"cloned_from\":\"CSD U3 shapes missing_2022\"}]"

@@ -890,6 +890,7 @@ hu-HU:
         - correct: true
         questions:
         - {}
+        title: Előrejelzés készítése
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -898,6 +899,7 @@ hu-HU:
         - correct: true
         questions:
         - {}
+        title: Előrejelzés készítése
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -906,6 +908,7 @@ hu-HU:
         - correct: true
         questions:
         - {}
+        title: Előrejelzés készítése
       Dance_Party_extras_intro:
         markdown: "# Táncolj tovább!\n\nA 2. részben saját projektet fogsz létrehozni.Itt
           nincsenek feladványok, helyettük viszont van egy csomó projekt, amelyek
@@ -3359,6 +3362,7 @@ hu-HU:
         - correct: true
         questions:
         - {}
+        title: Előrejelzés készítése
       Choose 2 Test:
         answers:
         - correct: true
@@ -3436,3 +3440,23 @@ hu-HU:
         - {}
         - {}
         - {}
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Képek hozzáadása
+      CSD U2 Image practice_pilot_2021:
+        display_name: Képek hozzáadása
+      CSD U3 drawing practice choice_2021:
+        display_name: Gyakorlás
+      CSD web draw loop practice choice_2021:
+        display_name: Gyakorlás
+      CSD web movement practice choice_2021:
+        display_name: Gyakorlás
+      CSD web text practice choice_2021:
+        display_name: Gyakorlás
+      ml-club app-choice parent:
+        display_name: Alkalmazás testreszabása
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Alkalmazás testreszabása
+      CSD games cake challenge choice_2021:
+        display_name: Feladatok
+      CSD games platform challenge choice_2021:
+        display_name: Feladatok

@@ -29,7 +29,7 @@ class Pd::Teachercon1819RegistrationTest < ActiveSupport::TestCase
       "Form data howManyHours",
       "Form data howManyTerms",
       "Form data gradingSystem",
-      "Form data howOfferCSP",
+      "Form data howOfferCsp",
       "Form data haveTaughtAp",
       "Form data haveTaughtWrittenProjectCourse",
       "Form data agreeShareContact"

@@ -833,17 +833,17 @@
         },
         "MC_HOC_2017_07_Cole": {
           "clear path": {
-            "name": "limpiar camino"
+            "name": "despejar camino"
           }
         },
         "MC_HOC_2017_07_Cole_2019": {
           "clear path": {
-            "name": "limpiar camino"
+            "name": "despejar camino"
           }
         },
         "MC_HOC_2017_07_Cole_2020": {
           "clear path": {
-            "name": "limpiar camino"
+            "name": "despejar camino"
           }
         },
         "MC_HOC_2017_10_RETRY": {
@@ -872,7 +872,7 @@
         },
         "MC_HOC_2017_Ali": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -880,7 +880,7 @@
         },
         "MC_HOC_2017_Ali_2019": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -888,7 +888,7 @@
         },
         "MC_HOC_2017_Ali_2020": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -4167,7 +4167,7 @@
         },
         "MC_HOC_2017_07_Cole_2021": {
           "clear path": {
-            "name": "limpiar camino"
+            "name": "despejar camino"
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
@@ -4180,7 +4180,7 @@
         },
         "MC_HOC_2017_Ali_2021": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -4241,7 +4241,7 @@
             "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar tallos de oreja"
+            "name": "dibujar patillas"
           }
         },
         "courseE_artist_functions2_dani": {
@@ -4315,7 +4315,7 @@
             "name": "dibujar una hilera de cuadrados"
           },
           "draw square": {
-            "name": "Dibuja un cuadrado"
+            "name": "dibujar cuadrado"
           },
           "do something": {
             "name": "hacer algo"
@@ -4373,7 +4373,7 @@
             "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions_predict1_dani": {
