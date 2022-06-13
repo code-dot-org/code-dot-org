@@ -44,7 +44,7 @@
 class SchoolStatsByYear < ApplicationRecord
   self.primary_keys = :school_id, :school_year
 
-  belongs_to :school
+  belongs_to :school, optional: true
 
   # Loads/merges the data from a CSV into the table.
   # Requires a block to parse the row.
