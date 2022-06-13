@@ -93,7 +93,7 @@ export default class SpriteLab extends P5Lab {
   }
 
   /**
-   * If there is an executionError while the program is running, display a WorkspaceAlert.
+   * If there is an executionError, display a WorkspaceAlert.
    * We do this because Sprite Lab has no user-facing console.
    */
   reactToExecutionError(msg) {
