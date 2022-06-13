@@ -1,9 +1,15 @@
 import React from 'react';
 import Congrats from './Congrats';
 
-const initialCertificateImageUrl = '/images/placeholder-hoc-image.jpg';
-
 export default storybook => {
+  const initialCertificateImageUrl = '/images/placeholder-hoc-image.jpg';
+  const defaultProps = {
+    tutorial: 'other',
+    userType: 'signedOut',
+    language: 'en',
+    initialCertificateImageUrl
+  };
+
   return storybook
     .storiesOf('Congrats/Congrats', module)
     .withReduxStore()
@@ -11,24 +17,16 @@ export default storybook => {
       {
         name: 'Congrats - Applab, signed out',
         description: `Congrats component if Applab tutorial completed`,
-        story: () => (
-          <Congrats
-            tutorial="applab-intro"
-            userType="signedOut"
-            language="en"
-            initialCertificateImageUrl={initialCertificateImageUrl}
-          />
-        )
+        story: () => <Congrats {...defaultProps} tutorial="applab-intro" />
       },
       {
         name: 'Congrats - Applab, student',
         description: `Congrats component if Applab tutorial completed, student`,
         story: () => (
           <Congrats
+            {...defaultProps}
             tutorial="applab-intro"
             userType="student"
-            language="en"
-            initialCertificateImageUrl={initialCertificateImageUrl}
           />
         )
       },
@@ -37,10 +35,9 @@ export default storybook => {
         description: `Congrats component if either pre-2017 Minecraft tutorial completed`,
         story: () => (
           <Congrats
+            {...defaultProps}
             tutorial="minecraft"
             userType="signedOut"
-            language="en"
-            initialCertificateImageUrl={initialCertificateImageUrl}
           />
         )
       },
@@ -48,36 +45,19 @@ export default storybook => {
         name: 'Congrats - pre-2017 Minecraft, student',
         description: `Congrats component if either pre-2017 Minecraft tutorial completed`,
         story: () => (
-          <Congrats
-            tutorial="minecraft"
-            userType="student"
-            language="en"
-            initialCertificateImageUrl={initialCertificateImageUrl}
-          />
+          <Congrats {...defaultProps} tutorial="minecraft" userType="student" />
         )
       },
       {
         name: 'Congrats - 2017 Minecraft, signed out',
         description: `Congrats component if 2017 Minecraft tutorial completed`,
-        story: () => (
-          <Congrats
-            tutorial="hero"
-            userType="signedOut"
-            language="en"
-            initialCertificateImageUrl={initialCertificateImageUrl}
-          />
-        )
+        story: () => <Congrats {...defaultProps} tutorial="hero" />
       },
       {
         name: 'Congrats - 2017 Minecraft, student',
         description: `Congrats component if 2017 Minecraft tutorial completed`,
         story: () => (
-          <Congrats
-            tutorial="hero"
-            userType="student"
-            language="en"
-            initialCertificateImageUrl={initialCertificateImageUrl}
-          />
+          <Congrats {...defaultProps} tutorial="hero" userType="student" />
         )
       },
       {
@@ -85,60 +65,32 @@ export default storybook => {
         description: `Congrats component if 2017 Minecraft tutorial completed, in Korean`,
         story: () => (
           <Congrats
+            {...defaultProps}
             tutorial="hero"
             userType="student"
             language="ko"
-            initialCertificateImageUrl={initialCertificateImageUrl}
           />
         )
       },
       {
         name: 'Congrats - 2018 Minecraft, signed out',
         description: `Congrats component if 2018 Minecraft Aquatic tutorial completed`,
-        story: () => (
-          <Congrats
-            tutorial="aquatic"
-            userType="signedOut"
-            language="en"
-            initialCertificateImageUrl={initialCertificateImageUrl}
-          />
-        )
+        story: () => <Congrats {...defaultProps} tutorial="aquatic" />
       },
       {
         name: 'Congrats - other, signed out',
         description: `Congrats component if any other Code.org tutorial completed`,
-        story: () => (
-          <Congrats
-            tutorial="other"
-            userType="signedOut"
-            language="en"
-            initialCertificateImageUrl={initialCertificateImageUrl}
-          />
-        )
+        story: () => <Congrats {...defaultProps} />
       },
       {
         name: 'Congrats - other, student',
         description: `Congrats component if any other Code.org tutorial completed`,
-        story: () => (
-          <Congrats
-            tutorial="other"
-            userType="student"
-            language="en"
-            initialCertificateImageUrl={initialCertificateImageUrl}
-          />
-        )
+        story: () => <Congrats {...defaultProps} userType="student" />
       },
       {
         name: 'Congrats - other, teacher',
         description: `Congrats component if any other Code.org tutorial completed`,
-        story: () => (
-          <Congrats
-            tutorial="other"
-            userType="teacher"
-            language="en"
-            initialCertificateImageUrl={initialCertificateImageUrl}
-          />
-        )
+        story: () => <Congrats {...defaultProps} userType="teacher" />
       }
     ]);
 };
