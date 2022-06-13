@@ -23,6 +23,10 @@ class CertificateImagesController < ApplicationController
       return render status: :bad_request, json: {message: 'invalid donor name'}
     end
 
+    if data['course'] && !ScriptConstants.has_congrats_page?(data['course']) && !CertificateImage.hoc_course?(data['course'])
+      return render status: :bad_request, json: {message: 'invalid course name'}
+    end
+
     begin
       image = CertificateImage.create_course_certificate_image(data['name'], data['course'], data['donor'])
       image.format = format
