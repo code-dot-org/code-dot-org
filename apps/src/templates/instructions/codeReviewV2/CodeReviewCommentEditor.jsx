@@ -1,8 +1,13 @@
 import React, {useCallback, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
 import {Editable, withReact, Slate} from 'slate-react';
-import {Editor, Transforms, createEditor, Element as SlateElement} from 'slate';
-import {serialize} from 'remark-slate';
+import {
+  Editor,
+  Transforms,
+  createEditor,
+  Text,
+  Element as SlateElement
+} from 'slate';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
@@ -23,10 +28,25 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
   );
 
   const onChange = value => {
-    console.log(value);
     const markdownValue = value.map(v => serialize(v)).join('');
-    console.log(markdownValue);
     setCommentText(markdownValue);
+  };
+
+  const serialize = node => {
+    if (Text.isText(node)) {
+      return node.text;
+    }
+
+    const children = node.children.map(n => serialize(n)).join('');
+
+    switch (node.type) {
+      case 'code_block':
+        return `\`\`\`\n${children}\n\`\`\`\n`;
+      case 'paragraph':
+        return `${children}\n`;
+      default:
+        return children;
+    }
   };
 
   const handleSubmit = () => {
