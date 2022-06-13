@@ -138,6 +138,16 @@ export default class Neighborhood {
         this.controller.subtype.turnLeft(id);
         break;
       }
+      case NeighborhoodSignalType.SHOW_PAINTER: {
+        const {id} = signal.detail;
+        this.controller.showPegman(id);
+        break;
+      }
+      case NeighborhoodSignalType.HIDE_PAINTER: {
+        const {id} = signal.detail;
+        this.controller.hidePegman(id);
+        break;
+      }
       default:
         console.log(signal.value);
         break;
