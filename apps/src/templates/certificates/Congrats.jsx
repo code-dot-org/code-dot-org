@@ -112,7 +112,7 @@ Congrats.propTypes = {
   randomDonorName: PropTypes.string,
   hideDancePartyFollowUp: PropTypes.bool,
   showStudioCertificate: PropTypes.bool,
-  initialCertificateImageUrl: PropTypes.string
+  initialCertificateImageUrl: PropTypes.string.isRequired
 };
 
 const styles = {
