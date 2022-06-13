@@ -190,7 +190,7 @@ Certificate.propTypes = {
   under13: PropTypes.bool,
   children: PropTypes.node,
   showStudioCertificate: PropTypes.bool,
-  initialCertificateImageUrl: PropTypes.string.isRequired
+  initialCertificateImageUrl: PropTypes.string
 };
 
 const styles = {
