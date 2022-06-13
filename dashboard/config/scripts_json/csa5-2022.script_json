@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-03 14:17:57 UTC",
+    "serialized_at": "2022-06-13 20:42:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2476,7 +2476,7 @@
       "key": "48c04230-868c-4e6b-a7c0-8fe721a48321",
       "position": 5,
       "properties": {
-        "description": "Now that you have a list of how your data is collected, let's think about the ethical and social implications of data collection.",
+        "description": "The creation of programs has impacts on society, economies, and culture. These impacts can be beneficial or harmful. Now that you have a list of how your data is collected, let's think about the ethical and social implications of data collection.",
         "remarks": true
       },
       "seeding_key": {
