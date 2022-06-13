@@ -25,7 +25,7 @@ Scenario: Flappy customized dashboard certificate pages
   And I wait until current URL contains "/congrats"
   And I wait to see element with ID "uitest-certificate"
   Then the href of selector ".social-print-link" contains "/print_certificates/"
-  Then I wait to see an image "/assets/js/hour_of_code_certificate"
+  Then I wait to see an image "/images/hour_of_code_certificate.jpg"
 
   When I type "Robo Coder" into "#name"
   And I press "button:contains(Submit)" using jQuery
@@ -48,7 +48,7 @@ Scenario: Oceans uncustomized dashboard certificate pages
   And I wait until current URL contains "/congrats"
   And I wait to see element with ID "uitest-certificate"
   Then the href of selector ".social-print-link" contains "/print_certificates/"
-  And I wait to see an image "/assets/js/oceans_hoc_certificate"
+  And I wait to see an image "/images/oceans_hoc_certificate.png"
 
   When I press the first "#uitest-certificate img" element to load a new page
   And I wait until current URL contains "/certificates/"
