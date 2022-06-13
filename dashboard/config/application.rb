@@ -23,7 +23,9 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
-    config.load_defaults 6.0
+    # Explicitly enable Zeitwerk. Eventually, we can simply call:
+    #config.load_defaults 6.0
+    config.autoloader = :zeitwerk
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
@@ -153,8 +155,8 @@ module Dashboard
     # this line.
     config.autoload_paths.map!(&:to_s)
 
-    # Also make sure some of these directories are always loaded up front.
-    # These directories will also be validated by Zeitwerk.
+    # Also make sure some of these directories are always loaded up front in production
+    # environments.  These directories will also be validated by Zeitwerk.
     config.eager_load_paths += [
       Rails.root.join('..', 'lib', 'cdo', 'shared_constants'),
       Rails.root.join('app', 'models', 'levels'),
