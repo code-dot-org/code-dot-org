@@ -911,7 +911,7 @@
           "definition": "Datos o señales representadas por un número limitado de valores. Señales análogas (que pueden tener valores limitados) deben convertirse a digital para ser computadas."
         },
         "array/csd/2021": {
-          "word": "Conjunto",
+          "word": "Arreglo",
           "definition": "Una estructura de datos en JavaScript que se utiliza para representar una lista."
         },
         "for_loop/csd/2021": {
@@ -924,7 +924,7 @@
         },
         "circuit/csd/2021": {
           "word": "Circuito",
-          "definition": "Dispositivo que proporciona un camino para que fluya una corriente eléctrica, a menudo modificando esa corriente. En los ordenadores, los circuitos permiten realizar operaciones lógicas y matemáticas sencillas utilizando la electricidad."
+          "definition": "Un dispositivo que proporciona el trayecto para una corriente eléctrica, usualmente modificando esa corriente. En las computadoras, los circuitos permiten operaciones lógicas y matemáticas utilizando electricidad."
         },
         "decode/csd/2021": {
           "word": "Decodificar",
