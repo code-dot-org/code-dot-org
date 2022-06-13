@@ -23,6 +23,11 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
+    # Explicitly load appropriate defaults for this version of Rails.
+    # Eventually, we want to simply call:
+    #config.load_defaults 6.0
+    config.active_record.belongs_to_required_by_default = true
+
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.

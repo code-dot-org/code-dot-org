@@ -30,11 +30,11 @@ class Level < ApplicationRecord
   include SharedConstants
   include Levels::LevelsWithinLevels
 
-  belongs_to :game
+  belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
-  belongs_to :ideal_level_source, class_name: "LevelSource" # "see the solution" link uses this
-  belongs_to :user
+  belongs_to :ideal_level_source, class_name: "LevelSource", optional: true # "see the solution" link uses this
+  belongs_to :user, optional: true
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
