@@ -31,11 +31,18 @@ class CertificateImagesControllerTest < ActionController::TestCase
     assert_includes response.body, 'invalid donor name'
   end
 
-  test 'can show certificate image given bogus course name' do
-    data = {name: 'student', course: 'bogus', donor: 'Amazon'}
+  test 'can show csf course name' do
+    data = {name: 'student', course: 'course1'}
     filename = Base64.urlsafe_encode64(data.to_json)
     get :show, format: 'jpg', params: {filename: filename}
     assert_response :success
+  end
+
+  test 'bad request given bogus course name' do
+    data = {name: 'student', course: 'bogus'}
+    filename = Base64.urlsafe_encode64(data.to_json)
+    get :show, format: 'jpg', params: {filename: filename}
+    assert_response :bad_request
   end
 
   test 'returns bad request given invalid format' do
