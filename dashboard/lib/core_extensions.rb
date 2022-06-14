@@ -8,11 +8,7 @@ module CoreExtensions
       end
     end
   end
-end
 
-Hash.include CoreExtensions::Hash::Camelizing
-
-module CoreExtensions
   module I18n
     module En
       def en?
@@ -22,4 +18,5 @@ module CoreExtensions
   end
 end
 
+Hash.include CoreExtensions::Hash::Camelizing
 I18n.extend CoreExtensions::I18n::En
