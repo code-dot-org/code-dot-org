@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-02 15:13:51 UTC",
+    "serialized_at": "2022-06-13 20:40:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2085,7 +2085,7 @@
       "key": "02bf3f80-7ee1-4fb5-8e08-533c31d5efeb",
       "position": 1,
       "properties": {
-        "description": "Companies often protect their code as intellectual property. Intellectual property is a creative work or invention that is protected by copyright laws. This includes copyrights, patents, trade secrets, and trademarks.",
+        "description": "Legal issues and concerns often arise when creating programs, so companies often protect their code as intellectual property. Intellectual property is a creative work or invention that is protected by copyright laws. This includes copyrights, patents, trade secrets, and trademarks.",
         "duration": "20",
         "name": "Algorithms",
         "remarks": true

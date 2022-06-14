@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-02 16:57:08 UTC",
+    "serialized_at": "2022-06-13 14:46:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2084,7 +2084,7 @@
       "key": "0ed956fe-34c3-4807-b2c7-87fdd75a5099",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *bug* and *debugging* and explain a possible error and potential console message that can occur if an object is not instantiated correctly.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *debugging*.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *bug* and *debugging* and explain a possible error and potential console message that can occur if an object is not instantiated correctly.",
         "tips": [
           {
             "type": "teachingTip",
@@ -8822,6 +8822,18 @@
       }
     },
     {
+      "name": "Software Engineering: Code Reviews",
+      "url": "https://youtu.be/dWddHWU3_YM",
+      "key": "software_engineering_code_reviews",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "software_engineering_code_reviews"
+      }
+    },
+    {
       "name": "SpiralPainter FRQ",
       "url": "https://docs.google.com/document/d/1fii6s81BkL_tz2Ji7bVwc-W_1smmFGbiZ0dX6mAaoXw/edit?usp=sharing",
       "key": "spiralpainter_frq",
@@ -9685,6 +9697,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "cs_bingo_definitions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "software_engineering_code_reviews"
       }
     },
     {
