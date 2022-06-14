@@ -23,6 +23,15 @@ function Certificate(props) {
   const isAIOceans = () => /oceans/.test(props.tutorial);
 
   const personalizeCertificate = session => {
+    if (isHocTutorial) {
+      personalizeHocCertificate(session);
+    } else {
+      setStudentName(nameInputRef.current.value);
+      setPersonalized(true);
+    }
+  };
+
+  const personalizeHocCertificate = session => {
     $.ajax({
       url: '/v2/certificate',
       type: 'post',
@@ -98,7 +107,8 @@ function Certificate(props) {
     randomDonorTwitter,
     under13,
     children,
-    initialCertificateImageUrl
+    initialCertificateImageUrl,
+    isHocTutorial
   } = props;
 
   const certificate = certificateId || 'blank';
@@ -190,7 +200,8 @@ Certificate.propTypes = {
   under13: PropTypes.bool,
   children: PropTypes.node,
   showStudioCertificate: PropTypes.bool,
-  initialCertificateImageUrl: PropTypes.string
+  initialCertificateImageUrl: PropTypes.string,
+  isHocTutorial: PropTypes.bool
 };
 
 const styles = {
