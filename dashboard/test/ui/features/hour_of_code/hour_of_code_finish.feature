@@ -59,7 +59,7 @@ Scenario: Oceans uncustomized dashboard certificate pages
   Then I wait to see an image "/images/oceans_hoc_certificate.png"
 
 Scenario: Course A 2017 uncustomized dashboard certificate pages
-  Given I am on "http://code.org/congrats?enableExperiments=studioCertificate"
+  Given I am on "http://studio.code.org/congrats?enableExperiments=studioCertificate"
   And I wait until element "#uitest-certificate" is visible
 
   When I am on "http://code.org/congrats/coursea-2017"
