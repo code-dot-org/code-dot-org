@@ -115,7 +115,8 @@ describe('Certificate', () => {
         tutorial: 'dance',
         certificateId: 'sessionId',
         initialCertificateImageUrl,
-        showStudioCertificate: true
+        showStudioCertificate: true,
+        isHocTutorial: true
       });
       let image = wrapper.find('#uitest-certificate img');
       expect(image.prop('src')).to.equal(initialCertificateImageUrl);
