@@ -25813,3 +25813,91 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Hello World CSC
+            Overfishing Simulation:
+              name: Overfishing Simulation
+            Model Animal Adaptations:
+              name: Model Animal Adaptations
+            lesson-2:
+              name: Overfishing Simulation
+            lesson-3:
+              name: Model Animal Adaptations
+          title: Ecosystems
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: csc-ecosystems-2022
+        csc-starquilts-2022:
+          lessons:
+            Native American Star Quilts:
+              name: Native American Star Quilts
+            Getting Started with The Artist:
+              name: Getting Started with The Artist
+            Code Your Star Quilt:
+              name: Code Your Star Quilt
+            lesson-1:
+              name: Native American Star Quilts
+            lesson-2:
+              name: Getting Started with The Artist
+            lesson-3:
+              name: Code Your Star Quilt
+          title: Star Quilts Module
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: csc-starquilts-2022
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Introduction to Fables"
+            Hello World CSC:
+              name: Hello World CSC
+            Plan Your Fable:
+              name: Plan Your Fable
+            Code Your Fable:
+              name: Code Your Fable
+            Share Your Fable:
+              name: Share Your Fable
+            lesson-4:
+              name: "[Optional] Introduction to Fables"
+            lesson-5:
+              name: Plan Your Fable
+            lesson-3:
+              name: Code Your Fable
+            lesson-6:
+              name: Share Your Fable
+          title: Fables
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: csc-fables-2022
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Poem Art
+            The Time We Live In:
+              name: The Time We Live In
+            Coding My Time Capsule:
+              name: Coding My Time Capsule
+            Gallery Walk:
+              name: Gallery Walk
+            lesson-2:
+              name: The Time We Live In
+            lesson-3:
+              name: Coding My Time Capsule
+            lesson-4:
+              name: Gallery Walk
+          title: Time Capsule
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
