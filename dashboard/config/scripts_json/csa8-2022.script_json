@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-02 15:32:17 UTC",
+    "serialized_at": "2022-06-13 16:23:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2908,7 +2908,7 @@
       "key": "0e165286-a89f-4f5f-84f9-678f8fa997e2",
       "position": 1,
       "properties": {
-        "description": "Now let's think about what you would do if you were a software engineer in those scenarios as a producer of technology.",
+        "description": "When using the computer, personal privacy is at risk. Programmers should attempt to safeguard personal privacy. Let's think about what you would do if you were a software engineer in those scenarios as a producer of technology.",
         "duration": "20",
         "name": "Data, Privacy, and Security",
         "remarks": true
@@ -2933,7 +2933,7 @@
       "key": "ab91ddb1-4502-49a5-a71c-ebe556082f57",
       "position": 3,
       "properties": {
-        "description": "Let's think about the tradeoffs between data collection and privacy and security.",
+        "description": "Computer use and the creation of programs have an impact on personal security. These impacts can be beneficial or harmful. Let's think about the tradeoffs between data collection and privacy and security.",
         "duration": "15",
         "name": "Debate",
         "remarks": true
