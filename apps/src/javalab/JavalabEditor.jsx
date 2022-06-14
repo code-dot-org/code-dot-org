@@ -753,7 +753,7 @@ class JavalabEditor extends React.Component {
                       }}
                       onClick={e => this.toggleTabMenu(tabKey, e)}
                       className="no-focus-outline"
-                      disabled={activeTabKey !== tabKey}
+                      disabled={isReadOnlyWorkspace || activeTabKey !== tabKey}
                     >
                       <FontAwesome
                         icon={
