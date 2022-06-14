@@ -6,11 +6,6 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   self.use_transactional_test_case = false
 
-  setup_all do
-    @project_owner = create :student
-    @project = create :project, owner: @project_owner
-  end
-
   setup do
     @admin = create(:admin)
     @facilitator = create(:facilitator)
@@ -32,6 +27,9 @@ class AdminUsersControllerTest < ActionController::TestCase
       script_id_or_name: @script.id,
       level_id: @level.id
     }
+
+    @project_owner = create :student
+    @project = create :project, owner: @project_owner
   end
 
   generate_admin_only_tests_for :account_repair_form
