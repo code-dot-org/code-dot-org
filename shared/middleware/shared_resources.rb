@@ -18,8 +18,9 @@ class SharedResources < Sinatra::Base
 
   configure do
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
-    Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
-    Sass::Plugin.options[:template_location] = shared_dir('css')
+    css_location = pegasus_dir('cache', 'css')
+    Sass::Plugin.add_template_location(shared_dir('css'), css_location)
+    Sass::Plugin.add_template_location(sites_v3_dir('code.org/public/css'), css_location)
 
     set :image_extnames, ['.png', '.jpeg', '.jpg', '.gif']
     set :javascript_extnames, ['.js']
