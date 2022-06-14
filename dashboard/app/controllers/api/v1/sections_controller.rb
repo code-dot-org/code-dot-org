@@ -1,4 +1,4 @@
-class Api::V1::SectionsController < Api::V1::JsonApiController
+class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
   load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
@@ -196,11 +196,11 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     participant_types =
       if current_user.permission?(UserPermission::PLC_REVIEWER) || current_user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || current_user.permission?(UserPermission::LEVELBUILDER)
-        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator]
+        [Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator]
       elsif current_user.permission?(UserPermission::FACILITATOR)
-        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher]
+        [Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher]
       else
-        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student]
+        [Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student]
       end
 
     render json: {availableParticipantTypes: participant_types}
