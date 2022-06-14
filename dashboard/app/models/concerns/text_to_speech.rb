@@ -94,7 +94,7 @@ module TextToSpeech
     return if AWS::S3.cached_exists_in_bucket?(TTS_BUCKET, filename)
 
     loc_voice = TextToSpeech.localized_voice
-    url = acapela_text_to_audio_url(text, loc_voice[:VOICE], loc_voice[:SPEED], loc_voice[:SHAPE], context)
+    url = Acapela.text_to_audio_url(text, loc_voice[:VOICE], loc_voice[:SPEED], loc_voice[:SHAPE], context)
     return if url.nil?
     uri = URI.parse(url)
     Net::HTTP.start(uri.host) do |http|
