@@ -104,7 +104,7 @@ Scenario: congrats certificate pages
   And I wait to see element with ID "uitest-thanks"
   And I see no difference for "customized oceans certificate"
 
-  When I am on "http://code.org/congrats/coursea-2017"
+  When I am on "http://code.org/congrats/coursea-2017?enableExperiments=studioCertificate"
   And I wait until current URL contains "http://studio.code.org/congrats"
   And I wait to see element with ID "uitest-certificate"
   And I wait for image "#uitest-certificate img" to load
