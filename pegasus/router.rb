@@ -20,8 +20,6 @@ require 'cdo/rack/upgrade_insecure_requests'
 require_relative 'helper_modules/dashboard'
 require 'dynamic_config/dcdo'
 require 'active_support/core_ext/hash'
-require 'sass'
-require 'sass/plugin'
 require 'haml'
 
 if rack_env?(:production)
@@ -110,9 +108,6 @@ class Documents < Sinatra::Base
       settings.template_extnames +
       settings.exclude_extnames +
       ['.fetch']
-    Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
-    Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
-    Sass::Plugin.options[:template_location] = shared_dir('css')
     set :mustermann_opts, check_anchors: false, ignore_unknown_options: true
 
     # Haml/Temple engine doesn't recognize the `path` option
