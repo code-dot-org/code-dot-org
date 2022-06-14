@@ -148,6 +148,14 @@ export default class Neighborhood {
         this.controller.hidePegman(id);
         break;
       }
+      case NeighborhoodSignalType.SHOW_BUCKETS: {
+        this.controller.subtype.setBucketVisibility(true);
+        break;
+      }
+      case NeighborhoodSignalType.HIDE_BUCKETS: {
+        this.controller.subtype.setBucketVisibility(false);
+        break;
+      }
       default:
         console.log(signal.value);
         break;
