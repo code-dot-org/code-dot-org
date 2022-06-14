@@ -10,6 +10,7 @@ import {
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 import renderProjectNotFound from './renderProjectNotFound';
+import renderVersionNotFound from './renderVersionNotFound';
 var userAgentParser = require('./userAgentParser');
 var clientState = require('../clientState');
 import getScriptData from '../../util/getScriptData';
@@ -264,7 +265,10 @@ function loadProjectAndCheckAbuse(appOptions) {
       })
       .catch(() => {
         if (project.channelNotFound()) {
-          renderProjectNotFound(project);
+          renderProjectNotFound();
+          return;
+        } else if (project.sourceNotFound()) {
+          renderVersionNotFound();
           return;
         }
       });
