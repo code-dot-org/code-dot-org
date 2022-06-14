@@ -14,5 +14,6 @@ class CongratsController < ApplicationController
     rescue OpenSSL::Cipher::CipherError
       return render status: :bad_request, json: {message: 'invalid base64'}
     end
+    @is_hoc_tutorial = CertificateImage.hoc_course?(course_name)
   end
 end

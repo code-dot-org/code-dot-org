@@ -23,6 +23,7 @@ $(document).ready(function() {
   // Extras tutorial if we have problems during Hour of Code.
   const hideDancePartyFollowUp = congratsData.hide_dance_followup;
   const certificateImageUrl = congratsData.certificate_image_url;
+  const isHocTutorial = congratsData.is_hoc_tutorial;
 
   let certificateId = '';
   let tutorial = '';
@@ -50,6 +51,7 @@ $(document).ready(function() {
         hideDancePartyFollowUp={hideDancePartyFollowUp}
         showStudioCertificate={showStudioCertificate}
         initialCertificateImageUrl={certificateImageUrl}
+        isHocTutorial={isHocTutorial}
       />
     </Provider>,
     document.getElementById('congrats-container')
