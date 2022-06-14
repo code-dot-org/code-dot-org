@@ -101,6 +101,7 @@ let initialCaptureComplete = false;
 let thumbnailChanged = false;
 let thumbnailPngBlob = null;
 let fetchChannelResponseCode = null;
+let fetchSourceResponseCode = null;
 
 /**
  * Current state of our sources API data
@@ -504,6 +505,10 @@ var projects = (module.exports = {
 
   channelNotFound() {
     return fetchChannelResponseCode >= 400 && fetchChannelResponseCode < 500;
+  },
+
+  sourceNotFound() {
+    return fetchSourceResponseCode >= 400 && fetchSourceResponseCode < 500;
   },
 
   __TestInterface: {
@@ -1698,8 +1703,10 @@ var projects = (module.exports = {
         .catch(err => {
           return Promise.reject(err);
         })
-
         .then(this.fetchSource.bind(this))
+        .catch(err => {
+          return Promise.reject(err);
+        })
         .then(() => {
           if (current.isOwner && pathInfo.action === 'view') {
             isEditing = true;
@@ -1720,7 +1727,13 @@ var projects = (module.exports = {
   loadProjectBackedLevel_: function() {
     isEditing = true;
     return this.fetchChannel(appOptions.channel)
+      .catch(err => {
+        return Promise.reject(err);
+      })
       .then(this.fetchSource.bind(this))
+      .catch(err => {
+        return Promise.reject(err);
+      })
       .then(() => {
         projects.showHeaderForProjectBacked();
         return fetchAbuseScoreAndPrivacyViolations(this);
@@ -1858,9 +1871,10 @@ var projects = (module.exports = {
         url += '?version=' + version;
       }
       return new Promise((resolve, reject) => {
-        sourcesApi.fetch(url, (err, data, jqXHR) =>
-          err ? reject(err) : resolve({data, jqXHR})
-        );
+        sourcesApi.fetch(url, (err, data, jqXHR, response) => {
+          fetchSourceResponseCode = response?.status;
+          err ? reject(err) : resolve({data, jqXHR});
+        });
       })
         .catch(err => {
           this.logError_(
