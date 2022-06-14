@@ -62,7 +62,7 @@ Scenario: Course A 2017 uncustomized dashboard certificate pages
   Given I am on "http://studio.code.org/congrats?enableExperiments=studioCertificate"
   And I wait until element "#uitest-certificate" is visible
 
-  When I am on "http://code.org/congrats/coursea-2017"
+  When I am on "http://code.org/congrats/coursea-2017?enableExperiments=studioCertificate"
   And I wait until current URL contains "http://studio.code.org/congrats"
   And I wait to see element with ID "uitest-certificate"
   Then the href of selector ".social-print-link" contains "/print_certificates/"
