@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-03 12:52:32 UTC",
+    "serialized_at": "2022-06-13 20:32:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1829,7 +1829,7 @@
       "key": "3b4b65e3-63b4-4987-ab7b-41b14417c803",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *parameterized constructor*, *formal parameter*, and *local variable*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *actual parameter* and *call by value*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *overloaded*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What do you think would happen if we didn't write any constructors in a class?*\n\n**Discussion Goal:** Students may predict that an error might occur or that Java will specify default values for the attributes based on the data types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the result of not writing any constructors in a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using `super()` in a parameterized constructor."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *parameterized constructor*, *formal parameter*, and *local variable*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *actual parameter* and *call by value*."
       },
       "seeding_key": {
         "activity_section.key": "3b4b65e3-63b4-4987-ab7b-41b14417c803",
@@ -1837,8 +1837,31 @@
       }
     },
     {
-      "key": "814c99d2-1402-48bc-8ba1-1501a4fd59ae",
+      "key": "295651c7-7b87-450e-8553-428258f2efe7",
       "position": 8,
+      "properties": {
+        "description": "Constructors are used to set the initial state of an object, which should include starting values for all instance variables. These values set the state of an object, which is represented by the object's instance variables and their values at a given time. The constructor parameters are local variables to the constructor and provide data to initialize instance variables.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "295651c7-7b87-450e-8553-428258f2efe7",
+        "lesson_activity.key": "146acf35-ae24-4de0-be0b-210c82702c37"
+      }
+    },
+    {
+      "key": "48e67885-f7fc-43ad-b029-adf04ca257c0",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *overloaded*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What do you think would happen if we didn't write any constructors in a class?*\n\n**Discussion Goal:** Students may predict that an error might occur or that Java will specify default values for the attributes based on the data types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the result of not writing any constructors in a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using `super()` in a parameterized constructor."
+      },
+      "seeding_key": {
+        "activity_section.key": "48e67885-f7fc-43ad-b029-adf04ca257c0",
+        "lesson_activity.key": "146acf35-ae24-4de0-be0b-210c82702c37"
+      }
+    },
+    {
+      "key": "814c99d2-1402-48bc-8ba1-1501a4fd59ae",
+      "position": 10,
       "properties": {
         "description": "The `PainterPlus` class inherits the instance variables defined in the `Painter` class. The actual parameters that are passed in the call to the superclass constructor provide values that the constructor can use to initialize the object's instance variables.",
         "remarks": true
@@ -1850,7 +1873,7 @@
     },
     {
       "key": "93f43edb-5f75-43ae-860d-68512a815df7",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Project Mercury Pastries Food Truck is starting its business in The Neighborhood, and the owner needs our help! They need to track the desserts they sell and manage their customers and orders. Throughout the upcoming lessons, we will use our software engineering skills to help solve the problems they encounter as they get their business started in The Neighborhood.",
         "duration": "10",
@@ -1864,7 +1887,7 @@
     },
     {
       "key": "957fce81-1a11-431e-9dd1-a2dac2ba72d9",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. On Level 2, students complete a choice level to use the parameterized constructor for the `Painter` class. Students continue to Level 3 to write and use a no-argument constructor in the `Dessert` class. On Level 4, students write and use a parameterized constructor in the `Dessert` class.",
         "progression_name": "Writing and Using Constructors",
@@ -1882,7 +1905,7 @@
     },
     {
       "key": "91729f1e-501d-43a8-a62b-e4b5a81cd8ad",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "This is a good time to commit our code and save our `Dessert` class to the Backpack.",
         "remarks": true
@@ -1894,7 +1917,7 @@
     },
     {
       "key": "f0f2b1d5-86d6-4055-9e6b-f165e195c4c4",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the `Dessert` class to the Backpack."
       },
@@ -2626,7 +2649,7 @@
       "key": "cf3c945d-4e85-40ee-8286-36e9d4f4651f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the methods change the values stored in the instance variables. Students may wonder how these methods are able to change the values since instance variables are `private`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Mutator Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling a mutator method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *What is different about the way mutator methods work in comparison to accessor methods?*\n* *Should all instance variables have mutator methods? When would we not want an instance variable to be modified?*\n* *Are there values that should be considered invalid for certain instance variables?*\n\n**Discussion Goal:** Students identify similarities between mutator methods and accessor methods, such as both working with the instance variables of a class. Students also identify differences, such as mutator methods taking a parameter to set a new value to the instance variable and does not return a value while accessor methods do not have a parameter and return the current value stored in the instance variable."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the methods change the values stored in the instance variables. Students may wonder how these methods are able to change the values since instance variables are `private`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Mutator Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling a mutator method."
       },
       "seeding_key": {
         "activity_section.key": "cf3c945d-4e85-40ee-8286-36e9d4f4651f",
@@ -2634,8 +2657,31 @@
       }
     },
     {
-      "key": "9fc7d87c-b01c-49ab-9d48-6ae78dc92d42",
+      "key": "985a7316-7840-4b0b-a011-0f3066160e3c",
       "position": 4,
+      "properties": {
+        "description": "When designing a class, programmers make decisions about what data to make accessible and modifiable from an external class. Data can be either accessible or modifiable, or it can be both or neither.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "985a7316-7840-4b0b-a011-0f3066160e3c",
+        "lesson_activity.key": "6c14c398-e123-4712-a62e-b86c4dfd3230"
+      }
+    },
+    {
+      "key": "8c92c964-78c0-4499-82e1-616baac9903c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *What is different about the way mutator methods work in comparison to accessor methods?*\n* *Should all instance variables have mutator methods? When would we not want an instance variable to be modified?*\n* *Are there values that should be considered invalid for certain instance variables?*\n\n**Discussion Goal:** Students identify similarities between mutator methods and accessor methods, such as both working with the instance variables of a class. Students also identify differences, such as mutator methods taking a parameter to set a new value to the instance variable and does not return a value while accessor methods do not have a parameter and return the current value stored in the instance variable."
+      },
+      "seeding_key": {
+        "activity_section.key": "8c92c964-78c0-4499-82e1-616baac9903c",
+        "lesson_activity.key": "6c14c398-e123-4712-a62e-b86c4dfd3230"
+      }
+    },
+    {
+      "key": "9fc7d87c-b01c-49ab-9d48-6ae78dc92d42",
+      "position": 6,
       "properties": {
         "description": "We can use an `if` statement to check for invalid values. For example, we may want to make sure that a user doesn't enter a negative value for a price or a quantity.",
         "duration": "10",
@@ -2649,7 +2695,7 @@
     },
     {
       "key": "de8d5b6a-c1f4-468a-ac3f-1ac1947d353c",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *Where have you used operators like less than, greater than, or equal?*\n\n**Discussion Goal:** Students recall using operators in math or previous computer science courses.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "progression_name": "Investigate: Exploring Edge Cases"
@@ -2661,7 +2707,7 @@
     },
     {
       "key": "012193e0-5d8f-4c57-a827-4b6f79f93160",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce relational operators.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *Boolean expression*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *sentinel value*."
       },
@@ -2672,7 +2718,7 @@
     },
     {
       "key": "7e42ea53-331e-4aa7-b678-a0419adc78de",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 through 5. Students write mutator methods in the `Dessert` class on Level 3, then continue to Level 4 to use the `Dessert` class mutator methods. On Level 5, students complete a choice level to use the `Scanner` class and a sentinel value to repeatedly take input from a user.",
         "duration": "10",
@@ -2692,7 +2738,7 @@
     },
     {
       "key": "62437ccc-513a-4c38-9d91-632fa819d55e",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "This is a good time to commit our code and save our new version of our `Dessert` class to the Backpack.",
         "remarks": true
@@ -2704,7 +2750,7 @@
     },
     {
       "key": "e1c2224f-04fd-4a0b-a611-2038c988497c",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the new version of the `Dessert` class to the Backpack."
       },
@@ -3030,7 +3076,7 @@
       "key": "58596fe4-eef2-4ad5-ae0b-0eedee304a9e",
       "position": 3,
       "properties": {
-        "description": "Sometimes we need to make it clear which variable or object we are referring to in our programs. Java has a special keyword that helps us refer to the current object when referring to a specific variable or object.",
+        "description": "We can give a local variable the same name as an instance variable. If we were to do this, the variable name will refer to the local variable instead of the instance variable. We need to make it clear which variable or object we are referring to in our programs. Java has a special keyword that helps us refer to the current object when referring to a specific variable or object.",
         "remarks": true
       },
       "seeding_key": {
