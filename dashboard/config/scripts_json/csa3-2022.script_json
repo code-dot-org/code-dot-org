@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-13 20:22:08 UTC",
+    "serialized_at": "2022-06-14 13:26:22 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2645,7 +2645,7 @@
       "key": "48b26340-8ff5-4707-9162-015d60c214be",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is causing this error? How do we fix it?*\n* *What are strategies we can use when debugging errors like this?*\n\n**Discussion Goal:** Students note that the program had an `ArrayIndexOutOfBoundsException` because the array traversal looped one too many times. Students share that changing the condition resolved the error and allowed the program to function as expected.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain off-by-one errors."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is causing this error? How do we fix it?*\n* *What are strategies we can use when debugging errors like this?*\n\n**Discussion Goal:** Students note that the program had an `ArrayIndexOutOfBoundsException` because the array traversal looped one too many times. Students share that changing the condition resolved the error and allowed the program to function as expected."
       },
       "seeding_key": {
         "activity_section.key": "48b26340-8ff5-4707-9162-015d60c214be",
@@ -2653,8 +2653,31 @@
       }
     },
     {
-      "key": "f69d4c98-584e-4d0c-98d5-6aa7b69c1305",
+      "key": "46046361-62f2-4700-9a98-c39c72c55350",
       "position": 10,
+      "properties": {
+        "description": "When we are using `for` or `while` loops, we need to be sure that these iteration statements do not loop one time too many or one time too few. Doing so results in an off-by-one error.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "46046361-62f2-4700-9a98-c39c72c55350",
+        "lesson_activity.key": "0dad2402-dd68-429f-93c5-de4f24211508"
+      }
+    },
+    {
+      "key": "a34c9fb5-4784-4614-a4a1-2ae4a05312b5",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain off-by-one errors."
+      },
+      "seeding_key": {
+        "activity_section.key": "a34c9fb5-4784-4614-a4a1-2ae4a05312b5",
+        "lesson_activity.key": "0dad2402-dd68-429f-93c5-de4f24211508"
+      }
+    },
+    {
+      "key": "f69d4c98-584e-4d0c-98d5-6aa7b69c1305",
+      "position": 12,
       "properties": {
         "description": "We have written algorithms throughout the unit to determine if elements in an array met specific criteria or find the sum or average of the values. We can also write algorithms to find the minimum and maximum values in an array.",
         "duration": "10",
@@ -2668,7 +2691,7 @@
     },
     {
       "key": "47920e66-7a5f-4400-a16a-e842cfed7b41",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "**Group:** Place students in pairs.",
         "tips": [
@@ -2685,7 +2708,7 @@
     },
     {
       "key": "94e7366a-5f11-42f1-8da2-18949b21ea98",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode to find the minimum and maximum values of a 1D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to implement their algorithms. ",
         "progression_name": "Finding Minimum and Maximum Values"
@@ -3014,7 +3037,7 @@
       "key": "3660d736-34eb-4a60-a6d5-0a4428ed3a2b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program uses nested loops and that the inner loop fully executes for each iteration of the outer loop. Students may wonder about other scenarios where nested loops would be useful.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Nested Loops*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *nested loop*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing a trace table to trace a nested loop.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program uses nested loops and that the inner loop fully executes for each iteration of the outer loop. Students may wonder about other scenarios where nested loops would be useful.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Nested Loops*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *nested loop*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3028,8 +3051,31 @@
       }
     },
     {
-      "key": "2963715d-d414-46aa-97c2-e3a370c24e18",
+      "key": "7b32bcc7-96d6-4471-96c5-651f26bcdb6d",
       "position": 4,
+      "properties": {
+        "description": "When a loop is nested inside another loop, the inner loop must complete all its iterations before the outer loop can continue.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7b32bcc7-96d6-4471-96c5-651f26bcdb6d",
+        "lesson_activity.key": "c270690e-89d1-47dd-b000-9c59105306aa"
+      }
+    },
+    {
+      "key": "986a35a7-baa4-4695-af66-fe406eb0afc3",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing a trace table to trace a nested loop."
+      },
+      "seeding_key": {
+        "activity_section.key": "986a35a7-baa4-4695-af66-fe406eb0afc3",
+        "lesson_activity.key": "c270690e-89d1-47dd-b000-9c59105306aa"
+      }
+    },
+    {
+      "key": "2963715d-d414-46aa-97c2-e3a370c24e18",
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Tracing Nested Loops handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Tracing Nested Loops handout."
       },
@@ -3040,7 +3086,7 @@
     },
     {
       "key": "079fd980-7d44-4559-826e-3f2cd10a6e10",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "Sometimes, we need to evaluate our data for situations like invalid or duplicate values. Duplicate values could change the meaning of the data or tell us about things like the popularity of a certain element. Finding duplicates is another standard algorithm that can be applied to many scenarios.",
         "duration": "20",
@@ -3054,7 +3100,7 @@
     },
     {
       "key": "14f530d1-16a8-489b-8431-a390dd4ab2c3",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Finding Duplicates handout and manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for finding duplicate values in a one-dimensional array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a Check for Understanding, then continue to Level 3 to complete a choice level to implement their algorithm to find duplicate values.",
         "progression_name": "Finding Duplicates"
@@ -3066,7 +3112,7 @@
     },
     {
       "key": "670d777a-62e7-4cf6-9086-a12caed25743",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
         "progression_name": "Code Review: Finding Duplicates"
