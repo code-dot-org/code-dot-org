@@ -7,6 +7,8 @@ import {
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
+import sinon from 'sinon';
+import * as utils from '@cdo/apps/code-studio/utils';
 
 const DEFAULT_PROPS = {
   type: codeReviewTimelineElementType.CREATED,
@@ -67,7 +69,32 @@ describe('CodeReviewTimelineElement', () => {
         projectVersionId: 'asdfjkl',
         viewAsCodeReviewer: false
       });
-      expect(wrapper.find('EyeballLink')).to.have.length(1);
+      const eyeballLink = wrapper.find('EyeballLink');
+      expect(eyeballLink).to.have.length(1);
+      expect(eyeballLink.props().versionHref.includes('version=asdfjkl')).to.be
+        .true;
+    });
+
+    it('has expected params in eyeball link', () => {
+      // Params existing in the url should be included and version param is overridden if one already exists in the url
+      sinon.stub(utils, 'queryParams').returns({
+        user_id: 123,
+        section_id: 456,
+        version: 'viewingOldVersion'
+      });
+      const wrapper = setUp({
+        type: codeReviewTimelineElementType.COMMIT,
+        projectVersionId: 'asdfjkl',
+        viewAsCodeReviewer: false
+      });
+      const eyeballLink = wrapper.find('EyeballLink');
+      expect(eyeballLink.props().versionHref.includes('version=asdfjkl')).to.be
+        .true;
+      expect(eyeballLink.props().versionHref.includes('user_id=123')).to.be
+        .true;
+      expect(eyeballLink.props().versionHref.includes('section_id=456')).to.be
+        .true;
+      utils.queryParams.restore();
     });
 
     it('hides eyeball link if there is not a version', () => {
