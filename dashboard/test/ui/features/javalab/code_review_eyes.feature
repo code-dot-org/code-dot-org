@@ -30,8 +30,4 @@ Feature: Code Review Eyes
     And I load the review tab
     Then I see no difference for "initial review tab state" using stitch mode "none"
     When I enable code review
-    And I write a code review comment with text "Hermione's comment"
-    Then I see no difference for "review tab with comment" using stitch mode "none"
-    When I mark the review comment complete
-    Then I see no difference for "resolved comment state" using stitch mode "none"
     And I close my eyes

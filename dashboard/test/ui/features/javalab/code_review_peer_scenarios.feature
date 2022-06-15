@@ -39,10 +39,10 @@ Feature: Code review (peer scenarios)
     And I enable code review
 
   Scenario: Students can see each others comments
+    And I load the peer project for peer number 2 in the list
     When I write a code review comment with text "Hermione's comment"
     Given I sign in as "Harry"
-    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
-    And I load the peer project for peer number 1 in the list
+    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true
     And I wait until element ".code-review-comment-body" is visible
     And element ".code-review-comment-body" has text "Hermione's comment"
 
