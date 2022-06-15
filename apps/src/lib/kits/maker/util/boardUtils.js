@@ -19,8 +19,7 @@ export const BOARD_TYPE = {
 export function detectBoardTypeFromPort(port) {
   let boardType = BOARD_TYPE.OTHER;
   if (port) {
-    const vendorId = port.vendorId;
-    const productId = port.productId;
+    const {vendorId, productId} = port;
     const parsedVendorId = vendorId ? parseInt(vendorId, 16) : null;
     const parsedProductId = productId ? parseInt(productId, 16) : null;
     if (

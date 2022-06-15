@@ -111,9 +111,9 @@ export default class SetupChecklist extends Component {
 
       // Can we talk to the firmware?
       .then(() =>
-        this.detectStep(STATUS_BOARD_CONNECT, () => {
-          setupChecker.detectCorrectFirmware(this.state.boardTypeDetected);
-        })
+        this.detectStep(STATUS_BOARD_CONNECT, () =>
+          setupChecker.detectCorrectFirmware(this.state.boardTypeDetected)
+        )
       )
 
       // Can we initialize components successfully?
