@@ -191,7 +191,7 @@ class CertificateImage
   end
 
   def self.prefilled_title_course?(course)
-    hoc_course?(course) || ScriptConstants.unit_in_category?(:twenty_hour, course)
+    hoc_course?(course) || ScriptConstants.unit_in_category?(:twenty_hour, course) || course == 'accelerated'
   end
 
   # Specify a fallback certificate title for a given non-HoC course ID. As of HoC
