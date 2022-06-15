@@ -12,6 +12,7 @@ import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const CodeReviewTimelineReview = ({
   review,
@@ -25,6 +26,8 @@ const CodeReviewTimelineReview = ({
   const {id, createdAt, isOpen, version, ownerId, ownerName, comments} = review;
   const [displayCloseError, setDisplayCloseError] = useState(false);
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
+
+  const isViewingOldVersion = !!queryParams('version');
 
   const handleCloseCodeReview = () => {
     closeReview(
@@ -56,7 +59,7 @@ const CodeReviewTimelineReview = ({
               {javalabMsg.openedDate({date: formattedDate})}
             </div>
           </div>
-          {isOpen && viewingAsOwner && (
+          {isOpen && viewingAsOwner && !isViewingOldVersion && (
             <div>
               <Button
                 icon="close"
@@ -91,7 +94,7 @@ const CodeReviewTimelineReview = ({
         {comments?.length === 0 && !isOpen && (
           <span>{javalabMsg.noFeedbackGiven()}</span>
         )}
-        {isOpen && !viewingAsOwner && (
+        {isOpen && !viewingAsOwner && !isViewingOldVersion && (
           <CodeReviewCommentEditor
             addCodeReviewComment={(commentText, onSuccess, onFailure) =>
               addCodeReviewComment(commentText, id, onSuccess, onFailure)
