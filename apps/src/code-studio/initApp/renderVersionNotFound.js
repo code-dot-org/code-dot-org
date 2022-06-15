@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import AlertExclamation from '../components/AlertExclamation';
 import msg from '@cdo/locale';
 
-export function ProjectNotFoundAlert() {
+export function VersionNotFoundAlert() {
   return (
     <AlertExclamation>
       <div className="exclamation-abuse">
-        <p style={styles.text}>{msg.projectNotFound()}</p>
+        <p style={styles.text}>{msg.versionNotFound()}</p>
         <p style={styles.text}>
           <a href="https://studio.code.org">{msg.goToCodeStudio()}</a>
         </p>
@@ -17,7 +17,7 @@ export function ProjectNotFoundAlert() {
 }
 
 export default () => {
-  ReactDOM.render(<ProjectNotFoundAlert />, document.getElementById('codeApp'));
+  ReactDOM.render(<VersionNotFoundAlert />, document.getElementById('codeApp'));
 };
 
 const styles = {
