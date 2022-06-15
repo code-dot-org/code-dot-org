@@ -234,7 +234,7 @@ class CertificateImage
       else
         'hour_of_code_certificate.jpg'
       end
-    elsif ScriptConstants.unit_in_category?(:twenty_hour, course)
+    elsif ScriptConstants.unit_in_category?(:twenty_hour, course) || course == 'accelerated'
       '20hours_certificate.jpg'
     else
       'blank_certificate.png'
