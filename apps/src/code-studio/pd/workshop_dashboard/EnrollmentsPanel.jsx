@@ -160,12 +160,13 @@ export default class EnrollmentsPanel extends React.Component {
       });
     } else {
       this.setState(state => {
-        state.selectedEnrollments.push({
+        const selectedEnrollments = state.selectedEnrollments.concat({
           id: enrollment.id,
           email: enrollment.email,
           first_name: enrollment.first_name,
           last_name: enrollment.last_name
         });
+        return {selectedEnrollments};
       });
     }
   };
