@@ -2825,9 +2825,9 @@
         },
         "courseb-2021/Programming in Maze": {
           "name": "Programmieren mit Angry Birds",
-          "overview": "Unter Verwendung von Charakteren aus Ice Age entwickeln die SchülerInnen sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
-          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Suchen Sie das Material für **\\*Happy Maps** oder drucken Sie es nach. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat. - Schneiden Sie für jede Richtung (N, S, E, W) genügend **Manipulatoren** aus, um jedem SchülerInnenpaar zwei Sätze zu geben (wenn Sie sich für die Überbrückungsoption 1 entscheiden).",
-          "purpose": "In dieser Lektion entwickeln die SchülerInneninnen und SchülerInnen Programmierkenntnisse auf einer Computerplattform. Das blockbasierte Format dieser Puzzles hilft den SchülerInnenn, Abläufe und Konzepte kennenzulernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen.",
+          "overview": "Unter Verwendung von Charakteren aus Ice Age entwickeln die Schüler sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
+          "preparation": "– Spielen Sie die Aufgaben durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n– Suchen Sie das Material für **\\*Fröhliche Karten** oder drucken Sie es nach.\n– Stellen Sie sicher, dass allen SchülerInnen ein Reflexionsjournal haben\n– Schneiden Sie für jede Richtung (N, S, E, W) genügend **Manipulatoren** aus, um jedem Paar zwei Sätze zu geben (wenn Sie sich für die Überbrückungsoption 1 entscheiden).",
+          "purpose": "In dieser Lektion entwickeln die SchülerInnen Programmierkenntnisse auf einer Computerplattform. Das blockbasierte Format dieser Aufgaben hilft den SchülerInnenn, Abläufe und Konzepte kennen zu lernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen.",
           "student_overview": "Erstellen Sie Programme, die dem Angry Bird helfen, sich durch das Labyrinth zu bewegen."
         },
         "courseb-2021/Programming in Harvester": {
@@ -2920,7 +2920,7 @@
         },
         "coursea-2021/Programming in Ice Age": {
           "name": "Programmieren mit Scrat",
-          "overview": "Unter Verwendung von Charakteren aus Ice Age entwickeln die SchülerInnen sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
+          "overview": "Unter Verwendung von Charakteren aus Ice Age entwickeln die Schüler sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
           "purpose": "In dieser Stunde erlernen die SchülerInnen Fähigkeiten im Programmieren und der Fehlersuche auf einer Computerplattform. Das blockbasierte Format dieser Aufgaben hilft den SchülerInnen, die Reihenfolge und Konzepte zu lernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen.",
           "student_overview": "Schreiben Sie Programme, die Scrat helfen, die Eichel zu erreichen."
@@ -3208,7 +3208,7 @@
           "name": "Programmieren mit Angry Birds",
           "overview": "Unter Verwendung von Figuren aus Angry Birds entwickeln die SchülerInnen sequentielle Algorithmen, um einen Vogel von einer Seite eines Labyrinths zu einem Schwein auf der anderen Seite zu bringen. Dazu ordnen sie Codebausteine in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
-          "purpose": "In dieser Lektion entwickeln die SchülerInneninnen und SchülerInnen Programmierkenntnisse auf einer Computerplattform. Das blockbasierte Format dieser Puzzles hilft den SchülerInnenn, Abläufe und Konzepte kennenzulernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen.",
+          "purpose": "In dieser Lektion entwickeln die SchülerInnen Programmierkenntnisse auf einer Computerplattform. Das blockbasierte Format dieser Aufgaben hilft den SchülerInnenn, Abläufe und Konzepte kennen zu lernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen.",
           "student_overview": "Erfahren Sie mit Angry Birds mehr über Sequenzen und Algorithmen."
         },
         "express-2021/Debugging with Scrat": {
@@ -3405,7 +3405,7 @@
         },
         "pre-express-2021/Programming in with Angry Birds": {
           "name": "Programmieren mit Angry Birds",
-          "overview": "Unter Verwendung von Charakteren aus Ice Age entwickeln die SchülerInnen sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
+          "overview": "Unter Verwendung von Charakteren aus Ice Age entwickeln die Schüler sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
           "preparation": "-   Spielen Sie die Lektion durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
           "purpose": "In dieser Stunde erlernen die SchülerInnen Fähigkeiten im Programmieren und der Fehlersuche auf einer Computerplattform. Das blockbasierte Format dieser Aufgaben hilft den SchülerInnen, die Reihenfolge und Konzepte zu lernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen."
         },

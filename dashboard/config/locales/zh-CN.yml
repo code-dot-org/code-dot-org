@@ -1092,6 +1092,7 @@ zh-CN:
         music: 音乐
         art: 艺术
         other: 其他：
+        na: 不适用
       resources:
         bootstrap: 启动
         codecademy: CodeCademy
@@ -1100,7 +1101,8 @@ zh-CN:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 其他：
+        other: 其他
+        na: 不适用
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1110,7 +1112,8 @@ zh-CN:
         sphero: Sphero
         raspberry: 树莓派
         wonder: 工作坊
-        other: 其他：
+        other: 其他
+        na: 不适用
       workshop_course:
         csf_af: 计算机科学基本原理 (课程 A - F)
         csf_express: 计算机科学基础课程（预快速或快速）

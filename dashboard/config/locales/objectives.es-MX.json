@@ -1422,28 +1422,28 @@
           "description": "Escribir programas que cambian los distintos elementos en una sola pantalla en lugar de cambiar pantallas"
         },
         "61fb8052-ffea-4adf-a134-8d730ad54e8b": {
-          "description": "Conectar y solucionar problemas de dispositivos externos"
+          "description": "Conectar y resolver problemas de dispositivos externos"
         },
         "d69128fd-98d6-4897-966d-76362dbaf0ac": {
-          "description": "Encender y apagar un LED con un código"
+          "description": "Encender y apagar un LED utilizando código"
         },
         "617e327c-d4cc-4b6e-b456-7233bb9c845b": {
-          "description": "Utilizar el código para controlar un dispositivo físico"
+          "description": "Usar código para controlar un dispositivo físico"
         },
         "2b306542-728e-4848-a27f-c0521831a6f4": {
-          "description": "Comparar y contrastar múltiples formas de obtener entradas"
+          "description": "Comparar y contrastar las distintas formas de recibir entradas"
         },
         "c10da89e-729b-4d0f-b376-3e14e931b870": {
-          "description": "Representar diferentes métodos de obtención de datos del usuario"
+          "description": "Modelar distintos métodos para recibir entradas de usuario"
         },
         "37fbfc3d-4e38-4c1c-86bc-6fe3342ba7ff": {
-          "description": "Conectar un manejador de eventos a una entrada de hardware"
+          "description": "Acoplar un controlador de eventos a una entrada de hardware"
         },
         "809dcd9a-f37c-4bfd-9b58-b4024c4fd2ec": {
-          "description": "Elige el evento apropiado para un escenario determinado"
+          "description": "Escoger el evento apropiado para un escenario determinado"
         },
         "21ba6c31-018e-4d23-b652-77d6ef65324d": {
-          "description": "Utilizar getters para acceder a las propiedades de los elementos de un sistema"
+          "description": "Utilizar getters para acceder a las propiedades de elementos en un sistema"
         },
         "bdd6a1a3-5115-4486-8e0e-b61c7041c5ce": {
           "description": "Desarrollar programas que respondan a la entrada analógica"

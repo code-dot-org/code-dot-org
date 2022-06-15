@@ -11,9 +11,9 @@
     "parent_level_id": 20012,
     "name_suffix": "_vpl-summer-pilot-2022",
     "reference_links": [
-      "/courses/vpl-csd2-summer-pilot-2022/guides/html-tags"
+      "/courses/vpl-csd-summer-pilot-2022/guides/html-tags"
     ],
-    "map_reference": "/courses/vpl-csd2-summer-pilot-2022/guides/headings-and-paragraphs",
+    "map_reference": "/courses/vpl-csd-summer-pilot-2022/guides/headings-and-paragraphs",
     "rubric_key_concept": "Use HTML to create a web page that includes hierarchical headings, paragraphs, lists, and images.\r\n\r\nUnderstand the need for precision when using computer languages and use appropriate syntax.\r\n",
     "mini_rubric": "true",
     "validation_enabled": "true",

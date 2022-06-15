@@ -18,12 +18,10 @@ AllCops:
 
 Rails:
   Enabled: true
+  Include:
+    - dashboard/**/* # only run Rails cops on Rails-specific code
 
 # BEGIN CODE.ORG OVERRIDES
-
-Rails/Delegate:
-  Include:
-    - dashboard/**/*
 
 Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
