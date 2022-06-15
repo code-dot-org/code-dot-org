@@ -72,7 +72,9 @@
       "keyWentDown": null,
       "randomNumber_min_max": null,
       "scale": null,
-      "rotation": null
+      "rotation": null,
+      "debug": null,
+      "setCollider": null
     },
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -98,11 +100,11 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
+    "validation_enabled": "false",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "validation_enabled": "false"
+    ]
   },
   "game_id": 50,
   "published": true,
@@ -110,7 +112,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:41:12.334+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction sidescroll template_2021\\\"\"],\"cloned_from\":\"CSD U3 abstraction sidescroll template_2021\"},{\"changed_at\":\"2022-05-19 15:04:03 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:41:12.334+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction sidescroll template_2021\\\"\"],\"cloned_from\":\"CSD U3 abstraction sidescroll template_2021\"},{\"changed_at\":\"2022-05-19 15:04:03 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-06-09 16:29:12 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

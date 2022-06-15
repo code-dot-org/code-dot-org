@@ -151,6 +151,13 @@ describe('CodeReviewTimelineReview', () => {
     expect(wrapper.find(Comment)).to.have.length(2);
   });
 
+  it('displays message for closed review with no comments', () => {
+    const review = {...DEFAULT_REVIEW, comments: [], isOpen: false};
+    const wrapper = setUp({review});
+    expect(wrapper.find(Comment)).to.have.length(0);
+    expect(wrapper.contains(javalabMsg.noFeedbackGiven())).to.be.true;
+  });
+
   it('displays code review disabled note if the review is open and viewing as owner', () => {
     const review = {...DEFAULT_REVIEW, isOpen: true, ownerId: 1};
     const wrapper = setUp({review: review, currentUserId: 1});

@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-03 12:52:32 UTC",
+    "serialized_at": "2022-06-14 19:49:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1829,7 +1829,7 @@
       "key": "3b4b65e3-63b4-4987-ab7b-41b14417c803",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *parameterized constructor*, *formal parameter*, and *local variable*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *actual parameter* and *call by value*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *overloaded*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What do you think would happen if we didn't write any constructors in a class?*\n\n**Discussion Goal:** Students may predict that an error might occur or that Java will specify default values for the attributes based on the data types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the result of not writing any constructors in a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using `super()` in a parameterized constructor."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *parameterized constructor*, *formal parameter*, and *local variable*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *actual parameter* and *call by value*."
       },
       "seeding_key": {
         "activity_section.key": "3b4b65e3-63b4-4987-ab7b-41b14417c803",
@@ -1837,8 +1837,31 @@
       }
     },
     {
-      "key": "814c99d2-1402-48bc-8ba1-1501a4fd59ae",
+      "key": "295651c7-7b87-450e-8553-428258f2efe7",
       "position": 8,
+      "properties": {
+        "description": "Constructors are used to set the initial state of an object, which should include starting values for all instance variables. These values set the state of an object, which is represented by the object's instance variables and their values at a given time. The constructor parameters are local variables to the constructor and provide data to initialize instance variables.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "295651c7-7b87-450e-8553-428258f2efe7",
+        "lesson_activity.key": "146acf35-ae24-4de0-be0b-210c82702c37"
+      }
+    },
+    {
+      "key": "48e67885-f7fc-43ad-b029-adf04ca257c0",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *overloaded*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What do you think would happen if we didn't write any constructors in a class?*\n\n**Discussion Goal:** Students may predict that an error might occur or that Java will specify default values for the attributes based on the data types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the result of not writing any constructors in a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using `super()` in a parameterized constructor."
+      },
+      "seeding_key": {
+        "activity_section.key": "48e67885-f7fc-43ad-b029-adf04ca257c0",
+        "lesson_activity.key": "146acf35-ae24-4de0-be0b-210c82702c37"
+      }
+    },
+    {
+      "key": "814c99d2-1402-48bc-8ba1-1501a4fd59ae",
+      "position": 10,
       "properties": {
         "description": "The `PainterPlus` class inherits the instance variables defined in the `Painter` class. The actual parameters that are passed in the call to the superclass constructor provide values that the constructor can use to initialize the object's instance variables.",
         "remarks": true
@@ -1850,7 +1873,7 @@
     },
     {
       "key": "93f43edb-5f75-43ae-860d-68512a815df7",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Project Mercury Pastries Food Truck is starting its business in The Neighborhood, and the owner needs our help! They need to track the desserts they sell and manage their customers and orders. Throughout the upcoming lessons, we will use our software engineering skills to help solve the problems they encounter as they get their business started in The Neighborhood.",
         "duration": "10",
@@ -1864,7 +1887,7 @@
     },
     {
       "key": "957fce81-1a11-431e-9dd1-a2dac2ba72d9",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. On Level 2, students complete a choice level to use the parameterized constructor for the `Painter` class. Students continue to Level 3 to write and use a no-argument constructor in the `Dessert` class. On Level 4, students write and use a parameterized constructor in the `Dessert` class.",
         "progression_name": "Writing and Using Constructors",
@@ -1882,7 +1905,7 @@
     },
     {
       "key": "91729f1e-501d-43a8-a62b-e4b5a81cd8ad",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "This is a good time to commit our code and save our `Dessert` class to the Backpack.",
         "remarks": true
@@ -1894,7 +1917,7 @@
     },
     {
       "key": "f0f2b1d5-86d6-4055-9e6b-f165e195c4c4",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the `Dessert` class to the Backpack."
       },
@@ -2079,7 +2102,7 @@
       "key": "f8797801-0679-495d-824d-3b47d4abf696",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate common errors using `Scanner` class methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define `null` and `NullPointerException`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate common errors using `Scanner` class methods."
       },
       "seeding_key": {
         "activity_section.key": "f8797801-0679-495d-824d-3b47d4abf696",
@@ -2087,8 +2110,31 @@
       }
     },
     {
-      "key": "d8f2d2bb-33e8-4aa5-8b9f-272ccde70828",
+      "key": "3eb6470f-4054-49fc-b744-55f5492dd743",
       "position": 8,
+      "properties": {
+        "description": "We previously learned that reference variables point to the location of an object in memory while `int`, `double`, and `boolean` variables hold a primitive value. When we have a primitive variable that does not yet have a specific value, we might initialize it to zero or `false`. Sometimes we might have a reference variable that does not yet point to a specific object. In these cases, we could initialize a reference variable to `null`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3eb6470f-4054-49fc-b744-55f5492dd743",
+        "lesson_activity.key": "73e5db0d-c2c9-42ef-87e2-f60e11d00c6b"
+      }
+    },
+    {
+      "key": "e293e1f3-832f-4976-8d73-54df30ffb1a0",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define `null` and `NullPointerException`."
+      },
+      "seeding_key": {
+        "activity_section.key": "e293e1f3-832f-4976-8d73-54df30ffb1a0",
+        "lesson_activity.key": "73e5db0d-c2c9-42ef-87e2-f60e11d00c6b"
+      }
+    },
+    {
+      "key": "d8f2d2bb-33e8-4aa5-8b9f-272ccde70828",
+      "position": 10,
       "properties": {
         "description": "The methods we saw in the video earlier are not the only methods available in the `Scanner` class. We can refer to the documentation for the `Scanner` class to see what methods it has and how to use them.",
         "duration": "15",
@@ -2102,7 +2148,7 @@
     },
     {
       "key": "55930d62-5967-421a-a7be-1def044d7878",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to access documentation in Java Lab.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students debug a program on Level 2 with a `NullPointer` exception, then continue to Level 3 to complete a choice level to create and use a `Scanner` object to obtain user input.",
         "progression_name": "Getting User Input"
@@ -2456,7 +2502,7 @@
       "key": "4f3d0d90-f95b-4936-94cb-2709b2d46b7a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Accessor Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling an accessor method and define *return type* and `return` *keyword*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling an accessor method using the Classes and Objects Manipulatives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write an accessor method for one of their instance variables and call it using their Classes and Objects Manipulatives.\n\n**Do This:** Explain return by value:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Calling the method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return by value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How did the manipulatives demonstrate return by value?*\n\n**Discussion Goal:** Students realize that return by value occurred when they copied the value to a new sticky note to pass to where the method was called.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Accessor Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling an accessor method and define *return type* and `return` *keyword*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2470,8 +2516,31 @@
       }
     },
     {
-      "key": "6d38994f-eaec-455b-9f3b-b64490520660",
+      "key": "a1b9268c-01e6-4f92-8025-baeeb9178949",
       "position": 3,
+      "properties": {
+        "description": "An accessor method is a non-void method. Non-void methods return a value that is the same type as the return type in the method signature. We can store the return value in a variable or use it as part of an expression.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a1b9268c-01e6-4f92-8025-baeeb9178949",
+        "lesson_activity.key": "c60c7f6f-3cde-414d-94f8-a355c2744ad8"
+      }
+    },
+    {
+      "key": "8a5b916e-7e8b-4d51-b0b1-233eee45eb92",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling an accessor method using the Classes and Objects Manipulatives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write an accessor method for one of their instance variables and call it using their Classes and Objects Manipulatives.\n\n**Do This:** Explain return by value:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Calling the method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return by value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How did the manipulatives demonstrate return by value?*\n\n**Discussion Goal:** Students realize that return by value occurred when they copied the value to a new sticky note to pass to where the method was called."
+      },
+      "seeding_key": {
+        "activity_section.key": "8a5b916e-7e8b-4d51-b0b1-233eee45eb92",
+        "lesson_activity.key": "c60c7f6f-3cde-414d-94f8-a355c2744ad8"
+      }
+    },
+    {
+      "key": "6d38994f-eaec-455b-9f3b-b64490520660",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1 through 5. Students complete a Check for Understanding on Level 1 then continue to Level 2 to write accessor methods in the `Dessert` class. On Level 3, students use the `Dessert` class accessor methods. Students then write accessor methods for the `Dessert` subclasses on Level 4 and use them on Level 5.",
         "duration": "15",
@@ -2491,7 +2560,7 @@
     },
     {
       "key": "da296ed9-242d-4892-8adb-94fc4e4ce6e4",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "This is a good time to commit our code and save our new version of our `Dessert` classes to the Backpack.",
         "remarks": true
@@ -2503,7 +2572,7 @@
     },
     {
       "key": "6725266f-3de1-4746-b987-a5a41dbd45d8",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the new version of the `Dessert` classes to the Backpack."
       },
@@ -2626,7 +2695,7 @@
       "key": "cf3c945d-4e85-40ee-8286-36e9d4f4651f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the methods change the values stored in the instance variables. Students may wonder how these methods are able to change the values since instance variables are `private`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Mutator Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling a mutator method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *What is different about the way mutator methods work in comparison to accessor methods?*\n* *Should all instance variables have mutator methods? When would we not want an instance variable to be modified?*\n* *Are there values that should be considered invalid for certain instance variables?*\n\n**Discussion Goal:** Students identify similarities between mutator methods and accessor methods, such as both working with the instance variables of a class. Students also identify differences, such as mutator methods taking a parameter to set a new value to the instance variable and does not return a value while accessor methods do not have a parameter and return the current value stored in the instance variable."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the methods change the values stored in the instance variables. Students may wonder how these methods are able to change the values since instance variables are `private`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Mutator Methods*."
       },
       "seeding_key": {
         "activity_section.key": "cf3c945d-4e85-40ee-8286-36e9d4f4651f",
@@ -2634,8 +2703,54 @@
       }
     },
     {
-      "key": "9fc7d87c-b01c-49ab-9d48-6ae78dc92d42",
+      "key": "71057f53-22d1-4b80-9158-85451199b9e3",
       "position": 4,
+      "properties": {
+        "description": "Mutator methods are `void` methods, which means they do not return a value and therefore cannot be called as part of an expression. As `void` methods, they can perform an action, like changing the state of an object.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "71057f53-22d1-4b80-9158-85451199b9e3",
+        "lesson_activity.key": "6c14c398-e123-4712-a62e-b86c4dfd3230"
+      }
+    },
+    {
+      "key": "1e6a16ff-5898-47eb-babc-5aa9fee77664",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling a mutator method."
+      },
+      "seeding_key": {
+        "activity_section.key": "1e6a16ff-5898-47eb-babc-5aa9fee77664",
+        "lesson_activity.key": "6c14c398-e123-4712-a62e-b86c4dfd3230"
+      }
+    },
+    {
+      "key": "985a7316-7840-4b0b-a011-0f3066160e3c",
+      "position": 6,
+      "properties": {
+        "description": "When designing a class, programmers make decisions about what data to make accessible and modifiable from an external class. Data can be either accessible or modifiable, or it can be both or neither.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "985a7316-7840-4b0b-a011-0f3066160e3c",
+        "lesson_activity.key": "6c14c398-e123-4712-a62e-b86c4dfd3230"
+      }
+    },
+    {
+      "key": "8c92c964-78c0-4499-82e1-616baac9903c",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *What is different about the way mutator methods work in comparison to accessor methods?*\n* *Should all instance variables have mutator methods? When would we not want an instance variable to be modified?*\n* *Are there values that should be considered invalid for certain instance variables?*\n\n**Discussion Goal:** Students identify similarities between mutator methods and accessor methods, such as both working with the instance variables of a class. Students also identify differences, such as mutator methods taking a parameter to set a new value to the instance variable and does not return a value while accessor methods do not have a parameter and return the current value stored in the instance variable."
+      },
+      "seeding_key": {
+        "activity_section.key": "8c92c964-78c0-4499-82e1-616baac9903c",
+        "lesson_activity.key": "6c14c398-e123-4712-a62e-b86c4dfd3230"
+      }
+    },
+    {
+      "key": "9fc7d87c-b01c-49ab-9d48-6ae78dc92d42",
+      "position": 8,
       "properties": {
         "description": "We can use an `if` statement to check for invalid values. For example, we may want to make sure that a user doesn't enter a negative value for a price or a quantity.",
         "duration": "10",
@@ -2649,7 +2764,7 @@
     },
     {
       "key": "de8d5b6a-c1f4-468a-ac3f-1ac1947d353c",
-      "position": 5,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *Where have you used operators like less than, greater than, or equal?*\n\n**Discussion Goal:** Students recall using operators in math or previous computer science courses.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "progression_name": "Investigate: Exploring Edge Cases"
@@ -2661,7 +2776,7 @@
     },
     {
       "key": "012193e0-5d8f-4c57-a827-4b6f79f93160",
-      "position": 6,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce relational operators.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *Boolean expression*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *sentinel value*."
       },
@@ -2672,7 +2787,7 @@
     },
     {
       "key": "7e42ea53-331e-4aa7-b678-a0419adc78de",
-      "position": 7,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 through 5. Students write mutator methods in the `Dessert` class on Level 3, then continue to Level 4 to use the `Dessert` class mutator methods. On Level 5, students complete a choice level to use the `Scanner` class and a sentinel value to repeatedly take input from a user.",
         "duration": "10",
@@ -2692,7 +2807,7 @@
     },
     {
       "key": "62437ccc-513a-4c38-9d91-632fa819d55e",
-      "position": 8,
+      "position": 12,
       "properties": {
         "description": "This is a good time to commit our code and save our new version of our `Dessert` class to the Backpack.",
         "remarks": true
@@ -2704,7 +2819,7 @@
     },
     {
       "key": "e1c2224f-04fd-4a0b-a611-2038c988497c",
-      "position": 9,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the new version of the `Dessert` class to the Backpack."
       },
@@ -3030,7 +3145,7 @@
       "key": "58596fe4-eef2-4ad5-ae0b-0eedee304a9e",
       "position": 3,
       "properties": {
-        "description": "Sometimes we need to make it clear which variable or object we are referring to in our programs. Java has a special keyword that helps us refer to the current object when referring to a specific variable or object.",
+        "description": "We can give a local variable the same name as an instance variable. If we were to do this, the variable name will refer to the local variable instead of the instance variable. We need to make it clear which variable or object we are referring to in our programs. Java has a special keyword that helps us refer to the current object when referring to a specific variable or object.",
         "remarks": true
       },
       "seeding_key": {
