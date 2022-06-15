@@ -70,7 +70,13 @@ export default class EnrollmentsPanel extends React.Component {
   };
 
   handleClickChangeEnrollments = event => {
-    this.setState({enrollmentChangeDialogOpen: event.target.name});
+    const name = event.target.name;
+    if (
+      name === MOVE_ENROLLMENT_BUTTON_NAME ||
+      name === EDIT_ENROLLMENT_NAME_BUTTON_NAME
+    ) {
+      this.setState({enrollmentChangeDialogOpen: name});
+    }
   };
 
   handleChangeEnrollmentsCanceled = () => {
