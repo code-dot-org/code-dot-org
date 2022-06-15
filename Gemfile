@@ -29,7 +29,6 @@ gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive'
 gem 'jumphash'
-gem 'le', '~> 2.2'
 gem 'os'
 gem 'parallel'
 gem 'redis', '~> 3.3.3'

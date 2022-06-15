@@ -10,7 +10,6 @@ module Cdo
   class Impl < Config
     prepend SecretsConfig
     include Singleton
-    @slog = nil
 
     # Match CDO_*, plus RACK_ENV and RAILS_ENV.
     ENV_PREFIX = /^(CDO|(RACK|RAILS)(?=_ENV))_/
@@ -231,24 +230,6 @@ module Cdo
     # with RACK_ENV=test do not carry out actions on behalf of the managed test system.
     def test_system?
       rack_env?(:test) && pegasus_hostname == 'test.code.org'
-    end
-
-    # Sets the slogger to use in a test.
-    # slogger must support a `write` method.
-    def set_slogger_for_test(slogger)
-      @@slog = slogger
-      # Set a fake slog token so that the slog method will actually call
-      # the test slogger.
-      stubs(slog_token: 'fake_slog_token')
-    end
-
-    def slog(params)
-      return unless slog_token
-      require 'dynamic_config/gatekeeper'
-      return unless Gatekeeper.allows('slogging', default: true)
-      require 'cdo/slog'
-      @@slog ||= Slog::Writer.new(secret: slog_token)
-      @@slog.write params
     end
 
     def shared_image_url(path)
