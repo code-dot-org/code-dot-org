@@ -9,7 +9,10 @@ import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/Cod
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
 import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
 import Button from '@cdo/apps/templates/Button';
-import {setIsReadOnlyWorkspace} from '@cdo/apps/javalab/javalabRedux';
+import {
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview
+} from '@cdo/apps/javalab/javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 
@@ -27,7 +30,10 @@ const CommitsAndReviewTab = props => {
     codeReviewEnabled,
     locale,
     isReadOnlyWorkspace,
-    setIsReadOnlyWorkspace
+    setIsReadOnlyWorkspace,
+    setHasOpenCodeReview,
+    isCommitSaveInProgress,
+    hasCommitSaveError
   } = props;
 
   const [isLoadingTimelineData, setIsLoadingTimelineData] = useState(false);
@@ -52,19 +58,28 @@ const CommitsAndReviewTab = props => {
     refresh();
   }, [refresh]);
 
+  useEffect(() => {
+    // If one of these values has change, and the save isn't in progress
+    // there has been a new commit and we need to refresh the timeline
+    if (!isCommitSaveInProgress && !hasCommitSaveError) {
+      refresh();
+    }
+  }, [isCommitSaveInProgress, hasCommitSaveError, refresh]);
+
   const refresh = useCallback(async () => {
     setIsLoadingTimelineData(true);
     try {
       const {timelineData, openReview} = await dataApi.getInitialTimelineData();
       setTimelineData(timelineData);
       setOpenReviewData(openReview);
+      setHasOpenCodeReview(!!openReview);
       setTimelineLoadingError(false);
     } catch (err) {
       console.log(err);
       setTimelineLoadingError(true);
     }
     setIsLoadingTimelineData(false);
-  }, [dataApi]);
+  }, [dataApi, setHasOpenCodeReview]);
 
   const loadPeers = async (onSuccess, onFailure) => {
     try {
@@ -127,6 +142,7 @@ const CommitsAndReviewTab = props => {
       setTimelineData([...timelineData, closedReview]);
       setOpenReviewData(null);
       setIsReadOnlyWorkspace(false);
+      setHasOpenCodeReview(false);
       onSuccess();
     } catch (err) {
       console.log(err);
@@ -141,6 +157,7 @@ const CommitsAndReviewTab = props => {
       const newReview = await dataApi.openNewCodeReview(currentVersion);
       setOpenReviewData(newReview);
       setIsReadOnlyWorkspace(true);
+      setHasOpenCodeReview(true);
       setOpenReviewError(false);
     } catch (err) {
       console.log(err);
@@ -247,11 +264,15 @@ export default connect(
     serverProjectLevelId: state.pageConstants.serverProjectLevelId,
     serverScriptId: state.pageConstants.serverScriptId,
     locale: state.pageConstants.locale,
-    isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace
+    isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
+    isCommitSaveInProgress: state.javalab.isCommitSaveInProgress,
+    hasCommitSaveError: state.javalab.hasCommitSaveError
   }),
   dispatch => ({
     setIsReadOnlyWorkspace: isReadOnly =>
-      dispatch(setIsReadOnlyWorkspace(isReadOnly))
+      dispatch(setIsReadOnlyWorkspace(isReadOnly)),
+    setHasOpenCodeReview: hasOpenCodeReview =>
+      dispatch(setHasOpenCodeReview(hasOpenCodeReview))
   })
 )(CommitsAndReviewTab);
 
@@ -267,7 +288,10 @@ CommitsAndReviewTab.propTypes = {
   serverScriptId: PropTypes.number,
   locale: PropTypes.string,
   isReadOnlyWorkspace: PropTypes.bool,
-  setIsReadOnlyWorkspace: PropTypes.func.isRequired
+  setIsReadOnlyWorkspace: PropTypes.func.isRequired,
+  setHasOpenCodeReview: PropTypes.func.isRequired,
+  isCommitSaveInProgress: PropTypes.bool,
+  hasCommitSaveError: PropTypes.bool
 };
 
 const styles = {

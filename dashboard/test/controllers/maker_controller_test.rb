@@ -522,7 +522,7 @@ class MakerControllerTest < ActionController::TestCase
 
   def ensure_script(script_name, is_stable=true)
     Script.find_by_name(script_name) ||
-      create(:script, name: script_name, is_maker_unit: true, published_state: is_stable ? SharedCourseConstants::PUBLISHED_STATE.stable : SharedCourseConstants::PUBLISHED_STATE.preview).tap do |script|
+      create(:script, name: script_name, is_maker_unit: true, published_state: is_stable ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable : Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview).tap do |script|
         lesson_group = create :lesson_group, script: script
         lesson = create :lesson, script: script, lesson_group: lesson_group
         create :script_level, script: script, lesson: lesson
@@ -531,6 +531,6 @@ class MakerControllerTest < ActionController::TestCase
 
   def ensure_course(course_name, version_year)
     UnitGroup.find_by_name(course_name) ||
-      create(:unit_group, name: course_name, version_year: version_year, family_name: 'csd', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+      create(:unit_group, name: course_name, version_year: version_year, family_name: 'csd', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
   end
 end
