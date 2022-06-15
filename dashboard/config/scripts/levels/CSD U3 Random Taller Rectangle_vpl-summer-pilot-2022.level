@@ -49,9 +49,9 @@
     "parent_level_id": 20651,
     "name_suffix": "_vpl-summer-pilot-2022",
     "reference_links": [
-      "/courses/vpl-csd2-summer-pilot-2022/guides/shapes-and-parameters"
+      "/courses/vpl-csd-summer-pilot-2022/guides/shapes-and-parameters"
     ],
-    "map_reference": "/courses/vpl-csd2-summer-pilot-2022/guides/drawing-shapes",
+    "map_reference": "/courses/vpl-csd-summer-pilot-2022/guides/drawing-shapes",
     "top_level_procedure_autopopulate": "false",
     "encrypted": "false",
     "mini_rubric": "false",

@@ -92,8 +92,7 @@ const CommitsAndReviewTab = props => {
       });
       onSuccess();
     } catch (err) {
-      console.log(err);
-      onFailure();
+      onFailure(err);
     }
   };
 
@@ -282,7 +281,7 @@ const styles = {
   },
   header: {
     display: 'flex',
-    flexWrap: 'wrap-reverse',
+    flexWrap: 'wrap',
     justifyContent: 'space-between',
     margin: '5px 0'
   },
