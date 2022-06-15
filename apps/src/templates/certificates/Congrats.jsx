@@ -127,7 +127,7 @@ const styles = {
     borderWidth: '1px 0 0 0',
     borderStyle: 'solid',
     margin: '20px 0px 20px 0px'
-  },  
+  },
   extraLinkContainer: {
     clear: 'both',
     paddingTop: 20
