@@ -2,14 +2,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
 import VerticalImageResourceCard from '@cdo/apps/templates/VerticalImageResourceCard';
-import {nextLevelCourses} from '@cdo/apps/templates/certificates/congratsNextLevelActivityCards';
+import {
+  nextLevelCourses,
+  defaultNextLevelCourse
+} from '@cdo/apps/templates/certificates/congratsNextLevelActivityCards';
 
 const GraduateToNextLevel = ({scriptName, courseTitle, courseDesc}) => {
-  // TODO: Create a pattern to make course identifiers are mapped to their titles correctly
-  // look at 'pre-express' and 'accelerated' courses too
-  const courseInfo = nextLevelCourses.find(
-    course => course.scriptName === scriptName
-  );
+  // The scriptName prop takes the form `course1` or `courseb-2022` or `applab-intro`
+  const courseInfo =
+    nextLevelCourses.find(course => scriptName.includes(course.scriptName)) ||
+    defaultNextLevelCourse;
 
   return (
     <>
