@@ -986,7 +986,6 @@ DEPENDENCIES
   jumphash
   jwt
   kaminari
-  le (~> 2.2)
   lograge!
   loofah (~> 2.2.1)
   memory_profiler
