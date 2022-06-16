@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "vpl-csd",
-    "serialized_at": "2022-06-02 20:11:08 UTC",
+    "serialized_at": "2022-06-15 19:28:33 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -899,15 +899,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-U3 Variables Predict Where XY_2022"
-        ],
         "progression": "New Content (~ 35 mins)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-U3 Variables Predict Where XY_2022"
+          "VPL - CSD U3 Variables Predict Where X_2022"
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
@@ -915,7 +912,7 @@
         "activity_section.key": "9b2cfe18-4f20-40e7-9b7b-9508e15bd3aa"
       },
       "level_keys": [
-        "VPL-CSD-U3 Variables Predict Where XY_2022"
+        "VPL - CSD U3 Variables Predict Where X_2022"
       ]
     },
     {
@@ -3932,9 +3929,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-U3 Variables Predict Where XY_2022",
+        "level.key": "VPL - CSD U3 Variables Predict Where X_2022",
         "script_level.level_keys": [
-          "VPL-CSD-U3 Variables Predict Where XY_2022"
+          "VPL - CSD U3 Variables Predict Where X_2022"
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",

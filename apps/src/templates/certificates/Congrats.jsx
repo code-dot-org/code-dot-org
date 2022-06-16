@@ -3,6 +3,7 @@ import React from 'react';
 import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
+import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 import styleConstants from '../../styleConstants';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '../../util/color';
@@ -95,6 +96,8 @@ export default function Congrats(props) {
         hideDancePartyFollowUp={hideDancePartyFollowUp}
       />
       {userType === 'signedOut' && isEnglish && <TeachersBeyondHoc />}
+      <hr style={styles.divider} />
+      <PetitionCallToAction tutorial={tutorial} />
     </div>
   );
 }
@@ -118,6 +121,12 @@ const styles = {
     maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
     marginRight: 'auto'
+  },
+  divider: {
+    borderColor: color.lightest_gray,
+    borderWidth: '1px 0 0 0',
+    borderStyle: 'solid',
+    margin: '20px 0px 20px 0px'
   },
   extraLinkContainer: {
     clear: 'both',
