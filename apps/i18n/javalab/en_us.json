@@ -117,6 +117,7 @@
   "rename": "Rename",
   "replace": "Replace",
   "reviewClassmateProject": "Review a classmate’s project...",
+  "reviewingPeersProject": "Reviewing {peerName}'s project",
   "returnToMyProject": "Return to my project",
   "running": "Running...",
   "runningProjectTests": "Running your project's tests...",

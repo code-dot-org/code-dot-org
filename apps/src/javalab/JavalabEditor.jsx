@@ -794,7 +794,9 @@ class JavalabEditor extends React.Component {
                 >
                   {isViewingOwnProject
                     ? javalabMsg.editingDisabledUnderReview()
-                    : `Code reviewing ${codeOwnersName}`}
+                    : javalabMsg.reviewingPeersProject({
+                        peerName: codeOwnersName
+                      })}
                 </div>
               )}
               {orderedTabKeys.map(tabKey => {
