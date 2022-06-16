@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-14 18:02:43 UTC",
+    "serialized_at": "2022-06-15 15:49:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2378,7 +2378,7 @@
       "key": "17da768e-fb81-40a2-a5e2-03769b2768d2",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *procedural abstraction*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to call a method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the `paint()` method."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *procedural abstraction*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to call a method."
       },
       "seeding_key": {
         "activity_section.key": "17da768e-fb81-40a2-a5e2-03769b2768d2",
@@ -2386,8 +2386,31 @@
       }
     },
     {
-      "key": "1ef9322e-a09a-4b37-9278-8910fa32050c",
+      "key": "ae798c5b-522d-4ac0-aa9a-6adade80754f",
       "position": 11,
+      "properties": {
+        "description": "Some of the methods in the `Painter` class need additional information to perform its task. For example, we need to specify what color we want to paint with when we use the `paint()` method. We specify the color we want to paint with using a string literal.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ae798c5b-522d-4ac0-aa9a-6adade80754f",
+        "lesson_activity.key": "988dfce3-4d3c-40fb-a00c-1f1557b26f42"
+      }
+    },
+    {
+      "key": "e0629c8c-b59c-49be-9c6e-abb03ad8626b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the `paint()` method."
+      },
+      "seeding_key": {
+        "activity_section.key": "e0629c8c-b59c-49be-9c6e-abb03ad8626b",
+        "lesson_activity.key": "988dfce3-4d3c-40fb-a00c-1f1557b26f42"
+      }
+    },
+    {
+      "key": "1ef9322e-a09a-4b37-9278-8910fa32050c",
+      "position": 13,
       "properties": {
         "description": "When we call a method or constructor, the program has to first execute the statements in the method or constructor before continuing.",
         "remarks": true
@@ -2399,7 +2422,7 @@
     },
     {
       "key": "05c7c689-6361-42b8-aba7-937920b5871a",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the flow of control when calling a method or constructor."
       },
@@ -2410,7 +2433,7 @@
     },
     {
       "key": "32de7f8f-5764-488e-888d-908b6f7f4abb",
-      "position": 13,
+      "position": 15,
       "properties": {
         "description": "Let's practice calling these methods to move around and paint The Neighborhood!",
         "duration": "15",
@@ -2424,7 +2447,7 @@
     },
     {
       "key": "f453b0d5-c881-42b3-a6f4-f18f212ed238",
-      "position": 14,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students debug the program on Level 2, then continue to complete Level 3. Students complete a choice level on Level 4. Students debug the program on Level 5.",
         "progression_name": "Moving and Painting",
