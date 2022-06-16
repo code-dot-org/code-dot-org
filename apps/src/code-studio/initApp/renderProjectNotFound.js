@@ -16,12 +16,7 @@ export function ProjectNotFoundAlert() {
   );
 }
 
-/**
- * Renders our AbuseExclamation component, and potentially updates admin box
- * @param {project.js} project
- * @param {string} tosText
- */
-export default (project, tosText) => {
+export default () => {
   ReactDOM.render(<ProjectNotFoundAlert />, document.getElementById('codeApp'));
 };
 
