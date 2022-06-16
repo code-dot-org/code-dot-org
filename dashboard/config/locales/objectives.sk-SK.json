@@ -1340,6 +1340,24 @@
         "434ebdb0-40d0-4a29-bcfb-635ade18fb5e": {
           "description": "Určiť, aké typy spracúvania sú vhodné na riešenie konkrétneho problému pomocou počítača"
         },
+        "eecfc6b0-93e7-4a6f-bdc2-fcfe306a3407": {
+          "description": "Určiť, ktoré informácie z výpočtového problému by sa mali uložiť na neskoršie použitie"
+        },
+        "f8ceacee-8c38-4d94-a2f3-35ee71d8b382": {
+          "description": "Vytvoriť zásady toho, aké informácie by sa v rámci výpočtového procesu mali ukladať a aké nie."
+        },
+        "30f1b582-38d8-402b-83da-c8a7cba4b2aa": {
+          "description": "Opísať výpočtový proces pomocou modelu vstup-výstup-pamäť-spracúvanie"
+        },
+        "e543e22d-8270-4eb9-81ad-6de8d5455d59": {
+          "description": "Identifikovať a zadefinovať problém, ktorý sa dá vyriešiť pomocou výpočtovej techniky"
+        },
+        "6fa18746-fa9c-4ace-a0e3-fc7936899b64": {
+          "description": "Navrhnúť aplikáciu, ktorá na riešenie problému využíva vstupy, výstupy, pamäť a spracúvanie informácií"
+        },
+        "5caf913a-779e-4174-9e9f-b6a87756263e": {
+          "description": "Poskytnúť a využiť cielenú spätnú väzbu od rovesníkov na zlepšenie informatického produktu"
+        },
         "07998a0e-1ef2-4bc0-af59-5278007a0058": {
           "description": " Komunikovať a spolupracovať so spolužiakmi na riešení problému "
         },

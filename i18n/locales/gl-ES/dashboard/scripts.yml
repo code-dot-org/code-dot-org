@@ -2192,21 +2192,16 @@ gl:
         csd3-2021:
           lessons:
             Variables:
-              key: Variables
               name: Variables
             Text:
-              key: Texto
               name: Texto
             Conditionals:
-              key: Condicionais
               name: Condicionais
             Functions:
-              key: Funcións
               name: Funcións
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Funcións con parámetros
               name: Funcións con parámetros
         csp4-2021:
           lesson_groups:
@@ -2240,7 +2235,6 @@ gl:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Creando camiños
               name: Creando camiños
             'Loops: Getting Loopy':
               name: Bucleándose
@@ -2254,7 +2248,6 @@ gl:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Pulseiras Binarias
               name: Pulseiras Binarias
             'Events: The Big Event':
               name: O Gran Evento
@@ -2272,16 +2265,11 @@ gl:
             'Algorithms: Graph Paper Programming':
               name: Programación en Papel Cadriculado
             Relay Programming:
-              key: Programación por relevos
               name: Programación por relevos
             Conditionals with Cards:
-              key: Condicionais con cartas
               name: Condicionais con cartas
             'Unplugged: Binary':
-              key: 'Desconectado: binario'
               name: Imaxes binárias
-            Artist Binary:
-              key: Artista binario
           lesson_groups:
             csf_events:
               display_name: Eventos
@@ -2297,8 +2285,6 @@ gl:
               display_name: Cidadanía dixital
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Condicionais
             'Functions: Songwriting':
               name: Composición
           lesson_groups:
@@ -2313,13 +2299,10 @@ gl:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Variábeis de sobre
               name: Variábeis de sobre
             Internet:
-              key: Internet
               name: A Internet
             For Loop Fun:
-              key: Diversión con bucles "para" (for)
               name: Diversión con bucles "para" (for)
           lesson_groups:
             csf_digcit:
@@ -2365,22 +2348,16 @@ gl:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Bucles
               name: Bucles
             Events:
-              key: Eventos
               name: Eventos
             Conditionals:
-              key: Condicionais
               name: Condicionais
             Functions:
-              key: Funcións
               name: Funcións
             Variables:
-              key: Variables
               name: Variables
             For Loops:
-              key: Bucles "Para" (For)
               name: Bucles "Para" (For)
           lesson_groups:
             k5_getting_started_1:
@@ -2390,7 +2367,6 @@ gl:
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
-              key: Fundamentos de Informática
               name: Fundamentos de Informática
         csa-videos:
           lesson_groups:
@@ -2491,7 +2467,6 @@ gl:
           lessons:
             Move It, Move It:
               name: Creando camiños
-              key: Creando camiños
             Getting Loopy:
               name: Bucleándose
             'Loops: Getting Loopy':
@@ -2509,7 +2484,6 @@ gl:
               name: O Gran Evento
             Binary Bracelets:
               name: Pulseiras Binarias
-              key: Pulseiras Binarias
             'Events: The Big Event':
               name: O Gran Evento
           lesson_groups:
@@ -2525,10 +2499,8 @@ gl:
               name: Programación en Papel Cadriculado
             Relay Programming:
               name: Programación por relevos
-              key: Programación por relevos
             Conditionals with Cards:
               name: Condicionais con cartas
-              key: Condicionais con cartas
             'Algorithms: Graph Paper Programming':
               name: Programación en Papel Cadriculado
           lesson_groups:
@@ -2546,8 +2518,6 @@ gl:
               name: Composición
             'Functions: Songwriting':
               name: Composición
-            Conditionals:
-              key: Condicionais
           lesson_groups:
             csf_digcit:
               display_name: Cidadanía dixital
@@ -2561,11 +2531,9 @@ gl:
           lessons:
             For Loop Fun:
               name: Diversión con bucles "para" (for)
-              key: Diversión con bucles "para" (for)
             The Internet:
               name: A Internet
             Internet:
-              key: Internet
               name: A Internet
           lesson_groups:
             lessonGroup-7:
@@ -2602,7 +2570,6 @@ gl:
           lessons:
             The Internet:
               name: A Internet
-              key: A Internet
           lesson_groups:
             lessonGroup-7:
               display_name: Cidadanía dixital
@@ -2616,37 +2583,39 @@ gl:
           lessons:
             Loops:
               name: Bucles
-              key: Bucles
             Events:
               name: Eventos
-              key: Eventos
             Conditionals:
               name: Condicionais
-              key: Condicionais
             Functions:
               name: Funcións
-              key: Funcións
             Variables:
               name: Variables
-              key: Variables
             For Loops:
               name: Bucles "Para" (For)
-              key: Bucles "Para" (For)
         csd3-2022:
           lessons:
             Variables:
               name: Variables
-              key: Variables
             Text:
               name: Texto
-              key: Texto
             Conditionals:
               name: Condicionais
-              key: Condicionais
             Functions:
               name: Funcións
-              key: Funcións
         csd6-2022:
           lessons:
             Functions:
               name: Funcións
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Visión xeral
+            lesson-1:
+              name: Visión xeral
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Visión xeral
+            lesson-1:
+              name: Visión xeral

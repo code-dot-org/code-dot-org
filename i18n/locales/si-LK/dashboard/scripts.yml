@@ -2466,21 +2466,16 @@ si:
         csd3-2021:
           lessons:
             Variables:
-              key: විචල්‍යන්
               name: විචල්‍යන්
             Text:
-              key: පෙළ
               name: පෙළ
             Conditionals:
-              key: කන්ඩිෂනලස්
               name: කන්ඩිෂනලස්
             Functions:
-              key: ශ්‍රිතයන්
               name: ශ්‍රිතයන්
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: පරාමිතියන් සහිත ශ්‍රිත
               name: පරාමිතියන් සහිත ශ්‍රිත
         csp1-2021:
           lesson_groups:
@@ -2526,7 +2521,6 @@ si:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: එය ගෙන යන්න, ගෙන යන්න
               name: එය ගෙන යන්න, ගෙන යන්න
             'Loops: Getting Loopy':
               name: ඔල්මාද වීම
@@ -2540,7 +2534,6 @@ si:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: ද්විමය වළලු
               name: ද්විමය වළලු
             'Events: The Big Event':
               name: විශාල සිදුවීම
@@ -2560,16 +2553,11 @@ si:
             'Algorithms: Graph Paper Programming':
               name: ප්‍රස්තාර රටා වැඩසටහන්
             Relay Programming:
-              key: ක්‍රමලේඛණය ප්‍රතිචාරණය
               name: ක්‍රමලේඛණය ප්‍රතිචාරණය
             Conditionals with Cards:
-              key: කාඩ්පත් සමඟ කොන්දේසික
               name: කාඩ්පත් සමඟ කොන්දේසික
             'Unplugged: Binary':
-              key: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ද්විමය සංඛ්‍යා'
               name: ද්විමය පින්තූර
-            Artist Binary:
-              key: කලාකරු ද්විමය
           lesson_groups:
             csf_events:
               display_name: වැඩසටහන්
@@ -2585,8 +2573,6 @@ si:
               display_name: ඩිජිටල් පුරවැසිකම
         coursee-2021:
           lessons:
-            Conditionals:
-              key: කන්ඩිෂනලස්
             'Functions: Songwriting':
               name: ගීත ලිවීම
           lesson_groups:
@@ -2601,13 +2587,10 @@ si:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: ආවරණය කරන ලද විචල්‍ය
               name: ආවරණය කරන ලද විචල්‍ය
             Internet:
-              key: අන්තර්ජාලය
               name: අන්තර්ජාලය
             For Loop Fun:
-              key: For ලුපයේ සතුට
               name: For ලුපයේ සතුට
           lesson_groups:
             csf_digcit:
@@ -2685,22 +2668,16 @@ si:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: ලූපයන්
               name: ලූපයන්
             Events:
-              key: වැඩසටහන්
               name: වැඩසටහන්
             Conditionals:
-              key: කන්ඩිෂනලස්
               name: කන්ඩිෂනලස්
             Functions:
-              key: ශ්‍රිතයන්
               name: ශ්‍රිතයන්
             Variables:
-              key: විචල්‍යන්
               name: විචල්‍යන්
             For Loops:
-              key: ලූපයන් සඳහා
               name: ලූපයන් සඳහා
           lesson_groups:
             k5_getting_started_1:
@@ -2710,7 +2687,6 @@ si:
         kodea-pd-2021:
           lessons:
             Next Steps:
-              key: ඉදිරි පියවර
               name: ඉදිරි පියවර
         csa1-exemplars:
           lesson_groups:
@@ -2893,7 +2869,6 @@ si:
           lessons:
             Move It, Move It:
               name: එය ගෙන යන්න, ගෙන යන්න
-              key: එය ගෙන යන්න, ගෙන යන්න
             Getting Loopy:
               name: ඔල්මාද වීම
             'Loops: Getting Loopy':
@@ -2911,7 +2886,6 @@ si:
               name: විශාල සිදුවීම
             Binary Bracelets:
               name: ද්විමය වළලු
-              key: ද්විමය වළලු
             'Events: The Big Event':
               name: විශාල සිදුවීම
           lesson_groups:
@@ -2933,10 +2907,8 @@ si:
               name: ප්‍රස්තාර රටා වැඩසටහන්
             Relay Programming:
               name: ක්‍රමලේඛණය ප්‍රතිචාරණය
-              key: ක්‍රමලේඛණය ප්‍රතිචාරණය
             Conditionals with Cards:
               name: කාඩ්පත් සමඟ කොන්දේසික
-              key: කාඩ්පත් සමඟ කොන්දේසික
             'Algorithms: Graph Paper Programming':
               name: ප්‍රස්තාර රටා වැඩසටහන්
           lesson_groups:
@@ -2954,8 +2926,6 @@ si:
               name: ගීත ලිවීම
             'Functions: Songwriting':
               name: ගීත ලිවීම
-            Conditionals:
-              key: කන්ඩිෂනලස්
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
@@ -2969,11 +2939,9 @@ si:
           lessons:
             For Loop Fun:
               name: For ලුපයේ සතුට
-              key: For ලුපයේ සතුට
             The Internet:
               name: අන්තර්ජාලය
             Internet:
-              key: අන්තර්ජාලය
               name: අන්තර්ජාලය
           lesson_groups:
             lessonGroup-7:
@@ -3038,7 +3006,6 @@ si:
           lessons:
             The Internet:
               name: අන්තර්ජාලය
-              key: අන්තර්ජාලය
           lesson_groups:
             lessonGroup-7:
               display_name: ඩිජිටල් පුරවැසිකම
@@ -3067,37 +3034,39 @@ si:
           lessons:
             Loops:
               name: ලූපයන්
-              key: ලූපයන්
             Events:
               name: වැඩසටහන්
-              key: වැඩසටහන්
             Conditionals:
               name: කන්ඩිෂනලස්
-              key: කන්ඩිෂනලස්
             Functions:
               name: ශ්‍රිතයන්
-              key: ශ්‍රිතයන්
             Variables:
               name: විචල්‍යන්
-              key: විචල්‍යන්
             For Loops:
               name: ලූපයන් සඳහා
-              key: ලූපයන් සඳහා
         csd3-2022:
           lessons:
             Variables:
               name: විචල්‍යන්
-              key: විචල්‍යන්
             Text:
               name: පෙළ
-              key: පෙළ
             Conditionals:
               name: කන්ඩිෂනලස්
-              key: කන්ඩිෂනලස්
             Functions:
               name: ශ්‍රිතයන්
-              key: ශ්‍රිතයන්
         csd6-2022:
           lessons:
             Functions:
               name: ශ්‍රිතයන්
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: දළ විශ්ලේෂණය
+            lesson-1:
+              name: දළ විශ්ලේෂණය
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: දළ විශ්ලේෂණය
+            lesson-1:
+              name: දළ විශ්ලේෂණය

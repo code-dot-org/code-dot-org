@@ -100,6 +100,10 @@
         "text-compression/Text Compression": {
           "student_overview": "Sa ilang mga punto, naabot natin ang pisikal na limitasyon kung gaano tayo kabilis makapagpadala ng mga bit at kung gusto nating magpadala ng malaking impormasyon nang mas mabilis, kailangan nating maghanap ng paraan upang kumatawan sa parehong impormasyon na may mas kaunting mga bit - dapat nating i-compress ang data."
         },
+        "outbreak/Outbreak": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Sa nakaraang aralin, ang mga mag-aaral ay nangolekta at nag-interpret ng mga datos mula sa isang simpleng simulation. Sa araling ito, susundin ng mga mag-aaral ang mga tagubilin upang mai-code ang kanilang sariling modelo ng simulation. Ang dating kaalaman ng mga mag-aaral tungkol sa mga paglaganap ng virus sa totoong mundo ay ilalapat sa isang kathang-isip na senaryo."
+        },
         "sports/Sports": {
           "overview": "Sa online na gawaing ito, ang mga estudyante ay matututo kung ano ang mga pangyayari, at kung paano ang mga kompyuter gumagamit sa mga ito sa mga programa gaya ng mga video na mga laro. Ang mga estudyante ay magtatrabaho sa mga palaisipan na nagpagawa sa mga programa na tumugon sa mga pangyayari (gaya ng pagpindot sa mga arrow na mga buttons.) Sa bandang huli ng palaisipan, ang mga estudyante ay magkakaroon ng pagkakataon na i-customize ang kanilang laro gamit ang iba't ibang mga bilis at mga tunog."
         },
@@ -2130,17 +2134,30 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Jigsaw",
-          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan."
+          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
+          "preparation": "-   Suriin ang website ng [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) para sa higit pang nilalamang pangkaligtasan sa online.",
+          "purpose": "Ang pangunahing layunin ng araling ito ay bumuo ng karanasan ng mag-aaral sa mga computer. Sa pamamagitan ng pagsakop sa pinakapangunahing mga function ng computer tulad ng pag-click, pag-drag, at pag-drop, lumilikha kami ng mas pantay na larangan ng paglalaro sa klase para sa mga puzzle sa hinaharap. Ang araling ito ay nagbibigay din ng magandang pagkakataon upang ipakilala ang mga pangunahing terminolohiya ng computer hardware, na posibleng kasama ang \"mouse\", \"trackpad\" o \"touchscreen\", depende sa iyong mga device."
+        },
+        "coursef-2021/Virtual Pet": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
         "coursef-2021/lesson-2": {
           "name": "Ang Kapangyarihan ng mga Salita",
           "student_overview": "Ang pang-aapi ay hindi talaga mabuti. Ang araling ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng sabihin online."
         },
+        "coursef-2021/Loops with the Artist": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
+        },
         "coursef-2021/Variables that Change in Artist": {
-          "overview": "Sa araling ito, ang mga estudyante ay tutuklas sa paglikha ng mga disenyong paulit-ulit gamit ang mga variables sa Artist na kapaligiran. Ang mga estudyante ay matututo kung paano ang mga variables maaaring gamitin para madaling isulat ang mga code at madaling basahin. Pagkatapos ng ginabayang mga palaisipan, ang mga estudyante ay magtatapos sa isang libreng laro na antas para ipakita kung ano ang kanilang natutunan at maglikha ng kanilang sariling mga disenyo."
+          "overview": "Sa araling ito, ang mga estudyante ay tutuklas sa paglikha ng mga disenyong paulit-ulit gamit ang mga variables sa Artist na kapaligiran. Ang mga estudyante ay matututo kung paano ang mga variables maaaring gamitin para madaling isulat ang mga code at madaling basahin. Pagkatapos ng ginabayang mga palaisipan, ang mga estudyante ay magtatapos sa isang libreng laro na antas para ipakita kung ano ang kanilang natutunan at maglikha ng kanilang sariling mga disenyo.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
         "coursef-2021/Nested Loops in the Maze": {
-          "name": "Naka-nest na mga Loops sa Maze"
+          "name": "Naka-nest na mga Loops sa Maze",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
+        },
+        "coursef-2021/Variables that Change in Bee": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
         "coursef-2021/For Loop Fun": {
           "name": "Saya sa For Loop",
@@ -2149,15 +2166,19 @@
         },
         "coursef-2021/For Loops in Bee": {
           "overview": "Nagtatampok sa Bee, ang araling ito ay nakatuon sa mga for loop at gamit ang isang lumalaking variable para malutas ang mas mahirap na mga palaisipan. Ang mga estudyante ay magsisimula sa pamamagitan ng pagbabalik-aral sa mga loop mula sa nakaraang mga aralin, pagkatapos ay dadaanan ang paggamit ng mga for loop para mas epektibong maglutas ng mga kumplikadong mga problema.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
           "student_overview": "Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for` loop!"
         },
         "coursef-2021/For Loops in Artist": {
           "name": "Mga Loops sa Artist",
           "overview": "Sa araling ito, ang mga estudyante ay patuloy na magsasanay sa mga for loop, sa pagkakataong ito gamit ang Artist. Ang mga estudyante ay magkukumpleto ng mga palaisipan sa pamamagitan ng pagsama-sama sa mga ideya ng mga variable, mga loop, at mga for loop para makalikha ng mga komplikadong mga disenyo. Sa bandang huli, sila ay magkakaroon ng pagkakataon na maglikha ng kanilang sariling sining sa libreng laro na antas.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
           "student_overview": "Maghanda na sa iyong susunod na obra maestra. Dito ay gagamit ka ng mga `for` loop para makagawa ng iilang kamangha-manghang mga larawan."
         },
         "coursef-2021/lesson-5": {
-          "name": "Pagsiklab"
+          "name": "Pagsiklab",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Sa nakaraang aralin, ang mga mag-aaral ay nangolekta at nag-interpret ng mga datos mula sa isang simpleng simulation. Sa araling ito, susundin ng mga mag-aaral ang mga tagubilin upang mai-code ang kanilang sariling modelo ng simulation. Ang dating kaalaman ng mga mag-aaral tungkol sa mga paglaganap ng virus sa totoong mundo ay ilalapat sa isang kathang-isip na senaryo."
         },
         "coursef-2021/Internet": {
           "name": "The Internet",
@@ -2228,13 +2249,18 @@
           "name": "Mga Loops kasama sina Rey at BB-8"
         },
         "coursec-2021/Loops in Harvester": {
-          "name": "Mga Loops sa Harvester"
+          "name": "Mga Loops sa Harvester",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
         "coursec-2021/Events: The Big Event": {
           "name": "The Big Event"
         },
         "coursec-2021/Build a Flappy Game": {
-          "name": "Bumuo ng Flappy na Laro"
+          "name": "Bumuo ng Flappy na Laro",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
+        },
+        "coursec-2021/Events in Play Lab": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
         "coursec-2021/Binary Bracelets": {
           "name": "Binary na mga Pulseras"
@@ -2246,13 +2272,15 @@
           "name": "Graph Paper Programming"
         },
         "coursed-2021/Introduction to Online Puzzles": {
-          "name": "Pambungad sa mga Online na mga Palaisipan"
+          "name": "Pambungad sa mga Online na mga Palaisipan",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
         "coursed-2021/Relay Programming": {
           "name": "Relay Programming"
         },
         "coursed-2021/Debugging in Collector": {
-          "name": "Pagde-debug sa Kolektor"
+          "name": "Pagde-debug sa Kolektor",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
         "coursed-2021/Events in Bounce": {
           "name": "Mga Pangyayari sa Bounce"
@@ -2266,8 +2294,12 @@
           "name": "Dance Party",
           "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block)."
         },
+        "coursed-2021/Loops in Artist": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
+        },
         "coursed-2021/Nested Loops in Bee": {
-          "name": "Naka-nest na mga Loops sa Maze"
+          "name": "Naka-nest na mga Loops sa Maze",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
         "coursed-2021/Conditionals with Cards": {
           "name": "Mga Conditional gamit ang mga Card"
@@ -2276,10 +2308,15 @@
           "name": "Masdan ang Hinaharap"
         },
         "coursed-2021/Conditionals in Bee": {
-          "name": "Mga Kondisyonal sa Bee"
+          "name": "Mga Kondisyonal sa Bee",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
         "coursed-2021/While Loops in Farmer": {
-          "name": "Mga While Loops sa Farmer"
+          "name": "Mga While Loops sa Farmer",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
+        },
+        "coursed-2021/Until Loops in Maze": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
         "coursed-2021/End of Course Project": {
           "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
@@ -2360,23 +2397,43 @@
         "pre-express-2021/On the Move with Events": {
           "overview": "Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!"
         },
+        "coursee-2021/Simon Says": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
+        },
+        "coursee-2021/Learning Sprites with Sprite Lab": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
+        },
+        "coursee-2021/Alien Dance Party with Sprite Lab": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
+        },
         "coursee-2021/Private and Personal Information": {
           "name": "Pribado at Personal na Impormasyon",
           "student_overview": "Ang internet ay masaya at kasabik-sabik, ngunit importante din na manatiling ligtas. Ang araling ito ay nagtuturo sa iyo sa kaibahan ng impormasyon na ligtas na ibahagi at impormasyon na pribado."
+        },
+        "coursee-2021/Programming and Loops with the Artist": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
         "coursee-2021/Functions: Songwriting": {
           "name": "Pagsusulat ng Awit",
           "overview": "Isa sa mga pinakadakilang istraktura sa mundo ng computer science ay ang function. Ang mga function (minsang tinatawag na mga pamamaraan) ay maliliit na mga programa na maaari mong gamitin nang paulit-ulit sa loob ng iyong mas malaking programa. Ang araling ito ay makakatulong sa mga estudyante na likas na makakaunawa kung bakit ang pagsama-sama sa mga piraso ng code sa isang function ay maaaring lubhang nakakatulong na pag-uugali.",
           "student_overview": "Kahit ang mga rockstar ay nangangailangan ng mga kakayahan sa pag-program. Ang araling ito ay nagtuturo sa iyo tungkol sa mga kakayahan gamit ang mga titik mula sa mga awitin."
         },
+        "coursee-2021/Functions in Minecraft": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
+        },
         "coursee-2021/Functions in Artist": {
           "name": "Mga Function sa Artist",
           "overview": "Ang mga estudyante ay ipapakilala sa paggamit ng mga function sa Code.org. Ang mga dakilang mga larawan ay ililikha at babaguhin gamit ang mga function sa Artist. Para sa mas kumplikadong mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng mga function sa pamamagitan ng pagtawag ng isang function sa loob ng isa pa.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
           "student_overview": "Gumawa ng kumplikadong mga drowing nang mas madali gamit ang mga function!"
         },
         "coursee-2021/Conditionals": {
           "overview": "Ang araling ito ay nagpapakilala sa mga estudyante sa `while` na mga loop at `if/else` na mga pahayag. Ang mga _while loop_ ay mga loop na patuloy na nag-uulit sa mga utos hanggang sa ang kondisyon ay true. Ang mga while loop ay ginagamit kapag ang nag-program ay hindi alam ang eksaktong bilang ng beses na kailangang ulitin ang kautusan, ngunit alam ng nag-program kung anong kondisyon ang kailangang maging true para magpagtuloy ang pag-loop. Ang `If / Else` na mga pahayag ay nagbibigay ng pleksibilidad sa pag-program sa pamamagitan ng pagpapatakbo lang sa buong bahagi ng code kapag ang isang bagay ay true, kung hindi magpapatakbo ito ng iba.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
           "student_overview": "Ikaw ay maaaring makapagsabi sa kompyuter kung ano ang gagawin sa loob ng iilang mga kondisyon sa loob ng masaya at mahirap na mga seryeng ito."
+        },
+        "coursee-2021/Functions in Harvester": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
         "csd7-2021/Survey Planning": {
           "name": "Pagdidisenyo ng Koleksyon ng mga Datos"

@@ -2974,6 +2974,28 @@
           "garden square": {
             "name": "สวนรูปสี่เหลี่ยมจัตุรัส"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "วาดรูปทรง",
+            "parameters": {
+              "sides": "ด้านข้าง",
+              "length": "ความยาว"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "ฟังก์ชั่น 1"
+          },
+          "function 2": {
+            "name": "ฟังก์ชั่น 2"
+          }
         }
       }
     }

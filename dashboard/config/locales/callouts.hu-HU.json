@@ -1123,7 +1123,12 @@
           "Course_4_Playlab_For_Loops_4b_2": "Ebben a feladatban csak a \"lépésköz\" értékét változtathatod meg, ráadásul csak az egyik `számold` ciklusban."
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "Kattints ide, hogy jelmezeket adhass a projektedhez."
+          "costumes_tab": "Kattints ide, hogy jelmezeket adhass a projektedhez.",
+          "make_sprite": "Egy sprite elkészítéséhez használd az itt található blokkokat!"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Kattints ide a blokk kibontásához",
+          "pointerlocation": "Húzza ide a tárgyblokkot."
         }
       }
     }

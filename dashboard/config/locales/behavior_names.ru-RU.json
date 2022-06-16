@@ -3329,6 +3329,32 @@
           "wobbling": "колебание",
           "moving west and looping": "движение на запад и зацикливание",
           "moving east and looping": "движение на восток и зацикливание"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "плавание налево и направо",
+          "shrinking": "сжимание",
+          "patrolling": "патрулирование",
+          "wandering": "хождение",
+          "growing": "рост",
+          "jittering": "дрожание",
+          "moving east": "движение на восток",
+          "moving north": "движение на север",
+          "moving south": "движение на юг",
+          "moving west": "движение на запад",
+          "spinning right": "вращение вправо"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "плавание налево и направо",
+          "shrinking": "сжимание",
+          "patrolling": "патрулирование",
+          "wandering": "хождение",
+          "growing": "рост",
+          "jittering": "дрожание",
+          "moving east": "движение на восток",
+          "moving north": "движение на север",
+          "moving south": "движение на юг",
+          "moving west": "движение на запад",
+          "spinning right": "вращение вправо"
         }
       }
     }

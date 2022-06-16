@@ -2385,26 +2385,20 @@ fa:
         csd3-2021:
           lessons:
             Variables:
-              key: متغیرها
               name: متغیرها
             Text:
-              key: متن
               name: متن
             Conditionals:
-              key: شرطی ها
               name: شرطی ها
             Functions:
-              key: توابع
               name: توابع
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: معادله با پارامترها
               name: معادله با پارامترها
         csp3-2021:
           lessons:
             Debugging:
-              key: اشکال‌زدایی
               name: اشکال‌زدایی
         csp4-2021:
           lesson_groups:
@@ -2438,7 +2432,6 @@ fa:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: حرکت کن، حرکت کن
               name: حرکت کن، حرکت کن
             'Loops: Getting Loopy':
               name: سر گیجه گرفتن
@@ -2452,7 +2445,6 @@ fa:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: دستبند دودویی
               name: دستبند دودویی
             'Events: The Big Event':
               name: رویداد بزرگ
@@ -2470,19 +2462,13 @@ fa:
             'Algorithms: Graph Paper Programming':
               name: برنامه نویسی روی کاغذ رسم شطرنجی
             Relay Programming:
-              key: برنامه نویسی دست به دست
               name: برنامه نویسی دست به دست
             Dance Party:
-              key: جشن و رقص
               name: جشن و رقص
             Conditionals with Cards:
-              key: شرطی ها با کارتها
               name: شرطی ها با کارتها
             'Unplugged: Binary':
-              key: 'بدون دستگاه: دودویی'
               name: تصاویر دوتایی
-            Artist Binary:
-              key: دودویی هنرمند
           lesson_groups:
             csf_events:
               display_name: رویدادها
@@ -2498,8 +2484,6 @@ fa:
               display_name: شهروندی دیجیتالی
         coursee-2021:
           lessons:
-            Conditionals:
-              key: شرطی ها
             'Functions: Songwriting':
               name: ترانه سرایی
           lesson_groups:
@@ -2514,13 +2498,10 @@ fa:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: متغیرهای پاکت
               name: متغیرهای پاکت
             Internet:
-              key: اینترنت
               name: اینترنت
             For Loop Fun:
-              key: برای تفریح حلقه ای
               name: برای تفریح حلقه ای
           lesson_groups:
             csf_digcit:
@@ -2538,7 +2519,6 @@ fa:
         express-2021:
           lessons:
             Dance Party:
-              key: جشن و رقص
               name: جشن و رقص
             lesson-1:
               name: جشن و رقص
@@ -2574,22 +2554,16 @@ fa:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: حلقه‌ها
               name: حلقه‌ها
             Events:
-              key: رویدادها
               name: رویدادها
             Conditionals:
-              key: شرطی ها
               name: شرطی ها
             Functions:
-              key: توابع
               name: توابع
             Variables:
-              key: متغیرها
               name: متغیرها
             For Loops:
-              key: حلقه های "برای"
               name: حلقه های "برای"
           lesson_groups:
             k5_getting_started_1:
@@ -2607,7 +2581,6 @@ fa:
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
-              key: مقدمات علم کامپیوتر
               name: مقدمات علم کامپیوتر
         csa-videos:
           lesson_groups:
@@ -2703,7 +2676,6 @@ fa:
           lessons:
             Debugging:
               name: اشکال‌زدایی
-              key: اشکال‌زدایی
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -2722,7 +2694,6 @@ fa:
           lessons:
             Move It, Move It:
               name: حرکت کن، حرکت کن
-              key: حرکت کن، حرکت کن
             Getting Loopy:
               name: سر گیجه گرفتن
             'Loops: Getting Loopy':
@@ -2740,7 +2711,6 @@ fa:
               name: رویداد بزرگ
             Binary Bracelets:
               name: دستبند دودویی
-              key: دستبند دودویی
             'Events: The Big Event':
               name: رویداد بزرگ
           lesson_groups:
@@ -2756,13 +2726,10 @@ fa:
               name: برنامه نویسی روی کاغذ رسم شطرنجی
             Relay Programming:
               name: برنامه نویسی دست به دست
-              key: برنامه نویسی دست به دست
             Dance Party:
               name: جشن و رقص
-              key: جشن و رقص
             Conditionals with Cards:
               name: شرطی ها با کارتها
-              key: شرطی ها با کارتها
             'Algorithms: Graph Paper Programming':
               name: برنامه نویسی روی کاغذ رسم شطرنجی
           lesson_groups:
@@ -2780,8 +2747,6 @@ fa:
               name: ترانه سرایی
             'Functions: Songwriting':
               name: ترانه سرایی
-            Conditionals:
-              key: شرطی ها
           lesson_groups:
             csf_digcit:
               display_name: شهروندی دیجیتالی
@@ -2795,11 +2760,9 @@ fa:
           lessons:
             For Loop Fun:
               name: برای تفریح حلقه ای
-              key: برای تفریح حلقه ای
             The Internet:
               name: اینترنت
             Internet:
-              key: اینترنت
               name: اینترنت
           lesson_groups:
             lessonGroup-7:
@@ -2840,7 +2803,6 @@ fa:
           lessons:
             The Internet:
               name: اینترنت
-              key: اینترنت
           lesson_groups:
             lessonGroup-7:
               display_name: شهروندی دیجیتالی
@@ -2854,37 +2816,39 @@ fa:
           lessons:
             Loops:
               name: حلقه‌ها
-              key: حلقه‌ها
             Events:
               name: رویدادها
-              key: رویدادها
             Conditionals:
               name: شرطی ها
-              key: شرطی ها
             Functions:
               name: توابع
-              key: توابع
             Variables:
               name: متغیرها
-              key: متغیرها
             For Loops:
               name: حلقه های "برای"
-              key: حلقه های "برای"
         csd3-2022:
           lessons:
             Variables:
               name: متغیرها
-              key: متغیرها
             Text:
               name: متن
-              key: متن
             Conditionals:
               name: شرطی ها
-              key: شرطی ها
             Functions:
               name: توابع
-              key: توابع
         csd6-2022:
           lessons:
             Functions:
               name: توابع
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: بررسی اجمالی
+            lesson-1:
+              name: بررسی اجمالی
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: بررسی اجمالی
+            lesson-1:
+              name: بررسی اجمالی

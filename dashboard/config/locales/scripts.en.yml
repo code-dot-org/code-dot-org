@@ -3,36 +3,6 @@
 en:
   data:
     script:
-      category:
-        csd_category_name: CS Discoveries ('17-'18)
-        csd_2018_category_name: CS Discoveries ('18-'19)
-        csd_2019_category_name: CS Discoveries ('19-'20)
-        csd_2020_category_name: CS Discoveries ('20-'21)
-        csd_2021_category_name: CS Discoveries ('21-'22)
-        csd_pilot_category_name: CS Discoveries Pilot
-        csf_category_name: CS Fundamentals
-        csf_2018_category_name: CS Fundamentals ('18-'19)
-        csf_2019_category_name: CS Fundamentals ('19-'20)
-        csf_2020_category_name: CS Fundamentals ('20-'21)
-        csf_2021_category_name: CS Fundamentals ('21-'22)
-        csf_international_category_name: CS Fundamentals International
-        csf2_draft_category_name: 'Under Development: Courses A - F'
-        csp_category_name: CS Principles ('15-'16)
-        csp_2018_category_name: CS Principles ('18-'19)
-        csp_2019_category_name: CS Principles ('19-'20)
-        csp_2020_category_name: CS Principles ('20-'21)
-        csp_2021_category_name: CS Principles ('21-'22)
-        cspexams_category_name: CS Principles Practice Test
-        csp17_category_name: CS Principles ('17-'18)
-        aiml_2021_category_name: AI / ML
-        csc_2021_category_name: CS Connnections ('21-'22)
-        full_course_category_name: Full Courses
-        hoc_category_name: Hour of Code
-        math_category_name: Math
-        research_studies_category_name: Research Studies
-        twenty_hour_category_name: 20-Hour
-        tts_category_name: Text-to-Speech
-        other_category_name: Other
       name:
         course1:
           title: Course 1
@@ -24669,7 +24639,7 @@ en:
             lessonGroup-2:
               display_name: Teaching AI and machine learning
           name: vpl-csd7-ci-pilot-2022
-          title: 'Module 7: Preparing to Teach AI and Machine Learning'
+          title: Preparing to Teach AI and Machine Learning
           description_audience: ''
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to AI and Machine Learning.\n* Practice key concepts included in the unit.\n* Engage with AI Lab and App Lab.\n* Explore end of chapter projects.\n* Make a plan for implementing the unit with your students.\n\n**Suggested time:** 120 minutes"
@@ -25591,6 +25561,8 @@ en:
               name: Learning CS Principles
             lesson-3:
               name: Teaching CS Principles
+            lesson-4:
+              name: Connect with the CS community
           title: Teaching and learning CS Principles
           description: |-
             In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
@@ -25600,20 +25572,24 @@ en:
             * Consider the role of the teacher in a CS Principles classroom.
             * Learn about authentic CS practices that students will develop throughout the CS Principles course.
             * Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+            * Learn about opportunities to connect with the broader CS community.
 
-            **Suggested Time**: 50 minutes
+            **Suggested Time**: 70 minutes
           student_description: |-
-            In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course.
+            In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
 
             **You will**:
 
-            * Consider the role of the teacher in a CS Discoveries classroom.
-            * Learn about authentic CS practices that students will develop throughout the CS Discoveries course.
+            * Consider the role of the teacher in a CS Principles classroom.
+            * Learn about authentic CS practices that students will develop throughout the CS Principles course.
             * Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+            * Learn about opportunities to connect with the broader CS community.
 
-            **Suggested Time**: 50 minutes
+            **Suggested Time**: 70 minutes
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: self-paced-pl-csp4-2022
         csa9-2022:
           lessons:
             The AP CSA Exam:
