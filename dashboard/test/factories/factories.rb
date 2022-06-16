@@ -1579,10 +1579,20 @@ FactoryGirl.define do
 
   factory :code_review do
     user_id 1
+    project_id 1
     script_id 1
     level_id 1
-    project_id 1
+    project_level_id 1
     project_version "1"
+    storage_id 1
+  end
+
+  factory :code_review_note do
+    association :commenter, factory: :student
+    association :code_review
+
+    is_resolved false
+    comment 'a note about the project'
   end
 
   factory :code_review_comment do
