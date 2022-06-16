@@ -7,6 +7,7 @@ import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/Peti
 import styleConstants from '../../styleConstants';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '../../util/color';
+import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 
 export default function Congrats(props) {
   /**
@@ -71,8 +72,12 @@ export default function Congrats(props) {
     hideDancePartyFollowUp,
     showStudioCertificate,
     initialCertificateImageUrl,
-    isHocTutorial
+    isHocTutorial,
+    nextCourseScriptName,
+    nextCourseTitle,
+    nextCourseDesc
   } = props;
+
   const isEnglish = language === 'en';
   const tutorialType = getTutorialType(tutorial);
 
@@ -102,6 +107,11 @@ export default function Congrats(props) {
       {userType === 'signedOut' && isEnglish && <TeachersBeyondHoc />}
       <hr style={styles.divider} />
       <PetitionCallToAction tutorial={tutorial} />
+      <GraduateToNextLevel
+        scriptName={nextCourseScriptName}
+        courseTitle={nextCourseTitle}
+        courseDesc={nextCourseDesc}
+      />
     </div>
   );
 }
@@ -118,7 +128,10 @@ Congrats.propTypes = {
   hideDancePartyFollowUp: PropTypes.bool,
   showStudioCertificate: PropTypes.bool,
   initialCertificateImageUrl: PropTypes.string,
-  isHocTutorial: PropTypes.bool
+  isHocTutorial: PropTypes.bool,
+  nextCourseScriptName: PropTypes.string,
+  nextCourseTitle: PropTypes.string,
+  nextCourseDesc: PropTypes.string
 };
 
 const styles = {

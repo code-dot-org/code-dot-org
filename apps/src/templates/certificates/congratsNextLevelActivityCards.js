@@ -74,3 +74,5 @@ export const nextLevelCourses = [
   CourseE,
   CourseF
 ];
+
+export const defaultNextLevelCourse = Applab;
