@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-14 19:49:14 UTC",
+    "serialized_at": "2022-06-15 13:16:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1107,7 +1107,7 @@
       "key": "0586ef33-7bbe-4e6f-bd3b-5042f2e80f9f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the different types of values and how a `String` can be created. Students may wonder about the differences between each type and why a `String` can be created in different ways.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate stack memory and heap memory.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *data type*, *primitive type*, and *reference type*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the different types of values and how a `String` can be created. Students may wonder about the differences between each type and why a `String` can be created in different ways."
       },
       "seeding_key": {
         "activity_section.key": "0586ef33-7bbe-4e6f-bd3b-5042f2e80f9f",
@@ -1115,8 +1115,48 @@
       }
     },
     {
-      "key": "eba9e668-35de-4bab-aa53-7d3f0b0ce51f",
+      "key": "adb339cd-68e6-4d5e-afd4-db07513b2289",
       "position": 5,
+      "properties": {
+        "description": "A `String` is a special data type that we often use in our programs. When we create a `String`, we are actually creating an object that is an instance of the `String` class which represents a collection of characters. This means that we can also create a `String` object using the `new` keyword.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "adb339cd-68e6-4d5e-afd4-db07513b2289",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "f2daf38b-7886-4501-914a-df539bd02ea4",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `String` class and the `java.lang` package.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The `java.lang` package is not accessible in Java Lab for security reasons. Students will receive an error if they attempt to explicitly import the `java.lang` package. Java Lab uses a version of the `java.lang` package with the classes students will need for the course that all programs implicitly import."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f2daf38b-7886-4501-914a-df539bd02ea4",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "1e32702f-2d95-4f35-845e-d5012fe95af1",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate stack memory and heap memory.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *data type*, *primitive type*, and *reference type*."
+      },
+      "seeding_key": {
+        "activity_section.key": "1e32702f-2d95-4f35-845e-d5012fe95af1",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "eba9e668-35de-4bab-aa53-7d3f0b0ce51f",
+      "position": 8,
       "properties": {
         "description": "Primitive variables are stored in stack memory. On the other hand, objects are stored in heap memory. We use reference variables to access an object from heap memory. Reference variables contain a pointer to where the object is located in memory.",
         "remarks": true
@@ -1128,7 +1168,7 @@
     },
     {
       "key": "030b1b51-7b8d-417a-a7be-b25f66036498",
-      "position": 6,
+      "position": 9,
       "properties": {
         "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "duration": "10",
@@ -1142,7 +1182,7 @@
     },
     {
       "key": "a8f5cfe2-070d-4ceb-b585-72177757ed4d",
-      "position": 7,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the code segment and define *assignment*, *declaration*, *initialization*, and *literal*."
       },
@@ -1153,7 +1193,7 @@
     },
     {
       "key": "a4661d22-2732-45a3-9d16-370f4c819a42",
-      "position": 8,
+      "position": 11,
       "properties": {
         "description": "Let's practice creating and using variables in Java. You can print the values stored in a variable to check its value.",
         "duration": "10",
@@ -1167,7 +1207,7 @@
     },
     {
       "key": "236a10a7-d2ef-42b0-b2e0-4890833e6713",
-      "position": 9,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating Variables*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate printing the value stored in a variable to the console.",
         "tips": [
@@ -1184,7 +1224,7 @@
     },
     {
       "key": "06becc23-9624-40ea-9387-e5656607c7e3",
-      "position": 10,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3, 4, and 5. Students complete a Check for Understanding on Level 3, then continue to Level 4 to create and print `int`, `double`, and `String` variables. Students change and print the values stored in these variables on Level 5.",
         "progression_name": "Creating and Printing Variables"
@@ -2993,7 +3033,7 @@
       "key": "32451ca6-ff18-4f98-bee9-612b77cd421f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the `super` keyword to call superclass methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students write a `toString()` method in the `Dessert` class then continue to Level 3 to refactor the code. On Level 4, students write `toString()` methods in the `Dessert` subclasses.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students write a `toString()` method in the `Dessert` class then continue to Level 3 to refactor the code. On Level 4, students write `toString()` methods in the `Dessert` subclasses.",
         "duration": "15",
         "name": "Overriding Object Class Methods",
         "progression_name": "Overriding Object Class Methods",
