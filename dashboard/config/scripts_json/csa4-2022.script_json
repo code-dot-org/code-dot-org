@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-07 17:59:09 UTC",
+    "serialized_at": "2022-06-15 14:55:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2314,7 +2314,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students may struggle to identify why the `Math` class is `final` and has only static methods. A few guiding questions might include:\n* *What might happen if we could change different mathematical formulas or calculations depending on the input?*\n* *If we were to create `Math` objects, what would you want to change about them? In other words, what instance variables would you declare? *"
+            "markdown": "Students may struggle to identify why the `Math` class is `final` and has only static methods. A few guiding questions might include:\n* *What might happen if we could change different mathematical formulas or calculations depending on the input?*\n* *If we were to create `Math` objects, what would you want to change about them? In other words, what instance variables would you declare?*"
           }
         ]
       },
