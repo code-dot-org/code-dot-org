@@ -30,9 +30,9 @@ const GraduateToNextLevel = ({scriptName, courseTitle, courseDesc}) => {
 };
 
 GraduateToNextLevel.propTypes = {
-  scriptName: PropTypes.string.isRequired,
-  courseTitle: PropTypes.string.isRequired,
-  courseDesc: PropTypes.string.isRequired
+  scriptName: PropTypes.string,
+  courseTitle: PropTypes.string,
+  courseDesc: PropTypes.string
 };
 
 export default GraduateToNextLevel;
