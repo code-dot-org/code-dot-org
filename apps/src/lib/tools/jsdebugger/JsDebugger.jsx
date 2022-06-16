@@ -12,6 +12,7 @@ import dom from '../../../dom';
 import commonStyles from '../../../commonStyles';
 import styleConstants from '../../../styleConstants';
 import Watchers from '../../../templates/watchers/Watchers';
+import color from '../../../util/color';
 import PaneHeader, {
   PaneSection,
   PaneButton
@@ -467,11 +468,14 @@ class JsDebugger extends React.Component {
           >
             {i18n.debugConsoleHeader()}
           </span>
-          <FontAwesome
-            icon={this.state.open ? 'chevron-circle-down' : 'chevron-circle-up'}
-            style={styles.showHideIcon}
-            onClick={this.slideToggle}
-          />
+          <span style={styles.showHideIcon}>
+            <FontAwesome
+              icon={
+                this.state.open ? 'chevron-circle-down' : 'chevron-circle-up'
+              }
+              onClick={this.slideToggle}
+            />
+          </span>
           {this.props.debugButtons && (
             <PaneSection id="debug-commands-header">
               <FontAwesome
@@ -631,7 +635,7 @@ const styles = {
     fontSize: 18,
     ':hover': {
       cursor: 'pointer',
-      color: 'white'
+      color: color.white
     }
   },
   showDebugWatchIcon: {
