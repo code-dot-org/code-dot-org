@@ -257,7 +257,7 @@
           "type": "matrix",
           "name": "codedotorg_teaching_strategies_csp",
           "title": "Right now, I have concrete teaching strategies to...",
-          "visibleIf": "{workshop_course} = 'CS Principles'",
+          "visibleIf": "{workshop_course} = 'CS Principles' or {workshop_course} = 'Computer Science A'",
           "questionTitleLocation": "hidden",
           "columns": [
             {
