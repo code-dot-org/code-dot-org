@@ -1716,6 +1716,8 @@ cs:
               name: Analogový vstup
             Map:
               name: Mapa
+            Board Events:
+              name: Události desky
             Functions with Parameters:
               name: Funkce s Parametry
         workshop-gamelab:
@@ -1760,8 +1762,12 @@ cs:
               name: Cykly "For"
             Analog Input:
               name: Analogový vstup
+            Board Events:
+              name: Události desky
             Functions with Parameters:
               name: Funkce s Parametry
+            Board Events_:
+              name: Události desky
             Analog Input_:
               name: Analogový vstup
             Functions with Parameters_:
@@ -2994,6 +3000,8 @@ cs:
               name: Rychlost
             Functions:
               name: Funkce
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
         csd2-2018:
           lesson_groups:
             csd2_1:
@@ -3003,6 +3011,8 @@ cs:
           lessons:
             Lists:
               name: Seznamy
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
         coursea-2018:
           title: Kurz A (2018)
           assignment_family_title: Kurz A
@@ -3348,10 +3358,14 @@ cs:
               name: Analogový vstup\_
             Functions with Parameters_:
               name: Funkce s parametry\_
+            Board Events:
+              name: Události desky
             Analog Input:
               name: Analogový vstup
             Functions with Parameters:
               name: Funkce s Parametry
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
         coursee-2018:
           title: Kurz E (2018)
           assignment_family_title: Kurz E
@@ -3544,10 +3558,16 @@ cs:
           lesson_groups:
             csd4_2:
               display_name: 'Kapitola 2: Prototypování aplikací'
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
         csd5-2018:
           lesson_groups:
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
         csp2-2018:
           lesson_groups:
             csp2_1_2018:
@@ -4526,6 +4546,8 @@ cs:
             csd6_2:
               display_name: 'Kapitola 2: Stavba fyzického prototypu'
           lessons:
+            Board Events:
+              name: Události desky
             Analog Input:
               name: Analogový vstup
             Functions with Parameters:
@@ -5135,6 +5157,8 @@ cs:
             csd6_2:
               display_name: 'Kapitola 2: Stavba fyzického prototypu'
           lessons:
+            Board Events:
+              name: Události desky
             Analog Input:
               name: Analogový vstup
             Functions with Parameters:
@@ -5738,6 +5762,8 @@ cs:
             csd3_2:
               display_name: 'Kapitola 2: Tvorba her'
           lessons:
+            Example Projects:
+              name: Ukázkové projekty
             Velocity:
               name: Rychlost
             Functions:
@@ -5915,6 +5941,10 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a řešení problémů'
+        csd2-2021:
+          lessons:
+            lesson-1:
+              name: Objevujeme informatiku – Průzkum po kurzu
         csd3-2021:
           lessons:
             Variables:
@@ -5933,27 +5963,39 @@ cs:
               name: Rychlost
             Functions:
               name: Funkce
+            lesson-1:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             csd3_1:
               display_name: 'Kapitola 1: Obrázky a animace'
             csd3_2:
               display_name: 'Kapitola 2: Tvorba her'
         csd4-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             csd4_2:
               display_name: 'Kapitola 2: Prototypování aplikací'
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
         csd5-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
         csd6-2021:
           lessons:
+            Board Events:
+              name: Události desky
             Analog Input:
               name: Analogový vstup
             Functions with Parameters:
               name: Funkce s Parametry
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             csd6_1:
               display_name: 'Kapitola 1: Programování s hardware'
@@ -6675,6 +6717,10 @@ cs:
               display_name: Modul epidemie
           name: epidemický modul
           title: Modul_epidemie_V2
+        csd7-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
         kodea-pd-2021:
           lessons:
             Getting Started:
@@ -7082,6 +7128,7 @@ cs:
           title: Lekce 5 – Uspořádání objektů [Exemplars]
         csd-post-survey-2021:
           name: csd-post-survey-2021
+          title: Objevujeme informatiku – Průzkum po kurzu
           description: Tato jednotka obsahuje průzkum po kurzu Objevování informatiky.
             Tuto jednotku lze přiřadit poté, co studenti dokončí svou poslední jednotku
             v Objevování informatiky.
@@ -7236,6 +7283,8 @@ cs:
               display_name: Projekt na zakončení kurzu
         csd6-pilot-2022:
           lessons:
+            Board Events:
+              name: Události desky
             lesson-10:
               name: Kombinace vstupů
             Functions with Parameters:
@@ -8281,6 +8330,12 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a řešení problémů'
+        csd2-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
+            lesson-1:
+              name: Objevujeme informatiku – Průzkum po kurzu
         csd3-2022:
           lessons:
             Variables:
@@ -8299,29 +8354,48 @@ cs:
               name: Rychlost
             Functions:
               name: Funkce
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
+            lesson-1:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             csd3_1:
               display_name: 'Kapitola 1: Obrázky a animace'
             csd3_2:
               display_name: 'Kapitola 2: Tvorba her'
         csd4-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             csd4_2:
               display_name: 'Kapitola 2: Prototypování aplikací'
         csd5-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
+        csd7-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
         csd6-2022:
           lessons:
+            Board Events:
+              name: Události desky
             Combining Inputs and Outputs:
               name: Kombinace vstupů
             Functions:
               name: Funkce
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapitola 2: Stavba fyzického prototypu'
         csd-post-survey-2022:
+          title: Objevujeme informatiku – Průzkum po kurzu
           description: Tato jednotka obsahuje průzkum po kurzu Objevování informatiky.
             Tuto jednotku lze přiřadit poté, co studenti dokončí svou poslední jednotku
             v Objevování informatiky.

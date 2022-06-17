@@ -1886,6 +1886,9 @@
           "name": "Jak fungují počítače: Hardware a software",
           "type": "Video"
         },
+        "board_events/csd/2021": {
+          "name": "Události desky"
+        },
         "analog-digital-video/csd/2021": {
           "type": "Video"
         },
@@ -1904,6 +1907,9 @@
         },
         "for_loops/csd/2021": {
           "name": "Cykly \"For\""
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "Události akcelerometru"
         },
         "circuits-logic-video/csd/2021": {
           "name": "Jak fungují počítače: Obvody a logika",

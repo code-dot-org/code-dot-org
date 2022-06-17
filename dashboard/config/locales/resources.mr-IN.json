@@ -1823,6 +1823,9 @@
           "name": "व्हिडिओ: प्रशिक्षण डेटा आणि पूर्वाग्रह",
           "type": "व्हिडीओ"
         },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
         "make-a-recommendation-1/csd/2021": {
           "type": "नियम"
         },
@@ -1877,6 +1880,9 @@
         "interactive-card-project-guide-2019/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
         },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
         "interactive_card/csd/2021": {
           "type": "नियम"
         },
@@ -1908,6 +1914,9 @@
         "make-your-own-game/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
         },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
         "make_your_own_game/csd/2021": {
           "type": "नियम"
         },
@@ -1922,6 +1931,9 @@
         },
         "what-do-computers-do/csd/2021": {
           "type": "व्हिडीओ"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
         },
         "apps_and_problem_solving/csd/2021": {
           "type": "नियम"
@@ -1942,6 +1954,9 @@
         },
         "html-web-page-1/csd/2021": {
           "type": "नियम"
+        },
+        "html-web-page/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
         },
         "html-page/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
@@ -1964,6 +1979,9 @@
         "your-personal-style-1-2-3/csd/2021": {
           "type": "नियम"
         },
+        "your-personal-style-1/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
         "your-personal-style/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
         },
@@ -1972,6 +1990,9 @@
         },
         "person-web-page-prepare/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
         },
         "person-web-page-reflect/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
@@ -2000,6 +2021,9 @@
         },
         "plan-a-multi-page-website/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
         },
         "website-for-a-purpose-reflect/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"

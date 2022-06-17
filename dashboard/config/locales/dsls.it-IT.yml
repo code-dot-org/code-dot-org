@@ -7657,7 +7657,7 @@ it-IT:
         markdown: |-
           # Braccialetti Binari
 
-          Crea un braccialetto che rappresenti il tuo nome in un sistema che sia comprensibile per i computer!
+          Crea un braccialetto che rappresenti il tuo nome in un sistema comprensibile ai computer!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       CSD U1 Test:
@@ -7830,9 +7830,9 @@ it-IT:
           Rendete i vostri programmi più brevi usando i loop!
       MyRoboticFriends-Unplugged_2021:
         markdown: |-
-          # I Miei Amici Robotici
+          # I miei amici robotici
 
-          Impara a programmare scrivendo il codice per i tuoi amici!
+          Impara a programmare scrivendo codice per i tuoi amici!
       OPD-K5 About_dani:
         markdown: |
           #  Per cominciare > Descrizione del corso
@@ -9588,22 +9588,22 @@ it-IT:
           Cerca quanto più possibile di portarla a termine. Continua a esercitarti
           con gli eventi!
         teacher_markdown: |-
-          # Panoramica sugli esercizi opzionali
-          Gli esercizi opzionali offrono una scelta di esercizi aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+          # Panoramica sugli esercizi facoltativi
+          Gli esercizi facoltativi mettono a disposizione una scelta di esercizi aggiuntivi. Gli alunni devono completarne almeno uno.
 
-          Puoi utilizzare le descrizioni seguenti per aiutare gli studenti a selezionare autonomamente le scelte o per definire le aspettative sul numero di esercizi secondari da completare.
+          Puoi utilizzare le descrizioni seguenti per aiutare gli alunni a selezionare autonomamente le scelte o per definire le aspettative sul numero di esercizi facoltativi da completare.
 
           |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Partenza!|Imparare a volare|Fai un avvitamento|Rimpicciolisci e ingrandisci|Fai gonfiare il pesce!|Pinguino in movimento|
           |-|-|-|-|-|-|-|
           | ***Digita*** |**Revisione**|**Debug**|**Debug**|**Debug**|**Contenuto facoltativo**|**Contenuto facoltativo**
           | ***Concetto***|*events, behaviors*|*eventi, comportamenti*|*events, behaviors*|*eventi, comportamenti*|*when/while events*|*quando/durante gli eventi*|
       courseF_text_practice:
-        display_name: Pratica con il testo e i comandi
+        display_name: Esercitarsi con il testo e le richieste all'utente
         description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
           Cerca quanto più possibile di portarla a termine. Continua a esercitarti
-          con i testi e i comandi!
+          con i testi e le richieste all'utente!
         teacher_markdown: |+
-          # Panoramica sugli esercizi opzionali
+          # Panoramica sugli esercizi facoltativi
           Gli esercizi facoltativi mettono a disposizione una scelta di esercizi aggiuntivi. Gli alunni devono completarne almeno uno.
 
           Puoi utilizzare le descrizioni seguenti per aiutare gli alunni a selezionare autonomamente le scelte o per definire le aspettative sul numero di esercizi facoltativi da completare.
@@ -9620,10 +9620,10 @@ it-IT:
           caselle vuote. Se hai già terminato la \"Parta 1\" del tuo progetto, vai
           alla \"Parte 2\".
         teacher_markdown: |
-          # Panoramica sugli esercizi opzionali
-          Gli esercizi opzionali offrono una scelta di esercizi aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono essere incoraggiati a completare **due** livelli per lo stesso progetto.
+          # Panoramica sugli esercizi facoltativi
+          Gli esercizi facoltativi offrono una scelta di esercizi aggiuntivi, che gli alunni devono portare a termine. Gli alunni devono completare almeno uno di questi sottolivelli.
 
-          Gli studenti potrebbero aver realmente bisogno di ricevere istruzioni chiare per capire come navigare tra le scelte. Per ognuna delle scelte del progetto, ci sono due esercizi secondari. Per iniziare, gli studenti devono selezionare uno degli esercizi contrassegnati come "Parte 1". Una volta terminato quell'esercizio devono ritornare qui e selezionare la "Parte 2" dello *stesso* progetto. Per ogni scelta, il primo esercizio fornirà agli studenti un riscontro mentre mettono insieme i componenti base del proprio progetto. Il secondo esercizio è un "esercizio libero" che consente agli studenti di apportare al loro codice tutte le modifiche desiderate.
+          Gli alunni potrebbero aver realmente bisogno di ricevere istruzioni chiare per capire come navigare tra le scelte. Per ognuna delle scelte del progetto, ci sono due sottolivelli. Per iniziare, gli alunni devono selezionare uno degli esercizi contrassegnati come "Parte 1". Una volta terminato quell'esercizio devono ritornare qui e selezionare la "Parte 2" dello *stesso* progetto. Per ogni scelta, il primo esercizio fornirà agli alunni un riscontro mentre mettono insieme i componenti base del proprio progetto. Il secondo esercizio è un "esercizio libero" che consente agli alunni di apportare al loro codice tutte le modifiche desiderate.
       courseF_variables_samples:
         display_name: 'Esplorazione: Programmi di esempio'
         description: Creerai un biglietto di auguri, un chatbot o una storia delle
@@ -9631,8 +9631,8 @@ it-IT:
           per capire cosa ti interessa creare. Premi su \"Termina"\ quando sarai pronto
           per iniziare a pianificare il tuo programma.
         teacher_markdown: |-
-          # Panoramica sugli esercizi opzionali
-          Gli esercizi opzionali offrono una scelta di esercizi aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+          # Panoramica sugli esercizi facoltativi
+          Gli esercizi facoltativi offrono una scelta di esercizi aggiuntivi, che gli alunni devono portare a termine. Gli alunni devono completare almeno uno di questi sottolivelli.
 
           Gli studenti devono osservare questi progetti attentamente prima di decidere quale desiderano creare. Puoi analizzarli insieme a loro come una classe, oppure puoi lasciare che gli studenti li esplorino per conto loro.
       express_EOC_examples_2021:

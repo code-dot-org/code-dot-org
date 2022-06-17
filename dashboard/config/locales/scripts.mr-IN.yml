@@ -148,12 +148,19 @@ mr:
               name: प्रतिबिंब
         20-hour:
           title: संगणक शास्त्राचा वेगवान परिचय
+          description: या 20 तासांच्या अभ्यासक्रमात 2-4 अभ्यासक्रमांमधील मुख्य संगणक
+            विज्ञान आणि प्रोग्रामिंग संकल्पना समाविष्ट आहेत. हा कोर्स 10-18 वयोगटातील
+            वापरासाठी डिझाइन केला आहे. अधिक संपूर्ण अनुभवासाठी 2-4 अभ्यासक्रम पहा!
           description_audience: वय वर्षे 10-18
           lessons:
             Computational Thinking:
               name: कॉम्प्युटेशनल विचार
             Conditionals:
               name: कंडीशनल्स
+          student_description: या 20 तासांच्या अभ्यासक्रमात 2-4 अभ्यासक्रमांमधील मुख्य
+            संगणक विज्ञान आणि प्रोग्रामिंग संकल्पना समाविष्ट आहेत. हा कोर्स 10-18
+            वयोगटातील वापरासाठी डिझाइन केला आहे. अधिक संपूर्ण अनुभवासाठी 2-4 अभ्यासक्रम
+            पहा!
         events:
           title: ईव्हेंट्स
           description: ईव्हेंट्स
@@ -222,6 +229,8 @@ mr:
               name: आर्टीस्ट
             Flappy:
               name: फ्लॅपी
+            Minecraft:
+              name: माइनक्राफ्ट
             Text Compression:
               name: टेक्स्ट कॉम्प्रेशन
             Web Lab:
@@ -317,6 +326,7 @@ mr:
             तुमचा स्वत:चा स्टार वॉर्स गेम तयार करा.
         mc:
           title: माईनक्राफ्ट अवर ऑफ कोड
+          description_short: कोडच्या माध्यमातून माइनक्राफ्ट जग एक्सप्लोर करा.
           lessons:
             Hour of Code 2015:
               name: अवर ऑफ कोड 2015
@@ -376,6 +386,10 @@ mr:
           lessons:
             Exploring Apps:
               name: एक्सप्लोरींग ॲप्स
+        CSDU2-Draft:
+          lessons:
+            Peer Review:
+              name: पीअर रिव्ह्यू
         CSDU5-Draft:
           description_short: डेटा
         CSF_Secret_Sample_Story:
@@ -511,6 +525,8 @@ mr:
               name: सुलभ एनक्रीप्शन
         csd2-2017:
           lessons:
+            Peer Review:
+              name: पीअर रिव्ह्यू
             Lists:
               name: याद्या
             Headings:
@@ -899,6 +915,10 @@ mr:
               name: शेतकऱ्यामधील फंक्शन्स
             Conditionals and Functions in Bee:
               name: मधमाशीमधील कंडीशनल्स आणि फंक्शन्स
+        csd2-old:
+          lessons:
+            Peer Review:
+              name: पीअर रिव्ह्यू
         artist-and-bb8:
           lessons:
             C9 Artist Loops:
@@ -1331,6 +1351,8 @@ mr:
           lessons:
             other:
               name: इतर
+            Thanks:
+              name: धन्यवाद
         csd4-draft:
           lessons:
             Linking Screens:
@@ -3739,6 +3761,8 @@ mr:
               name: अभ्यासक्रम A
             Course B:
               name: अभ्यासक्रम B
+            CS Discoveries:
+              name: सीएस डिस्कव्हरीज
             Course E:
               name: अभ्यासक्रम E
             Course F:
@@ -4393,6 +4417,8 @@ mr:
               name: साधने
             lesson-17:
               name: कन्सोल
+            lesson-18:
+              name: विजेट्स
           lesson_groups:
             lessonGroup-2:
               display_name: धडे
@@ -4527,6 +4553,8 @@ mr:
           name: हॅलो -वर्ल्ड-फुड
         csa-u7-dev:
           lessons:
+            lesson-2:
+              name: विजेट्स
             lesson-3:
               name: साधने
           lesson_groups:
@@ -4587,6 +4615,8 @@ mr:
             करण्याचे आव्हान स्वीकारा!
         csa-u8-dev:
           lessons:
+            lesson-1:
+              name: विजेट्स
             lesson-2:
               name: साधने
           lesson_groups:

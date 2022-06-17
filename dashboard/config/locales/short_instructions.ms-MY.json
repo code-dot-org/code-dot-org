@@ -2790,7 +2790,10 @@
         "Overworld Chop Tree - allthethings": "Hutan adalah sumber yang sangat penting. Banyak perkara dibuat daripadanya. Berjalan ke pokok dan gunakan perintah \"musnahkan blok\" untuk menebangnya.",
         "Test embedded K1 Blockly in instructions": "Gunakan tiga blok `bergerak ke barat` dan satu blok `petik jagung` untuk menyelesaikan teka-teki ini.",
         "U1L13 Text Compression": "Cari pola (perkataan atau frasa berulang) dalam teks. Masukkan corak yang anda lihat ke dalam kamus di sebelah kanan. Semasa anda menaip entri ke dalam kamus, simbol untuk entri dimasukkan ke dalam teks sebagai mengganti corak.",
-        "U2L10 NetSim Automatic DNS": "Dalam versi Simulator Internet ini, Sistem Nama Domain (DNS) disediakan untuk anda dan mengetahui alamat IP semua komputer yang disambungkan. Hantar mesej dalam borang GET [hostname] kepada perkhidmatan DNS di alamat <yourRouterNumber>.15 untuk mendapatkan alamat pelajar."
+        "U2L10 NetSim Automatic DNS": "Dalam versi Simulator Internet ini, Sistem Nama Domain (DNS) disediakan untuk anda dan mengetahui alamat IP semua komputer yang disambungkan. Hantar mesej dalam borang GET [hostname] kepada perkhidmatan DNS di alamat <yourRouterNumber>.15 untuk mendapatkan alamat pelajar.",
+        "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "Kami memulakan anda dengan imej 4x2 yang dicipta Maddie, tetapi kami telah meninggalkan dua petak terakhir. Selesaikan imej dengan mengetahui dua warna mana yang hilang dan mengekodnya.",
+        "Pixelation - Lesson 15 - Complete 3-bit color": "Kami memulakan anda dengan imej 4x2 yang dicipta Maddie, tetapi kami telah meninggalkan dua petak terakhir. Selesaikan imej dengan mengetahui dua warna mana yang hilang dan mengekodnya.",
+        "Pixelation 4x4 Empty": "Lebar dan tinggi kini dikodkan dalam data piksel. Bolehkah anda memikirkan cara menyesuaikan dimensi?"
       }
     }
   }
