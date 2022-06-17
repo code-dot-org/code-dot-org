@@ -10,7 +10,6 @@ describe('HeaderMiddle', () => {
     const widths = HeaderMiddle.getWidths(
       700,    // width,
       false,  // projectInfoOnly,
-      false,  // scriptNameOnly,
       0,      // projectInfoDesiredWidth,
       200,    // scriptNameDesiredWidth,
       350,    // lessonProgressDesiredWidth,
@@ -32,7 +31,6 @@ describe('HeaderMiddle', () => {
     const widths = HeaderMiddle.getWidths(
       350,    // width,
       false,  // projectInfoOnly,
-      false,  // scriptNameOnly,
       0,      // projectInfoDesiredWidth,
       200,    // scriptNameDesiredWidth,
       350,    // lessonProgressDesiredWidth,
@@ -54,7 +52,6 @@ describe('HeaderMiddle', () => {
     const widths = HeaderMiddle.getWidths(
       700,    // width,
       false,  // projectInfoOnly,
-      false,  // scriptNameOnly,
       200,    // projectInfoDesiredWidth,
       200,    // scriptNameDesiredWidth,
       350,    // lessonProgressDesiredWidth,
@@ -76,7 +73,6 @@ describe('HeaderMiddle', () => {
     const widths = HeaderMiddle.getWidths(
       350,    // width,
       false,  // projectInfoOnly,
-      false,  // scriptNameOnly,
       200,    // projectInfoDesiredWidth,
       200,    // scriptNameDesiredWidth,
       350,    // lessonProgressDesiredWidth,
@@ -98,7 +94,6 @@ describe('HeaderMiddle', () => {
     const widths = HeaderMiddle.getWidths(
       700,    // width,
       true,   // projectInfoOnly,
-      false,  // scriptNameOnly,
       400,    // projectInfoDesiredWidth,
       0,      // scriptNameDesiredWidth,
       0,      // lessonProgressDesiredWidth,
@@ -118,7 +113,6 @@ describe('HeaderMiddle', () => {
     const widths = HeaderMiddle.getWidths(
       350,    // width,
       true,   // projectInfoOnly,
-      false,  // scriptNameOnly,
       400,    // projectInfoDesiredWidth,
       0,      // scriptNameDesiredWidth,
       0,      // lessonProgressDesiredWidth,
@@ -129,46 +123,6 @@ describe('HeaderMiddle', () => {
 
     assert.equal(widths.projectInfo, 350);
     assert.equal(widths.scriptName, 0);
-    assert.equal(widths.progress, 0);
-    assert.equal(widths.popup, 0);
-    assert.equal(widths.finish, 0);
-  });
-
-  it('widths for script name only when wide', () => {
-    const widths = HeaderMiddle.getWidths(
-      700,    // width,
-      false,  // projectInfoOnly,
-      true,   // scriptNameOnly,
-      0,      // projectInfoDesiredWidth,
-      400,    // scriptNameDesiredWidth,
-      0,      // lessonProgressDesiredWidth,
-      0,      // numScriptLessons,
-      0,      // finishDesiredWidth,
-      false   // showFinish
-    );
-
-    assert.equal(widths.projectInfo, 0);
-    assert.equal(widths.scriptName, 410);
-    assert.equal(widths.progress, 0);
-    assert.equal(widths.popup, 0);
-    assert.equal(widths.finish, 0);
-  });
-
-  it('widths for script name only when narrow', () => {
-    const widths = HeaderMiddle.getWidths(
-      350,    // width,
-      false,  // projectInfoOnly,
-      true,   // scriptNameOnly,
-      0,      // projectInfoDesiredWidth,
-      400,    // scriptNameDesiredWidth,
-      0,      // lessonProgressDesiredWidth,
-      0,      // numScriptLessons,
-      0,      // finishDesiredWidth,
-      false   // showFinish
-    );
-
-    assert.equal(widths.projectInfo, 0);
-    assert.equal(widths.scriptName, 350);
     assert.equal(widths.progress, 0);
     assert.equal(widths.popup, 0);
     assert.equal(widths.finish, 0);
