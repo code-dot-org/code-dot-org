@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-06-13T20:59:48.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -74,9 +70,13 @@
     "encrypted_examples": "onrcknYSJHIZsRRIs8LDT11ZOOEV0mAJvu7ycxaIKgVDqW3+sv0Sh5Xka8bu\n5iVp89/HbWYIM//qZVrArPipm7DdVaTtsWHP857nv/QjgNVAe49xE27wnzZw\nkMniTnpE06FJtjdnh9dpzoPFmkN3Ew==\n",
     "preload_asset_list": null
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-06-13T20:59:48.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-13T20:59:48.710+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_multi_ecosystems\\\"\"],\"cloned_from\":\"helloworld_food_multi_ecosystems\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-13T20:59:48.710+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_multi_ecosystems\\\"\"],\"cloned_from\":\"helloworld_food_multi_ecosystems\"},{\"changed_at\":\"2022-06-16 21:15:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
