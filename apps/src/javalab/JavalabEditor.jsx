@@ -794,7 +794,7 @@ class JavalabEditor extends React.Component {
                 >
                   {isViewingOwnProject
                     ? javalabMsg.editingDisabledUnderReview()
-                    : javalabMsg.reviewingPeersProject({
+                    : javalabMsg.codeReviewingPeer({
                         peerName: codeOwnersName
                       })}
                 </div>
