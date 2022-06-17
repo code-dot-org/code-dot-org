@@ -1470,7 +1470,10 @@ export default class P5Lab {
       }
     }
 
-    this.reactToExecutionError(this.JSInterpreter.executionError?.message);
+    if (this.JSInterpreter.executionError) {
+      this.reactToExecutionError(this.JSInterpreter.executionError.message);
+    }
+
     this.completeRedrawIfDrawComplete();
   }
 

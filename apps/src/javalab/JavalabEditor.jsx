@@ -749,11 +749,12 @@ class JavalabEditor extends React.Component {
                         ...styles.fileMenuToggleButton,
                         ...(displayTheme === DisplayTheme.DARK &&
                           styles.darkFileMenuToggleButton),
-                        ...(activeTabKey !== tabKey && {visibility: 'hidden'})
+                        ...((isReadOnlyWorkspace ||
+                          activeTabKey !== tabKey) && {visibility: 'hidden'})
                       }}
                       onClick={e => this.toggleTabMenu(tabKey, e)}
                       className="no-focus-outline"
-                      disabled={activeTabKey !== tabKey}
+                      disabled={isReadOnlyWorkspace || activeTabKey !== tabKey}
                     >
                       <FontAwesome
                         icon={
