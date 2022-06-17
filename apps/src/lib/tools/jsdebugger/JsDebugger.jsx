@@ -502,21 +502,6 @@ class JsDebugger extends React.Component {
               ref={debugWatchHeader =>
                 (this._debugWatchHeader = debugWatchHeader)
               }
-              onClick={() => {
-                // reset resizer-overridden styles
-                // (remove once resize logic migrated to React)
-                if (!this.state.watchersHidden) {
-                  const resetResizeEvent = document.createEvent('Event');
-                  resetResizeEvent.initEvent(
-                    'resetWatchersResizableElements',
-                    true,
-                    true
-                  );
-                  document.dispatchEvent(resetResizeEvent);
-                }
-
-                this.setState({watchersHidden: !this.state.watchersHidden});
-              }}
               style={
                 this.state.watchersHidden
                   ? {
@@ -527,7 +512,23 @@ class JsDebugger extends React.Component {
                   : {}
               }
             >
-              <span style={styles.showDebugWatchIcon}>
+              <span
+                style={styles.showDebugWatchIcon}
+                onClick={() => {
+                  // reset resizer-overridden styles
+                  // (remove once resize logic migrated to React)
+                  if (!this.state.watchersHidden) {
+                    const resetResizeEvent = document.createEvent('Event');
+                    resetResizeEvent.initEvent(
+                      'resetWatchersResizableElements',
+                      true,
+                      true
+                    );
+                    document.dispatchEvent(resetResizeEvent);
+                  }
+                  this.setState({watchersHidden: !this.state.watchersHidden});
+                }}
+              >
                 <FontAwesome
                   id="hide-watcher"
                   icon={
