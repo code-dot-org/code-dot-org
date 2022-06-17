@@ -25,7 +25,8 @@ class TeacherContentToggle extends React.Component {
     hiddenLessonsInitialized: PropTypes.bool.isRequired,
     sectionsAreLoaded: PropTypes.bool.isRequired,
     isHiddenLesson: PropTypes.bool.isRequired,
-    isLockedLesson: PropTypes.bool.isRequired
+    isLockedLesson: PropTypes.bool.isRequired,
+    isCodeReviewing: PropTypes.bool
   };
 
   componentDidMount() {
@@ -55,7 +56,8 @@ class TeacherContentToggle extends React.Component {
       sectionsAreLoaded,
       isLockedLesson,
       isHiddenLesson,
-      isBlocklyOrDroplet
+      isBlocklyOrDroplet,
+      isCodeReviewing
     } = this.props;
 
     const frameStyle = {
@@ -70,10 +72,14 @@ class TeacherContentToggle extends React.Component {
     };
     let hasOverlayFrame = isLockedLesson || isHiddenLesson;
 
-    if (viewAs === ViewType.Participant) {
+    if (viewAs === ViewType.Participant && !isCodeReviewing) {
+      // When a teacher is code reviewing another teacher, we load a different header experience
+      // so that we don't expose progress between peers. Section data is not loaded in this teacher-as-student
+      // viewing another teacher experience
+      const sectionsAreLoading = !sectionsAreLoaded && !isCodeReviewing;
       // Keep this hidden until we've made our async calls for hidden_lessons and
       // locked lessons, so that we don't flash content before hiding it
-      if (!hiddenLessonsInitialized || !sectionsAreLoaded || hasOverlayFrame) {
+      if (!hiddenLessonsInitialized || sectionsAreLoading || hasOverlayFrame) {
         contentStyle.visibility = 'hidden';
       }
     }
@@ -148,7 +154,8 @@ export const mapStateToProps = state => {
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
     hiddenLessonsInitialized: state.hiddenLesson.hiddenLessonsInitialized,
     isHiddenLesson,
-    isLockedLesson
+    isLockedLesson,
+    isCodeReviewing: state.pageConstants?.isCodeReviewing
   };
 };
 
