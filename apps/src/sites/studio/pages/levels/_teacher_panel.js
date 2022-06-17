@@ -14,6 +14,7 @@ import {
   setUserRoleInCourse,
   CourseRoles
 } from '@cdo/apps/templates/currentUserRedux';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 $(document).ready(initPage);
 
@@ -34,16 +35,20 @@ function initPage() {
   }
 
   if (teacherPanelData.is_instructor) {
-    store.dispatch(setViewType(ViewType.Instructor));
+    store.dispatch(setViewType(queryParams('viewAs') || ViewType.Instructor));
     store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
   }
 
-  renderTeacherPanel(
-    store,
-    teacherPanelData.script_id,
-    teacherPanelData.script_name,
-    teacherPanelData.page_type
-  );
+  // If a teacher is peer-reviewing another teacher in a workshop, don't render
+  // the teacher panel, as it doesn't make sense in that context
+  if (!window.appOptions.isCodeReviewing) {
+    renderTeacherPanel(
+      store,
+      teacherPanelData.script_id,
+      teacherPanelData.script_name,
+      teacherPanelData.page_type
+    );
+  }
 }
 
 function renderTeacherContentToggle(store) {
