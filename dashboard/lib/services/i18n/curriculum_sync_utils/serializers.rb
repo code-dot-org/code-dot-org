@@ -130,9 +130,9 @@ module Services::I18n::CurriculumSyncUtils
     class StandardCrowdinSerializer < CrowdinSerializer
       attributes :description
 
-      belongs_to :framework, serializer: FrameworkCrowdinSerializer
-      belongs_to :parent_category, serializer: StandardCategoryCrowdinSerializer
-      belongs_to :category, serializer: StandardCategoryCrowdinSerializer
+      belongs_to :framework, serializer: FrameworkCrowdinSerializer, optional: true
+      belongs_to :parent_category, serializer: StandardCategoryCrowdinSerializer, optional: true
+      belongs_to :category, serializer: StandardCategoryCrowdinSerializer, optional: true
 
       delegate :crowdin_key, to: :object
     end
