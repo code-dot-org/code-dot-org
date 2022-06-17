@@ -859,7 +859,7 @@ describe('Java Lab Editor Test', () => {
       expect(banner).to.have.lengthOf(1);
       expect(
         banner.contains(
-          javalabMsg.reviewingPeersProject({
+          javalabMsg.codeReviewingPeer({
             peerName: 'George'
           })
         )
