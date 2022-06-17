@@ -753,6 +753,12 @@
           "name": "Reflexe",
           "description": "#### Vyslechněte zpětnou vazbu\n\nPožádejte studenty, aby se zamysleli nad aktivitami dnešního dne. Co se o psaní kódu učili? Sprajty? Události?\n\nJaký mají z počítačové vědy a psaní kódu po strávení jedné hodiny poznáváním pocit?\n\n#### Další kroky\n\nDejte studentům vědět, že jestliže se jim dnešní aktivita líbila, mají mnoho možností, jak mohou pokračovat v psaní kódu. Navštivte [CS Connections][0], kde najdete nápady, jak integrovat počítačovou vědu do jiných předmětů nebo si přečtěte více o našich [nabídkách kurzů pro základní školy][1]."
         },
+        "d6c0f379-8c4b-44a4-a027-b1b0d67a9605": {
+          "progression_name": "Vytvoření UI s návrhovým režimem"
+        },
+        "0bb9cc9e-e99a-4f86-af29-44e022052307": {
+          "progression_name": "Příklad útěku z místnosti"
+        },
         "b9d672f4-d86c-45ef-9203-d62f69ebf28b": {
           "name": "Kreslení tvarů",
           "progression_name": "Kreslení tvarů"
@@ -775,6 +781,12 @@
         "7cde2f9a-d424-43de-bb23-9301a3467204": {
           "progression_name": "Animace scény"
         },
+        "a90b9313-7969-47c6-9d6d-8eb20b587cc7": {
+          "progression_name": "Porovnání logických hodnot"
+        },
+        "a3444197-2e90-43e4-9719-a7f6112905d0": {
+          "progression_name": "Základní podmínky"
+        },
         "8ca97900-8855-4bb6-9717-d9e403b12fb0": {
           "progression_name": "Video: Podmínky"
         },
@@ -788,12 +800,29 @@
         "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
           "progression_name": "Funkce"
         },
+        "5852ebde-c874-4120-8211-aa786ef26ea0": {
+          "name": "Obránce dortu",
+          "progression_name": "Obránce dortu"
+        },
+        "7cee437f-0aa0-4131-9d81-d5cac21d1cab": {
+          "progression_name": "Vytvoření kódu na přizpůsobení platformě"
+        },
         "d6ed872d-76c1-4f17-a785-1279a9ad0a59": {
           "name": "Reflexe",
           "progression_name": "Reflexe"
         },
         "0e2f3c45-54d9-4caa-8d46-34bd2164efe5": {
           "progression_name": "Nastavení vlastností"
+        },
+        "dd2c6b75-07f5-41f6-b791-7d5fd972a30e": {
+          "progression_name": "Události a vlastnosti"
+        },
+        "db8d9f01-122e-4e38-8b20-7ad2414b1086": {
+          "name": "Vytvoření aplikace",
+          "progression_name": "Vytvoření aplikace"
+        },
+        "7f68e527-5e45-45e4-a825-3229b3ef7cfd": {
+          "progression_name": "Události desky"
         },
         "90bc9191-8e68-41bd-b8e9-8291930dca38": {
           "progression_name": "Události"
@@ -805,11 +834,28 @@
           "name": "Reflexe",
           "progression_name": "Reflexe"
         },
+        "f5090711-0809-42dc-9542-db9db5c0b18e": {
+          "name": "Úrovně výzvy",
+          "progression_name": "Úrovně výzvy"
+        },
         "bca84870-d563-4903-b1d9-51253cbbfc90": {
           "progression_name": "Cykly \"For\""
         },
+        "9602c704-6393-46ea-9ab9-96560faebed8": {
+          "progression_name": "Události akcelerometru"
+        },
+        "1f25bdc7-3dec-4d8e-8136-4d6f0a8763d0": {
+          "name": "Události akcelerometru",
+          "progression_name": "Události akcelerometru"
+        },
         "d03a5e1d-7252-4cd1-aea7-0bd0a228f9b0": {
           "progression_name": "Funkce s Parametry"
+        },
+        "21848bf7-b017-406c-a1f5-9451d0e782b4": {
+          "progression_name": "Obvody tlačítka"
+        },
+        "dc7dc8a0-f6d6-46aa-b3d6-ed54ec45d0e8": {
+          "progression_name": "Vstup a výstup desky"
         },
         "0767d56f-4e70-4485-b012-e40fd5a4065f": {
           "name": "Reflexe",
@@ -822,13 +868,24 @@
           "name": "Reflexe",
           "progression_name": "Reflexe"
         },
+        "9608412e-93a7-49c2-bb11-95906561502f": {
+          "name": "Dort – průzkum",
+          "progression_name": "Dort – průzkum"
+        },
         "5707e98f-8fcf-43b9-8354-de0f584c610f": {
           "name": "Reflexe",
           "progression_name": "Reflexe"
         },
+        "8667bd82-fed3-4fa1-8d54-bb13b22370e3": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu",
+          "progression_name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
         "b20a720d-b3ee-4431-a9ff-422a105447ee": {
           "name": "Reflexe",
           "progression_name": "Reflexe"
+        },
+        "c94f593e-4b76-4a2c-9e24-5b06f8c91a47": {
+          "progression_name": "Ukázkové typy aplikací"
         },
         "f283a069-539e-4f66-ad52-61c90f444c68": {
           "progression_name": "Představení dizajnového módu"
@@ -836,8 +893,15 @@
         "932f56f3-0737-4a5c-a254-4f71a2339b47": {
           "progression_name": "Úvod do dizajnového módu"
         },
+        "dad0e2b6-695d-4d58-bf2b-0c88f27f06ac": {
+          "progression_name": "Vytvoření obrazovky"
+        },
         "0c50e3b4-a993-42ff-959b-6e197b358a9a": {
           "progression_name": "Prvky dizajnového módu"
+        },
+        "aae0a3cd-a0e4-4945-b7fb-f9b4e54cc9c4": {
+          "name": "Projekt aplikace: Návrh obrazovky",
+          "progression_name": "Projekt aplikace: Návrh obrazovky"
         },
         "b4f90851-d1cc-4d08-bf3e-b8713bb6331d": {
           "progression_name": "Přidávání obrazovek"
@@ -849,6 +913,10 @@
           "name": "Reflexe",
           "progression_name": "Reflexe"
         },
+        "fc25253c-af43-45ae-8a3a-26330b2135c3": {
+          "name": "Ukázka osobních webových stránek",
+          "progression_name": "Ukázka osobních webových stránek"
+        },
         "bcc27c68-f369-4469-a472-2047c24ee541": {
           "progression_name": "Párové programování"
         },
@@ -857,6 +925,10 @@
         },
         "44a49f5c-5c77-4aae-833c-3288ab973af9": {
           "progression_name": "Přidávání obrázků"
+        },
+        "8f773097-a5a9-4f14-8d98-a589a8f5cf5f": {
+          "name": "Přisouzení",
+          "progression_name": "Přisouzení"
         },
         "0eb10caa-d6c3-4afd-bba1-c28694a1128a": {
           "progression_name": "Ladění"
@@ -954,6 +1026,9 @@
         "0ce7c02f-f05a-40cf-a5be-87946f72027d": {
           "progression_name": "Výzva"
         },
+        "c33397a2-b572-4128-b3a7-d2570f53b4b2": {
+          "progression_name": "Úvod Umělec s JR Hildebrandem"
+        },
         "38d68221-32e8-4984-8a39-69073466459f": {
           "progression_name": "Výzva"
         },
@@ -996,6 +1071,9 @@
         "71c84958-5cc4-467d-8c97-f2f63123c47d": {
           "progression_name": "Video"
         },
+        "86a30e40-09ca-4727-9fa0-88adf2bd0ca9": {
+          "progression_name": "Úvod Umělec s JR Hildebrandem"
+        },
         "2a412b4f-68cb-417f-bd40-716a3cfdf0ff": {
           "progression_name": "Výzva"
         },
@@ -1032,6 +1110,9 @@
         "30f90504-21cc-4713-949c-c5bcdb5c3288": {
           "progression_name": "Volná hra"
         },
+        "ee1ed9bb-80d3-4f5c-abfb-431d175a74d5": {
+          "progression_name": "Ukázkové projekty"
+        },
         "7ba3e3fc-9997-480c-86f7-54e100343b8a": {
           "progression_name": "Projekt Laboratoře sprajtů"
         },
@@ -1041,6 +1122,9 @@
         },
         "b53b7eb1-3aab-44fb-bda0-e658142a7093": {
           "progression_name": "Výzva"
+        },
+        "0fbde2f6-85b8-4c16-ab14-f2a0980336d2": {
+          "progression_name": "Úvod Umělec s JR Hildebrandem"
         },
         "b77b5637-ea90-4ae9-bfb9-22810b90bf92": {
           "progression_name": "Výzva"
@@ -1092,12 +1176,18 @@
         "1437cbd2-75ab-42e4-99c1-a1db6e0f446c": {
           "progression_name": "Výzva"
         },
+        "4b262c27-3441-41bf-8fe3-2d469d5085a5": {
+          "progression_name": "Ukázkové projekty"
+        },
         "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
           "progression_name": "Projekt Laboratoře sprajtů"
         },
         "22ed3900-dd2a-4eec-99c1-69f131286de6": {
           "name": "Projekt Umělec",
           "progression_name": "Projekt Umělec"
+        },
+        "7ac41e7f-cc21-4e84-ba6c-28b74d5eb12a": {
+          "progression_name": "Ukázkové projekty"
         },
         "f0d08173-4d56-4bdc-8bd0-173ba4445206": {
           "progression_name": "Projekt Laboratoře sprajtů"
@@ -1127,6 +1217,9 @@
         "7292a6ea-9eb1-4775-a680-ad1755ee4e59": {
           "name": "Doplňující cvičení",
           "progression_name": "Doplňující cvičení"
+        },
+        "7f146ca9-a234-446d-808a-f0acc1c991e8": {
+          "progression_name": "Úvod Umělec s JR Hildebrandem"
         },
         "62eb4fa5-496a-4d2d-ad6a-1618bc2be7f0": {
           "progression_name": "Výzva"
@@ -1194,8 +1287,14 @@
         "40b1875f-642b-41c8-b209-a80034c39f59": {
           "progression_name": "Animace scény"
         },
+        "f3e8bebe-fac6-4925-9423-ec3ed6d039ca": {
+          "progression_name": "Porovnání logických hodnot"
+        },
         "51e86e72-fda9-4a5d-9f4a-a3dec424039b": {
           "progression_name": "Video: Podmíněný příkaz"
+        },
+        "517a6df3-e41e-461a-8651-cfc1269067ac": {
+          "progression_name": "Základní podmínky"
         },
         "8b445d6f-6129-4ee3-b696-45de248cb3c7": {
           "progression_name": "Předpověď"
@@ -1213,12 +1312,29 @@
         "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
           "progression_name": "Funkce"
         },
+        "d134b6a0-9d53-4050-9ed3-bdb03cecaa48": {
+          "name": "Obránce dortu",
+          "progression_name": "Obránce dortu"
+        },
+        "35d19875-08f0-421b-8044-60f3264fb51c": {
+          "progression_name": "Vytvoření kódu na přizpůsobení platformě"
+        },
         "a93b675e-fb6a-430e-86e6-ffbe77fea72e": {
           "name": "Reflexe",
           "progression_name": "Reflexe"
         },
         "dc82808d-bac6-4e90-9047-694410f3090c": {
           "progression_name": "Nastavení vlastností"
+        },
+        "9dda00cc-e51b-48f2-b2a2-d38f5175571b": {
+          "progression_name": "Události a vlastnosti"
+        },
+        "e63385fd-2aa7-4253-9322-e5872437dac3": {
+          "name": "Vytvoření aplikace",
+          "progression_name": "Vytvoření aplikace"
+        },
+        "f7cf3218-cefb-4c70-bc21-4f565bbe32e2": {
+          "progression_name": "Události desky"
         },
         "de9506b3-18cc-45c8-a490-9f9b49505977": {
           "progression_name": "Události"
@@ -1230,11 +1346,28 @@
           "name": "Reflexe",
           "progression_name": "Reflexe"
         },
+        "f6d8d80c-d7df-4fdf-91a4-3f2dd1f7240c": {
+          "name": "Úrovně výzvy",
+          "progression_name": "Úrovně výzvy"
+        },
         "d6edc1c1-8e4b-47d8-821a-718c5007dfc6": {
           "progression_name": "Cykly \"For\""
         },
+        "cfb7fdf7-acfd-49fd-a833-916fb604644f": {
+          "progression_name": "Události akcelerometru"
+        },
+        "cc461490-71ab-41a3-9b17-762e8e70be78": {
+          "name": "Události akcelerometru",
+          "progression_name": "Události akcelerometru"
+        },
         "1ea8ae38-1276-4214-9baa-667d745ca47c": {
           "progression_name": "Funkce s Parametry"
+        },
+        "6dde267c-0406-4d04-bf98-05356f89668a": {
+          "progression_name": "Obvody tlačítka"
+        },
+        "818f22f8-26b8-4738-b143-aff923b35b45": {
+          "progression_name": "Vstup a výstup desky"
         },
         "12296f1e-4a27-45e0-b951-597d94b413ab": {
           "name": "Reflexe",
@@ -1244,8 +1377,14 @@
           "name": "Reflexe",
           "progression_name": "Reflexe"
         },
+        "278a92f7-2ba4-4bb6-9cbd-0b1a1b1c7a51": {
+          "progression_name": "Ukázkové typy aplikací"
+        },
         "463ab77e-51c4-410e-80ff-f4e4e58ccbbe": {
           "progression_name": "Úvod do dizajnového módu"
+        },
+        "440973a7-6351-45b5-938f-17845fbd92c6": {
+          "progression_name": "Vytvoření obrazovky"
         },
         "a2ef497e-7a9d-48aa-a188-412d082afd64": {
           "progression_name": "Představení dizajnového módu"
@@ -1253,8 +1392,15 @@
         "66fe6772-18ed-429c-927a-b9a919198b60": {
           "progression_name": "Prvky dizajnového módu"
         },
+        "9271144d-1d13-473d-99ba-96efd4b022ea": {
+          "name": "Projekt aplikace: Návrh obrazovky",
+          "progression_name": "Projekt aplikace: Návrh obrazovky"
+        },
         "1d83d565-21fa-499c-8a66-27f53423ea9b": {
           "progression_name": "Přidávání obrazovek"
+        },
+        "28a1debd-3867-4db1-89e9-435a5b18012c": {
+          "progression_name": "Události a propojení obrazovek"
         },
         "758bff77-ce78-4c98-bc3a-d5968a9032d3": {
           "name": "Reflexe",
@@ -1266,6 +1412,10 @@
         "8bfda8a9-2f92-4cf9-8fcd-1c3009cc0e63": {
           "name": "Reflexe",
           "progression_name": "Reflexe"
+        },
+        "50c39425-3842-4145-a778-7b2c59de2164": {
+          "name": "Dort – průzkum",
+          "progression_name": "Dort – průzkum"
         },
         "40a3f261-c8e8-4724-83fd-10c3f539083f": {
           "name": "Reflexe",
@@ -1279,6 +1429,10 @@
           "name": "Reflexe",
           "progression_name": "Reflexe"
         },
+        "0cc1b631-05c8-4129-b2e9-65f02c303d16": {
+          "name": "Ukázka osobních webových stránek",
+          "progression_name": "Ukázka osobních webových stránek"
+        },
         "4dcbbc45-c3df-4c2c-a75e-c5b2b5cc23db": {
           "progression_name": "Párové programování"
         },
@@ -1287,6 +1441,10 @@
         },
         "2a1838a5-708c-4af3-baf7-54864c87153a": {
           "progression_name": "Přidávání obrázků"
+        },
+        "c08ce93f-748c-4544-ad15-d9e4303c318b": {
+          "name": "Přisouzení",
+          "progression_name": "Přisouzení"
         },
         "9b99bbac-c605-4a93-a573-277dbf0d31fe": {
           "progression_name": "Ladění"
@@ -1309,11 +1467,23 @@
         "da39537c-01a9-4613-bc81-c20b9baf0747": {
           "progression_name": "Projekty k ukončení kurzu"
         },
+        "a66e8ec0-572b-44e2-9069-dd3bdddcded2": {
+          "name": "Začni plánovat projekt",
+          "progression_name": "Začni plánovat projekt"
+        },
         "cf810bf2-e1cf-492f-bf3f-b7a337cfa8ff": {
           "progression_name": "Projekty k ukončení kurzu"
         },
+        "4db4c162-d334-4c10-99d1-cdd9aa2bdbb8": {
+          "name": "Začni plánovat projekt",
+          "progression_name": "Začni plánovat projekt"
+        },
         "0d50aac7-6c49-46ce-b513-0f94f6b36024": {
           "progression_name": "Projekty k ukončení kurzu"
+        },
+        "ed74084a-54be-443d-a9c8-d998da62ce9a": {
+          "name": "Začni plánovat projekt",
+          "progression_name": "Začni plánovat projekt"
         },
         "a4e22b77-a871-48dd-b56a-c73055f6ba15": {
           "name": "Kreslení tvarů",
@@ -1361,6 +1531,12 @@
           "name": "Volná hra",
           "progression_name": "Volná hra"
         },
+        "586fbd28-f37c-401d-b660-2536ef45eca0": {
+          "progression_name": "Porovnání logických hodnot"
+        },
+        "376e5a15-45d2-4f2f-b204-5a11130eca07": {
+          "progression_name": "Základní podmínky"
+        },
         "88f47fb8-346f-4fba-8ed1-ee4550344298": {
           "name": "Volná hra",
           "progression_name": "Volná hra"
@@ -1375,6 +1551,9 @@
         "af0c5a51-2804-4dd1-996f-de522aa7b283": {
           "name": "Volná hra",
           "progression_name": "Volná hra"
+        },
+        "f83be689-77ef-49ee-9088-630893d4d087": {
+          "progression_name": "Objevujeme informatiku – Interaktivní ukázková karta U3"
         },
         "f72b823d-ca51-4ed1-8d06-1ccf7f0960d6": {
           "name": "Reflexe",
@@ -1406,12 +1585,29 @@
           "name": "Volná hra",
           "progression_name": "Volná hra"
         },
+        "cafb2d84-1d56-4201-a96c-e7933aeaf73a": {
+          "name": "Obránce dortu",
+          "progression_name": "Obránce dortu"
+        },
+        "c0b2cd82-e34b-4bbb-8b26-75b03b5635c9": {
+          "progression_name": "Objevujeme informatiku – Informace o platformě U3"
+        },
         "4a3c9ed6-af53-4747-9298-b104980a8961": {
           "name": "Reflexe",
           "progression_name": "Reflexe"
         },
         "253d14d2-023c-4055-b6d8-180cd3312ddf": {
           "progression_name": "Nastavení vlastností"
+        },
+        "a95228f9-b9fa-4c3e-beb6-aae6e6b1b82a": {
+          "progression_name": "Události a vlastnosti"
+        },
+        "44e3ffdb-ef64-47a5-bdd5-1520778f694e": {
+          "name": "Vytvoření aplikace",
+          "progression_name": "Vytvoření aplikace"
+        },
+        "68beaef7-db4f-4053-88df-7129a41d99ea": {
+          "progression_name": "Události desky"
         },
         "14876891-4b0e-4960-878d-f5c7b5771261": {
           "progression_name": "Události"
@@ -1426,15 +1622,35 @@
         "ffe0d2ab-7af9-4415-8af0-48c88e6a0693": {
           "progression_name": "Cykly \"For\""
         },
+        "e8c311fc-2914-40b2-92c0-d15195772399": {
+          "progression_name": "Objevujeme informatiku: Cyklus for"
+        },
         "2b5209d7-f495-4e26-b2af-8b639c085bca": {
           "progression_name": "Cykly \"For\""
+        },
+        "28ef0db8-d735-44ed-ae34-b62cb9c27a84": {
+          "progression_name": "Události akcelerometru"
+        },
+        "d0d2b68c-d439-452a-b0ae-4819284c34da": {
+          "name": "Události akcelerometru",
+          "progression_name": "Události akcelerometru"
         },
         "41a48a88-144d-417d-a903-a09df11b7f9c": {
           "progression_name": "Funkce s Parametry"
         },
+        "54241a71-28da-4a59-86c9-3f9f07e9406f": {
+          "progression_name": "Obvody tlačítka"
+        },
+        "b55ac1ef-838d-45e7-9bd6-b334df8c02d5": {
+          "progression_name": "Vstup a výstup desky"
+        },
         "6d0332f9-d670-4588-9e96-5975fb480945": {
           "name": "Reflexe",
           "progression_name": "Reflexe"
+        },
+        "114b3fc3-3b32-4fb0-808b-aa1649d75999": {
+          "name": "Ukázka osobních webových stránek",
+          "progression_name": "Ukázka osobních webových stránek"
         },
         "322f42db-5491-4424-9d7b-b64af0b54703": {
           "progression_name": "Párové programování"
@@ -1444,6 +1660,10 @@
         },
         "f8c60aab-32aa-4d82-8a8a-8d3ef2d5a467": {
           "progression_name": "Přidávání obrázků"
+        },
+        "efa79708-e590-4b15-943c-4fc8675f1929": {
+          "name": "Přisouzení",
+          "progression_name": "Přisouzení"
         },
         "3fcf676a-373f-41b3-8cf1-ecb10c28ec23": {
           "progression_name": "Ladění"
@@ -1487,6 +1707,10 @@
         "6cbd55ba-116e-493c-8bea-b71096dd0a05": {
           "progression_name": "Přehled"
         },
+        "6ac2bf23-0b34-4e13-8023-c8c436048d54": {
+          "name": "Dort – průzkum",
+          "progression_name": "Dort – průzkum"
+        },
         "4f744a54-0d8b-49a1-8581-fc05cef356c6": {
           "name": "Reflexe",
           "progression_name": "Reflexe"
@@ -1495,14 +1719,24 @@
           "name": "Reflexe",
           "progression_name": "Reflexe"
         },
+        "7e52b764-7b7d-47c6-9291-8a61a9f5cd22": {
+          "progression_name": "Ukázkové typy aplikací"
+        },
         "8465de8f-0cf7-40ea-8ed2-d5e48e0d8ae4": {
           "progression_name": "Představení dizajnového módu"
         },
         "45ec05ff-a316-4da6-8857-f4e39c4f55a8": {
           "progression_name": "Úvod do dizajnového módu"
         },
+        "9b0828bc-ccf8-466b-b351-5d9b0fcb4d9a": {
+          "progression_name": "Vytvoření obrazovky"
+        },
         "84dbdb28-4574-4fee-bbaa-2e5914ee2989": {
           "progression_name": "Prvky dizajnového módu"
+        },
+        "023b14b7-4298-426c-bbc3-2d60a52f08c1": {
+          "name": "Projekt aplikace: Návrh obrazovky",
+          "progression_name": "Projekt aplikace: Návrh obrazovky"
         },
         "86d32260-eb05-4162-a79e-f6d56995793c": {
           "progression_name": "Přidávání obrazovek"
@@ -1590,6 +1824,10 @@
         },
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
           "description": "#### Za hranice Hodiny kódu\n\nJe spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení počítačové vědy. Tady je několik námětů:\n\n-   Vyučujte kurzy programu [Základy informatiky Code Studia](http://code.org/educate/k5). Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci. Neznáte žádné informatiky v okolí? Oslovte některého dobrovolníka z naší [mapy dobrovolníků](https://code.org/volunteer/local)"
+        },
+        "f108ae93-f672-4062-b6d6-522901659990": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu",
+          "progression_name": "Objevujeme informatiku – Průzkum po kurzu"
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Úvod",
@@ -2204,6 +2442,9 @@
         },
         "41c8a77e-7549-4597-94c2-b5d1916209eb": {
           "description": "Cíl: Tato část procesu je průzkumem.  Studenti se posadí na pódium plné ukázkových projektů, které budou remixovat a učit se.  Nejenže tak získají představu o tom, co je možné, ale také jim to pomůže poznat omezení tohoto nástroje.\n\nDejte studentům den na to, aby si pohráli s ukázkovými projekty, které v lekci naleznou, a remixovali je. Nechte je použít deníky (nebo papírové sešity), aby si průběžně zaznamenávali myšlenky a nápady.\n\nTuto aktivitu by měli provádět ve stejných dvojicích/skupinách, které budou na projektech pracovat společně během několika následujících lekcí.\n\nUjistěte se, že třída chápe, že stráví příštích několik týdnů na vlastních projektech, takže by měla věnovat velkou pozornost tomu, jak byly tyto programy napsány, a také pojmům, které používají."
+        },
+        "db7f26e9-547b-4801-8328-a93aefc4ce9e": {
+          "progression_name": "Ukázkové projekty"
         },
         "1008c1d7-2968-4264-9de2-076e0bc0b086": {
           "name": "Definování a příprava",
@@ -3519,7 +3760,8 @@
           "description": "-   Dráty přenášejí informace prostřednictvím stroje ve formě elektřiny.\n    -   Dvě možnosti, které počítač používá s ohledem na tyto elektrické informace, jsou „vypnuto“ a „zapnuto“. Stejně jako světla v této místnosti!\n        -   Když počítače reprezentují informace pouze pomocí dvou možností, říká se tomu „binární“.\n    -   Toto téma dvou voleb nekončí, když se informace dostane na místo určení.\n-   Počítače také _ukládají_ informace pomocí binárního kódu.\n    -   Binární není vždy vypnuto a zapnuto.\n        -   Pevné disky ukládají informace pomocí magnetického pozitivu a magnetického negativu.\n        -   Disky DVD ukládají informace buď jako reflexní, nebo nereflexní.\n    -   Jak si myslíte, že můžeme převést věci z reálného života, které chceme uložit do počítače, do binární podoby?\n        -   Začněme písmeny.\n        -   Použijte **\\*pracovní list** a ukažte, jak by počítač mohl reprezentovat velká písmena.\n            -   Zde je vhodná chvíle zmínit, že každé místo, kde máte binární možnost, se nazývá „binární číslice“ nebo zkráceně „bit“.\n            -   Zeptejte se, zda někdo ví, jak se nazývá seskupení osmi bitů (je to bajt).\n            -   Zábavný fakt: Seskupení čtyř bitů se nazývá nibble.\n            -   Podívejte se na **\\*Bity versus bajty – video pro studenty** (~1 minuta).\n        -   Projděte několik příkladů převodu písmen do binární soustavy a zpět.\n        -   Poté napište zakódované písmeno a dejte třídě několik sekund na to, aby zjistila, co to je.\n        -   Jakmile třída sama přijde na to, jaké písmeno je zakódováno, můžete přejít k další aktivitě."
         },
         "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d": {
-          "name": "Binární náramky"
+          "name": "Binární náramky",
+          "progression_name": "Binární náramky – aktivita bez počítače"
         },
         "9ef02596-61a9-4eee-b8b5-db290a9721d0": {
           "tips": [
@@ -4064,6 +4306,9 @@
           "tips": [
             "Studenti si při kódování vyzkouší spoustu pokusů a omylů. Jejich projekty se pravděpodobně stanou zkrácenými verzemi původního rozsahu. Připomeňte studentům, že tento druh kompromisů je při navrhování softwaru běžný. Nevadí, když se jim nepodaří zabudovat všechny funkce, které si naplánovali!"
           ]
+        },
+        "44ff9770-a1eb-4ec3-922d-013bcadaef08": {
+          "progression_name": "Ukázkové projekty"
         },
         "bfb31158-7c6c-4e30-9e86-141b77445111": {
           "name": "Ukázka",
@@ -4718,6 +4963,10 @@
             "Studenti si při kódování vyzkouší spoustu pokusů a omylů. Jejich projekty se pravděpodobně stanou zkrácenými verzemi původního rozsahu. Připomeňte studentům, že tento druh kompromisů je při navrhování softwaru běžný. Nevadí, když se jim nepodaří zabudovat všechny funkce, které si naplánovali!"
           ]
         },
+        "b4d55ac7-44a4-4551-89ca-9fce880121ac": {
+          "name": "Ukázkové projekty",
+          "progression_name": "Ukázkové projekty"
+        },
         "d99249e4-021e-4a39-9462-045e0306c00a": {
           "name": "Ukázka",
           "description": "Chcete-li oslavit práci studentů, vyhraďte posledních 10 minut, aby mohli předvést své projekty. To lze provést mnoha způsoby, ale zde je několik z nich:\n\n-   **Veřejná ukázka**: Vyberte pár vzorných dobrovolníků, kteří krátce předvedou své projekty a vyprávějí o nich před třídou. Požádejte je, aby se přitom zmínili o tom, jaká pro ně byla zkušenost s plánováním a kódováním. \n-   **Testování ve dvojicích**: Vyzvěte studenty nebo skupiny, aby vytvořili dvojice a vzájemně si vyzkoušeli své projekty. Při tom je požádejte, aby si navzájem poskytli pozitivní a konstruktivní zpětnou vazbu. Výhodou je, že studenti budou mít možnost poskytnout zpětnou vazbu a reagovat na ni v menším počtu. \n-   **Procházka galerií**: Ujistěte se, že všichni studenti mají své projekty připravené k testování. Požádejte studenty, aby se ve stylu hry „škatule, škatule, hejbejte se“ přesunuli k jinému počítači a několik minut tam projekt testovali, dokud od vás nedostanou pokyn k přesunu k jinému počítači. Tento postup opakujte každých několik minut. I když je zde méně příležitostí pro strukturovanou komunikaci, zajistí to, že studenti budou mít možnost předvést co nejvíce projektů svým vrstevníkům."
@@ -5129,6 +5378,9 @@
         "d41c813d-c7c8-45df-82fc-7dfa577689c7": {
           "description": "Zde jsou další zdroje, které můžete studentům poskytnout pro zlepšení výuky:\n\n-   [Rodinné aktivity](https://drive.google.com/open?id=1jgFQhQawNgbG8VFWDgcu8jfYGeIvKz77VV54Revd0Gw)\n-   [Rodinné tipy](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)\n-   Nechte studenty vést brainstorming a napsat názor na to, co znamená tvrzení „s větší silou přichází větší zodpovědnost“ v digitálním světě. V čem je přístup k internetu „velkou silou“? Jakou odpovědnost máme vůči sobě a ostatním? Studenti mohou své práce zveřejnit na blogu nebo na stránce vaší třídy."
         },
+        "c350027b-7b9e-4782-af88-dc1015043bac": {
+          "progression_name": "Buď super digitální občan"
+        },
         "bec84680-216c-4711-b91f-5b37260fd598": {
           "name": "Klíčový slovník",
           "description": "-   **vrozené**: něco, s čím se narodíte.\n-   **osobní informace**: informace o vás, které nelze použít k vaší identifikaci, protože platí i pro mnoho jiných lidí (např. barva vašich vlasů nebo město, ve kterém žijete).\n-   **soukromé informace**: informace o vás, které mohou být použity k vaší identifikaci, protože jsou pro vás jedinečné (např. vaše celé jméno nebo vaše adresa)\n-   **registrace (online)**: zadání vašich údajů za účelem přihlášení a získání přístupu k webové stránce nebo aplikaci.\n\n**Před lekcí**: Jako volitelnou aktivitu před lekcí nechte studenty zahrát si hru [Share Jumper](https://www.digitalpassport.org/share-jumper.html) v Digital Passport™ od Common Sense Education. Pomůže vám to představit klíčové pojmy této lekce. Chcete-li se dozvědět více, nahlédněte do [Pedagogického průvodce Digital Passport](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf)\n\n**Řekněte**: _Dnes začneme malou hrou. Budu vám číst výroky a vy vstanete u každého, které je podle vás pravdivé. Pokud pravdivé není, zůstaňte sedět. Po každém výroku se rozhlédněte, kdo další stojí nebo sedí._ ([snímek 4](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_283))\n\n**Přečtěte** třídě níže uvedené výroky a nechte studentům čas, aby se po každém z nich postavili nebo posadili. Než přejdete k dalšímu výroku, vyzvěte všechny studenty, aby se posadili.\n\n-   _Vstaňte, pokud vy nebo někdo z vaší rodiny mluvíte kromě češtiny jiným jazykem._\n-   _Vstaňte, pokud máte dva nebo více sourozenců._\n-   _Vstaňte, pokud máte domácího mazlíčka._\n-   _Vstaňte, pokud jste někdy byli na YouTube._\n-   _Vstaňte, pokud jste někdy sdíleli něco o sobě online_\n\n**Požádejte** všechny studenty, aby se posadili, a zeptejte se: _Co jste se při této aktivitě naučili? Bavilo vás to? Proč ano nebo proč ne?_\n\nVyzvěte dobrovolníky ke sdílení. V případě potřeby navažte na studenty, kteří sdíleli, a požádejte je, aby vysvětlili, co je na tom bavilo nebo nebavilo.\n\n**Řekněte**: _Účelem této aktivity bylo užít si zábavu a lépe se poznat. Existuje mnoho situací, kdy sdílení informací o sobě může být zábavné a pozitivní. Jednou z těchto situací je internet, kde sdílení vašich zálib, názorů a dalších osobních informací – nikoli však soukromých – může být pozitivní a zábavné._"
@@ -5466,6 +5718,9 @@
           "name": "Day 1 – Zkoumání projektových nápadů",
           "description": "Cíl: Tato část procesu je průzkumem.  Studenti se posadí na pódium plné ukázkových projektů, které budou remixovat a učit se.  Nejenže tak získají představu o tom, co je možné, ale také jim to pomůže poznat omezení tohoto nástroje.\n\nDejte studentům den na to, aby si pohráli s ukázkovými projekty, které v lekci naleznou, a remixovali je. Nechte je použít deníky (nebo papírové sešity), aby si průběžně zaznamenávali myšlenky a nápady.\n\nTuto aktivitu by měli provádět ve stejných dvojicích/skupinách, které budou na projektech pracovat společně během několika následujících lekcí.\n\nUjistěte se, že třída chápe, že bude pracovat na vlastních projektech, takže by měla věnovat velkou pozornost tomu, jak byly tyto programy napsány, a také pojmům, které používají."
         },
+        "bc3611fe-1160-47c2-a928-c7c666478ecf": {
+          "progression_name": "Ukázkové projekty"
+        },
         "4c5a950e-1fc0-4ec3-9eda-a4a8e7631801": {
           "name": "Definování a příprava",
           "description": "Studenti během jednoho dne vymyslí projekt a naplánují strategii jeho programování.  Studenti by měli mít do konce dne náčrtek projektu a jeho popis.\n\n#### Příprava studentů na proces:\n\nNejdůležitější povinností, kterou máte při zahájení tohoto segmentu, je pomoci třídě pochopit rozsah tohoto projektu. Studenti by si měli v nadcházejících týdnech ujasnit různá očekávání, aby se mohli na své prezentace náležitě připravit.  \n\nAbyste třídě pomohli zvládnout tento vícestupňový úkol, měli byste jim první den plánování předat **\\*pracovní list** a **\\*rubriku projektu**. Studenti pak budou moci v každém kroku postupovat podle rubrik a předvídat, jaká bude nakonec známka jejich projektu.  \n\nPrůvodce projektem poskytne studentům místo, kde si mohou průběžně zaznamenávat příslušné myšlenky a postupy, aby byli na konci lépe připraveni na své prezentace.  \n\nJako učitel byste měli rozhodnout, které prvky těchto dokumentů jsou pro vás důležité, a nezapomenout upravit nebo odstranit vše, na co nemáte v úmyslu soustředit pozornost studentů."
@@ -5652,6 +5907,9 @@
             null
           ]
         },
+        "52e962a0-c40b-49c4-859e-bad1e64068ee": {
+          "progression_name": "Aplikace na doporučování knih"
+        },
         "73ce1ded-8856-4156-bfc4-c114b2bae063": {
           "tips": [
             null
@@ -5712,6 +5970,9 @@
             null
           ]
         },
+        "2f337322-f504-4ba7-9714-1c178eba4ca9": {
+          "progression_name": "Modelová karta aplikace na doporučování knih"
+        },
         "db8f4d62-af34-4871-993d-281cacf5ff29": {
           "tips": [
             null
@@ -5731,6 +5992,9 @@
           "tips": [
             null
           ]
+        },
+        "42abdf12-61c8-48a4-8118-6f0b713e28dc": {
+          "progression_name": "Ukázková aplikace: Klasifikace zvířat v ZOO"
         },
         "527dacdb-36d1-4e9e-ad42-b28aab54a395": {
           "tips": [
@@ -5815,6 +6079,15 @@
             null
           ]
         },
+        "6837e50f-be66-4db0-a31a-fff75d03b12b": {
+          "name": "Systém výstrah pro řidiče"
+        },
+        "1d2520a0-dcb3-41e9-b121-7bf0b221a87a": {
+          "progression_name": "Systém výstrah pro řidiče"
+        },
+        "29dce9c5-577d-4e2c-9d4b-b8bf0e4b18e8": {
+          "progression_name": "Systém výstrah pro řidiče"
+        },
         "4e10be5f-60ad-4bae-913d-7a157e519447": {
           "tips": [
             null
@@ -5880,6 +6153,9 @@
             null
           ]
         },
+        "1223d000-8832-4645-b9ec-3a7563068eb1": {
+          "progression_name": "Laboratoř umělé inteligence a data Kim"
+        },
         "7f4a57cb-7221-40f4-a60a-2026a13bcba2": {
           "tips": [
             null
@@ -5889,7 +6165,8 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "Laboratoř umělé inteligence a Isaacova data"
         },
         "0644a5d2-d3ae-4dea-8777-47a522955b21": {
           "tips": [
@@ -6294,6 +6571,9 @@
             null
           ]
         },
+        "761b498b-6ec2-4956-bd8f-b23e497644a5": {
+          "progression_name": "Ukázkové aplikace"
+        },
         "7fd85c65-ad1b-4f7d-a93d-eed09e89386c": {
           "tips": [
             null
@@ -6364,6 +6644,9 @@
             null
           ]
         },
+        "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8": {
+          "progression_name": "Vytvoření obrazovky"
+        },
         "648adba7-4a69-4bce-9109-9d50e9d71087": {
           "tips": [
             null
@@ -6382,7 +6665,8 @@
         "cc78f5f7-002f-44ed-9f5f-2518a19953e7": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Projekt aplikace: Návrh obrazovky"
         },
         "311288e0-9ddf-4681-a8f2-31ae7d196423": {
           "tips": [
@@ -6401,6 +6685,9 @@
         },
         "ed8ac962-30bc-457d-aee3-6965176fd6e4": {
           "progression_name": "Přidávání obrazovek"
+        },
+        "af502a23-0afa-4a37-b4e2-8ca110bd9ef6": {
+          "progression_name": "Události a propojení obrazovek"
         },
         "aec4a036-761c-4015-bdd0-e138372c1847": {
           "tips": [
@@ -6560,7 +6847,11 @@
         "fe4404fa-4e67-4c56-b117-6aa3dd7fd8ef": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Události a vlastnosti"
+        },
+        "12af028a-bc38-49f4-8fda-8cd49963e102": {
+          "progression_name": "Vytvoření aplikace"
         },
         "053cf5c9-1dd1-4da7-8fca-82dd5780c4b0": {
           "tips": [
@@ -6607,6 +6898,9 @@
           "tips": [
             null
           ]
+        },
+        "42897a7c-47b8-426e-9d2f-c9177a06433e": {
+          "progression_name": "Události desky"
         },
         "7091d49a-c4ac-4c04-aaa4-290efb0ee705": {
           "tips": [
@@ -6688,6 +6982,9 @@
             null
           ]
         },
+        "45cd46c8-3f06-4b93-8688-a6da5a670734": {
+          "progression_name": "Úrovně výzvy"
+        },
         "78b871d6-dd5f-4ad8-b32b-97df938ae849": {
           "tips": [
             null
@@ -6739,7 +7036,8 @@
         "88fbe9b6-7233-4617-a579-4eea7041c1b0": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Události akcelerometru"
         },
         "83dadfe8-ec04-4986-9e4b-8fcb301bce51": {
           "tips": [
@@ -6784,6 +7082,9 @@
             null
           ]
         },
+        "90ed38ab-3eec-449a-a2dd-dccd4a1aa26d": {
+          "progression_name": "Obvody tlačítka"
+        },
         "672d26f8-cbd5-46ea-8482-d84b0be3e335": {
           "tips": [
             null
@@ -6798,6 +7099,9 @@
           "tips": [
             null
           ]
+        },
+        "aff65857-e7c8-4c2c-91b8-ea88ac74042c": {
+          "progression_name": "Vstup a výstup desky"
         },
         "7550d329-92cf-4cd3-b0b5-c918c24f2105": {
           "progression_name": "Reflexe"
@@ -6946,6 +7250,9 @@
             null
           ]
         },
+        "b4133437-14b2-4221-8202-c411f147e13c": {
+          "progression_name": "Widget binárního čísla"
+        },
         "30ef889b-387b-4dbd-b6bc-96ca25489944": {
           "tips": [
             null
@@ -6975,6 +7282,9 @@
           "tips": [
             null
           ]
+        },
+        "5b070069-8e80-48a8-8a84-435906d67aef": {
+          "progression_name": "Widget 8bitového binárního čísla"
         },
         "38324708-63cb-4738-92c9-af06aed187f7": {
           "tips": [
@@ -7202,7 +7512,8 @@
         "f8f9a770-42a2-4c1d-9b51-52f46ff9360d": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "AI pomáhá oceánům: „Ryba“ vs. „není ryba“"
         },
         "914c565c-fb6d-490c-a14a-b289ac56d720": {
           "tips": [
@@ -7213,6 +7524,9 @@
           "tips": [
             null
           ]
+        },
+        "0644d195-c0b2-4557-9f2c-116b259fe74a": {
+          "progression_name": "AI pomáhá oceánům: Druhy ryb"
         },
         "92b13324-8ae5-4796-9071-694683704daa": {
           "tips": [
@@ -7557,6 +7871,9 @@
             null
           ]
         },
+        "d77db66e-6e3a-4e3a-82df-2499a5ad0efd": {
+          "progression_name": "Ukázka animované scény"
+        },
         "68f06aee-a50d-4b3e-9323-16f4812eb23a": {
           "progression_name": "Přidat sprajty"
         },
@@ -7851,6 +8168,9 @@
             null
           ]
         },
+        "96fe06b7-2d5b-434f-bb02-bc5e4bb74eaf": {
+          "progression_name": "Vytvoření kódu na přizpůsobení platformě"
+        },
         "b29f40dd-4e28-4c22-8aa8-9e387819622c": {
           "tips": [
             null
@@ -8040,22 +8360,30 @@
         "a52b80a3-f6a7-4e24-8347-1eb0be4ccddf": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Aplikace: Výběr domácího mazlíčka"
         },
         "e606d7d3-d552-4db3-91b7-c26f98da237c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Aplikace: Tvůrce příběhů"
         },
         "f1388388-8631-479b-bca9-ffe97206edf8": {
           "tips": [
             null
           ]
         },
+        "29f459d2-a640-4618-9829-6d5adb95cef9": {
+          "progression_name": "Aplikace: Vylepšená aplikace s domácími mazlíčky"
+        },
         "ce77f101-8880-4264-bf0e-b2d95e40c080": {
           "tips": [
             null
           ]
+        },
+        "658bb176-e81a-441b-9846-7f06edb26bcb": {
+          "progression_name": "Aplikace: Máš narozeniny?"
         },
         "584f3a53-ab7b-421d-a8a4-bc8c106ead2a": {
           "tips": [
@@ -8067,10 +8395,16 @@
             null
           ]
         },
+        "3136eec5-7ffe-4b31-9cdd-7e988769c3d1": {
+          "progression_name": "Aplikace: Národní parky"
+        },
         "fb64c101-5e75-4908-9b31-15d964b4ffa9": {
           "tips": [
             null
           ]
+        },
+        "59635fc9-85ee-4beb-8e84-3db4d473f7d5": {
+          "progression_name": "Aplikace: Kolik zemí"
         },
         "21e51178-7062-468a-b8e1-a9227a0ac5eb": {
           "tips": [
@@ -8081,6 +8415,21 @@
           "tips": [
             null
           ]
+        },
+        "7870b41a-67d4-4e4c-bac2-51df283c64a2": {
+          "progression_name": "Aplikace: Moje velkolepé narozeniny"
+        },
+        "fe0df0f8-e6fb-42c2-82a5-7542d4a4fcde": {
+          "progression_name": "Aplikace: Sešit na razítka"
+        },
+        "1bf0d6db-f0d5-4473-b861-ca00d265f8a9": {
+          "progression_name": "Aplikace: Nejrychlejší prst"
+        },
+        "09785de0-de7c-40a7-afac-9a255151a45d": {
+          "progression_name": "Aplikace: Uhodni číslo"
+        },
+        "23734edc-d8f1-43ea-b0bc-63a9f745c6bb": {
+          "progression_name": "Aplikace: Nejlepší místo na bydlení"
         },
         "ed3fc57d-be54-4625-bae7-5cac4680d615": {
           "tips": [
@@ -8101,6 +8450,15 @@
           "tips": [
             null
           ]
+        },
+        "2000a800-9ea1-4dbd-bb6c-7af93735477d": {
+          "progression_name": "Aplikace: Výběr outfitu"
+        },
+        "33b8468e-5c6c-4acb-b377-dd721dc0904a": {
+          "progression_name": "Aplikace: Vyhledávač kamarádů"
+        },
+        "028c50a4-a63b-44aa-a686-55512682ee15": {
+          "progression_name": "Aplikace: Volba filmu pro děti"
         },
         "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
           "tips": [
@@ -8464,6 +8822,9 @@
             null
           ]
         },
+        "db6b9679-26c9-45e7-9f82-03b3a92d3abf": {
+          "progression_name": "Výzva: Seznamy"
+        },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
           "tips": [
             null
@@ -8538,6 +8899,9 @@
           "tips": [
             null
           ]
+        },
+        "f52e5e03-5b2f-4caf-8c69-868f7c2acdbc": {
+          "progression_name": "Výzva: Barvy RGB"
         },
         "81ab793a-d696-4167-a9db-9258e5f476b4": {
           "progression_name": "Přidat na stránku obsah a strukturu"
@@ -8852,6 +9216,9 @@
             null
           ]
         },
+        "9b57ac7e-ffb4-413e-9289-0799156ef3ef": {
+          "progression_name": "Ukázkové projekty"
+        },
         "cef1dcf2-8240-4b77-b667-040c16bc6526": {
           "progression_name": "Párové programování"
         },
@@ -8917,6 +9284,9 @@
         "7f80f442-f41e-48a6-ba87-b2e0f50419ae": {
           "progression_name": "Výzva"
         },
+        "b7bc4801-90ce-42d1-bdcd-a4fc38632cff": {
+          "progression_name": "Úvod Umělec s JR Hildebrandem"
+        },
         "5123721b-64b2-41fd-b004-5c971dd870da": {
           "progression_name": "Výzva"
         },
@@ -8944,6 +9314,9 @@
         "d82614b6-8420-4d3f-83c7-b7fb9d353453": {
           "progression_name": "Volná hra"
         },
+        "0b1979f9-ab58-4284-adc9-ff2ccb176fde": {
+          "progression_name": "Ukázkové projekty"
+        },
         "4f8e01e3-039b-4253-992b-d0d3e8343559": {
           "progression_name": "Výzva"
         },
@@ -8965,6 +9338,9 @@
         "69f7dde3-e970-464a-8255-fa5a68ff1d77": {
           "name": "Doplňující cvičení",
           "progression_name": "Doplňující cvičení"
+        },
+        "11eeb059-ed55-4472-bcc2-95e163a7766d": {
+          "progression_name": "Úvod Umělec s JR Hildebrandem"
         },
         "c523e5e0-fe37-4dd6-a9e6-35cfc26415d3": {
           "progression_name": "Výzva"
@@ -9012,6 +9388,9 @@
         },
         "64524570-9c1b-4db9-932b-c23bfbf9bddd": {
           "progression_name": "Výzva"
+        },
+        "3d7a5a2e-afda-4120-af55-18212b84ea5c": {
+          "progression_name": "Úvod Umělec s JR Hildebrandem"
         },
         "b5e93dd6-0f17-4fe0-9628-dd5521588550": {
           "progression_name": "Výzva"
@@ -9062,6 +9441,9 @@
         "2b6efab0-59d9-4da3-ac2d-06f2f76dd473": {
           "progression_name": "Výzva"
         },
+        "b1287ca9-6c21-4e7e-86aa-9ab5b4165d30": {
+          "progression_name": "Ukázkové projekty"
+        },
         "600a7d5e-a862-4d84-bd9f-0ec3ec9f8223": {
           "progression_name": "Párové programování"
         },
@@ -9099,6 +9481,9 @@
         "54fa7040-6612-4012-b595-1f4745f1479d": {
           "progression_name": "Video"
         },
+        "d6a223e7-4d93-46e7-91ad-c8ddff5e78e0": {
+          "progression_name": "Úvod Umělec s JR Hildebrandem"
+        },
         "fca63890-3cc5-4821-b6d4-69e65dc80b05": {
           "progression_name": "Výzva"
         },
@@ -9134,6 +9519,9 @@
         },
         "20614514-4e5f-4737-8071-c17f2ae6f1e4": {
           "progression_name": "Volná hra"
+        },
+        "d8a45307-88cc-435b-a5b2-a6d8f7de2165": {
+          "progression_name": "Ukázkové projekty"
         }
       }
     }

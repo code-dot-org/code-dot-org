@@ -1446,37 +1446,37 @@
           "description": "Utilizar getters para acceder a las propiedades de elementos en un sistema"
         },
         "bdd6a1a3-5115-4486-8e0e-b61c7041c5ce": {
-          "description": "Desarrollar programas que respondan a la entrada analógica"
+          "description": "Desarrollar programas que respondan a una entrada análoga"
         },
         "bf9edfe9-1d42-4a71-a6e5-3cda32406544": {
           "description": "Escalar un rango de números para satisfacer una necesidad específica"
         },
         "5b183dd0-2691-4e31-81d2-74139e335e46": {
-          "description": "Representar el valor de un sensor de varias maneras"
+          "description": "Representar el valor de un sensor de distintas maneras"
         },
         "52c81204-19e3-433f-a6f2-9c7342c37b72": {
           "description": "Implementar distintas funciones de un programa siguiendo una guía de proyecto estructurada"
         },
         "828e50ab-ef2c-41af-987d-6a2c97c0eeda": {
-          "description": "Desarrolla un programa que responda a los eventos de una entrada de hardware"
+          "description": "Desarrollar un programa que responda a los eventos de la entrada de un hardware"
         },
         "5e15877a-55c0-434e-b794-1277ca716016": {
-          "description": "Crea una función que utilice parámetros para generalizar el comportamiento"
+          "description": "Crear una función que utilice parámetros para generalizar comportamiento"
         },
         "ae74915c-b485-44a1-a60b-a4051c1abca7": {
-          "description": "Utiliza los manejadores de eventos para responder a la interacción del usuario"
+          "description": "Utilizar controladores de eventos para responder a la interacción del usuario"
         },
         "a36af5cd-1af2-482c-8475-ebd96ef5ebf9": {
-          "description": "Diseñar un programa informático que utilice hardware para la entrada y salida no tradicionales"
+          "description": "Diseñar una pieza de software que utilice hardware para las entradas y salidas no tradicionales"
         },
         "84079c5a-326d-4fda-9439-acd6478673b3": {
-          "description": "Prototipo de un programa que integra software y hardware"
+          "description": "Elaborar el prototipo de un programa que incluya software y hardware"
         },
         "34585635-155a-4032-b653-6cfaa0832b7e": {
-          "description": "Acceder a un elemento de un array mediante su índice"
+          "description": "Acceder a un elemento en un conjunto utilizando su índice"
         },
         "57704d64-7732-445a-a82a-81f3b6955df8": {
-          "description": "Utiliza el array de LEDs de colores para controlar individualmente cada LED "
+          "description": "Usar el conjunto de LED de colores para controlar cada LED de color individualmente"
         },
         "5f30c244-1a5b-4db9-87bf-71b0e651d2f1": {
           "description": "Crear y modificar un array"

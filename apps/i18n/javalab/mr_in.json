@@ -110,6 +110,7 @@
   "saveToBackpack": "बॅकपॅकमध्ये  सेव्ह करा",
   "sendingVideo": "व्हिडीओ पाठवत आहे. एकूण लांबी: {totalTime} सेकंद.",
   "startingPainter": "सुरुवातीचा चित्रकार.",
+  "submit": "सबमिट करा",
   "successfulTestResult": "{className} > {methodName} यशस्वी",
   "switchToDisplayTheme": "{displayTheme} मध्ये बदला",
   "timeoutWarning": "चेतावणी: तुमचा प्रकल्प 15 सेकंदात चालणे बंद होईल.",

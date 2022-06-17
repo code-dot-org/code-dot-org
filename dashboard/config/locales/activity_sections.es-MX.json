@@ -13664,18 +13664,18 @@
           "description": "1.  ¿Qué código necesitas para obtener información de esta entrada?\n2.  Nombra un ejemplo de alguna situación en la que podrías usar esta entrada.\n3.  Nombra un ejemplo de alguna situación en la que **no** podrías utilizar esta entrada."
         },
         "f5a1e7d6-5715-4050-bfed-a5e0663486c4": {
-          "name": "Analógico y Digital",
-          "description": "**Piensa, Empareja, Comparte:** ¿Cómo cuantificarías cada uno de tus cinco sentidos (tacto, gusto, vista, olfato y oído)? Piensa en la unidad anterior y en las distintas formas que se te ocurrieron para codificar datos en un ordenador.",
+          "name": "Análogo y Digital",
+          "description": "**Pensar, trabajar en pares y compartir:** Cómo podrías contar cada uno de tus cinco sentidos (tacto, gusto, vista, olfato, oído). Piensen en la unidad anterior, y en las formas que ustedes mismos sugirieron de codificar información en una computadora.",
           "tips": [
-            "El objetivo es que los alumnos piensen en cómo se puede convertir un valor natural (o analógico) en un formato computable. Anima a los alumnos a reflexionar sobre cuáles pueden ser los límites superior e inferior de cada valor (por ejemplo, ¿hay una cantidad mínima o máxima de sonido?)."
+            "El objetivo de esta actividad es que los estudiantes analicen de qué forma pueden hacer que un valor natural (análogo) sea computable. Anime a los estudiantes a que consideren los límites   altos y más bajos que cada valor podría tener (por ejemplo, ¿existe una cantidad mínima o máxima de sonido?)."
           ]
         },
         "9b2fa494-5d70-4f47-967f-f7ede451d439": {
-          "description": "**Vídeo:** ¡Hoy vamos a escribir programas que tienen \"sentidos\" propios! Mostrar [Diferencia entre señales Analógicas y Digitales - Video](https://www.youtube.com/watch?v=RQc_frX50BA)"
+          "description": "**Video:** Hoy escribiremos programas que tienen sus propios “sentidos”. Muestre el video [La diferencia entre señales análogas y digitales](https://www.youtube.com/watch?v=RQc_frX50BA)"
         },
         "65b2eb73-b2f8-4ee7-ba1d-0d7e78e7f62a": {
-          "name": "Entradas Analógicas",
-          "description": "\\*\\* Distribuye:\\*\\* Reparte los Adafruit Circuit Playgrounds.\n\n**Transición:** Envía a los estudiantes a Code Studio. Hazles saber que hoy experimentarán con unos sensores que detectan señales [v analog/csd/2021] y las convierten en valores [v digital/csd/2021] que pueden ser utilizados por el ordenador."
+          "name": "Entradas Análogas",
+          "description": "**Distribuir:** Distribuya los Circuit Playgrounds.\n\n**Transición:** Pida a los estudiantes que ingresen a Code Studio. Comuníqueles que hoy experimentarán con sensores que detectan las señales [v analog/csd/2021] y que las convierten en valores [v digital/csd/2021] que pueden ser utilizados por computadoras."
         },
         "7eb66b7f-6ed3-4590-ac67-725362a38253": {
           "progression_name": "Experimento con sensores"
@@ -13688,7 +13688,7 @@
         },
         "ef9ec42f-f86e-4636-a45b-5da0d208b714": {
           "tips": [
-            "**Nivel 11**\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
+            "**Nivel 11** \nPuede utilizar este nivel como una evaluación formativa para sus estudiantes. Haga clic dentro del nivel para ver la rúbrica y dejar retroalimentación a sus estudiantes"
           ],
           "progression_name": "Sensores para Colores"
         },
@@ -13696,33 +13696,33 @@
           "progression_name": "Desafío Extra"
         },
         "563119d4-41c6-499b-a289-9a6911461c56": {
-          "name": "Sensores por todas partes",
-          "description": "**Diario:** Teniendo en cuenta todos los dispositivos informáticos con los que interactúas habitualmente, identifica todos los posibles sensores analógicos que puedas. ¿Dónde reciben tus dispositivos informáticos una señal que cambia continuamente y la convierten en datos digitales?"
+          "name": "Sensores por todos lados",
+          "description": "**Escribir en la bitácora:** Tomando en cuenta todos los dispositivos computacionales con los que interactúas diariamente, identifica todos los potenciales sensores análogos que puedas. ¿En qué lugar tus dispositivos computacionales toman una señal que cambia continuamente y la convierten en datos digitales?"
         },
         "4016ab65-7533-4351-9967-71b07aeb18f1": {
-          "name": "Juego de Carreras de Emojis",
-          "description": "**Agrupación:** Coloca a los estudiantes en parejas\n\n**Demostración:** Mostrar a los alumnos la demo de la Carrera Emoji, disponible al principio de esta lección.\n\n**Transición:** Envía a los estudiantes a Internet para que prueben el juego por su cuenta. Cada pareja debe ejecutar el juego y seguir las instrucciones en las que se les pide que hagan una lista de los componentes de la placa, los eventos y las variables que consideren necesarios para crear este juego."
+          "name": "Jugar a la carrera emoji",
+          "description": "**Grupo:** Pida a sus estudiantes que trabajen en pareja\n\n**Demostración:** Muestre a los estudiantes la aplicación “Carrera de Emojis” cuyo enlace aparece al inicio de esta lección.\n\n**Transición:** Pida a los estudiantes que se conecten y prueben el juego por su cuenta. Cada pareja debe jugar el juego y seguir las instrucciones que les indican, hacer una lista de los componentes del tablero, eventos, y variables que ellos creen que fueron necesarias para crear este juego."
         },
         "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f": {
           "name": "Pausa: Revisar la Guía de Proyecto",
-          "description": "**Debatir:** Los estudiantes deben haber creado individualmente una lista de componentes de la placa, eventos y funciones que necesitarán para hacer el juego que han practicado. Pide a los alumnos que compartan sus listas con un compañero antes de discutirlas en clase.",
+          "description": "**Análisis:** Los estudiantes deben haber creado una lista individual de los componentes del tablero, eventos y funciones que necesitarían para crear el juego que acaban de probar. Pida a los estudiantes que compartan sus listas con un compañero antes de analizarlas con el resto de la clase.",
           "tips": [
-            "**Dirige la conversación:** Puedes escribir \"Tablero\", \"Eventos\" y \"Funciones\" en la pizarra y anotar sus ideas debajo de cada una. Pide a los alumnos que justifiquen sus decisiones, pero sin sentir la necesidad de decantarse por una sola respuesta correcta.",
-            "**Mantener la Atención:** Los alumnos pueden distraerse fácilmente con la diversión del juego. Deja que jueguen un rato, pero eventualmente anímales a seguir las instrucciones en pantalla y a que hagan una lista de los componentes de la placa, los eventos y las variables que serían necesarias para crear el juego."
+            "**Manteniendo la conversación:** Puede escribir las palabras “tablero”, “eventos” y “funciones” en la pizarra e ir registrando las ideas de los estudiantes debajo de cada una de las palabras. Pida a los estudiantes que justifiquen sus respuestas. No es necesario llegar a una sola respuesta correcta.",
+            "**Mantener el enfoque:** Es muy fácil que los estudiantes se distraigan al probar este divertido juego. Permítales jugar un momento, pero luego anímelos a seguir las instrucciones en la pantalla y hacer la lista de los componentes del tablero, eventos y variables que serían necesarias para crear este juego."
           ]
         },
         "0d9ecf02-4bac-4dc3-86c4-ba83c96e8a14": {
-          "description": "**Distribuye:** Entrega a cada estudiante o pareja de estudiantes una copia de la guía del proyecto.\n\n**Pregunta:** Compara la lista de cosas que pensabas que serían necesarias con las que aparecen en esta guía del proyecto. ¿Notas alguna diferencia? \n\n**Debate:** Como clase, compara la lista que tenías en la pizarra con la lista de componentes de la placa, eventos y funciones que aparecen en la guía del proyecto. Observa las similitudes. Cuando haya diferencias, trata de entender por qué. No enfoques un conjunto como \"correcto\" frente a \"incorrecto\", sino simplemente confirma que ambos serían capaces de desarrollar el juego de los alumnos.",
+          "description": "**Distribuir:** Entregue una copia de la guía de proyecto a cada pareja o estudiante.\n\n**Decir:** Compara la tu lista de los elementos que tú creías eran necesarios para hacer este juego con los elementos de la guía de proyecto. ¿Notas algunas diferencias? \n\n**Análisis:** Como clase, compare la lista que escribió en la pizarra con la lista de componentes, eventos y funciones de la guía de proyecto. Resalte las similitudes En las diferencias, trate de entender el por qué. No establezca a un conjunto como “correcto” o “incorrecto”, sino, más bien, confirme que ambos podrían utilizarse para crear el juego que los estudiantes jugaron.",
           "tips": [
-            "**Compartir la Guía del Proyecto:** Los estudiantes no escriben en la guía del proyecto en esta lección. Puedes dar a cada alumno su propia copia como referencia, pero también puedes optar por imprimir una copia por pareja, compartir copias digitales o simplemente mostrar la guía en el proyector. Siempre que esté disponible como referencia, cualquier enfoque funcionará bien."
+            "**Compartiendo la guía de proyecto:** En esta lección los estudiantes no escribirán en la guía de proyecto.  Puede dar a cada estudiante su propia copia para que pueda usarla como referencia, también puede dar una copia a cada pareja, compartir copias digitales o proyectar la guía para que toda la clase pueda verla. Siempre y cuando la guía esté disponible como referencia, cualquier opción servirá."
           ]
         },
         "796b633c-05c1-4346-ba4f-65cdeb4a7715": {
-          "description": "Normalmente hay muchas formas de estructurar un programa para que funcione como uno quiere. Lo importante cuando se escriben programas complejos o grandes es empezar con un plan. Hoy vamos a ver cómo podemos implementar este plan para construir nuestro propio juego de carreras de emojis. Al final de la lección no sólo habrás construido tu juego, sino que sabrás cómo modificarlo y hacerlo tuyo. ¡Vamos allá!"
+          "description": "Por lo general, existen muchas formas en las que puedes estructurar un programa y hacer que funcione como tú quieres. Lo importante, cuando escribimos programas complejos o grandes, es que comiences con un plan. Hoy veremos cómo podríamos implementar este plan para crear nuestra propia carrera de emojis. Al final de esta lección no solo habrás construido tu juego, sino que además sabrás cómo puedes modificarlo para hacer el tuyo. ¡Aquí vamos!"
         },
         "08187ef2-1a13-465b-940a-78d18fea19eb": {
           "name": "Guía de Proyecto de Implementación ",
-          "description": "Los alumnos reciben un código de inicio para establecer las funciones y los manejadores de eventos necesarios para este proyecto. Estos niveles guían a los estudiantes en el uso de las variables proporcionadas y en lo que debe ocurrir dentro de los manejadores de eventos. A medida que los estudiantes avanzan por los niveles, se les indica cómo se utiliza la guía del proyecto. Aunque este proyecto está muy estructurado, en la siguiente lección se pedirá a los estudiantes que desarrollen un programa basado en hardware de su propio diseño, así que asegúrate de reforzar la conexión entre la planificación que se hizo en la guía del proyecto y los niveles de programación."
+          "description": "A los estudiantes se les proporcionará un código inicial para establecer las funciones y los controladores de eventos que necesitarán para este proyecto. Estos niveles guiarán a los estudiantes y les señalarán cómo utilizar las variables proporcionadas, y que debería ocurrir en los controladores de eventos. Mientras los estudiantes trabajan en los niveles, señale a los estudiantes cómo deberían estar usando la guía de proyecto. Si bien el aprendizaje en este proyecto se realiza en forma progresiva, en la siguiente lección los estudiantes tendrán que desarrollar un programa basado en hardware y con su propio diseño, es por esto que debe asegurarse de reforzar la conexión entre el plan realizado en la guía de proyecto y en los niveles de programación."
         },
         "75c3755e-3860-4965-b2df-a459e020a7a8": {
           "progression_name": "Programa de muestra"
@@ -13735,7 +13735,7 @@
         },
         "01addbef-11df-4c62-a099-ae69c66c7c1c": {
           "tips": [
-            "**Introducción a Funciones con Parámetros**\n\nLos parámetros son una forma poderosa de hacer que las funciones sean más útiles al darles una entrada específica. Estamos introduciendo esto aquí principalmente como una forma de exponer a los estudiantes a este concepto, pero las funciones con parámetros no se enseñarán a fondo hasta el capítulo 2. Para los alumnos que estén interesados en experimentar más con esta técnica ahora, guíalos a la [documentación](https://studio.code.org/docs/applab/functionParams_n/)."
+            "**Exposición a funciones con parámetros**\n\nLos parámetros son una buena forma de hacer que las funciones sean más útiles, dándoles una entrada específica. Presentamos este concepto en esta lección, para que los estudiantes estén expuestos y familiarizados con él;  sin embargo, las funciones con parámetros se presentarán formalmente en el capítulo 2.  Si los estudiantes están interesados en experimentar más con esta técnica, puede indicarles que visiten la sección de [documentation.](https://studio.code.org/docs/applab/functionParams_n/)"
           ],
           "progression_name": "Retocando Funciones"
         },
@@ -13749,29 +13749,29 @@
           "progression_name": "Hazlo tuyo"
         },
         "5f92fa0f-910d-429a-bb08-d71b1f5b3408": {
-          "name": "Hazlo tú mismo",
-          "description": "Este último nivel anima a los alumnos a hacer su propio juego. Si los alumnos han llegado hasta este punto, tienen todas las habilidades que necesitan para progresar en el plan de estudios, así que no hay presión para completar ninguna de las modificaciones sugeridas en este nivel. Sin embargo, si tienes tiempo, practicar la planificación y la implementación de nuevas características será una habilidad útil. Incluso el simple hecho de modificar el aspecto de las pantallas es una forma sencilla de que los alumnos hagan su propio juego.\n\n**Compartir:** Una vez que los estudiantes hayan completado el proyecto, pueden compartir su trabajo con los compañeros de clase. Anima a los estudiantes a mostrar el código adicional que han escrito y a explicar cómo ha cambiado el funcionamiento del juego."
+          "name": "Hazlo tuyo",
+          "description": "Este último nivel impulsa a los estudiantes a hacer su propio juego. Si los estudiantes han logrado avanzar hasta esta instancia, es porque ya tienen todas las habilidades necesarias para seguir avanzando en el currículum, por lo que no es necesario completar ninguna de las modificaciones sugeridas en este nivel. Sin embargo, si hay tiempo, practicar la planificación e implementación de nuevas características es una habilidad que los ayudará bastante.  Incluso el modificar la apariencia de las pantallas es una manera fácil con la que los estudiantes pueden personalizar su juego.\n\n**Compartir:** Una vez que los estudiantes hayan completado el proyecto, puede compartir su trabajo con sus compañeros de clase. Anímelos a exhibir el código adicional que escribieron y a que expliquen cómo este ha modificado el comportamiento del juego."
         },
         "8ec0ed9e-38fc-4dbb-b1c7-86a999fc644a": {
-          "name": "Ejemplos de Proyecto de Demostración",
-          "description": "**Presentar:** En el proyector, muestra el proyecto de ejemplo al principio de esta lección. \n\n**Sugerencia:** Analiza el ejemplo en busca de los siguientes elementos:\n\n-   ¿Dónde se reciben las entradas?\n    -   ¿Qué eventos crees que se están utilizando para cada entrada?\n-   ¿Qué información se está emitiendo a través de la placa?\n-   ¿Dónde podría estar usando este programa un bucle?\n\n**Comentar:** Pide a los estudiantes que compartan sus observaciones y análisis del ejemplo. \n\n**Distribuir:** Entrega a cada alumno una copia de la rúbrica. Repasa con ellos los diferentes componentes de la rúbrica para asegurarte de que entienden los componentes del proyecto."
+          "name": "Demostración Ejemplos de Proyecto",
+          "description": "**Mostrar:** En el proyector, muestre el proyecto de ejemplo que se encuentra al inicio de esta lección. \n\n**Decir:**: Analice el ejemplo de los siguientes elementos:\n\n-   ¿Desde dónde se obtiene la entrada?\n    -   ¿Qué eventos crees que se utilizan? \n-   ¿Qué información de salida se está emitiendo a través del tablero?\n-   ¿En qué parte este programa podría estar usando un bucle?\n\n**Análisis:** Pida a los estudiantes que compartan sus respuestas y análisis del ejemplar. \n\n**Distribuir:** Distribuya una copia de la rúbrica a cada estudiante. Revise los distintos componentes de la rúbrica junto con la clase para asegurarse de que comprenden las distintas partes del proyecto."
         },
         "93bea4b2-3987-42e0-8812-4a3ea4ebfba1": {
-          "name": "Sin Conexión: Planificación de Programas",
-          "description": "**Agrupa:** Coloca a los estudiantes en grupos de 2 a 3 personas.\n\n**Distribuye:** Reparte la guía del proyecto a los alumnos. Esta es la herramienta que los estudiantes utilizarán para definir sus proyectos antes de entrar en los ordenadores. Da tiempo a los alumnos para que hagan una lluvia de ideas sobre el tipo de programa que quieren hacer.\n\n#### Guía de Proyectos para Hacer un Juego\n\n#### Lluvia de Ideas\n\nDa a los grupos algo de tiempo para que hagan una lluvia de ideas sobre su proyecto. El objetivo es crear un juego sencillo que pueda ser controlado utilizando elementos del Circuit Playground. Anima a los estudiantes a pensar en todos los programas y proyectos que han hecho hasta ahora como posibles puntos de partida (incluyendo los prototipos de la Unidad 4)."
+          "name": "Desconectados: Planificando la Programación",
+          "description": "**Grupo:** Ubique a los estudiantes en parejas o en grupos de a 3.\n\n**Distribuir:** Entregue la guía de proyecto a los estudiantes. Esta es la herramienta que los estudiantes utilizarán para examinar sus proyectos antes de trabajar con las computadoras. De a los estudiantes unos minutos para que piensen en el tipo de programa que quieren hacer.\n\n#### Guía de proyecto: Crear un juego\n\n#### Lluvia de ideas\n\nDé a los grupos algunos minutos para proponer ideas para su proyecto. El objetivo es idear un juego simple que pueda ser controlado utilizando elementos del Circuit Playground. Anime a los estudiantes a que recuerden los programas y proyectos que han hecho hasta el momento y que los usen como puntos de partida (incluyendo a los prototipos de la unidad 4)."
         },
         "8259e743-5c84-4516-8f31-300f06de6ab0": {
-          "description": "1.  Una vez que los grupos se hayan decidido por una idea, pueden anotarla en la guía de actividades en el apartado Lluvia de Ideas del Proyecto.\n2.  A continuación, los alumnos piensan en los Eventos a los que tendrán que responder.",
+          "description": "1.  Una vez que los grupos hayan acordado una idea, pueden registrarla en la guía de actividades bajo el título de Ideas para el proyecto.\n\n2.  Luego, los estudiantes deben pensar en los eventos a los que deberán responder.",
           "tips": [
-            "A los alumnos les puede resultar especialmente difícil predecir _todos_ los acontecimientos a los que querrán responder o las funciones que tendrán que crear. Asegúrate de que sepan que se trata de un proceso _iterativo_ y que la planificación es sólo el primer paso. Queremos empezar este proyecto con un plan lo más claro posible, pero es probable que haya cosas que no se hayan tenido en cuenta desde el principio y que el plan tenga que cambiar en consecuencia."
+            "Es posible que para los estudiantes sea difícil predecir _todos_ los eventos a los que tendrán que responder o las funciones que deben crear. Asegúrese que comprendan que este es un proceso iterativo y que la planificación es solo el primer paso. La idea es comenzar este proyecto con un plan definido, pero lo más probable es que existan ciertas cosas que no fueron consideradas desde el inicio y a las que el plan deberá adaptarse."
           ]
         },
         "4bdf4cde-8f63-4c4b-bc7d-fd9df2bcd184": {
-          "description": "3.  Por último, los alumnos consideran las funciones que pueden necesitar para crear."
+          "description": "3.  Finalmente, los estudiantes deben considerar las funciones que deberán crear."
         },
         "0975dac9-f5aa-45b1-8f63-0a2a3fa2df52": {
-          "name": "Prototipo del Programa",
-          "description": "**Transición:** Una vez que los equipos han completado su hoja de planificación, pueden dirigirse a Code Studio para trabajar en la creación los prototipos de sus proyectos."
+          "name": "Creando un prototipo del programa",
+          "description": "**Transición:** Una vez que los equipos hayan completado su hoja de planificación, pueden ingresar a Code Studio y comenzar a trabajar en el prototipo de sus proyectos."
         },
         "6d7c017d-88c7-4ed3-ac37-b2a3c8a741df": {
           "progression_name": "Demo - Capturar error"
@@ -13793,45 +13793,45 @@
         },
         "5efa89cb-f262-4f85-afb8-752e1495d920": {
           "name": "Compartiendo Proyectos",
-          "description": "**Compartir:** Busca una forma de que los grupos compartan sus proyectos entre sí. Probablemente será útil utilizar el enlace para compartir el proyecto para que los estudiantes puedan compartir el proyecto con otros estudiantes."
+          "description": "**Compartir:** Encuentre una forma en la que los grupos puedan compartir sus proyectos con otros grupos. Los estudiantes pueden utilizar un enlace para compartir su proyecto con otros estudiantes más fácilmente."
         },
         "e478ff63-84b6-4de8-b5c3-83e86860f443": {
           "name": "Autoevaluación",
-          "description": "Utilizando la rúbrica, los estudiantes deben evaluar su propio proyecto antes de presentarlo.\n\nEnvía a los estudiantes a Code Studio para que completen su reflexión sobre sus actitudes hacia la informática.  Aunque sus respuestas son anónimas, los datos agregados estarán disponibles para tí una vez que al menos cinco estudiantes hayan completado la encuesta."
+          "description": "Los estudiantes deben usar la rúbrica para que puedan autoevaluar su proyecto antes de entregarlo.\n\nEnvíe a los estudiantes a Code Studio para completar la reflexión sobre sus actitudes frente a las ciencias de la computación. Si bien las respuestas de la encuesta son anónimas, los datos proporcionados estarán a su disposición una vez que al menos cinco estudiantes la hayan completado."
         },
         "187cdb02-266e-41c6-a35e-8d31c07cfdff": {
           "progression_name": "Reflexión"
         },
         "3c5adf69-342b-4296-bc79-e2240bf86187": {
-          "name": "Debatir: ¿Qué es una Lista?",
-          "description": "**Preparación:** Haz que los alumnos saquen sus diarios. Pídeles que respondan a la siguiente pregunta en sus diarios."
+          "name": "Análisis: ¿Qué es una lista?",
+          "description": "**Preparación:** Pida a los estudiantes que saquen sus bitácoras y que respondan en ellas la siguiente pregunta."
         },
         "316f977f-5ad8-4565-b6d1-1c62507ba565": {
-          "description": "**Pregunta:** ¿Qué es una lista?  ¿Para qué se utilizan las listas?",
+          "description": "**Decir:** ¿Qué es una lista? ¿Para qué utilizas las listas?",
           "tips": [
-            "Aunque los tipos de listas que elaboran los alumnos varían de una clase a otra, las dos características principales de las listas que los alumnos deben entender es que suelen estar compuestas por elementos del mismo tipo (tareas que hay que completar, nombres de personas, títulos de canciones, artículos de la compra, etc.) y que tienen un orden.  Algunos tipos comunes de listas son una lista de tareas, una lista de clases, una lista de canciones o una lista de la compra."
+            "Si bien los tipos de listas que los estudiantes sugieren pueden variar de acuerdo a la clase, existen dos tipos de características principales de una lista que es importante que los estudiantes comprendan: 1. Una lista es usualmente un conjunto de elementos del mismo tipo (quehaceres que debemos completar, nombres de personas, títulos de canciones, productos del supermercado, etc.) 2. Estos elementos siempre tienen un orden. Tipos de listas comunes son: Lista de quehaceres, registro de clase, una lista de canciones y una lista de compras."
           ]
         },
         "c569ec63-0065-4e94-bb83-9f1b3c9c63bf": {
-          "description": "**Debatir:** Una vez que los alumnos hayan tenido tiempo de escribir sus propias ideas, pídeles que las compartan con toda la clase. Trabajar como clase para tratar de entender lo que es una lista."
+          "description": "**Análisis:** Una vez que los estudiantes hayan escrito sus ideas, pídales que las compartan con el resto de la clase. Los estudiantes deben trabajar en conjunto como clase y traten de definir qué tipo de lista es."
         },
         "06806587-8a93-40a6-b92f-00bdf2f710a9": {
-          "description": "Cuando programamos, a veces queremos almacenar listas de elementos.  En Javascript, lo hacemos utilizando un array.  Un array es una colección de elementos que se almacenan en un orden determinado.  Vamos a ver diferentes formas de utilizar arrays, y luego veremos cómo nos ayudarán a controlar más LEDs en el Circuit Playground."
+          "description": "Al programar muchas veces queremos guardar listas de distintos elementos. Para hacer esto en JavaScript, utilizamos un conjunto. Un conjunto es una serie de elementos que han sido almacenados en un orden particular. Hoy aprenderemos las distintas formas de usar conjuntos, y veremos como estos nos pueden ayudar a controlar más LEDs en el Circuit Playground."
         },
         "81d447de-9abb-4bc8-af49-9d823c30e8cb": {
           "name": "Arreglos y LED de colores",
           "description": "**Transición:** Vaya a Code Studio"
         },
         "701df007-2fc2-4907-bdae-63ea39ea0649": {
-          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Cuándo puede ser más útil un array que una variable?\n-   ¿Por qué siempre hay que asignar un array a una variable?\n-   ¿Cómo puedes acceder a los elementos en tu array?",
+          "description": "**Preguntas a analizar con el video:**\n\n-   ¿En qué casos un conjunto puede ser más útil que una variable?\n-   ¿Por qué razón siempre debes asignar un conjunto a una variable?\n-   ¿Cómo puedes acceder a los elementos en un conjunto?",
           "tips": [
-            "**Objetivos:**\n\nEsta es la primera introducción a los arrays, y los alumnos tendrán la oportunidad de probarlos en la lección, así que entender por qué los arrays son útiles y las formas generales en que se pueden utilizar es más importante que la sintaxis o los comandos particulares del vídeo. Los alumnos deben entender que los arrays están pensados para contener varias piezas de información, normalmente todas del mismo tipo. Al igual que cualquier otra pieza de información, es necesario asignarla a una variable para que el programador pueda volver a encontrarla. Los programadores pueden acceder a cada elemento del array por su **índice**, o su número de posición en el array. Los estudiantes tendrán la oportunidad de practicar la sintaxis exacta en la lección."
+            "**Objetivo:**\n\nEsta es la primera introducción a los conjuntos, y los estudiantes tendrán la oportunidad de probarlos en esta lección, por lo tanto, comprender por qué los conjuntos son de gran ayuda y las formas en las que podemos utilizarlos es más importante que entender las sintaxis y comandos que aparecen en el video. Los estudiantes deben comprender que el propósito de los conjuntos es almacenar muchas piezas de información, generalmente del mismo tipo. Tal y como cualquier otra pieza de información, se les debe asignar una variable para que el programador pueda ubicarlo nuevamente. Los programadores pueden acceder a cada elemento del conjunto a través de su índice, o su número de posición en el conjunto. Los estudiantes podrán practicar la sintaxis exacta en esta lección."
           ],
           "progression_name": "Video: introducción a arreglos"
         },
         "528b9a48-dd5d-4f52-b455-be650f9ed180": {
           "tips": [
-            "**Nivel 6:**\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
+            "**Nivel 6:**\nPuede usar este nivel como una evaluación formativa para sus estudiantes. Haga clic dentro del nivel para ver la rúbrica y dejar retroalimentación a sus estudiantes"
           ],
           "progression_name": "Introducción a los arreglos"
         },
@@ -13843,7 +13843,7 @@
         },
         "3f472ce9-f1fe-4be7-8849-5ba3155f2d11": {
           "tips": [
-            "\\*\\*Nivel 14\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
+            "**Nivel 14:**\nPuede utilizar este nivel como una evaluación formativa para sus estudiantes. Haga clic dentro del nivel para ver la rúbrica y dejar retroalimentación a sus estudiantes."
           ],
           "progression_name": "Espectáculo de luces"
         },
@@ -13851,14 +13851,14 @@
           "progression_name": "Niveles de Desafío"
         },
         "78b871d6-dd5f-4ad8-b32b-97df938ae849": {
-          "name": "Debate: Objetos Vs Arrays",
-          "description": "**Pregunta:** Ahora has visto ambos objetos, como el objeto Sprite, y los arrays. ¿En qué se diferencia un array de los atributos de un objeto? ¿Cuándo usarías un array? ¿Cuándo usarías un objeto?",
+          "name": "Análisis: Objetos versus Conjuntos",
+          "description": "**Decir:** Ahora que han visto los objetos Sprite y los conjuntos. ¿En qué se diferencia un conjunto a los atributos de un objeto? ¿Cuándo usarías un conjunto? ¿Cuándo utilizarías un objeto?",
           "tips": [
-            "Los arrays se utilizan con frecuencia para reunir elementos del mismo tipo (un montón de números, un montón de cadenas, un montón de nombres de botones, etc.), pero en JavaScript no es necesario que todos los elementos de la lista sean del mismo tipo. Se pueden crear listas que incluyan números, cadenas, objetos e incluso otras listas.\n\nUn objeto es una estructura de datos que combina muchos valores (como números, cadenas, e incluso funciones) que representan los atributos de ese objeto (altura, anchura, rotación, nombre) que son más fáciles de seguir si se hacen en un solo lugar. Los atributos pueden ser de muchos tipos diferentes, pero todos describen un objeto. "
+            "Los conjuntos se utilizan para recopilar elementos del mismo tipo (un grupo de números, un grupo de cadenas, un grupo de nombres de botones, etc.), pero en JavaScript no es necesario que todas las listas contengan elementos del mismo tipo. Puedes crear listas que incluyan números, cadenas, objetos e incluso otras listas.\n\nUn objeto es una estructura de datos que combina muchos valores (como por ejemplo números, cadenas e incluso funciones) que representan los atributos de un objeto (alto, ancho, rotación, nombre), esto hace que sea más fácil llevar el seguimiento de ellos en un solo lugar. Los atributos pueden ser de distintos tipos, pero todos deben describir a un objeto. "
           ]
         },
         "dafa590d-cd6d-4b34-b4ba-507f43495366": {
-          "description": "Puedes usar esto como un ticket de salida o tener un debate en clase si tienes tiempo."
+          "description": "Puede usar esta actividad como un ticket de salida o como un análisis de la clase en conjunto si queda tiempo de clase."
         },
         "0d6b1fbb-59d1-4a90-a5f7-e6fdbabcdfb6": {
           "name": "LEDs de Colores vs Zumbador",

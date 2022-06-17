@@ -1963,6 +1963,7 @@
           "purpose": "Questa lezione fornisce un contesto condiviso che sarà utile per capire come funzionano le variabili quando gli studenti ritornano alla programmazione."
         },
         "coursef-2021/lesson-10": {
+          "name": "Testo e richieste all'utente",
           "preparation": "Gioca attraverso i livelli e rivedi le diapositive della lezione.",
           "purpose": "Le variabili verranno utilizzate in questo corso per memorizzare e modificare i dati. A questo punto, gli studenti memorizzeranno e recupereranno semplicemente i valori senza modificarli. Nelle lezioni successive, gli studenti memorizzeranno i valori numerici e li modificheranno nel tempo per tenere traccia di cose come il punteggio di un giocatore in una partita."
         },
@@ -2476,6 +2477,7 @@
           "student_overview": "Le funzioni ti faranno risparmiare un sacco di tempo, mentre aiuterai la contadina con il suo raccolto!"
         },
         "express-2021/lesson-4": {
+          "name": "Testo e richieste all'utente",
           "preparation": "Gioca attraverso i livelli e rivedi le diapositive della lezione.",
           "purpose": "Le variabili verranno utilizzate in questo corso per memorizzare e modificare i dati. A questo punto, gli studenti memorizzeranno e recupereranno semplicemente i valori senza modificarli. Nelle lezioni successive, gli studenti memorizzeranno i valori numerici e li modificheranno nel tempo per tenere traccia di cose come il punteggio di un giocatore in una partita."
         },
