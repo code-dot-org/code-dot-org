@@ -527,15 +527,16 @@ class JsDebugger extends React.Component {
                   : {}
               }
             >
-              <FontAwesome
-                id="hide-toolbox-icon"
-                style={styles.showDebugWatchIcon}
-                icon={
-                  this.state.watchersHidden
-                    ? 'chevron-circle-left'
-                    : 'chevron-circle-right'
-                }
-              />
+              <span style={styles.showDebugWatchIcon}>
+                <FontAwesome
+                  id="hide-watcher"
+                  icon={
+                    this.state.watchersHidden
+                      ? 'chevron-circle-left'
+                      : 'chevron-circle-right'
+                  }
+                />
+              </span>
               <span style={styles.noUserSelect} className="header-text">
                 {this.state.watchersHidden
                   ? i18n.debugShowWatchHeader()
