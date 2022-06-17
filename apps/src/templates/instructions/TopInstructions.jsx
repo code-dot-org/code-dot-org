@@ -357,15 +357,21 @@ class TopInstructions extends Component {
       return 0;
     }
 
-    const maxNeededHeight =
-      $(ReactDOM.findDOMNode(this.refForSelectedTab())).outerHeight(true) +
-      HEADER_HEIGHT +
-      RESIZER_HEIGHT;
+    const refForSelectedTab = this.refForSelectedTab();
 
-    if (maxHeight !== maxNeededHeight) {
-      setInstructionsMaxHeightNeeded(maxNeededHeight);
+    if (refForSelectedTab) {
+      const maxNeededHeight =
+        $(ReactDOM.findDOMNode(refForSelectedTab)).outerHeight(true) +
+        HEADER_HEIGHT +
+        RESIZER_HEIGHT;
+
+      if (maxHeight !== maxNeededHeight) {
+        setInstructionsMaxHeightNeeded(maxNeededHeight);
+      }
+      return maxNeededHeight;
+    } else {
+      return 0;
     }
-    return maxNeededHeight;
   };
 
   /**
@@ -481,9 +487,7 @@ class TopInstructions extends Component {
   );
 
   setInstructionsRef(ref) {
-    if (ref) {
-      this.instructions = ref;
-    }
+    this.instructions = ref;
   }
 
   renderInstructions(isCSF) {

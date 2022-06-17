@@ -285,9 +285,7 @@ class InstructionsCSF extends React.Component {
 
     // TopInstructions, our parent, needs a ref to the body of the instructions
     // to determine its height.
-    if (this.props.setInstructionsRef) {
-      this.props.setInstructionsRef(instructions);
-    }
+    this.props.setInstructionsRef(instructions);
   }
 
   render() {
