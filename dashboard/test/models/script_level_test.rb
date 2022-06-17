@@ -58,7 +58,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       @authorized_teacher = create :authorized_teacher
       @student = create :student
 
-      @pl_script = create(:script, name: 'test-script',  instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,  participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+      @pl_script = create(:script, name: 'test-script',  instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,  participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
       @sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: false)
       @instructor_in_training_sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: true)
     end
@@ -105,7 +105,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     end
 
     test 'get_example_solutions returns empty array if not instructor of course' do
-      unit = create(:script, name: 'example-solution-facilitator-course', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
+      unit = create(:script, name: 'example-solution-facilitator-course', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
       level = create(:dance, :with_example_solutions)
       sl = create(:script_level, levels: [level], script: unit)
 

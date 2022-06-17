@@ -315,6 +315,7 @@ module Pd
 
       return {
         Pd::WorkshopSurveyFoormConstants::FACILITATORS => facilitator_data,
+        workshop_id: workshop.id,
         workshop_course: workshop.course,
         workshop_subject: workshop.subject,
         regional_partner_name: regional_partner_name,
