@@ -1826,7 +1826,7 @@
           "slider": "Qui puoi rallentare l'esecuzione del tuo programma."
         },
         "courseF_events_conflict": {
-          "stops_block": "Nuovi blocchi qui!"
+          "stops_block": "Qui ci sono nuovi blocchi!"
         },
         "courseF_events_key": {
           "whenKey": "Usa il nuovo blocco di eventi trovato qui."
@@ -1851,7 +1851,7 @@
         },
         "courseF_text_choice_title": {
           "title_block": "Cerca due nuovi blocchi qui!",
-          "text_answer_finish": "La schermata del titolo compare per 3 secondi? Se sì, clicca 'Fine'. Sennò, clicca 'Resetta', modifica il tuo codice, e clicca di nuovo 'Esegui'."
+          "text_answer_finish": "La schermata del titolo compare per 3 secondi? Se sì, clicca 'Fine'. Altrimenti, clicca 'Ricomincia', modifica il tuo codice, e clicca di nuovo 'Esegui'."
         },
         "courseF_text_concat": {
           "join_blocks": "Cerca nuovi blocchi qui!"
@@ -1882,10 +1882,10 @@
           "variablesPredict": "Osserva attentamente il codice sotto questo punto."
         },
         "courseF_text_choice_color": {
-          "text_color_finish": "Il colore dello sfondo è cambiato quando hai risposto alla domanda? Se sì, clicca 'Fine'. Sennò, clicca 'Resetta', modifica il tuo codice, e clicca di nuovo 'Esegui'."
+          "text_color_finish": "Il colore dello sfondo è cambiato quando hai risposto alla domanda? Se sì, clicca `Termina`. Sennò, clicca `Ricomincia`, modifica il tuo programma, e clicca di nuovo `Esegui`."
         },
         "courseF_text_choice_conversation": {
-          "text_generic_finish": "Hai terminato? Se sì, clicca 'Fine'. Sennò, clicca 'Resetta', modifica il tuo codice, e clicca di nuovo 'Esegui'."
+          "text_generic_finish": "Hai finito? Se sì, clicca 'Termina'. Altrimenti, clicca 'Ricomincia', modifica il tuo codice, e clicca di nuovo 'Esegui'."
         },
         "courseF_variables_predict": {
           "variablesPredict": "Osserva attentamente il codice sotto questo punto."

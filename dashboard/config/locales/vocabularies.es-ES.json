@@ -991,6 +991,22 @@
         "copyright/csd/2021": {
           "word": "Derechos de autor",
           "definition": "el derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
+        },
+        "relevant/csd/2021": {
+          "word": "Relevante",
+          "definition": "estrechamente relacionado con un tema"
+        },
+        "trustworthy/csd/2021": {
+          "word": "De confianza",
+          "definition": "fiable, honesto y veraz "
+        },
+        "search_engine/csd/2021": {
+          "word": "Motor de Búsqueda",
+          "definition": "Un programa que busca elementos en la World Wide Web."
+        },
+        "css_class/csd/2021": {
+          "word": "Clase CSS",
+          "definition": "Un identificador que permite dar estilo a varios elementos de un documento HTML de la misma manera"
         }
       }
     }

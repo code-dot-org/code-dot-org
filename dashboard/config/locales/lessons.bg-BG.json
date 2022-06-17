@@ -770,8 +770,14 @@
         "coursea-2021/Programming with Rey and BB-8": {
           "name": "Програмиране с Рей и BB-8"
         },
+        "coursec-2021/Sticker Art with Loops": {
+          "name": "Мини-Проект: Стикер Изкуство"
+        },
         "coursec-2021/Events: The Big Event": {
           "name": "Голямото събитие"
+        },
+        "coursec-2021/Events in Play Lab": {
+          "name": "Мини-Проект: Игра на Гоненица"
         },
         "coursec-2021/Binary Bracelets": {
           "name": "Двоични гривни"
@@ -797,6 +803,9 @@
         },
         "express-2021/lesson-1": {
           "name": "Танцово Парти"
+        },
+        "express-2021/Sticker Art with Loops": {
+          "name": "Мини-Проект: Стикер Изкуство"
         },
         "express-2021/lesson-4": {
           "preparation": "Играйте през нивата и прегледайте слайдовете на урока."

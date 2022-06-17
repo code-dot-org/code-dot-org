@@ -826,6 +826,7 @@ cs-CZ:
         - correct: true
         questions:
         - {}
+        title: Sestavit předpověď
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -834,6 +835,7 @@ cs-CZ:
         - correct: true
         questions:
         - {}
+        title: Sestavit předpověď
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -842,6 +844,7 @@ cs-CZ:
         - correct: true
         questions:
         - {}
+        title: Sestavit předpověď
       ConditionalsWithCards-Unplugged:
         markdown: |
           # Podmínky s kartami
@@ -4797,6 +4800,7 @@ cs-CZ:
         - correct: true
         questions:
         - {}
+        title: Sestavit předpověď
       BinaryBracelets-Unplugged:
         markdown: |
           # Binární náramky
@@ -5010,3 +5014,19 @@ cs-CZ:
         display_name: Přidávání obrázků
       CSD U2 Image practice_pilot_2021:
         display_name: Přidávání obrázků
+      CSD U3 drawing practice choice_2021:
+        display_name: Procvičení
+      CSD games cake challenge choice_2021:
+        display_name: Výzvy
+      CSD games platform challenge choice_2021:
+        display_name: Výzvy
+      CSD web draw loop practice choice_2021:
+        display_name: Procvičení
+      CSD web movement practice choice_2021:
+        display_name: Procvičení
+      CSD web text practice choice_2021:
+        display_name: Procvičení
+      ml-club app-choice parent:
+        display_name: Přizpůsobit aplikaci
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Přizpůsobit aplikaci

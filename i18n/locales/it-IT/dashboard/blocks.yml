@@ -1519,7 +1519,7 @@ it:
       gamelab_whenLeftArrow:
         text: quando viene premuta la freccia a sinistra
       gamelab_whenPromptAnswered:
-        text: quando {VAR} ha dato una risposta
+        text: quando {VAR} ha risposto
       gamelab_whenRightArrow:
         text: quando viene premuta la freccia a destra
       gamelab_whenSpriteCreated:
@@ -2111,7 +2111,7 @@ it:
             '9': '9'
             '10': '10'
       Poetry_whenPromptAnswered:
-        text: quando {VAR} ha dato una risposta
+        text: quando {VAR} ha risposto
       RyanLab_moveForward:
         text: vai avanti
       RyanLab_turnLeft:

@@ -2959,7 +2959,7 @@
           "type": "Recurso"
         },
         "analog-digital-video/csd/2021": {
-          "name": "Diferencia entre señales analógicas y digitales",
+          "name": "La diferencia entre señales análogas y digitales",
           "url": "https://www.youtube.com/watch?v=RQc_frX50BA",
           "type": "Vídeo"
         },
@@ -2974,12 +2974,12 @@
           "type": "Recurso"
         },
         "date_and_change_events/csd/2021": {
-          "name": "Eventos de Fecha y Cambio",
+          "name": "Eventos de Dato y Cambio",
           "url": "https://drive.google.com/file/d/1t7EKjtcgISbHz_REmaCrcgPb_lArGkUJ/view?usp=sharing",
           "type": "Recurso"
         },
         "emoji-race-guide/csd/2021": {
-          "name": "Carrera de Emojis",
+          "name": "Carrera de Emoji",
           "url": "https://docs.google.com/document/d/1dn4FIRKYaVb1o7TNiyeKqoT1fBL9FPoqOmJV-nvJYUM/",
           "type": "Guía de Proyecto"
         },
@@ -3004,7 +3004,7 @@
           "type": "Guía de Actividades"
         },
         "make_a_game_-_student_checklist/csd/2021": {
-          "name": "Crear un Juego - Lista de Control del Alumno",
+          "name": "Crear un juego - Lista de comprobación del estudiante",
           "url": "https://docs.google.com/document/d/1Stnv4TxXnSI8JZWcd5lEXeihz7ok4OxhERcOllVHMy0/view"
         },
         "make_a_game_1/csd/2021": {
@@ -3013,7 +3013,7 @@
           "type": "Rúbrica"
         },
         "make_a_game_sample_marked_rubrics/csd/2021": {
-          "name": "Crear un Juego - Ejemplo de Rúbricas Marcadas",
+          "name": "Ejemplos de Rúbrica Marcadas para Crear un Juego",
           "url": "https://docs.google.com/document/d/1i9wFd-4ulv72MqJleZaOsr-JJrMFL0sdozjvwGOvXoU/view",
           "type": "Ejemplo"
         },
@@ -3043,7 +3043,7 @@
           "type": "Recurso"
         },
         "producing_output/csd/2021": {
-          "name": "Generando la Salida",
+          "name": "Generando Salida",
           "url": "https://drive.google.com/file/d/1LoSDj7s7Jv45DJnjxmAeLoZO-ex7HFAy/view?usp=sharing",
           "type": "Recurso"
         },
@@ -3078,12 +3078,12 @@
           "type": "Vídeo"
         },
         "physical-prototyping-project/csd/2021": {
-          "name": "Prototipos Físicos",
+          "name": "Prototipo Físico",
           "url": "https://docs.google.com/document/d/1MYLYmwNW4DH7n_oCTZFGnYz52e99htwzKTqOcmL5txQ/edit",
           "type": "Guía de Proyecto"
         },
         "circuits_and_buttons/csd/2021": {
-          "name": "Circuitos y Pulsadores",
+          "name": "Circuitos y LEDs",
           "url": "https://drive.google.com/file/d/12z50tIYpRJ2LFUlpYJYcKQ6I_qMk6g5p/view?usp=sharing",
           "type": "Recurso"
         },
@@ -3108,7 +3108,7 @@
           "type": "Ejemplo"
         },
         "prototype_an_innovation_-_student_checklist/csd/2021": {
-          "name": "Prototipo de una Innovación - Lista de Comprobación del Alumno",
+          "name": "Prototipo de una innovación - Lista de comprobación del estudiante",
           "url": "https://docs.google.com/document/d/1PkarqOeVEuHi24QFVuYsEy3EY5WPmi3pbmKjOB161EM/edit"
         },
         "sample_marked_rubrics_4/csd/2021": {
@@ -3117,7 +3117,7 @@
           "type": "Ejemplo"
         },
         "csd_guide_to_using_resources/csd/2021": {
-          "name": "Guía del CSD para el Uso de los Recursos",
+          "name": "Guía para el uso de recursos de Descubrimientos de las Ciencias de la Computación",
           "url": "https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview"
         },
         "all_code_4/csd/2021": {
@@ -3130,7 +3130,7 @@
         },
         "all_standards_6/csd/2021": {
           "name": "Todos los Estándares",
-          "url": "/s/csd6-2021/normas"
+          "url": "/s/csd6-2021/estándares"
         },
         "all_vocabulary_6/csd/2021": {
           "name": "Todo el Vocabulario",

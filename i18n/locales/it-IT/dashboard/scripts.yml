@@ -6195,6 +6195,8 @@ it:
               name: Forme e Parametri
             Random Numbers:
               name: Numeri Casuali
+            Sprite Properties:
+              name: Proprietà del personaggio
         maddie-test:
           lessons:
             stage 1:
@@ -6704,6 +6706,8 @@ it:
               name: Variabili
             Random Numbers:
               name: Numeri Casuali
+            Sprite Properties:
+              name: Proprietà del personaggio
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
@@ -7379,6 +7383,8 @@ it:
               name: Numeri Casuali
             Sprites:
               name: Personaggi
+            Sprite Properties:
+              name: Proprietà del personaggio
             Text:
               name: Testo
             Conditionals:
@@ -7469,6 +7475,8 @@ it:
           lessons:
             Course F Introduction:
               name: Introduzione al Laboratorio dei Personaggi
+            lesson-2:
+              name: Testo e richieste all'utente
             Virus Simulation for Code Bytes:
               name: Codifica di una simulazione
             Making Sprites:
@@ -7524,6 +7532,8 @@ it:
               name: Numeri Casuali
             Sprites:
               name: Personaggi
+            Sprite Properties:
+              name: Proprietà del personaggio
             Text:
               name: Testo
             Conditionals:
@@ -7926,6 +7936,8 @@ it:
               name: Creazione di personaggi
             lesson-8:
               name: Personaggi in azione
+            lesson-10:
+              name: Testo e richieste all'utente
             lesson-5:
               name: Epidemia
             lesson-2:
@@ -8007,6 +8019,8 @@ it:
               name: Creazione di personaggi
             lesson-3:
               name: Personaggi in azione
+            lesson-4:
+              name: Testo e richieste all'utente
           lesson_groups:
             csf_warmup:
               display_name: Riscaldamento
@@ -8071,6 +8085,8 @@ it:
               name: Creazione di personaggi
             Sprites in Action:
               name: Personaggi in azione
+            texts-and-prompts:
+              name: Testo e richieste all'utente
             introducing-spritelab:
               name: Introduzione al Laboratorio dei Personaggi
           lesson_groups:
@@ -8802,6 +8818,8 @@ it:
               name: Personaggi in azione
             'Mini-Project: Virtual Pet':
               name: 'Mini progetto: Animaletto Virtuale'
+            Text and Prompts:
+              name: Testo e richieste all'utente
           lesson_groups:
             lessonGroup-2:
               display_name: Personaggi
@@ -8938,6 +8956,8 @@ it:
               name: Funzioni con l'artista
             Functions with Harvester:
               name: Funzioni con la contadina
+            Text and Prompts:
+              name: Testo e richieste all'utente
             Variables with the Bee:
               name: Modifica delle variabili con l'ape
             For Loops with Bee:
@@ -8958,6 +8978,8 @@ it:
               name: Uno sguardo avanti con Minecraft
             While Loops with the Farmer:
               name: Cicli "mentre" con la contadina
+            lesson-4:
+              name: Testo e richieste all'utente
             Changing Variables with Bee:
               name: Modifica delle variabili con l'ape
           lesson_groups:
@@ -9302,6 +9324,8 @@ it:
               name: 'Mini progetto: Animaletto Virtuale'
             The Power of Words:
               name: Cittadinanza digitale - Il potere delle parole
+            Text and Prompts:
+              name: Testo e richieste all'utente
             Programming with the Bee:
               name: Cicli annidati nel labirinto
             Variables with the Bee:
@@ -9328,6 +9352,8 @@ it:
               name: 'Mini progetto: Animaletto Virtuale'
             lesson-2:
               name: Cittadinanza digitale - Il potere delle parole
+            lesson-10:
+              name: Testo e richieste all'utente
             Nested Loops in the Maze:
               name: Cicli annidati nel labirinto
             Variables that Change in Bee:
@@ -9526,6 +9552,8 @@ it:
               name: Personaggi in azione
             'Mini-Project: Virtual Pet':
               name: 'Mini progetto: Animaletto Virtuale'
+            Text and Prompts:
+              name: Testo e richieste all'utente
             Outbreak:
               name: Epidemia
             AI For Oceans:
@@ -9780,6 +9808,8 @@ it:
               name: Numeri Casuali
             Sprites:
               name: Personaggi
+            Sprite Properties:
+              name: Proprietà del personaggio
             Text:
               name: Testo
             Conditionals:

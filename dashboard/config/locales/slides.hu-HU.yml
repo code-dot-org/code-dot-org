@@ -1014,6 +1014,36 @@ hu:
           meg nem jelenik a sárga nyíl. Ekkor elengedem, és a két blokk összekapcsolódik.
           Amikor újra megnyomom a "Futtatás" gombot, a madár felülről lefelé haladva
           végrehajtja a munkaterületen egymás után pakolt parancsokat.
+      5:
+        text: Ha törölni szeretnél egy blokkot, csak ki kell venni a többi közül,
+          és be kell dobni a kukába. A program futtatása közben, bármikor megnyomhatja
+          a visszaállítás gombot, és a madár visszatér a kezdetekhez. Most pedig kapjuk
+          el azokat a disznókat!
+    C2_paper_airplanes:
+      1:
+        text: Ez a lecke az Algoritmusok a való világban címet viseli. Az algoritmusok
+          azt írják le, amivel az emberek a mindennapjaikban foglalkoznak. A süteményreceptek
+          lerása vagy madáretető készítése egyaránt mindennapi algoritmusok.
+      2:
+        text: Ma egy papírrepülőre írunk algoritmust, annak elkészítésére és tesztelésére.
+          Előbb azonban ezt a nagy projektet könnyen követhető kis lépésekre kell
+          bontanunk. Egy papírrepülő elkészítéséhez el kell döntenünk, hogy milyen
+          lépésekre van szükség és milyen sorrendben.
+      3:
+        text: Az algoritmus elkészítése a képek szétvágásával kezdődik. Ezután ki
+          kell választani azt a 6 képet, amelyek a papírrepülő elkészítéséhez szükséges
+          lépéseket mutatják, majd ezeket a képeket megfelelő sorrendbe kell rendezni.
+          Miután ezzel készen vagytok, cseréljetek algoritmust egy másik tanulócsoporttal,
+          és próbáljátok ki, működik-e az algoritmus. Egy jó papírrepülő elkészítéséhez
+          nagyon fontos, hogy algoritmus gondosan legyen megtervezve.
+      4:
+        text: A csokoládékészítés folyamata több nagyobb lépésből áll. És minden egyes
+          nagyobb lépés több kisebb lépésből áll. Többféle recept van, s hasonlóképp
+          többféle algoritmusok, attól függően, hogy milyen ízű csokoládét szeretnénk.
+          Minden lépés fontos, még a kisebbek is. Ha egy lépés kimarad, a többit sem
+          lehet végrehajtani. Nagyon fontos olyan algoritmusokat létrehozni, amelyeket
+          mások is megértenek. Ezért kell leírni minden egyes lépést, hogy bárki készíti
+          is el a csokoládét, az eredmény mindig ugyanaz legyen.
     C2_playlab_createstory:
       1:
         text: Eddig egy animációt vagy történetet készítettél, ami pontosan ugyanazt
@@ -1022,6 +1052,31 @@ hu:
       2:
         text: Itt van a "ha nyíl" blokk és a "mozgasd a szereplőt" blokk. Ezeket a
           blokkokat összeillesztheted, hogy a szereplőket a nyilakkal mozgatni tudd.
+    C2_relay_programming:
+      1:
+        text: Ma a váltóprogramozással foglalkozunk. Váltóprogramozásra akkor kerül
+          sor, amikro nagy nyomás alatt kell dolgozni vagy hibákat kell elhárítani.
+          Hibák pedig időnként előfordulnak, főleg amikor vagy nagyon gyorsan kell
+          dolgozni vagy csapatban kell dolgozni. Grafikus programozással szimuláljuk
+          a kódolást, és váltóversenyekkel szimuláljuk a határidőt.
+      2:
+        text: Váltóprogramozás során csapatok versenyez egymással, hogy ki készül
+          el gyorsabban egy grafikus programmal. Ellenőrizd a társad munkáját, keress
+          hibát, ha kell, javítsd ki, tedd hozzá a saját nyilad, majd fuss vissza
+          és jelöld meg a társad.
+      3:
+        text: A programozók gyakran végeznek hibakeresést, meg kell találniuk a hibákat
+          az algoritmusokban vagy a kódolásban, és ki kell javítaniuk azokat. A hibakeresésnek
+          számtalan módja van. Az egyik legegyszerűbb, ha lépésről lépésre haladunk,
+          amíg meg nem találjuk, hogy hol romlott el valami, majd ki kell javítani
+          a hibákat.
+      4:
+        text: Itt a hátraszaltózást próbálom, de folyton leesek. Lépésről lépésre
+          végigmegyek minden egyes részen, és rájövök, hol követtem el a hibát. Az
+          edzőm megmutatta, hogy nem megfelelően fogom meg a gerendát. Ezért egy újabb
+          hátraszaltót csináltam a gerendán, de már az új kéztartással, és sikerült!
+          Nagyon örültem, hogy sikerült kijavítani a hátraszaltómat. Megoldottuk!
+          A hibakeresés a probléma meghatározását és kijavítását jelenti. Szép munka!
     C2_zuck_repeat_loop:
       1:
         text: A számítógépek különösen jók a parancsok ismétlésében. Emberként elég
@@ -1122,6 +1177,26 @@ hu:
           gomb segít a programunk hibakeresésében, hogy megtaláljuk és kijavítsuk
           a hibákat.
     C3_bee_functions:
+      1:
+        text: A számítástechnikában az egyik legfontosabb fogalom az új parancsok
+          definiálása, hogyan adjuk hozzá a saját szavainkat egy számítógépes nyelvhez.
+          A legtöbb számítógépes nyelvnek mindössze körülbelül száz szava vagy parancsa
+          van. Egyszerre művészi és varázslatos, ahogy ezekből az építőelemekből új
+          szavakat határozunk meg, a saját szavainkat.
+      2:
+        text: A sportban is állandóan ezt csináljuk. Például a kosárlabdában azzal
+          kezdjük, hogy megtanulunk cselezni, feldobni, lepattanó labdát elkapni.
+          Miután megtanultuk ezeket az alapvető mozdulatokat, új mozdulatokat tanulunk,
+          majd összerakjuk ezeket az építőelemeket egy mozdulatsorrá, ilyen lehet
+          például az elzárás és leválás, az add és fuss. Ezekből azután már bonyolultabb
+          játékot is lehet játszani. Ha egyszer megtanulod a mozdulatokat, és nevet
+          is adsz nekik, a csapatban mindenki tudja fogja, hogyan kell csinálni.
+      3:
+        text: Hasonlóképpen, ha egyszer parancsok sorozatának segítségével megtanítottad
+          a számítógépnek, hogyan kell végrehajtani egy műveletet, akkor nevet is
+          adhatsz a műveletnek, így később könnyen megismételheted. Amikor meghatározod
+          a saját parancsodat, és nevet is adsz neki, akkor azt függvénynek nevezzük.
+          Most függvényeket fogunk használni, ezekkel segítünk a méheknek.
       4:
         text: Ebben a példában a függvényünket "get 2 nectar"-nak neveztük el, ez
           a zöld blokk itt. A szürke dobozra nézve, látjuk, hogy mit csinál a get
@@ -1129,7 +1204,164 @@ hu:
           hogy a get 2 nectar először begyűjt egy nektárt, majd megint begyűjt egy
           nektárt. Mindig azt nézd, hogy mi van a szürke dobozban, hogy megtudd, mire
           képesek ezek a zöld függvény blokkok.
+    C3_bee_nested_loops:
+      1:
+        text: Most pedig egymásba ágyazott ciklusokat fogunk használni a méhecskénél.
+          Kapunk egy kezdő kódot, amely azt mondja a méhnek, hogy haladjon előre,
+          háromszor vételezzen nektárt, majd forduljon jobbra. Fogjuk ezt az egész
+          kódot, és ágyazzuk be egy másik ismétlés blokkba, majd állítsuk be, hogy
+          háromszor ismétlődjön. Kész!
+    C3_bounce:
+      1:
+        text: Készíthetsz saját ugrálós játékot, amit megoszthatsz majd a barátaiddal!
+          Fantasztikus!
+      2:
+        text: Először össze kell kapcsolnunk az ütő vezérlőket a billentyűzetünk nyílbillentyűivel.
+      3:
+        text: Ezt úgy tudjuk megtenni, hogy a balra nyíl blokkot a balra mozdulás
+          blokkhoz, a jobbra nyíl blokkot pedig a jobbra mozdulás blokkhoz kapcsoljuk.
+          Próbáld ki, és pillanatok alatt programozhatod a saját ugrálós játékodat!
+    C3_computational_thinking:
+      1:
+        text: Ez a lecke a számítógépes gondolkodásról szól. Néha meglehetősen nehéz
+          egy új játékot megtanulni, nem igaz? Elsőre nagyon zavarosnak tűnik, és
+          néha nincs senki, aki megtanítana a szabályokat, így magadnak kell rájönnöd.
+      2:
+        text: A jó hír az, hogy egyre könnyebben fogsz rájönni a dolgokra egyedül,
+          különösen ha ismersz néhány gondolkodási trükköt. Ezek a trükkök egyedi
+          támpontot adnak a problémákat megfejtéséhez és megoldásához. Ebben a leckében
+          négy trükköt ismersz meg, gyakorolhatod is őket a barátaiddal, majd a trükkök
+          segítségével megpróbálod kitalálni egy játék szabályait.
+      3:
+        text: Amikor egy nagyobb problémát kisebb részekre bontasz, az eszedet használva
+          bontasz szét egy nagyobb problémát. Miután a nagyobb problémát több kisebb
+          problémára bontottuk, rátérhetünk a következő trükkre, amit mintaillesztésnek
+          hívunk.
+      4:
+        text: Ilyenkor a dolgok közötti hasonlóságokat keressük. Amint megtaláltam
+          az egyező dolgokat, ki tudom találni a különbözőségeket is. A különbségek
+          eltávolítását nevezzük absztrakciónak.
+      5:
+        text: Miután megvannak a probléma megoldásához vezető lépések, ezeket a lépéseket
+          meghatározott sorrendbe tudom helyezni, és ezt nevezzük algoritmusnak. Így
+          már bárki használhatja az utasításaimat a probléma megoldásához. Ezt a négy
+          lépést fogjuk használni arra, hogy kitaláljuk, hogyan játszunk egy szabály
+          nélküli játékot. A játék végére képesek lesztek valami olyasmit játszani,
+          ami így néz ki!
+    C3_crowdsourcing:
+      1:
+        text: Ezt a leckét úgy hívják, hogy közösségi ötletbörze. Ebben a leckében
+          egy kártyapakli segítségével azt fogjuk megtanulni, hogy bizonyos dolgokat
+          sokkal könnyebb csoportban elvégezni, mint egyedül próbálkozni. Szóval szedd
+          össze a barátaid, és csináljatok valami fantasztikusat. A közösségi ötlebörze
+          révén az emberek egy nagyobb csoportja nyújt segítséget akkor, amikor valamit
+          gyorsabban kell elvégezni.
+      2:
+        text: Az számítástechnikában állandóan használjuk a közösségi ötlebörzét.
+          Amatőrök és szakemberek ezrei kapcsolják össze a számítógépeiket, és több
+          milliárd információ között kutatnak. Olyan dolgokat keresnek mint például
+          hogy mi a következő Marsenne-prím, vagy hogy lehetséges-e földönkívüli kommunikáció.
+      3:
+        text: Amikor egy filmet nézünk, a filmben minden másodperc 24 egyedi képből
+          áll, ezeket hívjuk képkockáknak. Tehát minden egyes képet meg kell alkotni,
+          átalakítani vizuális formába, és össze kell rakni. A munkatársaimmal mi
+          mind szoftverfejlesztők vagyunk. Együtt dolgozunk egy szotver fejlesztésén,
+          valójában a szofter hozza létre a képet, a végső képet, amit a képernyőn
+          látunk. Ezt az eszközt művészek és fejlesztők használják csapatmunkában
+          egy olyan folyamat részeként, amelynek eredményeként megalkotják a képernyőn
+          látni kívánt képeket.
+      4:
+        text: Vegyük például a Némó nyomában című filmet, amikor Crush, Squirt és
+          barátaik átrepülnek a Kelet-ausztrál áramlaton. Képeket látunk az áramló
+          vízről, látjuk a színeket a teknős hátán, látjuk a halak oldalát. Mindezeket
+          az általunk írt matematikai és számítógépes programokkal generáljuk, majd
+          ezeket átadjuk a művésznek, aki felhasználja a végső kép elkészítéséhez,
+          finomít rajta, hogy szép és szórakoztató legyen.
+    C3_dice_race:
+      1:
+        text: Ezt a leckét kockaversenynek hívjuk. Szinte mindenki szeret számítógépes
+          játékokat játszani. Gondoltál már arra, hogy a számítógépes programozók
+          hogyan alakítják át egy játék lépéseit egy programmá? A számítógépes játékok
+          készítésének és bármilyen probléma megoldásának első lépése gondolkodást
+          és tervezést igényel.
+      2:
+        text: A problémamegoldás gondolkodási lépésének az eredménye egy algoritmus,
+          amely egy lépésről lépésre kidolgozott terv egy probléma megoldására vagy
+          egy feladat befejezésére. Ebben a leckében egy kockaverseny játék algoritmusát
+          fogjuk megalkotni. Ezután megkéritek a barátaitokat, hogy próbálják ki a
+          tervet, hogy lássuk, tudják-e követni a játék lépéseit. Miután a programozó
+          megbizonyosodott arról, hogy a lépések helyesek, lefordítja az algoritmust
+          egy olyan programra, amelynek nyelvét a számítógép már érti.
+      3:
+        text: Szinte minden mindennapi tevékenységünkhöz szükség van egy algoritmusra,
+          egy olyan listára, amelynek lépéseit követve el tudunk végezni egy feladatot.
+          Gondoljunk csak arra, amikor felkészülünk az iskolára, amikor megtervezünk
+          egy, a barátainkkal töltendő vidám napot, vagy egy uzsonna elkészítésére.
+          A feladatok elvégzését kisebb lépésekre kell bontani, és néha a lépéseket
+          meghatározott sorrendbe kell tenni.
+      4:
+        text: Gondolj egy szendvics elkészítésére. Nem számít, hogy melyik hozzávalót
+          veszed ki először a szekrényből. De a mogyoróvajat csak akkor tudod rákenni
+          a kenyérre, ha előtte kinyitottad az üveget. A számítógépeknek algoritmusokra
+          és programokra van szükségük, amelyek megmutatják nekik, hogyan kell elvégezni
+          még olyan egyszerű dolgokat is, amelyeket mi gondolkodás nélkül is meg tudunk
+          csinálni.
+      5:
+        text: Az algoritmus az a gondolatmenet, amely megmondja, hogy minek kell megtörténni,
+          a program viszont a számítógépnek ad tényleges utasításokat, hogy az a dolog
+          meg is történjen. Egy algoritmust le kell fordítani egy programra, mert
+          a számítógép csak azt tudja lefuttatni. Egy feladatot algoritmusnak nevezett
+          lépésekre lebontani nem mindig könnyű. De mint minden új készség, gyakorlással
+          ez is egyre könnyebb lesz.
+    C3_farmer_while:
+      1:
+        text: Míg a hurkok eléggé hasonlítanak ahhoz, amit a mindennapi életben is
+          csinálunk. Képzeld el, hogy autót mosol, és addig mosod, amíg tiszta nem
+          lesz. És mindaddig folytatod a mosást míg tiszta nem lesz. Ezeket a dolgokat
+          folyamatosan értékeled.
+      2:
+        text: Van egy új feladatunk, segítenünk kell egy gazdádnak. Ennek a neve while-blokk.
+          Valójában ez nagyon egyszerű. Amíg van fent egy igaz állítás, addig csinálni
+          kell valamit. Például, amíg van ott egy halom, addig a szénát onnan el kell
+          vinni. Gyerünk, próbáld ki a te gazdáddal.
+    C3_functional_suncatchers:
+      1:
+        text: Ez a lecke a működő napfogókról szól. Ezeket a csinos napfogókat függvények
+          segítségével fogod megalkotni. Egy ilyen napfogó létrehozása több lépésből
+          áll. Néhány lépést többször is meg kell ismételni.
+      2:
+        text: Egy napfogó készítésének a lépéseit leegyszerűsíthetjük azzal, hogy
+          megnézzük, mit kell újra és újra megismételni. Ezeket a lépéseket csoportosíthatjuk
+          egy úgynevezett függvénybe.
+      3:
+        text: De egy gyönyörű napfogó elkészítése nem szűkíthető le pusztán néhány
+          pontos lépés követésére. Néha szeretnénk kreatívak lenni, és megváltoztatni
+          a felhasznált gyöngyök színét. Különböző színű gyöngyökkel a napfogókat
+          egyedivé tehetjük.
+      4:
+        text: A napfogód akkor lesz egyedi, ha megtanulsz a gyöngyökre változóként
+          gondolni. A változó egy olyan szó, ami egy változó információ számára jelöli
+          ki e helyet. Jó szórakozást! Készíts gyönyörű napfogókat függvények és változók
+          segítségével!
     C3_internet:
+      1:
+        text: Ez a lecke az internetről szól. Az internet egy nagyon forgalmas hely,
+          hasonlít ehhez a forgalmas úthoz. Az üzenetek, mint az autók, száguldoznak,
+          hogy eljussanak a céljukhoz. Az üzenetek nagyon gyorsan mozognak az interneten.
+      2:
+        text: Az internet működésének eljátszása segít megérteni, mi történik az internet
+          használata közben. Megtanulod, hogyan jutnak el az üzenetek a számítógépedtől
+          a kedvenc weboldaladig vagy egy barátodtól az e-mail postaládájába. Ahogy
+          a forgalmas utakon is könnyebb közlekedni, ha ismered az utakat és el tudod
+          olvasni a táblákat, úgy az interneten való utazás sem olyan bonyolult, ha
+          tudod, mi zajlik a színfalak mögött.
+      3:
+        text: Az interneten történő üzenetküldés egy kicsit olyan, mint a postai üzenetküldés,
+          de van néhány eltérés. Itt vagyok a Google.com-on. A weboldal IP-címe ez
+          a szám. Az IP-címre úgy is gondolhatsz, mint a feladó címére egy postai
+          levélen. Képzeljük el, hogy üzenetet akarok küldeni valakinek a postán,
+          az irodájába, ide. Látod az URL-t és az IP-címet azon az ajtón? Megírtam
+          ezt az üzenetet, és megnyomom a küldés gombot.
       4:
         text: A postai szolgáltatásokkal szemben az első dolog ami történik, hogy
           az internet az üzenetet kisebb részekre osztja szét, hogy azokat egyszerűbb
@@ -1139,7 +1371,45 @@ hu:
           Természetesen rengeteg mindent kell még megismerni az internet működésével
           kapcsolatban, de ez egy remek kezdés. Kezdesz hozzáértő internet-felhasználó
           lenni! Ne felejtsd el megosztani a családoddal és barátaiddal, amit tanultál!
+      5:
+        text: A nevem Amanda Camp, és szoftvermérnökként dolgozom a Google-nél. Egy
+          olyan csapat tagja vagyok, akiknek a feladata egy profilokat és névjegyeket
+          tároló háttérszerver kezelése. A munkám során sokat gondolkodunk azon, hogyan
+          lehet a névjegyeket más eszközökre, például a telefonodra küldeni. A legtöbb
+          embernek sok névjegye van, akár 1000 is, és nem szeretnénk az összeset egyszerre
+          elküldeni a telefonodra, mert az túl nagy üzenet lenne. Hasonlóan ahhoz,
+          ahogyan az internet is a nagyméretű üzeneteket csomagokra bontja, mi is
+          használjuk a lapozásnak nevezett koncepciót, amely szerint egyszerre csak
+          100 kontaktot küldünk a telefonodnak, és hagyjuk, hogy a telefonod válaszoljon
+          nekünk, és kérje a következő 100-at.
+      6:
+        text: A legizgalmasabb dolog a szoftverekben az, hogy az egész világra hatással
+          lehetnek. Tizenkilenc éves koromban tanultam meg először programozni. Azt
+          hiszem, már másod- vagy harmadéves voltam a főiskolán. Az első program,
+          amire emlékszem, hogy írtam valamit, ami Celsiust Fahrenheitre konvertálta.
+          Azért szeretek programozni, mert szeretek segíteni az embereknek. A Google-nál
+          olyan programokat írhatok, amelyek a világ minden táján segítik az embereket,
+          és ez igazán észbontóan izgalmas.
     C3_maze_conditionals:
+      1:
+        text: Az emberek minden nap döntenek. Például mielőtt kimegyünk a házból,
+          van egy if utasítás, amely szerint,  ha esik az eső, akkor elő kell vennem
+          a kabátomat. A számítógépek lenyűgözőek, ha egyszer ilyen típusú utasításokról
+          döntünk, akkor ezeket a dolgokat megbízhatóan és hihetetlen sebességgel
+          képesek végrehajtani. Egy számítógépes program valójában egy kis matematika
+          és néhány if utasítás a döntés helyén.
+      2:
+        text: Az if blokk segít a zombinak a döntés meghozni. Ellenőriz valamit. Például
+          használjuk azt a blokkot, amely azt mondja, hogy ha van út balra, és akkor
+          tegyünk bele egy balra fordulj parancsot. Azt mondjuk a zombinak, hogy ellenőrizze
+          a környezetét, nézze meg, hogy van-e balra egy út, és ha igen, forduljon
+          balra.
+      3:
+        text: Ezután a mozgatás előre blokkot használjuk ezen az ismétlésen belül,
+          így tovább fog haladni előre, amíg csak egyenesen akar menni. Aztán amikor
+          van egy kanyar, az if blokk azt mondja neki, hogy forduljon balra. Láthatjuk,
+          ha ekként teszünk, ha balra fordulunk, és egyébként előre mozgunk, akkor
+          elérjük a célunkat.
       4:
         text: Egy egy példa az if (ha) utasítás használatára, amely egy alapvető fogalom
           a számítógépes programozásban. Az egyik első dolog, amit megtanultam leprogramozni,
@@ -1163,6 +1433,22 @@ hu:
       2:
         text: Itt van a "ha nyíl" blokk és a "mozgasd a szereplőt" blokk. Ezeket a
           blokkokat összeillesztheted, hogy a szereplőket a nyilakkal mozgatni tudd.
+    C3_songwriting_with_parameters:
+      1:
+        text: Ez a lecke a dalszerzésről szól. A zene sokban hasonlít egy számítógépes
+          programhoz. A leírt hangjegyek és szavak pontosan megmondják az énekesnek,
+          hogy mit kell tennie. A zene egyes részeit újra és újra felhasználjuk.
+      2:
+        text: Ezt refrénnek nevezzük. Egy számítógépes programban a program azon részeit,
+          amelyeket újra és újra használnak, függvényeknek nevezzük. Amikor elolvasod
+          a dalszövegeket, és ott a refrén szó szerepel, akkor a refrént énekled?
+          Nem, megnézed a lap tetején, hogy milyen szavakból áll a refrén.
+      3:
+        text: Ebben a leckében egy buta kis dalt fogunk megtanulni, amelynek a címe
+          Little bunny foo foo. A dalnak van egy refrénje, amelyet többször is el
+          fogunk énekelni. A függvény egy olyan kódrészlet, amelyet újra és újra meghívhatsz
+          és használhatsz. Könnyebbé és hatékonyabbá teszi a programozást, így nem
+          kell újra és újra leírni a függvény lépéseit. Csak egyszer kell megírni!
     C4_bee_conditional:
       1:
         text: Ez egy feltételes blokk. Azt mondja, ha egy virágnál vagy méhsejtnél
@@ -1342,11 +1628,21 @@ hu:
           Ez a középső terület az eszköztár, és minden egyes blokk egy-egy parancs,
           amit a madár megért. A jobb oldali fehér területet munkaterületnek nevezzük,
           és itt fogjuk felépíteni a programunkat.
+      3:
+        text: Ha a mozgatás blokkot a munkaterületünkre húzom, és megnyomom a futtatás
+          gombot, mi történik? A madár előre lép egy mezőt a rácson. És mi van, ha
+          azt akarom, hogy a madár csináljon valamit, miután egy mezővel előrébb lépett?
+          Hozzáadhatok egy másik blokkot a programunkhoz.
       4:
         text: Most a "fordulj jobbra" blokkot fogom használni, és addig húzom, amíg
           meg nem jelenik a sárga nyíl. Ekkor elengedem, és a két blokk összekapcsolódik.
           Amikor újra megnyomom a "Futtatás" gombot, a madár felülről lefelé haladva
           végrehajtja a munkaterületen egymás után pakolt parancsokat.
+      5:
+        text: Ha törölni szeretnél egy blokkot, csak ki kell venni a többi közül,
+          és be kell dobni a kukába. A program futtatása közben, bármikor megnyomhatja
+          a visszaállítás gombot, és a madár visszatér a kezdetekhez. Most pedig kapjuk
+          el azokat a disznókat!
     C4_math_artist:
       1:
         text: Ha egy olyan téglalapot szeretnénk rajzolni, amely 50 képpont magas
@@ -1361,6 +1657,146 @@ hu:
           akkor egyszerűen módosíthatom az algoritmust úgy, hogy menjen fel magasságnyit,
           forduljon jobbra, majd menjen 2-szer magasságnyit, amely egy olyan téglalapot
           eredményez, ami kétszer olyan széles, mint amilyen magas.
+    C4_unplugged_algorithms:
+      1:
+        text: Ez a lecke a Tangram-algoritmusokról szól. A tangram egy hét darabból
+          álló képkirakó, amelyből más alakzatokat lehet összerakni. Egy algoritmus
+          segítségével elmagyarázod a társadnak, hogyan kell összerakni a kirakót.
+      2:
+        text: Az algoritmus nem más, mint egy lista, amelyen felsoroljuk a feladat
+          elvégzéséhez szükséges lépéseket. Listákat minden nap használunk, például
+          bevásárlólisták és receptek esetén. Egy egyszerű algoritmust sokféleképpen
+          lehet értelmezni, és bárki is hajtja azt végre, nem biztos, hogy pontosan
+          az lesz a végeredmény, amit te akartál. Ha azt szeretnéd, hogy mindenki
+          pontosan ugyanazt kapja a végén, akkor az algoritmus legyen részletes és
+          nagyon konkrét.
+      3:
+        text: Ma egy algoritmust használok egy festmény befejezéséhez. Farkasokat
+          akartam festeni, de nem vagyok a legcsodálatosabb festő. Szerencsére a hozzám
+          hasonló emberek számára lehet festeni számok segítségével. Negyven szín
+          van, és a kis betűk és a számok megmondják, hogy az egyes részeket milyen
+          színnel kell megfesteni. A Festés számokkal pontosan megmondja nekem, hogy
+          milyen színt használjak és hol.
+      4:
+        text: Nagyon konkrét, így követni tudom az utasításokat, és a festmény fantasztikus
+          lesz. Ez egy nagyszerű algoritmus. Ha az utasítás nem lenne ennyire konkrét,
+          a farkasaim nem néznének ki ilyen jól. Ha tényleg azt akarod, hogy valami
+          pontosan a terveidnek megfelelően sikerüljön, akkor legyél rendkívül konkrét.
+    C4_unplugged_binary:
+      1:
+        text: Minden csapatban az utasítást adó személynek, aki a papírt tartja a
+          kezében, ki kell találnia, hogy mi lesz a KI szimbóluma és mi lesz a BE
+          szimbóluma. Binárisan ez olyan, mint egy ábécé két betűvel. Mintha az A
+          és a B lenne a teljes ábécé, de nekünk egy 0 és egy 1 számunk van.
+      2:
+        text: A bináris használatának leggyakoribb módja az if utasítás. Ez egy klasszikus
+          dolog a programozásban. A program fut, és azt mondja, hogy ha valami igaz,
+          akkor csináld ezt. Vagy ha nem igaz, és akkor csinálj valami mást. Mi van
+          akkor, ha valami kicsit bonyolultabbat akarsz csinálni. Az if utasítás helyett
+          például egy képpel vagy egy hanggal akarsz dolgozni a számítógépben.
+      3:
+        text: 'A számítógép csak a bináritást ismeri, de egy kép nem bináris, nem
+          egyesekből és nullákból áll, tehát hogyan csináljuk ezt? Íme egy példa:
+          Van ez a gyönyörű kép. A kép alapvetően egyfajta információ. Minden információ
+          kódolható binárisan, így vagy úgy, csak ki kell találni, hogyan.'
+      4:
+        text: Képzeld el, hogy egy rácsot teszünk erre a pandamacira, és minden egyes
+          négyzetnél el kell döntenünk, hogy az a négyzet inkább fekete vagy inkább
+          fehér legyen. Majd aztán így fogjuk kiszínezni. A cellák vagy feketék vagy
+          fehérek, a fekete négyzetekre azt mondjuk, hogy azok nullák (bináris számjegy),
+          a fehér négyzetek pedig egyesek, a másik bináris számjegy. A végén csak
+          egy csomó egyes és nulla marad. Így ábrázoljuk ezt a képet binárisan.
+    C4_unplugged_forloops:
+      1:
+        text: Ennek a leckének a neve a játék a hurkokkal. Ebben a leckében egy kockajátékot
+          fogunk játszani, amihez egy számegyenest fogunk használni. Minden játékos
+          háromszor fog dobni, ezzel hozzárendelnek egy kezdőértéket, egy megállító
+          értéket és az intervallumunkat. Minden forduló során bekarikázzuk a kezdőértékünket,
+          és minden olyan értéket, amellyel ugyanannyi lépést teszünk előre, mint
+          az intervallumértékünk. Akkor hagyjuk abba a bekarikázást, amikor elértük
+          a megállító értékünket. Az nyer, aki a legmagasabb pontszámot érte el!
+      2:
+        text: A for hurkok nagyon sok helyen nagyon jól használhatóak, és ha meteorológus
+          leszel, for hurkokat fogsz állandóan használni. Szia, Becky vagyok. Az EverPower
+          Renewables-nél dolgozom szélmeteorológusként. A Columbia River Gorge területén
+          prognosztizálom a szélsebességet, ahol a vállalatnak szélerőművei vannak.
+      3:
+        text: Próbáljuk megérteni, hogy mekkora lesz a szél ott, hogy megtudjuk, mennyi
+          energiát fogunk termelni. Ezt az információt átadjuk a valós idejű energiakereskedőknek.
+          Ők annak megfelelően adnak és vesznek energiát, hogy milyen energiaértéket
+          közlünk velük, hiszen biztosítani kell az elektromos hálózat egyensúlyát,
+          hogy a villanyok égjenek, és hogy maximalizálni tudjuk a farmjaink által
+          termelt energia mennyiségét.
+      4:
+        text: Az EverPower Renewables nemzeti irányítóközpontjában vagyunk Portlandben,
+          ahova az ország összes farmjáról érkeznek információk. Még a legnagyobb
+          teljesítményű számítógépek sem képesek mindenhol szimulálni a légkör változását.
+          A számítógépes előrejelző modellekben van egy úgynevezett rács. Minden rácspontnak
+          van egy szélességi és egy hosszúsági foka. Ki kell számolnunk a fizikai
+          jellemzőket, és ki kell számítanunk a szélsebességet, a hőmérsékletet, a
+          nyomást, és további tulajdonságokat.
+      5:
+        text: Mivel ezek meglehetősen nagy rácsok, és nagyon sok pont van, millió
+          és millió hurkolást végzünk ezeken a pontokon. Mindenhez, amit csinálok,
+          for hurkokat használok. Itt van például egy for hurok. A szél előrejelzésénél
+          annyi különböző paramétert kell figyelembe venni, hogy egy ember képtelen
+          lenne leülni és elvégezni ezeket a számításokat. Annyi különböző szempont
+          van, ami befolyásolja a széljárást, hogy az előrejelzéshez számítógépes
+          modellre van szükségünk.
+    C4_unplugged_madlibs:
+      1:
+        text: Ebben a leckében néhány kitöltendő történettel fogunk játszani. Van
+          egy kitöltendő sablon, amellyel egymáshoz nagyon hasonló történeteket lehet
+          alkotni, és amelyek mégis nagyon szórakoztató módon különböznek egymástól.
+      2:
+        text: Ebben a leckében azt is megtanultuk, hogyan lehet egy absztrakt sablont
+          készíteni két már kész történetből. Az absztrakció az eltérések és a részletek
+          eltávolításának a művészete, ezáltal megtudjuk, hogyan alkalmazható egy
+          megoldás több különböző problémára. Az informatikában nagyon hasznos dolog
+          az absztrakció, mert ezáltal olyan függvényeket tudunk létrehozni, amelyek
+          több különböző helyzetben is hasznosnak bizonyulhatnak.
+    C4_unplugged_parameters:
+      1:
+        text: 'Ez a leckének a címe: dalszerzés paraméterekkel. Itt néhány dalt fogunk
+          írni. A refrén minden egyes alkalommal egy kicsit más. Emlékeztek még az
+          Old MacDonald Had a Farm dalra? A refrén minden állat esetében egy kicsit
+          más. "És azon a farmon volt egy tehene, múú." A refrének apró változásait
+          meg tudjuk mutatni egy olyan dologgal, amit paraméternek nevezünk.'
+      2:
+        text: A függvényeknek időnként szükségük van paraméterre. A paraméter egy
+          olyan extra információ, amelyet átadsz egy függvénynek, ha azt akarod, hogy
+          egy speciális igényt vegyen fogyelembe. Amikor fagylaltkelyhet készítesz
+          a barátaiddal, a számítógépes program paramétereihez hasonló műveletet végzel.
+      3:
+        text: A vaníliafagylalt lehet ugyanaz minden fagylaltkehelynél, de ha megkérdezed
+          a barátaidat, hogy melyik öntetet kérik, rengeteg különböző kombinációt
+          kaphatsz. Az öntet a függvény, de minden egyes öntettípus egy-egy paraméter.
+          A függvények és a paraméterek együttesen nagyszerű számítógépes programokat
+          és nagyszerű fagylaltkelyheket eredményeznek.
+    C4_unplugged_variables:
+      1:
+        text: 'Ennek a leckének a címe: változók borítékban. Megtanuljuk, hogyan lehet
+          mondatokat építeni akkor, amikor  hiányoznak információk. Legtöbben már
+          ismeritek az üres hely kitöltésének a fogalmát. Ez történik például akkor,
+          amikor a nevünket ráírjuk a házi feladatunkra. Néha, amikor egynél több
+          szót kell kitölteni, az üres helyet felcímkézzük, hogy tudjuk, melyik információ
+          hova tartozik.'
+      2:
+        text: A változók olyan információdarabok helyőrzői, amelyek változhatnak.
+          Ha egy változót használunk a hiányzó információ helyén, akkor folytathatjuk
+          a munkát, amit éppen csináltunk, és hagyhatjuk, hogy valaki más később pótolja
+          a hiányzó információt. A szoftverekben sokszor használunk változókat. Változókat
+          használunk egy név, egy e-mail-cím és még egy felhasználónév helyőrzőjeként
+          is. Így tudatjuk a programmal, hogy hol fognak megjelenni ezek az adatok,
+          miután a felhasználó kitöltötte őket. Munkánk során folyamatosan használunk
+          változókat.
+      3:
+        text: Változót használunk akkor, amikor egy információt később akarunk felhasználni.
+          Tegyük fel, hogy meg kell számolnunk, egy felasználó hányszor tweetelt.
+          Minden alkalommal, amikor a felhasználó tweetel, hozzáadunk egyet ehhez
+          a számhoz, és minden alkalommal, amikor a felhasználó töröl egy tweetet,
+          eggyel csökkentjük ezt a számot. Bármikor, amikor tudni akarjuk, hányszor
+          tweetelt az adott felhasználó, csak megnézzük ezt a változót.
     C4_variables_artist:
       1:
         text: A változó egy olyan tároló, amelyben egy értéket tudunk megőrizni. Amikor
@@ -1397,6 +1833,231 @@ hu:
           oldalon található betűk méretét. A betűméret módosításával pedig módosulhat
           a könyv oldalainak száma. Ezt a könyv oldalszámának változóban tárolásával
           tudjuk beállítani.
+    infinity_playlab_events:
+      1:
+        text: 'Most olyasmivel fogunk megismerkedni, amit a játékprogramozók mindennap
+          használnak. Ezeket eseményeknek hívják. Egy esemény azt mondja a programodnak,
+          hogy figyeljen arra, hogy mi történik. És amikor ez megtörténik, akkor végrehajt
+          egy műveletet. Néhány példa az eseményekre: figyelése egérkattintásra, nyílgombra
+          vagy a képernyő megérintésére.'
+      2:
+        text: Itt azt akarjuk, hogy Baymax mozogjon felfelé és érintse meg Hirót,
+          vagy mozogjon lefelé és érintse meg Rapunzelt, amikor a játékos a fel/le
+          nyílbillentyűket vagy a fel/le gombokat használja. Az "amikor felfelé nyíl"
+          blokkot fogjuk használni, és hozzácsatoljuk a "szereplő felfelé mozog" blokkot,
+          így amikor a játékos megnyomja a felfelé nyíl billentyűt, minden, ami az
+          "amikor felfelé nyíl" blokkhoz van csatolva, működni kezd. Ugyanezt tesszük
+          akkor is, amikor azt akarjuk, hogy Baymax lefelé mozogjon. Így lépésről
+          lépésre a játékod egyre interaktívabbá válik.
+    infinity_playlab_intro:
+      1:
+        text: Szóval, melyik osztályba jársz? Másodikba. Tizedikbe. Elsőbe. Nyolcadikos
+          voltam, amikor megtanultam programozni. Hatodikos koromban kaptam az első
+          számítógépet. Azt szeretem, hogy meg tudom oldani az emberek problémáit.
+          Kifejezheted magad, és egy ötletből felépíthetsz dolgokat.
+      2:
+        text: A számítástechnika az alapja mindannak, amivel az egyetemisták és a
+          szakemberek a következő húsz-harminc évben foglalkoznak. Azért szeretek
+          programozni, mert szeretek segíteni az embereknek. Építhetek olyasmit, ami
+          megkönnyíti az emberek életét. Szerintem ez áll a legközelebb a szuperhatalomhoz.
+          Az indulás a legfontosabb rész. Én magam is kezdő vagyok, de szeretném,
+          ha együtt tanulnánk.
+      3:
+        text: John Vechey vagyok, a PopCap Games egyik társalapítója. Olyan játékokat
+          készítünk, mint a Plants kontra Zombies, a Bejeweled és a Peggle. A játékok
+          lényege nem a tökéletes kódban vagy a tökéletes művészetben rejlik, hanem
+          abban, hogy milyen érzést generál és mennyire szórakoztató a játék. Ezt
+          csak akkor érted meg, ha kipróbálod, ha csinálod, ha tanulsz, ha alkalmazkodsz
+          és ha újra és újra használod a játékkészítési készségeid.
+      4:
+        text: Van kedvenc videójátékod? A PlayLabban megtesszük az első lépést, hogy
+          ilyen játékokat tudjatok készíteni. A jó játékoknak van egy történetük,
+          és minden történetben vannak szereplők. Szereplők, akik különböző dolgokat
+          csinálnak, például beszélnek, mozognak és kapcsolatba lépnek egymással.
+          Talán még pontokat is szereznek a játék szabályai szerint. Ma megtanuljuk,
+          hogyan lehet mindezeket a dolgokat egyenként, szórakoztató Dismey szereplőkkel
+          létrehozni, ezek közé tartozik Anna, Elsa, Hiro, Baymax és Rapunzel. Majd
+          a nulláról kiindulva egy olyan játékot készítünk, amelyet telefonon lehet
+          játszani és meg tudtok osztani másokkal.
+      5:
+        text: A képernyő három fő részből áll. Balra van a játéktér, ahol a programod
+          fog futni. Az egyes szintekhez tartozó utasítások lent találhatók. Ez a
+          középső terület az eszköztár, és minden egyes blokk egy kódrészlet. A jobb
+          oldali fehér területet munkaterületnek nevezzük, és itt fogjuk felépíteni
+          a programunkat.
+      6:
+        text: Először a blokkokat hozzá kell kapcsolnunk a narancssárga "amikro fut"
+          blokkhoz. Több blokkot is össze lehet kapcsolni egymással. Húzd őket addig,
+          amíg a sárga kontúr meg nem jelenik, akkor össze fognak pattanni. Ebben
+          az első feladványban Hiro az 1-es szereplő, Baymax pedig a 2-es szereplő.
+          Azt akarjuk, hogy Hirót Baymaxhoz menjen. Ehhez húzzuk ki a "jobbra mozdul"
+          blokkot, és kössük össze az "amikor fut" blokkal. Ha a blokkok a helyükre
+          kerültek, nyomd meg a "Futtatás" gombot, és nézd meg, hogy mit programoztál.
+      7:
+        text: Kezdd el, és mire a végére érsz már el tudod készíten a saját játékod,
+          különféle szereplőkkel, akik kapcsolatba  tudnak léni egymással, pontokat
+          szerezhetnek, mikrobotokat, cseresznyét, serpenyőket, szikrát és jeget...
+          dobálhatnak és akár el is tüntethetik egymást. Minden csak rajtad múlik!
+    infinity_playlab_repeat_forever:
+      1:
+        text: El tudod képzelni, ha valamit állandóan ismételgetned kell? Remélhetőleg
+          soha nem kell, mert a számítógépek nagyon jók az ismételgetésekben. Ez az
+          örökké ismétlődő blokk. Bármi, ami ebben a blokkban van, mindig meg fog
+          történni a játékban.
+      2:
+        text: Tehát ha azt szeretnénk, hogy egy szereplő ismétlődően csináljon valamit
+          anélkül, hogy a játékos bármit is tenne, akkor ezeket a blokkokat az ismétlés
+          örökké blokkba tesszük. A következő feladványban az a célunk, hogy Annának
+          állandóan sétáljon le és fel. Ha megtanulod az ismétlő parancsok működését,
+          azzal rengeteg időt takaríthatsz meg később, amikor saját játékodat építed.
+    tutorial_puzzle_challenge:
+      1:
+        text: Olívia, mi szeretnél lenni, ha nagy leszel? Űrhajós. Tudod egyébként,
+          hogy mit csinál egy számítógépes programozó? Igen... nem. Várj, mit? Nem
+          igazán tudom, hogy magyarázzam el, de a számítógépes programozás elég egyszerű.
+          Egy sor utasítás, mint egy recept, amit lépésről lépésre kell követned,
+          hogy megkapd a kívánt végeredményt.
+      2:
+        text: A pixelek számát, a vonal hosszát, ezzel a legördülő menüponttal tudom
+          megváltoztatni. Milyen hosszú is volt? A futtatás gomb alatt megint láthatod
+          az utasításokat. Itt az előre mozgás blokkot használtam, és 100-as mixelt
+          fogok választani. Egy blokkot törölni lehet, ha az eszköztárba vagy a kukába
+          húzom. Tegyük vissza a helyére.
+      3:
+        text: Futtasd a kódot a futtatás gomb megnyomásával. Nos, ez nem működött!
+          Megnyomom a visszaállítás gombot, és megnézem, mi a baj. Egy feladvánnyal
+          annyiszor próbálkozhatsz, ahányszor csak akarsz, vagy kihagyhatod őket,
+          és később visszatérhetsz hozzájuk. Csak ügyelj arra, hogy mindent megpróbálsz,
+          és nem adod fel. Tegyünk még egy lépést előre. Még mindig nem sikerült.
+          Lehet egy blokkot több más blokk közé helyezni.
+      4:
+        text: Vegyünk egy fordulás blokkot, és helyezzük az előre mozgások közé. Fordulj
+          balra 45 fokot. Futtassuk le újra. Visszaálltás, futtatás, király! Itt egy
+          másik feladvány. Néha kapunk egy kitöltendő indítókódot. Itt a megfelelő
+          hosszúságokat és fokokat kell hozzáadni.
+      5:
+        text: Előfordulhat, hogy néha véletlenül kidobod a indítókódot. Mit kell tenni
+          ilyenkor? Megnyomhatod a feladvány törlése gombot, és kezdheted elölről
+          az egészet. Ezt a számblokkot különböző pixelterületekre húzom. Válaszd
+          a 100 pixelt, a 45 fokot, és ismét a 100 pixelt. Klassz! Itt van a Code
+          Studio méhecske. El kell mozgatnom a méhecskét a virágokhoz, hogy nektárt
+          tudjon gyűjteni.
+      6:
+        text: Az első virág három blokknyira van, így háromszor kell előre lépnem.
+          1, 2, 3. Aztán be kell gyűjtenie a nektárt, majd be kell gyűjtenie a nektárt
+          egy másik virágról. Hát ez nem működött! A nektárok közé teszek még egy
+          előre mozgást, és újra lefuttatom. Hurrá, működik! Ezzel megtanultad, hogyan
+          kell a Code Studio művészt és a méhecskés feladványokat használni. Sok szerencsét
+          a Code Studio feladványok kihívásaihoz.
+    unplug1:
+      1:
+        text: Olívia, mi szeretnél lenni, ha nagy leszel? Hmm, űrhajós! Tudod egyébként,
+          hogy mit csinál egy számítógépes programozó? Igen... nem. Hmm, mit? Nem
+          igazán tudom, hogy magyarázzam el. A számítógépes programozás elég egyszerű.
+          Egy sor utasítás, mint egy recept. Lépésről lépésre kell követned őket,
+          hogy megkapd a kívánt végeredményt.
+      2:
+        text: A számítástechnika egy eszköz, amivel hatással lehetünk a világra. Ezek
+          lehetnek zenei videók, játékok, de ki lehet mutatni azt is, hogy valaki
+          kapcsolatban áll-e valakivel vagy sem. Meg lehet találni az ismerőseid,
+          mások barátait. Csinálhatsz mindenféle őrült dolgokat, amivel valójában
+          életeket menthetsz. Azt hiszem, kell valami hajtóerő. Számomra ez olyan,
+          mint egy ecset. Szerintem a jó programozás nem sokban különbözik a művészettől.
+      3:
+        text: Amikor végre megtanultam egy kicsit programozni, az üres falon egy csomó
+          ajtó jelent meg. Kinyitod őket, és persze mögöttük egy másik terem van újabb
+          ajtókkal. A programozás szórakoztató és könnyű. Mindent megtehetsz, amit
+          csak akarsz. Végül, amikor már elég ajtó van nyitva, bejön a fény. Számomra
+          egy kész program olyan, mint egy fényben úszó építület. Minden sarka meg
+          van világítva. Annyi embert érinthetsz meg, annyi emberrel léphetsz kapcsolatba,
+          és ez valami olyasmi, amit a világ még soha nem látott.
+      4:
+        text: Sorozatunk első leckéje arról szól, hogy mi a számítástechnika, mit
+          csinál egy informatikus, és hogyan használhatod az informatikát felelősségteljesen.
+          Ez nagyon fontos lecke, de egy kicsit sok a szöveg. A végén elkészítheted
+          a saját, egyedi kódolásod a kezdőbetűid felhasználásával. Ez szórakoztató
+          és nagyon inspiráló, mert a bináris kódolás ugyan nagyon technikai tevékenységnek
+          tűnik, de ha egyszer megérted, olyan, mintha egy titkos nyelven tudnál beszélni.
+    unplug2:
+      1:
+        text: Ez a lecke a számítási gondolkodásról szól, a lecke célja megtanítani,
+          hogyan lehet egy nagyobb, nehéz problémát több egyszerűbb problémára lebontani.
+          Egy olyan utasítássorozatot kell megírni, amelyet követve bárki le tudja
+          rajzolni a leckében szereplő szörnyek egyikét.
+      2:
+        text: 'A tanulók csoportokat alkotnak, az utasításokat csoportban írják meg,
+          majd azokat kicserélik egy másik csoporttal, akiknek le kell rajzolniuk
+          a szörnyet. A csoportok a számítógépes gondolkodás négy lépését használva
+          írják meg az utasításokat: lebontás, mintázat meghatározása, absztrakció
+          és algoritmusok.'
+      3:
+        text: Először a csoportok lebontják a feladatot, ami azt jelenti, hogy játéktervet
+          készítenek. Ezután mintákat keresnek a katalógusban szereplő a szörnyek
+          között. Ha különbségekre bukkannak, elkülönítik vagy eltávolítják ezeket
+          a részleteket. Például az egyik szörnynek a katalógusban olyan szeme van,
+          mint egy Vegetának, egy másiknak pedig mint egy sprite-nak. De mindkettőnek
+          van szeme, így írhatunk egy sort, ami azt mondja, hogy a szörnynek üres
+          szeme van.
+      4:
+        text: A diákok tehát képesek lesznek egy algoritmusnak nevezett utasítássorozatot
+          írni, amelyben felsorolják a szörnyek üres részeit, és azt, és hogy azok
+          milyen fájtájúak lehetnek. Ezt az utasítássorozatot átadják a többi diáknak,
+          és ők megpróbálják újrateremteni a saját szörnyüket.
+    unplug9:
+      1:
+        text: A váltóprogramozás egy rendkívül szórakoztató lecke, és nem csupán a
+          számítástechnikáról lehet tanulni belőle. Néha, amikor mindenki egy kicsit
+          nyugtalan, és fel kell állítani őket. Ez nagyszerű lehetőség, hogy egy kis
+          izgalom kerüljön az informatikába.
+      2:
+        text: Két csoportra kell osztani az osztályt, és a diákok két sort alkotnak,
+          hasonlóan a váltófutáshoz. Mindkét csoportból az első személy a terem másik
+          oldalára fut, ahol egy rajz várja őket egy kockás papíron és egy üres papírlap.
+          Fölírják a kép létrehozásának első lépését, majd visszafutnak a sorba, megjejölik
+          a következő játékost, aki visszamegy, hogy megírja a következő lépést.
+      3:
+        text: Ez remek lehetőséget ad a hibakeresés fontosságának a megerősítésére,
+          hogy ellenőrizni kell a saját munkánkat, de ellenőrizni kell azt a munkát
+          is, amit mások végeztek el mi előttünk. Gyorsan megértik, hogy mennyire
+          fontos odafigyelni a kódolásra, amikor egy egész csapat függ tőlük.
+    unplug10:
+      1:
+        text: Ennek a tevékenységnek a segítségével az internet működése könnyen átlátható.
+          Egyszerű szavakkal elmagyarázzuk a szükséges szakkifejezéseket, így a diákok
+          szimulálni tudják üzenetek, például egy e-mail küldését.
+      2:
+        text: A tanulók üzeneteket továbbítanak, miközben a három átviteli módszer
+          egyikének a szerepét játszák el. Vezeték nélküli internet, DSL és optikai
+          szál. A wifit képviselő tanulóknak a fejükön kell viselniük a továbbítandó
+          üzenetet, mert a wifi esetében a legnagyobb a valószínűsége annak, hogy
+          elveszik az információ egy része.
+      3:
+        text: A DSL-t vagy kábeltévét játszó diákok a kézfejükön hordják az üzenetet,
+          ahol valamivel kisebb a valószínűsége az információ elejtésének. Az optikai
+          szálakat képviselő diákok pedig mindkét kezükben fogva viszik az üzenetet.
+          Ezzel a tevékenységgel könnyen meg lehet érteni valamit, amit sokan közülünk
+          nap mint nap használnak.
+    unplug11:
+      1:
+        text: Itt az ideje hátralépni, és madártávlatból szemlélni mindazt, ami az
+          elmúlt tizenkilenc leckében történt. Remek alkalom arra, hogy felhívjuk
+          a tanulók figyelmét, hatalmas eredményt értek el. Többet tanultak ezekből
+          a leckékből, mint amennyit a legtöbb felnőtt tud a számítástechnikáról
+      2:
+        text: Beszéljétek meg az osztállyal vagy kisebb csoportokban, hogy melyek
+          voltak a kedvenc leckéik. Csilloghat a diákok kreativitása amikor visszatekintetek
+          mindarra, amit tanultak. Oszd őket csoportokra, és a diákok készítsenek
+          egy számítógép nélkül is elvégezhető leckét. Minden csoportnak adj egy-egy
+          fontos fogalmat, például függvényeket vagy algoritmusokat, és legyen kéznél
+          sokféle anyag, amivel dolgozhatnak. A csoportok mutassák be az új számítógép
+          nélkül is elvégezhető tevékenységeket, vagy akár különíts el egy teljes
+          napot, amikor a diákok elvégezhetnek néhány tevékenységet ezek közül.
+      3:
+        text: A Code.org minden munkatársa nevében reméljük, hogy nagyon jól éreztétek
+          magatokat ezen a tanfolyamon. És bármi is az álmotok, létrehozni egy új,
+          tökéletes alkalmazást, vagy programozással segíteni betegségek leküzdését,
+          vagy kiváló problémamegoldók szeretnétek lenni, ez a tanfolyam volt az első
+          lépés az álmaitok megvalósításában.
     starwars_intro:
       1:
         text: Szia, Kathleen Kennedy vagyok, a Star Wars Ébredő erő producere. Ma
@@ -1775,30 +2436,303 @@ hu:
       4:
         text: Most bármit építhetsz, amit csak szeretnél! Jó szórakozást!
     gumball_intro:
+      1:
+        text: Ha szeretnéd elkészíteni a saját játékodat, az nagyon egyszerűen megteheted.
+          Mindössze néhány programozási alapismeretre van szükséged, és máris játszhatsz
+          az általad készített játékkal.
+      2:
+        text: Van kedvenc videojátékod? A PlayLabban megtesszük az első lépést, hogy
+          ilyen játékokat tudjatok készíteni. A jó játékoknak van egy történetük,
+          és minden történetben vannak szereplők. Szereplők, akik különböző dolgokat
+          csinálnak, például beszélnek, mozognak és kapcsolatba lépnek egymással.
+          Talán még pontokat is szereznek a játék szabályai szerint. Ma megtanuljuk,
+          hogyan lehet mindezeket a dolgokat egyenként, szórakoztató szereplőkkel
+          létrehozni, majd a nulláról kiindulva egy olyan játékot készítünk, amelyet
+          telefonon lehet játszani és meg tudtok osztani másokkal.
+      3:
+        text: Ma megtanuljuk, hogyan lehet mindezeket a dolgokat egyenként, szórakoztató
+          szereplőkkel létrehozni, majd a nulláról kiindulva egy olyan játékot készítünk,
+          amelyet telefonon lehet játszani és meg tudtok osztani másokkal.
       4:
         text: 3 fő részre van felosztva a képernyőd. A bal oldalon van a játéktér,
           ahol a program fog futni. Az utasítások minden egyes szinthez alól vannak
           odaírva.
+      5:
+        text: Ez a középső részen van az eszközkészlet, és minden egyes blokk egy-egy
+          kódelem.
       6:
         text: A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni.
       7:
         text: Az indításhoz, a blokkjaidat hozzá kell csatolnod a narancssárga "futtatáskor"
           blokkhoz. Több blokkot is összekapcsolhatsz úgy, hogy elhúzod őket a sárga
           vonalig, és akkor majd összekapcsolódnak.
+      8:
+        text: Ebben az első feladványban a szereplőket úgy fogjuk rávenni a beszédre,
+          hogy a "beszél" blokkot  összekötjük az "amikor fut" blokkal, és beírjuk
+          az üzenetet. Ha a blokkok a helyükre kerültek, nyomd meg a futtatás gombot,
+          és nézd meg, mit programoztál.
+      9:
+        text: Kezdd el, és mire a végére érsz már el tudod készíten a saját játékod,
+          különféle szereplőkkel, akik kapcsolatba  tudnak léni egymással, pontokat
+          szerezhetnek, dolgokat dobálhatnak és akár el is tüntethetik egymást. Minden
+          csak rajtad múlik!
+    gumball_events:
+      1:
+        text: Most valami olyasvalamivel fogunk megismerkedni, amit a játékprogramozók
+          mindennap használnak. Ezeket eseménynek hívjuk. Egy esemény azt mondja a
+          programodnak, hogy figyelje, mikor történik valami, és amikor ez megtörténik,
+          a játék végrehajt egy műveletet.
+      2:
+        text: 'Néhány példa egy eseményre: egérkattintás, felfelé vagy lefelé mutató
+          nyílbillentyű, vagy akár a képernyő megérintése.'
+      3:
+        text: Itt azt csináljuk, hogy amikor a játékos rákattint, a szereplő mondjon
+          valamit. Az amikor rákattint blokkot fogjuk használni, és hozzácsatoljuk
+          a beszél blokkot. Amikor a játékos rákattint, az összes ehhez a blokkhoz
+          csatolt blokkot a program végrehajtja.
+      4:
+        text: Vannak olyan blokkok is, amelyekben nyilak vannak. Ha ezeket összekapcsolod
+          a mozgatás blokkokkal, akkor a nyílbillentyűkkel lehet a szereplőket felfelé,
+          lefelé, balra vagy jobbra mozgatni. A játékod apránként egyre interaktívabb
+          lesz.
+    gumball_repeat:
+      1:
+        text: El tudod képzelni, ha valamit állandóan meg kell ismételned? Remélhetőleg
+          soha nem kell, mert a számítógépek nagyon jók a dolgok megismétlésében.
+      2:
+        text: Ez az ismétlés örökké blokk. Bármi, ami ebben a blokkban van, állandón
+          meg fog történni a játékban. Ha azt akarjuk, hogy egy szereplő ismétlődően
+          csináljon valamit anélkül, hogy a játékosnak bármit is kellene tenni, akkor
+          ezeket a blokkokat az ismétlés örökké blokkba tesszük.
+      3:
+        text: A következő feladványban az a célunk, hogy a szereplő folyamatosan végezzen
+          egy feladatot. Ha megtanulod az ismétlés parancsok működését, azzal később,
+          amikor a saját játékod építed, rengeteg időt takaríthatsz meg magadnak.
     iceage_intro:
+      1:
+        text: Ha szeretnéd elkészíteni a saját játékodat, az nagyon egyszerűen megteheted.
+          Mindössze néhány programozási alapismeretre van szükséged, és máris játszhatsz
+          az általad készített játékkal.
+      2:
+        text: Van kedvenc videojátékod? A PlayLabban megtesszük az első lépést, hogy
+          ilyen játékokat tudjatok készíteni. A jó játékoknak van egy történetük,
+          és minden történetben vannak szereplők. Szereplők, akik különböző dolgokat
+          csinálnak, például beszélnek, mozognak és kapcsolatba lépnek egymással.
+          Talán még pontokat is szereznek a játék szabályai szerint. Ma megtanuljuk,
+          hogyan lehet mindezeket a dolgokat egyenként, szórakoztató szereplőkkel
+          létrehozni, majd a nulláról kiindulva egy olyan játékot készítünk, amelyet
+          telefonon lehet játszani és meg tudtok osztani másokkal.
+      3:
+        text: Ma megtanuljuk, hogyan lehet mindezeket a dolgokat egyenként, szórakoztató
+          szereplőkkel létrehozni, majd a nulláról kiindulva egy olyan játékot készítünk,
+          amelyet telefonon lehet játszani és meg tudtok osztani másokkal.
       4:
         text: 3 fő részre van felosztva a képernyőd. A bal oldalon van a játéktér,
           ahol a program fog futni. Az utasítások minden egyes szinthez alól vannak
           odaírva.
+      5:
+        text: Ez a középső részen van az eszközkészlet, és minden egyes blokk egy-egy
+          kódelem.
       6:
         text: A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni.
       7:
         text: Az indításhoz, a blokkjaidat hozzá kell csatolnod a narancssárga "futtatáskor"
           blokkhoz. Több blokkot is összekapcsolhatsz úgy, hogy elhúzod őket a sárga
           vonalig, és akkor majd összekapcsolódnak.
+      8:
+        text: Ebben az első feladványban a szereplőket úgy fogjuk rávenni a beszédre,
+          hogy a "beszél" blokkot  összekötjük az "amikor fut" blokkal, és beírjuk
+          az üzenetet. Ha a blokkok a helyükre kerültek, nyomd meg a futtatás gombot,
+          és nézd meg, mit programoztál.
+      9:
+        text: Kezdd el, és mire a végére érsz már el tudod készíten a saját játékod,
+          különféle szereplőkkel, akik kapcsolatba  tudnak léni egymással, pontokat
+          szerezhetnek, dolgokat dobálhatnak és akár el is tüntethetik egymást. Minden
+          csak rajtad múlik!
+    iceage_events:
+      1:
+        text: Most valami olyasvalamivel fogunk megismerkedni, amit a játékprogramozók
+          mindennap használnak. Ezeket eseménynek hívjuk. Egy esemény azt mondja a
+          programodnak, hogy figyelje, mikor történik valami, és amikor ez megtörténik,
+          a játék végrehajt egy műveletet.
+      2:
+        text: 'Néhány példa egy eseményre: egérkattintás, felfelé vagy lefelé mutató
+          nyílbillentyű, vagy akár a képernyő megérintése.'
+      3:
+        text: Itt azt csináljuk, hogy amikor a játékos rákattint, a szereplő mondjon
+          valamit. Az amikor rákattint blokkot fogjuk használni, és hozzácsatoljuk
+          a beszél blokkot. Amikor a játékos rákattint, az összes ehhez a blokkhoz
+          csatolt blokkot a program végrehajtja.
+      4:
+        text: Vannak olyan blokkok is, amelyekben nyilak vannak. Ha ezeket összekapcsolod
+          a mozgatás blokkokkal, akkor a nyílbillentyűkkel lehet a szereplőket felfelé,
+          lefelé, balra vagy jobbra mozgatni. A játékod apránként egyre interaktívabb
+          lesz.
+    iceage_repeat:
+      1:
+        text: El tudod képzelni, ha valamit állandóan meg kell ismételned? Remélhetőleg
+          soha nem kell, mert a számítógépek nagyon jók a dolgok megismétlésében.
+      2:
+        text: Ez az ismétlés örökké blokk. Bármi, ami ebben a blokkban van, állandón
+          meg fog történni a játékban. Ha azt akarjuk, hogy egy szereplő ismétlődően
+          csináljon valamit anélkül, hogy a játékosnak bármit is kellene tenni, akkor
+          ezeket a blokkokat az ismétlés örökké blokkba tesszük.
+      3:
+        text: A következő feladványban az a célunk, hogy a szereplő folyamatosan végezzen
+          egy feladatot. Ha megtanulod az ismétlés parancsok működését, azzal később,
+          amikor a saját játékod építed, rengeteg időt takaríthatsz meg magadnak.
     mc_2016_intro:
+      1:
+        text: Szia, a nevem Jens, és én vagyok a Minecraft vezető kreatív tervezője.
+          A következő órában elkészítheted a saját Minecraft játékodat. Ez úgy fog
+          kinézni, mint a Minecraft, de a világ megállt. A birkák nem mozognak, a
+          csirkék nem tojnak, a zombik pedig csak állnak. Rajtad múlik, hogy hozzáadsz-e
+          kódot, hogy a Minecraft világa működjön.
+      2:
+        text: 'A nevem Melissa, a Minecraft felhasználói kutatója vagyok. Ami engem
+          igazán érdekel, az az, hogy az emberek hogyan gondolkodnak és hogyan lépnek
+          kapcsolatba a technológiával. Ez a munka tökéletes a  számomra, mert összekapcsolhatom
+          a számítástechnikát és a pszichológiát: hogyan gondolkodnak és viselkednek
+          az emberek.'
+      3:
+        text: Látni fogod, hogy a képernyőd három fő részre oszlik. 1. A bal oldalon
+          a Minecraft játék látható. Jelenleg a világ fagyott állapotban van, de ezt
+          kódolással ki fogjuk javítani.
+      4:
+        text: 2. Ez a középső terület az eszköztár. A blokkok mindegyike egy-egy parancsot
+          jelent, amit a csirkék, birkák és más Minecraft-lények megértenek.
+      5:
+        text: 3. A jobb oldali területet a munkaterület, és itt fogjuk felépíteni
+          a programunkat.
+      6:
+        text: Ha elfelejtenéd, hogy mit kell tenned, az egyes szintekhez tartozó utasításokat
+          fent találod.
+      7:
+        text: Először egy csirkét fogunk programozni. Húzzuk a "mozgás előre" parancsot
+          a munkaterületre. Amikor megnyomom a "Futtatás" gombot, a csirke egy lépést
+          tesz előre. Ha tovább akarunk menni, húzok egy másik "mozgás előre" blokkot
+          az első "mozgás előre" blokk alá, amíg a kiemelés meg nem jelenik. Ezután
+          eldobom, és a két blokk egymáshoz csattan. Ha ismét megnyomom a "Futtatás"
+          gombot, a csirke két lépést tesz előre.
       8:
         text: Ha ki akarsz törölni egy blokkot, csak húzd vissza az eszköztárba.
+      9:
+        text: Ha megnyomtad a "Futtatás" gombot, de a játékot vissza akarod állítani,
+          és elölről kezdeni, nyomd meg a " Visszaállítás" gombot. Most rajtad a sor,
+          készítsd el a Minecraft saját verziódat. Jó szórakozást!
+    mc_2016_loops:
+      1:
+        text: Szia, a nevem Lisa. A Minecraft szoftverfejlesztője vagyok, és a játékban
+          található állatok és ellenségek egy részével dolgozom. Az ocelot volt az
+          egyik állat, amivel dolgoztam. Azon a részen dolgoztam, ahol halat adhatsz
+          egy ocelotnak, hogy a saját macskáddá szelitísd őt.
+      2:
+        text: Mi emberek nagyon unatkozunk, ha ugyanazt a dolgot kell újra és újra
+          és újra megcsinálnunk. De a számítógépekben az a jó, hogy képesek ugyanazt
+          a dolgot milliószor vagy akár milliárdszor egymás után megcsinálni anélkül,
+          hogy megunnák. Ezt az ismétlést huroknak hívjuk, és a Minecraftban minden
+          lény használ hurkokat.
+      3:
+        text: Korábban megmozgattunk egy csirkét a képernyőn, de aztán megállt. A
+          Minecraftban a csirkék örökké és örökké vándorolnak. Használjunk egy "örökké
+          csinálja" hurkot az eszköztárunkból, hogy a csirkéink is örökké mozogjanak.
+          A hurkok segítségével rengeteg időt spórolhatsz meg, és nagyon sok szép
+          lehetőséget nyílik meg, amikor a Minecraft saját verziódat építed.
+    mc_2016_events:
+      1:
+        text: Ezen a szinten választhatsz, hogy Steve vagy Alex leszel-e. A billentyűzeted
+          nyílgombjaival tudsz felfelé, lefelé, balra és jobbra mozogni. Most már
+          a szinten ott mozoghatsz, ahol csak akarsz. Ha használni szeretnéd az egyik
+          lényt, csak sétálj felé, fordulj vele szembe, és nyomd meg a szóköz billentyűt.
+      2:
+        text: Ha érintőképernyőt használsz, a mozgáshoz húzd felfelé, lefelé, balra
+          vagy jobbra a kezed. Ezután koppints a játékra, hogy használd az előtted
+          lévő tárgyat.
+      3:
+        text: De mi történik, amikor használod? A Minecraftban a birkák levetik gyapjúkat,
+          ha megnyírod őket, a tehenek elszaladnak, ha megütöd őket, a Creeperek pedig
+          felrobbannak, ha a közelükbe érsz. Ezeket a reakciókat az események váltják
+          ki. Az események azt mondják a programodnak, hogy figyeljen vagy várjon,
+          amíg valami történik. És amikor ez a valami megtörténik, hajtson végre egy
+          műveletet.
+      4:
+        text: Eddig csak egy eseményt használtál. Az "amikor megszületik" keretbe
+          tett kód akkor fut le, amikor a lényed létrejön, vagy amikor a játék elindul.
+          A következő néhány szinten új keretekkel ismerkedsz majd meg, olyan eseményekkel,
+          mint például az "amikor megérinted", amely akkor fut le, amikor megérinted
+          a lényt, vagy az "amikor használod", amikor használod a lényt. Vagy ha azt
+          akarod, hogy napfelkeltekor eltűnjön zombid, akkor tedd az "amikor nappal
+          van" keretbe.
+    mc_2016_spawn:
+      1:
+        text: A játékokban a születés ugyanazt jelenti, mint a létrehozás. Ezen a
+          szinten legyen az, hogy a zombik akkor születnek, amikor a nap lemegy. Ehhez
+          az "amikor éjszaka van" blokkot fogjuk használni.
+      2:
+        text: Mivel azt akarjuk, hogy a zombik éjszaka szülessenek meg, az "amikor
+          éjszaka van" blokk alá hozzáadjuk a "zombi születése" blokkot. Amint megszületnek,
+          minden zombi lefuttatja azt a kódot, amit az "amikor megszületnek" eseményblokkjukba
+          tettünk. Jó szórakozást a zombik szaporításához!
+    mc_2016_congrats:
+      1:
+        text: Gratulálunk! Megtanultad, hogyan kell a Minecraft világának életre keltéséhez
+          az informatikai parancsokat használni. Most már te vagy a fejlesztő. Feloldottad
+          az összes parancsot és az összes lényt. Te döntöd el, hogy mi történik.
+      2:
+        text: Amikor kész a játékod, válaszd a megosztás lehetőséget, és megkapod
+          a linket, amelyet megoszthatsz barátaiddal, vagy hogy lejátszhasd a játékod
+          a telefonodon. Jó szórakozást! Alig várom, hogy játszhassak a te Minecraft
+          változatoddal.
+    applab_intro_welcome:
+      1:
+        text: A nevem Mei'lani. Gyakornok vagyok a code.org-nál, és informatika szakos
+          hallgató is vagyok. Szeretem az informatikát, mert nagyon kreatív. Lehetek
+          a problémamegoldó. Mindent úgy alakíthatok, ahogy én akarom. De lehetek
+          a tervező is. Lehetek a művész, és én választhatok ki mindent a kreatív
+          oldalon.
+      2:
+        text: Az App Lab segítségével könnyű saját alkalmazásokat készíteni! Akár
+          van némi tapasztalatod a kódolásban, akár nincs, az App Lab egy nagyszerű
+          eszköz. Új alkalmazásokat lehet készíteni vele, amiket aztán megoszthatsz
+          a barátaiddal.
+      3:
+        text: Ez egy App Lab. A bal oldalon van az alkalmazásod. A jobb oldalon a
+          kód, amely futtatni fogja. A programodat úgy építed fel, hogy blokkokat
+          húzol be az eszköztárból. Kezdetben csak egy 'setProperty' (tulajdonságok
+          beállítása) nevű blokkod lesz.
+      4:
+        text: A tulajdonságok beállítása blokk megváltoztatja a képernyőn megjelenő
+          elemek kinézetét. Például a gombokét, címkékét vagy akár magát a képernyőt.
+          Először el kell döntened, hogy melyik elemet szeretnéd megváltoztatni. Ha
+          az alkalmazásodban egy elem fölé viszed a kurzort, akkor láthatod annak
+          a nevét vagy az azonosítóját. Ezután válaszd ki azt az azonosítót az első
+          legördülő listából.
+      5:
+        text: Az elemeknek nagyon sok tulajdonságuk van, s ezeket mind meg lehet változtathatni,
+          megváltoztathatod például a szöveg színét, háttérszínt vagy betűméretet.
+          Láthatod a teljes listát, és a második legördülő menüből kiválaszthatod,
+          hogy melyik tulajdonságot szeretnéd megváltoztatni.
+      6:
+        text: Az utolsó legördülő menüpontba be tudod írni a kívánt értéket. A blokk
+          javaslatot fog tenni. De bármikor beírhatsz magadnak különböző színeket
+          vagy számokat.
+      7:
+        text: 'Ha kész vagy, a blokkot egy úgy lehet olvasni, mintha egy mondat lenne:
+          "Set button1''s background color to green." (Állítsd az 1. gomb háttérszínét
+          zöldre.) Nyomd meg a futtatás gombot, és megnézheted a kódba beépített változásokat.
+          Ha visszaállítod, újabb blokkokat húzhatsz be, és más dolgokat is megváltoztathatsz
+          az alkalmazásodban. Például a szöveget!'
+      8:
+        text: Ebben a gyakorlatban blokk módban fogunk dolgozni, de az App Lab támogatja
+          a szöveges munkát is.
+      9:
+        text: Mindenképpen JavaScriptben, a web nyelvén fogsz programozni. Minden
+          szinthez tartozik egy cél, utasítások és egy kép arról, hogy mit szeretnél
+          létrehozni.
+    mc_2017_agent_intro:
+      11:
+        text: Ha elfelejtenéd, hogy mit kell tenned, az egyes szintekhez tartozó utasításokat
+          fent találod.
     hoc_dance_warmup:
       1:
         text: 'Kódolás Órája | Táncos buli: Bemelegítés'

@@ -16568,6 +16568,7 @@
           ]
         },
         "4c8f3dd3-5f9e-4ba9-b560-8516e918e45f": {
+          "name": "Sugerencia del Diario/Boleto de Salida",
           "description": "**Pregunta del Día: ¿Qué tenemos que hacer como preparación para construir nuestras páginas web?**"
         },
         "b363e7a6-4522-46c8-99b8-c7a1db5936b7": {
@@ -16655,100 +16656,228 @@
           "progression_name": "Reflexión"
         },
         "20f18101-28c1-43ff-835a-9b098f7a5b9c": {
+          "name": "El Último Sitio Web que has Visitado",
+          "description": "**Pregunta:** ¿Cuál ha sido el último sitio web que has visitado? ¿Por qué has visitado ese sitio web?",
           "tips": [
-            null
+            "**Sitios Web vs. Aplicaciones:** Es posible, en ocasiones, que los alumnos no _piensen_ que visitan los sitios web con mucha frecuencia, porque en su lugar utilizan aplicaciones. Si te encuentras con esto, anima a los alumnos a considerar si esas aplicaciones pueden tener también versiones web. Facebook, por ejemplo, puede utilizarse con más frecuencia desde una aplicación, pero originalmente comenzó como un sitio web, y todavía se puede acceder a él desde la web."
           ]
         },
         "887eb66a-9701-4ec2-961e-2df7358980f6": {
+          "description": "**Debatir:** Pide a los alumnos que compartan el último sitio web que han visitado. Asegúrate de que los estudiantes compartan por qué fueron a ese sitio web y si el sitio web les proporcionó lo que estaban buscando.",
           "tips": [
-            null
+            "**Objetivo:** El objetivo de este debate es sacar a relucir que los sitios web comparten información y que la gente acude a los sitios web con un propósito concreto."
           ]
+        },
+        "8f260b2d-3718-492f-b75b-fa99597fef18": {
+          "description": "Se nos ocurren muchas razones por las que visitamos sitios web, pero eso es sólo una parte del panorama. Los creadores de los sitios web también tienen sus propias razones para hacerlo. En la siguiente actividad, vas a empezar a pensar en los propósitos que tienen los distintos sitios web tanto para el usuario como para el creador."
+        },
+        "8faac7b6-fb5b-4b94-982a-f7c8188bca44": {
+          "description": "**Pregunta del Día: ¿Cuáles son las diferentes razones por las que la gente crea sitios web?**"
+        },
+        "fb115984-94cf-4127-a53a-43a973865616": {
+          "name": "Finalidad de los Sitios Web",
+          "description": "**Agrupar:** Coloca a los alumnos en parejas.\n\n**Distribuir:** Reparte una copia de la guía de actividad a cada estudiante.\n\nRemite a los alumnos al nivel \"Ejemplos de Sitios Web\" en Code Studio."
         },
         "4e4b8bec-4263-4163-9bad-dee99822db2a": {
           "progression_name": "Top de Sitios Web"
         },
+        "050b41d5-f6a2-41e0-89e7-8bd3139dae2f": {
+          "description": "#### Explorando Sitios Web\n\n#### Ejemplos de Sitios Web"
+        },
         "d2fbc09d-cec0-4514-ba77-b635cc9379d5": {
+          "description": "En esta guía de actividad se pide a los alumnos que analicen los fines que pueden tener algunas páginas web de ejemplo. Las parejas de estudiantes seleccionan dos páginas web que les interesan y comentan cada una de ellas:",
           "tips": [
-            null
+            "No es necesario que acierten con cada sitio, pero deben demostrar que han analizado las posibles finalidades que un sitio web puede tener para el creador. Si los alumnos tienen dificultades para identificar el propósito de un sitio, piensa en plantear las siguientes preguntas:\n\n-   ¿Quiere el creador del sitio web que el usuario haga algo?\n-   ¿Intenta el sitio web convencer al usuario de algo en particular?\n-   ¿Qué problema soluciona el sitio web?\n-   ¿Qué impacto quiere el creador que tenga el sitio web?"
           ]
+        },
+        "272735d4-bd69-48d9-b443-dbe7055d5ec9": {
+          "description": "-   ¿Por qué la gente puede usar ese sitio? (¿qué propósito tiene para los usuarios?)\n-   ¿Por qué los creadores podrían haber hecho ese sitio? (¿qué propósito tiene para los creadores?)\n\nAnima a los alumnos a ser lo más concretos posible cuando hagan una lluvia de ideas sobre los propósitos de estos sitios."
         },
         "286dd512-4c7c-42ec-8028-428a89833572": {
+          "description": "**Debatir:** Una vez que todos han tenido la oportunidad de hacer una lluvia de ideas sobre sus sitios, da a la clase la oportunidad de debatir sus ideas sobre los ejemplos de sitios web.",
           "tips": [
-            null
+            "El objetivo de este debate es preparar a los alumnos para que piensen en los sitios web como una herramienta para resolver problemas y efectuar cambios.  Cuando los alumnos analicen el tema, anímalos a imaginar por qué podrían crear un sitio similar a los de los ejemplos y qué problemas podrían resolver con un sitio web.  "
           ]
+        },
+        "0635e0b2-714a-4200-a9d1-56a791801297": {
+          "description": "Si los alumnos no han tenido tiempo de pensar en las razones por las que podrían crear un sitio web, permíteles hacerlo antes de pasar a formar los grupos."
+        },
+        "e9f0bd2a-f77d-4011-82d6-906f22197bdf": {
+          "description": "En las próximas clases, tendrás la oportunidad de trabajar en grupo para crear tu propio sitio web y ayudar a resolver un problema."
+        },
+        "da79aa9d-2640-4ffb-a31d-4438be9d202a": {
+          "description": "**Compartir:** Pide a los alumnos que compartan los diferentes problemas que podrían resolver con una página web y que expongan sus respuestas en la parte delantera de la clase."
         },
         "f410b7cd-fcb4-42ac-9ba6-517b2a8db144": {
+          "description": "**Grupos:** Sobre la base de la discusión natural de cómo los estudiantes reaccionaron a los diferentes temas, pueden haber comenzado a surgir agrupaciones.  Permite que los alumnos formen grupos de 3 a 4, o asígnalos en grupos.",
           "tips": [
-            null
+            "Hay muchas consideraciones a la hora de formar grupos para un proyecto a largo plazo. Dependiendo de su clase, puedes optar por asignar grupos, permitir que los alumnos formen sus propios grupos, o cualquier otro enfoque que funcione mejor para tu clase. Independientemente de cómo decidas agrupar a los alumnos, será importante que tengan sus grupos formados para el comienzo de la siguiente sesión de clase."
           ]
         },
+        "3ccc5800-d573-4f7b-bc43-4f6bf8f44f86": {
+          "description": "**Pregunta del Día: ¿Cuáles son las diferentes razones por las que la gente crea sitios web?**\n\n**Sugerencia:** Tu equipo trabajará en conjunto durante las próximas lecciones para crear un sitio web que resuelva un problema. Juntos, pensad en un lema de equipo o en un diseño de logotipo que os recuerde: (1) ¿por qué es importante resolver el problema? (2) ¿cómo vais a trabajar bien juntos como equipo?"
+        },
         "f8ec8428-8030-4f3d-a42a-ace8a6526a70": {
+          "description": "**Compartir:** Permite a los equipos compartir sus diseños y lemas.",
           "tips": [
-            null
+            "Cuando los alumnos compartan sus lemas o logotipos, anímalos a que expliquen cómo se reflejan sus valores en ellos, destacando la importancia de una colaboración eficaz y de centrarse en objetivos compartidos."
           ]
         },
         "d328ac00-0ae4-43b4-ac6b-09b544bdf673": {
+          "description": "**Juego: Los Cinco Mejores Equipos**",
           "tips": [
-            null
+            "También puedes elegir que este juego se muestre al entrar en la clase, y permitirles que escriban las respuestas a su manera."
           ]
+        },
+        "c64b50ca-4c2f-4bce-a068-3f91a65f3e2e": {
+          "description": "Hoy es el primer día en el que se ponen a trabajar en sus equipos. Antes de hacerlo, vamos a pensar en algunos de los mejores equipos del mundo. Cuando digo una categoría de equipo, cada uno debe escribir el equipo que cree que la **mayoría de la clase** responderá como el mejor equipo.  Si elegís el equipo más popular, os lleváis un punto. Recordad que no es el que creéis que es el mejor, sino el que creéis que responderá la mayoría de la gente."
+        },
+        "02fff604-7ee5-4a4f-86fa-d44f20ba9cab": {
+          "description": "1.  Mejor Grupo de Música (banda o grupo de canto)\n2.  Mejor Equipo Deportivo\n3.  Mejor Equipo de Superhéroes\n4.  Mejor Equipo de Villanos\n5.  Mejor Grupo Infantil\n\nHaz que los alumnos compartan sus respuestas después de cada una y anota la respuesta más popular, dando \"puntos\" a los que adivinaron correctamente."
+        },
+        "a83111b2-bf6f-44d7-9542-f8bd4e0006c4": {
+          "description": "**Sugerencia:** Hemos mencionado algunos equipos de gran éxito. Escribe tres cosas que creas que han hecho que estos equipos tengan tanto éxito."
         },
         "fe322a4b-9393-40e7-92fe-8314928d0203": {
+          "description": "**Compartir:** Deja a los estudiantes un tiempo para que escriban sus propias respuestas y luego pídeles que las compartan con el resto de la clase. Destaca las características que serán útiles cuando trabajen con sus equipos en el proyecto.",
           "tips": [
-            null
+            "Este juego y el debate deben llevar a los alumnos a pensar en estrategias para trabajar en equipo con éxito en el proyecto. No dudes en cambiar las categorías por otras que tengan más sentido para tu propia clase. "
           ]
         },
+        "29baaa33-951f-4b1d-8fff-84f6185fa513": {
+          "description": "**Pregunta del Día: ¿Cómo podemos trabajar juntos para hacer un gran equipo?**"
+        },
+        "e877f46e-2546-45c8-b3da-ec38677cacf9": {
+          "description": "**Agrupar:** Coloca a los estudiantes en sus grupos de proyecto.\n\n**Mostrar:** Muestra el vídeo de Trabajo en Equipo (disponible en las diapositivas y en Code Studio)."
+        },
         "4e9b0621-b725-4913-8938-757f111a9ce6": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Cuáles son las ventajas de trabajar en equipo?\n-   ¿Cuáles son algunos consejos para que los equipos trabajen bien juntos?",
           "tips": [
-            null
+            "El objetivo de este vídeo es ayudar a los alumnos a entrar en el trabajo en equipo con una actitud positiva y darles algunas sugerencias para que sus equipos funcionen mejor.\nLos alumnos pueden tener diferentes ideas sobre las ventajas de trabajar en equipo, pero deben tener en cuenta que la gente puede hacer más cosas en equipo y que aportar una diversidad de ideas hará que un proyecto sea mejor.\n\n**Los consejos que se mencionan en el vídeo son los siguientes:**\n\n-   Tener un plan\n-   Dar a cada uno un cometido especial\n-   Celebrar los éxitos de los compañeros de equipo\n-   ¡Divertirse!\n-   Descubrir los puntos fuertes de cada uno\n-   Escuchar y respetar las ideas de todos\n-   Tener confianza para compartir tus ideas"
           ],
           "progression_name": "Vídeo: Trabajo en Equipo"
         },
+        "bb3e2187-2b04-4e47-8304-3eae1e02d9c7": {
+          "description": "**Distribuye:** Reparte la guía de actividad."
+        },
+        "912b3e51-d92c-4f07-95ce-781a726e07b3": {
+          "name": "Objetivo del Equipo",
+          "description": "Los equipos deben tener ya el tema de su proyecto, pero deben comprobar que todos están de acuerdo con el tema."
+        },
         "43da857d-e2ac-4797-b205-4bc8e5b274c8": {
+          "name": "Conocimientos y Objetivos",
+          "description": "Cada alumno debe identificar sus propios puntos fuertes y áreas de crecimiento para el proyecto, y luego compartirlos con el grupo.",
           "tips": [
-            null
+            "Este tipo de reflexión personal y de compartir puede ser difícil para algunos alumnos. Dependiendo de la clase, puedes dedicar algún tiempo a repasar cómo escuchar respetuosamente a los demás en el grupo. Esta primera actividad es una buena oportunidad para que los alumnos practiquen este tipo de escucha. Algunos grupos pueden necesitar la intervención del profesor para explicar qué tipo de comportamientos específicos promueven una buena dinámica de grupo."
           ]
         },
+        "4f9eedee-cf7c-4a28-a68c-294d1a5060b1": {
+          "description": "Los alumnos utilizan lo que han aprendido para elaborar un plan para su grupo y cómo se apoyarán mutuamente."
+        },
+        "82adee1c-1ccb-493b-89e8-f9e05f691574": {
+          "name": "Reuniendo Diferentes Ideas",
+          "description": "Una parte del trabajo en grupo consiste en tener muchas ideas diferentes, y los miembros del equipo no siempre están de acuerdo en cómo integrar sus ideas. Vamos a explorar algunas formas diferentes en las que un equipo puede gestionar los desacuerdos para que su producto sea aún mejor."
+        },
+        "7a0f9024-6d07-4372-bfad-439082fecd46": {
+          "description": "**Mostrar:** Proyecta el vídeo sobre la gestión de los desacuerdos, que está disponible en Code Studio y en las diapositivas de la lección."
+        },
         "52a7434e-fca4-48af-9aa8-61086949bb98": {
+          "description": "**Pregunta a tener en cuenta con el vídeo:**\n\n-   ¿Cuáles son los tres consejos para afrontar los desacuerdos?",
           "tips": [
-            null
+            "Los alumnos deben comprender que los desacuerdos son una parte normal del trabajo en equipo y disponer de estrategias para tratar de forma constructiva los conflictos en sus equipos.\n\n**Los consejos del vídeo son los siguientes:**\n\n-   Aprecia que tu equipo tenga muchas ideas, aunque no estés de acuerdo con todas ellas.\n-   Siente curiosidad por las otras ideas y trata de entender lo que tienen de bueno.\n-   Ponte de acuerdo con tus compañeros de equipo, recogiendo las partes buenas de muchas ideas y juntándolas."
           ],
           "progression_name": "Vídeo: Gestionando los Desacuerdos"
         },
         "4145fe6b-15f3-4528-91b5-726f4cffd9b5": {
+          "description": "Los alumnos planifican cómo afrontar los desacuerdos y elaboran estrategias para defenderse a sí mismos y a los miembros de su equipo.",
           "tips": [
-            null
+            "El fomento de una cultura inclusiva y la colaboración en torno a la informática son prácticas fundamentales en el marco de CS K12. Los alumnos pueden necesitar orientación sobre estrategias eficaces de inclusión y colaboración. Por ejemplo, algunos estudiantes pueden sugerir un enfoque de \"reglas de la mayoría\" para el desacuerdo. Desafía a los estudiantes a pensar en cómo eso puede excluir perspectivas valiosas y si hay mejores estrategias que puedan incorporar la voz de todo el equipo."
           ]
+        },
+        "43bb329a-86ef-46f8-a276-126437f08d74": {
+          "name": "Mirando hacia adelante",
+          "description": "Los alumnos definen cómo será el éxito en el contexto del proyecto y anticipan cuáles serán las partes más difíciles y más divertidas del proyecto.\n\n**Circular:** Cuando los alumnos estén completando o hayan completado la guía, circula por la sala y pregúntales sobre sus planes para trabajar juntos en grupo. Puedes señalar las ventajas y desventajas de ciertas estrategias.\n\n**Compartir:** Haz que los distintos grupos compartan aspectos de sus planes. Puedes llamar la atención sobre las estrategias eficaces que hayas visto durante la actividad.\n\n## Lluvia de ideas\n\n**Debatir:** Da tiempo a los alumnos para que hagan una lluvia de ideas del proyecto en sus equipos. Pueden hablar de diferentes contenidos o características del sitio web que les gustaría. Mientras comentan, mantente atento a posibles problemas en la dinámica de grupo e intervén si es necesario. Recuerda a los miembros del equipo sus planes y cómo pueden contribuir al éxito del equipo."
+        },
+        "6bf100e0-3cb3-45d3-b4f9-58fe77be8d7d": {
+          "name": "¡Reconocimientos!",
+          "description": "**Pregunta del Día: ¿Cómo podemos trabajar juntos para formar un gran equipo?**\n\n**Sugerencia:** Cuando trabajas en equipo, es importante reconocer cuando los miembros de tu equipo hacen algo bueno. Para cada miembro de tu equipo, escribe un \"agradecimiento\" que reconozca una forma especial en la que haya contribuido al grupo hoy."
+        },
+        "5d73aca1-2634-43e5-b541-b45f78746f8c": {
+          "name": "Caza del Tesoro en Internet",
+          "description": "**Agrupar:** Coloca a los alumnos en parejas. No es necesario que estén en sus grupos de proyectos para este calentamiento, pero pasarán a esos grupos en la actividad principal."
         },
         "49bb4251-eaa1-423c-9bfd-ec0f6113f83e": {
+          "description": "**Distribuir:** Cada grupo necesitará una copia de la guía de actividad de la Caza del Tesoro en Internet.",
           "tips": [
-            null
+            "**Reduciendo la Impresión:** En lugar de imprimir una guía de actividad para cada alumno, plantéate la posibilidad de exponer las preguntas y permitir que los alumnos respondan en sus diarios o en papel de borrador."
           ]
+        },
+        "b44dcba5-da3f-4ca8-a490-ae811b7299d1": {
+          "description": "**Transición:** Envía a los alumnos a los ordenadores para que se preparen para la caza del tesoro."
+        },
+        "aa1e95e2-41b2-4f89-9f46-8ecaee042a86": {
+          "description": "Tienes siete minutos para completar la mayor parte posible de esta caza del tesoro. Tu objetivo no es responder a _todas_ las preguntas de la lista, sino encontrar la mayor cantidad de información _correcta_ posible en el tiempo que se te ha concedido."
+        },
+        "9fc461a9-7e23-42ba-858c-301c3a8b31fe": {
+          "description": "**Sugerencia:** \n\n-   ¿Qué cosas fueron más difíciles de encontrar y cómo las encontraste?\n-   ¿Cómo sabes que la información era correcta?"
         },
         "229abe84-ae59-45f1-915e-681805560ab1": {
+          "description": "**Debatir:** Las parejas de estudiantes comparten lo que pudieron descubrir durante la caza del tesoro y qué estrategias funcionaron bien para encontrar información correcta.  Si es posible, utiliza el debate para introducir el vocabulario clave de la lección.",
           "tips": [
-            null
+            "**Objetivo:** Las tres primeras preguntas tienen por objeto ayudar a los alumnos a identificar las técnicas de búsqueda que utilizan actualmente. Si los alumnos _no_ tienen estrategias claras, puedes dedicar algún tiempo a comentar las técnicas básicas de búsqueda. Escribe las estrategias de búsqueda en la pizarra para poder consultarlas más adelante.\n\nCuando los alumnos hablen de los motores de búsqueda que utilizaron en el proceso, puedes desafiarlos a pensar en cómo los motores de búsqueda son capaces de darles resultados relevantes.  Esto puede suponer una buena transición al vídeo de la siguiente actividad."
           ]
+        },
+        "2f979aac-0d3b-4f36-ae61-7ce65731967f": {
+          "description": "**Vocabulario Clave:**\n\n-   relevante - estrechamente relacionado con el tema (responde a la pregunta)\n-   digno de confianza - fiable, honesto y veraz (da una respuesta correcta)\n-   motor de búsqueda - programa que busca elementos en la World Wide Web\n\n**Pregunta del Día: ¿Cómo podemos encontrar información relevante y fiable en Internet?**"
+        },
+        "96f9e813-1e45-4708-90fc-5cd09101faf6": {
+          "name": "Investigación y Fiabilidad",
+          "description": "A medida que empieces a construir tus sitios, es posible que quieras utilizar información que encuentres en la web, o enlazar con otros sitios relevantes para el problema que estás tratando de resolver.  Al hacerlo, tendrás que pensar si la información que utilizas es fiable."
+        },
+        "59e2dfbe-ec86-436d-91b0-5d19554ed462": {
+          "description": "**Agrupar:** Coloca a los alumnos en sus grupos de proyecto.\n\n**Distribuir:** Entrega a cada pareja una copia de la guía de actividad de Enlaces e Investigación, o reparte los diarios.\n\n**Buscar:** Concede a los grupos de estudiantes unos diez minutos para que busquen en Internet y rellenen la tabla de la guía de actividad. \n\n**Compartir:** Pide a los grupos de estudiantes que compartan los diferentes sitios que han encontrado y que decidan cuáles son los más y los menos fiables y por qué. Anima a los alumnos a que den razones detalladas de por qué confían o no en un sitio, y anótalas en la pizarra.\n\n**Buscar:** Deja a los alumnos unos minutos más para que vuelvan a revisar sus sitios de origen con los nuevos criterios de sus compañeros.  Si hay más tiempo de clase, los alumnos pueden seguir buscando fuentes para su sitio."
+        },
+        "b66bd9e2-03dd-4f20-925e-c0f6350831fe": {
+          "name": "La Lista de Control de la Fiabilidad",
+          "description": "**Configuración:** Coloca un cartel en la pared con la etiqueta **Lista de Control de Fiabilidad**."
         },
         "73c708b0-4bce-4d0c-8aef-d4383cbb24f5": {
+          "description": "**Sugerencia:** Ahora que hemos identificado algunos sitios que son y no son dignos de confianza, trabaja con tu grupo para elaborar una lista de cosas que hay que comprobar cuando se trata de determinar si se debe creer o no en un sitio web.",
           "tips": [
-            null
+            "Comprueba las listas de los alumnos para asegurarte de que aportan criterios relacionados con la fiabilidad de un sitio. Por ejemplo, los alumnos pueden mencionar que los sitios de confianza tienen información de contacto clara, citan sus fuentes, suelen tener menos anuncios y menos invasivos, y pueden estar mejor diseñados que los sitios menos creíbles. Los dominios .edu y .gov están reservados a las escuelas y al gobierno, y pueden ser más creíbles."
           ]
         },
+        "77e4cad0-e298-4a93-bbb1-5de9f8ca7ca9": {
+          "description": "**Compartir:** Haz que los grupos compartan sus listas. Como clase, elabora una lista de comprobación de la fiabilidad de la clase en un cartel. Puedes consultarla en el futuro cuando pidas a los alumnos que busquen información en Internet."
+        },
         "6a799e5e-d77a-4c80-bdd4-713e6a4d9760": {
+          "name": "Cómo Funciona la Búsqueda",
+          "description": "**Mostrar:** Ver con la clase el [r how-search-works-video/csd/2021].",
           "progression_name": "Vídeo: Cómo Funciona la Búsqueda"
         },
         "136308c1-5aa0-4820-afe0-a16252ba6c74": {
           "tips": [
-            null
+            "Los alumnos deben relacionar los criterios de las listas que han creado con sus propios sitios.  Aunque no puedan controlar la dirección web de su sitio, deben ser capaces de identificar los elementos de diseño y las características del contenido que harán que sus sitios sean más fiables, como la disposición ordenada y la mención adecuada de las fuentes."
           ]
+        },
+        "01a5973e-7096-468e-b640-899767928b23": {
+          "description": "**Sugerencia:** Piensa en tus propios sitios web: ¿crees que la gente considera que tu sitio es digno de confianza o que no lo es? ¿Qué cambios podrías hacer en tu sitio para animar a los usuarios a confiar en tu contenido?"
         },
         "cb743363-7f60-4fc8-9fa3-af3ab23ec321": {
-          "name": "Debatir: ¿Qué Estilos Quieres?"
+          "name": "Debatir: ¿Qué Estilos Quieres?",
+          "description": "**Muestra:** Envía a los estudiantes a la página web de ejemplo en Code Studio o muéstrala en la pizarra.\n\n**Sugerencia:** ¿Cuáles son los dos estilos CSS de esta página que ya conoces?  ¿Qué es lo que hace esta página que todavía no hemos aprendido a hacer?"
         },
         "c986ac31-a9e4-4fbb-8203-f8dd207cfed9": {
+          "description": "**Debatir:** Haz que los alumnos compartan sus respuestas a las preguntas.",
           "tips": [
-            null
+            "**Objetivo:** Esta discusión sirve como repaso de las propiedades CSS que los alumnos ya han aprendido y les hace pensar en cómo esta página va más allá de ese conocimiento. Es posible que los alumnos no se den cuenta, pero esta página da estilo a los mismos tipos de elementos de diferentes maneras en distintas partes de la página. Puedes sugerir a los alumnos que piensen más a fondo sobre la dificultad de esto preguntándoles cuál sería la propiedad de color del elemento párrafo en la hoja de estilos de esta página."
           ]
+        },
+        "a137f363-db20-45d9-8ee1-44b2161ceb64": {
+          "description": "Hasta ahora, hemos podido dar estilo a todos los elementos de nuestra página, pero ha habido un problema.  Tuvimos que estilizar **todos** los elementos del mismo tipo de la misma manera. Por ejemplo, si queríamos que un párrafo tuviera texto verde, todos tenían que tenerlo. Si queríamos que una imagen flotara a la derecha, todas tenían que flotar a la derecha.  Hoy vamos a aprender una forma de evitar este problema."
+        },
+        "18c9029a-3757-4033-ba16-6daad297eec5": {
+          "description": "**Pregunta del Día:  ¿Cómo podemos crear diferentes estilos para el mismo tipo de elemento?**"
         },
         "287a07a0-cdbc-4680-8733-69515c67c54b": {
           "name": "Clases"
@@ -16774,37 +16903,89 @@
         "5aa91065-3f4e-409f-9f3e-14bd98649ef5": {
           "progression_name": "Desafíos"
         },
+        "d2c208eb-49ed-4b4b-9a5f-5d51bda3d3f4": {
+          "description": "**Pregunta del Día:  ¿Cómo podemos crear diferentes estilos para el mismo tipo de elemento?**\n\n**Sugerencia:** Piensa en el sitio web de tu equipo. ¿Cuáles son las dos nuevas ideas que tienes para tu sitio, ahora que tienes clases?"
+        },
+        "82ae3bfa-978b-47d3-9aed-a7a48b47f282": {
+          "description": "**Sugerencia:** Escribe las tres características más divertidas que te gustaría añadir a tu sitio."
+        },
         "ada4d5c1-50ee-446a-85c6-d61dd4d3221f": {
+          "description": "**Compartir:** Permite a los estudiantes compartir algunas de sus características favoritas.",
           "tips": [
-            null
+            "El objetivo de este debate es asegurarse de que las diversas características que los alumnos han aprendido están presentes cuando empiezan a diseñar sus sitios. Asegúrate de que los alumnos mencionan las características que han disfrutado especialmente en la unidad, y repasa las etiquetas y propiedades css que las crean."
           ]
+        },
+        "047e22de-8f8d-46bc-b3ce-b48d570b70cc": {
+          "description": "Hoy tendrán la oportunidad de diseñar sus sitios web en sus equipos. Tendrán que trabajar juntos para decidir cómo pueden ir todas estas características en sus sitios."
+        },
+        "fd6e46c1-3c4d-45d8-819f-1622e8280317": {
+          "description": "**Pregunta del Día:  ¿Cómo planificamos una página web en grupo?**"
+        },
+        "5d28ad11-7626-46cc-8848-1aaab17dbbd5": {
+          "description": "**Agrupar:** Coloca a los alumnos en grupos de proyectos.\n\n**Distribuir:** Reparte las guías del proyecto, una para cada grupo. Reparte también una rúbrica o lista de control para cada grupo para que puedan autoevaluarse y reflexionar a lo largo del proyecto."
         },
         "05ee8316-106b-4b34-9138-d1ceca375a8f": {
-          "name": "Vista previa"
+          "name": "Vista previa",
+          "description": "Repasa los requisitos del proyecto con los alumnos, haciendo hincapié en que parte del proyecto consiste en trabajar en grupo. Asegúrales que en la próxima lección aprenderán a añadir nuevas páginas y a enlazarlas entre sí, pero que primero planificarán las páginas que quieran."
         },
         "410e0287-5cfd-4bc9-945a-4c1d330d795e": {
+          "name": "Diseña tu Sitio Web",
+          "description": "Los equipos deben describir cada página del sitio, incluyendo su propósito. En hojas de papel separadas, deben hacer un esquema de las distintas páginas. De este modo, los distintos miembros del equipo podrán centrarse en diferentes páginas.",
           "tips": [
-            null
+            "Puedes pedir a los grupos que te enseñen sus bocetos antes de seguir adelante. Asegúrate de que todas las páginas tengan el mismo estilo y que incluyan una forma de navegar de una a otra."
           ]
+        },
+        "1dde8dc9-5478-4477-9e8d-0e4ce134c5a5": {
+          "name": "Describe tus Estilos de Etiquetas y Clases",
+          "description": "Los alumnos deben decidir juntos cómo les gustaría que fueran todos los elementos. Pueden consultar los bocetos para decidir juntos."
+        },
+        "7719e9d6-bd0d-4266-b2ad-1a38ef6f4ca8": {
+          "name": "Plan de Trabajo",
+          "description": "Una vez establecido el diseño, los equipos deben decidir cómo se van a repartir el trabajo. Hay que tener en cuenta varias páginas y una hoja de estilo. También deben considerar cómo incorporarán los diferentes componentes en un solo proyecto."
+        },
+        "e86a4625-8675-4c17-9063-90f8f3399390": {
+          "description": "Comprueba que todos los alumnos están de acuerdo con el plan."
         },
         "967af757-c353-4f6b-bbe2-493cb9d31fa1": {
-          "name": "Encuentra tus Imágenes"
+          "name": "Encuentra tus Imágenes",
+          "description": "Una vez que los alumnos hayan obtenido su aprobación para los diseños de su sitio y el plan de trabajo, permíteles que busquen en Internet imágenes para el sitio."
         },
         "28d6755d-32ea-439a-91b0-a36f90e3dc83": {
+          "name": "Subiendo imagenes",
+          "description": "Una vez que los alumnos hayan obtenido sus imágenes, permíteles que las suban al proyecto en Code Studio. Cada estudiante dentro de cada equipo debe tener un conjunto idéntico de imágenes con nombres idénticos.",
           "progression_name": "Sube tus Imágenes"
         },
+        "06b391d9-3723-444d-9c93-882c4f22a1ad": {
+          "description": "**Pregunta del Día: ¿Cómo planificamos una página web en grupo?**"
+        },
         "754d0467-6e5e-45c8-8692-2fab52c45548": {
+          "description": "**Sugerencia:** Describe una diferencia de opinión que hayan tenido los miembros de tu equipo y cómo la habéis resuelto.",
           "tips": [
-            null
+            "Comprueba que las explicaciones de los alumnos sobre el desacuerdo y la resolución implican estrategias eficaces y de colaboración para trabajar juntos."
           ]
+        },
+        "1a13b683-5eb4-436f-b59e-bb9304d7d5a2": {
+          "name": "Búsqueda de la Primera Página Web",
+          "description": "**Agrupar:** Coloca a los alumnos en parejas.  No es necesario que estén en sus grupos de proyecto."
         },
         "85c3804b-17da-40f8-a088-0627011b36e7": {
+          "description": "**Mostrar:** Muestra las dos preguntas siguientes en la pizarra y pide a los alumnos que encuentren las respuestas en Internet utilizando un motor de búsqueda de su elección o cualquier otro método que utilicen normalmente para investigar.",
           "tips": [
-            null
+            "Aunque hay muchos lugares a los que los estudiantes podrían acudir para encontrar la respuesta a esta pregunta, lo más probable es que una búsqueda en Google les lleve a un artículo que describe la página que Tim Berners-Lee creó el 6 de agosto de 1991.  La página se compone de un texto sencillo con algunos hipervínculos.\n\n![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-10-18-at-11.58.45-AM.png)"
           ]
         },
+        "49df1f5f-4462-48ba-ba64-1fafdc8e8536": {
+          "description": "1.  ¿Cuál fue la primera página web que se creó?\n2.  ¿Cuál es la característica que tiene y que aún no hemos aprendido a hacer?\n\n**Compartir:** Después de dar tiempo a los alumnos para que busquen en Internet, deja que compartan sus respuestas."
+        },
+        "3f3d6e40-568d-42b7-aea3-260cba499c73": {
+          "description": "Aunque la primera página web parece sencilla, tenía algo que nunca se había hecho antes: los enlaces. Los enlaces son lo que hizo especial a la web, porque permiten a la gente moverse fácilmente por Internet. Hoy aprenderás a poner enlaces en tus propias páginas web, para que tu equipo pueda combinar todas tus páginas en un solo sitio web."
+        },
+        "c4e3074d-ca9e-415c-83f2-364698c96895": {
+          "description": "**Pregunta del Día: ¿Cómo podemos combinar varias páginas web diferentes en un solo sitio web?**"
+        },
         "c78f2804-62f0-4fe5-842f-0ed415de05fc": {
-          "name": "Web Lab"
+          "name": "Web Lab",
+          "description": "**Agrupar:** Permite que los estudiantes continúen en sus parejas.\n\n**Transición:** Envía a los estudiantes a Code Studio."
         },
         "01cbfd4f-3493-48d9-beb3-04018d4272f3": {
           "progression_name": "Exploración"
@@ -16824,22 +17005,33 @@
         "76186510-9804-44d1-8371-4aa2895fc16d": {
           "progression_name": "Desafíos"
         },
+        "37b960c3-650e-4d91-9561-fea00f3a39c7": {
+          "description": "**Pregunta del Día: ¿Cómo podemos combinar varias páginas web diferentes en un solo sitio web?**\n\n**Sugerencia:** Hoy has aprendido a enlazar páginas, lo que ayudará a tu equipo a trabajar juntos para construir un solo sitio web.  Además de enlazarse entre sí, ¿qué más ayudará a que todas tus páginas se sientan como un solo sitio?"
+        },
         "c881299c-2798-4137-ac19-ba5e05d59340": {
+          "description": "**Debatir:** Después de que los estudiantes tengan tiempo para escribir sus pensamientos, permíteles compartir en pequeños grupos antes de recoger las ideas de toda la clase.",
           "tips": [
-            null
+            "Los alumnos pueden aportar ideas como una combinación de colores o estilos similares, o un contenido similar.  Pueden mencionar una cabecera en la parte superior de la página o una barra de navegación.  Lo más importante es que piensen en el sitio como un proyecto único al que todos contribuyen, en lugar de un conjunto de páginas web individuales."
           ]
         },
+        "a40a2993-3db7-4eb7-9ef0-af6a24ddbf05": {
+          "name": "Animar al Equipo",
+          "description": "Vuestros equipos han trabajado duro durante estas últimas lecciones, así que vamos a tomarnos un poco de tiempo para celebrarlo.  Tenéis cinco minutos para pensar en una gran ovación para vuestro equipo."
+        },
         "4c27a0e8-612a-478a-a854-aa5a966c8245": {
+          "description": "**Compartir:** Da a los alumnos un tiempo para que se inventen una alegría para ellos mismos, y luego permíteles que la compartan con la clase si lo desean.",
           "tips": [
-            null
+            "Dependiendo de tu clase, puede que quieras modificar la actividad.  Cualquier actividad que ponga a los alumnos de buen humor para persistir en la codificación de este proyecto funcionará bien."
           ]
         },
         "e1f6d250-92c8-4b01-b970-698a4eb24f7b": {
-          "name": "Web Lab"
+          "name": "Web Lab",
+          "description": "Ahora que estamos listos para ponernos en marcha, es el momento de empezar a poner en práctica los planes que has hecho."
         },
         "8f6c023a-3dd4-4c70-8cff-a4daa7c7e497": {
+          "description": "**Distribuir:** Devolver la guía del proyecto \"Preparar\" a los grupos.\n\n**Transición:** Los equipos se conectan a Code Studio y comienzan a finalizar sus sitios web.",
           "tips": [
-            null
+            "**Nuevo Código y Niveles de Desafío Anteriores:** A lo largo de la unidad, los alumnos pueden haber aprendido código adicional en los niveles de desafío de diferentes lecciones. A medida que los estudiantes se acercan a este proyecto, es posible que quieran volver a ver el código que aprendieron en estos niveles o visitarlos por primera vez para aprender nuevos códigos para usar en este proyecto. Para ayudar a guiar a los estudiantes a los niveles anteriores, puedes utilizar el [r extra_code_in_challenge_levels/csd/2021] como un recurso para encontrar rápidamente donde se introdujeron nuevos códigos en los niveles de desafío anteriores."
           ]
         },
         "88207ae8-3b7d-4b0d-a2b7-7aeb01525bed": {
@@ -16860,22 +17052,53 @@
         "f6c5624d-14b2-4344-86e9-2a2da40edf31": {
           "progression_name": "Comprueba Tu Trabajo"
         },
+        "a790523a-0a20-4ebb-a242-9f3ce72f6f2e": {
+          "name": "¡Reconocimientos!",
+          "description": "**Sugerencia:** ¡Tu equipo ha trabajado muy duro! Felicita a cada persona del equipo por algo que haya hecho especialmente bien."
+        },
         "01c5f83f-7728-465f-b43d-1a5c9f05f982": {
-          "name": "Diario 3-2-1"
+          "name": "Diario 3-2-1",
+          "description": "**Sugerencia:**\n\n-   ¿De qué **3** partes de tu sitio web estás más orgulloso?\n-   ¿Qué **2** cosas has aprendido mientras trabajabas en este sitio web?\n-   ¿Sobre qué **1** cosa te gustaría tener una opinión externa?"
         },
         "35722166-2159-4038-8c7e-7a6cc0580812": {
+          "description": "**Compartir:** Permite que los alumnos compartan sus respuestas con el resto de la clase.",
           "tips": [
-            null
+            "Este debe ser un momento divertido para que los alumnos reflexionen sobre el gran trabajo que han realizado, pero también para que reconozcan que siempre pueden utilizar una perspectiva externa. Esto también les preparará para rellenar la parte del creador de la guía de revisión por pares."
           ]
         },
+        "b6268c04-ffb6-41a8-ac1f-379274e18ff8": {
+          "description": "**Pregunta del Día:  ¿Cómo podemos utilizar los comentarios para mejorar nuestros sitios web?**"
+        },
+        "5fc0d667-e07f-42b8-a5fd-3905077fc8df": {
+          "description": "Ahora deberías tener un producto pulido del que te sientas orgulloso. Una parte importante de cualquier proyecto importante es obtener la opinión de personas que no trabajan en ese proyecto contigo. Pueden aportar una perspectiva que tú podrías haber pasado por alto. Hoy nos dedicaremos a dar y recibir comentarios. A continuación, reflexionaremos sobre cómo poner en práctica estos comentarios."
+        },
+        "b53df602-a405-4fdb-87c8-16bfb1a58aaf": {
+          "name": "Reflexionar: Revisión por Pares",
+          "description": "**Distribuir:** Una copia de la guía de revisión por pares a cada equipo.\n\n**Agrupar:** Emparejar a los equipos entre sí. Alternativamente, puedes emparejar a individuos de diferentes equipos.\n\n#### Proceso de Revisión por Pares\n\nLos equipos deberán:\n\n-   Abrir sus proyectos de sitios web en el Laboratorio Web.\n-   Rellenar la parte superior de la hoja de trabajo, identificando los aspectos sobre los que les gustaría recibir comentarios. (Deberían haber pensado en esto al final de la última lección)\n-   Intercambiar los puestos con el otro equipo para que cada uno vea la hoja y el sitio web del otro.\n-   Comentar el trabajo del otro equipo.\n-   Volver a consultar su hoja y su sitio web para revisar los comentarios.\n-   Hacer un plan para poner en práctica algunos de los comentarios."
+        },
         "aca795d4-18ad-434c-91f8-cc29e3d5a96c": {
+          "name": "Preparar y Probar: Retoques Finales",
+          "description": "**Transición:** Los equipos vuelven a Code Studio y realizan las mejoras que se identificaron en la sesión de revisión por pares. Si no recibieron ninguna recomendación de la revisión por pares, es posible que quieras hacerles algunas sugerencias. \n\nLos equipos también deben revisar la rúbrica y la lista de control del alumno como forma final de comprobar su trabajo.",
           "tips": [
-            null
+            "**Rúbrica y Lista de Control:** Los alumnos disponen de dos recursos que pueden utilizar para su reflexión personal y para asegurarse de que van por el buen camino: la rúbrica y la lista de control del alumno. Recomendamos que los alumnos utilicen la lista de comprobación para su propia autoevaluación y reflexión, ya que puede ser más fácil de digerir y comprender al revisar su propio proyecto. Sin embargo, recomendamos a los profesores que utilicen la rúbrica completa para evaluar los proyectos, a fin de dar una respuesta más precisa a los alumnos."
           ],
           "progression_name": "Incorporar los Comentarios"
         },
         "c11db9e7-9e8e-470f-854b-a56722d138f0": {
+          "name": "Reflexionar: Reflexión final",
+          "description": "**Distribuir:** Entrega una copia de la reflexión del proyecto **a cada alumno**.\n\nEn la reflexión, los alumnos meditarán sobre el proceso y el producto. Deben identificar los aspectos de la página en sí de los que se sientan orgullosos, así como la forma en que el grupo trabajó en conjunto.  También describirán lo que han aprendido en el transcurso del proyecto.\n\nEnvía a los alumnos a Code Studio para que completen la reflexión sobre sus actitudes hacia la informática. Aunque sus respuestas son anónimas, los datos agregados estarán disponibles para tí una vez que al menos cinco estudiantes hayan completado la encuesta.",
           "progression_name": "Reflexión"
+        },
+        "4ee21f1f-e263-496a-a0b7-e224a25c2633": {
+          "name": "Configuración de la Exposición",
+          "description": "**Configuración:** Los estudiantes necesitan:\n\n-   Un ordenador para visualizar el sitio web.\n-   Una forma de mostrar sus capturas de pantalla de progresión del sitio web."
+        },
+        "ee499349-be5f-410c-950c-54c83fbe7afc": {
+          "name": "Exposición de la Página Web del Alumno",
+          "description": "Los alumnos deben situarse junto a sus ordenadores y hablar con los asistentes a la exposición sobre su trabajo. Si no puedes conseguir que otros acudan a tu sala para esta actividad, puedes dividir la clase por la mitad y hacer que una mitad presente mientras los demás circulan. Luego pueden intercambiar."
+        },
+        "8f3145b4-b880-44e9-986e-03a852b7e2fa": {
+          "description": "La prueba fin de proyecto se encuentra en la parte inferior de la página de resumen de la unidad de Desarrollo Web en Code Studio.\n\nEste test está bloqueado y oculto a la vista de los alumnos por defecto.  Para que los estudiantes puedan ver y realizar esta prueba, tendrás que desbloquearla pulsando el botón \"Bloquear Configuración\" y siguiendo las instrucciones que aparecen."
         },
         "938b93c7-1d09-4893-a312-181b8a14a4db": {
           "tips": [

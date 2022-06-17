@@ -12156,11 +12156,11 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 píxeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
-        - text: El ordenador pedirá al usuario un número.
+        - text: La computadora pedirá un número al usuario.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
             `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
@@ -12169,19 +12169,19 @@ es-MX:
       courseF_multi_bee_for3_predict1_2021:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
-            de una.
+            una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'La abeja avanzará y recogerá un néctar de las flores número 1 y 4. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
       courseF_sprites_freeplay:
@@ -12223,7 +12223,7 @@ es-MX:
         - text: Lee el código y haz una predicción.
       courseF_text_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. ¡Sigue practicando con el texto y los apuntes!"
+          todas las que puedas. ¡Sigue practicando con el texto y las solicitudes!"
         display_name: Práctica de Texto y Apuntes
         teacher_markdown: |+
           # Visión General de los Niveles de Elección
@@ -12231,30 +12231,30 @@ es-MX:
 
           Puedes utilizar las descripciones que aparecen a continuación para ayudar a los alumnos a auto-seleccionar las opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Uso de la Voz para el Texto|Texto de los Apuntes|¡Nombra el robot!|Etiquetas de Variables|Texto Grande|Solicitar colores|Empezar de cero|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Uso de la Voz para el Texto|Texto de las Solicitudes|¡Nombra el robot!|Etiquetas de Variables|Texto Grande|Solicitar colores|Empezar de cero|
           |-|-|-|-|-|-|-|-|
           | ***Teclear*** |**Revisisar**|**Debug**|**Depurar**|**Debug**|**Contenido Opcional**|**Optional Content**|**Juego Libre**
-          | ***Concepto***|*print block, events*|*apuntes, eventos*|*adding spaces*|*etiquetas de variables coincidentes*|*title screen blocks*|*almacenar colores*|*sin contenido nuevo*
+          | ***Concepto***|*print block, events*|*solicitudes, eventos*|*adding spaces*|*etiquetas de variables coincidentes*|*title screen blocks*|*almacenar colores*|*sin contenido nuevo*
 
 
       courseF_variables_predict_multi:
         answers:
         - text: El programa imprimirá "¡Hola nombre!"
           feedback: No es correcto. El bloque del nombre será reemplazado por lo que
-            usted escriba.
-        - text: El programa le dará la bienvenida con el nombre que introduzca.
+            escribas.
+        - text: El programa te dará la bienvenida con el nombre que escribas.
           correct: true
           feedback: "¡Correcto! Lo que escribas se utilizará en lugar del bloque de
             nombres."
         - text: El sprite cambiará de tamaño.
           feedback: Es incorrecto. El texto se imprime en la pantalla.
-        - text: El ordenador hará otra pregunta.
+        - text: La computadora hará otra pregunta.
           feedback: No es correcto. Sólo se hace una pregunta, justo al comenzar el
             programa.
         questions:
-        - text: 'Este programa le permite responder a una pregunta escribiendo con
-            el teclado. El bloque `impresión` muestra el texto en la pantalla. Haz
-            una predicción: ¿Qué ocurrirá después de responder a la pregunta?'
+        - text: 'Este programa te permite escribir con el teclado para responder una
+            pregunta. El bloque `imprimir` muestra el texto en la pantalla. Haz una
+            predicción: ¿qué ocurrirá después de responder la pregunta?'
       courseF_variables_projects:
         description: Crearás una tarjeta de felicitaciones, un chatbot o una historia
           de espacio en blanco. Si ya has terminado la \"Parte 1"\ de tu proyecto,
