@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-15 14:55:25 UTC",
+    "serialized_at": "2022-06-16 14:33:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5988,6 +5988,18 @@
       }
     },
     {
+      "name": "Aliasing",
+      "url": "https://youtu.be/9GLT7oQnW4I",
+      "key": "aliasing",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "aliasing"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csa4-2022/resources",
       "key": "all_resources_6",
@@ -6162,6 +6174,18 @@
       },
       "seeding_key": {
         "resource.key": "random_numbers"
+      }
+    },
+    {
+      "name": "Static Methods",
+      "url": "https://youtu.be/k3QLkzascYI",
+      "key": "static_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "static_methods"
       }
     },
     {
@@ -6583,6 +6607,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "aliasing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "u4l2_extra_practice"
       }
     },
@@ -6698,6 +6728,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "dataset_summaries"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "static_methods"
       }
     },
     {
