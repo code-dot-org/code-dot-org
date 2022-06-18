@@ -9208,6 +9208,8 @@ az:
               name: dəyişənlər
             For Loops:
               name: '"For" dövrü'
+            End of Course projects:
+              name: Kurs Layihələri
             Taking next steps:
               name: Növbəti addımları atmaq
             Welcome to "Teaching Computer Science Fundamentals":
@@ -9431,3 +9433,10 @@ az:
               name: Yekun
             lesson-1:
               name: Yekun
+        self-paced-pl-csd5-2022:
+          lessons:
+            Engage with machine learning apps:
+              name: Dizayn Prosesi
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1 -ci hissənin tədrisinə hazırlıq
