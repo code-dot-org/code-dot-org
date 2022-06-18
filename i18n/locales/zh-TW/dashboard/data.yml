@@ -606,6 +606,7 @@ zh-TW:
         CSA-PL-two-way-selection: 雙向選擇
         CSA-PL-Printing-in-Java: Java中的列印
         CSA-PL-multi-selection-statements: 多重選擇語句
+        CS_Changing_Everything: 計算機科學改變了一切
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方
