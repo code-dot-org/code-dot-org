@@ -50,7 +50,7 @@ module DataIOHelper
   # @param sheet_name [String]
   # @credential_json [String] Google credential json file
   def append_to_gsheet(rows_with_headers, spreadsheet_name, sheet_name, credential_json)
-    raise 'Invalid inputs!' if rows_with_headers.nil? || spreadsheet_name.empty? || sheet_name.empty? || credential_json.empty?
+    raise 'Input params cannot be nil or empty!' if rows_with_headers.nil? || spreadsheet_name.empty? || sheet_name.empty? || credential_json.empty?
     @gdrive_session ||= GoogleDrive::Session.from_service_account_key(credential_json)
 
     spreadsheet = @gdrive_session.spreadsheet_by_title(spreadsheet_name)
