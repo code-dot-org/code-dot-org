@@ -1070,6 +1070,7 @@ pl:
         music: 'Muzyka'
         art: 'Sztuka'
         other: "Inne:"
+        na: 'Nie dotyczy'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1079,7 +1080,8 @@ pl:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Inne:"
+        other: "Inni/inne"
+        na: 'Nie dotyczy'
       robotics:
         grok: 'Nauka Grok'
         kodable: 'Kodable'
@@ -1089,7 +1091,8 @@ pl:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Warsztaty Wonder'
-        other: "Inne:"
+        other: "Inni/inne"
+        na: 'Nie dotyczy'
       workshop_course:
         csf_af: 'Podstawy informatyki (Kursy A-F)'
         csf_express: 'Podstawy informatyki (Wstępne ekspresowe lub ekspresowe)'

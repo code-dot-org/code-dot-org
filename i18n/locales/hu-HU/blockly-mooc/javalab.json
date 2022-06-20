@@ -13,7 +13,6 @@
   "classNotFound": "Hiba: Egy vagy több Java fájlod kihagynak egy osztály meghatározást.",
   "closeReview": "Felülvizsgálat bezárása",
   "codeEditingDisabled": "A kódszerkesztés le van tiltva, amíg a projekt felülvizsgálata folyik.",
-  "codeReview": "Kód felülvizsgálata",
   "commentUpdateError": " Hiba történt a kérésed feldolgozása közben, kérlek próbáld újra.",
   "commit": "elkövet",
   "commitAndSave": "elkövet és elment",

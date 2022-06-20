@@ -34,7 +34,7 @@ module Services
 
             # Then we recursively flatten all of our hashes of objects, to group them
             # by type rather than by script
-            result = flatten(script_objects, ScriptCrowdinSerializer, :scripts)
+            result = flatten(script_objects, Serializers::ScriptCrowdinSerializer, :scripts)
 
             # Then we apply some postprocessing.
             postprocess(result)

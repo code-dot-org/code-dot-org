@@ -26,7 +26,7 @@ import {
   sectionForDropdownShape
 } from '@cdo/apps/templates/teacherDashboard/shapes';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
-import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SafeMarkdown from '../SafeMarkdown';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
@@ -157,7 +157,7 @@ class CourseOverview extends Component {
             redirectButtonText={i18n.goToAssignedVersion()}
           />
         )}
-        {userId && <StudentFeedbackNotification studentId={userId} />}
+        {userId && <ParticipantFeedbackNotification studentId={userId} />}
         {showRedirectWarning && !dismissedRedirectWarning(name) && (
           <Notification
             type={NotificationType.warning}

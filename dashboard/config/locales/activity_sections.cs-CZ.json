@@ -532,7 +532,8 @@
           "progression_name": "Komprese textu"
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "**Diskuse:**\n\n-   _Co víme o tom, jak se šíří viry?_\n-   _Co může přispět k rychlejšímu šíření viru městem?_\n-   _Co může pomoct zpomalit šíření viru?_\n\nCílem této diskuse je dát studentům příležitost k aktivaci předchozích znalostí – učitel píše nápady studentů na tabuli. Zároveň je to příležitost k prozkoumání některých mylných představ o tom, jak se viry šíří."
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Epidemie",
@@ -540,9 +541,20 @@
           "progression_name": "Epidemie"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "**Udělejte toto:** Přečtete si se třídou materiál _Vítejte ve Městě příšerek_.",
           "progression_name": "Vítejte ve Městě Příšer"
         },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": "**Udělejte toto:** Navažte na předchozí lekci a projděte se studenty slovní zásobu vztahující se k **modelům a simulacím**. Simulace je počítačový model procesu nebo systému."
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": "_V dnešní lekci pomocí kódu vdechneme život místu, jako je Město příšerek. V téhle simulaci dáte sprajtům roli různých příšerek. Různé převleky sprajtů budou vypovídat například o tom, jestli jsou zdraví, nebo nemocní. Pomocí chování také příšerky rozpohybujete. Nakonec pomocí událostí změníte převlek sprajta, když se dva sprajti na téhle obrazovce dotknou. Tato událost bude představovat předání viru jednou příšerkou druhé. Budete předvídat, co se s obyvateli Města příšerek stane, a pomůžete jim znovu se uzdravit!_ "
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "**Udělejte toto:** Přiveďte studenty k počítačům a nechte je začít plnit pokyny pro jednotlivé úrovně v části věnované rozvoji dovedností. Pokud někteří studenti tuto část dokončí brzy, můžou dál experimentovat se svým kódem v Úrovni 6, dokud celá třída nebude připravená posunout se dál."
+        },
         "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "**Udělejte toto:** Přiveďte studenty zpátky k počítačům a nechte je pracovat na zbývajících úrovních. Některé z nich obsahují volitelná zadání. Zdůrazněte studentům, ať si každé zadání pečlivě přečtou a ať se svými simulacemi experimentují.",
           "progression_name": "Miniprojekt: Simulátor epidemie"
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
@@ -551,8 +563,12 @@
         "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
           "description": "_Simulace jsou vynikající způsob, jak se můžeme učit o věcech, které se v reálném světě nesnadno pozorují. Pomáhají vědcům řešit problémy, ¨předvídat, jak problém vyřešit a testovat nové myšlenky bezpečně a účinně. Vaše simulace je způsob, jak ukázat, jak by šíření viru ve Městě Příšer mohlo vypadat._"
         },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": "**Diskuse:**\n\n-   Čím můžou být simulace užitečné v reálném světě? \n-   Jak nám můžou pomoct pochopit svět kolem nás? \n-   A jak můžeme díky nim vylepšit testování nápadů? \n\nCílem diskuse je ukázat studentům, že simulace představují interaktivní způsob modelování komplexních systémů. Studenti by si také měli uvědomit, že díky simulacím se dají rychle, levně a bezpečně testovat nápady."
+        },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflexe"
+          "name": "Reflexe",
+          "description": "**Výzvy:**\n\n-   Čím tahle simulace připomíná reálný svět? Čím se od něj liší?\n-   Co byste chtěli do simulace přidat a jak ji změnit?"
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Úvod",
@@ -750,8 +766,14 @@
         "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
           "progression_name": "Proměnné"
         },
+        "b3155f3f-f1d8-49d2-8fb9-32f7caf2de13": {
+          "progression_name": "Přidávání obrázků"
+        },
         "9fcb88d4-d160-48f1-839b-a859098936ba": {
           "progression_name": "Vlastnosti sprajtu"
+        },
+        "7cde2f9a-d424-43de-bb23-9301a3467204": {
+          "progression_name": "Animace scény"
         },
         "8ca97900-8855-4bb6-9717-d9e403b12fb0": {
           "progression_name": "Video: Podmínky"
@@ -817,6 +839,9 @@
         "0c50e3b4-a993-42ff-959b-6e197b358a9a": {
           "progression_name": "Prvky dizajnového módu"
         },
+        "b4f90851-d1cc-4d08-bf3e-b8713bb6331d": {
+          "progression_name": "Přidávání obrazovek"
+        },
         "ed742835-e65c-4038-9db0-9ec1c5d540eb": {
           "progression_name": "Události"
         },
@@ -829,6 +854,9 @@
         },
         "35ccf024-6c5d-495e-83ce-00b1e89cecd9": {
           "progression_name": "Seznamy"
+        },
+        "44a49f5c-5c77-4aae-833c-3288ab973af9": {
+          "progression_name": "Přidávání obrázků"
         },
         "0eb10caa-d6c3-4afd-bba1-c28694a1128a": {
           "progression_name": "Ladění"
@@ -1023,6 +1051,9 @@
         "b1387c6f-1fc5-4ce3-b5b8-b4b3a88cec5d": {
           "progression_name": "Cykly pokud (while) s farmářkou"
         },
+        "b45dbea4-592f-4cab-92f6-1319a6e90b58": {
+          "progression_name": "Příkazy If/Else se včelkou"
+        },
         "acb1431e-7cdb-4448-bf6d-1876d561952e": {
           "progression_name": "Výzva"
         },
@@ -1154,8 +1185,14 @@
         "13d78339-15e3-4fa2-9b87-22412794083d": {
           "progression_name": "Proměnné"
         },
+        "aae905a1-38d5-48ad-aed9-4de0921bd1ec": {
+          "progression_name": "Přidávání obrázků"
+        },
         "89860dc5-98ff-4e81-b72c-56732f2f2b0a": {
           "progression_name": "Vlastnosti sprajtu"
+        },
+        "40b1875f-642b-41c8-b209-a80034c39f59": {
+          "progression_name": "Animace scény"
         },
         "51e86e72-fda9-4a5d-9f4a-a3dec424039b": {
           "progression_name": "Video: Podmíněný příkaz"
@@ -1216,6 +1253,9 @@
         "66fe6772-18ed-429c-927a-b9a919198b60": {
           "progression_name": "Prvky dizajnového módu"
         },
+        "1d83d565-21fa-499c-8a66-27f53423ea9b": {
+          "progression_name": "Přidávání obrazovek"
+        },
         "758bff77-ce78-4c98-bc3a-d5968a9032d3": {
           "name": "Reflexe",
           "progression_name": "Reflexe"
@@ -1244,6 +1284,9 @@
         },
         "96c1880e-e7f9-43dd-a4e8-d89a104289cc": {
           "progression_name": "Seznamy"
+        },
+        "2a1838a5-708c-4af3-baf7-54864c87153a": {
+          "progression_name": "Přidávání obrázků"
         },
         "9b99bbac-c605-4a93-a573-277dbf0d31fe": {
           "progression_name": "Ladění"
@@ -1297,12 +1340,18 @@
           "name": "Volná hra",
           "progression_name": "Volná hra"
         },
+        "1893f672-0984-4956-a657-90f4a8a4ecb2": {
+          "progression_name": "Přidávání obrázků"
+        },
         "3d8197af-4652-485f-9f96-a5a2c78bb3d6": {
           "name": "Volná hra",
           "progression_name": "Volná hra"
         },
         "6d500881-4394-4b38-9bbb-56b73d897b83": {
           "progression_name": "Vlastnosti sprajtu"
+        },
+        "219f0d70-6ef7-4477-949e-180dbaef8e34": {
+          "progression_name": "Animace scény"
         },
         "bb202266-76ce-425e-83e1-fa5ccee34421": {
           "name": "Volná hra",
@@ -1393,6 +1442,9 @@
         "617bb683-840e-46f3-bfaf-72dea5842d0f": {
           "progression_name": "Seznamy"
         },
+        "f8c60aab-32aa-4d82-8a8a-8d3ef2d5a467": {
+          "progression_name": "Přidávání obrázků"
+        },
         "3fcf676a-373f-41b3-8cf1-ecb10c28ec23": {
           "progression_name": "Ladění"
         },
@@ -1452,6 +1504,9 @@
         "84dbdb28-4574-4fee-bbaa-2e5914ee2989": {
           "progression_name": "Prvky dizajnového módu"
         },
+        "86d32260-eb05-4162-a79e-f6d56995793c": {
+          "progression_name": "Přidávání obrazovek"
+        },
         "2462e46e-2f0c-48e2-b59d-bd3bb61ab202": {
           "progression_name": "Události"
         },
@@ -1493,24 +1548,48 @@
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Máte dva samolepicí papírky. Na jeden napište jednu věc, kterou jste se dnes dověděli o kódování. \nNa druhý napište jednu věc, kterou jste se dnes dověděli o poezii. \n\nPodělte se s celou třídou zvednutím ruky o odpověď na otázku: Co dalšího doufáte, že byste se mohli o kódování a informatice naučit příště? "
         },
+        "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
+          "description": "#### Nastavení fáze\n\nPřivítejte žáky ve třídě a velmi krátce představte aktivitu dne.\n\nŘekněte: _Dnes strávíme jednu hodinu řešením online úloh a osvojíme si zásady práce v počítačové učebně._\nCílem této diskuse je seznámit studenty s tím, co mají očekávat a jak se mají po vstupu do počítačové učebny chovat."
+        },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            null
+            "-   Po počítačové učebně se pohybujte tiše\n-   Nezapomeňte, že do počítačové učebny nepatří žvýkačky ani bonbony\n-   Dezinfikujte si ruce\n-   Sdílejte počítač s partnerem\n-   Dbejte na to, aby první „řidič“ dosáhl na myš\n-   Když jste frustrovaní, nebouchejte do počítače ani do monitoru a netřeste jimi\n-   Dodržujte [pravidlo 20/20/20](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n-   Jak se vypořádat s [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) každých 20–30 minut (vyžaduje bezplatné přihlášení na GoNoodle).\n-   Když něco nevíte, zeptejte se nejdřív partnera a až pak učitele\n-   Nezvyšujte příliš hlas, aby se slyšeli i ostatní\n-   Zaznamenávejte si do deníku své pocity a řešení"
           ]
+        },
+        "aa328958-bd87-4dbb-8585-cb33f905051f": {
+          "description": "**Diskuse:**\nDiskutujte o očekáváních ohledně počítačové učebny a ujistěte se, že studenti rozumějí pravidlům. Možná témata k diskusi:\n\n-   Je běhání v počítačové učebně v pořádku?\n-   Jak hlasitě bychom měli chodit, když jsme v počítačové učebně?\n-   Co byste měli dělat, když si s úlohou nevíte rady?\n-   Pomůže v případě frustrace bouchnutí do počítače?\n-   Když se chystáme do počítačové učebny, jak bychom se měli připravit?"
+        },
+        "95529f90-229b-4ce3-8f92-40528f8a7830": {
+          "description": "#### Náhled online hádanek ( minut)\n\nPromítněte zadání z lekce. Ukažte třídě, jak kliknout na obrázek a umístit ho na správné místo přetažením. Záměrně dělejte chyby, jako je kliknutí na pozadí nebo puštění obrázku ve chvíli, kdy ještě není na správném místě. Při těchto problémech požádejte o pomoc dobrovolníky ve třídě."
         },
         "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
-          "name": "Skládačka"
+          "name": "Skládačka",
+          "description": "Cíl:\\_ Žáci se naučí, jak používat Code.org k vypracování online úloh.\n\nTato fáze byla navržená tak, aby žáci dostali příležitost procvičit si koordinaci rukou a očí, stejně jako klikání a přetahování. Taky si v ní pohrají s posloupnostmi.\n\nPokud myslíte, že to žákům pomůže, nechte je, ať na tabuli napíšou jednotlivé kroky přetahování. Například: \n\n1.  Přesunutí kurzoru na blok. \n2.  Kliknutí a podržení tlačítka myši. \n3.  Pohyb myší. \n4.  Uvolnění tlačítka.\n\nŽáci si tak osvojí vytváření _algoritmů_ – tento koncept si vysvětlíme v následujících lekcích."
+        },
+        "3e0ffbe7-276b-4951-8d84-fb5ee9c8092c": {
+          "description": "Věnujte nějakou dobu výuce správného klikání a přetahování. Seznamte žáky s terminologií zařízení, která budou při práci na úlohách používat. Pokud mají tablety, budou používat _dotykovou obrazovku_. Pokud notebooky, budou pravděpodobně používat _trackpad_. Stolní počítače, jaké můžete najít v počítačové učebně, budou spoléhat na používání _myši_."
         },
         "6610529a-20b8-4b76-83d1-1215f72ed51b": {
+          "description": "Mezi nejdůležitější úkoly učitele při výuce informatiky patří rozvíjení prostředí, ve kterém probíhá živá spolupráce. Při online výuce jde zejména o povzbuzování a podporu žáků. Online výuka je ale zaměřená na studenty, to znamená, že učitelé by neměli zasahovat, když si studenti nebudou vědět rady. Tady je pár tipů, jak to udělat:",
           "tips": [
-            null
+            "Předveďte studentům správný způsob, jak pomáhat spolužákům:\n\n-   Nesedejte si na židli spolužáka.\n-   Nepoužívejte klávesnici spolužáka.\n-   Nedotýkejte se myši spolužáka. \n-   Než odejtedete, ujistěte se, že vám spolužák dokáže nahlas popsat řešení"
           ]
+        },
+        "66f2f042-aa67-41db-a756-4ab6e5623f77": {
+          "description": "Naveďte studenty, ať dokončí kurz [Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1).\n\n-   Povzbuďte studenty, kteří mají otázky nebo čelí nějaké výzvě, aby se nejprve zeptali spoužáka, se kterým spolupracují.\n-   Nezodpovězené otázky lze řešit se sousední skupinou, která už může znát řešení.\n-   Požádejte studenty, aby popsali problém, který řeší. Co by měl kód dělat? Co dělá? O čem to vypovídá?\n-   Připomeňte studentům, kteří pociťují frustraci, že frustrace je krokem na cestě k učení a že vytrvalost se vyplatí.\n-   Pokud se student po tom všem stále zasekává, položte mu návodné otázky, aby chybu sám odhalil."
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "Úrovně"
         },
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
-          "name": "Reflexe"
+          "name": "Reflexe",
+          "description": "Nechte studenty, ať napíšou nebo nakreslí, co se naučili a jaký měli pocit, když úlohu dokončili.\n\n**Výzvy:**\n\n-   Dokážete nakreslit pořadí, v jakém se připravujete na cestu do počítačové učebny?\n-   Nakreslete, co se v počítačové učebně dělá a co se nedělá.\n-   Nakreslete a označte názvy příslušenství počítače, která jste během řešení úlohy používali ke klikání a přetahování (tlačítko myši, dotyková obrazovka, trackpad)."
+        },
+        "8f47b370-5569-4a34-b105-c765a39c8460": {
+          "description": "Dejte studentům [odchodové lístky](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) a požádejte je, aby shrnuli, co se dnes naučili, jaké měli pocity nebo co prožívali. Studenti mohou kreslit, psát nebo se vyjadřovat, jakkoli uznají za vhodné. Pak od nich při odchodu z místnosti všechny odchodové lístky vyberte. Pokud chcete, můžete lístky ve škole vyvěsit na nějaké nástěnce nebo jiném dobře viditelném místě jako připomínku Hodiny kódu."
+        },
+        "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
+          "description": "#### Za hranice Hodiny kódu\n\nJe spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení počítačové vědy. Tady je několik námětů:\n\n-   Vyučujte kurzy programu [Základy informatiky Code Studia](http://code.org/educate/k5). Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci. Neznáte žádné informatiky v okolí? Oslovte některého dobrovolníka z naší [mapy dobrovolníků](https://code.org/volunteer/local)"
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Úvod",
@@ -1963,7 +2042,8 @@
           "description": "Během hlavní aktivity této lekce studenti spouštějí a upravují simulaci, kterou sami od začátku neprogramovali. Studenti mohou simulaci skutečně naprogramovat pomocí bloků kódu, které viděli v předchozích lekcích.\n\nV poslední úrovni lekce mohou studenti tento kód prozkoumat a začít přemýšlet o tom, jak sami naprogramovat simulaci."
         },
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "**Diskuse:**\n\n-   _Co víme o tom, jak se šíří viry?_\n-   _Co může přispět k rychlejšímu šíření viru městem?_\n-   _Co může pomoct zpomalit šíření viru?_\n\nCílem této diskuse je dát studentům příležitost k aktivaci předchozích znalostí – učitel píše nápady studentů na tabuli. Zároveň je to příležitost k prozkoumání některých mylných představ o tom, jak se viry šíří."
         },
         "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
           "name": "Epidemie",
@@ -1971,7 +2051,14 @@
           "progression_name": "Epidemie"
         },
         "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
+          "description": "**Udělejte toto:** Přečtete si se třídou materiál _Vítejte ve Městě příšerek_.",
           "progression_name": "Vítejte ve Městě Příšer"
+        },
+        "6d584bed-5c82-499c-8ca5-8a02186cad6a": {
+          "description": "**Udělejte toto:** Navažte na předchozí lekci a projděte se studenty slovní zásobu vztahující se k **modelům a simulacím**. Simulace je počítačový model procesu nebo systému."
+        },
+        "8356c629-922b-49f4-937e-b2d471c87ca0": {
+          "description": "_V dnešní lekci pomocí kódu vdechneme život místu, jako je Město příšerek. V téhle simulaci dáte sprajtům roli různých příšerek. Různé převleky sprajtů budou vypovídat například o tom, jestli jsou zdraví, nebo nemocní. Pomocí chování také příšerky rozpohybujete. Nakonec pomocí událostí změníte převlek sprajta, když se dva sprajti na téhle obrazovce dotknou. Tato událost bude představovat předání viru jednou příšerkou druhé. Budete předvídat, co se s obyvateli Města příšerek stane, a pomůžete jim znovu se uzdravit!_ "
         },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "description": "**Udělejte toto:** Přehrajte video \"Spousta sprajtů\" a proberte, jak fungují speciální bloky uvnitř bloků událostí.",
@@ -1980,18 +2067,26 @@
           ],
           "progression_name": "Video: Simulátor epidemie: Úvod"
         },
+        "1b81351d-aade-4896-8957-e06fdd93edfa": {
+          "description": "**Udělejte toto:** Přiveďte studenty k počítačům a nechte je začít plnit pokyny pro jednotlivé úrovně v části věnované rozvoji dovedností. Pokud někteří studenti tuto část dokončí brzy, můžou dál experimentovat se svým kódem v Úrovni 6, dokud celá třída nebude připravená posunout se dál."
+        },
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
           "description": "**Proveďte tohle:** Přiveďte třídu zpět, aby si četli _Epidemie: Myslet jako vědec._",
           "progression_name": "Učení se na základě simulací"
         },
         "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
+          "description": "**Udělejte toto:** Přiveďte studenty zpátky k počítačům a nechte je pracovat na zbývajících úrovních. Některé z nich obsahují volitelná zadání. Zdůrazněte studentům, ať si každé zadání pečlivě přečtou a ať se svými simulacemi experimentují.",
           "progression_name": "Miniprojekt: Simulátor epidemie"
         },
         "2085bbfe-07e4-4eb4-9830-520e979a04c8": {
           "description": "_Simulace jsou vynikající způsob, jak se můžeme učit o věcech, které se v reálném světě nesnadno pozorují. Pomáhají vědcům řešit problémy, ¨předvídat, jak problém vyřešit a testovat nové myšlenky bezpečně a účinně. Vaše simulace je způsob, jak ukázat, jak by šíření viru ve Městě Příšer mohlo vypadat._"
         },
+        "915a5565-ed7e-4c02-812a-fa59ae6e5f4b": {
+          "description": "**Diskuse:**\n\n-   Čím můžou být simulace užitečné v reálném světě? \n-   Jak nám můžou pomoct pochopit svět kolem nás? \n-   A jak můžeme díky nim vylepšit testování nápadů? \n\nCílem diskuse je ukázat studentům, že simulace představují interaktivní způsob modelování komplexních systémů. Studenti by si také měli uvědomit, že díky simulacím se dají rychle, levně a bezpečně testovat nápady."
+        },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
-          "name": "Reflexe"
+          "name": "Reflexe",
+          "description": "**Výzvy:**\n\n-   Čím tahle simulace připomíná reálný svět? Čím se od něj liší?\n-   Co byste chtěli do simulace přidat a jak ji změnit?"
         },
         "2c7244e0-80ea-472a-9dbe-051909768cfc": {
           "name": "Vytvářejte vzrušení!",
@@ -2235,7 +2330,7 @@
         "07f0915c-fd00-4787-8a53-251613824cc8": {
           "name": "Posloupnosti s Naštvanými ptáky",
           "tips": [
-            null
+            "Předveďte studentům správný způsob, jak pomáhat spolužákům:\n\n-   Nesedejte si na židli spolužáka.\n-   Nepoužívejte klávesnici spolužáka.\n-   Nedotýkejte se myši spolužáka. \n-   Než odejtedete, ujistěte se, že vám spolužák dokáže nahlas popsat řešení"
           ]
         },
         "4784895a-ea4f-4a2f-b4ef-c392b016f01c": {
@@ -2618,8 +2713,9 @@
           ]
         },
         "2f105d16-8751-4faa-a550-ae4dc2ef5078": {
+          "description": "Mezi nejdůležitější úkoly učitele při výuce informatiky patří rozvíjení prostředí, ve kterém probíhá živá spolupráce. Při online výuce jde zejména o povzbuzování a podporu žáků. Online výuka je ale zaměřená na studenty, to znamená, že učitelé by neměli zasahovat, když si studenti nebudou vědět rady. Tady je pár tipů, jak to udělat:",
           "tips": [
-            null
+            "Předveďte studentům správný způsob, jak pomáhat spolužákům:\n\n-   Nesedejte si na židli spolužáka.\n-   Nepoužívejte klávesnici spolužáka.\n-   Nedotýkejte se myši spolužáka. \n-   Než odejtedete, ujistěte se, že vám spolužák dokáže nahlas popsat řešení"
           ]
         },
         "25da4eea-6dc0-40ad-88ee-365e7f1ce9aa": {
@@ -4658,8 +4754,9 @@
           "description": "Rozdělte děti do dvojic a nechte je sledovat video o programování ve dvojicích jako třídu nebo na jejich stanovištích.  To by mělo studentům pomoci vydat se správným směrem."
         },
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
+          "description": "Mezi nejdůležitější úkoly učitele při výuce informatiky patří rozvíjení prostředí, ve kterém probíhá živá spolupráce. Při online výuce jde zejména o povzbuzování a podporu žáků. Online výuka je ale zaměřená na studenty, to znamená, že učitelé by neměli zasahovat, když si studenti nebudou vědět rady. Tady je pár tipů, jak to udělat:",
           "tips": [
-            null
+            "Předveďte studentům správný způsob, jak pomáhat spolužákům:\n\n-   Nesedejte si na židli spolužáka.\n-   Nepoužívejte klávesnici spolužáka.\n-   Nedotýkejte se myši spolužáka. \n-   Než odejtedete, ujistěte se, že vám spolužák dokáže nahlas popsat řešení"
           ]
         },
         "6de9f22c-a1d4-45f0-bc41-d7ab54516eab": {
@@ -4688,7 +4785,7 @@
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
           "name": "Programování s bloky",
           "tips": [
-            null
+            "Předveďte studentům správný způsob, jak pomáhat spolužákům:\n\n-   Nesedejte si na židli spolužáka.\n-   Nepoužívejte klávesnici spolužáka.\n-   Nedotýkejte se myši spolužáka. \n-   Než odejtedete, ujistěte se, že vám spolužák dokáže nahlas popsat řešení"
           ]
         },
         "20e998a3-d920-48f1-9d92-ec4102990042": {
@@ -5660,6 +5757,9 @@
             null
           ]
         },
+        "5c385108-484c-44cb-b688-858fc00e41df": {
+          "progression_name": "Přidávání nových obrazovek"
+        },
         "209eff96-d559-411e-b8cf-bd6a84923473": {
           "tips": [
             null
@@ -5801,10 +5901,16 @@
             null
           ]
         },
+        "920cf048-b5d3-4033-8705-25e47ba99238": {
+          "progression_name": "Alternativní datové sady"
+        },
         "8da670fc-d91b-438b-af07-2227156fdbcd": {
           "tips": [
             null
           ]
+        },
+        "f2a40f03-0400-4522-b5d6-8349034c6ebb": {
+          "progression_name": "Přidat úvodní obrazovku"
         },
         "1b28522d-bf63-4f09-94a2-a80833819a38": {
           "tips": [
@@ -6292,6 +6398,9 @@
           "tips": [
             null
           ]
+        },
+        "ed8ac962-30bc-457d-aee3-6965176fd6e4": {
+          "progression_name": "Přidávání obrazovek"
         },
         "aec4a036-761c-4015-bdd0-e138372c1847": {
           "tips": [
@@ -7370,6 +7479,12 @@
             null
           ]
         },
+        "853974f1-7e3b-4403-a475-5af28d960115": {
+          "progression_name": "Přidat sprajty"
+        },
+        "c0fc532b-e6eb-4858-af5b-5032cd917616": {
+          "progression_name": "Přidat text"
+        },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
             null
@@ -7441,6 +7556,15 @@
           "tips": [
             null
           ]
+        },
+        "68f06aee-a50d-4b3e-9323-16f4812eb23a": {
+          "progression_name": "Přidat sprajty"
+        },
+        "6e3a6230-12e7-4b7f-90a7-ec8574647b3b": {
+          "progression_name": "Přidat text"
+        },
+        "08bedf45-b2d1-4147-8479-22a9c5f20d51": {
+          "progression_name": "Přidat pohyb"
         },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
@@ -8415,6 +8539,12 @@
             null
           ]
         },
+        "81ab793a-d696-4167-a9db-9258e5f476b4": {
+          "progression_name": "Přidat na stránku obsah a strukturu"
+        },
+        "5c1f865c-e956-43d3-aac9-e6cf1a18c1b9": {
+          "progression_name": "Přidat na stránku styl"
+        },
         "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
           "name": "Připomínky spoluřešitele"
         },
@@ -8459,6 +8589,7 @@
           ]
         },
         "42f4e940-4ca1-41ce-9efc-c9147fb84229": {
+          "name": "Přidávání obrázků",
           "tips": [
             null
           ]
@@ -8676,7 +8807,8 @@
         "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Přidávání stránek"
         },
         "c881299c-2798-4137-ac19-ba5e05d59340": {
           "tips": [
@@ -8695,6 +8827,12 @@
           "tips": [
             null
           ]
+        },
+        "30c8efa1-9c2a-434b-8e72-474a8f38d93e": {
+          "progression_name": "Přidat obsah a HTML"
+        },
+        "61b38059-437b-4b5b-a71d-e94ff04f6ae6": {
+          "progression_name": "Přidat styl"
         },
         "35722166-2159-4038-8c7e-7a6cc0580812": {
           "tips": [
@@ -8883,6 +9021,9 @@
         },
         "ecfc3549-e589-40cb-abd5-1b3e075f2256": {
           "progression_name": "Cykly pokud (while) s farmářkou"
+        },
+        "25f91007-3163-43db-986a-9adf74256c7d": {
+          "progression_name": "Příkazy If/Else se včelkou"
         },
         "34f0eff5-b0dd-4bfc-9629-0b4d87f178b9": {
           "progression_name": "Výzva"

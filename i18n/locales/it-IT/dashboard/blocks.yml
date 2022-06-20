@@ -1408,9 +1408,9 @@ it:
             '75': mediamente
             '100': grande
       gamelab_setPrompt:
-        text: "{QUESTION} rapida dell'utente per la variabile {VAR}"
+        text: chiedi all'utente {QUESTION} per la variabile {VAR}
       gamelab_setPromptWithChoices:
-        text: "{QUESTION} rapida dell'utente per la variabile {VAR} con scelte {A}{B}{C}"
+        text: chiedi all'utente {QUESTION} per la variabile {VAR} con scelte {A}{B}{C}
       gamelab_setProp:
         text: imposta la {PROPERTY} di {SPRITE} a {VAL}
         options:
@@ -1586,7 +1586,7 @@ it:
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       Mikelab_beginDataCollection:
-        text: "{QUESTION} rapida dell'utente per la variabile {VAR} con scelte {A}{B}{C}"
+        text: chiedi all'utente {QUESTION} per la variabile {VAR} con scelte {A}{B}{C}
       Mikelab_changePropBy:
         options:
           PROPERTY:

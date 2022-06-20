@@ -21,7 +21,7 @@ function TopInstructionsHeader(props) {
     levelHasRubric,
     displayDocumentationTab,
     displayReviewTab,
-    displayCommitsAndReviewTab,
+    displayReviewV2Tab,
     isViewingAsTeacher,
     hasBackgroundMusic,
     fetchingData,
@@ -31,7 +31,7 @@ function TopInstructionsHeader(props) {
     handleCommentTabClick,
     handleDocumentationTabClick,
     handleReviewTabClick,
-    handleCommitsAndReviewTabClick,
+    handleReviewV2TabClick,
     handleTeacherOnlyTabClick,
     handleClickCollapser,
     isMinecraft,
@@ -145,12 +145,13 @@ function TopInstructionsHeader(props) {
               isRtl={isRtl}
             />
           )}
-          {displayCommitsAndReviewTab && (
+          {displayReviewV2Tab && (
             <InstructionsTab
-              className="uitest-commitsAndReviewTab"
-              onClick={handleCommitsAndReviewTabClick}
-              selected={tabSelected === TabType.COMMITS_AND_REVIEW}
+              className="uitest-reviewV2Tab"
+              onClick={handleReviewV2TabClick}
+              selected={tabSelected === TabType.REVIEW_V2}
               text={i18n.review()}
+              teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
             />
@@ -196,14 +197,11 @@ function TopInstructionsHeader(props) {
 
 const styles = {
   paneHeaderOverride: {
-    color: color.default_text,
-    display: 'flex',
-    width: '100%',
-    justifyContent: 'space-between'
+    color: color.default_text
   },
   audioRTL: {
     wrapper: {
-      order: 5
+      float: 'left'
     }
   },
   audio: {
@@ -220,15 +218,11 @@ const styles = {
   },
   audioLTR: {
     wrapper: {
-      order: 5
+      float: 'right'
     }
   },
   helpTabs: {
-    paddingTop: 6,
-    width: '100%',
-    boxSizing: 'border-box',
-    display: 'flex',
-    minWidth: 100
+    paddingTop: 6
   },
   helpTabsLtr: {
     float: 'left',
@@ -276,7 +270,7 @@ TopInstructionsHeader.propTypes = {
   levelHasRubric: PropTypes.bool,
   displayDocumentationTab: PropTypes.bool,
   displayReviewTab: PropTypes.bool,
-  displayCommitsAndReviewTab: PropTypes.bool,
+  displayReviewV2Tab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
   hasBackgroundMusic: PropTypes.bool.isRequired,
   fetchingData: PropTypes.bool,
@@ -286,7 +280,7 @@ TopInstructionsHeader.propTypes = {
   handleCommentTabClick: PropTypes.func.isRequired,
   handleDocumentationTabClick: PropTypes.func.isRequired,
   handleReviewTabClick: PropTypes.func.isRequired,
-  handleCommitsAndReviewTabClick: PropTypes.func.isRequired,
+  handleReviewV2TabClick: PropTypes.func.isRequired,
   handleTeacherOnlyTabClick: PropTypes.func.isRequired,
   handleClickCollapser: PropTypes.func.isRequired,
   isMinecraft: PropTypes.bool.isRequired,
