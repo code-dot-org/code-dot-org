@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-fables",
-    "serialized_at": "2022-04-26 19:25:37 UTC",
+    "serialized_at": "2022-06-17 14:14:10 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2016,6 +2016,18 @@
       }
     },
     {
+      "name": "Fables Project Rubric",
+      "url": "https://docs.google.com/document/d/1lxlMq68nCbKR1d9tD3VYTlD6qVzGaynqyUj1LT6VkeI/template/preview",
+      "key": "fables_project_rubric",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "fables_project_rubric"
+      }
+    },
+    {
       "name": "Fables Guide",
       "url": "https://docs.google.com/document/d/1Xl78e2Ii7eW2fp-xaehWCjFKos0cz6mnFRTvfd8Hpqg/template/preview",
       "key": "list_of_fables",
@@ -2117,6 +2129,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "fable_planning_sheet_key_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "fables_project_rubric"
       }
     },
     {

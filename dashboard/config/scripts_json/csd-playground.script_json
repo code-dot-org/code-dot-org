@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2022-06-08 17:56:22 UTC",
+    "serialized_at": "2022-06-16 23:34:31 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -537,6 +537,17 @@
         "activity_section.key": "98a31d64-f89d-4653-86a7-b53b38551943",
         "lesson_activity.key": "3e4e3118-34b6-411f-8b53-50e74a4341fb"
       }
+    },
+    {
+      "key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12",
+      "position": 2,
+      "properties": {
+        "progression_name": "Bitcoin Scenarios"
+      },
+      "seeding_key": {
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12",
+        "lesson_activity.key": "3e4e3118-34b6-411f-8b53-50e74a4341fb"
+      }
     }
   ],
   "script_levels": [
@@ -821,6 +832,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crypto - key generation"
+        ],
         "progression": "Bitcoin Widgets"
       },
       "bonus": false,
@@ -843,6 +857,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crypto - generate message"
+        ],
         "progression": "Bitcoin Widgets"
       },
       "bonus": false,
@@ -865,6 +882,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crypto - generate signature"
+        ],
         "progression": "Bitcoin Widgets"
       },
       "bonus": false,
@@ -887,6 +907,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crypto - verify signature"
+        ],
         "progression": "Bitcoin Widgets"
       },
       "bonus": false,
@@ -909,6 +932,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crypto - mine blocks"
+        ],
         "progression": "Bitcoin Widgets"
       },
       "bonus": false,
@@ -923,6 +949,94 @@
       },
       "level_keys": [
         "Crypto - mine blocks"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Bitcoin Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      },
+      "level_keys": [
+        "Crypto - Bitcoin - Scenario 1"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Bitcoin Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      },
+      "level_keys": [
+        "Crypto - Bitcoin - Scenario 2"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Bitcoin Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      },
+      "level_keys": [
+        "Crypto - Bitcoin - Scenario 3"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Bitcoin Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      },
+      "level_keys": [
+        "Crypto - Bitcoin - Scenario 4"
       ]
     }
   ],
@@ -1117,6 +1231,54 @@
         "lesson_group.key": "",
         "script.name": "csd-playground",
         "activity_section.key": "98a31d64-f89d-4653-86a7-b53b38551943"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - Bitcoin - Scenario 1",
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - Bitcoin - Scenario 2",
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - Bitcoin - Scenario 3",
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - Bitcoin - Scenario 4",
+        "script_level.level_keys": [
+          "Crypto - Bitcoin - Scenario 4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "5e99b4dc-133c-4760-85ce-ea3fa26c4d12"
       }
     }
   ],
