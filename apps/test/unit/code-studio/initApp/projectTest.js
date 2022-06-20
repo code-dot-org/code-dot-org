@@ -774,6 +774,7 @@ describe('project.js', () => {
       });
 
       it('fails when channel not found', done => {
+        stubGetChannelsWithNotFound(server);
         project.load().catch(() => {
           expect(project.channelNotFound()).to.be.true;
           done();
@@ -789,6 +790,22 @@ describe('project.js', () => {
         stubGetChannels(server);
         stubGetMainJsonWithError(server);
         project.load().catch(() => done());
+      });
+
+      it('fails when sources request fails', done => {
+        stubGetChannels(server);
+        stubGetMainJsonWithError(server);
+        project.load().catch(() => done());
+      });
+
+      it('fails when sources not found', done => {
+        stubGetChannels(server);
+        stubGetSourcesWithNotFound(server);
+        project.load().catch(() => {
+          expect(project.channelNotFound()).to.be.false;
+          expect(project.sourceNotFound()).to.be.true;
+          done();
+        });
       });
     });
 
@@ -1103,6 +1120,18 @@ function stubGetChannelsWithError(server) {
   });
 }
 
+function stubGetChannelsWithNotFound(server) {
+  server.respondWith('GET', /\/v3\/channels\/.*/, xhr => {
+    xhr.respond(
+      404,
+      {
+        'Content-Type': 'application/json'
+      },
+      'channel `channel_id` not found'
+    );
+  });
+}
+
 function stubGetChannels(server) {
   server.respondWith('GET', /\/v3\/channels\/.*/, xhr => {
     xhr.respond(
@@ -1169,6 +1198,18 @@ function stubGetMainJsonWithError(server) {
   server.respondWith('GET', /\/v3\/sources\/.*\/main\.json/, xhr =>
     xhr.error()
   );
+}
+
+function stubGetSourcesWithNotFound(server) {
+  server.respondWith('GET', /\/v3\/sources\/.*\/main\.json/, xhr => {
+    xhr.respond(
+      404,
+      {
+        'Content-Type': 'application/json'
+      },
+      'source for `channel_id` not found'
+    );
+  });
 }
 
 function stubPutMainJson(server) {

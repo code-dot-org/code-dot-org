@@ -58,6 +58,7 @@ en:
         personal_email_markdown: "Personal email address [(click here if you don't have an email address)](%{url})"
         username: 'Username'
         password: 'Password'
+        verified_teacher: 'Verified Teacher'
         password_confirmation: 'Password confirmation'
         current_password: 'Current password'
         locale: 'Language'
