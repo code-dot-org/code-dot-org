@@ -96,7 +96,6 @@ module Crowdin
         list_language_translations(crowdin_language_id, query, project_id)
       end
 
-      puts "Downloaded #{translations.size} translations"
       translations.map do |translation|
         translation['data']['crowdin_language_id'] = crowdin_language_id
         translation['data']
@@ -133,7 +132,6 @@ module Crowdin
         list_strings(query, project_id)
       end
 
-      puts "Downloaded #{source_strings.size} source strings"
       source_strings.map do |string|
         string['data']
       end

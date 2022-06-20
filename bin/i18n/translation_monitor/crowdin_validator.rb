@@ -40,17 +40,22 @@ class CrowdinValidator
     Dir.mkdir(OUTPUT_DIR) unless Dir.exist?(OUTPUT_DIR)
   end
 
-  # Load and run all configurations from a config file.
+  # Load configurations from a config file and execute them all.
   # May combine with a history file to skip already processed data.
   #
-  # This function has side effects. It may write to the local file system and Google Drive.
+  # If +dry_run+ is set to true, this function has no side effects.
+  # Otherwise, it may write to local files and Google Drive.
+  #
+  # If +download_from_crowdin+ is set to false, this function will try to load
+  # translations and source strings from local files instead of Crowdin.
+  # This option is helpful during development and debugging process.
   #
   # @param config_file [String]
   # @param history_file [String]
-  # @param update_history [Boolean]
+  # @param dry_run [Boolean]
   # @param download_from_crowdin [Boolean]
   #
-  def run_all_configs(config_file:, history_file: nil, update_history: false, download_from_crowdin: true)
+  def run_all_configs(config_file:, history_file: nil, dry_run: false, download_from_crowdin: true)
     configs = load_configs(config_file)
 
     # Update configs using the history of last successful runs
@@ -66,10 +71,10 @@ class CrowdinValidator
       puts "Executing config: #{config}"
 
       begin
-        translations, source_strings, errors = run_config(config, download_from_crowdin)
+        translations, source_strings, errors = run_config(config, dry_run, download_from_crowdin)
 
         # Update the history of last successful runs
-        if history_file && update_history
+        if history_file
           config_with_results = config.merge(
             {
               'results' => {
@@ -81,7 +86,14 @@ class CrowdinValidator
           )
           key = create_history_key(config)
           history[key] = config_with_results
-          write_to_json(history, history_file)
+
+          if dry_run
+            puts "\n[Dry-run] Will write history to file #{history_file}:"
+            puts "[History] #{history}"
+          else
+            write_to_json(history, history_file)
+            puts "Wrote history to file #{history_file}"
+          end
         end
       rescue Exception => e
         puts "Error: #{e.message}"
@@ -92,14 +104,15 @@ class CrowdinValidator
 
   # Run a single configuration.
   #
-  # This function has side effects. It updates the +config+ input.
-  # It may write to the local file system and Google Drive.
+  # If +dry_run+ is set to true, this function has no side effects.
+  # Otherwise, it may write to local files and Google Drive.
   #
   # @param config [Hash]
-  # @param download_from_crowdin [Boolean] downloading data from Crowdin or reading data from the local file system
+  # @param dry_run [Boolean] if true, will not write to the local file system and gsheet
+  # @param download_from_crowdin [Boolean] if true, download data from Crowdin. Otherwise load data local files
   # @return [Array<Array>] array of translations, source_strings, and translation errors
   #
-  def run_config(config, download_from_crowdin)
+  def run_config(config, dry_run, download_from_crowdin)
     missing_params = find_missing_params(config, REQUIRED_CONFIG_PARAMS)
     raise "Missing config params #{missing_params}" unless missing_params.empty?
     infer_config_params(config)
@@ -113,12 +126,20 @@ class CrowdinValidator
         config['start_date'],
         config['end_date']
       )
+      puts "Downloaded #{translations.size} translations from Crowdin"
+
       if config['write_to_file']
-        write_to_json(translations, config['translations_json'])
-        puts "Wrote #{translations.size} translations to #{config['translations_json']}"
+        if dry_run
+          puts "\n[Dry-run] Will write #{translations.size} translations to file #{config['translations_json']}:"
+          translations.each {|transltion| puts "[Translation] #{transltion}"}
+        else
+          write_to_json(translations, config['translations_json'])
+          puts "Wrote #{translations.size} translations to file #{config['translations_json']}"
+        end
       end
     else
       translations = read_from_json(config['translations_json'])
+      puts "Loaded #{translations.size} translations from file #{config['translations_json']}"
     end
 
     # Retreive source strings
@@ -130,31 +151,51 @@ class CrowdinValidator
         config['start_date'],
         config['end_date']
       )
+      puts "Downloaded #{source_strings.size} source strings from Crowdin"
+
       if config['write_to_file']
-        write_to_json(source_strings, config['source_strings_json'])
-        puts "Wrote #{source_strings.size} source strings to #{config['source_strings_json']}"
+        if dry_run
+          puts "\n[Dry-run] Will write #{source_strings.size} source strings to #{config['source_strings_json']}:"
+          source_strings.each {|source_string| puts "[SourceString] #{source_string}"}
+        else
+          write_to_json(source_strings, config['source_strings_json'])
+          puts "Wrote #{source_strings.size} source strings to #{config['source_strings_json']}"
+        end
       end
     else
       source_strings = read_from_json(config['source_strings_json'])
+      puts "Loaded #{translations.size} translations from file #{config['source_strings_json']}"
     end
 
     # Find all translation errors
     errors = validate_all_translations(translations, source_strings)
 
+    # Write errors to local files and/or gsheet
     if errors.empty?
-      puts "No errors, skip writing to files and ghseet."
+      puts "No translation errors found"
     else
       error_rows_with_headers = convert_to_csv_rows(errors)
       if config['write_to_file']
-        write_to_json errors, config['errors_json']
-        puts "Wrote #{errors.size} errors to #{config['errors_json']}"
-        write_to_csv error_rows_with_headers, config['errors_csv']
-        puts "Wrote #{errors.size} errors to #{config['errors_csv']}"
+        if dry_run
+          puts "\n[Dry-run] Will write #{errors.size} errors to file #{config['errors_json']} and #{config['errors_csv']}"
+        else
+          write_to_json errors, config['errors_json']
+          puts "Wrote #{errors.size} errors to file #{config['errors_json']}"
+          write_to_csv error_rows_with_headers, config['errors_csv']
+          puts "Wrote #{errors.size} errors to file #{config['errors_csv']}"
+        end
       end
+
       if config['write_to_gsheet']
-        append_to_gsheet error_rows_with_headers, config['errors_gsheet'], config['crowdin_language_id'], GOOGLE_DRIVE_CREDENTIAL_FILE
-        puts "Wrote #{errors.size} errors to '#{config['crowdin_language_id']}' tab in #{config['errors_gsheet']} gsheet"
+        if dry_run
+          puts "\n[Dry-run] Will write #{errors.size} errors to '#{config['crowdin_language_id']}' tab in #{config['errors_gsheet']} gsheet"
+        else
+          append_to_gsheet error_rows_with_headers, config['errors_gsheet'], config['crowdin_language_id'], GOOGLE_DRIVE_CREDENTIAL_FILE
+          puts "Wrote #{errors.size} errors to '#{config['crowdin_language_id']}' tab in #{config['errors_gsheet']} gsheet"
+        end
       end
+
+      errors.each {|error| puts "[Error] #{error}"} if dry_run
     end
 
     [translations, source_strings, errors]
