@@ -21,7 +21,8 @@ import javalab, {
   closePhotoPrompter,
   setBackpackEnabled,
   appendMarkdownLog,
-  setIsReadOnlyWorkspace
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview
 } from './javalabRedux';
 import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -195,6 +196,7 @@ Javalab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel,
     isEditingStartSources: this.isStartMode,
     isCodeReviewing: !!config.isCodeReviewing,
+    isViewingOwnProject: !!config.isViewingOwnProject,
     isResponsive: true,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted
@@ -273,6 +275,7 @@ Javalab.prototype.init = function(config) {
   // For javalab, we don't use pageConstants.isReadOnlyWorkspace because
   // the readOnly state can change when a code review is opened or closed
   getStore().dispatch(setIsReadOnlyWorkspace(!!config.readonlyWorkspace));
+  getStore().dispatch(setHasOpenCodeReview(!!config.hasOpenCodeReview));
 
   // Dispatches a redux update of display theme
   getStore().dispatch(setDisplayTheme(this.displayTheme));
