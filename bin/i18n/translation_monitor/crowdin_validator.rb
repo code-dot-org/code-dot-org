@@ -47,7 +47,7 @@ class CrowdinValidator
   # Otherwise, it may write to local files and Google Drive.
   #
   # If +download_from_crowdin+ is set to false, this function will try to load
-  # translations and source strings from local files instead of Crowdin.
+  # existing translations and source strings from local files instead of Crowdin.
   # This option is helpful during development and debugging process.
   #
   # @param config_file [String]
@@ -109,7 +109,7 @@ class CrowdinValidator
   #
   # @param config [Hash]
   # @param dry_run [Boolean] if true, will not write to the local file system and gsheet
-  # @param download_from_crowdin [Boolean] if true, download data from Crowdin. Otherwise load data local files
+  # @param download_from_crowdin [Boolean] if true, download data from Crowdin. Otherwise load existing data from local files
   # @return [Array<Array>] array of translations, source_strings, and translation errors
   #
   def run_config(config, dry_run, download_from_crowdin)
@@ -172,7 +172,7 @@ class CrowdinValidator
 
     # Write errors to local files and/or gsheet
     if errors.empty?
-      puts "No translation errors found"
+      puts "No errors found in #{translations.size} translations"
     else
       error_rows_with_headers = convert_to_csv_rows(errors)
       if config['write_to_file']
@@ -339,9 +339,6 @@ class CrowdinValidator
         string_id = data['stringId']
         translation_id = data['translationId']
         user_id = data.dig('user', 'id')
-        raise 'string_id must not be nil' if string_id.nil?
-        raise 'translation_id must not be nil' if translation_id.nil?
-        raise 'user_id must not be nil' if user_id.nil?
 
         res[string_id] ||= {}
         res[string_id][translation_id] = Translation.new(
@@ -364,8 +361,6 @@ class CrowdinValidator
     {}.tap do |res|
       source_strings.each do |data|
         string_id = data['id']
-        raise 'string_id must not be nil' if string_id.nil?
-
         res[string_id] = SourceString.new(
           id: string_id,
           project_id: data['projectId'],
