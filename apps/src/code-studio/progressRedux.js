@@ -341,9 +341,9 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
 
     // We are on an overview page if currentLevelId is undefined.
     const onOverviewPage = !state.currentLevelId;
-    // Show lesson plan links and other teacher info if teacher and on unit overview page.
+    // Show lesson plan links and other teacher info if instructor and on unit overview page.
     if (
-      (data.isTeacher || data.teacherViewingStudent) &&
+      (data.isInstructor || data.teacherViewingStudent) &&
       !data.professionalLearningCourse &&
       onOverviewPage
     ) {
@@ -522,6 +522,7 @@ const lessonFromLesson = lesson =>
     'lessonNumber',
     'lessonStartUrl',
     'lesson_plan_html_url',
+    'lesson_feedback_url',
     'student_lesson_plan_html_url',
     'description_student',
     'description_teacher'

@@ -34,6 +34,7 @@ import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
+import {hasQueryParam} from '@cdo/apps/code-studio/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import {getDefaultFileContents} from './JavalabFileHelper';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
@@ -104,6 +105,8 @@ class JavalabEditor extends React.Component {
     height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    hasOpenCodeReview: PropTypes.bool,
+    isViewingOwnProject: PropTypes.bool,
     backpackEnabled: PropTypes.bool,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired
   };
@@ -632,12 +635,20 @@ class JavalabEditor extends React.Component {
       sources,
       isEditingStartSources,
       isReadOnlyWorkspace,
+      hasOpenCodeReview,
+      isViewingOwnProject,
       showProjectTemplateWorkspaceIcon,
       height,
       isProjectTemplateLevel,
       handleClearPuzzle,
       backpackEnabled
     } = this.props;
+
+    const showOpenCodeReviewWarning =
+      isReadOnlyWorkspace &&
+      hasOpenCodeReview &&
+      isViewingOwnProject &&
+      !hasQueryParam('version');
 
     let menuStyle = {
       display: this.state.showMenu ? 'block' : 'none',
@@ -738,11 +749,12 @@ class JavalabEditor extends React.Component {
                         ...styles.fileMenuToggleButton,
                         ...(displayTheme === DisplayTheme.DARK &&
                           styles.darkFileMenuToggleButton),
-                        ...(activeTabKey !== tabKey && {visibility: 'hidden'})
+                        ...((isReadOnlyWorkspace ||
+                          activeTabKey !== tabKey) && {visibility: 'hidden'})
                       }}
                       onClick={e => this.toggleTabMenu(tabKey, e)}
                       className="no-focus-outline"
-                      disabled={activeTabKey !== tabKey}
+                      disabled={isReadOnlyWorkspace || activeTabKey !== tabKey}
                     >
                       <FontAwesome
                         icon={
@@ -774,6 +786,14 @@ class JavalabEditor extends React.Component {
               />
             </div>
             <Tab.Content id="tab-content" animation={false}>
+              {showOpenCodeReviewWarning && (
+                <div
+                  id="openCodeReviewWarningBanner"
+                  style={styles.openCodeReviewWarningBanner}
+                >
+                  {javalabMsg.editingDisabledUnderReview()}
+                </div>
+              )}
               {orderedTabKeys.map(tabKey => {
                 return (
                   <Tab.Pane eventKey={tabKey} key={`${tabKey}-content`}>
@@ -887,6 +907,14 @@ const styles = {
     display: 'inline-block',
     float: 'left',
     overflow: 'visible'
+  },
+  openCodeReviewWarningBanner: {
+    zIndex: 99,
+    backgroundColor: color.lightest_red,
+    height: 20,
+    padding: 5,
+    width: '100%',
+    color: color.black
   }
 };
 
@@ -897,6 +925,8 @@ export default connect(
     displayTheme: state.javalab.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
+    hasOpenCodeReview: state.javalab.hasOpenCodeReview,
+    isViewingOwnProject: state.pageConstants.isViewingOwnProject,
     backpackEnabled: state.javalab.backpackEnabled,
     showProjectTemplateWorkspaceIcon:
       !!state.pageConstants.isProjectTemplateLevel &&

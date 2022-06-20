@@ -230,6 +230,30 @@ describe('ProgressLessonTeacherInfo', () => {
     assert.equal(wrapper.find('SendLesson').length, 0);
   });
 
+  it('renders Rate This Lesson only if lesson feedback url', () => {
+    const lesson = {
+      ...fakeLesson('Maze', 1),
+      lesson_feedback_url: 'foo/bar/feedback'
+    };
+
+    const wrapper = shallow(
+      <ProgressLessonTeacherInfo
+        lesson={lesson}
+        section={MOCK_SECTION}
+        unitAllowsHiddenLessons={false}
+        hiddenLessonState={Immutable.fromJS({
+          lessonsBySection: {11: {}}
+        })}
+        unitName="My Unit"
+        hasNoSections={true}
+        toggleHiddenLesson={() => {}}
+        lockableAuthorized={true}
+      />
+    );
+
+    assert.equal(wrapper.find('.rate-lesson-button').length, 1);
+  });
+
   it('renders our HiddenForSectionToggle when we have a section', () => {
     const [withSection, withoutSection] = [MOCK_SECTION, undefined].map(
       section =>
