@@ -15,6 +15,9 @@
   - email_mismatch = current_user.errors.delete(:email_mismatch)
   - current_user.reload if email_mismatch.present?
   = render "devise/shared/error_messages", resource: resource
+  - if current_user.permission?(UserPermission::AUTHORIZED_TEACHER)
+    .field
+      = f.label '✔ '+t('activerecord.attributes.user.verified_teacher'), class: 'label-bold', style: 'color:green; text-transform: capitalize';
   %div
   .field
     = f.label :name, class: "label-bold"

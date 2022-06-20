@@ -9,7 +9,10 @@ import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/Cod
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
 import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
 import Button from '@cdo/apps/templates/Button';
-import {setIsReadOnlyWorkspace} from '@cdo/apps/javalab/javalabRedux';
+import {
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview
+} from '@cdo/apps/javalab/javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 
@@ -28,6 +31,7 @@ const CommitsAndReviewTab = props => {
     locale,
     isReadOnlyWorkspace,
     setIsReadOnlyWorkspace,
+    setHasOpenCodeReview,
     isCommitSaveInProgress,
     hasCommitSaveError
   } = props;
@@ -68,13 +72,14 @@ const CommitsAndReviewTab = props => {
       const {timelineData, openReview} = await dataApi.getInitialTimelineData();
       setTimelineData(timelineData);
       setOpenReviewData(openReview);
+      setHasOpenCodeReview(!!openReview);
       setTimelineLoadingError(false);
     } catch (err) {
       console.log(err);
       setTimelineLoadingError(true);
     }
     setIsLoadingTimelineData(false);
-  }, [dataApi]);
+  }, [dataApi, setHasOpenCodeReview]);
 
   const loadPeers = async (onSuccess, onFailure) => {
     try {
@@ -137,6 +142,7 @@ const CommitsAndReviewTab = props => {
       setTimelineData([...timelineData, closedReview]);
       setOpenReviewData(null);
       setIsReadOnlyWorkspace(false);
+      setHasOpenCodeReview(false);
       onSuccess();
     } catch (err) {
       console.log(err);
@@ -151,6 +157,7 @@ const CommitsAndReviewTab = props => {
       const newReview = await dataApi.openNewCodeReview(currentVersion);
       setOpenReviewData(newReview);
       setIsReadOnlyWorkspace(true);
+      setHasOpenCodeReview(true);
       setOpenReviewError(false);
     } catch (err) {
       console.log(err);
@@ -263,7 +270,9 @@ export default connect(
   }),
   dispatch => ({
     setIsReadOnlyWorkspace: isReadOnly =>
-      dispatch(setIsReadOnlyWorkspace(isReadOnly))
+      dispatch(setIsReadOnlyWorkspace(isReadOnly)),
+    setHasOpenCodeReview: hasOpenCodeReview =>
+      dispatch(setHasOpenCodeReview(hasOpenCodeReview))
   })
 )(CommitsAndReviewTab);
 
@@ -280,6 +289,7 @@ CommitsAndReviewTab.propTypes = {
   locale: PropTypes.string,
   isReadOnlyWorkspace: PropTypes.bool,
   setIsReadOnlyWorkspace: PropTypes.func.isRequired,
+  setHasOpenCodeReview: PropTypes.func.isRequired,
   isCommitSaveInProgress: PropTypes.bool,
   hasCommitSaveError: PropTypes.bool
 };
