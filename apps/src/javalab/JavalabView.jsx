@@ -41,7 +41,6 @@ class JavalabView extends React.Component {
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     handleClearPuzzle: PropTypes.func.isRequired,
     onPhotoPrompterFileSelected: PropTypes.func.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool,
     isCodeReviewing: PropTypes.bool,
 
     // populated by redux
@@ -63,7 +62,8 @@ class JavalabView extends React.Component {
     awaitingContainedResponse: PropTypes.bool,
     isSubmittable: PropTypes.bool,
     isSubmitted: PropTypes.bool,
-    setDisableFinishButton: PropTypes.func
+    setDisableFinishButton: PropTypes.func,
+    isReadOnlyWorkspace: PropTypes.bool
   };
 
   componentDidMount() {

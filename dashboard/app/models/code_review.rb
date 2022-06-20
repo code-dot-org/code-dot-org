@@ -39,6 +39,8 @@ class CodeReview < ApplicationRecord
   scope :open_reviews, -> {where(closed_at: nil)}
 
   def self.open_for_project?(channel:)
+    return false unless channel
+
     _, project_id = storage_decrypt_channel_id(channel)
     CodeReview.exists?(project_id: project_id, closed_at: nil)
   end
