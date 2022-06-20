@@ -1,5 +1,5 @@
 require_relative '../../test_helper'
-require 'cdo/redcarpet/inline'
+require 'cdo/redcarpet/render/inline'
 
 class RedcarpetInlineRendererTest < Minitest::Test
   def setup

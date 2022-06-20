@@ -1,5 +1,5 @@
 require 'cdo/script_config'
-require 'cdo/redcarpet/inline'
+require 'cdo/redcarpet/render/inline'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'

@@ -1,7 +1,7 @@
 require 'action_view'
 require 'cdo/markdown/handler'
 require 'cdo/markdown/renderer'
-require 'cdo/redcarpet/inline'
+require 'cdo/redcarpet/render/inline'
 require 'haml'
 require 'haml/template'
 require 'redcarpet'
