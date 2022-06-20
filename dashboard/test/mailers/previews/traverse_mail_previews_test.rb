@@ -1,4 +1,4 @@
-require 'test_helper'
+require_relative '../../test_helper'
 
 class TraverseMailPreviewsTest < ActiveSupport::TestCase
   test 'Verify all mailers can be run' do

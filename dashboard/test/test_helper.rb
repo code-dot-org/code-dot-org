@@ -1,4 +1,4 @@
-require 'test_reporter'
+require_relative 'test_reporter'
 
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
@@ -46,12 +46,10 @@ require 'rails/test_help'
 # Raise exceptions instead of rendering exception templates.
 Dashboard::Application.config.action_dispatch.show_exceptions = false
 
-require 'dynamic_config/gatekeeper'
-require 'dynamic_config/dcdo'
-require 'testing/setup_all_and_teardown_all'
-require 'testing/lock_thread'
-require 'testing/transactional_test_case'
-require 'testing/capture_queries'
+require_relative 'testing/setup_all_and_teardown_all'
+require_relative 'testing/lock_thread'
+require_relative 'testing/transactional_test_case'
+require_relative 'testing/capture_queries'
 
 require 'parallel_tests/test/runtime_logger'
 
