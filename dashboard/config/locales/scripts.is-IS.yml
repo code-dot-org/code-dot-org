@@ -7824,6 +7824,8 @@ is:
               name: Breytur
             For Loops:
               name: Frá lykkjur
+            End of Course projects:
+              name: Lokaverkefni námskeiðs
         csd1-2022:
           lessons:
             Input and Output:
