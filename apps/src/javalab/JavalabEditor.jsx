@@ -300,7 +300,7 @@ class JavalabEditor extends React.Component {
   }
 
   onChangeTabs(key) {
-    if (key !== this.state.activeTabKey) {
+    if (key !== this.props.activeTabKey) {
       this.props.setActiveTabKey(key);
       this.setState({
         showMenu: false,
@@ -472,8 +472,8 @@ class JavalabEditor extends React.Component {
   }
 
   onDeleteFile() {
-    const {activeTabKey, fileToDelete} = this.state;
-    const {fileMetadata, orderedTabKeys} = this.props;
+    const {fileToDelete} = this.state;
+    const {fileMetadata, orderedTabKeys, activeTabKey} = this.props;
     // find tab in list
     const indexToRemove = orderedTabKeys.indexOf(fileToDelete);
 
@@ -494,11 +494,9 @@ class JavalabEditor extends React.Component {
       // clean up editors
       delete this.editors[fileToDelete];
 
-      this.setState({
-        orderedTabKeys: newTabs,
-        activeTabKey: newActiveTabKey,
-        fileMetadata: newFileMetadata
-      });
+      this.props.setOrderedTabKeys(newTabs);
+      this.props.setActiveTabKey(newActiveTabKey);
+      this.props.setFileMetadata(newFileMetadata);
 
       // delete from sources
       this.props.removeFile(fileMetadata[fileToDelete]);
