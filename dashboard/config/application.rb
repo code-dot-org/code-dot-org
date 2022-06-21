@@ -158,9 +158,14 @@ module Dashboard
     config.autoload_paths.map!(&:to_s)
 
     # Also make sure some of these directories are always loaded up front in production
-    # environments.  These directories will also be validated by Zeitwerk.
+    # environments.
+    #
+    # These directories will also be treated as top-level directories by
+    # Zeitwerk, rather than as subdirectories which require namspacing.
     config.eager_load_paths += [
-      Rails.root.join('app', 'models', 'levels')
+      Rails.root.join('app', 'models', 'experiments'),
+      Rails.root.join('app', 'models', 'levels'),
+      Rails.root.join('app', 'models', 'sections')
     ].map(&:to_s)
 
     # use https://(*-)studio.code.org urls in mails
