@@ -26,33 +26,25 @@ describe('SetupChecklist', () => {
     sinon.stub(window.console, 'error');
     sinon
       .stub(SetupChecker.prototype, 'detectSupportedBrowser')
-      .callsFake(() => {
-        return Promise.resolve();
-      });
+      .callsFake(() => Promise.resolve());
     sinon
       .stub(SetupChecker.prototype, 'detectChromeAppInstalled')
-      .callsFake(() => {
-        return Promise.resolve();
-      });
-    sinon.stub(SetupChecker.prototype, 'detectBoardPluggedIn').callsFake(() => {
-      return Promise.resolve();
-    });
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'detectBoardPluggedIn')
+      .callsFake(() => Promise.resolve());
     sinon
       .stub(SetupChecker.prototype, 'detectCorrectFirmware')
-      .callsFake(() => {
-        return Promise.resolve();
-      });
-    sinon.stub(SetupChecker.prototype, 'detectBoardType').callsFake(() => {
-      return Promise.resolve();
-    });
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'detectBoardType')
+      .callsFake(() => Promise.resolve());
     sinon
       .stub(SetupChecker.prototype, 'detectComponentsInitialize')
-      .callsFake(() => {
-        return Promise.resolve();
-      });
-    sinon.stub(SetupChecker.prototype, 'celebrate').callsFake(() => {
-      return Promise.resolve();
-    });
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'celebrate')
+      .callsFake(() => Promise.resolve());
   });
 
   afterEach(() => {
@@ -108,9 +100,7 @@ describe('SetupChecklist', () => {
         SetupChecker.prototype.detectChromeAppInstalled.restore();
         sinon
           .stub(SetupChecker.prototype, 'detectChromeAppInstalled')
-          .callsFake(() => {
-            return Promise.reject(error);
-          });
+          .callsFake(() => Promise.reject(error));
         const wrapper = mount(
           <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
         );
@@ -150,9 +140,7 @@ describe('SetupChecklist', () => {
         SetupChecker.prototype.detectSupportedBrowser.restore();
         sinon
           .stub(SetupChecker.prototype, 'detectSupportedBrowser')
-          .callsFake(() => {
-            return Promise.reject(error);
-          });
+          .callsFake(() => Promise.reject(error));
         const wrapper = mount(<SetupChecklist stepDelay={STEP_DELAY_MS} />);
         expect(wrapper.find(WAITING_ICON)).to.have.length(1);
         await yieldUntilDoneDetecting(wrapper);
@@ -165,9 +153,7 @@ describe('SetupChecklist', () => {
         SetupChecker.prototype.detectSupportedBrowser.restore();
         sinon
           .stub(SetupChecker.prototype, 'detectSupportedBrowser')
-          .callsFake(() => {
-            return Promise.reject(error);
-          });
+          .callsFake(() => Promise.reject(error));
         const wrapper = mount(<SetupChecklist stepDelay={STEP_DELAY_MS} />);
         await yieldUntilDoneDetecting(wrapper);
         expect(wrapper.find(SUCCESS_ICON)).to.have.length(0);
