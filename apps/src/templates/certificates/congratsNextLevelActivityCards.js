@@ -63,7 +63,7 @@ const CourseF = {
   buttonText: i18n.viewCourse()
 };
 
-export const nextLevelCourses = [
+export const nextLevelCourseCards = [
   Course2,
   Course3,
   Course4,
@@ -75,4 +75,4 @@ export const nextLevelCourses = [
   CourseF
 ];
 
-export const defaultNextLevelCourse = Applab;
+export const defaultNextLevelCourseCard = Applab;

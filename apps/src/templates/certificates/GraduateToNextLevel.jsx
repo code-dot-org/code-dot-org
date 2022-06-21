@@ -3,15 +3,16 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import VerticalImageResourceCard from '@cdo/apps/templates/VerticalImageResourceCard';
 import {
-  nextLevelCourses,
-  defaultNextLevelCourse
+  nextLevelCourseCards,
+  defaultNextLevelCourseCard
 } from '@cdo/apps/templates/certificates/congratsNextLevelActivityCards';
 
 const GraduateToNextLevel = ({scriptName, courseTitle, courseDesc}) => {
   // The scriptName prop takes the form `course1` or `courseb-2022` or `applab-intro`
   const courseInfo =
-    nextLevelCourses.find(course => scriptName.includes(course.scriptName)) ||
-    defaultNextLevelCourse;
+    nextLevelCourseCards.find(courseCard =>
+      scriptName.includes(courseCard.scriptName)
+    ) || defaultNextLevelCourseCard;
 
   return (
     <>
