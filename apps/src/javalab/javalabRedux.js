@@ -31,7 +31,10 @@ const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
 const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
 const SET_FILE_METADATA_FROM_SOURCES = 'javalab/SET_FILE_METADATA_FROM_SOURCES';
 const SET_EDIT_TAB_KEY = 'javalab/SET_EDIT_TAB_KEY';
+const SET_ACTIVE_TAB_KEY = 'javalab/SET_ACTIVE_TAB_KEY';
+const SET_LAST_TAB_KEY_INDEX = 'javalab/SET_LAST_TAB_KEY_INDEX';
 const SET_FILE_METADATA = 'javalab/SET_FILE_METADATA';
+const SET_ORDERED_TAB_KEYS = 'javalab/SET_ORDERED_TAB_KEYS';
 
 const getFileMetadataFromSources = (sources, isEditingStartSources) => {
   let fileMetadata = {};
@@ -86,7 +89,7 @@ export const initialState = {
   activeTabKey:
     initialOrderedTabKeys.length > 0 ? initialOrderedTabKeys[0] : null,
   lastTabKeyIndex: initialOrderedTabKeys.length - 1,
-  editTabKey: null // initialize?
+  editTabKey: null // not initialized in current version
 };
 
 // Action Creators
@@ -304,12 +307,34 @@ export const setEditTabKey = editTabKey => {
   };
 };
 
+export const setActiveTabKey = activeTabKey => {
+  return {
+    type: SET_ACTIVE_TAB_KEY,
+    activeTabKey
+  };
+};
+
+export const setLastTabKeyIndex = lastTabKeyIndex => {
+  return {
+    type: SET_LAST_TAB_KEY_INDEX,
+    lastTabKeyIndex
+  };
+};
+
 export const setFileMetadata = fileMetadata => {
   return {
     type: SET_FILE_METADATA,
     fileMetadata
   };
 };
+
+export const setOrderedTabKeys = orderedTabKeys => {
+  return {
+    type: SET_ORDERED_TAB_KEYS,
+    orderedTabKeys
+  };
+};
+
 // Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
@@ -520,16 +545,38 @@ export default function reducer(state = initialState, action) {
       }
     });
 
+    const firstTabKey = orderedTabKeys.length > 0 ? orderedTabKeys[0] : null;
+
     return {
       ...state,
       fileMetadata,
-      orderedTabKeys
+      orderedTabKeys,
+      activeTabKey: firstTabKey,
+      lastTabKeyIndex: orderedTabKeys.length - 1
     };
   }
   if (action.type === SET_EDIT_TAB_KEY) {
     return {
       ...state,
       editTabKey: action.editTabKey
+    };
+  }
+  if (action.type === SET_ACTIVE_TAB_KEY) {
+    return {
+      ...state,
+      activeTabKey: action.activeTabKey
+    };
+  }
+  if (action.type === SET_LAST_TAB_KEY_INDEX) {
+    return {
+      ...state,
+      lastTabKeyIndex: action.lastTabKeyIndex
+    };
+  }
+  if (action.type === SET_ORDERED_TAB_KEYS) {
+    return {
+      ...state,
+      orderedTabKeys: action.orderedTabKeys
     };
   }
   if (action.type === SET_FILE_METADATA) {
