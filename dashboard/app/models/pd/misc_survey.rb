@@ -21,7 +21,7 @@ module Pd
   class MiscSurvey < ApplicationRecord
     include JotFormBackedForm
 
-    belongs_to :user
+    belongs_to :user, optional: true
 
     def self.all_form_data
       [

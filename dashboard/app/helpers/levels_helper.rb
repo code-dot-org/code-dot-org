@@ -199,6 +199,8 @@ module LevelsHelper
     # and pass the edited code directly to Javabuilder.
     level_requires_channel = !@is_editing_exemplar && !@is_viewing_exemplar if @level.is_a?(Javalab)
 
+    view_options(code_owners_name: @user&.name || @current_user&.name)
+
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching
       channel = get_channel_for(@level, @script&.id, @user)
