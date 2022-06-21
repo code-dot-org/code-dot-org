@@ -158,9 +158,7 @@ module Dashboard
     # Also make sure some of these directories are always loaded up front in production
     # environments.  These directories will also be validated by Zeitwerk.
     config.eager_load_paths += [
-      Rails.root.join('..', 'lib', 'cdo', 'shared_constants'),
-      Rails.root.join('app', 'models', 'levels'),
-      Rails.root.join('lib')
+      Rails.root.join('app', 'models', 'levels')
     ].map(&:to_s)
 
     # use https://(*-)studio.code.org urls in mails
