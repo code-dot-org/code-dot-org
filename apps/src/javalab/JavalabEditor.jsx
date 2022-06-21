@@ -301,10 +301,10 @@ class JavalabEditor extends React.Component {
 
   onChangeTabs(key) {
     if (key !== this.state.activeTabKey) {
+      this.props.setActiveTabKey(key);
       this.setState({
         showMenu: false,
-        contextTarget: null,
-        activeTabKey: key
+        contextTarget: null
       });
       // scroll the new editor to whatever its current selection is.
       // If this editor has no selection it will stay at the top of the file.
@@ -565,10 +565,12 @@ class JavalabEditor extends React.Component {
     let selectedFileIndex = newTabs.indexOf(key);
     newTabs.splice(selectedFileIndex, 1);
     newTabs.unshift(key);
+
+    this.props.setActiveTabKey(key);
+    this.props.setOrderedTabKeys(newTabs);
+
     // closes the tab menu if it is open
     this.setState({
-      activeTabKey: key,
-      orderedTabKeys: newTabs,
       showMenu: false,
       contextTarget: null
     });
