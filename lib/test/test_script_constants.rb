@@ -21,7 +21,7 @@ class ScriptConstantsTest < Minitest::Test
       express-2020
       pre-express-2020
     ).each do |script_name|
-      assert ScriptConstants.has_congrats_page?(script_name), "#{script_name} should have congrats page"
+      assert ScriptConstants.has_csf_congrats_page?(script_name), "#{script_name} should have congrats page"
     end
   end
 

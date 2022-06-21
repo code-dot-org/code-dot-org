@@ -77,6 +77,7 @@ export default class SpriteLab extends P5Lab {
   reset() {
     super.reset();
     getStore().dispatch(clearPrompts());
+    this.clearExecutionErrorWorkspaceAlert();
     this.preview();
   }
 
@@ -92,14 +93,15 @@ export default class SpriteLab extends P5Lab {
   }
 
   /**
-   * If there is an executionError, create a WorkspaceAlert.
+   * If there is an executionError, display a WorkspaceAlert.
    * We do this because Sprite Lab has no user-facing console.
    */
   reactToExecutionError(msg) {
     if (!msg) {
       return;
     }
-    studioApp().displayWorkspaceAlert(
+
+    this.executionErrorWorkspaceAlert = studioApp().displayWorkspaceAlert(
       'error',
       React.createElement(
         'div',
@@ -110,6 +112,15 @@ export default class SpriteLab extends P5Lab {
       ),
       true /* bottom */
     );
+  }
+
+  clearExecutionErrorWorkspaceAlert() {
+    if (!this.executionErrorWorkspaceAlert) {
+      return;
+    }
+
+    studioApp().closeAlert(this.executionErrorWorkspaceAlert);
+    this.executionErrorWorkspaceAlert = undefined;
   }
 
   onPromptAnswer(variableName, value) {

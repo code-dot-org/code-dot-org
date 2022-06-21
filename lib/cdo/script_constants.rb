@@ -288,7 +288,8 @@ module ScriptConstants
     VIGENERE = 'vigenere'.freeze,
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
     K5_ONLINEPD = 'K5-OnlinePD'.freeze,
-    KODEA_PD_2021 = 'kodea-pd-2021'.freeze
+    KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
+    ALLTHETHINGS = 'allthethings'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
@@ -344,7 +345,7 @@ module ScriptConstants
 
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
 
-  def self.has_congrats_page?(script)
+  def self.has_csf_congrats_page?(script)
     script == ACCELERATED_NAME ||
       ScriptConstants.unit_in_category?(:csf_international, script) ||
       CSF_COURSE_PATTERNS.map {|r| r =~ script}.any?

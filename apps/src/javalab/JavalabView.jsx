@@ -41,7 +41,6 @@ class JavalabView extends React.Component {
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     handleClearPuzzle: PropTypes.func.isRequired,
     onPhotoPrompterFileSelected: PropTypes.func.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool,
     isCodeReviewing: PropTypes.bool,
 
     // populated by redux
@@ -63,7 +62,8 @@ class JavalabView extends React.Component {
     awaitingContainedResponse: PropTypes.bool,
     isSubmittable: PropTypes.bool,
     isSubmitted: PropTypes.bool,
-    setDisableFinishButton: PropTypes.func
+    setDisableFinishButton: PropTypes.func,
+    isReadOnlyWorkspace: PropTypes.bool
   };
 
   componentDidMount() {
@@ -72,6 +72,8 @@ class JavalabView extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
+      // Whether the finish button is disabled in studioApp is dependent on whether the workspace
+      // is readonly, so if the readonly state changes, the disabled finish button state changes
       const disableFinishButton =
         (!!this.props.isReadOnlyWorkspace && !this.props.isSubmittable) ||
         !!this.props.isCodeReviewing;
@@ -140,20 +142,24 @@ class JavalabView extends React.Component {
   };
 
   isLeftSideVisible = () => {
-    const {longInstructions, hasContainedLevels} = this.props;
     // It's possible that a console level without instructions won't have
     // anything to show on the left side.
     return (
-      this.props.viewMode !== CsaViewMode.CONSOLE ||
-      hasInstructions(null, longInstructions, hasContainedLevels)
+      this.props.viewMode !== CsaViewMode.CONSOLE || this.hasInstructions()
     );
+  };
+
+  hasInstructions = () => {
+    const {longInstructions, hasContainedLevels} = this.props;
+    return hasInstructions(null, longInstructions, hasContainedLevels);
   };
 
   renderVisualization = width => {
     const {visualization} = this.props;
     if (visualization) {
+      const previewStyle = this.hasInstructions() ? styles.preview : {};
       return (
-        <div id="visualization-container" style={styles.preview}>
+        <div id="visualization-container" style={previewStyle}>
           {visualization}
         </div>
       );
@@ -223,7 +229,9 @@ class JavalabView extends React.Component {
                 displayReviewTab
                 initialSelectedTab={
                   queryParams(VIEWING_CODE_REVIEW_URL_PARAM) === 'true'
-                    ? TabType.REVIEW
+                    ? experiments.isEnabled('code_review_v2')
+                      ? TabType.REVIEW_V2
+                      : TabType.REVIEW
                     : null
                 }
                 explicitHeight={height}

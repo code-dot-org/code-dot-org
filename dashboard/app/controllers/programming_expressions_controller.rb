@@ -1,7 +1,5 @@
 class ProgrammingExpressionsController < ApplicationController
   include Rails.application.routes.url_helpers
-  include ProxyHelper
-  EXPIRY_TIME = 30.minutes
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:search, :show, :show_by_keys, :docs_show]
   before_action :set_expression_by_keys, only: [:show_by_keys, :docs_show]
@@ -103,13 +101,11 @@ class ProgrammingExpressionsController < ApplicationController
     end
   end
 
+  # GET /docs/ide/<programming_environment_name>/expressions/<programming_environment_key>
   def show_by_keys
     return render :not_found unless @programming_expression
-    if params[:programming_environment_name] && params[:programming_expression_key]
-      @programming_environment_categories = @programming_expression.programming_environment.categories_for_navigation
-      return render :show
-    end
-    render :not_found
+    @programming_environment_categories = @programming_expression.programming_environment.categories_for_navigation
+    return render :show
   end
 
   def destroy
@@ -135,18 +131,8 @@ class ProgrammingExpressionsController < ApplicationController
   end
 
   def docs_show
-    if DCDO.get('use-studio-code-docs', false)
-      return render :not_found unless @programming_expression
-      @programming_environment_categories = @programming_expression.programming_environment.categories_for_navigation
-      return render :show
-    end
-    render_proxied_url(
-      "https://curriculum.code.org/docs/#{params[:programming_environment_name]}/#{params[:programming_expression_key]}/",
-      allowed_content_types: nil,
-      allowed_hostname_suffixes: %w(curriculum.code.org),
-      expiry_time: EXPIRY_TIME,
-      infer_content_type: true
-    )
+    return render :not_found unless @programming_expression
+    return redirect_to(programming_environment_programming_expression_path(@programming_expression.programming_environment.name, @programming_expression.key))
   end
 
   private
