@@ -19,6 +19,6 @@ class ProjectStorage < ApplicationRecord
   # (e.g. cdo-v3-sources/sources/<storage id>, cdo-v3-files/files/<storage id>, etc.).
   self.table_name = 'user_project_storage_ids'
 
-  belongs_to :user
+  belongs_to :user, optional: true
   has_many :projects, inverse_of: :project_storage
 end
