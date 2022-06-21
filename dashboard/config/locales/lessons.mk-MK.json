@@ -2,6 +2,12 @@
   "mk-MK": {
     "data": {
       "lessons": {
+        "k5-onlinepd-2019/Loops": {
+          "name": "Лупови"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Променливи"
+        },
         "csd3-2018/Variables": {
           "name": "Променливи"
         },

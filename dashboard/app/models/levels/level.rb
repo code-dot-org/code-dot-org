@@ -202,8 +202,8 @@ class Level < ApplicationRecord
       unless callout_json.blank?
         return JSON.parse(callout_json).map do |callout_definition|
           i18n_key = "data.callouts.#{name}.#{callout_definition['localization_key']}"
-          callout_text = should_localize? &&
-            I18n.t(i18n_key, default: nil) ||
+          callout_text = (should_localize? &&
+            I18n.t(i18n_key, default: nil)) ||
             callout_definition['callout_text']
 
           Callout.new(
@@ -379,7 +379,7 @@ class Level < ApplicationRecord
   ).freeze
 
   def self.where_we_want_to_calculate_ideal_level_source
-    where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
+    where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
     where('ideal_level_source_id is null').
     to_a.reject {|level| level.try(:free_play)}
   end

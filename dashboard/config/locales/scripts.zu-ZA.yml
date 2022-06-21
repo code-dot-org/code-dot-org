@@ -2,8 +2,6 @@
 zu:
   data:
     script:
-      category:
-        math_category_name: Izibalo
       name:
         csd2-2017:
           lessons:
@@ -60,7 +58,6 @@ zu:
         csd3-2021:
           lessons:
             Text:
-              key: Umbhalo
               name: Umbhalo
         csp5-2021:
           lesson_groups:
@@ -74,4 +71,3 @@ zu:
           lessons:
             Text:
               name: Umbhalo
-              key: Umbhalo

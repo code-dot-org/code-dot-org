@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 az:
   errors:
     messages:
@@ -1054,6 +1060,7 @@ az:
         music: 'Musiqi'
         art: 'İncəsənət'
         other: "Başqa:"
+        na: 'Tətbiq olunmağa uyğun deyil'
       resources:
         bootstrap: 'ilkin yükləmə'
         codecademy: 'Kod Akademiyası'
@@ -1062,7 +1069,8 @@ az:
         kodable: 'Kodlanabilər'
         scratch: 'Cızıq'
         tynker: '"Tynker"'
-        other: "Başqa:"
+        other: "Digər"
+        na: 'Tətbiq olunmağa uyğun deyil'
       robotics:
         grok: 'Anlayaraq öyrənmək'
         kodable: 'Kodlanabilər'
@@ -1072,7 +1080,8 @@ az:
         sphero: 'Kürə'
         raspberry: 'Moruq Pi'
         wonder: 'Əla emalatxana'
-        other: "Başqa:"
+        other: "Digər"
+        na: 'Tətbiq olunmağa uyğun deyil'
       workshop_course:
         csf_af: 'Kompüter Elmləri əsasları (A-F kursları)'
         csf_express: 'CS (Əvvəldən ifadə etmək və ya ifadə etmək)'

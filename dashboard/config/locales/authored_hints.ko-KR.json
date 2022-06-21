@@ -10648,6 +10648,15 @@
         },
         "course2_maze_programming_challenge2": {
           "courseC_maze_programming_challenge2_a": "_나를 뒤로 보내면, 내가 바른 방향으로 돌 때 특히 주의해야 합니다!_"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!"
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "이 디자인을 완성하기 위해, 화가는 각 사각형 사이에서 120도 회전해야만 합니다. "
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "에이전트에게 마인코트 트랙을 만들게 하여 여러분이 세계를 탐구할 수 있게 하세요."
         }
       }
     }

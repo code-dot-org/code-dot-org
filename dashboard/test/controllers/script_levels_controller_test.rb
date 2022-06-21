@@ -13,10 +13,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
+    @facilitator = create :facilitator
     @levelbuilder = create(:levelbuilder)
     @project_validator = create :project_validator
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
+
+    @pl_section = create :section, user_id: @facilitator.id
+    Follower.create!(section_id: @pl_section.id, student_user_id: @teacher.id, user: @facilitator)
 
     @custom_script = create(:script, name: 'laurel', hideable_lessons: true)
     @custom_lesson_group = create(:lesson_group, script: @custom_script)
@@ -46,7 +50,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @script = @custom_script
     @script_level = @custom_s1_l1
 
-    in_development_unit = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development)
+    in_development_unit = create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     in_development_lesson_group = create(:lesson_group, script: in_development_unit)
     in_development_lesson = create(:lesson, script: in_development_unit, lesson_group: in_development_lesson_group)
     @in_development_script_level = create :script_level, script: in_development_unit, lesson: in_development_lesson
@@ -59,7 +63,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     pilot_section = create :section, user: @pilot_teacher, script: pilot_script
     @pilot_student = create(:follower, section: pilot_section).student_user
 
-    pilot_pl_script = create(:script, pilot_experiment: 'pl-pilot-experiment', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    pilot_pl_script = create(:script, pilot_experiment: 'pl-pilot-experiment', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     pilot_pl_lesson_group = create(:lesson_group, script: pilot_pl_script)
     pilot_pl_lesson = create(:lesson, script: pilot_pl_script, lesson_group: pilot_pl_lesson_group)
     @pilot_pl_script_level = create :script_level, script: pilot_pl_script, lesson: pilot_pl_lesson
@@ -68,7 +72,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @pilot_participant = create :teacher
     create(:follower, section: pilot_pl_section, student_user: @pilot_participant)
 
-    pl_script = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    pl_script = create(:script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     pl_lesson_group = create(:lesson_group, script: pl_script)
     pl_lesson = create(:lesson, script: pl_script, lesson_group: pl_lesson_group)
     @pl_script_level = create :script_level, script: pl_script, lesson: pl_lesson
@@ -600,8 +604,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to latest stable script version in family for logged out user if one exists" do
-    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     create :script, name: 'courseg-2019', family_name: 'courseg', version_year: '2019'
 
     courseg_2017_lesson_group_1 = create :lesson_group, script: courseg_2017
@@ -620,8 +624,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "show: redirect to latest assigned script version in family for student if one exists" do
     sign_in @student
 
-    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     create :script, name: 'courseg-2019', family_name: 'courseg', version_year: '2019'
 
     courseg_2017_lesson_group_1 = create :lesson_group, script: courseg_2017
@@ -648,8 +652,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "show: redirect to latest assigned script version in family for participant if one exists" do
     sign_in @student
 
-    pl_courseg_2017 = create :script, name: 'pl-courseg-2017', family_name: 'pl-courseg', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    create :script, name: 'pl-courseg-2018', family_name: 'pl-courseg', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    pl_courseg_2017 = create :script, name: 'pl-courseg-2017', family_name: 'pl-courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 'pl-courseg-2018', family_name: 'pl-courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     create :script, name: 'pl-courseg-2019', family_name: 'pl-courseg', version_year: '2019'
 
     pl_courseg_2017_lesson_group_1 = create :lesson_group, script: pl_courseg_2017
@@ -674,7 +678,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show: directs to script if script and family name match" do
-    courseg = create :script, name: 'courseg', family_name: 'courseg', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    courseg = create :script, name: 'courseg', family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     CourseOffering.add_course_offering(courseg)
     courseg_lesson_group_1 = create :lesson_group, script: courseg
     courseg_lesson_1 = create :lesson, script: courseg, lesson_group: courseg_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1'
@@ -1730,7 +1734,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal expected, hidden
   end
 
-  def put_student_in_section(student, teacher, script)
+  def  put_participant_in_section(student, teacher, script)
     section = create :section, user_id: teacher.id, script_id: script.id
     Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
     section
@@ -1741,7 +1745,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, teacher, @custom_script)
+    section = put_participant_in_section(student, teacher, @custom_script)
     lesson1 = @custom_script.lessons[0]
     assert @custom_script.hideable_lessons
 
@@ -1771,7 +1775,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, teacher, @custom_script)
+    section = put_participant_in_section(student, teacher, @custom_script)
     assert @custom_script.hideable_lessons
 
     # start with no hidden scripts
@@ -1799,7 +1803,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, teacher, script)
+    section = put_participant_in_section(student, teacher, script)
     refute script.hideable_lessons
 
     post :toggle_hidden, params: {
@@ -1818,7 +1822,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, other_teacher, @custom_script)
+    section = put_participant_in_section(student, other_teacher, @custom_script)
     lesson1 = @custom_script.lessons[0]
     assert @custom_script.hideable_lessons
 
@@ -1851,7 +1855,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, other_teacher, @custom_script)
+    section = put_participant_in_section(student, other_teacher, @custom_script)
 
     post :toggle_hidden, params: {
       script_id: @custom_script.id,
@@ -1897,11 +1901,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
     end
 
-    cats1.update!(published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    cats1.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
     assert_redirected_to "/s/cats1/lessons/1/levels/1"
 
-    create :script, name: 'cats2', family_name: 'ui-test-versioned-script', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 'cats2', family_name: 'ui-test-versioned-script', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
     assert_redirected_to "/s/cats2/lessons/1/levels/1"
 
@@ -2052,6 +2056,27 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     refute extras_data['bonusLevels'][0]['levels'][0]['perfect']
   end
 
+  test "lesson extras shows instructor no progress if no section and user id" do
+    sign_in @facilitator
+    pl_course = create(:script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    lesson_group = create(:lesson_group, script: pl_course)
+    lesson = create(:lesson, script: pl_course, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: pl_course
+    script_level.bonus = true
+    script_level.save!
+    create :user_level, user: @teacher, script: pl_course, level: script_level.level, best_result: 100
+    get :lesson_extras, params: {
+      script_id: script_level.script,
+      lesson_position: 1
+    }
+    assert_response :success
+    assert_select 'script[data-extras]', 1
+    extras_data = JSON.parse(
+      css_select('script[data-extras]').first.attribute('data-extras').to_s
+    )
+    refute extras_data['bonusLevels'][0]['levels'][0]['perfect']
+  end
+
   test "lesson extras shows teacher progress for student if section and user id" do
     sign_in @teacher
     script = create :script
@@ -2073,6 +2098,54 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       css_select('script[data-extras]').first.attribute('data-extras').to_s
     )
     assert extras_data['bonusLevels'][0]['levels'][0]['perfect']
+  end
+
+  test "lesson extras shows progress to instructor for participant if section and user id" do
+    sign_in @facilitator
+    pl_course = create(:script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    lesson_group = create(:lesson_group, script: pl_course)
+    lesson = create(:lesson, script: pl_course, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: pl_course
+    script_level.bonus = true
+    script_level.save!
+    create :user_level, user: @teacher, script: pl_course, level: script_level.level, best_result: 100
+    get :lesson_extras, params: {
+      script_id: script_level.script,
+      lesson_position: 1,
+      section_id: @pl_section.id,
+      user_id: @teacher.id
+    }
+    assert_response :success
+    assert_select 'script[data-extras]', 1
+    extras_data = JSON.parse(
+      css_select('script[data-extras]').first.attribute('data-extras').to_s
+    )
+    puts extras_data
+    assert extras_data['bonusLevels'][0]['levels'][0]['perfect']
+  end
+
+  test "lesson extras does not show teacher participant in pl course progress for participant even if section and user id" do
+    teacher2 = create :teacher
+    sign_in @teacher
+    pl_course = create(:script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    lesson_group = create(:lesson_group, script: pl_course)
+    lesson = create(:lesson, script: pl_course, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: pl_course
+    script_level.bonus = true
+    script_level.save!
+    create :user_level, user: teacher2, script: pl_course, level: script_level.level, best_result: 100
+    get :lesson_extras, params: {
+      script_id: script_level.script,
+      lesson_position: 1,
+      section_id: @pl_section.id,
+      user_id: teacher2.id
+    }
+    assert_response :success
+    assert_select 'script[data-extras]', 1
+    extras_data = JSON.parse(
+      css_select('script[data-extras]').first.attribute('data-extras').to_s
+    )
+    refute extras_data['bonusLevels'][0]['levels'][0]['perfect']
   end
 
   test "lesson extras shows no progress if no current user" do

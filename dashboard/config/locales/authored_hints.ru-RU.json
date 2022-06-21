@@ -10707,6 +10707,15 @@
         },
         "poetry_hoc_spriteSizes": {
           "size hint": "Найдите этот блок и нажмите `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nЧто происходит, когда число равно `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "Эту головоломку можно решить двумя способами!"
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "Художник должен повернуться на 120 градусов между каждым квадратом, чтобы завершить эту задачу."
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Попробуйте возвести с помощью Agent мосты, чтобы Алекс или Стив смогли обогнуть края карты."
         }
       }
     }

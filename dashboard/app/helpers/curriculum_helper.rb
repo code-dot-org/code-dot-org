@@ -18,7 +18,7 @@ module CurriculumHelper
       return false
     end
 
-    key_re = /\A#{KEY_CHAR_RE}+\Z/
+    key_re = /\A#{KEY_CHAR_RE}+\Z/o
     unless key_re.match?(key)
       errors.add(:base, "must only be letters, numbers, dashes, underscores, and periods. Got ${key}")
       return false

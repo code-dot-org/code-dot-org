@@ -131,6 +131,7 @@ vi:
         title: Phát hiện sự va chạm và định lý Pythagore
         desc: Xác định các đối tượng trên màn hình cảm ứng là một khía cạnh quan trọng của hầu hết các trò chơi. Trong bài học này, chúng ta sẽ xem cách định lý Pythagore và công thức Khoảng cách được sử dụng để đo khoảng cách giữa hai điểm trên mặt phẳng, và tính xem khi nào hai điểm đó (hoặc các nhân vật điện tử) chạm vào nhau.
       courseA_unplugged_loops:
+        title: Vòng lặp không dùng thiết bị điện tử
         desc: Trong bài học này, bạn sẽ học về vòng lặp!
       courseB_unplugged_MRF:
         title: Hoạt động không dùng máy
@@ -186,6 +187,7 @@ vi:
         title: Chương trình chuyển tiếp
         desc: Học sinh tham gia chạy tiếp sức, nơi các em sẽ lao qua sân để viết một thuật toán dựa trên hình ảnh "Lập Trình Giấy Vẽ Sơ Đồ". Các em chỉ có thể viết  từng hướng dẫn một và nếu có lỗi sai ở đâu đó, các em phải xóa hết đi và quay lại từ đầu từ điểm đó.
       courseD_unplugged_conditionalsCards:
+        title: Lệnh điều kiện với lá bài
         desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu Tôi rút được một thẻ đen, bạn sẽ được một điểm."
       courseD_unplugged_binaryImages:
         title: Hình ảnh Nhị phân
@@ -230,6 +232,7 @@ vi:
         title: Đến nơi an toàn
         desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt web.
       courseA_unplugged_loops_2018:
+        title: Vòng lặp không dùng thiết bị điện tử
         desc: Trong bài học này, bạn sẽ học về vòng lặp!
       BigEvent_2018:
         title: Sự kiện lớn
@@ -263,14 +266,23 @@ vi:
         desc: Học sinh tạo ra vòng tay như là một đại diện nhị phân của chữ cái đầu của tên của họ. Học sinh tìm hiểu rằng dữ liệu có thể được đại diện và lưu trữ theo nhiều hơn một cách.
       MoveItMoveIt_2018:
         title: Di chuyển nó, di chuyển nó
+      courseB_unplugged_CnC_2018:
+        title: Sáng tạo và vui chơi công bằng thật tuyệt vời
+        desc: Là nguồn cảm hứng cho bài học Nguyên tắc cơ bản của khoa học máy tính của đội ngũ Bản quyền và Sáng tạo, bài học này ra đời nhằm giúp học sinh hiểu quy trình sáng tạo của hoạt động chia sẻ và truyền cảm hứng. Bên cạnh đó là khuyến khích thể hiện sự sáng tạo và nhu cầu đối xử công bằng với tác phẩm sáng tạo.
+      courseE_unplugged_CnC_2018:
+        title: Chia sẻ nội dung số
+        desc: Là nguồn cảm hứng cho bài học Nguyên tắc cơ bản của khoa học máy tính của đội ngũ Bản quyền và Sáng tạo, bài học này ra đời nhằm giúp học sinh hiểu những khó khăn và lợi ích của việc tôn trọng quyền sở hữu và bản quyền, đặc biệt trong môi trường số. Học sinh cần được khuyến khích tôn trọng quyền của nghệ sĩ như một phần quan trọng trong việc trở thành công dân số có đạo đức.
       RelayProgramming_2018:
         title: Chương trình chuyển tiếp
+        desc: Hoạt động này sẽ bắt đầu bằng bài học ngắn sửa lỗi và sự kiên nhẫn, sau đó sẽ nhanh chóng chuyển sang phần bài tập tính giờ, trong đó học sinh chia thành các đội và cùng nhau viết một chương trình tại một thời điểm.
       courseB_unplugged_MRF_2019:
         title: Bạn bè robot của tôi
         desc: Học cách lập trình bằng việc viết mã cho bạn bè!
       BuildingAFoundation_2019:
         title: 'bản dịch thiếu: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'bản dịch thiếu: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: Những người bạn robot Loopy của tôi
       Conditionals_2019:
         title: Điều kiện
         desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu Tôi rút được một thẻ đen, bạn sẽ được một điểm."
@@ -288,15 +300,22 @@ vi:
         desc: Học sinh viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử dụng tập hợp các lệnh đã được định nghĩa sẵn để chỉ dẫn các bạn cùng lớp tái hiện một bản vẽ.
       RelayProgramming_2018_2019:
         title: Chương trình chuyển tiếp
+        desc: Hoạt động này sẽ bắt đầu bằng bài học ngắn sửa lỗi và sự kiên nhẫn, sau đó sẽ nhanh chóng chuyển sang phần bài tập tính giờ, trong đó học sinh chia thành các đội và cùng nhau viết một chương trình tại một thời điểm.
       courseD_unplugged_digitalCitizenship_2019:
         title: Hoạt động không dùng máy
         desc: Hôm nay bạn sẽ tìm hiểu một công dân số là thế nào.
       BinaryImages_2019:
         title: Hình ảnh Nhị phân
         desc: Mặc dù nhiều người nghĩ rằng số nhị phân như số 0 hoặc số 1 có thực, các khóa học trước đó giảng dạy sinh viên rằng thông tin có thể được biểu diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
+      courseE_unplugged_privateInformation_2019:
+        title: Thông tin cá nhân và riêng tư
+        desc: Bài học do Common Sense Education phát triển này nói về sự khác biệt giữa thông tin có thể chia sẻ trực tuyến và thông tin không nên chia sẻ trực tuyến.
       SongwritingParameters_2019:
         title: 'bản dịch thiếu: en-US.data.unplugged.SongwritingParameters_2018.title'
         desc: 'bản dịch thiếu: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: Chia sẻ nội dung số
+        desc: Là nguồn cảm hứng cho bài học Nguyên tắc cơ bản của khoa học máy tính của đội ngũ Bản quyền và Sáng tạo, bài học này ra đời nhằm giúp học sinh hiểu những khó khăn và lợi ích của việc tôn trọng quyền sở hữu và bản quyền, đặc biệt trong môi trường số. Học sinh cần được khuyến khích tôn trọng quyền của nghệ sĩ như một phần quan trọng trong việc trở thành công dân số có đạo đức.
       Internet_2019:
         title: 'bản dịch thiếu: en-US.data.unplugged.Internet_2018.title'
         desc: 'bản dịch thiếu: en-US.data.unplugged.Internet_2018.desc'
@@ -328,14 +347,31 @@ vi:
         title: Đến nơi an toàn
         desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt web.
       courseA_unplugged_loops_2019:
+        title: Vòng lặp không dùng thiết bị điện tử
         desc: Trong bài học này, bạn sẽ học về vòng lặp!
       MoveItMoveIt_2019:
         title: Di chuyển nó, di chuyển nó
       DigitalFootprint_2019:
         title: Dấu chân kỹ thuật số 
         desc: Giáo viên giới thiệu cho sinh viên việc đưa thông tin cá  nhân lên mạng sẽ tạo ra dấu chân hoặc "vệt dài" có hậu quả.
+      courseB_unplugged_CnC_2019:
+        title: Sáng tạo và vui chơi công bằng thật tuyệt vời
+        desc: Là nguồn cảm hứng cho bài học Nguyên tắc cơ bản của khoa học máy tính của đội ngũ Bản quyền và Sáng tạo, bài học này ra đời nhằm giúp học sinh hiểu quy trình sáng tạo của hoạt động chia sẻ và truyền cảm hứng. Bên cạnh đó là khuyến khích thể hiện sự sáng tạo và nhu cầu đối xử công bằng với tác phẩm sáng tạo.
+      GraphingData_2019:
+        title: Dữ liệu ảnh
+        desc: Trong bài học này, học sinh sẽ thu thập dữ liệu từ một dự án Play Lab hoặc tình huống thực tiễn và sử dụng dữ liệu đó để dự đoán.
+      courseE_unplugged_accessAbility_2019:
+        title: Khả năng truy cập
+        desc: Tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.
+      courseE_simon_says_2019:
+        title: Simon nói
+        desc: "Hãy chơi game và suy nghĩ về những lệnh cần thiết để cho kết quả phù hợp.\\r\n\\r\n![hình ảnh kiểm tra](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Mật khẩu mạnh
+        desc: Khám phá lý do mọi người dùng mật khẩu, tìm hiểu lợi ích khi dùng mật khẩu và khám phá các chiến lược tạo và duy trì mật khẩu bảo mật.
       timeforcs_demo_crowdsourcing:
         title: Đa nguồn
+        desc: '_Josh lưu ý: trái với bài học đầu tiên, tôi biên soạn bài học này dưới dạng bài học không sử dụng thiết bị điện tử điển hình._'
       timeforcs_demo_conditionals:
         title: Điều kiện
         desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu Tôi rút được một thẻ đen, bạn sẽ được một điểm."

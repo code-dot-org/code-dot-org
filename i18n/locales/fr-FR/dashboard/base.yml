@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 fr:
   errors:
     messages:
@@ -80,7 +86,7 @@ fr:
     submit: 'Ajouter un indice'
   appname: "Code.org"
   stage: "étape"
-  stage_number: "Leçon %{number}"
+  stage_number: "Leçon %{number} "
   puzzle: "Énigme"
   trophies: "trophées"
   courses: 'Cours'
@@ -1069,6 +1075,7 @@ fr:
         music: 'Musique'
         art: 'Art'
         other: "Autre :"
+        na: 'Non applicable'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1077,7 +1084,8 @@ fr:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Autre :"
+        other: "Autre"
+        na: 'Non applicable'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1087,7 +1095,8 @@ fr:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Autre :"
+        other: "Autre"
+        na: 'Non applicable'
       workshop_course:
         csf_af: 'Les Fondamentaux de l’Informatique (Cours A-F)'
         csf_express: 'Les Fondamentaux de l’Informatique (Pré-Express ou Express)'

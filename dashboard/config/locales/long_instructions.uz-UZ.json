@@ -2696,7 +2696,11 @@
         "courseC_collector_prog2_2020": "Laurelni xazinaga olib boring, so‘ng uni olish uchun <xml><block type=\"collector_collect\" block-text=\"collect\"/></xml> blokdan foydalaning.",
         "courseC_collector_prog2_2021": "Laurelni xazinaga olib boring, so‘ng uni olish uchun <xml><block type=\"collector_collect\" block-text=\"collect\"/></xml> blokdan foydalaning.",
         "courseC_data wizard": "Ishga tushirish tugmasi \"Run\"ni bosing.Sehrgar hayvonlarni ko'rsatadi.Ularni sanang.Nimani payqadingiz?",
-        "courseC_data wizard_2020": "Ishga tushirish tugmasi \"Run\"ni bosing.Sehrgar hayvonlarni ko'rsatadi.Ularni sanang.Nimani payqadingiz?"
+        "courseC_data wizard_2020": "Ishga tushirish tugmasi \"Run\"ni bosing.Sehrgar hayvonlarni ko'rsatadi.Ularni sanang.Nimani payqadingiz?",
+        "AllTheThings sprite lab with video": "Keling, baliq idishini tayyorlaymiz!\n\n<xml><block type=\"gamelab_allSpritesWithAnimation\" block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml> tugmachasini bosish orqali chakalakzor spraytini ixtiyoriy baliq turiga o'zgartiring.\n\nUshbu sprayt kostyumini <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the add behavior block\"></block></xml> da ham yangilashni unutmang.",
+        "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "# Rangli piksellar: 1-topshiriq\n\n \\*\\* Yo‘l-yo‘riq: \\*\\* \n\n-   Biz sizni Maddi yaratgan 4x2 o‘lchamdagi rasm bilan ishlashingizdan boshlaymiz, lekin biz so‘nggi ikkita kvadratni bo‘sh qoldirdik. \n-   Qanday ikkita rang yetishmayotganligini aniqlab, ularni kodlang.",
+        "MC Agent Freeplay": "\\*\\*Erkin o'yin: \\*\\* Endi bu sizga bog'liq! Bu dunyoni o'rganish uchun Agent kodidan foydalaning.",
+        "U1L13 Text Compression": "Matnda takrorlanishlarni (takrorlangan so'zlar yoki iboralarni) izlang. O'ngdagi lug'atga o'zingiz ko'rayotgan takrorlanishlaringizni kiriting. Siz lug'atga yozuvlarni kiritganingizda, yozuvning belgisi naqsh o'rniga matnga kiritiladi."
       }
     }
   }

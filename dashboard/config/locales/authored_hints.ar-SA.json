@@ -10682,6 +10682,15 @@
         },
         "courseF_text_choice_multiprompt": {
           "when_answered_var": "حاول تغيير تسمية المتغير في قطعة \"عند الإجابة\". نظرًا لوجود محفزات متعددة، استخدم تسمية المحفز \\* الأخير \\* الذي سيتم الرد عليه.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "هناك طريقتان لحل هذا اللغز!"
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "يحتاج الفنان أن يستدير 120 درجة بين كل مربع لإكمال التصميم."
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "حاول جعل الكائن يبني بعض مسارات السكك لكي تتمكن من استكشاف العالم!"
         }
       }
     }

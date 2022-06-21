@@ -4426,6 +4426,28 @@
           "garden square": {
             "name": "garden square"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "畫個正方形"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "畫個形狀",
+            "parameters": {
+              "sides": "邊",
+              "length": "長度"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "function 1"
+          },
+          "function 2": {
+            "name": "function 2"
+          }
         }
       }
     }

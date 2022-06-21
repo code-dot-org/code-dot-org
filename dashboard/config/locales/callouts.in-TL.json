@@ -6,7 +6,7 @@
           "2-3_Artist_Debugging_1_a": "crwdns2490708:0crwdne2490708:0"
         },
         "2-3 Bee Conditionals 5": {
-          "Bee_Cond_5_1a": "crwdns2490878:0crwdne2490878:0"
+          "Bee_Cond_5_1a": "crwdns2928220:0crwdne2928220:0"
         },
         "4-5 Artist Patterns Free Play": {
           "4-5_Artist_Patterns_Free_Play_1": "crwdns2492882:0crwdne2492882:0"
@@ -487,7 +487,7 @@
           "repeat": "crwdns2488248:0crwdne2488248:0"
         },
         "Course 4 Play Lab Params 2": {
-          "Course_4 _Play_Lab_Params_2_1": "crwdns2489188:0crwdne2489188:0"
+          "Course_4 _Play_Lab_Params_2_1": "crwdns2928234:0crwdne2928234:0"
         },
         "Course 4 Play Lab Params 3": {
           "edit_function": "crwdns2489198:0crwdne2489198:0"
@@ -675,7 +675,7 @@
           "MC_HOC_2017_08_RY_1": "crwdns2544086:0crwdne2544086:0"
         },
         "NEW Course 4 Artist Functions 3": {
-          "NEW_Course_4_Artist_Functions_3_1": "crwdns2488742:0crwdne2488742:0"
+          "NEW_Course_4_Artist_Functions_3_1": "crwdns2928192:0crwdne2928192:0"
         },
         "NEW Course 4 Artist Functions 7": {
           "edit_function": "crwdns2488760:0crwdne2488760:0"
@@ -1191,8 +1191,8 @@
           "courseC_maze_programming2_1": "crwdns2534634:0crwdne2534634:0"
         },
         "courseC_maze_programming3": {
-          "courseC_maze_programming3_2": "crwdns2527676:0crwdne2527676:0",
-          "courseC_maze_programming3_3": "crwdns2527678:0crwdne2527678:0"
+          "courseC_maze_programming3_2": "crwdns2928160:0crwdne2928160:0",
+          "courseC_maze_programming3_3": "crwdns2928162:0crwdne2928162:0"
         },
         "courseC_maze_programming3_2018": {
           "courseC_maze_programming3_2": "crwdns2500366:0crwdne2500366:0",
@@ -2601,6 +2601,30 @@
         "New Sprite Lab Project": {
           "costumes_tab": "crwdns2921440:0crwdne2921440:0",
           "make_sprite": "crwdns2921442:0crwdne2921442:0"
+        },
+        "Big Game Vars 1": {
+          "big_game_finish": "crwdns2928452:0crwdne2928452:0"
+        },
+        "Calc Circles of Eval .2": {
+          "calc_question_marks": "crwdns2928422:0crwdne2928422:0"
+        },
+        "Calc Vars 1": {
+          "Calc Vars 1_edit_option": "crwdns2928446:0crwdne2928446:0"
+        },
+        "Eval Booleans 2": {
+          "Eval Booleans 2 1": "crwdns2928464:0crwdne2928464:0"
+        },
+        "Eval Define Funcs 3": {
+          "Eval Define Funcs 3": "crwdns2928458:0crwdne2928458:0"
+        },
+        "Eval Define Funcs Test": {
+          "Eval Define Funcs 3": "crwdns2928480:0crwdne2928480:0"
+        },
+        "Eval Strings Images .2": {
+          "": "crwdns2928428:0crwdne2928428:0"
+        },
+        "Luigi's Pizza 1": {
+          "luigi's pizza 1": "crwdns2928474:0crwdne2928474:0"
         }
       }
     }

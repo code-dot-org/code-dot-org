@@ -1198,6 +1198,9 @@
           "courseA_collector_loops8_a": "Hvis du ikke lige kan finde ud af det, så prøv at skrive trinene ned på et stykke papir og kig efter gentagelser.",
           "courseA_collector_loops8_b": "Prøv at nedbryd opgaven i 3 del-problemer, og skriv hver del ind i en løkke.",
           "courseA_collector_loops8_c": "Husk på at du kan skrive koden ned trin for trin, og så trykke på Kør, for at se hvor langt du er kommet."
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Prøv at få agenten til at bygge nogle broer, så Alex eller Steve kan gå omkring uden for kortets kanter."
         }
       }
     }

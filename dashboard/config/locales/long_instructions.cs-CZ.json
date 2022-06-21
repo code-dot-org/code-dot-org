@@ -2688,7 +2688,12 @@
         "simconfig": "# Úprava a předpověď\n\nZvol si jednu z proměnných, které tuhle simulaci řídí, uprav ji a předpověz, jak to ovlivní výsledek.\n\nAž si poznamenáš svou předpověď, spusť simulaci 5krát za sebou a zapiš si výsledek. Byla tvoje předpověď přesná?",
         "simconfig_2020": "# Úprava a předpověď\n\nZvol si jednu z proměnných, které tuhle simulaci řídí, uprav ji a předpověz, jak to ovlivní výsledek.\n\nAž si poznamenáš svou předpověď, spusť simulaci 5krát za sebou a zapiš si výsledek. Byla tvoje předpověď přesná?",
         "simstarter": "# Sběr dat\n\nSpusť tuto simulaci 5krát. Pokaždé pomocí aktivity Sběr dat zaznamenej následující:\n\n-   Kolik jablek nasbíral slon?\n-   Kolik jablek nasbíral hroch?\n-   Jak dlouho trvalo sesbírat všechna jablka?",
-        "simstarter_2020": "# Sběr dat\n\nSpusť tuto simulaci 5krát. Pokaždé pomocí aktivity Sběr dat zaznamenej následující:\n\n-   Kolik jablek nasbíral slon?\n-   Kolik jablek nasbíral hroch?\n-   Jak dlouho trvalo sesbírat všechna jablka?"
+        "simstarter_2020": "# Sběr dat\n\nSpusť tuto simulaci 5krát. Pokaždé pomocí aktivity Sběr dat zaznamenej následující:\n\n-   Kolik jablek nasbíral slon?\n-   Kolik jablek nasbíral hroch?\n-   Jak dlouho trvalo sesbírat všechna jablka?",
+        "AllTheThings sprite lab with video": "Vytvořme akvárium!\nNahraď chuchvalec jakýmkoliv druhem ryby kliknutím na <xml><block type=\"gamelab_allSpritesWithAnimation\" block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.\nNezapomeň také upravit kostým postavy v <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the add behavior block\"></block></xml>.",
+        "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "# Barevná pixelace: Úkol 1\n\n**Pokyny:**\n\n-   Začneme s obrázkem 4x2, který Maddie vytvořila, ale vynechali jsme poslední dva čtverce. \n-   Dokonči obrázek tak, že vymyslíš, které dvě barvy chybí a zakóduj je.",
+        "Artist Autorun Test": "Nyní vlož funkci do bloku \"opakuj\" tak, aby se nakreslily tři črverce.",
+        "MC Agent Freeplay": "**Volná hra:** Teď je to na vás! Prozkoumejte tento svět pomocí agentova kódu.",
+        "U1L13 Text Compression": "Hledej v textu vzory (opakující se slova nebo sousloví). Zadej vzory, které vidíš, do slovníku napravo. Když píšeš záznamy do slovníku, symbol pro záznam se vloží do textu na místo vzoru."
       }
     }
   }

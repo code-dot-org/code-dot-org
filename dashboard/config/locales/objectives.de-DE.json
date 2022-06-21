@@ -300,13 +300,13 @@
           "description": "Erstelle mit Ereignissen interaktive Animationen."
         },
         "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
-          "description": "Erstellen Sie ein interaktives virtuelles Haustier mithilfe von Ereignissen, Verhaltensweisen und benutzerdefinierter Kunst."
+          "description": "Erstellen Sie ein interaktives virtuelles Haustier mithilfe von Ereignissen, Verhaltensweisen und eigener Kunst."
         },
         "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
-          "description": "Programmlösungen für Probleme, die bei der Gestaltung eines virtuellen Haustieres auftreten, wie z. B. die Fütterung des Tieres."
+          "description": "Programmlösungen für Aufgaben, die bei der Programmierung eines virtuellen Haustieres auftreten, wie z. B. die Fütterung des Tieres."
         },
         "8cbf109a-b450-420b-973a-db9efd47f61f": {
-          "description": "Entscheiden Sie, welche Aussagen Sie online machen dürfen und welche nicht."
+          "description": "Welche Aussagen dürft ihr im Intermet machen und welche nicht."
         },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Eine Variable deklarieren"
@@ -315,10 +315,10 @@
           "description": "Einer Variable einen Wert zuweisen"
         },
         "41ddf297-8c92-42c1-8157-97ba0660483d": {
-          "description": "Eine Variable mehrfach in einem Programm aufrufen."
+          "description": "Rufen Sie eine Variable in einem Programm mehrfach auf."
         },
         "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
-          "description": "Bestimmen Sie die Beziehung zwischen der Definition, der Speicherung und dem Abruf einer Variablen, wenn wir in einem Programm auf \"Ausführen\" drücken."
+          "description": "Bestimmen Sie die Beziehung zwischen dem, wie eine Variable definiert, gespeichert und abgerufen wird, wenn wir in einem Programm auf \"Ausführen\" klicken."
         },
         "28d3cc79-4aea-431d-a445-745e75e747d8": {
           "description": "Verwenden Sie Variablen, um Wörter und Ausdrücke zu speichern."
@@ -336,7 +336,7 @@
           "description": "Erstellen Sie ein interaktives Computerprogramm, das auf Benutzereingaben reagiert."
         },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
-          "description": "Identifizieren Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
+          "description": "Benennen Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
         },
         "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
           "description": "Unterscheiden Sie zwischen Befehlen, die in Schleifen wiederholt werden müssen, und Befehlen, die für sich allein verwendet werden sollten."
@@ -354,37 +354,37 @@
           "description": "Unterteilen Sie komplexe Aufgaben in kleinere, wiederholbare Abschnitte."
         },
         "12412b47-e83e-43a9-ad42-e98cba364913": {
-          "description": "Erkennen, dass große wiederholte Muster aus kleineren wiederholten Mustern bestehen."
+          "description": "Erkennen Sie, dass große wiederholte Muster aus kleineren wiederholten Mustern bestehen."
         },
         "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
-          "description": "Identifizieren Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
+          "description": "Benennen Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
         },
         "059b2997-3d05-4186-8450-066fceeb8c5b": {
-          "description": "Identifizieren Sie Bereiche, in denen sie Variablen verwenden können, um Mengen während der Laufzeit zu ändern."
+          "description": "Identifizieren Sie Bereiche, in denen sie Variablen verwenden können, um Mengen während der Laufzeit zu ändern. "
         },
         "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
           "description": "Untersuche den Code auf Stellen, an denen Variablen durch bestimmte Werte ersetzt werden können."
         },
         "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
-          "description": "Bestimmen Sie den Startwert, den Stoppwert und den Schrittmacherwert für eine \"for-Schleife\"."
+          "description": "Bestimmen Sie den Startwert, den Stoppwert und den Schrittwert einer \"for-Schleife\"."
         },
         "1e676bcd-e312-4827-88ce-d6befc87d61c": {
           "description": "Veranschaulichen Sie die Zählerwerte, die jedes Mal durch eine \"for-Schleife\" während der Laufzeit erreicht werden."
         },
         "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
-          "description": "Bestimmen Sie den Startwert, den Stoppwert und den Schrittwert für eine for-Schleife."
+          "description": "Bestimmen Sie den Startwert, den Stoppwert und den Schrittwert einer \"for-Schleife."
         },
         "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
-          "description": "Erkennen, wann eine for-Schleife und wann andere Schleifen wie repeat- und while-Schleifen verwendet werden sollten."
+          "description": "Erkennen Sie, wann eine for-Schleife und wann andere Schleifen wie repeat- und while-Schleifen verwendet werden sollten."
         },
         "68c038c1-990a-4009-ad61-619ba6ea71af": {
           "description": "Verwenden Sie for-Schleifen, um die Schleife mehrmals mit unterschiedlichen Werten zu ändern."
         },
         "7ad09074-8899-4330-bb54-6a00c5164299": {
-          "description": "Erkennen, wann eine for-Schleife und wann andere Schleifen wie repeat- und while-Schleifen verwendet werden sollten."
+          "description": "Erkennen Sie, wann eine for-Schleife und wann andere Schleifen wie repeat- und while-Schleifen verwendet werden sollten."
         },
         "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
-          "description": "Verwenden Sie eine Computersimulation, um Daten über ein Modell zu sammeln"
+          "description": " Sammeln der Daten über ein Modell mit einer Computersimulation"
         },
         "519c1444-230e-4182-a4eb-09414a7d09fb": {
           "description": "Erstellen eines Doppelliniendiagramms zum Vergleich von Daten aus zwei verschiedenen Quellen"
@@ -408,31 +408,31 @@
           "description": "URLs in IP-Adressen übersetzen."
         },
         "12c53e25-70d7-4192-a97a-da08dd673338": {
-          "description": "Lernen Sie, für einen laufenden Auftrag im Voraus zu planen."
+          "description": "Lernen, eine laufenden Aufgabe im Voraus zu planen."
         },
         "b76f1811-9865-416d-bd06-601301120384": {
-          "description": "In der Lage sein zu erklären, wie sich Systembeschränkungen auf die Projektgestaltung auswirken können."
+          "description": "Erklären können, wie Systembegrenzungen das Design eines Projekts beeinflussen können."
         },
         "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
-          "description": "Beschreiben Sie, wie Kompromisse dazu beitragen können, ein Projekt auf Kurs zu halten und die Kreativität zu fördern."
+          "description": "Beschreiben, wie Kompromisse dazu beitragen können, ein Projekt auf Kurs zu halten und die Kreativität zu wecken."
         },
         "ad877f06-ef7d-4a69-8217-1e593cfac32f": {
-          "description": "Ausarbeitung und Umsetzung von Plänen zur Behebung von Problemen in ihrem Code."
+          "description": "Ausarbeitung und Umsetzung von Plänen zur Behebung von Problemen des Codes."
         },
         "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
           "description": "Darlegung des Entwurfsprozesses und der Art und Weise, wie dieser das fertige Abschlussprojekt geformt hat."
         },
         "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
-          "description": "Sie lernen, dass die Informationen, die sie online teilen, einen digitalen Fußabdruck oder eine \"Spur\" hinterlassen."
+          "description": "Lernen Sie, dass die Informationen, die sie online teilen, einen digitalen Fußabdruck oder eine \"Spur\" hinterlassen."
         },
         "5efa6c72-000c-40a0-ace0-55f47117305b": {
-          "description": "Informieren Sie sich darüber, welche Informationen online weitergegeben werden dürfen."
+          "description": "Sie erkunden, welche Informationen online weitergegeben werden dürfen."
         },
         "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
-          "description": "Definieren Sie eine Liste von Schritten (Algorithmus), um einen Freund von seiner Startposition zu seinem Ziel zu bringen"
+          "description": "Erstellen Sie eine Liste mit Schritten (Algorithmus), um einen Freund von seiner Startposition zu seinem Ziel zu führen"
         },
         "5c532776-e5e5-4e5e-b3f1-15f01eb66449": {
-          "description": "Übersetzen Sie eine Liste von Schritten in eine Reihe von physischen Aktionen"
+          "description": "Übersetzen Sie eine Liste von Schritten in eine Reihe von körperlichen Aktionen"
         },
         "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37": {
           "description": "Erkennen und Beheben von Fehlern bei der Ausführung eines Algorithmus"
@@ -444,16 +444,16 @@
           "description": "Experimentieren Sie mit standardmäßigen blockbasierten Programmieraktionen wie: Klicken, Ziehen und Ablegen usw."
         },
         "fae372cb-4b72-4b35-abd6-e2424e54d791": {
-          "description": "Übersetzen Sie Bewegungen in eine Reihe von Befehlen."
+          "description": "Übersetzen Sie Bewegungen in eine Abfolge von Befehlen."
         },
         "bffe609e-4319-4507-b643-b2a2ab2507b9": {
           "description": "Konstruieren Sie ein Programm, indem Sie aufeinanderfolgende Bewegungen reorganisieren."
         },
         "7fe333c7-2422-4e9e-8328-9fcd2da6fdba": {
-          "description": "Erstellen Sie ein Computerprogramm anhand einer schriftlichen Anleitung."
+          "description": "Erstellen Sie ein Computerprogramm aus einer Reihe von schriftlichen Anweisungen."
         },
         "4576e06e-56f1-4e32-a81d-7bbfea125273": {
-          "description": "Übersetzen Sie Bewegungen in eine Reihe von Befehlen."
+          "description": "Übersetzen Sie Bewegungen in eine Abfolge von Befehlen."
         },
         "d5f927b9-727a-423e-90d3-80faad21aa34": {
           "description": "Identifizierung und Lokalisierung von Fehlern in einem Programm."
@@ -468,7 +468,7 @@
           "description": "Konvertieren Sie eine Reihe von Mehrfachaktionen in eine einzige Schleife."
         },
         "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
-          "description": "Identifizieren Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
+          "description": "Benennen Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
         },
         "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
           "description": "Zerlegen Sie eine lange Abfolge von Anweisungen in die kleinstmögliche wiederholbare Abfolge."
@@ -480,7 +480,7 @@
           "description": "Verwenden Sie eine Kombination aus sequentiellen und geschleiften Befehlen, um das Ende eines Labyrinths zu erreichen."
         },
         "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
-          "description": "Identifizieren Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
+          "description": "Benennen Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
         },
         "b46842b6-02c4-4fd5-abff-6180d77a5c55": {
           "description": "Zerlegen Sie eine lange Abfolge von Anweisungen in die kleinstmögliche wiederholbare Abfolge."
@@ -516,7 +516,7 @@
           "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
         },
         "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda": {
-          "description": "Erstellen Sie eine animierte, interaktive Geschichte mit Sequenzen und Event-Handlern."
+          "description": "Erstelle eine animierte, interaktive Geschichte, unter Nutzung von Sequenzen und Ereignisprozeduren."
         },
         "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
           "description": "Teile ein kreatives Artefakt mit anderen Schülern."
@@ -585,7 +585,7 @@
           "description": "Verbesserung des bestehenden Codes durch Auffinden von sich wiederholenden Bereichen und deren Überführung in Schleifenstrukturen"
         },
         "632bd918-c124-4f4c-892e-980cdc07b3bf": {
-          "description": "Identifizieren Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
+          "description": "Benennen Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
         },
         "ea6a44e1-0175-4ecc-a257-4489b703c063": {
           "description": "Zerlegen Sie eine lange Abfolge von Anweisungen in die kleinstmögliche wiederholbare Abfolge."
@@ -636,7 +636,7 @@
           "description": "Erkennen und Beheben von Fehlern in sequenzierten Anweisungen"
         },
         "560e14ee-7390-4244-aee5-a0c2737112e5": {
-          "description": "Übersetzen Sie Bewegungen in eine Reihe von Befehlen."
+          "description": "Übersetzen Sie Bewegungen in eine Abfolge von Befehlen."
         },
         "5ced3389-52c6-4f9c-a8da-2e997e0008da": {
           "description": "Identifizierung und Lokalisierung von Fehlern in einem Programm."
@@ -672,7 +672,7 @@
           "description": "Anweisungen schreiben, die Schleifen zur Wiederholung von Mustern verwenden"
         },
         "46288097-dbab-437f-897c-4e14352ae388": {
-          "description": "Identifizieren Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
+          "description": "Benennen Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
         },
         "dea9fd7a-8b64-4d36-90a4-1eee89ea355a": {
           "description": "Zerlegen Sie eine lange Folge von Anweisungen in die größte wiederholbare Folge."
@@ -690,7 +690,7 @@
           "description": "Verwenden Sie eine Kombination aus sequentiellen und geschleiften Befehlen, um sich zu bewegen und Aktionen auszuführen."
         },
         "bf154cd9-0914-43c2-b895-030de92d1427": {
-          "description": "Identifizieren Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
+          "description": "Benennen Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
         },
         "b27f9553-dc95-452c-a4ee-dc69db0fc913": {
           "description": "Unterscheiden Sie zwischen Befehlen, die in Schleifen wiederholt werden müssen, und Befehlen, die für sich allein verwendet werden sollten."
@@ -813,7 +813,7 @@
           "description": "Verbesserung des bestehenden Codes durch Auffinden von sich wiederholenden Bereichen und deren Überführung in Schleifenstrukturen"
         },
         "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
-          "description": "Identifizieren Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
+          "description": "Benennen Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
         },
         "079d7fb4-c8a7-4319-80d6-53037ad705eb": {
           "description": "Unterscheiden Sie zwischen Befehlen, die in Schleifen wiederholt werden müssen, und Befehlen, die für sich allein verwendet werden sollten."
@@ -822,10 +822,10 @@
           "description": "Unterteilen Sie komplexe Aufgaben in kleinere, wiederholbare Abschnitte."
         },
         "a19b271e-27b4-410c-bd3f-20c07f3ce2f0": {
-          "description": "Erkennen, dass große wiederholte Muster aus kleineren wiederholten Mustern bestehen."
+          "description": "Erkennen Sie, dass große wiederholte Muster aus kleineren wiederholten Mustern bestehen."
         },
         "673ddc56-5217-45a9-919c-b42024f7de2b": {
-          "description": "Identifizieren Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
+          "description": "Benennen Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
         },
         "fd3464fd-5921-4873-a850-c0799c55eecd": {
           "description": "Legen Sie fest, wann bestimmte Teile eines Programms ausgeführt werden sollen und wann nicht."
@@ -864,7 +864,7 @@
           "description": "Überwinden Sie Hindernisse wie Zeitdruck oder Bugs."
         },
         "8c021568-46ed-4243-a4d1-f2037138c01a": {
-          "description": "Übersetzen Sie Bewegungen in eine Reihe von Befehlen."
+          "description": "Übersetzen Sie Bewegungen in eine Abfolge von Befehlen."
         },
         "0b8dec87-ba78-4165-9d84-f91dc1fbc6df": {
           "description": "Identifizierung und Lokalisierung von Fehlern in einem Programm."
@@ -930,7 +930,7 @@
           "description": "Tanzanimationen mit Code kreieren"
         },
         "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
-          "description": "Identifizieren Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
+          "description": "Benennen Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
         },
         "d41cb934-ead6-42d0-a3c6-3a692fa53626": {
           "description": "Zerlegen Sie eine lange Folge von Anweisungen in die größte wiederholbare Folge."
@@ -939,7 +939,7 @@
           "description": "Verwenden Sie eine Kombination aus sequentiellen und geschleiften Befehlen, um das Ende eines Labyrinths zu erreichen."
         },
         "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
-          "description": "Identifizieren Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
+          "description": "Benennen Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
         },
         "32250c07-4872-43ce-9968-33e17f779cf3": {
           "description": "Unterscheiden Sie zwischen Befehlen, die in Schleifen wiederholt werden müssen, und Befehlen, die für sich allein verwendet werden sollten."
@@ -948,10 +948,10 @@
           "description": "Unterteilen Sie komplexe Aufgaben in kleinere, wiederholbare Abschnitte."
         },
         "b884b12d-1247-42f3-a907-652dd25566f2": {
-          "description": "Erkennen, dass große wiederholte Muster aus kleineren wiederholten Mustern bestehen."
+          "description": "Erkennen Sie, dass große wiederholte Muster aus kleineren wiederholten Mustern bestehen."
         },
         "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f": {
-          "description": "Identifizieren Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
+          "description": "Benennen Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
         },
         "f35a3857-a630-4783-98c3-c0e6304af48f": {
           "description": "Zerlegen Sie den Code in die größten wiederholbaren Sequenzen, indem Sie Schleifen und verschachtelte Schleifen verwenden."
@@ -1032,22 +1032,22 @@
           "description": "Verwenden Sie Variablen, um Werte innerhalb einer Schleife zu ändern."
         },
         "a80a4857-3cff-46f5-9fc5-63a3969a4631": {
-          "description": "Identifizieren Sie Bereiche, in denen sie Variablen verwenden können, um Mengen während der Laufzeit zu ändern."
+          "description": "Identifizieren Sie Bereiche, in denen sie Variablen verwenden können, um Mengen während der Laufzeit zu ändern. "
         },
         "dd4add89-b2d6-4b12-a073-6ec56b4c6de1": {
           "description": "Untersuche den Code auf Stellen, an denen Variablen durch bestimmte Werte ersetzt werden können."
         },
         "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
-          "description": "Bestimmen Sie den Startwert, den Stoppwert und den Schrittwert für eine for-Schleife."
+          "description": "Bestimmen Sie den Startwert, den Stoppwert und den Schrittwert einer \"for-Schleife."
         },
         "3abab07c-e404-45d4-ab89-f92a34c68356": {
-          "description": "Erkennen, wann eine for-Schleife und wann andere Schleifen wie repeat- und while-Schleifen verwendet werden sollten."
+          "description": "Erkennen Sie, wann eine for-Schleife und wann andere Schleifen wie repeat- und while-Schleifen verwendet werden sollten."
         },
         "1b705c64-cbba-4dfe-8d47-549eb6754326": {
           "description": "Verwenden Sie for-Schleifen, um die Schleife mehrmals mit unterschiedlichen Werten zu ändern."
         },
         "a5169230-8faf-4492-bc49-ca11dca864fa": {
-          "description": "Erkennen, wann eine for-Schleife und wann andere Schleifen wie repeat- und while-Schleifen verwendet werden sollten."
+          "description": "Erkennen Sie, wann eine for-Schleife und wann andere Schleifen wie repeat- und while-Schleifen verwendet werden sollten."
         },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "Überwinden Sie Hindernisse wie Zeitdruck oder Bugs."
@@ -1065,7 +1065,7 @@
           "description": "Experimentieren Sie mit standardmäßigen blockbasierten Programmieraktionen wie: Klicken, Ziehen und Ablegen usw."
         },
         "a5a52414-42a7-4b32-897b-819a70572328": {
-          "description": "Übersetzen Sie Bewegungen in eine Reihe von Befehlen."
+          "description": "Übersetzen Sie Bewegungen in eine Abfolge von Befehlen."
         },
         "7ef6d077-67aa-4a8b-b27b-ab3697654abc": {
           "description": "Ein Programm durch die Reorganisation von aufeinanderfolgenden Bewegungen konstruieren"
@@ -1080,7 +1080,7 @@
           "description": "Erkennen von Problemen oder \"Bugs\" in einem Programm und Entwickeln eines Plans zur Behebung der Probleme."
         },
         "620da514-ad6e-4049-a9d3-d189a79af01e": {
-          "description": "Übersetzen Sie Bewegungen in eine Reihe von Befehlen."
+          "description": "Übersetzen Sie Bewegungen in eine Abfolge von Befehlen."
         },
         "adabe26f-78e0-47f4-92b2-535a38f53f15": {
           "description": "Identifizierung und Lokalisierung von Fehlern in einem Programm."
@@ -1092,7 +1092,7 @@
           "description": "Verbesserung des bestehenden Codes durch Auffinden von sich wiederholenden Bereichen und deren Überführung in Schleifenstrukturen"
         },
         "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
-          "description": "Identifizieren Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
+          "description": "Benennen Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
         },
         "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
           "description": "Zerlegen Sie eine lange Abfolge von Anweisungen in die kleinstmögliche wiederholbare Abfolge."
@@ -1128,7 +1128,7 @@
           "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
         },
         "70e87cab-0d62-4974-9061-425a179bcb2d": {
-          "description": "Erstellen Sie eine animierte, interaktive Geschichte mit Sequenzen und Event-Handlern."
+          "description": "Erstelle eine animierte, interaktive Geschichte, unter Nutzung von Sequenzen und Ereignisprozeduren."
         },
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Teile ein kreatives Artefakt mit anderen Schülern."
@@ -1170,7 +1170,7 @@
           "description": "Ihre eigenen Rechte an den von ihnen erstellten Materialien zu kennen"
         },
         "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
-          "description": "Identifizieren Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
+          "description": "Benennen Sie die Vorteile der Verwendung einer Schleifenstruktur anstelle einer manuellen Wiederholung."
         },
         "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
           "description": "Unterscheiden Sie zwischen Befehlen, die in Schleifen wiederholt werden müssen, und Befehlen, die für sich allein verwendet werden sollten."
@@ -1242,16 +1242,16 @@
           "description": "Verbessern Sie das Design einer bestehenden App, indem Sie die Anforderungen der Nutzer an die Barrierefreiheit berücksichtigen."
         },
         "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
-          "description": "Lernen Sie, für einen laufenden Auftrag im Voraus zu planen."
+          "description": "Lernen, eine laufenden Aufgabe im Voraus zu planen."
         },
         "63070ef2-2aab-4493-a65f-7516e7aadb98": {
           "description": "Erläutern Sie, wie Systembeschränkungen den Projektentwurf beeinflussen können."
         },
         "45927b72-922a-4845-8b40-2458a92372f5": {
-          "description": "Beschreiben Sie, wie Kompromisse dazu beitragen können, ein Projekt auf Kurs zu halten und die Kreativität zu fördern."
+          "description": "Beschreiben, wie Kompromisse dazu beitragen können, ein Projekt auf Kurs zu halten und die Kreativität zu wecken."
         },
         "db7d248b-f06c-475c-8413-f1ea08fae35b": {
-          "description": "Ausarbeitung und Umsetzung von Plänen zur Behebung von Problemen in ihrem Code."
+          "description": "Ausarbeitung und Umsetzung von Plänen zur Behebung von Problemen des Codes."
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Darlegung des Entwurfsprozesses und der Art und Weise, wie dieser das fertige Abschlussprojekt geformt hat."

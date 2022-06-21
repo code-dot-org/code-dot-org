@@ -245,6 +245,10 @@
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modelle und Simulationen",
+          "definition": "ein Programm, das die wichtigsten Merkmale eines realen Ereignisses nachbildet oder nachahmt, um das Verhalten des Ereignisses ohne die Kosten, den Zeitaufwand oder die Gefahren eines Experiments in der realen Welt zu untersuchen."
+        },
         "event/sports/unversioned": {
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
@@ -350,7 +354,7 @@
         },
         "algorithm/coursef/2021": {
           "word": "Algorithmus",
-          "definition": "Eine Liste von Schritten zur Erledigung einer Aufgabe."
+          "definition": "Eine Liste der Schritten zur Ausführung einer Aufgabe."
         },
         "event/coursef/2021": {
           "word": "Ereignis",
@@ -373,12 +377,16 @@
           "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
         "repeat/coursef/2021": {
-          "word": "Wiederholen Sie",
-          "definition": "Um wieder etwas zu tun."
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
         },
         "for_loop/coursef/2021": {
-          "word": "For-Schleife",
-          "definition": "Schleifen, die einen vorbestimmten Anfang, ein vorbestimmtes Ende und eine vorbestimmte Schrittweite (Schrittintervall) haben."
+          "word": "\"for“-Schleife",
+          "definition": "Schleifen, die einen festgelegten Anfang, ein festgelegtes Ende und eine festgelegte Schrittgröße (Schrittintervall) haben."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Modelle und Simulationen",
+          "definition": "ein Programm, das die wichtigsten Merkmale eines realen Ereignisses nachbildet oder nachahmt, um das Verhalten des Ereignisses ohne die Kosten, den Zeitaufwand oder die Gefahren eines Experiments in der realen Welt zu untersuchen."
         },
         "machine_learning/coursef/2021": {
           "word": "Maschinelles Lernen",
@@ -386,7 +394,7 @@
         },
         "dns/coursef/2021": {
           "word": "DNS",
-          "definition": "kurz für Domain Name System, dieses System übersetzt Domänennamen (wie example.com) in IP-Adressen (wie 93.184.216.34)"
+          "definition": "Abkürzung für Domain Name System, dieses System übersetzt Domänennamen (wie example.com) in IP-Adressen (wie 93.184.216.34)"
         },
         "internet/coursef/2021": {
           "word": "Internet",
@@ -394,11 +402,11 @@
         },
         "packets/coursef/2021": {
           "word": "Pakete",
-          "definition": "Kleine Informationsbrocken, die sorgfältig aus größeren Informationsbrocken zusammengestellt wurden."
+          "definition": "Kleine Informationsfragmente, die sorgfältig aus größeren Informationsfragmenten zusammengestellt wurden."
         },
         "servers/coursef/2021": {
           "word": "Server",
-          "definition": "Computer, die nur dazu da sind, anderen etwas zu bieten."
+          "definition": "Computer die nur dazu dienen, um anderen etwas zur Verfügung zu stellen."
         },
         "url/coursef/2021": {
           "word": "URL",
@@ -409,7 +417,7 @@
           "definition": "Ein Verfahren zur Übertragung von Informationen über Telefon- oder Fernsehkabel."
         },
         "fiber_optic_cable/coursef/2021": {
-          "word": "Faseroptisches Kabel",
+          "word": "Glasfaserkabel",
           "definition": "Eine Verbindung, die Licht zur Übertragung von Informationen nutzt"
         },
         "ip_address/coursef/2021": {
@@ -417,7 +425,7 @@
           "definition": "Eine Nummer, die jedem Objekt zugewiesen wird, das mit dem Internet verbunden ist."
         },
         "wi_fi/coursef/2021": {
-          "word": "Wi-Fi",
+          "word": "WLAN",
           "definition": "Ein drahtloses Verfahren zur Übertragung von Informationen über Funkwellen."
         },
         "define/coursef/2021": {
@@ -433,36 +441,36 @@
           "definition": "Sorgfältig über etwas nachdenken, um das Ergebnis in der Zukunft zu verbessern"
         },
         "try/coursef/2021": {
-          "word": "Versuchen Sie",
+          "word": "Versuche",
           "definition": "Versuchen, etwas zu tun"
         },
         "algorithm/courseb/2021": {
           "word": "Algorithmus",
-          "definition": "Eine Liste von Schritten zur Erledigung einer Aufgabe."
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "bug/courseb/2021": {
           "word": "Fehler",
-          "definition": "Teil eines Programms, das nicht korrekt funktioniert."
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/courseb/2021": {
           "word": "Debugging/Fehlerbeseitigung",
           "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
         },
         "click/courseb/2021": {
-          "word": "Klicken Sie auf",
-          "definition": "Drücken Sie die Maustaste"
+          "word": "Klick",
+          "definition": "Drücken der Maustaste"
         },
         "drag/courseb/2021": {
           "word": "Ziehen",
-          "definition": "Klicken Sie mit der Maustaste und halten Sie sie gedrückt, während Sie den Mauszeiger an eine neue Stelle bewegen"
+          "definition": "Maustaste drücken und gedrückt halten, während Sie den Mauszeiger an eine andere Stelle bewegen"
         },
         "drop/courseb/2021": {
           "word": "Fallen lassen",
-          "definition": "Lassen Sie die Maustaste los, um ein Element loszulassen, das Sie ziehen"
+          "definition": "Die Maustaste loslassem, um das Element, das man zieht, abzulegen"
         },
         "double_click/courseb/2021": {
           "word": "Doppelklick",
-          "definition": "Drücken Sie die Maustaste sehr schnell"
+          "definition": "Zweimaliges, sehr schnelles Drücken der Maustaste."
         },
         "program/courseb/2021": {
           "word": "Programm",
@@ -470,7 +478,7 @@
         },
         "programming/courseb/2021": {
           "word": "Programmierung",
-          "definition": "Die Kunst, ein Programm zu erstellen."
+          "definition": "Die Kunst der Erstellung eines Programms."
         },
         "persistence/courseb/2021": {
           "word": "Persistenz",
@@ -481,8 +489,8 @@
           "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
         "repeat/courseb/2021": {
-          "word": "Wiederholen Sie",
-          "definition": "Um wieder etwas zu tun."
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
         },
         "event/courseb/2021": {
           "word": "Ereignis",
@@ -490,7 +498,7 @@
         },
         "algorithm/coursea/2021": {
           "word": "Algorithmus",
-          "definition": "Eine Liste von Schritten zur Erledigung einer Aufgabe."
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "debugging/coursea/2021": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -501,36 +509,36 @@
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "click/coursea/2021": {
-          "word": "Klicken Sie auf",
-          "definition": "Drücken Sie die Maustaste"
+          "word": "Klick",
+          "definition": "Drücken der Maustaste"
         },
         "drag/coursea/2021": {
           "word": "Ziehen",
-          "definition": "Klicken Sie mit der Maustaste und halten Sie sie gedrückt, während Sie den Mauszeiger an eine neue Stelle bewegen"
+          "definition": "Maustaste drücken und gedrückt halten, während Sie den Mauszeiger an eine andere Stelle bewegen"
         },
         "drop/coursea/2021": {
           "word": "Fallen lassen",
-          "definition": "Lassen Sie die Maustaste los, um ein Element loszulassen, das Sie ziehen"
+          "definition": "Die Maustaste loslassem, um das Element, das man zieht, abzulegen"
         },
         "double_click/coursea/2021": {
           "word": "Doppelklick",
-          "definition": "Drücken Sie die Maustaste sehr schnell"
+          "definition": "Zweimaliges, sehr schnelles Drücken der Maustaste."
         },
         "bug/coursea/2021": {
           "word": "Fehler",
-          "definition": "Teil eines Programms, das nicht korrekt funktioniert."
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "programming/coursea/2021": {
           "word": "Programmierung",
-          "definition": "Die Kunst, ein Programm zu erstellen."
+          "definition": "Die Kunst der Erstellung eines Programms."
         },
         "loop/coursea/2021": {
           "word": "Schleife",
           "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
         "repeat/coursea/2021": {
-          "word": "Wiederholen Sie",
-          "definition": "Um wieder etwas zu tun."
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
         },
         "event/coursea/2021": {
           "word": "Ereignis",
@@ -538,11 +546,11 @@
         },
         "algorithm/coursec/2021": {
           "word": "Algorithmus",
-          "definition": "Eine Liste von Schritten zur Erledigung einer Aufgabe."
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "bug/coursec/2021": {
           "word": "Fehler",
-          "definition": "Teil eines Programms, das nicht korrekt funktioniert."
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/coursec/2021": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -558,15 +566,15 @@
         },
         "programming/coursec/2021": {
           "word": "Programmierung",
-          "definition": "Die Kunst, ein Programm zu erstellen."
+          "definition": "Die Kunst der Erstellung eines Programms."
         },
         "loop/coursec/2021": {
           "word": "Schleife",
           "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
         "repeat/coursec/2021": {
-          "word": "Wiederholen Sie",
-          "definition": "Um wieder etwas zu tun."
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
         },
         "event/coursec/2021": {
           "word": "Ereignis",
@@ -578,7 +586,7 @@
         },
         "algorithm/coursed/2021": {
           "word": "Algorithmus",
-          "definition": "Eine Liste von Schritten zur Erledigung einer Aufgabe."
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "program/coursed/2021": {
           "word": "Programm",
@@ -586,7 +594,7 @@
         },
         "bug/coursed/2021": {
           "word": "Fehler",
-          "definition": "Teil eines Programms, das nicht korrekt funktioniert."
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/coursed/2021": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -598,7 +606,7 @@
         },
         "programming/coursed/2021": {
           "word": "Programmierung",
-          "definition": "Die Kunst, ein Programm zu erstellen."
+          "definition": "Die Kunst der Erstellung eines Programms."
         },
         "frustrated/coursed/2021": {
           "word": "Frustriert",
@@ -616,8 +624,8 @@
           "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
         },
         "repeat/coursed/2021": {
-          "word": "Wiederholen Sie",
-          "definition": "Um wieder etwas zu tun."
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
         },
         "command/coursed/2021": {
           "word": "Befehl",
@@ -645,11 +653,11 @@
         },
         "algorithm/express/2021": {
           "word": "Algorithmus",
-          "definition": "Eine Liste von Schritten zur Erledigung einer Aufgabe."
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "bug/express/2021": {
           "word": "Fehler",
-          "definition": "Teil eines Programms, das nicht korrekt funktioniert."
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/express/2021": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -665,7 +673,7 @@
         },
         "programming/express/2021": {
           "word": "Programmierung",
-          "definition": "Die Kunst, ein Programm zu erstellen."
+          "definition": "Die Kunst der Erstellung eines Programms."
         },
         "behavior/express/2021": {
           "word": "Verhalten",
@@ -687,8 +695,8 @@
           "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
         "repeat/express/2021": {
-          "word": "Wiederholen Sie",
-          "definition": "Um wieder etwas zu tun."
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
         },
         "command/express/2021": {
           "word": "Befehl",
@@ -723,8 +731,8 @@
           "definition": "Eine Meldung auf dem Computerbildschirm, die auf eine Eingabe des Benutzers wartet."
         },
         "for_loop/express/2021": {
-          "word": "For-Schleife",
-          "definition": "Schleifen, die einen vorbestimmten Anfang, ein vorbestimmtes Ende und eine vorbestimmte Schrittweite (Schrittintervall) haben."
+          "word": "\"for“-Schleife",
+          "definition": "Schleifen, die einen festgelegten Anfang, ein festgelegtes Ende und eine festgelegte Schrittgröße (Schrittintervall) haben."
         },
         "define/express/2021": {
           "word": "Definiere",
@@ -739,32 +747,32 @@
           "definition": "Sorgfältig über etwas nachdenken, um das Ergebnis in der Zukunft zu verbessern"
         },
         "try/express/2021": {
-          "word": "Versuchen Sie",
+          "word": "Versuche",
           "definition": "Versuchen, etwas zu tun"
         },
         "click/pre-express/2021": {
-          "word": "Klicken Sie auf",
-          "definition": "Drücken Sie die Maustaste"
+          "word": "Klick",
+          "definition": "Drücken der Maustaste"
         },
         "drag/pre-express/2021": {
           "word": "Ziehen",
-          "definition": "Klicken Sie mit der Maustaste und halten Sie sie gedrückt, während Sie den Mauszeiger an eine neue Stelle bewegen"
+          "definition": "Maustaste drücken und gedrückt halten, während Sie den Mauszeiger an eine andere Stelle bewegen"
         },
         "drop/pre-express/2021": {
           "word": "Fallen lassen",
-          "definition": "Lassen Sie die Maustaste los, um ein Element loszulassen, das Sie ziehen"
+          "definition": "Die Maustaste loslassem, um das Element, das man zieht, abzulegen"
         },
         "double_click/pre-express/2021": {
           "word": "Doppelklick",
-          "definition": "Drücken Sie die Maustaste sehr schnell"
+          "definition": "Zweimaliges, sehr schnelles Drücken der Maustaste."
         },
         "algorithm/pre-express/2021": {
           "word": "Algorithmus",
-          "definition": "Eine Liste von Schritten zur Erledigung einer Aufgabe."
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "bug/pre-express/2021": {
           "word": "Fehler",
-          "definition": "Teil eines Programms, das nicht korrekt funktioniert."
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/pre-express/2021": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -776,7 +784,7 @@
         },
         "programming/pre-express/2021": {
           "word": "Programmierung",
-          "definition": "Die Kunst, ein Programm zu erstellen."
+          "definition": "Die Kunst der Erstellung eines Programms."
         },
         "persistence/pre-express/2021": {
           "word": "Persistenz",
@@ -787,8 +795,8 @@
           "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
         "repeat/pre-express/2021": {
-          "word": "Wiederholen Sie",
-          "definition": "Um wieder etwas zu tun."
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
         },
         "event/pre-express/2021": {
           "word": "Ereignis",
@@ -819,8 +827,8 @@
           "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
         "repeat/coursee/2021": {
-          "word": "Wiederholen Sie",
-          "definition": "Um wieder etwas zu tun."
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
         },
         "function/coursee/2021": {
           "word": "Funktion",
@@ -851,7 +859,7 @@
           "definition": "Sorgfältig über etwas nachdenken, um das Ergebnis in der Zukunft zu verbessern"
         },
         "try/coursee/2021": {
-          "word": "Versuchen Sie",
+          "word": "Versuche",
           "definition": "Versuchen, etwas zu tun"
         },
         "machine_learning/csd/2021": {
@@ -867,11 +875,11 @@
         },
         "bug/csd/2021": {
           "word": "Fehler",
-          "definition": "Teil eines Programms, das nicht korrekt funktioniert."
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "for_loop/csd/2021": {
-          "word": "For-Schleife",
-          "definition": "Schleifen, die einen vorbestimmten Anfang, ein vorbestimmtes Ende und eine vorbestimmte Schrittweite (Schrittintervall) haben."
+          "word": "\"for“-Schleife",
+          "definition": "Schleifen, die einen festgelegten Anfang, ein festgelegtes Ende und eine festgelegte Schrittgröße (Schrittintervall) haben."
         },
         "debugging/csd/2021": {
           "word": "Debugging/Fehlerbeseitigung",

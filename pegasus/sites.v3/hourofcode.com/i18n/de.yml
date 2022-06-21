@@ -283,7 +283,7 @@ de:
   front_volunteers: Technische Freiwillige gesucht
   front_start_learning: Beginnen sie jetzt
   header_menu_resources: Ressourcen
-  header_menu_faq: Häufige Fragen
+  header_menu_faq: FAQ
   header_menu_how_to: Anleitung
   header_menu_promote: Förderung
   header_menu_activities: Aktivitäten
@@ -634,11 +634,16 @@ de:
     Are you? (Thanks %{random_donor} for supporting @codeorg)'
   twitter_default_text_donor: 'I''m participating in this year''s #HourOfCode, are
     you? (Thanks %{random_donor} for supporting @codeorg)'
-  hoc_faq_title: Häufig gestellte Fragen
+  hoc_faq_title: FAQ
   hoc_faq_what_is_hoc_q: Was ist die Hour of Code?
-  hoc_faq_what_is_hoc_a: Hour of Code ist eine einstündige Einführung in die Informatik,
-    entwickelt um hinter das Geheimnis der Programmierung zu schauen und die Grundlagen
-    kennen zu lernen. <a href='%{codeorg_url}'>Probieren Sie die Tutorials aus</a>.
+  hoc_faq_what_is_hoc_a: Hour of Code (Stunde des Codes) begann als einstündige Einführung
+    in die Informatik. Sie sollte zeigen, dass der "Code" kein Mysterium ist und jeder
+    die Grundlagen erlernen kann, und sie sollte das Interesse an Informatik wecken.
+    Inzwischen ist daraus eine weltweite Initiative zur Förderung der Informatik geworden.
+    Aus einer Stunde Programmieren entstanden die unterschiedlichsten Aktivitäten
+    für die Community. Sehen Sie sich die <a href='%{tutorials}'>Tutorials und Aktivitäten</a>.
+    an. Diese Basiskampagne wird weltweit von über <a href='%{partners}'>400 Partnern</a>  und
+    200.000 Pädagogen unterstützt.
   hoc_faq_what_is_hoc_a_markdown: Hour of Code (Stunde des Codes) begann als einstündige
     Einführung in die Informatik. Sie sollte zeigen, dass der "Code" kein Mysterium
     ist und jeder die Grundlagen erlernen kann, und sie sollte das Interesse an Informatik
@@ -647,270 +652,246 @@ de:
     für die Community. Sehen Sie sich die [Tutorials und Aktivitäten](%{tutorials})
     an. Diese Basiskampagne wird weltweit von über [400 Partnern]%{partners}) und
     200.000 Pädagogen unterstützt.
-  hoc_faq_last_year: Probiere die Tutorials
+  hoc_faq_last_year: Tutorials ausprobieren
   hoc_faq_when_is_hoc_q: Wann findet die Hour of Code statt?
-  hoc_faq_when_is_hoc_a: Eine Hour of Code kann jederzeit, von jedem veranstaltet
-    werden, doch das Ziel der Basisveranstaltung ist es, dass Millionen von Schülern
-    sich an einer Hour of Code am %{campaign_date} beteiligen, während die <a href='http://csedweek.org'>Computer
-    Science Education Week</a> stattfindet. Findet diese Stunde zu einem bestimmten
-    <i>Zeitpunkt</i> statt? Nein, sie kann jederzeit während dieser Woche durchgeführt
-    werden. Die Hour of Code kann auch in mehrere Abschnitte aufgeteilt werden, um
-    die Schüler die Einführung beenden zu lassen. Machen Sie es so, wie es für Sie
-    und Ihre Schüler am besten ist. (Sie könne die Veranstaltung natürlich auch eine
-    Woche vorverlegen oder nachholen, wenn es nicht anders möglich ist).
-  hoc_faq_when_is_hoc_a_markdown: "  Die Hour of Code findet jedes Jahr während der
-    [Computer Science Education Week](%{csedweek_url}) statt. Die %{campaign_date_year}
-    Computer Science Education Week wird %{campaign_date_full} voll sein, aber du
-    kannst eine Hour of Code das ganze Jahr durch hosten. Computer Science Education
-    Week findet jedes Jahr statt, in Anerkennung des Geburtstags des Computer-Pioniers
-    [Admiral Grace Murray Hopper](%{grace_hopper}) (Dezember 9, 1906).  "
+  hoc_faq_when_is_hoc_a: Die Hour of Code findet jedes Jahr während der <a href='%{csedweek_url}'>Computer
+    Science Education Week</a> statt. Die Computer Science Education Week %{campaign_date_year}
+    wird %{campaign_date_full} sein, aber Sie können das ganze Jahr über eine Hour
+    of Code veranstalten. Die Computer Science Education Week wird jährlich zu Ehren
+    des Geburtstags der Computerpionierin <a href='%{grace_hopper}'>Admiral Grace
+    Murray Hopper</a> (9. Dezember 1906) veranstaltet.
+  hoc_faq_when_is_hoc_a_markdown: Die Hour of Code findet jedes Jahr während der [Computer
+    Science Education Week](%{csedweek_url}) statt. Die %{campaign_date_year} Computer
+    Science Education Week wird %{campaign_date_full} sein, aber Sie können das ganze
+    Jahr über eine Hour of Code veranstalten. Die Computer Science Education Week
+    wird jährlich zu Ehren des Geburtstags der Computerpionierin [Admiral Grace Murray
+    Hopper](%{grace_hopper}) (9. Dezember 1906) veranstaltet.
   hoc_faq_why_cs_q: Warum Informatik?
-  hoc_faq_why_cs_a: "<i>Alle</i> Schüler und Schülerinnen sollten die Möglichkeit
-    haben, Informatik zu lernen. Dieses Wissen fördert das Logikverständnis, die Kreativität
-    und die Problemlösekompetenz. Zudem werden schon früh die Grundlagen für den Erfolg
-    im Berufsleben des 21. Jahrhunderts festgelegt. Weitere Statistiken hierzu finden
-    Sie bei <a href='http://code.org'>Code.org</a>."
-  hoc_faq_why_cs_a_markdown: "  _Jeder_ Student sollte die Möglichkeit haben Informatik
-    zu lernen. Dies hilft Fähigkeiten in der Lösung von Problemen, Logik und Kreativität
-    zu fördern. Indem sie früh anfangen, bauen Studenten eine Grundlage für Erfolg
-    in jedem Karrierepfad des 21. Jahrhunderts auf. Siehe noch mehr Statistiken [hier](%{stats_url}).
-    \ "
+  hoc_faq_why_cs_a: "<i>Jeder</i> Schüler sollte die Möglichkeit haben, Informatik
+    zu lernen. Dieses Wissen fördert die Problemlösungsfähigkeiten, das Logikverständnis
+    und die Kreativität. Außerdem werden schon früh die Grundlagen für den Erfolg
+    im Berufsleben des 21. Jahrhunderts festgelegt. Weitere Fakten und Zahlen finden
+    Sie unter <a href='%{stats_url}'>here</a>."
+  hoc_faq_why_cs_a_markdown: _Jeder Schüler_ sollte die Möglichkeit haben, Informatik
+    zu lernen. Dieses Wissen fördert die Problemlösungsfähigkeiten, das Logikverständnis
+    und die Kreativität. Außerdem werden schon früh die Grundlagen für den Erfolg
+    im Berufsleben des 21. Jahrhunderts festgelegt. Weitere Fakten und Zahlen finden
+    Sie unter [here]%{stats_url}
   hoc_faq_how_participate_q: Wie kann ich an einer Hour of Code teilnehmen?
-  hoc_faq_how_participate_a: Beginnen Sie die Planung <a href='/how-to'>hier</a>,
-    indem sie zunächst die Anleitung durchlesen. Sie können die Hour of Code an Ihrer
-    Schule oder in Ihrer Gemeinde veranstalten, als Ergänzungskurs, ehrenamtlich oder
-    an ihrer Arbeit. Oder probieren Sie es einfach selbst aus am %{campaign_date}.
-  hoc_faq_how_participate_a_markdown: "  [Fange mit der Planung an](%{howto}),  mit
-    einer Durchsicht unseres How-to-Leitfadens. Du kannst einen Hour-of-Code Event
-    in deiner Schule oder in deiner Gemeinschaft organisieren - genau wie bei einem
-    außerschulischen Verein, einer Non-Profit-Organisation oder an deinem Arbeitsplatz.
-    Oder, versuche es einfach selbst, wenn %{campaign_date} eintrifft.  "
+  hoc_faq_how_participate_a: "<a href='/how-to'>beginnen Sie hier</a> mit der Planung,
+    indem Sie sich unsere Anleitung lesen. Sie können eine Hour of Code-Veranstaltung
+    an Ihrer Schule oder in Ihrer Gemeinde organisieren &mdash;  z. B. in einem außerschulischen
+    Verein, einer gemeinnützigen Organisation oder am Arbeitsplatz. Oder versuchen
+    Sie es einfach selbst, wenn %{campaign_date} ansteht."
+  hoc_faq_how_participate_a_markdown: "[Beginnen Sie hier mit der Planung](%{howto}),
+    indem Sie sich unsere Anleitung lesen. Sie können eine Hour of Code-Veranstaltung
+    an Ihrer Schule oder in Ihrer Gemeinde organisieren z. B. in einem außerschulischen
+    Verein, einer gemeinnützigen Organisation oder am Arbeitsplatz. Oder versuchen
+    Sie es einfach selbst, wenn %{campaign_date} ansteht."
   hoc_faq_behind_hoc_q: Wer steht hinter der Hour of Code?
-  hoc_faq_behind_hoc_a: Die Hour-of-Code wird  von <a href='http://code.org'> Code.org</a>
-    organisiert, einer öffentlichen, 501c3 gemeinnützige Organisation, die die stärkere
-    Beteiligung von Frauen und unterrepräsentierten Schülern an Informatik fördert,
-    in dem sie Informatik an mehr Schulen verfügbar macht, und . Eine <a href='http://code.org/about/partners'>
-    noch nie dagewesene Koalition von Partnern</a> ist zusammengekommen, um die Hour-of-Code
-    zu unterstützen &mdash; darunter Microsoft, Apple, Amazon, Boys und Girls Clubs
-    of America und die College Board.
-  hoc_faq_behind_hoc_a_markdown: "  Die Hour of Code wird angetrieben durch die Hour
-    of Code und Computer Science Education Week [Ausschüsse für die Beratung und Bewertung](%{partner_url}),
-    sowie durch eine beispiellose Koalition von Partnern, die sich zur Unterstützung
-    von der Hour of Code zusammengefunden hat — mit u.a. Microsoft, Apple, Amazon,
-    Boys and Girls Clubs of America und dem College Board.  "
-  hoc_faq_host_q: Ich habe keinerlei Programmier-Kenntnisse. Kann ich trotzdem eine
+  hoc_faq_behind_hoc_a: Die Hour of Code wird von den <a href='%{partner_url}'>Beratungs-
+    und Prüfungskomitees</a> der Hour of Code und der Computer Science Education Week
+    sowie einer beispiellosen Koalition von Partnern vorangetrieben, die sich zusammengeschlossen
+    haben, um die Hour of Code zu unterstützen &mdash; darunter Microsoft, Apple,
+    Amazon, Boys and Girls Clubs of America und das College Board.
+  hoc_faq_behind_hoc_a_markdown: Die Hour of Code wird von den Hour of Code and Computer
+    Science Education Week [Advisory and Review Committees](%{partner_url}) sowie
+    einer beispiellosen Koalition von Partnern vorangetrieben, die sich zur Unterstützung
+    der Hour of Code zusammengeschlossen haben, darunter Microsoft, Apple, Amazon,
+    Boys and Girls Clubs of America und das College Board.
+  hoc_faq_host_q: Ich habe keine Ahnung vom Programmieren. Kann ich trotzdem eine
     Veranstaltung organisieren?
-  hoc_faq_host_a: Natürlich sind "Hour of Code"-Aktionen selbsterklärend. Sie müssen
-    nur <a href='%{codeorg_url}/learn'>die aktuellen Einführungen ausprobieren</a>,
-    eine beliebige Einführung auswählen, eine Stunde belegen &mdash; um den Rest kümmern
-    wir uns. Für jedes Alter vom Kindergarten angefangen haben wir etwas anzubieten.
-    Planen Sie ihre Veranstaltung und lesen Sie unsere <a href='/how-to'>Anleitung</a>.
-  hoc_faq_host_a_markdown: "  Natürlich. Die Aktivitäten von Hour of Code sind selbstgesteuert.
-    Du musst nichts weiteres tun als [unsere derzeitigen Tutorials auszuprobieren](%{codeorg_url}/learn);
-    selektiere das gewünschte Tutorial, und wähle 1 Stunde dafür aus — wir tun alles
-    weitere. Außerdem haben wir Optionen für jedes Alter und jede Erfahrungsebene,
-    vom Kindergarten aus aufwärts. Fange mit der Planung deines Events an durch unseren
-    [How-to-Guide](%{howto}) zu lesen.  "
+  hoc_faq_host_a: Ja, natürlich. Die Aktivitäten der Hour of Code sind selbstgesteuert.
+    Sie müssen nur <a href='%{codeorg_url}/learn'>unsere aktuellen Tutorials ausprobieren</a>,
+    das gewünschte Tutorial auswählen und eine Stunde auswählen &mdash; Alles andere
+    erledigen wir. Wir haben auch Optionen für jedes Alter und jede Erfahrungsstufe
+    ab dem Kindergarten. Lesen Sie zu Beginn der Planung Ihrer Veranstaltung unsere
+    <a href='/how-to'>Anleitung</a>.
+  hoc_faq_host_a_markdown: "  Ja, natürlich. Die Aktivitäten der Hour of Code sind
+    selbstgesteuert. Sie müssen nur [unsere aktuellen Tutorials ausprobieren](%{codeorg_url}/learn),
+    das gewünschte Tutorial auswählen und eine Stunde auswählen. Wir erledigen alles
+    andere. Wir haben auch Optionen für jedes Alter und jede Erfahrungsstufe, ab dem
+    Kindergarten. Lesen Sie zu Beginn der Planung Ihrer Veranstaltung unsere [Anleitung](%{howto})."
   hoc_faq_devices_q: Welche Geräte brauche ich für meine Schüler?
-  hoc_faq_devices_a: Code.org Anleitungen funktionieren auf allen Geräten und mit
-    allen Browsern. Weitere Informationen zu den Systemvoraussetzungen für Code.org
-    finden Sie <a href='%{codeorg_url}/educate/it'>hier</a>. Systemvoraussetzungen
-    für andere Einführungen befinden sich unter <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in den Beschreibungen. Wir bieten auch Aktivitäten ohne Computer an, falls Ihre
-    Schule die Einführungen technisch nicht unterstützt.
-  hoc_faq_devices_a_markdown: "  Code.org Tutorials funktionieren auf allen Apparaten
-    und Browsern. Du kannst noch mehr Informationen über die technischen Erfordernisse
-    von Code.org's Tutorials [hier](%{codeorg_url}/educate/it) anschauen. Technische
-    Erfordernisse für Tutorials, die nicht von Code.org erstellt wurden, können auf
-    [%{partner_url}/learn] (%{codeorg_url}/learn) und in der spezifischen Beschreibung
-    des Tutorials gefunden werden. Vergesse nicht, dass wir auch [-Aktivitäten](%{unplugged_url})
-    anbieten, wenn deine Schule die Tutorials nicht zur Verfügung stellen kann!  "
-  hoc_faq_need_computers_q: Brauche ich einen Computer für jeden einzelnen Teilnehmer?
-  hoc_faq_need_computers_a: Nein. Wir haben Hour-of-Code-Tutorials, die auf PCs, Smartphones
-    und Tablets funktionieren, und einige, für die überhaupt kein Computer erforderlich
-    ist! Sie können von überall und mit dem was Sie haben mitmachen. <p><i>Hier sind
-    ein paar Optionen:</i> <br><ul><li><b>zusammen arbeiten.</b> Forschung zeigt,
-    dass Schüler am besten lernen, in dem sie mit  <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>
-    einem Partner</a> arbeiten, einen Computer teilen und kooperieren. Ermutigen Sie
-    Ihre SchülerInnen und Schüler, zweier Teams zu bilden. <li><b>Verwenden Sie einen
-    Beamer.</b> Wenn Sie einen Beamer und Leinwand und einen internetfähigen Computer
-    haben, kann Ihre gesamte Gruppe eine Hour-of-Code zusammen machen. Videoabschnitte
-    gemeinsam anschauen und die Rätsel oder Fragen  abwechselnd lösen und beantworten.
-    <li><b>Versuchen Sie es offline!</b> Wir bieten Tutorials an, für die überhaupt
-    kein Computer erforderlich ist. </ul>
-  hoc_faq_need_computers_a_markdown: "  Nein. Wir haben Hour of Code Tutorials die
-    auf PCs, Handys und Tablet-Computern benutzt werden können, und einige die überhaupt
-    keinen Computer benötigen. Du kannst überall eine Verbindung herstellen, mit was
-    immer du zur Verfügung hast.      _Hier sind einige Optionen:_      - **Zusammenarbeit
-    zwischen zwei Personen** [Erforschung hat gezeigt,](%{pair_programming_research})
-    dass Studenten am besten lernen durch [Paar-Programmierung](%{pair_programming_video}),
-    eine gemeinsame Nutzung des Computers und eine Zusammenarbeit. Ermutige deine
-    Studenten zu einer Partnerschaft.   - **Benutze eine Projektionswand.** Falls
-    du einen Projektor und eine Leinwand hast, z.B. für einen internetfähigen Computer,
-    dann kann deine ganze Gruppe eine Hour of Code gemeinsam durchlaufen. Schaut euch
-    Videoteile gemeinsam an, und wechselt euch ab bei der Lösung von Rätseln oder
-    beim Antworten auf Fragen.   - **Ran an die Sachen „unplugged“.** Wir bieten auch
-    [Tutorials an die](%{unplugged_url}) überhaupt keinen Computer benötigen.  "
+  hoc_faq_devices_a: Code.org-Tutorials funktionieren auf allen Geräten und in allen
+    Browsern. Weitere Informationen über die technischen Anforderungen von Code.org-Tutorials
+    finden Sie <a href='%{codeorg_url}/educate/it'>hier</a>. Die technischen Anforderungen
+    für Tutorials, die nicht von Code.org stammen, finden Sie unter <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
+    in der spezifischen Beschreibung des Tutorials. Vergessen Sie nicht, dass wir
+    auch <a href='%{unplugged_url}'>Aktivitäten ohne Computer</a> anbieten, wenn Ihre
+    Schule keine Tutorials anbieten kann!
+  hoc_faq_devices_a_markdown: Code.org-Tutorials funktionieren auf allen Geräten und
+    in allen Browsern. Weitere Informationen über die technischen Anforderungen von
+    Code.org-Tutorials finden Sie [here](%{codeorg_url}/educate/it). Die technischen
+    Anforderungen für Tutorials, die nicht von Code.org stammen, finden Sie auf [%{partner_url}/learn](%{codeorg_url}/learn)
+    in der spezifischen Beschreibung des Tutorials. Vergessen Sie nicht, dass wir
+    auch [unplugged activities](%{unplugged_url}) anbieten, wenn Ihre Schule keine
+    Tutorials anbieten kann!
+  hoc_faq_need_computers_q: Muss ich für jeden Teilnehmer einen Computer haben?
+  hoc_faq_need_computers_a: Nein, wir haben Hour of Code-Tutorials, die auf PCs, Smartphones
+    und Tablets funktionieren, und einige, die überhaupt keinen Computer erfordern!
+    Sie können mitmachen, wo immer Sie sind, mit allem, was Sie haben.<p><i>Hier sind
+    einige Möglichkeiten:</i> <br> <ul> <li><b>Arbeiten Sie zu zweit.</b> <a href='%{pair_programming_research}'>Die
+    Forschung zeigt</a> dass Schüler am besten <a mit href='%{pair_programming_video}'>zu
+    zweit arbeiten</a>, wenn sie sich einen Computer teilen und zusammenarbeiten.
+    Fordern Sie die Schüler auf, zweit zu arbeiten. <li><b>Projizieren Sie einen Bildschirm.</b>
+    Wenn Sie einen Projektor und einen Bildschirm für einen Computer mit Internetanschluss
+    haben, kann Ihre gesamte Gruppe eine Hour of Code gemeinsam durchführen. Sehen
+    Sie sich die Videos gemeinsam an und lösen Sie abwechselnd Aufgaben oder beantworten
+    Sie Fragen. <li><b>Go unplugged.</b> Wir bieten<a href='%{unplugged_url}'>Tutorials
+    ohne Computer an.</a> at all. </ul>
+  hoc_faq_need_computers_a_markdown: |-
+    Nein, wir haben Hour of Code-Tutorials, die auf PCs, Smartphones und Tablets funktionieren, und einige, die überhaupt keinen Computer erfordern! Sie können mitmachen, wo immer Sie sind, mit allem, was Sie haben.
+
+    Hier sind ein paar Möglichkeiten:_
+
+    - **Arbeiten Sie zu zweit.** [Die Forschung zeigt](%{pair_programming_research}), dass Schüler am besten mit [pair programming](%{pair_programming_video}) lernen, wenn sie sich einen Computer teilen und zusammenarbeiten. Ermutigen Sie Ihre Schüler, zu zweit zu arbeiten.
+    - **Projizieren Sie den Bildschirm.** Wenn Sie einen Projektor und einen Bildschirm für einen Computer mit Internetanschluss haben, kann Ihre gesamte Gruppe eine Hour of Code gemeinsam durchführen. Sehen Sie sich die Videos gemeinsam an und lösen Sie abwechselnd Aufgaben oder beantworten Sie Fragen.
+    - **Ohne Computer.** Wir bieten [Tutorials, die keinen Computer erfordern](%{unplugged_url}) an.
   hoc_faq_international_q: Ich wohne in <country>. Wie kann ich international teilnehmen?
-  hoc_faq_international_a: Jeder kann überall auf der Welt eine Hour of Code veranstalten.
-    Im letzten Jahr haben Schüler auf der ganzen Welt an der Hour of Code teilgenommen.
-    Mehr Informationen <a href='/promote'>hier</a>.
-  hoc_faq_international_a_markdown: Jeder kann überall auf der Welt eine Hour of Code
-    veranstalten. Im letzten Jahr haben Schüler auf der ganzen Welt an der Hour of
-    Code teilgenommen. Erfahren Sie [hier](%{promote}) mehr.
-  hoc_faq_tutorial_q: Wie kann ich ein Hour of Code Tutorial machen?
-  hoc_faq_tutorial_a: Wenn Sie einen Tutorial-Partner werden möchten, <a href='target-tutorial-guidelines'>
-    lesen Sie unsere Richtlinien und Anweisungen</a>. Wir würden gerne eine Vielzahl
-    ansprechender Tutorials zur Verfügung stellen, aber das primäre Ziel ist es, das
-    Erlebnis für Schüler und Lehrer, die neu in zur Informatik sind, zu optimieren.
-  hoc_faq_tutorial_a_markdown: "  Falls du Interesse hast ein ein Partner bei den
-    Tutorials zu werden, [dann schaue dir unsere Richtlinien und Anweisungen an] (%{tutorial_guidelines}).
-    Wir möchten eine Reihe von ansprechenden Optionen hosten, aber das primäre Ziel
-    ist eine Optimierung der Erlebnisse von Studenten und Lehrer, für die Informatik
-    neu ist.  "
-  hoc_faq_account_q: Müssen sich Schüler mit einem Konto anmelden?
+  hoc_faq_international_a: Jeder kann eine Hour of Code-Veranstaltung organisieren,
+    überall auf der Welt. Letztes Jahr haben sich SchülerInnen weltweit zu Hour of
+    Code zusammengeschlossen. Erfahren Sie <a href='/promote'>hier</a> mehr.
+  hoc_faq_international_a_markdown: Jeder kann eine Hour of Code-Veranstaltung organisieren,
+    überall auf der Welt. Letztes Jahr haben sich SchülerInnen weltweit zu Hour of
+    Code zusammengeschlossen. Erfahren Sie [hier](%{promote}) mehr.
+  hoc_faq_tutorial_q: Wie kann ich an einem Hour of Code Tutorial teilnehmen?
+  hoc_faq_tutorial_a: Wenn Sie Tutorial-Partner werden möchten, lesen Sie unsere  <a
+    href='/tutorial-guidelines'>see our guidelines and instructions</a>. Wir würden
+    gerne eine Vielzahl ansprechender Tutorials zur Verfügung stellen, aber das primäre
+    Ziel besteht darin, das Erlebnis für Schüler und Lehrer, die neu in zur Informatik
+    sind, zu optimieren.
+  hoc_faq_tutorial_a_markdown: Wenn Sie Tutorial-Partner werden möchten, [lesen Sie
+    unsere Bedingungen und Anleitungen](%{tutorial_guidelines}). Wir würden gerne
+    eine Vielzahl ansprechender Tutorials zur Verfügung stellen, aber das primäre
+    Ziel besteht darin, das Erlebnis für Schüler und Lehrer, die neu in zur Informatik
+    sind, zu optimieren.
+  hoc_faq_account_q: Müssen sich die SchülerInnen mit einem Konto anmelden?
   hoc_faq_account_a: Nein. Für Schüler ist grundsätzlich weder eine Anmeldung noch
-    ein Login erforderlich, um die Hour of Code auszuprobieren. Die meisten <a href='%{codeorg_url}/learn/beyond'>weiterführenden
-    Kurse</a> benötigen aber ein Konto, um den Fortschritt abzuspeichern.
-  hoc_faq_account_a_markdown: "  Nein. Absolut keine Anmeldung oder ein Login ist
-    erforderlich, falls Studenten Hour of Code ausprobieren möchten. Die meisten der
-    darauf [folgenden Kurse](%{codeorg_url}/learn/beyond) erfordern die Erstellung
-    eines Kontos, wo die Fortschritte der Studenten gespeichert werden können. Außerdem,
-    sich registrieren für Hour of Code bewirkt NICHT automatisch die Erstellung eines
-    Code Studio Kontos. Falls du Konten für deine Studenten erstellen möchtest, dann
-    befolge bitte diese [Anweisungen](https://youtu.be/_smelV_KISE).  "
-  hoc_faq_high_school_q: Welche Aktivitäten sollten mit Oberschülern durchgeführt
-    werden?
-  hoc_faq_high_school_a: Unsere neuen Star Wars und Minecraft-Einführungen sind sehr
-    gut für Oberschüler geeignet, besonders die JavaScript-Version von Star Wars und
-    die freien Level in beiden Einführungen. Alternativ empfehlen wir mit einer Einführung
-    auf <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> zu beginnen, beispielsweise
-    mit den Angry Birds oder mit Anna und Elsa. Ein Oberschüler sollte in der Lage
-    sein eine dieser Einführungen in 30 Minuten zu beenden und dann eine fortgeschrittene
-    Anleitung in JavaScript, wie Khan Academy oder CodeHS.
-  hoc_faq_high_school_a_markdown: "  Unsere Star Wars und Minecraft Tutorials sind
-    fantastisch für Highschool-Studenten, und insbesondere die Star Wars JavaScript
-    Version und die frei Spiel-Ebenen in beiden Tutorials. Als Alternative empfehlen
-    wir eines unserer Anfänger-Tutorials  [%{partner_url}/learn](%{codeorg_url}/learn)
-    für den Anfang, wie zum Beispiel das Tutorial mit Angry Birds oder mit Anna und
-    Elsa. Für Studenten am Gymnasium sollte es möglich sein, eines dieser Tutorials
-    innerhalb von 30 Minuten zu durchlaufen, um danach ein fortgeschritteneres Tutorial
-    in JavaScript zu versuchen, wie Khan Academy oder CodeHS.  "
+    ein Login erforderlich, um die Hour of Code auszuprobieren. Für die meisten <a
+    href='%{codeorg_url}/learn/beyond'>weiterführenden Kurse</a> wird jedoch ein Konto
+    angelegt, um den Fortschritt zu speichern.
+  hoc_faq_account_a_markdown: Nein. Es ist absolut keine Registrierung oder Anmeldung
+    erforderlich, um die Hour of Code auszuprobieren. Für die meisten [follow-on courses]
+    (%{codeorg_url}/learn/beyond) wird ein Konto angelegt, um den Fortschritt der
+    Teilnehmer zu speichern. Bei der Anmeldung zur Hour of Code wird NICHT automatisch
+    ein Code Studio-Konto erstellt. Wenn Sie Konten für Ihre SchülerInnen erstellen
+    möchten, befolgen Sie bitte diesen [nstructions](%{section_instructions_url}).
+  hoc_faq_high_school_q: Welche Aktivitäten eignen sich für SchülerInnen der Oberstufe?
+  hoc_faq_high_school_a: Unsere Star Wars- und Minecraft-Tutorials eignen sich hervorragend
+    für Schüler, vor allem die Star Wars-JavaScript-Version und die freie Spielstufe
+    in beiden Tutorials. Alternativ empfehlen wir, zunächst eines der Anfänger-Tutorials
+    unter <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> auszuprobieren,
+    z. B. das Tutorial mit Angry Birds oder mit Anna und Elsa. Ein Oberstufenschüler
+    sollte in der Lage sein, eines dieser Tutorials in 30 Minuten zu beenden und kann
+    dann ein fortgeschritteneres Tutorial in JavaScript ausprobieren, z. B. Khan Academy
+    oder CodeHS.
+  hoc_faq_high_school_a_markdown: 'Unsere Star Wars und Minecraft Tutorials sind fantastisch
+    für Highschool-Studenten, und insbesondere die Star Wars JavaScript Version und
+    die frei Spiel-Ebenen in beiden Tutorials. Als Alternative empfehlen wir eines
+    unserer Anfänger-Tutorials  [%{partner_url}/learn](%{codeorg_url}/learn) für den
+    Anfang, wie zum Beispiel das Tutorial mit Angry Birds oder mit Anna und Elsa.
+    SchülerInnen in Gymnasium schließen diese Tutorials innerhalb von 30 Minuten ab
+    und können danach ein fortgeschritteneres Tutorial in JavaScript ausprobieren,
+    wie z. B. Khan Academy oder CodeHS.  '
   hoc_faq_scratch_q: Ich benutze Scratch für die Hour of Code. Was ist, wenn meine
-    Schüler iPads statt Laptops einsetzen?
-  hoc_faq_scratch_a: Scratch ist auf Tablets nicht lauffähig. Junge Schüler können
-    stattdessen ScratchJR iPad verwenden (wenn sie bereits lesen können). Andere Tutorials,
-    die auf iPads laufen - von Code.org, Tynker, Lightbot oder CodeSpark finden Sie
-    hier <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>.
-  hoc_faq_scratch_a_markdown: Scratch kann auf Tablets nicht ausgeführt werden. Ihre
-    Schüler können stattdessen ScratchJR iPad verwenden (wenn sie bereits lesen können).
-    Andere Tutorials, die für iPads geeignet sind, finden Sie unter [%{partner_url}/learn](%{codeorg_url}/learn).
+    Schüler iPads statt Laptops verwenden?
+  hoc_faq_scratch_a: Scratch kann auf Tablets nicht ausgeführt werden. Ihre Schüler
+    können stattdessen ScratchJR iPad verwenden (wenn sie bereits lesen können). Andere
+    Tutorials, die für iPads geeignet sind, finden Sie unter <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>.
     Das sind Tutorials von Code.org, Tynker, Lightbot oder CodeSpark.
-  hoc_faq_count_hoc_q: Wie zählen Sie die Stunden von Hour of Code?
+  hoc_faq_scratch_a_markdown: Scratch kann auf Tablets nicht ausgeführt werden. Ihre
+    SchülerInnen können stattdessen ScratchJR iPad verwenden (wenn sie bereits lesen
+    können). Andere Tutorials, die für iPads geeignet sind, finden Sie unter [%{partner_url}/learn](%{codeorg_url}/learn).
+    Das sind Tutorials von Code.org, Tynker, Lightbot oder CodeSpark.
+  hoc_faq_count_hoc_q: Wie werden die Stunden von Hour of Code gezählt?
   hoc_faq_map_q: Warum sehe ich meine Markierung nicht auf der Landkarte?
-  hoc_faq_map_a: Es tut uns Leid, dass Sie Ihre Veranstaltung nicht auf der Karte
-    finden. Da sich fast zehntausende von Organisatoren anmelden, werden die Daten
-    auf der Karte zusammengefasst und eine Markierung wird für mehrere Veranstaltungen
-    verwendet. Klicken Sie Zahl über Karte an, um eine Liste mit allen Veranstaltungen
-    aufzurufen. Eventuell ist die Liste nicht auf dem neuesten Stand, neue Einträge
-    erscheinen gewöhnlich nach 48 Stunden. Versuchen Sie es in ein paar Tagen noch
-    einmal.
-  hoc_faq_map_a_markdown: "  Es tut uns wirklich leid, dass du deinen Event auf der
-    Landkarte für Hour of Code nicht finden konntest. Wegen den zehntausenden von
-    Veranstaltern die sich registrieren lassen, fast die Landkarte die Daten zusammen
-    und zeigt nur einen. Für mehrere Events. Falls du auf das Link für die [Events-Seite](%{events_url}),
-    unterhalb der Landkarte klickst, dann wirst du nach einer Liste von allen Events
-    verwiesen, wo dein Event unter der Region gelistet ist. Die Landkarte und die
-    Liste von Events nimmt meistens 48 Stunden für einen Update, angesichts der tausenden
-    von Menschen die sich für Hour of Code registrieren lassen. Versuche es nochmals
-    in einigen Tagen!  "
-  hoc_faq_count_hoc_a: Der "Hour of Code"-tracker ist kein genaues Messinstrument.
-    Wir zählen nicht jede einzelne Schüler-ID, wenn die Teilnahme an der Hour of Code
-    gemessen wird, denn wir verlangen nicht, dass man sich zur Teilnahme anmeldet.
-    Aus diesem Grund stimmen die Zahlen der Teilnehmer nie genau. Lesen Sie alle Einzelheiten
-    dazu <a href='%{codeorg_url}/loc'>hier</a>.
-  hoc_faq_count_hoc_a_markdown: "  Der Tracker von Hour of Code ist nicht ein genaues
-    Maß für die Anwendung. Wir zählen nicht jede einzigartige ID der Studenten, beim
-    Tracking der Teilnahme an Hour of Code, insbesondere da wir die Studenten nicht
-    bitten sich zu registrieren oder einzuloggen. Das Resultat ist, dass wir gleichzeitig
-    zu viele und zu wenige Teilnehmer zählen. Lese alle Details darüber [hier](%{codeorg_url}/loc).
-    \ "
+  hoc_faq_map_a: Es tut uns sehr leid, dass Sie Ihre Veranstaltung nicht auf der Hour
+    of Code-Karte sehen. Weil sich zehntausenden Veranstalter anmelden, fasst die
+    Karte die Daten zusammen und zeigt einen Punkt für mehrere Veranstaltungen an.
+    Wenn Sie auf den Link <a href='%{events_url}'>Veranstaltungsseite</a> unterhalb
+    der Karte klicken, werden Sie zu einer Liste aller Veranstaltungen nach Bundesland
+    weitergeleitet und können Ihre Veranstaltung dort finden. Angesichts der unzähligen
+    Teilnehmer, die sich für die Hour of Code anmelden, dauert es in der Regel 48
+    Stunden, bis die Karte und die Veranstaltungsliste aktualisiert sind. Schauen
+    Sie in ein paar Tagen wieder vorbei!
+  hoc_faq_map_a_markdown: Es tut uns sehr leid, dass Sie Ihre Veranstaltung nicht
+    auf der Hour of Code-Karte sehen. Weil sich zehntausenden Veranstalter anmelden,
+    fasst die Karte die Daten zusammen und zeigt einen Punkt für mehrere Veranstaltungen
+    an. Wenn Sie auf den Link [events page](%{events_url}) unterhalb der Karte klicken,
+    werden Sie zu einer Liste aller Veranstaltungen nach Bundesland weitergeleitet
+    und können Ihre Veranstaltung dort finden. Angesichts der unzähligen Teilnehmer,
+    die sich für die Hour of Code anmelden, dauert es in der Regel 48 Stunden, bis
+    die Karte und die Veranstaltungsliste aktualisiert sind. Schauen Sie in ein paar
+    Tagen wieder vorbei!
+  hoc_faq_count_hoc_a: Der Hour of Code-Tracker ist keine exakte Messung der Nutzung.
+    Bei der Verfolgung der Teilnahme an der Hour of Code zählen wir die eindeutigen
+    Schüler-IDs nicht genau, vor allem weil die Schüler sich nicht anmelden oder registrieren
+    müssen. Aus diesem Grund stimmen die Teilnehmerzahlen nie genau. Lesen Sie alle
+    Details <a href='%{codeorg_url}/loc'>hier</a>.
+  hoc_faq_count_hoc_a_markdown: Der Hour of Code-Tracker ist keine exakte Messung
+    der Nutzung. Bei der Verfolgung der Teilnahme an der Hour of Code zählen wir die
+    eindeutigen Schüler-IDs nicht genau, vor allem weil die Schüler sich nicht anmelden
+    oder registrieren müssen. Aus diesem Grund stimmen die Teilnehmerzahlen nie genau.
+    Lesen Sie alle Details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Wieviel kann ich in einer Stunde lernen?
-  hoc_faq_one_hour_a: Das Ziel der Hour of Code ist es nicht, jeden innerhalb einer
-    Stunde zu einem Computerspezialisten zu machen. In einer Stunde kann man gerade
-    einmal lernen, dass Informatik Spass macht, kreativ ist, und allen Altersstufen
-    und Arten von Schülern, unabhängig von ihrem Hintergrund, zugänglich ist. Der
-    Erfolg dieser Aktion wird nicht danach bemessen, wieviel an Informatik die Schüler
-    lernen - der Erfolg zeigt vielmehr, an der Beteiligung über die Grenzen von Geschlechts-,
-    Volks- und Sozialgemeinschaftszugehörigkeit, sowie dem daraus folgenden Anstieg
-    von Teilnahmen an Informatikkursen aller Schwierigkeitsgrade. Millionen von teilnehmenden
-    Lehrern und Schülern haben beschlossen über eine Stunde hinaus für einen ganzen
-    Tag lang, eine Woche oder mehr zu lernen. Viele Schüler haben sich dazu entschieden
-    einen ganzen Kurs zu belegen, oder Informatik sogar als Hauptfach an der Universität
-    zu studieren. <br/><br/>Neben den Schülern haben die Pädagogen gelernt, dass sie
-    nach einer Stunde in der Lage sind, Informatik zu unterrichten, ohne Informatik
-    studiert zu haben. Zehntausende Lehrer Haben beschlossen Informatikunterricht
-    weiter zu betreiben, durch persönliche Begleitung von Schülern oder durch das
-    Anbieten von weiterführenden online-Kursen. Dies gilt auch für die Schulverwaltungen,
-    die gemerkt haben, dass Informatik von Schülern gewünscht wird und Lehrer in der
-    Lage sind sie zu unterrichten. <br/><br/> Darüber hinaus lernen alle Teilnehmer
-    in einer Stunde, dass sie es können.
-  hoc_faq_one_hour_a_markdown: "  Es ist nicht das Ziel von Hour of Code, irgendjemand
-    zu einem Experten in der Informatik innerhalb von 1 Stunde zu machen. Eine Stunde
-    ist nämlich nur genug, um zu lernen dass die Informatik Spaß sein kann und zu
-    Kreativität führt, dass sie für Menschen eines jeden Alters und für Studenten
-    zugänglich ist, ungeachtet ihres Werdegangs. Das Maß des Erfolgs dieser Kampagne
-    ist nicht wieviel Informatikstudenten am lernen sind - der Erfolg zeigt sich in
-    der breiten Teilnahme, ungeachtet des Geschlechts und der ethnischen oder sozioökonomischen
-    Gruppe, sowie in der Steigerung der Registrierung und der Teilnahme an Informatikkursen,
-    über alle Klassenstufen hinweg. Millionen der teilnehmenden Lehrer und Studenten
-    haben sich für mehr als nur eine Stunde entschlossen - sie lernen einen ganzen
-    Tag lang, oder sogar eine ganze Woche oder länger, wodurch viele Studenten sich
-    für einen ganzen Kurs entschlossen haben.      Neben den Studenten gehören auch
-    die Lehrer zu den „Lernenden“ - nach 1 Stunde nimmt ihr Selbstvertrauen zu, nämlich
-    dass sie anderen Informatik beibringen können, auch wenn sie keinen Hochschulabschluss
-    in der Informatik aufweisen können. Zehntausende Lehrer haben sich entschlossen
-    ihr Studium in der Informatik fortzusetzen, entweder durch Kurse der professionellen
-    Weiterbildung oder Online-Schulungen, oder beides. Dies gilt auch für Schulverwalter,
-    die sich bewusst sind das Informatik etwas ist was ihre Studenten wollen und,
-    etwas worin ihre Lehrer kompetent sind.      Alle Teilnehmer können, vor allem,
-    in 1 Stunde lernen, dass wir dies können.  "
+  hoc_faq_one_hour_a: Das Ziel der Hour of Code ist es nicht, jemanden in einer Stunde
+    zu einem Experten für Informatik zu machen. Eine Stunde reicht aus, um zu lernen,
+    dass Informatik Spaß macht und kreativ ist, dass sie in jedem Alter und für alle
+    Schüler zugänglich ist, unabhängig von ihrem Hintergrund. Der Erfolg dieser Kampagne
+    misst sich nicht daran, wie viel Informatik die SchülerInnen lernen. Der Erfolg
+    wird in der breiten Beteiligung über alle Geschlechter, Rassen und sozioökonomischen
+    Gruppen hinweg sichtbar und in der daraus resultierenden Zunahme der Einschreibung
+    und Teilnahme am Informatikunterricht in allen Klassenstufen. Millionen der teilnehmenden
+    Lehrer und Schüler haben sich entschlossen, mehr als nur eine Stunde zu lernen
+    - einen ganzen Tag, eine ganze Woche oder länger, und viele Schüler haben sich
+    deshalb für einen ganzen Kurs (oder sogar ein Studienfach) entschieden.<br/><br/>Neben
+    den SchülerInnen ist auch der Lehrer ein "Lernender". Er gewinnt nach einer Stunde
+    das Vertrauen, dass er Informatik unterrichten kann, auch wenn er vielleicht keinen
+    Hochschulabschluss als Informatiker hat. Zehntausende Lehrer beschließen, sich
+    weiter mit Informatik zu beschäftigen und entweder an einer Fortbildung teilzunehmen
+    oder weiterführende Online-Kurse anzubieten, oder beides. Und das gilt auch für
+    Schulleiter. Sie erkennen, dass ihre SchülerInnen Informatik lernen möchten und
+    dass ihre Lehrer in der Lage sind, Informatik zu unterrichten.<br/><br/> Was alle
+    Teilnehmer in einer Stunde lernen, ist vor allem, dass wir es schaffen können.
+  hoc_faq_one_hour_a_markdown: |-
+    Das Ziel der Hour of Code ist es nicht, jemanden in einer Stunde zu einem Experten für Informatik zu machen. Eine Stunde reicht aus, um zu lernen, dass Informatik Spaß macht und kreativ ist, dass sie in jedem Alter und für alle Schüler zugänglich ist, unabhängig von ihrem Hintergrund. Der Erfolg dieser Kampagne misst sich nicht daran, wie viel Informatik die SchülerInnen lernen. Der Erfolg wird in der breiten Beteiligung über alle Geschlechter, Rassen und sozioökonomischen Gruppen hinweg sichtbar und in der daraus resultierenden Zunahme der Einschreibung und Teilnahme am Informatikunterricht in allen Klassenstufen. Millionen der teilnehmenden Lehrer und Schüler haben sich entschlossen, mehr als nur eine Stunde zu lernen - einen ganzen Tag, eine ganze Woche oder länger, und viele Schüler haben sich deshalb für einen ganzen Kurs (oder sogar ein Studienfach) entschieden.
+
+    Neben den SchülerInnen ist auch der Lehrer ein "Lernender". Er gewinnt nach einer Stunde das Vertrauen, dass er Informatik unterrichten kann, auch wenn er vielleicht keinen Hochschulabschluss als Informatiker hat. Zehntausende Lehrer beschließen, sich weiter mit Informatik zu beschäftigen und entweder an einer Fortbildung teilzunehmen oder weiterführende Online-Kurse anzubieten, oder beides. Und das gilt auch für Schulleiter. Sie erkennen, dass ihre SchülerInnen Informatik lernen möchten und dass ihre Lehrer in der Lage sind, Informatik zu unterrichten.
+
+    Was alle Teilnehmer in einer Stunde lernen, ist vor allem, dass wir es schaffen können.
   hoc_faq_more_questions_q: Haben Sie noch weitere Fragen?
   hoc_faq_more_questions_a: Versuchen Sie, eine Antwort in unserem <a href='http://support.code.org'>Support-Forum</a>
     zu finden.
-  hoc_faq_more_questions_a_markdown: Antworten finden Sie auch unter [support forum](http://support.code.org).
-  hoc_faq_keep_learning_q: Wie lerne ich nach der Hour of Code weiter?
-  hoc_faq_keep_learning_a: Jeder kann eine Hour of Code jederzeit veranstalten. Die
-    Tutorials stehen das ganze Jahr zur Verfügung. Der Studienplan und die Tutorials
-    werden permanent abrufbar sein. Besuchen Sie <a href='/promote'>Materialien</a>
-    für Anleitungen zu den Veranstaltungen und anderen Materialien, damit Ihre Hour
-    of Code ein Erfolg wird.
-  hoc_faq_keep_learning_a_markdown: "  Jedermann kann eine Stunde Hour of Code zu
-    jeder Zeit hosten. Die Tutorials stehen ganzjährig zur Verfügung. Du kannst erwarten,
-    dass unsere Tutorials und unser Lehrplan auf unserer Website für immer zur Verfügung
-    stehen. Bitte durchsuche [unsere Ressourcen](%{promote}), für How-to-Anleitungen
-    und andere Ressourcen, die dir helfen werden deinen Hour of Code Event zu einem
-    Erfolg zu machen.  "
-  hoc_faq_certificates_q: Wo kann ich die Urkunden für meine Schüler drucken?
-  hoc_faq_certificates_a: Unter <a href='%{codeorg_url}/certificates'>certificates
-    page</a> können Sie Urkunden für die ganze Klasse im voraus drucken. Für Schüler,
-    die das Minecraft-Tutorial durchführen, können hier <a href='%{codeorg_url}/certificates?course=mc'>special
-    certificates</a> Urkunden ausgedruckt werden.
-  hoc_faq_certificates_a_markdown: "  Begebe dich zu unserer [Seite für Zertifikate]
-    (%{codeorg_url}/certificates), wo du schon im Voraus Zertifikate für deine ganze
-    Klasse ausdrucken kannst. Außerdem kannst du auch [spezielle Zertifikate] ausdrucken
-    (%{codeorg_url}/certificates?course=mc), für die Studenten die das Minecraft Tutorial
-    durchlaufen.  "
-  hoc_faq_logo_q: Welche Einschränkungen gelten für die Benutzung des Hour of Code
-    Logos unde der Marke?
-  hoc_faq_logo_a: Hour of Code ist markenrechtlich geschützt. Wir wollen die Nutzung
-    nicht verhindern, aber wir wollen sicherstellen, dass unsere Rahmenbedingungen
-    eingehalten werden. Bitte schau' Dir unsere <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>unsere
-    Verwendungsrichtlinien</a> an.
-  hoc_faq_logo_a_markdown: "  Hour of Code ist ein geschützter Markenname. Wir möchten
-    dessen Anwendung nicht verhindern, aber wir wollen sicherstellen, dass die Nutzung
-    davon sich in bestimmten Grenzen hält. Bitte schau dir [diese Richtlinien für
-    die Anwendung](%{logo_url}) an.  "
+  hoc_faq_more_questions_a_markdown: Versuchen Sie die Antwort unter [support forum](http://support.code.org)
+    zu finden.
+  hoc_faq_keep_learning_q: Wie kann ich nach der Hour of Code weiter lernen?
+  hoc_faq_keep_learning_a: Sie können jederzeit eine Hour of Code veranstalten. Die
+    Tutorials stehen das ganze Jahr über zur Verfügung. Der Lehrplan und die Tutorials
+    sind dauerhaft abrufbar. Anleitungen zu den Veranstaltungen und anderen Materialien
+    für eine erfolgreiche Hour of Code finden Sie unter <a href='/promote'>Materialien</a>.
+  hoc_faq_keep_learning_a_markdown: Jeder kann jederzeit eine Hour of Code veranstalten.
+    Die Tutorials sind das ganze Jahr über verfügbar. Sie können davon ausgehen, dass
+    alle unsere Tutorials und Lehrpläne dauerhaft auf unserer Website verfügbar sein
+    werden. Unter [our resources](%{promote}) finden Sie Anleitungen für Ereignisse
+    und andere Ressourcen, die Ihre Hour of Code zu einem Erfolg machen.
+  hoc_faq_certificates_q: Wo kann ich die Zertifikate für meine SchülerInnen ausdrucken?
+  hoc_faq_certificates_a: Auf unserer <a href='%{codeorg_url}/certificates'>Zertifikatsseite</a>
+    können Sie vorab Zertifikate für die gesamte Klasse ausdrucken. Sie können auch
+    <a href='%{codeorg_url}/certificates?course=mc'>spezielle Zertifikate</a> für
+    das Abschließen des Minecraft-Tutorials für einzelne SchülerInnen ausdrucken.
+  hoc_faq_certificates_a_markdown: Auf unserer [certificates page](%{codeorg_url}/certificates)
+    können Sie vorab Zertifikate für die gesamte Klasse ausdrucken. Sie können auch
+    [special certificates](%{codeorg_url}/certificates?course=mc) für SchülerInnen
+    ausdrucken, die das Minecraft-Tutorial besuchen.
+  hoc_faq_logo_q: 'Welche Einschränkungen gelten für die Nutzung des Logos und Namens
+    Hour of Code? '
+  hoc_faq_logo_a: Hour of Code ist markenrechtlich geschützt. Wir verbieten die Nutzung
+    nicht, aber wir möchten, dass unsere Rahmenbedingungen eingehalten werden. Bitte
+    lesen Sie <a href='%{logo_url}'>diese Nutzungsbedingungen</a>.
+  hoc_faq_logo_a_markdown: Hour of Code ist ein geschütztes Markenzeichen. Wir verbieten
+    die Nutzung nicht, aber wir möchten sicherstellen, dass die Nutzung begrenzt bleibt.
+    Bitte beachten Sie [these guidelines for usage].](%{logo_url}).
   stats_hoc_2013_image_alt: Statistiken der Hour of Code 2013
   stats_growth: Es hat schneller 15 Millionen Nutzer erreicht, als alle Internet-Plattformen
     je zuvor.
@@ -955,7 +936,7 @@ de:
   resources_stickers: Aufkleber
   resources_how_to_guides: How-to Anleitungen
   resources_promote: Förderung
-  resources_nav_tutorials: Probiere die Tutorials
+  resources_nav_tutorials: Tutorials ausprobieren
   resources_nav_promote: Erzählen Sie es weiter
   resources_nav_spread_word: Wie kann ich mich dafür einsetzen
   resources_banner_promote_text: Förderung
