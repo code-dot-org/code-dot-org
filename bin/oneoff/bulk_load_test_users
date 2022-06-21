@@ -1,0 +1,51 @@
+#!/usr/bin/env ruby
+
+require_relative '../../dashboard/config/environment'
+require 'optparse'
+
+# To run: ruby bin/oneoff/bulk_load_test_users --filename=users.csv --dry-run=false
+# To revert: ruby bin/oneoff/move_user_storage_ids_to_dashboard.rb --revert
+
+# Parse options
+options = {
+  revert: false,
+}
+
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    This moves the user_storage_ids table to the Dashboard DB and renames it to user_project_storage_ids
+
+    Options:
+  BANNER
+  opts.on('--filename=users.csv',
+          String,
+          'Name of CSV file with list of email addresses to bulk create users.'
+  ) do |filename|
+    options[:filename] = filename
+  end
+  opts.on('--dry-run',
+          'Enables read-only mode where no changes are written to the database'
+  ) do |dry_run|
+    options[:dry_run] = dry_run
+  end
+
+  opts.on('-h', '--help', 'Prints this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+puts "Options: #{options}"
+options.freeze
+
+$dry_run = options[:dry_run]
+
+CSV.foreach(options[:filename], {headers: true}) do |row|
+  puts row
+  email = row[0]
+  user = User.find_or_create_by(email: email)
+  user.update
+  puts user.to_json
+  user.save!
+end
