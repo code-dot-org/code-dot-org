@@ -598,6 +598,7 @@ sk:
         csd_u6_input_output: Vstup a výstup
         csp_applab_parameters: Funkcie s parametrami
         CSA-PL-intro-to-arrays: Jednorozmerné (1D) polia
+        CS_Changing_Everything: Informatika mení svet okolo nás
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

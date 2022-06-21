@@ -345,7 +345,7 @@ module ScriptConstants
 
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
 
-  def self.has_congrats_page?(script)
+  def self.has_csf_congrats_page?(script)
     script == ACCELERATED_NAME ||
       ScriptConstants.unit_in_category?(:csf_international, script) ||
       CSF_COURSE_PATTERNS.map {|r| r =~ script}.any?

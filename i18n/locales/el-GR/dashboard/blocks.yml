@@ -1351,6 +1351,38 @@ el:
           CONDITION:
             '"when"': όταν
             '"while"': όσο
+      gamelab_spriteThink_fables1:
+        options:
+          THOUGHT:
+            '"Hmm..."': Χμμ...
+            '"I am hungry, too."': Και εγώ πεινάω.
+            '"I only want the biggest goat."': Δε θέλω τίποτα παραπάνω από τη μεγαλύτερη κατσίκα.
+            '"I''m a green troll."': Είμαι ένα πράσινο τρολ.
+            '"No one will cross my bridge."': Κανένας δε θα διασχίσει τη γέφυρά μου.
+      gamelab_spriteThink_fables2:
+        options:
+          THOUGHT:
+            '"Hmm..."': Χμμ...
+            '"Time to make friends with the sheep."': "'Ώρα να γίνουμε φίλοι με το πρόβατο."
+            '"She''ll never recognize me now."': Δε θα με αναγνωρίσει τώρα!
+            '"This costume keeps me warm."': Αυτή η στολή με κρατάει ζεστό.
+            '"I am actually a wolf."': Ουσιαστικά, είμαι ένας λύκος.
+      gamelab_spriteThink_fables3:
+        options:
+          THOUGHT:
+            '"Hmm..."': Χμμ...
+            '"I''m feeling sleepy."': Νυστάζω.
+            '"No one could ever beat me."': Κανένας δε θα μπορούσε να με νικήσει.
+            '"I''ve done this race before."': Έχω κάνει αυτόν τον αγώνα ξανά.
+            '"My feet are bigger than Turtle''s feet."': Το πόδια μου είναι μεγαλύτερα από τα πόδια της Χελώνας.
+      gamelab_spriteThink_fables4:
+        options:
+          THOUGHT:
+            '"Hmm..."': Χμμ...
+            '"I''m so hungry."': Πεινάω τόσο πολύ.
+            '"I''m a visitor in this town."': Είμαι ένας επισκέπτης σε αυτήν την πόλη.
+            '"If we share, we''ll all have something to eat. "': Αν μοιραστούμε, όλοι θα έχουμε από κάτι να φάμε.
+            '"I''ll trick everyone into giving me their food."': Θα ξεγελάσω τους πάντες για να μου δώσουν το φαγητό τους.
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_turn:

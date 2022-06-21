@@ -310,6 +310,8 @@ el:
               name: Η Συνταγή του Σχεδιασμού
         K5PD:
           lessons:
+            Reflection:
+              name: Αντανάκλαση
             Teacher Dashboard:
               name: πίνακας Δασκάλου
             Writing computer programs:
@@ -417,6 +419,8 @@ el:
           student_description: Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών με χαρακτήρες από τα Θυμωμένα Πουλιά και τα Ζόμπι εναντίων Φυτών!
         cspunit1:
           lessons:
+            Binary Numbers:
+              name: Δυαδικοί Αριθμοί
             Text Compression:
               name: Συμπίεση κειμένου
         algebraPD:
@@ -556,6 +560,8 @@ el:
           lessons:
             Computer Science Fundamentals:
               name: Βασικές αρχές της επιστήμης υπολογιστών
+            Planning:
+              name: Σχεδιασμός
         ECSPD2:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
@@ -752,6 +758,8 @@ el:
             cspSurvey:
               display_name: Έρευνα
           lessons:
+            Binary Numbers:
+              name: Δυαδικοί Αριθμοί
             The Internet:
               name: Το Διαδίκτυο
         csp2-2017:
@@ -785,6 +793,8 @@ el:
         CSDU3-Draft:
           description_short: Προγραμματισμός
           lessons:
+            Collisions:
+              name: Συγκρούσεις
             Functions:
               name: Συναρτήσεις
             Velocity:
@@ -815,6 +825,8 @@ el:
           lessons:
             Design Mode:
               name: Κατάσταση Σχεδίασης
+        CSDU1-Draft:
+          description_short: Επίλυση Προβλημάτων
         CSF_Secret_Sample_Story:
           description_audience: Ηλικίες 8-18+
         MikeTest:
@@ -926,6 +938,8 @@ el:
           lessons:
             Velocity:
               name: Ταχύτητα
+            Collisions:
+              name: Συγκρούσεις
             Functions:
               name: Συναρτήσεις
             Variables:
@@ -934,6 +948,8 @@ el:
               name: Χαρακτήρας
             Conditionals:
               name: Συνθήκες
+            Keyboard Input:
+              name: Είσοδος Πληκτρολογίου
         grade2:
           description_audience: Ηλικίες 5-18
           lessons:
@@ -1001,10 +1017,16 @@ el:
           lessons:
             Lists:
               name: Λίστες
+            Headings:
+              name: Επικεφαλίδες
         csp2-support:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+        csd4-2017:
+          lessons:
+            Linking Screens:
+              name: Συνδέοντας Οθόνες
         minecraft:
           description_short: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση του Minecraft.
           description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση του Minecraft.
@@ -1145,6 +1167,10 @@ el:
               name: Λίστες
             For Loops:
               name: Βρόχοι Για
+            Board Events:
+              name: Γεγονότα Πίνακα
+            Getting Properties:
+              name: Αποκτώντας Ιδιότητες
             Functions with Parameters:
               name: Συναρτήσεις με παραμέτρους
         workshop-gamelab:
@@ -1155,6 +1181,12 @@ el:
               name: Χαρακτήρας
             Input:
               name: Είσοδος
+        csd5-draft:
+          lessons:
+            Combining Representations:
+              name: Συνδυάζοντας Αναπαραστάσεις
+            Representing Images:
+              name: Αναπαριστώντας Εικόνες
         coursed-ramp:
           lessons:
             Introduction:
@@ -1173,8 +1205,16 @@ el:
               name: Λίστες
             For Loops:
               name: Βρόχοι Για
+            Board Events:
+              name: Γεγονότα Πίνακα
+            Getting Properties:
+              name: Αποκτώντας Ιδιότητες
             Functions with Parameters:
               name: Συναρτήσεις με παραμέτρους
+            Board Events_:
+              name: Γεγονότα Πίνακα
+            Getting Properties_:
+              name: Αποκτώντας Ιδιότητες
             Functions with Parameters_:
               name: Συναρτήσεις με παραμέτρους
         csd3-draft:
@@ -1185,14 +1225,28 @@ el:
               name: Χαρακτήρας
             Conditionals:
               name: Συνθήκες
+            Keyboard Input:
+              name: Είσοδος Πληκτρολογίου
             Velocity:
               name: Ταχύτητα
+            Collisions:
+              name: Συγκρούσεις
             Functions:
               name: Συναρτήσεις
+        csd5-2017:
+          lessons:
+            Representing Images:
+              name: Αναπαριστώντας Εικόνες
+            Combining Representations:
+              name: Συνδυάζοντας Αναπαραστάσεις
+            Keeping Data Secret:
+              name: Κρατώντας τα Δεδομένα Μυστικά
         csd3-old:
           lessons:
             Velocity:
               name: Ταχύτητα
+            Collisions:
+              name: Συγκρούσεις
             Functions:
               name: Συναρτήσεις
         csd2-draft:
@@ -1207,8 +1261,12 @@ el:
               name: Χαρακτήρας
             Conditionals:
               name: Συνθήκες
+            Keyboard Input:
+              name: Είσοδος Πληκτρολογίου
             Velocity:
               name: Ταχύτητα
+            Collisions:
+              name: Συγκρούσεις
             Functions:
               name: Συναρτήσεις
             'null':
@@ -1243,6 +1301,8 @@ el:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+            Programming with Rey and BB-8:
+              name: Προγραμματίζοντας με τον Ρέι και BB-8
         coursec-2017:
           title: Μάθημα C
           assignment_family_title: Μάθημα C
@@ -1366,6 +1426,10 @@ el:
           lessons:
             Creating Functions:
               name: Δημιουργούμε Συναρτήσεις
+        csd4-draft:
+          lessons:
+            Linking Screens:
+              name: Συνδέοντας Οθόνες
         e-f-ramp:
           lessons:
             Building a Foundation:
@@ -1432,6 +1496,12 @@ el:
               name: Διασκέδαση με το Βρόχο Για
             Songwriting with Parameters:
               name: Γράφουμε τραγούδια με παραμέτρους
+        csd5-old:
+          lessons:
+            Representing Images:
+              name: Αναπαριστώντας Εικόνες
+            Combining Representations:
+              name: Συνδυάζοντας Αναπαραστάσεις
         csp3-staging:
           lessons:
             Creating Functions:
@@ -1440,6 +1510,12 @@ el:
           lessons:
             Simple Encryption:
               name: Απλή Κρυπτογράφηση
+        allthesurveys:
+          lessons:
+            CS Principles Pre-survey:
+              name: Προσχέδιο προκαταρκτικής μελέτης προχωρημένων μαθημάτων πληροφορικής
+            Course Survey:
+              name: Προσχέδιο Μελέτης για μετά το μάθημα προχωρημένου επίπεδου πληροφορικής
         hero:
           description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
           student_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
@@ -1500,8 +1576,12 @@ el:
               name: Χαρακτήρας
             Conditionals:
               name: Συνθήκες
+            Keyboard Input:
+              name: Είσοδος Πληκτρολογίου
             Velocity:
               name: Ταχύτητα
+            Collisions:
+              name: Συγκρούσεις
             Functions:
               name: Συναρτήσεις
         csd3-2018:
@@ -1515,17 +1595,27 @@ el:
               name: Χαρακτήρας
             Conditionals:
               name: Συνθήκες
+            Keyboard Input:
+              name: Είσοδος Πληκτρολογίου
             Velocity:
               name: Ταχύτητα
+            Collisions:
+              name: Συγκρούσεις
             Functions:
               name: Συναρτήσεις
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
         csd2-2018:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
           lessons:
+            Headings:
+              name: Επικεφαλίδες
             Lists:
               name: Λίστες
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
         coursea-2018:
           assignment_family_title: Μάθημα A
           lessons:
@@ -1580,6 +1670,8 @@ el:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
             Your Digital Footprint:
               name: Το Ψηφιακό σου Αποτύπωμα
+            Programming with Rey and BB-8:
+              name: Προγραμματίζοντας με τον Ρέι και BB-8
             Move It, Move It:
               name: Μετακίνησέ το, Μετακίνησέ το
             Copyright and Creativity:
@@ -1623,8 +1715,14 @@ el:
           lessons:
             Functions with Parameters_:
               name: Συναρτήσεις με παραμέτρους\_
+            Board Events:
+              name: Γεγονότα Πίνακα
+            Getting Properties:
+              name: Αποκτώντας Ιδιότητες
             Functions with Parameters:
               name: Συναρτήσεις με παραμέτρους
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
         coursee-2018:
           assignment_family_title: Μάθημα E
           lessons:
@@ -1674,6 +1772,8 @@ el:
             cspSurvey:
               display_name: Έρευνα
           lessons:
+            Binary Numbers:
+              name: Δυαδικοί Αριθμοί
             The Internet:
               name: Το Διαδίκτυο
         csd1-2018:
@@ -1684,10 +1784,24 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+          lessons:
+            Linking Screens:
+              name: Συνδέοντας Οθόνες
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
         csd5-2018:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+          lessons:
+            Representing Images:
+              name: Αναπαριστώντας Εικόνες
+            Keeping Data Secret:
+              name: Κρατώντας τα Δεδομένα Μυστικά
+            Combining Representations:
+              name: Συνδυάζοντας Αναπαραστάσεις
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
         csp2-2018:
           lessons:
             Text Compression:
@@ -1809,6 +1923,8 @@ el:
               name: Το Ψηφιακό σου Αποτύπωμα
             Copyright and Creativity:
               name: Είναι Τέλειο να Δημιουργούμε και να Παίζουμε Δίκαια
+            Programming with Rey and BB-8:
+              name: Προγραμματίζοντας με τον Ρέι και BB-8
             'Persistence & Frustration: Stevie and the Big Project':
               name: Ο Στίβι και το Μεγάλο Πρότζεκτ
         fit-test:
@@ -1841,6 +1957,10 @@ el:
             Aquatic:
               name: 'Minecraft: Υδάτινο Ταξίδι'
           name: θαλάσσιο
+        sconyers:
+          lessons:
+            Linking Screens:
+              name: Συνδέοντας Οθόνες
         dance--draft:
           lessons:
             Dance Party:
@@ -1950,10 +2070,14 @@ el:
               name: Διαδίκτυο
             Crowdsourcing:
               name: Crowdsourcing
+            Access Ability:
+              name: Σχεδιάζοντας για Προσβασιμότητα
             Digital Sharing:
               name: Κοινοποίηση στον ψηφιακό κόσμο
             Simon Says:
               name: Κάνε ό,τι κάνω
+            Designing for Accessibility:
+              name: Σχεδιάζοντας για Προσβασιμότητα
             Songwriting:
               name: Σύνθεση τραγουδιού
         express-2019:
@@ -2050,6 +2174,8 @@ el:
               name: Χαρούμενοι Χάρτες
             Going Places Safely:
               name: Πηγαίνοντας σε Μέρη με Ασφάλεια
+            Programming with Rey and BB-8:
+              name: Προγραμματίζοντας με τον Ρέι και BB-8
         courseb-2019:
           title: Μάθημα B (2019)
           lesson_groups:
@@ -2064,6 +2190,8 @@ el:
               name: Μετακίνησέ το, Μετακίνησέ το
             Your Digital Footprint:
               name: Το Ψηφιακό σου Αποτύπωμα
+            Programming with Rey and BB-8:
+              name: Προγραμματίζοντας με τον Ρέι και BB-8
             Loops in Ice Age:
               name: Βρόχοι στην Εποχή των Παγετώνων
             'Loops: Getting Loopy':
@@ -2079,6 +2207,8 @@ el:
               name: Μετακίνησέ το, Μετακίνησέ το
             Your Digital Footprint:
               name: Το Ψηφιακό σου Αποτύπωμα
+            Programming with Rey and BB-8:
+              name: Προγραμματίζοντας με τον Ρέι και BB-8
             Spelling Bee:
               name: Η μέλισσα της ορθογραφίας
         removed19:
@@ -2090,6 +2220,8 @@ el:
             cspSurvey:
               display_name: Έρευνα
           lessons:
+            Headings:
+              name: Επικεφαλίδες
             Lists:
               name: Λίστες
         csd3-2019:
@@ -2103,23 +2235,41 @@ el:
               name: Χαρακτήρας
             Conditionals:
               name: Συνθήκες
+            Keyboard Input:
+              name: Είσοδος Πληκτρολογίου
             Velocity:
               name: Ταχύτητα
+            Collisions:
+              name: Συγκρούσεις
             Functions:
               name: Συναρτήσεις
         csd4-2019:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+          lessons:
+            Linking Screens:
+              name: Συνδέοντας Οθόνες
         csd5-2019:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+          lessons:
+            Representing Images:
+              name: Αναπαριστώντας Εικόνες
+            Keeping Data Secret:
+              name: Κρατώντας τα Δεδομένα Μυστικά
+            Combining Representations:
+              name: Συνδυάζοντας Αναπαραστάσεις
         csd6-2019:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
           lessons:
+            Board Events:
+              name: Γεγονότα Πίνακα
+            Getting Properties:
+              name: Αποκτώντας Ιδιότητες
             Functions with Parameters:
               name: Συναρτήσεις με παραμέτρους
         csp4-pilot:
@@ -2142,6 +2292,8 @@ el:
             cspSurvey:
               display_name: Έρευνα
           lessons:
+            Binary Numbers:
+              name: Δυαδικοί Αριθμοί
             The Internet:
               name: Το Διαδίκτυο
         csp2-2019:
@@ -2190,6 +2342,9 @@ el:
               display_name: Έρευνα
             required:
               display_name: Επισκόπηση
+          lessons:
+            Binary Numbers:
+              name: Δυαδικοί Αριθμοί
         time4csdemo:
           lesson_groups:
             csf_sprites:
@@ -2327,8 +2482,12 @@ el:
             cspSurvey:
               display_name: Έρευνα
           lessons:
+            Headings:
+              name: Επικεφαλίδες
             Lists:
               name: Λίστες
+            Linking Pages:
+              name: Συνδέοντας Σελίδες
         csd3-pilot:
           lesson_groups:
             cspSurvey:
@@ -2340,8 +2499,12 @@ el:
               name: Χαρακτήρας
             Conditionals:
               name: Συνθήκες
+            Keyboard Input:
+              name: Είσοδος Πληκτρολογίου
             Velocity:
               name: Ταχύτητα
+            Collisions:
+              name: Συγκρούσεις
             Functions:
               name: Συναρτήσεις
             Random Numbers:
@@ -2366,6 +2529,8 @@ el:
             csf_events:
               display_name: Συμβάντα
           lessons:
+            Programming with Rey and BB-8:
+              name: Προγραμματίζοντας με τον Ρέι και BB-8
             Loops in Ice Age:
               name: Βρόχοι στην Εποχή των Παγετώνων
         dlp19-csd-mod-fit:
@@ -2432,6 +2597,8 @@ el:
           lessons:
             Computer Science Fundamentals:
               name: Βασικές αρχές της επιστήμης υπολογιστών
+            Planning:
+              name: Σχεδιασμός
             Loops:
               name: Βρόχοι
             Conditionals:
@@ -2552,6 +2719,11 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+          lessons:
+            Headings:
+              name: Επικεφαλίδες
+            Linking Pages:
+              name: Συνδέοντας Σελίδες
         csd1-2020:
           lesson_groups:
             cspSurvey:
@@ -2560,15 +2732,29 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+          lessons:
+            Linking Screens:
+              name: Συνδέοντας Οθόνες
         csd5-2020:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+          lessons:
+            Representing Images:
+              name: Αναπαριστώντας Εικόνες
+            Keeping Data Secret:
+              name: Κρατώντας τα Δεδομένα Μυστικά
+            Combining Representations:
+              name: Συνδυάζοντας Αναπαραστάσεις
         csd6-2020:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
           lessons:
+            Board Events:
+              name: Γεγονότα Πίνακα
+            Getting Properties:
+              name: Αποκτώντας Ιδιότητες
             Functions with Parameters:
               name: Συναρτήσεις με παραμέτρους
         csd3-2020:
@@ -2584,8 +2770,12 @@ el:
               name: Ιδιότητες Χαρακτήρα
             Conditionals:
               name: Συνθήκες
+            Keyboard Input:
+              name: Είσοδος Πληκτρολογίου
             Velocity:
               name: Ταχύτητα
+            Collisions:
+              name: Συγκρούσεις
             Functions:
               name: Συναρτήσεις
             Text:
@@ -2606,6 +2796,8 @@ el:
               name: Πηγαίνοντας σε Μέρη με Ασφάλεια
             'Programming: Happy Maps':
               name: Χαρούμενοι Χάρτες
+            Programming with Rey and BB-8:
+              name: Προγραμματίζοντας με τον Ρέι και BB-8
         courseb-2020:
           title: Μάθημα B (2020)
           lesson_groups:
@@ -2686,10 +2878,14 @@ el:
               name: Κάνε ό,τι κάνω
             Private and Personal Information:
               name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
+            Access Ability:
+              name: Σχεδιάζοντας για Προσβασιμότητα
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
             Digital Sharing:
               name: Κοινοποίηση στον ψηφιακό κόσμο
+            Designing for Accessibility:
+              name: Σχεδιάζοντας για Προσβασιμότητα
         coursef-2020:
           title: Μάθημα F (2020)
           lesson_groups:
@@ -2738,6 +2934,8 @@ el:
             csf_events:
               display_name: Συμβάντα
           lessons:
+            Programming with Rey and BB-8:
+              name: Προγραμματίζοντας με τον Ρέι και BB-8
             Spelling Bee:
               name: Η μέλισσα της ορθογραφίας
             Loops in Ice Age:
@@ -2746,6 +2944,9 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+          lessons:
+            Binary Numbers:
+              name: Δυαδικοί Αριθμοί
         csp3-2020:
           lessons:
             Debugging:
@@ -2758,6 +2959,10 @@ el:
           lessons:
             Debugging:
               name: Εντοπισμός σφαλμάτων
+        csd2-virtual:
+          lessons:
+            Headings:
+              name: Επικεφαλίδες
         csp5-virtual:
           lessons:
             While Loops:
@@ -2766,8 +2971,12 @@ el:
               name: Μεταβλητές
         virtual-holding-place:
           lessons:
+            Example Projects:
+              name: Παράδειγμα Εργασιών
             Velocity:
               name: Ταχύτητα
+            Collisions:
+              name: Συγκρούσεις
             Functions:
               name: Συναρτήσεις
         code-break:
@@ -2814,8 +3023,12 @@ el:
               name: κείμενο
             Conditionals:
               name: Συνθήκες
+            Keyboard Input:
+              name: Είσοδος Πληκτρολογίου
             Velocity:
               name: Ταχύτητα
+            Collisions:
+              name: Συγκρούσεις
             Functions:
               name: Συναρτήσεις
         curriculum-sandbox-levels:
@@ -2867,6 +3080,13 @@ el:
             cspSurvey:
               display_name: Έρευνα
         csd2-2021:
+          lessons:
+            Headings:
+              name: Επικεφαλίδες
+            Linking Pages:
+              name: Συνδέοντας Σελίδες
+            lesson-1:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -2884,29 +3104,56 @@ el:
               name: κείμενο
             Conditionals:
               name: Συνθήκες
+            Keyboard Input:
+              name: Είσοδος Πληκτρολογίου
             Velocity:
               name: Ταχύτητα
+            Collisions:
+              name: Συγκρούσεις
             Functions:
               name: Συναρτήσεις
+            lesson-1:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
         csd4-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
         csd5-2021:
+          lessons:
+            Representing Images:
+              name: Αναπαριστώντας Εικόνες
+            Keeping Data Secret:
+              name: Κρατώντας τα Δεδομένα Μυστικά
+            Combining Representations:
+              name: Συνδυάζοντας Αναπαραστάσεις
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
         csd6-2021:
           lessons:
+            Board Events:
+              name: Γεγονότα Πίνακα
+            Getting Properties:
+              name: Αποκτώντας Ιδιότητες
             Functions with Parameters:
               name: Συναρτήσεις με παραμέτρους
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
         csp1-2021:
+          lessons:
+            Binary Numbers:
+              name: Δυαδικοί Αριθμοί
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -2965,6 +3212,8 @@ el:
           lessons:
             'Programming: Happy Maps':
               name: Χαρούμενοι Χάρτες
+            Programming with Rey and BB-8:
+              name: Προγραμματίζοντας με τον Ρέι και BB-8
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3034,10 +3283,16 @@ el:
           lessons:
             Private and Personal Information:
               name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
+            About Me:
+              name: 'Μικρή Εργασία: Σχετικά με Εμένα'
             Digital Sharing:
               name: Κοινοποίηση στον ψηφιακό κόσμο
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
+            Designing for Accessibility:
+              name: Σχεδιάζοντας για Προσβασιμότητα
+            lesson-1:
+              name: Σχεδιάζοντας για Προσβασιμότητα
           lesson_groups:
             ramp_up:
               display_name: Φωλιασμένες Επαναλήψεις
@@ -3057,6 +3312,8 @@ el:
               name: Το Διαδίκτυο
             For Loop Fun:
               name: Διασκέδαση με το Βρόχο Για
+            lesson-1:
+              name: Σχεδιάζοντας για Προσβασιμότητα
             lesson-8:
               name: Χαρακτήρες σε Δράση
             lesson-5:
@@ -3085,6 +3342,8 @@ el:
             lesson-3:
               name: Χαρακτήρες σε Δράση
           lesson_groups:
+            csf_warmup:
+              display_name: Προθέρμανση
             csf_loops:
               display_name: Βρόχοι
             csf_conditionals:
@@ -3100,6 +3359,9 @@ el:
             lessonGroup-9:
               display_name: Συμβάντα
         pre-express-2021:
+          lessons:
+            Programming with Rey and BB-8:
+              name: Προγραμματίζοντας με τον Ρέι και BB-8
           lesson_groups:
             csf_loops:
               display_name: Βρόχοι
@@ -3123,12 +3385,22 @@ el:
             variables:
               display_name: Μεταβλητές
         csd4-preview-2021:
+          lessons:
+            Linking Screens:
+              name: Συνδέοντας Οθόνες
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
             csdSurvey:
               display_name: Έρευνα
         csd5-preview-2021:
+          lessons:
+            Representing Images:
+              name: Αναπαριστώντας Εικόνες
+            Keeping Data Secret:
+              name: Κρατώντας τα Δεδομένα Μυστικά
+            Combining Representations:
+              name: Συνδυάζοντας Αναπαραστάσεις
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3164,6 +3436,9 @@ el:
             lessonGroup-4:
               display_name: Έρευνα
         csd7-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
           lesson_groups:
             lessonGroup-4:
               display_name: Έρευνα
@@ -3171,6 +3446,8 @@ el:
           lessons:
             Computer Science Fundamentals:
               name: Βασικές αρχές της επιστήμης υπολογιστών
+            Planning:
+              name: Σχεδιασμός
         outbreak-module:
           title: Έξαρση
         csa-videos:
@@ -3226,14 +3503,23 @@ el:
           title: Η μέλισσα της ορθογραφίας
         outbreak-csc:
           title: Έξαρση
+        csd-post-survey-2021:
+          title: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
         spelling-bee-2021:
           lessons:
             lesson-1:
               name: Η μέλισσα της ορθογραφίας
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Οπτικοποίηση Δεδομένων
+          title: Οπτικοποίηση Δεδομένων
         2022drafting:
           lessons:
             lesson-4:
               name: Προσομοιωτής Επιδημικής Έξαρσης
+            lesson-5:
+              name: 'Μικρή Εργασία: Σχετικά με Εμένα'
             For Loop Fun:
               name: Διασκέδαση με το Βρόχο Για
           lesson_groups:
@@ -3250,12 +3536,16 @@ el:
               display_name: Μεταβλητές
         csd6-pilot-2022:
           lessons:
+            Board Events:
+              name: Γεγονότα Πίνακα
             Functions with Parameters:
               name: Συναρτήσεις
         coursea-2022:
           lessons:
             Happy Maps:
               name: Χαρούμενοι Χάρτες
+            Programming with Rey and BB-8:
+              name: Προγραμματίζοντας με τον Ρέι και BB-8
             'Programming: Happy Maps':
               name: Χαρούμενοι Χάρτες
           lesson_groups:
@@ -3291,6 +3581,9 @@ el:
             csf_for_loops:
               display_name: Βρόχοι Για
         csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Δυαδικοί Αριθμοί
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3386,12 +3679,20 @@ el:
           lessons:
             Private and Personal Information:
               name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
+            'Mini-Project: About Me':
+              name: 'Μικρή Εργασία: Σχετικά με Εμένα'
             Digital Sharing:
               name: Κοινοποίηση στον ψηφιακό κόσμο
             Songwriting:
               name: Σύνθεση τραγουδιού
+            Designing for Accessibility:
+              name: Σχεδιάζοντας για Προσβασιμότητα
+            About Me:
+              name: 'Μικρή Εργασία: Σχετικά με Εμένα'
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
+            lesson-1:
+              name: Σχεδιάζοντας για Προσβασιμότητα
           lesson_groups:
             csf_sprites:
               display_name: Χαρακτήρας
@@ -3434,6 +3735,9 @@ el:
             lessonGroup-5:
               display_name: Έρευνα
         pre-express-2022:
+          lessons:
+            Programming with Rey and BB-8:
+              name: Προγραμματίζοντας με τον Ρέι και BB-8
           lesson_groups:
             csf_loops:
               display_name: Βρόχοι
@@ -3506,11 +3810,28 @@ el:
               name: Μεταβλητές
             For Loops:
               name: Βρόχοι Για
+        csc-pilot-2022-fables:
+          lessons:
+            lesson-4:
+              name: "[Optional] Εισαγωγή στους Μύθους"
+            lesson-5:
+              name: Σχεδιάστε το Μύθο σας
+            lesson-6:
+              name: Μοιραστείτε το Μύθο σας
         csd1-2022:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
         csd2-2022:
+          lessons:
+            Headings:
+              name: Επικεφαλίδες
+            Linking Pages:
+              name: Συνδέοντας Σελίδες
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
+            lesson-1:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3528,32 +3849,66 @@ el:
               name: κείμενο
             Conditionals:
               name: Συνθήκες
+            Keyboard Input:
+              name: Είσοδος Πληκτρολογίου
             Velocity:
               name: Ταχύτητα
+            Collisions:
+              name: Συγκρούσεις
             Functions:
               name: Συναρτήσεις
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
+            lesson-1:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
         csd4-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
         csd5-2022:
+          lessons:
+            Representing Images:
+              name: Αναπαριστώντας Εικόνες
+            Combining Representations:
+              name: Συνδυάζοντας Αναπαραστάσεις
+            Keeping Data Secret:
+              name: Κρατώντας τα Δεδομένα Μυστικά
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
         csd7-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
           lesson_groups:
             lessonGroup-4:
               display_name: Έρευνα
         csd6-2022:
           lessons:
+            Board Events:
+              name: Γεγονότα Πίνακα
             Functions:
               name: Συναρτήσεις
+            CS Discoveries Post-Course Survey:
+              name: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
           lesson_groups:
             lessonGroup-4:
               display_name: Έρευνα
+        csd-post-survey-2022:
+          title: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
+        testtess2:
+          name: testtess2
+        aiml-2022:
+          name: aiml-2022
+          description_short: Μάθετε για την Τεχνητή Νοημοσύνη και την Μηχανική Μάθηση
         dlp-csd-overview-2022:
           lessons:
             Overview:
@@ -3566,3 +3921,17 @@ el:
               name: Επισκόπηση
             lesson-1:
               name: Επισκόπηση
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Εισαγωγή στους Μύθους"
+            Plan Your Fable:
+              name: Σχεδιάστε το Μύθο σας
+            Share Your Fable:
+              name: Μοιραστείτε το Μύθο σας
+            lesson-4:
+              name: "[Optional] Εισαγωγή στους Μύθους"
+            lesson-5:
+              name: Σχεδιάστε το Μύθο σας
+            lesson-6:
+              name: Μοιραστείτε το Μύθο σας

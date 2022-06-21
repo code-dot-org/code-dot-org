@@ -892,6 +892,7 @@ pt:
         csd_u6_input_output: Entrada e saída
         csp_applab_parameters: Funções com Parâmetros
         CSA-PL-intro-to-arrays: Matrizes unidimensionais (1D)
+        CS_Changing_Everything: Ciência da Computação está Mudando Tudo
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco
