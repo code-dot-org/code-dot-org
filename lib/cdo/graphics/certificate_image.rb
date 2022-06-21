@@ -234,7 +234,9 @@ class CertificateImage
       else
         'hour_of_code_certificate.jpg'
       end
-    elsif ScriptConstants.unit_in_category?(:twenty_hour, course) || course == 'accelerated'
+    elsif ScriptConstants.unit_in_category?(:twenty_hour, course) || course == ScriptConstants::ACCELERATED_NAME
+      # The 20-hour course is referred to as "accelerated" throughout the
+      # congrats and certificate pages (see csf_finish_url).
       '20hours_certificate.jpg'
     else
       'blank_certificate.png'
