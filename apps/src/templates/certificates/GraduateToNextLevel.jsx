@@ -10,8 +10,8 @@ import {
 const GraduateToNextLevel = ({scriptName, courseTitle, courseDesc}) => {
   // The scriptName prop takes the form `course1` or `courseb-2022` or `applab-intro`
   const courseInfo =
-    nextLevelCourseCards.find(courseCard =>
-      scriptName.includes(courseCard.scriptName)
+    nextLevelCourseCards.find(
+      courseCard => scriptName && scriptName.includes(courseCard.scriptName)
     ) || defaultNextLevelCourseCard;
 
   return (
