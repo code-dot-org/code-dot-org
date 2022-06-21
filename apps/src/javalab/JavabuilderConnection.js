@@ -3,7 +3,8 @@ import {
   StatusMessageType,
   STATUS_MESSAGE_PREFIX,
   ExecutionType,
-  AuthorizerSignalType
+  AuthorizerSignalType,
+  CsaViewMode
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -246,7 +247,19 @@ export default class JavabuilderConnection {
         this.onNewlineMessage();
         break;
       case WebSocketMessageType.NEIGHBORHOOD:
+        if (this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
+          this.miniApp.handleSignal(data);
+        } else {
+          this.onUnsupportedNeighborhoodMessage();
+        }
+        break;
       case WebSocketMessageType.THEATER:
+        if (this.miniAppType === CsaViewMode.THEATER) {
+          this.miniApp.handleSignal(data);
+        } else {
+          this.onUnsupportedTheaterMessage();
+        }
+        break;
       case WebSocketMessageType.PLAYGROUND:
         this.miniApp.handleSignal(data);
         break;
@@ -308,6 +321,16 @@ export default class JavabuilderConnection {
 
   onTimeout() {
     this.setIsRunning(false);
+  }
+
+  onUnsupportedNeighborhoodMessage() {
+    this.onOutputMessage(javalabMsg.unsupportedNeighborhoodMessage());
+    this.onNewlineMessage();
+  }
+
+  onUnsupportedTheaterMessage() {
+    this.onOutputMessage(javalabMsg.unsupportedTheaterMessage());
+    this.onNewlineMessage();
   }
 
   // Send a message across the websocket connection to Javabuilder
