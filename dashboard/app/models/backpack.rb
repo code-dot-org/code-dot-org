@@ -14,7 +14,7 @@
 #  index_backpacks_on_user_id         (user_id) UNIQUE
 #
 class Backpack < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
 
   # The projects table used to be named storage_apps. This column has not been renamed
   # to reflect the new table name, so an alias is used to clarify which table this ID maps to.

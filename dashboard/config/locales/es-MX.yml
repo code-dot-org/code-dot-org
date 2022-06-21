@@ -251,9 +251,9 @@ es-MX:
     share_teacher_email_reg_partner_preference_required: Debes especificar una preferencia
       de correo electrónico.
     parent_account_checkbox: Soy padre o tutor registrándose en lugar de mi hijo
-    parent_account_email_progress_permission: "¿Podríamos enviarte emails con actualizaciones
-      ocasionales del progreso y proyectos de tus hijos, y actualizaciones sobre sus
-      cursos de ciencias de la computación? [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
+    parent_account_email_progress_permission: "¿Podemos enviarle emails con para contarle
+      sobre el rendimiento y los proyectos de su hijo? Tambien mandaremos informacion
+      sobre los cursos de ciencias computacionales [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
     parent_account_email_label: Correo electrónico del padre o tutor
   school_info:
     title: Información de la escuela (opcional)
@@ -1344,6 +1344,7 @@ es-MX:
         israel: Israel
         malaysia: Malasia
         mexico: México
+        paraguay: Paraguay
         thailand: Tailandia
         uzbekistan: Uzbekistán
       ages:

@@ -11,8 +11,8 @@
 #  index_lessons_resources_on_resource_id_and_lesson_id  (resource_id,lesson_id)
 #
 class LessonsResource < ApplicationRecord
-  belongs_to :lesson
-  belongs_to :resource
+  belongs_to :lesson, optional: true
+  belongs_to :resource, optional: true
 
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.

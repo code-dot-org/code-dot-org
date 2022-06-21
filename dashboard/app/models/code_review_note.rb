@@ -19,9 +19,9 @@ class CodeReviewNote < ApplicationRecord
   # TODO: This model will be renamed to CodeReviewComment once the old models are
   # removed.
 
-  belongs_to :commenter, class_name: 'User'
+  belongs_to :commenter, class_name: 'User', optional: true
   # TODO: When the column is renamed, update this association
-  belongs_to :code_review, class_name: 'CodeReview', foreign_key: :code_review_request_id
+  belongs_to :code_review, class_name: 'CodeReview', foreign_key: :code_review_request_id, optional: true
 
   acts_as_paranoid
 
