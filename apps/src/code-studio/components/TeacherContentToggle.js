@@ -72,7 +72,7 @@ class TeacherContentToggle extends React.Component {
     };
     let hasOverlayFrame = isLockedLesson || isHiddenLesson;
 
-    if (viewAs === ViewType.Participant && !isCodeReviewing) {
+    if (viewAs === ViewType.Participant) {
       // When a teacher is code reviewing another teacher, we load a different header experience
       // so that we don't expose progress between peers. Section data is not loaded in this teacher-as-student
       // viewing another teacher experience
