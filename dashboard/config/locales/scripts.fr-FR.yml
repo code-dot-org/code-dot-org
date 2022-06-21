@@ -18452,7 +18452,7 @@ fr:
             For Loops:
               name: Les Boucles « Pour »
             End of Course projects:
-              name: Projets de Fin de Cours
+              name: Projets de fin de cours
             Reviewing your reflections:
               name: Examiner vos réflexions
         vpl-csd1-ci-pilot-2022:
@@ -19007,3 +19007,21 @@ fr:
               name: Aperçu
             lesson-1:
               name: Aperçu
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Bonjour tout le monde dans CSC
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Art du poème
+        self-paced-pl-csd5-2022:
+          lessons:
+            Train a machine learning model:
+              name: Les Animations Interactives et les Jeux
+            Engage with machine learning apps:
+              name: Le Processus Du Concept
+            Consider real world implications:
+              name: Les Données et la Société
+            Unit wrap up:
+              name: L'Informatique Physique

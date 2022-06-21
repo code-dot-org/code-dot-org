@@ -17193,7 +17193,7 @@ id:
             For Loops:
               name: For Loop
             End of Course projects:
-              name: Proyek Akhir-Kursus
+              name: Proyek Akhir Kursus
             Reviewing your reflections:
               name: Meninjau kembali renungan Anda
         vpl-csd1-ci-pilot-2022:
@@ -17802,3 +17802,36 @@ id:
               name: Tinjauan
             lesson-1:
               name: Tinjauan
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Halo Dunia CSC
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Pengantar Fable"
+            Plan Your Fable:
+              name: Rencanakan Fable Anda
+            Share Your Fable:
+              name: Bagikan Fable Anda
+            lesson-4:
+              name: "[Optional] Pengantar Fable"
+            lesson-5:
+              name: Rencanakan Fable Anda
+            lesson-6:
+              name: Bagikan Fable Anda
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Seni Puisi
+        self-paced-pl-csd5-2022:
+          lessons:
+            Train a machine learning model:
+              name: Animasi dan Permainan Interaktif
+            Engage with machine learning apps:
+              name: Proses Desain
+            Consider real world implications:
+              name: Data dan Masyarakat
+            Unit wrap up:
+              name: Komputasi Fisik
+          title: self-paced-pl-csd5
