@@ -96,24 +96,26 @@ export default function Congrats(props) {
         {renderExtraCertificateLinks(language, tutorial)}
       </Certificate>
       {userType === 'teacher' && isEnglish && <TeachersBeyondHoc />}
-      <StudentsBeyondHoc
-        completedTutorialType={tutorialType}
-        MCShareLink={MCShareLink}
-        userType={userType}
-        under13={under13}
-        isEnglish={isEnglish}
-        hideDancePartyFollowUp={hideDancePartyFollowUp}
-      />
-      {userType === 'signedOut' && isEnglish && <TeachersBeyondHoc />}
-      <hr style={styles.divider} />
-      <PetitionCallToAction tutorial={tutorial} />
-      {nextCourseScriptName && (
+      {isHocTutorial && (
+        <StudentsBeyondHoc
+          completedTutorialType={tutorialType}
+          MCShareLink={MCShareLink}
+          userType={userType}
+          under13={under13}
+          isEnglish={isEnglish}
+          hideDancePartyFollowUp={hideDancePartyFollowUp}
+        />
+      )}
+      {!isHocTutorial && (
         <GraduateToNextLevel
           scriptName={nextCourseScriptName}
           courseTitle={nextCourseTitle}
           courseDesc={nextCourseDesc}
         />
       )}
+      {userType === 'signedOut' && isEnglish && <TeachersBeyondHoc />}
+      <hr style={styles.divider} />
+      <PetitionCallToAction tutorial={tutorial} />
     </div>
   );
 }
