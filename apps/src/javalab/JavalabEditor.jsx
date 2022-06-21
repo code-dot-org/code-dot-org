@@ -11,6 +11,9 @@ import {
   setRenderedHeight,
   setEditorColumnHeight,
   setEditTabKey,
+  setActiveTabKey,
+  setLastTabKeyIndex,
+  setOrderedTabKeys,
   setFileMetadata
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
@@ -40,6 +43,9 @@ import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import VersionHistoryWithCommits from '@cdo/apps/templates/VersionHistoryWithCommits';
+
+// click new tab
+// new file
 
 const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
@@ -112,9 +118,12 @@ class JavalabEditor extends React.Component {
     fileMetadata: PropTypes.object.isRequired,
     setFileMetadata: PropTypes.func.isRequired,
     orderedTabKeys: PropTypes.array.isRequired,
+    setOrderedTabKeys: PropTypes.func.isRequired,
     // check if these should be required
     activeTabKey: PropTypes.string,
+    setActiveTabKey: PropTypes.func.isRequired,
     lastTabKeyIndex: PropTypes.number.isRequired,
+    setLastTabKeyIndex: PropTypes.func.isRequired,
     editTabKey: PropTypes.string,
     setEditTabKey: PropTypes.func.isRequired
   };
@@ -277,6 +286,7 @@ class JavalabEditor extends React.Component {
     this.updateValidation(key, isValidation);
   }
 
+  // duped in redux
   getTabKey(index) {
     return `file-${index}`;
   }
@@ -435,7 +445,7 @@ class JavalabEditor extends React.Component {
       return;
     }
 
-    const newTabIndex = this.state.lastTabKeyIndex + 1;
+    const newTabIndex = this.props.lastTabKeyIndex + 1;
     const newTabKey = this.getTabKey(newTabIndex);
 
     // update file key to filename map with new file name
@@ -451,11 +461,11 @@ class JavalabEditor extends React.Component {
     projectChanged();
 
     // add new tab and set it as the active tab
+    this.props.setOrderedTabKeys(newTabs);
+    this.props.setFileMetadata(newFileMetadata);
+    this.props.setActiveTabKey(newTabKey);
+    this.props.setLastTabKeyIndex(newTabIndex);
     this.setState({
-      orderedTabKeys: newTabs,
-      fileMetadata: newFileMetadata,
-      activeTabKey: newTabKey,
-      lastTabKeyIndex: newTabIndex,
       openDialog: null,
       newFileError: null
     });
@@ -887,6 +897,10 @@ export default connect(
     setRenderedHeight: height => dispatch(setRenderedHeight(height)),
     setEditorColumnHeight: height => dispatch(setEditorColumnHeight(height)),
     setEditTabKey: tabKey => dispatch(setEditTabKey(tabKey)),
+    setActiveTabKey: tabKey => dispatch(setActiveTabKey(tabKey)),
+    setLastTabKeyIndex: tabKey => dispatch(setLastTabKeyIndex(tabKey)),
+    setOrderedTabKeys: orderedTabKeys =>
+      dispatch(setOrderedTabKeys(orderedTabKeys)),
     setFileMetadata: fileMetadata => dispatch(setFileMetadata(fileMetadata))
   })
 )(Radium(JavalabEditor));
