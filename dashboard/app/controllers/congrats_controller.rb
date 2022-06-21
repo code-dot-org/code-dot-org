@@ -11,9 +11,9 @@ class CongratsController < ApplicationController
     end
 
     @next_course_script_name = ScriptConstants.csf_next_course_recommendation(course)
-    next_script = Script.get_from_cache(@next_course_script_name)
-    @next_course_title = next_script.localized_title
-    @next_course_description = next_script.localized_description
+    next_script = Script.get_from_cache(@next_course_script_name) if @next_course_script_name
+    @next_course_title = next_script.localized_title if next_script
+    @next_course_description = next_script.localized_description if next_script
 
     # Select two different donors, because the first must have a twitter
     # handle and the second must be equally weighted across all donors.

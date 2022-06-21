@@ -107,11 +107,13 @@ export default function Congrats(props) {
       {userType === 'signedOut' && isEnglish && <TeachersBeyondHoc />}
       <hr style={styles.divider} />
       <PetitionCallToAction tutorial={tutorial} />
-      <GraduateToNextLevel
-        scriptName={nextCourseScriptName}
-        courseTitle={nextCourseTitle}
-        courseDesc={nextCourseDesc}
-      />
+      {nextCourseScriptName && (
+        <GraduateToNextLevel
+          scriptName={nextCourseScriptName}
+          courseTitle={nextCourseTitle}
+          courseDesc={nextCourseDesc}
+        />
+      )}
     </div>
   );
 }
