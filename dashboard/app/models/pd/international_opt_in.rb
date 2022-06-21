@@ -38,7 +38,7 @@ class Pd::InternationalOptIn < ApplicationRecord
 
   belongs_to :user
 
-  validates_presence_of :user_id, :form_data
+  validates_presence_of :form_data
 
   def self.required_fields
     [
