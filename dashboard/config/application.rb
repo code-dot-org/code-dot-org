@@ -23,8 +23,10 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
-    # Explicitly enable Zeitwerk. Eventually, we can simply call:
+    # Explicitly load appropriate defaults for this version of Rails.
+    # Eventually, we want to simply call:
     #config.load_defaults 6.0
+    config.active_record.belongs_to_required_by_default = true
     config.autoloader = :zeitwerk
 
     unless CDO.chef_managed
