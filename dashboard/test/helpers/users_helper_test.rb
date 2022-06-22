@@ -13,7 +13,6 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal(
       {
         linesOfCode: 42,
-        linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
         isInstructor: false,
         progress: {},
@@ -30,7 +29,6 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal(
       {
         linesOfCode: 42,
-        linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
         isInstructor: false,
         progress: {
@@ -50,7 +48,6 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCode: 42,
         lockableAuthorized: false,
         isInstructor: false,
-        linesOfCodeText: 'Total lines of code: 42',
       },
       summarize_user_progress(script, user, exclude_level_progress)
     )
@@ -106,7 +103,6 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal(
       {
         linesOfCode: 42,
-        linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
         isInstructor: false,
         progress: {
@@ -140,7 +136,6 @@ class UsersHelperTest < ActionView::TestCase
 
     expected_summary = {
       linesOfCode: 150,
-      linesOfCodeText: 'Total lines of code: 150',
       lockableAuthorized: false,
       isInstructor: false,
       progress: {
