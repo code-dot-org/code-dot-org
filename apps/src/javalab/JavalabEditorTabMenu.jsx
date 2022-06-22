@@ -27,7 +27,6 @@ export class JavalabEditorTabMenu extends Component {
     const {
       renameFromTabMenu,
       deleteFromTabMenu,
-      cancelTabMenu,
       showVisibilityOption,
       changeFileTypeFromTabMenu,
       fileIsVisible,
@@ -95,11 +94,6 @@ export class JavalabEditorTabMenu extends Component {
         );
       }
     }
-    elements.push(
-      <button key="cancel" onClick={cancelTabMenu} type="button">
-        {javalabMsg.cancel()}
-      </button>
-    );
     return elements;
   };
 
