@@ -14,7 +14,8 @@ import {
   setActiveTabKey,
   setLastTabKeyIndex,
   setOrderedTabKeys,
-  setFileMetadata
+  setFileMetadata,
+  getTabKey
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
@@ -116,8 +117,7 @@ class JavalabEditor extends React.Component {
     setFileMetadata: PropTypes.func.isRequired,
     orderedTabKeys: PropTypes.array.isRequired,
     setOrderedTabKeys: PropTypes.func.isRequired,
-    // check if these should be required
-    activeTabKey: PropTypes.string,
+    activeTabKey: PropTypes.string.isRequired,
     setActiveTabKey: PropTypes.func.isRequired,
     lastTabKeyIndex: PropTypes.number.isRequired,
     setLastTabKeyIndex: PropTypes.func.isRequired,
@@ -283,11 +283,6 @@ class JavalabEditor extends React.Component {
     this.updateValidation(key, isValidation);
   }
 
-  // duped in redux
-  getTabKey(index) {
-    return `file-${index}`;
-  }
-
   makeListeners(key) {
     return {
       onContextMenu: e => {
@@ -403,7 +398,7 @@ class JavalabEditor extends React.Component {
     if (!this.validateFileName(newFilename, 'renameFileError')) {
       return;
     }
-    const {fileMetadata, editTabKey} = this.props;
+    const {fileMetadata, setFileMetadata, editTabKey, renameFile} = this.props;
     // check for duplicate filename
     const duplicateFileError = this.checkDuplicateFileName(newFilename);
     if (duplicateFileError) {
@@ -419,8 +414,8 @@ class JavalabEditor extends React.Component {
     const oldFilename = fileMetadata[editTabKey];
 
     // update sources with new filename
-    this.props.renameFile(oldFilename, newFilename);
-    this.props.setFileMetadata(newFileMetadata);
+    renameFile(oldFilename, newFilename);
+    setFileMetadata(newFileMetadata);
     projectChanged();
     this.setState({
       openDialog: null,
@@ -442,26 +437,36 @@ class JavalabEditor extends React.Component {
       return;
     }
 
-    const newTabIndex = this.props.lastTabKeyIndex + 1;
-    const newTabKey = this.getTabKey(newTabIndex);
+    const {
+      lastTabKeyIndex,
+      setLastTabKeyIndex,
+      fileMetadata,
+      setFileMetadata,
+      orderedTabKeys,
+      setOrderedTabKeys,
+      setSource,
+      setActiveTabKey
+    } = this.props;
+    const newTabIndex = lastTabKeyIndex + 1;
+    const newTabKey = getTabKey(newTabIndex);
 
     // update file key to filename map with new file name
-    const newFileMetadata = {...this.props.fileMetadata};
+    const newFileMetadata = {...fileMetadata};
     newFileMetadata[newTabKey] = filename;
 
     // add new key to tabs
-    let newTabs = [...this.props.orderedTabKeys];
+    let newTabs = [...orderedTabKeys];
     newTabs.push(newTabKey);
 
     // add new file to sources
-    this.props.setSource(filename, fileContents);
+    setSource(filename, fileContents);
     projectChanged();
 
     // add new tab and set it as the active tab
-    this.props.setOrderedTabKeys(newTabs);
-    this.props.setFileMetadata(newFileMetadata);
-    this.props.setActiveTabKey(newTabKey);
-    this.props.setLastTabKeyIndex(newTabIndex);
+    setOrderedTabKeys(newTabs);
+    setFileMetadata(newFileMetadata);
+    setActiveTabKey(newTabKey);
+    setLastTabKeyIndex(newTabIndex);
     this.setState({
       openDialog: null,
       newFileError: null
@@ -470,7 +475,15 @@ class JavalabEditor extends React.Component {
 
   onDeleteFile() {
     const {fileToDelete} = this.state;
-    const {fileMetadata, orderedTabKeys, activeTabKey} = this.props;
+    const {
+      fileMetadata,
+      setFileMetadata,
+      orderedTabKeys,
+      setOrderedTabKeys,
+      activeTabKey,
+      setActiveTabKey,
+      removeFile
+    } = this.props;
     // find tab in list
     const indexToRemove = orderedTabKeys.indexOf(fileToDelete);
 
@@ -491,12 +504,12 @@ class JavalabEditor extends React.Component {
       // clean up editors
       delete this.editors[fileToDelete];
 
-      this.props.setOrderedTabKeys(newTabs);
-      this.props.setActiveTabKey(newActiveTabKey);
-      this.props.setFileMetadata(newFileMetadata);
+      setOrderedTabKeys(newTabs);
+      setActiveTabKey(newActiveTabKey);
+      setFileMetadata(newFileMetadata);
 
       // delete from sources
-      this.props.removeFile(fileMetadata[fileToDelete]);
+      removeFile(fileMetadata[fileToDelete]);
       projectChanged();
     }
 
@@ -556,13 +569,14 @@ class JavalabEditor extends React.Component {
 
   // This is called from the file explorer when we want to jump to a file
   onOpenFile(key) {
-    let newTabs = [...this.props.orderedTabKeys];
+    const {orderedTabKeys, setOrderedTabKeys, setActiveTabKey} = this.props;
+    let newTabs = [...orderedTabKeys];
     let selectedFileIndex = newTabs.indexOf(key);
     newTabs.splice(selectedFileIndex, 1);
     newTabs.unshift(key);
 
-    this.props.setActiveTabKey(key);
-    this.props.setOrderedTabKeys(newTabs);
+    setActiveTabKey(key);
+    setOrderedTabKeys(newTabs);
 
     // closes the tab menu if it is open
     this.setState({
