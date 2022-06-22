@@ -638,6 +638,7 @@ zh-CN:
         CSA-PL-two-way-selection: 双向选择
         CSA-PL-Printing-in-Java: Java中的打印
         CSA-PL-multi-selection-statements: 多重选择语句
+        CS_Changing_Everything: 计算机科学正在改变一切
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

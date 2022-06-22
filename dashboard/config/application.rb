@@ -1,4 +1,4 @@
-require File.expand_path('../deployment', __FILE__)
+require File.expand_path('../../../deployment', __FILE__)
 require 'cdo/poste'
 require 'rails/all'
 
@@ -154,13 +154,16 @@ module Dashboard
     # this line.
     config.autoload_paths.map!(&:to_s)
 
-    # Make sure some paths are always loaded up front in production environments.
-    # Paths here will also be validated by Zeitwerk
+    # Also make sure some of these directories are always loaded up front in production
+    # environments.
+    #
+    # These directories will also be treated as top-level directories by
+    # Zeitwerk, rather than as subdirectories which require namspacing.
     config.eager_load_paths += [
-      Rails.root.join('lib'),
+      Rails.root.join('app', 'models', 'experiments'),
       Rails.root.join('app', 'models', 'levels'),
-      Rails.root.join('../lib/cdo/shared_constants'),
-    ].map!(&:to_s)
+      Rails.root.join('app', 'models', 'sections')
+    ].map(&:to_s)
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
@@ -187,10 +190,6 @@ module Dashboard
     config.assets.image_optim = false unless CDO.image_optim
 
     config.experiment_cache_time_seconds = 60
-
-    console do
-      ARGV.push '-r', root.join('lib/console.rb')
-    end
 
     # Use custom routes for error codes
     config.exceptions_app = routes

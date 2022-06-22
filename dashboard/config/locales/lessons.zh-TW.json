@@ -153,6 +153,9 @@
           "name": "舞蹈派對 - 深入學習",
           "purpose": "本課堂介紹核心的電腦科學概念：編寫程式與事件程式設計（使用積木）。"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "一小時玩程式 2013"
+        },
         "dance-2019/Dance Party": {
           "name": "舞蹈派對 2019",
           "overview": "在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。",
@@ -165,8 +168,173 @@
           "purpose": "本教程設計為向學生快速介紹 **機器學習**，這是 **人工智慧**。學生會瞭解 **訓練資料** 怎樣使機器學習模型能夠為資料分類。學生應在教程期間獲得正面體驗；而更重要的是，學生應受到激勵，繼續學習電腦科學。",
           "student_overview": "教程摘要：學生首先會把物件分類為「fish」（魚）或「not fish」（不是魚），從而嘗試清除海洋中的垃圾。然後，學生將需要擴充訓練資料集，加入屬於海洋的其他海洋生物。在活動的第 2 部分，學生會自行選擇標籤套用於隨機產生的魚中。這些訓練資料會在機器學習模型中使用，然後學習模型便應能夠自行標籤新的圖像。"
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "歡迎來到「教授計算機科學基礎」"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "瞭解計算機科學基礎課程"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "序列"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "迴圈"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "事件"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "條件判斷（Conditionals）"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "課程結束專案"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "函式"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "變數"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "計次迴圈（For Loops）"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "檢閱你的反思"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "下一步"
+        },
+        "vigenere/Vigenere": {
+          "name": "維吉尼亞密碼"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "情緒學習"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "數位設計"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "事件驅動的程式設計"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "基本的 App 函式"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getter 與 Setter"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "新手上路"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "計算機科學基礎"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "展望未來"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "掌握基本知識：序列（Sequencing）"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "掌握基本知識：迴圈（Loops）"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "掌握基本知識：條件判斷（Conditionals）"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "掌握基本知識：函式（Functions）"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "掌握基本知識：事件（Evnets）"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "教授計算機科學的最佳實踐"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "計畫"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "下一步"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "概覽與操作說明"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "點對點傳輸 - 在共用線路發送位元值"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "點對點傳輸 - 發送數字"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "點對點傳輸 - 發送 Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "廣播訊息"
+        },
+        "netsim/Routers and addresses": {
+          "name": "路由器和網路位址"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "封包和可靠度"
+        },
+        "netsim/Manual DNS": {
+          "name": "手動設定 DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "自動 DNS 節點"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "網路模擬器自由探索"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "逃出房間"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "開始與結束畫面"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "開始與結束畫面2"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "新手上路"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "計算機科學基礎"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "展望未來"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "掌握基本知識：序列（Sequencing）"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "掌握基本知識：迴圈（Loops）"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "掌握基本知識：條件判斷（Conditionals）"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "掌握基本知識：函式（Functions）"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "掌握基本知識：事件（Evnets）"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "教授計算機科學的最佳實踐"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "計畫"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "下一步"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "一小時玩程式 收藏家 2017"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "頻率分析"
         },
         "courseb-2018/Move It, Move It": {
           "name": "移動它，移動它"
@@ -2430,6 +2598,27 @@
         "csd4-2017/Project - App Presentation": {
           "name": "專案 - 應用程式簡報"
         },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "除錯（課程 AB 教師專用）"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "除錯（課程 CDEF 教師專用）"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "黑白像素化教程"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "黑白像素化自由探索"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "色彩像素化教程"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "色彩像素化範例"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "色彩像素化自由探索"
+        },
         "course4/Unplugged: Tangrams": {
           "name": "不插電活動 - 七巧版"
         },
@@ -2495,6 +2684,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "終極挑戰：綜合應用"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "計算機科學介紹"
+        },
+        "20-hour/The Maze": {
+          "name": "迷宮"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "計算機式思維"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "方格紙編程"
+        },
+        "20-hour/The Artist": {
+          "name": "藝術家"
+        },
+        "20-hour/Algorithms": {
+          "name": "演算法"
+        },
+        "20-hour/The Artist 2": {
+          "name": "藝術家 2 "
+        },
+        "20-hour/Functions": {
+          "name": "函式"
+        },
+        "20-hour/The Farmer": {
+          "name": "農夫"
+        },
+        "20-hour/Conditionals": {
+          "name": "條件判斷（Conditionals）"
+        },
+        "20-hour/The Artist 3": {
+          "name": "藝術家 3 "
+        },
+        "20-hour/Song Writing": {
+          "name": "歌曲創作"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "農夫 2 "
+        },
+        "20-hour/Abstraction": {
+          "name": "抽象概念"
+        },
+        "20-hour/The Artist 4": {
+          "name": "藝術家 4 "
+        },
+        "20-hour/Relay Programming": {
+          "name": "接力編程"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "農夫 3 "
+        },
+        "20-hour/The Internet": {
+          "name": "網際網路"
+        },
+        "20-hour/The Artist 5": {
+          "name": "藝術家 5 "
+        },
+        "20-hour/Wrap-up": {
+          "name": "總結"
         },
         "course2/Graph Paper Programming": {
           "name": "方格紙編程"
@@ -2676,6 +2925,132 @@
           "preparation": "-   回顧[常識教育](https://www.commonsense.org/education/digital-citizenship)網站，瞭解更多網上安全方面的內容。",
           "purpose": "本課的主要目標是建立學生的電腦經驗。通過涵蓋最基本的電腦功能，如點擊、拖動和下拉，我們在課堂上為未來的難題創造一個更平等的環境。本課還提供了一個很好的機會來介紹基本的電腦硬體術語，取決於你的設備，可能包括 \"游標\"、\"觸控板 \"或 \"觸控螢幕\"。",
           "student_overview": "以點擊與拖放的方式完成謎題。"
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "CSD 學生課後問卷調查 ('18-'19)"
+        },
+        "allthethings/Jigsaw": {
+          "name": "匿名學生問卷調查 2"
+        },
+        "allthethings/Maze": {
+          "name": "Pluralsight 測試"
+        },
+        "allthethings/Bee": {
+          "name": "蜜蜂"
+        },
+        "allthethings/PlayLab": {
+          "name": "PlayLab"
+        },
+        "allthethings/Farmer": {
+          "name": "農夫"
+        },
+        "allthethings/Flappy": {
+          "name": "像素鳥"
+        },
+        "allthethings/Bounce": {
+          "name": "彈跳"
+        },
+        "allthethings/Multi": {
+          "name": "多個"
+        },
+        "allthethings/Multi2": {
+          "name": "雙人"
+        },
+        "allthethings/Match": {
+          "name": "配對"
+        },
+        "allthethings/TextMatch": {
+          "name": "配上文字"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "籃網"
+        },
+        "allthethings/Odometer": {
+          "name": "呈程表"
+        },
+        "allthethings/Text Compression": {
+          "name": "文字壓縮"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Gamelab": {
+          "name": "Gamelab"
+        },
+        "allthethings/Online PD": {
+          "name": "線上 PD"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Markdown 細節"
+        },
+        "allthethings/Studio": {
+          "name": "工作室"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "多頁評估"
+        },
+        "allthethings/Star wars": {
+          "name": "星際大戰"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "詳盡評估"
+        },
+        "allthethings/Free Response": {
+          "name": "自由回應"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "PLC 評估範例"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "跳越的關卡"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "匿名學生問卷調查"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "公開金鑰加密"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
+        },
+        "allthethings/Single page assessment": {
+          "name": "單頁評估"
+        },
+        "allthethings/Standalone video": {
+          "name": "獨立影片"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "課程參考"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Dance Lab"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "迷你指標"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "外部課程，可選擇顯示為不插電"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "可選關卡"
+        },
+        "allthethings/Contained Levels": {
+          "name": "包含關卡"
+        },
+        "allthethings/ML Fish": {
+          "name": "ML 魚"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java 實驗室"
         },
         "coursef-2021/lesson-6": {
           "name": "Sprite Lab 簡介"
