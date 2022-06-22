@@ -749,6 +749,10 @@ export class WorkshopForm extends React.Component {
       this.setState({
         suppress_email: true
       });
+    } else {
+      this.setState({
+        suppress_email: false
+      });
     }
   };
 
