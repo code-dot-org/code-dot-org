@@ -158,7 +158,6 @@ module Pd
 
     # Used to suppress post-workshop emails and in create/edit workshop UI
     MUST_SUPPRESS_EMAIL_SUBJECTS = [
-      SUBJECT_VIRTUAL_KICKOFF,
       SUBJECT_ADMIN_COUNSELOR_WELCOME,
       SUBJECT_ADMIN_COUNSELOR_SLP_INTRO,
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL1,
