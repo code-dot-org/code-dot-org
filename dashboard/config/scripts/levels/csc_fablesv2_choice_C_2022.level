@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-06-13T21:01:28.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -46,7 +42,7 @@
     "pause_animations_by_default": "false",
     "start_animations": "{\"orderedKeys\":[\"e124324e-b68b-4be7-b7a6-2b22f16a06c7\",\"17cf02ac-58cd-4ebf-826d-690629fa11d2\",\"5948f795-d0e9-4ef4-bbe3-98f3fb7c3cb3\"],\"propsByKey\":{\"5948f795-d0e9-4ef4-bbe3-98f3fb7c3cb3\":{\"name\":\"hare_2_csc\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"animals\"],\"jsonLastModified\":\"2021-10-06 18:55:52 UTC\",\"pngLastModified\":\"2021-10-06 18:55:50 UTC\",\"version\":\"6iwUIQ2eJ0sMw0Fsbd7TmGdI5Yl83FLZ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/6iwUIQ2eJ0sMw0Fsbd7TmGdI5Yl83FLZ/category_animals/hare_2_csc.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"17cf02ac-58cd-4ebf-826d-690629fa11d2\":{\"name\":\"tortoise_1_csc\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"animals\"],\"jsonLastModified\":\"2021-10-06 22:18:36 UTC\",\"pngLastModified\":\"2021-10-06 22:18:34 UTC\",\"version\":\"HkrihWLG8VzyTjcO6p9tHqDVW_rkqxth\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/HkrihWLG8VzyTjcO6p9tHqDVW_rkqxth/category_animals/tortoise_1_csc.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"e124324e-b68b-4be7-b7a6-2b22f16a06c7\":{\"name\":\"flowery_meadow\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-11-10 23:26:29 UTC\",\"pngLastModified\":\"2021-11-10 23:26:29 UTC\",\"version\":\"_q6HFDYtPlVurA3iGo65.mj0G1TF_64W\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/_q6HFDYtPlVurA3iGo65.mj0G1TF_64W/category_backgrounds/flowery_meadow.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}",
     "hide_custom_blocks": "true",
-    "long_instructions": "##The Tortoise and the Hare\r\n**What led to the Hare losing the race?**\r\n- The moral of this story is **slow and steady wins the race.**\r\n- Read each quote in the dropdown menu of the `think` block\r\n- Choose the quote that most closely matches the character’s personality\r\n- Connect it under the `when run` chunk of code\r\n- Click \"Run\"",
+    "long_instructions": "##The Tortoise and the Hare\r\n**What led to the hare losing the race?**\r\n- The moral of this story is **slow and steady wins the race.**\r\n- Read each quote in the dropdown menu of the `think` block\r\n- Choose the quote that most closely matches the character’s personality\r\n- Connect it under the `when run` chunk of code\r\n- Click \"Run\"",
     "parent_level_id": 28525,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
@@ -69,11 +65,18 @@
     "skip_autosave": true,
     "display_name": "The Tortoise and the Hare",
     "thumbnail_url": "https://images.code.org/c3839280edf78da4d56018236598f2d6-image-1650474995627.16.16 AM.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-06-13T21:01:28.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-13T21:01:28.039+00:00\",\"changed\":[\"cloned from \\\"csc_fablesv2_choice_C\\\"\"],\"cloned_from\":\"csc_fablesv2_choice_C\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-13T21:01:28.039+00:00\",\"changed\":[\"cloned from \\\"csc_fablesv2_choice_C\\\"\"],\"cloned_from\":\"csc_fablesv2_choice_C\"},{\"changed_at\":\"2022-06-21 18:37:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
