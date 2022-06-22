@@ -2015,6 +2015,7 @@ el-GR:
   header_educate_beyond: Πέρα από το Code.org
   header_educate_inspire: Εμπνεύστε έναν Μαθητή
   header_educate_community: Online Κοινότητα
+  header_educate_requirements: Τεχνικές Απαιτήσεις
   header_about_us: Σχετικά με εμάς
   header_about_donors: Δωρητές
   header_about_partners: Συνεργάτες
@@ -2216,3 +2217,6 @@ el-GR:
   ai_activity: Δραστηριότητα
   ai_description: Περιγραφή
   outbreak_tile_title: Έξαρση
+  minecraft_tile_alt: 'Δύο χαρακτήρες από τον Ναρκαλιευτή , ο Στιβ και ο Άλεξ, ενάντια
+    σε ένα φόντο που δείχνει ένα θαλάσσιο σκηνικό Ναρκαλιευτή με κοράλλια, δελφίνια
+    και κέλπιες (φύκη). '
