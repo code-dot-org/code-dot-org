@@ -57,4 +57,20 @@ export default class WebSerialPortWrapper extends EventEmitter {
     }
     return this.writer.write(buffer).then(() => callback());
   }
+
+  async close() {
+    if (!this.portOpen) {
+      return;
+    }
+
+    if (this.port.readable && this.port.readable.locked) {
+      await this.reader.cancel();
+      await this.reader.releaseLock();
+    }
+
+    await this.writer.releaseLock();
+
+    await this.port.close();
+    this.portOpen = false;
+  }
 }
