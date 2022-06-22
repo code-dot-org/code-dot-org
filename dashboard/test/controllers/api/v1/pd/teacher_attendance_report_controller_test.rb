@@ -264,9 +264,9 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
 
     # Check expected row counts for our test workshops
     # (We don't count all rows to insulate this test against existing state)
-    assert_equal 10, response.select {|row| row[11] == @pm_workshop.id.to_s}.count
-    assert_equal 10, response.select {|row| row[11] == @workshop.id.to_s}.count
-    assert_equal 1, response.select {|row| row[11] == @other_workshop.id.to_s}.count
+    assert_equal 10, response.count {|row| row[11] == @pm_workshop.id.to_s}
+    assert_equal 10, response.count {|row| row[11] == @workshop.id.to_s}
+    assert_equal 1, response.count {|row| row[11] == @other_workshop.id.to_s}
   end
 
   private
