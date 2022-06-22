@@ -10,8 +10,8 @@ module CertificatesHelper
 
   def certificate_image_url(name, course, donor)
     return CDO.code_org_url('/images/hour_of_code_certificate.jpg') unless course.present?
-    is_hoc = CertificateImage.hoc_course?(course)
-    return CDO.code_org_url("/images/#{CertificateImage.certificate_template_for(course)}") if is_hoc && !name
+    is_prefilled = CertificateImage.prefilled_title_course?(course)
+    return CDO.code_org_url("/images/#{CertificateImage.certificate_template_for(course)}") if is_prefilled && !name
     encoded = encode_params(name, course, donor)
     "/certificate_images/#{encoded}.jpg"
   end
