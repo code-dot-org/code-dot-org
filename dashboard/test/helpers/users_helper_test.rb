@@ -7,12 +7,11 @@ class UsersHelperTest < ActionView::TestCase
 
   def test_summarize_user_progress
     script = create(:script, :with_levels, levels_count: 3)
-    user = create :user, total_lines: 42
+    user = create :user
 
     # Verify results for no completed levels.
     assert_equal(
       {
-        linesOfCode: 42,
         lockableAuthorized: false,
         isInstructor: false,
         progress: {},
@@ -28,7 +27,6 @@ class UsersHelperTest < ActionView::TestCase
 
     assert_equal(
       {
-        linesOfCode: 42,
         lockableAuthorized: false,
         isInstructor: false,
         progress: {
@@ -45,7 +43,6 @@ class UsersHelperTest < ActionView::TestCase
     exclude_level_progress = true
     assert_equal(
       {
-        linesOfCode: 42,
         lockableAuthorized: false,
         isInstructor: false,
       },
@@ -56,7 +53,7 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_summarize_user_progress_with_pages
-    user = create :user, total_lines: 42
+    user = create :user
     script = create :script
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
@@ -102,7 +99,6 @@ class UsersHelperTest < ActionView::TestCase
     # Validate.
     assert_equal(
       {
-        linesOfCode: 42,
         lockableAuthorized: false,
         isInstructor: false,
         progress: {
@@ -121,7 +117,7 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_summarize_user_progress_with_bubble_choice
-    user = create :user, total_lines: 150
+    user = create :user
     script = create :script
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
@@ -135,7 +131,6 @@ class UsersHelperTest < ActionView::TestCase
     create :user_level, user: user, level: sublevel2, script: script, best_result: 20
 
     expected_summary = {
-      linesOfCode: 150,
       lockableAuthorized: false,
       isInstructor: false,
       progress: {
@@ -160,7 +155,7 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_summarize_user_progress_with_locked
-    user = create :user, total_lines: 42
+    user = create :user
     script = create :script
     lesson_group = create :lesson_group, script: script
 
@@ -253,7 +248,7 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_summarize_user_progress_non_lockable
-    user = create :user, total_lines: 42
+    user = create :user
     script = create :script
     lesson_group = create :lesson_group, script: script
 

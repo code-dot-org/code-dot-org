@@ -75,11 +75,7 @@ export default storybook => {
             showPuzzleRatingButtons
             text="However, you could've done it with only N blocks. Can you make your program even better?"
           >
-            <CodeWritten
-              numLinesWritten={9}
-              totalNumLinesWritten={30}
-              useChallengeStyles
-            >
+            <CodeWritten numLinesWritten={9} useChallengeStyles>
               <GeneratedCode
                 message="Here's your code:"
                 code="console.log('F is friends who do stuff together!');"
@@ -103,11 +99,7 @@ export default storybook => {
             showPuzzleRatingButtons
             text="However, you could've done it with only N blocks. Can you make your program even better?"
           >
-            <CodeWritten
-              numLinesWritten={9}
-              totalNumLinesWritten={30}
-              useChallengeStyles
-            >
+            <CodeWritten numLinesWritten={9} useChallengeStyles>
               <GeneratedCode
                 message="Here's your code:"
                 code="console.log('U is for you and me!');"
@@ -131,11 +123,7 @@ export default storybook => {
             cancelButtonLabel="Replay"
             showPuzzleRatingButtons
           >
-            <CodeWritten
-              numLinesWritten={9}
-              totalNumLinesWritten={30}
-              useChallengeStyles
-            >
+            <CodeWritten numLinesWritten={9} useChallengeStyles>
               <GeneratedCode
                 message="Here's your code:"
                 code="console.log('N is for anywhere and anytime at all');"
@@ -158,11 +146,7 @@ export default storybook => {
             primaryButtonLabel="Continue"
             cancelButtonLabel="Replay"
           >
-            <CodeWritten
-              numLinesWritten={9}
-              totalNumLinesWritten={30}
-              useChallengeStyles
-            >
+            <CodeWritten numLinesWritten={9} useChallengeStyles>
               <GeneratedCode
                 message="Here's your code:"
                 code="console.log('N is for anywhere and anytime at all');"
