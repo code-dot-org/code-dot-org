@@ -7,7 +7,6 @@ import javalab, {
   getSources,
   getValidation,
   setAllSources,
-  setFileMetadataFromSources,
   setAllValidation,
   setDisplayTheme,
   appendOutputLog,
@@ -203,7 +202,7 @@ Javalab.prototype.init = function(config) {
   registerReducers({javalab, playground});
   // If we're in editBlock mode (for editing start_sources) we set up the save button to save
   // the project file information into start_sources on the level.
-  if (config.level.editBlocks) {
+  if (this.isStartMode) {
     config.level.lastAttempt = '';
     showLevelBuilderSaveButton(() => ({
       start_sources: getSources(getStore().getState()),
@@ -223,7 +222,6 @@ Javalab.prototype.init = function(config) {
   }
 
   const startSources = config.level.lastAttempt || config.level.startSources;
-  console.log(startSources);
   const validation = config.level.validation || {};
   if (config.level.exemplarSources) {
     // If we have exemplar sources (either for editing or viewing), set initial sources
@@ -236,7 +234,7 @@ Javalab.prototype.init = function(config) {
   ) {
     // Otherwise, if startSources exists and contains at least one key, use startSources.
 
-    if (config.level.editBlocks) {
+    if (this.isStartMode) {
       Object.keys(startSources).forEach(key => {
         startSources[key].isValidation = false;
       });
@@ -245,23 +243,23 @@ Javalab.prototype.init = function(config) {
         validation[key].isVisible = false;
       });
       getStore().dispatch(
-        setAllSources({
-          ...startSources,
-          // If we're editing start sources, validation is part of the source
-          ...(config.level.editBlocks && validation)
-        })
+        setAllSources(
+          {
+            ...startSources,
+            ...validation
+          },
+          this.isStartMode
+        )
       );
     } else {
       getStore().dispatch(setAllSources(startSources));
-      // Not sure if this is right place for this?
-      getStore().dispatch(setFileMetadataFromSources());
     }
   }
 
   // If we aren't editing start sources but we have validation code, we need to
   // store it in redux to check for naming conflicts
   if (
-    !config.level.editBlocks &&
+    !this.isStartMode &&
     validation &&
     typeof validation === 'object' &&
     Object.keys(validation).length > 0
