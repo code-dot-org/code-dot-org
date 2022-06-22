@@ -35,6 +35,7 @@ const SET_ACTIVE_TAB_KEY = 'javalab/SET_ACTIVE_TAB_KEY';
 const SET_LAST_TAB_KEY_INDEX = 'javalab/SET_LAST_TAB_KEY_INDEX';
 const SET_FILE_METADATA = 'javalab/SET_FILE_METADATA';
 const SET_ORDERED_TAB_KEYS = 'javalab/SET_ORDERED_TAB_KEYS';
+const SET_EDITOR_METADATA = 'javalab/SET_EDITOR_METADATA';
 
 export const getTabKey = index => `file-${index}`;
 
@@ -139,13 +140,15 @@ export const setSource = (
   filename,
   source,
   isVisible = true,
-  isValidation = false
+  isValidation = false,
+  fileMetadata = {}
 ) => ({
   type: SET_SOURCE,
   filename,
   source,
   isVisible,
-  isValidation
+  isValidation,
+  fileMetadata
 });
 
 // Handles updates to text within Code Mirror (ie, when text is edited)
@@ -331,6 +334,16 @@ export const setOrderedTabKeys = orderedTabKeys => {
   };
 };
 
+export const setEditorMetadata = editorMetadata => {
+  return {
+    type: SET_EDITOR_METADATA,
+    orderedTabKeys: editorMetadata.orderedTabKeys,
+    fileMetadata: editorMetadata.fileMetadata,
+    activeTabKey: editorMetadata.activeTabKey,
+    lastTabKeyIndex: editorMetadata.lastTabKeyIndex
+  };
+};
+
 // Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
@@ -354,6 +367,7 @@ export default function reducer(state = initialState, action) {
     };
     return {
       ...state,
+      ...action.fileMetadata,
       sources: newSources
     };
   }
@@ -555,6 +569,15 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       fileMetadata: action.fileMetadata
+    };
+  }
+  if (action.type === SET_EDITOR_METADATA) {
+    return {
+      ...state,
+      orderedTabKeys: action.orderedTabKeys,
+      fileMetadata: action.fileMetadata,
+      activeTabKey: action.activeTabKey,
+      lastTabKeyIndex: action.lastTabKeyIndex
     };
   }
   return state;
