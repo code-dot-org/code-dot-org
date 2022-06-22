@@ -36,6 +36,8 @@ const SET_LAST_TAB_KEY_INDEX = 'javalab/SET_LAST_TAB_KEY_INDEX';
 const SET_FILE_METADATA = 'javalab/SET_FILE_METADATA';
 const SET_ORDERED_TAB_KEYS = 'javalab/SET_ORDERED_TAB_KEYS';
 
+export const getTabKey = index => `file-${index}`;
+
 const fileMetadataForEditor = (sources, isEditingStartSources) => {
   let fileMetadata = {};
   let orderedTabKeys = [];
@@ -57,8 +59,6 @@ const fileMetadataForEditor = (sources, isEditingStartSources) => {
     lastTabKeyIndex: orderedTabKeys.length - 1
   };
 };
-
-const getTabKey = index => `file-${index}`;
 
 const initialSources = {
   'MyClass.java': {text: '', isVisible: true, isValidation: false}
