@@ -751,7 +751,6 @@
   dashboard_students_male: "Male"
   dashboard_students_female: "Female"
   dashboard_students_completed_levels: "Completed Levels"
-  dashboard_students_total_lines: "Lines of Code"
   dashboard_students_share_section: "Ask your students to go to <a href=%{join_url}>%{join_url}</a> and type in the section code (%{section_code})"
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Print out cards with your students' login information."

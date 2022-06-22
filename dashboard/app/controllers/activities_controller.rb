@@ -119,14 +119,9 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    total_lines = if current_user && current_user.total_lines
-                    current_user.total_lines
-                  end
-
     render json: milestone_response(
       script_level: @script_level,
       level: @level,
-      total_lines: total_lines,
       solved?: solved,
       level_source: @level_source.try(:hidden) ? nil : @level_source,
       level_source_image: @level_source_image,
@@ -221,6 +216,8 @@ class ActivitiesController < ApplicationController
 
     passed = ActivityConstants.passing?(test_result)
     if lines > 0 && passed
+      # TODO: Total lines of code is no longer shown anywere in the UI. Remove
+      # this as part of LP-2291 to clean up the back-end.
       current_user.total_lines += lines
       # bypass validations/transactions/etc
       User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)
