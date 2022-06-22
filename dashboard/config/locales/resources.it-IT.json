@@ -30,14 +30,16 @@
           "type": "Video"
         },
         "csf-artist-intro-video/artist/unversioned": {
-          "name": "Introduzione all'artista"
+          "name": "Introduzione all'artista",
+          "type": "Video per gli alunni"
         },
         "csf-turns-angles-doc/artist/unversioned": {
           "name": "Curve e angoli",
           "type": "Dispensa per gli alunni"
         },
         "csf-turns-angles-video/artist/unversioned": {
-          "name": "Curve e angoli"
+          "name": "Curve e angoli",
+          "type": "Video per gli alunni"
         },
         "dance-party-playlist/dance/unversioned": {
           "name": "Playlist Spotify (tutte le età)"
@@ -95,7 +97,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/courseb/2018": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "lesson_plans/coursea/2018": {
           "name": "Piano di lavoro delle lezioni"
@@ -107,7 +109,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursea/2018": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "lesson_plans/coursed/2018": {
           "name": "Piano di lavoro delle lezioni"
@@ -119,7 +121,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursed/2018": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "lesson_plans/coursef/2018": {
           "name": "Piano di lavoro delle lezioni"
@@ -131,7 +133,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursef/2018": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "lesson_plans/express/2018": {
           "name": "Piano di lavoro delle lezioni"
@@ -143,7 +145,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/express/2018": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "lesson_plans/coursee/2018": {
           "name": "Piano di lavoro delle lezioni"
@@ -155,7 +157,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursee/2018": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "lesson_plans/coursec/2018": {
           "name": "Piano di lavoro delle lezioni"
@@ -167,7 +169,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursec/2018": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "code_introduced_1/csd/2018": {
           "name": "Code introdotto"
@@ -182,7 +184,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary_2/csd/2018": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "code_introduced_3/csd/2018": {
           "name": "Code introdotto"
@@ -197,7 +199,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary_5/csd/2018": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "lesson_plans_4/csd/2018": {
           "name": "Piano di lavoro delle lezioni"
@@ -209,7 +211,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary_4/csd/2018": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "code_introduced_2/csd/2018": {
           "name": "Code introdotto"
@@ -224,7 +226,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary_3/csd/2018": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "code_introduced/csd/2018": {
           "name": "Code introdotto"
@@ -239,7 +241,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary_1/csd/2018": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "lesson_plans/csd/2018": {
           "name": "Piano di lavoro delle lezioni"
@@ -251,7 +253,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/csd/2018": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "curriculum_guide/coursea/2019": {
           "name": "Guida Curriculum"
@@ -266,7 +268,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursea/2019": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "curriculum_guide/courseb/2019": {
           "name": "Guida Curriculum"
@@ -281,7 +283,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/courseb/2019": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "curriculum_guide/coursed/2019": {
           "name": "Guida Curriculum"
@@ -296,7 +298,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursed/2019": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "curriculum_guide/coursef/2019": {
           "name": "Guida Curriculum"
@@ -311,7 +313,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursef/2019": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "curriculum_guide/coursee/2019": {
           "name": "Guida Curriculum"
@@ -326,7 +328,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursee/2019": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "lesson_plans/express/2019": {
           "name": "Piano di lavoro delle lezioni"
@@ -338,7 +340,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/express/2019": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "curriculum_guide/coursec/2019": {
           "name": "Guida Curriculum"
@@ -353,7 +355,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursec/2019": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "teacher_forum/csd/2019": {
           "name": "Forum dell'insegnante"
@@ -368,7 +370,7 @@
           "name": "Funzioni Standard"
         },
         "vocabulary_2/csd/2019": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "code_introduced_3/csd/2019": {
           "name": "Code introdotto"
@@ -380,7 +382,7 @@
           "name": "Funzioni Standard"
         },
         "vocabulary_5/csd/2019": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "code_introduced_2/csd/2019": {
           "name": "Code introdotto"
@@ -392,7 +394,7 @@
           "name": "Funzioni Standard"
         },
         "vocabulary_3/csd/2019": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "lesson_plans_4/csd/2019": {
           "name": "Piano di lavoro delle lezioni"
@@ -401,7 +403,7 @@
           "name": "Funzioni Standard"
         },
         "vocabulary_4/csd/2019": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "lesson_plans/csd/2019": {
           "name": "Piano di lavoro delle lezioni"
@@ -410,7 +412,7 @@
           "name": "Funzioni Standard"
         },
         "vocabulary/csd/2019": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "code_introduced/csd/2019": {
           "name": "Code introdotto"
@@ -422,7 +424,7 @@
           "name": "Funzioni Standard"
         },
         "vocabulary_1/csd/2019": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "code_introduced_1/csd/2017": {
           "name": "Code introdotto"
@@ -437,7 +439,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary_2/csd/2017": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "code_introduced_3/csd/2017": {
           "name": "Code introdotto"
@@ -452,7 +454,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary_5/csd/2017": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "code_introduced/csd/2017": {
           "name": "Code introdotto"
@@ -467,7 +469,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary_1/csd/2017": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "lesson_plans/csd/2017": {
           "name": "Piano di lavoro delle lezioni"
@@ -479,7 +481,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/csd/2017": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "lesson_plans_4/csd/2017": {
           "name": "Piano di lavoro delle lezioni"
@@ -491,7 +493,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary_4/csd/2017": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "code_introduced_2/csd/2017": {
           "name": "Code introdotto"
@@ -506,7 +508,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary_3/csd/2017": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Elenco di poesie",
@@ -571,6 +573,7 @@
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
         },
         "text_and_prompts/coursef/2021": {
+          "name": "Testo e richieste all'utente",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "user_input_programs/coursef/2021": {
@@ -685,7 +688,7 @@
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursef/2021": {
-          "name": "Vocabolario\t",
+          "name": "Glossario del corso\t",
           "url": "https://studio.code.org/s/coursef-2021/vocab"
         },
         "implementation_guide/coursef/2021": {
@@ -697,7 +700,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursef/2021": {
-          "name": "Guida al debug",
+          "name": "Guida alla correzione di errori",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursef/2021": {
@@ -752,15 +755,17 @@
         },
         "teacher-video-move-it/courseb/2021": {
           "name": "Muovilo, Muovilo",
-          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G",
+          "type": "Video per l'insegnante"
         },
         "feeling_faces_emotion_image/courseb/2021": {
-          "name": "Feeling Faces Emozione",
+          "name": "Emoticon - Rappresentazione grafica delle emozioni",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling-faces-image/courseb/2021": {
           "name": "Faccine delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emoticon"
         },
         "jigsaw/courseb/2021": {
           "name": "Esercizi di trascinamento e rilascio",
@@ -776,7 +781,8 @@
         },
         "pair-programming-vid/courseb/2021": {
           "name": "Programmazione in coppia",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video per gli alunni"
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Wiggles - GoNoodle",
@@ -796,7 +802,7 @@
           "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
         },
         "feeling_faces_-_emotion_image/courseb/2021": {
-          "name": "Feeling Faces - Emotion Image",
+          "name": "Emoticon - Rappresentazione grafica delle emozioni",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "stevie_and_the_big_project/courseb/2021": {
@@ -889,7 +895,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/courseb/2021": {
-          "name": "Guida al debug",
+          "name": "Guida alla correzione di errori",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/courseb/2021": {
@@ -927,7 +933,8 @@
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Programmazione in coppia",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video per gli alunni"
         },
         "20_20_20_rule/coursea/2021": {
           "name": "Regola 20/20/20",
@@ -960,7 +967,7 @@
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
-          "name": "Feeling Faces - Emotion Image",
+          "name": "Emoticon - Rappresentazione grafica delle emozioni",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
         },
         "course-ab-blockly-blocks/coursea/2021": {
@@ -982,11 +989,11 @@
           "type": "Video"
         },
         "feeling_faces_emotion_image/coursea/2021": {
-          "name": "Feeling Faces Emozione",
+          "name": "Emoticon - Rappresentazione grafica delle emozioni",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling_faces_-_emotion_image_1/coursea/2021": {
-          "name": "Feeling Faces - Emotion Image",
+          "name": "Emoticon - Rappresentazione grafica delle emozioni",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "happy-map-cards-xl/coursea/2021": {
@@ -998,12 +1005,13 @@
           "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
         },
         "feeling_faces_emotion_image_1/coursea/2021": {
-          "name": "Feeling Faces Emozione",
+          "name": "Emoticon - Rappresentazione grafica delle emozioni",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "Faccine delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emoticon"
         },
         "pair-programming/coursea/2021": {
           "name": "Programmazione in coppia",
@@ -1011,7 +1019,7 @@
           "type": "Video"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
-          "name": "Feeling Faces Emozione",
+          "name": "Emoticon - Rappresentazione grafica delle emozioni",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csf_lesson_recommendations/coursea/2021": {
@@ -1024,7 +1032,7 @@
           "type": "Video"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
-          "name": "Feeling Faces Emozione",
+          "name": "Emoticon - Rappresentazione grafica delle emozioni",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csf_lesson_recommendations_1/coursea/2021": {
@@ -1049,7 +1057,7 @@
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
-          "name": "Feeling Faces - Emotion Image",
+          "name": "Emoticon - Rappresentazione grafica delle emozioni",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csf-lesson-recommend/coursea/2021": {
@@ -1057,7 +1065,7 @@
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
-          "name": "Feeling Faces - Emotion Image",
+          "name": "Emoticon - Rappresentazione grafica delle emozioni",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csf_lesson_recommendations_2/coursea/2021": {
@@ -1097,7 +1105,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursea/2021": {
-          "name": "Guida al debug",
+          "name": "Guida alla correzione di errori",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursea/2021": {
@@ -1163,7 +1171,7 @@
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "debugging_guide/coursec/2021": {
-          "name": "Guida al debug",
+          "name": "Guida alla correzione di errori",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA"
         },
         "course-cf-blockly-blocks/coursec/2021": {
@@ -1171,10 +1179,12 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "csf-artist-intro-video/coursec/2021": {
-          "name": "Introduzione all'artista"
+          "name": "Introduzione all'artista",
+          "type": "Video per gli alunni"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "Curve e angoli"
+          "name": "Curve e angoli",
+          "type": "Video per gli alunni"
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "Curve e angoli",
@@ -1182,7 +1192,7 @@
           "type": "Dispensa per gli alunni"
         },
         "feeling_faces_emotion_image/coursec/2021": {
-          "name": "Feeling Faces Emozione",
+          "name": "Emoticon - Rappresentazione grafica delle emozioni",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs"
         },
         "unplugged-video-big-event/coursec/2021": {
@@ -1221,7 +1231,8 @@
         },
         "csf-bit-byte-video/coursec/2021": {
           "name": "Bit vs Byte",
-          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
+          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be",
+          "type": "Video per gli alunni"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Braccialetti binari",
@@ -1277,7 +1288,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide_1/coursec/2021": {
-          "name": "Guida al debug",
+          "name": "Guida alla correzione di errori",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursec/2021": {
@@ -1351,7 +1362,8 @@
         },
         "pair-programming-vid/coursed/2021": {
           "name": "Programmazione in coppia",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video per gli alunni"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Programmazione a staffetta",
@@ -1371,7 +1383,8 @@
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Programmazione a staffetta",
-          "url": "https://youtu.be/ZULpfAVJOBo"
+          "url": "https://youtu.be/ZULpfAVJOBo",
+          "type": "Video per l'insegnante"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Programmazione a staffetta",
@@ -1414,7 +1427,8 @@
         },
         "feeling-faces-image/coursed/2021": {
           "name": "Faccine delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emoticon"
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "Fermati e pensa online",
@@ -1475,7 +1489,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursed/2021": {
-          "name": "Guida al debug",
+          "name": "Guida alla correzione di errori",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursed/2021": {
@@ -1581,11 +1595,13 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
+          "name": "Testo e richieste all'utente",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "variables_video/express/2021": {
           "name": "Variabili",
-          "url": "https://youtu.be/DI7DprN4FtE"
+          "url": "https://youtu.be/DI7DprN4FtE",
+          "type": "Video per gli alunni"
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "Guida alla pianificazione del progetto di fine corso CSF Express",
@@ -1600,7 +1616,7 @@
           "url": "https://studio.code.org/s/express-2021/standards"
         },
         "course_vocabulary_1/express/2021": {
-          "name": "Vocabolario\t",
+          "name": "Glossario del corso\t",
           "url": "https://studio.code.org/s/express-2021/vocab"
         },
         "teacher_forum_1/express/2021": {
@@ -1608,20 +1624,23 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "debugging_guide/express/2021": {
-          "name": "Guida al debug",
+          "name": "Guida alla correzione di errori",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "Programmazione in coppia",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video per gli alunni"
         },
         "class-section-video/pre-express/2021": {
           "name": "Come creare una classe su Code.org",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+          "type": "Video per l'insegnante"
         },
         "feeling-faces-image/pre-express/2021": {
           "name": "Faccine delle emozioni",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emoticon"
         },
         "20_20_20_rule/pre-express/2021": {
           "name": "Regola 20/20/20",
@@ -1629,7 +1648,7 @@
           "type": "Video"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
-          "name": "Wiggles",
+          "name": "Wiggles - Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
@@ -1643,7 +1662,7 @@
           "url": "https://studio.code.org/s/pre-express-2021/standards"
         },
         "course_vocabulary/pre-express/2021": {
-          "name": "Vocabolario\t",
+          "name": "Glossario del corso\t",
           "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
         "teacher_forum_1/pre-express/2021": {
@@ -1651,8 +1670,11 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "debugging_guide/pre-express/2021": {
-          "name": "Guida al debug",
+          "name": "Guida alla correzione di errori",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        },
+        "follow_the_algorithm/coursee/2021": {
+          "name": "Segui l'algoritmo"
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
           "name": "Sandbox per insegnanti di pesce di nuoto",
@@ -1661,6 +1683,9 @@
         "sprite_lab_documentation/coursee/2021": {
           "name": "Documentazione Sviluppo App",
           "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "type": "Video per gli alunni"
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
           "type": "Dispensa per gli alunni"
@@ -1682,7 +1707,8 @@
           "type": "Dispensa per gli alunni"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "Curve e angoli"
+          "name": "Curve e angoli",
+          "type": "Video per gli alunni"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "Composizione di canzoni con le funzioni"
@@ -1703,6 +1729,9 @@
         "course-cf-blockly-blocks/coursee/2021": {
           "name": "Blocchi Blockly tradizionali (Corsi C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "designing_for_accessibility_1/coursee/2021": {
+          "name": "Progettare per l'accessibilità"
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Progetto finale - Fondamenti d'informatica",
@@ -1728,7 +1757,7 @@
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursee/2021": {
-          "name": "Vocabolario\t",
+          "name": "Glossario del corso\t",
           "url": "https://studio.code.org/s/coursee-2021/vocab"
         },
         "implementation_guide/coursee/2021": {
@@ -1740,7 +1769,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursee/2021": {
-          "name": "Guida al debug",
+          "name": "Guida alla correzione di errori",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursee/2021": {
@@ -1941,6 +1970,9 @@
         "sprites_1/csd/2021": {
           "name": "Personaggi"
         },
+        "sprite_properties/csd/2021": {
+          "name": "Proprietà del personaggio"
+        },
         "youtube-flipbook/csd/2021": {
           "type": "Video"
         },
@@ -2031,6 +2063,7 @@
           "type": "Video"
         },
         "video_pair_programming/csd/2021": {
+          "name": "Video: Programmazione in coppia",
           "type": "Video"
         },
         "headings_and_paragraphs/csd/2021": {
@@ -2091,7 +2124,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/pre-express/2020": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "lesson_plans/express/2020": {
           "name": "Piano di lavoro delle lezioni"
@@ -2103,7 +2136,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/express/2020": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "curriculum_guide/courseb/2020": {
           "name": "Guida Curriculum"
@@ -2118,7 +2151,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/courseb/2020": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "curriculum_guide/coursed/2020": {
           "name": "Guida Curriculum"
@@ -2133,7 +2166,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursed/2020": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "curriculum_guide/coursec/2020": {
           "name": "Guida Curriculum"
@@ -2148,7 +2181,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursec/2020": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "curriculum_guide/coursee/2020": {
           "name": "Guida Curriculum"
@@ -2163,7 +2196,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursee/2020": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "curriculum_guide/coursea/2020": {
           "name": "Guida Curriculum"
@@ -2178,7 +2211,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursea/2020": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         },
         "curriculum_guide/coursef/2020": {
           "name": "Guida Curriculum"
@@ -2193,7 +2226,7 @@
           "name": "Forum dell'insegnante"
         },
         "vocabulary/coursef/2020": {
-          "name": "Vocabolario"
+          "name": "Glossario"
         }
       }
     }

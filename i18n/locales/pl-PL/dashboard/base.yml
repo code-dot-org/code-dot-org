@@ -606,6 +606,7 @@ pl:
     try_hour_of_code: 'Wypróbuj Godzinę Kodowania!'
     store: 'Skład'
     cookie_notice: 'Informacja o plikach cookie'
+    view_code: 'Obejrzyj kod'
   reference_area:
     title: 'Czy potrzebujesz pomocy?'
     subtitle: 'Zobacz te filmiki i wskazówki'
@@ -1048,6 +1049,7 @@ pl:
         israel: 'Izrael'
         malaysia: 'Malezja'
         mexico: 'Meksyk'
+        paraguay: 'Paragwaj'
         thailand: 'Tajlandia'
         uzbekistan: 'Uzbekistan'
       ages:

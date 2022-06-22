@@ -94,7 +94,7 @@
   "genericReplay": "Asegúrate de repetir la simulación varias veces antes de continuar.",
   "genericSuccess": "¡Has terminado el nivel! Pulsa Continuar para seguir.",
   "growAndShrink": "Tu sprite necesita encogerse y crecer.",
-  "haikuBlock": "El haiku no apareció. Si ya has añadido el bloque, comprueba cuidadosamente las etiquetas de las variables en tu código y asegúrate de que se han respondido todas las alertas.",
+  "haikuBlock": "El haiku no apareció. Si ya has añadido el bloque, verifica con atención las etiquetas de las variables en tu código y asegúrate de que se han respondido todos los avisos.",
   "hideTitleScreen": "Has añadido una pantalla de título, pero no ha desaparecido. Utiliza el bloque `ocultar pantalla de título` bajo un bloque de suceso, como `a los 3 segundos` o `cuando se pulse arriba`.",
   "keyPressButNoEvent": "Asegúrate de que este bloque está en tu espacio de trabajo: \n<XML><block type=\"gamelab_keyPressed\"><title name=\"CONDITION\">\"when\"</title><title name=\"KEY\">\"up\"</title></block></XML>",
   "madlibAddPrompt": "El siguiente paso es añadir una alerta. Por ejemplo, puedes pedir un \"objeto\" o un \"adjetivo\". Cambia el nombre de la variable por algo que te ayude a recordar qué información se está almacenando. \n <xml><block type=\"gamelab_setPrompt\"><value name=\"QUESTION\"><block type=\"text\" can_disconnect_from_parent=\"false\"><title name=\"TEXT\">Introduzca un alimento:</title></block></value><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">alimento</title></block></value></block></xml>",

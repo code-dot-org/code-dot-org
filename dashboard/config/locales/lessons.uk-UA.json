@@ -57,8 +57,71 @@
         "dance-extras-2019/Dance Party - Go Further": {
           "purpose": "Цей урок вводить основні концепції інформатики, пов'язані з кодуванням та програмуванням подій (з використанням блоків)."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Година коду 2013"
+        },
         "dance-2019/Dance Party": {
           "purpose": "Цей урок вводить основні концепції інформатики, пов'язані з кодуванням та програмуванням подій (з використанням блоків)."
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Послідовність дій"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Цикли"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Події"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Умови"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Функції"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Змінні"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Цикли For"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Наступні кроки"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Починаємо"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Основи інформатики"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Дивлячись вперед"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Успішні методики викладання інформатики"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Планування"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Наступні Кроки"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Починаємо"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Основи інформатики"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Дивлячись вперед"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Успішні методики викладання інформатики"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Планування"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Наступні Кроки"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Рухайся, рухайся"
@@ -609,6 +672,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Екстремальний виклик - комплексний"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Вступ до інформатики"
+        },
+        "20-hour/The Maze": {
+          "name": "Лабіринт"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Обчислювальне мислення"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Програмування по клітинках"
+        },
+        "20-hour/The Artist": {
+          "name": "Художник"
+        },
+        "20-hour/Algorithms": {
+          "name": "Алгоритми"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Художник 2"
+        },
+        "20-hour/Functions": {
+          "name": "Функції"
+        },
+        "20-hour/The Farmer": {
+          "name": "Фермерка"
+        },
+        "20-hour/Conditionals": {
+          "name": "Умови"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Художник 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Написання пісень"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Фермерка 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Абстракції"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Художник 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Естафетне програмування"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Фермерка 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Інтернет"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Художник 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Підведення підсумків"
+        },
         "course2/Graph Paper Programming": {
           "name": "Програмування по клітинках"
         },
@@ -785,6 +908,42 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Пазли"
+        },
+        "allthethings/Bee": {
+          "name": "Бджілка"
+        },
+        "allthethings/Farmer": {
+          "name": "Фермер"
+        },
+        "allthethings/Flappy": {
+          "name": "Пурх"
+        },
+        "allthethings/Bounce": {
+          "name": "Арканоід"
+        },
+        "allthethings/Multi": {
+          "name": "Множинний вибір"
+        },
+        "allthethings/Match": {
+          "name": "Відповідність"
+        },
+        "allthethings/Odometer": {
+          "name": "Одометр"
+        },
+        "allthethings/Text Compression": {
+          "name": "Стиснення тексту"
+        },
+        "allthethings/Pixelation": {
+          "name": "Пікселізаціі"
+        },
+        "allthethings/AppLab": {
+          "name": "Програмна лабораторія"
+        },
+        "allthethings/Studio": {
+          "name": "Студія"
+        },
+        "allthethings/Minecraft": {
+          "name": "Майнкрафт"
         },
         "coursef-2021/lesson-6": {
           "name": "Представляємо Лабораторію спрайтів"
