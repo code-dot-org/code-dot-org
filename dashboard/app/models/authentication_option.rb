@@ -23,7 +23,7 @@
 
 class AuthenticationOption < ApplicationRecord
   acts_as_paranoid
-  belongs_to :user
+  belongs_to :user, optional: true
 
   # These are duplicated from the user model, until we're ready to cut over and remove them from there
   before_validation :normalize_email, :hash_email,

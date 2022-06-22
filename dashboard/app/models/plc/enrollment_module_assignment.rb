@@ -23,10 +23,7 @@
 class Plc::EnrollmentModuleAssignment < ApplicationRecord
   belongs_to :plc_enrollment_unit_assignment, class_name: '::Plc::EnrollmentUnitAssignment'
   belongs_to :plc_learning_module, class_name: '::Plc::LearningModule'
-  belongs_to :user
-
-  validates :plc_enrollment_unit_assignment, presence: true
-  validates :plc_learning_module, presence: true
+  belongs_to :user, optional: true
 
   MODULE_STATUS_STATES = [
     NOT_STARTED = :not_started,

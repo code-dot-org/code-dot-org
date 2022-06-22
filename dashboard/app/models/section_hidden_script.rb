@@ -13,6 +13,6 @@
 #
 
 class SectionHiddenScript < ApplicationRecord
-  belongs_to :section
-  belongs_to :script
+  belongs_to :section, optional: true
+  belongs_to :script, optional: true
 end
