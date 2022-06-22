@@ -3690,7 +3690,6 @@ class UserTest < ActiveSupport::TestCase
         user_type: @student.user_type,
         gender: @student.gender,
         birthday: @student.birthday,
-        total_lines: @student.total_lines,
         secret_words: @student.secret_words,
         secret_picture_name: @student.secret_picture.name,
         secret_picture_path: @student.secret_picture.path,
