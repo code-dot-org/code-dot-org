@@ -25,7 +25,7 @@ import javalab, {
 } from '@cdo/apps/javalab/javalabRedux';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import {
-  setAllSources,
+  setAllSourcesAndFileMetadata,
   setAllValidation,
   setBackpackEnabled
 } from '../../../src/javalab/javalabRedux';
@@ -217,7 +217,7 @@ describe('Java Lab Editor Test', () => {
         const editor = createWrapper();
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
-          setAllSources({
+          setAllSourcesAndFileMetadata({
             'Class1.java': {text: '', isVisible: true, isValidation: false},
             'Class2.java': {text: '', isVisible: true, isValidation: false}
           })
@@ -255,7 +255,7 @@ describe('Java Lab Editor Test', () => {
         const editor = createWrapper();
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
-          setAllSources({
+          setAllSourcesAndFileMetadata({
             'Class1.java': {text: '', isVisible: true, isValidation: false}
           })
         );
@@ -293,7 +293,7 @@ describe('Java Lab Editor Test', () => {
         const editor = createWrapper();
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
-          setAllSources({
+          setAllSourcesAndFileMetadata({
             'Class1.java': {text: '', isVisible: true, isValidation: false}
           })
         );
@@ -330,7 +330,7 @@ describe('Java Lab Editor Test', () => {
         const editor = createWrapper();
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
-          setAllSources({
+          setAllSourcesAndFileMetadata({
             'Class1.java': {text: '', isVisible: true, isValidation: false}
           })
         );
@@ -484,7 +484,7 @@ describe('Java Lab Editor Test', () => {
         const editor = createWrapper();
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
-          setAllSources({
+          setAllSourcesAndFileMetadata({
             'Class1.java': {text: '', isVisible: true, isValidation: false},
             'Class2.java': {text: '', isVisible: true, isValidation: false}
           })
@@ -547,7 +547,7 @@ describe('Java Lab Editor Test', () => {
         const editor = createWrapper();
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
-          setAllSources({
+          setAllSourcesAndFileMetadata({
             'Class1.java': {text: '', isVisible: true, isValidation: false}
           })
         );
@@ -582,7 +582,7 @@ describe('Java Lab Editor Test', () => {
         const editor = createWrapper();
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
-          setAllSources({
+          setAllSourcesAndFileMetadata({
             'Class1.java': {text: '', isVisible: true, isValidation: false}
           })
         );
@@ -674,7 +674,7 @@ describe('Java Lab Editor Test', () => {
         const newText = 'hello world';
 
         store.dispatch(
-          setAllSources({
+          setAllSourcesAndFileMetadata({
             'Class1.java': {
               text: oldText,
               isVisible: true,
@@ -706,7 +706,7 @@ describe('Java Lab Editor Test', () => {
         const javalabEditor = editor.find('JavalabEditor').instance();
 
         store.dispatch(
-          setAllSources({
+          setAllSourcesAndFileMetadata({
             'Class1.java': {
               text: '',
               isVisible: true,

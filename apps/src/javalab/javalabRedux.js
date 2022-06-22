@@ -8,7 +8,8 @@ const SET_SOURCE = 'javalab/SET_SOURCE';
 const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
 const SOURCE_VALIDATION_UPDATED = 'javalab/SOURCE_VALIDATION_UPDATED';
 const SOURCE_TEXT_UPDATED = 'javalab/SOURCE_TEXT_UPDATED';
-const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
+const SET_ALL_SOURCES_AND_FILE_METADATA =
+  'javalab/SET_ALL_SOURCES_AND_FILE_METADATA';
 const SET_ALL_VALIDATION = 'javalab/SET_ALL_VALIDATION';
 const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
@@ -119,8 +120,11 @@ export const setAllValidation = validation => ({
   validation
 });
 
-export const setAllSources = (sources, isEditingStartSources) => ({
-  type: SET_ALL_SOURCES,
+export const setAllSourcesAndFileMetadata = (
+  sources,
+  isEditingStartSources
+) => ({
+  type: SET_ALL_SOURCES_AND_FILE_METADATA,
   sources,
   isEditingStartSources
 });
@@ -400,7 +404,7 @@ export default function reducer(state = initialState, action) {
       sources: newSources
     };
   }
-  if (action.type === SET_ALL_SOURCES) {
+  if (action.type === SET_ALL_SOURCES_AND_FILE_METADATA) {
     return {
       ...state,
       ...fileMetadataForEditor(action.sources, action.isEditingStartSources),

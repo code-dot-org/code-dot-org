@@ -16,7 +16,7 @@ import {
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {
-  setAllSources,
+  setAllSourcesAndFileMetadata,
   setDisableFinishButton
 } from '@cdo/apps/javalab/javalabRedux';
 
@@ -125,7 +125,7 @@ describe('Javalab', () => {
       javalab.init(config);
 
       expect(getStore().dispatch).to.have.been.calledWith(
-        setAllSources(config.level.startSources)
+        setAllSourcesAndFileMetadata(config.level.startSources)
       );
     });
 
@@ -147,7 +147,7 @@ describe('Javalab', () => {
       javalab.init(config);
 
       expect(getStore().dispatch).to.have.been.calledWith(
-        setAllSources(config.level.lastAttempt)
+        setAllSourcesAndFileMetadata(config.level.lastAttempt)
       );
     });
 
@@ -173,7 +173,7 @@ describe('Javalab', () => {
       javalab.init(config);
 
       expect(getStore().dispatch).to.have.been.calledWith(
-        setAllSources(config.level.exemplarSources)
+        setAllSourcesAndFileMetadata(config.level.exemplarSources)
       );
     });
   });

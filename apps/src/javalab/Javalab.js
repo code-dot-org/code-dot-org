@@ -6,7 +6,7 @@ import JavalabView from './JavalabView';
 import javalab, {
   getSources,
   getValidation,
-  setAllSources,
+  setAllSourcesAndFileMetadata,
   setAllValidation,
   setDisplayTheme,
   appendOutputLog,
@@ -226,7 +226,9 @@ Javalab.prototype.init = function(config) {
   if (config.level.exemplarSources) {
     // If we have exemplar sources (either for editing or viewing), set initial sources
     // with the exemplar code saved to the level definition.
-    getStore().dispatch(setAllSources(config.level.exemplarSources));
+    getStore().dispatch(
+      setAllSourcesAndFileMetadata(config.level.exemplarSources)
+    );
   } else if (
     startSources &&
     typeof startSources === 'object' &&
@@ -243,7 +245,7 @@ Javalab.prototype.init = function(config) {
         validation[key].isVisible = false;
       });
       getStore().dispatch(
-        setAllSources(
+        setAllSourcesAndFileMetadata(
           {
             ...startSources,
             ...validation
@@ -252,7 +254,7 @@ Javalab.prototype.init = function(config) {
         )
       );
     } else {
-      getStore().dispatch(setAllSources(startSources));
+      getStore().dispatch(setAllSourcesAndFileMetadata(startSources));
     }
   }
 
@@ -457,7 +459,7 @@ Javalab.prototype.getCode = function() {
 };
 
 Javalab.prototype.afterClearPuzzle = function() {
-  getStore().dispatch(setAllSources(this.level.startSources));
+  getStore().dispatch(setAllSourcesAndFileMetadata(this.level.startSources));
   project.autosave();
 };
 
