@@ -104,10 +104,7 @@ export class JavalabEditorTabMenu extends Component {
   };
 
   handleClickOutside = () => {
-    if (this.state.dropdownOpen) {
-      this.setState({dropdownOpen: false});
-//      this.collapseDropdown();
-    }
+    this.props.cancelTabMenu();
   };
 
   render() {
