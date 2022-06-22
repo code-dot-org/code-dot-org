@@ -173,6 +173,24 @@
         "iste/4.d": {
           "description": "Utilizzare più processi e diverse prospettive per esplorare soluzioni alternative."
         },
+        "csta/1A-AP-11": {
+          "description": "Individua (scompone) i passaggi necessari per risolvere un problema in una sequenza precisa di istruzioni."
+        },
+        "csta/1A-IC-17": {
+          "description": "Lavora in modo rispettoso e responsabile con le altre persone online."
+        },
+        "csta/1A-AP-09": {
+          "description": "Plasma il modo in cui i programmi memorizzano e manipolano i dati utilizzando numeri o altri simboli per rappresentare le informazioni."
+        },
+        "csta/1A-IC-18": {
+          "description": "Mantieni private le informazioni di accesso e disconnettiti dai dispositivi in modo opportuno."
+        },
+        "csta/1A-CS-02": {
+          "description": "Utilizzare una terminologia appropriata per identificare e descrivere la funzione dei componenti fisici comuni dei sistemi informatici (hardware)."
+        },
+        "csta/1A-CS-03": {
+          "description": "Descrivere i problemi hardware e software di base utilizzando una terminologia accurata."
+        },
         "csta/1B-IC-18": {
           "description": "Discutere delle tecnologie informatiche che hanno cambiato il mondo ed esprimere in che modo tali tecnologie influenzano e sono influenzate dalle abitudini culturali."
         }

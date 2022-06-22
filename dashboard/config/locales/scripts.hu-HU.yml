@@ -5617,6 +5617,8 @@ hu:
               name: változók
             For Loops:
               name: Számláló ciklusok
+            End of Course projects:
+              name: Tanfolyam végi projektek
         hello-world-csc:
           title: Helló világ
         csc-pilot-2022-timecapsule:
@@ -5761,3 +5763,21 @@ hu:
               name: Összefoglaló
             lesson-1:
               name: Összefoglaló
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Bevezetés a mesékbe"
+            Plan Your Fable:
+              name: Saját mese tervezése
+            Share Your Fable:
+              name: Saját mese megosztása
+            lesson-4:
+              name: "[Optional] Bevezetés a mesékbe"
+            lesson-5:
+              name: Saját mese tervezése
+            lesson-6:
+              name: Saját mese megosztása
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Versművészet

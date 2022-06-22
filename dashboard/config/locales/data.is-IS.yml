@@ -795,6 +795,7 @@ is:
         playlab_2021_reader: Kynning á Leikjasmiðju
         csd_u6_input_output: Inntak og Úttak
         csp_applab_parameters: Föll með stikum
+        CS_Changing_Everything: Tölvunarfræði er að breyta öllu
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn
