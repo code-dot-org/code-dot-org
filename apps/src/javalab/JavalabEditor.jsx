@@ -12,10 +12,10 @@ import {
   setEditorColumnHeight,
   setEditTabKey,
   setActiveTabKey,
-  setLastTabKeyIndex,
   setOrderedTabKeys,
   setFileMetadata,
-  getTabKey
+  getTabKey,
+  setEditorMetadata
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
@@ -120,9 +120,9 @@ class JavalabEditor extends React.Component {
     activeTabKey: PropTypes.string.isRequired,
     setActiveTabKey: PropTypes.func.isRequired,
     lastTabKeyIndex: PropTypes.number.isRequired,
-    setLastTabKeyIndex: PropTypes.func.isRequired,
     editTabKey: PropTypes.string,
-    setEditTabKey: PropTypes.func.isRequired
+    setEditTabKey: PropTypes.func.isRequired,
+    setEditorMetadata: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -291,6 +291,7 @@ class JavalabEditor extends React.Component {
     };
   }
 
+  // need setActiveTabKey
   onChangeTabs(key) {
     if (key !== this.props.activeTabKey) {
       this.props.setActiveTabKey(key);
@@ -334,6 +335,7 @@ class JavalabEditor extends React.Component {
     }
   }
 
+  // need setEditTabKey
   // This is called from the dropdown menu on the active tab
   // when the rename option is clicked
   renameFromTabMenu() {
@@ -393,6 +395,7 @@ class JavalabEditor extends React.Component {
     return !errorMessage;
   }
 
+  // need setFileMetadata
   onRenameFile(newFilename) {
     newFilename = newFilename.trim();
     if (!this.validateFileName(newFilename, 'renameFileError')) {
@@ -439,13 +442,10 @@ class JavalabEditor extends React.Component {
 
     const {
       lastTabKeyIndex,
-      setLastTabKeyIndex,
       fileMetadata,
-      setFileMetadata,
       orderedTabKeys,
-      setOrderedTabKeys,
       setSource,
-      setActiveTabKey
+      setEditorMetadata
     } = this.props;
     const newTabIndex = lastTabKeyIndex + 1;
     const newTabKey = getTabKey(newTabIndex);
@@ -462,11 +462,15 @@ class JavalabEditor extends React.Component {
     setSource(filename, fileContents);
     projectChanged();
 
+    const editorMetadata = {
+      fileMetadata: newFileMetadata,
+      orderedTabKeys: newTabs,
+      activeTabKey: newTabKey,
+      lastTabKeyIndex: newTabIndex
+    };
+    setEditorMetadata(editorMetadata);
+
     // add new tab and set it as the active tab
-    setOrderedTabKeys(newTabs);
-    setFileMetadata(newFileMetadata);
-    setActiveTabKey(newTabKey);
-    setLastTabKeyIndex(newTabIndex);
     this.setState({
       openDialog: null,
       newFileError: null
@@ -477,12 +481,10 @@ class JavalabEditor extends React.Component {
     const {fileToDelete} = this.state;
     const {
       fileMetadata,
-      setFileMetadata,
       orderedTabKeys,
-      setOrderedTabKeys,
       activeTabKey,
-      setActiveTabKey,
-      removeFile
+      removeFile,
+      setEditorMetadata
     } = this.props;
     // find tab in list
     const indexToRemove = orderedTabKeys.indexOf(fileToDelete);
@@ -504,9 +506,13 @@ class JavalabEditor extends React.Component {
       // clean up editors
       delete this.editors[fileToDelete];
 
-      setOrderedTabKeys(newTabs);
-      setActiveTabKey(newActiveTabKey);
-      setFileMetadata(newFileMetadata);
+      const editorMetadata = {
+        fileMetadata: newFileMetadata,
+        orderedTabKeys: newTabs,
+        activeTabKey: newActiveTabKey,
+        lastTabKeyIndex: this.props.lastTabKeyIndex - 1
+      };
+      setEditorMetadata(editorMetadata);
 
       // delete from sources
       removeFile(fileMetadata[fileToDelete]);
@@ -567,6 +573,7 @@ class JavalabEditor extends React.Component {
     }
   }
 
+  // need setActiveTabKey, setOrderedTabKeys
   // This is called from the file explorer when we want to jump to a file
   onOpenFile(key) {
     const {orderedTabKeys, setOrderedTabKeys, setActiveTabKey} = this.props;
@@ -895,7 +902,8 @@ export default connect(
     editTabKey: state.javalab.editTabKey
   }),
   dispatch => ({
-    setSource: (filename, source) => dispatch(setSource(filename, source)),
+    setSource: (filename, source, fileMetadata) =>
+      dispatch(setSource(filename, source, true, false, fileMetadata)),
     sourceVisibilityUpdated: (filename, isVisible) =>
       dispatch(sourceVisibilityUpdated(filename, isVisible)),
     sourceValidationUpdated: (filename, isValidation) =>
@@ -909,9 +917,10 @@ export default connect(
     setEditorColumnHeight: height => dispatch(setEditorColumnHeight(height)),
     setEditTabKey: tabKey => dispatch(setEditTabKey(tabKey)),
     setActiveTabKey: tabKey => dispatch(setActiveTabKey(tabKey)),
-    setLastTabKeyIndex: tabKey => dispatch(setLastTabKeyIndex(tabKey)),
     setOrderedTabKeys: orderedTabKeys =>
       dispatch(setOrderedTabKeys(orderedTabKeys)),
-    setFileMetadata: fileMetadata => dispatch(setFileMetadata(fileMetadata))
+    setFileMetadata: fileMetadata => dispatch(setFileMetadata(fileMetadata)),
+    setEditorMetadata: editorMetadata =>
+      dispatch(setEditorMetadata(editorMetadata))
   })
 )(Radium(JavalabEditor));
