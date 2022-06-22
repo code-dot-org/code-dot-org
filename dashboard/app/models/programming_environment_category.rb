@@ -17,7 +17,7 @@
 #  index_programming_environment_categories_on_key_and_env_id  (key,programming_environment_id) UNIQUE
 #
 class ProgrammingEnvironmentCategory < ApplicationRecord
-  belongs_to :programming_environment
+  belongs_to :programming_environment, optional: true
   has_many :programming_classes
   has_many :programming_expressions
 
