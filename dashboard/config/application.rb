@@ -27,6 +27,7 @@ module Dashboard
     # Eventually, we want to simply call:
     #config.load_defaults 6.0
     config.active_record.belongs_to_required_by_default = true
+    config.assets.unknown_asset_fallback = false
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
