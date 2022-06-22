@@ -1,4 +1,4 @@
-class Pd::FitWeekendRegistrationMailerPreview < ActionMailer::Preview
+class PdFitWeekendRegistrationMailerPreview < ActionMailer::Preview
   include FactoryGirl::Syntax::Methods
 
   def confirmation_accept

@@ -25,7 +25,6 @@
 class LevelConceptDifficulty < ApplicationRecord
   include ConceptDifficulties
   belongs_to :level
-  validates :level, presence: true
 
   def serializable_hash(options=nil)
     super.compact.delete_if do |key, _|

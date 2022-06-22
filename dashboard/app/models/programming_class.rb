@@ -25,8 +25,8 @@ class ProgrammingClass < ApplicationRecord
   include CurriculumHelper
   include Rails.application.routes.url_helpers
 
-  belongs_to :programming_environment
-  belongs_to :programming_environment_category
+  belongs_to :programming_environment, optional: true
+  belongs_to :programming_environment_category, optional: true
   has_many :programming_methods, -> {order(:position)}, dependent: :destroy
 
   validates_uniqueness_of :key, scope: :programming_environment_id, case_sensitive: false
