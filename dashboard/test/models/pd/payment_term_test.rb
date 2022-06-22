@@ -69,7 +69,7 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
     term_2 = build(:pd_payment_term, start_date: Date.today)
     term_2.save
 
-    assert_equal ['Regional partner is required'], term_2.errors.full_messages
+    assert_equal ['Regional partner must exist'], term_2.errors.full_messages
 
     term_3 = build(:pd_payment_term, regional_partner: @regional_partner_1, start_date: nil)
     term_3.save

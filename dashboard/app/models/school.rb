@@ -35,7 +35,7 @@ class School < ApplicationRecord
 
   self.primary_key = 'id'
 
-  belongs_to :school_district
+  belongs_to :school_district, optional: true
 
   has_many :school_stats_by_year
   has_many :school_info
@@ -70,7 +70,7 @@ class School < ApplicationRecord
     if stats.nil? || stats.frl_eligible_total.nil? || stats.students_total.nil?
       return false
     end
-    stats.frl_eligible_total.to_f / stats.students_total.to_f >= 0.5
+    (stats.frl_eligible_total.to_f / stats.students_total) >= 0.5
   end
 
   # Determines if school meets Amazon Fugure Engineer criteria.
@@ -139,7 +139,7 @@ class School < ApplicationRecord
   # @returns [String, nil] the sanitized version of the string, with equal signs and double
   #   quotations removed. Returns nil on nil input, or if value is a dash (signifies missing in NCES data).
   def self.sanitize_string_for_db(unsanitized)
-    unsanitized = NIL_CHARS.include?(unsanitized) ? nil : unsanitized
+    unsanitized = nil if NIL_CHARS.include?(unsanitized)
     unsanitized&.tr('="', '')
   end
 

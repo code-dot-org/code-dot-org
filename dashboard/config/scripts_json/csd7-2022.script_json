@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-23 23:42:18 UTC",
+    "serialized_at": "2022-06-08 17:25:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2747,7 +2747,7 @@
       "key": "14f8ba48-f942-44d3-b108-46ab84f9823d",
       "position": 17,
       "properties": {
-        "description": " **Distribute:** pass out the [r patterns_in_data/csd/2022] Activity Guide to each student.\n\n**Do This:** Have students complete the activity by finding patterns and trends in the data using the Cross Tab charts. An answer key is provided for you to check answers.\n\n**Circulate:** Monitor students as they complete this activity guide. The sentence starters for each table should correlate with the hot spots in the data, while the final two answers can be more open ended and depend more on how well students justify their answers.",
+        "description": " **Distribute:** pass out the [r patterns_in_data_1/csd/2022] Activity Guide to each student.\n\n**Do This:** Have students complete the activity by finding patterns and trends in the data using the Cross Tab charts. An answer key is provided for you to check answers.\n\n**Circulate:** Monitor students as they complete this activity guide. The sentence starters for each table should correlate with the hot spots in the data, while the final two answers can be more open ended and depend more on how well students justify their answers.",
         "tips": [
           {
             "type": "assessmentOpportunity",

@@ -2,19 +2,18 @@
 #
 # Table name: code_reviews
 #
-#  id                         :bigint           not null, primary key
-#  user_id                    :integer          not null
-#  project_id                 :integer          not null
-#  script_id                  :integer          not null
-#  level_id                   :integer          not null
-#  project_level_id           :integer          not null
-#  project_version            :string(255)      not null
-#  project_version_expires_at :datetime
-#  storage_id                 :integer          not null
-#  closed_at                  :datetime
-#  deleted_at                 :datetime
-#  created_at                 :datetime         not null
-#  updated_at                 :datetime         not null
+#  id               :bigint           not null, primary key
+#  user_id          :integer          not null
+#  project_id       :integer          not null
+#  script_id        :integer          not null
+#  level_id         :integer          not null
+#  project_level_id :integer          not null
+#  project_version  :string(255)      not null
+#  storage_id       :integer          not null
+#  closed_at        :datetime
+#  deleted_at       :datetime
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
 #
 # Indexes
 #
@@ -25,7 +24,7 @@
 class CodeReview < ApplicationRecord
   acts_as_paranoid
 
-  belongs_to :owner, class_name: 'User', foreign_key: :user_id
+  belongs_to :owner, class_name: 'User', foreign_key: :user_id, optional: true
   # TODO: Once all the renaming has settled, the following association should be:
   # has_many :comments, class_name: 'CodeReviewComment', dependent:  :destroy
   has_many :comments, class_name: 'CodeReviewNote', foreign_key: 'code_review_request_id', dependent:  :destroy, inverse_of: 'code_review'
@@ -37,9 +36,11 @@ class CodeReview < ApplicationRecord
     message: 'already has an open code review for this project'
 
   # Scope that includes only open code reviews
-  scope :open_reviews, -> { where(closed_at: nil) }
+  scope :open_reviews, -> {where(closed_at: nil)}
 
   def self.open_for_project?(channel:)
+    return false unless channel
+
     _, project_id = storage_decrypt_channel_id(channel)
     CodeReview.exists?(project_id: project_id, closed_at: nil)
   end
@@ -61,7 +62,6 @@ class CodeReview < ApplicationRecord
       id: id,
       channelId: nil,             # TODO: implement this!
       version: project_version,
-      isVersionExpired: false,    # TODO: implement this!
       isOpen: open?,
       createdAt: created_at,
     }.merge!(summarize_owner_info)

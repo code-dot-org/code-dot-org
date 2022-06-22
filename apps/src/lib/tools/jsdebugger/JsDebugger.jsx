@@ -12,6 +12,7 @@ import dom from '../../../dom';
 import commonStyles from '../../../commonStyles';
 import styleConstants from '../../../styleConstants';
 import Watchers from '../../../templates/watchers/Watchers';
+import color from '../../../util/color';
 import PaneHeader, {
   PaneSection,
   PaneButton
@@ -467,11 +468,14 @@ class JsDebugger extends React.Component {
           >
             {i18n.debugConsoleHeader()}
           </span>
-          <FontAwesome
-            icon={this.state.open ? 'chevron-circle-down' : 'chevron-circle-up'}
-            style={styles.showHideIcon}
-            onClick={this.slideToggle}
-          />
+          <span style={styles.showHideIcon}>
+            <FontAwesome
+              icon={
+                this.state.open ? 'chevron-circle-down' : 'chevron-circle-up'
+              }
+              onClick={this.slideToggle}
+            />
+          </span>
           {this.props.debugButtons && (
             <PaneSection id="debug-commands-header">
               <FontAwesome
@@ -498,21 +502,6 @@ class JsDebugger extends React.Component {
               ref={debugWatchHeader =>
                 (this._debugWatchHeader = debugWatchHeader)
               }
-              onClick={() => {
-                // reset resizer-overridden styles
-                // (remove once resize logic migrated to React)
-                if (!this.state.watchersHidden) {
-                  const resetResizeEvent = document.createEvent('Event');
-                  resetResizeEvent.initEvent(
-                    'resetWatchersResizableElements',
-                    true,
-                    true
-                  );
-                  document.dispatchEvent(resetResizeEvent);
-                }
-
-                this.setState({watchersHidden: !this.state.watchersHidden});
-              }}
               style={
                 this.state.watchersHidden
                   ? {
@@ -523,15 +512,32 @@ class JsDebugger extends React.Component {
                   : {}
               }
             >
-              <FontAwesome
-                id="hide-toolbox-icon"
+              <span
                 style={styles.showDebugWatchIcon}
-                icon={
-                  this.state.watchersHidden
-                    ? 'chevron-circle-left'
-                    : 'chevron-circle-right'
-                }
-              />
+                onClick={() => {
+                  // reset resizer-overridden styles
+                  // (remove once resize logic migrated to React)
+                  if (!this.state.watchersHidden) {
+                    const resetResizeEvent = document.createEvent('Event');
+                    resetResizeEvent.initEvent(
+                      'resetWatchersResizableElements',
+                      true,
+                      true
+                    );
+                    document.dispatchEvent(resetResizeEvent);
+                  }
+                  this.setState({watchersHidden: !this.state.watchersHidden});
+                }}
+              >
+                <FontAwesome
+                  id="hide-watcher"
+                  icon={
+                    this.state.watchersHidden
+                      ? 'chevron-circle-left'
+                      : 'chevron-circle-right'
+                  }
+                />
+              </span>
               <span style={styles.noUserSelect} className="header-text">
                 {this.state.watchersHidden
                   ? i18n.debugShowWatchHeader()
@@ -631,7 +637,7 @@ const styles = {
     fontSize: 18,
     ':hover': {
       cursor: 'pointer',
-      color: 'white'
+      color: color.white
     }
   },
   showDebugWatchIcon: {

@@ -41,7 +41,6 @@ class JavalabView extends React.Component {
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     handleClearPuzzle: PropTypes.func.isRequired,
     onPhotoPrompterFileSelected: PropTypes.func.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool,
     isCodeReviewing: PropTypes.bool,
 
     // populated by redux
@@ -63,7 +62,8 @@ class JavalabView extends React.Component {
     awaitingContainedResponse: PropTypes.bool,
     isSubmittable: PropTypes.bool,
     isSubmitted: PropTypes.bool,
-    setDisableFinishButton: PropTypes.func
+    setDisableFinishButton: PropTypes.func,
+    isReadOnlyWorkspace: PropTypes.bool
   };
 
   componentDidMount() {
@@ -227,7 +227,9 @@ class JavalabView extends React.Component {
                 displayReviewTab
                 initialSelectedTab={
                   queryParams(VIEWING_CODE_REVIEW_URL_PARAM) === 'true'
-                    ? TabType.REVIEW
+                    ? experiments.isEnabled('code_review_v2')
+                      ? TabType.REVIEW_V2
+                      : TabType.REVIEW
                     : null
                 }
                 explicitHeight={height}
