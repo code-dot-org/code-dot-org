@@ -901,6 +901,10 @@
           "word": "Bucles desde",
           "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
         },
+        "parameter/csd/2021": {
+          "word": "Parámetro",
+          "definition": "Información adicional proporcionada como entrada a un bloque para personalizar su funcionalidad"
+        },
         "circuit/csd/2021": {
           "word": "Circuito",
           "definition": "Dispositivo que proporciona un camino para que fluya una corriente eléctrica, a menudo modificando esa corriente. En los ordenadores, los circuitos permiten realizar operaciones lógicas y matemáticas sencillas utilizando la electricidad."
@@ -977,11 +981,36 @@
           "definition": "Título o resumen de un documento o sección de un documento."
         },
         "digital_footprint/csd/2021": {
-          "word": "Huella digital"
+          "word": "Huella digital",
+          "definition": "La información recopilada sobre un individuo en varios sitios web de Internet."
+        },
+        "css/csd/2021": {
+          "word": "CSS",
+          "definition": "Hojas de Estilo en Cascada; lenguaje utilizado para describir el estilo de los elementos HTML"
+        },
+        "css_selector/csd/2021": {
+          "word": "Selector CSS",
+          "definition": "la parte de un conjunto de reglas CSS que define a qué elementos HTML debe aplicarse el estilo"
         },
         "copyright/csd/2021": {
           "word": "Derechos de autor",
           "definition": "el derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
+        },
+        "relevant/csd/2021": {
+          "word": "Relevante",
+          "definition": "estrechamente relacionado con un tema"
+        },
+        "trustworthy/csd/2021": {
+          "word": "De confianza",
+          "definition": "fiable, honesto y veraz "
+        },
+        "search_engine/csd/2021": {
+          "word": "Motor de Búsqueda",
+          "definition": "Un programa que busca elementos en la World Wide Web."
+        },
+        "css_class/csd/2021": {
+          "word": "Clase CSS",
+          "definition": "Un identificador que permite dar estilo a varios elementos de un documento HTML de la misma manera"
         }
       }
     }

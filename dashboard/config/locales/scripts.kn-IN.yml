@@ -2,11 +2,6 @@
 kn:
   data:
     script:
-      category:
-        csf_category_name: CS ಫಂಡಮೆಂಟಲ್ಸ್
-        hoc_category_name: ಅವರ್ ಆಫ್‌ ಕೋಡ್
-        math_category_name: ಗಣಿತ
-        other_category_name: ಇತರೆ
       name:
         course1:
           description_audience: ವಯಸ್ಸು 4-6
@@ -3172,8 +3167,6 @@ kn:
               name: ಕಂಡೀಷನಲ್ಸ್‌
             Variables:
               name: ವೇರಿಯಬಲ್‌ಗಳು
-            End of Course projects:
-              name: ಕೋರ್ಸ್‌ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳ ಮುಕ್ತಾಯ
         vpl-csd1-ci-pilot-2022:
           title: 'ಮಾಡ್ಯೂಲ್‌ 1: ಸಮಸ್ಯೆ ಪರಿಹಾರ ಮತ್ತು ಕಂಪ್ಯೂಟಿಂಗ್‌ ಬೋಧಿಸಲು ಸಿದ್ಧವಾಗುವುದು'
           description: "Code.org ಸಮಸ್ಯೆ ಪರಿಹಾರ ಮತ್ತು ಕಂಪ್ಯೂಟಿಂಗ್‌ ಯುನಿಟ್ ಅನ್ನು ಬೋಧಿಸಲು
@@ -3389,3 +3382,15 @@ kn:
               name: ಮುನ್ನೋಟ
             lesson-1:
               name: ಮುನ್ನೋಟ
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: ಹಲೋ ವರ್ಲ್ಡ್ CSC
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: ಕವನ ಕಲೆ
+        self-paced-pl-csd5-2022:
+          lessons:
+            Engage with machine learning apps:
+              name: ಡಿಸೈನ್ ಪ್ರಕ್ರಿಯೆ

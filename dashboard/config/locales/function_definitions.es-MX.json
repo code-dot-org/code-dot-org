@@ -419,7 +419,7 @@
         },
         "Course 4 Artist Functions challenge": {
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados",
+            "name": "dibujar una línea de cuadrados",
             "description": "Dibuja una fila de cuadros, uno junto a otro, con una longitud de 6 cuadros "
           },
           "draw a square 20": {
@@ -833,17 +833,17 @@
         },
         "MC_HOC_2017_07_Cole": {
           "clear path": {
-            "name": "limpiar camino"
+            "name": "despejar camino"
           }
         },
         "MC_HOC_2017_07_Cole_2019": {
           "clear path": {
-            "name": "limpiar camino"
+            "name": "despejar camino"
           }
         },
         "MC_HOC_2017_07_Cole_2020": {
           "clear path": {
-            "name": "limpiar camino"
+            "name": "despejar camino"
           }
         },
         "MC_HOC_2017_10_RETRY": {
@@ -872,7 +872,7 @@
         },
         "MC_HOC_2017_Ali": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -880,7 +880,7 @@
         },
         "MC_HOC_2017_Ali_2019": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -888,7 +888,7 @@
         },
         "MC_HOC_2017_Ali_2020": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -928,7 +928,7 @@
             "description": "Dibuja un cuadro con lados de 20 píxeles de largo"
           },
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           }
         },
         "NEW Course 4 Artist Functions 12": {
@@ -937,7 +937,7 @@
             "description": "dibuja un cuadro de 20 píxeles de tamaño"
           },
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           }
         },
         "NEW Course 4 Artist Functions 13": {
@@ -945,7 +945,7 @@
             "name": "dibujar un cuadrado 20"
           },
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           }
         },
         "NEW Course 4 Artist Functions 14": {
@@ -953,7 +953,7 @@
             "name": "función vacía"
           },
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados",
+            "name": "dibujar una línea de cuadrados",
             "description": "dibujar una fila de cuadrados "
           },
           "draw a square 40": {
@@ -2212,7 +2212,7 @@
             "name": "Dibuja un cuadrado"
           },
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw a plane of squares": {
             "name": "dibujar un nivel de cuadrados"
@@ -2223,7 +2223,7 @@
             "name": "Dibuja un cuadrado"
           },
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw a plane of squares": {
             "name": "dibujar un nivel de cuadrados"
@@ -2262,7 +2262,7 @@
             "name": "dibujar hexágono"
           },
           "draw line of hexagons": {
-            "name": "dibujar hilera de hexágonos"
+            "name": "dibujar una línea de hexágonos"
           }
         },
         "courseE_artist_functions10_2018": {
@@ -2273,7 +2273,7 @@
             "name": "dibujar hexágono"
           },
           "draw line of hexagons": {
-            "name": "dibujar hilera de hexágonos"
+            "name": "dibujar una línea de hexágonos"
           }
         },
         "courseE_artist_functions10_2019": {
@@ -2284,7 +2284,7 @@
             "name": "dibujar hexágono"
           },
           "draw line of hexagons": {
-            "name": "dibujar hilera de hexágonos"
+            "name": "dibujar una línea de hexágonos"
           }
         },
         "courseE_artist_functions10_2020": {
@@ -2295,7 +2295,7 @@
             "name": "dibujar hexágono"
           },
           "draw line of hexagons": {
-            "name": "dibujar hilera de hexágonos"
+            "name": "dibujar una línea de hexágonos"
           }
         },
         "courseE_artist_functions1_copy": {
@@ -2427,7 +2427,7 @@
             "name": "hacer algo"
           },
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw square": {
             "name": "dibujar cuadrado"
@@ -2441,7 +2441,7 @@
             "name": "cuadrados escalonados"
           },
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw square": {
             "name": "dibujar cuadrado"
@@ -2455,7 +2455,7 @@
             "name": "cuadrados escalonados"
           },
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw square": {
             "name": "dibujar cuadrado"
@@ -2469,7 +2469,7 @@
             "name": "cuadrados escalonados"
           },
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw square": {
             "name": "dibujar cuadrado"
@@ -2501,7 +2501,7 @@
         },
         "courseE_artist_functions8b_2018": {
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw square": {
             "name": "dibujar cuadrado"
@@ -2512,7 +2512,7 @@
         },
         "courseE_artist_functions8b_2019": {
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw square": {
             "name": "dibujar cuadrado"
@@ -2523,7 +2523,7 @@
         },
         "courseE_artist_functions8b_2020": {
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw square": {
             "name": "dibujar cuadrado"
@@ -2534,7 +2534,7 @@
         },
         "courseE_artist_functions8c_2018": {
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw square": {
             "name": "dibujar cuadrado"
@@ -2548,7 +2548,7 @@
         },
         "courseE_artist_functions8c_2019": {
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw square": {
             "name": "dibujar cuadrado"
@@ -2562,7 +2562,7 @@
         },
         "courseE_artist_functions8c_2020": {
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw square": {
             "name": "dibujar cuadrado"
@@ -2582,7 +2582,7 @@
             "name": "dibujar un triángulo"
           },
           "draw line of triangles": {
-            "name": "dibujar hilera de triángulos"
+            "name": "dibujar una línea de triángulos"
           }
         },
         "courseE_artist_functions9_2018": {
@@ -2593,7 +2593,7 @@
             "name": "dibujar un triángulo"
           },
           "draw line of triangles": {
-            "name": "dibujar hilera de triángulos"
+            "name": "dibujar una línea de triángulos"
           }
         },
         "courseE_artist_functions9_2019": {
@@ -2604,7 +2604,7 @@
             "name": "dibujar un triángulo"
           },
           "draw line of triangles": {
-            "name": "dibujar hilera de triángulos"
+            "name": "dibujar una línea de triángulos"
           }
         },
         "courseE_artist_functions9_2020": {
@@ -2615,7 +2615,7 @@
             "name": "dibujar un triángulo"
           },
           "draw line of triangles": {
-            "name": "dibujar hilera de triángulos"
+            "name": "dibujar una línea de triángulos"
           }
         },
         "courseE_artist_functionsProj_2018": {
@@ -2623,13 +2623,13 @@
             "name": "dibujar hexágono"
           },
           "draw line of hexagons": {
-            "name": "dibujar hilera de hexágonos"
+            "name": "dibujar una línea de hexágonos"
           },
           "staggered squares": {
             "name": "cuadrados escalonados"
           },
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw square": {
             "name": "dibujar cuadrado"
@@ -2640,13 +2640,13 @@
             "name": "dibujar hexágono"
           },
           "draw line of hexagons": {
-            "name": "dibujar hilera de hexágonos"
+            "name": "dibujar una línea de hexágonos"
           },
           "staggered squares": {
             "name": "cuadrados escalonados"
           },
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw square": {
             "name": "dibujar cuadrado"
@@ -2657,13 +2657,13 @@
             "name": "dibujar hexágono"
           },
           "draw line of hexagons": {
-            "name": "dibujar hilera de hexágonos"
+            "name": "dibujar una línea de hexágonos"
           },
           "staggered squares": {
             "name": "cuadrados escalonados"
           },
           "draw a line of squares": {
-            "name": "dibujar una hilera de cuadrados"
+            "name": "dibujar una línea de cuadrados"
           },
           "draw square": {
             "name": "dibujar cuadrado"
@@ -2775,7 +2775,7 @@
         },
         "courseE_artist_functions_predict2": {
           "draw line of polygons": {
-            "name": "dibujar hilera de polígonos"
+            "name": "dibujar una línea de polígonos"
           },
           "draw polygon": {
             "name": "dibujar polígono"
@@ -2786,7 +2786,7 @@
         },
         "courseE_artist_functions_predict2_2018": {
           "draw line of polygons": {
-            "name": "dibujar hilera de polígonos"
+            "name": "dibujar una línea de polígonos"
           },
           "draw polygon": {
             "name": "dibujar polígono"
@@ -2797,7 +2797,7 @@
         },
         "courseE_artist_functions_predict2_2019": {
           "draw line of polygons": {
-            "name": "dibujar hilera de polígonos"
+            "name": "dibujar una línea de polígonos"
           },
           "draw polygon": {
             "name": "dibujar polígono"
@@ -2808,7 +2808,7 @@
         },
         "courseE_artist_functions_predict2_2020": {
           "draw line of polygons": {
-            "name": "dibujar hilera de polígonos"
+            "name": "dibujar una línea de polígonos"
           },
           "draw polygon": {
             "name": "dibujar polígono"
@@ -4386,7 +4386,7 @@
         },
         "courseE_artist_functions_predict2_2021": {
           "draw line of polygons": {
-            "name": "dibujar hilera de polígonos"
+            "name": "dibujar una línea de polígonos"
           },
           "draw polygon": {
             "name": "dibujar polígono"

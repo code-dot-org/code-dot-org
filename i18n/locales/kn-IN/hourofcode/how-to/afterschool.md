@@ -16,7 +16,7 @@ title: ಶಾಲೆ ನಂತರದಲ್ಲಿ ಅವರ್ ಆಫ್ ಕೋಡ
 
 * * *
 
-## 1. ಈ ಹೇಗೆ ಮಾಡುವುದು ಎಂಬ ವೀಡಿಯೋ ವೀಕ್ಷಿಸಿ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. ಈ ಹೇಗೆ ಮಾಡುವುದು ಎಂಬ ವೀಡಿಯೋ ವೀಕ್ಷಿಸಿ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. ಟ್ಯುಟೋರಿಯಲ್ ಆಯ್ಕೆ ಮಾಡಿ
 

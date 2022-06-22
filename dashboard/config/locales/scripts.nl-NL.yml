@@ -2,13 +2,6 @@
 nl:
   data:
     script:
-      category:
-        csf_category_name: Basis
-        cspexams_category_name: CW Principes Praktische Test
-        full_course_category_name: Volledige Cursussen
-        hoc_category_name: Uur Code
-        math_category_name: wiskundige
-        other_category_name: Anders
       name:
         course1:
           title: Cursus 1
@@ -6985,3 +6978,7 @@ nl:
               name: Overzicht
             lesson-1:
               name: Overzicht
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Poëzie

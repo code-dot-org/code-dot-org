@@ -2,36 +2,6 @@
 in:
   data:
     script:
-      category:
-        csd_category_name: crwdns2659102:0crwdne2659102:0
-        csd_2018_category_name: crwdns2659104:0crwdne2659104:0
-        csd_2019_category_name: crwdns2659106:0crwdne2659106:0
-        csd_2020_category_name: crwdns2659108:0crwdne2659108:0
-        csd_2021_category_name: crwdns2659110:0crwdne2659110:0
-        csd_pilot_category_name: crwdns2659112:0crwdne2659112:0
-        csf_category_name: crwdns2659114:0crwdne2659114:0
-        csf_2018_category_name: crwdns2659116:0crwdne2659116:0
-        csf_2019_category_name: crwdns2659118:0crwdne2659118:0
-        csf_2020_category_name: crwdns2659120:0crwdne2659120:0
-        csf_2021_category_name: crwdns2659122:0crwdne2659122:0
-        csf_international_category_name: crwdns2659124:0crwdne2659124:0
-        csf2_draft_category_name: crwdns2659126:0crwdne2659126:0
-        csp_category_name: crwdns2659128:0crwdne2659128:0
-        csp_2018_category_name: crwdns2659130:0crwdne2659130:0
-        csp_2019_category_name: crwdns2659132:0crwdne2659132:0
-        csp_2020_category_name: crwdns2659134:0crwdne2659134:0
-        csp_2021_category_name: crwdns2659136:0crwdne2659136:0
-        cspexams_category_name: crwdns2659138:0crwdne2659138:0
-        csp17_category_name: crwdns2659140:0crwdne2659140:0
-        aiml_2021_category_name: crwdns2688612:0crwdne2688612:0
-        csc_2021_category_name: crwdns2713411:0crwdne2713411:0
-        full_course_category_name: crwdns2659142:0crwdne2659142:0
-        hoc_category_name: crwdns2659144:0crwdne2659144:0
-        math_category_name: crwdns2659146:0crwdne2659146:0
-        research_studies_category_name: crwdns2659148:0crwdne2659148:0
-        twenty_hour_category_name: crwdns2659150:0crwdne2659150:0
-        tts_category_name: crwdns2659152:0crwdne2659152:0
-        other_category_name: crwdns2659154:0crwdne2659154:0
       name:
         course1:
           title: crwdns2659156:0crwdne2659156:0
@@ -22351,6 +22321,7 @@ in:
           student_description: crwdns2887184:0crwdne2887184:0
           description_short: crwdns2887186:0crwdne2887186:0
           description_audience: crwdns2887188:0crwdne2887188:0
+          name: crwdns2929114:0crwdne2929114:0
         vpl-csd1-ci-pilot-2022:
           lessons:
             lesson-1:
@@ -22503,6 +22474,8 @@ in:
               name: crwdns2887586:0crwdne2887586:0
             Innovations in Computing:
               name: crwdns2906558:0crwdne2906558:0
+            lesson-3:
+              name: crwdns2929406:0crwdne2929406:0
           name: crwdns2887592:0crwdne2887592:0
           title: crwdns2887594:0crwdne2887594:0
           description_audience: crwdns2887596:0crwdne2887596:0
@@ -23099,6 +23072,7 @@ in:
             Module 8:
               name: crwdns2917942:0crwdne2917942:0
           title: crwdns2917950:0crwdne2917950:0
+          name: crwdns2929116:0crwdne2929116:0
         vpl-csp-2022:
           lessons:
             Module 1:
@@ -23126,6 +23100,7 @@ in:
             Module 8:
               name: crwdns2918042:0crwdne2918042:0
           title: crwdns2918048:0crwdne2918048:0
+          name: crwdns2929390:0crwdne2929390:0
         self-paced-pl-csd1-2022:
           lessons:
             Welcome to Codeorg:
@@ -23267,9 +23242,12 @@ in:
               name: crwdns2918446:0crwdne2918446:0
             lesson-3:
               name: crwdns2918454:0crwdne2918454:0
+            lesson-4:
+              name: crwdns2929118:0crwdne2929118:0
           title: crwdns2918460:0crwdne2918460:0
           description: crwdns2918462:0crwdne2918462:0
           student_description: crwdns2918464:0crwdne2918464:0
+          name: crwdns2929120:0crwdne2929120:0
         csa9-2022:
           lessons:
             The AP CSA Exam:
@@ -23441,3 +23419,105 @@ in:
               name: crwdns2927940:0crwdne2927940:0
           title: crwdns2927942:0crwdne2927942:0
           description: crwdns2927944:0crwdne2927944:0
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: crwdns2929408:0crwdne2929408:0
+            Overfishing Simulation:
+              name: crwdns2929410:0crwdne2929410:0
+            Model Animal Adaptations:
+              name: crwdns2929412:0crwdne2929412:0
+            lesson-2:
+              name: crwdns2929414:0crwdne2929414:0
+            lesson-3:
+              name: crwdns2929416:0crwdne2929416:0
+          title: crwdns2929418:0crwdne2929418:0
+          name: crwdns2929428:0crwdne2929428:0
+        csc-starquilts-2022:
+          lessons:
+            Native American Star Quilts:
+              name: crwdns2929430:0crwdne2929430:0
+            Getting Started with The Artist:
+              name: crwdns2929432:0crwdne2929432:0
+            Code Your Star Quilt:
+              name: crwdns2929434:0crwdne2929434:0
+            lesson-1:
+              name: crwdns2929436:0crwdne2929436:0
+            lesson-2:
+              name: crwdns2929438:0crwdne2929438:0
+            lesson-3:
+              name: crwdns2929440:0crwdne2929440:0
+          title: crwdns2929442:0crwdne2929442:0
+          name: crwdns2929452:0crwdne2929452:0
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: crwdns2929454:0[Optional]crwdne2929454:0
+            Hello World CSC:
+              name: crwdns2929456:0crwdne2929456:0
+            Plan Your Fable:
+              name: crwdns2929458:0crwdne2929458:0
+            Code Your Fable:
+              name: crwdns2929460:0crwdne2929460:0
+            Share Your Fable:
+              name: crwdns2929462:0crwdne2929462:0
+            lesson-4:
+              name: crwdns2929464:0[Optional]crwdne2929464:0
+            lesson-5:
+              name: crwdns2929466:0crwdne2929466:0
+            lesson-3:
+              name: crwdns2929468:0crwdne2929468:0
+            lesson-6:
+              name: crwdns2929470:0crwdne2929470:0
+          title: crwdns2929472:0crwdne2929472:0
+          name: crwdns2929482:0crwdne2929482:0
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: crwdns2929484:0crwdne2929484:0
+            The Time We Live In:
+              name: crwdns2929486:0crwdne2929486:0
+            Coding My Time Capsule:
+              name: crwdns2929488:0crwdne2929488:0
+            Gallery Walk:
+              name: crwdns2929490:0crwdne2929490:0
+            lesson-2:
+              name: crwdns2929492:0crwdne2929492:0
+            lesson-3:
+              name: crwdns2929494:0crwdne2929494:0
+            lesson-4:
+              name: crwdns2929496:0crwdne2929496:0
+          title: crwdns2929498:0crwdne2929498:0
+        alltheblocklythings:
+          lessons:
+            lesson-1:
+              name: crwdns2929508:0crwdne2929508:0
+            lesson-2:
+              name: crwdns2929510:0crwdne2929510:0
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2929512:0crwdne2929512:0
+            lessonGroup-3:
+              display_name: crwdns2929514:0crwdne2929514:0
+          name: crwdns2929516:0crwdne2929516:0
+          title: crwdns2929518:0crwdne2929518:0
+          description_short: crwdns2929522:0crwdne2929522:0
+        self-paced-pl-csd5-2022:
+          lessons:
+            Introduction to AI and machine learning:
+              name: crwdns2929528:0crwdne2929528:0
+            Train a machine learning model:
+              name: crwdns2929530:0crwdne2929530:0
+            Engage with machine learning apps:
+              name: crwdns2929532:0crwdne2929532:0
+            Consider real world implications:
+              name: crwdns2929534:0crwdne2929534:0
+            Unit wrap up:
+              name: crwdns2929536:0crwdne2929536:0
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2929538:0crwdne2929538:0
+          name: crwdns2929540:0crwdne2929540:0
+          title: crwdns2929542:0crwdne2929542:0
+          description: crwdns2929548:0crwdne2929548:0
+          student_description: crwdns2929550:0crwdne2929550:0

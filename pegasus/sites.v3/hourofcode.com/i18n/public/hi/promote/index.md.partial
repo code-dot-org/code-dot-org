@@ -6,28 +6,28 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# अपने समुदाय को ऑवर ऑफ़ कोड में शामिल कीजिये. 
+# अपने समुदाय को ऑवर ऑफ़ कोड में शामिल कीजिये।
 
 ## 1. इस का प्रचार करें
 
-आप के मित्र परिवार को इसके बारे में जरूर बताईयेगा **#HourOfCode**!
+आप के मित्र परिवार को इसके बारे में जरूर बताएं **#HourOfCode**!
 
 {{ promote/share_buttons }}
 
-## अपने पुरे स्कूल को एक घंटे कोड प्राप्त करने के लिए कहेँ
+## 2. अपने पुरे स्कूल को ऑवर ऑफ़ कोड प्राप्त करने के लिए कहेँ
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+[अपने प्रधानाचार्य को यह ईमेल]({{ promote/sample_emails }}) भेजें और अपने विद्यालय की प्रत्येक कक्षा को साइन अप करने के लिए चुनौती दें।
 
-## 3. आपके नियोक्ता को सहभागी होने का अनुरोध करे
+## 3. आपके नियोक्ता को सहभागी होने का अनुरोध करें
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+[यह ईमेल]({{ promote/sample_emails }}) अपने प्रबंधक या कंपनी के सीईओ को भेजें।
 
-## एक घंटे का कोड को अपने कम्युनिटी में प्रसार करें।
+## 4. ऑवर ऑफ़ कोड को अपनी कम्युनिटी में प्रसार करें।
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+[एक स्थानीय समूह की भर्ती करें]({{ promote/sample_emails }}) - लड़का/लड़की स्काउट्स क्लब, चर्च, विश्वविद्यालय, दिग्गज समूह, श्रमिक संघ, या यहां तक कि कुछ दोस्त भी। You don't have to be in school to learn new skills. अपने स्वयं के ईवेंट के लिए इन [पोस्टर, बैनर, स्टिकर, वीडियो और अधिक](/promote/resources) का उपयोग करें।
 
-## 5. एक घंटा कोड का' का समर्थन करने के लिए एक स्थानीय निर्वाचित अधिकारी से अनुरोध करे |
+## 5. ऑवर ऑफ़ कोड का' का समर्थन करने के लिए एक स्थानीय निर्वाचित अधिकारी को कहें
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[यह ईमेल]({{ promote/sample_emails }}) अपने स्थानीय प्रतिनिधियों, नगर परिषद, या स्कूल बोर्ड को भेजें और उन्हें आवर ऑफ कोड के लिए अपने स्कूल में आने के लिए आमंत्रित करें। It can help build support for computer science in your area beyond one hour.
 
 {{ signup_button }}

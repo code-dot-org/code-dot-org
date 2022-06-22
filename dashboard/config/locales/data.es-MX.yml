@@ -971,10 +971,12 @@ es-MX:
         CSA-PL-two-way-selection: Selección bidireccional
         CSA-PL-Printing-in-Java: Impresión en Java
         CSA-PL-multi-selection-statements: Sentencias de Selección Múltiple
+        CS_Changing_Everything: Las Ciencias de la Computación lo están cambiando
+          todo
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque
-        run: Dale a "Ejecutar" para probar el programa.
+        run: Haz clic en "Ejecutar" para probar tu programa
         watch_again: Haz clic aquí para volver a ver el video
         gray_block_explanation: Los bloques que están de color gris no se pueden eliminar.
           ¿Puedes resolver el rompecabezas de todas formas?
@@ -1086,7 +1088,7 @@ es-MX:
         craft_callout_preplaced: Hemos colocado algunos bloques para que empieces.
         craft_inside_repeat: Coloca bloques aquí para repetir acciones.
         craft_callout_preplaced_house: Este código comenzará a construir tu casa.
-          ¿Puedes terminarlo?
+          ¿Puedes terminarla?
         craft_what_is_iron: "¡Extrae este hierro!"
         craft_callout_moveforward: Este código comprobará si hay lava. ¿Puedes añadir
           un comando para avanzar?

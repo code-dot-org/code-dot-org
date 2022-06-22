@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-04-26T18:52:16.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -56,9 +52,9 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/vpl-csd-2022/guides/variables",
+      "/courses/vpl-csd-2022/guides/drawing-shapes",
+      "/courses/vpl-csd-2022/guides/shapes-and-parameters"
     ],
     "encrypted": "false",
     "mini_rubric": "false",
@@ -66,6 +62,10 @@
     "long_instructions": "**Note: This is the same level that students will complete in Unit 3 Lesson 5 Level 3 in the CS Discoveries curriculum.**\r\n",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-04-26T18:52:16.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-26T18:52:16.505+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-U3 Variables Predict Where XY_2021\\\"\"],\"cloned_from\":\"VPL-CSD-U3 Variables Predict Where XY_2021\"}]"

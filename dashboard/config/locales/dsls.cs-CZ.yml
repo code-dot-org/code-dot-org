@@ -826,6 +826,7 @@ cs-CZ:
         - correct: true
         questions:
         - {}
+        title: Sestavit předpověď
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -834,6 +835,7 @@ cs-CZ:
         - correct: true
         questions:
         - {}
+        title: Sestavit předpověď
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -842,6 +844,7 @@ cs-CZ:
         - correct: true
         questions:
         - {}
+        title: Sestavit předpověď
       ConditionalsWithCards-Unplugged:
         markdown: |
           # Podmínky s kartami
@@ -880,13 +883,11 @@ cs-CZ:
           \n\n</div>\n"
       Dance_Party_extras_intro_2019:
         markdown: |
-          "# Tancuj dál!
+          # Tancuj dál!
 
           Ve 2. části budeš vytvářet svůj vlastní projekt. Tady nenajdeš žádné hádanky - místo toho je tu několik projektů, které ukazují různé možnosti vytváření složitých tanečních párty.
 
           Tyto úrovně můžeš procházet _v libovolném pořadí_. Přejdi do jiné a podívej se, jak se něco dělalo v předchozí úrovni, nebo kombinuj koncepty z různých projektů. Vyzkoušej je všechny, vyber si své oblíbené, věnuj čas rozvíjení projektu a přizpůsob si ho podle sebe.
-
-          <a class=""btn btn-large btn-primary next-stage submitButton pull-right“>Pokračovat</a>
 
           <div class=""clearfix""></div>
 
@@ -968,7 +969,7 @@ cs-CZ:
 
           <img src=""https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif""></a>
 
-          </div>"
+          </div>
       DigitalCitizenship-Unplugged:
         markdown: |
           # Digitální občanství
@@ -4775,6 +4776,7 @@ cs-CZ:
         - correct: true
         questions:
         - {}
+        title: Sestavit předpověď
       BinaryBracelets-Unplugged:
         markdown: |
           # Binární náramky
@@ -4984,3 +4986,23 @@ cs-CZ:
         - {}
         - {}
         - text: Žádná z uvedených možností.
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Přidávání obrázků
+      CSD U2 Image practice_pilot_2021:
+        display_name: Přidávání obrázků
+      CSD U3 drawing practice choice_2021:
+        display_name: Procvičení
+      CSD games cake challenge choice_2021:
+        display_name: Výzvy
+      CSD games platform challenge choice_2021:
+        display_name: Výzvy
+      CSD web draw loop practice choice_2021:
+        display_name: Procvičení
+      CSD web movement practice choice_2021:
+        display_name: Procvičení
+      CSD web text practice choice_2021:
+        display_name: Procvičení
+      ml-club app-choice parent:
+        display_name: Přizpůsobit aplikaci
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Přizpůsobit aplikaci

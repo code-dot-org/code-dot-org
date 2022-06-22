@@ -213,7 +213,8 @@
           "definition": "Akce, která způsobí, že se něco stane."
         },
         "models_and_simulations/outbreak/unversioned": {
-          "word": "Modely a simulace"
+          "word": "Modely a simulace",
+          "definition": "program, který replikuje nebo napodobuje klíčové vlastnosti a fungování událostí v reálném světě s cílem prozkoumat jeho chování a přitom se vyhnout nákladům, časovým nárokům nebo škodám v případě spuštění experimentu v reálném světě."
         },
         "event/sports/unversioned": {
           "word": "Událost",
@@ -350,7 +351,8 @@
           "definition": "Cykly, které mají předem určený začátek, konec a přírůstek (krokový interval)."
         },
         "models_and_simulations/coursef/2021": {
-          "word": "Modely a simulace"
+          "word": "Modely a simulace",
+          "definition": "program, který replikuje nebo napodobuje klíčové vlastnosti a fungování událostí v reálném světě s cílem prozkoumat jeho chování a přitom se vyhnout nákladům, časovým nárokům nebo škodám v případě spuštění experimentu v reálném světě."
         },
         "machine_learning/coursef/2021": {
           "word": "Strojové učení",
@@ -818,6 +820,9 @@
         "user/csd/2021": {
           "word": "Uživatel",
           "definition": "Někdo, kdo používá nějaký objekt, včetně softwaru a hardwaru."
+        },
+        "user_interface/csd/2021": {
+          "word": "Uživatelské rozhraní"
         },
         "bug/csd/2021": {
           "word": "Chyba",

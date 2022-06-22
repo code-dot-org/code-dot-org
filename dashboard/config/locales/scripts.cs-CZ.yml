@@ -2,26 +2,6 @@
 cs:
   data:
     script:
-      category:
-        csd_category_name: Objevujeme informatiku (2017-2018)
-        csd_2018_category_name: Objevujeme informatiku (2018-2019)
-        csd_2019_category_name: Objevujeme informatiku (2019-2020)
-        csd_2020_category_name: Objevujeme informatiku (2020-2021)
-        csd_2021_category_name: Objevujeme informatiku (2021-2022)
-        csf_category_name: Základy informatiky
-        csf2_draft_category_name: 'Ve vývoji: Kurzy A - F'
-        csp_category_name: Principy informatiky (2015-2016)
-        csp_2018_category_name: Principy informatiky (2018-2019)
-        csp_2019_category_name: Principy informatiky (2019-2020)
-        csp_2020_category_name: Principy informatiky (2020-2021)
-        csp_2021_category_name: Principy informatiky (2021-2022)
-        cspexams_category_name: Praktický test z principů informatiky
-        csp17_category_name: Principy informatiky 2016-2017
-        full_course_category_name: Kompletní kurzy
-        hoc_category_name: Hodina kódu
-        math_category_name: Matematické
-        tts_category_name: Převod textu na řeč
-        other_category_name: Ostatní
       name:
         course1:
           title: Kurz 1
@@ -698,6 +678,8 @@ cs:
               name: Základy informatiky
             Getting Started:
               name: Začínáme
+            Planning:
+              name: Plánování
         ECSPD2:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
@@ -1015,6 +997,8 @@ cs:
         CSDU3-Draft:
           description_short: Programování
           lessons:
+            Collisions:
+              name: Kolize
             Functions:
               name: Funkce
             Velocity:
@@ -1065,6 +1049,7 @@ cs:
             Design Mode:
               name: Dizajnový mód
         CSDU1-Draft:
+          description_short: Řešení problémů
           lessons:
             Exploring Apps:
               name: Prozkoumávání aplikací
@@ -1109,6 +1094,8 @@ cs:
               name: 'Skládačky: Naučte se přetáhnout'
             Loops:
               name: Cykly
+            Loops Unplugged:
+              name: Cykly bez počítače
             Programming:
               name: Programování
             'Real-life Algorithms: Plant a Seed':
@@ -1137,6 +1124,8 @@ cs:
               name: 'Skládačky: Naučte se přetáhnout'
             Loops:
               name: Cykly
+            Loops Unplugged:
+              name: Cykly bez počítače
             Programming:
               name: Programování
             Unspotted Bugs:
@@ -1245,6 +1234,8 @@ cs:
           lessons:
             Velocity:
               name: Rychlost
+            Collisions:
+              name: Kolize
             Functions:
               name: Funkce
             Variables:
@@ -1253,6 +1244,8 @@ cs:
               name: Postavy
             Conditionals:
               name: Podmínky
+            Keyboard Input:
+              name: Vstup z klávesnice
         grade2:
           description_audience: Věk 5-18
           lessons:
@@ -1341,6 +1334,8 @@ cs:
               name: Nezávislý posudek
             Lists:
               name: Seznamy
+            Headings:
+              name: Záhlaví
         csp2-support:
           lesson_groups:
             required:
@@ -1356,6 +1351,9 @@ cs:
           lesson_groups:
             csd4_2:
               display_name: 'Kapitola 2: Prototypování aplikací'
+          lessons:
+            Linking Screens:
+              name: Propojení obrazovek
         minecraft:
           title: Hodina kódu Minecraft Designer
           description_short: Naprogramuj zvířata a další postavy, vytvoř si svojí
@@ -1548,6 +1546,8 @@ cs:
               name: Vybudujte si svůj projekt
             Present Your Project:
               name: Prezentujte svůj projekt
+            Private and Personal Information:
+              name: Soukromé a osobní informace
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1736,6 +1736,10 @@ cs:
               name: Analogový vstup
             Map:
               name: Mapa
+            Board Events:
+              name: Události desky
+            Getting Properties:
+              name: Načtení vlastností
             Functions with Parameters:
               name: Funkce s Parametry
         workshop-gamelab:
@@ -1750,6 +1754,11 @@ cs:
           lesson_groups:
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
+          lessons:
+            Combining Representations:
+              name: Kombinování reprezentací
+            Representing Images:
+              name: Reprezentace obrázků
         coursed-ramp:
           lessons:
             Introduction:
@@ -1780,8 +1789,16 @@ cs:
               name: Cykly "For"
             Analog Input:
               name: Analogový vstup
+            Board Events:
+              name: Události desky
+            Getting Properties:
+              name: Načtení vlastností
             Functions with Parameters:
               name: Funkce s Parametry
+            Board Events_:
+              name: Události desky
+            Getting Properties_:
+              name: Načtení vlastností
             Analog Input_:
               name: Analogový vstup
             Functions with Parameters_:
@@ -1795,18 +1812,31 @@ cs:
               name: Postavy
             Conditionals:
               name: Podmínky
+            Keyboard Input:
+              name: Vstup z klávesnice
             Velocity:
               name: Rychlost
+            Collisions:
+              name: Kolize
             Functions:
               name: Funkce
         csd5-2017:
           lesson_groups:
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
+          lessons:
+            Representing Images:
+              name: Reprezentace obrázků
+            Combining Representations:
+              name: Kombinování reprezentací
+            Keeping Data Secret:
+              name: Udržování dat v tajnosti
         csd3-old:
           lessons:
             Velocity:
               name: Rychlost
+            Collisions:
+              name: Kolize
             Functions:
               name: Funkce
         csd2-draft:
@@ -1821,8 +1851,12 @@ cs:
               name: Postavy
             Conditionals:
               name: Podmínky
+            Keyboard Input:
+              name: Vstup z klávesnice
             Velocity:
               name: Rychlost
+            Collisions:
+              name: Kolize
             Functions:
               name: Funkce
             'null':
@@ -2472,6 +2506,9 @@ cs:
           lesson_groups:
             csd4_2:
               display_name: 'Kapitola 2: Prototypování aplikací'
+          lessons:
+            Linking Screens:
+              name: Propojení obrazovek
         applab-intro:
           title: Úvod do App Lab
           lessons:
@@ -2509,6 +2546,8 @@ cs:
               name: 'Algoritmy: Kostkový závod'
             Conditionals:
               name: Podmínky
+            Private and Personal Information:
+              name: Soukromé a osobní informace
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
             'Functions: Songwriting':
@@ -2689,6 +2728,8 @@ cs:
               name: 'Algoritmy: Kostkový závod'
             Conditionals:
               name: Podmínky
+            Private and Personal Information:
+              name: Soukromé a osobní informace
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
             'Functions: Songwriting':
@@ -2784,6 +2825,11 @@ cs:
           lesson_groups:
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
+          lessons:
+            Representing Images:
+              name: Reprezentace obrázků
+            Combining Representations:
+              name: Kombinování reprezentací
         csd4-old:
           lesson_groups:
             csd4_2:
@@ -2809,6 +2855,10 @@ cs:
               name: Principy informatiky Předběžný průzkum 21-22
             CSD pre-survey 21-2:
               name: Objevujeme informatiku Předběžný průzkum 21-22
+            CS Principles Pre-survey:
+              name: Koncept principů informatiky Předběžný průzkum
+            Course Survey:
+              name: Koncept průzkumu po kurzu Objevování informatiky
         hero:
           title: 'Minecraft: Cesta hrdiny'
           description_short: Minecraft je zpět se zbrusu novou aktivitou pro Hodinu
@@ -2866,6 +2916,8 @@ cs:
               name: Úvod
             Conditionals:
               name: Podmínky
+            Private and Personal Information:
+              name: Soukromé a osobní informace
             'Functions: Songwriting':
               name: 'Funkce: Skládání písní'
             Functions in Artist:
@@ -2988,8 +3040,12 @@ cs:
               name: Postavy
             Conditionals:
               name: Podmínky
+            Keyboard Input:
+              name: Vstup z klávesnice
             Velocity:
               name: Rychlost
+            Collisions:
+              name: Kolize
             Functions:
               name: Funkce
         csd3-2018:
@@ -3006,10 +3062,16 @@ cs:
               name: Postavy
             Conditionals:
               name: Podmínky
+            Keyboard Input:
+              name: Vstup z klávesnice
             Velocity:
               name: Rychlost
+            Collisions:
+              name: Kolize
             Functions:
               name: Funkce
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
         csd2-2018:
           lesson_groups:
             csd2_1:
@@ -3017,8 +3079,12 @@ cs:
             csd2_2:
               display_name: 'Kapitola 2: Styly a CSS'
           lessons:
+            Headings:
+              name: Záhlaví
             Lists:
               name: Seznamy
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
         coursea-2018:
           title: Kurz A (2018)
           assignment_family_title: Kurz A
@@ -3236,6 +3302,8 @@ cs:
               name: Posloupnosti se Scratem
             Move It, Move It:
               name: Pohyb, pohyb
+            Copyright and Creativity:
+              name: Tvoření a férová hra jsou super
           student_description: Učte se základy počítačových věd a internetové bezpečnosti.
             Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete
             moci sdílet.
@@ -3364,10 +3432,16 @@ cs:
               name: Analogový vstup\_
             Functions with Parameters_:
               name: Funkce s parametry\_
+            Board Events:
+              name: Události desky
+            Getting Properties:
+              name: Načtení vlastností
             Analog Input:
               name: Analogový vstup
             Functions with Parameters:
               name: Funkce s Parametry
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
         coursee-2018:
           title: Kurz E (2018)
           assignment_family_title: Kurz E
@@ -3411,6 +3485,8 @@ cs:
               name: Úvod
             Conditionals:
               name: Podmínky s Farmářkou
+            Private and Personal Information:
+              name: Soukromé a osobní informace
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
             'Functions: Songwriting':
@@ -3443,6 +3519,8 @@ cs:
               name: Hodina kódu s Minecraftem
             Functions in Minecraft:
               name: Funkce v Minecraft
+            Copyright and Creativity:
+              name: Digitální sdílení
           student_description: Začněte programovat s algoritmy, cykly, podmínkami
             a událostmi a pak přejděte k funkcím. V druhé části tohoto kurzu navrhněte
             a vytvořte završující projekt, který budete moci sdílet s přáteli a rodinou.
@@ -3560,10 +3638,24 @@ cs:
           lesson_groups:
             csd4_2:
               display_name: 'Kapitola 2: Prototypování aplikací'
+          lessons:
+            Linking Screens:
+              name: Propojení obrazovek
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
         csd5-2018:
           lesson_groups:
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
+          lessons:
+            Representing Images:
+              name: Reprezentace obrázků
+            Keeping Data Secret:
+              name: Udržování dat v tajnosti
+            Combining Representations:
+              name: Kombinování reprezentací
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
         csp2-2018:
           lesson_groups:
             csp2_1_2018:
@@ -3745,6 +3837,8 @@ cs:
               name: Tvá digitální stopa
             Programming in Ice Age:
               name: Programování se Scratem
+            Copyright and Creativity:
+              name: Tvoření a férová hra jsou super
             Programming with Rey and BB-8:
               name: Programování s Rey a BB-8
             Loops in Ice Age:
@@ -3793,6 +3887,10 @@ cs:
             Aquatic:
               name: 'Minecraft: Vodní plavba'
           name: vodní
+        sconyers:
+          lessons:
+            Linking Screens:
+              name: Propojení obrazovek
         dance--draft:
           lessons:
             Dance Party:
@@ -3809,6 +3907,8 @@ cs:
               display_name: Podmínky
             csp_functions:
               display_name: Funkce
+            csp_project:
+              display_name: Projekt
         dance-extras:
           title: Tančete dále (2018)
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
@@ -3916,6 +4016,8 @@ cs:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Digital Sharing:
+              name: Digitální sdílení
             Running Simulations:
               name: Spouštění simulací
             Simulating Experiments:
@@ -4045,6 +4147,8 @@ cs:
               name: Podmínky s kartami
             Conditionals:
               name: Podmínky s Farmářkou
+            Private and Personal Information:
+              name: Soukromé a osobní informace
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
             'Functions: Songwriting':
@@ -4093,6 +4197,8 @@ cs:
               name: Vodní podmínky ve hře Minecraft
             Access Ability:
               name: Návrh pro přístupnost
+            Digital Sharing:
+              name: Digitální sdílení
             Simon Says:
               name: Kuba řekl
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -4505,6 +4611,8 @@ cs:
             csd2_2:
               display_name: 'Kapitola 2: Styly a CSS'
           lessons:
+            Headings:
+              name: Záhlaví
             Lists:
               name: Seznamy
         csd3-2019:
@@ -4521,8 +4629,12 @@ cs:
               name: Postavy
             Conditionals:
               name: Podmínky
+            Keyboard Input:
+              name: Vstup z klávesnice
             Velocity:
               name: Rychlost
+            Collisions:
+              name: Kolize
             Functions:
               name: Funkce
         csd4-2019:
@@ -4531,10 +4643,20 @@ cs:
               display_name: 'Kapitola 2: Prototypování aplikací'
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
+          lessons:
+            Linking Screens:
+              name: Propojení obrazovek
         csd5-2019:
           lesson_groups:
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
+          lessons:
+            Representing Images:
+              name: Reprezentace obrázků
+            Keeping Data Secret:
+              name: Udržování dat v tajnosti
+            Combining Representations:
+              name: Kombinování reprezentací
         csd6-2019:
           lesson_groups:
             csd6_1:
@@ -4542,6 +4664,10 @@ cs:
             csd6_2:
               display_name: 'Kapitola 2: Stavba fyzického prototypu'
           lessons:
+            Board Events:
+              name: Události desky
+            Getting Properties:
+              name: Načtení vlastností
             Analog Input:
               name: Analogový vstup
             Functions with Parameters:
@@ -4554,6 +4680,8 @@ cs:
               display_name: Podmínky
             csp_functions:
               display_name: Funkce
+            csp_project:
+              display_name: Projekt
             required:
               display_name: Přehled
           lessons:
@@ -4662,6 +4790,8 @@ cs:
               display_name: Podmínky
             csp_functions:
               display_name: Funkce
+            csp_project:
+              display_name: Projekt
         csp2-pilot-staging:
           title: '2.  lekce: Internet'
           lesson_groups:
@@ -4671,6 +4801,8 @@ cs:
               display_name: Podmínky
             csp_functions:
               display_name: Funkce
+            csp_project:
+              display_name: Projekt
         csp3-pilot-staging:
           lessons:
             'Project: Share Your App':
@@ -4683,12 +4815,16 @@ cs:
               display_name: Podmínky
             csp_functions:
               display_name: Funkce
+            csp_project:
+              display_name: Projekt
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Seznamy
             csp_loops:
               display_name: Cykly
+            csp_project:
+              display_name: Projekt
           lessons:
             'Loops Practice: While Loops':
               name: 'Procvičování cyklů: Cykly pokud (while)'
@@ -4700,6 +4836,8 @@ cs:
               display_name: Podmínky
             csp_functions:
               display_name: Funkce
+            csp_project:
+              display_name: Projekt
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -4708,6 +4846,8 @@ cs:
               display_name: Podmínky
             csp_functions:
               display_name: Funkce
+            csp_project:
+              display_name: Projekt
         csp9-pilot-staging:
           title: '9.  lekce: Data'
           lesson_groups:
@@ -4717,6 +4857,8 @@ cs:
               display_name: Podmínky
             csp_functions:
               display_name: Funkce
+            csp_project:
+              display_name: Projekt
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -4725,6 +4867,8 @@ cs:
               display_name: Podmínky
             csp_functions:
               display_name: Funkce
+            csp_project:
+              display_name: Projekt
         express-2018-vn:
           lessons:
             Graph Paper Programming:
@@ -4739,6 +4883,8 @@ cs:
               display_name: Seznamy
             csp_loops:
               display_name: Cykly
+            csp_project:
+              display_name: Projekt
             required:
               display_name: Přehled
           lessons:
@@ -4777,8 +4923,12 @@ cs:
             csd2_2:
               display_name: 'Kapitola 2: Styly a CSS'
           lessons:
+            Headings:
+              name: Záhlaví
             Lists:
               name: Seznamy
+            Linking Pages:
+              name: Propojení stránek
         csd3-pilot:
           title: CSD Kapitola 3 - Animace and hry (pilotní verze)
           lesson_groups:
@@ -4793,8 +4943,12 @@ cs:
               name: Postavy
             Conditionals:
               name: Podmínky
+            Keyboard Input:
+              name: Vstup z klávesnice
             Velocity:
               name: Rychlost
+            Collisions:
+              name: Kolize
             Functions:
               name: Funkce
             Random Numbers:
@@ -4951,6 +5105,8 @@ cs:
               name: Začínáme
             Computer Science Fundamentals:
               name: Základy informatiky
+            Planning:
+              name: Plánování
             Sequencing:
               name: Sekvence
             Loops:
@@ -4985,6 +5141,8 @@ cs:
               display_name: Podmínky
             csp_functions:
               display_name: Funkce
+            csp_project:
+              display_name: Projekt
         time4cs-original-unit-1:
           lessons:
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -4997,6 +5155,10 @@ cs:
               name: Kuba řekl
             Alien Dance Party with Sprite Lab:
               name: Taneční večírek vetřelců s Laboratoří sprajtů
+            Private and Personal Information:
+              name: Soukromé a osobní informace
+            Access Ability:
+              name: Usnadnění přístupu
             Drawing with Loops:
               name: Kreslení s cykly
         time4cs-control-unit-2:
@@ -5075,6 +5237,10 @@ cs:
               name: Kuba řekl
             Alien Dance Party with Sprite Lab:
               name: Taneční večírek vetřelců s Laboratoří sprajtů
+            Private and Personal Information:
+              name: Soukromé a osobní informace
+            Access Ability:
+              name: Usnadnění přístupu
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -5104,6 +5270,10 @@ cs:
               name: Kuba řekl
             Alien Dance Party with Sprite Lab:
               name: Taneční večírek vetřelců s Laboratoří sprajtů
+            Private and Personal Information:
+              name: Soukromé a osobní informace
+            Access Ability:
+              name: Usnadnění přístupu
         csp7-pilot:
           lesson_groups:
             required:
@@ -5116,18 +5286,27 @@ cs:
               display_name: Podmínky
             csp_functions:
               display_name: Funkce
+            csp_project:
+              display_name: Projekt
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Seznamy
             csp_loops:
               display_name: Cykly
+            csp_project:
+              display_name: Projekt
         csd2-2020:
           lesson_groups:
             csd2_1:
               display_name: 'Kapitola 1: Obsah webu a HTML'
             csd2_2:
               display_name: 'Kapitola 2: Styly a CSS'
+          lessons:
+            Headings:
+              name: Záhlaví
+            Linking Pages:
+              name: Propojení stránek
         csd1-2020:
           lesson_groups:
             csd1_1:
@@ -5140,10 +5319,20 @@ cs:
               display_name: 'Kapitola 2: Prototypování aplikací'
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
+          lessons:
+            Linking Screens:
+              name: Propojení obrazovek
         csd5-2020:
           lesson_groups:
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
+          lessons:
+            Representing Images:
+              name: Reprezentace obrázků
+            Keeping Data Secret:
+              name: Udržování dat v tajnosti
+            Combining Representations:
+              name: Kombinování reprezentací
         csd6-2020:
           lesson_groups:
             csd6_1:
@@ -5151,6 +5340,10 @@ cs:
             csd6_2:
               display_name: 'Kapitola 2: Stavba fyzického prototypu'
           lessons:
+            Board Events:
+              name: Události desky
+            Getting Properties:
+              name: Načtení vlastností
             Analog Input:
               name: Analogový vstup
             Functions with Parameters:
@@ -5170,8 +5363,12 @@ cs:
               name: Vlastnosti sprajtu
             Conditionals:
               name: Podmínky
+            Keyboard Input:
+              name: Vstup z klávesnice
             Velocity:
               name: Rychlost
+            Collisions:
+              name: Kolize
             Functions:
               name: Funkce
             Text:
@@ -5445,6 +5642,8 @@ cs:
               name: Plovoucí ryby s Laboratoří sprajtů
             Alien Dance Party with Sprite Lab:
               name: Taneční večírek vetřelců s Laboratoří sprajtů
+            Private and Personal Information:
+              name: Soukromé a osobní informace
             About Me:
               name: O mě s Laboratoří sprajtů
             Access Ability:
@@ -5465,6 +5664,8 @@ cs:
               name: Funkce s Artist
             End of Course Project:
               name: Projekt na zakončení kurzu
+            Digital Sharing:
+              name: Digitální sdílení
             Designing for Accessibility:
               name: Návrh pro přístupnost
           student_description: Začněte programovat s algoritmy, cykly, podmínkami
@@ -5527,6 +5728,8 @@ cs:
               name: Moc slova
             Crowdsourcing:
               name: Crowdsourcing
+            Digital Sharing:
+              name: Digitální sdílení
             End of Course Project:
               name: Projekt na zakončení kurzu
             AI for Oceans:
@@ -5739,6 +5942,9 @@ cs:
               display_name: 'Kapitola 1: Obsah webu a HTML'
             csd2_2:
               display_name: 'Kapitola 2: Styly a CSS'
+          lessons:
+            Headings:
+              name: Záhlaví
         csp5-virtual:
           lessons:
             While Loops:
@@ -5754,8 +5960,12 @@ cs:
             csd3_2:
               display_name: 'Kapitola 2: Tvorba her'
           lessons:
+            Example Projects:
+              name: Ukázkové projekty
             Velocity:
               name: Rychlost
+            Collisions:
+              name: Kolize
             Functions:
               name: Funkce
         code-break:
@@ -5809,8 +6019,12 @@ cs:
               name: Text
             Conditionals:
               name: Podmínky
+            Keyboard Input:
+              name: Vstup z klávesnice
             Velocity:
               name: Rychlost
+            Collisions:
+              name: Kolize
             Functions:
               name: Funkce
           lesson_groups:
@@ -5906,6 +6120,8 @@ cs:
           lessons:
             lesson-2:
               name: Text a výzvy
+            lesson-3:
+              name: 'Miniprojekt: Programy vstupu uživatele'
             Virus Simulation for Code Bytes:
               name: Naprogramování simulace
             Making Sprites:
@@ -5931,6 +6147,14 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a řešení problémů'
+        csd2-2021:
+          lessons:
+            Headings:
+              name: Záhlaví
+            Linking Pages:
+              name: Propojení stránek
+            lesson-1:
+              name: Objevujeme informatiku – Průzkum po kurzu
         csd3-2021:
           lessons:
             Variables:
@@ -5945,31 +6169,55 @@ cs:
               name: Text
             Conditionals:
               name: Podmínky
+            Keyboard Input:
+              name: Vstup z klávesnice
             Velocity:
               name: Rychlost
+            Collisions:
+              name: Kolize
             Functions:
               name: Funkce
+            lesson-1:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             csd3_1:
               display_name: 'Kapitola 1: Obrázky a animace'
             csd3_2:
               display_name: 'Kapitola 2: Tvorba her'
         csd4-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             csd4_2:
               display_name: 'Kapitola 2: Prototypování aplikací'
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
         csd5-2021:
+          lessons:
+            Representing Images:
+              name: Reprezentace obrázků
+            Keeping Data Secret:
+              name: Udržování dat v tajnosti
+            Combining Representations:
+              name: Kombinování reprezentací
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
         csd6-2021:
           lessons:
+            Board Events:
+              name: Události desky
+            Getting Properties:
+              name: Načtení vlastností
             Analog Input:
               name: Analogový vstup
             Functions with Parameters:
               name: Funkce s Parametry
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             csd6_1:
               display_name: 'Kapitola 1: Programování s hardware'
@@ -6001,12 +6249,16 @@ cs:
               display_name: Podmínky
             csp_functions:
               display_name: Funkce
+            csp_project:
+              display_name: Projekt
         csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: Seznamy
             csp_loops:
               display_name: Cykly
+            csp_project:
+              display_name: Projekt
         csp6-2021:
           lesson_groups:
             csp_unit6_2020:
@@ -6247,6 +6499,12 @@ cs:
               name: Plovoucí ryby s Laboratoří sprajtů
             Alien Dance Party with Sprite Lab:
               name: Taneční večírek vetřelců s Laboratoří sprajtů
+            Private and Personal Information:
+              name: Soukromé a osobní informace
+            About Me:
+              name: 'Miniprojekt: Informace o mně'
+            Digital Sharing:
+              name: Digitální sdílení
             Nested Loops in Bee:
               name: Vnořené cykly v bludišti
             Nested Loops in Artist:
@@ -6322,6 +6580,8 @@ cs:
               name: Na cykly s Artist
             Editing Behaviors:
               name: Chování v Laboratoři sprajtů
+            Virtual Pet:
+              name: 'Miniprojekt: Virtuální zvířátko'
             End of Course Project:
               name: Projekt na zakončení kurzu
             lesson-1:
@@ -6336,6 +6596,8 @@ cs:
               name: Epidemie
             lesson-2:
               name: Moc slova
+            lesson-11:
+              name: 'Miniprojekt: Programy vstupu uživatele'
           lesson_groups:
             ramp_up:
               display_name: Postavy
@@ -6499,6 +6761,8 @@ cs:
               name: Text a výzvy
             blank-space-stories:
               name: Příběhy prázdného prostoru
+            user-input-programs:
+              name: 'Miniprojekt: Programy vstupu uživatele'
           lesson_groups:
             ramp_up:
               display_name: Úvod
@@ -6511,12 +6775,22 @@ cs:
             variables:
               display_name: Proměnné
         csd4-preview-2021:
+          lessons:
+            Linking Screens:
+              name: Propojení obrazovek
           lesson_groups:
             csd4_2:
               display_name: 'Kapitola 2: Prototypování aplikací'
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
         csd5-preview-2021:
+          lessons:
+            Representing Images:
+              name: Reprezentace obrázků
+            Keeping Data Secret:
+              name: Udržování dat v tajnosti
+            Combining Representations:
+              name: Kombinování reprezentací
           lesson_groups:
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
@@ -6691,12 +6965,18 @@ cs:
               display_name: Modul epidemie
           name: epidemický modul
           title: Modul_epidemie_V2
+        csd7-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
         kodea-pd-2021:
           lessons:
             Getting Started:
               name: Začínáme
             Computer Science Fundamentals:
               name: Základy informatiky
+            Planning:
+              name: Plánování
         self-paced-pl-csd2-2021:
           lessons:
             lesson-9:
@@ -6786,6 +7066,8 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Lekce
+            lessonGroup-3:
+              display_name: Projekt
             lessonGroup-4:
               display_name: Ukázky a zdroje informací
         hello-world-draft:
@@ -6925,6 +7207,8 @@ cs:
               name: Proměnné a příkazy if
             lesson-8:
               name: 'Miniprojekt: Aplikace na cestu'
+            lesson-9:
+              name: Barevné LED
             lesson-10:
               name: Vstupy App Lab (getProperty, getText) (Rozbalovací nabídky, vstupy
                 a posuvníky?)
@@ -6942,6 +7226,8 @@ cs:
               name: Fyzické vstupy
             lesson-18:
               name: Prototypování
+            lesson-19:
+              name: Projekt
           lesson_groups:
             lessonGroup-3:
               display_name: Šablony
@@ -6969,6 +7255,8 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Lekce
+            lessonGroup-3:
+              display_name: Projekt
             lessonGroup-4:
               display_name: Ukázky a zdroje informací
         tesstest921:
@@ -7098,6 +7386,7 @@ cs:
           title: Lekce 5 – Uspořádání objektů [Exemplars]
         csd-post-survey-2021:
           name: csd-post-survey-2021
+          title: Objevujeme informatiku – Průzkum po kurzu
           description: Tato jednotka obsahuje průzkum po kurzu Objevování informatiky.
             Tuto jednotku lze přiřadit poté, co studenti dokončí svou poslední jednotku
             v Objevování informatiky.
@@ -7184,8 +7473,11 @@ cs:
               name: Hláskovací včelka
         explore-data-1-2021:
           lessons:
+            Exploring Box Plots and Histograms:
+              name: Vizualizace dat
             lesson-1:
               name: Zkoumání krabicových grafů a histogramů
+          title: Vizualizace dat
         counting-csc-2021:
           lessons:
             Counting with Laurel:
@@ -7212,6 +7504,8 @@ cs:
           lessons:
             lesson-4:
               name: Simulátor epidemie
+            lesson-5:
+              name: 'Miniprojekt: Informace o mně'
             Drawing with Loops:
               name: Kreslení s cykly
             Programming with the Bee:
@@ -7237,10 +7531,14 @@ cs:
           lessons:
             Making Sprites:
               name: Dělání sprajtů
+            'Mini-Project: Virtual Pet':
+              name: 'Miniprojekt: Virtuální zvířátko'
             Blank Space Stories:
               name: Příběhy prázdného prostoru
             Text and Prompts:
               name: Text a výzvy
+            'Mini-Project: User Input Programs':
+              name: 'Miniprojekt: Programy vstupu uživatele'
             Simulating Experiments:
               name: Simulační experimenty
           lesson_groups:
@@ -7252,6 +7550,10 @@ cs:
               display_name: Projekt na zakončení kurzu
         csd6-pilot-2022:
           lessons:
+            Board Events:
+              name: Události desky
+            Arrays and Color LEDs:
+              name: Barevné LED
             lesson-10:
               name: Kombinace vstupů
             Functions with Parameters:
@@ -7458,12 +7760,16 @@ cs:
               display_name: Podmínky
             csp_functions:
               display_name: Funkce
+            csp_project:
+              display_name: Projekt
         csp5-2022:
           lesson_groups:
             csp_lists:
               display_name: Seznamy
             csp_loops:
               display_name: Cykly
+            csp_project:
+              display_name: Projekt
         courseb-2022:
           lessons:
             Digital Trails:
@@ -7681,6 +7987,12 @@ cs:
               name: Taneční večírek vetřelců s Laboratoří sprajtů
             Be A Super Digital Citizen:
               name: Buďte super digitální občan
+            Private and Personal Information:
+              name: Soukromé a osobní informace
+            'Mini-Project: About Me':
+              name: 'Miniprojekt: Informace o mně'
+            Digital Sharing:
+              name: Digitální sdílení
             Drawing with Loops:
               name: Kreslení s cykly
             Fancy Shapes using Nested Loops:
@@ -7707,6 +8019,8 @@ cs:
               name: Plovoucí ryby s Laboratoří sprajtů
             lesson-4:
               name: Buďte super digitální občan
+            About Me:
+              name: 'Miniprojekt: Informace o mně'
             Programming and Loops with the Artist:
               name: Kreslení s cykly
             Nested Loops in Artist:
@@ -7743,12 +8057,16 @@ cs:
           lessons:
             Making Sprites:
               name: Dělání sprajtů
+            'Mini-Project: Virtual Pet':
+              name: 'Miniprojekt: Virtuální zvířátko'
             The Power of Words:
               name: Moc slova
             Blank Space Stories:
               name: Příběhy prázdného prostoru
             Text and Prompts:
               name: Text a výzvy
+            'Mini-Project: User Input Programs':
+              name: 'Miniprojekt: Programy vstupu uživatele'
             Drawing with Loops:
               name: Kreslení s cykly
             Programming with the Bee:
@@ -7771,12 +8089,16 @@ cs:
               name: Projekt na zakončení kurzu
             lesson-7:
               name: Dělání sprajtů
+            Virtual Pet:
+              name: 'Miniprojekt: Virtuální zvířátko'
             lesson-2:
               name: Moc slova
             lesson-9:
               name: Příběhy prázdného prostoru
             lesson-10:
               name: Text a výzvy
+            lesson-11:
+              name: 'Miniprojekt: Programy vstupu uživatele'
             Loops with the Artist:
               name: Kreslení s cykly
             Nested Loops in the Maze:
@@ -7809,6 +8131,8 @@ cs:
               name: Cykly
             lesson-21:
               name: Konzola
+            lesson-23:
+              name: Principy informatiky Předběžný průzkum
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -7969,16 +8293,26 @@ cs:
               display_name: Obsah
             lessonGroup-5:
               display_name: Sandbox
+        csa-backpack-2022:
+          lessons:
+            lesson-4:
+              name: TextovýProcesor
+            lesson-3:
+              name: ImagePlus a ScenePlus
         coursef-2022-pilot:
           lessons:
             The Power of Words:
               name: Moc slova
             Making Sprites:
               name: Dělání sprajtů
+            'Mini-Project: Virtual Pet':
+              name: 'Miniprojekt: Virtuální zvířátko'
             Blank Space Stories:
               name: Příběhy prázdného prostoru
             Text and Prompts:
               name: Text a výzvy
+            'Mini-Project: User Input Programs':
+              name: 'Miniprojekt: Programy vstupu uživatele'
             Simulating Experiments:
               name: Simulační experimenty
             Outbreak:
@@ -8277,12 +8611,28 @@ cs:
           lessons:
             Hello World CSC:
               name: CSC Hello World
+            lesson-4:
+              name: "[Optional] Úvod k Bajkám"
+            lesson-5:
+              name: Naplánuj si bajku
+            lesson-6:
+              name: Sdílej bajku
         csd1-2022:
           lesson_groups:
             csd1_1:
               display_name: 'Kapitola 1: Proces řešení problémů'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a řešení problémů'
+        csd2-2022:
+          lessons:
+            Headings:
+              name: Záhlaví
+            Linking Pages:
+              name: Propojení stránek
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
+            lesson-1:
+              name: Objevujeme informatiku – Průzkum po kurzu
         csd3-2022:
           lessons:
             Variables:
@@ -8297,39 +8647,75 @@ cs:
               name: Text
             Conditionals:
               name: Podmínky
+            Keyboard Input:
+              name: Vstup z klávesnice
             Velocity:
               name: Rychlost
+            Collisions:
+              name: Kolize
             Functions:
               name: Funkce
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
+            lesson-1:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             csd3_1:
               display_name: 'Kapitola 1: Obrázky a animace'
             csd3_2:
               display_name: 'Kapitola 2: Tvorba her'
         csd4-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             csd4_2:
               display_name: 'Kapitola 2: Prototypování aplikací'
         csd5-2022:
+          lessons:
+            Representing Images:
+              name: Reprezentace obrázků
+            Combining Representations:
+              name: Kombinování reprezentací
+            Keeping Data Secret:
+              name: Udržování dat v tajnosti
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
+        csd7-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
         csd6-2022:
           lessons:
+            Board Events:
+              name: Události desky
+            Color LEDs:
+              name: Barevné LED
             Combining Inputs and Outputs:
               name: Kombinace vstupů
             Functions:
               name: Funkce
+            CS Discoveries Post-Course Survey:
+              name: Objevujeme informatiku – Průzkum po kurzu
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapitola 2: Stavba fyzického prototypu'
         csd-post-survey-2022:
+          title: Objevujeme informatiku – Průzkum po kurzu
           description: Tato jednotka obsahuje průzkum po kurzu Objevování informatiky.
             Tuto jednotku lze přiřadit poté, co studenti dokončí svou poslední jednotku
             v Objevování informatiky.
           student_description: Tato jednotka obsahuje průzkum k vyplnění poté, co
             vaše třída dokončí všechny jednotky v Objevování informatiky. Váš učitel
             vám řekne, až nastane čas tento průzkum vyplnit.
+        testtess2:
+          name: testtess2
+        aiml-2022:
+          name: aiml-2022
+          description_short: Naučte se něco o umělé inteligenci a strojovém učení
         csa9-2022:
           lessons:
             Console:
@@ -8354,3 +8740,29 @@ cs:
               name: Přehled
             lesson-1:
               name: Přehled
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: CSC Hello World
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Úvod k Bajkám"
+            Plan Your Fable:
+              name: Naplánuj si bajku
+            Share Your Fable:
+              name: Sdílej bajku
+            lesson-4:
+              name: "[Optional] Úvod k Bajkám"
+            lesson-5:
+              name: Naplánuj si bajku
+            lesson-6:
+              name: Sdílej bajku
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Básnické umění
+        self-paced-pl-csd5-2022:
+          lessons:
+            Engage with machine learning apps:
+              name: Proces návrhu

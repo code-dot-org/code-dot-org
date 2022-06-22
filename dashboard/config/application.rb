@@ -1,4 +1,4 @@
-require File.expand_path('../deployment', __FILE__)
+require File.expand_path('../../../deployment', __FILE__)
 require 'cdo/poste'
 require 'rails/all'
 
@@ -23,6 +23,11 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
+    # Explicitly load appropriate defaults for this version of Rails.
+    # Eventually, we want to simply call:
+    #config.load_defaults 6.0
+    config.active_record.belongs_to_required_by_default = true
+
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
@@ -176,10 +181,6 @@ module Dashboard
     config.assets.image_optim = false unless CDO.image_optim
 
     config.experiment_cache_time_seconds = 60
-
-    console do
-      ARGV.push '-r', root.join('lib/console.rb')
-    end
 
     # Use custom routes for error codes
     config.exceptions_app = routes

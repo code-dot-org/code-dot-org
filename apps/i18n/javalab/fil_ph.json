@@ -13,7 +13,6 @@
   "classNotFound": "Error: walang class definition ang isa o higit pa sa mga Java file mo.",
   "closeReview": "Isara ang pagsusuri",
   "codeEditingDisabled": "Naka-disable ang pag-edit ng code habang sinusuri ang iyong proyekto",
-  "codeReview": "Pagsusuri ng Code",
   "commentUpdateError": "Nagkaroon ng error sa pagproseso ng kahilingan mo, subukang muli.",
   "commit": "Commit",
   "commitAndSave": "Commit & I-save",
