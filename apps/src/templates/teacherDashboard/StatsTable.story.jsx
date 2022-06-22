@@ -4,18 +4,15 @@ import {UnconnectedStatsTable as StatsTable} from './StatsTable';
 const students = [
   {
     id: 1,
-    name: 'Student B',
-    totalLines: 1
+    name: 'Student B'
   },
   {
     id: 2,
-    name: 'Student C',
-    totalLines: 2
+    name: 'Student C'
   },
   {
     id: 3,
-    name: 'Student A',
-    totalLines: 3
+    name: 'Student A'
   }
 ];
 
