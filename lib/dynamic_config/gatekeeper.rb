@@ -106,7 +106,7 @@ class GatekeeperBase < DynamicConfigBase
       rules.each do |conditions, value|
         rule = {"rule" => nil}
 
-        conditions = JSON.load(conditions)
+        conditions = JSON.parse(conditions)
         unless conditions.empty?
           where_clause = {}
           rule['where'] = where_clause
@@ -141,7 +141,7 @@ class GatekeeperBase < DynamicConfigBase
     Set.new.tap do |result|
       @datastore_cache.all.each do |_feature, rules|
         rules.each do |conditions, _value|
-          JSON.load(conditions).each do |property, value|
+          JSON.parse(conditions).each do |property, value|
             result << value if property == condition_property
           end
         end

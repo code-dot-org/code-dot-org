@@ -27,7 +27,7 @@ require_relative '../../lib/analyze_hoc_activity_helper'
 DEFAULT_LINES_OF_CODE = 20_886_942_901
 
 def main
-  to_date = JSON.load(IO.read(pegasus_dir("cache/HourOfActivity_Totals_2014-12-05.json")))
+  to_date = JSON.parse(IO.read(pegasus_dir("cache/HourOfActivity_Totals_2014-12-05.json")))
 
   total_started = to_date['started']
   total_finished = to_date['finished']
@@ -59,7 +59,7 @@ def main
   while day < today
     cache_path = pegasus_dir("cache/HourOfActivity_Results_#{day.strftime('%Y-%m-%d')}.json")
     if (day != today) && File.file?(cache_path)
-      day_data = JSON.load(IO.read(cache_path))
+      day_data = JSON.parse(IO.read(cache_path))
     else
       day_data = analyze_day_fast(day)
 

@@ -66,13 +66,13 @@ class RedactRestoreUtils
     is_json = File.extname(source) == '.json'
     source_data =
       if is_json
-        JSON.load(File.open(source, 'r'))
+        JSON.parse(File.open(source, 'r'))
       else
         YAML.load_file(source)
       end
     redacted_data =
       if is_json
-        JSON.load(File.open(redacted, 'r'))
+        JSON.parse(File.open(redacted, 'r'))
       else
         YAML.load_file(redacted)
       end
@@ -112,7 +112,7 @@ class RedactRestoreUtils
     source_data =
       if File.extname(source) == '.json'
         f = File.open(source, 'r')
-        JSON.load(f)
+        JSON.parse(f)
       else
         YAML.load_file(source)
       end

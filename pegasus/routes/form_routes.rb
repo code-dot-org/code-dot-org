@@ -16,7 +16,7 @@ post '/forms/:kind' do |kind|
     content_type :json
     cache_control :private, :must_revalidate, max_age: 0
     form = insert_or_upsert_form(kind, params)
-    data = JSON.load(form[:data]).merge(secret: form[:secret])
+    data = JSON.parse(form[:data]).merge(secret: form[:secret])
     if form[:kind] == "VolunteerContact2015"
       data.delete "volunteer_secret_s"
       data.delete "volunteer_email_s"

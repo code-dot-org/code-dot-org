@@ -208,7 +208,7 @@ module TextRender
     end
 
     def result(binding=nil)
-      YAML.load(@template.result(binding))
+      YAML.safe_load(@template.result(binding))
     end
   end
 

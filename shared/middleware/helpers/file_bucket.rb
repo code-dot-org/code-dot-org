@@ -19,7 +19,7 @@ class FileBucket < BucketHelper
     if manifest_result[:status] == 'NOT_FOUND'
       return []
     end
-    JSON.load manifest_result[:body]
+    JSON.parse manifest_result[:body]
   end
 
   def copy_files(src_channel, dest_channel, options={})
@@ -31,7 +31,7 @@ class FileBucket < BucketHelper
 
     # update dest_manifest with the decorated filenames from the src_manifest
     # (we need the new version ids from the dest_manifest, otherwise we'd just copy the src_manifest)
-    dest_manifest = JSON.load result.to_json
+    dest_manifest = JSON.parse result.to_json
     src_manifest = get_manifest(src_channel)
     src_manifest.each do |src_entry|
       src_filename = src_entry['filename']
