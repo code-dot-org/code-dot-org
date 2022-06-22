@@ -108,7 +108,8 @@ class JavalabEditor extends React.Component {
     hasOpenCodeReview: PropTypes.bool,
     isViewingOwnProject: PropTypes.bool,
     backpackEnabled: PropTypes.bool,
-    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
+    codeOwnersName: PropTypes.string
   };
 
   constructor(props) {
@@ -641,14 +642,12 @@ class JavalabEditor extends React.Component {
       height,
       isProjectTemplateLevel,
       handleClearPuzzle,
-      backpackEnabled
+      backpackEnabled,
+      codeOwnersName
     } = this.props;
 
     const showOpenCodeReviewWarning =
-      isReadOnlyWorkspace &&
-      hasOpenCodeReview &&
-      isViewingOwnProject &&
-      !hasQueryParam('version');
+      isReadOnlyWorkspace && hasOpenCodeReview && !hasQueryParam('version');
 
     let menuStyle = {
       display: this.state.showMenu ? 'block' : 'none',
@@ -750,7 +749,9 @@ class JavalabEditor extends React.Component {
                         ...(displayTheme === DisplayTheme.DARK &&
                           styles.darkFileMenuToggleButton),
                         ...((isReadOnlyWorkspace ||
-                          activeTabKey !== tabKey) && {visibility: 'hidden'})
+                          activeTabKey !== tabKey) && {
+                          visibility: 'hidden'
+                        })
                       }}
                       onClick={e => this.toggleTabMenu(tabKey, e)}
                       className="no-focus-outline"
@@ -791,7 +792,11 @@ class JavalabEditor extends React.Component {
                   id="openCodeReviewWarningBanner"
                   style={styles.openCodeReviewWarningBanner}
                 >
-                  {javalabMsg.editingDisabledUnderReview()}
+                  {isViewingOwnProject
+                    ? javalabMsg.editingDisabledUnderReview()
+                    : javalabMsg.codeReviewingPeer({
+                        peerName: codeOwnersName
+                      })}
                 </div>
               )}
               {orderedTabKeys.map(tabKey => {
@@ -851,7 +856,10 @@ class JavalabEditor extends React.Component {
           isOpen={openDialog === Dialog.COMMIT_FILES}
           files={Object.keys(sources)}
           handleClose={() =>
-            this.setState({openDialog: null, compileStatus: CompileStatus.NONE})
+            this.setState({
+              openDialog: null,
+              compileStatus: CompileStatus.NONE
+            })
           }
           handleCommit={onCommitCode}
           compileStatus={compileStatus}
@@ -910,7 +918,7 @@ const styles = {
   },
   openCodeReviewWarningBanner: {
     zIndex: 99,
-    backgroundColor: color.lightest_red,
+    backgroundColor: color.light_yellow,
     height: 20,
     padding: 5,
     width: '100%',
@@ -930,7 +938,8 @@ export default connect(
     backpackEnabled: state.javalab.backpackEnabled,
     showProjectTemplateWorkspaceIcon:
       !!state.pageConstants.isProjectTemplateLevel &&
-      state.javalab.isReadOnlyWorkspace
+      state.javalab.isReadOnlyWorkspace,
+    codeOwnersName: state.pageConstants.codeOwnersName
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),
