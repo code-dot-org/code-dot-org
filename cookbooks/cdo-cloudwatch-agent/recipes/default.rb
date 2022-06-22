@@ -27,8 +27,12 @@ script 'amazon-cloudwatch-agent-config-translator' do
   action :run
   interpreter "bash"
 
+  JSON_PATH = '/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json'.freeze
+  AGENT_TOM_PATH = '/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.toml'.freeze
+  COMMON_PATH = '/opt/aws/amazon-cloudwatch-agent/etc/common-config.toml'.freeze
+
   code <<-EOH
-    res="$(sudo /opt/aws/amazon-cloudwatch-agent/bin/config-translator --input #{json_path} --output #{agent_tom_path} --mode auto --config #{common_path} 2>&1)"
+    res="$(sudo /opt/aws/amazon-cloudwatch-agent/bin/config-translator --input #{JSON_PATH} --output #{AGENT_TOM_PATH} --mode auto --config #{COMMON_PATH} 2>&1)"
     echo "$res" | grep 'Valid Json input schema.'
     exit $?
   EOH
