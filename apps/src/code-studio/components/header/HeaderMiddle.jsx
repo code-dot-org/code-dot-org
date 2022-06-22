@@ -23,7 +23,6 @@ class HeaderMiddle extends React.Component {
     lessonData: PropTypes.object,
     scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
-    linesOfCodeText: PropTypes.string,
     isRtl: PropTypes.bool
   };
 
@@ -182,7 +181,6 @@ class HeaderMiddle extends React.Component {
       lessonData,
       scriptData,
       currentLevelId,
-      linesOfCodeText,
       isRtl
     } = this.props;
 
@@ -305,7 +303,6 @@ class HeaderMiddle extends React.Component {
                 scriptName={scriptData.name}
                 scriptData={scriptData}
                 currentLevelId={currentLevelId}
-                linesOfCodeText={linesOfCodeText}
                 windowHeight={this.state.windowHeight}
                 minimal={widths.showPopupBecauseProgressCropped}
               />
