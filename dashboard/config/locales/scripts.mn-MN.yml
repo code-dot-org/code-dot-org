@@ -16878,3 +16878,13 @@ mn:
               name: Тойм
             lesson-1:
               name: Тойм
+        self-paced-pl-csd5-2022:
+          lessons:
+            Train a machine learning model:
+              name: Интерактив анимейшн ба тоглоомууд
+            Engage with machine learning apps:
+              name: Дизайны үйл явц
+            Consider real world implications:
+              name: Өгөгдөл ба нийгэм
+            Unit wrap up:
+              name: Биет тооцоолол

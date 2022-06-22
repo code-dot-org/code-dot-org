@@ -42,7 +42,7 @@
   header_contents_options[:loc_prefix] = "nav.header."
   header_contents_options[:page_mode] = request.cookies['pm']
 
-  should_show_progress = script_level || @lesson_extras
+  should_show_progress = (script_level || @lesson_extras) && !@is_code_reviewing
 
   sign_in_user = current_user || user_type && OpenStruct.new(
     id: nil,
@@ -131,6 +131,12 @@
       href: script_path(@script, section_id: section_id, user_id: user_id),
       smallText: small_text
     }
+  elsif @is_code_reviewing
+    script_name_data = {
+      name: script_level.lesson.localized_title,
+      href: '#',  # When viewing peer code, link should do nothing
+      smallText: false
+    }
   end
 
 - if should_show_progress
@@ -149,6 +155,12 @@
       #{!script_level}
     )
     //]]>
+
+- elsif @is_code_reviewing
+  :javascript
+    dashboard.header.buildScriptNameOnly(
+      #{script_name_data.to_json}
+    )
 
 - elsif level
   :javascript

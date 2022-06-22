@@ -904,6 +904,7 @@ ru:
         PL_CS_Journeys_Overview: Занятия по информатике
         csp_applab_parameters: Процедуры с параметрами
         CSA-PL-intro-to-arrays: Одномерные (1D) массивы
+        CS_Changing_Everything: Информатика изменяет всё
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

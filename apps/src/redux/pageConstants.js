@@ -12,6 +12,7 @@ var ALLOWED_KEYS = new Set([
   'exampleSolutions',
   'isViewingAsInstructorInTraining',
   'channelId',
+  'codeOwnersName',
   'hasDataMode',
   'hasDesignMode',
   'isChallengeLevel',

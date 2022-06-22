@@ -1245,6 +1245,8 @@ en:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutGrid:
+        text: layout sprites as a grid
       gamelab_locationAt:
         text: 'location x: [X][0] y: [Y][1]'
       gamelab_locationModifier:

@@ -18730,7 +18730,7 @@ ar:
             For Loops:
               name: للحلقات
             End of Course projects:
-              name: مشاريع نهاية الدورة
+              name: نهاية مشروعات الدورة
             Reviewing your reflections:
               name: مراجعة تأملاتك
           student_description: تعرف على كيفية تدريس علم الحاسوب باستخدام أساسيات علم
@@ -19401,3 +19401,21 @@ ar:
               name: لمحة عامة
             lesson-1:
               name: لمحة عامة
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: مرحبًا أيها العالم CSC
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: فن القصيدة
+        self-paced-pl-csd5-2022:
+          lessons:
+            Train a machine learning model:
+              name: الرسوم المتحركة والألعاب التفاعلية
+            Engage with machine learning apps:
+              name: عملية التصميم
+            Consider real world implications:
+              name: البيانات والمجتمع
+            Unit wrap up:
+              name: الحوسبة المادية

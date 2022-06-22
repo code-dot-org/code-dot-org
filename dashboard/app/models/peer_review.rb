@@ -39,11 +39,11 @@ class PeerReview < ApplicationRecord
     escalated: 2
   }
 
-  belongs_to :submitter, class_name: 'User'
-  belongs_to :reviewer, class_name: 'User'
-  belongs_to :script
-  belongs_to :level
-  belongs_to :level_source
+  belongs_to :submitter, class_name: 'User', optional: true
+  belongs_to :reviewer, class_name: 'User', optional: true
+  belongs_to :script, optional: true
+  belongs_to :level, optional: true
+  belongs_to :level_source, optional: true
 
   validates :status, inclusion: {in: %w{accepted rejected}}, if: -> {from_instructor}
 
