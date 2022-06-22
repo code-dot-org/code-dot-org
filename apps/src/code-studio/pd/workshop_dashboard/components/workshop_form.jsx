@@ -433,15 +433,8 @@ export class WorkshopForm extends React.Component {
                 Enable workshop reminders?
                 <HelpTip>
                   <p>
-                    <strong>
-                      This functionality is disabled for all academic year
-                      workshops.
-                    </strong>
-                  </p>
-                  <p>
-                    For in-person CSF workshops, choose if you'd like automated
-                    10-day and 3-day pre-workshop reminders to be sent to your
-                    participants.
+                    Choose if you'd like automated 10-day and 3-day pre-workshop
+                    reminders to be sent to your participants.
                   </p>
                 </HelpTip>
               </ControlLabel>
