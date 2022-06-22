@@ -1,6 +1,10 @@
 Dashboard::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Don't raise an error on unknown or missing assets; we don't compile assets
+  # in the test environment, so otherwise we'd raise a lot of errors.
+  config.assets.unknown_asset_fallback = true
+
   # The test environment is used exclusively to run your application's
   # test suite. You never need to work with it otherwise. Remember that
   # your test database is "scratch space" for the test suite and is wiped
