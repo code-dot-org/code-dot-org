@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2022-06-16 22:19:15 UTC",
+    "serialized_at": "2022-06-21 23:39:23 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1094,6 +1094,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_location_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1116,6 +1119,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_multi_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1138,6 +1144,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_click_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1185,6 +1194,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_events_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1207,6 +1219,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_backgrounds_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1229,6 +1244,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_costumes_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1251,6 +1269,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_sizes_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1273,6 +1294,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_behaviors_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1295,6 +1319,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_whentouches"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1317,6 +1344,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_sounds_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1389,15 +1419,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_fablesv2_choice_2022"
-        ],
         "progression": "Choice Levels"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fablesv2_choice_2022"
+          "csc_fables_example"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1405,7 +1432,7 @@
         "activity_section.key": "48a28d14-eb09-48e9-8fa5-9aed3259b86d"
       },
       "level_keys": [
-        "csc_fablesv2_choice_2022"
+        "csc_fables_example"
       ]
     },
     {
@@ -1414,15 +1441,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_fablesv2_DIY_Set_Scene_2022"
-        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Set_Scene_2022"
+          "csc_fables_setting"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1430,7 +1454,7 @@
         "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
       },
       "level_keys": [
-        "csc_fablesv2_DIY_Set_Scene_2022"
+        "csc_fables_setting"
       ]
     },
     {
@@ -1439,15 +1463,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_fablesv2_DIY_Dialogue_2022"
-        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Dialogue_2022"
+          "csc_fables_characters"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1455,7 +1476,7 @@
         "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
       },
       "level_keys": [
-        "csc_fablesv2_DIY_Dialogue_2022"
+        "csc_fables_characters"
       ]
     },
     {
@@ -1464,15 +1485,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_fables_predict_2022"
-        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fables_predict_2022"
+          "csc_fables_say"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1480,7 +1498,7 @@
         "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
       },
       "level_keys": [
-        "csc_fables_predict_2022"
+        "csc_fables_say"
       ]
     },
     {
@@ -1489,15 +1507,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_fablesv2_DIY_Interactions_2022"
-        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Interactions_2022"
+          "csc_fables_behaviors"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1505,7 +1520,7 @@
         "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
       },
       "level_keys": [
-        "csc_fablesv2_DIY_Interactions_2022"
+        "csc_fables_behaviors"
       ]
     },
     {
@@ -1514,15 +1529,12 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_fablesv2_DIY_Freeplay_2022"
-        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Freeplay_2022"
+          "csc_fables_events"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1530,7 +1542,7 @@
         "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
       },
       "level_keys": [
-        "csc_fablesv2_DIY_Freeplay_2022"
+        "csc_fables_events"
       ]
     }
   ],
@@ -1717,9 +1729,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fablesv2_choice_2022",
+        "level.key": "csc_fables_example",
         "script_level.level_keys": [
-          "csc_fablesv2_choice_2022"
+          "csc_fables_example"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1729,9 +1741,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fablesv2_DIY_Set_Scene_2022",
+        "level.key": "csc_fables_setting",
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Set_Scene_2022"
+          "csc_fables_setting"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1741,9 +1753,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fablesv2_DIY_Dialogue_2022",
+        "level.key": "csc_fables_characters",
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Dialogue_2022"
+          "csc_fables_characters"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1753,9 +1765,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fables_predict_2022",
+        "level.key": "csc_fables_say",
         "script_level.level_keys": [
-          "csc_fables_predict_2022"
+          "csc_fables_say"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1765,9 +1777,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fablesv2_DIY_Interactions_2022",
+        "level.key": "csc_fables_behaviors",
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Interactions_2022"
+          "csc_fables_behaviors"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1777,9 +1789,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fablesv2_DIY_Freeplay_2022",
+        "level.key": "csc_fables_events",
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Freeplay_2022"
+          "csc_fables_events"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
