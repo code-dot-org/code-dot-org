@@ -29,14 +29,13 @@ const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
 const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
 const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
 const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
-const SET_FILE_METADATA_FROM_SOURCES = 'javalab/SET_FILE_METADATA_FROM_SOURCES';
 const SET_EDIT_TAB_KEY = 'javalab/SET_EDIT_TAB_KEY';
 const SET_ACTIVE_TAB_KEY = 'javalab/SET_ACTIVE_TAB_KEY';
 const SET_LAST_TAB_KEY_INDEX = 'javalab/SET_LAST_TAB_KEY_INDEX';
 const SET_FILE_METADATA = 'javalab/SET_FILE_METADATA';
 const SET_ORDERED_TAB_KEYS = 'javalab/SET_ORDERED_TAB_KEYS';
 
-const getFileMetadataFromSources = (sources, isEditingStartSources) => {
+const fileMetadataForEditor = (sources, isEditingStartSources) => {
   let fileMetadata = {};
   let orderedTabKeys = [];
 
@@ -48,7 +47,14 @@ const getFileMetadataFromSources = (sources, isEditingStartSources) => {
     }
   });
 
-  return [fileMetadata, orderedTabKeys];
+  const firstTabKey = orderedTabKeys.length > 0 ? orderedTabKeys[0] : null;
+
+  return {
+    fileMetadata,
+    orderedTabKeys,
+    activeTabKey: firstTabKey,
+    lastTabKeyIndex: orderedTabKeys.length - 1
+  };
 };
 
 const getTabKey = index => `file-${index}`;
@@ -56,13 +62,10 @@ const getTabKey = index => `file-${index}`;
 const initialSources = {
   'MyClass.java': {text: '', isVisible: true, isValidation: false}
 };
-let initialFileMetadata, initialOrderedTabKeys;
-[initialFileMetadata, initialOrderedTabKeys] = getFileMetadataFromSources(
-  initialSources
-);
 
 // Exported for test
 export const initialState = {
+  ...fileMetadataForEditor(initialSources),
   consoleLogs: [],
   sources: initialSources,
   displayTheme: DisplayTheme.LIGHT,
@@ -83,13 +86,7 @@ export const initialState = {
   disableFinishButton: false,
   isVisualizationCollapsed: false,
   isPhotoPrompterOpen: false,
-  photoPrompterPromptText: '',
-  fileMetadata: initialFileMetadata,
-  orderedTabKeys: initialOrderedTabKeys,
-  activeTabKey:
-    initialOrderedTabKeys.length > 0 ? initialOrderedTabKeys[0] : null,
-  lastTabKeyIndex: initialOrderedTabKeys.length - 1,
-  editTabKey: null // not initialized in current version
+  photoPrompterPromptText: ''
 };
 
 // Action Creators
@@ -122,9 +119,10 @@ export const setAllValidation = validation => ({
   validation
 });
 
-export const setAllSources = sources => ({
+export const setAllSources = (sources, isEditingStartSources) => ({
   type: SET_ALL_SOURCES,
-  sources
+  sources,
+  isEditingStartSources
 });
 
 export const renameFile = (oldFilename, newFilename) => ({
@@ -294,12 +292,6 @@ export const setEditorColumnHeight = editorColumnHeight => ({
   editorColumnHeight
 });
 
-export const setFileMetadataFromSources = () => {
-  return {
-    type: SET_FILE_METADATA_FROM_SOURCES
-  };
-};
-
 export const setEditTabKey = editTabKey => {
   return {
     type: SET_EDIT_TAB_KEY,
@@ -411,6 +403,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_ALL_SOURCES) {
     return {
       ...state,
+      ...fileMetadataForEditor(action.sources, action.isEditingStartSources),
       sources: action.sources
     };
   }
@@ -528,31 +521,6 @@ export default function reducer(state = initialState, action) {
       ...state,
       isPhotoPrompterOpen: false,
       photoPrompterPromptText: ''
-    };
-  }
-  if (action.type === SET_FILE_METADATA_FROM_SOURCES) {
-    const {sources, isEditingStartSources} = state;
-
-    let fileMetadata = {};
-    let orderedTabKeys = [];
-
-    // need to dedupe this code with getFileMetadataFromSources
-    Object.keys(sources).forEach((file, index) => {
-      if (sources[file].isVisible || isEditingStartSources) {
-        let tabKey = getTabKey(index);
-        fileMetadata[tabKey] = file;
-        orderedTabKeys.push(tabKey);
-      }
-    });
-
-    const firstTabKey = orderedTabKeys.length > 0 ? orderedTabKeys[0] : null;
-
-    return {
-      ...state,
-      fileMetadata,
-      orderedTabKeys,
-      activeTabKey: firstTabKey,
-      lastTabKeyIndex: orderedTabKeys.length - 1
     };
   }
   if (action.type === SET_EDIT_TAB_KEY) {
