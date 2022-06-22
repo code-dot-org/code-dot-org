@@ -10,6 +10,7 @@ import {
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 import renderProjectNotFound from './renderProjectNotFound';
+import renderVersionNotFound from './renderVersionNotFound';
 var userAgentParser = require('./userAgentParser');
 var clientState = require('../clientState');
 import getScriptData from '../../util/getScriptData';
@@ -72,7 +73,10 @@ export function setupApp(appOptions) {
         const isTeacher =
           getStore().getState().currentUser?.userType === 'teacher';
         const isViewingStudent = !!queryParams('user_id');
-        if (project.isOwner() || (isTeacher && isViewingStudent)) {
+        if (
+          project.isOwner() ||
+          (isTeacher && isViewingStudent && appOptions.level.isStarted)
+        ) {
           $('#versions-header').show();
         }
       }
@@ -264,7 +268,10 @@ function loadProjectAndCheckAbuse(appOptions) {
       })
       .catch(() => {
         if (project.channelNotFound()) {
-          renderProjectNotFound(project);
+          renderProjectNotFound();
+          return;
+        } else if (project.sourceNotFound()) {
+          renderVersionNotFound();
           return;
         }
       });
