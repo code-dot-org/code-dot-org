@@ -1,10 +1,12 @@
 import React from 'react';
 import Congrats from './Congrats';
 
+const initialCertificateImageUrl = '/images/placeholder-hoc-image.jpg';
 const defaultProps = {
   tutorial: 'other',
   userType: 'signedOut',
-  language: 'en'
+  language: 'en',
+  initialCertificateImageUrl
 };
 
 export default storybook => {

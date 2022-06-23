@@ -10,8 +10,10 @@ import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/Peti
 
 describe('Congrats', () => {
   const userTypes = ['signedOut', 'teacher', 'student'];
+  const initialCertificateImageUrl = '/images/placeholder-hoc-image.jpg';
   const defaultProps = {
-    language: 'en'
+    language: 'en',
+    initialCertificateImageUrl
   };
 
   userTypes.forEach(userType => {
