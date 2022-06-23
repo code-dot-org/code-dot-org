@@ -14,12 +14,12 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     # subcategory
     @reference_guide_subcategory = create :reference_guide, course_version: @unit_group.course_version, parent_reference_guide_key: @reference_guide.key
 
-    @in_development_unit_group = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
+    @in_development_unit_group = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
       family_name: 'indev-course', version_year: '2022', name: 'indev-course-2022'
     CourseOffering.add_course_offering(@in_development_unit_group)
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot,
+    @pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot,
     family_name: 'pilot-course', version_year: '2022', name: 'pilot-course-2022'
     CourseOffering.add_course_offering(@pilot_unit_group)
     @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
@@ -53,7 +53,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
 
     show_data = css_select('script[data-referenceguides]').first.attribute('data-referenceguides').to_s
 
-    assert_equal [@reference_guide.summarize_for_index, @reference_guide_subcategory.summarize_for_index].to_json, show_data
+    assert_equal @unit_group.course_version.reference_guides.map(&:summarize_for_index).to_json, show_data
   end
 
   test 'ref guide is updated through update route' do

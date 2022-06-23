@@ -10,6 +10,7 @@ class CertificateImageTest < Minitest::Test
     assert CertificateImage.prefilled_title_course?('starwars')
     assert CertificateImage.prefilled_title_course?('mc')
     assert CertificateImage.prefilled_title_course?('20-hour')
+    assert CertificateImage.prefilled_title_course?('accelerated')
     assert !CertificateImage.prefilled_title_course?('course1')
     assert !CertificateImage.prefilled_title_course?('course2')
     assert !CertificateImage.prefilled_title_course?('course3')
@@ -19,7 +20,7 @@ class CertificateImageTest < Minitest::Test
   def test_course_templates
     assert_equal 'MC_Hour_Of_Code_Certificate.png', CertificateImage.certificate_template_for('mc')
     assert_equal '20hours_certificate.jpg', CertificateImage.certificate_template_for('20-hour')
-    assert_equal '20hours_certificate.jpg', CertificateImage.certificate_template_for('20-hour')
+    assert_equal '20hours_certificate.jpg', CertificateImage.certificate_template_for('accelerated')
     assert_equal 'hour_of_code_certificate.jpg', CertificateImage.certificate_template_for('frozen')
     assert_equal 'hour_of_code_certificate.jpg', CertificateImage.certificate_template_for('starwars')
     assert_equal 'hour_of_code_certificate.jpg', CertificateImage.certificate_template_for('flappy')
@@ -60,6 +61,8 @@ class CertificateImageTest < Minitest::Test
     assert_image blank_named_certificate_image, 1754, 1240, 'PNG'
     twenty_hour_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', '20-hour')
     assert_image twenty_hour_certificate_image, 1754, 1240, 'JPEG'
+    accelerated_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'accelerated')
+    assert_image accelerated_certificate_image, 1754, 1240, 'JPEG'
 
     # Create course certificates with nil and empty values
     nil_name_course_certificate_image = CertificateImage.create_course_certificate_image(nil, 'course1', 'sponsor', 'Course 1')

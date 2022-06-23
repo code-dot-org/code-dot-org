@@ -43,8 +43,8 @@ class SchoolInfo < ApplicationRecord
     VALIDATION_COMPLETE = 'complete'.freeze
   ].freeze
 
-  belongs_to :school_district
-  belongs_to :school
+  belongs_to :school_district, optional: true
+  belongs_to :school, optional: true
 
   has_and_belongs_to_many :census_submissions, class_name: 'Census::CensusSubmission'
 

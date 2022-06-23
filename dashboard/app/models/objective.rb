@@ -21,7 +21,7 @@
 class Objective < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :lesson
+  belongs_to :lesson, optional: true
 
   serialized_attrs %w(
     description

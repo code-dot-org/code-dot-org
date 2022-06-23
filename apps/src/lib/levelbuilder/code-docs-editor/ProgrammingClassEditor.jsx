@@ -93,8 +93,7 @@ export default function ProgrammingClassEditor({
       })
       .then(json => {
         if (shouldCloseAfterSave) {
-          // TODO: update this when we have a show page for classes
-          navigateToHref('/');
+          navigateToHref(programmingClass.showUrl);
         } else {
           setLastUpdated(Date.now());
           setError(null);
@@ -230,7 +229,7 @@ export default function ProgrammingClassEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() => navigateToHref('/')}
+        handleView={() => navigateToHref(programmingClass.showUrl)}
       />
     </div>
   );

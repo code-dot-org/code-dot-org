@@ -20,7 +20,7 @@ module Services
             next unless ScriptConstants.i18n? script.name
 
             # prepare data
-            data = ScriptCrowdinSerializer.new(script).as_json.compact
+            data = Serializers::ScriptCrowdinSerializer.new(script).as_json.compact
             # The JSON object will have the script's crowdin_key as the top level key, but we don't
             # need that, so we will discard the crowdin_key and set data to be the object it is
             # pointing to.
