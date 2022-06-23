@@ -21,6 +21,7 @@ $dark_blue_background_colour: #0d4172;
 
 .homepage-professional-learning-banner {
   margin-bottom: 30px;
+  display: none; // banner is currently hidden
 
   a {
     font-family: "Gotham 4r", sans-serif;
@@ -46,7 +47,6 @@ $dark_blue_background_colour: #0d4172;
   }
 
   .professional-learning-banner-desktop.homepage {
-    display: none; // banner is currently hidden
 
     .text-wrapper {
       left: 3.5vw;
@@ -85,7 +85,6 @@ $dark_blue_background_colour: #0d4172;
     margin: 0 auto;
     position: relative;
     width: 100%;
-    display: none; // banner is currently hidden
 
     .banner {
       text-align: center;
