@@ -106,6 +106,7 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
           />
         )}
         <Button
+          className="code-review-comment-submit"
           disabled={commentText.length === 0}
           onClick={handleSubmit}
           text={javalabMsg.submit()}
