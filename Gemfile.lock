@@ -171,7 +171,6 @@ GEM
   remote: https://rubygems.org/
   specs:
     Ascii85 (1.1.0)
-    StreetAddress (1.0.6)
     acme-client (2.0.5)
       faraday (~> 0.9, >= 0.9.1)
     acmesmith (2.3.1)
@@ -908,7 +907,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  StreetAddress
   acmesmith (~> 2.3.1)
   active_model_serializers (~> 0.10.10)
   active_record_query_trace
