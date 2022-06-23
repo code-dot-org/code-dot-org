@@ -9,16 +9,6 @@ Minitest.load_plugins
 Minitest.extensions.delete('rails')
 Minitest.extensions.unshift('rails')
 
-if ENV['COVERAGE'] || ENV['CIRCLECI'] || ENV['DRONE'] # set this environment variable when running tests if you want to see test coverage
-  require 'simplecov'
-  SimpleCov.start :rails
-  SimpleCov.root(File.expand_path(File.join(File.dirname(__FILE__), '../../')))
-  if ENV['CIRCLECI'] || ENV['DRONE']
-    require 'codecov'
-    SimpleCov.formatter = SimpleCov::Formatter::Codecov
-  end
-end
-
 reporters = [CowReporter.new]
 if ENV['CIRCLECI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
@@ -85,13 +75,6 @@ class ActiveSupport::TestCase
     Dashboard::Application.config.action_controller.perform_caching = false
     # as in, I still need to clear the cache even though we are not 'performing' caching
     Rails.cache.clear
-
-    # A list of keys used by our shared cache that should be cleared between every test.
-    [
-      ProfanityHelper::PROFANITY_PREFIX,
-      AzureTextToSpeech::AZURE_SERVICE_PREFIX,
-      AzureTextToSpeech::AZURE_TTS_PREFIX
-    ].each {|cache_prefix| CDO.shared_cache.delete_matched(cache_prefix)}
 
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear

@@ -1017,7 +1017,7 @@
         "courseA_maze_seq6_2018": "Deplasați-vă într-o direcție, apoi în alta, pentru a duce pasărea la porc.",
         "courseA_maze_seq6_2019": "Deplasați-vă într-o direcție, apoi în alta, pentru a duce pasărea la porc.",
         "courseA_maze_seq6_2020": "Deplasați-vă într-o direcție, apoi în alta, pentru a duce pasărea la porc.",
-        "courseA_maze_seq6_2021": "Deplasați-vă într-o direcție, apoi în alta, pentru a duce pasărea la porc.",
+        "courseA_maze_seq6_2021": "Deplasați-vă într-o direcție, apoi în alta, pentru a duce pasărea la porc!",
         "courseA_playLab_events1_2019": "Acesta este un nivel de tip Laborator de joacă. Mutați blocurile în spațiul de lucru și vedeți ce se întâmplă!",
         "courseA_playLab_events1_2020": "Acesta este un nivel de tip Laborator de joacă. Mutați blocurile în spațiul de lucru și vedeți ce se întâmplă!",
         "courseA_playLab_events1_2021": "Acesta este un nivel de tip Laborator de joacă. Mutați blocurile în spațiul de lucru și vedeți ce se întâmplă!",
@@ -1746,7 +1746,10 @@
         "courseE_farmer_ramp12g": "Deplasați-vă înainte până ajungeți la salată, apoi faceți o întoarcere la stânga **dacă** există o cărare care duce spre stânga. În caz contrar, faceți o întoarcere la dreapta.",
         "courseE_farmer_ramp12g_2018": "Deplasați-vă înainte până ajungeți la salată, apoi faceți o întoarcere la stânga **dacă** există o cărare care duce spre stânga. În caz contrar, faceți o întoarcere la dreapta.",
         "courseE_farmer_ramp12g_2019": "Deplasați-vă înainte până ajungeți la salată, apoi faceți o întoarcere la stânga **dacă** există o cărare care duce spre stânga. În caz contrar, faceți o întoarcere la dreapta.",
-        "courseE_farmer_ramp12g_2020": "Deplasați-vă înainte până ajungeți la salată, apoi faceți o întoarcere la stânga **dacă** există o cărare care duce spre stânga. În caz contrar, faceți o întoarcere la dreapta."
+        "courseE_farmer_ramp12g_2020": "Deplasați-vă înainte până ajungeți la salată, apoi faceți o întoarcere la stânga **dacă** există o cărare care duce spre stânga. În caz contrar, faceți o întoarcere la dreapta.",
+        "AllTheThings sprite lab with video": "Să creăm un acvariu cu pești!  Transformați sprite-ul ghem de ierburi într-un pește, făcând clic pe <xml><block type=\"gamelab_allSpritesWithAnimation\" block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.Asigurați-vă că ați actualizat costumul acestui sprite în <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the add behavior block\"></block></xml>.",
+        "Artist Autorun Test": "Acum, pune funcţia în interiorul buclei pentru a desena aceste trei pătrate.",
+        "U1L13 Text Compression": "Caută modele (cuvinte sau fraze repetate) în text. Introdu modelul pe care îl găseşti in dictionarul din dreapta. Pe măsură ce adaugi intrări in dicţionar, simbolul acelei intrări este inserat in text în locul modelului."
       }
     }
   }

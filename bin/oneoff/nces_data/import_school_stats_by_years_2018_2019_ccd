@@ -45,7 +45,7 @@ COMMUNITY_TYPE_MAP = {
 # @returns [String, nil] the sanitized version of the string, with equal signs and double
 #   quotations removed. Returns nil on nil input, or if value is a dash (signifies missing in NCES data).
 def sanitize_string_for_db(unsanitized)
-  unsanitized = unsanitized == '-' ? nil : unsanitized
+  unsanitized = nil if unsanitized == '-'
   unsanitized&.tr('="', '')
 end
 

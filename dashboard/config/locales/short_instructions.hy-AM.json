@@ -17,7 +17,7 @@
         "2-3 Bee Loops 2A": "This time, use a loop to gather all of the nectar.",
         "2-3 Bee Loops 3A": "Use a `repeat` loop to collect all of the nectar.",
         "2-3 Maze 10": "Տա՛ր ինձ այդ կանաչ չարիքի մոտ: (Զգուշացի՛ր TNT-ներից) ",
-        "2-3 Maze 2": "Այս խոզուկն ինձ բարկացնում է: Օգնի՛ր նրան հասնել:",
+        "2-3 Maze 2": "Տա՛ր ինձ այդ կանաչ չարիքի մոտ: (Զգուշացի՛ր TNT-ներից) ",
         "2-3 Maze 4": "Տա՛ր ինձ այդ կանաչ չարիքի մոտ: (Զգուշացի՛ր TNT-ներից) ",
         "2-3 Maze 6": "Պահպանե՛ք հանգստություն և օգնե՛ք գտնել այդ վատ խոզուկին: Հակառակ դեպքում՝ կբարկանամ:",
         "2-3 Maze 7": "Տա՛ր ինձ այդ կանաչ չարիքի մոտ: (Զգուշացի՛ր TNT-ներից) ",
@@ -345,7 +345,11 @@
         "Underground Iron_2021": "Walking into molten lava is a bad idea. Place\ncobblestone to create a bridge, then mine at least two of the iron blocks.",
         "Underground Mining Coal_2021": "You’ll find the most valuable resources\nunderground, but it can get dark. Place at least 2 torches and mine at least\n2 coal.",
         "courseD_maze_nestedLoops4_2021": "Get me to the sunflower using the fewest blocks\npossible!  \\\r\n\\\r\nTry using one `repeat` loop inside of another to cut down\non the amount of code you need.",
-        "courseD_maze_nestedLoops6_2021": "Let's take this to another level! \\\r\nUse\nloops to get me to the sunflower with the fewest loops possible."
+        "courseD_maze_nestedLoops6_2021": "Let's take this to another level! \\\r\nUse\nloops to get me to the sunflower with the fewest loops possible.",
+        "2-3 Maze 1": "Տա՛ր ինձ այդ կանաչ չարիքի մոտ: (Զգուշացի՛ր TNT-ներից) ",
+        "2-3 Maze 3": "Պահպանե՛ք հանգստություն և օգնե՛ք գտնել այդ վատ խոզուկին: Հակառակ դեպքում՝ կբարկանամ:",
+        "Overworld Chop Tree - allthethings": "Wood is a very important resource. Many things\nare made from it. Walk to the tree and use the “destroy block” command to\nchop it down.",
+        "allthethings-anigif-instructions": "Move me East to get me to the pig!"
       }
     }
   }

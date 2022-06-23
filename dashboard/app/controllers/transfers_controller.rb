@@ -149,7 +149,7 @@ class TransfersController < ApplicationController
     students.each do |student|
       if new_section.user == current_user
         follower_same_user_teacher = student.followeds.find_by_section_id(current_section.id)
-        follower_same_user_teacher.update_attributes!(section_id: new_section.id)
+        follower_same_user_teacher.update!(section_id: new_section.id)
       else
         unless student.followeds.exists?(section_id: new_section.id)
           student.followeds.create!(user: new_section.user, section: new_section)

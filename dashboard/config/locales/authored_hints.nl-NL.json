@@ -4532,6 +4532,15 @@
         },
         "poetry_hoc_spriteSizes": {
           "size hint": "Ga naar dit blok en klik op '150'.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nWat gebeurd er als het '25' is? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "Er zijn 2 manieren om deze puzzel op te lossen!"
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "De kunstenaar moet 120 graden draaien tussen elk vierkant om dit ontwerp te voltooien."
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Probeer de agent wat bruggen te laten bouwen zodat Alex of Steve voorbij de grenzen van de kaart kunnen komen."
         }
       }
     }

@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-04-26T18:52:43.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -53,16 +49,16 @@
     "parent_level_id": 20711,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/vpl-csd-2022/guides/sprites",
+      "/courses/vpl-csd-2022/guides/animation-tab",
+      "/courses/vpl-csd-2022/guides/sprite-properties",
+      "/courses/vpl-csd-2022/guides/random-numbers",
+      "/courses/vpl-csd-2022/guides/variables",
+      "/courses/vpl-csd-2022/guides/naming-variables",
+      "/courses/vpl-csd-2022/guides/drawing-shapes",
+      "/courses/vpl-csd-2022/guides/shapes-and-parameters"
     ],
-    "map_reference": "/docs/concepts/game-lab/the-draw-loop/",
+    "map_reference": "/courses/vpl-csd-2022/guides/the-draw-loop",
     "video_key": "csd_gamelab_drawloop",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -75,6 +71,10 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-04-26T18:52:43.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-26T18:52:43.898+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD U3 Draw Loop Plugged orange and green_2020\\\"\"],\"cloned_from\":\"VPL - CSD U3 Draw Loop Plugged orange and green_2020\"}]"

@@ -3500,7 +3500,7 @@
         },
         "courseA_artist_loops_challenge2a_2021": {
           "courseA_artist_loops_challenge2_a": "Cu ajutorul blocurilor <xml>  <block type=\"simple_move_up_left\"/></xml> Artistul se va deplasa pe diagonală!",
-          "courseA_artist_loops_challenge2_b": "Cu ajutorul blocurilor [blockly block][0] Artistul se va deplasa pe diagonală!",
+          "courseA_artist_loops_challenge2_b": "Când terminați unul dintre corturi, săriți cu `jump` de două ori pentru a ajunge la următorul!",
           "courseA_artist_loops_challenge2_c": "Toate blocurile trebuie să se afle în interiorul unei bucle pentru a rezolva  acest puzzle."
         },
         "courseA_collector_loops3_2019": {
@@ -4476,7 +4476,7 @@
           "courseC_artist_prog7_d": "Trebuie să faceți următoarele:- deplasare înainte- întoarcere la dreapta cu 45 de grade- deplasare înainte- întoarcere la dreapta cu 90 de grade- deplasare înainte- întoarcere la dreapta cu 45 de gradeRepetați acest model de 2 ori!"
         },
         "courseC_artist_prog7_2021": {
-          "courseC_artist_prog7_d": "Trebuie să faceți următoarele:- deplasare înainte- întoarcere la dreapta cu 45 de grade- deplasare înainte- întoarcere la dreapta cu 90 de grade- deplasare înainte- întoarcere la dreapta cu 45 de gradeRepetați acest model de 2 ori!"
+          "courseC_artist_prog7_d": "Trebuie să faceți următoarele:- deplasare înainte- întoarcere la dreapta cu 45 de grade- deplasare înainte- întoarcere la dreapta cu 90 de grade- deplasare înainte- întoarcere la dreapta cu 45 de grade Repetați acest model de 2 ori!"
         },
         "courseC_artist_prog_challenge1": {
           "courseC_artist_prog_challenge1_a": "Puteți face acest desen sub forma unui dreptunghi cu o linie în mijloc sau folosind două pătrate diferite!"
@@ -6835,6 +6835,15 @@
         },
         "courseE_farmer_ramp12g_2020": {
           "courseE_farmer_ramp12G_b": "Folosiți un bloc `if/else` pentru a-l ajuta pe fermier să decidă dacă trebuie să se întoarcă la dreapta sau la stânga."
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "Există două metode de a rezolva acest puzzle!"
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "Artistul trebuie să întoarcă la 120 de grade între fiecare pătrat pentru a finaliza acest design."
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Încearcă să îl faci pe Agent să construiască câteva trasee de vagonet, ca să poți explora lumea!"
         }
       }
     }

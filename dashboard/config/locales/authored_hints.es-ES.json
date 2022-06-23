@@ -10812,6 +10812,23 @@
         },
         "poetry_hoc_spriteSizes": {
           "size hint": "Encuentra este bloque y haz clic en el `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\n¿Qué ocurre cuando el número es `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "¡Hay dos formas de resolver este desafío!"
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "El artista debe girar 120 grados entre cada cuadrado para completar este diseño."
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Intenta que el Agente construya algunos caminos de vagoneta para que puedas explorar el mundo!"
+        },
+        "Farmer for Authored Hint testing": {
+          "second_hint": "Esta es la segunda pista. Tiene un vídeo como pista.",
+          "last_hint": "Esta es la tercera y última pista. No tiene nada de especial."
+        },
+        "Farmer for TTS testing": {
+          "second_hint": "Esta es la segunda pista. Tiene una imagen.\n\n![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)",
+          "last_hint": "Esta es la tercera y última pista. No tiene nada de especial."
         }
       }
     }

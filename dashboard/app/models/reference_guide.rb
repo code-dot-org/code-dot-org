@@ -20,7 +20,7 @@
 class ReferenceGuide < ApplicationRecord
   include CurriculumHelper
 
-  belongs_to :course_version
+  belongs_to :course_version, optional: true
   validates_uniqueness_of :key, scope: :course_version_id
   validate :validate_key_format
 
@@ -60,6 +60,21 @@ class ReferenceGuide < ApplicationRecord
     return unless Rails.application.config.levelbuilder_mode
     file_path = Rails.root.join("config/reference_guides/#{course_offering_version}/#{key}.json")
     File.delete(file_path)
+  end
+
+  def copy_to_course_version(destination_course_version)
+    copied_ref_guide = ReferenceGuide.find_or_create_by(
+      course_version_id: destination_course_version.id,
+      key: key
+    ) do |created_ref_guide|
+      created_ref_guide.update!(
+        parent_reference_guide_key: parent_reference_guide_key,
+        display_name: display_name,
+        content: content,
+        position: position
+      )
+    end
+    copied_ref_guide.write_serialization
   end
 
   def self.find_by_course_name_and_key(course_name, key)

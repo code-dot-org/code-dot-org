@@ -2629,6 +2629,27 @@
           "keep playing": {
             "name": "fortsätt spela"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "rita en kvadrat"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "sides": "sidor",
+              "length": "längd"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "funktion 1"
+          },
+          "function 2": {
+            "name": "funktion 2"
+          }
         }
       }
     }

@@ -10798,6 +10798,15 @@
         },
         "poetry_hoc_spriteSizes": {
           "size hint": "尋找這個積木並點擊`150`。\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\n當數字是`25`時會發生什麼？ \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "有 2 個方法可以完成這個關卡！"
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "藝術家需要在每個正方形之間轉 120 度才能完成這個設計。"
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "試著讓代理 Agent 蓋一些鐵軌，這樣你才能四處探索！"
         }
       }
     }

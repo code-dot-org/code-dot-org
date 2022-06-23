@@ -10055,6 +10055,12 @@
         "courseC_artist_loops3a_2021": {
           "courseC_artist_loops3a_a": "Birinchi stikerdan keyin siklingiz ichiga bittagina blok qo‘shishingiz to‘g‘ri keladi.",
           "courseC_artist_loops3a_b": "Sizning dasturingiz shunday bo'lishi kerak!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nSiz xohlagan stikerlardan foydalanishingiz mumkin!"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "Bu jumboqni yechishning ikki xil usuli bor!"
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Agent vagoncha treklarini tuzishiga harakat qilib ko'ring, shunda siz dunyoni o'rganishingiz mumkin bo'ladi!"
         }
       }
     }

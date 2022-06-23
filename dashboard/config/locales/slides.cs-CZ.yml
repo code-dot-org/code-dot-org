@@ -2619,6 +2619,181 @@ cs:
         text: Až skončíš se svojí hrou, klikni na sdílet a dostaneš odkaz. Můžeš ho
           sdílet se svými přáteli nebo si s ním zahraješ hru na mobilu. Užijte si
           hru! Těším se až si zahraju právě tu tvojí verzi Minecraftu.
+    applab_intro_welcome:
+      1:
+        text: Jmenuji se Mei'lani. Jsem stážistka u code.org a studentka informatiky.
+          Mám ráda počítačovou vědu, protože je ohromně tvůrčí. Dovoluje mi řešit
+          problémy. A vymýšlet věci, aby fungovaly tak, jak chci. Zároveň můžu být
+          designérkou. Při programování se stávám umělkyní, která si může tvůrčí stránku
+          věci určovat podle svého.
+      2:
+        text: V App Labu si snadno vytvoříš vlastní aplikace. Ať už s kódováním začínáš,
+          nebo už máš nějaké zkušenosti. App Lab je výborný nástroj na vytváření nových
+          aplikací a jejich sdílení s kamarády.
+      3:
+        text: Tohle je App Lab. Na levé straně máš svoji aplikaci. Na pravé straně
+          kód, podle kterého běží. Program vytváříš přetahováním bloků z panelu nástrojů.
+          Na začátku má aplikace jen jeden blok s názvem setProperty.
+      4:
+        text: Blok setProperty mění vzhled prvků na obrazovce – tlačítka, popisky
+          a dokonce i samotnou obrazovku. Nejdřív se rozhodni, který prvek chceš změnit.
+          Když najedeš myší na prvek v aplikaci, zobrazí se tady jeho název nebo ID.
+          Pak toto ID vyber z první rozevírací nabídky.
+      5:
+        text: 'Prvky mají mnoho vlastností, které se dají měnit, jako barvu textu,
+          barvu pozadí nebo velikost písma. Ve druhém rozevíracím seznamu si ze seznamu
+          všech možností vyber, kterou vlastnost chceš změnit. '
+      6:
+        text: Do posledního rozevíracího seznamu zapiš hodnoty, které chceš použít.
+          Blok ti nějaké navrhne, ale kdykoli můžeš zadat jakékoli jiné barvy nebo
+          číselné hodnoty.
+      7:
+        text: 'Až budeš mít hotovo, můžeš blok číst, jako by to byla věta: „Nastav
+          barvu pozadí tlačítka 1 na zelenou.“ Stisknutím tlačítka Spustit zobrazíš
+          provedené změny v kódu. Kód můžeš resetovat a přetahovat do něj další bloky,
+          kterými ovlivníš nejrůznější věci v aplikaci. Například text.'
+      8:
+        text: V tomto kurzu budeme pracovat v blokovém režimu, ale App Lab podporuje
+          i práci v textu.
+      9:
+        text: Tak jako tak budeš programovat v JavaScriptu, jazyce webu. Každá úroveň
+          obsahuje cíl, pokyny a obrázek toho, co má vzniknout.
+      10:
+        text: Pokud se zasekneš, klikni na tenhle obrázek a uvidíš, jak přesně máš
+          úroveň dokončit. Nejdřív ale zkus úlohu vyřešit samostatně.
+      11:
+        text: Jakmile splníš cíl této úrovně, kliknutím na Dokončit se posuneš dál.
+          Nic víc na tom není! Stisknutím oranžového tlačítka Pokračovat přejdi na
+          další úroveň a dobrodružství s App Labem může začít!
+    applab_intro_events:
+      1:
+        text: Aplikace jsou fakt super – je to jako začít vlastní byznys, protože
+          si musíte všechno sami navrhnout a vyřešit. A pak jste vlastníkem díla,
+          které jste pomocí kódu právě vytvořili.
+      2:
+        text: Teď když umíme změnit vzhled aplikace, pojďme přidat interaktivní prvky
+          – odpovědi na události. Události jsou akce uživatele jako kliknutí na tlačítko,
+          procházení nabídky nebo přejetí nad obrázkem. Interaktivní aplikace musí
+          mít možnost reagovat na události, například přehráním zvuku, když kliknu
+          na tohle tlačítko. V App Lab to jde udělat pomocí nového bloku s názvem
+          onEvent.
+      3:
+        text: Tento program nastaví modrou obrazovku. Já chci, aby se při kliknutí
+          na tohle tlačítko změnila barva na zelenou. Nejdřív musím do kódu přetáhnout
+          blok onEvent. Když přejedu na tlačítko, vidím, že jeho ID je „bigButton“,
+          tak ho v první rozevírací nabídce vyberu.
+      4:
+        text: Teď vyberu typ události. Máme na výběr z celé řady možností, ale pro
+          tentokrát zůstanu u klasického kliknutí.
+      5:
+        text: 'Nakonec přidám kód do příkazu onEvent, který změní barvu pozadí obrazovky.
+          Tento blok se dá číst jako věta: „Při události kliknutí na tlačítko spusť
+          všechen tento kód.“'
+      6:
+        text: Pojďme to otestovat. Bloky mimo příkaz onEvent se spustí hned, takže
+          obrazovka na začátku zmodrá.
+      7:
+        text: A když kliknu na velké tlačítko, spustí se kód uvnitř mého příkazu onEvent
+          a obrazovka změní barvu na zelenou.
+      8:
+        text: Pokud chcete při události změnit víc věcí, například text na obrazovce,
+          stačí přidat příslušný kód do příkazu onEvent
+      9:
+        text: Když chcete, aby program reagoval na víc událostí, přidejte víc bloků
+          onEvent. Jen dejte pozor, abyste jeden příkaz onEvent neumístili do jiného.
+          Teď je čas, abyste si to sami vyzkoušeli. Příjemnou zábavu!
+    applab_intro_sounds:
+      1:
+        text: Dál si ukážeme, jak do aplikace přidávat obrázky a zvuky. Začneme tím,
+          že se podíváme, jaké zvuky jsou k dispozici.
+      2:
+        text: V panelu nástrojů najdete nový blok s názvem „playSound“. Přetáhněte
+          ho do pracovního prostoru. Zvuk, který chcete přehrávat, zvolíte tím, že
+          na něj kliknete v rozevírací nabídce a pak kliknete na Vybrat.
+      3:
+        text: Odtud můžete nahrát zvuk z počítače nebo najít zvuk v knihovně zvuků.
+          V knihovně zvuků najdete celou řadu kategorií jako hudební nástroje, podkresová
+          hudba nebo zvuky zvířat.
+      4:
+        text: Pokud jste našli požadovaný zvuk, klikněte na „Vybrat“. Při spuštění
+          tento blok vybraný zvuk přehraje.
+      5:
+        text: Pokud chcete k prvkům přidat obrázky, stačí použít blok setProperty.
+          Zvolte ve druhé rozevírací nabídce vlastnost obrázku.
+      6:
+        text: Potom ve třetí rozevírací nabídce zvolte Vybrat.
+      7:
+        text: Odtud můžete nahrát obrázek z počítače nebo si vybrat z rozsáhlé knihovny
+          ikon.
+      8:
+        text: V režimu kódování pak můžete pomocí bloku setProperty změnit barvu ikony.
+          Až si nastavíte vzhled ikony, klikněte na Spustit a podívejte se na výsledek.
+      9:
+        text: Nic víc na tom není. Teď můžete začít přidávat obrázky a zvuky, aby
+          byla aplikace ještě zábavnější a dynamičtější.
+    applab_intro_designmode:
+      1:
+        text: Při vytváření vlastní aplikace je potřeba začít návrhem obrazovek a
+          prvků. V App Labu to jde snadno díky Návrhovému režimu.
+      2:
+        text: Návrhový režim otevřete pomocí přepínače v horní části aplikace.
+      3:
+        text: Přetažením na obrazovku můžete přidávat nové prvky. Pak je můžete přesouvat
+          na různá místa a přetažením pravého dolního rohu měnit jejich velikost.
+      4:
+        text: Ke změně vlastností prvku použijte ovládací prvky napravo. Například
+          se dá opravdu snadno změnit text, barva a velikost písma u tohoto tlačítka.
+      5:
+        text: Když na obrazovku přidáte nový prvek, dostane obecné ID, například button1
+          (tlačítko1). Je vhodné změnit ID tlačítka na něco, co ho bude blíž specifikovat,
+          například na „pravéTlačítko“, abyste ho v programu mohli dobře najít.
+      6:
+        text: Pokud do aplikace přidáte nějaký prvek omylem, stačí ho přetáhnout zpět
+          nebo zvolit možnost Odstranit.
+      7:
+        text: Přetažením prvku obrazovky se dají do aplikace přidávat úplně nové obrazovky
+      8:
+        text: Pomocí rozevírací nabídky nahoře můžete mezi vytvořenými obrazovkami
+          rychle přecházet.
+      9:
+        text: Budete potřebovat příkaz, který umožní přecházet mezi všemi obrazovkami
+          při běhu aplikace, proto je v sadě nástrojů blok setScreen. Když blok setScreen
+          použijete uvnitř bloku onEvent, obrazovky bude možné měnit kliknutím na
+          tlačítko.
+      10:
+        text: V následujících několika úrovních budete pracovat na jediném projektu.
+          Nejdřív přidáte tlačítko, pak přidáte novou obrazovku a nakonec napíšete
+          kód, který po stisknutí tlačítka na tuto novou obrazovku přepne.
+    applab_intro_share:
+      1:
+        text: Když jste se teď seznámili se základy práce v App Labu, jako je přidávání
+          tlačítek, zvuků, obrázků, textu a nových obrazovek, můžete vytvářet celou
+          škálu aplikací.
+      2:
+        text: V následující úrovni najdete aplikaci, kterou jste právě vytvořili.
+          S trochou tvořivosti z ní můžete udělat osobnostní kvíz pro kamarády, přání
+          k rodinnému výročí nebo dobrodružnou hru podle vlastního výběru. Všechny
+          tyto aplikace jsou jen kombinace dovedností, které už ovládáte, a vsadím
+          se, že dovedete vymyslete i další.
+      3:
+        text: Až budete mít aplikaci hotovou, můžete si ji snadno poslat na telefon
+          a podívat se, jak vypadá. Stačí, když kliknete na Sdílet a sem zadáte telefonní
+          číslo.
+      4:
+        text: Obdržíte textovou zprávu, ze které můžete aplikaci hned otevřít.
+      5:
+        text: Můžete také sdílet odkaz na aplikaci na sociálních médiích nebo ji nahrát
+          do veřejné galerie code.org, aby k ní měli přístup a mohli ji sdílet i další
+          lidé.
+      6:
+        text: Ukázali jsme si jen střípek toho, co App Lab umí. App Lab podporuje
+          i pokročilejší uživatelské interakce a prvky nové obrazovky a dokonce má
+          integrovanou databázi, takže můžete rychle vytvářet i složitější aplikace.
+          Jestli se chcete rozvíjet dál, na adrese code.org/applab najdete kompletní
+          nástroje a spoustu tipů.
+      7:
+        text: Díky, že jste se dívali. Teď se pusťte do vytvoření a nasdílení své
+          první aplikace. A pak v App Labu vytvářejte další.
     mc_2017_agent_intro:
       1:
         text: 'Stacy: Stampy, Lizzy, Preston - děkuji vám, že jste se mnou přišly.
@@ -2765,56 +2940,1139 @@ cs:
       8:
         text: 'Stampy: Jak jsi to provedla? Stacy: Ve skutečnosti to bylo snadné.
           Prostě jsem použila kód!'
+    csd_concept_how_computers_work:
+      1:
+        text: 'Všude, kam se podíváte, mění počítače svět. Ať už je máme v práci na
+          stole, doma, v kapse, nebo kdekoli jinde. Ale i když většina z nás používá
+          tuto revoluční technologii denně, jen málokdy si pokládáme otázku: „Jak
+          počítače fungují?“ V téhle sérii zjistíte, jak počítače doopravdy fungují
+          – co dělá počítač počítačem. A dozvíte se, jak je informace v počítači otisknutá
+          a zpracovává se pomocí drobných elektrických signálů, které se závratnou
+          rychlostí zapínají a vypínají.'
+      2:
+        text: Dál se dozvíte, jak počítače využívají obvody ke všem úkonům od jednoduchých
+          matematických výpočtů až po simulace celých virtuálních světů. Pak se na
+          počítač podíváte z jiné perspektivy a seznámíte se s různými jeho částmi,
+          které řeší vstup, výstup a ukládání všech těchto informací. A nakonec se
+          dozvíte, co to vlastně je kód a jak software ovládá hardware. Je jedno,
+          jestli jste jen zvědaví, jak fungují zařízení, co denně používáte, nebo
+          se chystáte navrhnout inovace budoucnosti, prvním krokem je seznámit se
+          s tím, jak počítače fungují.
+    csd_concept_computer:
+      1:
+        text: Jmenuji se May-Li Khoe. Jsem designérka a vynálezkyně. Některé ze svých
+          návrhů jsem dělala pro firmu Apple a teď navrhuji produkty, které dětem
+          usnadňují školní výuku. Kromě toho jsem DJka a tanečnice.
+      2:
+        text: Počítače jsou všude. Najdeme je v autech, nosíme je v kapse a dokonce
+          i na zápěstí. Možná zrovna máte nějaký v batohu. Co ale dělá počítač počítačem?
+          Jaké jsou charakteristické vlastnosti počítače? A jak vlastně funguje?
+      3:
+        text: Ahoj, já jsem Nat! Jsem jeden z původních autorů Xboxu. S počítači jsem
+          začal, když mi bylo nějakých sedm, a teď pracuji na virtuální realitě. Lidstvo
+          odpradávna vymýšlí nástroje, které jim pomáhají řešit problémy. Nástroje
+          jako kolečko, kladivo, tiskařský lis nebo tahač s návěsem.
+      4:
+        text: Všechny tyto vynálezy nám usnadnily ruční práci. Postupně lidé začali
+          přemýšlet, jestli by bylo možné navrhnout a postavit stroje, které by nám
+          pomáhaly s přemýšlením – například s řešením rovnic nebo sledováním hvězd
+          na obloze. Namísto manipulace s fyzickými věcmi, jako je hlína nebo kamení,
+          by tyto stroje manipulovaly s informacemi. Když průkopníci počítačových
+          věd zkoumali, jak navrhnout stroj na přemýšlení, uvědomili si, že takový
+          stroj musí zvládat čtyři různé úkoly.
+      5:
+        text: Musí dokázat přijmout vstup, uložit informaci, zpracovat ji a potom
+          vrátit výsledek. Možná to zní jednoduše, ale tyto čtyři kroky jsou pro všechny
+          počítače společné. Právě ony dělají počítač počítačem.
+      6:
+        text: První počítače byly vlastně jednoduché kalkulačky, i když i tak byly
+          na svoji dobu převratné, a zpracovávaly jen čísla. V současnosti můžeme
+          díky nim na dálku komunikovat, hrát hry, řídit roboty a dělat spoustu bláznivých
+          věcí, co si jen lze představit. Moderní počítače už ničím nepřipomínají
+          ty obrovské skříně, jakými byly kdysi, přesto pořád provádějí ony stejné
+          čtyři úlohy.
+      7:
+        text: Nejdřív si povíme něco o vstupu. Počítači můžete sdělit, co má dělat,
+          pomocí klávesnice, myši, mikrofonu nebo kamery. Všechny tyto různé vstupy
+          dávají počítači informaci, která se pak uloží v paměti.
+      8:
+        text: Procesor počítače si bere informace z paměti. Zpracovává je nebo mění
+          pomocí algoritmu, což je v zásadě série příkazů. A pak posílá zpracované
+          informace zpátky k uložení do paměti. Tak to pokračuje do té doby, než jsou
+          zpracované informace připravené na výstup.
+      9:
+        text: Podoba výstupních informací závisí na tom, za jakým účelem je počítač
+          navržený. Počítačový displej může zobrazovat text, fotky, videa, interaktivní
+          hry – nebo dokonce virtuální realitu! Za počítačový výstup můžeme považovat
+          i signály, které slouží k ovládání robota.
+      10:
+        text: A kdo ví, jak budou vypadat počítače budoucnosti? Přeju si, abyste mohli
+          spolurozhodovat o tom, jak budou počítače zítřka vypadat. Nicméně všechny
+          počítače, bez ohledu na typ použité technologie, vždycky provádějí uvedené
+          čtyři úkony – přijmou vstupní informaci, uloží ji jako data, zpracují ji
+          a pak vrátí výsledky.
+    csd_concept_binary_data:
+      1:
+        text: Ahoj! Jmenuji se Limor Fried a jsem inženýrka ve společnosti Adafruit
+          Industries. Vytvářím technické návrhy – navrhuji obvody pro módu, hudbu
+          a technologie.
+      2:
+        text: Jsem Federico Gomez Suarez, vývojář softwaru v programu Microsoft Hack
+          for Good. Zkoumám způsoby, jak pomocí technologie řešit některé velké sociální
+          problémy současnosti.
+      3:
+        text: Možná jste slyšeli, že počítače fungují na bázi jedniček a nul. I když
+          už dnes téměř nikdo nepracuje na této základní úrovni, jedničky a nuly hrají
+          velkou roli v tom, jak počítače fungují uvnitř.
+      4:
+        text: Uvnitř počítače jsou elektrické rozvody a obvody, které přenášejí veškeré
+          informace uložené v počítači. Jak se ukládají informace pomocí elektřiny?
+      5:
+        text: Představte si jeden kabel, kterým proudí elektřina. Signál je buď zapnutý,
+          nebo vypnutý. To není mnoho možností na výběr, ale je to důležitý začátek.
+          Pomocí jednoho kabelu lze určit volbu ze dvou možností – ano nebo ne, pravda
+          nebo nepravda, jedna nebo nula apod. Tento stav zapnuto/vypnuto jednoho
+          kabelu se nazývá bit a je to nejmenší informace, jakou může počítač uložit.
+      6:
+        text: 'Když použijete víc kabelů, dostanete víc bitů: víc jedniček a nul.
+          Pomocí více bitů se dají uložit složitější informace. Ale abychom to pochopili,
+          musíme si říct něco o takzvané dvojkové číselné soustavě.'
+      7:
+        text: V desítkové soustavě máme deset číslic od nuly do devítky – to všichni
+          známe jako základ počítání. Ve dvojkové soustavě máme jen dvě číslice –
+          nulu a jedničku. Pomocí těchto dvou číslic ale můžeme vyjádřit jakékoli
+          číslo.
+      8:
+        text: 'Funguje to takhle. V desítkové soustavě, na kterou jsme zvyklí, má
+          každá číselná pozice neboli řád jinou hodnotu – máme řád jedniček, desítek,
+          stovek atd. Například číslovka 9 v řádu stovek představuje číslo 900. Také
+          ve dvojkové soustavě má každá pozice určitou hodnotu. Jen místo násobení
+          deseti násobíme dvěma. Řády dvojkové soustavy proto mají hodnoty 1, 2, 4,
+          8 atd. Například číslo 9 se ve dvojkové soustavě vyjádří číslem 1001. Do
+          desítkové soustavy převedeme tuto hodnotu takto: 1 × 8 + 0 × 4 + 0 × 2 +
+          1 × 1. Těmito výpočty se ale nemusíme zabývat, počítač je provádí za nás.
+          Důležité je, že jakékoli číslo se dá vyjádřit pouze pomocí jedniček a nul
+          nebo pomocí skupiny kabelů, které jsou buď zapnuté, nebo vypnuté. Čím víc
+          kabelů použijete, tím vyšší číslo můžete uložit. Pomocí osmi kabelů je možné
+          uložit číslo od 0 do 255 – to je osm jedniček. A pomocí pouhých 32 kabelů
+          je možné uložit číslo od 0 až do 4 miliard. Takže pomocí dvojkové soustavy
+          můžete vyjádřit opravdu libovolné číslo.'
+      9:
+        text: Ale co jiné typy informací? Jako text, obrázky nebo zvuk. I tenhle obsah
+          se dá vyjádřit pomocí čísel. Vezměme třeba všechna písmena abecedy. Každému
+          písmenu můžeme přiřadit číslo. A může být 1, B může být 2 atd. Jakékoli
+          slovo, větu nebo odstavec tak můžeme zapsat pomocí řady čísel. A tato čísla
+          jde uložit jako elektrické signály ve stavu zapnuto/vypnuto. Každé slovo
+          na jakémkoli webu, na displeji telefonu a podobně je v zařízení uložené
+          pomocí tohoto systému.
+      10:
+        text: Teď přejděme k fotkám, videím a vůbec jakémukoli grafickému obsahu,
+          co vidíme na obrazovce.
+      11:
+        text: Všechny obrázky a snímky videí jsou tvořené drobounkými body – takzvanými
+          pixely. A každý pixel má určitou barvu. Každou barvu je možné vyjádřit pomocí
+          čísel. Když uvážíme, že typický obrázek má milióny pixelů a typické video
+          zobrazuje 30 snímků za sekundu, mluvíme tady o hodně velkém objemu dat.
+      12:
+        text: Každý zvuk je v zásadě série vibrací. Vibrace můžeme vyjádřit graficky
+          v podobě zvukových vln. A každý bod zvukové vlny lze vyjádřit číselně. Libovolný
+          zvuk tak můžeme vyjádřit sérií čísel. Pokud chceme, aby byl kvalitnější,
+          zvolíme 32bitový zvuk spíše než 8bitový. Víc bitů znamená větší číselné
+          rozpětí.
+      13:
+        text: Když na počítači píšete kód nebo vytváříte vlastní aplikaci, nepracujete
+          přímo s jedničkami a nulami, budete pracovat s obrázky, zvukem nebo videem.
+          Přesto je dobré vědět, že za tím vším jsou na základní úrovni právě jedničky
+          a nuly a elektrické signály v logických obvodech počítače.
+    csd_concept_circuits_logic:
+      1:
+        text: Co mě na obvodech ohromně baví, je možnost využívat je k uměleckému
+          vyjádření – když dostanu nějaký tvůrčí nápad, můžu ho přenést do jazyka
+          obvodů. Pomocí technologií tak můžete svým nápadům vdechnout život.
+      2:
+        text: Každý počítačový vstup nebo výstup je v zásadě informace, kterou je
+          možné vyjádřit pomocí elektrických signálů zapnuto nebo vypnuto, resp. pomocí
+          jedniček a nul.
+      3:
+        text: Aby počítač mohl zpracovat vstupní informace a vytvořit informace výstupní,
+          musí upravit a zkombinovat vstupní signály. K tomu používá milióny miniaturních
+          elektronických součástek, které dohromady tvoří integrovaný obvod.
+      4:
+        text: Pojďme si trochu přiblížit, jak můžou obvody upravit a zpracovat informace
+          složené z jedniček a nul. Toto je nesmírně jednoduchý obvod. Přijme elektronický
+          signál, zapnuto nebo vypnuto, a převrátí ho. Takže pokud mu předáte signál
+          1, obvod vrátí hodnotu 0 a pokud předáte signál 0, vrátí 1. Signál, který
+          vstupuje, není stejný jako signál výstupní, proto tomuhle obvodu říkáme
+          NOT.
+      5:
+        text: Složitější obvody můžou přijmout několik vstupních signálů, zkombinovat
+          je a vrátit jiný výsledek. V tomhle příkladu vstupují do obvodu dva elektrické
+          signály, z nichž každý může být 1 nebo 0. Pokud má kterýkoli ze vstupních
+          signálů hodnotu 0, pak je výsledek také 0. Obvod vrátí hodnotu 1 jen v případě,
+          že oba vstupní signály mají hodnotu 1, proto tento obvod nazýváme AND.
+      6:
+        text: Existuje celá řada takovýchto malých obvodů, které provádějí jednoduché
+          logické výpočty. Jejich pospojováním můžeme vytvořit složitější obvody,
+          které provádějí složitější výpočty.
+      7:
+        text: 'Můžete například vytvořit obvod, který sečte dva přijaté bity. Říká
+          se mu sčítačka. Tento obvod přijme dva bity, kdy každý má hodnotu 1 nebo
+          0, sečte je a vrátí jejich součet. Možnosti tohoto výpočtu jsou: 0 + 0 =
+          0, 0 + 1 = 1 nebo 1 + 1 = 2. Na výstupu jsou potřeba dva kabely, protože
+          součet ve dvojkové soustavě může mít až dva řády. Jestliže jedna sčítačka
+          dokáže sečíst dva bity informace, můžete dát vedle sebe celou skupinu těchto
+          sčítacích obvodů, které pak dokážou sečíst mnohem vyšší čísla.'
+      8:
+        text: Tady je příklad toho, jak 8bitová sčítačka sečte čísla 25 a 50. Každé
+          číslo je zastoupené 8 bity, takže do obvodu vstupuje 16 různých elektrických
+          signálů. Obvod 8bitové sčítačky obsahuje mnoho malých sčítaček, které dohromady
+          vypočítají součet.
+      9:
+        text: Jiné elektrické obvody můžou provádět další jednoduché výpočty jako
+          odčítání nebo násobení. Vlastně všechny operace zpracování informací, které
+          počítač provádí, jsou poskládané z obrovského množství jednoduchých menší
+          operací. Každá operace, kterou počátač provede, je tak jednoduchá, že by
+          ji zvládl člověk, ale obvody v počítači jsou mnohem mnohem rychlejší.
+      10:
+        text: První elektrické obvody byly velké a těžkopádné – 8bitová sčítačka měla
+          rozměry ledničky a trvalo minuty, než provedla jednoduchý výpočet. Dnešní
+          počítačové obvody jsou mikroskopických rozměrů a mnohem rychlejší. Proč
+          jsou menší počítače zároveň rychlejší? To proto, že čím menší je obvod,
+          tím menší vzdálenost musí elektrický signál urazit. Elektřina proudí rychlostí
+          světla, proto moderní obvody dokážou provádět miliardy výpočtů za sekundu.
+      11:
+        text: Ať hrajete hru, nahráváte video, nebo prozkoumáváte vesmír, všechno,
+          k čemu technologie využíváte, vyžaduje extrémně rychlé zpracování velkého
+          množství informací. Základem pro veškerou tuto složitost je spousta miniaturních
+          obvodů, které ze signálů dvojkové soustavy vytvářejí weby, videa, hudbu
+          a hry. Tyto obvody nám dokonce můžou pomoct dekódovat DNA kvůli diagnostice
+          a léčbě nemocí. A k čemu chcete všechny ty obvody použít vy?
+    csd_concept_memory_cpu_input_output:
+      1:
+        text: Ahoj, já jsem Madison Maxey. Moje společnost Loomia se zaměřuje na výrobu
+          chytrých látek pro smart oblečení a měkké výrobky. Možnosti textilií neznají
+          hranice.
+      2:
+        text: Jmenuji se Danielle Applestone a jsem CEO společnosti Other Machine
+          Company. Zabýváme se výrobou stolních fréz. Frézovací stroj má rotační řezací
+          hrot, který obráběním materiálu vytváří 3D objekty.
+      3:
+        text: Uvnitř provádějí všechny počítače stejné čtyři základní věci. Je to
+          vstup, uložení a zpracování informací. A nakonec výstup informací. Každý
+          z těcho úkolů provádí jiná část počítače.
+      4:
+        text: Máme vstupní zařízení, která přijímají informace z vnějšího světa a
+          předávějí je do dvojkové soustavy. Pak paměť, která tyto informace ukládá.
+          Všechny výpočty pak provádí centrální procesorová jednotka neboli CPU. A
+          nakonec máme výstupní zařízení, která výsledné informace převedou na fyzický
+          výstup.
+      5:
+        text: Nejdřív se podíváme na vstup. Počítače dokážou přijímat spoustu různých
+          typů vstupních informací – například z klávesnice, dotykové obrazovky telefonu,
+          fotoaparátu, mikrofonu nebo přijímače GPS. Ale mezi vstupní zařízení patří
+          například i snímače v autě, termostat nebo dron.
+      6:
+        text: Ukažme si jednoduchý příklad, jak vstup prochází počítačem a stává se
+          výstupem. Když stisknete klávesu na klávesnici, třeba písmeno B, klávesnice
+          ho převede na číslo. Tohle číslo se ve dvojkové soustavě – v podobě jedniček
+          a nul – odešle do počítače.
+      7:
+        text: 'Když procesor dostane tohle číslo, vypočítá pixel po pixelu, jak zobrazit
+          písmeno B. K tomu potřebuje podrobné pokyny od paměti, která mu řekne, jak
+          vykreslit písmeno B. Procesor tuto operaci provede a výsledek uloží jako
+          pixely v paměti. '
+      8:
+        text: Nakonec je informace o pixelech odeslána v podobě jedniček a nul do
+          monitoru. Monitor je výstupní zařízení, které převádí tyto binární signály
+          na miniaturní světla a barvy – ty utvářejí obraz, který vidíme.
+      9:
+        text: To všechno se děje tak rychle, že to působí bezprostředně, ale mezi
+          okamžikem, kdy stisknete klávesu, a zobrazením písmene na displeji provede
+          počítač tisíce operací.
+      10:
+        text: V našem příkladu byla výstupním zařízením obrazovka, ale existuje mnoho
+          typů výstupů, které přijímají binární signál z počítače a provádějí něco
+          ve fyzickém světě. Například reproduktor přehraje zvuk a 3D tiskárna vytiskne
+          objekt. Výstupní zařízení dokážou i řídit fyzický pohyb – robotickou ruku,
+          motor v autě, řezací nástroj frézovacích strojů, jaké vyrábí moje společnost.
+          Nové typy vstupů a výstupů umožňují počítačům interagovat se světěm zcela
+          novými způsoby, a to díky zvyšování rychlosti a zvětšování paměti CPU.
+      11:
+        text: Čím je úkol náročnější a čím víc informací na vstupu a výstupu proudí,
+          tím vyšší výpočetní výkon a větší paměť musí počítač mít. Psaní písmen na
+          obrazovce je snadné, ale pokud chceme vytvářet složitou 3D grafiku nebo
+          nahrávat videa ve vysokém rozlišení, musí mít moderní počítače často několik
+          procesorů na zpracování všech těchto informací a spoustu gigabajtů paměti
+          na jejich ukládání.
+      12:
+        text: 'Ať chcete počítač využívat na cokoli, vždycky je scénář stejný: vstup
+          informace z fyzického světa, uložení a zpracování této informace a nakonec
+          výstup zpátky do fyzického světa.'
+    csd_concept_hardware_software:
+      1:
+        text: Ahoj, jsem Erica Gomez a pracuji jako technická manažerka u Amazon.com.
+          Jednou z nejlepších věcí na práci v technickém oboru – a u Amazonu zvlášť
+          – je to, že si můžu každý den brát s sebou do práce svého psa. Mým úkolem
+          je dodávat software a úkolem mojí fenky je ležet pod stolem a hodně nahlas
+          chrápat.
+      2:
+        text: 'Jmenuji se Jerome Holman a jsem programový manažer u Xboxu. Mám opravdu
+          zábavnou náplň práce: v zásadě dávám dohromady hardware a software, abys
+          vám na Xboxu běžely všechny vaše oblíbené hry.'
+      3:
+        text: Když se podíváte do výpočetního zařízení, uvidíte spoustu obvodů, čipů,
+          kabelů, reproduktorů, zástrček a podobných věcí. Tomu se říká hardware.
+      4:
+        text: Co ale nevidíte, je software. Software, to jsou všechny počítačové programy
+          nebo kód, co na zařízení běží. Software může být cokoli od aplikací a her
+          přes weby až po software pro datovou vědu, jaký já a můj tým v Amazonu používáme,
+          abychom porozuměli chování zákazníků.
+      5:
+        text: Jak ale spolu hardware a software interagují? Začneme tím, že se podíváme
+          na centrální procesorovou jednotku neboli CPU.
+      6:
+        text: CPU je hlaví čip, který řídí všechny ostatní komponenty počítače. CPU
+          musí provádět různé věci, proto se skládá z menších, jednodušších částí,
+          a ty plní určité specifické úkoly. Má obvody na jednoduché matematické a
+          logické operace. A jiné na odesílání a přijímání informací, které si vyměňuje
+          s jinými částmi počítače.
+      7:
+        text: Skutečné kouzlo je v tom, že CPU ví, které obvody má použít a kdy je
+          má použít. To zajišťují jednoduché příkazy, které procesoru sdělují, jaký
+          obvod má použít na jakou úlohu. Třeba příkaz add procesoru říká, že má použít
+          vnější obvod na výpočet čísla. A příkaz store mu sděluje, aby použil jiný
+          obvod na uložení výsledku do paměti.
+      8:
+        text: Stejně jako u čísel je možné všechny tyto jednoduché příkazy vyjádřit
+          binárně – jedničkami a nulami nebo elektrickými signály zapnuto a vypnuto.
+          Binární příkazy se uloží do paměti a procesor je jeden po druhém přečte
+          a provede. Tato řada příkazů je vlastně velmi jednoduchý počítačový program.
+      9:
+        text: Binární kód je nejzákladnější forma softwaru, která řídí veškerý hardware
+          počítače. V dnešní době už nikdo nepíše software ve dvojkové soustavě. Trvalo
+          by to věčnost.
+      10:
+        text: Současný kód softwaru vypadá spíš takto (Python) nebo takto (Ruby) anebo
+          dokonce takto (Blockly). Tyto programovací jazyky vám umožňují psát příkazy
+          jazykem, který je hodně podobný angličtině.
+      11:
+        text: Když chcete třeba nakreslit na obrazovce obdélník, stačí vám jediný
+          příkaz. Tento příkaz vyšší úrovně se převede na stovky nebo dokonce tisíce
+          jednoduchých binárních příkazů, kterým procesor rozumí. Software říká procesoru,
+          co má dělat, ale když posloucháte hudbu, procházíte web a mluvíte s kamarádkou,
+          běží v počítači několik aplikací najednou.
+      12:
+        text: Jak se vůbec všechny tyto programy na počítač dostanou a jak to, že
+          je procesor dokáže spouštět všechny najednou? Abychom si to vysvětlili,
+          musíme se podívat na operační systém.
+      13:
+        text: Operační systém počítače je hlavní program, který řídí, jak může software
+          používat hardware počítače. Já jsem například pomohl vytvořit operační systém
+          Windows, který běží na většině osobních počítačů.
+      14:
+        text: Operační systém je speciální program, který dokáže řídit další software
+          na počítači. Umožňuje instalovat nové programy jejich načtením do paměti
+          počítače. Rozhoduje o tom, kdy centrální procesorová jednotka spustí ten
+          který program a jestli daný program smí přistupovat ke vstupním a výstupním
+          zařízením počítače. A když se vám zdá, že v počítači běží spousta programů
+          najednou, ve skutečnosti jen operační systém ve zlomcích vteřiny přepíná
+          mezi programy, které se o procesor dělí.
+      15:
+        text: Uvnitř každého počítače je operační systém a ten spravuje software,
+          který ovládá hardware počítače.
+      16:
+        text: Software je série příkazů, ty jsou tvořené jednoduchým binárním kódem
+          a ten zase není nic jiného než elektrické signály, které proudí miliardami
+          malých obvodů.
+      17:
+        text: Počítače dokážou spoustu úžasných věcí. Ale pouze my lidé jim můžeme
+          předat chytrost nebo užitečnost. Když se naučíte kódovat, budete umět definovat
+          problém, který chcete vyřešit, a napsat software, který promění vaše nápady
+          v realitu.
     hoc_dance_warmup:
       1:
         text: 'Hodina kódu | Taneční večírek: Na rozehřátí'
+      2:
+        text: Ahoj! Jmenuji se Miral Kotb a jsem tanečnice, vývojářka softwaru a tvůrkyně
+          iLuminate.
+      3:
+        text: Počítačová věda má mnoha průsečíků s tvůrčí činností. Ani by se spočítat
+          nedaly. Když se naučíte psát software, můžete realizovat svoje nápady v
+          jakékoli oblasti. V mém případě jsou to světelné obleky. S nástroji na psaní
+          softwaru můžete dokázat opravdu hodně věcí, možnosti jsou prakticky nekonečné.
+      4:
+        text: V následující hodině budete zasvěceni do počítačové vědy a zkusíte si
+          naprogramovat svoji vlastní taneční party! Dali jsme dohromady parádní hity
+          a skupinu skvělých tanečníků, takže hraní může začít.
+      5:
+        text: Pomocí bloků kódu si zvolíte různé tanečníky, budete měnit jejich taneční
+          pohyby, necháte je reagovat na hudbu a naprogramujete jejich vzájemné interakce.
+      6:
+        text: Obrazovka bude rozdělená na tři hlavní části. Nalevo je herní prostor.
+          Tady se objeví tanečníci.
+      7:
+        text: Oblast uprostřed je vyhrazená pro sadu nástrojů. Tady budou v průběhu
+          lekcí dostupné nové bloky kódu.
+      8:
+        text: Prostor napravo je pracovní prostor. Sem můžete přetahovat bloky ze
+          sady nástrojů, abyste je použili v programu.
+      9:
+        text: Pokyny pro jednotlivé úrovně se objeví v horní části obazovky. Když
+          potřebujete nápovědu, stačí kliknout na žárovku.
+      10:
+        text: Začněme vytvořením nového tanečníka pomocí tohoto červeného bloku. Nejdřív
+          blok přetáhneme z panelu nástrojů a přidáme ho do oranžového bloku setup.
+          Tanečník je kočka, dáme jí jméno „my_first_dancer“. Když kliknete sem, můžete
+          jméno změnit na cokoli jiného.
+      11:
+        text: Tady můžete taky zvolit, kde se tanečník v herním prostoru objeví.
+      12:
+        text: Nad herním prostorem je nabídka pro výběr hudby. Výběr je bohatý, tak
+          si užijte hledání skladby, co vám vyhovuje. Pod herním prostorem je tlačítko
+          Spustit. Když ho zvolíte, tanečníci z vašeho programu se objeví v herním
+          prostoru a muzika začne hrát.
+      13:
+        text: Vyzkoušejte si to! A pokud se zaseknete, je to v pořádku. Zvedněte se
+          a trochu se rozhýbejte. Než se nadějete, máte svoji vlastní taneční party.
+          Tak co, už víte, co vytvoříte?
     hoc_dance_events:
       1:
         text: 'Hodina kódu | Taneční večírek: Události'
+      2:
+        text: Já jsem Aloe Blacc. Jsem zpěvák, písničkář a bavič. Myslím, že učit
+          se informatiku je moc důležité, protože v počítačích je budoucnost. A taky
+          myslím, že je potřeba, aby lidé uměli pracovat s technologiemi, které doslova
+          řídí jejich život.
+      3:
+        text: Když chcete různé taneční pohyby synchronizovat s muzikou, můžete použít
+          něco, čemu říkáme události. Událost řekne programu, aby naslouchal, a až
+          se něco stane, hned na to zareagoval.
+      4:
+        text: Mezi příklady událostí patří čekání na kliknutí myší, stisknutí klávesy
+          šipky nebo klepnutí na obrazovku. Událost, kterou teď použijeme, čeká na
+          změnu v písničce. Změna způsobí, že tanečník změní styl tance.
+      5:
+        text: Profesionální tanečníci si při nácviku choreografií počítají doby v
+          písničce.
+      6:
+        text: V hudbě má jeden takt určitý počet dob.
+      7:
+        text: Aby to tanečníci mohli rozjet, je potřeba zelený blok události. Tenhle
+          blok události říká „po 4 taktech“.
+      8:
+        text: Když vložíte fialový blok „do forever“, můžete pro tanečníka vybrat
+          tanec. Protože je pod blokem události „after 4 measures“, tanečník počká
+          čtyři takty, než začne tančit.
+      9:
+        text: Sledujte počítadlo taktů v horní části displeje.
+      10:
+        text: Počkejte si na událost, která spustí kód tance. A přesně na dobu se
+          tanečník začne pohybovat.
     hoc_dance_properties:
       1:
         text: 'Hodina kódu | Taneční večírek: Vlastnosti'
+      2:
+        text: Jmenuji se Maria a studuji na Washingtonské univerzitě. Taky jsem Amazon
+          Future Engineer.
+      3:
+        text: Miluju informatiku, protože zahrnuje řešení problémů a kritické myšlení,
+          a když do něčeho vložíte hodiny práce, můžete vytvořit něco opravdu krásného,
+          co vám přinese uspokojení.
+      4:
+        text: Doteď jste měli možnost pohrát si s různými typy tanečníků a naprogramovat
+          různé typy tanečních pohybů. Ale jak tyhle pohyby vlastně fungují?
+      5:
+        text: Každý taneční pohyb tvoří série obrázků, tzv. snímků. Každý snímek je
+          o trochu jiný než předchozí. Když program běží, počítač zobrazuje jeden
+          snímek za druhým. Střídají se tak rychle, že to vypadá, že se tanečník hýbe.
+          To je tajemství animace.
+      6:
+        text: Kromě pohybů tanečníka můžete změnit i jeho vlastnosti. Vlastnosti popisují
+          věci jako pozici tanečníka na obrazovce, jeho velikost a barvu.
+      7:
+        text: Ke změně vlastností tanečníka slouží blok set. Pomocí bloku set tanečníka
+          zmenšíme. Nejdřív tento blok přetáhněte do programu. Potom zvolte tanečníka,
+          kterého chcete změnit, a zadejte jeho velikost na obrazovce.
+      8:
+        text: Plná velikost je 100. Pokud zvolíte menší číslo, tanečník bude menší.
+          Čím je tanečník menší, tím vzdálenější se zdá. Takhle se dají výborně vytvořit
+          tanečníci v pozadí.
+      9:
+        text: Pomocí bloku set můžete změnit také rozměry, rotaci, pozici a barvu
+          tanečníka. Když si s těmito vlastnostmi pohrajete, můžete provádět spoustu
+          změn a propojit je s různými částmi písničky.
+      10:
+        text: Pamatujte ale, že vlastnosti můžete nastavovat jen u existujících tanečníků.
+          Blok set musí přijít za blok „make a new dancer“. Experimentujte, dejte
+          průchod tvořivosti a užijte si to.
     hoc_dance_congrats:
       1:
         text: 'Hodina kódu | Taneční večírek: Party začíná!'
+      2:
+        text: Gratuluji! Právě jste se naučili základy informatiky. Teď pomocí těchto
+          bloků můžete navrhnout taneční party podle svých představ a pak ji sdílet
+          s kamarády.
+      3:
+        text: Když se podíváte na panel nástrojů, najdete zbrusu nové bloky, které
+          předtím nebyly dostupné. Například pomocí bloku layout jde změnit uspořádání
+          tanečníků na obrazovce.
+      4:
+        text: Prohlédněte si všechno a vyzkoušejte nové bloky a funkce. Vytvoříte
+          pečlivou choreografii na svoji oblíbenou písničku?
+      5:
+        text: Nebo taneční souboj s kamarádem?
+      6:
+        text: Anebo něco úplně jiného?
+      7:
+        text: Na konci kurzu můžete odkaz na svůj výtvor poslat kamarádům. Dejte průchod
+          fantazii a užijte si to!
+    mc_2018_intro:
+      1:
+        text: Ahoj! Jste tu právě včas. Vítejte ve Vodní cestě. Právě se chystám na
+          výpravu za pokladem ukrytým pod vodou a moc se mi hodí vaše pomoc. Kdo ví,
+          co nás na tajemné podvodní cestě čeká? Někde na tomhle molu se máme potkat
+          s naším prvním průvodcem.
+      2:
+        text: Vítejte, dobrodruzi! Abyste dokončili Vodní cestu, budete muset vyřešit
+          sérii kódovacích úloh. Funguje to takhle. Obrazovka je rozdělená na tři
+          hlaví části.
+      3:
+        text: Nalevo vidíte svět Minecraftu.
+      4:
+        text: Uprostřed je sada nástrojů, kde najdete programovací příkazy.
+      5:
+        text: A ta velká plocha napravo je váš pracovní prostor. Sem můžete přetahovat
+          příkazy do svého programu na řízení pohybu.
+      6:
+        text: Pokyny pro každou úroveň najdete v horní části stránky. Kliknutím na
+          symbol plus přepnete mezi dlouhými a krátkými pokyny.
+      7:
+        text: Zkuste přetáhnout bloky z panelu nástrojů do pracovního prostoru, připojit
+          je do sebe a pak kliknutím na tlačítko Spustit tyto příkazy provést.
+      8:
+        text: Možná to budete muset zkusit víckrát, než se to podaří. Některé úlohy
+          mají víc řešení – experimentováním zjistíte, co funguje.
+      9:
+        text: Jestli chcete začít znova, kliknutím na tlačítko Reset se vrátíte na
+          začátek.
+      10:
+        text: Příkazy můžete odstraňovat přetažením bloku z pracovního prostoru na
+          panel nástrojů. Nezapomeňte tlačítkem Spustit ověřovat, co kód dělá.
+      11:
+        text: Tak a dost řečí, dobrodruzi. Pusťte se do kódování, ať najdete podvodní
+          poklad.
+    MC_2018_loops:
+      1:
+        text: Super! Chytili jsme tresku! Věděli jste, že když tresku dáte sníst delfínovi,
+          zavede vás k vraku, kde by mohl být poklad? Už jsme zas o něco blíž. Teď
+          přijde několik záludnějších úloh, pro které budeme potřebovat další kódovací
+          dovednosti. Co to je? Jeskyně?
+      2:
+        text: Vítejte, dobrodruzi! Já jsem Chobotnice. Všimla jsem si, že jste v některých
+          úlohách používali pořád dokola ty samé příkazy. To ale muselo být úmorné.
+          Nepřejete si někdy, aby stále se opakující činnosti, jako je mytí nádobí
+          nebo čištění zubů, nebyly tak únavné a nudné? To by bylo fajn.
+      3:
+        text: V tomhle jsou počítače opravdu dobré – v provádění nějaké činnosti stále
+          dokola pomocí cyklů. Když chcete, aby program hodněkrát opakoval stejný
+          úkol, můžete použít cyklus!
+      4:
+        text: Blok cyklu obsahuje pokyny, které se opakují, dokud není dosaženo cíle.
+          Jakmile program zahájí cyklus „repeat until goal“, bude úkol opakovat, dokud
+          nesplní cíl.
+      5:
+        text: Zkuste si to sami. Vložte do bloku „repeat until goal“ příkazy, které
+          chcete opakovat, klikněte na „Spustit“ a dívejte se, jak to jde.
+      6:
+        text: Tak to bylo trochu divné. Kdo by tušil, že chobotnice programují? Ani
+          jsem nevěděla, že mají prsty. Tak teď víme, k čemu jsou cykly. Pojďme je
+          využít k získání dalšího pokladu.
+    mc_2018_conditionals:
+      1:
+        text: Páni! Další tři úlohy vyřešeny! A chytili jsme… lososa. Není to tak
+          vzrušující jako hroudy zlata, ale spokojíme se s tím, co máme. A mám pocit,
+          že ulita loděnky se nám později bude hodit. Zajímalo by mě, co se skrývá
+          v těchhle ruinách. Možná další nápověda! Pojďme se podívat dovnitř.
+      2:
+        text: Já jsem Netty, vítejte v mých rozvalinách. Neustále děláme rozhodnutí
+          na základě podmínek. Když to vypadá na déšť, vezmeme si deštník. Když máme
+          hlad, dáme si svačinu.
+      3:
+        text: Když uvidíme creepera, běžíme od něj pryč. I počítače dělají takováhle
+          rozhodnutí. Dokážou reagovat na podmínky pomocí kódu.
+      4:
+        text: Když chcete pomocí příkazů naprogramovat takovouhle odezvu, zvolte blok
+          if path.
+      5:
+        text: V rozevírací nabídce vyberte některou možnost.
+      6:
+        text: Když třeba napíšete příkaz „if path to the right“ a do podmínky přidáte
+          blok „turn right“, pak Steve vždycky zabočí doprava, když dojde na místo,
+          kde je vpravo volný prostor. Když vpravo volno není, neodbočí. Tyhle podmiňovací
+          příkazy if jsou užitečné, když spouštíte kód v nepředvídatelných situacích,
+          jako jsou tajemné rozvaliny v jeskyni pod vodou.
+      7:
+        text: Zkuste pomocí bloků if vylepšit svůj kód.
+      8:
+        text: Páni! Netty má ale úžasné rozvaliny. Vážně už se musím odstěhovat od
+          rodičů. Tak co myslíte? Jsou podmínky to, co nám pomůže dokončit poslední
+          úlohy? Pojďme to zkusit.
+    mc_2018_closing:
+      1:
+        text: 'Amy Lee33: Blahopřeji! Zvládli jste to!'
+      2:
+        text: 'Chobotnice: Blahopřeji!'
+      3:
+        text: 'Netty: Zvládli jste to! Blahopřeji!'
+      4:
+        text: 'Tomohawk: Blahopřeji!'
+      5:
+        text: Jaký krásný den! Všechno to hledání pokladů nás přivedlo k vybudování
+          vedení Minecraftu, našli jsme ulity loděnek a objevili truhly s pokladem.
+          Barvu prismarinu prostě miluju. Taky jsme se naučili kódovat pomocí cyklů
+          a podmínek.
+      6:
+        text: Když je řeč o kódování, na naší dobrodružné výpravě zbývá poslední úroveň.
+          Jste připravení?
+      7:
+        text: Je to úroveň volného hraní – můžete využít svoje kódovací dovednosti
+          a vytvořit něco parádního.
+      8:
+        text: Hmmm… skrýš pro ukrytí pokladu, podvodní monument, korálový hrad? Ach…
+          tolik nápadů. Zkuste pomocí cyklů vytvořit opakující se akce a využít podmínky,
+          ať jste připravení na všechny nepředvídatelné scénáře.
+      9:
+        text: Prokázali jste neohroženost v kódování. Nemůžu se dočkat, až uvidím
+          vaše výtvory. A doufám, že vaše dobrodružství s kódem tímhle nekončí. Šťastnou
+          plavbu!
+    teaching_csf_how_it_works:
+      1:
+        image: notes/teaching_cs_fundamentals_1.png
+        text: Tento kurz je rozdělený na několik fází.
+      2:
+        image: notes/teaching_cs_fundamentals_2.png
+        text: V prvních několika fázích budou představeny principy informatiky a klíčová
+          terminologie.
+      3:
+        image: notes/teaching_cs_fundamentals_3.png
+        text: V dalším kroku se naučíte kódovat stejným způsobem jako studenti. Poslední
+          fáze kurzu vám pomůžou naplánovat výuku informatiky. Během kurzu se setkáte
+          s příklady online lekcí i lekcí bez počítače.
+      4:
+        image: notes/teaching_cs_fundamentals_4.png
+        text: Výuková platforma zaznamenává váš pokrok, takže můžete kdykoli pokračovat
+          od místa, kde jste skončili.
+    what_is_cs:
+      1:
+        image: notes/what_is_cs.png
+        text: Kódování je sada pokynů, které dáváte počítači. Informatika je obor,
+          který lidem umožňuje využívat výkon počítače k řešení rozsáhlých problémů.
+          Informatika zahrnuje kódování, ale i další věci, jako je fungování internetu
+          a jeho dopad na společnost, manipulace s velkými daty nebo způsoby, jak
+          si rozdělit větší problém na několik menších. Informatika je o řešení problémů,
+          kritickém myšlení a vytrvalosti.
+    writing_first_program:
+      1:
+        image: notes/writing_first_program_1.png
+        text: Code.org používá vizuální programovací jazyk Blockly, který funguje
+          na principu přetahování bloků. V Blockly pomocí barevných pokynů, takzvaných
+          bloků, vytváříte programy a řešíte zadání.
+      2:
+        image: notes/writing_first_program_2.png
+        text: Každé zadání se skládá ze čtyř částí.
+      3:
+        image: notes/writing_first_program_3.png
+        text: Nalevo je herní plocha, kde program běží.
+      4:
+        image: notes/writing_first_program_4.png
+        text: Uprostřed je panel nástrojů, kde najdete všechny potřebné bloky.
+      5:
+        image: notes/writing_first_program_5.png
+        text: Na pravé straně je pracovní prostor vašeho programu, kam přetahujete
+          bloky.
+      6:
+        image: notes/writing_first_program_6.png
+        text: Nad pracovním prostorem jsou pokyny k dané úloze.
+      7:
+        image: notes/writing_first_program_7.png
+        text: Pokud přetáhnete z panelu nástrojů nadbytečné bloky, můžete je přetáhnout
+          zpět. Stisknutím tlačítka Spustit uvedete program do chodu, tlačítkem Reset
+          se vrátíte na začátek.
+    repeat_block:
+      1:
+        image: notes/repeat_block.png
+        text: Kód vložený do bloku repeat se opakuje podle toho, kolik opakování nastavíte.
+    what_is_an_event:
+      1:
+        image: notes/what_is_an_event.png
+        text: Událost říká programu, že má čekat, až se stane konkrétní věc. Když
+          k tomu dojde, program provede akci. Počítač může čekat třeba na kliknutí
+          myší, stisknutí klávesy se šipkou nebo klepnutí na obrazovku.
+    lesson_planning:
+      1:
+        image: notes/lesson_planning_1.png
+        text: Lekce základů informatiky začínají přehledem, který shrnuje jejich zaměření.
+      2:
+        image: notes/lesson_planning_2.png
+        text: Lekce zahrnují aktivity na zahřátí, hlavní aktivity a rekapitulaci.
+          Pokud chcete vytvořit vlastní plány lekcí, možná byste měli mít na paměti
+          následující tipy.
+      3:
+        image: notes/lesson_planning_3.png
+        text: 1. Snažte se navrhnout učební plán, který rozvíjí dovednosti po spirále.
+          Každý koncept jednou představte a pak se k němu vraťte.
+      4:
+        image: notes/lesson_planning_4.png
+        text: 2. Obohaťte výuku tím, že zkombinujete online lekce s lekcemi bez počítače.
+      5:
+        image: notes/lesson_planning_5.png
+        text: 3. Rozdělte si učební plán na několik menších dílů.
+      6:
+        image: notes/lesson_planning_6.png
+        text: 4. Ujistěte se, že výuka vyhovuje místním standardům a rozvíjí dovednosti,
+          které studenty připravují na vysokou školu a pracovní kariéru.
+    opd_closing:
+      1:
+        image: notes/opd_closing_1.png
+        text: Blahopřejeme! Dokončili jste online kurz Výuka základů informatiky.
+          Teď patříte do stále se rozšiřující komunity učitelů, kteří připravují studenty
+          na budoucnost.
+      2:
+        image: notes/opd_closing_2.png
+        text: 'Pokud hledáte další podporu, projděte si tyto zdroje: 1. fórum.code.org
+          2. @teachcode na Twitteru 3. web studio.code.org '
     hoc_dance_warmup_2019:
       1:
         text: 'Hodina kódu | Taneční večírek: Na rozehřátí'
+      2:
+        text: Ahoj! Jmenuji se Miral Kotb a jsem tanečnice, vývojářka softwaru a tvůrkyně
+          iLuminate.
+      3:
+        text: Počítačová věda má mnoha průsečíků s tvůrčí činností. Ani by se spočítat
+          nedaly. Když se naučíte psát software, můžete realizovat svoje nápady v
+          jakékoli oblasti. V mém případě jsou to světelné obleky. S nástroji na psaní
+          softwaru můžete dokázat opravdu hodně věcí, možnosti jsou prakticky nekonečné.
+      4:
+        text: V následující hodině budete zasvěceni do počítačové vědy a zkusíte si
+          naprogramovat svoji vlastní taneční party! Dali jsme dohromady parádní hity
+          a skupinu skvělých tanečníků, takže hraní může začít.
+      5:
+        image: notes/hoc_dance_warmup_2019_5.png
+        text: Pomocí bloků kódu si zvolíte různé tanečníky, budete měnit jejich taneční
+          pohyby, necháte je reagovat na hudbu a naprogramujete jejich vzájemné interakce.
+      6:
+        image: notes/hoc_dance_warmup_2019_6.png
+        text: Obrazovka bude rozdělená na tři hlavní části. Nalevo je herní prostor.
+          Tady se objeví tanečníci.
+      7:
+        image: notes/hoc_dance_warmup_2019_7.png
+        text: Oblast uprostřed je vyhrazená pro sadu nástrojů. Tady budou v průběhu
+          lekcí dostupné nové bloky kódu.
+      8:
+        image: notes/hoc_dance_warmup_2019_8.png
+        text: Prostor napravo je pracovní prostor. Sem můžete přetahovat bloky ze
+          sady nástrojů, abyste je použili v programu.
+      9:
+        image: notes/hoc_dance_warmup_2019_9.png
+        text: Pokyny pro jednotlivé úrovně se objeví v horní části obazovky. Když
+          potřebujete nápovědu, stačí kliknout na žárovku.
+      10:
+        image: notes/hoc_dance_warmup_2019_10.png
+        text: Začněme vytvořením nového tanečníka pomocí tohoto červeného bloku. Nejdřív
+          blok přetáhneme z panelu nástrojů a přidáme ho do oranžového bloku setup.
+          Tanečník je kočka.
+      11:
+        image: notes/hoc_dance_warmup_2019_11.png
+        text: Tady můžete taky zvolit, kde se tanečník v herním prostoru objeví.
+      12:
+        image: notes/hoc_dance_warmup_2019_12.png
+        text: Nad herním prostorem je nabídka pro výběr hudby. Výběr je bohatý, tak
+          si užijte hledání skladby, co vám vyhovuje. Pod herním prostorem je tlačítko
+          Spustit. Když ho zvolíte, tanečníci z vašeho programu se objeví v herním
+          prostoru a muzika začne hrát.
+      13:
+        text: Vyzkoušejte si to! A pokud se zaseknete, je to v pořádku. Zvedněte se
+          a trochu se rozhýbejte. Než se nadějete, máte svoji vlastní taneční party.
+          Tak co, už víte, co vytvoříte?
     hoc_dance_events_2019:
       1:
         text: 'Hodina kódu | Taneční večírek: Události'
       2:
+        image: notes/hoc_dance_events_2019_2.png
         text: Jmenuji se Erin a jsem softwarová inženýrka tady v Code.org. Pomohla
           jsem vytvořit Taneční večírek.
+      3:
+        image: notes/hoc_dance_events_2019_3.png
+        text: Když chcete různé taneční pohyby synchronizovat s muzikou, můžete použít
+          něco, čemu říkáme události. Událost řekne programu, aby „naslouchal“, a
+          až se něco stane, hned na to zareagoval.
       4:
+        image: notes/hoc_dance_events_2019_4.png
         text: Některé příklady událostí naslouchají klepnutí myší, kurzorové směrové
           tlačítko nebo dotek na obrazovku.
+      5:
+        image: notes/hoc_dance_events_2019_5.png
+        text: Tady naprogramujeme, aby tanečník předvedl pohyb, až stisknete některé
+          tlačítko se šipkou na obrazovce nebo klávesu na klávesnici.
+      6:
+        image: notes/hoc_dance_events_2019_6.png
+        text: Můžeme použít blok události „when up arrow“ a připojit k němu blok „do
+          once“. Když někdo stiskne klávesu se šipkou nahoru, spustí se kód připojený
+          k bloku „when up arrow“. Který taneční pohyb zvolíte?
+      7:
+        image: notes/hoc_dance_events_2019_7.png
+        text: Zvolený typ tanečníka musí odpovídat jednomu z tanečníků, které jste
+          vytvořili uvnitř bloku „setup“, jinak se nic nestane.
+      8:
+        image: notes/hoc_dance_events_2019_8.png
+        text: Nakonec můžete vytvořit víc takových událostí, aby tanečníci předváděli
+          různé pohyby při stisknutí příslušných kláves. Vyzkoušejte si to – pomocí
+          několika řádků kódu můžete vytvořit vlastní interaktivní tanec.
+    hoc_dance_measures_2019:
+      1:
+        image: notes/hoc_dance_measures_2019_1.png
+        text: 'Hodina kódu | Taneční večírek: Takty'
+      2:
+        image: notes/hoc_dance_measures_2019_2.png
+        text: Já jsem Aloe Blacc. Jsem zpěvák, písničkář a bavič. Myslím, že učit
+          se informatiku je moc důležité, protože v počítačích je budoucnost. A taky
+          myslím, že je potřeba, aby lidé uměli pracovat s technologiemi, které doslova
+          řídí jejich život.
+      3:
+        image: notes/hoc_dance_measures_2019_3.png
+        text: Událost, kterou teď vytvoříme, bude čekat na změnu v písničce. Ta aktivuje
+          změnu v pohybech tanečníka.
+      4:
+        image: notes/hoc_dance_measures_2019_4.png
+        text: Profesionální tanečníci si při nácviku choreografií počítají doby v
+          písničce. Určitému pevně stanovenému počtu dob se v hudbě říká takt. Ve
+          většině populárních skladeb má takt čtyři doby.
+      5:
+        image: notes/hoc_dance_measures_2019_5.png
+        text: Aby to tanečníci mohli rozjet, je potřeba zelený blok události. Tenhle
+          blok události říká „po 4 taktech“.
+      6:
+        image: notes/hoc_dance_measures_2019_6.png
+        text: Když vložíte fialový blok „do forever“, můžete pro tanečníka vybrat
+          tanec. Protože je pod blokem události „after 4 measures“, tanečník počká
+          čtyři takty, než začne tančit.
+      7:
+        image: notes/hoc_dance_measures_2019_7.png
+        text: Sledujte počítadlo taktů v horní části displeje.
+      8:
+        image: notes/hoc_dance_measures_2019_8.png
+        text: Počkejte si na událost, která spustí kód tance. A přesně na dobu se
+          tanečník začne pohybovat.
     hoc_dance_properties_2019:
       1:
         text: 'Hodina kódu | Taneční večírek: Vlastnosti'
+      2:
+        text: Jmenuji se Maria a studuji na Washingtonské univerzitě. Taky jsem Amazon
+          Future Engineer.
+      3:
+        text: Miluju informatiku, protože zahrnuje řešení problémů a kritické myšlení,
+          a když do něčeho vložíte hodiny práce, můžete vytvořit něco opravdu krásného,
+          co vám přinese uspokojení.
+      4:
+        text: Doteď jste měli možnost pohrát si s různými typy tanečníků a naprogramovat
+          různé typy tanečních pohybů. Ale jak tyhle pohyby vlastně fungují?
+      5:
+        text: Každý taneční pohyb tvoří série obrázků, tzv. snímků. Každý snímek je
+          o trochu jiný než předchozí. Když program běží, počítač zobrazuje jeden
+          snímek za druhým. Střídají se tak rychle, že to vypadá, že se tanečník hýbe.
+          To je tajemství animace.
+      6:
+        text: Kromě pohybů tanečníka můžete změnit i jeho vlastnosti. Vlastnosti popisují
+          věci jako pozici tanečníka na obrazovce, jeho velikost a barvu.
+      7:
+        image: notes/hoc_dance_properties_2019_7.png
+        text: Ke změně vlastností tanečníka slouží blok set. Pomocí bloku set tanečníka
+          zmenšíme. Nejdřív tento blok přetáhněte do programu.
+      8:
+        image: notes/hoc_dance_properties_2019_8.png
+        text: Potom zvolte tanečníka, kterého chcete změnit, a zadejte jeho velikost
+          na obrazovce. Plná velikost je 100. Pokud zvolíte menší číslo, tanečník
+          bude menší. Čím je tanečník menší, tím vzdálenější se zdá.
+      9:
+        image: notes/hoc_dance_properties_2019_9.png
+        text: Pomocí bloku set můžete změnit také rozměry, rotaci, pozici a barvu
+          tanečníka. Když si s těmito vlastnostmi pohrajete, můžete provádět spoustu
+          změn a propojit je s různými částmi písničky.
+      10:
+        image: notes/hoc_dance_properties_2019_10.png
+        text: Pamatujte ale, že vlastnosti můžete nastavovat jen u existujících tanečníků.
+          Blok set musí přijít za blok „make a new dancer“. Experimentujte, dejte
+          průchod tvořivosti a užijte si to!
     hoc_dance_congrats_2019:
       1:
         text: 'Hodina kódu | Taneční večírek: Party začíná!'
+      2:
+        text: Gratuluji! Právě jste se naučili základy informatiky. Teď pomocí těchto
+          bloků můžete navrhnout taneční party podle svých představ a pak ji sdílet
+          s kamarády.
+      3:
+        text: Když se podíváte na panel nástrojů, najdete zbrusu nové bloky, které
+          předtím nebyly dostupné. Například pomocí bloku layout jde změnit uspořádání
+          tanečníků na obrazovce.
+      4:
+        text: Prohlédněte si všechno a vyzkoušejte nové bloky a funkce. Vytvoříte
+          pečlivou choreografii na svoji oblíbenou písničku?
+      5:
+        text: Nebo taneční souboj s kamarádem?
+      6:
+        text: Anebo něco úplně jiného?
+      7:
+        image: notes/hoc_dance_congrats_7.png
+        text: Na konci kurzu můžete odkaz na svůj výtvor poslat kamarádům. Dejte průchod
+          fantazii a užijte si to!
     poemart_intro:
       1:
         image: notes/hoc_poem_art_2021_introduction_01.jpg
+        text: Jsmenuji se Caia a jsem básnířka a studentka informatiky. Kódování mi
+          pomohlo psát lepší básně a moje básně mi zas pomohly zlepšit se v kódování,
+          protože musíte hodně přemýšlet, která slova zvolit a jak má váš výtvor vypadat,
+          až bude hotový.
       2:
         image: notes/hoc_poem_art_2021_introduction_02.jpg
+        text: V následující hodině se potrénujete v informatice a poezii napsáním
+          kódu animované básně. Poezie je v zásadě umění slov. Psaní poezie je forma
+          vyjádření; při psaní se snažím podnítit představivost a emoce čtenářů pomocí
+          svébytného stylu a rytmu.
       3:
         image: notes/hoc_poem_art_2021_introduction_03.jpg
+        text: Stejně jako jiné umění i básně se dají interpretovat mnoha různými způsoby.
+          Jedna a ta samá báseň může pro každého znamenat něco úplně jiného. Každá
+          báseň má svoji nezaměnitelnou náladu – pocit, který z ní máte. Různé nálady
+          si lidé někdy spojují s určitými barvami nebo obrazy.
       4:
         image: notes/hoc_poem_art_2021_introduction_04.jpg
+        text: Například žlutá ve mně vyvolává veselou náladu. A když myslím na pocit,
+          jako je strach, představím si někdy obraz bouřky za temné noci. Při téhle
+          aktivitě budete mít možnost vytvořit ilustraci a animaci k náladě básně
+          podle toho, jaké pocity ve vás vyvolává.
       5:
         image: notes/hoc_poem_art_2021_introduction_05.jpg
+        text: Pojďme se podívat, jak to udělám pomocí kódu. Jak vidíte, obrazovku
+          máte rozdělenou na tři hlavní části. Nalevo je herní prostor. Tady se spustí
+          vaše animace. Každá báseň má název a autora.
       6:
         image: notes/hoc_poem_art_2021_introduction_06.jpg
+        text: Oblast uprostřed je vyhrazená pro sadu nástrojů. Tady budou v průběhu
+          lekce dostupné nové bloky kódu.
       7:
         image: notes/hoc_poem_art_2021_introduction_07.jpg
+        text: Prostor napravo je pracovní prostor. Sem můžete přetahovat bloky ze
+          sady nástrojů, abyste je použili v programu.
       8:
         image: notes/hoc_poem_art_2021_introduction_08.jpg
+        text: Pokyny pro jednotlivé úrovně se objeví v horní části obazovky. Když
+          chcete nápovědu, stačí kliknout na žárovku.
       9:
         image: notes/hoc_poem_art_2021_introduction_09.jpg
+        text: Nejdřív vyberte báseň, co se vám líbí. Na výběr jsou nejrůznější básně
+          a můžete si v každé úrovni vybrat jinou.
       10:
         image: notes/hoc_poem_art_2021_introduction_10.jpg
+        text: Potom přetáhněte z panelu nástrojů do pracovního prostoru bloky pro
+          animaci básně. Můžete zvolit barvu pozadí nebo efekt, který se hodí k náladě
+          básně. Pak klikněte na Spustit a podívejte se, jak animace vypadá.
       11:
         image: notes/hoc_poem_art_2021_introduction_11.jpg
+        text: Chvíli si básně pročítejte a najděte si takovou, která k vám promlouvá.
+          Zamyslete se nad svými pocity a nad tím, jak je můžete vyjádřit pomocí obrazů
+          a kódu.
+    poemart_events:
+      1:
+        image: notes/hoc_poem_art_2021_events_01.jpg
+        text: Někdy se nálada v průběhu básně promění. Začne třeba vesele a skončí
+          smutně. Anebo se temnota promění ve světlo.
+      2:
+        image: notes/hoc_poem_art_2021_events_02.jpg
+        text: V téhle aktivitě budete pracovat s událostmi. Pomocí tohoto bloku události
+          můžete změnit chování programu, když se zobrazí konkrétní verš básně. Všimněte
+          si, že bloky událostí se nepřichycují k hlavnímu programu. Jsou to spíš
+          jakési samostatné malé programy.
+      3:
+        image: notes/hoc_poem_art_2021_events_03.jpg
+        text: 'Pročtěte si báseň a najděte místo, kde se změní nálada. Spočítajte,
+          na kolikátém verši se to stane: jeden, dva, tři. Číslo verše napište do
+          bloku události.'
+      4:
+        image: notes/hoc_poem_art_2021_events_04.jpg
+        text: Pak napište kód, který bude odrážet změnu nálady, když se daný verš
+          objeví na obrazovce. Když stisknete Spustit, uvidíte, co jste naprogramovali.
+    poemart_imagery:
+      1:
+        image: notes/hoc_poem_art_2021_imagery_01.jpg
+        text: Autoři poezie vykreslují v představivosti čtenářů obrazy. Když vidíme
+          slovo krokorýl, automaticky si představíme zeleného krokodýla. Takový obrázek
+          můžeme do animace přidat pomocí sprajtů.
+      2:
+        image: notes/hoc_poem_art_2021_imagery_02.jpg
+        text: Tenhle blok umožňuje přidat nového sprajta – a vybrat pro něj kostým.
+          Zvolte takový kostým, co se podle vás dobře hodí k básni.
+      3:
+        image: notes/hoc_poem_art_2021_imagery_03.jpg
+        text: |-
+          Můžete změnit umístění sprajta – klikněte v bloku umístění na ikonu špendlíku a pak na místo, kam ho chcete v herním prostoru dát.
+
+          [][0].
+      4:
+        image: notes/hoc_poem_art_2021_imagery_04.jpg
+        text: V dalších úrovních uvidíte pár nových bloků. Tenhle blok umožňuje měnit
+          velikost sprajtu. A pomocí tohoto můžete animovat jeho chování.
+      5:
+        image: notes/hoc_poem_art_2021_imagery_05.jpg
+        text: Pokud báseň zmiňuje putující oblaka, vytvořte nejdřív sprajta oblaku,
+          pak zvolte tento blok chování, přetáhněte ho a zvolte „wandering“ (toulat
+          se).
+      6:
+        image: notes/hoc_poem_art_2021_imagery_06.jpg
+        text: Zkontrolujte, že se kostýmy sprajtu shodují. Když stisknete Spustit,
+          uvidíte při čtení pohybující se mrak.
+      7:
+        image: notes/hoc_poem_art_2021_imagery_07.jpg
+        text: Teď umíte přidávat výstižné obrázky, které ilustrují slova v básni.
+          Pěknou zábavu!
+    poemart_celebration:
+      1:
+        image: notes/hoc_poem_art_2021_celebration_01.jpg
+        text: Blahopřeji. Právě jste se naučili základy informatiky a umíte poznat
+          náladu básně. Teď můžete vytvořit vlastní animovanou báseň a poslat ji kamarádům.
+      2:
+        image: notes/hoc_poem_art_2021_celebration_02.jpg
+        text: Zvolíte pečlivě jednoduchou scénu pro celou báseň?
+      3:
+        image: notes/hoc_poem_art_2021_celebration_03.jpg
+        text: Anebo použijete hodně událostí, aby se scéna s každým veršem měnila?
+      4:
+        image: notes/hoc_poem_art_2021_celebration_04.jpg
+        text: Na konci kurzu můžete odkaz na svůj výtvor poslat kamarádům.
+      5:
+        image: notes/hoc_poem_art_2021_celebration_05.jpg
+        text: Dejte průchod fantazii a užijte si to!
+    hello_world_intro:
+      1:
+        image: notes/hoc_hello_world_2021_introduction_01.jpg
+        text: 'Ahoj! Já jsem Erin a jsem softwarová inženýrka v Code.org. Jsem nadšená,
+          protože jsem mohla pracovat na kurzu, na který se teď chystáte. Jmenuje
+          se „Hello World“. '
+      2:
+        image: notes/hoc_hello_world_2021_introduction_02.jpg
+        text: "„Hello World“ je v informatice známá věta – její zobrazení je často
+          první krok při získávání znalostí informatiky. Během následující hodiny
+          si vyzkoušíte programování v Laboratoři sprajtů a začnete pronikat do tajů
+          informatiky."
+      3:
+        image: notes/hoc_hello_world_2021_introduction_03.jpg
+        text: Laboratoř sprajtů je nástroj, ve kterém můžete vytvářet nápadité, zábavné
+          projekty. Obrazovka je rozdělená na tři hlaví části. Nalevo je herní prostor.
+          Tady uvidíte svoje sprajty.
+      4:
+        image: notes/hoc_hello_world_2021_introduction_04.jpg
+        text: Sprajt je objekt na obrazovce, se kterým můžete interagovat – něco jako
+          postava nebo položka v příběhu nebo ve hře.
+      5:
+        image: notes/hoc_hello_world_2021_introduction_05.jpg
+        text: Oblast uprostřed je vyhrazená pro sadu nástrojů. Tady budou v průběhu
+          lekce dostupné nové bloky kódu.
+      6:
+        image: notes/hoc_hello_world_2021_introduction_06.jpg
+        text: Prostor napravo je pracovní prostor. Sem můžete přetahovat bloky ze
+          sady nástrojů, abyste je použili v programu.
+      7:
+        image: notes/hoc_hello_world_2021_introduction_07.jpg
+        text: Pokyny pro jednotlivé úrovně se objeví v horní části obazovky. Když
+          chcete nápovědu, stačí kliknout na žárovku.
+      8:
+        image: notes/hoc_hello_world_2021_introduction_08.jpg
+        text: Začneme tím, že vytvoříme sprajta. V tomhle bloku můžete zvolit kostým
+          a umístění sprajta. Výrazem kostým označujeme vzhled sprajta. Jeho umístění
+          změníte tak, že kliknete na ikonu špendlíku v bloku umístění a pak na místo,
+          kam ho chcete v herním prostoru dát.
+      9:
+        image: notes/hoc_hello_world_2021_introduction_09.jpg
+        text: Teď necháme sprajta, aby se představil. Když chceme, aby něco řekl,
+          přidáme do programu tenhle blok „Say“. Zkontrolujte, že je v bloku „Say“
+          zvolený stejný kostým jako v bloku sprajta.
+      10:
+        image: notes/hoc_hello_world_2021_introduction_10.jpg
+        text: Když stisknete „Spustit“, sprajt řekne text, který jste zadali. Je čas
+          pustit se do programování v Laboratoři sprajtů. Schválně, kam vás představivost
+          zavede!
+    hello_world_events:
+      1:
+        image: notes/hoc_hello_world_2021_events_01.jpg
+        text: Když teď umíte používat Laboratoř sprajtů, mohli byste program naučit,
+          aby zareagoval, když si s ním někdo bude hrát. K tomu budete potřebovat
+          události. Událost řekne programu, aby naslouchal, a až se něco stane, hned
+          na to zareagoval.
+      2:
+        image: notes/hoc_hello_world_2021_events_02.jpg
+        text: Mezi příklady událostí patří čekání na kliknutí myší, stisknutí klávesy
+          šipky nebo klepnutí na obrazovku. Blokům jako „when clicked“ říkáme bloky
+          událostí. Kód propojený s blokem události se spustí, jakmile program detekuje
+          příslušnou akci.
+      3:
+        image: notes/hoc_hello_world_2021_events_03.jpg
+        text: Když například připojím tenhle blok „say“ k události „when clicked“,
+          sprajt něco řekne, jakmile na něj uživatel klikne nebo klepne. Všimněte
+          si, že bloky událostí se nepřichycují k hlavnímu programu. Jsou to spíš
+          jakési samostatné malé programy.
+      4:
+        image: notes/hoc_hello_world_2021_events_04.jpg
+        text: Pokud máte víc sprajtů, můžete pomocí dalších událostí vyprávět interaktivní
+          příběh.
+      5:
+        image: notes/hoc_hello_world_2021_events_05.jpg
+        text: Brzy se naučíte dělat další věci v Laboratoři sprajtů, třeba změnit
+          velikost nebo vzhled sprajtu, nastavit různá pozadí, přehrát zvuk a další.
+          Co mají sprajti udělat, když s nimi někdo bude interagovat? Je to jen na
+          vás!
+    hello_world_congrats:
+      1:
+        image: notes/hoc_hello_world_2021_freeplay_01.jpg
+        text: Gratuluji! Právě jste se naučili základy informatiky. Teď můžete v Laboratoři
+          sprajtů vytvořit, co vás jen napadne.
+      2:
+        image: notes/hoc_hello_world_2021_freeplay_02.jpg
+        text: Všimněte si tlačítka Costumes (kostýmy). Když na něj kliknete, můžete
+          pro sprajty vybrat nové kostýmy z knihovny.
+      3:
+        image: notes/hoc_hello_world_2021_freeplay_03.jpg
+        text: Anebo si nakreslit vlastní! Až budete mít kostým podle svých představ,
+          vraťte se ke svému kódu.
+      4:
+        image: notes/hoc_hello_world_2021_freeplay_04.jpg
+        text: Teď pro sprajta zvolte svůj kostým.
+      5:
+        image: notes/hoc_hello_world_2021_freeplay_05.jpg
+        text: Když se podíváte na panel nástrojů, najdete zbrusu nové bloky, které
+          předtím nebyly dostupné. Například spoustu bloků chování, pomocí kterých
+          můžete sprajty zajímavým a zábavným způsobem rozhýbat.
+      6:
+        image: notes/hoc_hello_world_2021_freeplay_06.jpg
+        text: Pomocí bloku události „when touches“ můžete určit, co se stane, když
+          do sebe dva sprajti narazí.
+      7:
+        image: notes/hoc_hello_world_2021_freeplay_07.jpg
+        text: Najděte blok „create effect“. Pomocí tohoto šikovného bloku můžete vytvořit
+          animaci ze spousty sprajtů, kteří na povel vytrysknou, vyskočí nebo se snesou
+          z nebe.
+      8:
+        image: notes/hoc_hello_world_2021_freeplay_08.jpg
+        text: Všechno si prohlédněte a vyzkoušejte si tyto nové bloky a funkce. Na
+          konci kurzu klikněte na tlačítko „Share“ a pošlete kamarádům odkaz na svůj
+          výtvor.
+      9:
+        image: notes/hoc_hello_world_2021_freeplay_09.jpg
+        text: Získali jste všechny důležité dovednosti, které potřebujete, abyste
+          v Laboratoři sprajtů začali vyvíjet aplikace, hry a další nové programy.
+          Své nové schopnosti použijte pro dobrou věc. Pamatujte na zdvořilost a laskavost
+          – stejně, jako když něco vytváříte na papír nebo mluvíte s kamarádem.
+      10:
+        image: notes/hoc_hello_world_2021_freeplay_10.jpg
+        text: Tak co vytvoříte? Můžete vyprávět příběh o sobě… anebo si nějaký vymyslet
+          a navrhnout pro něj vlastní postavy. Možná že nově nabyté kódovací dovednosti
+          využijete při práci na školním projektu. Dejte průchod fantazii a užijte
+          si to!

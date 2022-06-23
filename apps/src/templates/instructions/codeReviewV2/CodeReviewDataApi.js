@@ -7,47 +7,23 @@ export const timelineElementType = {
 };
 
 export default class CodeReviewDataApi {
-  constructor(channelId, levelId, scriptId, locale) {
+  constructor(channelId, levelId, projectLevelId, scriptId, locale) {
     this.channelId = channelId;
     this.levelId = levelId;
+    this.projectLevelId = projectLevelId;
     this.scriptId = scriptId;
     this.locale = locale;
   }
 
-  // Temp method only used to set this.token
-  getCodeReviewCommentsForProject(onDone) {
-    return $.ajax({
-      url: `/code_review_comments/project_comments`,
-      method: 'GET',
-      data: {channel_id: this.channelId}
-    }).done((data, _, request) => {
-      this.token = request.getResponseHeader('csrf-token');
-    });
-  }
-
   getReviewablePeers() {
-    // Enable when the API is ready
-    // return $.ajax({
-    //   url: `/code_review/peers_ready_for_review`,
-    //   type: 'GET',
-    //   data: {
-    //     channel_id: this.channelId,
-    //     level_id: this.levelId,
-    //     script_id: this.scriptId
-    //   }
-    // });
-
-    // For now returning stub data
-    return [
-      {
-        id: 1,
-        name: 'Jerry'
-      },
-      {
-        id: 1,
-        name: 'Karen'
+    return $.ajax({
+      url: `/code_reviews/peers_with_open_reviews`,
+      type: 'GET',
+      data: {
+        scriptId: this.scriptId,
+        projectLevelId: this.projectLevelId || this.levelId
       }
-    ];
+    });
   }
 
   getInitialTimelineData = async () => {
@@ -87,17 +63,19 @@ export default class CodeReviewDataApi {
   };
 
   getCodeReviews() {
-    // TODO: csrf token get rid of this:
-    this.getCodeReviewCommentsForProject();
-
-    return $.ajax({
-      url: `/code_reviews`,
-      type: 'GET',
-      data: {
-        channelId: this.channelId,
-        levelId: this.levelId,
-        scriptId: this.scriptId
-      }
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: `/code_reviews`,
+        type: 'GET',
+        data: {
+          channelId: this.channelId
+        }
+      })
+        .done((codeReviews, _, request) => {
+          this.token = request.getResponseHeader('csrf-token');
+          resolve(codeReviews);
+        })
+        .fail(result => reject(result));
     });
   }
 
@@ -137,8 +115,28 @@ export default class CodeReviewDataApi {
     });
   }
 
+  toggleResolveComment(commentId, isResolved) {
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: `/code_review_notes/${commentId}`,
+        type: 'PATCH',
+        headers: {'X-CSRF-Token': this.token},
+        data: {isResolved}
+      })
+        .done(codeReviewComment => resolve(codeReviewComment))
+        .fail(result => reject(result));
+    });
+  }
+
+  deleteCodeReviewComment(commentId) {
+    return $.ajax({
+      url: `/code_review_notes/${commentId}`,
+      type: 'DELETE',
+      headers: {'X-CSRF-Token': this.token}
+    });
+  }
+
   closeReview(reviewId) {
-    // TODO: call API for close review
     return new Promise((resolve, reject) => {
       $.ajax({
         url: `/code_reviews/${reviewId}`,
@@ -168,6 +166,7 @@ export default class CodeReviewDataApi {
           channelId: this.channelId,
           scriptId: this.scriptId,
           levelId: this.levelId,
+          projectLevelId: this.projectLevelId || this.levelId,
           version: version
         }
       })

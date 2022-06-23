@@ -3606,6 +3606,19 @@
           "move and get nectar with counter": {
             "name": "тоологчийн хамт шүүс цуглуулж, хөдлөөрэй"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "дүрс зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
         }
       }
     }

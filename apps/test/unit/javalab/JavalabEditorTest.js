@@ -22,7 +22,8 @@ import javalab, {
   sourceVisibilityUpdated,
   sourceValidationUpdated,
   setBackpackApi,
-  setIsReadOnlyWorkspace
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview
 } from '@cdo/apps/javalab/javalabRedux';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import {
@@ -34,6 +35,7 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import {allowConsoleWarnings} from '../../util/throwOnConsole';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
+import javalabMsg from '@cdo/javalab/locale';
 
 describe('Java Lab Editor Test', () => {
   // Warnings allowed due to usage of deprecated componentWillReceiveProps
@@ -782,6 +784,13 @@ describe('Java Lab Editor Test', () => {
       const editor = createWrapper();
       expect(editor.find(backpackHeaderButtonId)).to.have.lengthOf(0);
     });
+
+    it('does not display code review readonly banner', () => {
+      const editor = createWrapper();
+      expect(editor.find('div#openCodeReviewWarningBanner')).to.have.lengthOf(
+        0
+      );
+    });
   });
 
   describe('View Only Mode', () => {
@@ -813,6 +822,48 @@ describe('Java Lab Editor Test', () => {
 
         expect(isButtonDisabled).to.be.true;
       });
+    });
+
+    it('displays warning message when open for review and being viewed by project owner', () => {
+      store.dispatch(setHasOpenCodeReview(true));
+      store.dispatch(setPageConstants({isViewingOwnProject: true}));
+
+      const editor = createWrapper();
+
+      const banner = editor.find('div#openCodeReviewWarningBanner');
+      expect(banner).to.have.lengthOf(1);
+      expect(banner.contains(javalabMsg.editingDisabledUnderReview())).to.be
+        .true;
+    });
+
+    it('does not display warning message if not open for review', () => {
+      store.dispatch(setHasOpenCodeReview(false));
+      store.dispatch(setPageConstants({isViewingOwnProject: true}));
+
+      const editor = createWrapper();
+
+      expect(editor.find('div#openCodeReviewWarningBanner')).to.have.lengthOf(
+        0
+      );
+    });
+
+    it('displays warning message when viewing a peers project', () => {
+      store.dispatch(setHasOpenCodeReview(true));
+      store.dispatch(
+        setPageConstants({isViewingOwnProject: false, codeOwnersName: 'George'})
+      );
+
+      const editor = createWrapper();
+
+      const banner = editor.find('div#openCodeReviewWarningBanner');
+      expect(banner).to.have.lengthOf(1);
+      expect(
+        banner.contains(
+          javalabMsg.codeReviewingPeer({
+            peerName: 'George'
+          })
+        )
+      ).to.be.true;
     });
   });
 });

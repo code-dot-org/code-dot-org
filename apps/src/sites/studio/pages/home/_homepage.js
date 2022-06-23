@@ -17,7 +17,6 @@ import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
-import experiments from '@cdo/apps/util/experiments';
 
 $(document).ready(showHomepage);
 
@@ -45,10 +44,6 @@ function showHomepage() {
 
   const announcement = getTeacherAnnouncement(announcementOverride);
 
-  const allowTeacherAppReopening = experiments.isEnabled(
-    experiments.TEACHER_APPLICATION_SAVING_REOPENING
-  );
-
   ReactDOM.render(
     <Provider store={store}>
       <div>
@@ -70,11 +65,9 @@ function showHomepage() {
             showCensusBanner={homepageData.showCensusBanner}
             showNpsSurvey={homepageData.showNpsSurvey}
             showFinishTeacherApplication={
-              allowTeacherAppReopening &&
               homepageData.showFinishTeacherApplication
             }
             showReturnToReopenedTeacherApplication={
-              allowTeacherAppReopening &&
               homepageData.showReturnToReopenedTeacherApplication
             }
             donorBannerName={homepageData.donorBannerName}
@@ -83,6 +76,7 @@ function showHomepage() {
             teacherEmail={homepageData.teacherEmail}
             schoolYear={homepageData.currentSchoolYear}
             specialAnnouncement={specialAnnouncement}
+            hasFeedback={homepageData.hasFeedback}
           />
         )}
         {!isTeacher && (

@@ -672,6 +672,7 @@ ms-MY:
         - correct: true
         questions:
         - {}
+        title: Buat Ramalan
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -680,6 +681,7 @@ ms-MY:
         - correct: true
         questions:
         - {}
+        title: Buat Ramalan
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -688,6 +690,7 @@ ms-MY:
         - correct: true
         questions:
         - {}
+        title: Buat Ramalan
       Dance_Party_extras_intro:
         markdown: "# Teruskan Menari! \n\nUntuk bahagian 2, anda akan mencipta projek
           anda sendiri. Tiada teka-teki di sini - sebaliknya terdapat banyak projek
@@ -995,7 +998,7 @@ ms-MY:
         - correct: true
           feedback: Betul!
         - {}
-        - {}
+        - feedback: Salah
         questions:
         - {}
       behaviors 1 predict_2020:
@@ -1004,7 +1007,7 @@ ms-MY:
         - correct: true
           feedback: Betul!
         - {}
-        - {}
+        - feedback: Salah
         questions:
         - {}
       behaviors 4 predict:
@@ -1013,7 +1016,7 @@ ms-MY:
         - correct: true
           feedback: Betul!
         - {}
-        - {}
+        - feedback: Salah
         questions:
         - {}
       behaviors 4 predict_2020:
@@ -1022,7 +1025,7 @@ ms-MY:
         - correct: true
           feedback: Betul!
         - {}
-        - {}
+        - feedback: Salah
         questions:
         - {}
       courseC_multi_artist_prog6_predict1:
@@ -4044,6 +4047,7 @@ ms-MY:
         - correct: true
         questions:
         - {}
+        title: Buat Ramalan
       Multi-Screen Apps:
         content1: penerangan di sini
       New Challenge Introduction:
@@ -4731,3 +4735,100 @@ ms-MY:
           # Kejiranan Dalam Talian Saya
 
           ## Bagaimanakah anda pergi ke tempat dengan selamat secara dalam talian?
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: biru
+        - text: hijau
+        - {}
+        - text: kuning
+        - correct: true
+        - text: merah
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: penerangan di sini
+      allthethings_external_not_displayed_as_unplugged:
+        content1: penerangan di sini
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+        title: Pilihan berbagai
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - text: Tiada satu pun di atas
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Menambah Imej
+      CSD U2 Image practice_pilot_2021:
+        display_name: Menambah Imej
+      CSD U3 drawing practice choice_2021:
+        display_name: Latihan
+      CSD games cake challenge choice_2021:
+        display_name: Cabaran
+      CSD games platform challenge choice_2021:
+        display_name: Cabaran
+      CSD web draw loop practice choice_2021:
+        display_name: Latihan
+      CSD web movement practice choice_2021:
+        display_name: Latihan
+      CSD web text practice choice_2021:
+        display_name: Latihan
+      ml-club app-choice parent:
+        display_name: Sesuaikan Aplikasi Anda
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Sesuaikan Aplikasi Anda

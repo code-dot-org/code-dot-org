@@ -3439,7 +3439,12 @@
         "CSD U6 iter predict bubbles": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)",
         "CSD U6 iter predict bubbles_2018": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)",
         "CSD U6 iter predict bubbles_2019": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)",
-        "CSD U6 iter predict bubbles_2021": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+        "CSD U6 iter predict bubbles_2021": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)",
+        "AllTheThings sprite lab with video": "Vytvor akvárium!  \n\nZmeň Pracháča (kôpku slamy) na akúkoľvek rybu kliknutím na <xml><block type=\"gamelab_allSpritesWithAnimation\" block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.\n\nNezabudni tiež zmeniť kostým v <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the add behavior block\"></block></xml>.",
+        "Artist Autorun Test": "Teraz vlož funkciu do cyklu, aby si nakreslil tri štvorce.",
+        "MC Agent Freeplay": "**Voľná hra:** Teraz je to na tebe! Nakóduj agenta a preskúmaj s ním tento svet.",
+        "U1L13 Text Compression": "Vyhľadajte vzory (opakované slová alebo frázy) v texte. Nájdené vzory pridajte do slovníka vpravo. Pri zadávaní položiek do slovníka sa symbol pre položku vloží do textu namiesto vzoru.",
+        "gamelab free play": "# Finálne úpravy\n\nTeraz, keď máš pripravený základ hry je vhodný čas pridať zopár vylepšení.\n\nAby bola tvoja hra ešte lepšia, skús ku nej pridať aspoň dve vylepšenia. Môžeš sa inšpirovať týmto zoznamom, alebo implementuj svoj vlastný nápad.\n\n-   Zabezpeč, aby sa hráč nedostal mimo obrazovky.\n-   Pridaj nový predmet, ktorý môže tvoj hráč zbierať a bude mať inú bodovú hodnotu. Alebo pridaj predmet, ktorému sa má vyhnuť.\n-   Pridaj premennú, ktorá bude sledovať počet životov tvojho hráča a ukonči hru, keď hráč o všetky životy príde.\n-   Pridaj \"sprite\" objekty, ktoré sa budú pohybovať na pozadí hry.\n-   Pridaj ďalšie pozadie, ktoré sa zmení pri ešte vyššom skóre, alebo v momente, keď hra skončí.\n-   Pridaj hre spôsob, akým sa ukončí. Môžeš ju ukončiť napríklad pri dosiahnutí určitého skóre, alebo keď hráč príde o všetky životy.\n-   Ak má tvoja hra plošiny, nechaj, aby objekty hry s týmito plošinami na seba nejako pôsobili."
       }
     }
   }

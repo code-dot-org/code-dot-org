@@ -245,6 +245,10 @@
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modelle und Simulationen",
+          "definition": "ein Programm, das die wichtigsten Merkmale eines realen Ereignisses nachbildet oder nachahmt, um das Verhalten des Ereignisses ohne die Kosten, den Zeitaufwand oder die Gefahren eines Experiments in der realen Welt zu untersuchen."
+        },
         "event/sports/unversioned": {
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
@@ -380,6 +384,10 @@
           "word": "\"for“-Schleife",
           "definition": "Schleifen, die einen festgelegten Anfang, ein festgelegtes Ende und eine festgelegte Schrittgröße (Schrittintervall) haben."
         },
+        "models_and_simulations/coursef/2021": {
+          "word": "Modelle und Simulationen",
+          "definition": "ein Programm, das die wichtigsten Merkmale eines realen Ereignisses nachbildet oder nachahmt, um das Verhalten des Ereignisses ohne die Kosten, den Zeitaufwand oder die Gefahren eines Experiments in der realen Welt zu untersuchen."
+        },
         "machine_learning/coursef/2021": {
           "word": "Maschinelles Lernen",
           "definition": "Wie Computer Muster erkennen und Entscheidungen machen können, ohne dass sie dafür explizit programmiert wurden."
@@ -438,11 +446,11 @@
         },
         "algorithm/courseb/2021": {
           "word": "Algorithmus",
-          "definition": "Eine Liste von Schritten zur Erledigung einer Aufgabe."
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "bug/courseb/2021": {
           "word": "Fehler",
-          "definition": "Teil eines Programms, das nicht korrekt funktioniert."
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/courseb/2021": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -490,7 +498,7 @@
         },
         "algorithm/coursea/2021": {
           "word": "Algorithmus",
-          "definition": "Eine Liste von Schritten zur Erledigung einer Aufgabe."
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "debugging/coursea/2021": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -518,7 +526,7 @@
         },
         "bug/coursea/2021": {
           "word": "Fehler",
-          "definition": "Teil eines Programms, das nicht korrekt funktioniert."
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "programming/coursea/2021": {
           "word": "Programmierung",
@@ -538,11 +546,11 @@
         },
         "algorithm/coursec/2021": {
           "word": "Algorithmus",
-          "definition": "Eine Liste von Schritten zur Erledigung einer Aufgabe."
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "bug/coursec/2021": {
           "word": "Fehler",
-          "definition": "Teil eines Programms, das nicht korrekt funktioniert."
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/coursec/2021": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -578,7 +586,7 @@
         },
         "algorithm/coursed/2021": {
           "word": "Algorithmus",
-          "definition": "Eine Liste von Schritten zur Erledigung einer Aufgabe."
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "program/coursed/2021": {
           "word": "Programm",
@@ -586,7 +594,7 @@
         },
         "bug/coursed/2021": {
           "word": "Fehler",
-          "definition": "Teil eines Programms, das nicht korrekt funktioniert."
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/coursed/2021": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -645,11 +653,11 @@
         },
         "algorithm/express/2021": {
           "word": "Algorithmus",
-          "definition": "Eine Liste von Schritten zur Erledigung einer Aufgabe."
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "bug/express/2021": {
           "word": "Fehler",
-          "definition": "Teil eines Programms, das nicht korrekt funktioniert."
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/express/2021": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -760,11 +768,11 @@
         },
         "algorithm/pre-express/2021": {
           "word": "Algorithmus",
-          "definition": "Eine Liste von Schritten zur Erledigung einer Aufgabe."
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "bug/pre-express/2021": {
           "word": "Fehler",
-          "definition": "Teil eines Programms, das nicht korrekt funktioniert."
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/pre-express/2021": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -867,7 +875,7 @@
         },
         "bug/csd/2021": {
           "word": "Fehler",
-          "definition": "Teil eines Programms, das nicht korrekt funktioniert."
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "for_loop/csd/2021": {
           "word": "\"for“-Schleife",

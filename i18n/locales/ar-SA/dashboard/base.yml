@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ar:
   errors:
     messages:
@@ -1056,6 +1062,7 @@ ar:
         music: 'الموسيقى'
         art: 'الفن'
         other: "غير ذلك:"
+        na: 'لا ينطبق'
       resources:
         bootstrap: 'التمهيد'
         codecademy: 'CodeCademy'
@@ -1064,7 +1071,8 @@ ar:
         kodable: 'كودابل'
         scratch: 'لغة سكراتش (برمجة)'
         tynker: "Tynker\n"
-        other: "غير ذلك:"
+        other: "الأخرى"
+        na: 'لا ينطبق'
       robotics:
         grok: 'Grok Learning'
         kodable: 'كودابل'
@@ -1074,7 +1082,8 @@ ar:
         sphero: "Sphero\n"
         raspberry: "Raspberry Pi\n"
         wonder: 'Wonder Workshop'
-        other: "غير ذلك:"
+        other: "الأخرى"
+        na: 'لا ينطبق'
       workshop_course:
         csf_af: 'أساسيات علوم الكمبيوتر (دورات أ-و)'
         csf_express: 'أساسيات علوم الكمبيوتر (ما قبل السريعة أو السريعة)'
