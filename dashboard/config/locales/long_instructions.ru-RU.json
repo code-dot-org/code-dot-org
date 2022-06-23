@@ -3106,7 +3106,12 @@
         "CourseD_EOC_bounce1": "Создай собственную игру в баскетбол!",
         "CourseD_EOC_dance": "Создай свой собственный танец!",
         "CourseD_EOC_starwars": "Создай собственную игру на тему Звездных войн!",
-        "courseA_playLab_events3_2020": "Помоги псу Хорхе двигаться, соединив блок <xml><block type=\"studio_move\" block-text=\"move dog west\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> к блоку события <xml><block type=\"studio_whenArrow\" block-text=\"when left arrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>, который уже имеется в рабочей области.\n\nИспользуй клавиши или кнопки со стрелками, чтобы переместить Хорхе к флагу и завершить уровень!"
+        "courseA_playLab_events3_2020": "Помоги псу Хорхе двигаться, соединив блок <xml><block type=\"studio_move\" block-text=\"move dog west\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> к блоку события <xml><block type=\"studio_whenArrow\" block-text=\"when left arrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>, который уже имеется в рабочей области.\n\nИспользуй клавиши или кнопки со стрелками, чтобы переместить Хорхе к флагу и завершить уровень!",
+        "AllTheThings sprite lab with video": "Давай сделаем аквариум!\n\n Замени спрайт перекати-поле на любую рыбку путем нажатия на <xml><block type=\"gamelab_allSpritesWithAnimation\" block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.\n\n Обязательно обнови костюм этого спрайта в <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the add behavior block\"></block></xml>.",
+        "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "# Разноцветные Пиксели: Задание 1\n\n**Подсказки:**\n\n-   Мы начнём с изображения размером 4x2, которое создала Мэдди, но там пропало два последних квадратика. \n-   Заверши изображение, выяснив, какие два цвета отсутствуют, и закодируй их.",
+        "Artist Autorun Test": "Используй блок «повторить», чтобы нарисовать эти 3 квадрата.",
+        "MC Agent Freeplay": "**Свободная игра:** Теперь всё в твоих руках! Используй код, чтобы исполнитель помог тебе исследовать мир.",
+        "U1L13 Text Compression": "Ищите закономерности (повторяющиеся слова или фразы) в тексте. Введите шаблоны, которые вы видите в словаре справа. Когда вы вводите записи в словарь, символ для записи вставляется в текст вместо шаблона."
       }
     }
   }

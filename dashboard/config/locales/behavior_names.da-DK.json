@@ -2626,6 +2626,30 @@
           "moving west": "bevæger sig vestpå",
           "patrolling": "patruljerer",
           "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "AllTheThings sprite lab with video": {
+          "shrinking": "krymper",
+          "patrolling": "patruljerer",
+          "wandering": "vandrende",
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "spinning right": "spinning til højre"
+        },
+        "allthethings_fish_tank": {
+          "shrinking": "krymper",
+          "patrolling": "patruljerer",
+          "wandering": "vandrende",
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "spinning right": "spinning til højre"
         }
       }
     }

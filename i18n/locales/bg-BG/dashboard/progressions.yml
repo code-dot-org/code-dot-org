@@ -44,12 +44,14 @@ bg:
       Be a Super Digital Citizen: Бъди Супер Дигитален Гражданин
       Begin planning your project: Започнете планирането на Вашия проект
       Begin planning your project_2018: Започнете планирането на вашия проект_2018
+      Binary Number Widget: Widget Бинарни Числа
       Binary Numbers: Бинарни числа
       Book Recommender App: Приложение за Препоръчване на Книги
       Boolean Comparison: Булево Сравнение
       Build a Screen: Създай Екран
       Building an App: Създаване на Приложение
       Cake Defender: Предпазител на Торти
+      Cake Survey: Анкета за Торта
       Challenge: Предизвикателство
       Challenge Levels: Предизвикателни Нива
       'Challenge: Lists': 'Предизвикателство: Листи'
@@ -74,6 +76,15 @@ bg:
       'Conditionals: If Statements': 'Условия: If Условия'
       'Conditionals: If and If/Else Statements': 'Условия: Ако и Ако/иначе'
       Control Your Player: Контролирай Своя Играч
+      'Course E: Play Lab Project': 'Курс Е: Play Lab Проект'
+      'Course F: Artist Project': 'Курс F: Проект Художник'
+      'Course F: Artist Project - Revise': 'Курс F: Проект Художник - Преговор'
+      'Course F: Play Lab Project': 'Курс F: Play Lab Проект'
+      'Course F: Play Lab Project - Revise': 'Курс F: Play Lab Проект - Преговор'
+      Crack a Caesar Cipher: Разбиване на Цезар Код
+      Create Your Own Animation: Създай Своя Собствена Анимация
+      Create Your Sprites: Създай Свои Спрайтове
+      Create a Background: Създай Фон
       Create a Google Form: Създай Google формуляр
       Create a Story: Създай История
       Create an App in App Lab: Създай Приложение в App Lab
@@ -82,6 +93,7 @@ bg:
       Customize Your App: Персонализирай Своето Приложение
       Data Visualization: Визуализиране на Данни
       Debugging: Отстраняване на грешки
+      Demo Apps: Демонстрационни Приложения
       Design Mode: Режим на проектиране
       Design Your Game: Проектирай Играта Си
       Design Your Prototype: Проектирай Своя Прототип
@@ -96,6 +108,7 @@ bg:
       Driver Alert System: Система За Предупреждение на Шофъор
       Escape Room Example: Примерен Escape Room
       Events: Събития
+      Events and Properties: Събития и Свойства
       Example: Пример
       Example Animated Scene: Примерни Анимирани Сцени
       Example App Types: Примерни Типове Приложения
@@ -111,11 +124,14 @@ bg:
       'Exploration: Sample Apps': 'Изследване: Примерни Приложения'
       'Exploration: Sample Programs': 'Изследване: Примерни Програми'
       'Exploration: Sample Project': 'Изследване: Примерен Проект'
+      Extra Challenge: Допълнително Предизвикателство
       Find the Wizard: Намери Магъосника
       Finish a Screen: Завършване на Екран
       Finish the Prototype: Завърши Прототипа
       Finishing Functions: Завършващи Функции
       Finishing Touches: Финални Детайли
+      Follow the Algorithm - Unplugged Activity: Следвай Алгоритъма - Изключена Дейност
+      Follow the Mouse: Следвай Мишката
       Fonts and Style: Шрифтове и Стилове
       For Loops: За циклите
       Free Play: Свободна игра
@@ -148,7 +164,7 @@ bg:
       Kim's Survey Data: Данни от Анкетата на Ким
       LED Apps: LED Приложения
       Learning from Simulations: Учене от Симулации
-      Lesson Extras: Допълнителни екстри
+      Lesson Extras: Екстри към Урока
       Level Overview: Преглед на Нивото
       Levels: Нива
       Light Show: Светлинно Шоу
@@ -177,6 +193,7 @@ bg:
       "Mini-Project: Snowflake #2": "Мини-Проект: Снежинка #1"
       'Mini-Project: Swimming Fish': 'Мини-Проект: Плуващи Риби'
       'Mini-Project: Swimming Fish (continued)': 'Мини-Проект: Плуващи Риби (продължение)'
+      'Mini-Project: User Input Programs': 'Мини-Проект: Програми за Вход от Потребител'
       'Mini-Project: Virtual Pet': 'Мини-Проект: Виртуален Домашен Любимец'
       'Mini-project: Chase Game': 'Мини-проект: Игра на Гоненица'
       'Mini-project: Flappy Game': 'Мини-проект: Flappy'
@@ -186,6 +203,8 @@ bg:
       'Mini-project: Sticker Design': 'Мини-проект: Стикер Дизайн'
       More Parameters: Повече Параметри
       Motorcycle: Мотоциклет
+      Multiframe Animations: Анимации с Много Кадри
+      Musical Arrays: Музикален Масив
       My Online Neighborhood: Моят Онлайн Квартал
       My Robotic Friends - Unplugged Activity: Моите Роботи Приятели
       New Shapes: Нови Форми
@@ -212,6 +231,11 @@ bg:
       Prepare for your presentation: Пригответе се за вашата презентация
       Prepare for your presentation_2018: Пригответе се за вашата презентация_2018
       Problem Solving: Разрешаване на Проблеми
+      Programming with Rey and BB-8: Програмиране с Рей и BB-8
+      Programs that Repeat: Програми, които се Повтарят
+      Project: Проект
+      Project - Background and Variables: Проект - Фон и Променливи
+      Project - Sprites and Interactions: Проект - Спрайтове и Взаимодействия
       Project Guide: Проектен Пътеводител
       Properties: Свойства
       Publishing Your Website: Публикуване на Твоя Уебсайт
@@ -241,11 +265,15 @@ bg:
       Screen Design: Дизайн на Екран
       Sensors to Colors: Сензори до Цветове
       Set Up Sprites: Приготвяне на Спрайтове
+      Setting Properties: Задаване на Свойства
       Share Your App: Споделете Приложението Си
       Share Your Pages: Споделете Вашите Страници
       Shoe Recommender: Препоръчител на Обувки
+      Side Scroller: Side Scroller
       Simple Circuits: Прости Вериги
       Skill Building: Изграждане на Умения
+      Skill-Building: Изграждане на Умения
+      Sliders: Плъзгачи
       Sprite Lab Project: Sprite Lab Проект
       Sprite Properties: Свойства на Спрайта
       Star Chaser: Гонене на Звезди
@@ -256,9 +284,18 @@ bg:
       Text Compression: Компресия на текста
       The Animation Tab: Раздел "Анимация"
       The Harvester: Събирачът
+      Train a Model in AI Lab: Обучаване на Модел в AI Lab
       Using the Repeat Block: Използване на Блокчето Повтаряй
       Variables: Променливи
       Velocity: Скорост
       Video: Видео
+      'Video: Code Your Own Flappy Game': 'Видео: Програмирай Своя Flappy Игра'
+      'Video: Ice Age Loops': 'Видео: Ледена Епоха Цикли'
+      'Video: Introducing Sprite Lab': 'Видео: Представяне на Sprite Lab'
+      'Video: Introduction to Play Lab': 'Видео: Въведение в Play Lab'
+      'Video: Maze Intro - Programming with Blocks ': 'Видео: Въведение в Лабиринт - Програмиране с Блокове '
+      'Video: The Collector': 'Видео: Събирача'
+      'Video: Using the Repeat Block': 'Видео: Използвайки Блока Повтаряй'
       Welcome to Monster Town: Добре Дошли в Града на Чудовищата
+      Where'd They Go?: Къде Отидоха Те?
       Wrap-up: Изводи

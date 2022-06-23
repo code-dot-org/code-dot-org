@@ -10753,6 +10753,15 @@
         },
         "courseA_collector_preLoops5": {
           "courseA_collector_preLoops5_a": "Anda harus pergi dua arah yang berbeda untuk mendapatkan satu permata!"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "Ada dua alternatif untuk menyelesaikan teka-teki ini!"
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "Seniman membutuhkan 120 derajat antara setiap persegi untuk menyelesaikan desain ini."
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Coba minta Agent membuat beberapa jalan kereta tambang sehingga Anda dapat menjelajahi dunia!"
         }
       }
     }

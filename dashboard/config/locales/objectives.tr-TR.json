@@ -272,6 +272,12 @@
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
           "description": "Bir metinde mecazi ve gerçek dili temsil eder."
         },
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "Öğrenciler, bilgisayar laboratuvarına geçtiklerinde onlardan nelerin beklendiğini tanımlayın."
+        },
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "Bilgisayar faresini, dokunmatik fareyi veya dokunmatik ekranı belirtirken uygun terminolojiyi kullanın."
+        },
         "5b8eb232-7326-4c4d-8507-0c2da9642581": {
           "description": "Tasarım sürecinde kullanıcının önemini tanımlayabilecektir."
         },
@@ -529,6 +535,12 @@
         },
         "ba49206c-c099-4994-be57-1f8744273eaf": {
           "description": "İnternette güvenli bir şekilde seyahat etme kurallarını açıklayın."
+        },
+        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
+          "description": "Öğrenciler, bilgisayar laboratuvarına geçtiklerinde onlardan nelerin beklendiğini tanımlayın."
+        },
+        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
+          "description": "Bilgisayar faresini, dokunmatik fareyi veya dokunmatik ekranı belirtirken uygun terminolojiyi kullanın."
         },
         "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
           "description": "Bir algoritmayı bir programa çevirme"
@@ -1040,6 +1052,12 @@
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "Zaman kısıtlamaları veya hatalar gibi engellerin üstesinden gelme."
         },
+        "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
+          "description": "Öğrenciler, bilgisayar laboratuvarına geçtiklerinde onlardan nelerin beklendiğini tanımlayın."
+        },
+        "d1485387-01e4-484d-9935-75f7c14b9d76": {
+          "description": "Bilgisayar faresini, dokunmatik fareyi veya dokunmatik ekranı belirtirken uygun terminolojiyi kullanın."
+        },
         "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
           "description": "Bilgisayar laboratuvarında düzgün davranışların modelini çıkarma"
         },
@@ -1115,6 +1133,9 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Yaratıcı bir eseri diğer öğrencilerle paylaşma."
         },
+        "a937dee9-2cd3-4978-8f88-09f8af577395": {
+          "description": "program yazmanın yeni bir yolu hakkında bağlantılar kurmaya başlayın"
+        },
         "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
           "description": "Ekranda hareket ettirilebilen ve değiştirilebilen bir karakter veya nesne olarak \"hareketli nesneyi\" tanımlama."
         },
@@ -1123,6 +1144,24 @@
         },
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
           "description": "Girdi olayları ile ilişkili hareketleri tanımlama."
+        },
+        "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
+          "description": "Hareketli nesneleri, davranışları ve olayları kullanarak etkileşimli bir animasyon yapın."
+        },
+        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
+          "description": "İnsanların çevrimiçi ortamda bilgi paylaşma nedenlerini tanımlayın."
+        },
+        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
+          "description": "Bugün, özel ve kişisel bilgiler arasındaki farkı açıklayın."
+        },
+        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
+          "description": "Özel bilgileri çevrimiçi ortamda paylaşmanın neden riskli olduğunu açıklayın."
+        },
+        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
+          "description": "Kendileri hakkında hangi bilgileri çevrimiçi ortamda paylaşmanın güvenli olduğunu seçin."
+        },
+        "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
+          "description": "Metin ve özel görüntülerle kim olduklarını ifade eden etkileşimli bir bilgisayar programı oluşturun."
         },
         "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
           "description": "Telifli malzemenin etik bir şekilde paylaşıma karşı etik olmayan bir şekilde paylaşımı yorumlama."
@@ -1192,6 +1231,15 @@
         },
         "cff52f84-5090-495e-a37b-02cf8b666ad6": {
           "description": "Ortak olarak tekrarlanan görevleri tamamlamak için önceden belirlenmiş fonksiyonları kullanma."
+        },
+        "87094122-056f-4fa4-83b7-e3d6abb52e67": {
+          "description": "Mobil uygulamaların modern dünyadaki etkilerini açıklayın."
+        },
+        "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
+          "description": "Erişilebilirliğin neden kullanıcılar için bir uygulama tasarlamanın önemli bir parçası olduğunu açıklayın."
+        },
+        "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
+          "description": "Kullanıcıların erişilebilirlik ihtiyaçlarını ele alarak mevcut bir uygulama tasarımını iyileştirin."
         },
         "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
           "description": "Devam eden bir ödev için önceden plan yapmayı öğrenme."

@@ -748,7 +748,7 @@ Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
   expect(element_displayed?(selector)).to eq(negation.nil?)
 end
 
-And (/^I select age (\d+) in the age dialog/) do |age|
+And(/^I select age (\d+) in the age dialog/) do |age|
   steps %Q{
     And element ".age-dialog" is visible
     And I select the "#{age}" option in dropdown "uitest-age-selector"
@@ -756,12 +756,12 @@ And (/^I select age (\d+) in the age dialog/) do |age|
   }
 end
 
-And (/^I do not see "([^"]*)" option in the dropdown "([^"]*)"/) do |option, selector|
+And(/^I do not see "([^"]*)" option in the dropdown "([^"]*)"/) do |option, selector|
   select_options_text = @browser.execute_script("return $('#{selector} option').val()")
   expect((select_options_text.include? option)).to eq(false)
 end
 
-And (/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |option_alpha, option_beta, selector|
+And(/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |option_alpha, option_beta, selector|
   select_options_text = @browser.execute_script("return $('#{selector} option').text()")
   expect((select_options_text.include? option_alpha) || (select_options_text.include? option_beta)).to eq(true)
 end
@@ -826,6 +826,11 @@ end
 
 Then /^I click an image "([^"]*)"$/ do |path|
   @browser.execute_script("$('img[src*=\"#{path}\"]').click();")
+end
+
+Then /^I wait for image "([^"]*)" to load$/ do |selector|
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until {@browser.execute_script("return $('#{selector}').prop('complete');")}
 end
 
 Then /^I see jquery selector (.*)$/ do |selector|
@@ -1123,9 +1128,7 @@ end
 # Add @no_ie tag to your scenario to skip IE when using this step.
 When /^I press backspace to clear element "([^"]*)"$/ do |selector|
   element = @browser.find_element(:css, selector)
-  while @browser.execute_script("return $('#{selector}').val()") != ""
-    press_keys(element, ":backspace")
-  end
+  press_keys(element, ":backspace") while @browser.execute_script("return $('#{selector}').val()") != ""
 end
 
 When /^I press enter key$/ do

@@ -42,8 +42,10 @@ import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
+import {hasQueryParam} from '@cdo/apps/code-studio/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
-import VersionHistoryWithCommits from '@cdo/apps/templates/VersionHistoryWithCommits';
+import {getDefaultFileContents} from './JavalabFileHelper';
+import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 
 const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
@@ -52,7 +54,8 @@ const Dialog = makeEnum(
   'RENAME_FILE',
   'DELETE_FILE',
   'CREATE_FILE',
-  'COMMIT_FILES'
+  'COMMIT_FILES',
+  'VERSION_HISTORY'
 );
 const DEFAULT_FILE_NAME = '.java';
 const EDITOR_LOAD_PAUSE_MS = 100;
@@ -93,13 +96,11 @@ class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
-    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     handleClearPuzzle: PropTypes.func.isRequired,
+    viewMode: PropTypes.string,
 
     // populated by redux
-    setRenderedHeight: PropTypes.func.isRequired,
-    setEditorColumnHeight: PropTypes.func.isRequired,
     setSource: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
     sourceValidationUpdated: PropTypes.func,
@@ -112,7 +113,11 @@ class JavalabEditor extends React.Component {
     height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    hasOpenCodeReview: PropTypes.bool,
+    isViewingOwnProject: PropTypes.bool,
     backpackEnabled: PropTypes.bool,
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
+    codeOwnersName: PropTypes.string,
     fileMetadata: PropTypes.object.isRequired,
     setFileMetadata: PropTypes.func.isRequired,
     orderedTabKeys: PropTypes.array.isRequired,
@@ -148,6 +153,10 @@ class JavalabEditor extends React.Component {
     // Used to manage dark and light mode configuration.
     this.editorModeConfigCompartment = new Compartment();
     this.editorThemeOverrideCompartment = new Compartment();
+
+    // Used to manage readOnly/editable configuration.
+    this.editorEditableCompartment = new Compartment();
+    this.editorReadOnlyCompartment = new Compartment();
 
     this.state = {
       showMenu: false,
@@ -188,7 +197,23 @@ class JavalabEditor extends React.Component {
       });
     }
 
+    if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
+      Object.keys(this.editors).forEach(editorKey => {
+        this.editors[editorKey].dispatch({
+          effects: [
+            this.editorEditableCompartment.reconfigure(
+              EditorView.editable.of(!this.props.isReadOnlyWorkspace)
+            ),
+            this.editorReadOnlyCompartment.reconfigure(
+              EditorState.readOnly.of(this.props.isReadOnlyWorkspace)
+            )
+          ]
+        });
+      });
+    }
+
     const {fileMetadata} = this.props;
+
     if (
       !_.isEqual(Object.keys(prevProps.fileMetadata), Object.keys(fileMetadata))
     ) {
@@ -221,12 +246,14 @@ class JavalabEditor extends React.Component {
           ]
     );
 
-    if (isReadOnlyWorkspace) {
-      extensions.push(
-        EditorView.editable.of(false),
-        EditorState.readOnly.of(true)
-      );
-    }
+    extensions.push(
+      this.editorEditableCompartment.of(
+        EditorView.editable.of(!isReadOnlyWorkspace)
+      ),
+      this.editorReadOnlyCompartment.of(
+        EditorState.readOnly.of(isReadOnlyWorkspace)
+      )
+    );
 
     this.editors[key] = new EditorView({
       state: EditorState.create({
@@ -254,10 +281,6 @@ class JavalabEditor extends React.Component {
       }
     };
   };
-
-  handleVersionHistory() {
-    this.setState({versionHistoryOpen: true});
-  }
 
   updateVisibility(key, isVisible) {
     this.props.sourceVisibilityUpdated(this.props.fileMetadata[key], isVisible);
@@ -431,7 +454,6 @@ class JavalabEditor extends React.Component {
     if (!this.validateFileName(filename, 'newFileError')) {
       return;
     }
-    fileContents = fileContents || '';
     const duplicateFileError = this.checkDuplicateFileName(filename);
     if (duplicateFileError) {
       this.setState({
@@ -449,6 +471,9 @@ class JavalabEditor extends React.Component {
     } = this.props;
     const newTabIndex = lastTabKeyIndex + 1;
     const newTabKey = getTabKey(newTabIndex);
+
+    fileContents =
+      fileContents || getDefaultFileContents(filename, this.props.viewMode);
 
     // update file key to filename map with new file name
     const newFileMetadata = {...fileMetadata};
@@ -603,8 +628,7 @@ class JavalabEditor extends React.Component {
       contextTarget,
       renameFileError,
       newFileError,
-      compileStatus,
-      versionHistoryOpen
+      compileStatus
     } = this.state;
     const {
       onCommitCode,
@@ -612,6 +636,8 @@ class JavalabEditor extends React.Component {
       sources,
       isEditingStartSources,
       isReadOnlyWorkspace,
+      hasOpenCodeReview,
+      isViewingOwnProject,
       showProjectTemplateWorkspaceIcon,
       height,
       isProjectTemplateLevel,
@@ -620,8 +646,12 @@ class JavalabEditor extends React.Component {
       orderedTabKeys,
       fileMetadata,
       activeTabKey,
-      editTabKey
+      editTabKey,
+      codeOwnersName
     } = this.props;
+
+    const showOpenCodeReviewWarning =
+      isReadOnlyWorkspace && hasOpenCodeReview && !hasQueryParam('version');
 
     let menuStyle = {
       display: this.state.showMenu ? 'block' : 'none',
@@ -632,15 +662,7 @@ class JavalabEditor extends React.Component {
       zIndex: 1000
     };
     return (
-      <div style={this.props.style} ref={ref => (this.tabContainer = ref)}>
-        {versionHistoryOpen && (
-          <VersionHistoryWithCommits
-            handleClearPuzzle={handleClearPuzzle}
-            isProjectTemplateLevel={isProjectTemplateLevel}
-            onClose={() => this.setState({versionHistoryOpen: false})}
-            isOpen={versionHistoryOpen}
-          />
-        )}
+      <div style={this.props.style}>
         <PaneHeader hasFocus>
           <PaneButton
             id="javalab-editor-create-file"
@@ -668,7 +690,7 @@ class JavalabEditor extends React.Component {
             label={msg.showVersionsHeader()}
             headerHasFocus
             isRtl={false}
-            onClick={() => this.handleVersionHistory()}
+            onClick={() => this.setState({openDialog: Dialog.VERSION_HISTORY})}
             isDisabled={isReadOnlyWorkspace}
           />
           <PaneButton
@@ -730,11 +752,14 @@ class JavalabEditor extends React.Component {
                         ...styles.fileMenuToggleButton,
                         ...(displayTheme === DisplayTheme.DARK &&
                           styles.darkFileMenuToggleButton),
-                        ...(activeTabKey !== tabKey && {visibility: 'hidden'})
+                        ...((isReadOnlyWorkspace ||
+                          activeTabKey !== tabKey) && {
+                          visibility: 'hidden'
+                        })
                       }}
                       onClick={e => this.toggleTabMenu(tabKey, e)}
                       className="no-focus-outline"
-                      disabled={activeTabKey !== tabKey}
+                      disabled={isReadOnlyWorkspace || activeTabKey !== tabKey}
                     >
                       <FontAwesome
                         icon={
@@ -766,6 +791,18 @@ class JavalabEditor extends React.Component {
               />
             </div>
             <Tab.Content id="tab-content" animation={false}>
+              {showOpenCodeReviewWarning && (
+                <div
+                  id="openCodeReviewWarningBanner"
+                  style={styles.openCodeReviewWarningBanner}
+                >
+                  {isViewingOwnProject
+                    ? javalabMsg.editingDisabledUnderReview()
+                    : javalabMsg.codeReviewingPeer({
+                        peerName: codeOwnersName
+                      })}
+                </div>
+              )}
               {orderedTabKeys.map(tabKey => {
                 return (
                   <Tab.Pane eventKey={tabKey} key={`${tabKey}-content`}>
@@ -823,11 +860,22 @@ class JavalabEditor extends React.Component {
           isOpen={openDialog === Dialog.COMMIT_FILES}
           files={Object.keys(sources)}
           handleClose={() =>
-            this.setState({openDialog: null, compileStatus: CompileStatus.NONE})
+            this.setState({
+              openDialog: null,
+              compileStatus: CompileStatus.NONE
+            })
           }
           handleCommit={onCommitCode}
           compileStatus={compileStatus}
         />
+        {openDialog === Dialog.VERSION_HISTORY && (
+          <VersionHistoryWithCommitsDialog
+            handleClearPuzzle={handleClearPuzzle}
+            isProjectTemplateLevel={isProjectTemplateLevel}
+            onClose={() => this.setState({openDialog: null})}
+            isOpen={openDialog === Dialog.VERSION_HISTORY}
+          />
+        )}
       </div>
     );
   }
@@ -871,6 +919,14 @@ const styles = {
     display: 'inline-block',
     float: 'left',
     overflow: 'visible'
+  },
+  openCodeReviewWarningBanner: {
+    zIndex: 99,
+    backgroundColor: color.light_yellow,
+    height: 20,
+    padding: 5,
+    width: '100%',
+    color: color.black
   }
 };
 
@@ -880,8 +936,14 @@ export default connect(
     validation: state.javalab.validation,
     displayTheme: state.javalab.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
+    hasOpenCodeReview: state.javalab.hasOpenCodeReview,
+    isViewingOwnProject: state.pageConstants.isViewingOwnProject,
     backpackEnabled: state.javalab.backpackEnabled,
+    showProjectTemplateWorkspaceIcon:
+      !!state.pageConstants.isProjectTemplateLevel &&
+      state.javalab.isReadOnlyWorkspace,
+    codeOwnersName: state.pageConstants.codeOwnersName,
     fileMetadata: state.javalab.fileMetadata,
     orderedTabKeys: state.javalab.orderedTabKeys,
     activeTabKey: state.javalab.activeTabKey,

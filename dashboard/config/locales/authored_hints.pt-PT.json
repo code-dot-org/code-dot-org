@@ -10695,6 +10695,15 @@
         },
         "poetry_hoc_spriteSizes": {
           "size hint": "Localize este bloco e clique no '150'. \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml> \n\nO que acontece quando o número é '25'? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "Existem duas maneiras de resolver este quebra-cabeças!"
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "A artista precisa girar 120 graus entre cada quadrado para concluir este projeto."
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Tente fazer com que o agente crie algumas faixas de carrinhos de minas para que você possa explorar o mundo!"
         }
       }
     }

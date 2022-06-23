@@ -17,7 +17,7 @@
 #  index_programming_environment_categories_on_key_and_env_id  (key,programming_environment_id) UNIQUE
 #
 class ProgrammingEnvironmentCategory < ApplicationRecord
-  belongs_to :programming_environment
+  belongs_to :programming_environment, optional: true
   has_many :programming_classes
   has_many :programming_expressions
 
@@ -53,7 +53,7 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
       key: key,
       name: name,
       color: color,
-      docs: programming_classes.map(&:summarize_for_navigation) + programming_expressions.map(&:summarize_for_navigation)
+      docs: (programming_classes.map(&:summarize_for_navigation) + programming_expressions.map(&:summarize_for_navigation)).sort_by {|doc| doc[:name]}
     }
   end
 
@@ -79,7 +79,7 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
   def self.sanitize_key(key)
     key.strip.downcase.chars.map do |character|
       KEY_CHAR_RE.match(character) ? character : '_'
-    end.join.gsub(/_+/, '_')
+    end.join.squeeze('_')
   end
 
   def name_with_environment

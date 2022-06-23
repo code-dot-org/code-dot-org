@@ -10812,6 +10812,15 @@
         },
         "poetry_hoc_spriteSizes": {
           "size hint": "寻找这个模块并点击`150`。\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\n当数字是`25`时会发生什么？ \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "有两种方法来解决这个难题 ！"
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "艺术家需要在每个方块之间旋转 120 度来完成这个设计。"
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "尝试让代理人建造一些桥梁，这样艾莉克斯和史蒂夫就可以在地图边缘以外的地区走动了。"
         }
       }
     }

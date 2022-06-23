@@ -6,6 +6,7 @@ sk:
       Advanced: Pokročilé
       Behaviors: Správanie
       Brushes: Štetce
+      Category: Kategória
       Color: Farba
       Comment: Komentár
       Comments: Komentáre
@@ -26,7 +27,7 @@ sk:
       Math: Matematika
       Numbers: Čísla
       Properties: Vlastnosti
-      Sprites: Objekt "sprite"
+      Sprites: Sprajty
       Text: Text
       Variables: Premenné
       'Variables ': 'Premenné '

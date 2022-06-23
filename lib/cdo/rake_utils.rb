@@ -105,7 +105,7 @@ module RakeUtils
   def self.system_stream_output(*args, &block)
     command = command_(*args)
     CDO.log.info command
-    if block_given?
+    if block
       IO.popen(command, &block)
     else
       Kernel.system(command)

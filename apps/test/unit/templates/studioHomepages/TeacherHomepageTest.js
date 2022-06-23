@@ -21,7 +21,8 @@ const DEFAULT_PROPS = {
   showCensusBanner: false,
   teacherId: 1,
   teacherEmail: 'teacher@code.org',
-  teacherName: 'Teacher'
+  teacherName: 'Teacher',
+  hasFeedback: false
 };
 
 const setUp = (overrideProps = {}) => {
@@ -38,7 +39,6 @@ describe('TeacherHomepage', () => {
   ];
   beforeEach(() => {
     server = sinon.fakeServer.create();
-    server.respondWith('POST', '/dashboardapi/courses', successResponse());
     server.respondWith('POST', '/dashboardapi/sections', successResponse());
   });
   afterEach(() => server.restore());
@@ -214,5 +214,32 @@ describe('TeacherHomepage', () => {
   it('renders ProjectWidgetWithData component', () => {
     const wrapper = setUp();
     assert(wrapper.find('ProjectWidgetWithData').exists());
+  });
+
+  it('renders a ParticipantFeedbackNotification component if has feedback and pl courses', () => {
+    const wrapper = setUp({
+      plCourses: plCourses,
+      topPlCourse: topPlCourse,
+      hasFeedback: true
+    });
+    assert.equal(wrapper.find('ParticipantFeedbackNotification').length, 1);
+  });
+
+  it('does not render a ParticipantFeedbackNotification component if there is no feedback', () => {
+    const wrapper = setUp({
+      plCourses: plCourses,
+      topPlCourse: topPlCourse,
+      hasFeedback: false
+    });
+    assert.equal(wrapper.find('ParticipantFeedbackNotification').length, 0);
+  });
+
+  it('does not render a ParticipantFeedbackNotification component if there are no PL courses', () => {
+    const wrapper = setUp({
+      plCourses: [],
+      topPlCourse: null,
+      hasFeedback: true
+    });
+    assert.equal(wrapper.find('ParticipantFeedbackNotification').length, 0);
   });
 });

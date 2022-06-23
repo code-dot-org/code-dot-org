@@ -15,6 +15,8 @@ class HttpCache
     'language_',
     # Offline experiment flag, to allow users into the pilot
     'offline_pilot',
+    # Experiment flag used to debug the onetrust cookie experience.
+    'onetrust_cookie_scripts',
     # Page mode, for A/B experiments and feature-flag rollouts.
     'pm'
   ].freeze
@@ -22,7 +24,6 @@ class HttpCache
   # A list of script levels that should not be cached, even though they are
   # in a cacheable script
   UNCACHED_UNIT_LEVEL_PATHS = [
-    '/s/dance-2019/lessons/1/levels/10', # plan to remove: https://codedotorg.atlassian.net/browse/LP-2225
     '/s/poem-art-2021/lessons/1/levels/2', # prediction levels are not cacheable
     '/s/poem-art-2021/lessons/1/levels/5', # prediction levels are not cacheable
   ]

@@ -61,7 +61,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
   test 'index gets all regional partners for workshop admin' do
     regional_partner = create :regional_partner, name: 'New regional partner'
-    sign_in (create :workshop_admin)
+    sign_in(create(:workshop_admin))
 
     get :index
     response = JSON.parse(@response.body)

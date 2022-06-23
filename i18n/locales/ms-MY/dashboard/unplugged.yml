@@ -6,34 +6,103 @@ ms:
         desc: Pembelajaran ini akan memperkenalkan konsep Sains Komputer dan menerangkan apakah yang dilakukan oleh seorang Saintis Komputer. Pembelajaran ini juga akan memberikan pelajar-pelajar peluang untuk memainkan peranan sebagai seorang saintis komputer. Di penghujung aktiviti, setiap pelajar akan membawa pulang ingatan mengenai apa yang telah dipelajari. Anda mungkin cenderung untuk melangkau untuk mengajar kanak-kanak perbendaharaan kata yang berkaitan dengan pembelajaran seterusnya, tetapi dengan mempersembahkan kepada mereka dalam bentuk permainan dan menyeronokkan sekarang adalah jauh lebih produktif daripada menunggu untuk lebih banyak peluang lanjut.
       Unplug2:
         title: Pengiraan pemikiran
+        desc: Dengan hanya menggunakan kertas dan penanda, pelajar akan mempelajari empat langkah pemikiran pengiraan. Selepas pengenalan ringkas, pelajar harus dibahagikan kepada kumpulan untuk memberi arahan kepada pelajar lain melukis raksasa tertentu (daripada katalog raksasa yang telah dipilih sebelumnya). Keseluruhan tugas mesti diuraikan, kemudian pasukan akan menganalisis semua raksasa dalam katalog untuk mendapatkan corak, mengabstraksi butiran berbeza daripada raksasa, serta menggunakan maklumat itu untuk mencipta algoritma (arah) untuk pasukan lain melukis raksasa tertentu. Pasukan kemudian akan menukar algoritma dengan kumpulan lain dan melukis raksasa berdasarkan perkara yang ditunjukkan oleh algoritma itu. Adakah lukisan itu dimaksudkan oleh pasukan asal?
       Unplug3:
         title: Pengaturcaraan kertas graf
+        desc: Dengan pengaturcaraan satu sama lain untuk melukis gambar, pelajar akan mula memahami konsep pengaturcaraan sebenar. Kelas akan dimulakan oleh pelajar yang mengarahkan satu sama lain untuk mewarna kotak pada kertas graf dalam usaha untuk menghasilkan semula gambar yang sedia ada.  Sekiranya ada masa, pelajaran dapat disimpulkan dengan gambar yang dibuat oleh pelajar sendiri.
       Unplug4:
         title: Algoritma
+        desc: Pelajaran ini merangkumi algoritma.  Menggunakan bentuk tangram dan kertas graf, latihan pertama akan menunjukkan betapa pentingnya untuk membuat setiap arahan sebagai jelas dan tidak jelas. Selepas itu, kelas akan meneroka pelbagai cara anda boleh melipat kertas ke dalam segi empat tepat, dengan menyatakan beberapa kaedah boleh mengambil lebih atau kurang lipatan daripada yang lain.
       Unplug5:
         title: Fungsi
+        desc: Dalam pelajaran ini, pelajar akan membuat Suncatcher daripada tali, manik, dan daya tarikan istimewa. Pelajar akan mengikuti satu siri langkah berulang, kemudian diminta untuk mengenal pasti set "kemahiran" tertentu yang diduplikasi beberapa kali. Sebaik sahaja kemahiran tersebut ditakrifkan, mereka akan dipanggil dari program utama dan keseluruhan proses penciptaan yang indah akan direkodkan pada satu helaian kertas. Program terakhir akan ditujukan ke seluruh kelas, apa pun jenis string, manik, dan pesona mereka. Untuk membolehkan ini dengan berkesan, pelajar perlu "menghapuskan" butiran bahan khusus mereka dan membuat istilah yang samar-samar untuk bekalan individu.  Penggunaan ruang letak generik ini adalah pengenalan yang indah kepada pembolehubah.
+      Unplug6:
+        title: Keadaan
+        desc: Ini adalah permainan kelas.  Selepas memperkenal idea bersyarat, pernyataan jika, dan gelung, kelas boleh berlatih bersama menggunakan program pra-tulis, dek kad, dan nasib cabutan.
       Unplug7:
         title: Lagu
+        desc: Membaca lirik adalah usaha yang cukup intuitif bagi kebanyakan pelajar.  Kami akan mengambil aktiviti yang sudah menjadi pengetahuan umum dan mengubahnya menjadi pendidikan yang kukuh untuk menentukan dan memanggil fungsi. Setelah pelajar biasa dengan proses definisi / panggilan, kami akan menambahkan keupayaan tambahan yang disertakan dengan parameter lulus dalam panggilan fungsi tersebut.
       Unplug8:
         title: Abstraksi
+        desc: Aktiviti ini menggabungkan rutin harian pelajar anda dan permainan pemikiran gaya Mad-Lib untuk membantu kelas anda mengetahui tentang keberkesanan abstraksi.
       Unplug9:
         title: Pengaturcaraan penyampai
+        desc: Pelajaran ini akan mengambil idea dari aktiviti sebelumnya (4. Pengaturcaraan Kertas Graf) dan menggunakan kemahiran tersebut untuk menekankan pentingnya menyelesaikan program yang beroperasi mengikut urutan dan sering memeriksa program untuk "pepijat".
       Unplug10:
         title: Internet
+        desc: Dalam pelajaran ini, pelajar akan berpura-pura menyusuri Internet, sambil belajar tentang alamat web, IP dan DNS.
       Unplug11:
         title: Wrap-up
+        desc: Pusingan akhir dalam siri 20 jam pertama akan membantu kelas menghidupkan semula semua momen kegemaran mereka, sambil memberi mereka langkah seterusnya yang boleh mereka ambil sendiri jika mereka berminat untuk meneruskan perjalanan sains komputer mereka.
       UnplugHappyMaps:
         title: Peta-peta Gembira
+        desc: Pelajar mencipta algoritma mudah (set arahan) untuk menggerakkan watak melalui pagar sesat menggunakan satu arahan.
+      MoveIt:
+        title: Move it, Move it
+        desc: Pelajar mencipta algoritma mudah (set arahan) untuk menggerakkan watak melalui pagar sesat menggunakan satu arahan.
+      PlantASeed:
+        title: 'Algoritma kehidupan sebenar: Menanam Benih'
+        desc: Pelajaran ini menerangkan cara menggunakan algoritma dalam kehidupan seharian kita, menggunakan tindakan menanam benih sebagai contoh. Ini memberi gambaran yang lebih besar tentang sains komputer dan cara algoritma memainkan peranan penting.
+      BuildingAFoundation:
+        title: Membina Asas
+        desc: Pelajar membina struktur menggunakan bekalan yang disediakan sahaja. Struktur mesti menyelesaikan tugasan (mencapai ketinggian tertentu atau menanggung berat tertentu), dan pelajar membincangkan idea dan bertahan apabila keadaan menjadi rumit.
+      GettingLoopy:
+        title: Getting Loopy
+        desc: Pelajaran ini memperkenal konsep pengaturcaraan gelung (arahan berulang) melalui aktiviti tarian. Pelajar akan belajar koreografi mudah, kemudian diarahkan untuk mengulanginya.
       RelayProgramming:
         title: Pengaturcaraan penyampai
+        desc: Pelajar menjalankan perlumbaan relay, dengan melintasi halaman untuk menulis algoritma berdasarkan imej "Pengaturcaraan Kertas Graf". Mereka hanya boleh menulis satu arahan pada satu masa dan jika terdapat ralat di suatu tempat, mereka perlu memadamkan segala-galanya kembali ke titik itu.
       Conditionals:
         title: Bersyarat
+        desc: Untuk mengetahui tentang pernyataan bersyarat, pelajar bermain permainan kad dan membuat peraturan seperti "Jika saya menarik kad merah, saya mendapat markah" dan "Jika saya menarik kad hitam, anda mendapat markah."
+      BigEvent:
+        title: The Big Event
+        desc: Pelajar diperkenalkan kepada konsep pengaturcaraan "acara," yang merupakan tindakan yang sentiasa dipantau oleh komputer. Guru akan menekan butang pada alat kawalan jauh kertas dan pelajar akan bertindak balas bergantung pada butang mana yang ditekan.
+      GoingPlacesSafely:
+        title: Going Places Safely
+        desc: Internet mempunyai pengaruh tersendiri, tetapi kadang-kadang berbahaya. Guru memperkenal cara kekal selamat semasa menavigasi Internet.
       GraphPaperProgramming:
         title: Pengaturcaraan kertas graf
+        desc: Pelajar menulis algoritma (satu set arahan) menggunakan satu set arahan yang telah ditetapkan untuk mengarahkan rakan sekelas mereka untuk menghasilkan semula lukisan.
+      PaperPlanes:
+        title: 'Algoritma Kehidupan Sebenar: Paper Planes'
+        desc: Pelajaran ini menyatakan cara kita menggunakan algoritma dalam kehidupan seharian kita, khususnya membuat kapal terbang kertas. Pelajaran ini juga memberi tumpuan kepada gambaran sains komputer yang lebih besar dan cara algoritma memainkan peranan penting.
+      BinaryBracelets:
+        title: Binary Bracelets
+        desc: Pelajar membuat gelang sebagai perwakilan binari huruf pertama nama mereka. Pelajar mengetahui bahawa data boleh diwakili dan disimpan dalam lebih daripada satu cara.
+      DigitalFootprint:
+        title: Your Digital Footprint
+        desc: Guru memperkenal kepada pelajar idea meletakkan maklumat tentang diri mereka dalam talian mencipta jejak digital atau "trail" yang mempunyai akibat.
       ComputationalThinking:
         title: Pengiraan pemikiran
+        desc: Pelajar menggunakan langkah-langkah pemikiran pengiraan (decompose, padanan corak, abstrak, algoritma) untuk mengetahui cara bermain permainan yang datang tanpa arahan.
+      FunctionalSuncatchers:
+        title: Functional Suncatchers
+        desc: Pelajar mencipta algoritma dengan pemboleh ubah dan fungsi (kepingan kod yang anda mahu gunakan berulang kali) untuk mencipta suncatchers menggunakan rentetan dan manik.
+      SongwritingParameters:
+        title: Songwriting
+        desc: Pelajar menggunakan konsep korus dalam lagu untuk belajar tentang menentukan dan memanggil fungsi.
+      DiceRace:
+        title: 'Algoritma Kehidupan Sebenar: Dice Race'
+        desc: Pelajaran ini menyebut cara kita menggunakan algoritma dalam kehidupan seharian kita. Sebagai sebahagian daripada itu, pelajar akan mengenal pasti dan menulis algoritma untuk permainan perlumbaan dadu.
       Internet:
         title: Internet
+        desc: Pelajar menghantar mesej yang mewakili pelbagai kaedah penghantaran Internet menggunakan kepingan kertas.
+      Crowdsourcing:
+        title: Crowdsourcing
+        desc: Pelajar menggunakan Crowdsourcing, teknik penyelesaian masalah yang biasa berlaku dalam sains komputer, untuk menyelesaikan tugas bersama sebagai bilik darjah dengan lebih cekap daripada jika pelajar mencubanya sendiri.
+      DigitalCitizenship:
+        title: Kewarganegaraan Digital
+        desc: Pelajar meneroka perbezaan antara maklumat peribadi dan maklumat peribadi, membezakan apa yang selamat dan tidak selamat untuk dikongsi dalam talian.
+      TangramAlgorithms:
+        title: Tangram Algorithms
+        desc: Pelajaran ini menunjukkan kepada kita sesuatu yang penting tentang algoritma. Jika anda menyimpan algoritma mudah terdapat banyak cara untuk menggunakannya. Jika anda ingin memastikan semua orang berakhir dengan perkara yang sama, maka algoritma anda memerlukan lebih terperinci.
+      EnvelopeVariables:
+        title: Envelope Variables
+        desc: Pembolehubah membolehkan banyak kebebasan dalam sains komputer.  Pelajaran ini membantu menjelaskan pembolehubah apa dan bagaimana kita boleh menggunakannya dalam pelbagai cara. Gunakan aktiviti ini sebelum (atau bersempena dengan) pelajaran mengenai abstraksi untuk benar-benar memukul rumah idea.
+      MadGlibs:
+        title: Mad Glibs
+        desc: Abstraksi adalah salah satu kemahiran yang paling penting untuk difahami oleh saintis komputer.  Aktiviti ini akan membolehkan pelajar anda menganalisis cerita untuk perbezaan supaya mereka dapat menghilangkannya. Cerita-cerita abstrak itu menjadi templat untuk cerita baru yang menyeronokkan dan gila-gila.
       courseB_unplugged_MRF:
         title: Aktiviti Nirplag
       courseB_unplugged_loopyMRF:
@@ -44,37 +113,152 @@ ms:
         title: Aktiviti Nirplag
       courseF_unplugged_powerOfWords:
         title: Aktiviti Nirplag
+      courseAB_unplugged_plantASeed:
+        title: 'Algoritma kehidupan sebenar: Menanam Benih'
+        desc: Pelajaran ini menerangkan cara menggunakan algoritma dalam kehidupan seharian kita, menggunakan tindakan menanam benih sebagai contoh. Ini memberi gambaran yang lebih besar tentang sains komputer dan cara algoritma memainkan peranan penting.
       courseA_unplugged_happyMaps:
         title: Peta-peta Gembira
+        desc: Pelajar mencipta algoritma mudah (set arahan) untuk menggerakkan watak melalui pagar sesat menggunakan satu arahan.
+      courseA_unplugged_goingPlacesSafely:
+        title: Going Places Safely
+        desc: Internet mempunyai pengaruh tersendiri, tetapi kadang-kadang berbahaya. Guru memperkenal cara kekal selamat semasa menavigasi Internet.
+      courseABC_unplugged_bigEvent:
+        title: The Big Event
+        desc: Pelajar diperkenalkan kepada konsep pengaturcaraan "acara," yang merupakan tindakan yang sentiasa dipantau oleh komputer. Guru akan menekan butang pada alat kawalan jauh kertas dan pelajar akan bertindak balas bergantung pada butang mana yang ditekan.
+      courseB_unplugged_digitalFootprint:
+        title: Your Digital Footprint
+        desc: Guru memperkenal kepada pelajar idea meletakkan maklumat tentang diri mereka dalam talian mencipta jejak digital atau "trail" yang mempunyai akibat.
+      courseC_unplugged_buildingAFoundation:
+        title: Membina Asas
+        desc: Pelajar membina struktur menggunakan bekalan yang disediakan sahaja. Struktur mesti menyelesaikan tugasan (mencapai ketinggian tertentu atau menanggung berat tertentu), dan pelajar membincangkan idea dan bertahan apabila keadaan menjadi rumit.
+      courseC_unplugged_paperPlanes:
+        title: 'Algoritma Kehidupan Sebenar: Paper Planes'
+        desc: Pelajaran ini menyatakan cara kita menggunakan algoritma dalam kehidupan seharian kita, khususnya membuat kapal terbang kertas. Pelajaran ini juga memberi tumpuan kepada gambaran sains komputer yang lebih besar dan cara algoritma memainkan peranan penting.
+      courseC_unplugged_gettingLoopy:
+        title: Getting Loopy
+        desc: Pelajaran ini memperkenal konsep pengaturcaraan gelung (arahan berulang) melalui aktiviti tarian. Pelajar akan belajar koreografi mudah, kemudian diarahkan untuk mengulanginya.
+      courseC_unplugged_binaryBracelets:
+        title: Binary Bracelets
+        desc: Pelajar membuat gelang sebagai perwakilan binari huruf pertama nama mereka. Pelajar mengetahui bahawa data boleh diwakili dan disimpan dalam lebih daripada satu cara.
       courseD_unplugged_graphPaperProgramming:
         title: Pengaturcaraan kertas graf
+        desc: Pelajar menulis algoritma (satu set arahan) menggunakan satu set arahan yang telah ditetapkan untuk mengarahkan rakan sekelas mereka untuk menghasilkan semula lukisan.
       courseD_unplugged_relayProgramming:
         title: Pengaturcaraan penyampai
+        desc: Pelajar menjalankan perlumbaan relay, dengan melintasi halaman untuk menulis algoritma berdasarkan imej "Pengaturcaraan Kertas Graf". Mereka hanya boleh menulis satu arahan pada satu masa dan jika terdapat ralat di suatu tempat, mereka perlu memadamkan segala-galanya kembali ke titik itu.
+      courseD_unplugged_conditionalsCards:
+        title: Bersyarat dengan Kad
+        desc: Untuk mengetahui tentang pernyataan bersyarat, pelajar bermain permainan kad dan membuat peraturan seperti "Jika saya menarik kad merah, saya mendapat markah" dan "Jika saya menarik kad hitam, anda mendapat markah."
+      courseE_unplugged_diceRace:
+        desc: Pelajaran ini menyebut cara kita menggunakan algoritma dalam kehidupan seharian kita. Sebagai sebahagian daripada itu, pelajar akan mengenal pasti dan menulis algoritma untuk permainan perlumbaan dadu.
+      courseE_unplugged_songwritingParameters:
+        desc: Pelajar menggunakan konsep korus dalam lagu untuk belajar tentang menentukan dan memanggil fungsi.
       courseE_unplugged_internet:
         title: Internet
+        desc: Pelajar menghantar mesej yang mewakili pelbagai kaedah penghantaran Internet menggunakan kepingan kertas.
+      courseE_unplugged_crowdsourcing:
+        title: Crowdsourcing
+        desc: Pelajar menggunakan Crowdsourcing, teknik penyelesaian masalah yang biasa berlaku dalam sains komputer, untuk menyelesaikan tugas bersama sebagai bilik darjah dengan lebih cekap daripada jika pelajar mencubanya sendiri.
+      courseE_unplugged_songwriting:
+        title: Songwriting
+        desc: Pelajar menggunakan konsep korus dalam lagu untuk belajar tentang menentukan dan memanggil fungsi.
+      courseF_unplugged_tangrams:
+        title: Tangram Algorithms
+        desc: Pelajaran ini menunjukkan kepada kita sesuatu yang penting tentang algoritma. Jika anda menyimpan algoritma mudah terdapat banyak cara untuk menggunakannya. Jika anda ingin memastikan semua orang berakhir dengan perkara yang sama, maka algoritma anda memerlukan lebih terperinci.
+      courseF_unplugged_envelopeVariables:
+        title: Envelope Variables
+        desc: Pembolehubah membolehkan banyak kebebasan dalam sains komputer.  Pelajaran ini membantu menjelaskan pembolehubah apa dan bagaimana kita boleh menggunakannya dalam pelbagai cara. Gunakan aktiviti ini sebelum (atau bersempena dengan) pelajaran mengenai abstraksi untuk benar-benar memukul rumah idea.
+      courseB_unplugged_MRF_2018:
+        title: Rakan-rakan Robotik Saya
+      PlantASeed_2018:
+        title: 'Algoritma kehidupan sebenar: Menanam Benih'
+        desc: Pelajaran ini menerangkan cara menggunakan algoritma dalam kehidupan seharian kita, menggunakan tindakan menanam benih sebagai contoh. Ini memberi gambaran yang lebih besar tentang sains komputer dan cara algoritma memainkan peranan penting.
       UnplugHappyMaps_2018:
         title: Peta-peta Gembira
+        desc: Pelajar mencipta algoritma mudah (set arahan) untuk menggerakkan watak melalui pagar sesat menggunakan satu arahan.
+      GoingPlacesSafely_2018:
+        title: Going Places Safely
+        desc: Internet mempunyai pengaruh tersendiri, tetapi kadang-kadang berbahaya. Guru memperkenal cara kekal selamat semasa menavigasi Internet.
+      BigEvent_2018:
+        title: The Big Event
+        desc: Pelajar diperkenalkan kepada konsep pengaturcaraan "acara," yang merupakan tindakan yang sentiasa dipantau oleh komputer. Guru akan menekan butang pada alat kawalan jauh kertas dan pelajar akan bertindak balas bergantung pada butang mana yang ditekan.
       GraphPaperProgramming_2018:
         title: Pengaturcaraan kertas graf
+        desc: Pelajar menulis algoritma (satu set arahan) menggunakan satu set arahan yang telah ditetapkan untuk mengarahkan rakan sekelas mereka untuk menghasilkan semula lukisan.
       courseD_unplugged_digitalCitizenship_2018:
         title: Aktiviti Nirplag
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Aktiviti Nirplag
       Conditionals_2018:
         title: Bersyarat
+        desc: Untuk mengetahui tentang pernyataan bersyarat, pelajar bermain permainan kad dan membuat peraturan seperti "Jika saya menarik kad merah, saya mendapat markah" dan "Jika saya menarik kad hitam, anda mendapat markah."
+      DigitalFootprint_2018:
+        title: Your Digital Footprint
+        desc: Guru memperkenal kepada pelajar idea meletakkan maklumat tentang diri mereka dalam talian mencipta jejak digital atau "trail" yang mempunyai akibat.
+      PaperPlanes_2018:
+        title: 'Algoritma Kehidupan Sebenar: Paper Planes'
+        desc: Pelajaran ini menyatakan cara kita menggunakan algoritma dalam kehidupan seharian kita, khususnya membuat kapal terbang kertas. Pelajaran ini juga memberi tumpuan kepada gambaran sains komputer yang lebih besar dan cara algoritma memainkan peranan penting.
+      GettingLoopy_2018:
+        title: Getting Loopy
+        desc: Pelajaran ini memperkenal konsep pengaturcaraan gelung (arahan berulang) melalui aktiviti tarian. Pelajar akan belajar koreografi mudah, kemudian diarahkan untuk mengulanginya.
+      BinaryBracelets_2018:
+        title: Binary Bracelets
+        desc: Pelajar membuat gelang sebagai perwakilan binari huruf pertama nama mereka. Pelajar mengetahui bahawa data boleh diwakili dan disimpan dalam lebih daripada satu cara.
       RelayProgramming_2018:
         title: Pengaturcaraan penyampai
+      courseB_unplugged_MRF_2019:
+        title: Rakan-rakan Robotik Saya
       Conditionals_2019:
         title: Bersyarat
+        desc: Untuk mengetahui tentang pernyataan bersyarat, pelajar bermain permainan kad dan membuat peraturan seperti "Jika saya menarik kad merah, saya mendapat markah" dan "Jika saya menarik kad hitam, anda mendapat markah."
       GraphPaperProgramming_2019:
         title: Pengaturcaraan kertas graf
+        desc: Pelajar menulis algoritma (satu set arahan) menggunakan satu set arahan yang telah ditetapkan untuk mengarahkan rakan sekelas mereka untuk menghasilkan semula lukisan.
       RelayProgramming_2018_2019:
         title: Pengaturcaraan penyampai
       courseD_unplugged_digitalCitizenship_2019:
         title: Aktiviti Nirplag
+      GettingLoopy_2019:
+        title: Getting Loopy
+        desc: Pelajaran ini memperkenal konsep pengaturcaraan gelung (arahan berulang) melalui aktiviti tarian. Pelajar akan belajar koreografi mudah, kemudian diarahkan untuk mengulanginya.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Aktiviti Nirplag
+      BigEvent_2019:
+        title: The Big Event
+        desc: Pelajar diperkenalkan kepada konsep pengaturcaraan "acara," yang merupakan tindakan yang sentiasa dipantau oleh komputer. Guru akan menekan butang pada alat kawalan jauh kertas dan pelajar akan bertindak balas bergantung pada butang mana yang ditekan.
+      BinaryBracelets_2019:
+        title: Binary Bracelets
+        desc: Pelajar membuat gelang sebagai perwakilan binari huruf pertama nama mereka. Pelajar mengetahui bahawa data boleh diwakili dan disimpan dalam lebih daripada satu cara.
+      PaperPlanes_2019:
+        title: 'Algoritma Kehidupan Sebenar: Paper Planes'
+        desc: Pelajaran ini menyatakan cara kita menggunakan algoritma dalam kehidupan seharian kita, khususnya membuat kapal terbang kertas. Pelajaran ini juga memberi tumpuan kepada gambaran sains komputer yang lebih besar dan cara algoritma memainkan peranan penting.
+      PlantASeed_2019:
+        title: 'Algoritma kehidupan sebenar: Menanam Benih'
+        desc: Pelajaran ini menerangkan cara menggunakan algoritma dalam kehidupan seharian kita, menggunakan tindakan menanam benih sebagai contoh. Ini memberi gambaran yang lebih besar tentang sains komputer dan cara algoritma memainkan peranan penting.
       UnplugHappyMaps_2019:
         title: Peta-peta Gembira
+        desc: Pelajar mencipta algoritma mudah (set arahan) untuk menggerakkan watak melalui pagar sesat menggunakan satu arahan.
+      GoingPlacesSafely_2019:
+        title: Going Places Safely
+        desc: Internet mempunyai pengaruh tersendiri, tetapi kadang-kadang berbahaya. Guru memperkenal cara kekal selamat semasa menavigasi Internet.
+      DigitalFootprint_2019:
+        title: Your Digital Footprint
+        desc: Guru memperkenal kepada pelajar idea meletakkan maklumat tentang diri mereka dalam talian mencipta jejak digital atau "trail" yang mempunyai akibat.
+      GraphingData_2019:
+        title: Memotret Data
+        desc: Dalam pelajaran ini, pelajar akan mengumpul data daripada projek Play Lab atau senario dunia sebenar dan menggunakannya untuk membuat ramalan.
+      courseE_unplugged_accessAbility_2019:
+        title: Access Ability
+        desc: Ketahui tentang kebolehcapaian dan nilai empati melalui sumbang saran dan mereka bentuk penyelesaian yang boleh diakses untuk aplikasi hipotetikal.
+      courseE_simon_says_2019:
+        title: Simon Says
+        desc: "Mainkan permainan dan fikirkan tentang arahan yang diperlukan untuk mendapatkan hasil yang betul.\\r\n\\r\n![imej ujian] (https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Powerful Passwords
+        desc: Terokai mengapa orang menggunakan kata laluan, mempelajari faedah menggunakan kata laluan, dan temui strategi untuk membuat dan menyimpan kata laluan yang kukuh dan selamat.
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing
+        desc: '_Nota Josh: berbeza dengan pelajaran pertama, saya telah memformatkan yang ini sama seperti pelajaran yang dinirplag biasa._'
       timeforcs_demo_conditionals:
         title: Bersyarat
+        desc: Untuk mengetahui tentang pernyataan bersyarat, pelajar bermain permainan kad dan membuat peraturan seperti "Jika saya menarik kad merah, saya mendapat markah" dan "Jika saya menarik kad hitam, anda mendapat markah."

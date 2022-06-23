@@ -516,7 +516,7 @@
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Escribe tu edad:",
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ¡años también!",
           "605f302ebc9f7fbacba60b15f551a633": "¿Cuál es tu color favorito?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Introduce tu color favorito:",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Escribe tu color favorito:",
           "ae096fbf24d913754b01a1601672bf62": "también!",
           "1f258d88a70309efc1435ef5daa277a0": "¡Gracias por charlar conmigo hoy!"
         },
@@ -544,12 +544,12 @@
         },
         "courseF_editable_chatbot": {
           "a72e7c5c68af0546e963e510297f5233": "¡Hola, soy X-9! ¿Cómo te llamas?",
-          "f0e5da70d264f312a1658d51c130b101": "Introduce tu nombre:",
+          "f0e5da70d264f312a1658d51c130b101": "Escribe tu nombre:",
           "13e575be866ecf5ac3dcbf61ab2048d7": "¿Cuántos años tienes?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Introduce tu edad:",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Escribe tu edad:",
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ¡años también!",
           "605f302ebc9f7fbacba60b15f551a633": "¿Cuál es tu color favorito?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Introduce tu color favorito:",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Escribe tu color favorito:",
           "ae096fbf24d913754b01a1601672bf62": "también!",
           "1f258d88a70309efc1435ef5daa277a0": "¡Gracias por charlar conmigo hoy!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
@@ -580,14 +580,14 @@
         },
         "courseF_text_choice_events": {
           "c529a06c3f8518b63ff6dfac482b335c": "Nombra este planeta:",
-          "44506356d48394cd903b579df9de9117": "¡Terrícola!",
+          "44506356d48394cd903b579df9de9117": ", terrícola!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
         },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
         },
         "courseF_text_choice_interview": {
-          "5bd698afd23bccde289bb0b4aa72a518": "Ponle nombre al robot.",
+          "5bd698afd23bccde289bb0b4aa72a518": "Nombra el robot",
           "34088af1fb721900963462375b3bbe23": "¡el robot!"
         },
         "courseF_text_choice_multiprompt": {

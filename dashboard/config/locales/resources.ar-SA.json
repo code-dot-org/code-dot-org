@@ -817,8 +817,7 @@
         },
         "class-section-video/courseb/2021": {
           "name": "كيف تنشئ شعبة صفية على Code.org",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-          "type": "فيديو المعلم"
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "course-ab-blockly-blocks/courseb/2021": {
           "name": "قطع بلوكلي البرمجية غير المتصلة (الصفوف من رياض الأطفال وحتى الصف الأول)",
@@ -2445,9 +2444,6 @@
         },
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "تمثيل الأرقام"
-        },
-        "keeping-data-secret-exemplar-2019/csd/2021": {
-          "name": "الحفاظ على سرية البيانات"
         },
         "unit_5_data_society/csd/2021": {
           "type": "شرائح"

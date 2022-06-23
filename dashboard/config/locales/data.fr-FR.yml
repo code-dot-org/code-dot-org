@@ -334,16 +334,16 @@ fr:
           quand tu es prêt.
         jigsaw_1: Clique sur le bloc
         jigsaw_2: Glisse le bloc vers la cible
-        jigsaw_3: Ordonne les blocs pour former l'image
-        jigsaw_4: Ordonne les blocs pour former l'image
-        jigsaw_5: Ordonne les blocs pour former l'image
-        jigsaw_6: Ordonne les blocs pour former l'image
-        jigsaw_7: Ordonne les blocs pour former l'image
-        jigsaw_8: Ordonne les blocs pour former l'image
-        jigsaw_9: Ordonne les blocs pour former l'image
-        jigsaw_10: Ordonne les blocs pour former l'image
-        jigsaw_11: Ordonne les blocs par numéro
-        jigsaw_12: Ordonne les blocs pour former l'image
+        jigsaw_3: Mets les blocs dans l'ordre pour former l'image
+        jigsaw_4: Mets les blocs ensemble pour compléter l'image
+        jigsaw_5: Mets les blocs ensemble pour compléter l'image
+        jigsaw_6: Mets les blocs ensemble pour compléter l'image
+        jigsaw_7: Mets les blocs ensemble pour compléter l'image
+        jigsaw_8: Mets les blocs ensemble pour compléter l'image
+        jigsaw_9: Mets les blocs dans l'ordre pour former l'image
+        jigsaw_10: Mets les blocs dans l'ordre pour former l'image
+        jigsaw_11: Mets les blocs dans l'ordre par numéro croissant
+        jigsaw_12: Mets ces blocs dans l'ordre par numéro croissant
         jigsaw_13: Répare le puzzle !
         mazestep_1: Description de l'étape du labyrinthe ici
         mazestep_2: Description de l'étape du labyrinthe ici
@@ -855,6 +855,20 @@ fr:
         codebreak_e05: 'Code Break 5.0: Simulations & Données avec Bill Gates'
         csd_how_teamwork_works: Comment fonctionne le Travail d'Équipe
         csd_teamwork_and_disagreement: Travail d'équipe - Gérer le Désaccord
+        codebreak_e06: 'Pause informatique 6.0 : L''internet avec Keegan--Michael
+          Scott et Vint Cerf'
+        codebreak_e07: 'Pause informatique 7.0 : Conditionnels avec Sal Khan et Flo
+          Vaughn'
+        codebreak_e08: 'Pause informatique 8.0 : Variables avec Yara Shahidi et Fuzzy
+          Khosrowshahi'
+        codebreak_e09: 'Pause informatique 9.0 : Événements avec Macklemore et Scott
+          Forstall'
+        codebreak_e10: 'Pause informatique 10.0 : Intelligence Artificielle avec Kat
+          Graham et Kate Park'
+        codebreak_e11: 'Pause informatique 11.0 : Abstraction avec Susan Wojcicki
+          et China Anne McClain'
+        codebreak_e12: 'Pause informatique 12.0 : Matériel avec  Aloe Blacc, Bret
+          Taylor et Paula Mejia'
         outbreak_mike: CodeBytes Episode 3 avec Mike - Simulateur d'épidémie
         csd_ml_import_model: Importer un modèle IA
         playlab_2021: Introduction au Labo de jeux
@@ -895,6 +909,7 @@ fr:
         PL_CS_Journeys_Overview: Voyages CS
         csp_applab_parameters: Fonctions avec Paramètres
         CSA-PL-intro-to-arrays: Tableaux unidimensionnels (1D)
+        CS_Changing_Everything: L'informatique est en Train de Tout Changer
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

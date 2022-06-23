@@ -171,11 +171,11 @@ es:
     ciencias y estudios sociales. A través de estos módulos, proyectos y lecciones,
     las escuelas pueden estudiar sus asignaturas habituales de formas nuevas e interesantes.
   hoc_overview_csc_learn_more: Conoce más sobre Conexiones a las Ciencias de la Computación
-  hoc_danceparty_alt_text: Animated characters dancing to music underneath the text
-    'Code your own dance party'
-  hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
-    a scanner on the bottom, and an LED face
-  hoc_banner_alt_text: Hour of Code banner
+  hoc_danceparty_alt_text: Personajes animados bailando al ritmo de la música bajo
+    el texto "Codifica tu propia fiesta de baile".
+  hoc_ai_alt_text: Un personaje flotante de inteligencia artificial, de color blanco,
+    con una antena, un escáner en la parte inferior y una cara LED
+  hoc_banner_alt_text: Cartel de la Hora del Código
   ai_video_title_what_is_ai: "¿Qué es la Inteligencia Artificial?"
   ai_video_title_algorithm_bias: Combatiendo el sesgo en los algoritmos
   ai_video_title_phone_knows_dog: "¿Cómo sabe tu teléfono que esto es un perro?"
@@ -3972,13 +3972,13 @@ es:
     algoritmos para dibujar la naturaleza. Los algoritmos son recursivos, es decir,
     describen un paso y luego te dicen simplemente que dibujes el siguiente paso de
     la misma manera, siguiendo el algoritmo desde el principio.
-  tutorial_tlcpunch_longdescription: Demuestra cómo las primeras computadoras pudieron
-    encontrar datos almacenados en tarjetas perforadas y muestra que es el mismo algoritmo
-    que se usa en el truco de magia de la actividad "El sueño del mago australiano".
-    Su objetivo es mostrar de forma visual cómo funciona un algoritmo de búsqueda.
-    Al hacerlo, demuestras un uso práctico de los números binarios, un algoritmo de
-    división y conquista para buscar y explorar el truco de pensamiento computacional
-    para traducir soluciones entre áreas problemáticas.
+  tutorial_tlcpunch_longdescription: Demuestra cómo los primeros ordenadores eran
+    capaces de encontrar datos almacenados en tarjetas perforadas y demuestra que
+    es el mismo algoritmo que el truco de magia de la actividad "El Sueño del Mago
+    Australiano". Pretende mostrar de forma visual cómo funciona un algoritmo de búsqueda.
+    Para ello, demuestra un uso práctico de los números binarios, un algoritmo de
+    "divide y vencerás" para la búsqueda y explora el truco de pensamiento informático
+    de trasladar las soluciones entre áreas de problemas.
   tutorial_finchfract_longdescription: Esta actividad usa recursividad para dibujar
     fractales de Koch con el robot Finch. Asume que a los estudiantes se les ha presentado
     la idea de recursividad, pero completar esta actividad los ayudará a desarrollar
@@ -11201,166 +11201,166 @@ es:
   dont_know: No sé
   language_label: Idioma
   language_code:
-    ar: Arabic
-    az: Azerbaijani
-    bg: Bulgarian
-    bn: Bengali
-    br: Breton
-    bs: Bosnian
-    ca: Catalan
-    co: Corsican
-    cs: Czech
-    da: Danish
-    de: German
+    ar: Árabe
+    az: Azerí
+    bg: Búlgaro
+    bn: Bengalí
+    br: Bretón
+    bs: Bosnio
+    ca: Catalán
+    co: Corso
+    cs: Checo
+    da: Danés
+    de: Alemán
     dv: Dhivehi
-    el: Greek
+    el: Griego
     en: Español (España)
-    es: Spanish
-    et: Estonian
-    eu: Basque
-    fa: Persian
-    fi: Finnish
-    fil: Filipino
-    fr: French
-    ga: Irish
-    gl: Galician
-    haw: Hawaiian
-    he: Hebrew
+    es: Español
+    et: Estonio
+    eu: Vasco
+    fa: Persa
+    fi: Finlandés
+    fil: Tagalo
+    fr: Francés
+    ga: Irlandés
+    gl: Gallego
+    haw: Hawaiano
+    he: Hebreo
     hi: Hindi
-    hr: Croatian
-    hu: Hungarian
-    hy: Armenian
-    ia: Interlingua (International Auxiliary Language Association)
-    id: Indonesian
-    is: Icelandic
-    it: Italian
-    ja: Japanese
-    ka: Georgian
-    kk: Kazakh
-    km: Khmer
-    kn: Kannada
-    ko: Korean
-    ku: Kurdish
-    ky: Kyrgyz
-    lt: Lithuanian
-    lv: Latvian
+    hr: Croata
+    hu: Húngaro
+    hy: Armenio
+    ia: Interlingua (Asociación Internacional de Lenguas Auxiliares)
+    id: indonesio
+    is: Islandés
+    it: Italiano
+    ja: Japonés
+    ka: Georgiano
+    kk: Kazajo
+    km: Jemer
+    kn: Canarés
+    ko: Coreano
+    ku: Kurdo
+    ky: Kirguís
+    lt: Lituano
+    lv: Letón
     mi: Maori
-    mk: Macedonian
-    mn: Mongolian
-    mr: Marathi
-    ms: Malay
-    mt: Maltese
-    my: Burmese
-    ne: Nepali
-    nl: Dutch
-    nn: Norwegian (Nynorsk)
-    false: Norwegian (Bokmål)
-    pl: Polish
-    ps: Pashto
-    pt: Portuguese
-    ro: Romanian
-    ru: Russian
-    se: Northern Sami
-    si: Sinhalese
-    sk: Slovak
-    sl: Slovenian
-    sq: Albanian
-    sr: Serbian
-    sv: Swedish
-    sw: Kiswahili
+    mk: Macedonio
+    mn: Mongol
+    mr: Maratí
+    ms: Malayo
+    mt: Maltés
+    my: Birmano
+    ne: Nepalí
+    nl: Holandés
+    nn: Noruego (Nynorsk)
+    false: Noruego (Bokmål)
+    pl: Polaco
+    ps: Pastún
+    pt: Portugués
+    ro: Rumano
+    ru: Ruso
+    se: Sami del Norte
+    si: Cingalés
+    sk: Eslovaco
+    sl: Esloveno
+    sq: Albanés
+    sr: Serbio
+    sv: Sueco
+    sw: Swahili
     ta: Tamil
-    te: Telugu
-    tg: Tajik
-    th: Thai
-    tl: Tagalog
-    tr: Turkish
-    uk: Ukrainian
+    te: Télugu
+    tg: Tayiko
+    th: Tailandés
+    tl: Tagalo
+    tr: Turco
+    uk: Ucraniano
     ur: Urdu
-    uz: Uzbek
-    vi: Vietnamese
-    zh: Chinese (Simplified)
-    zu: Zulu
+    uz: Uzbeko
+    vi: Vietnamita
+    zh: Chino (Simplificado)
+    zu: Zulú
   locale_code:
-    ar-sa: Arabic
-    az-az: Azerbaijani
-    bg-bg: Bulgarian
-    bn-bd: Bengali
-    bs-ba: Bosnian
-    ca-es: Catalan
-    co-co: Corsican
-    cs-cz: Czech
-    da-dk: Danish
-    de-de: German
+    ar-sa: Árabe
+    az-az: Azerí
+    bg-bg: Búlgaro
+    bn-bd: Bengalí
+    bs-ba: Bosnio
+    ca-es: Catalán
+    co-co: Corso
+    cs-cz: Checo
+    da-dk: Danés
+    de-de: Alemán
     dv-mv: Dhivehi
-    el-gr: Greek
-    en-gb: English (United Kingdom)
+    el-gr: Griego
+    en-gb: Inglés (Reino Unido)
     en-us: Español (España)
-    es-es: Spanish (Spain)
+    es-es: Español (España)
     es-mx: Español (México)
-    et-ee: Estonian
-    eu-es: Basque
-    fa-af: Dari
-    fa-ir: Persian
-    fi-fi: Finnish
-    fil-ph: Filipino
-    fr-fr: French
-    ga-ie: Irish
-    gl-es: Galician
-    haw-hi: Hawaiian
-    he-il: Hebrew
+    et-ee: Estonio
+    eu-es: Vasco
+    fa-af: Darí
+    fa-ir: Persa
+    fi-fi: Finlandés
+    fil-ph: Tagalo
+    fr-fr: Francés
+    ga-ie: Irlandés
+    gl-es: Gallego
+    haw-hi: Hawaiano
+    he-il: Hebreo
     hi-in: Hindi
-    hr-hr: Croatian
-    hu-hu: Hungarian
-    hy-am: Armenian
-    id-id: Indonesian
-    is-is: Icelandic
-    it-it: Italian
-    ja-jp: Japanese
-    ka-ge: Georgian
-    kk-kz: Kazakh
-    km-kh: Khmer
-    kn-in: Kannada
-    ko-kr: Korean
-    ku-iq: Kurdish
-    ky-kg: Kyrgyz
-    lt-lt: Lithuanian
-    lv-lv: Latvian
+    hr-hr: Croata
+    hu-hu: Húngaro
+    hy-am: Armenio
+    id-id: indonesio
+    is-is: Islandés
+    it-it: Italiano
+    ja-jp: Japonés
+    ka-ge: Georgiano
+    kk-kz: Kazajo
+    km-kh: Jemer
+    kn-in: Canarés
+    ko-kr: Coreano
+    ku-iq: Kurdo
+    ky-kg: Kirguís
+    lt-lt: Lituano
+    lv-lv: Letón
     mi-nz: Maori
-    mk-mk: Macedonian
-    mn-mn: Mongolian
-    mr-in: Marathi
-    ms-my: Malay
-    mt-mt: Maltese
-    my-mm: Burmese
-    ne-np: Nepali
-    nl-nl: Dutch
-    nn-no: Norwegian (Nynorsk)
-    no-no: Norwegian (Bokmål)
-    pl-pl: Polish
-    ps-af: Pashto
-    pt-br: Portuguese (Brazil)
-    pt-pt: Portuguese (Portugal)
-    ro-ro: Romanian
-    ru-ru: Russian
-    se-fi: Northern Sami
-    si-lk: Sinhalese
-    sk-sk: Slovak
-    sl-si: Slovenian
-    sq-al: Albanian
-    sr-sp: Serbian
-    sv-se: Swedish
+    mk-mk: Macedonio
+    mn-mn: Mongol
+    mr-in: Maratí
+    ms-my: Malayo
+    mt-mt: Maltés
+    my-mm: Birmano
+    ne-np: Nepalí
+    nl-nl: Holandés
+    nn-no: Noruego (Nynorsk)
+    no-no: Noruego (Bokmål)
+    pl-pl: Polaco
+    ps-af: Pastún
+    pt-br: Portugués (Brasil)
+    pt-pt: Portugués (Portugal)
+    ro-ro: Rumano
+    ru-ru: Ruso
+    se-fi: Sami del Norte
+    si-lk: Cingalés
+    sk-sk: Eslovaco
+    sl-si: Esloveno
+    sq-al: Albanés
+    sr-sp: Serbio
+    sv-se: Sueco
     ta-in: Tamil
-    te-in: Telugu
-    tg-tj: Tajik
-    th-th: Thai
-    tr-tr: Turkish
-    uk-ua: Ukrainian
-    ur-in: Urdu (India)
-    ur-pk: Urdu (Pakistan)
-    uz-uz: Uzbek
-    vi-vn: Vietnamese
-    zh-cn: Chinese (Simplified)
-    zh-hans: Chinese (Simplified)
-    zh-hant: Chinese (Traditional)
-    zh-tw: Chinese (Traditional)
-    zu-za: Zulu
+    te-in: Télugu
+    tg-tj: Tayiko
+    th-th: Tailandés
+    tr-tr: Turco
+    uk-ua: Ucraniano
+    ur-in: Urdú (India)
+    ur-pk: Urdú (Pakistán)
+    uz-uz: Uzbeko
+    vi-vn: Vietnamita
+    zh-cn: Chino (Simplificado)
+    zh-hans: Chino (Simplificado)
+    zh-hant: Chino (Tradicional)
+    zh-tw: Chino (Tradicional)
+    zu-za: Zulú

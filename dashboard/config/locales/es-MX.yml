@@ -251,9 +251,9 @@ es-MX:
     share_teacher_email_reg_partner_preference_required: Debes especificar una preferencia
       de correo electrónico.
     parent_account_checkbox: Soy padre o tutor registrándose en lugar de mi hijo
-    parent_account_email_progress_permission: "¿Podríamos enviarte emails con actualizaciones
-      ocasionales del progreso y proyectos de tus hijos, y actualizaciones sobre sus
-      cursos de ciencias de la computación? [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
+    parent_account_email_progress_permission: "¿Podemos enviarle emails con para contarle
+      sobre el rendimiento y los proyectos de su hijo? Tambien mandaremos informacion
+      sobre los cursos de ciencias computacionales [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
     parent_account_email_label: Correo electrónico del padre o tutor
   school_info:
     title: Información de la escuela (opcional)
@@ -433,6 +433,7 @@ es-MX:
       educate_beyond: Más allá de Code.org
       educate_inspire: Inspira a un estudiante
       educate_community: Comunidad en línea
+      educate_requirements: Requisitos Técnicos
       educate_tools: Herramientas y videos
       about_us: Acerca de nosotros
       about_leadership: Liderazgo
@@ -841,8 +842,11 @@ es-MX:
       title: Fiesta de baile
     hello-world:
       title: Hola Mundo
+      body: Elige entre cuatro temas divertidos para codificar personajes interactivos
+        en un mundo creado por ti.
     poem-art:
       title: El Arte del Poema
+      body: "¡Exprésate! Utiliza el código para crear poemas animados."
     hoc:
       title: Laberinto clásico
       body: Prueba los fundamentos de la ciencia de la computación. Millones ya lo
@@ -1340,6 +1344,7 @@ es-MX:
         israel: Israel
         malaysia: Malasia
         mexico: México
+        paraguay: Paraguay
         thailand: Tailandia
         uzbekistan: Uzbekistán
       ages:
@@ -1362,6 +1367,7 @@ es-MX:
         music: Música
         art: Arte
         other: 'Otros:'
+        na: No Aplicable
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1371,7 +1377,8 @@ es-MX:
         lightbot: Lightbot
         scratch: Scratch
         tynker: Tynker
-        other: 'Otros:'
+        other: Otro
+        na: No Aplicable
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1381,7 +1388,8 @@ es-MX:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Otros:'
+        other: Otro
+        na: No Aplicable
       workshop_course:
         csf_af: Fundamentos de Ciencias de la Computación (cursos A-F)
         csf_express: Fundamentos de Ciencias de la Computación (Pre-Express o Express)

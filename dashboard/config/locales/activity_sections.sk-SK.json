@@ -1583,11 +1583,21 @@
         "80638f32-a3e0-46c4-99fa-74d740d9ff1d": {
           "progression_name": "Prehľad lekcie"
         },
+        "b9d672f4-d86c-45ef-9203-d62f69ebf28b": {
+          "name": "Kreslenie tvarov",
+          "progression_name": "Kreslenie tvarov"
+        },
         "5e520688-3496-4589-958b-0e5560b783c1": {
           "progression_name": "Prehľad lekcie"
         },
+        "2bc2e284-7c4e-4db0-93e1-557ee7ef6c7a": {
+          "progression_name": "Úvod do Game Labu"
+        },
         "78487cb4-f224-4753-81c2-df924d996d9b": {
           "progression_name": "Video: Kreslenie v Game Labe - 1. časť"
+        },
+        "6c0110bb-f32b-426c-9f9f-fba56f763171": {
+          "progression_name": "Používanie mriežky"
         },
         "0c63e064-c9b6-4d9e-89ee-0322c3fe32d4": {
           "progression_name": "Video: Kreslenie v Game Labe - 2. časť"
@@ -1607,8 +1617,14 @@
         "40225249-89e9-4677-9820-761de98201c9": {
           "progression_name": "Nové tvary"
         },
+        "10047599-0a86-466e-9b9f-d66726c566eb": {
+          "progression_name": "Tvary a parametre"
+        },
         "54794f39-e51b-4038-befd-6b8db76eb6ff": {
           "progression_name": "Ďalšie parametre"
+        },
+        "d3dd0108-0a50-46d8-b7b7-60086d0a8dda": {
+          "progression_name": "Náhodné čísla"
         },
         "cdff8625-d4f2-4357-b8b2-8fe8a9e2ff5a": {
           "progression_name": "Používanie náhodných čísel"
@@ -1635,7 +1651,7 @@
           "progression_name": "Prehľad lekcie"
         },
         "7b0d3ea8-0ebd-4893-b63a-f7e106350484": {
-          "progression_name": "Video: Predstavenie objeku Sprite"
+          "progression_name": "Video: Predstavenie sprajtov"
         },
         "ac9962af-c594-428a-8aca-016b794e0c00": {
           "progression_name": "Predstavenie \"sprite\" objektov"
@@ -1652,11 +1668,17 @@
         "0f6d3640-c10a-497b-a1ce-7dcca920ca0d": {
           "progression_name": "Vytvávaranie scén"
         },
+        "be2d8bd4-15d7-421c-9a7b-ffd13ab3f274": {
+          "progression_name": "Scény so sprajtmi"
+        },
         "07292173-4754-438e-8e54-6ed886d79779": {
           "progression_name": "Vytvávaranie scén"
         },
         "61e3ec44-af7c-436f-aca6-4e46a91f6542": {
           "progression_name": "Prehľad lekcie"
+        },
+        "039d7065-387d-437a-9d2f-fe2be655434e": {
+          "progression_name": "Video: Predstavujeme cyklus draw()"
         },
         "23ab6af6-1209-49cd-9a80-45b112fb2cf8": {
           "progression_name": "Tvary  a vykresľovací cyklus"
@@ -2319,6 +2341,9 @@
         },
         "1565f22f-1429-48f2-adbe-58eb4da1f25b": {
           "progression_name": "Prehľad lekcie"
+        },
+        "737a9d39-005b-43b5-bd74-4580674f8165": {
+          "progression_name": "Sprievodca projektom"
         },
         "308a55cf-4781-4887-b674-69824882ad64": {
           "progression_name": "Projekt webstránky"
@@ -3399,11 +3424,21 @@
         "bb6a2b90-0730-48ab-b10d-325b0f37b6af": {
           "progression_name": "Prehľad lekcie"
         },
+        "122c7721-3946-460b-905c-aaf2a8315a7a": {
+          "name": "Kreslenie tvarov",
+          "progression_name": "Kreslenie tvarov"
+        },
         "31ea1300-575e-4f67-9fba-ffccd705a373": {
           "progression_name": "Prehľad lekcie"
         },
+        "495fcc03-4c32-4a02-8104-dde4ba8e64a8": {
+          "progression_name": "Úvod do Game Labu"
+        },
         "95278d60-fdcd-4e26-b8c3-85f66c91f510": {
           "progression_name": "Video: Kreslenie v Game Labe - 1. časť"
+        },
+        "c1956796-6ad7-45c7-95fb-c3d61030e4cf": {
+          "progression_name": "Používanie mriežky"
         },
         "e4bb69ec-e58a-4445-9f49-0c8ceafe7ebe": {
           "progression_name": "Video: Kreslenie v Game Labe - 2. časť"
@@ -3426,11 +3461,17 @@
         "62f6b478-10f1-41c0-b3d9-c8538dd7e2eb": {
           "progression_name": "Ďalšie parametre"
         },
+        "c7a839b0-71da-41ac-af2d-a8e5084040cc": {
+          "progression_name": "Tvary a parametre"
+        },
         "0893f8dd-fe78-4cde-9f44-76ce38edb0af": {
           "progression_name": "Ďalšie parametre"
         },
         "1bcac68c-1997-43a5-bc7c-a99f303f7bc0": {
           "progression_name": "Používanie náhodných čísel"
+        },
+        "06529421-f2f5-4ecc-b960-e5ad918d55a5": {
+          "progression_name": "Náhodné čísla"
         },
         "2d59194a-6738-49ec-8bbb-3e13f3648cc3": {
           "progression_name": "Prehľad lekcie"
@@ -3451,7 +3492,7 @@
           "progression_name": "Prehľad lekcie"
         },
         "6ba9de0a-29fa-4fd8-98c8-0d85178ea684": {
-          "progression_name": "Video: Predstavenie objeku Sprite"
+          "progression_name": "Video: Predstavenie sprajtov"
         },
         "5136ca8d-00e2-4fa2-8563-f2edd7bc46d6": {
           "progression_name": "Predstavenie \"sprite\" objektov"
@@ -3468,11 +3509,17 @@
         "659bc6e3-ae3c-44c3-83f1-816afa3a113d": {
           "progression_name": "Vytvávaranie scén"
         },
+        "0bb0b37f-e6d5-4d39-928f-4fbbbd791fde": {
+          "progression_name": "Scény so sprajtmi"
+        },
         "25308bbe-f78f-4d88-90f6-2a88b35c7fbf": {
           "progression_name": "Vytvávaranie scén"
         },
         "220fbb14-03e2-4b6b-966d-0fb9607a7c0d": {
           "progression_name": "Prehľad lekcie"
+        },
+        "832dbd27-6b24-4512-9ab3-2e932bb1c988": {
+          "progression_name": "Video: Predstavujeme cyklus draw()"
         },
         "9d10f9c7-aa20-4ed7-826f-dfaef530dd61": {
           "progression_name": "Tvary  a vykresľovací cyklus"
@@ -4058,8 +4105,8 @@
           "progression_name": "Prehľad lekcie"
         },
         "8044f0e5-2eee-425f-b124-6f80494e5b23": {
-          "name": "Video: Proces riešenia problémov",
-          "progression_name": "Video: Proces riešenia problémov"
+          "name": "Video: Postup riešenia problémov",
+          "progression_name": "Video: Postup riešenia problémov"
         },
         "11df93d2-fda9-467b-bb01-71f213fe5346": {
           "name": "Prehľad lekcie",
@@ -4176,6 +4223,9 @@
         },
         "736313a5-2b8b-4290-bda7-c60ae0ffd965": {
           "progression_name": "Prehľad lekcie"
+        },
+        "a64ebebb-2737-43a0-b4d8-f7971096b3e0": {
+          "progression_name": "Sprievodca projektom"
         },
         "174b4817-ee38-47a4-be7c-dbf4c4d752ea": {
           "progression_name": "Projekt webstránky"
@@ -4304,11 +4354,21 @@
         "c6e24cc7-63f3-4893-95d6-7f4974b6214e": {
           "progression_name": "Prehľad lekcie"
         },
+        "a4e22b77-a871-48dd-b56a-c73055f6ba15": {
+          "name": "Kreslenie tvarov",
+          "progression_name": "Kreslenie tvarov"
+        },
         "74674f27-4080-468a-b72c-5eedcd9b0148": {
           "progression_name": "Prehľad lekcie"
         },
+        "6c3fca58-2c3c-4b29-9ec3-ba3426ab48cf": {
+          "progression_name": "Úvod do Game Labu"
+        },
         "1509843f-2d27-434d-afa5-8678d006fdaf": {
           "progression_name": "Video: Kreslenie v Game Labe - 1. časť"
+        },
+        "eb60220a-bd3b-45a9-bea3-08e2f7bce363": {
+          "progression_name": "Používanie mriežky"
         },
         "76f4a490-ba17-4487-8dee-bc8264c6870d": {
           "progression_name": "Video: Kreslenie v Game Labe - 2. časť"
@@ -4332,8 +4392,14 @@
         "fdd422c2-71f0-46ba-992b-e84a5036881e": {
           "progression_name": "Nové tvary"
         },
+        "4b39d5c9-0c98-44d5-9761-011f93ad0721": {
+          "progression_name": "Tvary a parametre"
+        },
         "951b3300-bbab-4862-9403-fe40353a2189": {
           "progression_name": "Ďalšie parametre"
+        },
+        "8b2d6e79-7e2d-44c6-b048-e458f01608c8": {
+          "progression_name": "Náhodné čísla"
         },
         "b188c296-ff87-409b-8540-2143ded296bf": {
           "progression_name": "Používanie náhodných čísel"
@@ -4368,7 +4434,7 @@
           "progression_name": "Prehľad lekcie"
         },
         "21279214-0c29-48a8-8158-7d3f96726320": {
-          "progression_name": "Video: Predstavenie objeku Sprite"
+          "progression_name": "Video: Predstavenie sprajtov"
         },
         "e9c923af-0bf2-42f6-8330-02d063158fa5": {
           "progression_name": "Predstavenie \"sprite\" objektov"
@@ -4382,6 +4448,9 @@
         "1893f672-0984-4956-a657-90f4a8a4ecb2": {
           "progression_name": "Pridanie obrázkov"
         },
+        "64957b25-c71b-4b9c-ab40-16fc9845944d": {
+          "progression_name": "Scény so sprajtmi"
+        },
         "7837e5c4-b7a2-4b7b-a19b-d88da6f1c973": {
           "progression_name": "Vytvávaranie scén"
         },
@@ -4391,6 +4460,9 @@
         },
         "bd35dacd-835c-497c-a32c-7ec91b544e3f": {
           "progression_name": "Prehľad lekcie"
+        },
+        "1d24300b-6ff3-4ae7-8721-c201e189e481": {
+          "progression_name": "Video: Predstavujeme cyklus draw()"
         },
         "dc64960a-61a1-492a-9019-267233fa287d": {
           "progression_name": "Tvary  a vykresľovací cyklus"
@@ -4910,6 +4982,9 @@
         },
         "74b89378-b7af-4b21-9fb5-e11d2718a24b": {
           "progression_name": "Prehľad lekcie"
+        },
+        "cb0106eb-31ae-4c7c-bb6c-00ae7a829cfa": {
+          "progression_name": "Sprievodca projektom"
         },
         "5b3e0fbb-5198-4d7c-af25-62102d190e8c": {
           "progression_name": "Projekt webstránky"
@@ -10284,6 +10359,7 @@
           "description": "Ak už vaši žiaci dobre poznajú základné koncepty programovania, môžete ich požiadať, aby svoje projekty vytvorili v inej platforme, napríklad [Scratch](https://scratch.mit.edu/) alebo [Alice](http://www.alice.org/index.php)."
         },
         "1d222524-316a-4988-b206-b1f948cfbee7": {
+          "name": "Denník",
           "tips": [
             null
           ]
@@ -10306,6 +10382,9 @@
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
           "name": "Reflexia"
         },
+        "1c3edfdb-7f19-4a9e-ac61-3e57dbaeddf0": {
+          "name": "Denník"
+        },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
           "tips": [
             null
@@ -10327,14 +10406,21 @@
           ]
         },
         "8791201e-af87-456b-8f93-1c4cb8c10099": {
+          "name": "Denník",
           "tips": [
             null
           ]
+        },
+        "7f167e37-0d33-4983-bd63-a5c51984f818": {
+          "name": "Denník"
         },
         "6ca0b1c3-d106-4e70-bdf5-ee0ed4f7dad6": {
           "tips": [
             null
           ]
+        },
+        "1ff2a858-92a9-4175-9625-5f94526dac1c": {
+          "name": "Denník"
         },
         "48b299c7-bdd4-453e-aa47-d9d2c7622ee8": {
           "tips": [
@@ -10350,6 +10436,12 @@
           "tips": [
             null
           ]
+        },
+        "1fb18042-bbe6-4e8d-89e3-070a0154f66e": {
+          "name": "Denník"
+        },
+        "4a6f20d9-93fe-4b85-baf5-0605c1fd4774": {
+          "name": "Denník"
         },
         "ec6a94fb-4529-40b5-bee7-42c5d06822e1": {
           "tips": [
@@ -10375,6 +10467,12 @@
           "tips": [
             null
           ]
+        },
+        "d27e9e80-d500-4611-8dad-a4bad04f1273": {
+          "name": "Denník"
+        },
+        "9911d79f-8812-4c66-b610-66e91d854548": {
+          "name": "Denník"
         },
         "40e5d7a1-ae14-4585-bdab-1fc0036d91b2": {
           "tips": [
@@ -10416,6 +10514,12 @@
             null
           ]
         },
+        "6c43539f-8ba5-43e6-93fa-9bc34d0e4d75": {
+          "name": "Denník"
+        },
+        "181e84e3-430b-4c20-9e48-fffad8c5bab2": {
+          "name": "Denník"
+        },
         "bebc0942-fc14-4063-9feb-e47a4a62d9c8": {
           "tips": [
             null
@@ -10452,11 +10556,13 @@
           ]
         },
         "7cc32c19-2a9a-423f-a8b7-90a739cd379c": {
+          "name": "Denník",
           "tips": [
             null
           ]
         },
         "79f35dc1-bf5e-47ca-b1eb-b726b15859a8": {
+          "name": "Denník",
           "tips": [
             null
           ]
@@ -10482,6 +10588,7 @@
           ]
         },
         "db8f4d62-af34-4871-993d-281cacf5ff29": {
+          "name": "Denník",
           "tips": [
             null
           ]
@@ -10546,6 +10653,12 @@
         "61bfa751-8587-4118-84e1-b3870975fad4": {
           "progression_name": "Výzva"
         },
+        "5dc1d0a7-a3a8-4e26-8ddd-3133d70c5f9f": {
+          "name": "Denník"
+        },
+        "557e0ccc-ca5d-4da8-a653-04055517a185": {
+          "name": "Denník"
+        },
         "b39acb79-1fad-4acd-b3e4-789f32636f46": {
           "tips": [
             null
@@ -10566,6 +10679,9 @@
             null
           ]
         },
+        "cf7fec91-b8c2-4b68-8e78-f10c536c2d3f": {
+          "name": "Denník"
+        },
         "221c0911-a3eb-4409-be91-e665b43e3fc9": {
           "tips": [
             null
@@ -10582,10 +10698,25 @@
             null
           ]
         },
+        "b45bc335-aa90-474a-a72e-d53cd598287f": {
+          "name": "Denník"
+        },
+        "9382a280-a542-46a5-932f-9f2258bbb2eb": {
+          "name": "Denník"
+        },
         "4e10be5f-60ad-4bae-913d-7a157e519447": {
           "tips": [
             null
           ]
+        },
+        "85a0ec6f-c1c7-46f6-8e4f-f805984133dc": {
+          "name": "Denník"
+        },
+        "edd27907-d992-46f6-a9d6-71f7cb7098b9": {
+          "name": "Denník"
+        },
+        "27fb858f-74be-466d-8261-26a610837a03": {
+          "name": "Denník"
         },
         "c5595f82-fa56-4a48-a7f6-65b97947a7e9": {
           "tips": [
@@ -10606,6 +10737,9 @@
           "name": "Reflexia",
           "progression_name": "Reflexia"
         },
+        "4ed9befe-cfcb-4d9b-ab09-0eab8239853f": {
+          "name": "Denník"
+        },
         "f2c599ed-2dc6-4fa2-8ebd-5123c77dd9c3": {
           "tips": [
             null
@@ -10620,6 +10754,12 @@
           "tips": [
             null
           ]
+        },
+        "d7e29a9c-d566-4556-983d-cd31736f67e8": {
+          "name": "Denník"
+        },
+        "d87d6a30-1929-4ec3-baae-5b3457330c9c": {
+          "name": "Denník"
         },
         "c0c1d052-3e33-4066-a541-356b552d5ec7": {
           "tips": [
@@ -10661,6 +10801,9 @@
             null
           ]
         },
+        "57e61086-a30b-47d8-ad65-af83a970d437": {
+          "name": "Denník"
+        },
         "0644a5d2-d3ae-4dea-8777-47a522955b21": {
           "tips": [
             null
@@ -10675,6 +10818,12 @@
           "tips": [
             null
           ]
+        },
+        "a8ff2adf-b2f8-4f4f-95e0-b5359f05d5a1": {
+          "name": "Denník"
+        },
+        "c4594eb3-a313-4824-a608-4558d7783967": {
+          "name": "Denník"
         },
         "1b28522d-bf63-4f09-94a2-a80833819a38": {
           "tips": [
@@ -10774,6 +10923,12 @@
             null
           ]
         },
+        "3fe573d7-2c09-4e1c-ae7e-d4029f905d35": {
+          "name": "Denník"
+        },
+        "bffb7609-21c3-4e03-b16a-e4753c421cbc": {
+          "name": "Denník"
+        },
         "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
           "tips": [
             null
@@ -10798,6 +10953,12 @@
           "tips": [
             null
           ]
+        },
+        "ac33d632-f30f-4def-b290-37aa318342ca": {
+          "name": "Denník"
+        },
+        "5becca11-20b8-4141-9617-ef7c518a3d99": {
+          "name": "Denník"
         },
         "aed2c64f-4f98-4bf6-adf7-f7cd80ab941a": {
           "tips": [
@@ -10843,10 +11004,16 @@
             null
           ]
         },
+        "32060f67-52fc-496b-9178-29bbcd0a854e": {
+          "name": "Denník"
+        },
         "0e79724e-4dc4-491d-ac17-f4839c30ce19": {
           "tips": [
             null
           ]
+        },
+        "77645736-2519-4d27-b58f-460674b37ac3": {
+          "name": "Denník"
         },
         "ef056da0-16f9-479a-95ea-42f70ae6a9aa": {
           "tips": [
@@ -10865,9 +11032,13 @@
           "name": "Reflexia"
         },
         "8f2a96ab-2fe4-4799-bf45-5d850c830f97": {
+          "name": "Denník",
           "tips": [
             null
           ]
+        },
+        "9cdb66ed-0a11-469c-86c7-516372ae3eca": {
+          "name": "Denník"
         },
         "8a310d03-4c27-4b18-b8f7-994c23971fdd": {
           "tips": [
@@ -10895,9 +11066,13 @@
           ]
         },
         "18ddafa9-e84c-403f-a417-d4516a1ae6a7": {
+          "name": "Denník",
           "tips": [
             null
           ]
+        },
+        "d4051ea3-89a9-4721-812c-0eaff899cb06": {
+          "name": "Denník"
         },
         "c5dbb48d-d120-4560-b671-bd507f1685b0": {
           "tips": [
@@ -10914,10 +11089,16 @@
             null
           ]
         },
+        "6c56c6d8-505f-450b-af78-6589752885e9": {
+          "name": "Denník"
+        },
         "4a408d6d-8d2f-481e-aafe-e5d81da03a43": {
           "tips": [
             null
           ]
+        },
+        "6c9f71c2-38be-428f-88e2-c7b16c1f4b47": {
+          "name": "Denník"
         },
         "3fef28ad-87b4-4154-b80f-12b358f2e031": {
           "tips": [
@@ -10934,10 +11115,16 @@
             null
           ]
         },
+        "b1a23a75-eac2-45e6-aeb9-dc86a259ee94": {
+          "name": "Denník"
+        },
         "47fe69d8-300c-488d-94ac-616b6fb2fbb8": {
           "tips": [
             null
           ]
+        },
+        "950c4c2b-2dea-43a3-bf2f-b3ce9ba2b710": {
+          "name": "Denník"
         },
         "37a98989-bd44-40e0-8606-da8c32dde749": {
           "tips": [
@@ -10981,6 +11168,9 @@
             null
           ]
         },
+        "3f6409bb-cc17-4e85-8567-bd8e0fdd0e53": {
+          "name": "Denník"
+        },
         "a97b7f87-b7d9-4a8d-a68e-35cd489345e2": {
           "tips": [
             null
@@ -10988,6 +11178,9 @@
         },
         "3c6018f8-0048-4c97-9970-72884de4c736": {
           "progression_name": "Reflexia"
+        },
+        "74abfed4-1d5e-46f2-ac52-727f18e332ee": {
+          "name": "Denník"
         },
         "86647112-ffd2-4c41-84b4-1ea040590a32": {
           "tips": [
@@ -11024,10 +11217,16 @@
             null
           ]
         },
+        "7ca08821-712e-460c-abe0-f55fcbd00be7": {
+          "name": "Denník"
+        },
         "99a48707-5d94-418b-a63e-120ef2178c88": {
           "tips": [
             null
           ]
+        },
+        "d605e701-6f3b-4741-bc41-65c4045ec132": {
+          "name": "Denník"
         },
         "61333e8c-4c43-4cb8-8a5f-56153ff20170": {
           "tips": [
@@ -11049,10 +11248,16 @@
             null
           ]
         },
+        "676729d1-867d-48fd-b7c8-4c2a1530cbce": {
+          "name": "Denník"
+        },
         "43484e40-619c-44a7-97e1-2612ae402193": {
           "tips": [
             null
           ]
+        },
+        "892ffdca-d923-46c2-8040-6a951d995301": {
+          "name": "Denník"
         },
         "d7947c4f-5f7c-4011-a004-6fb9cc228706": {
           "tips": [
@@ -11069,10 +11274,16 @@
             null
           ]
         },
+        "c8cdff99-2d0f-425f-a6bf-1bb532626320": {
+          "name": "Denník"
+        },
         "4aec71fb-6cbe-4811-ab72-128f739c84a7": {
           "tips": [
             null
           ]
+        },
+        "08454e57-f59f-4c27-b0db-eca09ff97edf": {
+          "name": "Denník"
         },
         "580b0187-b553-4031-b073-fa6790bd6f48": {
           "tips": [
@@ -11099,6 +11310,9 @@
             null
           ]
         },
+        "66638787-9770-450a-8bcc-f30821a49742": {
+          "name": "Denník"
+        },
         "bcbc8736-9513-438c-b118-87470fc5f545": {
           "tips": [
             null
@@ -11114,10 +11328,16 @@
             null
           ]
         },
+        "c9ee08ae-95af-4d56-94c0-a855a029bd5d": {
+          "name": "Denník"
+        },
         "52705132-ae81-4c78-8704-9ffd36b9e5cb": {
           "tips": [
             null
           ]
+        },
+        "ab1eda38-c903-473b-9548-006095f627b6": {
+          "name": "Denník"
         },
         "9ac26727-d92c-474f-8a18-271e7f494132": {
           "tips": [
@@ -11155,10 +11375,16 @@
             null
           ]
         },
+        "4f1b507e-f956-4c2a-bff2-59ac9952efa4": {
+          "name": "Denník"
+        },
         "311288e0-9ddf-4681-a8f2-31ae7d196423": {
           "tips": [
             null
           ]
+        },
+        "faeadd09-075d-484e-a6ae-9ac553e4b0bc": {
+          "name": "Denník"
         },
         "045c4fbc-83bd-4cce-a007-ed7ed6ac48bf": {
           "tips": [
@@ -11181,10 +11407,16 @@
             null
           ]
         },
+        "d82e5878-50f2-42ee-9cb1-067c2d895b73": {
+          "name": "Denník"
+        },
         "ff9510f7-5db2-48e7-906e-2289e52db678": {
           "tips": [
             null
           ]
+        },
+        "81a95d07-b352-4a95-984a-66003cc6db35": {
+          "name": "Denník"
         },
         "75d3dcbc-e41c-4063-b598-facb3bdc9bcb": {
           "tips": [
@@ -11203,6 +11435,9 @@
           "tips": [
             null
           ]
+        },
+        "90141481-474e-4636-a38f-6ddf0f343559": {
+          "name": "Denník"
         },
         "66a0329e-9fa3-4294-ba1a-ac918f0e8408": {
           "tips": [
@@ -11224,10 +11459,16 @@
             null
           ]
         },
+        "5284db9f-3ea1-4dd4-84ed-7ee322b0d302": {
+          "name": "Denník"
+        },
         "ba1c96c9-ff95-432b-8d22-5138a319f4b4": {
           "tips": [
             null
           ]
+        },
+        "4d4e5546-072a-436d-b65b-51d1d4909294": {
+          "name": "Denník"
         },
         "f7bad8f1-8f27-48a7-bd98-70d03a7ddf81": {
           "tips": [
@@ -11254,10 +11495,16 @@
             null
           ]
         },
+        "29e7bdae-0e2f-4440-9401-e3fe76c10785": {
+          "name": "Denník"
+        },
         "b25121aa-b946-4bea-9fdd-6a874ffb4bd7": {
           "tips": [
             null
           ]
+        },
+        "17f71bbe-d207-4d5d-9a13-3090748a85f2": {
+          "name": "Denník"
         },
         "8b41cd86-ab6d-4cc1-b24f-70a9534ba318": {
           "tips": [
@@ -11268,6 +11515,12 @@
           "tips": [
             null
           ]
+        },
+        "2954cf31-f0c3-43f2-a132-9e0b0b6e88c5": {
+          "name": "Denník"
+        },
+        "e5200699-b4cc-41b9-b945-df5223effafd": {
+          "name": "Denník"
         },
         "a96b40dd-a27b-4fc0-8c1e-db5584a87c4e": {
           "tips": [
@@ -11570,6 +11823,9 @@
           ],
           "progression_name": "Cykly \"for\" a farebné LEDky"
         },
+        "020265fb-ab0b-4d77-8cf9-30fb0228a37b": {
+          "name": "Denník"
+        },
         "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
           "tips": [
             null
@@ -11585,6 +11841,7 @@
           "progression_name": "Udalosti s akcelerometrom"
         },
         "83dadfe8-ec04-4986-9e4b-8fcb301bce51": {
+          "name": "Denník",
           "tips": [
             null
           ]
@@ -11681,6 +11938,7 @@
           "progression_name": "Inštrukcie pre vypĺňanie dotazníka po kurze"
         },
         "322ad615-5d42-4b54-ab60-5d7b7d36e277": {
+          "name": "Denník",
           "tips": [
             null
           ]
@@ -11713,6 +11971,12 @@
             null
           ]
         },
+        "a050b814-d2e2-4a84-8fee-d1320e9bb9ea": {
+          "name": "Denník"
+        },
+        "a8a0cd51-12b0-4c58-8d16-b4b4778d2719": {
+          "name": "Denník"
+        },
         "c80549fe-fb7e-4eef-ba30-247264bf0e1f": {
           "tips": [
             null
@@ -11739,9 +12003,13 @@
           ]
         },
         "cc06e6ea-b748-4c9d-b201-ccb10cd77cf6": {
+          "name": "Denník",
           "tips": [
             null
           ]
+        },
+        "71a4871e-99e0-48c7-8dbc-e651828553d8": {
+          "name": "Denník"
         },
         "cbce24b3-baeb-42f3-978b-e4262e9e38b7": {
           "tips": [
@@ -11757,6 +12025,9 @@
           "tips": [
             null
           ]
+        },
+        "1ab47faa-8f31-4cdf-8fab-39b193dee663": {
+          "name": "Denník"
         },
         "604675cc-016d-4706-ad48-32d1547d7a74": {
           "tips": [
@@ -11783,12 +12054,16 @@
             null
           ]
         },
+        "d49613fe-8fcf-4801-a656-6bd752db7c1b": {
+          "name": "Denník"
+        },
         "143b040a-8c9e-4653-92d4-f58ea9ffef72": {
           "tips": [
             null
           ]
         },
         "85c49ae4-5b52-40ad-96eb-424f02d8539e": {
+          "name": "Denník",
           "tips": [
             null
           ]
@@ -11818,6 +12093,9 @@
             null
           ]
         },
+        "f5e577d7-b133-493e-995f-76c9ef44de1d": {
+          "name": "Denník"
+        },
         "5ab922e3-8512-4c62-83c7-e17aa282377d": {
           "tips": [
             null
@@ -11843,6 +12121,12 @@
             null
           ]
         },
+        "8df6cc07-f2c4-499d-87e8-6ffe1c84ebd0": {
+          "name": "Denník"
+        },
+        "b5f6e7d0-04f2-4175-897c-236e80570d9e": {
+          "name": "Denník"
+        },
         "95c12363-142c-4e82-bed6-76541ed021c4": {
           "tips": [
             null
@@ -11863,10 +12147,16 @@
             null
           ]
         },
+        "cc154748-5e22-45df-9986-66cabc550f17": {
+          "name": "Denník"
+        },
         "112b54ac-5751-4635-8275-23e6acc5947c": {
           "tips": [
             null
           ]
+        },
+        "a4878e11-13db-48d2-907c-c08afff5a2f1": {
+          "name": "Denník"
         },
         "1fcec88e-f931-4ece-95d2-966a9ce0d0eb": {
           "tips": [
@@ -11918,6 +12208,9 @@
         "7080a972-d63e-4299-8260-f1df2f234857": {
           "name": "Reflexia"
         },
+        "08bb2602-af7f-4afc-91ee-cc1b81b67264": {
+          "name": "Denník"
+        },
         "cb6b53c4-832b-4488-b7d8-e235460c633c": {
           "tips": [
             null
@@ -11942,6 +12235,12 @@
           "tips": [
             null
           ]
+        },
+        "197e10c6-aca0-4198-8c55-08b02638a517": {
+          "name": "Denník"
+        },
+        "21d25224-74a0-4aeb-9fdf-edbb7db6a111": {
+          "name": "Denník"
         },
         "b65a936d-eb48-4c6f-a0bf-751bb0829269": {
           "tips": [
@@ -11973,6 +12272,9 @@
             null
           ]
         },
+        "ff83c374-628a-4388-8d39-29a2a7030ab9": {
+          "name": "Denník"
+        },
         "501ce03f-e483-4e6d-bbc8-dc26c9a3a265": {
           "tips": [
             null
@@ -11998,12 +12300,16 @@
             null
           ]
         },
+        "8848bff8-2f99-42e1-b248-8c56fea22e1f": {
+          "name": "Denník"
+        },
         "400536e8-3e68-4e2e-a1cb-15abe6e78255": {
           "tips": [
             null
           ]
         },
         "1fd332bf-4d3a-4fb3-8585-11aa036c87ff": {
+          "name": "Denník",
           "tips": [
             null
           ]
@@ -12017,6 +12323,9 @@
           "tips": [
             null
           ]
+        },
+        "1d97d183-068b-4f5a-b823-e6b47f686a81": {
+          "name": "Denník"
         },
         "e4a6519f-4954-49e6-8914-83043cd945d7": {
           "tips": [
@@ -12046,12 +12355,16 @@
         "1f315b3a-9470-42be-95de-4b2327b9a338": {
           "name": "Reflexia"
         },
+        "cab8946a-af60-4101-9f3b-a6ea464f6601": {
+          "name": "Denník"
+        },
         "85bda82c-51d9-4b18-a377-4ecd142855c0": {
           "tips": [
             null
           ]
         },
         "8ff48983-ab23-42db-8ad0-d0d690bafad5": {
+          "name": "Denník",
           "tips": [
             null
           ]
@@ -12083,9 +12396,13 @@
           ]
         },
         "7c5c8f29-ab7a-4891-b135-182f4222a591": {
+          "name": "Denník",
           "tips": [
             "O tieto príbehy sa môžete podeliť so svojimi žiakmi, aby ste im pomohli pochopiť, aký vplyv bude mať umelá inteligencia na budúcnosť.\n\n-   [Plytvanie potravinami je vážny problém. Umelá inteligencia sa ho snaží vyriešiť](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n-   [Technológia umelej inteligencie dokáže identifikovať genetické poruchy z tváre človeka](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n-   [Ako startup s umelou inteligenciou navrhol nový liek len za 46 dní] [2]\n-   [Nástroj umelej inteligencie z MIT dokáže predpovedať rakovinu prsníka až o 5 rokov skôr] [3].\n-   [Armáda zvyšuje tempo vývoja samojazdiacich áut] [4]\n-   [San Francisco tvrdí, že bude využívať umelú inteligenciu na zníženie predpojatosti pri obviňovaní ľudí z trestných činov] [5].\n-   [Umelá inteligencia pomáha vedcom obnoviť starogrécke texty na kamenných doskách] [6]."
           ]
+        },
+        "7833e351-1d81-480d-bf06-6c70c8374072": {
+          "name": "Denník"
         },
         "375e017e-8620-4d95-a1f5-89fda22729ac": {
           "tips": [
@@ -12149,6 +12466,9 @@
             null
           ]
         },
+        "d4d92cde-d8c2-4f5d-89bb-6aac7ec2de59": {
+          "progression_name": "Kreslenie tvarov"
+        },
         "e82622fb-a1cf-45c8-a0f2-7929503c4bfe": {
           "tips": [
             null
@@ -12182,13 +12502,17 @@
         "935fb22e-ea0b-4c9b-92fc-61c39895fca9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Úvod do Game Labu"
         },
         "9663d7f7-168d-4f85-8f8a-cc2d6f86efa3": {
           "tips": [
             null
           ],
           "progression_name": "Video: Kreslenie v Game Labe - 1. časť"
+        },
+        "9b7caf32-0737-4382-be8b-66460fc06c42": {
+          "progression_name": "Používanie mriežky"
         },
         "c838ee44-b6fd-467e-8733-9b52d9727b08": {
           "tips": [
@@ -12245,6 +12569,9 @@
           ],
           "progression_name": "Výzvy"
         },
+        "0e7890f7-6b15-4d74-9d06-39410d94914b": {
+          "name": "Denník"
+        },
         "5485407f-b2b9-433e-86a4-6da5afa523f5": {
           "tips": [
             null
@@ -12261,7 +12588,8 @@
         "df26b7e2-cb48-40b2-b360-d0e9770b8802": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Predstavenie premenných"
         },
         "a14285ec-28bc-4b44-a63c-204c0034c19f": {
           "tips": [
@@ -12329,7 +12657,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Video: Predstavenie objeku Sprite"
+          "progression_name": "Video: Predstavenie sprajtov"
         },
         "31324d8c-8187-4b66-b0fe-ff74bbb6077e": {
           "progression_name": "Budovanie zručností"
@@ -12362,6 +12690,9 @@
           ],
           "progression_name": "Výzvy"
         },
+        "7fe0e935-1853-4c68-a62c-332e86840c6d": {
+          "name": "Denník"
+        },
         "5989291d-e9d4-4f14-bdf6-399b69b96cec": {
           "tips": [
             null
@@ -12389,6 +12720,9 @@
           "tips": [
             null
           ]
+        },
+        "bc610d8b-c45e-48e4-a5de-63a7f8bf5a3b": {
+          "name": "Denník"
         },
         "de715c3f-0860-4e19-acb1-ebcb230a19a8": {
           "progression_name": "Predpoveď"
@@ -12421,10 +12755,28 @@
             null
           ]
         },
+        "d4865d33-6382-4b57-b532-6949d5621973": {
+          "progression_name": "Scény so sprajtmi"
+        },
+        "9a593b91-9cd2-48ff-a733-2943aa535ceb": {
+          "progression_name": "Vytvor pozadie"
+        },
+        "853974f1-7e3b-4403-a475-5af28d960115": {
+          "progression_name": "Pridaj sprajty"
+        },
+        "c0fc532b-e6eb-4858-af5b-5032cd917616": {
+          "progression_name": "Pridaj text"
+        },
+        "53f44c86-807a-412c-a436-ed4235537ed4": {
+          "progression_name": "Skontroluj si scénu"
+        },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
             null
           ]
+        },
+        "4638c8d2-4376-4673-979e-66a86d260573": {
+          "name": "Denník"
         },
         "760b0216-8c5d-4954-ac35-fd42c527ac66": {
           "tips": [
@@ -12444,7 +12796,8 @@
         "18bcf449-d684-4e93-abbd-5af4e82d1e7b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Predstavujeme cyklus draw()"
         },
         "09ba5105-6934-4a31-9684-3e62192e7542": {
           "progression_name": "Objavovanie"
@@ -12507,6 +12860,9 @@
         "23d183b4-c898-41d3-b5c7-de7336534cd5": {
           "progression_name": "Výzvy"
         },
+        "a8fccbf5-3042-489e-97eb-19fb589b606d": {
+          "name": "Denník"
+        },
         "06cad4ef-4d60-42e4-829c-02fd3364c31e": {
           "tips": [
             null
@@ -12520,10 +12876,34 @@
             null
           ]
         },
+        "d77db66e-6e3a-4e3a-82df-2499a5ad0efd": {
+          "progression_name": "Príklad animovanej scény"
+        },
+        "3b4e9eb3-a29a-432e-b6dd-0c525bfaedf2": {
+          "progression_name": "Naplánuj si scénu"
+        },
+        "2e883502-c179-45a9-a313-6ec995831ed2": {
+          "progression_name": "Nakresli pozadie"
+        },
+        "68f06aee-a50d-4b3e-9323-16f4812eb23a": {
+          "progression_name": "Pridaj sprajty"
+        },
+        "6e3a6230-12e7-4b7f-90a7-ec8574647b3b": {
+          "progression_name": "Pridaj text"
+        },
+        "08bedf45-b2d1-4147-8479-22a9c5f20d51": {
+          "progression_name": "Pridaj pohyby"
+        },
+        "7de39108-1c8b-4602-9afe-cfde5d7f3ed4": {
+          "progression_name": "Skontroluj svoju animovanú scénu"
+        },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
             null
           ]
+        },
+        "8ad6136f-ee41-4b14-8866-2d4d8b0d9779": {
+          "name": "Denník"
         },
         "f54152bb-4d02-459d-beea-ceeb422be02a": {
           "tips": [
@@ -12551,6 +12931,9 @@
             null
           ],
           "progression_name": "Video: Logické výrazy"
+        },
+        "6eac26fe-a47a-4dbc-b225-c006efd6c418": {
+          "progression_name": "Rýchla kontrola"
         },
         "ba88e2d6-49b9-4e4b-a34f-3a7804ea1ce5": {
           "progression_name": "Budovanie zručností"
@@ -12650,21 +13033,28 @@
             null
           ]
         },
+        "e4ea6961-efa2-4cc3-806d-a32d96885abf": {
+          "name": "Denník"
+        },
         "09884749-ea7e-4df2-94f7-f73308052d81": {
           "tips": [
             null
           ]
         },
+        "00e65ea4-8a6e-408e-bb09-2fcb9f1a27d6": {
+          "progression_name": "Ukážková aplikácia: Interaktívna pohľadnica"
+        },
         "4b3c39d2-a62c-43c3-b5ae-048ef270624a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vytvor si interaktívnu pohľadnicu"
         },
         "1f6b91fb-f2a1-4585-bb33-4ede2232a20d": {
           "progression_name": "Projektová práca"
         },
         "187ab288-8997-4b05-90b2-993b1d29c6ba": {
-          "name": "Recenzia"
+          "name": "Vzájomné hodnotenie"
         },
         "4bfb9e2c-557b-464a-9a07-7190bc4dce87": {
           "tips": [
@@ -12713,6 +13103,7 @@
           "progression_name": "Výzvy"
         },
         "864f7c7f-a19d-4470-8d53-52e790f5e783": {
+          "name": "Denník",
           "tips": [
             null
           ]
@@ -12822,7 +13213,7 @@
           ]
         },
         "a7af5fa7-b9bc-4779-bf77-e349bd07d0f2": {
-          "progression_name": "Pohyb \"sprite\" objektu"
+          "progression_name": "Pohyb sprajtov"
         },
         "40b22769-f206-4725-b2f4-fd3f71c15101": {
           "tips": [
@@ -12849,6 +13240,9 @@
             null
           ],
           "progression_name": "Cvičenie"
+        },
+        "46206978-44fa-44f3-a4b3-746a30a86dce": {
+          "progression_name": "Rýchla kontrola"
         },
         "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
           "tips": [
@@ -12918,6 +13312,9 @@
         "3732107f-02cf-4117-941b-725824574e50": {
           "progression_name": "Výzvy"
         },
+        "193dc0bf-c474-4454-bb43-8a430a12634d": {
+          "name": "Denník"
+        },
         "7e64a6bf-73b9-4cd3-be58-402b3da57768": {
           "tips": [
             null
@@ -12942,6 +13339,9 @@
         "d1ae9072-39e7-4cd7-81eb-6434e0b2e39d": {
           "name": "Zdieľať"
         },
+        "a151ee83-294e-43ad-83ec-6047931fc83d": {
+          "name": "Denník"
+        },
         "2d58346e-e123-4477-8995-fefc448b3fe3": {
           "name": "Reflexia",
           "progression_name": "Reflexia"
@@ -12953,297 +13353,708 @@
           "progression_name": "Inštrukcie pre vypĺňanie dotazníka po kurze"
         },
         "beb5adaf-44d3-48fe-bb2d-99a2f55caeff": {
+          "description": "Na to, aby ste mohli počas roka kontrolovať prácu svojich žiakov a aby mali vaši žiaci prístup k online nástrojom a zdrojom, všetci musia byť v Code studiu zapísaní v rovnakej triede. Navyše platí, že na zobrazenie hodnotených úloh a kľúčov s odpoveďami musíte byť „overený učiteľ“.",
           "tips": [
-            null
+            "**Videonávody:** Nasledujúci postup je pokrytý aj v sérií [r how-to-videos/csd/2021], ktoré sú k dispozícii ná našej stránke s podpornými materiálmi pre učiteľov. Môže byť vhodné pozrieť si tieto videá ešte pred prečítaním nasledujúcich pokynov."
           ]
         },
+        "ad03dcc6-515c-4a86-bf14-d0bb13c89769": {
+          "description": "## Pred hodinou\n\n#### Uistite sa, že máte v Code studiu zaregistrovaný „overený“ učiteľský účet\n\nUčiteľský účet si v Code studiu môže vytvoriť ktokoľvek. Preto musíme mať zavedený postup na dodatočné overenie identity, aby žiaci nemali ľahký prístup k materiálom z kurzu Objavujeme informatiku, napríklad k hodnoteným úlohám, kľúčom s odpoveďami a podobne. Ak ste sa počas leta zúčastnili našej konferencie TeacherCon, tento typ prístupu by ste už mali mať schválený.\n\nAko skontrolovať, či už prístup máte:\n\n1.  Prejdite na stránku [Tematický celok č. 1 – prehľad kurzu](https://studio.code.org/s/csd1-2021)\n2.  Zobrazuje sa vám ako prvá vec v kurze úvodný dotazník?\n3.  Ak nie, vyplňte [tento formulár](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Upozorňujeme, že overenie učiteľského účtu môže trvať aj vyše dňa, tak formulár vyplňte dostatočne včas!\n\nAk _nemáte_ overený učiteľský účet, stále môžete vytvoriť triedu, no pred overením účtu zatiaľ nebudete môcť žiakom zadať úvodný dotazník.\n\n#### Vytvorenie triedy v Code studiu.\n\nNa vytvorenie triedy:\n\n1.  Prejdite na [domovskú stránku učiteľa](https://studio.code.org/home)\n2.  V sekcii 'Triedy' vyberte možnosť 'Vytvoriť triedu'\n3.  Vyberte možnosť 'Prihlasovanie e-mailom' \n4.  Do poskytnutého políčka zadajte názov triedy (napr. Objavujeme informatiku – 1. skupina), ročník, Kurz: 'Objavujeme informatiku', Aktuálny tematický celok: 'Tematický celok č. 1: Riešenie problémov' a kliknite 'Uložiť'\n5.  Po vytvorení triedy kliknite na jej názov\n6.  Na novej stránke uvidíte unikátnu URL adresu na pripojenie do triedy, ktorú budete môcť v škole rozdať žiakom. \n\nAk si chcete tento postup pozrieť na videu a dozvedieť sa viac o tom, ako sa zorientovať vo svojom účte na Code.org, prejdite do sekcie\n[r how-to-videos/csd/2021]"
+        },
+        "32772c7d-26fd-4352-b09c-6a7331500a70": {
+          "description": "## Na začiatku hodiny\n\n1.  Ak žiaci ešte nemajú povytvárané účty v Code studiu na adrese <https://studio.code.org>, povedzte im, aby si ich vytvorili.\n2.  Dajte žiakom URL adresu na pripojenie sa k triede a povedzte im, aby ju otvorili .\n    -   To, či sa žiaci k triede úspešne pripájajú, si môžete overiť na domovskej stránke učiteľa v sekcii „pokrok“ – stačí, keď budete priebežne obnovovať stránku. Žiaci by mali navrchu stránky vidieť malý zelený oznam s textom 'Pripojil(a) si sa do triedy ...' \n3.  Povedzte žiakom, aby na stránke [studio.code.org](https://studio.code.org) našli kurz Objavujeme informatiku, klikli na možnosť 'Zobraziť kurz' a potom prešli na tematický celok č. 1.\n\nKeď sa žiakom podarí dostať na stránku s prehľadom tematického celku č. 1, budú pripravení vyplniť úvodný dotazník pred kurzom Objavujeme informatiku."
+        },
         "1dca60be-eb7f-40ef-8b91-8ca231c1b14a": {
+          "description": "#### Dôležité! Dajte svojim žiakom za úlohu vyplniť úvodný dotazník pred kurzom Objavujeme informatiku!\n\nOdkaz na dotazník v Code studiu je prvá vec, ktorá sa žiakom zobrazí na stránke s prehľadom tematického celku č. 1. Ak chcete zabezpečiť, aby žiaci vypĺňali dotazník iba vtedy, keď je na to vhodný čas, kým ho neodomknete, bude uvedený ako „zamknutý“ a žiaci nebudú mať možnosť otvoriť ho. Článok [Ako žiakom zadať zamknutú hodnotenú úlohu](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys) vám poskytne viac podrobností o tom, ako dotazník odomknúť, keď už naň budú žiaci pripravení. Upozorňujeme, že pokyny na odomknutie hodnotenej úlohy a dotazníka sú rovnaké.    \n\n**Koľko času to zaberie?** Vyplnenie dotazníka žiakom zaberie istý čas – obsahuje približne 30 otázok. Môžete zvážiť, či nebude vhodné dať ho žiakom vyplniť na domácu úlohu.\n\n**Kedy mám dať žiakom dotazník na vyplnenie?** Keďže ide o úvodný dotazník pred kurzom, je dôležité, aby ho žiaci vyplnili čo najskôr ešte pred tým, ako sa počas hodín stihli venovať informatike, aby sme dokázali čo najpresnejšie odmerať, aké zmeny v postojoch a presvedčení žiakov náš kurz podporuje.",
           "tips": [
-            null
+            "-   Jedným z hlavných cieľov kurzu Objavujeme informatiku je zvýšiť záujem ľudí o informatiku.  \n\n-   Preto je _nesmierne dôležité_ vedieť, aké postoje a názory na informatiku majú žiaci _pred_ kurzom, aby sme dokázali zmerať, ako veľmi sa u nich tieto veci zmenili _po absolvovaní_ kurzu.\n\n-   Upozorňujeme, že tento dotazník je pre žiakov **anonymný**\n\n-   Vyplnenie dotazníka nám tiež pomáha zistiť, akým spôsobom by sme mohli významne zlepšiť naše učebné osnovy, aby fungovali čo najlepšie pre žiakov aj učiteľov.\n\n**Budeme vám veľmi vďační, ak nám pomôžetete zozbierať tieto cenné údaje. Názory vašich žiakov sú pre nás dôležité!**"
           ]
         },
         "1c951438-4727-4ea5-84d9-560f7dac9204": {
+          "name": "Príprava",
+          "description": "**Spýtajte sa:** Aké vlastnosti má mať človek, ktorý je dobrý v riešení problémov? Každý si pripraví tri odpovede, o ktoré sa podelí so svojou skupinou.",
           "tips": [
-            null
+            "**Vedenie denníka:** Vedenie denníka je v kurze Objavujeme informatiku dôležitou zručnosťou. Žiaci si môžu písať denník na samostatné papiere, do zápisníka alebo aj digitálne.\n\n**Prezentácie:** Prezentácie k tomuto tematickému celku sú k dispozícii v učebnom pláne v sekcii „Materiály pre učiteľov“. Systém vás vyzve, aby ste si uložili kópiu, čo stačí urobiť raz. Následne už budete môcť používať prezentácie ku všetkým lekciám v učebných osnovách."
           ]
         },
         "37d397d0-785f-4dc7-b172-2b51e5757ba3": {
+          "description": "**Diskutujte:** Dajte žiakom možnosť podeliť sa o svoje odpovede so zvyšnými členmi skupiny pri stole. Potom tých, ktorí s tým nemajú problém, požiadajte, aby sa o odpovede podelili s celou triedou. ",
           "tips": [
-            null
+            "Cieľom tejto úvodnej aktivity je dosiahnuť, aby sa žiaci ešte pred dnešnou aktivitou začali zamýšľať nad riešením problémov.  Vyzdvihujte odpovede, ktoré odkazujú na dôležité vlastnosti a schopnosti využívané pri práci v triede, napríklad spoluprácu, vytrvalosť či tvorivosť. Teraz tiež máte príležitosť podporiť v triede pozitívnu kultúru, ktorá motivuje žiakov zdieľať veci s ostatnými a navzájom sa podporovať pri rýchlom vymýšľaní nápadov prostredníctvom brainstormingu."
           ]
         },
+        "4ae4ed17-55d9-4ad4-837d-06cbcaa121d1": {
+          "description": "Výborné myšlienky! V informatike riešime problémy neustále, takže ku všetkým zručnostiam, ktoré ste vymenovali, sa budeme vracať nielen dnes, ale aj po zvyšok kurzu. V informatike platí, že problémy väčšinou riešime v tímoch. Dnes teda budete pracovať v tímoch na riešení zábavnej úlohy, pri ktorej nebudeme používať počítače. Kým budete na úlohe pracovať, zamyslite sa nad nasledujúcou otázkou."
+        },
+        "9eb792f3-b6ec-4e1b-a96e-f9bc4bda5247": {
+          "description": "**Ukážte:** Ukážte žiakom otázku dňa\n\n**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "621b00e1-d6b6-4060-b0db-8dee8c8ebb6a": {
+          "name": "Staviame hliníkovú loď",
+          "description": "**Vytvorte skupiny**: Rozdeľte žiakov do skupín po dvoch alebo troch."
+        },
+        "8f694c11-9713-491a-a965-360ddbc1033a": {
+          "description": "Dnes budeme stavať hliníkové loďky. Budete mať príležitosť postaviť aspoň dve loďky a pri každej ďalšej využiť predchádzajúce skúsenosti na to, aby ste ju postavili lepšie. Kým začneme, v skupine sa dohodnite a navrhnite svoju prvú loďku. Svoje nápady a možné nedostatky tohto prvého návrhu zapíšte do sprievodcu aktivitou."
+        },
         "5166952d-961b-4ba8-b379-c4101d84b4de": {
+          "description": "**Rozdajte**: Jednu kópiu sprievodcu aktivitou každej skupine.",
           "tips": [
-            null
+            "**Ako vytvárať kópie materiálov z Dokumentov Google:** Sprievodcovia aktivitami z týchto učebných osnov sú k dispozícii online v službe Dokumenty Google, ako dokumenty vytvorené vo Worde a vo formáte PDF. Ak chcete nejaký materiál zo služby Dokumenty Google upraviť alebo si vytvoriť vlastnú kópiu, môžete tak urobiť aj bez toho, aby ste museli žiadať o dodatočné povolenia. Stačí sa prihlásiť pomocou svojho účtu Google, kliknúť na „Súbor“ a vybrať z ponuky možnosť „Vytvoriť kópiu“. Svoju kópiu potom môžete zdieľať so žiakmi.\n\n![](https://images.code.org/ef58681bcfba8239ddf2a0b00b62efb6-Screenshot-2017-08-17-at-11.51.32-AM.png)"
           ]
         },
         "79ffacab-f428-4e4f-8f85-e9409b2e43a3": {
           "name": "Cieľ a pravidlá",
+          "description": "S celou triedou v sprievodcovi aktivitou prečítajte sekciu „Cieľ a pravidlá“ a zodpovedajte otázky.",
           "tips": [
-            null
+            "Pri tejto aktivite sa môže stať, že v triede bude mokro! V ideálnom prípade by mala mať každá skupina vlastné vedro alebo inú nádobu z vodou, v ktorej budú môcť žiaci testovať svoju loďku. V prípade potreby sa môže viacero skupín deliť o jednu nádobu, no je dôležité nastaviť si pravidlá na používanie takejto spoločnej nádoby. Pod každú nádobu umiestnite handru alebo uterák. Ak máte v triede obmedzené možnosti, zvážte, či by ste nevedeli so žiakmi túto aktivitu robiť na chodbe alebo v nejakom inom priestore, prípadne či nebude potrebné dohodnúť sa aj na dodatočných pravidlách."
           ]
         },
         "6470c3f3-0547-4d23-bede-dbac0704a029": {
           "name": "Vytvorte plán",
+          "description": "Dajte žiakom niekoľko minút na to, aby v skupine prediskutovali, ako budú pristupovať k navrhovaniu prvej loďky. Keď všetky skupiny zaznamenajú svoje nápady a možné nedostatky daného návrhhu, môžu si k vám prísť po hliníkovú fóliu a pustiť sa do stavby lode.",
           "tips": [
-            null
+            "Fóliu žiakom poskytnite až vtedy, keď vám odovzdajú svoj plán lode. Cieľom tohto postupu nie je spomaliť žiakov, ale dať im chvíľu na to, aby sa v krátkosti zamysleli nad možnými prístupmi k stavbe loďky. Ide o jeden zo spôsobov, ktorými táto aktivita odkazuje na krok plánovania, s ktorým sa žiaci budú stretávať pri nasledujúcich lekciách o riešení problémov."
           ]
         },
         "2b44b34b-743b-4698-bcf9-2b32d2172ac5": {
-          "name": "Otestujte loď"
+          "name": "Otestujte loď",
+          "description": "Keď sú skupiny pripravené, dajte žiakom za úlohu otestovať svoje loďky tým, že do nich budú postupne klásť jednocentové mince. Pripomeňte im pravidlá aktivity, najmä to, že po umiestnení loďky na vodu sa jej už nesmú dotýkať ani ju upravovať. Žiaci si do sprievodcu aktivitou zaznamenajú celkový počet jednocentoviek, ktoré je ich loďka schopná udržať."
         },
         "75e6b296-d238-4993-a9f3-2712d896e9c6": {
-          "name": "Vyhodnotenie a zlepšovanie"
+          "name": "Vyhodnotenie a zlepšovanie",
+          "description": "Tento prvý pokus o postavenie loďky slúžil len na to, aby ste sa s úlohou oboznámili. Každá skupina teraz bude mať za úlohu postaviť ďalšiu loďku a pozrieme sa na to, či sa vám podarí v porovnaní s predchádzajúcou loďkou zväčšiť počet mincí, ktoré udrží. Kým sa však pustíme do práce, pozrime sa na to, čo sme sa pri tejto skúšobnej stave lode dozvedeli."
         },
         "e1fdc61e-61b5-4b5d-b46a-62a26f7cca05": {
+          "description": "**Zdieľajte:** Dajte žiakom za úlohu podeliť sa o výsledky svojej prvej loďky so susednými skupinami. Povedzte skupinám, aby sa zamerali najmä na to, na čom ich loďka nakoniec zlyhala (napr. „nebola dostatočne hlboká“, „bola nestabilná“), a spravily krátky brainstorming nápadov, ako by dokázali tieto problémy vyriešiť.",
           "tips": [
-            null
+            "Hoci niektorí žiaci budú túto časť lekcie vnímať ako súťaž, pripomeňte skupinám, že ich cieľom je zlepšiť svoj vlastný návrh lode, nie súťažiť s ostatnými. Všetkých žiakov takto vyzývate k tomu, aby súťažili predovšetkým sami so sebou, nie s ostatnými."
           ]
+        },
+        "fd85159d-c1a1-484b-a5c6-fed3d2d0cc77": {
+          "description": "### Vytvorte plán\n\n**Povedzte:** Teraz, keď ste už mali príležitosť poučiť sa zo svojej prvej stavby lode, urobme tú istú aktivitu znova. Každá skupina najprv vytvorí nový plán. Rovnako ako minule, aj teraz si ho zaznamenajte do sprievodcu aktivitou, a keď bude hotový, prídem za vami a dám vám novú fóliu na stavbu lode.\n\n**Poskytujte podporu**: Keď sa budete prechádzať medzi skupinami, pýtajte sa žiakov, na čo sa zameriavali pri prerábaní svojho návrhu. Napríklad: „Akú vlastnosť vašej lode bolo treba zlepšiť najviac?“ „Aké nápady od iných skupín ste chceli zakomponovať do svojho návrhu?“ „Mali ste pocit, že svoju loď musíte úplne prerobiť, alebo ste sa rozhodli len pre menšie úpravy?“ \n\nKeď budú mať skupiny pripravené nové plány, dajte im novú hliníkovú fóliu na postavenie loďky.\n\n### Testovanie lode\n\nRovnako ako prvýkrát, aj teraz môžu skupiny testovať svoju loďku a zaznamenať výsledky do sprievodcu aktivitou."
         },
         "fc1bd727-4c35-4405-a14f-a713bcd7e532": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "**Premostenie**: Povedzte žiakom, aby sa vrátili na svoje miesta na reflexiu."
+        },
+        "62597c94-0e74-4478-b491-9427a83a7a2a": {
+          "name": "Diskusia o výzve",
+          "description": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "4a8474b0-c86b-4bc6-8813-1a47b5be09e8": {
+          "description": "**Spýtajte sa**: Pri tejto aktivite ste pracovali v tímoch. Čím práca v tíme túto aktivitu zjednodušila a čím ju, naopak, skomplikovala? Čo vašej skupine pomohlo prekonať tieto výzvy?"
         },
         "82378234-dc3a-4578-a458-e237d6b9b729": {
+          "description": "**Diskutujte**: Dajte žiakom čas na to, aby sa o svoje myšlienky podelili so zvyškom triedy.",
           "tips": [
-            null
+            "Žiaci si možno uvedomia, spolupráca im umožnila premyslieť si svoje nápady dôkladnejšie alebo rozdeliť prácu medzi viacerých ľudí. Keď budú žiaci spomínať komplikácie, ktoré im spolupráca spôsobila, dozrite na to, aby zároveň prichádzali aj s možnými riešeniami týchto problémov. Ak ste si v dynamike niektorej skupiny počas aktivity všimli nejaké problémy, môžete tento čas využiť na to, aby ste tieto potenciálne problémy nekonfliktným tónom spomenuli a pomohli žiakom vymyslieť stratégie, ako v budúcnosti spolupracovať efektívnejšie. Tieto nápady si dokonca môžete spísať ako pravidlá tímovej práce v danej triede."
           ]
+        },
+        "3d5ff4dc-c2df-4b01-852e-2a3449801046": {
+          "description": "Všetky vaše myšlienky k týmto otázkam boli výborné. V tejto triede budeme spoločnú prácu využívať často. Možno ste zvyknutí vnímať informatiku tak, že je iba o počítačoch, no informatika je v prvom rade o riešení problémov a to je aktivita, ktorej sa zvyčajne venujeme v tímoch. Mnohé ďalšie časti tejto aktivity, napríklad zlepšovanie návrhov či budovanie vecí, budú tiež dôležitou súčasťou tohto kurzu. Dúfam, že sa na tohtoročné aktivity tešíte. Zajtra sa viac zahĺbime do samotného riešenia problémov."
+        },
+        "a46854b4-0c89-445c-bb74-76b861c1f7a9": {
+          "name": "Brainstorming problémov",
+          "description": "**Povedzte:** Výraz „problém“ používame v množstve rôznych situácií. Napríklad môžem povedať, že mám za úlohu vyriešiť nejaký problém, že mám problém so svojím bratom alebo že mám problém s autom, pričom v každom z týchto slovných spojení výraz „problém“ znamená niečo iné. Chcem, aby ste si na papier spísali čo najviac rôznych typov problémov a pripravili sa na to, aby ste sa o ne mohli podeliť so zvyškom triedy."
         },
         "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "description": "**Diskutujte:** Žiaci by mali venovať niekoľko minút tomu, aby si v tichosti spísať svoje nápady. Potom ich vyzvite, aby sa o svoje nápady podelili so susedom. Nakoniec si nápady prejdite v rámci celej triedy a vytvorte zoznam. Všetky potenciálne problémy, ktoré žiakom napadli, zaznamenajte na tabuli alebo na iné miesto, kde budú jasne viditeľné.",
           "tips": [
-            null,
-            null
+            "**Vytvorte kategórie:** Počas tohto rozhovoru sa môžete rozhodnúť, že problémy s pomocou žiakov zatriedite do väčších kategórií. Ak by ste napríklad mali návrhy „hľadanie kľúčov“ a „hľadanie domácej úlohy“, môžete navrhnúť všeobecnejšiu kategóriu „hľadanie stratených vecí“.\n\n**Problémy z reálneho sveta:** Skúste žiakov naviesť tak, aby nevymenovávali príliš veľa problémov týkajúcich sa domácich úloh či školských predmetov – povedzte im, že vás zaujímajú skôr problémy z reálneho života, napríklad riešenie sporov, robenie veľkých rozhodnutí, opravovanie alebo hľadanie vecí, dostávanie sa z bodu A do bodu B atď.",
+            "**Cieľ:** Cieľom tohto rozhovoru je dokázať, že problémy a ich riešenie sú veci, ktoré patria do každodenného života. Využite tento brainstorming na to, aby ste na tabuľu vypísali čo najviac rôznych druhov problémov. Informácie spísané na tabuli sa žiakom zídu neskôr, keď sa ich budete pýtať, aby subjektívne vyhodnotili, v riešení akého typu problému sú výnimočne dobrí."
           ]
+        },
+        "889b6e82-6222-44d5-a7e8-d6bea339eb73": {
+          "description": "Je zrejmé, že s problémami sa stretávame v rôznych oblastiach nášho života. Podľa toho, v akom kontexte sa používa, môže mať slovo „problém“ rôzne významy. Dnes sa pozrieme na to, aké kroky môžeme podniknúť na riešenie rôznych typov problémov."
+        },
+        "1b5c295f-10f1-469e-8cbf-d16b7c19056f": {
+          "description": "**Otázka dňa: Aké bežné kroky môžeme použiť na riešenie rôznych typov problémov?**"
+        },
+        "6a21930f-10d3-4f81-9c1d-8fd69681c1ef": {
+          "description": "Nejaké problémy riešime každú chvíľu, no väčšinou sa nad tým ani len nezamýšľame. Ak má človek stratégiu alebo postup, ako pristupovať k rôznym typom problémov, môže byť pri riešení problémov pozornejší, tvorivejší a úspešnejší."
+        },
+        "9842f2ee-96b6-4407-9dcb-379b048173c3": {
+          "description": "**Rozdajte**: Rozdajte žiakom kópie sprievodcu aktivitou."
         },
         "23f003b6-2c1b-4e88-a343-f77714a50d89": {
-          "name": "Proces riešenia problémov",
+          "name": "Postup riešenia problémov",
+          "description": "**Video:** Pozrite si v Code studiu video Proces riešenia problémov\n\n**Otázky na zamyslenie k videu:**\n\n-   Ako sa vám v predchádzajúcej lekcii darilo použiť postup riešenia problémov?\n-   Ako by ste vedeli tento proces využiť na riešenie problému v bežnom živote?",
           "tips": [
-            null
+            "Prvá otázka diskusie je súčasťou hlavnej aktivity, ktorej sa budú žiaci venovať po zvyšok hodiny. Žiaci by sa mali v skupinách zamyslieť nad konkrétnymi vecami, ktoré robili a ktoré zodpovedajú jednotlivým krokom postupu. Cieľom tejto diskusie a zapojenia žiakov do spoločnej aktivity je dosiahnuť, aby boli abstraktné kroky pre žiakov konkrétnejšie a uchopiteľnejšie.\nDruhá otázka dáva žiakom príležitosť rozšíriť svoje chápanie postupu aj o iný problém a uvedomiť si, ako môžu jednotlivé kroky vyzerať v rôznych oblastiach. Cieľom tejto diskusie je zabezpečiť, aby žiaci chápali postup dostatočne všeobecne a mohli ho aplikovať na širšiu škálu problémov, pretože tento postup sa bude využívať v rôznych oblastiach počas celého kurzu."
           ],
-          "progression_name": "Video: Proces riešenia problémov"
+          "progression_name": "Video: Postup riešenia problémov"
+        },
+        "9541def4-ab55-4976-8e32-5c267d62e229": {
+          "description": "Nahlas prečítajte štyri kroky, z ktorých postup pozostáva. Týmto si postup predstavíte a prejdete spolu so žiakmi. Ak majú žiaci k postupu nejaké otázky, zodpovedajte ich alebo ich prediskutujte. Inak môžete prejsť na vypĺňanie prvej časti sprievodcu aktivitou."
+        },
+        "aab191bf-3a2c-4f58-86d1-bfa34cf48052": {
+          "name": "Ako to vyzerá",
+          "description": "Dajte žiakom za úlohu vypracovať prvú časť sprievodcu aktivitou – do jednotlivých krokov v postupe riešenia problémov doplnia kroky tej aktivity, ktorej sa venovali v predchádzajúcej lekcii."
         },
         "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "description": "**Diskutujte:** Keď žiaci vyplnia prvú časť sprievodcu aktivitou, povedzte im, aby sa o svoje odpovede podelili so susedmi a následne aj s celou triedou.",
           "tips": [
-            null
+            "**Cieľ:** Najmä pri tomto úvodnom rozhovore je dôležité, aby žiaci porozumeli významu každého zo štvorice krokov. Keďže niektoré kroky môžu byť občas definované dvomi rôznymi spôsobmi, využite túto príležitosť porozprávať sa so žiakmi o tejto nejednoznačnosti. Vašou úlohou je využiť spoločný zážitok zo stavania hliníkových lodiek na to, aby žiaci postupu porozumeli. Tu sme pre vás pripravili možný súbor krokov, ktoré by vaši žiaci mohli vymenovať. \n\n**Definuj:** Porozumenie problému pri zadaní; vyhodnotenie dostupných zdrojov; hľadanie problémov s pôvodným návrhom pred ich opravou; hľadanie problémov v návrhoch iných skupín\n\n**Priprav:** Rozhovor s ostatnými členmi skupiny o ďalšom postupe; vymýšľanie rôznych prístupov; predvídanie možných chýb.\n\n**Vyskúšaj:** Samotné stavanie lodiek; testovanie\n\n**Vyhodnoť:** Vyhodnocovanie výsledkov testu; porovnávanie výsledkov s predpovedanými hodnotami; diskutovanie s ostatnými členmi skupiny o tom, prečo sa loďka nakoniec potopila."
           ]
+        },
+        "9071b1c1-0031-4e52-b8f6-a20e311f95c1": {
+          "name": "Problém, ktorý vieš riešiť dobre",
+          "description": "Dajte žiakom za úlohu vybrať si jeden typ problému, ktorý podľa svojich vlastných pocitov vedia riešiť veľmi dobre. Pri vymýšľaní konkrétneho typu problému si žiaci môžu pomôcť zoznamom problémov, ktorý ste na začiatku hodiny napísali na tabuľu. Opäť im dajte niekoľko minút na to, aby si v tichosti zaznačili kroky postupu a potom sa o nich porozprávali so svojím susedom."
         },
         "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "description": "**Diskutujte:** Dajte žiakom za úlohu podeliť sa o to, čo napísali, so svojím susedom, a potom znova v rámci celej triedy diskutujte so žiakmi o tom, o akých veciach sa vo dvojiciach so susedmi rozprávali. Požiadajte žiakov, aby rozprávali o konkrétnych krokoch, pomocou ktorých riešia vybraný problém. Popri tom však poukazujte aj na prípady, keď sa podobné typy stratégií opakujú u rôznych žiakov.",
           "tips": [
-            null
+            "**Cieľ:** Všetky tri diskusie majú za cieľ upevniť u žiakov vedomosti o význame štyroch krokov v postupe riešenia problémov. V tejto diskusii sa môžete viac obracať na iných žiakov, ktorí si môžu navzájom overovať, či spomínané stratégie a kroky vyhovujú definíciám štyroch krokov uvedeným v sprievodcovi aktivitou."
           ]
+        },
+        "7048cb12-62e3-4d97-a12a-7d75befc7d07": {
+          "name": "Problém, v riešení ktorého sa ty a tvoj spolužiak chcete zlepšiť",
+          "description": "Rozdeľte žiakov do dvojíc a dajte im za úlohu vyplniť poslednú časť sprievodcu aktivitou. Budú si musieť vybrať typ problému, v riešení ktorého sa chcú zlepšiť obaja členovia dvojice, a potom spísať kroky v rámci postupu riešenia problémov, ktoré by im daní problém pomohli vyriešiť.\n\n**Diskutujte:** Ešte posledný raz požiadajte žiakov, aby sa podelili o nápady, ako by postup riešenia problémov využili na riešenie problému, s ktorým sú menej oboznámení."
         },
         "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "name": "Vytvorte plagáty so zoznamom krokov",
+          "description": "**Rozdajte:** Dajte každej skupine list plagátového papiera.",
           "tips": [
-            null
+            "Túto aktivitu môžete robiť aj digitálne. Otvorte si naše [fórum](https://forum.code.org/c/csd) a pozrite sa, ako iní učitelia túto aktivitu prispôsobili pre svoje triedy, alebo sa s nimi podeľte o svoje vlastné nápady na úpravy. "
           ]
+        },
+        "6c98d6b3-a1ef-45a7-afb1-4d6fa842e50d": {
+          "description": "**Povedzte:** „V aktuálnych dvojiciach si vyberte jeden z problémov, na ktorých ste dnes pracovali, a na plagát rozpíšte, ako sa dá tento problém vyriešiť pomocou postupu riešenia problémov.“\n\n**Monitorovanie:** Kým žiaci pracujú na svojich plagátoch, pýtajte sa ich na analyzované problémy a na to, ako jednotlivé kroky ich navrhovaného riešenia súvisia so všeobecnými krokmi v postupe riešenia problémov.\n\n**Zdieľajte:** Dajte žiakom možnosť ukázať svoje plagáty zvyšku triedy."
+        },
+        "5c0ec90c-60b9-463c-a278-5a3c5104d0be": {
+          "description": "**Otázka dňa: Aké bežné kroky môžeme použiť na riešenie rôznych typov problémov?**"
         },
         "03418848-4f2d-4f45-8f25-38012b191a2a": {
+          "description": "**Povedzte:** Dnes sme si spomenuli rôzne typy problémov. Všetky však využívali náš postup riešenia problémov. Pri každom kroku v tomto postupe skúste vymyslieť jednu všeobecnú radu, ktorá by bola užitočná nezávisle od toho, aký problém človek rieši.",
           "tips": [
-            null
+            "Kontrolujte, či žiaci pri každom kroku postupu vymýšľajú účinné stratégie. Ich stratégie by mali byť všeobecné – nemali by sa vzťahovať na konkrétne problémy, ktoré sa žiaci rozhodli riešiť."
           ]
+        },
+        "ae99a30d-0767-4d0b-9f6d-49a26f879d3d": {
+          "description": "Na začiatku lekcie som povedal(a), že formálny postup riešenia problémov nám pomôže s riešením rôznych typov problémov. Dnes sme sa dozvedeli viac o tom, ako tento postup vyzerá v rozličných situáciách z reálneho života. Zajtra začneme tento postup využívať v praxi, aby sme videli, ako v skutočnosti funguje."
+        },
+        "640e6f56-0797-4fde-a056-1b37b27d7e46": {
+          "name": "Diskusia o článku",
+          "description": "Prečítajte si článok [You Are Solving the Wrong Problem](https://uxmag.com/articles/you-are-solving-the-wrong-problem) (Riešite nesprávne problémy)\n\n1.  Čo bolo na tomto článku zaujímavé?\n2.  Na aké aktuálne udalosti by sme sa podľa vás mali pozrieť optikou tohto postupu riešenia problémov? Prečo?"
+        },
+        "3410a6f3-94eb-4404-a14b-17cd5a218c65": {
+          "description": "**Zapíšte si do denníka:** Skúste vymyslieť najsrandovnejší problém, s ktorým by nám vedel postup riešenia problémov pomôcť. Buďte pripravení zdôvodniť, ako aby sa využívali jednotlivé kroky postupu."
         },
         "10aec291-0c45-453c-8609-5386783ff20e": {
+          "description": "Dajte žiakom možnosť podeliť sa o svoje nápady samostatne.",
           "tips": [
-            null
+            "Cieľom tejto diskusie je zopakovať si postup riešenia problémov a poukázať na to, koľko rôznych typov problémov existuje. Motivujte žiakov k tomu, aby k úlohe pristupovali tvorivo a zabavili sa pri vymýšľaní rôznych „problémov“, ktoré by mohli riešiť."
           ]
+        },
+        "dc8e60ec-e4b4-4188-8064-085405ab0268": {
+          "description": "Pri takejto širokej škále problémov a stratégií je dôležité vedieť sa zamyslieť nad tým, ako čo najlepšie využiť postup riešenia problémov. Dnes sa pozrieme na rôzne typy problémov, porozprávame sa o tom, čím sa od seba odlišujú, a zamyslíme sa nad tým, ako nám postup riešenia problémov pomohol vyriešiť ich."
+        },
+        "199d8062-4c1e-4b7c-8c92-8aea7a3fcc21": {
+          "description": "**Otázka dňa: Ako môžeme postup riešenia problémov využiť pri rôznych druhoch problémov?**"
+        },
+        "c71aa4f8-ddb7-46b0-b4a8-c6446a08a66a": {
+          "description": "**Skupiny:** Pri všetkých troch aktivitách by žiaci mali pracovať v skupinách, aj ak si výsledky zaznačujú jednotlivo. Najlšpie by mali fungovať skupiny 2 – 4 žiakov.\n\n**Rozdajte:** Rozdajte žiakom sprievodcu aktivitou – každý by mal mať vlastnú kópiu. Na začiatku je ideálne položiť sprievodcov dole hlavou, aby žiaci nevideli osemsmerovku.\n\n## Riešenie problémov"
         },
         "11b483ae-c3f6-467d-85c3-9427203e2488": {
+          "description": "#### Osemsmerovka\n\nKeď sú už žiaci rozdelení do dvojíc, povedzte im, aby obrátili svojho sprievodcu aktivitou a pustili sa do prvej úlohy. Ich úlohou bude hľadať 8-písmenové slová na hracej ploche s veľkosťou 20×20 písmen.\n\n**Monitorovanie:** Prechádzajte sa po triede a kontrolujte, ako žiaci riešia úlohu. Dozrite na to, aby si skupiny navzájom nepomáhali s hľadaním slov. Motivujte ich k tomu, aby sa zamysleli, ako by im s riešením úlohy pomohlo, keby si najprv spravili plán.",
           "tips": [
-            null
+            "**Využívanie postupu riešenia problémov:** Táto osemsmerovka môže trvať aj niekoľko minút, najmä ak žiaci nemajú na jej riešenie žiadnu stratégiu. Pripomeňte im, že jeden krok postupu je pripraviť sa ešte pred tým, než sa pustia do hľadania slov.\n\n**Kľúč s odpoveďami:** Overení učitelia nájdu medzi zdrojmi v tomto pláne hodiny aj kľúč s odpoveďami. Ak medzi zdrojmi nevidíte uvedený kľúč s odpoveďami, [postupujte podľa týchto krokov](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-), aby ste sa stali overeným učiteľom."
           ]
+        },
+        "7eb30cac-9fa4-41f0-8a0a-08bae8e43ef0": {
+          "description": "Keď už všetky skupiny skončili, opäť sa obráťte na celú triedu. Povedzte žiakom, aby prešli na poslednú stránku v sprievodcovi aktivitou. Tam nájdu tabuľku, kde môžu zaznamenať, ako sa im úloha riešila. Zapíšu do tabuľky, ktoré časti riešenia tohto problému zodpovedajú jednotlivým krokom v postupe riešenia problémov.\n\n**Diskutujte:** V krátkosti so žiakmi prediskutujte, ktoré časti aktivity podľa nich zodpovedajú jednotlivým krokom v postupe riešenia problémov. V nasledujúcom zozname nájdete myšlienky, ktoré môžete spomenúť, keď sa už žiaci podelili o svoje myšlienky.\n\n-   **Definuj**: Tento problém bol už na začiatku veľmi dobre definovaný. Niektoré problémy však nebudú.\n-   **Priprav**: Ak si v rámci tímu vytvoríte plán (napríklad rozdelenie slovíčok medzi členov tímu, rozdelenie hracej plochy na menšie časti a ich pridelenie jednotlivým členom tímu, dôsledný prístup k hľadaniu slovíčok), riešenie tohto problému je oveľa jednoduchšie než pri náhodnom hľadaní slovíčok.\n-   **Vyskúšaj**: S uskutočnením plánu nám pomáha trpezlivosť a vytrvalosť.\n-   **Vyhodnoť**: Ak pôvodný plán nefunguje, môžeme ho prehodnotiť a vytvoriť si nový."
         },
         "d7edf595-a13a-4992-b963-58a034f34112": {
+          "description": "#### Hostia na narodeninovej oslave\n\nPrejdite na úlohu, ktorá sa zameriava na hostí na narodeninovej oslave. Žiaci môžu aj túto úlohu riešiť v skupinách, no nemali by sa o svoje riešenia deliť s inými skupinami.\n\n**Monitorovanie:** Tak ako predtým, prechádzajte sa po triede a pozorujte, aké typy stratégií jednotlivé skupiny využívajú. Ak sa niektorá skupina zasekne, pripomeňte jej členom, aby využívali kroky z postupu riešenia problémov.",
           "tips": [
-            null
+            "**Využívanie postupu riešenia problémov:** Táto úloha je náročná najmä vtedy, ak si nedostatočne dobre zadefinujú problém. Ak sa na problém pozrú len tak, ich úlohou je náhodne hádať a kontrolovať, kde usadiť jednotlivých ľudí, až kým nenájdu riešenie. Je však oveľa jednoduchšie, ak si problém zadefinujú ako „usádzanie skupín kamarátov“. Ak vytvoria skupiny 2 alebo 3 ľudí, ktorí budú určite chcieť sedieť spolu, potom im už stačí iba zistiť, ktoré skupiny nemôžu sedieť pri jednom stole \n\nToto nie je jediný možný prístup k danému problému, takže by ste ho takto žiakom určite nemali prezentovať. Práve naopak, motivujte žiakov k tomu, aby sa spolu zamysleli nad tým, aké podmienky musia byť splnené na konci úlohy a či by im s tým nemohli pomôcť aj iné prístupy.\n\n**Kreslenie obrázkov:** Žiakom sa pravdepodobne bude lepšie dariť, keď si budú kresliť obrázky. Môžete žiakom povedať, aby na vymýšľanie nápadov využívali svoje denníky alebo škrabací papier.\n\n**Rozšírenie problému:** Ak jedna skupina skončí výrazne skôr než ostatné, môžete im dať čistý papier a dať im za úlohu vyriešiť problém znova, no predtým im pridajte nejakú novú podmienku (napr. v riešení žiakov vyberte dvoch ľudí sediacich pri jednom stole a spýtajte sa, či problém zvládnu vyriešiť aj po tom, čo sa títo dvaja hostia pohádali.)"
           ]
+        },
+        "33f346e7-e10d-454f-b2a2-58f1b78f5c4c": {
+          "description": "Keď už skupiny vyriešili úlohu, povedzte žiakom, aby prešli na poslednú stránku v sprievodcovi aktivitou. Tam si zapíšu, ako pri riešení tejto úlohy využívali postup riešenia problémov.\n\n**Diskutujte:** V krátkosti so žiakmi prediskutujte, ktoré časti aktivity podľa nich zodpovedajú jednotlivým krokom v postupe riešenia problémov. V nasledujúcom zozname nájdete myšlienky, ktoré môžete spomenúť, keď sa už žiaci podelili o svoje myšlienky.\n\n-   **Definuj**: Na prvý pohľad sa zdá, že problém spočíva v usádzaní jednotlivcov. Ak sa naň však pozrieme ako na usádzanie skupín ľudí, ktoré budú pravdepodobne chcieť sedieť spolu, stačí nám vziať do úvahy oveľa menej možností.\n-   **Priprav**: Spýtajte sa žiakov, aké typy stratégií zvažovali pred tým, než začali ľudí usádzať na konkrétne miesta.\n-   **Vyskúšaj**: Rovnako ako pri predchádzajúcej úlohe, s uskutočnením plánu nám pomáha trpezlivosť a vytrvalosť.\n-   **Vyhodnoť**: Ak úvodné stratégie nefungujú, skupiny ich môžu prehodnotiť a skúsiť štruktúrovanejší prístup."
         },
         "7accdcb0-3787-4a97-9ac5-4044890f8c12": {
+          "description": "#### Prerobte si triedu\n\nPrejdite s triedou na úlohu zameranú na prerábanie triedy. Každý člen skupiny bude samostatne navrhovať plán rozloženia triedy spĺňajúci podmienky, ktoré si v tíme spoločne určili. Dajte žiakom čas na to, aby si vybrali ciele, podľa ktorých budú plánovať rozloženie triedy. Napríklad môžu chcieť presunúť niektoré existujúce veci, pridať nové predmety, využiť pomoc konkrétnych ľudí atď.\n\n**Monitorovanie:** Keď si už skupiny určili ciele, aktivitu robia splnia tým, že vytvoria plán na prerobenie triedy. Na túto časť aktivity im dajte časový limit (napr. 15 minút), aby sa v prvom rade sústredili na kľúčové súčasti ich plánu a nestrácali príliš veľa času jeho zdokonaľovaním. Kľúčové informácie o pláne by si mali zaznamenať do sprievodcu aktivitou.",
           "tips": [
-            null
+            "**Využívanie postupu riešenia problémov:** Táto úloha je cielene navrhnutá tak, aby mala veľmi otvorené možnosti riešenia. Kritériá na vyhodnotenie úspešného splnenia úlohy si dokonca vytvárajú samotní žiaci. Táto úloha najlepšie zo všetkých troch ilustruje všetky štyri kroky v postupe riešenia problémov a cielenejšie žiakov prevedie fázami „definuj“, „priprav“, „vyskúšaj“ a „vyhodnoť“.\n\n**Poskytnite nápady na ďalšie zdroje:** Žiaci môžu vymýšľať nápady a možné rozloženia triedy samostatne, no ak sa v nejakom bode zaseknú, odkážte ich aj na ďalšie zdroje inšpirácie, napríklad vyhľadávače webových stránok či obrázkov. Dajte im možnosť prezrieť si na internete iné triedy.\n\n**Kedy skončiť:** Riešenie tejto úlohy by pokojne mohlo zabrať aj celú 45-minútovú vyučovaciu hodinu. Vopred preto žiakov informujte, že na jednotlivé časti aktivity majú časový limit, a motivujte ich k tomu, aby sa zamysleli, ako by postup riešenia problémov zlepšil ich riešenie, keby mali viac času na vyhodnocovanie a ďalšie pokusy."
           ]
+        },
+        "b151b93c-fa73-40a3-8a67-aeedab7f1dc0": {
+          "description": "V rámci celej triedy požiadajte jednotlivé skupiny, aby ostatným porozprávali o svojich úvodných plánoch. Spolužiaci im potom poskytnú spätnú väzbu, ktorú si môžu zaznamenať v sprievodcovi aktivitou.\n\nKeď už mali všetky ostatné skupiny možnosť vyjadriť sa, čo sa im na plánoch ich spolužiakov páčilo alebo nepáčilo, pôvodná skupina môže ich návrhy vyhodnotiť a zlepšiť na základe nich svoj plán. Sú ešte nejaké ďalšie veci, ktoré by chceli spraviť? Majú teraz nejaké nové ciele? Dajte im niekoľko minút na to, aby svoj plán zlepšili a rozhodli sa, ako bude vyzerať ich finálna verzia.\n\nV rámci celej triedy povedzte žiakom, aby si do sprievodcu aktivitou zaznamenali jednotlivé kroky z postupu riešenia problémov, ktoré využívali.\n\n**Diskutujte:** V krátkosti so žiakmi prediskutujte, ktoré časti aktivity podľa nich zodpovedajú jednotlivým krokom v postupe riešenia problémov. V nasledujúcom zozname nájdete myšlienky, ktoré môžete spomenúť, keď sa už žiaci podelili o svoje myšlienky.\n\n-   **Definuj**: Tento problém nebol dobre zadefinovaný. Žiaci sa museli sami rozhodnúť, ako podľa nich vyzerá dobre navrhnutá trieda, pričom táto vízia sa mohla počas aktivity pokojne zmeniť.\n-   **Priprav**: Je užitočné čo najviac si zúžiť zoznam možných rozložení triedy. Môžete žiakom poukázať na to, že celá táto aktivita je vlastne ukážkou prípravnej fázy. Kým niektoré rozloženia nebudú dávať zmysel, iné budú fungovať lepšie, takže v tejto fáze možno budete musieť tiež plánovať.\n-   **Vyskúšaj**: Rovnako ako pri predchádzajúcej úlohe, s uskutočnením plánu nám pomáha trpezlivosť a vytrvalosť.\n-   **Vyhodnoť**: V tejto úlohe fáza vyhodnocovania prebiehala predovšetkým v podobe spätnej väzby od spolužiakov. Niektoré rozloženia nakoniec pre ostatných členov skupiny možno nebudú až také zaujímavé. Iné sú zábavné, ale vyžadujú si priveľa presúvania alebo priveľa nových vecí. Spätná väzba je dôležitou súčasťou vyhodnocovacieho kroku, a pri skupinovej práci to platí dvojnásobne."
         },
         "555a0b86-988d-4c75-ad9a-e3fc127d44c3": {
+          "name": "Ako funguje postup riešenia problémov",
+          "description": "**Povedzte:** Práve ste vyriešili niekoľko veľmi odlišných problémov. Porozprávajte sa so spolužiakmi sediacimi pri tom istom stole a prejdite si poznámky, ktoré ste si pri jednotlivých úlohách zapísali. Pripravte si odpovede na nasledujúce otázky:\n\n-   Aký je účel jednotlivých krokov v postupe riešenia problémov? Prečo je daný krok súčasťou postupu?\n-   Existujú nejaké typy problémov, pri riešení ktorých je postup riešenia problémov výnimočne užitočný?\n\n**Diskutujte:** Keď žiaci pri stoloch venovali niekoľko minút rozoberaniu svojich odpovedí, vyzvite žiakov, aby pred celou triedou zdôvodnili, prečo jednotlivé kroky postupu vybrali. Keď ste už s triedou rozobrali každý krok postupu, prejdite na druhú otázku. Táto otázka môže mať mnoho rôznych odpovedí, pričom by ste mali dať žiakom priestor na to, aby sa podelili o svoje myšlienky a skúsenosti. Ak sa počas tejto diskusie nespomenú, na konci žiakom spomeňte niektoré alebo všetky myšlienky uvedené v sekcii Cieľ diskusie.",
           "tips": [
-            null
+            "**Cieľ:** Vaši žiaci si už vyskúšali postup riešenia problémov na rozličných problémoch. Pomôžte im spraviť súhrn poznámok, ktoré si zapisovali, aby lepšie pochopili úlohy jednotlivých krokov v postupe riešenia problémov a jeho hodnotu vo všeobecnosti. Nižšie nájdete vzorový súbor záverov, no kým žiakom ponúknete svoje myšlienky, dajte im žiakom príležitosť podeliť sa o tie ich.\n\n**Definuj:** Ak si problém nezadefinujeme, možno vyriešime nesprávny problém, nebudeme vedieť, kde začať, alebo nebudeme vedieť, kedy treba skončiť\n\n**Priprav:** Aj dobre zadefinované problémy zvyčajne umožňujú množstvo rôznych prístupov. Jednotlivé pokusy budú mať väčšiu šancu na úspech, ak sa najprv zamyslíme nad našimi možnosťami a skúsime predvídať komplikácie.\n\n**Vyskúšaj:** Ak sa nebudeme snažiť, nikam sa nedostaneme. Kým má náš plán ešte stále nejakú šancu na úspech, je dôležité byť vytrvalý a trpezlivý.\n\n**Vyhodnoť:** Je pravdepodobné, že na prvý pokus sa nám nepodarí problém vyriešiť alebo zistíme, že existuje lepšie riešenie. Učme sa z našich predchádzajúcich pokusov a buďme pripravení pustiť sa do postupu odznova.\n\n**Postup riešenia problémov:** Hoci si možno všimnete, že postup riešenia problémov využívate aj pri malých či jednoduchých úlohách, je nesmierne užitočný najmä pri veľkých, zložitých a zle zadefinovaných problémoch, ako aj pri takých, ktoré majú otvorené riešenie. Pomôže vám približovať sa k riešeniu vtedy, keď nie je jasné, ako treba postupovať."
           ]
+        },
+        "8e8798ce-2ba6-437b-bc5f-6e6dc5e6a940": {
+          "description": "**Otázka dňa: Ako môžeme postup riešenia problémov využiť pri rôznych druhoch problémov?**"
+        },
+        "b13a8d4e-7630-4937-a70c-4dda58710460": {
+          "description": "**Zapíšte si do denníka:** Postup riešenia problémov je užitočný najmä vtedy, keď narazíme na zle zadefinovaný problém. Dnes sme videli, že využívať postup riešenia problémov je bez dobre zadefinovaného problému náročné. Aké otázky alebo stratégie môžeme využiť na to, aby sme lepšie pochopili a zadefinovali problémy, kým sa pustíme do ich riešenia?"
         },
         "7e307eaa-f893-47b4-94ce-38801b41592a": {
+          "description": "**Diskutujte:** Povedzte žiakom, aby sa rýchlo porozprávali v skupinách, a potom zdieľajte nápady v rámci celej triedy.",
           "tips": [
-            null
+            "Existujte množstvo rôznych stratégií, ktoré nám môžu pomôcť zadefinovať problémy. Niektoré z nich sú uvedené v sprievodcovi aktivitou k predchádzajúcej lekcii. Užitočné môžu byť napríklad nasledujúce otázky:\n\n-   Koho konkrétne tento problém ovplyvňuje? Čo konkrétne potrebujú? V akých situáciách?\n-   Prečo tento problém existuje? (A prečo existuje TEN problém?) Opakujte otázku, až kým sa nedostanete k jadru problému.\n-   Ako vieme zistiť, či už je problém vyriešený? Čo vieme pozorovať alebo merať?"
           ]
+        },
+        "6b42302a-c520-4c7c-ba26-b400a5da88e7": {
+          "description": "Dobrá práca, všetci! Teraz už viete veľa o postupe riešenia problémov. Tento nástroj pre vás bude nesmierne užitočný, pretože ho budeme počas roka opakovane využívať, keď sa budeme čoraz hlbšie ponárať do sveta informatiky."
+        },
+        "4436ad56-59ce-4b60-8e8e-bd0c9f80626a": {
+          "name": "Počítače v minulosti a dnes",
+          "description": "![](https://curriculum.code.org/media/uploads/first-computer.jpg)"
+        },
+        "387404c2-efb3-4e5b-b09c-463a47a6b214": {
+          "description": "**Zapíšte si do denníka:** Na tomto obrázku vidíte jeden z prvých počítačov a dve z úplne prvých programátoriek na svete. Vedeli by ste vymenovať tri spôsoby, ako sa tento počítač odlišuje od dnešných počítačov? Potom vymenujte dve veci, ktorými si je so súčasnými počítačmi rovnaký. Napadne vám jedna vec, ktorú majú VŠETKY počítače spoločné?"
         },
         "c21034e8-cca8-4197-9819-081e4114ef36": {
+          "description": "**Diskutujte:** Keď už žiaci mali možnosť zamyslieť sa nad odpoveďami v denníku, môžu sa o svoje myšlienky podeliť s ostatnými tak, že každý žiak, ktorý odpovie, potom zase vyvolá ďalšieho. Tento rozhovor sa snažte viesť ako rýchle vymenúvanie nápadov, ktoré zapisujte na tabuľu. Upriamujte pozornosť žiakov na podobné vlastnosti. Žiaci môžu k niektorým bežným vlastnostiam vymýšľať aj protipríklady. Pripomeňte im, že ide len o rýchly brainstorming, takže je dôležité snažiť sa zaznamenať všetky možné nápady, pričom počas hodiny budú mať viac času na to, aby sa nad otázkou zamysleli hlbšie.",
           "tips": [
-            null
+            "**Cieľ:** Táto úvodná aktivita motivuje žiakov k tomu, aby sa začali zamýšľať nad tým, aké vlastnosti robia z počítača počítač. Žiaci nepotrebujú poznať definíciu počítača – mali by sa zamyslieť nad rôznymi typmi počítačov, s ktorými sa stretávajú v bežnom živote, a tým, čo majú tieto typy počítačov spoločné.\n\n**Poznámka:** Na obrázku sú programátorky Elizabeth Jean Jennings Bartik a Frances Bilas Spence. Zobrazený počítač sa volá ENIAC."
           ]
+        },
+        "455d8859-98cd-49da-8d9d-47880a8f24e8": {
+          "description": "Počítače môžu mať rôzne podoby a od svojho vzniku sa veľmi zmenili. Dnes sa zamyslíme nad tým, čo robí počítač počítačom."
+        },
+        "4f6f922f-4af2-4143-a308-d43b8bf52191": {
+          "description": "**Otázka dňa: Čo je to počítač?**"
+        },
+        "c23840b1-46e6-4538-b892-bb22f6ed543b": {
+          "name": "Počítač alebo nie?",
+          "description": "**Skupiny:** Rozdeľte žiakov do skupín po troch alebo štyroch"
         },
         "06af5ad1-d9b6-4834-b94a-12f5c46232c7": {
+          "description": "**Rozdajte:** sprievodcu aktivitou, nožnice, fixky/pastelky, plagátový papier a lepidlo alebo lepiacu pásku na vyrábanie plagátov. (Upozorňujeme, že sprievodca aktivitou je k dispozícii v dvoch rôznych verziách. Vyberte tú verziu, ktorá je podľa vás pre vašu triedu vhodnejšia, alebo rozdajte rôznym skupinám rôzne verzie.)",
           "tips": [
-            null
+            "**Úpravy z fóra:** Mnohí učitelia sa na [učiteľskom fóre](http://forum.code.org/c/csd) podelili o svoje nápady, ako lekciu rozšíriť či upraviť. Prejdite tam a pozrite sa, ako učitelia zredukovali množstvo tlačených materiálov, zakomponovali do lekcie IKT alebo aktivitu inak prispôsobili potrebám svojej triedy. Ak budete skúšať niečo nové, pokojne sa o svoje nápady podeľte tiež! "
           ]
+        },
+        "24fe9cac-40fb-48cc-ab1a-e06e4e474af9": {
+          "description": "Dajte žiakom nasledujúce pokyny:\n\n-   Rozdeľte plagát na dve polovice zvislou čiarou. Jednu stranu označte nadpisom „počítače“ a druhú nadpisom „nepočítače“.\n-   V skupine prediskutujte, ktoré predmety zo súboru predmetov (ktorý je daný v sprievodcovi aktivitou) patria do jednej a ktoré do druhej kategórie.\n-   Keď sa vaša skupina dohodne, prilepte jednotlivé predmety na príslušnú stranu plagátu.\n-   Vytvorte si zoznam vlastností, podľa ktorých sa vaša skupina rozhodovala, či je nejaký predmet počítač alebo nie."
         },
         "ec21fe96-de6c-4818-bf1a-c02c1f4b66ff": {
+          "description": "**Monitorovanie:** Kým žiaci pracujú na triedení obrázkov zo sprievodcu aktivitou, prechádzajte sa po triede. Motivujte skupiny k tomu, aby sa otvorene rozprávali o svojich nápadoch a vysvetľovali, prečo by podľa nich jednotlivé predmety mali alebo nemali byť zatriedené ako počítače. Ak sa niektorá skupina nevedia dohodnúť, vyzvite jej členov, aby sa pokúsili obhájiť svoj názor a následne v skupine dosiahnuť nejaký konsenzus. Pripomeňte skupinám, že je úplne v poriadku, ak jeden či dvaja ľudia nesúhlasia s ostatnými, a každého názor je dôležité rešpektovať.",
           "tips": [
-            null
+            "**Najprv lepenie:** Žiaci budú mať neskôr počas lekcie príležitosť zmeniť, ako jednotlivé predmety zatriedili. Zatiaľ by však mali predmety prilepiť na plagát alebo aspoň umiestniť na správnu stranu podľa svojho prvotného rozhodnutia."
           ]
+        },
+        "9b8fefda-e95f-4760-9e74-11bc72f33a4b": {
+          "description": "Keď uplynie čas, obráťte sa na všetkých žiakov a poproste ich, aby svoje plagáty doniesli do prednej časti triedy."
         },
         "ecb7626b-e9dc-4011-b1a2-54f138d54872": {
+          "name": "Prezentujte svoje zatriedenie",
+          "description": "**Zdieľanie:** Každá skupina stručne predstaví svoj plagát, pričom sa zameria na nasledujúce body:",
           "tips": [
-            null
+            "**Porovnanie zatriedenia:** V sprievodcovi aktivitou sú dva rôzne súbory predmetov. V oboch súboroch je prvá stránka rovnaká a druhá stránka odlišná. To znamená, že žiaci budú vidieť predmety, ktoré už zatriedili, ako aj nové predmety. Využite to na podporu diskusie."
           ]
         },
+        "aab18b5a-b8a1-4015-b1d3-a4590f057057": {
+          "description": "1.  Podľa akých pravidiel alebo definície ste svoje predmety triedili?\n2.  Ktorý predmet bolo pre vás najťažšie zatriediť? Ako ste sa nakoniec rozhodli, do ktorej kategórie ho dať?\n\nPovedzte ostatným žiakom, že ak s prezentovanými rozhodnutiami nesúhlasia, môžu sa ozvať a svoj nesúhlas zdvorilo zdôvodniť."
+        },
+        "3f21f8e1-bcdc-4e08-9be8-53211f4c71b0": {
+          "description": "Ako si môžete všimnúť, nie vždy je jasné, či je niečo počítač alebo nie, pričom aj odborníci sa niekedy v názoroch rozchádzajú. Pozrime sa však na definíciu, ktorú budeme počas tohto kurzu používať my."
+        },
+        "397250f1-0ead-4ee1-b22f-bc7c0036a794": {
+          "description": "**Ukážte:** Ukážte video [r what-is-a-computer-1-2-3/csd/2021]. Toto video je k dispozícii aj na webe Code.org, kde nájdete aj alternatívny odkaz pre školy, na ktorých je portál YouTube zablokovaný. Vo videu sa počítač prezentuje ako stroj, ktorý umožňuje určité typy „myšlienkovej práce“ tým, že manipuluje s informáciami. Definíciu však môžete skrátiť na „stroj, ktorý pracuje s informáciami“."
+        },
         "5733d57d-7dc2-45ba-885b-e223a44ad2af": {
+          "description": "**Otázky na zamyslenie k videu**:\n\n-   Čím sa počítače odlišujú od strojov, ktoré existovali pred nimi?",
           "tips": [
-            null
+            "Po pozretí videa by žiaci mali chápať, že počítače sú stroje navrhnuté s cieľom pomôcť ľuďom s „myšlienkovou prácou“, nie s fyzickou prácou. V kontexte riešenia problémov sú počítače navrhnuté tak, aby dokázali riešiť informačné problémy. Iné odtienky tejto definície sa môžu objaviť najmä v diskusii o počítačoch, ktorým ich výstupné mechanizmy umožňujú vykonávať fyzickú prácu (napr. počítače). Je teda v poriadku, ak žiaci nedokážu spraviť konkrétny záver o každom zariadení, ktoré im napadne."
           ],
           "progression_name": "Video: Čo robí počítač počítačom?"
         },
         "900764b3-0256-4cc9-b88f-1b8c4992e653": {
+          "description": "**Kľúčové pojmy:**\n\n-   **počítač:** stroj, ktorý pracuje s informáciami\n\nDajte žiakom možnosť upraviť svoje plagáty na základe informácií, ktoré práve získali. Môžu si pomôcť nasledujúcimi otázkami:\n\n-   Na riešenie akých typov problémov sa toto zariadenie využíva?\n-   Využíva toto zariadenie na riešenie problémov informácie?\n-   Kde tieto informácie získava?\n-   Ako tieto informácie využíva na riešenie problémov?\n\n**Diskutujte:** Zmenili niektoré skupiny názor na to, či je niektorý predmet počítač alebo nie? Ktorá časť definície ich na toto rozhodnutie naviedla?",
           "tips": [
-            null
+            "Nekontrolujte zatriedenie konkrétnych predmetov, ale radšej si overte, ako žiaci zdôvodňujú, či je nejaké zariadenie počítač. Je dôležité, aby spomenuli, že dané zariadenie manipuluje s informáciami alebo rieši informačné (myšlienkové) problémy. Ak vám nedokážu poskytnúť dostatočne dobrú odpoveď, postupne ich naveďte na správnu odpoveď pomocnými otázkami.\n\nMôže sa stať, že len na základe obrázka nebude možné rozhodnúť, či je nejaký predmet počítač. Ubezpečte žiakov, že dokonca ani odborníci sa často nevedia presne zhodnúť, či je niečo počítač alebo nie."
           ]
+        },
+        "9a0930f2-a1e3-409f-b215-4bc00d2110a4": {
+          "description": "**Otázka dňa: Čo je to počítač?**\n\n**Kľúčové pojmy:**\n\n-   **počítač:** – stroj, ktorý pracuje s informáciami"
         },
         "e623c176-d684-43c0-ad4b-9f33a3acc00f": {
+          "name": "Denník",
+          "description": "**Povedzte:** Dnes ste spoznali definíciu počítača, ktorá sa zameriava na to, ako počítač rieši problémy. Okrem toho sme si pozreli množstvo rôznych typov počítačov. Vo svojich denníkoch sa zamyslite nad tým, s riešením akého problému by vám mohol počítač pomôcť.\n\n-   O aký informačný problém ide?\n-   Aké informácie počítač potrebuje na vyriešenie problému?\n-   Akému typu „myšlienkovej práce“ sa počítač potrebuje venovať, aby tento problém vyriešil?",
           "tips": [
-            null,
-            null
+            "**Rozpoznanie informačných problémov:** Žiaci sa stále učia, v čom spočívajú informačné problémy, s riešením ktorých by dokázal pomôcť počítač. Ak chcete, môžete požiadať žiakov, aby sa podelili o svoje myšlienky, no rámcujte túto diskusiu ako prvé nahliadnutie do tejto otázky, keďže žiaci sa k nej budú opakovane vracať po zvyšok tohto tematického celku.",
+            "Overte, či si žiaci vybrali informačné problémy a opísali, ako sa dajú na ich riešenie využiť informácie. Odpovede nemusia byť dostatočne konkrétne na to, aby sa dali naprogramovať na počítači, no mali by poskytnúť dostatočne dobrý všeobecný opis na to, aby z nich bolo jasné, že ide o informačný (výpočtový) problém."
           ]
+        },
+        "4136f0ec-4960-439b-b710-c102d09432d7": {
+          "name": "Odporúčanie domáceho zvieratka",
+          "description": "#### Denník\n\n**Povedzte:** Predstavte si, že idete niekomu odporučiť domáce zvieratko. Aké tri otázky by ste danej osobe položili, aby ste jej vedeli poskytnúť čo najlepšie odporúčanie?\n\nDajte žiakom čas na to, aby si svoju trojicu otázok zapísali."
+        },
+        "897da97a-8dfc-435e-9dba-2a478519e407": {
+          "description": "V predchádzajúcej lekcii sme sa naučili, že počítač je stroj, ktorý „pracuje s informáciami“. Teraz budeme pracovať s informáciami my, aby sme vedeli spolužiakovi odporučiť domáce zvieratko."
+        },
+        "9f814ba0-3a5b-4261-884b-2a41dcbd1e38": {
+          "description": "**Skupiny:** Rozdeľte žiakov do dvojíc.\n\n**Povedzte:** Položte spolusediacemu svoje otázky a na základe odpovedí mu odporučte domáce zvieratko. Potom si úlohy vymeňte."
         },
         "396fe142-472b-4c62-976b-578e5ff5bff0": {
+          "description": "**Diskutujte:** Keď už mali všetci žiaci možnosť odporučiť spolusediacemu nejaké zvieratko, vyzvite niekoľko žiakov, aby sa s celou triedou podelili o svoje odpovede a odporúčania. Spravte na tabuli zoznam odpovedí a vedľa neho zoznam odporúčaní.",
           "tips": [
-            null
+            "**Cieľ:** V dnešnej lekcii budú žiaci hovoriť o konceptoch vstupu a výstupu vo výpočtovej technike. Pri tejto diskusii nie sú dôležité konkrétne odpovede a odporúčania, ale to, aby žiaci videli, že tieto informácie patria do dvoch rôznych kategórií."
           ]
+        },
+        "187046cd-aaf6-466a-be86-5060acdda8e4": {
+          "description": "Na vyriešenie tohto problému ste potrebovali od svojho spolusediaceho **získať** informácie v podobe odpovedí na vaše otázky. Okrem toho ste svojmu spolusediacemu potrebovali **poskytnúť** informácie v podobe odporúčania. Toto isté robia aj počítače. Informácie, ktoré dostávajú od používateľa, sa nazývajú **vstup** a informácie, ktoré používateľom poskytujú, sa nazývajú **výstup**.  Pozrime sa na aplikáciu, ktorá tiež odporúča vhodné domáce zvieratko."
+        },
+        "324a171f-99ef-42b7-b94b-df073186ff8a": {
+          "description": "**Kľúčové pojmy:**\n\n-   **Vstup** – informácie, ktoré počítače získavajú od používateľov, zariadení alebo iných počítačov\n-   **Výstup** – informácie, ktoré počítače poskytujú používateľom, zariadeniam alebo iným počítačom\n\n**Otázka dňa: Ako využívajú počítače vstup a výstup na získanie a poskytnutie informácií potrebných na riešenie problémov?**"
+        },
+        "502a9053-c029-441d-aac1-5dcfc540fe9d": {
+          "name": "Vstupy a výstupy",
+          "description": "**Rozdajte:** jednu kópiu sprievodcu aktivitou každej dvojici (alebo ich požiadajte, aby si odpovede na otázky zapísali do denníka).\n\n**Slovná zásoba:** Dva kľúčové pojmy z tejto lekcie sa nachádzajú v hornej časti sprievodcu aktivitou."
+        },
+        "a7d0f6de-e600-44ae-98e2-434e94375160": {
+          "description": "## Vzorové aplikácie\n\n**Premostenie:** Povedzte dvojiciam, aby si otvorili Code Studio."
         },
         "a52b80a3-f6a7-4e24-8347-1eb0be4ccddf": {
+          "name": "Výber zvieratka",
+          "description": "Pozrite sa spolu so žiakmi na aplikáciu na výber zvieratka. Všimnite si, že robí niečo veľmi podobné tomu, čo žiaci pred chvíľou robili vo dvojiciach. V skupine najprv odpovedzte na prvé dve otázky o vstupoch aplikácie. Uistite sa, či žiaci chápu, že aplikácia získava vstupy na základe správania používateľa – konkrétne stlačením tlačidla. V závislosti od danej skupiny sa môžete rozhodnúť, že sa otázkou zameriate skôr na výstupy alebo žiakom umožníte pracovať na nej vo dvojici.",
           "tips": [
-            null
-          ]
+            "Žiaci nepotrebujú presný vstup ku každej položenej otázke. Stačí, ak napríklad povedia, že vstupom je informácia o tom, či má používateľ aplikácie alergiu, či sa chce so zvieratkom hrať a pod., a že aplikácia tieto informácie od používateľa získava tým, že používateľ stlačí tlačidlo."
+          ],
+          "progression_name": "Aplikácia: Výber zvieratka"
         },
         "e606d7d3-d552-4db3-91b7-c26f98da237c": {
+          "name": "Tvorba príbehov",
+          "description": "Teraz dajte dvojiciam možnosť, aby sa samostatne pozreli na aplikáciu slúžiacu na tvorbu príbehov a zodpovedali podobné otázky o jej vstupoch a výstupoch. Táto aplikácia žiakom umožňuje zadávať konkrétne informácie do formulára, potom na základe poskytnutých informácií vytvorí špeciálne prispôsobený príbeh.",
           "tips": [
-            null
-          ]
+            "Uistite sa, či žiaci vymenúvajú správne vstupy a výstupy. Odpovede žiakov sa môžu mierne odlišovať, no mali by byť podobné odpovediam uvedeným v príklade, ktorý pri robení prvej úrovne v Code studiu nájdete v sekcii „Iba pre učiteľov“."
+          ],
+          "progression_name": "Aplikácia: Tvorba príbehov"
+        },
+        "f0ca9021-3f50-4255-99a0-41558253f592": {
+          "description": "## Žiacke aplikácie\n\nŽiaci vo dvojiciach alebo väčších skupinách vymýšľajú vlastné nápady na aplikácie a rozhodujú sa, aké typy vstupov a výstupov do nich budú potrebovať.\n\n**Zdieľanie:** Dajte žiakom možnosť odprezentovať svoje nápady na aplikácie, ako aj potrebné vstupy a výstupy."
+        },
+        "ce9e1b16-609b-43ed-bcc4-99f024c05fee": {
+          "description": "## Ďalšie zdroje vstupov\n\n**Povedzte:** Všetky vstupy, ktoré sme videli doteraz, pochádzali priamo od používateľa. Sú aj iné cesty, ako sa aplikácia môže dostať k potrebným informáciám?"
         },
         "f1388388-8631-479b-bca9-ffe97206edf8": {
+          "description": "**Diskutujte:** Dajte žiakom možnosť v tichosti si spísať nápady, potom sa o nich porozprávať vo dvojiciach alebo malých skupinách a nakoniec vyvolávajte žiakov, aby sa o svoje odpovede podelili s celou triedou.",
           "tips": [
-            null
+            "Keď budú žiaci prezentovať svoje nápady, uistite sa, aby sa v diskusii spomenul aj internet a senzorické údaje (napríklad GPS, mikrofón či kamera). Môže byť potrebné naviesť žiakov tým, že sa ich spýtate, či napríklad smartfón nejaké veci vie aj bez toho, aby sme mu ich museli povedať. Aj keď žiaci nemusia poznať všetky senzory na smarfónoch, na konci tejto diskusie by mali vedieť, že smartfón má senzory, pomocou ktorých vie získavať údaje aj bez priameho zásahu používateľa."
           ]
+        },
+        "29f459d2-a640-4618-9829-6d5adb95cef9": {
+          "name": "Zlepšená aplikácia na výber zvieratka",
+          "description": "Žiaci by sa mali pozrieť na novú aplikáciu, ktorá je podobná tej predchádzajúcej, no má dodatočnú funkciu – dokáže používateľa znavigovať do najbližšieho obchodu so zvieratkami, kde si môžu zvolené zvieratko kúpiť.\n\nŽiaci by mali identifikovať všetky vstupy, ktoré táto zlepšená aplikácia využíva, a to vstupy od používateľa, z internetu aj zo senzorov telefónu."
+        },
+        "065a0d2e-1f70-4ff0-8e46-42d5c8116cc2": {
+          "description": "**Otázka dňa: Ako využívajú počítače vstup a výstup na získanie a poskytnutie informácií potrebných na riešenie problémov?**"
+        },
+        "e92cb9d2-6fd3-43f3-abd5-7eec596b537f": {
+          "name": "Aké vstupy a výstupy využívam?",
+          "description": "**Kľúčové pojmy:**\n\n-   **Vstup** – informácie, ktoré počítače získavajú od používateľov, zariadení alebo iných počítačov\n-   **Výstup** – informácie, ktoré počítače poskytujú používateľom, zariadeniam alebo iným počítačom\n\n**Povedzte:** Skúste vymyslieť každodennú aktivitu, ktorú vy alebo vaši známi robíte pomocou aplikácie alebo počítača.\n\n1.  Aký vstup sa pri danej aktivite využíva?\n2.  Aký má táto aktivita výstup?\n\n**Monitorovanie:** Žiaci premýšľajú samostatne a zaznamenávajú svoje nápady do svojho sprievodcu aktivitou alebo denníka."
         },
         "ce77f101-8880-4264-bf0e-b2d95e40c080": {
+          "description": "**Diskutujte:** V rámci celej triedy prediskutujte príklady, ktoré žiaci vymenovali.",
           "tips": [
-            null
+            "Pomocou tejto záverečnej aktivity vyhodnoťte, ako dobre žiaci porozumeli tomu, akú úlohu vstupy a výstupy zohrávajú pri aktivitách, ktoré sa bežne robia na počítači. Napríklad:\n\n-   Písaním na klávesnici (vstup) dosiahneme, že na obrazovke sa zobrazia písmená (výstup)\n-   Pohybom myši alebo pohybom prsta po dotykovej obrazovke (vstup) sa mení to, čo sa zobrazuje na obrazovke (výstup)\n-   Stlačením tlačidla Prehrať na dotykovej obrazovke (vstup) dosiahneme, že cez reproduktory sa prehrá pieseň (výstup)\n\nV prípade potreby žiakom poskytnúť tieto alebo iné príklady, na základe ktorých skúsia vymyslieť ďalšie."
           ]
         },
+        "658bb176-e81a-441b-9846-7f06edb26bcb": {
+          "name": "Analýza aplikácie (Narodeninová aplikácia)",
+          "description": "**Zapíšte si do denníka**: Otvorte Code Studio a vyskúšajte si narodeninovú aplikáciu. Aplikácia má tri možné výstupy, pričom vašou úlohou je nájsť každý z nich.\n\n1.  Aký má aplikácia vstup?  \n2.  Aký má výstup?  \n3.  Ako sa podľa vás aplikácia rozhodne, ktorý výstup používateľovi zobrazí?",
+          "progression_name": "Aplikácia: Máš dnes narodeniny?"
+        },
         "584f3a53-ab7b-421d-a8a4-bc8c106ead2a": {
+          "description": "**Monitorovanie:** Prvá časť tejto reflexie je určená na to, aby si žiaci zopakovali, čo už vedia o vstupoch a výstupoch. Kým sa zamýšľajú nad vašimi otázkami, kontrolujte ich odpovede, aby ste sa uistili, či rozumejú tomu, ako sa v aplikácii využívajú vstupy a výstupy.",
           "tips": [
-            null
+            "Žiaci môžu vyhodnotiť, že používateľov dátum narodenia je jeden vstup, prípadne že aktuálny dátum je ďalší vstup. Správa, či má dnes používateľ narodeniny alebo nie, je výstup. Rozhodnutie, ktorá správa sa má zobraziť, vychádza z toho, či sa aktuálny dátum zhoduje s dátumom, ktorý ako vstup zadá používateľ."
           ]
         },
         "4d905d80-5cc4-4017-88ab-904e5092fe0c": {
+          "description": "Požiadajte žiakov, aby povedali, ako sa podľa nich aplikácia rozhodovala.",
           "tips": [
-            null
+            "Pre žiakov môže byť náročné presne vyjadriť, ako sa aplikácia rozhoduje. Motivujte ich k tomu, aby diskutovali, a poukážte na to, ako v rozhodovacom procese vstupuje do hry hľadanie zhody a podmienky „ak/tak“ (napr. „Aplikácia **porovnáva** dátum narodenia s aktuálnym dátumom.“ / „**Ak** je dátum narodenia rovnaký ako dnešný dátum, **tak** sa zobrazí nápis: Všetko najlepšie k narodeninám!“)"
           ]
+        },
+        "db018d57-7aa0-4395-b16a-8649a1e291c1": {
+          "description": "V predchádzajúcich lekciách sme sa naučili, že počítače sú stroje, ktoré nám pomáhajú s „myšlienkovou prácou“ tým, že premieňajú vstupy na výstupy. Napríklad v tejto aplikácii bolo touto myšlienkovou prácou porovnávanie dátumu narodenia s dnešným dátumom a využívanie týchto informácií pri rozhodovaní, čo sa má zobraziť na obrazovke. Týmto typom myšlienkovej práce v prípade počítačov hovoríme „spracúvanie“. Dnes sa spolu pozrieme na rôzne typy spracúvania."
+        },
+        "4c64e5b5-a49e-4fbf-874c-e8de24a9277f": {
+          "description": "**Kľúčové pojmy:**\n\n-   **Spracúvanie** – myšlienková práca, v rámci ktorej počítače premieňajú vstup na výstup\n\n**Otázka dňa: Akými rôznymi spôsobmi počítače spracúvajú informácie?**"
+        },
+        "dd302238-9da9-4598-a9ad-346d80a7ca0f": {
+          "name": "Typy spracúvania",
+          "description": "V Narodeninovej aplikácii sme už videli dva rôzne typy spracúvania: porovnávanie a podmienky „ak/tak“. Prehliadneme si niekoľko ďalších aplikácií a pozrieme sa na to, aké typy spracúvania asi využívajú."
+        },
+        "3136eec5-7ffe-4b31-9cdd-7e988769c3d1": {
+          "description": "**Ukážte:** V prednej časti triedy žiakom predveďte aplikáciu Národné parky, alebo im dajte možnosť prehliadnuť si ju samostatne.",
+          "progression_name": "Aplikácia: Národné parky"
         },
         "fb64c101-5e75-4908-9b31-15d964b4ffa9": {
+          "description": "**Povedzte:** Ako táto aplikácia pomocou podmienok „ak/tak“ a porovnávania premieňa vstupy na výstupy?",
           "tips": [
-            null
+            "Dajte žiakom možnosť podeliť sa o svoje odpovede a upriamte pozornosť na to, že proces porovnávania sa dá aplikovať na hocijakú dvojicu vecí, nielen na čísla."
           ]
+        },
+        "59635fc9-85ee-4beb-8e84-3db4d473f7d5": {
+          "description": "**Ukážte:** V prednej časti triedy žiakom predveďte aplikáciu Koľko krajín…, alebo im dajte možnosť prehliadnuť si ju samostatne.",
+          "progression_name": "Aplikácia: Koľko krajín"
         },
         "21e51178-7062-468a-b8e1-a9227a0ac5eb": {
+          "description": "**Povedzte:** Táto aplikácia na rozhodovanie využíva rôzne typy spracúvania. Aké typy spracúvania by to mohli byť?",
           "tips": [
-            null
+            "Dajte žiakom možnosť podeliť sa o svoje odpovede, no uistite sa, že v diskusii sa upriamuje pozornosť na „počítanie“ a „hľadanie zhody“."
           ]
+        },
+        "58559ae7-ea27-45aa-ba26-1fdc3758d9a0": {
+          "description": "Počítače môžu využívať veľa rôznych typov spracúvania. Dnes sa však zameriame na štyri základné typy: podmienky „ak/tak“, porovnávanie, hľadanie zhody a počítanie."
+        },
+        "ffa29e42-7efc-41b6-ba23-b18391cd1041": {
+          "description": "**Ukážte:** V prednej časti triedy odprezentujte štyri typy spracúvania a ich definície. Potom si tieto informácie prejdite so žiakmi.\n\n**Skupiny:** Rozdeľte žiakov do skupín po dvoch alebo troch. Pri tejto aktivite bude každá skupina potrebovať prístup k počítaču.\n\n**Rozdajte:** Dajte každej skupine jednu kópiu sprievodcu aktivitou."
+        },
+        "0cba3d63-aa17-4e9e-b3e0-91330dc94748": {
+          "name": "Aplikácie a spracúvanie",
+          "description": "V rámci celej triedy vyplňte prvé tri riadky v sprievodcovi aktivitou. Tieto tri riadky odkazujú na trojicu aplikácií, ktoré už žiaci videli."
         },
         "95323c16-49dc-4c54-9bf5-c351b458beb7": {
+          "description": "**Monitorovanie:** Dajte žiakom priestor vyplniť v skupinách aj zvyšok tabuľky. Kým tabuľku vypĺňajú, povedzte im, aby detailnejšie popísali, ako dané aplikácie fungujú a čím je pre ne použitý typ spracúvania užitočný.",
           "tips": [
-            null
+            "Keďže takmer všetky aplikácie využívajú viacero typov spracúvania, žiaci môžu prísť aj na nečakané aspekty aplikácií. V takýchto prípadoch je najdôležitejšie, či vedia svoju odpoveď vysvetliť. Mali by vedieť zdôvodniť, ako sa v aplikácii na základe vstupu vytvára výstup."
           ]
+        },
+        "7870b41a-67d4-4e4c-bac2-51df283c64a2": {
+          "description": "**Moje slávne narodeniny**\n\nTáto aplikácia vyzve používateľa, aby zadal svoj dátum narodenia, a potom mu povie, aký deň v týždni to bol a aký slávny autor sa narodil v rovnaký deň. Typ spracúvania je v tejto úrovni uvedený v sekcii s poznámkami „iba pre učiteľov“.",
+          "progression_name": "Aplikácia: Moje slávne narodeniny"
+        },
+        "fe0df0f8-e6fb-42c2-82a5-7542d4a4fcde": {
+          "description": "**Pečiatkovanie v zápisníku**\n\nTáto aplikácia umožňuje používateľom kliknúť na ikonku a „opečiatkovať“ ju na zobrazovacej ploche. Ak používateľ na niektorú ikonu klikne viackrát, zmení sa jej farba.",
+          "progression_name": "Aplikácia: Pečiatkovanie v zápisníku"
+        },
+        "30a5ba05-3776-4be9-b6d5-66df2e579294": {
+          "name": "Ďalšie spracúvanie",
+          "description": "V nasledujúcej tabuľke majú žiaci za úlohu nájsť v každej aplikácii dva typy spracúvania. Vysvetlivky k tejto úlohe nájdete v Code studiu v sekcii „Iba pre učiteľov“. V tejto časti aktivity majú žiaci vyhodnotiť zložitejšie aplikácie, ktoré môžu byť pre mladších žiakov náročnejšie. Túto náročnejšiu časť teda môžete preskočiť a prejsť rovno na časť zameranú na žiacku aplikáciu.\n\n**Rýchle prsty**\n\nTáto aplikácia ukazuje, ktorý kláves vie používateľ stláčať rýchlejšie – kláves „s“ alebo kláves „k“. \n\n**Uhádni číslo**\n\nTáto aplikácia vyzve používateľa, aby uhádol náhodné číslo od 1 do 100. Potom používateľovi hovorí, či si tipol príliš vysoké číslo, príliš nízke číslo alebo ho uhádol.\n\n**Kde mám bývať?**\n\nTáto aplikácia poskytuje používateľovi rady, kde má bývať, na základe jeho odpovedí na niekoľko otázok.",
+          "progression_name": "Ďalšie aplikácie so spracúvaním"
+        },
+        "1bf0d6db-f0d5-4473-b861-ca00d265f8a9": {
+          "progression_name": "Aplikácia: Rýchle prsty"
+        },
+        "09785de0-de7c-40a7-afac-9a255151a45d": {
+          "progression_name": "Aplikácia: Uhádni číslo"
+        },
+        "23734edc-d8f1-43ea-b0bc-63a9f745c6bb": {
+          "progression_name": "Aplikácia: Kde mám bývať?"
+        },
+        "b8be58da-51d2-44de-8fd8-f136b1604f84": {
+          "name": "Žiacke aplikácie",
+          "description": "Žiaci prídu s vlastnými nápadmi na aplikácie – môžu využiť svoju predchádzajúcu aplikáciu z lekcie Vstup a výstup, prípadne vymyslieť úplne novú. Potom sa zamyslia nad tým, aké typy spracúvania by tieto aplikácie potrebovali využívať.\n\n**Zdieľanie:** Dajte žiakom možnosť odprezentovať svoje nápady na aplikácie, ako aj typy spracúvania, ktoré by v nich potrebovali využívať."
+        },
+        "dd0a4480-2ff7-407b-be56-5a7ff2df932e": {
+          "name": "Aké vstupy a výstupy využívam?",
+          "description": "**Povedzte:** Dnes sme si predstavili štyri rôzne typy spracúvania, no existuje ich oveľa viac. \n\n1.  Aký ďalší typ spracúvania by podľa vás mohol byť užitočný? \n2.  V akej aplikácii by mohol nájsť uplatnenie?\n\n**Monitorovanie:** Žiaci premýšľajú samostatne a zaznamenávajú svoje nápady do svojho sprievodcu aktivitou alebo denníka."
         },
         "ed3fc57d-be54-4625-bae7-5cac4680d615": {
+          "description": "**Diskutujte:** V rámci celej triedy prediskutujte príklady, ktoré žiaci vymenovali.",
           "tips": [
-            null
+            "Odpovede žiakov sa budú líšiť. Kontrolujte preto, či všetky vymenované príklady pomocou spracúvania premieňajú vstupy na výstupy."
           ]
         },
+        "49fca890-c067-42b3-9982-6a30352b21d3": {
+          "name": "Analýza aplikácie (Výber oblečenia)",
+          "description": "**Zapíšte si do denníka**: Otvorte si Code Studio a pozrite si v rozhraní aplikáciu Výber oblečenia. Skúste v aplikácii identifikovať jeden vstup, jeden výstup a jeden typ spracúvania? Predstavte si, že túto aplikáciu používate každý deň. Aké informácie by ste chceli, aby si táto aplikácia pamätala?"
+        },
         "071466cb-7d6b-4e91-93bb-261e508f89dc": {
+          "description": "**Monitorovanie:** Prvá časť tejto reflexie je určená na to, aby si žiaci zopakovali, čo už vedia o vstupoch, výstupoch a spracúvaní. Kým sa zamýšľajú nad vašimi otázkami, kontrolujte ich odpovede, aby ste sa uistili, či rozumejú tomu, ako sa v aplikácii využívajú vstupy, výstupy a spracúvanie.",
           "tips": [
-            null
+            "Žiaci možno rozoznajú, že vstupom počasie, obľúbená farba alebo ročné obdobie a výstupom sú obrázky. Hoci presný spôsob, ako aplikácia spracúva informácie, nie je jasný, žiaci môžu poukázať na to, že pravdepodobne využíva viacero podmienok „ak/tak“ (\"„Ak je daždivé počasie, tak si zober dáždnik.“) alebo hľadá zhodu medzi vstupmi od používateľa a vlastnosťami oblečenia."
           ]
         },
         "9c0439ca-8ac8-463f-889c-47df291b32d9": {
+          "description": "Požiadajte žiakov, aby povedali, aké informácie by sa podľa nich mali ukladať a prečo.",
           "tips": [
-            null
+            "Hoci nie je dôležité, aby sa žiaci na svojich odpovediach zhodli, v tejto diskusii sa oboznámia s myšlienkou ukladania informácií na neskôr a získajú podnet na to, aby sa zamysleli, aké informácie je v aplikácii vhodné ukladať a aké nie."
           ]
+        },
+        "2f41e74b-1693-4621-a008-ee942996e062": {
+          "description": "Táto vzorová aplikácia si od vás vypýta informácie, ktoré sa veľmi často nemenia, napríklad chce vedieť vašu obľúbenú farbu. Namiesto toho, aby ste tieto údaje museli zakaždým zadávať nanovo, by bolo užitočné, keby si aplikácia dokázala zapamätať naše odpovede tým, že si ich niekam uloží. Všetky počítače si dokážu ukladať informácie na neskôr a načítavať uložené informácie – umožňuje im to **pamäť**."
+        },
+        "dee06cd4-dac7-4000-bce5-c10bedcc7874": {
+          "description": "**Kľúčové pojmy:** \n\n-   **Pamäť** – schopnosť ukladať informácie na neskoršie použitie\n\n**Otázka dňa: Prečo je pamäť dôležitou súčasťou výpočtového procesu?**"
+        },
+        "b289fd48-6c31-480d-a98b-7d3d92fdca67": {
+          "name": "Aplikácie s pamäťou",
+          "description": "Pozrieme sa na niekoľko aplikácií, ktoré využívajú rôzne druhy informácií. Chceme určiť, aké informácie by sa mohli ukladať, aby sme ich nemuseli zakaždým zadávať nanovo."
+        },
+        "24dd5f31-50de-4a28-91c2-5d4591b8d1d8": {
+          "description": "**Skupiny:** Rozdeľte žiakov do skupín po dvoch alebo troch. Pri tejto aktivite bude každá skupina potrebovať prístup k počítaču.\n\n**Rozdajte:** Každej skupine dajte jednu kópiu sprievodcu aktivitou.\n\nV rámci celej triedy vyplňte prvú časť sprievodcu aktivitou, odkazujúcu na aplikáciu „Výber oblečenia“, s ktorou sa žiaci stretli v úvodnej aktivite.\n\nPovedzte žiakom, aby si otvorili Code Studio a pozreli si vzorové aplikácie."
         },
         "59845bd6-dedc-4283-9cbd-f3c574fd99ab": {
+          "description": "**Monitorovanie:** Nechajte žiakom priestor na to, aby v skupinách vyplnili aj zvyšok sprievodcu aktivitou. Kým budú vypĺňať tabuľky, povedzte im, aby detailnejšie vysvetlili, prečo by sa podľa nich jednotlivé vstupy mali ukladať alebo nie.",
           "tips": [
-            null
+            "Rozhodnutie, aké informácie sa majú ukladať a aké nie, nie je úplne jednoznačné, keďže ide o rozhodnutie vývojára aplikácie. Najdôležitejšie je teda zdôvodnenie. Žiaci by mali svoje rozhodnutie vysvetľovať tým, či sa budú informácie často meniť alebo nie."
           ]
+        },
+        "2000a800-9ea1-4dbd-bb6c-7af93735477d": {
+          "name": "Výber oblečenia",
+          "description": "Prvá aplikácia požiada používateľa, aby ako vstup zadal svoju obľúbenú farbu, aktuálne ročné obdobie a počasie. Výstupom aplikácie je obrázok oblečenia, ktorý vychádza zo vstupov používateľa.",
+          "progression_name": "Aplikácia: Výber oblečenia"
+        },
+        "33b8468e-5c6c-4acb-b377-dd721dc0904a": {
+          "name": "Nájdi svojich priateľov",
+          "description": "Druhá aplikácia vyzýva používateľa, aby ako vstup zadal, ktorých priateľov chce mať vo svojom zozname priateľov. Výstupom je mapa, kde je zobrazená poloha priateľov zo zoznamu.",
+          "progression_name": "Aplikácia: Nájdi svojich priateľov"
+        },
+        "028c50a4-a63b-44aa-a686-55512682ee15": {
+          "name": "Výber detského filmu",
+          "description": "Tretia aplikácia vyzve používateľa, aby ako vstup zadal niekoľko informácií o tom, aké filmy uprednostňuje, a potom na základe zadaných preferencií ako výstup zobrazí odporúčanie na film.",
+          "progression_name": "Aplikácia: Výber detského filmu"
+        },
+        "2956f576-807d-495f-ae89-140842e245b0": {
+          "name": "Zásady",
+          "description": "Keď skupiny prejdú na záverečnú aktivitu, možno bude potrebné v krátkosti im vysvetliť, čo sa v zadaní úlohy myslí pod pojmom „zásady“. Uistite sa, aby mali všetky skupiny dostatok času na vymýšľanie zásad, aj keby to malo znamenať, že budú musieť preskočiť niektoré časti predchádzajúcej úlohy zameranej na vypĺňanie tabuľky."
         },
         "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
+          "description": "**Monitorovanie:** Ak sa skupiny pri písaní zásad zaseknú, spýtajte sa ich, aké vstupy podľa nich bolo vhodné ukladať v ostatných aplikáciách. Spýtajte sa ich, či dokážu nájsť nejaké podobnosti medzi vstupmi, ktoré sa ukladali, a podobne medzi tými, ktoré sa neukladali. Pripomeňte im, že môžu písať aj zásady zamerané na vstupy, ktoré sa neukladali.",
           "tips": [
-            null
+            "Odpovede žiakov sa môžu líšiť. Vo všeobecnosti by si však žiaci mali uvedomovať, že to, či by sa informácie mali ukladať alebo nie, závisí od toho, ako často sa menia (ak vôbec)."
           ]
+        },
+        "93237735-0211-4bda-be3e-0a22ee8e868a": {
+          "description": "Keď už väčšina skupín dopísala svoje zásady, obráťte sa na celú triedu a spýtajte sa, či by sa niektorá skupina chcela podeliť o svoje zásady."
+        },
+        "9f28ebbd-3614-4789-b84e-9f9037fc8c83": {
+          "description": "Teraz už vieme, že počítač je stroj, ktorý dokáže štyri veci: prijať vstup, vytvoriť výstup, ukladať informácie do pamäte a spracúvať informácie."
+        },
+        "0e40d4c1-d45a-4209-989f-30553ca8de8a": {
+          "description": "Ukážte žiakom video, ktoré predstavuje model VVPS.",
+          "progression_name": "Video: Model VVPS"
         },
         "4cefb9ba-ffbc-40ba-bc37-dae06e608b67": {
+          "description": "Otvorte diskusiu pomocou nasledujúcich dvoch otázok.",
           "tips": [
-            null
+            "Ako majú vaši žiaci denníky, povedzte im, aby si odpovede zapísali do nich."
           ]
+        },
+        "bf776613-5d76-4349-8f6d-3df95766a838": {
+          "description": "1.  Zamyslite sa nad niečím, čo robíte na počítači. Aké sú pri tejto aktivite vstupy a výstupy, aké informácie sa ukladajú do pamäte a aké informácie sa spracúvajú?\n\n2.  Aké vstupy, výstupy, ukladanie do pamäte a spracúvanie využívajú moderné smartfóny?\n\nNakoniec sa pozrite na svoj plagát z lekcie „Čo je to počítač?“ a skúste sa zamyslieť nad tým, či by na základe tohto nového modelu VVPS nebolo vhodné preradiť niektoré stroje do kategórie „počítače“ alebo „nepočítače“."
+        },
+        "2d4d1c53-92af-4087-b1e7-964f95e3c3da": {
+          "name": "Denník",
+          "description": "**Povedzte**: Skúste vymyslieť aplikáciu, ktorú by ste radi vytvorili. Aké informácie by potrebovala ukladať?"
         },
         "40b16a1c-add1-445a-81de-c281c495fe6f": {
+          "description": "**Zdieľanie:** Ak vám zvýši čas, dajte žiakom priestor na to, aby sa podelili o svoje nápady.",
           "tips": [
-            null
+            "Keď žiaci prezentujú svoje nápady, dozerajte na to, aby využívali kľúčový pojem z tejto lekcie:\n\n**pamäť** – schopnosť ukladať informácie na neskoršie použitie"
           ]
         },
+        "8a962e67-680c-4b35-8f29-bee873ebf2fe": {
+          "name": "Predstavenie projektu",
+          "description": "**Povedzte:** Ktorá z aplikácií, s ktorými sme sa v tomto tematickom celku stretli, sa vám páčila najviac? Aký problém riešila?\n\n**Zdieľanie:** Nechajte žiakom priestor, aby sa podelili o svoje obľúbené aplikácie."
+        },
+        "76ebb601-8ed2-4aa1-ac1e-4a8d04173f64": {
+          "description": "Od začiatku tematického celku sme sa učili o postupe riešenie problémov a o tom, ako počítače riešia problémy – spracúvajú informácie tým, že prijímajú vstupy a premieňajú ich na užitočné výstupy. Dnes začneme pracovať na projekte, v rámci ktorého budete vo dvojici navrhovať aplikáciu zameranú na riešenie problému podľa vášho výberu."
+        },
+        "400c20cd-fe74-435b-a883-db94d9c4ee41": {
+          "description": "**Otázka dňa: Ako nám model VVPS pomáha navrhnúť aplikáciu, ktorá rieši problém?**"
+        },
+        "a5bc259a-2779-4488-b754-f6485a212933": {
+          "name": "Sprievodca projektom",
+          "description": "**Rozdajte**: Dajte každému žiakovi jedného sprievodcu projektom a jednu hodnotiacu tabuľku alebo kontrolný zoznam pre žiakov. V rámci celej triedy si prejdite informácie uvedené na prvej strane sprievodcu projektom, kde nájdete vysvetlenie projektu, zoznam krokov a pokyny, aký výstup sa od žiakov očakáva. Potom poskytnite žiakom stručný prehľad každého z podrobnejšie rozpísaných krokov."
+        },
         "254a27b6-75fb-4f5f-bdf1-2ac909f01f75": {
+          "description": "**1. krok: Vyberte si, s kým budete pracovať**: Rozdeľte žiakov do dvojíc alebo trojíc.",
           "tips": [
-            null
+            "**Vytváranie skupín:** Tento projekt je najlepšie robiť vo dvojiciach. V prípade potreby však môžu žiaci vytvoriť aj trojicu. Mali by ste sa vopred rozhodnúť, či žiakom dáte možnosť vybrať si, s kým budú na projekte pracovať."
           ]
         },
         "e7394c68-613b-4772-90c8-dcf1228ba5dc": {
+          "description": "**2. krok: Vymýšľajte problémy**: Vyzvite skupiny, aby strávili niekoľko minút tým, že budú v rámci tichého brainstormingu vymýšľať problémy a zaznamenávať ich do sprievodcu projektom. Prechádzajte sa po triede a upozorňujte žiakov na to, že v tomto bode by sa ešte nemali zamýšľať nad aplikáciou, ktorú by chceli vytvoriť, dokonca ani nad tým, či by sa daný problém dal vyriešiť pomocou aplikácie. Uistite sa, aby žiaci celý proces začínali tým, že identifikujú problém, nie riešenie.",
           "tips": [
-            null
+            "**Pomoc s brainstormingom:** Pozorne počúvajte rozhovory medzi žiakmi. Snažte sa odhaliť, ktorí žiaci sa zasekli a prečo. Majú príliš vysoké ciele? Pomôžte týmto žiakom nazerať na problémy ako niečo, čo ich otravuje alebo im spôsobuje isté nepohodlie, prípadne ako príležitosť viac či menej zlepšiť kvalitu svojho života. "
           ]
         },
+        "4118dd91-3977-4ade-825a-32aa7f2996c1": {
+          "description": "**3. krok: Vyberte si problém**: Sprievodca projektom žiakom poskytuje viacero kritérií, pomocou ktorých môžu posúdiť, ktorý z vymenovaných problémov by chceli skúsiť vyriešiť. Povedzte žiakom, že ak potrebujú viac informácií o tom, ako budú neskôr musieť svoje problémy definovať, môžu sa pozrieť na 4. krok. Dajte žiakom niekoľko minút na to, aby v skupinách prediskutovali svoje možnosti a vybrali si problém, ktorý by chceli svojou aplikáciou riešiť."
+        },
         "6a60775b-f641-46a0-820d-f6895dd26fed": {
+          "description": "**4. krok: Definujte svoj problém**: V tomto kroku budú žiaci potrebovať vhodne nastaviť rozsah svojho problému tým, že zadefinujú svoju cieľovú skupinu, konkrétne vymedzia problém a určia, podľa čoho budú overovať, či je už problém vyriešený.",
           "tips": [
-            null
+            "**Akú veľkú pomoc ponúknuť:** V tomto bode už žiaci majú veľa skúseností s definovaním problémov. Onedlho po tomto kroku nasleduje proces spätnej väzby od/pre spolužiakov. Motivujte ich k tomu, aby sa snažili byť čo najpodrobnejší, no snažte sa nedávať im konkrétne rady, ako by mali daný problém zadefinovať. "
           ]
         },
         "709fc018-84ca-4c5c-af4e-bae11c2867b1": {
+          "description": "**5. krok: Vaša aplikácia**: Keď už žiaci vymedzili svoj problém, nechajte ich prediskutovať, aká aplikácia by sa dala na riešenie daného problému využiť. Na začiatok im postačí všeobecný opis aplikácie z pohľadu používateľa a jej funkcií.",
           "tips": [
-            null
+            "**Aká aplikácia:** Výstupom tohto projektu má byť jednoduchá aplikácia podobná tým, s ktorými sa žiaci stretli v predchádzajúcej lekcii. Dokonca aj veľké problémy alebo časti veľkých problémov sa dajú riešiť vhodným zberom a spracúvaním údajov."
           ]
         },
+        "fe619886-9d11-4f22-9a63-fd59c89246d3": {
+          "description": "**6. krok: Vstup, výstup, pamäť, spracúvanie**: V tomto kroku žiaci navrhnú spôsob, ako bude ich aplikácia spracúvať údaje. \n\nŽiaci najprv nakreslia a potom opíšu výstupy svojej aplikácie. Vľavo môžu spraviť hrubý náčrt toho, ako bude ich aplikácia vyzerať. Nemusí ísť o konečnú podobu aplikácie – náčrt slúži na to, aby pomohol žiakom vymýšľať nápady a vysvetliť inej skupine, ako by ich aplikácia vyzerala. Vpravo majú k dispozícii priestor na označenie jednotlivých informácií zobrazených na obrazovke.\n\nNa základe výstupov, ktoré si vybrali, by si žiaci mali vybrať aj vstupy, ktoré budú na vytvorenie daných výstupov potrebovať. K dispozícii majú len 6 políčok, no môžu si ich vybrať aj viac. Toto „obmedzenie“ je do istej miery úmyselné, aby pomáhalo žiakom vhodne vymedziť rozsah funkcií svojej aplikácie.\n\nŽiaci opíšu, ako ich aplikácia spracúva údaje, na základe toho, ako by ich spracúvali sami. Hlavným cieľom tejto úlohy je zabezpečiť, že žiaci si vybrali vstupy, na základe ktorých sa dajú vytvoriť výstupy. Ak napríklad chcú vytvoriť zoznam kamarátov, ktorí majú tento mesiac narodeniny, tak rovnako počítač aj človek by potrebovali poznať dátumy narodenia všetkých kamarátov a zároveň vedieť, aký je aktuálny mesiac.\n\nŽiaci majú nakoniec za úlohu rozhodnúť, aké informácie (ak vôbec) je vhodné ukladať dlhodobo.\n\n**Rozdajte:** Aplikácie a riešenie problémov – vzájomné hodnotenie, jednu kópiu pre každú dvojicu.\n\n**7. krok: Vzájomné hodnotenie**: Každá skupina by si mala vymeniť sprievodcu projektom s inou skupinou. Mali by vyplniť prvý riadok vo vzájomnom hodnotení, kde zadávajú, ku ktorej konkrétnej časti projektu by ocenili spätnú väzbu. Potom žiaci odpovedajú na viacero konkrétnejších otázok a tiež majú príležitosť poskytnúť na daný nápad voľnejšiu spätnú väzbu.\n\nŽiaci by mali naspäť dostať sprievodcu projektom aj spätnú väzbu od spolužiakom. Na zadnej strane sú otázky, kde si môžu zaznamenať, aké zmeny alebo vylepšenia plánujú v aplikácii urobiť na základe poskytnutej spätnej väzby."
+        },
         "06fa61d8-63d0-49d0-b9d1-77ec59c88d72": {
+          "description": "**8. krok: Dokončite aplikáciu a vyrobte plagát**: V záverečnej fáze plánovania aplikácie by žiaci mali zakomponovať do plánu nápady svojich spolužiakov. Potom by mali pomocou pokynov uvedených v sprievodcovi aktivitou vyrobiť plagát, ktorý prezentuje ich aplikáciu.\n\nŽiaci by sa mali vrátiť k hodnotiacej tabuľke k tomuto projektu a overiť si, či ich projekt spĺňa stanovené podmienky. Môžete sa tiež rozhodnúť, že žiakom rozdáte kontrolný zoznam [r apps_and_problem_solving_-_student_checklist/csd/2021], aby žiaci mohli samostatne vyhodnotiť, ako dobre ich projekt spĺňa požiadavky projektu.",
           "tips": [
-            null
+            "**Hodnotiaca tabuľka a kontrolný zoznam:** Žiaci majú k dispozícii hodnotiacu tabuľku a kontrolný zoznam. Tieto dva materiály môžu využiť na reflexiu svojej práce a uistenie sa, či sú na správnej ceste. Odporúčame, aby žiaci na sebahodnotenie a reflexiu použili kontrolný zoznam, pretože pri hodnotení vlastného projektu je jednoduchší na spracovanie a porozumenie. Učiteľom však odporúčame, aby pri hodnotení projektov používali hodnotiacu tabuľku v plnom znení, aby dokázali žiakom poskytnúť presnejšiu spätnú väzbu.\n\nPríklady použitia hodnotiacej tabuľky nájdete v hornej časti plánu hodiny pod názvom _Vzorovo vyplnené hodnotiace tabuľky_ (viditeľné len pre overených učiteľov)."
           ]
+        },
+        "cabc123a-f4bd-41d6-87f7-f85807b42c97": {
+          "name": "Prezentácia aplikácií",
+          "description": "**Zdieľanie**: Rozhodnite sa, či a ako si budú žiaci navzájom prezentovať plagáty. Ak budú žiaci robiť formálnejšie prezentácie, na ich štruktúrovanie využite pokyny uvedené v 9. kroku sprievodcu projektom.\n\n**Vyzbierajte:** Na konci prezentácie od každej skupiny vyzbierajte vyplneného sprievodcu projektom, formulár so spätnou väzbou od spolužiakov a plagát."
         },
         "03ad2f47-6f62-4854-b398-3075d952d71e": {
           "name": "Reflexia",
+          "description": "**Otázka dňa: Ako nám model VVPS pomáha navrhnúť aplikáciu, ktorá rieši problém?**\n\n**Reflexia:** Žiaci sa vo svojich denníkoch zamyslia nad nasledujúcou otázkou:\n\n-   Na čo ste vo svojom projekte najviac hrdí?\n\nPošlite žiakov do Code Studia, kde vyplnia reflexiu zameranú na ich postoj k informatike. Hoci ich odpovede sú anonymné, keď dotazník vyplnia aspoň piati žiaci, budete mať k dispozícii súhrnné údaje o ich odpovediach.",
           "progression_name": "Reflexia"
+        },
+        "a37c4b7c-19a2-4517-b0f4-d4187aa8f1a2": {
+          "name": "Odprezentuj svoj projekt „investorom“",
+          "description": "Ak chcete k záverečnému projektu doplniť zaujímavý kontext, zahrajte sa v triede na investorov, ktorí si vyberajú projekty, ktoré podporia. Majte na mysli nasledujúce veci: \n\n-   Umožňuje aktuálna triedna kultúra, aby súťaživosť medzi žiakmi neprerástla do nepríjemných rozmerov? \n-   Pozvite členov učiteľského zboru, miestnych obyvateľov alebo rôznych profesionálov, aby si vypočuli žiacke záverečné prezentácie a rozhodli, ktorý nápad v pomyselnej súťaži získa prvé, druhé a tretie miesto. \n-   Na prvý alebo druhý deň pozvite na hodinu podnikateľov alebo iných profesionálov z miestnej komunity, aby žiakom vysvetlili, ako pri svojej práci využívajú informatiku."
+        },
+        "371d5237-e425-45ed-9e45-0879ff7105b7": {
+          "description": "Záverečný test po projekte nájdete v Code studiu v dolnej časti tematického celku Riešenie problémov a výpočtová technika.\n\nV štandardnom nastavení je test zamknutý a žiakom sa nezobrazuje. Ak chcete, aby ho žiaci videli a mohli test absolvovať, budete ho najprv musieť odomknúť kliknutím na tlačidlo „Nastavenia zámku“ a potom postupovať podľa zobrazených pokynov. Ak chcete viac informácií o odomykaní a zadávaní hodnotených úloh, [kliknite sem](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)"
+        },
+        "7693d6aa-abdb-4631-ae6c-d358e5d063e8": {
+          "description": "Na to, aby ste mohli počas roka kontrolovať prácu svojich žiakov a aby mali vaši žiaci prístup k online nástrojom a zdrojom, všetci musia byť v Code studiu zapísaní v rovnakej triede. Navyše platí, že na zobrazenie hodnotených úloh a kľúčov s odpoveďami musíte byť „overený učiteľ“."
+        },
+        "7bc95fda-8bc5-4e9c-8e1c-504e1fe504b8": {
+          "name": "Pred hodinou"
         },
         "7d3700c3-08ad-41e8-bee3-19384d50e4c4": {
           "tips": [
-            null
+            "-   Jedným z hlavných cieľov kurzu Objavujeme informatiku je zvýšiť záujem ľudí o informatiku.  \n\n-   Preto je _nesmierne dôležité_ vedieť, aké postoje a názory na informatiku majú žiaci _pred_ kurzom, aby sme dokázali zmerať, ako veľmi sa u nich tieto veci zmenili _po absolvovaní_ kurzu.\n\n-   Upozorňujeme, že tento dotazník je pre žiakov **anonymný**\n\n-   Vyplnenie dotazníka nám tiež pomáha zistiť, akým spôsobom by sme mohli významne zlepšiť naše učebné osnovy, aby fungovali čo najlepšie pre žiakov aj učiteľov.\n\n**Budeme vám veľmi vďační, ak nám pomôžetete zozbierať tieto cenné údaje. Názory vašich žiakov sú pre nás dôležité!**"
           ]
         },
         "68d48a87-2999-499a-962e-a0a177e1c4e6": {
+          "name": "Príprava",
+          "description": "**Spýtajte sa:** Aké vlastnosti má mať človek, ktorý je dobrý v riešení problémov? Každý si pripraví tri odpovede, o ktoré sa podelí so svojou skupinou.",
           "tips": [
-            null
+            "**Vedenie denníka:** Vedenie denníka je v kurze Objavujeme informatiku dôležitou zručnosťou. Žiaci si môžu písať denník na samostatné papiere, do zápisníka alebo aj digitálne.\n\n**Prezentácie:** Prezentácie k tomuto tematickému celku sú k dispozícii v učebnom pláne v sekcii „Materiály pre učiteľov“. Systém vás vyzve, aby ste si uložili kópiu, čo stačí urobiť raz. Následne už budete môcť používať prezentácie ku všetkým lekciám v učebných osnovách."
           ]
         },
         "f51c4e46-0b95-4035-bbef-921e12d33e3c": {
+          "description": "**Diskutujte:** Dajte žiakom možnosť podeliť sa o svoje odpovede so zvyšnými členmi skupiny pri stole. Potom tých, ktorí s tým nemajú problém, požiadajte, aby sa o odpovede podelili s celou triedou. ",
           "tips": [
-            null
+            "Cieľom tejto úvodnej aktivity je dosiahnuť, aby sa žiaci ešte pred dnešnou aktivitou začali zamýšľať nad riešením problémov.  Vyzdvihujte odpovede, ktoré odkazujú na dôležité vlastnosti a schopnosti využívané pri práci v triede, napríklad spoluprácu, vytrvalosť či tvorivosť. Teraz tiež máte príležitosť podporiť v triede pozitívnu kultúru, ktorá motivuje žiakov zdieľať veci s ostatnými a navzájom sa podporovať pri rýchlom vymýšľaní nápadov prostredníctvom brainstormingu."
           ]
         },
+        "b7043c24-837d-4375-8abc-db97b39d5a86": {
+          "description": "Výborné myšlienky! V informatike riešime problémy neustále, takže ku všetkým zručnostiam, ktoré ste vymenovali, sa budeme vracať nielen dnes, ale aj po zvyšok kurzu. V informatike platí, že problémy väčšinou riešime v tímoch. Dnes teda budete pracovať v tímoch na riešení zábavnej úlohy, pri ktorej nebudeme používať počítače. Kým budete na úlohe pracovať, zamyslite sa nad nasledujúcou otázkou."
+        },
+        "1b6e47b3-1fff-4497-abb7-08eaea7bbd52": {
+          "description": "**Ukážte:** Ukážte žiakom otázku dňa\n\n**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "20c1bfc1-6514-49f7-8426-549f7bce2c3f": {
+          "description": "**Vytvorte skupiny**: Rozdeľte žiakov do skupín po dvoch alebo troch."
+        },
         "922ac8cd-6633-48ac-bcb7-85fb1d2e711a": {
+          "description": "**Rozdajte**: Jednu kópiu sprievodcu aktivitou každej skupine.",
           "tips": [
             null
           ]
         },
         "f3726d11-0690-46a9-b742-f48b4a80ab33": {
           "name": "Cieľ a pravidlá",
+          "description": "S celou triedou v sprievodcovi aktivitou prečítajte sekciu „Cieľ a pravidlá“ a zodpovedajte otázky.",
           "tips": [
             null
           ]
@@ -13259,39 +14070,71 @@
         },
         "caf7880a-40b3-4252-865e-a81d22f30d07": {
           "tips": [
-            null
+            "Hoci niektorí žiaci budú túto časť lekcie vnímať ako súťaž, pripomeňte skupinám, že ich cieľom je zlepšiť svoj vlastný návrh lode, nie súťažiť s ostatnými. Všetkých žiakov takto vyzývate k tomu, aby súťažili predovšetkým sami so sebou, nie s ostatnými."
           ]
         },
         "17a60d00-0762-4796-8bb7-c953b2f53867": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "**Premostenie**: Povedzte žiakom, aby sa vrátili na svoje miesta na reflexiu."
+        },
+        "8da74910-a0c5-4983-a7be-0b370c20d612": {
+          "name": "Diskusia o výzve",
+          "description": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "e2eaa19c-4ad1-42ea-a0ee-1186b3a986b7": {
+          "description": "**Spýtajte sa**: Pri tejto aktivite ste pracovali v tímoch. Čím práca v tíme túto aktivitu zjednodušila a čím ju, naopak, skomplikovala? Čo vašej skupine pomohlo prekonať tieto výzvy?"
         },
         "04f7b740-ae5f-4f12-9867-27f7b08eff1e": {
+          "description": "**Diskutujte**: Dajte žiakom čas na to, aby sa o svoje myšlienky podelili so zvyškom triedy.",
           "tips": [
-            null
+            "Žiaci si možno uvedomia, spolupráca im umožnila premyslieť si svoje nápady dôkladnejšie alebo rozdeliť prácu medzi viacerých ľudí. Keď budú žiaci spomínať komplikácie, ktoré im spolupráca spôsobila, dozrite na to, aby zároveň prichádzali aj s možnými riešeniami týchto problémov. Ak ste si v dynamike niektorej skupiny počas aktivity všimli nejaké problémy, môžete tento čas využiť na to, aby ste tieto potenciálne problémy nekonfliktným tónom spomenuli a pomohli žiakom vymyslieť stratégie, ako v budúcnosti spolupracovať efektívnejšie. Tieto nápady si dokonca môžete spísať ako pravidlá tímovej práce v danej triede."
           ]
+        },
+        "84c36a0f-89da-46bf-a8c8-8ccaafb3146a": {
+          "description": "Všetky vaše myšlienky k týmto otázkam boli výborné. V tejto triede budeme spoločnú prácu využívať často. Možno ste zvyknutí vnímať informatiku tak, že je iba o počítačoch, no informatika je v prvom rade o riešení problémov a to je aktivita, ktorej sa zvyčajne venujeme v tímoch. Mnohé ďalšie časti tejto aktivity, napríklad zlepšovanie návrhov či budovanie vecí, budú tiež dôležitou súčasťou tohto kurzu. Dúfam, že sa na tohtoročné aktivity tešíte. Zajtra sa viac zahĺbime do samotného riešenia problémov."
+        },
+        "805b87e8-c377-489d-84e2-8be6316309b1": {
+          "description": "Na to, aby ste mohli počas roka kontrolovať prácu svojich žiakov a aby mali vaši žiaci prístup k online nástrojom a zdrojom, všetci musia byť v Code studiu zapísaní v rovnakej triede. Navyše platí, že na zobrazenie hodnotených úloh a kľúčov s odpoveďami musíte byť „overený učiteľ“."
+        },
+        "6c301b18-2257-43b7-ad69-d9d8eab042bd": {
+          "name": "Pred hodinou"
         },
         "c55fae38-7795-4027-b469-a3238f34efe5": {
           "tips": [
-            null
+            "-   Jedným z hlavných cieľov kurzu Objavujeme informatiku je zvýšiť záujem ľudí o informatiku.  \n\n-   Preto je _nesmierne dôležité_ vedieť, aké postoje a názory na informatiku majú žiaci _pred_ kurzom, aby sme dokázali zmerať, ako veľmi sa u nich tieto veci zmenili _po absolvovaní_ kurzu.\n\n-   Upozorňujeme, že tento dotazník je pre žiakov **anonymný**\n\n-   Vyplnenie dotazníka nám tiež pomáha zistiť, akým spôsobom by sme mohli významne zlepšiť naše učebné osnovy, aby fungovali čo najlepšie pre žiakov aj učiteľov.\n\n**Budeme vám veľmi vďační, ak nám pomôžetete zozbierať tieto cenné údaje. Názory vašich žiakov sú pre nás dôležité!**"
           ]
         },
         "418d731c-d516-4e49-8547-9313763526ca": {
+          "name": "Príprava",
+          "description": "**Spýtajte sa:** Aké vlastnosti má mať človek, ktorý je dobrý v riešení problémov? Každý si pripraví tri odpovede, o ktoré sa podelí so svojou skupinou.",
           "tips": [
-            null
+            "**Vedenie denníka:** Vedenie denníka je v kurze Objavujeme informatiku dôležitou zručnosťou. Žiaci si môžu písať denník na samostatné papiere, do zápisníka alebo aj digitálne.\n\n**Prezentácie:** Prezentácie k tomuto tematickému celku sú k dispozícii v učebnom pláne v sekcii „Materiály pre učiteľov“. Systém vás vyzve, aby ste si uložili kópiu, čo stačí urobiť raz. Následne už budete môcť používať prezentácie ku všetkým lekciám v učebných osnovách."
           ]
         },
         "c941f0ac-38f6-4828-9ca4-e8b600868807": {
+          "description": "**Diskutujte:** Dajte žiakom možnosť podeliť sa o svoje odpovede so zvyšnými členmi skupiny pri stole. Potom tých, ktorí s tým nemajú problém, požiadajte, aby sa o odpovede podelili s celou triedou. ",
           "tips": [
-            null
+            "Cieľom tejto úvodnej aktivity je dosiahnuť, aby sa žiaci ešte pred dnešnou aktivitou začali zamýšľať nad riešením problémov.  Vyzdvihujte odpovede, ktoré odkazujú na dôležité vlastnosti a schopnosti využívané pri práci v triede, napríklad spoluprácu, vytrvalosť či tvorivosť. Teraz tiež máte príležitosť podporiť v triede pozitívnu kultúru, ktorá motivuje žiakov zdieľať veci s ostatnými a navzájom sa podporovať pri rýchlom vymýšľaní nápadov prostredníctvom brainstormingu."
           ]
         },
+        "d4e42301-7a41-4d37-8f34-07e7d9562339": {
+          "description": "Výborné myšlienky! V informatike riešime problémy neustále, takže ku všetkým zručnostiam, ktoré ste vymenovali, sa budeme vracať nielen dnes, ale aj po zvyšok kurzu. V informatike platí, že problémy väčšinou riešime v tímoch. Dnes teda budete pracovať v tímoch na riešení zábavnej úlohy, pri ktorej nebudeme používať počítače. Kým budete na úlohe pracovať, zamyslite sa nad nasledujúcou otázkou."
+        },
+        "ae6365e1-e28d-4d30-846a-2ebef57b4afd": {
+          "description": "**Ukážte:** Ukážte žiakom otázku dňa\n\n**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "d3cf10fd-68e0-46fd-8a4e-a82daa4e0f1c": {
+          "description": "**Vytvorte skupiny**: Rozdeľte žiakov do skupín po dvoch alebo troch."
+        },
         "c209191d-c268-4f8e-b40c-93a5de206b76": {
+          "description": "**Rozdajte**: Jednu kópiu sprievodcu aktivitou každej skupine.",
           "tips": [
             null
           ]
         },
         "09e4642c-bedd-44e7-a7a7-ed2f85ece6c1": {
           "name": "Cieľ a pravidlá",
+          "description": "S celou triedou v sprievodcovi aktivitou prečítajte sekciu „Cieľ a pravidlá“ a zodpovedajte otázky.",
           "tips": [
             null
           ]
@@ -13307,39 +14150,71 @@
         },
         "193961e8-e637-4d45-bb0b-014a3e8d1bbb": {
           "tips": [
-            null
+            "Hoci niektorí žiaci budú túto časť lekcie vnímať ako súťaž, pripomeňte skupinám, že ich cieľom je zlepšiť svoj vlastný návrh lode, nie súťažiť s ostatnými. Všetkých žiakov takto vyzývate k tomu, aby súťažili predovšetkým sami so sebou, nie s ostatnými."
           ]
         },
         "cebe2e73-7783-4bbf-9469-c2084423900d": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "**Premostenie**: Povedzte žiakom, aby sa vrátili na svoje miesta na reflexiu."
+        },
+        "a90c61ba-7aa3-4b9b-ba1c-081bb47c3230": {
+          "name": "Diskusia o výzve",
+          "description": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "6977e8b1-edf5-4a77-b65d-561695544e26": {
+          "description": "**Spýtajte sa**: Pri tejto aktivite ste pracovali v tímoch. Čím práca v tíme túto aktivitu zjednodušila a čím ju, naopak, skomplikovala? Čo vašej skupine pomohlo prekonať tieto výzvy?"
         },
         "01c916af-970c-4e2f-a98e-38cbc436eefc": {
+          "description": "**Diskutujte**: Dajte žiakom čas na to, aby sa o svoje myšlienky podelili so zvyškom triedy.",
           "tips": [
-            null
+            "Žiaci si možno uvedomia, spolupráca im umožnila premyslieť si svoje nápady dôkladnejšie alebo rozdeliť prácu medzi viacerých ľudí. Keď budú žiaci spomínať komplikácie, ktoré im spolupráca spôsobila, dozrite na to, aby zároveň prichádzali aj s možnými riešeniami týchto problémov. Ak ste si v dynamike niektorej skupiny počas aktivity všimli nejaké problémy, môžete tento čas využiť na to, aby ste tieto potenciálne problémy nekonfliktným tónom spomenuli a pomohli žiakom vymyslieť stratégie, ako v budúcnosti spolupracovať efektívnejšie. Tieto nápady si dokonca môžete spísať ako pravidlá tímovej práce v danej triede."
           ]
+        },
+        "f5e08562-db11-4323-80ed-4c719b6a6905": {
+          "description": "Všetky vaše myšlienky k týmto otázkam boli výborné. V tejto triede budeme spoločnú prácu využívať často. Možno ste zvyknutí vnímať informatiku tak, že je iba o počítačoch, no informatika je v prvom rade o riešení problémov a to je aktivita, ktorej sa zvyčajne venujeme v tímoch. Mnohé ďalšie časti tejto aktivity, napríklad zlepšovanie návrhov či budovanie vecí, budú tiež dôležitou súčasťou tohto kurzu. Dúfam, že sa na tohtoročné aktivity tešíte. Zajtra sa viac zahĺbime do samotného riešenia problémov."
+        },
+        "7e2b0140-2517-4a48-89c6-2e51107ec2f2": {
+          "description": "Na to, aby ste mohli počas roka kontrolovať prácu svojich žiakov a aby mali vaši žiaci prístup k online nástrojom a zdrojom, všetci musia byť v Code studiu zapísaní v rovnakej triede. Navyše platí, že na zobrazenie hodnotených úloh a kľúčov s odpoveďami musíte byť „overený učiteľ“."
+        },
+        "625b6145-fb18-49d5-ba66-2f69668f8178": {
+          "name": "Pred hodinou"
         },
         "163d7212-c083-4ba8-bb87-6150a37f8f0f": {
           "tips": [
-            null
+            "-   Jedným z hlavných cieľov kurzu Objavujeme informatiku je zvýšiť záujem ľudí o informatiku.  \n\n-   Preto je _nesmierne dôležité_ vedieť, aké postoje a názory na informatiku majú žiaci _pred_ kurzom, aby sme dokázali zmerať, ako veľmi sa u nich tieto veci zmenili _po absolvovaní_ kurzu.\n\n-   Upozorňujeme, že tento dotazník je pre žiakov **anonymný**\n\n-   Vyplnenie dotazníka nám tiež pomáha zistiť, akým spôsobom by sme mohli významne zlepšiť naše učebné osnovy, aby fungovali čo najlepšie pre žiakov aj učiteľov.\n\n**Budeme vám veľmi vďační, ak nám pomôžetete zozbierať tieto cenné údaje. Názory vašich žiakov sú pre nás dôležité!**"
           ]
         },
         "9823b27f-66ca-4ea1-860d-3472e5317340": {
+          "name": "Príprava",
+          "description": "**Spýtajte sa:** Aké vlastnosti má mať človek, ktorý je dobrý v riešení problémov? Každý si pripraví tri odpovede, o ktoré sa podelí so svojou skupinou.",
           "tips": [
             null
           ]
         },
         "77c22840-b9e9-4426-9894-30f101f2c00e": {
+          "description": "**Diskutujte:** Dajte žiakom možnosť podeliť sa o svoje odpovede so zvyšnými členmi skupiny pri stole. Potom tých, ktorí s tým nemajú problém, požiadajte, aby sa o odpovede podelili s celou triedou. ",
           "tips": [
-            null
+            "Cieľom tejto úvodnej aktivity je dosiahnuť, aby sa žiaci ešte pred dnešnou aktivitou začali zamýšľať nad riešením problémov.  Vyzdvihujte odpovede, ktoré odkazujú na dôležité vlastnosti a schopnosti využívané pri práci v triede, napríklad spoluprácu, vytrvalosť či tvorivosť. Teraz tiež máte príležitosť podporiť v triede pozitívnu kultúru, ktorá motivuje žiakov zdieľať veci s ostatnými a navzájom sa podporovať pri rýchlom vymýšľaní nápadov prostredníctvom brainstormingu."
           ]
         },
+        "c1a4e53a-2218-4c00-80d7-3505a462d81d": {
+          "description": "Výborné myšlienky! V informatike riešime problémy neustále, takže ku všetkým zručnostiam, ktoré ste vymenovali, sa budeme vracať nielen dnes, ale aj po zvyšok kurzu. V informatike platí, že problémy väčšinou riešime v tímoch. Dnes teda budete pracovať v tímoch na riešení zábavnej úlohy, pri ktorej nebudeme používať počítače. Kým budete na úlohe pracovať, zamyslite sa nad nasledujúcou otázkou."
+        },
+        "05812355-06bd-4750-9713-691134fd7a89": {
+          "description": "**Ukážte:** Ukážte žiakom otázku dňa\n\n**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "241975ce-013e-4f72-a787-8800069fd731": {
+          "description": "**Vytvorte skupiny**: Rozdeľte žiakov do skupín po dvoch alebo troch."
+        },
         "b452ecde-f660-4d52-9ab7-8b33989681f0": {
+          "description": "**Rozdajte**: Jednu kópiu sprievodcu aktivitou každej skupine.",
           "tips": [
             null
           ]
         },
         "f5570fab-fdee-464e-b569-ec19142fc35d": {
           "name": "Cieľ a pravidlá",
+          "description": "S celou triedou v sprievodcovi aktivitou prečítajte sekciu „Cieľ a pravidlá“ a zodpovedajte otázky.",
           "tips": [
             null
           ]
@@ -13355,23 +14230,46 @@
         },
         "bc8e4c54-e3ca-42f2-b613-2b383783dad8": {
           "tips": [
-            null
+            "Hoci niektorí žiaci budú túto časť lekcie vnímať ako súťaž, pripomeňte skupinám, že ich cieľom je zlepšiť svoj vlastný návrh lode, nie súťažiť s ostatnými. Všetkých žiakov takto vyzývate k tomu, aby súťažili predovšetkým sami so sebou, nie s ostatnými."
           ]
         },
         "ba9df800-646b-4324-9b35-b3f6564ba061": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "**Premostenie**: Povedzte žiakom, aby sa vrátili na svoje miesta na reflexiu."
+        },
+        "eb580d4d-4253-490a-9fe8-256885fb0ed8": {
+          "name": "Diskusia o výzve",
+          "description": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "10f5ec1c-3957-422e-a1ee-3787a5df1dc7": {
+          "description": "**Spýtajte sa**: Pri tejto aktivite ste pracovali v tímoch. Čím práca v tíme túto aktivitu zjednodušila a čím ju, naopak, skomplikovala? Čo vašej skupine pomohlo prekonať tieto výzvy?"
         },
         "f25bdc7d-2ab6-493a-a4e7-e46dbeaa01c4": {
+          "description": "**Diskutujte**: Dajte žiakom čas na to, aby sa o svoje myšlienky podelili so zvyškom triedy.",
           "tips": [
-            null
+            "Žiaci si možno uvedomia, spolupráca im umožnila premyslieť si svoje nápady dôkladnejšie alebo rozdeliť prácu medzi viacerých ľudí. Keď budú žiaci spomínať komplikácie, ktoré im spolupráca spôsobila, dozrite na to, aby zároveň prichádzali aj s možnými riešeniami týchto problémov. Ak ste si v dynamike niektorej skupiny počas aktivity všimli nejaké problémy, môžete tento čas využiť na to, aby ste tieto potenciálne problémy nekonfliktným tónom spomenuli a pomohli žiakom vymyslieť stratégie, ako v budúcnosti spolupracovať efektívnejšie. Tieto nápady si dokonca môžete spísať ako pravidlá tímovej práce v danej triede."
           ]
+        },
+        "32af4c30-b182-4d2e-9c46-e61ad93d6eb9": {
+          "description": "Všetky vaše myšlienky k týmto otázkam boli výborné. V tejto triede budeme spoločnú prácu využívať často. Možno ste zvyknutí vnímať informatiku tak, že je iba o počítačoch, no informatika je v prvom rade o riešení problémov a to je aktivita, ktorej sa zvyčajne venujeme v tímoch. Mnohé ďalšie časti tejto aktivity, napríklad zlepšovanie návrhov či budovanie vecí, budú tiež dôležitou súčasťou tohto kurzu. Dúfam, že sa na tohtoročné aktivity tešíte. Zajtra sa viac zahĺbime do samotného riešenia problémov."
+        },
+        "144a51cf-3c4b-4bed-affb-763354cf3123": {
+          "description": "**Zapíšte si do denníka:** Skúste vymyslieť najsrandovnejší problém, s ktorým by nám vedel postup riešenia problémov pomôcť. Buďte pripravení zdôvodniť, ako aby sa využívali jednotlivé kroky postupu."
         },
         "48dcb032-0dad-4177-89a7-066d60d785f5": {
+          "description": "Dajte žiakom možnosť podeliť sa o svoje nápady samostatne.",
           "tips": [
-            null
+            "Cieľom tejto diskusie je zopakovať si postup riešenia problémov a poukázať na to, koľko rôznych typov problémov existuje. Motivujte žiakov k tomu, aby k úlohe pristupovali tvorivo a zabavili sa pri vymýšľaní rôznych „problémov“, ktoré by mohli riešiť."
           ]
         },
+        "b78b02cc-1078-4788-acb8-1a9f616e5904": {
+          "description": "Pri takejto širokej škále problémov a stratégií je dôležité vedieť sa zamyslieť nad tým, ako čo najlepšie využiť postup riešenia problémov. Dnes sa pozrieme na rôzne typy problémov, porozprávame sa o tom, čím sa od seba odlišujú, a zamyslíme sa nad tým, ako nám postup riešenia problémov pomohol vyriešiť ich."
+        },
+        "b9d78148-7cc9-4625-998e-f58589c75a3f": {
+          "description": "**Otázka dňa: Ako môžeme postup riešenia problémov využiť pri rôznych druhoch problémov?**"
+        },
         "7ce61da1-8486-4987-a971-d02802cf3223": {
+          "name": "Riešenie problémov",
           "tips": [
             null
           ]
@@ -13387,21 +14285,43 @@
           ]
         },
         "e550c27b-967f-46f1-a1bf-96eb4e4ccc2e": {
+          "name": "Ako funguje postup riešenia problémov",
           "tips": [
-            null
+            "**Cieľ:** Vaši žiaci si už vyskúšali postup riešenia problémov na rozličných problémoch. Pomôžte im spraviť súhrn poznámok, ktoré si zapisovali, aby lepšie pochopili úlohy jednotlivých krokov v postupe riešenia problémov a jeho hodnotu vo všeobecnosti. Nižšie nájdete vzorový súbor záverov, no kým žiakom ponúknete svoje myšlienky, dajte im žiakom príležitosť podeliť sa o tie ich.\n\n**Definuj:** Ak si problém nezadefinujeme, možno vyriešime nesprávny problém, nebudeme vedieť, kde začať, alebo nebudeme vedieť, kedy treba skončiť\n\n**Priprav:** Aj dobre zadefinované problémy zvyčajne umožňujú množstvo rôznych prístupov. Jednotlivé pokusy budú mať väčšiu šancu na úspech, ak sa najprv zamyslíme nad našimi možnosťami a skúsime predvídať komplikácie.\n\n**Vyskúšaj:** Ak sa nebudeme snažiť, nikam sa nedostaneme. Kým má náš plán ešte stále nejakú šancu na úspech, je dôležité byť vytrvalý a trpezlivý.\n\n**Vyhodnoť:** Je pravdepodobné, že na prvý pokus sa nám nepodarí problém vyriešiť alebo zistíme, že existuje lepšie riešenie. Učme sa z našich predchádzajúcich pokusov a buďme pripravení pustiť sa do postupu odznova.\n\n**Postup riešenia problémov:** Hoci si možno všimnete, že postup riešenia problémov využívate aj pri malých či jednoduchých úlohách, je nesmierne užitočný najmä pri veľkých, zložitých a zle zadefinovaných problémoch, ako aj pri takých, ktoré majú otvorené riešenie. Pomôže vám približovať sa k riešeniu vtedy, keď nie je jasné, ako treba postupovať."
           ]
+        },
+        "95279059-3b3a-44e8-b2f7-08a2a726a016": {
+          "description": "**Otázka dňa: Ako môžeme postup riešenia problémov využiť pri rôznych druhoch problémov?**"
+        },
+        "102f5ee3-1f34-4f48-8ec5-defeee1f7bfa": {
+          "description": "**Zapíšte si do denníka:** Postup riešenia problémov je užitočný najmä vtedy, keď narazíme na zle zadefinovaný problém. Dnes sme videli, že využívať postup riešenia problémov je bez dobre zadefinovaného problému náročné. Aké otázky alebo stratégie môžeme využiť na to, aby sme lepšie pochopili a zadefinovali problémy, kým sa pustíme do ich riešenia?"
         },
         "05109520-cc5d-4422-8447-09b5e315232c": {
+          "description": "**Diskutujte:** Povedzte žiakom, aby sa rýchlo porozprávali v skupinách, a potom zdieľajte nápady v rámci celej triedy.",
           "tips": [
             null
           ]
+        },
+        "33b1ee6f-b47b-4f4c-ac14-1d3d3098f82e": {
+          "description": "Dobrá práca, všetci! Teraz už viete veľa o postupe riešenia problémov. Tento nástroj pre vás bude nesmierne užitočný, pretože ho budeme počas roka opakovane využívať, keď sa budeme čoraz hlbšie ponárať do sveta informatiky."
+        },
+        "1970d225-513d-4988-a849-ce1074a58ad5": {
+          "description": "**Zapíšte si do denníka:** Skúste vymyslieť najsrandovnejší problém, s ktorým by nám vedel postup riešenia problémov pomôcť. Buďte pripravení zdôvodniť, ako aby sa využívali jednotlivé kroky postupu."
         },
         "8e2e9def-edb6-462f-b068-2be956dcc3c0": {
+          "description": "Dajte žiakom možnosť podeliť sa o svoje nápady samostatne.",
           "tips": [
-            null
+            "Cieľom tejto diskusie je zopakovať si postup riešenia problémov a poukázať na to, koľko rôznych typov problémov existuje. Motivujte žiakov k tomu, aby k úlohe pristupovali tvorivo a zabavili sa pri vymýšľaní rôznych „problémov“, ktoré by mohli riešiť."
           ]
         },
+        "37ba1da2-a964-42fa-a40f-433569e7566e": {
+          "description": "Pri takejto širokej škále problémov a stratégií je dôležité vedieť sa zamyslieť nad tým, ako čo najlepšie využiť postup riešenia problémov. Dnes sa pozrieme na rôzne typy problémov, porozprávame sa o tom, čím sa od seba odlišujú, a zamyslíme sa nad tým, ako nám postup riešenia problémov pomohol vyriešiť ich."
+        },
+        "2194dc5a-79f0-4b48-9630-5dca26cb5b56": {
+          "description": "**Otázka dňa: Ako môžeme postup riešenia problémov využiť pri rôznych druhoch problémov?**"
+        },
         "9844b63f-04a1-4011-87f7-eec3c63a5496": {
+          "name": "Riešenie problémov",
           "tips": [
             null
           ]
@@ -13417,14 +14337,26 @@
           ]
         },
         "9ceef85f-40f8-4692-bcb4-1a689968a685": {
+          "name": "Ako funguje postup riešenia problémov",
+          "description": "**Povedzte:** Práve ste vyriešili niekoľko veľmi odlišných problémov. Porozprávajte sa so spolužiakmi sediacimi pri tom istom stole a prejdite si poznámky, ktoré ste si pri jednotlivých úlohách zapísali. Pripravte si odpovede na nasledujúce otázky:\n\n-   Aký je účel jednotlivých krokov v postupe riešenia problémov? Prečo je daný krok súčasťou postupu?\n-   Existujú nejaké typy problémov, pri riešení ktorých je postup riešenia problémov výnimočne užitočný?\n\n**Diskutujte:** Keď žiaci pri stoloch venovali niekoľko minút rozoberaniu svojich odpovedí, vyzvite žiakov, aby pred celou triedou zdôvodnili, prečo jednotlivé kroky postupu vybrali. Keď ste už s triedou rozobrali každý krok postupu, prejdite na druhú otázku. Táto otázka môže mať mnoho rôznych odpovedí, pričom by ste mali dať žiakom priestor na to, aby sa podelili o svoje myšlienky a skúsenosti. Ak sa počas tejto diskusie nespomenú, na konci žiakom spomeňte niektoré alebo všetky myšlienky uvedené v sekcii Cieľ diskusie.",
           "tips": [
-            null
+            "**Cieľ:** Vaši žiaci si už vyskúšali postup riešenia problémov na rozličných problémoch. Pomôžte im spraviť súhrn poznámok, ktoré si zapisovali, aby lepšie pochopili úlohy jednotlivých krokov v postupe riešenia problémov a jeho hodnotu vo všeobecnosti. Nižšie nájdete vzorový súbor záverov, no kým žiakom ponúknete svoje myšlienky, dajte im žiakom príležitosť podeliť sa o tie ich.\n\n**Definuj:** Ak si problém nezadefinujeme, možno vyriešime nesprávny problém, nebudeme vedieť, kde začať, alebo nebudeme vedieť, kedy treba skončiť\n\n**Priprav:** Aj dobre zadefinované problémy zvyčajne umožňujú množstvo rôznych prístupov. Jednotlivé pokusy budú mať väčšiu šancu na úspech, ak sa najprv zamyslíme nad našimi možnosťami a skúsime predvídať komplikácie.\n\n**Vyskúšaj:** Ak sa nebudeme snažiť, nikam sa nedostaneme. Kým má náš plán ešte stále nejakú šancu na úspech, je dôležité byť vytrvalý a trpezlivý.\n\n**Vyhodnoť:** Je pravdepodobné, že na prvý pokus sa nám nepodarí problém vyriešiť alebo zistíme, že existuje lepšie riešenie. Učme sa z našich predchádzajúcich pokusov a buďme pripravení pustiť sa do postupu odznova.\n\n**Postup riešenia problémov:** Hoci si možno všimnete, že postup riešenia problémov využívate aj pri malých či jednoduchých úlohách, je nesmierne užitočný najmä pri veľkých, zložitých a zle zadefinovaných problémoch, ako aj pri takých, ktoré majú otvorené riešenie. Pomôže vám približovať sa k riešeniu vtedy, keď nie je jasné, ako treba postupovať."
           ]
         },
+        "38da4389-98b4-4b62-a60c-578bcd4b3a8a": {
+          "description": "**Otázka dňa: Ako môžeme postup riešenia problémov využiť pri rôznych druhoch problémov?**"
+        },
+        "0f62dbbd-bdcb-4926-a6fb-31fb8a2c80e1": {
+          "description": "**Zapíšte si do denníka:** Postup riešenia problémov je užitočný najmä vtedy, keď narazíme na zle zadefinovaný problém. Dnes sme videli, že využívať postup riešenia problémov je bez dobre zadefinovaného problému náročné. Aké otázky alebo stratégie môžeme využiť na to, aby sme lepšie pochopili a zadefinovali problémy, kým sa pustíme do ich riešenia?"
+        },
         "ab4371e8-c868-4587-9f32-2a0f857b910d": {
+          "description": "**Diskutujte:** Povedzte žiakom, aby sa rýchlo porozprávali v skupinách, a potom zdieľajte nápady v rámci celej triedy.",
           "tips": [
-            null
+            "Existujte množstvo rôznych stratégií, ktoré nám môžu pomôcť zadefinovať problémy. Niektoré z nich sú uvedené v sprievodcovi aktivitou k predchádzajúcej lekcii. Užitočné môžu byť napríklad nasledujúce otázky:\n\n-   Koho konkrétne tento problém ovplyvňuje? Čo konkrétne potrebujú? V akých situáciách?\n-   Prečo tento problém existuje? (A prečo existuje TEN problém?) Opakujte otázku, až kým sa nedostanete k jadru problému.\n-   Ako vieme zistiť, či už je problém vyriešený? Čo vieme pozorovať alebo merať?"
           ]
+        },
+        "c5579cff-7b72-4ce8-8f6e-922a512e41f0": {
+          "description": "Dobrá práca, všetci! Teraz už viete veľa o postupe riešenia problémov. Tento nástroj pre vás bude nesmierne užitočný, pretože ho budeme počas roka opakovane využívať, keď sa budeme čoraz hlbšie ponárať do sveta informatiky."
         },
         "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
           "tips": [
@@ -13542,7 +14474,8 @@
         "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Rýchla kontrola"
         },
         "f5c13deb-a9a7-4f04-9daa-ec92ec261b02": {
           "tips": [
@@ -13558,15 +14491,27 @@
         "499a4b6c-eccd-4c51-a6db-17c2c9a0801a": {
           "progression_name": "Výzvy"
         },
+        "86e13822-ef3f-4ec1-981a-e8b90ef192ab": {
+          "name": "Denník"
+        },
         "1db390c3-2d64-4581-a038-c4dd0f7226ee": {
           "tips": [
             null
           ]
         },
+        "ec9d873f-eb15-42ae-b9cd-a291ddaca6e2": {
+          "name": "Denník"
+        },
         "016877a1-d391-46b7-998e-fbe9a7c12703": {
           "tips": [
             null
           ]
+        },
+        "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c": {
+          "name": "Spätná väzba spoluriešiteľa"
+        },
+        "a167e87b-c7c9-4adc-a70d-c49dcb309bc8": {
+          "name": "Denník"
         },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
           "tips": [
@@ -13644,6 +14589,9 @@
             null
           ]
         },
+        "5572ccc6-7ab9-4dca-a02c-8ecd22e87705": {
+          "name": "Denník"
+        },
         "4662cf38-bec5-4f63-9f2d-237617407f0f": {
           "tips": [
             null
@@ -13656,6 +14604,9 @@
         },
         "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
           "name": "Spätná väzba spoluriešiteľa"
+        },
+        "3656d6a8-efb7-4950-97ee-4415833d7ec8": {
+          "name": "Denník"
         },
         "8c10515f-4ba5-4629-b5e0-e44975336298": {
           "tips": [
@@ -13797,7 +14748,8 @@
         "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Sprievodca projektom"
         },
         "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7": {
           "progression_name": "Projekt webstránky"
@@ -13811,7 +14763,7 @@
           "progression_name": "Publikovanie tvojej webstránky"
         },
         "ff09ae02-5fc8-4ac3-9e08-18a25ffd0d76": {
-          "name": "Recenzia"
+          "name": "Vzájomné hodnotenie"
         },
         "10b08619-0a72-442e-a75e-13b6cead2e90": {
           "tips": [
@@ -13901,6 +14853,9 @@
             null
           ]
         },
+        "01a5973e-7096-468e-b640-899767928b23": {
+          "name": "Denník"
+        },
         "c986ac31-a9e4-4fbb-8203-f8dd207cfed9": {
           "tips": [
             null
@@ -13924,6 +14879,9 @@
         "5aa91065-3f4e-409f-9f3e-14bd98649ef5": {
           "progression_name": "Výzvy"
         },
+        "d2c208eb-49ed-4b4b-9a5f-5d51bda3d3f4": {
+          "name": "Denník"
+        },
         "ada4d5c1-50ee-446a-85c6-d61dd4d3221f": {
           "tips": [
             null
@@ -13936,6 +14894,9 @@
           "tips": [
             null
           ]
+        },
+        "06b391d9-3723-444d-9c93-882c4f22a1ad": {
+          "name": "Denník"
         },
         "754d0467-6e5e-45c8-8692-2fab52c45548": {
           "tips": [
@@ -13966,6 +14927,9 @@
         },
         "76186510-9804-44d1-8371-4aa2895fc16d": {
           "progression_name": "Výzvy"
+        },
+        "37b960c3-650e-4d91-9561-fea00f3a39c7": {
+          "name": "Denník"
         },
         "c881299c-2798-4137-ac19-ba5e05d59340": {
           "tips": [

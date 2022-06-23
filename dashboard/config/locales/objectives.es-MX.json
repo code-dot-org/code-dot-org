@@ -1292,122 +1292,233 @@
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Explicar el proceso de diseño y cómo ayudó a dar forma al resultado final del proyecto."
         },
+        "ad6a4213-49c3-49e2-ace9-5a7d36daa458": {
+          "description": " Evaluar de manera crítica un objeto en base a su diseño y considerar si este cumple con ciertos requerimientos."
+        },
+        "5b050fa6-537c-42bd-ab68-8da930f96fc1": {
+          "description": "Identificar la empatía por el usuario como un componente importante del proceso de diseño."
+        },
+        "c570aee0-75a6-4698-a3d7-b211adcd5ef8": {
+          "description": " Evaluar de manera crítica un diseño a través de la perspectiva de un perfil de usuario."
+        },
+        "6b88c767-4b50-4334-8b24-fff5e79a467d": {
+          "description": " Diseñar mejoras en un producto a partir de un perfil de usuario."
+        },
+        "8885beeb-2915-4569-b3b2-2ceca9293597": {
+          "description": "Generar varias estrategias para suplir las necesidades del usuario"
+        },
+        "ce14b7c8-ae41-4118-9fa2-56086e2298a1": {
+          "description": "Organizar ideas y estrategias en categorías significativas"
+        },
+        "33a9d6e5-89ba-422e-a8f1-c3a200a8c2ba": {
+          "description": "Analizar y seleccionar las estrategias más adecuadas para satisfacer las necesidades de los usuarios."
+        },
+        "81d19c33-2675-415e-9b35-12643f8c33be": {
+          "description": "Usar un prototipo de papel para probar el diseño de una aplicación."
+        },
+        "6c20f4f3-4375-4dee-9f00-012a33e7d2af": {
+          "description": "Recolectar y analizar las opiniones de los usuarios que probaron un prototipo de papel."
+        },
+        "cff6cc90-bf04-4c7d-9dac-c6f1a28310a8": {
+          "description": "Utilizar los comentarios para crear un plan de desarrollo para una aplicación."
+        },
+        "3b9c322a-6a98-4473-8079-d20160c3e352": {
+          "description": "Clasificar y priorizar los comentarios de los usuarios para una aplicación."
+        },
+        "95e992b6-6a6c-42f6-aa5c-aee60535a00a": {
+          "description": "Mejorar el diseño de una pantalla a partir de los comentarios de los usuarios."
+        },
+        "b09ef219-e569-45de-94f7-3e7beec34d72": {
+          "description": "Analizar los apuntes tomados en la entrevista para identificar las necesidades del usuario"
+        },
+        "c6441f90-9643-4b1d-9ac8-90e4ee024f61": {
+          "description": "Diseñar un prototipo de papel de una aplicación que responda a las necesidades específicas de un usuario"
+        },
+        "6d0afa47-7d02-480b-9369-b4aabf3b6841": {
+          "description": "Identificar las mejoras de una aplicación a partir de las pruebas con usuarios"
+        },
+        "91be4c6c-f556-4fc4-85b4-8cb5bbdf8e29": {
+          "description": "Diseñar la interfaz de usuario de una aplicación"
+        },
+        "b3622011-d99b-4a7b-9818-63ff04be86f8": {
+          "description": "Desarrollar un plan colaborativo para diseñar un artefacto computacional"
+        },
+        "6fa760e4-910d-4f77-99be-68f7673581d6": {
+          "description": "Describir los usuarios objetivo de un artefacto computacional"
+        },
+        "d1a36c22-f6c1-42c6-bf97-88091a1201c6": {
+          "description": "Evaluar un diseño basado en su habilidad para cumplir con las necesidades del usuario objetivo"
+        },
+        "3e59ba97-41b3-4967-9366-d38699ab43bb": {
+          "description": "Evaluar el propósito y el impacto de un artefacto computacional"
+        },
+        "01fafc69-a442-46b9-8274-d8ec27670236": {
+          "description": "Explicar el propósito de cada uno de los elementos de interfaz de usuario al desarrollar una aplicación"
+        },
+        "c2f81013-f143-44b7-940d-fba98243bb3d": {
+          "description": "Explicar el rol de los prototipos de papel en el desarrollo de aplicaciones."
+        },
+        "3a6f69e7-fc2d-4f5a-bebe-8336c819e788": {
+          "description": "Crear un prototipo de papel que incorpore el flujo de usuarios para un artefacto computacional."
+        },
+        "41aa43b4-0a6f-4377-927a-e1d6042149cb": {
+          "description": "Diseñar y realizar una prueba con prototipos de papel para recibir comentarios sobre un diseño"
+        },
+        "b6e2c14d-12b9-44dd-96fa-82de930560a1": {
+          "description": "Analizar las pruebas con usuarios para identificar características que deberían ser eliminadas, añadidas, o mejoradas."
+        },
+        "0e89a393-31c9-4c3c-b1bb-0285a4a618c7": {
+          "description": "Asignar roles y responsabilidades a cada miembro del equipo al colaborar en la creación de un artefacto digital"
+        },
+        "fec5eaa1-f93f-4255-b69a-080150de17c0": {
+          "description": "Seleccionar el elemento de entrada apropiado para un determinado tipo de información"
+        },
+        "a39d3b79-7607-4435-9ecb-d2b1041334ec": {
+          "description": "Crear un prototipo digital de la pantalla de una aplicación"
+        },
+        "6ee3d556-8e43-4ecb-9805-dc5596471be8": {
+          "description": "Crear un evento que detecta y responde a las entradas de usuario"
+        },
+        "12ae5d81-38da-43a1-bf10-53d10c0e3e04": {
+          "description": "Integrar todos los componentes del trabajo colaborativo en un artefacto computacional final."
+        },
+        "f027b687-253c-4337-bfa7-815483f163d6": {
+          "description": "Crear un prototipo digital que incorpore el flujo de usuarios para un artefacto computacional"
+        },
+        "d40519ba-f2c6-485e-919d-b4752a96e391": {
+          "description": "Diseñar y realizar pruebas con prototipos digitales para recopilar comentarios sobre un diseño."
+        },
+        "6aab1c32-4afe-4d2a-a747-61bf6f0ce7b3": {
+          "description": "Analizar la retroalimentación de los usuarios y los resultados de las pruebas en un artefacto computacional"
+        },
+        "db9fbd1e-9028-4c08-8490-2906a54bee8a": {
+          "description": "Clasificar y priorizar los problemas según el impacto y la facilidad de implementación"
+        },
+        "f6bad7b7-7a94-46b6-8375-016077a5bf54": {
+          "description": "Monitorear el progreso mientras realizan cambios a la aplicación"
+        },
+        "f86060e6-0c95-4d92-85c1-52fc82c32257": {
+          "description": "Presentar claramente información técnica a usuarios no técnicos"
+        },
+        "3f8b9c32-15fb-4b26-9360-9cb6fdfe7ed3": {
+          "description": "Reflexionar sobre el desarrollo de un proyecto en curso"
+        },
         "f7ff9c67-ed9a-40c2-8082-1ebb78dae095": {
-          "description": "Identifica las innovaciones informáticas en un campo determinado"
+          "description": "Identificar las innovaciones en computación dentro de un ámbito específico"
         },
         "494a4afe-5479-4e4f-b656-99ddc4781740": {
-          "description": "Para un dispositivo determinado, articula las entradas y salidas probables"
+          "description": "Expresar las entradas y salidas posibles de un artefacto determinado"
         },
         "c06e8dad-fa68-43cd-a53a-ed66bd90cee4": {
-          "description": "Plantea mejoras para que un dispositivo resuelva mejor un problema concreto"
+          "description": "Sugerir mejoras para ayudar al artefacto a solucionar mejor un problema específico"
         },
         "a49c45e6-6dd1-4a47-8b8b-23f63139beef": {
-          "description": "Configurar las propiedades de los elementos de la interfaz de usuario mediante código"
+          "description": "Establecer las propiedades de los elementos de interfaz de usuario utilizando código"
         },
         "04724c46-add4-4ec1-af15-4c44eed0a91b": {
-          "description": "Responder a la entrada del usuario mediante un manejador de eventos"
+          "description": "Responder a la entrada de usuario utilizando un controlador de eventos"
         },
         "8902d86e-40fd-47c8-92d0-c4a9b766f913": {
-          "description": "Escribir programas que cambien varios elementos en una sola pantalla en lugar de cambiar de pantalla"
+          "description": "Escribir programas que cambian los distintos elementos en una sola pantalla en lugar de cambiar pantallas"
         },
         "61fb8052-ffea-4adf-a134-8d730ad54e8b": {
-          "description": "Conectar y solucionar problemas de dispositivos externos"
+          "description": "Conectar y resolver problemas de dispositivos externos"
         },
         "d69128fd-98d6-4897-966d-76362dbaf0ac": {
-          "description": "Encender y apagar un LED con un código"
+          "description": "Encender y apagar un LED utilizando código"
         },
         "617e327c-d4cc-4b6e-b456-7233bb9c845b": {
-          "description": "Utilizar el código para controlar un dispositivo físico"
+          "description": "Usar código para controlar un dispositivo físico"
         },
         "2b306542-728e-4848-a27f-c0521831a6f4": {
-          "description": "Comparar y contrastar múltiples formas de obtener entradas"
+          "description": "Comparar y contrastar las distintas formas de recibir entradas"
         },
         "c10da89e-729b-4d0f-b376-3e14e931b870": {
-          "description": "Representar diferentes métodos de obtención de datos del usuario"
+          "description": "Modelar distintos métodos para recibir entradas de usuario"
         },
         "37fbfc3d-4e38-4c1c-86bc-6fe3342ba7ff": {
-          "description": "Conectar un manejador de eventos a una entrada de hardware"
+          "description": "Acoplar un controlador de eventos a una entrada de hardware"
         },
         "809dcd9a-f37c-4bfd-9b58-b4024c4fd2ec": {
-          "description": "Elige el evento apropiado para un escenario determinado"
+          "description": "Escoger el evento apropiado para un escenario determinado"
         },
         "21ba6c31-018e-4d23-b652-77d6ef65324d": {
-          "description": "Utilizar getters para acceder a las propiedades de los elementos de un sistema"
+          "description": "Utilizar getters para acceder a las propiedades de elementos en un sistema"
         },
         "bdd6a1a3-5115-4486-8e0e-b61c7041c5ce": {
-          "description": "Desarrollar programas que respondan a la entrada analógica"
+          "description": "Desarrollar programas que respondan a una entrada análoga"
         },
         "bf9edfe9-1d42-4a71-a6e5-3cda32406544": {
           "description": "Escalar un rango de números para satisfacer una necesidad específica"
         },
         "5b183dd0-2691-4e31-81d2-74139e335e46": {
-          "description": "Representar el valor de un sensor de varias maneras"
+          "description": "Representar el valor de un sensor de distintas maneras"
         },
         "52c81204-19e3-433f-a6f2-9c7342c37b72": {
           "description": "Implementar distintas funciones de un programa siguiendo una guía de proyecto estructurada"
         },
         "828e50ab-ef2c-41af-987d-6a2c97c0eeda": {
-          "description": "Desarrolla un programa que responda a los eventos de una entrada de hardware"
+          "description": "Desarrollar un programa que responda a los eventos de la entrada de un hardware"
         },
         "5e15877a-55c0-434e-b794-1277ca716016": {
-          "description": "Crea una función que utilice parámetros para generalizar el comportamiento"
+          "description": "Crear una función que utilice parámetros para generalizar comportamiento"
         },
         "ae74915c-b485-44a1-a60b-a4051c1abca7": {
-          "description": "Utiliza los manejadores de eventos para responder a la interacción del usuario"
+          "description": "Utilizar controladores de eventos para responder a la interacción del usuario"
         },
         "a36af5cd-1af2-482c-8475-ebd96ef5ebf9": {
-          "description": "Diseñar un programa informático que utilice hardware para la entrada y salida no tradicionales"
+          "description": "Diseñar una pieza de software que utilice hardware para las entradas y salidas no tradicionales"
         },
         "84079c5a-326d-4fda-9439-acd6478673b3": {
-          "description": "Prototipo de un programa que integra software y hardware"
+          "description": "Elaborar el prototipo de un programa que incluya software y hardware"
         },
         "34585635-155a-4032-b653-6cfaa0832b7e": {
-          "description": "Acceder a un elemento de un array mediante su índice"
+          "description": "Acceder a un elemento en un arreglo utilizando su índice"
         },
         "57704d64-7732-445a-a82a-81f3b6955df8": {
-          "description": "Utiliza el array de LEDs de colores para controlar individualmente cada LED "
+          "description": "Usar el arreglo de LED de colores para controlar cada LED de color individualmente"
         },
         "5f30c244-1a5b-4db9-87bf-71b0e651d2f1": {
-          "description": "Crear y modificar un array"
+          "description": "Crear y modificar un arreglo"
         },
         "f739947f-be77-462b-b0ef-3823349016ef": {
-          "description": "Utilizar el zumbador para producir secuencias de notas"
+          "description": "Utilizar el timbre para elaborar secuencias de notas"
         },
         "4449a257-a6e6-426f-a87b-a1ef39ea777f": {
-          "description": "Reconocer un array como una lista de elementos sobre los que se puede operar secuencialmente."
+          "description": "Reconocer un arreglo como una lista de elementos que pueden funcionar de manera secuencial."
         },
         "8a9102e9-704c-452b-b063-62f6b63d2627": {
-          "description": "Modifica la condición de salida de un bucle `for` para controlar el número de veces que se repite"
+          "description": "Modificar la condición de salida de un ciclo for para controlar la cantidad de veces que se repite"
         },
         "bb5539ee-e0af-4379-9179-2bebc947c741": {
-          "description": "Utiliza un bucle `for` para iterar sobre un array"
+          "description": "Utilizar un ciclo for para repetir sobre un arreglo"
         },
         "eb28a603-8753-4a84-ad3e-fe5566c8ee76": {
-          "description": "Reconocer el uso y la necesidad de la orientación del acelerómetro (cabeceo y balanceo)."
+          "description": "Reconocer el uso y la necesidad de la orientación proporcionada por un acelerómetro (inclinación y balanceo)."
         },
         "cbd66e36-6a02-4227-8674-70636d61b455": {
-          "description": "Utiliza los eventos de datos para actualizar continuamente las propiedades de un elemento."
+          "description": "Utilizar los datos de eventos para actualizar continuamente las propiedades de un elemento."
         },
         "6db0b0d2-7aa7-4da1-aa47-33581d3b7c8f": {
-          "description": "Utiliza los parámetros para generalizar el propósito de una función."
+          "description": "Utilizar parámetros para generalizar el propósito de una función."
         },
         "14b8c405-027c-4aa5-8a31-235dfc98dcc3": {
-          "description": "Crear y depurar circuitos sencillos"
+          "description": "Crear y depurar circuitos simples"
         },
         "f81a856f-07a6-49f0-aab0-f3c6da5d125b": {
-          "description": "Desarrollar un prototipo físico interactivo que combine software y hardware"
+          "description": "Desarrollar un prototipo interactivo físico que combine software y hardware"
         },
         "cb58f0fd-2266-48fa-80b7-f584aabbd19a": {
-          "description": "Tener en cuenta las necesidades de los distintos usuarios al diseñar un producto"
+          "description": "Considerar las necesidades de distintos usuarios al diseñar un producto"
         },
         "f574312e-c0f6-4d4c-a52a-10e2874d55ba": {
           "description": "Explorar las características de una pieza de programa de forma independiente."
         },
         "46a593f4-3334-477c-9bac-f1fa12e83979": {
-          "description": "Prototipo de un dispositivo informático físico"
+          "description": "Construir el prototipo de un dispositivo computacional físico"
         },
         "5ae2739b-3776-43ba-973f-50fa22302e32": {
-          "description": "Aplicar un plan para desarrollar un programa informático que integre entradas y salidas de hardware"
+          "description": "Implementar un plan para desarrollar una pieza de software que integre las entradas y salidas de hardware"
         },
         "11f42eed-8c8c-4fca-b3ff-8bb800a8fbcd": {
           "description": "Brindar ejemplos de cómo las distintas formas de representar los datos puede afectar la forma en cómo se resuelven los problemas."
@@ -1449,7 +1560,7 @@
           "description": "Describir las razones por las cuales el encriptado es necesario para proteger datos personales"
         },
         "42021a55-c97c-432b-9420-a62927cc2bba": {
-          "description": "Aplicar métodos de encriptación para garantizar el traspaso de datos seguro"
+          "description": "Aplicar métodos de encriptación para garantizar el traspaso seguro de datos."
         },
         "e537dea9-f777-4037-8c48-d20298ba53b2": {
           "description": "Escoger y justificar el uso de distintos sistemas de representación binaria dependiendo de la información que esté siendo representada"
@@ -1458,7 +1569,7 @@
           "description": "Codificar y decodificar información representada en números binarios y texto ASCII"
         },
         "8f1a62d6-c1b7-400f-9324-3f7cf5cecc72": {
-          "description": "Crear un sistema de representación generalizado para una variedad instancias de tipos complejos de información"
+          "description": "Crear un sistema de representación generalizado para una variedad de instancias de un tipo de información compleja"
         },
         "d7b16ab2-6683-4efa-93d9-d425024858bf": {
           "description": "Usar el proceso de resolución de problemas para responder una pregunta utilizando datos."
@@ -1499,11 +1610,26 @@
         "02c329fa-a4a0-4b23-b77e-788296c2bc7b": {
           "description": "Interpretar datos recolectados para identificar patrones"
         },
+        "b8217d7c-960e-42d1-b3f0-1035158a64a0": {
+          "description": "Dar ejemplos de cómo se recolectan los datos por sensores y seguimiento de comportamientos de usuario."
+        },
+        "fd3bf488-7c63-4869-9c48-a97556d39150": {
+          "description": "Determinar datos que pueden ser útiles para resolver un problema y cómo esos datos pueden ser recolectados."
+        },
+        "44bb192f-0e71-405f-b8a6-5757ff7f37e1": {
+          "description": "Distinguir entre datos que los usuarios aportaron ya sea voluntaria o involuntariamente."
+        },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "Entrena y prueba un modelo de aprendizaje automático."
         },
         "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
           "description": "Piensa acerca de cómo el prejuicio humano juega un papel en el aprendizaje automático."
+        },
+        "6885b6d1-78d2-4560-8bf5-8f14cfc68bb7": {
+          "description": "Aplicar el proceso de Resolución de Problemas de datos a un tema de relevancia personal"
+        },
+        "b0342e84-056b-46d6-ac84-1d976155c38d": {
+          "description": "Determinar las fuentes de datos apropiadas que necesitarán para resolver un problema"
         },
         "b2682f90-e600-48aa-aef4-def3798b261d": {
           "description": "Identificar cómo se utilizan las ciencias de la computación en el ámbito del entretenimiento"

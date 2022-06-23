@@ -16,7 +16,7 @@ class Api::V1::UserSchoolInfosController < ApplicationController
       return
     end
 
-    school_info_params.delete(:full_address) if school_info_params[:full_address]&.blank?
+    school_info_params.delete(:full_address) if school_info_params[:full_address].blank?
 
     if school_info_params[:country]&.downcase&.eql? 'united states'
       school_info_params[:country] = 'US'
