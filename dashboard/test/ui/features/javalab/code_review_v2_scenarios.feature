@@ -22,8 +22,6 @@ Feature: Code review V2
     And I load the review tab
     And I wait until element ".uitest-code-review-timeline-commit" is visible
 
-    # Peer dropdown has no peers
-
     # Open a code review
     And I press ".uitest-open-code-review" using jQuery
     And I wait until element ".uitest-code-review-timeline-review" is visible
@@ -37,10 +35,19 @@ Feature: Code review V2
     And I write a code review v2 comment with text "Great work!"
     And I sign out using jquery
 
-    # Log in as code review owner
+    # Log in as the teacher and review the student
+    Given I sign in as "Code Review Teacher"
+    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?enableExperiments=code_review_v2&noautoplay=true"
+    And I load student number 1's project from the blue teacher panel
+    And I load the review tab
+    And I write a code review v2 comment with text "A comment from your teacher"
+    And I sign out using jquery
+
+    # Log in as code review owner and close the code review
     Given I sign in as "student_0"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?enableExperiments=code_review_v2&noautoplay=true"
     And I load the review tab
     And I wait until element ".code-review-comment-body" is visible
-    And I wait for 5 seconds
+    And I press ".uitest-close-code-review" using jQuery
+    And I wait until element ".uitest-open-code-review" is visible
 

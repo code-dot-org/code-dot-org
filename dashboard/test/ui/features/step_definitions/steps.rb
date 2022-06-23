@@ -1343,7 +1343,8 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
   end
 
   steps %Q{
-    Given I create a levelbuilder named "#{teacher_name}"
+    Given I create a teacher named "#{teacher_name}"
+    And I give user "#{teacher_name}" authorized teacher permission
     And I create a new student section assigned to "ui-test-csa-family-script"
     And I sign in as "#{teacher_name}" and go home
     And I save the student section url

@@ -65,6 +65,7 @@ const CodeReviewTimelineReview = ({
           {isOpen && viewingAsOwner && !isViewingOldVersion && (
             <div>
               <Button
+                className="uitest-close-code-review"
                 icon="close"
                 style={{fontSize: 13, margin: 0}}
                 onClick={handleCloseCodeReview}
