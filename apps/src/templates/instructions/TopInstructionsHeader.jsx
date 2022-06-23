@@ -87,6 +87,7 @@ function TopInstructionsHeader(props) {
             headerHasFocus={false}
             onClick={handleDocumentationClick}
             isMinecraft={isMinecraft}
+            style={styles.documentationButton}
           />
         )}
         <div
@@ -197,11 +198,14 @@ function TopInstructionsHeader(props) {
 
 const styles = {
   paneHeaderOverride: {
-    color: color.default_text
+    color: color.default_text,
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'space-between'
   },
   audioRTL: {
     wrapper: {
-      float: 'left'
+      order: 5
     }
   },
   audio: {
@@ -218,18 +222,20 @@ const styles = {
   },
   audioLTR: {
     wrapper: {
-      float: 'right'
+      order: 5
     }
   },
   helpTabs: {
-    paddingTop: 6
+    paddingTop: 6,
+    width: '100%',
+    boxSizing: 'border-box',
+    display: 'flex',
+    minWidth: 100
   },
   helpTabsLtr: {
-    float: 'left',
     paddingLeft: 30
   },
   helpTabsRtl: {
-    float: 'right',
     paddingRight: 30
   },
   collapserIcon: {
@@ -258,6 +264,11 @@ const styles = {
         color: color.default_text
       }
     }
+  },
+  documentationButton: {
+    order: 4,
+    whiteSpace: 'nowrap',
+    minWidth: 'fit-content'
   }
 };
 

@@ -318,7 +318,8 @@ const styles = {
 
   wrapper: {
     marginLeft: '3px',
-    marginRight: '3px'
+    marginRight: '3px',
+    display: 'flex'
   },
 
   button: {
