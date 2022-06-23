@@ -25,4 +25,26 @@ describe('GraduateToNextLevel', () => {
       expect(prop.toLowerCase()).to.contain('app');
     });
   });
+  [
+    'course2',
+    'course3',
+    'course4',
+    'courseb-2017',
+    'coursec-2050',
+    'coursed-2011',
+    'coursee-2022',
+    'coursef-2001'
+  ].forEach(scriptName => {
+    it(`passes correct course info to ResourceCard for script ${scriptName}`, () => {
+      const propsPassed = propsPassedToVerticalImageResourceCard({
+        scriptName: scriptName,
+        courseTitle: `Localized title of ${scriptName}`,
+        courseDesc: `Localized description of ${scriptName}`
+      });
+      const {id, title, description, link, image} = propsPassed;
+      [id, title, description, link, image].forEach(prop => {
+        expect(prop.toLowerCase()).to.contain(scriptName.slice(0, 7));
+      });
+    });
+  });
 });
