@@ -10,6 +10,6 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 CrowdinValidator.new.run_all_configs(
   config_file: CrowdinValidator::CONFIG_FILE,
   history_file: CrowdinValidator::HISTORY_FILE,
-  update_history: true,
+  dry_run: false,
   download_from_crowdin: true
 )
