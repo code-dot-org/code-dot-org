@@ -3,6 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import Congrats from '@cdo/apps/templates/certificates/Congrats';
 import Certificate from '@cdo/apps/templates/certificates/Certificate';
+import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 import StudentsBeyondHoc from '@cdo/apps/templates/certificates/StudentsBeyondHoc';
 import TeachersBeyondHoc from '@cdo/apps/templates/certificates/TeachersBeyondHoc';
 import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
@@ -22,15 +23,28 @@ describe('Congrats', () => {
       expect(wrapper.find(Certificate).exists()).to.be.true;
     });
 
-    it(`renders a StudentsBeyondHoc for user type ${userType}`, () => {
+    it(`renders a StudentsBeyondHoc for user type ${userType} for HOC course`, () => {
       const wrapper = shallow(
         <Congrats
           completedTutorialType="other"
           userType={userType}
           language="en"
+          isHocTutorial
         />
       );
       expect(wrapper.find(StudentsBeyondHoc).exists()).to.be.true;
+    });
+
+    it(`renders a GraduateToNextLevel for user type ${userType} for CSF course`, () => {
+      const wrapper = shallow(
+        <Congrats
+          completedTutorialType="other"
+          userType={userType}
+          language="en"
+          isHocTutorial={false}
+        />
+      );
+      expect(wrapper.find(GraduateToNextLevel).exists()).to.be.true;
     });
 
     it(`renders a PetitionCallToAction component with tutorial for user type ${userType}`, () => {
