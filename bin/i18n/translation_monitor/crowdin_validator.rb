@@ -305,7 +305,17 @@ class CrowdinValidator
     end
   end
 
-  # Load language mapping from file
+  # Get mappings from Crowdin's language_code to Crowdin's language_name,
+  # Crowdin's editor_code, and Google CLD's language_detector_code.
+  #
+  # Note: The language_detector_code field only exists if its value is different
+  # from Crowdin's language_code.
+  #
+  # @see https://developer.crowdin.com/language-codes/ for Crowdin language codes and names
+  # @see https://developer.crowdin.com/api/v2/#operation/api.languages.getMany for Crowdin language names and editor codes
+  # @see https://github.com/google/cld3#supported-languages for language_detector_code(s) for the Google Compact Language Detector
+  #
+  # @return [Hash]
   def load_languages(file_name = LANGUAGE_FILE)
     @languages = read_from_json(file_name) if @languages.nil? && File.exist?(file_name)
     @languages
