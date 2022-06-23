@@ -41,18 +41,18 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
-    "long_instructions": "##What will they say?\r\n\r\n- What does the main character say? \r\n- What the main character thinking? \r\n\r\n\r\n",
+    "long_instructions": "##Add the moral of the story\r\n\r\n- When the last character is met, use the `print` block to add the moral to the story",
     "parent_level_id": 28525,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
-    "short_instructions": "Set Your Scene: Choose a background and two sprites to set the opening scene. ",
+    "short_instructions": "Add the moral of the story: When the last character is met, use the `print` block to add the moral of the story. ",
     "block_pool": "gamelab",
     "name_suffix": "_2022",
     "block_pools": [
       "GamelabJr"
     ],
     "mini_rubric": "false",
-    "include_shared_functions": "false",
+    "include_shared_functions": "true",
     "encrypted": "false",
     "hint_prompt_attempts_threshold": "1",
     "validation_enabled": "false",
@@ -60,7 +60,7 @@
     "hide_pause_button": "false",
     "callout_json": "[]",
     "instructions_icon": "bear",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `say` or `think` block to share what your character is feeling. \\n<xml><block type=\\\"gamelab_spriteSay\\\"><field name=\\\"SPEECH\\\">Hello, world!</field><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"blue_dress_wave_1\\\"</field></block></value></block></xml>\\n\\n<xml><block type=\\\"gamelab_spriteThink\\\"><field name=\\\"SPEECH\\\">I'm feeling ...</field><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"blue_dress_wave_1\\\"</field></block></value></block></xml>\\n\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2e367451958d5c1f71d9e620fd1d1ebc/csc_fables_say.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"When the main character meets the final character, add a print block (or more!) to share the moral of the story with the user: \\n<xml><block type=\\\"gamelab_checkTouching\\\">\\n  <field name=\\\"CONDITION\\\">\\\"when\\\"</field>\\n  <value name=\\\"SPRITE1\\\">\\n    <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n      <field name=\\\"ANIMATION\\\">\\\"blue_dress_wave_1\\\"</field>\\n    </block>\\n  </value>\\n  <value name=\\\"SPRITE2\\\">\\n    <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n      <field name=\\\"ANIMATION\\\">\\\"gray_robot_2_1\\\"</field>\\n    </block>\\n  </value>\\n  <next>\\n    <block type=\\\"gamelab_setBackgroundImageAs\\\">\\n      <field name=\\\"IMG\\\">\\\"rainbow\\\"</field>\\n      <next>\\n        <block type=\\\"gamelab_spriteSayTime\\\">\\n          <value name=\\\"SPRITE\\\">\\n            <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n              <field name=\\\"ANIMATION\\\">\\\"gray_robot_2_1\\\"</field>\\n            </block>\\n          </value>\\n          <value name=\\\"TEXT1\\\">\\n            <block type=\\\"text\\\">\\n              <field name=\\\"TEXT\\\">If I only had a heart.</field>\\n            </block>\\n          </value>\\n          <value name=\\\"NUM\\\">\\n            <block type=\\\"math_number\\\">\\n              <field name=\\\"NUM\\\">4</field>\\n            </block>\\n          </value>\\n          <next>\\n            <block type=\\\"gamelab_printText\\\">\\n              <value name=\\\"TEXT\\\">\\n                <block type=\\\"text\\\">\\n                  <field name=\\\"TEXT\\\">By the end of their journey, all 4 of them realized they were full of courage, heart, brains, and confidence to find their way home. </field>\\n                </block>\\n              </value>\\n              <next>\\n                <block type=\\\"gamelab_printText\\\">\\n                  <value name=\\\"TEXT\\\">\\n                    <block type=\\\"text\\\">\\n                      <field name=\\\"TEXT\\\">What you're looking for, you already have!</field>\\n                    </block>\\n                  </value>\\n                </block>\\n              </next>\\n            </block>\\n          </next>\\n        </block>\\n      </next>\\n    </block>\\n  </next>\\n</block></xml>\\n\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8921b0297c9d7d3ecab5163cc38188fa/csc_fables_moral.mp3\"}]",
     "skip_autosave": true,
     "display_name": "Set Your Scene",
     "project_template_level_name": "csc_fables_template_2022",
@@ -72,11 +72,11 @@
   },
   "game_id": 64,
   "published": true,
-  "created_at": "2022-06-21T23:23:50.000Z",
+  "created_at": "2022-06-22T18:25:26.000Z",
   "level_num": "custom",
   "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-21T23:23:50.199+00:00\",\"changed\":[\"cloned from \\\"csc_fables_characters\\\"\"],\"cloned_from\":\"csc_fables_characters\"},{\"changed_at\":\"2022-06-21 23:27:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-21 23:27:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-22 17:20:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-22 17:58:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-22T18:25:26.020+00:00\",\"changed\":[\"cloned from \\\"csc_fables_next scene\\\"\"],\"cloned_from\":\"csc_fables_next scene\"},{\"changed_at\":\"2022-06-22 18:29:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -99,7 +99,7 @@
           <field name="IMG">"rainbow"</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon">
-          <field name="ANIMATION_NAME">"cuteanimals_penguin_hello"</field>
+          <field name="ANIMATION_NAME">"cuteanimals_tiger"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker">
               <field name="LOCATION">{"x":194,"y":231}</field>
@@ -110,7 +110,7 @@
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"cuteanimals_penguin_hello"</field>
+              <field name="ANIMATION">"cuteanimals_tiger"</field>
             </block>
           </value>
           <value name="VAL">
@@ -123,7 +123,7 @@
           <field name="SPEECH">I'm feeling ...</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"cuteanimals_penguin_hello"</field>
+              <field name="ANIMATION">"cuteanimals_fox"</field>
             </block>
           </value>
         </block>
@@ -131,7 +131,33 @@
           <field name="SPEECH">Hello, world!</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"cuteanimals_penguin_hello"</field>
+              <field name="ANIMATION">"cuteanimals_dog"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_addBehaviorSimple">
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"cuteanimals_dog"</field>
+            </block>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_behavior_get">
+              <mutation/>
+              <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_checkTouching">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"cuteanimals_dog"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"cuteanimals_fox"</field>
             </block>
           </value>
         </block>
