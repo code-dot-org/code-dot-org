@@ -43,6 +43,8 @@ export default class JavabuilderConnection {
     this.currentUser = currentUser;
     this.onMarkdownLog = onMarkdownLog;
     this.csrfToken = csrfToken;
+    this.seenUnsupportedNeighborhoodMessage = false;
+    this.seenUnsupportedTheaterMessage = false;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -324,13 +326,19 @@ export default class JavabuilderConnection {
   }
 
   onUnsupportedNeighborhoodMessage() {
-    this.onOutputMessage(javalabMsg.unsupportedNeighborhoodMessage());
-    this.onNewlineMessage();
+    if (!this.seenUnsupportedNeighborhoodMessage) {
+      this.onOutputMessage(javalabMsg.unsupportedNeighborhoodMessage());
+      this.onNewlineMessage();
+      this.seenUnsupportedNeighborhoodMessage = true;
+    }
   }
 
   onUnsupportedTheaterMessage() {
-    this.onOutputMessage(javalabMsg.unsupportedTheaterMessage());
-    this.onNewlineMessage();
+    if (!this.seenUnsupportedTheaterMessage) {
+      this.onOutputMessage(javalabMsg.unsupportedTheaterMessage());
+      this.onNewlineMessage();
+      this.seenUnsupportedTheaterMessage = true;
+    }
   }
 
   // Send a message across the websocket connection to Javabuilder
@@ -348,6 +356,8 @@ export default class JavabuilderConnection {
   }
 
   handleExecutionFinished() {
+    this.seenUnsupportedNeighborhoodMessage = false;
+    this.seenUnsupportedTheaterMessage = false;
     switch (this.executionType) {
       case ExecutionType.RUN:
         this.setIsRunning(false);
