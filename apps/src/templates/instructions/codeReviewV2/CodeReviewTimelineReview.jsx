@@ -44,7 +44,10 @@ const CodeReviewTimelineReview = ({
       isLast={isLastElementInTimeline}
       projectVersionId={version}
     >
-      <div style={styles.wrapper}>
+      <div
+        style={styles.wrapper}
+        className="uitest-code-review-timeline-review"
+      >
         <div style={styles.header}>
           <div style={styles.icon}>
             <FontAwesome icon="comments-o" />
