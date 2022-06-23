@@ -17,8 +17,6 @@ class CodeReviewNotesControllerTest < ActionController::TestCase
 
     @project = create :project, owner: @project_owner
 
-    script_id = 12
-    level_id = 5
     @code_review = create :code_review, user_id: @project_owner.id, project_id: @project.id
   end
 
