@@ -39,7 +39,7 @@ module DataIOHelper
   def write_to_csv(rows, file_name)
     return if rows.nil? || rows.empty?
     CSV.open(file_name, 'w') do |csv|
-      rows.each { |row| csv << row }
+      rows.each {|row| csv << row}
     end
   end
 
