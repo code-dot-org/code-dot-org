@@ -9,6 +9,9 @@ class CoreValidatorTest < Minitest::Test
     assert_nil validate_markdown_link('[text](url)')
     assert_nil validate_markdown_link('[.](http://go.somewhere)')
 
+    # a valid special case
+    assert_nil validate_markdown_link("[][0] (this is just an explanation)")
+
     # invalid cases
     refute_nil validate_markdown_link('[text] (url)')
     refute_nil validate_markdown_link("[text]\t(url)")
@@ -19,11 +22,15 @@ class CoreValidatorTest < Minitest::Test
     assert_nil validate_redacted_blocks('[A][0]')
     assert_nil validate_redacted_blocks('[A][0][B][1]')
     assert_nil validate_redacted_blocks('[A][0] [B][1]')
+    assert_nil validate_redacted_blocks('[][0][][1]')
+    assert_nil validate_redacted_blocks('[][0] [][1]')
 
     # invalid cases
     refute_nil validate_redacted_blocks('[A] [0]')
     refute_nil validate_redacted_blocks("[A]\t[0]")
-    refute_nil validate_redacted_blocks("[] []")
+    refute_nil validate_redacted_blocks("[] [0]")
+    refute_nil validate_redacted_blocks("[]\t[0]")
+    refute_nil validate_redacted_blocks('[] []')
   end
 
   def test_validate_language
