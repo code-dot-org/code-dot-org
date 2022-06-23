@@ -1,7 +1,9 @@
+@eyes
 @no_mobile
 Feature: Code review V2
 
-  Scenario: Code review v2
+  Scenario: Code review V2
+    When I open my eyes to test "Javalab Code Review V2"
     Given I set up code review for teacher "Code Review Teacher" with 2 students in a group
     And I sign out using jquery
 
@@ -33,6 +35,7 @@ Feature: Code review V2
     And I load the review tab
     And I load the code review for peer number 1 in the list
     And I write a code review v2 comment with text "Great work!"
+    Then I see no difference for "student code reviewing peer" using stitch mode "none"
     And I sign out using jquery
 
     # Log in as the teacher and review the student
@@ -41,6 +44,7 @@ Feature: Code review V2
     And I load student number 1's project from the blue teacher panel
     And I load the review tab
     And I write a code review v2 comment with text "A comment from your teacher"
+    Then I see no difference for "teacher code reviewing student" using stitch mode "none"
     And I sign out using jquery
 
     # Log in as code review owner and close the code review
@@ -48,6 +52,7 @@ Feature: Code review V2
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?enableExperiments=code_review_v2&noautoplay=true"
     And I load the review tab
     And I wait until element ".code-review-comment-body" is visible
+    Then I see no difference for "student viewing own code review" using stitch mode "none"
     And I press ".uitest-close-code-review" using jQuery
     And I wait until element ".uitest-open-code-review" is visible
 
