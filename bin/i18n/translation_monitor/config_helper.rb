@@ -13,7 +13,7 @@ module ConfigHelper
   ]
 
   # Optional fields in a configuration. They will take default values if not
-  # explicitly specified. See the +get_default_params+ function in this module.
+  # explicitly specified. See the +merge_default_params+ function in this module.
   #   start_date: e.g. 2022-01-01 (yyyy-mm-dd). See https://developer.crowdin.com/croql/
   #   end_date: e.g. 2022-06-23
   #   translations_json: output JSON file for translations downloaded from Crowdin
@@ -63,7 +63,7 @@ module ConfigHelper
       raise "Missing config params #{missing_params} in config #{config}" unless missing_params.empty?
 
       # Explicit config data will overwrite the default data
-      get_default_params(config).merge(config)
+      merge_default_params(config)
     end
   end
 
@@ -77,27 +77,28 @@ module ConfigHelper
     end
   end
 
-  # Get the default parameters for a config.
-  # Note: Explicit config params should overwrite the default values.
+  # Merge a config with the default values for date range and output locations.
+  # Explicit config params overwrite the default values.
+  #
+  # Note: this function changes the input config.
   #
   # @param config [Hash]
-  # @return [Hash]
-  def get_default_params(config)
-    {}.tap do |default|
-      # date range
-      default['start_date'] = DEFAULT_START_DATE
-      default['end_date'] = Time.now.utc.strftime(DATE_FORMAT)
+  # @return [Hash] a modified config
+  def merge_default_params(config)
+    # date range
+    config['start_date'] ||= DEFAULT_START_DATE
+    config['end_date'] ||= Time.now.utc.strftime(DATE_FORMAT)
 
-      # local file outputs
-      output_prefix = "#{CrowdinValidator::OUTPUT_DIR}/#{create_config_key_with_date_range(config)}"
-      default['translations_json'] = "#{output_prefix}_translations.json"
-      default['source_strings_json'] = "#{output_prefix}_source_strings.json"
-      default['errors_json'] = "#{output_prefix}_errors.json"
-      default['errors_csv'] = "#{output_prefix}_errors.csv"
+    # local file outputs
+    output_prefix = "#{CrowdinValidator::OUTPUT_DIR}/#{create_config_key_with_date_range(config)}"
+    config['translations_json'] ||= "#{output_prefix}_translations.json"
+    config['source_strings_json'] ||= "#{output_prefix}_source_strings.json"
+    config['errors_json'] ||= "#{output_prefix}_errors.json"
+    config['errors_csv'] ||= "#{output_prefix}_errors.csv"
 
-      # gsheet output
-      default['errors_gsheet'] = "#{config['user_name']}_#{config['project_name']}"
-    end
+    # gsheet output
+    config['errors_gsheet'] ||= "#{config['user_name']}_#{config['project_name']}"
+    config
   end
 
   # Create a synthetic key for a config from its required params.
