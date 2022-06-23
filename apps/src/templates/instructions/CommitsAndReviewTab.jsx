@@ -227,6 +227,7 @@ const CommitsAndReviewTab = props => {
           {!openReviewData && !isReadOnlyWorkspace && (
             <div style={styles.timelineAligned}>
               <Button
+                className="uitest-open-code-review"
                 icon="comment"
                 onClick={handleOpenReview}
                 text={javalabMsg.startReview()}
