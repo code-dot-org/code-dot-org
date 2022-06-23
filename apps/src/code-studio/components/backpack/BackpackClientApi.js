@@ -33,7 +33,7 @@ export default class BackpackClientApi {
       this.channelId + '/' + filename,
       (error, data) => {
         if (error) {
-          onError(error);
+          onError();
         } else {
           onSuccess(data);
         }

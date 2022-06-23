@@ -67,28 +67,45 @@ class Backpack extends Component {
   };
 
   importFiles = selectedFiles => {
+    let failedServerImportFiles = [];
     selectedFiles.forEach(filename => {
       this.props.backpackApi.fetchFile(
         filename,
-        () => {} /* onError, currently do nothing */,
+        () => failedServerImportFiles.push(filename),
         fileContents =>
           this.props.onImport(filename, fileContents) /* onSuccess */
       );
     });
-    this.collapseDropdown();
+
+    if (failedServerImportFiles.length > 0) {
+      this.showImportError(failedServerImportFiles, false);
+    } else {
+      this.collapseDropdown();
+    }
   };
 
   showImportWarning = files => {
     this.setState({
       openDialog: Dialog.IMPORT_WARNING,
-      fileImportMessage: this.getFileImportMessage(false, files)
+      fileImportMessage: this.getFileImportMessage(
+        true,
+        files,
+        javalabMsg.fileImportWarning()
+      )
     });
   };
 
-  showImportError = files => {
+  showImportError = (files, isValidationError) => {
     this.setState({
       openDialog: Dialog.IMPORT_ERROR,
-      fileImportMessage: this.getFileImportMessage(true, files)
+      dropdownOpen: false,
+      fileImportMessage: this.getFileImportMessage(
+        false,
+        files,
+        isValidationError
+          ? javalabMsg.fileImportError()
+          : javalabMsg.fileImportServerError()
+      )
     });
   };
 
@@ -110,7 +127,7 @@ class Backpack extends Component {
     });
 
     if (hiddenFilenamesUsed.length > 0) {
-      errorCallback(hiddenFilenamesUsed);
+      errorCallback(hiddenFilenamesUsed, true);
     } else if (visibleFilenamesUsed.length > 0) {
       warnCallback(visibleFilenamesUsed);
     } else {
@@ -171,20 +188,16 @@ class Backpack extends Component {
     }
   };
 
-  getFileImportMessage = (isError, overwriteFileList) => {
+  getFileImportMessage = (isWarning, overwriteFileList, message) => {
     return (
       <div>
-        <p>
-          {isError
-            ? javalabMsg.fileImportError()
-            : javalabMsg.fileImportWarning()}
-        </p>
+        <p>{message}</p>
         <ul style={styles.importMessageList}>
           {overwriteFileList.map(filename => {
             return <li key={filename}>{filename}</li>;
           })}
         </ul>
-        {!isError && (
+        {isWarning && (
           <p style={styles.importWarningConfirm}>
             {javalabMsg.fileImportWarningConfirm()}
           </p>
