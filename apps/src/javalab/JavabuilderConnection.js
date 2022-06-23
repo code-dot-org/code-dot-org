@@ -3,7 +3,8 @@ import {
   StatusMessageType,
   STATUS_MESSAGE_PREFIX,
   ExecutionType,
-  AuthorizerSignalType
+  AuthorizerSignalType,
+  CsaViewMode
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -42,6 +43,8 @@ export default class JavabuilderConnection {
     this.currentUser = currentUser;
     this.onMarkdownLog = onMarkdownLog;
     this.csrfToken = csrfToken;
+    this.seenUnsupportedNeighborhoodMessage = false;
+    this.seenUnsupportedTheaterMessage = false;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -246,7 +249,19 @@ export default class JavabuilderConnection {
         this.onNewlineMessage();
         break;
       case WebSocketMessageType.NEIGHBORHOOD:
+        if (this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
+          this.miniApp.handleSignal(data);
+        } else {
+          this.onUnsupportedNeighborhoodMessage();
+        }
+        break;
       case WebSocketMessageType.THEATER:
+        if (this.miniAppType === CsaViewMode.THEATER) {
+          this.miniApp.handleSignal(data);
+        } else {
+          this.onUnsupportedTheaterMessage();
+        }
+        break;
       case WebSocketMessageType.PLAYGROUND:
         this.miniApp.handleSignal(data);
         break;
@@ -310,6 +325,22 @@ export default class JavabuilderConnection {
     this.setIsRunning(false);
   }
 
+  onUnsupportedNeighborhoodMessage() {
+    if (!this.seenUnsupportedNeighborhoodMessage) {
+      this.onOutputMessage(javalabMsg.unsupportedNeighborhoodMessage());
+      this.onNewlineMessage();
+      this.seenUnsupportedNeighborhoodMessage = true;
+    }
+  }
+
+  onUnsupportedTheaterMessage() {
+    if (!this.seenUnsupportedTheaterMessage) {
+      this.onOutputMessage(javalabMsg.unsupportedTheaterMessage());
+      this.onNewlineMessage();
+      this.seenUnsupportedTheaterMessage = true;
+    }
+  }
+
   // Send a message across the websocket connection to Javabuilder
   sendMessage(message) {
     if (this.socket) {
@@ -325,6 +356,8 @@ export default class JavabuilderConnection {
   }
 
   handleExecutionFinished() {
+    this.seenUnsupportedNeighborhoodMessage = false;
+    this.seenUnsupportedTheaterMessage = false;
     switch (this.executionType) {
       case ExecutionType.RUN:
         this.setIsRunning(false);

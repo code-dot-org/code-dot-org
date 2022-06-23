@@ -828,6 +828,11 @@ Then /^I click an image "([^"]*)"$/ do |path|
   @browser.execute_script("$('img[src*=\"#{path}\"]').click();")
 end
 
+Then /^I wait for image "([^"]*)" to load$/ do |selector|
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until {@browser.execute_script("return $('#{selector}').prop('complete');")}
+end
+
 Then /^I see jquery selector (.*)$/ do |selector|
   exists = @browser.execute_script("return $(\"#{selector}\").length != 0;")
   expect(exists).to eq(true)
@@ -1123,9 +1128,7 @@ end
 # Add @no_ie tag to your scenario to skip IE when using this step.
 When /^I press backspace to clear element "([^"]*)"$/ do |selector|
   element = @browser.find_element(:css, selector)
-  while @browser.execute_script("return $('#{selector}').val()") != ""
-    press_keys(element, ":backspace")
-  end
+  press_keys(element, ":backspace") while @browser.execute_script("return $('#{selector}').val()") != ""
 end
 
 When /^I press enter key$/ do

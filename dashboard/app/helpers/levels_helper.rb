@@ -199,6 +199,8 @@ module LevelsHelper
     # and pass the edited code directly to Javabuilder.
     level_requires_channel = !@is_editing_exemplar && !@is_viewing_exemplar if @level.is_a?(Javalab)
 
+    view_options(code_owners_name: @user&.name || @current_user&.name)
+
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching
       channel = get_channel_for(@level, @script&.id, @user)
@@ -208,8 +210,12 @@ module LevelsHelper
           !Gatekeeper.allows("updateChannelOnSave", where: {script_name: @script.name}, default: true) :
           false
       )
-      # readonly if viewing another user's channel or a code review is open for that project
-      readonly_view_options if @user || CodeReview.open_for_project?(channel: channel)
+
+      viewing_another_user = !!@user
+      code_review_open = CodeReview.open_for_project?(channel: channel)
+
+      view_options(is_viewing_own_project: !viewing_another_user, has_open_code_review: code_review_open)
+      readonly_view_options if viewing_another_user || code_review_open
     end
 
     view_options(

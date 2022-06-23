@@ -215,7 +215,10 @@ class ScriptLevelsController < ApplicationController
   def lesson_extras
     authorize! :read, ScriptLevel
 
-    if current_user&.teacher?
+    @script = Script.get_from_cache(params[:script_id], raise_exceptions: false)
+    raise ActiveRecord::RecordNotFound unless @script
+
+    if @script.can_be_instructor?(current_user)
       if params[:section_id]
         @section = current_user.sections.find_by(id: params[:section_id])
         @user = @section&.students&.find_by(id: params[:user_id])
@@ -229,8 +232,6 @@ class ScriptLevelsController < ApplicationController
       @show_lesson_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
     end
 
-    @script = Script.get_from_cache(params[:script_id], raise_exceptions: false)
-    raise ActiveRecord::RecordNotFound unless @script
     @lesson = @script.lesson_by_relative_position(params[:lesson_position].to_i)
 
     if params[:id]
@@ -412,6 +413,7 @@ class ScriptLevelsController < ApplicationController
       @user = user_to_view
 
       if can?(:view_as_user_for_code_review, @script_level, user_to_view, sublevel_to_view)
+        @is_code_reviewing = true
         view_options(is_code_reviewing: true)
       end
     end
