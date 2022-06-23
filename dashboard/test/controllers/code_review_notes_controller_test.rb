@@ -16,8 +16,10 @@ class CodeReviewNotesControllerTest < ActionController::TestCase
     create :code_review_group_member, follower: peer_follower, code_review_group: @code_review_group
 
     @project = create :project, owner: @project_owner
+    @project_closed_review = create :project, owner: @peer
 
     @code_review = create :code_review, user_id: @project_owner.id, project_id: @project.id
+    @closed_code_review = create :code_review, user_id: @peer.id, project_id: @project_closed_review.id, closed_at: DateTime.now
   end
 
   test 'create code review comment' do
@@ -39,18 +41,11 @@ class CodeReviewNotesControllerTest < ActionController::TestCase
   end
 
   test 'cannot create a code review note for a closed code review' do
-    another_student = create :student
-    another_student_follower = create :follower, section: @section, student_user: another_student
-    create :code_review_group_member, follower: another_student_follower, code_review_group: @code_review_group
-    another_student_project = create :project, owner: another_student
-
-    closed_code_review = create :code_review, user_id: another_student.id, project_id: another_student_project.id, closed_at: DateTime.now
-
-    sign_in @peer
+    sign_in @project_owner
 
     post :create, params: {
       comment: "A comment on closed code review",
-      codeReviewId: closed_code_review.id,
+      codeReviewId: @closed_code_review.id,
     }
 
     assert_response :forbidden
@@ -58,9 +53,7 @@ class CodeReviewNotesControllerTest < ActionController::TestCase
 
   test 'cannot create a code review note for someone outside the code review group' do
     student_outside_group = create :student
-    create :follower, section: @section, student_user: student_outside_group
     outside_group_project = create :project, owner: student_outside_group
-
     code_review_outside_group = create :code_review, user_id: student_outside_group.id, project_id: outside_group_project.id
 
     sign_in @peer
