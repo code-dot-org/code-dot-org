@@ -216,8 +216,9 @@ class ActivitiesController < ApplicationController
 
     passed = ActivityConstants.passing?(test_result)
     if lines > 0 && passed
-      # TODO: Total lines of code is no longer shown anywere in the UI. Remove
-      # this as part of LP-2291 to clean up the back-end.
+      # TODO: The user's total line count is no longer shown anywhere in the UI.
+      # Remove this as part of LP-2291 to clean up the code that stores and
+      # maintains the total line count.
       current_user.total_lines += lines
       # bypass validations/transactions/etc
       User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)

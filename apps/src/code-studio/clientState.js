@@ -161,6 +161,11 @@ function levelProgressByScript() {
 
 /**
  * Returns the number of lines completed from the cookie.
+ *
+ * TODO: The user's total line count is no longer shown anywhere in the UI.
+ * Remove this as part of LP-2291 to clean up the code that stores and
+ * maintains the total line count.
+ *
  * @returns {number}
  */
 clientState.lines = function() {
