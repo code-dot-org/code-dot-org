@@ -314,7 +314,6 @@ class JavalabEditor extends React.Component {
     };
   }
 
-  // need setActiveTabKey
   onChangeTabs(key) {
     if (key !== this.props.activeTabKey) {
       this.props.setActiveTabKey(key);
@@ -358,7 +357,6 @@ class JavalabEditor extends React.Component {
     }
   }
 
-  // need setEditTabKey
   // This is called from the dropdown menu on the active tab
   // when the rename option is clicked
   renameFromTabMenu() {
@@ -418,7 +416,6 @@ class JavalabEditor extends React.Component {
     return !errorMessage;
   }
 
-  // need setFileMetadata
   onRenameFile(newFilename) {
     newFilename = newFilename.trim();
     if (!this.validateFileName(newFilename, 'renameFileError')) {
@@ -585,7 +582,6 @@ class JavalabEditor extends React.Component {
     }
   }
 
-  // need setActiveTabKey, setOrderedTabKeys
   // This is called from the file explorer when we want to jump to a file
   onOpenFile(key) {
     const {orderedTabKeys, setOrderedTabKeys, setActiveTabKey} = this.props;
