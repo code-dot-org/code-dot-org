@@ -13,48 +13,27 @@ describe('Congrats', () => {
 
   userTypes.forEach(userType => {
     it(`renders a Certificate component for user type ${userType}`, () => {
-      const wrapper = shallow(
-        <Congrats
-          completedTutorialType="other"
-          userType={userType}
-          language="en"
-        />
-      );
+      const wrapper = shallow(<Congrats userType={userType} language="en" />);
       expect(wrapper.find(Certificate).exists()).to.be.true;
     });
 
     it(`renders a StudentsBeyondHoc for user type ${userType} for HOC course`, () => {
       const wrapper = shallow(
-        <Congrats
-          completedTutorialType="other"
-          userType={userType}
-          language="en"
-          isHocTutorial
-        />
+        <Congrats userType={userType} language="en" isHocTutorial />
       );
       expect(wrapper.find(StudentsBeyondHoc).exists()).to.be.true;
     });
 
     it(`renders a GraduateToNextLevel for user type ${userType} for CSF course`, () => {
       const wrapper = shallow(
-        <Congrats
-          completedTutorialType="other"
-          userType={userType}
-          language="en"
-          isHocTutorial={false}
-        />
+        <Congrats userType={userType} language="en" isHocTutorial={false} />
       );
       expect(wrapper.find(GraduateToNextLevel).exists()).to.be.true;
     });
 
     it(`renders a PetitionCallToAction component with tutorial for user type ${userType}`, () => {
       const wrapper = shallow(
-        <Congrats
-          completedTutorialType="other"
-          userType={userType}
-          language="en"
-          tutorial="coursea"
-        />
+        <Congrats userType={userType} language="en" tutorial="coursea" />
       );
       expect(wrapper.find(PetitionCallToAction).exists()).to.be.true;
       expect(wrapper.find(PetitionCallToAction).props().tutorial).to.not.be
@@ -63,35 +42,17 @@ describe('Congrats', () => {
   });
 
   it('renders a TeachersBeyondHoc component, for teachers', () => {
-    const wrapper = shallow(
-      <Congrats
-        completedTutorialType="other"
-        userType="teacher"
-        language="en"
-      />
-    );
+    const wrapper = shallow(<Congrats userType="teacher" language="en" />);
     expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.true;
   });
 
   it('renders a TeachersBeyondHoc component, for signed out', () => {
-    const wrapper = shallow(
-      <Congrats
-        completedTutorialType="other"
-        userType="signedOut"
-        language="en"
-      />
-    );
+    const wrapper = shallow(<Congrats userType="signedOut" language="en" />);
     expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.true;
   });
 
   it('does not render a TeachersBeyondHoc component, for students', () => {
-    const wrapper = shallow(
-      <Congrats
-        completedTutorialType="other"
-        userType="student"
-        language="en"
-      />
-    );
+    const wrapper = shallow(<Congrats userType="student" language="en" />);
     expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.false;
   });
 });
