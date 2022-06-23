@@ -1,5 +1,6 @@
 require_relative 'core_validator.rb'
 require_relative 'data_io_helper'
+require_relative 'config_helper'
 require_relative '../../../lib/cdo/crowdin/client_extentions.rb'
 
 #
@@ -9,6 +10,7 @@ require_relative '../../../lib/cdo/crowdin/client_extentions.rb'
 class CrowdinValidator
   include CoreValidator
   include DataIOHelper
+  include ConfigHelper
 
   CURRENT_DIR = File.dirname(__FILE__)
   CONFIG_DIR = File.join(CURRENT_DIR, 'configs')
@@ -19,15 +21,6 @@ class CrowdinValidator
   CONFIG_FILE = File.join(CONFIG_DIR, 'crowdin_validator_config.json')
   HISTORY_FILE = File.join(CONFIG_DIR, 'crowdin_validator_history.json')
   LANGUAGE_FILE = File.join(CONFIG_DIR, 'crowdin_validator_languages.json')
-
-  REQUIRED_CONFIG_PARAMS = %w[
-    user_name
-    project_name
-    crowdin_language_id
-    start_date
-  ]
-
-  DATE_FORMAT = '%Y-%m-%d'
 
   SourceString = Struct.new(:id, :project_id, :file_id, :identifier, :text, :is_hidden, :is_icu, :created_at, :updated_at, keyword_init: true)
   Translation = Struct.new(:id, :string_id, :text, :crowdin_language_id, :user_id, :user_name, :created_at, keyword_init: true)
@@ -40,13 +33,13 @@ class CrowdinValidator
     Dir.mkdir(OUTPUT_DIR) unless Dir.exist?(OUTPUT_DIR)
   end
 
-  # Load configurations from a config file and execute them all.
+  # Load configurations from a config file and run them all.
   # May combine with a history file to skip already processed data.
   #
   # If +dry_run+ is set to true, this function has no side effects.
   # Otherwise, it may write to local files and Google Drive.
   #
-  # If +download_from_crowdin+ is set to false, this function will try to load
+  # If +download_from_crowdin+ is set to false, this function will load
   # existing translations and source strings from local files instead of Crowdin.
   # This option is helpful during development and debugging process.
   #
@@ -56,13 +49,14 @@ class CrowdinValidator
   # @param download_from_crowdin [Boolean]
   #
   def run_all_configs(config_file:, history_file: nil, dry_run: false, download_from_crowdin: true)
-    configs = load_configs(config_file)
+    # Read configs from file
+    configs = parse_config_file(config_file)
 
     # Update configs using the history of last successful runs
     history = {}
     if history_file && File.exist?(history_file)
       history = read_from_json(history_file)
-      merge_configs_and_history(configs, history)
+      update_configs_with_history(configs, history)
     end
 
     # Execute all configs, one by one
@@ -73,19 +67,20 @@ class CrowdinValidator
       begin
         translations, source_strings, errors = run_config(config, dry_run, download_from_crowdin)
 
-        # Update the history of last successful runs
+        # Save the last successful runs to the history file
         if history_file
           config_with_results = config.merge(
             {
               'results' => {
                 'translation_count' => translations.size,
                 'source_string_count' => source_strings.size,
-                'error_count' => errors.size
+                'error_count' => errors.size,
+                'processed_time' => Time.now.to_s
               }
             }
           )
-          key = create_history_key(config)
-          history[key] = config_with_results
+          config_key = create_config_key(config)
+          history[config_key] = config_with_results
 
           if dry_run
             puts "\n[Dry-run] Will write history to file #{history_file}:"
@@ -107,16 +102,12 @@ class CrowdinValidator
   # If +dry_run+ is set to true, this function has no side effects.
   # Otherwise, it may write to local files and Google Drive.
   #
-  # @param config [Hash]
+  # @param config [Hash] a valid configuration to run
   # @param dry_run [Boolean] if true, will not write to the local file system and gsheet
   # @param download_from_crowdin [Boolean] if true, download data from Crowdin. Otherwise load existing data from local files
   # @return [Array<Array>] array of translations, source_strings, and translation errors
   #
   def run_config(config, dry_run, download_from_crowdin)
-    missing_params = find_missing_params(config, REQUIRED_CONFIG_PARAMS)
-    raise "Missing config params #{missing_params}" unless missing_params.empty?
-    infer_config_params(config)
-
     # Retreive translations
     if download_from_crowdin
       translations = @crowdin_client.download_translations(
@@ -203,75 +194,12 @@ class CrowdinValidator
 
   private
 
-  def load_configs(config_file)
-    configs = read_from_json(config_file)
-    shared_data = configs['shared_data']
-    data = configs['data']
-    limit = configs['limit'] || data.size
-    limit.times.map do |i|
-      # The more specifc data will overwrite the shared data
-      shared_data.merge(data[i])
-    end
-  end
-
-  # Use history of the last successful runs to update the +congfigs+ input.
-  # @param configs [Array<Hash>]
-  # @param history [Hash]
-  def merge_configs_and_history(configs, history)
-    configs.each do |config|
-      key = create_history_key(config)
-      last_successful_date = history.dig(key, 'end_date')
-      config['start_date'] = last_successful_date if last_successful_date
-    end
-  end
-
-  # Create a key that will be used in the history file.
-  # @param config [Hash]
-  # @return [String]
-  def create_history_key(config)
-    values = %w[user_name project_name crowdin_language_id]
-    config.values_at(*values).join('_')
-  end
-
-  # Create a key that will be used to create unique output files.
-  # @param config [Hash]
-  # @return [String]
-  def create_config_key(config)
-    values = %w[user_name project_name crowdin_language_id start_date end_date]
-    config.values_at(*values).join('_')
-  end
-
-  # @param input_hash [Hash]
-  # @param required_params [Array<String>]
-  # @return [Array<String>]
-  def find_missing_params(input_hash, required_params)
-    required_params.select do |param|
-      input_hash[param].nil? || input_hash[param].empty?
-    end
-  end
-
-  # Update the +config+ input with inferred date and output params.
-  # @param config [Hash]
-  def infer_config_params(config)
-    config['end_date'] ||= Time.now.utc.strftime(DATE_FORMAT)
-
-    # local file outputs
-    output_folder = config['output_folder'] || OUTPUT_DIR
-    output_prefix = "#{output_folder}/#{create_config_key(config)}"
-    config['translations_json'] ||= "#{output_prefix}_translations.json"
-    config['source_strings_json'] ||= "#{output_prefix}_source_strings.json"
-    config['errors_json'] ||= "#{output_prefix}_errors.json"
-    config['errors_csv'] ||= "#{output_prefix}_errors.csv"
-
-    # gsheet output
-    gsheet_path = "#{config['user_name']}_#{config['project_name']}"
-    config['errors_gsheet'] ||= gsheet_path
-  end
-
-  # @param translations [Hash]
-  # @param source_strings [Hash]
+  # Validate multiple translations.
+  # @param translations [Array<Hash>]
+  # @param source_strings [Array<Hash>]
   # @return [Array<Hash>] array of translation errors
   def validate_all_translations(translations, source_strings)
+    # Transform data structure from an array to a hash for faster lookup using string_id
     transformed_translations = transform_translations(translations)
     transformed_source_strings = transform_source_strings(source_strings)
 
@@ -288,6 +216,7 @@ class CrowdinValidator
     errors
   end
 
+  # Validate one translation.
   # @param source [SourceString]
   # @param translation [Translation]
   # @return [Array<Hash>] array of translation errors
@@ -376,7 +305,7 @@ class CrowdinValidator
     end
   end
 
-  # Load language mapping
+  # Load language mapping from file
   def load_languages(file_name = LANGUAGE_FILE)
     @languages = read_from_json(file_name) if @languages.nil? && File.exist?(file_name)
     @languages
