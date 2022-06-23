@@ -159,14 +159,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.FieldButton = CdoFieldButton;
   blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
-
-  // Fix built-in block
-  blocklyWrapper.blockly_.fieldRegistry.unregister('field_variable');
-  blocklyWrapper.blockly_.fieldRegistry.register(
-    'field_variable',
-    CdoFieldVariable
-  );
-
+  blocklyWrapper.blockly_.FieldVariable = CdoFieldVariable;
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
 
