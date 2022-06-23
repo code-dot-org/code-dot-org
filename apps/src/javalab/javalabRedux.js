@@ -32,10 +32,9 @@ const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
 const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
 const SET_EDIT_TAB_KEY = 'javalab/SET_EDIT_TAB_KEY';
 const SET_ACTIVE_TAB_KEY = 'javalab/SET_ACTIVE_TAB_KEY';
-const SET_LAST_TAB_KEY_INDEX = 'javalab/SET_LAST_TAB_KEY_INDEX';
 const SET_FILE_METADATA = 'javalab/SET_FILE_METADATA';
 const SET_ORDERED_TAB_KEYS = 'javalab/SET_ORDERED_TAB_KEYS';
-const SET_EDITOR_METADATA = 'javalab/SET_EDITOR_METADATA';
+const SET_ALL_EDITOR_METADATA = 'javalab/SET_EDITOR_METADATA';
 
 export const getTabKey = index => `file-${index}`;
 
@@ -140,15 +139,13 @@ export const setSource = (
   filename,
   source,
   isVisible = true,
-  isValidation = false,
-  fileMetadata = {}
+  isValidation = false
 ) => ({
   type: SET_SOURCE,
   filename,
   source,
   isVisible,
-  isValidation,
-  fileMetadata
+  isValidation
 });
 
 // Handles updates to text within Code Mirror (ie, when text is edited)
@@ -313,13 +310,6 @@ export const setActiveTabKey = activeTabKey => {
   };
 };
 
-export const setLastTabKeyIndex = lastTabKeyIndex => {
-  return {
-    type: SET_LAST_TAB_KEY_INDEX,
-    lastTabKeyIndex
-  };
-};
-
 export const setFileMetadata = fileMetadata => {
   return {
     type: SET_FILE_METADATA,
@@ -334,13 +324,18 @@ export const setOrderedTabKeys = orderedTabKeys => {
   };
 };
 
-export const setEditorMetadata = editorMetadata => {
+export const setAllEditorMetadata = (
+  fileMetadata,
+  orderedTabKeys,
+  activeTabKey,
+  lastTabKeyIndex
+) => {
   return {
-    type: SET_EDITOR_METADATA,
-    orderedTabKeys: editorMetadata.orderedTabKeys,
-    fileMetadata: editorMetadata.fileMetadata,
-    activeTabKey: editorMetadata.activeTabKey,
-    lastTabKeyIndex: editorMetadata.lastTabKeyIndex
+    type: SET_ALL_EDITOR_METADATA,
+    fileMetadata,
+    orderedTabKeys,
+    activeTabKey,
+    lastTabKeyIndex
   };
 };
 
@@ -367,7 +362,6 @@ export default function reducer(state = initialState, action) {
     };
     return {
       ...state,
-      ...action.fileMetadata,
       sources: newSources
     };
   }
@@ -553,12 +547,6 @@ export default function reducer(state = initialState, action) {
       activeTabKey: action.activeTabKey
     };
   }
-  if (action.type === SET_LAST_TAB_KEY_INDEX) {
-    return {
-      ...state,
-      lastTabKeyIndex: action.lastTabKeyIndex
-    };
-  }
   if (action.type === SET_ORDERED_TAB_KEYS) {
     return {
       ...state,
@@ -571,13 +559,13 @@ export default function reducer(state = initialState, action) {
       fileMetadata: action.fileMetadata
     };
   }
-  if (action.type === SET_EDITOR_METADATA) {
+  if (action.type === SET_ALL_EDITOR_METADATA) {
     return {
       ...state,
-      orderedTabKeys: action.orderedTabKeys,
       fileMetadata: action.fileMetadata,
+      orderedTabKeys: action.orderedTabKeys,
       activeTabKey: action.activeTabKey,
-      lastTabKeyIndex: action.lastTabKeyIndex
+      lastTabKeyIndex: action.lastTabKeyIndex || state.lastTabKeyIndex
     };
   }
   return state;

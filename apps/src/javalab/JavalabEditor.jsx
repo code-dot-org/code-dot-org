@@ -15,7 +15,7 @@ import {
   setOrderedTabKeys,
   setFileMetadata,
   getTabKey,
-  setEditorMetadata
+  setAllEditorMetadata
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
@@ -122,7 +122,7 @@ class JavalabEditor extends React.Component {
     lastTabKeyIndex: PropTypes.number.isRequired,
     editTabKey: PropTypes.string,
     setEditTabKey: PropTypes.func.isRequired,
-    setEditorMetadata: PropTypes.func.isRequired
+    setAllEditorMetadata: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -445,7 +445,7 @@ class JavalabEditor extends React.Component {
       fileMetadata,
       orderedTabKeys,
       setSource,
-      setEditorMetadata
+      setAllEditorMetadata
     } = this.props;
     const newTabIndex = lastTabKeyIndex + 1;
     const newTabKey = getTabKey(newTabIndex);
@@ -461,14 +461,7 @@ class JavalabEditor extends React.Component {
     // add new file to sources
     setSource(filename, fileContents);
     projectChanged();
-
-    const editorMetadata = {
-      fileMetadata: newFileMetadata,
-      orderedTabKeys: newTabs,
-      activeTabKey: newTabKey,
-      lastTabKeyIndex: newTabIndex
-    };
-    setEditorMetadata(editorMetadata);
+    setAllEditorMetadata(newFileMetadata, newTabs, newTabKey, newTabIndex);
 
     // add new tab and set it as the active tab
     this.setState({
@@ -484,7 +477,7 @@ class JavalabEditor extends React.Component {
       orderedTabKeys,
       activeTabKey,
       removeFile,
-      setEditorMetadata
+      setAllEditorMetadata
     } = this.props;
     // find tab in list
     const indexToRemove = orderedTabKeys.indexOf(fileToDelete);
@@ -506,13 +499,7 @@ class JavalabEditor extends React.Component {
       // clean up editors
       delete this.editors[fileToDelete];
 
-      const editorMetadata = {
-        fileMetadata: newFileMetadata,
-        orderedTabKeys: newTabs,
-        activeTabKey: newActiveTabKey,
-        lastTabKeyIndex: this.props.lastTabKeyIndex - 1
-      };
-      setEditorMetadata(editorMetadata);
+      setAllEditorMetadata(newFileMetadata, newTabs, newActiveTabKey);
 
       // delete from sources
       removeFile(fileMetadata[fileToDelete]);
@@ -902,8 +889,7 @@ export default connect(
     editTabKey: state.javalab.editTabKey
   }),
   dispatch => ({
-    setSource: (filename, source, fileMetadata) =>
-      dispatch(setSource(filename, source, true, false, fileMetadata)),
+    setSource: (filename, source) => dispatch(setSource(filename, source)),
     sourceVisibilityUpdated: (filename, isVisible) =>
       dispatch(sourceVisibilityUpdated(filename, isVisible)),
     sourceValidationUpdated: (filename, isValidation) =>
@@ -920,7 +906,19 @@ export default connect(
     setOrderedTabKeys: orderedTabKeys =>
       dispatch(setOrderedTabKeys(orderedTabKeys)),
     setFileMetadata: fileMetadata => dispatch(setFileMetadata(fileMetadata)),
-    setEditorMetadata: editorMetadata =>
-      dispatch(setEditorMetadata(editorMetadata))
+    setAllEditorMetadata: (
+      fileMetadata,
+      orderedTabKeys,
+      activeTabKey,
+      lastTabKeyIndex
+    ) =>
+      dispatch(
+        setAllEditorMetadata(
+          fileMetadata,
+          orderedTabKeys,
+          activeTabKey,
+          lastTabKeyIndex
+        )
+      )
   })
 )(Radium(JavalabEditor));
