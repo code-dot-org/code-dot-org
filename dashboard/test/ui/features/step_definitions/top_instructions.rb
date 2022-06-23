@@ -62,3 +62,23 @@ Given /^I load the peer project for peer number (.*) in the list$/ do |number|
    And I wait to see ".code-review-comment-input"
   STEPS
 end
+
+Given /^I write a code review v2 comment with text "([^"]*)"$/ do |text|
+  steps <<-STEPS
+     And I press ".editable-text-area" using jQuery
+     And I press keys "#{text}" for element ".editable-text-area"
+     And element ".editable-text-area" contains text "#{text}"
+     And I press ".code-review-comment-submit" using jQuery
+     And I wait until element ".code-review-comment-body" is visible
+  STEPS
+end
+
+Given /^I load the code review for peer number (.*) in the list$/ do |number|
+  steps <<-STEPS
+   And I load the review tab
+   And I press ".peer-dropdown-button" using jQuery
+   And I wait to see ".code-review-peer-link"
+   And I click selector ".code-review-peer-link:nth-child(#{number})" to load a new page
+   And I wait to see ".editable-text-area"
+  STEPS
+end
