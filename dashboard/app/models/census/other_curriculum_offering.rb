@@ -24,8 +24,9 @@ class Census::OtherCurriculumOffering < ApplicationRecord
 
   SUPPORTED_PROVIDERS = %w(
     BootUp
-    TEALS
     PLTW
+    SkillsStruck
+    TEALS
   ).freeze
 
   def self.seed_from_csv(provider_code, school_year, filename, dry_run = false)
