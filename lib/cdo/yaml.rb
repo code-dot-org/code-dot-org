@@ -21,7 +21,12 @@ module Cdo
     end
 
     def load_erb_file(path, binding=nil)
-      YAML.safe_load(erb_file_to_string(path, binding), path)
+      # Load this YAML un-safely with `load`; these config files depend on
+      # functionality which is excluded by `safe_load`
+      #
+      # rubocop:disable Security/YAMLLoad
+      YAML.load(erb_file_to_string(path, binding), path)
+      # rubocop:enable Security/YAMLLoad
     rescue Errno::ENOENT
       nil
     end
