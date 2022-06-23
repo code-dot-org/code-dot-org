@@ -1574,10 +1574,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@blockly/field-grid-dropdown@^1.0.38":
-  version "1.0.38"
-  resolved "https://registry.yarnpkg.com/@blockly/field-grid-dropdown/-/field-grid-dropdown-1.0.38.tgz#6e10ae2a5851cf9c7b562c1fee823e3a95e13eed"
-  integrity sha512-PQiheo+yUioI2gFoREmJZ9yYU4HaAdFG0IYkx61ymHwHMplsLbtjl2CMnRZ1UVj/wvw3AhZrv9UOlB/oxuqBvw==
+"@blockly/field-grid-dropdown@^1.0.41":
+  version "1.0.41"
+  resolved "https://registry.yarnpkg.com/@blockly/field-grid-dropdown/-/field-grid-dropdown-1.0.41.tgz#6c18e74b6f9c13f3b43ad7d203fc7adac35b191a"
+  integrity sha512-zP+DF69u4PJ705CdIEFsTNt7IRqOsQ+HMWbWyDuGLm9nVNdzZihSsfoGjQ5jbYVonnjNaUfM76C7LyASxOME3w==
 
 "@blockly/plugin-scroll-options@^2.0.13":
   version "2.0.13"
