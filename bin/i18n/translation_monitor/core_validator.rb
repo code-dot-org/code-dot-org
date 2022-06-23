@@ -12,7 +12,8 @@ module CoreValidator
   #
   def validate_markdown_link(str)
     return if str.nil? || str.empty?
-    str.match?(/\[.*\]\s+\(.*\)/) ? 'cannot have space between [] and () block' : nil
+    remainder = remove_valid_redacted_blocks(str)
+    remainder.match?(/\[.*\]\s+\(.*\)/) ? 'cannot have space between [] and () block' : nil
   end
 
   # Redacted string should not have space(s) between two [] blocks.
@@ -23,12 +24,15 @@ module CoreValidator
   #
   def validate_redacted_blocks(str)
     return if str.nil? || str.empty?
-    # delete all valid redacted blocks
-    valid_blocks_pattern = /\[\w+\]\[\d+\]/
-    remainder = str.gsub(valid_blocks_pattern, '')
-
+    remainder = remove_valid_redacted_blocks(str)
     invalid_blocks_pattern = /\[.*\]\s+\[.*\]/
     remainder.match?(invalid_blocks_pattern) ? 'cannot have space between 2 [] blocks' : nil
+  end
+
+  def remove_valid_redacted_blocks(str)
+    # A valid redacted blocks could be [][0] or [something][0] or [another thing][0]
+    valid_blocks_pattern = /\[[\w\s]*\]\[\d+\]/
+    str.gsub(valid_blocks_pattern, '')
   end
 
   # Check if a string is in a certain language.
