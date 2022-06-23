@@ -48,7 +48,7 @@ class CoreValidatorTest < Minitest::Test
     assert_nil validate_language("", 'any_language_code')
 
     # invalid cases
-    refute_nil validate_language("இது தமிழில் ஒரு வாக்கியம்", 'it')
+    refute_nil validate_language("இது தமிழில் ஒரு சோதனை வாக்கியம்", 'it')
     refute_nil validate_language("ini adalah kalimat dalam bahasa indonesia", 'es')
   end
 end

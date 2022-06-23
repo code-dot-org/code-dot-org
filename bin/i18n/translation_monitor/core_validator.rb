@@ -46,13 +46,17 @@ module CoreValidator
   #
   def validate_language(str, language_code)
     # Enforce a minimum string length since language detection is not accurate for short strings.
-    return if str.nil? || str.size < 20
+    return if str.nil? || count_words(str) < 5
 
     # Ignore 'unknown' language. Also ignore 'en' because of high false-positive rate.
-    ignored_language_codes = %w[un en]
+    ignored_language_codes = %w[un en xxx]
 
     detected_language = CLD.detect_language(str)[:code]
     return if ignored_language_codes.include?(detected_language) || language_code == detected_language
     "language looks like '#{detected_language}' instead of '#{language_code}'"
+  end
+
+  def count_words(str)
+    str.strip.split(/\s+/).size
   end
 end
