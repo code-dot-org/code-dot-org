@@ -27,7 +27,9 @@ export default class JavabuilderConnection {
     miniAppType,
     currentUser,
     onMarkdownLog,
-    csrfToken
+    csrfToken,
+    onValidationPassed,
+    onValidationFailed
   ) {
     this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
@@ -43,8 +45,13 @@ export default class JavabuilderConnection {
     this.currentUser = currentUser;
     this.onMarkdownLog = onMarkdownLog;
     this.csrfToken = csrfToken;
+    this.onValidationPassed = onValidationPassed;
+    this.onValidationFailed = onValidationFailed;
+
     this.seenUnsupportedNeighborhoodMessage = false;
     this.seenUnsupportedTheaterMessage = false;
+    this.sawValidationTests = false;
+    this.allValidationPassed = true;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -237,6 +244,7 @@ export default class JavabuilderConnection {
 
   onMessage(event) {
     const data = JSON.parse(event.data);
+    let testResult;
     switch (data.type) {
       case WebSocketMessageType.STATUS:
         this.onStatusMessage(data.value, data.detail);
@@ -245,7 +253,13 @@ export default class JavabuilderConnection {
         this.onOutputMessage(data.value);
         break;
       case WebSocketMessageType.TEST_RESULT:
-        onTestResult(data, this.onOutputMessage);
+        testResult = onTestResult(data, this.onOutputMessage);
+        if (testResult.isValidation) {
+          this.sawValidationTests = true;
+          if (!testResult.success) {
+            this.allValidationPassed = false;
+          }
+        }
         this.onNewlineMessage();
         break;
       case WebSocketMessageType.NEIGHBORHOOD:
@@ -356,6 +370,13 @@ export default class JavabuilderConnection {
   }
 
   handleExecutionFinished() {
+    if (this.sawValidationTests && this.allValidationPassed) {
+      this.onValidationPassed();
+    } else if (this.sawValidationTests) {
+      this.onValidationFailed();
+    }
+    this.sawValidationTests = false;
+    this.allValidationPassed = true;
     this.seenUnsupportedNeighborhoodMessage = false;
     this.seenUnsupportedTheaterMessage = false;
     switch (this.executionType) {
