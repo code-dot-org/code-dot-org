@@ -24,8 +24,9 @@ class Backpack extends Component {
     isButtonDisabled: PropTypes.bool.isRequired,
     onImport: PropTypes.func.isRequired,
     // populated by redux
-    backpackApi: PropTypes.object,
-    sources: PropTypes.object,
+    backpackApi: PropTypes.object.isRequired,
+    sources: PropTypes.object.isRequired,
+    validation: PropTypes.object.isRequired,
     backpackEnabled: PropTypes.bool
   };
 
@@ -113,7 +114,7 @@ class Backpack extends Component {
     let hiddenFilenamesUsed = [];
     let visibleFilenamesUsed = [];
     const {selectedFiles} = this.state;
-    const {sources} = this.props;
+    const {sources, validation} = this.props;
 
     selectedFiles.forEach(filename => {
       const source = sources[filename];
@@ -123,6 +124,10 @@ class Backpack extends Component {
         } else {
           hiddenFilenamesUsed.push(filename);
         }
+      }
+
+      if (Object.keys(validation).includes(filename)) {
+        hiddenFilenamesUsed.push(filename);
       }
     });
 
@@ -445,5 +450,6 @@ export const UnconnectedBackpack = Backpack;
 export default connect(state => ({
   backpackApi: state.javalab.backpackApi,
   sources: state.javalab.sources,
+  validation: state.javalab.validation,
   backpackEnabled: state.javalab.backpackEnabled
 }))(onClickOutside(Radium(UnconnectedBackpack)));
