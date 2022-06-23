@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require_relative '../../../../dashboard/config/environment'
-require 'street_address'
 
 class CodeMatch
   attr_accessor :ap_name
