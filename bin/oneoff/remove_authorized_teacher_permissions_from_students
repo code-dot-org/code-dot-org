@@ -11,7 +11,6 @@ removed_permissions = 0
 authorized_teacher_student_permissions.each do |permission|
   user = permission.user
   next unless user.student?
-  next unless permission.permission = UserPermission::AUTHORIZED_TEACHER
   permission.destroy! unless DRY_RUN
   puts "Removed authorized teacher permission from student account #{user.id}"
   removed_permissions += 1
