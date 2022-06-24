@@ -156,16 +156,6 @@ module Pd
       SUBJECT_WORKSHOP_3_4
     ].freeze
 
-    # Used to suppress post-workshop emails and in create/edit workshop UI
-    MUST_SUPPRESS_EMAIL_SUBJECTS = [
-      SUBJECT_ADMIN_COUNSELOR_WELCOME,
-      SUBJECT_ADMIN_COUNSELOR_SLP_INTRO,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL1,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL2,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL3,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4
-    ].freeze
-
     LEGACY_SUBJECTS = {
       COURSE_CSP => [
         LEGACY_SUBJECT_CSP_WORKSHOP_1_1920 = 'Workshop 1: Unit 3'.freeze,
