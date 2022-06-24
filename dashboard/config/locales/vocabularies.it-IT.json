@@ -334,7 +334,7 @@
         },
         "sprite/coursef/2021": {
           "word": "Personaggio",
-          "definition": "Un disegno sullo schermo con una posizione, dimensioni e aspetto."
+          "definition": "Un disegno sullo schermo dotato di posizione, dimensioni e aspetto."
         },
         "user/coursef/2021": {
           "word": "Utente",
@@ -474,7 +474,7 @@
         },
         "persistence/courseb/2021": {
           "word": "Perseveranza",
-          "definition": "Continuare ad insistere in ciò che si sta facendo, fino a raggiungere il risultato voluto."
+          "definition": "Provare in continuazione, anche quando qualcosa è molto difficile."
         },
         "loop/courseb/2021": {
           "word": "Ciclo",
@@ -606,7 +606,7 @@
         },
         "persistence/coursed/2021": {
           "word": "Perseveranza",
-          "definition": "Continuare ad insistere in ciò che si sta facendo, fino a raggiungere il risultato voluto."
+          "definition": "Provare in continuazione, anche quando qualcosa è molto difficile."
         },
         "event/coursed/2021": {
           "word": "Evento",
@@ -673,7 +673,7 @@
         },
         "sprite/express/2021": {
           "word": "Personaggio",
-          "definition": "Un disegno sullo schermo con una posizione, dimensioni e aspetto."
+          "definition": "Un disegno sullo schermo dotato di posizione, dimensioni e aspetto."
         },
         "event/express/2021": {
           "word": "Evento",
@@ -780,7 +780,7 @@
         },
         "persistence/pre-express/2021": {
           "word": "Perseveranza",
-          "definition": "Continuare ad insistere in ciò che si sta facendo, fino a raggiungere il risultato voluto."
+          "definition": "Provare in continuazione, anche quando qualcosa è molto difficile."
         },
         "loop/pre-express/2021": {
           "word": "Ciclo",
@@ -800,7 +800,7 @@
         },
         "sprite/coursee/2021": {
           "word": "Personaggio",
-          "definition": "Un disegno sullo schermo con una posizione, dimensioni e aspetto."
+          "definition": "Un disegno sullo schermo dotato di posizione, dimensioni e aspetto."
         },
         "event/coursee/2021": {
           "word": "Evento",
