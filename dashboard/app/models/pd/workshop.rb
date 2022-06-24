@@ -64,11 +64,8 @@ class Pd::Workshop < ApplicationRecord
     'third_party_provider',
 
     # If true, our system will not send enrollees reminders related to this workshop.
-    # Note that this is one of (at least) three mechanisms we use to suppress
-    # email in various cases -- see Workshop.suppress_reminders? for
-    # subject-specific suppression of reminder emails. This is functionally
-    # extremely similar (identical?) to the logic currently implemented
-    # by this serialized attribute.
+    # If the subject is not in the suppress_reminder? array, this attribute can be
+    # set to be true or false from the UI
     'suppress_email'
   ]
 
@@ -443,13 +440,10 @@ class Pd::Workshop < ApplicationRecord
       "#{workshop_year.to_i - 1}-#{workshop_year}"
   end
 
-  # Note that this is one of (at least) three mechanisms we use to suppress
-  # email in various cases -- see the serialized attribute 'suppress_email'
-  # for more information.
   # Suppress 3 and 10-day reminders for certain workshops
-  # [MEG] It appears that these courses can move into the MUST_SUPPRESS_EMAIL_SUBJECTS constant
+  # The suppress_email? attribute gets set in the UI
   def suppress_reminders?
-    [
+    ([
       SUBJECT_CSP_TEACHER_CON,
       SUBJECT_CSP_FIT,
       SUBJECT_CSD_TEACHER_CON,
@@ -461,7 +455,7 @@ class Pd::Workshop < ApplicationRecord
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL2,
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL3,
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL4
-    ].include? subject
+    ].include? subject) || suppress_email?
   end
 
   def self.send_reminder_for_upcoming_in_days(days)
