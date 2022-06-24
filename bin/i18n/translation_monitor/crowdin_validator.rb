@@ -113,7 +113,7 @@ class CrowdinValidator
       translations = @crowdin_client.download_translations(
         config['project_name'],
         config['crowdin_language_id'],
-        config['user_name'],
+        config['user_names'],
         config['start_date'],
         config['end_date']
       )
@@ -138,7 +138,7 @@ class CrowdinValidator
       source_strings = @crowdin_client.download_source_strings(
         config['project_name'],
         config['crowdin_language_id'],
-        config['user_name'],
+        config['user_names'],
         config['start_date'],
         config['end_date']
       )

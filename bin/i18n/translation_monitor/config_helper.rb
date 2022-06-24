@@ -3,17 +3,18 @@
 #
 module ConfigHelper
   # A valid configuration must have 3 fields
-  #   user_name (in Crowdin): e.g. tomedes, translatebyhumans
+  #   user_names (in Crowdin): an array of names, e.g. tomedes, translatebyhumans
   #   project_name (in Crowdin): e.g. codeorg, hour-of-code, codeorg-markdown, codeorg-restricted
   #   crowdin_language_id: e.g. it, es-MX. See https://developer.crowdin.com/language-codes/
   REQUIRED_CONFIG_PARAMS = %w[
-    user_name
+    user_names
     project_name
     crowdin_language_id
   ]
 
   # Optional fields in a configuration. They will take default values if not
   # explicitly specified. See the +merge_default_params+ function in this module.
+  #   user_group: identify a group of users. If not set, takes the first value from the user_names array
   #   start_date: e.g. 2022-01-01 (yyyy-mm-dd). See https://developer.crowdin.com/croql/
   #   end_date: e.g. 2022-06-23
   #   write_to_file: if true, the tool will write the translations, source strings, and translation errors to the local file system
@@ -28,6 +29,7 @@ module ConfigHelper
   #     The service account won't try to create a new Google file.
   #     See +append_to_gsheet+ function in the DataIOHelper module.
   OPTIONAL_CONFIG_PARAMS = %w[
+    user_group
     start_date
     end_date
     write_to_file
@@ -89,6 +91,8 @@ module ConfigHelper
   # @param config [Hash]
   # @return [Hash] a modified config
   def merge_default_params(config)
+    config['user_group'] ||= config['user_names'].first
+
     # date range
     config['start_date'] ||= DEFAULT_START_DATE
     config['end_date'] ||= Time.now.utc.strftime(DATE_FORMAT)
@@ -101,7 +105,7 @@ module ConfigHelper
     config['errors_csv'] ||= "#{output_prefix}_errors.csv"
 
     # gsheet output
-    config['errors_gsheet'] ||= "#{config['user_name']}_#{config['project_name']}"
+    config['errors_gsheet'] ||= "#{config['user_group']}_#{config['project_name']}"
     config
   end
 
@@ -109,7 +113,7 @@ module ConfigHelper
   # @param config [Hash]
   # @return [String]
   def create_config_key(config)
-    keys = %w[user_name project_name crowdin_language_id]
+    keys = %w[user_group project_name crowdin_language_id]
     config.values_at(*keys).join('_')
   end
 
@@ -117,7 +121,7 @@ module ConfigHelper
   # @param config [Hash]
   # @return [String]
   def create_config_key_with_date_range(config)
-    keys = %w[user_name project_name crowdin_language_id start_date end_date]
+    keys = %w[user_group project_name crowdin_language_id start_date end_date]
     config.values_at(*keys).join('_')
   end
 
