@@ -3,6 +3,7 @@ path = File.expand_path('../../../deployment.rb', __FILE__) unless File.file?(pa
 require path
 
 if CDO.dashboard_sock
+  bind "tcp://#{CDO.dashboard_host}:9000"
   bind "unix://#{CDO.dashboard_sock}"
 else
   bind "tcp://#{CDO.dashboard_host}:#{CDO.dashboard_port}"

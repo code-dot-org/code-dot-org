@@ -1,6 +1,7 @@
 require File.join(File.expand_path(__FILE__), '../../../deployment')
 
 if CDO.pegasus_sock
+  bind "tcp://#{CDO.pegasus_host}:9001"
   bind "unix://#{CDO.pegasus_sock}"
 else
   bind "tcp://#{CDO.pegasus_host}:#{CDO.pegasus_port}"
