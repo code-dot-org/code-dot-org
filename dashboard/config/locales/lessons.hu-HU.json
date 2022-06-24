@@ -359,7 +359,7 @@
           "name": "Adatok titokban tartása"
         },
         "csd5-2018/Combining Representations": {
-          "name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása"
         },
         "csd5-2018/CS Discoveries Post-Course Survey": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
@@ -533,10 +533,13 @@
           "name": "Adatok titokban tartása"
         },
         "csd5-2019/Combining Representations": {
-          "name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása"
         },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Bevezetés a problémamegoldásba"
+        },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "A probléma-megoldási folyamat"
         },
         "csd1-2019/What is a Computer?": {
           "name": "Mi az a számítógép?"
@@ -641,7 +644,7 @@
           "name": "Adatok titokban tartása"
         },
         "csd5-2017/Combining Representations": {
-          "name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása"
         },
         "csd4-2017/Linking Screens": {
           "name": "Képernyők összekapcsolása"
@@ -950,8 +953,17 @@
           "name": "Kirakós játék",
           "overview": "Ez a leckében a diákok megismerik, hogy mire számíthatnak egy számítógépes laborban. A lecke egy rövid megbeszéléssel kezdődik a számítógépes laborban való megfelelő viselkedésről, majd áttérnek a számítógép használatára, és online rejtvényeket oldanak meg.",
           "preparation": "-   A [Mindennapi tudás iskolája](https://www.commonsense.org/education/digital-citizenship) webhelyen további tartalmak találhatók az online biztonságról.",
-          "purpose": "A lecke fő célja, hogy a diákok némi számítógépes tapasztalatot szerezzenek. Megismerkednek a legalapvetőbb számítógépes funkciókkal, mint a kattintás, a húzás és dobás, és ezzel egyenlőbb feltételeket lesznek az osztályban, amikor a diákok majd rejtvényeket fognak megoldani. Ez a lecke remek lehetőséget nyújt arra is, hogy bemutassuk az alapvető számítógépes hardverterminológiát, beleértve az \"egér\", az \"érintőpad\" vagy az \"érintőképernyő\" fogalmakat, attól függően, hogy milyen eszközt használunk.",
-          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
+          "purpose": "A lecke fő célja, hogy a diákok némi számítógépes tapasztalatot szerezzenek. Megismerkednek a legalapvetőbb számítógépes funkciókkal, mint a kattintás, a húzás és dobás, és ezzel az osztályban a diákok lényegében azonos szintre kerülnek, amikor majd feladványokat kell megoldaniuk. Ez a lecke remek lehetőséget nyújt arra is, hogy megismerjék a számítógépes hardver alapvető kifejezéseit, többek között az \"egér\", az \"érintőpad\" vagy az \"érintőképernyő\" kifejezéseket, attól függően, hogy milyen eszközt használnak.",
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Kirakós játék"
+        },
+        "allthethings/Maze": {
+          "name": "Labirintus"
+        },
+        "allthethings/Artist": {
+          "name": "Művész"
         },
         "allthethings/Bee": {
           "name": "Méh"
@@ -1057,7 +1069,7 @@
           "name": "Kurzus Projekt vége"
         },
         "coursea-2021/Learn to Drag and Drop": {
-          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
         },
         "coursea-2021/Programming: Happy Maps": {
           "name": "Vidám térképek"
@@ -1145,7 +1157,7 @@
           "name": "Kurzus Projekt vége"
         },
         "pre-express-2021/Learn to Drag and Drop": {
-          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
         },
         "pre-express-2021/Programming with Rey and BB-8": {
           "name": "Programozás Rey és BB-8 segítségével",
@@ -1215,7 +1227,7 @@
           "name": "Képek ábrázolása"
         },
         "csd5-2021/Combining Representations": {
-          "name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása"
         },
         "csd5-2021/Keeping Data Secret": {
           "name": "Adatok titokban tartása"
@@ -1255,6 +1267,9 @@
         },
         "csd1-2021/Intro to Problem Solving": {
           "name": "Bevezetés a problémamegoldásba"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "A probléma-megoldási folyamat"
         },
         "csd1-2021/What is a Computer?": {
           "name": "Mi az a számítógép?"
