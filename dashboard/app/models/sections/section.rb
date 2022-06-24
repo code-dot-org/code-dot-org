@@ -284,7 +284,7 @@ class Section < ApplicationRecord
   # Follower is determined by the controller so that it can authorize first.
   # Optionally email the teacher.
   def remove_student(student, follower, options)
-    follower.delete
+    follower.destroy
 
     if student.sections_as_student.empty?
       if student.under_13?
