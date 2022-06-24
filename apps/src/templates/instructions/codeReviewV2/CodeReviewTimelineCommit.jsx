@@ -17,7 +17,10 @@ const CodeReviewTimelineCommit = ({commit, isLastElementInTimeline}) => {
       isLast={isLastElementInTimeline}
       projectVersionId={projectVersion}
     >
-      <div style={styles.wrapper}>
+      <div
+        style={styles.wrapper}
+        className="uitest-code-review-timeline-commit"
+      >
         <div style={styles.header}>{javalabMsg.commit()}</div>
         <div style={styles.date}>{formattedDate}</div>
         <div>{comment}</div>
