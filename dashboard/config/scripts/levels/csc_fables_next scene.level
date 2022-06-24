@@ -41,11 +41,11 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
-    "long_instructions": "##What happens next? \r\n\r\n- What does each character say or think when they meet each other? \r\n\r\n**Bonus:**\r\n- Change the background \r\n- Add more narrative",
+    "long_instructions": "*What happens next?* \r\n\r\n- What does each character say or think when they meet each other? \r\n- Add in more `say` or `think` blocks for your sprites\r\n\r\n*Extra Challenge:* Try changing the background or adding more narration.",
     "parent_level_id": 28525,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
-    "short_instructions": "Set Your Scene: Choose a background and two sprites to set the opening scene. ",
+    "short_instructions": "Set Your Scene: Add more say or think blocks.",
     "block_pool": "gamelab",
     "name_suffix": "_2022",
     "block_pools": [
@@ -76,7 +76,7 @@
   "level_num": "custom",
   "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-22T18:04:33.378+00:00\",\"changed\":[\"cloned from \\\"csc_fables_events\\\"\"],\"cloned_from\":\"csc_fables_events\"},{\"changed_at\":\"2022-06-22 18:11:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-22 18:13:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-22T18:04:33.378+00:00\",\"changed\":[\"cloned from \\\"csc_fables_events\\\"\"],\"cloned_from\":\"csc_fables_events\"},{\"changed_at\":\"2022-06-22 18:11:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-22 18:13:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-23 20:43:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
