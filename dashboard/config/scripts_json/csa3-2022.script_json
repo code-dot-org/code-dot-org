@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-14 13:26:22 UTC",
+    "serialized_at": "2022-06-16 14:31:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6548,6 +6548,18 @@
       }
     },
     {
+      "name": "Nested Loops",
+      "url": "https://youtu.be/xFJoqfqVEbg",
+      "key": "nested_loops",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "nested_loops"
+      }
+    },
+    {
       "name": "One-Dimensional (1D) Arrays",
       "url": "https://youtu.be/MgRMA_qZxZ4",
       "key": "one-dimensional_1d_arrays",
@@ -6557,6 +6569,18 @@
       },
       "seeding_key": {
         "resource.key": "one-dimensional_1d_arrays"
+      }
+    },
+    {
+      "name": "Polymorphism",
+      "url": "https://youtu.be/Sx8NRbuAJNQ",
+      "key": "polymorphism",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "polymorphism"
       }
     },
     {
@@ -6936,6 +6960,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
+        "resource.key": "nested_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
         "resource.key": "tracing_nested_loops"
       }
     },
@@ -7231,6 +7261,12 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "investigating_polymorphism"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "polymorphism"
       }
     },
     {

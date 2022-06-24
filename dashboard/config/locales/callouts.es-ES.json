@@ -2593,6 +2593,15 @@
         "New Sprite Lab Project": {
           "costumes_tab": "Pulsa aquí para añadir disfraces a tu proyecto.",
           "make_sprite": "¡Utiliza los bloques aquí para hacer un sprite!"
+        },
+        "Calc Circles of Eval .2": {
+          "calc_question_marks": "Selecciona el número correcto en este desplegable"
+        },
+        "Calc Vars 1": {
+          "Calc Vars 1_edit_option": "Pulsa en editar para cambiar el valor de esta variable"
+        },
+        "Eval Strings Images .2": {
+          "": "Los bloques de color turquesa, como éste, devuelven valores de cadena"
         }
       }
     }

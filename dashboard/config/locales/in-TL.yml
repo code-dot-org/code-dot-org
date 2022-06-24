@@ -28,6 +28,7 @@ in:
         personal_email_markdown: crwdns2067358:0%{url}crwdne2067358:0
         username: crwdns2550:0crwdne2550:0
         password: crwdns2551:0crwdne2551:0
+        verified_teacher: crwdns2929400:0crwdne2929400:0
         password_confirmation: crwdns2552:0crwdne2552:0
         current_password: crwdns2553:0crwdne2553:0
         locale: crwdns2554:0crwdne2554:0
@@ -585,6 +586,7 @@ in:
     try_hour_of_code: crwdns55879:0crwdne55879:0
     store: crwdns2689313:0crwdne2689313:0
     cookie_notice: crwdns2864053:0crwdne2864053:0
+    view_code: crwdns2929402:0crwdne2929402:0
   reference_area:
     title: crwdns2625:0crwdne2625:0
     subtitle: crwdns3090:0crwdne3090:0

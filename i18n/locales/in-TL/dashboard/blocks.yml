@@ -1227,6 +1227,8 @@ in:
             '"x"': crwdns2658540:0crwdne2658540:0
             '"y"': crwdns2658542:0crwdne2658542:0
             '"z"': crwdns2658544:0crwdne2658544:0
+      gamelab_layoutGrid:
+        text: crwdns2929404:0crwdne2929404:0
       gamelab_locationAt:
         text: crwdns169063:0[X]crwdnd169063:0[0]crwdnd169063:0[Y]crwdnd169063:0[1]crwdne169063:0
       gamelab_locationModifier:

@@ -32,8 +32,122 @@
         "infinity/Infinity": {
           "name": "Disney Infinitiija Speallan-lab"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kodendiibmu 2013"
+        },
         "oceans/Oceans": {
           "name": "AI Mearaide"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Dáhpáhusaid"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite-lab"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Dáhpáhus Stivrejuvvon Prográmmeren"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Álgge"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "DihtorDiehtaga Vuođut"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Geahča Ovddasguvlui"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Hálddašit Vuođđoáššiid: Sekveanssaiguin"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Hálddašit Vuođđoáššiid: Mohkit"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Hálddašit Vuođđoáššiid: Eavttut"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Hálddašit Vuođđoáššiid: Funkšuvnnat"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Hálddašit Vuođđoáššiid: Dáhpáhusat"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Buoremus Práksisat Oahpahit DihtorDiehtaga"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Pláne"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Boahttevaš Lávkkit"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Várddus ja Bajásbidjan Instrukšuvnnat"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Oahppis Oahppái - Sáddet Bihtáid juhkkojuvvon Wire mielde"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Oahppis Oahppái - Sáddet Nummariid"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Oahppis Oahppái - Sáddet Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Njuolggosádde dieđuid"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routarat ja čujuhusat"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Páhkat ja Luohttevašvuohta"
+        },
+        "netsim/Manual DNS": {
+          "name": "DNS Manuála"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Automahtalaš DNS-noda"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Friddjaspeallan Interneahtta Simulator"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Álgge"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "DihtorDiehtaga Vuođut"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Geahča Ovddasguvlui"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Hálddašit Vuođđoáššiid: Sekveanssaiguin"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Hálddašit Vuođđoáššiid: Mohkit"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Hálddašit Vuođđoáššiid: Eavttut"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Hálddašit Vuođđoáššiid: Funkšuvnnat"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Hálddašit Vuođđoáššiid: Dáhpáhusat"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Buoremus Práksisat Oahpahit DihtorDiehtaga"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Pláne"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Boahttevaš Lávkkit"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Frekveansa Analysa"
         },
         "courseb-2018/Your Digital Footprint": {
           "name": "Du Digitála Luodda"
@@ -647,6 +761,21 @@
         "csd4-2017/Prototype Testing": {
           "name": "Prototyhpa Teasten"
         },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Čáhppes ja Vilges Neavvagat"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Čáhppes ja Vilges Pikseleren Friddjaspeallan"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Ivdne Pikseleren Neavvagat"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Ivdne Pikseleren Ovdamearkkat"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Ivdne Pikseleren Friddjaspeallan"
+        },
         "course4/Unplugged: Tangrams": {
           "name": "Neahtahaga: Tangrámmat"
         },
@@ -868,6 +997,120 @@
         },
         "course1/Artist: Loops": {
           "name": "Dáiddár: Mohkit"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Anonyma oahppi iskkadeapmi 2"
+        },
+        "allthethings/Maze": {
+          "name": "MáŋggageahčestagaTeasta"
+        },
+        "allthethings/Bee": {
+          "name": "Uvlu"
+        },
+        "allthethings/PlayLab": {
+          "name": "SpeallanLab"
+        },
+        "allthethings/Farmer": {
+          "name": "Boanda"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Gilvu"
+        },
+        "allthethings/TextMatch": {
+          "name": "TeakstaGilvu"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "Odomehter"
+        },
+        "allthethings/Text Compression": {
+          "name": "TeakstaKomprimeren"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Gamelab": {
+          "name": "Spilla-lab"
+        },
+        "allthethings/Online PD": {
+          "name": "Neahttavuđot PD"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Markdown Detálljat"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Multi siidosaš árvvoštallan"
+        },
+        "allthethings/Star wars": {
+          "name": "Náste soahti"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "Rikkis guhkes árvvoštallan"
+        },
+        "allthethings/Free Response": {
+          "name": "Friddja Responsa"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "Ovdamearka PLC Árvvoštallan"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Lonohallon Dásit"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Anonyma oahppi iskkadeapmi"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Almmolaš Čoavdda Kryptografiija"
+        },
+        "allthethings/Single page assessment": {
+          "name": "Ovtta siidosaš árvvoštallan"
+        },
+        "allthethings/Standalone video": {
+          "name": "Dušše video"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Oahppoplána Čujuhus"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite-lab"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Dánsun-lab"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Mini Rubrihkka"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "Eksternat Sáhttet Čájehuvvot Neahtahaga"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "Bulljaras Válljen"
+        },
+        "allthethings/Contained Levels": {
+          "name": "Sisdoalu dásit"
+        },
+        "allthethings/ML Fish": {
+          "name": "ML Guolli"
         },
         "coursef-2021/For Loop Fun": {
           "name": "Suohttasat Mohkiid váste"

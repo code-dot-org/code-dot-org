@@ -16,6 +16,7 @@ const lessonProgressExtraWidth = 10;
 class HeaderMiddle extends React.Component {
   static propTypes = {
     projectInfoOnly: PropTypes.bool,
+    scriptNameOnly: PropTypes.bool,
     appLoadStarted: PropTypes.bool,
     appLoaded: PropTypes.bool,
     scriptNameData: PropTypes.object,
@@ -78,6 +79,7 @@ class HeaderMiddle extends React.Component {
   static getWidths(
     width,
     projectInfoOnly,
+    scriptNameOnly,
     projectInfoDesiredWidth,
     scriptNameDesiredWidth,
     lessonProgressDesiredWidth,
@@ -90,6 +92,18 @@ class HeaderMiddle extends React.Component {
       return {
         projectInfo: Math.floor(Math.min(projectInfoDesiredWidth, width)),
         scriptName: 0,
+        progress: 0,
+        popup: 0,
+        finish: 0
+      };
+    }
+
+    if (scriptNameOnly) {
+      return {
+        projectInfo: 0,
+        scriptName: Math.floor(
+          Math.min(scriptNameDesiredWidth + scriptNameExtraWidth, width)
+        ),
         progress: 0,
         popup: 0,
         finish: 0
@@ -179,6 +193,7 @@ class HeaderMiddle extends React.Component {
     const widths = HeaderMiddle.getWidths(
       this.state.width,
       this.props.projectInfoOnly,
+      this.props.scriptNameOnly,
       this.state.projectInfoDesiredWidth,
       this.state.scriptNameDesiredWidth,
       this.state.lessonProgressDesiredWidth,

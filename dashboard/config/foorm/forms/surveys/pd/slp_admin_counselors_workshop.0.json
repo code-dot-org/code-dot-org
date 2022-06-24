@@ -17,6 +17,8 @@
         {
           "type": "radiogroup",
           "name": "cs_understanding",
+          "visibleIf": "{workshop_subject}<>'Academic Year Workshop 2' and {workshop_subject}<>'Academic Year Workshop 3' and {workshop_subject}<>'Academic Year Workshop 4' and {workshop_subject}<>'Academic Year Workshop 5'",
+          "Natalia_comment": "******NOTE: SLP will have 1 intro call during the summer and 4 quarterly calls during the academic year",
           "title": "After participating in this workshop, I have a better understanding of what Computer Science is and what it isn't.",
           "choices": [
             {
