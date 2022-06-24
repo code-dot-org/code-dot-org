@@ -22,8 +22,10 @@ class CoreValidatorTest < Minitest::Test
     assert_nil validate_redacted_blocks('[A][0]')
     assert_nil validate_redacted_blocks('[A][0][B][1]')
     assert_nil validate_redacted_blocks('[A][0] [B][1]')
+    assert_nil validate_redacted_blocks('[A][0]  [B][1]  [C][2]')
     assert_nil validate_redacted_blocks('[][0][][1]')
     assert_nil validate_redacted_blocks('[][0] [][1]')
+    assert_nil validate_redacted_blocks("[][0]  [][1]  [][2]")
 
     # invalid cases
     refute_nil validate_redacted_blocks('[A] [0]')
