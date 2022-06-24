@@ -39,7 +39,7 @@ class CrowdinClientExtensionsTest < Minitest::Test
     results = @crowdin_client.download_translations(
       'project_name',
       'crowdin_language_id',
-      'user_name',
+      %w[user1 user2],
       'start_date',
       'end_date',
       limit
@@ -62,11 +62,16 @@ class CrowdinClientExtensionsTest < Minitest::Test
     results = @crowdin_client.download_source_strings(
       'project_name',
       'crowdin_language_id',
-      'user_name',
+      %w[user1 user2],
       'start_date',
       'end_date',
       limit
     )
     assert_equal fake_responses.size - 1, results.size
+  end
+
+  def test_create_user_query
+    assert_equal '(user=@user:"user1")', @crowdin_client.create_user_query(['user1'])
+    assert_equal '(user=@user:"user1" or user=@user:"user2")', @crowdin_client.create_user_query(%w[user1 user2])
   end
 end

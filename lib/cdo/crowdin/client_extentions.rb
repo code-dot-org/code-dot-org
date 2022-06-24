@@ -78,15 +78,15 @@ module Crowdin
     #
     # @param project_name [String]
     # @param crowdin_language_id [String]
-    # @param user_name [String]
+    # @param user_names [Array<String>]
     # @param start_date [String]
     # @param end_date [String]
     # @param limit [Number]
     # @return Array<Hash> array of translations
     #
-    def download_translations(project_name, crowdin_language_id, user_name, start_date, end_date, limit = MAX_ITEMS_COUNT)
+    def download_translations(project_name, crowdin_language_id, user_names, start_date, end_date, limit = MAX_ITEMS_COUNT)
       query = {
-        croql: "user=@user:\"#{user_name}\" and updated>='#{start_date}' and updated<'#{end_date}'",
+        croql: "#{create_user_query(user_names)} and updated>='#{start_date}' and updated<'#{end_date}'",
         limit: limit,
         offset: 0
       }
@@ -109,17 +109,17 @@ module Crowdin
     #
     # @param project_name [String]
     # @param crowdin_language_id [String]
-    # @param user_name [String]
+    # @param user_names [Array<String>]
     # @param start_date [String]
     # @param end_date [String]
     # @param limit [Number]
     # @return Array<Hash> array of source strings
     #
-    def download_source_strings(project_name, crowdin_language_id, user_name, start_date, end_date, limit = MAX_ITEMS_COUNT)
+    def download_source_strings(project_name, crowdin_language_id, user_names, start_date, end_date, limit = MAX_ITEMS_COUNT)
       query = {
         croql: "count of translations where (" \
           "language=@language:\"#{crowdin_language_id}\" and " \
-          "user=@user:\"#{user_name}\" and " \
+          "#{create_user_query(user_names)} and " \
           "updated>='#{start_date}' and " \
           "updated<'#{end_date}'" \
           ") > 0",
@@ -135,6 +135,23 @@ module Crowdin
       source_strings.map do |string|
         string['data']
       end
+    end
+
+    # Create a Crowdin query using multiple user names.
+    # The result can be embedded in another query.
+    #
+    # Example:
+    #   input: ['user1', 'user2']
+    #   output: '(user=@user:"user1" or user=@user:"user2")'
+    #
+    # @param user_names [Array<String>]
+    # @return [String]
+    def create_user_query(user_names)
+      query = user_names.map do |user_name|
+        "user=@user:\"#{user_name}\""
+      end.join(' or ')
+
+      "(#{query})"
     end
   end
 
