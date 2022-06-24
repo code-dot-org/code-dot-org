@@ -1,8 +1,8 @@
-require_relative '../../translation_monitor/translation_validator'
+require_relative '../../translation_monitor/core_validator'
 require_relative '../test_helper'
 
-class TranslationValidatorTest < Minitest::Test
-  include TranslationValidator
+class CoreValidatorTest < Minitest::Test
+  include CoreValidator
 
   def test_validate_markdown_link
     # valid cases

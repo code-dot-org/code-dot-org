@@ -148,7 +148,7 @@ function TopInstructionsHeader(props) {
           )}
           {displayReviewV2Tab && (
             <InstructionsTab
-              className="uitest-reviewV2Tab"
+              className="uitest-reviewTab"
               onClick={handleReviewV2TabClick}
               selected={tabSelected === TabType.REVIEW_V2}
               text={i18n.review()}
