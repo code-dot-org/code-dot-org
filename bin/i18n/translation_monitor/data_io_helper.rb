@@ -59,11 +59,11 @@ module DataIOHelper
     worksheet = spreadsheet.worksheet_by_title(sheet_name)
     worksheet ||= spreadsheet.add_worksheet(sheet_name, 200)
 
-    # Delete new data headers if the worksheet already has data
     if overwrite
       worksheet.delete_rows(1, worksheet.num_rows)
       worksheet.update_cells(1, 1, rows_with_headers)
     else
+      # Delete new data headers if the worksheet already has data
       rows_with_headers.shift if worksheet.num_rows > 0
       worksheet.insert_rows(worksheet.num_rows + 1, rows_with_headers)
     end
