@@ -16,6 +16,8 @@ module ConfigHelper
   # explicitly specified. See the +merge_default_params+ function in this module.
   #   start_date: e.g. 2022-01-01 (yyyy-mm-dd). See https://developer.crowdin.com/croql/
   #   end_date: e.g. 2022-06-23
+  #   write_to_file: if true, the tool will write the translations, source strings, and translation errors to the local file system
+  #   write_to_gsheet: if true, the tool will write translation errors to Google Sheet
   #   translations_json: output JSON file for translations downloaded from Crowdin
   #   source_strings_json: output JSON file for source strings downloaded from Crowdin
   #   errors_json: output JSON file for translation errors
@@ -28,6 +30,8 @@ module ConfigHelper
   OPTIONAL_CONFIG_PARAMS = %w[
     start_date
     end_date
+    write_to_file
+    write_to_gsheet
     translations_json
     source_strings_json
     errors_json
