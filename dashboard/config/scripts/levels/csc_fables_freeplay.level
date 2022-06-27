@@ -64,18 +64,15 @@
     "authored_hints": "[]",
     "skip_autosave": true,
     "project_template_level_name": "csc_fables_template_2022",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-06-22T18:32:03.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-06-22T18:32:03.000Z",
   "user_id": 182,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-22T18:32:03.293+00:00\",\"changed\":[\"cloned from \\\"csc_fables_example\\\"\"],\"cloned_from\":\"csc_fables_example\"},{\"changed_at\":\"2022-06-22 18:33:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"free_play\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-22 18:33:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-22 18:34:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-23 20:46:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-22T18:32:03.293+00:00\",\"changed\":[\"cloned from \\\"csc_fables_example\\\"\"],\"cloned_from\":\"csc_fables_example\"},{\"changed_at\":\"2022-06-22 18:33:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"free_play\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-22 18:33:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-22 18:34:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-23 20:46:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-24 14:13:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-24 14:13:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-24 14:14:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1403,7 +1400,7 @@
       <xml>
         <category name="World">
           <block type="gamelab_setBackgroundImageAs">
-            <field name="IMG">"fire_crop_csc_1"</field>
+            <field name="IMG">"rainbow"</field>
           </block>
           <block type="gamelab_setBackground">
             <value name="COLOR">
@@ -1443,7 +1440,7 @@
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNewSpriteAnon">
-            <field name="ANIMATION_NAME">"cuteanimals_dog_1"</field>
+            <field name="ANIMATION_NAME">"grey_shirt_hand_behind"</field>
             <value name="LOCATION">
               <block type="gamelab_location_picker">
                 <field name="LOCATION">{"x":200,"y":200}</field>
@@ -1451,7 +1448,7 @@
             </value>
           </block>
           <block type="gamelab_makeNumSprites">
-            <field name="ANIMATION_NAME">"cuteanimals_dog_1"</field>
+            <field name="ANIMATION_NAME">"grey_shirt_hand_behind"</field>
             <value name="NUM">
               <block type="math_number">
                 <field name="NUM">3</field>
@@ -1460,7 +1457,7 @@
           </block>
           <block type="gamelab_makeBurst">
             <field name="EFFECT">"burst"</field>
-            <field name="ANIMATION_NAME">"cuteanimals_dog_1"</field>
+            <field name="ANIMATION_NAME">"grey_shirt_hand_behind"</field>
             <value name="NUM">
               <block type="math_number">
                 <field name="NUM">10</field>
@@ -1471,14 +1468,39 @@
             <field name="SPEECH">Hello, world!</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_spriteSayTime">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
+              </block>
+            </value>
+            <value name="TEXT1">
+              <block type="text">
+                <field name="TEXT">Hello, world!</field>
+              </block>
+            </value>
+            <value name="NUM">
+              <block type="math_number">
+                <field name="NUM">4</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_spriteThink">
+            <field name="SPEECH">Hello, world!</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_spriteThinkTime">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
             <value name="TEXT1">
@@ -1496,7 +1518,7 @@
             <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
             <value name="VAL">
@@ -1509,7 +1531,7 @@
             <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
             <value name="VAL">
@@ -1519,17 +1541,17 @@
             </value>
           </block>
           <block type="gamelab_setAnimation">
-            <field name="ANIMATION">"cuteanimals_dog_1"</field>
+            <field name="ANIMATION">"grey_shirt_hand_behind"</field>
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_jumpTo">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
             <value name="LOCATION">
@@ -1539,7 +1561,7 @@
           <block type="gamelab_setTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
             <value name="COLOR">
@@ -1551,7 +1573,7 @@
           <block type="gamelab_setTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
             <value name="COLOR">
@@ -1561,7 +1583,7 @@
           <block type="gamelab_removeTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
           </block>
@@ -1569,14 +1591,14 @@
             <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_destroy">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
           </block>
@@ -1584,7 +1606,7 @@
             <field name="DIRECTION">"North"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
             <value name="DISTANCE">
@@ -1597,7 +1619,7 @@
             <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
             <value name="N">
@@ -1609,7 +1631,7 @@
           <block type="gamelab_moveForward">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
             <value name="DISTANCE">
@@ -1642,7 +1664,7 @@
             <field name="CONDITION">"when"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
           </block>
@@ -1650,12 +1672,12 @@
             <field name="CONDITION">"when"</field>
             <value name="SPRITE1">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
             <value name="SPRITE2">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
           </block>
@@ -1676,21 +1698,21 @@
           <block type="gamelab_addBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_removeBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_removeAllBehaviors">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_dog_1"</field>
+                <field name="ANIMATION">"grey_shirt_hand_behind"</field>
               </block>
             </value>
           </block>

@@ -1066,7 +1066,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'pre_survey_units_and_lessons' do
-    unit_group = create :unit_group, name: 'pd-workshop-pre-survey-test'
+    unit_group = create :unit_group, name: 'pd-workshop-pre-survey-test-1991', family_name: 'pd-workshop-pre-survey-test', version_year: '1991'
+    CourseOffering.add_course_offering(unit_group)
     next_position = 1
     add_unit = ->(unit_name, lesson_names) do
       create(:script, name: unit_name).tap do |script|
@@ -1082,7 +1083,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     workshop = build :workshop
     workshop.expects(:pre_survey?).returns(true).twice
-    workshop.stubs(:pre_survey_course_name).returns('pd-workshop-pre-survey-test')
+    workshop.stubs(:pre_survey_course_offering_name).returns('pd-workshop-pre-survey-test')
+    UnitGroup.expects(:latest_stable_version).with('pd-workshop-pre-survey-test').returns(unit_group)
 
     expected = [
       ['pre-survey-unit-1', ['Lesson 1: Unit 1 - Lesson 1', 'Lesson 2: Unit 1 - Lesson 2']],
@@ -1103,16 +1105,16 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     # With valid course name
     workshop.stubs(:pre_survey?).returns(true)
-    workshop.stubs(:pre_survey_course_name).returns(course_name)
-    UnitGroup.expects(:find_by_name!).with(course_name).returns(mock_course)
+    workshop.stubs(:pre_survey_course_offering_name).returns(course_name)
+    UnitGroup.expects(:latest_stable_version).with(course_name).returns(mock_course)
     assert_equal mock_course, workshop.pre_survey_course
 
     # With invalid course name
-    UnitGroup.expects(:find_by_name!).with(course_name).raises(ActiveRecord::RecordNotFound)
+    UnitGroup.expects(:latest_stable_version).with(course_name).raises(ActiveRecord::RecordNotFound)
     e = assert_raises RuntimeError do
       workshop.pre_survey_course
     end
-    assert_equal "No course found for name #{course_name}", e.message
+    assert_equal "No course found for course offering key #{course_name}", e.message
   end
 
   test 'friendly date range same month' do
