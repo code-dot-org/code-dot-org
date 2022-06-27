@@ -10,7 +10,6 @@ require 'googleauth/stores/file_token_store'
 require 'csv'
 require 'fileutils'
 require 'rubygems'
-require 'csv'
 require 'optparse'
 
 APPLICATION_NAME = 'Dubbed Video Batch Upload'

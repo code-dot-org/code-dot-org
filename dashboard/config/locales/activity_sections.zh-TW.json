@@ -635,6 +635,9 @@
             null
           ]
         },
+        "2123b1ad-42d8-4c2f-87f6-4300fe7dd741": {
+          "name": "編寫屬於你的運動遊戲程式"
+        },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
           "tips": [
             null
@@ -5280,6 +5283,7 @@
           "name": "檢視"
         },
         "05818b32-90cc-466a-b952-8fcf048e4e5c": {
+          "name": "文字與提示",
           "progression_name": "預測"
         },
         "aae21e24-4a0c-4d8c-aec0-67554766b38f": {
@@ -7730,6 +7734,7 @@
           "name": "檢視"
         },
         "e7833677-6e13-40dc-9e36-56388378828d": {
+          "name": "文字與提示",
           "progression_name": "預測"
         },
         "79cc55bf-53a8-463c-b4dc-86cc8651587a": {
@@ -8848,6 +8853,7 @@
           ]
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "name": "AI Lab 的模型卡",
           "tips": [
             null
           ]
@@ -8869,6 +8875,9 @@
         },
         "7d040814-9039-4b26-b0ef-29cb28227d53": {
           "progression_name": "匯入你的模型"
+        },
+        "1503235c-6a46-401d-85f0-1fa291901771": {
+          "progression_name": "自訂你的應用程式"
         },
         "42abdf12-61c8-48a4-8118-6f0b713e28dc": {
           "progression_name": "示例App：動物分類"
@@ -9575,6 +9584,7 @@
           ]
         },
         "2e5264db-0d1d-4fc1-adf1-c5bf13967af5": {
+          "name": "App Lab 的設計模式",
           "tips": [
             null
           ]
@@ -9720,6 +9730,9 @@
           "tips": [
             null
           ]
+        },
+        "98d47c66-d1b6-4d05-bada-bd58b317813b": {
+          "progression_name": "更新你的原型"
         },
         "2e7e6d2b-ce4c-48ee-ab67-a7002104dad7": {
           "tips": [

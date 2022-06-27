@@ -842,6 +842,9 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Včela Hláskovanie"
         },
+        "csd3-2018/Programming for Entertainment": {
+          "name": "Programovanie pre zábavu"
+        },
         "csd3-2018/Plotting Shapes": {
           "name": "Tvorba tvarov"
         },
@@ -1377,10 +1380,10 @@
           "name": "Kráľovská bitka s udalosťami"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Záverečný test po projekte"
+          "name": "Programovanie pre zábavu"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Objavujeme informatiku: Záverečný dotazník"
+          "name": "Tvorba tvarov"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Kreslenie v Game Labe"
@@ -1442,35 +1445,20 @@
         "csd3-2019/Project - Design a Game": {
           "name": "Projekt - Vytvor vlastnú hru"
         },
-        "csd6-2019/Innovations in Computing": {
-          "name": "Záverečný test po projekte"
-        },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "Objavujeme informatiku: Záverečný dotazník"
-        },
         "csd6-2019/Functions with Parameters": {
           "name": "Funkcie s parametrami"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Záverečný test po projekte"
-        },
-        "csd4-2019/Understanding Your User": {
-          "name": "Objavujeme informatiku: Záverečný dotazník"
+          "name": "Analýza dizajnu"
         },
         "csd4-2019/Digital Design": {
           "name": "Digitálny dizajn"
-        },
-        "csd5-2019/Representation Matters": {
-          "name": "Záverečný test po projekte"
-        },
-        "csd5-2019/Patterns and Representation": {
-          "name": "Objavujeme informatiku: Záverečný dotazník"
         },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Úvod do riešenia problémov"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Záverečný test po projekte"
+          "name": "Postup riešenia problémov"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Objavujeme riešenie problémov"
@@ -1489,12 +1477,6 @@
         },
         "csd1-2019/Project - Propose an App": {
           "name": "Projekt - Navrhnite aplikáciu"
-        },
-        "csd2-2019/Exploring Websites": {
-          "name": "Záverečný test po projekte"
-        },
-        "csd2-2019/Websites for Expression ": {
-          "name": "Objavujeme informatiku: Záverečný dotazník"
         },
         "csd2-2019/Headings": {
           "name": "Nadpisy"
@@ -1955,6 +1937,12 @@
         "express-2017/Present Your Project": {
           "name": "Prezentuj svoj projekt"
         },
+        "csd3-2017/Programming for Entertainment": {
+          "name": "Programovanie pre zábavu"
+        },
+        "csd3-2017/Plotting Shapes": {
+          "name": "Tvorba tvarov"
+        },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Kreslenie v Game Labe"
         },
@@ -2056,6 +2044,9 @@
         },
         "csd1-2017/Project - Propose an App": {
           "name": "Projekt - Navrhnite aplikáciu"
+        },
+        "csd4-2017/Analysis of Design": {
+          "name": "Analýza dizajnu"
         },
         "csd4-2017/Digital Design": {
           "name": "Digitálny dizajn"
@@ -2383,7 +2374,13 @@
           "student_overview": "Dokonči úlohy presúvaním objektov."
         },
         "allthethings/Jigsaw": {
-          "name": "Anonymný študentský dotazník"
+          "name": "Skladačka"
+        },
+        "allthethings/Maze": {
+          "name": "Bludisko"
+        },
+        "allthethings/Artist": {
+          "name": "Umelec"
         },
         "allthethings/Bee": {
           "name": "Včela"
@@ -3307,14 +3304,8 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "Záverečný test po projekte"
-        },
         "csd4-2021/CS Discoveries Post-Course Survey": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
-        },
-        "csd6-2021/Innovations in Computing": {
-          "name": "Záverečný test po projekte"
         },
         "csd6-2021/Functions with Parameters": {
           "name": "Funkcie s parametrami"
@@ -3322,14 +3313,11 @@
         "csd6-2021/CS Discoveries Post-Course Survey": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
         },
-        "csd5-2021/Representation Matters": {
-          "name": "Záverečný test po projekte"
-        },
         "csd5-2021/CS Discoveries Post-Course Survey": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Záverečný test po projekte",
+          "name": "Programovanie pre zábavu",
           "student_overview": "**Otázka dňa: Ako sa informatika využíva pre zábavu?**\n\nV tejto lekcii preskúmaš, akú úlohu zohráva informatika a najmä programovanie v zábavnom priemysle a pri sebavyjadrovaní."
         },
         "csd3-2021/Plotting Shapes": {
@@ -3432,7 +3420,7 @@
           "student_overview": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**\n\nBudete v skupine navrhovať a testovať loďku z hliníkovej fólie. Cieľom je navrhnúť loďku, ktorá udrží čo najviac jednocentových mincí."
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Záverečný test po projekte",
+          "name": "Postup riešenia problémov",
           "overview": "**Otázka dňa: Aké bežné kroky môžeme použiť na riešenie rôznych typov problémov?**\n\nTáto lekcia predstavuje formálny postup riešenia problémov, podľa ktorého budú žiaci počas roka postupovať. Postup pozostáva zo štyroch krokov: definuj – priprav – vyskúšaj– vyhodnoť. Lekcia sa začína tým, že žiaci dostanú za úlohu vymenovať rôzne typy problémov, s ktorými sa stretávajú v každodennom živote. Žiaci sa potom oboznámia so štvoricou krokov, z ktorých pozostáva postup riešenia problémov, a spoločne sa snažia spojiť si tieto abstraktné kroky s vlastnými skúsenosťami s riešením problémov. Žiaci si tieto kroky najprv spoja s problémami, s ktorými sa stretli v predchádzajúcej lekcii, potom s nejakým problémom, ktorý už vedia dobre riešiť, a nakoniec s problémom, v riešení ktorého by sa chceli zlepšiť. Na konci hodiny žiaci v rámci triedy vytvoria zoznam všeobecne užitočných stratégií pre každý krok postupu riešenia problémov. Stratégie následne spíšu na plagáty, ktoré budú používať po zvyšok tematického celku a roka.",
           "preparation": "Pre každého žiaka \n\n-   Vytlačte kópiu sprievodcu aktivitou\n\nPre triedu\n\n-   Plagátový papier\n-   Fixky alebo pastelky",
           "purpose": "Cieľom tejto lekcie je ukotviť formálny postup riešenia problémov, ktorý budú žiaci využívať počas kurzu, jeho prepojením s reálnymi skúsenosťami žiakov s riešením problémov. V nasledujúcich tematických celkoch v kurze Objavujeme informatiku budú úlohy prezentované v kontextoch, ktoré žiakom môžu, no nemusia byť povedomé. Štruktúrovaný postup riešenia problémov preto bude pre žiakov dôležitým nástrojom, ktorý im pomôže úspešne riešiť aj nové a zložité úlohy.",
@@ -3493,9 +3481,6 @@
         "csd1-2021/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
           "name": "Objavovanie riešenia problémov - Hry (Alternatívna Lekcia 3)",
           "purpose": "Táto lekcia žiakom poskytuje možnosť viac si vyskúšať postup riešenia problémov v praxi a v rôznych kontextoch. Vyzdvihuje fakt, že postup riešenia problémov je užitočný najmä vtedy, keď treba riešiť zle zadefinované problémy. Záverečný brainstorming v lekcii poskytne žiakom stratégie a otázky, pomocou ktorých budú schopní lepšie definovať problémy, keďže práve tento krok je často najdôležitejší. Problémy rozoberané v tejto lekcii slúžia aj na to, aby v nasledujúcej lekcii podporili diskusiu o tom, na riešenie akých typov problémov sú počítače stavané výnimočne dobre."
-        },
-        "csd2-2021/Exploring Web Pages": {
-          "name": "Záverečný test po projekte"
         },
         "csd2-2021/Headings": {
           "name": "Nadpisy"

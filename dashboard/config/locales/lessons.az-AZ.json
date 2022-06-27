@@ -484,9 +484,6 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Yazı yoxlayan arı"
         },
-        "csd3-2018/Programming for Entertainment": {
-          "name": "CS Discoveries Semestr Sonu Sorğusu"
-        },
         "csd3-2018/Drawing in Game Lab": {
           "name": "Oyun laboratoriyasında rəsm"
         },
@@ -793,6 +790,9 @@
         "csd3-2019/Project - Design a Game": {
           "name": "Layihə - Oyun dizayn edin"
         },
+        "csd6-2019/Designing Screens with Code": {
+          "name": "Kod ilə ekran dizaynı "
+        },
         "csd6-2019/Board Events": {
           "name": "İdarə Heyətinin Tədbirləri"
         },
@@ -804,6 +804,12 @@
         },
         "csd6-2019/Functions with Parameters": {
           "name": "Parametrli funksiyalar"
+        },
+        "csd4-2019/Analysis of Design": {
+          "name": "Dizaynın təhlili"
+        },
+        "csd4-2019/Understanding Your User": {
+          "name": "İstifadəçinizi Anlamaq"
         },
         "csd4-2019/User Interfaces": {
           "name": "İstifadəçi Araüzü"
@@ -849,6 +855,9 @@
         },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Problem Həllinə giriş"
+        },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Məsələnin həlli prosesi"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Problemin həllini araşdırmaq"
@@ -1009,12 +1018,6 @@
         "express-2017/Present Your Project": {
           "name": "Layihənizi Təqdim edin"
         },
-        "csd3-2017/Programming for Entertainment": {
-          "name": "CS Discoveries Semestr Sonu Sorğusu"
-        },
-        "csd3-2017/Plotting Shapes": {
-          "name": "CSD Kursdan Sonra Sorğu"
-        },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Oyun laboratoriyasında rəsm"
         },
@@ -1057,9 +1060,6 @@
         "csd3-2017/Project - Design a Game": {
           "name": "Layihə - Oyun dizayn edin"
         },
-        "csd6-2017/Innovations in Computing_": {
-          "name": "CSD Kursdan Sonra Sorğu"
-        },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Kod ilə ekran dizaynı "
         },
@@ -1074,9 +1074,6 @@
         },
         "csd6-2017/Functions with Parameters_": {
           "name": "Parametrli funksiyalar"
-        },
-        "csd2-2017/Exploring Websites": {
-          "name": "CSD Kursdan Sonra Sorğu"
         },
         "csd2-2017/Intro to HTML": {
           "name": "HTML-ə giriş"
@@ -1105,9 +1102,6 @@
         "csd1-2017/Apps and Problem Solving": {
           "name": "Tətbiqlər və Problemlərin Həlli"
         },
-        "csd5-2017/Representation Matters": {
-          "name": "CSD Kursdan Sonra Sorğu"
-        },
         "csd5-2017/Representing Images": {
           "name": "Şəkilləri təmsil edir"
         },
@@ -1124,7 +1118,7 @@
           "name": "Data ilə bağlı qərar vermək"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "CSD Kursdan Sonra Sorğu"
+          "name": "Dizaynın təhlili"
         },
         "csd4-2017/Understanding Your User": {
           "name": "İstifadəçinizi Anlamaq"
@@ -1454,10 +1448,13 @@
           "student_overview": "Məsələni bitirmək üçün seçin və sürüşdürün."
         },
         "allthethings/Jigsaw": {
-          "name": "Anonim tələbə sorğusu 2"
+          "name": "Mozaika"
         },
         "allthethings/Maze": {
-          "name": "Çoxluq Testi"
+          "name": "Labirint"
+        },
+        "allthethings/Artist": {
+          "name": "Rəssam"
         },
         "allthethings/Bee": {
           "name": "Arı"
@@ -2134,6 +2131,9 @@
         "csd1-2021/Intro to Problem Solving": {
           "name": "Problem Həllinə giriş",
           "overview": "**Günün Sualı: Bizə birlikdə işləmək və komanda şəklində problemləri həll etmək üçün nə kömək edə bilər?**\n\nBu dərsdə tələbələr mümkün qədər çox qəpikləri dəstəkləyəcək alüminium folqa qayıqları dizayn etmək üçün qruplar şəklində işləyirlər. Qrupların qayıqlarında işləmək üçün iki dövrə var, məqsədi 1-ci dövrədə olduğundan daha çox qəpik tutmağa çalışmaqdır. Fəaliyyətin strukturu tələbələrin növbəti dərsdə daha ətraflı tanış olacaqları problemin həlli prosesinin müxtəlif mərhələlərindən xəbər verir. Dərsin sonunda tələbələr fəaliyyətlə bağlı təcrübələrini əks etdirir və kursun qalan hissəsində görəcəkləri problemin həlli növləri ilə əlaqələndirirlər.\n**Bu dərsin alternativ versiyaları da mövcuddur.**\n\n-   [Qəzet Cədvəli](/s/csd1-2021/lessons/9/)\n-   [Spagetti Körpüsü](/s/csd1-2021/lessons/10/)\n-   [Kağız Qüllə](/s/csd1-2021/lessons/11/)"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Məsələnin həlli prosesi"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Problemin həllini araşdırmaq"

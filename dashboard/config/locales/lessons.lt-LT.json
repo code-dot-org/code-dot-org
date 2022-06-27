@@ -614,6 +614,15 @@
         "jigsaw/Jigsaw": {
           "name": "Dėlionės"
         },
+        "allthethings/Jigsaw": {
+          "name": "Dėlionės"
+        },
+        "allthethings/Maze": {
+          "name": "Labirintas"
+        },
+        "allthethings/Artist": {
+          "name": "Menininkas"
+        },
         "allthethings/Bee": {
           "name": "Bitė"
         },
