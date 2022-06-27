@@ -358,7 +358,7 @@ module ScriptConstants
       "course2" => "course3",
       "course3" => "course4",
       "accelerated" => "course4",
-      "course4" => "applab"
+      "course4" => "applab-intro"
     }
 
     return static_mapping[course_name] if static_mapping.include?(course_name)
@@ -374,7 +374,7 @@ module ScriptConstants
       prefix = match_data[1]
       year = match_data[2]
 
-      return "applab" if %w(coursef express).include?(prefix)
+      return "applab-intro" if %w(coursef express).include?(prefix)
 
       prefix_mapping = {
         "coursea" => "courseb",
