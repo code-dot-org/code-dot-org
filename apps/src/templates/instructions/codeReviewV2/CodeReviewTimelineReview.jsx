@@ -44,7 +44,10 @@ const CodeReviewTimelineReview = ({
       isLast={isLastElementInTimeline}
       projectVersionId={version}
     >
-      <div style={styles.wrapper}>
+      <div
+        style={styles.wrapper}
+        className="uitest-code-review-timeline-review"
+      >
         <div style={styles.header}>
           <div style={styles.icon}>
             <FontAwesome icon="comments-o" />
@@ -62,6 +65,7 @@ const CodeReviewTimelineReview = ({
           {isOpen && viewingAsOwner && !isViewingOldVersion && (
             <div>
               <Button
+                className="uitest-close-code-review"
                 icon="close"
                 style={{fontSize: 13, margin: 0}}
                 onClick={handleCloseCodeReview}

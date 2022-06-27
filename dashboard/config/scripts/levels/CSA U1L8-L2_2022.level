@@ -357,14 +357,13 @@
     "long_instructions": "##Style and Documentation\r\n\r\n1. What do you notice about the way this code is written? Is it easier to read than the previous one? Why or why not?\r\n\r\n2. What is the purpose of the `//`(#e7e8ea) and `/* */`(#e7e8ea) lines? Are they displayed in the **Console** when the program is run?",
     "encrypted_examples": [
 
-    ],
-    "map_reference": "/programming_environments/javalab"
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-02-15T18:25:20.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-02-15T18:25:20.822+00:00\",\"changed\":[\"cloned from \\\"CSA U1L8-L1_2022\\\"\"],\"cloned_from\":\"CSA U1L8-L1_2022\"},{\"changed_at\":\"2022-02-15 18:25:27 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-01 18:08:37 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 18:59:23 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-15T18:25:20.822+00:00\",\"changed\":[\"cloned from \\\"CSA U1L8-L1_2022\\\"\"],\"cloned_from\":\"CSA U1L8-L1_2022\"},{\"changed_at\":\"2022-02-15 18:25:27 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-01 18:08:37 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 18:59:23 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-24 14:42:06 +0000\",\"changed\":[\"serialized_maze\",\"map_reference\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

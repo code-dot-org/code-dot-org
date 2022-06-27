@@ -41,11 +41,11 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
-    "long_instructions": "##What will they say?\r\n\r\n- What does the main character say? \r\n- What the main character thinking? \r\n\r\n\r\n",
+    "long_instructions": "*What will they say?*\r\n\r\nWhat does the main character say or think?\r\n\r\n- Add in a `say` or `think` block for your sprite\r\n\r\n*Extra Challenge:* Add in a say or think block for your other sprite\r\n\r\n\r\n",
     "parent_level_id": 28525,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
-    "short_instructions": "Set Your Scene: Choose a background and two sprites to set the opening scene. ",
+    "short_instructions": "Set Your Scene: Add in a say or think block for the main sprite",
     "block_pool": "gamelab",
     "name_suffix": "_2022",
     "block_pools": [
@@ -60,7 +60,7 @@
     "hide_pause_button": "false",
     "callout_json": "[]",
     "instructions_icon": "bear",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `say` or `think` block to share what your character is feeling. \\n<xml><block type=\\\"gamelab_spriteSay\\\"><field name=\\\"SPEECH\\\">Hello, world!</field><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"blue_dress_wave_1\\\"</field></block></value></block></xml>\\n\\n<xml><block type=\\\"gamelab_spriteThink\\\"><field name=\\\"SPEECH\\\">I'm feeling ...</field><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"blue_dress_wave_1\\\"</field></block></value></block></xml>\\n\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2e367451958d5c1f71d9e620fd1d1ebc/csc_fables_say.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `say` or `think` block to share what your character is feeling. \\n<xml><block type=\\\"gamelab_spriteSay\\\"><field name=\\\"SPEECH\\\">Hello, world!</field><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"blue_dress_wave_1\\\"</field></block></value></block>\\n\\n<block type=\\\"gamelab_spriteThink\\\">\\n  <field name=\\\"SPEECH\\\">I'm feeling...</field>\\n  <value name=\\\"SPRITE\\\">\\n    <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n      <field name=\\\"ANIMATION\\\">\\\"black_haori\\\"</field>\\n    </block>\\n  </value>\\n</block> </xml>\\n\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2e367451958d5c1f71d9e620fd1d1ebc/csc_fables_say.mp3\"}]",
     "skip_autosave": true,
     "display_name": "Set Your Scene",
     "project_template_level_name": "csc_fables_template_2022",
@@ -76,7 +76,7 @@
   "level_num": "custom",
   "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-21T23:23:50.199+00:00\",\"changed\":[\"cloned from \\\"csc_fables_characters\\\"\"],\"cloned_from\":\"csc_fables_characters\"},{\"changed_at\":\"2022-06-21 23:27:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-21 23:27:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-22 17:20:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-22 17:58:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-21T23:23:50.199+00:00\",\"changed\":[\"cloned from \\\"csc_fables_characters\\\"\"],\"cloned_from\":\"csc_fables_characters\"},{\"changed_at\":\"2022-06-21 23:27:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-21 23:27:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-22 17:20:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-22 17:58:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-23 19:42:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-23 20:19:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-23 20:26:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-24 15:08:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-24 15:09:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
