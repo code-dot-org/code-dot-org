@@ -106,12 +106,12 @@ module Pd
     }.freeze
 
     # Pre-survey data, arranged by course, consisting of:
-    #  - course_name : the name of the Course object associated with that workshop.
+    #  - course_offering_name : the name of the course offering associated with that workshop.
     # Only courses with a pre-survey will have an entry here
     PRE_SURVEY_BY_COURSE = {
-      COURSE_CSD => {course_name: 'csd-2020'},
-      COURSE_CSP => {course_name: 'csp-2020'},
-      COURSE_CSA => {course_name: 'csa-2020'}
+      COURSE_CSD => {course_offering_name: 'csd'},
+      COURSE_CSP => {course_offering_name: 'csp'},
+      COURSE_CSA => {course_offering_name: 'csa'}
     }.freeze
   end
 end
