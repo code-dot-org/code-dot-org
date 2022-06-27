@@ -38,6 +38,8 @@
   "drawATriangle": "畫個三角形",
   "drawUpperWave": "繪製較高的波浪",
   "drawLowerWave": "繪製較低的波浪",
+  "drawShape": "繪畫形狀",
+  "drawShapeWithSideLength": "繪畫具有邊長的形狀",
   "drawSticker": "繪製貼紙",
   "drawStickerWithSize": "繪製貼紙 尺寸設為",
   "forward": "向前",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "將藝術家隱藏或顯示。",
   "widthTooltip": "更改畫筆筆跡的寬度。",
   "withSize": "尺寸設為",
+  "withSideLength": "具有邊長",
   "wrongColour": "你的圖形的顏色不正確。在這關必須用 %1。"
 }

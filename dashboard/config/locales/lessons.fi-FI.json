@@ -668,6 +668,15 @@
         "jigsaw/Jigsaw": {
           "name": "Palapeli"
         },
+        "allthethings/Jigsaw": {
+          "name": "Palapeli"
+        },
+        "allthethings/Maze": {
+          "name": "Sokkelo"
+        },
+        "allthethings/Artist": {
+          "name": "Taiteilija"
+        },
         "allthethings/Bee": {
           "name": "Mehiläinen"
         },

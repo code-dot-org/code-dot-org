@@ -41,11 +41,11 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
-    "long_instructions": "##Add Behaviors\r\n\r\n- Choose your main character\r\n- Make your main character `begin moving with arrow keys`\r\n- Click \"Run\" and use your up, down, left, and right arrow keys to move your sprite\r\n\r\n\r\n",
+    "long_instructions": "##Add Behaviors\r\n\r\n- Make your main character `begin moving with arrow keys`\r\n- Click \"Run\" and use your up, down, left, and right arrow keys to move your sprite\r\n\r\n\r\n",
     "parent_level_id": 28525,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
-    "short_instructions": "Set Your Scene: Choose a background and two sprites to set the opening scene. ",
+    "short_instructions": "Set Your Scene: Make the main character move using the arrow keys",
     "block_pool": "gamelab",
     "name_suffix": "_2022",
     "block_pools": [
@@ -60,7 +60,7 @@
     "hide_pause_button": "false",
     "callout_json": "[]",
     "instructions_icon": "bear",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `make new sprite` block to add a few new characters to your story: \\n<xml><block type=\\\"gamelab_addBehaviorSimple\\\"><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"blue_dress_wave_1\\\"</field></block></value><value name=\\\"BEHAVIOR\\\"><block type=\\\"gamelab_behavior_get\\\"><mutation></mutation><field name=\\\"VAR\\\" id=\\\"moving with arrow keys\\\">moving with arrow keys</field></block></value></block></xml>\\n\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4925ba2615b118915d36bc99f66318b3/csc_fables_behaviors.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `behavior` block to make the sprite move around using the arrow keys: \\n<xml><block type=\\\"gamelab_addBehaviorSimple\\\">\\n  <value name=\\\"SPRITE\\\">\\n    <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n      <field name=\\\"ANIMATION\\\">\\\"blue_dress_wave\\\"</field>\\n    </block>\\n  </value>\\n  <value name=\\\"BEHAVIOR\\\">\\n    <block type=\\\"gamelab_behavior_get\\\">\\n      <mutation></mutation>\\n      <field name=\\\"VAR\\\" id=\\\"moving with arrow keys\\\">moving with arrow keys</field>\\n    </block>\\n  </value>\\n</block></xml>\\n\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/783904a11edc1ff8740c3ae9a8604d58/csc_fables_behaviors.mp3\"}]",
     "skip_autosave": true,
     "display_name": "Set Your Scene",
     "project_template_level_name": "csc_fables_template_2022",
@@ -76,7 +76,7 @@
   "level_num": "custom",
   "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-21T23:29:12.707+00:00\",\"changed\":[\"cloned from \\\"csc_fables_characters\\\"\"],\"cloned_from\":\"csc_fables_characters\"},{\"changed_at\":\"2022-06-21 23:31:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-21 23:32:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-21 23:32:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-21T23:29:12.707+00:00\",\"changed\":[\"cloned from \\\"csc_fables_characters\\\"\"],\"cloned_from\":\"csc_fables_characters\"},{\"changed_at\":\"2022-06-21 23:31:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-21 23:32:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-21 23:32:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-22 17:20:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-23 20:23:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-23 20:34:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-24 16:27:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -132,23 +132,6 @@
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
               <field name="ANIMATION">"cuteanimals_penguin_hello"</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_spriteSayTime">
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"cuteanimals_penguin_hello"</field>
-            </block>
-          </value>
-          <value name="TEXT1">
-            <block type="text">
-              <field name="TEXT">Hello, world!</field>
-            </block>
-          </value>
-          <value name="NUM">
-            <block type="math_number">
-              <field name="NUM">4</field>
             </block>
           </value>
         </block>

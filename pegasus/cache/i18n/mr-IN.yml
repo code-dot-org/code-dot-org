@@ -1457,15 +1457,34 @@ mr-IN:
   codeorg_platformtext: आधुनिक ब्राउझर्स , स्मार्टफोन, टॅब्लेट
   codeintl_platformtext: आधुनिक ब्राउझर्स , स्मार्टफोन, टॅब्लेट
   thinkersmithspanish_platformtext: अनप्लग केले
+  khan_platformtext: आधुनिक वेब ब्राउझर्स
+  khanes_platformtext: आधुनिक वेब ब्राउझर्स
+  khanpt_platformtext: आधुनिक वेब ब्राउझर्स
+  khanhe_platformtext: आधुनिक वेब ब्राउझर्स
+  khanfr_platformtext: आधुनिक वेब ब्राउझर्स
+  khanpl_platformtext: आधुनिक वेब ब्राउझर्स
+  tynker_platformtext: आधुनिक वेब ब्राउझर्स
   scratch_platformtext: फक्त-डेस्कटॉप वेब ब्राउझर्स (टॅबलेट नाही)
   lightbot_platformtext: सर्व ब्राउझर्स आणि आईओएस, अँड्रॉइड, किंवा गेम कन्सोल
   thinkersmith_platformtext: अनप्लग केले
   condcards_platformtext: अनप्लग केले
+  lightbotintl_platformtext: आयओएस, अँड्रॉइड (किंवा वेब ब्राउझर)
   codehs_platformtext: आधुनिक ब्राउझर्स. (फॉलो-ऑन कोर्ससाठी $$ आवश्यक आहे)
+  codecademy_platformtext: आधुनिक वेब ब्राउझर्स, आयओएस, अँड्रॉइड अॅप्स
   codecombat_platformtext: आधुनिक वेब ब्राउझर्स (फॉलो-ऑन कोर्ससाठी $$ आवश्यक आहे)
+  codemonkey_platformtext: आधुनिक वेब ब्राउझर्स
+  codeavengers_platformtext: आधुनिक वेब ब्राउझर्स
+  processing_platformtext: आधुनिक वेब ब्राउझर्स
+  robomind_platformtext: मॉडर्न वेब ब्राउझर्स, मोबाईल वेब
+  groklearning_platformtext: आधुनिक वेब ब्राउझर्स
   quorum_platformtext: आधुनिक वेब ब्राउझर्स. स्क्रीन-रीडर समर्थित
+  codespark_platformtext: आयओएस, अँड्रॉइड (किंवा वेब ब्राउझर)
   tynkerapp_platformtext: आयपॅड, अँड्रॉइड टॅबलेट
+  robomindnl_platformtext: मॉडर्न वेब ब्राउझर्स, मोबाईल वेब
   flappy_platformtext: आधुनिक ब्राउझर्स , स्मार्टफोन, टॅब्लेट
+  bitsbox_platformtext: आधुनिक वेब ब्राउझर्स
+  makeschool_platformtext: आधुनिक वेब ब्राउझर्स
+  touchdevelop_platformtext: मॉडर्न ब्राउझर्स, स्मार्टफोन, सर्व उपकरणे
   appinventor_platformtext: आधुनिक ब्राउझर्स + अँड्रॉइड
   blockly_platformtext: केवळ आधुनिक ब्राउझर्स
   thinkersmith2_platformtext: अनप्लग केले
@@ -1477,7 +1496,9 @@ mr-IN:
   playlab_platformtext: आधुनिक ब्राउझर्स , स्मार्टफोन, टॅब्लेट
   monstercoding_platformtext: आधुनिक वेब ब्राउझर्स, आयओएस, अँड्रॉइड
   allcancode_platformtext: आधुनिक वेब ब्राउझर्स, आयओएस
+  csfirst_platformtext: आधुनिक वेब ब्राउझर्स
   boxisland_platformtext: 'अँड्रॉइड, आयओएस, '
+  codesters_platformtext: आधुनिक वेब ब्राउझर्स
   texasinstruments_platformtext: टीआय कॅल्क्युलेटर
   teacherled_platformtext: आधुनिक ब्राउझर्स , स्मार्टफोन, टॅब्लेट
   codeorg_shortdescription: मार्क झुकेरबर्ग आणि अॅन्ग्री बर्ड यांसोबत प्रोग्रामिंग
@@ -1854,6 +1875,11 @@ mr-IN:
   lynda_beyond_name: 'ऑनलाईन प्रोग्रामिंग कोर्सेस '
   edx_beyond_name: 'हार्वर्ड CS50 क्लास '
   coursera_beyond_name: स्टॅनफोर्ड CS 101 क्लास
+  teachingtree_beyond_name: ऑनलाइन विद्यापीठ अभ्यासक्रम
+  w3schools_beyond_name: HTML शिका
+  codeavengers_beyond_name: वेबसाइट्स कोड करायला शिका
+  arduino_beyond_name: स्पार्कफनसह अर्डुइनो
+  processing_beyond_name: प्रोसेसिंगसह प्रोग्राम
   codeorg_beyond_gradelevel: वय वर्षे 4-104
   khan_beyond_gradelevel: मध्यम शाळा +
   tynker_beyond_gradelevel: वय वर्षे 5-13
@@ -1871,6 +1897,12 @@ mr-IN:
   appinventor_beyond_gradelevel: मध्यम शाळा +
   touchdevelop_beyond_gradelevel: उच्च माध्यमिक शाळा
   codehs_beyond_gradelevel: उच्च माध्यमिक शाळा
+  udemy_beyond_gradelevel: हायस्कूल +
+  lynda_beyond_gradelevel: हायस्कूल +
+  edx_beyond_gradelevel: विद्यापीठ
+  coursera_beyond_gradelevel: विद्यापीठ
+  udacity_beyond_gradelevel: विद्यापीठ
+  teachingtree_beyond_gradelevel: विद्यापीठ
   kodu_beyond_gradelevel: वय वर्षे 8+
   cargobot_beyond_gradelevel: वय वर्षे 8+
   kidsruby_beyond_gradelevel: वय वर्षे 12+
@@ -1878,22 +1910,78 @@ mr-IN:
   codeavengers_beyond_gradelevel: मध्यम शाळा +
   mozilla_beyond_gradelevel: वय वर्षे 12+
   codecombat_beyond_gradelevel: मध्यम शाळा +
+  codea_beyond_gradelevel: हायस्कूल +
   lego_beyond_gradelevel: मध्यम शाळा +
   finch_beyond_gradelevel: वय वर्षे 8+
+  arduino_beyond_gradelevel: हायस्कूल +
   processing_beyond_gradelevel: उच्च माध्यमिक शाळा
   alice_beyond_gradelevel: मध्यम शाळा +
   sphero_beyond_gradelevel: वय वर्षे 8+
+  codeorg_beyond_platformtext: आधुनिक ब्राउझर्स ,टॅबलेट
+  khan_beyond_platformtext: आधुनिक वेब ब्राउझर्स
+  tynker_beyond_platformtext: आधुनिक वेब ब्राउझर्स ($$ आवश्यक)
+  scratch_beyond_platformtext: कोणतेही ब्राउझर
+  lightbot_beyond_platformtext: आयओएस, अँड्रॉइड (किंवा वेब ब्राउझर)
+  codecademy_beyond_platformtext: आधुनिक वेब ब्राउझर्स, आयओएस, अँड्रॉइड अॅप्स
+  pocketcode_beyond_platformtext: मोबाइल अॅप
+  groklearning_beyond_platformtext: आधुनिक वेब ब्राउझर्स
+  hacketyhack_beyond_platformtext: डेस्कटॉप इंस्टॉल
+  robomind_beyond_platformtext: मॉडर्न वेब ब्राउझर्स, मोबाईल वेब
+  makeschool_beyond_platformtext: आधुनिक वेब ब्राउझर्स
+  appinventor_beyond_platformtext: मॉडर्न ब्राउझर + अँड्रॉइड
+  touchdevelop_beyond_platformtext: मॉडर्न ब्राउझर्स, स्मार्टफोन, सर्व उपकरणे
+  codehs_beyond_platformtext: मॉडर्न ब्राउझर्स ($$ आवश्यक)
+  udemy_beyond_platformtext: वेब आधारित
+  lynda_beyond_platformtext: वेब आधारित ($$ आवश्यक)
+  edx_beyond_platformtext: मॉडर्न  ब्राउझर्स
+  coursera_beyond_platformtext: मॉडर्न  ब्राउझर्स
+  udacity_beyond_platformtext: मॉडर्न  ब्राउझर्स
+  teachingtree_beyond_platformtext: वेब आधारित
+  kidsruby_beyond_platformtext: डेस्कटॉप इंस्टॉल
+  w3schools_beyond_platformtext: आधुनिक वेब ब्राउझर्स
+  codeavengers_beyond_platformtext: आधुनिक वेब ब्राउझर्स
+  mozilla_beyond_platformtext: आधुनिक वेब ब्राउझर्स
+  codecombat_beyond_platformtext: वेब आधारित (फायरफॉक्स, क्रोम, सफारी, IE9+)
+  lego_beyond_platformtext: रोबोटची खरेदी
+  finch_beyond_platformtext: रोबोटची खरेदी
+  arduino_beyond_platformtext: वेब ब्राउझर, त्यानंतर किट खरेदी
+  processing_beyond_platformtext: आधुनिक वेब ब्राउझर्स
+  alice_beyond_platformtext: विंडोज किंवा मॅक (इंस्टॉल करणे आवश्यक)
+  sphero_beyond_platformtext: रोबोटची खरेदी
   codeorg_beyond_shortdescription: मार्क झुकेरबर्ग आणि अॅन्ग्री बर्ड यांसोबत प्रोग्रामिंग
     शिका!
   khan_beyond_shortdescription: जावास्क्रिप्टमध्ये चित्र काढण्यास शिका
+  tynker_beyond_shortdescription: ग्रेड 4-8 मधील मुलांसाठी एक मजेदार आणि आकर्षक कोर्स
   scratch_beyond_shortdescription: परस्पर खेळ, कथा आणि अॅनिमेशन तयार करा.
   lightbot_beyond_shortdescription: कोडिंग संकल्पना शिकवण्यासाठी एक खेळ
   codecademy_beyond_shortdescription: वेब ब्राउझर मध्ये "जावास्क्रिप्ट" प्रोग्रामिंग
     शिका.
   kodable_beyond_shortdescription: कॉम्प्युटर प्रोग्रामिंग संकल्पना शिकवण्यासाठी एक
     मजेदार आयपैड गेम
+  scratchjr_beyond_shortdescription: ScratchJr वापरून संवादात्मक कथा आणि गेम तयार
+    करा.
+  hopscotch_beyond_shortdescription: आयपॅडवर व्हिज्युअल प्रोग्रामिंग जाणून घ्या
+  pocketcode_beyond_shortdescription: तुमच्या स्मार्टफोनवर गेम तयार करा आणि प्रयत्न
+    करण्यासाठी मित्रांसह शेअर करा!
+  groklearning_beyond_shortdescription: पायथन प्रोग्रामिंगची मूलभूत ओळख
+  hacketyhack_beyond_shortdescription: रुबीला ग्राउंड अप पासून शिका
   robomind_beyond_shortdescription: व्हर्च्युअल रोबोसाठी कोड लिहा
+  makeschool_beyond_shortdescription: आयफोन गेम एका तासात बनवायला शिका
   appinventor_beyond_shortdescription: आपले स्वतःचे अॅप बनवा! (केवळ-अँड्रॉइड)
+  touchdevelop_beyond_shortdescription: तुमच्या फोन, टॅबलेट किंवा लॅपटॉपवर थेट मोबाइल
+    अॅप्स कोड करा
+  codehs_beyond_shortdescription: मजेदार व्हिज्युअल वातावरणासह जावास्क्रिप्ट प्रोग्रामिंग
+    जाणून घ्या
+  udemy_beyond_shortdescription: डझनभर ऑनलाइन प्रोग्रामिंग कोर्स
+  lynda_beyond_shortdescription: डझनभर ऑनलाइन प्रोग्रामिंग कोर्स
+  edx_beyond_shortdescription: हार्वर्ड येथील सर्वात लोकप्रिय वर्ग
+  coursera_beyond_shortdescription: CS101 ने सुरुवात करा
+  udacity_beyond_shortdescription: CS101 ने सुरुवात करा
+  teachingtree_beyond_shortdescription: 'ऑनलाइन ज्ञान: वेगवान आणि अनियंत्रित'
+  kodu_beyond_shortdescription: 3D गेम वर्ल्ड डिझाइन करा
+  cargobot_beyond_shortdescription: तुमच्या आयपॅड वर रोबोट आर्म प्रोग्राम करा
+  kidsruby_beyond_shortdescription: रुबी वापरून प्रोग्राम करायला शिका
+  w3schools_beyond_shortdescription: वेब साइट्स बनवायला शिका
   codeavengers_beyond_shortdescription: गेम आणि वेबसाइट्स कोड करण्यास शिका
   mozilla_beyond_shortdescription: वेब पेज तयार करा आणि शेअर करा
   codecombat_beyond_shortdescription: एक गेम खेळा आणि जिंकण्यासाठी जावास्क्रिप्ट शिका
@@ -2130,24 +2218,88 @@ mr-IN:
   header_screen_reader_hamburger: 'मेनू '
   header_screen_reader_help: हेल्प मेनु
   app_lab_documentation: वेब लॅब डॉक्युमेंटेशन
+  app_lab_tutorials: अॅप लॅब ट्यूटोरियल
+  game_lab_documentation: गेम लॅब डॉक्युमेंटेशन
+  game_lab_tutorials: गेम लॅब ट्यूटोरियल
+  sprite_lab_documentation: स्प्राईट लॅब डॉक्युमेंटेशन
+  sprite_lab_tutorials: स्प्राइट लॅब ट्यूटोरियल
   header_documentation: दस्तऐवजीकरण
   user_header_label: नमस्कार %{username}
   user_header_team: संघ
+  user_header_my_projects: माझा प्रोजेक्ट
   user_header_settings: खाते सेटिंग्ज
   user_header_logout: साइन आउट करा
   user_header_signin: साइन इन करा
   user_header_create: 'बनवा '
+  user_header_applab: अॅप लॅब
   user_header_artist: आर्टीस्ट
   user_header_dance: डांस पार्टी
+  user_header_spritelab: स्प्राइट लॅब
   user_header_minecraft: माइनक्राफ्ट
   user_header_flappy: फ्लॅपी
+  user_header_view_all: सर्व प्रोजेक्ट्स पहा
+  user_header_view_project_gallery: प्रोजेक्ट गॅलरी पहा
   user_header_view_my_projects: माझे प्रोजेक्ट्स पहा
   view_all_sections: सर्व विभाग पहा
+  view_section: विभाग पहा
+  view_named_section: "%{section_name} पहा"
+  privacy_doc_explanation: आमच्या गोपनीयता दस्तऐवजासाठी येथे क्लिक करा जे तुमच्या
+    विद्यार्थ्यांसाठी शेअर केले जाऊ शकतात किंवा प्रिंट केले जाऊ शकतात.
+  signing_in: साइन इन करत आहे
+  sign_in_overview: 'तुमचे विद्यार्थी त्यांच्या Code.org खात्यांमध्ये या चरणांचे अनुसरण
+    करून साइन इन करू शकतात:'
+  sign_in_instruct_website: "%{code_org_url} कडे जा."
+  sign_in_instruct_code: 'त्यांचा विभाग कोड टाईप करावा: %{section_code}.'
+  sign_in_instruct_name: त्यांचे डिस्प्ले नाव निवडा.
+  sign_in_instruct_secret: त्यांचे गुप्त %{secret} निवडा.
+  sign_in_instruct_button: '"साइन इन" बटणावर क्लिक करा.'
+  sign_in_overview_cards: 'विद्यार्थ्यांच्या गुप्त %{secret} सह ही सर्व माहिती खालील
+    लॉगीन कार्ड्सवर मिळेल. '
+  reset_student_password: विद्यार्थ्यांचे पासवर्ड रीसेट करत आहे
+  reset_student_password_instructions: विभागासाठी “मैनेज स्टूडेंट” टॅबवर जाऊन, “पासवर्ड”
+    स्तंभाखालील “शो सिक्रेट” बटणावर क्लिक करून आणि “रीसेट सिक्रेट” बटणावर क्लिक करून
+    तुम्ही तुमच्या कोणत्याही विद्यार्थ्यासाठी गुप्त <word/picture> रीसेट करू शकता.
+    .
+  login_cards: लॉग इन कार्ड्स
+  print_login_cards: लॉगिन कार्ड प्रिंट करा
+  joining_section: तुमच्या विभागात सामील होत आहे (फक्त एकदाच)
+  joining_section_overview: जर एखादा विद्यार्थी तुमच्या विभागात आधीपासून सामील झाला
+    नसेल, तर कृपया त्यांना पुढील पायऱ्या करण्यास सांगा. लक्षात घ्या की त्यांना हे
+    फक्त एकदाच करण्याची आवश्यकता आहे. तुमच्या विभागात सामील होऊन, विद्यार्थी त्यांना
+    नियुक्त केलेला अभ्यासक्रम पाहण्यास सक्षम असतील आणि त्यांनी साइन इन केलेले असताना
+    त्यांनी पूर्ण केलेल्या कामाच्या प्रगतीचा मागोवा घेण्यास तुम्ही सक्षम असाल.
+  joining_section_instruct_website: त्यांचे आधीपासून Code.org खाते नसेल तर ते तयार
+    करा.  इथे ते तयार करता येईल. ते ईमेल पत्ता आणि पासवर्ड वापरून https://studio.code.org/users/sign_up
+    वर साईन अप करू शकतात किंवा यातील एक बटण क्लिक करून गुगल, फेसबुक किंवा मायक्रोसॉफ्टवरून
+    साईन अप करू शकतात याची नोंद घ्या.
+  joining_section_instruct_account: त्यांच्या Code.org खात्यात साइन इन करा.
+  joining_section_instruct_code: "%{code_org_url} ला नेव्हीगेट करा आणि त्यांचा विभाग
+    कोड टाईप करा: %{section_code}."
+  joining_section_instruct_button: 'एकदा त्यांनी "गो" बटण दाबले की ते तुमच्या विभागात
+    समाविष्ट झाले पाहिजेत. '
+  signing_in_single_instruct: तुमचे विद्यार्थी https://code.org/ वर जाऊन आणि वरच्या
+    उजव्या कोपर्‍यात असलेल्या “साइन इन” बटणावर क्लिक करून त्यांच्या Code.org खात्यांमध्ये
+    साइन इन करू शकतात.
+  reset_student_password_email: तुमच्या विद्यार्थ्याने त्यांचा ईमेल अॅड्रेस आणि पासवर्ड
+    वापरून Code.org खाते तयार केले असल्यास (त्यांच्या गुगल, फेसबुक, मायक्रोसॉफ्ट किंवा
+    क्लेवर खात्याद्वारे साइन इन करण्याऐवजी), तुम्ही "विद्यार्थ्यांना व्यवस्थापित करा"
+    टॅबवर जाऊन त्यांचा पासवर्ड रीसेट करू शकता. विभाग, आणि "पासवर्ड" स्तंभाखालील "पासवर्ड
+    रीसेट करा" बटणावर क्लिक करा.
+  syncing_students: तुमचे विद्यार्थी सिंक करत आहे
+  syncing_students_instructions: 'जर तुमचा Code.org विभाग गूगल क्लासरूम मधील तुमच्या
+    विद्यार्थ्यांच्या यादीसह कालबाह्य झाला असेल तर, "मैनेज स्टूडेंट" टॅबवरील "गूगल
+    क्लासरूम मधील विद्यार्थी सिंक करा" बटणावर क्लिक करा:'
+  google_sign_in_instruct: 'तेथून, त्यांनी "गूगल खात्यासह साइन इन करा" पर्याय निवडला
+    पाहिजे:'
+  hero_name: माईनक्राफ्ट हिरोचा प्रवास
+  applab-intro_name: अॅप लॅब परिचय
+  applab_tile_title: अॅप लॅबचा परिचय (वय 13+)
   applab_tile_subtitle: 'ब्लॉकवर आधारित प्रोग्रॅमिंगचा वापर करून जावास्क्रिप्टमध्ये  तुमचे
     स्वत:चे अॅप तयार करा किंवा टेक्स्टवर आधारित प्रोग्रॅमिंग करून तुमचे कौशल्य पुढच्या
     पातळीला न्या. (फक्त इंग्रजी)    '
   applab_tile_start_tutorial: सुरुवात
   applab_tile_teacher_guide: शिक्षक मार्गदर्शक पहा
+  aquatic_name: 'माइनक्राफ्ट: व्हॉयेज एक्वाटिक'
   account_sign_up_email_opt_in: आम्ही तुम्हाला आमच्या कोर्सेस, स्थानिक संधी किंवा
     इतर संगणक विज्ञान बातम्यांबद्दल ईमेल करू शकतो? (अंदाजे महिन्यातून एकदा)
   account_sign_up_child_accept_terms: Code.org सेवा वापरण्यासाठी माझ्याकडे माझ्या
@@ -2160,6 +2312,10 @@ mr-IN:
     डान्स पार्टीचा कोड लिहा. यामध्ये सहभागी असतील केटी पेरी, शॉन मेंडेस, पॅनिक! अॅट
     द डिस्को, लिल नॅस एक्स, जोनास ब्रदर्स, निकी मिनाज आणि इतर 34 जण!
   hoc_overview_title: Code.org कडून अवर ऑफ कोड कृती
+  hoc_overview_subtitle: <a href="https://hourofcode.com">अवर ऑफ कोड</a> ही एक जागतिक
+    चळवळ आहे जी 180+ देशांतील लाखो विद्यार्थ्यांपर्यंत पोहोचते. कोणीही, कुठेही Hour
+    of Code कार्यक्रम आयोजित करू शकतो किंवा 45 पेक्षा जास्त भाषांमध्ये उपलब्ध असलेल्या
+    500+ पेक्षा जास्त एक तासाच्या ट्यूटोरियलपैकी कोणतेही प्रयत्न करू शकतो.
   hoc_overview_subtitle_markdown: "[अवर ऑफ कोड](https://hourofcode.com) ही 180+ देशांमधील
     लक्षावधी विद्यार्थ्यापर्यंत पोहोचण्याची एक जागतिक चळवळ आहे. कोणीही, कुठेही अवर
     ऑफ कोड इव्हेंट आयोजित करू शकते किंवा 45 पेक्षा जास्त भाषांमध्ये उपलब्ध असलेल्या
@@ -2170,15 +2326,39 @@ mr-IN:
     500 पेक्षा जास्त कृती आहेत.
   hoc_overview_partner_activities_link: कृती पहा
   hoc_overview_start_tutorial: सुरुवात
+  hoc_overview_more_resources: तुमच्या रिमोट क्लासरूममध्ये कसे गुंतायचे यावरील अधिक
+    संसाधनांसाठी, [आभासी तासाचा कोड](https://hourofcode.com/us/how-to/virtual) होस्टिंगसाठी
+    आमचे मार्गदर्शक पहा. मर्यादित किंवा कोणतेही तंत्रज्ञान किंवा कनेक्टिव्हिटी नसलेल्या
+    विद्यार्थ्यांसाठी, [unplugged Hour of Code activity](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)
+    चे हे पॅकेट शेअर करा.
   hoc_overview_view_teacher_guide: शिक्षक मार्गदर्शक पहा
+  hoc2018_creativity: सर्जनशीलता
   hoc2018_creativity_create: बनवा
+  hoc2018_creativity_hoc_coming: अवर ऑफ कोड येत आहे
+  hoc2018_creativity_what_will_you_create: तुम्ही काय बनवाल?
+  hoc2018_creativity_homepage: कल्पनेला उड्डाण द्या आणि नावीन्यपूर्णतेला जन्म द्या.
+    अवर ऑफ कोड आणि तुमच्या स्वतःच्या सर्जनशीलतेच्या ब्रँडसह प्रारंभ करा, ते काहीही
+    असले तरीही. आमचा व्हिडिओ पहा.
+  hoc2018_creativity_hoc_about: या वर्षी, कोडचा तास सर्जनशीलतेबद्दल आहे.
+  hoc2018_creativity_social_media: 'या वर्षीचा #HourOfCode हा सर्जनशीलतेबद्दल आहे.
+    मी तयार आहे! तुम्ही आहात का?'
+  hoc2018_creativity_social_media_2: 'या वर्षीचा #HourOfCode हा सर्जनशीलतेबद्दल आहे.
+    आपण काय तयार कराल?'
+  hoc2018_creativity_courses: Code.org कोर्सेससह पुढे जा
   hoc2018_creativity_courses_link: <a href="https://studio.code.org/courses">Code.org
     अभ्यासक्रमांसह </a> आणखी पुढे जा
+  hoc2018_homepage: कोडच्या तासासाठी (दिवस 3-9) 150 पेक्षा जास्त नवीन क्रियाकलापांपैकी
+    एक वापरून पाहण्यासाठी आपल्या वर्गात साइन अप करा!
   hoc2018_mc_page_title: माईनक्राफ्ट  कोड मार्गदर्शनाचा तास
   hoc2018_mc_details: वेगवेगळ्या भाष, अद्ययावत ब्राऊझर आणि गोळ्या,  दर्जा २
+  hoc2018_mc_aquatic_announcement: अवर ऑफ कोड (डिसेंबर 3-9) साठी 150 हून अधिक नवीन
+    क्रियाकलापांपैकी एक वापरून पाहण्यासाठी तुमचा वर्ग साइन अप करा. 2018 साठी आमची
+    अगदी नवीन माइनक्राफ्ट उपक्रम, व्हॉयेज अॅक्वाटिक पाहण्याचे सुनिश्चित करा! आजच तुमचा
+    वर्ग साइन अप करा.
   hoc2018_mc_aquatic_title: माईनक्राफ्ट प्रवास जलचर
   hoc2018_mc_aquatic_description: 'अवर ऑफ कोडसाठी एका नव्या कोऱ्या कृतीसह आता माईनक्राफ्ट
     पुन्हा परत आले आहे! माईनक्राफ्टमधून कोडद्वारे प्रवास करा. '
+  hoc2019_mc_aquatic_description: कोडसह पाण्याखालील जग एक्सप्लोर करा आणि तयार करा.
   hoc2018_mc_hero_title: माईनक्राफ्ट हिरोचा प्रवास
   hoc2018_mc_hero_description: 'अवर ऑफ कोडसाठी एका नव्या कोऱ्या कृतीसह आता माईनक्राफ्ट
     पुन्हा परत आले आहे! माईनक्राफ्टमधून कोडद्वारे प्रवास करा. '
@@ -2207,6 +2387,8 @@ mr-IN:
     सहा आणि त्यापासून पुढे.   '
   hoc2018_mc_educators_box3_button: कार्यशाळा शोधा
   hoc2018_mc_educators_box4_title: संगणक शास्त्रातील अधिक स्रोत अॅक्सेस करा
+  hoc2018_mc_educators_box4_desc: मायक्रोसॉफ्ट कडील डिजिटल कौशल्ये आणि संगणक विज्ञान
+    शिक्षण संसाधनांसह तुमच्या समुदायामध्ये बदल घडवा.
   hoc2018_mc_educators_box4_button: स्रोत पहा
   hoc2018_mc_watch_videos: तुम्ही सुरुवात करण्यापूर्वी, यातील एखादा प्रेरणादायी व्हिडीओ
     पाहा
@@ -2228,22 +2410,34 @@ mr-IN:
   hoc2018_mc_video_title_hoc_is_here: अवर ऑफ कोड आला आहे - कोणीही शिकू शकते
   hoc2018_mc_video_title_anybody_can_learn: कोणीही शिकू शकते
   hoc2018_mc_video_title_my_name_is_aracely: 'माझे नाव अरासेली आहे '
+  hoc2018_mc_homepage_hoc_coming: अवर ऑफ कोड येत आहे
+  hoc2018_mc_homepage_what_create: तुम्ही काय बनवाल?
+  hoc2018_mc_homepage_give_flight: तुमच्या कल्पनांना पंख द्या आणि सर्जनशीलतेची सुरुवात
+    करा. कोडचा तास सुरू करा आणि स्वतःची सर्जनशीलता वाढवा, ती कशीही असो.
+  hoc2018_mc_homepage_watch_video: आमचा व्हिडिओ पहा
   hoc2018_mc_homepage_join_us: आमच्यात सामील व्हा
   hoc2018_mc_homepage_try_it: करून पाहा
+  hoc2018_mc_back: माइनक्राफ्ट अवर ऑफ कोड साठी अगदी नवीन गतिविधीसह परत आले आहे!
   hoc2018_mc_back_journey: 'अवर ऑफ कोडसाठी एका नव्या कोऱ्या कृतीसह आता माईनक्राफ्ट
     पुन्हा परत आले आहे! माईनक्राफ्टमधून कोडद्वारे प्रवास करा. '
   hoc2018_mc_teacher_guide: शिक्षक मार्गदर्शक पहा
   hoc2018_mc_minecraft_education: माईनक्राफ्ट एज्युकेशन
   hoc2018_mc_continue_learning: माईनक्राफ्टसह शिकणे सुरू ठेवा.
   hoc2018_mc_go_to_mc_education: 'माईनक्राफ्ट एज्युकेशनकडे जा '
+  hoc2018_mc_short_description: कोडच्या सामर्थ्याने खजिना शोधण्यासाठी आणि पाण्याखालील
+    जग एक्सप्लोर करण्यासाठी तुमची सर्जनशीलता आणि समस्या सोडवण्याच्या कौशल्यांचा वापर
+    करा.
   hoc2018_mc_short_description_shorter: तुमच्या सर्जनशीलतेचा आणि समस्या सोडवण्याच्या
     कौशल्यांचा उपयोग संहितेसह पाण्याखालील जग शोधण्यासाठी आणि निर्माण करण्यासाठी करा.
   hoc2018_mc_journey: कोडसह माईनक्राफ्टचा प्रवास.
   hoc2018_dance_party_main_heading: डांस पार्टी
+  hoc2018_dance_party_landing_title: डान्स
   hoc2018_dance_party_subheading: डान्स पार्टीचे भाषांतर करण्यासाठी मदत करा
+  hoc2018_dance_create_your_own_dance_title: तुमची स्वतःची डान्स पार्टी तयार करा
   hoc2018_dance_party_box_title: डांस पार्टी
   hoc2018_dance_party_box_description: तुमच्या मित्रमैत्रिणींच्याबरोबर शेअर करण्यासाठी
     डान्स पार्टीचा कोड लिहा!
+  hoc2018_dance_party_specs: भाषा | फॉर्मेट | वय 6-106
   hoc2018_dance_party_button: सुरुवात
   hoc2018_dance_keep_on_dancing_box_title: नाचत रहा
   hoc2018_dance_keep_on_dancing_description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या
@@ -2273,45 +2467,123 @@ mr-IN:
     फ्युचर इंजिनिअर* हा लहानपणापासून ते करीअरपर्यंतचा एक सर्वसमावेशक कार्यक्रम आहे.
     यामध्ये कमी उत्पन्न असलेल्या आणि इतर वंचित मुलांना आणि तरुण व्यक्तींना संगणक शास्त्रात
     करीअर घडवण्यासाठी प्रोत्साहित, शिक्षित आणि प्रशिक्षित केले जाते. [अधिक जाणून घ्या](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: तुम्ही फ्रान्समधील विद्यार्थी
+    किंवा शिक्षक असल्यास, [Amazon Future Engineer - France] (%{amazon_future_engineer_france_link})
+    ला भेट द्या.
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: अॅमेझॉन फ्युचर
     इंजिनिअरबद्दल अधिक जाणून घ्या
+  hoc2018_dance_amazon_about_future_engineer_title: अॅमेझॉन फ्यूचर इंजिनियर विषयी
   hoc2018_dance_amazon_about_future_engineer_description: संगणक शास्त्राच्या शिक्षणाला
     प्रवेश वाढवण्यासाठी अॅमेझॉनच्या बालवाडी ते करीअर कार्यक्रमाबद्दल जाणून घ्या. आमच्या
     उन्हाळी शिबिरांमध्ये कसे सहभागी  व्हायचे, हायस्कूलसाठी संगणक शास्त्राचे वर्ग,
     शिष्यवृत्त्या आणि इंटर्नशिप्सबद्दल माहिती मिळवा.
   hoc2018_dance_amazon_about_future_engineer_button: अधिक जाणून घ्या
+  hoc2018_dance_amazon_try_coding_this_summer_title: या उन्हाळ्यात कोडिंग करून पहा
+  hoc2018_dance_amazon_try_coding_this_summer_description: अॅमेझॉन फ्यूचर इंजिनियर
+    च्या मोफत, मजेदार आणि सर्वसमावेशक संगणक विज्ञान शिबिरांमध्ये सहभागी व्हा! उन्हाळी
+    2019 साठी यूएस मध्ये अनेक ठिकाणी बालवाडीपासून ते 8 व्या वर्गापर्यंतच्या विद्यार्थ्यांसाठी
+    उन्हाळी शिबिरे उपलब्ध आहेत.
+  hoc2018_dance_amazon_try_coding_this_summer_button: शिबिरात सामील व्हा
+  hoc2018_dance_amazon_scholarship_programs_title: स्कॉलरशिप कार्यक्रम
+  hoc2018_dance_amazon_scholarship_programs_description: Amazon ज्यांनी AP CS अभ्यासक्रम
+    यशस्वीरीत्या पूर्ण केला आहे किंवा सध्या प्रवेश घेतला आहे आणि युनायटेड स्टेट्समधील
+    4 वर्षांच्या महाविद्यालयात किंवा विद्यापीठात CS पदवीचा अभ्यास करण्याचा मानस आहे
+    अशा कमी सेवा नसलेल्या विद्यार्थ्यांसाठी दरवर्षी $10,000 शिष्यवृत्ती देत आहे.
+  hoc2018_dance_amazon_scholarship_programs_button: 'आता लागू करा '
+  hoc2018_dance_amazon_internships_title: अॅमेझॉनवर इंटर्न या
+  hoc2018_dance_amazon_internships_description: अॅमेझॉन फ्यूचर इंजिनीअर इंटर्नशिप
+    2019 च्या उन्हाळ्यासाठी आता अर्ज खुले आहेत. अॅमेझॉन ग्राहकांच्या वतीने नवीन वैशिष्ट्ये
+    आणि सेवा तयार करण्यासाठी इंटर्न व्यवस्थापक, तांत्रिक मार्गदर्शक आणि इतर इंटर्नसह
+    भागीदारी करतील. इंटर्नशिप यूएस आणि कॅनडामध्ये उपलब्ध आहे.
+  hoc2018_dance_amazon_internships_button: इंटर्नशिप शोधा
+  hoc2018_dance_amazon_k8_programs_title: 'K-8 प्रोग्राम '
+  hoc2018_dance_amazon_funding_title: तुमच्या सीएस पदवीसाठी निधी मिळवा
   hoc2018_dance_amazon_future_engineer_footer: "*ज्या कलाकारांच्या संगीताचा वापर या
     ट्युटोरीयलमध्ये केला आहे ते, त्यांच्या संगीताचा वापर Code.org वर करण्यासाठी दिलेल्या
     परवान्याच्या अंतर्गत अॅमेझॉनला प्रायोजित करत नाहीत किंवा त्याची जाहिरात करत नाहीत.
     \  "
+  hoc2018_dance_measure: मापे
+  hoc2018_dance_measure_colon: मापे
+  hoc2018_aquatic_video1: माइनक्राफ्ट व्हॉयेज एक्वाटिक - परिचय
+  hoc2018_aquatic_video2: माइन क्राफ्ट व्हॉयेज एक्वाटिक - लूप्स
+  hoc2018_aquatic_video3: 'माईनक्राफ्ट: व्हॉयेज एक्वाटिक कंडिशनल्स'
+  hoc2018_aquatic_video4: माइनक्राफ्ट व्हॉयेज एक्वाटिक - अभिनंदन
+  hoc2018_dance_video1: डान्स पार्टी - परिचय
   hoc2018_dance_video2: नृत्य पार्टी - कार्यक्रम
   hoc2018_dance_video3: नृत्य पार्टी - मालमत्ता
+  hoc2018_dance_video4: डान्स पार्टी - अभिनंदन
+  dance_box_higher_power_line_1: कोल्डप्लेच्या "हायर पॉवर" वर एक नृत्य कोड करा आणि
+    तुम्हाला बँड लाइव्ह पाहण्याची संधी मिळेल!
+  dance_box_higher_power_line_2: अधिक माहितीसाठी <a href="%{path}">code.org/coldplay</a>
+    पहा.
+  page_not_found_title: पेज सापडला नाही
+  page_not_found_header: '404: पेज सापडले नाही'
+  page_not_found_description: तुम्ही शोधत असलेले पान या पत्त्यावर अस्तित्वात नाही.
+    वेब अॅड्रेस तपासा आणि पुन्हा सबमिट करा. किंवा आमच्या होमपेजवर परत जा.
+  page_not_found_button: 'होम वर परत जाणे '
   hoc2018_mc_with_microsoft: भागीदार
   hoc2018_mc_thank_microsoft: प्रत्येक लहान मुलाला संगणक शास्त्र आणि 21 व्या शतकात
     यशस्वी होण्यासाठी कौशल्ये शिकण्याची संधी मिळावी, या आमच्या दृष्टीकोनाला आणि ध्येयाला
     पाठिंबा दिल्याबद्दल आम्ही मायक्रोसॉफ्टचे आभार मानतो.
+  hoc2019_mc_mee_title: 'माईनक्राफ्ट AI चांगल्या गोष्टींसाठी '
   hoc2019_mc_mee_description1: 'नवीन माईनक्राफ्ट कोड ऑफ अवर ट्युटोरीयल आता माईनक्राफ्टवर
     उपलब्ध आहे: Windows, Mac आणि iPad साठी शैक्षणिक आवृत्ती. कोडींगच्या मूलभूत गोष्टी
     जाणून घ्या आणि तुमच्या विद्यार्थ्यांबरोबर AI शिका!     '
+  hoc2019_mc_mee_description2: धडा योजना, व्हिडिओ, संगणक विज्ञान अभ्यासक्रम आणि शिक्षक
+    प्रशिक्षण यासह विनामूल्य संसाधनांमध्ये प्रवेश करा.
   hoc2019_mc_more_coding_resources: कोडींगचे अधिक स्रोत
   hoc2019_dance_previous_versions: |-
     डान्स पार्टीचे आधीचे व्हर्जन शोधत आहात?
     सुरू करण्यासाठी येथे क्लिक करा, 2018 मधील [भाग 1](%{dance_2018_link}) आणि [भाग 2](%{dance_extras_2018_link}).
+  homepage_slot_text_title_at_home: 'घरीच शिका '
+  homepage_slot_text_blurb_at_home: हे संसाधने सोपे करतात
+  homepage_slot_text_link_code_break: कोड ब्रेक घ्या
+  homepage_slot_text_link_do_hoc: 'कोड चा तास करा '
+  homepage_slot_text_link_express_course: एक्सप्रेस कोर्स करून पहा
+  page_not_available_title: पेज उपलब्ध नाही
+  page_not_available_description: आम्ही दिलगीर आहोत, तुम्ही विनंती केलेले पान या पत्त्यावर
+    उपलब्ध नाही. तुम्हाला अजूनही प्रवेश हवा असल्यास, कृपया ईमेल [support@code.org](%{support_email_link})करा.
+  page_not_available_button: 'होम वर परत जाणे '
   hoc2020_mc_available_code_org: Code.org वर उपलब्ध
   hoc2020_mc_available_mee: 'माईनक्राफ्टमध्ये उपलब्ध: शैक्षणिक आवृत्ती '
+  hoc2020_mc_mee_title: माइनक्राफ्ट दोन गावांची गोष्ट
   hoc2020_mc_mee_description: 'नवीन माईनक्राफ्ट अवर ऑफ कोड ट्युटोरीयल आता माईनक्राफ्टवर
     उपलब्ध आहे: Windows, Mac, Chromebook, आणि iPad साठी शिक्षण आवृत्ती. कोडींगमधील
     मूलभूत गोष्टी शिका आणि तुमच्या विद्यार्थ्यांबरोबर विविधता आणि सर्वसमावेशकतेचा
     अनुभव घ्या! धड्याचा प्लॅन, व्हिडीओज, संगणक शास्त्राचा अभ्यासक्रम, समानतेचे धडे
     आणि शिक्षक प्रशिक्षणे यासह मोफत स्रोतांना प्रवेश मिळवा.'
+  hoc2021_mc_mee_title: माइनक्राफ्ट टाइमक्राफ्ट
+  hoc2021_mc_mee_description: 'वेळेत परत जा आणि कोड करायला शिका! नवीन माइनक्राफ्ट
+    अवर ऑफ कोड ट्यूटोरियल आता माइनक्राफ्ट: एज्युकेशन एडिशन मध्ये विंडोज, मॅक, क्रोमबुक
+    आणि आयपॅड साठी उपलब्ध आहे. मोफत शिक्षक संसाधने, प्रशिक्षणे आणि व्हिडिओंसह प्रारंभ
+    करा.'
+  hoc2021_mc_mee_villages_title: दोन गावांची गोष्ट
+  hoc2021_mc_mee_villages_description: 'कोडिंगच्या मूलभूत गोष्टी जाणून घ्या आणि माइनक्राफ्ट:
+    एज्युकेशन एडिशन मध्ये तुमच्या विद्यार्थ्यांसोबत विविधता आणि समावेशन एक्सप्लोर
+    करा.'
+  hoc2021_mc_mee_ai_title: चांगल्या गोष्टींसाठी एआय
+  hoc2021_mc_mee_ai_description: 'तुमच्या विद्यार्थ्यांसह एआय एक्सप्लोर करा आणि माइनक्राफ्ट:
+    एज्युकेशन एडिशन मध्‍ये कोड करायला शिका.'
   footer_powered_by_aws: Amazon Web Services आणि “Powered by AWS” लोगो हे Amazon.com,
     Inc. किंवा युनायटेड स्टेट्स आणि/किंवा इतर देशांमधील त्याच्या संलग्न कंपन्यांचे
     ट्रेडमार्क आहेत.
+  footer_built_on_github: 'मायक्रोसॉफ्टच्या गिटहबवर तयार केलेले '
+  codebytes_skinny_banner_title: आमच्या CodeBytes लाइव्ह मिनी-धड्यांसाठी 7-11 डिसेंबरला
+    आमच्यात सामील व्हा!
+  codebytes_skinny_banner_description: 'कोडबाइट्स, 20 मिनिटांच्या परस्परसंवादी संगणक
+    विज्ञान धड्यांसाठी CS शिक्षण सप्ताहाच्या प्रत्येक दिवशी आमच्यासोबत सामील व्हा.
+    विद्यार्थ्यांसाठी व्हर्च्युअल #HourOfCode मध्‍ये सहभागी होण्‍यासाठी CodeBytes
+    हा दिवसातून दोनदा लाइव्‍ह स्‍ट्रीमिंग करण्‍याचा उत्तम मार्ग आहे!'
   codebytes_skinny_banner_english_only: फक्त-इंग्रजी
+  codebytes_skinny_banner_learn: "[code.org/codebytes](%{code_bytes_url}) येथे अधिक
+    जाणून घ्या."
   footer_privacy_policy: गोपनीयता धोरण
+  footer_privacy_policy_updated: गोपनीयता धोरण (अपडेट केलेले)
   footer_about: या बद्दल
   footer_partners: भागीदार
+  footer_blog: ब्लॉग
   footer_donate: देणगी
+  footer_store: दुकान
   footer_support: सहाय्य
   footer_terms: अटी
   ai_for_oceans: महासागरांसाठी कृत्रिम बुद्धिमत्ता
@@ -2389,6 +2661,10 @@ mr-IN:
     प्लॅटफॉर्म
   ai_try_activity: कृती करून पहा
   outbreak_tile_title: उद्रेक
+  outbreak_tile_subtitle: मॉन्स्टर टाउनला एका विषाणूने संसर्ग केला आहे! एक उद्रेक
+    सिम्युलेटर कोड करा आणि मॉन्स्टर टाउनच्या शेजारी काय होईल याबद्दल अंदाज लावा.
+  outbreak_tile_alt: पर्पल मॉन्स्टरच्या गटातून व्हायरस कसा पसरतो याचे सिम्युलेशन.
+  footer_cookie_notice: 'कुकी सूचना '
   top_hoc_tutorial_applab_alt_text: तर्जनी असलेला तपकिरी हात एका टच स्क्रीन टॅब्लेटला
     स्पर्श करत आहे जो निळ्या पार्श्वभूमीवर तारे आणि प्रकाश किरण उत्सर्जित करतो
   minecraft_tile_alt: दोन माइन क्राफ्ट पात्र, स्टीव्ह आणि अॅलेक्स, पार्श्वभूमीवर कोरल,
