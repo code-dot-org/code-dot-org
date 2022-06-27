@@ -1043,7 +1043,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     end
   end
 
-  test 'workshops without default suppress_reminders will suppress_reminders once suppress_email is set' do
+  test 'workshops not suppressing reminders by default will suppress_reminders once suppress_email is set' do
     workshop = build :workshop
 
     workshop.virtual = false

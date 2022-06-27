@@ -64,8 +64,8 @@ class Pd::Workshop < ApplicationRecord
     'third_party_provider',
 
     # If true, our system will not send enrollees reminders related to this workshop.
-    # If the subject is not in the suppress_reminder? array, this attribute can be
-    # set to be true or false from the UI
+    # If the subject is not in the MUST_SUPPRESS_EMAIL_SUBJECTS constant, this attribute
+    # can be set to be true or false from the UI
     'suppress_email'
   ]
 
