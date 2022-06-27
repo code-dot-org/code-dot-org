@@ -384,7 +384,7 @@ class School < ApplicationRecord
       end
 
       CDO.log.info "Seeding 2019-2020 private school data."
-      AWS::S3.seed_from_file('cdo-nces', "2020-2021/pss/final_schools_private.csv") do |filename|
+      AWS::S3.seed_from_file('cdo-nces', "2019-2020/pss/final_schools_private.csv") do |filename|
         merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false) do |row|
           {
             id:                           row['School ID - NCES Assigned [Private School] Latest available year'],
@@ -405,7 +405,7 @@ class School < ApplicationRecord
       end
 
       CDO.log.info "Seeding 2019-2020 private school geographic data."
-      AWS::S3.seed_from_file('cdo-nces', "2020-2021/pss/final_locale_private.csv") do |filename|
+      AWS::S3.seed_from_file('cdo-nces', "2019-2020/pss/final_locale_private.csv") do |filename|
         merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false, insert_new: false) do |row|
           {
             id:                 row['PPIN'],

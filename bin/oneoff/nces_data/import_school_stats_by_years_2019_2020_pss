@@ -41,7 +41,7 @@ COMMUNITY_TYPE_MAP = {
   '43' => 'rural_remote'
 }.freeze
 
-AWS::S3.process_file('cdo-nces', "2020-2021/pss/final_schools_private.csv") do |filename|
+AWS::S3.process_file('cdo-nces', "2019-2020/pss/final_schools_private.csv") do |filename|
   SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'UTF-8'}, dry_run: false) do |row|
     {
       school_id:          row['School ID - NCES Assigned [Private School] Latest available year'],
@@ -78,7 +78,7 @@ AWS::S3.process_file('cdo-nces', "2020-2021/pss/final_schools_private.csv") do |
   end
 end
 
-AWS::S3.process_file('cdo-nces', "2020-2021/pss/final_locale_private.csv") do |filename|
+AWS::S3.process_file('cdo-nces', "2019-2020/pss/final_locale_private.csv") do |filename|
   SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'ISO-8859-1:UTF-8'}, dry_run: false) do |row|
     {
       school_id:      row['PPIN'],
