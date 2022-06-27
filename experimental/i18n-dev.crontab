@@ -48,3 +48,6 @@ HOME=/home/ubuntu
 
 # Update string translation status to Redshift
 0 0 * * * cd /home/ubuntu/code-dot-org && (bundle exec ./bin/i18n/translation_status/update_translation_status.rb | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error
+
+# Run the Crowdin translation validator tool
+30 0 * * * cd /home/ubuntu/code-dot-org && (bundle exec bin/i18n/translation_monitor/run_crowdin_validator.rb | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error
