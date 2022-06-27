@@ -770,11 +770,6 @@ Style/SoleNestedConditional:
 Style/StderrPuts:
   Enabled: false
 
-# Offense count: 2
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/StringChars:
-  Enabled: false
-
 # Offense count: 315
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: Mode.
