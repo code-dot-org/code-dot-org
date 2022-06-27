@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Units
 
-#### **CS Discoveries is divided into seven units.** Units are structured to give students context and motivation for the content before skill building. Units begin with a lesson that leverages students’ knowledge and experience in problem solving and technology. This lays the foundation for the skills and content that the unit introduces.  
+##### **CS Discoveries is divided into seven units.** Units are structured to give students context and motivation for the content before skill building. Units begin with a lesson that leverages students’ knowledge and experience in problem solving and technology. This lays the foundation for the skills and content that the unit introduces.  
 
 ## Click on the units below to learn about the course content:
 
@@ -64,8 +64,7 @@ The **Data and Society** unit is about the importance of using data to solve pro
 <img src="https://images.code.org/1cb7783cc95f8c54e384b20ef6204b55-image-1627696963140.55.23 PM.png" alt="Image of a Circuit playground" width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 
-In the **Physical Computing** unit, students further develop their programming skills, while exploring more deeply the role of hardware platforms in computing. Harkening back to the Input/Storage/Processing/Output model for a computer, students look towards modern “smart” devices to understand the ways in which non-traditional computing platforms take input and provide output in ways that couldn't be done with the traditional keyboard, mouse, and monitor.
-Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that we see in many modern smart devices, and they get to see how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge that asks students to use the Circuit Playground as the basis for an innovation of their own design.
+In the **Physical Computing** unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
 
 </details>
 
@@ -76,7 +75,7 @@ Using App Lab and Adafruit’s Circuit Playground, students develop programs tha
 <img src="https://images.code.org/7980152abc6fb3bc99d3f986f4071baa-image-1628699865854.png" alt="Image of an AI bot." width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 
-In this optional **AI and Machine Learning** unit, students learn how computers can find patterns in data to make decisions. Students use the Problem Solving Process for machine learning to define a problem, prepare their data, train a model, then test and evaluate their model for accuracy and potential bias. Students explore a variety of scenarios and datasets that lend themselves to machine learning. They also explore some of the modern problems with machine learning, especially around bias and impact.
+In the **AI and Machine Learning** unit, students learn how computers can find patterns in data to make decisions. Students use the Problem Solving Process for machine learning to define a problem, prepare their data, train a model, then test and evaluate their model for accuracy and potential bias. Students explore a variety of scenarios and datasets that lend themselves to machine learning. They also explore some of the modern problems with machine learning, especially around bias and impact.
 </details>
 
 <div style="clear:both"/>
