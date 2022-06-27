@@ -17,16 +17,6 @@
   "properties": {
     "family_name": "csp",
     "has_verified_resources": true,
-    "teacher_resources": [
-      [
-        "curriculum",
-        "https://curriculum.code.org/csp-19"
-      ],
-      [
-        "teacherForum",
-        "https://forum.code.org/c/csp"
-      ]
-    ],
     "version_year": "2019"
   },
   "resources": [
