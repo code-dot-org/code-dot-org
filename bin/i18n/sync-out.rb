@@ -121,8 +121,7 @@ def find_malformed_links_images(locale, file_path)
   is_json = File.extname(file_path) == '.json'
   data =
     if is_json
-      file = File.open(file_path, 'r')
-      JSON.parse(file)
+      JSON.parse(File.read(file_path, 'r'))
     else
       YAML.load_file(file_path)
     end
@@ -396,7 +395,7 @@ def distribute_translations(upload_manifests)
     if file_changed?(locale, spritelab_animation_translation_path)
       @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true, quiet: true})
       spritelab_animation_translation_file = File.join(locale_dir, spritelab_animation_translation_path)
-      translations = JSON.parse(File.open(spritelab_animation_translation_file))
+      translations = JSON.parse(File.read(spritelab_animation_translation_file))
       # Use js_locale here as the animation library is used by apps
       @manifest_builder.upload_localized_manifest(js_locale, translations) if upload_manifests
     end
@@ -404,12 +403,12 @@ def distribute_translations(upload_manifests)
     ### Blockly Core
     # Blockly doesn't know how to fall back to English, so here we manually and
     # explicitly default all untranslated strings to English.
-    blockly_english = JSON.parse(File.open("i18n/locales/source/blockly-core/core.json"))
+    blockly_english = JSON.parse(File.read("i18n/locales/source/blockly-core/core.json"))
     Dir.glob("#{locale_dir}/blockly-core/*.json") do |loc_file|
       relative_path = loc_file.delete_prefix(locale_dir)
       next unless file_changed?(locale, relative_path)
 
-      translations = JSON.parse(File.open(loc_file))
+      translations = JSON.parse(File.read(loc_file))
       # Create a hash containing all translations, with English strings in
       # place of any missing translations. We do this as 'english merge
       # translations' rather than 'translations merge english' to ensure that
