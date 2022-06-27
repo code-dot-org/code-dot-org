@@ -232,6 +232,8 @@ mr:
               name: टेक्स्ट कॉम्प्रेशन
             Web Lab:
               name: वेब लॅब
+            Sprite Lab:
+              name: स्प्राइट लॅब
             Java Lab:
               name: जावा लॅब
         algebraPD2b:
@@ -1649,7 +1651,12 @@ mr:
             Course Survey:
               name: CSA पोस्ट-कोर्स सर्वे ड्राफ्ट
         hero:
+          title: माईनक्राफ्ट हिरोचा प्रवास
+          description_short: माइनक्राफ्ट अवर ऑफ कोड साठी अगदी नवीन गतिविधीसह परत आले आहे!
           description: अवर ऑफ कोडसाठी एका नव्या कोऱ्या कृतीसह आता माईनक्राफ्ट पुन्हा परत आले आहे! माईनक्राफ्टमधून कोडद्वारे प्रवास करा.
+          lessons:
+            Minecraft Hour of Code:
+              name: माईनक्राफ्ट हिरोचा प्रवास
           student_description: अवर ऑफ कोडसाठी एका नव्या कोऱ्या कृतीसह आता माईनक्राफ्ट पुन्हा परत आले आहे! माईनक्राफ्टमधून कोडद्वारे प्रवास करा.
           name: हिरो
         applab-intro-staging:
@@ -2330,6 +2337,10 @@ mr:
             Artist:
               name: आर्टीस्ट
         aquatic:
+          title: 'माइनक्राफ्ट: व्हॉयेज एक्वाटिक'
+          lessons:
+            Aquatic:
+              name: 'माइनक्राफ्ट: व्हॉयेज एक्वाटिक'
           name: जलचर
         sconyers:
           lessons:
@@ -3186,6 +3197,8 @@ mr:
               name: कंडीशनल्स
             Events:
               name: ईव्हेंट्स
+            Sprite Lab:
+              name: स्प्राइट लॅब
             Variables:
               name: व्हेरीएबल्स
             End of Course projects:
@@ -3805,6 +3818,8 @@ mr:
               name: अभ्यासक्रमाच्या समाप्तीचे प्रोजेक्ट्स
             Variables:
               name: व्हेरीएबल्स
+            Sprite Lab:
+              name: स्प्राइट लॅब
         csd3-virtual:
           lessons:
             Variables:

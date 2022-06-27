@@ -602,6 +602,15 @@
         "jigsaw/Jigsaw": {
           "name": "Pangahono"
         },
+        "allthethings/Jigsaw": {
+          "name": "Pangahono"
+        },
+        "allthethings/Maze": {
+          "name": "Rīrapa"
+        },
+        "allthethings/Artist": {
+          "name": "Rehetoi"
+        },
         "allthethings/Flappy": {
           "name": "Flappy"
         },

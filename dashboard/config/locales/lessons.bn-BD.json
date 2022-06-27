@@ -338,6 +338,15 @@
         "jigsaw/Jigsaw": {
           "name": "টুকরো কাঠের ধাঁধা"
         },
+        "allthethings/Jigsaw": {
+          "name": "টুকরো কাঠের ধাঁধা"
+        },
+        "allthethings/Maze": {
+          "name": "গোলকধাঁধা"
+        },
+        "allthethings/Artist": {
+          "name": "শিল্পী"
+        },
         "allthethings/Bee": {
           "name": "মৌমাছি"
         },

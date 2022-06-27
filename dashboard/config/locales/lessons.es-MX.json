@@ -924,7 +924,7 @@
           "name": "Concurso de Ortografía"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "Encuesta de fin de semestre de Descubrimientos de Ciencias de la Computación"
+          "name": "Programación para entretenimiento"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Trazar formas"
@@ -1629,10 +1629,10 @@
           "name": "Una batalla real con eventos"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Programación para entretenimiento"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Trazar formas"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Dibujar en el Laboratorio de juegos"
@@ -1695,10 +1695,10 @@
           "name": "Proyecto - Diseñar un juego"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Innovaciones en computación"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Diseñar pantallas a través del código"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "The Circuit Playground"
@@ -1743,10 +1743,10 @@
           "name": "Proyecto: crear el prototipo de una innovación"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Análisis de diseño"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Entender a tu usuario"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Microactividad de diseño centrada en el usuario"
@@ -1791,10 +1791,10 @@
           "name": "Proyecto - Presentación de la aplicación"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Asuntos de representación"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Patrones y representación"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII y representación binaria"
@@ -1839,7 +1839,7 @@
           "name": "Introducción a la resolución de problemas"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Prueba posterior al proyecto"
+          "name": "El proceso de resolución de problemas"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Exploración de la resolución de problemas"
@@ -1860,10 +1860,10 @@
           "name": "Proyecto - Propuesta de aplicación"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Exploración de sitios web"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Sitios web para la expresión "
         },
         "csd2-2019/Intro to HTML": {
           "name": "Introducción al HTML"
@@ -2385,10 +2385,10 @@
           "name": "Presenta tu proyecto"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "Encuesta de fin de semestre de Descubrimientos de Ciencias de la Computación"
+          "name": "Programación para entretenimiento"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Trazar formas"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Dibujar en el Laboratorio de juegos"
@@ -2451,7 +2451,7 @@
           "name": "Proyecto - Diseñar un juego"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Innovaciones en computación"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Diseñar pantallas a través del código"
@@ -2499,7 +2499,7 @@
           "name": "Proyecto: crear el prototipo de una innovación"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Exploración de sitios web"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Sitios web para la expresión "
@@ -2568,7 +2568,7 @@
           "name": "Proyecto - Propuesta de aplicación"
         },
         "csd5-2017/Representation Matters": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Asuntos de representación"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Patrones y representación"
@@ -2613,7 +2613,7 @@
           "name": "Proyecto - Solucionar un problema de datos"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Análisis de diseño"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Entender a tu usuario"
@@ -2992,13 +2992,13 @@
           "name": "Encuesta de fin de curso para estudiantes de CSD ('18-'19)"
         },
         "allthethings/Jigsaw": {
-          "name": "Encuesta anónima de estudiantes 2"
+          "name": "Rompecabezas"
         },
         "allthethings/Maze": {
-          "name": "Prueba de Pluralsight"
+          "name": "Laberinto"
         },
         "allthethings/Artist": {
-          "name": "Ejemplo de Evaluación CSP"
+          "name": "Artista"
         },
         "allthethings/Bee": {
           "name": "Abeja"
@@ -4170,7 +4170,7 @@
           "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
         },
         "csd4-2021/Analysis of Design": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Diseñando con Empatía",
           "overview": "**Pregunta del día:** ¿Cómo podemos elegir productos en base a las necesidades del usuario?\n\nPara comenzar esta unidad, dedicada a la resolución de problemas en grupo y al desarrollo de productos, los estudiantes explorarán el diseño de distintos zapatos. Los estudiantes analizarán una variedad de zapatos y luego intentarán decidir qué zapato correspondería a un usuario potencial. También deberán brindar retroalimentación acerca de los diseños utilizando las siguientes estructuras que usarán a lo largo de esta unidad: “me gusta…”, “desearía…”, “que tal si…”. Al finalizar esta actividad, los estudiantes deberán proponer cambios al diseño de un par de zapatos con el fin de mejorar su utilidad o usabilidad.",
           "preparation": "-   Imprima una copia de la guía de actividades para cada estudiante o envíe una copia digital.",
           "purpose": "Los estudiantes inician esta unidad con una comprensión del proceso de resolución de problemas que estudiaron en las unidades anteriores del curso.\n\nEl proceso de resolución de problemas que se usa a lo largo de Descubrimientos CS está conformado por los siguientes pasos:\n\n-   Definir\n-   Preparar\n-   Intentar\n-   Reflexionar\n\nEn esta lección, los estudiantes analizarán objetos de la vida cotidiana para comprender cómo el proceso de resolución de problemas puede utilizarse para ayudar a otros. A partir de esta lección, se añadirá un nuevo componente al proceso de resolución de problemas: la empatía. Esto motivará a los estudiantes a reflexionar acerca de la experiencia y el uso que otras personas harán de los productos que ellos hayan creado.\n\nPara comenzar, y antes de hablar de los aspectos específicos del diseño de un software, analizaremos objetos no técnicos, con el objetivo de que los estudiantes puedan comprender un poco más acerca de lo que significa tomar en consideración a los usuarios finales del producto.",
@@ -4318,7 +4318,7 @@
           "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Innovaciones en computación",
           "overview": "Para iniciar la unidad final de este curso, los estudiantes investigarán acerca de las innovaciones en computación. En esta lección los estudiantes estarán expuestos a una mayor variedad de factores de formas de la computación (cómo se ve una computadora) y analizarán aquellas áreas que han sido impactadas por la computación. Más adelante, en esta unidad, y a medida que desarrollen sus propios artefactos computacionales, los estudiantes volverán a analizar los dispositivos que vieron en esta lección.",
           "preparation": "-   Revise los enlaces de las páginas de recursos en Code Studio\n-   Prepare el video [El Internet de las cosas](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) o [Las ciencias de la computación están cambiando todo](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n-   Imprima una copia de la guía de actividades para cada estudiante",
           "purpose": "Esta lección sienta las bases para que los estudiantes comprendan de qué formas podría utilizarse su tablero de circuitos para modelar un artefacto computacional innovador. El objetivo es lograr que los estudiantes reflexionen acerca de cómo las computadoras pueden ser incorporadas en la mayoría de las áreas y procesos, y también que tengan presente los impactos potenciales de este tipo de aplicación.",
@@ -4425,7 +4425,7 @@
           "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Asuntos de representación",
           "overview": "**Pregunta del día: ¿Cómo afectan los datos en las decisiones que tomamos cada día?**\n\nEn la primera lección de la unidad de datos, los estudiantes obtienen una visión general de lo que son los datos y de cómo se utilizan para resolver problemas. Los estudiantes comenzarán la lección con un breve análisis y luego realizarán una reflexión común para comprender qué son los datos. A continuación, se dividen en grupos y utilizan un conjunto de datos para recomendar varios tipos de comidas a personas con diversos criterios. Cada grupo tiene las opciones de comidas representadas de distintas maneras (imágenes, recetas, menú, información nutricional), algunas representaciones tienen más ventajas que otras. Finalmente, los grupos comparan sus respuestas y analizan de qué manera el tener distintas representaciones de los datos de las comidas influyó en la forma en la que resolvieron los distintos problemas.",
           "preparation": "-   Imprima copias de los Datos de Comidas para que cada grupo pueda tener una de las cuatro páginas\n-   Imprima una copia de la guía de actividades para cada grupo",
           "purpose": "Esta lección presenta un número importante de ideas que los estudiantes explorarán a lo largo de este capítulo. Podrán ver cómo los mismos objetos pueden ser representados de distintas formas. En el capítulo 1, aprenderán los distintos sistemas de representación que las computadoras utilizan para representar la información. También descubrirán la importancia de la representación cuando utilizamos datos para tomar decisiones. En el segundo capítulo de esta unidad, los estudiantes estudiarán más detenidamente las formas en las que los humanos y las computadoras pueden hacer uso de estos datos para tomar decisiones.",
@@ -4533,7 +4533,7 @@
           "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Programación para entretenimiento",
           "overview": "**Pregunta del día: ¿Cómo se usan las ciencias de la computación en el entretenimiento?**\n\nLos estudiantes analizan los “problemas” causados por el aburrimiento y la autoexpresión, y reflexionan acerca de cómo enfrentan estas situaciones en su vida personal. Luego, exploran el rol que tienen las ciencias de la computación, específicamente la programación, en algunas formas específicas de entretenimiento o como un medio para la autoexpresión.",
           "preparation": "-   Revise los enlaces de recursos de investigación en Code Studio\n-   Imprima una copia de la guía de actividades para cada grupo de tres estudiantes",
           "purpose": "El propósito de esta lección es iniciar esta unidad de programación captando la atención de todos los estudiantes independientemente de sus intereses o experiencias. Si bien en las últimas lecciones los estudiantes deberán desarrollar un videojuego, recomendamos no dar tanta relevancia a _este_ tema. La intención de esta lección es ampliar la perspectiva de los estudiantes acerca de la relevancia de la programación en las distintas formas de entretenimiento y autoexpresión. Esta nueva perspectiva ayudará a los estudiantes durante toda la unidad, en especial cuando deban decidir cómo aplicar las distintas habilidades de programación que aprenden.",
@@ -4717,7 +4717,7 @@
           "student_overview": "**Pregunta del día: ¿Qué puede ayudarnos a trabajar juntos y a resolver problemas en equipo?**\n\nTrabajarás con un grupo para diseñar y probar un barco de papel de aluminio que soporte el mayor número posible de monedas de un céntimo. "
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Prueba posterior al proyecto",
+          "name": "El proceso de resolución de problemas",
           "overview": "**Pregunta del día: ¿Qué pasos podemos utilizar para resolver distintos problemas?**\n\nEsta lección es una introducción al proceso de resolución de problemas formal, que los estudiantes utilizarán durante todo el curso, Definir - Preparar - Intentar - Reflexionar. Los estudiantes comenzarán esta lección realizando una lluvia de ideas de los distintos tipos de problemas a los que se enfrentan día a día. Luego, conocerán los cuatro pasos del proceso de resolución de problemas y trabajarán en conjunto para relacionar estos conceptos con sus propias experiencias resolviendo problemas. Primero, los estudiantes relacionan estos cuatro pasos con las actividades realizadas en la clase anterior, luego con un problema que son hábiles resolviendo, y finalmente con uno que les gustaría resolver mejor. Al final de la lección, la clase recopila una lista de estrategias útiles para cada paso del proceso y con esta información realizan un póster que les será útil durante la unidad y el curso.",
           "preparation": "Para cada estudiante \n\n-   Imprima copias de la guía de actividades\n\nPara la clase\n\n-   Cartulina\n-   Marcadores o lápices de color",
           "purpose": "El objetivo de esta lección es relacionar el proceso de resolución de problemas con las experiencias que los estudiantes tengan en solucionar problemas cotidianos. En las siguientes unidades de Descubrimientos de las ciencias de la computación se presentarán problemas en contextos conocidos y desconocidos. Un proceso de solución de problemas estructurado será una herramienta importante para ayudar a los estudiantes en la superación de desafíos nuevos y complejos.",
@@ -4800,7 +4800,7 @@
           "student_overview": "**Pregunta del día: ¿Cómo podemos aplicar el proceso de resolución de problemas en diferentes tipos de problemas?**\n\nCon el objetivo de comprender mejor la importancia de cada paso, en esta lección, los estudiantes trabajarán con el proceso de resolución de problemas para solucionar tres problemas distintos. "
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Exploración de páginas web",
           "overview": "**Pregunta del día: ¿Por qué las personas crean páginas web?**  \n\nCada sitio web tiene un propósito, una razón por la que existe y por la que las personas lo usan. En esta lección, los estudiantes reflexionarán acerca de los propósitos de un sitio web, tanto para los creadores como para los usuarios. Los estudiantes verán ejemplos de algunos sitios web y analizarán cuál es el propósito de sus creadores. Luego, reflexionarán acerca de las razones por las que las personas crean sitios web.",
           "preparation": "-   Imprima una copia de la guía de actividades para cada estudiante.",
           "purpose": "En toda esta unidad se hablará acerca de la World Wide Web (red informática mundial), con el propósito de mostrar la creación de sitios web como una forma de expresión. Para que los estudiantes comiencen a pensar en las razones por las que les gustaría crear un sitio web, primero deben considerar que los sitios web son herramientas útiles tanto para los usuarios como para los creadores. En esta lección, se mostrarán ejemplos de sitios web populares que los estudiantes ya conocen, sin embargo, se les pedirá que presten atención a páginas web más simples, ya que estas se encuentran en el rango de lo que podrán lograr con este curso.",

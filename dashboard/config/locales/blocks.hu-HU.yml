@@ -1045,8 +1045,8 @@ hu:
             new Behavior(patrolling, []): járőrözés
             new Behavior(moving_west_and_looping, []): nyugat felé menni és ismételgetni
             new Behavior(moving_east_and_looping, []): kelet felé menni és ismételgetni
-            new Behavior(moving_north_and_looping, []): mozgatás északra és ciklusokban
-            new Behavior(moving_south_and_looping, []): mozgatás délre és ciklusokban
+            new Behavior(moving_north_and_looping, []): mozgatás északra és hurkokban
+            new Behavior(moving_south_and_looping, []): mozgatás délre és hurkokban
       gamelab_comment:
         text: 'megjegyzés: {COMMENT}'
       gamelab_costumeImage:
