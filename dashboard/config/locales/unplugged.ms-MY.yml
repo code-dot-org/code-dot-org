@@ -202,16 +202,87 @@ ms:
           oleh saintis komputer.  Aktiviti ini akan membolehkan pelajar anda menganalisis
           cerita untuk perbezaan supaya mereka dapat menghilangkannya. Cerita-cerita
           abstrak itu menjadi templat untuk cerita baru yang menyeronokkan dan gila-gila.
+      ForLoopFun:
+        title: Gelung Untuk yang Menyeronokkan
+        desc: Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali,
+          tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai
+          struktur tambahan terbina di dalam.
+      SongwritingWithParameters:
+        desc: 'Satu daripada struktur paling gemilang di dalam dunia sains komputer
+          ialah fungsinya. Fungsi (kadang-kadang disebut sebagai prosedur) ialah atur
+          cara mini yang anda boleh gunakan berulang kali di dalam atur cara anda
+          yang lebih besar. Pelajaran ini akan membantu pelajar memahami secara intuitif
+          tujuan menggabungkan sejumlah besar kod kepada fungsi boleh menjadi latihan
+          yang berguna.  '
+      BinaryImages:
+        title: Imej Binari
+        desc: Walaupun ramai individu menganggap binari sebagai angka sifar dan satu,
+          pelajar akan diperkenalkan kepada idea bahawa maklumat boleh dijelaskan
+          dalam pelbagai pilihan binari. Pelajaran ini mengambil konsep itu selangkah
+          di hadapan kerana menggambarkan cara komputer menyimpan maklumat yang lebih
+          kompleks (seperti imej dan warna) dalam bentuk binari.
+      VideoGamesCoordinatePlanes:
+        title: Permainan Video dan Menyelaras Pesawat
+        desc: Ketahui cara permainan video yang anda sukai yang didorong oleh algebra!
+          Terokai cara ungkapan algebra dan satah koordinat yang membantu kami memahami
+          cara permainan video berfungsi, dan mula merancang untuk permainan video
+          yang akan anda cipta.
+      Contracts:
+        title: Kontrak, Domain dan Julat
+        desc: Kontrak memberi kita cara untuk memahami dan membincangkan fungsi. Dalam
+          pelajaran ini kita akan melihat cara Kontrak boleh membantu kita memahami
+          bahasa pengaturcaraan atau fungsi baharu.
+      DesignRecipe:
+        title: Resipi Rekaan
+        desc: Pada peringkat akhir, pelajar menulis beberapa fungsi yang sangat mudah
+          - tetapi fungsi yang lebih canggih memerlukan pendekatan yang lebih bijak.
+          Resipi Reka Bentuk ialah pendekatan berstruktur untuk menulis fungsi yang
+          termasuk menulis kes ujian untuk memastikan fungsi itu berfungsi seperti
+          yang diharapkan.
+      Booleans:
+        title: Boolean dan Logik
+        desc: Boolean ialah jenis data keempat dan terakhir yang akan anda pelajari
+          dalam kursus ini. Dalam aktiviti ini anda akan belajar tentang apa itu Boolean,
+          dan cara membantu kami menulis fungsi yang berfikir secara logik
+      ConditionalsPiecewiseFunctions:
+        title: Ciri Bersyarat dan Fungsi Piecewise
+        desc: Parameter yang kami hantar ke fungsi menyebabkan output berubah berdasarkan
+          corak yang sangat tegar. Katakan kita mahu parameter dengan beberapa nilai
+          untuk mencipta output menggunakan satu corak tetapi nilai lain menggunakan
+          corak yang berbeza. Di sinilah syarat diperlukan...
+      CollisionDetection:
+        title: Pengesanan Perlanggaran dan Teorem Pythagoras
+        desc: Menentukan apabila objek pada skrin menyentuh adalah aspek penting dalam
+          kebanyakan permainan. Dalam pelajaran ini kita akan melihat bagaimana Teorem
+          Pythagoras dan Formula Jarak boleh digunakan untuk mengukur jarak antara
+          dua titik pada satah, dan kemudian memutuskan sama ada dua mata (atau watak
+          permainan) itu bersentuhan.
+      courseA_unplugged_loops:
+        title: Nirplag Gelung
+        desc: Dalam pelajaran ini, anda akan belajar tentang gelung!
       courseB_unplugged_MRF:
         title: Aktiviti Nirplag
+        desc: Dalam pelajaran ini, anda akan 'mengatur cara' rakan anda!
       courseB_unplugged_loopyMRF:
         title: Aktiviti Nirplag
+        desc: Sama seperti dalam "Rakan Robotik Saya", anda akan "memprogramkan" rakan
+          anda, tetapi kali ini dengan gelung!
       courseC_Unplugged_ScreenOutTheMean:
         title: Aktiviti Nirplag
+        desc: Hari ini anda akan belajar tentang perkara yang perlu dilakukan jika
+          seseorang dihina dalam talian.
       courseD_unplugged_digitalCitizenship:
         title: Aktiviti Nirplag
+        desc: Hari ini anda akan belajar apa ertinya menjadi Warga Digital.
+      courseE_unplugged_privateInformation:
+        title: 'Pendidikan Akal Waras: Maklumat Peribadi dan Peribadi'
+        desc: Hari ini anda akan mempelajari perbezaan antara maklumat sulit dan peribadi!
       courseF_unplugged_powerOfWords:
         title: Aktiviti Nirplag
+        desc: Hari ini anda akan belajar tentang perkara yang perlu dilakukan jika
+          seseorang dihina dalam talian.
+      deeper learning description:
+        desc: 'terjemahan tiada: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritma kehidupan sebenar: Menanam Benih'
         desc: Pelajaran ini menerangkan cara menggunakan algoritma dalam kehidupan
@@ -274,7 +345,15 @@ ms:
         desc: Untuk mengetahui tentang pernyataan bersyarat, pelajar bermain permainan
           kad dan membuat peraturan seperti "Jika saya menarik kad merah, saya mendapat
           markah" dan "Jika saya menarik kad hitam, anda mendapat markah."
+      courseD_unplugged_binaryImages:
+        title: Imej Binari
+        desc: Walaupun ramai individu menganggap binari sebagai angka sifar dan satu,
+          pelajar akan diperkenalkan kepada idea bahawa maklumat boleh dijelaskan
+          dalam pelbagai pilihan binari. Pelajaran ini mengambil konsep itu selangkah
+          di hadapan kerana menggambarkan cara komputer menyimpan maklumat yang lebih
+          kompleks (seperti imej dan warna) dalam bentuk binari.
       courseE_unplugged_diceRace:
+        title: 'Algoritma Kehidupan Sebenar: Dice Race'
         desc: Pelajaran ini menyebut cara kita menggunakan algoritma dalam kehidupan
           seharian kita. Sebagai sebahagian daripada itu, pelajar akan mengenal pasti
           dan menulis algoritma untuk permainan perlumbaan dadu.
@@ -306,8 +385,21 @@ ms:
           ini membantu menjelaskan pembolehubah apa dan bagaimana kita boleh menggunakannya
           dalam pelbagai cara. Gunakan aktiviti ini sebelum (atau bersempena dengan)
           pelajaran mengenai abstraksi untuk benar-benar memukul rumah idea.
+      courseF_unplugged_forLoopFun:
+        title: Gelung Untuk yang Menyeronokkan
+        desc: Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali,
+          tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai
+          struktur tambahan terbina di dalam.
+      courseF_unplugged_songwritingParameters:
+        desc: 'Satu daripada struktur paling gemilang di dalam dunia sains komputer
+          ialah fungsinya. Fungsi (kadang-kadang disebut sebagai prosedur) ialah atur
+          cara mini yang anda boleh gunakan berulang kali di dalam atur cara anda
+          yang lebih besar. Pelajaran ini akan membantu pelajar memahami secara intuitif
+          tujuan menggabungkan sejumlah besar kod kepada fungsi boleh menjadi latihan
+          yang berguna.  '
       courseB_unplugged_MRF_2018:
         title: Rakan-rakan Robotik Saya
+        desc: Belajar mengatur cara dengan menulis kod untuk rakan anda!
       PlantASeed_2018:
         title: 'Algoritma kehidupan sebenar: Menanam Benih'
         desc: Pelajaran ini menerangkan cara menggunakan algoritma dalam kehidupan
@@ -322,6 +414,9 @@ ms:
         title: Going Places Safely
         desc: Internet mempunyai pengaruh tersendiri, tetapi kadang-kadang berbahaya.
           Guru memperkenal cara kekal selamat semasa menavigasi Internet.
+      courseA_unplugged_loops_2018:
+        title: Nirplag Gelung
+        desc: Dalam pelajaran ini, anda akan belajar tentang gelung!
       BigEvent_2018:
         title: The Big Event
         desc: Pelajar diperkenalkan kepada konsep pengaturcaraan "acara," yang merupakan
@@ -335,8 +430,11 @@ ms:
           semula lukisan.
       courseD_unplugged_digitalCitizenship_2018:
         title: Aktiviti Nirplag
+        desc: Hari ini anda akan belajar apa ertinya menjadi Warga Digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Aktiviti Nirplag
+        desc: Hari ini anda akan belajar tentang perkara yang perlu dilakukan jika
+          seseorang dihina dalam talian.
       Conditionals_2018:
         title: Bersyarat
         desc: Untuk mengetahui tentang pernyataan bersyarat, pelajar bermain permainan
@@ -346,6 +444,13 @@ ms:
         title: Your Digital Footprint
         desc: Guru memperkenal kepada pelajar idea meletakkan maklumat tentang diri
           mereka dalam talian mencipta jejak digital atau "trail" yang mempunyai akibat.
+      BinaryImages_2018:
+        title: Imej Binari
+        desc: Walaupun ramai individu menganggap binari sebagai angka sifar dan satu,
+          pelajar akan diperkenalkan kepada idea bahawa maklumat boleh dijelaskan
+          dalam pelbagai pilihan binari. Pelajaran ini mengambil konsep itu selangkah
+          di hadapan kerana menggambarkan cara komputer menyimpan maklumat yang lebih
+          kompleks (seperti imej dan warna) dalam bentuk binari.
       PaperPlanes_2018:
         title: 'Algoritma Kehidupan Sebenar: Paper Planes'
         desc: Pelajaran ini menyatakan cara kita menggunakan algoritma dalam kehidupan
@@ -362,15 +467,48 @@ ms:
         desc: Pelajar membuat gelang sebagai perwakilan binari huruf pertama nama
           mereka. Pelajar mengetahui bahawa data boleh diwakili dan disimpan dalam
           lebih daripada satu cara.
+      courseB_unplugged_CnC_2018:
+        title: Sangat Hebat untuk Mencipta dan Bermain dengan Adil
+        desc: Dipinjamkan kepada Computer Science Fundamentals oleh pasukan di Copyright
+          and Creativity, pelajaran ini wujud untuk membantu pelajar memahami proses
+          kreatif perkongsian dan inspirasi. Seiring dengan itu, promosi ekspresi
+          kreatif dan keperluan untuk bersikap adil dengan kerja kreatif akan dapat
+          dipupuk.
+      courseE_unplugged_CnC_2018:
+        title: Perkongsian Digital
+        desc: Dipinjamkan kepada Computer Science Fundamentals oleh pasukan di Copyright
+          and Creativity, pelajaran ini wujud untuk membantu pelajar memahami cabaran
+          dan faedah menghormati pemilikan dan hak cipta, terutamanya dalam persekitaran
+          digital. Pelajar harus digalakkan untuk menghormati hak artis sebagai bahagian
+          penting dalam menjadi warganegara digital yang beretika.
       RelayProgramming_2018:
         title: Pengaturcaraan penyampai
+        desc: Aktiviti ini akan bermula dengan pelajaran pendek tentang penyahpepijatan
+          dan berterusan, kemudian akan dengan cepat bergerak ke perlumbaan melawan
+          jam apabila pelajar memecah masuk ke dalam pasukan dan bekerjasama untuk
+          menulis satu arahan program pada satu masa.
       courseB_unplugged_MRF_2019:
         title: Rakan-rakan Robotik Saya
+        desc: Belajar mengatur cara dengan menulis kod untuk rakan anda!
+      BuildingAFoundation_2019:
+        title: 'terjemahan tiada: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'terjemahan tiada: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: My Loopy Robotic Friends
       Conditionals_2019:
         title: Bersyarat
         desc: Untuk mengetahui tentang pernyataan bersyarat, pelajar bermain permainan
           kad dan membuat peraturan seperti "Jika saya menarik kad merah, saya mendapat
           markah" dan "Jika saya menarik kad hitam, anda mendapat markah."
+      courseF_unplugged_powerOfWords_2019:
+        title: 'terjemahan tiada: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'terjemahan tiada: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'terjemahan tiada: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'terjemahan tiada: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'terjemahan tiada: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'terjemahan tiada: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Pengaturcaraan kertas graf
         desc: Pelajar menulis algoritma (satu set arahan) menggunakan satu set arahan
@@ -378,8 +516,40 @@ ms:
           semula lukisan.
       RelayProgramming_2018_2019:
         title: Pengaturcaraan penyampai
+        desc: Aktiviti ini akan bermula dengan pelajaran pendek tentang penyahpepijatan
+          dan berterusan, kemudian akan dengan cepat bergerak ke perlumbaan melawan
+          jam apabila pelajar memecah masuk ke dalam pasukan dan bekerjasama untuk
+          menulis satu arahan program pada satu masa.
       courseD_unplugged_digitalCitizenship_2019:
         title: Aktiviti Nirplag
+        desc: Hari ini anda akan belajar apa ertinya menjadi Warga Digital.
+      BinaryImages_2019:
+        title: Imej Binari
+        desc: Walaupun ramai individu menganggap binari sebagai angka sifar dan satu,
+          pelajar akan diperkenalkan kepada idea bahawa maklumat boleh dijelaskan
+          dalam pelbagai pilihan binari. Pelajaran ini mengambil konsep itu selangkah
+          di hadapan kerana menggambarkan cara komputer menyimpan maklumat yang lebih
+          kompleks (seperti imej dan warna) dalam bentuk binari.
+      courseE_unplugged_privateInformation_2019:
+        title: Sulit dan Maklumat Peribadi
+        desc: Dibangunkan oleh Common Sense Education, pelajaran ini adalah tentang
+          perbezaan sama ada maklumat yang dikongsi dalam talian selamat atau tidak.
+      SongwritingParameters_2019:
+        title: 'terjemahan tiada: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'terjemahan tiada: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: Perkongsian Digital
+        desc: Dipinjamkan kepada Computer Science Fundamentals oleh pasukan di Copyright
+          and Creativity, pelajaran ini wujud untuk membantu pelajar memahami cabaran
+          dan faedah menghormati pemilikan dan hak cipta, terutamanya dalam persekitaran
+          digital. Pelajar harus digalakkan untuk menghormati hak artis sebagai bahagian
+          penting dalam menjadi warganegara digital yang beretika.
+      Internet_2019:
+        title: 'terjemahan tiada: en-US.data.unplugged.Internet_2018.title'
+        desc: 'terjemahan tiada: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'terjemahan tiada: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'terjemahan tiada: en-US.data.unplugged.Crowdsourcing_2018.desc '
       GettingLoopy_2019:
         title: Getting Loopy
         desc: Pelajaran ini memperkenal konsep pengaturcaraan gelung (arahan berulang)
@@ -387,6 +557,8 @@ ms:
           diarahkan untuk mengulanginya.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Aktiviti Nirplag
+        desc: Hari ini anda akan belajar tentang perkara yang perlu dilakukan jika
+          seseorang dihina dalam talian.
       BigEvent_2019:
         title: The Big Event
         desc: Pelajar diperkenalkan kepada konsep pengaturcaraan "acara," yang merupakan
@@ -418,10 +590,20 @@ ms:
         title: Going Places Safely
         desc: Internet mempunyai pengaruh tersendiri, tetapi kadang-kadang berbahaya.
           Guru memperkenal cara kekal selamat semasa menavigasi Internet.
+      courseA_unplugged_loops_2019:
+        title: Nirplag Gelung
+        desc: Dalam pelajaran ini, anda akan belajar tentang gelung!
       DigitalFootprint_2019:
         title: Your Digital Footprint
         desc: Guru memperkenal kepada pelajar idea meletakkan maklumat tentang diri
           mereka dalam talian mencipta jejak digital atau "trail" yang mempunyai akibat.
+      courseB_unplugged_CnC_2019:
+        title: Sangat Hebat untuk Mencipta dan Bermain dengan Adil
+        desc: Dipinjamkan kepada Computer Science Fundamentals oleh pasukan di Copyright
+          and Creativity, pelajaran ini wujud untuk membantu pelajar memahami proses
+          kreatif perkongsian dan inspirasi. Seiring dengan itu, promosi ekspresi
+          kreatif dan keperluan untuk bersikap adil dengan kerja kreatif akan dapat
+          dipupuk.
       GraphingData_2019:
         title: Memotret Data
         desc: Dalam pelajaran ini, pelajar akan mengumpul data daripada projek Play
