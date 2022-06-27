@@ -22,13 +22,17 @@ describe('JavabuilderConnection', () => {
     connection,
     setIsRunning,
     setIsTesting,
-    handleTestResult;
+    handleTestResult,
+    onValidationPassed,
+    onValidationFailed;
 
   beforeEach(() => {
     sinon.stub(project, 'getCurrentId');
     onOutputMessage = sinon.stub();
     handleException = sinon.stub(ExceptionHandler, 'handleException');
     handleTestResult = sinon.stub(TestResultHandler, 'onTestResult');
+    onValidationPassed = sinon.stub();
+    onValidationFailed = sinon.stub();
     setIsRunning = sinon.stub();
     setIsTesting = sinon.stub();
     connection = new JavabuilderConnection(
@@ -41,7 +45,9 @@ describe('JavabuilderConnection', () => {
       setIsRunning,
       setIsTesting,
       ExecutionType.RUN,
-      CsaViewMode.NEIGHBORHOOD
+      CsaViewMode.NEIGHBORHOOD,
+      onValidationPassed,
+      onValidationFailed
     );
   });
 
@@ -89,6 +95,10 @@ describe('JavabuilderConnection', () => {
       const event = {
         data: JSON.stringify(data)
       };
+      handleTestResult.returns({
+        success: true,
+        isValidation: false
+      });
       connection.onMessage(event);
       expect(handleTestResult).to.have.been.calledWith(data, onOutputMessage);
     });
