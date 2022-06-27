@@ -719,13 +719,14 @@ export class WorkshopForm extends React.Component {
   handleCourseChange = event => {
     const course = this.handleFieldChange(event);
 
-    // clear facilitators, subject, and funding
+    // clear facilitators, subject, funding, and email reminders
     this.setState({
       facilitators: [],
       subject: null,
       fee: null,
       funded: '',
-      funding_type: null
+      funding_type: null,
+      suppress_email: false
     });
     this.loadAvailableFacilitators(course);
   };
