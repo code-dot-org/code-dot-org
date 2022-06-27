@@ -46,6 +46,9 @@ describe('JavabuilderConnection', () => {
       setIsTesting,
       ExecutionType.RUN,
       CsaViewMode.NEIGHBORHOOD,
+      null,
+      null,
+      null,
       onValidationPassed,
       onValidationFailed
     );
@@ -149,6 +152,82 @@ describe('JavabuilderConnection', () => {
 
       sinon.assert.calledWith(setIsTesting, false);
       sinon.assert.notCalled(setIsRunning);
+    });
+
+    it('Calls validation passed if validation passed', () => {
+      const data = {
+        type: WebSocketMessageType.TEST_RESULT,
+        value: UserTestResultSignalType.TEST_STATUS,
+        detail: {
+          status: TestStatus.SUCCESSFUL,
+          className: 'MyTestClass',
+          methodName: 'myTestMethod'
+        }
+      };
+      const event = {
+        data: JSON.stringify(data)
+      };
+      handleTestResult.returns({
+        success: true,
+        isValidation: true
+      });
+      // send a single passed validation message
+      connection.onMessage(event);
+      connection.handleExecutionFinished();
+      sinon.assert.called(onValidationPassed);
+      sinon.assert.notCalled(onValidationFailed);
+    });
+
+    it('Calls validation failed if validation failed', () => {
+      const data = {
+        type: WebSocketMessageType.TEST_RESULT,
+        value: UserTestResultSignalType.TEST_STATUS,
+        detail: {
+          status: TestStatus.SUCCESSFUL,
+          className: 'MyTestClass',
+          methodName: 'myTestMethod'
+        }
+      };
+      const event = {
+        data: JSON.stringify(data)
+      };
+      // two tests, first succeeds, second passes
+      handleTestResult.onCall(0).returns({
+        success: true,
+        isValidation: true
+      });
+      handleTestResult.onCall(1).returns({
+        success: false,
+        isValidation: true
+      });
+      connection.onMessage(event);
+      connection.onMessage(event);
+      connection.handleExecutionFinished();
+      sinon.assert.called(onValidationFailed);
+      sinon.assert.notCalled(onValidationPassed);
+    });
+
+    it('Does not call validation passed or failed if no validation tests were seen', () => {
+      const data = {
+        type: WebSocketMessageType.TEST_RESULT,
+        value: UserTestResultSignalType.TEST_STATUS,
+        detail: {
+          status: TestStatus.SUCCESSFUL,
+          className: 'MyTestClass',
+          methodName: 'myTestMethod'
+        }
+      };
+      const event = {
+        data: JSON.stringify(data)
+      };
+      handleTestResult.returns({
+        success: true,
+        isValidation: false
+      });
+      connection.onMessage(event);
+      connection.handleExecutionFinished();
+      sinon.assert.notCalled(onValidationFailed);
+      sinon.assert.notCalled(onValidationPassed);
     });
 
     function createJavabuilderConnection(executionType) {
