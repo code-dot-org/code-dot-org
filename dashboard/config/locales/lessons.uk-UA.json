@@ -264,9 +264,6 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Грамотна Бджілка"
         },
-        "csd3-2018/Programming for Entertainment": {
-          "name": "Опитування по закінченню курсу Відкриття інформатики"
-        },
         "csd3-2018/Variables": {
           "name": "Змінні"
         },
@@ -399,9 +396,6 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Грамотна Бджілка"
         },
-        "csd3-2019/Plotting Shapes": {
-          "name": "Опитування після курсу Відкриття інформатики"
-        },
         "csd3-2019/Variables": {
           "name": "Змінні"
         },
@@ -420,17 +414,11 @@
         "csd3-2019/Functions": {
           "name": "Функції"
         },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "Опитування після курсу Відкриття інформатики"
-        },
         "csd6-2019/Accelerometer": {
           "name": "Акселерометр"
         },
         "csd6-2019/Functions with Parameters": {
           "name": "Функції з параметрами"
-        },
-        "csd4-2019/Understanding Your User": {
-          "name": "Опитування після курсу Відкриття інформатики"
         },
         "csd4-2019/Identifying User Needs": {
           "name": "Визначення потреб користувачів"
@@ -444,17 +432,14 @@
         "csd4-2019/Prototype Testing": {
           "name": "Випробування прототипів"
         },
-        "csd5-2019/Patterns and Representation": {
-          "name": "Опитування після курсу Відкриття інформатики"
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Процес вирішення проблем"
         },
         "csd1-2019/What is a Computer?": {
           "name": "Що таке комп’ютер?"
         },
         "csd1-2019/Processing": {
           "name": "В обробці"
-        },
-        "csd2-2019/Websites for Expression ": {
-          "name": "Опитування після курсу Відкриття інформатики"
         },
         "csd2-2019/Intro to HTML": {
           "name": "Вступ до HTML"
@@ -548,9 +533,6 @@
         },
         "express-2017/Nested Loops": {
           "name": "Вкладені цикли"
-        },
-        "csd3-2017/Programming for Entertainment": {
-          "name": "Опитування по закінченню курсу Відкриття інформатики"
         },
         "csd3-2017/Variables": {
           "name": "Змінні"
@@ -909,6 +891,15 @@
         "jigsaw/Jigsaw": {
           "name": "Пазли"
         },
+        "allthethings/Jigsaw": {
+          "name": "Пазли"
+        },
+        "allthethings/Maze": {
+          "name": "Лабіринт"
+        },
+        "allthethings/Artist": {
+          "name": "Художник"
+        },
         "allthethings/Bee": {
           "name": "Бджілка"
         },
@@ -1076,6 +1067,9 @@
         },
         "csd3-2021/lesson-1": {
           "name": "Опитування після курсу Відкриття інформатики"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Процес вирішення проблем"
         },
         "csd1-2021/What is a Computer?": {
           "name": "Що таке комп’ютер?"

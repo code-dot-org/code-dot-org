@@ -851,7 +851,7 @@
           "name": "Soletrando"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "CS Discoveries - Pesquisa de fim de semestre"
+          "name": "Programação para entretenimento"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Formas de plotagem"
@@ -1544,10 +1544,10 @@
           "name": "Um Battle Royal com eventos"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Teste pós-projeto"
+          "name": "Programação para entretenimento"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Pesquisa do CS Discoveries pós curso"
+          "name": "Formas de plotagem"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Desenhando no Laboratório de Jogos"
@@ -1610,10 +1610,10 @@
           "name": "Projeto - Projetar um Jogo"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Teste pós-projeto"
+          "name": "Inovações em Computação"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "Pesquisa do CS Discoveries pós curso"
+          "name": "Criando telas com código"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "O parque de diversões do circuito"
@@ -1658,10 +1658,10 @@
           "name": "Projeto: Protótipo de Inovação"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Teste pós-projeto"
+          "name": "Análise de Design"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Pesquisa do CS Discoveries pós curso"
+          "name": "Entendendo seu usuário"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Micro atividade de design centrado no usuário"
@@ -1706,10 +1706,10 @@
           "name": "Projeto - Apresentação do App"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Teste pós-projeto"
+          "name": "Representação Importa"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Pesquisa do CS Discoveries pós curso"
+          "name": "Padrões e Representações"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII e Representações Binárias"
@@ -1754,7 +1754,7 @@
           "name": "Introdução a Resolução de problemas"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Teste pós-projeto"
+          "name": "O Processo de Resolução de Problemas"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Explorando a solução de problemas"
@@ -1775,10 +1775,10 @@
           "name": "Projeto - Propor um Aplicativo"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Teste pós-projeto"
+          "name": "Explorando sites"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Pesquisa do CS Discoveries pós curso"
+          "name": "Sites para Expressão "
         },
         "csd2-2019/Intro to HTML": {
           "name": "Introdução a HTML"
@@ -2300,10 +2300,10 @@
           "name": "Apresente seu projeto"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "CS Discoveries - Pesquisa de fim de semestre"
+          "name": "Programação para entretenimento"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "Pesquisa Pós-Curso CSD"
+          "name": "Formas de plotagem"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Desenhando no Laboratório de Jogos"
@@ -2366,7 +2366,7 @@
           "name": "Projeto - Projetar um Jogo"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "Pesquisa Pós-Curso CSD"
+          "name": "Inovações em Computação"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Criando telas com código"
@@ -2414,7 +2414,7 @@
           "name": "Projeto: Protótipo de Inovação"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "Pesquisa Pós-Curso CSD"
+          "name": "Explorando sites"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Sites para Expressão "
@@ -2483,7 +2483,7 @@
           "name": "Projeto - Propor um Aplicativo"
         },
         "csd5-2017/Representation Matters": {
-          "name": "Pesquisa Pós-Curso CSD"
+          "name": "Representação Importa"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Padrões e Representações"
@@ -2528,7 +2528,7 @@
           "name": "Projeto - Resolver um problema de dados"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "Pesquisa Pós-Curso CSD"
+          "name": "Análise de Design"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Entendendo seu usuário"
@@ -2905,10 +2905,13 @@
           "name": "CSD pesquisa pós-curso de estudantes ('18'19)"
         },
         "allthethings/Jigsaw": {
-          "name": "Pesquisa anônima de estudante 2"
+          "name": "Quebra-cabeças"
         },
         "allthethings/Maze": {
-          "name": "Teste Pluralsight"
+          "name": "Labirinto"
+        },
+        "allthethings/Artist": {
+          "name": "Artista"
         },
         "allthethings/Bee": {
           "name": "Abelha"
@@ -3870,9 +3873,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "Teste pós-projeto"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "Entendendo seu usuário"
         },
@@ -3907,7 +3907,7 @@
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Teste pós-projeto",
+          "name": "Inovações em Computação",
           "overview": "Para iniciar a unidade final deste curso, os alunos farão algumas pesquisas sobre inovações interessantes na computação. Esta lição irá expor os alunos a uma variedade mais ampla de fatores de forma de computação (aparência de um computador) e campos afetados pela computação. Posteriormente nesta unidade, os alunos analisarão os dispositivos que encontraram nesta lição à medida que desenvolvem seus próprios dispositivos físicos de computação."
         },
         "csd6-2021/Designing Screens with Code": {
@@ -3965,7 +3965,7 @@
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Teste pós-projeto"
+          "name": "Representação Importa"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Padrões e Representações"
@@ -4007,7 +4007,7 @@
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Teste pós-projeto"
+          "name": "Programação para entretenimento"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Formas de plotagem"
@@ -4079,7 +4079,7 @@
           "name": "Introdução a Resolução de problemas"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Teste pós-projeto"
+          "name": "O Processo de Resolução de Problemas"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Explorando a solução de problemas"
@@ -4100,7 +4100,7 @@
           "name": "Projeto - Propor um Aplicativo"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Teste pós-projeto"
+          "name": "Explorando páginas da Web"
         },
         "csd2-2021/Intro to HTML": {
           "name": "Introdução a HTML"

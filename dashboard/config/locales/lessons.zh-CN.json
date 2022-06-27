@@ -834,7 +834,7 @@
           "name": "拼字比赛"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "计算机科学发现期末调查"
+          "name": "娱乐编程"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "绘制形状"
@@ -1521,10 +1521,10 @@
           "name": "游戏实验室中的事件"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "项目后测试"
+          "name": "娱乐编程"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "计算机科学发现课后问卷"
+          "name": "绘制形状"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "在游戏实验室绘画"
@@ -1587,10 +1587,10 @@
           "name": "项目 - 设计一个游戏"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "项目后测试"
+          "name": "计算中的创新"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "计算机科学发现课后问卷"
+          "name": "使用代码设计屏幕"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "电路游乐场"
@@ -1635,10 +1635,10 @@
           "name": "项目：创新原型"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "项目后测试"
+          "name": "设计分析"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "计算机科学发现课后问卷"
+          "name": "了解您的用户"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "以用户为中心的设计微活动"
@@ -1683,10 +1683,10 @@
           "name": "项目 - 应用程序演示"
         },
         "csd5-2019/Representation Matters": {
-          "name": "项目后测试"
+          "name": "表示事项"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "计算机科学发现课后问卷"
+          "name": "模式和表示法"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII 和二进制表示形式"
@@ -1731,7 +1731,7 @@
           "name": "解决问题入门"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "项目后测试"
+          "name": "解决问题的过程"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "探索解决问题"
@@ -1752,10 +1752,10 @@
           "name": "项目- 提议一个应用程序"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "项目后测试"
+          "name": "探索网站"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "计算机科学发现课后问卷"
+          "name": "网址表达式 "
         },
         "csd2-2019/Intro to HTML": {
           "name": "HTML介绍"
@@ -2277,10 +2277,10 @@
           "name": "介绍您的项目"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "计算机科学发现期末调查"
+          "name": "娱乐编程"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "计算机科学发现课后问卷"
+          "name": "绘制形状"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "在游戏实验室绘画"
@@ -2343,7 +2343,7 @@
           "name": "项目 - 设计一个游戏"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "计算机科学发现课后问卷"
+          "name": "计算中的创新"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "使用代码设计屏幕"
@@ -2391,7 +2391,7 @@
           "name": "项目：创新原型"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "计算机科学发现课后问卷"
+          "name": "探索网站"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "网址表达式 "
@@ -2460,7 +2460,7 @@
           "name": "项目- 提议一个应用程序"
         },
         "csd5-2017/Representation Matters": {
-          "name": "计算机科学发现课后问卷"
+          "name": "表示事项"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "模式和表示法"
@@ -2505,7 +2505,7 @@
           "name": "项目- 解决数据问题"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "计算机科学发现课后问卷"
+          "name": "设计分析"
         },
         "csd4-2017/Understanding Your User": {
           "name": "了解您的用户"
@@ -2884,10 +2884,13 @@
           "name": "计算机科学发现学生课程后调查"
         },
         "allthethings/Jigsaw": {
-          "name": "匿名学生调查2"
+          "name": "拼图"
         },
         "allthethings/Maze": {
-          "name": "Pluralsight 测试"
+          "name": "迷宫"
+        },
+        "allthethings/Artist": {
+          "name": "小艺术家"
         },
         "allthethings/Bee": {
           "name": "蜜蜂"
@@ -3916,9 +3919,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "计算机科学发现课后调查"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "项目后测试"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "了解您的用户"
         },
@@ -3953,7 +3953,7 @@
           "name": "计算机科学发现课后调查"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "项目后测试",
+          "name": "计算中的创新",
           "overview": "为了开始这门课程的最后一个单元, 学生们将对计算中有趣的创新做一些研究。本课将向学生展示各种计算形式的因素 (计算机的外观是什么样的) 和受计算影响的领域。在本单元的后面课程中, 学生在开发自己的物理计算设备时, 他们会回顾在本课中学习到的设备。"
         },
         "csd6-2021/Designing Screens with Code": {
@@ -4011,7 +4011,7 @@
           "name": "计算机科学发现课后调查"
         },
         "csd5-2021/Representation Matters": {
-          "name": "项目后测试"
+          "name": "表示事项"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "模式和表示法"
@@ -4053,7 +4053,7 @@
           "name": "计算机科学发现课后调查"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "项目后测试"
+          "name": "娱乐编程"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "绘制形状"
@@ -4130,7 +4130,7 @@
           "preparation": "**小组须知**\n\n-   2张5X5英寸的铝箔\n-   1个能储存3-5英寸水的容器\n-   几张能够放在容器下面的纸巾或废纸 \n-   15个便士（硬币）\n-   一份活动介绍的拷贝\n\n**教师须知**\n\n-   一个可以储存3-5英寸水的容器 \n-   50个便士（硬币） \n-   更多纸巾或废纸"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "项目后测试"
+          "name": "解决问题的过程"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "探索解决问题"
@@ -4151,7 +4151,7 @@
           "name": "项目- 提议一个应用程序"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "项目后测试"
+          "name": "探索网页"
         },
         "csd2-2021/Intro to HTML": {
           "name": "HTML介绍"

@@ -179,6 +179,7 @@ it:
       Orientation: Orientamento
       Overview: Panoramica
       Pair Programming: Programmazione in coppia
+      Picturing Data: Rappresentazione grafica dei dati
       Planning: Gestione della classe
       Platform Jumper - Background and Variables: Saltatore di Piattaforme - Sfondo e Variabili
       Platform Jumper - Items: Saltatore di Piattaforme - Elementi
@@ -226,7 +227,7 @@ it:
       Side Scroller: Scorrimento Laterale
       Simple Circuits: Circuiti Semplici
       Skill Building: Esercizi per lo sviluppo delle competenze
-      Skill-Building: Palestra delle competenze
+      Skill-Building: Esercizi per lo sviluppo delle competenze
       Sliders: Cursori
       Smart Bike - Blinkers: Bici Intelligente - Frecce
       Songwriting - Functions Unplugged Activity: Composizione di canzoni - Attività tradizionale sulle funzioni
@@ -291,7 +292,7 @@ it:
       'Video: Drawing in Game Lab - Part 2': 'Video: Disegnare nel Game Lab - Parte 2'
       'Video: Events': 'Video: Eventi'
       'Video: Follow The Digital Trail': 'Video: Segui le tue tracce digitali'
-      'Video: For Loops': 'Video: per i loop'
+      'Video: For Loops': 'Video: Cicli con contatore'
       'Video: Functions': 'Video: Funzioni'
       'Video: Getting Loopy': 'Video: Diventare ripetitivi'
       'Video: Happy Maps - Unplugged Activity': 'Video: Mappe felici - Attività tradizionale'
@@ -320,10 +321,10 @@ it:
       'Video: Minecraft: Voyage Aquatic Congratulations': 'Video: Minecraft: Viaggio Acquatico - Congratulazioni'
       'Video: Minecraft: Voyage Aquatic Introduction': 'Video: Minecraft: Viaggio acquatico - Introduzione'
       'Video: Minecraft: Voyage Aquatic Repeat Until': 'Video: Minecraft: Viaggio acquatico - Ripeti fino a che'
-      'Video: Nested Loops': 'Video: Cicli nidificati'
-      'Video: Nested Loops with the Bee': 'Video: Cicli nidificati con l''ape'
+      'Video: Nested Loops': 'Video: Cicli annidati'
+      'Video: Nested Loops with the Bee': 'Video: Cicli annidati con l''ape'
       'Video: Outbreak Simulator: Introduction': 'Video: Outbreak Simulator: Introduzione'
-      'Video: Pair Programming': 'Video: Programmazione in coppia'
+      'Video: Pair Programming': 'Video: Programmazione in coppie'
       'Video: Pair Programming ': 'Video: Programmazione a coppie '
       'Video: Problem Solving Process': 'Video: Processo di Risoluzione di Problemi'
       'Video: Programming with Blocks': 'Video: programmare con i blocchi'
