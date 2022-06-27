@@ -436,19 +436,7 @@ class Pd::Workshop < ApplicationRecord
   # Suppress 3 and 10-day reminders for certain workshops
   # The suppress_email? attribute gets set in the UI
   def suppress_reminders?
-    ([
-      SUBJECT_CSP_TEACHER_CON,
-      SUBJECT_CSP_FIT,
-      SUBJECT_CSD_TEACHER_CON,
-      SUBJECT_CSD_FIT,
-      SUBJECT_CSF_FIT,
-      SUBJECT_ADMIN_COUNSELOR_WELCOME,
-      SUBJECT_ADMIN_COUNSELOR_SLP_INTRO,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL1,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL2,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL3,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4
-    ].include? subject) || suppress_email?
+    (MUST_SUPPRESS_EMAIL_SUBJECTS.include? subject) || suppress_email?
   end
 
   def self.send_reminder_for_upcoming_in_days(days)
