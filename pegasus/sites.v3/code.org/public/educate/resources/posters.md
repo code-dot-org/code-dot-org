@@ -119,9 +119,58 @@ theme: responsive
   </figure>
   <figure>
     <a href="/files/obama-poster.pdf">
-      <img src="/images/fit-193/obama-poster.png" alt="Downloadable poster featuring a quote by Former President Barack Obama: Don't just play on your phone, program it." />
+      <img src="/images/fit-300/obama-poster.png" alt="Downloadable poster featuring a quote by Former President Barack Obama: Don't just play on your phone, program it." />
     </a>
   </figure>
 </section>
 
 <hr>
+
+<section>
+  <figure>
+    <a href="/files/heritage-posters/poster-diana-trujillo.pdf">
+      <img src="/images/fit-300/poster-diana-trujillo.jpg" alt="Downloadable poster featuring Diana Trujillo who leads the engineering team responsible for the robotic arm of NASA’s Perseverance Rover" />
+    </a>
+  </figure>
+  <figure>
+    <a href="/files/heritage-posters/poster-john-romero.pdf">
+      <img src="/images/fit-300/poster-john-romero.jpg" alt="Downloadable poster featuring John Romero who is an influential game designer whose works include Doom, Quake, and Wolfenstein 3D" />
+    </a>
+  </figure>
+  <figure>
+    <a href="/files/heritage-posters/poster-ellen-ochoa.pdf">
+      <img src="/images/fit-300/poster-ellen-ochoa.jpg" alt="Downloadable poster featuring Ellen Ochoa who is the first Hispanic woman in space and first Hispanic director of the Johnson Space Center" />
+    </a>
+  </figure>
+  <figure>
+    <a href="/files/heritage-posters/poster-luis-von-ahn.pdf">
+      <img src="/images/fit-300/poster-luis-von-ahn.jpg" alt="Downloadable poster featuring Luis von Ahn who is the co-founder of Duolingo, inventor of reCAPTCHA and a MacArthur Fellowship winner" />
+    </a>
+  </figure>
+  <figure>
+    <a href="/files/heritage-posters/poster-john-henry.pdf">
+      <img src="/images/fit-300/poster-john-henry.jpg" alt="Downloadable poster featuring John Henry who is an entrepreneur who started a company that uses AI to make car insurance rates more equitable for POC" />
+    </a>
+  </figure>
+  <figure>
+    <a href="/files/heritage-posters/poster-laura-teclemariam.pdf">
+      <img src="/images/fit-300/poster-laura-teclemariam.jpg" alt="Downloadable poster featuring Laura Teclemariam who is the Director of Product at Netflix and the Chairwoman of the Board at Black in Gaming" />
+    </a>
+  </figure>
+  <figure>
+    <a href="/files/heritage-posters/poster-joseph-saulter.pdf">
+      <img src="/images/fit-300/poster-joseph-saulter.jpg" alt="Downloadable poster featuring Joseph Saulter who is a musician, game designer, and CEO of the first African American-owned 3D video game company in the U.S." />
+    </a>
+  </figure>
+  <figure>
+    <a href="/files/heritage-posters/poster-window-snyder.pdf">
+      <img src="/images/fit-300/poster-window-snyder.jpg" alt="Downloadable poster featuring Window Snyder who is a computer security expert who’s worked at Apple, Microsoft, Mozilla, Intel, Square, and more" />
+    </a>
+  </figure>
+</section>
+
+
+
+
+
+
