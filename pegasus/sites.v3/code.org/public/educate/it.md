@@ -65,15 +65,14 @@ theme: responsive
  </tr>
 </table>
 
-
 ## Sites to Unblock
 
 For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
 
 | Priority                                                                                 | URL                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Required**                                                                             | `https://code.org`<br/>`https://*.code.org`                                                                                                            |
-| **Optional**                                                                             | `https://cdn.optimizely.com`<br/>`https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                                               |
+| **Optional**                                                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                                                                                |
 | **To use YouTube hosted videos** <br/>(Enhanced Privacy Mode - available late July 2018) | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                                         |
 | **To use YouTube hosted videos** <br/>(Deprecated late July 2018)                        | `https://s.youtube.com/*`<br/>`https://www.youtube.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                |
 | **To use Code.org hosted videos**                                                        | **Unblock:**<br/>`https://videos.code.org`<br/>**Block:**<br/>`https://www.youtube.com/favicon.ico`<br/>`https://www.youtube-nocookie.com/favicon.ico` |
