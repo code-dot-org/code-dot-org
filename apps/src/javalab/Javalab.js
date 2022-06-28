@@ -22,7 +22,8 @@ import javalab, {
   setBackpackEnabled,
   appendMarkdownLog,
   setIsReadOnlyWorkspace,
-  setHasOpenCodeReview
+  setHasOpenCodeReview,
+  setValidationPassed
 } from './javalabRedux';
 import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -258,14 +259,24 @@ Javalab.prototype.init = function(config) {
   }
 
   // If we aren't editing start sources but we have validation code, we need to
-  // store it in redux to check for naming conflicts
+  // store it in redux to check for naming conflicts.
+  let hasValidation = false;
   if (
     !config.level.editBlocks &&
     validation &&
     typeof validation === 'object' &&
     Object.keys(validation).length > 0
   ) {
+    hasValidation = true;
     getStore().dispatch(setAllValidation(validation));
+  }
+
+  // If validation exists and the level is not passing, validationPassed
+  // should be false. Otherwise it is true.
+  if (hasValidation && !config.level.isPassing) {
+    getStore().dispatch(setValidationPassed(false));
+  } else {
+    getStore().dispatch(setValidationPassed(true));
   }
 
   // Set information about the current Javalab level being displayed.
@@ -295,8 +306,10 @@ Javalab.prototype.init = function(config) {
       // that has been submitted will be considered "readonly" but a student must still be able to
       // unsubmit it. That is generally the only exception to a readonly workspace. However if a
       // student is reviewing another student's code, we'd always want to disable the finish button.
+      // Finally, if validation is not passing, the finish button should also be disabled.
       (!!config.readonlyWorkspace && !config.level.submittable) ||
-        !!config.isCodeReviewing
+        !!config.isCodeReviewing ||
+        (hasValidation && !config.level.isPassing)
     )
   );
 
@@ -533,6 +546,7 @@ Javalab.prototype.onValidationPassed = function(studioApp) {
     submitted: getStore().getState().pageConstants.isSubmitted,
     onComplete: () => {}
   });
+  getStore().dispatch(setValidationPassed(true));
 };
 
 Javalab.prototype.onValidationFailed = function(studioApp) {

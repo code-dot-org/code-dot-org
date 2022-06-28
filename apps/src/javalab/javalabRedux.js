@@ -32,6 +32,7 @@ const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
 const SET_IS_READONLY_WORKSPACE = 'javalab/SET_IS_READONLY_WORKSPACE';
 const SET_HAS_OPEN_CODE_REVIEW = 'javalab/SET_HAS_OPEN_CODE_REVIEW';
 const SET_COMMIT_SAVE_STATUS = 'javalab/SET_COMMIT_SAVE_STATUS';
+const SET_VALIDATION_PASSED = 'javalab/SET_VALIDATION_PASSED';
 
 // Exported for test
 export const initialState = {
@@ -65,7 +66,8 @@ export const initialState = {
   isReadOnlyWorkspace: false,
   hasOpenCodeReview: false,
   isCommitSaveInProgress: false,
-  hasCommitSaveError: false
+  hasCommitSaveError: false,
+  validationPassed: false
 };
 
 // Action Creators
@@ -289,6 +291,11 @@ export const setCommitSaveStatus = (
   hasCommitSaveError
 });
 
+export const setValidationPassed = validationPassed => ({
+  type: SET_VALIDATION_PASSED,
+  validationPassed
+});
+
 // Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
@@ -501,6 +508,12 @@ export default function reducer(state = initialState, action) {
       ...state,
       isCommitSaveInProgress: action.isCommitSaveInProgress,
       hasCommitSaveError: action.hasCommitSaveError
+    };
+  }
+  if (action.type === SET_VALIDATION_PASSED) {
+    return {
+      ...state,
+      validationPassed: action.validationPassed
     };
   }
   return state;
