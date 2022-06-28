@@ -59,22 +59,22 @@ theme: responsive
 <section>
   <figure>
     <a href="/files/careers/maddy-maxey.pdf">
-      <img src="/images/fit-400/careers/poster_thumbnail_maddy_maxey.jpg" alt="Downloadable poster with a young man leaning over a technical project and the headline: You can be a creator and an artist, not just a consumer" />
+      <img src="/images/fit-400/careers/poster_thumbnail_maddy_maxey.jpg" alt="Downloadable poster with a student leaning over a technical project and the headline: You can be a creator and an artist, not just a consumer" />
     </a>
   </figure>
   <figure>
     <a href="/files/careers/nidhi-and-erin.pdf">
-      <img src="/images/fit-400/careers/poster_thumbnail_nidhi_erin.jpg" alt="Downloadable poster with two young women smiling and the headline: Coding is deeply creative work" />
+      <img src="/images/fit-400/careers/poster_thumbnail_nidhi_erin.jpg" alt="Downloadable poster with two students smiling and the headline: Coding is deeply creative work" />
     </a>
   </figure>
   <figure>
     <a href="/files/careers/rory-and-kieran.pdf">
-      <img src="/images/fit-400/careers/poster_thumbnail_rory_kieran.jpg" alt="Downloadable poster with two young men smiling and the headline: When things get tough, dig deep — your future is yours to build" />
+      <img src="/images/fit-400/careers/poster_thumbnail_rory_kieran.jpg" alt="Downloadable poster with two students smiling and the headline: When things get tough, dig deep — your future is yours to build" />
     </a>
   </figure>
   <figure>
     <a href="/files/careers/javier-aguera.pdf">
-      <img src="/images/fit-250/careers/poster_thumbnail_javier_aguera.jpg" alt="Downloadable poster with a young man holding a cellphone and the headline: The skills you learn today will let you shape tomorrow's future" />
+      <img src="/images/fit-250/careers/poster_thumbnail_javier_aguera.jpg" alt="Downloadable poster with a student holding a cellphone and the headline: The skills you learn today will let you shape tomorrow's future" />
     </a>
   </figure>
 </section>
