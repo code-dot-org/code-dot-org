@@ -1,0 +1,30 @@
+@import 'imports/_breakpoints.scss';
+
+section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+figure {
+  width: 22%;
+  margin: 1em 2em 1em 0;
+
+  @media screen and (max-width: $width-md) {
+    width: 28%;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    width: 42%;
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: .75em;
+  }
+
+  figcaption {
+    line-height: 1.2;
+  }
+}
