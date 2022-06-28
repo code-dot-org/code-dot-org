@@ -14,12 +14,14 @@
 #  deleted_at       :datetime
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  active           :boolean
+#  open             :boolean
 #
 # Indexes
 #
 #  index_code_reviews_for_peer_lookup               (user_id,script_id,project_level_id,closed_at,deleted_at)
 #  index_code_reviews_on_project_id_and_deleted_at  (project_id,deleted_at)
-#  index_code_reviews_unique                        (user_id,project_id,closed_at,deleted_at) UNIQUE
+#  index_code_reviews_unique                        (user_id,project_id,open,active) UNIQUE
 #
 class CodeReview < ApplicationRecord
   acts_as_paranoid
@@ -31,6 +33,9 @@ class CodeReview < ApplicationRecord
 
   # Enforce that each student can only have one open code review per script and
   # level. (This is also enforced at the database level with a unique index.)
+  #
+  # See migration 20220627214005_add_active_to_code_reviews.rb for more information
+  # about this unique index and the active and open virtual columns
   validates_uniqueness_of :user_id, scope: [:project_id],
     conditions: -> {where(closed_at: nil)},
     message: 'already has an open code review for this project'
