@@ -530,6 +530,15 @@
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "type": "影片"
         },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "空白區故事"
+        },
+        "blank_space_stories/coursef/2021": {
+          "name": "空白區故事"
+        },
+        "text_and_prompts/coursef/2021": {
+          "name": "文字與提示"
+        },
         "pause_and_think_online/coursef/2021": {
           "name": "在線上，停一停、想一想",
           "type": "影片"
@@ -1016,6 +1025,9 @@
         "unplugged_blocks_courses_c-f__5/express/2021": {
           "name": "不插電活動積木（課程 C-F）"
         },
+        "text_and_prompts/express/2021": {
+          "name": "文字與提示"
+        },
         "variables_video/express/2021": {
           "name": "變數"
         },
@@ -1126,23 +1138,45 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "影片"
         },
+        "patterns_in_data/csd/2021": {
+          "name": "數據中的規律"
+        },
+        "patterns_in_data_1/csd/2021": {
+          "name": "數據中的規律"
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "AI Lab 的介紹"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "AI Lab 的介紹",
           "type": "影片"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "AI Lab 的訓練和測試",
           "type": "影片"
+        },
+        "importing_a_model_in_app_lab/csd/2021": {
+          "name": "從 App Lab 匯入模型"
         },
         "ai_training_data_bias/csd/2021": {
           "name": "AI（人工智慧）：訓練資料與偏見",
           "type": "影片"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "AI Lab 的模型卡",
           "type": "影片"
         },
         "if-statements_in_app_lab/csd/2021": {
           "type": "影片"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "AI Lab 的數字資料"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "AI Lab 的數字資料"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "AI Lab 的數字資料",
           "type": "影片"
         },
         "ai_ethics_research_reflection/csd/2021": {
@@ -1200,6 +1234,15 @@
         },
         "responding_to_user_input/csd/2021": {
           "name": "回應使用者輸入的內容"
+        },
+        "bugs-and-features-planning/csd/2021": {
+          "name": "臭蟲和功能"
+        },
+        "bugs_and_features/csd/2021": {
+          "name": "臭蟲和功能"
+        },
+        "updating-your-prototype/csd/2021": {
+          "name": "更新你的原型"
         },
         "app-presentation/csd/2021": {
           "name": "應用程式簡報",
@@ -1313,7 +1356,14 @@
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "數字表示法"
         },
+        "create-a-representation-exemplar-2019/csd/2021": {
+          "name": "建立表示法"
+        },
+        "encode-a-thing/csd/2021": {
+          "name": "建立表示法"
+        },
         "create_a_representation/csd/2021": {
+          "name": "建立表示法",
           "type": "標題 "
         },
         "structuring_data/csd/2021": {

@@ -870,7 +870,7 @@
           "name": "Buchstabierwettbewerb"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "Erkenntnisse aus der Informatik Befragung zum Semesterende"
+          "name": "Programmieren zur Unterhaltung"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Formen plotten"
@@ -1572,10 +1572,10 @@
           "name": "Royal Battle mit Ereignissen"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Test nach dem Projekt"
+          "name": "Programmieren zur Unterhaltung"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "Formen plotten"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Zeichnen im Game Lab"
@@ -1638,10 +1638,10 @@
           "name": "Projekt Ein Spiel erstellen"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Test nach dem Projekt"
+          "name": "Innovationen in der Datenverarbeitung"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "Bildschirme mit Code gestalten"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "Der Circuit Playground"
@@ -1686,10 +1686,10 @@
           "name": "Projekt: Prototyp einer Innovation"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Test nach dem Projekt"
+          "name": "Analyse der Planung"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "Den Benutzer verstehen"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Benutzerzentrierte Design-Mikroaktivität"
@@ -1734,10 +1734,10 @@
           "name": "Projekt - App-Präsentation"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Test nach dem Projekt"
+          "name": "Darstellung ist wichtig"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "Muster und Darstellung"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII- und Binärdarstellung"
@@ -1782,7 +1782,7 @@
           "name": "Einführung in die Problemlösung"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Test nach dem Projekt"
+          "name": "Der Problemlösungsprozess"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Problemlösung erforschen"
@@ -1803,10 +1803,10 @@
           "name": "Projekt - Eine App vorschlagen"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Test nach dem Projekt"
+          "name": "Erkunde Webseiten"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "Websites für den Ausdruck"
         },
         "csd2-2019/Intro to HTML": {
           "name": "Einführung in HTML"
@@ -2328,10 +2328,10 @@
           "name": "Stelle dein Projekt vor"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "Erkenntnisse aus der Informatik Befragung zum Semesterende"
+          "name": "Programmieren zur Unterhaltung"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "Erkenntnisse aus der Informatik Befragung nach dem Kurs"
+          "name": "Formen plotten"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Zeichnen im Game Lab"
@@ -2394,7 +2394,7 @@
           "name": "Projekt Ein Spiel erstellen"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "Erkenntnisse aus der Informatik Befragung nach dem Kurs"
+          "name": "Innovationen in der Datenverarbeitung"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Bildschirme mit Code gestalten"
@@ -2442,7 +2442,7 @@
           "name": "Projekt: Prototyp einer Innovation"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "Erkenntnisse aus der Informatik Befragung nach dem Kurs"
+          "name": "Erkunde Webseiten"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Websites für den Ausdruck"
@@ -2511,7 +2511,7 @@
           "name": "Projekt - Eine App vorschlagen"
         },
         "csd5-2017/Representation Matters": {
-          "name": "Erkenntnisse aus der Informatik Befragung nach dem Kurs"
+          "name": "Darstellung ist wichtig"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Muster und Darstellung"
@@ -2556,7 +2556,7 @@
           "name": "Projekt - Lösen eines Datenproblems"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "Erkenntnisse aus der Informatik Befragung nach dem Kurs"
+          "name": "Analyse der Planung"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Den Benutzer verstehen"
@@ -2935,10 +2935,13 @@
           "name": "Erkenntnisse aus der Informatik Befragung der SchülerInnen nach dem Kurs ('18-'19)"
         },
         "allthethings/Jigsaw": {
-          "name": "Anonyme Befragung der SchülerInnen 2"
+          "name": "Puzzle"
         },
         "allthethings/Maze": {
-          "name": "Mehrsichtigkeits-Test"
+          "name": "Labyrinth"
+        },
+        "allthethings/Artist": {
+          "name": "Künstler"
         },
         "allthethings/Bee": {
           "name": "Biene"
@@ -3991,9 +3994,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "CS Discoveries Nachbefragung"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "Test nach dem Projekt"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "Den Benutzer verstehen"
         },
@@ -4028,7 +4028,7 @@
           "name": "CS Discoveries Nachbefragung"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Test nach dem Projekt",
+          "name": "Innovationen in der Datenverarbeitung",
           "overview": "Zum Auftakt der letzten Lerneinheit dieses Kurses werden die SchülerInnen einige Untersuchungen zu interessanten Innovationen im Bereich der Informatik durchführen. In dieser Lektion werden die SchülerInnen mit einer größeren Vielfalt von Formfaktoren für Computer (wie ein Computer aussieht) und Bereichen konfrontiert, die von Computern beeinflusst werden. Später in dieser Lektion werden die SchülerInnen sich noch einmal mit Geräten auseinandersetzen, die sie in dieser Lektion kennengelernt haben, während sie ihre eigenen physischen Computergeräte entwickeln."
         },
         "csd6-2021/Designing Screens with Code": {
@@ -4086,7 +4086,7 @@
           "name": "CS Discoveries Nachbefragung"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Test nach dem Projekt"
+          "name": "Darstellung ist wichtig"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Muster und Darstellung"
@@ -4128,7 +4128,7 @@
           "name": "CS Discoveries Nachbefragung"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Test nach dem Projekt"
+          "name": "Programmieren zur Unterhaltung"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Formen plotten"
@@ -4201,7 +4201,7 @@
           "name": "Einführung in die Problemlösung"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Test nach dem Projekt"
+          "name": "Der Problemlösungsprozess"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Problemlösung erforschen"
@@ -4237,7 +4237,7 @@
           "name": "Erkunden des Problemlösens - Thema Spiele (Alternative Lektion 3)"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Test nach dem Projekt"
+          "name": "Erkundung von Webseiten"
         },
         "csd2-2021/Intro to HTML": {
           "name": "Einführung in HTML"

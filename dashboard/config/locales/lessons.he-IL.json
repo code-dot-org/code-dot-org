@@ -782,6 +782,15 @@
         "jigsaw/Jigsaw": {
           "name": "פאזל"
         },
+        "allthethings/Jigsaw": {
+          "name": "פאזל"
+        },
+        "allthethings/Maze": {
+          "name": "מבוך"
+        },
+        "allthethings/Artist": {
+          "name": "אומן"
+        },
         "allthethings/Bee": {
           "name": "דבורה"
         },

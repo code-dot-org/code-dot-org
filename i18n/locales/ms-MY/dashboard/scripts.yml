@@ -162,6 +162,10 @@ ms:
           description_short: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
           student_description: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
           name: infiniti
+        algebrademo:
+          lessons:
+            The Design Recipe:
+              name: Resipi Rekaan
         K5PD:
           lessons:
             Reflection:
@@ -277,6 +281,8 @@ ms:
           lessons:
             Teacher Dashboard:
               name: Papan Pemuka Guru
+            The Design Recipe:
+              name: Resipi Rekaan
         algebraPD-NexTech:
           lessons:
             Teacher Dashboard:
@@ -293,6 +299,8 @@ ms:
           lessons:
             Free Play:
               name: Permainan Bebas
+            The Design Recipe:
+              name: Resipi Rekaan
         allthethings:
           lessons:
             Artist:
@@ -343,6 +351,8 @@ ms:
           lessons:
             Teacher Dashboard:
               name: Papan Pemuka Guru
+            The Design Recipe:
+              name: Resipi Rekaan
         sciencePD2b:
           lessons:
             Wrap-Up:
@@ -524,6 +534,8 @@ ms:
               name: 'Jigsaw: Belajar untuk drag and drop'
             Loops:
               name: Gelung
+            Loops Unplugged:
+              name: Nirplag Gelung
             Programming:
               name: Pengaturcaraan
             'Real-life Algorithms: Plant a Seed':
@@ -550,6 +562,8 @@ ms:
               name: 'Jigsaw: Belajar untuk drag and drop'
             Loops:
               name: Gelung
+            Loops Unplugged:
+              name: Nirplag Gelung
             Programming:
               name: Pengaturcaraan
             'Debugging: Unspotted Bugs':
@@ -625,6 +639,8 @@ ms:
           lessons:
             Teacher Dashboard:
               name: Papan Pemuka Guru
+            The Design Recipe:
+              name: Resipi Rekaan
         csp-online-test:
           lesson_groups:
             required:
@@ -834,6 +850,8 @@ ms:
               name: Membina Projek Anda
             Present Your Project:
               name: Bentangkan Projek Anda
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             Internet:
               name: Internet
             Crowdsourcing:
@@ -858,6 +876,8 @@ ms:
               name: Pemboleh Ubah di dalam Makmal Mainan
             Variables in Artist:
               name: Pemboleh Ubah di dalam Artis
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Bee:
               name: Untuk Gelung di dalam Lebah
             For Loops in Artist:
@@ -1239,6 +1259,8 @@ ms:
               name: Pemboleh Ubah di dalam Artis
             Variables in Play Lab:
               name: Pemboleh Ubah di dalam Makmal Mainan
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Bee:
               name: Untuk Gelung di dalam Lebah
             For Loops in Artist:
@@ -1490,6 +1512,8 @@ ms:
               name: Pemboleh Ubah di dalam Artis
             Variables in Play Lab:
               name: Pemboleh Ubah di dalam Makmal Mainan
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Bee:
               name: Untuk Gelung di dalam Lebah
             For Loops in Artist:
@@ -1611,6 +1635,8 @@ ms:
               name: 'Algoritma: Perlumbaan Dadu'
             Conditionals:
               name: Bersyarat
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             Build a Star Wars Game:
               name: Membina Permainan Star Wars
             'Functions: Songwriting':
@@ -1775,6 +1801,8 @@ ms:
               name: 'Algoritma: Perlumbaan Dadu'
             Conditionals:
               name: Bersyarat
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             Build a Star Wars Game:
               name: Membina Permainan Star Wars
             'Functions: Songwriting':
@@ -1840,6 +1868,8 @@ ms:
               name: Pemboleh Ubah di dalam Artis
             Variables in Play Lab:
               name: Pemboleh Ubah di dalam Makmal Mainan
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Bee:
               name: Untuk Gelung di dalam Lebah
             For Loops in Artist:
@@ -1886,6 +1916,7 @@ ms:
               name: Draf Kajian Pasca Kursus CSA
         hero:
           title: 'Minecraft: Hero''s Journey'
+          description_short: Minecraft kembali dengan aktiviti baharu untuk Hour of Code!
           description: Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan merentasi Minecraft dengan kod.
           lessons:
             Minecraft Hour of Code:
@@ -1935,6 +1966,8 @@ ms:
               name: 'Algoritma: Perlumbaan Dadu'
             Conditionals:
               name: Bersyarat
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             'Functions: Songwriting':
               name: 'Fungsi : Penulisan Lagu'
             Functions in Artist:
@@ -2002,6 +2035,8 @@ ms:
               name: Pemboleh Ubah di dalam Artis
             Variables in Play Lab:
               name: Pemboleh Ubah di dalam Makmal Mainan
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Bee:
               name: Untuk Gelung di dalam Lebah
             For Loops in Artist:
@@ -2189,8 +2224,12 @@ ms:
               name: Pemboleh Ubah dengan Artis
             Variables that Change in Artist:
               name: Menukar Pemboleh Ubah dengan Artis
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             Binary Bracelets:
               name: Binary Bracelets
+            'Unplugged: Binary':
+              name: Imej Binari
             Artist Binary:
               name: Imej Binari dengan Artis
             Internet:
@@ -2241,6 +2280,8 @@ ms:
               name: Gelung dengan Scrat
             Sequencing with Scrat:
               name: Penjujukan dengan Scrat
+            Copyright and Creativity:
+              name: Sangat Hebat untuk Mencipta dan Bermain dengan Adil
           student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
         coursed-2018:
           title: Kursus D (2018)
@@ -2273,6 +2314,8 @@ ms:
               name: Kewarganegaraan Digital
             Build a Play Lab Game:
               name: Permainan Ninja lwn. Lanun
+            'Unplugged: Binary':
+              name: Imej Binari
             Artist Binary:
               name: Imej Binari dengan Artis
             Nested Loops in Frozen:
@@ -2368,6 +2411,8 @@ ms:
               name: Penyahpepijatan dengan Scrat
             Programming in Artist:
               name: Mencipta Seni dengan Kod
+            'Loops: My Loopy Robotic Friends':
+              name: My Loopy Robotic Friends
             Loops in Artist:
               name: Melukis Bentuk dengan Gelung
             Nested Loops:
@@ -2378,6 +2423,8 @@ ms:
               name: 'Algoritma: Perlumbaan Dadu'
             Conditionals:
               name: Bersyarat dengan Peladang
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             Build a Star Wars Game:
               name: Membina Permainan Star Wars
             'Functions: Songwriting':
@@ -2410,6 +2457,8 @@ ms:
               name: Jam Kod Minecraft
             Functions in Minecraft:
               name: Fungsi dalam Minecraft
+            Copyright and Creativity:
+              name: Perkongsian Digital
           student_description: Mulakan pengekodan dengan algoritma, gelung, bersyarat dan peristiwa dan kemudian anda akan bergerak kepada fungsi. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga anda.
         coursef-2018:
           title: Kursus F (2018)
@@ -2435,6 +2484,8 @@ ms:
               name: Penyahpepijatan dengan Scrat
             Programming in Artist:
               name: Mencipta Seni dengan Kod
+            'Loops: My Loopy Robotic Friends':
+              name: My Loopy Robotic Friends
             Loops in Artist:
               name: Melukis Bentuk dengan Gelung
             Nested Loops in Bee/Zombie:
@@ -2453,6 +2504,8 @@ ms:
               name: Pemboleh Ubah di dalam Artis
             Variables in Play Lab:
               name: Pemboleh Ubah di dalam Makmal Mainan
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Artist:
               name: Untuk Gelung dengan Artis
             Functions in Bee:
@@ -2626,6 +2679,8 @@ ms:
               name: Your Digital Footprint
             Programming in Ice Age:
               name: Pengaturcaraan dengan Scrat
+            Copyright and Creativity:
+              name: Sangat Hebat untuk Mencipta dan Bermain dengan Adil
             Programming with Rey and BB-8:
               name: Pengaturcaraan dengan Rey dan BB-8
             Loops in Ice Age:
@@ -2744,6 +2799,8 @@ ms:
               name: Pemboleh Ubah dengan Artis
             Variables that Change in Artist:
               name: Menukar Pemboleh Ubah dengan Artis
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Artist:
               name: Untuk Gelung dengan Artis
             Learning Sprites with Sprite Lab:
@@ -2784,6 +2841,8 @@ ms:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Digital Sharing:
+              name: Perkongsian Digital
             Running Simulations:
               name: Menjalankan Simulasi
             Simulating Experiments:
@@ -2839,6 +2898,8 @@ ms:
               name: Kewarganegaraan Digital
             Build a Play Lab Game:
               name: Membina Permainan Makmal Mainan
+            'Unplugged: Binary':
+              name: Imej Binari
             Artist Binary:
               name: Imej Binari dengan Artis
             Build a Star Wars Game:
@@ -2889,6 +2950,8 @@ ms:
               name: Bersyarat dengan Kad
             Conditionals:
               name: Bersyarat dengan Peladang
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             Build a Star Wars Game:
               name: Membina Permainan Star Wars
             'Functions: Songwriting':
@@ -2937,6 +3000,8 @@ ms:
               name: Bersyarat Akuatik dalam Minecraft
             Access Ability:
               name: Mereka Bentuk untuk Aksesibiliti
+            Digital Sharing:
+              name: Perkongsian Digital
             Simon Says:
               name: Simon Says
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -3019,6 +3084,8 @@ ms:
               name: Pemboleh Ubah dengan Artis
             Variables that Change in Artist:
               name: Menukar Pemboleh Ubah dengan Artis
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Artist:
               name: Untuk Gelung dengan Artis
             Explore Project Ideas:
@@ -3679,6 +3746,8 @@ ms:
               name: Simon Says
             Alien Dance Party with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             Access Ability:
               name: Access Ability
             Drawing with Loops:
@@ -3757,6 +3826,8 @@ ms:
               name: Simon Says
             Alien Dance Party with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             Access Ability:
               name: Access Ability
         time4cs-experiment-unit-1:
@@ -3788,6 +3859,8 @@ ms:
               name: Simon Says
             Alien Dance Party with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             Access Ability:
               name: Access Ability
         csp7-pilot:
@@ -4035,6 +4108,8 @@ ms:
               name: Bersyarat dengan Kad
             While Loops in Farmer:
               name: Gelung Semasa di dalam Peladang
+            'Unplugged: Binary':
+              name: Imej Binari
             Artist Binary:
               name: Imej Binari dengan Artis
             Digital Citizenship:
@@ -4083,6 +4158,8 @@ ms:
               name: Ikan Berenang dengan Makmal Peperi
             Alien Dance Party with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             About Me:
               name: Tentang Saya dengan Makmal Peperi
             Access Ability:
@@ -4103,6 +4180,8 @@ ms:
               name: Fungsi dengan Artis
             End of Course Project:
               name: Akhir Projek Kursus
+            Digital Sharing:
+              name: Perkongsian Digital
             Designing for Accessibility:
               name: Mereka Bentuk untuk Aksesibiliti
           student_description: Mulakan pengekodan dengan algoritma, gelung, bersyarat dan peristiwa dan kemudian anda akan bergerak kepada fungsi. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga anda.
@@ -4143,6 +4222,8 @@ ms:
               name: Menukar Pemboleh Ubah dengan Artis
             Simulating Experiments:
               name: Mensimulasikan Eksperimen
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Artist:
               name: Untuk Gelung dengan Artis
             Internet:
@@ -4155,6 +4236,8 @@ ms:
               name: Kuasa Perkataan
             Crowdsourcing:
               name: Crowdsourcing
+            Digital Sharing:
+              name: Perkongsian Digital
             End of Course Project:
               name: Akhir Projek Kursus
             AI for Oceans:
@@ -4714,6 +4797,8 @@ ms:
               name: Gelung Semasa di dalam Peladang
             Conditionals & Loops in Harvester:
               name: Menuai dengan Bersyarat " "Perlu Dipadamkan"
+            'Unplugged: Binary':
+              name: Imej Binari
             Artist Binary:
               name: Imej Binari dengan Artis
             Be A Super Digital Citizen:
@@ -4758,8 +4843,12 @@ ms:
               name: Ikan Berenang dengan Makmal Peperi
             Alien Dance Party with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             About Me:
               name: 'Projek Mini: Tentang Saya'
+            Digital Sharing:
+              name: Perkongsian Digital
             Nested Loops in Bee:
               name: Gelung Bersarang di dalam Pagar Sesat
             Nested Loops in Artist:
@@ -4829,6 +4918,8 @@ ms:
               name: Kecerdasan Buatan (AI) Untuk Lautan
             Internet:
               name: Internet
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Artist:
               name: Untuk Gelung dengan Artis
             Editing Behaviors:
@@ -5600,6 +5691,8 @@ ms:
               name: Pengaturcaraan dengan Lebah
             Variables with the Bee:
               name: Pemboleh ubah dengan Lebah
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops with Artist:
               name: Untuk Gelung dengan Artis
             Follow the Algorithm:
@@ -6014,8 +6107,12 @@ ms:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
             Be A Super Digital Citizen:
               name: Jadilah Warganegara Super Digital
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             'Mini-Project: About Me':
               name: 'Projek Mini: Tentang Saya'
+            Digital Sharing:
+              name: Perkongsian Digital
             Drawing with Loops:
               name: Melukis dengan Gelung
             Fancy Shapes using Nested Loops:
@@ -6096,6 +6193,8 @@ ms:
               name: Pengaturcaraan dengan Lebah
             Variables with the Bee:
               name: Pemboleh ubah dengan Lebah
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops with Artist:
               name: Untuk Gelung dengan Artis
             Simulating Experiments:
