@@ -219,7 +219,7 @@ class ScriptLevel < ApplicationRecord
 
   def valid_progression_level?(user=nil)
     return false if level.unplugged?
-    return false if lesson && lesson.unplugged_lesson?
+    return false if lesson&.unplugged_lesson?
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && lesson && lesson.spelling_bee?
     return false if locked_or_hidden?(user)

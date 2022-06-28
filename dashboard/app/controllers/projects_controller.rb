@@ -226,7 +226,7 @@ class ProjectsController < ApplicationController
   # GET /projects/featured
   # Access is restricted to those with project_validator permission
   def featured
-    if current_user && current_user.project_validator?
+    if current_user&.project_validator?
       combine_projects_and_featured_projects_data
       render template: 'projects/featured'
     else

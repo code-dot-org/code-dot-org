@@ -59,9 +59,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       enrollment = ::Pd::Enrollment.new workshop: @workshop
       enrollment.school_info_attributes = school_info_params
       if enrollment.update enrollment_params
-        if user
-          user.update_school_info(enrollment.school_info)
-        end
+        user&.update_school_info(enrollment.school_info)
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
 
@@ -86,7 +84,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   # DELETE /api/v1/pd/workshops/1/enrollments/1
   def destroy
     enrollment = @workshop.enrollments.find_by(id: params[:id])
-    enrollment.destroy! if enrollment
+    enrollment&.destroy!
     head :no_content
   end
 

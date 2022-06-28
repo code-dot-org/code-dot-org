@@ -176,7 +176,7 @@ class Projects
 
   # This method can be removed once thumbnails are being served with s3 version ids.
   def self.make_thumbnail_url_cacheable(url)
-    url.sub('/v3/files/', '/v3/files-public/') if url
+    url&.sub('/v3/files/', '/v3/files-public/')
   end
 
   def unpublish(channel_id)

@@ -124,7 +124,7 @@ class ManifestBuilder
       if result.is_a? String
         @warnings.push result
       end
-      download_progress_bar.increment unless download_progress_bar.nil?
+      download_progress_bar&.increment
     end
 ) do |name|
       # This is the parallel block.  This block should return a string to
@@ -154,7 +154,7 @@ class ManifestBuilder
 
       true
     end
-    download_progress_bar.finish unless download_progress_bar.nil?
+    download_progress_bar&.finish
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
 
@@ -294,7 +294,7 @@ class ManifestBuilder
       else
         @warnings.push result
       end
-      metadata_progress_bar.increment unless metadata_progress_bar.nil?
+      metadata_progress_bar&.increment
     end
 ) do |name|
       # This is the parallel block.  This block should return a string to
@@ -379,7 +379,7 @@ class ManifestBuilder
 
       metadata
     end
-    metadata_progress_bar.finish unless metadata_progress_bar.nil?
+    metadata_progress_bar&.finish
     animation_metadata_by_name
   end
 
@@ -394,9 +394,9 @@ class ManifestBuilder
         # Push name into target array, deduplicate, and sort
         alias_map[aliaz] = (alias_map[aliaz] + [name]).uniq.sort
       end
-      alias_progress_bar.increment unless alias_progress_bar.nil?
+      alias_progress_bar&.increment
     end
-    alias_progress_bar.finish unless alias_progress_bar.nil?
+    alias_progress_bar&.finish
     alias_map.each {|k, v| verbose "#{bold k}: #{v.join(', ')}"} if @options[:verbose]
     alias_map
   end
@@ -411,9 +411,9 @@ class ManifestBuilder
         normalized_category = category.tr(' ', '_')
         category_map[normalized_category] = (category_map[normalized_category] + [name]).uniq.sort
       end
-      category_progress_bar.increment unless category_progress_bar.nil?
+      category_progress_bar&.increment
     end
-    category_progress_bar.finish unless category_progress_bar.nil?
+    category_progress_bar&.finish
     category_map
   end
 

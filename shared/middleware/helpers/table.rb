@@ -43,11 +43,9 @@ def table_to_csv(table_array, column_order: nil)
   end
 
   unique_columns = unique_columns.to_a
-  if column_order
-    column_order.reverse_each do |c|
-      unique_columns.delete(c)
-      unique_columns.insert(0, c)
-    end
+  column_order&.reverse_each do |c|
+    unique_columns.delete(c)
+    unique_columns.insert(0, c)
   end
 
   csv_string = CSV.generate do |csv|

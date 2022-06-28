@@ -15,7 +15,7 @@ end
 
 get '/v2/hoc/tutorial-metrics.json' do
   only_for 'code.org'
-  forbidden! unless dashboard_user_helper && dashboard_user_helper.admin?
+  forbidden! unless dashboard_user_helper&.admin?
   content_type :json
   JSON.pretty_generate(fetch_hoc_metrics['tutorials'])
 end
@@ -77,7 +77,7 @@ get '/api/hour/certificate/:filename' do |filename|
     content_type image.format.to_sym
     image.to_blob
   ensure
-    image && image.destroy!
+    image&.destroy!
   end
 end
 
@@ -103,7 +103,7 @@ get '/v2/hoc/certificate/:filename' do |filename|
     expires 0, :private, :must_revalidate
     image.to_blob
   ensure
-    image && image.destroy!
+    image&.destroy!
   end
 end
 
@@ -129,7 +129,7 @@ get '/api/hour/certificate64/:course/:filename' do |course, filename|
     expires 0, :private, :must_revalidate
     image.to_blob
   ensure
-    image && image.destroy!
+    image&.destroy!
   end
 end
 

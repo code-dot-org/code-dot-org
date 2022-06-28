@@ -575,7 +575,7 @@ class User < ApplicationRecord
       self.email = ''
       self.full_address = nil
       self.school_info = nil
-      studio_person.destroy! if studio_person
+      studio_person&.destroy!
       self.studio_person_id = nil
     end
 
@@ -1438,7 +1438,7 @@ class User < ApplicationRecord
 
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
-    return if name.blank? || name.utf8mb4? || (email && email.utf8mb4?)
+    return if name.blank? || name.utf8mb4? || (email&.utf8mb4?)
     self.username = UserHelpers.generate_username(User.with_deleted, name)
   end
 

@@ -33,7 +33,7 @@ class CertificateImagesController < ApplicationController
       content_type = "image/#{format}"
       send_data image.to_blob, type: content_type
     ensure
-      image && image.destroy!
+      image&.destroy!
     end
   end
 end
