@@ -7,6 +7,7 @@ import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import progressStyles from './progressStyles';
+import {refetchSectionLockStatus} from '../../lessonLockRedux';
 import color from '@cdo/apps/util/color';
 import commonMsg from '@cdo/locale';
 import SectionSelector from './SectionSelector';
@@ -14,7 +15,13 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import {NO_SECTION} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {LockStatus, useGetLockState, saveLockState} from './LessonLockDataApi';
 
-function LessonLockDialog({unitId, lessonId, handleClose, selectedSectionId}) {
+function LessonLockDialog({
+  unitId,
+  lessonId,
+  handleClose,
+  selectedSectionId,
+  refetchSectionLockStatus
+}) {
   const {loading, serverLockState} = useGetLockState(
     unitId,
     lessonId,
@@ -71,6 +78,8 @@ function LessonLockDialog({unitId, lessonId, handleClose, selectedSectionId}) {
     setSaving(true);
     const csrfToken = $('meta[name="csrf-token"]').attr('content');
     await saveLockState(serverLockState, clientLockState, csrfToken);
+    // Refresh the lock information on the script overview page and teacher panel
+    await refetchSectionLockStatus(selectedSectionId, unitId);
     handleClose();
   };
 
@@ -305,7 +314,8 @@ LessonLockDialog.propTypes = {
   handleClose: PropTypes.func.isRequired,
 
   // Provided by redux
-  selectedSectionId: PropTypes.number
+  selectedSectionId: PropTypes.number,
+  refetchSectionLockStatus: PropTypes.func.isRequired
 };
 
 const styles = {
@@ -367,6 +377,13 @@ const styles = {
 
 export const UnconnectedLessonLockDialog = LessonLockDialog;
 
-export default connect(state => ({
-  selectedSectionId: state.teacherSections.selectedSectionId
-}))(LessonLockDialog);
+export default connect(
+  state => ({
+    selectedSectionId: state.teacherSections.selectedSectionId
+  }),
+  dispatch => ({
+    refetchSectionLockStatus(sectionId, lockStatus) {
+      dispatch(refetchSectionLockStatus(sectionId, lockStatus));
+    }
+  })
+)(LessonLockDialog);
