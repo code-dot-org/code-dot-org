@@ -2469,7 +2469,7 @@ class User < ApplicationRecord
   end
 
   # The data returned by this method is set to cookies for the marketing team to
-  # use in Optimizely for segmenting teacher user experience.
+  # use in Google Optimize for segmenting teacher user experience.
   def marketing_segment_data
     return unless teacher?
 
