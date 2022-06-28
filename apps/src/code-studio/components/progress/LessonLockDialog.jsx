@@ -1,44 +1,48 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import $ from 'jquery';
+import _ from 'lodash';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import progressStyles from './progressStyles';
-import {LockStatus, saveLockDialog} from '../../lessonLockRedux';
-import color from '../../../util/color';
+import color from '@cdo/apps/util/color';
 import commonMsg from '@cdo/locale';
 import SectionSelector from './SectionSelector';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {NO_SECTION} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {LockStatus, useGetLockState, saveLockState} from './LessonLockDataApi';
 
-function LessonLockDialog({
-  isOpen,
-  handleClose,
-  initialLockStatus,
-  selectedSectionId,
-  saving,
-  saveDialog
-}) {
-  const [lockStatuses, setLockStatuses] = useState(initialLockStatus);
+function LessonLockDialog({unitId, lessonId, handleClose, selectedSectionId}) {
+  const {loading, serverLockState} = useGetLockState(
+    unitId,
+    lessonId,
+    selectedSectionId
+  );
 
-  useEffect(() => {
-    if (!saving) {
-      setLockStatuses(initialLockStatus);
-    }
-  }, [initialLockStatus]);
+  const [clientLockState, setClientLockState] = useState([]);
+  const [saving, setSaving] = useState(false);
+
+  // The data returned from useGetLockState is the state that's currently saved
+  // on the server associated with the given unit, lesson, and section. We also
+  // need to separately track the client state which will reflect the changes
+  // made by the user in this dialog. This line re-syncs the client state to the
+  // server state whenever the server state changes (e.g. when the selected
+  // section changes). Any unsaved changes are lost.
+  useEffect(() => setClientLockState(serverLockState), [serverLockState]);
 
   //
   // Event handlers
   //
   const setAllLockStatus = lockStatus => {
-    setLockStatuses(currentLockStatuses =>
-      currentLockStatuses.map(item => ({...item, lockStatus}))
+    setClientLockState(clientLockState =>
+      clientLockState.map(item => ({...item, lockStatus}))
     );
   };
 
   const allowEditing = () => setAllLockStatus(LockStatus.Editable);
-
   const lockLesson = () => setAllLockStatus(LockStatus.Locked);
-
   const showAnswers = () => setAllLockStatus(LockStatus.ReadonlyAnswers);
 
   const viewSection = () => {
@@ -53,8 +57,8 @@ function LessonLockDialog({
     const modifiedIndex = parseInt(event.target.name, 10);
     const value = event.target.value;
 
-    setLockStatuses(currentLockStatuses =>
-      currentLockStatuses.map((item, index) => {
+    setClientLockState(clientLockState =>
+      clientLockState.map((item, index) => {
         if (index !== modifiedIndex) {
           return item;
         }
@@ -63,8 +67,11 @@ function LessonLockDialog({
     );
   };
 
-  const handleSave = () => {
-    saveDialog(selectedSectionId, lockStatuses);
+  const handleSave = async () => {
+    setSaving(true);
+    const csrfToken = $('meta[name="csrf-token"]').attr('content');
+    await saveLockState(serverLockState, clientLockState, csrfToken);
+    handleClose();
   };
 
   //
@@ -176,13 +183,28 @@ function LessonLockDialog({
           </tr>
         </thead>
         <tbody>
-          {lockStatuses.map(({name, lockStatus}, index) =>
-            renderStudentRow(index, name, lockStatus)
-          )}
+          {loading
+            ? renderSkeletonRows(5, 4)
+            : clientLockState.map(({name, lockStatus}, index) =>
+                renderStudentRow(index, name, lockStatus)
+              )}
         </tbody>
       </table>
     </>
   );
+
+  // Returns an array of rows, each with the given number of cells containing
+  // a Skeleton element.
+  const renderSkeletonRows = (numRows, numCols) =>
+    _.times(numRows, rowIndex => (
+      <tr key={rowIndex}>
+        {_.times(numCols, colIndex => (
+          <td key={colIndex} style={styles.tableCell}>
+            <Skeleton />
+          </td>
+        ))}
+      </tr>
+    ));
 
   const renderStudentRow = (index, name, lockStatus) => (
     <tr key={index}>
@@ -266,7 +288,7 @@ function LessonLockDialog({
   };
 
   return (
-    <BaseDialog isOpen={isOpen} handleClose={handleClose}>
+    <BaseDialog isOpen handleClose={handleClose}>
       <div style={{...styles.main, ...responsiveHeight}}>
         {renderHeading()}
         {renderInstructionsAndButtons()}
@@ -278,17 +300,12 @@ function LessonLockDialog({
 }
 
 LessonLockDialog.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
+  unitId: PropTypes.number.isRequired,
+  lessonId: PropTypes.number.isRequired,
   handleClose: PropTypes.func.isRequired,
-  initialLockStatus: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      lockStatus: PropTypes.oneOf(Object.values(LockStatus)).isRequired
-    })
-  ),
-  selectedSectionId: PropTypes.number,
-  saving: PropTypes.bool.isRequired,
-  saveDialog: PropTypes.func.isRequired
+
+  // Provided by redux
+  selectedSectionId: PropTypes.number
 };
 
 const styles = {
@@ -350,16 +367,6 @@ const styles = {
 
 export const UnconnectedLessonLockDialog = LessonLockDialog;
 
-export default connect(
-  state => ({
-    initialLockStatus: state.lessonLock.lockStatus,
-    isOpen: !!state.lessonLock.lockDialogLessonId,
-    saving: state.lessonLock.saving,
-    selectedSectionId: state.teacherSections.selectedSectionId
-  }),
-  dispatch => ({
-    saveDialog(sectionId, lockStatus) {
-      dispatch(saveLockDialog(sectionId, lockStatus));
-    }
-  })
-)(LessonLockDialog);
+export default connect(state => ({
+  selectedSectionId: state.teacherSections.selectedSectionId
+}))(LessonLockDialog);
