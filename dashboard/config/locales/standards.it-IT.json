@@ -2,6 +2,9 @@
   "it-IT": {
     "data": {
       "standards": {
+        "csta/1B-AP-12": {
+          "description": "Modifica, rimescola o incorpora parti di un programma esistente, personalizzandolo, per sviluppare qualcosa di nuovo o aggiungere funzionalità più avanzate."
+        },
         "ccela/6.SL.1": {
           "description": "Impegnarsi efficacemente in una serie di discussioni collaborative (in coppia, in gruppo e sotto la guida di un insegnante) con diversi partner su argomenti di prima media, basandosi sulle idee degli altri ed esprimendo chiaramente le proprie."
         },
@@ -182,6 +185,9 @@
         "csta/1A-AP-09": {
           "description": "Plasma il modo in cui i programmi memorizzano e manipolano i dati utilizzando numeri o altri simboli per rappresentare le informazioni."
         },
+        "csta/1A-AP-14": {
+          "description": "Fai il debug (identifica e correggi) degli errori in un algoritmo o in un programma che include sequenze e cicli semplici."
+        },
         "csta/1A-IC-18": {
           "description": "Mantieni private le informazioni di accesso e disconnettiti dai dispositivi in modo opportuno."
         },
@@ -190,6 +196,9 @@
         },
         "csta/1A-CS-03": {
           "description": "Descrivere i problemi hardware e software di base utilizzando una terminologia accurata."
+        },
+        "csta/1A-AP-10": {
+          "description": "Sviluppa programmi con sequenze e cicli semplici, per dare forma alle tue idee o per affrontare un problema."
         },
         "csta/1B-IC-18": {
           "description": "Discutere delle tecnologie informatiche che hanno cambiato il mondo ed esprimere in che modo tali tecnologie influenzano e sono influenzate dalle abitudini culturali."

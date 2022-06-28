@@ -503,6 +503,15 @@
         "jigsaw/Jigsaw": {
           "name": "Jigsaw"
         },
+        "allthethings/Jigsaw": {
+          "name": "Jigsaw"
+        },
+        "allthethings/Maze": {
+          "name": "Лабиринт"
+        },
+        "allthethings/Artist": {
+          "name": "Сүрөтчү"
+        },
         "allthethings/Bounce": {
           "name": "Bounce"
         },
