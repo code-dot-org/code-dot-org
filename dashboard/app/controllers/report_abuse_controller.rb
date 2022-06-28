@@ -104,9 +104,9 @@ class ReportAbuseController < ApplicationController
 
   def report_abuse_form
     @react_props = {
-      name: (current_user&.name),
-      email: (current_user&.email),
-      age: (current_user&.age),
+      name: current_user&.name,
+      email: current_user&.email,
+      age: current_user&.age,
     }
   end
 end

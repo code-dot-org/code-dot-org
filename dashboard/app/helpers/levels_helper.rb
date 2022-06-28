@@ -528,7 +528,7 @@ module LevelsHelper
       sublevelCallback: @sublevel_callback,
     }
 
-    if (@game&.owns_footer_for_share?) || @legacy_share_style
+    if @game&.owns_footer_for_share? || @legacy_share_style
       app_options[:copyrightStrings] = build_copyright_strings
     end
 
@@ -666,7 +666,7 @@ module LevelsHelper
     end
 
     # User/session-dependent options
-    app_options[:disableSocialShare] = true if (current_user&.under_13?) || app_options[:embed]
+    app_options[:disableSocialShare] = true if current_user&.under_13? || app_options[:embed]
     app_options[:legacyShareStyle] = true if @legacy_share_style
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
@@ -711,7 +711,7 @@ module LevelsHelper
     end
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:isUS]
 
-    if (@game&.owns_footer_for_share?) || @legacy_share_style
+    if @game&.owns_footer_for_share? || @legacy_share_style
       app_options[:copyrightStrings] = build_copyright_strings
     end
 
