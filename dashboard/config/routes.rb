@@ -11,7 +11,7 @@ Dashboard::Application.routes.draw do
     get '/style.css', constraints: {host: CDO.codeprojects_hostname}, to: redirect('/assets/weblab/footer.css')
   end
 
-  constraints host: CDO.dashboard_hostname do
+  constraints host: /.*code.org.*/ do
     # React-router will handle sub-routes on the client.
     get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
     get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
