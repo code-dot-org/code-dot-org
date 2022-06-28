@@ -63,23 +63,24 @@ class JavalabView extends React.Component {
     isSubmittable: PropTypes.bool,
     isSubmitted: PropTypes.bool,
     setDisableFinishButton: PropTypes.func,
-    isReadOnlyWorkspace: PropTypes.bool
+    isReadOnlyWorkspace: PropTypes.bool,
+    validationPassed: PropTypes.bool
   };
 
   componentDidMount() {
     this.props.onMount();
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
-      // Whether the finish button is disabled in studioApp is dependent on whether the workspace
-      // is readonly, so if the readonly state changes, the disabled finish button state changes
-      const disableFinishButton =
-        (!!this.props.isReadOnlyWorkspace && !this.props.isSubmittable) ||
-        !!this.props.isCodeReviewing;
-      this.props.setDisableFinishButton(disableFinishButton);
-    }
-  }
+  // componentDidUpdate(prevProps) {
+  //   if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
+  //     // Whether the finish button is disabled in studioApp is dependent on whether the workspace
+  //     // is readonly, so if the readonly state changes, the disabled finish button state changes
+  //     const disableFinishButton =
+  //       (!!this.props.isReadOnlyWorkspace && !this.props.isSubmittable) ||
+  //       !!this.props.isCodeReviewing || !this.props.validationPassed;
+  //     this.props.setDisableFinishButton(disableFinishButton);
+  //   }
+  // }
 
   compile = () => {
     this.props.appendOutputLog(javalabMsg.compilingProgram());
@@ -191,7 +192,6 @@ class JavalabView extends React.Component {
       isEditingStartSources,
       isRunning,
       isTesting,
-      disableFinishButton,
       awaitingContainedResponse,
       isSubmittable,
       isSubmitted,
@@ -199,7 +199,10 @@ class JavalabView extends React.Component {
       handleClearPuzzle,
       canRun,
       canTest,
-      onPhotoPrompterFileSelected
+      onPhotoPrompterFileSelected,
+      isReadOnlyWorkspace,
+      isCodeReviewing,
+      validationPassed
     } = this.props;
 
     if (displayTheme === DisplayTheme.DARK) {
@@ -207,6 +210,13 @@ class JavalabView extends React.Component {
     } else {
       document.body.style.backgroundColor = color.background_gray;
     }
+
+    // The finish button is disabled if the workspace is readonly and not submittable, the
+    // level is in code review, or validation has not passed
+    const disableFinishButton =
+      (!!isReadOnlyWorkspace && !isSubmittable) ||
+      !!isCodeReviewing ||
+      !validationPassed;
 
     return (
       <StudioAppWrapper>
@@ -348,7 +358,8 @@ export default connect(
     isSubmittable: state.pageConstants.isSubmittable,
     isSubmitted: state.pageConstants.isSubmitted,
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
-    isCodeReviewing: state.pageConstants.isCodeReviewing
+    isCodeReviewing: state.pageConstants.isCodeReviewing,
+    validationPassed: state.javalab.validationPassed
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
