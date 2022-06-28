@@ -12,7 +12,7 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshops/:id/foorm/csv_survey_report
     def csv_survey_report
-      return render json: {}, status: 401 unless current_user && current_user.workshop_admin?
+      return render json: {}, status: 401 unless current_user&.workshop_admin?
       form_name = params[:name]
       form_version = params[:version]
       workshop_id = params[:workshop_id]

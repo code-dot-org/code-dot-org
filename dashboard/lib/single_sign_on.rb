@@ -100,10 +100,8 @@ class SingleSignOn
       payload[k] = val
     end
 
-    if @custom_fields
-      @custom_fields.each do |k, v|
-        payload["custom.#{k}"] = v.to_s
-      end
+    @custom_fields&.each do |k, v|
+      payload["custom.#{k}"] = v.to_s
     end
 
     Rack::Utils.build_query(payload)

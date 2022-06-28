@@ -75,7 +75,7 @@ class ClientState
   # @return Boolean
   def video_seen?(video_key)
     s = session[:videos_seen]
-    s && s.include?(video_key)
+    s&.include?(video_key)
   end
 
   # Returns if at least one video has been seen in the current user session.
@@ -91,7 +91,7 @@ class ClientState
   # @return Boolean
   def callout_seen?(callout_key)
     c = session[:callouts_seen]
-    c && c.include?(callout_key)
+    c&.include?(callout_key)
   end
 
   # Adds callout_key to the set of callouts seen in the current user session.

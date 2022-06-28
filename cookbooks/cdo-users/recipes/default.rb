@@ -108,7 +108,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
       next if instance.private_dns_name.nil? || instance.private_dns_name.empty?
 
       name = instance.tags.find {|tag| tag.key == "Name"}
-      next unless name && name.value
+      next unless name&.value
 
       # SSH requires that hostnames consist of zero or more non-whitespace
       # characters, with optional wildcards:

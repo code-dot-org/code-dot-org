@@ -304,9 +304,9 @@ def open_log_files
 end
 
 def close_log_files
-  $success_log.close if $success_log
-  $error_log.close if $error_log
-  $errorbrowsers_log.close if $errorbrowsers_log
+  $success_log&.close
+  $error_log&.close
+  $errorbrowsers_log&.close
 end
 
 def log_success(msg)
