@@ -742,13 +742,6 @@ Style/RescueModifier:
 Style/RescueStandardError:
   Enabled: false
 
-# Offense count: 125
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: ConvertCodeThatCanStartToReturnNil, AllowedMethods, MaxChainLength.
-# AllowedMethods: present?, blank?, presence, try, try!
-Style/SafeNavigation:
-  Enabled: false
-
 # Offense count: 17
 # This cop supports unsafe auto-correction (--auto-correct-all).
 Style/SingleArgumentDig:
