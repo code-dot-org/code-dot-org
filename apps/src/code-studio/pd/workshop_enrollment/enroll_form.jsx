@@ -500,7 +500,9 @@ export default class EnrollForm extends React.Component {
           </FormGroup>
         )}
         {this.props.workshop_course === CSF &&
-          this.props.workshop_subject === INTRO && (
+          (this.props.workshop_subject === INTRO ||
+            this.props.workshop_subject ===
+              SubjectNames.SUBJECT_CSF_DISTRICT) && (
             <ButtonList
               groupName="csf_intro_intent"
               type="radio"
@@ -518,7 +520,9 @@ export default class EnrollForm extends React.Component {
             />
           )}
         {this.props.workshop_course === CSF &&
-          this.props.workshop_subject === INTRO && (
+          (this.props.workshop_subject === INTRO ||
+            this.props.workshop_subject ===
+              SubjectNames.SUBJECT_CSF_DISTRICT) && (
             <ButtonList
               groupName="csf_intro_other_factors"
               type="check"
@@ -756,7 +760,10 @@ export default class EnrollForm extends React.Component {
 
     if (this.props.workshop_course === CSF) {
       requiredFields.push('role', 'grades_teaching');
-      if (this.props.workshop_subject === INTRO) {
+      if (
+        this.props.workshop_subject === INTRO ||
+        this.props.workshop_subject === SubjectNames.SUBJECT_CSF_DISTRICT
+      ) {
         requiredFields.push('csf_intro_intent');
       } else if (this.props.workshop_subject === DEEP_DIVE) {
         requiredFields.push(
