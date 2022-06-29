@@ -172,7 +172,7 @@ class Pd::Enrollment < ApplicationRecord
     foorm_enrollments, other_enrollments = enrollments.partition do |enrollment|
       (enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
         (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) ||
-        (enrollment.workshop.workshop_ending_date >= Date.new(2020, 9, 1) && enrollment.workshop.csf_201?)
+        (enrollment.workshop.workshop_ending_date >= Date.new(2020, 9, 1) && enrollment.workshop.csf_201?) || enrollment.workshop.csf_district?
     end
 
     # Admin and Counselor still use Pegasus form
