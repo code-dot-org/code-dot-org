@@ -48,7 +48,7 @@ class CourseBlocksTools extends Component {
         heading: i18n.courseBlocksToolsAi(),
         callout: i18n.newExclame(),
         description: i18n.courseBlocksToolsAiDescription(),
-        link: studio('/s/aiml-2021')
+        link: studio('/s/aiml')
       });
     } else {
       this.cards.push({

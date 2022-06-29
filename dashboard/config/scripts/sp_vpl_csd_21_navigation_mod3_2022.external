@@ -3,7 +3,7 @@ title 'Navigating this Professional Learning Course'
 description 'description here'
 
 markdown <<MARKDOWN
-# Congratulations, you are finished with Module 3! 
+# Congratulations, you are finished with Module 3!
 
 ## Help us make this module better
 
@@ -35,7 +35,7 @@ markdown <<MARKDOWN
         <a href="https://studio.code.org/s/self-paced-pl-csd4-2022/"  rel="noopener noreferrer" style="color: white">Module 4</a><br/>
         <i>Teaching and learning CS Discoveries</i>
     </th>
-   
+
   <tr>
     <td colspan="5" style="text-align:center;width:96%;background-color:#d9d9d9;color:black; border-style:none;"> </td>
   </tr>
@@ -67,7 +67,7 @@ markdown <<MARKDOWN
         <li><a href="https://studio.code.org/s/self-paced-pl-csd4-2022/lessons/3/levels/1" >Teaching CS Discoveries </a></li>
       </ul>
     </td>
-    
+
 </table>
 <br/>
 
