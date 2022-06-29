@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-27 19:36:53 UTC",
+    "serialized_at": "2022-06-28 14:40:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3052,7 +3052,13 @@
       "key": "11a2c844-9c0f-40fa-a71f-ba45515cbbd4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of data visualizations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a visual or animation of your data?*\n\n**Discussion Goal:** Students share ideas about visuals or animations they might make to convey the patterns or meaning of their data. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of data visualizations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a visual or animation of your data?*\n\n**Discussion Goal:** Students share ideas about visuals or animations they might make to convey the patterns or meaning of their data. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each project level on Lessons 11, 12, and 13 has a different exemplar to provide multiple examples and ideas for the Abstract Data Art Project. You can choose to show one or more of these exemplars to students to provide inspiration and guidance."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "11a2c844-9c0f-40fa-a71f-ba45515cbbd4",
