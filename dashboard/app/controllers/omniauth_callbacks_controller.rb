@@ -344,8 +344,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def just_authorized_google_classroom?
-    current_user &&
-    current_user.providers.include?(AuthenticationOption::GOOGLE) &&
+    current_user&.providers&.include?(AuthenticationOption::GOOGLE) &&
       has_google_oauth2_scope?('classroom.rosters.readonly')
   end
 
