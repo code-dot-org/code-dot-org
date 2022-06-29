@@ -33,6 +33,7 @@ const SET_IS_READONLY_WORKSPACE = 'javalab/SET_IS_READONLY_WORKSPACE';
 const SET_HAS_OPEN_CODE_REVIEW = 'javalab/SET_HAS_OPEN_CODE_REVIEW';
 const SET_COMMIT_SAVE_STATUS = 'javalab/SET_COMMIT_SAVE_STATUS';
 const SET_VALIDATION_PASSED = 'javalab/SET_VALIDATION_PASSED';
+const SET_HAS_RUN_OR_TESTED = 'javalab/SET_HAS_RUN_OR_TESTED';
 
 // Exported for test
 export const initialState = {
@@ -67,7 +68,8 @@ export const initialState = {
   hasOpenCodeReview: false,
   isCommitSaveInProgress: false,
   hasCommitSaveError: false,
-  validationPassed: false
+  validationPassed: false,
+  hasRunOrTestedCode: false
 };
 
 // Action Creators
@@ -296,6 +298,11 @@ export const setValidationPassed = validationPassed => ({
   validationPassed
 });
 
+export const setHasRunOrTestedCode = hasRunOrTestedCode => ({
+  type: SET_HAS_RUN_OR_TESTED,
+  hasRunOrTestedCode
+});
+
 // Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
@@ -514,6 +521,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       validationPassed: action.validationPassed
+    };
+  }
+  if (action.type === SET_HAS_RUN_OR_TESTED) {
+    return {
+      ...state,
+      hasRunOrTestedCode: action.hasRunOrTestedCode
     };
   }
   return state;
