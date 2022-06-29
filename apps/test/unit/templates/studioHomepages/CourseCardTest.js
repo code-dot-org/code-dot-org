@@ -92,9 +92,6 @@ describe('CourseCard', () => {
       />
     );
 
-    assert.include(
-      wrapper.find('img').props().src,
-      'small_purple_icons_fullwidth'
-    );
+    assert.include(wrapper.find('img').props().src, 'small_purple_icons');
   });
 });
