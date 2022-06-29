@@ -15,7 +15,6 @@ import javalab, {
   setLevelName,
   appendNewlineToConsoleLog,
   setIsRunning,
-  setDisableFinishButton,
   setIsTesting,
   openPhotoPrompter,
   closePhotoPrompter,
@@ -23,7 +22,8 @@ import javalab, {
   appendMarkdownLog,
   setIsReadOnlyWorkspace,
   setHasOpenCodeReview,
-  setValidationPassed
+  setValidationPassed,
+  setHasRunOrTestedCode
 } from './javalabRedux';
 import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -274,8 +274,10 @@ Javalab.prototype.init = function(config) {
   // If validation exists and the level is not passing, validationPassed
   // should be false. Otherwise it is true.
   if (hasValidation && !config.level.isPassing) {
+    console.log('setting validation passed to false');
     getStore().dispatch(setValidationPassed(false));
   } else {
+    console.log('setting validation passed to true');
     getStore().dispatch(setValidationPassed(true));
   }
 
@@ -299,19 +301,6 @@ Javalab.prototype.init = function(config) {
       setBackpackApi(new BackpackClientApi(config.backpackChannel))
     );
   }
-
-  getStore().dispatch(
-    setDisableFinishButton(
-      // The "submit" button overrides the finish button on a submittable level. A submittable level
-      // that has been submitted will be considered "readonly" but a student must still be able to
-      // unsubmit it. That is generally the only exception to a readonly workspace. However if a
-      // student is reviewing another student's code, we'd always want to disable the finish button.
-      // Finally, if validation is not passing, the finish button should also be disabled.
-      (!!config.readonlyWorkspace && !config.level.submittable) ||
-        !!config.isCodeReviewing ||
-        (hasValidation && !config.level.isPassing)
-    )
-  );
 
   // Used for some post requests made in Javalab, namely
   // when providing overrideSources or commiting code.
@@ -362,7 +351,6 @@ Javalab.prototype.beforeUnload = function(event) {
 Javalab.prototype.onRun = function() {
   if (this.studioApp_.hasContainedLevels) {
     lockContainedLevelAnswers();
-    getStore().dispatch(setDisableFinishButton(false));
   }
 
   this.miniApp?.reset?.();
@@ -379,6 +367,8 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     // Javabuilder requires code to be saved to S3.
     project.projectChanged();
   }
+
+  getStore().dispatch(setHasRunOrTestedCode(true));
 
   this.studioApp_.attempts++;
 

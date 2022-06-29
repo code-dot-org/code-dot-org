@@ -9,8 +9,7 @@ import {
   appendOutputLog,
   setDisplayTheme,
   setIsRunning,
-  setIsTesting,
-  setDisableFinishButton
+  setIsTesting
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
@@ -45,7 +44,6 @@ class JavalabView extends React.Component {
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
-    disableFinishButton: PropTypes.bool,
     displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
     appendOutputLog: PropTypes.func,
     setDisplayTheme: PropTypes.func,
@@ -62,25 +60,14 @@ class JavalabView extends React.Component {
     awaitingContainedResponse: PropTypes.bool,
     isSubmittable: PropTypes.bool,
     isSubmitted: PropTypes.bool,
-    setDisableFinishButton: PropTypes.func,
     isReadOnlyWorkspace: PropTypes.bool,
-    validationPassed: PropTypes.bool
+    validationPassed: PropTypes.bool,
+    hasRunOrTestedCode: PropTypes.bool
   };
 
   componentDidMount() {
     this.props.onMount();
   }
-
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
-  //     // Whether the finish button is disabled in studioApp is dependent on whether the workspace
-  //     // is readonly, so if the readonly state changes, the disabled finish button state changes
-  //     const disableFinishButton =
-  //       (!!this.props.isReadOnlyWorkspace && !this.props.isSubmittable) ||
-  //       !!this.props.isCodeReviewing || !this.props.validationPassed;
-  //     this.props.setDisableFinishButton(disableFinishButton);
-  //   }
-  // }
 
   compile = () => {
     this.props.appendOutputLog(javalabMsg.compilingProgram());
@@ -202,7 +189,8 @@ class JavalabView extends React.Component {
       onPhotoPrompterFileSelected,
       isReadOnlyWorkspace,
       isCodeReviewing,
-      validationPassed
+      validationPassed,
+      hasRunOrTestedCode
     } = this.props;
 
     if (displayTheme === DisplayTheme.DARK) {
@@ -211,9 +199,17 @@ class JavalabView extends React.Component {
       document.body.style.backgroundColor = color.background_gray;
     }
 
-    // The finish button is disabled if the workspace is readonly and not submittable, the
-    // level is in code review, or validation has not passed
+    console.log(
+      `isReadonly: ${isReadOnlyWorkspace}, is submittable: ${isSubmittable}, hasRunOrTestedCode: ${hasRunOrTestedCode}, validationPassed: ${validationPassed}`
+    );
+    // The finish button is disabled if any of the following are true:
+    // 1. The user has not clicked 'run' or test' yet for this session
+    // 2. The workspace is readonly and not submittable
+    // 3. The workspace is readonly, submitted, and has not been submitted
+    // 4. The level is in code review
+    // 5. Validation has not passed (if validation does not exist, validationPassed will be true)
     const disableFinishButton =
+      !hasRunOrTestedCode ||
       (!!isReadOnlyWorkspace && !isSubmittable) ||
       !!isCodeReviewing ||
       !validationPassed;
@@ -354,19 +350,17 @@ export default connect(
     longInstructions: state.instructions.longInstructions,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
-    disableFinishButton: state.javalab.disableFinishButton,
     isSubmittable: state.pageConstants.isSubmittable,
     isSubmitted: state.pageConstants.isSubmitted,
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
     isCodeReviewing: state.pageConstants.isCodeReviewing,
-    validationPassed: state.javalab.validationPassed
+    validationPassed: state.javalab.validationPassed,
+    hasRunOrTestedCode: state.javalab.hasRunOrTestedCode
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
     setDisplayTheme: displayTheme => dispatch(setDisplayTheme(displayTheme)),
     setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
-    setIsTesting: isTesting => dispatch(setIsTesting(isTesting)),
-    setDisableFinishButton: disabled =>
-      dispatch(setDisableFinishButton(disabled))
+    setIsTesting: isTesting => dispatch(setIsTesting(isTesting))
   })
 )(UnconnectedJavalabView);
