@@ -7,8 +7,10 @@ const craftStyles = {
     color: color.white
   },
   highlighted: {
-    borderBottom: '2px solid ' + color.white,
     color: color.white
+  },
+  highlightedWrapper: {
+    borderBottom: '2px solid ' + color.white
   }
 };
 
@@ -25,8 +27,18 @@ export default class InstructionsTab extends Component {
   };
 
   render() {
-    const combinedStyle = {
+    const wrapperStyle = {
+      ...styles.tabWrapper,
       ...(this.props.isRtl ? styles.tabRtl : styles.tab),
+      ...(this.props.selected
+        ? this.props.teacherOnly
+          ? styles.teacherHighlightedWrapper
+          : this.props.isMinecraft
+          ? craftStyles.highlightedWrapper
+          : styles.highlightedWrapper
+        : {})
+    };
+    const combinedStyle = {
       ...this.props.style,
       ...(this.props.selected
         ? this.props.teacherOnly
@@ -41,13 +53,16 @@ export default class InstructionsTab extends Component {
         : styles.text)
     };
     return (
-      <a
-        className={this.props.className}
-        onClick={this.props.onClick}
-        style={combinedStyle}
-      >
-        {this.props.text}
-      </a>
+      <div style={wrapperStyle}>
+        <a
+          className={this.props.className}
+          onClick={this.props.onClick}
+          style={combinedStyle}
+          title={this.props.text}
+        >
+          {this.props.text}
+        </a>
+      </div>
     );
   }
 }
@@ -57,17 +72,23 @@ const styles = {
     marginRight: 5,
     paddingLeft: 10,
     paddingRight: 10,
-    paddingBottom: 6,
+    paddingBottom: 4,
     fontWeight: 'bold',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    whiteSpace: 'nowrap'
   },
   tabRtl: {
     marginLeft: 5,
     paddingLeft: 10,
     paddingRight: 10,
-    paddingBottom: 6,
+    paddingBottom: 4,
     fontWeight: 'bold',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    whiteSpace: 'nowrap'
+  },
+  tabWrapper: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
   },
   text: {
     color: color.charcoal
@@ -76,11 +97,15 @@ const styles = {
     color: color.lightest_cyan
   },
   highlighted: {
-    borderBottom: '2px solid ' + color.default_text,
     color: color.default_text
   },
+  highlightedWrapper: {
+    borderBottom: '2px solid ' + color.default_text
+  },
   teacherHighlighted: {
-    borderBottom: '2px solid ' + color.lightest_cyan,
     color: color.white
+  },
+  teacherHighlightedWrapper: {
+    borderBottom: '2px solid ' + color.lightest_cyan
   }
 };
