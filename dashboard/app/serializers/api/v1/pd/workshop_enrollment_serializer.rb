@@ -13,10 +13,10 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
 
   def alternate_email
     application_id = object.try(:application_id)
-    return unless application_id
+    return unless application_id && Pd::Application::TeacherApplication.exists?(id: application_id)
 
     # Note: Use dig instead of [] because RuboCop doesn't like chaining ordinary method call after safe navigation operator.
-    Pd::Application::ApplicationBase.find(application_id)&.
+    Pd::Application::TeacherApplication.find(application_id)&.
       sanitize_form_data_hash&.
       dig(:alternate_email)
   end
