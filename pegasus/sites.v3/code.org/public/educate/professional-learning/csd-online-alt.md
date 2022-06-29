@@ -22,7 +22,7 @@ In addition to our curriculum and immersive <a href="https://code.org/profession
 <div class="col-50" style="padding-right: 20px;">
 
 <h2>Teaching Computer Science Discoveries</h2>
-Teaching Computer Science Discoveries is intended as an introduction to <a href="https://code.org/educate/csd">Computer Science Discoveries</a> and the <a href="https://studio.code.org/courses/csd-2021">Code.org resources</a> for teachers. Through reading, viewing videos, completing interactive puzzles and reflecting on your learning, you'll develop your own understanding while preparing to teach computer science in your classroom.
+Teaching Computer Science Discoveries is intended as an introduction to <a href="https://code.org/educate/csd">Computer Science Discoveries</a> and the <a href="https://studio.code.org/courses/csd">Code.org resources</a> for teachers. Through reading, viewing videos, completing interactive puzzles and reflecting on your learning, you'll develop your own understanding while preparing to teach computer science in your classroom.
 <p>
 <p>
 <strong>Learning objectives</strong>
