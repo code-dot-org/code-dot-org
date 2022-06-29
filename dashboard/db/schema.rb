@@ -320,7 +320,7 @@ ActiveRecord::Schema.define(version: 2022_06_27_214005) do
     t.index ["code_review_request_id"], name: "index_code_review_notes_on_code_review_request_id"
   end
 
-  create_table "code_review_requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "code_review_requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "script_id", null: false
     t.integer "level_id", null: false
@@ -333,7 +333,7 @@ ActiveRecord::Schema.define(version: 2022_06_27_214005) do
     t.index ["user_id", "script_id", "level_id", "closed_at", "deleted_at"], name: "index_code_review_requests_unique", unique: true
   end
 
-  create_table "code_reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "code_reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "project_id", null: false
     t.integer "script_id", null: false
@@ -476,7 +476,7 @@ ActiveRecord::Schema.define(version: 2022_06_27_214005) do
     t.index ["name"], name: "index_courses_on_name"
   end
 
-  create_table "data_docs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "data_docs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "key", null: false
     t.string "name"
     t.text "content"
@@ -2207,6 +2207,17 @@ ActiveRecord::Schema.define(version: 2022_06_27_214005) do
     t.index ["word", "definition"], name: "index_vocabularies_on_word_and_definition", type: :fulltext
   end
 
+  add_foreign_key "ap_school_codes", "schools"
+  add_foreign_key "census_inaccuracy_investigations", "census_overrides"
+  add_foreign_key "census_inaccuracy_investigations", "census_submissions"
+  add_foreign_key "census_inaccuracy_investigations", "users"
+  add_foreign_key "census_overrides", "schools"
+  add_foreign_key "census_submission_form_maps", "census_submissions"
+  add_foreign_key "census_summaries", "schools"
+  add_foreign_key "circuit_playground_discount_applications", "schools"
+  add_foreign_key "hint_view_requests", "users"
+  add_foreign_key "ib_school_codes", "schools"
+  add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "other_curriculum_offerings", "schools"
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"
