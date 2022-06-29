@@ -7,15 +7,14 @@ markdown <<MARKDOWN
 
 ##### Code.org is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Our vision is that every student in every school has the opportunity to learn computer science as part of their core K-12 education.
 
-## The majority of our students are young women or students from marginalized racial and ethnic groups.
+## Over 70 million students and 2 million teachers on Code.org
 
-<img src="https://images.code.org/65a91afb6fa3e31a8c3e22c4560924e3-image-1628863624258.png" alt="Donut chart representing racial and ethnic groups for US Code.org students. White students: 47%; Black / African American students: 21.2%; Hispanic / Latinx students: 21%; Students of two or more races / ethnicities: 7.1%; Asian students: 5.9%; Native American / Alaskan students: 1.3%; Native Hawaiian / Pacific Islander students: 0.9%"  style = "height: 435px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/fba984e40049c335ff81edd7a4b2a6de-image-1656085390114.42.03 AM.png" alt="Donut charts representing Code.org participation. Female or Gender-Expansive: 45%; Underrrepresented racial/ethnic groups: 50%; Students qualifying for free and reduced-price lunch: 46%; "  style = "height: 300px; clear: both; margin: 0 20px 20px 0;">
 
-<img src="https://images.code.org/df814273eb0c71a2757b736d20203fb4-image-1628863642569.png" alt="Donut chart representing gender of US Code.org students. Male students: 55%; female students: 45%" style = "height: 435px; clear: both; margin: 0 20px 20px 0;">
 
-***Percentage breakdown is for US students only*** 
+<h5 style="text-align: center;">Code.org participation from the 2020-2021 school year. <a href="https://code.org/promote/diversitydata" target="blank" >See disaggregated data</a>.</h5>
 
-##### Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Increasing diversity in computer science is foundational to our work, and <a href="https://code.org/diversity" target="blank" rel="noopener noreferrer">we encourage you to read more about our efforts</a>.
+##### Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. The vast majority of the students on Code.org are from student groups historically underrepresented in computer science. Increasing diversity in computer science is foundational to our work, and <a href="https://code.org/diversity" target="blank" rel="noopener noreferrer">we encourage you to read more about our efforts</a>.
 <br>
 
 > ##**Curriculum Value:** Equity
@@ -30,5 +29,6 @@ markdown <<MARKDOWN
 ## Our commitment to free curriculum and open source technology
 
 ##### All curriculum resources and tutorials we author will forever be free to use and openly licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank" rel="noopener noreferrer" >Creative Commons license</a> allowing others to make derivative education resources for non-commercial purposes. Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an open source project.
+
 
 MARKDOWN

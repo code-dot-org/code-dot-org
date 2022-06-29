@@ -801,7 +801,7 @@
           "name": "Bilimdon Asalari"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "CS Discoveries End of Semester Survey"
+          "name": "Programming for Entertainment"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Plotting Shapes"
@@ -1488,10 +1488,10 @@
           "name": "A Royal Battle with Events"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Programming for Entertainment"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Informatika kashfiyotlari kursidan keyingi so'rovnoma"
+          "name": "Plotting Shapes"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Drawing in Game Lab"
@@ -1548,10 +1548,7 @@
           "name": "Project - Design a Game"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Loyiha yakuniy testi"
-        },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "Informatika kashfiyotlari kursidan keyingi so'rovnoma"
+          "name": "Innovations in Computing"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "The Circuit Playground"
@@ -1593,10 +1590,10 @@
           "name": "Project: Prototype an Innovation"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Analysis of Design"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Informatika kashfiyotlari kursidan keyingi so'rovnoma"
+          "name": "Understanding Your User"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "User-Centered Design Micro Activity"
@@ -1641,10 +1638,10 @@
           "name": "Project - App Presentation"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Representation Matters"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Informatika kashfiyotlari kursidan keyingi so'rovnoma"
+          "name": "Patterns and Representation"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII and Binary Representation"
@@ -1689,7 +1686,7 @@
           "name": "Intro to Problem Solving"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Muammoni yechish jarayoni"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Exploring Problem Solving"
@@ -1710,10 +1707,10 @@
           "name": "Project - Propose an App"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Exploring Websites"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Informatika kashfiyotlari kursidan keyingi so'rovnoma"
+          "name": "Websites for Expression "
         },
         "csd2-2019/Intro to HTML": {
           "name": "Intro to HTML"
@@ -2235,10 +2232,10 @@
           "name": "Present Your Project"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "CS Discoveries End of Semester Survey"
+          "name": "Programming for Entertainment"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "CSD Post-Course Survey"
+          "name": "Plotting Shapes"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Drawing in Game Lab"
@@ -2295,7 +2292,7 @@
           "name": "Project - Design a Game"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "CSD Post-Course Survey"
+          "name": "Innovations in Computing"
         },
         "csd6-2017/The Circuit Playground_": {
           "name": "The Circuit Playground"
@@ -2337,7 +2334,7 @@
           "name": "Project: Prototype an Innovation"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "CSD Post-Course Survey"
+          "name": "Exploring Websites"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Websites for Expression "
@@ -2406,7 +2403,7 @@
           "name": "Project - Propose an App"
         },
         "csd5-2017/Representation Matters": {
-          "name": "CSD Post-Course Survey"
+          "name": "Representation Matters"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Patterns and Representation"
@@ -2451,7 +2448,7 @@
           "name": "Project - Solve a Data Problem"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "CSD Post-Course Survey"
+          "name": "Analysis of Design"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Understanding Your User"
@@ -2828,10 +2825,13 @@
           "name": "CSD Student Post-Course Survey ('18-'19)"
         },
         "allthethings/Jigsaw": {
-          "name": "Talabalar uchun anonim so‘rovnoma 2"
+          "name": "Topishmoq"
         },
         "allthethings/Maze": {
-          "name": "Pluralsight Test"
+          "name": "Labirint"
+        },
+        "allthethings/Artist": {
+          "name": "Rassom"
         },
         "allthethings/Bee": {
           "name": "Asalari"
@@ -3626,9 +3626,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "CS Discoveries Post-Course Survey"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "Loyiha yakuniy testi"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "Understanding Your User"
         },
@@ -3663,7 +3660,7 @@
           "name": "CS Discoveries Post-Course Survey"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Loyiha yakuniy testi",
+          "name": "Innovations in Computing",
           "overview": "Ushbu kursning yakuniy bo'limini boshlash uchun talabalar hisoblashdagi qiziqarli yangiliklar bo'yicha bir necha tadqiqotlar olib boradilar. Ushbu dars o'quvchilarga turli xil hisoblash shakllari omillari (kompyuter qanday ko'rinishini) va hisoblash ta'sirida bo'lgan sohalarni ochib beradi. Keyinchalik ushbu bo'limda talabalar o'zlarining jismoniy hisoblash moslamalarini ishlab chiqishda ushbu darsda duch kelgan qurilmalarni qayta ko'rib chiqadilar.\\*"
         },
         "csd6-2021/The Circuit Playground": {
@@ -3715,7 +3712,7 @@
           "name": "CS Discoveries Post-Course Survey"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Representation Matters"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Patterns and Representation"
@@ -3757,7 +3754,7 @@
           "name": "CS Discoveries Post-Course Survey"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Programming for Entertainment"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Plotting Shapes"
@@ -3824,7 +3821,7 @@
           "name": "Intro to Problem Solving"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Muammoni yechish jarayoni"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Exploring Problem Solving"
@@ -3844,9 +3841,6 @@
         },
         "csd1-2021/Project - Propose an App": {
           "name": "Project - Propose an App"
-        },
-        "csd2-2021/Exploring Web Pages": {
-          "name": "Loyiha yakuniy testi"
         },
         "csd2-2021/Intro to HTML": {
           "name": "Intro to HTML"

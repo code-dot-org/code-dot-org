@@ -1,0 +1,20 @@
+{
+  "limit": null,
+  "shared_data": {
+    "write_to_gsheet": true,
+    "write_to_file": false,
+    "start_date": "2021-11-01"
+  },
+  "data": [
+    {
+      "project_name": "codeorg",
+      "crowdin_language_id": "es-MX",
+      "user_name": "Tomedes"
+    },
+    {
+      "project_name": "codeorg",
+      "crowdin_language_id": "it",
+      "user_name": "translatebyhumans"
+    }
+  ]
+}

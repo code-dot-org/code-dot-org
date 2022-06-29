@@ -12,6 +12,7 @@ Data informs district and school recruitment by supporting your case and alignin
 - [Access Your Data Dashboard](#tableau)
 - [Data Dashboard How-To Guide](#guide)
 - [2021 Data Clean-up](#cleanup)
+- [Tableau Dashboards for Regional Partners](https://docs.google.com/document/d/1KZOTnVwGjPLRGGSsBlEwfBTaaKzQWG6p7guL2uzJW5Q/edit#heading=h.nnntqv7spgmp)
 
 <a name="tableau"></a>
 
@@ -40,6 +41,7 @@ Visit <a href="http://online.tableau.com/" target=_blank>http://online.tableau.c
 - [Data Guide](https://docs.google.com/document/d/1qeOw9YiogQ9o75lsgQ5uRNr5jZBd92Tfjc26V2_ie78/view) - Top ways to use Tableau and policy data to target and engage districts
 - [In Depth Guide](https://docs.google.com/document/d/14KgWKsfRuzC740lDZLlgjTpW4qZ-Wnt0U-v1xpNHjss/edit?ts=5a737737) - Dive more into Tableau, including Tableau navigation and available data
 - [Overview of Tableau Webinar](https://drive.google.com/file/d/1y5uJc0peiLUjGT6eqjmrMnUqsofRVyHR/view) including the [recording](https://code.zoom.us/recording/play/dllXoAASg7qgR_c2QMXC9dgou-2cjYawiWpJ2lixfkGzRlAHj1jhxUDqa0ERSrKK?continueMode=true) of useful views in Tableau
+- [Tableau Dashboards for Regional Partners](https://docs.google.com/document/d/1KZOTnVwGjPLRGGSsBlEwfBTaaKzQWG6p7guL2uzJW5Q/edit#heading=h.nnntqv7spgmp)
 
 
 <a name="cleanup"></a>

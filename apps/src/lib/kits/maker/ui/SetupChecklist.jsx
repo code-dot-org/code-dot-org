@@ -19,7 +19,6 @@ import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import experiments from '@cdo/apps/util/experiments';
 import {BOARD_TYPE} from '../util/boardUtils';
 import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
-import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -49,7 +48,7 @@ export default class SetupChecklist extends Component {
   state = {...initialState};
 
   static propTypes = {
-    webSerialPort: PropTypes.object,
+    setupChecker: PropTypes.instanceOf(SetupChecker).isRequired,
     stepDelay: PropTypes.number
   };
 
@@ -70,9 +69,7 @@ export default class SetupChecklist extends Component {
   }
 
   detect() {
-    const {webSerialPort} = this.props;
-    const wrappedSerialPort = new WebSerialPortWrapper(webSerialPort);
-    const setupChecker = new SetupChecker(wrappedSerialPort);
+    const {setupChecker} = this.props;
     this.setState({...initialState, isDetecting: true});
 
     Promise.resolve()
@@ -174,7 +171,7 @@ export default class SetupChecklist extends Component {
   }
 
   /**
-   * Helper to be used on second/subsequent attempts at detecting board usability.
+   * Helper to be used on second/subsequent attempts at detecing board usability.
    */
   redetect() {
     if (

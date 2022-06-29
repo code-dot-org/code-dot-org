@@ -859,7 +859,7 @@
           "name": "Spelling Bee"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "Survei Akhir Semester CS Discoveries"
+          "name": "Pemrograman untuk Hiburan"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Merancang Bentuk"
@@ -1564,10 +1564,10 @@
           "name": "Pertempuran Besar dengan Event"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Pemrograman untuk Hiburan"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Survei Pascakursus CS Discoveries"
+          "name": "Merancang Bentuk"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Menggambar dalam lab permaianan"
@@ -1630,10 +1630,10 @@
           "name": "Proyek - merancang sebuah permainan"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Inovasi dalam Komputasi"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "Survei Pascakursus CS Discoveries"
+          "name": "Perancangan Layar dengan Kode"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "Sirkuit Bermain Anak"
@@ -1678,10 +1678,10 @@
           "name": "Proyek: Buat Prototipe Inovasi"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Analisis desain"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Survei Pascakursus CS Discoveries"
+          "name": "Memahami pengguna anda"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Aktivitas Mikro Desain Berpusat-Pengguna"
@@ -1726,10 +1726,10 @@
           "name": "Proyek - Presentasi Aplikasi"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Representasi Itu Penting"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Survei Pascakursus CS Discoveries"
+          "name": "Pola dan Representasi"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII dan Representasi Binary"
@@ -1774,7 +1774,7 @@
           "name": "Pengenalan Pemecahan Masalah"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Proses Pemecahan Masalah"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Eksplorasi Pemecahan Masalah"
@@ -1795,10 +1795,10 @@
           "name": "Proyek - Pengajuan Aplikasi"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Mengeksplorasi Situs Web"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Survei Pascakursus CS Discoveries"
+          "name": "Situs-situs untuk Ekspresi "
         },
         "csd2-2019/Intro to HTML": {
           "name": "Pengenalan HTML"
@@ -2320,10 +2320,10 @@
           "name": "Menyajikan Proyek Anda"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "Survei Akhir Semester CS Discoveries"
+          "name": "Pemrograman untuk Hiburan"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "Survei Pascakursus CSD"
+          "name": "Merancang Bentuk"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Menggambar dalam lab permaianan"
@@ -2386,7 +2386,7 @@
           "name": "Proyek - merancang sebuah permainan"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "Survei Pascakursus CSD"
+          "name": "Inovasi dalam Komputasi"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Perancangan Layar dengan Kode"
@@ -2434,7 +2434,7 @@
           "name": "Proyek: Buat Prototipe Inovasi"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "Survei Pascakursus CSD"
+          "name": "Mengeksplorasi Situs Web"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Situs-situs untuk Ekspresi "
@@ -2503,7 +2503,7 @@
           "name": "Proyek - Pengajuan Aplikasi"
         },
         "csd5-2017/Representation Matters": {
-          "name": "Survei Pascakursus CSD"
+          "name": "Representasi Itu Penting"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Pola dan Representasi"
@@ -2548,7 +2548,7 @@
           "name": "Proyek - Memecahkan Masalah Data"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "Survei Pascakursus CSD"
+          "name": "Analisis desain"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Memahami pengguna anda"
@@ -2927,10 +2927,13 @@
           "name": "Survei Pascakursus Murid CSD  ('18-'19)"
         },
         "allthethings/Jigsaw": {
-          "name": "Survei siswa tanpa nama 2"
+          "name": "Teka-teki"
         },
         "allthethings/Maze": {
-          "name": "Pluralsight Test"
+          "name": "Labirin"
+        },
+        "allthethings/Artist": {
+          "name": "Artis"
         },
         "allthethings/Bee": {
           "name": "Lebah"
@@ -3959,9 +3962,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Survei Pascakursus CS Discoveries"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "Pengujian Pascaproyek"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "Memahami pengguna anda"
         },
@@ -3996,7 +3996,7 @@
           "name": "Survei Pascakursus CS Discoveries"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Pengujian Pascaproyek",
+          "name": "Inovasi dalam Komputasi",
           "overview": "Untuk memulai unit terakhir kursus ini, murid akan melakukan penelitian tentang beberapa inovasi menarik di dunia komputasi. Pelajaran ini akan menyingkap beraneka ragam faktor bentuk komputasi (tampilan fisik komputer) dan bidang yang terdampak oleh komputasi kepada murid. Dalam unit ini selanjutnya, murid akan melihat kembali perangkat yang mereka jumpai dalam pelajaran ini pada saat mereka mengembangkan perangkat komputasi fisik mereka sendiri."
         },
         "csd6-2021/Designing Screens with Code": {
@@ -4054,7 +4054,7 @@
           "name": "Survei Pascakursus CS Discoveries"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Representasi Itu Penting"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Pola dan Representasi"
@@ -4099,7 +4099,7 @@
           "name": "Survei Pascakursus CS Discoveries"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Pemrograman untuk Hiburan"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Merancang Bentuk"
@@ -4168,7 +4168,7 @@
           "name": "Pengenalan Pemecahan Masalah"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Proses Pemecahan Masalah"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Eksplorasi Pemecahan Masalah"
@@ -4204,7 +4204,7 @@
           "name": "Mengeksplorasi Pemecahan Masalah - Tema Permainan (Pelajaran 3 Alternatif)"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Mengeksplorasi Halaman Web"
         },
         "csd2-2021/Intro to HTML": {
           "name": "Pengenalan HTML"

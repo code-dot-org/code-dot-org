@@ -8,9 +8,9 @@ hu:
       moving east: mozgatás keletre
       moving east and looping: kelet felé menni és ismételgetni
       moving north: mozgatás északra
-      moving north and looping: mozgatás északra és ciklusokban
+      moving north and looping: mozgatás északra és hurkokban
       moving south: mozgatás délre
-      moving south and looping: mozgatás délre és ciklusokban 
+      moving south and looping: mozgatás délre és hurkokban 
       moving west: mozgatás nyugatra
       moving west and looping: nyugat felé menni és ismételgetni
       moving with arrow keys: mozgatás a nyílbillentyűkkel

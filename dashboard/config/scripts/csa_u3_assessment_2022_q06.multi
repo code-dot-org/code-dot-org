@@ -3,8 +3,8 @@ name 'CSA U3 Assessment 2022 q06'
 wrong '`{3, 4, 0}`'
 wrong '`{4, 9, 1}`'
 wrong '`13`'
-right '`14`'
-wrong '`26`'
+wrong '`14`'
+right '`26`'
 
 markdown <<MARKDOWN
 Consider the following code segment:

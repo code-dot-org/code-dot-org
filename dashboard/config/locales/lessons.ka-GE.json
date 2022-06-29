@@ -551,6 +551,9 @@
         "pre-express-2018/Spelling Bee": {
           "name": "შეჯიბრი დამარცვლაში"
         },
+        "csd3-2018/Programming for Entertainment": {
+          "name": "პროგრამირება გართობისათვის"
+        },
         "csd3-2018/Drawing in Game Lab": {
           "name": "ხატვა თამაშების ლაბორატორიაში"
         },
@@ -938,6 +941,9 @@
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "მოვლენები სათამაშო ლაბორატორიაში"
         },
+        "csd3-2019/Programming for Entertainment": {
+          "name": "პროგრამირება გართობისათვის"
+        },
         "csd3-2019/Drawing in Game Lab": {
           "name": "ხატვა თამაშების ლაბორატორიაში"
         },
@@ -992,6 +998,9 @@
         "csd6-2019/Functions with Parameters": {
           "name": "ფუნქციები პარამეტრებით"
         },
+        "csd4-2019/Analysis of Design": {
+          "name": "დიზაინის ანალიზი"
+        },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "მომხმარებელზე გათვლილი დიზაინის მიკრო აქტიურობა"
         },
@@ -1037,6 +1046,9 @@
         "csd1-2019/Intro to Problem Solving": {
           "name": "შესავალი პრობლემების გადაწყვეტაში"
         },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "პროებლემების გადაჭრის პროცესი"
+        },
         "csd1-2019/What is a Computer?": {
           "name": "რა არის კომპიუტერი?"
         },
@@ -1048,6 +1060,12 @@
         },
         "csd1-2019/Project - Propose an App": {
           "name": "პროექტი - შემოგვთავაზეთ აპლიკაცია"
+        },
+        "csd2-2019/Exploring Websites": {
+          "name": "ვებ-საიტების გამოკვლევა"
+        },
+        "csd2-2019/Websites for Expression ": {
+          "name": "ვებ-საიტები გამოხატვისათვის "
         },
         "csd2-2019/Intro to HTML": {
           "name": "შესავალი HTML-ში"
@@ -1514,6 +1532,9 @@
         "express-2017/Present Your Project": {
           "name": "წარმოადგინეთ თქვენი პროექტი"
         },
+        "csd3-2017/Programming for Entertainment": {
+          "name": "პროგრამირება გართობისათვის"
+        },
         "csd3-2017/Drawing in Game Lab": {
           "name": "ხატვა თამაშების ლაბორატორიაში"
         },
@@ -1567,6 +1588,9 @@
         },
         "csd6-2017/Functions with Parameters_": {
           "name": "ფუნქციები პარამეტრებით"
+        },
+        "csd2-2017/Exploring Websites": {
+          "name": "ვებ-საიტების გამოკვლევა"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "ვებ-საიტები გამოხატვისათვის "
@@ -1645,6 +1669,9 @@
         },
         "csd5-2017/Project - Solve a Data Problem": {
           "name": "პროექტი - გადაწყვიტეთ მონაცემთა პრობლემა"
+        },
+        "csd4-2017/Analysis of Design": {
+          "name": "დიზაინის ანალიზი"
         },
         "csd4-2017/User-Centered Design Micro Activity": {
           "name": "მომხმარებელზე გათვლილი დიზაინის მიკრო აქტიურობა"
@@ -1972,7 +1999,13 @@
           "overview": "ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე."
         },
         "allthethings/Jigsaw": {
-          "name": "მოსწავლეთა ანონიმური გამოკითხვა 2"
+          "name": "ფაზლი"
+        },
+        "allthethings/Maze": {
+          "name": "ლაბირინთი"
+        },
+        "allthethings/Artist": {
+          "name": "მხატვარი"
         },
         "allthethings/Bee": {
           "name": "ფუტკარი"
@@ -2327,6 +2360,9 @@
         "csd5-2021/Automating Data Decisions": {
           "name": "მონაცემთა გადაწყვეტილებების ავტომატიზირება"
         },
+        "csd3-2021/Programming for Entertainment": {
+          "name": "პროგრამირება გართობისათვის"
+        },
         "csd3-2021/Drawing in Game Lab": {
           "name": "ხატვა თამაშების ლაბორატორიაში"
         },
@@ -2380,6 +2416,9 @@
         },
         "csd1-2021/Intro to Problem Solving": {
           "name": "შესავალი პრობლემების გადაწყვეტაში"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "პროებლემების გადაჭრის პროცესი"
         },
         "csd1-2021/What is a Computer?": {
           "name": "რა არის კომპიუტერი?"

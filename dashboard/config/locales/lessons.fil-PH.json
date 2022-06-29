@@ -614,7 +614,7 @@
           "name": "Spelling Bee"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "Pangkatapusan ng Semestre na Pagsisiyasat sa Mga Natuklasan sa CS"
+          "name": "Pag-program para sa Libangan"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Pag-plot ng mga Hugis"
@@ -1105,6 +1105,12 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Spelling Bee"
         },
+        "csd3-2019/Programming for Entertainment": {
+          "name": "Pag-program para sa Libangan"
+        },
+        "csd3-2019/Plotting Shapes": {
+          "name": "Pag-plot ng mga Hugis"
+        },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Pagguhit sa Game Lab"
         },
@@ -1165,6 +1171,12 @@
         "csd3-2019/Project - Design a Game": {
           "name": "Proyekto - Pagdisenyo ng Laro"
         },
+        "csd6-2019/Innovations in Computing": {
+          "name": "Mga Pagbabago sa Pag-Compute"
+        },
+        "csd6-2019/Designing Screens with Code": {
+          "name": "Pagdidisenyo ng mga Screen gamit ang Code"
+        },
         "csd6-2019/The Circuit Playground": {
           "name": "Ang Circuit na Playground"
         },
@@ -1206,6 +1218,12 @@
         },
         "csd6-2019/Project: Prototype an Innovation": {
           "name": "Proyekto: Mag-Prototype ng isang Pagbabago"
+        },
+        "csd4-2019/Analysis of Design": {
+          "name": "Pagsusuri ng Disenyo"
+        },
+        "csd4-2019/Understanding Your User": {
+          "name": "Pag-uunawa sa Iyong Gumagamit"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Maliit na Gawain para sa Disenyo na Naka-Sentro sa Gumagamit"
@@ -1249,6 +1267,12 @@
         "csd4-2019/Project - App Presentation": {
           "name": "Proyekto - Pagpapakita ng App"
         },
+        "csd5-2019/Representation Matters": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
+        "csd5-2019/Patterns and Representation": {
+          "name": "Mga Pattern at Representasyon"
+        },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII at Binary na Representasyon"
         },
@@ -1291,6 +1315,9 @@
         "csd1-2019/Intro to Problem Solving": {
           "name": "Panimula sa Paglutas ng Problema"
         },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Ang Proseso ng Pagtuklas ng Problema"
+        },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Pagtuklas sa Paglutas ng Problema"
         },
@@ -1305,6 +1332,12 @@
         },
         "csd1-2019/Project - Propose an App": {
           "name": "Proyekto - Pagmungkahi ng App"
+        },
+        "csd2-2019/Exploring Websites": {
+          "name": "Paggalugad sa mga Website"
+        },
+        "csd2-2019/Websites for Expression ": {
+          "name": "Mga Website para sa Pagpapahayag "
         },
         "csd2-2019/Intro to HTML": {
           "name": "Panimula sa HTML"
@@ -1820,7 +1853,10 @@
           "name": "Ipakita ang Iyong Proyekto"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "Pangkatapusan ng Semestre na Pagsisiyasat sa Mga Natuklasan sa CS"
+          "name": "Pag-program para sa Libangan"
+        },
+        "csd3-2017/Plotting Shapes": {
+          "name": "Pag-plot ng mga Hugis"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Pagguhit sa Game Lab"
@@ -1882,6 +1918,9 @@
         "csd3-2017/Project - Design a Game": {
           "name": "Proyekto - Pagdisenyo ng Laro"
         },
+        "csd6-2017/Innovations in Computing_": {
+          "name": "Mga Pagbabago sa Pag-Compute"
+        },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Pagdidisenyo ng mga Screen gamit ang Code"
         },
@@ -1926,6 +1965,9 @@
         },
         "csd6-2017/Project: Prototype an Innovation_": {
           "name": "Proyekto: Mag-Prototype ng isang Pagbabago"
+        },
+        "csd2-2017/Exploring Websites": {
+          "name": "Paggalugad sa mga Website"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Mga Website para sa Pagpapahayag "
@@ -1993,6 +2035,9 @@
         "csd1-2017/Project - Propose an App": {
           "name": "Proyekto - Pagmungkahi ng App"
         },
+        "csd5-2017/Representation Matters": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
         "csd5-2017/Patterns and Representation": {
           "name": "Mga Pattern at Representasyon"
         },
@@ -2034,6 +2079,9 @@
         },
         "csd5-2017/Project - Solve a Data Problem": {
           "name": "Proyekto - Paglutas ang Problema sa mga Datos"
+        },
+        "csd4-2017/Analysis of Design": {
+          "name": "Pagsusuri ng Disenyo"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Pag-uunawa sa Iyong Gumagamit"
@@ -2403,7 +2451,13 @@
           "student_overview": "I-click at i-drag para tapusin ang mga puzzle."
         },
         "allthethings/Jigsaw": {
-          "name": "Walang pangalan na surbey ng estudyante 2"
+          "name": "Jigsaw"
+        },
+        "allthethings/Maze": {
+          "name": "Maze"
+        },
+        "allthethings/Artist": {
+          "name": "Artista"
         },
         "allthethings/Bee": {
           "name": "Bubuyog"
@@ -2864,6 +2918,7 @@
           "name": "Survey ng CS Discoveries Post-Course"
         },
         "csd6-2021/Innovations in Computing": {
+          "name": "Mga Pagbabago sa Pag-Compute",
           "overview": "Para simulan ang huling yunit ng kursong ito, ang mga estudyante ay gagawa ng isang pananaliksik sa kawili-wiling makabagong likha sa pag-compute. Ang araling ito ay magpapakita sa mga estudyante sa iba-bang mga mas malawak na kaibahan ng mga maaaring makakaapekto sa mga anyo ng pag-compute (ano ang hitsura ng kompyuter) at ang mga puwang na makakaapekto sa pag-compute. Mamaya sa yunit na ito, ang mga estudyante ay titingin pabalik sa mga kagawamitan na kanilang natagpuan sa araling ito habang sila ay gumagawa ng sarili nilang pisikal na mga pag-compute na mga kagamitan."
         },
         "csd6-2021/Designing Screens with Code": {
@@ -2920,6 +2975,9 @@
         "csd6-2021/CS Discoveries Post-Course Survey": {
           "name": "Survey ng CS Discoveries Post-Course"
         },
+        "csd5-2021/Representation Matters": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
         "csd5-2021/Patterns and Representation": {
           "name": "Mga Pattern at Representasyon"
         },
@@ -2958,6 +3016,9 @@
         },
         "csd5-2021/CS Discoveries Post-Course Survey": {
           "name": "Survey ng CS Discoveries Post-Course"
+        },
+        "csd3-2021/Programming for Entertainment": {
+          "name": "Pag-program para sa Libangan"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Pag-plot ng mga Hugis"
@@ -3018,6 +3079,9 @@
         },
         "csd1-2021/Intro to Problem Solving": {
           "name": "Panimula sa Paglutas ng Problema"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Ang Proseso ng Pagtuklas ng Problema"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Pagtuklas sa Paglutas ng Problema"
