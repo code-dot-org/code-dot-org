@@ -55,4 +55,5 @@ Feature: Code review V2
     Then I see no difference for "student viewing own code review" using stitch mode "none"
     And I press ".uitest-close-code-review" using jQuery
     And I wait until element ".uitest-open-code-review" is visible
+    And I close my eyes
 
