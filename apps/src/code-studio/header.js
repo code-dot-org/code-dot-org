@@ -84,7 +84,6 @@ header.build = function(
   lessonData = lessonData || {};
   progressData = progressData || {};
 
-  const linesOfCodeText = progressData.linesOfCodeText;
   let saveAnswersBeforeNavigation = currentPageNumber !== PUZZLE_PAGE_NONE;
 
   // Set up the store immediately. Note that some progress values are populated
@@ -114,7 +113,6 @@ header.build = function(
           lessonData={lessonData}
           scriptData={scriptData}
           currentLevelId={currentLevelId}
-          linesOfCodeText={linesOfCodeText}
         />
       </Provider>,
       document.querySelector('.header_level')

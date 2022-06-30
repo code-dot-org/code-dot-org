@@ -78,7 +78,7 @@ module SetupTest
     VCR.use_cassette(cassette_name, record: record_mode) do
       PEGASUS_DB.transaction(rollback: :always) do
         DASHBOARD_DB.transaction(rollback: :always) do
-          AWS::S3.stub(:random, proc {random.bytes(16).unpack('H*')[0]}, &block)
+          AWS::S3.stub(:random, proc {random.bytes(16).unpack1('H*')}, &block)
         end
       end
     end
