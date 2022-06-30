@@ -119,6 +119,7 @@
           "purpose": "本課程旨在幫助學生在精靈圖實驗室中創建簡單的程式設計項目。通過這項技能，學生可以創建任何主題的項目，如另一個學校主題或與他們個人相關的東西。訪問[CS Connections](https://code.org/educate/csc)瞭解如何將電腦科學整合到其他學科的思路。"
         },
         "starwarsblocks/Hour of Code 2015": {
+          "name": "星際大戰：用程式碼建立銀河系（Blockly）",
           "purpose": "本課堂會介紹核心的電腦科學程式編寫與設計概念，包括序列和事件。JavaScript 版本的教程也可讓學生體驗編寫程式。",
           "student_overview": "在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂提供2個版本。"
         },
@@ -136,6 +137,7 @@
           "student_overview": "一種病毒來到怪物城鎮！學習創建一個病毒模擬器，幫助怪物恢復健康。"
         },
         "sports/Sports": {
+          "name": "編寫屬於你的運動遊戲程式",
           "overview": "在這項線上活動中，學生會學習甚麼是事件（event），以及電腦怎樣在程式（例如電子遊戲）中使用事件。學生會在各種謎題中，讓程式，對事件做出反應（例如按下箭頭按鈕後）。在謎題結束時，學生將有機會以不同的速度與聲音自訂遊戲。",
           "student_overview": "有沒有想過，你可以在學校玩電子遊戲？在本課堂中，你將有機會製作自己的遊戲！"
         },
@@ -287,6 +289,9 @@
         },
         "netsim/Internet Simulator Freeplay": {
           "name": "網路模擬器自由探索"
+        },
+        "odometer/Odometer Widget": {
+          "name": "里程錶小工具"
         },
         "applab-1hour/Room Escape": {
           "name": "逃出房間"
@@ -441,6 +446,9 @@
         "coursed-2018/Nested Loops in Bee": {
           "name": "迷宮裡的巢狀迴圈（Nested Loops）"
         },
+        "coursed-2018/Nested Loops in Artist": {
+          "name": "使用巢狀迴圈的花式形狀"
+        },
         "coursed-2018/Nested Loops in Frozen": {
           "name": "和安娜與艾莎一同玩雪花"
         },
@@ -467,6 +475,9 @@
         },
         "coursed-2018/Unplugged: Binary": {
           "name": "二進制圖像"
+        },
+        "coursed-2018/Artist Binary": {
+          "name": "與藝術家與二進制圖像"
         },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "我的機器人朋友"
@@ -684,6 +695,9 @@
         "express-2018/Unplugged: Binary": {
           "name": "二進制圖像"
         },
+        "express-2018/Artist Binary": {
+          "name": "與藝術家與二進制圖像"
+        },
         "express-2018/Internet": {
           "name": "網際網路"
         },
@@ -871,7 +885,7 @@
           "name": "拼字蜜蜂"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "電腦科學探索學期結束問卷調查"
+          "name": "娛樂用途的程式設計"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "幾何繪圖"
@@ -1278,6 +1292,9 @@
         "coursed-2019/Unplugged: Binary": {
           "name": "二進制圖像"
         },
+        "coursed-2019/Artist Binary": {
+          "name": "與藝術家與二進制圖像"
+        },
         "coursed-2019/Digital Citizenship": {
           "name": "數位公民"
         },
@@ -1373,6 +1390,9 @@
         },
         "coursee-2019/Nested Loops in Bee": {
           "name": "迷宮裡的巢狀迴圈（Nested Loops）"
+        },
+        "coursee-2019/Nested Loops in Artist": {
+          "name": "使用巢狀迴圈的花式形狀"
         },
         "coursee-2019/Nested Loops in Frozen": {
           "name": "在冰雪奇緣中使用巢狀迴圈（Nested Loop）"
@@ -1567,10 +1587,10 @@
           "name": "以事件（Event）展開皇家大戰"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "專案後測驗"
+          "name": "娛樂用途的程式設計"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "電腦科學探索課後問卷調查"
+          "name": "幾何繪圖"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "用 Game Lab 繪圖"
@@ -1633,10 +1653,10 @@
           "name": "專案 - 設計一個遊戲"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "專案後測驗"
+          "name": "運算上的創新"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "電腦科學探索課後問卷調查"
+          "name": "以程式碼設計螢幕畫面"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "電路（Circuit ）遊樂場"
@@ -1681,10 +1701,10 @@
           "name": "專案：原型創新"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "專案後測驗"
+          "name": "設計分析"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "電腦科學探索課後問卷調查"
+          "name": "瞭解您的使用者"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "以使用者為中心的微型活動"
@@ -1729,10 +1749,10 @@
           "name": "專案 - 應用程式簡報"
         },
         "csd5-2019/Representation Matters": {
-          "name": "專案後測驗"
+          "name": "表示事項"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "電腦科學探索課後問卷調查"
+          "name": "模式和標記法"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII 和 二進位表示法"
@@ -1777,7 +1797,7 @@
           "name": "問題解決能力的介紹"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "專案後測驗"
+          "name": "問題解決流程"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "問題解決探索"
@@ -1798,10 +1818,10 @@
           "name": "專案 - 提出應用程式建議"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "專案後測驗"
+          "name": "探索不同網站"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "電腦科學探索課後問卷調查"
+          "name": "建立網站，表達內容"
         },
         "csd2-2019/Intro to HTML": {
           "name": "HTML 簡介"
@@ -2323,10 +2343,10 @@
           "name": "說明你的專案"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "電腦科學探索學期結束問卷調查"
+          "name": "娛樂用途的程式設計"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "CSD 課後問卷調查"
+          "name": "幾何繪圖"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "用 Game Lab 繪圖"
@@ -2389,7 +2409,7 @@
           "name": "專案 - 設計一個遊戲"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "CSD 課後問卷調查"
+          "name": "運算上的創新"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "以程式碼設計螢幕畫面"
@@ -2437,7 +2457,7 @@
           "name": "專案：原型創新"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "CSD 課後問卷調查"
+          "name": "探索不同網站"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "建立網站，表達內容"
@@ -2506,7 +2526,7 @@
           "name": "專案 - 提出應用程式建議"
         },
         "csd5-2017/Representation Matters": {
-          "name": "CSD 課後問卷調查"
+          "name": "表示事項"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "模式和標記法"
@@ -2551,7 +2571,7 @@
           "name": "專案 - 解決數據問題"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "CSD 課後問卷調查"
+          "name": "設計分析"
         },
         "csd4-2017/Understanding Your User": {
           "name": "瞭解您的使用者"
@@ -2930,10 +2950,13 @@
           "name": "CSD 學生課後問卷調查 ('18-'19)"
         },
         "allthethings/Jigsaw": {
-          "name": "匿名學生問卷調查 2"
+          "name": "拼圖"
         },
         "allthethings/Maze": {
-          "name": "Pluralsight 測試"
+          "name": "迷宮"
+        },
+        "allthethings/Artist": {
+          "name": "藝術家"
         },
         "allthethings/Bee": {
           "name": "蜜蜂"
@@ -2973,6 +2996,9 @@
         },
         "allthethings/Text Compression": {
           "name": "文字壓縮"
+        },
+        "allthethings/Pixelation": {
+          "name": "像素化"
         },
         "allthethings/AppLab": {
           "name": "AppLab"
@@ -3049,6 +3075,9 @@
         "allthethings/ML Fish": {
           "name": "ML 魚"
         },
+        "allthethings/AI Lab": {
+          "name": "AI Lab"
+        },
         "allthethings/Java Lab": {
           "name": "Java 實驗室"
         },
@@ -3070,6 +3099,12 @@
         "coursef-2021/lesson-2": {
           "name": "語言的力量",
           "student_overview": "欺凌絕對是不恰當的行為。本課堂會教導你可以和不可以在線上做些甚麼。"
+        },
+        "coursef-2021/lesson-9": {
+          "name": "空白區故事"
+        },
+        "coursef-2021/lesson-10": {
+          "name": "文字與提示"
         },
         "coursef-2021/lesson-11": {
           "name": "小項目：用戶輸入程式"
@@ -3139,6 +3174,7 @@
           "student_overview": "這麼大型的專案需要時間與充分計畫。找出靈感、制訂計畫，激發你的創意！"
         },
         "courseb-2021/Digital Trails": {
+          "name": "數位足跡",
           "student_overview": "瞭解自己的數位足跡，並學習怎樣在瀏覽網站時保持安全。"
         },
         "courseb-2021/Move It, Move It": {
@@ -3202,6 +3238,7 @@
           "name": "課程結束專案"
         },
         "coursea-2021/Safety in My Online Neighborhood": {
+          "name": "我的網上社區的安全",
           "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\n本課程由 Common Sense Education 製作。[了解更多。](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\n互聯網的力量令學生能夠體驗和參觀他們也許無法親身去看的地方，但如現實中旅行一樣，網上旅遊時注意安全亦同樣重要。這次虛擬的實地考察，孩子可以練習在網上探險時保持安全。",
           "preparation": "-   查閱教材。\n-   為每位學生列印講義。\n-   (可選) 列印詩歌海報，展示在教室中。",
           "purpose": "Common Sense Education 設立了這個課程，教學生如何在網上安全地到處去。"
@@ -3268,6 +3305,9 @@
         },
         "coursea-2021/lesson-1": {
           "name": "課程結束專案"
+        },
+        "coursec-2021/Putting a STOP to Online Meanness": {
+          "name": "制止網上的卑鄙行為"
         },
         "coursec-2021/Programming: My Robotic Friends": {
           "name": "我的小機器人朋友",
@@ -3350,6 +3390,7 @@
           "student_overview": "準備就緒，開始編寫大量程式！是時候開始製作你的專案了。"
         },
         "coursed-2021/lesson-5": {
+          "name": "密碼升級",
           "purpose": "Common Sense Education 設立了這個課程，教學生如何在網上安全地到處去。",
           "student_overview": "在本課堂中，你會瞭解密碼可怎樣保護你的資訊，以及怎樣才算是好的密碼。"
         },
@@ -3547,6 +3588,9 @@
           "overview": "學生已練習在藝術家遊戲中製作精彩的設計，並在蜜蜂遊戲中遊走，但他們今天會使用函式（function），在收割者遊戲中收割農作物。本課堂會鼓勵學生以新的方式使用函式：把函式和「while」（當）迴圈與「if/else」（如果/否則）陳述句結合起來。",
           "student_overview": "協助農夫收割農作物時，函式（function）可為你省下大量工夫！"
         },
+        "express-2021/lesson-4": {
+          "name": "文字與提示"
+        },
         "express-2021/Variables with Artist": {
           "overview": "在本課堂中，學生會在藝術家環境中，學習怎樣使用變數製作重複的設計。學生會學習變數可怎樣使程式碼更容易編寫和閱讀。在引導式謎題後，學生會在自由探索關卡中結束課堂，然後展示他們學到的內容，以及製作自己的設計。",
           "student_overview": "在本課堂中，你會使用變數來繪畫。在程式執行期間，這些變數都可變更。"
@@ -3647,6 +3691,9 @@
           "preparation": "-   解決難題，找出學生可能存在的問題。\n-   確保每個學生都有反思日誌。",
           "student_overview": "製作可與同學分享的互動專案。"
         },
+        "coursee-2021/lesson-4": {
+          "name": "成為超級數位公民"
+        },
         "coursee-2021/Private and Personal Information": {
           "name": "隱私與個人資訊",
           "purpose": "Common Sense Education 設立了這個課程，教學生如何在網上安全地到處去。",
@@ -3667,6 +3714,7 @@
           "student_overview": "在本課堂中，迴圈（loop）讓你在藝術家中輕鬆製作更酷炫的圖像！"
         },
         "coursee-2021/Nested Loops in Artist": {
+          "name": "使用巢狀迴圈的花式形狀",
           "purpose": "在這個線上活動中，學生會在藝術家遊戲中設計作品，並可自豪地與家人分享。\n\n這項活動之目的，是運用巢狀迴圈（nested loop）做為啟發學生藝術思維的方式，把編寫程式視為另一種表現創意的方式。這組謎題用於發展學生的批判思維技巧、讓學生學習初等幾何學，並啟發學生的創意 - 這些目標全都納入巢狀迴圈的學習範圍中！",
           "student_overview": "更多巢狀迴圈（nested loop）！這一次，你將能夠使用巢狀迴圈製作一些非常漂亮的圖畫！"
         },
@@ -3718,8 +3766,17 @@
           "overview": "接下來的 4 個課堂讓學生有機會把自己的程寫編寫技巧，用於製作一份總結專案。這個專案可幫助學生累積程式編寫經驗，並製作範例專案與同伴和摯愛分享。這是多個課堂或多個星期的體驗，學生會花時間一起思考、學習設計流程、製作並展示自己的最終作品。\\\\r\n\\\\r\n在探索階段中，學生將會試玩預先製作完成的藝術家與 Sprite Lab 專案範例，從而獲取靈感。然後，學生將會學習設計流程，以及怎樣將設計加入自己的專案中。之後，學生會有自由創作空間，在藝術家、Sprite Lab 或其他他們熟悉的介面中製作自己的專案（這可能是專案中最長的階段）。最後，學生將能夠向同伴展示自己的成品。",
           "student_overview": "這麼大型的專案需要時間與充分計畫。找出靈感、制訂計畫，激發你的創意！"
         },
+        "csd7-2021/Patterns in Data": {
+          "name": "數據中的規律"
+        },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "AI Lab 的介紹"
+        },
         "csd7-2021/Similarity Models": {
           "overview": "在本課中，學生參與一個線下活動，模擬僵屍疫情爆發。學生必須利用鄰近城鎮的數據來預測城鎮的哪一部分擁有最少的僵屍。學生們將使用相似度和平均值來預測某一特定地點的僵屍數量。然後，學生得到拯救，並將他們的預測與實際數字進行比較，以討論數字數據與分類數據的準確性有何不同。\n\n**今日問題。**電腦如何學習用數字資料進行預測？"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "AI Lab 的數字資料"
         },
         "csd7-2021/Survey Planning": {
           "name": "設計數據收集"
@@ -3728,10 +3785,16 @@
           "name": "電腦科學探索課後問卷調查"
         },
         "csd4-2021/Analysis of Design": {
-          "name": "專案後測驗"
+          "name": "用同理心設計"
         },
         "csd4-2021/Understanding Your User": {
           "name": "瞭解您的使用者"
+        },
+        "csd4-2021/User-Centered Design 1": {
+          "name": "用戶為本設計   定義和準備"
+        },
+        "csd4-2021/User-Centered Design 2": {
+          "name": "用戶為本設計   嘗試和反思"
         },
         "csd4-2021/User Interfaces": {
           "name": "使用者介面"
@@ -3751,11 +3814,35 @@
         "csd4-2021/Market Research": {
           "name": "市場研究"
         },
+        "csd4-2021/Exploring UI Elements": {
+          "name": "探索 UI 元素"
+        },
+        "csd4-2021/Paper Prototypes": {
+          "name": "製作紙上原型"
+        },
         "csd4-2021/Prototype Testing": {
           "name": "原型測試"
         },
+        "csd4-2021/Digital Design": {
+          "name": "App Lab 的設計模式"
+        },
+        "csd4-2021/Build a Digital Prototype": {
+          "name": "製作數位原型"
+        },
+        "csd4-2021/Events In AppLab": {
+          "name": "AppLab 中的事件"
+        },
+        "csd4-2021/Linking Screens": {
+          "name": "連接原型畫面"
+        },
         "csd4-2021/Testing the App": {
           "name": "測試應用程式"
+        },
+        "csd4-2021/Bugs and Features": {
+          "name": "臭蟲和功能"
+        },
+        "csd4-2021/Updating Your Prototype": {
+          "name": "更新你的原型"
         },
         "csd4-2021/Project - App Presentation": {
           "name": "專案 - 應用程式簡報"
@@ -3764,7 +3851,7 @@
           "name": "電腦科學探索課後問卷調查"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "專案後測驗",
+          "name": "運算上的創新",
           "overview": "在這個本課程的最後一個單元中，學生首先會做一些研究，瞭解電腦運算的有趣創新成果。本課堂會讓學生瞭解更多電腦運算的形式（電腦的外觀看起來怎樣），以及受電腦運算影響的範疇。在本單元的後期，學生會在開發自己的運算裝置時，回顧本課堂中看到的裝置。"
         },
         "csd6-2021/Designing Screens with Code": {
@@ -3792,6 +3879,9 @@
           "name": "程式設計流程",
           "overview": "本課堂會向學生介紹相關流程，他們將會在整個單元中，使用這個流程設計自己的程式。這項流程會以一個專案指南為中心，指南中會要求學生繪製畫面草圖、找出要使用的 Circuit Playground 元件、定義變數與描述事件，然後才開始設計程式。這項流程與單元 3 中使用的遊戲設計流程。在本課堂中，學生首先會玩一款拔河風格的遊戲，遊戲期間程式碼會被隱藏。學生會展開討論，指出他們認為需使用哪些電路板元件、事件與變數製作這款程式。學生會收到完整的專案指南，裡面會說明實作專案的一種方式。然後，學生會在不同的關卡中瞭解這項流程。在課堂結束時，學生將有機會改良程式，使之成為自己的作品。"
         },
+        "csd6-2021/Project: Make a Game": {
+          "name": "專案 - 製作遊戲"
+        },
         "csd6-2021/Arrays and Color LEDs": {
           "name": "陣列與彩色 LED",
           "overview": "陣列是項目的有序的集合，通常含有相同的項目類型。在本課堂中，學生會學習各種方式，使用其索引存取清單中指定或隨機的值。然後，學生會學習怎樣存取 colorLEDs 陣列，以控制 Circuit Playground 上的彩色 LED 行為。學生會控制 LED 的顏色與強度，然後使用所學到的知識編寫燈光模式程式，從而在 Circuit Playground 上進行燈光表演。"
@@ -3816,13 +3906,14 @@
           "overview": "為了準備這一章的期末專案，學生會學習怎樣開發包含 Circuit Playground 的實物原型。學生會使用範例專案計畫指南，學習怎樣編寫一些簡單電路和製作原型，從而可使用便宜且容易找到的材料（例如紙板與膠帶）展現出預期產品的設計。"
         },
         "csd6-2021/Project: Prototype an Innovation": {
+          "name": "專案 - 為新點子製作原型",
           "overview": "在課程的這個期末專案中，學生會以團隊方式開發並測試一款創新運算裝置的原型，這個原型以 Circuit Playground 為基礎。各小組會使用電路板上可用的輸入與輸出來製作程式，讓程式可與使用者進行有趣且獨一無二的互動。"
         },
         "csd6-2021/CS Discoveries Post-Course Survey": {
           "name": "電腦科學探索課後問卷調查"
         },
         "csd5-2021/Representation Matters": {
-          "name": "專案後測驗"
+          "name": "表示事項"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "模式和標記法"
@@ -3842,6 +3933,9 @@
         "csd5-2021/Keeping Data Secret": {
           "name": "讓資料保密"
         },
+        "csd5-2021/Project - Create a Representation": {
+          "name": "建立表示法"
+        },
         "csd5-2021/Problem Solving and Data": {
           "name": "問題解決與數據"
         },
@@ -3860,11 +3954,17 @@
         "csd5-2021/Problem Solving with Big Data": {
           "name": "用大數據解決問題"
         },
+        "csd5-2021/Data and Machine Learning": {
+          "name": "數據與機器學習"
+        },
+        "csd5-2021/Project - Make a Recommendation": {
+          "name": "專案 - 提出建議"
+        },
         "csd5-2021/CS Discoveries Post-Course Survey": {
           "name": "電腦科學探索課後問卷調查"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "專案後測驗"
+          "name": "娛樂用途的程式設計"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "幾何繪圖"
@@ -3896,6 +3996,9 @@
         },
         "csd3-2021/Keyboard Input": {
           "name": "鍵盤輸入"
+        },
+        "csd3-2021/Mouse Input": {
+          "name": "滑鼠輸入"
         },
         "csd3-2021/Project - Interactive Card": {
           "name": "專案 - 互動式卡片"
@@ -3931,7 +4034,7 @@
           "name": "問題解決能力的介紹"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "專案後測驗"
+          "name": "問題解決流程"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "問題解決探索"
@@ -3951,8 +4054,23 @@
         "csd1-2021/Project - Propose an App": {
           "name": "專案 - 提出應用程式建議"
         },
+        "csd1-2021/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "解難簡介 - 讀報桌 (備選課堂 1)"
+        },
+        "csd1-2021/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "解難簡介 - 義大利麵橋 (備選課堂 1)"
+        },
+        "csd1-2021/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "解難簡介 - 紙塔 (備選課堂 1)"
+        },
+        "csd1-2021/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "探索解難 - 動物主題 (備選課堂 3)"
+        },
+        "csd1-2021/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "探索解難 - 遊戲主題 (備選課堂 3)"
+        },
         "csd2-2021/Exploring Web Pages": {
-          "name": "專案後測驗"
+          "name": "瀏覽網頁"
         },
         "csd2-2021/Intro to HTML": {
           "name": "HTML 簡介"
@@ -4119,6 +4237,9 @@
         "express-2020/End of Course Project": {
           "name": "課程結束專案"
         },
+        "courseb-2020/Digital Trails": {
+          "name": "數位足跡"
+        },
         "courseb-2020/Move It, Move It": {
           "name": "移動它，移動它"
         },
@@ -4200,8 +4321,20 @@
         "coursed-2020/Unplugged: Binary": {
           "name": "二進制圖像"
         },
+        "coursed-2020/Artist Binary": {
+          "name": "與藝術家與二進制圖像"
+        },
+        "coursed-2020/Be A Super Digital Citizen": {
+          "name": "成為超級數位公民"
+        },
         "coursed-2020/End of Course Project": {
           "name": "課程結束專案"
+        },
+        "coursec-2020/Putting a STOP to Online Meanness": {
+          "name": "制止網上的卑鄙行為"
+        },
+        "coursec-2020/Password Power-Up": {
+          "name": "密碼升級"
         },
         "coursec-2020/Programming: My Robotic Friends": {
           "name": "我的小機器人朋友"
@@ -4281,6 +4414,9 @@
         "coursee-2020/Nested Loops in Bee": {
           "name": "迷宮裡的巢狀迴圈（Nested Loops）"
         },
+        "coursee-2020/Nested Loops in Artist": {
+          "name": "使用巢狀迴圈的花式形狀"
+        },
         "coursee-2020/Nested Loops in Frozen": {
           "name": "在冰雪奇緣中使用巢狀迴圈（Nested Loop）"
         },
@@ -4301,6 +4437,9 @@
         },
         "coursee-2020/End of Course Project": {
           "name": "課程結束專案"
+        },
+        "coursea-2020/Safety in My Online Neighborhood": {
+          "name": "我的網上社區的安全"
         },
         "coursea-2020/Learn to Drag and Drop": {
           "name": "學習滑鼠的拖放"

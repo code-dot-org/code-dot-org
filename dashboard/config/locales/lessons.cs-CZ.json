@@ -2034,6 +2034,15 @@
           "purpose": "Hlavním cílem této lekce je prohloubit zkušenosti studentů s počítači. Tím, že si studenti osvojí nejzákladnější funkce ovládání počítače, jako je klikání a přetahování, vytvoří se ve třídě rovnější podmínky pro práci na budoucích zadáních. Tato lekce je také skvělou příležitostí k představení základní terminologie počítačového hardwaru – a k seznámení žáků s myší, trackpadem nebo dotykovou obrazovkou – podle toho, jaké zařízení používáte.",
           "student_overview": " Hlavolamy dokončete kliknutím a potažením."
         },
+        "allthethings/Jigsaw": {
+          "name": "Skládačka"
+        },
+        "allthethings/Maze": {
+          "name": "Bludiště"
+        },
+        "allthethings/Artist": {
+          "name": "Umělec"
+        },
         "allthethings/Bee": {
           "name": "Včela"
         },

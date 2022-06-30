@@ -64,6 +64,7 @@ npm-debug.log
 /log
 /pegasus/config/newrelic.yml
 /pegasus/.sass-cache
+/pegasus/sites.v3/code.org/public/css/generated
 /rebuild
 /rebuild-apps
 /rebuild-shared

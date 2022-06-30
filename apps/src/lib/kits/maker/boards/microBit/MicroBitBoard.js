@@ -11,7 +11,6 @@ import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 import {isChromeOS, serialPortType} from '../../util/browserChecks';
-import {MICROBIT_FIRMWARE_VERSION} from './MicroBitConstants';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -97,15 +96,6 @@ export default class MicroBitBoard extends EventEmitter {
     return Promise.resolve()
       .then(() => this.openSerialPort())
       .then(serialPort => this.boardClient_.connectBoard(serialPort))
-      .then(() => {
-        if (
-          this.boardClient_.firmwareVersion.includes(MICROBIT_FIRMWARE_VERSION)
-        ) {
-          return Promise.resolve();
-        } else {
-          return Promise.reject('Incorrect firmware detected');
-        }
-      })
       .catch(err => Promise.reject(err));
   }
 

@@ -45,6 +45,7 @@ mr:
         personal_email_markdown: "वैयक्तिक ईमेल पत्ता [(तुमच्याकडे ईमेल पत्ता नसल्यास येथे क्लिक करा)](%{url})"
         username: 'वापरकर्तानाव'
         password: 'पासवर्ड '
+        verified_teacher: 'प्रमाणित शिक्षक'
         password_confirmation: 'पासवर्ड पुष्टीकरण'
         current_password: 'सध्याचा पासवर्ड '
         locale: 'भाषा'
@@ -344,6 +345,11 @@ mr:
       documentation: "दस्तऐवजीकरण"
       tutorials: "ट्यूटोरियल्स"
       app_lab_documentation: "वेब लॅब डॉक्युमेंटेशन"
+      app_lab_tutorials: "अॅप लॅब ट्यूटोरियल"
+      game_lab_documentation: "गेम लॅब डॉक्युमेंटेशन"
+      game_lab_tutorials: "गेम लॅब ट्यूटोरियल"
+      sprite_lab_documentation: "स्प्राईट लॅब डॉक्युमेंटेशन"
+      sprite_lab_tutorials: "स्प्राइट लॅब ट्यूटोरियल"
       web_lab_documentation: "वेब लॅब डॉक्युमेंटेशन"
       educate_overview: "शिक्षक अवलोकन"
       educate_elementary: "प्राथमिक शाळा"
@@ -379,6 +385,7 @@ mr:
       district_dashboard: 'डिस्ट्रिक्ट डॅशबोर्ड'
       label: 'नमस्कार %{username}'
       stats: 'कोड स्टुडिओ'
+      my_projects: 'माझा प्रोजेक्ट'
       settings: 'खाते सेटिंग्ज'
       logout: 'साइन आउट करा'
       signin: 'साइन इन करा'
@@ -413,12 +420,14 @@ mr:
       poetry_hoc: 'कविता कला '
       scratch: 'स्क्रॅच'
       sports: 'क्रीडा'
+      spritelab: 'स्प्राइट लॅब'
       starwars: 'स्टार वॉर्स'
       starwarsblocks: 'स्टार वॉर्स (ब्लॉक्स)'
       starwarsblocks_hour: 'स्टार वॉर्स (ब्लॉक्स)'
       thebadguys: 'द बॅड गाईज'
       loading: 'लोड करीत आहे ...'
       weblab: 'वेब लॅब'
+      view_all: 'सर्व प्रोजेक्ट्स पहा'
     popup:
       progress_for_user: "%{name} ची प्रगती"
       progress: 'तुमची प्रगती'
@@ -573,6 +582,7 @@ mr:
     art_from_html_old: 'माइनक्राफ्ट&#8482; &कॉपी; %{current_year} मायक्रोसॉफ्ट. सर्व हक्क राखीव. स्टार वॉर्स&#8482; &कॉपी; %{current_year} डिस्ने आणि लुकासफिल्म. सर्व हक्क राखीव. फ्रोझन&#8482; &कॉपी; %{current_year} डिस्ने. सर्व हक्क राखीव. आइस एज &#8482; &कॉपी; %{current_year} 20 व्या शतकातील फॉक्स. सर्व हक्क राखीव. अँग्री बर्ड्स&#8482; &कॉपी; 2009-%{current_year} रोवियो एंटरटेनमेंट लिमिटेड सर्व हक्क राखीव. प्लांट्स  वि. झोम्बी&#8482; &कॉपी; %{current_year} इलेक्ट्रॉनिक आर्ट्स इंक. सर्व हक्क राखीव. ड्रीमवर्क्स द बॅड गाईज &कॉपी; %{current_year} ड्रीमवर्क्स अॅनिमेशन एलएलसी. सर्व हक्क राखीव.'
     code_from_html: 'Code.org p5.play वापरते, जे <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a> अंतर्गत परवानाकृत आहे. .'
     powered_by_aws: 'Amazon Web Services आणि “Powered by AWS” लोगो हे Amazon.com, Inc. किंवा युनायटेड स्टेट्स आणि/किंवा इतर देशांमधील त्याच्या संलग्न कंपन्यांचे ट्रेडमार्क आहेत.'
+    built_on_github: 'मायक्रोसॉफ्टच्या गिटहबवर तयार केलेले '
     google_copyright: '&कॉपी;© Google Inc. परवानगी घेऊन वापरले आहे. गुगल क्लासरूम हा गुगल इंकचा ट्रेडमार्क आहे.'
     trademark: '&कॉपी; Code.org, %{current_year}. Code.org&reg;, CODE लोगो आणि Hour of Code & reg; Code.org चे ट्रेडमार्क आहेत.'
     copyright: 'कॉपीराइट'
@@ -583,12 +593,16 @@ mr:
     tos_short: 'अटी'
     tos: 'सेवेच्या अटी'
     privacy: 'गोपनीयता धोरण'
+    privacy_updated: 'गोपनीयता धोरण (अपडेट केलेले)'
     secure: 'सुरक्षित आवृत्ती'
     report_abuse: 'गैरवर्तनाची रिपोर्ट करा'
     built_on_code_studio: 'कोड स्टुडिओवर तयार केले'
     make_my_own_app: 'माझे स्वत:चे अॅप बनवा'
     how_it_works: 'ते कसे कार्य करते (कोड पहा)'
     try_hour_of_code: 'अवर ऑफ कोड करून पहा'
+    store: 'दुकान'
+    cookie_notice: 'कुकी सूचना '
+    view_code: 'कोड पहा'
   reference_area:
     title: 'मदत पाहिजे?'
     subtitle: 'हे व्हिडिओ आणि इशारे पाहा'
@@ -1104,6 +1118,10 @@ mr:
     message: 'आमच्या साइटवर पुढे ब्राउझ करून किंवा "माझी संमती आहे” वर क्लिक करून तुम्ही संमती देता की तुमच्या कॉम्प्युटर किंवा डिव्हाइसवर कुकीज ठेवण्यात येतील.'
     more_information: "Code.org चे गोपनीयता धोरण पाहा."
     accept: 'माझी संमती आहे'
+  page_not_found_title: "पेज सापडला नाही"
+  page_not_found_header: '404: पेज सापडले नाही'
+  page_not_found_description: "तुम्ही शोधत असलेले पान या पत्त्यावर अस्तित्वात नाही. वेब अॅड्रेस तपासा आणि पुन्हा सबमिट करा. किंवा आमच्या होमपेजवर परत जा."
+  page_not_found_button: "होम वर परत जाणे "
   copy: 'कॉपी'
   confirm: 'पुष्टी करा'
   maker:

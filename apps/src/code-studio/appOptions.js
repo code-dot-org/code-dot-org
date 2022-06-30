@@ -68,6 +68,7 @@
  * @property {boolean} reduceChannelUpdates
  * @property {boolean} hasOpenCodeReview
  * @property {boolean} isViewingOwnProject
+ * @property {?string} codeOwnersName
  */
 
 /**

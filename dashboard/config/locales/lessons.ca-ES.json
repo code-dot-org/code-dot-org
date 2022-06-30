@@ -596,6 +596,15 @@
         "jigsaw/Jigsaw": {
           "name": "Puzzle"
         },
+        "allthethings/Jigsaw": {
+          "name": "Puzzle"
+        },
+        "allthethings/Maze": {
+          "name": "Laberint"
+        },
+        "allthethings/Artist": {
+          "name": "Artista"
+        },
         "allthethings/Bee": {
           "name": "Abella"
         },

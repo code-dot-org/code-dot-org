@@ -24,7 +24,7 @@
 class CodeReview < ApplicationRecord
   acts_as_paranoid
 
-  belongs_to :owner, class_name: 'User', foreign_key: :user_id
+  belongs_to :owner, class_name: 'User', foreign_key: :user_id, optional: true
   # TODO: Once all the renaming has settled, the following association should be:
   # has_many :comments, class_name: 'CodeReviewComment', dependent:  :destroy
   has_many :comments, class_name: 'CodeReviewNote', foreign_key: 'code_review_request_id', dependent:  :destroy, inverse_of: 'code_review'
@@ -36,7 +36,7 @@ class CodeReview < ApplicationRecord
     message: 'already has an open code review for this project'
 
   # Scope that includes only open code reviews
-  scope :open_reviews, -> { where(closed_at: nil) }
+  scope :open_reviews, -> {where(closed_at: nil)}
 
   def self.open_for_project?(channel:)
     return false unless channel

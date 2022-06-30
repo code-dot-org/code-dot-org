@@ -17,6 +17,9 @@ $(document).ready(function() {
     : 'signedOut';
   const language = congratsData.language;
   const under13 = congratsData.under_13;
+  const nextCourseScriptName = congratsData.next_course_script_name;
+  const nextCourseTitle = congratsData.next_course_title;
+  const nextCourseDesc = congratsData.next_course_description;
   const randomDonorTwitter = congratsData.random_donor_twitter;
   const randomDonorName = congratsData.random_donor_name;
   // Allows us to conditionally hide the promotional card for the Dance Party
@@ -52,6 +55,9 @@ $(document).ready(function() {
         showStudioCertificate={showStudioCertificate}
         initialCertificateImageUrl={certificateImageUrl}
         isHocTutorial={isHocTutorial}
+        nextCourseScriptName={nextCourseScriptName}
+        nextCourseTitle={nextCourseTitle}
+        nextCourseDesc={nextCourseDesc}
       />
     </Provider>,
     document.getElementById('congrats-container')

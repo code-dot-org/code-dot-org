@@ -59,8 +59,8 @@ class Script < ApplicationRecord
   has_many :user_scripts
   has_many :hint_view_requests
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
-  belongs_to :wrapup_video, class_name: 'Video'
-  belongs_to :user
+  belongs_to :wrapup_video, class_name: 'Video', optional: true
+  belongs_to :user, optional: true
   has_many :unit_group_units
   has_many :unit_groups, through: :unit_group_units
   has_one :course_version, as: :content_root, dependent: :destroy

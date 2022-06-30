@@ -139,6 +139,17 @@ header.buildProjectInfoOnly = function() {
   );
 };
 
+// When viewing the level page in code review mode, we want to show only the
+// lesson information (which is displayed by the ScriptName component).
+header.buildScriptNameOnly = function(scriptNameData) {
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <HeaderMiddle scriptNameData={scriptNameData} scriptNameOnly={true} />
+    </Provider>,
+    document.querySelector('.header_level')
+  );
+};
+
 // When the page is cached, this function is called to retrieve and set the
 // sign-in button or user menu in the DOM.
 header.buildUserMenu = function() {
