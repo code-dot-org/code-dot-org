@@ -6,11 +6,12 @@
     "properties": {
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-27 22:32:42 UTC",
+    "serialized_at": "2022-06-29 20:53:51 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -148,6 +149,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_2022"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -170,6 +174,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_2022"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -192,6 +199,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_2022"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -214,6 +224,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-AboutCSD_2022"
+        ],
         "progression": "Welcome to CS Discoveries"
       },
       "bonus": false,
@@ -236,6 +249,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_2022"
+        ],
         "progression": "Welcome to CS Discoveries"
       },
       "bonus": false,
@@ -258,6 +274,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-ModuleOverview_2022"
+        ],
         "progression": "Engaging in this course"
       },
       "bonus": false,
@@ -280,6 +299,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-ActivityOverview_2022"
+        ],
         "progression": "Engaging in this course"
       },
       "bonus": false,
@@ -302,6 +324,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-Navigation_2022"
+        ],
         "progression": "Engaging in this course"
       },
       "bonus": false,

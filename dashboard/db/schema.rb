@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_06_173510) do
+ActiveRecord::Schema.define(version: 2022_06_27_214005) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -345,8 +345,10 @@ ActiveRecord::Schema.define(version: 2022_06_06_173510) do
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.virtual "active", type: :boolean, as: "if(isnull(`deleted_at`),TRUE,NULL)"
+    t.virtual "open", type: :boolean, as: "if(isnull(`closed_at`),TRUE,NULL)"
     t.index ["project_id", "deleted_at"], name: "index_code_reviews_on_project_id_and_deleted_at"
-    t.index ["user_id", "project_id", "closed_at", "deleted_at"], name: "index_code_reviews_unique", unique: true
+    t.index ["user_id", "project_id", "open", "active"], name: "index_code_reviews_unique", unique: true
     t.index ["user_id", "script_id", "project_level_id", "closed_at", "deleted_at"], name: "index_code_reviews_for_peer_lookup"
   end
 
