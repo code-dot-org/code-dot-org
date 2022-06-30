@@ -42,7 +42,7 @@ Through completing this online course, participants will:
 No prior experience with coding or computer science is needed to implement, teach, or learn Computer Science Discoveries!
 <p>
 <p>
-<a href="https://studio.code.org/s/k5-onlinepd-2021"><button>Try now</button></a>
+<a href="https://studio.code.org/s/k5-onlinepd-2022"><button>Try now</button></a>
 
 </div>
 
