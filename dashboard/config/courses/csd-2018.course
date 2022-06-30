@@ -16,16 +16,6 @@
   "properties": {
     "family_name": "csd",
     "has_verified_resources": true,
-    "teacher_resources": [
-      [
-        "curriculum",
-        "https://curriculum.code.org/csd-18/"
-      ],
-      [
-        "teacherForum",
-        "https://forum.code.org/c/csd"
-      ]
-    ],
     "version_year": "2018"
   },
   "resources": [
