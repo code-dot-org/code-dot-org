@@ -278,7 +278,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   private
 
   def save_timestamp
-    return unless @enrollment && @enrollment.persisted?
+    return unless @enrollment&.persisted?
     Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
   end
 

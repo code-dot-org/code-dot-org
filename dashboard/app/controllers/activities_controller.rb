@@ -119,7 +119,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    total_lines = if current_user && current_user.total_lines
+    total_lines = if current_user&.total_lines
                     current_user.total_lines
                   end
 
