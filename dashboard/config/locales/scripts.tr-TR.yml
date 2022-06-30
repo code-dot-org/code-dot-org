@@ -18454,7 +18454,7 @@ tr:
             For Loops:
               name: For Döngüleri
             End of Course projects:
-              name: Kurs Sonu projeleri
+              name: Kurs Projelerinin Sonu
             Reviewing your reflections:
               name: Yansımalarınızı Gözden Geçirme
         vpl-csd1-ci-pilot-2022:
@@ -19090,3 +19090,35 @@ tr:
               name: Genel Bakış
             lesson-1:
               name: Genel Bakış
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Merhaba Dünya CSC
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Fabllara Giriş"
+            Plan Your Fable:
+              name: Fablınızı Planlayın
+            Share Your Fable:
+              name: Fablınızı Paylaşın
+            lesson-4:
+              name: "[Optional] Fabllara Giriş"
+            lesson-5:
+              name: Fablınızı Planlayın
+            lesson-6:
+              name: Fablınızı Paylaşın
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Şiir Sanatı
+        self-paced-pl-csd5-2022:
+          lessons:
+            Train a machine learning model:
+              name: Etkileşimli Animasyonlar ve Oyunlar
+            Engage with machine learning apps:
+              name: Tasarım işlemi
+            Consider real world implications:
+              name: Veri ve Toplum
+            Unit wrap up:
+              name: Fiziksel Bilişim

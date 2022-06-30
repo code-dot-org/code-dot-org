@@ -189,7 +189,11 @@
           "name": "Fiesta de baile - Ir más allá",
           "overview": "En esta lección, alumnos de todas las edades continúan su experiencia con la codificación y la informática en un entorno seguro y de apoyo. Esta lección ha sido diseñada para alumnos de todas las edades, pero requiere saber leer. Esta actividad necesita sonido, ya que la herramienta fue construida para responder a la música.",
           "preparation": "-   Revisa y completa tú mismo el tutorial online: [Dancy Party](https://hourofcode.com/us/how-to)\n\n-   Asegúrate de probarlo primero antes de pedir a tus alumnos que lo completen. \n\n-   Comprueba tu tecnología y decide si necesitas solucionar algún problema antes de la Hora del Código.",
-          "purpose": "Esta lección presenta los conceptos básicos de las ciencias de la computación para la codificación y la programación de eventos (con bloques)."
+          "purpose": "Esta lección presenta los conceptos básicos de las ciencias de la computación para la codificación y la programación de eventos (con bloques).",
+          "student_overview": "Estudiantes de todas las edades continúan con una experiencia introductoria a la codificación y la informática en un entorno seguro y de apoyo. "
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "La hora del código 2013"
         },
         "dance-2019/Dance Party": {
           "name": "Fiesta de baile (remix 2019)",
@@ -205,8 +209,176 @@
           "purpose": "Esta lección está diseñada para iniciar rápidamente a los estudiantes en el **aprendizaje automático**, un tipo de **inteligencia artificial**. Los alumnos analizarán cómo se utilizan los **datos de entrenamiento** para que un modelo de aprendizaje automático pueda clasificar nuevos datos. Los estudiantes deben tener una experiencia positiva durante el ejercicio y lo que es más importante, deben estar motivados para seguir aprendiendo informática. ",
           "student_overview": "Resumen de la tutoría: En primer lugar, los alumnos clasifican los objetos como \"peces\" o \"no peces\" para intentar eliminar la basura del océano. A continuación, los alumnos deberán ampliar su conjunto de datos de entrenamiento para incluir otras criaturas marinas que pertenecen al agua. En la segunda parte de la actividad, los alumnos elegirán sus propias etiquetas para aplicarlas a imágenes de peces generadas al azar. Estos datos de entrenamiento se utilizan para un modelo de aprendizaje automático que luego debería ser capaz de etiquetar nuevas imágenes por sí mismo."
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Bienvenido a \"Cómo enseñar los Fundamentos de Ciencias de la Computación\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Cursos de comprensión de los Fundamentos de Ciencias de la Computación"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Secuencias"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Bucles"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Eventos"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Condicionales"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Proyectos de fin de curso"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funciones"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variables"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Bucles Para"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laboratorio de sprites"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Revisión de tus reflexiones"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Próximos pasos"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Estudio de Humor"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Diseño digital"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Programación orientada por eventos"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Funcionalidad básica de la aplicación"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getters y setters"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Primeros pasos"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fundamentos de la informática"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Mirar hacia adelante"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Dominio de los conceptos básicos: secuencias"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Dominio de los conceptos básicos: bucles"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Dominio de los conceptos básicos: condicionales"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Dominio de los conceptos básicos: funciones"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Dominio de los conceptos básicos: eventos"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Mejores prácticas para la enseñanza de ciencias de la computación"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planificación"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Próximos pasos"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Instrucciones generales y de configuración"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Red de compañeros - Envío de bits en un cable compartido"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Red de compañeros - Envío de números"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Red de compañeros - Envío de Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Difusión de mensajes"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Enrutadores y direcciones"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Paquetes y confiabilidad"
+        },
+        "netsim/Manual DNS": {
+          "name": "DNS manual"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Nodo DNS automático"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Juego libre de simulador de Internet"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget de cuentakilómetros"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Sala de escape"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Pantallas de inicio y fin"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Pantallas de inicio y fin2"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Primeros pasos"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fundamentos de la informática"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Mirar hacia adelante"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Dominio de los conceptos básicos: secuencias"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Dominio de los conceptos básicos: bucles"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Dominio de los conceptos básicos: condicionales"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Dominio de los conceptos básicos: funciones"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Dominio de los conceptos básicos: eventos"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Mejores prácticas para la enseñanza de ciencias de la computación"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planificación"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Próximos pasos"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Hora del Código de la Recolectora 2017"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Análisis de frecuencia"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Muévelo, muévelo"
@@ -752,7 +924,7 @@
           "name": "Concurso de Ortografía"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "Encuesta de fin de semestre de Descubrimientos de Ciencias de la Computación"
+          "name": "Programación para entretenimiento"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Trazar formas"
@@ -1457,10 +1629,10 @@
           "name": "Una batalla real con eventos"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Programación para entretenimiento"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Trazar formas"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Dibujar en el Laboratorio de juegos"
@@ -1523,10 +1695,10 @@
           "name": "Proyecto - Diseñar un juego"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Innovaciones en computación"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Diseñar pantallas a través del código"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "The Circuit Playground"
@@ -1571,10 +1743,10 @@
           "name": "Proyecto: crear el prototipo de una innovación"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Análisis de diseño"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Entender a tu usuario"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Microactividad de diseño centrada en el usuario"
@@ -1619,10 +1791,10 @@
           "name": "Proyecto - Presentación de la aplicación"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Asuntos de representación"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Patrones y representación"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII y representación binaria"
@@ -1667,7 +1839,7 @@
           "name": "Introducción a la resolución de problemas"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Prueba posterior al proyecto"
+          "name": "El proceso de resolución de problemas"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Exploración de la resolución de problemas"
@@ -1688,10 +1860,10 @@
           "name": "Proyecto - Propuesta de aplicación"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Exploración de sitios web"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Sitios web para la expresión "
         },
         "csd2-2019/Intro to HTML": {
           "name": "Introducción al HTML"
@@ -2213,10 +2385,10 @@
           "name": "Presenta tu proyecto"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "Encuesta de fin de semestre de Descubrimientos de Ciencias de la Computación"
+          "name": "Programación para entretenimiento"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Trazar formas"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Dibujar en el Laboratorio de juegos"
@@ -2279,7 +2451,7 @@
           "name": "Proyecto - Diseñar un juego"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Innovaciones en computación"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Diseñar pantallas a través del código"
@@ -2327,7 +2499,7 @@
           "name": "Proyecto: crear el prototipo de una innovación"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Exploración de sitios web"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Sitios web para la expresión "
@@ -2396,7 +2568,7 @@
           "name": "Proyecto - Propuesta de aplicación"
         },
         "csd5-2017/Representation Matters": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Asuntos de representación"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Patrones y representación"
@@ -2441,7 +2613,7 @@
           "name": "Proyecto - Solucionar un problema de datos"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Análisis de diseño"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Entender a tu usuario"
@@ -2487,6 +2659,27 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "Proyecto - Presentación de la aplicación"
+        },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "Depuración para educadores de AB"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "Depuración para educadores de CDEF"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Tutorial de pixelación en blanco y negro"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Juego libre de pixelación en blanco y negro"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Tutorial de pixelación en color"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Ejemplos de pixelación en color"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Juego libre de pixelación en color"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Desconectado: Tangrams"
@@ -2553,6 +2746,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Desafío extremo: integral"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Introducción a Ciencias de la Computación"
+        },
+        "20-hour/The Maze": {
+          "name": "El Laberinto"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Pensamiento computacional"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programación con Papel Cuadriculado"
+        },
+        "20-hour/The Artist": {
+          "name": "El Artista"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmos"
+        },
+        "20-hour/The Artist 2": {
+          "name": "El artista 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funciones"
+        },
+        "20-hour/The Farmer": {
+          "name": "La Granjera"
+        },
+        "20-hour/Conditionals": {
+          "name": "Condicionales"
+        },
+        "20-hour/The Artist 3": {
+          "name": "El Artista 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Composición de canciones"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "La granjera 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstracción"
+        },
+        "20-hour/The Artist 4": {
+          "name": "El Artista 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Programación de relevos"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "La Granjera 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "El Artista 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Cierre"
         },
         "course2/Graph Paper Programming": {
           "name": "Programación con Papel Cuadriculado"
@@ -2734,6 +2987,141 @@
           "preparation": "-   Consulta el sitio web de [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) para ver más contenidos sobre seguridad en línea.",
           "purpose": "El objetivo principal de esta lección es que los alumnos adquieran experiencia con los ordenadores. Al cubrir las funciones informáticas más básicas, como hacer clic, arrastrar y soltar, estamos creando un campo de juego más igualitario en la clase para futuros rompecabezas. Esta lección también ofrece una gran oportunidad para introducir la terminología básica del hardware del ordenador, incluyendo potencialmente \"ratón\", \"trackpad\" o \"pantalla táctil\", dependiendo de sus dispositivos.",
           "student_overview": "Haz clic y arrastra para terminar los desafíos."
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "Encuesta de fin de curso para estudiantes de CSD ('18-'19)"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Rompecabezas"
+        },
+        "allthethings/Maze": {
+          "name": "Laberinto"
+        },
+        "allthethings/Artist": {
+          "name": "Artista"
+        },
+        "allthethings/Bee": {
+          "name": "Abeja"
+        },
+        "allthethings/PlayLab": {
+          "name": "Laboratorio de juegos"
+        },
+        "allthethings/Farmer": {
+          "name": "Cultivador"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Rebotar"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Combinar"
+        },
+        "allthethings/TextMatch": {
+          "name": "TextMatch"
+        },
+        "allthethings/CSinA": {
+          "name": "CCenA"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "Odómetro"
+        },
+        "allthethings/Text Compression": {
+          "name": "Compresión de texto"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pixelación"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Gamelab": {
+          "name": "Laboratorio de juegos"
+        },
+        "allthethings/Online PD": {
+          "name": "PD en línea"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Detalles de Markdown"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Evaluación de varias páginas"
+        },
+        "allthethings/Star wars": {
+          "name": "Star Wars"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "Evaluación larga completa"
+        },
+        "allthethings/Free Response": {
+          "name": "Respuesta libre"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "Muestra de la evaluación de PLC"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Intercambio de niveles"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Encuesta anónima de estudiantes"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Criptografía de claves públicas"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
+        },
+        "allthethings/Single page assessment": {
+          "name": "Evaluación de una sola página"
+        },
+        "allthethings/Standalone video": {
+          "name": "Video independiente"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Referencia del plan de estudios"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Laboratorio de sprites"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Laboratorio de baile"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Mini rúbrica"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "Externos opcionalmente mostrados como sin conexión"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "Bubble Choice"
+        },
+        "allthethings/Contained Levels": {
+          "name": "Niveles contenidos"
+        },
+        "allthethings/ML Fish": {
+          "name": "Pez ML"
+        },
+        "allthethings/AI Lab": {
+          "name": "Laboratorio de Inteligencia Artificial"
+        },
+        "allthethings/Java Lab": {
+          "name": "Laboratorio Java"
         },
         "coursef-2021/lesson-6": {
           "name": "Presentamos el Laboratorio de sprites",
@@ -3782,7 +4170,7 @@
           "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
         },
         "csd4-2021/Analysis of Design": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Diseñando con Empatía",
           "overview": "**Pregunta del día:** ¿Cómo podemos elegir productos en base a las necesidades del usuario?\n\nPara comenzar esta unidad, dedicada a la resolución de problemas en grupo y al desarrollo de productos, los estudiantes explorarán el diseño de distintos zapatos. Los estudiantes analizarán una variedad de zapatos y luego intentarán decidir qué zapato correspondería a un usuario potencial. También deberán brindar retroalimentación acerca de los diseños utilizando las siguientes estructuras que usarán a lo largo de esta unidad: “me gusta…”, “desearía…”, “que tal si…”. Al finalizar esta actividad, los estudiantes deberán proponer cambios al diseño de un par de zapatos con el fin de mejorar su utilidad o usabilidad.",
           "preparation": "-   Imprima una copia de la guía de actividades para cada estudiante o envíe una copia digital.",
           "purpose": "Los estudiantes inician esta unidad con una comprensión del proceso de resolución de problemas que estudiaron en las unidades anteriores del curso.\n\nEl proceso de resolución de problemas que se usa a lo largo de Descubrimientos CS está conformado por los siguientes pasos:\n\n-   Definir\n-   Preparar\n-   Intentar\n-   Reflexionar\n\nEn esta lección, los estudiantes analizarán objetos de la vida cotidiana para comprender cómo el proceso de resolución de problemas puede utilizarse para ayudar a otros. A partir de esta lección, se añadirá un nuevo componente al proceso de resolución de problemas: la empatía. Esto motivará a los estudiantes a reflexionar acerca de la experiencia y el uso que otras personas harán de los productos que ellos hayan creado.\n\nPara comenzar, y antes de hablar de los aspectos específicos del diseño de un software, analizaremos objetos no técnicos, con el objetivo de que los estudiantes puedan comprender un poco más acerca de lo que significa tomar en consideración a los usuarios finales del producto.",
@@ -3930,7 +4318,7 @@
           "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Innovaciones en computación",
           "overview": "Para iniciar la unidad final de este curso, los estudiantes investigarán acerca de las innovaciones en computación. En esta lección los estudiantes estarán expuestos a una mayor variedad de factores de formas de la computación (cómo se ve una computadora) y analizarán aquellas áreas que han sido impactadas por la computación. Más adelante, en esta unidad, y a medida que desarrollen sus propios artefactos computacionales, los estudiantes volverán a analizar los dispositivos que vieron en esta lección.",
           "preparation": "-   Revise los enlaces de las páginas de recursos en Code Studio\n-   Prepare el video [El Internet de las cosas](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) o [Las ciencias de la computación están cambiando todo](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n-   Imprima una copia de la guía de actividades para cada estudiante",
           "purpose": "Esta lección sienta las bases para que los estudiantes comprendan de qué formas podría utilizarse su tablero de circuitos para modelar un artefacto computacional innovador. El objetivo es lograr que los estudiantes reflexionen acerca de cómo las computadoras pueden ser incorporadas en la mayoría de las áreas y procesos, y también que tengan presente los impactos potenciales de este tipo de aplicación.",
@@ -3970,74 +4358,74 @@
         },
         "csd6-2021/Analog Input": {
           "name": "Entrada analógica",
-          "overview": "En esta lección, los estudiantes exploran cómo se pueden utilizar los tres sensores analógicos (sonido, luz y temperatura) para escribir programas que respondan a los cambios en el ambiente. El uso de estos sensores marca una transición en términos de cómo los usuarios interactúan con un programa. Al usar sensores como entrada, el usuario de una aplicación no tiene que interactuar directamente con ella, o puede interactuar sin darse cuenta de que lo está haciendo.",
-          "preparation": "-   Poner en marcha el [r analog-digital-video/csd/2021]\n-   Si tu habitación no es muy luminosa, es útil tener a mano algunas linternas u otras fuentes de luz para probar el sensor de luz",
-          "purpose": "Esta lección se basa en la anterior introduciendo los sensores analógicos como una nueva forma de entrada. Todos estos sensores realizan una conversión analógico-digital, permitiendo que los programas perciban cosas representadas por un número de 10 bits (0-1023).",
-          "student_overview": "En esta lección, podrás explorar las entradas analógicas en el Circuit Playground, escribiendo programas que respondan al entorno a través de sensores."
+          "overview": "En esta lección, los estudiantes explorarán cómo tres sensores análogos (sonido, luz y temperatura) se pueden utilizar para escribir programas que respondan a los cambios en el ambiente. El uso de estos sensores marcará un hito en la forma en la que los usuarios interactúan con un programa. Al usar estos sensores como una entrada, no será necesario que el usuario interactúe directamente con la aplicación, y si lo hace será más bien de manera indirecta y sin darse cuenta.",
+          "preparation": "-   Prepare el video [r analog-digital-video/csd/2021]\n-   Si su salón de clases no cuenta con mucha luz, será necesario tener a su alcance linternas u otras fuentes de iluminación para probar los sensores de luz",
+          "purpose": "Esta lección se basa en la lección anterior al introducir sensores análogos. Estos sensores efectúan una conversión de lo análogo a lo digital, y permiten a los programas detectar cosas representadas por un número de 10 bits (0-1023).",
+          "student_overview": "En esta lección, podrás explorar las entradas análogas en el Circuit Playground, escribiendo programas que respondan al entorno a través de sensores."
         },
         "csd6-2021/The Program Design Process": {
           "name": "El proceso de diseño de programas",
-          "overview": "Esta lección presenta a los estudiantes el proceso que usarán para diseñar programas propios a lo largo de esta unidad. Este proceso se centra en una guía de proyecto que pide a los estudiantes que esbocen sus pantallas, identifiquen elementos del Circuit Playground a utilizar, definan variables y describan eventos antes de que empiecen a programar. Este proceso es similar al proceso de diseño de juegos que utilizamos en la Unidad 3. En esta lección, los estudiantes comienzan por un \"juego de la cuerda\" donde se oculta el código. Debaten sobre cómo tendrían que ser los componentes del tablero, los eventos y las variables para crear el programa. Luego, se les da una guía de proyecto terminado que muestra una forma de implementar el proyecto. Los estudiantes realizan este proceso a través de una serie de niveles. Al final de la lección, tienen la oportunidad de hacer mejoras al programa para personalizarlo.",
-          "preparation": "-   Entrega a los estudiantes copias de la guía del proyecto",
-          "purpose": "Esta lección permite a los alumnos practicar el desarrollo de un programa a mayor escala con el fin de prepararlos para hacerlo de forma independiente. Mientras que las lecciones anteriores se han centrado en la construcción de habilidades en torno al uso de elementos específicos del Circuit Playground y conceptos de programación relacionados, esta lección se centra en la combinación de todo lo aprendido hasta ahora en un programa más complejo. La lección fomenta en gran medida el proceso de desarrollo de software proporcionando a los estudiantes una guía de proyecto completa, proporcionando el código de inicio, y guiando a los alumnos a través de su implementación. En las lecciones siguientes los estudiantes tendrán que completar una mayor parte de esta guía de forma independiente, y para el proyecto final seguirán este proceso en gran medida de forma independiente.",
-          "student_overview": "En esta lección, conocerás el proceso que utilizarás para diseñar tus propios programas a lo largo de esta unidad. "
+          "overview": "Esta lección presenta a los estudiantes el proceso que usarán para diseñar programas propios a lo largo de esta unidad. Este proceso se centra en una guía de proyecto que pide a los estudiantes que esbocen sus pantallas, identifiquen elementos del Circuit Playground a utilizar, definan variables, y describan eventos antes de que empiecen a programar. Este proceso es similar al proceso de diseño de juegos que utilizamos en la Unidad 3. En esta lección, los estudiantes comienzan por un \"juego de la cuerda\" donde se oculta el código. Debaten sobre cómo tendrían que ser los componentes del tablero, los eventos y las variables para crear el programa. Luego, se les da una guía de proyecto terminado que muestra una forma de implementar el proyecto. Los estudiantes realizan este proceso a través de una serie de niveles. Al final de la lección, tienen la oportunidad de hacer mejoras al programa para personalizarlo.",
+          "preparation": "-   Entregue a los estudiantes copias de la guía de proyecto",
+          "purpose": "Esta lección permite que los estudiantes practiquen el desarrollo de un programa a gran escala, preparándolos para que más adelante puedan hacerlo de manera independiente. Mientras que las lecciones anteriores se enfocaban en el desarrollo de habilidades para utilizar elementos específicos del Circuit Playground y conceptos de programación relacionados con este, esta lección se enfoca en combinar todo lo aprendido hasta ahora para crear un programa más complejo. Esta lección muestra el proceso de desarrollo de un software, entregando a los estudiantes una guía de proyecto previamente completada, el código inicial, y guiándolos en todos los pasos para la implementación de su proyecto. En las próximas lecciones, los estudiantes deberán completar gran parte de esta guía por si solos, y para el proyecto final, seguirán todo este proceso de forma independiente.",
+          "student_overview": "En esta lección, aprenderás sobre el proceso que usarás para diseñar tus propios programas a lo largo de esta unidad. "
         },
         "csd6-2021/Project: Make a Game": {
           "name": "Proyecto - Crear un Juego",
-          "overview": "Para este proyecto, los estudiantes diseñan y crean un juego que aprovecha las nuevas entradas y salidas que tienen a su disposición. Este proyecto se ha dejado intencionadamente muy abierto para que los estudiantes puedan pensar en términos generales sobre la utilidad de los resultados físicos en una aplicación, a la vez que se les da la oportunidad de revisar el proceso de desarrollo del programa y probar las nuevas funciones disponibles en el Circuit Playground.",
-          "preparation": "-   Imprime una copia de la guía del proyecto para cada grupo de alumnos\n-   Imprime una copia de la rúbrica para cada alumno",
-          "purpose": "Esta evaluación de fin de capítulo es un buen lugar para que los estudiantes reúnan todas las piezas que han aprendido (controladores de eventos, uso de la placa como salida, etc.) en un solo lugar. Este proyecto se deja a propósito muy abierto para permitir a los alumnos pensar ampliamente sobre cómo la salida física podría ser útil en una aplicación, esta es una gran oportunidad para animar a los estudiantes a revisar los programas que han escrito anteriormente en esta unidad o en la Unidad 4 y que podrían beneficiarse del uso de la placa para la salida de información.",
-          "student_overview": "En esta lección, utilizarás lo que has aprendido en el capítulo uno y desarrollarás una aplicación de tu propio diseño que utilice la pizarra para emitir información."
+          "overview": "En este proyecto, los estudiantes diseñarán y elaborarán un juego que utilice las nuevas entradas y salidas que ahora tienen a su disposición. Este es un proyecto de carácter abierto, que empodera a los estudiantes a analizar más a fondo la utilización de salidas físicas en una aplicación, mientras tienen la oportunidad de revisar el proceso de desarrollo de un programa y prueban las nuevas características disponibles con la ayuda del Circuit Playground.",
+          "preparation": "-   Imprima una copia de la guía del proyecto para cada grupo de estudiante\n-   Imprima una copia de la rúbrica para cada estudiante",
+          "purpose": "Esta evaluación de final de capítulo es un buen momento para que los estudiantes apliquen todo lo aprendido en una sola actividad (controladores de eventos, usar el tablero como una salida, etc.). El proyecto es de carácter abierto y permite que los estudiantes analicen más a fondo el uso de salidas físicas en una aplicación. Esta es una buena oportunidad para motivar a los estudiantes a revisar los programas escribieron anteriormente en esta unidad o en la unidad 4 y analizar cómo se beneficiarían al usar el tablero para la salida de información.",
+          "student_overview": "En esta lección, tomarás lo que aprendiste en el capítulo uno y desarrollarás una aplicación de tu propio diseño que usa la pizarra para generar información."
         },
         "csd6-2021/Arrays and Color LEDs": {
           "name": "Arreglos y LED de colores",
-          "overview": "Un arreglo es una colección ordenada de elementos, generalmente del mismo tipo. En esta lección, los estudiantes aprenden maneras de acceder a un valor específico o aleatorio de una lista mediante su índice. Luego, aprenden a acceder al arreglo colorLED que controla el comportamiento de los LED de colores en Circuit Playground. Los estudiantes controlarán el color y la intensidad de cada LED, y luego usarán lo que han aprendido para programar patrones luminosos y crear un espectáculo de luces en el Circuit Playground.",
-          "purpose": "Los arrays son una estructura de datos habitual en informática, que se utiliza para facilitar el almacenamiento y el acceso a la información. La lección prepara a los estudiantes para acceder a los elementos dentro de un array, pero aún no cubre la creación y modificación de arrays, que se abordará en la siguiente lección. También se presenta a los alumnos el anillo de LEDs de color, que se expone como un array llamado [\\`colorLeds\\`(#f78183)](/docs/applab/colorLeds/). Los estudiantes aprenden cómo acceder y controlar cada LED en el array individualmente, preparándolos para acceder a múltiples LEDs a través de la iteración más adelante en el capítulo.",
-          "student_overview": "En esta lección, aprenderás a acceder a la matriz colorLEDs que controla el comportamiento de los LEDs de color en el Circuit Playground. "
+          "overview": "Un arreglo es una colección ordenada de elementos, generalmente del mismo tipo. En esta lección, los estudiantes aprenden maneras de acceder a un valor específico o aleatorio de una lista mediante su índice. Luego, aprenden a acceder al arreglo colorLEDs que controla el comportamiento de los LED de colores en Circuit Playground. Los estudiantes controlarán el color y la intensidad de cada LED, y luego usarán lo que han aprendido para programar patrones luminosos y crear un espectáculo de luces en el Circuit Playground.",
+          "purpose": "Los arreglos son estructuras de datos comunes en las ciencias de la computación, y se utilizan para almacenar y acceder a la información de forma más fácil. Esta lección prepara a los estudiantes para acceder a elementos dentro de estos conjuntos, sin embargo, aún no se presenta la creación y modificación de arreglos, los estudiantes aprenderán acerca de esto en la próxima lección. Los estudiantes conocerán el anillo de LED de colores, el cual será presentado como un arreglo llamado [\\`colorLeds\\`(#f78183)](/docs/applab/colorLeds/). Los estudiantes aprenden cómo acceder y controlar cada LED en el arreglo de manera independiente, preparándolos para acceder a varios LEDs en la iteración del próximo capítulo.",
+          "student_overview": "En esta lección, aprenderás cómo acceder al arreglo colorLEDs que controla el comportamiento de los LED de color en el Circuit Playground. "
         },
         "csd6-2021/Making Music": {
           "name": "Crear música",
-          "overview": "En esta lección los alumnos utilizarán el zumbador en toda su extensión produciendo sonidos, notas y canciones con el zumbador. Los alumnos comienzan con un breve repaso de los parámetros de frecuencia y duración del zumbador, para pasar después al concepto de notas.  Las notas permiten a los alumnos limitarse a las frecuencias que se utilizan en la \"música country\" y proporcionan una capa de abstracción que les ayuda a comprender qué frecuencias pueden sonar bien juntas.  Una vez que los alumnos son capaces de tocar notas en el zumbador, utilizan matrices (arrays) para mantener y reproducir secuencias de notas, formando canciones sencillas.",
-          "purpose": "Esta lección permite a los alumnos ser más creativos con el zumbador introduciendo el concepto de \"nota\" y utilizando arrays para contener colecciones secuenciales de notas.  El uso de notas en lugar de frecuencias proporciona una capa de abstracción que facilita a los alumnos la identificación de sonidos que pueden utilizarse para hacer música.  Los arrays ofrecen una forma de agrupar los sonidos en secuencia, para que puedan ser reproducidos como música.  El uso del bloque `playNotes` para iterar sobre un array de notas proporciona una base conceptual para trabajar con los bucles `for` en la siguiente lección.",
-          "student_overview": "En esta lección, utilizarás al máximo la función de zumbador del Circuit Playground produciendo sonidos, notas y canciones. "
+          "overview": "En esta lección, los estudiantes utilizarán el timbre para crear sonidos, notas y canciones. Esta lección comienza con una breve reseña de los parámetros de frecuencia y duración del timbre para continuar con el concepto de las notas. Las notas permiten a los estudiantes restringirse a las frecuencias que se usan en la música occidental (Western) y les brindan una capa de abstracción que los ayuda a entender cuáles frecuencias pueden sonar bien juntas. Cuando los estudiantes ya sean capaces de tocar notas en el timbre, utilizarán arreglos para mantener y tocar secuencias de notas, formando canciones simples.",
+          "purpose": "En esta lección, los estudiantes podrán expresar su creatividad al utilizar el timbre, al presentar el concepto de “nota” y al utilizar arreglos para mantener colecciones secuenciales de notas. Al utilizar notas en lugar de frecuencias, los estudiantes contarán con una capa de abstracción que les facilitará identificar los sonidos que pueden ser utilizados para crear música. Los arreglos proporcionarán una forma de agrupar sonidos en una secuencia, para que se puedan reproducir como música. Usar el bloque `playNotes` para repetir un conjunto de notas establecerá bases conceptuales para que los estudiantes puedan trabajar con ciclos `for` en la próxima lección.",
+          "student_overview": "En esta lección, utilizarás la función de timbre de Circuit Playground en toda su extensión al producir sonidos, notas y canciones. "
         },
         "csd6-2021/Arrays and For Loops": {
           "name": "Arreglos y bucles 'desde'",
-          "overview": "Utilizar un _bucle desde_ para repetir todos los elementos de un arreglo es un recurso realmente útil en la mayoría de los lenguajes de programación. En esta lección, los estudiantes aprenden los aspectos básicos de cómo se puede usar un _bucle desde_ para repetir código, y luego lo combinan con lo que han aprendido sobre arreglos para escribir programas que procesen todos los elementos de un arreglo. Los estudiantes utilizan bucles 'desde' para pasar por un elemento de la lista a la vez sin tener que escribir código para cada elemento. Hacia el final de la lección, los estudiantes aplicarán esto con la lista `colorLed` en el tablero para crear una aplicación que cambie todos los LED cada vez que se hace clic en un botón.",
-          "purpose": "A medida que los alumnos empiezan a utilizar arrays con más frecuencia, surge un patrón común en el que se quiere ejecutar algún código en cada elemento de un array. Aunque los _bucles for_ son una estructura generalmente útil para repetir código, son particularmente útiles para iterar sobre un array. En esta lección nos basamos en el entendimiento de los arrays que los estudiantes han desarrollado en las dos últimas lecciones introduciendo el bucle _for_, que combina una variable, el patrón de contador y una condicional, todo en una sola construcción",
-          "student_overview": "En esta lección, aprenderás a combinar listas y bucles \"for\" para escribir código que afecte a cada elemento de una lista, independientemente de su longitud. "
+          "overview": "Utilizar un _ciclo for_ para repetir todos los elementos de un arreglo es un recurso realmente útil en la mayoría de los lenguajes de programación. En esta lección, los estudiantes aprenden los aspectos básicos de cómo se puede usar un _ciclo for_ para repetir código, y luego lo combinan con lo que han aprendido sobre arreglos para escribir programas que procesen todos los elementos de un arreglo. Los estudiantes utilizan ciclos for para pasar por un elemento de la lista a la vez sin tener que escribir código para cada elemento. Hacia el final de la lección, los estudiantes aplicarán esto con la lista `colorLed` en el tablero para crear una aplicación que cambie todos los LED cada vez que se hace clic en un botón.",
+          "purpose": "A medida que los estudiantes comienzan a usar arreglos de forma más frecuente, surge un patrón común en el que desean ejecutar código en cada uno de los elementos de un arreglo. Si bien los ciclos for son estructuras generalmente útiles para repetir código, son particularmente útiles para iterar sobre un arreglo. En esta lección nos basamos en la comprensión de arreglos que los estudiantes han desarrollado en las dos últimas lecciones, al introducir el ciclo for, el cual combina una variable, el patrón contador, y una condicional, todo en una misma estructura.",
+          "student_overview": "En esta lección, aprenderás a combinar listas y ciclos for para escribir código que afecte a todos los elementos de una lista, independientemente de su longitud. "
         },
         "csd6-2021/Accelerometer": {
           "name": "Acelerómetro",
-          "overview": "En esta lección, los estudiantes explorarán el acelerómetro y sus capacidades. Se familiarizarán con sus eventos y propiedades, y crearán varios programas que utilicen el acelerómetro, similares a los que se encuentran en aplicaciones del mundo real.",
-          "purpose": "Esta lección ofrece a los alumnos la oportunidad de trabajar con el sensor del acelerómetro y explorar sus propiedades de orientación y los eventos de la placa específicos del acelerómetro. Los estudiantes verán el propósito y los usos de un acelerómetro en dispositivos y programas del mundo real y crearán sus propias versiones de algunas de estas aplicaciones. Para ello, los alumnos tendrán que recurrir a sus conocimientos anteriores sobre el patrón de contador para crear aplicaciones funcionales basadas en el acelerómetro. ",
-          "student_overview": "En esta lección, explorarás el acelerómetro y sus posibilidades. "
+          "overview": "En esta lección los estudiantes explorarán el acelerómetro y sus funciones. Se familiarizan con sus eventos y propiedades, y crearán una serie de programas utilizando el acelerómetro de forma similar a como se utiliza en otras aplicaciones reales.",
+          "purpose": "Esta lección da a los estudiantes una oportunidad para trabajar con el sensor del acelerómetro y explorar sus propiedades de orientación y eventos de tablero específicos. Los estudiantes conocerán los propósitos y usos del acelerómetro en dispositivos y programas reales, y crearán sus propias versiones de algunas de estas aplicaciones. Para hacer esto, los estudiantes deberán recordar lo que aprendieron acerca del patrón contador para crear aplicaciones funcionales basadas en acelerómetros. ",
+          "student_overview": "En esta lección, explorarás el acelerómetro y sus capacidades. "
         },
         "csd6-2021/Functions with Parameters": {
           "name": "Funciones con parámetros",
-          "overview": "La lección comienza con una revisión rápida de los parámetros, en el contexto de los bloques del Laboratorio de aplicaciones que han visto recientemente los estudiantes. Luego, \nverán ejemplos de parámetros dentro de las funciones creadas por el usuario en el Laboratorio de aplicaciones, y crearán y llamarán funciones con parámetros por sí mismos, y las utilizarán para controlar varios elementos en una pantalla. Después, los estudiantes usarán los bucles 'desde' para repetir un arreglo y pasar cada elemento a una función. Por último, emplearán lo que han aprendido para crear un juego de capturar la estrella.",
-          "purpose": "En las lecciones anteriores, los alumnos han utilizado las funciones para definir bloques de código que pueden utilizarse en varios lugares de un programa.  En esta lección, los alumnos aprenden a utilizar parámetros para generalizar el propósito de una función.  Los parámetros permiten que un programa especifique los detalles de cómo funciona una función cuando se llama, en lugar de cuando se define el programa.  Aunque los alumnos han visto funciones con parámetros anteriormente en la unidad, esta es la primera vez que se espera que definan y llamen a las suyas propias.  Los alumnos también aprenden a utilizar un bucle `for` para pasar de forma iterativa los elementos de una matriz como parámetros de una función, lo que les permite utilizar la misma función en varios elementos de la pantalla.",
-          "student_overview": "En esta lección, crearás y llamarás a funciones con parámetros, utilizarás bucles `for` para recorrer un array y finalmente, utilizarás lo que has aprendido para crear un juego de atrapar estrellas."
+          "overview": "Esta lección comienza con un repaso rápido de los parámetros, en el contexto de los bloques del App Lab que los estudiantes han visto en las últimas lecciones. A continuación, los estudiantes observarán ejemplos de parámetros que se encuentran dentro de funciones creadas por usuarios en el App Lab e intentarán utilizar parámetros para crear y llamar a funciones por sí solos con el fin de poder utilizarlas para controlar varios elementos de una misma pantalla. Más tarde, los estudiantes utilizarán ciclos for para iterar sobre un arreglo, pasando cada elemento a una función. Al concluir esta lección, los estudiantes aplicarán sus conocimientos en la creación de un juego que consiste en capturar estrellas.",
+          "purpose": "En las lecciones anteriores, los estudiantes utilizaron funciones para definir bloques de código que pueden utilizarse en distintos lugares dentro de un programa. En esta lección los estudiantes aprenderán a utilizar parámetros para generalizar el propósito de una función. Los parámetros permiten que el programa pueda especificar los detalles del desempeño de una función cuando se le llama, en lugar de cuando se define el programa. Si bien en las unidades anteriores los estudiantes ya habían aprendido acerca de las funciones con parámetros, esta es la primera vez que se les pedirá definir o llamar sus propias funciones. Los estudiantes también aprenderán a utilizar el ciclo for iterativamente para pasar los elementos de un arreglo a una función como parámetros, permitiéndoles usar la misma función en varios elementos en la pantalla.",
+          "student_overview": "En esta lección, crearás y llamarás a funciones con parámetros, usará ciclos for para iterar sobre una arreglo, y finalmente usará lo que has aprendido para crear un juego de captura de estrellas."
         },
         "csd6-2021/Circuits and Physical Prototypes": {
           "name": "Circuitos y prototipos físicos",
-          "overview": "A la hora de preparar el proyecto final de este capítulo, los estudiantes aprenderán cómo desarrollar un prototipo de un objeto físico que incluya un Circuit Playground. Mediante una guía de planificación de proyectos modelados y materiales baratos fáciles de conseguir, como cartulina y cinta adhesiva, los estudiantes aprenderán a conectar un par de circuitos simples y crear prototipos que puedan comunicar el diseño previsto de un producto.",
-          "preparation": "-   Reúne los materiales para la creación de prototipos, como por ejemplo:\n    -   Material estructural (cartón, papel de construcción, etc.)\n    -   Material de conexión (cinta adhesiva, pegamento, cola caliente, etc.)\n    -   Herramientas de construcción (tijeras, grapadoras, etc.)\n    -   Otros materiales (vasos, clips, platos de papel, etc.)\n-   Prepara los materiales para el cableado del circuito, como por ejemplo:\n    -   Cables con pinzas de cocodrilo (incluidos en el kit para el aula del Circuit Playground)\n    -   LEDs (incluidos en el kit para el aula del Circuit Playground)\n    -   Otros materiales conductores (cables, clips, láminas, etc.)\n    -   (opcional) Botones o interruptores\n-   Imprime una copia de la guía del proyecto para cada grupo de 2-3 alumnos\n-   Prepara un modelo de botón para mostrar a la clase",
-          "purpose": "El objetivo de esta lección es tanto demostrar a los alumnos cómo influye en el proceso de creación de prototipos el hecho de pensar en el diseño físico de un producto, como introducir un puñado de conocimientos prácticos que facilitarán la creación de sus proyectos finales.",
-          "student_overview": "En esta lección, cablearás circuitos sencillos para crear un prototipo físico utilizando materiales de bajo coste y fáciles de encontrar."
+          "overview": "Como preparación para el capítulo final de este proyecto, los estudiantes aprenderán a desarrollar el prototipo de un objeto físico que incluya al Circuit Playground, Utilizando un modelo de la guía de planificación del proyecto, los estudiantes aprenderán a conectar circuitos simples que sean capaces comunicar el diseño deseado de un producto, utilizando materiales económicos y fáciles de encontrar como el cartón y la cinta para ductos.",
+          "preparation": "-   Reúna los materiales para la construcción del prototipo:\n    -   Materiales para la estructura (cartón, cartulinas, etc.)\n    -   Material para las conexiones (cinta adhesiva, pegamento, silicona caliente, etc.) \n    -   Herramientas de construcción (tijeras, corcheteras, etc.)\n    -   Otros materiales (vasos, apretadores, platos de papel, etc.)\n-   Prepare los materiales para el cableado:\n    -   Cable con pinzas (incluidos en el kit del circuit Playground)\n    -   LED (incluidos en el kit del Circuit Playground)\n    -   Otros materiales conductores (cables, clips para papel, papel aluminio, etc)\n    -   Botones e interruptores (opcional)\n-   Imprima una copia de la guía del proyecto para cada grupo de 2 ó 3 estudiantes\n-   Prepare un botón de ejemplo para mostrarlo a la clase",
+          "purpose": "El objetivo de esta lección es mostrar a los estudiantes cómo sus ideas acerca del diseño físico de un producto pueden impactar el proceso de un prototipo y presentar nuevas habilidades prácticas que facilitarán la elaboración de sus proyectos finales.",
+          "student_overview": "En esta lección, cablearás circuitos simples para crear un prototipo físico utilizando materiales de bajo costo y fáciles de encontrar."
         },
         "csd6-2021/Project: Prototype an Innovation": {
           "name": "Proyecto - Prototipo de una Innovación",
-          "overview": "En este proyecto final del curso, los estudiantes se reúnen en grupos para desarrollar y probar un prototipo de un dispositivo informático innovador basado en el Circuit Playground. Mediante las entradas y salidas disponibles en el tablero, los grupos crearán programas que generan interacciones interesantes y únicas con los usuarios. ",
-          "preparation": "-   Reunir materiales para la creación de prototipos físicos, por ejemplo:\n    -   Cartón\n    -   Tijeras\n    -   Cinta adhesiva\n    -   Pegamento\n    -   Papel de aluminio\n-   Imprime una copia de la guía del proyecto para cada pareja de estudiantes\n-   Imprime una copia de la hoja de revisión por pares para cada estudiante\n-   Imprime una copia de la rúbrica para cada estudiante",
-          "purpose": "Esta lección es la culminación de la Unidad 6 y ofrece a los estudiantes la oportunidad de construir un proyecto propio del Maker Toolkit desde cero. Este proyecto es una oportunidad para mostrar las habilidades técnicas, pero también tendrán que demostrar la colaboración, la retroalimentación constructiva de los compañeros y la resolución de problemas iterativos, ya que se encuentran con obstáculos en el camino. Este proyecto debe ser dirigido por los alumnos siempre que sea posible y proporcionar una conclusión memorable y motivadora para la unidad final de Descubrimientos CS.",
-          "student_overview": "En este proyecto final, te enfrentarás al reto de desarrollar y probar un prototipo para un dispositivo que interactúe con el mundo físico a través de varios tipos de entrada y salida y que permita interacciones de usuario interesantes y únicas. "
+          "overview": "En este proyecto de finalización de curso, los estudiantes trabajarán en equipos para desarrollar y probar el prototipo de un dispositivo computacional innovador basado en el Circuit Playground. Los grupos crearán programas que permitan interacciones de usuario únicas e interesantes utilizando las entradas y salidas disponibles en el tablero. ",
+          "preparation": "-   Recolecte los materiales para la construcción del prototipo físico, como:\n    -   Cartón\n    -   Tijeras\n    -   Cinta adhesiva\n    -   Pegamento\n    -   Papel aluminio\n-   Imprima una copia de la guía del proyecto para cada pareja\n-   Imprima una copia de la revisión por pares para cada estudiante\n-   Imprima una copia de la rúbrica para cada estudiante",
+          "purpose": "Esta lección es la culminación de la unidad 6 y brinda a los estudiantes la oportunidad de construir un proyecto por sí solos y a partir de cero, utilizando las herramientas del fabricante (Maker Toolkit). Si bien este proyecto es una buena oportunidad para que los estudiantes demuestren sus habilidades técnicas, también deberán demostrar otras capacidades como: la colaboración con sus compañeros, la entrega de retroalimentación constructiva y la resolución de problemas iterativos de los obstáculos que se presenten. Este proyecto debería ser en su mayoría dirigido por el estudiante, y proporcionar una conclusión inspiradora y memorable a la última unidad de Descubrimientos de las Ciencias de la Computación.",
+          "student_overview": "En este proyecto final, tendrás el desafío de desarrollar y probar un prototipo de un dispositivo que interactúe con el mundo físico a través de varios tipos de entrada y salida y permita interacciones de usuario únicas e interesantes. "
         },
         "csd6-2021/CS Discoveries Post-Course Survey": {
           "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Asuntos de representación",
           "overview": "**Pregunta del día: ¿Cómo afectan los datos en las decisiones que tomamos cada día?**\n\nEn la primera lección de la unidad de datos, los estudiantes obtienen una visión general de lo que son los datos y de cómo se utilizan para resolver problemas. Los estudiantes comenzarán la lección con un breve análisis y luego realizarán una reflexión común para comprender qué son los datos. A continuación, se dividen en grupos y utilizan un conjunto de datos para recomendar varios tipos de comidas a personas con diversos criterios. Cada grupo tiene las opciones de comidas representadas de distintas maneras (imágenes, recetas, menú, información nutricional), algunas representaciones tienen más ventajas que otras. Finalmente, los grupos comparan sus respuestas y analizan de qué manera el tener distintas representaciones de los datos de las comidas influyó en la forma en la que resolvieron los distintos problemas.",
           "preparation": "-   Imprima copias de los Datos de Comidas para que cada grupo pueda tener una de las cuatro páginas\n-   Imprima una copia de la guía de actividades para cada grupo",
           "purpose": "Esta lección presenta un número importante de ideas que los estudiantes explorarán a lo largo de este capítulo. Podrán ver cómo los mismos objetos pueden ser representados de distintas formas. En el capítulo 1, aprenderán los distintos sistemas de representación que las computadoras utilizan para representar la información. También descubrirán la importancia de la representación cuando utilizamos datos para tomar decisiones. En el segundo capítulo de esta unidad, los estudiantes estudiarán más detenidamente las formas en las que los humanos y las computadoras pueden hacer uso de estos datos para tomar decisiones.",
@@ -4145,7 +4533,7 @@
           "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Programación para entretenimiento",
           "overview": "**Pregunta del día: ¿Cómo se usan las ciencias de la computación en el entretenimiento?**\n\nLos estudiantes analizan los “problemas” causados por el aburrimiento y la autoexpresión, y reflexionan acerca de cómo enfrentan estas situaciones en su vida personal. Luego, exploran el rol que tienen las ciencias de la computación, específicamente la programación, en algunas formas específicas de entretenimiento o como un medio para la autoexpresión.",
           "preparation": "-   Revise los enlaces de recursos de investigación en Code Studio\n-   Imprima una copia de la guía de actividades para cada grupo de tres estudiantes",
           "purpose": "El propósito de esta lección es iniciar esta unidad de programación captando la atención de todos los estudiantes independientemente de sus intereses o experiencias. Si bien en las últimas lecciones los estudiantes deberán desarrollar un videojuego, recomendamos no dar tanta relevancia a _este_ tema. La intención de esta lección es ampliar la perspectiva de los estudiantes acerca de la relevancia de la programación en las distintas formas de entretenimiento y autoexpresión. Esta nueva perspectiva ayudará a los estudiantes durante toda la unidad, en especial cuando deban decidir cómo aplicar las distintas habilidades de programación que aprenden.",
@@ -4329,7 +4717,7 @@
           "student_overview": "**Pregunta del día: ¿Qué puede ayudarnos a trabajar juntos y a resolver problemas en equipo?**\n\nTrabajarás con un grupo para diseñar y probar un barco de papel de aluminio que soporte el mayor número posible de monedas de un céntimo. "
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Prueba posterior al proyecto",
+          "name": "El proceso de resolución de problemas",
           "overview": "**Pregunta del día: ¿Qué pasos podemos utilizar para resolver distintos problemas?**\n\nEsta lección es una introducción al proceso de resolución de problemas formal, que los estudiantes utilizarán durante todo el curso, Definir - Preparar - Intentar - Reflexionar. Los estudiantes comenzarán esta lección realizando una lluvia de ideas de los distintos tipos de problemas a los que se enfrentan día a día. Luego, conocerán los cuatro pasos del proceso de resolución de problemas y trabajarán en conjunto para relacionar estos conceptos con sus propias experiencias resolviendo problemas. Primero, los estudiantes relacionan estos cuatro pasos con las actividades realizadas en la clase anterior, luego con un problema que son hábiles resolviendo, y finalmente con uno que les gustaría resolver mejor. Al final de la lección, la clase recopila una lista de estrategias útiles para cada paso del proceso y con esta información realizan un póster que les será útil durante la unidad y el curso.",
           "preparation": "Para cada estudiante \n\n-   Imprima copias de la guía de actividades\n\nPara la clase\n\n-   Cartulina\n-   Marcadores o lápices de color",
           "purpose": "El objetivo de esta lección es relacionar el proceso de resolución de problemas con las experiencias que los estudiantes tengan en solucionar problemas cotidianos. En las siguientes unidades de Descubrimientos de las ciencias de la computación se presentarán problemas en contextos conocidos y desconocidos. Un proceso de solución de problemas estructurado será una herramienta importante para ayudar a los estudiantes en la superación de desafíos nuevos y complejos.",
@@ -4412,7 +4800,7 @@
           "student_overview": "**Pregunta del día: ¿Cómo podemos aplicar el proceso de resolución de problemas en diferentes tipos de problemas?**\n\nCon el objetivo de comprender mejor la importancia de cada paso, en esta lección, los estudiantes trabajarán con el proceso de resolución de problemas para solucionar tres problemas distintos. "
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Exploración de páginas web",
           "overview": "**Pregunta del día: ¿Por qué las personas crean páginas web?**  \n\nCada sitio web tiene un propósito, una razón por la que existe y por la que las personas lo usan. En esta lección, los estudiantes reflexionarán acerca de los propósitos de un sitio web, tanto para los creadores como para los usuarios. Los estudiantes verán ejemplos de algunos sitios web y analizarán cuál es el propósito de sus creadores. Luego, reflexionarán acerca de las razones por las que las personas crean sitios web.",
           "preparation": "-   Imprima una copia de la guía de actividades para cada estudiante.",
           "purpose": "En toda esta unidad se hablará acerca de la World Wide Web (red informática mundial), con el propósito de mostrar la creación de sitios web como una forma de expresión. Para que los estudiantes comiencen a pensar en las razones por las que les gustaría crear un sitio web, primero deben considerar que los sitios web son herramientas útiles tanto para los usuarios como para los creadores. En esta lección, se mostrarán ejemplos de sitios web populares que los estudiantes ya conocen, sin embargo, se les pedirá que presten atención a páginas web más simples, ya que estas se encuentran en el rango de lo que podrán lograr con este curso.",

@@ -6,13 +6,6 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
           "notice": "More Opportunities for Feedback",
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
           "link": "",
@@ -27,11 +20,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-15 15:49:06 UTC",
+    "serialized_at": "2022-06-27 19:34:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8927,6 +8921,18 @@
       }
     },
     {
+      "name": "Software Engineering: Skills and Characteristics",
+      "url": "https://youtu.be/VJFZejhRKjk",
+      "key": "software_engineering_skills_and_characteristics",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "software_engineering_skills_and_characteristics"
+      }
+    },
+    {
       "name": "SpiralPainter FRQ",
       "url": "https://docs.google.com/document/d/1fii6s81BkL_tz2Ji7bVwc-W_1smmFGbiZ0dX6mAaoXw/edit?usp=sharing",
       "key": "spiralpainter_frq",
@@ -9298,6 +9304,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "software_engineering_characteristics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "software_engineering_skills_and_characteristics"
       }
     },
     {

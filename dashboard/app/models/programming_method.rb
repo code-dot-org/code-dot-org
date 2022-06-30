@@ -25,7 +25,7 @@
 class ProgrammingMethod < ApplicationRecord
   include CurriculumHelper
 
-  belongs_to :programming_class
+  belongs_to :programming_class, optional: true
 
   before_validation :generate_key, on: :create
   validates_uniqueness_of :key, scope: :programming_class_id, case_sensitive: false

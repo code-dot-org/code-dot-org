@@ -29,6 +29,27 @@
         "infinity/Infinity": {
           "name": "Дизнијева Играоница"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Час кода 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Петље"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Догађаји"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Кондиционали"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Функције"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Променљиве"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Бројачке петље"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Помери га, помери"
         },
@@ -320,6 +341,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Екстремни изазов - Comprehensive"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Увод у Компјутерске Науке"
+        },
+        "20-hour/The Maze": {
+          "name": "Лавиринт"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Компјутерско Размишљање"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Графиконско - Папирно Програмирање"
+        },
+        "20-hour/The Artist": {
+          "name": "Уметник"
+        },
+        "20-hour/Algorithms": {
+          "name": "Алгоритми"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Уметник 2"
+        },
+        "20-hour/Functions": {
+          "name": "Функције"
+        },
+        "20-hour/The Farmer": {
+          "name": "Фармер"
+        },
+        "20-hour/Conditionals": {
+          "name": "Кондиционали"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Уметник 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Писање Песама"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Фармер 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Апстракција"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Уметник 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Relay programming"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Фармер 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Интернет"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Уметник 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Замотај-Умотај"
+        },
         "course2/Graph Paper Programming": {
           "name": "Графиконско - Папирно Програмирање"
         },
@@ -490,6 +571,27 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Слагалица"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Слагалица"
+        },
+        "allthethings/Maze": {
+          "name": "Лавиринт"
+        },
+        "allthethings/Artist": {
+          "name": "Уметник"
+        },
+        "allthethings/Bee": {
+          "name": "Пчела"
+        },
+        "allthethings/Farmer": {
+          "name": "Фармер"
+        },
+        "allthethings/Flappy": {
+          "name": "Флапи"
+        },
+        "allthethings/Bounce": {
+          "name": "одбиј се"
         },
         "coursef-2021/Internet": {
           "name": "Интернет"

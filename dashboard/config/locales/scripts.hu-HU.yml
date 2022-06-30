@@ -1085,7 +1085,7 @@ hu:
         CSDU2-Draft:
           lessons:
             Peer Review:
-              name: Társértékelés
+              name: Társ értékelése
         CSDU5-Draft:
           description_short: Adat
         CSF_Secret_Sample_Story:
@@ -1373,7 +1373,7 @@ hu:
         csd2-2017:
           lessons:
             Peer Review:
-              name: Társértékelés
+              name: Társ értékelése
             Lists:
               name: Listák
             Headings:
@@ -1603,7 +1603,7 @@ hu:
         csd5-draft:
           lessons:
             Combining Representations:
-              name: Reprezentációk egyesítése
+              name: Ábrázolások kombinálása
             Representing Images:
               name: Képek ábrázolása
         coursed-ramp:
@@ -1659,7 +1659,7 @@ hu:
             Representing Images:
               name: Képek ábrázolása
             Combining Representations:
-              name: Reprezentációk egyesítése
+              name: Ábrázolások kombinálása
             Keeping Data Secret:
               name: Adatok titokban tartása
         csd3-old:
@@ -1729,7 +1729,7 @@ hu:
         csd2-old:
           lessons:
             Peer Review:
-              name: Társértékelés
+              name: Társ értékelése
         artist-and-bb8:
           lessons:
             Programming with BB-8:
@@ -2080,7 +2080,7 @@ hu:
             Representing Images:
               name: Képek ábrázolása
             Combining Representations:
-              name: Reprezentációk egyesítése
+              name: Ábrázolások kombinálása
         csp3-staging:
           lesson_groups:
             csp3_1:
@@ -2498,7 +2498,7 @@ hu:
             Keeping Data Secret:
               name: Adatok titokban tartása
             Combining Representations:
-              name: Reprezentációk egyesítése
+              name: Ábrázolások kombinálása
             CS Discoveries Post-Course Survey:
               name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
         csp2-2018:
@@ -3107,7 +3107,7 @@ hu:
             Keeping Data Secret:
               name: Adatok titokban tartása
             Combining Representations:
-              name: Reprezentációk egyesítése
+              name: Ábrázolások kombinálása
         csd6-2019:
           lesson_groups:
             cspSurvey:
@@ -3696,7 +3696,7 @@ hu:
             Keeping Data Secret:
               name: Adatok titokban tartása
             Combining Representations:
-              name: Reprezentációk egyesítése
+              name: Ábrázolások kombinálása
         csd6-2020:
           lesson_groups:
             cspSurvey:
@@ -4225,7 +4225,7 @@ hu:
             Keeping Data Secret:
               name: Adatok titokban tartása
             Combining Representations:
-              name: Reprezentációk egyesítése
+              name: Ábrázolások kombinálása
             CS Discoveries Post-Course Survey:
               name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
           lesson_groups:
@@ -4538,7 +4538,7 @@ hu:
             Keeping Data Secret:
               name: Adatok titokban tartása
             Combining Representations:
-              name: Reprezentációk egyesítése
+              name: Ábrázolások kombinálása
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
@@ -5617,6 +5617,8 @@ hu:
               name: változók
             For Loops:
               name: Számláló ciklusok
+            End of Course projects:
+              name: Tanfolyam végi projektek
         hello-world-csc:
           title: Helló világ
         csc-pilot-2022-timecapsule:
@@ -5702,7 +5704,7 @@ hu:
             Representing Images:
               name: Képek ábrázolása
             Combining Representations:
-              name: Reprezentációk egyesítése
+              name: Ábrázolások kombinálása
             Keeping Data Secret:
               name: Adatok titokban tartása
             CS Discoveries Post-Course Survey:
@@ -5761,3 +5763,21 @@ hu:
               name: Összefoglaló
             lesson-1:
               name: Összefoglaló
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Bevezetés a mesékbe"
+            Plan Your Fable:
+              name: Saját mese tervezése
+            Share Your Fable:
+              name: Saját mese megosztása
+            lesson-4:
+              name: "[Optional] Bevezetés a mesékbe"
+            lesson-5:
+              name: Saját mese tervezése
+            lesson-6:
+              name: Saját mese megosztása
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Versművészet

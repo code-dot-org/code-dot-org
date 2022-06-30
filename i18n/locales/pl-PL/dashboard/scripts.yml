@@ -20173,7 +20173,7 @@ pl:
             For Loops:
               name: Pętle dla (for)
             End of Course projects:
-              name: Projekty na koniec kursu
+              name: Koniec projektów w ramach kursu
             Reviewing your reflections:
               name: Przeglądanie Twoich refleksji
           name: k5-onlinepd-2022
@@ -20255,6 +20255,8 @@ pl:
           lessons:
             Innovations in Computing:
               name: Innowacje w informatyce
+            lesson-3:
+              name: Krypto plac zabaw
           name: csd-playground
         csc-pilot-2022-ecosystems:
           lessons:
@@ -20739,6 +20741,7 @@ pl:
               name: 'Moduł 5: Jednostka 7 i zrozumienie funkcji z parametrami i zwracaniem wartości'
             Module 6:
               name: 'Moduł 6: Wprowadzenie do Zadania Create Performance'
+          name: vpl-csp-2022
         self-paced-pl-csd1-2022:
           lessons:
             Welcome to Codeorg:
@@ -20851,7 +20854,10 @@ pl:
             lessonGroup-3:
               display_name: Egzaminy próbne
           name: csa9-2022
+          title: Przegląd egzaminu AP i praktyka ('22-'23)
           description_short: Uczniowie przygotowują się do egzaminu AP CSA, ćwicząc odpowiedzi na pytania wielokrotnego wyboru i pytania otwarte.
+          description: Ta jednostka przygotowuje uczniów do egzaminu AP CSA poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru i pytań z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania testu. Uczniowie identyfikują mocne strony i obszary poprawy, aby tworzyć zindywidualizowane plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje postępy.
+          student_description: Ta jednostka przygotowuje Ciebie do egzaminu AP CSA poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru i pytań z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania testu. Identyfikujesz mocne strony i obszary poprawy, aby tworzyć zindywidualizowane plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje postępy.
         csa-pl-standalone-code-2022:
           lessons:
             lesson-1:
@@ -20859,6 +20865,7 @@ pl:
             lesson-2:
               name: Jednostka 2 Projekty
           name: csa-pl-standalone-code-2022
+          title: Projekty CSA Profesjonalnego kodowania edukacyjnego
           description: Uczestnicy warsztatów będą mogli zobaczyć przykładowe projekty i kod podczas PL z sąsiedztwa, konsoli i teatru.
         dlp-csd-overview-2022:
           lessons:
@@ -20964,3 +20971,64 @@ pl:
               name: Streszczenie
           title: 2021 Zasady informatyki Omówienie głębszego uczenia
           description: "### Witamy w programie Głębsze uczenie 2021 dla początkujących moderatorów kursu Zasad informatyki."
+        csc-ecosystems-2022:
+          lessons:
+            Model Animal Adaptations:
+              name: Ewolucja biologiczna
+            lesson-3:
+              name: Ewolucja biologiczna
+          name: csc-ecosystems-2022
+        csc-starquilts-2022:
+          name: csc-starquilts-2022
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Wprowadzenie do bajek"
+            Hello World CSC:
+              name: Witaj świecie opowieści
+            Plan Your Fable:
+              name: Zaplanuj swoją bajkę
+            Share Your Fable:
+              name: Udostępnij swoj bajkę
+            lesson-4:
+              name: "[Optional] Wprowadzenie do bajek"
+            lesson-5:
+              name: Zaplanuj swoją bajkę
+            lesson-6:
+              name: Udostępnij swoj bajkę
+          name: csc-fables-2022
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Sztuka poezji
+        alltheblocklythings:
+          lessons:
+            lesson-1:
+              name: Poziomy projektu
+            lesson-2:
+              name: Poziomy projektu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Google Blockly
+            lessonGroup-3:
+              display_name: CDO Blockly
+          name: alltheblocklythings
+          title: Wszystkie rzeczy Blockly!
+          description_short: Wybór poziomów Blockly do testów wewnętrznych
+        self-paced-pl-csd5-2022:
+          lessons:
+            Introduction to AI and machine learning:
+              name: Opracowywaniem stron internetowych
+            Train a machine learning model:
+              name: Animacje i gry interaktywne
+            Engage with machine learning apps:
+              name: Proces projektowania
+            Consider real world implications:
+              name: Dane i społeczeństwo
+            Unit wrap up:
+              name: Oiczenia fizyczne
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przygotowanie do uczenia Jednostki 1
+          name: self-paced-pl-csd5-2022
+          title: self-paced-pl-csd5

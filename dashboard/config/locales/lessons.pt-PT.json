@@ -122,6 +122,9 @@
           "name": "Festa Dançante - Ir além",
           "purpose": "Esta lição apresenta os principais conceitos do CS sobre codificação e programação de eventos (usando blocos)."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hora do Código 2013"
+        },
         "dance-2019/Dance Party": {
           "name": "Festa de dança (2019)",
           "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música.",
@@ -133,8 +136,176 @@
           "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Primeiro, os alunos classificam objetos como “peixes\" ou \"não peixes”, para tentar remover entulhos do oceano. Em seguida, os alunos terão de expandir seu conjunto de dados de treinamento para incluir outras criaturas marinhas que vivem na água. Na segunda parte da atividade, os alunos vão escolher seus próprios identificadores para aplicar às imagens de peixes geradas aleatoriamente. Esses dados de treinamento servem como modelo de aprendizagem de máquina, em que os alunos poderão identificar novas imagens por conta própria.",
           "student_overview": "Resumo do Tutorial: primeiro os estudantes classificam objetos como \"peixe\" ou \"não peixe\" para tentar remover o lixo do oceano. Em seguida, eles precisarão expandir seu conjunto de dados para incluir outras criaturas marinhas que pertencem à água. Na segunda parte da atividade, irão escolher suas próprias marcações para aplicar às imagens de peixes gerados aleatoriamente. Esses dados de treinamento são usados para um modelo de aprendizado de máquina que depois deve ser capaz de marcar novas imagens sozinho."
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Bem-vindo ao \"Ensinando os Fundamentos da Ciência da Computação\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Compreendendo os cursos de Fundamentos de Ciência da Computação"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sequenciamento"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Ciclos"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Eventos"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Condicionais"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Projetos de fim de curso"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funções"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variáveis"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Ciclos \"for\""
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laboratório de Sprite"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Revendo suas reflexões"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Próximos passos"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenère"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Estudo de ambiência"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Design digital"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Programação Orientada a Eventos"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Funcionalidade básica do aplicativo"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getters e Setters"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Iniciando"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fundamentos de Ciência da Computação"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Olhando para o futuro"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Dominando o básico: Sequenciamento"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Dominando o básico: Ciclos"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Dominando o básico: Condicionais"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Dominando o básico: Funções"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Dominando o básico: Eventos"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Melhores Práticas para o Ensino de Ciência da Computação"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planejamento"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Próximas etapas"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Visão Geral e Instruções de Configuração"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Ponto a Ponto - Enviando Bits em um cabo compartilhado"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Ponto a Ponto - Enviando Números"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Ponto a Ponto - Enviando Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Transmitindo mensagens"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Rotas e endereços"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pacotes e Confiabilidade"
+        },
+        "netsim/Manual DNS": {
+          "name": "DNS Manual"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Nó DNS Automático"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Simulador de Internet Gratuito"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget de hodômetro"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Fuga do quarto"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Telas de início e fim"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Telas de início e fim 2"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Iniciando"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fundamentos de Ciência da Computação"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Olhando para o futuro"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Dominando o básico: Sequenciamento"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Dominando o básico: Ciclos"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Dominando o básico: Condicionais"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Dominando o básico: Funções"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Dominando o básico: Eventos"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Melhores Práticas para o Ensino de Ciência da Computação"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planejamento"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Próximas etapas"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Hora do Código do Coletor 2017"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Análise de Freqüência"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Criando caminhos"
@@ -680,7 +851,7 @@
           "name": "Soletrando"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "CS Discoveries - Pesquisa de fim de semestre"
+          "name": "Programação para entretenimento"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Formas de plotagem"
@@ -1373,10 +1544,10 @@
           "name": "Um Battle Royal com eventos"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Teste pós-projeto"
+          "name": "Programação para entretenimento"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Pesquisa do CS Discoveries pós curso"
+          "name": "Formas de plotagem"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Desenhando no Laboratório de Jogos"
@@ -1439,10 +1610,10 @@
           "name": "Projeto - Projetar um Jogo"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Teste pós-projeto"
+          "name": "Inovações em Computação"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "Pesquisa do CS Discoveries pós curso"
+          "name": "Criando telas com código"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "O parque de diversões do circuito"
@@ -1487,10 +1658,10 @@
           "name": "Projeto: Protótipo de Inovação"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Teste pós-projeto"
+          "name": "Análise de Design"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Pesquisa do CS Discoveries pós curso"
+          "name": "Entendendo seu usuário"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Micro atividade de design centrado no usuário"
@@ -1535,10 +1706,10 @@
           "name": "Projeto - Apresentação do App"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Teste pós-projeto"
+          "name": "Representação Importa"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Pesquisa do CS Discoveries pós curso"
+          "name": "Padrões e Representações"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII e Representações Binárias"
@@ -1583,7 +1754,7 @@
           "name": "Introdução a Resolução de problemas"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Teste pós-projeto"
+          "name": "O Processo de Resolução de Problemas"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Explorando a solução de problemas"
@@ -1604,10 +1775,10 @@
           "name": "Projeto - Propor um Aplicativo"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Teste pós-projeto"
+          "name": "Explorando sites"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Pesquisa do CS Discoveries pós curso"
+          "name": "Sites para Expressão "
         },
         "csd2-2019/Intro to HTML": {
           "name": "Introdução a HTML"
@@ -2129,10 +2300,10 @@
           "name": "Apresente seu projeto"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "CS Discoveries - Pesquisa de fim de semestre"
+          "name": "Programação para entretenimento"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "Pesquisa Pós-Curso CSD"
+          "name": "Formas de plotagem"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Desenhando no Laboratório de Jogos"
@@ -2195,7 +2366,7 @@
           "name": "Projeto - Projetar um Jogo"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "Pesquisa Pós-Curso CSD"
+          "name": "Inovações em Computação"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Criando telas com código"
@@ -2243,7 +2414,7 @@
           "name": "Projeto: Protótipo de Inovação"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "Pesquisa Pós-Curso CSD"
+          "name": "Explorando sites"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Sites para Expressão "
@@ -2312,7 +2483,7 @@
           "name": "Projeto - Propor um Aplicativo"
         },
         "csd5-2017/Representation Matters": {
-          "name": "Pesquisa Pós-Curso CSD"
+          "name": "Representação Importa"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Padrões e Representações"
@@ -2357,7 +2528,7 @@
           "name": "Projeto - Resolver um problema de dados"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "Pesquisa Pós-Curso CSD"
+          "name": "Análise de Design"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Entendendo seu usuário"
@@ -2403,6 +2574,27 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "Projeto - Apresentação do App"
+        },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "Depuração para educadores da AB"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "Depuração para educadores da CDEF"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Tutorial de pixelização em preto e branco"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Pixelização em preto e branco livre"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Tutorial de Pixelização colorida"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Exemplos de pixelização colorida"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Pixelização colorida gratuita"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Offline: tangrams"
@@ -2469,6 +2661,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Desafio Extremo - Abrangente"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Introdução à Ciência Computacional"
+        },
+        "20-hour/The Maze": {
+          "name": "O Labirinto"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Pensamento computacional"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programação de papel milimetrico"
+        },
+        "20-hour/The Artist": {
+          "name": "O Artista"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmos"
+        },
+        "20-hour/The Artist 2": {
+          "name": "O Artista 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funções"
+        },
+        "20-hour/The Farmer": {
+          "name": "O Agricultor"
+        },
+        "20-hour/Conditionals": {
+          "name": "Condicionais"
+        },
+        "20-hour/The Artist 3": {
+          "name": "O Artista 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "escrita de canção"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "O Agricultor 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstração"
+        },
+        "20-hour/The Artist 4": {
+          "name": "O Artista 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Programação por revezamento"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "O Agricultor 3"
+        },
+        "20-hour/The Internet": {
+          "name": "A Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "O Artista 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Resumo"
         },
         "course2/Graph Paper Programming": {
           "name": "Programação de papel milimetrico"
@@ -2648,6 +2900,135 @@
           "name": "Quebra-cabeças",
           "overview": "Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.",
           "student_overview": "Clique e arraste para finalizar os quebra-cabeças."
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "CSD pesquisa pós-curso de estudantes ('18'19)"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Quebra-cabeças"
+        },
+        "allthethings/Maze": {
+          "name": "Labirinto"
+        },
+        "allthethings/Artist": {
+          "name": "Artista"
+        },
+        "allthethings/Bee": {
+          "name": "Abelha"
+        },
+        "allthethings/PlayLab": {
+          "name": "PlayLab"
+        },
+        "allthethings/Farmer": {
+          "name": "Fazendeiro"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy Bird"
+        },
+        "allthethings/Bounce": {
+          "name": "Bounce"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Correspondência"
+        },
+        "allthethings/TextMatch": {
+          "name": "Comparador de texto"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "Hodômetro"
+        },
+        "allthethings/Text Compression": {
+          "name": "Compressão de texto"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pixelização"
+        },
+        "allthethings/AppLab": {
+          "name": "Laboratório de aplicativo"
+        },
+        "allthethings/Gamelab": {
+          "name": "Laboratório de jogos"
+        },
+        "allthethings/Online PD": {
+          "name": "DP on-line"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Detalhes de Marcação"
+        },
+        "allthethings/Studio": {
+          "name": "Estúdio"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Avaliação de múltiplas página"
+        },
+        "allthethings/Star wars": {
+          "name": "Star wars"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "Avaliação longa"
+        },
+        "allthethings/Free Response": {
+          "name": "Resposta livre"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "Avaliação de amostra PLC"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Níveis trocados"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Pesquisa anônima de estudante"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Criptografia de chave pública"
+        },
+        "allthethings/Web Lab": {
+          "name": "Laboratório Web"
+        },
+        "allthethings/Single page assessment": {
+          "name": "Avaliação de página única"
+        },
+        "allthethings/Standalone video": {
+          "name": "Vídeo independente"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Currículo de referência"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Laboratório de Sprite"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Tapete de Dança"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Mini Rubrica"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "Externos Opcionalmente Exibidos como Desconectados"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "Escolha da bolha"
+        },
+        "allthethings/Contained Levels": {
+          "name": "Níveis Contidos"
+        },
+        "allthethings/ML Fish": {
+          "name": "ML Fish"
         },
         "coursef-2021/lesson-6": {
           "name": "Introdução ao Sprite Lab",
@@ -3492,9 +3873,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "Teste pós-projeto"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "Entendendo seu usuário"
         },
@@ -3529,7 +3907,7 @@
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Teste pós-projeto",
+          "name": "Inovações em Computação",
           "overview": "Para iniciar a unidade final deste curso, os alunos farão algumas pesquisas sobre inovações interessantes na computação. Esta lição irá expor os alunos a uma variedade mais ampla de fatores de forma de computação (aparência de um computador) e campos afetados pela computação. Posteriormente nesta unidade, os alunos analisarão os dispositivos que encontraram nesta lição à medida que desenvolvem seus próprios dispositivos físicos de computação."
         },
         "csd6-2021/Designing Screens with Code": {
@@ -3587,7 +3965,7 @@
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Teste pós-projeto"
+          "name": "Representação Importa"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Padrões e Representações"
@@ -3629,7 +4007,7 @@
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Teste pós-projeto"
+          "name": "Programação para entretenimento"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Formas de plotagem"
@@ -3701,7 +4079,7 @@
           "name": "Introdução a Resolução de problemas"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Teste pós-projeto"
+          "name": "O Processo de Resolução de Problemas"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Explorando a solução de problemas"
@@ -3722,7 +4100,7 @@
           "name": "Projeto - Propor um Aplicativo"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Teste pós-projeto"
+          "name": "Explorando páginas da Web"
         },
         "csd2-2021/Intro to HTML": {
           "name": "Introdução a HTML"

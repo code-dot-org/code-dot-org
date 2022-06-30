@@ -329,8 +329,35 @@
         "csta/1A-AP-15": {
           "description": "Utilizando una terminología correcta, describe los pasos dados y las decisiones tomadas durante el proceso iterativo de desarrollo del programa."
         },
+        "csta/2-AP-17": {
+          "description": "Probar y perfeccionar sistemáticamente los programas utilizando una serie de situaciones de prueba."
+        },
+        "csta/2-AP-13": {
+          "description": "Descomponer los problemas y subproblemas en partes para facilitar el diseño, la ejecución y la revisión de los programas."
+        },
         "csta/3A-AP-16": {
           "description": "Diseñar y desarrollar de forma iterativa dispositivos informáticos con fines prácticos, de expresión personal o para abordar un problema social utilizando eventos para iniciar instrucciones."
+        },
+        "csta/2-AP-19": {
+          "description": "Documentar los programas para que sean más fáciles de seguir, probar y depurar."
+        },
+        "csta/2-AP-11": {
+          "description": "Crear variables con nombres claros que representen diferentes tipos de datos y realizar operaciones con sus valores."
+        },
+        "csta/2-AP-12": {
+          "description": "Diseñar y desarrollar repetidamente programas que combinen estructuras de control, incluyendo bucles anidados y condicionales compuestas."
+        },
+        "csta/2-AP-15": {
+          "description": "Buscar e incorporar los comentarios de los miembros del equipo y de los usuarios para perfeccionar una solución que satisfaga las necesidades de los usuarios."
+        },
+        "csta/2-AP-10": {
+          "description": "Utilizar diagramas de flujo y/o pseudocódigo para abordar problemas complejos como algoritmos."
+        },
+        "csta/2-AP-16": {
+          "description": "Incorpora el código, los medios y las bibliotecas existentes en los programas originales, y concede la autorización."
+        },
+        "csta/2-AP-18": {
+          "description": "Distribuir las tareas y mantener un calendario del proyecto cuando se desarrollan artefactos computacionales en colaboración."
         },
         "csta/2-CS-03": {
           "description": "Identificar y solucionar sistemáticamente los problemas de los dispositivos informáticos y sus componentes."

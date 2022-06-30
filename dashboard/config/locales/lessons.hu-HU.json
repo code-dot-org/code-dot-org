@@ -115,6 +115,9 @@
         "dance-extras-2019/Dance Party - Go Further": {
           "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kódolás órája 2013"
+        },
         "dance-2019/Dance Party": {
           "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére.",
           "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével).",
@@ -124,8 +127,47 @@
           "name": "AI óceánok",
           "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Először a diákok szemetet próbálnak eltávolítani az óceánból és a tárgyakat \"hal\" vagy \"nem hal\" kategóriába sorolják. Ezután a tanulóknak ki kell bővíteniük az adathalmazt más tengeri élőlénnyel. A foglalkozás második részében a tanulók maguk választanak címkéket, amelyeket a véletlenszerűen generált halak képeire helyeznek. Ezeket az adatokat egy gépi tanuló modellben használják, amely ezután képes lesz arra, hogy önállóan címkézzen fel új képeket."
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "hurkok"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Események"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Feltételek"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "funkciók"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "változók"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Számláló ciklusok"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite labor"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Hangulat tanulmányozása"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Első lépések"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "A számítógép-tudomány alapjai"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Tervezés"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Első lépések"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "A számítógép-tudomány alapjai"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Tervezés"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Gyerünk, gyerünk!"
@@ -317,7 +359,7 @@
           "name": "Adatok titokban tartása"
         },
         "csd5-2018/Combining Representations": {
-          "name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása"
         },
         "csd5-2018/CS Discoveries Post-Course Survey": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
@@ -491,10 +533,13 @@
           "name": "Adatok titokban tartása"
         },
         "csd5-2019/Combining Representations": {
-          "name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása"
         },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Bevezetés a problémamegoldásba"
+        },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "A probléma-megoldási folyamat"
         },
         "csd1-2019/What is a Computer?": {
           "name": "Mi az a számítógép?"
@@ -599,7 +644,7 @@
           "name": "Adatok titokban tartása"
         },
         "csd5-2017/Combining Representations": {
-          "name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása"
         },
         "csd4-2017/Linking Screens": {
           "name": "Képernyők összekapcsolása"
@@ -669,6 +714,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extrém kihívás - Átfogó"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Bevezetés a számítógép tudományába"
+        },
+        "20-hour/The Maze": {
+          "name": "A labirintus"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Számítógépes gondolkodás"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Grafikus programozás"
+        },
+        "20-hour/The Artist": {
+          "name": "A Művész"
+        },
+        "20-hour/Algorithms": {
+          "name": "algoritmusok"
+        },
+        "20-hour/The Artist 2": {
+          "name": "A Művész 2"
+        },
+        "20-hour/Functions": {
+          "name": "funkciók"
+        },
+        "20-hour/The Farmer": {
+          "name": "A Farmer"
+        },
+        "20-hour/Conditionals": {
+          "name": "Feltételek"
+        },
+        "20-hour/The Artist 3": {
+          "name": "A Művész 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Dal iras"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "A Farmer 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Absztrakció"
+        },
+        "20-hour/The Artist 4": {
+          "name": "A Művész 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Váltó programozás"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "A Farmer 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Az internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "A Művész 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Összefoglaló"
         },
         "course2/Graph Paper Programming": {
           "name": "Grafikus programozás"
@@ -848,8 +953,68 @@
           "name": "Kirakós játék",
           "overview": "Ez a leckében a diákok megismerik, hogy mire számíthatnak egy számítógépes laborban. A lecke egy rövid megbeszéléssel kezdődik a számítógépes laborban való megfelelő viselkedésről, majd áttérnek a számítógép használatára, és online rejtvényeket oldanak meg.",
           "preparation": "-   A [Mindennapi tudás iskolája](https://www.commonsense.org/education/digital-citizenship) webhelyen további tartalmak találhatók az online biztonságról.",
-          "purpose": "A lecke fő célja, hogy a diákok némi számítógépes tapasztalatot szerezzenek. Megismerkednek a legalapvetőbb számítógépes funkciókkal, mint a kattintás, a húzás és dobás, és ezzel egyenlőbb feltételeket lesznek az osztályban, amikor a diákok majd rejtvényeket fognak megoldani. Ez a lecke remek lehetőséget nyújt arra is, hogy bemutassuk az alapvető számítógépes hardverterminológiát, beleértve az \"egér\", az \"érintőpad\" vagy az \"érintőképernyő\" fogalmakat, attól függően, hogy milyen eszközt használunk.",
-          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
+          "purpose": "A lecke fő célja, hogy a diákok némi számítógépes tapasztalatot szerezzenek. Megismerkednek a legalapvetőbb számítógépes funkciókkal, mint a kattintás, a húzás és dobás, és ezzel az osztályban a diákok lényegében azonos szintre kerülnek, amikor majd feladványokat kell megoldaniuk. Ez a lecke remek lehetőséget nyújt arra is, hogy megismerjék a számítógépes hardver alapvető kifejezéseit, többek között az \"egér\", az \"érintőpad\" vagy az \"érintőképernyő\" kifejezéseket, attól függően, hogy milyen eszközt használnak.",
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Kirakós játék"
+        },
+        "allthethings/Maze": {
+          "name": "Labirintus"
+        },
+        "allthethings/Artist": {
+          "name": "Művész"
+        },
+        "allthethings/Bee": {
+          "name": "Méh"
+        },
+        "allthethings/Farmer": {
+          "name": "Farmer"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Ugrál"
+        },
+        "allthethings/Multi": {
+          "name": "Feleletválasztás"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Párosítás"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Text Compression": {
+          "name": "Szöveg tömörítése"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Star wars": {
+          "name": "Star Wars"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web-Lab"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite labor"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Tánc Labor"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java laboratórium"
         },
         "coursef-2021/Virtual Pet": {
           "name": "Miniprojekt: Virtuális kisállat",
@@ -904,7 +1069,7 @@
           "name": "Kurzus Projekt vége"
         },
         "coursea-2021/Learn to Drag and Drop": {
-          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
         },
         "coursea-2021/Programming: Happy Maps": {
           "name": "Vidám térképek"
@@ -992,7 +1157,7 @@
           "name": "Kurzus Projekt vége"
         },
         "pre-express-2021/Learn to Drag and Drop": {
-          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
         },
         "pre-express-2021/Programming with Rey and BB-8": {
           "name": "Programozás Rey és BB-8 segítségével",
@@ -1062,7 +1227,7 @@
           "name": "Képek ábrázolása"
         },
         "csd5-2021/Combining Representations": {
-          "name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása"
         },
         "csd5-2021/Keeping Data Secret": {
           "name": "Adatok titokban tartása"
@@ -1102,6 +1267,9 @@
         },
         "csd1-2021/Intro to Problem Solving": {
           "name": "Bevezetés a problémamegoldásba"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "A probléma-megoldási folyamat"
         },
         "csd1-2021/What is a Computer?": {
           "name": "Mi az a számítógép?"

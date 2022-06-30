@@ -9000,3 +9000,15 @@ ro:
               name: Prezentare generală
             lesson-1:
               name: Prezentare generală
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Salutare Lume CSC
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Arta Poeziei
+        self-paced-pl-csd5-2022:
+          lessons:
+            Engage with machine learning apps:
+              name: Procesul de design

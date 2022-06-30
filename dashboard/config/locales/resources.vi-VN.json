@@ -9,12 +9,15 @@
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "poem_art_celebration/poem-art/2021": {
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
           "type": "Video"
         },
         "poem_art_events/poem-art/2021": {
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
           "type": "Video"
         },
         "poem_art_imagery/poem-art/2021": {
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
           "type": "Video"
         },
         "poem_art_introduction/poem-art/2021": {
@@ -30,6 +33,12 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "url": "https://docs.google.com/presentation/d/199mZZrEbIArDM6Z4dsaOeopnzGeww-uWnfVuDfXD0mY/edit?usp=drivesdk"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "url": "https://docs.google.com/presentation/d/199mZZrEbIArDM6Z4dsaOeopnzGeww-uWnfVuDfXD0mY/edit?usp=drivesdk"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
           "name": "Danh sách nhạc Spotify (cho mọi lứa tuổi)"
@@ -528,7 +537,7 @@
         },
         "variables_blank_space_stories/coursef/2021": {
           "name": "Biến: Câu chuyện khoảng trống",
-          "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview"
+          "url": "https://docs.google.com/presentation/d/1jvu2DUS50L3xLeXHH_yCSiqS5UduWixBNJ_UDchiyTA"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
           "name": "Câu chuyện khoảng trống",
@@ -802,7 +811,7 @@
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "Các kịch bản ứng dụng phù hợp",
-          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
+          "url": "https://docs.google.com/presentation/d/1aL8_Rba6663CQWxsF9Ve2IR-CGZRiVpXyEY7zBieF8E/edit?usp=drivesdk"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Sự kiện lớn",
@@ -1338,7 +1347,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
-          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
+          "url": "https://docs.google.com/presentation/d/199mZZrEbIArDM6Z4dsaOeopnzGeww-uWnfVuDfXD0mY/edit?usp=drivesdk"
         },
         "pause_and_think_online/coursed/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến",
@@ -1377,9 +1386,11 @@
           "type": "Video"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Lệnh điều kiện với lá bài",
           "url": "https://youtu.be/UymN4lTL50s"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Lệnh điều kiện với lá bài",
           "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
@@ -1387,18 +1398,22 @@
           "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Lệnh điều kiện với lá bài",
           "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
           "type": "Đánh giá"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Lệnh điều kiện với lá bài",
           "url": "https://youtu.be/TbUaEnAYPjI"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Lệnh điều kiện với lá bài",
           "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "name": "Hướng dẫn lập kế hoạch dự án tổng kết khóa học NTCB của KHMT Khóa học D",
-          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
+          "type": "Hướng dẫn dự án"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "Cấu trúc Tiêu chuẩn CSTA",
@@ -1471,6 +1486,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/express/2021": {
+          "name": "Tài liệu Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
@@ -1478,6 +1494,7 @@
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
+          "name": "Tài liệu Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
@@ -1535,7 +1552,8 @@
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "Hướng dẫn lập kế hoạch dự án tổng kết khóa học NTCB của KHMT Cấp tốc",
-          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
+          "type": "Hướng dẫn dự án"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Dự án cuối cùng về Nguyên tắc cơ bản của KHMT",
@@ -1603,13 +1621,14 @@
         },
         "follow_the_algorithm/coursee/2021": {
           "name": "Làm theo thuật toán",
-          "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview"
+          "url": "https://docs.google.com/presentation/d/1X5-60Z1_ziBfAbgXq3r6bfBd5iXfDPDulaXhYQdMTAM"
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
           "name": "Hộp cát dành cho giáo viên Cá bơi",
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/coursee/2021": {
+          "name": "Tài liệu Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
@@ -1688,7 +1707,7 @@
         },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "Thiết kế cho trợ năng",
-          "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview"
+          "url": "https://docs.google.com/presentation/d/1AguduBLKViRdTQ0z4vc8lRyZWI1CLIxybvj8o4vu08Q"
         },
         "types_of_disabilities/coursee/2021": {
           "name": "Các dạng khuyết tật",
@@ -1810,7 +1829,7 @@
           "type": "Video"
         },
         "computer-science-practices/csd/2021": {
-          "type": "Phản ánh"
+          "type": "Suy nghĩ"
         },
         "paper-prototypes/csd/2021": {
           "name": "Nguyên mẫu giấy",
@@ -1857,8 +1876,14 @@
         "how_computers_word_hardware_software/csd/2021": {
           "type": "Video"
         },
+        "board_events/csd/2021": {
+          "name": "Sự kiện bảng mạch"
+        },
         "analog-digital-video/csd/2021": {
           "type": "Video"
+        },
+        "emoji-race-guide/csd/2021": {
+          "type": "Hướng dẫn dự án"
         },
         "functions_2/csd/2021": {
           "name": "Các hàm"
@@ -1870,6 +1895,9 @@
           "name": "Giới thiệu Danh sách",
           "type": "Video"
         },
+        "playing_notes/csd/2021": {
+          "name": "Ghi chú khi chơi"
+        },
         "loops_in_app_lab/csd/2021": {
           "name": "Cho vòng lặp",
           "type": "Video"
@@ -1877,11 +1905,20 @@
         "for_loops/csd/2021": {
           "name": "Cho vòng lặp"
         },
+        "accelerometer_events/csd/2021": {
+          "name": "Sự kiện gia tốc kế"
+        },
         "circuits-logic-video/csd/2021": {
           "type": "Video"
         },
+        "physical-prototyping-project/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
         "prototype-an-innovation-1/csd/2021": {
           "type": "Thang điểm"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "Hướng dẫn dự án"
         },
         "representing-information-1/csd/2021": {
           "name": "Miêu tả thông tin"
@@ -1902,6 +1939,7 @@
           "type": "Video"
         },
         "video_impact_on_society/csd/2021": {
+          "name": "Video: Tác động đến xã hội",
           "type": "Video"
         },
         "video_machine_learning/csd/2021": {
@@ -1909,10 +1947,17 @@
           "type": "Video"
         },
         "video_training_data_and_bias/csd/2021": {
+          "name": "Video: Dữ liệu đào tạo và Định kiến",
           "type": "Video"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Đánh giá đồng cấp"
         },
         "make-a-recommendation-1/csd/2021": {
           "type": "Thang điểm"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "Hướng dẫn dự án"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "Video"
@@ -1962,6 +2007,12 @@
         "if_else_statements/csd/2021": {
           "type": "Video"
         },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Đánh giá đồng cấp"
+        },
         "interactive_card/csd/2021": {
           "type": "Thang điểm"
         },
@@ -1975,10 +2026,23 @@
           "name": "Phát hiện va chạm"
         },
         "side-scroller-1/csd/2021": {
+          "name": "Game đi cảnh",
           "type": "Thang điểm"
         },
+        "side-scroller/csd/2021": {
+          "name": "Game đi cảnh",
+          "type": "Hướng dẫn dự án"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "Vận tốc và mẫu bộ đếm"
+        },
         "flyer-game-1/csd/2021": {
+          "name": "Trò chơi Thú bay",
           "type": "Thang điểm"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Trò chơi Thú bay",
+          "type": "Hướng dẫn dự án"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "Các hàm",
@@ -1986,6 +2050,12 @@
         },
         "functions_1/csd/2021": {
           "name": "Các hàm"
+        },
+        "make-your-own-game/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Đánh giá đồng cấp"
         },
         "make_your_own_game/csd/2021": {
           "type": "Thang điểm"
@@ -2008,6 +2078,9 @@
         "what-do-computers-do/csd/2021": {
           "type": "Video"
         },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "Đánh giá đồng cấp"
+        },
         "apps_and_problem_solving/csd/2021": {
           "type": "Thang điểm"
         },
@@ -2018,19 +2091,33 @@
           "type": "Video"
         },
         "video_pair_programming/csd/2021": {
+          "name": "Video: Lập trình theo cặp",
           "type": "Video"
         },
         "video_debugging/csd/2021": {
+          "name": "Video: Sửa lỗi",
           "type": "Video"
         },
         "html-web-page-1/csd/2021": {
           "type": "Thang điểm"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "html-page/csd/2021": {
+          "type": "Hướng dẫn dự án"
         },
         "lists/csd/2021": {
           "name": "Danh sách"
         },
         "digital-footprint/csd/2021": {
           "name": "Dấu vết số"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Thám tử mạng xã hội"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "Thám tử mạng xã hội"
         },
         "intro_to_css_-_part_1/csd/2021": {
           "type": "Video"
@@ -2041,29 +2128,57 @@
         "your-personal-style-1-2-3/csd/2021": {
           "type": "Thang điểm"
         },
+        "your-personal-style-1/csd/2021": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "your-personal-style/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
         "creative-commons-video/csd/2021": {
           "type": "Video"
         },
         "images_in_html/csd/2021": {
           "name": "Hình ảnh trong HTML"
         },
+        "person-web-page-prepare/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
         "personal-web-page/csd/2021": {
           "type": "Thang điểm"
         },
         "publishing_your_website/csd/2021": {
+          "name": "Xuất bản trang ",
           "type": "Video"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "Video: Xử lý sự bất đồng",
           "type": "Video"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "Video: Làm việc theo nhóm",
           "type": "Video"
         },
         "how-search-works-video/csd/2021": {
+          "name": "Video: Cách hoạt động của tính năng tìm kiếm",
           "type": "Video"
         },
         "website-for-a-purpose-1/csd/2021": {
           "type": "Thang điểm"
+        },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "Hướng dẫn dự án"
         },
         "lesson_plans/pre-express/2020": {
           "name": "Giáo Án"

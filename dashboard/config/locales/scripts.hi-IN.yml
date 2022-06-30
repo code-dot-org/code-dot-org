@@ -17401,7 +17401,7 @@ hi:
             For Loops:
               name: फॉर लूप्स
             End of Course projects:
-              name: कोर्स की समाप्ति प्रोजेक्ट
+              name: समाप्ति कोर्स प्रोजेक्ट
             Reviewing your reflections:
               name: आपके प्रतिबिंबों की समीक्षा करना
         vpl-csd1-ci-pilot-2022:
@@ -18005,3 +18005,35 @@ hi:
               name: रूपरेखा
             lesson-1:
               name: रूपरेखा
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Hello World CSC
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] फेबल्स का परिचय"
+            Plan Your Fable:
+              name: अपनी फेबल की योजना बनाएं
+            Share Your Fable:
+              name: अपना फेबल साँझा करें
+            lesson-4:
+              name: "[Optional] फेबल्स का परिचय"
+            lesson-5:
+              name: अपनी फेबल की योजना बनाएं
+            lesson-6:
+              name: अपना फेबल साँझा करें
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: कविता आर्ट
+        self-paced-pl-csd5-2022:
+          lessons:
+            Train a machine learning model:
+              name: बौद्धिक एनिमेशन्स और गेम्स
+            Engage with machine learning apps:
+              name: डिज़ाइन प्रक्रिया
+            Consider real world implications:
+              name: डेटा और समाज
+            Unit wrap up:
+              name: भौतिक कंप्यूटिंग

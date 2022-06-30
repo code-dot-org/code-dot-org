@@ -55,8 +55,38 @@
         "dance-extras-2019/Dance Party - Go Further": {
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Timme av Kod 2013"
+        },
         "dance-2019/Dance Party": {
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "loopar"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Händelser"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Villkor"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "funktioner"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "variabler"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "'För' loopar"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Nästa steg"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Nästa steg"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Nästa steg"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Flytta det, flytta den"
@@ -454,6 +484,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extreme utmaning - Omfattande"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Introduktion till Datavetenskap"
+        },
+        "20-hour/The Maze": {
+          "name": "Labyrinten"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Uträkningstänkande"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Kalkyleringsprogrammering"
+        },
+        "20-hour/The Artist": {
+          "name": "Konstnären"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmer"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Konstnären 2"
+        },
+        "20-hour/Functions": {
+          "name": "funktioner"
+        },
+        "20-hour/The Farmer": {
+          "name": "Bonden"
+        },
+        "20-hour/Conditionals": {
+          "name": "Villkor"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Konstnären 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Sångskrivande"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Bonden 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstraktion"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Konstnären 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Stafettprogrammering"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Bonden 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Konstnären 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Gör klart"
+        },
         "course2/Graph Paper Programming": {
           "name": "Kalkyleringsprogrammering"
         },
@@ -630,6 +720,54 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Pussel"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Pussel"
+        },
+        "allthethings/Maze": {
+          "name": "Labyrint"
+        },
+        "allthethings/Artist": {
+          "name": "Konstnären"
+        },
+        "allthethings/Bee": {
+          "name": "Biet"
+        },
+        "allthethings/Farmer": {
+          "name": "Bonde"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Studsa"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Match": {
+          "name": "Matcha"
+        },
+        "allthethings/Odometer": {
+          "name": "Mätarställning"
+        },
+        "allthethings/Text Compression": {
+          "name": "Text komprimering"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pixelering"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
         },
         "coursef-2021/For Loop Fun": {
           "name": "'För' loop skoj"

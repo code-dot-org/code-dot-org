@@ -71,7 +71,7 @@ group :development, :test do
 
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.7.0'
   gem 'binding_of_caller'
   gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
@@ -168,7 +168,7 @@ gem 'nokogiri', '>= 1.10.0'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger' # error monitoring
+gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'newrelic_rpm', group: [:staging, :development, :production], # perf/error/etc monitoring
   # Ref:
@@ -290,7 +290,7 @@ gem 'octokit'
 
 # Used to create a prefix trie of student names within a section
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
-gem 'rambling-trie'
+gem 'rambling-trie', '>= 2.1.1'
 
 gem 'omniauth-openid'
 gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: 'cdo'
@@ -310,8 +310,6 @@ gem 'auto_strip_attributes', '~> 2.1'
 
 # Used to sort UTF8 strings properly
 gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
-
-gem 'StreetAddress', require: "street_address"
 
 gem 'recaptcha', require: 'recaptcha/rails'
 

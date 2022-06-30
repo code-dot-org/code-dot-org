@@ -152,6 +152,9 @@
           "name": "Dans Partisi - İleri Git",
           "purpose": "Bu ders, kodlamanın ve (blokları kullanarak) etkinlik programlamanın temel CS kavramlarını anlatır."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kodlama Saati 2013"
+        },
         "dance-2019/Dance Party": {
           "name": "Dans Partisi (2019)",
           "overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders her yaştan öğrenci için tasarlanmıştır, ancak okumayı gerektirir. Araç müziğe yanıt vermek üzere tasarlandığından, bu etkinlik ses gerektirir.",
@@ -164,8 +167,173 @@
           "purpose": "Bu eğitim, öğrencilere bir **yapay zeka** türü olan **makine öğrenmesini** hızlıca tanıtmak için tasarlandı. Bir makine öğrenmesi modelinin yeni verileri sınıflandırmasını sağlamak için **eğitim verisinin** nasıl kullanıldığını keşfedecek. Öğrenciler eğitim sırasında pozitif bir deneyim yaşamalılar ve daha da önemlisi bilgisayar bilimi öğrenmeye devam etmek konusunda motivasyon kazanmalılar. ",
           "student_overview": "Ders Özeti: Öncelikle öğrenciler, okyanustan çöpleri kaldırmak amacıyla nesneleri ya \"balık\" ya da \"balık değil\" olarak sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir. Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir. Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen bir makine öğrenim modeli için kullanılır."
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "\"Bilgisayar Bilimi Temelleri Öğretimine\" Hoşgeldiniz"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Bilgisayar Bilimi Temelleri Derslerinin Anlaşılması"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sıralama"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Döngüler"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Olaylar"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Koşullar"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Kurs Sonu projeleri"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Fonksiyonlar"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Değişkenler"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For Döngüleri"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Kukla Laboratuvarı"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Yansımalarınızı Gözden Geçirme"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Sonraki adımlar"
+        },
+        "vigenere/Vigenere": {
+          "name": "Şifre karesi"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Mod Çalışması"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Dijital Tasarım"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Olay Temelli Programlama"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Temel uygulama işlevselliği"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Alıcılar ve Belirleyiciler"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "İlk adım"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Bilgisayar Bilimi Temelleri"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Geleceğe bakış"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Temellerde uzmanlaşma: Sıralama"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Temellerde uzmanlaşma-Döngüler"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Temellerde uzmanlaşma: Koşullar"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Temellerde uzmanlaşma: Fonksiyonlar"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Temellerde uzmanlaşma-Olaylar"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Bilgisayar Bilimleri öğretim için en iyi yöntemler"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planlama"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Sonraki Adımlar"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Genel bakış ve kurulum yönergeleri"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Karşı karşıya -paylaşılan bir tel üzerinden ikili gönderme"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Karşı karşıya - Ascii Karakter gönderme"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Karşı karşıya - Ascii gönderme"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Mesajları yayımlamak"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Yönlendiriciler ve adresleri"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Paketler ve güvenilirlik"
+        },
+        "netsim/Manual DNS": {
+          "name": "El ile DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Otomatik DNS düğümü"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Internet simülatörü serbest oyun"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Kaçış odası"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Başlatma ve Sonlandırma Ekranları"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Başlatma ve Sonlandırma Ekranları2"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "İlk adım"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Bilgisayar Bilimi Temelleri"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Geleceğe bakış"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Temellerde uzmanlaşma: Sıralama"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Temellerde uzmanlaşma-Döngüler"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Temellerde uzmanlaşma: Koşullar"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Temellerde uzmanlaşma: Fonksiyonlar"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Temellerde uzmanlaşma-Olaylar"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Bilgisayar Bilimleri öğretim için en iyi yöntemler"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planlama"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Sonraki Adımlar"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Toplayıcı Kod Saati 2017"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Frekans analizi"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Çabuk, Çabuk Taşı"
@@ -693,7 +861,7 @@
           "name": "Heceleme Yarışması"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "Bilgisayar Bilimi Keşifleri Dönem Sonu Anketi"
+          "name": "Eğlence için programlama"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Şekiller çizme"
@@ -1392,10 +1560,10 @@
           "name": "Play Lab' da Olaylar"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Proje Sonrası Test"
+          "name": "Eğlence için programlama"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi"
+          "name": "Şekiller çizme"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Game Lab' da Çizim"
@@ -1458,10 +1626,10 @@
           "name": "Proje - Bir oyun tasarla"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Proje Sonrası Test"
+          "name": "Bilişimdeki Yenilikler"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi"
+          "name": "Kod ile Ekranlar Tasarlama"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "Çember Oyun Alanı"
@@ -1506,10 +1674,10 @@
           "name": "Proje: Bir yenilik prototiple"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Proje Sonrası Test"
+          "name": "Tasarım analizi"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi"
+          "name": "Kullanıcınızı anlama"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Kullanıcı Merkezli Tasarım Mikro Aktivitesi"
@@ -1554,10 +1722,10 @@
           "name": "Proje - Uygulama Sunumu"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Proje Sonrası Test"
+          "name": "Konuları ifade etme"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi"
+          "name": "Desen ve gösterimi"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII ve ikili gösterimi"
@@ -1602,7 +1770,7 @@
           "name": "Problem çözme tanıtımı"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Proje Sonrası Test"
+          "name": "Problem çözme süreci"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Problem çözmeyi keşfetme"
@@ -1623,10 +1791,10 @@
           "name": "Proje - bir uygulama önermek"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Proje Sonrası Test"
+          "name": "Web Sitelerini Keşfetme"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi"
+          "name": "İfade Web Siteleri "
         },
         "csd2-2019/Intro to HTML": {
           "name": "HTML' ye Giriş"
@@ -2148,7 +2316,10 @@
           "name": "Projeni sun"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "Bilgisayar Bilimi Keşifleri Dönem Sonu Anketi"
+          "name": "Eğlence için programlama"
+        },
+        "csd3-2017/Plotting Shapes": {
+          "name": "Şekiller çizme"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Game Lab' da Çizim"
@@ -2210,6 +2381,9 @@
         "csd3-2017/Project - Design a Game": {
           "name": "Proje - Bir oyun tasarla"
         },
+        "csd6-2017/Innovations in Computing_": {
+          "name": "Bilişimdeki Yenilikler"
+        },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Kod ile Ekranlar Tasarlama"
         },
@@ -2254,6 +2428,9 @@
         },
         "csd6-2017/Project: Prototype an Innovation_": {
           "name": "Proje: Bir yenilik prototiple"
+        },
+        "csd2-2017/Exploring Websites": {
+          "name": "Web Sitelerini Keşfetme"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "İfade Web Siteleri "
@@ -2321,6 +2498,9 @@
         "csd1-2017/Project - Propose an App": {
           "name": "Proje - bir uygulama önermek"
         },
+        "csd5-2017/Representation Matters": {
+          "name": "Konuları ifade etme"
+        },
         "csd5-2017/Patterns and Representation": {
           "name": "Desen ve gösterimi"
         },
@@ -2362,6 +2542,9 @@
         },
         "csd5-2017/Project - Solve a Data Problem": {
           "name": "Proje - bir veri sorunu çözmek"
+        },
+        "csd4-2017/Analysis of Design": {
+          "name": "Tasarım analizi"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Kullanıcınızı anlama"
@@ -2407,6 +2590,27 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "Proje - Uygulama Sunumu"
+        },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "AB Eğitimcileri için Hata Ayıklama"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "CDEF Eğitimcileri için Hata Ayıklama"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Siyah ve beyaz Pixelleme eğitim"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Siyah ve beyaz Pixelleme serbest oyun"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Renkli mozaik eğitim"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Renkli mozaik örnekleri"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Renkli mozaik serbest oyun"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Bağımsız: Tangramlar"
@@ -2473,6 +2677,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Aşırı zorluk - kapsamlı"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Bilgisayar Bilimine Giriş"
+        },
+        "20-hour/The Maze": {
+          "name": "Labirent"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Sayısal Düşünme"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Grafik Kağıdı Programlama"
+        },
+        "20-hour/The Artist": {
+          "name": "Sanatçı"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmalar"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Sanatçı 2"
+        },
+        "20-hour/Functions": {
+          "name": "Fonksiyonlar"
+        },
+        "20-hour/The Farmer": {
+          "name": "Çiftçi"
+        },
+        "20-hour/Conditionals": {
+          "name": "Koşullar"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Sanatçı 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Şarkı yazma"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Çiftçi 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Soyutlama"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Sanatçı 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Röle Programlama"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Çiftçi 3"
+        },
+        "20-hour/The Internet": {
+          "name": "İnternet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Sanatçı 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Özet"
         },
         "course2/Graph Paper Programming": {
           "name": "Grafik Kağıdı Programlama"
@@ -2654,6 +2918,138 @@
           "preparation": "-   Daha fazla çevrimiçi güvenlik içeriği için [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) web sitesini inceleyin.",
           "purpose": "Bu dersin temel amacı, bilgisayarlarla öğrenci deneyimi oluşturmaktır. Tıklama, sürükleme ve bırakma gibi en temel bilgisayar işlevlerini ele alarak, gelecekteki bulmacalar için sınıfta daha eşit bir oyun alanı yaratıyoruz. Bu ders ayrıca, cihazlarınıza bağlı olarak potansiyel olarak \"fare\", \"dokunmatik fare\" veya \"dokunmatik ekran\" dahil olmak üzere temel bilgisayar donanımı terminolojisini tanıtmak için harika bir fırsat sunar.",
           "student_overview": "Bulmacaları tamamlamak için tıklayıp sürükleyin."
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "CSD Öğrenci Kurs Sonrası Anketi ('18-'19)"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Yapboz"
+        },
+        "allthethings/Maze": {
+          "name": "Labirent"
+        },
+        "allthethings/Artist": {
+          "name": "Sanatçı"
+        },
+        "allthethings/Bee": {
+          "name": "Arı"
+        },
+        "allthethings/PlayLab": {
+          "name": "Oyun Labaratuarı"
+        },
+        "allthethings/Farmer": {
+          "name": "Çiftçi"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Sıçrama"
+        },
+        "allthethings/Multi": {
+          "name": "Çoklu"
+        },
+        "allthethings/Multi2": {
+          "name": "Çoktan Seçmeli Soru-2"
+        },
+        "allthethings/Match": {
+          "name": "Eşleştir"
+        },
+        "allthethings/TextMatch": {
+          "name": "Metin Karşılaştıma"
+        },
+        "allthethings/CSinA": {
+          "name": "Müfredatta Bilgisayar Bilimleri"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "Kilometre sayacı"
+        },
+        "allthethings/Text Compression": {
+          "name": "Metin Sıkıştırma"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pikselleşme"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Gamelab": {
+          "name": "Oyun Labaratuarı"
+        },
+        "allthethings/Online PD": {
+          "name": "Çevrimiçi kişisel gelişim"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Etiketleme Ayrıntıları"
+        },
+        "allthethings/Studio": {
+          "name": "Stüdyo"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Çoklu sayfa değerlendirmesi"
+        },
+        "allthethings/Star wars": {
+          "name": "Yıldız Savaşları"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "Zengin uzun değerlendirme"
+        },
+        "allthethings/Free Response": {
+          "name": "Serbest cevap"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "Örnek PLC değerlendirme"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Değiştirilen Düzeyler"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Anonim öğrenci incelemesi"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Genel anahtar şifrelemesi"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Laboratuvarı"
+        },
+        "allthethings/Single page assessment": {
+          "name": "Tek sayfa değerlendirme"
+        },
+        "allthethings/Standalone video": {
+          "name": "Tek başına video"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Öğretim programı"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Kukla Laboratuvarı"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Dans Laboratuvarı"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Mini Tablo"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "Tercihen Bağlantısız olarak Gösterilen Dış Unsurlar"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "Baloncuk Seçimi"
+        },
+        "allthethings/Contained Levels": {
+          "name": "İçerdiği Düzeyler"
+        },
+        "allthethings/ML Fish": {
+          "name": "ML Balığı"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java Laboratuvarı"
         },
         "coursef-2021/lesson-6": {
           "name": "Hareketli Nesne Laboratuvarı Tanıtımı",
@@ -3569,9 +3965,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "Proje Sonrası Test"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "Kullanıcınızı anlama"
         },
@@ -3606,7 +3999,7 @@
           "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Proje Sonrası Test",
+          "name": "Bilişimdeki Yenilikler",
           "overview": "Bu dersin son bölümünü başlatmak için, öğrenciler bilgisayarlarda ilginç yenilikler konusunda biraz araştırma yapacaklardır. Bu ders öğrencileri bilgisayarlardan etkilenen alanlar ve bilgisayar form faktörlerinden daha geniş bir kitleye (bir bilgisayarın nasıl göründüğü) açıklayacak. Daha sonra bu birimde öğrenciler kendi fiziki bilgi işlem cihazlarını geliştirdikçe bu derste karşılaştıkları cihazlara bakacaklardır."
         },
         "csd6-2021/Designing Screens with Code": {
@@ -3664,7 +4057,7 @@
           "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Proje Sonrası Test"
+          "name": "Konuları ifade etme"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Desen ve gösterimi"
@@ -3709,7 +4102,7 @@
           "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Proje Sonrası Test"
+          "name": "Eğlence için programlama"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Şekiller çizme"
@@ -3784,7 +4177,7 @@
           "name": "Problem çözme tanıtımı"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Proje Sonrası Test"
+          "name": "Problem çözme süreci"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Problem çözmeyi keşfetme"
@@ -3820,7 +4213,7 @@
           "name": "Problem Çözmeyi Keşfetme - Oyun Teması (Alternatif Ders 3)"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Proje Sonrası Test"
+          "name": "Web Sayfalarını Keşfetme"
         },
         "csd2-2021/Intro to HTML": {
           "name": "HTML' ye Giriş"

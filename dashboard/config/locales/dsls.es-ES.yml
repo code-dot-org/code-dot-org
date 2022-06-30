@@ -13214,35 +13214,61 @@ es-ES:
         display_name: Practica con Modelos en el Laboratorio de Aplicaciones
       Choose 2 Test:
         answers:
-        - correct: true
-        - correct: true
-        - {}
-        - {}
+        - text: Línea 2
+          correct: true
+        - text: Línea 3
+          correct: true
+        - text: Línea 4
+        - text: Línea 5
         questions:
-        - {}
+        - text: Qué líneas de código hay que eliminar para que el programa funcione
+            como se pretende? Selecciona <u>dos</u> respuestas
+        markdown: "Esta pregunta utiliza un robot en una trama de cuadrados. El robot
+          se representa como un triángulo, que inicialmente está orientado hacia el
+          lado derecho de la cuadrícula. El robot se mueve según las siguientes instrucciones:\n\n|
+          Instrucción       | Explicación |\n|--------------------|--------|\n|`Avanzar`
+          | El robot se mueve una casilla hacia adelante en la dirección en la que
+          está orientado |\n|`Girar a la derecha` | El robot gira en su sitio 90 grados
+          en el sentido de las agujas del reloj (es decir, hace un giro a la derecha
+          en su sitio). |\n|`Girar a la izquierda` | El robot gira en su lugar 90
+          grados en sentido contrario a las agujas del reloj (es decir, hace un giro
+          a la izquierda en su lugar). |\n|`REPETIR n VECES` | El bloque de instrucciones
+          contenido entre las llaves {} se repite n veces. |\n \n&nbsp;\n\nObserva
+          el siguiente programa incorrecto, que pretende mover el robot alrededor
+          del perímetro de la cuadrícula de abajo, como indican las flechas.\n\n![](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png)\n\n![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n\n"
       Eval Contracts F:
         answers:
-        - ''
+        - texto|Imagen|Cadena|Número|Cadena
+        content1: Escribe un contrato para la función de texto
+        content2: Contratos de Evaluación E.bloques_solución, 300
+        title: Texto del Contrato
       Multi Horizontal Scroll Test:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 3 bits
+        - text: 4 bits
+        - text: 5 bits
+        - text: 6 bits
+        - text: 7 bits
+          correct: true
+        - text: 12 bits
         questions:
-        - {}
+        - text: |-
+            El teclado QWERTY estándar tiene 47 teclas que pueden colocar caracteres en la pantalla. Cada una de estas teclas también puede mostrar un segundo carácter manteniendo pulsada la tecla "Shift" al mismo tiempo (Supongamos que en esta pregunta se ignoran todas las demás teclas).
+
+            ¿Cuántos bits necesitarías para codificar todo lo que se puede escribir en este teclado?
+        title: 'Evaluación: Codificación del Texto'
       Submittable Multi:
         answers:
         - text: azul
         - text: verde
-        - {}
+        - text: turquesa
         - text: amarillo
-        - correct: true
+        - text: naranja auténtica, por supuesto
+          correct: true
         - text: rojo
         questions:
-        - {}
+        - text: "¿Cuál es tu color favorito?"
+        title: Múltiples Opciones para Enviar
       Test Contained Multi:
         answers:
         - text: '0'
@@ -13258,18 +13284,23 @@ es-ES:
         content1: descripción aquí
       contained_Choose_2_Test:
         answers:
-        - correct: true
-        - correct: true
-        - {}
-        - {}
+        - text: Línea 2
+          correct: true
+        - text: Línea 3
+          correct: true
+        - text: Línea 4
+        - text: Línea 5
         questions:
-        - {}
+        - text: Qué líneas de código hay que eliminar para que el programa funcione
+            como se pretende? Selecciona <u>dos</u> respuestas
       contained_Choose_2_Test_2:
         answers:
-        - correct: true
-        - correct: true
-        - {}
-        - {}
+        - text: Línea 2
+          correct: true
+        - text: Línea 3
+          correct: true
+        - text: Línea 4
+        - text: Línea 5
         questions:
         - {}
       contained_Happy_Maps_Multi 1:
@@ -13285,9 +13316,24 @@ es-ES:
         title: Opción múltiple
       test questionless single multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "Llamar a los parámetros de una función  \n ![](https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png)"
+        - text: "Definir los parámetros de una función  \n ![](https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png)"
+          correct: true
+        - text: "Mover la tortuga por la pantalla  \n ![](https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png)"
+        - text: "Orientar la dirección de la tortuga   \n ![](https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png)"
+        - text: "Configurar las propiedades del lápiz \n ![](https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png)"
         - text: Ninguna de las anteriores
+        markdown: "Ten en cuenta los siguientes usos de `randomNumber`.  Cada respuesta
+          describe el uso y muestra un ejemplo de código. ¿Cuál de las siguientes
+          opciones NO es un uso válido de `randomNumber`?\n\n"
+        teacher_markdown: "La respuesta llega a la diferencia entre definir los parámetros
+          de una función y llamar a esa función.  Dado que `randomNumber` devuelve
+          un valor (un número), puede utilizarse en lugares en los que, de otro modo,
+          se proporcionaría un valor numérico.\n\nPor ejemplo, no se define una función
+          con un parámetro numérico.  Esto no tiene sentido:\n\n`función dibujarFigura(50){
+          ... }` <-- no hagas esto.\n\nEn lugar de eso, *define* la función con un
+          parámetro con nombre, así:\n\n`función dibujarFigura(tamaño){ ... }`  \n\ny
+          luego la *llamas*, proporcionando un valor para ese parámetro así:\n\n`dibujarFigura(50);`
+          \n\nEn el caso de esta pregunta estamos usando randomNumber en lugar de
+          ese valor para la *llamada* a la función.\n\ndibujarFigura( número aleatorio(25,75)
+          );`\n\n"

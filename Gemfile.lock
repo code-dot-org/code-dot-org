@@ -171,7 +171,6 @@ GEM
   remote: https://rubygems.org/
   specs:
     Ascii85 (1.1.0)
-    StreetAddress (1.0.6)
     acme-client (2.0.5)
       faraday (~> 0.9, >= 0.9.1)
     acmesmith (2.3.1)
@@ -321,9 +320,9 @@ GEM
     backports (3.11.3)
     bcrypt (3.1.13)
     benchmark-ips (2.7.2)
-    better_errors (2.1.1)
+    better_errors (2.9.1)
       coderay (>= 1.0.0)
-      erubis (>= 2.6.6)
+      erubi (>= 1.0.0)
       rack (>= 0.9.0)
     bindata (2.4.10)
     binding_of_caller (0.8.0)
@@ -489,7 +488,7 @@ GEM
     hashery (2.1.2)
     hashie (3.6.0)
     highline (1.6.21)
-    honeybadger (4.5.1)
+    honeybadger (4.12.1)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
@@ -530,7 +529,6 @@ GEM
     kgio (2.11.3)
     launchy (2.4.3)
       addressable (~> 2.3)
-    le (2.7.2)
     libv8 (8.4.255.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -714,7 +712,7 @@ GEM
     rainbow (3.0.0)
     raindrops (0.19.0)
     rake (11.3.0)
-    rambling-trie (1.0.0)
+    rambling-trie (2.2.1)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -909,7 +907,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  StreetAddress
   acmesmith (~> 2.3.1)
   active_model_serializers (~> 0.10.10)
   active_record_query_trace
@@ -937,7 +934,7 @@ DEPENDENCIES
   aws-sdk-secretsmanager
   bcrypt (= 3.1.13)
   benchmark-ips
-  better_errors
+  better_errors (>= 2.7.0)
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
   brakeman
@@ -974,7 +971,7 @@ DEPENDENCIES
   haml_lint
   hammerspace
   highline (~> 1.6.21)
-  honeybadger
+  honeybadger (>= 4.5.6)
   httparty
   image_optim!
   image_optim_pack (~> 0.5.0)!
@@ -1032,7 +1029,7 @@ DEPENDENCIES
   rack_csrf
   rails (= 6.0.4.1)
   rails-controller-testing (~> 1.0.5)
-  rambling-trie
+  rambling-trie (>= 2.1.1)
   recaptcha
   redcarpet (~> 3.3.4)
   redis (~> 3.3.3)

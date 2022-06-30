@@ -562,6 +562,7 @@ bg:
         PL_overview_CSP: Какви са Принципите на Компютърните Науки?
         PL_CS_Journeys_Overview: CS Пътешествия
         csp_applab_parameters: Функции с параметри
+        CS_Changing_Everything: Компютърните Науки Променят Всичко
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

@@ -17771,3 +17771,40 @@ de:
               name: Übersicht
             lesson-1:
               name: Übersicht
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Hallo Welt CSC
+        csc-starquilts-2022: {}
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Einführung in Fabeln"
+            Plan Your Fable:
+              name: Plane deine Fabel
+            Share Your Fable:
+              name: Teile deine Fabel
+            lesson-4:
+              name: "[Optional] Einführung in Fabeln"
+            lesson-5:
+              name: Plane deine Fabel
+            lesson-6:
+              name: Teile deine Fabel
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Dichtkunst
+        alltheblocklythings: {}
+        self-paced-pl-csd5-2022:
+          lessons:
+            Introduction to AI and machine learning:
+              name: Webentwicklung
+            Train a machine learning model:
+              name: Interaktive Animationen und Spiele
+            Engage with machine learning apps:
+              name: Der Entwurfsprozess
+            Consider real world implications:
+              name: Daten und Gesellschaft
+            Unit wrap up:
+              name: Physische Datenverarbeitung
+          title: Unterrichten von KI und maschinellem Lernen

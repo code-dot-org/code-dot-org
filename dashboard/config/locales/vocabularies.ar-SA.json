@@ -244,10 +244,6 @@
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "event/sports/unversioned": {
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
@@ -382,10 +378,6 @@
         "for_loop/coursef/2021": {
           "word": "حلقة \"لِ\"",
           "definition": "حلقات لها بداية ونهاية ومقدار زيادة محدد مسبقاً (مقدار الخطوة)."
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
         },
         "machine_learning/coursef/2021": {
           "word": "التعلم الآلي",
@@ -686,7 +678,6 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "code/express/2021": {
-          "word": "",
           "definition": "لكتابة الكود، أو لكتابة التعليمات للكمبيوتر"
         },
         "loop/express/2021": {
@@ -706,8 +697,7 @@
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
         },
         "conditionals/express/2021": {
-          "word": "الجمل الشرطية",
-          "definition": ""
+          "word": "الجمل الشرطية"
         },
         "while_loop/express/2021": {
           "word": "حلقات بينما",

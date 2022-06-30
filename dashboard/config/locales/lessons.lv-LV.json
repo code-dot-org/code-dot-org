@@ -17,6 +17,24 @@
         "playlab/Play Lab": {
           "name": "Spēles laboratorija"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Cikli"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Pasākumi"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Sazarojumi"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcijas"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Mainīgie"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "\"par\" cikli"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Ej, ej"
         },
@@ -335,6 +353,66 @@
         "course4/Artist Binary": {
           "name": "Mākslinieks: Binārais"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Ievads datorzinātnēs"
+        },
+        "20-hour/The Maze": {
+          "name": "Labirints"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Algoritmiska domāšana"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "20-hour/The Artist": {
+          "name": "Mākslinieks"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmi"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Mākslinieks 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funkcijas"
+        },
+        "20-hour/The Farmer": {
+          "name": "Fermeris"
+        },
+        "20-hour/Conditionals": {
+          "name": "Sazarojumi"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Mākslinieks 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Dziesmas rakstīšana"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Fermeris 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstrakcija"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Mākslinieks 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Releju programmēšana"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Fermeris 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internets"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Mākslinieks 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Ietīt"
+        },
         "course2/Graph Paper Programming": {
           "name": "Rūtiņpapīra programmēšana"
         },
@@ -511,6 +589,30 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Puzle"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Puzle"
+        },
+        "allthethings/Maze": {
+          "name": "Labirints"
+        },
+        "allthethings/Artist": {
+          "name": "Mākslinieks"
+        },
+        "allthethings/Bee": {
+          "name": "Bite"
+        },
+        "allthethings/Flappy": {
+          "name": "Flapijs"
+        },
+        "allthethings/Bounce": {
+          "name": "Atlekt"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Match": {
+          "name": "Sakrīt"
         },
         "coursef-2021/For Loop Fun": {
           "name": "Jautrība ar \"For\" Cikliem"

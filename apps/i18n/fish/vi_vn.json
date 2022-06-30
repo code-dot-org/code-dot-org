@@ -1,12 +1,24 @@
 {
+  "fishvtrash-training-init1": "Rác thải được xả vào nước gây ảnh hưởng đến sinh vật biển. Trong hoạt động này, bạn sẽ dạy A.I. (trí tuệ nhân tạo) để nhận diện cá hoặc rác thải. Hãy cùng làm sạch đại dương! Nhấp vào bất cứ nơi nào trên màn hình để tiếp tục.",
+  "creaturesvtrashdemo-predicting-init1": "Tính tới giờ, chúng ta đã đào tạo cho A.I. cách nhận diện các vật thể là \"cá\" hoặc \"không phải cá\".",
+  "creaturesvtrash-training-init1": "Hãy dạy cho A.I. biết những đối tượng nào thuộc về nước.",
+  "fishshort-words-init2": "Hãy dạy cho A.I. một từ mới bằng cách cho A.I. xem một vài ví dụ về loài cá đó.",
   "continue": "Tiếp tục",
   "areYouSure": "Bạn chắc chứ?",
   "cancel": "Huỷ",
   "yes": "Đồng ý",
   "no": "Không",
+  "notWord": "Không phải {word}",
   "run": "Chạy",
   "finish": "Hoàn Thành",
+  "wordQuestionShort": "Bạn muốn đào tạo A.I. nhận diện loại cá nào?",
+  "isThisAFish": "Đây có phải là cá không?",
+  "doesThisBelongInWater": "Thứ này có thuộc về nước không?",
+  "fish": "Cá",
   "blue": "Màu xanh da trời",
   "green": "Màu xanh lá",
-  "red": "Màu đỏ"
+  "red": "Màu đỏ",
+  "circular": "Hình tròn",
+  "rectangular": "Hình chữ nhật",
+  "triangular": "Hình tam giác"
 }

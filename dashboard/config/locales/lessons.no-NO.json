@@ -44,6 +44,39 @@
         "infinity/Infinity": {
           "name": "Disney Infinity Spill-Lab"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kodetimen 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Løkker"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Hendelser"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Betingelser"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funksjoner"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variabler"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For-løkker"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Grunnleggende informatikk"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "De Neste Trinnene"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Grunnleggende informatikk"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "De Neste Trinnene"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Flytt den, flytt den"
         },
@@ -401,6 +434,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ekstrem utfordring - Omfattende"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Introduksjon til informatikk"
+        },
+        "20-hour/The Maze": {
+          "name": "Labyrinten"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Programmeringstenkning"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "20-hour/The Artist": {
+          "name": "Kunstneren"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmer"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Kunstneren 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funksjoner"
+        },
+        "20-hour/The Farmer": {
+          "name": "Bonden"
+        },
+        "20-hour/Conditionals": {
+          "name": "Betingelser"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Kunstneren 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Låtskriving"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Bonden 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstraksjon"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Kunstneren 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Relé programmering"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Bonden 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internett"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Kunstneren 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Oppsummering"
+        },
         "course2/Graph Paper Programming": {
           "name": "Millimeterpapirprogrammering"
         },
@@ -577,6 +670,48 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Puslespill"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Puslespill"
+        },
+        "allthethings/Maze": {
+          "name": "Labyrint"
+        },
+        "allthethings/Artist": {
+          "name": "Kunstner"
+        },
+        "allthethings/Bee": {
+          "name": "Bie"
+        },
+        "allthethings/Farmer": {
+          "name": "Bonde"
+        },
+        "allthethings/Flappy": {
+          "name": "Flakse"
+        },
+        "allthethings/Bounce": {
+          "name": "sprett"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Match": {
+          "name": "Kamp"
+        },
+        "allthethings/Odometer": {
+          "name": "Kilometerteller"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Web Lab": {
+          "name": "Weblaboratoriet"
         },
         "coursef-2021/For Loop Fun": {
           "name": "Morro med for løkker"

@@ -4464,8 +4464,8 @@ it-IT:
           feedback: Corretto! Prima, Scrat si gira nella direzione sbagliata, poi
             non si muove in avanti abbastanza volte per raggiungere la ghianda.
         - text: Non lo so.
-          feedback: Ci sono due bug in questo codice. Prima, Scrat si gira nella direzione
-            sbagliata, poi non si muove in avanti abbastanza volte per raggiungere
+          feedback: Ci sono due errori in questo codice. Prima, Scrat si gira nella
+            direzione sbagliata, poi non si muove in avanti abbastanza volte per raggiungere
             la ghianda.
         questions:
         - text: Cerca gli errori in questo codice. Scrat raggiungerà la ghianda o
@@ -7172,12 +7172,12 @@ it-IT:
         markdown: |-
           # Istruzioni condizionali con le carte da gioco
 
-          Gioca a carte e crea regole come "Se pesco una carta rossa, faccio un punto" e "Se pesco una carta nera, fai punto tu."
+          Gioca a carte e crea regole come "Se pesco una carta rossa, allora faccio un punto" e "Se pesco una carta nera, fai punto tu."
       ConditionalsWithCards-Unplugged_2020:
         markdown: |-
           # Istruzioni condizionali con le carte da gioco
 
-          Gioca a carte e crea regole come "Se pesco una carta rossa, faccio un punto" e "Se pesco una carta nera, fai punto tu."
+          Gioca a carte e crea regole come "Se pesco una carta rossa, allora faccio un punto" e "Se pesco una carta nera, fai punto tu."
       DigitalCitizenship-Unplugged:
         markdown: |-
           # Cittadinanza Digitale
@@ -7217,7 +7217,7 @@ it-IT:
           ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
       PrivatePersonalInformation-Unplugged_2020:
         markdown: |-
-          # Informazioni Private e Personali
+          # Dati personali e altri dati
 
           ## Quali informazioni su di te possono essere condivise online?
       ScreenOutTheMean-Unplugged:
@@ -7352,14 +7352,14 @@ it-IT:
           e come possiamo usarle in molti modi diversi."
       ForLoopFun-Unplugged:
         markdown: |-
-          # Per divertirsi con i loop
+          # Per divertirsi con i cicli
 
-          Sappiamo che i loop ci permettono di fare le cose più e più volte, ma ora impareremo come usare i loop con una struttura extra incorporata.
+          Sappiamo che i cicli ci permettono di fare le cose più e più volte, ma ora impareremo come usare i cicli con una struttura extra incorporata.
       ForLoopFun-Unplugged_2020:
         markdown: |-
-          # Per divertirsi con i loop
+          # Per divertirsi con i cicli
 
-          Sappiamo che i loop ci permettono di fare le cose più e più volte, ma ora impareremo come usare i loop con una struttura extra incorporata.
+          Sappiamo che i cicli ci permettono di fare le cose più e più volte, ma ora impareremo come usare i cicli con una struttura extra incorporata.
       GettingLoopy-Unplugged:
         markdown: |-
           # Diventare ripetitivi
@@ -7367,9 +7367,9 @@ it-IT:
           Questa lezione introduce il concetto di ripetizione nella programmazione, attraverso un'attività di ballo.
       GettingLoopy-Unplugged_2020:
         markdown: |-
-          # A ripetizione di... ballo a ripetizione
+          # Diventare ripetitivi
 
-          Questa lezione introduce il concetto della ripetizione a ciclo nella programmazione, attraverso un'attività di ballo.
+          Questa lezione introduce il concetto di ripetizione nella programmazione, attraverso un'attività di ballo.
       Internet-Unplugged:
         markdown: |-
           # Internet.
@@ -7382,24 +7382,24 @@ it-IT:
           Costruisci il tuo Internet in classe usando solo pezzi di carta.
       MoveItMoveIt-Unplugged:
         markdown: |-
-          # Spostalo, Spostalo
+          # Spostalo, spostalo
 
-          Usa una mappa e dài istruzioni per raggiungere l'obiettivo.
+          Usa una mappa e dai istruzioni per raggiungere l'obiettivo.
       MoveItMoveIt-Unplugged_2020:
         markdown: |-
-          # Spostalo, Spostalo
+          # Spostalo, spostalo
 
-          Usa una mappa e dài istruzioni per raggiungere l'obiettivo.
+          Usa una mappa e dai istruzioni per raggiungere l'obiettivo.
       MyLoopyRoboticFriends-Unplugged:
         markdown: |-
           # I miei amici robot ripetitivi
 
-          Rendete i vostri programmi più brevi usando i loop!
+          Rendete i vostri programmi più brevi usando i cicli!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |-
           # I miei amici robot ripetitivi
 
-          Rendete i vostri programmi più brevi usando i loop!
+          Rendete i vostri programmi più brevi usando i cicli!
       PicturingData-Unplugged:
         markdown: |-
           # Raffigurare dati.
@@ -7427,11 +7427,11 @@ it-IT:
 
           ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
       RelayProgramming-Unplugged:
-        markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorate
-          in gruppo per scrivere programmi per disegnare immagini. "
+        markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorando
+          in gruppo scrivete programmi per disegnare immagini. "
       RelayProgramming-Unplugged_2020:
-        markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorate
-          in gruppo per scrivere programmi per disegnare immagini. "
+        markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorando
+          in gruppo scrivete programmi per disegnare immagini. "
       Social Sleuth_2018_2019:
         markdown: "# Social Sleuth\n\nAvrai bisogno del <a href=\"https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#\">
           Foglio di lavoro Social Sleuth </a> per completare questa attività.\n\n##
@@ -7467,12 +7467,12 @@ it-IT:
           * In che modo questo vi fa pensare in modo diverso a ciò che scegliete di pubblicare online?
       Songwriting-Unplugged:
         markdown: |-
-          # Scrivereunacanzone.
+          # Scrivere una canzone.
 
           Usa il concetto di ritornello in una canzone per imparare a definire e nominare le funzioni.
       Songwriting-Unplugged_2020:
         markdown: |-
-          # Scrivereunacanzone.
+          # Scrivere una canzone.
 
           Usa il concetto di ritornello in una canzone per imparare a definire e nominare le funzioni.
       TheRightAppMarkdownLevel_2019:
@@ -7486,7 +7486,7 @@ it-IT:
         markdown: "# L'App giusta\n\n* Al giorno d'oggi, tutti utilizzano i computer
           e, in particolare, gli smartphone. \n* Le applicazioni per smartphone, o
           \"app\", aiutano le persone a fare cose come parlare con gli amici, ascoltare
-          musica, fare acquisti o semplicemente navigare su internet.\n* Per un programmatore
+          musica, fare acquisti o semplicemente navigare su Internet.\n* Per un programmatore
           è importante comprendere i bisogni altrui e tenerli presenti per progettare
           le app!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       courseE_project_exemplars_2019:
@@ -7542,7 +7542,7 @@ it-IT:
 
       csf_digital_trails:
         markdown: |-
-          # Segui la Traccia Digitale
+          # Segui la traccia digitale
 
           ## Quali sono le informazioni ADATTE da lasciare nelle tue tracce digitali?
       csf_safety_in_my_online_neighborhood:
@@ -7657,7 +7657,7 @@ it-IT:
         markdown: |-
           # Braccialetti Binari
 
-          Crea un braccialetto che rappresenti il tuo nome in un sistema che sia comprensibile per i computer!
+          Crea un braccialetto che rappresenti il tuo nome in un sistema comprensibile ai computer!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       CSD U1 Test:
@@ -7666,7 +7666,7 @@ it-IT:
         markdown: |-
           # Istruzioni condizionali con le carte da gioco
 
-          Gioca a carte e crea regole come "Se pesco una carta rossa, faccio un punto" e "Se pesco una carta nera, fai punto tu."
+          Gioca a carte e crea regole come "Se pesco una carta rossa, allora faccio un punto" e "Se pesco una carta nera, fai punto tu."
       CourseF_outbreak_story:
         content1: descrizione qui
         markdown: "# Epidemia - Programma la tua simulazione\n\n## Benvenuto nella
@@ -7795,9 +7795,9 @@ it-IT:
           In questa lezione considererai le sfide e i benefici del rispetto della proprietà e del copyright, in particolare negli ambienti digitali.
       ForLoopFun-Unplugged_2021:
         markdown: |-
-          # Per divertirsi con i loop
+          # Per divertirsi con i cicli
 
-          Sappiamo che i loop ci permettono di fare le cose più e più volte, ma ora impareremo come usare i loop con una struttura extra incorporata.
+          Sappiamo che i cicli ci permettono di fare le cose più e più volte, ma ora impareremo come usare i cicli con una struttura extra incorporata.
       GettingLoopy-Unplugged_2021:
         markdown: |-
           # Diventare ripetitivi
@@ -7820,19 +7820,19 @@ it-IT:
           Costruisci il tuo Internet in classe usando solo pezzi di carta.
       MoveItMoveIt-Unplugged_2021:
         markdown: |-
-          # Spostalo, Spostalo
+          # Spostalo, spostalo
 
-          Usa una mappa e dài istruzioni per raggiungere l'obiettivo.
+          Usa una mappa e dai istruzioni per raggiungere l'obiettivo.
       MyLoopyRoboticFriends-Unplugged_2021:
         markdown: |-
           # I miei amici robot ripetitivi
 
-          Rendete i vostri programmi più brevi usando i loop!
+          Rendete i vostri programmi più brevi usando i cicli!
       MyRoboticFriends-Unplugged_2021:
         markdown: |-
-          # I Miei Amici Robotici
+          # I miei amici robotici
 
-          Impara a programmare scrivendo il codice per i tuoi amici!
+          Impara a programmare scrivendo codice per i tuoi amici!
       OPD-K5 About_dani:
         markdown: |
           #  Per cominciare > Descrizione del corso
@@ -8845,15 +8845,15 @@ it-IT:
           ## Cosa dovresti fare quando qualcuno usa un linguaggio cattivo od offensivo su internet?
       PrivatePersonalInformation-Unplugged_2021:
         markdown: |-
-          # Informazioni Private e Personali
+          # Dati riservati e dati personali
 
           ## Quali informazioni su di te possono essere condivise online?
       RelayProgramming-Unplugged_2021:
-        markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorate
-          in gruppo per scrivere programmi per disegnare immagini. "
+        markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorando
+          in gruppo scrivete programmi per disegnare immagini. "
       Songwriting-Unplugged_2021:
         markdown: |-
-          # Scrivereunacanzone.
+          # Scrivere una canzone.
 
           Usa il concetto di ritornello in una canzone per imparare a definire e nominare le funzioni.
       TheRightAppMarkdownLevel_2021:
@@ -8915,8 +8915,8 @@ it-IT:
           feedback: Corretto! Prima, Scrat si gira nella direzione sbagliata, poi
             non si muove in avanti abbastanza volte per raggiungere la ghianda.
         - text: Scrat non si sposterà dal primo blocco.
-          feedback: Ci sono due bug in questo codice. Prima, Scrat si gira nella direzione
-            sbagliata, poi non si muove in avanti abbastanza volte per raggiungere
+          feedback: Ci sono due errori in questo codice. Prima, Scrat si gira nella
+            direzione sbagliata, poi non si muove in avanti abbastanza volte per raggiungere
             la ghianda.
         questions:
         - text: Cerca gli errori in questo codice. Scrat raggiungerà la ghianda o
@@ -9157,7 +9157,7 @@ it-IT:
             il mucchio sarà finito.
           correct: true
           feedback: Corretto!
-        - text: La contadina rimuoverà la sporcizia solo una volta.
+        - text: La contadina rimuoverà i rifiuti solo una volta.
           feedback: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo
             appena il mucchio è finito
         questions:
@@ -9194,7 +9194,7 @@ it-IT:
           feedback: Sbagliato. Il programma fa andare l'uccellino avanti mentre c'è
             strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando
             non raggiunge il maiale!
-        - text: L'uccello gira dalla parte sbagliata.
+        - text: L'uccellino gira dalla parte sbagliata.
           feedback: Il programma fa andare l'uccellino avanti mentre c'è strada in
             avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge
             il maialino!
@@ -9277,14 +9277,14 @@ it-IT:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Non succederà nulla.
-          feedback: Sbagliato. La balla di fieno inizierà a rotolare
-        - text: La balla di fieno inizierà a fluttuare in cima allo schermo
-          feedback: Sbagliato. La balla di fieno inizierà a rotolare
-        - text: La balla di fieno inizierà a rotolare
+          feedback: Sbagliato. Il cespuglio rotolante inizierà a rotolare
+        - text: Il cespuglio rotolante inizierà a fluttuare in cima allo schermo
+          feedback: Sbagliato. Il cespuglio rotolante inizierà a rotolare
+        - text: Il cespuglio rotolante inizierà a rotolare
           correct: true
           feedback: Corretto!
         - text: Il cespuglio rotolante si accenderà e si spegnerà.
-          feedback: Sbagliato. La balla di fieno inizierà a rotolare
+          feedback: Sbagliato. Il cespuglio rotolante inizierà a rotolare
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
@@ -9297,7 +9297,7 @@ it-IT:
       courseF_EOC_samples_2021:
         display_name: Progetto di fine corso
         description: Stai per iniziare il tuo progetto finale. Prima di cominciare,
-          trascorri un po' tempo a osservare i progetti di esempio.
+          dedica un po' di tempo a dare un'occhiata ai progetti di esempio.
       courseF_events_predict_multi:
         answers:
         - text: Il personaggio si girerà soltanto verso destra.
@@ -9309,27 +9309,27 @@ it-IT:
           correct: true
           feedback: Corretto! Entrambi i comportamenti si manifesteranno contemporaneamente.
         - text: Il personaggio farà prima un giro e dopo si sposterà.
-          feedback: Sbagliato. Nel Laboratorio dei Personaggi, i blocchi collegati
+          feedback: Sbagliato. Nel laboratorio dei personaggi, i blocchi collegati
             sono eseguiti in maniera consecutiva, ognuno subito dopo l'ultimo, quindi
             entrambi i comportamenti verranno eseguiti contemporaneamente.
         questions:
-        - text: Leggi il codice, poi fai una previsione.
+        - text: Leggi il programma, poi fai una previsione.
       courseF_labels_predict_multi:
         answers:
-        - text: '"Una pizza arriva subito!"'
-          feedback: Sbagliato. Le etichette delle variabili non corrispondono.
-        - text: '"Un pasto arriva subito!"'
-          feedback: Sbagliato. L'etichetta di una variabile non è mai stampata.
-        - text: '"Un alimento arriva subito!"'
-          feedback: Sbagliato. L'etichetta di una variabile non è mai stampata.
-        - text: '"Uno arriva subito!"'
+        - text: '"Una pizza in arrivo!"'
+          feedback: Sbagliato. I nomi delle variabili non corrispondono.
+        - text: '"Un pasto in arrivo!"'
+          feedback: Sbagliato. L'etichetta di una variabile non viene mai visualizzata.
+        - text: '"Un cibo in arrivo!"'
+          feedback: Sbagliato. L'etichetta di una variabile non viene mai visualizzata.
+        - text: '"Uno  in arrivo!"'
           correct: true
-          feedback: Corretto! Le etichette delle variabili non corrispondono.
-        - text: Non verrà stampato nulla.
-          feedback: Sbagliato. I blocchi evento e stampa continueranno a funzionare.
+          feedback: Corretto! I nomi delle variabili non corrispondono.
+        - text: Non verrà visualizzato nulla.
+          feedback: Sbagliato. I blocchi evento e "scrivi" continueranno a funzionare.
         questions:
-        - text: Questo codice potrebbe apparire fmailiare, ma leggilo attentamente.
-            Cosa verrà stampato, se l'utente digita "pizza"?
+        - text: Questo codice potrebbe apparire familiare, ma leggilo attentamente.
+            Cosa verrà visualizzato, se l'utente digita "pizza"?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: L'artista disegnerà un triangolo con lati lunghi 50 pixel.
@@ -9392,7 +9392,7 @@ it-IT:
           feedback: Sbagliato. Gli aerei non sono posizionati in modo da entrare in
             contatto.
         questions:
-        - text: Leggi il codice, poi fai una previsione.
+        - text: Leggi il programma, poi fai una previsione.
       courseF_variables_predict_multi:
         answers:
         - text: Il programma stamperà "Ciao nome!"
@@ -9409,21 +9409,22 @@ it-IT:
             viene avviato.
         questions:
         - text: 'Questo programma ti consente di rispondere a una domanda digitando
-            direttamente dalla tua tastiera. Il blocco `stampa` visualizza il testo
+            direttamente dalla tua tastiera. Il blocco `scrivi` visualizza il testo
             sullo schermo. Fai una previsione: cosa succederà dopo aver risposto alla
             domanda?'
       courseF_variables_stop:
         content1: descrizione qui
-        markdown: "# Stop!\n\n## Sei sicuro che tu sia pronto per procedere? \n\n\nNel
-          livello successivo, inizierai a scrivere il codice per il tuo progetto,
-          che funzionerà al meglio se hai già un piano.\n\nIl tuo piano completato
-          dovrebbe includere:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+        markdown: "# Stop!\n\n## Sei sicuro di essere pronto per proseguire? \n\n\nNell'esercizio
+          successivo, inizierai a scrivere il codice per il tuo progetto, che funzionerà
+          al meglio se hai già un piano.\n\nIl tuo piano completato dovrebbe includere:\n\n<img
+          src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
           style=\"float:left; height:70px; padding:10px\"/>\n\n* Il tipo di progetto
           che stai costruendo. Ad esempio, un biglietto di auguri, chatbot o storia
-          delle caselle vuote.\n* Un elenco delle domande che ciederai all'utente.\n*
+          delle caselle vuote.\n* Un elenco delle domande che chiederai all'utente.\n*
           L'altro testo che visualizzerai sullo schermo.\n* Una descrizione o un disegno
           dei personaggi di cui avrai bisogno (e dei loro comportamenti).\n\nSe non
-          sei sicuro di essere pronto per continuare, controlla con il tuo insegnante!\n"
+          sei sicuro di essere pronto per continuare, fai una verifica con il tuo
+          insegnante!\n"
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: L'artista risolverà correttamente l'esercizio.
@@ -9448,7 +9449,7 @@ it-IT:
           ## Come possiamo essere di aiuto quando assistiamo al cyberbullismo?
       csf_digital_trails_2021:
         markdown: |-
-          # Segui la Traccia Digitale
+          # Segui la traccia digitale
 
           ## Quali sono le informazioni ADATTE da lasciare nelle tue tracce digitali?
       csf_password_power-up_2021:
@@ -9460,7 +9461,7 @@ it-IT:
 
           * Inizia con una **frase** memorabile
           * Solo i tuoi **genitori** dovrebbero conoscere la tua password.
-          * Non utilizzare mai  per la tua password alcuna informazione legate alla tua identità **personale**.
+          * Non utilizzare mai per la tua password alcuna informazione legata alla tua identità **personale**.
           * Crea password con almeno **otto** caratteri.
           * Usa lettere, numeri e **simboli** nella tua password.
 
@@ -9517,10 +9518,11 @@ it-IT:
         title: Testo Post-Progetto di Sviluppo Web
       courseF_intro_apps:
         display_name: App del Laboratorio di personaggi
-        description: Ti diamo il benvenuto nei Principi fondamentali di CS! Tutti
-          questi progetti sono stati creati con il Laboratorio dei personaggi. Provali
-          ora per capire cos'è possibile fare. Entro la fine di questo corso, potrai
-          creare dei progetti tutti tuoi che siano uguali a questi... e altro ancora!
+        description: Ti diamo il benvenuto nel corso sui Fondamenti di informatica!
+          Tutti questi progetti sono stati creati con il Laboratorio dei personaggi.
+          Provali ora per capire cos'è possibile fare. Entro la fine di questo corso,
+          potrai creare dei progetti tutti tuoi che siano uguali a questi... e altro
+          ancora!
         teacher_markdown: |-
           # Panoramica sugli esercizi facoltativi
           Gli esercizi facoltativi offrono una scelta di esercizi aggiuntivi, che gli alunni devono portare a termine. Gli alunni devono completare almeno uno di questi sottolivelli.
@@ -9555,10 +9557,10 @@ it-IT:
           Prova a fare un gioco e pensa a quali comandi sono necessari per ottenere il giusto risultato.
       courseD_EOC_examples_2021:
         description: Stai per iniziare il tuo progetto finale. Prima di cominciare,
-          trascorri un po' tempo a osservare i progetti di esempio.
-        display_name: Esempi di progetti
+          dedica un po' di tempo a dare un'occhiata ai progetti di esempio.
+        display_name: Progetti di esempio
       courseF_artist_practice:
-        display_name: Pratica dell'artista
+        display_name: Esercitarsi con l'artista
         description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
           Cerca quanto più possibile di portarla a termine. Continua a esercitarti
           con i cicli e l'Artista!
@@ -9583,32 +9585,32 @@ it-IT:
           di più il tuo progetto! Continua con le aggiunte al tuo programma oppure
           inizia qualcosa di nuovo!
       courseF_events_practice:
-        display_name: Esercitazioni per gli eventi
+        display_name: Esercitazioni con gli eventi
         description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
           Cerca quanto più possibile di portarla a termine. Continua a esercitarti
           con gli eventi!
         teacher_markdown: |-
-          # Panoramica sugli esercizi opzionali
-          Gli esercizi opzionali offrono una scelta di esercizi aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+          # Panoramica sugli esercizi facoltativi
+          Gli esercizi facoltativi mettono a disposizione una scelta di esercizi aggiuntivi. Gli alunni devono completarne almeno uno.
 
-          Puoi utilizzare le descrizioni seguenti per aiutare gli studenti a selezionare autonomamente le scelte o per definire le aspettative sul numero di esercizi secondari da completare.
+          Puoi utilizzare le descrizioni seguenti per aiutare gli alunni a selezionare autonomamente le scelte o per definire le aspettative sul numero di esercizi facoltativi da completare.
 
           |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Partenza!|Imparare a volare|Fai un avvitamento|Rimpicciolisci e ingrandisci|Fai gonfiare il pesce!|Pinguino in movimento|
           |-|-|-|-|-|-|-|
           | ***Digita*** |**Revisione**|**Debug**|**Debug**|**Debug**|**Contenuto facoltativo**|**Contenuto facoltativo**
           | ***Concetto***|*events, behaviors*|*eventi, comportamenti*|*events, behaviors*|*eventi, comportamenti*|*when/while events*|*quando/durante gli eventi*|
       courseF_text_practice:
-        display_name: Pratica con il testo e i comandi
+        display_name: Esercitarsi con il testo e le richieste all'utente
         description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
           Cerca quanto più possibile di portarla a termine. Continua a esercitarti
-          con i testi e i comandi!
+          con i testi e le richieste all'utente!
         teacher_markdown: |+
-          # Panoramica sugli esercizi opzionali
+          # Panoramica sugli esercizi facoltativi
           Gli esercizi facoltativi mettono a disposizione una scelta di esercizi aggiuntivi. Gli alunni devono completarne almeno uno.
 
           Puoi utilizzare le descrizioni seguenti per aiutare gli alunni a selezionare autonomamente le scelte o per definire le aspettative sul numero di esercizi facoltativi da completare.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Utilizzo della voce per il testo|Testo dal prompt|Dai un nome al robot!|Etichette di variabili|Testo grande|Richiesta di colori|Ripartire da zero|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Utilizzo della voce per il testo|Richiesta di un testo|Dai un nome al robot!|Nomi di variabili|Testo grande|Richiesta di un colore|Ripartire da zero|
           |-|-|-|-|-|-|-|-|
           | ***Tipologia*** |**Ripasso**|**Correzione**|**Correzione**|**Correzione**|**Contenuto facoltativo**|**Contenuto facoltativo**|**Gioco libero**
           | ***Concetto***|*blocco scrivi, eventi*|*discussioni, eventi*|*aggiunta spazi*|*corrispondenza variabili di etichetta*|*blocchi  schermata introduttiva*|*salvataggio colori*|*nessun nuovo contenuto*
@@ -9617,28 +9619,28 @@ it-IT:
       courseF_variables_projects:
         display_name: Scegli un progetto
         description: Creerai un biglietto di auguri, un chatbot o una storia delle
-          caselle vuote. Se hai già terminato la \"Parta 1\" del tuo progetto, vai
+          caselle vuote. Se hai già terminato la \"Parte 1\" del tuo progetto, vai
           alla \"Parte 2\".
         teacher_markdown: |
-          # Panoramica sugli esercizi opzionali
-          Gli esercizi opzionali offrono una scelta di esercizi aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono essere incoraggiati a completare **due** livelli per lo stesso progetto.
+          # Panoramica sugli esercizi facoltativi
+          Gli esercizi facoltativi offrono una scelta di esercizi aggiuntivi, che gli alunni devono portare a termine. Gli alunni devono completare almeno uno di questi sottolivelli.
 
-          Gli studenti potrebbero aver realmente bisogno di ricevere istruzioni chiare per capire come navigare tra le scelte. Per ognuna delle scelte del progetto, ci sono due esercizi secondari. Per iniziare, gli studenti devono selezionare uno degli esercizi contrassegnati come "Parte 1". Una volta terminato quell'esercizio devono ritornare qui e selezionare la "Parte 2" dello *stesso* progetto. Per ogni scelta, il primo esercizio fornirà agli studenti un riscontro mentre mettono insieme i componenti base del proprio progetto. Il secondo esercizio è un "esercizio libero" che consente agli studenti di apportare al loro codice tutte le modifiche desiderate.
+          Gli alunni potrebbero aver realmente bisogno di ricevere istruzioni chiare per capire come navigare tra le scelte. Per ognuna delle scelte del progetto, ci sono due sottolivelli. Per iniziare, gli alunni devono selezionare uno degli esercizi contrassegnati come "Parte 1". Una volta terminato quell'esercizio devono ritornare qui e selezionare la "Parte 2" dello *stesso* progetto. Per ogni scelta, il primo esercizio fornirà agli alunni un riscontro mentre mettono insieme i componenti base del proprio progetto. Il secondo esercizio è un "esercizio libero" che consente agli alunni di apportare al loro codice tutte le modifiche desiderate.
       courseF_variables_samples:
-        display_name: 'Esplorazione: Programmi di esempio'
+        display_name: Esplorazione - Programmi di esempio
         description: Creerai un biglietto di auguri, un chatbot o una storia delle
-          caselle vuote. Prima che inizi, esplora i progetti di esempio sottostanti,
+          caselle vuote. Prima di iniziare, esplora i progetti di esempio sottostanti,
           per capire cosa ti interessa creare. Premi su \"Termina"\ quando sarai pronto
           per iniziare a pianificare il tuo programma.
         teacher_markdown: |-
-          # Panoramica sugli esercizi opzionali
-          Gli esercizi opzionali offrono una scelta di esercizi aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+          # Panoramica sugli esercizi facoltativi
+          Gli esercizi facoltativi offrono una scelta di esercizi aggiuntivi, che gli alunni devono portare a termine. Gli alunni devono completare almeno uno di questi sottolivelli.
 
           Gli studenti devono osservare questi progetti attentamente prima di decidere quale desiderano creare. Puoi analizzarli insieme a loro come una classe, oppure puoi lasciare che gli studenti li esplorino per conto loro.
       express_EOC_examples_2021:
         description: Stai per iniziare il tuo progetto finale. Prima di cominciare,
-          trascorri un po' tempo a osservare i progetti di esempio.
-        display_name: Esempi di progetti
+          dedica un po' di tempo a dare un'occhiata ai progetti di esempio.
+        display_name: Progetti di esempio
       EnvelopeVariables-Unplugged_2021_2:
         markdown: |-
           # Storia delle caselle vuote
@@ -10042,3 +10044,5 @@ it-IT:
         - {}
         - {}
         - text: Nessuno dei precedenti
+      CSD Games Properties practice_2021:
+        display_name: Proprietà del personaggio

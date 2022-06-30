@@ -863,6 +863,7 @@ tr:
         CSA-PL-two-way-selection: İki yönlü seçim
         CSA-PL-Printing-in-Java: Java'da Yazdırma
         CSA-PL-multi-selection-statements: Çok Seçenekli İfadeler
+        CS_Changing_Everything: Bilgisayar Bilimi, Her Şeyi Değiştiriyor.
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

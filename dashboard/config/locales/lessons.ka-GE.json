@@ -74,8 +74,89 @@
         "basketball/Bounce": {
           "overview": "ამ ონლაინ აქტივობისას, მოსწავლეები ისწავლიან რას წარმოადგენენ მოვლენები და როგორ იყენებს მათ კომპიუტერი ვიდეო თამაშების მსგავს პროგრამებში. მოსწავლეები თავსატეხებზე მუშაობისას პროგრამებს მოვლენებზე რეაგირებას ასწავლიან (მაგ: ისრის ღილაკებზე დაჭერა). თავსატეხის ბოლოს, კი მოსწავლეებს საშუალება ექნებათ გაამრავალფეროვნონ საკუთარი თამაშები სხვადასხვა ხმებითა თუ სიჩქარეებით."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "კოდის ერთი საათი 2013"
+        },
         "oceans/Oceans": {
           "name": "AI ოკეანეებისთვის"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "ციკლები"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "მოვლენები"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "პირობითი ბრძანებები"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "ფუნქციები"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "ცვლადები"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "\"მიზნისთვის\" ციკლები"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "სპრიტის ლაბორატორია"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "ციფრული დიზაინი"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "მოვლენებზე დაფუძნებული პროგრამირება"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "აპლიკაციის საბაზისო ფუნქციონალი"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "დაწყება"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "კომპიუტერული მეცნიერების საფუძვლები"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "საფუძვლების დაუფლება: ციკლები"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "საფუძვლების დაუფლება: პირობითი ბრძანებები"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "საფუძვლების დაუფლება: ფუნქციები"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "დაგეგმვა"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "მომდევნო ნაბიჯები"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "ოთახიდან გაქცევა"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "დაწყება"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "კომპიუტერული მეცნიერების საფუძვლები"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "საფუძვლების დაუფლება: ციკლები"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "საფუძვლების დაუფლება: პირობითი ბრძანებები"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "საფუძვლების დაუფლება: ფუნქციები"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "დაგეგმვა"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "მომდევნო ნაბიჯები"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "სიხშირის ანალიზი"
         },
         "courseb-2018/Move It, Move It": {
           "name": "ვისწავლოთ გადაადგილება"
@@ -470,6 +551,9 @@
         "pre-express-2018/Spelling Bee": {
           "name": "შეჯიბრი დამარცვლაში"
         },
+        "csd3-2018/Programming for Entertainment": {
+          "name": "პროგრამირება გართობისათვის"
+        },
         "csd3-2018/Drawing in Game Lab": {
           "name": "ხატვა თამაშების ლაბორატორიაში"
         },
@@ -857,6 +941,9 @@
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "მოვლენები სათამაშო ლაბორატორიაში"
         },
+        "csd3-2019/Programming for Entertainment": {
+          "name": "პროგრამირება გართობისათვის"
+        },
         "csd3-2019/Drawing in Game Lab": {
           "name": "ხატვა თამაშების ლაბორატორიაში"
         },
@@ -911,6 +998,9 @@
         "csd6-2019/Functions with Parameters": {
           "name": "ფუნქციები პარამეტრებით"
         },
+        "csd4-2019/Analysis of Design": {
+          "name": "დიზაინის ანალიზი"
+        },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "მომხმარებელზე გათვლილი დიზაინის მიკრო აქტიურობა"
         },
@@ -956,6 +1046,9 @@
         "csd1-2019/Intro to Problem Solving": {
           "name": "შესავალი პრობლემების გადაწყვეტაში"
         },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "პროებლემების გადაჭრის პროცესი"
+        },
         "csd1-2019/What is a Computer?": {
           "name": "რა არის კომპიუტერი?"
         },
@@ -967,6 +1060,12 @@
         },
         "csd1-2019/Project - Propose an App": {
           "name": "პროექტი - შემოგვთავაზეთ აპლიკაცია"
+        },
+        "csd2-2019/Exploring Websites": {
+          "name": "ვებ-საიტების გამოკვლევა"
+        },
+        "csd2-2019/Websites for Expression ": {
+          "name": "ვებ-საიტები გამოხატვისათვის "
         },
         "csd2-2019/Intro to HTML": {
           "name": "შესავალი HTML-ში"
@@ -1433,6 +1532,9 @@
         "express-2017/Present Your Project": {
           "name": "წარმოადგინეთ თქვენი პროექტი"
         },
+        "csd3-2017/Programming for Entertainment": {
+          "name": "პროგრამირება გართობისათვის"
+        },
         "csd3-2017/Drawing in Game Lab": {
           "name": "ხატვა თამაშების ლაბორატორიაში"
         },
@@ -1486,6 +1588,9 @@
         },
         "csd6-2017/Functions with Parameters_": {
           "name": "ფუნქციები პარამეტრებით"
+        },
+        "csd2-2017/Exploring Websites": {
+          "name": "ვებ-საიტების გამოკვლევა"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "ვებ-საიტები გამოხატვისათვის "
@@ -1564,6 +1669,9 @@
         },
         "csd5-2017/Project - Solve a Data Problem": {
           "name": "პროექტი - გადაწყვიტეთ მონაცემთა პრობლემა"
+        },
+        "csd4-2017/Analysis of Design": {
+          "name": "დიზაინის ანალიზი"
         },
         "csd4-2017/User-Centered Design Micro Activity": {
           "name": "მომხმარებელზე გათვლილი დიზაინის მიკრო აქტიურობა"
@@ -1651,6 +1759,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "განსაკუთრებული დავალება - ამომწურავი"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "ინფორმატიკის შესავალი"
+        },
+        "20-hour/The Maze": {
+          "name": "ლაბირინთი"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "გამოთვლითი აზროვნება"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "გრაფიკული პროგრამირება ქაღალდზე"
+        },
+        "20-hour/The Artist": {
+          "name": "მხატვარი"
+        },
+        "20-hour/Algorithms": {
+          "name": "ალგორითმები"
+        },
+        "20-hour/The Artist 2": {
+          "name": "მხატვარი 2"
+        },
+        "20-hour/Functions": {
+          "name": "ფუნქციები"
+        },
+        "20-hour/The Farmer": {
+          "name": "ფერმერი"
+        },
+        "20-hour/Conditionals": {
+          "name": "პირობითი ბრძანებები"
+        },
+        "20-hour/The Artist 3": {
+          "name": "მხატვარი 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "სიმღერის დაწერა"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "ფერმერი 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "აბსტრაქცია"
+        },
+        "20-hour/The Artist 4": {
+          "name": "მხატვარი 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "პროგრამირება ცვლაში"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "ფერმერი 3"
+        },
+        "20-hour/The Internet": {
+          "name": "ინტერნეტი"
+        },
+        "20-hour/The Artist 5": {
+          "name": "მხატვარი 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "შედეგები"
         },
         "course2/Graph Paper Programming": {
           "name": "გრაფიკული პროგრამირება ქაღალდზე"
@@ -1829,6 +1997,63 @@
         "jigsaw/Jigsaw": {
           "name": "ფაზლი",
           "overview": "ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე."
+        },
+        "allthethings/Jigsaw": {
+          "name": "ფაზლი"
+        },
+        "allthethings/Maze": {
+          "name": "ლაბირინთი"
+        },
+        "allthethings/Artist": {
+          "name": "მხატვარი"
+        },
+        "allthethings/Bee": {
+          "name": "ფუტკარი"
+        },
+        "allthethings/PlayLab": {
+          "name": "სათამაშო ლაბორატორია"
+        },
+        "allthethings/Farmer": {
+          "name": "ფერმერი"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Bounce"
+        },
+        "allthethings/Odometer": {
+          "name": "ოდომეტრი"
+        },
+        "allthethings/Text Compression": {
+          "name": "ტექსტის შეკუმშვა"
+        },
+        "allthethings/AppLab": {
+          "name": "აპლიკაციების ლაბორატორია"
+        },
+        "allthethings/Gamelab": {
+          "name": "თამაშების ლაბორატორია"
+        },
+        "allthethings/Studio": {
+          "name": "სტუდია"
+        },
+        "allthethings/Star wars": {
+          "name": "ვარსკვლავური ომები"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Free Response": {
+          "name": "თავისუფალი გამოხმაურება"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "მოსწავლეთა ანონიმური გამოკითხვა"
+        },
+        "allthethings/Web Lab": {
+          "name": "ვებ ლაბორატორია"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "სპრიტის ლაბორატორია"
         },
         "coursef-2021/lesson-8": {
           "name": "სპრაიტები მოქმედებაში"
@@ -2135,6 +2360,9 @@
         "csd5-2021/Automating Data Decisions": {
           "name": "მონაცემთა გადაწყვეტილებების ავტომატიზირება"
         },
+        "csd3-2021/Programming for Entertainment": {
+          "name": "პროგრამირება გართობისათვის"
+        },
         "csd3-2021/Drawing in Game Lab": {
           "name": "ხატვა თამაშების ლაბორატორიაში"
         },
@@ -2188,6 +2416,9 @@
         },
         "csd1-2021/Intro to Problem Solving": {
           "name": "შესავალი პრობლემების გადაწყვეტაში"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "პროებლემების გადაჭრის პროცესი"
         },
         "csd1-2021/What is a Computer?": {
           "name": "რა არის კომპიუტერი?"

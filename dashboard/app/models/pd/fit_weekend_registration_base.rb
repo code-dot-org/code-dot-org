@@ -24,7 +24,7 @@ class Pd::FitWeekendRegistrationBase < ApplicationRecord
   NO = 'No'.freeze
   YES_OR_NO = [YES, NO].freeze
 
-  belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
+  belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase', optional: true
 
   after_initialize :set_registration_year
   before_validation :set_registration_year

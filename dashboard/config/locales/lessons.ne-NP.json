@@ -35,11 +35,32 @@
         "infinity/Infinity": {
           "name": "Disney Infinity Play Lab"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
+        },
         "dance-2019/Dance Party": {
           "name": "डान्स पार्टी (२०१९)"
         },
         "oceans/Oceans": {
           "name": "महासागरका लागि A.I"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Loops"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "घटनाहरु"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Conditionals"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Functions"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variables"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For Loops"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Move It, Move It"
@@ -359,6 +380,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extreme Challenge - Comprehensive"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Introduction to Computer Science"
+        },
+        "20-hour/The Maze": {
+          "name": "The Maze"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Computational Thinking"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Graph Paper Programming"
+        },
+        "20-hour/The Artist": {
+          "name": "The Artist"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algorithms"
+        },
+        "20-hour/The Artist 2": {
+          "name": "The Artist 2"
+        },
+        "20-hour/Functions": {
+          "name": "Functions"
+        },
+        "20-hour/The Farmer": {
+          "name": "The Farmer"
+        },
+        "20-hour/Conditionals": {
+          "name": "Conditionals"
+        },
+        "20-hour/The Artist 3": {
+          "name": "The Artist 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Song Writing"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "The Farmer 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstraction"
+        },
+        "20-hour/The Artist 4": {
+          "name": "The Artist 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Relay programming"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "The Farmer 3"
+        },
+        "20-hour/The Internet": {
+          "name": "The Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "The Artist 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Wrap-up"
+        },
         "course2/Graph Paper Programming": {
           "name": "Graph Paper Programming"
         },
@@ -535,6 +616,27 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Jigsaw"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Jigsaw"
+        },
+        "allthethings/Maze": {
+          "name": "Maze"
+        },
+        "allthethings/Artist": {
+          "name": "Artist"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Bounce"
+        },
+        "allthethings/Studio": {
+          "name": "स्टुडियो"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "coursef-2021/For Loop Fun": {
           "name": "For Loop Fun"

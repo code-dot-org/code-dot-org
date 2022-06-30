@@ -4684,7 +4684,7 @@ es:
             Representing Images:
               name: Representar imágenes
             Representation Matters:
-              name: Asuntos de representación
+              name: La Representación Importa
             Patterns and Representation:
               name: Patrones y representación
             ASCII and Binary Representation:
@@ -4956,7 +4956,7 @@ es:
               display_name: Encuesta de final de curso
           lessons:
             Representation Matters:
-              name: Asuntos de representación
+              name: La Representación Importa
             Patterns and Representation:
               name: Patrones y representación
             ASCII and Binary Representation:
@@ -6607,7 +6607,7 @@ es:
               display_name: 'Capítulo 2: Resolución de problemas en los datos'
           lessons:
             Representation Matters:
-              name: Asuntos de representación
+              name: La Representación Importa
             Patterns and Representation:
               name: Patrones y representación
             ASCII and Binary Representation:
@@ -8176,7 +8176,7 @@ es:
               display_name: Encuesta
           lessons:
             Representation Matters:
-              name: Asuntos de representación
+              name: La Representación Importa
             Patterns and Representation:
               name: Patrones y representación
             ASCII and Binary Representation:
@@ -10094,7 +10094,7 @@ es:
               display_name: Encuesta
           lessons:
             Representation Matters:
-              name: Asuntos de representación
+              name: La Representación Importa
             Patterns and Representation:
               name: Patrones y representación
             ASCII and Binary Representation:
@@ -13193,7 +13193,7 @@ es:
               display_name: Encuesta
           lessons:
             Representation Matters:
-              name: Asuntos de representación
+              name: La Representación Importa
             Patterns and Representation:
               name: Patrones y representación
             ASCII and Binary Representation:
@@ -15451,7 +15451,7 @@ es:
           description_short: Aprende cómo las personas usan las computadoras para resolver problemas de datos.
           lessons:
             Representation Matters:
-              name: Asuntos de representación
+              name: La Representación Importa
             Patterns and Representation:
               name: Patrones y representación
             ASCII and Binary Representation:
@@ -16610,7 +16610,7 @@ es:
           description_short: Aprende cómo las personas usan las computadoras para resolver problemas de datos.
           lessons:
             Representation Matters:
-              name: Asuntos de representación
+              name: La Representación Importa
             Patterns and Representation:
               name: Patrones y representación
             ASCII and Binary Representation:
@@ -22335,7 +22335,7 @@ es:
             For Loops:
               name: Bucles Para
             End of Course projects:
-              name: Proyectos de fin de curso
+              name: Proyectos de final de curso
             Reviewing your reflections:
               name: Revisión de tus reflexiones
             Taking next steps:
@@ -22530,6 +22530,8 @@ es:
               name: Mi Historia de la Cápsula del Tiempo
             lesson-3:
               name: Codificando mi Cápsula del Tiempo
+            lesson-4:
+              name: Paseo por la Galería
             Poem Art:
               name: Arte del Poema
           name: csc-piloto-2022-cápsuladeltiempo
@@ -22851,7 +22853,7 @@ es:
         csd5-2022:
           lessons:
             Representation Matters:
-              name: Asuntos de representación
+              name: La Representación Importa
             Patterns and Representation:
               name: Patrones y representación
             ASCII and Binary Representation:
@@ -23463,3 +23465,81 @@ es:
               name: Vista previa
           title: 2021 Descripción General de Deeper Learning en Principios de Informática
           description: "### Bienvenido al programa Deeper Learning  2021 para la incorporación de facilitadores de Principios de Informática ."
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Hola Mundo CSC
+            Overfishing Simulation:
+              name: 'Ecosistemas: Interacciones, Energía y Dinámica'
+            Model Animal Adaptations:
+              name: Evolución Biológica
+            lesson-2:
+              name: 'Ecosistemas: Interacciones, Energía y Dinámica'
+            lesson-3:
+              name: Evolución Biológica
+        csc-starquilts-2022:
+          lessons:
+            Native American Star Quilts:
+              name: Colchas de Estrellas Nativas Americanas
+            Getting Started with The Artist:
+              name: Cómo empezar con El Artista
+            Code Your Star Quilt:
+              name: Codifica tu Colcha de Estrellas
+            lesson-1:
+              name: Colchas de Estrellas Nativas Americanas
+            lesson-2:
+              name: Cómo empezar con El Artista
+            lesson-3:
+              name: Codifica tu Colcha de Estrellas
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Introducción a las Fábulas"
+            Plan Your Fable:
+              name: Planifica tu Fábula
+            Code Your Fable:
+              name: Codifica tu Fábula
+            Share Your Fable:
+              name: Comparte tu Fábula
+            lesson-4:
+              name: "[Optional] Introducción a las Fábulas"
+            lesson-5:
+              name: Planifica tu Fábula
+            lesson-3:
+              name: Codifica tu Fábula
+            lesson-6:
+              name: Comparte tu Fábula
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Arte del Poema
+            The Time We Live In:
+              name: Mi Historia de la Cápsula del Tiempo
+            Coding My Time Capsule:
+              name: Codificando mi Cápsula del Tiempo
+            Gallery Walk:
+              name: Paseo por la Galería
+            lesson-2:
+              name: Mi Historia de la Cápsula del Tiempo
+            lesson-3:
+              name: Codificando mi Cápsula del Tiempo
+            lesson-4:
+              name: Paseo por la Galería
+        self-paced-pl-csd5-2022:
+          lessons:
+            Introduction to AI and machine learning:
+              name: Desarrollo Web
+            Train a machine learning model:
+              name: Animaciones y juegos interactivos
+            Engage with machine learning apps:
+              name: El Proceso de Diseño
+            Consider real world implications:
+              name: Los datos y la sociedad
+            Unit wrap up:
+              name: Computación física
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparación para Enseñar la Unidad 1
+          title: autodidáctico-pl-csd5
+          description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Para cada unidad en Descubrimientos de la Informática, tendrás la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
+          student_description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Para cada unidad en Descubrimientos de la Informática, tendrás la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
