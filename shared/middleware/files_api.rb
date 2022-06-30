@@ -355,7 +355,7 @@ class FilesApi < Sinatra::Base
   TEXT_HTML = 'text/html'.freeze
 
   def html?(headers)
-    headers[CONTENT_TYPE] && headers[CONTENT_TYPE].include?(TEXT_HTML)
+    headers[CONTENT_TYPE]&.include?(TEXT_HTML)
   end
 
   def html_file?(filename)
@@ -501,7 +501,7 @@ class FilesApi < Sinatra::Base
       source.each_key do |key|
         # Multi-file source structure:
         # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
-        return false unless source[key]["text"] && source[key]["text"].force_encoding("UTF-8").valid_encoding?
+        return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?
       end
       return true
     end
