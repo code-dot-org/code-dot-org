@@ -241,7 +241,7 @@ class UnitGroup < ApplicationRecord
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
         unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil)
-        unit.course_version.destroy if unit.course_version
+        unit.course_version&.destroy
 
         unit.reload
         unit.write_script_json
@@ -455,7 +455,7 @@ class UnitGroup < ApplicationRecord
   # @return [String] URL to the course the user should be redirected to.
   def redirect_to_course_url(user)
     # Only redirect students.
-    return nil unless user && user.student?
+    return nil unless user&.student?
     # No redirect unless user is allowed to view this course version, they are not assigned to the course,
     # and it is versioned.
     return nil unless can_view_version?(user) && !user.assigned_course?(self) && version_year
