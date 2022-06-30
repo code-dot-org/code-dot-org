@@ -24,11 +24,10 @@
 class CodeReviewComment < ApplicationRecord
   acts_as_paranoid
 
-  belongs_to :commenter, class_name: 'User'
+  belongs_to :commenter, class_name: 'User', optional: true
   belongs_to :project_owner, class_name: 'User'
 
   validates :comment, presence: true
-  validates :project_owner_id, presence: true
 
   before_save :compute_is_from_teacher
 

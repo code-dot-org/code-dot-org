@@ -63,13 +63,7 @@ module Pd
     validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :pd_session_id, :facilitator_id, :form_id],
       message: 'already has a submission for this workshop, session, facilitator, and form'
 
-    validates_presence_of(
-      :user_id,
-      :pd_workshop_id,
-      :pd_session_id,
-      :facilitator_id,
-      :day
-    )
+    validates_presence_of :day
     validate :day_for_subject
 
     before_validation :set_workshop_from_session, if: -> {pd_session_id_changed? && !pd_workshop_id_changed?}

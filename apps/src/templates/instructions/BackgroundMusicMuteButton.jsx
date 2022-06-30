@@ -85,6 +85,7 @@ function BackgroundMusicMuteButton({
       isMinecraft={isMinecraft}
       onClick={handleMuteMusicTabClick}
       style={{
+        ...styles.button,
         ...(!isMinecraft
           ? isBackgroundMusicMuted
             ? styles.musicOff
@@ -109,6 +110,10 @@ BackgroundMusicMuteButton.propTypes = {
 };
 
 export const styles = {
+  button: {
+    whiteSpace: 'nowrap',
+    minWidth: 'fit-content'
+  },
   musicOn: {
     color: 'rgb(118, 101, 160)',
     backgroundColor: 'rgb(255, 255, 255)'

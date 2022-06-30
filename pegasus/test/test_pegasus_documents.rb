@@ -2,6 +2,7 @@ require_relative './test_helper'
 require_relative '../router'
 require 'helpers/auth_helpers'
 require 'cdo/rack/request'
+require 'shared_resources'
 require 'parallel'
 require 'open3'
 require 'digest'
@@ -198,7 +199,7 @@ class PegasusTest < Minitest::Test
     # 1 if warnings are present
     # 2 if errors are present
     if status == 2
-      result.lines.select {|line| line =~ /Error:/}
+      result.lines.grep(/Error:/)
     end
   end
 end

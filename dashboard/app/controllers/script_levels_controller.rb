@@ -413,6 +413,7 @@ class ScriptLevelsController < ApplicationController
       @user = user_to_view
 
       if can?(:view_as_user_for_code_review, @script_level, user_to_view, sublevel_to_view)
+        @is_code_reviewing = true
         view_options(is_code_reviewing: true)
       end
     end

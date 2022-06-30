@@ -39,7 +39,7 @@ class Resource < ApplicationRecord
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
   has_and_belongs_to_many :scripts, join_table: :scripts_resources
   has_and_belongs_to_many :unit_groups, join_table: :unit_groups_resources
-  belongs_to :course_version
+  belongs_to :course_version, optional: true
 
   before_validation :generate_key, on: :create
 

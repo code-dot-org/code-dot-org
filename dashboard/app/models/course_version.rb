@@ -23,7 +23,7 @@
 class CourseVersion < ApplicationRecord
   include Rails.application.routes.url_helpers
 
-  belongs_to :course_offering
+  belongs_to :course_offering, optional: true
   has_many :resources
   has_many :vocabularies
   has_many :reference_guides
@@ -50,7 +50,7 @@ class CourseVersion < ApplicationRecord
   # is_course? - used during seeding to determine whether this object represents the content root for a CourseVersion.
   #   For example, this should return True for the CourseA-2019 Unit and the CSP-2019 UnitGroup. This should return
   #   False for the CSP1-2019 Unit.
-  belongs_to :content_root, polymorphic: true
+  belongs_to :content_root, polymorphic: true, optional: true
 
   alias_attribute :version_year, :key
 

@@ -115,4 +115,15 @@ Scenario: congrats certificate pages
   And I wait to see element with ID "uitest-thanks"
   And I see no difference for "customized Course A 2017 certificate"
 
+  When I am on "http://code.org/congrats/accelerated?enableExperiments=studioCertificate"
+  And I wait until current URL contains "http://studio.code.org/congrats"
+  And I wait to see element with ID "uitest-certificate"
+  And I wait for image "#uitest-certificate img" to load
+  And I see no difference for "uncustomized 20-hour certificate"
+
+  When I type "Robo Coder" into "#name"
+  And I press "button:contains(Submit)" using jQuery
+  And I wait to see element with ID "uitest-thanks"
+  And I see no difference for "customized 20-hour certificate"
+
   And I close my eyes
