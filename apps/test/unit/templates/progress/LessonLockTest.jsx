@@ -1,29 +1,13 @@
 import React from 'react';
 import {expect} from '../../../util/deprecatedChai';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import {UnconnectedLessonLock as LessonLock} from '@cdo/apps/templates/progress/LessonLock';
-import LessonLockDialog from '@cdo/apps/code-studio/components/progress/LessonLockDialog';
-import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
+import LessonLock from '@cdo/apps/templates/progress/LessonLock';
 
-const FAKE_SECTION_ID = 123;
 const FAKE_LESSON_ID = 33;
-const FAKE_SCRIPT_ID = 1;
+const FAKE_UNIT_ID = 1;
 const DEFAULT_PROPS = {
-  lesson: {
-    name: '',
-    id: FAKE_LESSON_ID,
-    lockable: false,
-    isFocusArea: false
-  },
-  sectionId: FAKE_SECTION_ID,
-  sectionsAreLoaded: false,
-  saving: false,
-  scriptId: FAKE_SCRIPT_ID,
-  openLockDialog: () => {},
-  closeLockDialog: () => {},
-  refetchSectionLockStatus: () => {}
+  unitId: FAKE_UNIT_ID,
+  lessonId: FAKE_LESSON_ID
 };
 
 const setUp = (overrideProps = {}) => {
@@ -32,66 +16,15 @@ const setUp = (overrideProps = {}) => {
 };
 
 describe('LessonLock', () => {
-  it('renders a loading message before sections are loaded', () => {
+  it('renders only a button initially', () => {
     const wrapper = setUp();
-    expect(wrapper).to.containMatchingElement(<div>{i18n.loading()}</div>);
+    expect(wrapper.find('Button')).to.have.length(1);
+    expect(wrapper.find('LessonLockDialog')).to.have.length(0);
   });
 
-  it('renders a button and dialog after sections are loaded', () => {
-    const wrapper = setUp({sectionsAreLoaded: true});
-
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <div>
-          <Button
-            __useDeprecatedTag
-            color={Button.ButtonColor.gray}
-            text={i18n.lockSettings()}
-            icon="lock"
-          />
-        </div>
-        <LessonLockDialog />
-      </div>
-    );
-  });
-
-  it('changes button text while saving', () => {
-    const wrapper = setUp({sectionsAreLoaded: true, saving: true});
-
-    expect(wrapper).to.containMatchingElement(
-      <Button __useDeprecatedTag text={i18n.saving()} icon="lock" />
-    );
-  });
-
-  it('hooks up callbacks correctly', () => {
-    const openSpy = sinon.spy();
-    const closeSpy = sinon.spy();
-    const refetchSpy = sinon.spy();
-    const wrapper = setUp({
-      sectionsAreLoaded: true,
-      openLockDialog: openSpy,
-      closeLockDialog: closeSpy,
-      refetchSectionLockStatus: refetchSpy
-    });
-
-    // Close callback gets passed through to the dialog unchanged.
-    expect(wrapper).to.containMatchingElement(
-      <LessonLockDialog handleClose={closeSpy} />
-    );
-
-    // Open callback gets called when button is clicked.
-    wrapper
-      .find(Button)
-      .first()
-      .props()
-      .onClick();
-    expect(openSpy).to.have.been.calledOnce.and.calledWith(
-      FAKE_SECTION_ID,
-      FAKE_LESSON_ID
-    );
-    expect(refetchSpy).to.have.been.calledOnce.and.calledWith(
-      FAKE_SECTION_ID,
-      FAKE_SCRIPT_ID
-    );
+  it('renders the dialog when the button is clicked', () => {
+    const wrapper = setUp();
+    wrapper.find('Button').simulate('click');
+    expect(wrapper.find('Connect(LessonLockDialog)')).to.have.length(1);
   });
 });
