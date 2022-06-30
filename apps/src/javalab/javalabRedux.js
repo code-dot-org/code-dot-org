@@ -1,5 +1,6 @@
 import UserPreferences from '../lib/util/UserPreferences';
 import {DisplayTheme} from './DisplayTheme';
+import {JavalabEditorDialog} from './JavalabEditorDialogManager';
 
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const CLEAR_CONSOLE_LOGS = 'javalab/CLEAR_CONSOLE_LOGS';
@@ -38,6 +39,8 @@ const SET_ACTIVE_TAB_KEY = 'javalab/SET_ACTIVE_TAB_KEY';
 const SET_FILE_METADATA = 'javalab/SET_FILE_METADATA';
 const SET_ORDERED_TAB_KEYS = 'javalab/SET_ORDERED_TAB_KEYS';
 const SET_ALL_EDITOR_METADATA = 'javalab/SET_EDITOR_METADATA';
+const OPEN_EDITOR_DIALOG = 'javalab/OPEN_EDITOR_DIALOG';
+const CLOSE_EDITOR_DIALOG = 'javalab/CLOSE_EDITOR_DIALOG';
 
 export const getTabKey = index => `file-${index}`;
 
@@ -94,7 +97,8 @@ export const initialState = {
   isReadOnlyWorkspace: false,
   hasOpenCodeReview: false,
   isCommitSaveInProgress: false,
-  hasCommitSaveError: false
+  hasCommitSaveError: false,
+  editorOpenDialogName: null
 };
 
 // Action Creators
@@ -242,6 +246,15 @@ export const openPhotoPrompter = promptText => ({
 
 export const closePhotoPrompter = () => ({
   type: CLOSE_PHOTO_PROMPTER
+});
+
+export const openEditorDialog = dialogName => ({
+  type: OPEN_EDITOR_DIALOG,
+  dialogName
+});
+
+export const closeEditorDialog = () => ({
+  type: CLOSE_EDITOR_DIALOG
 });
 
 // Selectors
@@ -611,6 +624,20 @@ export default function reducer(state = initialState, action) {
       orderedTabKeys: action.orderedTabKeys,
       activeTabKey: action.activeTabKey,
       lastTabKeyIndex: action.lastTabKeyIndex || state.lastTabKeyIndex
+    };
+  }
+  if (action.type === OPEN_EDITOR_DIALOG) {
+    if (JavalabEditorDialog[action.dialogName] !== undefined) {
+      return {
+        ...state,
+        editorOpenDialogName: action.dialogName
+      };
+    }
+  }
+  if (action.type === CLOSE_EDITOR_DIALOG) {
+    return {
+      ...state,
+      editorOpenDialogName: null
     };
   }
   return state;
