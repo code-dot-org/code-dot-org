@@ -47,6 +47,8 @@ export function apiValidateType(
   const validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
     var properType;
+    var customWarning;
+    var warningMessage;
     switch (expectedType) {
       case 'color':
         // Special handling for colors, must be a string and a valid RGBColor:
@@ -63,8 +65,13 @@ export function apiValidateType(
           typeof varValue === 'boolean';
         break;
       case 'pinid':
+        var reservedPins = ['A2', 'A3', 'A7', 1, 9, 10];
         properType =
-          typeof varValue === 'string' || typeof varValue === 'number';
+          (typeof varValue === 'string' || typeof varValue === 'number') &&
+          !reservedPins.includes(varValue);
+        if (reservedPins.includes(varValue)) {
+          customWarning = `${funcName}() ${varName} parameter value (${varValue}) is a reserved ${expectedType}. Please use a different ${expectedType}`;
+        }
         break;
       case 'number':
         properType =
@@ -105,9 +112,11 @@ export function apiValidateType(
     if (!properType) {
       const outputValue =
         typeof varValue === 'function' ? 'function' : varValue;
-      outputWarning(
-        `${funcName}() ${varName} parameter value (${outputValue}) is not a ${expectedType}.`
-      );
+      // Use the default warning message if a custom one has not been set
+      warningMessage =
+        customWarning ||
+        `${funcName}() ${varName} parameter value (${outputValue}) is not a ${expectedType}.`;
+      outputWarning(warningMessage);
     }
     opts[validatedTypeKey] = properType;
   }
