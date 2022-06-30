@@ -3034,3 +3034,91 @@ he-IL:
           ## איזה מידע נתיר לשמור בפרופיל הדיגיטלי הפובמי שלכם?
       express_EOC_2021:
         display_name: פרויקט סיום קורס
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: כחול
+          correct: true
+        - text: ירוק
+          correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - text: אדום
+          correct: true
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+          correct: true
+        - text: '1'
+          correct: true
+        - text: '2'
+          correct: true
+        - text: '4'
+          correct: true
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: הוסיפו תיאור כאן
+      allthethings_external_not_displayed_as_unplugged:
+        content1: הוסיפו תיאור כאן
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        questions:
+        - text: איזה מן החצים לוקח את פורב (היצור) אל האוצר?
+        title: בחירה ממספר אפשרויות
+      test questionless single multi:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true

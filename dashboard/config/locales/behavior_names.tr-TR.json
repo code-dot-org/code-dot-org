@@ -3329,6 +3329,32 @@
           "wobbling": "sallanma",
           "moving west and looping": "batıya doğru hareket ve döngü",
           "moving east and looping": "doğuya doğru hareket ve döngü"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "sola ve sağa yüzme",
+          "shrinking": "küçülme",
+          "patrolling": "kontrol sağlama",
+          "wandering": "gezinme",
+          "growing": "büyüme",
+          "jittering": "kararsızlık",
+          "moving east": "doğuya ilerleme",
+          "moving north": "kuzeye ilerleme",
+          "moving south": "güneye ilerleme",
+          "moving west": "batıya ilerleme",
+          "spinning right": "sağa dönme"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "sola ve sağa yüzme",
+          "shrinking": "küçülme",
+          "patrolling": "kontrol sağlama",
+          "wandering": "gezinme",
+          "growing": "büyüme",
+          "jittering": "kararsızlık",
+          "moving east": "doğuya ilerleme",
+          "moving north": "kuzeye ilerleme",
+          "moving south": "güneye ilerleme",
+          "moving west": "batıya ilerleme",
+          "spinning right": "sağa dönme"
         }
       }
     }

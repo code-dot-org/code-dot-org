@@ -910,6 +910,12 @@
         },
         "iceage_move_to_flag": {
           "iceage_hello3_a": "Käytä \"siirrä hahmoa 1 oikealle 200 kuvapistettä\" lohkoa ratkaistaksesi tämän pulman."
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "Taiteilijan on käännyttävä 120 astetta jokaisen neliön välissä, jotta se voi suorittaa loppuun tämän mallin."
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Kokeile laittaa Agent rakentamaan siltoja, jotta Alex tai Steve voi tehdä tutkimusmatkoja kartan reunojen ulkopuolelle."
         }
       }
     }

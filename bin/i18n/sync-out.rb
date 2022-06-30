@@ -6,7 +6,7 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'cdo/languages'
 
-require 'cdo/crowdin/utils'
+require 'cdo/crowdin/legacy_utils'
 require 'cdo/crowdin/project'
 
 require 'fileutils'
@@ -113,7 +113,7 @@ def rename_from_crowdin_name_to_locale
   # that aren't in our system. Remove them.
   # A regex is used in the .select rather than Dir.glob because Dir.glob will ignore
   # character case on file systems which are case insensitive by default, such as OSX.
-  FileUtils.rm_r Dir.glob("i18n/locales/*").select {|path| path =~ /i18n\/locales\/[A-Z].*/}
+  FileUtils.rm_r Dir.glob("i18n/locales/*").grep(/i18n\/locales\/[A-Z].*/)
 end
 
 def find_malformed_links_images(locale, file_path)

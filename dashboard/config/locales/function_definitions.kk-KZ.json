@@ -1925,6 +1925,18 @@
               "binary": "бинарлы"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "төртбұрыш салу"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "ұзындық"
+            }
+          }
         }
       }
     }

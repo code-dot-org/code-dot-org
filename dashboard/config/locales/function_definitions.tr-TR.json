@@ -4142,6 +4142,28 @@
           "move and get nectar with counter": {
             "name": "hareket et ve sayaç ile nektar al"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "bir kare çiz"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "bir şekil çiz",
+            "parameters": {
+              "sides": "kenarlar",
+              "length": "uzunluk"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "fonksiyon 1"
+          },
+          "function 2": {
+            "name": "fonksiyon 2\n"
+          }
         }
       }
     }

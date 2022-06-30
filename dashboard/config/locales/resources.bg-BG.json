@@ -600,14 +600,26 @@
           "url": "https://curriculum.code.org/csd/unit4/vocab/"
         },
         "introducing_sprite_lab/coursef/2021": {
-          "name": "Въведение в Sprite Lab"
+          "name": "Въведение в Sprite Lab",
+          "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
+        },
+        "exploring_apps/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "Въведение в Sprite Lab",
+          "url": "https://youtu.be/yd-9xZ275dM",
           "type": "Видео"
         },
+        "exploring_apps_1/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
+        },
+        "making_sprites/coursef/2021": {
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
+        },
         "sprites_in_action/coursef/2021": {
-          "name": "Спрайтове в Действие"
+          "name": "Спрайтове в Действие",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "type": "Видео"
@@ -978,7 +990,15 @@
         "teacher_forum_1/coursee/2021": {
           "name": "Учителски форум"
         },
+        "classifying_fish/csd/2021": {
+          "name": "Определяне на Риби",
+          "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view"
+        },
+        "introduction_to_machine_learning/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/copy"
+        },
         "ai_what_is_machine_learning_/csd/2021": {
+          "name": "AI: Какво е Машинно Обучение?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Видео"
         },
@@ -1117,9 +1137,6 @@
         "how-computers-work-data-and-binary/csd/2021": {
           "type": "Видео"
         },
-        "keeping-data-secret-exemplar-2019/csd/2021": {
-          "name": "Пазене на Тайни Данни"
-        },
         "create_a_representation/csd/2021": {
           "type": "Рубрика"
         },
@@ -1136,6 +1153,7 @@
           "type": "Видео"
         },
         "video_machine_learning/csd/2021": {
+          "name": "Видео: Машинно Обучение",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Видео"
         },
@@ -1220,9 +1238,11 @@
           "name": "Скорост"
         },
         "side-scroller-1/csd/2021": {
+          "name": "Side Scroller",
           "type": "Рубрика"
         },
         "side-scroller/csd/2021": {
+          "name": "Side Scroller",
           "type": "Проектен Пътеводител"
         },
         "flyer-game-1/csd/2021": {
@@ -1250,7 +1270,12 @@
         "teacher_forum_1/csd/2021": {
           "name": "Учителски форум"
         },
+        "aluminum-boats-exemplar-2020/csd/2021": {
+          "name": "Алуминиеви Лодки",
+          "url": "https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit"
+        },
         "aluminum-boats-activity-guide-2020/csd/2021": {
+          "name": "Алуминиеви Лодки",
           "url": "https://docs.google.com/document/d/1dY3N0DvsPLoPRgWOXcSwRKGxZGaiP2HI84QaalQcE7s/"
         },
         "problem-solving-process-1/csd/2021": {

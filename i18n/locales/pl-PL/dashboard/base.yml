@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 pl:
   errors:
     messages:
@@ -39,6 +45,7 @@ pl:
         personal_email_markdown: "Osobisty adres e-mail [(kliknij tutaj, jeśli nie masz adresu e-mail)](%{url})"
         username: 'Nazwa użytkownika'
         password: 'Hasło'
+        verified_teacher: 'Zweryfikowany nauczyciel'
         password_confirmation: 'Potwierdzenie hasła'
         current_password: 'Aktualne hasło'
         locale: 'Język'
@@ -600,6 +607,7 @@ pl:
     try_hour_of_code: 'Wypróbuj Godzinę Kodowania!'
     store: 'Skład'
     cookie_notice: 'Informacja o plikach cookie'
+    view_code: 'Obejrzyj kod'
   reference_area:
     title: 'Czy potrzebujesz pomocy?'
     subtitle: 'Zobacz te filmiki i wskazówki'
@@ -668,8 +676,10 @@ pl:
       title: 'Potańcówka'
     hello-world:
       title: 'Witaj świecie'
+      body: 'Wybierz jeden z czterech zabawnych motywów, aby zakodować interaktywne postacie w tworzonym przez siebie świecie.'
     poem-art:
       title: 'Sztuka poezji '
+      body: 'Wyraź siebie! Użyj kodu do tworzenia animowanych wierszy.'
     hoc:
       title: 'Klasyczny labirynt'
       body: 'Wypróbuj podstawy informatyki. Miliony dały im już szansę.'
@@ -1040,6 +1050,7 @@ pl:
         israel: 'Izrael'
         malaysia: 'Malezja'
         mexico: 'Meksyk'
+        paraguay: 'Paragwaj'
         thailand: 'Tajlandia'
         uzbekistan: 'Uzbekistan'
       ages:
@@ -1062,6 +1073,7 @@ pl:
         music: 'Muzyka'
         art: 'Sztuka'
         other: "Inne:"
+        na: 'Nie dotyczy'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1071,7 +1083,8 @@ pl:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Inne:"
+        other: "Inni/inne"
+        na: 'Nie dotyczy'
       robotics:
         grok: 'Nauka Grok'
         kodable: 'Kodable'
@@ -1081,7 +1094,8 @@ pl:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Warsztaty Wonder'
-        other: "Inne:"
+        other: "Inni/inne"
+        na: 'Nie dotyczy'
       workshop_course:
         csf_af: 'Podstawy informatyki (Kursy A-F)'
         csf_express: 'Podstawy informatyki (Wstępne ekspresowe lub ekspresowe)'

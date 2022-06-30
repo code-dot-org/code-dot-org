@@ -2,6 +2,15 @@
   "tr-TR": {
     "data": {
       "standards": {
+        "csta/1B-AP-10": {
+          "description": "Sıra, olay, döngü ve koşulları içeren programlar oluşturun."
+        },
+        "csta/1B-AP-12": {
+          "description": "Yeni bir şey geliştirmek veya daha gelişmiş özellikler eklemek için mevcut bir programın bölümlerini modifiye edin, yeniden karıştırın veya birinin kendi çalışmasına dahil edin. "
+        },
+        "csta/1B-AP-15": {
+          "description": "Bir programın veya algoritmanın hedeflendiği gibi çalıştığından emin olmak için onu deneyin ve hatasını ayıklayın (hataları tespit edin ve düzeltin)."
+        },
         "ccela/6.SL.1": {
           "description": "6.  sınıftaki konularda, metinlerde ve meselelerde, başkalarının fikirlerini oluşturarak ve kendi fikirlerini açıkça ifade ederek farklı ortaklarla, birebir görüşmelerle (birebir, grup halinde ve öğretmen liderliğinde) bir dizi tartışmaya katılın."
         },
@@ -173,8 +182,47 @@
         "iste/4.d": {
           "description": "Alternatif çözümleri keşfetmek için birden fazla süreç ve çeşitli perspektifler kullanın."
         },
+        "csta/1A-AP-11": {
+          "description": "Bir problemi çözmek için gerekli adımları, tam bir talimat sırası halinde ayrıştırın (ayırın)."
+        },
+        "csta/1A-AP-09": {
+          "description": "Bilgiyi temsil etmek için sayıları veya başka sembolleri kullanarak programların veriyi depolama ve kullanma biçimini modelleyin."
+        },
+        "csta/1A-AP-14": {
+          "description": "Sıraları ve basit döngüleri içeren bir algoritmadaki veya programdaki yanlışlıkların hatasını ayıklayın (tanımlayın ve düzeltin)."
+        },
+        "csta/1B-CS-01": {
+          "description": "Bir sistem oluşturmak için bilgi işlem cihazlarının dahili ve harici parçalarının nasıl çalıştığını açıklayın."
+        },
+        "csta/1B-CS-02": {
+          "description": "Bilgisayar donanımı ve yazılımının görevleri gerçekleştirmek için bir sistem olarak birlikte nasıl çalıştığını modelleyin."
+        },
+        "csta/1A-CS-03": {
+          "description": "Temel donanım ve yazılım sorunlarını doğru terimler ile açıklayın."
+        },
+        "csta/1A-AP-10": {
+          "description": "Fikirleri ifade etmek veya bir problemi yönlendirmek için sıraların ve basit döngülerin olduğu programlar geliştirin."
+        },
         "csta/1B-IC-18": {
           "description": "Dünyayı değiştiren bilgisayar teknolojileri hakkında tartışın ve bu teknolojilerin kültürler pratikleri nasıl etkilediğini ve bunlar tarafından nasıl etkilendiğini açıklayın."
+        },
+        "csta/1B-AP-11": {
+          "description": "Program geliştirme sürecini basitleştirmek için problemleri daha küçük, yönetilebilir alt problemler halinde ayrıştırın (ayırın)."
+        },
+        "csta/1B-NI-05": {
+          "description": "Gerçek dünyadaki siber güvenlik sorunları ve kişisel bilgilerin nasıl korunabileceği hakkında tartışın."
+        },
+        "csta/1B-AP-09": {
+          "description": "Veri depolamak ve modifiye etmek için değişkenleri kullanan programlar oluşturun."
+        },
+        "csta/1B-IC-21": {
+          "description": "Herkese açık veya kamu telif hakkı olan ortamları kullanın ve başkalarının ürettiği materyalleri izin almadan kopyalamaktan ve kullanmaktan kaçının."
+        },
+        "csta/1B-AP-14": {
+          "description": "Programları oluştururken veya yeniden karıştırırken fikri mülkiyet haklarını gözetin ve uygun atıflarda bulunun."
+        },
+        "csta/1B-AP-17": {
+          "description": "Kod yorumları, sunumlar ve gösterimleri kullanarak program geliştirme sırasında yapılan seçimleri açıklayın."
         }
       }
     }

@@ -62,6 +62,18 @@
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
           "description": "Átvitt és szó szerinti nyelvezet ábrázolása egy szövegben."
         },
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
+        },
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
+        },
+        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
+          "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
+        },
+        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
+          "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
+        },
         "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
           "description": "Időzített eseményekre reagáló programok fejlesztése"
         },
@@ -79,6 +91,12 @@
         },
         "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2": {
           "description": "Táncanimációk készítése kóddal"
+        },
+        "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
+          "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
+        },
+        "d1485387-01e4-484d-9935-75f7c14b9d76": {
+          "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
         }
       }
     }

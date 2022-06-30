@@ -50,6 +50,18 @@
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
         },
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "Kilalanin kung ano ang inaasahan kapag lumipat ang mga mag-aaral sa computer lab."
+        },
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
+        },
+        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
+          "description": "Kilalanin kung ano ang inaasahan kapag lumipat ang mga mag-aaral sa computer lab."
+        },
+        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
+          "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
+        },
         "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
           "description": "Bumuo ng mga programa na tumutugon sa inoorasang mga event"
         },
@@ -67,6 +79,12 @@
         },
         "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2": {
           "description": "Lumikha ng mga animation ng sayaw gamit ang code"
+        },
+        "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
+          "description": "Kilalanin kung ano ang inaasahan kapag lumipat ang mga mag-aaral sa computer lab."
+        },
+        "d1485387-01e4-484d-9935-75f7c14b9d76": {
+          "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
         }
       }
     }

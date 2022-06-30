@@ -64,6 +64,7 @@ class ScriptsController < ApplicationController
       user_type: current_user&.user_type,
       user_id: current_user&.id,
       user_providers: current_user&.providers,
+      is_instructor: @script.can_be_instructor?(current_user),
       is_verified_instructor: current_user&.verified_instructor?,
       locale: Script.locale_english_name_map[request.locale],
       locale_code: request.locale,
@@ -117,19 +118,19 @@ class ScriptsController < ApplicationController
     # are not used when you call new() just when you call create
     updated_unit_params = unit_params.merge(
       {
-        published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
       }
     )
 
     updated_general_params = general_params.merge(
       {
-        published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
       }
     )
 

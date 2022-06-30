@@ -983,6 +983,7 @@
   coursee-2020_name: Curso E (2019)
   coursef-2020_name: Curso F (2019)
   coursed-2021_name: Curso D (2021)
+  coursed-2022_name: Curso D (2021)
   express-2018_name: Curso Expresso (2018)
   pre-express-2018_name: Curso Expresso de Pré-Leitor (2018)
   express-2019_name: Curso Expresso (2019)
@@ -1102,6 +1103,12 @@
   coursed-2021_gradelevel: Alunos a partir do 8º ano
   coursee-2021_gradelevel: Dos 8 aos 12 anos
   coursef-2021_gradelevel: 'Idade: de 9 a 13 anos'
+  coursea-2022_gradelevel: 'Idade: de 4 a 7 anos'
+  courseb-2022_gradelevel: 'Idade: de 5 a 8 anos'
+  coursec-2022_gradelevel: 'Idade: de 6 a 10 anos'
+  coursed-2022_gradelevel: Alunos a partir do 8º ano
+  coursee-2022_gradelevel: Dos 8 aos 12 anos
+  coursef-2022_gradelevel: 'Idade: de 9 a 13 anos'
   accelerated_gradelevel: "Dos 10 aos 18 anos"
   codeorg_platformtext: "Navegadores modernos, smartphones e tablets"
   codeintl_platformtext: "Navegadores modernos, smartphones e tablets"
@@ -1238,6 +1245,12 @@
   coursed-2021_shortdescription_congrats: Os alunos desenvolvem sua compreensão de loops, condicionais e eventos. Além da codificação, os alunos aprendem sobre cidadania digital.
   coursee-2021_shortdescription_congrats: Comece a codificar com algoritmos, loops, condicionais e eventos e, em seguida, você passará às funções. Na segunda parte deste curso, projete e crie um projeto principal que você possa compartilhar com seus amigos e familiares.
   coursef-2021_shortdescription_congrats: Aprenda a usar diferentes tipos de loops, eventos, funções e condicionais. Investigue diferentes técnicas de solução de problemas e discuta os impactos sociais da computação e da Internet. Na segunda parte deste curso, projete e crie um projeto principal que você possa compartilhar com amigos e familiares.
+  coursea-2022_shortdescription_congrats: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+  courseb-2022_shortdescription_congrats: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+  coursec-2022_shortdescription_congrats: Crie programas com sequenciamento, loops e eventos. Traduza suas iniciais em binário, investigue diferentes técnicas de solução de problemas e aprenda a responder ao cyberbullying. No final do curso, crie seu próprio jogo ou história que você pode compartilhar!
+  coursed-2022_shortdescription_congrats: Os alunos desenvolvem sua compreensão de loops, condicionais e eventos. Além da codificação, os alunos aprendem sobre cidadania digital.
+  coursee-2022_shortdescription_congrats: Comece a codificar com algoritmos, loops, condicionais e eventos e, em seguida, você passará às funções. Na segunda parte deste curso, projete e crie um projeto principal que você possa compartilhar com seus amigos e familiares.
+  coursef-2022_shortdescription_congrats: Aprenda a usar diferentes tipos de loops, eventos, funções e condicionais. Investigue diferentes técnicas de solução de problemas e discuta os impactos sociais da computação e da Internet. Na segunda parte deste curso, projete e crie um projeto principal que você possa compartilhar com amigos e familiares.
   codeorg_longdescription: "Aprenda os conceitos básicos de Ciência da Computação com a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos básicos. Este tutorial está disponível em 34 idiomas."
   codeintl_longdescription: "Aprenda os conceitos básicos de Ciência da Computação com a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos básicos. Este tutorial está disponível em 34 idiomas."
   khan_longdescription: "Aprenda os conceitos básicos da programação JavaScript enquanto cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com sua turma!"

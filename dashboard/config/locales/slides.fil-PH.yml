@@ -4092,30 +4092,881 @@ fil:
           o naging kapaki-pakinabang nito, ay ikaw. Kapag ikaw ay natutong magcode,
           maaari mo nang ilarawan ang mga problema na gusto mong lutasin, at magsulat
           ng mga software na nagsasabuhay sa mga ideyang iyon.
-    hoc_dance_events_2019:
+    hoc_dance_warmup:
+      1:
+        text: 'Hour of Code | Dance Party: Magpainit'
+      2:
+        text: Hi! Miral Kotb ang pangalan ko at isa akong mananayaw, developer ng
+          software, at tagalikha ng iLuminate.
+      3:
+        text: Nauugnay sa pagkamalikhain ang computer science sa maraming paraan.
+          Talagang hindi masusukat. Ibig kong sabihin, kapag mayroon kang kakayahang
+          magsulat ng software maaari kang maglagay ng mga ideya sa kahit ano. Ginagawa
+          ko ito sa mga light suit. Napakarami mong magagawa kapag mayroon kang mga
+          tool sa pagsulat ng software, at talagang walang katapusa ang mga posibilidad.
       4:
+        text: Sa susunod na oras, magsisimula ka sa computer science sa pamamagitan
+          ng pagprograma ng sarili mong dance party! Pinagsama namin ang ilang patok
+          na musika at isang team ng mahuhusay na mananayaw para masubukan mo.
+      5:
+        text: Gagamit ka ng mga block ng code upang pumili ng iba't ibang mananayaw,
+          baguhin ang kanilang mga galaw, pasayawin sila sa musika, at gawin silang
+          interactive.
+      6:
+        text: Makikita mong nahahati ang screen mo sa tatlong pangunahing bahagi.
+          Sa kaliwa ay ang play space. Dito magpapakita ang mga mananayaw mo.
+      7:
+        text: Ang gitnang bahaging ito ay ang toolbox. Magagamit ang mga bagong block
+          ng code sa puwang na ito habang inaaral mo ang mga aralin.
+      8:
+        text: Ang espasyo sa kanan ay ang workspace. Maaari mong i-drag ang mga block
+          palabas ng toolbox at papunta sa workspace upang buuin ang programa mo.
+      9:
+        text: Ang mga tagubilin sa bawat antas ay makikita dito sa tuktok ng screen.
+          Kung kailangan mo ng pahiwatig, i-click lang ang bumbilya.
+      10:
+        text: Upang magsimula, gumawa tayo ng bagong mananayaw gamit ang pulang block
+          na ito. Una, i-drag ito palabas ng toolbox at i-snap sa ilalim ng orange
+          na "setup" block na ito. Isang pusa ang mananayaw na ito at ang pangalan
+          ay "aking_unang_mananayaw". Maaari mong baguhin ang pangalan sa pamamagitan
+          ng pag-click dito.
+      11:
+        text: Maaari mo ring baguhin kung saan lumilitaw ang mananayaw sa play space
+          mo gamit ito.
+      12:
+        text: Isang menu sa pagpili ng musika ang nasa itaas ng play space. May maraming
+          kanta na mapagpipilian kaya masiyahan sa paghahanap ng mga paborito mo.
+          Sa ilalim ng play space ay ang run na buton. Kapag pinindot mo ang run,
+          makikita mo ang mga mananayaw mula sa programa na lalabas sa play space
+          at tutugtog ang musika.
+      13:
+        text: Subukan mo! At kung pakiramdam mo ay hindi ka progresibo, okay lang!
+          Gumawa ka na lang ng paraan at kumilos, at bago mo matanto, nakagawa ka
+          na ng sarili mong dance party. Kaya, ano ang lilikhain mo?
+    hoc_dance_events:
+      1:
+        text: 'Hour of Code | Dance Party: Mga Kaganapan'
+      2:
+        text: Ako si Aloe Blacc. Isa akong mang-aawit, manunulat ng kanta, at entertainer.
+          Sa tingin ko talagang mahalagang matutunan ang computer science dahil ang
+          computer science ay ang kinabukasan, at sa tingin ko mahalagang kontrolin
+          ng mga tao ang teknolohiya na literal na kumokontrol sa buhay nila.
+      3:
+        text: Upang magawa ang iba't ibang sayaw sa tamang tiyempo ng musika, maaari
+          kang gumamit ng mga kaganapan. Nagsasaad ang isang kaganapan sa programa
+          mo na makinig sa isang bagay at tumugon kaagad.
+      4:
+        text: Nakikinig sa isang pag-click ng mouse, isang arrow button, o isang pag-tap
+          sa screen ang ilang mga halimbawa ng mga kaganapan. Makikinig sa pagbabago
+          ng kanta ang kaganapang gagamitin natin ngayon. Ang pagbabago ay mag-uudyok
+          sa mananayaw mo na gumawa ng bagong sayaw.
+      5:
+        text: Nagsasanay ang mga propesyonal na mananayaw ng kanilang koreograpiya
+          sa pamamagitan ng pagbibilang ng mga tiyempo ng kanta.
+      6:
+        text: Sa musika, tumutukoy ang isang sukat sa isang tiyak na bilang ng mga
+          tiyempo. Sa karamihan ng mga sikat na kanta, ang isang sukat ay apat na
+          tiyempo ang haba.
+      7:
+        text: Upang malayang pagalawin ang mga mananayaw mo, kakailanganin mo ng block
+          ng berdeng kaganapan. Nagsasabi ang ang block ng kaganapang ito, "pagkatapos
+          ng 4 na hakbang".
+      8:
+        text: Kung ililipat mo ang isang block ng lilang "gawin magpakailanman", makakapili
+          ka ng sayaw na gagawin ng mananayaw mo. Dahil nasa ilalim ito ng block ng
+          kaganapan na "pagkatapos ng 4 na hakbang", maghihintay ang mananayaw mo
+          ng apat na sukat ng kanta bago simulan ang sayaw nila.
+      9:
+        text: Pagmasdan ang counter ng sukat sa itaas ng display area.
+      10:
+        text: Hanapin at pakinggan ang kaganapan na mag-uudyok sa code ng sayaw. At
+          sa saktong sandali, gagalaw na ang mananayaw natin.
+    hoc_dance_properties:
+      1:
+        text: 'Hour of Code | Dance Party: Mga Katangian'
+      2:
+        text: Ang pangalan ko ay Maria isa akong junior sa Unibersidad ng Washington
+          at ako ay isang Amazon Future Engineer.
+      3:
+        text: Gustung-gusto ko ang computer science dahil kalakip nito ang paglutas
+          ng problema at maingat na pag-iisip at pagkatapos ng ilang oras ng pagsisikap
+          sa isang bagay ay makakakuha ka talaga ng cool at kapaki-pakinabang na bagay
+          mula dito.
+      4:
+        text: Sa ngayon, nagkaroon ka ng pagkakataong gamitin ang ilang iba't ibang
+          uri ng mananayaw at iprinograma mo sila na gumawa ng iba't ibang uri ng
+          kilos ng sayaw. Ngunit paano talaga gumagana ang mga galaw na ito?
+      5:
+        text: Binubuo ang bawat galaw ng sayaw ng isang serye ng mga imahe na tinatawag
+          na mga frame. Bahagyang naiiba ang bawat frame mula sa nauna nito. Kapag
+          gumagana ang programa mo, nagpapakita ang computer ng sunud-sunod na frame.
+          Ipinakita ito ng napakabilis na parang gumagalaw ang mananayaw. Ito ang
+          sikreto sa likod ng lahat ng animation.
+      6:
+        text: Hindi mo lang mababago ang galaw ng mananayaw mo, maaari mo ring baguhin
+          ang mga katangian nito. Inilalarawan ng mga katangian ang mga bagay tulad
+          ng posisyon ng mananayaw sa screen, laki ng mananayaw, at kulay ng mananayaw.
+      7:
+        text: Upang baguhin ang mga katangian ng isang mananayaw, gagamit ka ng set
+          block. Gumamit tayo ng set block upang paliitin ang hitsura ng ating mga
+          mananayaw. Una, ilipat ang set block sa programa mo. Pagkatapos, piliin
+          ang mananayaw na gusto mong baguhin at i-type ang laki na lalabas sa screen.
+      8:
+        text: Ang buong laki ay 100. Kung pinili mo ang mas mababang numero, mas maliit
+          ang mananayaw na iyon. Kung mas maliit ang mananayaw, mas mukhang malayo
+          ito. Isang mahusay na paraan ito upang gumawa ng mga backup na mananayaw.
+      9:
+        text: Gamit ang set block, maaari mo ring baguhin ang mga sukat, pag-ikot,
+          posisyon at kulay ng mananayaw. Sa pamamagitan ng pagsuri sa mga katangiang
+          ito, maaari kang gumawa ng mga pagbabago at i-link ang mga ito sa iba't
+          ibang bahagi ng kanta.
+      10:
+        text: Tandaan, maaari mo lamang itakda ang mga katangian ng isang mananayaw
+          na umiiral na. Siguraduhin na ang set block mo ay kasunod ng "Gumawa ng
+          bagong mananayaw" na block. Huwag mag-atubiling mag-eksperimento, maging
+          malikhain, at mag-enjoy.
+    hoc_dance_congrats:
+      1:
+        text: 'Hour of Code | Dance Party: Parti Na!'
+      2:
+        text: Congratulations! Natutunan mo na ang mga pangunahing kaalaman sa computer
+          science. Maaari mo na ngayong gamitin ang mga block na ito upang lumikha
+          ng sarili mong disenyo ng isang dance party upang ibahagi sa iyong mga kaibigan.
+      3:
+        text: Kung titingnan mo ang tool box, makakahanap ka ng ilang mga bagong block
+          na hindi mo pa nakikita dati. Halimbawa, maaari mong gamitin ang layout
+          block upang ayusin ang mga mananayaw sa iba't ibang paraan sa screen.
+      4:
+        text: Tumingin sa paligid at subukang mag-eksperimento sa mga bagong block
+          at feature na ito. Gagawa ka ba ng isang maingat na galaw na sayaw sa paboritong
+          mong kanta?
+      5:
+        text: O isang sayaw kasama ang mga kaibigan mo?
+      6:
+        text: O iba pa?
+      7:
+        text: Sa dulo ng tutorial maaari kang magbahagi ng link sa paglikha mo sa
+          iyong mga kaibigan. Iunat ang iyong imahinasyon at magsaya!
+    mc_2018_intro:
+      1:
+        text: Hello! Tama ang dating mo. Maligayang pagdating sa Voyage Aquatic. Malapit
+          na akong magsimula sa isang pakikipagsapalaran upang makahanap ng nakatagong
+          kayamanan sa ilalim ng dagat at labis akong natutuwa sa tulong mo. Sino
+          ang nakakaalam kung ano ang matatagpuan natin sa mga mahiwagang daluyan
+          ng tubig na ito? Makakatagpo namin ang aming unang gabay sa alinmang dako
+          sa pantalan na ito.
+      2:
+        text: Maligayang pagdating, mga manlalakbay! Upang makumpleto ang Voyage Aquatic
+          kakailanganin mong lutasin ang isang serye ng mga puzzle gamit ang code.
+          Narito kung paano ito gumagana. Nahahati ang iyong screen sa tatlong pangunahing
+          bahagi.
+      3:
+        text: Sa kaliwa, makikita mo ang mundo ng Minecraft.
+      4:
+        text: Ang gitnang bahagi ay ang toolbox mo kung saan makakahanap ka ng mga
+          coding command.
+      5:
+        text: At ang malaking lugar sa kanan ay ang iyong workspace. Dito maaari kang
+          mag-stack ng mga command upang buuin ang programa mo at kontrolin ang iyong
+          mga paggalaw.
+      6:
+        text: Nasa itaas ng pahina ang mga instruksiyon ng bawat antas. I-click ang
+          plus sign upang lumipat sa pagitan ng mahaba at maikling mga instruksiyon.
+      7:
+        text: Subukang i-drag ang mga block mula sa toolbox papunta sa workspace,
+          i-stack ang mga ito, at pagkatapos ay i-click ang run button upang isagawa
+          ang iyong mga command.
+      8:
+        text: Maaaring kailanganin mong subukan nang ilang beses upang maayos ito
+          at ang ilan sa mga puzzle ay may higit sa isang solusyon kaya mag-eksperimento
+          upang makita kung ano ang gumagana.
+      9:
+        text: Kung gusto mong subukang muli, i-click ang reset button upang bumalik
+          kung saan ka nagsimula.
+      10:
+        text: Kung kailangan mong magtanggal ng command, i-drag lang ang block mula
+          sa workspace mo pabalik sa toolbox. Tandaan, i-click ang "Run" para makita
+          kung ano ang hitsura ng iyong code sa pagkilos.
+      11:
+        text: Okey, tama na ang kalokohan, kapwa manlalakbay. Magsimula na tayo sa
+          pag-coding upang makahanap ng ilang kayamanan sa ilalim ng dagat.
+    MC_2018_loops:
+      1:
+        text: Magaling! Nakahuli tayo ng bakalaw! Alam mo ba kung magpapakain ka ng
+          bakalaw sa isang dolphin, gagabayan ka ng dolphin sa isang nawasak ng barko
+          kung saan maaaring may kayamanan? Mukhang malapit na tayo. Ang susunod na
+          hanay ng mga puzzle ay tiyak na magiging mas nakakalito, kaya mas mabuting
+          matuto tayo ng higit pang mga kasanayan sa pag-coding. Ano ito? Isang kweba?
+      2:
+        text: Maligayang pagdating, mga manlalakbay! Pusit ang pangalan ko. Napansin
+          kong paulit-ulit mong ginagamit ang parehong hanay ng mga utos sa ilan sa
+          mga huling palaisipan. Medyo nakakapagod siguro. Nais mo bang magkaroon
+          ng paraan upang gawin ang isang bagay nang paulit-ulit tulad ng, alam mo
+          na, paghuhugas ng pinggan o pagsisipilyo ng ngipin mo nang hindi napapagod
+          o nababato? Aba maganda iyon.
+      3:
+        text: Talagang mahusay ang mga computer sa paggawa ng parehong bagay nang
+          paulit-ulit gamit ang coding loops. Kapag gusto mong gawin ng iyong program
+          ang parehong mga tagubilin nang maraming beses, maaari kang gumamit ng loop!
+      4:
+        text: Naglalaman ang loop block ng mga tagubilin na inuulit hanggang sa maabot
+          ang layunin. Sa sandaling magsimula ang iyong programa ng loop na "Ulitin
+          hanggang sa goal" patuloy nitong uulitin ang mga instruksiyon hanggang sa
+          makarating ito sa goal.
+      5:
+        text: Subukan mo! Ilagay ang mga utos na gusto mong ulitin sa loob ng block
+          na "Ulitin hanggang sa goal", i-click ang "Run", at panoorin ito!
+      6:
+        text: Well, iyon ay medyo kakaiba. Sinong may alam na ang mga pusit ay maaaring
+          mag-code? Hindi ko akalain na may mga daliri sila. Ngayon alam na natin
+          ang tungkol sa mga loop. Gamitin natin ang mga ito upang makakuha ng higit
+          pang kayamanan.
+    mc_2018_conditionals:
+      1:
+        text: Wow! Tatlong puzzle pa ang nalutas! At nakahuli tayo ng...isang salmon.
+          Hindi kasing kapana-panabik gaya ng mga tambak na ginto, ngunit kukunin
+          natin kung ano ang makukuha natin. At pakiramdam ko na magagamit mamaya
+          ang nautilus na kabibe. Iniisip ko kung ano ang nakatago sa mga guho na
+          ito. Baka isa pang pahiwatig! Tingnan natin ang loob.
+      2:
+        text: Ang pangalan ko ay Netty at maligayang pagdating sa aking mga guho.
+          Gumagawa kami ng mga desisyon sa lahat ng oras batay sa mga kondisyon. Kung
+          mukhang uulan, kukuha kami ng payong. Kung gutom kami, kakain kami ng meryenda.
+      3:
+        text: Kung nakakita tayo ng isang gumagapang, tatakbo tayo sa kabilang direksyon.
+          Gumagawa din ang mga computer ng mga ganitong uri ng mga desisyon. Maaari
+          silang tumugon sa mga kondisyon gamit ang code.
+      4:
+        text: Upang mag-program ng tugon na tulad nito gamit ang mga code command
+          mo, pumili ng kung tungo na block.
+      5:
+        text: Piliin ang dropdown upang gawin ang command.
+      6:
+        text: Halimbawa, kung isusulat mo ang utos na "kung tungo sa kanan" at inilagay
+          ang lumiko pakanan sa conditional, palaging liliko sa kanan si Steve kapag
+          naabot niya ang bukas na landas sa kanan. Kung walang bukasan sa kanan,
+          hindi siya liliko sa kanan. Nakakatulong ang mga command na conditional
+          na ito kapag nagpapatakbo ka ng code sa mga hindi mahuhulaang sitwasyon
+          gaya ng mahiwagang guho sa mga kuweba sa ilalim ng dagat.
+      7:
+        text: Subukang gamitin ang mga kung na block at kunin ang code mo sa pag-ikot.
+      8:
+        text: Wow! Kahanga-hanga ang mga guho ni Netty. Kailangan ko na talagang umalis
+          sa bahay ng mga magulang ko. Ano sa tingin mo? Tama ba ang mga kundisyon
+          para makumpleto natin ang mga huling puzzle? Subukan natin.
+    mc_2018_closing:
+      1:
+        text: 'Amy Lee33: Binabati kita! Nagawa mo!'
+      2:
+        text: 'Pusit: Congratulations!'
+      3:
+        text: 'Netty: Nagawa mo! Binabati kita!'
+      4:
+        text: 'Tomohawk: Congratulations!'
+      5:
+        text: Napakagandang araw! Ang lahat ng paghahanap ng kayamanan ay humantong
+          sa pagbuo natin ng Minecraft conduit, nakahanap ng mga Nautilus na kabibe,
+          at tumuklas ng mga kabang-yaman. Gusto ko ang kulay ng prismarine. Natutunan
+          din natin kung paano mag-code gamit ang mga loop at conditional.
+      6:
+        text: Tungkol sa coding, may isa pang level sa paghahanap na ito. Handa na
+          ba kayo, mga manlalakbay?
+      7:
+        text: Isa itong libreng antas ng paglalaro at maaari mong gamitin ang mga
+          kasanayan mo sa coding at bumuo ng isang bagay na hindi kapani-paniwala.
+      8:
+        text: Hmmm... isang lugar upang itago ang kayamanan mo, isang monumento sa
+          ilalim ng dagat, isang kastilyong korales? Ahhh...maraming ideya. Subukang
+          gumamit ng mga loop para gumawa ng paulit-ulit na pagkilos, at mga kondisyon
+          para maghanda sa lahat ng hindi mahuhulaan na sitwasyong iyon.
+      9:
+        text: Tiyak na napatunayan mo ngayon na isa kang matapang na coder, at hindi
+          ako makapaghintay na makita kung ano ang binuo mo. At sana ay hindi dito
+          magtatapos ang mga pakikipagsapalaran mo sa code. Maligayang paglalakbay!
+    teaching_csf_how_it_works:
+      1:
+        image: notes/teaching_cs_fundamentals_1.png
+        text: Nahahati sa mga yugto ang kursong ito.
+      2:
+        image: notes/teaching_cs_fundamentals_2.png
+        text: Ipapakilala ng unang ilang yugto kung ano ang computer science, pati
+          na rin ang ilang pangunahing bokabularyo.
+      3:
+        image: notes/teaching_cs_fundamentals_3.png
+        text: Pagkatapos, matututunan mong mag-code sa parehong paraan na gagawin
+          ng mga mag-aaral mo. Tutulong sa iyo ang mga huling yugto ng kurso na gumawa
+          ng plano para magturo ng computer science sa iyong silid-aralan. Sa buong
+          kurso, makakakita ka ng mga halimbawa ng parehong naka-plug – o online –
+          na mga aralin, pati na rin ang mga naka-unplug na aralin na ginagawa nang
+          walang computer.
+      4:
+        image: notes/teaching_cs_fundamentals_4.png
+        text: Susubaybayan ng platform ng pag-aaral ang pag-unlad mo, upang makabalik
+          kung saan ka tumigil anumang oras.
+    what_is_cs:
+      1:
+        image: notes/what_is_cs.png
+        text: Ang coding ay ang hanay ng mga instruksiyon na ibinibigay mo sa isang
+          computer. Ang computer science ay isang larangan kung saan ginagamit ng
+          mga tao ang kapangyarihan ng mga computer upang malutas ang malalaking problema.
+          Kasama sa computer science ang coding, ngunit kabilang din dito ang iba
+          pang mga bagay, tulad ng kung paano gumagana at nakakaapekto ang internet
+          sa lipunan, kung ano ang gagawin sa malaking data, at kung paano himayin
+          ang malalaking problema. Ang computer science ay tungkol sa paglutas ng
+          problema, kritikal na pag-iisip, at pagtitiyaga.
+    writing_first_program:
+      1:
+        image: notes/writing_first_program_1.png
+        text: Gumagamit ang Code.org ng visual, drag and drop programming na wika
+          na tinatawag na Blockly. Gumagamit ang Blockly ng mga makukulay na instruksiyon
+          na tinatawag na mga block upang bumuo ng mga programa at malutas ang mga
+          puzzle.
+      2:
+        image: notes/writing_first_program_2.png
+        text: Ang bawat puzzle ay may apat na bahagi.
+      3:
+        image: notes/writing_first_program_3.png
+        text: Ang play area ay nasa kaliwa, kung saan tumatakbo ang programa mo.
+      4:
+        image: notes/writing_first_program_4.png
+        text: Ang gitna ay may lugar ng toolbox, na mayroong lahat ng mga block na
+          kailangan mo.
+      5:
+        image: notes/writing_first_program_5.png
+        text: Sa kanan ay ang workspace, kung saan magda-drag ka ng mga block para
+          buuin ang programa mo.
+      6:
+        image: notes/writing_first_program_6.png
+        text: Sa itaas ng workspace ay ang mga instruksiyon sa bawat puzzle.
+      7:
+        image: notes/writing_first_program_7.png
+        text: Kung nag-drag ka ng napakaraming block palabas mula sa toolbox, i-drag
+          lang ang extra block pabalik sa toolbox. Pindutin ang Run upang subukan
+          ang iyong programa, at I-reset upang subukang muli.
+    repeat_block:
+      1:
+        image: notes/repeat_block.png
+        text: Hinahayaan ka ng paulit-ulit na block na i-loop ang code sa loob nito
+          nang maraming beses ayon sa gusto mo.
+    what_is_an_event:
+      1:
+        image: notes/what_is_an_event.png
+        text: Ang isang event ay nagsasabi sa programa mo na makinig sa isang bagay
+          na mangyayari. Kapag nangyari ang bagay na iyon, ang programa ay nagsasagawa
+          ng isang aksiyon. Maaaring makinig ang isang computer sa isang pag-click
+          ng mouse, pindutin ang isang arrow button, o isang tap sa screen.
+    lesson_planning:
+      1:
+        image: notes/lesson_planning_1.png
+        text: Ang mga aralin sa CS Fundamentals ay nagsisimula sa mga pangkalahatang-ideya
+          upang ipaalam sa iyo kung ano ang saklaw ng aralin.
+      2:
+        image: notes/lesson_planning_2.png
+        text: Ang mga aralin ay may mga warm-up, aktibidad, at wrap-up. Kung gusto
+          mong gumawa ng sarili mong mga lesson plan, baka gusto mong isaisip ang
+          mga tip na ito.
+      3:
+        image: notes/lesson_planning_3.png
+        text: 1. Subukang gumamit ng spiraling curriculum design. Ipakilala ang mga
+          konsepto nang isang beses at pagkatapos ay muling bisitahin ang mga ito.
+      4:
+        image: notes/lesson_planning_4.png
+        text: 2. Gumawa ng pinaghalong karanasan sa pag-aaral sa pamamagitan ng pagsasama-sama
+          ng mga online na aralin sa mga hindi naka-plug na aralin.
+      5:
+        image: notes/lesson_planning_5.png
+        text: 3. Hatiin ang iyong kurikulum sa mas maliliit na bahagi.
+      6:
+        image: notes/lesson_planning_6.png
+        text: 4. Tiyaking nakaayon ka sa mga lokal na pamantayan at mga kasanayan
+          sa pagiging handa sa kolehiyo at karera.
+    opd_closing:
+      1:
+        image: notes/opd_closing_1.png
+        text: Congratulations! Nakumpleto mo ang online na kursong Teaching Computer
+          Science Fundamentals. Bahagi ka na ngayon ng lumalaking komunidad ng mga
+          guro na naghahanda sa kanilang mga mag-aaral para sa hinaharap.
+      2:
+        image: notes/opd_closing_2.png
+        text: 'Tingnan ang mga mapagkukunang ito kung kailangan mo ng higit pang suporta:
+          1. forum.code.org 2. @teachcode sa Twitter 3. studio.code.org '
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Hour of Code | Dance Party: Magpainit'
+      2:
+        text: Hi! Miral Kotb ang pangalan ko at isa akong mananayaw, developer ng
+          software, at tagalikha ng iLuminate.
+      3:
+        text: Nauugnay sa pagkamalikhain ang computer science sa maraming paraan.
+          Talagang hindi masusukat. Ibig kong sabihin, kapag mayroon kang kakayahang
+          magsulat ng software maaari kang maglagay ng mga ideya sa kahit ano. Ginagawa
+          ko ito sa mga light suit. Napakarami mong magagawa kapag mayroon kang mga
+          tool sa pagsulat ng software, at talagang walang katapusa ang mga posibilidad.
+      4:
+        text: Sa susunod na oras, magsisimula ka sa computer science sa pamamagitan
+          ng pagprograma ng sarili mong dance party! Pinagsama namin ang ilang patok
+          na musika at isang team ng mahuhusay na mananayaw para masubukan mo.
+      5:
+        image: notes/hoc_dance_warmup_2019_5.png
+        text: Gagamit ka ng mga block ng code upang pumili ng iba't ibang mananayaw,
+          baguhin ang kanilang mga galaw, pasayawin sila sa musika, at gawin silang
+          interactive.
+      6:
+        image: notes/hoc_dance_warmup_2019_6.png
+        text: Makikita mong nahahati ang screen mo sa tatlong pangunahing bahagi.
+          Sa kaliwa ay ang play space. Dito magpapakita ang mga mananayaw mo.
+      7:
+        image: notes/hoc_dance_warmup_2019_7.png
+        text: Ang gitnang bahagi ay ang toolbox. Magagamit ang mga bagong block ng
+          code sa puwang na ito habang inaaral mo ang mga aralin.
+      8:
+        image: notes/hoc_dance_warmup_2019_8.png
+        text: Ang espasyo sa kanan ay ang workspace. Maaari mong i-drag ang mga block
+          palabas ng toolbox at papunta sa workspace upang buuin ang programa mo.
+      9:
+        image: notes/hoc_dance_warmup_2019_9.png
+        text: Ang mga tagubilin sa bawat antas ay makikita dito sa tuktok ng screen.
+          Kung kailangan mo ng pahiwatig, i-click lang ang bumbilya.
+      10:
+        image: notes/hoc_dance_warmup_2019_10.png
+        text: Upang magsimula, gumawa tayo ng bagong mananayaw gamit ang pulang block
+          na ito. Una, i-drag ito palabas ng toolbox at i-snap ito sa ilalim ng orange
+          na "setup" na block na ito. Isang pusa ang mananayaw na ito.
+      11:
+        image: notes/hoc_dance_warmup_2019_11.png
+        text: Maaari mo ring baguhin kung saan lumilitaw ang mananayaw sa play space
+          mo gamit ito.
+      12:
+        image: notes/hoc_dance_warmup_2019_12.png
+        text: Isang menu sa pagpili ng musika ang nasa itaas ng play space. May maraming
+          kanta na mapagpipilian kaya masiyahan sa paghahanap ng mga paborito mo.
+          Sa ilalim ng play space ay ang run na buton. Kapag pinindot mo ang run,
+          makikita mo ang mga mananayaw mula sa programa na lalabas sa play space
+          at tutugtog ang musika.
+      13:
+        text: Subukan mo! At kung pakiramdam mo ay hindi ka progresibo, okay lang,
+          gumawa ka na lang ng paraan at kumilos, at bago mo matanto, nakagawa ka
+          na ng sarili mong dance party. Kaya, ano ang lilikhain mo?
+    hoc_dance_events_2019:
+      1:
+        text: 'Hour of Code | Dance Party: Mga Kaganapan'
+      2:
+        image: notes/hoc_dance_events_2019_2.png
+        text: Ang pangalan ko ay Erin, at ako ay isang software engineer dito sa Code.org,
+          at tumulong ako sa pagbuo ng Dance Party.
+      3:
+        image: notes/hoc_dance_events_2019_3.png
+        text: Upang magawa ang iba't ibang sayaw sa tamang tiyempo ng musika, maaari
+          kang gumamit ng mga kaganapan. Nagsasaad ang isang kaganapan sa programa
+          mo na "makinig" sa isang bagay at tumugon kaagad.
+      4:
+        image: notes/hoc_dance_events_2019_4.png
         text: Ilang halimbawa ng mga "event" ay ang pagkikinig sa pag-click ng mouse,
           arrow na button, o pag-tap sa screen.
+      5:
+        image: notes/hoc_dance_events_2019_5.png
+        text: Magpo-programa tayo dito ng isang mananayaw upang magsagawa ng isang
+          galaw kapag pinindot mo ang mga arrow button sa screen, o ang mga key sa
+          keyboard mo.
+      6:
+        image: notes/hoc_dance_events_2019_6.png
+        text: Maaari nating gamitin ang block ng event na "kapag pataas ang arrow"
+          at ikonekta ang isang block na "gawin nang isang beses" dito. Kapag pinindot
+          ang pataas na arrow key, ang code na naka-attach sa "kapag pataas na arrow"
+          na block ay pinagana. Aling galaw ng sayaw ang pipiliin mo?
+      7:
+        image: notes/hoc_dance_events_2019_7.png
+        text: 'Tiyaking tumutugma ang uri ng mananayaw na pipiliin mo sa isa sa mga
+          mananayaw na ginawa mo sa loob ng block ng "setup", o baka wala kang makitang
+          nangyayari. '
+      8:
+        image: notes/hoc_dance_events_2019_8.png
+        text: Sa kalaunan, maaari kang lumikha ng higit pang mga event tulad nito
+          upang hayaan ang mga mananayaw mo na magsagawa ng iba't ibang mga galaw
+          sa bawat key. Subukan ito, at sa ilang linya ng code maaari kang gumawa
+          ng sarili mong interactive na sayaw.
+    hoc_dance_measures_2019:
+      1:
+        image: notes/hoc_dance_measures_2019_1.png
+        text: 'Hour of Code | Dance Party: Mga Sukat'
+      2:
+        image: notes/hoc_dance_measures_2019_2.png
+        text: Ako si Aloe Blacc. Isa akong mang-aawit, manunulat ng kanta, at entertainer.
+          Sa tingin ko talagang mahalagang matutunan ang computer science dahil ang
+          computer science ay ang kinabukasan, at sa tingin ko mahalagang kontrolin
+          ng mga tao ang teknolohiya na literal na kumokontrol sa buhay nila.
+      3:
+        image: notes/hoc_dance_measures_2019_3.png
+        text: Makikinig sa pagbabago sa kanta ang event na gagamitin natin ngayon.
+          Ang pagbabagong iyon ay mag-uudyok sa mananayaw mo na gumawa ng bagong sayaw.
+      4:
+        image: notes/hoc_dance_measures_2019_4.png
+        text: Ang mga propesyonal na mananayaw ay nagsasanay ng kanilang koreograpiya
+          sa pamamagitan ng pagbibilang ng mga kumpas ng kanta. Karamihan ng mga sikat
+          na kanta, ang isang sukat ay apat na kumpas ang haba.
+      5:
+        image: notes/hoc_dance_measures_2019_5.png
+        text: Upang malayang pagalawin ang mga mananayaw mo, kakailanganin mo ng block
+          ng berdeng kaganapan. Nagsasabi ang ang block ng kaganapang ito, "pagkatapos
+          ng 4 na hakbang".
+      6:
+        image: notes/hoc_dance_measures_2019_6.png
+        text: Kung ililipat mo ang isang block ng lilang "gawin magpakailanman", makakapili
+          ka ng sayaw na gagawin ng mananayaw mo. Dahil nasa ilalim ito ng block ng
+          kaganapan na "pagkatapos ng 4 na hakbang", maghihintay ang mananayaw mo
+          ng apat na sukat ng kanta bago simulan ang sayaw nila.
+      7:
+        image: notes/hoc_dance_measures_2019_7.png
+        text: Pagmasdan ang counter ng sukat sa itaas ng display area.
+      8:
+        image: notes/hoc_dance_measures_2019_8.png
+        text: Hanapin at pakinggan ang kaganapan na mag-uudyok sa code ng sayaw. At
+          sa saktong sandali, gagalaw na ang mananayaw natin.
+    hoc_dance_properties_2019:
+      1:
+        text: 'Hour of Code | Dance Party: Mga Katangian'
+      2:
+        text: Ang pangalan ko ay Maria isa akong junior sa Unibersidad ng Washington
+          at ako ay isang Amazon Future Engineer.
+      3:
+        text: Gustung-gusto ko ang computer science dahil kalakip nito ang paglutas
+          ng problema at maingat na pag-iisip at pagkatapos ng ilang oras ng pagsisikap
+          sa isang bagay ay makakakuha ka talaga ng cool at kapaki-pakinabang na bagay
+          mula dito.
+      4:
+        text: Nagkaroon ka na sa ngayon ng pagkakataong subukan ang iba't ibang uri
+          ng mananayaw at na-program mo na silang gumawa ng iba&'t ibang uri ng mga
+          kilos ng sayaw. Ngunit paano talaga gumagana ang mga galaw na ito?
+      5:
+        text: Binubuo ang bawat galaw ng sayaw ng isang serye ng mga imahe na tinatawag
+          na mga frame. Bahagyang naiiba ang bawat frame mula sa nauna nito. Kapag
+          gumagana ang programa mo, nagpapakita ang computer ng sunud-sunod na frame.
+          Ipinakita ito ng napakabilis na parang gumagalaw ang mananayaw. Ito ang
+          sikreto sa likod ng lahat ng animation.
+      6:
+        text: Hindi mo lang mababago ang galaw ng mananayaw mo, maaari mo ring baguhin
+          ang mga katangian nito. Inilalarawan ng mga katangian ang mga bagay tulad
+          ng posisyon ng mananayaw sa screen, laki ng mananayaw, at kulay ng mananayaw.
+      7:
+        image: notes/hoc_dance_properties_2019_7.png
+        text: Para baguhin ang mga katangian ng isang mananayaw, gagamit ka ng set
+          block. Gumamit tayo ng set block para mas maliit ang hitsura ng ating mga
+          mananayaw. Una, i-drag ang set block sa programa mo.
+      8:
+        image: notes/hoc_dance_properties_2019_8.png
+        text: Pagkatapos, pumili ng mananayaw na gusto mong baguhin, at i-type ang
+          laki na lalabas sa screen. 100 ang buong laki. Kung pipiliin mo ang mas
+          mababang numero, gagawin nito na mas maliit ang mananayaw. Kung mas maliit
+          ang mananayaw, mas malayo ang hitsura nito.
+      9:
+        image: notes/hoc_dance_properties_2019_9.png
+        text: Gamit ang set block, maaari mo ring baguhin ang mga sukat, pag-ikot,
+          posisyon at kulay ng isang mananayaw. Sa pamamagitan ng pagsuri sa mga katangiang
+          ito, maaari kang gumawa ng mga pagbabago at i-link ang mga ito sa iba't
+          ibang bahagi ng kanta.
+      10:
+        image: notes/hoc_dance_properties_2019_10.png
+        text: Tandaan, maaari mo lamang itakda ang mga katangian ng isang mananayaw
+          na umiiral na. Siguraduhin na ang set block mo ay kasunod ng "Gumawa ng
+          bagong mananayaw" na block. Huwag mag-atubiling mag-eksperimento, maging
+          malikhain, at mag-enjoy!
+    hoc_dance_congrats_2019:
+      1:
+        text: 'Hour of Code | Dance Party: Parti Na!'
+      2:
+        text: Congratulations! Natutunan mo na ang mga pangunahing kaalaman sa computer
+          science. Maaari mo na ngayong gamitin ang mga block na ito upang lumikha
+          ng sarili mong disenyo ng isang dance party upang ibahagi sa iyong mga kaibigan.
+      3:
+        text: Kung titingnan mo ang tool box, makakahanap ka ng ilang mga bagong block
+          na hindi mo pa nakikita dati. Halimbawa, maaari mong gamitin ang layout
+          block upang ayusin ang mga mananayaw sa iba't ibang paraan sa screen.
+      4:
+        text: Tumingin sa paligid at subukang mag-eksperimento sa mga bagong block
+          at feature na ito. Gagawa ka ba ng isang maingat na galaw na sayaw sa paboritong
+          mong kanta?
+      5:
+        text: O isang sayaw kasama ang mga kaibigan mo?
+      6:
+        text: O iba pa?
+      7:
+        image: notes/hoc_dance_congrats_7.png
+        text: Sa dulo ng tutorial maaari kang magbahagi ng link sa paglikha mo sa
+          iyong mga kaibigan. Iunat ang iyong imahinasyon at magsaya!
     poemart_intro:
       1:
         image: notes/hoc_poem_art_2021_introduction_01.jpg
+        text: Ang pangalan ko ay Caia at ako ay isang makata at isang computer science
+          student. Marami akong natutunan sa coding na naging dahilan para maging
+          mas mahusay akong makata, at dahil sa dami ng tula ko, naging mas mahusay
+          ako sa coding, dahil kailangan mo talagang isipin ang mga salitang pipiliin
+          mo at kung ano ang gagawin mo kapag pinagsama-sama ang lahat.
       2:
         image: notes/hoc_poem_art_2021_introduction_02.jpg
+        text: Sa susunod na oras, matututo ka tungkol sa computer science at tula
+          sa pamamagitan ng paggawa ng animated na tula. Sa esensya ang tula ay paggawa
+          ng sining gamit ang mga salita. Gumagawa ako ng tula upang ipahayag ang
+          sarili ko; sinusubukan kong pukawin ang imahinasyon at damdamin ng madla
+          kapag nagsusulat ako sa pamamagitan ng paggamit ng aking kakaibang istilo
+          at ritmo.
       3:
         image: notes/hoc_poem_art_2021_introduction_03.jpg
+        text: Tulad ng sining, ang mga tula ay maaaring bigyang-kahulugan sa iba't
+          ibang paraan. Maaaring magkaibang kahulugan ang parehong tula sa iba't ibang
+          tao, at ang bawat tula ay may sariling mood. Ang mood ay ang pakiramdam
+          na nakukuha mo mula sa isang tula. Minsan iniuugnay ng mga tao ang ilang
+          partikular na kulay at imahe sa iba't ibang mood.
       4:
         image: notes/hoc_poem_art_2021_introduction_04.jpg
+        text: Halimbawa, ang kulay dilaw ay nagpapasaya sa akin. At kapag iniisip
+          ko ang tungkol sa isang mood tulad ng takot, minsan naiisip ko ang isang
+          madilim at mabagyong gabi sa aking isipan. Sa aktibidad na ito magkakaroon
+          ka ng pagkakataong ilarawan at bigyang-buhay ang mood ng isang tula batay
+          sa kung ano ang nararamdaman mo.
       5:
         image: notes/hoc_poem_art_2021_introduction_05.jpg
+        text: Tingnan natin kung paano mo ito gagawin gamit ang code. Makikita mo
+          na nahahati ang screen mo sa tatlong pangunahing bahagi. Sa kaliwa ay ang
+          play space. Dito lalabas ang iyong animated na tula. Bawat tula ay may pamagat
+          at may awtor.
       6:
         image: notes/hoc_poem_art_2021_introduction_06.jpg
+        text: Ang gitnang bahaging ito ay ang toolbox. Ang mga bagong block ng code
+          ay magiging available sa espasyong ito habang isinasagawa mo ang aralin.
       7:
         image: notes/hoc_poem_art_2021_introduction_07.jpg
+        text: Ang espasyo sa kanan ay ang workspace. Maaari mong i-drag ang mga block
+          palabas ng toolbox at papunta sa workspace para buuin ang programa mo.
       8:
         image: notes/hoc_poem_art_2021_introduction_08.jpg
+        text: Ang mga instruksiyon sa bawat antas ay makikita dito sa tuktok ng screen.
+          Kung gusto mo ng pahiwatig, mag-click sa bumbilya.
       9:
         image: notes/hoc_poem_art_2021_introduction_09.jpg
+        text: Una, pumili ng tula na gusto mo. Mayroong lahat ng uri ng mga tula at
+          maaari kang pumili ng bago sa bawat antas.
       10:
         image: notes/hoc_poem_art_2021_introduction_10.jpg
+        text: Susunod, magda-drag ka ng mga block mula sa toolbox papunta sa iyong
+          workspace upang bigyang-buhay ang tula mo. Maaari kang pumili ng kulay ng
+          background o epekto na tumutugma sa mood ng iyong tula, pagkatapos ay i-click
+          ang "Run" para makita ang iyong tula na isinasagawa.
       11:
         image: notes/hoc_poem_art_2021_introduction_11.jpg
+        text: Gumugol ng ilang oras sa pagbabasa ng iba't ibang mga tula at hanapin
+          ang isa na pumukaw ng emosyon sa iyo. Pag-isipan kung ano ang nararamdaman
+          mo, at kung paano mo maipapahayag ang damdaming iyon sa pamamagitan ng koleksiyon
+          ng imahe at code.
+    poemart_events:
+      1:
+        image: notes/hoc_poem_art_2021_events_01.jpg
+        text: Minsan nagbabago ang mood ng tula sa ilang punto pagkatapos magsimula.
+          Kung ano ang maaaring magsimula bilang masaya na tula ay nagiging malungkot,
+          o marahil ang madilim ay nagiging maliwanag.
+      2:
+        image: notes/hoc_poem_art_2021_events_02.jpg
+        text: Sa aktibidad na ito, gagawa ka ng mga event. Magagamit mo ang event
+          block na ito para baguhin ang takbo ng iyong programa kapag may lumabas
+          na partikular na linya sa tula mo. Pansinin na ang mga block ng event ay
+          hindi pumapasok sa iyong pangunahing programa. Sa halip, gumagawa sila ng
+          sarili nilang maliliit na programa.
+      3:
+        image: notes/hoc_poem_art_2021_events_03.jpg
+        text: 'Basahin ang iyong tula at maghanap ng sandali kung saan nagbabago ang
+          mood. Bilangin kung anong nangyayari sa linyang: isa, dalawa, tatlo. Sa
+          iyong block ng event, ilagay ang numero ng linya.'
+      4:
+        image: notes/hoc_poem_art_2021_events_04.jpg
+        text: Pagkatapos ay mag-program sa isang bagay upang ipakita ang pagbabago
+          sa mood kapag ang linyang iyon ay lumabas sa screen. Kapag pinindot mo ang
+          "Run" makikita mo kung ano ang iyong na-code.
+    poemart_imagery:
+      1:
+        image: notes/hoc_poem_art_2021_imagery_01.jpg
+        text: Sa tula, ang mga awtor ay gumagamit ng mga imahe upang maipinta ang
+          isang larawan sa isip ng mambabasa. Kapag nakita natin ang salitang buwaya,
+          awtomatiko nating naiisip ang isang berdeng buwaya sa ating isipan. Upang
+          gawing animation ang isang imaheng tulad nito, gagamit tayo ng mga sprite.
+      2:
+        image: notes/hoc_poem_art_2021_imagery_02.jpg
+        text: Gumawa ito ng bagong sprite block na hinahayaan kang gumawa ng sprite
+          at pumili ng kasuotan para dito. Pumili ng kasuotan para sa sprite na sa
+          tingin mo ay kasama ng tula.
+      3:
+        image: notes/hoc_poem_art_2021_imagery_03.jpg
+        text: Upang baguhin ang lokasyon ng sprite, maaari mong i-click ang pin icon
+          sa block ng lokasyon, at pagkatapos ay i-click kung saan mo ito gustong
+          pumunta sa play space.
+      4:
+        image: notes/hoc_poem_art_2021_imagery_04.jpg
+        text: Sa susunod na ilang mga antas makakakita ka ng ilang mga bagong block.
+          Binibigyang-daan ka ng block na ito na baguhin ang laki ng sprite mo. Binibigyang-daan
+          ka ng block na ito na i-animate ang pag-uugali ng sprite mo.
+      5:
+        image: notes/hoc_poem_art_2021_imagery_05.jpg
+        text: Kung binanggit ng isang tula ang mga gumagala na ulap, gawin muna ang
+          cloud sprite, pagkatapos ay piliin ang block ng gawi na ito, i-drag ito
+          palabas, at piliin ang gumagala.
+      6:
+        image: notes/hoc_poem_art_2021_imagery_06.jpg
+        text: Tiyaking tumutugma ang mga kasuotan ng sprite mo. Kapag pinindot mo
+          ang run, mababasa mo at makakakita ka ng gumagalang ulap.
+      7:
+        image: notes/hoc_poem_art_2021_imagery_07.jpg
+        text: Ngayon ay maaari kang magdagdag ng mga literal na larawan upang ilarawan
+          ang mga salita sa tula. Magsaya ka!
+    poemart_celebration:
+      1:
+        image: notes/hoc_poem_art_2021_celebration_01.jpg
+        text: Congratulations! Natutunan mo lang ang mga pangunahing kaalaman sa computer
+          science at kung paano hanapin ang mood ng isang tula. Ngayon ay maaari kang
+          lumikha ng sarili mong animated na tula upang ibahagi sa iyong mga kaibigan.
+      2:
+        image: notes/hoc_poem_art_2021_celebration_02.jpg
+        text: Maingat ka bang pipili ng isang simpleng eksena para sa buong tula?
+      3:
+        image: notes/hoc_poem_art_2021_celebration_03.jpg
+        text: O gagamit ka ba ng maraming mga event upang lumikha ng isang bagong
+          eksena para sa bawat linya ng iyong tula?
+      4:
+        image: notes/hoc_poem_art_2021_celebration_04.jpg
+        text: Sa dulo ng tutorial maaari kang magbahagi ng link sa paglikha mo sa
+          iyong mga kaibigan.
+      5:
+        image: notes/hoc_poem_art_2021_celebration_05.jpg
+        text: Iunat ang imahinasyon mo at magsaya!
+    hello_world_intro:
+      1:
+        image: notes/hoc_hello_world_2021_introduction_01.jpg
+        text: Hi! Ang pangalan ko ay Erin, at ako ay isang software engineer dito
+          sa Code.org. Ako ay nasasabik, dahil makakasama mo akong gawin ang tutorial
+          na gagawin mo! Tinatawag namin itong "Hello World."
+      2:
+        image: notes/hoc_hello_world_2021_introduction_02.jpg
+        text: Ang "Hello World" ay isang sikat na parirala sa computer science, at
+          ang pagpapakita ng pariralang iyon ay isang karaniwang unang hakbang sa
+          pag-aaral ng computer science. Sa susunod na oras, magsisimula ka sa computer
+          science sa pamamagitan ng programming sa Sprite Lab.
+      3:
+        image: notes/hoc_hello_world_2021_introduction_03.jpg
+        text: Isang tool Ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha
+          at nakakatuwang proyekto. Makikita mo na ang iyong screen ay nahahati sa
+          tatlong pangunahing bahagi. Sa kaliwa ay ang play space. Dito lalabas ang
+          mga sprite mo.
+      4:
+        image: notes/hoc_hello_world_2021_introduction_04.jpg
+        text: Ang mga sprite ay mga bagay sa screen na maaari kang makipag-ugnayan,
+          tulad ng isang karakter o item sa isang kuwento o laro.
+      5:
+        image: notes/hoc_hello_world_2021_introduction_05.jpg
+        text: Ang gitnang bahaging ito ay ang toolbox. Ang mga bagong block ng code
+          ay magiging available sa espasyong ito habang isinasagawa mo ang aralin.
+      6:
+        image: notes/hoc_hello_world_2021_introduction_06.jpg
+        text: Ang espasyo sa kanan ay ang workspace. Maaari mong i-drag ang mga block
+          palabas ng toolbox, at papunta sa workspace para buuin ang programa mo.
+      7:
+        image: notes/hoc_hello_world_2021_introduction_07.jpg
+        text: Ang mga instruksiyon sa bawat antas ay makikita dito sa tuktok ng screen.
+          Kung gusto mo ng pahiwatig, mag-click sa bumbilya.
+      8:
+        image: notes/hoc_hello_world_2021_introduction_08.jpg
+        text: Upang magsimula, gumawa tayo ng isang sprite! Hinahayaan ka ng block
+          na ito na bigyan ang iyong sprite ng costume at lokasyon. Ang kasuotan ay
+          ang salitang ginagamit natin upang ilarawan ang hitsura ng isang sprite.
+          Upang baguhin ang lokasyon ng sprite, maaari mong i-click ang icon ng pin
+          sa block ng lokasyon, at pagkatapos ay i-click kung saan mo ito gustong
+          pumunta.
+      9:
+        image: notes/hoc_hello_world_2021_introduction_09.jpg
+        text: Ngayon hayaan na nating ipakilala ang sprite! Para makapagsabi ng isang
+          bagay ang sprite, gamitin itong "Sabihin" na block, at idagdag ito sa iyong
+          program. Siguraduhin na ang kasuotan na napili sa iyong "Sabihin" na block
+          ay tumutugma sa kasuotan sa sprite mo.
+      10:
+        image: notes/hoc_hello_world_2021_introduction_10.jpg
+        text: Kapag pinindot mo ang "Run", sasabihin ng sprite ang anumang text na
+          sasabihin mo dito. Ngayon ay oras na para magsimula sa Sprite Lab, at tingnan
+          kung saan ka dadalhin ng iyong imahinasyon!
+    hello_world_events:
+      1:
+        image: notes/hoc_hello_world_2021_events_01.jpg
+        text: Ngayong natutunan mo na kung paano gamitin ang Sprite Lab, gugustuhin
+          mong tumugon ang programa mo kapag may naglaro nito. Para magawa iyon, gagamit
+          ka ng mga event. Ang isang event ay nagsasabi sa iyong programa na makinig
+          sa isang bagay na mangyayari, at pagkatapos ay tutugon kaagad.
+      2:
+        image: notes/hoc_hello_world_2021_events_02.jpg
+        text: Ang ilang mga halimbawa ng mga event ay nakikinig sa isang pag-click
+          ng mouse, isang arrow button, o isang pag-tap sa screen. Ang mga block tulad
+          ng "kapag na-click" ay tinatawag na mga block ng event. Gumagana ang code
+          na konektado sa isang block ng event kapag natukoy ang naaangkop na pagkilos.
+      3:
+        image: notes/hoc_hello_world_2021_events_03.jpg
+        text: Halimbawa, kung isasama ko itong "sabihin" na block sa "kapag na-click"
+          na event, may sasabihin ang aking sprite kapag nag-click o nag-tap dito
+          ang user. Pansinin na ang mga block ng event ay hindi pumapasok sa iyong
+          pangunahing programa. Sa halip, gumagawa sila ng sarili nilang maliliit
+          na programa.
+      4:
+        image: notes/hoc_hello_world_2021_events_04.jpg
+        text: Kung marami kang sprite, maaari kang gumamit ng mga karagdagang event
+          para magkwento ng interactive na kwento.
+      5:
+        image: notes/hoc_hello_world_2021_events_05.jpg
+        text: Malapit mo nang matutunan kung paano gumawa ng higit pa sa Sprite Lab,
+          kabilang ang pagbabago ng laki o hitsura ng isang sprite, pagtatakda ng
+          iba't ibang background, pagtugtog ng mga tunog, at higit pa. Ano ang gusto
+          mong gawin ng iyong mga sprite kapag may nakipag-ugnayan sa kanila? Ikaw
+          ang bahala!
+    hello_world_congrats:
+      1:
+        image: notes/hoc_hello_world_2021_freeplay_01.jpg
+        text: Congratulations! Natutunan mo na ang mga pangunahing kaalaman sa computer
+          science. Ngayon ay maaari mong gamitin ang Sprite Lab upang lumikha ng anumang
+          gusto mo.
+      2:
+        image: notes/hoc_hello_world_2021_freeplay_02.jpg
+        text: Makakakita ka ng button na nagsasabing Mga Kasuotan. Kapag nag-click
+          ka dito, maaari kang pumili ng mga bagong sprite na kasuotan mula sa isang
+          library.
+      3:
+        image: notes/hoc_hello_world_2021_freeplay_03.jpg
+        text: Maaari ka ring gumuhit ng sarili mo! Kapag mayroon kang costume na gusto
+          mo, bumalik sa iyong code.
+      4:
+        image: notes/hoc_hello_world_2021_freeplay_04.jpg
+        text: Ngayon, piliin ang kasuotang iyon para sa sprite mo.
+      5:
+        image: notes/hoc_hello_world_2021_freeplay_05.jpg
+        text: Kung titingnan mo ang toolbox, makakahanap ka ng ilang bagong block
+          na hindi mo pa nakikita dati. Halimbawa, mayroong maraming mga block ng
+          pag-uugali na magbibigay-daan sa iyong ilipat ang sprite mo sa masaya at
+          kawili-wiling mga paraan.
+      6:
+        image: notes/hoc_hello_world_2021_freeplay_06.jpg
+        text: Maaari mong gamitin ang block ng event na "kapag hinawakan" upang kontrolin
+          kung ano ang mangyayari kapag nagbanggaan ang dalawang sprite.
+      7:
+        image: notes/hoc_hello_world_2021_freeplay_07.jpg
+        text: Hanapin ang block na "lumikha ng epekto". Ang makapangyarihang block
+          na ito ay maaaring gamitin upang gumawa ng isang buong grupo ng mga sprite
+          na sumabog, o pumutok, o umulan sa command.
+      8:
+        image: notes/hoc_hello_world_2021_freeplay_08.jpg
+        text: Tumingin sa paligid, at subukang mag-eksperimento sa mga bagong block
+          at feature na ito. Sa dulo ng tutorial, i-click ang button na "Ibahagi"
+          upang magbahagi ng link ng paglikha mo sa iyong mga kaibigan.
+      9:
+        image: notes/hoc_hello_world_2021_freeplay_09.jpg
+        text: Nasa iyo ang lahat ng makapangyarihang kasanayan na kailangan mo upang
+          simulan ang pagbuo ng mga app, laro at iba pang mga bagong programa sa Sprite
+          Lab! Gamitin ang iyong bagong kapangyarihan sa kabutihan. Maging mabait
+          at magalang, tulad ng gagawin mo kung gumagawa ka ng isang bagay sa papel,
+          o nakikipag-usap sa isang kaibigan.
+      10:
+        image: notes/hoc_hello_world_2021_freeplay_10.jpg
+        text: Kaya ano ang gagawin mo? Maaari kang magkwento tungkol sa iyong sarili...
+          o gumawa ng isa gamit ang sarili mong mga espesyal na karakter. Marahil
+          ay gagamitin mo pa ang iyong mga bagong kasanayan sa computer science sa
+          iyong susunod na proyekto sa paaralan! Iunat ang iyong imahinasyon at magsaya!

@@ -2168,6 +2168,18 @@
               "binary": "binarno"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
         }
       }
     }

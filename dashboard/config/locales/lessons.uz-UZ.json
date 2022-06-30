@@ -17,7 +17,8 @@
           "name": "Flappy o‘yinini yarating",
           "overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin.",
           "preparation": "### Sizning kod soatingizdan bir hafta oldin\n\n-   [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) va [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) bilan tanishib chiqing. Hour of Code tadbiri. \n-   [Register your Hour of Code event](http://hourofcode.com), agar siz qalbakilashtirish yoki sinfda yordam olishni istasangiz. \n    Onlayn qo'llanmani o'zingiz ko'rib chiqing va to'ldiring: [Flappy Game](https://studio.code.org/flappy/1) \n    O'quvchilaringizdan uni to'ldirishni so'rashdan oldin, avval sinovdan o'tkazganingizga ishonch hosil qiling. Texnologiyangizni tekshirib ko'ring va sizning Kodeks soatingizdan oldin biron bir muammo bilan shug'ullanishingiz kerakligi to'g'risida qaror qabul qiling. \n    ### Soatingizdan bir kun oldin Kod\n    'Kodlash', 'dasturlash' va 'disk sozlamasi' so'zlarini doskaga yozing yoki agar sizda mavjud bo'lsa, ularni so'z devoringizga qo'shing. \n    Faoliyatni yakunlagan har bir talaba sertifikat olishi kerak. Hour of Codeingiz oxirida oson bo‘lishi uchun har bir o‘quvchiga [Print one](http://code.org/certificates) oldindan chop qilib qo‘ying. ",
-          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
+          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi.",
+          "student_overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin."
         },
         "hourofcode/Maze": {
           "name": "Labirint",
@@ -29,6 +30,7 @@
         },
         "iceage/Ice Age Play Lab": {
           "name": "Ice Age Play Lab",
+          "overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin.",
           "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
         },
         "artist/Artist": {
@@ -38,7 +40,9 @@
         },
         "gumball/Gumball Play Lab": {
           "name": "Gumball Play Lab",
-          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
+          "overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin.",
+          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi.",
+          "student_overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin."
         },
         "dance/Dance Party": {
           "name": "Dance Party",
@@ -63,6 +67,7 @@
         },
         "playlab/Play Lab": {
           "name": "Play Lab - O‘yin laboratoriyasi",
+          "overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin.",
           "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
         },
         "applab-intro/Intro to App Lab": {
@@ -85,6 +90,7 @@
         },
         "infinity/Infinity": {
           "name": "Disney Cheksiz O‘yin laboratoriyasi",
+          "overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin.",
           "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
         },
         "basketball/Bounce": {
@@ -95,6 +101,9 @@
           "name": "Dance Party - Go Further",
           "purpose": "Ushbu dars Infomatikadagi asosiy tushunchalar, kodlash va hodisaviy dasturlash (bloklardan foydalangan holda) bilan tanishtiradi."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Dasturlash soati - 2013"
+        },
         "dance-2019/Dance Party": {
           "name": "Raqs bazmi (2019)",
           "purpose": "Ushbu dars Infomatikadagi asosiy tushunchalar, kodlash va hodisaviy dasturlash (bloklardan foydalangan holda) bilan tanishtiradi."
@@ -103,6 +112,150 @@
           "name": "AI for Oceans",
           "purpose": "Ushbu o'quv qo'llanma talabalarni \\*\\* sun'iy intellektning \\*\\* bir turi bo'lgan \\*\\* mashinasozlik \\*\\* bilan tezda tanishtirish uchun mo'ljallangan. Talabalar mashina o'rganish modelini faollashtirish uchun \\*\\* o'quv ma'lumotlari \\*\\* qanday ishlatilishini o'rganadilar. Talabalar o'quv mashg'ulotlari davomida ijobiy tajribaga ega bo'lishi va eng muhimi, informatika fanini o'rganishda davom etishi kerak. ",
           "student_overview": "O'quv qo'llanmasining qisqacha mazmuni: Dastlab talabalar okeandan chiqindilarni olib tashlash uchun obyektlarni 'baliqlar' yoki 'baliqlar emas' deb tasniflashadi. Keyin talabalar o'zlarining ma'lumot to'plamlarini boshqa dengizni o'z ichiga olgan holda kengaytirishlari kerak bo'ladi. Faoliyatning ikkinchi qismida talabalar tasodifiy hosil bo'lgan baliqlarning rasmlariga murojaat qilish uchun o'zlarining yorliqlarini tanlaydilar. Ushbu ma'lumotlar yangi tasvirlarni belgilashga qodir bo'lgan mashina o'rganish modeli uchun ishlatiladi. "
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sequencing"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Sikllar"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Hodisalar"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Shartli bayonotlar"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funksiyalar"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "O‘zgaruvchilar"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For sikllari"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Digital Design"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Event Driven Programming"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Basic App Functionality"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getters and Setters"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Boshlash"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Kompyuter fanlari asoslari"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Looking Ahead"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Mastering the Basics: Sequencing"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Mastering the Basics: Loops"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Mastering the Basics: Conditionals"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Mastering the Basics: Functions"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Mastering the Basics: Events"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Best Practices for Teaching Computer Science"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planning"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Overview and Setup Instructions"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Sending Bits on a Shared Wire"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Sending Numbers"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Sending Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Broadcasting messages"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routers and addresses"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Packets and Reliability"
+        },
+        "netsim/Manual DNS": {
+          "name": "Qo'lbola DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Automatic DNS node"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Internet Simulator Freeplay"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Room Escape"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Start and End Screens"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Start and End Screens2"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Boshlash"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Kompyuter fanlari asoslari"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Looking Ahead"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Mastering the Basics: Sequencing"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Mastering the Basics: Loops"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Mastering the Basics: Conditionals"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Mastering the Basics: Functions"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Mastering the Basics: Events"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Best Practices for Teaching Computer Science"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planning"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Collector Hour of Code 2017"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Frequency Analysis"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Move It, Move It (Harakatlan)"
@@ -648,7 +801,7 @@
           "name": "Bilimdon Asalari"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "CS Discoveries End of Semester Survey"
+          "name": "Programming for Entertainment"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Plotting Shapes"
@@ -1335,10 +1488,10 @@
           "name": "A Royal Battle with Events"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Programming for Entertainment"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Informatika kashfiyotlari kursidan keyingi so'rovnoma"
+          "name": "Plotting Shapes"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Drawing in Game Lab"
@@ -1395,10 +1548,7 @@
           "name": "Project - Design a Game"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Loyiha yakuniy testi"
-        },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "Informatika kashfiyotlari kursidan keyingi so'rovnoma"
+          "name": "Innovations in Computing"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "The Circuit Playground"
@@ -1440,10 +1590,10 @@
           "name": "Project: Prototype an Innovation"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Analysis of Design"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Informatika kashfiyotlari kursidan keyingi so'rovnoma"
+          "name": "Understanding Your User"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "User-Centered Design Micro Activity"
@@ -1488,10 +1638,10 @@
           "name": "Project - App Presentation"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Representation Matters"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Informatika kashfiyotlari kursidan keyingi so'rovnoma"
+          "name": "Patterns and Representation"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII and Binary Representation"
@@ -1536,7 +1686,7 @@
           "name": "Intro to Problem Solving"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Muammoni yechish jarayoni"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Exploring Problem Solving"
@@ -1557,10 +1707,10 @@
           "name": "Project - Propose an App"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Exploring Websites"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Informatika kashfiyotlari kursidan keyingi so'rovnoma"
+          "name": "Websites for Expression "
         },
         "csd2-2019/Intro to HTML": {
           "name": "Intro to HTML"
@@ -2082,10 +2232,10 @@
           "name": "Present Your Project"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "CS Discoveries End of Semester Survey"
+          "name": "Programming for Entertainment"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "CSD Post-Course Survey"
+          "name": "Plotting Shapes"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Drawing in Game Lab"
@@ -2142,7 +2292,7 @@
           "name": "Project - Design a Game"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "CSD Post-Course Survey"
+          "name": "Innovations in Computing"
         },
         "csd6-2017/The Circuit Playground_": {
           "name": "The Circuit Playground"
@@ -2184,7 +2334,7 @@
           "name": "Project: Prototype an Innovation"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "CSD Post-Course Survey"
+          "name": "Exploring Websites"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Websites for Expression "
@@ -2253,7 +2403,7 @@
           "name": "Project - Propose an App"
         },
         "csd5-2017/Representation Matters": {
-          "name": "CSD Post-Course Survey"
+          "name": "Representation Matters"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Patterns and Representation"
@@ -2298,7 +2448,7 @@
           "name": "Project - Solve a Data Problem"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "CSD Post-Course Survey"
+          "name": "Analysis of Design"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Understanding Your User"
@@ -2344,6 +2494,27 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "Project - App Presentation"
+        },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "Debugging for AB Educators"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "Debugging for CDEF Educators"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Black & White Pixelation Tutorial"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Black & White Pixelation Freeplay"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Color Pixelation Tutorial"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Color Pixelation Examples"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Color Pixelation Freeplay"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Kompyutersiz: Tangram"
@@ -2410,6 +2581,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Murakkab Challenge - keng qamrovli"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Informatikaga kirish"
+        },
+        "20-hour/The Maze": {
+          "name": "Labirint"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Dasturiy fikrlash"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Katakchali varaqda dasturlash"
+        },
+        "20-hour/The Artist": {
+          "name": "Rassom"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmlar"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Rassom 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funksiyalar"
+        },
+        "20-hour/The Farmer": {
+          "name": "Fermer"
+        },
+        "20-hour/Conditionals": {
+          "name": "Shartli bayonotlar"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Rassom 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Musiqa yozish"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Fermer 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstraksiya"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Rassom 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Estafetali dasturlash"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Fermer 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Rassom 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Yakun"
         },
         "course2/Graph Paper Programming": {
           "name": "Katakchali varaqda dasturlash"
@@ -2589,6 +2820,135 @@
           "name": "Topishmoq",
           "overview": "Bu dars o‘quvchilarga ular kompyuter laboratoriyalariga kirganda nima kutishi kerakligi haqida o‘rgatadi. U ularga laboratoriya qonun-qoidalarini tanishtirish kabi qisqacha muhokama bilan boshlanadi, shunda ularda onlayin boshqotirmalarni yechishda kompyuterdan foydalanishda o‘sish kuzatiladi.",
           "student_overview": "Click and drag to finish the puzzles."
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "CSD Student Post-Course Survey ('18-'19)"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Topishmoq"
+        },
+        "allthethings/Maze": {
+          "name": "Labirint"
+        },
+        "allthethings/Artist": {
+          "name": "Rassom"
+        },
+        "allthethings/Bee": {
+          "name": "Asalari"
+        },
+        "allthethings/PlayLab": {
+          "name": "PlayLab"
+        },
+        "allthethings/Farmer": {
+          "name": "Fermer"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Sakrash"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Match"
+        },
+        "allthethings/TextMatch": {
+          "name": "TextMatch"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "Odometer"
+        },
+        "allthethings/Text Compression": {
+          "name": "Matnni Zichlash"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Gamelab": {
+          "name": "Gamelab"
+        },
+        "allthethings/Online PD": {
+          "name": "Online PD"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Markdown Details"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Ko'p sahifali baholash"
+        },
+        "allthethings/Star wars": {
+          "name": "Star wars"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "Boy davomli baholash"
+        },
+        "allthethings/Free Response": {
+          "name": "Erkin javob"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "PLC baholash na'munasi"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Swapped Levels"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Talabalar uchun anonim so‘rovnoma"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Ommaviy kalitni shifrlash"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
+        },
+        "allthethings/Single page assessment": {
+          "name": "Bir sahifali baholash"
+        },
+        "allthethings/Standalone video": {
+          "name": "Standalone video"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Curriculum Reference"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Dance Lab"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Mini Rubric"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "Externals Optionally Displayed as Unplugged"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "Bubble Choice"
+        },
+        "allthethings/Contained Levels": {
+          "name": "Contained Levels"
+        },
+        "allthethings/ML Fish": {
+          "name": "ML Fish"
+        },
+        "allthethings/AI Lab": {
+          "name": "AI Lab"
         },
         "coursef-2021/lesson-6": {
           "name": "Sprite laboratoriyasi bilan tanishish"
@@ -3266,9 +3626,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "CS Discoveries Post-Course Survey"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "Loyiha yakuniy testi"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "Understanding Your User"
         },
@@ -3303,7 +3660,7 @@
           "name": "CS Discoveries Post-Course Survey"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Loyiha yakuniy testi",
+          "name": "Innovations in Computing",
           "overview": "Ushbu kursning yakuniy bo'limini boshlash uchun talabalar hisoblashdagi qiziqarli yangiliklar bo'yicha bir necha tadqiqotlar olib boradilar. Ushbu dars o'quvchilarga turli xil hisoblash shakllari omillari (kompyuter qanday ko'rinishini) va hisoblash ta'sirida bo'lgan sohalarni ochib beradi. Keyinchalik ushbu bo'limda talabalar o'zlarining jismoniy hisoblash moslamalarini ishlab chiqishda ushbu darsda duch kelgan qurilmalarni qayta ko'rib chiqadilar.\\*"
         },
         "csd6-2021/The Circuit Playground": {
@@ -3355,7 +3712,7 @@
           "name": "CS Discoveries Post-Course Survey"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Representation Matters"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Patterns and Representation"
@@ -3397,7 +3754,7 @@
           "name": "CS Discoveries Post-Course Survey"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Programming for Entertainment"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Plotting Shapes"
@@ -3464,7 +3821,7 @@
           "name": "Intro to Problem Solving"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Loyiha yakuniy testi"
+          "name": "Muammoni yechish jarayoni"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Exploring Problem Solving"
@@ -3484,9 +3841,6 @@
         },
         "csd1-2021/Project - Propose an App": {
           "name": "Project - Propose an App"
-        },
-        "csd2-2021/Exploring Web Pages": {
-          "name": "Loyiha yakuniy testi"
         },
         "csd2-2021/Intro to HTML": {
           "name": "Intro to HTML"

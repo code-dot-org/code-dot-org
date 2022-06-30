@@ -353,8 +353,8 @@
   homepage_slot_text_link_shop: "Тениски, шапки & повече"
   homepage_slot_text_link_administrators: "Въведете CS във вашето училище"
   homepage_gallery_header: "Над %{project_count} милиона Code.org проекти създадени"
-  homepage_header_donors: "Code.org благодари на своите привърженици"
-  homepage_donors_seall: "Вижте всички"
+  homepage_header_donors: "Code.org благодари"
+  homepage_donors_seall: "Вижте още поддръжници"
   homepage_donors_donate: "Дарения"
   homepage_below_hero_announcement_text: "Ние се грижим за вашата поверителност и направихме някои актуализации за поверителността, влезнаха в сила от 25 май."
   homepage_below_hero_announcement_link_text: "Научете повече"
@@ -461,6 +461,7 @@
   video_title_obama: "Президентът Обама за компютърните науки"
   video_title_hoc_is_here: "Hour of Code е тук - всеки може да се научи"
   video_title_anybody_can_learn: "Всеки може да се научи"
+  video_title_steph_curry: "Час на Кода със Стеф Къри"
   video_title_draymond_green: "Hour of Code с Draymond Green"
   video_title_russell_okung: "Hour of Code с Russell Okung"
   video_title_real_madrid: "Russell Okung с Real Madrid"
@@ -469,6 +470,7 @@
   video_title_my_name_is_aracely: "Моето Име е Аракели"
   video_1min: "1 мин."
   video_2min: "2 мин."
+  video_3min: "3 мин"
   video_5min: "5 мин."
   speak_another_language: "Говорите друг език?"
   help_translate: "Помогнете ни с превода."
@@ -905,6 +907,10 @@
   coursed-2020_name: Курс D (2020)
   coursee-2020_name: Курс E (2020)
   coursef-2020_name: Курс F (2020)
+  coursea-2021_name: Курс А (2021)
+  courseb-2021_name: Курс B (2021)
+  coursec-2021_name: Курс C (2021)
+  coursef-2021_name: Курс F (2021)
   accelerated_name: "Ускорен курс"
   20-hour_name: Ускорен курс
   algebra_name: "CS в алгебрата"
@@ -1012,6 +1018,12 @@
   coursed-2021_gradelevel: Клас 8 +
   coursee-2021_gradelevel: Възраст 8-12
   coursef-2021_gradelevel: Възраст 9-13
+  coursea-2022_gradelevel: Възраст 4-7
+  courseb-2022_gradelevel: Възраст 5-8
+  coursec-2022_gradelevel: Възраст 6-10
+  coursed-2022_gradelevel: Клас 8 +
+  coursee-2022_gradelevel: Възраст 8-12
+  coursef-2022_gradelevel: Възраст 9-13
   accelerated_gradelevel: "Възраст 10 + (след курс 3)"
   codeorg_platformtext: "Съвременни браузъри, смартфони, таблети"
   codeintl_platformtext: "Съвременни браузъри, смартфони, таблети"
@@ -1437,7 +1449,9 @@
   hoc2018_mc_careers_more: "Още <a href='%{careers_url}' target='_blank'> вдъхновяващи видеа</a> с участието на специалисти от областта на технологиите"
   hoc2018_mc_video_1min: "1 мин."
   hoc2018_mc_video_2min: "2 мин."
+  hoc2018_mc_video_3min: "3 мин"
   hoc2018_mc_video_5min: "5 мин."
+  hoc2018_mc_video_title_steph_curry: "Час на Кода със Стеф Къри"
   hoc2018_mc_video_title_sports: "Опитай. Всеки може да се научи."
   hoc2018_mc_video_title_cs_is_everything: "Компютърните Науки Променят Всичко"
   hoc2018_mc_video_title_inspire_girl: "Вдъхновете момиче"
@@ -1482,3 +1496,4 @@
   ai_for_oceans_lesson_plan: "план на урок"
   ai_activity: "Упражнение"
   ai_description: "Описание"
+  outbreak_tile_title: "Епидемия"

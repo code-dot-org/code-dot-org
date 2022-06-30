@@ -55,7 +55,7 @@ describe('ProgrammingClassOverview', () => {
       'Tips',
       'Additional Information',
       'Fields',
-      'Methods'
+      'Method Details'
     ]);
 
     expect(
@@ -141,7 +141,9 @@ describe('ProgrammingClassOverview', () => {
       <ProgrammingClassOverview programmingClass={defaultProgrammingClass} />
     );
     expect(wrapper.find('h2').length).to.be.greaterThan(0);
-    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Methods');
+    expect(wrapper.find('h2').map(h => h.text())).to.not.include(
+      'Method Details'
+    );
   });
 
   it('uses color if color is provided', () => {

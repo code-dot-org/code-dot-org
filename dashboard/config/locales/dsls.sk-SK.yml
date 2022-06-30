@@ -4780,16 +4780,16 @@ sk-SK:
 
           [/key]
       Unit 1 Lesson 2 Overview:
-        markdown: |
+        markdown: |-
           # Prehľad
 
-          V tejto lekcii sa naučíš všeobecný proces riešenia problémov, ktorý ti pomôže vhodne zvoliť prístup pri riešení najrôznejších problémov.
+          V tejto lekcii sa naučíš všeobecný postup riešenia problémov, ktorý ti pomôže vhodne zvoliť prístup pri riešení najrôznejších problémov.
 
           ## Materiál
 
-          * [Proces riešenia problémov - Sprievodca aktivitami ](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+          * [Postup riešenia problémov - Sprievodca aktivitami ](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
         teacher_markdown: |-
-          * [Proces riešenia problémov]
+          * [Postup riešenia problémov]
           (https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/) - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))
       Unit 1 Lesson 3 Overview:
         teacher_markdown: "[Riešenie problémov KĽÚČ](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
@@ -4797,7 +4797,7 @@ sk-SK:
           | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))"
         markdown: |-
           # Prehľad
-          V tejto lekcii sa naučíš uplatniť proces riešenia problémov na najrôznejšie problémy a objavíš, ako ti jednotlivé kroky pomôžu k vybudovaniu a vylepšeniu procesu riešenia problémov.
+          V tejto lekcii sa naučíš uplatniť postup riešenia problémov na najrôznejšie problémy a objavíš, ako ti jednotlivé kroky pomôžu k vybudovaniu a vylepšeniu postupu riešenia problémov.
 
           ## Materiály
 
@@ -6389,3 +6389,82 @@ sk-SK:
         content1: Sem pridať popis
       OPD-K5 where to next:
         content1: Sem pridať popis
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: modrá
+        - text: zelená
+        - {}
+        - text: žltá
+        - correct: true
+        - text: červená
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: Sem pridať popis
+      allthethings_external_not_displayed_as_unplugged:
+        content1: Sem pridať popis
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        questions:
+        - text: Ktorá šípka dostane Flurb k pokladu?
+        title: Vyber správnu odpoveď
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - text: Žiadny z uvedených

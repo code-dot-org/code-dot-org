@@ -204,6 +204,36 @@
         },
         "helloworld_emoji_sounds": {
           "hello_world_new": "Novi blok!"
+        },
+        "helloworld_animals_location": {
+          "pin": "zakači"
+        },
+        "helloworld_animals_multi": {
+          "pin": "zakači"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili.",
+          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite."
+        },
+        "helloworld_food_location": {
+          "pin": "zakači"
+        },
+        "helloworld_food_multi": {
+          "pin": "zakači"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili.",
+          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite."
+        },
+        "helloworld_retro_location": {
+          "pin": "zakači"
+        },
+        "helloworld_retro_multi": {
+          "pin": "zakači"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili.",
+          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite."
         }
       }
     }

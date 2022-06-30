@@ -58,8 +58,8 @@
         "2-3 Maze 13": "Få meg bort til grisen! Du kan kun bruke én `gå framover`-blokk denne gangen",
         "2-3 Maze 16": "Løkker fungerer til og med med mer enn en blokk inni! Kan du lage en løkke til denne sekvensen for å få zombien til solsikken?",
         "2-3 Maze 16 before": "Kan du finne raskeste måte å få meg til grisen?",
-        "2-3 Maze 2": "Denne grisen har røska i fjøra mine. Hjelp meg å få tak i han!",
-        "2-3 Maze 3": "Følg stien og før meg til den tåpelege grisen. Unngå dynamitt elles vil fjøra mine fyke!",
+        "2-3 Maze 2": "Før meg til den grøne styggingen! (Sjå opp for dynamitt)",
+        "2-3 Maze 3": "Hold deg i ro og hjelp meg med å finne den slemme grisen. Elles blir eg kanskje sinna!",
         "2-3 Maze 4": "Før meg til den grøne styggingen! (Sjå opp for dynamitt)",
         "2-3 Maze 6": "Hold deg i ro og hjelp meg med å finne den slemme grisen. Elles blir eg kanskje sinna!",
         "2-3 Maze 7": "Før meg til den grøne styggingen! (Sjå opp for dynamitt)",
@@ -1621,7 +1621,12 @@
         "CSDU6 arrays select rainbow_2021": "Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)",
         "CSDU6 arrays select random_2021": "Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)",
         "CSDU6 arrays select variable_2021": "Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)",
-        "U4 Model Design 1_2021": "Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)"
+        "U4 Model Design 1_2021": "Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)",
+        "2-3 Maze 1": "Før meg til den grøne styggingen! (Sjå opp for dynamitt)",
+        "MC Agent Freeplay": "**Frileik:** Utforsk på eiga hand!",
+        "Overworld Chop Tree - allthethings": "Tre er ein veldig viktig ressurs. Mange ting blir laga av tre. Gå bort til treet og bruk \"øydelegg blokk\"-kommandoen for å hogge det ned.",
+        "U1L13 Text Compression": "Sjå etter mønster (repeterande ord eller fraser) i teksten. Legg inn mønstra du finn i ordlista til høgre. Når du legg inn eit mønster i ordlista, vil symbolet for mønsteret bli lagt inn i teksten istadenfor mønsteret.",
+        "allthethings-anigif-instructions": "Flytt meg austover for å få meg til grisen!"
       }
     }
   }

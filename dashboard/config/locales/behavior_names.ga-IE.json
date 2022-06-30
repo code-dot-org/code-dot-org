@@ -2613,6 +2613,32 @@
           "jittering": "crith",
           "moving west": "dul siar",
           "patrolling": "patrólú"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "snámh anonn is anall",
+          "shrinking": "crapadh",
+          "patrolling": "patrólú",
+          "wandering": "fánaíocht",
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "spinning right": "casadh ar deiseal"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "snámh anonn is anall",
+          "shrinking": "crapadh",
+          "patrolling": "patrólú",
+          "wandering": "fánaíocht",
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "spinning right": "casadh ar deiseal"
         }
       }
     }

@@ -157,7 +157,7 @@
         },
         "2-3 Artist Functions 4": {
           "draw a square": {
-            "name": "crwdns2491974:0crwdne2491974:0"
+            "name": "crwdns2928182:0crwdne2928182:0"
           }
         },
         "2-3 Artist Functions 9": {
@@ -512,8 +512,8 @@
         },
         "Course 4 Play Lab Params 2": {
           "jump": {
-            "name": "crwdns2489190:0crwdne2489190:0",
-            "description": "crwdns2489192:0crwdne2489192:0"
+            "name": "crwdns2928236:0crwdne2928236:0",
+            "description": "crwdns2928238:0crwdne2928238:0"
           }
         },
         "Course 4 Play Lab Params 3": {
@@ -967,7 +967,7 @@
         },
         "NEW Course 4 Artist Functions 3": {
           "draw a square": {
-            "name": "crwdns2488744:0crwdne2488744:0"
+            "name": "crwdns2928194:0crwdne2928194:0"
           }
         },
         "NEW Course 4 Artist Functions 4": {
@@ -4357,6 +4357,39 @@
               "actor": "crwdns2434500:0crwdne2434500:0",
               "speed": "crwdns2434502:0crwdne2434502:0"
             }
+          }
+        },
+        "2-3 Artist Loops 2": {
+          "draw 3 hexagons": {
+            "name": "crwdns2928660:0crwdne2928660:0"
+          },
+          "draw 4 hexagons": {
+            "name": "crwdns2928662:0crwdne2928662:0"
+          },
+          "draw 5 hexagons": {
+            "name": "crwdns2928664:0crwdne2928664:0"
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "crwdns2928210:0crwdne2928210:0"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "crwdns2928198:0crwdne2928198:0",
+            "parameters": {
+              "sides": "crwdns2928200:0crwdne2928200:0",
+              "length": "crwdns2928202:0crwdne2928202:0"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "crwdns2928634:0crwdne2928634:0"
+          },
+          "function 2": {
+            "name": "crwdns2928636:0crwdne2928636:0"
           }
         }
       }

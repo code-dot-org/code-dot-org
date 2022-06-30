@@ -10,7 +10,7 @@
     "csd7-2022",
     "csd-post-survey-2022"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -134,6 +134,17 @@
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview",
+      "key": "csd_learning_frameworks",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
       }
     },
     {

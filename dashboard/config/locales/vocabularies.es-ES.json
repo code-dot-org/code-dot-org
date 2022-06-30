@@ -901,6 +901,10 @@
           "word": "Bucles desde",
           "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
         },
+        "parameter/csd/2021": {
+          "word": "Parámetro",
+          "definition": "Información adicional proporcionada como entrada a un bloque para personalizar su funcionalidad"
+        },
         "circuit/csd/2021": {
           "word": "Circuito",
           "definition": "Dispositivo que proporciona un camino para que fluya una corriente eléctrica, a menudo modificando esa corriente. En los ordenadores, los circuitos permiten realizar operaciones lógicas y matemáticas sencillas utilizando la electricidad."
@@ -917,33 +921,112 @@
           "word": "Variable",
           "definition": "un marcador de posición para una información que puede cambiar."
         },
+        "property/csd/2021": {
+          "word": "Propiedad",
+          "definition": "Una etiqueta para definir las características de un sprite, como su ubicación y apariencia"
+        },
         "sprite/csd/2021": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Un personaje en la pantalla con propiedades que describen su ubicación, movimiento y apariencia."
+        },
+        "dot_notation/csd/2021": {
+          "word": "Notación de Punto",
+          "definition": "la forma en que se utilizan las propiedades de los sprites en el Laboratorio de Juegos, conectando el sprite y la propiedad con un punto."
         },
         "condition/csd/2021": {
-          "word": "Condición"
+          "word": "Condición",
+          "definition": "Algo que un programa comprueba para ver si es cierto antes de decidir ejecutar una acción."
         },
         "conditionals/csd/2021": {
-          "word": "Condicionales"
+          "word": "Condicionales",
+          "definition": "Sentencias que sólo se ejecutan cuando ciertas condiciones son verdaderas."
+        },
+        "boolean_expression/csd/2021": {
+          "word": "Expresión Booleana",
+          "definition": "en programación, una expresión que se evalúa como Verdadero o Falso. "
         },
         "abstraction/csd/2021": {
-          "word": "Abstracción"
+          "word": "Abstracción",
+          "definition": "una representación simplificada de algo más complejo. Las abstracciones permiten ocultar los detalles para ayudar a gestionar la complejidad, centrarse en los conceptos relevantes y razonar sobre los problemas a un nivel superior."
         },
         "function/csd/2021": {
           "word": "Función"
         },
+        "computer/csd/2021": {
+          "word": "Ordenador",
+          "definition": "Una máquina que trabaja con información."
+        },
         "input/csd/2021": {
-          "word": "Entrada"
+          "word": "Entrada",
+          "definition": "la información que los ordenadores obtienen de los usuarios, dispositivos u otros ordenadores"
+        },
+        "output/csd/2021": {
+          "word": "Salida",
+          "definition": "la información que los ordenadores dan a los usuarios, dispositivos u otros ordenadores"
         },
         "processing/csd/2021": {
-          "word": "Procesamiento"
+          "word": "Procesamiento",
+          "definition": "El trabajo intelectual que realizan los ordenadores para convertir los datos en resultados."
+        },
+        "storage/csd/2021": {
+          "word": "almacenamiento",
+          "definition": "guardar la información para utilizarla en el futuro"
+        },
+        "html/csd/2021": {
+          "word": "HTML",
+          "definition": "Hypertext Markup Language, (HTML) lenguaje utilizado para crear páginas web"
+        },
+        "html_element/csd/2021": {
+          "word": "Elemento HTML",
+          "definition": "Un fragmento de un sitio web, marcado por una etiqueta de inicio y a menudo cerrado con una etiqueta de fin"
+        },
+        "html_tag/csd/2021": {
+          "word": "Etiqueta HTML",
+          "definition": "El conjunto especial de caracteres que indica el inicio y el final de un elemento HTML y el tipo de ese elemento"
+        },
+        "website_content/csd/2021": {
+          "word": "Contenido del Sitio Web",
+          "definition": "el texto y las imágenes de un sitio web"
+        },
+        "website_structure/csd/2021": {
+          "word": "Estructura del Sitio Web",
+          "definition": "cómo se organiza el contenido de un sitio web"
+        },
+        "heading/csd/2021": {
+          "word": "Cabecera",
+          "definition": "Título o resumen de un documento o sección de un documento."
         },
         "digital_footprint/csd/2021": {
-          "word": "Huella digital"
+          "word": "Huella digital",
+          "definition": "La información recopilada sobre un individuo en varios sitios web de Internet."
+        },
+        "css/csd/2021": {
+          "word": "CSS",
+          "definition": "Hojas de Estilo en Cascada; lenguaje utilizado para describir el estilo de los elementos HTML"
+        },
+        "css_selector/csd/2021": {
+          "word": "Selector CSS",
+          "definition": "la parte de un conjunto de reglas CSS que define a qué elementos HTML debe aplicarse el estilo"
         },
         "copyright/csd/2021": {
           "word": "Derechos de autor",
           "definition": "el derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
+        },
+        "relevant/csd/2021": {
+          "word": "Relevante",
+          "definition": "estrechamente relacionado con un tema"
+        },
+        "trustworthy/csd/2021": {
+          "word": "De confianza",
+          "definition": "fiable, honesto y veraz "
+        },
+        "search_engine/csd/2021": {
+          "word": "Motor de Búsqueda",
+          "definition": "Un programa que busca elementos en la World Wide Web."
+        },
+        "css_class/csd/2021": {
+          "word": "Clase CSS",
+          "definition": "Un identificador que permite dar estilo a varios elementos de un documento HTML de la misma manera"
         }
       }
     }

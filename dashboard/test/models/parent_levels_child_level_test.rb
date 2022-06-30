@@ -5,7 +5,7 @@ class ParentLevelsChildLevelTest < ActiveSupport::TestCase
 
   test 'validate child level kind' do
     parent = create :level
-    child = create :level
+    child = create :free_response
     ParentLevelsChildLevel.find_or_create_by!(
       parent_level: parent,
       child_level: child,
@@ -44,22 +44,22 @@ class ParentLevelsChildLevelTest < ActiveSupport::TestCase
   test 'scopes filter by kind' do
     parent = create :level
 
-    contained = create :level
-    ParentLevelsChildLevel.create(
+    contained = create :free_response
+    ParentLevelsChildLevel.create!(
       parent_level: parent,
       child_level: contained,
       kind: ParentLevelsChildLevel::CONTAINED
     )
 
     project_template = create :level
-    ParentLevelsChildLevel.create(
+    ParentLevelsChildLevel.create!(
       parent_level: parent,
       child_level: project_template,
       kind: ParentLevelsChildLevel::PROJECT_TEMPLATE
     )
 
     sublevel = create :level
-    ParentLevelsChildLevel.create(
+    ParentLevelsChildLevel.create!(
       parent_level: parent,
       child_level: sublevel,
       kind: ParentLevelsChildLevel::SUBLEVEL

@@ -92,6 +92,6 @@ class SurveyResultsControllerTest < ActionController::TestCase
     end
     survey_result = SurveyResult.where(user: @teacher).last
     assert survey_result
-    assert_equal "0" * 997 + "...", survey_result.nps_comment
+    assert_equal ("0" * 997) + "...", survey_result.nps_comment
   end
 end

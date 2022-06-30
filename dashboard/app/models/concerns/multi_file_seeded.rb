@@ -35,14 +35,14 @@ module MultiFileSeeded
   def directory(old=false)
     directories = ['config', self.class::CONFIG_DIRECTORY]
     directories += self.class::SUBDIRECTORY_ATTRIBUTES.map do |attr|
-      old && attribute_was(attr) || attributes[attr.to_s]
+      (old && attribute_was(attr)) || attributes[attr.to_s]
     end
     Rails.root.join(*directories)
   end
 
   def file_path(old=false)
     extension = self.class::EXTENSION
-    Rails.root.join "config", directory(old), "#{old && name_was || name}.#{extension}"
+    Rails.root.join "config", directory(old), "#{(old && name_was) || name}.#{extension}"
   end
 
   def file_path_was

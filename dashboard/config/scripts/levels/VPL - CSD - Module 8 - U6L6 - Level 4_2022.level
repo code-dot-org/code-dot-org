@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-26T18:53:35.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -58,7 +54,7 @@
     "encrypted_examples": "ib3q/3gvDxi5WQbLnBZF1JQ674Pbm3ZvKzBZss0DkYxf2cv7rlqvtXFdZvjU\nMj1EMqP2k5im8GwyLVNrhpCLVw==\n",
     "parent_level_id": 20432,
     "name_suffix": "_2022",
-    "map_reference": "/docs/concepts/app-lab/taking-input-with-getproperty/",
+    "map_reference": "/courses/vpl-csd-2022/guides/taking-input-with-getproperty",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
@@ -66,6 +62,10 @@
     "widget_mode": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-26T18:53:35.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-26T18:53:35.851+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - Module 8 - U6L6 - Level 4\\\"\"],\"cloned_from\":\"VPL - CSD - Module 8 - U6L6 - Level 4\"}]"

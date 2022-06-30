@@ -1,9 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "game_id": 68,
-  "created_at": "2022-02-26T00:32:00.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "display_name": "User's Choice",
@@ -15,19 +11,7 @@
     "csa_view_mode": "theater",
     "start_sources": {
       "MyTheater.java": {
-        "text": "import java.io.FileNotFoundException;\n\npublic class MyTheater {\n  public static void main(String[] args) throws FileNotFoundException {\n\n    TitleSequence myShow = new TitleSequence(\"theme.wav\");\n    myShow.playTitleSequence();\n    \n  }\n}",
-        "isVisible": true
-      },
-      "TitleSequence.java": {
-        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.util.Scanner;\nimport java.util.ArrayList;\nimport java.io.FileNotFoundException;\n\npublic class TitleSequence {\n\n  private Stage myStage = Theater.stage;    // the stage the scenes are played on\n  private ArrayList<Scene> sequenceScenes;  // the list of scenes in the title sequence\n  private String audioFile;                 // the soundtrack for the title sequence\n\n  public TitleSequence(String audioFile) {\n    sequenceScenes = new ArrayList<Scene>();\n    this.audioFile = audioFile;\n  }\n\n  public void promptUser() {\n    Scanner input = new Scanner(System.in);\n    System.out.print(\"Choose music, fashion, or sports (or q to quit): \");\n    String choice = input.next();\n\n    while (!choice.equals(\"q\")) {\n      chooseScene(choice);\n      System.out.print(\"Choose music, fashion, or sports (or q to quit): \");\n      choice = input.next();\n    }\n\n    System.out.println(\"\\nCreating title sequence for your show...\");\n    input.close();\n  }\n\n  public void chooseScene(String topic) {\n    String[] musicImages = {\"musician.jpeg\", \"guitars.jpeg\", \"piano.jpeg\"};\n    String[] fashionImages = {\"fashion.jpeg\", \"closet.jpeg\", \"store.jpeg\"};\n    String[] sportsImages = {\"basketball.jpeg\", \"track.jpeg\", \"soccer.jpeg\"};\n\n    int randomIndex = 0;\n    Scene temp = null;\n    \n    if (topic.equals(\"music\")) {\n      randomIndex = (int)(Math.random() * musicImages.length);\n      temp = new Scene(musicImages[randomIndex]);\n    }\n    else if (topic.equals(\"fashion\")) {\n      randomIndex = (int)(Math.random() * fashionImages.length);\n      temp = new Scene(fashionImages[randomIndex]);\n    }\n    else if (topic.equals(\"sports\")) {\n      randomIndex = (int)(Math.random() * sportsImages.length);\n      temp = new Scene(sportsImages[randomIndex]);\n    }\n    else {\n      myStage.clear(Color.BLACK);\n      myStage.drawText(\"No topic selected\", 50, 200, Color.WHITE, Font.SANS, FontStyle.BOLD, 30, 0);\n    }\n\n    sequenceScenes.add(temp);\n  }\n\n  /**\n   * Plays each scene in the array of scenes\n   */\n  public void playTitleSequence() throws FileNotFoundException {\n    promptUser();\n    \n    myStage.playSound(audioFile);\n\n    RecursiveScene drawing = new RecursiveScene(\"abstract.jpeg\");\n    \n    for (int index = 0; index < sequenceScenes.size(); index++) {\n      Scene currentScene = sequenceScenes.get(index);\n      currentScene.playScene();\n      myStage.pause(0.5);\n    }\n\n    drawing.playScene();\n\n    myStage.play();\n  }\n}",
-        "isVisible": true
-      },
-      "Scene.java": {
-        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.util.Scanner;\nimport java.io.FileNotFoundException;\n\npublic class Scene {\n\n  private String imageFile;\n  private Stage myStage = Theater.stage;\n\n  public Scene(String imageFile) {\n    this.imageFile = imageFile;\n  }\n\n  public void setBackground() throws FileNotFoundException {\n    myStage.drawImage(imageFile, 0, 0, myStage.getWidth(), myStage.getHeight(), 0);\n  }\n\n  public void playScene() throws FileNotFoundException {\n    setBackground();\n    myStage.pause(0.5);\n    myStage.clear(Color.BLACK);\n  }\n}",
-        "isVisible": true
-      },
-      "RecursiveScene.java": {
-        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class RecursiveScene extends Scene {\n\n  private Stage myStage = Theater.stage;\n  private int dim = myStage.getWidth();\n  private int limit = dim;\n  private int depth = 3;\n\n  public RecursiveScene(String imageFile) {\n    super(imageFile);\n  }\n\n  public void drawArt(int x, int y, int size) {\n    if (size < limit) {\n      return;\n    }\n\n    size = size / 3;\n\n    for (int i = 0; i < 9; i++) {\n      if (i == 4) {\n        myStage.setFillColor(Color.GOLD);\n        myStage.drawRectangle(x + size, y + size, size, size);\n        myStage.removeFillColor();\n        myStage.pause(0.1);\n      }\n      else {\n        drawArt(x + (i % 3) * size, y + (i / 3) * size, size);\n      }\n    }\n  }\n\n  public void playScene() throws FileNotFoundException {\n    for (int i = 0; i < depth; i++) {\n      drawArt(0, 0, dim);\n      limit = limit / 3;\n    }\n  }\n}",
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    \n    \n  }\n}",
         "isVisible": true
       }
     },
@@ -47,7 +31,11 @@
     "thumbnail_url": "https://images.code.org/551a8f4ed67521a010bd8564ba6f7c51-image-1639769655090.jpeg",
     "name_suffix": "_2022"
   },
+  "game_id": 68,
+  "created_at": "2022-02-26T00:32:00.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-02-26T00:32:00.375+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1c\\\"\"],\"cloned_from\":\"CSA U7L1-L1c\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-26T00:32:00.375+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1c\\\"\"],\"cloned_from\":\"CSA U7L1-L1c\"},{\"changed_at\":\"2022-05-13 23:08:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

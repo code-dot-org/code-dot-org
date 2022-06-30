@@ -2,7 +2,7 @@
 
 $root: '/blockly/media/craft/'; //TODO: Parameterize for asset pipeline
 
-@import 'color';
+@import 'color.scss';
 @import '../common';
 @import 'font';
 

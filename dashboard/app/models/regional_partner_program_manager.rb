@@ -13,8 +13,8 @@
 #
 
 class RegionalPartnerProgramManager < ApplicationRecord
-  belongs_to :program_manager, class_name: 'User'
-  belongs_to :regional_partner
+  belongs_to :program_manager, class_name: 'User', optional: true
+  belongs_to :regional_partner, optional: true
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', through: :program_manager
 

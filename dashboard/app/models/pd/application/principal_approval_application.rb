@@ -43,8 +43,6 @@ module Pd::Application
     belongs_to :teacher_application, class_name: 'Pd::Application::TeacherApplication',
                primary_key: :application_guid, foreign_key: :application_guid
 
-    validates_presence_of :teacher_application
-
     # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
     def year
       application_year

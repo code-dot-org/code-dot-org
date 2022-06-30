@@ -245,6 +245,10 @@
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "모델 및 시뮬레이션",
+          "definition": "비용과 시간 또는 실제 세계에서 실험할 때의 위험 없이 행동을 조사하기 위해 실제 세계 이벤트의 주요 특징을 복제 또는 흉내내는 프로그램"
+        },
         "event/sports/unversioned": {
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
@@ -380,6 +384,10 @@
           "word": "For 루프",
           "definition": "사전에 결정된 시작 및 종류, 증분 (단계 간격)이 있는 루프."
         },
+        "models_and_simulations/coursef/2021": {
+          "word": "모델 및 시뮬레이션",
+          "definition": "비용과 시간 또는 실제 세계에서 실험할 때의 위험 없이 행동을 조사하기 위해 실제 세계 이벤트의 주요 특징을 복제 또는 흉내내는 프로그램"
+        },
         "machine_learning/coursef/2021": {
           "word": "머신 러닝",
           "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
@@ -429,7 +437,7 @@
           "definition": "지금 막 하려고 하는 활동에 관한 자료를 조사 및 계획, 획득"
         },
         "reflect/coursef/2021": {
-          "word": "성찰",
+          "word": "점검",
           "definition": "미래 결과물을 개선할 의도로 뭔가를 주의 깊게 되돌아 봄."
         },
         "try/coursef/2021": {
@@ -449,7 +457,7 @@
           "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
         },
         "click/courseb/2021": {
-          "word": "Click",
+          "word": "클릭",
           "definition": "마우스 버튼을 누룸."
         },
         "drag/courseb/2021": {
@@ -501,7 +509,7 @@
           "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
         "click/coursea/2021": {
-          "word": "Click",
+          "word": "클릭",
           "definition": "마우스 버튼을 누룸."
         },
         "drag/coursea/2021": {
@@ -735,7 +743,7 @@
           "definition": "지금 막 하려고 하는 활동에 관한 자료를 조사 및 계획, 획득"
         },
         "reflect/express/2021": {
-          "word": "성찰",
+          "word": "점검",
           "definition": "미래 결과물을 개선할 의도로 뭔가를 주의 깊게 되돌아 봄."
         },
         "try/express/2021": {
@@ -743,7 +751,7 @@
           "definition": "뭔가를 하려고 시도"
         },
         "click/pre-express/2021": {
-          "word": "Click",
+          "word": "클릭",
           "definition": "마우스 버튼을 누룸."
         },
         "drag/pre-express/2021": {
@@ -847,7 +855,7 @@
           "definition": "지금 막 하려고 하는 활동에 관한 자료를 조사 및 계획, 획득"
         },
         "reflect/coursee/2021": {
-          "word": "성찰",
+          "word": "점검",
           "definition": "미래 결과물을 개선할 의도로 뭔가를 주의 깊게 되돌아 봄."
         },
         "try/coursee/2021": {

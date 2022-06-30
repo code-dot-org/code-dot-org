@@ -526,6 +526,10 @@
         "courseE_playLab_scaffold6": {
           "2d3cdcfdd4061212e4d4930a183dad2d": "もう一度試してみてください.",
           "af142a90df4becc2aa7ae0d3acb3cc90": "ゲーム オーバー！"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "マスクを付けるにはSpritesをクリックします。",
+          "968c8b54671ab303d48320f86937c40b": "マスクはウイルスの拡散を遅らせるのに役立ちます！"
         }
       }
     }

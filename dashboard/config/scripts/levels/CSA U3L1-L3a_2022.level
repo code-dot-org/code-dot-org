@@ -16,13 +16,16 @@
         "isVisible": true
       }
     },
-    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI51XZX+8fjW8UQD53+T\niPozhTT8rNsSoZFYDe9hC/SJ2VyAYQK4EMqBosySJFiOYfI0eS/CoUA7xqoC\n0Do1Y0jx0fR+h1RWtPeXzX8fc3BidPCeaM6BV4ds+OaT/T5PxMtZPl0EW7em\nenKkfHuBpL617GNttjge1qjHKaKSC6g+l3yrjkfJCEfKCaMvYTm1r0h1pxDL\nUD/VTy1PsW83Aokax6x1/J5jvy6uFj4hAdO+wiXdU64gBrTbaMw2XqDEtz59\nBGcIOHRWWoouJFpJ8Pr6SuKDa2MuZl/ltE5kitPNsdePQeEuX4GiLVZrnVoc\nejNjgJf/LZAQKU1ORAX+B7FGYoUQae1e1IMy/mB225WUDdRGfXT+KOJbx9o3\nrGsqNBGBvcpV8RXpLXDWtolvmPE0FmYhNGEDoRYwNuzBy80yBTCb4hgyDxdt\nrCtMWpvNZX+MRBK/cmnB+D9DODkc1bAVdr9D1qL+4B0s9kArGo/doA==\n"
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI51XZX+8fjW8UQD53+T\niPozhTT8rNsSoZFYDe9hC/SJ2VyAYQK4EMqBosySJFiOYfI0eS/CoUA7xqoC\n0Do1Y0jx0fR+h1RWtPeXzX8fc3BidPCeaM6BV4ds+OaT/T5PxMtZPl0EW7em\nenKkfHuBpL617GNttjge1qjHKaKSC6g+l3yrjkfJCEfKCaMvYTm1r0h1pxDL\nUD/VTy1PsW83Aokax6x1/J5jvy6uFj4hAdO+wiXdU64gBrTbaMw2XqDEtz59\nBGcIOHRWWoouJFpJ8Pr6SuKDa2MuZl/ltE5kitPNsdePQeEuX4GiLVZrnVoc\nejNjgJf/LZAQKU1ORAX+B7FGYoUQae1e1IMy/mB225WUDdRGfXT+KOJbx9o3\nrGsqNBGBvcpV8RXpLXDWtolvmPE0FmYhNGEDoRYwNuzBy80yBTCb4hgyDxdt\nrCtMWpvNZX+MRBK/cmnB+D9DODkc1bAVdr9D1qL+4B0s9kArGo/doA==\n",
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-03-24T23:55:59.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-03-24 23:56:01 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:21:17 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:23:07 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:25:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:25:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-24 23:56:01 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:21:17 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:23:07 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:25:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:25:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 19:21:36 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-24 15:05:33 +0000\",\"changed\":[\"map_reference\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

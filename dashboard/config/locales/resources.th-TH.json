@@ -492,6 +492,7 @@
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "making_sprites/coursef/2021": {
+          "name": "การสร้างสไปร์ท",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
@@ -1470,6 +1471,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
+          "name": "การสร้างสไปร์ท",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
@@ -1900,6 +1902,9 @@
         },
         "the_animation_tab/csd/2021": {
           "type": "วิดีโอ"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "คุณสมบัติของสไปร์ท"
         },
         "captioned-scenes/csd/2021": {
           "type": "เกณฑ์"

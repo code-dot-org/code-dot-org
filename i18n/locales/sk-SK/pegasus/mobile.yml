@@ -152,7 +152,9 @@
   thanks_for_submitting: "Ďakujeme za odoslanie!"
   if_you_enjoyed: "Ak sa ti hodina páčila, opýtaj sa priateľov či to chcú skúsiť tiež! Chceme, aby sa celý svet mohol učiť."
   personalize_certificate: "Prispôsob si svoj certifikát"
+  print_batch_certificates: "Vytlačiť viacero certifikátov"
   print_certificates: "Vytlačiť certifikáty"
+  certificate_sponsor_message: "%{sponsor_name} prispel(a) štedrým darom na podporu tvojho učenia."
   share_achievement: "Zdieľaj svoj úspech"
   beyond_hour_message: "Pokračujte s našimi <a href='http://studio.code.org'>ďalšími kurzami</a> alebo si prezrite možnosti ako pokračovať vo <a href='/learn/beyond'>výučbe po prvej hodine</a>."
   leaderboards_for_hoc: "Rebríčky pre Hour of Code."
@@ -950,6 +952,7 @@
   coursee-2020_name: Kurz E (2019)
   coursef-2020_name: Kurz F (2019)
   coursed-2021_name: Kurz D (2021)
+  coursed-2022_name: Kurz D (2021)
   express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
   express-2019_name: Zrýchlený kurz (2019)
@@ -1068,6 +1071,12 @@
   coursed-2021_gradelevel: Vek 7-11
   coursee-2021_gradelevel: Vek 8-12
   coursef-2021_gradelevel: Vek 9-13
+  coursea-2022_gradelevel: Vek 4-7
+  courseb-2022_gradelevel: Vek 5-8
+  coursec-2022_gradelevel: Vek 6-10
+  coursed-2022_gradelevel: Vek 7-11
+  coursee-2022_gradelevel: Vek 8-12
+  coursef-2022_gradelevel: Vek 9-13
   accelerated_gradelevel: "Vek 10-18"
   codeorg_platformtext: "Moderné prehliadače, smartfóny, tablety"
   codeintl_platformtext: "Moderné prehliadače, smartfóny, tablety"
@@ -1202,6 +1211,11 @@
   coursec-2021_shortdescription_congrats: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
   coursed-2021_shortdescription_congrats: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania sa oboznámia aj s významom pojmu "digitálne občianstvo".
   coursee-2021_shortdescription_congrats: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
+  coursea-2022_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
+  courseb-2022_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
+  coursec-2022_shortdescription_congrats: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
+  coursed-2022_shortdescription_congrats: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania sa oboznámia aj s významom pojmu "digitálne občianstvo".
+  coursee-2022_shortdescription_congrats: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
   codeorg_longdescription: "Nauč sa základné koncepty informatiky pomocou vizuálneho blokového programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč sa príkazy opakovania, rozhodovania a základné algoritmy. Dostupné v 34 jazykoch."
   codeintl_longdescription: "Nauč sa základné koncepty informatiky pomocou vizuálneho blokového programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč sa príkazy opakovania, rozhodovania a základné algoritmy. Dostupné v 34 jazykoch."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1607,7 +1621,10 @@
   page_not_found_description: "Stránka, ktorú hľadáte na tejto adrese neexistuje. Skontrolujte adresu a zadajte ju znova. Alebo prejdite na našu domovskú stránku."
   page_not_found_button: "Späť na domovskú stránku"
   hoc2018_mc_with_microsoft: "V spolupráci s"
+  homepage_slot_text_title_at_home: "Učenie na doma"
+  page_not_available_title: "Stránka je nedostupná"
   page_not_available_button: "Späť na domovskú stránku"
+  hoc2020_mc_available_mee: 'Dostupné v Minecrafte: verzia pre vzdelávanie'
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
   hoc2021_mc_mee_description: 'Cestujte späť v čase a naučte sa programovať! Nový tutoriál Minecraft Hour of Code je teraz dostupný v hre Minecraft: vzdelávacie vydanie pre Windows, Mac, Chromebook a iPad. Začnite s bezplatnými zdrojmi pre pedagógov a videami.'
   hoc2021_mc_mee_villages_title: "Rozprávka o dvoch dedinách"
@@ -1619,13 +1636,19 @@
   footer_privacy_policy: "Zásady ochrany súkromia"
   footer_about: "O nás"
   footer_partners: "Partneri"
+  footer_blog: "Blog"
   footer_donate: "Prispejte"
+  footer_store: "Obchod"
   footer_support: "Podpora"
   footer_terms: "Podmienky"
   ai_for_oceans: "AI pomáha oceánom"
   ai_for_oceans_lesson_plan: "učebný plán"
+  how_ai_works: "Ako funguje umelá inteligencia"
+  view_lesson_plan: "Zobraziť plán lekcie"
   ai_in_partnership_with: "V spolupráci s"
+  cs_for_good: "Počítačová veda na dobré účely"
   ai_activity: "Aktivita"
   ai_description: "Popis"
+  ai_ibm_machine_learning_for_kids: 'IBM: strojové učenie pre deti'
   outbreak_tile_title: "Nákaza"
   outbreak_tile_subtitle: "Mesto Monster Town napadol vírus! Naprogramujte simulátor ohniska a skúste urobiť predpovede, čo sa stane so susedmi mesta Monster Town."

@@ -7,8 +7,8 @@ Scenario: Complete Level 1
   Given I am on "http://studio.code.org/s/events/lessons/1/levels/1?noautoplay=true"
   When I rotate to landscape
   And I wait for the page to fully load
-  And I drag block "1" to block "3"
-  Then block "4" is child of block "3"
+  And I drag Google Blockly block "1" to block "0"
+  Then Google Blockly block "1" is child of block "0"
   And I press "runButton"
   And I hold key "LEFT"
   And I wait to see ".congrats"
@@ -19,8 +19,8 @@ Scenario: Complete Level 3
   Given I am on "http://studio.code.org/s/events/lessons/1/levels/3?noautoplay=true"
   When I rotate to landscape
   And I wait for the page to fully load
-  And I drag block "3" to block "5"
-  Then block "6" is child of block "5"
+  And I drag Google Blockly block "3" to block "0"
+  Then Google Blockly block "1" is child of block "0"
   And I press "runButton"
   And I hold key "UP"
   And I wait to see ".congrats"
@@ -41,8 +41,8 @@ Scenario: Complete Level 5
   Given I am on "http://studio.code.org/s/events/lessons/1/levels/5?noautoplay=true"
   When I rotate to landscape
   And I wait for the page to fully load
-  And I drag block "1" to block "3"
-  Then block "4" is child of block "3"
+  And I drag Google Blockly block "1" to block "0"
+  Then Google Blockly block "1" is child of block "0"
   And I press "runButton"
   And I wait to see ".congrats"
   And element ".congrats" is visible

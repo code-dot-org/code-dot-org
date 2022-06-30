@@ -3136,6 +3136,32 @@
           "wobbling": "bergoyang",
           "moving west and looping": "bergerak ke barat dan bergelung",
           "moving east and looping": "bergerak ke timur dan bergelung"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "berenang ke kiri dan ke kanan",
+          "shrinking": "mengecil",
+          "patrolling": "meronda",
+          "wandering": "merayau",
+          "growing": "membesar",
+          "jittering": "terketar",
+          "moving east": "bergerak ke timur",
+          "moving north": "bergerak ke utara",
+          "moving south": "bergerak ke selatan",
+          "moving west": "bergerak ke barat",
+          "spinning right": "berputar ke kanan"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "berenang ke kiri dan ke kanan",
+          "shrinking": "mengecil",
+          "patrolling": "meronda",
+          "wandering": "merayau",
+          "growing": "membesar",
+          "jittering": "terketar",
+          "moving east": "bergerak ke timur",
+          "moving north": "bergerak ke utara",
+          "moving south": "bergerak ke selatan",
+          "moving west": "bergerak ke barat",
+          "spinning right": "berputar ke kanan"
         }
       }
     }

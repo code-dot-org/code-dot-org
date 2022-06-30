@@ -4462,6 +4462,28 @@
           "garden square": {
             "name": "花园广场"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "画一个正方形"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "画一个图形",
+            "parameters": {
+              "sides": "边",
+              "length": "长度"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "函数1"
+          },
+          "function 2": {
+            "name": "函数2"
+          }
         }
       }
     }

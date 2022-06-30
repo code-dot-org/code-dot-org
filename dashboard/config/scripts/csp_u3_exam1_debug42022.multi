@@ -3,17 +3,17 @@ height 'auto'
 
 question ‘The following program is run. Then the user clicks the “bottomButton” ONCE and then clicks the “topButton” ONCE. What will be displayed in the console?’
 
-wrong ‘`cow`  
-`pig`  
+wrong ‘`cow`
+`pig`
 `chicken`’
-wrong ‘`cow`  
-`chicken`  
+wrong ‘`cow`
+`chicken`
 `pig`’
-wrong ‘`pig`  
-`cow`  
+wrong ‘`pig`
+`cow`
 `chicken`’
-right ‘`chicken`  
-`pig`  
+right ‘`chicken`
+`pig`
 `cow`’
 
 
@@ -25,7 +25,7 @@ teacher_markdown <<MARKDOWN
 * The user clicks the “bottomButton” ONCE which causes line 5 to run, displaying `pig` to the console.
 * The user clicks the “topButton” ONCE which causes line 2 to run, displaying `cow` to the console.
 
-[Lesson 6 - Intro to Programming](https://studio.code.org/s/csp3-2021/lessons/6) showed students examples of programs like this one.
+[Lesson 6 - Intro to Programming](https://studio.code.org/s/csp3-2022/lessons/6) showed students examples of programs like this one.
 
 ::: details [**Essential Knowledge Connected To This Question**]
 

@@ -2,6 +2,9 @@
   "de-DE": {
     "data": {
       "category": {
+        "csta/AP": {
+          "description": "Algorithmen und Programmierung"
+        },
         "ccela/SL": {
           "description": "Sprechen und zuhören"
         },
@@ -29,6 +32,9 @@
         "ccela/RI": {
           "description": "Lesen von informativen"
         },
+        "ccmath/MD": {
+          "description": "Entscheidungsfindung mithilfe der Wahrscheinlichkeitsrechnung"
+        },
         "ccela/W": {
           "description": "Schreiben"
         },
@@ -40,6 +46,15 @@
         },
         "csta/IC": {
           "description": "Auswirkungen der Datenverarbeitung"
+        },
+        "csta/NI": {
+          "description": "Netzwerke und das Internet"
+        },
+        "csta/CS": {
+          "description": "Computersysteme"
+        },
+        "ngss/ETS1": {
+          "description": "Konstruktive Gestaltung"
         }
       }
     }

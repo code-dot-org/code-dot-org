@@ -17,9 +17,9 @@
         "2-3 Bee Loops 1A": "Hej, är jag ett bi. Kan du hjälpa mig att samla nektar från blommorna? ",
         "2-3 Bee Loops 2A": "Den här gången, använd en slinga för att samla all nektar.",
         "2-3 Bee Loops 3A": "Kan du använda en loop för att samla all nektar?",
-        "2-3 Maze 1": "Kan du hjälpa mig att fånga den stygga grisen? Stapla ett par \"framåt\" block tillsammans och tryck på \"Kör\". ",
+        "2-3 Maze 1": "Led mig till den gröna elakheten! (Se upp för TNT)",
         "2-3 Maze 10": "Led mig till den gröna elakheten! (Se upp för TNT)",
-        "2-3 Maze 2": "Grisen rufsar min fjädrar. Hjälp mig komma till honom!",
+        "2-3 Maze 2": "Led mig till den gröna elakheten! (Se upp för TNT)",
         "2-3 Maze 4": "Led mig till den gröna elakheten! (Se upp för TNT)",
         "2-3 Maze 6": "Behåll lugnet och hjälpa mig att hitta den elaka grisen. Annars kanske jag blir arg!",
         "2-3 Maze 7": "Led mig till den gröna elakheten! (Se upp för TNT)",
@@ -633,7 +633,7 @@
         "2-3 Maze 15": "I det här pusslet är det två 'upprepa'-block som kommer att hjälpa dig att komma till grisen med så få block som möjligt.",
         "2-3 Maze 16": "Slingor fungerar också med mer än ett block inuti! Kan du göra en slinga av den här sekvensen för att få zombien till solrosen?",
         "2-3 Maze 16 before": "Kan du lista ut det snabbaste sättet att ta mig till grisen?",
-        "2-3 Maze 3": "Spåra vägen och led mig till den tokiga grisen. Undvik TNT, annars kommer fjädrar att flyga!",
+        "2-3 Maze 3": "Behåll lugnet och hjälpa mig att hitta den elaka grisen. Annars kanske jag blir arg!",
         "2-3 Maze Loops 1": "Kan du ta mig till grisen genom att använda 5 likadana block?",
         "2-3 Maze Loops 18": "Ta mig till solrosen genom att använda så få block som möjligt!\n\nFörsök att använda ett 'upprepa'-block inuti ett annat för att skära ner på mängden kod du behöver.",
         "2-3 Maze Loops 19": "Nu tar vi det här till en annan nivå!\nAnvänd slingor för att ta mig till solrosen med så få slingor som möjligt.",
@@ -695,7 +695,10 @@
         "CSD U3 Sprites intro sprites": "Gör detta",
         "CSD U3 Sprites intro sprites_2018": "Gör detta",
         "CSD U3 Sprites intro sprites_2019": "Gör detta",
-        "CSD U3 Sprites intro sprites_2021": "Gör detta"
+        "CSD U3 Sprites intro sprites_2021": "Gör detta",
+        "MC Agent Freeplay": "**Spela fritt:**  Dags att utforska på egen hand!",
+        "Overworld Chop Tree - allthethings": "Trä är en viktig resurs. Mycket kan tillverkas av det. Gå till trädet och använd kommandot \"förstör block\" för att hugga ned det.",
+        "allthethings-anigif-instructions": "Flytta mig åt öster för att få mig till grisen!"
       }
     }
   }

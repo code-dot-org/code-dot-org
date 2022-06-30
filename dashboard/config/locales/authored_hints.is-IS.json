@@ -10548,6 +10548,15 @@
         },
         "helloworld_animals_say": {
           "hello-world-first-solution-bear": "Til að láta björnin segja eitthvað er hægt að tengja kóðakubbana svona:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "Það eru tvær leiðir til að leysa þessa þraut!"
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "Listamaðurinn þarf að snúa um 120 gráður á milli ferninga til að teikna þetta mynstur."
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Prófaðu að láta Umbann byggja brýr svo að Alex eða Steve geti gengið um utan við jaðar kortsins."
         }
       }
     }

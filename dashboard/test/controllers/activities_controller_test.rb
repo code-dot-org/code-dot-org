@@ -301,7 +301,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      total_lines: 15, # No change
       level_source: "http://test.host/c/#{assigns(:level_source).id}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -323,7 +322,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      total_lines: 1015, # Pretend it was 1000
       level_source: "http://test.host/c/#{assigns(:level_source).id}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -898,7 +896,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # find localized test strings for custom lesson names in script
     assert response.key?('lesson_changing'), "No key 'lesson_changing' in response #{response.inspect}"
-    assert_equal('Milestone Lesson 1', response['lesson_changing']['previous']['name'])
+    assert_equal('milestone-lesson-1', response['lesson_changing']['previous']['name'])
   end
 
   test 'milestone post respects level_id for active level' do

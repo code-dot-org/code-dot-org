@@ -44,11 +44,44 @@
         "infinity/Infinity": {
           "name": "Spraotharlann Disney Infinity"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "An Uair Chódála 2013"
+        },
         "dance-2019/Dance Party": {
           "name": "Cóisir Dhamhsa (2019)"
         },
         "oceans/Oceans": {
           "name": "AI ar son an Aigéin"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Seicheamhú"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Lúba"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Teagmhais"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Coinníollacha"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Feidhmeanna"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Athróga"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Lúba \"Do Gach\""
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Saotharlann na Sprideanna"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Buntús na Ríomheolaíochta"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Buntús na Ríomheolaíochta"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Bog é, Bog é"
@@ -467,6 +500,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Sár-Dhúshlán - Cuimsitheach"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Buntús na Ríomheolaíochta"
+        },
+        "20-hour/The Maze": {
+          "name": "An Chathair Ghríobháin"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Smaointeoireacht Ríomhaireachtúil"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "20-hour/The Artist": {
+          "name": "An tEalaíontóir"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algartaim"
+        },
+        "20-hour/The Artist 2": {
+          "name": "An tEalaíontóir 2"
+        },
+        "20-hour/Functions": {
+          "name": "Feidhmeanna"
+        },
+        "20-hour/The Farmer": {
+          "name": "An Feirmeoir"
+        },
+        "20-hour/Conditionals": {
+          "name": "Coinníollacha"
+        },
+        "20-hour/The Artist 3": {
+          "name": "An tEalaíontóir 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Cumadh Ceoil"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "An Feirmeoir 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Teibíocht"
+        },
+        "20-hour/The Artist 4": {
+          "name": "An tEalaíontóir 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Códáil Sealaíochta"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "An Feirmeoir 3"
+        },
+        "20-hour/The Internet": {
+          "name": "An tIdirlíon"
+        },
+        "20-hour/The Artist 5": {
+          "name": "An tEalaíontóir 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Clabhsúr"
+        },
         "course2/Graph Paper Programming": {
           "name": "Ríomhchlárú ar Ghrafpháipéar"
         },
@@ -643,6 +736,48 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Míreanna Mearaí"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Míreanna Mearaí"
+        },
+        "allthethings/Maze": {
+          "name": "Cathair Ghríobháin"
+        },
+        "allthethings/Artist": {
+          "name": "Ealaíontóir"
+        },
+        "allthethings/Bee": {
+          "name": "Beach"
+        },
+        "allthethings/PlayLab": {
+          "name": "Spraotharlann"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Preabadh"
+        },
+        "allthethings/Multi": {
+          "name": "Ilrogha"
+        },
+        "allthethings/Match": {
+          "name": "Meaitseáil"
+        },
+        "allthethings/Studio": {
+          "name": "Stiúideo"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Web Lab": {
+          "name": "Saotharlann an Ghréasáin"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Saotharlann na Sprideanna"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Miontreoirlínte"
         },
         "coursef-2021/lesson-6": {
           "name": "Fáilte go dtí Saotharlann na Sprideanna"

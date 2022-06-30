@@ -10,7 +10,6 @@ import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import {allowConsoleWarnings} from '../../../../util/testUtils';
-import experiments from '@cdo/apps/util/experiments';
 
 describe('DetailViewContents', () => {
   allowConsoleWarnings();
@@ -20,18 +19,10 @@ describe('DetailViewContents', () => {
   let server;
   before(() => {
     server = sinon.fakeServer.create();
-    experiments.setEnabled(
-      experiments.TEACHER_APPLICATION_SAVING_REOPENING,
-      true
-    );
   });
 
   after(() => {
     server.restore();
-    experiments.setEnabled(
-      experiments.TEACHER_APPLICATION_SAVING_REOPENING,
-      false
-    );
   });
 
   let context;

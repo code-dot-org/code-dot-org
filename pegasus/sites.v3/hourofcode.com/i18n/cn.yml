@@ -536,14 +536,14 @@ cn:
   hoc_faq_last_year: 尝试教程
   hoc_faq_when_is_hoc_q: 编程一小时活动将在什么时候举行？
   hoc_faq_when_is_hoc_a: 编程一小时是每年在 <a href='%{csedweek_url}'> 计算机科学教育周</a> 期间举行的。%{campaign_date_year}
-    计算机科学教育周将在 %{campaign_date_full} 举办，但你一年四季都可以参与或者举办编程一小时活动。为了纪念 <a href='%{grace_hopper}'>
-    海军上将 Grace Murray Hopper</a>  （1906 年 12 月 9 日） ，每年计算机科学教育周的举办时间是他的生日。
+    计算机科学教育周将在 %{campaign_date_full} 举办，但你一年四季都可以参与或者举办编程一小时活动。计算机科学教育周每年举行一次，以纪念计算机先驱<a
+    href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>的生日（1906年12月9日）。
   hoc_faq_when_is_hoc_a_markdown: 编程一小时每年在[计算机科学教育周](%{csedweek_url})期间举行。%{campaign_date_year}计算机科学教育周将在%{campaign_date_full}举办，但你全年都可以参与或举办编程一小时活动。计算机科学教育周每年举行一次，以纪念计算机先驱[Admiral
     Grace Murray Hopper](%{grace_hopper})的生日（1906年12月9日）。
   hoc_faq_why_cs_q: 为什么要学习计算机科学？
   hoc_faq_why_cs_a: "<i>每一个</i>学生都应该获得学习计算机科学的机会。它有益于培养解决问题的能力，逻辑能力和创造性。通过早期的学习，学生们将为他们在21世纪的职业成功打下基础。在<a
     href='http://code.org'>Code.org</a>上查看更多数据。"
-  hoc_faq_why_cs_a_markdown: _每个_学生都应该有机会学习计算机科学。它有助于培养问题解决技能、逻辑能力和创造力。尽早开始学习能帮助学生在21世纪任何职业道路上奠定成功的基础。查看更多统计数据[here](%{stats_url})。
+  hoc_faq_why_cs_a_markdown: _每个_学生都应该有机会学习计算机科学。它有助于培养问题解决技能、逻辑能力和创造力。尽早开始学习能帮助学生在21世纪任何职业道路上奠定成功的基础。在[here](%{stats_url})查看更多统计数据。
   hoc_faq_how_participate_q: 我怎样才能参加编程一小时活动？
   hoc_faq_how_participate_a: "<a href='/how-to'>点击这里阅读使用指南</a>，开启新的旅程！你可以在学校或者你所在的团体&mdash;，比如在课外兴趣小组、非营利性组织或是在工作圈子里组织《编程一小时》活动。当然，你自己也可以选择在%{campaign_date}
     来一次自我挑战。"
@@ -556,79 +556,77 @@ cn:
   hoc_faq_host_q: 我完全不懂编程。我也可以举办这个活动吗？
   hoc_faq_host_a: 当然。代码一小时活动是自我引导的。你要做的就是 <a href='%{codeorg_url}/learn'> 尝试我们当前的教程</a>，挑选你想要的教程，并安排一个小时的时间
     &mdash; 其余部分就交给我们。我们提供了适应每个年龄和经验水平的课程，从幼儿园到成年。阅读我们 <a href='/how-to'> 如何策划</a>，来开始规划您的编程一小时活动。
-  hoc_faq_host_a_markdown: "  当然了。一小时玩程序活动侧重于自我指导。你所要做的就是 [尝试我们当前的教程] (%{codeorg_url}/learn)，选择你想要的教程，并选择一个小时的时间——其余的事情我们会处理。我们还为幼儿园以上的每个不同年龄段和经验水平的人提供了不同选择。马上阅读我们的
-    [指南] (%{howto})，开始规划你的活动。"
+  hoc_faq_host_a_markdown: 当然。编程一小时活动侧重于自我指导。你所要做的就是[尝试我们当前的教程](%{codeorg_url}/learn)，选择你想要的教程，并选择一个小时的时间
+    — 其余的事情我们会处理。我们还为幼儿园以上的每个不同年龄段和经验水平的人提供不同选择。马上阅读我们的[指南](%{howto})，开始规划你的活动。
   hoc_faq_devices_q: 我应该给我的学生用什么设备?
   hoc_faq_devices_a: Code.org教程在所有设备和浏览器上都能使用。你可以点击<a href='%{codeorg_url}/educate/it'>这里</a>看到更多code.org教程的技术要求信息。非code.org教程的技术要求信息在
     <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> 的教程具体描述里。别忘了我们也提供了离线活动，如果你的学校不能使用这些教程！
-  hoc_faq_devices_a_markdown: "  Code.org 的教程可以在所有装置和浏览器上使用。你可以在 [这里] (%{codeorg_url}/educate/it)
-    看到更多关于 Code.org 教程技术需求的信息。非 Code.org 教程的技术需求可以在 [%{partner_url}/learn] (%{codeorg_url}/learn)
-    的教程具体说明中找到。不要忘了，如果你的学校不能满足教程的要求，我们还提供 [不插电活动] (%{unplugged_url})！"
+  hoc_faq_devices_a_markdown: Code.org的教程可以在所有设备和浏览器上使用。你可以在[这里](%{codeorg_url}/educate/it)看到更多关于Code.org教程技术需求的信息。非Code.org教程的技术需求可以在[%{partner_url}/learn](%{codeorg_url}/learn)的教程具体说明中找到。不要忘了，如果你的学校不能满足教程的要求，我们还提供[离线活动](%{unplugged_url})！
   hoc_faq_need_computers_q: 我需要为所有的学生准备计算机吗？
-  hoc_faq_need_computers_a: 不需要。我们的教程可以在电脑、智能手机、平板电脑上运行，也可以完全不用电脑来完成！无论你在哪里，有什么设备，都可以参加编程一小时的活动。<p><i>这里有一些参考选项：</i>
-    <br> <ul> <li><b>结对学习</b> 研究表明，学生在共享一台电脑并且共同工作的<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>结对编程</a>中学习效果最好，应当鼓励学生们结对互助。<li><b>使用投影设备</b>使用投影设备和连接互联网的电脑，通过一起观看视频，轮流解决谜题和回答问题，全体学员可以一起参加编程一小时活动。<li><b>不插电活动</b>我们提供完全不需要电脑的编程一小时活动教程。</ul>
-  hoc_faq_need_computers_a_markdown: "  我们的 Hour of Code 教程可以在计算机、智能手机、平板计算机上使用，有些甚至不需要计算机！无论你在哪里，无论你条件如何，你都可以加入。
-    \     _这里有几个选项：_       - **配对合作。**[研究表明] (%{pair_programming_research}) 学生在 [配对程序设计](%{pair_programming_video})
-    中共享一台电脑共同学习，效果最好。鼓励学生双人合作。   - **使用投影屏幕。**如果你有一台投影仪和屏幕给连上网络的计算机用，你的整个小组就可以一起进行“一小时玩程序”。一起观看视频部分，然后轮流解谜或回答问题。
-    \  - **不插电。**我们提供完全 [不需要计算机的教程] (%{unplugged_url})。"
+  hoc_faq_need_computers_a: 不。我们的编程一小时教程可以在电脑、智能手机、平板电脑上运行，也可以完全不用电脑来完成！无论你在哪里，有什么设备，都可以参加编程一小时的活动。<p><i>这里有一些参考选项：</i>
+    <br> <ul> <li><b>结对学习</b> <a href='%{pair_programming_research}'>研究表明</a>，学生在共享一台电脑并且共同工作的<a
+    href='%{pair_programming_video}'>结对编程</b>中学习效果最好，应当鼓励学生们结对互助。<li><b>使用投影设备</b>使用投影设备和连接互联网的电脑，通过一起观看视频，轮流解决谜题和回答问题，全体学员可以一起参加编程一小时活动。<li><b>离线活动。</b>我们提供<a
+    href='%{unplugged_url}'>完全</a>不需要电脑的教程。</ul>
+  hoc_faq_need_computers_a_markdown: |-
+    不。我们的编程一小时教程可以在个人电脑、智能手机、平板电脑使用，有些甚至不需要电脑！无论你在哪里，无论你条件如何，你都可以加入。
+
+    _这里有几个选项：_
+
+    - **组对合作。**[研究表明] (%{pair_programming_research}) 学生在[结对编程](%{pair_programming_video})中共享一台电脑共同学习，效果最好。鼓励学生双人合作。
+    - **使用投影屏幕。**如果你有投影仪和屏幕供联网的电脑使用，你的整个小组就可以一起进行“编程一小时”。一起观看视频部分，然后轮流解谜或回答问题。
+    - **离线活动。**我们提供完全[不需要电脑的教程](%{unplugged_url})。
   hoc_faq_international_q: 我在<country>。我如何加入国际化的活动？
   hoc_faq_international_a: 任何人在世界任何地方，都可以组织一个编程一小时活动。去年，全世界的学生一起参与编程一小时。查看更多<a href='/promote'>点击这里</a>。
-  hoc_faq_international_a_markdown: 任何人在世界任何地方，都可以组织编程一小时活动。去年，全世界的学生一起参与编程一小时。查看更多[here](%{promote})。
+  hoc_faq_international_a_markdown: 任何人在世界任何地方，都可以组织编程一小时活动。去年，全世界的学生一起参与编程一小时。请在[here](%{promote})查看更多。
   hoc_faq_tutorial_q: 我怎样才能编写编程一小时的教程？
   hoc_faq_tutorial_a: 如果你有兴趣成为教程的合作伙伴，<a href='targetHOC'> 请参阅我们的指南和介绍</a>。我们需要各种引人入胜的项目，但主要目标是为那些不熟悉计算机科学的学生和教师提供更优化的体验。
-  hoc_faq_tutorial_a_markdown: "  如果你有兴趣成为教程合作伙伴，请 [参见我们的指南和说明] (%{tutorial_guidelines})。我们希望举办各种引人入胜的活动，但主要目标是为刚接触计算机科学的学生和教师优化体验。"
+  hoc_faq_tutorial_a_markdown: 如果你有兴趣成为教程合作伙伴，请[参见我们的指南和说明](%{tutorial_guidelines})。我们希望举办各种引人入胜的活动，但主要目标是为刚接触计算机科学的学生和教师优化体验。
   hoc_faq_account_q: 学生需要使用帐户登录吗?
   hoc_faq_account_a: 不，学生尝试编程一小时完全不需要注册或登陆。大多数<a href='http://code.org/learn/beyond'>后续课程</a>需要创建账户以保存学生的学习进度。
-  hoc_faq_account_a_markdown: "  不，学生完全不需要注册或登入就可以尝试“一小时玩程序”。大多数 [后续课程] (%{codeorg_url}/learn/beyond)
-    则需要建立账户来储存学生的学习进度。另外，注册“一小时玩程序”并不会自动建立一个 Code Studio 账户。如果你想为你的学生建立账户，请按照以下 [说明](https://youtu.be/_smelV_KISE)
-    操作。"
+  hoc_faq_account_a_markdown: 不，学生完全不需要注册或登入就可以尝试“编程一小时”。大多数[后续课程](%{codeorg_url}/learn/beyond)则需要建立账户来储存学生的学习进度。另外，注册“编程一小时”并不会自动建立一个代码工作室账户。如果你想为你的学生建立账户，请按照以下[instructions](%{section_instructions_url})操作。
   hoc_faq_high_school_q: 哪些活动适合高中生？
-  hoc_faq_high_school_a: 在所有年龄段，我们建议你在<a href='http://code.org/learn'> Code.org/learn</a>初学者教程开始尝试，如愤怒的小鸟教程或安娜和艾尔莎教程。一名高中学生应该能够在30分钟内完成下列操作之一，然后可以在JavaScript中尝试更高级教程，如Khan
-    Academy或CodeHS。
-  hoc_faq_high_school_a_markdown: "  我们的《星球大战》和《我的世界》教程很适合高中生，尤其是《星球大战》JavaScript
-    版和两个教程上的免费游戏关卡。另外，我们建议尝试从 [%{partner_url}/learn] (%{codeorg_url}/learn) 上的某个初级教程开始，比如《愤怒的小鸟》或《安娜和艾尔莎》的教程。一个高中生应该可以在
-    30 分钟内完成其中的一个教程，然后可以尝试更高阶的 JavaScript 教程，比如可汗学院或 CodeHS。"
+  hoc_faq_high_school_a: 我们的星球大战和《我的世界》教程是非常适合高中生，特别是星球大战JavaScript版本和自由发挥级别的两个教程。另外，我们建议您尝试在<a
+    href='%{codeorg_url}/learn'>%{partner_url}/learn</a>入门教程，比如愤怒的小鸟或安娜和埃尔莎的教程。一个高中生应该能够在30分钟内完成其中的一个，然后可以在JavaScript尝试一个更高级教程，如可汗学院或CodeHS。
+  hoc_faq_high_school_a_markdown: 我们的《星球大战》和《我的世界》教程很适合高中生，尤其是《星球大战》JavaScript版和两个教程上的自由发挥级别。另外，我们建议尝试从[%{partner_url}/learn](%{codeorg_url}/learn)上的某个初级教程开始，比如《愤怒的小鸟》或《安娜和艾尔莎》的教程。一个高中生应该可以在
+    30 分钟内完成其中的一个教程，然后可以尝试更高阶的JavaScript教程，比如可汗学院或CodeHS。
   hoc_faq_scratch_q: 我正在为编程一小时制作简易程序，但是如果我的学生只有iPad没有笔记本电脑怎么办？
   hoc_faq_scratch_a: Scratch不能在平板电脑上运行。如果你的学生都很小，他们可以使用ScratchJR iPad应用程序（早期阅读器）。如果你看一下<a
     href='http://code.org/learn'> Code.org/learn</a>的教程，你可以找到在iPad可行的其他教程 - Code.org，Tynker，
     Lightbot，或CodeSpark。
   hoc_faq_scratch_a_markdown: Scratch不能在平板电脑上运行。如果你的学生都很小，他们可以使用ScratchJR iPad应用程序（年幼阅读者）。如果你查看[%{partner_url}/learn](%{codeorg_url}/learn)上的教程，你可以找到在iPad运行的其他教程
-    - 来自Code.org，Tynker，Lightbot或CodeSpark。
+    - 来自Code.org、Tynker、Lightbot或CodeSpark。
   hoc_faq_count_hoc_q: 你对《编程一小时》有多期待？
   hoc_faq_map_q: 为什么在地图上见不到我的小点?
   hoc_faq_map_a: 非常抱歉，你不能在编程一小时地图上看到你的活动。因为有成千上万的组织者报名，地图会将活动都聚集起来，几个活动只会显示一个点。如果你点击地图下方<a
     href='%{events_url}'>活动页面</a>链接，就会到达按照省/州组织的活动列表，这样就能在列表里看到你的活动了。另外，由于数千人都在报名编程一小时，地图和活动列表通常需要48小时来更新。过几天再来看吧！
-  hoc_faq_map_a_markdown: "  很抱歉，在“一小时玩程序”地图上看不到你的活动。由于有成千上万的组织者注册，所以地图汇总了所有资料，并在一个点上显示多个活动。如果你点选地图下方的
-    [活动页面] (%{events_url}) 连结，你会被引导到一个按州划分的所有活动列表上，你可以在那里找到你的活动列表。此外，由于有成千上万的人报名参加“一小时玩程序”，地图和活动列表通常需要
-    48 小时才能更新。请在几天后再来检视！"
+  hoc_faq_map_a_markdown: 非常抱歉，你不能在编程一小时地图上看到你的活动。因为有成千上万的组织者报名，地图会将活动都聚集起来，几个活动只会显示一个点。如果你点击地图下方[活动页面](%{events_url})链接，就会到达按照省/州组织的活动列表，这样就能在列表里看到你的活动了。另外，由于数千人都在报名编程一小时，地图和活动列表通常需要48小时来更新。过几天再来看吧！
   hoc_faq_count_hoc_a: "《编程一小时》跟踪器不会对使用情况进行准确测量。在学员参与《编程一小时》时，我们不会对学生的登录信息进行精准统计，特别是因为我们不需要学生注册或登陆。因此，高估和低估的情况会同时发生。<a
     href='http://code.org/loc'>点击这里</a>阅读详细信息。"
-  hoc_faq_count_hoc_a_markdown: "  一小时玩程序追踪器并不能精确测量使用情况。当我们追踪“一小时玩程序”的参与情况时，我们并不能完美地计算出唯一的学生
-    ID，特别是因为我们并不要求学生登入或注册。因此，我们会同时多算和少算参与者。在 [这里] 阅读所有细节 (%{codeorg_url}/loc)。"
+  hoc_faq_count_hoc_a_markdown: 编程一小时跟踪器并不是对使用量的精确测量。在跟踪参与编程一小时的时候，我们并不会精确统计学生ID，特别是因为我们不要求学生登录或注册。因此，我们会过高过低的统计参与者的情况会同时发生。请在[这里](%{codeorg_url}/loc)阅读详细信息。
   hoc_faq_one_hour_q: 一小时能学到多少？
   hoc_faq_one_hour_a: 编程一小时的目的不是让任何人在一小时内成为一个计算机科学的专家。一个小时只够用来了解计算机科学的趣味和创造力，它是可以被所有年龄，无论什么背景的学生使用的。这个运动成功的衡量标准不是有多少计算机科学的学生学习了，而是由有多广泛的跨性别，跨种族和社会经济组织的参与来反映，以及能够让更多的各个年级的学生愿意注册和参与计算机科学的课程。上百万参与过的老师和学生已经决定超越一小时——去学习一整天，一周或更长，并且很多学生已经决定报名参加整个课程（甚至大学专业）。<br/><br/>除了学生之外，另一种“学习者”是教育工作者，他们在这一小时后，虽然他们可能没有计算机科学的学位，也会有信心能够讲授计算机科学了。数万名教师决定进一步追寻计算机科学，提供进一步的在线课程和离线课程。学校的管理者也是一样，他们人知道了计算机科学是学生们需要的，也是老师能教的。<br/><br/>总之，这就是所有的参与者在一小时内得到的，也是我们所做的。
-  hoc_faq_one_hour_a_markdown: "  “一小时玩程序”的目标不是要教任何人在一小时内成为计算机科学家或者专家。一个小时的时间只够让大家了解到计算机科学是有趣的、有创造力的，是所有年龄段、所有学生（无论什么背景）都能接触到的。衡量这项活动成功与否的标准并不在于学生学到了多少计算机科学知识——而在于让不同性别、种族和社会经济群体广泛参与，以及由此带来的各年级计算机科学课程入学率和参与率的提高。数以百万计的教师和学生参与活动之后都决定要超越一个小时——学习一整天或一整周或更长的时间，还有许多学生因此决定报读一整门课程（甚至大学专业）。
-    \     除了学生群体，教育者同时也是另一群“学习者”，他们在这一小时后获得了信心，认为自己可以教授计算机科学，即使他们可能没有计算机科学的大学学位。数以万计的教师决定进一步钻研计算机科学，要么参加
-    PD，要么提供后续的在线课程，或者两者兼而有之。这同样也适用于学校管理者，他们意识到计算机科学是他们的学生想要学系的，而且他们的老师也有能力胜任教学任务。
-    \     最重要的是，所有参与者在一小时内都能学到的是：我们可以做到。"
+  hoc_faq_one_hour_a_markdown: |-
+    编程一小时的目标不是让任何人在一小时内成为计算机科学家或者专家。一个小时的时间只够让大家了解到计算机科学是有趣的、有创造力的，是所有年龄段、所有学生（无论什么背景）都能接触到的。衡量这项活动成功与否的标准并不在于学生学到了多少计算机科学知识，而在于让不同性别、种族/民族和社会经济群体广泛参与，以及由此带来的各年级计算机科学课程入学率和参与率的提高。数以百万计的教师和学生参与活动之后都决定要超越一个小时：学习一整天或一整周或更长的时间，还有许多学生因此决定报读一整门课程（甚至大学专业）。
+
+    除了学生群体，教育工作者同时也是另一群“学习者”，他们在这一小时后获得了信心，认为自己可以教授计算机科学，即使他们可能没有计算机科学的大学学位。数以万计的教师决定进一步钻研计算机科学，要么参加 PD，要么提供后续的在线课程，或者两者兼而有之。这同样也适用于学校管理者，他们意识到计算机科学是他们的学生想要的，而且他们的老师也有能力胜任教学任务。
+
+    最重要的是，所有参与者在一小时内都能学到的是：我们可以做到。
   hoc_faq_more_questions_q: 还有更多的问题吗？
   hoc_faq_more_questions_a: 试着在我们的 <a href='http://support.code.org'> 支持论坛</a> 中找到答案。
   hoc_faq_more_questions_a_markdown: 尝试在我们的[支持论坛](http://support.code.org)寻找答案。
   hoc_faq_keep_learning_q: 我如何在一小时后还接着学习？
   hoc_faq_keep_learning_a: 任何人在任何时候都可以组织编程一小时。这个指南是全年的。你可以认为我们的教程和课程是永远在线的。 请转到<a
     href='/promote'>活动的资源</a>获得操作指南和其它资源来帮助你成功举办编程一小时活动。
-  hoc_faq_keep_learning_a_markdown: "  任何人在任何时候都可以举办“一小时玩程序”活动。教程全年不间断。放心，我们所有的教程和课程都会在我们的网站上永久保留。请到
-    [我们的资源] (%{promote}) 检视活动指南和其他资源，以帮助你的“一小时玩程序”活动获得成功。"
+  hoc_faq_keep_learning_a_markdown: 任何人在任何时候都可以组织编程一小时。这个指南是全年的。你可以认为我们的教程和课程是永远在线的。请前往[我们的资源](%{promote})获取操作指南和其他资源来帮助你成功举办编程一小时活动。
   hoc_faq_certificates_q: 在哪里可以为我的学生打印证书？
   hoc_faq_certificates_a: 转到<a href='%{codeorg_url}/certificates'>证书页面</a>，你就能在开始之前为全班打印证书了。你也能给参加了《我的世界》教程的学生打印<a
     href='%{codeorg_url}/certificates?course=mc'>特别证书</a>。
-  hoc_faq_certificates_a_markdown: "  就我们的 [证书页面] (%{codeorg_url}/certificates)，在这里你可以提前打印全班的证书。你也可以打印
-    [特殊证书] (%{codeorg_url}/certificates?course=mc) 给正在学习《我的世界》教程的学生。"
+  hoc_faq_certificates_a_markdown: 前往我们的[证书页面](%{codeorg_url}/certificates)，在这里你可以提前打印全班的证书。你也可以打印[特殊证书](%{codeorg_url}/certificates?course=mc)
+    给正在学习《我的世界》教程的学生。
   hoc_faq_logo_q: 是否有我能否使用编程一小时标志或名称的限制？
   hoc_faq_logo_a: 编程一小时已进行商标注册。我们不希望阻止它的使用，但我们想要确保它的使用符合限制。请参阅 <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>
     使用准则</a>。
-  hoc_faq_logo_a_markdown: "  Hour of Code 是一个商标。我们不想阻止它的使用，但我们希望确保它的使用符合一些限制。请参阅
-    [使用指南] (%{logo_url})。"
+  hoc_faq_logo_a_markdown: 编程一小时已进行商标注册。我们不希望阻止它的使用，但我们想要确保它的使用符合限制。请参阅[使用指南](%{logo_url})。
   stats_hoc_2013_image_alt: 2013年开始编程一小时活动统计数据
   stats_growth: 它以最快的速度到达 1500 万用户。
   stats_i18n: 学生在用40种语言学习

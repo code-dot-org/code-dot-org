@@ -1239,6 +1239,7 @@ hi:
             '180': बाएं
             '270': ऊपर
       gamelab_makeSpritesWithSize:
+        text: बनाएं {NUM} नया {SIZE} {COSTUME} स्प्राइट्स
         options:
           SIZE:
             '30': छोटा
@@ -1456,6 +1457,46 @@ hi:
         text: "{SPRITE} {SPEECH} बोलता है"
       gamelab_spriteSayTime:
         text: "{SPRITE}{TEXT1}को{NUM}सेकंड तक बोलता है"
+      gamelab_spriteThink:
+        text: "{SPRITE} सोचें {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}सोचें{TEXT1}के लिए{NUM}सेकंड्स"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} सोचें {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': हम्म...
+            '"I am hungry, too."': मुझे भी भूख लगी है।
+            '"I only want the biggest goat."': मुझे केवल सबसे बड़ी बकरी चाहिए।
+            '"I''m a green troll."': मैं एक हरा ट्रोल हूँ।
+            '"No one will cross my bridge."': कोई मेरे पुल को पार नहीं करेगा।
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} सोचें {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': हम्म...
+            '"Time to make friends with the sheep."': भेड़ों से दोस्ती करने का समय है।
+            '"She''ll never recognize me now."': वह अब मुझे कभी नहीं पहचान पाएगी।
+            '"This costume keeps me warm."': यह पोशाक मुझे गर्म रखती है।
+            '"I am actually a wolf."': मैं वास्तव में एक भेड़िया हूँ।
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} सोचें {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': हम्म...
+            '"I''m feeling sleepy."': मुझे नींद आ रही है।
+            '"No one could ever beat me."': मुझे कभी कोई हरा नहीं सकता था।
+            '"I''ve done this race before."': मैं यह रेस पहले भी की है।
+            '"My feet are bigger than Turtle''s feet."': मेरे पैर कछुए के पैरों से बड़े हैं।
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} सोचें {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': हम्म...
+            '"I''m so hungry."': मुझे बहुत भूख लगी है।
+            '"I''m a visitor in this town."': मैं इस शहर में एक आगंतुक हूं।
+            '"If we share, we''ll all have something to eat. "': यदि हम साँझा करते हैं, तो हम सभी के पास खाने के लिए कुछ न कुछ होगा।
+            '"I''ll trick everyone into giving me their food."': मैं सबके साथ मुझे उनका खाना देने में छल करूंगा।
       gamelab_startAvoiding:
         text: "{SPRITE} {TARGET} से बचना शुरू करता है"
       gamelab_startFollowing:

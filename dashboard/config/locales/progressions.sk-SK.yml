@@ -9,10 +9,26 @@ sk:
       'AI: Training Data & Bias - Video': 'Umelá inteligencia: Trénovacie dáta a skreslenie
         – Video'
       Accelerometer Events: Udalosti s akcelerometrom
+      Add Movement: Pridaj pohyby
+      Add Sprites: Pridaj sprajty
+      Add Text: Pridaj text
       Adding Images: Pridanie obrázkov
       Adding Screens: Pridanie obrazoviek
       Animate Your Scene: Animuj svoju scénu
       App Lab Intro - Video: Úvod do App Labu – video
+      'App: Choose a Kid''s Movie': 'Aplikácia: Výber detského filmu'
+      'App: Friend Finder': 'Aplikácia: Nájdi svojich priateľov'
+      'App: Guess the Number': 'Aplikácia: Uhádni číslo'
+      'App: How Many Countries': 'Aplikácia: Koľko krajín'
+      'App: Is It Your Birthday?': 'Aplikácia: Máš dnes narodeniny?'
+      'App: My Famous Birthday': 'Aplikácia: Moje slávne narodeniny'
+      'App: National Parks': 'Aplikácia: Národné parky'
+      'App: Outfit Picker': 'Aplikácia: Výber oblečenia'
+      'App: Pet Chooser': 'Aplikácia: Výber zvieratka'
+      'App: Stamp Notebook': 'Aplikácia: Pečiatkovanie v zápisníku'
+      'App: Story Creator': 'Aplikácia: Tvorba príbehov'
+      'App: The Fastest Finger': 'Aplikácia: Rýchle prsty'
+      'App: Where Should I Live?': 'Aplikácia: Kde mám bývať?'
       Arrays: Rady
       Artist Intro with JR Hildebrand: Úvod k Umelcovi s JR Hildebrandom
       Artist Intro with JR Hildebrande: Úvod k Umelcovi s JR Hildebrandom
@@ -64,6 +80,7 @@ sk:
       'Course F: Play Lab Project': 'Kurz F: Projekt v Play Labe'
       'Course F: Play Lab Project - Revise': 'Kurz F: Projekt v Play Labe – opakovanie'
       Create Your Own Animation: Vytvor svoju vlastnú animáciu
+      Create a Background: Vytvor pozadie
       Create a Story: Vytvor príbeh
       Create your project: Vytvor svoj projekt
       Customize: Prispôsobiť
@@ -72,19 +89,23 @@ sk:
       De-bugging with the Step Button: Ladenie programu pomocou tlačidla krokovania
       Debugging: Ladenie
       Debugging with the Step Button: Ladenie pomocou tlačidla Krok
+      'Demo App: Interactive Card': 'Ukážková aplikácia: Interaktívna pohľadnica'
       Demo Apps: Demo aplikácie
       Design Mode: Dizajnový mód
       Design Mode Elements: Prvky dizajnového módu
       Designing for Accessibility: Navrhovanie s ohľadom na zjednodušenie ovládania
       Digital Sharing - Unplugged Activity: Digitálne zdieľanie – aktivita bez počítača
       Dogger Example: Príklad s loďou
+      Draw a Background: Nakresli pozadie
       Drawing: Kreslenie
+      Drawing Shapes: Kreslenie tvarov
       Editing Images: Úprava obrázkov
       End of Course Projects: Záverečné projekty
       Events: Udalosti
       Events and Linking Screens: Udalosti a prepájanie obrazoviek
       Events and Properties: Udalosti a vlastnosti
       Example: Príklad
+      Example Animated Scene: Príklad animovanej scény
       Example Projects: Vzorové projekty
       Example projects: Vzorové projekty
       Expanding Personal Website: Rozšírenie vlastnej webstránky
@@ -139,6 +160,7 @@ sk:
       Intro to Variables: Predstavenie premenných
       Introducing Sprite Lab: Predstavenie Sprite Labu
       Introduction to Arrays: Úvod do zoskupení
+      Introduction to Game Lab: Úvod do Game Labu
       Introduction to Variables: Predstavenie premenných
       Introduction to Variables - Part 1: Predstavenie premenných - 1. časť
       Iteration and Parameters: Opakovanie a parametre
@@ -155,6 +177,7 @@ sk:
       Lists in HTML: Zoznamy v HTML
       Loops with the Artist: Cykly s umelcom
       Make a Prediction: Odhadni výsledok
+      Make an Interactive Card: Vytvor si interaktívnu pohľadnicu
       Make it Interactive: Spravte to interaktívne
       Making Scenes: Vytvávaranie scén
       Making Songs: Tvorba pesničiek
@@ -203,6 +226,7 @@ sk:
       Overview: Prehľad
       Pair Programming: Programovanie v páre
       Picturing Data: Zobrazenie dát v grafoch
+      Plan Your Scene: Naplánuj si scénu
       Planning: Plánovanie
       Platform Jumper - Background and Variables: Plošinový skokan - Pozadie a premenné
       Platform Jumper - Items: Plošinový skokan - Prvky
@@ -221,11 +245,14 @@ sk:
       Project: Projekt
       Project - Background and Variables: Projekt - Pozadie a premenné
       Project - Sprites and Interactions: Projekt - "Sprite" objekty a interakcie
+      Project Guide: Sprievodca projektom
       Project Work: Projektová práca
       Properties: Vlastnosti
       Publishing Your Website: Publikovanie tvojej webstránky
       Quarter Notes: Štvrťové noty
+      Quick Check: Rýchla kontrola
       RGB Exploration: Objavovanie RGB
+      Random Numbers: Náhodné čísla
       Reading Sensors: Čítanie snímačov
       Reflection: Reflexia
       Relay Programming - Unplugged Activity: Štafetové programovanie – aktivita bez
@@ -236,6 +263,8 @@ sk:
       Repeat Unit Statements: Príkazy „opakuj až kým neplatí“
       Repeat Until Statements: Príkazy „opakuj až kým neplatí“
       Review: Opakovanie
+      Review Your Animated Scene: Skontroluj svoju animovanú scénu
+      Review Your Scene: Skontroluj si scénu
       Revise Artist Project: Zreviduj projekt Umelec
       Revise Sprite Lab Project: Reviduj Sprite Lab projekt
       Robot Doodle: Robotova čmáranica
@@ -246,6 +275,7 @@ sk:
       Sensor Events: Udalosti obrazovky
       Sensors to Colors: Prevod zo snímačov na farby
       Setting Properties: Nastavenie vlastností
+      Shapes and Parameters: Tvary a parametre
       Shapes and the Draw Loop: Tvary  a vykresľovací cyklus
       Share Your App: Zdieľaj svoju appku
       Side Scroller: Posúvačka (side-scroller)
@@ -259,8 +289,9 @@ sk:
       Speed it Up, Slow it Down: Zrýchli, spomaľ
       Sprite Lab Example Project: Sprite Lab ukážkový projekt
       Sprite Lab Project: Lab postáv projekt
-      Sprite Movement: Pohyb "sprite" objektu
+      Sprite Movement: Pohyb sprajtov
       Sprite Properties: Vlastnosti postáv
+      Sprite Scenes: Scény so sprajtmi
       Sprite Velocity: Rýchlosť "sprite" objektu
       Sprites and the Draw Loop: '"Sprite" objekty a vykresľovací cyklus'
       Star Chaser: Lovec hviezd
@@ -287,6 +318,7 @@ sk:
       Using HTML Tags: Použivanie HTML tagov
       Using Random Numbers: Používanie náhodných čísel
       Using Training Data: Používanie trénovacích dát
+      Using the Grid: Používanie mriežky
       Using the LED: Používanie LEDiek
       Using the Repeat Block: 'Video: Používanie bloku „opakuj“'
       Using the Switch: Používanie prepínača
@@ -333,6 +365,7 @@ sk:
       'Video: Harvesting with Conditionals': 'Video: Zber úrody s podmienkami'
       'Video: How to Create a Simple Function': 'Video: Ako vytvoriť jednoduchú funkciu'
       'Video: How to Make a Sprite': 'Video: Ako vytvoriť sprajt'
+      'Video: IOSP Model': 'Video: Model VVPS'
       'Video: Ice Age Loops': 'Video: Cykly Doby ľadovej'
       'Video: If/Else Statements': 'Video: Podmienkové výroky'
       'Video: Impacts on Society': 'Video: Vplyv na spoločnosť'
@@ -343,7 +376,9 @@ sk:
       'Video: Introducing Sprite Lab': 'Video: Predstavenie Sprite Labu'
       'Video: Introduction to Arrays': Úvod do radov
       'Video: Introduction to Play Lab': 'Video: Úvod do Play Labu'
-      'Video: Introduction to Sprites': 'Video: Predstavenie objeku Sprite'
+      'Video: Introduction to Sprites': 'Video: Predstavenie sprajtov'
+      'Video: Introduction to Variables': 'Video: Predstavenie premenných'
+      'Video: Introduction to the Draw Loop': 'Video: Predstavujeme cyklus draw()'
       'Video: Loops in Artist': 'Video: Cykly v Umelcovi'
       'Video: Loops with the Artist': 'Video: Cykly s Umelcom'
       'Video: Maze Intro - Programming with Blocks': 'Video: Úvod k bludiskám – Programovanie
@@ -370,7 +405,7 @@ sk:
       'Video: Outbreak Simulator: Introduction': 'Video: Veľa sprajtov'
       'Video: Pair Programming': 'Video: Párové programovanie'
       'Video: Pair Programming ': 'Video: Párové programovanie'
-      'Video: Problem Solving Process': 'Video: Proces riešenia problémov'
+      'Video: Problem Solving Process': 'Video: Postup riešenia problémov'
       'Video: Programming with Blocks': 'Video: Programovanie pomocou blokov'
       'Video: Programming with Rey and BB-8': 'Video: Programovanie s Rey a BB-8'
       'Video: Properties': 'Video: Vlastnosti'

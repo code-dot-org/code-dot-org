@@ -91,15 +91,15 @@
         "2-3 Bee Loops 7": "Que lindo campo florido!  Ajude a abelha a visitar cada flor. Você consegue achar uma maneira de fazer isso com menos de 7 blocos?",
         "2-3 Bee Loops 8": "Essas flores roxas têm uma quantidade diferente de néctar a cada vez que você executa o desafio. \n\nUse o laço \"enquanto houver néctar\" para coletar todo o néctar.\n\nEsse laço será executado enquanto a condição for verdadeira, neste caso, enquanto `néctar > 0`.",
         "2-3 Bee Loops Assessment 1": "Avaliação: Use um laço `enquanto` para coletar todo o néctar dessas flores.",
-        "2-3 Maze 1": "Você pode me ajudar a pegar o porco malvado? Junte alguns blocos `avance para frente` abaixo do bloco `quando executar` e clique em \"Executar\". ",
+        "2-3 Maze 1": "Leva-me até ao maldito verde! (Tem cuidado com a dinamite)",
         "2-3 Maze 10": "Leva-me até ao maldito verde! (Tem cuidado com a dinamite)",
         "2-3 Maze 12": "Você consegue chegar ao porco criando um laço que usa somente um bloco `mover para frente` dentro de um `repete`?",
         "2-3 Maze 13": "Leve-me até o porco! Você pode usar somente um bloco `mover para frente` desta vez",
         "2-3 Maze 15": "Neste desafio, dois laços `repita` ajudarão você a pegar o porco com o menor número possível de blocos!",
         "2-3 Maze 16": "Os laços funcionam inclusive com mais de um bloco dentro! Você consegue repetir essa sequência para levar o zumbi até o girassol?",
         "2-3 Maze 16 before": "Você consegue descobrir a maneira mais rápida de me levar até o porco?",
-        "2-3 Maze 2": "Esse porco está me irritando. Ajude-me a chegar até ele!",
-        "2-3 Maze 3": "Trace o caminho e leve-me até o porco bobalhão. Desvie dos explosivos, ou penas irão voar!",
+        "2-3 Maze 2": "Leva-me até ao maldito verde! (Tem cuidado com a dinamite)",
+        "2-3 Maze 3": "Mantenha a calma e ajude-me a encontrar o porco malvado. Senão eu posso ficar zangado!",
         "2-3 Maze 4": "Leva-me até ao maldito verde! (Tem cuidado com a dinamite)",
         "2-3 Maze 6": "Mantenha a calma e ajude-me a encontrar o porco malvado. Senão eu posso ficar zangado!",
         "2-3 Maze 7": "Leva-me até ao maldito verde! (Tem cuidado com a dinamite)",
@@ -3711,7 +3711,17 @@
         "CSDU6 arrays select random_2021": "Escreva um programa que escolha e mostre uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)",
         "CSDU6 arrays select variable_2021": "Escreva um programa que escolha e mostre uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)",
         "U4 Model Design 1_2021": "Adicione um grande botão vermelho na sua tela usando o Modo de Design. (Clique para ver as instruções completas)",
-        "courseF_bee_variables_5b_2021": "Crie seu próprio código para resolver este enigma."
+        "courseF_bee_variables_5b_2021": "Crie seu próprio código para resolver este enigma.",
+        "AllTheThings sprite lab with video": "Mude Dusty (o amaranto) para um peixe.",
+        "AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4": "Vamos começar com a imagem 4x4 que Maddie criou no vídeo. Sua tarefa é preencher uma grade 4x4 com cores usando 12-bits por pixel. Aqui estão os requisitos: Linha 1 - preencha com sombras de vermelho. Linha 2 - sombras de verde. Linha 3 - sombras de azul. Linha 4 - sombras de cinza.",
+        "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "Vamos começar com você com a imagem 4x2 que Maddie estava criando, mas deixamos de fora os últimos dois quadrados. Termine a imagem descobrindo quais duas cores estão faltando e codifique-as.",
+        "Artist Autorun Test": "Agora coloque a função dentro de um laço para desenhar esses três quadrados.",
+        "MC Agent Freeplay": "**Jogo Livre:**  É hora de explorar sozinho!",
+        "Overworld Chop Tree - allthethings": "A madeira é um recurso muito importante. Fazem-se muitas coisas com ela. Aproxima-te de uma árvore e utiliza o comando \"destruir bloco\" para a cortares.",
+        "Test embedded K1 Blockly in instructions": "Use três blocos 'mover para oeste' e um bloco 'pegar o milho' para resolver este enigma.",
+        "U1L13 Text Compression": "Procure por padrões (palavras ou frases repetidas) no texto. Insira os padrões que você vê no dicionário à direta. A medida que você insere mais coisas no dicionário, o símbolo da entrada é inserido no texto no lugar do padrão.",
+        "U2L10 NetSim Automatic DNS": "Nesta versão do Simulador de Internet, um DNS (Sistema de Nome de Domínio) é fornecido e você conhece os endereços IP de todos os computadores conectados. Envie uma mensagem no formato GET [hostname] para o serviço DNS no endereço <yourRouterNumber>.15 para obter o endereço de um aluno.",
+        "allthethings-anigif-instructions": "Mova-me para o leste para chegar até o porco!"
       }
     }
   }

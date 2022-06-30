@@ -25,9 +25,9 @@
         "CSD Board Buttons Map": "Botones e interruptores",
         "CSD Board Buttons Map_2018": "Botones e interruptores",
         "CSD Board Buttons Map_2019": "Botones e interruptores",
-        "CSD Board Sensors Map": "Sensores análogos",
-        "CSD Board Sensors Map_2018": "Sensores análogos",
-        "CSD Board Sensors Map_2019": "Sensores análogos",
+        "CSD Board Sensors Map": "Sensores analógicos",
+        "CSD Board Sensors Map_2018": "Sensores analógicos",
+        "CSD Board Sensors Map_2019": "Sensores analógicos",
         "CSD Booleans Map": "Operadores booleanos y de comparación",
         "CSD Booleans Map_2018": "Operadores booleanos y de comparación",
         "CSD Booleans Map_2019": "Operadores booleanos y de comparación",
@@ -1271,7 +1271,10 @@
         "ml-use model card-choice2": "Añade una Imagen",
         "ml-use model card-choice3": "Añade un Sonido",
         "ml-use model card-choice4": "Abre una Página Web",
-        "ml-use model card-choice5": "Leer la Pantalla de Inicio en Voz Alta"
+        "ml-use model card-choice5": "Leer la Pantalla de Inicio en Voz Alta",
+        "MC Agent Freeplay": "Juego libre",
+        "gamelab free play": "Proyecto - Toques finales",
+        "allthethings-playlab-project-backed": "Juego Libre del Laboratorio de juegos"
       }
     }
   }

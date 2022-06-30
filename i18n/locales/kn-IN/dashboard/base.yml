@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 kn:
   activerecord:
     attributes:
@@ -203,6 +209,14 @@ kn:
         math: 'ಗಣಿತ'
         science: 'ವಿಜ್ಞಾನ'
         la: 'ಭಾಷಾ ಕಲೆ'
+        other: "ಇತರೆ"
+        na: 'ಅನ್ವಯಿಸುವುದಿಲ್ಲ'
+      resources:
+        other: "ಇತರೆ"
+        na: 'ಅನ್ವಯಿಸುವುದಿಲ್ಲ'
+      robotics:
+        other: "ಇತರೆ"
+        na: 'ಅನ್ವಯಿಸುವುದಿಲ್ಲ'
       workshop_course:
         csf_express: 'ಸಿಎಸ್ ಫಂಡಮೆಂಟಲ್‌ಗಳು (ಎಕ್ಸ್‌ಪ್ರೆಸ್‌ಗೂ ಮೊದಲು ಅಥವಾ ಎಕ್ಸ್‌ಪ್ರೆಸ್)'
         not_applicable: "ಅನ್ವಯಿಸುವುದಿಲ್ಲ"

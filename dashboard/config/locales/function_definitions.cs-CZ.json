@@ -3961,6 +3961,28 @@
           "move and get nectar with counter": {
             "name": "posuň se a seber nektar pomocí čítače"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "nakresli čtverec"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "sides": "strany",
+              "length": "délka"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "funkce 1"
+          },
+          "function 2": {
+            "name": "funkce 2"
+          }
         }
       }
     }

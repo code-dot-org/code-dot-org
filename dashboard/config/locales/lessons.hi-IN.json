@@ -124,6 +124,9 @@
           "name": "डांस पार्टी - आगे जाएं",
           "purpose": "यह पाठ कोडिंग और इवेंट प्रोग्रामिंग (ब्लॉक्स का उपयोग करते हुए) मुख्य CS अवधारणाएं पेश करता है।"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "आवर ऑफ़ कोड 2013"
+        },
         "dance-2019/Dance Party": {
           "overview": "इस पाठ में, हर आयु वर्ग के छात्र सुरक्षित, सहयोग करने वाले वातावरण में कोडिंग और कंप्यूटर साइंस का शुरूआती अनुभव प्राप्त करते हैं। यह पाठ हर आयु वर्ग के छात्रों के लिए तैयार किया गया है परंतु इसके लिए पठन की जरूरत है। इस गतिविधि के लिए साउंड की जरूरत है क्योंकि टूल संगीत पर प्रतिक्रिया करने वाला बनाया गया था।",
           "purpose": "यह पाठ कोडिंग और इवेंट प्रोग्रामिंग (ब्लॉक्स का उपयोग करते हुए) मुख्य CS अवधारणाएं पेश करता है।",
@@ -133,8 +136,173 @@
           "name": "समुद्रों के लिए AI",
           "overview": "इस पाठ में, हर आयु वर्ग के शिक्षार्थी सुरक्षित व सहयोगात्मक माहौल में कोडिंग और कंप्यूटर साइंस का आरंभिक अनुभव प्राप्त करते हैं। सबसे पहले, छात्र समुद्र से कचरा हटाने का प्रयास करने के लिए वस्तुओं को \"मछली\" या \"मछली नहीं\" के रूप में वर्गीकृत करते हैं।फिर, छात्रों को अन्य समुद्री प्राणियों को शामिल करने के लिए अपने प्रशिक्षण डेटा सेट को विस्तार करने की आवश्यकता होगी। गतिविधि के दूसरे भाग में, छात्र रैंडम तरीके से उत्पन्न मछली की छवियों पर लागू करने के लिए अपने स्वयं के लेबल चुनेंगे। इस प्रशिक्षण डेटा का उपयोग मशीन लर्निंग मॉडल के लिए किया जाता है जो इसके बाद खुद नए चित्तरों को लेबल करने में सक्षम होगा।"
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "\"कंप्यूटर साइंस के मूल सिद्धांतों को पढ़ाना\" में आपका स्वागत है"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "कंप्यूटर साइंस के मूल सिद्धांतों के कोर्सों को समझना"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "अनुक्रमण"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "फंदे"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "घटनाएँ"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "कंडीशनल्स"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "कोर्स की समाप्ति प्रोजेक्ट"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "कार्य"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "चर"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "फॉर लूप्स"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "स्प्राइट लैब"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "आपके प्रतिबिंबों की समीक्षा करना"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "अगले चरण"
+        },
+        "vigenere/Vigenere": {
+          "name": "विजेनर"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "मनोदशा अध्ययन"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "डिजीटल डिज़ाइन"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "इवेंट संचालित प्रोग्रामिंग"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "बुनियादी ऐप कार्यात्मकता"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "गेटर्स एंड सेटर्स"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "शुरू करें"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "कंप्यूटर साइंस के मूल सिद्धांत"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "आगे देखना"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "मूल सिद्धांतों पर निपुणता हासिल करना: अनुक्रमण"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "मूल सिद्धांतों पर निपुणता हासिल करना: लूप्स"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "मूल सिद्धांतों पर निपुणता हासिल करना: सापेक्ष"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "मूल सिद्धांतों पर निपुणता हासिल करना: फंक्शन्स"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "मूल सिद्धांतों पर निपुणता हासिल करना: इवेंट्स"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "कंप्यूटर साइंस पढ़ाने के लिए बेहतर अभ्यास"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "नियोजन"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "अगले चरण"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "रूपरेखा और सेटअप निर्देश"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "एक से दूसरे सहपाठी को - साझी तार पर बिट्स भेजना"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "एक से दूसरे सहपाठी को - संख्याएं भेजना"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "एक से दूसरे सहपाठी को - Ascii भेजना"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "संदेशों को प्रसारित करना"
+        },
+        "netsim/Routers and addresses": {
+          "name": "रूटर्स और पते"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "पैकेट्स और विश्वसनीयता"
+        },
+        "netsim/Manual DNS": {
+          "name": "मैनुअल DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "ऑटोमैटिक DNS बिंदु"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "इंटरनेट सिम्युलेटर फ्रीप्ले"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "रूम एस्केप"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "शुरुआती और समाप्ति स्क्रीनें"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "शुरुआती और समाप्ति स्क्रीनें2"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "शुरू करें"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "कंप्यूटर साइंस के मूल सिद्धांत"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "आगे देखना"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "मूल सिद्धांतों पर निपुणता हासिल करना: अनुक्रमण"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "मूल सिद्धांतों पर निपुणता हासिल करना: लूप्स"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "मूल सिद्धांतों पर निपुणता हासिल करना: सापेक्ष"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "मूल सिद्धांतों पर निपुणता हासिल करना: फंक्शन्स"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "मूल सिद्धांतों पर निपुणता हासिल करना: इवेंट्स"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "कंप्यूटर साइंस पढ़ाने के लिए बेहतर अभ्यास"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "नियोजन"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "अगले चरण"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "कलेक्टर आवर ऑफ़ कोड 2017"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "बारंबारता विश्लेषण"
         },
         "courseb-2018/Move It, Move It": {
           "name": "इसे मूव करें, इसे मूव करें"
@@ -680,7 +848,7 @@
           "name": "उच्चारण मधुमक्खी"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "CS अन्वेषण सेमेस्टर का अंत सर्वेक्षण"
+          "name": "मनोरंजन के लिए प्रोग्रामिंग"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "प्लॉटिंग आकृतियां"
@@ -1382,10 +1550,10 @@
           "name": "इवेंट्स के साथ रॉयल बैटल"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "प्रोजेक्ट के बाद परीक्षण"
+          "name": "मनोरंजन के लिए प्रोग्रामिंग"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "CS अन्वेषण कोर्स के बाद का सर्वेक्षण"
+          "name": "प्लॉटिंग आकृतियां"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "गेम लैब में चित्रित करना"
@@ -1448,10 +1616,10 @@
           "name": "प्रोजेक्ट - गेम डिज़ाइन करें"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "प्रोजेक्ट के बाद परीक्षण"
+          "name": "कंप्यूटिंग में अन्वेषण"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "CS अन्वेषण कोर्स के बाद का सर्वेक्षण"
+          "name": "कोड के साथ स्क्रीन डिजाइन करना"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "Circuit Playgrounds"
@@ -1496,10 +1664,10 @@
           "name": "प्रोजेक्ट: अन्वेषण का प्रतिमान बनाएं"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "प्रोजेक्ट के बाद परीक्षण"
+          "name": "डिज़ाइन का विश्लेषण"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "CS अन्वेषण कोर्स के बाद का सर्वेक्षण"
+          "name": "आपके उपयोगकर्ता को समझना"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "उपयोगकर्ता-केंद्रित डिज़ाइन माइक्रो गतिविधि"
@@ -1544,10 +1712,10 @@
           "name": "प्रोजेक्ट - ऐप प्रस्तुति"
         },
         "csd5-2019/Representation Matters": {
-          "name": "प्रोजेक्ट के बाद परीक्षण"
+          "name": "प्रस्तुतिकरण विषय"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "CS अन्वेषण कोर्स के बाद का सर्वेक्षण"
+          "name": "पैटर्न और प्रस्तुति"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII और युग्मक प्रस्तुति"
@@ -1592,7 +1760,7 @@
           "name": "सवाल हल करना का परिचय"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "प्रोजेक्ट के बाद परीक्षण"
+          "name": "सवाल हल करने की प्रक्रिया"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "सवाल हल करना की पड़ताल करना"
@@ -1613,10 +1781,10 @@
           "name": "प्रोजेक्ट: ऐप का प्रस्ताव रखना"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "प्रोजेक्ट के बाद परीक्षण"
+          "name": "वेबसाइटों की पड़ताल करना"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "CS अन्वेषण कोर्स के बाद का सर्वेक्षण"
+          "name": "अभिव्यक्ति के लिए वेबसाइटें "
         },
         "csd2-2019/Intro to HTML": {
           "name": "HTML का परिचय"
@@ -2138,10 +2306,10 @@
           "name": "अपना प्रोजेक्ट प्रस्तुत करें"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "CS अन्वेषण सेमेस्टर का अंत सर्वेक्षण"
+          "name": "मनोरंजन के लिए प्रोग्रामिंग"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "CSD कोर्स के बाद का सर्वेक्षण"
+          "name": "प्लॉटिंग आकृतियां"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "गेम लैब में चित्रित करना"
@@ -2204,7 +2372,7 @@
           "name": "प्रोजेक्ट - गेम डिज़ाइन करें"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "CSD कोर्स के बाद का सर्वेक्षण"
+          "name": "कंप्यूटिंग में अन्वेषण"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "कोड के साथ स्क्रीन डिजाइन करना"
@@ -2252,7 +2420,7 @@
           "name": "प्रोजेक्ट: अन्वेषण का प्रतिमान बनाएं"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "CSD कोर्स के बाद का सर्वेक्षण"
+          "name": "वेबसाइटों की पड़ताल करना"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "अभिव्यक्ति के लिए वेबसाइटें "
@@ -2321,7 +2489,7 @@
           "name": "प्रोजेक्ट: ऐप का प्रस्ताव रखना"
         },
         "csd5-2017/Representation Matters": {
-          "name": "CSD कोर्स के बाद का सर्वेक्षण"
+          "name": "प्रस्तुतिकरण विषय"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "पैटर्न और प्रस्तुति"
@@ -2366,7 +2534,7 @@
           "name": "प्रोजेक्ट - डेटा समस्या को सुलझाना"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "CSD कोर्स के बाद का सर्वेक्षण"
+          "name": "डिज़ाइन का विश्लेषण"
         },
         "csd4-2017/Understanding Your User": {
           "name": "आपके उपयोगकर्ता को समझना"
@@ -2412,6 +2580,27 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "प्रोजेक्ट - ऐप प्रस्तुति"
+        },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "AB शिक्षकों के लिए डीबगिंग"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "CDEF शिक्षकों के लिए डीबगिंग"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "काला व सफेद पिक्लेशन ट्यूटोरियल"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "काला व सफेद पिक्लेशन फ्रीप्ले"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "रंग पिक्लेशन ट्यूटोरियल"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "रंग पिक्लेशन के उदाहरण"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "रंग पिक्लेशन फ्रीप्ले"
         },
         "course4/Unplugged: Tangrams": {
           "name": "अनप्लग़्ड: टैन्ग्राम्स"
@@ -2478,6 +2667,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "तीव्र चुनौती - व्यापक"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "कंप्यूटर विज्ञान का परिचय"
+        },
+        "20-hour/The Maze": {
+          "name": "पहेली"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "अभिकलनात्मक चिंतन"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "ग्राफ पेपर प्रोग्रामिंग"
+        },
+        "20-hour/The Artist": {
+          "name": "कलाकार"
+        },
+        "20-hour/Algorithms": {
+          "name": "कलन विधियां"
+        },
+        "20-hour/The Artist 2": {
+          "name": "कलाकार 2"
+        },
+        "20-hour/Functions": {
+          "name": "कार्य"
+        },
+        "20-hour/The Farmer": {
+          "name": "किसान"
+        },
+        "20-hour/Conditionals": {
+          "name": "कंडीशनल्स"
+        },
+        "20-hour/The Artist 3": {
+          "name": "कलाकार 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "गीत लेखन"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "किसान 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "संक्षेपण"
+        },
+        "20-hour/The Artist 4": {
+          "name": "कलाकार 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "रिले प्रोग्रामिंग"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "किसान 3"
+        },
+        "20-hour/The Internet": {
+          "name": "इंटरनेट"
+        },
+        "20-hour/The Artist 5": {
+          "name": "कलाकार 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "समाप्ति"
         },
         "course2/Graph Paper Programming": {
           "name": "ग्राफ पेपर प्रोग्रामिंग"
@@ -2656,7 +2905,138 @@
         "jigsaw/Jigsaw": {
           "name": "पहेली",
           "overview": "यह पाठ छात्रों को इसका अनुमान देगा कि जब वे कंप्यूटर लैब में जाते हैं तो उन्हें क्या अपेक्षा रखनी चाहिए। यह उन्हें कंप्यूटर लैब के आचरण से परिचय कराते हुए संक्षिप्त चर्चा के साथ शुरू होता है, फिर वे ऑनलाइन पहेलियों को पूरा करने के लिए कंप्यूटर का उपयोग करने में प्रगति करेंगे।",
+          "preparation": "-   अधिक ऑनलाइन सुरक्षा सामग्री के लिए [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) वेबसाइट की समीक्षा करें।",
+          "purpose": "इस पाठ का मुख्य लक्ष्य कंप्यूटरों के साथ छात्रों के अनुभव का निर्माण करना है। क्लिकिंग, ड्रैगिंग और ड्रॉपिंग जैसे सबसे मूल कंप्यूटर कार्यों को कवर करके, हम भविष्य की पहेलियों के लिए कक्षा में अधिक समान खेल के मैदान बना रहे हैं। यह पाठ आपके डिवाइसेस के आधार पर \"माउस\", \"ट्रैकपैड\" या \"टचस्क्रीन\" सहित संभावित रूप से मूल कंप्यूटर हार्डवेयर शब्दावली को पेश करने का एक शानदार अवसर प्रदान करता है।",
           "student_overview": "पहेलियों को पूरा करने के लिए क्लिक करें और खींचें।"
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "CSD छात्रों का कोर्स के बाद का सर्वेक्षण ('18-'19)"
+        },
+        "allthethings/Jigsaw": {
+          "name": "पहेली"
+        },
+        "allthethings/Maze": {
+          "name": "पहेली"
+        },
+        "allthethings/Artist": {
+          "name": "कलाकार"
+        },
+        "allthethings/Bee": {
+          "name": "मधुमक्खी"
+        },
+        "allthethings/PlayLab": {
+          "name": "प्लेलैब"
+        },
+        "allthethings/Farmer": {
+          "name": "किसान"
+        },
+        "allthethings/Flappy": {
+          "name": "फ्लैपी"
+        },
+        "allthethings/Bounce": {
+          "name": "उछाल"
+        },
+        "allthethings/Multi": {
+          "name": "मल्टी"
+        },
+        "allthethings/Multi2": {
+          "name": "मल्टी2"
+        },
+        "allthethings/Match": {
+          "name": " मेल"
+        },
+        "allthethings/TextMatch": {
+          "name": "TextMatch"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "नेटसिम"
+        },
+        "allthethings/Odometer": {
+          "name": "ओडोमीटर"
+        },
+        "allthethings/Text Compression": {
+          "name": "टेक्स्ट कम्प्रेशन"
+        },
+        "allthethings/AppLab": {
+          "name": "ऐपलैब"
+        },
+        "allthethings/Gamelab": {
+          "name": "गेमलैब"
+        },
+        "allthethings/Online PD": {
+          "name": "ऑनलाइन PD"
+        },
+        "allthethings/Markdown Details": {
+          "name": "मार्कडाउन विवरण"
+        },
+        "allthethings/Studio": {
+          "name": "स्टूडियो"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "मल्टी पृष्ठ मूल्यांकन"
+        },
+        "allthethings/Star wars": {
+          "name": "Star wars"
+        },
+        "allthethings/Minecraft": {
+          "name": "माइनक्राफ्ट"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "संपंन लंबा मूल्यांकन"
+        },
+        "allthethings/Free Response": {
+          "name": "फ्री जवाब"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "नमूना PLC मूल्यांकन"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "अदला-बदली किए गए स्तर"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "गुमनाम छात्र सर्वेक्षण"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "पब्लिक कुंजी कूटलेखन"
+        },
+        "allthethings/Web Lab": {
+          "name": "वेब लैब"
+        },
+        "allthethings/Single page assessment": {
+          "name": "एकल पृष्ठ मूल्यांकन"
+        },
+        "allthethings/Standalone video": {
+          "name": "स्टैंडअलोन वीडियो"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "पाठ्यक्रम संदर्भ"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "स्प्राइट लैब"
+        },
+        "allthethings/Dance Lab": {
+          "name": "डांस लैब"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "लघु शीर्षक"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "बाहरी को वैकल्पिक रूप से अनप्लग्ड के तौर पर प्रदर्शित किया गया"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "बबल विकल्प"
+        },
+        "allthethings/Contained Levels": {
+          "name": "सम्मिलित स्तर"
+        },
+        "allthethings/ML Fish": {
+          "name": "ML फिश"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java Lab"
         },
         "coursef-2021/lesson-6": {
           "name": "स्प्राइट लैब का परिचय",
@@ -3600,9 +3980,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "CS अन्वेषण कोर्स के बाद का सर्वेक्षण"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "प्रोजेक्ट के बाद परीक्षण"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "आपके उपयोगकर्ता को समझना"
         },
@@ -3637,7 +4014,7 @@
           "name": "CS अन्वेषण कोर्स के बाद का सर्वेक्षण"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "प्रोजेक्ट के बाद परीक्षण",
+          "name": "कंप्यूटिंग में अन्वेषण",
           "overview": "इस कोर्स की अंतिम इकाई की शुरुआत करने के लिए, छात्र कंप्यूटिंग में रोचक अन्वेषणों पर थोड़ा शोध करेंगे। यह पाठ छात्रों के सम्मुख कंप्यूटिंग प्रकार कारकों (कंप्यूटर कैसा दिखाई देता है) और उन क्षेत्रों के व्यापक प्रकारों को प्रकट करेगा, जो कंप्यूटिंग द्वारा प्रभावित हैं। इस इकाई में बाद में छात्र उन डिवाइसों पर वापस नज़र डालेंगे, जिनसे इस पाठ में उनका सामना हो, जब वे अपनी खुद की भौतिक कंप्यूटिंग डिवाइसें विकसित करेंगे।"
         },
         "csd6-2021/Designing Screens with Code": {
@@ -3695,7 +4072,7 @@
           "name": "CS अन्वेषण कोर्स के बाद का सर्वेक्षण"
         },
         "csd5-2021/Representation Matters": {
-          "name": "प्रोजेक्ट के बाद परीक्षण"
+          "name": "प्रस्तुतिकरण विषय"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "पैटर्न और प्रस्तुति"
@@ -3737,7 +4114,7 @@
           "name": "CS अन्वेषण कोर्स के बाद का सर्वेक्षण"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "प्रोजेक्ट के बाद परीक्षण"
+          "name": "मनोरंजन के लिए प्रोग्रामिंग"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "प्लॉटिंग आकृतियां"
@@ -3803,7 +4180,7 @@
           "name": "सवाल हल करना का परिचय"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "प्रोजेक्ट के बाद परीक्षण"
+          "name": "सवाल हल करने की प्रक्रिया"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "सवाल हल करना की पड़ताल करना"
@@ -3824,7 +4201,7 @@
           "name": "प्रोजेक्ट: ऐप का प्रस्ताव रखना"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "प्रोजेक्ट के बाद परीक्षण"
+          "name": "वेब पृष्ठों की पड़ताल करना"
         },
         "csd2-2021/Intro to HTML": {
           "name": "HTML का परिचय"

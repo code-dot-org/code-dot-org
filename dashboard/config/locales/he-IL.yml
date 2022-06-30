@@ -1074,10 +1074,10 @@ he:
         other: 'אחר:'
       resources:
         kodable: Kodable
-        other: 'אחר:'
+        other: אחר
       robotics:
         kodable: Kodable
-        other: 'אחר:'
+        other: אחר
       email_opt_in:
         opt_in_yes: כן
         opt_in_no: לא

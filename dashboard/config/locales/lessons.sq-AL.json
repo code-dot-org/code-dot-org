@@ -38,6 +38,33 @@
         "infinity/Infinity": {
           "name": "Larmishmeria e lojrave ne laboratorin e Disney"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Ora e Kodit 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "cikle "
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Ngjarje"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Kushtet"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "funksione"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "variabla"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Për Ciklet"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Hapat e ardhshme"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Hapat e ardhshme"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Lëvize atë, lëvize atë"
         },
@@ -359,6 +386,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Sfidë Ekstreme- Gjithëpërfshirëse"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Hyrje në Shkencë Kompjuterike"
+        },
+        "20-hour/The Maze": {
+          "name": "Labirinti"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Te menduarit kompjuterik"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programimi Grafik me Letër"
+        },
+        "20-hour/The Artist": {
+          "name": "Artisti"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmet"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Artisti 2"
+        },
+        "20-hour/Functions": {
+          "name": "funksione"
+        },
+        "20-hour/The Farmer": {
+          "name": "Fermeri"
+        },
+        "20-hour/Conditionals": {
+          "name": "Kushtet"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Artisti 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Të Shkruarit Këngë"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Fermeri 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstraksioni"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Artisti 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Programimi i Besuar"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Fermeri 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Interneti"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Artisti 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Mbështjell"
+        },
         "course2/Graph Paper Programming": {
           "name": "Programimi Grafik me Letër"
         },
@@ -535,6 +622,42 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Jigsaw"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Jigsaw"
+        },
+        "allthethings/Maze": {
+          "name": "Labirint"
+        },
+        "allthethings/Artist": {
+          "name": "Artisti"
+        },
+        "allthethings/Bee": {
+          "name": "Bletë"
+        },
+        "allthethings/Farmer": {
+          "name": "Fermer"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Hidhu"
+        },
+        "allthethings/Multi": {
+          "name": "Shumë"
+        },
+        "allthethings/Match": {
+          "name": "Përshtat"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pixelation"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "coursef-2021/For Loop Fun": {
           "name": "Qef me Ciklet For"

@@ -75,15 +75,15 @@
         "2-3 Bee Loops 6": "Dokážeš nájsť najrýchlejšiu cestu pre včielku, aby mohla nazbierať všetok nektár a vyrobiť všetok med?",
         "2-3 Bee Loops 8": "Tieto fialové kvetinky majú pri každom spustení tejto úlohy iné množstvo nektáru. \n\nPoužite slučku \"pokiaľ je nektár\" pre pozbieranie všetkého nektáru. \n\nTáto slučka bude bežať tak dlho, pokiaľ bude splnená podmienka, v tomto prípade \"nektár > 0\".",
         "2-3 Bee Loops Assessment 1": "Hodnotená úloha: Použi cyklus  `pokiaľ` a pozbieraj z týchto kvetín všetok nektár.",
-        "2-3 Maze 1": "Viete mi pomôcť chytiť nezbedné prasiatko? Navrstvite niekoľko blokov \"posunúť dopredu\" pod blok \"po spustení\" a stlačte \"Spustiť\". ",
+        "2-3 Maze 1": "Priveď ma k tomu zelenému zlu! (Pozor na TNT)",
         "2-3 Maze 10": "Priveď ma k tomu zelenému zlu! (Pozor na TNT)",
         "2-3 Maze 12": "Vieš sa dostať k prasiatku použitím cyklu, ktorý používa len jeden blok \"posuň sa dopredu\" vo vnútri bloku \"opakuj\"?",
         "2-3 Maze 13": "Dostaň ma k prasiatku! Teraz môžeš použiť len jeden blok na posunutie dopredu",
         "2-3 Maze 15": "V tejto úlohe ti dva príkazy \"opakuj\" pomôžu dostať prasiatko najmenším možným počtom blokov!",
         "2-3 Maze 16": "Cykly fungujú dokonca aj s viac ako jedným vsunutým blokom. Vieš zopakovať tento postup tak, aby sa zombie dostal k slnečnici?",
         "2-3 Maze 16 before": "Viete nájsť najrýchlejšiu cestu k prasiatku?",
-        "2-3 Maze 2": "Toto prasiatko mi nedá spať. Pomôž mi dostať sa k nemu!",
-        "2-3 Maze 3": "Nájdi cestu a priveď ma k tomu nezbednému prasiatku. Vyhni sa TNT, lebo bude lietať perie!",
+        "2-3 Maze 2": "Priveď ma k tomu zelenému zlu! (Pozor na TNT)",
+        "2-3 Maze 3": "Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa rozhnevám!",
         "2-3 Maze 4": "Priveď ma k tomu zelenému zlu! (Pozor na TNT)",
         "2-3 Maze 6": "Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa rozhnevám!",
         "2-3 Maze 7": "Priveď ma k tomu zelenému zlu! (Pozor na TNT)",
@@ -3142,7 +3142,14 @@
         "CSD U5 black white images pixelation 4_2021": "Pridajte smajlíkovi obočie (kliknite sem pre zobrazenie obrázka)",
         "CSD U5 black white images pixelation 5_2021": "Nakreslite čo len chcete",
         "CSD U5 black white images pixelation_2021": "Dokončite tvar X písaním núl a jednotiek",
-        "Choose Your Own Adventure": "V Play Labe si môžeš vytvoriť, čo len chceš. Toto je príklad interaktívneho príbehu, ktorý môžeš v Play Labe vytvoriť."
+        "Choose Your Own Adventure": "V Play Labe si môžeš vytvoriť, čo len chceš. Toto je príklad interaktívneho príbehu, ktorý môžeš v Play Labe vytvoriť.",
+        "AllTheThings sprite lab with video": "Zmeňte Pracháča (kôpku slamy) na rybu.",
+        "Artist Autorun Test": "Teraz vlož funkciu do cyklu, aby si nakreslil tri štvorce.",
+        "MC Agent Freeplay": "**Voľná hra:** Čas objavovať na vlastnú päsť!",
+        "Overworld Chop Tree - allthethings": "Drevo je veľmi dôležitý materiál, pretože sa z neho vyrába veľa vecí. Prejdi k stromu a zotni ho pomocou príkazu „znič blok“.",
+        "Test embedded K1 Blockly in instructions": "Na vyriešenie úlohy použi 3 bloky `pohni sa na západ` a jeden blok `zober kukuricu`.",
+        "U1L13 Text Compression": "Vyhľadajte vzory (opakované slová alebo frázy) v texte. Nájdené vzory pridajte do slovníka vpravo. Pri zadávaní položiek do slovníka sa symbol pre položku vloží do textu namiesto vzoru.",
+        "U2L10 NetSim Automatic DNS": "V tejto verzii internetového simulátora, máte k dispozícii systém doménových mien (DNS), ktorý pozná IP adresy všetkých pripojených zariadení. Pošlite správu vo formáte GET [hostname] do DNS servisu na adresu  <yourRouterNumber>.15 aby ste dostali adresu študenta alebo študentky."
       }
     }
   }

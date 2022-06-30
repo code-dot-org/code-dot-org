@@ -19,7 +19,7 @@ const TeacherFeedbackTab = ({
   teacher,
   innerRef
 }) => {
-  // If the teacher is viewing student work and there is no review tab (CSA peer review)
+  // If the teacher is viewing student work and there is no review tab (CSA peer review v1)
   // then the teacher is able to leave feedback for the student (editable feedback)
   const renderEditableFeedback = teacherViewingStudentWork && !displayReviewTab;
 

@@ -29,6 +29,9 @@
         "ccela/RI": {
           "description": "정보 읽기"
         },
+        "ccmath/MD": {
+          "description": "결정을 내리기 위해 확률 사용"
+        },
         "ccela/W": {
           "description": "쓰기"
         },

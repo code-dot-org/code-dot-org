@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 bg:
   errors:
     messages:
@@ -322,7 +328,7 @@ bg:
         personal_login_created_username: 'Съдадохте парсонална регистрация за вход успешно. Сега можете да влезете в Code.org с вашия имейл и парола'
   nav:
     header:
-      finished_hoc: "Аз приключих моя 'Час на Кодирането'"
+      finished_hoc: "Приключих!"
       sign_in_to_save: 'Впишете се, за да запазите напредъка си'
       my_dashboard: "Моето табло"
       course_catalog: "Каталог на курса"
@@ -954,6 +960,7 @@ bg:
   hidden_stage: "Вашият учител не е позволил достъпа до този етап. Моля, попитайте учителя кой урок трябва започнете."
   no_course_access_student: "Нямате достъп до този курс. Моля питайте вашият ментор/учител на кой курс трябва да бъдете."
   no_course_access_teacher: "Нямате достъп до този курс. Ако смятате, че трябва да имате достъп до курса, моля пишете до support@code.org, за да можем да оправим ситуацията."
+  no_script_access_student: "Нямате достъп до този раздел. Моле питайте вашия учител на кой раздел трябва да бъдете."
   no_script_access_teacher: "Нямате достъп до това ниво. Ако смятате, че трябва да имате достъп до нивото, моля пишете до support@code.org, за да можем да оправим ситуацията."
   no_level_access_student: "Нямате достъп до това ниво. Моля питайте вашият ментор/учител на кое ниво трябва да бъдете."
   no_level_access_teacher: "Нямате достъп до това ниво. Ако смятате, че трябва да имате достъп до нивото, моля пишете до support@code.org, за да можем да оправим ситуацията."
@@ -1024,7 +1031,7 @@ bg:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Друго:"
+        other: "Друго"
       robotics:
         kodable: 'Kodable'
         lego: 'LEGO Education'
@@ -1032,7 +1039,7 @@ bg:
         ozobot: 'Ozobot'
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
-        other: "Друго:"
+        other: "Друго"
       workshop_course:
         csp: '"15-" 16 CS принципи'
       email_opt_in:
