@@ -111,7 +111,7 @@ def process_image(path, ext_names, language=nil, site=nil)
     end
     output.merge(content: image_blob)
   ensure
-    image_list && image_list.to_a.map(&:destroy!)
+    image_list&.to_a&.map(&:destroy!)
   end
 end
 
@@ -119,5 +119,5 @@ def optimize_image(blob)
   image = Magick::Image.from_blob(blob).first
   image.to_blob {self.quality = 85}
 ensure
-  image && image.destroy!
+  image&.destroy!
 end
