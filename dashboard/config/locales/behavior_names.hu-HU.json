@@ -1108,8 +1108,8 @@
           "moving west": "mozgatás nyugatra",
           "patrolling": "járőrözés",
           "moving with arrow keys": "mozgatás a nyílbillentyűkkel",
-          "moving north and looping": "mozgatás északra és ciklusokban",
-          "moving south and looping": "mozgatás délre és ciklusokban "
+          "moving north and looping": "mozgatás északra és hurkokban",
+          "moving south and looping": "mozgatás délre és hurkokban "
         },
         "helloworld_animals_costumes": {
           "fluttering": "csapkodva",
@@ -1160,8 +1160,8 @@
           "moving west": "mozgatás nyugatra",
           "patrolling": "járőrözés",
           "moving with arrow keys": "mozgatás a nyílbillentyűkkel",
-          "moving north and looping": "mozgatás északra és ciklusokban",
-          "moving south and looping": "mozgatás délre és ciklusokban "
+          "moving north and looping": "mozgatás északra és hurkokban",
+          "moving south and looping": "mozgatás délre és hurkokban "
         },
         "helloworld_emoji_costumes": {
           "fluttering": "csapkodva",
@@ -1243,8 +1243,8 @@
           "moving west": "mozgatás nyugatra",
           "patrolling": "járőrözés",
           "moving with arrow keys": "mozgatás a nyílbillentyűkkel",
-          "moving north and looping": "mozgatás északra és ciklusokban",
-          "moving south and looping": "mozgatás délre és ciklusokban "
+          "moving north and looping": "mozgatás északra és hurkokban",
+          "moving south and looping": "mozgatás délre és hurkokban "
         },
         "helloworld_retro_costumes": {
           "fluttering": "csapkodva",
@@ -1295,8 +1295,8 @@
           "moving west": "mozgatás nyugatra",
           "patrolling": "járőrözés",
           "moving with arrow keys": "mozgatás a nyílbillentyűkkel",
-          "moving north and looping": "mozgatás északra és ciklusokban",
-          "moving south and looping": "mozgatás délre és ciklusokban "
+          "moving north and looping": "mozgatás északra és hurkokban",
+          "moving south and looping": "mozgatás délre és hurkokban "
         },
         "helloworld_emoji_sounds": {
           "driving with arrow keys": "irányítás nyilakkal",
@@ -1316,8 +1316,8 @@
           "moving west": "mozgatás nyugatra",
           "patrolling": "járőrözés",
           "moving with arrow keys": "mozgatás a nyílbillentyűkkel",
-          "moving north and looping": "mozgatás északra és ciklusokban",
-          "moving south and looping": "mozgatás délre és ciklusokban "
+          "moving north and looping": "mozgatás északra és hurkokban",
+          "moving south and looping": "mozgatás délre és hurkokban "
         },
         "helloworld_food_sounds": {
           "driving with arrow keys": "irányítás nyilakkal",
@@ -1337,8 +1337,8 @@
           "moving west": "mozgatás nyugatra",
           "patrolling": "járőrözés",
           "moving with arrow keys": "mozgatás a nyílbillentyűkkel",
-          "moving north and looping": "mozgatás északra és ciklusokban",
-          "moving south and looping": "mozgatás délre és ciklusokban "
+          "moving north and looping": "mozgatás északra és hurkokban",
+          "moving south and looping": "mozgatás délre és hurkokban "
         },
         "helloworld_retro_sounds": {
           "driving with arrow keys": "irányítás nyilakkal",
@@ -1358,8 +1358,8 @@
           "moving west": "mozgatás nyugatra",
           "patrolling": "járőrözés",
           "moving with arrow keys": "mozgatás a nyílbillentyűkkel",
-          "moving north and looping": "mozgatás északra és ciklusokban",
-          "moving south and looping": "mozgatás délre és ciklusokban "
+          "moving north and looping": "mozgatás északra és hurkokban",
+          "moving south and looping": "mozgatás délre és hurkokban "
         },
         "helloworld_food_behaviors": {
           "driving with arrow keys": "irányítás nyilakkal",
@@ -1379,8 +1379,8 @@
           "moving west": "mozgatás nyugatra",
           "patrolling": "járőrözés",
           "moving with arrow keys": "mozgatás a nyílbillentyűkkel",
-          "moving north and looping": "mozgatás északra és ciklusokban",
-          "moving south and looping": "mozgatás délre és ciklusokban "
+          "moving north and looping": "mozgatás északra és hurkokban",
+          "moving south and looping": "mozgatás délre és hurkokban "
         },
         "poetry_hoc_spriteSizes": {
           "driving with arrow keys": "irányítás nyilakkal",
@@ -1442,8 +1442,8 @@
           "moving west": "mozgatás nyugatra",
           "patrolling": "járőrözés",
           "moving with arrow keys": "mozgatás a nyílbillentyűkkel",
-          "moving north and looping": "mozgatás északra és ciklusokban",
-          "moving south and looping": "mozgatás délre és ciklusokban "
+          "moving north and looping": "mozgatás északra és hurkokban",
+          "moving south and looping": "mozgatás délre és hurkokban "
         },
         "helloworld_emoji_backgrounds": {
           "driving with arrow keys": "irányítás nyilakkal",
@@ -1463,8 +1463,8 @@
           "moving west": "mozgatás nyugatra",
           "patrolling": "járőrözés",
           "moving with arrow keys": "mozgatás a nyílbillentyűkkel",
-          "moving north and looping": "mozgatás északra és ciklusokban",
-          "moving south and looping": "mozgatás délre és ciklusokban "
+          "moving north and looping": "mozgatás északra és hurkokban",
+          "moving south and looping": "mozgatás délre és hurkokban "
         },
         "helloworld_food_backgrounds": {
           "driving with arrow keys": "irányítás nyilakkal",
@@ -1484,8 +1484,8 @@
           "moving west": "mozgatás nyugatra",
           "patrolling": "járőrözés",
           "moving with arrow keys": "mozgatás a nyílbillentyűkkel",
-          "moving north and looping": "mozgatás északra és ciklusokban",
-          "moving south and looping": "mozgatás délre és ciklusokban "
+          "moving north and looping": "mozgatás északra és hurkokban",
+          "moving south and looping": "mozgatás délre és hurkokban "
         },
         "helloworld_retro_backgrounds": {
           "driving with arrow keys": "irányítás nyilakkal",
@@ -1505,8 +1505,8 @@
           "moving west": "mozgatás nyugatra",
           "patrolling": "járőrözés",
           "moving with arrow keys": "mozgatás a nyílbillentyűkkel",
-          "moving north and looping": "mozgatás északra és ciklusokban",
-          "moving south and looping": "mozgatás délre és ciklusokban "
+          "moving north and looping": "mozgatás északra és hurkokban",
+          "moving south and looping": "mozgatás délre és hurkokban "
         },
         "courseF_sprites_predict": {
           "moving east": "keletre menni",

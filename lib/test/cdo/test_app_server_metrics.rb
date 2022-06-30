@@ -63,6 +63,6 @@ class AppServerMetricsTest < Minitest::Test
     Cdo::Metrics.expects(:put).at_least(1)
     sleep 1
   ensure
-    listener && listener.shutdown
+    listener&.shutdown
   end
 end

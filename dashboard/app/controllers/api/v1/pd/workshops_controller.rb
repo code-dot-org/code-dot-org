@@ -289,7 +289,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
       # Since these ids are supplied by the caller, make sure they each actually represent a real user
       # and that the user is actually a facilitator before adding.
-      next unless facilitator && facilitator.facilitator?
+      next unless facilitator&.facilitator?
       @workshop.facilitators << facilitator
     end
   end

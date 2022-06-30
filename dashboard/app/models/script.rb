@@ -590,7 +590,7 @@ class Script < ApplicationRecord
   end
 
   def self.remove_from_cache(unit_name)
-    script_cache.delete(unit_name) if script_cache
+    script_cache&.delete(unit_name)
   end
 
   def self.get_unit_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
@@ -1222,7 +1222,7 @@ class Script < ApplicationRecord
         if Rails.application.config.levelbuilder_mode
           copy_and_write_i18n(new_name, course_version)
           copied_unit.write_script_json
-          destination_unit_group.write_serialization if destination_unit_group
+          destination_unit_group&.write_serialization
         end
 
         copied_unit

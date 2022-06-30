@@ -8,7 +8,7 @@
     "csa_view_mode": "console",
     "start_sources": {
       "MyConsole.java": {
-        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String[] cropsList = {\"tomatoes\", \"strawberries\", \"carrots\", \"apples\", \"sweet potatoes\"};\n    int[] yieldsList = {968079, 650772, 463819, 394802, 212510};\n\n    CropsStats myCrops = new CropsStats(cropsList, yieldsList);\n\n    System.out.println(\"My crops has a yield of at least 600000: \" + myCrops.hasAtLeast(6000));\n    \n  }\n}",
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String[] cropsList = {\"tomatoes\", \"strawberries\", \"carrots\", \"apples\", \"sweet potatoes\"};\n    int[] yieldsList = {968079, 650772, 463819, 394802, 212510};\n\n    CropsStats myCrops = new CropsStats(cropsList, yieldsList);\n\n    System.out.println(\"My crops has a yield of at least 600000: \" + myCrops.hasAtLeast(600000));\n    \n  }\n}",
         "isVisible": true
       },
       "CropsStats.java": {
@@ -22,6 +22,6 @@
   "level_num": "custom",
   "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 00:44:31 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 17:13:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 17:15:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 17:49:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 19:58:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 20:20:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25 00:44:31 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 17:13:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 17:15:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 17:49:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 19:58:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 20:20:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-27 12:33:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
