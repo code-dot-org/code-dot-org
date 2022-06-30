@@ -58,7 +58,7 @@ class Section < ApplicationRecord
   include Rails.application.routes.url_helpers
   acts_as_paranoid
 
-  belongs_to :user
+  belongs_to :user, optional: true
   alias_attribute :teacher, :user
 
   has_many :followers, dependent: :destroy
@@ -69,8 +69,8 @@ class Section < ApplicationRecord
 
   validates :name, presence: true, unless: -> {deleted?}
 
-  belongs_to :script
-  belongs_to :unit_group, foreign_key: 'course_id'
+  belongs_to :script, optional: true
+  belongs_to :unit_group, foreign_key: 'course_id', optional: true
 
   has_many :section_hidden_lessons
   has_many :section_hidden_scripts
@@ -284,7 +284,7 @@ class Section < ApplicationRecord
   # Follower is determined by the controller so that it can authorize first.
   # Optionally email the teacher.
   def remove_student(student, follower, options)
-    follower.delete
+    follower.destroy
 
     if student.sections_as_student.empty?
       if student.under_13?

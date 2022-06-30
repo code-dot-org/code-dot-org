@@ -20,11 +20,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-15 13:16:16 UTC",
+    "serialized_at": "2022-06-27 19:35:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1092,10 +1093,33 @@
       }
     },
     {
-      "key": "b940a466-2ede-478d-b12b-c439ff186fa8",
+      "key": "15d30ea9-fba5-4ee5-a826-949f29185b7a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *variable*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *variable*."
+      },
+      "seeding_key": {
+        "activity_section.key": "15d30ea9-fba5-4ee5-a826-949f29185b7a",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "67320b8a-bf2a-4059-b1d1-cb622db68f27",
+      "position": 4,
+      "properties": {
+        "description": "Each variable in a program has associated memory that is used to hold its value.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "67320b8a-bf2a-4059-b1d1-cb622db68f27",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "b940a466-2ede-478d-b12b-c439ff186fa8",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict: Creating Variables"
       },
       "seeding_key": {
@@ -1105,7 +1129,7 @@
     },
     {
       "key": "0586ef33-7bbe-4e6f-bd3b-5042f2e80f9f",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the different types of values and how a `String` can be created. Students may wonder about the differences between each type and why a `String` can be created in different ways."
       },
@@ -1116,7 +1140,7 @@
     },
     {
       "key": "adb339cd-68e6-4d5e-afd4-db07513b2289",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "A `String` is a special data type that we often use in our programs. When we create a `String`, we are actually creating an object that is an instance of the `String` class which represents a collection of characters. This means that we can also create a `String` object using the `new` keyword.",
         "remarks": true
@@ -1128,7 +1152,7 @@
     },
     {
       "key": "f2daf38b-7886-4501-914a-df539bd02ea4",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `String` class and the `java.lang` package.",
         "tips": [
@@ -1145,7 +1169,7 @@
     },
     {
       "key": "1e32702f-2d95-4f35-845e-d5012fe95af1",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate stack memory and heap memory.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *data type*, *primitive type*, and *reference type*."
       },
@@ -1156,9 +1180,9 @@
     },
     {
       "key": "eba9e668-35de-4bab-aa53-7d3f0b0ce51f",
-      "position": 8,
+      "position": 10,
       "properties": {
-        "description": "Primitive variables are stored in stack memory. On the other hand, objects are stored in heap memory. We use reference variables to access an object from heap memory. Reference variables contain a pointer to where the object is located in memory.",
+        "description": "Primitive variables are stored in stack memory. The memory associated with a variable of a primitive type holds an actual primitive value. On the other hand, objects are stored in heap memory. We use reference variables to access an object from heap memory. Reference variables contain a pointer to where the object is located in memory.",
         "remarks": true
       },
       "seeding_key": {
@@ -1168,7 +1192,7 @@
     },
     {
       "key": "030b1b51-7b8d-417a-a7be-b25f66036498",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "duration": "10",
@@ -1182,7 +1206,7 @@
     },
     {
       "key": "a8f5cfe2-070d-4ceb-b585-72177757ed4d",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the code segment and define *assignment*, *declaration*, *initialization*, and *literal*."
       },
@@ -1193,7 +1217,7 @@
     },
     {
       "key": "a4661d22-2732-45a3-9d16-370f4c819a42",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "Let's practice creating and using variables in Java. You can print the values stored in a variable to check its value.",
         "duration": "10",
@@ -1207,7 +1231,7 @@
     },
     {
       "key": "236a10a7-d2ef-42b0-b2e0-4890833e6713",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating Variables*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate printing the value stored in a variable to the console.",
         "tips": [
@@ -1224,7 +1248,7 @@
     },
     {
       "key": "06becc23-9624-40ea-9387-e5656607c7e3",
-      "position": 13,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3, 4, and 5. Students complete a Check for Understanding on Level 3, then continue to Level 4 to create and print `int`, `double`, and `String` variables. Students change and print the values stored in these variables on Level 5.",
         "progression_name": "Creating and Printing Variables"
@@ -3002,10 +3026,33 @@
       }
     },
     {
-      "key": "6066c686-1809-4ff9-bc1f-65ea7816009c",
+      "key": "1c12a557-b1d2-4e08-af7a-b159840d9454",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the output of this program?*\n* *What do you wonder about the output of this program?*\n\n**Discussion Goal:** Students notice that printing an object displays random letters and numbers to the console instead of the values stored in its instance variables. Students may wonder what the letters and numbers mean and why the values are not printed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The toString() Method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain why printing an object that doesn't have a `toString()` method in its class does not print the values stored in its instance variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the `Object` class and introduce its `toString()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *If we could write our own version of the `toString()` method in our `Dessert` class, what information would we want it to include?*\n\n**Discussion Goal:** Students suggest including the instance variables in the `toString()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define overriding and demonstrate overriding the `toString()` method and printing an object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Is this information useful? Why or why not?*\n\n**Discussion Goal:** Students note that the output contains the information about the object, but it is not in a user-friendly format.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the output of this program?*\n* *What do you wonder about the output of this program?*\n\n**Discussion Goal:** Students notice that printing an object displays random letters and numbers to the console instead of the values stored in its instance variables. Students may wonder what the letters and numbers mean and why the values are not printed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The toString() Method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain why printing an object that doesn't have a `toString()` method in its class does not print the values stored in its instance variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the `Object` class and introduce its `toString()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *If we could write our own version of the `toString()` method in our `Dessert` class, what information would we want it to include?*\n\n**Discussion Goal:** Students suggest including the instance variables in the `toString()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define overriding and demonstrate overriding the `toString()` method and printing an object."
+      },
+      "seeding_key": {
+        "activity_section.key": "1c12a557-b1d2-4e08-af7a-b159840d9454",
+        "lesson_activity.key": "d6038b4d-6e90-43d1-89cc-09e5f80fd805"
+      }
+    },
+    {
+      "key": "c0e44a03-b8d1-4dc5-800f-2287a4854e78",
+      "position": 4,
+      "properties": {
+        "description": "Notice that this code segment did not explicitly call the object's `toString()` method. The object's `toString()` method is automatically called when we pass an object reference to a print statement or when we concatenate an object reference with a `String`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c0e44a03-b8d1-4dc5-800f-2287a4854e78",
+        "lesson_activity.key": "d6038b4d-6e90-43d1-89cc-09e5f80fd805"
+      }
+    },
+    {
+      "key": "6066c686-1809-4ff9-bc1f-65ea7816009c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Is this information useful? Why or why not?*\n\n**Discussion Goal:** Students note that the output contains the information about the object, but it is not in a user-friendly format.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3020,7 +3067,7 @@
     },
     {
       "key": "41b31194-9c81-4212-97ca-23634fa14156",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the `super` keyword can be used to call the superclass method.\n\n**<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This:** Introduce escape sequences, and have students determine the output for each example:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a quotation mark ( `\\\"` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a new line ( `\\n` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a backslash ( `\\\\` )"
       },
@@ -3031,7 +3078,7 @@
     },
     {
       "key": "32451ca6-ff18-4f98-bee9-612b77cd421f",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students write a `toString()` method in the `Dessert` class then continue to Level 3 to refactor the code. On Level 4, students write `toString()` methods in the `Dessert` subclasses.",
         "duration": "15",
@@ -3051,7 +3098,7 @@
     },
     {
       "key": "134d3afa-413a-4724-83da-e6273a075288",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "This is a good time to commit our code and save our new version of our `Dessert` classes to the Backpack.",
         "remarks": true
@@ -3063,7 +3110,7 @@
     },
     {
       "key": "0d1e185c-0545-4439-996b-158234d639c5",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the new version of the `Dessert` classes to the Backpack."
       },

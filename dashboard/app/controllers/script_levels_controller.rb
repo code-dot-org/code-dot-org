@@ -120,7 +120,7 @@ class ScriptLevelsController < ApplicationController
     authenticate_user! if !can?(:read, @script) || @script.login_required? || (!params.nil? && params[:login_required] == "true")
     return render 'levels/no_access' unless can?(:read, @script_level)
 
-    if current_user && current_user.script_level_hidden?(@script_level)
+    if current_user&.script_level_hidden?(@script_level)
       view_options(full_width: true)
       render 'levels/_hidden_lesson'
       return
@@ -383,7 +383,7 @@ class ScriptLevelsController < ApplicationController
         script: @script_level.script,
         level: @level
       )
-      if user_level && user_level.submitted?
+      if user_level&.submitted?
         level_view_options(
           @level.id,
           submitted: true,
@@ -391,7 +391,7 @@ class ScriptLevelsController < ApplicationController
         )
         readonly_view_options
       end
-      readonly_view_options if user_level && user_level.readonly_answers?
+      readonly_view_options if user_level&.readonly_answers?
     end
 
     @last_attempt = level_source.try(:data)
@@ -413,6 +413,7 @@ class ScriptLevelsController < ApplicationController
       @user = user_to_view
 
       if can?(:view_as_user_for_code_review, @script_level, user_to_view, sublevel_to_view)
+        @is_code_reviewing = true
         view_options(is_code_reviewing: true)
       end
     end

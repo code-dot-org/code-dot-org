@@ -27,11 +27,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-15 14:44:38 UTC",
+    "serialized_at": "2022-06-27 19:40:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1443,10 +1444,33 @@
       }
     },
     {
-      "key": "2e5d5104-fdcb-4d7c-89ad-574618a8ca2b",
+      "key": "a758c24a-5530-4bb2-bc30-fe2a40a8faa0",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate autoboxing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate unboxing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students debug the program on Level 2, then continue to complete Levels 3 and 4 to use `Integer` and `Double` objects and their methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate autoboxing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate unboxing."
+      },
+      "seeding_key": {
+        "activity_section.key": "a758c24a-5530-4bb2-bc30-fe2a40a8faa0",
+        "lesson_activity.key": "38d28908-84a9-446e-9ea5-c1fdbdae8f5f"
+      }
+    },
+    {
+      "key": "0225c47d-f493-40e7-b5cd-16b01930d533",
+      "position": 11,
+      "properties": {
+        "description": "Autoboxing also occurs when a primitive value is passed as a parameter to a method that expects an object of the corresponding wrapper class. On the other hand, unboxing occurs when a wrapper class object is passed as a parameter to a method that expects a value of the corresponding primitive type.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0225c47d-f493-40e7-b5cd-16b01930d533",
+        "lesson_activity.key": "38d28908-84a9-446e-9ea5-c1fdbdae8f5f"
+      }
+    },
+    {
+      "key": "2e5d5104-fdcb-4d7c-89ad-574618a8ca2b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students debug the program on Level 2, then continue to complete Levels 3 and 4 to use `Integer` and `Double` objects and their methods.",
         "progression_name": "Using Wrapper Classes"
       },
       "seeding_key": {

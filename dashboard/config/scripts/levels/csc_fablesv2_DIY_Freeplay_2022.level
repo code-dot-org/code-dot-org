@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-06-13T21:01:32.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -68,11 +64,18 @@
     "authored_hints": "[]",
     "skip_autosave": true,
     "project_template_level_name": "csc_fables_template_2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-06-13T21:01:32.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-13T21:01:32.458+00:00\",\"changed\":[\"cloned from \\\"csc_fablesv2_DIY_Freeplay\\\"\"],\"cloned_from\":\"csc_fablesv2_DIY_Freeplay\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-13T21:01:32.458+00:00\",\"changed\":[\"cloned from \\\"csc_fablesv2_DIY_Freeplay\\\"\"],\"cloned_from\":\"csc_fablesv2_DIY_Freeplay\"},{\"changed_at\":\"2022-06-21 22:22:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

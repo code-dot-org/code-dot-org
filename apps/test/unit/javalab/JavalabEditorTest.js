@@ -35,6 +35,7 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import {allowConsoleWarnings} from '../../util/throwOnConsole';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
+import javalabMsg from '@cdo/javalab/locale';
 
 describe('Java Lab Editor Test', () => {
   // Warnings allowed due to usage of deprecated componentWillReceiveProps
@@ -829,9 +830,10 @@ describe('Java Lab Editor Test', () => {
 
       const editor = createWrapper();
 
-      expect(editor.find('div#openCodeReviewWarningBanner')).to.have.lengthOf(
-        1
-      );
+      const banner = editor.find('div#openCodeReviewWarningBanner');
+      expect(banner).to.have.lengthOf(1);
+      expect(banner.contains(javalabMsg.editingDisabledUnderReview())).to.be
+        .true;
     });
 
     it('does not display warning message if not open for review', () => {
@@ -845,15 +847,23 @@ describe('Java Lab Editor Test', () => {
       );
     });
 
-    it("does not display warning message if viewing someone else's project", () => {
+    it('displays warning message when viewing a peers project', () => {
       store.dispatch(setHasOpenCodeReview(true));
-      store.dispatch(setPageConstants({isViewingOwnProject: false}));
+      store.dispatch(
+        setPageConstants({isViewingOwnProject: false, codeOwnersName: 'George'})
+      );
 
       const editor = createWrapper();
 
-      expect(editor.find('div#openCodeReviewWarningBanner')).to.have.lengthOf(
-        0
-      );
+      const banner = editor.find('div#openCodeReviewWarningBanner');
+      expect(banner).to.have.lengthOf(1);
+      expect(
+        banner.contains(
+          javalabMsg.codeReviewingPeer({
+            peerName: 'George'
+          })
+        )
+      ).to.be.true;
     });
   });
 });

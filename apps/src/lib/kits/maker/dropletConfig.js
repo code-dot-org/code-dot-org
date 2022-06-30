@@ -87,7 +87,7 @@ function getMakerBlocks(boardType) {
       parent: api,
       category: MAKER_CATEGORY,
       paletteParams: ['pin', 'mode'],
-      params: ['13', '"output"'],
+      params: [defaultPin, '"output"'],
       dropdown: {1: ['"output"', '"input"', '"analog"']}
     },
     {
@@ -95,7 +95,7 @@ function getMakerBlocks(boardType) {
       parent: api,
       category: MAKER_CATEGORY,
       paletteParams: ['pin', 'value'],
-      params: ['13', '1'],
+      params: [defaultPin, '1'],
       dropdown: {1: ['1', '0']}
     },
     {
@@ -105,14 +105,14 @@ function getMakerBlocks(boardType) {
       type: 'value',
       nativeIsAsync: true,
       paletteParams: ['pin'],
-      params: ['"D4"']
+      params: [defaultPin]
     },
     {
       func: 'analogWrite',
       parent: api,
       category: MAKER_CATEGORY,
       paletteParams: ['pin', 'value'],
-      params: ['5', '150']
+      params: [defaultPin, '150']
     },
     {
       func: 'analogRead',
@@ -121,7 +121,7 @@ function getMakerBlocks(boardType) {
       type: 'value',
       nativeIsAsync: true,
       paletteParams: ['pin'],
-      params: ['5']
+      params: [defaultPin]
     },
     {
       func: 'boardConnected',

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2022-06-13 21:05:57 UTC",
+    "serialized_at": "2022-06-27 22:13:02 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -36,30 +36,12 @@
   ],
   "lessons": [
     {
-      "key": "[Optional] Introduction to Fables",
-      "name": "[Optional] Introduction to Fables",
+      "key": "Hello World CSC",
+      "name": "Hello World of Stories",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
-      "properties": {
-        "overview": "Students will review and list the common morals and character traits of fables. In this lesson, students will develop a list of similar themes, topics and patterns of events in traditional literature from different cultures in order to begin writing and coding their own fable. ",
-        "preparation": "- Review the List of Fables document\n- Choose Fables for students to read for this lesson\n",
-        "purpose": "Students will begin to compare and contrast common topics and elements of fables. Students can identify similar themes, topics, and patterns of events in traditional literature from across different cultures. "
-      },
-      "seeding_key": {
-        "lesson.key": "[Optional] Introduction to Fables",
-        "lesson_group.key": "",
-        "script.name": "csc-fables-2022"
-      }
-    },
-    {
-      "key": "Hello World CSC",
-      "name": "Hello World CSC",
-      "absolute_position": 2,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 2,
       "properties": {
         "overview": "In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. ",
         "preparation": "\n* Play through the puzzles to find any potential problem areas for your class.\n- Use the resources at [CS Connections](https://code.org/educate/csc) to make a plan for more computer science learning after the initial tutorial.",
@@ -73,8 +55,23 @@
       }
     },
     {
+      "key": "lesson-5",
+      "name": "Common Stories",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022"
+      }
+    },
+    {
       "key": "Plan Your Fable",
-      "name": "Plan Your Fable",
+      "name": "Plan Your Story",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -92,7 +89,7 @@
     },
     {
       "key": "Code Your Fable",
-      "name": "Code Your Fable",
+      "name": "Code Your Story",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -110,7 +107,7 @@
     },
     {
       "key": "Share Your Fable",
-      "name": "Share Your Fable",
+      "name": "Share Your Story",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -128,48 +125,6 @@
     }
   ],
   "lesson_activities": [
-    {
-      "key": "f9260e56-291d-4b2a-a016-a583d4ccce71",
-      "position": 1,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f9260e56-291d-4b2a-a016-a583d4ccce71",
-        "lesson.key": "[Optional] Introduction to Fables",
-        "lesson_group.key": "",
-        "script.name": "csc-fables-2022"
-      }
-    },
-    {
-      "key": "8b15ef84-6888-4d40-9998-b3295e4ee7a8",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8b15ef84-6888-4d40-9998-b3295e4ee7a8",
-        "lesson.key": "[Optional] Introduction to Fables",
-        "lesson_group.key": "",
-        "script.name": "csc-fables-2022"
-      }
-    },
-    {
-      "key": "a285e846-56d7-4f37-8d26-7e8afe90ca8b",
-      "position": 3,
-      "properties": {
-        "duration": 10,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a285e846-56d7-4f37-8d26-7e8afe90ca8b",
-        "lesson.key": "[Optional] Introduction to Fables",
-        "lesson_group.key": "",
-        "script.name": "csc-fables-2022"
-      }
-    },
     {
       "key": "8a1c9e45-7af4-4cfd-8d06-0237aeff4142",
       "position": 1,
@@ -340,104 +295,6 @@
     }
   ],
   "activity_sections": [
-    {
-      "key": "731b1fde-b886-44c3-9d60-2c3a7d0fa518",
-      "position": 1,
-      "properties": {
-        "description": "**Do This**: Before the lesson, gather and plan to read aloud two fables for this activity. You can choose from our List of Fables or curate your own fables. Be sure to identify the moral of each fable and the character traits of each character ahead of time.\n",
-        "name": "What Is a Fable?"
-      },
-      "seeding_key": {
-        "activity_section.key": "731b1fde-b886-44c3-9d60-2c3a7d0fa518",
-        "lesson_activity.key": "f9260e56-291d-4b2a-a016-a583d4ccce71"
-      }
-    },
-    {
-      "key": "dbbb8ab5-a49c-4f55-a987-7f3566e0f2bc",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss**: _What is an example of a story with a lesson?_\n\n**Discussion Goal**: Students should understand that a fable is a short story that explains or shows a moral. Review examples of common fables students may be familiar with, like The Tortoise and the Hare, The Boy who Cried Wolf, or The Ugly Duckling. You can also ask students to share stories they’ve read with their family that may have a moral as well.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "dbbb8ab5-a49c-4f55-a987-7f3566e0f2bc",
-        "lesson_activity.key": "f9260e56-291d-4b2a-a016-a583d4ccce71"
-      }
-    },
-    {
-      "key": "9b930e16-92d9-46bc-a9bb-9bcdf791734c",
-      "position": 3,
-      "properties": {
-        "description": "When a story has a lesson that we can learn from, that lesson is called the **moral** of the story. Short stories with a moral are called a fable. \n\nToday, we are going to read two fables and try to describe the moral of each **fable**. We’re also going to pay attention to the characters in each fable and describe their personalities. Then we’ll compare these fables to see what they have in common.\n",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "9b930e16-92d9-46bc-a9bb-9bcdf791734c",
-        "lesson_activity.key": "f9260e56-291d-4b2a-a016-a583d4ccce71"
-      }
-    },
-    {
-      "key": "6971a42b-86cd-4aec-b8f7-e599513a8bb6",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary:**\n\n- **Fable** - A short story conveying a moral\n- **Moral** - A lesson learned"
-      },
-      "seeding_key": {
-        "activity_section.key": "6971a42b-86cd-4aec-b8f7-e599513a8bb6",
-        "lesson_activity.key": "f9260e56-291d-4b2a-a016-a583d4ccce71"
-      }
-    },
-    {
-      "key": "08fc5f22-242d-476c-ad3c-223c21c5575d",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Compare Fables” slide\n\n**Do This**: Create a Venn Diagram titled “Common Fable Elements” in a large area at the front of the classroom. Put the names of the two fables above each circle.\n\nThen, read the fables as a class, pausing to fill in each individual circle with descriptive words about each character in the story. Ask students to describe how each character is acting, such as “greedy” or “brace” or “caring” or “courageous”. At the end of each story, write the moral in the venn diagram circle as well. See the Teacher Example for an example of how this can look.\n",
-        "duration": "30",
-        "name": "Compare Fables "
-      },
-      "seeding_key": {
-        "activity_section.key": "08fc5f22-242d-476c-ad3c-223c21c5575d",
-        "lesson_activity.key": "8b15ef84-6888-4d40-9998-b3295e4ee7a8"
-      }
-    },
-    {
-      "key": "d1210c13-1dbe-4e4f-bf2c-01ff1a9a5ee7",
-      "position": 2,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Focus on Actions**: To foreshadow the next few lessons, ask students to focus on the actions that characters take as clues to their character traits - for example, we may know someone is cowardly because they hide during an important part of the fable. In later lessons, when students are coding their character actions, they can remember back to this lesson when they connected character actions to character traits. "
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "d1210c13-1dbe-4e4f-bf2c-01ff1a9a5ee7",
-        "lesson_activity.key": "8b15ef84-6888-4d40-9998-b3295e4ee7a8"
-      }
-    },
-    {
-      "key": "177691fb-5c2e-4d8a-ac1a-c0e36f5b42e0",
-      "position": 3,
-      "properties": {
-        "description": "**Do This**: After completing the Venn Diagram for both stories, ask students to suggest any similarities between the two fables. These may have to do with the plot, like both stories involving an obstacle to overcome, or it may have to do with the setting, such as both stories being set in an outdoor space."
-      },
-      "seeding_key": {
-        "activity_section.key": "177691fb-5c2e-4d8a-ac1a-c0e36f5b42e0",
-        "lesson_activity.key": "8b15ef84-6888-4d40-9998-b3295e4ee7a8"
-      }
-    },
-    {
-      "key": "2324790d-d125-488c-97c0-7c20ed44dc1e",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: _Are there other stories with similar morals or characters as these ones? What is an example?_\n\n**Discussion Goal**: Encourage students to make connections to stories they’ve heard growing up or from family members and ask them to share with the group, or stories they’ve seen in movies or television. As students share, connect their fables back to the ones they read as a class and compare how characters or morals can be similar between many different stories.",
-        "name": " Review Anchor Chart"
-      },
-      "seeding_key": {
-        "activity_section.key": "2324790d-d125-488c-97c0-7c20ed44dc1e",
-        "lesson_activity.key": "a285e846-56d7-4f37-8d26-7e8afe90ca8b"
-      }
-    },
     {
       "key": "171901ca-fd8a-4645-b917-fae2759c6e51",
       "position": 1,
@@ -919,7 +776,7 @@
       "position": 3,
       "properties": {
         "description": "**Do This**: Have students move to their computer and sign in. ",
-        "progression_name": "Choice Levels"
+        "progression_name": "Example"
       },
       "seeding_key": {
         "activity_section.key": "48a28d14-eb09-48e9-8fa5-9aed3259b86d",
@@ -1034,6 +891,7 @@
       "key": "bcd5ac75-d26f-4915-8f64-0e8dc5ee4be3",
       "position": 12,
       "properties": {
+        "progression_name": "Free Play",
         "tips": [
           {
             "type": "teachingTip",
@@ -1202,6 +1060,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_introtosprites_2022"
+        ],
         "progression": "Video: Hello World: Welcome to Sprite Lab"
       },
       "bonus": false,
@@ -1224,6 +1085,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_say_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1246,12 +1110,15 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_location_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_location_2022"
+          "helloworld_stories_location_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1259,7 +1126,7 @@
         "activity_section.key": "731a60a7-3368-49b7-adff-82e7af66447f"
       },
       "level_keys": [
-        "helloworld_food_location_2022"
+        "helloworld_stories_location_2022"
       ]
     },
     {
@@ -1268,12 +1135,15 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_multi_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_multi_2022"
+          "helloworld_stories_multi_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1281,7 +1151,7 @@
         "activity_section.key": "731a60a7-3368-49b7-adff-82e7af66447f"
       },
       "level_keys": [
-        "helloworld_food_multi_2022"
+        "helloworld_stories_multi_2022"
       ]
     },
     {
@@ -1290,12 +1160,15 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_click_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_click_2022"
+          "helloworld_stories_click_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1303,7 +1176,7 @@
         "activity_section.key": "731a60a7-3368-49b7-adff-82e7af66447f"
       },
       "level_keys": [
-        "helloworld_food_click_2022"
+        "helloworld_stories_click_2022"
       ]
     },
     {
@@ -1312,6 +1185,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_2022"
+        ],
         "progression": "Video: Hello World: Programming with Events"
       },
       "bonus": false,
@@ -1334,12 +1210,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_events_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coursee_helloworld_events_2022"
+          "helloworld_stories_events_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1347,7 +1226,7 @@
         "activity_section.key": "4c91d8e3-aa07-4b5d-b23d-12331878d5bb"
       },
       "level_keys": [
-        "coursee_helloworld_events_2022"
+        "helloworld_stories_events_2022"
       ]
     },
     {
@@ -1356,12 +1235,15 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_backgrounds_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_backgrounds_2022"
+          "helloworld_stories_backgrounds_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1369,7 +1251,7 @@
         "activity_section.key": "4c91d8e3-aa07-4b5d-b23d-12331878d5bb"
       },
       "level_keys": [
-        "helloworld_food_backgrounds_2022"
+        "helloworld_stories_backgrounds_2022"
       ]
     },
     {
@@ -1378,12 +1260,15 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_costumes_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_costumes_2022"
+          "helloworld_stories_costumes_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1391,7 +1276,7 @@
         "activity_section.key": "4c91d8e3-aa07-4b5d-b23d-12331878d5bb"
       },
       "level_keys": [
-        "helloworld_food_costumes_2022"
+        "helloworld_stories_costumes_2022"
       ]
     },
     {
@@ -1400,12 +1285,15 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_sizes_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_sizes_2022"
+          "helloworld_stories_sizes_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1413,7 +1301,7 @@
         "activity_section.key": "4c91d8e3-aa07-4b5d-b23d-12331878d5bb"
       },
       "level_keys": [
-        "helloworld_food_sizes_2022"
+        "helloworld_stories_sizes_2022"
       ]
     },
     {
@@ -1422,12 +1310,15 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_behaviors_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_behaviors_2022"
+          "helloworld_stories_behaviors_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1435,7 +1326,7 @@
         "activity_section.key": "4c91d8e3-aa07-4b5d-b23d-12331878d5bb"
       },
       "level_keys": [
-        "helloworld_food_behaviors_2022"
+        "helloworld_stories_behaviors_2022"
       ]
     },
     {
@@ -1444,12 +1335,15 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_whentouches"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gray_csc_helloworld_choice_group_fables_2022"
+          "helloworld_whentouches"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1457,7 +1351,7 @@
         "activity_section.key": "4c91d8e3-aa07-4b5d-b23d-12331878d5bb"
       },
       "level_keys": [
-        "gray_csc_helloworld_choice_group_fables_2022"
+        "helloworld_whentouches"
       ]
     },
     {
@@ -1466,12 +1360,15 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_stories_sounds_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "helloworld_food_sounds_2022"
+          "helloworld_stories_sounds_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1479,7 +1376,7 @@
         "activity_section.key": "4c91d8e3-aa07-4b5d-b23d-12331878d5bb"
       },
       "level_keys": [
-        "helloworld_food_sounds_2022"
+        "helloworld_stories_sounds_2022"
       ]
     },
     {
@@ -1488,6 +1385,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplayvideo_2022"
+        ],
         "progression": "Video: Hello World: Do What You Want"
       },
       "bonus": false,
@@ -1510,6 +1410,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplay_2022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1532,12 +1435,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Choice Levels"
+        "level_keys": [
+          "csc_fables_example"
+        ],
+        "progression": "Example"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fablesv2_choice_2022"
+          "csc_fables_example"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1545,7 +1451,7 @@
         "activity_section.key": "48a28d14-eb09-48e9-8fa5-9aed3259b86d"
       },
       "level_keys": [
-        "csc_fablesv2_choice_2022"
+        "csc_fables_example"
       ]
     },
     {
@@ -1554,12 +1460,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fables_setting"
+        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Set_Scene_2022"
+          "csc_fables_setting"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1567,7 +1476,7 @@
         "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
       },
       "level_keys": [
-        "csc_fablesv2_DIY_Set_Scene_2022"
+        "csc_fables_setting"
       ]
     },
     {
@@ -1576,12 +1485,15 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fables_characters"
+        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Dialogue_2022"
+          "csc_fables_characters"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1589,7 +1501,7 @@
         "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
       },
       "level_keys": [
-        "csc_fablesv2_DIY_Dialogue_2022"
+        "csc_fables_characters"
       ]
     },
     {
@@ -1598,12 +1510,15 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fables_say"
+        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fables_predict_2022"
+          "csc_fables_say"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1611,7 +1526,7 @@
         "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
       },
       "level_keys": [
-        "csc_fables_predict_2022"
+        "csc_fables_say"
       ]
     },
     {
@@ -1620,12 +1535,15 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fables_behaviors"
+        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Interactions_2022"
+          "csc_fables_behaviors"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1633,7 +1551,7 @@
         "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
       },
       "level_keys": [
-        "csc_fablesv2_DIY_Interactions_2022"
+        "csc_fables_behaviors"
       ]
     },
     {
@@ -1642,12 +1560,15 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fables_events"
+        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Freeplay_2022"
+          "csc_fables_events"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1655,7 +1576,107 @@
         "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
       },
       "level_keys": [
-        "csc_fablesv2_DIY_Freeplay_2022"
+        "csc_fables_events"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fables_events_say"
+        ],
+        "progression": "Code Your Fable"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fables_events_say"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
+      },
+      "level_keys": [
+        "csc_fables_events_say"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fables_next scene"
+        ],
+        "progression": "Code Your Fable"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fables_next scene"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
+      },
+      "level_keys": [
+        "csc_fables_next scene"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 9,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fables_moral"
+        ],
+        "progression": "Code Your Fable"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fables_moral"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
+      },
+      "level_keys": [
+        "csc_fables_moral"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fables_freeplay"
+        ],
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fables_freeplay"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "bcd5ac75-d26f-4915-8f64-0e8dc5ee4be3"
+      },
+      "level_keys": [
+        "csc_fables_freeplay"
       ]
     }
   ],
@@ -1686,9 +1707,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_location_2022",
+        "level.key": "helloworld_stories_location_2022",
         "script_level.level_keys": [
-          "helloworld_food_location_2022"
+          "helloworld_stories_location_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1698,9 +1719,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_multi_2022",
+        "level.key": "helloworld_stories_multi_2022",
         "script_level.level_keys": [
-          "helloworld_food_multi_2022"
+          "helloworld_stories_multi_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1710,9 +1731,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_click_2022",
+        "level.key": "helloworld_stories_click_2022",
         "script_level.level_keys": [
-          "helloworld_food_click_2022"
+          "helloworld_stories_click_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1734,9 +1755,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coursee_helloworld_events_2022",
+        "level.key": "helloworld_stories_events_2022",
         "script_level.level_keys": [
-          "coursee_helloworld_events_2022"
+          "helloworld_stories_events_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1746,9 +1767,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_backgrounds_2022",
+        "level.key": "helloworld_stories_backgrounds_2022",
         "script_level.level_keys": [
-          "helloworld_food_backgrounds_2022"
+          "helloworld_stories_backgrounds_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1758,9 +1779,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_costumes_2022",
+        "level.key": "helloworld_stories_costumes_2022",
         "script_level.level_keys": [
-          "helloworld_food_costumes_2022"
+          "helloworld_stories_costumes_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1770,9 +1791,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_sizes_2022",
+        "level.key": "helloworld_stories_sizes_2022",
         "script_level.level_keys": [
-          "helloworld_food_sizes_2022"
+          "helloworld_stories_sizes_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1782,9 +1803,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_behaviors_2022",
+        "level.key": "helloworld_stories_behaviors_2022",
         "script_level.level_keys": [
-          "helloworld_food_behaviors_2022"
+          "helloworld_stories_behaviors_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1794,9 +1815,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "gray_csc_helloworld_choice_group_fables_2022",
+        "level.key": "helloworld_whentouches",
         "script_level.level_keys": [
-          "gray_csc_helloworld_choice_group_fables_2022"
+          "helloworld_whentouches"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1806,9 +1827,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "helloworld_food_sounds_2022",
+        "level.key": "helloworld_stories_sounds_2022",
         "script_level.level_keys": [
-          "helloworld_food_sounds_2022"
+          "helloworld_stories_sounds_2022"
         ],
         "lesson.key": "Hello World CSC",
         "lesson_group.key": "",
@@ -1842,9 +1863,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fablesv2_choice_2022",
+        "level.key": "csc_fables_example",
         "script_level.level_keys": [
-          "csc_fablesv2_choice_2022"
+          "csc_fables_example"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1854,9 +1875,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fablesv2_DIY_Set_Scene_2022",
+        "level.key": "csc_fables_setting",
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Set_Scene_2022"
+          "csc_fables_setting"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1866,9 +1887,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fablesv2_DIY_Dialogue_2022",
+        "level.key": "csc_fables_characters",
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Dialogue_2022"
+          "csc_fables_characters"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1878,9 +1899,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fables_predict_2022",
+        "level.key": "csc_fables_say",
         "script_level.level_keys": [
-          "csc_fables_predict_2022"
+          "csc_fables_say"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1890,9 +1911,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fablesv2_DIY_Interactions_2022",
+        "level.key": "csc_fables_behaviors",
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Interactions_2022"
+          "csc_fables_behaviors"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
@@ -1902,14 +1923,62 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fablesv2_DIY_Freeplay_2022",
+        "level.key": "csc_fables_events",
         "script_level.level_keys": [
-          "csc_fablesv2_DIY_Freeplay_2022"
+          "csc_fables_events"
         ],
         "lesson.key": "Code Your Fable",
         "lesson_group.key": "",
         "script.name": "csc-fables-2022",
         "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fables_events_say",
+        "script_level.level_keys": [
+          "csc_fables_events_say"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fables_next scene",
+        "script_level.level_keys": [
+          "csc_fables_next scene"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fables_moral",
+        "script_level.level_keys": [
+          "csc_fables_moral"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fables_freeplay",
+        "script_level.level_keys": [
+          "csc_fables_freeplay"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "bcd5ac75-d26f-4915-8f64-0e8dc5ee4be3"
       }
     }
   ],
@@ -1973,18 +2042,6 @@
       },
       "seeding_key": {
         "resource.key": "project_reflection"
-      }
-    },
-    {
-      "name": "Venn Diagram Example",
-      "url": "https://docs.google.com/document/d/1HtfKpCHRBeZePeCGcheFzLu9N9HDzxYuiTjB0QUmPxs/template/preview",
-      "key": "venn_diagram_example",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "venn_diagram_example"
       }
     }
   ],
@@ -2053,24 +2110,6 @@
       "seeding_key": {
         "lesson.key": "Share Your Fable",
         "resource.key": "project_reflection"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "[Optional] Introduction to Fables",
-        "resource.key": "fable_adaptations"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "[Optional] Introduction to Fables",
-        "resource.key": "fables_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "[Optional] Introduction to Fables",
-        "resource.key": "venn_diagram_example"
       }
     }
   ],
@@ -2152,18 +2191,6 @@
         "lesson.key": "Plan Your Fable",
         "vocabulary.key": "character_trait"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "[Optional] Introduction to Fables",
-        "vocabulary.key": "fable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "[Optional] Introduction to Fables",
-        "vocabulary.key": "moral"
-      }
     }
   ],
   "lessons_programming_expressions": [
@@ -2201,16 +2228,6 @@
       }
     },
     {
-      "key": "30307c5f-aa33-45f8-8dd3-a41b15f1969b",
-      "properties": {
-        "description": "Compare and contrast fables to find commonalities in fable writing "
-      },
-      "seeding_key": {
-        "lesson.key": "[Optional] Introduction to Fables",
-        "objective.key": "30307c5f-aa33-45f8-8dd3-a41b15f1969b"
-      }
-    },
-    {
       "key": "3a8854ba-0ccd-43a6-9fdb-57774a199920",
       "properties": {
         "description": "Program a character’s actions to affect other characters"
@@ -2231,16 +2248,6 @@
       }
     },
     {
-      "key": "47b835d4-9afd-4eb7-824e-dfd8ed8aba98",
-      "properties": {
-        "description": "List similar traits of fables"
-      },
-      "seeding_key": {
-        "lesson.key": "[Optional] Introduction to Fables",
-        "objective.key": "47b835d4-9afd-4eb7-824e-dfd8ed8aba98"
-      }
-    },
-    {
       "key": "620004b3-a25c-4583-8180-b8ae30361bfb",
       "properties": {
         "description": "Create new sprites and assign them costumes and locations."
@@ -2248,16 +2255,6 @@
       "seeding_key": {
         "lesson.key": "Hello World CSC",
         "objective.key": "620004b3-a25c-4583-8180-b8ae30361bfb"
-      }
-    },
-    {
-      "key": "9e9ce048-d29f-499c-bb49-07a2689cc177",
-      "properties": {
-        "description": "Identify common topics of fables"
-      },
-      "seeding_key": {
-        "lesson.key": "[Optional] Introduction to Fables",
-        "objective.key": "9e9ce048-d29f-499c-bb49-07a2689cc177"
       }
     },
     {
