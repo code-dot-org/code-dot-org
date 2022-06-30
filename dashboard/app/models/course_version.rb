@@ -104,7 +104,7 @@ class CourseVersion < ApplicationRecord
     if content_root.course_version && content_root.course_version != course_version && content_root.prevent_course_version_change?
       raise "cannot change course version of #{content_root.name}"
     end
-    course_version.save! if course_version
+    course_version&.save!
 
     # Destroy the previously associated CourseVersion and CourseOffering if appropriate. This can happen if either:
     #   - family_name or version_year was changed

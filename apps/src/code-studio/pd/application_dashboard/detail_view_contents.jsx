@@ -1102,6 +1102,7 @@ export class DetailViewContents extends React.Component {
             showSendEmailButton={true}
             showNotRequiredButton={true}
             onChange={this.handlePrincipalApprovalChange}
+            applicationStatus={this.props.applicationData.status}
           />
         </div>
       );
@@ -1120,6 +1121,7 @@ export class DetailViewContents extends React.Component {
             applicationId={this.props.applicationId}
             showSendEmailButton={true}
             onChange={this.handlePrincipalApprovalChange}
+            applicationStatus={this.props.applicationData.status}
           />
         </div>
       );
@@ -1151,6 +1153,7 @@ export class DetailViewContents extends React.Component {
               this.props.applicationData.allow_sending_principal_email
             }
             onChange={this.handlePrincipalApprovalChange}
+            applicationStatus={this.props.applicationData.status}
           />
         </div>
       );
