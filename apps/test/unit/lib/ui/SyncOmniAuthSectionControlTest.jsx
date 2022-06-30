@@ -56,7 +56,6 @@ describe('SyncOmniAuthSectionControl', () => {
 
   it('initially renders in ready state', () => {
     const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
-    //console.log('wrapper :', wrapper.debug());
     expect(
       wrapper.containsMatchingElement(
         <SyncOmniAuthSectionButton
@@ -72,7 +71,6 @@ describe('SyncOmniAuthSectionControl', () => {
     const wrapper = shallow(
       <SyncOmniAuthSectionControl {...defaultProps} sectionProvider={null} />
     );
-    //console.log('wrapper 1:', wrapper.debug());
     expect(wrapper.isEmptyRender()).to.equal(true);
 
     // Edge case - a provider name, but not one we currently support for imports.
@@ -82,7 +80,6 @@ describe('SyncOmniAuthSectionControl', () => {
         sectionProvider={'microsoft_classroom'}
       />
     );
-    //console.log('wrapper 2:', wrapper2.debug());
     expect(wrapper2.isEmptyRender()).to.equal(true);
   });
 
@@ -91,14 +88,12 @@ describe('SyncOmniAuthSectionControl', () => {
     const wrapper = shallow(
       <SyncOmniAuthSectionControl {...defaultProps} sectionCode={null} />
     );
-    //console.log('wrapper 3:', wrapper.debug());
     expect(wrapper.isEmptyRender()).to.equal(true);
   });
 
   it('calls updateRoster when clicked', () => {
     const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
     wrapper.find(SyncOmniAuthSectionButton).simulate('click');
-    //console.log('wrapper 3:', wrapper.debug());
     expect(updateRoster).to.have.been.calledOnce;
   });
   describe('Strips the prefix from the sectionCode to generate course ID', () => {
@@ -107,7 +102,6 @@ describe('SyncOmniAuthSectionControl', () => {
         <SyncOmniAuthSectionControl {...defaultProps} sectionCode="G-54321" />
       );
       wrapper.find(SyncOmniAuthSectionButton).simulate('click');
-      //console.log('wrapper click 54321:', wrapper.debug())
       expect(updateRoster).to.have.been.calledWith('54321');
     });
 
@@ -116,7 +110,6 @@ describe('SyncOmniAuthSectionControl', () => {
         <SyncOmniAuthSectionControl {...defaultProps} sectionCode="C-2468" />
       );
       wrapper.find(SyncOmniAuthSectionButton).simulate('click');
-      //console.log('wrapper click 2468:', wrapper.debug())
       expect(updateRoster).to.have.been.calledWith('2468');
     });
   });
