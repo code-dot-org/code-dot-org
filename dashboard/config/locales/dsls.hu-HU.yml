@@ -890,6 +890,7 @@ hu-HU:
         - correct: true
         questions:
         - {}
+        title: Előrejelzés készítése
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -898,6 +899,7 @@ hu-HU:
         - correct: true
         questions:
         - {}
+        title: Előrejelzés készítése
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -906,6 +908,7 @@ hu-HU:
         - correct: true
         questions:
         - {}
+        title: Előrejelzés készítése
       Dance_Party_extras_intro:
         markdown: "# Táncolj tovább!\n\nA 2. részben saját projektet fogsz létrehozni.Itt
           nincsenek feladványok, helyettük viszont van egy csomó projekt, amelyek
@@ -1068,10 +1071,108 @@ hu-HU:
           Készíts algoritmust, hogy a karaktert kivezesd az útvesztőből.
       Internet Simulator Setup:
         content1: a leírás itt található
+        markdown: "# Code.org internet-szimulátora\n\nMegjegyzés: Az útmutatóban felsorolt
+          utasítások olyan tanároknak szólnak, akik az internet-szimulátort önálló
+          eszközként, a Code.org számítástechnikai alapismeretek (CSP) tantervétől
+          függetlenül kívánják használni. Ha a Code.org CSP tanterv részeként szeretné
+          a tervezett tevékenységeket használni, akkor kérjük, látogasson el a [CSP
+          tanterv oldalára.](https://code.org/educate/csp)_\n\n### Tartalom\nHárom
+          oldalnyi háttéranyag és információ található itt:\n\n* Mi az internet-szimulátor?
+          Összefoglaló (lásd alább)\n* [beállítási utasítások](/s/netsim/leckék/1/szintek/2)\n*
+          [FAQ](/s/netsim/leckék/1/szintek/3)\n \n### Mi az internet-szimulátor? Összefoglaló:\n\nAz
+          internet-szimulátort a Code.org fejlesztett ki az új középiskolai osztályunk
+          számára [Számítástechnikai alapismeretek](https://code.org/educate/csp).
+          Az eszköz azzal a céllal készült, hogy a diákok gyakorlati tapasztalatot
+          szerezzenek, hálózatba kapcsolt számítógépekkel kapcsolatban különböző problémákkal
+          (és azok megoldásával) kísérletezzenek. Az internet-szimulátort a tanterv
+          1. és 2. egységében használjuk, több órán is, így építjük az internet különböző
+          rétegeit. \n\nHa az eszközt az osztályteremben akarja használni a tervezett
+          tevékenységek részeként, javasoljuk, hogy ismerkedjen meg az eszközzel a
+          [óravázlatok](https://curriculum.code.org/csp/unit1) segítségével. A következő
+          oldalon található **beállítási utasítások** azoknak a tanároknak szólnak,
+          akik az internet-szimulátort a Code.org CSP tantervétől függetlenül szeretnék
+          használni. \n\nMaga az eszköz nem _tanítja meg_ ezeket a fogalmakat, de
+          olyan környezetet biztosít, amelyben a diákok bináris, decimális vagy ascii-alapú
+          üzeneteket küldhetnek egymásnak vagy a többi osztálytársuknak.  **A környezet
+          sokféleképpen konfigurálható**, így különböző típusú problémákat lehet feltárni,
+          adatokat és a hosztok közötti kapcsolatokat vizualizálni, és ezáltal megtanulni
+          az internettel kapcsolatos különböző fogalmakat.\n\nAz internet-szimulátort
+          *osztálytermi* használatra tervezték, ahol a diákok személyesen, együttműködve
+          dolgoznak különböző problémák megoldásán. Miközben ezekkel a problémákkal
+          foglalkoznai, ki kell dolgozniuk egy kommunikációs protokollt vagy információkat
+          kell kódolni olyan strukturált formában, hogy azokat továbbítani lehessen
+          az interneten keresztül. \n\n**A Code.org számítástechnikai alapismeretek
+          tantervében** a leckéket és a tevékenységeket általában a következő módon
+          strukturáljuk:\n\n* **Először a diákok egy feladatot kapnak**\n * pl. A
+          fizikai internet eleve megbízhatatlan, és az üzenetek elveszhetnek\n* **Adjunk
+          lehetőséget a szimulátorral való kísérletezésre, hogy a diákok megérezzék
+          a problémákat** \n * pl. nézzék meg az útválasztó naplókat, és látni fogják,
+          hogy az üzenetek 10-20%-a elveszik, és az adatcsomagok nem a megfelelő sorrendben
+          kerülnek továbbításra.\n* **A diákok kapjanak lehetőséget, és keressenek
+          saját megoldást a feladatokhoz** \n  * pl. találjanak ki saját protokollt
+          arra, hogyan lehet megbízhatóan üzeneteket küldeni ezen a megbízhatatlan
+          hálózaton\n* **Végezetül a diákok megnézik, hogyan működik a protokoll vagy
+          egy találmány a \"való világban \"**\n * pl. Vizsgálják meg, hogyan működik
+          valójában a TCP, és nézzenek meg egy videót.\n\n### Mire konfigurálható
+          az internet-szimulátor?\n\nA legalapvetőbb szinten az internet-szimulátor
+          egyetlen bitnyi információt közöl egyetlen közös vezetéken keresztül, koordináció
+          és szinkronizálás nélkül.  A legfejlettebb változatban több útválasztón
+          keresztül képes megbízhatatlan kapcsolatokat szimulálni, IP-címeket, DNS-t
+          és fix méretű adatcsomagokat használva, ami a TCP/IP-hez vagy a HTTP-hez
+          hasonló protokollok létrehozását igényli. \n\nAz internet-szimulátort különböző
+          konfigurációkban állítottuk be, annak megfelelően, hogy milyen témák oktatását
+          terveztük támogatni vele.  Ha azonban az internet-szimulátort tanórán akarja
+          használni, akkor ismernie kell a felhasználói felület néhány beállítását,
+          ha a diákjait egy bizonyos beállításra akarja utasítani, vagy a beállításokat
+          ellenőrizni akarja.\n\nPéldául: az internet-szimulátor egyik tulajdonsága,
+          hogy az elküldött adatok bináris, decimális, hexa és ASCII formában is megjeleníthetőek.
+          \ Egyes konfigurációkban a felhasználó beállíthatja a \"chunk size\" (darabméretet)
+          is, hogy megszabhatja, hogyan értelmezzék a biteket.  A saját tervezésű
+          leckékhez választhatja az általunk megadott konfigurációk egyikét, de az
+          is lehet, hogy a diákoknak csak a bitek egy bizonyos ábrázolását mutatja
+          meg, vagy esetleg azt szeretné, hogy a darab méretét egy bizonyos értékre
+          állítsák be.\n\nA lényeg az, hogy az itt megadott konfigurációk egy adott
+          téma tanítását szolgálják.  Lehet más tanítási stratégiát is alkalmazni,
+          és a szimulátor használatát találékonyan az igényeinek megfelelően tovább
+          finomítani.\n\n\n <br><br>\n<img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
+          width=\"600px\" style=\"margin:0 100px\"/>\n\n    \n    \n\n_Következő:
+          Beállítási utasítások_\n\n\n"
       Internet Simulator Setup 2:
         content1: a leírás itt található
+        markdown: "# Internet-szimulátor: Telepítési utasítások\n\n1. **Hozzon létre
+          egy csoportot a Code Studio-ban.** Ahhoz, hogy az osztály diákjai kommunikálni
+          tudjanak egymással, mindannyiuknak ugyanahhoz a csoporthoz kell tartozniuk
+          a Code Studio-ban. Jelentkezzen be a tanári fiókjával, és hozzon létre egy
+          csoportot, és ehhez csatlakozzanak a diákjai. Egy csoport létrehozása:\n
+          * Navigáljon a tanári irányítófalon [sections](https://code.org/teacher-dashboard#/sections)
+          területére.\n * Kattintson az Új csoport gombra. Javasoljuk, hogy válassza
+          az e-mailes bejelentkezést és a 'cspunit1'-et a tanfolyamhoz. \n <br>\n<img
+          src=\"https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png\"
+          width=\"600px\" />\n<br><br>\n2. **A diákok jelentkezzenek be a csoportba.**
+          A csoport létrehozása után kattintson a csoportban 'Diákok kezelése' linkre.
+          Megjelenik egy csoporkód, és kérje meg a diákokat, hogy csatlakozzanak,
+          miután létrehozták saját Code Studio fiókjukat.\n<br>\n<img src=\"https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png\"
+          width=\"400px\" />\n<br><br>\n3. **Adja meg a diákoknak a használni kívánt
+          internet-szimulátor verzió URL-címét.** Az internet-szimulátor több különböző
+          konfigurációban is létezik, amelyek a [code.org/internetsimulator](http://code.org/internetsimulator)
+          címen érhetők el. Ha megtalálta a tevékenységéhez megfelelő konfigurációt,
+          ossza meg az URL-címet a tanulókkal. Ha mindannyian ugyanabban a csoportban
+          vannak, akkor automatikusan tudnak majd egymáshoz kapcsolódni, amikor ugyanarra
+          az URL-címre érkeznek.  \n\n_ Következő lépés: Gyakran ismételt kérdések_\n\n"
       Internet Simulator Setup 3:
         content1: a leírás itt található
+        markdown: |+
+          # Internet-szimulátor: GYIK
+
+          #### Hol találom az internet-szimulátorra tervezett tevékenységeket?
+          A Számítástechnikai alapismeretek tantervünkhöz tervezett tevékenységek, beleértve a konkrét internet-szimulátor-konfigurációkat is, megtalálhatók az Egység óravázlataiban [here](https://code.org/educate/csp). Az óratervekhez több videó is tartozik "Tanári tippek és trükkök" címmel, ezekben bemutatjuk, hogy hogyan lehet az internet-szimulátort az osztálytermi tevékenységek részeként használni. Ezeket a tevékenységeket lehet használni az eredeti formájukban, de módosítsa bátran, ha az jobban megfelel az osztályának!
+
+          #### Testreszabhatom-e az internet-szimulátort az osztályom számára?
+          Jelenleg sajnos ez nem lehetslges, a Code.org-on kívüli személyek nem hozhatnak létre egyedi konfigurációkat és utasításokat az internet-szimulátorhoz. Igyekeztünk különböző konfigurációkat létrehozni, amelyek remélhetőleg működnek az Ön osztálytermében és tevékenységeihez. Hosszú távon azonban szeretnénk megengedni, hogy mások is konfigurálhassák az eszközt.
+
+          #### A diákjaim nem látják egymást, amikor az általam megadott URL-címen az internet-szimulátorhoz mennek. Mit tegyek?
+          A diákoknak ugyanabban a csoportban kell lenniük, hogy lássák egymást az internet-szimulátor előcsarnokában. Ellenőrizze, hogy az előző oldalon található csoportbeállítási utasításoknak megfelelően járt-e el, és hogy a kérdéses diákok csatlakoztak-e az adott csoportkódhoz. Az is előfordulhat, hogy néhány diák, ha korábban már elvégeztek néhány Code.org tanfolyamot,  több csoportnak is tagja. Ezért ellenőrizze, hogy a diákok tudják a csoport nevét, és mielőtt belépnek a lobbiba, a megfelelőt választották ki a legördülő listából.
+
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -2684,7 +2785,7 @@ hu-HU:
           A számítástechnikában az események olyan akciók, amiket a számítógép kijelez. Ebben a leckében a gép mindenre másképp reagál, attól függően, hogy melyik gombot nyomod meg.
       CourseF_outbreak_story:
         content1: a leírás itt található
-        markdown: "# Kitörés: Kódold a saját szimulációdat\n\n## Üdvözölünk a Szörnyvárosban!\nSzörnyváros
+        markdown: "# Kitörés: Kódold a saját szimulációdat\n\n## Üdvözlünk a Szörnyvárosban!\nSzörnyváros
           korábban egy boldog és egészséges város volt volt. Szörnyváros szörnyei
           szerettek vándorolni, felkeresni a barátaikat. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -3359,6 +3460,7 @@ hu-HU:
         - correct: true
         questions:
         - {}
+        title: Előrejelzés készítése
       Choose 2 Test:
         answers:
         - correct: true
@@ -3436,3 +3538,23 @@ hu-HU:
         - {}
         - {}
         - {}
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Képek hozzáadása
+      CSD U2 Image practice_pilot_2021:
+        display_name: Képek hozzáadása
+      CSD U3 drawing practice choice_2021:
+        display_name: Gyakorlás
+      CSD web draw loop practice choice_2021:
+        display_name: Gyakorlás
+      CSD web movement practice choice_2021:
+        display_name: Gyakorlás
+      CSD web text practice choice_2021:
+        display_name: Gyakorlás
+      ml-club app-choice parent:
+        display_name: Alkalmazás testreszabása
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Alkalmazás testreszabása
+      CSD games cake challenge choice_2021:
+        display_name: Feladatok
+      CSD games platform challenge choice_2021:
+        display_name: Feladatok

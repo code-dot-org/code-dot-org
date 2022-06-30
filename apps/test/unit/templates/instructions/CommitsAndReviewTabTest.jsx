@@ -17,7 +17,8 @@ const DEFAULT_PROPS = {
   codeReviewEnabled: true,
   locale: 'en_us',
   isReadOnlyWorkspace: false,
-  setIsReadOnlyWorkspace: () => {}
+  setIsReadOnlyWorkspace: () => {},
+  setHasOpenCodeReview: () => {}
 };
 
 const setUp = (overrideProps = {}) => {

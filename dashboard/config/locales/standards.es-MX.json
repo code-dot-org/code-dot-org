@@ -345,7 +345,7 @@
           "description": "Descomponer problemas en subproblemas en distintas partes para facilitar el diseño, implementación, y revisión de programas."
         },
         "csta/3A-AP-16": {
-          "description": "Diseñar y desarrollar de forma iterativa dispositivos informáticos con fines prácticos, de expresión personal o para abordar un problema social utilizando eventos para iniciar instrucciones."
+          "description": "Diseñar e iterativamente desarrollar artefactos computacionales con intenciones prácticas, como forma de demostrar la expresión personal, o para abordar un asunto social, utilizando eventos para iniciar instrucciones."
         },
         "csta/2-AP-19": {
           "description": "Documentar programas con el objetivo de hacerlos más simples de seguir, probar y depurar."
@@ -384,7 +384,7 @@
           "description": "Crear procedimientos con parámetros para organizar el código y hacer más fácil su reutilización."
         },
         "csta/2-CS-03": {
-          "description": "Identificar y solucionar sistemáticamente los problemas de los dispositivos informáticos y sus componentes."
+          "description": "Identifique y resuelva sistemáticamente problemas con los dispositivos computacionales y sus componentes."
         },
         "csta/2-DA-07": {
           "description": "Representar datos usando múltiples esquemas de codificación."

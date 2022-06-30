@@ -1247,6 +1247,7 @@ zh-CN:
             '180': 向左
             '270': 向上
       gamelab_makeSpritesWithSize:
+        text: 制作{NUM}个新的{SIZE} {COSTUME}精灵图
         options:
           SIZE:
             '30': 小
@@ -1459,6 +1460,46 @@ zh-CN:
         text: "{SPRITE} 表示 {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}说{TEXT1}，持续{NUM}秒"
+      gamelab_spriteThink:
+        text: "{SPRITE}思考{SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}思考{TEXT1}，持续{NUM}秒"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE}思考{THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': 哼……
+            '"I am hungry, too."': 我也饿了。
+            '"I only want the biggest goat."': 我只想要最大的山羊。
+            '"I''m a green troll."': 我是一个绿色巨魔。
+            '"No one will cross my bridge."': 没有谁会越过我的桥。
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE}思考{THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': 哼……
+            '"Time to make friends with the sheep."': 是时候和绵羊做朋友了。
+            '"She''ll never recognize me now."': 她再也认不出我了。
+            '"This costume keeps me warm."': 这套服装让我保持温暖。
+            '"I am actually a wolf."': 我其实是一只狼。
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE}思考{THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': 哼……
+            '"I''m feeling sleepy."': 我感觉困了。
+            '"No one could ever beat me."': 没有谁能打败我。
+            '"I''ve done this race before."': 我以前参加过这个比赛。
+            '"My feet are bigger than Turtle''s feet."': 我的脚比乌龟的脚大。
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE}思考{THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': 哼……
+            '"I''m so hungry."': 我饿极了。
+            '"I''m a visitor in this town."': 我是这个镇上的游客。
+            '"If we share, we''ll all have something to eat. "': 如果我们分享，那么我们大家都有东西吃。
+            '"I''ll trick everyone into giving me their food."': 我会欺骗所有人让他们把食物给我。
       gamelab_startAvoiding:
         text: "{SPRITE}开始避开{TARGET}"
       gamelab_startFollowing:

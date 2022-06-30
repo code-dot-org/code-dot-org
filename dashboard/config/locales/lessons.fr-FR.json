@@ -144,6 +144,9 @@
           "preparation": "-   Passez en revue et complétez vous-même le tutoriel en ligne : [Soirée Dansante](https://hourofcode.com/us/how-to) \n\n-   Veillez à l'essayer vous-même avant de demander à vos élèves de le compléter. \n\n-   Assurez-vous que votre matériel informatique est bien compatible et voyez s'il y a un problème à résoudre avant votre Heure de Code.",
           "purpose": "Cette leçon présente les concepts clés de l'informatique relatifs au codage et à la programmation d'événements (utilisation de blocs)."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "L'Heure de Code 2013"
+        },
         "dance-2019/Dance Party": {
           "name": "Soirée Dansante (2019)",
           "overview": "Ce cours permettra aux apprenants de tous âges de s'initier au codage et à l'informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Il a été conçu pour les apprenants de tous âges, mais il requiert de la lecture. L'activité nécessite du son, car l'outil a été conçu pour s'adapter à la musique.",
@@ -156,8 +159,173 @@
           "overview": "Grâce à ce cours, les apprenants de tous âges pourront s'initier au codage et à l'informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Tout d'abord, ils classeront les objets dans les catégories \"poisson\" ou \"pas poisson\" pour tenter d'éliminer les déchets présents dans l'océan. Ensuite, ils devront enrichir leur base de données d'entraînement pour y ajouter d'autres créatures marines qui doivent rester dans l'eau. Pour la deuxième partie du cours, ils choisiront leurs propres étiquettes qu'ils associeront à des images de poissons générées de manière aléatoire. Ces données d'entraînement sont utilisées pour un modèle d'apprentissage automatique qui devrait ensuite être en mesure d'associer lui-même des étiquettes à de nouvelles images.",
           "student_overview": "Résumé du Tutoriel : Tout d'abord, les élèves classent les objets en tant que \"poisson\" ou \"pas poisson\" pour tenter d'éliminer les déchets de l'océan. Ensuite, les élèves élargiront leur ensemble de données d'entraînement pour inclure d'autres créatures marines. Dans la deuxième partie de l'activité, les élèves choisiront leurs propres étiquettes à appliquer aux images de poissons générés aléatoirement. Ces données de formation sont utilisées pour un modèle d'apprentissage automatique qui devrait ensuite être capable d'étiqueter de nouvelles images par ses propres moyens."
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Bienvenue à « Enseigner les Principes Fondamentaux de l'Informatique »"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Comprendre les Cours sur les Principes Fondamentaux de l'Informatique"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Séquencement"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Boucles"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Événements"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Instructions conditionnelles"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Projets de Fin de Cours"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Fonctions"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "variables"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Les Boucles « Pour »"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Le Labo des Lutins"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Examiner vos réflexions"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Prochaines étapes"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenère"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Étude de l'humeur"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Concept Numérique"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "La Programmation Événementielle"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Fonctionnalité De Base De l'Application"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Accesseurs en lecture et en écriture"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "La Mise en Route"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fondamentaux de l'informatique"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Regarder en avant"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Maîtriser les bases: Les séquences"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Maîtriser les bases: Les boucles"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Maîtriser les bases: Les conditions"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Maîtriser les bases: Les fonctions"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Maîtriser les bases: Les événements"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Les Meilleures Pratiques pour l'Enseignement de l'Informatique"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planifier"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Prochaines étapes"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Vue d’ensemble et consignes d’installation"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Transmetre les Bits sur un Fil Commun"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Envoyer des Nombres"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Envoyer Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Diffusion de messages"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routeurs et Adresses"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Paquets et Fiabilité"
+        },
+        "netsim/Manual DNS": {
+          "name": "DNS manuel"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Nœud DNS automatique"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Simulateur d'Internet en libre accès"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "S'Échapper de la Pièce"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Écrans de Début et de Fin"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Écrans de Début et de Fin2"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "La Mise en Route"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fondamentaux de l'informatique"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Regarder en avant"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Maîtriser les bases: Les séquences"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Maîtriser les bases: Les boucles"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Maîtriser les bases: Les conditions"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Maîtriser les bases: Les fonctions"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Maîtriser les bases: Les événements"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Les Meilleures Pratiques pour l'Enseignement de l'Informatique"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planifier"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Prochaines étapes"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Hour of Code 2017 de Collecteur"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Analyse de fréquence"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Bouge, Bouge"
@@ -703,7 +871,7 @@
           "name": "Concours d'orthographe"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "CS Découvertes Enquête de Fin de Semestre"
+          "name": "Programmer pour le Divertissement"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Tracer Des Formes"
@@ -1408,10 +1576,10 @@
           "name": "Une Bataille Royale avec des Événements"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Test Post-Projet"
+          "name": "Programmer pour le Divertissement"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "CS Discoveries Enquête Post Cours"
+          "name": "Tracer Des Formes"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Dessiner dans le Labo des Jeux"
@@ -1474,10 +1642,10 @@
           "name": "Projet - Concevoir un Jeu"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Test Post-Projet"
+          "name": "Innovations en informatique"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "CS Discoveries Enquête Post Cours"
+          "name": "Dessiner des écrans en codant"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "Le Circuit Playground"
@@ -1522,10 +1690,10 @@
           "name": "Projet: Réaliser un prototype innovant"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Test Post-Projet"
+          "name": "L'Analyse de la Conception"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "CS Discoveries Enquête Post Cours"
+          "name": "Comprendre Votre Utilisateur"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Micro Activité de Conception Centrée sur l'Utilisateur"
@@ -1570,10 +1738,10 @@
           "name": "Projet - Présentation de l'Application"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Test Post-Projet"
+          "name": "Questions de Représentation"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "CS Discoveries Enquête Post Cours"
+          "name": "Modèles et Représentation"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "La Représentation ASCII et binaire"
@@ -1618,7 +1786,7 @@
           "name": "Introduction à la Résolution de Problèmes"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Test Post-Projet"
+          "name": "Le Processus de Résolution de Problèmes"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Explorer la Résolution de Problèmes"
@@ -1639,10 +1807,10 @@
           "name": "Projet - Propose une Application"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Test Post-Projet"
+          "name": "Explorer des Sites Web"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "CS Discoveries Enquête Post Cours"
+          "name": "Sites Web pour l'Expression "
         },
         "csd2-2019/Intro to HTML": {
           "name": "Initiation au HTML"
@@ -2164,10 +2332,10 @@
           "name": "Présente Ton Projet"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "CS Découvertes Enquête de Fin de Semestre"
+          "name": "Programmer pour le Divertissement"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "CSD Enquête  Post-Cours"
+          "name": "Tracer Des Formes"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Dessiner dans le Labo des Jeux"
@@ -2230,7 +2398,7 @@
           "name": "Projet - Concevoir un Jeu"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "CSD Enquête  Post-Cours"
+          "name": "Innovations en informatique"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Dessiner des écrans en codant"
@@ -2278,7 +2446,7 @@
           "name": "Projet: Réaliser un prototype innovant"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "CSD Enquête  Post-Cours"
+          "name": "Explorer des Sites Web"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Sites Web pour l'Expression "
@@ -2347,7 +2515,7 @@
           "name": "Projet - Propose une Application"
         },
         "csd5-2017/Representation Matters": {
-          "name": "CSD Enquête  Post-Cours"
+          "name": "Questions de Représentation"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Modèles et Représentation"
@@ -2392,7 +2560,7 @@
           "name": "Projet - Résoudre un Problème de Données"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "CSD Enquête  Post-Cours"
+          "name": "L'Analyse de la Conception"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Comprendre Votre Utilisateur"
@@ -2438,6 +2606,27 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "Projet - Présentation de l'Application"
+        },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "Débogage pour les Éducateurs AB"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "Débogage pour les Éducateurs CDEF"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Pixellisation en Noir et Blanc Tutoriel"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Pixellisation en Noir et Blanc Freeplay"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Pixellisation en Couleur Tutoriel"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Exemples de Pixellisation en Couleur"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Pixellisation en Couleur libre"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Débranché: Tangrams"
@@ -2504,6 +2693,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Défi extrême - Toutes les leçons"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Introduction à l'informatique"
+        },
+        "20-hour/The Maze": {
+          "name": "Le labyrinthe"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Algorithmique"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programmation sur papier quadrillé"
+        },
+        "20-hour/The Artist": {
+          "name": "L'Artiste"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algorithmes"
+        },
+        "20-hour/The Artist 2": {
+          "name": "L'Artiste 2"
+        },
+        "20-hour/Functions": {
+          "name": "Fonctions"
+        },
+        "20-hour/The Farmer": {
+          "name": "Le Fermier"
+        },
+        "20-hour/Conditionals": {
+          "name": "Instructions conditionnelles"
+        },
+        "20-hour/The Artist 3": {
+          "name": "L'Artiste 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Ecriture de chanson"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Le Fermier 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstraction"
+        },
+        "20-hour/The Artist 4": {
+          "name": "L'Artiste 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Programmation de relais"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Le Fermier 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet et les réseaux connectés"
+        },
+        "20-hour/The Artist 5": {
+          "name": "L'Artiste 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Résumé et ouverture"
         },
         "course2/Graph Paper Programming": {
           "name": "Programmation sur papier quadrillé"
@@ -2683,6 +2932,138 @@
           "name": "Puzzle",
           "overview": "Cette leçon donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique. Elle commence par une brève discussion les initiant aux manières, dans le laboratoire informatique, puis ils progresseront dans l'utilisation d'un ordinateur pour résoudre des énigmes en ligne.",
           "student_overview": "Clique et fais glisser pour terminer les énigmes."
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "Enquête Post-Cours Auprès des Étudiants de CSD (2018 - 2019)"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Puzzle"
+        },
+        "allthethings/Maze": {
+          "name": "Labyrinthe"
+        },
+        "allthethings/Artist": {
+          "name": "Artiste"
+        },
+        "allthethings/Bee": {
+          "name": "Abeille"
+        },
+        "allthethings/PlayLab": {
+          "name": "Le Labo du Jeu"
+        },
+        "allthethings/Farmer": {
+          "name": "Fermier"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Rebond"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Correspondance"
+        },
+        "allthethings/TextMatch": {
+          "name": "TextMatch"
+        },
+        "allthethings/CSinA": {
+          "name": "L'Informatique en Algèbre"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "Compteur kilométrique"
+        },
+        "allthethings/Text Compression": {
+          "name": "Compression de texte"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pixellisation"
+        },
+        "allthethings/AppLab": {
+          "name": "Laboratoire App"
+        },
+        "allthethings/Gamelab": {
+          "name": "Labo des Jeux"
+        },
+        "allthethings/Online PD": {
+          "name": "Développement Professionnel En Ligne"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Les Détails de Markdown"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Évaluation de plusieurs pages"
+        },
+        "allthethings/Star wars": {
+          "name": "Star Wars"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "Riche et longue évaluation"
+        },
+        "allthethings/Free Response": {
+          "name": "Réponse Libre"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "Exemple D'évaluation d'une Communauté d'Apprentissage Professionnel"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Niveaux Échangés"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Sondage anonyme pour les élèves"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "La Cryptographie à Clé Publique"
+        },
+        "allthethings/Web Lab": {
+          "name": "Lab du Web"
+        },
+        "allthethings/Single page assessment": {
+          "name": "Évaluation d'une seule page"
+        },
+        "allthethings/Standalone video": {
+          "name": "Vidéo indépendante"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Référence Du Programme d'Études"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Le Labo des Lutins"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Le Labo de la Danse"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Mini Rubrique"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "Externes Éventuellement Affichés comme Débranchés"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "Choix de Bulle"
+        },
+        "allthethings/Contained Levels": {
+          "name": "Les Niveaux Contenus"
+        },
+        "allthethings/ML Fish": {
+          "name": "ML Poisson"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java Lab"
         },
         "coursef-2021/lesson-6": {
           "name": "Introduction au Labo des Sprites",
@@ -3581,9 +3962,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "CS Discoveries Enquête Post-Cours"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "Test Post-Projet"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "Comprendre Votre Utilisateur"
         },
@@ -3618,7 +3996,7 @@
           "name": "CS Discoveries Enquête Post-Cours"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Test Post-Projet",
+          "name": "Innovations en informatique",
           "overview": "Pour démarrer le dernière partie de ce module, les élèves vont rechercher quelques innovations intéressantes en informatique. Cette leçon montrera aux élèves une grande variété dans la forme des ordinateurs et les activités impactées par l'informatique. Plus tard dans le module, les étudiants pourront comparer le résultat de leur recherche avec leur propre expérimentation sur un microcontrôleur."
         },
         "csd6-2021/Designing Screens with Code": {
@@ -3676,7 +4054,7 @@
           "name": "CS Discoveries Enquête Post-Cours"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Test Post-Projet"
+          "name": "Questions de Représentation"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Modèles et Représentation"
@@ -3718,7 +4096,7 @@
           "name": "CS Discoveries Enquête Post-Cours"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Test Post-Projet"
+          "name": "Programmer pour le Divertissement"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Tracer Des Formes"
@@ -3790,7 +4168,7 @@
           "name": "Introduction à la Résolution de Problèmes"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Test Post-Projet"
+          "name": "Le Processus de Résolution de Problèmes"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Explorer la Résolution de Problèmes"
@@ -3811,7 +4189,7 @@
           "name": "Projet - Propose une Application"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Test Post-Projet"
+          "name": "Explorer des Pages Web"
         },
         "csd2-2021/Intro to HTML": {
           "name": "Initiation au HTML"

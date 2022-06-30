@@ -1,5 +1,5 @@
 /* global dashboard */
-import React, {useState, useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import BackToFrontConfetti from '../BackToFrontConfetti';
@@ -10,18 +10,6 @@ import queryString from 'query-string';
 import SocialShare from './SocialShare';
 import LargeChevronLink from './LargeChevronLink';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
-
-const blankCertificates = {
-  hourOfCode: require('@cdo/static/hour_of_code_certificate.jpg'),
-  oceans: require('@cdo/static/oceans_hoc_certificate.png'),
-  mc: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
-  minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
-  hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
-  aquatic: require('@cdo/static/MC_Hour_Of_Code_Certificate_Aquatic.png'),
-  mee: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee.png'),
-  mee_empathy: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee_empathy.png'),
-  mee_timecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee_timecraft.png')
-};
 
 function Certificate(props) {
   const [personalized, setPersonalized] = useState(false);
@@ -35,6 +23,15 @@ function Certificate(props) {
   const isAIOceans = () => /oceans/.test(props.tutorial);
 
   const personalizeCertificate = session => {
+    if (isHocTutorial) {
+      personalizeHocCertificate(session);
+    } else {
+      setStudentName(nameInputRef.current.value);
+      setPersonalized(true);
+    }
+  };
+
+  const personalizeHocCertificate = session => {
     $.ajax({
       url: '/v2/certificate',
       type: 'post',
@@ -109,14 +106,16 @@ function Certificate(props) {
     certificateId,
     randomDonorTwitter,
     under13,
-    children
+    children,
+    initialCertificateImageUrl,
+    isHocTutorial
   } = props;
 
   const certificate = certificateId || 'blank';
   const personalizedCertificate = getCertificateImagePath(certificate);
-  const blankCertificate =
-    blankCertificates[tutorial] || blankCertificates.hourOfCode;
-  const imgSrc = personalized ? personalizedCertificate : blankCertificate;
+  const imgSrc = personalized
+    ? personalizedCertificate
+    : initialCertificateImageUrl;
   const certificateShareLink = getCertificateSharePath(certificate);
   const desktop =
     responsiveSize === ResponsiveSize.lg ||
@@ -200,7 +199,9 @@ Certificate.propTypes = {
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   under13: PropTypes.bool,
   children: PropTypes.node,
-  showStudioCertificate: PropTypes.bool
+  showStudioCertificate: PropTypes.bool,
+  initialCertificateImageUrl: PropTypes.string.isRequired,
+  isHocTutorial: PropTypes.bool
 };
 
 const styles = {

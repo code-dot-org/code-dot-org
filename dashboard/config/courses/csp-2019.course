@@ -17,20 +17,31 @@
   "properties": {
     "family_name": "csp",
     "has_verified_resources": true,
-    "teacher_resources": [
-      [
-        "curriculum",
-        "https://curriculum.code.org/csp-19"
-      ],
-      [
-        "teacherForum",
-        "https://forum.code.org/c/csp"
-      ]
-    ],
     "version_year": "2019"
   },
   "resources": [
-
+    {
+      "name": "Curriculum",
+      "url": "https://curriculum.code.org/csp-19",
+      "key": "curriculum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "curriculum"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp",
+      "key": "teacher_forum_6",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_6"
+      }
+    }
   ],
   "student_resources": [
 

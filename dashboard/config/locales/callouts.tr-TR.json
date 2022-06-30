@@ -2283,7 +2283,8 @@
           "CSD_U3_variables": "Buradaki sayıyı değiştir"
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "Projene kostüm eklemek için buraya tıkla."
+          "costumes_tab": "Projene kostüm eklemek için buraya tıkla.",
+          "make_sprite": "Bir hareketli nesne yapmak için burada blokları kullanın!"
         }
       }
     }

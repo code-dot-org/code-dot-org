@@ -3,43 +3,43 @@ require 'test_helper'
 class AbilityTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    @public_teacher_to_student_unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student) do |unit_group|
+    @public_teacher_to_student_unit_group = create(:unit_group, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) do |unit_group|
       CourseOffering.add_course_offering(unit_group)
       @reference_guide_student_unit_group = create(:reference_guide, course_version: unit_group.course_version)
     end
 
-    @public_teacher_to_student_unit = create(:script, name: 'teacher-to-student', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
+    @public_teacher_to_student_unit = create(:script, name: 'teacher-to-student', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
       @public_teacher_to_student_script_level = create(:script_level, script: script)
     end
 
-    @public_facilitator_to_teacher_unit = create(:script, name: 'facilitator-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
+    @public_facilitator_to_teacher_unit = create(:script, name: 'facilitator-to-teacher', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
       @public_facilitator_to_teacher_script_level = create(:script_level, script: script)
     end
 
-    @public_facilitator_to_teacher_unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher) do |unit_group|
+    @public_facilitator_to_teacher_unit_group = create(:unit_group, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher) do |unit_group|
       CourseOffering.add_course_offering(unit_group)
       @reference_guide_teacher_unit_group = create(:reference_guide, course_version: unit_group.course_version)
     end
 
-    @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'reviewer-to-facilitator', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator).tap do |script|
+    @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'reviewer-to-facilitator', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator).tap do |script|
       @public_plc_reviewer_to_facilitator_script_level = create(:script_level, script: script)
     end
 
-    @public_universal_instructor_to_teacher_unit = create(:script, name: 'universal-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
+    @public_universal_instructor_to_teacher_unit = create(:script, name: 'universal-to-teacher', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
       @public_universal_instructor_to_teacher_script_level = create(:script_level, script: script)
     end
 
-    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true, name: 'migrated-login-required', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
+    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true, name: 'migrated-login-required', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
       @login_required_migrated_lesson = create(:lesson, script: script, has_lesson_plan: true).tap do |lesson|
         @login_required_script_level = create(:script_level, script: script, lesson: lesson)
       end
     end
 
-    @pilot_course = create(:unit, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot).tap do |script|
+    @pilot_course = create(:unit, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot).tap do |script|
       @pilot_course_script_level = create(:script_level, script: script)
     end
 
-    @pl_pilot_course = create(:unit, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer).tap do |script|
+    @pl_pilot_course = create(:unit, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer).tap do |script|
       @pl_pilot_course_script_level = create(:script_level, script: script)
     end
 
@@ -686,6 +686,25 @@ class AbilityTest < ActiveSupport::TestCase
     assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
   end
 
+  test 'student in same CSA code review enabled section and code review group as student seeking code review (v2) can view as peer' do
+    # We enable read only access to other student work only on Javalab levels
+    javalab_script_level = create :script_level,
+      levels: [create(:javalab)]
+
+    project_owner = create :student
+    peer_reviewer = create :student
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
+    create :code_review,
+      user_id: project_owner.id,
+      script_id: javalab_script_level.script_id,
+      level_id: javalab_script_level.levels[0].id,
+      project_level_id: javalab_script_level.levels[0].id
+
+    assert Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
+    assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
+  end
+
   test 'student in same CSA code review enabled section and code review group as student seeking code review can view as peer on bubble choice level' do
     javalab_sublevel = create(:javalab)
     bubble_choice_level = create :bubble_choice_level, sublevels: [javalab_sublevel]
@@ -705,6 +724,31 @@ class AbilityTest < ActiveSupport::TestCase
     assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, bubble_choice_script_level, project_owner, javalab_sublevel
   end
 
+  test 'student in same CSA code review enabled section and code review group as student seeking code review (v2) can view as peer on level with project template' do
+    # Create two javalab levels that share the same project template level.
+    # The first one will be used to create the code review and the second one
+    # will be used to check the ability.
+    script = create :script
+    template_level = create :javalab
+    javalab_level_1 = create :javalab, project_template_level_name: template_level.name
+    javalab_level_2 = create :javalab, project_template_level_name: template_level.name
+    javalab_script_level_2 = create :script_level, script: script,
+      levels: [javalab_level_2]
+
+    project_owner = create :student
+    peer_reviewer = create :student
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
+    create :code_review,
+      user_id: project_owner.id,
+      script_id: script.id,
+      level_id: javalab_level_1.id,
+      project_level_id: template_level.id
+
+    assert Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level_2, project_owner
+    assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level_2, project_owner
+  end
+
   test 'student in same CSA code review enabled section and code review group as student seeking code review (v2) can view as peer on bubble choice level' do
     javalab_sublevel = create(:javalab)
     bubble_choice_level = create :bubble_choice_level, sublevels: [javalab_sublevel]
@@ -719,7 +763,7 @@ class AbilityTest < ActiveSupport::TestCase
       user_id: project_owner.id,
       script_id: bubble_choice_script_level.script_id,
       level_id: javalab_sublevel.id,
-      closed_at: nil
+      project_level_id: javalab_sublevel.id
 
     assert Ability.new(peer_reviewer).can? :view_as_user, bubble_choice_script_level, project_owner, javalab_sublevel
     assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, bubble_choice_script_level, project_owner, javalab_sublevel

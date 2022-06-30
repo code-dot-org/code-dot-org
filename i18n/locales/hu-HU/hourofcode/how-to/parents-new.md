@@ -12,7 +12,7 @@ Ha csatlakozik ehhez  az globális eseményhez, világszerte több tízmillió h
 <h3>Mire van szükségem az elinduláshoz?</h3>
 Egy Kódolás óráját könnyű megszervezni - még kezdőknek is. Nincs szükség sem informatikai, sem tanítási tapasztalatra, ahhoz hogy szórakoztató feladatokat készítsen a gyermekei számára, olyanokat, amelyekből tanuhatnak is.
 
-Kipróbálhatja a Kódolás óráját számítógépenl, táblagépen, okostelefonon vagy akár offline is! Így kezdheti el.
+Kipróbálhatja a Kódolás óráját számítógépen, táblagépen, okostelefonon vagy akár számítógépen nélkül is! Így kezdheti el.
 
 ***
 
@@ -33,7 +33,7 @@ Ha csak néha vagy egyáltalán nem használ technológiát, akkor a [Kódolás 
 
 [<img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" />]({{ urls/learn }})
 
-Megnézheti ezeket a [rövid videókat](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) is, ha további ötleteket szeretne kapni a technológia nélküli otthoni feladatokhoz!
+Megnézheti ezeket a [rövid videókat](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) is, ha további ötleteket szeretne kapni a számítógép nélküli otthoni feladatokhoz!
 
 ## 2) Készüljön fel előre
 Most, hogy már kigondolt néhány gyakorlatot, hasznos lenne kipróbálni azokat, mielőtt megmutatná a gyermekének.

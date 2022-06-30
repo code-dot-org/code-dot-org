@@ -2,24 +2,6 @@
 se:
   data:
     script:
-      category:
-        csd_category_name: CS Fuomášumit ('17-'18)
-        csd_2018_category_name: CS Fuomášumit ('18-'19)
-        csd_2019_category_name: CS Fuomášumit ('19-'20)
-        csd_2020_category_name: CS Fuomášumit ('20-'21)
-        csd_2021_category_name: CS Fuomášumit ('21-'22)
-        csf_international_category_name: CS Vuođut Riikkagaskasaččat
-        csf2_draft_category_name: 'Ovdánahttime: Kurssat A -F'
-        csp_category_name: CS Prinsihpat ('15-'16)
-        csp_2018_category_name: CS Prinsihpat ('18-'19)
-        csp_2019_category_name: CS Prinsihpat ('19-'20)
-        csp_2020_category_name: CS Prinsihpat ('20-'21)
-        csp_2021_category_name: CS Prinsihpat ('21-'22)
-        cspexams_category_name: CS Prinsihpat Praktihkalaš Teasta
-        csp17_category_name: CS Prinsihpat ('17-'18)
-        full_course_category_name: Ollislaš Kurssat
-        research_studies_category_name: Dutkanoahppu
-        other_category_name: Eará
       name:
         course1:
           title: Kursa 1

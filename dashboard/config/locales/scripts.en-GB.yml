@@ -2,9 +2,6 @@
 en-GB:
   data:
     script:
-      category:
-        hoc_category_name: The Hour of Code
-        math_category_name: Mathematics
       name:
         course1:
           title: Course 1

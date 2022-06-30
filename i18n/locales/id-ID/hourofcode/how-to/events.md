@@ -29,7 +29,7 @@ title: How-To untuk acara Hour of Code
     - Mintalah sekelompok siswa untuk memperlihatkan cara membuat kode kepada kepala sekolah atau guru.
     - Jika sekolah Anda telah mengajarkan ilmu komputer, mintalah siswa untuk mendemonstrasikan proyeknya.
 
-## 3. Bagikan bagaimana pelaksanaannya
+## 3. Bagikan bagaimana akhir acaranya
 
 Bagikan foto acara Anda di Facebook dan Twitter dengan menggunakan tagar **#HourOfCode**.
 
@@ -41,11 +41,11 @@ Pertimbangkan untuk menyelenggarakan acara malam K-5 dan undang orang tua untuk 
 
 * * *
 
-## Contoh rencana untuk pertemuan atau acara sekolah
+## Contoh rencana untuk pertemuan umum atau acara di sekolah
 
-**Acara:** Pertemuan pembukaan Pekan Pendidikan Ilmu Komputer di Sekolah
+**Acara:** Pertemuan pembukaan Computer Science Education Week di Sekolah
 
-**Tanggal:** {{ campaign_date/start_short }} (awal Pekan Pendidikan Ilmu Komputer)
+**Tanggal:** {{ campaign_date/start_short }} (awal Computer Science Education Week)
 
 **Waktu:** Selama hari sekolah. Lebih dianjurkan acara pagi. Kurang lebih satu jam.
 

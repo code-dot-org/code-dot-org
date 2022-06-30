@@ -840,6 +840,7 @@ el-GR:
         - correct: true
         questions:
         - {}
+        title: Κάντε μια Πρόβλεψη
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -848,6 +849,7 @@ el-GR:
         - correct: true
         questions:
         - {}
+        title: Κάντε μια Πρόβλεψη
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -856,6 +858,7 @@ el-GR:
         - correct: true
         questions:
         - {}
+        title: Κάντε μια Πρόβλεψη
       Dance_Party_extras_intro:
         markdown: "#Συνεχίστε να \n\nχορεύετε! Για το μέρος 2, θα δημιουργήσετε το
           δικό σας έργο. Δεν υπάρχουν παζλ εδώ - αντ 'αυτού υπάρχει μια δέσμη έργων
@@ -1404,7 +1407,7 @@ el-GR:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Δεν ξέρω.
         questions:
         - {}
       courseC_multi_starWars_predict1_2018:
@@ -1412,7 +1415,7 @@ el-GR:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Δεν ξέρω.
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
@@ -1420,7 +1423,7 @@ el-GR:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Δεν ξέρω.
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019_2020:
@@ -1428,7 +1431,7 @@ el-GR:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Δεν ξέρω.
         questions:
         - {}
       courseC_multi_starWars_predict2:
@@ -2828,6 +2831,7 @@ el-GR:
         - correct: true
         questions:
         - {}
+        title: Κάντε μια Πρόβλεψη
       Choose 2 Test:
         answers:
         - correct: true
@@ -2905,3 +2909,19 @@ el-GR:
         - {}
         - {}
         - {}
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Προσθέτοντας Εικόνας
+      CSD U2 Image practice_pilot_2021:
+        display_name: Προσθέτοντας Εικόνας
+      CSD U3 drawing practice choice_2021:
+        display_name: Εξάσκηση
+      CSD games cake challenge choice_2021:
+        display_name: Προκλήσεις
+      CSD games platform challenge choice_2021:
+        display_name: Προκλήσεις
+      CSD web draw loop practice choice_2021:
+        display_name: Εξάσκηση
+      CSD web movement practice choice_2021:
+        display_name: Εξάσκηση
+      CSD web text practice choice_2021:
+        display_name: Εξάσκηση

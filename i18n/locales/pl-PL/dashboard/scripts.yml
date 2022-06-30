@@ -2,36 +2,6 @@
 pl:
   data:
     script:
-      category:
-        csd_category_name: Odkrycia Informatyki ('17-'18)
-        csd_2018_category_name: Odkrycia Informatyki ('18-'19)
-        csd_2019_category_name: Odkrycia Informatyki ('19-'20)
-        csd_2020_category_name: Odkrycia Informatyki ('20-'21)
-        csd_2021_category_name: Odkrycia Informatyki ('21-'22)
-        csd_pilot_category_name: Pilotaż Odkryć Informatyki
-        csf_category_name: Podstawy Informatyki
-        csf_2018_category_name: Podstawy Informatyki ('18-'19)
-        csf_2019_category_name: Podstawy Informatyki ('19-'20)
-        csf_2020_category_name: Podstawy Informatyki ('20-'21)
-        csf_2021_category_name: Podstawy Informatyki ('21-'22)
-        csf_international_category_name: Podstawy Informatyki, Mędzynarodowe
-        csf2_draft_category_name: 'W fazie rozwoju: Kursy A - F'
-        csp_category_name: Zasady Informatyki ('15-'16)
-        csp_2018_category_name: Zasady Informatyki ('18-'19)
-        csp_2019_category_name: Zasady Informatyki ('19-'20)
-        csp_2020_category_name: Zasady Informatyki ('20-'21)
-        csp_2021_category_name: Zasady Informatyki ('21-'22)
-        cspexams_category_name: Praktyczny Test Podstaw Informatyki
-        csp17_category_name: Zasady Informatyki ('17-'18)
-        aiml_2021_category_name: AI / ML
-        csc_2021_category_name: Powiązania z informatyką ('21-'22)
-        full_course_category_name: Pełne Kursy
-        hoc_category_name: Godzina Kodowania
-        math_category_name: Matematyka
-        research_studies_category_name: Studia badawcze
-        twenty_hour_category_name: 20 Godzina
-        tts_category_name: Zamiana tekstu na mowę
-        other_category_name: Inni/inne
       name:
         course1:
           title: Kurs 1
@@ -16141,6 +16111,8 @@ pl:
               name: Implementacja sortowania przez scalanie
             lesson-7:
               name: Rozszerzanie standardowych algorytmów
+            lesson-8:
+              name: Przemierzanie wielu list
             lesson-9:
               name: Ochrona prywatności i bezpieczeństwa
             lesson-11:
@@ -16737,6 +16709,16 @@ pl:
             lesson-3:
               name: Nauczanie Zasad Informatyki
           name: self-paced-pl-csp4-2021
+          student_description: |-
+            W tym module zapoznasz się z autentycznymi praktykami informatycznymi, z którymi uczniowie będą się spotykać podczas kursu Odkrycia Informatyki. Praktyki te obejmują debugowanie, używanie zasobów i programowanie w parach. Poznasz także rolę nauczyciela kursu Odkrycia Inforematyki w klasie i opracujesz plan, w jaki sposób będziesz wspierać naukę uczniów podczas prowadzenia tego kursu.
+
+            **Będziesz**:
+
+            -   Rozważ rolę nauczyciela kursu Odkrycia Informatyki w klasie.
+            -   Dowiedz się o autentycznych praktykach informatycznych, które uczniowie rozwiną podczas tego kursu.
+            -   Zaplanuj, w jaki sposób będziesz wspierać naukę uczniów poprzez różnicowanie, ciągłą ocenę i promowanie kultury włączania.
+
+            **Sugerowany czas**: 50 minut
         self-paced-pl-csp5-2021:
           name: self-paced-pl-csp5-2021
         self-paced-pl-csp6-2021:
@@ -17956,12 +17938,15 @@ pl:
             lessonGroup-3:
               display_name: Pokaż, co wiesz
           name: csa6-exemplars
+          title: Jednostka 6 - Rozszerzanie możliwości programu [Exemplars]
         2022drafting:
           lessons:
             lesson-1:
               name: Obliczenia ze zmiennymi
             lesson-2:
               name: Wiele duszków
+            lesson-3:
+              name: 'Mini-projekt: Gra kolekcjonera'
             lesson-4:
               name: Symulator pandemii
             lesson-5:
@@ -18047,6 +18032,8 @@ pl:
               name: Wiele duszków
             lesson-2:
               name: Obliczenia ze zmiennymi
+            lesson-3:
+              name: 'Mini-projekt: Gra kolekcjonera'
             Introducing Sprite Lab:
               name: Wprowadzenie Sprite Lab
             Making Sprites:
@@ -18129,6 +18116,7 @@ pl:
             lessonGroup-3:
               display_name: Rozdział 2
           name: csd6-pilot-2022
+          title: Pilotaż informatyki z urzdzeniami fizycznymi (2022)
         csa8-exemplars:
           lessons:
             lesson-1:
@@ -18147,6 +18135,8 @@ pl:
               name: Implementacja sortowania przez scalanie
             lesson-8:
               name: Rozszerzanie standardowych algorytmów
+            lesson-9:
+              name: Przemierzanie wielu list
             lesson-10:
               name: Ochrona prywatności i bezpieczeństwa
             lesson-11:
@@ -18165,8 +18155,15 @@ pl:
             lessonGroup-3:
               display_name: Pokaż, co wiesz
           name: csa8-exemplars
+          title: Jednostka 8 - Nadawanie życia obiektom [Exemplars]
         alltheselfpacedplthings:
+          lessons:
+            Instructor In Training Levels:
+              name: Instruktor na poziomach szkolenia
+            Dani Test Lesson 2:
+              name: Instruktor w Szkoleniu LevelGroup
           name: alltheselfpacedplthings
+          title: Wszystkie PL rzeczy we własnym tempie
         csa7-pilot-facilitator:
           lessons:
             Accessing Object Behavior:
@@ -18263,6 +18260,8 @@ pl:
               name: Implementacja sortowania przez scalanie
             Expanding Standard Algorithms:
               name: Rozszerzanie standardowych algorytmów
+            Traversing Multiple Lists:
+              name: Przemierzanie wielu list
             Defending Privacy and Security:
               name: Ochrona prywatności i bezpieczeństwa
             Inclusive Playground Project - Day 1:
@@ -18297,6 +18296,8 @@ pl:
               name: Implementacja sortowania przez scalanie
             lesson-7:
               name: Rozszerzanie standardowych algorytmów
+            lesson-8:
+              name: Przemierzanie wielu list
             lesson-9:
               name: Ochrona prywatności i bezpieczeństwa
             lesson-11:
@@ -19112,6 +19113,8 @@ pl:
               name: Internet
             End of Course Project:
               name: Koniec projektu kursu
+            lesson-6:
+              name: 'Mini-projekt: Gra kolekcjonera'
             lesson-7:
               name: Tworzenie duszków
             lesson-8:
@@ -19148,6 +19151,8 @@ pl:
               name: Wiele duszków
             "[New] Counting with Variables":
               name: Obliczenia ze zmiennymi
+            "[New] Mini-Project: Collector Game":
+              name: 'Mini-projekt: Gra kolekcjonera'
           lesson_groups:
             ramp_up:
               display_name: Duszki
@@ -19606,6 +19611,8 @@ pl:
               name: Implementacja sortowania przez scalanie
             Expanding Standard Algorithms:
               name: Rozszerzanie standardowych algorytmów
+            Traversing Multiple Lists:
+              name: Przemierzanie wielu list
             Defending Privacy and Security:
               name: Ochrona prywatności i bezpieczeństwa
             Inclusive Playground Project - Day 1:
@@ -19640,6 +19647,8 @@ pl:
               name: Implementacja sortowania przez scalanie
             lesson-7:
               name: Rozszerzanie standardowych algorytmów
+            lesson-8:
+              name: Przemierzanie wielu list
             lesson-9:
               name: Ochrona prywatności i bezpieczeństwa
             lesson-11:
@@ -19895,6 +19904,8 @@ pl:
               name: Implementacja sortowania przez scalanie
             Expanding Standard Algorithms:
               name: Rozszerzanie standardowych algorytmów
+            Traversing Multiple Lists:
+              name: Przemierzanie wielu list
             Defending Privacy and Security:
               name: Ochrona prywatności i bezpieczeństwa
             Inclusive Playground Project - Day 1:
@@ -20162,9 +20173,10 @@ pl:
             For Loops:
               name: Pętle dla (for)
             End of Course projects:
-              name: Projekty na koniec kursu
+              name: Koniec projektów w ramach kursu
             Reviewing your reflections:
               name: Przeglądanie Twoich refleksji
+          name: k5-onlinepd-2022
         vpl-csd1-ci-pilot-2022:
           lessons:
             lesson-1:
@@ -20243,6 +20255,8 @@ pl:
           lessons:
             Innovations in Computing:
               name: Innowacje w informatyce
+            lesson-3:
+              name: Krypto plac zabaw
           name: csd-playground
         csc-pilot-2022-ecosystems:
           lessons:
@@ -20708,6 +20722,7 @@ pl:
               name: Moduł 7
             Module 8:
               name: Moduł 8
+          name: vpl-csd-2022
         vpl-csp-2022:
           lessons:
             Module 1:
@@ -20726,6 +20741,7 @@ pl:
               name: 'Moduł 5: Jednostka 7 i zrozumienie funkcji z parametrami i zwracaniem wartości'
             Module 6:
               name: 'Moduł 6: Wprowadzenie do Zadania Create Performance'
+          name: vpl-csp-2022
         self-paced-pl-csd1-2022:
           lessons:
             Welcome to Codeorg:
@@ -20793,6 +20809,9 @@ pl:
               name: Nauka Zasad Informatyki
             lesson-3:
               name: Nauczanie Zasad Informatyki
+            lesson-4:
+              name: Połącz się ze społecznością informatyki
+          name: self-paced-pl-csp4-2022
         csa9-2022:
           lessons:
             The AP CSA Exam:
@@ -20835,7 +20854,10 @@ pl:
             lessonGroup-3:
               display_name: Egzaminy próbne
           name: csa9-2022
+          title: Przegląd egzaminu AP i praktyka ('22-'23)
           description_short: Uczniowie przygotowują się do egzaminu AP CSA, ćwicząc odpowiedzi na pytania wielokrotnego wyboru i pytania otwarte.
+          description: Ta jednostka przygotowuje uczniów do egzaminu AP CSA poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru i pytań z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania testu. Uczniowie identyfikują mocne strony i obszary poprawy, aby tworzyć zindywidualizowane plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje postępy.
+          student_description: Ta jednostka przygotowuje Ciebie do egzaminu AP CSA poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru i pytań z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania testu. Identyfikujesz mocne strony i obszary poprawy, aby tworzyć zindywidualizowane plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje postępy.
         csa-pl-standalone-code-2022:
           lessons:
             lesson-1:
@@ -20843,6 +20865,7 @@ pl:
             lesson-2:
               name: Jednostka 2 Projekty
           name: csa-pl-standalone-code-2022
+          title: Projekty CSA Profesjonalnego kodowania edukacyjnego
           description: Uczestnicy warsztatów będą mogli zobaczyć przykładowe projekty i kod podczas PL z sąsiedztwa, konsoli i teatru.
         dlp-csd-overview-2022:
           lessons:
@@ -20948,3 +20971,64 @@ pl:
               name: Streszczenie
           title: 2021 Zasady informatyki Omówienie głębszego uczenia
           description: "### Witamy w programie Głębsze uczenie 2021 dla początkujących moderatorów kursu Zasad informatyki."
+        csc-ecosystems-2022:
+          lessons:
+            Model Animal Adaptations:
+              name: Ewolucja biologiczna
+            lesson-3:
+              name: Ewolucja biologiczna
+          name: csc-ecosystems-2022
+        csc-starquilts-2022:
+          name: csc-starquilts-2022
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Wprowadzenie do bajek"
+            Hello World CSC:
+              name: Witaj świecie opowieści
+            Plan Your Fable:
+              name: Zaplanuj swoją bajkę
+            Share Your Fable:
+              name: Udostępnij swoj bajkę
+            lesson-4:
+              name: "[Optional] Wprowadzenie do bajek"
+            lesson-5:
+              name: Zaplanuj swoją bajkę
+            lesson-6:
+              name: Udostępnij swoj bajkę
+          name: csc-fables-2022
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Sztuka poezji
+        alltheblocklythings:
+          lessons:
+            lesson-1:
+              name: Poziomy projektu
+            lesson-2:
+              name: Poziomy projektu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Google Blockly
+            lessonGroup-3:
+              display_name: CDO Blockly
+          name: alltheblocklythings
+          title: Wszystkie rzeczy Blockly!
+          description_short: Wybór poziomów Blockly do testów wewnętrznych
+        self-paced-pl-csd5-2022:
+          lessons:
+            Introduction to AI and machine learning:
+              name: Opracowywaniem stron internetowych
+            Train a machine learning model:
+              name: Animacje i gry interaktywne
+            Engage with machine learning apps:
+              name: Proces projektowania
+            Consider real world implications:
+              name: Dane i społeczeństwo
+            Unit wrap up:
+              name: Oiczenia fizyczne
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przygotowanie do uczenia Jednostki 1
+          name: self-paced-pl-csd5-2022
+          title: self-paced-pl-csd5

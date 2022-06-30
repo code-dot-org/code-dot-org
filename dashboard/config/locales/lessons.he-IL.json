@@ -62,11 +62,44 @@
         "infinity/Infinity": {
           "name": "מעבדת הצעצועים עם דיסני אינסוף"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "שעת קוד 2013"
+        },
         "dance-2019/Dance Party": {
           "name": "מסיבת ריקודים (2019)"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "חזרות"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "אירועים"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "תנאים"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "פונקציות"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "משתנים"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "בשביל לולאות"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "אווירת לימוד"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "יסודות מדעי המחשב"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "השלבים הבאים"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "יסודות מדעי המחשב"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "השלבים הבאים"
         },
         "courseb-2018/Move It, Move It": {
           "name": "זוזו, זוזו"
@@ -533,6 +566,66 @@
         "course4/Super Challenge - For Loops": {
           "name": "אתגר מיוחד - לולאות עבור"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "היכרות למדעי המחשב"
+        },
+        "20-hour/The Maze": {
+          "name": "המבוך"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "חשיבה חישובית"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "תכנות לנייר משבצות"
+        },
+        "20-hour/The Artist": {
+          "name": "האמן"
+        },
+        "20-hour/Algorithms": {
+          "name": "אלגוריתמים"
+        },
+        "20-hour/The Artist 2": {
+          "name": "האמן 2"
+        },
+        "20-hour/Functions": {
+          "name": "פונקציות"
+        },
+        "20-hour/The Farmer": {
+          "name": "האיכר"
+        },
+        "20-hour/Conditionals": {
+          "name": "תנאים"
+        },
+        "20-hour/The Artist 3": {
+          "name": "האמן 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "כתיבת שיר"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "האיכר 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "הפשטה"
+        },
+        "20-hour/The Artist 4": {
+          "name": "האמן 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "האיכר 3"
+        },
+        "20-hour/The Internet": {
+          "name": "האינטרנט"
+        },
+        "20-hour/The Artist 5": {
+          "name": "האמן 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "סיום"
+        },
         "course2/Graph Paper Programming": {
           "name": "תכנות לנייר משבצות"
         },
@@ -688,6 +781,36 @@
         },
         "jigsaw/Jigsaw": {
           "name": "פאזל"
+        },
+        "allthethings/Jigsaw": {
+          "name": "פאזל"
+        },
+        "allthethings/Maze": {
+          "name": "מבוך"
+        },
+        "allthethings/Artist": {
+          "name": "אומן"
+        },
+        "allthethings/Bee": {
+          "name": "דבורה"
+        },
+        "allthethings/Farmer": {
+          "name": "חקלאי"
+        },
+        "allthethings/Flappy": {
+          "name": "פלאפי"
+        },
+        "allthethings/Bounce": {
+          "name": "להקפיץ"
+        },
+        "allthethings/Studio": {
+          "name": "סטודיו"
+        },
+        "allthethings/Minecraft": {
+          "name": "מיינקראפט"
+        },
+        "allthethings/Web Lab": {
+          "name": "מעבדת האתרים"
         },
         "coursef-2021/Nested Loops in the Maze": {
           "name": "לולאות מקוננות במבוך"

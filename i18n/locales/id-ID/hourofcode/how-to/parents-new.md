@@ -43,7 +43,7 @@ Setelah mempertimbangkan beberapa tutorialnya, ada baiknya untuk mencoba kegiata
 <h3>Lebih dari satu anak di rumah?</h3>
 Berikan headphone kepada tiap anak jika mereka akan belajar di perangkat berbeda. Dengan begitu, mereka dapat melakukan kegiatan dengan suara tanpa mengganggu satu sama lain.
 
-Jika Anda hanya akan menggunakan satu perangkat, atau ingin agar Hour of Code lebih atraktif, cobalah <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming mendorong anak untuk belajar bersama. Saat berpasangan, mereka saling membantu untuk menyelesaikan masalah. Mereka juga akan melihat ilmu komputer bersifat sosial dan kolaboratif.
+Jika Anda hanya akan menggunakan satu perangkat, atau ingin agar Hour of Code lebih atraktif, cobalah <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pemrograman berpasangan</a>. Pemrograman berpasangan mendorong anak untuk belajar bersama. Saat berpasangan, mereka saling membantu untuk menyelesaikan masalah. Mereka juga akan melihat ilmu komputer bersifat sosial dan kolaboratif.
 
 <h3>Buat anak-anak bersemangat! </h3>
 Ini adalah kesempatan yang baik untuk memberi kegiatan baru ke hari-hari anak Anda. Anda dapat memaksimalkan keseruan satu tutorial dengan saran berikut:

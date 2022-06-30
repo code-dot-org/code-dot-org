@@ -193,6 +193,10 @@
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modellek és szimulációk",
+          "definition": "olyan program, amelynek célja egy való világbeli esemény vizsgálata utánozva vagy lemásolva annak fő tulajdonságait, így meg lehet takarítani egy, a valós életben történő kísérletezés költségeit, a ráfordítandó időt és meg lehet előzni az esetleges veszélyeket."
+        },
         "event/sports/unversioned": {
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
@@ -289,6 +293,10 @@
         },
         "input/coursef/2021": {
           "word": "Bemenet"
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Modellek és szimulációk",
+          "definition": "olyan program, amelynek célja egy való világbeli esemény vizsgálata utánozva vagy lemásolva annak fő tulajdonságait, így meg lehet takarítani egy, a valós életben történő kísérletezés költségeit, a ráfordítandó időt és meg lehet előzni az esetleges veszélyeket."
         },
         "internet/coursef/2021": {
           "word": "Internet"
@@ -431,6 +439,9 @@
         },
         "define/coursee/2021": {
           "word": "Meghatározás"
+        },
+        "user_interface/csd/2021": {
+          "word": "Felhasználói felület"
         },
         "debugging/csd/2021": {
           "word": "Hibakeresés"

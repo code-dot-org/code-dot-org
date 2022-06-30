@@ -2,10 +2,6 @@
 km:
   data:
     script:
-      category:
-        hoc_category_name: កម្មវិធី Hour of Code
-        math_category_name: គណិត​វិទ្យា
-        other_category_name: ផ្សេងៗ
       name:
         course1:
           lessons:
@@ -1999,6 +1995,8 @@ km:
               name: អនុ​គមន៍
             Variables:
               name: អ​ថេរ
+            End of Course projects:
+              name: គម្រោងត្រូវបានបញ្ចប់
         csd3-2022:
           lessons:
             Shapes and Parameters:

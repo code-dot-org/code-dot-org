@@ -17,7 +17,6 @@
   "classNotFound": "Error: uno o más de tus archivos Java no tienen una definición de clase.",
   "closeReview": "Revisión cerrada",
   "codeEditingDisabled": "La edición de código está desactivada mientras tu proyecto está en revisión",
-  "codeReview": "Revisión de Código",
   "commentProfanityFound": "Tu comentario contiene lenguaje inapropiado, por lo que no se guardará. Por favor, actualiza tu comentario para eliminar las {wordCount, plural, one {palabra} other {palabras}} \"{words}\".",
   "commentUpdateError": "Hubo un error al procesar tu solicitud. Vuelve a intentarlo.",
   "commit": "Enviar",

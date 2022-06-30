@@ -19,7 +19,7 @@
 class LessonGroup < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :script
+  belongs_to :script, optional: true
   def script
     Script.get_from_cache(script_id)
   end

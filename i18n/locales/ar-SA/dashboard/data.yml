@@ -606,6 +606,7 @@ ar:
         csd_u6_input_output: الإدخال والإخراج
         csp_applab_parameters: الدوال والمعاملات
         CSA-PL-intro-to-arrays: مصفوفات أحادية البعد (1D)
+        CS_Changing_Everything: علم الحاسوب غيّر كل شيء
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر

@@ -245,6 +245,10 @@
           "word": "Event",
           "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Model dan Simulasi",
+          "definition": "program yang mereplika atau meniru ciri utama dari peristiwa dunia nyata guna menyelidiki perilakunya tanpa menghabiskan biaya, waktu, atau bahaya dalam menjalankan eksperimen di kehidupan nyata."
+        },
         "event/sports/unversioned": {
           "word": "Event",
           "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
@@ -379,6 +383,10 @@
         "for_loop/coursef/2021": {
           "word": "For Loop",
           "definition": "Loop yang memiliki awal, akhir, dan nilai kenaikan yang telah ditentukan (interval langkah)."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Model dan Simulasi",
+          "definition": "program yang mereplika atau meniru ciri utama dari peristiwa dunia nyata guna menyelidiki perilakunya tanpa menghabiskan biaya, waktu, atau bahaya dalam menjalankan eksperimen di kehidupan nyata."
         },
         "machine_learning/coursef/2021": {
           "word": "Pembelajaran Mesin",

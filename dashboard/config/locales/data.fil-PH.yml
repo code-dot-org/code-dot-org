@@ -39,6 +39,7 @@ fil:
         Custom: Artista
         CustomStudio: Play Lab
         Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Bronse
@@ -787,7 +788,11 @@ fil:
         CSF_harvester_loops_K1: Mga Loops sa Harvester
         CSF_loops_AB: Mga loop
         hoc_dance_warmup: Dance Party - Warm Up
+        hoc_dance_events: Dance Party - Mga Event
+        hoc_dance_properties: Dance Party - Mga Katangian
         hoc_dance_congrats: Dance Party - Party On!
+        c_and_c_great_to_create: Mahusay na Gumawa at Maglaro ng Patas
+        c_and_c_digital_sharing: Digital na Pagbabahagi
         csd_pair_programming: Pair programming
         csd_applab_parameters: Mga function na meron mga parameter
         csd_problem_solving_process: Ang Proseso ng Pagtuklas ng Problema

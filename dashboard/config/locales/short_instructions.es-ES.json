@@ -3861,7 +3861,15 @@
         "U1L13 Text Compression": "Busca patrones (palabras o frases repetidas) en el texto. Ingresa los patrones que ves en el diccionario de la derecha. A medida que escribes entradas en el diccionario, el símbolo de la entrada reemplaza el patrón en el texto.",
         "U2L10 NetSim Automatic DNS": "En esta versión del simulador de Internet, se te proporciona un sistema de nombres de dominio (DNS) y este conoce las direcciones IP de todos las computadoras conectadas. Envía un mensaje en el formulario GET [hostname] al servicio DNS en la dirección <yourRouterNumber>.15 para obtener la dirección de un estudiante.",
         "U3L2 Using Simple Commands": "Dibuja un cuadrado de 1x1 por encima y a la izquierda de la posición inicial de la tortuga. Haz clic para ver las instrucciones completas.",
-        "allthethings-anigif-instructions": "¡Muéveme al Este para llevarme al cerdo!"
+        "allthethings-anigif-instructions": "¡Muéveme al Este para llevarme al cerdo!",
+        "Auto Open Function Editor": "¡Puedes llamar a funciones desde dentro de otras funciones! Usando tu función \"shape\" como base, crea 3 figuras de casas, cada una 20 píxeles más grande que la anterior, empezando por 50 píxeles de longitud. Utilizar un bucle de contador puede ser útil. ",
+        "Bee Recommended Blocks test": "Las flores moradas pueden tener 1 o 0 néctar, ¡pero no sabes cuál! Ten cuidado de no recoger el néctar de una flor púrpura si no tiene. Comprueba si el néctar es igual a 1 utilizando el bloque `if`.",
+        "Calc Circles of Eval .2": "Este bloque de evaluación es una función de multiplicación que toma dos números y devuelve el producto de esos números. Edita este bloque para que multiplique 2 \\* 5",
+        "Calc Vars 1": "Las variables nos permiten nombrar valores para que podamos referirnos a ellos repetidamente a lo largo de nuestros programas. Aquí tienes una variable llamada edad. Establece su valor a tu edad y haz clic en ejecutar.",
+        "Eval Contracts A": "Utiliza la función de estrella para realizar una estrella roja sólida con un radio de 60 píxeles",
+        "Eval Strings Images .2": "La función añadir-cadena utiliza dos cadenas y devuelve una cadena combinada. Agrega una cadena \"Universo\" al segundo argumento de añadir-cadena.",
+        "Farmer for Authored Hint testing": "¡Vaya, he encontrado un agujero muy profundo! No sé cuántas paladas de tierra necesita.  ¿Puedes escribir un programa que lo llene hasta que el suelo quede uniforme?  Pista: Intenta usar el bucle ''while'' esta vez.",
+        "Farmer for TTS testing": "¡Vaya, he encontrado un agujero muy profundo! No sé cuántas paladas de tierra necesita.  ¿Puedes escribir un programa que lo llene hasta que el suelo quede uniforme?  Pista: Intenta usar el bucle ''while'' esta vez."
       }
     }
   }

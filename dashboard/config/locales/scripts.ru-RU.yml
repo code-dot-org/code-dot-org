@@ -2,16 +2,6 @@
 ru:
   data:
     script:
-      category:
-        csf_category_name: Основы информатики
-        csf2_draft_category_name: 'В разработке: Курсы A - F'
-        cspexams_category_name: Практический тест по основам информатики
-        csp17_category_name: "«16 - 17» Основы информатики"
-        full_course_category_name: Курсы полностью
-        hoc_category_name: Час Кода
-        math_category_name: Математика
-        tts_category_name: Озвучивание текста
-        other_category_name: Другое
       name:
         course1:
           title: Курс 1
@@ -8049,6 +8039,8 @@ ru:
               name: Переменные
             For Loops:
               name: Циклы с параметром
+            End of Course projects:
+              name: Конец проектов курса
         vpl-csd1-ci-pilot-2022:
           title: 'Модуль 1: Подготовка к преподаванию по теме "Решения задач и вычисления"'
           description: "Этот модуль профессионального обучения поможет вам подготовиться
@@ -8377,3 +8369,11 @@ ru:
               name: Краткий обзор
             lesson-1:
               name: Краткий обзор
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Привет, мир CSC!
+        self-paced-pl-csd5-2022:
+          lessons:
+            Engage with machine learning apps:
+              name: Процесс разработки схемы

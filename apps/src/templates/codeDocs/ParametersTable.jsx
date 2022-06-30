@@ -19,23 +19,29 @@ const requiredFormatter = required => {
   }
 };
 
-const descriptionFormatter = description => {
-  if (description) {
-    return (
-      <div style={{padding: 10}}>
-        <EnhancedSafeMarkdown markdown={description} />
-      </div>
-    );
-  } else {
-    return null;
-  }
-};
-
 export default function ParametersTable({
   parameters,
-  programmingEnvironmentLanguage
+  programmingEnvironmentLanguage,
+  isSmallWindow
 }) {
+  const descriptionFormatter = description => {
+    if (description) {
+      const padding = isSmallWindow ? '0px 0px 0px 5px' : 10;
+      return (
+        <div style={{padding: padding}}>
+          <EnhancedSafeMarkdown markdown={description} />
+        </div>
+      );
+    } else {
+      return null;
+    }
+  };
+
   const hideRequiredColumn = programmingEnvironmentLanguage === 'java';
+  let cellStyle = tableLayoutStyles.cell;
+  if (isSmallWindow) {
+    cellStyle = {...cellStyle, ...styles.smallCell};
+  }
   const columns = [
     {
       property: 'name',
@@ -50,7 +56,7 @@ export default function ParametersTable({
         }
       },
       cell: {
-        props: {style: tableLayoutStyles.cell}
+        props: {style: cellStyle}
       }
     },
     {
@@ -66,7 +72,7 @@ export default function ParametersTable({
         }
       },
       cell: {
-        props: {style: tableLayoutStyles.cell}
+        props: {style: cellStyle}
       }
     },
     {
@@ -86,7 +92,7 @@ export default function ParametersTable({
         formatters: [requiredFormatter],
         props: {
           style: {
-            ...tableLayoutStyles.cell,
+            ...cellStyle,
             ...(hideRequiredColumn && {display: 'none'})
           }
         }
@@ -106,7 +112,7 @@ export default function ParametersTable({
       },
       cell: {
         formatters: [descriptionFormatter],
-        props: {style: tableLayoutStyles.cell}
+        props: {style: cellStyle}
       }
     }
   ];
@@ -125,7 +131,8 @@ export default function ParametersTable({
 
 ParametersTable.propTypes = {
   parameters: PropTypes.arrayOf(PropTypes.object),
-  programmingEnvironmentLanguage: PropTypes.string
+  programmingEnvironmentLanguage: PropTypes.string,
+  isSmallWindow: PropTypes.bool
 };
 
 const styles = {
@@ -138,5 +145,9 @@ const styles = {
   },
   table: {
     width: '100%'
+  },
+  smallCell: {
+    padding: 5,
+    fontSize: 13
   }
 };

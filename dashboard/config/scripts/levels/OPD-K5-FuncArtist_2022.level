@@ -1,9 +1,5 @@
 <Artist>
   <config><![CDATA[{
-  "game_id": 23,
-  "created_at": "2022-03-09T19:21:17.000Z",
-  "level_num": "custom",
-  "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
     "short_instructions": "Use the `draw a square` function to create the glasses. ",
@@ -17,7 +13,7 @@
     "slider_speed": "0.7",
     "video_key": "C3_artist_functions",
     "embed": "false",
-    "long_instructions": "**Try this student lesson level from Course E - Lesson 13, Level 2:  Functions with Artist.**\r\n\r\nHere is a function called `draw a square`. Use it to complete this drawing. \r\n___\r\n\r\nThe squares are 75 pixels apart.",
+    "long_instructions": "**Try this student lesson level from Course E - Lesson 11, Level 2:  Functions with Artist.**\r\n\r\nHere is a function called `draw a square`. Use it to complete this drawing. \r\n___\r\n\r\nThe squares are 75 pixels apart.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -48,11 +44,18 @@
     "encrypted": "false",
     "validation_enabled": "false",
     "enable_download_image": "false",
+    "encrypted_examples": [
+
+    ],
     "preload_asset_list": null
   },
+  "game_id": 23,
   "published": true,
+  "created_at": "2022-03-09T19:21:17.000Z",
+  "level_num": "custom",
+  "user_id": 6,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-09T19:21:17.120+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-FuncArtist-2021\\\"\"],\"cloned_from\":\"OPD-K5-FuncArtist-2021\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-03-09T19:21:17.120+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-FuncArtist-2021\\\"\"],\"cloned_from\":\"OPD-K5-FuncArtist-2021\"},{\"changed_at\":\"2022-06-03 20:30:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

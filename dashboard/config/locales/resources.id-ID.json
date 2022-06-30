@@ -2039,6 +2039,7 @@
           "name": "Data di Dunia Nyata"
         },
         "video_impact_on_society/csd/2021": {
+          "name": "Video: Dampak terhadap Masyarakat",
           "type": "Video"
         },
         "video_machine_learning/csd/2021": {
@@ -2046,6 +2047,7 @@
           "type": "Video"
         },
         "video_training_data_and_bias/csd/2021": {
+          "name": "Video: Data Pelatihan dan Bias",
           "type": "Video"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
@@ -2235,6 +2237,7 @@
           "name": "Heading dan Paragrap"
         },
         "video_debugging/csd/2021": {
+          "name": "Video: Debugging",
           "type": "Video"
         },
         "html-web-page-1/csd/2021": {
@@ -2313,12 +2316,15 @@
           "name": "Situs Web untuk suatu Tujuan"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "Video: Mengelola Ketidakcocokan",
           "type": "Video"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "Video: Kerja Tim",
           "type": "Video"
         },
         "how-search-works-video/csd/2021": {
+          "name": "Video: Cara Kerja Pencarian",
           "type": "Video"
         },
         "classes/csd/2021": {

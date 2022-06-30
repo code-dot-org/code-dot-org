@@ -20,7 +20,7 @@ Meskipun Hour of Code umumnya diadakan di ruang kelas di seluruh dunia, Anda tid
 Bahkan jika Anda punya rencana agar siswa menyelesaikan kegiatannya secara mandiri, kami sarankan untuk memulai acara Anda dengan kick-off virtual online untuk membuat peserta bersemangat. Ada beberapa cara menarik untuk memulai acara Anda: 
 
 <ul>
-<li><b>Undang pembicara tamu</b>: Ribuan sukarelawan dari segala latar belakang menunggu kabar dari Anda! Cukup gunakan <a href="https://code.org/volunteer/local">peta relawan</a> kami untuk menelusurinya. Dengan Hour of Code virtual, Anda tidak dibatasi oleh jarak. Jadi, jika diperlukan, pertimbangkan untuk mencari sukarelawan di luar wilayah Anda yang menawarkan bantuan dari jarak jauh. Setelah terhubung dengan seorang sukarelawan, Anda dapat merujuk <a href="http://hourofcode.com/us/how-to/volunteers">Panduan Relawan Hour of Code</a> untuk menentukan topik potensial, pertanyaan diskusi, dan lainnya.</li> 
+<li><b>Undang pembicara tamu</b>: Ribuan relawan dari segala latar belakang menunggu kabar dari Anda! Cukup gunakan <a href="https://code.org/volunteer/local">peta relawan</a> kami untuk menelusurinya. Dengan Hour of Code virtual, Anda tidak dibatasi oleh jarak. Jadi, jika diperlukan, pertimbangkan untuk mencari relawan di luar wilayah Anda yang menawarkan bantuan dari jarak jauh. Setelah terhubung dengan seorang relawan, Anda dapat merujuk <a href="http://hourofcode.com/us/how-to/volunteers">Panduan Relawan Hour of Code</a> untuk menentukan topik potensial, pertanyaan diskusi, dan lainnya.</li> 
 <li><b>Tampilkan video inspiratif</b>: Opsi andal lainnya untuk memulai acara Anda adalah menunjukkan kepada peserta satu dari sekian <a href="http://hourofcode.com/us/promote/resources#videos">video inspiratif</a> kami. Banyak video yang berdurasi kurang dari 5 menit dan menampilkan inspirasi dan dorongan dari selebriti yang pasti dikenal oleh siswa Anda.</li> 
 <li><b>Diskusikan manfaat ilmu komputer</b>: Ubah acara Hour of Code Anda menjadi pemahaman yang lebih mendalam tentang ilmu komputer dengan mempertimbangkan dampak teknologi terhadap kehidupan kita sehari-hari. Ajukan pertanyaan panduan kepada siswa dan ubah awal acara Anda menjadi diskusi yang interaktif. Untuk ide tentang cara memulai percakapan, lihat <a href="https://code.org/csforgood#prompts">pertanyaan diskusi</a> ini.</li>
 </ul>
@@ -58,11 +58,11 @@ Kemungkinan Anda sudah mengenal platform seperti Cisco Webex, Google Meet, Micro
 </p>
 
 <h3 spaces-before="0">
-  3. Daftarkan seorang sukarelawan
+  3. Daftarkan seorang relawan
 </h3>
 
 <p spaces-before="0">
-  Anda dapat menemukan relawan yang sesuai dengan kebutuhan Anda dengan mengunjungi <a href="https://code.org/volunteer/local">peta relawan</a> kami. Banyak sukarelawan yang tersedia untuk partisipasi jarak jauh dan sangat antusias untuk berbicara tentang pengalaman mereka dalam ilmu komputer, dampak teknologi terhadap pekerjaan mereka, atau sekadar membantu Anda dalam menjawab pertanyaan siswa. Setelah menemukan sukarelawan, pastikan untuk mengadakan pertemuan sebelumnya dengan mereka untuk membahas tugas mereka dalam acara tersebut, membuat persyaratan teknis, dan menetapkan bahan-bahan untuk berpartisipasi secara online.
+  Anda dapat menemukan relawan yang sesuai dengan kebutuhan Anda dengan mengunjungi <a href="https://code.org/volunteer/local">peta relawan</a> kami. Banyak relawan yang tersedia untuk partisipasi jarak jauh dan sangat antusias untuk berbicara tentang pengalaman mereka dalam ilmu komputer, dampak teknologi terhadap pekerjaannya, atau sekadar membantu Anda dalam menjawab pertanyaan siswa. Setelah menemukan relawan, pastikan untuk mengadakan pertemuan sebelumnya dengan mereka untuk membahas tugasnya dalam acara tersebut, membuat persyaratan teknis, serta menetapkan bahan/materi untuk berpartisipasi secara online.
 </p>
 
 <h3 spaces-before="0">

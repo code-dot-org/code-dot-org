@@ -2,10 +2,6 @@
 fi:
   data:
     script:
-      category:
-        hoc_category_name: Koodaustunti
-        math_category_name: Matematiikka
-        other_category_name: Muut
       name:
         course1:
           title: Kurssi 1

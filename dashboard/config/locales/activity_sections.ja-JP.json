@@ -8902,15 +8902,24 @@
             null
           ]
         },
+        "42738b6d-fc16-4de9-b190-d6253f5e2c67": {
+          "progression_name": "魚を認識中"
+        },
         "aa866b7f-747f-49e4-9578-f937dbef61e4": {
           "tips": [
             null
           ]
         },
+        "0cd5acdb-155e-4161-aba7-610f3869ec29": {
+          "progression_name": "魚の特徴を認識中"
+        },
         "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
           "tips": [
             null
           ]
+        },
+        "1ce2130f-e735-4060-811f-b8c87e6f74b0": {
+          "progression_name": "式を認識中"
         },
         "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
           "tips": [
@@ -8929,7 +8938,11 @@
         "57d8014b-4da5-4981-b5aa-bd5feb656548": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "パターンを探す"
+        },
+        "3b73e965-37ee-48c9-b346-0b2f05e5664d": {
+          "progression_name": "緑のガラスドア"
         },
         "14ad319c-b3ec-4f24-a9c7-5f80f29c9ba8": {
           "tips": [
@@ -8961,6 +8974,12 @@
           "tips": [
             null
           ]
+        },
+        "4e1f64ea-a1bd-4509-b618-84f364384c9a": {
+          "name": "改善された靴リコメンダー"
+        },
+        "e2df5e33-a11a-4ad5-9607-4a67f1b95608": {
+          "progression_name": "改善された靴リコメンダー"
         },
         "a0725763-95c5-47e3-ad8f-ce01dba4cda3": {
           "name": "靴のおすすめアンケート",
@@ -9004,6 +9023,9 @@
             null
           ]
         },
+        "f2beead8-eebd-486b-8748-d31955df2c4d": {
+          "progression_name": "フルーツと野菜のエクスプローラ"
+        },
         "40e5d7a1-ae14-4585-bdab-1fc0036d91b2": {
           "tips": [
             null
@@ -9014,10 +9036,16 @@
             null
           ]
         },
+        "3b4dcf97-2764-4939-af16-c39d10ab214f": {
+          "name": "形状を認識中"
+        },
         "187961bf-44e5-4407-81d7-a47884e32eb6": {
           "tips": [
             null
           ]
+        },
+        "d6f29378-22de-403d-955a-f8e77800dd27": {
+          "progression_name": "形状を認識中"
         },
         "859c17eb-f742-4430-ab49-fe335f6dc3c0": {
           "tips": [
@@ -9033,6 +9061,9 @@
           "tips": [
             null
           ]
+        },
+        "040518cf-bdfa-4bea-a3c4-7e2a5b973097": {
+          "progression_name": "ピザのおすすめ"
         },
         "948494c6-f9ab-422f-a5e5-1ba0dd2bb690": {
           "tips": [
@@ -9071,7 +9102,8 @@
         "d3990be6-8d37-475a-bb3e-5a4f4fc990ca": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "モデルをインポート"
         },
         "24852ddc-3470-46ba-b727-e205b2a6da3c": {
           "progression_name": "あなたのアプリをカスタマイズ"
@@ -9097,6 +9129,12 @@
             null
           ]
         },
+        "5930841f-14d4-4405-915f-abebc0c094fe": {
+          "name": "医療優先順位アプリ"
+        },
+        "a19cc9c3-8670-48e8-bcea-dcddf2581cfa": {
+          "progression_name": "医療優先順位アプリ"
+        },
         "189848b1-8798-4d6b-ba64-c7e43f6aa84a": {
           "tips": [
             null
@@ -9120,6 +9158,9 @@
         "2f337322-f504-4ba7-9714-1c178eba4ca9": {
           "progression_name": "おすすめ本モデルカード"
         },
+        "8a788853-2486-42f1-b0d0-572ad723f421": {
+          "progression_name": "医療用データセットモデルカード"
+        },
         "db8f4d62-af34-4871-993d-281cacf5ff29": {
           "tips": [
             null
@@ -9140,14 +9181,22 @@
           ]
         },
         "0c250e92-85e3-4f85-8a99-44a79fb72c03": {
+          "name": "モデルをインポート中",
           "tips": [
             null
           ]
         },
+        "7d040814-9039-4b26-b0ef-29cb28227d53": {
+          "progression_name": "モデルをインポート中"
+        },
+        "42abdf12-61c8-48a4-8118-6f0b713e28dc": {
+          "progression_name": "アプリケーションの例: 動物園の動物分類"
+        },
         "527dacdb-36d1-4e9e-ad42-b28aab54a395": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ペットリコメンダー"
         },
         "91d7768c-2c1c-4b4b-bb3d-b7646f8144d6": {
           "tips": [
@@ -9157,7 +9206,11 @@
         "aedb156c-9f9c-4214-94aa-a664ce875b23": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ペットリコメンダー"
+        },
+        "757e3c3a-8354-4b41-9b54-ad138d99c341": {
+          "progression_name": "ペットリコメンダー"
         },
         "819a4c17-f05f-4298-9cfc-1cb2c0b00f5d": {
           "tips": [
@@ -9212,6 +9265,9 @@
             null
           ]
         },
+        "02eaa4ce-ab4c-485c-bb2d-08cebd8c5e17": {
+          "progression_name": "Safariモデル"
+        },
         "221c0911-a3eb-4409-be91-e665b43e3fc9": {
           "tips": [
             null
@@ -9227,6 +9283,21 @@
             null,
             null
           ]
+        },
+        "f0652a6f-7460-4715-90e1-1a022ca38631": {
+          "progression_name": "Safariアプリ"
+        },
+        "6837e50f-be66-4db0-a31a-fff75d03b12b": {
+          "name": "ドライバー警告システム"
+        },
+        "87b65d20-bf70-4db3-ae6f-2333f970ad8c": {
+          "progression_name": "ラスパ―ド酒リコメンダー"
+        },
+        "1d2520a0-dcb3-41e9-b121-7bf0b221a87a": {
+          "progression_name": "ドライバー警告システム"
+        },
+        "29dce9c5-577d-4e2c-9d4b-b8bf0e4b18e8": {
+          "progression_name": "ドライバー警告システム"
         },
         "4e10be5f-60ad-4bae-913d-7a157e519447": {
           "tips": [
@@ -9296,12 +9367,14 @@
           ]
         },
         "bb917641-be8e-41f9-8ba5-bad758aeb8d5": {
-          "name": "アンケート"
+          "name": "アンケート",
+          "progression_name": "Kimの調査"
         },
         "9f17132f-2c2e-4f16-bead-88b852b9e33f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Kimの調査データ"
         },
         "3c4c7d3e-338a-4934-bc9c-b9e01d0f14cd": {
           "tips": [
@@ -9310,6 +9383,9 @@
         },
         "1223d000-8832-4645-b9ec-3a7563068eb1": {
           "progression_name": "AI Labとキムのデータ"
+        },
+        "4ca8fcb7-141b-4201-976c-2bafbae0f7a7": {
+          "progression_name": "Isaacの調査データ"
         },
         "7f4a57cb-7221-40f4-a60a-2026a13bcba2": {
           "tips": [
@@ -9344,6 +9420,9 @@
             null
           ]
         },
+        "373c20f4-965e-4cd1-9a60-6fbb186da8c9": {
+          "progression_name": "モデルをインポート"
+        },
         "f2a40f03-0400-4522-b5d6-8349034c6ebb": {
           "progression_name": "ようこそ画面を追加"
         },
@@ -9353,7 +9432,8 @@
         "1b28522d-bf63-4f09-94a2-a80833819a38": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "アプリをレビュー"
         },
         "f1aefb0a-3a33-499b-9ea6-fc842ba895de": {
           "name": "ウォームアップ"
@@ -9682,7 +9762,8 @@
         "233defe7-9977-4539-8a42-7e146979db0e": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "最終盤サンプルアプリ"
         },
         "f5bad206-6147-4a6c-af88-bf15c41f6469": {
           "tips": [
@@ -9743,6 +9824,9 @@
           "tips": [
             null
           ]
+        },
+        "761b498b-6ec2-4956-bd8f-b23e497644a5": {
+          "progression_name": "アプリ例"
         },
         "7fd85c65-ad1b-4f7d-a93d-eed09e89386c": {
           "tips": [
@@ -10103,6 +10187,9 @@
         "15e99a5a-e49e-47de-8eb1-f01b08a46a42": {
           "progression_name": "ブザー"
         },
+        "1184f2a5-021b-42e7-ba86-75ac8ffcc8ad": {
+          "progression_name": "追加の課題: Sound Board"
+        },
         "7091d49a-c4ac-4c04-aaa4-290efb0ee705": {
           "tips": [
             null
@@ -10122,6 +10209,9 @@
         },
         "a7dd4853-b8c3-44d2-a03b-f5e5e23ff0ac": {
           "progression_name": "オートバイ"
+        },
+        "c7ee1edc-3c31-4a6a-a814-1bc69360e6fe": {
+          "progression_name": "追加の課題"
         },
         "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
           "tips": [
@@ -10144,6 +10234,9 @@
             null
           ],
           "progression_name": "色のセンサー"
+        },
+        "1a668f58-e58e-4624-a911-fcfc3188df23": {
+          "progression_name": "追加の課題"
         },
         "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f": {
           "tips": [
@@ -10664,6 +10757,9 @@
             null
           ]
         },
+        "4668155e-befd-4113-bcad-1c7a7fa245be": {
+          "progression_name": "ピザパーティデータ"
+        },
         "28dfd4cd-0d62-4c35-bed0-d6038adf4813": {
           "tips": [
             null
@@ -11180,6 +11276,9 @@
         "c0fc532b-e6eb-4858-af5b-5032cd917616": {
           "progression_name": "テキストを追加"
         },
+        "53f44c86-807a-412c-a436-ed4235537ed4": {
+          "progression_name": "シーンをレビュー"
+        },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
             null
@@ -11278,6 +11377,15 @@
             null
           ]
         },
+        "d77db66e-6e3a-4e3a-82df-2499a5ad0efd": {
+          "progression_name": "アニメーションシーンの例"
+        },
+        "3b4e9eb3-a29a-432e-b6dd-0c525bfaedf2": {
+          "progression_name": "あなたのシーンを計画"
+        },
+        "2e883502-c179-45a9-a313-6ec995831ed2": {
+          "progression_name": "背景を描画"
+        },
         "68f06aee-a50d-4b3e-9323-16f4812eb23a": {
           "progression_name": "Spritesを追加"
         },
@@ -11286,6 +11394,9 @@
         },
         "08bedf45-b2d1-4147-8479-22a9c5f20d51": {
           "progression_name": "動きを追加"
+        },
+        "7de39108-1c8b-4602-9afe-cfde5d7f3ed4": {
+          "progression_name": "アニメ化したシーンのレビュー"
         },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
@@ -11317,6 +11428,9 @@
           "tips": [
             null
           ]
+        },
+        "6eac26fe-a47a-4dbc-b225-c006efd6c418": {
+          "progression_name": "クイックチェック"
         },
         "ba88e2d6-49b9-4e4b-a34f-3a7804ea1ce5": {
           "progression_name": "スキル構築"
@@ -11426,7 +11540,8 @@
         "4b3c39d2-a62c-43c3-b5ae-048ef270624a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "インタラクティブなカードを作る"
         },
         "1f6b91fb-f2a1-4585-bb33-4ede2232a20d": {
           "progression_name": "プロジェクト作品"
@@ -11517,11 +11632,26 @@
             null
           ]
         },
+        "0525516c-cd72-4700-9c7b-36644137ab93": {
+          "progression_name": "サイドスクローラ入門"
+        },
+        "c62c9fee-1e51-4d9d-b221-915d73af2cd2": {
+          "progression_name": "背景を描画"
+        },
         "ef36eaf3-2930-44dd-a939-e0e614755352": {
           "progression_name": "あなたのSpritesを作成"
         },
+        "c8d03646-3696-4a48-9ae9-b54fce33300e": {
+          "progression_name": "プレーヤーコントロール"
+        },
+        "b763e8fd-b51e-4a15-b9be-7d675958d51c": {
+          "progression_name": "ループ中"
+        },
         "1ffc10cf-5883-4d6d-915c-2eb055ce8f84": {
           "progression_name": "スコア & スコアボード"
+        },
+        "8cdb45e9-b767-4246-b5bc-12648197665d": {
+          "progression_name": "ゲームをレビュー"
         },
         "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
           "tips": [
@@ -11597,8 +11727,20 @@
             null
           ]
         },
+        "05331f50-c576-42e0-91ce-00561faee05c": {
+          "progression_name": "フライヤーゲーム入門"
+        },
+        "b67bbd2c-2139-48e4-8002-a7f3f048052a": {
+          "progression_name": "あなたのSpritesを作成"
+        },
+        "91ab7cf4-19a7-4424-b59e-c806057dbb65": {
+          "progression_name": "プレーヤーコントロール"
+        },
         "a7af5fa7-b9bc-4779-bf77-e349bd07d0f2": {
           "progression_name": "スプライトの動き"
+        },
+        "a9203a76-f8c9-4a77-9c8e-0d329d1f9099": {
+          "progression_name": "ゲームをレビュー"
         },
         "40b22769-f206-4725-b2f4-fd3f71c15101": {
           "tips": [
@@ -11625,6 +11767,9 @@
           ],
           "progression_name": "練習"
         },
+        "46206978-44fa-44f3-a4b3-746a30a86dce": {
+          "progression_name": "クイックチェック"
+        },
         "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
           "tips": [
             null
@@ -11648,6 +11793,9 @@
           "tips": [
             null
           ]
+        },
+        "655acab5-5605-4833-b201-7d4776773bb5": {
+          "progression_name": "同じゲーム"
         },
         "f2e6c88e-bc52-4073-b67d-69a0dda590a7": {
           "progression_name": "プロジェクトの計画"
@@ -11697,7 +11845,8 @@
         "b29f40dd-4e28-4c22-8aa8-9e387819622c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "プラットフォームジャンパーレビュー"
         },
         "3732107f-02cf-4117-941b-725824574e50": {
           "progression_name": "チャレンジ"
@@ -11706,6 +11855,9 @@
           "tips": [
             null
           ]
+        },
+        "204d6831-54a0-4a74-bd1e-a81cfb74475a": {
+          "progression_name": "サンプルゲーム"
         },
         "686b638e-1a29-49cc-8711-191165d251b9": {
           "tips": [
@@ -11717,6 +11869,9 @@
         },
         "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9": {
           "progression_name": "プロジェクト - スプライトとインタラクション"
+        },
+        "3cabd5bc-4a69-4067-abda-7200bf0de085": {
+          "progression_name": "ゲームをレビュー"
         },
         "59ca85ff-b7b0-450d-b354-1c9938c4a615": {
           "tips": [
@@ -12353,7 +12508,8 @@
         "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "クイックチェック"
         },
         "f5c13deb-a9a7-4f04-9daa-ec92ec261b02": {
           "tips": [
@@ -12380,11 +12536,20 @@
             null
           ]
         },
+        "d30c88c0-ef5a-4b8a-9bd0-68123ecf6cb6": {
+          "progression_name": "レビュー: HTML"
+        },
         "db6b9679-26c9-45e7-9f82-03b3a92d3abf": {
           "progression_name": "課題: リスト"
         },
         "f1f2db2f-90f0-454f-a438-ad0ef1d6f27a": {
           "progression_name": "あなたのページをコーディング"
+        },
+        "b8b06d7c-cb56-4412-85ad-c68fb0953dc0": {
+          "progression_name": "ページをレビュー"
+        },
+        "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c": {
+          "name": "ピア ・ フィードバック"
         },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
           "tips": [
@@ -12480,6 +12645,9 @@
             null
           ]
         },
+        "58f32e0f-f519-4eae-9c0c-a5cd428869b2": {
+          "progression_name": "レビュー: CSS"
+        },
         "f52e5e03-5b2f-4caf-8c69-868f7c2acdbc": {
           "progression_name": "課題: RGBカラー"
         },
@@ -12488,6 +12656,9 @@
         },
         "5c1f865c-e956-43d3-aac9-e6cf1a18c1b9": {
           "progression_name": "ページにスタイルを追加"
+        },
+        "30535418-4101-4313-b0f2-fb2afdde6b62": {
+          "progression_name": "ページをレビュー"
         },
         "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
           "name": "ピア ・ フィードバック"
@@ -12878,7 +13049,8 @@
         "aca795d4-18ad-434c-91f8-cc29e3d5a96c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "フィードバックを取り入れる"
         },
         "c11db9e7-9e8e-470f-854b-a56722d138f0": {
           "progression_name": "復習"

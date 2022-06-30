@@ -10821,6 +10821,14 @@
         },
         "MC Agent Freeplay": {
           "MC_HOC_2017_13_Cole_a": "Intenta que el Agente construya algunos caminos de vagoneta para que puedas explorar el mundo!"
+        },
+        "Farmer for Authored Hint testing": {
+          "second_hint": "Esta es la segunda pista. Tiene un vídeo como pista.",
+          "last_hint": "Esta es la tercera y última pista. No tiene nada de especial."
+        },
+        "Farmer for TTS testing": {
+          "second_hint": "Esta es la segunda pista. Tiene una imagen.\n\n![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)",
+          "last_hint": "Esta es la tercera y última pista. No tiene nada de especial."
         }
       }
     }

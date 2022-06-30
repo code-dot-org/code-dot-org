@@ -664,10 +664,13 @@ th:
         math: 'คณิตศาสตร์'
         science: 'วิทยาศาสตร์'
         la: 'ศิลปะการใช้ภาษา'
+        other: "อาชีพอื่น ๆ"
       resources:
         kodable: 'Kodable'
+        other: "อาชีพอื่น ๆ"
       robotics:
         kodable: 'Kodable'
+        other: "อาชีพอื่น ๆ"
       workshop_course:
         csf_express: 'CS พื้นฐาน (Pre-Express หรือ Express)'
       email_opt_in:

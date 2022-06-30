@@ -140,6 +140,9 @@
         "dance-extras-2019/Dance Party - Go Further": {
           "purpose": "На этом уроке ученики знакомятся с основными понятиями информатики: написанием кода и программированием событий (с использованием блоков)."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Час кода 2013"
+        },
         "dance-2019/Dance Party": {
           "overview": "В ходе этого урока учащиеся всех возрастов получают начальный опыт написания кода и изучения информатики в безопасной и обеспечивающей поддержку среде. Этот урок предназначен для учащихся всех возрастов, но он требует умения читать. Занятие требует использования звука, так как назначение этого инструмента — реагировать на музыку.",
           "purpose": "На этом уроке ученики знакомятся с основными понятиями информатики: написанием кода и программированием событий (с использованием блоков).",
@@ -151,8 +154,98 @@
           "purpose": "Это учебное пособие предназначено для быстрого ознакомления учащихся с **машинным обучением**, одной из разновидностей **искусственного интеллекта**. Ученики изучат использование **обучающих данных** с целью обучить модель машинного обучения классифицировать новые данные. При ознакомлении с учебным пособием ученики должны получить позитивные впечатления и, что еще более важно, мотивацию к продолжению изучения информатики.",
           "student_overview": "Краткое содержание урока: сначала ученики классифицируют объекты либо как \"рыбу\", либо как\" не рыбу\", чтобы попытаться удалить мусор из океана. Затем учащиеся должны будут расширить свой набор данных обучения, чтобы включить в него других морских существ, которые живут в воде. Во второй части занятия учащиеся будут выбирать собственные метки для нанесения на изображения случайно сгенерированных рыб. Эти обучающие данные используются для модели машинного обучения, которая затем должна иметь возможность самостоятельно маркировать новые изображения."
         },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Последовательность действий"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Циклы"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "События"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Условные команды"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "функции"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Переменные"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Циклы с параметром"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Лаборатория Спрайтов"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Изучение настроения"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Приступить к работе"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Основы программирования"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Освоение основ: последовательности"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Освоение основ: циклы"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Освоение основ: условные операторы"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Освоение основ: функции"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Освоение основ: события"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Планирование"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Следующие шаги"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Обзор и инструкция по установке"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Широковещательные сообщения"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Маршрутизаторы и адреса"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Пакеты и надёжность"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Приступить к работе"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Основы программирования"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Освоение основ: последовательности"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Освоение основ: циклы"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Освоение основ: условные операторы"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Освоение основ: функции"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Освоение основ: события"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Планирование"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Следующие шаги"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Вперед, вперед"
@@ -796,6 +889,9 @@
         "pre-express-2019/Loops in Artist": {
           "name": "Циклы в исполнителе Художник"
         },
+        "csd3-2019/Plotting Shapes": {
+          "name": "Рисование фигур"
+        },
         "csd3-2019/Variables": {
           "name": "Переменные"
         },
@@ -858,6 +954,9 @@
         },
         "csd5-2019/Making Decisions with Data": {
           "name": "Использование данных для принятия решений"
+        },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Процесс решения проблем"
         },
         "csd1-2019/What is a Computer?": {
           "name": "Что такое компьютер?"
@@ -1177,6 +1276,9 @@
         "express-2017/Present Your Project": {
           "name": "Представь свой проект"
         },
+        "csd3-2017/Plotting Shapes": {
+          "name": "Рисование фигур"
+        },
         "csd3-2017/Variables": {
           "name": "Переменные"
         },
@@ -1320,6 +1422,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Невозможное задание — комплекс"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Введение в Информатику"
+        },
+        "20-hour/The Maze": {
+          "name": "Лабиринт"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Вычислительное мышление"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Программирование на бумаге в клеточку"
+        },
+        "20-hour/The Artist": {
+          "name": "Художник"
+        },
+        "20-hour/Algorithms": {
+          "name": "Алгоритмы"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Художник 2"
+        },
+        "20-hour/Functions": {
+          "name": "функции"
+        },
+        "20-hour/The Farmer": {
+          "name": "Фермер"
+        },
+        "20-hour/Conditionals": {
+          "name": "Условные команды"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Художник 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Написание песни"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Фермер 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Абстракция"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Художник 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Эстафетное программирование"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Фермер 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Интернет"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Художник 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Итоги"
         },
         "course2/Graph Paper Programming": {
           "name": "Программирование на бумаге в клеточку"
@@ -1499,6 +1661,69 @@
           "name": "Головоломки",
           "overview": "Этот урок даст учащимся понятие о том, что ожидает их в компьютерном классе. Он начинается с краткого обсуждения, в ходе которого они знакомятся с правилами пребывания в компьютерном классе, затем речь идет об использовании компьютера и создании онлайн-головоломок.",
           "student_overview": "Щелкните и перетащите, чтобы закончить головоломки."
+        },
+        "allthethings/Jigsaw": {
+          "name": "Головоломки"
+        },
+        "allthethings/Maze": {
+          "name": "Лабиринт"
+        },
+        "allthethings/Artist": {
+          "name": "Художник"
+        },
+        "allthethings/Bee": {
+          "name": "Пчела"
+        },
+        "allthethings/Farmer": {
+          "name": "Фермер"
+        },
+        "allthethings/Flappy": {
+          "name": "Порхающий код"
+        },
+        "allthethings/Bounce": {
+          "name": "Прыжок"
+        },
+        "allthethings/Multi": {
+          "name": "Мульти"
+        },
+        "allthethings/Match": {
+          "name": "Соответствие"
+        },
+        "allthethings/Text Compression": {
+          "name": "Сжатие текста"
+        },
+        "allthethings/Pixelation": {
+          "name": "Пикселизация"
+        },
+        "allthethings/AppLab": {
+          "name": "Лаборатория приложений"
+        },
+        "allthethings/Studio": {
+          "name": "Студия"
+        },
+        "allthethings/Star wars": {
+          "name": "Звёздные войны"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Анонимный опрос учащихся"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Криптография с открытым ключом"
+        },
+        "allthethings/Web Lab": {
+          "name": "Веб-лаборатория"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Ссылки на учебный план"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Лаборатория Спрайтов"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java Lab"
         },
         "coursef-2021/lesson-6": {
           "name": "Представляем Лабораторию спрайтов",
@@ -2195,6 +2420,9 @@
         },
         "csd3-2021/lesson-1": {
           "name": "Занимательная информатика: опрос по окончании курса"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Процесс решения проблем"
         },
         "csd1-2021/What is a Computer?": {
           "name": "Что такое компьютер?"

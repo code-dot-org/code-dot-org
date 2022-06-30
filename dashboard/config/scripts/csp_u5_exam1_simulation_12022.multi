@@ -31,7 +31,7 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 **Explanation:** Since the for-loop will run 100 times until the expression `i < rolls` evaluates to `false` the combined total of `tails` and `heads` must be 100.
 
-[Lesson 6 - Loops Investigate](https://studio.code.org/s/csp5-2021/lessons/6) gave students practice with a coin flip simulation program.
+[Lesson 6 - Loops Investigate](https://studio.code.org/s/csp5-2022/lessons/6) gave students practice with a coin flip simulation program.
 
 ::: details [**Essential Knowledge Connected To This Question**]
 

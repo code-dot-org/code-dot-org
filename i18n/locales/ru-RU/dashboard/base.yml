@@ -1055,6 +1055,7 @@ ru:
         music: 'Музыка'
         art: 'Искусство'
         other: "Другое:"
+        na: 'Не применимо'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1063,7 +1064,8 @@ ru:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Другое:"
+        other: "Другое"
+        na: 'Не применимо'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1073,7 +1075,8 @@ ru:
         sphero: 'Спиро'
         raspberry: 'Raspberry Pi'
         wonder: 'Чудесная мастерская'
-        other: "Другое:"
+        other: "Другое"
+        na: 'Не применимо'
       workshop_course:
         csf_af: 'Основы Информатики (Курсы A-F)'
         csf_express: 'Основы информатики (Полу-Ускоренные или Ускоренные)'

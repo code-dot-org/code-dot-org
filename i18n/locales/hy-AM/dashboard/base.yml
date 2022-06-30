@@ -625,10 +625,13 @@ hy:
       subjects:
         cs: 'Համակարգչային գիտություն'
         math: 'Մաթեմատիկա'
+        other: "Այլ"
       resources:
         kodable: 'Kodable'
+        other: "Այլ"
       robotics:
         kodable: 'Kodable'
+        other: "Այլ"
       workshop_course:
         csp: '''16-''17 CS Principles'
       email_opt_in:

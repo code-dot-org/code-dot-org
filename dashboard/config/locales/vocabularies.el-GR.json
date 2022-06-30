@@ -256,6 +256,9 @@
         "program/poem-art/unversioned": {
           "word": "Πρόγραμμα"
         },
+        "behavior/coursef/2021": {
+          "word": "Συμπεριφορά"
+        },
         "program/coursef/2021": {
           "word": "Πρόγραμμα",
           "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
@@ -360,6 +363,9 @@
         "programming/express/2021": {
           "word": "Προγραμματισμός"
         },
+        "behavior/express/2021": {
+          "word": "Συμπεριφορά"
+        },
         "event/express/2021": {
           "word": "Εκδήλωση",
           "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
@@ -393,6 +399,9 @@
           "word": "Εκδήλωση",
           "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
         },
+        "behavior/coursee/2021": {
+          "word": "Συμπεριφορά"
+        },
         "event/coursee/2021": {
           "word": "Εκδήλωση",
           "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
@@ -411,6 +420,9 @@
         },
         "machine_learning/csd/2021": {
           "word": "Εκμάθηση μηχανής"
+        },
+        "user_interface/csd/2021": {
+          "word": "Διεπαφή Χρήστη"
         },
         "debugging/csd/2021": {
           "word": "Εντοπισμός σφαλμάτων"

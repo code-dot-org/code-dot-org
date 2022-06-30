@@ -74,7 +74,7 @@ get '/unsubscribe/:email' do |email|
 end
 
 post '/v2/poste/send-message' do
-  forbidden! unless dashboard_user_helper && dashboard_user_helper.admin?
+  forbidden! unless dashboard_user_helper&.admin?
 
   template = params[:template].to_s
   template = File.basename(template, '.md')

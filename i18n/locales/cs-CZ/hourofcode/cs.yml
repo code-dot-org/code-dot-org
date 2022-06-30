@@ -618,49 +618,52 @@ cs:
     you? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: Nejčastější dotazy
   hoc_faq_what_is_hoc_q: 'Co je Hodina kódu? '
-  hoc_faq_what_is_hoc_a: Hodina kódu je hodinovým úvodem do informatiky, který má
-    za cíl přiblížit programování a ukázat, že každý se může naučit jeho základy.
-    <a href='%{codeorg_url}'> Podívejte se na kurzy</a>.
-  hoc_faq_what_is_hoc_a_markdown: Hodina programování začala jako hodinový úvod do
-    počítačové vědy navržený tak, aby demystifikoval „programování“, aby ukázal, že
-    základy se může naučit každý, a aby se rozšířila účast studentů na poli počítačových
-    věd. Od té doby se z toho stalo celosvětové úsilí oslavit počítačové vědy, počínaje
-    hodinovými programovacími aktivitami, avšak s tím, že dále se pokračuje komunitními
-    projety všeho druhu. Podívejte se na [výukové kurzy a aktivity](%{tutorials}).
-    Tuto kampaň podporuje přes [400 partnerů](%{partners}) a 200&nbsp;000 vzdělavatelů
+  hoc_faq_what_is_hoc_a: Hodina kódu začala jako hodinový úvod do počítačové vědy
+    navržený tak, aby demystifikoval programování a ukázal, že základy se může naučit
+    každý – a aby otevřel dveře k počítačové vědě více studentům. Od té doby se z
+    ní stala celosvětová záležitost – dnes je to oslava počítačové vědy, která začíná
+    hodinovými programovacími aktivitami, ale pokračuje celou řadou komunitních kurzů.
+    Podívejte se na <a href='%{tutorials}'>výukové kurzy a aktivity</a>. Tuto všeobecnou
+    kampaň podporuje přes <a href='%{partners}'>400 partnerů</a> a 200 000 pedagogů
     po celém světě.
+  hoc_faq_what_is_hoc_a_markdown: Hodina kódu začala jako hodinový úvod do počítačové
+    vědy navržený tak, aby demystifikoval programování a ukázal, že základy se může
+    naučit každý – a aby otevřel dveře k počítačové vědě více studentům. Od té doby
+    se z ní stala celosvětová záležitost – dnes je to oslava počítačové vědy, která
+    začíná hodinovými programovacími aktivitami, ale pokračuje celou řadou komunitních
+    kurzů. Podívejte se na [výukové kurzy a aktivity](%{tutorials}). Tuto všeobecnou
+    kampaň podporuje přes [400 partnerů](%{partners}) a 200 000 pedagogů po celém
+    světě.
   hoc_faq_last_year: Vyzkoušejte kurzy
   hoc_faq_when_is_hoc_q: Kdy začne Hodina kódu?
-  hoc_faq_when_is_hoc_a: Hodinu kódu může uspořádat kdykoliv a kdokoliv. Cílem kampaně
-    je poskytnout Hodinu kódu desítkám milionů žáků v jednom týdnu 7. - 13. prosince
-    (%{campaign_date}), kdy slavíme <a href='http://csedweek.org'>Týden informatiky</a>.
-    Je stanovena nějaká konkrétní <i>hodina</i>? Ne. Hodiny kódu se můžeš zúčastnit
-    kdykoliv během tohoto týdne. Jestliže nemůžeš, tak to zkus týden předtím nebo
-    potom.
-  hoc_faq_when_is_hoc_a_markdown: "„Hodina programování“  se koná každý rok během
-    [Týdne vzdělávání v počítačových vědách](%{csedweek_url}). %{campaign_date_year}
-    Týden vzdělávání v počítačových vědách bude %{campaign_date_full}, ale „Hodinu
-    programování“ můžete hostovat kdykoli během roku. Týden vzdělávání v počítačových
-    vědách se koná každoročně v den narozenin pionýra počítačových věd  [Admiral Grace
-    Murray Hopper](%{grace_hopper}) (9. prosince 1906)."
+  hoc_faq_when_is_hoc_a: Hodina kódu se koná každý rok v rámci <a href='%{csedweek_url}'>Týdne
+    informatiky</a>. Ten bude v roce %{campaign_date_year} probíhat %{campaign_date_full},
+    ale Hodinu kódu můžete uspořádat kdykoli během celého roku. Týden informatiky
+    se každoročně koná na počest průkopnice počítačových věd <a href='%{grace_hopper}'>admirálky
+    Grace Murray Hopperové</a> v den jejích narozenin (9. prosince 1906).
+  hoc_faq_when_is_hoc_a_markdown: Hodina kódu se koná každý rok v rámci [Týdne informatiky](%{csedweek_url}).
+    Ten bude v roce %{campaign_date_year} probíhat %{campaign_date_full}, ale Hodinu
+    kódu můžete uspořádat kdykoli během celého roku. Týden informatiky se každoročně
+    koná na počest průkopnice počítačových věd [admirálky Grace Murray Hopperové](%{grace_hopper})
+    v den jejích narozenin (9. prosince 1906).
   hoc_faq_why_cs_q: Proč informatika?
-  hoc_faq_why_cs_a: "<i>Každý</i> student by měl mít možnost se učit informatiku.
-    Pomáhá to podporovat dovednost, logiku a tvořivost při řešení problémů. Hned na
-    začátku studenti získají základy pro úspěch v jakékoliv profesní dráze 21.století.
-    Více ve statistikách na <a href='http://code.org'>Code.org</a>."
-  hoc_faq_why_cs_a_markdown: _Každý_ student by měl mít příležitost učit se počítačovou
-    vědu. Pomáhá to v něm rozvíjet schopnost řešit problémy, logiku a kreativitu.
-    Když začnou včas, budou mít studenti základ pro úspěch na jakékoli kariérní dráze
-    21. století. Na další statistiky se můžete podívat [tady](%{stats_url}).
+  hoc_faq_why_cs_a: "<i>Každý</i> student by měl mít možnost učit se informatiku –
+    díky ní může rozvíjet schopnost řešit problémy, logické myšlení a tvořivost. Když
+    studenti začnou včas, dostanou základ pro budoucí úspěch v jakékoli kariérní dráze,
+    která je ve 21. století čeká. Na další statistiky se můžete podívat <a href='%{stats_url}'>tady</a>."
+  hoc_faq_why_cs_a_markdown: _Každý_ student by měl mít možnost učit se informatiku
+    – díky ní může rozvíjet schopnost řešit problémy, logické myšlení a tvořivost.
+    Když studenti začnou včas, dostanou základ pro budoucí úspěch v jakékoli kariérní
+    dráze, která je ve 21. století čeká. Na další statistiky se můžete podívat [tady](%{stats_url}).
   hoc_faq_how_participate_q: Jak se Hodiny kódu zúčastním?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Naplánujte ji zde</a> tím, že si prohlídnete
-    náši příručku. Hodinu kódu můžete organizovat na vaší škole nebo ve vaší komunitě,
-    jako je mimoškolní klub, případně v práci. Můžete to zkusit i sami, jakmile začneme
-    (datum: %{campaign_date})."
-  hoc_faq_how_participate_a_markdown: "[Začít plánovat můžete tady](%{howto}) přečtením
-    našeho návodného průvodce. Akci „Hodina programování“ můžete pořádat ve své škole
-    nebo v jiném společenství — jako třeba v mimoškolním klubu, neziskové organizaci,
-    nebo v práci. Nebo to prostě zkuste sami, až přijde %{campaign_date}."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Začít plánovat můžete tady</a> – přečtením
+    našeho průvodce. Hodinu kódu můžete uapořádat ve škole nebo v jiném zařízení –
+    třeba ve volnočasovém centru, neziskové organizaci nebo v práci. Anebo si Hodinu
+    kódu vyzkoušejte %{campaign_date} sami."
+  hoc_faq_how_participate_a_markdown: "[Začít plánovat můžete tady](%{howto}) – přečtením
+    našeho průvodce. Hodinu kódu můžete uapořádat ve škole nebo v jiném zařízení –
+    třeba ve volnočasovém centru, neziskové organizaci nebo v práci. Anebo si Hodinu
+    kódu vyzkoušejte %{campaign_date} sami."
   hoc_faq_behind_hoc_q: Kdo stojí za Hodinou kódu?
   hoc_faq_behind_hoc_a: Hodinu kódu pomáhají zajišťovat <a href='%{partner_url}'>Poradní
     a kontrolní výbory</a> vzdělávacího programu Hodina kódu a Týden informatiky,
