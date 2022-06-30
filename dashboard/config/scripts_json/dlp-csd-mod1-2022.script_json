@@ -10,9 +10,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-18 15:24:01 UTC",
+    "serialized_at": "2022-06-29 16:11:03 UTC",
     "published_state": "in_development",
-    "instruction_type": "teacher_led",
+    "instruction_type": "self_paced",
     "instructor_audience": "plc_reviewer",
     "participant_audience": "facilitator",
     "seeding_key": {
@@ -121,6 +121,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21-csd-general-prep_2022"
+        ],
         "progression": "Preparation"
       },
       "bonus": false,
@@ -143,6 +146,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21-csd-mod1-pre_2022"
+        ],
         "progression": "Preparation"
       },
       "bonus": false,
@@ -165,6 +171,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21-csd-mod1-q1_2022"
+        ],
         "progression": "Prompts"
       },
       "bonus": false,
@@ -187,6 +196,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21-csd-mod1-q2_2022"
+        ],
         "progression": "Prompts"
       },
       "bonus": false,
@@ -209,6 +221,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21-csd-mod1-q3_2022"
+        ],
         "progression": "Prompts"
       },
       "bonus": false,

@@ -216,16 +216,13 @@
     "libraries_enabled": "false",
     "validation_enabled": "false",
     "ai_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-05-23T20:18:02.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-05-23T20:18:02.000Z",
   "user_id": 1,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-05-23T20:18:02.538+00:00\",\"changed\":[\"cloned from \\\"CSDU6 Circuit Playground Test_2222\\\"\"],\"cloned_from\":\"CSDU6 Circuit Playground Test_2222\"},{\"changed_at\":\"2022-06-01 15:29:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18579,\"changed_by_email\":\"jess+levelbuilder@code.org\"},{\"changed_at\":\"2022-06-01 15:35:09 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18579,\"changed_by_email\":\"jess+levelbuilder@code.org\"},{\"changed_at\":\"2022-06-01 19:02:07 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18579,\"changed_by_email\":\"jess+levelbuilder@code.org\"}]"
 }]]></config>

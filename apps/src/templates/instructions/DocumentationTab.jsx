@@ -97,6 +97,7 @@ export const UnconnectedDocumentationTab = function({
           <ProgrammingClassOverview
             programmingClass={classMap[keyToShow].doc}
             includeMethodSummary={true}
+            isSmallWindow={true}
           />
         </>
       )}

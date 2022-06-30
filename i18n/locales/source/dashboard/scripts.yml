@@ -2,36 +2,6 @@
 en:
   data:
     script:
-      category:
-        csd_category_name: CS Discoveries ('17-'18)
-        csd_2018_category_name: CS Discoveries ('18-'19)
-        csd_2019_category_name: CS Discoveries ('19-'20)
-        csd_2020_category_name: CS Discoveries ('20-'21)
-        csd_2021_category_name: CS Discoveries ('21-'22)
-        csd_pilot_category_name: CS Discoveries Pilot
-        csf_category_name: CS Fundamentals
-        csf_2018_category_name: CS Fundamentals ('18-'19)
-        csf_2019_category_name: CS Fundamentals ('19-'20)
-        csf_2020_category_name: CS Fundamentals ('20-'21)
-        csf_2021_category_name: CS Fundamentals ('21-'22)
-        csf_international_category_name: CS Fundamentals International
-        csf2_draft_category_name: 'Under Development: Courses A - F'
-        csp_category_name: CS Principles ('15-'16)
-        csp_2018_category_name: CS Principles ('18-'19)
-        csp_2019_category_name: CS Principles ('19-'20)
-        csp_2020_category_name: CS Principles ('20-'21)
-        csp_2021_category_name: CS Principles ('21-'22)
-        cspexams_category_name: CS Principles Practice Test
-        csp17_category_name: CS Principles ('17-'18)
-        aiml_2021_category_name: AI / ML
-        csc_2021_category_name: CS Connnections ('21-'22)
-        full_course_category_name: Full Courses
-        hoc_category_name: Hour of Code
-        math_category_name: Math
-        research_studies_category_name: Research Studies
-        twenty_hour_category_name: 20-Hour
-        tts_category_name: Text-to-Speech
-        other_category_name: Other
       name:
         course1:
           title: Course 1
@@ -24242,7 +24212,7 @@ en:
             For Loops:
               name: For Loops
             End of Course projects:
-              name: End of Course projects
+              name: End of Course Projects
             Reviewing your reflections:
               name: Reviewing your reflections
             Taking next steps:
@@ -24269,6 +24239,7 @@ en:
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+          name: k5-onlinepd-2022
         vpl-csd1-ci-pilot-2022:
           lessons:
             lesson-1:
@@ -24379,11 +24350,11 @@ en:
             lesson-1:
               name: Introduction to Physical Computing
             lesson-2:
-              name: Get to know the circuit playground
+              name: Get to know the Circuit Playground
             lesson-3:
               name: Experiment with inputs and outputs
             lesson-4:
-              name: Engage with maker-based prototypes
+              name: Engage with prototypes
             lesson-5:
               name: Unit wrap up
           lesson_groups: {}
@@ -24441,6 +24412,8 @@ en:
               name: Level Updates
             Innovations in Computing:
               name: Innovations in Computing
+            lesson-3:
+              name: Crypto Playground
           lesson_groups: {}
           name: csd-playground
           title: CSD Playground
@@ -25132,21 +25105,23 @@ en:
               name: Module 7
             Module 8:
               name: Module 8
-          title: CS Discoveries Virtual Professional Learning 2021 - 22
+          title: CS Discoveries Virtual Professional Learning 2022 - 23
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: vpl-csd-2022
         vpl-csp-2022:
           lessons:
             Module 1:
-              name: Module 1
+              name: 'Module 1: Wrapping Up Unit 3 & EIPM'
             Module 2:
-              name: Module 2
+              name: 'Module 2: Variables Practice & Make Lessons'
             Module 3:
-              name: Module 3
+              name: 'Module 3: Wrapping Up Unit 4 & Lists in Unit 5'
             Module 4:
-              name: Module 4
+              name: 'Module 4: Mental Models, Datasets, & Assessment'
             'Module 5: Unit 7 and Understanding Functions with Parameters and Return':
               name: 'Module 5: Unit 7 and Understanding Functions with Parameters and Return'
             'Module 6: Introduction to the Create Performance Task':
@@ -25163,11 +25138,13 @@ en:
               name: 'Module 7: Tools and Structure in Unit 9 - Data'
             Module 8:
               name: 'Module 8: Building Community and Preparing Students for the AP Exam'
-          title: CS Principles Virtual Professional Learning 21 - 22
+          title: CS Principles Virtual Professional Learning 22 - 23
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: vpl-csp-2022
         self-paced-pl-csd1-2022:
           lessons:
             Welcome to Codeorg:
@@ -25345,6 +25322,8 @@ en:
               name: Learning CS Principles
             lesson-3:
               name: Teaching CS Principles
+            lesson-4:
+              name: Connect with the CS community
           title: Teaching and learning CS Principles
           description: |-
             In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
@@ -25354,20 +25333,24 @@ en:
             -   Consider the role of the teacher in a CS Principles classroom.
             -   Learn about authentic CS practices that students will develop throughout the CS Principles course.
             -   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+            -   Learn about opportunities to connect with the broader CS community.
 
-            **Suggested Time**: 50 minutes
+            **Suggested Time**: 70 minutes
           student_description: |-
-            In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course.
+            In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
 
             **You will**:
 
-            -   Consider the role of the teacher in a CS Discoveries classroom.
-            -   Learn about authentic CS practices that students will develop throughout the CS Discoveries course.
+            -   Consider the role of the teacher in a CS Principles classroom.
+            -   Learn about authentic CS practices that students will develop throughout the CS Principles course.
             -   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+            -   Learn about opportunities to connect with the broader CS community.
 
-            **Suggested Time**: 50 minutes
+            **Suggested Time**: 70 minutes
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: self-paced-pl-csp4-2022
         csa9-2022:
           lessons:
             The AP CSA Exam:
@@ -25584,3 +25567,132 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Hello World CSC
+            Overfishing Simulation:
+              name: Overfishing Simulation
+            Model Animal Adaptations:
+              name: Model Animal Adaptations
+            lesson-2:
+              name: Overfishing Simulation
+            lesson-3:
+              name: Model Animal Adaptations
+          title: Ecosystems
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: csc-ecosystems-2022
+        csc-starquilts-2022:
+          lessons:
+            Native American Star Quilts:
+              name: Native American Star Quilts
+            Getting Started with The Artist:
+              name: Getting Started with The Artist
+            Code Your Star Quilt:
+              name: Code Your Star Quilt
+            lesson-1:
+              name: Native American Star Quilts
+            lesson-2:
+              name: Getting Started with The Artist
+            lesson-3:
+              name: Code Your Star Quilt
+          title: Star Quilts Module
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: csc-starquilts-2022
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Introduction to Fables"
+            Hello World CSC:
+              name: Hello World of Stories
+            Plan Your Fable:
+              name: Plan Your Story
+            Code Your Fable:
+              name: Code Your Story
+            Share Your Fable:
+              name: Share Your Fable
+            lesson-4:
+              name: "[Optional] Introduction to Fables"
+            lesson-5:
+              name: Common Stories
+            lesson-3:
+              name: Code Your Fable
+            lesson-6:
+              name: Share Your Fable
+          title: Fables
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: csc-fables-2022
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Poem Art
+            The Time We Live In:
+              name: The Time We Live In
+            Coding My Time Capsule:
+              name: Coding My Time Capsule
+            Gallery Walk:
+              name: Gallery Walk
+            lesson-2:
+              name: The Time We Live In
+            lesson-3:
+              name: Coding My Time Capsule
+            lesson-4:
+              name: Gallery Walk
+          title: Time Capsule
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csd1-ayw-pilot-2022:
+          lessons: {}
+          lesson_groups: {}
+        alltheblocklythings:
+          lessons:
+            lesson-1:
+              name: Project Levels
+            lesson-2:
+              name: Project Levels
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Google Blockly
+            lessonGroup-3:
+              display_name: CDO Blockly
+          name: alltheblocklythings
+          title: All the Blockly Things!
+          description_audience: ''
+          description_short: A selection of Blockly levels for internal testing
+          description: ''
+          student_description: ''
+        self-paced-pl-csd5-2022:
+          lessons:
+            Introduction to AI and machine learning:
+              name: Introduction to AI and machine learning
+            Train a machine learning model:
+              name: Train a machine learning model
+            Engage with machine learning apps:
+              name: Engage with machine learning apps
+            Consider real world implications:
+              name: Consider real world implications
+            Unit wrap up:
+              name: Unit wrap up
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching Artificial Intelligence and Machine Learning
+          name: self-paced-pl-csd5-2022
+          title: Teaching AI and Machine Learning
+          description_audience: ''
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"

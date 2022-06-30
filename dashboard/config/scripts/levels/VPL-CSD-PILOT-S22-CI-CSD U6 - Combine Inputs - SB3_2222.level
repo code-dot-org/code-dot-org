@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-05-25T16:09:06.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -24,7 +20,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Frequency\r\n\r\nThis buzzer controller has been expanded to control frequency as well, but the code isn't finished yet.\r\n\r\n# Do This\r\n* Using the `duration` variable as a model, create a `frequency` variable that gets the value from the `frequencySlider` design element.\r\n* Modify the line of code that makes the buzzer sound so that it uses the `frequency` variable rather than the default frequency of `500`.\r\n* Run your code, then change the frequency and the duration to hear the difference in the buzzer.  (Don't forget to hit the button after you make a change!)",
+    "long_instructions": "# Buzzer Frequency\r\n\r\nStudents will also learn how to expand the capability of the buzzer by updating the buzzer frequency. This sample app combines inputs and outputs across both the circuit playground and the app screen. \r\n\r\n# Do This\r\n* Using the `duration` variable as a model, create a `frequency` variable that gets the value from the `frequencySlider` design element.\r\n* Modify the line of code that makes the buzzer sound so that it uses the `frequency` variable rather than the default frequency of `500`.\r\n* Run your code, then change the frequency and the duration to hear the difference in the buzzer.  (Don't forget to hit the button after you make a change!)",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "onBoardEvent(buttonL, \"press\", function() {\r\n  var duration = getProperty(\"durationSlider\", \"value\");\r\n  //Add your code here\r\n  \r\n  buzzer.frequency(500, duration);\r\n});\r\nonBoardEvent(buttonR, \"press\", function() {\r\n  buzzer.off();\r\n});\r\n\r\n",
@@ -68,7 +64,7 @@
     "name_suffix": "_2222",
     "encrypted_examples": "9MDoybI9Z9v2YLzhetcvT/sP5gwFi+0N8z1vKqrjfBGcPNzuvZalQB9BhjHM\n+tDxBFBAj8ugnrtgZqy18AuhXg==\n",
     "text_mode_at_start": "false",
-    "map_reference": "/docs/concepts/app-lab/taking-input-with-getproperty/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/taking-input-with-getproperty",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",
@@ -79,9 +75,13 @@
     },
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-05-25T16:09:06.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-05-25T16:09:06.706+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - SB3_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-05-25T16:09:06.706+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - SB3_2222\"},{\"changed_at\":\"2022-06-08 17:34:53 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18579,\"changed_by_email\":\"jess+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

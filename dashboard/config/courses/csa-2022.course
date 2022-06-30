@@ -11,7 +11,7 @@
     "csa8-2022",
     "csa9-2022"
   ],
-  "published_state": "preview",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -113,6 +113,16 @@
       },
       "seeding_key": {
         "resource.key": "culturally_responsive_pedagogy_and_equity"
+      }
+    },
+    {
+      "name": "Objects-First Approach to CSA",
+      "url": "https://docs.google.com/document/d/1t7RbyhrgNM7xXNPiCq1g-lXSJvR2qbEA1fURYxfZ9N8/edit?usp=sharing",
+      "key": "objects-first_approach_to_csa",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "objects-first_approach_to_csa"
       }
     }
   ],

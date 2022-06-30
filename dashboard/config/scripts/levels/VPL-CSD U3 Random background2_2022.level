@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-04-26T18:52:15.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -51,9 +47,9 @@
     "parent_level_id": 20654,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/game-lab/drawing-shapes/"
+      "/courses/vpl-csd-2022/guides/drawing-shapes"
     ],
-    "map_reference": " /docs/concepts/game-lab/shapes-and-parameters/",
+    "map_reference": "/courses/vpl-csd-2022/guides/shapes-and-parameters",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "mini_rubric": "false",
@@ -63,6 +59,10 @@
     "thumbnail_url": "https://images.code.org/a68cfd23a13b6bdeef91dc9fd584f657-image-1491332601738.03.04 PM.png",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-04-26T18:52:15.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-26T18:52:15.533+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD U3 Random background2_2020\\\"\"],\"cloned_from\":\"VPL-CSD U3 Random background2_2020\"}]"

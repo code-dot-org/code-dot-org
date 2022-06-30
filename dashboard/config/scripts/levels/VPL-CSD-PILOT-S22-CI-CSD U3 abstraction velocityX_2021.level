@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T19:21:28.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -73,16 +69,20 @@
     "name_suffix": "_2021",
     "long_instructions": "# velocityX\r\n\r\nOne way to move sprites in Game Lab is with the counter pattern. For example `sprite1.x = sprite1.x + 1` moves a sprite by 1 pixel each frame of the draw loop. This pattern is so common that sprites have a `velocityX` property that does this for you.\r\n\r\n# Do This\r\n\r\n* Drag a `sprite.velocityX` block directly below where your sprite is created. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( [Show me where](#triggercallout=code_triggered) )\r\n* Write the name of your sprite in the block.\r\n* Assign the `velocityX` property a value of 1.\r\n* Run the code. What happens?\r\n* Re-run the code giving the `velocityX` property a different value. What's changing?",
     "reference_links": [
-      "/docs/concepts/game-lab/the-counter-pattern/",
-      "/docs/concepts/game-lab/animation-tab/multi-frame-animations/"
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/the-counter-pattern-2",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/multi-frame-animations"
     ],
-    "map_reference": "/docs/concepts/game-lab/sprites/velocity/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/velocity",
     "video_key": "csd_gamelab_velocity",
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T19:21:28.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T19:21:28.533+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction velocityX_2021\\\"\"],\"cloned_from\":\"CSD U3 abstraction velocityX_2021\"}]"

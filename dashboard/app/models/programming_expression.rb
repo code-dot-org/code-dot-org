@@ -24,8 +24,8 @@ class ProgrammingExpression < ApplicationRecord
   include SerializedProperties
   include Rails.application.routes.url_helpers
 
-  belongs_to :programming_environment
-  belongs_to :programming_environment_category
+  belongs_to :programming_environment, optional: true
+  belongs_to :programming_environment_category, optional: true
   has_and_belongs_to_many :lessons, join_table: :lessons_programming_expressions
   has_many :lessons_programming_expressions
 
@@ -152,11 +152,7 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def documentation_path
-    if DCDO.get('use-studio-code-docs', false)
-      studio_documentation_path
-    else
-      cb_documentation_path
-    end
+    studio_documentation_path
   end
 
   def summarize_for_lesson_edit

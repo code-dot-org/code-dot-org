@@ -88,6 +88,7 @@ class XhrProxyController < ApplicationController
     lakeside-cs.org
     maker.ifttt.com
     myschoolapp.com
+    native-land.ca
     newsapi.org
     noaa.gov
     numbersapi.com

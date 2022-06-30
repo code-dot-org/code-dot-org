@@ -108,6 +108,7 @@ export default function initPage(unitEditorData) {
         initialUseLegacyLessonPlans={scriptData.useLegacyLessonPlans || false}
         scriptPath={scriptData.scriptPath}
         courseOfferingEditorLink={scriptData.courseOfferingEditPath}
+        isCSDCourseOffering={scriptData.isCSDCourseOffering}
       />
     </Provider>,
     document.querySelector('.edit_container')

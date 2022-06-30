@@ -37,7 +37,8 @@ ________________
 - [Application link](https://code.org/educate/professional-learning/middle-high)
 - [Code.org Why CS Pitch Deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) can help your pitch on district implementation.
 - [The K–12 Computer Science Framework](https://k12cs.org/) provides an organizing structure and guidance for states and school districts to create their own standards. The framework also informs curriculum and professional development. See [Figure 8.7](https://k12cs.org/wp-content/uploads/2016/09/K%E2%80%9312-Computer-Science-Framework.pdf) for sample implementation pathways.
-- [K-5 Administrator Brochure](https://docs.google.com/presentation/d/1hISLWJWXAvS2bNWB-kqrOyaA6U1ImiYZk5228ZOktQ4/edit#slide=id.g54497bb914_0_85) - CSF program overview plus case study.
+- [K-12 Program Brochure for Administrators](https://docs.google.com/presentation/d/1EHRzvdOzPG96-g_oG1XvewCLIffybVl_wdCtt8JcMoU/edit?usp=sharing)
+- [CSF K-5 Administrator Brochure](https://docs.google.com/presentation/d/1hISLWJWXAvS2bNWB-kqrOyaA6U1ImiYZk5228ZOktQ4/edit#slide=id.g54497bb914_0_85) - CSF program overview plus case study.
 - [Professional Learning Programs Overview 1-Pager](https://docs.google.com/document/d/1-jt3i9ep9dvxZAfvAcNeZybq5Af0PKYFPJTPuB5Pa1E/view) that you can customize.
 - Share the following [Become A Computer Science Teacher video](https://www.youtube.com/watch?v=9VvuRiFQv10) via
     - [Facebook](https://www.facebook.com/Code.org/videos/1590100594419571/) 
