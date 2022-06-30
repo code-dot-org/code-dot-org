@@ -42,7 +42,7 @@ section:nth-of-type(1) figure.flex-container {
     }
 
 section:nth-of-type(2) figure {
-  padding-left: 4em;
+  padding-left: 3em;
 }
   section:nth-of-type(2) img {
     width: 100%;
@@ -79,28 +79,31 @@ section.afe-programs {
   }
 
   section.afe-programs h4{
-    font-size: 16px;
+    font-size: 15px;
   }
 
   section.afe-programs ul {
     padding: 0;
-    margin: 3em 0 0;
+    margin: 4em 0 0;
     align-items: baseline;
   }
-    section.afe-programs li {
-      padding: 0;
-      margin: 0;
-      width: 30%;
-      text-indent: 0;
+    section.afe-programs ul:nth-of-type(1) {
+      margin-bottom: 5em;
     }
-      section.afe-programs li::before {
-        display: none;
+      section.afe-programs li {
+        padding: 0;
+        margin: 0;
+        width: 29%;
+        text-indent: 0;
       }
-        section.afe-programs li img {
-          width: 100%;
-          margin-bottom: 0.5em;
-          border-radius: 8px;
+        section.afe-programs li::before {
+          display: none;
         }
+          section.afe-programs li img {
+            width: 100%;
+            margin-bottom: 0.5em;
+            border-radius: 8px;
+          }
 
 /* Tablet styles */
 @media screen and (max-width: 970px) {

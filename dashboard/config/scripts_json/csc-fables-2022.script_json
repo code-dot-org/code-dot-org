@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2022-06-21 23:39:23 UTC",
+    "serialized_at": "2022-06-27 22:13:02 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -55,12 +55,27 @@
       }
     },
     {
-      "key": "Plan Your Fable",
-      "name": "Plan Your Fable",
+      "key": "lesson-5",
+      "name": "Common Stories",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022"
+      }
+    },
+    {
+      "key": "Plan Your Fable",
+      "name": "Plan Your Story",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
       "properties": {
         "overview": "In this lesson, students will choose their favorite fables to adapt, by picking a moral and two characters from two different fables. Students will begin drafting the characters and drafting the scene they plan to animate. ",
         "preparation": "- Play through the levels and review the lesson slides.\n- Review the List of Fables document\n- Have students read and discuss fables prior to this module. ",
@@ -74,11 +89,11 @@
     },
     {
       "key": "Code Your Fable",
-      "name": "Code Your Fable",
-      "absolute_position": 3,
+      "name": "Code Your Story",
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
         "overview": "In this lesson, students will use their planning sheets to program two character’s dialogue in order to portray a moral. ",
         "preparation": "- Play through the levels and review the lesson slides.\n- Review the List of Fables document\n- It may be helpful to have students choose a fable to retell before this activity. \n",
@@ -92,11 +107,11 @@
     },
     {
       "key": "Share Your Fable",
-      "name": "Share Your Fable",
-      "absolute_position": 4,
+      "name": "Share Your Story",
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
         "overview": "In this lesson, students will have time to reflect on their projects and share them with their peers. Students should work with their peers to debug any errors in their code. They are encouraged to  make connections to peers who have similar problems in their code, how they solved those problems, or see different ways to program. ",
         "preparation": "- Print Project Reflection handouts for each student\n- Review the activity prior to starting \n",
@@ -761,7 +776,7 @@
       "position": 3,
       "properties": {
         "description": "**Do This**: Have students move to their computer and sign in. ",
-        "progression_name": "Choice Levels"
+        "progression_name": "Example"
       },
       "seeding_key": {
         "activity_section.key": "48a28d14-eb09-48e9-8fa5-9aed3259b86d",
@@ -876,6 +891,7 @@
       "key": "bcd5ac75-d26f-4915-8f64-0e8dc5ee4be3",
       "position": 12,
       "properties": {
+        "progression_name": "Free Play",
         "tips": [
           {
             "type": "teachingTip",
@@ -1419,7 +1435,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Choice Levels"
+        "level_keys": [
+          "csc_fables_example"
+        ],
+        "progression": "Example"
       },
       "bonus": false,
       "seeding_key": {
@@ -1441,6 +1460,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fables_setting"
+        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
@@ -1463,6 +1485,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fables_characters"
+        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
@@ -1485,6 +1510,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fables_say"
+        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
@@ -1507,6 +1535,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fables_behaviors"
+        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
@@ -1529,6 +1560,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fables_events"
+        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
@@ -1543,6 +1577,106 @@
       },
       "level_keys": [
         "csc_fables_events"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fables_events_say"
+        ],
+        "progression": "Code Your Fable"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fables_events_say"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
+      },
+      "level_keys": [
+        "csc_fables_events_say"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fables_next scene"
+        ],
+        "progression": "Code Your Fable"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fables_next scene"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
+      },
+      "level_keys": [
+        "csc_fables_next scene"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 9,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fables_moral"
+        ],
+        "progression": "Code Your Fable"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fables_moral"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
+      },
+      "level_keys": [
+        "csc_fables_moral"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fables_freeplay"
+        ],
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fables_freeplay"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "bcd5ac75-d26f-4915-8f64-0e8dc5ee4be3"
+      },
+      "level_keys": [
+        "csc_fables_freeplay"
       ]
     }
   ],
@@ -1797,6 +1931,54 @@
         "lesson_group.key": "",
         "script.name": "csc-fables-2022",
         "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fables_events_say",
+        "script_level.level_keys": [
+          "csc_fables_events_say"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fables_next scene",
+        "script_level.level_keys": [
+          "csc_fables_next scene"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fables_moral",
+        "script_level.level_keys": [
+          "csc_fables_moral"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fables_freeplay",
+        "script_level.level_keys": [
+          "csc_fables_freeplay"
+        ],
+        "lesson.key": "Code Your Fable",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022",
+        "activity_section.key": "bcd5ac75-d26f-4915-8f64-0e8dc5ee4be3"
       }
     }
   ],
