@@ -828,6 +828,15 @@
         "jigsaw/Jigsaw": {
           "name": "Legpuzzel"
         },
+        "allthethings/Jigsaw": {
+          "name": "Legpuzzel"
+        },
+        "allthethings/Maze": {
+          "name": "Doolhof"
+        },
+        "allthethings/Artist": {
+          "name": "Kunstenaar"
+        },
         "allthethings/Bee": {
           "name": "Bee"
         },

@@ -871,7 +871,7 @@
           "name": "Concours d'orthographe"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "CS Découvertes Enquête de Fin de Semestre"
+          "name": "Programmer pour le Divertissement"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Tracer Des Formes"
@@ -1576,10 +1576,10 @@
           "name": "Une Bataille Royale avec des Événements"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Test Post-Projet"
+          "name": "Programmer pour le Divertissement"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "CS Discoveries Enquête Post Cours"
+          "name": "Tracer Des Formes"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Dessiner dans le Labo des Jeux"
@@ -1642,10 +1642,10 @@
           "name": "Projet - Concevoir un Jeu"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Test Post-Projet"
+          "name": "Innovations en informatique"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "CS Discoveries Enquête Post Cours"
+          "name": "Dessiner des écrans en codant"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "Le Circuit Playground"
@@ -1690,10 +1690,10 @@
           "name": "Projet: Réaliser un prototype innovant"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Test Post-Projet"
+          "name": "L'Analyse de la Conception"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "CS Discoveries Enquête Post Cours"
+          "name": "Comprendre Votre Utilisateur"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Micro Activité de Conception Centrée sur l'Utilisateur"
@@ -1738,10 +1738,10 @@
           "name": "Projet - Présentation de l'Application"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Test Post-Projet"
+          "name": "Questions de Représentation"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "CS Discoveries Enquête Post Cours"
+          "name": "Modèles et Représentation"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "La Représentation ASCII et binaire"
@@ -1786,7 +1786,7 @@
           "name": "Introduction à la Résolution de Problèmes"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Test Post-Projet"
+          "name": "Le Processus de Résolution de Problèmes"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Explorer la Résolution de Problèmes"
@@ -1807,10 +1807,10 @@
           "name": "Projet - Propose une Application"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Test Post-Projet"
+          "name": "Explorer des Sites Web"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "CS Discoveries Enquête Post Cours"
+          "name": "Sites Web pour l'Expression "
         },
         "csd2-2019/Intro to HTML": {
           "name": "Initiation au HTML"
@@ -2332,10 +2332,10 @@
           "name": "Présente Ton Projet"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "CS Découvertes Enquête de Fin de Semestre"
+          "name": "Programmer pour le Divertissement"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "CSD Enquête  Post-Cours"
+          "name": "Tracer Des Formes"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Dessiner dans le Labo des Jeux"
@@ -2398,7 +2398,7 @@
           "name": "Projet - Concevoir un Jeu"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "CSD Enquête  Post-Cours"
+          "name": "Innovations en informatique"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Dessiner des écrans en codant"
@@ -2446,7 +2446,7 @@
           "name": "Projet: Réaliser un prototype innovant"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "CSD Enquête  Post-Cours"
+          "name": "Explorer des Sites Web"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Sites Web pour l'Expression "
@@ -2515,7 +2515,7 @@
           "name": "Projet - Propose une Application"
         },
         "csd5-2017/Representation Matters": {
-          "name": "CSD Enquête  Post-Cours"
+          "name": "Questions de Représentation"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Modèles et Représentation"
@@ -2560,7 +2560,7 @@
           "name": "Projet - Résoudre un Problème de Données"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "CSD Enquête  Post-Cours"
+          "name": "L'Analyse de la Conception"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Comprendre Votre Utilisateur"
@@ -2937,10 +2937,13 @@
           "name": "Enquête Post-Cours Auprès des Étudiants de CSD (2018 - 2019)"
         },
         "allthethings/Jigsaw": {
-          "name": "Second sondage anonyme pour les élèves"
+          "name": "Puzzle"
         },
         "allthethings/Maze": {
-          "name": "Test Pluralsight"
+          "name": "Labyrinthe"
+        },
+        "allthethings/Artist": {
+          "name": "Artiste"
         },
         "allthethings/Bee": {
           "name": "Abeille"
@@ -3649,6 +3652,7 @@
           "name": "Les Sprites en Action",
           "overview": "Dans cette leçon de **renforcement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche de « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les étudiants écriront des programmes qui répondent à des événements chronométrés et à des entrées utilisateur. ",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
+          "purpose": "",
           "student_overview": "Vous travaillerez à travers les niveaux de programmation et terminerez avec une tâche de « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2021/Virtual Pet with Sprite Lab": {
@@ -3958,9 +3962,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "CS Discoveries Enquête Post-Cours"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "Test Post-Projet"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "Comprendre Votre Utilisateur"
         },
@@ -3995,7 +3996,7 @@
           "name": "CS Discoveries Enquête Post-Cours"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Test Post-Projet",
+          "name": "Innovations en informatique",
           "overview": "Pour démarrer le dernière partie de ce module, les élèves vont rechercher quelques innovations intéressantes en informatique. Cette leçon montrera aux élèves une grande variété dans la forme des ordinateurs et les activités impactées par l'informatique. Plus tard dans le module, les étudiants pourront comparer le résultat de leur recherche avec leur propre expérimentation sur un microcontrôleur."
         },
         "csd6-2021/Designing Screens with Code": {
@@ -4053,7 +4054,7 @@
           "name": "CS Discoveries Enquête Post-Cours"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Test Post-Projet"
+          "name": "Questions de Représentation"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Modèles et Représentation"
@@ -4095,7 +4096,7 @@
           "name": "CS Discoveries Enquête Post-Cours"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Test Post-Projet"
+          "name": "Programmer pour le Divertissement"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Tracer Des Formes"
@@ -4167,7 +4168,7 @@
           "name": "Introduction à la Résolution de Problèmes"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Test Post-Projet"
+          "name": "Le Processus de Résolution de Problèmes"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Explorer la Résolution de Problèmes"
@@ -4188,7 +4189,7 @@
           "name": "Projet - Propose une Application"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Test Post-Projet"
+          "name": "Explorer des Pages Web"
         },
         "csd2-2021/Intro to HTML": {
           "name": "Initiation au HTML"

@@ -503,6 +503,8 @@ el:
         mc_2018_conditionals: 'Minecraft: Υδάτινο Ταξίδι Συνθήκες'
         mc_2018_closing: 'Minecraft: Υδάτινο Ταξίδι Συγχαρητήρια'
         hoc_dance_warmup: Χορευτικό πάρτι- Προθέρμανση
+        hoc_dance_events: Χορευτικό πάρτι - Εκδηλώσεις
+        hoc_dance_properties: Χορευτικό πάρτι - Ιδιότητες
         hoc_dance_congrats: Χορευτικό πάρτι - Το πάρτι ξεκίνησε!
         c_and_c_great_to_create: Είναι Τέλειο να Δημιουργούμε και να Παίζουμε Δίκαια
         c_and_c_digital_sharing: Κοινοποίηση στον ψηφιακό κόσμο
@@ -524,6 +526,7 @@ el:
         playlab_2021_reader: Εισαγωγή στο εργαστήριο παιχνιδιού
         CSA-PL-for-loops: Για βρόχους σε Java.
         CSA-PL-variables: Δημιουργώντας μεταβλητές σε Java
+        PL_CS_Journeys_Overview: Ταξίδια CS
         CSA-PL-intro-to-java-lab: Στοιχειώδη Εργαστηρίου Java
         CSA-PL-first-program: Γράφοντας ένα Πρόγραμμα σε Java
         csc-poem-art-intro: Εισαγωγικό Βίντεο

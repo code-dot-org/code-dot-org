@@ -65,13 +65,12 @@ theme: responsive
  </tr>
 </table>
 
-
 ## Sites to Unblock
 
 For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
 
 | Priority                                                                                 | URL                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Required**                                                                             | `https://code.org`<br/>`https://*.code.org`                                                                                                            |
 | **Optional**                                                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                                               |
 | **To use YouTube hosted videos (Enhanced Privacy Mode)**                                 | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                                         |

@@ -387,7 +387,9 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     this.level.csaViewMode,
     getStore().getState().currentUser,
     this.onMarkdownMessage,
-    this.csrf_token
+    this.csrf_token,
+    () => this.onValidationPassed(this.studioApp_),
+    () => this.onValidationFailed(this.studioApp_)
   );
 
   let connectToJavabuilder;
@@ -519,6 +521,30 @@ Javalab.prototype.onPhotoPrompterFileSelected = function(photo) {
 
 Javalab.prototype.onMarkdownMessage = function(message) {
   getStore().dispatch(appendMarkdownLog(message));
+};
+
+Javalab.prototype.onValidationPassed = function(studioApp) {
+  studioApp.report({
+    app: 'javalab',
+    level: this.level.id,
+    result: true,
+    testResult: TestResults.ALL_PASS,
+    program: '',
+    submitted: getStore().getState().pageConstants.isSubmitted,
+    onComplete: () => {}
+  });
+};
+
+Javalab.prototype.onValidationFailed = function(studioApp) {
+  studioApp.report({
+    app: 'javalab',
+    level: this.level.id,
+    result: false,
+    testResult: TestResults.APP_SPECIFIC_FAIL,
+    program: '',
+    submitted: getStore().getState().pageConstants.isSubmitted,
+    onComplete: () => {}
+  });
 };
 
 export default Javalab;
