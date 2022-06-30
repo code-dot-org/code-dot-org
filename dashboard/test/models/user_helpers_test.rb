@@ -80,7 +80,7 @@ class UserHelpersTest < ActiveSupport::TestCase
   test 'generate_username for long names' do
     assert_equal 'there',
       UserHelpers.generate_username(
-        User, 'There is a really long name' + ' blah' * 10
+        User, 'There is a really long name' + (' blah' * 10)
       )
   end
 

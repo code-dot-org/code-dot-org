@@ -16,6 +16,10 @@ def get_rows
   # Seed results array with a header row
   results = [
     [
+      "Regional Partner",
+      "Workshop Date",
+      "Workshop ID",
+      "Enrollment Code",
       "First Name",
       "Last Name",
       "Email",
@@ -38,6 +42,10 @@ def get_rows
     joins('INNER JOIN pd_scholarship_infos ON pd_scholarship_infos.user_id = pd_enrollments.user_id AND pd_scholarship_infos.scholarship_status = "yes_eir"').
     find_each do |enrollment|
       results << [
+        enrollment.workshop.regional_partner&.name,
+        enrollment.workshop.workshop_starting_date&.strftime('%Y-%m-%d'),
+        enrollment.workshop.id,
+        enrollment.code,
         enrollment.first_name,
         enrollment.last_name,
         enrollment.email,

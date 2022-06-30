@@ -14,14 +14,14 @@
 
 def get_social_metadata_for_page(request)
   # Not currently used, but left here for reference in case we want to use videos again.
-  # rubocop:disable UselessAssignment
+  # rubocop:disable Lint/UselessAssignment
   videos = {
     what_most_schools_dont_teach: {youtube_key: "nKIu9yen5nc", width: 640, height: 360},
     computer_science_is_changing_everything: {youtube_key: "QvyTEx1wyOY", width: 640, height: 360},
     hour_of_code_worldwide: {youtube_key: "KsOIlDT145A", width: 640, height: 360},
     creativity_is: {youtube_key: "VYqHGIR7a_k", width: 640, height: 640}
   }
-  # rubocop:enable UselessAssignment
+  # rubocop:enable Lint/UselessAssignment
 
   images = {
     kids_with_ipads: {path: "/images/default-og-image.png", width: 1220, height: 640},

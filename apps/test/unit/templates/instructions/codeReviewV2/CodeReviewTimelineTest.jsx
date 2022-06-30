@@ -16,29 +16,29 @@ const DEFAULT_PROPS = {
       createdAt: '2022-03-04T04:58:42.000Z',
       comment: 'First commit',
       projectVersion: 'asdfjkl',
-      isVersionExpired: false,
       timelineElementType: timelineElementType.commit
     },
     {
       id: 1,
       createdAt: '2022-03-15T04:58:42.000Z',
-      isClosed: true,
-      projectVersion: 'asdfjkl',
-      isVersionExpired: false,
+      isOpen: false,
+      version: 'asdfjkl',
       timelineElementType: timelineElementType.review,
       comments: [
         {
           id: 123,
-          commentText: 'Great work on this!',
-          name: 'Steve',
-          timestampString: '2022-03-31T04:58:42.000Z',
+          comment: 'Great work on this!',
+          commenterName: 'Steve',
+          commenterId: 987,
+          createdAt: '2022-03-31T04:58:42.000Z',
           isResolved: false
         },
         {
           id: 124,
-          commentText: 'Could you add more comments?',
-          name: 'Karen',
-          timestampString: '2022-03-31T04:58:42.000Z',
+          comment: 'Could you add more comments?',
+          commenterName: 'Karen',
+          commenterId: 654,
+          createdAt: '2022-03-31T04:58:42.000Z',
           isResolved: false
         }
       ]
@@ -48,12 +48,13 @@ const DEFAULT_PROPS = {
       createdAt: '2022-03-20T04:58:42.000Z',
       comment: 'Second commit (after review)',
       projectVersion: 'lkjfds',
-      isVersionExpired: false,
       timelineElementType: timelineElementType.commit
     }
   ],
   addCodeReviewComment: () => {},
-  closeReview: () => {}
+  closeReview: () => {},
+  toggleResolveComment: () => {},
+  deleteCodeReviewComment: () => {}
 };
 
 const setUp = (overrideProps = {}) => {

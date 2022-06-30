@@ -16,7 +16,13 @@ import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2
 // ordered by oldest at the top to most recent at the bottom. When the data has loaded, there
 // is an automatic scroll to the bottom to orient the viewer to the latest changes.
 const CodeReviewTimeline = props => {
-  const {timelineData, addCodeReviewComment, closeReview} = props;
+  const {
+    timelineData,
+    addCodeReviewComment,
+    closeReview,
+    toggleResolveComment,
+    deleteCodeReviewComment
+  } = props;
 
   const timelineEndRef = useRef(null);
 
@@ -39,7 +45,7 @@ const CodeReviewTimeline = props => {
         if (data.timelineElementType === timelineElementType.commit) {
           return (
             <CodeReviewTimelineCommit
-              key={`commit-${data.id}`}
+              key={`commit-${data.projectVersion}`}
               commit={data}
               isLastElementInTimeline={lastElementInTimeline}
             />
@@ -54,6 +60,8 @@ const CodeReviewTimeline = props => {
               isLastElementInTimeline={lastElementInTimeline}
               addCodeReviewComment={addCodeReviewComment}
               closeReview={closeReview}
+              toggleResolveComment={toggleResolveComment}
+              deleteCodeReviewComment={deleteCodeReviewComment}
             />
           );
         }
@@ -68,7 +76,9 @@ CodeReviewTimeline.propTypes = {
     PropTypes.oneOfType([reviewShape, commitShape])
   ),
   addCodeReviewComment: PropTypes.func.isRequired,
-  closeReview: PropTypes.func.isRequired
+  closeReview: PropTypes.func.isRequired,
+  toggleResolveComment: PropTypes.func.isRequired,
+  deleteCodeReviewComment: PropTypes.func.isRequired
 };
 
 export default CodeReviewTimeline;

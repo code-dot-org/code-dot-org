@@ -1,0 +1,14 @@
+inherit_from: ../.rubocop.yml
+
+AllCops:
+  # Chef embeds its own version of Ruby which is used to execute these
+  # cookbooks, so we want to make sure we're validating against that version
+  TargetRubyVersion: 2.6
+
+# Unfortunately, cookbooks are sometimes also loaded and executed by the
+# version of Ruby we run everywhere else (currently 2.5), so we have to make
+# sure to NOT enforce rules that don't work on earlier versions
+Style/MapToHash:
+  Enabled: false
+Style/SlicingWithRange:
+  Enabled: false

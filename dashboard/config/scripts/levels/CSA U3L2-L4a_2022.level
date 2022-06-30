@@ -16,13 +16,16 @@
     "display_name": "Student Grades",
     "bubble_choice_description": "Create and modify a 1D array containing the scores a student received on daily quizzes.",
     "thumbnail_url": "https://images.code.org/c7e0f316f467b245a2c03a4808808bfa-image-1648509410235.png",
-    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI4hK4E39vhHHEajGWEc\nYihfLk+/2qkodWts6gE7bpyMb6Q0fA3T1eCagS+qCiQjWoXPuiOo8GatBqkU\nKc6DzEoErbvBnXsuTWu20OdosftP+B44cObw4Whu4A8w0n484lvhUSn9mH5w\nSx5gJwv/kV7FAkYxE3scXizaz/BcJT7GcstR+JM6fJvbi9ya6RkUjFw2dhw/\nbX/NUNgmatwje6u/4CgJpkb8/AiorG1RD/KR1VAmslcWfTu9vrJ3G7GAr8kb\nPZxz/EeMv6l8UOUzn+HYMnwRiQFcTkpM3PTbLu/b8W1OhypLH9+jUeMBukWu\nW6VTIjG/f0cYgWyNKBVBSYf3MAcvilLo3/X4rnMZa7AwNrlj3xW7J0OcgFWo\nDR7ysNb2cZDu/aQa0bWdBTzr8og0JT6n3++QZ0Ui8UGLKr24Ww7PGb/tMhrU\n0vGrshGdiNH8q6g2OhSXrkXZPBUr1KXq1Fq87vyd4pyi7Ubi2QqL7gkhQj6v\nQUP+UA+dNoMJo+5W+uzMARlwqk8MXO+v89m+U7i4IZWkhXiOpxRTUot0Kp9R\n+h9AQ4z+7anF7xsJupcOzFAc+HIfOsSCKUBsfQFD\n"
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI4hK4E39vhHHEajGWEc\nYihfLk+/2qkodWts6gE7bpyMb6Q0fA3T1eCagS+qCiQjWoXPuiOo8GatBqkU\nKc6DzEoErbvBnXsuTWu20OdosftP+B44cObw4Whu4A8w0n484lvhUSn9mH5w\nSx5gJwv/kV7FAkYxE3scXizaz/BcJT7GcstR+JM6fJvbi9ya6RkUjFw2dhw/\nbX/NUNgmatwje6u/4CgJpkb8/AiorG1RD/KR1VAmslcWfTu9vrJ3G7GAr8kb\nPZxz/EeMv6l8UOUzn+HYMnwRiQFcTkpM3PTbLu/b8W1OhypLH9+jUeMBukWu\nW6VTIjG/f0cYgWyNKBVBSYf3MAcvilLo3/X4rnMZa7AwNrlj3xW7J0OcgFWo\nDR7ysNb2cZDu/aQa0bWdBTzr8og0JT6n3++QZ0Ui8UGLKr24Ww7PGb/tMhrU\n0vGrshGdiNH8q6g2OhSXrkXZPBUr1KXq1Fq87vyd4pyi7Ubi2QqL7gkhQj6v\nQUP+UA+dNoMJo+5W+uzMARlwqk8MXO+v89m+U7i4IZWkhXiOpxRTUot0Kp9R\n+h9AQ4z+7anF7xsJupcOzFAc+HIfOsSCKUBsfQFD\n",
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-03-25T00:03:41.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 00:03:44 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 23:08:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 23:17:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 23:19:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 23:20:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25 00:03:44 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 23:08:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 23:17:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 23:19:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 23:20:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 19:22:35 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-24 15:06:23 +0000\",\"changed\":[\"map_reference\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

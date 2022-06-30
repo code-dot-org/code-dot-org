@@ -86,7 +86,7 @@ Given(/^I view the temp lesson edit page for lesson without lesson plan$/) do
   }
 end
 
-Given (/^I remove the temp unit from the cache$/) do
+Given(/^I remove the temp unit from the cache$/) do
   browser_request(
     url: '/api/test/invalidate_script',
     method: 'POST',

@@ -17,7 +17,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     @script_level = create :script_level, levels: [@bubble_choice]
 
     @sublevel_with_contained = create :level, name: 'sublevel_with_contained', display_name: 'Sublevel with contained', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
-    @sublevel_contained_level = create :level, name: 'Sublevel contained level'
+    @sublevel_contained_level = create :free_response, name: 'Sublevel contained level'
     @sublevel_with_contained.contained_level_names = [@sublevel_contained_level.name]
     @sublevel_with_contained.save!
   end
@@ -232,7 +232,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         display_name: @sublevel_with_contained.display_name,
         contained_levels: [{
           level_id: @sublevel_contained_level.id.to_s,
-          type: "Blockly",
+          type: "FreeResponse",
           name: "Sublevel contained level",
           display_name: nil
         }],
@@ -464,9 +464,9 @@ class BubbleChoiceTest < ActiveSupport::TestCase
 
   test 'only actual sublevels are considered sublevels' do
     sublevel = create :level
-    contained_level = create :level
+    contained_level = create :free_response
     bubble_choice = create :bubble_choice_level, sublevels: [sublevel]
-    ParentLevelsChildLevel.create(
+    ParentLevelsChildLevel.create!(
       parent_level: bubble_choice,
       child_level: contained_level,
       kind: ParentLevelsChildLevel::CONTAINED,
@@ -489,8 +489,8 @@ class BubbleChoiceTest < ActiveSupport::TestCase
 
   test 'setup_sublevels will not remove non-sublevel child levels' do
     bubble_choice = create :bubble_choice_level
-    contained_level = create :level
-    ParentLevelsChildLevel.create(
+    contained_level = create :free_response
+    ParentLevelsChildLevel.create!(
       parent_level: bubble_choice,
       child_level: contained_level,
       kind: ParentLevelsChildLevel::CONTAINED
@@ -499,6 +499,22 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     bubble_choice.setup_sublevels([@sublevel1.name])
     assert_equal [@sublevel1], bubble_choice.sublevels
     assert_equal [contained_level, @sublevel1], bubble_choice.child_levels.to_a
+  end
+
+  test 'bubble choice cannot contain another bubble choice level' do
+    bubble_choice = create :bubble_choice_level
+    e = assert_raises(ActiveRecord::RecordInvalid) do
+      create :bubble_choice_level, sublevels: [bubble_choice]
+    end
+    assert_includes e.message, 'cannot contain BubbleChoice level'
+  end
+
+  test 'bubble choice level cannot contain level group' do
+    level_group = create :level_group
+    e = assert_raises(ActiveRecord::RecordInvalid) do
+      create :bubble_choice_level, sublevels: [level_group]
+    end
+    assert_includes e.message, 'cannot contain LevelGroup level'
   end
 
   test 'level_for_progress_for_sublevel returns the sublevel if it does not have a contained level' do

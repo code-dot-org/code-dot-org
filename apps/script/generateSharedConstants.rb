@@ -107,7 +107,7 @@ def main
       COURSE_OFFERING_CATEGORIES
       PARTICIPANT_AUDIENCES_BY_TYPE
     ),
-      source_module: SharedCourseConstants, transform_keys: false
+      source_module: Curriculum::SharedCourseConstants, transform_keys: false
     ),
     "#{REPO_DIR}/apps/src/generated/curriculum/sharedCourseConstants.js"
   )
@@ -122,6 +122,8 @@ def main
         SUBJECT_NAMES
         SUBJECTS
         VIRTUAL_ONLY_SUBJECTS
+        HIDE_FEE_INFORMATION_SUBJECTS
+        HIDE_ON_WORKSHOP_MAP_SUBJECTS
         MUST_SUPPRESS_EMAIL_SUBJECTS
         ACADEMIC_YEAR_WORKSHOP_SUBJECTS
         LEGACY_SUBJECTS
@@ -129,6 +131,7 @@ def main
         WORKSHOP_APPLICATION_STATES
         WORKSHOP_SEARCH_ERRORS
         ACTIVE_COURSE_WORKSHOPS
+        ACTIVE_COURSES_WITH_SURVEYS
         WORKSHOP_TYPES
         NOT_FUNDED_SUBJECTS
       ),

@@ -217,57 +217,6 @@ describe('UnitOverviewTopRow', () => {
         )
       ).to.be.true;
     });
-
-    it('renders legacy resources instead of migrated resources on migrated script', () => {
-      const wrapper = shallow(
-        <UnitOverviewTopRow
-          {...defaultProps}
-          viewAs={ViewType.Instructor}
-          isMigrated={true}
-          teacherResources={[
-            {
-              type: ResourceType.curriculum,
-              link: 'https://example.com/a'
-            },
-            {
-              type: ResourceType.vocabulary,
-              link: 'https://example.com/b'
-            }
-          ]}
-          migratedTeacherResources={[
-            {
-              id: 1,
-              key: 'curriculum',
-              name: 'Curriculum',
-              url: 'https://example.com/a'
-            },
-            {
-              id: 2,
-              key: 'vocabulary',
-              name: 'Vocabulary',
-              url: 'https://example.com/b'
-            }
-          ]}
-        />
-      );
-      expect(
-        wrapper.containsMatchingElement(
-          <ResourcesDropdown
-            resources={[
-              {
-                type: ResourceType.curriculum,
-                link: 'https://example.com/a'
-              },
-              {
-                type: ResourceType.vocabulary,
-                link: 'https://example.com/b'
-              }
-            ]}
-            useMigratedResources={false}
-          />
-        )
-      ).to.be.true;
-    });
   });
 
   it('renders the unit calendar when showCalendar true for instructor', () => {

@@ -1,6 +1,7 @@
 class ProgrammingClassesController < ApplicationController
   include Rails.application.routes.url_helpers
   before_action :require_levelbuilder_mode_or_test_env
+  before_action :require_levelbuilder_mode_or_test_env, only: [:new, :create, :edit, :update, :destroy, :get_filtered_results]
   load_and_authorize_resource
 
   def new
@@ -80,6 +81,15 @@ class ProgrammingClassesController < ApplicationController
     @programming_environment_categories = @programming_class.programming_environment.categories_for_navigation
   end
 
+  # GET /docs/ide/<programming_environment_name>/classes/<programming_class_key>
+  def show_by_keys
+    set_class_by_keys
+    return render :not_found unless @programming_class
+    return head :forbidden unless can?(:read, @programming_class)
+    @programming_environment_categories = @programming_class.programming_environment.categories_for_navigation
+    return render :show
+  end
+
   def destroy
     return render :not_found unless @programming_class
     begin
@@ -108,5 +118,9 @@ class ProgrammingClassesController < ApplicationController
     transformed_params[:examples] = transformed_params[:examples].to_json if transformed_params[:examples]
     transformed_params[:fields] = transformed_params[:fields].to_json if transformed_params[:fields]
     transformed_params
+  end
+
+  def set_class_by_keys
+    @programming_class = ProgrammingClass.get_from_cache(params[:programming_environment_name], params[:programming_class_key])
   end
 end

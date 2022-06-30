@@ -843,6 +843,7 @@ he-IL:
   coursed-2019_name: קורס ד' (2019)
   coursed-2020_name: קורס ד' (2020)
   coursed-2021_name: קורס ד' (2021)
+  coursed-2022_name: קורס ד' (2021)
   accelerated_name: קורס מואץ
   20-hour_name: קורס מואץ
   classicmaze_name: מבוך קלאסי
@@ -944,6 +945,12 @@ he-IL:
   coursed-2021_gradelevel: כיתות ח' ומעלה
   coursee-2021_gradelevel: גילאי 8-12
   coursef-2021_gradelevel: גילאי 9-13
+  coursea-2022_gradelevel: גילאי 4-7
+  courseb-2022_gradelevel: גילאי 5-8
+  coursec-2022_gradelevel: גילאי 6-10
+  coursed-2022_gradelevel: כיתות ח' ומעלה
+  coursee-2022_gradelevel: גילאי 8-12
+  coursef-2022_gradelevel: גילאי 9-13
   accelerated_gradelevel: גילאי 10-18
   codeorg_platformtext: דפדפנים מודרנים, סמארטפונים, טאבלטים
   codeintl_platformtext: דפדפנים מודרנים, סמארטפונים, טאבלטים
@@ -1043,6 +1050,9 @@ he-IL:
     מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות
     דיגיטלית.
   coursed-2021_shortdescription_congrats: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות
+    מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות
+    דיגיטלית.
+  coursed-2022_shortdescription_congrats: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות
     מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות
     דיגיטלית.
   codeorg_longdescription: למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור

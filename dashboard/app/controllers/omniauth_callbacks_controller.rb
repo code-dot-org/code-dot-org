@@ -320,32 +320,31 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def extract_powerschool_data(auth)
     # OpenID 2.0 data comes back in a different format compared to most of our other oauth data.
     args = JSON.parse(auth.extra.response.message.to_json)['args']
-    auth_info = auth.info.merge(OmniAuth::AuthHash.new(
+    powerschool_data = OmniAuth::AuthHash.new(
       user_type: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext0\"]"],
       email: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext1\"]"],
       name: {
         first: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext2\"]"],
         last: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext3\"]"],
-      },
-      )
+      }
     )
-    auth.info = auth_info
+
+    auth.info.merge!(powerschool_data)
     auth
   end
 
   def extract_microsoft_data(auth)
-    auth_info = auth.info.merge(OmniAuth::AuthHash.new(
+    microsoft_data = OmniAuth::AuthHash.new(
       email: auth[:extra][:raw_info][:userPrincipalName],
       name: auth[:extra][:raw_info][:displayName]
-      )
     )
-    auth.info = auth_info
+
+    auth.info.merge!(microsoft_data)
     auth
   end
 
   def just_authorized_google_classroom?
-    current_user &&
-    current_user.providers.include?(AuthenticationOption::GOOGLE) &&
+    current_user&.providers&.include?(AuthenticationOption::GOOGLE) &&
       has_google_oauth2_scope?('classroom.rosters.readonly')
   end
 
@@ -358,9 +357,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # OAuth providers do not necessarily provide student email addresses, so we
     # want to perform silent takeover on these accounts, but *only if* the
     # student hasn't made progress with the initial account
+    has_auth_email = user.migrated? && user.authentication_options.any? {|ao| ao.hashed_email.present?}
     user.persisted? && user.oauth_student? &&
       user.email.blank? && user.hashed_email.blank? &&
-      !user.has_activity?
+      # Also *all* AuthenticationOption's emails are blank
+      !has_auth_email && !user.has_activity?
   end
 
   # Looks for an existing user with an email address matching the oauth credentials.

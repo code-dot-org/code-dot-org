@@ -8,19 +8,10 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   setup do
     @teacher = create(:teacher)
     @student = create(:student)
-    script = create(:script, lesson_extras_available: true)
+    script = create(:script, :with_levels, lessons_count: 3, levels_count: 3, lesson_extras_available: true)
     create(:section, user: @teacher, script: script)
     @section = create(:section, user: @teacher, script: script)
     create(:follower, section: @section, student_user: @student)
-
-    # give our test script a more-complex internal hierarchy than the one
-    # provided by the factory, so we can test a variety of script_level and
-    # lesson relative positions.
-    script.lesson_groups << create(:lesson_group) do |lesson_group|
-      create_list(:lesson, 3, lesson_group: lesson_group) do |lesson|
-        create_list(:script_level, 3, lesson: lesson, script: script)
-      end
-    end
   end
 
   test 'tracking_pixel_url' do
@@ -52,7 +43,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     stubs(:current_user).returns(nil)
     script = Script.find_by_name(Script::COURSE4_NAME)
     script_level = script.get_script_level_by_relative_position_and_puzzle_position 3, 1, false
-    assert_equal "Lesson 3: #{script_level.lesson.name}", script_level.lesson.summarize[:title]
+    assert_equal 'Lesson 3: ' + I18n.t("data.script.name.#{script.name}.lessons.#{script_level.lesson.key}.name"), script_level.lesson.summarize[:title]
   end
 
   test 'show lesson position in header for default script' do

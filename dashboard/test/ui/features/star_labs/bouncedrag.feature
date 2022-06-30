@@ -6,7 +6,7 @@ Background:
 Scenario: Connect two blocks from toolbox
   When I rotate to landscape
   And I wait for the page to fully load
-  And I drag block "1" to block "3"
-  And I drag block "1" to block "4"
+  And I drag Google Blockly block "1" to block "0"
+  And I drag Google Blockly block "2" to block "0"
   And I wait for 1 seconds
-  Then block "6" is child of block "4"
+  Then Google Blockly block "2" is child of block "1"

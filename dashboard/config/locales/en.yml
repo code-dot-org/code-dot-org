@@ -16,8 +16,18 @@
 #
 # This would use the information in config/locales/es.yml.
 #
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
 # To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
+# available at https://guides.rubyonrails.org/i18n.html.
 
 en:
   errors:
@@ -48,6 +58,7 @@ en:
         personal_email_markdown: "Personal email address [(click here if you don't have an email address)](%{url})"
         username: 'Username'
         password: 'Password'
+        verified_teacher: 'Verified Teacher'
         password_confirmation: 'Password confirmation'
         current_password: 'Current password'
         locale: 'Language'
@@ -441,7 +452,6 @@ en:
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'Your progress'
-      lines: 'Total lines of code: %{lines}'
       close: 'CLOSE'
       mastery: 'Concepts'
       puzzle_map: 'Stages'
@@ -613,6 +623,7 @@ en:
     try_hour_of_code: 'Try an Hour of Code!'
     store: 'Store'
     cookie_notice: 'Cookie Notice'
+    view_code: 'View Code'
   reference_area:
     title: 'Need help?'
     subtitle: 'See these videos and hints'
@@ -1104,6 +1115,7 @@ en:
         israel: 'Israel'
         malaysia: 'Malaysia'
         mexico: 'Mexico'
+        paraguay: 'Paraguay'
         thailand: 'Thailand'
         uzbekistan: 'Uzbekistan'
       ages:
@@ -1125,7 +1137,8 @@ en:
         efl: 'English as a Foreign Language'
         music: 'Music'
         art: 'Art'
-        other: "Other:"
+        other: "Other"
+        na: 'Not applicable'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1135,7 +1148,8 @@ en:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Other:"
+        other: "Other"
+        na: 'Not applicable'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1145,7 +1159,8 @@ en:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Other:"
+        other: "Other"
+        na: 'Not applicable'
       workshop_course:
         csf_af: 'CS Fundamentals (Courses A-F)'
         csf_express: 'CS Fundamentals (Pre-Express or Express)'

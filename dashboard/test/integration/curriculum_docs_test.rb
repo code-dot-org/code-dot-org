@@ -109,6 +109,8 @@ class CurriculumDocsTest < ActionDispatch::IntegrationTest
       @programming_environment = create :programming_environment
       programming_environment_category = create :programming_environment_category, programming_environment: @programming_environment
       @programming_expression = create :programming_expression, programming_environment: @programming_environment, programming_environment_category: programming_environment_category
+      @programming_class = create :programming_class, programming_environment: @programming_environment, programming_environment_category: programming_environment_category
+      create :programming_method, programming_class: @programming_class
     end
 
     test "environment index should cache all queries" do
@@ -131,6 +133,20 @@ class CurriculumDocsTest < ActionDispatch::IntegrationTest
       end
       assert_response :success
     end
+
+    test "class show should cache all queries" do
+      assert_cached_queries(0) do
+        get programming_environment_programming_class_path(@programming_environment.name, @programming_class.key)
+      end
+      assert_response :success
+    end
+
+    test "environment get_summary_by_name should cache all queries" do
+      assert_cached_queries(0) do
+        get get_summary_by_name_programming_environment_path(@programming_environment.name)
+      end
+      assert_response :success
+    end
   end
 
   class CodeDocsQueryCountTest < CurriculumDocsTest
@@ -139,6 +155,8 @@ class CurriculumDocsTest < ActionDispatch::IntegrationTest
       @programming_environment = create :programming_environment
       programming_environment_category = create :programming_environment_category, programming_environment: @programming_environment
       @programming_expression = create :programming_expression, programming_environment: @programming_environment, programming_environment_category: programming_environment_category
+      @programming_class = create :programming_class, programming_environment: @programming_environment, programming_environment_category: programming_environment_category
+      create :programming_method, programming_class: @programming_class
     end
 
     test "signed out environment index query count" do
@@ -149,15 +167,29 @@ class CurriculumDocsTest < ActionDispatch::IntegrationTest
     end
 
     test "signed out environment show query count" do
-      assert_queries(9) do
+      assert_queries(8) do
         get programming_environment_path(@programming_environment.name)
       end
       assert_response :success
     end
 
     test "signed out expression show query count" do
-      assert_queries(10) do
+      assert_queries(9) do
         get programming_environment_programming_expression_path(@programming_environment.name, @programming_expression.key)
+      end
+      assert_response :success
+    end
+
+    test "signed out class show query count" do
+      assert_queries(11) do
+        get programming_environment_programming_class_path(@programming_environment.name, @programming_class.key)
+      end
+      assert_response :success
+    end
+
+    test "environment get_summary_by_name query count" do
+      assert_queries(7) do
+        get get_summary_by_name_programming_environment_path(@programming_environment.name)
       end
       assert_response :success
     end

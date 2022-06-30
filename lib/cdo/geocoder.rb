@@ -79,7 +79,7 @@ module Geocoder
         end&.compact&.first
       end
     end
-    Mapbox.send :prepend, CdoResultAdapter
+    Mapbox.prepend CdoResultAdapter
   end
 
   MIN_ADDRESS_LENGTH = 10
@@ -172,7 +172,7 @@ module FreegeoipOverride
     [:http]
   end
 end
-Geocoder::Lookup::Freegeoip.send :prepend, FreegeoipOverride
+Geocoder::Lookup::Freegeoip.prepend FreegeoipOverride
 
 def geocoder_config
   {

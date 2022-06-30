@@ -177,7 +177,8 @@ module AWS
               Id: app_name == proxy ? 'cdo' : app_name,
               CustomOriginConfig: {
                 OriginProtocolPolicy: 'match-viewer',
-                OriginSSLProtocols: %w(TLSv1.2 TLSv1.1)
+                OriginSSLProtocols: %w(TLSv1.2 TLSv1.1),
+                OriginReadTimeout: rack_env?(:levelbuilder) ? 60 : 30
               },
               DomainName: origin,
               OriginPath: '',
@@ -263,7 +264,7 @@ module AWS
       # Behaviors including session cookies aren't cacheable anyway, so don't bother
       # running the extra header-normalization function for these.
       normalize_accept_language = false if behavior_config[:cookies] == 'all' ||
-        behavior_config[:cookies].is_a?(Array) && behavior_config[:cookies].include?('rack.session')
+        (behavior_config[:cookies].is_a?(Array) && behavior_config[:cookies].include?('rack.session'))
 
       {
         AllowedMethods: ALLOWED_METHODS,

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csa-examples-21",
-    "serialized_at": "2022-04-08 15:41:12 UTC",
+    "serialized_at": "2022-05-19 13:08:37 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -321,6 +321,7 @@
       "key": "9c799a63-f581-4b24-b45b-68771463e20d",
       "position": 1,
       "properties": {
+        "progression_name": "A Sustainable Neighborhood Project [The Theater]"
       },
       "seeding_key": {
         "activity_section.key": "9c799a63-f581-4b24-b45b-68771463e20d",
@@ -331,6 +332,7 @@
       "key": "13f99c8f-3afc-4728-82cb-aaa70b0dbaac",
       "position": 1,
       "properties": {
+        "progression_name": "Neighborhood Lit Fest Project [Console]"
       },
       "seeding_key": {
         "activity_section.key": "13f99c8f-3afc-4728-82cb-aaa70b0dbaac",
@@ -1240,6 +1242,50 @@
       "level_keys": [
         "CSA Unit 4 Project Examples"
       ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "A Sustainable Neighborhood Project [The Theater]"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 5 Project Examples"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "9c799a63-f581-4b24-b45b-68771463e20d"
+      },
+      "level_keys": [
+        "CSA Unit 5 Project Examples"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Neighborhood Lit Fest Project [Console]"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 6 Project Examples"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "13f99c8f-3afc-4728-82cb-aaa70b0dbaac"
+      },
+      "level_keys": [
+        "CSA Unit 6 Project Examples"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1673,6 +1719,30 @@
         "lesson_group.key": "",
         "script.name": "csa-examples-21",
         "activity_section.key": "a8ddeb84-4fbf-414e-8a9a-919c53edec35"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 5 Project Examples",
+        "script_level.level_keys": [
+          "CSA Unit 5 Project Examples"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "9c799a63-f581-4b24-b45b-68771463e20d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 6 Project Examples",
+        "script_level.level_keys": [
+          "CSA Unit 6 Project Examples"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "13f99c8f-3afc-4728-82cb-aaa70b0dbaac"
       }
     }
   ],

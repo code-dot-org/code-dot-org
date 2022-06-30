@@ -46,7 +46,7 @@ MONITORING_GROUPS = {
   'product' => ['Product'],
   'programsnpartners_theluau' => ['PNP'],
   'regional_managers' => ['Outreach'],
-  'star-labs-cabal' => ['*Labs']
+  'star-labs' => ['*Labs']
 }
 
 # Zendesk group -> Zendesk filter id mappings for helpful links (optional)

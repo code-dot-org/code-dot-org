@@ -20,7 +20,9 @@ import javalab, {
   openPhotoPrompter,
   closePhotoPrompter,
   setBackpackEnabled,
-  appendMarkdownLog
+  appendMarkdownLog,
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview
 } from './javalabRedux';
 import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -194,6 +196,7 @@ Javalab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel,
     isEditingStartSources: this.isStartMode,
     isCodeReviewing: !!config.isCodeReviewing,
+    isViewingOwnProject: !!config.isViewingOwnProject,
     isResponsive: true,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted
@@ -268,6 +271,11 @@ Javalab.prototype.init = function(config) {
   // Set information about the current Javalab level being displayed.
   getStore().dispatch(setIsStartMode(this.isStartMode));
   getStore().dispatch(setLevelName(this.level.name));
+
+  // For javalab, we don't use pageConstants.isReadOnlyWorkspace because
+  // the readOnly state can change when a code review is opened or closed
+  getStore().dispatch(setIsReadOnlyWorkspace(!!config.readonlyWorkspace));
+  getStore().dispatch(setHasOpenCodeReview(!!config.hasOpenCodeReview));
 
   // Dispatches a redux update of display theme
   getStore().dispatch(setDisplayTheme(this.displayTheme));
@@ -379,7 +387,9 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     this.level.csaViewMode,
     getStore().getState().currentUser,
     this.onMarkdownMessage,
-    this.csrf_token
+    this.csrf_token,
+    () => this.onValidationPassed(this.studioApp_),
+    () => this.onValidationFailed(this.studioApp_)
   );
 
   let connectToJavabuilder;
@@ -511,6 +521,30 @@ Javalab.prototype.onPhotoPrompterFileSelected = function(photo) {
 
 Javalab.prototype.onMarkdownMessage = function(message) {
   getStore().dispatch(appendMarkdownLog(message));
+};
+
+Javalab.prototype.onValidationPassed = function(studioApp) {
+  studioApp.report({
+    app: 'javalab',
+    level: this.level.id,
+    result: true,
+    testResult: TestResults.ALL_PASS,
+    program: '',
+    submitted: getStore().getState().pageConstants.isSubmitted,
+    onComplete: () => {}
+  });
+};
+
+Javalab.prototype.onValidationFailed = function(studioApp) {
+  studioApp.report({
+    app: 'javalab',
+    level: this.level.id,
+    result: false,
+    testResult: TestResults.APP_SPECIFIC_FAIL,
+    program: '',
+    submitted: getStore().getState().pageConstants.isSubmitted,
+    onComplete: () => {}
+  });
 };
 
 export default Javalab;

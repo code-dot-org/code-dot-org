@@ -31,19 +31,11 @@ class CoursesController < ApplicationController
 
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
-    respond_to do |format|
-      format.html do
-        @is_teacher = (current_user && current_user.teacher?) || params[:view] == 'teacher'
-        @is_english = request.language == 'en'
-        @is_signed_out = current_user.nil?
-        @force_race_interstitial = params[:forceRaceInterstitial]
-        @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
-      end
-      format.json do
-        course_infos = UnitGroup.valid_course_infos(user: current_user)
-        render json: course_infos
-      end
-    end
+    @is_teacher = (current_user&.teacher?) || params[:view] == 'teacher'
+    @is_english = request.language == 'en'
+    @is_signed_out = current_user.nil?
+    @force_race_interstitial = params[:forceRaceInterstitial]
+    @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
   end
 
   def show
@@ -72,9 +64,9 @@ class CoursesController < ApplicationController
       name: params.require(:course).require(:name),
       family_name: params.require(:family_name),
       version_year: params.require(:version_year),
-      instruction_type: params[:instruction_type] ? params[:instruction_type] : SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
-      instructor_audience: params[:instructor_audience] ? params[:instructor_audience] : SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-      participant_audience: params[:participant_audience] ? params[:participant_audience] : SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      instruction_type: params[:instruction_type] ? params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+      instructor_audience: params[:instructor_audience] ? params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+      participant_audience: params[:participant_audience] ? params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       has_numbered_units: true
     )
     if @unit_group.save
@@ -88,7 +80,6 @@ class CoursesController < ApplicationController
   def update
     @unit_group.persist_strings_and_units_changes(params[:scripts], params[:alternate_units], i18n_params)
     @unit_group.update(course_params)
-    @unit_group.write_serialization
     CourseOffering.add_course_offering(@unit_group)
     @unit_group.reload
 
@@ -99,6 +90,7 @@ class CoursesController < ApplicationController
     end
 
     @unit_group.reload
+    @unit_group.write_serialization
     render json: @unit_group.summarize
   end
 
@@ -203,7 +195,7 @@ class CoursesController < ApplicationController
   def course_params
     cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
-    cp[:published_state] = SharedCourseConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
+    cp[:published_state] = Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
 
     cp
   end

@@ -288,7 +288,8 @@ module ScriptConstants
     VIGENERE = 'vigenere'.freeze,
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
     K5_ONLINEPD = 'K5-OnlinePD'.freeze,
-    KODEA_PD_2021 = 'kodea-pd-2021'.freeze
+    KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
+    ALLTHETHINGS = 'allthethings'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
@@ -344,7 +345,7 @@ module ScriptConstants
 
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
 
-  def self.has_congrats_page?(script)
+  def self.has_csf_congrats_page?(script)
     script == ACCELERATED_NAME ||
       ScriptConstants.unit_in_category?(:csf_international, script) ||
       CSF_COURSE_PATTERNS.map {|r| r =~ script}.any?
@@ -357,7 +358,7 @@ module ScriptConstants
       "course2" => "course3",
       "course3" => "course4",
       "accelerated" => "course4",
-      "course4" => "applab"
+      "course4" => "applab-intro"
     }
 
     return static_mapping[course_name] if static_mapping.include?(course_name)
@@ -373,7 +374,7 @@ module ScriptConstants
       prefix = match_data[1]
       year = match_data[2]
 
-      return "applab" if %w(coursef express).include?(prefix)
+      return "applab-intro" if %w(coursef express).include?(prefix)
 
       prefix_mapping = {
         "coursea" => "courseb",

@@ -29,11 +29,20 @@ const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
 const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
 const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
 const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
+const SET_IS_READONLY_WORKSPACE = 'javalab/SET_IS_READONLY_WORKSPACE';
+const SET_HAS_OPEN_CODE_REVIEW = 'javalab/SET_HAS_OPEN_CODE_REVIEW';
+const SET_COMMIT_SAVE_STATUS = 'javalab/SET_COMMIT_SAVE_STATUS';
 
 // Exported for test
 export const initialState = {
   consoleLogs: [],
-  sources: {'MyClass.java': {text: '', isVisible: true, isValidation: false}},
+  sources: {
+    'MyClass.java': {
+      text: '',
+      isVisible: true,
+      isValidation: false
+    }
+  },
   displayTheme: DisplayTheme.LIGHT,
   validation: {},
   renderedEditorHeight: 400,
@@ -52,7 +61,11 @@ export const initialState = {
   disableFinishButton: false,
   isVisualizationCollapsed: false,
   isPhotoPrompterOpen: false,
-  photoPrompterPromptText: ''
+  photoPrompterPromptText: '',
+  isReadOnlyWorkspace: false,
+  hasOpenCodeReview: false,
+  isCommitSaveInProgress: false,
+  hasCommitSaveError: false
 };
 
 // Action Creators
@@ -257,6 +270,25 @@ export const setEditorColumnHeight = editorColumnHeight => ({
   editorColumnHeight
 });
 
+export const setIsReadOnlyWorkspace = isReadOnlyWorkspace => ({
+  type: SET_IS_READONLY_WORKSPACE,
+  isReadOnlyWorkspace
+});
+
+export const setHasOpenCodeReview = hasOpenCodeReview => ({
+  type: SET_HAS_OPEN_CODE_REVIEW,
+  hasOpenCodeReview
+});
+
+export const setCommitSaveStatus = (
+  isCommitSaveInProgress,
+  hasCommitSaveError
+) => ({
+  type: SET_COMMIT_SAVE_STATUS,
+  isCommitSaveInProgress,
+  hasCommitSaveError
+});
+
 // Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
@@ -450,6 +482,25 @@ export default function reducer(state = initialState, action) {
       ...state,
       isPhotoPrompterOpen: false,
       photoPrompterPromptText: ''
+    };
+  }
+  if (action.type === SET_IS_READONLY_WORKSPACE) {
+    return {
+      ...state,
+      isReadOnlyWorkspace: action.isReadOnlyWorkspace
+    };
+  }
+  if (action.type === SET_HAS_OPEN_CODE_REVIEW) {
+    return {
+      ...state,
+      hasOpenCodeReview: action.hasOpenCodeReview
+    };
+  }
+  if (action.type === SET_COMMIT_SAVE_STATUS) {
+    return {
+      ...state,
+      isCommitSaveInProgress: action.isCommitSaveInProgress,
+      hasCommitSaveError: action.hasCommitSaveError
     };
   }
   return state;

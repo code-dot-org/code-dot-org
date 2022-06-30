@@ -5,8 +5,7 @@ import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
 import {
   MB_COMPONENT_COUNT,
-  MB_COMPONENTS,
-  MICROBIT_FIRMWARE_VERSION
+  MB_COMPONENTS
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
@@ -16,7 +15,6 @@ function boardSetupAndStub(board) {
   stubOpenSerialPort(board);
   sinon.stub(board.boardClient_, 'connectBoard').callsFake(() => {
     board.boardClient_.myPort = {write: () => {}};
-    board.boardClient_.firmwareVersion = `Long String Includes ${MICROBIT_FIRMWARE_VERSION}`;
     sinon.stub(board.boardClient_.myPort, 'write');
   });
 }

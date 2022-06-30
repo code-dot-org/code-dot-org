@@ -1310,6 +1310,7 @@ uz-UZ:
   coursee-2020_name: Kurs E (2020)
   coursef-2020_name: Kurs F (2020)
   coursed-2021_name: Kurs D (2021)
+  coursed-2022_name: Kurs D (2021)
   express-2018_name: Ekspress Kurs (2018)
   pre-express-2018_name: Maktabgacha ekspress kurs (2018)
   express-2019_name: Ekspress Kurs (2019)
@@ -1318,6 +1319,7 @@ uz-UZ:
   pre-express-2020_name: Maktabgacha ekspress kurs (2020)
   express-2021_name: Ekspress Kurs (2020)
   pre-express-2021_name: Maktabgacha ekspress kurs (2021)
+  express-2022_name: Ekspress Kurs (2020)
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: Tezlashtirilgan kurs
@@ -1431,6 +1433,12 @@ uz-UZ:
   coursed-2021_gradelevel: 'Yosh: 7-11'
   coursee-2021_gradelevel: 'Yosh: 8-12'
   coursef-2021_gradelevel: 'Yosh: 9-13'
+  coursea-2022_gradelevel: 'Yosh: 4-7'
+  courseb-2022_gradelevel: 'Yosh: 5-8'
+  coursec-2022_gradelevel: 'Yosh: 6-10'
+  coursed-2022_gradelevel: 'Yosh: 7-11'
+  coursee-2022_gradelevel: 'Yosh: 8-12'
+  coursef-2022_gradelevel: 'Yosh: 9-13'
   accelerated_gradelevel: 'Yosh: 10-18'
   codeorg_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
   codeintl_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
@@ -1652,6 +1660,27 @@ uz-UZ:
     and events and then you’ll move on functions. In the second part of this course,
     design and create a capstone project you can share with your friends and family.
   coursef-2021_shortdescription_congrats: Learn to use different kinds of loops, events,
+    functions, and conditionals. Investigate different problem-solving techniques
+    and discuss societal impacts of computing and the internet. In the second part
+    of this course, design and create a capstone project you can share with friends
+    and family.
+  coursea-2022_shortdescription_congrats: Kompyuter fanlari va Internet xavfsizligi
+    asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni
+    yarating.
+  courseb-2022_shortdescription_congrats: Kompyuter fanlari va Internet xavfsizligi
+    asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni
+    yarating.
+  coursec-2022_shortdescription_congrats: Create programs with sequencing, loops,
+    and events. Translate your initials into binary, investigate different problem-solving
+    techniques, and learn how to respond to cyberbullying. At the end of the course,
+    create your very own game or story you can share!
+  coursed-2022_shortdescription_congrats: Talabalar sikllar, shartli operatorlar va
+    hodisalar to'g'risida tushunchalarini rivojlantiradilar. Kodlashdan tashqari talabalar
+    raqamli fuqarolik to'g'risida ma'lumot olishadi.
+  coursee-2022_shortdescription_congrats: Start coding with algorithms, loops, conditionals,
+    and events and then you’ll move on functions. In the second part of this course,
+    design and create a capstone project you can share with your friends and family.
+  coursef-2022_shortdescription_congrats: Learn to use different kinds of loops, events,
     functions, and conditionals. Investigate different problem-solving techniques
     and discuss societal impacts of computing and the internet. In the second part
     of this course, design and create a capstone project you can share with friends

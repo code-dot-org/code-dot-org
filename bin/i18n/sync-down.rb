@@ -6,7 +6,7 @@
 
 require_relative 'i18n_script_utils'
 
-require 'cdo/crowdin/utils'
+require 'cdo/crowdin/legacy_utils'
 require 'cdo/crowdin/project'
 
 def with_elapsed
@@ -43,7 +43,7 @@ def sync_down
         options[:locale_subdir] = "hourofcode"
       end
 
-      utils = Crowdin::Utils.new(project, options)
+      utils = Crowdin::LegacyUtils.new(project, options)
 
       puts "Fetching list of changed files"
       elapsed = with_elapsed {utils.fetch_changes}

@@ -28,26 +28,26 @@ video_player: true
   %h2 Explore these sample projects or change the code to make them your own.
   .highlights-content
     - cta = "Remix the project"
-    = view :highlight_item, item: {image: "spritelab/rikki", title: "About Me", desc: "Click the sprites to learn more about me.", cta: cta, url: 'https://studio.code.org/s/coursee-2021/lessons/6/levels/1'}
-    = view :highlight_item, item: {image: "spritelab/pet", title: "Virtual Pet", desc: "Drag the food or the toy to the pet and watch the sprites interact.", cta: cta, url: 'https://studio.code.org/s/coursef-2021/lessons/4/levels/1'}
-    = view :highlight_item, item: {image: "spritelab/birthday", title: "Greeting Card", desc: "Enter your name and age to get a personalized greeting.", cta: cta, url: 'https://studio.code.org/s/coursef-2021/lessons/8/levels/2/sublevel/1'}
-    = view :highlight_item, item: {image: "spritelab/sky", title: "Sky Dancer", desc: "Collect the coins. Avoid the clouds.", cta: cta, url: 'https://studio.code.org/s/coursef-2021/lessons/20/levels/1/sublevel/2'}
+    = view :highlight_item, item: {image: "spritelab/rikki", title: "About Me", desc: "Click the sprites to learn more about me.", cta: cta, url: 'https://studio.code.org/s/coursee-2022/lessons/5/levels/1'}
+    = view :highlight_item, item: {image: "spritelab/pet", title: "Virtual Pet", desc: "Drag the food or the toy to the pet and watch the sprites interact.", cta: cta, url: 'https://studio.code.org/s/coursef-2022/lessons/5/levels/1'}
+    = view :highlight_item, item: {image: "spritelab/birthday", title: "Greeting Card", desc: "Enter your name and age to get a personalized greeting.", cta: cta, url: 'https://studio.code.org/s/coursef-2022/lessons/8/levels/2/sublevel/1'}
+    = view :highlight_item, item: {image: "spritelab/sky", title: "Sky Dancer", desc: "Collect the coins. Avoid the clouds.", cta: cta, url: 'https://studio.code.org/s/coursef-2022/lessons/16/levels/1/sublevel/2'}
   .clear
 
 #videos
   %h1 Video library
-  These videos appear in 
+  These videos appear in
   %a{href: "/curriculum/csf/"}
     CS Fundamentals
   and are displayed here as a quick introduction to using Sprite Lab. Check out each video to see how you can add new features to your project.
 
   - spritelab_videos = []
-  - spritelab_videos << { id: 'CSF_SpriteLabIntro_CDEF', category_title: 'Making Your First Projects', code: 'l0B0gDuHHC8', download_path: 'https://videos.code.org/levelbuilder/introducingspritelab_sm-mp4.mp4', studio_stage: '/s/coursee-2021/lessons/2/levels/3' }
-  - spritelab_videos << { id: 'CSF_Spritelab_MakeSprite_CDEF', code: 'nHq7_-Kpgc8', download_path: 'https://videos.code.org/levelbuilder/howtomakeasprite_sm-mp4.mp4', studio_stage: '/s/coursee-2021/lessons/2/levels/7' }
+  - spritelab_videos << { id: 'CSF_SpriteLabIntro_CDEF', category_title: 'Making Your First Projects', code: 'l0B0gDuHHC8', download_path: 'https://videos.code.org/levelbuilder/introducingspritelab_sm-mp4.mp4', studio_stage: '/s/coursee-2022/lessons/3/levels/3' }
+  - spritelab_videos << { id: 'CSF_Spritelab_MakeSprite_CDEF', code: 'nHq7_-Kpgc8', download_path: 'https://videos.code.org/levelbuilder/howtomakeasprite_sm-mp4.mp4', studio_stage: '/s/coursee-2022/lessons/3/levels/7' }
   - spritelab_videos << { id: 'CDEF_Video_SpritesInAction', code: 'vsjoWjyQLRU', download_path: 'https://videos.code.org/levelbuilder/spritesinaction_sm-mp4.mp4', studio_stage: '/s/coursee-2021/lessons/3/levels/3' }
-  - spritelab_videos << { id: 'csf21pilot_events', code: '_RxDeRPwJ-g', download_path: 'https://videos.code.org/levelbuilder/video-1-sprites-in-action_v2_small_20mb-mp4.mp4', studio_stage: '/s/coursef-2021/lessons/3/levels/3' }
-  - spritelab_videos << { id: 'csf21pilot_prompts', code: '3TQ6ybjSm6c', download_path: 'https://videos.code.org/levelbuilder/video-2-sprite-lab-text-and-prompts_v2_small_20mb-mp4.mp4', studio_stage: '/s/coursef-2021/lessons/7/levels/3' }
-  - spritelab_videos << { id: 'csf_lots_of_sprites', code: '5yWt5o0zwAM', download_path: 'https://videos.code.org/levelbuilder/video-3-sprite-lab-lots-of-sprites-v2_small_20mb-mp4.mp4', studio_stage: 's/coursef-2021/lessons/20/levels/2/sublevel/1' }
+  - spritelab_videos << { id: 'csf21pilot_events', code: '_RxDeRPwJ-g', download_path: 'https://videos.code.org/levelbuilder/video-1-sprites-in-action_v2_small_20mb-mp4.mp4', studio_stage: '/s/coursef-2022/lessons/4/levels/3' }
+  - spritelab_videos << { id: 'csf21pilot_prompts', code: '3TQ6ybjSm6c', download_path: 'https://videos.code.org/levelbuilder/video-2-sprite-lab-text-and-prompts_v2_small_20mb-mp4.mp4', studio_stage: '/s/coursef-2022/lessons/7/levels/3' }
+  - spritelab_videos << { id: 'csf_lots_of_sprites', code: '5yWt5o0zwAM', download_path: 'https://videos.code.org/levelbuilder/video-3-sprite-lab-lots-of-sprites-v2_small_20mb-mp4.mp4', studio_stage: 's/coursef-2022/lessons/20/levels/2/sublevel/1' }
 
   - spritelab_videos.each do |video|
     // Show the chapter title at the beginning of each video chapter
