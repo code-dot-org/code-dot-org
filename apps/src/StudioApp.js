@@ -1395,17 +1395,17 @@ function resizePinnedBelowVisualizationArea() {
 }
 
 /**
- * Debounced onResize operations that update the layout to support sizing
+ * Throttled onResize operations that update the layout to support sizing
  * to viewport height and using the small footer.
  * @type {Function}
  */
-var onResizeSmallFooter = _.debounce(function() {
+var onResizeSmallFooter = _.throttle(function() {
   resizePinnedBelowVisualizationArea();
-}, 10);
+}, 1000 / 60);
 
 /**
  * Passthrough to local static resizePinnedBelowVisualizationArea, which needs
- * to be static so it can be statically debounced as onResizeSmallFooter
+ * to be static so it can be statically throttled as onResizeSmallFooter.
  */
 StudioApp.prototype.resizePinnedBelowVisualizationArea = function() {
   resizePinnedBelowVisualizationArea();
