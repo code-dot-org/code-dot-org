@@ -29,8 +29,8 @@ describe('maker/commands.js', () => {
 
   describe('pinMode(pin, mode)', () => {
     it('delegates to makerBoard.pinMode with mapped mode id', () => {
-      pinMode({pin: 1, mode: 'input'});
-      expect(stubBoardController.pinMode).to.have.been.calledWith(1, 0);
+      pinMode({pin: 0, mode: 'input'});
+      expect(stubBoardController.pinMode).to.have.been.calledWith(0, 0);
     });
 
     it(`maps 'input' mode to 0`, () => {
