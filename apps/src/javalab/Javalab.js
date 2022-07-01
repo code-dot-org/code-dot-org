@@ -303,7 +303,7 @@ Javalab.prototype.init = function(config) {
   // Used for some post requests made in Javalab, namely
   // when providing overrideSources or commiting code.
   // Code review manages a csrf token separately.
-  fetch('/project_versions/get_token', {
+  fetch('/project_commits/get_token', {
     method: 'GET'
   }).then(response => (this.csrf_token = response.headers.get('csrf-token')));
 
@@ -387,7 +387,9 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     this.level.csaViewMode,
     getStore().getState().currentUser,
     this.onMarkdownMessage,
-    this.csrf_token
+    this.csrf_token,
+    () => this.onValidationPassed(this.studioApp_),
+    () => this.onValidationFailed(this.studioApp_)
   );
 
   let connectToJavabuilder;
@@ -473,7 +475,7 @@ Javalab.prototype.afterClearPuzzle = function() {
 
 Javalab.prototype.onCommitCode = function(commitNotes, onSuccessCallback) {
   project.save(true).then(result => {
-    fetch('/project_versions', {
+    fetch('/project_commits', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -519,6 +521,30 @@ Javalab.prototype.onPhotoPrompterFileSelected = function(photo) {
 
 Javalab.prototype.onMarkdownMessage = function(message) {
   getStore().dispatch(appendMarkdownLog(message));
+};
+
+Javalab.prototype.onValidationPassed = function(studioApp) {
+  studioApp.report({
+    app: 'javalab',
+    level: this.level.id,
+    result: true,
+    testResult: TestResults.ALL_PASS,
+    program: '',
+    submitted: getStore().getState().pageConstants.isSubmitted,
+    onComplete: () => {}
+  });
+};
+
+Javalab.prototype.onValidationFailed = function(studioApp) {
+  studioApp.report({
+    app: 'javalab',
+    level: this.level.id,
+    result: false,
+    testResult: TestResults.APP_SPECIFIC_FAIL,
+    program: '',
+    submitted: getStore().getState().pageConstants.isSubmitted,
+    onComplete: () => {}
+  });
 };
 
 export default Javalab;

@@ -821,7 +821,7 @@ class Lesson < ApplicationRecord
 
     copied_lesson.absolute_position = destination_unit.lessons.count + 1
     copied_lesson.relative_position =
-      destination_unit.lessons.select {|l| copied_lesson.numbered_lesson? == l.numbered_lesson?}.length + 1
+      destination_unit.lessons.count {|l| copied_lesson.numbered_lesson? == l.numbered_lesson?} + 1
 
     copied_lesson.save!
 
