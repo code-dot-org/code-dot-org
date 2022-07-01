@@ -138,9 +138,12 @@ section.flex-container {
   section.flex-container p {
     margin: 1em 0;
     font-size: 18px;
+    text-align: center;
+    width: 150px;
   }
     section.flex-container img {
       align-self: center;
+      width: 150px;
     }
 
 section.lists h3 {
@@ -170,18 +173,16 @@ section.lists h3 {
     display: block !important;
   }
 
-  section.flex-container {
-    flex-direction: column;
+  section.flex-container img,
+  section.flex-container p {
+    margin: 1.5em auto;
   }
-    section.flex-container img {
-      margin: 1.5em auto;
-    }
 
     /* Adjust padding of the Gold Supporters sections */
-    section.flex-container.logos {
+    section.flex-container.row-01 {
       padding-bottom: 0;
     }
-    section.flex-container.text {
+    section.flex-container.row-02 {
       padding-top: 0;
       padding-bottom: 4em
     }
@@ -192,4 +193,12 @@ section.lists h3 {
     margin: 1.5em 1em 0;
     font-size: 1em;
   }
+}
+
+@media screen and (max-width: 640px) {
+
+  section.flex-container {
+    flex-direction: column;
+  }
+
 }

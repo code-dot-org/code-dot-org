@@ -1128,9 +1128,7 @@ end
 # Add @no_ie tag to your scenario to skip IE when using this step.
 When /^I press backspace to clear element "([^"]*)"$/ do |selector|
   element = @browser.find_element(:css, selector)
-  while @browser.execute_script("return $('#{selector}').val()") != ""
-    press_keys(element, ":backspace")
-  end
+  press_keys(element, ":backspace") while @browser.execute_script("return $('#{selector}').val()") != ""
 end
 
 When /^I press enter key$/ do
@@ -1330,4 +1328,34 @@ Then /^I click selector "([^"]*)" (\d+(?:\.\d*)?) times?$/ do |selector, times|
     step_list.push("And I wait for 1 seconds")
   end
   steps step_list.join("\n")
+end
+
+When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students in a group$/ do |teacher_name, student_count|
+  add_student_step_list = []
+  student_count.to_i.times do |i|
+    add_student_step_list.push("Given I create a student named \"student_#{i}\"")
+    add_student_step_list.push("And I join the section")
+  end
+
+  add_students_to_group_step_list = []
+  student_count.to_i.times do
+    add_students_to_group_step_list.push("And I add the first student to the first code review group")
+  end
+
+  steps %Q{
+    Given I create a teacher named "#{teacher_name}"
+    And I give user "#{teacher_name}" authorized teacher permission
+    And I create a new student section assigned to "ui-test-csa-family-script"
+    And I sign in as "#{teacher_name}" and go home
+    And I save the student section url
+    And I save the section id from row 0 of the section table
+    #{add_student_step_list.join("\n")}
+    And I wait to see ".alert-success"
+    And I sign out using jquery
+    Given I sign in as "#{teacher_name}" and go home
+    And I create a new code review group for the section I saved
+    #{add_students_to_group_step_list.join("\n")}
+    And I click selector ".uitest-base-dialog-confirm"
+    And I click selector ".toggle-input"
+  }
 end

@@ -8,7 +8,13 @@ import ReactDOM from 'react-dom';
 import TeacherContentToggle from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import {getHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {renderTeacherPanel} from '@cdo/apps/code-studio/teacherPanelHelpers';
-import TeachersOnly from '@cdo/apps/code-studio/components/TeachersOnly';
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 $(document).ready(initPage);
 
@@ -28,12 +34,27 @@ function initPage() {
     renderTeacherContentToggle(store);
   }
 
-  renderTeacherPanel(
-    store,
-    teacherPanelData.script_id,
-    teacherPanelData.script_name,
-    teacherPanelData.page_type
-  );
+  if (teacherPanelData.is_instructor) {
+    store.dispatch(setViewType(queryParams('viewAs') || ViewType.Instructor));
+    store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+  }
+
+  // If a teacher is peer-reviewing another teacher in a workshop, don't render
+  // the teacher panel, as it doesn't make sense in that context.
+  // We need to check for presence of appOptions since some pages such as /extras
+  // (lesson extras page) do not set appOptions.
+  const shouldRenderTeacherPanel = window.appOptions
+    ? !window.appOptions.isCodeReviewing
+    : true;
+
+  if (shouldRenderTeacherPanel) {
+    renderTeacherPanel(
+      store,
+      teacherPanelData.script_id,
+      teacherPanelData.script_name,
+      teacherPanelData.page_type
+    );
+  }
 }
 
 function renderTeacherContentToggle(store) {
@@ -45,9 +66,9 @@ function renderTeacherContentToggle(store) {
 
   ReactDOM.render(
     <Provider store={store}>
-      <TeachersOnly>
+      <InstructorsOnly>
         <TeacherContentToggle isBlocklyOrDroplet={isBlocklyOrDroplet} />
-      </TeachersOnly>
+      </InstructorsOnly>
     </Provider>,
     element
   );

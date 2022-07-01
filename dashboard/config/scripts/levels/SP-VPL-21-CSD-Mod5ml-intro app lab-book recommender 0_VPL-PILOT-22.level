@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-31T15:13:42.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -56,12 +52,16 @@
     "ai_model_id": "OV8kuQzp3Yuh",
     "ai_model_name": "Class Book Recommender",
     "reference_links": [
-      "/docs/concepts/ai-lab/importing-a-model-in-app-lab/"
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/importing-a-model-in-app-lab"
     ],
     "encrypted_examples": "Il4qMYOAAnGWvsS6ZLOIN7n6S6prSiOZu0/gCQ5hUgXpyTWetYvZ1Jz+yzxs\nJZiGjcSMA11eJTySc8JLoU3xZA==\n",
     "name_suffix": "_VPL-PILOT-22",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-31T15:13:42.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-31T15:13:42.137+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-21-CSD-Mod5ml-intro app lab-book recommender 0-2021\\\"\"],\"cloned_from\":\"SP-VPL-21-CSD-Mod5ml-intro app lab-book recommender 0-2021\"}]"

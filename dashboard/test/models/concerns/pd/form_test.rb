@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class DummyForm < ActiveRecord::Base
+class DummyForm < ApplicationRecord
   include Pd::Form
 end
 

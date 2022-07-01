@@ -7,7 +7,7 @@ nav: how_to_nav
 {{ signup_button }}
 
 # Jak přivést Hodinu kódu do vaší společnosti
-### Zjistěte si, jak můžete Vy i Vaši zaměstnanci inspirovat studenty k účasti na počítačové vědě!
+### Zjistěte, jak můžete vy i vaši zaměstnanci inspirovat studenty, aby se zajímali o počítačovou vědu.
 
 ***
 
@@ -33,7 +33,7 @@ Další pokyny k povzbuzení zaměstnanců a napojení Vašich zaměstnanců na 
 - Propagujte svou akci [Hodina programování]({{ urls/promote }}) a vybídněte ostatní, aby ji pořádali.
 - Vybídněte softwarové inženýry ve své firmě, aby navštívili některou místní třídu a aby pomohli vést Hodinu programování a inspirovat studenty ke studiu počítačové vědy. Mohou se [zaregistrovat,]({{ urls/volunteer_engineer }}) aby byli napojeni na třídu.
 
-## 2. Sledujte toto návodné video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Sledujte toto návodné video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Vyberte si nějakou aktivitu
 Pořádáme množství [zábavných hodinových aktivit]({{ urls/learn }}) pro účastníky všech věkových kategorií, které vytvořilo mnoho různých partnerů. [Vyzkoušejte je!]({{ urls/learn }})

@@ -1,5 +1,5 @@
 export default function initializeCss(blocklyWrapper) {
-  blocklyWrapper.Css.register([
+  blocklyWrapper.Css.register(
     `.fieldGridDropDownContainer.blocklyMenu .blocklyMenuItem {
       width: 32px;
       height: 32px;
@@ -19,5 +19,5 @@ export default function initializeCss(blocklyWrapper) {
       object-fit: contain;
     }
     `
-  ]);
+  );
 }

@@ -145,7 +145,7 @@ class CertificateImage
 
   # This method returns a newly-allocated Magick::Image object.
   # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
-  def self.create_course_certificate_image(name, course=nil, sponsor=nil, course_title=nil)
+  def self.create_course_certificate_image(name, course=nil, donor_name=nil, course_title=nil, default_random_donor: false)
     name = ' ' if name.nil? || name.empty?
 
     course ||= ScriptConstants::HOC_NAME
@@ -168,17 +168,19 @@ class CertificateImage
       apply_text(image, course_title, 47, 'Helvetica bold', 'rgb(29,173,186)', 0, 15, course_title_width, course_title_height)
     end
 
-    unless sponsor
+    if default_random_donor && !donor_name
       donor = CdoDonor.get_random_donor_by_weight
-      sponsor = donor[:name_s]
+      donor_name = donor[:name_s]
     end
 
-    # Note certificate_sponsor_message is in both the Dashboard and Pegasus string files.
-    sponsor_message = I18n.t('certificate_sponsor_message', sponsor_name: sponsor)
-    # The area in pixels which will display the sponsor message.
-    sponsor_area_width = 1400
-    sponsor_area_height = 35
-    apply_text(image, sponsor_message, 18, 'Times bold', 'rgb(87,87,87)', 0, 447, sponsor_area_width, sponsor_area_height)
+    if donor_name
+      # Note certificate_sponsor_message is in both the Dashboard and Pegasus string files.
+      sponsor_message = I18n.t('certificate_sponsor_message', sponsor_name: donor_name)
+      # The area in pixels which will display the sponsor message.
+      sponsor_area_width = 1400
+      sponsor_area_height = 35
+      apply_text(image, sponsor_message, 18, 'Times bold', 'rgb(87,87,87)', 0, 447, sponsor_area_width, sponsor_area_height)
+    end
     image
   end
 
@@ -189,7 +191,7 @@ class CertificateImage
   end
 
   def self.prefilled_title_course?(course)
-    hoc_course?(course) || ScriptConstants.unit_in_category?(:twenty_hour, course)
+    certificate_template_for(course) != 'blank_certificate.png'
   end
 
   # Specify a fallback certificate title for a given non-HoC course ID. As of HoC
@@ -232,7 +234,9 @@ class CertificateImage
       else
         'hour_of_code_certificate.jpg'
       end
-    elsif ScriptConstants.unit_in_category?(:twenty_hour, course)
+    elsif ScriptConstants.unit_in_category?(:twenty_hour, course) || course == ScriptConstants::ACCELERATED_NAME
+      # The 20-hour course is referred to as "accelerated" throughout the
+      # congrats and certificate pages (see csf_finish_url).
       '20hours_certificate.jpg'
     else
       'blank_certificate.png'
