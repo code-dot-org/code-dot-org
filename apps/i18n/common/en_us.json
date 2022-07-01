@@ -1226,7 +1226,6 @@
   "loginTypeSyncButton_success": "Sync complete!",
   "loginTypeSyncButtonDialogHeader": "Sync error",
   "loginTypeSyncButtonDialogHeaderSub": "Syncing students failed. This is the information we have on the error:",
-  "loginTypeSyncButtonDialogNeedHelp": "[Need additional help?]({syncFailureSupportArticle})",
   "loginTypeSyncButtonDialogTroubleshooting": "[Troubleshooting common issues with Google Classroom or Clever sections.]({syncFailureSupportArticle})",
   "loginTypeWord": "Word logins",
   "loginTypeWordUpdated": "Secret words",
