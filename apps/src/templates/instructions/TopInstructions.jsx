@@ -74,7 +74,7 @@ class TopInstructions extends Component {
     isViewingAsInstructorInTraining: PropTypes.bool,
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number,
-    maxNeededHeight: PropTypes.number.isRequired,
+    maxNeededHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
     dynamicInstructions: PropTypes.object,
