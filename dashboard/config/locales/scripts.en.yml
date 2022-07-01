@@ -25690,10 +25690,12 @@ en:
             lesson-1:
               name: Overview
           title: CS Discoveries Deeper Learning Overview
-          description: Welcome to the 2021 Deeper Learning program for onboarding CS Discoveries facilitators.
+          description: Welcome to the 2022 Deeper Learning program for onboarding CS Discoveries facilitators.
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csd-overview-2022
         dlp-csd-mod1-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25721,11 +25723,13 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Discoveries Deeper Learning Module 2 for Workshop 2
+          title: 2022 CS Discoveries Deeper Learning Module 2 for Workshop 2
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csd-mod2-2022
         dlp-csd-mod3-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25736,11 +25740,13 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Discoveries Deeper Learning Module 3 for Workshop 3
+          title: 2022 CS Discoveries Deeper Learning Module 3 for Workshop 3
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csd-mod3-2022
         dlp-csd-mod4-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25751,11 +25757,13 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
+          title: 2022 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csd-mod4-2022
         dlp-csp-mod1-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25766,11 +25774,13 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Principles Deeper Learning Module 1 for Workshop 1
+          title: 2022 CS Principles Deeper Learning Module 1 for Workshop 1
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csp-mod1-2022
         dlp-csp-mod2-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25781,11 +25791,13 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Principles Deeper Learning Module 2 for Workshop 2
+          title: 2022 CS Principles Deeper Learning Module 2 for Workshop 2
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csp-mod2-2022
         dlp-csp-mod3-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25796,11 +25808,13 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Principles Deeper Learning Module 3 for Workshop 3
+          title: 2022 CS Principles Deeper Learning Module 3 for Workshop 3
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csp-mod3-2022
         dlp-csp-mod4-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25811,22 +25825,26 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Principles Deeper Learning Module 4  for Workshop 4
+          title: 2022 CS Principles Deeper Learning Module 4  for Workshop 4
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csp-mod4-2022
         dlp-csp-overview-2022:
           lessons:
             Overview:
               name: Overview
             lesson-1:
               name: Overview
-          title: 2021 CS Principles Deeper Learning Overview
+          title: 2022 CS Principles Deeper Learning Overview
           description: "###Welcome to the 2021 Deeper Learning program for onboarding CS Principles facilitators."
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csp-overview-2022
         csc-ecosystems-2022:
           lessons:
             Hello World CSC:
