@@ -48,7 +48,6 @@ export function apiValidateType(
   if (typeof opts[validatedTypeKey] === 'undefined') {
     var properType;
     var customWarning;
-    var warningMessage;
     switch (expectedType) {
       case 'color':
         // Special handling for colors, must be a string and a valid RGBColor:
@@ -113,7 +112,7 @@ export function apiValidateType(
       const outputValue =
         typeof varValue === 'function' ? 'function' : varValue;
       // Use the default warning message if a custom one has not been set
-      warningMessage =
+      var warningMessage =
         customWarning ||
         `${funcName}() ${varName} parameter value (${outputValue}) is not a ${expectedType}.`;
       outputWarning(warningMessage);
