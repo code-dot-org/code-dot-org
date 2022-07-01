@@ -44,6 +44,132 @@
         "infinity/Infinity": {
           "name": "Disney Infinity leikjasmiðja"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Klukkustund kóðunar 2013"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Skipanaröð"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Lykkjur"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Atvik"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Skilyrði"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Föll"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Breytur"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Frá lykkjur"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Kvikasmiðjan"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Fyrstu skrefin"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Grunnatriði tölvunarfræði"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Horft fram á við"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Grunnfærni: Skipanaröðin"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Grunnfærni: Lykkjur"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Grunnfærni: Skilyrðingar"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Grunnfærni: Föll"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Grunnfærni: Atburðir"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Bestu aðferðir við kennslu tölvunarfræði"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Áætlanagerð"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Næstu skref"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Yfirlit og uppsetningarleiðbeiningar"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Milli jafningja - Sending bita á samnýttri línu"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Milli jafningja - Sending talna"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Milli jafningja - Sending Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Sending boða"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Beinar og vistföng"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pakkar og áreiðanleiki"
+        },
+        "netsim/Manual DNS": {
+          "name": "Handvirkt DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Sjálfvirk DNS stöð"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Internet-hermir frjáls æfing"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Fyrstu skrefin"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Grunnatriði tölvunarfræði"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Horft fram á við"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Grunnfærni: Skipanaröðin"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Grunnfærni: Lykkjur"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Grunnfærni: Skilyrðingar"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Grunnfærni: Föll"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Grunnfærni: Atburðir"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Bestu aðferðir við kennslu tölvunarfræði"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Áætlanagerð"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Næstu skref"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Hreyfa sig, hreyfa sig"
         },
@@ -458,6 +584,9 @@
         "csd1-2019/Project - Propose an App": {
           "name": "Verkefni - Tillaga að Appi"
         },
+        "csd2-2019/Exploring Websites": {
+          "name": "Könnun Vefsetra"
+        },
         "csd2-2019/Intro to HTML": {
           "name": "Kynning á HTML"
         },
@@ -614,6 +743,9 @@
         "csd6-2017/Functions with Parameters_": {
           "name": "Föll með stikum"
         },
+        "csd2-2017/Exploring Websites": {
+          "name": "Könnun Vefsetra"
+        },
         "csd2-2017/Intro to HTML": {
           "name": "Kynning á HTML"
         },
@@ -649,6 +781,21 @@
         },
         "csd4-2017/Identifying User Needs": {
           "name": "Greining á þörfum notenda"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Svart-hvít dílamynstur - kennslustund"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Svart-hvít dílamynstur - frjáls æfing"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Lituð dílamynstur - kennslustund"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Lituð dílamynstur - dæmi"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Lituð dílamynstur - frjáls æfing"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Verkefni án tölvu: Tangram"
@@ -715,6 +862,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ýkt áskorun - Fjölþætt"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Kynning á tölvunarfræði"
+        },
+        "20-hour/The Maze": {
+          "name": "Völundarhúsið"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Tölvunarmiðuð hugsun"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Forritun rúðublaða"
+        },
+        "20-hour/The Artist": {
+          "name": "Listamaðurinn"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algrím"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Listamaðurinn 2"
+        },
+        "20-hour/Functions": {
+          "name": "Föll"
+        },
+        "20-hour/The Farmer": {
+          "name": "Bóndinn"
+        },
+        "20-hour/Conditionals": {
+          "name": "Skilyrði"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Listamaðurinn 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Lagasmíð"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Bóndinn 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Útdráttur"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Listamaðurinn 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Boðhlaupsforritun"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Bóndinn 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internetið"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Listamaðurinn 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Samantekt"
         },
         "course2/Graph Paper Programming": {
           "name": "Forritun rúðublaða"
@@ -892,6 +1099,96 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Púsl"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Púsl"
+        },
+        "allthethings/Maze": {
+          "name": "Völundarhús"
+        },
+        "allthethings/Artist": {
+          "name": "Listamaður"
+        },
+        "allthethings/Bee": {
+          "name": "Býfluga"
+        },
+        "allthethings/PlayLab": {
+          "name": "Leikjasmiðja"
+        },
+        "allthethings/Farmer": {
+          "name": "Bóndi"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Skopp"
+        },
+        "allthethings/Multi": {
+          "name": "Val"
+        },
+        "allthethings/Multi2": {
+          "name": "Val2"
+        },
+        "allthethings/Match": {
+          "name": "Tengja"
+        },
+        "allthethings/Odometer": {
+          "name": "Vegmælir"
+        },
+        "allthethings/Text Compression": {
+          "name": "Þjöppun texta"
+        },
+        "allthethings/Pixelation": {
+          "name": "Dílamynstur"
+        },
+        "allthethings/AppLab": {
+          "name": "App-smiðjan"
+        },
+        "allthethings/Gamelab": {
+          "name": "Leikjasmiðja"
+        },
+        "allthethings/Online PD": {
+          "name": "Fagmenntun á netinu"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Markdown upplýsingar"
+        },
+        "allthethings/Studio": {
+          "name": "Stúdíó"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Mat með meira en eina síðu"
+        },
+        "allthethings/Star wars": {
+          "name": "Stjörnustríð"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Free Response": {
+          "name": "Frjálst svar"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Nafnlaus nemendakönnun"
+        },
+        "allthethings/Web Lab": {
+          "name": "Vefsmiðja"
+        },
+        "allthethings/Single page assessment": {
+          "name": "Mat með einni síðu"
+        },
+        "allthethings/Standalone video": {
+          "name": "Stakt myndband"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Tilvísun í námskrá"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Kvikasmiðjan"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Danssmiðja"
         },
         "coursef-2021/lesson-6": {
           "name": "Kynning á Kvikasmiðjunni",

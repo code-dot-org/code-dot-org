@@ -1404,121 +1404,121 @@
           "description": "Reflexionar sobre el desarrollo de un proyecto en curso"
         },
         "f7ff9c67-ed9a-40c2-8082-1ebb78dae095": {
-          "description": "Identifica las innovaciones informáticas en un campo determinado"
+          "description": "Identificar las innovaciones en computación dentro de un ámbito específico"
         },
         "494a4afe-5479-4e4f-b656-99ddc4781740": {
-          "description": "Para un dispositivo determinado, articula las entradas y salidas probables"
+          "description": "Expresar las entradas y salidas posibles de un artefacto determinado"
         },
         "c06e8dad-fa68-43cd-a53a-ed66bd90cee4": {
-          "description": "Plantea mejoras para que un dispositivo resuelva mejor un problema concreto"
+          "description": "Sugerir mejoras para ayudar al artefacto a solucionar mejor un problema específico"
         },
         "a49c45e6-6dd1-4a47-8b8b-23f63139beef": {
-          "description": "Configurar las propiedades de los elementos de la interfaz de usuario mediante código"
+          "description": "Establecer las propiedades de los elementos de interfaz de usuario utilizando código"
         },
         "04724c46-add4-4ec1-af15-4c44eed0a91b": {
-          "description": "Responder a la entrada del usuario mediante un manejador de eventos"
+          "description": "Responder a la entrada de usuario utilizando un controlador de eventos"
         },
         "8902d86e-40fd-47c8-92d0-c4a9b766f913": {
-          "description": "Escribir programas que cambien varios elementos en una sola pantalla en lugar de cambiar de pantalla"
+          "description": "Escribir programas que cambian los distintos elementos en una sola pantalla en lugar de cambiar pantallas"
         },
         "61fb8052-ffea-4adf-a134-8d730ad54e8b": {
-          "description": "Conectar y solucionar problemas de dispositivos externos"
+          "description": "Conectar y resolver problemas de dispositivos externos"
         },
         "d69128fd-98d6-4897-966d-76362dbaf0ac": {
-          "description": "Encender y apagar un LED con un código"
+          "description": "Encender y apagar un LED utilizando código"
         },
         "617e327c-d4cc-4b6e-b456-7233bb9c845b": {
-          "description": "Utilizar el código para controlar un dispositivo físico"
+          "description": "Usar código para controlar un dispositivo físico"
         },
         "2b306542-728e-4848-a27f-c0521831a6f4": {
-          "description": "Comparar y contrastar múltiples formas de obtener entradas"
+          "description": "Comparar y contrastar las distintas formas de recibir entradas"
         },
         "c10da89e-729b-4d0f-b376-3e14e931b870": {
-          "description": "Representar diferentes métodos de obtención de datos del usuario"
+          "description": "Modelar distintos métodos para recibir entradas de usuario"
         },
         "37fbfc3d-4e38-4c1c-86bc-6fe3342ba7ff": {
-          "description": "Conectar un manejador de eventos a una entrada de hardware"
+          "description": "Acoplar un controlador de eventos a una entrada de hardware"
         },
         "809dcd9a-f37c-4bfd-9b58-b4024c4fd2ec": {
-          "description": "Elige el evento apropiado para un escenario determinado"
+          "description": "Escoger el evento apropiado para un escenario determinado"
         },
         "21ba6c31-018e-4d23-b652-77d6ef65324d": {
-          "description": "Utilizar getters para acceder a las propiedades de los elementos de un sistema"
+          "description": "Utilizar getters para acceder a las propiedades de elementos en un sistema"
         },
         "bdd6a1a3-5115-4486-8e0e-b61c7041c5ce": {
-          "description": "Desarrollar programas que respondan a la entrada analógica"
+          "description": "Desarrollar programas que respondan a una entrada análoga"
         },
         "bf9edfe9-1d42-4a71-a6e5-3cda32406544": {
           "description": "Escalar un rango de números para satisfacer una necesidad específica"
         },
         "5b183dd0-2691-4e31-81d2-74139e335e46": {
-          "description": "Representar el valor de un sensor de varias maneras"
+          "description": "Representar el valor de un sensor de distintas maneras"
         },
         "52c81204-19e3-433f-a6f2-9c7342c37b72": {
           "description": "Implementar distintas funciones de un programa siguiendo una guía de proyecto estructurada"
         },
         "828e50ab-ef2c-41af-987d-6a2c97c0eeda": {
-          "description": "Desarrolla un programa que responda a los eventos de una entrada de hardware"
+          "description": "Desarrollar un programa que responda a los eventos de la entrada de un hardware"
         },
         "5e15877a-55c0-434e-b794-1277ca716016": {
-          "description": "Crea una función que utilice parámetros para generalizar el comportamiento"
+          "description": "Crear una función que utilice parámetros para generalizar comportamiento"
         },
         "ae74915c-b485-44a1-a60b-a4051c1abca7": {
-          "description": "Utiliza los manejadores de eventos para responder a la interacción del usuario"
+          "description": "Utilizar controladores de eventos para responder a la interacción del usuario"
         },
         "a36af5cd-1af2-482c-8475-ebd96ef5ebf9": {
-          "description": "Diseñar un programa informático que utilice hardware para la entrada y salida no tradicionales"
+          "description": "Diseñar una pieza de software que utilice hardware para las entradas y salidas no tradicionales"
         },
         "84079c5a-326d-4fda-9439-acd6478673b3": {
-          "description": "Prototipo de un programa que integra software y hardware"
+          "description": "Elaborar el prototipo de un programa que incluya software y hardware"
         },
         "34585635-155a-4032-b653-6cfaa0832b7e": {
-          "description": "Acceder a un elemento de un array mediante su índice"
+          "description": "Acceder a un elemento en un arreglo utilizando su índice"
         },
         "57704d64-7732-445a-a82a-81f3b6955df8": {
-          "description": "Utiliza el array de LEDs de colores para controlar individualmente cada LED "
+          "description": "Usar el arreglo de LED de colores para controlar cada LED de color individualmente"
         },
         "5f30c244-1a5b-4db9-87bf-71b0e651d2f1": {
-          "description": "Crear y modificar un array"
+          "description": "Crear y modificar un arreglo"
         },
         "f739947f-be77-462b-b0ef-3823349016ef": {
-          "description": "Utilizar el zumbador para producir secuencias de notas"
+          "description": "Utilizar el timbre para elaborar secuencias de notas"
         },
         "4449a257-a6e6-426f-a87b-a1ef39ea777f": {
-          "description": "Reconocer un array como una lista de elementos sobre los que se puede operar secuencialmente."
+          "description": "Reconocer un arreglo como una lista de elementos que pueden funcionar de manera secuencial."
         },
         "8a9102e9-704c-452b-b063-62f6b63d2627": {
-          "description": "Modifica la condición de salida de un bucle `for` para controlar el número de veces que se repite"
+          "description": "Modificar la condición de salida de un ciclo for para controlar la cantidad de veces que se repite"
         },
         "bb5539ee-e0af-4379-9179-2bebc947c741": {
-          "description": "Utiliza un bucle `for` para iterar sobre un array"
+          "description": "Utilizar un ciclo for para repetir sobre un arreglo"
         },
         "eb28a603-8753-4a84-ad3e-fe5566c8ee76": {
-          "description": "Reconocer el uso y la necesidad de la orientación del acelerómetro (cabeceo y balanceo)."
+          "description": "Reconocer el uso y la necesidad de la orientación proporcionada por un acelerómetro (inclinación y balanceo)."
         },
         "cbd66e36-6a02-4227-8674-70636d61b455": {
-          "description": "Utiliza los eventos de datos para actualizar continuamente las propiedades de un elemento."
+          "description": "Utilizar los datos de eventos para actualizar continuamente las propiedades de un elemento."
         },
         "6db0b0d2-7aa7-4da1-aa47-33581d3b7c8f": {
-          "description": "Utiliza los parámetros para generalizar el propósito de una función."
+          "description": "Utilizar parámetros para generalizar el propósito de una función."
         },
         "14b8c405-027c-4aa5-8a31-235dfc98dcc3": {
-          "description": "Crear y depurar circuitos sencillos"
+          "description": "Crear y depurar circuitos simples"
         },
         "f81a856f-07a6-49f0-aab0-f3c6da5d125b": {
-          "description": "Desarrollar un prototipo físico interactivo que combine software y hardware"
+          "description": "Desarrollar un prototipo interactivo físico que combine software y hardware"
         },
         "cb58f0fd-2266-48fa-80b7-f584aabbd19a": {
-          "description": "Tener en cuenta las necesidades de los distintos usuarios al diseñar un producto"
+          "description": "Considerar las necesidades de distintos usuarios al diseñar un producto"
         },
         "f574312e-c0f6-4d4c-a52a-10e2874d55ba": {
           "description": "Explorar las características de una pieza de programa de forma independiente."
         },
         "46a593f4-3334-477c-9bac-f1fa12e83979": {
-          "description": "Prototipo de un dispositivo informático físico"
+          "description": "Construir el prototipo de un dispositivo computacional físico"
         },
         "5ae2739b-3776-43ba-973f-50fa22302e32": {
-          "description": "Aplicar un plan para desarrollar un programa informático que integre entradas y salidas de hardware"
+          "description": "Implementar un plan para desarrollar una pieza de software que integre las entradas y salidas de hardware"
         },
         "11f42eed-8c8c-4fca-b3ff-8bb800a8fbcd": {
           "description": "Brindar ejemplos de cómo las distintas formas de representar los datos puede afectar la forma en cómo se resuelven los problemas."

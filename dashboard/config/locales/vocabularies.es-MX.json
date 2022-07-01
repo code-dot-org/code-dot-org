@@ -900,19 +900,19 @@
         },
         "innovation/csd/2021": {
           "word": "Innovación",
-          "definition": "Una idea, dispositivo, producto, etc. nuevo o mejorado, o su desarrollo"
+          "definition": "Una nueva o mejorada idea de aparato, producto, etc, o el desarrollo de este"
         },
         "analog/csd/2021": {
-          "word": "Analógico",
-          "definition": "Cualquier señal que cambia continuamente y que no está restringida a un conjunto finito de valores. Por ejemplo, las formas de onda de las palabras cuando hablamos son una señal analógica."
+          "word": "Análogo",
+          "definition": "Una señal que cambia continuamente y que no está restringida a un conjunto de valores limitados. Por ejemplo, la forma ondulada de las palabras habladas son una señal análoga."
         },
         "digital/csd/2021": {
           "word": "Digital",
-          "definition": "Datos o señales representados por un número finito de valores. Las señales analógicas (que pueden tener infinitos valores) deben ser convertidas a digitales para poder ser computadas."
+          "definition": "Datos o señales representadas por un número limitado de valores. Señales análogas (que pueden tener valores limitados) deben convertirse a digital para ser computadas."
         },
         "array/csd/2021": {
-          "word": "Array",
-          "definition": "Una estructura de datos en JavaScript utilizada para representar una lista."
+          "word": "Arreglo",
+          "definition": "Una estructura de datos en JavaScript que se utiliza para representar una lista."
         },
         "for_loop/csd/2021": {
           "word": "Bucle desde",
@@ -924,7 +924,7 @@
         },
         "circuit/csd/2021": {
           "word": "Circuito",
-          "definition": "Dispositivo que proporciona un camino para que fluya una corriente eléctrica, a menudo modificando esa corriente. En los ordenadores, los circuitos permiten realizar operaciones lógicas y matemáticas sencillas utilizando la electricidad."
+          "definition": "Un dispositivo que proporciona el trayecto para una corriente eléctrica, usualmente modificando esa corriente. En las computadoras, los circuitos permiten operaciones lógicas y matemáticas utilizando electricidad."
         },
         "decode/csd/2021": {
           "word": "Decodificar",

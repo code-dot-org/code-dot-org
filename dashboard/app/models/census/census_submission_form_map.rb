@@ -17,6 +17,5 @@
 class Census::CensusSubmissionFormMap < ApplicationRecord
   belongs_to :census_submission
 
-  validates_presence_of :census_submission
   validates_presence_of :form_id
 end

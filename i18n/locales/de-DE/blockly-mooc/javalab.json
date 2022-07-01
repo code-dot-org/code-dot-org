@@ -13,7 +13,6 @@
   "classNotFound": "Fehler: in einer oder mehrerer deiner Java-Dateien fehlt die Definition der Klasse.",
   "closeReview": "Überprüfung schließen",
   "codeEditingDisabled": "Während der Überprüfung deines Projekts, ist die Bearbeitung des Programms deaktiviert",
-  "codeReview": "Überprüfung des Programms",
   "commentUpdateError": "Bei Verarbeiten deiner Anfrage ist ein Fehler aufgetreten, bitte versuche es nochmal.",
   "commit": "Commit",
   "commitAndSave": "Commit & Speichern",

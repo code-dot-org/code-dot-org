@@ -91,6 +91,7 @@ pl:
       speed: prędkość
       startX: początek X
       startY: początek Y
+      stopped-left: stopped-left
       variable: zmienna
       width: szerokość
       wizard: kreator

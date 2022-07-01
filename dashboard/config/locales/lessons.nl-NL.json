@@ -103,6 +103,9 @@
           "name": "Disney Infinity Play Lab",
           "student_overview": "Deze les bevat een inleiding tot informatica en hier kunnen studenten een spel creëren met behulp van basic blokcode."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Uur van Code 2013"
+        },
         "dance-2019/Dance Party": {
           "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
           "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren."
@@ -111,8 +114,65 @@
           "name": "AI voor oceanen",
           "overview": "In deze les maken In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Eerst classificeren studenten objecten als \"vis' of \"niet vis\" in een poging het vuil uit de oceaan te verwijderen. Daarna moeten studenten hun dataset voor de training uitbreiden zodat ook andere zeedieren die in het water thuishoren worden inbegrepen. In het tweede deel van de activiteit, kiezen studenten hun eigen etiketten om toe te passen op willekeurig gegenereerde vissen. Deze data van de training wordt gebruik voor een model voor machinaal leren dat tegen die tijd in staat moet zijn om zelf etiketten op afbeeldingen te plakken. "
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Lussen"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Gebeurtenissen"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Voorwaardelijke instructies"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Functies"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variabelen"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For-lussen"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Volgende stappen"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Stemmingsonderzoek"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Basisbegrippen Informatica"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Plannen"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Volgende stappen"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Verzend Bits op een Gedeelde Lijn"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Verzend Getallen"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Verzend Ascii"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routers en Adressen"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manuele DNS"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Basisbegrippen Informatica"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Plannen"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Volgende stappen"
         },
         "courseb-2018/Move It, Move It": {
           "name": "verplaats het, verplaats het"
@@ -531,6 +591,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extreme uitdaging - Omvangrijk"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Inleiding Informatica"
+        },
+        "20-hour/The Maze": {
+          "name": "Het Doolhof"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Rekenend Denken"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "20-hour/The Artist": {
+          "name": "De Artiest"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmen"
+        },
+        "20-hour/The Artist 2": {
+          "name": "De Artiest 2"
+        },
+        "20-hour/Functions": {
+          "name": "Functies"
+        },
+        "20-hour/The Farmer": {
+          "name": "De Boer"
+        },
+        "20-hour/Conditionals": {
+          "name": "Voorwaardelijke instructies"
+        },
+        "20-hour/The Artist 3": {
+          "name": "De Artiest 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Liedjes Schrijven"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "De Boer 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstractie"
+        },
+        "20-hour/The Artist 4": {
+          "name": "De Artiest 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Estafette Programmeren"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "De Boer 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Het Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "De Artiest 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Einde"
+        },
         "course2/Graph Paper Programming": {
           "name": "Programmeren op Ruitjespapier"
         },
@@ -707,6 +827,84 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Legpuzzel"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Legpuzzel"
+        },
+        "allthethings/Maze": {
+          "name": "Doolhof"
+        },
+        "allthethings/Artist": {
+          "name": "Kunstenaar"
+        },
+        "allthethings/Bee": {
+          "name": "Bee"
+        },
+        "allthethings/PlayLab": {
+          "name": "SpeelLab"
+        },
+        "allthethings/Farmer": {
+          "name": "Boer"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Stuiter"
+        },
+        "allthethings/Multi": {
+          "name": "meerdere"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Overeenkomst"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "Kilometerteller"
+        },
+        "allthethings/Text Compression": {
+          "name": "Tekstcompressie"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pixelachtig"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Gamelab": {
+          "name": "Gamelab"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Star wars": {
+          "name": "Star Wars"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Publieke Sleutel Cryptografie"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
+        },
+        "allthethings/Standalone video": {
+          "name": "Alleenstaande video"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "allthethings/ML Fish": {
+          "name": "ML Vis"
         },
         "coursef-2021/For Loop Fun": {
           "name": "For Lus fun"

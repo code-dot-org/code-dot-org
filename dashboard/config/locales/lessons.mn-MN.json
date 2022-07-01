@@ -69,11 +69,179 @@
         "dance-extras-2019/Dance Party - Go Further": {
           "name": "Бүжгийн үдэшлэг - Цааш явах"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Кодын цаг 2013"
+        },
         "dance-2019/Dance Party": {
           "name": "Бүжгийн үдэшлэг (2019 ремикс)"
         },
         "oceans/Oceans": {
           "name": "Далайд зориулсан ХОУ"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "\"Компьютерийн шинжлэх ухааны суурийг заах арга зүй\" -д тавтай морилно уу"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Компьютерийн шинжлэх ухааны хичээлийн талаарх ойлголт"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Дараалуулах"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Гогцоонууд"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Үйл явдлууд"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Нөхцлүүд"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Хичээлийн төслийн төгсгөл"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Функцүүд"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Хувьсагчууд"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Гогцоонд зориулав"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Шидтэний лаборатори"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Таны ойлголтыг шалгах"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Дараагийн алхамууд"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Дижитал дизайн"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Үйл явдалд суурилсан програм"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Апп-ын үндсэн функц"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Авагчид ба тохируулагчид"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Эхлүүлэх"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Компьютерийн шинжлэх ухааны үндэс"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Урагш харах"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Үндэс эзэмших: Дараалуулах"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Үндэс эзэмших: Гогцоонууд"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Үндэс эзэмших: Нөхцлүүд"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Үндэс эзэмших: Функцүүд"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Үндэс эзэмших: Үйл явдлууд"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Компьютерийн шинжлэх ухаан заах шилдэг туршлагууд"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Төлөвлөлт"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Дараагийн Алхамууд"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Тойм ба тохируулах заавар"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Найзаас найз руу - Хуваалцсан утас дээр битүүдийг илгээх"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Найзаас найз руу - Тоог илгээж байна"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Найзаас найз руу - Ascii-г илгээж байна"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Зурвас цацаж байна"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Чиглүүлэгчид болон хаягууд"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Багц ба найдвартай байдал"
+        },
+        "netsim/Manual DNS": {
+          "name": "Гар ажиллагааны DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Автомат DNS зангилаа"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Интернет симулятор чөлөөтэй тоглох"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Өрөөнөөс зугтах"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Эхлэх ба дуусах дэлгэцүүд"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Эхлэх ба дуусах дэлгэцүүд2"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Эхлүүлэх"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Компьютерийн шинжлэх ухааны үндэс"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Урагш харах"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Үндэс эзэмших: Дараалуулах"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Үндэс эзэмших: Гогцоонууд"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Үндэс эзэмших: Нөхцлүүд"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Үндэс эзэмших: Функцүүд"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Үндэс эзэмших: Үйл явдлууд"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Компьютерийн шинжлэх ухаан заах шилдэг туршлагууд"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Төлөвлөлт"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Дараагийн Алхамууд"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Цуглуулагчийн кодын цаг 2017"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Давтамжийн шинжилгээ"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
@@ -619,7 +787,7 @@
           "name": "Зөв бичих дүрэм заах зөгий"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "КШУ-ны нээлтүүд улирлын судалгааны төгсгөл"
+          "name": "Үзвэр үйлчилгээний програмчлал"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Дүрсийг зураглах"
@@ -1309,10 +1477,10 @@
           "name": "Үйл явдлуудтай хааны тулаан"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Төслийн дараах тест"
+          "name": "Үзвэр үйлчилгээний програмчлал"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
+          "name": "Дүрсийг зураглах"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Тоглоомын лабораторид зураг зурах"
@@ -1375,10 +1543,10 @@
           "name": "Төсөл - Тоглоом зохиох"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Төслийн дараах тест"
+          "name": "Тооцоолол дээрх инноваци"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
+          "name": "Дэлгэцийг кодоор загварчлах"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "Хэлхээний тоглоомын талбай"
@@ -1423,10 +1591,10 @@
           "name": "Төсөл: Инновацийг загварчлах"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Төслийн дараах тест"
+          "name": "Дизайны шинжилгээ"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
+          "name": "Хэрэглэгчээ ойлгох"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Хэрэглэгч төвтэй дизайны микро үйл ажиллагаа"
@@ -1471,10 +1639,10 @@
           "name": "Төсөл - Апп танилцуулга"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Төслийн дараах тест"
+          "name": "Төлөөллийн асуудал"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
+          "name": "Дүрсүүд ба төлөөлөл"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII ба хоёртын төлөөлөл"
@@ -1519,7 +1687,7 @@
           "name": "Асуудлыг шийдвэрлэх талаар танилцуулга"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Төслийн дараах тест"
+          "name": "Асуудал шийдэх үйл явц"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Асуудлыг шийдэхийг судлах"
@@ -1540,10 +1708,10 @@
           "name": "Төсөл - Апп санал болгох"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Төслийн дараах тест"
+          "name": "Вэбсайтуудыг судлах"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
+          "name": "Илэрхийлэх вэбсайтууд "
         },
         "csd2-2019/Intro to HTML": {
           "name": "HTML-н танилцуулга"
@@ -2065,10 +2233,10 @@
           "name": "Төслөө танилцуулах"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "КШУ-ны нээлтүүд улирлын судалгааны төгсгөл"
+          "name": "Үзвэр үйлчилгээний програмчлал"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "CSD Хичээлийн дараах судалгаа"
+          "name": "Дүрсийг зураглах"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Тоглоомын лабораторид зураг зурах"
@@ -2131,7 +2299,7 @@
           "name": "Төсөл - Тоглоом зохиох"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "CSD Хичээлийн дараах судалгаа"
+          "name": "Тооцоолол дээрх инноваци"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Дэлгэцийг кодоор загварчлах"
@@ -2179,7 +2347,7 @@
           "name": "Төсөл: Инновацийг загварчлах"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "CSD Хичээлийн дараах судалгаа"
+          "name": "Вэбсайтуудыг судлах"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Илэрхийлэх вэбсайтууд "
@@ -2248,7 +2416,7 @@
           "name": "Төсөл - Апп санал болгох"
         },
         "csd5-2017/Representation Matters": {
-          "name": "CSD Хичээлийн дараах судалгаа"
+          "name": "Төлөөллийн асуудал"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Дүрсүүд ба төлөөлөл"
@@ -2293,7 +2461,7 @@
           "name": "Төсөл - Өгөгдлийн асуудлыг шийдэх"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "CSD Хичээлийн дараах судалгаа"
+          "name": "Дизайны шинжилгээ"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Хэрэглэгчээ ойлгох"
@@ -2339,6 +2507,27 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "Төсөл - Апп танилцуулга"
+        },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "AB сурган хүмүүжүүлэгчдийн алдааг засах"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "CDEF сурган хүмүүжүүлэгчдийн алдааг засах"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Хар ба цагаан өнгийн пикселийн заавар"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Хар ба цагаан өнгийн пикселийн хөдөлгөөн"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Өнгийн пикселийн заавар"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Өнгийн пикселийн жишээ"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Өнгийн пикселээр чөлөөтэй тоглох"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Залгаагүй: Танграм"
@@ -2405,6 +2594,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Онцгой сорилт - Иж бүрэн"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Компьютерын шинжлэх ухааны танилцуулга"
+        },
+        "20-hour/The Maze": {
+          "name": "Ээдрээ"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Тооцоолох ухаан"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "График цаасны программчлал"
+        },
+        "20-hour/The Artist": {
+          "name": "Зураач"
+        },
+        "20-hour/Algorithms": {
+          "name": "Алгоритм"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Зураач 2"
+        },
+        "20-hour/Functions": {
+          "name": "Функцүүд"
+        },
+        "20-hour/The Farmer": {
+          "name": "Фермер"
+        },
+        "20-hour/Conditionals": {
+          "name": "Нөхцлүүд"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Зураач 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Дуу бичих"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Фермер 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Хийсвэрлэл"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Зураач 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Буухиа программчлал"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Фермер 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Интернэт"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Зураач 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Дуусгах"
         },
         "course2/Graph Paper Programming": {
           "name": "График цаасны программчлал"
@@ -2584,6 +2833,132 @@
           "name": "Хөрөө",
           "overview": "Энэ хичээл нь сурагчдад компьютерын лабораторид очиход юу хүлээж болох талаархи ойлголтыг өгөх болно. Энэ нь тэднийг компьютерын лабораторийн ажлын талаар танилцуулах товч хэлэлцүүлгээс эхэлж, дараа нь онлайнаар таавраа бөглөхөд компьютер ашиглана.",
           "student_overview": "Тааваруудыг дуусгахын тулд товшоод чирнэ үү."
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "CSD Сурагчийн хичээлийн дараах судалгаа ('18-'19)"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Хөрөө"
+        },
+        "allthethings/Maze": {
+          "name": "Ээдрээ"
+        },
+        "allthethings/Artist": {
+          "name": "Зураач"
+        },
+        "allthethings/Bee": {
+          "name": "Зөгий"
+        },
+        "allthethings/PlayLab": {
+          "name": "Тоглоомын лаборатори"
+        },
+        "allthethings/Farmer": {
+          "name": "Фермер"
+        },
+        "allthethings/Flappy": {
+          "name": "Хийсдэг"
+        },
+        "allthethings/Bounce": {
+          "name": "Ойх"
+        },
+        "allthethings/Multi": {
+          "name": "Олон"
+        },
+        "allthethings/Multi2": {
+          "name": "Олон2"
+        },
+        "allthethings/Match": {
+          "name": "Хослол"
+        },
+        "allthethings/TextMatch": {
+          "name": "Текстийн тохироо"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "Хурд хэмжигч"
+        },
+        "allthethings/Text Compression": {
+          "name": "Текстийн шахалт"
+        },
+        "allthethings/AppLab": {
+          "name": "Аппын лаборатори"
+        },
+        "allthethings/Gamelab": {
+          "name": "Тоглоомын лаборатори"
+        },
+        "allthethings/Online PD": {
+          "name": "Онлайн PD"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Бууралтын мэдээлэл"
+        },
+        "allthethings/Studio": {
+          "name": "Студи"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Олон хуудасны үнэлгээ"
+        },
+        "allthethings/Star wars": {
+          "name": "Оддын дайн"
+        },
+        "allthethings/Minecraft": {
+          "name": "Майнкрафт"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "Урт өргөн үнэлгээ"
+        },
+        "allthethings/Free Response": {
+          "name": "Чөлөөтэй хариу"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "PLC үнэлгээний түүвэр"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Сольсон түвшин"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Нэргүй оюутны судалгаа"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Олон нийтийн түлхүүрийн криптограф"
+        },
+        "allthethings/Web Lab": {
+          "name": "Вэбийн лаб"
+        },
+        "allthethings/Single page assessment": {
+          "name": "Дан хуудасны үнэлгээ"
+        },
+        "allthethings/Standalone video": {
+          "name": "Бие даасан видео"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Сургалтын хөтөлбөрийн лавлагаа"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Шидтэний лаборатори"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Бүжгийн лаборатори"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Мини шоо"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "Гаднах төрлийг сонголттойгоор залгаагүй байдлаар харуулна"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "Хөөсний сонголт"
+        },
+        "allthethings/Contained Levels": {
+          "name": "Оруулсан түвшин"
+        },
+        "allthethings/ML Fish": {
+          "name": "ML Загас"
         },
         "coursef-2021/lesson-6": {
           "name": "Шидтэний лабораторийг танилцуулах"
@@ -3163,9 +3538,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "Төслийн дараах тест"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "Хэрэглэгчээ ойлгох"
         },
@@ -3200,7 +3572,7 @@
           "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Төслийн дараах тест",
+          "name": "Тооцоолол дээрх инноваци",
           "overview": "Энэхүү сургалтын төгсгөлийн хэсгийг эхлүүлэхийн тулд сурагчид тооцоолол хийхэд сонирхолтой шинэчлэл хийх талаар тодорхой судалгаа хийж байна. Энэ хичээл нь сурагчдыг тооцооллын хэлбэр хүчин зүйлүүд (компьютер шиг харагдуулах) болон тооцоолоход нөлөөлж буй талбаруудыг ил болгох болно. Хожим нь энэ тасгийн оюутнууд өөрсдийн бие даасан тооцоолох төхөөрөмжөө боловсруулж байхдаа энэ хичээлд тааралдсан төхөөрөмжүүдийг эргэн харах болно."
         },
         "csd6-2021/Designing Screens with Code": {
@@ -3258,7 +3630,7 @@
           "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Төслийн дараах тест"
+          "name": "Төлөөллийн асуудал"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Дүрсүүд ба төлөөлөл"
@@ -3300,7 +3672,7 @@
           "name": "КШУ-ны нээлтүүд Хичээлийн дараах судалгаа"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Төслийн дараах тест"
+          "name": "Үзвэр үйлчилгээний програмчлал"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Дүрсийг зураглах"
@@ -3363,7 +3735,7 @@
           "name": "Асуудлыг шийдвэрлэх талаар танилцуулга"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Төслийн дараах тест"
+          "name": "Асуудал шийдэх үйл явц"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Асуудлыг шийдэхийг судлах"
@@ -3384,7 +3756,7 @@
           "name": "Төсөл - Апп санал болгох"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Төслийн дараах тест"
+          "name": "Вэб хуудсуудыг судлах"
         },
         "csd2-2021/Intro to HTML": {
           "name": "HTML-н танилцуулга"

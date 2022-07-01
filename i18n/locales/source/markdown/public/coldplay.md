@@ -6,13 +6,19 @@ title: Join the Coldplay Dance Party
 
 {{coldplay_banner}}
 
-# Join the Coldplay Dance Party by June 10!
+# Thanks for participating!
+
+**This promotion has now ended, and the winners have been notified. Congratulations to all winners, especially our classroom winner, Mrs. Lopez’s 2nd grade class from PS 22 in Graniteville, Staten Island, New York City:**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yf9oS3nv5mI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# Join the Coldplay Dance Party
 
 Coldplay and Code.org believe in the power of computer science education for every student, in every classroom around the world. That's why we're teaming up to inspire students everywhere to code and dance - let's celebrate the magic of computer science and music! 
 
 Join the party by using Code.org's Dance Party activity to code your own choreography to Coldplay's "Higher Power." Get creative with classic moves, and have fun with new album-inspired visuals and dancer formations!
 
-Post your creations for Coldplay and Code.org to see, and we'll share the best ones on social media. Plus, if you participate by June 10, you'll get a chance to win tickets to see Coldplay on tour, or a chance for your classroom to video chat with the band.
+Post your creations for Coldplay and Code.org to see, and we'll share the best ones on social media. Plus, if you participate by June 10, 2022, you'll get a chance to win tickets to see Coldplay on tour, or a chance for your classroom to video chat with the band.
 
 We can't wait to see and share what you create! 
 
@@ -92,8 +98,6 @@ In every city on the [tour](https://www.coldplay.com/tour/) we will pick two stu
 We'll be looking first and foremost for creativity and fun - code a "Higher Power" dance that really wows, and ideally pair it up with some actual dancing. For example, check out this [unfinished choreography made by a former Code.org engineer] (https://studio.code.org/projects/dance/S_vcQiglulAGJ0tkN4cv2g) - feel free to remix, change, and complete it. For extra fun, record a video of yourself and/or friends dancing to your creation! 
 
 <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@ale.camposss/video/7071055666772708614" data-video-id="7071055666772708614" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@ale.camposss" href="https://www.tiktok.com/@ale.camposss">@ale.camposss</a> This is my <a title="higherpower" target="_blank" href="https://www.tiktok.com/tag/higherpower">#HigherPower</a> Dance Party creation! My concert city is Monterrey México @codeorg &#38; @coldplay 💖! I really tried my best😂💫 <a title="codeplay" target="_blank" href="https://www.tiktok.com/tag/codeplay">#codeplay</a> <a target="_blank" title="♬ Higher Power - Coldplay" href="https://www.tiktok.com/music/Higher-Power-6956843326319151106">♬ Higher Power - Coldplay</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yf9oS3nv5mI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Grab attention with entries that get lots of likes, comments, or re-shares on social media - across Instagram, TikTok, Twitter, or Facebook.  And Coldplay and Code.org will share, favorite, or comment on especially awesome posts. 
 

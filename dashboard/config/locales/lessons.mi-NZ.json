@@ -41,6 +41,27 @@
         "infinity/Infinity": {
           "name": "Taiwhanga Tākaro Disney Infinity"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Ngā Koromeke"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Ngā Takunetanga"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Ngā Here"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Ngā Taumahi"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Ngā Taurangi"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Mō Ngā Koromeke"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "E Neke, E Neke"
         },
@@ -344,6 +365,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Wero Nui Rawa Atu - Matawhānui"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Whakatakinga ki te Pūtaiao Rorohiko"
+        },
+        "20-hour/The Maze": {
+          "name": "Te Rīrapa"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Whakaaro ā-Rorohiko"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Papatono Pepa Kauwhata"
+        },
+        "20-hour/The Artist": {
+          "name": "Te Rehetoi"
+        },
+        "20-hour/Algorithms": {
+          "name": "Ngā Hātepe"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Te Rehetoi 2"
+        },
+        "20-hour/Functions": {
+          "name": "Ngā Taumahi"
+        },
+        "20-hour/The Farmer": {
+          "name": "Te Kaiahuwhenua"
+        },
+        "20-hour/Conditionals": {
+          "name": "Ngā Here"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Te Rehetoi 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Tito Waiata"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Te Kaiahuwhenua 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Te Whakawaitara"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Te Rehetoi 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Te Kaiahuwhenua 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Te Ipurangi"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Te Rehetoi 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Tākaia"
+        },
         "course2/Graph Paper Programming": {
           "name": "Papatono Pepa Kauwhata"
         },
@@ -520,6 +601,27 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Pangahono"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Pangahono"
+        },
+        "allthethings/Maze": {
+          "name": "Rīrapa"
+        },
+        "allthethings/Artist": {
+          "name": "Rehetoi"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Tupana"
+        },
+        "allthethings/Studio": {
+          "name": "Taupuni"
+        },
+        "allthethings/Minecraft": {
+          "name": "Mahimaina"
         },
         "coursef-2021/For Loop Fun": {
           "name": "Kia Ngahau te Mahi Koromeke"

@@ -2,34 +2,6 @@
 it:
   data:
     script:
-      category:
-        csd_category_name: Alla scoperta dell'informatica ('17-'18)
-        csd_2018_category_name: Alla scoperta dell'informatica ('18-'19)
-        csd_2019_category_name: Alla scoperta dell'informatica ('19-'20)
-        csd_2020_category_name: Alla Scoperta dell'Informatica ('20-'21)
-        csd_2021_category_name: Alla scoperta dell'informatica ('21-'22)
-        csd_pilot_category_name: Pilot di Alla Scoperta dell'Informatica
-        csf_category_name: Corsi base
-        csf_2018_category_name: Fondamenti di Informatica ('18-'19)
-        csf_2019_category_name: Fondamenti di Informatica ('19-'20)
-        csf_2020_category_name: Fondamenti di Informatica ('20-'21)
-        csf_2021_category_name: Fondamenti di informatica ('21-'22)
-        csf_international_category_name: Fondamenti di Informatica (in Italiano)
-        csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
-        csp_category_name: CS Principles ('15-'16)
-        csp_2018_category_name: Principi di informatica ('18-'19)
-        csp_2019_category_name: Principi di informatica ('19-'20)
-        csp_2020_category_name: Principi di Informatica ('20-'21)
-        csp_2021_category_name: Principi di informatica ('21-'22)
-        cspexams_category_name: Prova pratica di principi d'informatica
-        csp17_category_name: Principi di informatica ('17-'18)
-        full_course_category_name: Corsi Avanzati
-        hoc_category_name: L'Ora del Codice
-        math_category_name: Matematica
-        research_studies_category_name: Studi di Ricerca
-        twenty_hour_category_name: 20-Ore
-        tts_category_name: Sintesi Vocale
-        other_category_name: Altro
       name:
         course1:
           title: Corso 1
@@ -206,7 +178,7 @@ it:
           title: Corso 4
           description: Il corso 4 è rivolto agli studenti che hanno già seguito i corsi 2 e 3. Gli studenti imparano come affrontare problemi di maggiore complessità e a combinare diversi concetti per risolvere i diversi problemi proposti. Una volta completato questo corso, gli studenti saranno in grado di creare programmi abbastanza complessi, anche con l'utilizzo di cicli con contatore e funzioni con parametri.
           description_short: Costruisci programmi più complessi imparando concetti come variabili, cicli con contatore e funzioni con parametri. È la continuazione del corso 3.
-          description_audience: Da 10 anni in su (dopo il Corso 3)
+          description_audience: Dai 9 ai 18 anni
           lessons:
             Artist:
               name: Artista
@@ -2474,7 +2446,7 @@ it:
             Presentation Your Project:
               name: Presenta il tuo progetto
             The Power of Words:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
             Songwriting with Parameters:
               name: Composizione di Canzoni - Parametri
             Introduction:
@@ -2891,7 +2863,7 @@ it:
           description: 'In questo corso vengono insegnati nuovi concetti di informatica tra cui algoritmi, cicli annidati, cicli "mentre", istruzioni condizionali ed eventi. Vengono introdotti alcuni concetti di cittadinanza digitale ed è possibile creare il proprio gioco o la propria storia che è poi possibile condividere con gli amici. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           lessons:
             Introduction:
-              name: Introduzione agli Esercizi Online
+              name: Introduzione agli esercizi online
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmi: Programmazione su carta a quadretti'
             Events in Bounce:
@@ -2944,9 +2916,9 @@ it:
             'Algorithms: Tangrams':
               name: 'Algoritmi: Tangram'
             Introduction:
-              name: Introduzione agli Esercizi Online
+              name: Introduzione agli esercizi online
             The Power of Words:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Envelope Variables:
@@ -3041,7 +3013,7 @@ it:
             'Algorithms: Tangrams':
               name: 'Algoritmi: Tangram'
             Introduction:
-              name: Introduzione agli Esercizi Online
+              name: Introduzione agli esercizi online
             The Power of Words:
               name: 'Cittadinanza Digitale: Il Potere delle Parole'
             Ice Age Play Lab:
@@ -3187,8 +3159,8 @@ it:
             content:
               display_name: Contenuto
         express-2017:
-          title: Corso Rapido (2018)
-          assignment_family_title: Corso Rapido (2018)
+          title: Corso Rapido
+          assignment_family_title: Corso Rapido
           description_audience: Da 9 a 18 anni
           description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
           description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
@@ -3646,7 +3618,7 @@ it:
             'Algorithms: Tangrams':
               name: 'Algoritmi: Tangram'
             The Power of Words:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Conditionals in Minecraft:
@@ -3868,7 +3840,7 @@ it:
             Introduction:
               name: Introduzione
             The Power of Words:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Conditionals in Minecraft:
@@ -4019,8 +3991,8 @@ it:
               name: Stefi e il grande progetto
           student_description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         express-2018:
-          title: Corso Rapido (2018)
-          assignment_family_title: Corso Rapido (2018)
+          title: Corso Rapido
+          assignment_family_title: Corso Rapido
           description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
           description_audience: Da 9 a 18 anni
@@ -4064,7 +4036,7 @@ it:
             'For Loops: For Loop Fun':
               name: Divertiti usando i cicli con contatore
             For Loops in Bee:
-              name: Cicli con Contatore con l'Ape
+              name: Cicli con contatore con l'Ape
             For Loops in Artist:
               name: Cicli con contatore con l'artista
             'Functions: Songwriting with Parameters':
@@ -4128,7 +4100,7 @@ it:
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
             The Power of Words:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
             Envelope Variables:
               name: Variabili e buste
             Variables as Constant in Artist:
@@ -4184,7 +4156,7 @@ it:
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
             'Loops: My Loopy Robotic Friends':
-              name: I miei ciclici amici robotici (per i più piccoli)
+              name: I miei ripetitivi amici robotici (per i più piccoli)
             Loops in Collector:
               name: Cicli con la collezionista
             Loops in Artist:
@@ -4258,7 +4230,7 @@ it:
             Relay Programming:
               name: Programmazione a staffetta
             Introduction to Online Puzzles:
-              name: Introduzione agli Esercizi Online
+              name: Introduzione agli esercizi online
             Events in Bouncey:
               name: Rimbalzando con gli eventi
             Nested Loops in Maze:
@@ -4439,7 +4411,7 @@ it:
             Introduction:
               name: Introduzione
             The Power of Words:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Conditionals in Minecraft:
@@ -4453,7 +4425,7 @@ it:
             For Loop Fun:
               name: Divertiti usando i cicli con contatore
             For Loops in Bee:
-              name: Cicli con Contatore con l'Ape
+              name: Cicli con contatore con l'Ape
             For Loops in Artist:
               name: Cicli con contatore con l'artista
             Songwriting with Parameters:
@@ -4843,7 +4815,7 @@ it:
             Programming in Maze:
               name: Programmare con Angry Birds
             'Loops: My Loopy Robotic Friends':
-              name: I miei ciclici amici robotici (per i più piccoli)
+              name: I miei ripetitivi amici robotici (per i più piccoli)
             Loops in Collector:
               name: Cicli con la collezionista
             Loops in Artist:
@@ -4902,7 +4874,7 @@ it:
             Artist:
               name: Artista
         dance:
-          description_short: Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara e altri 25!
+          description_short: Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara e altri 25 artisti!
           description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
           lessons:
             Dance Party:
@@ -4915,7 +4887,7 @@ it:
               name: Artista
         aquatic:
           title: 'Minecraft: Viaggio Acquatico'
-          description_short: Usa la tua creatività e le competenze di problem solving per esplorare e costruire mondi sottomarini con la programmazione!
+          description_short: Usa la tua creatività e le tue capacità nella risoluzione dei problemi per esplorare e costruire mondi sottomarini con la programmazione!
           description: Anche quest'anno Minecraft propone un'attività nuova di zecca! Usa la tua creatività e le competenze di problem solving per esplorare e creare mondi sottomarini grazie alla potenza della programmazione.
           lessons:
             Aquatic:
@@ -5005,7 +4977,7 @@ it:
             Functions in Minecraft:
               name: Funzioni con Minecraft
             The Power of Words:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
             Envelope Variables:
               name: Variabili e buste
             Variables as Constant in Artist:
@@ -5017,11 +4989,13 @@ it:
             For Loop Fun:
               name: Divertiti usando i cicli con contatore
             For Loops in Bee:
-              name: Cicli con Contatore con l'Ape
+              name: Cicli con contatore con l'Ape
             For Loops in Artist:
               name: Cicli con contatore con l'artista
+            Learning Sprites with Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
             Alien Dance Party with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa di ballo degli alieni con il Laboratorio dei personaggi
             Explore Project Ideas:
               name: Idee di progetto
             The Design Process:
@@ -5037,7 +5011,9 @@ it:
             Nested Loops in the Maze:
               name: Cicli annidati nel labirinto
             Events with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa di ballo degli alieni con il Laboratorio dei personaggi
+            Loops with the Artist:
+              name: Disegnare con i cicli
             Sprite Lab Behaviors:
               name: Comportamenti del Laboratorio dei personaggi
             Virtual Pet:
@@ -5054,6 +5030,8 @@ it:
               name: Condivisione digitale
             Running Simulations:
               name: Simulazioni in corso
+            Simulating Experiments:
+              name: Simulazione di esperimenti
           student_description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         dance-low:
           title: Ballando col codice (versione per connessioni lente)
@@ -5084,7 +5062,7 @@ it:
             'Algorithms: Graph Paper Programming':
               name: Programmazione su carta a quadretti
             Introduction to Online Puzzles:
-              name: Introduzione agli Esercizi Online
+              name: Introduzione agli esercizi online
             Relay Programming:
               name: Programmazione a staffetta
             Debugging in Collector:
@@ -5183,8 +5161,10 @@ it:
               name: Funzioni con l'artista
             Determine the Concept:
               name: Fissare i concetti
+            Learning Sprites with Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
             Alien Dance Party with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa di ballo degli alieni con il Laboratorio dei personaggi
             Explore Project Ideas:
               name: Idee di progetto
             The Design Process:
@@ -5203,26 +5183,35 @@ it:
               name: Cicli annidati con l'artista
             Nested Loops in Frozen:
               name: Cicli annidati con Frozen
+            Programming and Loops with the Artist:
+              name: Disegnare con i cicli
             End of Course Project:
               name: Progetto di fine corso
             Conditionals in Minecraft:
               name: Istruzioni Condizionali con Minecraft
+            Access Ability:
+              name: Progettare per l'accessibilità
             Digital Sharing:
               name: Condivisione digitale
             Simon Says:
               name: Simone Dice
             'Conditionals in Minecraft: Voyage Aquatic':
               name: Istruzioni condizionali in Minecraft - Viaggio acquatico
+            Swimming Fish with Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
+            Designing for Accessibility:
+              name: Progettare per l'accessibilità
             Songwriting:
               name: Composizione di canzoni
           student_description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         express-2019:
-          title: Corso Rapido (2017)
+          title: Corso Rapido (2019)
+          description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
           description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
           description_audience: Da 9 a 18 anni
           lesson_groups:
             csf_warmup:
-              display_name: Riscaldamento
+              display_name: Introduzione
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
@@ -5291,7 +5280,7 @@ it:
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
             The Power of Words:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
             Envelope Variables:
               name: Variabili e buste
             Variables as Constant in Artist:
@@ -5303,9 +5292,11 @@ it:
             For Loop Fun:
               name: Divertiti usando i cicli con contatore
             For Loops in Bee:
-              name: Cicli con Contatore con l'Ape
+              name: Cicli con contatore con l'Ape
             For Loops in Artist:
               name: Cicli con contatore con l'artista
+            Learning Sprites with Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
             Alien Dance Party with Sprite Lab:
               name: Discoteca Aliena
             Explore Project Ideas:
@@ -5338,6 +5329,7 @@ it:
               name: Istruzioni condizionali in Minecraft - Viaggio acquatico
             Concept Practice with Minecraft:
               name: Teoria e pratica con Minecraft
+          student_description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
         csd1-2019:
           lesson_groups:
             cspSurvey:
@@ -5426,11 +5418,13 @@ it:
             'Programming: My Robotic Friends':
               name: I miei amici robotici (per i più piccoli)
             'Loops: My Loopy Robotic Friends':
-              name: I miei ciclici amici robotici (per i più piccoli)
+              name: I miei ripetitivi amici robotici (per i più piccoli)
             Powerful Passwords:
               name: Password Potenti
             Sticker Art with Loops:
               name: Cicli con l'artista
+            Picturing Data:
+              name: Rappresentazione grafica dei dati
           student_description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         csp-mid-survey:
           lesson_groups:
@@ -5542,6 +5536,7 @@ it:
           student_description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         pre-express-2019:
           title: Corso Rapido pre-scolare (2019)
+          description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
           description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
           description_audience: Da 4 a 8 anni
           lesson_groups:
@@ -5596,6 +5591,7 @@ it:
               name: Una battaglia con gli eventi
             Ocean Scene with Loops:
               name: Al mare con i cicli
+          student_description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
         removed19:
           lessons:
             'Debugging: Unspotted Bugs':
@@ -5912,7 +5908,7 @@ it:
             Nested Loops with Frozen:
               name: Cicli annidati con Frozen
             Alien Dance Party with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa di ballo degli alieni con il Laboratorio dei personaggi
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
             Build a Star Wars Game:
@@ -6223,6 +6219,8 @@ it:
               name: Forme e Parametri
             Random Numbers:
               name: Numeri Casuali
+            Sprite Properties:
+              name: Proprietà del personaggio
         maddie-test:
           lessons:
             stage 1:
@@ -6372,6 +6370,7 @@ it:
             required:
               display_name: Panoramica
         dance-2019:
+          description_short: Con Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj e altri 34 artisti!
           description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
           student_description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
         k5-onlinepd-2019:
@@ -6490,11 +6489,13 @@ it:
             Simon Says:
               name: Simone Dice
             Alien Dance Party with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa di ballo degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
             Access Ability:
               name: Abilità di Accesso
+            Drawing with Loops:
+              name: Disegnare con i cicli
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -6570,7 +6571,7 @@ it:
             Simon Says:
               name: Simone Dice
             Alien Dance Party with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa di ballo degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
             Access Ability:
@@ -6603,7 +6604,7 @@ it:
             Simon Says:
               name: Simone Dice
             Alien Dance Party with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa di ballo degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
             Access Ability:
@@ -6732,6 +6733,8 @@ it:
               name: Variabili
             Random Numbers:
               name: Numeri Casuali
+            Sprite Properties:
+              name: Proprietà del personaggio
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
@@ -6785,6 +6788,8 @@ it:
               name: Il grande evento (per i più piccoli)
             Events in Play Lab:
               name: In movimento con gli eventi
+            Safety in My Online Neighborhood:
+              name: Sicurezza nel mio quartiere digitale
           student_description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         courseb-2020:
           title: Corso B (2020)
@@ -6827,6 +6832,8 @@ it:
               name: Il grande evento (per i più piccoli)
             Events in Play Lab:
               name: Una battaglia con gli eventi
+            Digital Trails:
+              name: Tracce digitali
           student_description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         coursec-2020:
           title: Corso C (2020)
@@ -6866,7 +6873,7 @@ it:
             Binary Bracelets:
               name: Braccialetti binari
             'Loops: My Loopy Robotic Friends':
-              name: I miei ciclici amici robotici (per i più piccoli)
+              name: I miei ripetitivi amici robotici (per i più piccoli)
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
             Loops in Harvester:
@@ -6881,8 +6888,14 @@ it:
               name: Realizzare un gioco Flappy
             Events in Play Lab:
               name: Giocare con gli eventi
+            Picturing Data:
+              name: Rappresentazione grafica dei dati
             'End of Course Project: Create a Play Lab Game':
               name: Progetto di fine corso
+            Putting a STOP to Online Meanness:
+              name: Porre FINE alla cattiveria online
+            Password Power-Up:
+              name: Potenziare le password
           student_description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         coursed-2020:
           title: Corso D (2020)
@@ -6907,7 +6920,7 @@ it:
             'Algorithms: Graph Paper Programming':
               name: Programmazione su carta a quadretti
             Introduction to Online Puzzles:
-              name: Introduzione agli Esercizi Online
+              name: Introduzione agli esercizi online
             Relay Programming:
               name: Programmazione a staffetta
             Debugging in Collector:
@@ -6942,6 +6955,8 @@ it:
               name: Ballando col codice
             End of Course Project:
               name: Progetto di fine corso
+            Be A Super Digital Citizen:
+              name: Diventa un super cittadino digitale
           student_description: 'Gli studenti sviluppano la comprensione dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         coursee-2020:
           title: Corso E (2020)
@@ -6964,16 +6979,22 @@ it:
             end_of_course_project:
               display_name: Progetto di fine corso
           lessons:
+            Programming and Loops with the Artist:
+              name: Disegnare con i cicli
             'Conditionals in Minecraft: Voyage Aquatic':
               name: Istruzioni condizionali in Minecraft - Viaggio acquatico
             Conditionals:
               name: Istruzioni condizionali con la contadina
             Simon Says:
               name: Simone Dice
+            Learning Sprites with Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
             Alien Dance Party with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa di ballo degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+            Access Ability:
+              name: Progettare per l'accessibilità
             Nested Loops in Bee:
               name: Cicli annidati nel labirinto
             Nested Loops in Artist:
@@ -6992,6 +7013,8 @@ it:
               name: Progetto di fine corso
             Digital Sharing:
               name: Condivisione digitale
+            Designing for Accessibility:
+              name: Progettare per l'accessibilità
           student_description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         coursef-2020:
           title: Corso F (2020)
@@ -7016,8 +7039,12 @@ it:
           lessons:
             Functions in Minecraft:
               name: Funzioni con Minecraft
+            Learning Sprites with Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
             Events with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa di ballo degli alieni con il Laboratorio dei personaggi
+            Loops with the Artist:
+              name: Disegnare con i cicli
             Nested Loops in the Maze:
               name: Cicli annidati nel labirinto
             Envelope Variables:
@@ -7028,10 +7055,12 @@ it:
               name: Modifica delle variabili con l'ape
             Variables that Change in Artist:
               name: Modifica delle Variabili con l'Artista
+            Simulating Experiments:
+              name: Simulazione di esperimenti
             For Loop Fun:
               name: Divertiti usando i cicli con contatore
             For Loops in Bee:
-              name: Cicli con Contatore con l'Ape
+              name: Cicli con contatore con l'Ape
             For Loops in Artist:
               name: Cicli con contatore con l'artista
             Internet:
@@ -7039,7 +7068,7 @@ it:
             Virtual Pet:
               name: Un animale domestico virtuale con il Laboratorio dei personaggi
             The Power of Words:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
             Crowdsourcing:
               name: Intelligenza collettiva
             Digital Sharing:
@@ -7050,12 +7079,13 @@ it:
               name: L'Intelligenza Artificiale per il mare
           student_description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         express-2020:
-          title: Corso Rapido (2017)
+          title: Corso Rapido (2020)
+          description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
           description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
           description_audience: Da 9 a 18 anni
           lesson_groups:
             csf_warmup:
-              display_name: Riscaldamento
+              display_name: Introduzione
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
@@ -7112,9 +7142,11 @@ it:
             For Loops in Artist:
               name: Cicli con contatore con l'artista
             Alien Dance Party with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa di ballo degli alieni con il Laboratorio dei personaggi
             Virtual Pet with Sprite Lab:
               name: Un animale domestico virtuale con il Laboratorio dei personaggi
+            Swimming Fish with Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
             End of Course Project:
               name: Progetto di fine corso
             Programming with Angry Birds:
@@ -7148,12 +7180,17 @@ it:
             Changing Variables with Artist:
               name: Modifica delle Variabili con l'Artista
             For Loops with Bee:
-              name: Cicli con Contatore con l'Ape
+              name: Cicli con contatore con l'Ape
             For Loops with Artist:
               name: Cicli con contatore con l'artista
+            Swimming Fish in Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
             Alien Dance Party:
               name: Discoteca Aliena
+          student_description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
         pre-express-2020:
+          title: Corso Rapido pre-scolare (2020)
+          description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
           description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
           description_audience: Da 4 a 8 anni
           lesson_groups:
@@ -7198,6 +7235,7 @@ it:
               name: In movimento con gli eventi
             A Royal Battle with Events:
               name: Una battaglia con gli eventi
+          student_description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
@@ -7315,6 +7353,8 @@ it:
             csd3_2:
               display_name: 'Capitolo 2: Costruzione di Giochi'
           lessons:
+            Example Projects:
+              name: Progetti di esempio
             Velocity:
               name: Velocità
             Collision Detection:
@@ -7407,6 +7447,8 @@ it:
               name: Numeri Casuali
             Sprites:
               name: Personaggi
+            Sprite Properties:
+              name: Proprietà del personaggio
             Text:
               name: Testo
             Conditionals:
@@ -7497,12 +7539,18 @@ it:
           lessons:
             Course F Introduction:
               name: Introduzione al Laboratorio dei Personaggi
+            lesson-2:
+              name: Testo e richieste all'utente
+            lesson-3:
+              name: 'Mini progetto: Programmi basati sull''imput dell''utente'
             Virus Simulation for Code Bytes:
               name: Codifica di una simulazione
             Making Sprites:
               name: Creazione di personaggi
             Sprites in Action:
               name: Personaggi in azione
+            blank space stories:
+              name: Storia delle caselle vuote
             End of Course Project:
               name: Progetto di fine corso
           lesson_groups:
@@ -7552,6 +7600,8 @@ it:
               name: Numeri Casuali
             Sprites:
               name: Personaggi
+            Sprite Properties:
+              name: Proprietà del personaggio
             Text:
               name: Testo
             Conditionals:
@@ -7690,9 +7740,13 @@ it:
             lessonGroup-2:
               display_name: Sondaggio
         coursea-2021:
+          title: Corso A (2021)
+          description: 'Il corso A offre un piano di studi di informatica per i bambini che hanno appena iniziato a leggere, inclusi gli alunni della scuola materna. Gli alunni impareranno a programmare usando comandi come cicli ed eventi. Le lezioni presentate in questo corso insegnano anche agli alunni a collaborare in modo proficuo con gli altri, indagare su diverse tecniche di risoluzione dei problemi, persistere di fronte a compiti impegnativi e conoscere le questioni di sicurezza legate a Internet. '
           description_short: Introduzione all'informatica per bambini che non leggono ancora.
           description_audience: 'Età: da 4 a 7 anni'
           lessons:
+            Safety in My Online Neighborhood:
+              name: Sicurezza nel mio quartiere digitale
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
             'Programming: Happy Maps':
@@ -7713,6 +7767,8 @@ it:
               name: Al mare con i cicli
             'Events: The Big Event':
               name: Il grande evento (per i più piccoli)
+            Events in Play Lab:
+              name: 'Mini progetto: In movimento con il laboratorio'
             lesson-1:
               name: Progetto di fine corso
           lesson_groups:
@@ -7728,9 +7784,13 @@ it:
               display_name: Progetto di fine corso
           student_description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         courseb-2021:
+          title: Corso B (2021)
+          description: Il Corso B è stato sviluppato pensando ad alunni della 1° classe della scuola primaria. Il Corso B è sostanzialmente allineato con il Corso A, ma offre lezioni tradizionali più complesse e una maggiore varietà di esercizi. Gli alunni impareranno le basi della programmazione, tecniche di collaborazione, indagine e pensiero critico, perseveranza di fronte alle difficoltà e le basi della sicurezza su Internet. Alla fine del corso gli alunni possono condividere con un link il proprio gioco personalizzato creato nell'ambiente del Laboratorio.
           description_short: Introduzione all'informatica per alunni che devono imparare a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
           description_audience: Da 5 a 8 anni
           lessons:
+            Digital Trails:
+              name: Tracce digitali
             Move It, Move It:
               name: Muovilo, muovilo
             Sequencing in Maze:
@@ -7751,6 +7811,8 @@ it:
               name: L'App Giusta
             'Events: The Big Event':
               name: Il grande evento (per i più piccoli)
+            Events in Play Lab:
+              name: 'Mini Progetto: una Battaglia Reale con gli eventi'
             lesson-1:
               name: Progetto di fine corso
           lesson_groups:
@@ -7766,11 +7828,18 @@ it:
               display_name: Eventi
             lessonGroup-6:
               display_name: Progetto di fine corso
+              description: "![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)"
           student_description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         coursec-2021:
+          title: Corso C (2021)
+          description: Abbiamo realizzato il Corso C per gli alunni della seconda elementare. Gli alunni creeranno programmi con sequenze di istruzioni, cicli ed eventi. Indagheranno tecniche di risoluzione dei problemi e svilupperanno strategie per sviluppare comunità costruttive sia online che offline. Entro la fine del corso, gli alunni creeranno giochi interattivi che potranno condividere.
           description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
           description_audience: Da 6 a 10 anni
           lessons:
+            Putting a STOP to Online Meanness:
+              name: Porre FINE alla cattiveria online
+            Password Power-Up:
+              name: Potenziare le password
             'Programming: My Robotic Friends':
               name: I miei amici robotici (per i più piccoli)
             Programming in Maze:
@@ -7784,17 +7853,23 @@ it:
             Binary Bracelets:
               name: Braccialetti binari
             'Loops: My Loopy Robotic Friends':
-              name: I miei ciclici amici robotici (per i più piccoli)
+              name: I miei ripetitivi amici robotici (per i più piccoli)
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
             Loops in Harvester:
               name: Cicli con la contadina
             Looking Ahead:
               name: Uno sguardo avanti con Minecraft
+            Sticker Art with Loops:
+              name: 'Mini-progetto: Arte degli adesivi'
             'Events: The Big Event':
               name: Il grande evento
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
+            Events in Play Lab:
+              name: 'Mini Progetto: Gioco di Inseguimento'
+            Picturing Data:
+              name: Rappresentazione grafica dei dati
             'End of Course Project: Create a Play Lab Game':
               name: Progetto di fine corso
           lesson_groups:
@@ -7815,12 +7890,13 @@ it:
           student_description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         coursed-2021:
           title: Corso D (2021)
+          description: 'Abbiamo creato il corso D per gli alunni della terza elementare. Il corso inizia con una rassegna dei concetti trovati nei corsi precedenti, inclusi cicli ed eventi. In seguito, gli alunni svilupperanno la loro comprensione di algoritmi, cicli annidati, cicli, istruzioni condizionali e altro ancora. '
           description_audience: Da 7 a 11 anni
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programmazione su carta a quadretti
             Introduction to Online Puzzles:
-              name: Introduzione agli Esercizi Online
+              name: Introduzione agli esercizi online
             Relay Programming:
               name: Programmazione a staffetta
             Debugging in Collector:
@@ -7853,8 +7929,10 @@ it:
               name: Progetto di fine corso
             lesson-6:
               name: Uno sguardo avanti con Minecraft
+            lesson-5:
+              name: Potenziare le password
             lesson-1:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
           lesson_groups:
             csf_sequencing:
               display_name: Sequenze di istruzioni
@@ -7872,23 +7950,36 @@ it:
               display_name: Progetto di fine corso
             lessonGroup-6:
               display_name: Cittadinanza digitale
+          student_description: Impara di più sui cicli, le istruzioni condizionali e gli eventi. Oltre alla programmazione, scopri la cittadinanza digitale.
         coursee-2021:
+          title: Corso E (2021)
+          description: Abbiamo creato il Corso E per gli alunni della quarta elementare. Il corso inizia con un'introduzione allo strumento di programmazione Laboratorio dei personaggi. Gli alunni impareranno a realizzare divertenti progetti interattivi che consolidano ciò che hanno imparerato sulla sicurezza online. Dopo queste lezioni, gli alunni si impegneranno in una programmazione più complessa. Gli alunni impareranno a conoscere i cicli annidati, le funzioni e le istruzioni condizionali. Entro la fine del corso, gli alunni uniranno questi concetti per risolvere esercizi impegnativi. Il corso si conclude con un progetto senza limiti di tempo in cui gli alunni creano un gioco o un disegno.
           description_audience: Da 8 a 12 anni
           lessons:
+            Programming and Loops with the Artist:
+              name: Disegnare con i cicli
             'Conditionals in Minecraft: Voyage Aquatic':
               name: Istruzioni condizionali in Minecraft - Viaggio acquatico
             Conditionals:
               name: Istruzioni condizionali con la contadina
+            Simon Says:
+              name: Segui l'algoritmo
+            Learning Sprites with Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
             Alien Dance Party with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa di ballo degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+            About Me:
+              name: 'Mini progetto: a proposito di me'
             Digital Sharing:
               name: Condivisione digitale
             Nested Loops in Bee:
               name: Cicli annidati nel labirinto
             Nested Loops in Artist:
               name: Cicli annidati con l'artista
+            Nested Loops in Frozen:
+              name: 'Mini Progetto: Disegna un fiocco di neve'
             'Functions: Songwriting':
               name: Composizione di canzoni
             Functions in Minecraft:
@@ -7897,8 +7988,14 @@ it:
               name: Funzioni con la contadina
             Functions in Artist:
               name: Funzioni con l'artista
+            Designing for Accessibility:
+              name: Progettare per l'accessibilità
             End of Course Project:
               name: Progetto di fine corso
+            lesson-4:
+              name: Diventa un super cittadino digitale
+            lesson-1:
+              name: Progettare per l'accessibilità
           lesson_groups:
             ramp_up:
               display_name: Cicli annidati
@@ -7916,24 +8013,35 @@ it:
               display_name: Progetto di fine corso
             lessonGroup-7:
               display_name: Impatti dell'informatica
+          student_description: Inizia a programmare con algoritmi, eventi, cicli, istruzioni condizionali e funzioni! Alla fine di questo corso, progetta e crea un gioco o un disegno da condividere con amici e parenti.
         coursef-2021:
+          title: Corso F (2021)
+          description: Abbiamo elaborato il Corso F per gli alunni della quinta elementare. Il corso inizia esaminando il modo in cui gli utenti effettuano le scelte nelle app che utilizzano. Gli alunni imparano quindi a realizzare una varietà di app del Laboratorio dei personaggi, che consentono all'utente anche di operare delle scelte. Nelle prossime lezioni del corso, gli alunni apprenderanno concetti più avanzati, tra cui variabili e cicli con contatore "per". Durante questo corso viene concessa agli alunni una maggiore autonomia e più scelte. Entro la fine del corso, gli alunni avranno creato progetti interattivi e opere d'arte da condividere con amici e parenti.
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
           description_audience: Da 9 a 13 anni
           lessons:
             Functions in Minecraft:
               name: Funzioni con Minecraft
+            Learning Sprites with Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
             Events with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa di ballo degli alieni con il Laboratorio dei personaggi
+            Loops with the Artist:
+              name: Disegnare con i cicli
             Nested Loops in the Maze:
               name: Cicli annidati nel labirinto
             The Power of Words:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
             Envelope Variables:
               name: Variabili e buste
             Variables as Constant in Artist:
               name: Variabili con l'Artista
             Variables that Change in Bee:
               name: Modifica delle variabili con l'ape
+            Variables that Change in Artist:
+              name: Utilizzo delle variabili con l'artista
+            Simulating Experiments:
+              name: Simulazione di esperimenti
             AI for Oceans:
               name: L'Intelligenza Artificiale per il mare
             Internet:
@@ -7941,23 +8049,31 @@ it:
             For Loop Fun:
               name: Divertiti usando i cicli con contatore
             For Loops in Bee:
-              name: Cicli con Contatore con l'Ape
+              name: Cicli con contatore con l'Ape
             For Loops in Artist:
               name: Cicli con contatore con l'artista
             Virtual Pet:
               name: 'Mini progetto: Animaletto Virtuale'
             End of Course Project:
               name: Progetto di fine corso
+            lesson-1:
+              name: Progettare per l'accessibilità
             lesson-6:
               name: Introduzione al Laboratorio dei Personaggi
             lesson-7:
               name: Creazione di personaggi
             lesson-8:
               name: Personaggi in azione
+            lesson-9:
+              name: Storia delle caselle vuote
+            lesson-10:
+              name: Testo e richieste all'utente
             lesson-5:
               name: Epidemia
             lesson-2:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
+            lesson-11:
+              name: 'Mini progetto: Programmi basati sull''imput dell''utente'
           lesson_groups:
             ramp_up:
               display_name: Personaggi
@@ -7965,6 +8081,8 @@ it:
               display_name: Cittadinanza digitale
             csf_variables:
               display_name: Cicli con contatore
+            csf_data:
+              display_name: Dati e simulazioni
             csf_for_loops:
               display_name: Cicli con contatore
             csf_sprites:
@@ -7977,7 +8095,10 @@ it:
               display_name: rimuovi
             lessonGroup-7:
               display_name: Cittadinanza digitale
+          student_description: Impara a programmare con personaggi, variabili e cicli e discuti l'impatto sociale dell'informatica e di Internet. Alla fine di questo corso, progetta e crea un progetto da condividere con amici e familiari.
         express-2021:
+          title: Corso Rapido (2021)
+          description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
           description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
           description_audience: Da 9 a 18 anni
           lessons:
@@ -7993,6 +8114,8 @@ it:
               name: Programmare con l'artista
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
+            Sticker Art with Loops:
+              name: 'Mini-progetto: Arte degli adesivi'
             Nested Loops in Maze:
               name: Cicli annidati nel labirinto
             Snowflakes with Anna and Elsa:
@@ -8015,14 +8138,18 @@ it:
               name: Funzioni con la contadina
             Functions with Artist:
               name: Funzioni con l'artista
+            Variables with Artist:
+              name: Utilizzo delle variabili con l'artista
             Changing Variables with Bee:
               name: Modifica delle variabili con l'ape
             Changing Variables with Artist:
               name: Modifica delle Variabili con l'Artista
             For Loops with Bee:
-              name: Cicli con Contatore con l'Ape
+              name: Cicli con contatore con l'Ape
             For Loops with Artist:
               name: Cicli con contatore con l'artista
+            Swimming Fish in Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
             Alien Dance Party:
               name: Discoteca Aliena
             Virtual Pet with Sprite Lab:
@@ -8035,9 +8162,11 @@ it:
               name: Creazione di personaggi
             lesson-3:
               name: Personaggi in azione
+            lesson-4:
+              name: Testo e richieste all'utente
           lesson_groups:
             csf_warmup:
-              display_name: Riscaldamento
+              display_name: Introduzione
             csf_sequencing:
               display_name: Sequenze di istruzioni
             csf_loops:
@@ -8056,7 +8185,10 @@ it:
               display_name: Progetto di fine corso
             lessonGroup-9:
               display_name: Eventi
+          student_description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
         pre-express-2021:
+          title: Corso Rapido pre-scolare (2021)
+          description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
           description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
           description_audience: Da 4 a 8 anni
           lessons:
@@ -8089,8 +8221,11 @@ it:
               display_name: Cicli
             csf_events:
               display_name: Eventi
+          student_description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
         csf-2021-pilot:
           lessons:
+            Learning Sprites with Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
             Virus Simulation for Code Bytes:
               name: Codifica di una simulazione
             Course F Introduction:
@@ -8099,8 +8234,16 @@ it:
               name: Creazione di personaggi
             Sprites in Action:
               name: Personaggi in azione
+            blank space stories:
+              name: Storia delle caselle vuote
+            texts-and-prompts:
+              name: Testo e richieste all'utente
             introducing-spritelab:
               name: Introduzione al Laboratorio dei Personaggi
+            blank-space-stories:
+              name: Storia delle caselle vuote
+            user-input-programs:
+              name: 'Mini progetto: Programmi basati sull''imput dell''utente'
           lesson_groups:
             ramp_up:
               display_name: Introduzione
@@ -8795,6 +8938,12 @@ it:
           lessons:
             lesson-4:
               name: Simulazione di epidemia
+            lesson-5:
+              name: 'Mini progetto: a proposito di me'
+            Drawing with Loops:
+              name: Disegnare con i cicli
+            Using Variables with the Artist:
+              name: Utilizzo delle variabili con l'artista
             Programming with the Bee:
               name: Cicli annidati nel labirinto
             Variables with the Bee:
@@ -8802,11 +8951,13 @@ it:
             For Loop Fun:
               name: Divertiti usando i cicli con contatore
             For Loops with Bee:
-              name: Cicli con Contatore con l'Ape
+              name: Cicli con contatore con l'Ape
             For Loops with Artist:
               name: Cicli con contatore con l'artista
+            Follow the Algorithm:
+              name: Segui l'algoritmo
             Alien Dance Party with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa di ballo degli alieni con il Laboratorio dei personaggi
           lesson_groups:
             lessonGroup-5:
               display_name: Varibili del Corso F (Deprecato)
@@ -8830,6 +8981,14 @@ it:
               name: Personaggi in azione
             'Mini-Project: Virtual Pet':
               name: 'Mini progetto: Animaletto Virtuale'
+            Blank Space Stories:
+              name: Storia delle caselle vuote
+            Text and Prompts:
+              name: Testo e richieste all'utente
+            'Mini-Project: User Input Programs':
+              name: 'Mini progetto: Programmi basati sull''imput dell''utente'
+            Simulating Experiments:
+              name: Simulazione di esperimenti
           lesson_groups:
             lessonGroup-2:
               display_name: Personaggi
@@ -8874,6 +9033,8 @@ it:
               display_name: Sandbox
         coursea-2022:
           lessons:
+            Safety in My Online Neighborhood:
+              name: Sicurezza nel mio quartiere digitale
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
             Happy Maps:
@@ -8894,6 +9055,8 @@ it:
               name: Al mare con i cicli
             The Big Event Jr:
               name: Il grande evento (per i più piccoli)
+            'Mini-Project: On the Move with Play Lab':
+              name: 'Mini progetto: In movimento con il laboratorio'
             End of Course Project:
               name: Progetto di fine corso
             'Programming: Happy Maps':
@@ -8908,6 +9071,8 @@ it:
               name: Cicli con la collezionista
             'Events: The Big Event':
               name: Il grande evento (per i più piccoli)
+            Events in Play Lab:
+              name: 'Mini progetto: In movimento con il laboratorio'
             lesson-1:
               name: Progetto di fine corso
           lesson_groups:
@@ -8921,6 +9086,8 @@ it:
               display_name: Eventi
             lessonGroup-5:
               display_name: Progetto di fine corso
+          title: Corso A (2022)
+          description: 'Il corso A offre un piano di studi di informatica per i bambini che hanno appena iniziato a leggere, inclusi gli alunni della scuola materna. Gli alunni impareranno a programmare usando comandi come cicli ed eventi. Le lezioni presentate in questo corso insegnano anche agli alunni a collaborare in modo proficuo con gli altri, indagare su diverse tecniche di risoluzione dei problemi, persistere di fronte a compiti impegnativi e conoscere le questioni di sicurezza legate a Internet. '
           student_description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per bambini che non leggono ancora.
           description_audience: 'Età: da 4 a 7 anni'
@@ -8934,6 +9101,8 @@ it:
               name: Programmare con la collezionista
             Creating Art with Code:
               name: Programmare con l'artista
+            Swimming Fish in Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
             Making Sprites:
               name: Creazione di personaggi
             Sprites in Action:
@@ -8944,6 +9113,8 @@ it:
               name: Ballando col codice
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
+            'Mini-Project: Sticker Art':
+              name: 'Mini-progetto: Arte degli adesivi'
             Nested Loops in Maze:
               name: Cicli annidati nel labirinto
             Snowflakes with Anna and Elsa:
@@ -8966,10 +9137,14 @@ it:
               name: Funzioni con l'artista
             Functions with Harvester:
               name: Funzioni con la contadina
+            Text and Prompts:
+              name: Testo e richieste all'utente
+            Using Variables with the Artist:
+              name: Utilizzo delle variabili con l'artista
             Variables with the Bee:
               name: Modifica delle variabili con l'ape
             For Loops with Bee:
-              name: Cicli con Contatore con l'Ape
+              name: Cicli con contatore con l'Ape
             For Loops with Artist:
               name: Cicli con contatore con l'artista
             End of Course Project:
@@ -8982,10 +9157,16 @@ it:
               name: Personaggi in azione
             lesson-1:
               name: Ballando col codice
+            Sticker Art with Loops:
+              name: 'Mini-progetto: Arte degli adesivi'
             'Looking Ahead with Minecraft ':
               name: Uno sguardo avanti con Minecraft
             While Loops with the Farmer:
               name: Cicli "mentre" con la contadina
+            lesson-4:
+              name: Testo e richieste all'utente
+            Variables with Artist:
+              name: Utilizzo delle variabili con l'artista
             Changing Variables with Bee:
               name: Modifica delle variabili con l'ape
           lesson_groups:
@@ -9007,6 +9188,9 @@ it:
               display_name: Cicli con contatore
             end_of_course_project:
               display_name: Progetto di fine corso
+          title: Corso Rapido (2022)
+          description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
+          student_description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
           description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
           description_audience: Da 9 a 18 anni
           name: corso rapido 2022
@@ -9060,6 +9244,8 @@ it:
               display_name: Sondaggio Post-corso
         courseb-2022:
           lessons:
+            Digital Trails:
+              name: Tracce digitali
             Move It, Move It:
               name: Muovilo, muovilo
             Sequencing with Angry Birds:
@@ -9080,6 +9266,8 @@ it:
               name: L'App Giusta
             The Big Event Jr:
               name: Il grande evento (per i più piccoli)
+            'Mini-Project: A Royal Battle with Events':
+              name: 'Mini Progetto: una Battaglia Reale con gli eventi'
             End of Course Project:
               name: Progetto di fine corso
             Sequencing in Maze:
@@ -9098,6 +9286,8 @@ it:
               name: Disegnare giardini con i cicli
             'Events: The Big Event':
               name: Il grande evento (per i più piccoli)
+            Events in Play Lab:
+              name: 'Mini Progetto: una Battaglia Reale con gli eventi'
             lesson-1:
               name: Progetto di fine corso
           lesson_groups:
@@ -9113,11 +9303,15 @@ it:
               display_name: Eventi
             lessonGroup-6:
               display_name: Progetto di fine corso
+          title: Corso B (2022)
+          description: Il Corso B è stato sviluppato pensando ad alunni della 1° classe della scuola primaria. Il Corso B è sostanzialmente allineato con il Corso A, ma offre lezioni tradizionali più complesse e una maggiore varietà di esercizi. Gli alunni impareranno le basi della programmazione, tecniche di collaborazione, indagine e pensiero critico, perseveranza di fronte alle difficoltà e le basi della sicurezza su Internet. Alla fine del corso gli alunni possono condividere con un link il proprio gioco personalizzato creato nell'ambiente del Laboratorio.
           student_description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per alunni che devono imparare a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
           description_audience: Da 5 a 8 anni
         coursec-2022:
           lessons:
+            Putting a STOP to Online Meanness:
+              name: Porre FINE alla cattiveria online
             My Robotic Friends Jr:
               name: I miei amici robotici (per i più piccoli)
             Programming with Angry Birds:
@@ -9129,15 +9323,21 @@ it:
             Creating Art with Code:
               name: Programmare con l'artista
             My Loopy Robotic Friends Jr:
-              name: I miei ciclici amici robotici (per i più piccoli)
+              name: I miei ripetitivi amici robotici (per i più piccoli)
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
             Harvesting Crops with Loops:
               name: Cicli con la contadina
+            'Mini-Project: Sticker Art':
+              name: 'Mini-progetto: Arte degli adesivi'
             The Big Event:
               name: Il grande evento
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
+            'Mini-Project: Chase Game':
+              name: 'Mini Progetto: Gioco di Inseguimento'
+            Picturing Data:
+              name: Rappresentazione grafica dei dati
             Binary Bracelets:
               name: Braccialetti binari
             End of Course Project:
@@ -9151,11 +9351,15 @@ it:
             Programming in Artist:
               name: Programmare con l'artista
             'Loops: My Loopy Robotic Friends':
-              name: I miei ciclici amici robotici (per i più piccoli)
+              name: I miei ripetitivi amici robotici (per i più piccoli)
             Loops in Harvester:
               name: Cicli con la contadina
+            Sticker Art with Loops:
+              name: 'Mini-progetto: Arte degli adesivi'
             'Events: The Big Event':
               name: Il grande evento
+            Events in Play Lab:
+              name: 'Mini Progetto: Gioco di Inseguimento'
             'End of Course Project: Create a Play Lab Game':
               name: Progetto di fine corso
           lesson_groups:
@@ -9171,6 +9375,8 @@ it:
               display_name: Dati
             end_of_course_project:
               display_name: Progetto di fine corso
+          title: Corso C (2022)
+          description: Abbiamo realizzato il Corso C per gli alunni della seconda elementare. Gli alunni creeranno programmi con sequenze di istruzioni, cicli ed eventi. Indagheranno tecniche di risoluzione dei problemi e svilupperanno strategie per sviluppare comunità costruttive sia online che offline. Entro la fine del corso, gli alunni creeranno giochi interattivi che potranno condividere.
           student_description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
           description_audience: Da 6 a 10 anni
@@ -9207,10 +9413,12 @@ it:
               display_name: Sondaggio Post-corso
         coursed-2022:
           lessons:
+            Password Power-Up:
+              name: Potenziare le password
             Graph Paper Programming:
               name: Programmazione su carta a quadretti
             Introduction to Online Puzzles:
-              name: Introduzione agli Esercizi Online
+              name: Introduzione agli esercizi online
             Relay Programming:
               name: Programmazione a staffetta
             Debugging with Laurel:
@@ -9239,6 +9447,8 @@ it:
               name: Cicli "fino a che" nel labirinto
             End of Course Project:
               name: Progetto di fine corso
+            lesson-5:
+              name: Potenziare le password
             'Algorithms: Graph Paper Programming':
               name: Programmazione su carta a quadretti
             Debugging in Collector:
@@ -9264,18 +9474,32 @@ it:
               display_name: Istruzioni condizionali
             end_of_course_project:
               display_name: Progetto di fine corso
-          title: Corso D (2021)
+          title: Corso D (2022)
+          description: 'Abbiamo creato il corso D per gli alunni della terza elementare. Il corso inizia con una rassegna dei concetti trovati nei corsi precedenti, inclusi cicli ed eventi. In seguito, gli alunni svilupperanno la loro comprensione di algoritmi, cicli annidati, cicli, istruzioni condizionali e altro ancora. '
+          student_description: Impara di più sui cicli, le istruzioni condizionali e gli eventi. Oltre alla programmazione, scopri la cittadinanza digitale.
           description_audience: Da 7 a 11 anni
         coursee-2022:
           lessons:
+            Follow the Algorithm:
+              name: Segui l'algoritmo
+            Swimming Fish with Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
             Alien Dance Party with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa di ballo degli alieni con il Laboratorio dei personaggi
+            Be A Super Digital Citizen:
+              name: Diventa un super cittadino digitale
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+            'Mini-Project: About Me':
+              name: 'Mini progetto: a proposito di me'
             Digital Sharing:
               name: Condivisione digitale
+            Drawing with Loops:
+              name: Disegnare con i cicli
             Fancy Shapes using Nested Loops:
               name: Cicli annidati con l'artista
+            'Mini-Project: Design a Snowflake':
+              name: 'Mini Progetto: Disegna un fiocco di neve'
             Songwriting:
               name: Composizione di canzoni
             Functions in Minecraft:
@@ -9288,10 +9512,24 @@ it:
               name: Istruzioni condizionali con la contadina
             Functions with Harvester:
               name: Funzioni con la contadina
+            Designing for Accessibility:
+              name: Progettare per l'accessibilità
             End of Course Project:
               name: Progetto di fine corso
+            Simon Says:
+              name: Segui l'algoritmo
+            Learning Sprites with Sprite Lab:
+              name: Pesce che nuota, nel Laboratorio dei personaggi
+            lesson-4:
+              name: Diventa un super cittadino digitale
+            About Me:
+              name: 'Mini progetto: a proposito di me'
+            Programming and Loops with the Artist:
+              name: Disegnare con i cicli
             Nested Loops in Artist:
               name: Cicli annidati con l'artista
+            Nested Loops in Frozen:
+              name: 'Mini Progetto: Disegna un fiocco di neve'
             'Functions: Songwriting':
               name: Composizione di canzoni
             Functions in Artist:
@@ -9300,6 +9538,8 @@ it:
               name: Istruzioni condizionali con la contadina
             Functions in Harvester:
               name: Funzioni con la contadina
+            lesson-1:
+              name: Progettare per l'accessibilità
             'Hello World: Food':
               name: Ciao Mondo
           lesson_groups:
@@ -9317,6 +9557,9 @@ it:
               display_name: Impatti dell'informatica
             end_of_course_project:
               display_name: Progetto di fine corso
+          title: Corso E (2022)
+          description: Abbiamo creato il Corso E per gli alunni della quarta elementare. Il corso inizia con un'introduzione allo strumento di programmazione Laboratorio dei personaggi. Gli alunni impareranno a realizzare divertenti progetti interattivi che consolidano ciò che hanno imparerato sulla sicurezza online. Dopo queste lezioni, gli alunni si impegneranno in una programmazione più complessa. Gli alunni impareranno a conoscere i cicli annidati, le funzioni e le istruzioni condizionali. Entro la fine del corso, gli alunni uniranno questi concetti per risolvere esercizi impegnativi. Il corso si conclude con un progetto senza limiti di tempo in cui gli alunni creano un gioco o un disegno.
+          student_description: Inizia a programmare con algoritmi, eventi, cicli, istruzioni condizionali e funzioni! Alla fine di questo corso, progetta e crea un gioco o un disegno da condividere con amici e parenti.
           description_audience: Da 8 a 12 anni
         coursef-2022:
           lessons:
@@ -9329,7 +9572,17 @@ it:
             'Mini-Project: Virtual Pet':
               name: 'Mini progetto: Animaletto Virtuale'
             The Power of Words:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
+            Blank Space Stories:
+              name: Storia delle caselle vuote
+            Text and Prompts:
+              name: Testo e richieste all'utente
+            'Mini-Project: User Input Programs':
+              name: 'Mini progetto: Programmi basati sull''imput dell''utente'
+            Drawing with Loops:
+              name: Disegnare con i cicli
+            Using Variables with the Artist:
+              name: Utilizzo delle variabili con l'artista
             Programming with the Bee:
               name: Cicli annidati nel labirinto
             Variables with the Bee:
@@ -9337,9 +9590,11 @@ it:
             For Loop Fun:
               name: Divertiti usando i cicli con contatore
             For Loops with Bee:
-              name: Cicli con Contatore con l'Ape
+              name: Cicli con contatore con l'Ape
             For Loops with Artist:
               name: Cicli con contatore con l'artista
+            Simulating Experiments:
+              name: Simulazione di esperimenti
             Outbreak:
               name: Epidemia
             AI For Oceans:
@@ -9355,13 +9610,23 @@ it:
             Virtual Pet:
               name: 'Mini progetto: Animaletto Virtuale'
             lesson-2:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
+            lesson-9:
+              name: Storia delle caselle vuote
+            lesson-10:
+              name: Testo e richieste all'utente
+            lesson-11:
+              name: 'Mini progetto: Programmi basati sull''imput dell''utente'
+            Loops with the Artist:
+              name: Disegnare con i cicli
+            Variables that Change in Artist:
+              name: Utilizzo delle variabili con l'artista
             Nested Loops in the Maze:
               name: Cicli annidati nel labirinto
             Variables that Change in Bee:
               name: Modifica delle variabili con l'ape
             For Loops in Bee:
-              name: Cicli con Contatore con l'Ape
+              name: Cicli con contatore con l'Ape
             For Loops in Artist:
               name: Cicli con contatore con l'artista
             AI for Oceans:
@@ -9375,8 +9640,11 @@ it:
               display_name: Cittadinanza digitale
             lessonGroup-8:
               display_name: Variabili
+            csf_data:
+              display_name: Dati e simulazioni
             end_of_course_project:
               display_name: Progetto di fine corso
+          title: Corso F (2022)
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
           description_audience: Da 9 a 13 anni
         csa1-2022:
@@ -9431,6 +9699,8 @@ it:
               display_name: Eventi
           description_audience: Da 4 a 8 anni
           description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
+          description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
+          student_description: Impara l'informatica esercitandoti con le seguenti lezioni al ritmo che ti è più congeniale! Impara a creare programmi per computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide divertenti! Crea giochi e progetti creativi da condividere con amici, familiari e insegnanti.
         csa2-2022:
           lessons:
             lesson-6:
@@ -9545,7 +9815,7 @@ it:
         coursef-2022-pilot:
           lessons:
             The Power of Words:
-              name: Cittadinanza digitale - Il potere delle parole
+              name: Il potere delle parole
             Introducing Sprite Lab:
               name: Introduzione al Laboratorio dei Personaggi
             Making Sprites:
@@ -9554,6 +9824,14 @@ it:
               name: Personaggi in azione
             'Mini-Project: Virtual Pet':
               name: 'Mini progetto: Animaletto Virtuale'
+            Blank Space Stories:
+              name: Storia delle caselle vuote
+            Text and Prompts:
+              name: Testo e richieste all'utente
+            'Mini-Project: User Input Programs':
+              name: 'Mini progetto: Programmi basati sull''imput dell''utente'
+            Simulating Experiments:
+              name: Simulazione di esperimenti
             Outbreak:
               name: Epidemia
             AI For Oceans:
@@ -9569,8 +9847,11 @@ it:
               display_name: Personaggi
             lessonGroup-8:
               display_name: Variabili
+            csf_data:
+              display_name: Dati e simulazioni
             end_of_course_project:
               display_name: Progetto di fine corso
+          title: Corso F (2022)
           description_audience: Da 9 a 13 anni
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
         csa6-2022:
@@ -9686,7 +9967,7 @@ it:
             For Loops:
               name: Cicli con contatore
             End of Course projects:
-              name: Progetti di fine corso
+              name: Progetto di Fine Corso
             Reviewing your reflections:
               name: Analizza le tue riflessioni
         vpl-csd1-ci-pilot-2022:
@@ -9808,6 +10089,8 @@ it:
               name: Numeri Casuali
             Sprites:
               name: Personaggi
+            Sprite Properties:
+              name: Proprietà del personaggio
             Text:
               name: Testo
             Conditionals:
@@ -9910,3 +10193,15 @@ it:
               name: Panoramica
             lesson-1:
               name: Panoramica
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Ciao Mondo del CSC
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: L'arte della poesia
+        self-paced-pl-csd5-2022:
+          lessons:
+            Engage with machine learning apps:
+              name: Il Processo di Progettazione

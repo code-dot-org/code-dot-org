@@ -1278,6 +1278,7 @@ is:
         music: Tónlist
         art: Listir
         other: 'Annað:'
+        na: Á ekki við
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1287,7 +1288,8 @@ is:
         lightbot: Lightbot
         scratch: Scratch
         tynker: Tynker
-        other: 'Annað:'
+        other: Annað
+        na: Á ekki við
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1297,7 +1299,8 @@ is:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Annað:'
+        other: Annað
+        na: Á ekki við
       workshop_course:
         csf_af: Grunnatriði TF (Námskeið A-F)
         csf_express: Grunnatriði TF (Forstig Hraðferðar eða Hraðferð)

@@ -29,6 +29,27 @@
         "infinity/Infinity": {
           "name": "Disneyren Infinity Play Lab"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kodearen ordua 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Itzuliak"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Gertaerak"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Baldintzak"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funtzioak"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Aldagaiak"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For begiztak"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Mugi ezazu, mugi ezazu!"
         },
@@ -374,6 +395,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Muturreko erronka - osokoa"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Konputazio zientzetarako sarrera"
+        },
+        "20-hour/The Maze": {
+          "name": "labirintoa"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Pentsamendu konputazionala"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Paper grafiko programazioa"
+        },
+        "20-hour/The Artist": {
+          "name": "Artista"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmoak"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Artista 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funtzioak"
+        },
+        "20-hour/The Farmer": {
+          "name": "Baserritarra"
+        },
+        "20-hour/Conditionals": {
+          "name": "Baldintzak"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Artista 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Abestiak idazten"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Baserritarra 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstrakzioa"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Artista 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Txandaka programatzen"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Baserritarra 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Artista 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Ixtea"
+        },
         "course2/Graph Paper Programming": {
           "name": "Paper grafiko programazioa"
         },
@@ -550,6 +631,36 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Buruhaustea"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Buruhaustea"
+        },
+        "allthethings/Maze": {
+          "name": "Labirintoa"
+        },
+        "allthethings/Artist": {
+          "name": "Artista"
+        },
+        "allthethings/Bee": {
+          "name": "Erlea"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Errebotea"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Match": {
+          "name": "Parekatu"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
         },
         "coursef-2021/For Loop Fun": {
           "name": "Begizta jostarirako"

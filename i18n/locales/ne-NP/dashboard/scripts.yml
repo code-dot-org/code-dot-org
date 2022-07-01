@@ -2,13 +2,6 @@
 ne:
   data:
     script:
-      category:
-        csf_category_name: CS आधारभूत
-        cspexams_category_name: CS Principles Practice Test
-        csp17_category_name: "'16-'17 CS Principles"
-        hoc_category_name: Hour of Code
-        math_category_name: Math
-        other_category_name: अन्य
       name:
         course1:
           title: Course 1

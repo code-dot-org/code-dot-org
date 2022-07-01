@@ -3788,7 +3788,10 @@
         "Overworld Chop Tree - allthethings": "Drewno to bardzo ważny materiał. Można z niego zbudować wiele rzeczy. Podejdź do drzewa i skorzystaj z polecenia \"zniszcz blok\", aby je ściąć.",
         "Test embedded K1 Blockly in instructions": "Użyj trzech bloków \"przesuń na zachód\" i jednego loku \"zbierz kukurydzę\", aby rozwiązać tę łamigłówkę.",
         "U1L13 Text Compression": "Poszukaj wzorców (powtarzające się słowa lub frazy) w tekście. Wprowadź do słownika po prawej stronie wzorce, które widzisz. Podczas ich wpisywania do słownika, symbol wpisu jest wstawiany do tekstu zamiast wzorca.",
-        "allthethings-anigif-instructions": "Przenieś mnie na wschód (E - East), aby doprowadzić mnie do świnki!"
+        "allthethings-anigif-instructions": "Przenieś mnie na wschód (E - East), aby doprowadzić mnie do świnki!",
+        "2-3 Artist Loops 2": "Teraz użyj bloku \"powtórz\", aby z komórki utworzyć powłokę.",
+        "PS predictive Applab level test": "Oto kilka instrukcji.",
+        "allthethings AI Lab 1": "Oto kilka krótkich instrukcji dla tego poziomu testowego AI Lab."
       }
     }
   }

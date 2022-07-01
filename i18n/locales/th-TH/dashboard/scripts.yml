@@ -2,11 +2,6 @@
 th:
   data:
     script:
-      category:
-        csf_category_name: พื้นฐานด้านวิทยาการคอมพิวเตอร์
-        hoc_category_name: ช่วงเวลาของ Code
-        math_category_name: คณิตศาสตร์
-        other_category_name: อาชีพอื่น ๆ
       name:
         course1:
           title: คอร์ส 1
@@ -6556,3 +6551,15 @@ th:
               name: ภาพรวม
             lesson-1:
               name: ภาพรวม
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: สวัสดีโลกแห่ง CSC!
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: ภาพปกบทกวี
+        self-paced-pl-csd5-2022:
+          lessons:
+            Engage with machine learning apps:
+              name: ขั้นตอนการออกแบบ

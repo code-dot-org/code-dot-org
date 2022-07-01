@@ -70,6 +70,9 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "व्हिडीओ"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings/courseb/2018": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -78,6 +81,9 @@
         },
         "vocabulary/courseb/2018": {
           "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings/coursea/2018": {
           "name": "मानक मॅपिंग्ज"
@@ -88,6 +94,9 @@
         "vocabulary/coursea/2018": {
           "name": "शब्दसंग्रह"
         },
+        "lesson_plans/coursed/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings/coursed/2018": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -96,6 +105,9 @@
         },
         "vocabulary/coursed/2018": {
           "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings/coursef/2018": {
           "name": "मानक मॅपिंग्ज"
@@ -106,6 +118,9 @@
         "vocabulary/coursef/2018": {
           "name": "शब्दसंग्रह"
         },
+        "lesson_plans/express/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings/express/2018": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -115,6 +130,9 @@
         "vocabulary/express/2018": {
           "name": "शब्दसंग्रह"
         },
+        "lesson_plans/coursee/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings/coursee/2018": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -123,6 +141,9 @@
         },
         "vocabulary/coursee/2018": {
           "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings/coursec/2018": {
           "name": "मानक मॅपिंग्ज"
@@ -136,6 +157,9 @@
         "code_introduced_1/csd/2018": {
           "name": "कोडचा परिचय करून दिला"
         },
+        "lesson_plans_2/csd/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings_2/csd/2018": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -148,6 +172,9 @@
         "code_introduced_3/csd/2018": {
           "name": "कोडचा परिचय करून दिला"
         },
+        "lesson_plans_5/csd/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings_5/csd/2018": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -156,6 +183,9 @@
         },
         "vocabulary_5/csd/2018": {
           "name": "शब्दसंग्रह"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings_4/csd/2018": {
           "name": "मानक मॅपिंग्ज"
@@ -169,6 +199,9 @@
         "code_introduced_2/csd/2018": {
           "name": "कोडचा परिचय करून दिला"
         },
+        "lesson_plans_3/csd/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings_3/csd/2018": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -181,6 +214,9 @@
         "code_introduced/csd/2018": {
           "name": "कोडचा परिचय करून दिला"
         },
+        "lesson_plans_1/csd/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings_1/csd/2018": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -189,6 +225,9 @@
         },
         "vocabulary_1/csd/2018": {
           "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings/csd/2018": {
           "name": "मानक मॅपिंग्ज"
@@ -202,6 +241,9 @@
         "curriculum_guide/coursea/2019": {
           "name": "अभ्यासक्रम मार्गदर्शक"
         },
+        "lesson_plans/coursea/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings/coursea/2019": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -213,6 +255,9 @@
         },
         "curriculum_guide/courseb/2019": {
           "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings/courseb/2019": {
           "name": "मानक मॅपिंग्ज"
@@ -226,6 +271,9 @@
         "curriculum_guide/coursed/2019": {
           "name": "अभ्यासक्रम मार्गदर्शक"
         },
+        "lesson_plans/coursed/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings/coursed/2019": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -237,6 +285,9 @@
         },
         "curriculum_guide/coursef/2019": {
           "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings/coursef/2019": {
           "name": "मानक मॅपिंग्ज"
@@ -250,6 +301,9 @@
         "curriculum_guide/coursee/2019": {
           "name": "अभ्यासक्रम मार्गदर्शक"
         },
+        "lesson_plans/coursee/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings/coursee/2019": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -258,6 +312,9 @@
         },
         "vocabulary/coursee/2019": {
           "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/express/2019": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings/express/2019": {
           "name": "मानक मॅपिंग्ज"
@@ -270,6 +327,9 @@
         },
         "curriculum_guide/coursec/2019": {
           "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings/coursec/2019": {
           "name": "मानक मॅपिंग्ज"
@@ -286,6 +346,9 @@
         "code_introduced_1/csd/2019": {
           "name": "कोडचा परिचय करून दिला"
         },
+        "lesson_plans_2/csd/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings_2/csd/2019": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -294,6 +357,9 @@
         },
         "code_introduced_3/csd/2019": {
           "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings_5/csd/2019": {
           "name": "मानक मॅपिंग्ज"
@@ -304,17 +370,26 @@
         "code_introduced_2/csd/2019": {
           "name": "कोडचा परिचय करून दिला"
         },
+        "lesson_plans_3/csd/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings_3/csd/2019": {
           "name": "मानक मॅपिंग्ज"
         },
         "vocabulary_3/csd/2019": {
           "name": "शब्दसंग्रह"
         },
+        "lesson_plans_4/csd/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings_4/csd/2019": {
           "name": "मानक मॅपिंग्ज"
         },
         "vocabulary_4/csd/2019": {
           "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings/csd/2019": {
           "name": "मानक मॅपिंग्ज"
@@ -325,6 +400,9 @@
         "code_introduced/csd/2019": {
           "name": "कोडचा परिचय करून दिला"
         },
+        "lesson_plans_1/csd/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings_1/csd/2019": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -333,6 +411,9 @@
         },
         "code_introduced_1/csd/2017": {
           "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings_2/csd/2017": {
           "name": "मानक मॅपिंग्ज"
@@ -346,6 +427,9 @@
         "code_introduced_3/csd/2017": {
           "name": "कोडचा परिचय करून दिला"
         },
+        "lesson_plans_5/csd/2017": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings_5/csd/2017": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -358,6 +442,9 @@
         "code_introduced/csd/2017": {
           "name": "कोडचा परिचय करून दिला"
         },
+        "lesson_plans_1/csd/2017": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings_1/csd/2017": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -367,6 +454,9 @@
         "vocabulary_1/csd/2017": {
           "name": "शब्दसंग्रह"
         },
+        "lesson_plans/csd/2017": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings/csd/2017": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -375,6 +465,9 @@
         },
         "vocabulary/csd/2017": {
           "name": "शब्दसंग्रह"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings_4/csd/2017": {
           "name": "मानक मॅपिंग्ज"
@@ -387,6 +480,9 @@
         },
         "code_introduced_2/csd/2017": {
           "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings_3/csd/2017": {
           "name": "मानक मॅपिंग्ज"
@@ -417,6 +513,7 @@
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
+          "name": "स्प्राईट लॅब डॉक्युमेंटेशन",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/coursef/2021": {
@@ -1004,18 +1101,23 @@
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "माझे रोबोटिक मित्र",
           "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
         },
         "csf-mrf-symbol-key/coursec/2021": {
+          "name": "माझे रोबोटिक मित्र",
           "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "माझे रोबोटिक मित्र",
           "url": "https://youtu.be/xaW3PAzHxCU"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "माझे रोबोटिक मित्र",
           "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "माझे रोबोटिक मित्र",
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
         },
         "c2-maze-bridge/coursec/2021": {
@@ -1284,9 +1386,11 @@
           "type": "व्हिडीओ"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "कार्ड्सबरोबर कंडीशनल्स",
           "url": "https://youtu.be/UymN4lTL50s"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "कार्ड्सबरोबर कंडीशनल्स",
           "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
@@ -1294,13 +1398,16 @@
           "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "कार्ड्सबरोबर कंडीशनल्स",
           "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
           "type": "मूल्यांकन"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "कार्ड्सबरोबर कंडीशनल्स",
           "url": "https://youtu.be/TbUaEnAYPjI"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "कार्ड्सबरोबर कंडीशनल्स",
           "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
@@ -1383,6 +1490,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/express/2021": {
+          "name": "स्प्राईट लॅब डॉक्युमेंटेशन",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
@@ -1390,6 +1498,7 @@
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
+          "name": "स्प्राईट लॅब डॉक्युमेंटेशन",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
@@ -1522,6 +1631,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/coursee/2021": {
+          "name": "स्प्राईट लॅब डॉक्युमेंटेशन",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
@@ -1823,6 +1933,9 @@
           "name": "व्हिडिओ: प्रशिक्षण डेटा आणि पूर्वाग्रह",
           "type": "व्हिडीओ"
         },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
         "make-a-recommendation-1/csd/2021": {
           "type": "नियम"
         },
@@ -1877,6 +1990,9 @@
         "interactive-card-project-guide-2019/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
         },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
         "interactive_card/csd/2021": {
           "type": "नियम"
         },
@@ -1908,6 +2024,9 @@
         "make-your-own-game/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
         },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
         "make_your_own_game/csd/2021": {
           "type": "नियम"
         },
@@ -1922,6 +2041,9 @@
         },
         "what-do-computers-do/csd/2021": {
           "type": "व्हिडीओ"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
         },
         "apps_and_problem_solving/csd/2021": {
           "type": "नियम"
@@ -1942,6 +2064,9 @@
         },
         "html-web-page-1/csd/2021": {
           "type": "नियम"
+        },
+        "html-web-page/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
         },
         "html-page/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
@@ -1964,6 +2089,9 @@
         "your-personal-style-1-2-3/csd/2021": {
           "type": "नियम"
         },
+        "your-personal-style-1/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
         "your-personal-style/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
         },
@@ -1972,6 +2100,9 @@
         },
         "person-web-page-prepare/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
         },
         "person-web-page-reflect/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
@@ -2001,8 +2132,14 @@
         "plan-a-multi-page-website/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
         },
+        "website-for-a-purpose/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
         "website-for-a-purpose-reflect/csd/2021": {
           "type": "प्रकल्प मार्गदर्शक"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings/pre-express/2020": {
           "name": "मानक मॅपिंग्ज"
@@ -2012,6 +2149,9 @@
         },
         "vocabulary/pre-express/2020": {
           "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/express/2020": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings/express/2020": {
           "name": "मानक मॅपिंग्ज"
@@ -2025,6 +2165,9 @@
         "curriculum_guide/courseb/2020": {
           "name": "अभ्यासक्रम मार्गदर्शक"
         },
+        "lesson_plans/courseb/2020": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings/courseb/2020": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -2036,6 +2179,9 @@
         },
         "curriculum_guide/coursed/2020": {
           "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings/coursed/2020": {
           "name": "मानक मॅपिंग्ज"
@@ -2049,6 +2195,9 @@
         "curriculum_guide/coursec/2020": {
           "name": "अभ्यासक्रम मार्गदर्शक"
         },
+        "lesson_plans/coursec/2020": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings/coursec/2020": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -2060,6 +2209,9 @@
         },
         "curriculum_guide/coursee/2020": {
           "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings/coursee/2020": {
           "name": "मानक मॅपिंग्ज"
@@ -2073,6 +2225,9 @@
         "curriculum_guide/coursea/2020": {
           "name": "अभ्यासक्रम मार्गदर्शक"
         },
+        "lesson_plans/coursea/2020": {
+          "name": "धड्याचे प्लॅन्स"
+        },
         "standard_mappings/coursea/2020": {
           "name": "मानक मॅपिंग्ज"
         },
@@ -2084,6 +2239,9 @@
         },
         "curriculum_guide/coursef/2020": {
           "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "धड्याचे प्लॅन्स"
         },
         "standard_mappings/coursef/2020": {
           "name": "मानक मॅपिंग्ज"

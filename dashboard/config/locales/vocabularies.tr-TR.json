@@ -245,6 +245,10 @@
           "word": "Etkinlik",
           "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modeller ve Simülasyonlar",
+          "definition": "deneyin gerçek hayatta ortaya çıkabilecek maliyeti, zamanı veya tehlikesi olmadan gerçek dünyadaki bir olayda olan davranışları araştırmak için o olayın temel özelliklerini kopyalayan veya taklit eden bir program."
+        },
         "event/sports/unversioned": {
           "word": "Etkinlik",
           "definition": "Bir şeylerin olmasına neden olan bir eylem."
@@ -379,6 +383,10 @@
         "for_loop/coursef/2021": {
           "word": "İçin Döngüsü",
           "definition": "Önceden belirlenmiş bir başlangıç, son ve artışa (adım aralığı) sahip döngüler."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Modeller ve Simülasyonlar",
+          "definition": "deneyin gerçek hayatta ortaya çıkabilecek maliyeti, zamanı veya tehlikesi olmadan gerçek dünyadaki bir olayda olan davranışları araştırmak için o olayın temel özelliklerini kopyalayan veya taklit eden bir program."
         },
         "machine_learning/coursef/2021": {
           "word": "Makine Öğrenimi",

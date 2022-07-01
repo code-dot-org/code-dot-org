@@ -216,12 +216,25 @@ Dashboard::Application.routes.draw do
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
   put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
+  # Routes needed for the footer on weblab share links on codeprojects
+  get '/weblab/footer', to: 'projects#weblab_footer', constraints: {host: CDO.codeprojects_hostname}
+  get '/scripts/hosted.js', constraints: {host: CDO.codeprojects_hostname}, to: redirect('/weblab/footer.js')
+  get '/style.css', constraints: {host: CDO.codeprojects_hostname}, to: redirect('/assets/weblab/footer.css')
+
   resources :projects, path: '/projects/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, _|
         get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
         get "/#{key}/new", to: 'projects#create_new', key: key.to_s, as: "#{key}_project_create_new"
-        get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
+
+        # Weblab projects are shared on a codeprojects path. The share URL on code studio doesn't mean anything and instead
+        # should be redirected to the corresponding codeprojects path.
+        if key == 'weblab'
+          get "/#{key}/:channel_id", constraints: {host: CDO.dashboard_hostname}, to: redirect("//#{CDO.site_host('codeprojects.org')}/%{channel_id}/")
+        else
+          get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
+        end
+
         get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
@@ -404,7 +417,6 @@ Dashboard::Application.routes.draw do
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
     get 'hidden_lessons', to: 'script_levels#hidden_lesson_ids'
-    get 'hidden_stages', to: 'script_levels#hidden_lesson_ids' #TODO: Remove once launched
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
     member do
@@ -915,7 +927,6 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
-  get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
   post '/dashboardapi/v1/text_to_speech/azure', to: 'api/v1/text_to_speech#azure', defaults: {format: 'json'}
 
@@ -987,9 +998,9 @@ Dashboard::Application.routes.draw do
 
   get '/backpacks/channel', to: 'backpacks#get_channel'
 
-  resources :project_versions, only: [:create]
-  get 'project_versions/get_token', to: 'project_versions#get_token'
-  get 'project_commits/:channel_id', to: 'project_versions#project_commits'
+  resources :project_commits, only: [:create]
+  get 'project_commits/get_token', to: 'project_commits#get_token'
+  get 'project_commits/:channel_id', to: 'project_commits#project_commits'
 
   resources :reviewable_projects, only: [:create, :destroy]
   get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'

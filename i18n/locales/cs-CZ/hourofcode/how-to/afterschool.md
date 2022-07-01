@@ -6,13 +6,13 @@ title: Hodina programování na čas po škole
 
 # Jak realizovat Hodinu kódu při mimoškolní aktivitě
 
-### Přidejte se k hnutí a poskytněte svým studentům úvod do počítačových věd podle těchto kroků.
+### Přidejte se k hnutí a pomocí těchto kroků uveďte studenty do počítačových věd.
 
-Výpočetní myšlení pomáhá zlepšovat dovednosti v oblasti řešení problémů, logiky a kreativity. A technika mění veškerý průmysl na planetě. Studenti by se dnes měli naučit techniku vytvářet, nejen ji používat. Tím, že začnou brzy, získají základ k úspěchu na jakékoli kariérní dráze 21. století.
+Informatické myšlení pomáhá rozvíjet schopnost řešit problémy, logické uvažování a tvořivost. A technologie mění každý obor na planetě. Studenti by se dnes měli učit technologie nejen používat, ale také je vytvářet. Tím, že začnou brzy, dostanou základ pro úspěch v jakékoli budoucí kariérní dráze, která je ve 21. století čeká.
 
 Vyzkoušet „Hodinu programování“ je jednoduchý a zábavný způsob, jak dát svým studentům úvod do počítačových věd, možná i ten úplně první. Pokud potřebujete někoho na pomoc, můžete se spojit s [místním dobrovolníkem, ]({{ urls/volunteer_local }}) aby Vám pomohl zorganizovat Hodinu programování ve Vašich mimoškolních aktivitách nebo klubu.
 
-### Hodinu programování lze pořádat také dálkově! Chcete-li začít, podívejte se na naše [tipy k pořádání akce Hodina programování](https://hourofcode.com/us/how-to/virtual).
+### Hodinu kódu lze uspořádat také na dálku. Chcete-li začít, podívejte se na naše [tipy k pořádání virtuální Hodiny kódu](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 

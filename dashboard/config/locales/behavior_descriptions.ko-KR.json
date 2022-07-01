@@ -3,7 +3,7 @@
     "data": {
       "behavior_descriptions": {
         "AllTheThings sprite lab with video": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "CourseE_Project_SpriteLab": {
           "move a sprite, changing its direction randomly": "방향을 무작위로 변경하며 스프라이트를 이동",
@@ -226,138 +226,138 @@
           "move a sprite across the screen, reversing direction if it touches the edges": "스프라이트가 가장자리에 닿으면 스프라이트를 반대 방향으로, 화면을 가로질러 이동합니다"
         },
         "Dance Party 2": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트가 화면의 가장자리에 닿으면 스프라이트를 반대 방향으로, 수평으로 이동합니다"
         },
         "Dance Party 2_2019": {
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트가 화면의 가장자리에 닿으면 스프라이트를 반대 방향으로, 수평으로 이동합니다"
         },
         "Dance Party 2_2020": {
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트가 화면의 가장자리에 닿으면 스프라이트를 반대 방향으로, 수평으로 이동합니다"
         },
         "Dance Party 2_2021": {
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트가 화면의 가장자리에 닿으면 스프라이트를 반대 방향으로, 수평으로 이동합니다"
         },
         "Dance Party 3_2019": {
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트가 화면의 가장자리에 닿으면 스프라이트를 반대 방향으로, 수평으로 이동합니다"
         },
         "Dance Party 3_2020": {
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트가 화면의 가장자리에 닿으면 스프라이트를 반대 방향으로, 수평으로 이동합니다"
         },
         "Dance Party 3_2021": {
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트가 화면의 가장자리에 닿으면 스프라이트를 반대 방향으로, 수평으로 이동합니다"
         },
         "Dance Party 4_2019": {
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트가 화면의 가장자리에 닿으면 스프라이트를 반대 방향으로, 수평으로 이동합니다"
         },
         "Dance Party 4_2020": {
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트가 화면의 가장자리에 닿으면 스프라이트를 반대 방향으로, 수평으로 이동합니다"
         },
         "Dance Party 4_2021": {
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트가 화면의 가장자리에 닿으면 스프라이트를 반대 방향으로, 수평으로 이동합니다"
         },
         "Dance Party 5_2019": {
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트가 화면의 가장자리에 닿으면 스프라이트를 반대 방향으로, 수평으로 이동합니다"
         },
         "Dance Party 5_2020": {
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트가 화면의 가장자리에 닿으면 스프라이트를 반대 방향으로, 수평으로 이동합니다"
         },
         "Dance Party 5_2021": {
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트가 화면의 가장자리에 닿으면 스프라이트를 반대 방향으로, 수평으로 이동합니다"
         },
         "Dance Party 6": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Dance Party 6_2019": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Dance Party 6_2020": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Dance Party 6_2021": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Dance Party 7_2019": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Dance Party 7_2020": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Dance Party 7_2021": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Dance Party Freeplay": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 2-validated_2019": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 2-validated_2020": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 2-validated_2021": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 3-validated_2019": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 3-validated_2020": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 3-validated_2021": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 4-validated_2019": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 4-validated_2020": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 4-validated_2021": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 5-validated_2019": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 5-validated_2020": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 5-validated_2021": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 6-validated_2019": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 6-validated_2020": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Fish Tank 6-validated_2021": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Virtual Pet 1_2019": {
           "move a sprite, changing its direction randomly": "방향을 무작위로 변경하며 스프라이트를 이동",
@@ -404,7 +404,7 @@
           "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "스프라이트를 화면을 가로질러 왼쪽으로 이동합니다. 스프라이트가 화면의 오른쯕에서 벗어날 때, 다시 화면의 왼쪽으로 이동합니다."
         },
         "Virtual Pet 2": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "스프라이트가 화면의 가장자리에 닿으면 스프라이트를 반대 방향으로, 수평으로 이동합니다"
         },
@@ -487,7 +487,7 @@
           "move a sprite across the screen, reversing direction if it touches the edges": "스프라이트가 가장자리에 닿으면 스프라이트를 반대 방향으로, 화면을 가로질러 이동합니다"
         },
         "Virtual Pet 4": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Virtual Pet 4_2019": {
           "move a sprite, changing its direction randomly": "방향을 무작위로 변경하며 스프라이트를 이동",
@@ -516,16 +516,16 @@
           "move a sprite across the screen, reversing direction if it touches the edges": "스프라이트가 가장자리에 닿으면 스프라이트를 반대 방향으로, 화면을 가로질러 이동합니다"
         },
         "Virtual Pet 5": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Virtual Pet 6": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "Virtual Pet Freeplay": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "allthethings_fish_tank": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요"
         },
         "behaviors 1": {
           "move a sprite, changing its direction randomly": "방향을 무작위로 변경하며 스프라이트를 이동",
@@ -934,11 +934,11 @@
           "move a sprite if the user is pressing the arrow keys": "사용자가 화살표를 누르면 스프라이트를 이동합니다"
         },
         "courseF_apps_card": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전"
         },
         "courseF_apps_chatbot": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전",
           "move a sprite, changing its direction randomly": "방향을 무작위로 변경하며 스프라이트를 이동",
           "move a sprite to the right across the screen": "스프라이트를 화면을 가로질러 오른쪽으로 이동",
@@ -1005,11 +1005,11 @@
           "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "스프라이트를 화면을 가로질러 왼쪽으로 이동합니다. 스프라이트가 화면의 오른쯕에서 벗어날 때, 다시 화면의 왼쪽으로 이동합니다."
         },
         "courseF_editable_card": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전"
         },
         "courseF_editable_chatbot": {
-          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 전후로 이동합니다. 스프라이트가 순찰하는 방향을 변경하기 위해, 스프라이트의 \"이동 방향\"을 변경합니다",
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "한 방향으로 앞뒤로 이동합니다. 스프라이트가 돌아다니는 방향을 변경하려면, 스프라이트의 \"이동 방향\"을 변경하세요",
           "rotate a sprite to its left": "스프라이트를 왼쪽으로 회전"
         },
         "courseF_editable_madlib": {

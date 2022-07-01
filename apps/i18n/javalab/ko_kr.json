@@ -13,7 +13,6 @@
   "classNotFound": "오류: 한 개 이상의 자바 파일에서 학급 정의가 누락되었습니다.",
   "closeReview": "검토 닫기",
   "codeEditingDisabled": "프로젝트가 검토 중일 때는 코드 편집을 할 수 없습니다",
-  "codeReview": "코드 검토",
   "commentUpdateError": "요청 처리 중에 오류가 있었습니다, 다시 시도해 주세요.",
   "commit": "커밋",
   "commitAndSave": "커밋 및 저장",

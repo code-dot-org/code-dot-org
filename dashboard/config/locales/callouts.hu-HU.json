@@ -1115,9 +1115,6 @@
           "pause_button": "Teszteld az animációt ezzel a gombbal. ",
           "run_button": "Teszteld az animációt ezzel a gombbal. "
         },
-        "courseF_sprites_positioning": {
-          "locations_category": "Kattints ide, hogy megnyisd a pozíció kategóriát."
-        },
         "Course 4 Playlab For Loops 4b": {
           "Course_4_Playlab_For_Loops_4b_1": "Mindkét karakternek saját `counter` változója van. Így mindkét `számold` ciklus egymástól függetlenül tud működni.",
           "Course_4_Playlab_For_Loops_4b_2": "Ebben a feladatban csak a \"lépésköz\" értékét változtathatod meg, ráadásul csak az egyik `számold` ciklusban."
@@ -1128,7 +1125,10 @@
         },
         "CourseF_outbreak2": {
           "minitoolbox": "Kattints ide a blokk kibontásához",
-          "pointerlocation": "Húzza ide a tárgyblokkot."
+          "pointerlocation": "Húzd ide a tárgyblokkot."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Kattints ide, hogy megnyisd a pozíció kategóriát."
         }
       }
     }

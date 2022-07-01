@@ -2067,130 +2067,571 @@
           "moving east and looping": "கிழக்கு நோக்கி நகர்ந்து, லூப் செய்கிறது"
         },
         "CourseE_Project_SpriteLab": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "CourseE_Project_SpriteLab_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "CourseE_Project_SpriteLab_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "CourseE_hoops": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "CourseF_Project_SpriteLab": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "CourseF_Project_SpriteLab_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்"
         },
         "CourseF_Project_SpriteLab_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்"
         },
         "Dance Party 2": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது"
         },
         "Dance Party 2_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Dance Party 2_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Dance Party 3_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Dance Party 3_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Dance Party 4_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Dance Party 4_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Dance Party 5_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Dance Party 5_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Dance Party 6": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "jittering": "நடுக்கம் ",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Dance Party 6_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "jittering": "நடுக்கம் ",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Dance Party 6_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "jittering": "நடுக்கம் ",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Dance Party 7_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "jittering": "நடுக்கம் ",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Dance Party 7_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "jittering": "நடுக்கம் ",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Dance Party Freeplay": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "jittering": "நடுக்கம் ",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Fish Tank 2-validated_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Fish Tank 2-validated_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Fish Tank 3-validated_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Fish Tank 3-validated_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Fish Tank 4-validated_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Fish Tank 4-validated_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Fish Tank 5-validated_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Fish Tank 5-validated_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Fish Tank 6-validated_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Fish Tank 6-validated_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "OPD-K5-spritelab-2": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "OPD-K5-spritelab-3": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "OPD-K5-spritelab-4": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "OPD-K5-spritelab-6": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "OPD-K5-spritelab-7": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "Virtual Pet 1_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "shrinking": "சுருங்குகிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "growing": "வளர்கிறது",
+          "patrolling": "ரோந்து"
         },
         "Virtual Pet 1_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "shrinking": "சுருங்குகிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "growing": "வளர்கிறது",
+          "patrolling": "ரோந்து"
         },
         "Virtual Pet 2": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது"
         },
         "Virtual Pet 2_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "Virtual Pet 2_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "Virtual Pet 3_2019": {
           "wandering2": "அலைதல்2",
@@ -2205,7 +2646,18 @@
           "moving north2": "வடக்கே நகர்கிறது2 ",
           "jittering2": "நடுக்கம்2 ",
           "moving west2": "மேற்கு நோக்கி நகரும் 2 ",
-          "patrolling2": "ரோந்து 2 "
+          "patrolling2": "ரோந்து 2 ",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "Virtual Pet 3_2020": {
           "wandering2": "அலைதல்2",
@@ -2220,109 +2672,496 @@
           "moving north2": "வடக்கே நகர்கிறது2 ",
           "jittering2": "நடுக்கம்2 ",
           "moving west2": "மேற்கு நோக்கி நகரும் 2 ",
-          "patrolling2": "ரோந்து 2 "
+          "patrolling2": "ரோந்து 2 ",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "Virtual Pet 4_2019": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "Virtual Pet 4_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "behaviors 1": {
           "mystery behavior": "மர்மமான நடத்தை ",
           "running east": "கிழக்கு நோக்கி ஓடுகிறது ",
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து",
+          "moving east": "கிழக்கு நோக்கி நகரும் "
         },
         "behaviors 1_2020": {
           "mystery behavior": "மர்மமான நடத்தை ",
           "running east": "கிழக்கு நோக்கி ஓடுகிறது ",
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து",
+          "moving east": "கிழக்கு நோக்கி நகரும் "
         },
         "behaviors 2": {
           "running east": "கிழக்கு நோக்கி ஓடுகிறது ",
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து",
+          "moving east": "கிழக்கு நோக்கி நகரும் "
         },
         "behaviors 2_2020": {
           "running east": "கிழக்கு நோக்கி ஓடுகிறது ",
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து",
+          "moving east": "கிழக்கு நோக்கி நகரும் "
         },
         "behaviors 3": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து",
+          "moving east": "கிழக்கு நோக்கி நகரும் "
         },
         "behaviors 3_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து",
+          "moving east": "கிழக்கு நோக்கி நகரும் "
         },
         "behaviors 3a": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "wandering": "அலைந்து திரிதல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து",
+          "moving east": "கிழக்கு நோக்கி நகரும் "
         },
         "behaviors 3a_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "wandering": "அலைந்து திரிதல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து",
+          "moving east": "கிழக்கு நோக்கி நகரும் "
         },
         "behaviors 4": {
           "running east": "கிழக்கு நோக்கி ஓடுகிறது ",
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து",
+          "moving east": "கிழக்கு நோக்கி நகரும் "
         },
         "behaviors 4_2020": {
           "running east": "கிழக்கு நோக்கி ஓடுகிறது ",
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து",
+          "moving east": "கிழக்கு நோக்கி நகரும் "
         },
         "behaviors 6": {
           "running east": "கிழக்கு நோக்கி ஓடுகிறது ",
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "wandering": "அலைந்து திரிதல்",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "behaviors 6_2020": {
           "running east": "கிழக்கு நோக்கி ஓடுகிறது ",
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "wandering": "அலைந்து திரிதல்",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "behaviors 7": {
           "running east": "கிழக்கு நோக்கி ஓடுகிறது ",
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "wandering": "அலைந்து திரிதல்",
+          "moving south": "தெற்கு நகரும் ",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து",
+          "moving east": "கிழக்கு நோக்கி நகரும் "
         },
         "behaviors 7_2020": {
           "running east": "கிழக்கு நோக்கி ஓடுகிறது ",
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "wandering": "அலைந்து திரிதல்",
+          "moving south": "தெற்கு நகரும் ",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து",
+          "moving east": "கிழக்கு நோக்கி நகரும் "
         },
         "courseE_Dogger_2": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "courseE_aboutme_1": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "courseE_aboutme_1_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "courseE_aboutme_2": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "courseE_aboutme_2_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "courseE_aboutme_3": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "courseE_aboutme_3_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "courseE_aboutme_4": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "courseE_aboutme_4_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "courseE_aboutme_5": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "courseE_aboutme_5_2020": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "courseF_project_1": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "spinning left": "இடதுபுறமாக சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "patrolling": "ரோந்து"
         },
         "AllTheThings sprite lab with video": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         },
         "allthethings_fish_tank": {
-          "swimming left and right": "இடது மற்றும் வலது நீச்சல்"
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
+        },
+        "Virtual Pet 4": {
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
+        },
+        "Virtual Pet 5": {
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
+        },
+        "Virtual Pet 6": {
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
+        },
+        "Virtual Pet Freeplay": {
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "growing": "வளர்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  "
         }
       }
     }

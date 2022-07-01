@@ -28,6 +28,8 @@ import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType} from './constants';
 
+const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
+
 /**
  * Wrapper class for https://github.com/google/blockly
  * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
@@ -74,12 +76,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_LEFT');
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('applab_locale');
-  blocklyWrapper.wrapReadOnlyProperty('bindEvent_');
   blocklyWrapper.wrapReadOnlyProperty('blockRendering');
   blocklyWrapper.wrapReadOnlyProperty('Block');
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
   blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
+  blocklyWrapper.wrapReadOnlyProperty('browserEvents');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
@@ -157,7 +159,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.FieldButton = CdoFieldButton;
   blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
-  blocklyWrapper.blockly_.FieldVariable = CdoFieldVariable;
+
+  // Fix built-in block
+  blocklyWrapper.blockly_.fieldRegistry.unregister('field_variable');
+  blocklyWrapper.blockly_.fieldRegistry.register(
+    'field_variable',
+    CdoFieldVariable
+  );
+
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
 
@@ -305,7 +314,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.WorkspaceSvg.prototype.addUnusedBlocksHelpListener = function(
     helpClickFunc
   ) {
-    blocklyWrapper.bindEvent_(
+    blocklyWrapper.browserEvents.bind(
       blocklyWrapper.mainBlockSpace.getCanvas(),
       blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
       blocklyWrapper.mainBlockSpace,
@@ -418,10 +427,26 @@ function initializeBlocklyWrapper(blocklyInstance) {
       container.appendChild(svg);
       svg.appendChild(workspace.createDom());
       Blockly.Xml.domToBlockSpace(workspace, xml);
+
+      // Loop through all the child blocks and remove transform
+      const blocksInWorkspace = workspace.getAllBlocks();
+      blocksInWorkspace
+        .filter(block => block.getParent() === null)
+        .forEach(block => {
+          block.svgGroup_.removeAttribute('transform');
+        });
+
       // Shrink SVG to size of the block
       const bbox = svg.getBBox();
       svg.setAttribute('height', bbox.height + bbox.y);
       svg.setAttribute('width', bbox.width + bbox.x);
+      // Add a transform to center read-only blocks on their line
+      const notchHeight = workspace.getRenderer().getConstants().NOTCH_HEIGHT;
+
+      svg.setAttribute(
+        'style',
+        `transform: translate(0px, ${notchHeight + BLOCK_PADDING}px)`
+      );
       return workspace;
     }
   };

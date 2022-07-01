@@ -2,10 +2,6 @@
 lt:
   data:
     script:
-      category:
-        hoc_category_name: "„Programavimo valanda“"
-        math_category_name: Matematika
-        other_category_name: Kita
       name:
         course1:
           title: Kursas 1
@@ -1822,6 +1818,7 @@ lt:
           lessons:
             Aquatic:
               name: 'Minecraft: Kelionės vandeniu'
+          name: vandens
         cspplayground:
           lesson_groups:
             csp_variables:

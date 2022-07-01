@@ -2,29 +2,6 @@
 uk:
   data:
     script:
-      category:
-        csd_category_name: Відкриття інформатики (2017-2018)
-        csd_2018_category_name: Відкриття інформатики (2018-2019)
-        csd_2019_category_name: Відкриття інформатики (2019-2020)
-        csd_2020_category_name: Відкриття інформатики (2020-2021)
-        csd_2021_category_name: Відкриття інформатики (2120-2022)
-        csd_pilot_category_name: Відкриття інформатики. Пілотний курс
-        csf_category_name: Основи інформатики
-        csf2_draft_category_name: 'В розробці: курси А—Д'
-        csp_category_name: "'15-'16 принципи інформатики"
-        csp_2018_category_name: "'18-'19 принципи інформатики"
-        csp_2019_category_name: "'19-'20 принципи інформатики"
-        csp_2020_category_name: "'20-'21 принципи інформатики"
-        csp_2021_category_name: "'21-'22 принципи інформатики"
-        cspexams_category_name: Практичний тест з принципів інформатики
-        csp17_category_name: "'16-'17 принципи інформатики"
-        full_course_category_name: Всі курси
-        hoc_category_name: Година коду
-        math_category_name: Математика
-        research_studies_category_name: Наукові дослідження
-        twenty_hour_category_name: 20-годин
-        tts_category_name: Озвучення тексту
-        other_category_name: Інше
       name:
         course1:
           title: Курс 1
@@ -1994,15 +1971,21 @@ uk:
           title: Курс А
           assignment_family_title: Курс А
           description_audience: 'Вік: 4-7'
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Життєві алгоритми: посадити насіння'
             Loops in Artist:
               name: Художник - Цикли
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         courseb-2017:
           title: Курс Б
           assignment_family_title: Курс Б
           description_audience: 'Вік: 5-8'
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Життєві алгоритми: посадити насіння'
@@ -2012,6 +1995,8 @@ uk:
               name: 'Цикли: Мої циклічні друзі-роботи '
             Loops in Artist:
               name: Художник - Цикли
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         coursec-2017:
           title: Курс В
           assignment_family_title: Курс В
@@ -2210,6 +2195,8 @@ uk:
               display_name: Зміст
         express-2017:
           description_audience: 'Вік: 9-18'
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           lesson_groups:
             content:
               display_name: Зміст
@@ -2236,8 +2223,12 @@ uk:
               name: Закладання основ
             Nested Loops:
               name: Вкладені цикли
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         pre-express-2017:
           description_audience: 'Вік: 4-8'
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Життєві алгоритми: посадити насіння'
@@ -2249,6 +2240,8 @@ uk:
               name: Художник - Цикли
             Spelling Bee:
               name: Грамотна Бджілка
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         subgoal-labels-opt-in:
           lessons:
             deprecated:
@@ -2660,6 +2653,8 @@ uk:
         coursea-2018:
           title: Курс А (2018)
           assignment_family_title: Курс А
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 4-7'
           lessons:
             'Debugging: Unspotted Bugs':
@@ -2672,7 +2667,11 @@ uk:
               name: Безпечне добирання
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стів і Великий проект
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         express-2018:
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 9-18'
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -2709,9 +2708,13 @@ uk:
               name: Естафетне програмування
             Graph Paper Programming:
               name: Програмування по клітинках
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         courseb-2018:
           title: Курс В (2018)
           assignment_family_title: Курс Б
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 5-8'
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -2720,6 +2723,8 @@ uk:
               name: Твій цифровий слід
             Move It, Move It:
               name: Рухайся, рухайся
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         coursed-2018:
           title: Курс D (2018)
           assignment_family_title: Курс Г
@@ -3183,6 +3188,8 @@ uk:
             Day 4:
               name: День 4
         pre-express-2018:
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 4-8'
           lessons:
             'Debugging: Unspotted Bugs':
@@ -3199,6 +3206,8 @@ uk:
               name: Твій цифровий слід
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стів і Великий проект
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         2018hoc-ab:
           lessons:
             Labyrinth:
@@ -3496,6 +3505,8 @@ uk:
           title: Ігрова лабораторія
         coursea-2019:
           title: Курс А (2019)
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 4-7'
           lesson_groups:
             csf_digcit:
@@ -3513,8 +3524,12 @@ uk:
               name: Безпечне добирання
             Loops in Artist:
               name: Художник - Цикли
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         courseb-2019:
           title: Курс В (2019)
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 5-8'
           lesson_groups:
             csf_digcit:
@@ -3538,6 +3553,8 @@ uk:
               name: Петлі в Ice Age
             'Loops: Getting Loopy':
               name: Економія на повторах
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         pre-express-2019:
           description_audience: 'Вік: 4-8'
           lesson_groups:
@@ -4557,6 +4574,8 @@ uk:
             проекті ви розробитьте персоналізовану інтерактивну програму."
         coursea-2020:
           title: Курс А (2020)
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 4-7'
           lesson_groups:
             csf_digcit:
@@ -4572,8 +4591,12 @@ uk:
               name: Безпечне добирання
             'Programming: Happy Maps':
               name: Щасливі карти
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         courseb-2020:
           title: Курс В (2020)
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 5-8'
           lesson_groups:
             csf_digcit:
@@ -4591,6 +4614,8 @@ uk:
               name: Рухайся, рухайся
             'Loops: Getting Loopy':
               name: Економія на повторах
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         coursec-2020:
           title: Курс С (2020)
           description_audience: 'Вік: 6-10'
@@ -5293,6 +5318,8 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         courseb-2021:
           description_audience: 'Вік: 5-8'
           lessons:
@@ -5313,6 +5340,8 @@ uk:
               display_name: Події
             lessonGroup-6:
               display_name: Фінальний проєкт
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         coursec-2021:
           description_audience: 'Вік: 6-10'
           lessons:
@@ -5914,6 +5943,8 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
           description_audience: 'Вік: 4-7'
         express-2022:
           lessons:
@@ -6008,6 +6039,8 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
           description_audience: 'Вік: 5-8'
         coursec-2022:
           lessons:
@@ -6286,6 +6319,8 @@ uk:
               name: Змінні
             For Loops:
               name: Цикли For
+            End of Course projects:
+              name: Кінець курсових проектів
         csd1-2022:
           lessons:
             CS Discoveries Pre-survey:

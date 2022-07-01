@@ -2439,6 +2439,7 @@
           "type": "Zdroj"
         },
         "random_numbers_1/csd/2021": {
+          "name": "Náhodné čísla",
           "type": "Zdroj"
         },
         "responding_to_user_input_1/csd/2021": {
@@ -2742,6 +2743,7 @@
           "type": "Prezentácia"
         },
         "drawing-shapes-exemplar-2020/csd/2021": {
+          "name": "Kreslenie tvarov",
           "type": "Príklad"
         },
         "colored-shape-drawing/csd/2021": {
@@ -2762,12 +2764,15 @@
           "type": "Video"
         },
         "drawing_shapes/csd/2021": {
+          "name": "Kreslenie tvarov",
           "type": "Zdroj"
         },
         "shapes_and_parameters_-_map_level/csd/2021": {
+          "name": "Tvary a parametre",
           "type": "Zdroj"
         },
         "shapes_and_parameters/csd/2021": {
+          "name": "Tvary a parametre",
           "type": "Zdroj"
         },
         "introduction-to-variables/csd/2021": {
@@ -2782,6 +2787,7 @@
           "type": "Zdroj"
         },
         "random_numbers/csd/2021": {
+          "name": "Náhodné čísla",
           "type": "Zdroj"
         },
         "introduction_to_sprites/csd/2021": {
@@ -2795,7 +2801,7 @@
           "type": "Zdroj"
         },
         "sprites_1/csd/2021": {
-          "name": "Objekt \"sprite\"",
+          "name": "Sprajty",
           "type": "Zdroj"
         },
         "sprite_properties/csd/2021": {
@@ -2822,7 +2828,7 @@
           "type": "Zdroj"
         },
         "animating-sprites/csd/2021": {
-          "name": "Pohyb \"sprite\" objektu",
+          "name": "Pohyb sprajtov",
           "type": "Video"
         },
         "the_counter_pattern/csd/2021": {

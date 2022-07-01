@@ -158,13 +158,11 @@ module Pd
 
     # Used to suppress post-workshop emails and in create/edit workshop UI
     MUST_SUPPRESS_EMAIL_SUBJECTS = [
-      SUBJECT_VIRTUAL_KICKOFF,
-      SUBJECT_WORKSHOP_1,
-      SUBJECT_WORKSHOP_2,
-      SUBJECT_WORKSHOP_3,
-      SUBJECT_WORKSHOP_4,
-      SUBJECT_WORKSHOP_1_2,
-      SUBJECT_WORKSHOP_3_4,
+      SUBJECT_CSP_TEACHER_CON,
+      SUBJECT_CSP_FIT,
+      SUBJECT_CSD_TEACHER_CON,
+      SUBJECT_CSD_FIT,
+      SUBJECT_CSF_FIT,
       SUBJECT_ADMIN_COUNSELOR_WELCOME,
       SUBJECT_ADMIN_COUNSELOR_SLP_INTRO,
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL1,
@@ -238,10 +236,17 @@ module Pd
     }.freeze
 
     ACTIVE_COURSE_WORKSHOPS = {
-      CSD: 'CS Discoveries',
-      CSP: 'CS Principles',
-      CSA: 'Computer Science A'
+      CSD: COURSE_CSD,
+      CSP: COURSE_CSP,
+      CSA: COURSE_CSA
     }.freeze
+
+    ACTIVE_COURSES_WITH_SURVEYS = [
+      COURSE_CSD,
+      COURSE_CSP,
+      COURSE_CSA,
+      COURSE_CSF
+    ].freeze
 
     WORKSHOP_TYPES = {
       teachercon: SUBJECT_TEACHER_CON,

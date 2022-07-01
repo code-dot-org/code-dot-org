@@ -12,7 +12,7 @@ Sie können zusammen mit vielen Millionen SchülerInnen weltweit an dieser globa
 
 <h3>Was brauchen wir, um mitzumachen?</h3>
 
-Die Hour of Code ist extrem unkompliziert - auch für Anfänger. Sie brauchen keine Erfahrung mit Informatik oder pädagogische Qualifikationen, um Ihren Kindern eine unterhaltsame Aktivität zu bieten, mit der sie sowohl lernen als auch etwas zum Lachen haben.
+Die Hour of Code ist auch für Anfänger sehr unkompliziert. Sie brauchen keine Erfahrung mit Informatik oder pädagogische Qualifikationen, um Ihren Kindern eine unterhaltsame Aktivität zu bieten, mit der sie sowohl lernen als auch etwas zum Lachen haben.
 
 Sie können die Hour of Code auf einem Computer, einem Tablet, einem Smartphone oder ganz ohne Internet durchführen! Hier erfahren Sie, wie Sie mitmachen können. 
 
@@ -24,15 +24,15 @@ Sie können die Hour of Code auf einem Computer, einem Tablet, einem Smartphone 
 
 [![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-Es gibt unzählige <a href="https://hourofcode.com/us/learn>Hour of Code Aktivitäten</a>, die Ihnen zur Verfügung stehen, wenn Sie an einem Computer mit Internetzugang arbeiten. Es ist hilfreich, wenn Sie sich einige der Optionen vorher ansehen, damit Sie Ihr Kind zu denjenigen Übungen führen können, die ihm besonders viel Spaß machen werden.
+Es gibt unzählige <a href="https://hourofcode.com/us/learn>Hour of Code Aktivitäten</a>, die Ihnen zur Verfügung stehen, wenn Sie an einem Computer mit Internetzugang arbeiten. Es ist hilfreich, wenn Sie sich einige der Optionen vorher ansehen, damit Sie Ihr Kind zu den Übungen führen können, die ihm besonders viel Spaß machen werden.
 
-Alle unsere Aktivitäten verbinden das Lösen von Aufgaben und kritisches Denken mit Spaß und Kreativität, aber hier sehen Sie einige, die bei den SchülerInnen besonders beliebt sind:
+Alle unsere Aktivitäten verbinden das Lösen von Aufgaben und kritisches Denken mit Spaß und Kreativität, Hier finden Sie Aufgaben, die bei den SchülerInnen besonders beliebt sind:
 
 - Für Kinder, die gerne spielen: [Minecraft](https://code.org/minecraft) oder die[Tanzparty](https://code.org/dance) 
 - For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - Für Kinder, die gerne lernen: [KI für Ozeane](https://code.org/oceans) oder [Musizieren mit Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg) 
 
-<h3>Low-Tech oder No-Tech?</h3>
+<h3>Wenig oder keine Technik?</h3>
 
 Wenn Sie nur wenig oder keine Technologie verwenden, können Sie die <a href="https://hourofcode.com/us/learn>Hour of Code-Aktivitäten</a> filtern, indem Sie im Abschnitt *Technologie in der Klasse* "Keine Computer oder Geräte" auswählen. 
 
@@ -42,7 +42,7 @@ Schauen Sie sich auch diese <a href="https://www.youtube.com/playlist?list=PLzdn
 
 ## 2) Bereiten Sie sich vor
 
-Sie haben sich nun einige Tutorials ausgesucht. Dabei kann es sinnvoll sein, diese Aktivitäten auf Ihrem Gerät zu testen, bevor Sie sie Ihrem Kind vorstellen.
+Sie haben sich jetzt einige Tutorials ausgesucht. Testen Sie die Aktivitäten auf Ihrem Gerät, bevor Sie sie Ihrem Kind vorstellen.
 
 [![](/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg)]({{ urls/learn }})
 

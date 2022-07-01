@@ -32,6 +32,27 @@
         "infinity/Infinity": {
           "name": "Диснейдің Шексіз Ойындар Лабораториясы"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Код Жазу Сағаты 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Ілмек"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Шаралар"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Шарттар"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Функциялар"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Айнымалылар"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For ілмектері"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Қозғал, Қозғал"
         },
@@ -353,6 +374,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Өте Қиын жаттығулар - Kешенді"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Информатика пәніне кіріспе"
+        },
+        "20-hour/The Maze": {
+          "name": "Лабиринт"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Есептегіштік ойлау"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "20-hour/The Artist": {
+          "name": "Кейіпкер"
+        },
+        "20-hour/Algorithms": {
+          "name": "Алгоритмдер"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Кейіпкер 2"
+        },
+        "20-hour/Functions": {
+          "name": "Функциялар"
+        },
+        "20-hour/The Farmer": {
+          "name": "Фермер"
+        },
+        "20-hour/Conditionals": {
+          "name": "Шарттар"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Кейіпкер 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Ән Жазу"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Фермер 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Абстракция"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Кейіпкер 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Фермер 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Ғаламтор"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Кейіпкер 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Орау"
+        },
         "course2/Graph Paper Programming": {
           "name": "Миллиметрлік Бағдарламалау"
         },
@@ -529,6 +610,30 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Бас қатырғыш"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Бас қатырғыш"
+        },
+        "allthethings/Maze": {
+          "name": "Лабиринт"
+        },
+        "allthethings/Artist": {
+          "name": "Кейіпкер"
+        },
+        "allthethings/Bee": {
+          "name": "Ара"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Секіру"
+        },
+        "allthethings/Studio": {
+          "name": "Студия"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "coursef-2021/For Loop Fun": {
           "name": "Көңілді For циклі"

@@ -1167,6 +1167,7 @@ tr-TR:
         - correct: true
         questions:
         - {}
+        title: Bir Tahminde Bulun
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -1175,6 +1176,7 @@ tr-TR:
         - correct: true
         questions:
         - {}
+        title: Bir Tahminde Bulun
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -1183,6 +1185,7 @@ tr-TR:
         - correct: true
         questions:
         - {}
+        title: Bir Tahminde Bulun
       Dance_Party_extras_intro:
         markdown: "# Dans etmeye devam edin!\n\n2. Bölüm için kendi projenizi oluşturacaksınız.Burada
           bulmaca yok - bunun yerine daha karmaşık dans partileri yapmanın farklı
@@ -1302,10 +1305,103 @@ tr-TR:
           </div>"
       Internet Simulator Setup:
         content1: açıklama buraya
+        markdown: "# Code.org'un İnternet Simülatörü\n\n_Not: Bu öğreticide listelenen
+          bu talimatlar, Internet Simülatörünü Code.org Bilgisayar Bilimi İlkeleri
+          müfredatından ayrı, bağımsız bir araç olarak kullanmak isteyen öğretmenler
+          içindir. Code.org CSP müfredatının bir parçası olarak tasarlanan aktiviteleri
+          kullanmayı planlıyorsanız, lütfen [CSP müfredat sayfasına](https://code.org/educate/csp)_
+          gidin.\n\n### İçindekiler\nBurada yer alan 3 sayfa arka plan ve bilgi vardır:\n\n*
+          İnternet Simülatörü nedir? Genel bakış (aşağıya bakın)\n* [kurulum talimatları](/s/netsim/lessons/1/levels/2)\n*
+          [FAQ](/s/netsim/lessons/1/levels/3)\n \n### İnternet Simülatörü nedir? Genel
+          Bakış:\n\nİnternet Simülatörü, yeni lise [Bilgisayar Bilimi İlkeleri](https://code.org/educate/csp)
+          sınıfımız için Code.org tarafından geliştirilmiş bir araçtır. Araç, öğrencilerin
+          ağa bağlı bilgisayarlarla ilgili farklı türde sorunları deneme (ve çözme)
+          konusunda uygulamalı deneyim kazanmalarını sağlamak için tasarlanmıştır.
+          İnternet Simülatörü, İnternet'in farklı katmanlarını art arda oluşturmak
+          için müfredatımızdaki 1. ve 2. Ünitelerde birden fazla derste kullanılır.\n\nAracı
+          sınıfınızda tasarladığınız aktivitelerle kullanmayı düşünüyorsanız, [ders
+          planlarımız](https://curriculum.code.org/csp/unit1) aracılığıyla aracı tanımanızı
+          öneririz. Bir sonraki sayfada yer alan **kurulum talimatları**, Code.org
+          CSP müfredatından ayrı olarak İnternet Simülatörünü kullanmak isteyen öğretmenler
+          içindir.\n\nAracın kendisi bu kavramları öğretmez; bunun yerine birden fazla
+          öğrencinin bir araya gelip birbirlerine veya diğer sınıf arkadaşlarına ikili,
+          ondalık veya ascii tabanlı mesajlar göndermesi için bir ortam sağlar. Ortam,
+          farklı türde sorunları ortaya çıkarmak, ana bilgisayarlar arasındaki verileri
+          ve bağlantıları görselleştirmek ve İnternet ile ilgili çeşitli kavramların
+          öğrenilmesini desteklemek için çeşitli şekillerde **yapılandırılabilir.**\n\nİnternet
+          Simülatörü, öğrencilerin sorunları çözmek için yüz yüze işbirliği içinde
+          çalıştığı bir *sınıfta* kullanılmak üzere tasarlanmıştır. Çoğu zaman bu
+          problemler, bir iletişim protokolü icat etmeyi veya bilgiyi internet üzerinden
+          taşımayı mümkün kılan yapısal bir şekilde kodlamanın yollarını bulmayı içerir.\n\n**Code.org'un
+          Bilgisayar Bilimi İlkeleri müfredatında** dersleri ve aktiviteleri genellikle
+          aşağıdaki şekilde yapılandırırız:\n\n* **İlk olarak öğrencilere bir zorluk
+          sunun**\n * Örneğin fiziksel internet doğası gereği güvenilmezdir ve iletileri
+          iptal edebilir\n* **Sorunları anlamak için simülatörle deneme yapma fırsatı
+          verin**\n * Örneğin tüm mesajların %10-20'sinin düştüğünü ve paketlerin
+          düzensiz yönlendirilebildiğini keşfetmek için yönlendirici günlüklerine
+          bakın\n* **Bu zorluk için kendi çözümlerini bulma fırsatı verin**\n  * Örneğin
+          bu güvenilmez ağda iletilerin nasıl güvenilir bir şekilde gönderileceğine
+          dair kendi protokollerini yaparlar.\n* **Son olarak, öğrenciler bu protokolün
+          veya buluşun \"gerçek dünyada\" nasıl çalıştığını araştırırlar**\n * Örneğin
+          TCP'nin gerçekte nasıl çalıştığını araştırın ve bir video izleyin\n\n###
+          İnternet Simülatörü Ne Yapmak İçin Yapılandırılabilir?\n\nEn temelde, İnternet
+          Simülatörü, koordinasyon veya senkronizasyon olmaksızın tek bir paylaşılan
+          kablo aracılığıyla tek bir bilgi biti iletebilir. En gelişmiş haliyle, IP
+          adresleri, bir DNS ve TCP/IP veya HTTP'ye benzer protokollerin oluşturulmasını
+          gerektiren sabit boyutlu paketler kullanarak birden çok yönlendirici üzerinden
+          güvenilmez bağlantıları simüle edebilir.\n\nİnternet Simülatörünü belirli
+          konuları öğretmeye elverişli çeşitli yapılandırmalarla kurduk. Ancak İnternet
+          Simülatörünü sınıf için kullanıyorsanız, kontrol etmek isteyebileceğiniz
+          veya öğrencilerinize belirli bir şekilde kurmalarını söylemek isteyebileceğiniz
+          bazı kullanıcı arayüzü ayarlarının farkında olmalısınız.\n\nÖrneğin: İnternet
+          Simülatörünün özelliklerinden biri, gönderdiğiniz herhangi bir verinin ikili,
+          ondalık, onaltılık ve ASCII temsillerini gösterebilmenizdir. Bazı konfigürasyonlarda
+          kullanıcı, bitlerin nasıl yorumlanacağını dikte etmek için \"yığın boyutunu\"
+          da ayarlayabilir. Kendi tasarımınıza ait bir ders için, sunduğumuz yapılandırmalardan
+          birini seçebilir ancak öğrencilerin bitlerin yalnızca belirli bir halini
+          göstermesini zorunlu kılmanız gerekebilir veya belki de yığın boyutunun
+          belirli bir değere ayarlanmasını isteyebilirsiniz.\n\nDaha önemli bir konu,
+          burada sağlanan yapılandırmaların belirli bir konuyu öğretmek için başlangıç
+          ​​noktası olması gerektiğidir. Simülatörün kullanımını ihtiyaçlarınıza uyacak
+          şekilde daha da hassaslaştırmak için bazı ustalık ve öğretim stratejileri
+          kullanmanız gerekebilir.\n\n\n <br><br>\n<img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-14386426711411.57.13.png\"
+          width=\"600px\" style=\"margin:0 100px\"/>\n<br><br>\n\n\n\n    \n\n\n_Sıradaki:
+          Kurulum talimatları_"
       Internet Simulator Setup 2:
         content1: açıklama buraya
+        markdown: "# İnternet Simülatörü: Kurulum Talimatları\n\n1. **Code Studio'da
+          bir bölüm oluşturun.** Sınıfınızdaki öğrencilerin birbirleriyle iletişim
+          kurabilmeleri için hepsinin Code Studio'da aynı bölümle ilişkilendirilmesi
+          gerekir. Öğretmen hesabı olarak giriş yaptığınızda, tüm öğrencilerinizin
+          katılacağı bir bölüm oluşturmanız gerekecektir. Bir bölüm oluşturmak için:\n
+          * Öğretmen panosunun [sections](https://code.org/teacher-dashboard#/sections)
+          alanına gidin\n * 'Yeni Bölüm' düğmesine tıklayın. Kurs için Giriş Tipi
+          'Email' ve 'cspunit1' seçmenizi öneririz.\n <br>\n<img src=\"https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png\"
+          width=\"600px\" />\n<br><br>\n2. **Öğrencilerin bölümünüze katılmasını sağlayın.**
+          Bölüm oluşturulduktan sonra, bölüm için 'Manage Students' (Öğrencileri Yönet)
+          bağlantısına tıklayın. Öğrencilerden kendi Code Studio hesaplarını oluşturduktan
+          sonra katılmalarını isteyebileceğiniz bir bölüm kodu göreceksiniz.\n<br>\n<img
+          src=\"https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png\"
+          width=\"400px\" />\n<br><br>\n3. **Öğrencilere kullanmak istediğiniz İnternet
+          Simülatörü sürümünün URL'sini sağlayın.** [code.org/internetsimulator](http://code.org/internetsimulator)
+          adresinde bulunan İnternet Simülatörünün birkaç farklı yapılandırmasını
+          oluşturduk. Aktiviteniz için uygun bir yapılandırma bulduğunuzda, URL'yi
+          öğrencilerle paylaşın. Hepsi aynı bölümdeyse, aynı URL'ye ulaştıklarında
+          otomatik olarak birbirleriyle bağlantı kurabilirler. \n\n_Sıradaki: Sıkça
+          Sorulan Sorular_"
       Internet Simulator Setup 3:
         content1: açıklama buraya
+        markdown: |-
+          # İnternet Simülatörü: SSS
+
+          #### İnternet Simülatörü ile kullanmak üzere tasarladığınız aktiviteleri nerede bulabilirim?
+          Belirli İnternet Simülatörü yapılandırmaları da dahil olmak üzere Bilgisayar Bilimi İlkeleri müfredatımız için tasarladığımız aktiviteler Ünite ders planlarında [here](https://code.org/educate/csp) bulunabilir. Ders planlarının çoğunda, sınıf aktivitelerinin bir parçası olarak kullanılan İnternet Simülatörünün tanıtımlarını gösteren "Öğretmen İpuçları ve Püf Noktaları" destek videoları bulunur. Bu aktiviteleri olduğu gibi kullanabilir veya sınıfınıza en uygun şekilde değiştirebilirsiniz!
+
+          #### İnternet Simülatörünü sınıfım için özelleştirebilir miyim?
+          Şu anda, ne yazık ki Code.org dışındaki kişilerin İnternet Simülatörü için yapılandırmalar ve talimatlar oluşturması için bir yolumuz yok. Sınıfınız ve aktiviteniz için işe yarayabileceğini umduğumuz çeşitli farklı yapılandırları ortaya koymaya çalıştık. Uzun vadede, başkalarının aracı yapılandırmasına izin vermenin bir yolunu bulmayı çok isteriz.
+
+          #### Öğrencilerim İnternet Simülatörü için verdiğim URL'ye gittiklerinde birbirlerini göremiyorlar. Ben ne yaparım?
+          Öğrencilerin İnternet Simülatörünün lobisinde birbirlerini görmeleri için aynı bölümde olmaları gerekir. Önceki sayfadaki bölüm kurulum talimatlarını tamamladığınızı ve söz konusu öğrencilerin o bölüm koduna katıldığını iki kez kontrol ederek doğrulayın. Ayrıca, bazı öğrenciler daha önce Code.org'dan ders almışlarsa birden fazla bölümde olabilirler; bu nedenle bölümünüzün adını bildiklerinden ve lobiye girmeden önce açılır menüden seçtiklerinden emin olun.
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -6766,6 +6862,7 @@ tr-TR:
         - correct: true
         questions:
         - {}
+        title: Bir Tahminde Bulun
       CSD games cake challenge choice_2021:
         display_name: Meydan okuma
       CSD games functions practice choice_2021:
@@ -6873,3 +6970,7 @@ tr-TR:
         - {}
         - {}
         - text: Yukarıdakilerden hiçbiri
+      ml-club app-choice parent:
+        display_name: Uygulamanızı Kişiselleştirin
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Uygulamanızı Kişiselleştirin

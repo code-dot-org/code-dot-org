@@ -12,9 +12,9 @@ title: Panduan Hour of Code untuk Perusahaan
 
 Pemikirian komputasional membantu pengembangan keahlian memecahkan masalah, logika, dan kreativitas. Dan teknologi berhasil merombak setiap industri di planet ini. Siswa di masa ini harus belajar cara menciptakan teknologi, bukan hanya menggunakannya. Dengan memulai sejak dini, mereka akan memiliki pondasi menuju kesuksesan karier pada abad 21 ini.
 
-Selama kampanye Hour of Code, perusahaan Anda dapat membantu meningkatkan kesadaran tentang gerakan ilmu komputer. Baik dengan menjadi sukarelawan individu atau merencanakan acara untuk perusahaan Anda, semua upaya Anda dapat memberi dampak besar terhadap cara remaja putri dan siswa dari kelompok ras dan etnis yang terpinggirkan dalam memandang ilmu komputer dan potensi mereka sendiri.
+Selama kampanye Hour of Code, perusahaan Anda dapat membantu meningkatkan kesadaran tentang gerakan ilmu komputer. Baik dengan menjadi relawan individu atau merencanakan acara untuk perusahaan Anda, semua upaya Anda dapat memberi dampak besar terhadap cara remaja putri dan siswa dari kelompok ras dan etnis yang terpinggirkan dalam memandang ilmu komputer dan potensi mereka sendiri.
 
-- [Dorong karyawan untuk menjadi sukarelawan dengan kelas](#encourage-employees)
+- [Dorong karyawan untuk menjadi relawan di kelas](#encourage-employees)
 - [Hubungkan perusahaan Anda dengan sekolah](#connect-with-a-school)
 - [Selenggarakan acara Hour of Code Anda sendiri](#host-hour-of-code)
 - [Promosikan Hour of Code](#promote-hour-of-code)
@@ -24,17 +24,17 @@ Selama kampanye Hour of Code, perusahaan Anda dapat membantu meningkatkan kesada
 
 <a id="encourage-employees"></a>
 
-## Dorong karyawan untuk menjadi sukarelawan dengan kelas
+## Dorong karyawan untuk menjadi relawan di kelas
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-Salah satu cara yang paling memuaskan untuk berpartisipasi dalam Hour of Code adalah menjadi sukarelawan di kelas lokal, baik secara langsung atau virtual. Dan yang paling penting, Anda tidak harus menjadi seorang insinyur untuk menjadi sukarelawan. Anda tetap dapat memberikan pengalaman yang berarti kepada siswa dengan menceritakan pengalaman kerja Anda sendiri serta dampak Ilmu Komputer atau teknologi terhadap pekerjaan Anda.
+Salah satu cara yang paling pas untuk berpartisipasi dalam Hour of Code adalah menjadi relawan di kelas lokal, baik secara langsung atau virtual. Dan yang paling penting, Anda tidak harus menjadi seorang programmer untuk menjadi relawan. Anda tetap dapat memberikan pengalaman yang berarti kepada siswa dengan menceritakan pengalaman kerja Anda sendiri serta dampak Ilmu Komputer atau teknologi terhadap pekerjaan Anda.
 
-[<button>Daftar sebagai sukarelawan</button>]({{ urls/volunteer }})
+[<button>Mendaftar sebagai relawan</button>]({{ urls/volunteer }})
 
-Setelah sukarelawan mendaftar, guru dapat melihat profil mereka di [peta sukarelawan](https://code.org/volunteer/local) kami - jadi profil harus dikirimkan selengkap mungkin. Jika Anda cocok dengan kelas mereka, guru akan menghubungi Anda melalui platform (kami tidak akan pernah memberikan alamat email Anda kepada guru tersebut). Anda lalu dapat mengoordinasikan detail secara langsung dengan guru seputar [cara terbaik untuk menjadi sukarelawan di kelas mereka](https://hourofcode.com/us/how-to/volunteers).
+Setelah relawan mendaftar, guru dapat melihat profil mereka di [peta relawan](https://code.org/volunteer/local) kami - jadi profil harus dikirimkan selengkap mungkin. Jika Anda cocok dengan kelas mereka, guru akan menghubungi Anda melalui platform (kami tidak akan pernah memberikan alamat email Anda kepada guru tersebut). Anda lalu dapat mengoordinasikan detailnya secara langsung bersama guru seputar [cara terbaik untuk menjadi relawan di kelas mereka](https://hourofcode.com/us/how-to/volunteers).
 
-Untuk panduan selengkapnya tentang menjadi sukarelawan dan contoh pesan untuk menarik perhatian perusahaan Anda terhadap Hour of Code, lihat [panduan untuk mitra perusahaan]({{ localized_files/hoc_corporate_toolkit }}).
+Untuk panduan selengkapnya tentang menjadi relawan dan contoh pesan untuk menarik perhatian perusahaan Anda terhadap Hour of Code, lihat [panduan untuk mitra perusahaan]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -54,7 +54,7 @@ Jika Anda tidak dapat terhubung dengan sekolah, silakan [hubungi kami](https://s
 
 <h4><font color="00adbc"><i>"SAYA SENANG melihat betapa senangnya anak-anak itu. Satu hal yang menakjubkan adalah bahwa para guru mendapati sejumlah siswa yang tidak berprestasi secara akademis namun sangat unggul dalam berpikir seperti seorang pengembang dan membantu orang lain - ini membuat mereka merasa percaya diri.”</i></font></h4>
 
--Sukarelawan Hour of Code
+-Relawan Hour of Code
 
 * * *
 
@@ -76,14 +76,14 @@ Kami sudah sering mendapati acara yang diselenggarakan secara [virtual](https://
 
 |Waktu | Rincian Agenda | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 menit | Menampilkan [video inspiratif](https://hourofcode.com/us/promote/resources#videos)|  
 |5-10 menit | Perkenalkan diri Anda dan kenali siswa lebih jauh: Di mana kamu bekerja, apa yang kamu lakukan, dan apa yang paling kamu sukai dari pekerjaanmu? Apa atau siapa yang menginspirasimu? Bagaimana kamu tertarik dengan ilmu komputer? Apakah kamu memiliki mentor? Ajukan pertanyaan kepada siswa dan berikan waktu untuk tanya jawab. |  
-|30-60 menit | Buat Kode! Jika acara Anda diadakan secara tatap muka, inilah saatnya untuk menjawab pertanyaan dan membimbing siswa melalui teka-teki yang sulit. Cobalah untuk tidak memberi solusi secara langsung kepada siswa. Sebaliknya, cobalah mengajukan pertanyaan sehingga mereka dapat menjawab sendiri apa yang salah, dan dorong siswa untuk bertanya satu sama lain jika memiliki pertanyaan. Jika Anda menjadi sukarelawan secara virtual, diskusikan dengan guru tentang pendekatan terbaik yang dapat diambil. Mungkin lebih cocok jika kembali pada akhir sesi untuk melihat kemajuan yang telah dicapai oleh siswa. | | |1-3 menit | Berterimakasih kepada semua dan berikan kata-kata perpisahan yang menginspirasi. Bagikan cendera mata dari perusahaan Anda ([stiker](#celebrate) juga boleh)! | | <br />
+|30-60 menit | Buat Kode! Jika acara Anda diadakan secara tatap muka, inilah saatnya untuk menjawab pertanyaan dan membimbing siswa melalui puzzle yang sulit. Cobalah untuk tidak memberi solusi secara langsung kepada siswa. Sebaliknya, cobalah mengajukan pertanyaan sehingga mereka dapat menjawab sendiri apa yang salah, dan dorong siswa untuk bertanya satu sama lain jika memiliki pertanyaan. Jika Anda menjadi relawan secara virtual, diskusikan dengan guru tentang pendekatan terbaik yang dapat diambil. Mungkin lebih cocok jika kembali pada akhir sesi untuk melihat kemajuan yang telah dicapai oleh siswa. | | |1-3 menit | Berterimakasih kepada semua dan berikan kata-kata perpisahan yang menginspirasi. Bagikan cendera mata dari perusahaan Anda ([stiker](#celebrate) juga boleh)! | | <br />
 
 #### Ide lain yang bisa ditambahkan ke acara Anda
 
 - Jelaskan dampak teknologi terhadap kehidupan kita, dengan contoh yang akan diperhatikan oleh siswa dari semua latar belakang - bicarakan tentang teknologi yang menyelamatkan nyawa, membantu orang, menghubungkan orang. 
 - Jika Anda adalah perusahaan teknologi, demonstrasikan produk inovatif dan seru yang sedang dikembangkan oleh perusahaan Anda. Jika Anda bukan perusahaan teknologi, ceritakan cara perusahaan Anda dalam menggunakan teknologi untuk memecahkan masalah dan mencapai tujuan.
 - Undang software engineer dari perusahaan Anda untuk berbicara mengenai alasan mereka memutuskan untuk belajar ilmu komputer dan proyek-proyek yang sedang mereka kerjakan.
-- Jika Anda memiliki kelompok staf yang akan memfasilitasi acara Anda atau menjadi sukarelawan di sekolah lokal, pertimbangkan untuk memesan [kaos khusus](http://blog.code.org/post/132608499493/hour-of-code-shirts-and -more) untuk karyawan Anda.
+- Jika Anda memiliki kelompok staf yang akan memfasilitasi acara Anda atau menjadi relawan di sekolah lokal, pertimbangkan untuk memesan [kaos khusus](http://blog.code.org/post/132608499493/hour-of-code-shirts-and -more) untuk karyawan Anda.
 
 ### 3. Rencanakan kebutuhan teknologi Anda
 

@@ -11,8 +11,8 @@
 #  index_lessons_vocabularies_on_vocabulary_id_and_lesson_id  (vocabulary_id,lesson_id)
 #
 class LessonsVocabulary < ApplicationRecord
-  belongs_to :lesson
-  belongs_to :vocabulary
+  belongs_to :lesson, optional: true
+  belongs_to :vocabulary, optional: true
 
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.

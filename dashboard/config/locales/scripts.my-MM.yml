@@ -2,8 +2,6 @@
 my:
   data:
     script:
-      category:
-        math_category_name: သင်္ချာ
       name:
         hourofcode:
           title: ဂန္တဝင် ဝင်္ကပါ

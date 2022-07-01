@@ -2,8 +2,6 @@
 mi:
   data:
     script:
-      category:
-        math_category_name: Pāngarau
       name:
         course1:
           title: Akoranga 1

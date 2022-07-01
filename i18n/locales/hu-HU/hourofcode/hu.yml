@@ -4,32 +4,32 @@ hu:
   hour_of_code: Kódolás órája
   language: Magyar
   front_title: Csatlakozz minden idők legnagyobb tanulmányi eseményéhez %{campaign_date}
-  coming_soon: Hamarosan
-  campaign_date_start_short: dec. 6
-  campaign_date_start_long: december 6
-  campaign_date_short: dec. 4-10
-  campaign_date_full: december 6-12
-  campaign_date_year: '2021'
-  campaign_date_full_year: December 6-12, 2021
+  coming_soon: Hamarosan!
+  campaign_date_start_short: Dec. 6.
+  campaign_date_start_long: December 6.
+  campaign_date_short: Dec. 6-12.
+  campaign_date_full: December 6-12.
+  campaign_date_year: '2021.'
+  campaign_date_full_year: 2021. december 6-12.
   latam_campaign_date_start_short: Okt. 1.
   latam_campaign_date_start_long: Október 1.
-  latam_campaign_date_short: Okt. 1. - dec. 18.
-  latam_campaign_date_full: Október 1. - december 18.
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: 2020. október 1. - 2020. december 18.
+  latam_campaign_date_short: Okt. 1. - dec. 12.
+  latam_campaign_date_full: Október 1. - december 12.
+  latam_campaign_date_year: '2021.'
+  latam_campaign_date_full_year: 2021. október 1. - 2021. december 12.
   europe_campaign_date_start_short: 'Okt. 10.
 
 '
   europe_campaign_date_start_long: Október 10.
   europe_campaign_date_short: Okt. 10-25.
   europe_campaign_date_full: Október 10-25.
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2021.'
   europe_campaign_date_full_year: 2020. október 10-25.
-  africa_campaign_date_start_short: dec. 6
-  africa_campaign_date_start_long: december 6
+  africa_campaign_date_start_short: Dec. 6.
+  africa_campaign_date_start_long: December 6.
   africa_campaign_date_short: Okt. 1-31.
   africa_campaign_date_full: Október 1-31.
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2021.'
   africa_campaign_date_full_year: 2020. október 1-31.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
@@ -40,111 +40,114 @@ hu:
     és építs egy szebb holnapot.
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
-  social_hoc2020_hoc_is_about_csforgood: 'Amiről az #Hour of Code szól, az a #Számítástechnika
+  social_hoc2020_hoc_is_about_csforgood: 'Amiről a #Kódolás órája szól, az a #Számítástechnika
     egy jobb jövőért. Tanulj ma, és építs egy szebb holnapot.'
   social_hoc2020_global_movement: A Kódolás Órája egy globális kezdeményezés, mely
     több tíz millió diákot elér. Több mint 45 nyelven érhetők el oktatóvideók minden
     korosztálynak.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
-  hoc2020_ai_subheader: Hamarosan itt az Hour of Code 2020!
+  hoc2020_ai_subheader: Hamarosan itt a 2020-as Kódolás órája!
   hoc2020_ai_header: Fedezd fel a mesterséges intelligenciát (MI)
   hoc2020_ai_description: A MI és a gépi tanulás át- meg átszövi az egész világunkat.
     Csatlakozz hozzánk, és fedezd fel a MI-t egy új videósorozat segítségével, tanulj
-    a "MI az óceánokért" programmal 25+ nyelven, vitasd meg az etikát és a MI-t, és
-    még ennél több is van...
+    a "MI az óceánokért" programmal 25+ nyelven, vitasd meg az erkölcsi tanulásgokat
+    és a MI-t, de van még annyi minden más is...
   hoc2019_header: Tanulj informatikát. Változtasd meg a világot!
   hoc2019_header_line1_mobile: Tanulj informatikát.
   hoc2019_header_line2_mobile: Változtasd meg a világot!
   social_hoc2019_every_sudent: 'Minden diákban ott rejlik a lehetőség, hogy megváltoztassa
-    a világot. Segíts nekik elkezdeni. #CSforGood'
+    a világot. Segíts nekik elkezdeni. #CSforGood (Számítástechnika egy jobb világért)'
   social_hoc2019_learn_computer_science: 'Tanulj informatikát. Változtasd meg a világot.
     #CSforGood #HourofCode'
-  social_hoc_is_coming: Hamarosan itt a Kódolás Órája!
-  social_hoc2019_hoc_is_about_csforgood: 'Tanulj informatikát. Változtasd meg a világot!
-    #HourOfCode #CSforGood'
-  social_hoc2019_coming_dates: A Kódolás órájának dátuma 2019. december 9-15. Elengedhetetlen,
-    hogy minden tanuló tanuljon informatikát.
-  social_hoc2019_dance: Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X,
-    Jonas Brothers, Nicki Minaj, és még sokan mások!
+  social_hoc_is_coming: Hamarosan itt a Kódolás órája!
+  social_hoc2019_hoc_is_about_csforgood: 'Amiről a #Kódolás órája szól, az a #Számítástechnika
+    egy jobb jövőért. Tanulj informatikát. Változtasd meg a világot! #HourOfCode #CSforGood'
+  social_hoc2019_coming_dates: A Kódolás óráját 2019. december 9-15. között rendezzük
+    meg. Elengedhetetlen, hogy egy diák is kimaradjon az informatikai oktatásból.
+  social_hoc2019_dance: Katy Perry, Shawn Mendes - ne pánikolj! Lil Nas X, Jonas Brothers,
+    Nicki Minaj és még sokan mások diszkóznak!
   social_hoc_anybody: 'Hour of Code: Anybody can Learn'
-  oceans_landing_title: MI az Óceánokért
-  oceans_landing_description: Fedezd fel a gépi tanulást, tanítsd meg az "M.I"-t,
-    hogyan ismerjen fel halakat.
+  oceans_landing_title: MI az óceánokért
+  oceans_landing_description: Ismerd meg a gépi tanulást és a mesterséges intelligencia
+    etikus használatát.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: 25+ nyelven elérhető, 3+ évfolyam
+  oceans_landing_specs: Elérhető 25+ nyelven 3. évfolyamtól
   oceans_landing_explanation: A számtástechnika sokkal több, mint csak kódolás! Tanulj
-    többet a mesterséges intelligenciáról (MI), a gépi tanulásról, más ehhez kapcsolódó
-    foglamakról, az ezzel járó etikai problémákról és arról, hogy az MI hogyan oldhatja
-    meg a világ problémáit! Élvezd a Code.org első lépését az utazásban, aminek köszönhetően
-    sokkal többet taníthatsz majd a mesterséges intelligenciáról! Amikor az 'MI az
-    óceánokért' tevékenységet használod, egy valódi gépi tanulási modellt tanítasz.
-    <a href='#behind-the-scenes'>Tudj meg többet</a>.
-  oceans_landing_explanation_markdown: A számtástechnika sokkal több, mint csak kódolás!
-    Tanulj többet a mesterséges intelligenciáról (MI), a gépi tanulásról, más ehhez
-    kapcsolódó foglamakról, az ezzel járó etikai problémákról és arról, hogy az MI
-    hogyan oldhatja meg a világ problémáit! Élvezd a Code.org első lépését az utazásban,
+    többet a mesterséges intelligenciáról (MI), a gépi tanulásról, a képzési adatokról,
+    az előítéletekről, az ezekkel járó etikai problémákról és arról, hogy az MI hogyan
+    oldhatja meg a világ problémáit! Élvezd a Code.org első lépését az utazásban,
     aminek köszönhetően sokkal többet taníthatsz majd a mesterséges intelligenciáról!
     Amikor az 'MI az óceánokért' tevékenységet használod, egy valódi gépi tanulási
     modellt tanítasz. <a href='#behind-the-scenes'>Tudj meg többet</a>.
+  oceans_landing_explanation_markdown: A számtástechnika sokkal több, mint csak kódolás!
+    Tanulj többet a mesterséges intelligenciáról (MI), a gépi tanulásról, a képzési
+    adatokról, az előítéletekről és az ezekkel járó etikai problémákról és arról,
+    hogy az MI hogyan oldhatja meg a világ problémáit! Élvezd a Code.org első lépését
+    az utazásban, aminek köszönhetően sokkal többet taníthatsz majd a mesterséges
+    intelligenciáról! Amikor az 'MI az óceánokért' tevékenységet használod, egy valódi
+    gépi tanulási modellt tanítasz. <a href='#behind-the-scenes'>Tudj meg többet</a>.
   oceans_landing_teacher_resources: Oktatói segédanyagok
-  oceans_landing_teacher_resources_desc: Óratervek és gyakorlatok az MI, gépi tanulás,
-    az ehhez kapcsolódó fogalmak és etikai problémák megtanításához.
+  oceans_landing_teacher_resources_desc: Tantervek és tevékenységek, amelyek segítségével
+    taníthatsz a mesterséges intelligenciáról, a gépi tanulásról, a képzési adatokról,
+    az előítéletekről, miközben etikai kérdéseket is meg lehet vitatni.
   oceans_landing_resource_button: Források megtekintése
-  oceans_landing_cs_for_good: Informatika a jóért
+  oceans_landing_cs_for_good: Számítástechnika egy jobb világáért
   oceans_landing_cs_for_good_desc: Források, melyek segítenek a diákoknak megérteni,
     hogyan segíthet a számítástecnika egy igazságosabb világ létrehozásában.
-  oceans_landing_videos: Videók MI-ről és gépi tanulásról
+  oceans_landing_videos: Videók az MI-ről és a gépi tanulásról
   oceans_behind_the_scenes: 'MI az óceánokért: A színfalak mögött'
-  oceans_behind_the_scenes_1: A 2–4. szint a <a href="https://www.tensorflow.org/">
-    TensorFlow </a> <a href = "https://github.com/tensorflow/models/ által előkészített
-    modellt használja. blob / master / research / slim / nets / mobilenet_v1.md ">
-    MobileNet </a> projekt. A MobileNet modell egy <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">
-    konvolúciós ideghálózat </a>, amelyre < a href = "http://www.image-net.org/">
-    ImageNet </a>, több mint 14 millió képből álló adatkészlet, megjegyzésekkel kiegészítve,
-    többek között olyan szavakkal, mint "lufi" vagy "eper". Annak érdekében, hogy
-    ezt a modellt testre szabhassuk a tanuló által ebben a tevékenységben generált
-    címkézett képzési adatokkal, a <a href="https://en.wikipedia.org/wiki/Transfer_learning">
-    Transfer Learning </a> elnevezésű technikát használjuk. A képzési adatkészlet
-    minden képét pixelként továbbítja a MobileNet-hez, hogy megkapja a rá legvalószínűbb
-    feljegyzések listáját. Ezután egy új kép elkészítéséhez betápláljuk a MobileNet-be,
-    és összehasonlítjuk az eredményül kapott annotációk listáját a képzési adatkészletben
-    szereplőekkel. Az új képet ugyanazzal a címkével osztályozzuk (például "hal" vagy
-    "nem hal"), mint a legegyszerűbb eredményeket tartalmazó képzési kép képei.
-  oceans_behind_the_scenes_1_markdown: A 2–4. szint a <a href="https://www.tensorflow.org/">
-    TensorFlow </a> <a href = "https://github.com/tensorflow/models/ által előkészített
-    modellt használja. blob / master / research / slim / nets / mobilenet_v1.md ">
-    MobileNet </a> projekt. A MobileNet modell egy <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">
-    konvolúciós ideghálózat </a>, amelyre < a href = "http://www.image-net.org/">
-    ImageNet </a>, több mint 14 millió képből álló adatkészlet, megjegyzésekkel kiegészítve,
-    többek között olyan szavakkal, mint "lufi" vagy "eper". Annak érdekében, hogy
-    ezt a modellt testre szabhassuk a tanuló által ebben a tevékenységben generált
-    címkézett képzési adatokkal, a <a href="https://en.wikipedia.org/wiki/Transfer_learning">
-    Transfer Learning </a> elnevezésű technikát használjuk. A képzési adatkészlet
-    minden képét pixelként továbbítja a MobileNet-hez, hogy megkapja a rá legvalószínűbb
-    feljegyzések listáját. Ezután egy új kép elkészítéséhez betápláljuk a MobileNet-be,
-    és összehasonlítjuk az eredményül kapott annotációk listáját a képzési adatkészletben
-    szereplőekkel. Az új képet ugyanazzal a címkével osztályozzuk (például "hal" vagy
-    "nem hal"), mint a legegyszerűbb eredményeket tartalmazó képzési kép képei.
-  oceans_behind_the_scenes_2: A 6–8. szint egy <a href="https://en.wikipedia.org/wiki/Support-vector_machine">
-    Support-Vector Machine </a> (SVM) szolgáltatást használ. Megnézzük a hal minden
-    összetevőjét (például szemét, száját, testét), és az egyes elemek összes metaadatát
-    (például a fogak számát, a test alakját) egyes halak számvektorává állítjuk össze.
-    Ezeket a vektorokat használjuk az SVM képzésére. A kiképzési adatok alapján az
-    SVM az összes lehetséges hal "terét" két részre osztja, amelyek megfelelnek azoknak
-    az osztályoknak, amelyeket megpróbálunk megtanulni (például "kék" vagy "nem kék").
-  oceans_behind_the_scenes_2_markdown: A 6–8. szint egy <a href="https://en.wikipedia.org/wiki/Support-vector_machine">
-    Support-Vector Machine </a> (SVM) szolgáltatást használ. Megnézzük a hal minden
-    összetevőjét (például szemét, száját, testét), és az egyes elemek összes metaadatát
-    (például a fogak számát, a test alakját) egyes halak számvektorává állítjuk össze.
-    Ezeket a vektorokat használjuk az SVM képzésére. A kiképzési adatok alapján az
-    SVM az összes lehetséges hal "terét" két részre osztja, amelyek megfelelnek azoknak
-    az osztályoknak, amelyeket megpróbálunk megtanulni (például "kék" vagy "nem kék").
-  social_hoc2019_oceans_title: 'Mesterséges Intelligencia az óceánok számára #CSforGood'
+  oceans_behind_the_scenes_1: A 2-4. szintek a <a href="https://www.tensorflow.org/"
+    >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a> projekt által biztosított, előre betanított modellt használják.
+    A MobileNet modell egy <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">összetett
+    ideghálózat</a>, amelyet a <a href="http://www.image-net.org/">ImageNet</a>, egy
+    több mint 14 millió képből álló, kézzel kommentált, például "ballon" vagy "eper"
+    szavakkal ellátott adathalmazon képeztek ki. Annak érdekében, hogy ezt a modellt
+    a tanuló által a tevékenység során generált címkézett képzési adatokkal testre
+    szabjuk, a <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a> nevű technikát használjuk. A képzési adathalmaz minden egyes képét
+    pixelként betápláljuk a MobileNet-be, hogy megkapjuk a rá nagy valószínűséggel
+    vonatkozó megjegyzések listáját. Ezután egy új képet betáplálunk a MobileNet-be,
+    és összehasonlítjuk az így kapott megjegyzések listáját a képzési adatkészletből
+    származó megjegyzésekkel. Az új képet ugyanazzal a címkével (például "hal" vagy
+    "nem hal") osztályozzuk, mint a képzési halmazból a leghasonlóbb eredményt mutató
+    képeket.
+  oceans_behind_the_scenes_1_markdown: A 2-4. szintek a [TensorFlow](https://www.tensorflow.org/)
+    [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    projekt által biztosított, előzetesen betanított modellt használják. A MobileNet
+    modell egy [összetett ideghálózat](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks),
+    amelyet az [ImageNet](http://www.image-net.org/), egy több mint 14 millió képből
+    álló, kézzel jegyzetelt, olyan szavakkal, mint például "ballon" vagy "eper", ellátott
+    adathalmazon képeztek ki. Annak érdekében, hogy ezt a modellt a tanuló által a
+    tevékenység során generált címkézett képzési adatokkal testre szabjuk, a [transzfertanulás](https://en.wikipedia.org/wiki/Transfer_learning)
+    nevű technikát használjuk. A képzési adathalmaz minden egyes képét pixelként betápláljuk
+    a MobileNet-be, hogy megkapjuk a rá nagy valószínűséggel vonatkozó megjegyzések
+    listáját. Ezután egy új képet betáplálunk a MobileNet-be, és összehasonlítjuk
+    az így kapott megjegyzések listáját a képzési adathalmazból származó megjegyzésekkel.
+    Az új képet ugyanazzal a címkével (például "hal" vagy "nem hal") osztályozzuk,
+    mint a képzési halmazból a leghasonlóbb eredményt mutató képeket.
+  oceans_behind_the_scenes_2: A 6–8. szintek egy <a href="https://en.wikipedia.org/wiki/Support-vector_machine">támogatóvektor-gép</a>
+    (SVM) szolgáltatást használnak. Megnézzük a hal minden összetevőjét (például szemét,
+    száját, testét), és az egyes elemek összes metaadatát (például a fogak számát,
+    a test alakját) egyes halak számvektorává állítjuk össze. Ezeket a vektorokat
+    használjuk az SVM képzésére. A képzési adatok alapján az SVM az összes lehetséges
+    hal "terét" két részre osztja, amelyek megfelelnek azoknak az osztályoknak, amelyeket
+    megpróbálunk megtanulni (például "kék" vagy "nem kék").
+  oceans_behind_the_scenes_2_markdown: A 6-8. szintek egy [támogatóvektor-gépet](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM) használnak. A halak minden egyes komponensét (például szemek, száj, test)
+    megvizsgáljuk, és a komponensek összes metaadatát (például fogak száma, testforma)
+    minden egyes hal esetében számvektorba állítjuk össze. Ezeket a vektorokat használjuk
+    az SVM betanításához. A képzési adatok alapján az SVM az összes lehetséges hal
+    "terét" két részre osztja, amelyek megfelelnek a tanulni kívánt osztályoknak (például
+    "kék" vagy "nem kék").
+  social_hoc2019_oceans_title: 'MI az óceánok számára #CSforGood'
   social_hoc2019_oceans_desc: Tanulj többet a mesterséges intelligenciáról, a gépi
-    tanulásról, más ehhez kapcsolódó foglamakról, az ezzel járó etikai problémákról
-    és arról, hogyan oldja meg az MI a világ problémáit. A számítástechnika sokkal
-    több mint csak kódolás! Taníts többet a Code.org segédanyagaival.
+    tanulásról, a képzési adatokról, az előítéletekről, az ezekkel járó etikai problémákról,
+    és arról, hogyan az MI hogyan használható a világ problémáinak megoldásában. A
+    számítástechnika sokkal több mint csak kódolás! Élvezd a Code.org segítségével
+    megtett első lépéseket azon az új úton, amelynek célja, hogy a tananyagainkban
+    egyre többet tanítsunk az MI-ről.
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
@@ -161,10 +164,11 @@ hu:
     of Code Live episodes.
   hoc_live_join_us: Csatlakozz
   hoc_live_learn_more: Tudj meg többet
-  hoc_overview_oceans_tutorial_header: MI az Óceánokért
+  hoc_overview_oceans_tutorial_header: MI az óceánokért
   hoc_overview_oceans_tutorial_desc: Tanulj többet a mesterséges intelligenciáról,
-    a gépi tanulásról, más ehhez kapcsolódó foglamakról, az ezzel járó etikai problémákról
-    és arról, hogyan oldja meg az MI a világ problémáit.
+    a gépi tanulásról, a képzési adatokról, az előítéletekről, az ezekkel járó etikai
+    problémákról és arról, hogy az MI hogyan használható fel a világ problémáinak
+    megoldásában.
   hoc_overview_csc_header: Introducing CS Connections
   hoc_overview_csc_desc: Our newest curriculum highlights the connections between
     computer science and other subjects like math, language arts, science, and social
@@ -177,74 +181,76 @@ hu:
     a scanner on the bottom, and an LED face
   hoc_banner_alt_text: Hour of Code banner
   ai_video_title_what_is_ai: Mi a Mesterséges Intelligencia (MI)?
-  ai_video_title_algorithm_bias: Harc az algoritmusok elfogultságával szemben
+  ai_video_title_algorithm_bias: Harc az algoritmusokban megjelenő előítéletek ellen
   ai_video_title_phone_knows_dog: Honnan tudja a telefonod, hogy ez egy kutya?
-  ai_video_title_what_is_ml: Mi az a gépi tanulás?
-  ai_video_title_ml_big_small_prickly: 'Gépi Tanulás: Kicsi, Nagy és Szeszélyes problémákra'
-  ai_video_title_ethics_of_ai: MI és az Etikusság
-  ai_video_title_ml_human_bias: Gépi Tanulás és Emberi Elfogultság
-  ai_video_title_seeing_ai: 'Seeing AI: A vizuális világ hozzáférhetőbbé tétele'
+  ai_video_title_what_is_ml: Mi a gépi tanulás?
+  ai_video_title_ml_big_small_prickly: 'Gépi tanulás: kicsi, nagy és kényes problémák
+    megoldása'
+  ai_video_title_ethics_of_ai: Az MI etikája
+  ai_video_title_ml_human_bias: Gépi tanulás és emberi elfogultság
+  ai_video_title_seeing_ai: 'Látva az MI-t: A vizuális világ hozzáférhetőbbé tétele'
   activity: Tevékenység
   name: Név
   description: Leírás
   audience: Közönség
-  ai_resource_header: Taníts és Tanulj az MI-ről
+  ai_resource_header: Taníts és tanulj az MI-ről
   ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: 'Hozzáférés ingyenes anyagokhoz, köztük óratervhez,
-    videókhoz, számítástechnikai tantervhez és oktatói tréningekhez. (A Minecraft:
-    Oktatási kiadás szükséges hozzá.)'
-  ai_resource_ml_for_kids: Gépi Tanulás Gyerekeknek
-  ai_resource_ml_for_kids_desc: Használj szöveget, számokat vagy képeket, hogy megtaníts
-    egz tanuló algoritmust, és készíts játékokat Scratch-ben.
-  ai_resource_ibm_ml_for_kids: 'IBM: Gépi Tanulás Gyerekeknek'
-  ai_resouce_ibm_ml_for_kids_desc: Gyakorló feladatok, melyek játékokon és interaktív
-    projekteken keresztül mutatnak be gépi tanuló algoritmusokat a diákoknak.
-  ai_resource_ecs: 'ECS: Mesterséges Intelligencia (MI)'
-  ai_resource_ecs_desc: Egy új, alternatív lecke a Számtástechnika felfedezése (ECS)
-    tantervhez.
+  ai_resource_minecraft_desc: 'Hozzáférés ingyenes forrásokhoz, többek között óravázlathoz,
+    videókhoz, informatikai tananyaghoz és tanárok továbbképzéséhez. (Minecraft: Oktatási
+    kiadás szükséges)'
+  ai_resource_ml_for_kids: Gépi tanulás gyermekeknek
+  ai_resource_ml_for_kids_desc: Taníts be egy gépi tanulási modellt szöveggel, számokkal
+    vagy képekkel, és készíts belőle játékokat Scratchben.
+  ai_resource_ibm_ml_for_kids: 'IBM: gépi tanulás gyermekeknek'
+  ai_resouce_ibm_ml_for_kids_desc: Gyakorlati feladatok, amelyekkel egyszerű gépi
+    tanulási modelleket mutathatsz be a diákoknak játékokon és interaktív projekteken
+    keresztül.
+  ai_resource_ecs: 'ECS: Mesterséges intelligencia (MI)'
+  ai_resource_ecs_desc: Egy új, alternatív tananyag a Számtástechnika felfedezése
+    (ECS) tantervhez.
   ai_resource_elements_ai: Az MI elemei
-  ai_resource_elements_ai_desc: Egy sor online kurzus a Reaktor es a Helsinki Egyetem
-    által.
+  ai_resource_elements_ai_desc: A Reaktor és a Helsinki Egyetem által létrehozott
+    ingyenes online kurzussorozat.
   ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: Egy MI tanító platform játékok építésére, robotok programozására
-    és gyakorlásra.
-  ai_audience_k12: K-12 (olvasás szükséges)
+  ai_resource_cognimates_desc: Egy MI oktatási platform játékok építésére, robotok
+    programozására és képzésre.
+  ai_audience_k12: K-12 (olvasni tudás szükséges)
   ai_audience_hs: Középiskola
-  ai_activity_header: MI és GT támogatta tevékenységek
-  ai_activity_seeing_ai: Seeing AI
-  ai_activity_seeing_ai_desc: Egy ingyenes applikáció, ami számos különböző nyelven
-    beszámol a körülötted lévő világról.
-  ai_activity_quick_draw: Gyorsan, Rajzolj!
-  ai_activity_quick_draw_desc: Fel tudja ismerni a neurális háló a firkálást?
-  ai_activity_teachable: Tanítható Gép
-  ai_activity_teachable_desc: Taníts meg egy számítógépet, hogy felismerje a képeidet,
+  ai_activity_header: MI és gépi tanulás által támogatta tevékenységek
+  ai_activity_seeing_ai: Látni az MI-t
+  ai_activity_seeing_ai_desc: Egy ingyenes applikáció, amely több nyelven mesél a
+    körülötted lévő világról.
+  ai_activity_quick_draw: Gyorsan, rajzolj!
+  ai_activity_quick_draw_desc: Meg tudja tanulni egy ideghálózat felismerni a firkálást?
+  ai_activity_teachable: Tanítható gép
+  ai_activity_teachable_desc: Taníts meg egy számítógépet, hogy ismerje fel a képeidet,
     hangjaidat és mozdulataidat.
-  ai_activity_experiments: MI kísérletek a Googlevel
-  ai_activity_experiments_desc: Kezd el a gépi tanulás megtanulását képeken, rajzokon,
-    nyelveken, zenén és sok máson keresztül.
+  ai_activity_experiments: MI kísérletek a Google-val
+  ai_activity_experiments_desc: Kezdd el felfedezni a gépi tanulást képek, rajzok,
+    nyelv, zene és még sok más segítségével.
   ai_activity_zooniverse: Zooniverse - Pillanatkép hegyi zebrával
   ai_activity_zooniverse_desc: Segítsen megvédeni a veszélyeztetett hegyi zebrát a
     képeken látható különböző állatok azonosításával.
   codeorg_homepage_hoc2018_curriculum: Haladj tovább a <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org kurzusokkal</a>
   codeorg_homepage_hoc2018_dance_heading: Készítsd el saját <span class="highlight-word">tánc&nbsp;partidat</span>
-  codeorg_homepage_hoc2018_header_line1: Hamarosan itt az Hour of Code...
+  codeorg_homepage_hoc2018_header_line1: Hamarosan itt a Kódolás órája
   codeorg_homepage_hoc2018_header_line2_desktop: Te mit fogsz <span class="hoc2018-highlight-word">létrehozni?</span>
   codeorg_homepage_hoc2018_header_line2_mobile: Te mit fogsz létrehozni?
-  codeorg_homepage_hoc2018_header_line3: Szárnyaljon a képzeleted és légy készen az
-    innovációra. Hozz létre egy olyan "Hour of Code" eseményt, melynek csak a kreativitás
-    szabhat határt.
+  codeorg_homepage_hoc2018_header_line3: Szárnyaljon a képzeleted és légy innovatív.
+    Hozz létre egy olyan Kódolás óráját, amelynek csak a saját kreativitásod szabhat
+    határt.
   codeorg_homepage_hoc2018_musician_before: Kiemelt
   codeorg_homepage_hoc2018_musician_after: és sokan mások!
   codeorg_homepage_hoc2018_video: Nézd meg a videónkat
-  hourofcode_homepage_hoc2018_header_line1: Az Hour of Code  eseményeket bárki bárhol
-    megszervezheti. Egyórás gyakorlatok több mint 45 nyelven. Gyakorlat nem szükséges.
-  hourofcode_homepage_hoc2018_header_line2: "-től 104 éves korig."
-  codeorg_homepage_hoc_is_coming: Közeleg a Kódolás Órája
+  hourofcode_homepage_hoc2018_header_line1: Egy Kódolás óráját bárki bárhol megtarthat.
+    Gyakorlatok egy óra alatt több mint 45 nyelven. Tapasztalat nem szükséges.
+  hourofcode_homepage_hoc2018_header_line2: 4-től 104 éves korig.
+  codeorg_homepage_hoc_is_coming: Közeleg a Kódolás órája
   codeorg_homepage_celebrate_cse: Ünnepeljük a számítástechnikát mindenhol!
   codeorg_homepage_csc: Az informatika találkozik az irodalommal, a nyelvekkel, a
     matematikával és még sok mással a CS Connections programban.
-  codeorg_homepage_csc_long: Nézze meg, hogy a tantervünkben hogyan kapcsolódik az
+  codeorg_homepage_csc_long: Nézd meg, hogy a tantervünkben hogyan kapcsolódik az
     informatika az irodalomhoz, a nyelvekhez, a matematikához és még sok minden máshoz!
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: A Minecraft egy vadonatúj programmal tér vissza
@@ -8778,7 +8784,7 @@ hu:
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_mee_name: 'Minecraft Kódolás Órája: Az MI lehetőségei '
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
-  tutorial_ai-oceans_name: MI az Óceánokért
+  tutorial_ai-oceans_name: MI az óceánokért
   tutorial_scratchimagine_longdescription: Képzelj el egy világot ahol bármi lehetséges,
     és keltsd életre Scratch segítségével.
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while

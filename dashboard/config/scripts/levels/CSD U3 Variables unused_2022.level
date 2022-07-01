@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:03.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -76,13 +72,17 @@
     "libraries_enabled": "false",
     "encrypted_examples": "WbOC0O13uiDDkoM8aohvnT77p3iTwgdpFf6m3kqyo63bPEk1d3StOWFHbB5B\nsywuteuzRsR6j1t/99tEEsByIg==\n",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/vpl-csd-2022/guides/variables",
+      "/courses/vpl-csd-2022/guides/drawing-shapes",
+      "/courses/vpl-csd-2022/guides/shapes-and-parameters"
     ],
-    "map_reference": " /docs/concepts/javascript/naming-variables/",
+    "map_reference": "/courses/vpl-csd-2022/guides/naming-variables",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:03.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:02.995+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables unused_2021\\\"\"],\"cloned_from\":\"CSD U3 Variables unused_2021\"}]"

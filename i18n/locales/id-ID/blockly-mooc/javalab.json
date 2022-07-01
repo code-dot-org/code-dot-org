@@ -13,7 +13,6 @@
   "classNotFound": "Kesalahan: satu atau lebih file Java Anda tidak memiliki definisi kelas.",
   "closeReview": "Tutup tinjauan",
   "codeEditingDisabled": "Pengeditan kode dinonaktifkan saat proyek Anda sedang ditinjau",
-  "codeReview": "Peninjauan Kode",
   "commentUpdateError": "Terjadi kesalahan saat memproses permintaan Anda, silakan coba lagi.",
   "commit": "Commit",
   "commitAndSave": "Commit & Simpan",
@@ -25,6 +24,7 @@
   "compilerError": "Kami tidak dapat mengkompilasi program Anda. Cari bug di program Anda dan coba lagi.",
   "compiling": "Mengompilasi...",
   "console": "Konsol",
+  "created": "Dibuat",
   "delete": "Hapus",
   "deleteFileConfirmation": "Anda yakin ingin menghapus {filename}?",
   "duplicateProjectFilenameError": "Nama file {filename} sudah digunakan dalam proyek ini. Harap pilih nama lain",
@@ -100,6 +100,10 @@
   "startReview": "Mulai Tinjauan",
   "teacherLabel": "guru",
   "togglePeerReviewError": "Terjadi kesalahan saat mengaktifkan/menonaktifkan tinjauan sejawat, silakan coba lagi.",
+  "unauthorizedJavabuilderConnectionNotLoggedIn": "Anda harus masuk untuk menjalankan kode di Java Lab. Masuk dan coba lagi.",
+  "unauthorizedJavabuilderConnectionTeacher": "Untuk menjalankan kode di Java Lab, Anda harus \"terverifikasi\" atau bergabung degan segmen CSA yang dimiliki oleh guru terverifikasi. Lihat [this article](https://support.code.org/hc/en-us/articles/115001550131) tentang cara untuk terverifikasi.",
+  "unauthorizedJavabuilderConnectionStudent": "Untuk menjalankan kode di Java Lab, Anda harus dimasukkan ke segmen CSA dan guru Anda harus \"terverifikasi.\" Mintalah bantuan guru Anda dan coba lagi. Guru Anda dapat melihat detailnya di [artikel ini.](https://support.code.org/hc/en-us/articles/115001550131)",
   "unknownError": "Ups. Kami mengalami kesalahan. Coba jalankan kembali program Anda. Jika kesalahan berlanjut, hubungi kami di support@code.org. Pastikan untuk menyertakan ID koneksi {connectionId} dalam pesan Anda.",
+  "youHaveProjectsToReview": "Ada proyek yang harus Anda tinjau...",
   "yourPeer": "rekan Anda"
 }
