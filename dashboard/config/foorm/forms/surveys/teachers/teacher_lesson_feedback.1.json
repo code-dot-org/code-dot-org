@@ -7,17 +7,19 @@
         {
           "type": "text",
           "name": "script_name",
-          "visible": false
+          "visible": false,
+          "defaultValueExpression": "{script_name}"
         },
         {
           "type": "text",
           "name": "lesson_number",
-          "visible": false
+          "visible": false,
+          "defaultValueExpression": "{lesson_number}"
         },
         {
           "type": "html",
           "name": "heading_with_unit",
-          "html": "<h1>Course: {course_name}</h1><br/><h2>Unit {unit_number}: {unit_name}</h2><br/><h3>Lesson {lesson_number}: {lesson_name}</h3>",
+          "html": "<h1>Course: {course_name}</h1><h2>Unit {unit_number}: {unit_name}</h2><h3>Lesson {lesson_number}: {lesson_name}</h3>",
           "visibleIf": "!!{unit_name}"
         },
         {
