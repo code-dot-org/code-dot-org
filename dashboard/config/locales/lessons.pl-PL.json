@@ -885,7 +885,7 @@
           "name": "Literująca Pszczółka"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "Ankieta pod koniec semestru Odkrycia informatyki"
+          "name": "Programowanie dla rozrywki"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Rysowanie kształtów"
@@ -1584,10 +1584,10 @@
           "name": "Królewska bitwa ze zdarzeniami"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Testy po realizacji projektu"
+          "name": "Programowanie dla rozrywki"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Rysowanie kształtów"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Rysowanie w laboratorium gier"
@@ -1647,10 +1647,7 @@
           "name": "Projekt - Zaprojektuj grę"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Testy po realizacji projektu"
-        },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Innowacje w informatyce"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "Circuit Playground"
@@ -1695,10 +1692,10 @@
           "name": "Projekt - Zbuduj prototyp rozwiązania innowacyjnego"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Testy po realizacji projektu"
+          "name": "Analiza projektu"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Zrozumienie twojego użytkownika"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Mikrozajęcia poświęcone projektowaniu ukierunkowanemu na użytkownika"
@@ -1743,10 +1740,10 @@
           "name": "Projekt - Prezentacja aplikacji"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Testy po realizacji projektu"
+          "name": "Reprezentacja ma znaczenie"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Wzorce i reprezentacje"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII i reprezentacja binarna"
@@ -1791,7 +1788,7 @@
           "name": "Wprowadzenie do rozwiązywania problemów"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Testy po realizacji projektu"
+          "name": "Proces rozwiązywania problemów"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Zgłębianie rozwiązywania problemów"
@@ -1812,10 +1809,10 @@
           "name": "Projekt - Zaproponuj aplikację"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Testy po realizacji projektu"
+          "name": "Odkrywanie stron"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Strony internetowe służące wyrażeniu się"
         },
         "csd2-2019/Intro to HTML": {
           "name": "Wprowadzenie do HTML"
@@ -2337,10 +2334,10 @@
           "name": "Zaprezentuj swój projekt"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "Ankieta pod koniec semestru Odkrycia informatyki"
+          "name": "Programowanie dla rozrywki"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Rysowanie kształtów"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Rysowanie w laboratorium gier"
@@ -2400,7 +2397,7 @@
           "name": "Projekt - Zaprojektuj grę"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Innowacje w informatyce"
         },
         "csd6-2017/The Circuit Playground_": {
           "name": "Circuit Playground"
@@ -2445,7 +2442,7 @@
           "name": "Projekt - Zbuduj prototyp rozwiązania innowacyjnego"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Odkrywanie stron"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Strony internetowe służące wyrażeniu się"
@@ -2514,7 +2511,7 @@
           "name": "Projekt - Zaproponuj aplikację"
         },
         "csd5-2017/Representation Matters": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Reprezentacja ma znaczenie"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Wzorce i reprezentacje"
@@ -2559,7 +2556,7 @@
           "name": "Projekt - Rozwiąż problem z danymi"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Analiza projektu"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Zrozumienie twojego użytkownika"
@@ -2936,13 +2933,13 @@
           "name": "Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)"
         },
         "allthethings/Jigsaw": {
-          "name": "Anonimowa ankieta uczniów 2"
+          "name": "Układanka"
         },
         "allthethings/Maze": {
-          "name": "Test Pluralsight"
+          "name": "Labirynt"
         },
         "allthethings/Artist": {
-          "name": "Przykład sprawdzianu CSP"
+          "name": "Artysta"
         },
         "allthethings/Bee": {
           "name": "Pszczółka"
@@ -4026,7 +4023,7 @@
           "name": "Ankieta po kursie Odkrycia Informatyki"
         },
         "csd4-2021/Analysis of Design": {
-          "name": "Testy po realizacji projektu"
+          "name": "Projektowanie z empatią"
         },
         "csd4-2021/Understanding Your User": {
           "name": "Zrozumienie twojego użytkownika"
@@ -4083,7 +4080,7 @@
           "name": "Ankieta po kursie Odkrycia Informatyki"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Testy po realizacji projektu",
+          "name": "Innowacje w informatyce",
           "overview": "Celem rozpoczęcia przerabiania ostatniego działu tego kursu, uczniowie wykonają pewne badania w zakresie ciekawych innowacji w informatyce. Na tej lekcji uczniowie skonfrontują się z szerszym zakresem informatycznych czynników kształtujących (jak wygląda komputer) oraz pól, na które oddziałuje informatyka. W dalszej części tego działu, będą znów oglądać urządzenia, które poznali na tej lekcji, w trakcie tworzenia swoich własnych urządzeń informatycznych."
         },
         "csd6-2021/The Circuit Playground": {
@@ -4138,7 +4135,7 @@
           "name": "Ankieta po kursie Odkrycia Informatyki"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Testy po realizacji projektu"
+          "name": "Reprezentacja ma znaczenie"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Wzorce i reprezentacje"
@@ -4186,7 +4183,7 @@
           "name": "Ankieta po kursie Odkrycia Informatyki"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Testy po realizacji projektu"
+          "name": "Programowanie dla rozrywki"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Rysowanie kształtów"
@@ -4256,7 +4253,7 @@
           "name": "Wprowadzenie do rozwiązywania problemów"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Testy po realizacji projektu"
+          "name": "Proces rozwiązywania problemów"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Zgłębianie rozwiązywania problemów"
@@ -4292,7 +4289,7 @@
           "name": "Wprowadzenie do rozwiązywania problemów - Motywy gier (Alternatywna lekcja 3)"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Testy po realizacji projektu"
+          "name": "Badanie stron internetowych"
         },
         "csd2-2021/Intro to HTML": {
           "name": "Wprowadzenie do HTML"

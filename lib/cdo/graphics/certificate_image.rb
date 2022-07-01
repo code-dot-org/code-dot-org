@@ -191,7 +191,7 @@ class CertificateImage
   end
 
   def self.prefilled_title_course?(course)
-    hoc_course?(course) || ScriptConstants.unit_in_category?(:twenty_hour, course)
+    certificate_template_for(course) != 'blank_certificate.png'
   end
 
   # Specify a fallback certificate title for a given non-HoC course ID. As of HoC
@@ -234,7 +234,9 @@ class CertificateImage
       else
         'hour_of_code_certificate.jpg'
       end
-    elsif ScriptConstants.unit_in_category?(:twenty_hour, course)
+    elsif ScriptConstants.unit_in_category?(:twenty_hour, course) || course == ScriptConstants::ACCELERATED_NAME
+      # The 20-hour course is referred to as "accelerated" throughout the
+      # congrats and certificate pages (see csf_finish_url).
       '20hours_certificate.jpg'
     else
       'blank_certificate.png'

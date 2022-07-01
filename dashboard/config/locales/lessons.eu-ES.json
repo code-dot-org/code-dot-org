@@ -632,6 +632,15 @@
         "jigsaw/Jigsaw": {
           "name": "Buruhaustea"
         },
+        "allthethings/Jigsaw": {
+          "name": "Buruhaustea"
+        },
+        "allthethings/Maze": {
+          "name": "Labirintoa"
+        },
+        "allthethings/Artist": {
+          "name": "Artista"
+        },
         "allthethings/Bee": {
           "name": "Erlea"
         },

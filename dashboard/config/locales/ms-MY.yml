@@ -40,6 +40,7 @@ ms:
           jika anda tidak mempunyai alamat e-mel)</a>)
         username: nama pengguna
         password: Kata laluan
+        verified_teacher: Guru Bertauliah
         password_confirmation: Pengesahan kata laluan
         current_password: Kata laluan semasa
         locale: Bahasa
@@ -532,6 +533,7 @@ ms:
       student: pelajar
       viewing_solution: Melihat Penyelesaian
       try_it_yourself: Cuba sendiri
+      section: Bahagian
       example: Contoh Penyelesaian
       example_with_number: Contoh Penyelesaian %{solution_number}
       submitted_on: 'Dihantar pada:'
@@ -753,6 +755,7 @@ ms:
     try_hour_of_code: Cuba Hour of Code!
     store: Kedai
     cookie_notice: Notis Kuki
+    view_code: Lihat Kod
   reference_area:
     title: Perlu bantuan?
     subtitle: Lihat video dan petunjuk ini

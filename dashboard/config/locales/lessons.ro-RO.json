@@ -1064,6 +1064,9 @@
         "csd6-2019/Functions with Parameters": {
           "name": "Funcții cu Parametrii"
         },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Procesul de Rezolvare a Problemei"
+        },
         "csd1-2019/What is a Computer?": {
           "name": "Ce Este un Computer?"
         },
@@ -1892,6 +1895,15 @@
           "preparation": "-   Consultați site-ul web [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) pentru mai mult conținut legat de siguranța online.",
           "purpose": "Scopul principal al acestei lecții este de a construi experiența elevilor cu computerele. Prin acoperirea celor mai de bază funcții ale computerului, cum ar fi click, glisare și plasare, creăm un teren de joc propice la clasă pentru puzzle-urile viitoare. Această lecție oferă, de asemenea, o oportunitate excelentă de a introduce terminologia de bază a hardware-ului computerului, inclusiv „mouse”, „trackpad” sau „touchscreen”, în funcție de dispozitivele dvs.",
           "student_overview": "Dă click și glisează  pentru a rezolva puzzle-urile."
+        },
+        "allthethings/Jigsaw": {
+          "name": "Puzzle"
+        },
+        "allthethings/Maze": {
+          "name": "Labirint"
+        },
+        "allthethings/Artist": {
+          "name": "Artist"
         },
         "allthethings/Bee": {
           "name": "Albină"
@@ -2820,6 +2832,9 @@
         },
         "csd3-2021/Functions": {
           "name": "Funcţii"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Procesul de Rezolvare a Problemei"
         },
         "csd1-2021/What is a Computer?": {
           "name": "Ce Este un Computer?"

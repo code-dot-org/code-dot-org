@@ -617,6 +617,15 @@
         "jigsaw/Jigsaw": {
           "name": "Jigsaw"
         },
+        "allthethings/Jigsaw": {
+          "name": "Jigsaw"
+        },
+        "allthethings/Maze": {
+          "name": "Maze"
+        },
+        "allthethings/Artist": {
+          "name": "Artist"
+        },
         "allthethings/Flappy": {
           "name": "Flappy"
         },

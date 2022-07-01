@@ -1,5 +1,7 @@
 import _ from 'lodash';
 import xml from './xml';
+import CdoFieldVariable from './blockly/addons/cdoFieldVariable';
+import {BlocklyVersion} from '@cdo/apps/constants';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -729,6 +731,11 @@ const STANDARD_INPUT_TYPES = {
   },
   [VARIABLE_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
+      const FieldVariableClass =
+        Blockly.version === BlocklyVersion.CDO
+          ? Blockly.FieldVariable
+          : CdoFieldVariable;
+
       // Make sure the variable name gets declared at the top of the program
       block.getVars = function() {
         return {
@@ -764,7 +771,7 @@ const STANDARD_INPUT_TYPES = {
       // Add the variable field to the block
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(new Blockly.FieldVariable(null), inputConfig.name);
+        .appendField(new FieldVariableClass(null), inputConfig.name);
     },
     generateCode(block, inputConfig) {
       return Blockly.JavaScript.translateVarName(
