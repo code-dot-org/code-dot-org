@@ -23175,6 +23175,8 @@ in:
               name: crwdns2918250:0crwdne2918250:0
             lesson-3:
               name: crwdns2918258:0crwdne2918258:0
+            Connect with the CS community:
+              name: crwdns2929806:0crwdne2929806:0
           lesson_groups:
             lessonGroup-2:
               display_name: crwdns2918264:0crwdne2918264:0
@@ -23194,6 +23196,7 @@ in:
           title: crwdns2918304:0crwdne2918304:0
           description: crwdns2918306:0crwdne2918306:0
           student_description: crwdns2918308:0crwdne2918308:0
+          name: crwdns2929808:0crwdne2929808:0
         self-paced-pl-csp2-2022:
           lessons:
             Navigating the Codeorg learning platform:
@@ -23211,6 +23214,7 @@ in:
           title: crwdns2918356:0crwdne2918356:0
           description: crwdns2918358:0crwdne2918358:0
           student_description: crwdns2918360:0crwdne2918360:0
+          name: crwdns2929810:0crwdne2929810:0
         self-paced-pl-csp3-2022:
           lessons:
             Overview of course content:
@@ -23228,6 +23232,7 @@ in:
           title: crwdns2918408:0crwdne2918408:0
           description: crwdns2918410:0crwdne2918410:0
           student_description: crwdns2918412:0crwdne2918412:0
+          name: crwdns2929812:0crwdne2929812:0
         self-paced-pl-csp4-2022:
           lessons:
             The role of the teacher:
