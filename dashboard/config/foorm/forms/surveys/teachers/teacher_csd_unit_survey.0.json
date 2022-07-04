@@ -29,7 +29,7 @@
               "name": "unit_name",
               "startWithNewLine": false,
               "defaultValueExpression": "{unit_number}",
-              "readOnly": true,
+              "readOnly": false,
               "choices": [
                 {
                   "value": 1,
@@ -65,7 +65,8 @@
           "title": "Panel to hold variables for foorm. HIDE AFTER TESTING",
           "startWithNewLine": false,
           "innerIndent": 3,
-          "indent": 3
+          "indent": 3,
+          "visible": "true"
         },
         {
           "type": "html",

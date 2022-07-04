@@ -150,7 +150,7 @@ class Level < ApplicationRecord
   end
 
   def unplugged?
-    game && game.unplugged?
+    game&.unplugged?
   end
 
   def finishable?
