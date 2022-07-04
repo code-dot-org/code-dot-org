@@ -2559,6 +2559,8 @@
           "type": "Recurso"
         },
         "computer-science-practices/csd/2021": {
+          "name": "Prácticas de Informática",
+          "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
           "type": "Reflexión"
         },
         "paper-prototypes/csd/2021": {
@@ -2764,7 +2766,7 @@
           "type": "Vídeo"
         },
         "analog_sensors/csd/2021": {
-          "name": "Sensores análogos",
+          "name": "Sensores analógicos",
           "url": "https://drive.google.com/file/d/11XwNv2922DAvixhreVXgfxnTS9SHa8ds/view?usp=sharing",
           "type": "Recurso"
         },
@@ -2938,14 +2940,14 @@
           "type": "Diapositivas"
         },
         "representation-matters-exemplar-2019/csd/2021": {
-          "name": "Asuntos de representación",
+          "name": "La Representación Importa",
           "type": "Ejemplo"
         },
         "meals-data-resource-2019/csd/2021": {
           "type": "Recurso"
         },
         "representation-matters/csd/2021": {
-          "name": "Asuntos de representación",
+          "name": "La Representación Importa",
           "type": "Guía de Actividad"
         },
         "representing-information-1/csd/2021": {
@@ -3196,159 +3198,228 @@
           "type": "Recurso"
         },
         "introduction_to_sprites/csd/2021": {
+          "url": "https://youtu.be/aUHzpGt9nso",
           "type": "Vídeo"
         },
         "the_animation_tab/csd/2021": {
           "name": "La pestaña de Animación",
+          "url": "https://youtu.be/DQPruYTJ0Fk",
           "type": "Vídeo"
         },
         "animation_tab/csd/2021": {
+          "name": "Pestaña de Animación",
+          "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
           "type": "Recurso"
         },
         "sprites_1/csd/2021": {
           "name": "Sprites",
+          "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
           "type": "Recurso"
         },
         "sprite_properties/csd/2021": {
           "name": "Propiedades de Sprite",
+          "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
           "type": "Recurso"
         },
         "mini-project-captioned-scenes-2020/csd/2021": {
+          "name": "Mini-Proyecto - Escenas Subtituladas",
+          "url": "https://docs.google.com/document/d/1zC5eycqT-4oHrNjzyPncscHfwh-T6TZEQEtQ2lOpp6o/edit",
           "type": "Ejemplo"
         },
         "captioned-scenes/csd/2021": {
+          "name": "Escenas Subtituladas",
+          "url": "https://docs.google.com/document/d/1nnknkBeMA8SkIyvVcffbOKV_i5xQmLPGRMwJxORuVwQ/edit",
           "type": "Rúbrica"
         },
         "sprite-scene-planning/csd/2021": {
+          "name": "Planificación de Escenas de Sprite",
+          "url": "https://docs.google.com/document/d/10TvBlmIsCVtf4encEutlYmzU30voTyE1L3PNXQQFobw/edit",
           "type": "Guía de Actividad"
         },
+        "random-dot-flipbook/csd/2021": {
+          "name": "Libro Animado de Puntos Aleatorios",
+          "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit"
+        },
+        "random-sprite-flipbook/csd/2021": {
+          "name": "Libro Animado de Sprite Aleatorio",
+          "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit"
+        },
         "youtube-flipbook/csd/2021": {
+          "name": "Ejemplo de Libro Animado - por Marnic Bos",
+          "url": "https://youtu.be/hol0p29cd8o",
           "type": "Vídeo"
         },
         "introduction_to_the_draw_loop/csd/2021": {
+          "url": "https://youtu.be/G6QJeuHhqCM",
           "type": "Vídeo"
         },
         "the_draw_loop/csd/2021": {
           "name": "El bucle 'dibujar'",
+          "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
           "type": "Recurso"
         },
         "animating-sprites/csd/2021": {
           "name": "Movimiento de sprites",
+          "url": "https://youtu.be/G666sFzAg5g",
           "type": "Vídeo"
         },
         "the_counter_pattern/csd/2021": {
           "name": "El patrón del contador",
+          "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing",
           "type": "Recurso"
         },
         "animated-scene-planning-exemplar-2020/csd/2021": {
+          "name": "Planificación de Escena Animada",
+          "url": "https://docs.google.com/document/d/109GkaCj5HIBSELJ9SN2aLKSmnA3M2uo-yBiuua9DGkc/edit?usp=sharing",
           "type": "Ejemplo"
         },
         "animated-scene-1/csd/2021": {
+          "name": "Escena Animada",
+          "url": "https://docs.google.com/document/d/10pk8PAdaLzSAnmMvvCP8pYsYWXv6UyxzxN1k9M9ThpE/edit",
           "type": "Rúbrica"
         },
         "animated-scene/csd/2021": {
+          "name": "Escena Animada",
+          "url": "https://docs.google.com/document/d/1vYDwIgLOLPH4ymHusLyTo4Ydn5OEOCJ4rf5ZbQ9rrOQ/edit",
           "type": "Guía de Actividad"
         },
         "boolean_expressions/csd/2021": {
           "name": "Expresiones booleanas",
+          "url": "https://youtu.be/_j9nvYKaOVE",
           "type": "Vídeo"
         },
         "conditional_statements/csd/2021": {
           "name": "Sentencias condicionales",
+          "url": "https://youtu.be/TuLIK7DcPWs",
           "type": "Vídeo"
         },
         "booleans_and_comparison_operators/csd/2021": {
           "name": "Operadores booleanos y de comparación",
+          "url": "https://drive.google.com/file/d/1gGmtvyZpXVcH6Vrju9FX73X7qlZLIBvt/view?usp=sharing",
           "type": "Recurso"
         },
         "if_statements/csd/2021": {
           "name": "Sentencias si",
+          "url": "https://drive.google.com/file/d/1EmNUdnXpCIyJdd4p8k2q9OEK-4KNI7PO/view?usp=sharing",
           "type": "Recurso"
         },
         "if-else_statements_-_map_level_pdf_/csd/2021": {
           "name": "Sentencias si-si no",
+          "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
           "type": "Recurso"
         },
         "if_else_statements/csd/2021": {
           "name": "Sentencias `si/si no`",
+          "url": "https://youtu.be/6m6FFUJsOzo",
           "type": "Vídeo"
         },
         "interactive-card-exemplar-2020/csd/2021": {
           "name": "Tarjeta interactiva",
+          "url": "https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/",
           "type": "Ejemplo"
         },
         "interactive-card-marked-rubrics/csd/2021": {
+          "name": "Tarjeta Interactiva - Rúbricas Marcadas",
+          "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view",
           "type": "Ejemplo"
         },
         "interactive-card-project-guide-2019/csd/2021": {
           "name": "Tarjeta interactiva",
+          "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/",
           "type": "Guía de Proyecto"
         },
         "interactive-card-1-2-3-4/csd/2021": {
           "name": "Tarjeta interactiva",
+          "url": "https://docs.google.com/document/d/1ZbLM2oRl3eWGBY47oAtmcODga_sGi_DSq8WLVew9F5c/",
           "type": "Revisión por pares"
         },
         "interactive_card/csd/2021": {
           "name": "Tarjeta interactiva",
+          "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
           "type": "Rúbrica"
         },
+        "interactive_card_-_student_checklist/csd/2021": {
+          "name": "Tarjeta Interactiva - Lista de Control del Alumno",
+          "url": "https://docs.google.com/document/d/1v25XqBmYj3KmniWzQE4PTNrXcfPCsnSQGey0wTN2WHY/view"
+        },
         "extra_code_in_challenge_levels_1/csd/2021": {
+          "name": "Código Adicional en los Niveles de Desafío",
+          "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
           "type": "Recurso"
         },
         "velocity_1/csd/2021": {
           "name": "Velocidad",
+          "url": "https://youtu.be/zcP94yMYqrI",
           "type": "Vídeo"
         },
         "velocity_2/csd/2021": {
           "name": "Velocidad",
+          "url": "https://drive.google.com/file/d/10n2QcpY__sDlycr09Xar6o-2iDAb0P49/view?usp=sharing",
           "type": "Recurso"
         },
         "collision-detection-exemplar-2020/csd/2021": {
           "name": "Detección de colisiones",
+          "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
           "type": "Ejemplo"
         },
         "collision_detection_version_b_/csd/2021": {
+          "name": "Detección de Colisiones (Versión B)",
+          "url": "https://docs.google.com/document/d/1FquQ6g2xpWsJyXf1GFrBM33aL7mxn-htJpG8plRQ9MU/",
           "type": "Guía de Actividad"
         },
         "collision_detection_version_a_/csd/2021": {
+          "name": "Detección de Colisiones (Versión A)",
+          "url": "https://docs.google.com/document/d/18RKLr5ZwCX5OOpzpnQuekQMpas7JreTcQxL1TyCnv7o/",
           "type": "Guía de Actividad"
         },
         "collision_detection/csd/2021": {
           "name": "Detección de colisiones",
+          "url": "https://drive.google.com/file/d/1xPa35tY4P8GUXKSMp0F6OUTQjcDpMa6M/view?usp=sharing",
           "type": "Recurso"
         },
         "mini-project-guide-side-scroller-exemplar-2020/csd/2021": {
+          "name": "Guía de Mini-Proyectos - Desplazamiento Lateral",
+          "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
           "type": "Ejemplo"
         },
         "side-scroller-1/csd/2021": {
           "name": "Desplazamiento Lateral",
+          "url": "https://docs.google.com/document/d/1BcPO2oaU-mX3h2YVLeZtX3gSWcqG1BwR6TLnGjQDWH4/edit",
           "type": "Rúbrica"
         },
         "side-scroller/csd/2021": {
           "name": "Desplazamiento Lateral",
+          "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit",
           "type": "Guía de Proyecto"
         },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
           "name": "Velocidad y patrón del contador",
+          "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
           "type": "Recurso"
         },
         "flyer-game-project-guide-exemplar/csd/2021": {
+          "name": "Juego de Voladores - Guía de Proyecto",
+          "url": "https://docs.google.com/document/d/1dQ_JBSrcrt5MN5zqkghrxWg_YtP2rpn-jGOl0-EHdao/edit?usp=sharing",
           "type": "Ejemplo"
         },
         "flyer-game-1/csd/2021": {
           "name": "Juego de volantes",
+          "url": "https://docs.google.com/document/d/1NWIeTvJCpHOauxVZGRdDCpsinbXb6Oo_erT5s-_INCY/edit",
           "type": "Rúbrica"
         },
         "flyer-game/csd/2021": {
           "name": "Juego de volantes",
+          "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit",
           "type": "Guía de Proyecto"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "Funciones",
+          "url": "https://youtu.be/3ZfqwCuDZaQ",
           "type": "Vídeo"
         },
         "functions_1/csd/2021": {
           "name": "Funciones",
+          "url": "https://drive.google.com/file/d/1m4GATuAOfc3cL-kgb5Bmc4yciCNyxgVH/view?usp=sharing",
           "type": "Recurso"
         },
         "planning-your-platform-game-exemplar-2020/csd/2021": {
@@ -3824,6 +3895,7 @@
           "type": "Recurso"
         },
         "extra_code_in_challenge_levels/csd/2021": {
+          "name": "Código Adicional en los Niveles de Desafío",
           "url": "https://docs.google.com/document/d/1TwY87H6Ul3H2q7nynj-HESE8Bird9KX31Qw7e2cyulI/view",
           "type": "Recurso"
         },

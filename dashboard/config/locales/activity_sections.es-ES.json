@@ -2129,7 +2129,7 @@
           "progression_name": "Experimento con sensores"
         },
         "17d9e588-8fc8-413a-acba-32158ed4ca67": {
-          "progression_name": "Sensores análogos"
+          "progression_name": "Sensores analógicos"
         },
         "2c914fd2-35e7-4455-8379-38c34e50c040": {
           "progression_name": "Sensores de lectura"
@@ -4228,7 +4228,7 @@
           "progression_name": "Sensores de lectura"
         },
         "49edfef0-606a-428e-ae2a-5e5d14105bb5": {
-          "progression_name": "Sensores análogos"
+          "progression_name": "Sensores analógicos"
         },
         "27ca6fe8-340f-4654-bbc2-36586b97b73c": {
           "progression_name": "Sucesos de sensor"
@@ -5522,7 +5522,7 @@
           "progression_name": "Experimento con sensores"
         },
         "851eccb4-1413-4364-8a74-0f5d7c0c584b": {
-          "progression_name": "Sensores análogos"
+          "progression_name": "Sensores analógicos"
         },
         "e454afc7-ded1-4152-9fb2-3c901a2029fa": {
           "progression_name": "Sensores de lectura"
@@ -11630,6 +11630,9 @@
             null
           ]
         },
+        "a78fb652-de9d-4d40-9024-8e6c4d15ee18": {
+          "name": "Diario "
+        },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
           "name": "Tarjetas Modelo en Laboratorio de Inteligencia Artificial",
           "tips": [
@@ -11656,6 +11659,12 @@
         },
         "1503235c-6a46-401d-85f0-1fa291901771": {
           "progression_name": "Personalizando tu Aplicación"
+        },
+        "fab00d1e-0bf0-4f6c-866f-388441b6505d": {
+          "name": "Diario "
+        },
+        "3227657f-0bd2-4f06-970c-445432836588": {
+          "name": "Diario "
         },
         "42abdf12-61c8-48a4-8118-6f0b713e28dc": {
           "progression_name": "Ejemplo de Aplicación: Clasificación de Zoológico"
@@ -11741,6 +11750,9 @@
         },
         "cf7fec91-b8c2-4b68-8e78-f10c536c2d3f": {
           "name": "Diario"
+        },
+        "bcdd8b8e-db28-42f7-9ddf-d24579e170d5": {
+          "name": "Diario "
         },
         "02eaa4ce-ab4c-485c-bb2d-08cebd8c5e17": {
           "progression_name": "Modelo Safari"
@@ -12283,7 +12295,7 @@
         },
         "ce9819ba-4ea2-4327-9ed9-6e56f4bf3400": {
           "tips": [
-            null
+            "**Rúbrica y Lista de Control:** Los alumnos disponen de dos recursos que pueden utilizar para la autorreflexión y para asegurarse de que van por el buen camino: la rúbrica y la lista de control del alumno. Recomendamos que los alumnos utilicen la lista de comprobación para su propia autoevaluación y reflexión, ya que puede ser más fácil de digerir y comprender al revisar su propio proyecto. Sin embargo, recomendamos a los profesores que utilicen la rúbrica completa para evaluar los proyectos, a fin de dar una respuesta más precisa a los alumnos. Puedes ver ejemplos de esto con el recurso Ejemplo de Rúbricas Marcadas en la parte superior del plan de la lección (sólo visible para los profesores verificados)"
           ]
         },
         "beeb8da7-5283-44e8-a1b5-0eb3987e226b": {
@@ -12804,7 +12816,8 @@
           ]
         },
         "a0ed3723-a361-4988-ae6a-3b9db7e7b151": {
-          "name": "Programando el Hardware"
+          "name": "Programando el Hardware",
+          "description": "**Transición:** Envía a los estudiantes a Code Studio"
         },
         "9fc2aec4-9f01-4726-82a7-306e613d936e": {
           "description": "**Preguntas a Tener en Cuenta con el Vídeo:**\n\n-   ¿Cuál es la diferencia entre hardware y software?\n-   ¿Qué hace el sistema operativo de un ordenador?",
@@ -13159,6 +13172,7 @@
           "progression_name": "Extra"
         },
         "eb895db7-aeb1-4efe-9eb8-c314cd7a2621": {
+          "name": "Diario ",
           "description": "**Sugerencia:** Hoy, en lugar de elegir sólo un elemento de un array, hemos utilizado el bloque `playNotes` para hacer algo con cada elemento.  Piensa en otros arrays que hayas visto.  ¿Cómo podría ser útil hacer algo en cada elemento de un array?",
           "tips": [
             "Los alumnos deben reconocer que el bloque `playNotes` reproduce cada nota del array en secuencia, y extender esa idea a otras ocasiones en las que sea útil operar sobre cada elemento de un array.  Esto les preparará para la siguiente lección, en la que se utilizan bucles `for` para operar sobre cada elemento de una lista en secuencia."
@@ -13178,7 +13192,8 @@
           "description": "Hacer algo en cada elemento de un array es un problema muy común en Informática, y averiguar cómo resolver este problema nos permitirá escribir programas más eficientes. Hoy vamos a centrarnos en tres cosas que nos ayudarán con este problema:\n\n1.  El uso del índice para hacer algo a los elementos de un array\n2.  Llevar la cuenta de un contador para poder movernos a través de los elementos de un array por el índice\n3.  Usar la longitud de un array para saber cuándo hemos llegado al final"
         },
         "e91b0fe3-8fe2-463c-b2fe-349fcbc510b7": {
-          "name": "Arreglos y bucles 'desde'"
+          "name": "Arreglos y bucles 'desde'",
+          "description": "**Transición:** Envía a los estudiantes a Code Studio"
         },
         "d4f41f0f-3bd8-493c-b4c6-9ec09058247b": {
           "progression_name": "Programas que se repiten"
@@ -13201,7 +13216,7 @@
         },
         "020265fb-ab0b-4d77-8cf9-30fb0228a37b": {
           "name": "Diario",
-          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [\\[cinco prácticas de  Descubrimientos CS\\]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
+          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [[cinco prácticas de  Descubrimientos CS]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
         },
         "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
           "name": "¿Qué hace un sensor?",
@@ -13348,7 +13363,7 @@
         "0516be14-10b2-4124-af7c-3d76c5177d95": {
           "description": "**Agrupa:** Coloca a los alumnos en grupos de 2 a 4 para este proyecto. A tu criterio, puedes elegir que los estudiantes formen grupos más grandes o que trabajen de forma independiente.\n\n**Distribuye:** Proporciona una copia de la guía del proyecto a cada grupo. Como clase, revisa los diferentes pasos del proyecto y dónde aparecen en la guía del proyecto. \n\nDistribuye la rúbrica o la lista de control del estudiante a cada uno de ellos. Pídeles que revisen este recurso para que sepan desde el principio qué componentes del proyecto se van a buscar.",
           "tips": [
-            null
+            "**Rúbrica y Lista de Control:** Los alumnos disponen de dos recursos que pueden utilizar para la autorreflexión y para asegurarse de que van por el buen camino: la rúbrica y la lista de control del alumno. Recomendamos que los alumnos utilicen la lista de comprobación para su propia autoevaluación y reflexión, ya que puede ser más fácil de digerir y comprender al revisar su propio proyecto. Sin embargo, recomendamos a los profesores que utilicen la rúbrica completa para evaluar los proyectos, a fin de dar una respuesta más precisa a los alumnos. Puedes ver ejemplos de esto con el recurso Ejemplo de Rúbricas Marcadas en la parte superior del plan de la lección (sólo visible para los profesores verificados)"
           ]
         },
         "c6e5a606-d3cb-453d-91a9-d1b3d5ae7e5f": {
@@ -13763,6 +13778,7 @@
           ]
         },
         "46bfc542-d2d8-4124-a4cd-d7e53fff618e": {
+          "name": "Diario ",
           "tips": [
             null
           ]
@@ -13924,7 +13940,7 @@
         },
         "24a8f1ab-d8eb-4738-b114-0534be713085": {
           "tips": [
-            null
+            "**Rúbrica y Lista de Control:** Los alumnos disponen de dos recursos que pueden utilizar para la autorreflexión y para asegurarse de que van por el buen camino: la rúbrica y la lista de control del alumno. Recomendamos que los alumnos utilicen la lista de comprobación para su propia autoevaluación y reflexión, ya que puede ser más fácil de digerir y comprender al revisar su propio proyecto. Sin embargo, recomendamos a los profesores que utilicen la rúbrica completa para evaluar los proyectos, a fin de dar una respuesta más precisa a los alumnos. Puedes ver ejemplos de esto con el recurso Ejemplo de Rúbricas Marcadas en la parte superior del plan de la lección (sólo visible para los profesores verificados)"
           ]
         },
         "84929552-ebfc-43ef-a97d-f1857609d4ae": {
@@ -14374,7 +14390,7 @@
         "f52c22d8-72a7-44d1-91d2-66aacf92c1a8": {
           "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Qué es un sprite?\n-   ¿Qué son las propiedades?\n-   ¿Qué problema resuelven los sprites?",
           "tips": [
-            null
+            "**Vocabulario Clave:**\n\n-   **Sprite** - Un personaje en la pantalla con propiedades que describen su ubicación, movimiento y aspecto.\n-   **Propiedad** - Una etiqueta para una característica de un sprite, como su ubicación y apariencia.\n-   **Notación de Punto** - La forma en que se utilizan las propiedades de los sprites en el Game Lab, conectando el sprite y la propiedad con un punto.\n\nLos sprites son un concepto muy complejo, y los alumnos pueden tener dificultades para entender qué son exactamente. El aspecto más importante para que los alumnos lo entiendan es que los sprites les permiten organizar mucha información sobre algo que quieren dibujar en la pantalla.\n\nLos alumnos deben establecer la conexión entre las propiedades y las variables, ya que ambas contienen información que su programa necesita para funcionar. Se accede a las propiedades a través de los sprites, y los sprites del Laboratorio de Juegos ya tienen propiedades específicas que se crean automáticamente cuando los alumnos crean cada sprite, como la posición X, la altura y la rotación.\n\nLos sprites resuelven el problema de organizar una gran cantidad de información sobre cómo debe dibujarse algo en la pantalla. En lugar de crear nuevas variables para mantener toda esa información, los sprites utilizan propiedades para mantener toda la información sobre una cosa que se dibuja en la pantalla.\n\n**Esquina del Contenido:** El sprite es un tipo de datos llamado objeto. Aunque todavía no estamos introduciendo explícitamente el concepto de objeto, los alumnos deben entender que un sprite es un tipo de valor diferente a los que hemos visto antes, que puede contener referencias a muchos más valores."
           ],
           "progression_name": "Video: introducción a los sprites"
         },
@@ -14382,8 +14398,9 @@
           "progression_name": "Desarrollo de Habilidades"
         },
         "8f56a7b9-e17b-4173-bae9-c996824270b4": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Cuáles son los pasos para añadir una imagen a un sprite?\n-   ¿Cuáles son las diferentes formas de obtener una imagen?",
           "tips": [
-            null
+            "Asegúrate de que los alumnos entienden que tendrán que crear la imagen (o animación) en la pestaña de animación y luego añadir la animación al sprite utilizando el bloque [\\`setAnimation\\`(#f78183)](/docs/gamelab/setAnimation/). Los estudiantes pueden confundirse por el uso de la palabra \"animación\" para imágenes individuales, pero en el Laboratorio de Juegos, las imágenes fijas se consideran \"animaciones\" con un solo cuadro.\n\nLos alumnos pueden utilizar una animación ya existente en la biblioteca de la pestaña de animación, cargar una desde su ordenador o crear la suya propia utilizando las herramientas de dibujo proporcionadas. Además, los estudiantes pueden utilizar las herramientas de dibujo para modificar las imágenes que han elegido de la biblioteca o que han subido.\n\n**¡Alerta de Malentendidos!**\nMuchos alumnos pueden confundir ahora los conceptos de un sprite, su animación y la imagen que dibuja en la pantalla. En las próximas lecciones, ten cuidado con este error y refuerza la idea de que la animación de un sprite es sólo una de sus propiedades, la que controla la imagen que se dibuja en la pantalla. Recuerda a los alumnos que un mismo sprite puede tener diferentes animaciones a lo largo del programa, al igual que pueden cambiar otras propiedades, y que dos o más sprites pueden compartir la misma animación."
           ],
           "progression_name": "Video: pestaña de animación"
         },
@@ -14405,20 +14422,37 @@
         "2057627a-c665-4a63-8aed-c1123ce9796a": {
           "name": "Desafíos",
           "tips": [
-            null
+            "**Nivel 11e - Encontrar una imagen en línea**: Como no podemos saber qué sitios pueden estar bloqueados en tu zona, hemos evitado indicar a los estudiantes un motor de búsqueda específico. No todos los motores de búsqueda facilitan la configuración de los filtros de Creative Commons - algunos de los más fáciles son:\n\n-   [Búsqueda de Creative Commons](https://search.creativecommons.org/)\n-   [Búsqueda Avanzada de Imágenes de Google](https://www.google.com/advanced_image_search)\n-   [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n-   [Flickr Creative Commons](https://www.flickr.com/creativecommons/)"
           ],
           "progression_name": "Desafíos"
         },
+        "60981e3b-2e60-4bd0-9708-372bf36d6a5e": {
+          "description": "**Vocabulario Clave:**\n\n-   **Sprite** - Un personaje en la pantalla con propiedades que describen su ubicación, movimiento y aspecto.\n-   **Propiedad** - Una etiqueta para una característica de un sprite, como su ubicación y apariencia.\n-   **Notación de Punto** - La forma en que se utilizan las propiedades de los sprites en Game Lab, conectando el sprite y la propiedad con un punto."
+        },
         "7fe0e935-1853-4c68-a62c-332e86840c6d": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "**Pregunta del Día:  ¿Cómo podemos usar los sprites para ayudarnos a mantener un seguimiento de mucha información en nuestros programas?**\n\n**Sugerencia:** Hasta ahora hemos sido capaces de cambiar la ubicación y la imagen de un sprite. ¿Qué más podrías querer cambiar de tus sprites?"
         },
         "5989291d-e9d4-4f14-bdf6-399b69b96cec": {
+          "description": "\\*\\* Compartir:\\*\\* Permite a los estudiantes compartir sus ideas.",
           "tips": [
-            null
+            "Este debate hace que los alumnos piensen en las diferentes propiedades que puede tener un sprite y les prepara para la siguiente lección, que trata explícitamente las propiedades de los sprites."
           ]
         },
         "b6e69712-d43e-4ca8-8802-741420948bef": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
+        },
+        "4d7800ef-fda9-4e2f-9094-742ad082214e": {
+          "description": "**Sugerencia:** ¿Cuál es tu definición de un sprite?  ¿Qué propiedades de los sprites sabes utilizar?  ¿Qué otras propiedades de los sprites podrían ser útiles?\n\nDeja que los alumnos reflexionen por su cuenta y luego con un compañero antes de compartirlo con todo el grupo. No pasa nada si los alumnos no tienen una definición exacta de un sprite, pero deben reconocer que un sprite es una parte del programa que tiene varias propiedades diferentes que controlan su ubicación y apariencia."
+        },
+        "5d2ffe80-c763-4ae6-8632-703e41f4f0ee": {
+          "description": "Hasta ahora, sólo hemos podido controlar la ubicación y la animación de nuestro sprite, pero hoy vamos a aprender a actualizar otras propiedades del sprite para poder hacer programas aún mejores."
+        },
+        "eba90858-374c-49fd-8bf7-391446b7b506": {
+          "description": "**Pregunta del Día: ¿Cómo podemos usar las propiedades de los sprites para cambiar su apariencia en la pantalla?**"
+        },
+        "903979dd-20fe-4394-8663-c67a84bcd0d7": {
+          "description": "**Agrupar:** Coloca a los alumnos en parejas.\n\n**Transición:** Envía a los estudiantes a Code Studio."
         },
         "08b6ad2a-7ff0-429d-bc3b-e83030e2fcbc": {
           "progression_name": "Predicción"
@@ -14438,16 +14472,30 @@
         "9925febf-964d-468b-8ad0-b76a389d4498": {
           "progression_name": "Desafíos"
         },
+        "f287b9b0-8bd6-4b3c-9ce1-d660ec302b13": {
+          "description": "**Pregunta del Día: ¿Cómo podemos usar las propiedades de los sprites para cambiar su apariencia en la pantalla?**\n\n**Sugerencia del Diario:** ¿Cuál es una forma en la que las propiedades de los sprites son iguales a las variables?  ¿Cuál es una forma en que las propiedades de los sprites son diferentes de las variables?"
+        },
         "f455bf72-f2c8-4bf2-970f-af533ef80342": {
+          "description": "**Debatir:** Permite a los alumnos debatir en parejas o en pequeños grupos antes de compartirlo con todo el grupo.",
           "tips": [
-            null
+            "Los alumnos pueden observar que las propiedades de los sprites y las variables se parecen en que ambas almacenan información. Se diferencian en que las variables pueden ser cualquier cosa, pero los sprites tienen propiedades particulares que se utilizan de determinadas maneras en la pantalla."
           ]
         },
         "44fd5b1c-5d9e-40b5-8eca-a817778563f9": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
         "bc610d8b-c45e-48e4-a5de-63a7f8bf5a3b": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "![](https://curriculum.code.org/media/uploads/Screen-Shot-2020-04-01-at-3.51.06-AM.png)\n\n**Pantalla:** Muestra el dibujo animado para que los estudiantes lo vean.\n\n**Sugerencia:** Mira el dibujo animado que se hizo en el Laboratorio de Juegos. ¿Qué crees que debería decir el extraterrestre?\n\n**Compartir:** Permite que los voluntarios compartan sus ideas."
+        },
+        "21269f39-79c8-4b91-8ae8-48a13a3da5fd": {
+          "description": "Nos hemos divertido mucho dibujando cosas y usando nuestros sprites, pero ha faltado una cosa en nuestros dibujos del Laboratorio de Juegos: ¡texto! Hoy vamos a aprender a añadir texto a los proyectos del Laboratorio de Juegos."
+        },
+        "621ef750-87ee-4947-a0d7-4bf1964b1fbd": {
+          "description": "**Pregunta del Día: ¿Cómo podemos utilizar el texto para mejorar nuestras escenas y animaciones?**"
+        },
+        "6c15b25f-3b31-4a86-a747-1599391da0c2": {
+          "description": "**Transición:** Envía a los alumnos a Code Studio."
         },
         "de715c3f-0860-4e19-acb1-ebcb230a19a8": {
           "progression_name": "Predicción"
@@ -14467,21 +14515,37 @@
         "06559d3f-7ebd-4356-a06d-c16cdeaebde5": {
           "progression_name": "Desafíos"
         },
+        "d437ce8a-62d4-422b-9626-0f7ef6f4603f": {
+          "name": "Diario ",
+          "description": "**Pregunta del Día: ¿Cómo podemos utilizar el texto para mejorar nuestras escenas y animaciones?**\n\n**Sugerencia:** Has dibujado tanto con texto como con figuras en la pantalla.\n\n-   ¿De qué manera dibujar con texto es similar a dibujar figuras?\n-   ¿En qué se diferencia dibujar con texto y dibujar con figuras?"
+        },
         "7e2e7a3e-fd91-4ab5-8b46-f8ae96c91169": {
+          "description": "**Compartir:** Si hay tiempo, permite a los alumnos compartir sus respuestas.",
           "tips": [
-            null
+            "Las respuestas de los alumnos a la pregunta pueden variar, pero algunas similitudes son que ambos utilizan el plano de coordenadas, y que se dibujan automáticamente, a diferencia de los sprites, que deben utilizar el comando [\\`drawSprites\\`(#fff176)](/docs/gamelab/drawSprites/). Una posible diferencia es que es más difícil controlar el tamaño exacto del texto, ya que la cantidad de texto y el tamaño de la fuente no son tan específicos como los parámetros de altura y anchura. "
           ]
         },
         "dca1c201-75a3-4b5f-9100-9e7da42aeec2": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
         "67d8c4d5-fda2-47c0-a7a3-164eb669718f": {
-          "name": "Revisión"
+          "name": "Revisión",
+          "description": "**Sugerencia:** Escribe todos los bloques que recuerdes del Laboratorio de Juegos. Asegúrate de que sabes lo que hace cada uno, especialmente las entradas, o parámetros, de cada uno de los bloques."
         },
         "0b250aa0-f3fa-4530-bef8-e328e4d93620": {
+          "description": "\\*\\* Compartir:\\*\\* Permite a los estudiantes compartir lo que recuerdan como una revisión de grupo.",
           "tips": [
-            null
+            "El objetivo de este debate es repasar los diferentes bloques y conocimientos que los alumnos han aprendido. Cuando los alumnos hablen de los diferentes bloques, intenta dirigir la conversación hacia la forma en que pueden utilizarse de forma creativa, para enlazar con el tema principal del día."
           ]
+        },
+        "1fc3fa43-7278-4924-92ed-ff3231846092": {
+          "description": "Ya has aprendido a hacer algunas cosas realmente geniales en el Laboratorio de Juegos. Hoy tendrás la oportunidad de ponerlas todas juntas para crear una escena interesante que compartirás con el mundo. Eso significa que, en lugar de intentar recrear la idea de otra persona, vas a tener que crear una idea propia, ¡así que es hora de ser creativo!"
+        },
+        "fcdd3f31-ae71-41fb-8ba3-d989576ec372": {
+          "description": "**Pregunta del Día: ¿Cómo podemos utilizar el Laboratorio de Juegos para expresar nuestra creatividad?**"
+        },
+        "20942849-9b2e-42e1-8259-e38ee03e01f6": {
+          "description": "**Distribuir:** (Opcional) repartir copias de la guía de actividad. Los alumnos pueden utilizar esta hoja para planificar la escena que crearán al final de esta lección, pero la planificación también puede completarse en papel de borrador.\n\n**Transición** Envía a los estudiantes a Code Studio."
         },
         "d4865d33-6382-4b57-b532-6949d5621973": {
           "progression_name": "Escenas de sprites"
@@ -14499,34 +14563,53 @@
           "progression_name": "Revisa tu Escena"
         },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
+          "name": "Paseo por la Galería",
+          "description": "Permite que los estudiantes recorran la sala y vean las imágenes que cada uno de sus compañeros ha codificado.  Celebra todas las ideas diferentes que los estudiantes han sido capaces de poner en práctica con el mismo código básico.",
           "tips": [
-            null
+            "Puedes optar por formalizar este proceso haciendo que cada alumno escriba una cualidad positiva de cada proyecto, o haciendo que los alumnos \"saquen nombres\" para comentar el trabajo de un compañero en particular."
           ]
         },
         "4638c8d2-4376-4673-979e-66a86d260573": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "**Pregunta del Día: ¿Cómo podemos utilizar el Laboratorio de Juegos para expresar nuestra creatividad?**\n\n**Sugerencia:** ¿Cuál ha sido la forma especialmente creativa en la que has visto a otra persona utilizar los bloques hoy?"
         },
         "760b0216-8c5d-4954-ac35-fd42c527ac66": {
+          "description": "**Compartir:** Haz que los estudiantes compartan lo que aprecian de los proyectos de sus compañeros. Puedes hacer esto al estilo de las \"palomitas de maíz\", en el que cada estudiante que responde elige a la siguiente persona para compartir.",
           "tips": [
-            null
+            "Este debate debe servir para celebrar lo que los alumnos han conseguido. A medida que los alumnos compartan lo que han visto, anímalos a aprender unos de otros y a hacer preguntas si no estaban seguros de cómo hacer algo. Destaca cómo los alumnos han sido capaces de hacer cosas muy diferentes con la misma herramienta."
           ]
         },
         "b7a6c643-6f1d-48c2-8a04-ec02e409ab09": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
+        "8ba6257d-a227-4ba8-884e-f2b516a73da4": {
+          "description": "**Pantalla:** Mostrar [Ejemplo de Flipbook - por Marnic Bos - Vídeo.](https://www.youtube.com/watch?v=hol0p29cd8o&feature=youtu.be)\n\n**Sugerencia:** Este video muestra un flipbook para hacer animación. En tus propias palabras, ¿cómo funciona? ¿Por qué \"engaña a nuestros ojos\" para que piensen que algo se mueve?"
+        },
         "c490c403-c5dc-4755-a03b-1532565b1119": {
+          "description": "**Debatir:** Pide a los alumnos que escriban sus ideas de forma independiente, que las compartan con sus compañeros y que las compartan con todo el grupo.",
           "tips": [
-            null
+            "\\*\\* Objetivo:\\*\\* Este debate debe introducir algunos conocimientos clave sobre la animación. Los alumnos deben entender que la clave es ver muchas imágenes seguidas que son ligeramente diferentes. Introduce la palabra de vocabulario \"fotograma\" como una de esas muchas imágenes, una sola imagen dentro de una animación. A continuación, explica que pronto los alumnos crearán sus propias animaciones. "
           ]
+        },
+        "fec359dd-3f5c-4956-a6ba-037f6da3460b": {
+          "description": "Empezaremos aprendiendo cómo hacer animaciones, no sólo imágenes fijas. Para ello necesitamos  conseguir que nuestros programas dibujen muchas imágenes por segundo. Nuestros ojos los difuminarán para que parezca un movimiento suave. Para hacer esto, sin embargo, vamos a necesitar el aprendizaje de una nueva e importante herramienta."
+        },
+        "bfb74221-6537-4c48-8e03-2f536bc27635": {
+          "description": "**Pregunta del Día: ¿Cómo podemos animar nuestras imágenes en el Laboratorio de Juegos?**"
         },
         "6cf8f316-c11f-4cc5-85a3-1596303e4317": {
+          "description": "**Vídeo:** Observa el vídeo de introducción al bucle de dibujo.",
           "tips": [
-            null
+            "**Programación por Parejas:** Esta lección introduce un nuevo y desafiante paradigma. Conviene que los alumnos programen por parejas. Recuerda dar a los estudiantes instrucciones claras sobre cuándo cambiar el conductor y el navegante."
           ]
         },
+        "a2b62aaa-e34a-4413-b6cc-710fa82cdc5f": {
+          "description": "**Demostración:** Si lo deseas, utiliza los manipulativos suministrados para realizar una demostración práctica y explorar cómo se conectan el bucle de dibujo y las animaciones."
+        },
         "18bcf449-d684-4e93-abbd-5af4e82d1e7b": {
+          "description": "**Pregunta a tener en cuenta con el vídeo:**\n\n-   Qué hace la función dibujar?",
           "tips": [
-            null
+            "**Objetivo:**\n\nLa función dibujar ejecuta el mismo código una y otra vez en un bucle, por lo que a menudo se llama \"el bucle de dibujo\". Esto crea un efecto de animación al cambiar lo que se dibuja en una pequeña cantidad cada vez que se ejecuta la función de dibujo. Se puede comparar con un libro físico, que puede animar una imagen cambiándola ligeramente en cada página.\n\n**¡Alerta de Malentendido!**\n\nCuando el bucle de dibujo se ejecuta, no \"borra\" el dibujo anterior, por lo que seguirá mostrando cualquier cosa que no haya sido cubierta por el nuevo bucle de dibujo. Si los alumnos no añaden un \"fondo\" al principio del bucle de dibujo, seguirán viendo todas las imágenes dibujadas en la pantalla anteriormente."
           ],
           "progression_name": "Video: introducción al bucle dibujar"
         },
@@ -14560,28 +14643,45 @@
           ],
           "progression_name": "Desafíos"
         },
+        "ae283e61-6157-489e-8159-5789906bf694": {
+          "description": "**Pregunta del Día: ¿Cómo podemos animar nuestras imágenes en el Laboratorio de Juegos?**"
+        },
         "4e97aa36-b285-40f3-83cb-383e83158dc5": {
+          "description": "**Sugerencia:** ¿Cómo nos ayuda el bucle de dibujo a hacer animaciones?",
           "tips": [
-            null
+            "**Entendimiento Clave:** Hay muchos conceptos erróneos comunes con el bucle de dibujo. Asegúrate de que los alumnos entiendan lo siguiente:\n\n-   El bucle de dibujo se ejecuta después de todo el resto del código en tu programa. En realidad, no importa dónde se encuentra en tu programa.\n-   El bucle de dibujo es ejecutado por el Laboratorio de Juegos a una velocidad constante de 30 cuadros por segundo. En realidad, no necesitas llamar a la función tú mismo.\n-   Los \"fotogramas\" en el Laboratorio de Juegos pueden ser considerados como hojas de transparencia. A menos que dibujes un fondo, todas tus nuevas formas o sprites simplemente aparecerán encima de las antiguas.\n-   Sólo debes tener un bucle de dibujo en tu programa."
           ]
+        },
+        "950f7b61-b6d2-47cb-a926-f32ba935bdc9": {
+          "description": "**Revisión:** Vuelve a los recursos que los alumnos vieron al principio de la lección (Vídeo, libros animados físicos) o en Ayuda y Consejos durante la lección. Comenta los conceptos erróneos que han surgido en la lección."
         },
         "b8c807cd-1cbc-45d4-8687-a083ae4aa65a": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
+        "153ee481-0b64-4a7a-948a-a016f9133783": {
+          "name": "Revisando las Propiedades del Sprite",
+          "description": "\\*\\* Revisión:\\*\\* En un trozo de papel de borrador, haz una lista de todas las propiedades de los sprites que se te ocurran y a qué aspecto de un sprite afectan.\n\n**Sugerencia:** ¿Qué tipo de animaciones podrías hacer si pudieras controlar estas propiedades? Considera la posibilidad de sumar y restar propiedades, o incluso de actualizar varias propiedades al mismo tiempo."
+        },
         "b8ce874f-8e09-4a78-aa14-7b32de942c69": {
+          "description": "**Debatir:** Permite a los alumnos compartir sus ideas con un compañero antes de compartirlas con toda la clase.",
           "tips": [
-            null
+            "El objetivo de este debate es que los alumnos empiecen a pensar en cómo podrían utilizar las distintas propiedades de los sprites que han visto hasta ahora para hacer animaciones con movimiento propio. Si a los alumnos les cuesta encontrar ideas, puedes limitar la pregunta a propiedades específicas. Por ejemplo:\n\n-   ¿Qué le ocurriría a un sprite si aumentaras constantemente su propiedad [\\`x\\`(#f78183)](/docs/gamelab/x/)?\n-   ¿Qué le ocurriría a un sprite si aumentaras constantemente su propiedad [\\`y\\`(#f78183)](/docs/gamelab/y/)?\n-   ¿Qué ocurre con otras propiedades, o con la combinación de varias propiedades?"
           ]
         },
+        "405ad4ad-0633-4613-9883-f54a8559b49b": {
+          "description": "**Pregunta del Día: ¿Cómo podemos controlar el movimiento de los sprites en el Laboratorio de Juegos?**"
+        },
         "f8383f8b-c898-4d3d-9e56-a117c8fda127": {
+          "name": " Niveles: Sprites e Imágenes",
           "description": "**Transición:** Envía a los alumnos a Code Studio."
         },
         "93b30d12-a9fb-473d-88e3-55b1c6948991": {
           "progression_name": "Predicción"
         },
         "a6ebae49-e1ca-4918-9d7f-4c0e33cdf00e": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Qué es el patrón de contador?\n-   ¿Cómo mueve el patrón de contador los sprites por la pantalla?",
           "tips": [
-            null
+            "**Objetivos:**\n\nLos alumnos pueden describir el patrón de contador de varias maneras. Asegúrate de que no se limiten a indicar los bloques o el código que utiliza el patrón contador. Deben entender que el patrón contador permite al programador actualizar el valor de una variable en un patrón que cuenta hacia arriba (o hacia abajo) en cada repetición del bucle de dibujo. Esto puede usarse para muchas cosas diferentes, como girar, crecer, encoger o temporizar, pero se usa más a menudo para mover sprites por la pantalla.\n\nCuando la propiedad X o Y de un sprite se actualiza en un patrón de contador, su posición cambia de forma consistente en el tiempo, haciendo que se mueva por la pantalla. Los estudiantes deben ser capaces de explicar que el movimiento en una animación es sólo un cambio de posición, y que el cambio de la posición X de un sprite hará que se mueva horizontalmente, y el cambio de la posición Y de un sprite hará que se mueva verticalmente."
           ],
           "progression_name": "Video: movimiento de sprites"
         },
@@ -14598,23 +14698,36 @@
           "progression_name": "Desafíos"
         },
         "a8fccbf5-3042-489e-97eb-19fb589b606d": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "**Pregunta del Día: ¿Cómo podemos controlar el movimiento de los sprites en el Laboratorio de Juegos?**\n\n**Sugerencia:** Has visto dos formas de crear animaciones con el bucle de dibujo: números aleatorios y el patrón de contador. ¿Cuál es el tipo de movimiento para el que te gustaría utilizar números aleatorios?  ¿Cuál es un tipo de movimiento para el que quisieras usar el patrón de contador?  ¿Hay algún movimiento que pueda combinar el patrón de contador y los números aleatorios?"
         },
         "06cad4ef-4d60-42e4-829c-02fd3364c31e": {
+          "description": "**Debatir:** Permite a los alumnos debatir con un compañero antes de compartirlo con toda la clase.",
           "tips": [
-            null
+            "Las respuestas de los alumnos pueden variar, pero los movimientos como la agitación utilizan números aleatorios, y los movimientos más intencionados utilizan el patrón del contador. Es menos importante que los alumnos tengan una respuesta concreta que el hecho de que sus respuestas reflejen una creciente comprensión del funcionamiento de las diferentes construcciones de programación.\n\nEs posible que los alumnos hayan visto cómo se utilizan los números aleatorios en una propiedad (rotación) y el patrón contador en otra (posición x) en uno de los retos, pero si hay tiempo, anímales a pensar qué pasaría si utilizaras el patrón contador para sumar o restar un número aleatorio a una propiedad del sprite, o para combinar las dos construcciones de otras maneras."
           ]
         },
         "814e725b-8ddc-466b-808a-1ea5687fbf6a": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
         "eb0d27fe-7158-49fe-9e96-bbc70d2fa158": {
-          "name": "Revisión"
+          "name": "Revisión",
+          "description": "**Sugerencia:** Anota todos los tipos de movimiento y animaciones que puedas recordar de la lección anterior. Asegúrate de saber qué bloques y patrones necesitas para hacer esos movimientos, y cuándo podrían ser útiles."
         },
         "a5361b9b-6e15-4bba-9b35-ae31a1e1b525": {
+          "description": "\\*\\* Compartir:\\*\\* Permite a los estudiantes compartir lo que recuerdan como una revisión de grupo.",
           "tips": [
-            null
+            "El objetivo de este debate es repasar los diferentes tipos de movimiento y animaciones que los alumnos han aprendido. Cuando los alumnos hablen de los distintos métodos, asegúrate de que mencionen por qué sería útil ese tipo de movimiento.  Pídeles que especifiquen qué podrían animar utilizando los distintos métodos."
           ]
+        },
+        "c0a4e139-2176-45dd-9d6d-aecd235122a6": {
+          "description": "Ahora que podemos controlar un poco mejor la forma en que se mueven nuestros sprites, vamos a tener la oportunidad de juntar todo para hacer una animación desde cero."
+        },
+        "75a9f378-c871-48f7-af42-468ab3b1343b": {
+          "description": "**Pregunta del Día: ¿Cómo podemos combinar diferentes patrones de programación para hacer una animación completa?**"
+        },
+        "688648c7-ae17-46ad-8eb4-c4198f741607": {
+          "description": "**Distribuir:** (Opcional) reparte copias de la guía de actividad. Los alumnos pueden utilizar esta hoja para planificar la animación que crearán al final de esta lección, pero la planificación también puede completarse en papel de borrador.\n\n**Transición** Envía a los estudiantes a Code Studio."
         },
         "d77db66e-6e3a-4e3a-82df-2499a5ad0efd": {
           "progression_name": "Ejemplo de Escena Animada"
@@ -14638,30 +14751,49 @@
           "progression_name": "Revisa tu Escena Animada"
         },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
+          "name": "Paseo por la Galería",
+          "description": "Permite que los estudiantes recorran la sala y vean las imágenes que cada uno de sus compañeros ha codificado.  Celebra todas las ideas diferentes que los estudiantes han sido capaces de poner en práctica con el mismo código básico.",
           "tips": [
-            null
+            "Puedes optar por formalizar este proceso haciendo que cada alumno escriba una cualidad positiva de cada proyecto, o haciendo que los alumnos \"saquen nombres\" para comentar el trabajo de un compañero en particular."
           ]
         },
         "8ad6136f-ee41-4b14-8866-2d4d8b0d9779": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "**Pregunta del Día: ¿Cómo podemos combinar diferentes patrones de programación para hacer una animación completa?**\n\n**Sugerencia:** ¿Cuál ha sido una forma interesante en la que has visto utilizar el movimiento de los sprites hoy?"
         },
         "f54152bb-4d02-459d-beea-ceeb422be02a": {
+          "description": "**Compartir:** Haz que los estudiantes compartan lo que aprecian de los proyectos de sus compañeros. Puedes hacer esto al estilo de las \"palomitas de maíz\", en el que cada estudiante que responde elige a la siguiente persona para compartir.",
           "tips": [
-            null
+            "Este debate debe servir para celebrar lo que los alumnos han conseguido.  A medida que los alumnos compartan lo que han visto, anímalos a aprender unos de otros y a hacer preguntas si no estaban seguros de cómo hacer algo. Destaca cómo los alumnos han sido capaces de hacer cosas muy diferentes con la misma herramienta."
           ]
         },
         "75ec8386-e5c1-480b-b5bf-999312f069b9": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
         "fbcd5bf0-4c6e-4142-934d-e4f4ebe17ad2": {
+          "name": "Introducción a las Condicionales",
+          "description": "**Mostrar:** Muestra las siguientes preguntas en la pizarra y pide a los alumnos que las respondan.",
           "tips": [
-            null
+            "Las dos últimas indicaciones piden a los alumnos que reaccionen ante una información que puede cambiar a medida que van respondiendo a las preguntas. Para que este punto quede claro, considera la posibilidad de moverte desde el frente del aula y hacia atrás, así como de golpear alternativamente el lápiz y no hacerlo, para que los estudiantes se den cuenta de que sus respuestas pueden cambiar según el momento en que estén respondiendo a cada pregunta."
           ]
         },
+        "11e53943-0950-46e1-923a-5652d92e731e": {
+          "description": "1.  Si tu apellido tiene más de cinco letras, dibuja un cuadrado en tu papel.\n2.  Si tu apellido tiene menos de siete letras, dibuja un círculo.\n3.  Si llevas algo verde, suma 3 + 2.\n4.  Si el profesor está golpeando su lápiz, dibuja una 'X'.\n5.  Si el profesor está en la parte delantera de la sala, dobla tu papel por la mitad."
+        },
+        "b61b3716-3fd4-47b0-8125-9ab8b0245db4": {
+          "description": "**Sugerencia:** Cuando programamos, le damos al ordenador instrucciones sobre lo que debe hacer.  ¿En qué se diferencian las instrucciones que acabas de seguir de las que hemos dado en el Laboratorio de Juegos?"
+        },
         "8ed5e3eb-5ffa-473f-b166-3ea936d0c9e7": {
+          "description": "**Pensar-Emparejar-Compartir:** Después de que los alumnos hayan tenido la oportunidad de escribir sus respuestas, permíteles hablar con un compañero antes de compartirlas en clase.",
           "tips": [
-            null
+            "Este debate debe preparar a los alumnos para investigar programas que reaccionen a condiciones cambiantes.  Los estudiantes deben darse cuenta de que no hay una \"única manera\" de responder a estas preguntas, y que las respuestas cambiarán según las condiciones cambiantes."
           ]
+        },
+        "d15a0f9e-d270-49e5-9afd-09b9eef33cef": {
+          "description": "Estas instrucciones eran un poco diferentes porque primero teníamos que decidir si algo era verdadero o no antes de saber qué debíamos hacer. En programación, las instrucciones que dependen de si algo es verdadero o no se llaman **condicionales**, y lo que se comprueba se llama **condición**.  Las condicionales son especialmente útiles cuando queremos que el programa reaccione a situaciones que cambian mientras el programa se está ejecutando."
+        },
+        "0a277e8b-1d71-485a-890a-b12cc826092b": {
+          "description": "**Vocabulario Clave:**\n\n-   **Condición** - Algo que un programa comprueba para ver si es verdadero antes de decidir si se realiza una acción.\n-   **Condicionales** - Sentencias que sólo se ejecutan bajo ciertas condiciones.\n\n**Pregunta del Día:  ¿Cómo pueden los programas reaccionar a los cambios mientras se están ejecutando?**"
         },
         "02bcc907-1476-4a48-90ea-a56c5c91e6d4": {
           "name": "Condicionales",
@@ -14671,8 +14803,9 @@
           "progression_name": "Predicción"
         },
         "230cf2d8-bf75-4b73-aa29-4e468f203e78": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Qué es una expresión booleana?\n-   ¿Cuál es una expresión que se evaluaría como verdadera?\n-   ¿Cuál es una expresión que se evaluaría como falsa?",
           "tips": [
-            null
+            "**Objetivos:**\n\n**Vocabulario Clave:**\n\n-   **Expresión Booleana** - en programación, una expresión que se evalúa como Verdadero o Falso.\n\nLos alumnos deben ser capaces de explicar que una expresión booleana es algo que es verdadero o falso, similar a una pregunta de sí o no. La manera más formal de decir esto es que las expresiones booleanas se evalúan como verdadero o falso. Esto significa que cuando el ordenador procesa una expresión booleana, comprueba si la expresión describe una situación que es verdadera o falsa, y luego utiliza el valor de verdadero o falso dondequiera que se encuentre la expresión.\n\nAlgunos ejemplos de expresiones booleanas que se evalúan como verdaderas son `3 > 1` y `4 <= 7`, pero anima a los alumnos a pensar en expresiones que podrían estar mejor representadas por variables, como `edadEstudiantes < 70` o `tamañoDeLaClase > 2`.\n\nAlgunos ejemplos de expresiones booleanas que se evalúan como falsas son `4 == 7`, `nombreEscuela == \"Hogwarts\"` y `añoActual < 1000`."
           ],
           "progression_name": "Video: booleanos"
         },
@@ -14683,8 +14816,9 @@
           "progression_name": "Desarrollo de Habilidades"
         },
         "030bb18c-bfaf-4c13-8ca7-9b251c26c162": {
+          "description": "**Pregunta a tener en cuenta con el vídeo:**\n\n-   ¿Cuándo deberías utilizar una sentencia if?",
           "tips": [
-            null
+            "**Objetivos:**\n\nEl argumento general de esta pregunta es que los programadores utilizan las sentencias `if` cuando quieren que el programa se ejecute de forma diferente en respuesta a distintas situaciones. Anima a los alumnos a pensar en situaciones concretas en las que esto sería así. Por ejemplo, tal vez quieran que sus personajes se muevan más rápido cuando un \"bonus\" esté en vigor, o tal vez quieran que aparezcan más enemigos cuando el jugador alcance un determinado nivel. También pueden querer que el programa reaccione de alguna manera si el usuario pulsa una tecla o hace clic con el ratón, o que un personaje cambie de animación si toca un elemento concreto."
           ],
           "progression_name": "Video: sentencias condicionales"
         },
@@ -14706,9 +14840,14 @@
         "30bb6b07-5257-4a19-89a0-02be767443b5": {
           "progression_name": "Desafíos"
         },
+        "9addd7c3-06f4-4522-b6b3-d469bf2290ad": {
+          "name": "Considerando las Condiciones",
+          "description": "**Pregunta del Día:  ¿Cómo pueden los programas reaccionar a los cambios mientras se están ejecutando?**\n\n**Vocabulario Clave:**\n\n-   **Condición** - Algo que un programa comprueba para ver si es cierto antes de decidir ejecutar una acción.\n-   **Condicionales** - Sentencias que sólo se ejecutan bajo ciertas condiciones.\n-   **Expresión Booleana** - En programación, una expresión que se evalúa como Verdadero o Falso.\n\n**Sugerencia:** Ahora que sabes cómo funcionan las condicionales, ¿dónde crees que se utilizan en los juegos u otros programas y aplicaciones que ya utilizas?"
+        },
         "2b5e9944-1e90-4362-98e9-ef74a8d1d48b": {
+          "description": "**Debatir:** Pide a los alumnos que compartan sus respuestas.",
           "tips": [
-            null
+            "Esta conversación debería hacer pensar a los alumnos en cómo se utilizan las condicionales en los juegos que ya han visto, y ayudarles a relacionar esas ideas con la forma en que les gustaría utilizar las condicionales en sus propios programas.  Las respuestas de los alumnos podrían ser las siguientes:\n\n-   Si mi nombre de usuario y mi contraseña son correctos, entra en Facebook\n-   Si Pacman ha recogido todas las bolas, comienza el siguiente nivel\n-   Si mi teclado o mi ratón no se han movido en 10 minutos, enciende el salvapantallas"
           ]
         },
         "9a0645a5-b561-4520-8ea8-353a9bce8812": {
@@ -14716,12 +14855,17 @@
         },
         "0ee8704d-9ad3-4a31-816f-555813322a78": {
           "name": "Toma de información",
+          "description": "**Debatir:** Hasta ahora todos los programas que has escrito se ejecutan sin ninguna intervención del usuario. ¿Cómo podría la inclusión de la interacción del usuario hacer que tus programas sean más útiles, eficaces o entretenidos? ¿Cómo podría un usuario aportar información a tu programa?",
           "tips": [
-            null
+            "El objetivo aquí no es entrar en los detalles técnicos de cómo los programas pueden recibir entradas (los alumnos llegarán a eso en la parte online de la lección), sino más bien hacer que los alumnos piensen en cómo las entradas del usuario podrían cambiar los programas que han hecho. Anima a los alumnos a recordar la Unidad 1 y las distintas entradas y salidas del ordenador que exploraron entonces. ¿Qué entradas serían más útiles para los tipos de programas que han estado haciendo?"
           ]
         },
+        "838815a3-a605-4926-9560-014250c6b6b0": {
+          "description": "**Pregunta del Día: ¿Cómo pueden nuestros programas reaccionar a la entrada del usuario?**"
+        },
         "55c35c06-acaf-41fa-b001-47448467e841": {
-          "name": "Entrada de teclado"
+          "name": "Entrada de teclado",
+          "description": "**Transición:** Envía a los estudiantes a Code Studio"
         },
         "1cc6a39c-ad40-4484-941a-cfedaee5e669": {
           "progression_name": "Predicción"
@@ -14741,26 +14885,46 @@
         "d489f6eb-e7e8-45ba-ac13-a12a78c22a08": {
           "progression_name": "Desafíos"
         },
+        "3bb656e1-9394-4bd4-a11c-2a695a93850d": {
+          "name": "Añadiendo Condicionales",
+          "description": "**Pregunta del Día: ¿Cómo pueden nuestros programas reaccionar a la entrada del usuario?**\n\n**Diario:** Piensa en todos los programas que has escrito hasta ahora; ¿cómo podrías utilizar la interacción del usuario para mejorar uno de tus programas de las lecciones anteriores? ¿Qué condición comprobarías y cómo responderías a ella?"
+        },
         "038f368d-96fb-4780-9ac5-1e625c66e42d": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
+        "f42d2534-cb6a-47d6-90da-6e062f116c40": {
+          "name": " Revisión 3-2-1",
+          "description": "**Sugerencia:** ¿Cuáles son las tres cosas diferentes que has podido hacer con las condicionales? ¿Cuáles son dos cosas importantes que todo el mundo debería recordar al usar condicionales? ¿Qué es lo que todavía quieres aprender a programar?"
+        },
         "e016d4b6-9ebd-4c6c-9697-b368a0c90bd8": {
+          "description": "**Compartir:** Permite a los estudiantes compartir sus respuestas.",
           "tips": [
-            null
+            "Los alumnos pueden plantear muchos escenarios específicos diferentes, pero asegúrate de que diferencian entre las condicionales que responden a la entrada del usuario y las que responden a otros cambios en el programa, como el aumento de la puntuación, la ubicación de un sprite o la pérdida de vidas del jugador.  Las cosas más importantes a recordar pueden incluir poner las condicionales en el bucle de dibujo o prestar atención a cómo se anidan los bloques."
           ]
+        },
+        "3e7fe748-b20a-4fa7-9f64-5d18f201a8a7": {
+          "description": "¡Eso es genial!  Hoy vamos a ver una forma de hacer que nuestras condicionales sean aún más poderosas, y ver algunas nuevas formas de captar la entrada del usuario."
+        },
+        "2e8a75bd-1389-4713-aa61-2c27d7d16419": {
+          "description": "\\*\\*Pregunta del Día: ¿De qué otras formas puede reaccionar el ordenador a la entrada del usuario?"
+        },
+        "e0c39c9e-835d-4c46-984f-51ae04398f13": {
+          "name": "If/Else y más Entradas",
+          "description": "**Transición:** Mueve la clase a Code Studio, y haz que los estudiantes completen el nivel de predicción como clase o en pequeños grupos, y luego hablen sobre lo que encontraron.\n\n**Vídeo:** Ver el vídeo como clase y revisar las preguntas de debate juntos."
         },
         "04c8e14b-6000-4ac2-9f56-6dd8b660b460": {
           "progression_name": "Predicción"
         },
         "48c9aa57-b904-4660-b629-e49bf606fad7": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Qué ejemplo de situación se puede dar cuando se necesita una sentencia \"if/else\"?",
           "tips": [
-            null
+            "**Objetivo**\n\nAsegúrate de que los alumnos piensan en situaciones en las que quieren que ocurran dos cosas diferentes, dependiendo de la situación. Por ejemplo, pueden decir que quieren una animación si el sprite se mueve hacia la izquierda y otra diferente si el sprite se mueve hacia la derecha. Desafía a los alumnos a que piensen cuándo utilizarán simplemente un bloque `if` y cuándo es necesario un bloque `ifelse`."
           ],
           "progression_name": "Video: sentencias si/si no"
         },
         "991be916-6a79-484c-95a2-0e6f753d9ac8": {
           "tips": [
-            null
+            "**Nivel 3:** Puedes utilizar este nivel como evaluación formativa para los alumnos. Pulsa dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos\n\n**Nivel 4:** Puedes utilizar este nivel como evaluación formativa para los alumnos. Pulsa dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -14777,30 +14941,53 @@
           "progression_name": "Desafíos"
         },
         "957a684d-5930-4823-99fa-0af6c5701b6f": {
-          "name": "Actividad de cierre"
+          "name": "Actividad de cierre",
+          "description": "\\*\\*Pregunta del Día: ¿De qué otras formas puede reaccionar el ordenador a la entrada del usuario?"
         },
         "b9716428-aedc-4578-8328-379b70cb0d50": {
+          "description": "**Sugerencia:** Ahora, tienes muchas formas diferentes de detectar la entrada del usuario. Con un compañero, elige tres comandos de entrada de usuario diferentes y piensa en un ejemplo de cuándo podrías utilizarlos. Prepárate para compartirlo con la clase.",
           "tips": [
-            null
+            "Este debate sirve como un breve repaso y evaluación de los nuevos comandos de entrada del usuario.  A medida que los alumnos lo compartan, pídeles que expliquen por qué su elección es mejor que otras opciones similares (mouseDown / mouseWentDown / mouseWentUp). Si falta algún comando después de que todos los grupos lo hayan compartido, pregúntales por los que faltan antes de seguir adelante."
           ]
         },
         "7dd21653-fbb9-4d8f-97d5-aa4879f9c1c8": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
         "e4ea6961-efa2-4cc3-806d-a32d96885abf": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "**Sugerencia:** Piensa en una ocasión en la que hayas enviado o recibido una tarjeta de alguien. ¿Quién era esa persona? ¿Cuál era el propósito de la tarjeta? ¿Qué tiene la tarjeta que la hace específica para ese propósito?"
         },
         "09884749-ea7e-4df2-94f7-f73308052d81": {
+          "description": "**Compartir:** Pide a los alumnos que compartan sus ideas.",
           "tips": [
-            null
+            "Este debate introduce el proyecto del capítulo: crear una tarjeta interactiva. Es una buena oportunidad para relacionar el concepto de \"tarjeta\" con el proceso de resolución de problemas, definiendo el \"problema\" como animar a una persona o hacerle saber que estamos pensando en ella. "
           ]
         },
+        "3dcc6251-6afa-4834-8392-2a427859d3cb": {
+          "description": "Hoy, vamos a empezar a diseñar nuestras propias tarjetas. Como hemos aprendido a programar, nuestras tarjetas van a ser interactivas. Al final del proyecto, podrás enviar tu tarjeta por correo electrónico o por mensaje de texto a alguien."
+        },
+        "591ad25f-0d71-48ba-8aa6-00830db0a01c": {
+          "description": "**Pregunta del Día: ¿Qué conocimientos y prácticas son importantes a la hora de crear un programa interactivo?**"
+        },
         "00e65ea4-8a6e-408e-bb09-2fcb9f1a27d6": {
+          "name": "Ejemplos de Proyecto de Demostración (Nivel 1)",
+          "description": "**Objetivo:** Los estudiantes ven un ejemplo de un proyecto final y comentan los diferentes elementos que se utilizaron para realizarlo.\n\n**Mostrar:** Exponer a los alumnos el programa de ejemplo.",
           "progression_name": "Aplicación de Demostración: Tarjeta Interactiva"
+        },
+        "98d19496-66aa-42da-b213-0041a105222f": {
+          "description": "**Debatir:** Pide a los alumnos que compartan sus observaciones y análisis del programa. \n\nAnima a la clase a entender que hay múltiples enfoques para programar cualquier cosa, pero que puede haber pistas sobre cómo se creó algo. En particular, cuando compartan sus ideas pídeles que especifiquen lo siguiente:\n\n-   Pistas que sugieran que se utilizó un sprite\n-   Pistas que sugieran que se utilizó una condicional\n-   Pistas que sugieran que se utilizó un patrón iterador\n\n**Presentación:** Muestra a los alumnos la rúbrica.  Revisa los diferentes componentes de la rúbrica con ellos para asegurarte de que entienden los componentes del proyecto.\n\n**Pregunta del Día:  ¿Qué conocimientos y prácticas son importantes cuando se crea un programa interactivo?**"
+        },
+        "49b539a4-1d94-4fa2-9538-dc413331f866": {
+          "name": "Sin Conexión: Planificación de Tarjetas Interactivas",
+          "description": "**Objetivo:** Los alumnos deben planificar lo que quieren crear antes de dirigirse al ordenador para que, una vez que lleguen a él, sólo tengan que ejecutar el plan.\n\n**Distribuir:** Reparte la guía de proyecto a los alumnos. Los alumnos la utilizarán para definir sus proyectos antes de crearlos. Dales un poco de tiempo para que hagan una lluvia de ideas sobre el tipo de tarjeta que quieren crear y quién será el destinatario. \n\nDistribuye también una copia de la Lista de Control del Estudiante a cada uno de ellos. Los estudiantes pueden utilizarla para autoevaluarse y reflexionar mientras desarrollan su proyecto.\n\n#### Pasos\n\n1.  La primera capa de la tarjeta interactiva es un fondo dibujado sólo con los comandos del cajón de Dibujo. El anverso de la Guía de Actividad proporciona una cuadrícula para que los estudiantes dispongan su fondo, una tabla de referencia de los comandos de dibujo y un área para que los estudiantes tomen notas y escriban el pseudocódigo.\n\n2.  A continuación, los alumnos piensan en los sprites que necesitarán, rellenando una tabla con la etiqueta, las imágenes y las propiedades de cada sprite.\n\n3.  Por último, los alumnos estudian las condicionales que necesitarán para que su tarjeta sea interactiva."
+        },
+        "9ba73a20-ba7f-42ae-9360-0b5607bd0498": {
+          "name": "Niveles: Implementando la Tarjeta Interactiva (Nivel 2 - 7)",
+          "description": "**Transición:** Una vez que los alumnos han completado su hoja de planificación, es el momento de dirigirse al sitio web Code.org. La secuencia de nivel corto pide a los estudiantes que completen cada elemento de su proyecto."
         },
         "4b3c39d2-a62c-43c3-b5ae-048ef270624a": {
           "tips": [
-            null
+            "**Nuevo Código y Niveles de Desafío Anteriores:** A lo largo de la unidad, los estudiantes pueden haber aprendido código adicional en los niveles de desafío de diferentes lecciones. A medida que los estudiantes se acercan a este proyecto, es posible que quieran volver a ver el código que aprendieron en estos niveles o visitarlos por primera vez para aprender nuevos códigos para usar en este proyecto. Para ayudar a guiar a los estudiantes a los niveles anteriores, puedes utilizar el [r extra_code_in_challenge_levels_1/csd/2021] como recurso para encontrar rápidamente donde se introdujeron nuevos códigos en los niveles de desafío anteriores."
           ],
           "progression_name": "Crea una Tarjeta Interactiva"
         },
@@ -14808,42 +14995,64 @@
           "progression_name": "Trabajo del proyecto"
         },
         "187ab288-8997-4b05-90b2-993b1d29c6ba": {
-          "name": "Revisión por pares"
+          "name": "Revisión por pares",
+          "description": "**Distribuye:** Entrega a cada estudiante una copia de la guía de revisión por pares.\n\nLos alumnos deben dedicar 15 minutos a revisar la tarjeta del otro alumno y a rellenar la guía de revisión por pares."
         },
         "4bfb9e2c-557b-464a-9a07-7190bc4dce87": {
+          "name": "Iterar - Actualizar el código",
+          "description": "**Circular:** Los alumnos deben completar el reverso de la guía de revisión por pares y decidir cómo responder a los comentarios que se les han dado. A continuación, deben utilizar esos comentarios para mejorar sus tarjetas.\n\nLos alumnos deben utilizar la rúbrica y la lista de control del alumno para autoevaluarse y asegurarse de que su proyecto se ajusta a la rúbrica.",
           "tips": [
-            null
+            "**Rúbrica y Lista de Control:** Los alumnos disponen de dos recursos que pueden utilizar para la autorreflexión y para asegurarse de que van por el buen camino: la rúbrica y la lista de control del alumno. Recomendamos que los alumnos utilicen la lista de comprobación para su propia autoevaluación y reflexión, ya que puede ser más fácil de digerir y comprender al revisar su propio proyecto. Sin embargo, recomendamos a los profesores que utilicen la rúbrica completa para evaluar los proyectos, a fin de dar una respuesta más precisa a los alumnos. Puedes ver ejemplos de esto con el recurso Ejemplo de Rúbricas Marcadas en la parte superior del plan de la lección (sólo visible para los profesores verificados)"
           ]
         },
         "b2ad1d43-99f9-40fa-9f88-d8b42f8c723e": {
-          "name": "Reflexionar"
+          "name": "Reflexionar",
+          "description": "Utilizando la rúbrica, los alumnos deben evaluar su propio proyecto antes de presentarlo.\n\nEnvía a los estudiantes a Code Studio para que completen su reflexión sobre sus actitudes hacia la informática. Aunque sus respuestas son anónimas, los datos agregados estarán disponibles para tí una vez que al menos cinco estudiantes hayan completado la encuesta."
         },
         "d8f8a198-8cc9-47f1-b6c9-f03f573fe546": {
           "progression_name": "Reflexión"
         },
         "360d3353-5639-4dfb-a66d-784a152e1794": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Pregunta del Día:  ¿Qué conocimientos y prácticas son importantes a la hora de crear un programa interactivo?**\n\n**Sugerencia:** Haz que los estudiantes reflexionen sobre su desarrollo de las cinco prácticas de Descubrimientos de Informática (Resolución de problemas, Persistencia, Creatividad, Colaboración, Comunicación).\n\n-   Escoge una de las cinco prácticas en las que demostraste crecimiento durante esta lección. Escribe algo que hayas hecho que demuestre esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para este proyecto. ¿Qué la hizo tan importante?"
         },
         "aef8a30c-a6a5-4aeb-b36a-d3b66ef87a81": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
+        "5699b426-cfa2-4614-9434-9554d27e785d": {
+          "description": "**Demostración**: Pide a un voluntario que pase al frente de la clase y actúe como tu \"sprite\". Di que le darás instrucciones al sprite como si fueras un programa del Laboratorio de Juegos.\n\nCuando tu alumno esté listo, colócate de frente a él para que tenga algo de espacio y pídele que \"avance 1\". Deberá dar un paso adelante. A continuación, repite la orden varias veces, esperando cada vez que el alumno avance un paso. El objetivo es que la repetición de estas instrucciones sea clara. Una vez que el alumno haya completado esta actividad, pídele que vuelva al punto de partida. Esta vez repite la demostración pero pidiéndole al alumno que \"avance 2 pasos\" y que dé 2 pasos cada vez. Una vez que el alumno haya hecho esto varias veces, pide a la clase que le dé un aplauso y le invite a volver a su asiento.\n\n**Sugerencia:** Estaba dando instrucciones a mi \"sprite\", pero parecían ser bastante repetitivas. ¿Cómo podría haber simplificado mis instrucciones?"
+        },
         "a2fda764-6cf6-419d-a9cb-7d62a2749660": {
+          "description": "**Debatir:** Concede a los alumnos un minuto para que escriban sus pensamientos antes de invitarles a compartirlos con un compañero. A continuación, pide a la clase que comparta sus ideas. Puedes escribir sus ideas en la pizarra.",
           "tips": [
-            null
+            "**Objetivo:** La demostración anterior debería haber reforzado el hecho de que dar repetidamente la misma instrucción es algo que nunca harías en la vida real. En lugar de ello, idearías una forma de captar que la instrucción debe repetirse, como \"sigue avanzando de 1 en 1\"."
           ]
+        },
+        "2f613c08-27bb-4353-9d03-9bb0c35dc4d7": {
+          "description": "Los lenguajes de programación también tienen formas de simplificarnos las cosas. Hoy vamos a ver algunos bloques del Laboratorio de Juegos que ocultan complicados patrones de codificación para facilitar las cosas a los programadores."
+        },
+        "16735d40-9b97-463b-aade-a585e0796962": {
+          "description": "**Pregunta del Día:  ¿Cómo pueden los lenguajes de programación ocultar patrones complicados para que sea más fácil programar?**"
+        },
+        "671f71fd-1569-454a-b6b9-5f3cebce4da1": {
+          "description": "Una forma de simplificar estas instrucciones es simplemente decirle a nuestro \"sprite\" que siga moviéndose 1 o 2, o los pasos que queramos. Como humanos, esto haría que las instrucciones fueran más fáciles de entender, y como vamos a ver hay una forma similar de hacer nuestro código más simple también."
+        },
+        "e09946dd-2f75-40a0-ac8f-38a20df49236": {
+          "description": "**Transición:** Mueve a los estudiantes a Code Studio\n\n**Circular:** Estos niveles introducen las propiedades velocityX, velocityY y rotationSpeed que acabas de comentar con los alumnos.  Comprueba con los alumnos cómo lo están haciendo y lleva la cuenta de cuándo han llegado todos al final del nivel 10."
         },
         "498b10a2-a029-449b-a37d-0b85141e917b": {
           "progression_name": "Desarrollo de Habilidades"
         },
         "42d0eae6-06b2-4aa6-a8f6-6081ce2fa560": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Por qué es conveniente utilizar un bloque de velocidad en lugar de un patrón de contador?\n-   Pon un ejemplo de un patrón de contador y cómo podrías utilizar un bloque de velocidad en su lugar.",
           "tips": [
-            null
+            "**Objetivos del Debate**\n\nPuede que no sea obvio para los estudiantes por qué el bloque de velocidad es tan poderoso. La respuesta inmediata es que el bloque de velocidad permite al programador establecer la velocidad al principio del programa y no tener que preocuparse por el patrón del contador dentro del bucle de dibujo (ya que el Laboratorio de Juegos se encargará de ello). Si los alumnos tienen problemas para pensar en situaciones en las que el bloque de velocidad suponga una gran ventaja, comunícales que en la próxima lección abordarán algunos problemas para los que necesitarán este bloque.\n\nCuando los alumnos te den ejemplos, intenta obtener respuestas que utilicen tanto números positivos como negativos, y que usen las posiciones X e Y, así como la rotación del sprite."
           ],
           "progression_name": "Video: velocidad"
         },
         "e8b8a1b0-89e9-4b09-978f-11db835db760": {
           "tips": [
-            null
+            "**Dentro y fuera del bucle de dibujo**\n\nEste es un buen momento para recordar a los estudiantes que el código fuera del bucle de dibujo se utiliza para configurar el programa. Es para saber cómo quieres que empiece tu programa. El código dentro del bucle de dibujo es para las cosas que cambian mientras el programa se ejecuta, la interacción con el usuario.\n\nPuede haber alguna confusión de que los nuevos bloques son animación (cambiando de posición) y sin embargo han ido fuera del bucle de dibujo hasta este punto. Esto se debe a que hasta este punto, la velocidad se ha establecido al principio del programa y no se ha cambiado. Cuando los alumnos quieran que la velocidad cambie durante el programa, tendrá que ir dentro del bucle de dibujo."
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -14861,30 +15070,65 @@
         },
         "864f7c7f-a19d-4470-8d53-52e790f5e783": {
           "name": "Diario",
+          "description": "**Sugerencia:** Hoy has aprendido unos cuantos bloques nuevos. A primera vista, estos bloques hacían el mismo tipo de cosas que ya habíamos hecho con el patrón del contador, pero nos simplificaban la tarea. Sin embargo, a medida que avanzabas en los rompecabezas, comenzaste a hacer algunos movimientos interesantes que no habíamos podido hacer antes.",
           "tips": [
-            null
+            "Cuando los alumnos describan los bloques que harían, asegúrate de que relacionan el código específico que utilizaría un bloque con el concepto de nivel superior de lo que haría. Por ejemplo, un bloque de \"velocidad\" movería un sprite a través de la pantalla, e incluiría bloques que utilizan el patrón de contador en una propiedad de posición. \n\nLos alumnos deben describir las ventajas de tener estos bloques, como no tener que reescribir el código todo el tiempo, o facilitar la lectura de lo que hace el programa."
           ]
+        },
+        "9d10acce-6889-4d46-b233-2abf5ee14fce": {
+          "description": "-   Describe uno de esos movimientos y cómo lo has hecho.\n-   Describe otro bloque que te gustaría tener.\n    -   ¿Cómo lo llamarías?\n    -   ¿Qué haría?\n    -   ¿Qué código escondería en su interior?\n    -   ¿Cómo te ayudaría?"
+        },
+        "ea1596ff-227e-4616-bc38-1c6bb5a9c6d6": {
+          "description": "Todos los movimientos que hemos hecho hoy son posibles sin los nuevos bloques, pero sería muy complicado codificarlos. Una de las ventajas de los bloques como el de velocidad es que, cuando no tenemos que preocuparnos por los detalles de los movimientos y las acciones sencillas, podemos utilizar esa capacidad intelectual extra para resolver problemas más complicados. A medida que vayas construyendo tu juego de desplazamiento lateral, seguiremos buscando nuevos bloques que simplifiquen las cosas, para poder construir juegos cada vez más complicados."
         },
         "4b924f47-109d-4f86-a0bf-84a5c9b84cd2": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
         "28c72532-e347-4f43-81ea-7b83a4e336d1": {
+          "description": "**Proyección:** En un proyector o en una pantalla de ordenador, muestra el juego que aparece en el primer nivel en Code Studio para esta lección.",
           "tips": [
-            null
+            "**Mostrando el Juego:** Evita que los alumnos entren en Code Studio en este momento para ejecutar el juego ellos mismos. Tienen una actividad desconectada bastante importante inmediatamente después y es probable que se produzcan dificultades en la transición."
           ],
           "progression_name": "Juego de muestra"
         },
+        "06caef58-c89e-40b6-8dc5-cdf7ae1c0e63": {
+          "description": "**Sugerencia:** Un aspecto interesante de esta animación es que los sprites cambian cuando se tocan entre sí. ¿Se te ocurre alguna manera de que el ordenador pueda utilizar las propiedades de los sprites para saber si se están tocando?"
+        },
         "57411d29-c010-41c3-82bc-be6b7025c796": {
+          "description": "**Debatir**: Permite que los alumnos hagan una lluvia de ideas sobre cómo el ordenador podría determinar si los dos sprites se tocan.  Enumera sus ideas en la pizarra y diles que tendrán la oportunidad de probar sus teorías dentro de un momento.",
           "tips": [
-            null
+            "**Objetivo:** El propósito de este debate es simplemente conseguir algunas ideas en la pizarra para que los alumnos las utilicen en la siguiente actividad. No es necesario evaluarlas o probarlas, porque los alumnos trabajarán juntos para hacerlo inmediatamente después del debate."
           ]
+        },
+        "397e5216-4fc6-486e-bf16-54b5cef8cbb9": {
+          "description": "Este es un problema difícil, y hoy vamos a profundizar en él. Mientras trabajamos para resolverlo, también vamos a ver cómo el ordenador puede ayudarnos a simplificar estos difíciles y complicados problemas."
+        },
+        "0f6f9756-d4cd-45fa-88b4-047efb6b0e0c": {
+          "description": "**Pregunta del Día: ¿Cómo puede la programación ayudar a simplificar los problemas complicados?**"
+        },
+        "95391339-cac6-411f-a328-f890e0b516c5": {
+          "name": "Colisiones - Sin Conexión",
+          "description": "**Agrupar:** Coloca a los alumnos en parejas."
+        },
+        "7502f74c-787b-4f62-b0ca-f08968943bbf": {
+          "description": "Ahora vas a tener la oportunidad de probar en grupo las estrategias que se te ocurrieron. Cada guía de actividad tiene cuatro hojas de papel. Un compañero debe coger los papeles con la \"A\" en la parte superior, y el otro debe coger los papeles con la \"B\" en la parte superior. Cada uno va a dibujar dos sprites secretos en la tabla, y su compañero tratará de averiguar si se tocan o no, basándose en la misma información que el ordenador tendrá sobre las propiedades de cada sprite. No dejes que tu compañero vea lo que estás dibujando."
+        },
+        "f74030b1-2aa4-4043-8f40-0142610b40d4": {
+          "description": "**Distribuye** las guías de actividad a cada grupo de compañeros.  Asegúrate de que un compañero ha tomado la versión A y el otro la versión B.\n\nCada alumno dispondrá de una línea en la que dibujará dos cuadrados.  El alumno elige la ubicación y el tamaño de cada uno de los cuadrados y, a continuación, registra la información sobre los mismos en una tabla. Después, cambian las tablas (no los dibujos) e intentan determinar si los dos sprites se tocan o no, basándose en la anchura de cada uno de ellos y en la distancia entre ellos.\n\nLos cálculos para determinar si los sprites se tocan son los siguientes:\n\n1.  Resta las posiciones X (o Y) de los sprites para encontrar la distancia entre sus centros.\n2.  Divide la anchura (o la altura) de cada cuadrado por 2 para obtener la distancia desde el centro hasta el borde.\n3.  Si la distancia entre los centros de los sprites es mayor que la suma de las distancias de sus centros a sus bordes, los sprites no se están tocando.\n4.  Si la distancia entre los centros de los sprites es igual a la suma de las distancias de sus centros a sus bordes, los sprites apenas se tocan.\n5.  Si la distancia entre los centros de los sprites es menor que la suma de las distancias de sus centros a sus bordes, los sprites están superpuestos.\n\n**Circular**: Ayuda a los alumnos a completar la hoja de trabajo.  Si los alumnos no están seguros de cómo determinar si los sprites se tocan, anímalos a utilizar una de las ideas de la pizarra. Recuérdeles que no se les califica por si aciertan o se equivocan, sino por su capacidad para utilizar el proceso de resolución de problemas. Si alguno de los alumnos ha terminado antes de tiempo, desafíale a encontrar un método que funcione para los sprites en cualquier parte de la cuadrícula, no sólo en la misma línea.\n\n**Compartir**: Cuando todos los alumnos hayan podido probar sus soluciones, pídeles que compartan lo que han descubierto."
+        },
+        "106e41ec-b537-478b-83c3-e78b68720f4a": {
+          "description": "Las personas pueden utilizar muchas estrategias diferentes para resolver un problema como éste. Como los ordenadores no pueden \"ver\" los dibujos de la misma manera que las personas, tienen que utilizar las matemáticas para averiguar si dos cosas se tocan. Hemos visto cómo esto puede funcionar a lo largo de una línea, pero podemos combinar estos métodos para trabajar en cualquier parte de la pantalla del juego."
+        },
+        "7c6ad91c-621c-4a56-b170-4ee19c608e1f": {
+          "name": "estáTocando()",
+          "description": "**Transición:** Envía a los alumnos a Code Studio."
         },
         "da7336ee-33fe-4542-970c-9cf2e888859e": {
           "progression_name": "Juego de muestra"
         },
         "49cfe240-7090-4fbd-9e61-ef725f8bddb1": {
           "tips": [
-            null
+            "**Nivel 2:**\nEl código de este nivel es abrumador. No se trata de que los alumnos entiendan cada línea, sino de que vean que es posible comprobar si los sprites se tocan sólo con sus posiciones. Deben entender que el bloque [\\`isTouching\\`(#f78183)](/docs/gamelab/isTouching/) utilizado en el siguiente nivel ejecuta automáticamente el complicado código que ven aquí, pero que está oculto dentro del bloque para facilitar la programación.\n\nEste código no incluye las propiedades `Y` y `Altura` porque los dos sprites están interactuando en la misma línea horizontal. Si el conejito pudiera moverse en diagonal, el código sería aún más complicado.\n\n**Nivel 5:** En este nivel no se pide a los alumnos que arreglen el error en el programa, que debe hacerse en la pestaña de animación. Para que la colisión funcione correctamente, los estudiantes tendrán que recortar el espacio vacío alrededor de la parte visible de la imagen. La forma más fácil de hacerlo es hacer clic una vez en el icono de \"recorte\" en la pestaña de animación, que recortará firmemente el rectángulo más pequeño alrededor de las partes visibles de la imagen. Los alumnos también pueden utilizar la herramienta de selección rectangular para especificar lo que debe ser recortado."
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -14900,13 +15144,35 @@
         "db772045-97b4-4f93-8e9d-8b9d015190a2": {
           "progression_name": "Desafíos"
         },
+        "e26cad2f-c0ec-4b82-8708-2fc5aab733ed": {
+          "description": "**Pregunta del Día: ¿Cómo puede la programación ayudar a simplificar los problemas complicados?**"
+        },
         "1e949591-d103-4f64-9c54-eeac71cc51d3": {
+          "description": "**Sugerencia:** Al principio de la lección, has visto que es posible hacer todo lo que hace el bloque [\\`isTouching\\`(#f78183)](/docs/gamelab/isTouching/) sin usar el bloque.  ¿Qué hace que este bloque sea útil?",
           "tips": [
-            null
+            "Los alumnos deben tener en cuenta que, aunque podrían programar el código para detectar si los sprites se tocan cada vez, es propenso a errores y les llevaría más tiempo y energía que tener un bloque que realice el mismo código automáticamente. El nuevo bloque les ayuda a enfrentarse a retos más difíciles al reducir el riesgo de errores y liberarles para pensar en el panorama general."
           ]
+        },
+        "6592f70e-8770-4725-9609-400632ac401f": {
+          "description": "Una de las grandes cosas de la programación es que, una vez que has descubierto la solución a un problema, a menudo puedes programarla en el ordenador para utilizarla una y otra vez. Cuando no tienes que preocuparte por los detalles de ese problema en particular, puedes afrontar retos mayores, como has hecho hoy. Utilizar una representación simplificada de algo para ocultar los detalles y poder pensar en el panorama general se llama \"abstracción\", y es una herramienta clave que utilizan los programadores para ayudarles a escribir programas complicados."
+        },
+        "31586745-1403-460d-9644-5447bbcb924d": {
+          "description": "**Vocabulario Clave:**\n\n-   **Abstracción**: Una representación simplificada de algo más complejo."
         },
         "0cc3d97f-9a2f-411c-8821-147c1e24a0c0": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
+        },
+        "b8cd00d2-c063-4c23-b515-12c5d5a5c89b": {
+          "description": "**Repaso**\n\nPide a los alumnos que piensen en todas las cosas que han aprendido a hacer en la unidad hasta el momento y muestra sus respuestas a la clase.  Este es un buen momento para revisar cualquier concepto que haya sido un reto para los estudiantes."
+        },
+        "9bb424bb-78ee-4289-b15c-4508a240fa47": {
+          "description": "Ahora que has aprendido a detectar las interacciones de los sprites, puedes empezar a crear juegos más interesantes.  Hoy vamos a ver cómo puedes usar lo que has aprendido para hacer un juego de desplazamiento lateral."
+        },
+        "325ef25b-590a-4aca-a61c-c1191abbb6bf": {
+          "description": "**Pregunta del Día:  ¿Cómo se pueden utilizar los nuevos tipos de movimiento de los sprites y la detección de colisiones para crear un juego?**"
+        },
+        "20840463-cccb-4058-b492-540706bf7ff5": {
+          "description": "**Distribuir:** (Opcional) repartir copias de la guía de actividad. Los alumnos pueden utilizar esta hoja para planificar el Desplazamiento Lateral que crearán al final de esta lección, pero la planificación también puede completarse en papel de borrador.\n\n**Transición** Envía a los estudiantes a Code Studio."
         },
         "0525516c-cd72-4700-9c7b-36644137ab93": {
           "progression_name": "Introducción a los Desplazamientos Laterales"
@@ -14932,17 +15198,36 @@
         "8cdb45e9-b767-4246-b5bc-12648197665d": {
           "progression_name": "Revisa tu Juego"
         },
+        "f8340a52-501b-4c4b-a3e5-227c22655447": {
+          "description": "**Pregunta del Día:  ¿Cómo se pueden utilizar los nuevos tipos de movimiento de los sprites y la detección de colisiones para crear un juego?**\n\n**Sugerencia:** ¿Qué dificultad encontraste en la creación de este juego?  ¿Cuál es tu consejo para alguien que tenga el mismo desafío?"
+        },
         "768b3d78-4f96-4e9d-bb05-bcb9b3b7bff7": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
+        "af7747ff-b050-4db4-b2a2-d589a6f15e7b": {
+          "description": "**Monitor:** Muestra a la clase las dos imágenes de una rana saltando.\n\n![](https://curriculum.code.org/media/uploads/triangleJump.gif)  ![](https://curriculum.code.org/media/uploads/curveJump.gif)"
+        },
+        "f1f25133-0e7a-4bfe-b4f2-4280286c98be": {
+          "description": "**Sugerencia:** Aquí hay dos imágenes de una rana saltando.  La primera es de desplazamiento lateral.  ¿Tienes alguna idea de cómo hacer el segundo tipo de salto?"
+        },
         "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
+          "description": "**Pensar-Emparejar-Compartir** Permite que los estudiantes comenten sus ideas con un compañero antes de compartirlas con toda la clase.",
           "tips": [
-            null
+            "Es poco probable que los alumnos den con la solución por sí solos, pero anímales a pensar en todas las ideas posibles y a que sigan trabajando en el problema a lo largo de la clase."
           ]
+        },
+        "6779426a-0497-4eae-8f11-ef773a852324": {
+          "description": "Hemos aprendido un montón de bloques nuevos que nos han ayudado a crear algunas animaciones divertidas.  Hoy, vamos a ver cómo podemos utilizar los bloques que ya conocemos de nuevas formas para hacer tipos de movimientos más interesantes.  Al final de la clase, serás capaz de codificar el nuevo tipo de salto con los bloques que ya conoces."
+        },
+        "d2231aa3-a7d1-4843-aea6-1d68abe0dbcf": {
+          "description": "**Pregunta del Día: ¿Cómo se pueden combinar los bloques anteriores con nuevos patrones para hacer movimientos interesantes?**"
+        },
+        "59cd6d13-7d74-48c5-b0c1-a38feedfca70": {
+          "description": "**Transición:** Cambia los alumnos a Code Studio."
         },
         "c87f7c08-8f60-4810-9e6f-10ae69319288": {
           "tips": [
-            null
+            "Este nivel introduce el nuevo patrón de programación principal de esta lección, combinando el patrón de contador con las propiedades de velocidad de los sprites. Anima a los alumnos a tomar en serio sus predicciones antes de ejecutar el código."
           ],
           "progression_name": "Predicción"
         },
@@ -14961,36 +15246,62 @@
         "077d6880-3d7a-4c59-a63c-06ab77e3e0d8": {
           "progression_name": "Desafíos"
         },
+        "d39528c9-93b2-42e0-be34-acc0a7c58567": {
+          "description": "**Compartir:** Pide a los estudiantes que compartan con sus compañeros las modificaciones que han introducido en su juego final de aviadores. Haz que los estudiantes se centren no solo en cómo funciona el juego, sino en cómo es el código para crear ese tipo de funcionalidad."
+        },
         "443eb6ca-6406-4399-b140-a4d6ec3f0bca": {
+          "description": "**Sugerencia:** En tu papel haz dos listas. Primero, haz una lista de las cosas nuevas que puedes programar para los sprites después de la lección de hoy. En la segunda lista escribe todos los bloques nuevos que has aprendido hoy.",
           "tips": [
-            null
+            "\\*\\* Objetivo:\\*\\* Esta conversación debe poner de manifiesto que los alumnos no han aprendido ningún bloque nuevo en la lección de hoy, sino que sólo han aprendido nuevas formas de combinar bloques y patrones que ya habían aprendido anteriormente. El punto más amplio aquí es que la programación no siempre consiste en aprender nuevos bloques, sino en ser creativo al combinar las herramientas que ya sabes utilizar."
           ]
         },
+        "cfead828-2f8f-4e8e-b63a-23686054c171": {
+          "description": "**Debatir:** Pide a los alumnos que compartan sus listas con los compañeros de clase. A continuación, comparte las listas con toda la clase. Es de esperar que hayan enumerado muchos movimientos de sprites nuevos, pero los alumnos no han aprendido realmente ningún bloque nuevo en esta lección."
+        },
+        "f77a52f4-816e-4851-8401-b82a152197b7": {
+          "description": "**Sugerencia:** Hoy hemos construido un montón de nuevos movimientos de sprites como la gravedad y el salto, pero nada de esto ha requerido que aprendamos nuevos bloques. ¿Cómo has podido hacer cosas nuevas sin aprender ningún bloque nuevo?"
+        },
         "136ec817-6a58-41db-aae8-3238b015ce63": {
+          "description": "**Debatir:** Realiza un rápido seguimiento de tu conversación inicial sobre este punto.",
           "tips": [
-            null
+            " Comprueba que los alumnos pueden explicar las nuevas estructuras de programación y los algoritmos que han podido utilizar para obtener los nuevos comportamientos del programa."
           ]
+        },
+        "71669d41-5507-4ee9-a7bc-081fbdc67f5b": {
+          "description": "Vamos a seguir aprendiendo algunas herramientas más en el Laboratorio de Juegos, pero mientras lo hacemos, recuerda lo que hemos visto hoy. Para crear nuevos tipos de programas no siempre es necesario aprender nuevos bloques. La mayoría de las veces la creatividad de la programación proviene de aprender a combinar cosas que ya conoces de formas nuevas y creativas."
         },
         "4225cb9b-8e55-43c7-918e-1693bf239840": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
         "da390762-bcc9-47c8-ab06-9bac895ebd00": {
+          "description": "**Pantalla**: Muestra la imagen animada. También está disponible como nivel en code studio.\n\n![](https://curriculum.code.org/media/uploads/collision.gif)\n\n**Sugerencia:** Utilizando los bloques que ya sabemos utilizar, ¿cómo podríamos crear la interacción de los sprites que podemos ver en este programa?",
           "progression_name": "Predicción de Código"
         },
         "29881c8e-82cb-4886-8e1f-7f101c91bae9": {
+          "description": "\\*\\* Compartir:\\*\\* Permite a los estudiantes compartir sus ideas.",
           "tips": [
-            null
+            "**Objetivo:** El objetivo de este debate es que los alumnos hagan una lluvia de ideas para resolver el problema de que un sprite empuje a otro por la pantalla. No es necesario que los alumnos lleguen a un consenso, porque cada uno tendrá la oportunidad de probar una solución en el siguiente nivel en Code Studio. Los alumnos deben entender que es posible utilizar bloques para producir el movimiento deseado sólo con los bloques que ya han aprendido."
           ]
+        },
+        "0372ae88-c110-4f23-9db0-f634f257bb14": {
+          "description": "La primera parte del problema es averiguar cuándo se tocan los dos sprites, pero ya hemos averiguado cómo hacerlo y ahora podemos utilizar el bloque [\\`isTouching\\`(#f78183)](/docs/gamelab/isTouching/). Eso significa que ya no tenemos que pensar en esos detalles.  Usar la abstracción para ocultar los detalles complicados en esa parte del problema significa que podemos centrarnos en la nueva zona."
         },
         "4c0ed738-4808-45b2-aaae-965d536ffc6a": {
           "tips": [
-            null
+            "Los alumnos ya han visto este vocabulario antes, pero dada su importancia para el capítulo, se introduce de nuevo aquí."
           ]
         },
+        "115e8fa4-da2f-49c9-921d-0c155e9bc474": {
+          "description": "**Repaso del Vocabulario:**\n\n-   **abstracción** - representación simplificada de algo más complejo\n\n**Pregunta del Día: ¿Cómo pueden los programadores basarse en las abstracciones para crear más abstracciones?**"
+        },
         "0d8cc1e7-4e01-4315-a98c-87fcc7031ca7": {
+          "description": "**Sugerencia**: Este fue un problema difícil, pero pudimos resolverlo.  ¿Qué nos ayudó a resolver este problema?",
           "tips": [
-            null
+            "Asegúrate de que los alumnos hablen de la importancia de los bloques de nivel superior, como `isTouching`, y de que, aunque estos bloques no proporcionan una nueva funcionalidad, ocultar la complejidad del código dentro de un solo bloque les permite abordar problemas más complejos.  \n\nEste es también un buen momento para destacar lo mucho que los alumnos han progresado en sus conocimientos desde el comienzo de la unidad.  Este problema habría parecido casi imposible a principios de año. Algunas cosas que facilitaron la resolución del problema fueron:\n\n-   Preparación: Los alumnos hicieron una lluvia de ideas y pensaron en las soluciones antes de probar su código.\n-   Cooperación: Los estudiantes trabajaron en grupo para llegar a una solución\n-   Abstracción: Los alumnos pudieron utilizar los bloques [\\`isTouching\\`(#f78183)](/docs/gamelab/isTouching/) y [\\`velocityY\\`(#f78183)](/docs/gamelab/velocityY/) para ocultar parte de la complejidad de la solución."
           ]
+        },
+        "c24af160-0ae9-421e-bea1-cff4b26e0c2e": {
+          "description": "Todas estas cosas son muy importantes, y aparecen mucho en Informática. Una cosa que fue especialmente útil es el bloque [\\`isTouching\\`(#f78183)](/docs/gamelab/isTouching/), que oculta el complicado código que nos dice si los dos sprites se están tocando. También hay un bloque [\\`displace\\`(#f78183)](/docs/gamelab/displace/) que oculta el código que acabamos de escribir, y otros bloques que ocultan el código para otros tipos de interacciones entre sprites.  Tendrás la oportunidad de probar estos bloques en los próximos niveles."
         },
         "c6e363e6-23a1-466a-9589-a4b871989618": {
           "progression_name": "Desarrollo de Habilidades"
@@ -15007,13 +15318,29 @@
         "e0a4583c-3ca6-4235-a457-774d3696a07d": {
           "progression_name": "Desafíos"
         },
+        "e8b820d4-a23a-4e51-bc59-a3eae3b48b0f": {
+          "description": "**Pregunta del Día: ¿Cómo pueden los programadores basarse en las abstracciones para crear más abstracciones?**\n\n**Repaso del Vocabulario:**\n\n-   **abstracción** - una representación simplificada de algo más complejo"
+        },
         "d2cc216a-b098-4754-bb18-087f42007b46": {
+          "description": "**Sugerencia:** ¿Cómo el hecho de tener el bloque [\\`isTouching\\`(#f78183)](/docs/gamelab/isTouching/) y el bloque [\\`velocityX\\`(#f78183)](/docs/gamelab/velocityX/) facilita la solución del problema de que un sprite empuje a otro?",
           "tips": [
-            null
+            "Los alumnos deben entender que estos dos bloques representan soluciones parciales al problema de que un sprite empuje al otro, y que al ocultar los detalles de esas soluciones parciales, pueden centrarse más fácilmente en cómo encajar esas soluciones parciales para resolver problemas más grandes y complejos. "
           ]
         },
         "8999374a-d5b5-44c6-9df7-766edef29ef4": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
+        },
+        "373fd729-b7fb-4a97-a247-9932f91115b8": {
+          "description": "**Repaso**\n\nPide a los alumnos que piensen en todas las cosas que han aprendido a hacer en la unidad hasta el momento y muestra sus respuestas a la clase. Este es un buen momento para revisar cualquier concepto que haya sido un poco complicado para los alumnos."
+        },
+        "900acfd9-62e0-47d0-a99e-686f8845b8ed": {
+          "description": "Ya has aprendido todas las interacciones de los sprites y los tipos de movimiento que trataremos en esta unidad. Hoy tendrás la oportunidad de juntarlos todos para hacer un juego de voladores."
+        },
+        "6ef7e63f-b5aa-4186-9d73-8cab4596cbf8": {
+          "description": "\\*\\*Pregunta del Día:  ¿Cómo se pueden utilizar los nuevos tipos de colisiones y la simulación del movimiento para crear un juego?"
+        },
+        "ed81acad-ac30-4dfa-b79e-613ef2850c38": {
+          "description": "**Distribuye:** (Opcional) reparte copias de la guía del proyecto. Los alumnos pueden utilizar esta hoja para planificar el Juego de Voladores que crearán al final de esta lección, pero la planificación también puede completarse en papel de borrador.\n\n**Transición** Envía a los estudiantes a Code Studio."
         },
         "05331f50-c576-42e0-91ce-00561faee05c": {
           "progression_name": "Introducción al Juego de Voladores"
@@ -15033,23 +15360,42 @@
         "a9203a76-f8c9-4a77-9c8e-0d329d1f9099": {
           "progression_name": "Revisa tu Juego"
         },
+        "136931c2-5be0-4503-904e-d498bfdd72e2": {
+          "name": "Compartir y Diario 3-2-1",
+          "description": "**Compartir:** Deja tiempo a los alumnos para que ejecuten los juegos de voladores de los demás. Pídeles que se centren no sólo en el nuevo comportamiento que han añadido, sino también en el código que han utilizado para crearlo.\n\n**Diario:** Pide a los alumnos que escriban y reflexionen sobre las siguientes indicaciones.\n\n-   ¿Cuáles son las tres cosas que has visto en el juego de otra persona que te han gustado mucho?\n-   ¿Qué dos mejoras harías en tu juego si tuvieras más tiempo?\n-   ¿Qué consejo le darías a alguien que esté haciendo este tipo de juego?\n\n\\*\\*Pregunta del Día: ¿Cómo se pueden utilizar los nuevos tipos de colisiones y la simulación del movimiento para crear un juego?"
+        },
         "b5208602-6e96-4de5-8eb0-bd174781ade8": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
+        "64cbcef1-8097-4f85-a451-3a993e485ed4": {
+          "name": "Tus Bloques Personales",
+          "description": "**Sugerencia:** ¿Cuál es el bloque que te gustaría tener en el Laboratorio de Juegos?  ¿Qué haría?  ¿Qué código utilizaría para funcionar?"
+        },
         "40b22769-f206-4725-b2f4-fd3f71c15101": {
+          "description": "**Pensar-Emparejar-Compartir:** Permita que los alumnos expliquen sus bloques a un compañero antes de compartir sus ideas.",
           "tips": [
-            null
+            "Cuando los alumnos compartan sus ideas, asegúrate de que tienen una idea clara del código que utilizarían para hacer el bloque, recordándoles que todos los bloques que han aprendido en este capítulo (por ejemplo, velocidad, colisiones) se han construido a partir de bloques que ya conocían."
           ]
         },
+        "b746d8d7-6d54-42ea-ab4c-3336c7012b87": {
+          "description": "Hoy vamos a aprender a crear nuestros propios bloques para decidir exactamente cómo van a funcionar. Estos bloques especiales se llaman funciones, y son una de las partes más poderosas de la programación."
+        },
+        "3a52ad10-05db-405a-acbd-2f62c7629e43": {
+          "description": "\\*\\*Pregunta del Día: ¿Cómo pueden los programadores utilizar las funciones para crear sus propias abstracciones?"
+        },
+        "d1233fef-e471-45e9-81a1-87acb866060b": {
+          "description": "**Transición:** Mueve a los estudiantes a Code Studio donde aprenderán a crear y llamar a funciones."
+        },
         "52d53651-705c-47ec-a68f-d014f3499a99": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   Piensa en una ocasión en la que una función te haya ayudado a escribir un programa.\n-   ¿Qué código iría en la **definición** de la función?\n-   ¿Cuándo **llamarías** a la función?\n-   ¿Qué nombre le darías?",
           "tips": [
-            null
+            "**Objetivo:**\n\n**Vocabulario Clave:**\n\n-   **Función** - un conjunto de instrucciones de programación con nombre\n\nAsegúrate de que los alumnos entienden el papel de los dos pasos en el uso de las funciones, así como que ven las funciones como una forma de \"fragmentación\" o abstracción. La definición de la función debe incluir todo el código que se quiere ejecutar, y el nombre de la función debe ser una breve descripción del propósito del código. La función debe ser llamada en cada lugar del programa en el que el alumno quiera que se ejecute ese bloque de código."
           ],
           "progression_name": "Video: funciones"
         },
         "085e06bd-a991-42ec-b8e2-2e27712cf7dd": {
           "tips": [
-            null
+            "**Introducción a las Funciones**\n\nEn estos primeros niveles a los alumnos sólo se les enseña la sintaxis de las funciones y no se les pide que escriban o creen las suyas propias. Puede ser útil explicar la creación de una función como, básicamente, \"la creación de un nuevo bloque\" al igual que otro programador creó los bloques \"isTouching\" o \"velocity\" que han visto que en realidad contienen otro código más complejo."
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -15058,7 +15404,7 @@
         },
         "e4283f2d-5933-4812-80df-341067426cc8": {
           "tips": [
-            null
+            "**Por qué usar Funciones**\n\nLos niveles 5a, 5b y 5c introducen tres usos de las funciones, a saber, eliminar la repetición en los programas, permitir que el código se modifique rápidamente en varios puntos y proporcionar organización en el código. Los alumnos tendrán que escribir más funciones propias en estos niveles."
           ],
           "progression_name": "Practica"
         },
@@ -15067,17 +15413,27 @@
         },
         "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
           "tips": [
-            null
+            "**Nivel 7: Funciones en Contexto**\n\nEn este nivel y en los dos siguientes, los alumnos utilizarán funciones para organizar el código dentro de un juego sencillo. Aunque no es idéntico al desplazamiento lateral, muchos de los conocimientos y usos de las funciones en estos niveles pueden y deben ser utilizados cuando completen su desplazamiento lateral."
           ],
           "progression_name": "Juego de Coleccionista"
         },
         "c3302e9a-4da1-4c1b-96ca-232b7026ea9c": {
           "progression_name": "Desafíos"
         },
+        "a35882d4-fd9e-4c8b-a3e0-31a764068440": {
+          "description": "**Vocabulario Clave:** \n\n-   **Función** - un conjunto de instrucciones de programación con nombre\n\n**Sugerencia:** ¿Por qué diríamos que las funciones nos permiten \"crear nuestros propios bloques\"? ¿Por qué es algo que nos gustaría hacer?  ¿Por qué una función cuenta como una abstracción?"
+        },
         "3dfe6414-c583-4af9-a55d-7da0d06783ef": {
+          "description": "**Debatir:** Pide a los alumnos que comenten en su mesa antes de hablar en conjunto.",
           "tips": [
-            null
+            "  **Objetivo:** Utiliza esta primera indicación para repasar lo que los alumnos han aprendido hoy. Cuando crean una función están creando su propio bloque que pueden llamar o utilizar cuando quieran. Hoy vieron al menos dos motivaciones principales para crear funciones, entre ellas:\n\n-   Simplificar el código dividiéndolo en bloques con nombres lógicos\n-   Permitir que un programador piense a un nivel superior ocultando los detalles o un fragmento particular de instrucciones de programación\n-   Evitar la repetición de código haciendo un bloque que se pueda utilizar varias veces\n\nLos alumnos deben repasar la definición de abstracción como \"una forma sencilla de representar algo complejo\". Observa que una función es una abstracción porque te permite crear un nombre simple para un bloque de código más complejo."
           ]
+        },
+        "3c9a4d37-8a16-4e62-a21e-7fe688c3905d": {
+          "description": "Las funciones son una herramienta útil para ayudarnos a escribir y organizar porciones de código más complejas. A medida que empezamos a mirar hacia el final de la unidad y tu proyecto final, ser capaz de mantener tu código organizado será una experiencia importante."
+        },
+        "050ea509-1c7f-4c70-95f0-27015941f570": {
+          "description": "\\*\\*Pregunta del Día: ¿Cómo pueden los programadores utilizar las funciones para crear sus propias abstracciones?"
         },
         "924cad07-d581-4fd3-b43e-bb1e8061a72a": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
@@ -15165,6 +15521,7 @@
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
         "7e64a6bf-73b9-4cd3-be58-402b3da57768": {
+          "description": "\\*\\* Compartir:\\*\\* Permite a los estudiantes compartir sus ideas.",
           "tips": [
             null
           ]
@@ -15174,7 +15531,7 @@
         },
         "686b638e-1a29-49cc-8711-191165d251b9": {
           "tips": [
-            null
+            "**Nuevo Código y Niveles de Desafío Anteriores:** A lo largo de la unidad, los estudiantes pueden haber aprendido código adicional en los niveles de desafío de diferentes lecciones. A medida que los estudiantes se acercan a este proyecto, es posible que quieran volver a ver el código que aprendieron en estos niveles o visitarlos por primera vez para aprender nuevos códigos para usar en este proyecto. Para ayudar a guiar a los estudiantes a los niveles anteriores, puedes utilizar el [r extra_code_in_challenge_levels_1/csd/2021] como recurso para encontrar rápidamente donde se introdujeron nuevos códigos en los niveles de desafío anteriores."
           ]
         },
         "c06da82f-6be2-49e8-8d8b-6579ef11f06d": {
@@ -15187,8 +15544,9 @@
           "progression_name": "Revisa tu Juego"
         },
         "59ca85ff-b7b0-450d-b354-1c9938c4a615": {
+          "name": "Iterar - Actualizar el código",
           "tips": [
-            null
+            "**Rúbrica y Lista de Control:** Los alumnos disponen de dos recursos que pueden utilizar para la autorreflexión y para asegurarse de que van por el buen camino: la rúbrica y la lista de control del alumno. Recomendamos que los alumnos utilicen la lista de comprobación para su propia autoevaluación y reflexión, ya que puede ser más fácil de digerir y comprender al revisar su propio proyecto. Sin embargo, recomendamos a los profesores que utilicen la rúbrica completa para evaluar los proyectos, a fin de dar una respuesta más precisa a los alumnos. Puedes ver ejemplos de esto con el recurso Ejemplo de Rúbricas Marcadas en la parte superior del plan de la lección (sólo visible para los profesores verificados)"
           ]
         },
         "d1ae9072-39e7-4cd7-81eb-6434e0b2e39d": {
@@ -16987,6 +17345,7 @@
         },
         "42f4e940-4ca1-41ce-9efc-c9147fb84229": {
           "name": "Añadiendo Imágenes",
+          "description": "**Transición:** Envía a los alumnos a Code Studio.",
           "tips": [
             "A medida que los estudiantes comienzan a utilizar imágenes, pueden tener problemas a la hora de encontrar el tamaño adecuado para sus páginas.  En estas dos lecciones, los alumnos aprenderán a cambiar el tamaño de sus imágenes con CSS.  Por ahora, los alumnos pueden utilizar un redimensionador de imágenes en línea, como el que se encuentra en <https://resizeimage.net/>, para cambiar el tamaño de las imágenes.  También pueden utilizar el atributo [\\`height\\`](/docs/weblab/height/) o [\\`width\\`](/docs/weblab/width/) dentro de la etiqueta [\\`img\\`](/docs/weblab/img/) para cambiar su tamaño mientras se carga la página."
           ]
