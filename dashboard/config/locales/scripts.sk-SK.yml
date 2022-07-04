@@ -1447,9 +1447,9 @@ sk:
             Collision Detection:
               name: Detekcia kolízie
             Collisions:
-              name: Kolízie "sprite" objektov
+              name: Kolízie sprajtov
             Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb sprajtov
             Conditionals and Keyboard Input:
               name: Podmienky a použitie kláves
             Drawing in Game Lab:
@@ -1851,9 +1851,9 @@ sk:
             Collision Detection:
               name: Detekcia kolízie
             Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb sprajtov
             Collisions:
-              name: Kolízie "sprite" objektov
+              name: Kolízie sprajtov
             Functions:
               name: Funkcie
             The Game Design Process:
@@ -2561,9 +2561,9 @@ sk:
             Collision Detection:
               name: Detekcia kolízie
             Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb sprajtov
             Collisions:
-              name: Kolízie "sprite" objektov
+              name: Kolízie sprajtov
             Functions:
               name: Funkcie
             The Game Design Process:
@@ -2595,9 +2595,9 @@ sk:
             Collision Detection:
               name: Detekcia kolízie
             Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb sprajtov
             Collisions:
-              name: Kolízie "sprite" objektov
+              name: Kolízie sprajtov
             Functions:
               name: Funkcie
             The Game Design Process:
@@ -2679,9 +2679,9 @@ sk:
             Collision Detection:
               name: Detekcia kolízie
             Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb sprajtov
             Collisions:
-              name: Kolízie "sprite" objektov
+              name: Kolízie sprajtov
             Functions:
               name: Funkcie
             The Game Design Process:
@@ -3924,9 +3924,9 @@ sk:
             Collision Detection:
               name: Detekcia kolízie
             Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb sprajtov
             Collisions:
-              name: Kolízie "sprite" objektov
+              name: Kolízie sprajtov
             Functions:
               name: Funkcie
             The Game Design Process:
@@ -3991,9 +3991,9 @@ sk:
             Collision Detection:
               name: Detekcia kolízie
             Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb sprajtov
             Collisions:
-              name: Kolízie "sprite" objektov
+              name: Kolízie sprajtov
             Functions:
               name: Funkcie
             The Game Design Process:
@@ -5847,9 +5847,9 @@ sk:
             Collision Detection:
               name: Detekcia kolízie
             Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb sprajtov
             Collisions:
-              name: Kolízie "sprite" objektov
+              name: Kolízie sprajtov
             Functions:
               name: Funkcie
             The Game Design Process:
@@ -6377,9 +6377,9 @@ sk:
             Collision Detection:
               name: Detekcia kolízie
             Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb sprajtov
             Collisions:
-              name: Kolízie "sprite" objektov
+              name: Kolízie sprajtov
             Functions:
               name: Funkcie
             The Game Design Process:
@@ -6970,9 +6970,9 @@ sk:
             Collision Detection:
               name: Detekcia kolízie
             Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb sprajtov
             Collisions:
-              name: Kolízie "sprite" objektov
+              name: Kolízie sprajtov
             Functions:
               name: Funkcie
             The Game Design Process:
@@ -7620,9 +7620,9 @@ sk:
             Collision Detection:
               name: Detekcia kolízie
             Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb sprajtov
             Collisions:
-              name: Kolízie "sprite" objektov
+              name: Kolízie sprajtov
             Functions:
               name: Funkcie
             The Game Design Process:
@@ -7723,9 +7723,9 @@ sk:
             Collision Detection:
               name: Detekcia kolízie
             Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb sprajtov
             Collisions:
-              name: Kolízie "sprite" objektov
+              name: Kolízie sprajtov
             Functions:
               name: Funkcie
             The Game Design Process:
@@ -7904,6 +7904,22 @@ sk:
               display_name: Dotazník
         csd3-2021:
           title: Interaktívne animácie a hry (2021 – 2022)
+          description: "V 3. tematickom celku budeš stavať na svojich skúsenostiach
+            s programovaním tak, že budeš v prostredí Game Lab programovať animácie,
+            interaktívne umenie a hry. Tematický celok sa začína vytváraním jednoduchých
+            tvarov a postupne prejde k prepracovaným hrám, ktoré využívajú sprajty.
+            Na ich vytváranie sa pri tom využívajú rovnaký proces dizajnovania a rovnaké
+            programovacie koncepty, aké každodenne využívajú reálni programátori.
+            V záverečnom projekte si vytvoríš svoj vlastný interaktívny program.\n\n**Pokyny
+            k 3. tematickému celku**\n\n-   Kým začnete robiť tento tematický celok,
+            spravte 1. kapitolu v 1. tematickom celku\n-   1. kapitola v tomto tematickom
+            celku je nevyhnutnou podmienkou pred začatím 6. tematického celku \n-
+            \  Pokyny, ako žiakom poskytovať podporu pri riešení programovacích úrovní
+            a ako im prispôsobiť náročnosť jednotlivých úloh, nájdete v [Sprevodcovi
+            ladením](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview)
+            a v [Diferenciačnej príručke](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n-
+            \  Viac informácií o tomto tematickom celku nájdete v [Príručke k osnovám](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
+            a [Implementačnej príručke](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview)."
           lessons:
             Programming for Entertainment:
               name: Programovanie pre zábavu
@@ -7943,10 +7959,14 @@ sk:
               name: Rýchlosť
             Collision Detection:
               name: Detekcia kolízie
+            'Mini-Project: Side Scroller':
+              name: Miniprojekt – Side-scroller
             Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb sprajtov
             Collisions:
-              name: Kolízie "sprite" objektov
+              name: Kolízie sprajtov
+            'Mini-Project: Flyer Game':
+              name: Miniprojekt – Lietacia hra
             Functions:
               name: Funkcie
             The Game Design Process:
@@ -8799,6 +8819,14 @@ sk:
           lesson_groups:
             lessonGroup-4:
               display_name: Dotazník
+          title: Umelá inteligencia a strojové učenie
+          student_description: 7. tematický celok je praktickým úvodom do vytvárania
+            modelov strojového učenia pomocou tabuľkových údajov. Zistíš, ako sa počítače
+            na základe údajov učia robiť rozhodnutia, a následne budeš pracovať na
+            vlastných projektoch strojového učenia, pri ktorých sa budú využívať údaje
+            z reálneho sveta. Na záver tohto tematického celku si vytvoríš vlastnú
+            aplikáciu tak, aby pomocou strojového učenia riešila problém, ktorý je
+            pre teba osobne relevantný.
         kodea-pd-2021:
           lessons:
             Getting Started:
@@ -8823,6 +8851,8 @@ sk:
               name: Údaje a spoločnosť
             lesson-6:
               name: Fyzické výpočty
+            lesson-7:
+              name: Umelá inteligencia a strojové učenie
         self-paced-pl-csd6-2021:
           lessons:
             lesson-4:
@@ -10617,10 +10647,14 @@ sk:
               name: Rýchlosť
             Collision Detection:
               name: Detekcia kolízie
+            Mini-Project - Side Scroller:
+              name: Miniprojekt – Side-scroller
             Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb sprajtov
             Collisions:
-              name: Kolízie "sprite" objektov
+              name: Kolízie sprajtov
+            Mini-Project - Flyer Game:
+              name: Miniprojekt – Lietacia hra
             Functions:
               name: Funkcie
             The Game Design Process:
@@ -10637,6 +10671,10 @@ sk:
               name: Miniprojekt – Scény s popismi
             'Mini-Project: Animation':
               name: Miniprojekt – Animácia
+            'Mini-Project: Side Scroller':
+              name: Miniprojekt – Side-scroller
+            'Mini-Project: Flyer Game':
+              name: Miniprojekt – Lietacia hra
             lesson-1:
               name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
