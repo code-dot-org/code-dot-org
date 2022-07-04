@@ -5,14 +5,50 @@ kn:
       name:
         course1:
           description_audience: ವಯಸ್ಸು 4-6
+          lessons:
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
+            Getting Loopy:
+              name: ಲೂಪಿ ಆಗುವುದು
+            Going Places Safely:
+              name: ಸುರಕ್ಷಿತವಾಗಿ ಸ್ಥಳಗಳಿಗೆ ಹೋಗುವುದು
+            Happy Maps:
+              name: ಸಂತೋಷದ ನಕ್ಷೆಗಳು
+            Move it, Move it:
+              name: ಮೂವ್ ಇಟ್, ಮೂವ್ ಇಟ್
+            'Real-life Algorithms: Plant a Seed':
+              name: 'ನೈಜ-ಜೀವನದ ಕ್ರಮಾವಳಿಗಳು: ಬೀಜವನ್ನು ನೆಡಿರಿ'
+            The Big Event:
+              name: ದೊಡ್ಡ ಘಟನೆ
         course2:
           lessons:
+            Binary Bracelets:
+              name: ಬೈನರಿ ಕಡಗಗಳು
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
             Flappy:
               name: ಫ್ಲಾಪಿ
+            Getting Loopy:
+              name: ಲೂಪಿ ಆಗುವುದು
+            'Real-life Algorithms: Paper Planes':
+              name: 'ನಿಜ ಜೀವನದ ಅಲ್ಗಾರಿದಮ್‌ಗಳು: ಪೇಪರ್ ಪ್ಲೇನ್ಸ್'
+            The Big Event:
+              name: ದೊಡ್ಡ ಘಟನೆ
+            Your Digital Footprint:
+              name: ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಹೆಜ್ಜೆಗುರುತು
         course3:
           description_audience: ವಯಸ್ಸು 8-18
+          lessons:
+            Crowdsourcing:
+              name: ಕ್ರೌಡ್ಸೋರ್ಸಿಂಗ್
+            Digital Citizenship:
+              name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            Functional Suncatchers:
+              name: ಕ್ರಿಯಾತ್ಮಕ ಸನ್‌ಕ್ಯಾಚರ್‌ಗಳು
+            Internet:
+              name: ಇಂಟರ್ನೆಟ್
+            Songwriting:
+              name: ಹಾಡು ಬರೆಯವುದು
         playlab:
           name: ಪ್ಲೇಲ್ಯಾಬ್‌
         artist:
@@ -27,6 +63,9 @@ kn:
               name: ಆನಾ ಮತ್ತು ಎಲ್ಸಾ ಜೊತೆಗೆ ಕೋಡ್ ಮಾಡುವುದು
         course4:
           description_audience: ವಯಸ್ಸು 9-18
+          lessons:
+            'Artist: Variables':
+              name: 'ಕಲಾವಿದ: ವೇರಿಯಬಲ್ಸ್‌'
         usability:
           lessons:
             Variables:
@@ -36,13 +75,22 @@ kn:
             'Eval: Conditionals':
               name: ಕಂಡೀಷನಲ್ಸ್‌
         infinity:
+          description: ಡಿಸ್ನೆ ಇನ್‌ಫಿನಿಟಿ ಪಾತ್ರಗಳನ್ನು ಬಳಸಿ ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಲು ಪ್ಲೇ ಲ್ಯಾಬ್ ಬಳಸಿ.
+          description_short: ಡಿಸ್ನೆ ಇನ್‌ಫಿನಿಟಿ ಪಾತ್ರಗಳನ್ನು ಬಳಸಿ ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಲು ಪ್ಲೇ ಲ್ಯಾಬ್ ಬಳಸಿ.
+          student_description: ಡಿಸ್ನೆ ಇನ್‌ಫಿನಿಟಿ ಪಾತ್ರಗಳನ್ನು ಬಳಸಿ ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಲು ಪ್ಲೇ ಲ್ಯಾಬ್ ಬಳಸಿ.
           name: ಇನ್‌ಫಿನಿಟಿ
+        algebrademo:
+          lessons:
+            The Design Recipe:
+              name: ವಿನ್ಯಾಸ ಪಾಕವಿಧಾನ
         20-hour:
           title: CS ಕೋರ್ಸ್‌ಗೆ ವರ್ಧಿಸಿಕೊಳ್ಳಿ
+          description: ಈ 20-ಗಂಟೆಗಳ ಕೋರ್ಸ್ 2-4 ಕೋರ್ಸ್‌ಗಳಲ್ಲಿ ಕೋರ್ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಮತ್ತು ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಪರಿಕಲ್ಪನೆಗಳನ್ನು ಒಳಗೊಂಡಿದೆ. ಕೋರ್ಸ್ ಅನ್ನು 10-18 ವಯಸ್ಸಿನವರಿಗೆ ಬಳಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ. ಹೆಚ್ಚು ಸಂಪೂರ್ಣ ಅನುಭವಕ್ಕಾಗಿ 2-4 ಕೋರ್ಸ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸಿ!
           description_audience: ವಯಸ್ಸು 10-18
           lessons:
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+          student_description: ಈ 20-ಗಂಟೆಗಳ ಕೋರ್ಸ್ 2-4 ಕೋರ್ಸ್‌ಗಳಲ್ಲಿ ಕೋರ್ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಮತ್ತು ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಪರಿಕಲ್ಪನೆಗಳನ್ನು ಒಳಗೊಂಡಿದೆ. ಕೋರ್ಸ್ ಅನ್ನು 10-18 ವಯಸ್ಸಿನವರಿಗೆ ಬಳಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ. ಹೆಚ್ಚು ಸಂಪೂರ್ಣ ಅನುಭವಕ್ಕಾಗಿ 2-4 ಕೋರ್ಸ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸಿ!
         events:
           title: ಈವೆಂಟ್‌ಗಳು
           description: ಈವೆಂಟ್‌ಗಳು
@@ -72,10 +120,28 @@ kn:
           lessons:
             Hour of Code 2013:
               name: ಅವರ್ ಆಫ್‌ ಕೋಡ್ 2013
+        cspunit1:
+          lessons:
+            Binary Numbers:
+              name: ಬೈನರಿ ಸಂಖ್ಯೆಗಳು
+        algebraPD3:
+          lessons:
+            The Design Recipe:
+              name: ವಿನ್ಯಾಸ ಪಾಕವಿಧಾನ
+        sciencePD2:
+          lessons:
+            Wrap-Up:
+              name: ಅಂತಿಮಗೊಳಿಸಿ
+        algebraPD2a:
+          lessons:
+            The Design Recipe:
+              name: ವಿನ್ಯಾಸ ಪಾಕವಿಧಾನ
         allthethings:
           lessons:
             Flappy:
               name: ಫ್ಲಾಪಿ
+            Minecraft:
+              name: ಮೈನ್‌ಕ್ರಾಫ್ಟ್
             Web Lab:
               name: ವೆಬ್ ಲ್ಯಾಬ್
             Java Lab:
@@ -84,16 +150,53 @@ kn:
           lessons:
             Computer Science Fundamentals:
               name: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್
+        algebraPD2:
+          lessons:
+            The Design Recipe:
+              name: ವಿನ್ಯಾಸ ಪಾಕವಿಧಾನ
+        sciencePD2b:
+          lessons:
+            Wrap-Up:
+              name: ಅಂತಿಮಗೊಳಿಸಿ
         equity-pd:
           lessons:
             Codeorg Equity PD:
               name: Code.org ಈಕ್ವಿಟಿ PD
+        science-PD2:
+          lessons:
+            Wrap-Up:
+              name: ಅಂತಿಮಗೊಳಿಸಿ
+        sciencePD2b-iZone:
+          lessons:
+            Wrap-Up:
+              name: ಅಂತಿಮಗೊಳಿಸಿ
         asUnplugged:
           description_audience: ವಯಸ್ಸು 6-13
+          lessons:
+            Binary Bracelets:
+              name: ಬೈನರಿ ಕಡಗಗಳು
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
+            Getting Loopy:
+              name: ಲೂಪಿ ಆಗುವುದು
+            Happy Maps:
+              name: ಸಂತೋಷದ ನಕ್ಷೆಗಳು
+            Move it, Move it:
+              name: ಮೂವ್ ಇಟ್, ಮೂವ್ ಇಟ್
+            'Real-life Algorithms: Plant a Seed':
+              name: 'ನೈಜ-ಜೀವನದ ಕ್ರಮಾವಳಿಗಳು: ಬೀಜವನ್ನು ನೆಡಿರಿ'
+            Songwriting:
+              name: ಹಾಡು ಬರೆಯವುದು
+            The Big Event:
+              name: ದೊಡ್ಡ ಘಟನೆ
         afterschool1:
           description_audience: ವಯಸ್ಸು 7-13
         cspunit4draft:
           description_short: ಡೇಟಾ
+        ScienceP3OLPT2:
+          lessons:
+            Wrap-Up:
+              name: ಅಂತಿಮಗೊಳಿಸಿ
         Special Fun:
           description_audience: ವಯಸ್ಸು 10-18
         SpecialSeries:
@@ -118,15 +221,28 @@ kn:
           student_description: ಡ್ರಾಯ್ಡ್‌ಗಳನ್ನು ಪ್ರೋಗ್ರಾಮ್‌ ಮಾಡಲು ಕಲಿಯಿರಿ ಮತ್ತು ದೂರದ ಗ್ಯಾಲಾಕ್ಸಿಯಲ್ಲಿ ನಿಮ್ಮ ಸ್ವಂತ ಸ್ಟಾರ್‌ ವಾರ್ಸ್ ಗೇಮ್‌ ರಚಿಸಿ.
         mc:
           title: ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್
+          description_short: ಕೋಡ್ ಮೂಲಕ ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಪ್ರಪಂಚವನ್ನು ಅನ್ವೇಷಿಸಿ.
           lessons:
             Hour of Code 2015:
               name: ಅವರ್ ಆಫ್‌ ಕೋಡ್ 2015
         oceans:
           name: ಸಮುದ್ರಗಳು
+        ScienceP3OLPT3:
+          lessons:
+            Wrap-Up:
+              name: ಅಂತಿಮಗೊಳಿಸಿ
+        csp1-2017:
+          lessons:
+            Binary Numbers:
+              name: ಬೈನರಿ ಸಂಖ್ಯೆಗಳು
         csp4-2017:
           lessons:
             Simple Encryption:
               name: ಸರಳ ಎನ್‌ಕ್ರಿಪ್ಷನ್
+        CSDU3-Draft:
+          lessons:
+            Collisions:
+              name: ಡಿಕ್ಕಿಗಳು
         CSF_Secret_Sample:
           description_audience: ವಯಸ್ಸು 8-18
         cspunit1-support:
@@ -161,11 +277,19 @@ kn:
               name: ಈವೆಂಟ್‌ಗಳು
             Loops:
               name: ಲೂಪ್‌ಗಳು
+            Loops Unplugged:
+              name: ಕುಣಿಕೆಗಳು ಅನ್ಪ್ಲಗ್ಡ್
+            'Real-life Algorithms: Plant a Seed':
+              name: 'ನೈಜ-ಜೀವನದ ಕ್ರಮಾವಳಿಗಳು: ಬೀಜವನ್ನು ನೆಡಿರಿ'
         grade4:
           description_audience: ವಯಸ್ಸು 9-99
           lessons:
             Build a Star Wars Game!:
               name: ಸ್ಟಾರ್ ವಾರ್ ಗೇಮ್ ಅನ್ನು ನಿರ್ಮಿಸಿ!
+            Digital Citizenship:
+              name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            Songwriting:
+              name: ಹಾಡು ಬರೆಯವುದು
         grade1:
           description_audience: ವಯಸ್ಸು 5-18
           lessons:
@@ -175,10 +299,17 @@ kn:
               name: ಈವೆಂಟ್‌ಗಳು
             Loops:
               name: ಲೂಪ್‌ಗಳು
+            Loops Unplugged:
+              name: ಕುಣಿಕೆಗಳು ಅನ್ಪ್ಲಗ್ಡ್
             'Debugging: Unspotted Bugs':
               name: 'ಡಿಬಗ್ ಮಾಡುವುದು: ಗುರುತಿಸಿಲ್ಲದ ಬಗ್‌ಗಳು'
         grade5:
           description_audience: ವಯಸ್ಸು 10-110
+          lessons:
+            'Artist: Variables':
+              name: 'ಕಲಾವಿದ: ವೇರಿಯಬಲ್ಸ್‌'
+            Digital Citizenship:
+              name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
         grade3:
           description_audience: ವಯಸ್ಸು 5-18
         alltheplcthings:
@@ -187,6 +318,8 @@ kn:
               display_name: ಮುನ್ನೋಟ
         csd3-2017:
           lessons:
+            Collisions:
+              name: ಡಿಕ್ಕಿಗಳು
             Variables:
               name: ವೇರಿಯಬಲ್‌ಗಳು
             Conditionals:
@@ -196,6 +329,12 @@ kn:
           lessons:
             Flappy:
               name: ಫ್ಲಾಪಿ
+            Binary Bracelets:
+              name: ಬೈನರಿ ಕಡಗಗಳು
+            'Real-life Algorithms: Paper Planes':
+              name: 'ನಿಜ ಜೀವನದ ಅಲ್ಗಾರಿದಮ್‌ಗಳು: ಪೇಪರ್ ಪ್ಲೇನ್ಸ್'
+            The Big Event:
+              name: ದೊಡ್ಡ ಘಟನೆ
         k5concepts:
           lessons:
             Conditionals:
@@ -208,6 +347,10 @@ kn:
               name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
             Variables:
               name: ವೇರಿಯಬಲ್‌ಗಳು
+        algebrapdnext:
+          lessons:
+            The Design Recipe:
+              name: ವಿನ್ಯಾಸ ಪಾಕವಿಧಾನ
         csp-online-test:
           lesson_groups:
             required:
@@ -230,6 +373,10 @@ kn:
           lesson_groups:
             required:
               display_name: ಮುನ್ನೋಟ
+        minecraft:
+          description_short: ನಿಮ್ಮ ಸ್ವಂತ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಆವೃತ್ತಿಯಲ್ಲಿ ಪ್ರಾಣಿಗಳು ಮತ್ತು ಇತರ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಜೀವಿಗಳನ್ನು ಪ್ರೋಗ್ರಾಂ ಮಾಡಿ.
+          description: ನಿಮ್ಮ ಸ್ವಂತ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಆವೃತ್ತಿಯಲ್ಲಿ ಪ್ರಾಣಿಗಳು ಮತ್ತು ಇತರ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಜೀವಿಗಳನ್ನು ಪ್ರೋಗ್ರಾಂ ಮಾಡಿ.
+          student_description: ನಿಮ್ಮ ಸ್ವಂತ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಆವೃತ್ತಿಯಲ್ಲಿ ಪ್ರಾಣಿಗಳು ಮತ್ತು ಇತರ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಜೀವಿಗಳನ್ನು ಪ್ರೋಗ್ರಾಂ ಮಾಡಿ.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -241,6 +388,8 @@ kn:
               name: 'ಡಿಬಗ್ ಮಾಡುವುದು: ಕೋಡ್‌ವಿಲ್ಲೆಯಲ್ಲಿ ಬಗ್‌ಗಳು'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'ಸುಸ್ಥಿರತೆ ಮತ್ತು ಕಿರಿಕಿರಿ: ಸ್ಟೀವಿ ಮತ್ತು ದಿ ಮಾರ್ಬಲ್ಸ್'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'ನೈಜ-ಜೀವನದ ಕ್ರಮಾವಳಿಗಳು: ಬೀಜವನ್ನು ನೆಡಿರಿ'
             'Programming: Happy Maps':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಹ್ಯಾಪಿ ಮ್ಯಾಪ್ಸ್'
             Programming in Maze:
@@ -255,6 +404,8 @@ kn:
               name: 'ಈವೆಂಟ್‌ಗಳು: ದಿ ಬಿಗ್ ಈವೆಂಟ್'
             Events in Play Lab:
               name: ಪ್ಲೇ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಈವೆಂಟ್ಸ್
+            Going Places Safely:
+              name: ಸುರಕ್ಷಿತವಾಗಿ ಸ್ಥಳಗಳಿಗೆ ಹೋಗುವುದು
             'Debugging: Unspotted Bugs':
               name: 'ಡಿಬಗ್ ಮಾಡುವುದು: ಗುರುತಿಸಿಲ್ಲದ ಬಗ್‌ಗಳು'
         courseb-draft:
@@ -282,11 +433,17 @@ kn:
               name: ಪ್ಲೇ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಈವೆಂಟ್ಸ್
             Keep it Private:
               name: ಖಾಸಗಿಯಾಗಿಡಿ
+            'Real-life Algorithms: Plant a Seed':
+              name: 'ನೈಜ-ಜೀವನದ ಕ್ರಮಾವಳಿಗಳು: ಬೀಜವನ್ನು ನೆಡಿರಿ'
+            Your Digital Footprint:
+              name: ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಹೆಜ್ಜೆಗುರುತು
         coursec-draft:
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
           lessons:
             Programming in Maze:
               name: ಮೇಝ್‌ನಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
+            'Real-life Algorithms: Paper Planes':
+              name: 'ನಿಜ ಜೀವನದ ಅಲ್ಗಾರಿದಮ್‌ಗಳು: ಪೇಪರ್ ಪ್ಲೇನ್ಸ್'
             Programming in Collector:
               name: ಕಲೆಕ್ಟರ್‌ನಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             Programming in Artist:
@@ -297,8 +454,14 @@ kn:
               name: ಮೇಝ್‌ನಲ್ಲಿ ಲೂಪ್‌ಗಳು
             'Events: The Big Event':
               name: 'ಈವೆಂಟ್‌ಗಳು: ದಿ ಬಿಗ್ ಈವೆಂಟ್'
+            Binary Bracelets:
+              name: ಬೈನರಿ ಕಡಗಗಳು
             Events in Play Lab:
               name: ಪ್ಲೇ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಈವೆಂಟ್ಸ್
+            Your Digital Footprint:
+              name: ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಹೆಜ್ಜೆಗುರುತು
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Screen Out the Mean:
               name: ಮೀನ್ ಸ್ಕ್ರೀನ್ ಔಟ್ ಮಾಡಿ
         coursed-draft:
@@ -322,6 +485,8 @@ kn:
               name: ಪ್ಲೇಲ್ಯಾಬ್ ಗೇಮ್ ಬಿಲ್ಡ್ ಮಾಡಿ
             Conditionals in Bee:
               name: ಜೇನ್ನೊಣದಲ್ಲಿ ಕಂಡೀಷನಲ್‌ಗಳು
+            Digital Citizenship:
+              name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             Nested Loops:
               name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
             Nested Loops Project in Artist:
@@ -334,6 +499,8 @@ kn:
             extra_course_content:
               display_name: ಹೆಚ್ಚುವರಿ ಕೋರ್ಸ್‌ ಕಂಟೆಂಟ್
           lessons:
+            Digital Citizenship:
+              name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             'Functions: Songwriting':
               name: 'ಫಂಕ್ಷನ್‌ಗಳು: ಹಾಡು ಬರೆಯುವುದು'
             Functions in Artist:
@@ -354,6 +521,12 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ನಿರ್ಮಿಸಿ
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
+            Private and Personal Information:
+              name: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
+            Internet:
+              name: ಇಂಟರ್ನೆಟ್
+            Crowdsourcing:
+              name: ಕ್ರೌಡ್ಸೋರ್ಸಿಂಗ್
             Determine the Concept:
               name: ಕಾನ್ಸೆಪ್ಟ್ ನಿರ್ಧರಿಸಿ
             Conditionals:
@@ -366,10 +539,16 @@ kn:
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
+            Digital Citizenship:
+              name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            Envelope Variables:
+              name: ಎನ್ವಲಪ್ ವೇರಿಯಬಲ್ಸ್
             Variables in Play Lab:
               name: ಪ್ಲೇಲ್ಯಾಬ್‌ನಲ್ಲಿ ವೇರಿಯಬಲ್‌ಗಳು
             Variables in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ವೇರಿಯಬಲ್‌ಗಳು
+            For Loop Fun:
+              name: ಲೂಪ್ ಮೋಜಿಗಾಗಿ
             For Loops in Bee:
               name: ಜೇನ್ನೊಣದಲ್ಲಿ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             For Loops in Artist:
@@ -406,6 +585,14 @@ kn:
               name: ಅವರ್ ಆಫ್‌ ಕೋಡ್ 2013
         sports:
           name: ಸ್ಪೋರ್ಟ್ಸ್
+        2016_sciencePD-phase2b:
+          lessons:
+            Wrap-Up:
+              name: ಅಂತಿಮಗೊಳಿಸಿ
+        2016_sciencePD_phase2b:
+          lessons:
+            Wrap-Up:
+              name: ಅಂತಿಮಗೊಳಿಸಿ
         csp3-support:
           lesson_groups:
             required:
@@ -414,6 +601,14 @@ kn:
           lesson_groups:
             required:
               display_name: ಮುನ್ನೋಟ
+        sciencepd4:
+          lessons:
+            Wrap-Up:
+              name: ಅಂತಿಮಗೊಳಿಸಿ
+        science-pd-ol-pt-5:
+          lessons:
+            Wrap-Up:
+              name: ಅಂತಿಮಗೊಳಿಸಿ
         csf2harvey:
           lesson_groups:
             end_of_course_project:
@@ -429,6 +624,10 @@ kn:
               name: ಫಾರ್ಮರ್‌ನಲ್ಲಿ ಫಂಕ್ಷನ್‌ಗಳು
             Determine the Concept:
               name: ಕಾನ್ಸೆಪ್ಟ್ ನಿರ್ಧರಿಸಿ
+        sciencepd5:
+          lessons:
+            Wrap-Up:
+              name: ಅಂತಿಮಗೊಳಿಸಿ
         csp5-support:
           description: "#### **ಇನ್ನು ಬೆಂಬಲಿಸದ ಕೋರ್ಸ್‌ನ ಆವೃತ್ತಿಯೊಂದಿಗೆ ಈ ಕೋರ್ಸ್‌ ಸಂಬಂಧಿಸಿದೆ. ನಮ್ಮ ಅತ್ಯಂತ ಇತ್ತೀಚಿನ ಪಠ್ಯಕ್ರಮವನ್ನು ನೋಡಲು ನಮ್ಮ ಕೋರ್ಸ್‌ಗಳ ಮುನ್ನೋಟ ಪುಟಕ್ಕೆ (<https://studio.code.org/courses>) ಭೇಟಿ ನೀಡಿ.**\n\nಇದು ಆನ್‌ಲೈನ್‌ ಸೆಟ್ ಆಗಿದ್ದು, ಯುನಿಟ್ 5 ಕ್ಕೆ ಬೋಧಿಸಲು ಸಿದ್ಧತೆ ನಡೆಸುತ್ತಿರುವ ಶಿಕ್ಷಕರಿಗೆ ಸಿಎಸ್‌ಪಿ ಪ್ರೊಫೆಷನಲ್ ಲರ್ನಿಂಗ್ ಕೋರ್ಸ್‌ಗೆ ಬೆಂಬಲ ನೀಡುತ್ತದೆ."
           lesson_groups:
@@ -440,20 +639,42 @@ kn:
               name: ಪಟ್ಟಿಗಳು
             Map:
               name: ನಕ್ಷೆ
+            Board Events:
+              name: ಬೋರ್ಡ್ ಈವೆಂಟ್‌ಗಳು
+        csd5-draft:
+          lessons:
+            Combining Representations:
+              name: ಪ್ರಾತಿನಿಧ್ಯಗಳನ್ನು ಸಂಯೋಜಿಸುವುದು
         coursee-ramp:
           lessons:
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            'Real Life Algorithms: Dice Race':
+              name: 'ರಿಯಲ್ ಲೈಫ್ ಅಲ್ಗಾರಿದಮ್‌ಗಳು: ಡೈಸ್ ರೇಸ್'
         csd6-2017:
           lessons:
             Lists:
               name: ಪಟ್ಟಿಗಳು
+            Board Events:
+              name: ಬೋರ್ಡ್ ಈವೆಂಟ್‌ಗಳು
+            Board Events_:
+              name: ಬೋರ್ಡ್ ಈವೆಂಟ್‌ಗಳು
         csd3-draft:
           lessons:
             Variables:
               name: ವೇರಿಯಬಲ್‌ಗಳು
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Collisions:
+              name: ಡಿಕ್ಕಿಗಳು
+        csd5-2017:
+          lessons:
+            Combining Representations:
+              name: ಪ್ರಾತಿನಿಧ್ಯಗಳನ್ನು ಸಂಯೋಜಿಸುವುದು
+        csd3-old:
+          lessons:
+            Collisions:
+              name: ಡಿಕ್ಕಿಗಳು
         csd2-draft:
           lessons:
             Lists:
@@ -464,6 +685,8 @@ kn:
               name: ವೇರಿಯಬಲ್‌ಗಳು
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Collisions:
+              name: ಡಿಕ್ಕಿಗಳು
             'null':
               name: ಇಲ್ಲ
         coursef-ramp:
@@ -483,6 +706,8 @@ kn:
               name: 'ಡಿಬಗ್ ಮಾಡುವುದು: ಗುರುತಿಸಿಲ್ಲದ ಬಗ್‌ಗಳು'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'ಸುಸ್ಥಿರತೆ: ಸ್ಟೀವ್ ಮತ್ತು ಬಿಗ್ ಪ್ರಾಜೆಕ್ಟ್‌'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'ನೈಜ-ಜೀವನದ ಕ್ರಮಾವಳಿಗಳು: ಬೀಜವನ್ನು ನೆಡಿರಿ'
             Learn to Drag and Drop:
               name: ಡ್ರ್ಯಾಗ್ ಮತ್ತು ಡ್ರಾಪ್ ಮೂಲಕ ಸೀಕ್ವೆನ್ಸ್ ಮಾಡುವುದು
             'Programming: Happy Maps':
@@ -510,6 +735,8 @@ kn:
               name: 'ಡಿಬಗ್ ಮಾಡುವುದು: ಗುರುತಿಸಿಲ್ಲದ ಬಗ್‌ಗಳು'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'ಸುಸ್ಥಿರತೆ: ಸ್ಟೀವ್ ಮತ್ತು ಬಿಗ್ ಪ್ರಾಜೆಕ್ಟ್‌'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'ನೈಜ-ಜೀವನದ ಕ್ರಮಾವಳಿಗಳು: ಬೀಜವನ್ನು ನೆಡಿರಿ'
             Learn to Drag and Drop:
               name: ಡ್ರ್ಯಾಗ್ ಮತ್ತು ಡ್ರಾಪ್ ಮೂಲಕ ಸೀಕ್ವೆನ್ಸ್ ಮಾಡುವುದು
             Your Digital Footprint:
@@ -541,6 +768,8 @@ kn:
               name: 'ಸುಸ್ಥಿರತೆ: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು'
             Programming in Maze:
               name: ಮೇಝ್‌ನಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
+            'Real-life Algorithms: Paper Planes':
+              name: 'ನಿಜ ಜೀವನದ ಅಲ್ಗಾರಿದಮ್‌ಗಳು: ಪೇಪರ್ ಪ್ಲೇನ್ಸ್'
             Programming in Collector:
               name: ಕಲೆಕ್ಟರ್‌ನಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             Programming in Artist:
@@ -600,10 +829,14 @@ kn:
               name: ಆನ್‌ಲೈನ್ ಪಝಲ್‌ಗಳಿಗೆ ಪರಿಚಯ
             The Power of Words:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
+            Envelope Variables:
+              name: ಎನ್ವಲಪ್ ವೇರಿಯಬಲ್ಸ್
             Variables in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ವೇರಿಯಬಲ್‌ಗಳು
             Variables in Play Lab:
               name: ಪ್ಲೇಲ್ಯಾಬ್‌ನಲ್ಲಿ ವೇರಿಯಬಲ್‌ಗಳು
+            For Loop Fun:
+              name: ಲೂಪ್ ಮೋಜಿಗಾಗಿ
             For Loops in Bee:
               name: ಜೇನ್ನೊಣದಲ್ಲಿ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             For Loops in Artist:
@@ -640,6 +873,8 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Programming in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             'Loops: My Loopy Robotic Friends':
@@ -690,6 +925,8 @@ kn:
               name: ಜೇನ್ನೊಣದಲ್ಲಿ ಫಂಕ್ಷನ್‌ಗಳು
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Programming in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             'Loops: My Loopy Robotic Friends':
@@ -757,16 +994,24 @@ kn:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್
             Nested Loops Project in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ನೆಸ್ಟೆಡ್ ಲೂಪ್ಸ್ ಪ್ರಾಜೆಕ್ಟ್
+            Internet:
+              name: ಇಂಟರ್ನೆಟ್
+            Digital Citizenship:
+              name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             Screen Out the Mean:
               name: ಮೀನ್ ಸ್ಕ್ರೀನ್ ಔಟ್ ಮಾಡಿ
             'Events: The Big Event':
               name: 'ಈವೆಂಟ್‌ಗಳು: ದಿ ಬಿಗ್ ಈವೆಂಟ್'
             Conditionals & Loops in Maze:
               name: ಮೇಝ್‌ನಲ್ಲಿ ಕಂಡೀಷನಲ್‌ಗಳು ಮತ್ತು ಲೂಪ್‌ಗಳು
+            Envelope Variables:
+              name: ಎನ್ವಲಪ್ ವೇರಿಯಬಲ್ಸ್
             Variables in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ವೇರಿಯಬಲ್‌ಗಳು
             Variables in Play Lab:
               name: ಪ್ಲೇಲ್ಯಾಬ್‌ನಲ್ಲಿ ವೇರಿಯಬಲ್‌ಗಳು
+            For Loop Fun:
+              name: ಲೂಪ್ ಮೋಜಿಗಾಗಿ
             For Loops in Bee:
               name: ಜೇನ್ನೊಣದಲ್ಲಿ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             For Loops in Artist:
@@ -793,6 +1038,8 @@ kn:
               name: ಮೇಝ್‌ನಲ್ಲಿ ಕಂಡೀಷನಲ್‌ಗಳು ಮತ್ತು ಲೂಪ್‌ಗಳು
             'Functions: Songwriting with Parameters':
               name: 'ಫಂಕ್ಷನ್‌ಗಳು: ಪ್ಯಾರಾಮೀಟರ್‌ಗಳೊಂದಿಗೆ ಹಾಡು ಬರೆಯುವುದು'
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Nested Loops:
               name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
             Conditionals & Loops in Harvester:
@@ -803,6 +1050,8 @@ kn:
               name: 'ಡಿಬಗ್ ಮಾಡುವುದು: ಗುರುತಿಸಿಲ್ಲದ ಬಗ್‌ಗಳು'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'ಸುಸ್ಥಿರತೆ: ಸ್ಟೀವ್ ಮತ್ತು ಬಿಗ್ ಪ್ರಾಜೆಕ್ಟ್‌'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'ನೈಜ-ಜೀವನದ ಕ್ರಮಾವಳಿಗಳು: ಬೀಜವನ್ನು ನೆಡಿರಿ'
             Learn to Drag and Drop:
               name: ಡ್ರ್ಯಾಗ್ ಮತ್ತು ಡ್ರಾಪ್ ಮೂಲಕ ಸೀಕ್ವೆನ್ಸ್ ಮಾಡುವುದು
             'Online Safety: Your Digital Footprint':
@@ -825,6 +1074,8 @@ kn:
           lessons:
             other:
               name: ಇತರೆ
+            Thanks:
+              name: ಧನ್ಯವಾದಗಳು
         applab-intro:
           title: ಆಪ್‌ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ
           lessons:
@@ -839,6 +1090,8 @@ kn:
           lessons:
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Programming in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             'Loops: My Loopy Robotic Friends':
@@ -851,6 +1104,8 @@ kn:
               name: 'ಅಲ್ಗೊರಿಥಂಗಳು: ಡೈಸ್ ರೇಸ್'
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Private and Personal Information:
+              name: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
             'Functions: Songwriting':
               name: 'ಫಂಕ್ಷನ್‌ಗಳು: ಹಾಡು ಬರೆಯುವುದು'
             Functions in Artist:
@@ -871,6 +1126,10 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ನಿರ್ಮಿಸಿ
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
+            Internet:
+              name: ಇಂಟರ್ನೆಟ್
+            Crowdsourcing:
+              name: ಕ್ರೌಡ್ಸೋರ್ಸಿಂಗ್
         new-d:
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -887,8 +1146,12 @@ kn:
               name: ಜೇನ್ನೊಣದಲ್ಲಿ ಕಂಡೀಷನಲ್‌ಗಳು
             Conditionals & Loops in Maze:
               name: ಮೇಝ್‌ನಲ್ಲಿ ಕಂಡೀಷನಲ್‌ಗಳು ಮತ್ತು ಲೂಪ್‌ಗಳು
+            Digital Citizenship:
+              name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             Build a Play Lab Game:
               name: ಪ್ಲೇಲ್ಯಾಬ್ ಗೇಮ್ ಬಿಲ್ಡ್ ಮಾಡಿ
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Loops in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್
         new-express:
@@ -932,6 +1195,8 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್ ಪರಿಷ್ಕರಿಸಿ
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Nested Loops:
               name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
         new-stages-sept-2017:
@@ -947,6 +1212,8 @@ kn:
           lessons:
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Programming in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             'Loops: My Loopy Robotic Friends':
@@ -957,6 +1224,8 @@ kn:
               name: 'ಅಲ್ಗೊರಿಥಂಗಳು: ಡೈಸ್ ರೇಸ್'
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Private and Personal Information:
+              name: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
             'Functions: Songwriting':
               name: 'ಫಂಕ್ಷನ್‌ಗಳು: ಹಾಡು ಬರೆಯುವುದು'
             Functions in Bee:
@@ -977,6 +1246,10 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ನಿರ್ಮಿಸಿ
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
+            Internet:
+              name: ಇಂಟರ್ನೆಟ್
+            Crowdsourcing:
+              name: ಕ್ರೌಡ್ಸೋರ್ಸಿಂಗ್
         new-f:
           lesson_groups:
             end_of_course_project:
@@ -984,6 +1257,8 @@ kn:
           lessons:
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Programming in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             'Loops: My Loopy Robotic Friends':
@@ -994,10 +1269,14 @@ kn:
               name: 'ಅಲ್ಗೊರಿಥಂಗಳು: ಟ್ಯಾಂಗ್ರಾಮ್ಸ್‌'
             The Power of Words:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
+            Envelope Variables:
+              name: ಎನ್ವಲಪ್ ವೇರಿಯಬಲ್ಸ್
             Variables in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ವೇರಿಯಬಲ್‌ಗಳು
             Variables in Play Lab:
               name: ಪ್ಲೇಲ್ಯಾಬ್‌ನಲ್ಲಿ ವೇರಿಯಬಲ್‌ಗಳು
+            For Loop Fun:
+              name: ಲೂಪ್ ಮೋಜಿಗಾಗಿ
             For Loops in Bee:
               name: ಜೇನ್ನೊಣದಲ್ಲಿ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             For Loops in Artist:
@@ -1018,6 +1297,10 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್ ಪರಿಷ್ಕರಿಸಿ
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
+        csd5-old:
+          lessons:
+            Combining Representations:
+              name: ಪ್ರಾತಿನಿಧ್ಯಗಳನ್ನು ಸಂಯೋಜಿಸುವುದು
         pwc:
           lessons:
             Simple Encryption:
@@ -1030,6 +1313,10 @@ kn:
               name: ಸಿಎಸ್‌ಪಿ ಸಮೀಕ್ಷೆ ಪೂರ್ವ 21-22
             CSD pre-survey 21-2:
               name: ಸಿಎಸ್‌ಪಿ ಸಮೀಕ್ಷೆ ಪೂರ್ವ 21-22
+            CS Principles Pre-survey:
+              name: CSA Pre-Survey Draft
+            Course Survey:
+              name: CSA ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ ಕರಡು
         hero:
           name: ಹೀರೋ
         applab-intro-staging:
@@ -1045,6 +1332,8 @@ kn:
           lessons:
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Programming in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             'Loops: My Loopy Robotic Friends':
@@ -1057,6 +1346,8 @@ kn:
               name: 'ಅಲ್ಗೊರಿಥಂಗಳು: ಡೈಸ್ ರೇಸ್'
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Private and Personal Information:
+              name: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
             'Functions: Songwriting':
               name: 'ಫಂಕ್ಷನ್‌ಗಳು: ಹಾಡು ಬರೆಯುವುದು'
             Functions in Artist:
@@ -1077,6 +1368,10 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ನಿರ್ಮಿಸಿ
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
+            Internet:
+              name: ಇಂಟರ್ನೆಟ್
+            Crowdsourcing:
+              name: ಕ್ರೌಡ್ಸೋರ್ಸಿಂಗ್
         course-f-2018:
           lesson_groups:
             end_of_course_project:
@@ -1084,6 +1379,8 @@ kn:
           lessons:
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Programming in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             'Loops: My Loopy Robotic Friends':
@@ -1094,10 +1391,14 @@ kn:
               name: 'ಅಲ್ಗೊರಿಥಂಗಳು: ಟ್ಯಾಂಗ್ರಾಮ್ಸ್‌'
             The Power of Words:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
+            Envelope Variables:
+              name: ಎನ್ವಲಪ್ ವೇರಿಯಬಲ್ಸ್
             Variables in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ವೇರಿಯಬಲ್‌ಗಳು
             Variables in Play Lab:
               name: ಪ್ಲೇಲ್ಯಾಬ್‌ನಲ್ಲಿ ವೇರಿಯಬಲ್‌ಗಳು
+            For Loop Fun:
+              name: ಲೂಪ್ ಮೋಜಿಗಾಗಿ
             For Loops in Bee:
               name: ಜೇನ್ನೊಣದಲ್ಲಿ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             For Loops in Artist:
@@ -1128,25 +1429,42 @@ kn:
               name: ವೇರಿಯಬಲ್‌ಗಳು
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Collisions:
+              name: ಡಿಕ್ಕಿಗಳು
         csd3-2018:
           lessons:
             Variables:
               name: ವೇರಿಯಬಲ್‌ಗಳು
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Collisions:
+              name: ಡಿಕ್ಕಿಗಳು
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
         csd2-2018:
           lessons:
             Lists:
               name: ಪಟ್ಟಿಗಳು
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
         coursea-2018:
           assignment_family_title: ಕೋರ್ಸ್‌ ಎ
           description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
+          lessons:
+            'Programming: Happy Maps':
+              name: ಸಂತೋಷದ ನಕ್ಷೆಗಳು
+            Going Places Safely:
+              name: ಸುರಕ್ಷಿತವಾಗಿ ಸ್ಥಳಗಳಿಗೆ ಹೋಗುವುದು
         express-2018:
           lessons:
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             'Loops: My Loopy Robotic Friends':
               name: 'ಲೂಪ್ಸ್: ಮೈ ಲೂಪಿ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
             Nested Loops:
               name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            'Events: The Big Event':
+              name: ದೊಡ್ಡ ಘಟನೆ
             Variables in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ವೇರಿಯಬಲ್‌ಗಳು
             Variables in Play Lab:
@@ -1171,6 +1489,10 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್ ಪರಿಷ್ಕರಿಸಿ
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
+            'Loops: Getting Loopy':
+              name: ಲೂಪಿ ಆಗುವುದು
+            'Functions: Songwriting':
+              name: ಹಾಡು ಬರೆಯವುದು
             Functions in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಫಂಕ್ಷನ್‌ಗಳು
             Screen Out the Mean:
@@ -1179,6 +1501,16 @@ kn:
               name: ಕಾನ್ಸೆಪ್ಟ್ ನಿರ್ಧರಿಸಿ
             The Power of Words:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
+            Envelope Variables:
+              name: ಎನ್ವಲಪ್ ವೇರಿಯಬಲ್ಸ್
+            For Loop Fun:
+              name: ಲೂಪ್ ಮೋಜಿಗಾಗಿ
+            Binary Bracelets:
+              name: ಬೈನರಿ ಕಡಗಗಳು
+            'Unplugged: Binary':
+              name: ಬೈನರಿ ಚಿತ್ರಗಳು
+            Crowdsourcing:
+              name: ಕ್ರೌಡ್ಸೋರ್ಸಿಂಗ್
         courseb-2018:
           assignment_family_title: ಕೋರ್ಸ್‌ ಬಿ
           lessons:
@@ -1186,23 +1518,49 @@ kn:
               name: 'ಡಿಬಗ್ ಮಾಡುವುದು: ಗುರುತಿಸಿಲ್ಲದ ಬಗ್‌ಗಳು'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'ಸುಸ್ಥಿರತೆ ಮತ್ತು ಕಿರಿಕಿರಿ: ಸ್ಟೀವಿ ಮತ್ತು ದಿ ಮಾರ್ಬಲ್ಸ್'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'ನೈಜ-ಜೀವನದ ಕ್ರಮಾವಳಿಗಳು: ಬೀಜವನ್ನು ನೆಡಿರಿ'
+            Your Digital Footprint:
+              name: ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಹೆಜ್ಜೆಗುರುತು
             Programming in Maze:
               name: ಮೇಝ್‌ನಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             Programming with Rey and BB-8:
               name: ರೇ ಮತ್ತು ಬಿಬಿ-8 ಸಹಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್
+            Copyright and Creativity:
+              name: ಫೇರ್ ಅನ್ನು ರಚಿಸಲು ಮತ್ತು ಪ್ಲೇ ಮಾಡಲು ಇದು ಅದ್ಭುತವಾಗಿದೆ
         coursed-2018:
           assignment_family_title: ಕೋರ್ಸ್‌ ಡಿ
           lessons:
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Conditionals & Loops in Maze:
               name: ಮೇಝ್‌ನಲ್ಲಿ ಕಂಡೀಷನಲ್‌ಗಳು ಮತ್ತು ಲೂಪ್‌ಗಳು
+            Digital Citizenship:
+              name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            'Unplugged: Binary':
+              name: ಬೈನರಿ ಚಿತ್ರಗಳು
             Introduction to Online Puzzles:
               name: ಆನ್‌ಲೈನ್ ಪಝಲ್‌ಗಳಿಗೆ ಪರಿಚಯ
         coursec-2018:
           assignment_family_title: ಕೋರ್ಸ್‌ ಸಿ
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
           lessons:
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
+            'Loops: Getting Loopy':
+              name: ಲೂಪಿ ಆಗುವುದು
+            'Events: The Big Event':
+              name: ದೊಡ್ಡ ಘಟನೆ
             Screen Out the Mean:
               name: ಮೀನ್ ಸ್ಕ್ರೀನ್ ಔಟ್ ಮಾಡಿ
+            Binary Bracelets:
+              name: ಬೈನರಿ ಕಡಗಗಳು
+        csd6-2018:
+          lessons:
+            Board Events:
+              name: ಬೋರ್ಡ್ ಈವೆಂಟ್‌ಗಳು
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
         coursee-2018:
           assignment_family_title: ಕೋರ್ಸ್‌ ಇ
           lesson_groups:
@@ -1211,8 +1569,16 @@ kn:
             extra_course_content:
               display_name: ಹೆಚ್ಚುವರಿ ಕೋರ್ಸ್‌ ಕಂಟೆಂಟ್
           lessons:
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
+            'Loops: My Loopy Robotic Friends':
+              name: ನನ್ನ ಲೂಪಿ ರೋಬೋಟಿಕ್ ಸ್ನೇಹಿತರು
             'Algorithms: Dice Race':
               name: 'ಅಲ್ಗೊರಿಥಂಗಳು: ಡೈಸ್ ರೇಸ್'
+            Private and Personal Information:
+              name: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
+            'Functions: Songwriting':
+              name: ಹಾಡು ಬರೆಯವುದು
             Determine the Concept:
               name: ಕಾನ್ಸೆಪ್ಟ್ ನಿರ್ಧರಿಸಿ
             Build a Play Lab Game:
@@ -1225,8 +1591,12 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ನಿರ್ಮಿಸಿ
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
+            Crowdsourcing:
+              name: ಕ್ರೌಡ್ಸೋರ್ಸಿಂಗ್
             Minecraft Hour of Code:
               name: ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್
+            Copyright and Creativity:
+              name: ಡಿಜಿಟಲ್ ಹಂಚಿಕೆ
         coursef-2018:
           assignment_family_title: ಕೋರ್ಸ್‌ ಎಫ್‌
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
@@ -1234,14 +1604,22 @@ kn:
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
+            'Loops: My Loopy Robotic Friends':
+              name: ನನ್ನ ಲೂಪಿ ರೋಬೋಟಿಕ್ ಸ್ನೇಹಿತರು
             'Algorithms: Tangrams':
               name: 'ಅಲ್ಗೊರಿಥಂಗಳು: ಟ್ಯಾಂಗ್ರಾಮ್ಸ್‌'
             The Power of Words:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
+            Envelope Variables:
+              name: ಎನ್ವಲಪ್ ವೇರಿಯಬಲ್ಸ್
             Variables in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ವೇರಿಯಬಲ್‌ಗಳು
             Variables in Play Lab:
               name: ಪ್ಲೇಲ್ಯಾಬ್‌ನಲ್ಲಿ ವೇರಿಯಬಲ್‌ಗಳು
+            For Loop Fun:
+              name: ಲೂಪ್ ಮೋಜಿಗಾಗಿ
             For Loops in Bee:
               name: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             Functions in Bee:
@@ -1260,6 +1638,20 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್ ಪರಿಷ್ಕರಿಸಿ
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
+        csp1-2018:
+          lessons:
+            Binary Numbers:
+              name: ಬೈನರಿ ಸಂಖ್ಯೆಗಳು
+        csd4-2018:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
+        csd5-2018:
+          lessons:
+            Combining Representations:
+              name: ಪ್ರಾತಿನಿಧ್ಯಗಳನ್ನು ಸಂಯೋಜಿಸುವುದು
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
         csp4-2018:
           lessons:
             Simple Encryption:
@@ -1334,8 +1726,14 @@ kn:
               display_name: ಮುನ್ನೋಟ
         pre-express-2018:
           lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'ನೈಜ-ಜೀವನದ ಕ್ರಮಾವಳಿಗಳು: ಬೀಜವನ್ನು ನೆಡಿರಿ'
             Programming in Maze:
               name: ಮೇಝ್‌ನಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
+            Your Digital Footprint:
+              name: ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಹೆಜ್ಜೆಗುರುತು
+            Copyright and Creativity:
+              name: ಫೇರ್ ಅನ್ನು ರಚಿಸಲು ಮತ್ತು ಪ್ಲೇ ಮಾಡಲು ಇದು ಅದ್ಭುತವಾಗಿದೆ
             Programming with Rey and BB-8:
               name: ರೇ ಮತ್ತು ಬಿಬಿ-8 ಸಹಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್
         fit-test:
@@ -1373,11 +1771,17 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_data:
               display_name: ಡೇಟಾ
+            csf_internet:
+              display_name: ಇಂಟರ್ನೆಟ್
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Programming in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             'Loops: My Loopy Robotic Friends':
@@ -1386,6 +1790,10 @@ kn:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್
             The Power of Words:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
+            Envelope Variables:
+              name: ಎನ್ವಲಪ್ ವೇರಿಯಬಲ್ಸ್
+            For Loop Fun:
+              name: ಲೂಪ್ ಮೋಜಿಗಾಗಿ
             For Loops in Bee:
               name: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             Explore Project Ideas:
@@ -1400,6 +1808,10 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
             End of Course Project:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+            Crowdsourcing:
+              name: ಕ್ರೌಡ್ಸೋರ್ಸಿಂಗ್
+            Digital Sharing:
+              name: ಡಿಜಿಟಲ್ ಹಂಚಿಕೆ
         dance-low:
           lessons:
             Dance Party:
@@ -1412,6 +1824,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
@@ -1419,12 +1833,18 @@ kn:
               name: ಆನ್‌ಲೈನ್ ಪಝಲ್‌ಗಳಿಗೆ ಪರಿಚಯ
             Nested Loops in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ನೆಸ್ಟೆಡ್ ಲೂಪ್ಸ್
+            Digital Citizenship:
+              name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             Build a Play Lab Game:
               name: ಪ್ಲೇಲ್ಯಾಬ್ ಗೇಮ್ ಬಿಲ್ಡ್ ಮಾಡಿ
+            'Unplugged: Binary':
+              name: ಬೈನರಿ ಚಿತ್ರಗಳು
             Dance Party:
               name: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
         coursee-2019:
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_nested_loops:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
             end_of_course_project:
@@ -1432,6 +1852,8 @@ kn:
           lessons:
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Programming in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             'Loops: My Loopy Robotic Friends':
@@ -1440,6 +1862,10 @@ kn:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್
             Nested Loops:
               name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            Private and Personal Information:
+              name: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
+            'Functions: Songwriting':
+              name: ಹಾಡು ಬರೆಯವುದು
             Determine the Concept:
               name: ಕಾನ್ಸೆಪ್ಟ್ ನಿರ್ಧರಿಸಿ
             Explore Project Ideas:
@@ -1450,8 +1876,18 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ನಿರ್ಮಿಸಿ
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
+            Internet:
+              name: ಇಂಟರ್ನೆಟ್
+            Crowdsourcing:
+              name: ಕ್ರೌಡ್ಸೋರ್ಸಿಂಗ್
             End of Course Project:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+            Digital Sharing:
+              name: ಡಿಜಿಟಲ್ ಹಂಚಿಕೆ
+            Simon Says:
+              name: ಸೈಮನ್ ಹೇಳುತ್ತಾನೆ
+            Songwriting:
+              name: ಹಾಡು ಬರೆಯವುದು
         express-2019:
           lesson_groups:
             csf_loops:
@@ -1475,6 +1911,10 @@ kn:
               name: 'ಈವೆಂಟ್‌ಗಳು: ದಿ ಬಿಗ್ ಈವೆಂಟ್'
             The Power of Words:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
+            Envelope Variables:
+              name: ಎನ್ವಲಪ್ ವೇರಿಯಬಲ್ಸ್
+            For Loop Fun:
+              name: ಲೂಪ್ ಮೋಜಿಗಾಗಿ
             For Loops in Bee:
               name: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             Explore Project Ideas:
@@ -1487,6 +1927,12 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್ ಪರಿಷ್ಕರಿಸಿ
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
+            Binary Bracelets:
+              name: ಬೈನರಿ ಕಡಗಗಳು
+            Internet:
+              name: ಇಂಟರ್ನೆಟ್
+            Crowdsourcing:
+              name: ಕ್ರೌಡ್ಸೋರ್ಸಿಂಗ್
             Build A Project:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             Dance Party:
@@ -1505,6 +1951,8 @@ kn:
         coursec-2019:
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
@@ -1514,41 +1962,63 @@ kn:
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'ನಿಜ ಜೀವನದ ಅಲ್ಗಾರಿದಮ್‌ಗಳು: ಪೇಪರ್ ಪ್ಲೇನ್ಸ್'
             'Loops: Getting Loopy':
               name: 'ಲೂಪ್ಸ್: ಲೂಪಿ ಆಗುವುದು'
             Loops in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್
+            'Events: The Big Event':
+              name: ದೊಡ್ಡ ಘಟನೆ
             Screen Out the Mean:
               name: ಮೀನ್ ಸ್ಕ್ರೀನ್ ಔಟ್ ಮಾಡಿ
+            Binary Bracelets:
+              name: ಬೈನರಿ ಕಡಗಗಳು
             'End of Course Project: Create a Play Lab Game':
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+            Powerful Passwords:
+              name: ಶಕ್ತಿಯುತ ಪಾಸ್‌ವರ್ಡ್‌ಗಳು
+            Picturing Data:
+              name: ಚಿತ್ರಣ ಡೇಟಾ
         coursea-2019:
           description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
               display_name: ಈವೆಂಟ್‌ಗಳು
           lessons:
+            'Programming: Happy Maps':
+              name: ಸಂತೋಷದ ನಕ್ಷೆಗಳು
             Programming in Maze:
               name: ಮೇಝ್‌ನಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
+            Going Places Safely:
+              name: ಸುರಕ್ಷಿತವಾಗಿ ಸ್ಥಳಗಳಿಗೆ ಹೋಗುವುದು
             Loops in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್
             Programming with Rey and BB-8:
               name: ರೇ ಮತ್ತು ಬಿಬಿ-8 ಸಹಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್
         courseb-2019:
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
               display_name: ಈವೆಂಟ್‌ಗಳು
           lessons:
+            Your Digital Footprint:
+              name: ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಹೆಜ್ಜೆಗುರುತು
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
             Programming with Rey and BB-8:
               name: ರೇ ಮತ್ತು ಬಿಬಿ-8 ಸಹಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             'Loops: My Loopy Robotic Friends':
               name: 'ಲೂಪ್ಸ್: ಮೈ ಲೂಪಿ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
+            'Loops: Getting Loopy':
+              name: ಲೂಪಿ ಆಗುವುದು
         pre-express-2019:
           lesson_groups:
             csf_loops:
@@ -1558,6 +2028,8 @@ kn:
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'ಡಿಬಗ್ ಮಾಡುವುದು: ಗುರುತಿಸಿಲ್ಲದ ಬಗ್‌ಗಳು'
+            Your Digital Footprint:
+              name: ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಹೆಜ್ಜೆಗುರುತು
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
             Programming with Rey and BB-8:
@@ -1572,6 +2044,8 @@ kn:
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'ಡಿಬಗ್ ಮಾಡುವುದು: ಗುರುತಿಸಿಲ್ಲದ ಬಗ್‌ಗಳು'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'ನೈಜ-ಜೀವನದ ಕ್ರಮಾವಳಿಗಳು: ಬೀಜವನ್ನು ನೆಡಿರಿ'
         csd2-2019:
           lessons:
             Lists:
@@ -1582,6 +2056,16 @@ kn:
               name: ವೇರಿಯಬಲ್‌ಗಳು
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Collisions:
+              name: ಡಿಕ್ಕಿಗಳು
+        csd5-2019:
+          lessons:
+            Combining Representations:
+              name: ಪ್ರಾತಿನಿಧ್ಯಗಳನ್ನು ಸಂಯೋಜಿಸುವುದು
+        csd6-2019:
+          lessons:
+            Board Events:
+              name: ಬೋರ್ಡ್ ಈವೆಂಟ್‌ಗಳು
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -1590,6 +2074,10 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             required:
               display_name: ಮುನ್ನೋಟ
+        csp1-2019:
+          lessons:
+            Binary Numbers:
+              name: ಬೈನರಿ ಸಂಖ್ಯೆಗಳು
         csp4-2019:
           lessons:
             Simple Encryption:
@@ -1598,10 +2086,17 @@ kn:
           lesson_groups:
             required:
               display_name: ಮುನ್ನೋಟ
+          lessons:
+            Binary Numbers:
+              name: ಬೈನರಿ ಸಂಖ್ಯೆಗಳು
         time4csdemo:
           lessons:
+            Crowdsourcing:
+              name: ಕ್ರೌಡ್ಸೋರ್ಸಿಂಗ್
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
+            Building a Foundation:
+              name: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
             Programming in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             'Loops: My Loopy Robotic Friends':
@@ -1694,6 +2189,8 @@ kn:
               name: ವೇರಿಯಬಲ್‌ಗಳು
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Collisions:
+              name: ಡಿಕ್ಕಿಗಳು
             Sprite Properties:
               name: ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು
         csp3-pilot:
@@ -1799,8 +2296,16 @@ kn:
               name: ಕಂಡೀಷನಲ್ಸ್‌
             'Events: The Big Event':
               name: 'ಈವೆಂಟ್‌ಗಳು: ದಿ ಬಿಗ್ ಈವೆಂಟ್'
+            Simon Says:
+              name: ಸೈಮನ್ ಹೇಳುತ್ತಾನೆ
+            Private and Personal Information:
+              name: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
+            Access Ability:
+              name: ಪ್ರವೇಶ ಸಾಮರ್ಥ್ಯ
         time4cs-control-unit-2:
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_nested_loops:
@@ -1808,6 +2313,8 @@ kn:
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
+            Crowdsourcing:
+              name: ಕ್ರೌಡ್ಸೋರ್ಸಿಂಗ್
             Nested Loops in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ನೆಸ್ಟೆಡ್ ಲೂಪ್ಸ್
             'Functions: Songwriting':
@@ -1824,11 +2331,19 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_events:
               display_name: ಈವೆಂಟ್‌ಗಳು
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
           lessons:
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
             'Events: The Big Event':
               name: 'ಈವೆಂಟ್‌ಗಳು: ದಿ ಬಿಗ್ ಈವೆಂಟ್'
+            Simon Says:
+              name: ಸೈಮನ್ ಹೇಳುತ್ತಾನೆ
+            Private and Personal Information:
+              name: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
+            Access Ability:
+              name: ಪ್ರವೇಶ ಸಾಮರ್ಥ್ಯ
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -1837,11 +2352,19 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_events:
               display_name: ಈವೆಂಟ್‌ಗಳು
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
           lessons:
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
             'Events: The Big Event':
               name: 'ಈವೆಂಟ್‌ಗಳು: ದಿ ಬಿಗ್ ಈವೆಂಟ್'
+            Simon Says:
+              name: ಸೈಮನ್ ಹೇಳುತ್ತಾನೆ
+            Private and Personal Information:
+              name: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
+            Access Ability:
+              name: ಪ್ರವೇಶ ಸಾಮರ್ಥ್ಯ
         csp7-pilot:
           lesson_groups:
             required:
@@ -1858,6 +2381,14 @@ kn:
               display_name: ಪಟ್ಟಿಗಳು
             csp_loops:
               display_name: ಲೂಪ್‌ಗಳು
+        csd5-2020:
+          lessons:
+            Combining Representations:
+              name: ಪ್ರಾತಿನಿಧ್ಯಗಳನ್ನು ಸಂಯೋಜಿಸುವುದು
+        csd6-2020:
+          lessons:
+            Board Events:
+              name: ಬೋರ್ಡ್ ಈವೆಂಟ್‌ಗಳು
         csd3-2020:
           lessons:
             Variables:
@@ -1866,27 +2397,44 @@ kn:
               name: ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Collisions:
+              name: ಡಿಕ್ಕಿಗಳು
             Text:
               name: ಪಠ್ಯ
         coursea-2020:
           description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
               display_name: ಈವೆಂಟ್‌ಗಳು
           lessons:
+            Going Places Safely:
+              name: ಸುರಕ್ಷಿತವಾಗಿ ಸ್ಥಳಗಳಿಗೆ ಹೋಗುವುದು
+            'Programming: Happy Maps':
+              name: ಸಂತೋಷದ ನಕ್ಷೆಗಳು
             Programming with Rey and BB-8:
               name: ರೇ ಮತ್ತು ಬಿಬಿ-8 ಸಹಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್
         courseb-2020:
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
               display_name: ಈವೆಂಟ್‌ಗಳು
+          lessons:
+            Your Digital Footprint:
+              name: ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಹೆಜ್ಜೆಗುರುತು
+            'Loops: Getting Loopy':
+              name: ಲೂಪಿ ಆಗುವುದು
         coursec-2020:
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
@@ -1898,6 +2446,14 @@ kn:
           lessons:
             Screen Out the Mean:
               name: ಮೀನ್ ಸ್ಕ್ರೀನ್ ಔಟ್ ಮಾಡಿ
+            Powerful Passwords:
+              name: ಶಕ್ತಿಯುತ ಪಾಸ್‌ವರ್ಡ್‌ಗಳು
+            Binary Bracelets:
+              name: ಬೈನರಿ ಕಡಗಗಳು
+            'Events: The Big Event':
+              name: ದೊಡ್ಡ ಘಟನೆ
+            Picturing Data:
+              name: ಚಿತ್ರಣ ಡೇಟಾ
             'End of Course Project: Create a Play Lab Game':
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursed-2020:
@@ -1908,27 +2464,45 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             Introduction to Online Puzzles:
               name: ಆನ್‌ಲೈನ್ ಪಝಲ್‌ಗಳಿಗೆ ಪರಿಚಯ
+            'Unplugged: Binary':
+              name: ಬೈನರಿ ಚಿತ್ರಗಳು
+            Digital Citizenship:
+              name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             Dance Party:
               name: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
             End of Course Project:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursee-2020:
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_nested_loops:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
+            Simon Says:
+              name: ಸೈಮನ್ ಹೇಳುತ್ತಾನೆ
+            Private and Personal Information:
+              name: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
+            'Functions: Songwriting':
+              name: ಹಾಡು ಬರೆಯವುದು
             End of Course Project:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+            Digital Sharing:
+              name: ಡಿಜಿಟಲ್ ಹಂಚಿಕೆ
         coursef-2020:
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_data:
@@ -1936,10 +2510,18 @@ kn:
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
+            Envelope Variables:
+              name: ಎನ್ವಲಪ್ ವೇರಿಯಬಲ್ಸ್
+            For Loop Fun:
+              name: ಲೂಪ್ ಮೋಜಿಗಾಗಿ
             For Loops in Bee:
               name: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             The Power of Words:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
+            Crowdsourcing:
+              name: ಕ್ರೌಡ್ಸೋರ್ಸಿಂಗ್
+            Digital Sharing:
+              name: ಡಿಜಿಟಲ್ ಹಂಚಿಕೆ
             End of Course Project:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         express-2020:
@@ -1992,6 +2574,10 @@ kn:
               name: ಕಲೆಕ್ಟರ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್
             Loops in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್
+        csp1-2020:
+          lessons:
+            Binary Numbers:
+              name: ಬೈನರಿ ಸಂಖ್ಯೆಗಳು
         csp3-2020:
           lessons:
             Debugging:
@@ -2012,6 +2598,10 @@ kn:
               name: ಆಪ್‌ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ
             Variables:
               name: ವೇರಿಯಬಲ್‌ಗಳು
+        virtual-holding-place:
+          lessons:
+            Collisions:
+              name: ಡಿಕ್ಕಿಗಳು
         code-break:
           lessons:
             Events:
@@ -2038,6 +2628,8 @@ kn:
               name: ಪಠ್ಯ
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Collisions:
+              name: ಡಿಕ್ಕಿಗಳು
         ui-test-script-in-course-2017:
           lessons:
             Lesson:
@@ -2060,6 +2652,8 @@ kn:
               name: ಕೋರ್ಸ್‌ ಎ
             Course B:
               name: ಕೋರ್ಸ್‌ ಬಿ
+            CS Discoveries:
+              name: CS ಡಿಸ್ಕವರಿಗಳು
             Course E:
               name: ಕೋರ್ಸ್‌ ಇ
             Course F:
@@ -2104,6 +2698,10 @@ kn:
               display_name: ಔಟ್‌ಬ್ರೇಕ್ ಸಿಮ್ಯುಲೇಟರ್
             debugging:
               display_name: ಡಿಬಗ್ ಮಾಡುವುದು
+        csd2-2021:
+          lessons:
+            lesson-1:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
         csd3-2021:
           lessons:
             Variables:
@@ -2114,6 +2712,30 @@ kn:
               name: ಪಠ್ಯ
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Collisions:
+              name: ಡಿಕ್ಕಿಗಳು
+            lesson-1:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
+        csd4-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
+        csd5-2021:
+          lessons:
+            Combining Representations:
+              name: ಪ್ರಾತಿನಿಧ್ಯಗಳನ್ನು ಸಂಯೋಜಿಸುವುದು
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
+        csd6-2021:
+          lessons:
+            Board Events:
+              name: ಬೋರ್ಡ್ ಈವೆಂಟ್‌ಗಳು
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              name: ಬೈನರಿ ಸಂಖ್ಯೆಗಳು
         csp3-2021:
           lessons:
             Debugging:
@@ -2133,11 +2755,15 @@ kn:
         coursea-2021:
           description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
           lessons:
+            'Programming: Happy Maps':
+              name: ಸಂತೋಷದ ನಕ್ಷೆಗಳು
             Programming with Rey and BB-8:
               name: ರೇ ಮತ್ತು ಬಿಬಿ-8 ಸಹಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             lesson-1:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
@@ -2146,9 +2772,13 @@ kn:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         courseb-2021:
           lessons:
+            'Loops: Getting Loopy':
+              name: ಲೂಪಿ ಆಗುವುದು
             lesson-1:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
@@ -2158,9 +2788,17 @@ kn:
         coursec-2021:
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
           lessons:
+            Binary Bracelets:
+              name: ಬೈನರಿ ಕಡಗಗಳು
+            'Events: The Big Event':
+              name: ದೊಡ್ಡ ಘಟನೆ
+            Picturing Data:
+              name: ಚಿತ್ರಣ ಡೇಟಾ
             'End of Course Project: Create a Play Lab Game':
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
@@ -2176,6 +2814,8 @@ kn:
               name: ಆನ್‌ಲೈನ್ ಪಝಲ್‌ಗಳಿಗೆ ಪರಿಚಯ
             Dance Party:
               name: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
+            'Unplugged: Binary':
+              name: ಬೈನರಿ ಚಿತ್ರಗಳು
             End of Course Project:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lesson-1:
@@ -2187,15 +2827,27 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+            lessonGroup-6:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
         coursee-2021:
           lessons:
+            Private and Personal Information:
+              name: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
+            Digital Sharing:
+              name: ಡಿಜಿಟಲ್ ಹಂಚಿಕೆ
+            'Functions: Songwriting':
+              name: ಹಾಡು ಬರೆಯವುದು
             End of Course Project:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
             ramp_up:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_nested_loops:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             end_of_course_project:
@@ -2205,6 +2857,10 @@ kn:
           lessons:
             The Power of Words:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
+            Envelope Variables:
+              name: ಎನ್ವಲಪ್ ವೇರಿಯಬಲ್ಸ್
+            For Loop Fun:
+              name: ಲೂಪ್ ಮೋಜಿಗಾಗಿ
             For Loops in Bee:
               name: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             End of Course Project:
@@ -2216,10 +2872,14 @@ kn:
             lesson-2:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lessonGroup-8:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            lessonGroup-7:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
         express-2021:
           lessons:
             Dance Party:
@@ -2265,6 +2925,10 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+        csd5-preview-2021:
+          lessons:
+            Combining Representations:
+              name: ಪ್ರಾತಿನಿಧ್ಯಗಳನ್ನು ಸಂಯೋಜಿಸುವುದು
         testtess:
           lessons:
             lesson-2:
@@ -2364,6 +3028,10 @@ kn:
               display_name: ಔಟ್‌ಬ್ರೇಕ್ ಮಾಡ್ಯೂಲ್
           name: ಔಟ್‌ಬ್ರೇಕ್ ಮಾಡ್ಯೂಲ್
           title: ಔಟ್‌ಬ್ರೇಕ್ ಮಾಡ್ಯೂಲ್\_ವಿ2
+        csd7-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
@@ -2383,6 +3051,10 @@ kn:
           lesson_groups:
             lessonGroup-3:
               display_name: ಸಂಪನ್ಮೂಲಗಳು
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: ಟೆಸ್ಟ್‌
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -2401,6 +3073,8 @@ kn:
               name: ಸಲಕರಣೆಗಳು
             lesson-17:
               name: ಕನ್ಸೋಲ್
+            lesson-18:
+              name: ವಿಜೆಟ್‍ಗಳು
           lesson_groups:
             lessonGroup-2:
               display_name: ಅಧ್ಯಾಯಗಳು
@@ -2490,6 +3164,8 @@ kn:
               name: ವೇರಿಯಬಲ್ಸ್‌ + ಇಫ್‌-ಸ್ಟೇಟ್‌ಮೆಂಟ್‌ಗಳು
             lesson-8:
               name: 'ಮಿನಿ ಪ್ರಾಜೆಕ್ಟ್‌: ಆನ್ ದಿ ಗೋ ಆಪ್‌ಗಳು'
+            lesson-9:
+              name: ಕಲರ್‌ LED ಗಳು
             lesson-10:
               name: ಆಪ್‌ ಲ್ಯಾಬ್ ಇನ್‌ಪುಟ್‌ಗಳು (getProperty, getText) (ಡ್ರಾಪ್‌ಡೌನ್‌ಗಳು ಇನ್‌ಪುಟ್‌ಗಳ ಸ್ಲೈಡರ್‌ಗಳು?)
             lesson-11:
@@ -2524,6 +3200,8 @@ kn:
           name: hello-world-food
         csa-u7-dev:
           lessons:
+            lesson-2:
+              name: ವಿಜೆಟ್‍ಗಳು
             lesson-3:
               name: ಸಲಕರಣೆಗಳು
           lesson_groups:
@@ -2577,6 +3255,8 @@ kn:
           description_short: ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್‌ ಬಳಸಿ ನಿಮ್ಮದೇ ಸ್ಪ್ರೈಟ್ ಎಫೆಕ್ಟ್ ರಚಿಸಲು ಸವಾಲು ತೆಗೆದುಕೊಳ್ಳಿ!
         csa-u8-dev:
           lessons:
+            lesson-1:
+              name: ವಿಜೆಟ್‍ಗಳು
             lesson-2:
               name: ಸಲಕರಣೆಗಳು
           lesson_groups:
@@ -2629,6 +3309,7 @@ kn:
           title: ಯುನಿಟ್ 5 - ಅಬ್ಜೆಕ್ಟ್‌ಗಳ ಆರ್ಗನೈಸೇಶನ್‌ ನೀಡುವುದು [Exemplars]
         csd-post-survey-2021:
           name: ಸಿಎಸ್‌ಡಿ-ನಂತರದ-ಸಮೀಕ್ಷೆ-2021
+          title: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
           description: ಈ ಘಟಕವು ಸಿಎಸ್ ಡಿಸ್ಕವರೀಸ್ ಕೋರ್ಸ್ ನಂತರದ ಸಮೀಕ್ಷೆಯನ್ನು ಒಳಗೊಂಡಿದೆ. ವಿದ್ಯಾರ್ಥಿಗಳು ತಮ್ಮ ಅಂತಿಮ ಯುನಿಟ್‌ ಅನ್ನು ಸಿಎಸ್‌ ಡಿಸ್ಕವರಿಸ್‌‌ ನಲ್ಲಿ ಪೂರ್ಣಗೊಳಿಸಿದ ನಂತರ ಈ ಯುನಿಟ್‌ ಅನ್ನು ನಿಯೋಜಿಸಬಹುದು.
           student_description: ಈ ಯುನಿಟ್‌ ಸಿಎಸ್‌ ಡಿಸ್ಕವರಿಸ್‌‌ ನಲ್ಲಿನ ಯುನಿಟ್‌ಗಳೊಂದಿಗೆ ನಿಮ್ಮ ತರಗತಿಯನ್ನು ಯಾವಾಗ ಪೂರ್ಣಗೊಳಿಸುತ್ತೀರಿ ಎನ್ನುವುದರ ಸಮೀಕ್ಷೆಯನ್ನು ಒಳಗೊಂಡಿದೆ. ಈ ಸಮೀಕ್ಷೆಯನ್ನು ತೆಗೆದುಕೊಳ್ಳುವ ಸಮಯ ಬಂದಾಗ ನಿಮ್ಮ ಶಿಕ್ಷಕರು ನಿಮಗೆ ತಿಳಿಸುತ್ತಾರೆ.
         csa-pl-test:
@@ -2730,6 +3411,8 @@ kn:
           lessons:
             lesson-4:
               name: ಔಟ್‌ಬ್ರೇಕ್ ಸಿಮ್ಯುಲೇಟರ್
+            For Loop Fun:
+              name: ಲೂಪ್ ಮೋಜಿಗಾಗಿ
             For Loops with Bee:
               name: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
           lesson_groups:
@@ -2746,6 +3429,10 @@ kn:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         csd6-pilot-2022:
           lessons:
+            Board Events:
+              name: ಬೋರ್ಡ್ ಈವೆಂಟ್‌ಗಳು
+            Arrays and Color LEDs:
+              name: ಕಲರ್‌ LED ಗಳು
             lesson-10:
               name: ಕಂಬೈನಿಂಗ್ ಇನ್‌ಪುಟ್‌ಗಳು
           lesson_groups:
@@ -2769,13 +3456,19 @@ kn:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
         coursea-2022:
           lessons:
+            Happy Maps:
+              name: ಸಂತೋಷದ ನಕ್ಷೆಗಳು
             Programming with Rey and BB-8:
               name: ರೇ ಮತ್ತು ಬಿಬಿ-8 ಸಹಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             End of Course Project:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+            'Programming: Happy Maps':
+              name: ಸಂತೋಷದ ನಕ್ಷೆಗಳು
             lesson-1:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
@@ -2808,6 +3501,10 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: ಬೈನರಿ ಸಂಖ್ಯೆಗಳು
         csp3-2022:
           lessons:
             Debugging:
@@ -2826,11 +3523,17 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
         courseb-2022:
           lessons:
+            Getting Loopy:
+              name: ಲೂಪಿ ಆಗುವುದು
             End of Course Project:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+            'Loops: Getting Loopy':
+              name: ಲೂಪಿ ಆಗುವುದು
             lesson-1:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
@@ -2839,11 +3542,21 @@ kn:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursec-2022:
           lessons:
+            The Big Event:
+              name: ದೊಡ್ಡ ಘಟನೆ
+            Picturing Data:
+              name: ಚಿತ್ರಣ ಡೇಟಾ
+            Binary Bracelets:
+              name: ಬೈನರಿ ಕಡಗಗಳು
             End of Course Project:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+            'Events: The Big Event':
+              name: ದೊಡ್ಡ ಘಟನೆ
             'End of Course Project: Create a Play Lab Game':
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
@@ -2862,6 +3575,8 @@ kn:
             End of Course Project:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
+            lessonGroup-6:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             csf_events:
               display_name: ಈವೆಂಟ್‌ಗಳು
             csf_loops:
@@ -2873,11 +3588,21 @@ kn:
           title: ಕೋರ್ಸ್‌ ಡಿ (2021)
         coursee-2022:
           lessons:
+            Private and Personal Information:
+              name: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
+            Digital Sharing:
+              name: ಡಿಜಿಟಲ್ ಹಂಚಿಕೆ
+            Songwriting:
+              name: ಹಾಡು ಬರೆಯವುದು
             End of Course Project:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+            'Functions: Songwriting':
+              name: ಹಾಡು ಬರೆಯವುದು
             'Hello World: Food':
               name: ಹಲೋ ವರ್ಲ್ಡ್
           lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             ramp_up:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
             csf_nested_loops:
@@ -2890,6 +3615,8 @@ kn:
               name: ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡುವುದು
             The Power of Words:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
+            For Loop Fun:
+              name: ಲೂಪ್ ಮೋಜಿಗಾಗಿ
             For Loops with Bee:
               name: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             Outbreak:
@@ -2903,6 +3630,8 @@ kn:
             For Loops in Bee:
               name: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
           lesson_groups:
+            lessonGroup-7:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             lessonGroup-8:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             end_of_course_project:
@@ -2916,6 +3645,8 @@ kn:
               name: ಲೂಪ್‌ಗಳು
             lesson-21:
               name: ಕನ್ಸೋಲ್
+            lesson-23:
+              name: CSA ಸಮೀಕ್ಷೆ ಪೂರ್ವ
           lesson_groups:
             lessonGroup-4:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್‌ಗಳು
@@ -3012,6 +3743,12 @@ kn:
           lesson_groups:
             lessonGroup-5:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
+        csa-backpack-2022:
+          lessons:
+            lesson-4:
+              name: ಟೆಕ್ಸ್‌ಟ್‌ಪ್ರೋಸೆಸರ್
+            lesson-3:
+              name: ಇಮೇಜ್‌ಪ್ಲಸ್‌ ಮತ್ತು ಸೀನ್‌ಪ್ಲಸ್
         coursef-2022-pilot:
           lessons:
             The Power of Words:
@@ -3023,6 +3760,8 @@ kn:
             End of Course Project:
               name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
+            lessonGroup-7:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             lessonGroup-8:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             end_of_course_project:
@@ -3192,6 +3931,18 @@ kn:
           lessons:
             Hello World CSC:
               name: ಹಲೋ ವರ್ಲ್ಡ್ CSC
+            lesson-4:
+              name: "[Optional] ನೀತಿಕಥೆಗಳ ಪರಿಚಯ"
+            lesson-5:
+              name: ನಿಮ್ಮ ನೀತಿಕಥೆಯನ್ನು ಯೋಜಿಸಿ
+            lesson-6:
+              name: ನಿಮ್ಮ ನೀತಿಕಥೆಯನ್ನು ಹಂಚಿಕೊಳ್ಳಿ
+        csd2-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
+            lesson-1:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
         csd3-2022:
           lessons:
             Variables:
@@ -3202,13 +3953,45 @@ kn:
               name: ಪಠ್ಯ
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Collisions:
+              name: ಡಿಕ್ಕಿಗಳು
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
+            lesson-1:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
+        csd4-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
+        csd5-2022:
+          lessons:
+            Combining Representations:
+              name: ಪ್ರಾತಿನಿಧ್ಯಗಳನ್ನು ಸಂಯೋಜಿಸುವುದು
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
+        csd7-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
         csd6-2022:
           lessons:
+            Board Events:
+              name: ಬೋರ್ಡ್ ಈವೆಂಟ್‌ಗಳು
+            Color LEDs:
+              name: ಕಲರ್‌ LED ಗಳು
             Combining Inputs and Outputs:
               name: ಕಂಬೈನಿಂಗ್ ಇನ್‌ಪುಟ್‌ಗಳು
+            CS Discoveries Post-Course Survey:
+              name: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
         csd-post-survey-2022:
+          title: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
           description: ಈ ಘಟಕವು ಸಿಎಸ್ ಡಿಸ್ಕವರೀಸ್ ಕೋರ್ಸ್ ನಂತರದ ಸಮೀಕ್ಷೆಯನ್ನು ಒಳಗೊಂಡಿದೆ. ವಿದ್ಯಾರ್ಥಿಗಳು ತಮ್ಮ ಅಂತಿಮ ಯುನಿಟ್‌ ಅನ್ನು ಸಿಎಸ್‌ ಡಿಸ್ಕವರಿಸ್‌‌ ನಲ್ಲಿ ಪೂರ್ಣಗೊಳಿಸಿದ ನಂತರ ಈ ಯುನಿಟ್‌ ಅನ್ನು ನಿಯೋಜಿಸಬಹುದು.
           student_description: ಈ ಯುನಿಟ್‌ ಸಿಎಸ್‌ ಡಿಸ್ಕವರಿಸ್‌‌ ನಲ್ಲಿನ ಯುನಿಟ್‌ಗಳೊಂದಿಗೆ ನಿಮ್ಮ ತರಗತಿಯನ್ನು ಯಾವಾಗ ಪೂರ್ಣಗೊಳಿಸುತ್ತೀರಿ ಎನ್ನುವುದರ ಸಮೀಕ್ಷೆಯನ್ನು ಒಳಗೊಂಡಿದೆ. ಈ ಸಮೀಕ್ಷೆಯನ್ನು ತೆಗೆದುಕೊಳ್ಳುವ ಸಮಯ ಬಂದಾಗ ನಿಮ್ಮ ಶಿಕ್ಷಕರು ನಿಮಗೆ ತಿಳಿಸುತ್ತಾರೆ.
+        testtess2:
+          name: testtess2
+        aiml-2022:
+          name: aiml-2022
+          description_short: ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ ಮತ್ತು ಯಂತ್ರ ಕಲಿಕೆಯ ಬಗ್ಗೆ ತಿಳಿಯಿರಿ
         csa9-2022:
           lessons:
             Console:
@@ -3237,6 +4020,16 @@ kn:
           lessons:
             Hello World CSC:
               name: ಹಲೋ ವರ್ಲ್ಡ್ CSC
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] ನೀತಿಕಥೆಗಳ ಪರಿಚಯ"
+            Share Your Fable:
+              name: ನಿಮ್ಮ ನೀತಿಕಥೆಯನ್ನು ಹಂಚಿಕೊಳ್ಳಿ
+            lesson-4:
+              name: "[Optional] ನೀತಿಕಥೆಗಳ ಪರಿಚಯ"
+            lesson-6:
+              name: ನಿಮ್ಮ ನೀತಿಕಥೆಯನ್ನು ಹಂಚಿಕೊಳ್ಳಿ
         csc-timecapsule-2022:
           lessons:
             Poem Art:

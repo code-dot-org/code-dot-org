@@ -354,6 +354,17 @@ kn:
       gamelab_collectibleBehaviors:
         options:
           BEHAVIOR:
+            new Behavior(spinning_right, []): ಬಲಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ
+            new Behavior(spinning_left, []): ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ
+            new Behavior(fluttering, []): ಬೀಸುತ್ತಿದೆ
+            new Behavior(jittering, []): ನಡುಗುತ್ತಿದೆ
+            new Behavior(wobbling, []): ಒದ್ದಾಡುವುದು
+            new Behavior(wandering, []): ಅಲೆದಾಡುವುದು
+            new Behavior(patrolling, []): ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ
+            new Behavior(moving_west_and_looping, []): ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು
+              ಲೂಪ್ ಮಾಡುವುದು
+            new Behavior(moving_east_and_looping, []): ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್
+              ಮಾಡುವ
             new Behavior(moving_north_and_looping, []): ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು
               ಲೂಪ್ ಆಗುತ್ತಿದೆ
             new Behavior(moving_south_and_looping, []): ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು
@@ -493,6 +504,7 @@ kn:
             '180': ಎಡಕ್ಕೆ
             '270': ಮೇಲಕ್ಕೆ
       gamelab_makeSpritesWithSize:
+        text: "{NUM} ಹೊಸ {SIZE} {COSTUME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
         options:
           SIZE:
             '30': ಸಣ್ಣ
@@ -578,6 +590,8 @@ kn:
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): ಬಾಣದ ಕೀಲಿಗಳೊಂದಿಗೆ ಚಲಿಸುತ್ತದೆ
+            new Behavior(driving_with_arrow_keys, []): ಬಾಣದ ಕೀಲಿಗಳೊಂದಿಗೆ ಚಾಲನೆ
             draggable(): ಡ್ರ್ಯಾಗ್ ಮಾಡಬಹುದಾದ
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION} ಪಾಯಿಂಟ್"
@@ -723,6 +737,49 @@ kn:
         text: "{SPRITE} ಹೇಳಿ {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}ಹೇಳಿ{TEXT1}{NUM}ಸೆಕೆಂಡುಗಳವರೆಗೆ"
+      gamelab_spriteThink:
+        text: "{SPRITE} ಯೋಚಿಸಿ {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}ಯೋಚಿಸಿ{TEXT1}{NUM}ಸೆಕೆಂಡುಗಳಿಗೆ"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} ಯೋಚಿಸಿ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': ಹಂ...
+            '"I am hungry, too."': ನನಗೂ ಹಸಿವಾಗಿದೆ.
+            '"I only want the biggest goat."': ನನಗೆ ದೊಡ್ಡ ಮೇಕೆ ಮಾತ್ರ ಬೇಕು.
+            '"I''m a green troll."': ನಾನೊಬ್ಬ ಹಸಿರು ಟ್ರೋಲ್.
+            '"No one will cross my bridge."': No one will cross my bridge.
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} ಯೋಚಿಸಿ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': ಹಂ...
+            '"Time to make friends with the sheep."': ಕುರಿಗಳೊಂದಿಗೆ ಸ್ನೇಹ ಬೆಳೆಸುವ ಸಮಯ.
+            '"She''ll never recognize me now."': ಅವಳು ಈಗ ನನ್ನನ್ನು ಗುರುತಿಸುವುದಿಲ್ಲ.
+            '"This costume keeps me warm."': ಈ ವೇಷಭೂಷಣ ನನ್ನನ್ನು ಬೆಚ್ಚಗಾಗಿಸುತ್ತದೆ.
+            '"I am actually a wolf."': ನಾನು ನಿಜವಾಗಿಯೂ ತೋಳ.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} ಯೋಚಿಸಿ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': ಹಂ...
+            '"I''m feeling sleepy."': I'm feeling sleepy.
+            '"No one could ever beat me."': ಯಾರೂ ನನ್ನನ್ನು ಸೋಲಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.
+            '"I''ve done this race before."': ನಾನು ಮೊದಲು ಈ ರೇಸ್ ಮಾಡಿದ್ದೇನೆ.
+            '"My feet are bigger than Turtle''s feet."': ನನ್ನ ಪಾದಗಳು ಆಮೆಯ ಪಾದಗಳಿಗಿಂತ
+              ದೊಡ್ಡದಾಗಿದೆ.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} ಯೋಚಿಸಿ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': ಹಂ...
+            '"I''m so hungry."': ನನಗೆ ತುಂಬಾ ಹಸಿವಾಗಿದೆ.
+            '"I''m a visitor in this town."': ನಾನು ಈ ಊರಿಗೆ ಸಂದರ್ಶಕ.
+            '"If we share, we''ll all have something to eat. "': ನಾವು ಹಂಚಿಕೊಂಡರೆ,
+              ನಮಗೆಲ್ಲರಿಗೂ ತಿನ್ನಲು ಏನಾದರೂ ಇರುತ್ತದೆ.
+            '"I''ll trick everyone into giving me their food."': ನಾನು ಎಲ್ಲರಿಗೂ ಅವರವರ
+              ಆಹಾರವನ್ನು ಕೊಡುವಂತೆ ಮೋಸಗೊಳಿಸುತ್ತೇನೆ.
       gamelab_startAvoiding:
         text: "{SPRITE} ಇದು {TARGET} ಅನ್ನು ದೂರವಿಡಲು ಆರಂಭಿಸುತ್ತದೆ"
       gamelab_startFollowing:
@@ -1173,12 +1230,28 @@ kn:
         text: "{ANIMATION_NAME} ಸ್ಪ್ರೈಟ್ {BEHAVIOR}  ಆರಂಭವಾಗುತ್ತದೆ"
         options:
           BEHAVIOR:
+            '"fluttering"': ಬೀಸುತ್ತಿದೆ
+            '"growing"': ಬೆಳೆಯುತ್ತಿದೆ
+            '"jittering"': ನಡುಗುತ್ತಿದೆ
+            '"shrinking"': ಕುಗ್ಗುತ್ತಿರುವ
+            '"spinning_left"': ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ
+            '"spinning_right"': ಬಲಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ
             '"swimming_left_and_right"': ಈಜುವುದು
+            '"wandering"': ಅಲೆದಾಡುವುದು
+            '"wobbling"': ಒದ್ದಾಡುವುದು
       Poetry_stopBehavior:
         text: "{ANIMATION_NAME} ಸ್ಪ್ರೈಟ್ {BEHAVIOR} ನಿಲ್ಲಿಸುತ್ತದೆ"
         options:
           BEHAVIOR:
+            '"fluttering"': ಬೀಸುತ್ತಿದೆ
+            '"growing"': ಬೆಳೆಯುತ್ತಿದೆ
+            '"jittering"': ನಡುಗುತ್ತಿದೆ
+            '"shrinking"': ಕುಗ್ಗುತ್ತಿರುವ
+            '"spinning_left"': ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ
+            '"spinning_right"': ಬಲಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ
             '"swimming_left_and_right"': ಈಜುವುದು
+            '"wandering"': ಅಲೆದಾಡುವುದು
+            '"wobbling"': ಒದ್ದಾಡುವುದು
             '"all"': "--ಎಲ್ಲ ವರ್ತನೆಗಳು--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
