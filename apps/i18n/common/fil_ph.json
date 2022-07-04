@@ -955,6 +955,8 @@
   "instructionsWithColon": "Mga instruksiyon:\n",
   "intlAnnouncementSpecial2020Body": "Kumuha ng Code Break sa amin, o tingnan ang mga mapagkukunan sa mga mag-aaral, magulang, at guro - kabilang ang mga video, nakakatuwang tutorial, at proyekto! Available lang sa Ingles ang karamihan sa mga opsyon.",
   "intlAnnouncementSpecial2020Heading": "Higit pang mga mapagkukunan sa pag-aaral sa bahay",
+  "introToAppLabTitle": "Panimula sa App Lab",
+  "introToAppLabDesc": "Lumikha ng iyong sariling app sa JavaScript gamit ang alinman sa pag-program na nakabase sa mga bloke o teksto. Kung nakagawa ka na ng ilang pag-program gamit ang mga bloke pahusayin pa ang iyong kakayahan.",
   "introducedCode": "Ipinakilalang Code",
   "invalidDataEntryTypeError": "Dapat na boolean, numero, string, `undefined`, o `null` ang value. Siguraduhing magsama ng mga quote sa mga string tulad ng \"ito&quot\".",
   "invalidRecordTypeError": "Sinubukan mong magdagdag ng tala sa talahanayan na may kasamang listahan o bagay. Maaari lamang mag-imbak ng mga boolean, numero, string, null, at hindi natukoy ang talahanayan ng data.",

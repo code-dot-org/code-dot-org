@@ -835,6 +835,8 @@
   "instructionsWithColon": "Ko‘rsatmalar:",
   "intlAnnouncementSpecial2020Body": "Maktablar yopiq bo‘lgan paytda o‘quvchilar uyda o‘qishni davom ettirishlari mumkin. Biz bilan Code Break-ni oling yoki o‘quvchilar, ota-onalar va o‘qituvchilar uchun manbalarni ko‘ring - shu jumladan videofilmlar, qiziqarli o‘quv qo‘llanmalari va loyihalar! Ko‘pgina variantlar faqat ingliz tilida mavjud.",
   "intlAnnouncementSpecial2020Heading": "Uyda o‘rganish uchun ko‘proq manbalar",
+  "introToAppLabTitle": "Intro to App Lab",
+  "introToAppLabDesc": "Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.",
   "invalidDataEntryTypeError": "Qiymat mantiqiy, raqam, satr, \"aniqlangan\" (`undefined`) yoki \"null\" bo‘lishi kerak. Qatorlar uchun tirnoqlarni \" This \" kabi qo‘shganingizga ishonch hosil qiling.",
   "invalidRecordTypeError": "Siz jadvalga ro‘yxat yoki obyektni o‘z ichiga olgan yozuvni qo‘shishga urinib ko‘rdingiz. Ma'lumotlar jadvali faqat mantiqiy ma'lumotlar, raqamlar, satrlar, bo‘sh va aniqlanmagan narsalarni saqlashi mumkin.",
   "joinASection": "Bo‘limga qo‘shiling",

@@ -971,6 +971,8 @@
   "instructionsWithColon": "Instruções:",
   "intlAnnouncementSpecial2020Body": "Estudantes podem continuar a aprender em casa enquanto as escolas estão fechadas. Faça uma Code Break conosco, ou veja os recursos para estudantes, pais e professores - incluindo videos, tutoriais divertidos e projetos!",
   "intlAnnouncementSpecial2020Heading": "Mais recursos para aprender em casa",
+  "introToAppLabTitle": "Introdução Laboratório de Aplicativos",
+  "introToAppLabDesc": "Crie seu próprio aplicativo em JavaScript usando programação ou texto com base em bloco. Se você já fez alguma programação com blocos, leve suas habilidades para o próximo nível.",
   "invalidDataEntryTypeError": "O valor deve ser booleano, numérico, uma cadeia de caracteres, `undefined` ou `null`. Lembre-se de incluir aspas em cadeias de caracteres “assim”.",
   "invalidRecordTypeError": "Você tentou adicionar um registro à tabela que incluía uma lista ou um objeto. A tabela de dados pode armazenar apenas valores booleanos, números, cadeias de caracteres, nulo e indefinido.",
   "joinASection": "Entrar em uma seção",

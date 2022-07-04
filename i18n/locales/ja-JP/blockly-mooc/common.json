@@ -970,6 +970,8 @@
   "instructionsWithColon": "説明：",
   "intlAnnouncementSpecial2020Body": "学校が閉鎖されている間も、生徒は自宅で学習を続けることができます。コードブレイクを行ったり、ビデオ、楽しいチュートリアル、プロジェクトなど、生徒、親、先生向けのリソースをご覧ください。ほとんどのオプションは英語でのみご利用いただけます。\n",
   "intlAnnouncementSpecial2020Heading": "自宅学習用の追加リソース\n",
+  "introToAppLabTitle": "アプリラボの紹介",
+  "introToAppLabDesc": "ブロックベースのプログラミングまたはテキストを使って、JavaScriptで独自のアプリを作成しましょう。ブロックを使ったプログラミングをある程度すでに完了している場合は、スキルを次のレベルに高めましょう。",
   "introducedCode": "紹介済みのコード",
   "invalidDataEntryTypeError": "値はブール値、数値、文字列、`undefined`、または `null` である必要があります。 \"this\" のような文字列の引用符を必ず含めてください。\n",
   "invalidRecordTypeError": "リストやオブジェクトを含むテーブルに記録を追加しようとしました。データテーブルに保存できるのは、ブール値、数値、文字列、null、および undefined のみです。\n",

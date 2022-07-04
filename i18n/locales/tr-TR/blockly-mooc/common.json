@@ -981,6 +981,8 @@
   "instructionsWithColon": "Talimatlar:",
   "intlAnnouncementSpecial2020Body": "Okullar kapalıyken öğrenciler evde öğrenmeye devam edebilir. Bizimle bir Kod Molası yap, veya videolar, eğlenceli dersler, ve projelerinde olduğu öğrenciler, ebeveynler, ve öğretmenler için kaynaklara bak! Çoğu seçenek sadece İngilizce için geçerlidir.",
   "intlAnnouncementSpecial2020Heading": "Evde öğrenmek için daha fazla kaynak",
+  "introToAppLabTitle": "Uygulama Labına Giriş",
+  "introToAppLabDesc": "Kendi programınızı blok tabanlı programlama veya metin kullanarak JavaScript'te oluşturun. Zaten bloklarla bazı programlar yapmışsanız, yeteneklerinizi bir sonraki seviyeye taşıyın.",
   "introducedCode": "Tanıtılmış Kod",
   "invalidDataEntryTypeError": "Değer boolean, sayı, dizi, 'tanımlanmamış' veya 'boş' olmak zorundadır. \"this\" gibi diziler için tırnak işaretlerini koyduğunuzdan emin olun.",
   "invalidRecordTypeError": "Sen bir listeyi veya objeyi barındıran bir kaydı veri masana yüklemeye çalıştın. Veri masana sadece dükkan seçenekleri, sayılar, şartlar, hiçbir şey, ve tanımlanamayan verileri kaydeder.",

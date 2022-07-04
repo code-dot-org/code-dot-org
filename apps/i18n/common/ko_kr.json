@@ -966,6 +966,8 @@
   "instructionsWithColon": "설명:",
   "intlAnnouncementSpecial2020Body": "학교가 문을 닫은 동안 학생들은 집에서 계속 공부할 수 있습니다. 저희와 Code Break을 하거나, 학생, 학부모 및 교사를 위한 자료(비디오, 재미있는 튜토리얼, 프로젝트 포함)를 보세요! 대부분의 선택은 영어로만 제공됩니다.",
   "intlAnnouncementSpecial2020Heading": "가정학습을 위한 더 많은 자료",
+  "introToAppLabTitle": "앱 랩 소개",
+  "introToAppLabDesc": "블록 기반 프로그래밍 또는 텍스트를 사용하여 자바스크립트 앱을 만드세요. 이미 블록으로 프로그래밍을 했으면, 다음 레벨로 넘어갑니다.",
   "introducedCode": "도입된 코드",
   "invalidDataEntryTypeError": "값은 불, 숫자, 스트링, '정의되지 않음' 또는 '값 없음'이어야 합니다. \"이것\"처럼 스트링에 인용부호를 포함시켜야 합니다. ",
   "invalidRecordTypeError": "레코드를 목록 또는 객체를 포함한 표에 추가했습니다. 데이터 표는 불, 숫자, 문자열, 값 없음 및 정의되지 않음만 저장할 수 있습니다. ",

@@ -1006,6 +1006,8 @@
   "instructionsWithColon": "Instruksi:",
   "intlAnnouncementSpecial2020Body": "Bergabunglah di Code Break dengan kami, atau lihat materi pembelajaran untuk murid, orang tua, dan guru - termasuk berbagai video, tutorial yang menarik, dan proyek! Sebagian besar opsi ini hanya tersedia dalam bahasa Inggris.",
   "intlAnnouncementSpecial2020Heading": "Lebih banyak materi pembelajaran untuk belajar di rumah",
+  "introToAppLabTitle": "Pengenalan App Lab",
+  "introToAppLabDesc": "Buat aplikasi Anda sendiri di JavaScript menggunakan pemrograman berbasis blok atau teks. Jika Anda sudah melakukan pemrograman dengan blok, tingkatkan keterampilan Anda ke level selanjutnya.",
   "introducedCode": "Kode Yang Dikenalkan",
   "invalidDataEntryTypeError": "Nilai harus berupa boolean, angka, string, `undefined` (tidak ditetapkan), atau `null` (kosong). Pastikan menambahkan tanda kutip untuk string seperti \"ini\". ",
   "invalidRecordTypeError": "Anda mencoba menambahkan data ke tabel yang berisi daftar atau objek. Tabel data hanya dapat menyimpan boolean, angka, string, kosong, dan tidak ditetapkan.",

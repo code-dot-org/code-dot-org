@@ -975,6 +975,8 @@
   "instructionsWithColon": "说明:",
   "intlAnnouncementSpecial2020Body": "学校停课期间，学生可以继续在家学习。与我们一起《代码小憩》，或查看学生、家长和老师可用的资源 - 包括视频、有趣的教程和项目！大部分选项仅有英文版。\n",
   "intlAnnouncementSpecial2020Heading": "更多可供在家学习的资源\n",
+  "introToAppLabTitle": "应用程序实验室简介",
+  "introToAppLabDesc": "基于模块或文本创建你自己的Javascript应用程序。如果你已经做过一些模块编程了，开始挑战下个阶段的技能。",
   "introducedCode": "引进的代码",
   "invalidDataEntryTypeError": "变量必须为布尔值，数字，字符串，“undefined”，或“null”。确定在字符串上加入引号像\"这样\"。",
   "invalidRecordTypeError": "你必须尝试加入一个记录到含有列表或物品。表格必须为布尔值，数字，字符串，空或未定义。",

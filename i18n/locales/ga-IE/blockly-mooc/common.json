@@ -650,6 +650,8 @@
   "inProgress": "Idir lámha",
   "inspireStudents": "Spreag daltaí",
   "instructions": "Treoracha",
+  "introToAppLabTitle": "Buneolas ar an tSaotharlann Aipeanna",
+  "introToAppLabDesc": "Cruthaigh aip de do chuid féin in JavaScript le ríomhchlár bunaithe ar bhlocanna nó ar théacs. Má tá taithí agat ar ríomhchlárú le blocanna cheana, is féidir leat cur le do chuid scileanna.",
   "joinASection": "Glac páirt i rannán",
   "joinSection": "Glac páirt i rannán",
   "joinSectionAsk": "Inis do na daltaí a gcuntas féin a chruthú agus a dhul le do rannán ag: ",

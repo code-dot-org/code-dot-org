@@ -980,6 +980,8 @@
   "instructionsWithColon": "Anleitungen:",
   "intlAnnouncementSpecial2020Body": "Die Schüler können zu Hause weiter lernen, auch wenn die Schulen geschlossen sind. Machen Sie eine Pause mit uns, oder sehen Sie sich Ressourcen für Schüler, Eltern und Lehrer an - das sind u.a. Videos, unterhaltsame Tutorials und Projekte! Die meisten Optionen stehen nur auf Englisch zur Verfügbung.",
   "intlAnnouncementSpecial2020Heading": "Mehr Ressourcen für das Lernen zu Hause\n",
+  "introToAppLabTitle": "Einführung in AppLab",
+  "introToAppLabDesc": "Erstellen Sie Ihre eigene Anwendung in JavaScript, indem Sie entweder Baustein-basierte Programmierung oder Text verwenden. Wenn Sie bereits etwas mit Bausteinen programmiert haben, bringen Sie Ihre Kenntnisse auf die nächste Stufe.",
   "introducedCode": "Eingeführter Code",
   "invalidDataEntryTypeError": "Der Wert muss vom Typ boolean, number, string, 'undefined\" oder 'null' sein. Stelle sicher, dass String mit \"Hochkommatas\" versehen sind.",
   "invalidRecordTypeError": "Du hast versucht einen Eintrag in die Tabelle einzufügen, welcher eine Liste oder eine Object enthält. Die data table kann nur booleans, numbers, strings, null und undefined speichern.",
