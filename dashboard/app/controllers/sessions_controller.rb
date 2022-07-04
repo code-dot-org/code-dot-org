@@ -62,7 +62,7 @@ class SessionsController < Devise::SessionsController
   # Override default Devise sign_out path method
   def after_sign_out_path_for(resource_or_scope)
     user = resource_or_scope && send(:"current_#{resource_or_scope}")
-    if user && user.oauth?
+    if user&.oauth?
       return oauth_sign_out_path(user.provider)
     end
 

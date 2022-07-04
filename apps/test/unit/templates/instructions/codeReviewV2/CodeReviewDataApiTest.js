@@ -278,4 +278,41 @@ describe('CodeReviewDataApi', () => {
       utils.findProfanity.restore();
     });
   });
+
+  describe('toggleResolveComment', () => {
+    let dataApi, ajaxStub;
+    before(() => {
+      dataApi = new CodeReviewDataApi(
+        fakeChannelId,
+        fakeLevelId,
+        fakeProjectLevelId,
+        fakeScriptId
+      );
+    });
+
+    beforeEach(() => {
+      ajaxStub = sinon.stub($, 'ajax').returns({
+        done: successCallback => {
+          successCallback(fakeReviewData[0]);
+          return {fail: () => {}};
+        }
+      });
+    });
+
+    afterEach(() => {
+      ajaxStub.restore();
+    });
+
+    it('calls code_review_notes PATCH endpoint with the isResolved value to set', async () => {
+      await dataApi.toggleResolveComment(11, true);
+      expect(ajaxStub).to.have.been.calledWith({
+        url: `/code_review_notes/11`,
+        type: 'PATCH',
+        headers: {'X-CSRF-Token': undefined},
+        data: {
+          isResolved: true
+        }
+      });
+    });
+  });
 });

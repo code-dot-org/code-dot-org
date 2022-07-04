@@ -30,20 +30,6 @@
   "properties": {
     "family_name": "csp",
     "has_verified_resources": true,
-    "teacher_resources": [
-      [
-        "curriculum",
-        "https://curriculum.code.org/csp/"
-      ],
-      [
-        "teacherForum",
-        "http://forum.code.org/c/csp"
-      ],
-      [
-        "professionalLearning",
-        "https://studio.code.org/courses/CSP%20Support"
-      ]
-    ],
     "version_year": "2017"
   },
   "resources": [
