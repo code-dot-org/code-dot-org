@@ -742,18 +742,6 @@ Style/RescueModifier:
 Style/RescueStandardError:
   Enabled: false
 
-# Offense count: 125
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: ConvertCodeThatCanStartToReturnNil, AllowedMethods, MaxChainLength.
-# AllowedMethods: present?, blank?, presence, try, try!
-Style/SafeNavigation:
-  Enabled: false
-
-# Offense count: 3
-# This cop supports safe auto-correction (--auto-correct).
-Style/SelectByRegexp:
-  Enabled: false
-
 # Offense count: 17
 # This cop supports unsafe auto-correction (--auto-correct-all).
 Style/SingleArgumentDig:
@@ -768,11 +756,6 @@ Style/SoleNestedConditional:
 # Offense count: 28
 # This cop supports safe auto-correction (--auto-correct).
 Style/StderrPuts:
-  Enabled: false
-
-# Offense count: 2
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/StringChars:
   Enabled: false
 
 # Offense count: 315
@@ -792,18 +775,6 @@ Style/TernaryParentheses:
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: AllowNamedUnderscoreVariables.
 Style/TrailingUnderscoreVariable:
-  Enabled: false
-
-# Offense count: 2
-# This cop supports safe auto-correction (--auto-correct).
-Style/UnpackFirst:
-  Enabled: false
-
-# Offense count: 9
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle, MinSize, WordRegex.
-# SupportedStyles: percent, brackets
-Style/WordArray:
   Enabled: false
 
 # Offense count: 13
