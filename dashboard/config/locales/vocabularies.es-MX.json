@@ -867,6 +867,42 @@
           "word": "Aprendizaje automático",
           "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
         },
+        "features/csd/2021": {
+          "word": "Características",
+          "definition": "Entradas que un modelo utiliza para tomar decisiones"
+        },
+        "label/csd/2021": {
+          "word": "Etiqueta",
+          "definition": "Salida que se intenta decidir o predecir a través de un modelo"
+        },
+        "model/csd/2021": {
+          "word": "Modelo",
+          "definition": "Programa computacional diseñado para tomar decisiones"
+        },
+        "supervised_learning/csd/2021": {
+          "word": "Aprendizaje Supervisado",
+          "definition": "Proceso en el que un humano entrena un modelo para que aprenda mediante ejemplos"
+        },
+        "training/csd/2021": {
+          "word": "Entrenamiento",
+          "definition": "Presentación de ejemplos a un modelo para que éste aprenda"
+        },
+        "unsupervised_learning/csd/2021": {
+          "word": "Aprendizaje No Supervisado",
+          "definition": "Detección de patrones en datos que no tienen etiquetas"
+        },
+        "categorical_data/csd/2021": {
+          "word": "Datos categóricos",
+          "definition": "Datos que pueden separarse en grupos"
+        },
+        "classification/csd/2021": {
+          "word": "Clasificación",
+          "definition": "Predicción de una categoría basada en otras características"
+        },
+        "bias/csd/2021": {
+          "word": "Sesgo",
+          "definition": "Cuando una decisión favorece algunas cosas y quita prioridad o excluye otras"
+        },
         "ethics/csd/2021": {
           "word": "Ética"
         },

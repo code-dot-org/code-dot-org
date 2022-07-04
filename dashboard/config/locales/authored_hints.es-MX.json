@@ -1904,7 +1904,7 @@
         },
         "courseA_harvester_seq1": {
           "courseA_harvester_seq1_a": "¡Usa este bloque para recoger el maíz cuando la cosechadora lo encuentre!\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "La cosechadora deberá moverse al este tres veces para llegar al maíz. Utilice este bloque:\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "La cosechadora deberá moverse al Este tres veces para llegar al maíz. Utilice este bloque:\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq10": {
           "courseA_harvester_seq10_a": "¿Estás atascado/a? Trata de anotar primero los pasos en una hoja de papel.",
@@ -1932,22 +1932,22 @@
         },
         "courseA_harvester_seq1_2019": {
           "courseA_harvester_seq1_a": "¡Usa este bloque para recoger el maíz cuando la cosechadora lo encuentre!\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "La cosechadora deberá moverse al este tres veces para llegar al maíz. Utilice este bloque:\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "La cosechadora deberá moverse al Este tres veces para llegar al maíz. Utilice este bloque:\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq1_2020": {
           "courseA_harvester_seq1_a": "¡Usa este bloque para recoger el maíz cuando la cosechadora lo encuentre!\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "La cosechadora deberá moverse al este tres veces para llegar al maíz. Utilice este bloque:\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "La cosechadora deberá moverse al Este tres veces para llegar al maíz. Utilice este bloque:\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq2": {
-          "courseA_harvester_seq2_a": "¡No te olvides de usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
+          "courseA_harvester_seq2_a": "¡No olvides usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
           "courseA_harvester_seq2_b": "¡Intenta escribir los pasos en papel para encontrar una solución!"
         },
         "courseA_harvester_seq2_2019": {
-          "courseA_harvester_seq2_a": "¡No te olvides de usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
+          "courseA_harvester_seq2_a": "¡No olvides usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
           "courseA_harvester_seq2_b": "¡Intenta escribir los pasos en papel para encontrar una solución!"
         },
         "courseA_harvester_seq2_2020": {
-          "courseA_harvester_seq2_a": "¡No te olvides de usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
+          "courseA_harvester_seq2_a": "¡No olvides usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
           "courseA_harvester_seq2_b": "¡Intenta escribir los pasos en papel para encontrar una solución!"
         },
         "courseA_harvester_seq3": {
@@ -2089,15 +2089,15 @@
         },
         "courseA_maze_seq10_2018": {
           "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
-          "courseA_maze_seq10_b": "Tendrá que ir en 3 direcciones diferentes para resolver este rompecabezas."
+          "courseA_maze_seq10_b": "Tendrás que ir en 3 direcciones diferentes para resolver este rompecabezas."
         },
         "courseA_maze_seq10_2019": {
           "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
-          "courseA_maze_seq10_b": "Tendrá que ir en 3 direcciones diferentes para resolver este rompecabezas."
+          "courseA_maze_seq10_b": "Tendrás que ir en 3 direcciones diferentes para resolver este rompecabezas."
         },
         "courseA_maze_seq10_2020": {
           "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
-          "courseA_maze_seq10_b": "Tendrá que ir en 3 direcciones diferentes para resolver este rompecabezas."
+          "courseA_maze_seq10_b": "Tendrás que ir en 3 direcciones diferentes para resolver este rompecabezas."
         },
         "courseA_maze_seq10_copy": {
           "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
@@ -2109,19 +2109,19 @@
           "courseA_maze_seq13_c": "Estos bloques <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> te ayudarán a moverte más cerca del cerdo."
         },
         "courseA_maze_seq13_2018": {
-          "courseA_maze_seq13_a": "Si el camino que necesita no está claro, use su dedo para seguir el camino del pájaro hasta el cerdo.",
+          "courseA_maze_seq13_a": "Si el camino que necesitas no está claro, use tu dedo para seguir el camino del pájaro hasta el cerdo.",
           "courseA_maze_seq13_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá.",
           "courseA_maze_seq13_c": "Estos bloques <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> te ayudarán a moverte más cerca del cerdo."
         },
         "courseA_maze_seq13_2019": {
-          "courseA_maze_seq13_a": "Si el camino que necesita no está claro, use su dedo para seguir el camino del pájaro hasta el cerdo.",
+          "courseA_maze_seq13_a": "Si el camino que necesitas no está claro, use tu dedo para seguir el camino del pájaro hasta el cerdo.",
           "courseA_maze_seq13_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá.",
-          "courseA_maze_seq13_c": "Estos bloques le ayudarán a moverse más cerca del cerdo <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>."
+          "courseA_maze_seq13_c": "Estos bloques le ayudarán a moverte más cerca del cerdo <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>."
         },
         "courseA_maze_seq13_2020": {
-          "courseA_maze_seq13_a": "Si el camino que necesita no está claro, use su dedo para seguir el camino del pájaro hasta el cerdo.",
+          "courseA_maze_seq13_a": "Si el camino que necesitas no está claro, use tu dedo para seguir el camino del pájaro hasta el cerdo.",
           "courseA_maze_seq13_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá.",
-          "courseA_maze_seq13_c": "Estos bloques le ayudarán a moverse más cerca del cerdo <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>."
+          "courseA_maze_seq13_c": "Estos bloques le ayudarán a moverte más cerca del cerdo <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>."
         },
         "courseA_maze_seq1_2018": {
           "courseA_maze_seq1_a": "Si no puedes hacer que el pájaro se mueva, asegúrate de que los bloques estén en el lugar correcto debajo de <xml>\n  <block type=\"when_run\"/>\n</xml>",
@@ -3289,19 +3289,19 @@
         },
         "courseB_starWars_prog1": {
           "courseB_starWars_prog1_a": "Intenta agregar bloques de uno en uno, luego haz clic en \"Ejecutar\" para ver qué sucede.",
-          "courseB_starWars_prog1_b": "Querrás moverte hacia el este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Querrás moverte hacia el Este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2018": {
           "courseB_starWars_prog1_a": "Intenta agregar bloques de uno en uno, luego haz clic en \"Ejecutar\" para ver qué sucede.",
-          "courseB_starWars_prog1_b": "Querrás moverte hacia el este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Querrás moverte hacia el Este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2019": {
           "courseB_starWars_prog1_a": "Intenta agregar bloques de uno en uno, luego haz clic en \"Ejecutar\" para ver qué sucede.",
-          "courseB_starWars_prog1_b": "Querrás moverte hacia el este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Querrás moverte hacia el Este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2020": {
           "courseB_starWars_prog1_a": "Intenta agregar bloques de uno en uno, luego haz clic en \"Ejecutar\" para ver qué sucede.",
-          "courseB_starWars_prog1_b": "Querrás moverte hacia el este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Querrás moverte hacia el Este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2": {
           "courseB_starWars_prog2_a": "Divide este problema en dos partes. Consigue una sola pila de chatarra y luego descubre cómo llegar a la otra."
@@ -3390,22 +3390,22 @@
         "courseB_starWars_prog7": {
           "courseB_starWars_prog7_a": "¿Este patrón no se parece un poco al último rompecabezas?",
           "courseB_starWars_prog7_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
-          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre todo el metal de desecho?"
+          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre toda la chatarra?"
         },
         "courseB_starWars_prog7_2018": {
           "courseB_starWars_prog7_a": "¿Este patrón no se parece un poco al último rompecabezas?",
           "courseB_starWars_prog7_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
-          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre todo el metal de desecho?"
+          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre toda la chatarra?"
         },
         "courseB_starWars_prog7_2019": {
           "courseB_starWars_prog7_a": "¿Este patrón no se parece un poco al último rompecabezas?",
           "courseB_starWars_prog7_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
-          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre todo el metal de desecho?"
+          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre toda la chatarra?"
         },
         "courseB_starWars_prog7_2020": {
           "courseB_starWars_prog7_a": "¿Este patrón no se parece un poco al último rompecabezas?",
           "courseB_starWars_prog7_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
-          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre todo el metal de desecho?"
+          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre toda la chatarra?"
         },
         "courseB_starWars_prog8": {
           "courseB_starWars_prog8_a": "Está bien volver sobre un conjunto de espacios por los que ya has viajado.",
@@ -3431,17 +3431,17 @@
         "courseB_starWars_prog9_2018": {
           "courseB_starWars_prog9_a": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
           "courseB_starWars_prog9_b": "Hay muchas formas de resolver este rompecabezas.",
-          "courseB_starWars_prog9_c": "¿Podría un bucle (loop) de 'repetir' ayudar aquí?"
+          "courseB_starWars_prog9_c": "¿Podría un bucle (loop) de 'repetir' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> ayudar aquí?"
         },
         "courseB_starWars_prog9_2019": {
           "courseB_starWars_prog9_a": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
           "courseB_starWars_prog9_b": "Hay muchas formas de resolver este rompecabezas.",
-          "courseB_starWars_prog9_c": "¿Podría un bucle (loop) de 'repetir' ayudar aquí?"
+          "courseB_starWars_prog9_c": "¿Podría un bucle (loop) de 'repetir' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> ayudar aquí?"
         },
         "courseB_starWars_prog9_2020": {
           "courseB_starWars_prog9_a": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
           "courseB_starWars_prog9_b": "Hay muchas formas de resolver este rompecabezas.",
-          "courseB_starWars_prog9_c": "¿Podría un bucle (loop) de 'repetir' ayudar aquí?"
+          "courseB_starWars_prog9_c": "¿Podría un bucle (loop) de 'repetir' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> ayudar aquí?"
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "El bloque 'establecer actor 1 ??? imagen' puede usarse para agregar un actor al escenario.",
@@ -8133,22 +8133,22 @@
           "courseF_artist_variables6a_d": "¡Este es el patrón que seguirás!\n\n![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)"
         },
         "courseF_artist_variables7": {
-          "courseF_artist_variables7_a": "Empieza tu programa usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
+          "courseF_artist_variables7_a": "Empieza tu código usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
           "courseF_artist_variables7_b": "Puedes utilizar un bucle (loop) de 'repetir' para simplificar el código para el triángulo.",
           "courseF_artist_variables7_c": "Tendrás que girar a la izquierda 120 grados para hacer las esquinas del triángulo."
         },
         "courseF_artist_variables7_2018": {
-          "courseF_artist_variables7_a": "Empieza tu programa usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
+          "courseF_artist_variables7_a": "Empieza tu código usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
           "courseF_artist_variables7_b": "Puedes utilizar un bucle (loop) de 'repetir' para simplificar el código para el triángulo.",
           "courseF_artist_variables7_c": "Tendrás que girar a la izquierda 120 grados para hacer las esquinas del triángulo."
         },
         "courseF_artist_variables7_2019": {
-          "courseF_artist_variables7_a": "Empieza tu programa usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
+          "courseF_artist_variables7_a": "Empieza tu código usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
           "courseF_artist_variables7_b": "Puedes utilizar un bucle (loop) de 'repetir' para simplificar el código para el triángulo.",
           "courseF_artist_variables7_c": "Tendrás que girar a la izquierda 120 grados para hacer las esquinas del triángulo."
         },
         "courseF_artist_variables7_2020": {
-          "courseF_artist_variables7_a": "Empieza tu programa usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
+          "courseF_artist_variables7_a": "Empieza tu código usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
           "courseF_artist_variables7_b": "Puedes utilizar un bucle (loop) de 'repetir' para simplificar el código para el triángulo.",
           "courseF_artist_variables7_c": "Tendrás que girar a la izquierda 120 grados para hacer las esquinas del triángulo."
         },
@@ -8285,25 +8285,25 @@
         "courseF_bee_for10": {
           "courseF_bee_for10_a": "¿Puedes encontrar un patrón entre el número de pasos que necesitas tomar y el numero de néctares a recolectar?",
           "courseF_bee_for10_b": "El primer conjunto de flores tiene un total de **14 flores**. Para llegar al primer conjunto, la abeja debe volar **7 cuadros** (o 14 cuadros divididos por 2). ¿Cuántas flores hay en el siguiente conjunto y cuántos cuadros tendrá que viajar la abeja para llegar ahí?",
-          "courseF_bee_for10_c": "En el desafío, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
+          "courseF_bee_for10_c": "En el puzzle, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
           "courseF_bee_for10_d": "Necesitas 2 repeticiones, y una usará un bloque matemático."
         },
         "courseF_bee_for10_2018": {
           "courseF_bee_for10_a": "¿Puedes encontrar un patrón entre el número de pasos que necesitas tomar y el numero de néctares a recolectar?",
           "courseF_bee_for10_b": "El primer conjunto de flores tiene un total de **14 flores**. Para llegar al primer conjunto, la abeja debe volar **7 cuadros** (o 14 cuadros divididos por 2). ¿Cuántas flores hay en el siguiente conjunto y cuántos cuadros tendrá que viajar la abeja para llegar ahí?",
-          "courseF_bee_for10_c": "En el desafío, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
+          "courseF_bee_for10_c": "En el puzzle, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
           "courseF_bee_for10_d": "Necesitas 2 repeticiones, y una usará un bloque matemático."
         },
         "courseF_bee_for10_2019": {
           "courseF_bee_for10_a": "¿Puedes encontrar un patrón entre el número de pasos que necesitas tomar y el numero de néctares a recolectar?",
           "courseF_bee_for10_b": "El primer conjunto de flores tiene un total de **14 flores**. Para llegar al primer conjunto, la abeja debe volar **7 cuadros** (o 14 cuadros divididos por 2). ¿Cuántas flores hay en el siguiente conjunto y cuántos cuadros tendrá que viajar la abeja para llegar ahí?",
-          "courseF_bee_for10_c": "En el desafío, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
+          "courseF_bee_for10_c": "En el puzzle, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
           "courseF_bee_for10_d": "Necesitas 2 repeticiones, y una usará un bloque matemático."
         },
         "courseF_bee_for10_2020": {
           "courseF_bee_for10_a": "¿Puedes encontrar un patrón entre el número de pasos que necesitas tomar y el numero de néctares a recolectar?",
           "courseF_bee_for10_b": "El primer conjunto de flores tiene un total de **14 flores**. Para llegar al primer conjunto, la abeja debe volar **7 cuadros** (o 14 cuadros divididos por 2). ¿Cuántas flores hay en el siguiente conjunto y cuántos cuadros tendrá que viajar la abeja para llegar ahí?",
-          "courseF_bee_for10_c": "En el desafío, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
+          "courseF_bee_for10_c": "En el puzzle, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
           "courseF_bee_for10_d": "Necesitas 2 repeticiones, y una usará un bloque matemático."
         },
         "courseF_bee_for11": {
@@ -9109,19 +9109,19 @@
         },
         "courseA_harvester_seq1_2021": {
           "courseA_harvester_seq1_a": "¡Usa este bloque para recoger el maíz en cuanto el cosechador lo encuentre!\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "El cosechador necesita moverse tres veces hacia el Este para recoger el maíz. Usa este bloque:\n\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "La cosechadora deberá moverse al Este tres veces para llegar al maíz. Utilice este bloque:\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq2_2021": {
-          "courseA_harvester_seq2_a": "¡No te olvides de usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
+          "courseA_harvester_seq2_a": "¡No olvides usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
           "courseA_harvester_seq2_b": "¡Intenta escribir los pasos en papel para encontrar una solución!"
         },
         "courseA_harvester_seq3_2021": {
-          "courseA_harvester_seq3_a": "¿Te has acordado de usar este bloque?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_a": "¿Recordaste usar este bloque?\n<xml><block type=\"harvester_corn\"/></xml>",
           "courseA_harvester_seq3_b": "Diga los pasos en voz alta y vea si le ayudan a encontrar la respuesta."
         },
         "courseA_harvester_seq4_2021": {
-          "courseA_harvester_seq4_a": "¿Cuántos espacios hay entre el Harvester y el maíz? ¿Cuántos bloques hay en tu espacio de trabajo?",
-          "courseA_harvester_seq4_b": "Necesitas cinco bloques de `Mover al Este` y un bloque de `Coger Maíz`:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_a": "¿Cuántos espacios hay entre la cosechadora y el maíz? ¿Cuántos bloques hay en tu espacio de trabajo?",
+          "courseA_harvester_seq4_b": "Necesitas cinco bloques de `Mover al Este` y un bloque de `Recoger Maíz`:\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq5_2021": {
           "courseA_harvester_seq5_a": "¿Qué bloque mueve a la cosechadora de la manera incorrecta?",
@@ -9160,20 +9160,20 @@
         },
         "courseA_maze_seq10_2021": {
           "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
-          "courseA_maze_seq10_b": "Tendrá que ir en 3 direcciones diferentes para resolver este rompecabezas."
+          "courseA_maze_seq10_b": "Tendrás que ir en 3 direcciones diferentes para resolver este rompecabezas."
         },
         "courseA_maze_seq10_dani": {
           "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
           "courseA_maze_seq10_b": "Tendrá que ir en 3 direcciones para resolver este rompecabezas."
         },
         "courseA_maze_seq13_2021": {
-          "courseA_maze_seq13_a": "Si el camino que necesita no está claro, use su dedo para seguir el camino del pájaro hasta el cerdo.",
+          "courseA_maze_seq13_a": "Si el camino que necesitas no está claro, use tu dedo para seguir el camino del pájaro hasta el cerdo.",
           "courseA_maze_seq13_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá.",
-          "courseA_maze_seq13_c": "Estos bloques <xml><block type=\"maze_moveNorth\"/></xml><xml><block type=\"maze_moveEast\"/></xml> te acercarán al cerdo."
+          "courseA_maze_seq13_c": "Estos bloques le ayudarán a moverte más cerca del cerdo <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_a": "Si no puedes hacer que el pájaro se mueva, asegúrate de que los bloques estén en el lugar correcto en <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "El ave tendrá que moverse hacia el oeste 3 veces para llegar al cerdo. Utilice este bloque:\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "Si no puedes hacer que el pájaro se mueva, asegúrate de que los bloques estén en el lugar correcto debajo de <xml>\n  <block type=\"when_run\"/>\n</xml>",
+          "courseA_maze_seq1_b": "El pájaro tendrá que moverse hacia el Oeste 3 veces para llegar al cerdo. Usa este bloque:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq5_2021": {
           "1": "¡Intenta escribir los pasos en papel para encontrar una solución!",
@@ -9188,7 +9188,7 @@
         },
         "courseA_maze_seq6_2021": {
           "courseA_maze_seq6_a": "Tu código final debe tener 3 bloques de movimiento.",
-          "courseA_maze_seq6_b": "Si te quedas atascado, intenta resolver el rompecabezas en 2 partes, una parte antes de la esquina y una parte después de la esquina."
+          "courseA_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en 2 partes, una parte antes de la esquina y una parte después de la esquina."
         },
         "courseA_maze_seq6_dani": {
           "courseA_maze_seq6_a": "Tu código final debe tener 3 bloques de movimiento.",
@@ -9199,7 +9199,7 @@
           "courseA_maze_seq7_b": "Si no puede descubrir qué hacer, intente dibujar el rompecabezas en papel y use su dedo para descubrir en qué dirección moverse."
         },
         "courseA_maze_seq8_2021": {
-          "courseA_maze_seq8_a": "Si estás atascado, intenta dibujar la imagen en papel para ver cómo se debe mover el pájaro."
+          "courseA_maze_seq8_a": "Si estás atascado/a, intenta dibujar la imagen en papel para ver cómo se debe mover el pájaro."
         },
         "courseA_maze_seq8_dani": {
           "courseA_maze_seq8_a": "Si estás atascado/a, intenta dibujar la imagen en papel para ver cómo se debe mover el pájaro."
@@ -9248,7 +9248,7 @@
         },
         "courseB_Scrat_ramp1_2021": {
           "1": "Si Scrat no está haciendo lo que quieres, asegúrate se has hecho clic en ambos bloques al mismo tiempo, luego haz clic en \"ejecutar\" otra vez.",
-          "2": "¡No tengas miedo de cometer un error! ¡Prueba algo y si no funciona, prueba con algo más!"
+          "2": "¡No tengas miedo de equivocarte! Intenta algo, ¡y si no funciona, prueba otra cosa!"
         },
         "courseB_Scrat_ramp2_2021": {
           "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -9481,13 +9481,13 @@
         },
         "courseB_starWars_prog1_2021": {
           "courseB_starWars_prog1_a": "Intenta agregar bloques de uno en uno, luego haz clic en \"Ejecutar\" para ver qué sucede.",
-          "courseB_starWars_prog1_b": "Querrás moverte hacia el este para resolver este desafío. ¿Qué tan lejos necesitas moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Querrás moverte hacia el Este para resolver este rompecabezas. ¿Qué tan lejos necesitas moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2_2021": {
           "courseB_starWars_prog2_a": "Divide este problema en dos partes. Consigue una sola pila de chatarra y luego descubre cómo llegar a la otra."
         },
         "courseB_starWars_prog3_2021": {
-          "courseB_starWars_prog3_a": "Necesitarás moverte de 3 maneras para resolver este desafío.",
+          "courseB_starWars_prog3_a": "Tendrás que moverte en 3 direcciones para resolver este rompecabezas.",
           "courseB_starWars_prog3_b": "Construye una pieza de código a la vez. Ejecútalo para descubrir a dónde ir desde allí."
         },
         "courseB_starWars_prog4_2021": {
@@ -9495,28 +9495,28 @@
           "courseB_starWars_prog4_b": "Intenta usar el bloque `repetir` para que el código sea más corto.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog5_2021": {
-          "courseB_starWars_prog5_a": "¿Este patrón no se parece un poco al último desafío?",
+          "courseB_starWars_prog5_a": "¿Este patrón no se parece un poco al último rompecabezas?",
           "courseB_starWars_prog5_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
           "courseB_starWars_prog5_c": "Traza este patrón con tu dedo. Cuenta las piezas de metal mientras te mueves.",
-          "courseB_starWars_prog5_da": "Mira lo que sucede si usas la misma solución del desafío de la escalera:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+          "courseB_starWars_prog5_da": "Mira lo que ocurre si utilizas la misma solución que el rompecabezas de la escalera:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog6_2021": {
           "courseB_starWars_prog6_a": "¡Este patrón es solo un paso escalón con dos movimientos por dirección!",
           "courseB_starWars_prog6_b": "Intenta usar el bloque `repetir` para que el código sea más corto.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7_2021": {
-          "courseB_starWars_prog7_a": "¿Este patrón no se parece un poco al último desafío?",
+          "courseB_starWars_prog7_a": "¿Este patrón no se parece un poco al último rompecabezas?",
           "courseB_starWars_prog7_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
-          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre todo el metal de desecho?"
+          "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre toda la chatarra?"
         },
         "courseB_starWars_prog8_2021": {
           "courseB_starWars_prog8_a": "Está bien volver sobre un conjunto de espacios por los que ya has viajado.",
           "courseB_starWars_prog8_b": "Intenta usar el bloque `repetir` para ver lo que ocurre en el código que pusiste dentro.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9_2021": {
-          "courseB_starWars_prog9_a": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el puzle.",
-          "courseB_starWars_prog9_b": "Hay muchas formas de resolver este desafío.",
-          "courseB_starWars_prog9_c": "¿Podría un loop 'repetir' <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block></xml> ayudar aquí?"
+          "courseB_starWars_prog9_a": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
+          "courseB_starWars_prog9_b": "Hay muchas formas de resolver este rompecabezas.",
+          "courseB_starWars_prog9_c": "¿Podría un bucle (loop) de 'repetir' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> ayudar aquí?"
         },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "El bloque 'establecer actor 1 ??? imagen' puede usarse para agregar un actor al escenario.",
@@ -10518,14 +10518,14 @@
           "courseF_artist_for1_a": "Puedes dibujar algo como esto:\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
         },
         "courseF_artist_for6_2021": {
-          "courseF_artist_for6_a": "Tu bucle 'desde' contará de 15 a 300 por 15.",
-          "courseF_artist_for6_b": "Pon un bloque 'avanzar' y uno 'girar' dentro de este loop 'para'.",
+          "courseF_artist_for6_a": "Tu bucle (loop) 'para' contará de 15 a 300 por 15.",
+          "courseF_artist_for6_b": "Pon un bloque 'avanzar' y uno 'girar' dentro de este bucle (loop) 'para'.",
           "courseF_artist_for6_c": "Todo lo que tienes que cambiar es el número de grados en el bloque de 'girar'."
         },
         "courseF_artist_for7_2021": {
-          "courseF_artist_for7_a": "El lápiz es más fino en este puzle. Tendrás que configurarlo en '1' antes de empezar.",
+          "courseF_artist_for7_a": "La pluma es más fina en este rompecabezas. Tendrás que configurarla a '1' antes de empezar.",
           "courseF_artist_for7_b": "¡Fíjate en que esta espiral gira a la derecha en vez de a la izquierda!",
-          "courseF_artist_for7_c": "El bucle 'desde' en este desafío va de 15 a 300 de 2 en 2.",
+          "courseF_artist_for7_c": "El bucle (loop) 'para' en este rompecabezas va de 15 a 300 por 2.",
           "courseF_artist_for7_d": "Esta imagen se hace girando a 89 grados."
         },
         "courseF_artist_for8_2021": {
@@ -10533,7 +10533,7 @@
           "courseF_artist_for8_b": "¡Si lo deseas puedes elegir un color diferente para tu espiral!"
         },
         "courseF_artist_for9_2021": {
-          "courseF_artist_for9_a": "Si pones el bloque 'establecer alfa' dentro de tu bucle 'desde' y usas la variable 'contador' para cambiarlo, puedes crear un diseño como este.",
+          "courseF_artist_for9_a": "Si pones el bloque 'establecer alfa' dentro de tu bucle (loop) 'para' y usas la variable 'contador' para cambiarlo, puedes crear un diseño como este.",
           "courseF_artist_for9_b": "El bloque de 'establecer alfa' cambia la opacidad de un color. Cuanto menor sea el valor, más transparente es el color."
         },
         "courseF_artist_for_challenge1_2021": {
@@ -10543,9 +10543,9 @@
           "courseF_artist_for_challenge1_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_for_challenge2_2021": {
-          "courseF_artist_for_challenge2_c": "El \"bucle para\" va desde 5 a 250 por 2. ",
+          "courseF_artist_for_challenge2_c": "El bucle \"loop para\" va desde 5 a 250 por 2. ",
           "courseF_artist_for_challenge2_a": "El cambio de color se presenta con el bloque 'definir color con rojo, verde, azul'. Rojo es la constante definida como 255, verde es siempre el valor de `contador`, y azul es siempre `255-contador`.",
-          "courseF_artist_for_challenge2_b": "El código para esto es mucho más simple de lo que podrías pensar. Solo define el color dentro del 'bucle para', avanza, y luego gira.",
+          "courseF_artist_for_challenge2_b": "El código para esto es mucho más simple de lo que podrías pensar. Solo define el color dentro del bucle 'loop para', avanza, y luego gira.",
           "courseF_artist_for_challenge2_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
         },
         "courseF_artist_variables10_2021": {
@@ -10553,18 +10553,18 @@
           "courseF_artist_variables10_b": "Puedes intentar varias cosas y ejecutar el código varias veces."
         },
         "courseF_artist_variables7_2021": {
-          "courseF_artist_variables7_a": "Empieza tu programa usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
-          "courseF_artist_variables7_b": "Puedes utilizar un bucle 'repetir' para simplificar el código para el triángulo.",
+          "courseF_artist_variables7_a": "Empieza tu código usando el bloque de 'establecer longitud'. Establece la variable de longitud a 150.",
+          "courseF_artist_variables7_b": "Puedes utilizar un bucle (loop) de 'repetir' para simplificar el código para el triángulo.",
           "courseF_artist_variables7_c": "Tendrás que girar a la izquierda 120 grados para hacer las esquinas del triángulo."
         },
         "courseF_artist_variables8_2021": {
           "courseF_artist_variables8_b": "Recuerda iniciar tu código para el triángulo con el bloque 'establecer longitud', y empezar a 150 píxeles.",
-          "courseF_artist_variables8_c": "Asegúrate de utilizar el bucle 'repetir' para dibujar el triángulo.",
-          "courseF_artist_variables8_a": "Intenta poner el\n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\ndentro del bucle al final."
+          "courseF_artist_variables8_c": "Asegúrate de utilizar el bucle (loop) de 'repetir' para dibujar el triángulo.",
+          "courseF_artist_variables8_a": "Intenta poner el\n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\ndentro del bucle (loop) al final."
         },
         "courseF_artist_variables9_2021": {
-          "courseF_artist_variables9_a": "Para este puzle, todo lo que necesitas es cambiar cuántas veces se repite el bucle.",
-          "courseF_artist_variables9_b": "Asegúrate de que el bloque que cambia la `longitud` está dentro del bucle para que las líneas sigan siendo más largas."
+          "courseF_artist_variables9_a": "Para este puzle, todo lo que necesitas es cambiar cuántas veces se repite el bucle (loop).",
+          "courseF_artist_variables9_b": "Asegúrate de que el bloque que cambia la `longitud` está dentro del bucle (loop) para que las líneas sigan siendo más largas."
         },
         "courseF_artist_variablesFP_2021": {
           "polygon_table": "¿Quieres probar otros polígonos? \n\nUtiliza el número de lados en tu `repetición` y el ángulo en tu bloque de `giro`.\nPrueba con estos:\n\n| Forma, lados, ángulo...\n\\| :------: \\| :---: \\| :---: \\|\n| triángulo | 3 | 120° |\n| cuadrado | 4 | 90° |\n| pentágono | 5 | 72° |\n| hexágono | 6 | 60° |\n| octógono | 8 | 45° |\n| nonágono | 9 | 40° |\n| decágono | 10 | 36° |"
@@ -10572,53 +10572,53 @@
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "¿Puedes encontrar un patrón entre el número de pasos que necesitas tomar y el numero de néctares a recolectar?",
           "courseF_bee_for10_b": "El primer conjunto de flores tiene un total de **14 flores**. Para llegar al primer conjunto, la abeja debe volar **7 cuadros** (o 14 cuadros divididos por 2). ¿Cuántas flores hay en el siguiente conjunto y cuántos cuadros tendrá que viajar la abeja para llegar ahí?",
-          "courseF_bee_for10_c": "En el desafío, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
+          "courseF_bee_for10_c": "En el puzzle, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
           "courseF_bee_for10_d": "Necesitas 2 repeticiones, y una usará un bloque matemático."
         },
         "courseF_bee_for11_2021": {
           "courseF_bee_for11_a": "¿Cuánto menos es 12 que 15?\\\n¿Cuánto menos es 9 que 12?\n\n¿Ves un patrón'?"
         },
         "courseF_bee_for1_2021": {
-          "courseF_bee_for1_b": "Necesitas dos bloques en tu bucle 'repetir' para recoger todo el néctar."
+          "courseF_bee_for1_b": "Necesitas dos bloques en tu bucle (loop) de 'repetir' para recoger todo el néctar."
         },
         "courseF_bee_for2_2021": {
-          "courseF_bee_for2_a": "Si estas confunso, trabaja con una flor cada vez y prueba continuamente.",
-          "courseF_bee_for2_b": "Recuerda avanzar entre cada bucle, y así podrás llegar a cada flor."
+          "courseF_bee_for2_a": "Si estas confundido/a, trabaja con una flor a la vez y prueba continuamente.",
+          "courseF_bee_for2_b": "Recuerda avanzar entre cada bucle (loop) para llegar a cada flor."
         },
         "courseF_bee_for4_2021": {
-          "courseF_bee_for4_a": "Utiliza un bucle ´desde' que vaya de 1 a 7 con un incremento de 1 para resolver este puzle.",
-          "courseF_bee_for4_b": "Dentro de tu bucle 'desde', tendrás que tener un comando 'avanzar' y un bucle para recolectar néctar.",
-          "courseF_bee_for4_c": "¡Asegúrate de usar la variable `contador` dentro de tu bucle `repetir` anidado para obtener suficiente néctar!"
+          "courseF_bee_for4_a": "Utiliza un bucle (loop)´para' que vaya de 1 a 7 con un incremento de 1 para resolver este puzle.",
+          "courseF_bee_for4_b": "Dentro de tu bucle (loop) 'para', tendrás que tener un comando 'avanzar' y un bucle (loop) para recolectar néctar.",
+          "courseF_bee_for4_c": "¡Asegúrate de usar la variable `contador` dentro de tu bucle (loop) de `repetir` anidado para obtener suficiente néctar!"
         },
         "courseF_bee_for5_2021": {
-          "courseF_bee_for5_a": "Esta vez, tu bloque 'avanzar' y tu bloque 'obtener néctar' tendrán que estar en bucles'repetir' diferentes, ambos dentro del mismo bucle 'desde'.",
-          "courseF_bee_for5_b": "Usa la variable 'contador' en cada bucle para que la abeja se mueva a distintas distancias entre cada flor.",
-          "courseF_bee_for5_c": "¡No tengas miedo de cometer un error! Prueba a agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el puzle."
+          "courseF_bee_for5_a": "Esta vez, tu bloque 'avanzar' y tu bloque 'obtener néctar' tendrán que estar en bucles (loops) de 'repetir' separados, ambos dentro del mismo bucle (loop) 'para'.",
+          "courseF_bee_for5_b": "Usa la variable 'contador' en cada bucle (loop) para que la abeja se mueva distintas distancias entre cada flor.",
+          "courseF_bee_for5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el rompecabezas."
         },
         "courseF_bee_for6_2021": {
-          "courseF_bee_for6_a": "No te olvides de utilizar una variable 'contador' dentro de tu bucle ´repetir´,",
-          "courseF_bee_for6_b": "Dentro de tu bucle 'desde', tendrás que tener un comando 'avanzar' y un bucle para recolectar néctar.",
-          "courseF_bee_for6_c": "Tu bucle debe contar \\*\\* de 5 a 1 \\*\\*."
+          "courseF_bee_for6_a": "No te olvides de utilizar una variable 'contador' dentro de tu bucle (loop) de ´repetir´,",
+          "courseF_bee_for6_b": "Dentro de tu bucle (loop) 'para', tendrás que tener un comando 'avanzar' y un bucle (loop) para recolectar néctar.",
+          "courseF_bee_for6_c": "Tu bucle (loop) debe contar \\*\\* de 5 a 1 \\*\\*."
         },
         "courseF_bee_for7_2021": {
-          "courseF_bee_for7_a": "Tu loop 'desde' deberá contar de 1 a 7 en incrementos de 2.",
-          "courseF_bee_for7_b": "Dentro de tu bucle 'desde', tendrás que tener un comando 'avanzar' y un bucle para recolectar néctar.",
-          "courseF_bee_for7_c": "No te olvides de utilizar una variable 'contador' dentro de tu bucle 'repetir'."
+          "courseF_bee_for7_a": "Tu bucle (loop) 'para' deberá contar de 1 a 7 en incrementos de 2.",
+          "courseF_bee_for7_b": "Dentro de tu bucle (loop) 'para', tendrás que tener un comando 'avanzar' y un bucle (loop) para recolectar néctar.",
+          "courseF_bee_for7_c": "No te olvides de utilizar una variable 'contador' dentro de tu bucle (loop) de 'repetir'."
         },
         "courseF_bee_for8_2021": {
-          "courseF_bee_for8_a": "Si tu bucle está contando hacia arriba, el incremento se agrega a tu variable de contador cada vez.\n\n¿Qué necesitas añadir a cada número para obtener la próxima cantidad de néctar?",
+          "courseF_bee_for8_a": "Si tu bucle (loop) está contando hacia arriba, el incremento se agrega a tu variable de contador cada vez.\n\n¿Qué necesitas añadir a cada número para obtener la próxima cantidad de néctar?",
           "courseF_bee_for8_b": "En este puzle, tendrás que moverte en un patrón de escaleras para llegar a las flores.",
-          "courseF_bee_for8_c": "Tu bucle contará _de 3 a 15_ con algún incremento. ¿Cuál es?"
+          "courseF_bee_for8_c": "Tu bucle (loop) contará _de 3 a 15_ con algún incremento. ¿Qué es?"
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_a": "Intenta hacer algunos cálculos con la variable contador.\n\n¿Qué tienes que hacerle al contador en cada flor para alcanzar la cantidad de néctar que necesitas recolectar?",
-          "courseF_bee_for9_c": "Parece que tendrás que girar a la abeja al inicio de cada repetición del bucle si quieres resolver el puzle.",
-          "courseF_bee_for9_b": "**Recuerda.** Si tu bucle está contando hacia arriba, el incremento se añade a tu variable 'contador' cada vez."
+          "courseF_bee_for9_c": "Parece que tendrás que girar a la abeja al inicio de cada repetición del bucle (loop) si quieres resolver el puzle.",
+          "courseF_bee_for9_b": "**Recuerda.** Si tu bucle (loop) está contando hacia arriba, el incremento se añade a tu variable 'contador' cada vez."
         },
         "courseF_bee_for_challenge2_2021": {
           "courseF_bee_for_challenge2_a": "Echa un vistazo a esta opción de movimiento:\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
-          "courseF_bee_for_challenge2_b": "Trata de usar dos loops \"para\": Uno para escalar y agarrar el néctar, y otro para descender y hacer miel.",
-          "courseF_bee_for_challenge2_c": "Observe que un bucle `para` necesita varios bucles regulares dentro en que se repita 'contador' veces para hacer el patrón creciente de escalera.\n\nEl otro bucle `para` solo necesita un bucle regular para hacer una cantidad 'contador' de miel.",
+          "courseF_bee_for_challenge2_b": "Trata de usar dos bucles (loops) \"para\": Uno para escalar y agarrar el néctar, y otro para descender y hacer miel.",
+          "courseF_bee_for_challenge2_c": "Observa que un bucle (loop) \"para\" necesita varios bucles (loops) regulares dentro del 'contador' de repetición; las veces para hacer aumentar el patrón de escalera.\n\nEl otro bucle (loop) \"para\" solo necesita un bucle (loop) regular para hacer un 'contador' cantidad de miel.",
           "courseF_bee_for_challenge2_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_bee_variables_3a_2021": {

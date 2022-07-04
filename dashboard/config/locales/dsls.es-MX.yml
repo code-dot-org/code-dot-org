@@ -12061,12 +12061,12 @@ es-MX:
         answers:
         - text: No sucederá nada.
           feedback: Incorrecto. El pez dorado comenzará a dar vueltas
-        - text: El pez dorado flotará hasta la parte superior de la pantalla
+        - text: La planta rodadora flotará hasta la parte superior de la pantalla
           feedback: Incorrecto. El pez dorado comenzará a dar vueltas
-        - text: " El pez dorado comenzará a dar vueltas"
+        - text: La planta rodadora comenzará a caer
           correct: true
           feedback: "¡Correcto!"
-        - text: El pez dorado se encenderá y apagará.
+        - text: La planta rodadora se encenderá y apagará.
           feedback: Incorrecto. El pez dorado comenzará a dar vueltas
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
@@ -12168,11 +12168,11 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 píxeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
-        - text: El ordenador pedirá al usuario un número.
+        - text: La computadora solicitará un número al usuario.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
             `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
@@ -12181,19 +12181,19 @@ es-MX:
       courseF_multi_bee_for3_predict1_2021:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
-            de una.
+            una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'La abeja avanzará y recogerá un néctar de las flores número 1 y 4. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
       courseF_sprites_freeplay:
@@ -12236,7 +12236,7 @@ es-MX:
       courseF_text_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
           todas las que puedas. ¡Sigue practicando con el texto y las solicitudes!"
-        display_name: Práctica de Texto y Apuntes
+        display_name: Práctica de Texto y Solicitudes
         teacher_markdown: |+
           # Visión General de los Niveles de Elección
           Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
@@ -12609,7 +12609,7 @@ es-MX:
             AM.png">
         title: dibujarSprites
       CSD U3 drawing practice choice_2021:
-        display_name: Practica
+        display_name: Práctica
         description: "¡Practica mucho!"
       CSD U3 game intro_2018_2019_pilot_2021:
         content1: descripción aquí
@@ -12760,13 +12760,13 @@ es-MX:
         display_name: Condicionales Practicar
         description: Practica el uso de booleanos y condicionales con estas actividades.
       CSD web draw loop practice choice_2021:
-        display_name: Practica
+        display_name: Práctica
         description: Prueba a utilizar el bucle de dibujo con estas actividades.
       CSD web movement practice choice_2021:
-        display_name: Practica
+        display_name: Práctica
         description: Prueba a utilizar el bucle de dibujo con estas actividades.
       CSD web text practice choice_2021:
-        display_name: Practica
+        display_name: Práctica
         description: Pon a prueba tus conocimientos de texto en estas actividades.
       CSDU6 Innovation_2021:
         teacher_markdown: |+

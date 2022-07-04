@@ -1292,6 +1292,48 @@
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Explicar el proceso de diseño y cómo ayudó a dar forma al resultado final del proyecto."
         },
+        "56d03b70-1f5b-408c-a3d4-bd8439cc372e": {
+          "description": " Aplicar el proceso de resolución de problemas para entrenar a una computadora en\\\n la resolución de un problema"
+        },
+        "3160fb3d-404e-41b2-b8dc-ad2f4baf630c": {
+          "description": "Describir las diferencias entre aprendizaje supervisado y no supervisado."
+        },
+        "5e9ca97a-3af9-4a06-bab7-09e6831a6070": {
+          "description": "Describir cómo la inteligencia artificial impacta en la sociedad"
+        },
+        "83f51427-8851-4311-b7d6-bc2dc72898f0": {
+          "description": "Describir cómo un modelo toma una decisión (por ejemplo: de forma aleatoria, con un árbol de decisiones, o utilizando datos)"
+        },
+        "554a2d22-308b-4e01-be9d-b8bd9287a065": {
+          "description": "Buscar patrones en los datos para ayudar a tomar una decisión"
+        },
+        "8870551e-1d9f-4c03-b78e-e1ac184cba86": {
+          "description": "Explicar cómo las computadoras pueden separar los datos para tomar una decisión"
+        },
+        "aa76cd8b-eb6b-48ee-92f9-e48af49997c0": {
+          "description": "Utilizar AI Lab en la selección de características para entrenar un modelo"
+        },
+        "7d06da51-46a7-4210-9366-091598d8f8cf": {
+          "description": "Utilizar las herramientas de visualización de datos para decidir qué características incluir al momento de entrenar un modelo"
+        },
+        "49f91ded-6e10-4292-81c0-bf90fdd0de99": {
+          "description": "Crear una aplicación que utilice aprendizaje automático"
+        },
+        "1d44b50f-9b7f-4fd8-819b-7f62f60fda8a": {
+          "description": "Añadir pantallas y eventos en App Lab"
+        },
+        "a22e4c3d-2f63-4fbc-972c-6bbec9d73c64": {
+          "description": "Leer una ficha de modelo y utilizarla para evaluar un modelo"
+        },
+        "02f51780-cf77-4ecd-874b-df34b3770de9": {
+          "description": "Utilizar visualizaciones de datos e iteración de características para entrenar modelos de aprendizaje automático"
+        },
+        "58409d45-e5cc-431d-9cfb-2a2f3ec482d5": {
+          "description": "Crear fichas de modelos en AI Lab para guardar modelos de aprendizaje automático"
+        },
+        "99cfd798-833c-40e9-8382-bce53c24ce78": {
+          "description": "Crear una aplicación que utilice aprendizaje automático"
+        },
         "ad6a4213-49c3-49e2-ace9-5a7d36daa458": {
           "description": " Evaluar de manera crítica un objeto en base a su diseño y considerar si este cumple con ciertos requerimientos."
         },
