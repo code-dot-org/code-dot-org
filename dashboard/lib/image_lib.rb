@@ -32,8 +32,8 @@ module ImageLib
       c.compose('Over')
     end
   ensure
-    bg_temp.unlink if bg_temp
-    fg_temp.unlink if fg_temp
+    bg_temp&.unlink
+    fg_temp&.unlink
   end
 
   def self.to_png(image_blob)

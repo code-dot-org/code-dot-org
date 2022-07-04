@@ -13,6 +13,7 @@ def set_course_audiences
     # scripts in unit_groups get their audiences from their unit group
     next if script.unit_group
 
+    # rubocop:disable Style/WordArray
     script.instructor_audience = if [].include?(script.name)
                                    Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
                                  elsif ['csd1-dlp-18', 'csd2-dlp-18', 'csd3-dlp-18', 'csd4-dlp-18', 'csd5-dlp-18',
@@ -48,6 +49,7 @@ def set_course_audiences
                                   else
                                     Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
                                   end
+    # rubocop:enable Style/WordArray
 
     script.update!(skip_name_format_validation: true)
     script.write_script_json

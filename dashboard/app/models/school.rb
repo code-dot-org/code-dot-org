@@ -407,6 +407,38 @@ class School < ApplicationRecord
           }
         end
       end
+
+      CDO.log.info "Seeding 2019-2020 private school data."
+      AWS::S3.seed_from_file('cdo-nces', "2019-2020/pss/final_schools_private.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false) do |row|
+          {
+            id:                           row['School ID - NCES Assigned [Private School] Latest available year'],
+            name:                         row['Private School Name'].upcase,
+            address_line1:                row['Physical Address [Private School] 2019-20'].to_s.upcase.truncate(50).presence,
+            address_line2:                nil,
+            address_line3:                nil,
+            city:                         row['City [Private School] 2019-20'].to_s.upcase.presence,
+            state:                        row['State Abbr [Private School] Latest available year'].to_s.strip.upcase.presence,
+            zip:                          row['ZIP [Private School] 2019-20'],
+            latitude:                     nil,
+            longitude:                    nil,
+            school_type:                  'private',
+            school_district_id:           nil,
+            state_school_id:              nil
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2019-2020 private school geographic data."
+      AWS::S3.seed_from_file('cdo-nces', "2019-2020/pss/final_locale_private.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false, insert_new: false) do |row|
+          {
+            id:                 row['PPIN'],
+            latitude:           row['LAT'].to_f,
+            longitude:          row['LON'].to_f
+          }
+        end
+      end
     end
   end
 
