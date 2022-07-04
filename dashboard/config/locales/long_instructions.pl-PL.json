@@ -3250,7 +3250,22 @@
         "Allthethings Java Lab 6": "To jest przykładowy poziom Java Lab.",
         "Allthethings Java Lab Validation": "To jest przykładowy poziom Java Lab z testami walidacyjnymi.",
         "Allthethings Java Lab submittable": "To jest przykładowy poziom Java Lab.",
-        "PS fr prediction q1": "Jak _Ty_ myślisz, co się stanie?"
+        "PS fr prediction q1": "Jak _Ty_ myślisz, co się stanie?",
+        "Allthethings Java Lab 2": "## Poziom tylko dla konsoli\n\nPoziom tylko dla konsoli nie powinien mieć miejsca na wizualizację (w przeciwieństwie do Teatru, Sąsiedztwa itp.). Dodatkowo przestrzeń na instrukcje powinna zajmować całą lewą kolumnę.\n\nPoziom tylko dla konsoli zawsze będzie zawierał instrukcje. Samodzielne poziomy Java Lab będą poziomami Teatru.",
+        "Allthethings Java Lab 3": "To jest przykładowy poziom Ssiedztwo Java Lab.",
+        "Allthethings Java Lab 4": "## Zapraszamy do Teatru!\n\nUdaj się do menedżera zasobów i prześlij swoje zdjęcie. Twoje zdjęcie ze strony <https://code.org/about/team> byłoby świetną opcją!\n\n![](https://images.code.org/718dc869168a74a6382156c6b7b31a08-image-1627678801303.png)\n\nPo zakończeniu przesyłania obrazu spójrz na kod i zastąp przykładowy tekst nazwą swojego obrazu.\n\n![](https://images.code.org/d046446202282dfbdb9ce666565afc46-image-1627678635564.png)\n\nOtóż ​​to! Zwiększ głośność, kliknij Uruchom i zobacz (i usłysz), jak Twoje dzieło ożywa!",
+        "Allthethings Java Lab 7": "To jest przykładowy poziom Ssiedztwo Java Lab.",
+        "Allthethings Java Lab Playground": "To jest przykładowy poziom Placu zabaw, który demonstruje podstawy miniaplikacji, tworząc układankę ze zjeżdżalnią!\n\n**Uwaga**: jeśli chcesz grać, musisz zmienić wartość logiczną `shuffleTiles` w pliku `Game.java` na `true`.",
+        "Allthethings Java Lab Prompter": "## Przykładowy poziom suflera\n\nTen poziom pokazuje przykład suflera w teatrze.",
+        "AppLab AI Enabled": "Jest to poziom włączony przez AI, co oznacza 1.) Istnieje dodatkowa opcja „Zarządzaj modelami A.I,” w ustawieniach cog 2.) W sekcji Dane w przyborniku znajduje się blok getPrediction",
+        "Calc Circles of Eval .2": "Ten blok obliczeń wykonuje mnożenie dwóch liczb i zwraca ich iloczyn. Edytuj ten blok tak, aby mnożył 2 \\* 5",
+        "Calc Vars 1": "Zmienne służą do nazywania wartości, dzięki czemu możemy łatwo odwoływać się do nich wielokrotnie w naszych programach. Oto zmienna zwana 'age'. Ustaw jego wartość na swój wiek i kliknij Uruchom.",
+        "Eval Booleans 2": "Czy możesz tak ustawić wartości, aby to wyrażenie miałlo wartość _true_?",
+        "Eval Contracts A": "Użyj funkcji 'star\", aby uzyskać pełną czerwoną gwiazdę o promieniu 60 pikseli",
+        "Eval Define Funcs 3": "Oto początek kolejnej nowej funkcji zwanej „purple-circle” z jedną liczbą jako domeną (promień) i obrazem jako typem wyniku. Treść funkcji jest jednak popsute, zawsze rysuje okrąg o promieniu 50 pikseli zamiast używać promienia jako parametr. Zastąp liczbę blokiem „radius” z domeny.\n\nPo naprawieniu funkcji przetestuj nową funkcję z promieniem 150 pikseli.",
+        "Eval Define Funcs Test": "Oto początek kolejnej nowej funkcji zwanej „purple-circle” z jedną liczbą jako domeną (promień) i obrazem jako typem wyniku. Treść funkcji jest jednak popsute, zawsze rysuje okrąg o promieniu 50 pikseli zamiast używać promienia jako parametr. Zastąp liczbę blokiem „radius” z domeny.\n\nPo naprawieniu funkcji przetestuj nową funkcję z promieniem 150 pikseli.",
+        "Eval Strings Images .2": "Funkcja string-append pobiera dwa łńcuchy i zwraca jeden połączony łańcuch. Dodaj łańcuch \"Universe\" jako drugi argument tej funkcji\\`.",
+        "csa widget test2": "# Widżet konfiguracji Sąsiedztwa\n\nTen widżet tworzy łąńcuch JSON, który można skopiować na poziom, aby wyświetlić określony układ Sąsiedztwa.\n\n1.  Za pomocą suwaka wybierz rozmiar otoczenia.\n2.  Kliknij kafelek, aby go wybrać.\n3.  Wybierz kategorię z listy rozwijanej i kliknij kafelek, aby ustawić obraz na wybrany kafelek.\n\nWiele obrazów jest większych niż 1x1. W takich przypadkach będziesz musiał wybrać kolejne płytki i umieszczać je jedna obok drugiej. \n\nOstatnim krokiem jest skopiowanie danych wyjściowych i wklejenie ich w odpowiednim polu na poziomie Levelbuilder.\n\n## Edytuj istniejący poziom\n\n1.  Skopiuj łańcuch JSON z pola w levelbuilder\n2.  Wklej dane w konwerter jednowierszowego, taki jak [this one](https://w3percentagecalculator.com/json-to-one-line-converter/).\n3.  Skopiuj ciąg z konwertera.\n4.  Kliknij przycisk Ręcznie.\n5.  Wklej w String.\n6.  Kliknij każdy kafelek, aby edytować jak zwykle."
       }
     }
   }

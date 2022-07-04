@@ -6384,6 +6384,9 @@ pl-PL:
         - text: Ile jest 1 + 1?
         content1: Oto kilka informacji.
         title: Zawiera wiele
+        markdown: 'Test **zaznacz** _tutaj_
+
+'
       allthethings_external_displayed_as_unplugged:
         content1: opis tutaj
         markdown: Ten poziom zewnętrzny powinien być wyświetlany jako bez komputera.
@@ -6401,6 +6404,18 @@ pl-PL:
         questions:
         - text: Które wiersze kodu należy usunąć, aby program działał zgodnie z przeznaczeniem?
             Wybierz <u>dwie</u> odpowiedzi
+        markdown: "To pytanie używa robota w siatce kwadratów. Robot jest przedstawiony
+          jako trójkąt, który początkowo jest skierowany w prawą stronę siatki. Robot
+          jest przemieszczany zgodnie z poniższymi instrukcjami.\n\n| Instrukcja       |
+          Wyjaśnienie |\n|--------------------|--------|\n|`Idź do przodu` | Robot
+          porusza się o jedno pole do przodu w kierunku, w którym jest zwrócony|\n|`Skręć
+          w prawo` | Robot obraca się w miejscu o 90 stopni zgodnie z ruchem wskazówek
+          zegara (tj. wykonuje obrót w prawo). |\n|`Skręć w lewo` | Robot obraca się
+          w miejscu o 90 stopni przeciwnie do ruchu wskazówek zegara (tj. wykonuje
+          obrót w lewo). |\n|`POWTÓRZ n RAZY` | Blok instrukcji zawarty między nawiasami
+          klamrowymi {} jest powtarzany n razy. |\n  \n  \nRozważ następujący niepoprawny
+          program, który ma na celu przemieszczenie robota po obwodzie siatki poniżej,
+          jak wskazują strzałki.\n\n![](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png)\n\n![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)\n\n"
       contained_Choose_2_Test_2:
         answers:
         - text: Wiersz 2
@@ -6412,6 +6427,21 @@ pl-PL:
         questions:
         - text: Które wiersze kodu należy usunąć, aby program działał zgodnie z przeznaczeniem?
             Wybierz **dwie** odpowiedzi
+        markdown: |
+          Rozważ następujący niepoprawny program, który ma na celu przemieszczenie robota po obwodzie siatki poniżej, jak wskazują strzałki.
+          ```
+          Wiersz 1: POWTÓRZ 4 RAZY
+                  {
+          Wiersz 2:   Idź do przodu
+          Wiersz 3:   Skręć w prawo
+          Wiersz 4:   POWTÓRZ 4 RAZY
+                          {
+          Line 5:        Move Forward
+                     }
+          Wiersz 6:   Skręć w prawo
+                  }
+          ```
+          ![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)
       contained_Happy_Maps_Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/up.png"
