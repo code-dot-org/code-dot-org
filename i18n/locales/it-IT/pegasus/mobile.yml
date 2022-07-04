@@ -985,19 +985,25 @@
   coursed-2021_name: Corso D (2021)
   coursee-2021_name: Corso E (2021)
   coursef-2021_name: Corso F (2021)
-  coursed-2022_name: Corso D (2021)
+  coursea-2022_name: Corso A (2022)
+  courseb-2022_name: Corso B (2022)
+  coursec-2022_name: Corso C (2022)
+  coursed-2022_name: Corso D (2022)
+  coursee-2022_name: Corso E (2022)
+  coursef-2022_name: Corso F (2022)
   express-2018_name: Corso Rapido (2018)
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
-  express-2019_name: Corso Rapido (2017)
+  express-2019_name: Corso Rapido (2019)
   pre-express-2019_name: Corso Rapido pre-scolare (2019)
-  express-2020_name: Corso Rapido (2017)
+  express-2020_name: Corso Rapido (2020)
   pre-express-2020_name: Corso Express Pre-lettore (2020)
   express-2021_name: Corso Rapido (2021)
   pre-express-2021_name: Corso Rapido pre-scolare (2021)
+  express-2022_name: Corso Rapido (2022)
   csd2_name: 'Unità 2: Sviluppo Web'
   csd3_name: 'Unità 3: Animazioni e Giochi'
   accelerated_name: "Corso rapido"
-  express_name: "Corso Rapido (2018)"
+  express_name: "Corso Rapido"
   pre-express_name: Corso Rapido pre-scolare
   20-hour_name: Corso rapido
   algebra_name: "L'informatica in algebra"
@@ -1506,7 +1512,7 @@
   header_about: "Informazioni"
   header_teacher_community: "Teacher community"
   header_help_support: 'Help and support'
-  header_report_bug: "Report a problem"
+  header_report_bug: "Segnala un errore"
   header_report_abuse: "Segnala abuso"
   header_legal: "Privacy & Legale"
   header_legal_privacy: "Informativa sulla privacy"
@@ -1523,7 +1529,7 @@
   header_documentation: "Documentazione"
   user_header_label: "Ciao %{username}"
   user_header_team: "Squadra"
-  user_header_my_projects: "Collezione Privata"
+  user_header_my_projects: "I miei progetti"
   user_header_settings: "Il mio account"
   user_header_logout: "Esci"
   user_header_signin: "Accedi"

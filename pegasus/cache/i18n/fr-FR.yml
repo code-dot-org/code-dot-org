@@ -2296,9 +2296,10 @@ fr-FR:
     le mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un
     de nos navigateurs supportés</a>. Vous pouvez essayer d’afficher la page, mais
     la fonctionnalité risque d’être rompue.
-  compatibility_unsupported_browser_markdown: Votre navigateur n'est pas supporté.
-    Merci de mettre votre navigateur à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}).
-    Vous pouvez essayer d’afficher la page mais la fonctionnalité risque d’être rompue.
+  compatibility_unsupported_browser_markdown: 'Votre navigateur n''est pas compatible.
+    Merci de mettre votre navigateur à jour avec [un des navigateurs compatibles avec
+    nos services](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page,
+    mais les fonctionnalités risquent d’être compromises. '
   flappy_shortcode: battre des ailes
   header_home: Accueil
   header_my_dashboard: Mon Tableau de Bord
@@ -2706,7 +2707,9 @@ fr-FR:
   hoc2021_mc_mee_ai_title: AI pour de bon
   hoc2021_mc_mee_ai_description: 'Explorez l''AI avec vos élèves et apprenez à coder
     dans Minecraft : Education Edition.'
-  footer_powered_by_aws: Fourni par Amazon Web Services
+  footer_powered_by_aws: 'Amazon Web Services et le logo « Powered by AWS » sont des
+    marques déposées d''Amazon.com, Inc. ou ses filiales aux États-Unis et/ou dans
+    d''autres pays. '
   footer_built_on_github: Construit sur GitHub de Microsoft
   codebytes_skinny_banner_title: Rejoignez-nous du 7 au 11 décembre pour nos mini-leçons
     en direct CodeBytes !
