@@ -27,11 +27,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-14 19:44:51 UTC",
+    "serialized_at": "2022-06-27 19:40:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

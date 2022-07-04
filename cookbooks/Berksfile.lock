@@ -128,7 +128,7 @@ GRAPH
     sudo-user (>= 0.0.0)
   cdo-tippecanoe (0.1.6)
     ark (>= 0.0.0)
-  cdo-users (0.1.35)
+  cdo-users (0.1.36)
     apt (>= 0.0.0)
   cdo-varnish (0.3.304)
     apt (>= 0.0.0)
