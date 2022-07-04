@@ -16,6 +16,11 @@ Dashboard::Application.configure do
   config.public_file_server.enabled = true
   config.public_file_server.headers = {'Cache-Control' => "public, max-age=3600, s-maxage=1800"}
 
+  # We only precompile assets in some test environments, not all; make sure
+  # that environments that don't precompile assets also provide a friendly
+  # fallback for missing assets.
+  config.assets.unknown_asset_fallback = !CDO.optimize_rails_assets
+
   # test environment should use precompiled, minified, digested assets like production,
   # unless it's being used for unit tests.
   ci_test = !!(ENV['UNIT_TEST'] || ENV['CI'])
