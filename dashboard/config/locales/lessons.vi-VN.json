@@ -1258,6 +1258,12 @@
         "csd6-2019/Functions with Parameters": {
           "name": "Hàm và tham số"
         },
+        "csd4-2019/Analysis of Design": {
+          "name": "Phân tích thiết kế"
+        },
+        "csd4-2019/Understanding Your User": {
+          "name": "Tìm hiểu về người dùng của bạn"
+        },
         "csd4-2019/Designing Apps for Good": {
           "name": "Thiết kế ứng dụng nhằm mục đích tốt"
         },
@@ -1290,6 +1296,9 @@
         },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Giới thiệu phần giải quyết vấn đề"
+        },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Quá trình giải quyết vấn đề"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Khám phá Giải quyết vấn đề"
@@ -1873,6 +1882,9 @@
         "csd5-2017/Combining Representations": {
           "name": "Kết hợp các đại diện"
         },
+        "csd4-2017/Analysis of Design": {
+          "name": "Phân tích thiết kế"
+        },
         "csd4-2017/Understanding Your User": {
           "name": "Tìm hiểu về người dùng của bạn"
         },
@@ -2220,7 +2232,13 @@
           "student_overview": "Nhấp chuột và kéo để hoàn thành các bài tập."
         },
         "allthethings/Jigsaw": {
-          "name": "Khảo sát học sinh giấu tên 2"
+          "name": "Ghép hình"
+        },
+        "allthethings/Maze": {
+          "name": "Mê cung"
+        },
+        "allthethings/Artist": {
+          "name": "Họa sĩ"
         },
         "allthethings/Bee": {
           "name": "Ong"
@@ -3253,6 +3271,9 @@
         },
         "csd1-2021/Intro to Problem Solving": {
           "name": "Giới thiệu phần giải quyết vấn đề"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Quá trình giải quyết vấn đề"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Khám phá Giải quyết vấn đề"

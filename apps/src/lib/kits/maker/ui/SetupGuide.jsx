@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import yaml from 'js-yaml';
 import SetupChecklist from './SetupChecklist';
+import SetupChecker from '../util/SetupChecker';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import applabI18n from '@cdo/applab/locale';
@@ -21,6 +22,7 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {Provider} from 'react-redux';
 import experiments from '@cdo/apps/util/experiments';
+import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 import {WEB_SERIAL_FILTERS} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
@@ -75,8 +77,13 @@ export default class SetupGuide extends React.Component {
       );
     }
 
+    let wrappedPort = webSerialPort
+      ? new WebSerialPortWrapper(webSerialPort)
+      : null;
+    this.setupChecker = new SetupChecker(wrappedPort);
+
     if (isCodeOrgBrowser() || isChromeOS() || isWebSerial) {
-      return <SetupChecklist webSerialPort={webSerialPort} />;
+      return <SetupChecklist setupChecker={this.setupChecker} />;
     }
     return (
       <Provider store={store}>

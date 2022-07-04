@@ -452,7 +452,6 @@ en:
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'Your progress'
-      lines: 'Total lines of code: %{lines}'
       close: 'CLOSE'
       mastery: 'Concepts'
       puzzle_map: 'Stages'

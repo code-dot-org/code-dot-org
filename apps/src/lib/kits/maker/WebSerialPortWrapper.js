@@ -1,6 +1,8 @@
 import {EventEmitter} from 'events';
 import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
+const DEVICE_LOST_ERROR_CODE = 19;
+
 export default class WebSerialPortWrapper extends EventEmitter {
   constructor(port) {
     super();
@@ -37,7 +39,7 @@ export default class WebSerialPortWrapper extends EventEmitter {
       .then(async () => {
         this.portOpen = true;
         this.emit('open');
-        while (this.port.readable.locked) {
+        while (this.port.readable?.locked) {
           try {
             const {value, done} = await this.reader.read();
             if (done) {
@@ -46,6 +48,10 @@ export default class WebSerialPortWrapper extends EventEmitter {
             this.emit('data', Buffer.from(value));
           } catch (e) {
             console.error(e);
+
+            if (e.code === DEVICE_LOST_ERROR_CODE) {
+              this.emit('disconnect');
+            }
           }
         }
       });
@@ -56,21 +62,5 @@ export default class WebSerialPortWrapper extends EventEmitter {
       throw new Error('Requested port cannot be written to until it is open');
     }
     return this.writer.write(buffer).then(() => callback());
-  }
-
-  async close() {
-    if (!this.portOpen) {
-      return;
-    }
-
-    if (this.port.readable && this.port.readable.locked) {
-      await this.reader.cancel();
-      await this.reader.releaseLock();
-    }
-
-    await this.writer.releaseLock();
-
-    await this.port.close();
-    this.portOpen = false;
   }
 }

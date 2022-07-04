@@ -575,7 +575,7 @@ class User < ApplicationRecord
       self.email = ''
       self.full_address = nil
       self.school_info = nil
-      studio_person.destroy! if studio_person
+      studio_person&.destroy!
       self.studio_person_id = nil
     end
 
@@ -1438,7 +1438,7 @@ class User < ApplicationRecord
 
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
-    return if name.blank? || name.utf8mb4? || (email && email.utf8mb4?)
+    return if name.blank? || name.utf8mb4? || (email&.utf8mb4?)
     self.username = UserHelpers.generate_username(User.with_deleted, name)
   end
 
@@ -2015,7 +2015,6 @@ class User < ApplicationRecord
       user_type: user_type,
       gender: gender,
       birthday: birthday,
-      total_lines: total_lines,
       secret_words: secret_words,
       secret_picture_name: secret_picture&.name,
       secret_picture_path: secret_picture&.path,
@@ -2469,7 +2468,7 @@ class User < ApplicationRecord
   end
 
   # The data returned by this method is set to cookies for the marketing team to
-  # use in Optimizely for segmenting teacher user experience.
+  # use in Google Optimize for segmenting teacher user experience.
   def marketing_segment_data
     return unless teacher?
 

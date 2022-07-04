@@ -861,7 +861,7 @@
           "name": "Heceleme Yarışması"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "Bilgisayar Bilimi Keşifleri Dönem Sonu Anketi"
+          "name": "Eğlence için programlama"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Şekiller çizme"
@@ -1560,10 +1560,10 @@
           "name": "Play Lab' da Olaylar"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Proje Sonrası Test"
+          "name": "Eğlence için programlama"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi"
+          "name": "Şekiller çizme"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Game Lab' da Çizim"
@@ -1626,10 +1626,10 @@
           "name": "Proje - Bir oyun tasarla"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Proje Sonrası Test"
+          "name": "Bilişimdeki Yenilikler"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi"
+          "name": "Kod ile Ekranlar Tasarlama"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "Çember Oyun Alanı"
@@ -1674,10 +1674,10 @@
           "name": "Proje: Bir yenilik prototiple"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Proje Sonrası Test"
+          "name": "Tasarım analizi"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi"
+          "name": "Kullanıcınızı anlama"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Kullanıcı Merkezli Tasarım Mikro Aktivitesi"
@@ -1722,10 +1722,10 @@
           "name": "Proje - Uygulama Sunumu"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Proje Sonrası Test"
+          "name": "Konuları ifade etme"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi"
+          "name": "Desen ve gösterimi"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII ve ikili gösterimi"
@@ -1770,7 +1770,7 @@
           "name": "Problem çözme tanıtımı"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Proje Sonrası Test"
+          "name": "Problem çözme süreci"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Problem çözmeyi keşfetme"
@@ -1791,10 +1791,10 @@
           "name": "Proje - bir uygulama önermek"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Proje Sonrası Test"
+          "name": "Web Sitelerini Keşfetme"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi"
+          "name": "İfade Web Siteleri "
         },
         "csd2-2019/Intro to HTML": {
           "name": "HTML' ye Giriş"
@@ -2316,7 +2316,10 @@
           "name": "Projeni sun"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "Bilgisayar Bilimi Keşifleri Dönem Sonu Anketi"
+          "name": "Eğlence için programlama"
+        },
+        "csd3-2017/Plotting Shapes": {
+          "name": "Şekiller çizme"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Game Lab' da Çizim"
@@ -2378,6 +2381,9 @@
         "csd3-2017/Project - Design a Game": {
           "name": "Proje - Bir oyun tasarla"
         },
+        "csd6-2017/Innovations in Computing_": {
+          "name": "Bilişimdeki Yenilikler"
+        },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Kod ile Ekranlar Tasarlama"
         },
@@ -2422,6 +2428,9 @@
         },
         "csd6-2017/Project: Prototype an Innovation_": {
           "name": "Proje: Bir yenilik prototiple"
+        },
+        "csd2-2017/Exploring Websites": {
+          "name": "Web Sitelerini Keşfetme"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "İfade Web Siteleri "
@@ -2489,6 +2498,9 @@
         "csd1-2017/Project - Propose an App": {
           "name": "Proje - bir uygulama önermek"
         },
+        "csd5-2017/Representation Matters": {
+          "name": "Konuları ifade etme"
+        },
         "csd5-2017/Patterns and Representation": {
           "name": "Desen ve gösterimi"
         },
@@ -2530,6 +2542,9 @@
         },
         "csd5-2017/Project - Solve a Data Problem": {
           "name": "Proje - bir veri sorunu çözmek"
+        },
+        "csd4-2017/Analysis of Design": {
+          "name": "Tasarım analizi"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Kullanıcınızı anlama"
@@ -2908,10 +2923,13 @@
           "name": "CSD Öğrenci Kurs Sonrası Anketi ('18-'19)"
         },
         "allthethings/Jigsaw": {
-          "name": "Anonim öğrenci incelemesi 2"
+          "name": "Yapboz"
         },
         "allthethings/Maze": {
-          "name": "Pluralsight Testi"
+          "name": "Labirent"
+        },
+        "allthethings/Artist": {
+          "name": "Sanatçı"
         },
         "allthethings/Bee": {
           "name": "Arı"
@@ -3947,9 +3965,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "Proje Sonrası Test"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "Kullanıcınızı anlama"
         },
@@ -3984,7 +3999,7 @@
           "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Proje Sonrası Test",
+          "name": "Bilişimdeki Yenilikler",
           "overview": "Bu dersin son bölümünü başlatmak için, öğrenciler bilgisayarlarda ilginç yenilikler konusunda biraz araştırma yapacaklardır. Bu ders öğrencileri bilgisayarlardan etkilenen alanlar ve bilgisayar form faktörlerinden daha geniş bir kitleye (bir bilgisayarın nasıl göründüğü) açıklayacak. Daha sonra bu birimde öğrenciler kendi fiziki bilgi işlem cihazlarını geliştirdikçe bu derste karşılaştıkları cihazlara bakacaklardır."
         },
         "csd6-2021/Designing Screens with Code": {
@@ -4042,7 +4057,7 @@
           "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Proje Sonrası Test"
+          "name": "Konuları ifade etme"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Desen ve gösterimi"
@@ -4087,7 +4102,7 @@
           "name": "Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Proje Sonrası Test"
+          "name": "Eğlence için programlama"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Şekiller çizme"
@@ -4162,7 +4177,7 @@
           "name": "Problem çözme tanıtımı"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Proje Sonrası Test"
+          "name": "Problem çözme süreci"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Problem çözmeyi keşfetme"
@@ -4198,7 +4213,7 @@
           "name": "Problem Çözmeyi Keşfetme - Oyun Teması (Alternatif Ders 3)"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Proje Sonrası Test"
+          "name": "Web Sayfalarını Keşfetme"
         },
         "csd2-2021/Intro to HTML": {
           "name": "HTML' ye Giriş"

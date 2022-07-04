@@ -27,11 +27,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-13 20:53:10 UTC",
+    "serialized_at": "2022-06-30 14:28:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6070,6 +6071,18 @@
       }
     },
     {
+      "name": "Column-Major Traversal",
+      "url": "https://youtu.be/wgYqBhDDNEc",
+      "key": "column-major_traversal",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "column-major_traversal"
+      }
+    },
+    {
       "name": "Creating Image Filters",
       "url": "https://docs.google.com/document/d/1roMH6K4FHugoTNiOwls50lZLvpk_pGpzPKjbRaVaK-8/edit?usp=sharing",
       "key": "creating_image_filters",
@@ -6238,6 +6251,18 @@
       }
     },
     {
+      "name": "Row-Major Traversal",
+      "url": "https://youtu.be/vS_yPc-2Eb8",
+      "key": "row-major_traversal",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "row-major_traversal"
+      }
+    },
+    {
       "name": "Shifting a 2D Array",
       "url": "https://docs.google.com/document/d/1HhjeF2KfrdBrC5fnNmNw86vSj7Yail9Zu6YSdwXXKig/edit?usp=sharing",
       "key": "shifting_a_2d_array",
@@ -6295,6 +6320,18 @@
       },
       "seeding_key": {
         "resource.key": "tracing_enhanced_for_loops"
+      }
+    },
+    {
+      "name": "Two-Dimensional (2D) Arrays",
+      "url": "https://youtu.be/QIPNA3p6FBo",
+      "key": "two-dimensional_2d_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "two-dimensional_2d_arrays"
       }
     },
     {
@@ -6476,6 +6513,18 @@
       "seeding_key": {
         "resource.key": "unlocking_assessments"
       }
+    },
+    {
+      "name": "Working with 2D Array Elements",
+      "url": "https://youtu.be/t0ZyG6uWSLE",
+      "key": "working_with_2d_array_elements",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "working_with_2d_array_elements"
+      }
     }
   ],
   "lessons_resources": [
@@ -6656,6 +6705,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "two-dimensional_2d_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "u5l1_extra_practice"
       }
     },
@@ -6673,6 +6728,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "working_with_2d_array_elements"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_tracing_2d_array_traversals"
       }
@@ -6681,6 +6742,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_u5l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "row-major_traversal"
       }
     },
     {
@@ -6711,6 +6778,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "_key_u5l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "column-major_traversal"
       }
     },
     {

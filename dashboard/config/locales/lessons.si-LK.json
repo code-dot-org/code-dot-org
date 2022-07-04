@@ -629,6 +629,15 @@
         "jigsaw/Jigsaw": {
           "name": "පින්තූර ප්‍රෙහේලිකාව"
         },
+        "allthethings/Jigsaw": {
+          "name": "පින්තූර ප්‍රෙහේලිකාව"
+        },
+        "allthethings/Maze": {
+          "name": "පැටලිලි සහිත මාර්ගය"
+        },
+        "allthethings/Artist": {
+          "name": "කලාකරු"
+        },
         "allthethings/Flappy": {
           "name": "ෆ්ලැපි"
         },
