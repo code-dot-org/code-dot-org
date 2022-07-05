@@ -14,23 +14,36 @@ import {
   pinMode
 } from '@cdo/apps/lib/kits/maker/commands';
 import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
+import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 
 describe('maker/commands.js', () => {
-  let stubBoardController;
+  let stubBoardController, errorHandler;
 
   beforeEach(() => {
     stubBoardController = sinon.createStubInstance(FakeBoard);
     injectBoardController(stubBoardController);
+    errorHandler = {
+      outputWarning: sinon.spy()
+    };
+    injectErrorHandler(errorHandler);
   });
 
   afterEach(() => {
     injectBoardController(undefined);
+    injectErrorHandler(null);
   });
 
   describe('pinMode(pin, mode)', () => {
     it('delegates to makerBoard.pinMode with mapped mode id', () => {
       pinMode({pin: 0, mode: 'input'});
       expect(stubBoardController.pinMode).to.have.been.calledWith(0, 0);
+    });
+
+    it('display warning when reserved pin 1 is used', () => {
+      pinMode({pin: 1, mode: 'input'});
+      expect(errorHandler.outputWarning).to.have.been.calledWith(
+        'pinMode() pin parameter value (1) is a reserved pinid. Please use a different pinid'
+      );
     });
 
     it(`maps 'input' mode to 0`, () => {

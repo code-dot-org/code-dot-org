@@ -33,7 +33,7 @@ export function getAsyncOutputWarning(...args) {
 }
 
 /**
- * Validates a user function parameter, and outputs error to the console if invalid
+ * Validates a user function parameter, and outputs warning to the console if invalid
  * @returns {boolean} True if param passed validation.
  */
 export function apiValidateType(
