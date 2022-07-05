@@ -55,7 +55,7 @@ If you want to run tests on Sauce Labs against localhost you need to set up your
 2. Start the tunnel via `bin/sc --user <saucelabs-username> --api-key <saucelabs-api-key>`
    - Notes: The link above has an example command line with your credentials that you can copy.
      - `bin/sc` should be replaced with the path that points to the tunnel software downloaded in step 1.
-     - The command given by Sauce Labs includes a `--tunnel-name` flag (formally [`--tunnel-id`](https://docs.saucelabs.com/dev/cli/saucectl/run/#--tunnel-name)). This flag can be removed unless on an EC2 instance (see the note below). If you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
+     - The command given by Sauce Labs includes a `--tunnel-name` flag (formerly [`--tunnel-id`](https://docs.saucelabs.com/dev/cli/saucectl/run/#--tunnel-name)). This flag can be removed unless on an EC2 instance (see the note below). If you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
      - If you are running on an EC2 instance, the `--tunnel-name` flag referred to above is required to launch the tunnel.
 3. In a separate terminal window, `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
 
