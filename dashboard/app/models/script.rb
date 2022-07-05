@@ -1332,7 +1332,7 @@ class Script < ApplicationRecord
       errors.add(:base, e.to_s)
       return false
     end
-    update_migrated_teacher_resources(general_params[:resourceIds])
+    update_teacher_resources(general_params[:resourceIds])
     update_student_resources(general_params[:studentResourceIds])
     tts_update(true) if need_to_update_tts
     begin
@@ -1353,7 +1353,7 @@ class Script < ApplicationRecord
     File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
   end
 
-  def update_migrated_teacher_resources(resource_ids)
+  def update_teacher_resources(resource_ids)
     self.resources = (resource_ids || []).map {|id| Resource.find(id)}
   end
 
