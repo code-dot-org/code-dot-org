@@ -82,6 +82,13 @@ class CoursesController < ApplicationController
     @unit_group.update(course_params)
     CourseOffering.add_course_offering(@unit_group)
     @unit_group.reload
+
+    if @unit_group.has_migrated_unit? && @unit_group.course_version
+      @unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
+      @unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
+    end
+
+    @unit_group.reload
     @unit_group.write_serialization
     render json: @unit_group.summarize
   end
