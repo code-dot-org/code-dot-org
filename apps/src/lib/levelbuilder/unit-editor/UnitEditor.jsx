@@ -16,7 +16,7 @@ import {
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {lessonGroupShape} from './shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
@@ -97,8 +97,8 @@ class UnitEditor extends React.Component {
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
-    teacherResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
-    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
+    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    studentResources: PropTypes.arrayOf(resourceShape).isRequired,
     init: PropTypes.func.isRequired
   };
 

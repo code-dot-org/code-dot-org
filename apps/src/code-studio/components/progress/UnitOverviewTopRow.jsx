@@ -6,7 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -30,8 +30,8 @@ const NEXT_BUTTON_TEXT = {
 class UnitOverviewTopRow extends React.Component {
   static propTypes = {
     assignedSectionId: PropTypes.number,
-    teacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
+    teacherResources: PropTypes.arrayOf(resourceShape),
+    studentResources: PropTypes.arrayOf(resourceShape).isRequired,
     showAssignButton: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
