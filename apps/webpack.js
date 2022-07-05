@@ -45,6 +45,13 @@ const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
 var baseConfig = {
   resolve: {
     extensions: ['.js', '.jsx'],
+    fallback: {
+      buffer: require.resolve('buffer'),
+      stream: require.resolve('stream-browserify'),
+      path: require.resolve('path-browserify'),
+      timers: require.resolve('timers-browserify'),
+      crypto: false
+    },
     alias: {
       '@cdo/locale': path.resolve(
         __dirname,
