@@ -90,7 +90,7 @@ describe('Applab Exporter,', function() {
       'https://code.jquery.com/jquery-1.12.1.min.js',
       JQUERY_JS_CONTENT
     );
-    server.respondWith(/\/_karma_webpack_\/.*\.png/, PNG_ASSET_CONTENT);
+    server.respondWith(/\/webpack_output\/.*\.png/, PNG_ASSET_CONTENT);
     server.respondWith(
       /\/fonts\/fontawesome-webfont\.woff2\?__cb__=\d+/,
       FONTAWESOME_CONTENT
