@@ -1512,7 +1512,7 @@ class Script < ApplicationRecord
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
-      migrated_teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
