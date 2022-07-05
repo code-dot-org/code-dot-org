@@ -138,7 +138,7 @@ var baseConfig = {
         ],
         loader: 'ejs-webpack-loader'
       },
-      {test: /\.css$/, loader: 'style-loader!css-loader'},
+      {test: /\.css$/, use: [{loader: 'style-loader'}, {loader: 'css-loader'}]},
       {
         test: /\.scss$/,
         use: [
@@ -147,9 +147,11 @@ var baseConfig = {
           {
             loader: 'sass-loader',
             options: {
-              includePaths: [scssIncludePath],
               implementation: sass,
-              quietDeps: true
+              sassOptions: {
+                includePaths: [scssIncludePath],
+                outputStyle: 'compressed'
+              }
             }
           }
         ]
@@ -169,7 +171,17 @@ var baseConfig = {
         // this file when asset digests are turned off, it will return a
         // 404 because it thinks the hash is a digest and it won't
         // be able to find the file without the hash. :( :(
-        loader: 'url-loader?limit=1024&name=[name]wp[hash].[ext]'
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 1024,
+              // uses the file-loader when file size is over the limit
+              name: '[name]wp[contenthash].[ext]',
+              esModule: false
+            }
+          }
+        ]
       },
       {
         test: /\.jsx?$/,
@@ -180,7 +192,7 @@ var baseConfig = {
         ].concat(toTranspileWithinNodeModules),
         exclude: [path.resolve(__dirname, 'src', 'lodash.js')],
         loader: 'babel-loader',
-        query: {
+        options: {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
           compact: false
         }
@@ -211,7 +223,7 @@ if (envConstants.COVERAGE) {
       // about the contents of the compiled version of this file :(
       path.resolve(__dirname, 'src', 'flappy', 'levels.js')
     ],
-    query: {
+    options: {
       cacheDirectory: true,
       compact: false,
       esModules: true
@@ -225,7 +237,7 @@ function devtool(options) {
   } else if (options && options.minify) {
     return 'source-map';
   } else if (process.env.DEV) {
-    return 'cheap-inline-source-map';
+    return 'inline-cheap-source-map';
   } else {
     return 'inline-source-map';
   }
@@ -252,7 +264,7 @@ var storybookConfig = _.extend({}, baseConfig, {
       ),
       PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
     }),
-    new webpack.IgnorePlugin(/^serialport$/)
+    new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
   ]
 });
 
@@ -320,7 +332,8 @@ var karmaConfig = _.extend({}, baseConfig, {
         'kits',
         'maker',
         'StubChromeSerialPort.js'
-      )
+      ),
+      serialport: false
     })
   }),
   externals: {
@@ -339,7 +352,11 @@ var karmaConfig = _.extend({}, baseConfig, {
     bindings: true
   },
   plugins: [
-    new webpack.ProvidePlugin({React: 'react'}),
+    new webpack.ProvidePlugin({
+      React: 'react',
+      Buffer: ['buffer', 'Buffer'],
+      process: require.resolve('process/browser')
+    }),
     new webpack.DefinePlugin({
       IN_UNIT_TEST: JSON.stringify(true),
       IN_STORYBOOK: JSON.stringify(false),
@@ -390,7 +407,7 @@ function create(options) {
     devtool: devtool(options),
     entry: entries,
     externals: externals,
-    optimization: optimization,
+    optimization: {chunkIds: 'total-size', moduleIds: 'size', ...optimization},
     mode: mode,
     plugins: [
       new webpack.DefinePlugin({
@@ -401,8 +418,7 @@ function create(options) {
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode)
       }),
-      new webpack.IgnorePlugin(/^serialport$/),
-      new webpack.optimize.OccurrenceOrderPlugin(true)
+      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
     ].concat(plugins),
     watch: watch,
     keepalive: watch,
