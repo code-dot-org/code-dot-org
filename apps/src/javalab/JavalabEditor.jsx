@@ -42,7 +42,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
-import {CompileStatus} from './constants';
 import {hasQueryParam} from '@cdo/apps/code-studio/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import {getDefaultFileContents} from './JavalabFileHelper';
@@ -162,8 +161,7 @@ class JavalabEditor extends React.Component {
       menuPosition: {},
       newFileError: null,
       renameFileError: null,
-      fileToDelete: null,
-      compileStatus: CompileStatus.NONE
+      fileToDelete: null
     };
   }
 
@@ -598,15 +596,7 @@ class JavalabEditor extends React.Component {
   }
 
   onOpenCommitDialog() {
-    // When the dialog opens, we will compile the user's files and notify them of success/errors.
-    // For now, this is mocked out to successfully compile after a set amount of time.
     this.props.openEditorDialog(JavalabEditorDialog.COMMIT_FILES);
-    this.setState({
-      compileStatus: CompileStatus.LOADING
-    });
-    setTimeout(() => {
-      this.setState({compileStatus: CompileStatus.SUCCESS});
-    }, 500);
   }
 
   editorHeaderText = () =>
@@ -619,8 +609,7 @@ class JavalabEditor extends React.Component {
       fileToDelete,
       contextTarget,
       renameFileError,
-      newFileError,
-      compileStatus
+      newFileError
     } = this.state;
     const {
       onCommitCode,
@@ -860,12 +849,8 @@ class JavalabEditor extends React.Component {
           files={Object.keys(sources)}
           handleClose={() => {
             closeEditorDialog();
-            this.setState({
-              compileStatus: CompileStatus.NONE
-            });
           }}
           handleCommit={onCommitCode}
-          compileStatus={compileStatus}
         />
         {editorOpenDialogName === JavalabEditorDialog.VERSION_HISTORY && (
           <VersionHistoryWithCommitsDialog
