@@ -50,7 +50,7 @@ If you want to run tests on Sauce Labs against localhost you need to set up your
 1. Login to Sauce Labs and download the [tunnel](https://app.saucelabs.com/tunnels).
    - If you work on a Linux EC2 instance:
      - Download the Linux version (will end in .tar.gz)
-     - Secure copy this file into your dev environment with something like: `scp sc-4.7.1-linux.tar.gz ubuntu@[ip_address]:/ec2-user/environment/code-dot-org`
+     - Secure copy this file into your dev environment with something like `scp sc-4.7.1-linux.tar.gz ubuntu@[ip_address]:/ec2-user/environment/code-dot-org`
      - From the destination folder, unzip and untar the file with `tar -xvzf sc-4.7.1-linux.tar`
 2. Start the tunnel via `bin/sc --user <saucelabs-username> --api-key <saucelabs-api-key>`. The link in Step 1 has an example command line with your credentials that you can copy.
    - `bin/sc` should be replaced with the path that points to the tunnel software downloaded in Step 1.
