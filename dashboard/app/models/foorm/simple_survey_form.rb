@@ -34,6 +34,6 @@ class Foorm::SimpleSurveyForm < ApplicationRecord
 
   def self.form_path_disabled?(path)
     disabled_forms = DCDO.get('foorm_simple_survey_disabled', [])
-    disabled_forms && disabled_forms.include?(path)
+    disabled_forms&.include?(path)
   end
 end
