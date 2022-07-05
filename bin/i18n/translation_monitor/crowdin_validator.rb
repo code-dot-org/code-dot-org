@@ -228,10 +228,14 @@ class CrowdinValidator
     # Validate markdown content
     error_messages << validate_markdown_link(translation.text)
 
-    # Validate translation language
     languages = load_languages
-    accepted_languages = languages[translation.crowdin_language_id]['language_detector_code'] || translation.crowdin_language_id
-    error_messages << validate_language(translation.text, accepted_languages)
+
+    # Temporarily disable language validation due to high false-negative rate
+    # (saying something is false when it is actually true). E.g. it mistakes Czech
+    # to be Slovak, and Indonesian to be Malay.
+    # TODO: turn on language validation once we can use it effectively.
+    # accepted_languages = languages[translation.crowdin_language_id]['language_detector_code'] || translation.crowdin_language_id
+    # error_messages << validate_language(translation.text, accepted_languages)
 
     # Combine error messages found by the validation functions with
     # other useful information to help translators fixing errors faster.
