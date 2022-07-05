@@ -25,7 +25,7 @@ export default storybook => {
       name: 'migrated teacher resources',
       story: () => (
         <div>
-          <ResourcesDropdown migratedResources={migratedSampleResources} />
+          <ResourcesDropdown resources={migratedSampleResources} />
         </div>
       )
     },
@@ -34,7 +34,7 @@ export default storybook => {
       story: () => (
         <div>
           <ResourcesDropdown
-            migratedResources={migratedSampleResources}
+            resources={migratedSampleResources}
             studentFacing={true}
           />
         </div>

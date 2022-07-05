@@ -8,7 +8,7 @@ import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 export default class ResourcesDropdown extends React.Component {
   static propTypes = {
-    migratedResources: PropTypes.arrayOf(resourceShape).isRequired,
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
     studentFacing: PropTypes.bool,
 
     //For firehose
@@ -81,9 +81,9 @@ export default class ResourcesDropdown extends React.Component {
   };
 
   render() {
-    const {migratedResources} = this.props;
+    const {resources} = this.props;
 
-    const dropdownResources = migratedResources.map(resource => (
+    const dropdownResources = resources.map(resource => (
       <a
         key={resource.key}
         href={resource.url}

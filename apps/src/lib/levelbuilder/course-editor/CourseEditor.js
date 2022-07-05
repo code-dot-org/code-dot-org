@@ -381,7 +381,7 @@ class CourseEditor extends Component {
             <h4>Teacher Resources</h4>
             <ResourcesEditor
               inputStyle={styles.input}
-              migratedResources={this.props.teacherResources}
+              resources={this.props.teacherResources}
               courseVersionId={this.props.courseVersionId}
               getRollupsUrl={`/courses/${this.props.name}/get_rollup_resources`}
             />
@@ -390,7 +390,7 @@ class CourseEditor extends Component {
             <h4>Student Resources</h4>
             <ResourcesEditor
               inputStyle={styles.input}
-              migratedResources={this.props.studentResources}
+              resources={this.props.studentResources}
               courseVersionId={this.props.courseVersionId}
               studentFacing
             />

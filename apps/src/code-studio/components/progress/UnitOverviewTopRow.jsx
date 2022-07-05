@@ -151,7 +151,7 @@ class UnitOverviewTopRow extends React.Component {
             />
             {studentResources.length > 0 && (
               <ResourcesDropdown
-                migratedResources={studentResources}
+                resources={studentResources}
                 unitId={scriptId}
                 studentFacing
               />
@@ -173,7 +173,7 @@ class UnitOverviewTopRow extends React.Component {
             viewAs === ViewType.Instructor &&
             (isMigrated && teacherResources.length > 0) && (
               <ResourcesDropdown
-                migratedResources={teacherResources}
+                resources={teacherResources}
                 unitId={scriptId}
               />
             )}

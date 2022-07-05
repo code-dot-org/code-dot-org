@@ -9,7 +9,7 @@ import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/Resourc
 export default class ResourcesEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    migratedResources: PropTypes.arrayOf(resourceShape).isRequired,
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
     studentFacing: PropTypes.bool,
     courseVersionId: PropTypes.number,
     getRollupsUrl: PropTypes.string
@@ -44,14 +44,14 @@ export default class ResourcesEditor extends Component {
           resourceContext={
             this.props.studentFacing ? 'studentResource' : 'teacherResource'
           }
-          resources={this.props.migratedResources}
+          resources={this.props.resources}
           getRollupsUrl={this.props.getRollupsUrl}
         />
         <div style={styles.box}>
           <div style={styles.error}>{errorString}</div>
           <div style={{marginBottom: 5}}>Preview:</div>
           <ResourcesDropdown
-            migratedResources={this.props.migratedResources}
+            resources={this.props.resources}
             studentFacing={this.props.studentFacing}
           />
         </div>
