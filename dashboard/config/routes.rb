@@ -998,9 +998,9 @@ Dashboard::Application.routes.draw do
 
   get '/backpacks/channel', to: 'backpacks#get_channel'
 
-  resources :project_versions, only: [:create]
-  get 'project_versions/get_token', to: 'project_versions#get_token'
-  get 'project_commits/:channel_id', to: 'project_versions#project_commits'
+  resources :project_commits, only: [:create]
+  get 'project_commits/get_token', to: 'project_commits#get_token'
+  get 'project_commits/:channel_id', to: 'project_commits#project_commits'
 
   resources :reviewable_projects, only: [:create, :destroy]
   get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'

@@ -98,27 +98,6 @@ class StatsTable extends Component {
             }
           }
         }
-      },
-      {
-        property: 'totalLines',
-        header: {
-          label: i18n.linesOfCode(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...styles.rightAlignText
-            }
-          },
-          transforms: [sortable]
-        },
-        cell: {
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.rightAlignText
-            }
-          }
-        }
       }
     ];
   };
