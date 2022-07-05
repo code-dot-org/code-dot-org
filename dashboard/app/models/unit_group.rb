@@ -202,15 +202,6 @@ class UnitGroup < ApplicationRecord
     save!
   end
 
-  # @param types [Array<string>]
-  # @param links [Array<string>]
-  def update_teacher_resources(types, links)
-    return if types.nil? || links.nil? || types.length != links.length
-    # Only take those pairs in which we have both a type and a link
-    self.teacher_resources = types.zip(links).select {|type, link| type.present? && link.present?}
-    save!
-  end
-
   def write_serialization
     # Only save non-plc course, and only in LB mode
     return unless Rails.application.config.levelbuilder_mode && !plc_course
