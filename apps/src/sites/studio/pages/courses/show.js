@@ -98,7 +98,7 @@ function showCourseOverview() {
         descriptionStudent={courseSummary.description_student}
         descriptionTeacher={courseSummary.description_teacher}
         sectionsInfo={scriptData.sections}
-        migratedTeacherResources={courseSummary.migrated_teacher_resources}
+        teacherResources={courseSummary.migrated_teacher_resources}
         studentResources={courseSummary.student_resources}
         scripts={courseSummary.scripts}
         versions={versions}

@@ -55,7 +55,7 @@ class CourseEditor extends Component {
     courseOfferingEditorLink: PropTypes.string,
 
     // Provided by redux
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    teacherResources: PropTypes.arrayOf(migratedResourceShape),
     studentResources: PropTypes.arrayOf(migratedResourceShape)
   };
 
@@ -115,10 +115,8 @@ class CourseEditor extends Component {
       scripts: this.state.unitsInCourse
     };
 
-    if (this.props.migratedTeacherResources) {
-      dataToSave.resourceIds = this.props.migratedTeacherResources.map(
-        r => r.id
-      );
+    if (this.props.teacherResources) {
+      dataToSave.resourceIds = this.props.teacherResources.map(r => r.id);
     }
 
     if (this.props.studentResources) {
@@ -383,7 +381,7 @@ class CourseEditor extends Component {
             <h4>Teacher Resources</h4>
             <ResourcesEditor
               inputStyle={styles.input}
-              migratedResources={this.props.migratedTeacherResources}
+              migratedResources={this.props.teacherResources}
               courseVersionId={this.props.courseVersionId}
               getRollupsUrl={`/courses/${this.props.name}/get_rollup_resources`}
             />
@@ -456,6 +454,6 @@ const styles = {
 export const UnconnectedCourseEditor = CourseEditor;
 
 export default connect(state => ({
-  migratedTeacherResources: state.resources,
+  teacherResources: state.resources,
   studentResources: state.studentResources
 }))(CourseEditor);

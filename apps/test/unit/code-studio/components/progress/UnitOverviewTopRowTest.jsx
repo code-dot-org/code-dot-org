@@ -141,7 +141,7 @@ describe('UnitOverviewTopRow', () => {
           {...defaultProps}
           viewAs={ViewType.Instructor}
           isMigrated={true}
-          migratedTeacherResources={[
+          teacherResources={[
             {
               id: 1,
               key: 'curriculum',

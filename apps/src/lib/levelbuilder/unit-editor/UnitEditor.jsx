@@ -97,8 +97,7 @@ class UnitEditor extends React.Component {
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
-      .isRequired,
+    teacherResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
     studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
     init: PropTypes.func.isRequired
   };
@@ -350,9 +349,7 @@ class UnitEditor extends React.Component {
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
-      resourceIds: this.props.migratedTeacherResources.map(
-        resource => resource.id
-      ),
+      resourceIds: this.props.teacherResources.map(resource => resource.id),
       studentResourceIds: this.props.studentResources.map(
         resource => resource.id
       ),
@@ -950,7 +947,7 @@ class UnitEditor extends React.Component {
               <ResourcesEditor
                 inputStyle={styles.input}
                 courseVersionId={this.props.initialCourseVersionId}
-                migratedResources={this.props.migratedTeacherResources}
+                migratedResources={this.props.teacherResources}
                 getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}
               />
             </div>
@@ -1140,7 +1137,7 @@ export const UnconnectedUnitEditor = UnitEditor;
 export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
-    migratedTeacherResources: state.resources,
+    teacherResources: state.resources,
     studentResources: state.studentResources
   }),
   {

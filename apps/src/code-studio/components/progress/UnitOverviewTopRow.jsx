@@ -30,7 +30,7 @@ const NEXT_BUTTON_TEXT = {
 class UnitOverviewTopRow extends React.Component {
   static propTypes = {
     assignedSectionId: PropTypes.number,
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    teacherResources: PropTypes.arrayOf(migratedResourceShape),
     studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
     showAssignButton: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
@@ -109,7 +109,7 @@ class UnitOverviewTopRow extends React.Component {
       unitTitle,
       viewAs,
       isRtl,
-      migratedTeacherResources,
+      teacherResources,
       studentResources,
       showAssignButton,
       assignedSectionId,
@@ -171,9 +171,9 @@ class UnitOverviewTopRow extends React.Component {
         <div style={styles.resourcesRow}>
           {!professionalLearningCourse &&
             viewAs === ViewType.Instructor &&
-            (isMigrated && migratedTeacherResources.length > 0) && (
+            (isMigrated && teacherResources.length > 0) && (
               <ResourcesDropdown
-                migratedResources={migratedTeacherResources}
+                migratedResources={teacherResources}
                 unitId={scriptId}
               />
             )}
