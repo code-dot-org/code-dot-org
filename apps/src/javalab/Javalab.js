@@ -305,7 +305,7 @@ Javalab.prototype.init = function(config) {
   // Used for some post requests made in Javalab, namely
   // when providing overrideSources or commiting code.
   // Code review manages a csrf token separately.
-  fetch('/project_versions/get_token', {
+  fetch('/project_commits/get_token', {
     method: 'GET'
   }).then(response => (this.csrf_token = response.headers.get('csrf-token')));
 
@@ -478,7 +478,7 @@ Javalab.prototype.afterClearPuzzle = function() {
 
 Javalab.prototype.onCommitCode = function(commitNotes, onSuccessCallback) {
   project.save(true).then(result => {
-    fetch('/project_versions', {
+    fetch('/project_commits', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
