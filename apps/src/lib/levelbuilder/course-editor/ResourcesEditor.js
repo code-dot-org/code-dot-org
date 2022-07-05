@@ -26,7 +26,6 @@ export default class ResourcesEditor extends Component {
   render() {
     const {errorString} = this.state;
 
-    // If using migrated resources, we have to have a course version id
     if (!this.props.courseVersionId) {
       return (
         <strong>

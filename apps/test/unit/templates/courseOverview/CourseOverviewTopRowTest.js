@@ -42,7 +42,7 @@ describe('CourseOverviewTopRow', () => {
     assert.equal(wrapper.find('Connect(SectionAssigner)').length, 0);
   });
 
-  it('renders migrated teacher resource dropdown', () => {
+  it('renders teacher resource dropdown', () => {
     const wrapper = shallow(<CourseOverviewTopRow {...defaultProps} />);
     assert.equal(wrapper.find('ResourcesDropdown').length, 1);
     assert.equal(wrapper.find('ResourcesDropdown').props().resources.length, 3);
@@ -72,7 +72,7 @@ describe('CourseOverviewTopRow', () => {
     );
   });
 
-  it('doesnt render migrated teacher resource dropdown for students', () => {
+  it('doesnt render teacher resource dropdown for students', () => {
     const wrapper = shallow(
       <CourseOverviewTopRow
         {...defaultProps}
