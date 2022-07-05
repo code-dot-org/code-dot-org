@@ -1771,15 +1771,12 @@ class Script < ApplicationRecord
       :use_legacy_lesson_plans,
       :is_maker_unit
     ]
-    not_defaulted_keys = []
 
     result = {}
     # If a non-boolean prop was missing from the input, it'll get populated in the result hash as nil.
     nonboolean_keys.each {|k| result[k] = unit_data[k]}
     # If a boolean prop was missing from the input, it'll get populated in the result hash as false.
     boolean_keys.each {|k| result[k] = !!unit_data[k]}
-    not_defaulted_keys.each {|k| result[k] = unit_data[k] if unit_data.keys.include?(k)}
-
     result
   end
 
