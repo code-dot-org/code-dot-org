@@ -74,6 +74,7 @@ class TopInstructions extends Component {
     isViewingAsInstructorInTraining: PropTypes.bool,
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number,
+    maxNeededHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
     dynamicInstructions: PropTypes.object,
@@ -182,9 +183,12 @@ class TopInstructions extends Component {
     if (!dynamicInstructions) {
       const maxNeededHeight = this.adjustMaxNeededHeight();
 
-      // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
-      // adjusts max height.
-      this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
+      // Initially set to 22% of the window height. This might be adjusted when
+      // InstructionsWithWorkspace adjusts max height.
+      const defaultHeight = Math.round(window.innerHeight * 0.22);
+      this.props.setInstructionsRenderedHeight(
+        Math.min(maxNeededHeight, defaultHeight)
+      );
     }
 
     const promises = [];
@@ -343,7 +347,7 @@ class TopInstructions extends Component {
       shortInstructions,
       longInstructions,
       hasContainedLevels,
-      maxHeight,
+      maxNeededHeight,
       setInstructionsMaxHeightNeeded
     } = this.props;
 
@@ -355,15 +359,21 @@ class TopInstructions extends Component {
       return 0;
     }
 
-    const maxNeededHeight =
-      $(ReactDOM.findDOMNode(this.refForSelectedTab())).outerHeight(true) +
-      HEADER_HEIGHT +
-      RESIZER_HEIGHT;
+    const refForSelectedTab = this.refForSelectedTab();
 
-    if (maxHeight !== maxNeededHeight) {
-      setInstructionsMaxHeightNeeded(maxNeededHeight);
+    if (refForSelectedTab) {
+      const maxNeededHeightMeasured =
+        $(ReactDOM.findDOMNode(refForSelectedTab)).outerHeight(true) +
+        HEADER_HEIGHT +
+        RESIZER_HEIGHT;
+
+      if (maxNeededHeight !== maxNeededHeightMeasured) {
+        setInstructionsMaxHeightNeeded(maxNeededHeightMeasured);
+      }
+      return maxNeededHeightMeasured;
+    } else {
+      return 0;
     }
-    return maxNeededHeight;
   };
 
   /**
@@ -479,9 +489,7 @@ class TopInstructions extends Component {
   );
 
   setInstructionsRef(ref) {
-    if (ref) {
-      this.instructions = ref;
-    }
+    this.instructions = ref;
   }
 
   renderInstructions(isCSF) {
@@ -508,7 +516,7 @@ class TopInstructions extends Component {
     } else if (isCSF && tabSelected === TabType.INSTRUCTIONS) {
       return (
         <InstructionsCSF
-          ref={ref => this.setInstructionsRef(ref)}
+          setInstructionsRef={ref => this.setInstructionsRef(ref)}
           handleClickCollapser={this.handleClickCollapser}
           adjustMaxNeededHeight={this.adjustMaxNeededHeight}
           isEmbedView={isEmbedView}
@@ -702,9 +710,7 @@ class TopInstructions extends Component {
         />
         <div style={[isCollapsed && isCSDorCSP && commonStyles.hidden]}>
           <div style={instructionsContainerStyle} id="scroll-container">
-            <div ref={ref => this.setInstructionsRef(ref)}>
-              {this.renderInstructions(isCSF)}
-            </div>
+            {this.renderInstructions(isCSF)}
             {tabSelected === TabType.RESOURCES && (
               <HelpTabContents
                 ref={ref => (this.helpTab = ref)}
@@ -871,6 +877,7 @@ export default connect(
     isBlockly: !!state.pageConstants.isBlockly,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
+    maxNeededHeight: state.instructions.maxNeededHeight,
     maxHeight: Math.min(
       state.instructions.maxAvailableHeight,
       state.instructions.maxNeededHeight
