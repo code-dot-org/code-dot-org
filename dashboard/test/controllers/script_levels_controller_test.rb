@@ -1026,7 +1026,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       lesson_position: @custom_s2_l1.lesson,
       id: @custom_s2_l1.position
     }
-    assert_equal 'laurel-lesson-2 #1 | custom-script-laurel - Code.org [test]',
+    assert_equal 'Laurel Lesson 2 #1 | custom-script-laurel - Code.org [test]',
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 

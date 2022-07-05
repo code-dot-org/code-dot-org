@@ -25723,8 +25723,8 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2022 CS Discoveries Deeper Learning Module 2 for Workshop 2
-          description: ''
+          title: 2022 CS Discoveries Deeper Learning Module A
+          description: "##This module will be published by August 1, 2022."
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -25740,8 +25740,8 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2022 CS Discoveries Deeper Learning Module 3 for Workshop 3
-          description: ''
+          title: 2022 CS Discoveries Deeper Learning Module B
+          description: "##This module will be published by October 3, 2022."
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -25774,7 +25774,7 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2022 CS Principles Deeper Learning Module 1 for Workshop 1
+          title: 2022 CS Principles Deeper Learning FiT Module
           description: ''
           student_description: ''
           description_short: ''
@@ -25791,7 +25791,7 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2022 CS Principles Deeper Learning Module 2 for Workshop 2
+          title: 2022 CS Principles Deeper Learning Module A
           description: ''
           student_description: ''
           description_short: ''
@@ -25808,8 +25808,8 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2022 CS Principles Deeper Learning Module 3 for Workshop 3
-          description: ''
+          title: 2022 CS Principles Deeper Learning Module B
+          description: "##This module will be published by October 3, 2022."
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -25981,6 +25981,23 @@ en:
           lesson_groups: {}
           name: vpl-csa-2022
           title: CSA Virtual Professional Learning
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-labs-2022:
+          lessons:
+            lesson-1:
+              name: Magpie Lab First Activity
+            lesson-2:
+              name: Celebrity Lab First Activity
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Magpie Lab
+            lessonGroup-3:
+              display_name: Celebrity Lab
+          name: csa-labs-2022
+          title: AP CSA College Board Labs
           description_audience: ''
           description_short: ''
           description: ''
