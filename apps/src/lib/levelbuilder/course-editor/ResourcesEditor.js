@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import MigratedResourceEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
+import LessonResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 
 //Editor for Teacher Resources
@@ -39,7 +39,7 @@ export default class ResourcesEditor extends Component {
 
     return (
       <div>
-        <MigratedResourceEditor
+        <LessonResourcesEditor
           courseVersionId={this.props.courseVersionId}
           resourceContext={
             this.props.studentFacing ? 'studentResource' : 'teacherResource'
