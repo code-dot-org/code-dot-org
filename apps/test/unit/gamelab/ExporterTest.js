@@ -66,7 +66,7 @@ describe('The Gamelab Exporter,', function() {
       'https://code.jquery.com/jquery-1.12.1.min.js',
       JQUERY_JS_CONTENT
     );
-    server.respondWith(/\/_karma_webpack_\/.*\.png/, PNG_ASSET_CONTENT);
+    server.respondWith(/\/webpack_output\/.*\.png/, PNG_ASSET_CONTENT);
     server.respondWith(
       '/api/v1/sound-library/default.mp3',
       'default.mp3 content'
