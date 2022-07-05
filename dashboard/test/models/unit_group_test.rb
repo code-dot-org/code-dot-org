@@ -1060,13 +1060,6 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
   end
 
-  test "update_teacher_resources" do
-    unit_group = create :unit_group
-    unit_group.update_teacher_resources(['professionalLearning'], ['/link/to/plc'])
-
-    assert_equal [['professionalLearning', '/link/to/plc']], unit_group.teacher_resources
-  end
-
   test 'has pilot access' do
     unit_group = create :unit_group
     pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment'
