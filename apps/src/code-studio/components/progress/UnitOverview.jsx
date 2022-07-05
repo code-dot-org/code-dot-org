@@ -35,7 +35,7 @@ class UnitOverview extends React.Component {
     courseTitle: PropTypes.string,
     courseLink: PropTypes.string,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    teacherResources: PropTypes.arrayOf(migratedResourceShape),
     studentResources: PropTypes.arrayOf(migratedResourceShape),
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
@@ -83,7 +83,7 @@ class UnitOverview extends React.Component {
   render() {
     const {
       excludeCsfColumnInLegend,
-      migratedTeacherResources,
+      teacherResources,
       studentResources,
       scriptId,
       scriptName,
@@ -167,7 +167,7 @@ class UnitOverview extends React.Component {
             </div>
           )}
           <UnitOverviewTopRow
-            migratedTeacherResources={migratedTeacherResources}
+            teacherResources={teacherResources}
             studentResources={studentResources}
             showAssignButton={showAssignButton}
             assignedSectionId={assignedSectionId}

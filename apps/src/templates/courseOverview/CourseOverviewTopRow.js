@@ -11,7 +11,7 @@ export default class CourseOverviewTopRow extends Component {
     id: PropTypes.number.isRequired,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    teacherResources: PropTypes.arrayOf(migratedResourceShape),
     studentResources: PropTypes.arrayOf(migratedResourceShape),
     showAssignButton: PropTypes.bool,
     isInstructor: PropTypes.bool
@@ -22,7 +22,7 @@ export default class CourseOverviewTopRow extends Component {
       id,
       courseOfferingId,
       courseVersionId,
-      migratedTeacherResources,
+      teacherResources,
       studentResources,
       showAssignButton,
       sectionsForDropdown,
@@ -31,9 +31,9 @@ export default class CourseOverviewTopRow extends Component {
 
     return (
       <div style={styles.main} className="course-overview-top-row">
-        {isInstructor && migratedTeacherResources.length > 0 && (
+        {isInstructor && teacherResources.length > 0 && (
           <ResourcesDropdown
-            migratedResources={migratedTeacherResources}
+            migratedResources={teacherResources}
             unitGroupId={id}
           />
         )}

@@ -44,7 +44,7 @@ const defaultProps = {
   initialInstructionType: InstructionType.teacher_led,
   initialInstructorAudience: InstructorAudience.teacher,
   initialParticipantAudience: ParticipantAudience.student,
-  migratedTeacherResources: [],
+  teacherResources: [],
   studentResources: []
 };
 
@@ -82,7 +82,7 @@ describe('CourseEditor', () => {
       const wrapper = shallow(
         <CourseEditor
           {...defaultProps}
-          migratedTeacherResources={[
+          teacherResources={[
             {id: 1, key: 'curriculum', name: 'Curriculum', url: '/foo'}
           ]}
         />

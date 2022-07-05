@@ -7,7 +7,7 @@ const defaultProps = {
   sectionsForDropdown: [],
   id: 30,
   title: 'Computer Science Principles',
-  migratedTeacherResources: [
+  teacherResources: [
     {
       key: 'key1',
       name: 'Curriculum',
@@ -79,7 +79,7 @@ describe('CourseOverviewTopRow', () => {
     const wrapper = shallow(
       <CourseOverviewTopRow
         {...defaultProps}
-        migratedTeacherResources={[
+        teacherResources={[
           {
             key: 'key1',
             name: 'Curriculum',

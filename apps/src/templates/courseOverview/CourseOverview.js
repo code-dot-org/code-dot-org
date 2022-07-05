@@ -48,7 +48,7 @@ class CourseOverview extends Component {
         name: PropTypes.string.isRequired
       })
     ).isRequired,
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    teacherResources: PropTypes.arrayOf(migratedResourceShape),
     studentResources: PropTypes.arrayOf(migratedResourceShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     scripts: PropTypes.array.isRequired,
@@ -121,7 +121,7 @@ class CourseOverview extends Component {
       descriptionTeacher,
       sectionsInfo,
       sectionsForDropdown,
-      migratedTeacherResources,
+      teacherResources,
       studentResources,
       viewAs,
       scripts,
@@ -211,7 +211,7 @@ class CourseOverview extends Component {
             courseVersionId={courseVersionId}
             id={id}
             title={title}
-            migratedTeacherResources={migratedTeacherResources}
+            teacherResources={teacherResources}
             studentResources={studentResources}
             showAssignButton={showAssignButton}
             isInstructor={viewAs === ViewType.Instructor}
