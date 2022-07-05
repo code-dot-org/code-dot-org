@@ -32,10 +32,7 @@ export default class CourseOverviewTopRow extends Component {
     return (
       <div style={styles.main} className="course-overview-top-row">
         {isInstructor && teacherResources.length > 0 && (
-          <ResourcesDropdown
-            migratedResources={teacherResources}
-            unitGroupId={id}
-          />
+          <ResourcesDropdown resources={teacherResources} unitGroupId={id} />
         )}
         {isInstructor && (
           <SectionAssigner
@@ -49,7 +46,7 @@ export default class CourseOverviewTopRow extends Component {
         )}
         {!isInstructor && studentResources && studentResources.length > 0 && (
           <ResourcesDropdown
-            migratedResources={studentResources}
+            resources={studentResources}
             unitGroupId={id}
             studentFacing
           />

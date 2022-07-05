@@ -16,7 +16,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        migratedResources={[
+        resources={[
           {
             id: 1,
             key: 'curriculum',
@@ -40,7 +40,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        migratedResources={[
+        resources={[
           {
             id: 1,
             key: 'curriculum',

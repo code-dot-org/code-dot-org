@@ -160,7 +160,7 @@ describe('UnitOverviewTopRow', () => {
       expect(
         wrapper.containsMatchingElement(
           <ResourcesDropdown
-            migratedResources={[
+            resources={[
               {
                 id: 1,
                 key: 'curriculum',

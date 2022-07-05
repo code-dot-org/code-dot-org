@@ -10,7 +10,7 @@ describe('ResourcesDropdown', () => {
   it('renders migrated resources for teacher', () => {
     const wrapper = shallow(
       <ResourcesDropdown
-        migratedResources={[
+        resources={[
           {
             key: 'key1',
             name: 'Curriculum',
@@ -42,7 +42,7 @@ describe('ResourcesDropdown', () => {
   it('renders migrated resources for student', () => {
     const wrapper = shallow(
       <ResourcesDropdown
-        migratedResources={[
+        resources={[
           {
             key: 'key1',
             name: 'Curriculum',
