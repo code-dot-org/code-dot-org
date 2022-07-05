@@ -70,7 +70,6 @@ class UnitGroup < ApplicationRecord
   include SerializedProperties
 
   serialized_attrs %w(
-    teacher_resources
     has_verified_resources
     has_numbered_units
     family_name
@@ -315,7 +314,6 @@ class UnitGroup < ApplicationRecord
         include_lessons = false
         unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display)
       end,
-      teacher_resources: teacher_resources,
       migrated_teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       is_migrated: has_migrated_unit?,
