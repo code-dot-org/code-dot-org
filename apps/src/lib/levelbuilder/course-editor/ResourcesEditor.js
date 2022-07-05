@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import MigratedResourceEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 
@@ -9,7 +9,7 @@ import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/Resourc
 export default class ResourcesEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    migratedResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
+    migratedResources: PropTypes.arrayOf(resourceShape).isRequired,
     studentFacing: PropTypes.bool,
     courseVersionId: PropTypes.number,
     getRollupsUrl: PropTypes.string

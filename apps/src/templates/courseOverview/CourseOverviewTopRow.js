@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
@@ -11,8 +11,8 @@ export default class CourseOverviewTopRow extends Component {
     id: PropTypes.number.isRequired,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
-    teacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape),
+    teacherResources: PropTypes.arrayOf(resourceShape),
+    studentResources: PropTypes.arrayOf(resourceShape),
     showAssignButton: PropTypes.bool,
     isInstructor: PropTypes.bool
   };

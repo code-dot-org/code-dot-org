@@ -4,11 +4,11 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 export default class ResourcesDropdown extends React.Component {
   static propTypes = {
-    migratedResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
+    migratedResources: PropTypes.arrayOf(resourceShape).isRequired,
     studentFacing: PropTypes.bool,
 
     //For firehose

@@ -8,7 +8,7 @@ import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWith
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 import $ from 'jquery';
@@ -55,8 +55,8 @@ class CourseEditor extends Component {
     courseOfferingEditorLink: PropTypes.string,
 
     // Provided by redux
-    teacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape)
+    teacherResources: PropTypes.arrayOf(resourceShape),
+    studentResources: PropTypes.arrayOf(resourceShape)
   };
 
   constructor(props) {
