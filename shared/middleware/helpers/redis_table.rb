@@ -152,7 +152,7 @@ class RedisTable
   # Deletes all the tables and rows in a shard.
   def self.reset_shard(shard_id, redis, pub_sub)
     RedisPropertyBag.new(redis, shard_id).delete_all
-    pub_sub.publish(shard_id, 'all_tables', {action: 'reset_shard'}) if pub_sub
+    pub_sub&.publish(shard_id, 'all_tables', {action: 'reset_shard'})
   end
 
   private
@@ -231,7 +231,7 @@ class RedisTable
   #
   # @param [Hash] update_hash A hash describing the update.
   def publish_change(update_hash)
-    @pub_sub_api.publish(@shard_id, @table_name, update_hash) if @pub_sub_api
+    @pub_sub_api&.publish(@shard_id, @table_name, update_hash)
   end
 
   # Return true if row_key is a row_key for this table.
