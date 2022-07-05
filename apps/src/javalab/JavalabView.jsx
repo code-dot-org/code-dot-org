@@ -60,9 +60,9 @@ class JavalabView extends React.Component {
     awaitingContainedResponse: PropTypes.bool,
     isSubmittable: PropTypes.bool,
     isSubmitted: PropTypes.bool,
-    isReadOnlyWorkspace: PropTypes.bool,
     validationPassed: PropTypes.bool,
-    hasRunOrTestedCode: PropTypes.bool
+    hasRunOrTestedCode: PropTypes.bool,
+    hasOpenCodeReview: PropTypes.bool
   };
 
   componentDidMount() {
@@ -187,10 +187,10 @@ class JavalabView extends React.Component {
       canRun,
       canTest,
       onPhotoPrompterFileSelected,
-      isReadOnlyWorkspace,
       isCodeReviewing,
       validationPassed,
-      hasRunOrTestedCode
+      hasRunOrTestedCode,
+      hasOpenCodeReview
     } = this.props;
 
     if (displayTheme === DisplayTheme.DARK) {
@@ -199,18 +199,14 @@ class JavalabView extends React.Component {
       document.body.style.backgroundColor = color.background_gray;
     }
 
-    console.log(
-      `isReadonly: ${isReadOnlyWorkspace}, is submittable: ${isSubmittable}, hasRunOrTestedCode: ${hasRunOrTestedCode}, validationPassed: ${validationPassed}`
-    );
     // The finish button is disabled if any of the following are true:
-    // 1. The user has not clicked 'run' or test' yet for this session
-    // 2. The workspace is readonly and not submittable
-    // 3. The workspace is readonly, submitted, and has not been submitted
-    // 4. The level is in code review
+    // 1. The user has not clicked 'run' or test' yet for this session.
+    // 2. This is the user's code and they have opened it for code review.
+    // 4. This is a peer's code, which the current user is code reviewing.
     // 5. Validation has not passed (if validation does not exist, validationPassed will be true)
     const disableFinishButton =
       !hasRunOrTestedCode ||
-      (!!isReadOnlyWorkspace && !isSubmittable) ||
+      !!hasOpenCodeReview ||
       !!isCodeReviewing ||
       !validationPassed;
 
@@ -352,10 +348,10 @@ export default connect(
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     isSubmittable: state.pageConstants.isSubmittable,
     isSubmitted: state.pageConstants.isSubmitted,
-    isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
     isCodeReviewing: state.pageConstants.isCodeReviewing,
     validationPassed: state.javalab.validationPassed,
-    hasRunOrTestedCode: state.javalab.hasRunOrTestedCode
+    hasRunOrTestedCode: state.javalab.hasRunOrTestedCode,
+    hasOpenCodeReview: state.javalab.hasOpenCodeReview
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
