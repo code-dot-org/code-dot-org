@@ -287,7 +287,6 @@ class Script < ApplicationRecord
     student_detail_progress_view
     project_widget_visible
     project_widget_types
-    teacher_resources
     lesson_extras_available
     has_verified_resources
     curriculum_path
@@ -1355,8 +1354,7 @@ class Script < ApplicationRecord
   end
 
   def update_migrated_teacher_resources(resource_ids)
-    teacher_resources = (resource_ids || []).map {|id| Resource.find(id)}
-    self.resources = teacher_resources
+    self.resources = (resource_ids || []).map {|id| Resource.find(id)}
   end
 
   def update_student_resources(resource_ids)
@@ -1514,7 +1512,6 @@ class Script < ApplicationRecord
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
-      teacher_resources: teacher_resources,
       migrated_teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       lesson_extras_available: lesson_extras_available,
@@ -1774,9 +1771,7 @@ class Script < ApplicationRecord
       :use_legacy_lesson_plans,
       :is_maker_unit
     ]
-    not_defaulted_keys = [
-      :teacher_resources, # teacher_resources gets updated from the unit edit UI through its own code path
-    ]
+    not_defaulted_keys = []
 
     result = {}
     # If a non-boolean prop was missing from the input, it'll get populated in the result hash as nil.
