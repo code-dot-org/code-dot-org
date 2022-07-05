@@ -11,25 +11,10 @@
           "elements": [
             {
               "type": "radiogroup",
-              "name": "unit_number",
-              "startWithNewLine": false,
-              "choices": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8
-              ]
-            },
-            {
-              "type": "radiogroup",
               "name": "unit_name",
               "startWithNewLine": false,
               "defaultValueExpression": "{unit_number}",
-              "readOnly": true,
+              "readOnly": false,
               "choices": [
                 {
                   "value": 1,
@@ -65,7 +50,8 @@
           "title": "Panel to hold variables for foorm. HIDE AFTER TESTING",
           "startWithNewLine": false,
           "innerIndent": 3,
-          "indent": 3
+          "indent": 3,
+          "visible": "false"
         },
         {
           "type": "html",

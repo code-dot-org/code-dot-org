@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2022-06-27 22:13:02 UTC",
+    "serialized_at": "2022-06-30 14:55:37 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -430,7 +430,7 @@
       "key": "d9d32b68-4eb1-4b33-8574-34d1a6e32dce",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14 - Free Play” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 15 - Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
