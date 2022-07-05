@@ -1,0 +1,26 @@
+name 'vpl-csa-module-1-intro-to-unit3-project-2022'
+editor_experiment ''
+display_name 'CSA Module 1 Overview'
+
+title 'Module 1: CSA Virtual Professional Learning'
+markdown <<MARKDOWN
+# Reviewing the Unit 3 Project
+
+*Goal: To understand the options students have when starting the Unit 3 project.*
+
+Let’s get started by going into more depth in the Unit 3 Project.  In the Unit 3 project, students use data to help a user solve a problem or get more information.  
+
+Below are the 5 different “User Stories” students can choose from.
+
+<img src="https://images.code.org/2186d4a7ea032dfb6cef0b1fe44eed21-image-1656876986306.36.09 PM.png" alt="Screenshot from Planning Guide">
+
+Students start with a user story as a starting point for their project.  With this user story in mind, students will develop their own computer program that will help the user featured in the user story.  
+
+In order to provide students with more options, students are also able to use other datasets that they are interested in too. 
+
+<hr>
+
+**Up next:** We will learn more about user stories in software engineering. 
+
+
+MARKDOWN
