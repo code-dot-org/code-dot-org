@@ -516,7 +516,7 @@ hu:
       2:
         text: "A Blockly három fő részből áll. Balra van a madár labirintusa, ahol a programod fog futni. Az egyes szintekhez tartozó utasítások a labirintus alatt találhatók. Ez a középső terület az eszköztár, és minden egyes blokk egy-egy parancs, ezeket a madár érti. A jobb oldali fehér területet munkaterületnek nevezzük, és itt fogjuk felépíteni a programunkat."
       3:
-        text: "Mi történik, ha a a mozgatás blokkot a munkaterületünkre húzom, és megnyomom a Futtatás gombot? A madár egy kockával előbbre lép a rácson. És mi van akkor, ha azt akarom, hogy a madár csináljon is valamit, miután egy kockával előrébb lépett? Hozzáadhatok egy másik blokkot a programunkhoz."
+        text: "Mi történik, ha a mozgatás blokkot a munkaterületünkre húzom, és megnyomom a Futtatás gombot? A madár egy kockával előbbre lép a rácson. És mi van akkor, ha azt akarom, hogy a madár csináljon is valamit, miután egy kockával előrébb lépett? Hozzáadhatok egy másik blokkot a programunkhoz."
       4:
         text: "Most a \"fordulj jobbra\" blokkot fogom használni, és addig húzom, amíg meg nem jelenik a sárga nyíl. Ekkor elengedem, és a két blokk összekapcsolódik. Amikor újra megnyomom a \"Futtatás\" gombot, a madár felülről lefelé haladva végrehajtja a munkaterületen egymás után pakolt parancsokat."
       5:
@@ -669,11 +669,11 @@ hu:
         text: "A legizgalmasabb dolog a szoftverekben az, hogy az egész világra hatással lehetnek. Tizenkilenc éves koromban tanultam meg először programozni. Azt hiszem, már másod- vagy harmadéves voltam a főiskolán. Az első program, amire emlékszem, hogy írtam valamit, ami Celsiust Fahrenheitre konvertálta. Azért szeretek programozni, mert szeretek segíteni az embereknek. A Google-nál olyan programokat írhatok, amelyek a világ minden táján segítik az embereket, és ez igazán észbontóan izgalmas."
     C3_maze_conditionals:
       1:
-        text: "Az emberek minden nap döntenek. Például mielőtt kimegyünk a házból, van egy HA utasítás, amely szerint,  ha esik az eső, akkor elő kell vennem a kabátomat. A számítógépek lenyűgözőek, ha egyszer ilyen típusú utasításokról döntünk, akkor ezeket a dolgokat megbízhatóan és hihetetlen sebességgel képesek végrehajtani. Egy számítógépes program valójában egy kis matematika és néhány ha utasítás a döntés helyén."
+        text: "Az emberek minden nap döntenek. Például mielőtt kimegyünk a házból, van egy if utasítás, amely szerint,  ha esik az eső, akkor elő kell vennem a kabátomat. A számítógépek lenyűgözőek, ha egyszer ilyen típusú utasításokról döntünk, akkor ezeket a dolgokat megbízhatóan és hihetetlen sebességgel képesek végrehajtani. Egy számítógépes program valójában egy kis matematika és néhány ha utasítás a döntés helyén."
       2:
-        text: "A ha blokk segít a zombinak a döntés meghozni. Ellenőriz valamit. Például használjuk azt a blokkot, amely azt mondja, hogy ha van út balra, és akkor tegyünk bele egy balra fordulás parancsot. Azt mondjuk a zombinak, hogy ellenőrizze a környezetét, nézze meg, hogy van-e balra egy út, és ha igen, forduljon balra."
+        text: "Az if blokk segít a zombinak a döntés meghozni. Ellenőriz valamit. Például használjuk azt a blokkot, amely azt mondja, hogy ha van út balra, és akkor tegyünk bele egy balra fordulás parancsot. Azt mondjuk a zombinak, hogy ellenőrizze a környezetét, nézze meg, hogy van-e balra egy út, és ha igen, forduljon balra."
       3:
-        text: "Ezután a mozgás előre blokkot használjuk ezen az ismétlésen belül, így tovább fog haladni előre, amíg csak egyenesen akar menni. Aztán amikor van egy kanyar, a ha blokk azt mondja neki, hogy forduljon balra. Láthatjuk, ha ekként teszünk, ha balra fordulunk, és egyébként előre mozgunk, akkor elérjük a célunkat."
+        text: "Ezután a mozgás előre blokkot használjuk ezen az ismétlésen belül, így tovább fog haladni előre, amíg csak egyenesen akar menni. Aztán amikor van egy kanyar, az if blokk azt mondja neki, hogy forduljon balra. Láthatjuk, ha ekként teszünk, ha balra fordulunk, és egyébként előre mozgunk, akkor elérjük a célunkat."
       4:
         text: "Egy egy példa az if (ha) utasítás használatára, amely egy alapvető fogalom a számítógépes programozásban. Az egyik első dolog, amit megtanultam leprogramozni, a tic-tac-toe. Voltak benne if utasítások, amelyek azt mondták, hogy oké, ha a másik személy nyerni fog, akkor akadályozd meg. Jó szórakozást az if utasítások megismeréséhez, amely tényleg kulcsfontosságú."
     C3_maze_level_4:
@@ -778,7 +778,7 @@ hu:
       1:
         text: "Minden csapatban az utasítást adó személynek, aki a papírt tartja a kezében, ki kell találnia, hogy mi lesz a KI szimbóluma és mi lesz a BE szimbóluma. Binárisan ez olyan, mint egy ábécé két betűvel. Mintha az A és a B lenne a teljes ábécé, de nekünk egy 0 és egy 1 számunk van."
       2:
-        text: "A bináris használatának leggyakoribb módja a ha utasítás. Ez egy klasszikus dolog a programozásban. A program fut, és azt mondja, hogy ha valami igaz, akkor csináld ezt. Vagy ha nem igaz, és akkor csinálj valami mást. Mi van akkor, ha valami kicsit bonyolultabbat akarsz csinálni. A ha utasítás helyett például egy képpel vagy egy hanggal akarsz dolgozni a számítógépben."
+        text: "A bináris használatának leggyakoribb módja az if utasítás. Ez egy klasszikus dolog a programozásban. A program fut, és azt mondja, hogy ha valami igaz, akkor csináld ezt. Vagy ha nem igaz, és akkor csinálj valami mást. Mi van akkor, ha valami kicsit bonyolultabbat akarsz csinálni. Az if utasítás helyett például egy képpel vagy egy hanggal akarsz dolgozni a számítógépben."
       3:
         text: "A számítógép csak a bináritást ismeri, de egy kép nem bináris, nem egyesekből és nullákból áll, tehát hogyan csináljuk ezt? Íme egy példa: Van ez a gyönyörű kép. A kép alapvetően egyfajta információ. Minden információ kódolható binárisan, így vagy úgy, csak ki kell találni, hogyan."
       4:
@@ -900,9 +900,9 @@ hu:
         text: "A tevékenység második felében megkérdezzük a tanulóktól, hogy hányféleképpen tudnak összehajtani egy papírlapot úgy, hogy tizenhat egyforma téglalapot kapjanak végül. Ezután megbeszéljük, hogy többféle megoldás is vezethet ugyanahhoz az eredményhez, és hogy bizonyos helyzetekben miért jobb egyik megoldás a másiknál."
     unplug6:
       1:
-        text: "Ezt a tevékenységet kártyákkal való kódolásnak nevezzük, és bármelyik korosztály számára nagyszerű program lehet. Ahogy a korábbi leckékben a ha utasításokról megtanultad, a Blockly során a ha utasításoknak van egy darabja, amit ki kell értékelned, hogy igaz-e vagy hamis. Ez a feltételes feltétel, és ezt sokféleképpen lehet használni."
+        text: "Ezt a tevékenységet kártyákkal való kódolásnak nevezzük, és bármelyik korosztály számára nagyszerű program lehet. Ahogy a korábbi leckékben az if utasításokról megtanultad, a Blockly során az if utasításoknak van egy darabja, amit ki kell értékelned, hogy igaz-e vagy hamis. Ez a feltételes feltétel, és ezt sokféleképpen lehet használni."
       2:
-        text: "Ezt felhasználva olyan programokat készítünk papíron, amelyeket a véletlenszerűen kihúzott játékkártyák segítségével futtatunk le. Lehet egy ha utasításunk, ami valami olyasmit mond, hogy ha a kihúzott kártya nagyobb, mint 8, akkor kapunk egy pontot. Ellenkező esetben az ellenfél kap egy pontot. A játékod lehet egyszerű vagy bonyolult, amilyennek szeretnéd."
+        text: "Ezt felhasználva olyan programokat készítünk papíron, amelyeket a véletlenszerűen kihúzott játékkártyák segítségével futtatunk le. Lehet egy if utasításunk, ami valami olyasmit mond, hogy ha a kihúzott kártya nagyobb, mint 8, akkor kapunk egy pontot. Ellenkező esetben az ellenfél kap egy pontot. A játékod lehet egyszerű vagy bonyolult, amilyennek szeretnéd."
     unplug7:
       1:
         text: "Emlékszel, amikor megnézzük egy dalnak a szövegét, már a legelején meghatározzák a refrént, majd a dal további részében csak utalnak a refrénre? Ezt hívjuk függvénynek."
@@ -1446,7 +1446,7 @@ hu:
       7:
         text: "A tízes számrendszerben tíz számjegy van nullától kilencig, és mindannyian így tanultunk meg számolni. A bináris számrendszerben csak két számjegyünk van: nulla és egy. Ezzel a két számjeggyel bármilyen számig elszámolhatunk."
       8:
-        text: "A következőképpen működik. Az általunk megszokott decimális számrendszerben a szám minden egyes pozíciója más-más értékkel rendelkezik. Van az 1-es pozíció, a 10-es pozíció, a 100-as pozíció, és így tovább. Például a 9-es a 100-as pozícióban 900-as értéket jelent. A bináris számrendszerben minden pozíciónak egy értéke van. De ahelyett, hogy minden alkalommal 10-zel szoroznánk, 2-vel szorzunk. Tehát van az 1-es pozíció, a 2-es pozíció, a 4-es pozíció, a 8-as pozíció, és így tovább. Például a 9-es szám binárisan 1001. Az érték kiszámításához összeadjuk az 1-szer 8-at, plusz 0-szor 4-et, plusz 0-szor 2-t, plusz 1-szer 1-et. Már senki sem végzi ezt a számítást, mert a számítógépek megteszik helyettünk. A fontos az, hogy a számokat csak egyesekkel és nullákkal lehet kifejezni, vagy egy csomó vezetékkel, amelyek vagy be vannak kapcsolva vagy ki vannak kapcsolva. Minél több vezetéket használunk, annál nagyobb számokat tudunk tárolni. Nyolc vezetékkel 0 és 255 közötti számokat lehet tárolni. Ez 8 egyes. Mindössze 32 vezetékkel 0-tól több mint 4 milliárdig lehet tárolni a számokat. A bináris számrendszer használatával bármilyen számot meg lehet adni.\n"
+        text: "A következőképpen működik. Az általunk megszokott decimális számrendszerben a szám minden egyes pozíciója más-más értékkel rendelkezik. Van az 1-es pozíció, a 10-es pozíció, a 100-as pozíció, és így tovább. Például a 9-es a 100-as pozícióban 900-as értéket jelent. A bináris számrendszerben minden pozíciónak egy értéke van. De ahelyett, hogy minden alkalommal 10-zel szoroznánk, 2-vel szorzunk. Tehát van az 1-es pozíció, a 2-es pozíció, a 4-es pozíció, a 8-as pozíció, és így tovább. Például a 9-es szám binárisan 1001. Az érték kiszámításához összeadjuk az 1-szer 8-at, plusz 0-szor 4-et, plusz 0-szor 2-t, plusz 1-szer 1-et. Már senki sem végzi ezt a számítást, mert a számítógépek megteszik helyettünk. A fontos az, hogy a számokat csak egyesekkel és nullákkal lehet kifejezni, vagy egy csomó vezetékkel, amelyek vagy be vannak kapcsolva vagy ki vannak kapcsolva. Minél több vezetéket használunk, annál nagyobb számokat tudunk tárolni. Nyolc vezetékkel 0 és 255 közötti számokat lehet tárolni. Ez 8 egyes. Mindössze 32 vezetékkel 0-tól több mint 4 milliárdig lehet tárolni a számokat. A bináris számrendszer használatával bármilyen számot meg lehet adni."
       9:
         text: "De mi a helyzet a más típusú információkkal? Például a szövegekkel, a képekkel vagy a hangokkal? Kiderült, hogy ezek is ábrázolhatók számokkal. Gondoljunk csak az ábécé betűire. Minden betűhöz rendelhetünk egy számot. Az A lehetne 1, a B lehetne 2, és így tovább. Ezután bármely szót vagy bekezdést számok sorozataként lehet megadni. És mint láttuk, ezek a számok ki- vagy bekapcsolt elektromos jelek formájában tárolhatók. Minden szó amit egy weboldalon vagy a telefonodon látsz, egy ilyen rendszerrel van ábrázolva."
       10:
@@ -1674,7 +1674,7 @@ hu:
       6:
         text: "Ha például a \"ha útvonal jobbra\" parancsot adod, és a feltételen belül a jobbra fordulást helyezed el, akkor amikor Steve egy jobbra kanyarodó úthoz ér, mindig jobbra fog fordulni. Ha nincs jobbra nyíló út, akkor nem fordul jobbra. Ezek a feltételes ha parancsok akkor hasznosak, amikor a kódot előre nem kiszámítható helyzetekben futtatod, például víz alatti barlangokban lévő titokzatos romoknál."
       7:
-        text: "Próbáld ki a ha blokkok használatát, és próbáld ki a kódod."
+        text: "Próbáld ki az if blokkok használatát, és próbáld ki a kódod."
       8:
         text: "Hűha! Netty romjai fantasztikusak voltak. Tényleg ki kell költöznöm a szüleim házából. Szóval, mit gondolsz? Megfelelőek a feltételek ahhoz, hogy befejezzük az utolsó feladványokat? Próbáljuk meg."
     mc_2018_closing:

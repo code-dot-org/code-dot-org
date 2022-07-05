@@ -261,7 +261,7 @@
           "name": "Stávengilvu"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "CS Fuomášumit LoahppaKursaIskkadeamis "
+          "name": "Programmere Guoimmuheami"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Plottet Hámiid"
@@ -449,6 +449,12 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Stávengilvu"
         },
+        "csd3-2019/Programming for Entertainment": {
+          "name": "Programmere Guoimmuheami"
+        },
+        "csd3-2019/Plotting Shapes": {
+          "name": "Plottet Hámiid"
+        },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Tevdnet SpeallanLáb:as"
         },
@@ -497,6 +503,12 @@
         "csd6-2019/Making Music": {
           "name": "Ráhkat Musihka"
         },
+        "csd4-2019/Analysis of Design": {
+          "name": "Analyseret Designa"
+        },
+        "csd4-2019/Understanding Your User": {
+          "name": "Ipmirdit Du Geavaheaddji"
+        },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "GeavaheaddjeStivrejuvvon Designa Mikrodoaibma"
         },
@@ -526,6 +538,12 @@
         },
         "csd1-2019/Project - Propose an App": {
           "name": "Prošeakta - Evttohit App:a"
+        },
+        "csd2-2019/Exploring Websites": {
+          "name": "Suokkardallat Neahttasiidduid"
+        },
+        "csd2-2019/Websites for Expression ": {
+          "name": "Neahttasiiddut Dadjamiidda"
         },
         "csd2-2019/Intro to HTML": {
           "name": "Láidehus HTML:ii"
@@ -621,10 +639,10 @@
           "name": "Suokkardala ProšeaktaIdeaid"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "CS Fuomášumit LoahppaKursaIskkadeamis "
+          "name": "Programmere Guoimmuheami"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "CDS Maŋŋil-Kurssa Iskkadeapmi"
+          "name": "Plottet Hámiid"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Tevdnet SpeallanLáb:as"
@@ -668,9 +686,6 @@
         "csd3-2017/Project - Design a Game": {
           "name": "Prošeakta  - Designe Spealu"
         },
-        "csd6-2017/Innovations in Computing_": {
-          "name": "CDS Maŋŋil-Kurssa Iskkadeapmi"
-        },
         "csd6-2017/Project: Make a Game__": {
           "name": "Prošeakta: Ráhkat Spealu"
         },
@@ -678,7 +693,7 @@
           "name": "Ráhkat Musihka"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "CDS Maŋŋil-Kurssa Iskkadeapmi"
+          "name": "Suokkardallat Neahttasiidduid"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Neahttasiiddut Dadjamiidda"
@@ -737,11 +752,8 @@
         "csd1-2017/Project - Propose an App": {
           "name": "Prošeakta - Evttohit App:a"
         },
-        "csd5-2017/Representation Matters": {
-          "name": "CDS Maŋŋil-Kurssa Iskkadeapmi"
-        },
         "csd4-2017/Analysis of Design": {
-          "name": "CDS Maŋŋil-Kurssa Iskkadeapmi"
+          "name": "Analyseret Designa"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Ipmirdit Du Geavaheaddji"
@@ -998,11 +1010,11 @@
         "course1/Artist: Loops": {
           "name": "Dáiddár: Mohkit"
         },
-        "allthethings/Jigsaw": {
-          "name": "Anonyma oahppi iskkadeapmi 2"
-        },
         "allthethings/Maze": {
-          "name": "MáŋggageahčestagaTeasta"
+          "name": "Labirynta"
+        },
+        "allthethings/Artist": {
+          "name": "Dáiddár"
         },
         "allthethings/Bee": {
           "name": "Uvlu"
@@ -1165,6 +1177,9 @@
         },
         "csd6-2021/Making Music": {
           "name": "Ráhkat Musihka"
+        },
+        "csd3-2021/Programming for Entertainment": {
+          "name": "Programmere Guoimmuheami"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Plottet Hámiid"

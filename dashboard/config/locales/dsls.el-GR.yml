@@ -1407,7 +1407,7 @@ el-GR:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Δεν ξέρω.
         questions:
         - {}
       courseC_multi_starWars_predict1_2018:
@@ -1415,7 +1415,7 @@ el-GR:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Δεν ξέρω.
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
@@ -1423,7 +1423,7 @@ el-GR:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Δεν ξέρω.
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019_2020:
@@ -1431,7 +1431,7 @@ el-GR:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Δεν ξέρω.
         questions:
         - {}
       courseC_multi_starWars_predict2:

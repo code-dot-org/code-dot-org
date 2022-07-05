@@ -611,6 +611,15 @@
         "jigsaw/Jigsaw": {
           "name": "ոլորահատ սղոց"
         },
+        "allthethings/Jigsaw": {
+          "name": "ոլորահատ սղոց"
+        },
+        "allthethings/Maze": {
+          "name": "Maze"
+        },
+        "allthethings/Artist": {
+          "name": "Արտիստ"
+        },
         "allthethings/Bee": {
           "name": "Bee"
         },

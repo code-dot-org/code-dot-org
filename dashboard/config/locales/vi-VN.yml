@@ -39,6 +39,7 @@ vi:
           có địa chỉ email)](%{url})
         username: tài khoản
         password: Mật khẩu
+        verified_teacher: Giáo viên đã xác minh
         password_confirmation: Xác nhận mật khẩu
         current_password: Mật khẩu hiện tại
         locale: Ngôn ngữ
@@ -759,6 +760,7 @@ vi:
     try_hour_of_code: Hãy thử Giờ lập trình!
     store: Cửa hàng
     cookie_notice: Thông báo về cookie
+    view_code: Xem mã lệnh
   reference_area:
     title: Cần trợ giúp?
     subtitle: Xem các video và gợi ý

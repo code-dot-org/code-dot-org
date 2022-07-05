@@ -180,6 +180,10 @@ ta:
           student_description: டிஸ்னி முடிவிலி எழுத்துக்கள் நடித்த கதை அல்லது விளையாட்டை
             உருவாக்க பிளே லேப் பயன்படுத்தவும்.
           name: முடிவிலி
+        algebrademo:
+          lessons:
+            The Design Recipe:
+              name: வடிவமைப்பு செய்முறை
         K5PD:
           lessons:
             Reflection:
@@ -300,6 +304,8 @@ ta:
           lessons:
             Teacher Dashboard:
               name: ஆசிரியர் டாஷ்போர்டு
+            The Design Recipe:
+              name: வடிவமைப்பு செய்முறை
         algebraPD-NexTech:
           lessons:
             Teacher Dashboard:
@@ -316,6 +322,8 @@ ta:
           lessons:
             Free Play:
               name: இலவசமாக விளையாடு
+            The Design Recipe:
+              name: வடிவமைப்பு செய்முறை
         allthethings:
           lessons:
             Artist:
@@ -356,6 +364,8 @@ ta:
           lessons:
             Teacher Dashboard:
               name: ஆசிரியர் டாஷ்போர்டு
+            The Design Recipe:
+              name: வடிவமைப்பு செய்முறை
         sciencePD2b:
           lessons:
             Wrap-Up:
@@ -540,6 +550,8 @@ ta:
               name: நிகழ்வுகள்
             Loops:
               name: சுழற்சிகள்
+            Loops Unplugged:
+              name: சுழல்கள் அவிழ்க்கப்பட்டன
             Programming:
               name: நிரலாக்கம்
             'Real-life Algorithms: Plant a Seed':
@@ -566,6 +578,8 @@ ta:
               name: நிகழ்வுகள்
             Loops:
               name: சுழற்சிகள்
+            Loops Unplugged:
+              name: சுழல்கள் அவிழ்க்கப்பட்டன
             Programming:
               name: நிரலாக்கம்
             'Debugging: Unspotted Bugs':
@@ -633,6 +647,8 @@ ta:
           lessons:
             Teacher Dashboard:
               name: ஆசிரியர் டாஷ்போர்டு
+            The Design Recipe:
+              name: வடிவமைப்பு செய்முறை
         csp-online-test:
           lesson_groups:
             required:
@@ -844,6 +860,8 @@ ta:
               name: உங்கள் திட்டத்தை உருவாக்குங்கள்
             Present Your Project:
               name: உங்கள் திட்டத்தை வழங்கவும்
+            Private and Personal Information:
+              name: தனியார் மற்றும் தனிப்பட்ட தகவல்
             Internet:
               name: இணையதளம்
             Crowdsourcing:
@@ -869,6 +887,8 @@ ta:
               name: Play ஆய்வகத்தில் மாறிகள்
             Variables in Artist:
               name: கலைஞரின் மாறுபாடுகள்
+            For Loop Fun:
+              name: லூப் வேடிக்கைக்காக
             For Loops in Bee:
               name: தேனீயில் லூப்களுக்கு
             For Loops in Artist:
@@ -1250,6 +1270,8 @@ ta:
               name: கலைஞரின் மாறுபாடுகள்
             Variables in Play Lab:
               name: Play ஆய்வகத்தில் மாறிகள்
+            For Loop Fun:
+              name: லூப் வேடிக்கைக்காக
             For Loops in Bee:
               name: தேனீயில் லூப்களுக்கு
             For Loops in Artist:
@@ -1473,6 +1495,8 @@ ta:
               name: கலைஞரின் மாறுபாடுகள்
             Variables in Play Lab:
               name: Play ஆய்வகத்தில் மாறிகள்
+            For Loop Fun:
+              name: லூப் வேடிக்கைக்காக
             For Loops in Bee:
               name: தேனீயில் லூப்களுக்கு
             For Loops in Artist:
@@ -1586,6 +1610,8 @@ ta:
               name: 'அல்காரிதம்ஸ்: டைஸ் ரேஸ் '
             Conditionals:
               name: நிபந்தனைகள்
+            Private and Personal Information:
+              name: தனியார் மற்றும் தனிப்பட்ட தகவல்
             Build a Star Wars Game:
               name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
             'Functions: Songwriting':
@@ -1728,6 +1754,8 @@ ta:
               name: 'அல்காரிதம்ஸ்: டைஸ் ரேஸ் '
             Conditionals:
               name: நிபந்தனைகள்
+            Private and Personal Information:
+              name: தனியார் மற்றும் தனிப்பட்ட தகவல்
             Build a Star Wars Game:
               name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
             'Functions: Songwriting':
@@ -1783,6 +1811,8 @@ ta:
               name: கலைஞரின் மாறுபாடுகள்
             Variables in Play Lab:
               name: Play ஆய்வகத்தில் மாறிகள்
+            For Loop Fun:
+              name: லூப் வேடிக்கைக்காக
             For Loops in Bee:
               name: தேனீயில் லூப்களுக்கு
             For Loops in Artist:
@@ -1876,6 +1906,8 @@ ta:
               name: 'அல்காரிதம்ஸ்: டைஸ் ரேஸ் '
             Conditionals:
               name: நிபந்தனைகள்
+            Private and Personal Information:
+              name: தனியார் மற்றும் தனிப்பட்ட தகவல்
             'Functions: Songwriting':
               name: 'செயல்பாடுகள்: பாடல் எழுதுதல் '
             Functions in Artist:
@@ -1931,6 +1963,8 @@ ta:
               name: கலைஞரின் மாறுபாடுகள்
             Variables in Play Lab:
               name: Play ஆய்வகத்தில் மாறிகள்
+            For Loop Fun:
+              name: லூப் வேடிக்கைக்காக
             For Loops in Bee:
               name: தேனீயில் லூப்களுக்கு
             For Loops in Artist:
@@ -2115,8 +2149,12 @@ ta:
               name: கலைஞருடன் மாறுபாடுகள்
             Variables that Change in Artist:
               name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
+            For Loop Fun:
+              name: லூப் வேடிக்கைக்காக
             Binary Bracelets:
               name: பைனரி பிரெஸ்ட்லெட்ஸ்
+            'Unplugged: Binary':
+              name: பைனரி படங்கள்
             Artist Binary:
               name: கலைஞருடன் பைனரி படங்கள்
             Internet:
@@ -2157,6 +2195,8 @@ ta:
               name: நிகழ்வுகளுடன் ஒரு ராயல் போர்
             Loops in Ice Age:
               name: ஸ்க்ராட்டுடன் சுழல்கள்
+            Copyright and Creativity:
+              name: ப்ளே ஃபேர் உருவாக்குவது அருமை
           student_description: கணினி அறிவியல் மற்றும் இணையப் பாதுகாப்பின் அடிப்படைகளைக்
             கற்றுக்கொள்ளுங்கள். பாடத்திட்டத்தின் முடிவில், நீங்கள் பகிர்ந்து கொள்ளக்கூடிய
             உங்கள் சொந்த கேம் அல்லது கதையை உருவாக்கவும்.
@@ -2186,6 +2226,8 @@ ta:
               name: பிரமை உள்ள நிபந்தனைகள் மற்றும் சுழல்கள்
             Digital Citizenship:
               name: டிஜிட்டல் குடியுரிமை
+            'Unplugged: Binary':
+              name: பைனரி படங்கள்
             Artist Binary:
               name: கலைஞருடன் பைனரி படங்கள்
             Nested Loops in Frozen:
@@ -2275,6 +2317,8 @@ ta:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Programming in Artist:
               name: குறியீட்டுடன் கலையை உருவாக்குதல்
+            'Loops: My Loopy Robotic Friends':
+              name: என் லூப்பி ரோபோ நண்பர்கள்
             Loops in Artist:
               name: சுழல்களுடன் வடிவங்களை வரைதல்
             Nested Loops:
@@ -2285,6 +2329,8 @@ ta:
               name: 'அல்காரிதம்ஸ்: டைஸ் ரேஸ் '
             Conditionals:
               name: விவசாயியுடன் நிபந்தனைகள்
+            Private and Personal Information:
+              name: தனியார் மற்றும் தனிப்பட்ட தகவல்
             Build a Star Wars Game:
               name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
             'Functions: Songwriting':
@@ -2315,6 +2361,8 @@ ta:
               name: Minecraft Hour of Code
             Functions in Minecraft:
               name: Minecraft இல் செயல்பாடுகள்
+            Copyright and Creativity:
+              name: டிஜிட்டல் பகிர்வு
           student_description: அல்காரிதம்கள், லூப்கள், நிபந்தனைகள் மற்றும் நிகழ்வுகளுடன்
             குறியீட்டு முறையைத் தொடங்குங்கள், பின்னர் நீங்கள் செயல்பாடுகளுக்குச் செல்லலாம்.
             இந்த பாடத்திட்டத்தின் இரண்டாம் பகுதியில், உங்கள் நண்பர்கள் மற்றும் குடும்பத்தினருடன்
@@ -2341,6 +2389,8 @@ ta:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Programming in Artist:
               name: குறியீட்டுடன் கலையை உருவாக்குதல்
+            'Loops: My Loopy Robotic Friends':
+              name: என் லூப்பி ரோபோ நண்பர்கள்
             Loops in Artist:
               name: சுழல்களுடன் வடிவங்களை வரைதல்
             Nested Loops in Bee/Zombie:
@@ -2357,6 +2407,8 @@ ta:
               name: கலைஞரின் மாறுபாடுகள்
             Variables in Play Lab:
               name: Play ஆய்வகத்தில் மாறிகள்
+            For Loop Fun:
+              name: லூப் வேடிக்கைக்காக
             For Loops in Bee:
               name: தேனீ கொண்ட லூப்களுக்கு
             For Loops in Artist:
@@ -2524,6 +2576,8 @@ ta:
               name: நிகழ்வுகளுடன் ஒரு ராயல் போர்
             Your Digital Footprint:
               name: உங்கள் டிஜிட்டல் தடம்
+            Copyright and Creativity:
+              name: ப்ளே ஃபேர் உருவாக்குவது அருமை
             Programming with Rey and BB-8:
               name: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம்
             Loops in Ice Age:
@@ -2640,6 +2694,8 @@ ta:
               name: கலைஞருடன் மாறுபாடுகள்
             Variables that Change in Artist:
               name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
+            For Loop Fun:
+              name: லூப் வேடிக்கைக்காக
             For Loops in Bee:
               name: தேனீ கொண்ட லூப்களுக்கு
             For Loops in Artist:
@@ -2674,6 +2730,8 @@ ta:
               name: இணையம்
             Crowdsourcing:
               name: க்ரவுட்சோர்சிங்
+            Digital Sharing:
+              name: டிஜிட்டல் பகிர்வு
             Running Simulations:
               name: இயங்கும் உருவகப்படுத்துதல்கள்
           student_description: பல்வேறு வகையான சுழல்கள், நிகழ்வுகள், செயல்பாடுகள் மற்றும்
@@ -2735,6 +2793,8 @@ ta:
               name: டிஜிட்டல் குடியுரிமை
             Build a Play Lab Game:
               name: ப்ளே லேப் கேமை உருவாக்கவும்
+            'Unplugged: Binary':
+              name: பைனரி படங்கள்
             Artist Binary:
               name: கலைஞருடன் பைனரி படங்கள்
             Build a Star Wars Game:
@@ -2780,6 +2840,8 @@ ta:
               name: அட்டைகளுடன் நிபந்தனைகள்
             Conditionals:
               name: விவசாயியுடன் நிபந்தனைகள்
+            Private and Personal Information:
+              name: தனியார் மற்றும் தனிப்பட்ட தகவல்
             Build a Star Wars Game:
               name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
             'Functions: Songwriting':
@@ -2818,6 +2880,8 @@ ta:
               name: பாடநெறி திட்டத்தின் முடிவு
             Access Ability:
               name: AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்
+            Digital Sharing:
+              name: டிஜிட்டல் பகிர்வு
             Simon Says:
               name: சைமன் கூறுகிறார்
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -2904,6 +2968,8 @@ ta:
               name: கலைஞருடன் மாறுபாடுகள்
             Variables that Change in Artist:
               name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
+            For Loop Fun:
+              name: லூப் வேடிக்கைக்காக
             For Loops in Bee:
               name: தேனீ கொண்ட லூப்களுக்கு
             For Loops in Artist:
@@ -3533,6 +3599,8 @@ ta:
               name: சைமன் கூறுகிறார்
             Alien Dance Party with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
+            Private and Personal Information:
+              name: தனியார் மற்றும் தனிப்பட்ட தகவல்
             Access Ability:
               name: அணுகல் திறன்
             Drawing with Loops:
@@ -3599,6 +3667,8 @@ ta:
               name: சைமன் கூறுகிறார்
             Alien Dance Party with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
+            Private and Personal Information:
+              name: தனியார் மற்றும் தனிப்பட்ட தகவல்
             Access Ability:
               name: அணுகல் திறன்
         time4cs-experiment-unit-1:
@@ -3624,6 +3694,8 @@ ta:
               name: சைமன் கூறுகிறார்
             Alien Dance Party with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
+            Private and Personal Information:
+              name: தனியார் மற்றும் தனிப்பட்ட தகவல்
             Access Ability:
               name: அணுகல் திறன்
         csp7-pilot:
@@ -3864,6 +3936,8 @@ ta:
               name: பிரமை உள்ள சுழல்கள் வரை
             Conditionals & Loops in Harvester:
               name: நிபந்தனைகளுடன் அறுவடை
+            'Unplugged: Binary':
+              name: பைனரி படங்கள்
             Artist Binary:
               name: கலைஞருடன் பைனரி படங்கள்
             Digital Citizenship:
@@ -3903,6 +3977,8 @@ ta:
               name: ஸ்பிரைட் ஆய்வகத்துடன் நீச்சல் மீன்
             Alien Dance Party with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
+            Private and Personal Information:
+              name: தனியார் மற்றும் தனிப்பட்ட தகவல்
             Access Ability:
               name: AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்
             Nested Loops in Bee:
@@ -3919,6 +3995,8 @@ ta:
               name: கலைஞருடன் செயல்பாடுகள்
             End of Course Project:
               name: பாடநெறி திட்டத்தின் முடிவு
+            Digital Sharing:
+              name: டிஜிட்டல் பகிர்வு
             Designing for Accessibility:
               name: AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்
           student_description: அல்காரிதம்கள், லூப்கள், நிபந்தனைகள் மற்றும் நிகழ்வுகளுடன்
@@ -3960,6 +4038,8 @@ ta:
               name: கலைஞருடன் மாறுபாடுகள்
             Variables that Change in Artist:
               name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
+            For Loop Fun:
+              name: லூப் வேடிக்கைக்காக
             For Loops in Bee:
               name: தேனீ கொண்ட லூப்களுக்கு
             For Loops in Artist:
@@ -3972,6 +4052,8 @@ ta:
               name: வார்த்தைகளின் சக்தி
             Crowdsourcing:
               name: க்ரவுட்சோர்சிங்
+            Digital Sharing:
+              name: டிஜிட்டல் பகிர்வு
             End of Course Project:
               name: பாடநெறி திட்டத்தின் முடிவு
             AI for Oceans:
@@ -4506,6 +4588,8 @@ ta:
               name: வேளாண்மையில் சுழல்கள்
             Until Loops in Maze:
               name: பிரமை உள்ள சுழல்கள் வரை
+            'Unplugged: Binary':
+              name: பைனரி படங்கள்
             Artist Binary:
               name: கலைஞருடன் பைனரி படங்கள்
             End of Course Project:
@@ -4543,8 +4627,12 @@ ta:
               name: ஸ்பிரைட் ஆய்வகத்துடன் நீச்சல் மீன்
             Alien Dance Party with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
+            Private and Personal Information:
+              name: தனியார் மற்றும் தனிப்பட்ட தகவல்
             About Me:
               name: 'மினி-திட்டம்: என்னைப் பற்றி'
+            Digital Sharing:
+              name: டிஜிட்டல் பகிர்வு
             Nested Loops in Bee:
               name: பிரமை உள்ள கூடுகள்
             'Functions: Songwriting':
@@ -4598,6 +4686,8 @@ ta:
               name: கடல்களுக்கான AI
             Internet:
               name: இணையம்
+            For Loop Fun:
+              name: லூப் வேடிக்கைக்காக
             For Loops in Bee:
               name: தேனீ கொண்ட லூப்களுக்கு
             For Loops in Artist:
@@ -5384,6 +5474,8 @@ ta:
               name: தேனீயுடன் நிரலாக்கம்
             Variables with the Bee:
               name: தேனீயுடன் மாறிகள்
+            For Loop Fun:
+              name: லூப் வேடிக்கைக்காக
             For Loops with Bee:
               name: தேனீ கொண்ட லூப்களுக்கு
             For Loops with Artist:
@@ -5767,8 +5859,12 @@ ta:
               name: ஸ்பிரைட் ஆய்வகத்துடன் நீச்சல் மீன்
             Alien Dance Party with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
+            Private and Personal Information:
+              name: தனியார் மற்றும் தனிப்பட்ட தகவல்
             'Mini-Project: About Me':
               name: 'மினி-திட்டம்: என்னைப் பற்றி'
+            Digital Sharing:
+              name: டிஜிட்டல் பகிர்வு
             Drawing with Loops:
               name: சுழல்களால் வரைதல்
             Songwriting:
@@ -5838,6 +5934,8 @@ ta:
               name: தேனீயுடன் நிரலாக்கம்
             Variables with the Bee:
               name: தேனீயுடன் மாறிகள்
+            For Loop Fun:
+              name: லூப் வேடிக்கைக்காக
             For Loops with Bee:
               name: தேனீ கொண்ட லூப்களுக்கு
             For Loops with Artist:

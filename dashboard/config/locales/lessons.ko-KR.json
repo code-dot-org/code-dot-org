@@ -894,7 +894,7 @@
           "name": "말하는 꿀벌"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "CS 발견 학기말 설문조사"
+          "name": "엔터테인먼트를 위한 프로그래밍"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "모양 플롯팅"
@@ -1587,10 +1587,10 @@
           "name": "이벤트가 있는 왕가의 전투"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "프로젝트 후 테스트"
+          "name": "엔터테인먼트를 위한 프로그래밍"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "CS 발견 과정 후 설문 조사"
+          "name": "모양 플롯팅"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "게임 랩 내 그리기"
@@ -1649,12 +1649,6 @@
         "csd3-2019/Project - Design a Game": {
           "name": " 프로젝트 - 게임 설계"
         },
-        "csd6-2019/Innovations in Computing": {
-          "name": "프로젝트 후 테스트"
-        },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "CS 발견 과정 후 설문 조사"
-        },
         "csd6-2019/The Circuit Playground": {
           "name": "써킷 플레이그라운드"
         },
@@ -1695,10 +1689,10 @@
           "name": "프로젝트 - 혁신 프로토타입"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "프로젝트 후 테스트"
+          "name": "설계 분석"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "CS 발견 과정 후 설문 조사"
+          "name": "사용자 이해"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "사용자 중심 설계 마이크로 활동"
@@ -1743,10 +1737,10 @@
           "name": "프로젝트 - 앱 프레젠테이션"
         },
         "csd5-2019/Representation Matters": {
-          "name": "프로젝트 후 테스트"
+          "name": "표현 문제"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "CS 발견 과정 후 설문 조사"
+          "name": "패턴과 표현"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "아스키와 바이너리 표현"
@@ -1791,7 +1785,7 @@
           "name": "문제해결 소개"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "프로젝트 후 테스트"
+          "name": "문제 해결 과정"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "문제해결 탐구"
@@ -1812,10 +1806,10 @@
           "name": "프로젝트 -앱 제안"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "프로젝트 후 테스트"
+          "name": "웹사이트 탐구"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "CS 발견 과정 후 설문 조사"
+          "name": "표현을 위한 웹사이트 "
         },
         "csd2-2019/Intro to HTML": {
           "name": "HTML 소개"
@@ -2334,10 +2328,10 @@
           "name": "프로젝트 발표"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "CS 발견 학기말 설문조사"
+          "name": "엔터테인먼트를 위한 프로그래밍"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "CSD 과정 후 설문조사 "
+          "name": "모양 플롯팅"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "게임 랩 내 그리기"
@@ -2396,9 +2390,6 @@
         "csd3-2017/Project - Design a Game": {
           "name": " 프로젝트 - 게임 설계"
         },
-        "csd6-2017/Innovations in Computing_": {
-          "name": "CSD 과정 후 설문조사 "
-        },
         "csd6-2017/The Circuit Playground_": {
           "name": "써킷 플레이그라운드"
         },
@@ -2439,7 +2430,7 @@
           "name": "프로젝트 - 혁신 프로토타입"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "CSD 과정 후 설문조사 "
+          "name": "웹사이트 탐구"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "표현을 위한 웹사이트 "
@@ -2508,7 +2499,7 @@
           "name": "프로젝트 -앱 제안"
         },
         "csd5-2017/Representation Matters": {
-          "name": "CSD 과정 후 설문조사 "
+          "name": "표현 문제"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "패턴과 표현"
@@ -2553,7 +2544,7 @@
           "name": "프로젝트: 데이터 문제 해결"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "CSD 과정 후 설문조사 "
+          "name": "설계 분석"
         },
         "csd4-2017/Understanding Your User": {
           "name": "사용자 이해"
@@ -2932,10 +2923,13 @@
           "name": "CSD 학생 과정 후 설문조사 ('18-'19)"
         },
         "allthethings/Jigsaw": {
-          "name": "익명 학생 설문조사 2"
+          "name": "직소퍼즐"
         },
         "allthethings/Maze": {
-          "name": "Pluralsight 테스트"
+          "name": "미로"
+        },
+        "allthethings/Artist": {
+          "name": "예술가"
         },
         "allthethings/Bee": {
           "name": "꿀벌"
@@ -3982,7 +3976,7 @@
           "name": "CS 발견 과정 후 설문 조사"
         },
         "csd4-2021/Analysis of Design": {
-          "name": "프로젝트 후 테스트"
+          "name": "공감으로 설계하기"
         },
         "csd4-2021/Understanding Your User": {
           "name": "사용자 이해"
@@ -4048,7 +4042,6 @@
           "name": "CS 발견 과정 후 설문 조사"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "프로젝트 후 테스트",
           "overview": "이 과정의 최종 단원을 시작하기 위해, 학생들은 컴퓨팅에 흥미로운 혁신을 가져다 줄 몇 가지 리서치를 할 것입니다. 이 레슨은 학생들을 더 넓은 다양한 컴퓨팅 형태 요소 (컴퓨터가 어떻게 보이는지)와 컴퓨팅에 의해 영향을 받는 분야에 노출시킬 것입니다. 이 단원의 뒷부분에서, 학생들은 자신의 물리적 컴퓨팅 기기를 개발하며 이 레슨에서 접하게 된 여러 기기를 되돌아 볼 것입니다. "
         },
         "csd6-2021/The Circuit Playground": {
@@ -4099,7 +4092,7 @@
           "name": "CS 발견 과정 후 설문 조사"
         },
         "csd5-2021/Representation Matters": {
-          "name": "프로젝트 후 테스트"
+          "name": "표현 문제"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "패턴과 표현"
@@ -4150,7 +4143,7 @@
           "name": "CS 발견 과정 후 설문 조사"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "프로젝트 후 테스트"
+          "name": "엔터테인먼트를 위한 프로그래밍"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "모양 플롯팅"
@@ -4229,7 +4222,7 @@
           "name": "문제해결 소개"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "프로젝트 후 테스트"
+          "name": "문제 해결 과정"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "문제해결 탐구"
@@ -4265,7 +4258,7 @@
           "name": "문제해결 탐구- 게임 테마 (대체 레슨 3)"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "프로젝트 후 테스트"
+          "name": "웹 페이지 탐구"
         },
         "csd2-2021/Intro to HTML": {
           "name": "HTML 소개"
