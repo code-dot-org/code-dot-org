@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-20 17:16:00 UTC",
+    "serialized_at": "2022-07-01 17:52:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2035,7 +2035,7 @@
       "key": "ae9d39e4-4a65-4c9f-87ef-d7802c2e68db",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Record in your journal the following vocaublary words: Phishing, Keylogging, Malware, Rogue Access Point. \r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Record in your journal the following vocabulary words: Phishing, Keylogging, Malware, Rogue Access Point. \n\n---"
       },
       "seeding_key": {
         "activity_section.key": "ae9d39e4-4a65-4c9f-87ef-d7802c2e68db",
