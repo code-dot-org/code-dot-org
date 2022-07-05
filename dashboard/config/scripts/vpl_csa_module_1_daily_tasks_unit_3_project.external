@@ -1,0 +1,27 @@
+name 'vpl-csa-module-1-daily-tasks-unit-3-project'
+editor_experiment ''
+display_name 'CSA Module 1 Overview'
+
+title 'Module 1: CSA Virtual Professional Learning'
+markdown <<MARKDOWN
+# Reviewing the Unit 3 Project
+
+*Goal: To understand the options students have when starting the Unit 3 project.*
+
+After students develop question based on the user story they select, students:
+
+* Create a UML diagram for their new class
+* Identify and write pseudocode for one or more methods they will write in their class
+* Start to develop their class 
+
+As you consider what this process looks like in your classroom, it can be helpful to understand what happens on each day of the project.
+
+<img src="https://images.code.org/c6255f40bc774a9a655caa53e99f4eb5-image-1656886930618.22.01 PM.png" alt="Daily breakdown of tasks">
+
+
+By the end of the 3-lesson project, students will have finished their activity guide and written their program.  
+
+<hr>
+
+**Up next:** It can be helpful to look at the exemplar activity guide found in the lesson plan and the exemplar code to better understand what students might produce by the end of this project. We will be doing this next!
+MARKDOWN
