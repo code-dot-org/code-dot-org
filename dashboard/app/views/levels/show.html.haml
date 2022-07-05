@@ -31,7 +31,7 @@
   level-body is used for some semi-strange DOM manipulation. When a teacher toggles to viewAs a student,
   in some cases we want to give them an entirely different rendering (i.e. hidden/locked lessons). We do
   this by hiding level-body and unhiding the other content.
-#level-body{style: params[:viewAs] ? 'visibility: hidden' : nil}
+#level-body{style: @script.can_be_instructor?(@current_user) && params[:viewAs] ? 'visibility: hidden' : nil}
   -# Render the hidden lesson partial, but make it hidden so that client can unhide if needed
   = render partial: 'levels/hidden_lesson', locals: {hidden: true}
 
