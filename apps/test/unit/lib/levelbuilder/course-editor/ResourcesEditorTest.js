@@ -12,7 +12,7 @@ describe('ResourcesEditor', () => {
     };
   });
 
-  it('uses the new resource editor for migrated resources', () => {
+  it('uses the new resource editor for resources', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
@@ -36,7 +36,7 @@ describe('ResourcesEditor', () => {
     expect(wrapper.find('Connect(ResourcesEditor)').length).to.equal(1);
   });
 
-  it('uses no editor for migrated resources without courseVersionId', () => {
+  it('uses no editor for resources without courseVersionId', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}

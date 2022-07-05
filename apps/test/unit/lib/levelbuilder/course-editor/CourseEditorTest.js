@@ -78,7 +78,7 @@ describe('CourseEditor', () => {
   };
 
   describe('Teacher Resources', () => {
-    it('uses the migrated resource component for migrated resources', () => {
+    it('uses the resource component for resources', () => {
       const wrapper = shallow(
         <CourseEditor
           {...defaultProps}

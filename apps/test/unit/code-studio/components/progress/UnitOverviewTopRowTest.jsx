@@ -135,7 +135,7 @@ describe('UnitOverviewTopRow', () => {
   });
 
   describe('instructor resources', () => {
-    it('renders migrated resources for instructor on a migrated script', () => {
+    it('renders resources for instructor on a migrated script', () => {
       const wrapper = shallow(
         <UnitOverviewTopRow
           {...defaultProps}
