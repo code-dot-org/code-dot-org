@@ -1,4 +1,4 @@
-import '@babel/polyfill';
+import '@babel/polyfill/noConflict';
 import 'whatwg-fetch';
 import {throwOnConsoleErrorsEverywhere} from './util/throwOnConsole';
 import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
