@@ -38,6 +38,7 @@ import {
   Subjects,
   HideFeeInformationSubjects,
   HideOnWorkshopMapSubjects,
+  HideFundedSubjects,
   VirtualOnlySubjects,
   NotFundedSubjects,
   MustSuppressEmailSubjects
@@ -371,7 +372,12 @@ export class WorkshopForm extends React.Component {
       isCsf &&
       this.state.subject &&
       !HideOnWorkshopMapSubjects.includes(this.state.subject);
-    const showFundedInput = !isAdminCounselor;
+    const showFundedInput = !(
+      isAdminCounselor ||
+      (isCsf &&
+        this.state.subject &&
+        HideFundedSubjects.includes(this.state.subject))
+    );
 
     return (
       <FormGroup>
@@ -734,7 +740,10 @@ export class WorkshopForm extends React.Component {
   handleSubjectChange = event => {
     const subject = this.handleFieldChange(event);
 
-    if (NotFundedSubjects.includes(subject)) {
+    if (
+      HideFundedSubjects.includes(subject) ||
+      NotFundedSubjects.includes(subject)
+    ) {
       this.setState({
         funded: false
       });
