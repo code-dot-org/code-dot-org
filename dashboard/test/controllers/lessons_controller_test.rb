@@ -37,12 +37,7 @@ class LessonsControllerTest < ActionController::TestCase
         'script' => {
           'name' => {
             @script.name => {
-              'title' => @script_title,
-              'lessons' => {
-                @lesson.name => {
-                  'name' => @lesson_name
-                }
-              }
+              'title' => @script_title
             }
           }
         }
@@ -288,12 +283,7 @@ class LessonsControllerTest < ActionController::TestCase
         'script' => {
           'name' => {
             script.name => {
-              'title' => @script_title,
-              'lessons' => {
-                solo_lesson_in_script.key => {
-                  'name' => @lesson_name
-                }
-              }
+              'title' => @script_title
             }
           }
         }
@@ -688,11 +678,6 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'update writes lesson name to i18n and script_json in levelbuilder mode' do
     @update_params[:name] = "New Lesson Display Name #{SecureRandom.uuid}"
-
-    # Just make sure the new lesson name appears somewhere in the new file contents.
-    File.stubs(:write).with do |filename, data|
-      filename.end_with?('scripts.en.yml') && data.include?(@update_params[:name])
-    end.once
 
     # Just make sure the new lesson name appears somewhere in the new file contents.
     File.stubs(:write).with do |filename, data|

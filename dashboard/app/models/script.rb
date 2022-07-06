@@ -1649,14 +1649,6 @@ class Script < ApplicationRecord
     Services::MarkdownPreprocessor.sub_resource_links!(data['description_audience'], resource_markdown_replacement_proc) if data['description_audience']
     Services::MarkdownPreprocessor.sub_vocab_definitions!(data['description_audience'], vocab_markdown_replacement_proc) if data['description_audience']
 
-    data['lessons'] = {}
-    lessons.each do |lesson|
-      lesson_data = {
-        'name' => lesson.name,
-      }
-      data['lessons'][lesson.key] = lesson_data
-    end
-
     {'en' => {'data' => {'script' => {'name' => {new_name => data}}}}}
   end
 
