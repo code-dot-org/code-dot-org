@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import MigratedResourceEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import LessonResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 
 //Editor for Teacher Resources
 export default class ResourcesEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    migratedResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
     studentFacing: PropTypes.bool,
     courseVersionId: PropTypes.number,
     getRollupsUrl: PropTypes.string
@@ -26,7 +26,6 @@ export default class ResourcesEditor extends Component {
   render() {
     const {errorString} = this.state;
 
-    // If using migrated resources, we have to have a course version id
     if (!this.props.courseVersionId) {
       return (
         <strong>
@@ -39,19 +38,19 @@ export default class ResourcesEditor extends Component {
 
     return (
       <div>
-        <MigratedResourceEditor
+        <LessonResourcesEditor
           courseVersionId={this.props.courseVersionId}
           resourceContext={
             this.props.studentFacing ? 'studentResource' : 'teacherResource'
           }
-          resources={this.props.migratedResources}
+          resources={this.props.resources}
           getRollupsUrl={this.props.getRollupsUrl}
         />
         <div style={styles.box}>
           <div style={styles.error}>{errorString}</div>
           <div style={{marginBottom: 5}}>Preview:</div>
           <ResourcesDropdown
-            migratedResources={this.props.migratedResources}
+            resources={this.props.resources}
             studentFacing={this.props.studentFacing}
           />
         </div>

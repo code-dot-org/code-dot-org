@@ -16,7 +16,7 @@ import {
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {lessonGroupShape} from './shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
@@ -97,9 +97,8 @@ class UnitEditor extends React.Component {
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
-      .isRequired,
-    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
+    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    studentResources: PropTypes.arrayOf(resourceShape).isRequired,
     init: PropTypes.func.isRequired
   };
 
@@ -350,9 +349,7 @@ class UnitEditor extends React.Component {
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
-      resourceIds: this.props.migratedTeacherResources.map(
-        resource => resource.id
-      ),
+      resourceIds: this.props.teacherResources.map(resource => resource.id),
       studentResourceIds: this.props.studentResources.map(
         resource => resource.id
       ),
@@ -950,7 +947,7 @@ class UnitEditor extends React.Component {
               <ResourcesEditor
                 inputStyle={styles.input}
                 courseVersionId={this.props.initialCourseVersionId}
-                migratedResources={this.props.migratedTeacherResources}
+                resources={this.props.teacherResources}
                 getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}
               />
             </div>
@@ -964,7 +961,7 @@ class UnitEditor extends React.Component {
                 <ResourcesEditor
                   inputStyle={styles.input}
                   courseVersionId={this.props.initialCourseVersionId}
-                  migratedResources={this.props.studentResources}
+                  resources={this.props.studentResources}
                   studentFacing
                 />
               </div>
@@ -1140,7 +1137,7 @@ export const UnconnectedUnitEditor = UnitEditor;
 export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
-    migratedTeacherResources: state.resources,
+    teacherResources: state.resources,
     studentResources: state.studentResources
   }),
   {
