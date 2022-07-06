@@ -10,9 +10,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-29 16:11:03 UTC",
-    "published_state": "in_development",
-    "instruction_type": "self_paced",
+    "serialized_at": "2022-06-30 20:06:31 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
     "instructor_audience": "plc_reviewer",
     "participant_audience": "facilitator",
     "seeding_key": {
