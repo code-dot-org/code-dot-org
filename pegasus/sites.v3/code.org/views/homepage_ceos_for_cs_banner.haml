@@ -1,14 +1,14 @@
 - display_ceos_for_cs_banner = true
 - if request.locale == "en-US" && display_ceos_for_cs_banner
   = inline_css 'generated/homepage_ceos_for_cs_banner.css'
-  - header_text = 'CEOs for CS'
-  - text = "Over 500 business and nonprofit leaders call for computer science in K-12"
-  - cta_01 = 'Read the letter'
-  - cta_02 = 'Bring CS to your school'
 
-  .homepage-ceos-for-cs-banner
-    .text-wrapper
-      .header= header_text
-      .text= text
+  %aside.homepage-ceos-for-cs-banner
+    .wrapper
+      .top-wrapper
+        %h1 CEOs for CS
+        %a.btn{:href => 'https://www.ceosforcs.com/', :target => '_blank'} Read the letter
+        %a.btn{:href => '/yourschool', :target => '_blank'} Bring CS to your school
+
+      %p Over 500 business and nonprofit leaders call for computer science in K-12
 
     .clear
