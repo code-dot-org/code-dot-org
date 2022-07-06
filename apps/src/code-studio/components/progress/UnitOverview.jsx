@@ -9,8 +9,7 @@ import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/Un
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
-import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import UnitOverviewHeader from './UnitOverviewHeader';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {
@@ -37,8 +36,7 @@ class UnitOverview extends React.Component {
     courseLink: PropTypes.string,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape),
+    studentResources: PropTypes.arrayOf(resourceShape),
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
     redirectScriptUrl: PropTypes.string,
@@ -86,7 +84,6 @@ class UnitOverview extends React.Component {
     const {
       excludeCsfColumnInLegend,
       teacherResources,
-      migratedTeacherResources,
       studentResources,
       scriptId,
       scriptName,
@@ -171,7 +168,6 @@ class UnitOverview extends React.Component {
           )}
           <UnitOverviewTopRow
             teacherResources={teacherResources}
-            migratedTeacherResources={migratedTeacherResources}
             studentResources={studentResources}
             showAssignButton={showAssignButton}
             assignedSectionId={assignedSectionId}

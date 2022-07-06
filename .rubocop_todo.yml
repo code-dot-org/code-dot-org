@@ -270,12 +270,7 @@ Rails/ApplicationMailer:
 Rails/AssertNot:
   Enabled: false
 
-# Offense count: 1
-# This cop supports safe auto-correction (--auto-correct).
-Rails/BelongsTo:
-  Enabled: false
-
-# Offense count: 49
+# Offense count: 50
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: NilOrEmpty, NotPresent, UnlessPresent.
 Rails/Blank:
