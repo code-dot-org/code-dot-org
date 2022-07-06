@@ -12,7 +12,10 @@ function initPage() {
     widgetMode.on('click', () => syncValidateWithElements(embed, widgetMode));
   }
   if ($('#level_validation_code').length > 0) {
-    initializeCodeMirror('level_validation_code', 'javascript');
+    this.validationEditor = initializeCodeMirror(
+      'level_validation_code',
+      'javascript'
+    );
   }
 }
 
@@ -22,3 +25,7 @@ function syncValidateWithElements(element1, element2) {
   autoValidate.prop('checked', !eitherChecked);
   autoValidate.prop('disabled', eitherChecked);
 }
+
+window.levelbuilder.populateValidationEditor = function(string) {
+  document.validationEditor.getDoc().setValue(string);
+};
