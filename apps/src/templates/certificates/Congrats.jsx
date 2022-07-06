@@ -131,7 +131,7 @@ Congrats.propTypes = {
   randomDonorName: PropTypes.string,
   hideDancePartyFollowUp: PropTypes.bool,
   showStudioCertificate: PropTypes.bool,
-  initialCertificateImageUrl: PropTypes.string,
+  initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
   nextCourseScriptName: PropTypes.string,
   nextCourseTitle: PropTypes.string,

@@ -70,7 +70,6 @@ class UnitGroup < ApplicationRecord
   include SerializedProperties
 
   serialized_attrs %w(
-    teacher_resources
     has_verified_resources
     has_numbered_units
     family_name
@@ -202,15 +201,6 @@ class UnitGroup < ApplicationRecord
     save!
   end
 
-  # @param types [Array<string>]
-  # @param links [Array<string>]
-  def update_teacher_resources(types, links)
-    return if types.nil? || links.nil? || types.length != links.length
-    # Only take those pairs in which we have both a type and a link
-    self.teacher_resources = types.zip(links).select {|type, link| type.present? && link.present?}
-    save!
-  end
-
   def write_serialization
     # Only save non-plc course, and only in LB mode
     return unless Rails.application.config.levelbuilder_mode && !plc_course
@@ -241,7 +231,7 @@ class UnitGroup < ApplicationRecord
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
         unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil)
-        unit.course_version.destroy if unit.course_version
+        unit.course_version&.destroy
 
         unit.reload
         unit.write_script_json
@@ -324,8 +314,7 @@ class UnitGroup < ApplicationRecord
         include_lessons = false
         unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display)
       end,
-      teacher_resources: teacher_resources,
-      migrated_teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       is_migrated: has_migrated_unit?,
       has_verified_resources: has_verified_resources?,
@@ -455,7 +444,7 @@ class UnitGroup < ApplicationRecord
   # @return [String] URL to the course the user should be redirected to.
   def redirect_to_course_url(user)
     # Only redirect students.
-    return nil unless user && user.student?
+    return nil unless user&.student?
     # No redirect unless user is allowed to view this course version, they are not assigned to the course,
     # and it is versioned.
     return nil unless can_view_version?(user) && !user.assigned_course?(self) && version_year

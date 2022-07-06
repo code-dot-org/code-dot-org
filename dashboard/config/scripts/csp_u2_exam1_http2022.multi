@@ -8,7 +8,7 @@ wrong 'User Datagram Protocol (UDP)'
 right 'HyperText Transfer Protocol (HTTP)'
 
 teacher_markdown <<MARKDOWN
-**Explanation:** [Lesson 6 - HTTP and DNS](https://studio.code.org/s/csp2-2021/lessons/6) includes a video that explains how HTTP works.
+**Explanation:** [Lesson 6 - HTTP and DNS](https://studio.code.org/s/csp2-2022/lessons/6) includes a video that explains how HTTP works.
 
 ::: details [**Essential Knowledge Connected To This Question**]
 

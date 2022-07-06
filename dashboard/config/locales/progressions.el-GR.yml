@@ -42,7 +42,9 @@ el:
       'App: Where Should I Live?': 'Εφαρμογές: Που θα έπρεπε να ζούσα;'
       Artist Intro with JR Hildebrand: Εισαγωγή Καλλιτέχνη με JR Hildebrand
       Artist Intro with JR Hildebrande: Εισαγωγή Καλλιτέχνη με JR Hildebrand
+      Artist Project: Έργο Καλλιτέχνης
       'Artist: Variables': 'Καλλιτέχνης: Μεταβλητές'
+      Assessment: Αξιολόγηση
       Attribution: Καταλογισμός
       Back and Forth: Μπρος-πίσω
       Basic Conditionals: Βασικές Συνθήκες
@@ -196,6 +198,7 @@ el:
       Layout Properties: Ιδιότητες Διάταξης
       Learning from Simulations: Μαθαίνοντας από Προσομοιώσεις
       Level Overview: Σύνοψη Επιπέδου
+      Levels: Επίπεδα
       Light Show: Επίδειξη Φωτός
       Linking Pages: Συνδέοντας Σελίδες
       Linking Screens: Συνδέοντας Οθόνες
@@ -214,6 +217,7 @@ el:
         με Κύβους'
       Measures: Μέτρα
       Medical Priority App: Εφαρμογές Ιατρικής Προτεραιότητας
+      'Minecraft: Hero''s Journey': 'Ναρκαλιευτής: Το Ταξίδι του Ήρωα'
       'Mini-Project: About Me': 'Μικρή Εργασία: Σχετικά με Εμένα'
       'Mini-Project: Alien Dance Moves': 'Μικρή Εργασία: Κινήσεις Χορού Εξωγήινου'
       'Mini-Project: Alien Dance Party': 'Μικρή Εργασία: Πάρτι Χορού Εξωγήινου'
@@ -284,6 +288,7 @@ el:
       Repeat Unit Statements: Επανάληψη Εντολών Έως
       Repeat Until Statements: Επανάληψη Εντολών Έως
       Representing Images: Αναπαριστώντας Εικόνες
+      Review: Ανασκόπηση
       Review Your Animated Scene: Αναθεωρήστε Την Κινούμενη και με ζωή Σκηνή Σας
       Review Your App: Αναθεωρήστε Τις Εφαρμογές Σας
       Review Your Game: Αναθεωρήστε Το Παιχνίδι Σας
@@ -314,6 +319,7 @@ el:
       Skill Building: Καλλιέργεια Δεξιοτήτων
       Skill-Building: Καλλιέργεια Δεξιοτήτων
       Speed it Up, Slow it Down: Πιο γρήγορα, Πιο αργά
+      Sprite Lab Project: Εργαστήριο εφαρμογής
       Sprite Properties: Ιδιότητες Χαρακτήρα
       Terminology Recap: Ανακεφαλαίωση Ορολογίας
       Text Compression: Συμπίεση κειμένου
@@ -340,6 +346,7 @@ el:
       Using the Switch: Χρησιμοποιώντας το Διακόπτη
       Variables: Μεταβλητές
       Velocity: Ταχύτητα
+      Video: Βίντεο
       Video - Encryption and Public Keys: Βίντεο - Κρυπτογράφηση και Δημόσια Κλειδιά
       'Video - Maze Intro: Programming with Blocks': 'Βίντεο - Εισαγωγή στον Λαβύρινθο:
         Προγραμματισμός με Κύβους'

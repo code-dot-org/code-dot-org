@@ -63,6 +63,9 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/courseb/2018": {
           "name": "Pemetaan Standard"
         },
@@ -71,6 +74,9 @@
         },
         "vocabulary/courseb/2018": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursea/2018": {
           "name": "Pemetaan Standard"
@@ -81,6 +87,9 @@
         "vocabulary/coursea/2018": {
           "name": "Perbendaharaan kata"
         },
+        "lesson_plans/coursed/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/coursed/2018": {
           "name": "Pemetaan Standard"
         },
@@ -89,6 +98,9 @@
         },
         "vocabulary/coursed/2018": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursef/2018": {
           "name": "Pemetaan Standard"
@@ -99,6 +111,9 @@
         "vocabulary/coursef/2018": {
           "name": "Perbendaharaan kata"
         },
+        "lesson_plans/express/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/express/2018": {
           "name": "Pemetaan Standard"
         },
@@ -108,6 +123,9 @@
         "vocabulary/express/2018": {
           "name": "Perbendaharaan kata"
         },
+        "lesson_plans/coursee/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/coursee/2018": {
           "name": "Pemetaan Standard"
         },
@@ -116,6 +134,9 @@
         },
         "vocabulary/coursee/2018": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursec/2018": {
           "name": "Pemetaan Standard"
@@ -129,6 +150,9 @@
         "code_introduced_1/csd/2018": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_2/csd/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_2/csd/2018": {
           "name": "Pemetaan Standard"
         },
@@ -141,6 +165,9 @@
         "code_introduced_3/csd/2018": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_5/csd/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_5/csd/2018": {
           "name": "Pemetaan Standard"
         },
@@ -149,6 +176,9 @@
         },
         "vocabulary_5/csd/2018": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings_4/csd/2018": {
           "name": "Pemetaan Standard"
@@ -162,6 +192,9 @@
         "code_introduced_2/csd/2018": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_3/csd/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_3/csd/2018": {
           "name": "Pemetaan Standard"
         },
@@ -174,6 +207,9 @@
         "code_introduced/csd/2018": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_1/csd/2018": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_1/csd/2018": {
           "name": "Pemetaan Standard"
         },
@@ -182,6 +218,9 @@
         },
         "vocabulary_1/csd/2018": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/csd/2018": {
           "name": "Pemetaan Standard"
@@ -195,6 +234,9 @@
         "curriculum_guide/coursea/2019": {
           "name": "Panduan Kurikulum"
         },
+        "lesson_plans/coursea/2019": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/coursea/2019": {
           "name": "Pemetaan Standard"
         },
@@ -206,6 +248,9 @@
         },
         "curriculum_guide/courseb/2019": {
           "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/courseb/2019": {
           "name": "Pemetaan Standard"
@@ -219,6 +264,9 @@
         "curriculum_guide/coursed/2019": {
           "name": "Panduan Kurikulum"
         },
+        "lesson_plans/coursed/2019": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/coursed/2019": {
           "name": "Pemetaan Standard"
         },
@@ -230,6 +278,9 @@
         },
         "curriculum_guide/coursef/2019": {
           "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursef/2019": {
           "name": "Pemetaan Standard"
@@ -243,6 +294,9 @@
         "curriculum_guide/coursee/2019": {
           "name": "Panduan Kurikulum"
         },
+        "lesson_plans/coursee/2019": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/coursee/2019": {
           "name": "Pemetaan Standard"
         },
@@ -251,6 +305,9 @@
         },
         "vocabulary/coursee/2019": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/express/2019": {
           "name": "Pemetaan Standard"
@@ -263,6 +320,9 @@
         },
         "curriculum_guide/coursec/2019": {
           "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursec/2019": {
           "name": "Pemetaan Standard"
@@ -279,6 +339,9 @@
         "code_introduced_1/csd/2019": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_2/csd/2019": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_2/csd/2019": {
           "name": "Pemetaan Standard"
         },
@@ -287,6 +350,9 @@
         },
         "code_introduced_3/csd/2019": {
           "name": "Kod Diperkenalkan"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings_5/csd/2019": {
           "name": "Pemetaan Standard"
@@ -297,17 +363,26 @@
         "code_introduced_2/csd/2019": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_3/csd/2019": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_3/csd/2019": {
           "name": "Pemetaan Standard"
         },
         "vocabulary_3/csd/2019": {
           "name": "Perbendaharaan kata"
         },
+        "lesson_plans_4/csd/2019": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_4/csd/2019": {
           "name": "Pemetaan Standard"
         },
         "vocabulary_4/csd/2019": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/csd/2019": {
           "name": "Pemetaan Standard"
@@ -318,6 +393,9 @@
         "code_introduced/csd/2019": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_1/csd/2019": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_1/csd/2019": {
           "name": "Pemetaan Standard"
         },
@@ -326,6 +404,9 @@
         },
         "code_introduced_1/csd/2017": {
           "name": "Kod Diperkenalkan"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings_2/csd/2017": {
           "name": "Pemetaan Standard"
@@ -339,6 +420,9 @@
         "code_introduced_3/csd/2017": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_5/csd/2017": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_5/csd/2017": {
           "name": "Pemetaan Standard"
         },
@@ -351,6 +435,9 @@
         "code_introduced/csd/2017": {
           "name": "Kod Diperkenalkan"
         },
+        "lesson_plans_1/csd/2017": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings_1/csd/2017": {
           "name": "Pemetaan Standard"
         },
@@ -360,6 +447,9 @@
         "vocabulary_1/csd/2017": {
           "name": "Perbendaharaan kata"
         },
+        "lesson_plans/csd/2017": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/csd/2017": {
           "name": "Pemetaan Standard"
         },
@@ -368,6 +458,9 @@
         },
         "vocabulary/csd/2017": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings_4/csd/2017": {
           "name": "Pemetaan Standard"
@@ -380,6 +473,9 @@
         },
         "code_introduced_2/csd/2017": {
           "name": "Kod Diperkenalkan"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings_3/csd/2017": {
           "name": "Pemetaan Standard"
@@ -479,6 +575,7 @@
           "type": "Video"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Gelung Untuk yang Menyeronokkan",
           "url": "https://youtu.be/mX857v5B4gE"
         },
         "flf-assessment-teacher-key/coursef/2021": {
@@ -486,15 +583,19 @@
           "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Gelung Untuk yang Menyeronokkan",
           "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Gelung Untuk yang Menyeronokkan",
           "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Gelung Untuk yang Menyeronokkan",
           "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Gelung Untuk yang Menyeronokkan",
           "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
           "type": "Penilaian"
         },
@@ -2049,6 +2150,9 @@
         "website-for-a-purpose-reflect/csd/2021": {
           "type": "Panduan Projek"
         },
+        "lesson_plans/pre-express/2020": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/pre-express/2020": {
           "name": "Pemetaan Standard"
         },
@@ -2057,6 +2161,9 @@
         },
         "vocabulary/pre-express/2020": {
           "name": "Perbendaharaan kata"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/express/2020": {
           "name": "Pemetaan Standard"
@@ -2070,6 +2177,9 @@
         "curriculum_guide/courseb/2020": {
           "name": "Panduan Kurikulum"
         },
+        "lesson_plans/courseb/2020": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/courseb/2020": {
           "name": "Pemetaan Standard"
         },
@@ -2081,6 +2191,9 @@
         },
         "curriculum_guide/coursed/2020": {
           "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursed/2020": {
           "name": "Pemetaan Standard"
@@ -2094,6 +2207,9 @@
         "curriculum_guide/coursec/2020": {
           "name": "Panduan Kurikulum"
         },
+        "lesson_plans/coursec/2020": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/coursec/2020": {
           "name": "Pemetaan Standard"
         },
@@ -2105,6 +2221,9 @@
         },
         "curriculum_guide/coursee/2020": {
           "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursee/2020": {
           "name": "Pemetaan Standard"
@@ -2118,6 +2237,9 @@
         "curriculum_guide/coursea/2020": {
           "name": "Panduan Kurikulum"
         },
+        "lesson_plans/coursea/2020": {
+          "name": "Rancangan Pelajaran"
+        },
         "standard_mappings/coursea/2020": {
           "name": "Pemetaan Standard"
         },
@@ -2129,6 +2251,9 @@
         },
         "curriculum_guide/coursef/2020": {
           "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Rancangan Pelajaran"
         },
         "standard_mappings/coursef/2020": {
           "name": "Pemetaan Standard"

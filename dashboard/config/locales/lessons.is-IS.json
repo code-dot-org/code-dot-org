@@ -584,6 +584,9 @@
         "csd1-2019/Project - Propose an App": {
           "name": "Verkefni - Tillaga að Appi"
         },
+        "csd2-2019/Exploring Websites": {
+          "name": "Könnun Vefsetra"
+        },
         "csd2-2019/Intro to HTML": {
           "name": "Kynning á HTML"
         },
@@ -739,6 +742,9 @@
         },
         "csd6-2017/Functions with Parameters_": {
           "name": "Föll með stikum"
+        },
+        "csd2-2017/Exploring Websites": {
+          "name": "Könnun Vefsetra"
         },
         "csd2-2017/Intro to HTML": {
           "name": "Kynning á HTML"
@@ -1095,7 +1101,13 @@
           "name": "Púsl"
         },
         "allthethings/Jigsaw": {
-          "name": "Nafnlaus nemendakönnun 2"
+          "name": "Púsl"
+        },
+        "allthethings/Maze": {
+          "name": "Völundarhús"
+        },
+        "allthethings/Artist": {
+          "name": "Listamaður"
         },
         "allthethings/Bee": {
           "name": "Býfluga"
