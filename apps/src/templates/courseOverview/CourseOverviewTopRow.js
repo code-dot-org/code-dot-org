@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
@@ -11,8 +11,8 @@ export default class CourseOverviewTopRow extends Component {
     id: PropTypes.number.isRequired,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape),
+    teacherResources: PropTypes.arrayOf(resourceShape),
+    studentResources: PropTypes.arrayOf(resourceShape),
     showAssignButton: PropTypes.bool,
     isInstructor: PropTypes.bool
   };
@@ -22,7 +22,7 @@ export default class CourseOverviewTopRow extends Component {
       id,
       courseOfferingId,
       courseVersionId,
-      migratedTeacherResources,
+      teacherResources,
       studentResources,
       showAssignButton,
       sectionsForDropdown,
@@ -31,11 +31,8 @@ export default class CourseOverviewTopRow extends Component {
 
     return (
       <div style={styles.main} className="course-overview-top-row">
-        {isInstructor && migratedTeacherResources.length > 0 && (
-          <ResourcesDropdown
-            migratedResources={migratedTeacherResources}
-            unitGroupId={id}
-          />
+        {isInstructor && teacherResources.length > 0 && (
+          <ResourcesDropdown resources={teacherResources} unitGroupId={id} />
         )}
         {isInstructor && (
           <SectionAssigner
@@ -49,7 +46,7 @@ export default class CourseOverviewTopRow extends Component {
         )}
         {!isInstructor && studentResources && studentResources.length > 0 && (
           <ResourcesDropdown
-            migratedResources={studentResources}
+            resources={studentResources}
             unitGroupId={id}
             studentFacing
           />

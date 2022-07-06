@@ -1332,7 +1332,7 @@ class Script < ApplicationRecord
       errors.add(:base, e.to_s)
       return false
     end
-    update_migrated_teacher_resources(general_params[:resourceIds])
+    update_teacher_resources(general_params[:resourceIds])
     update_student_resources(general_params[:studentResourceIds])
     tts_update(true) if need_to_update_tts
     begin
@@ -1353,7 +1353,7 @@ class Script < ApplicationRecord
     File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
   end
 
-  def update_migrated_teacher_resources(resource_ids)
+  def update_teacher_resources(resource_ids)
     self.resources = (resource_ids || []).map {|id| Resource.find(id)}
   end
 
@@ -1512,7 +1512,7 @@ class Script < ApplicationRecord
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
-      migrated_teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,

@@ -617,7 +617,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal [:name, :id, :title, :assignment_family_title,
                   :family_name, :version_year, :published_state, :instruction_type, :instructor_audience, :participant_audience,
                   :pilot_experiment, :description_short, :description_student,
-                  :description_teacher, :version_title, :scripts, :migrated_teacher_resources,
+                  :description_teacher, :version_title, :scripts, :teacher_resources,
                   :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :course_versions, :show_assign_button,
                   :announcements, :course_offering_id, :course_version_id, :course_path, :course_offering_edit_path], summary.keys
     assert_equal 'my-unit-group', summary[:name]
