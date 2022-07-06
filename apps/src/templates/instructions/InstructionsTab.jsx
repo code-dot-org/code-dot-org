@@ -36,6 +36,8 @@ export default class InstructionsTab extends Component {
           : this.props.isMinecraft
           ? craftStyles.highlightedWrapper
           : styles.highlightedWrapper
+        : this.props.teacherOnly
+        ? styles.teacherText
         : {})
     };
     const combinedStyle = {
@@ -106,6 +108,7 @@ const styles = {
     color: color.white
   },
   teacherHighlightedWrapper: {
+    color: color.lightest_cyan,
     borderBottom: '2px solid ' + color.lightest_cyan
   }
 };
