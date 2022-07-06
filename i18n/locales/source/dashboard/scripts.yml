@@ -24234,7 +24234,7 @@ en:
               display_name: 'Part II:  Concepts in Courses A - F'
             k5_next_steps_1:
               display_name: 'Part III:  Next Steps'
-          title: Teaching Computer Science Fundamentals ('21-'22)
+          title: Teaching Computer Science Fundamentals ('22-'23)
           description: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
@@ -25163,6 +25163,7 @@ en:
           student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Discoveries.\n-   Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
           description_short: ''
           description_audience: ''
+          name: self-paced-pl-csd1-2022
         self-paced-pl-csd2-2022:
           lessons:
             Welcome to Codeorg:
@@ -25189,6 +25190,7 @@ en:
           student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
           description_short: ''
           description_audience: ''
+          name: self-paced-pl-csd2-2022
         self-paced-pl-csd3-2022:
           lessons:
             Overview of course content:
@@ -25211,6 +25213,7 @@ en:
           student_description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n-   Gain a high-level understanding of the CS Discoveries curriculum.\n-   Become familiar with the programming environments used within CS Discoveries.\n-   Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
           description_short: ''
           description_audience: ''
+          name: self-paced-pl-csd3-2022
         self-paced-pl-csd4-2022:
           lessons:
             Role of the teacher:
@@ -25225,6 +25228,8 @@ en:
               name: Learning CS Discoveries
             lesson-3:
               name: Teaching CS Discoveries
+            Connect with the CS community:
+              name: Connect with the CS community
           lesson_groups:
             lessonGroup-2:
               display_name: Teaching and learning CS Discoveries
@@ -25233,6 +25238,7 @@ en:
           student_description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n\n-   Consider the role of the teacher in a CS Discoveries classroom. \n-   Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n-   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
           description_short: ''
           description_audience: ''
+          name: self-paced-pl-csd4-2022
         self-paced-pl-csp1-2022:
           lessons:
             Welcome to Codeorg:
@@ -25248,6 +25254,8 @@ en:
           student_description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: self-paced-pl-csp1-2022
         self-paced-pl-csp2-2022:
           lessons:
             Navigating the Codeorg learning platform:
@@ -25267,6 +25275,8 @@ en:
           student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: self-paced-pl-csp2-2022
         self-paced-pl-csp3-2022:
           lessons:
             Overview of course content:
@@ -25308,6 +25318,8 @@ en:
             **Suggested time**: 90 minutes
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: self-paced-pl-csp3-2022
         self-paced-pl-csp4-2022:
           lessons:
             The role of the teacher:
@@ -25432,10 +25444,12 @@ en:
             lesson-1:
               name: Overview
           title: CS Discoveries Deeper Learning Overview
-          description: Welcome to the 2021 Deeper Learning program for onboarding CS Discoveries facilitators.
+          description: Welcome to the 2022 Deeper Learning program for onboarding CS Discoveries facilitators.
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csd-overview-2022
         dlp-csd-mod1-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25446,11 +25460,13 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Discoveries Deeper Learning Module 1 for Workshop 1
+          title: 2022 CS Discoveries Deeper Learning FiT Module
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csd-mod1-2022
         dlp-csd-mod2-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25461,11 +25477,13 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Discoveries Deeper Learning Module 2 for Workshop 2
-          description: ''
+          title: 2022 CS Discoveries Deeper Learning Module A
+          description: "## This module will be published by August 1, 2022."
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csd-mod2-2022
         dlp-csd-mod3-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25476,11 +25494,13 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Discoveries Deeper Learning Module 3 for Workshop 3
-          description: ''
+          title: 2022 CS Discoveries Deeper Learning Module B
+          description: "## This module will be published by October 3, 2022."
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csd-mod3-2022
         dlp-csd-mod4-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25491,11 +25511,13 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
+          title: 2022 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csd-mod4-2022
         dlp-csp-mod1-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25506,11 +25528,13 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Principles Deeper Learning Module 1 for Workshop 1
+          title: 2022 CS Principles Deeper Learning FiT Module
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csp-mod1-2022
         dlp-csp-mod2-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25521,11 +25545,13 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Principles Deeper Learning Module 2 for Workshop 2
+          title: 2022 CS Principles Deeper Learning Module A
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csp-mod2-2022
         dlp-csp-mod3-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25536,11 +25562,13 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Principles Deeper Learning Module 3 for Workshop 3
-          description: ''
+          title: 2022 CS Principles Deeper Learning Module B
+          description: "## This module will be published by October 3, 2022."
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csp-mod3-2022
         dlp-csp-mod4-2022:
           lessons:
             'Stage 1: Increase Understanding':
@@ -25551,22 +25579,26 @@ en:
               name: 'Stage 1: Increase Understanding'
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-          title: 2021 CS Principles Deeper Learning Module 4  for Workshop 4
+          title: 2022 CS Principles Deeper Learning Module 4  for Workshop 4
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csp-mod4-2022
         dlp-csp-overview-2022:
           lessons:
             Overview:
               name: Overview
             lesson-1:
               name: Overview
-          title: 2021 CS Principles Deeper Learning Overview
+          title: 2022 CS Principles Deeper Learning Overview
           description: "### Welcome to the 2021 Deeper Learning program for onboarding CS Principles facilitators."
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: dlp-csp-overview-2022
         csc-ecosystems-2022:
           lessons:
             Hello World CSC:
@@ -25618,7 +25650,7 @@ en:
             Code Your Fable:
               name: Code Your Story
             Share Your Fable:
-              name: Share Your Fable
+              name: Share Your Story
             lesson-4:
               name: "[Optional] Introduction to Fables"
             lesson-5:
@@ -25696,3 +25728,41 @@ en:
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+        vpl-csa-2022:
+          lessons:
+            lesson-1:
+              name: 'Module 1 post-work: Reviewing the Unit 3 project'
+            lesson-2:
+              name: 'Module 2 post-work: Understanding Unit 4 content'
+          lesson_groups: {}
+          name: vpl-csa-2022
+          title: CSA Virtual Professional Learning
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-labs-2022:
+          lessons:
+            lesson-1:
+              name: Introduction to Chatbots (Optional)
+            lesson-2:
+              name: Celebrity Lab First Activity
+            lesson-3:
+              name: Chatbot Investigation
+            lesson-4:
+              name: Better Keyword Detection
+            lesson-5:
+              name: Read and Respond to Statements
+            lesson-6:
+              name: Arrays within Magpie (Optional)
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Magpie Lab
+            lessonGroup-3:
+              display_name: Celebrity Lab
+          name: csa-labs-2022
+          title: AP CSA College Board Labs
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
