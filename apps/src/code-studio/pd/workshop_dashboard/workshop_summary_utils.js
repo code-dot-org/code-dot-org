@@ -7,7 +7,7 @@ import {CSF, CSD, CSP, CSA} from '../application/ApplicationConstants';
 export function shouldUseFoormSurvey(subject, lastSessionDate) {
   // Local summer workshop, CSF Intro workshop, CSP workshop for returning teachers, and academic year workshops for CSP and CSD
   // after 5/8/2020 will use Foorm for survey completion.
-  // Everything after 9/1 will use Foorm
+  // CSF Deep Dive and District workshops after 9/1 will also use Foorm
   return (
     (lastSessionDate >= new Date('2020-05-08') &&
       (subject === SubjectNames.SUBJECT_SUMMER_WORKSHOP ||
