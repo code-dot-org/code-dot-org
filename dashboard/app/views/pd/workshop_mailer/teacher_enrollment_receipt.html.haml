@@ -7,7 +7,7 @@
   Hi
   = @enrollment.first_name + ','
 
-- if @workshop.local_summer?
+- if @workshop.local_summer? || @workshop.ayw?
   %p
     Thanks for enrolling in
     = "#{@workshop.organizer.name}’#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
