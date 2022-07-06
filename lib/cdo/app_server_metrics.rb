@@ -39,7 +39,7 @@ module Cdo
     end
 
     def shutdown
-      @task && @task.shutdown
+      @task&.shutdown
     end
 
     def spawn_reporting_task

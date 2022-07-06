@@ -1,8 +1,8 @@
 {
   "limit": null,
   "shared_data": {
-    "write_to_file": true,
     "write_to_gsheet": true,
+    "write_to_file": false,
     "start_date": "2021-11-01"
   },
   "data": [

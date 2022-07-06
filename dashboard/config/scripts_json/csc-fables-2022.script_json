@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2022-06-23 20:33:31 UTC",
+    "serialized_at": "2022-07-05 22:19:01 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -62,6 +62,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "In this lesson, students will compare and contrast similar themes, topics, and patterns of events in traditional literature from different cultures in order to begin writing and coding their own short stories.",
+        "preparation": "- Review the List of Fables document\n- Choose a theme to focus on \n- Choose fables from within the theme for students to read for this lesson\n",
+        "purpose": "Students will begin to compare and contrast common topics and elements of short stories (fairy tales, folklore, myths, and fables). Students can identify similar themes, topics, and patterns of events in traditional literature from across different cultures. Students will use their knowledge of story patterns to code and program their own short story scene. "
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -107,7 +110,7 @@
     },
     {
       "key": "Share Your Fable",
-      "name": "Share Your Fable",
+      "name": "Share Your Story",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -163,6 +166,48 @@
       "seeding_key": {
         "lesson_activity.key": "d36188e4-afe5-4ac4-9a2f-6073f9f70d59",
         "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022"
+      }
+    },
+    {
+      "key": "e20feaf2-913b-4e1b-8000-7136ed6258ad",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e20feaf2-913b-4e1b-8000-7136ed6258ad",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022"
+      }
+    },
+    {
+      "key": "429424a5-50c8-4363-8441-864eb6b47786",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "429424a5-50c8-4363-8441-864eb6b47786",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-fables-2022"
+      }
+    },
+    {
+      "key": "1d066e73-3e98-44e7-b318-9b3006a26c43",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d066e73-3e98-44e7-b318-9b3006a26c43",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "csc-fables-2022"
       }
@@ -430,7 +475,7 @@
       "key": "d9d32b68-4eb1-4b33-8574-34d1a6e32dce",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14 - Free Play” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 15 - Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -459,6 +504,122 @@
       "seeding_key": {
         "activity_section.key": "28f6cc76-0588-4abe-bd4f-1040d609cf4e",
         "lesson_activity.key": "d36188e4-afe5-4ac4-9a2f-6073f9f70d59"
+      }
+    },
+    {
+      "key": "2f8a5c70-23e2-4225-8bda-f0cfeb2a21fe",
+      "position": 1,
+      "properties": {
+        "description": "**Do This**: Before the lesson, choose a theme to focus on. For example, “truth prevails over lies”. Gather and plan to read aloud one fable as a class and also 4-5 additional fables for this activity. All fables should fall under the same theme. You can choose from our List of Fables or curate your own fables. Be sure to identify the moral of each fable and the scene where the moral/lesson is learned before reading.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f8a5c70-23e2-4225-8bda-f0cfeb2a21fe",
+        "lesson_activity.key": "e20feaf2-913b-4e1b-8000-7136ed6258ad"
+      }
+    },
+    {
+      "key": "1eae1f71-de3d-47ae-9fdf-6e4355d5c3a6",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss**: What is an example of a story with a lesson?\n\n**Discussion Goal**: Encourage students to make connections to stories they’ve heard growing up or from family members and ask them to share with the group, or stories they’ve seen in movies or television. Use The Tortoise and the Hare as an example to help guide the discussion. As students share, connect their fables back to the ones they read as a class and compare how characters or morals/lessons can be similar between many different stories. Students should understand that short stories that are fairytales, fables, folklore, or myths explain or show a moral. Review examples of common fables students may be familiar with, like The Tortoise and the Hare, The Boy who Cried Wolf, or The Ugly Duckling. You can also ask students to share stories they’ve read with their family that may have a moral as well.\n",
+        "duration": "5",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "1eae1f71-de3d-47ae-9fdf-6e4355d5c3a6",
+        "lesson_activity.key": "e20feaf2-913b-4e1b-8000-7136ed6258ad"
+      }
+    },
+    {
+      "key": "791327b6-64fb-4d07-8e3d-2ad0deb1b33b",
+      "position": 3,
+      "properties": {
+        "description": "When a story has a lesson that we can learn from, that lesson is called the **moral** of the story. Short stories with a moral are common across many countries and cultures. Short stories that teach a moral can be fairytales, fables, myths, or folklore. \n\nToday, we are going to read two short stories that have a similar moral and try to describe the moral of each fable. We’re also going to pay attention to who the characters are and where in the story the lesson is learned. Then we’ll compare these fables to see what they have in common.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "791327b6-64fb-4d07-8e3d-2ad0deb1b33b",
+        "lesson_activity.key": "e20feaf2-913b-4e1b-8000-7136ed6258ad"
+      }
+    },
+    {
+      "key": "d9c25cc5-67d5-4005-989b-906ca2a88a1e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**\n\n- **Fable** - A short story conveying a moral\n- **Moral** - A lesson learned\n- **Scene** - A small moment in a story that adds meaning \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9c25cc5-67d5-4005-989b-906ca2a88a1e",
+        "lesson_activity.key": "e20feaf2-913b-4e1b-8000-7136ed6258ad"
+      }
+    },
+    {
+      "key": "9083e327-182a-4f17-90fb-a7855d840e57",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Create a Venn Diagram in a large area at the front of the classroom. Put the name of the fable above the left circle.\n\nBefore reading, share the moral/lesson of the story with the class. Ask students to look for scenes where the lesson/moral is learned by the character. \n\nThen, read the fable as a class, pausing to fill in each individual circle with descriptive words about each character in the story. Ask students to describe how each character is acting, such as “greedy” or “brave” or “caring”. At the end of each story, identify the scene/part in the story where the moral/lesson is learned. See the Teacher Example for an example of how this can look.\n\nHave students return to their original groups. There should be an “expert” for each number/short story. Students will share with their groups their findings/answers to the guiding questions. Students will hear examples of different short stories. \n",
+        "duration": "30",
+        "name": "Compare Fables"
+      },
+      "seeding_key": {
+        "activity_section.key": "9083e327-182a-4f17-90fb-a7855d840e57",
+        "lesson_activity.key": "429424a5-50c8-4363-8441-864eb6b47786"
+      }
+    },
+    {
+      "key": "964d741d-fe42-4b49-a311-b571db1e3a05",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "***Focus on Actions:*** To foreshadow the next few lessons, ask students to focus on the actions that characters take as clues to their character traits - for example, we may know someone is cowardly because they hide during an important part of the fable. Have students think about how they might show a “cowardly” character using code. In later lessons, when students are coding their character actions, they can remember back to this lesson when they connected character actions to character traits. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "964d741d-fe42-4b49-a311-b571db1e3a05",
+        "lesson_activity.key": "429424a5-50c8-4363-8441-864eb6b47786"
+      }
+    },
+    {
+      "key": "3fc4d6eb-9b3b-4cf8-851f-010b532427da",
+      "position": 3,
+      "properties": {
+        "description": "\n\n**Do This:** After completing the Venn Diagram for one story, instruct students that they will be placed into partnerships and as a group, they will be reading a fable with a similar lesson/moral. Students will compare their fables, to the fable they read aloud as a class.  \n\nAsk students to write any similarities between the two fables. These may have to do with the plot, like both stories involving an obstacle to overcome, or it may have to do with the setting, such as both stories being set in an outdoor space.\n\n**Do This:** Once students have finished filling in their Venn Diagram, students will jigsaw to share their work with other students. \n\n**Create a jigsaw:**\n1. Split the room into groups of 4-5.\n2. Give each person in the group a short story from the text set.\n3. Each person in the group will become an “expert” on their short story.\n4. Assign a number to each person in the group. This will be their “expert” group. \n5. Students move to “expert” groups and give the group their short story.\n6. Each group will read their story allowed and then discuss using the following guiding questions:\n7. In your own words, what is the moral?\n   - Where in the story did the characters learn the lesson?\n   - What events in the story contributed to making this lesson?\n   - How is this lesson similar, or different than the lesson of the short story we read as a class?\n8. Have students return to their original groups. There should be an “expert” for each number/short story.\n9. Students will share with their groups their findings/answers to the guiding questions which allows all students to hear examples of several different short stories. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3fc4d6eb-9b3b-4cf8-851f-010b532427da",
+        "lesson_activity.key": "429424a5-50c8-4363-8441-864eb6b47786"
+      }
+    },
+    {
+      "key": "28182805-4c4a-418e-9e06-97b650a69b37",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Benefits to using a jigsaw will allow students to get exposure to different fables. They will have a chance to act as both expert and researcher as they go around the classroom. This can be quicker and more effective than having each student read every story and analyze it as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "28182805-4c4a-418e-9e06-97b650a69b37",
+        "lesson_activity.key": "429424a5-50c8-4363-8441-864eb6b47786"
+      }
+    },
+    {
+      "key": "dd838c02-ba76-41b5-8f4c-1b3d1bc16219",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\nJournal \n\n**Discuss**: \n_How were the short stories we read similar? How were they different?_\n\n**Discussion Goal**: Encourage Students to give specific examples about the story they read by using titles and specific details. All had a moral of ____________, One short story had a similar problem to  another, etcetera. Students will gain an understanding, that all of these types of stories follow a similar pattern.  \n",
+        "duration": "10",
+        "name": "Review Anchor Chart"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd838c02-ba76-41b5-8f4c-1b3d1bc16219",
+        "lesson_activity.key": "1d066e73-3e98-44e7-b318-9b3006a26c43"
       }
     },
     {
@@ -1585,6 +1746,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fables_events_say"
+        ],
         "progression": "Code Your Fable"
       },
       "bonus": false,
@@ -2040,6 +2204,18 @@
       "seeding_key": {
         "resource.key": "project_reflection"
       }
+    },
+    {
+      "name": "Venn Diagram Example",
+      "url": "https://docs.google.com/document/d/1HtfKpCHRBeZePeCGcheFzLu9N9HDzxYuiTjB0QUmPxs/template/preview",
+      "key": "venn_diagram_example",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "venn_diagram_example"
+      }
     }
   ],
   "lessons_resources": [
@@ -2108,6 +2284,24 @@
         "lesson.key": "Share Your Fable",
         "resource.key": "project_reflection"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "fable_adaptations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "fables_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "venn_diagram_example"
+      }
     }
   ],
   "scripts_resources": [
@@ -2156,6 +2350,16 @@
       "seeding_key": {
         "vocabulary.key": "moral"
       }
+    },
+    {
+      "key": "scene",
+      "word": "Scene",
+      "definition": "A small moment in a short story",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "scene"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -2187,6 +2391,24 @@
       "seeding_key": {
         "lesson.key": "Plan Your Fable",
         "vocabulary.key": "character_trait"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "fable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "moral"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "scene"
       }
     }
   ],
@@ -2235,6 +2457,16 @@
       }
     },
     {
+      "key": "3e86c2f0-6cd3-4b8d-8cba-262b478f8524",
+      "properties": {
+        "description": "Identify common topics of fables in order to compare and contrast commonalities"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "3e86c2f0-6cd3-4b8d-8cba-262b478f8524"
+      }
+    },
+    {
       "key": "3f8f64c7-3a22-448f-81d2-ee721384523f",
       "properties": {
         "description": "Reflect on the design process"
@@ -2252,6 +2484,16 @@
       "seeding_key": {
         "lesson.key": "Hello World CSC",
         "objective.key": "620004b3-a25c-4583-8180-b8ae30361bfb"
+      }
+    },
+    {
+      "key": "96ccb457-7857-4847-b6bb-3f8a44b24f78",
+      "properties": {
+        "description": "List similar traits of short stories in order to compare and contrast commonalities"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "96ccb457-7857-4847-b6bb-3f8a44b24f78"
       }
     },
     {

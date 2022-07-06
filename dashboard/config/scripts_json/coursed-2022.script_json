@@ -15,8 +15,8 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-06-22 18:44:06 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-06-29 14:54:32 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -3197,7 +3197,8 @@
       "key": "419b0732-9e07-4ab2-8c48-0fb798dfdfde",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5 - Skill Building” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-4 - Skill Building” slide",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "419b0732-9e07-4ab2-8c48-0fb798dfdfde",
@@ -3219,7 +3220,7 @@
       "key": "c6bd1d9a-a98f-444b-b24b-05fef7ca82ec",
       "position": 5,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-12 - Skill Building” slide",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-10 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -3242,7 +3243,7 @@
       "key": "4d4e1c44-ff30-4ba6-bdcc-67dc52d3c85a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14-16 - Challenge” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11-13 - Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -3266,7 +3267,7 @@
       "key": "268e56b4-6f3e-4a44-8383-2e538ae1ab72",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 18 - Free Play” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14 - Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -6489,7 +6490,8 @@
       "properties": {
         "level_keys": [
           "Overworld Move to Sheep2022"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -6513,7 +6515,8 @@
       "properties": {
         "level_keys": [
           "Overworld Chop Tree2022"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -6537,7 +6540,8 @@
       "properties": {
         "level_keys": [
           "Overworld Shear Sheep2022"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -6561,7 +6565,8 @@
       "properties": {
         "level_keys": [
           "Overworld Chop Trees2022"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
