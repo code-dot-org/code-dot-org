@@ -1,5 +1,3 @@
-import i18n from '@cdo/locale';
-
 // We want level builders to be able to specify which of these strings is used,
 // but then want to make sure to show teachers the localized version
 const ResourceType = {
@@ -15,16 +13,3 @@ const ResourceType = {
   curriculumGuide: 'curriculumGuide'
 };
 export default ResourceType;
-
-export const stringForType = {
-  [ResourceType.curriculum]: i18n.curriculum(),
-  [ResourceType.teacherForum]: i18n.teacherForum(),
-  [ResourceType.professionalLearning]: i18n.professionalLearning(),
-  [ResourceType.lessonPlans]: i18n.lessonPlans(),
-  [ResourceType.vocabulary]: i18n.vocabulary(),
-  [ResourceType.codeIntroduced]: i18n.codeIntroduced(),
-  [ResourceType.standardMappings]: i18n.standardMappings(),
-  [ResourceType.allHandouts]: i18n.allHandouts(),
-  [ResourceType.videos]: i18n.videos(),
-  [ResourceType.curriculumGuide]: i18n.curriculumGuide()
-};
