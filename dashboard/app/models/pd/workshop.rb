@@ -707,6 +707,10 @@ class Pd::Workshop < ApplicationRecord
     attendance_count_by_teacher.select {|_, attendances| attendances == sessions.count}.keys
   end
 
+  def ayw?
+    ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(subject)
+  end
+
   def local_summer?
     subject == SUBJECT_SUMMER_WORKSHOP
   end
