@@ -612,14 +612,12 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, position: 0, script: create(:script, name: 'unit1'))
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: 'unit2'))
 
-    unit_group.teacher_resources = [['curriculum', '/link/to/curriculum']]
-
     summary = unit_group.summarize(create(:teacher))
 
     assert_equal [:name, :id, :title, :assignment_family_title,
                   :family_name, :version_year, :published_state, :instruction_type, :instructor_audience, :participant_audience,
                   :pilot_experiment, :description_short, :description_student,
-                  :description_teacher, :version_title, :scripts, :teacher_resources, :migrated_teacher_resources,
+                  :description_teacher, :version_title, :scripts, :migrated_teacher_resources,
                   :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :course_versions, :show_assign_button,
                   :announcements, :course_offering_id, :course_version_id, :course_path, :course_offering_edit_path], summary.keys
     assert_equal 'my-unit-group', summary[:name]
@@ -629,7 +627,6 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'Teacher description here', summary[:description_teacher]
     assert_equal 'Version title', summary[:version_title]
     assert_equal 2, summary[:scripts].length
-    assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
     assert_equal false, summary[:has_verified_resources]
 
     # spot check that we have fields that show up in Script.summarize(false)
@@ -1058,13 +1055,6 @@ class UnitGroupTest < ActiveSupport::TestCase
       refute @csp_2017.has_older_version_progress?(@student)
       refute @csp_2018.has_older_version_progress?(@student)
     end
-  end
-
-  test "update_teacher_resources" do
-    unit_group = create :unit_group
-    unit_group.update_teacher_resources(['professionalLearning'], ['/link/to/plc'])
-
-    assert_equal [['professionalLearning', '/link/to/plc']], unit_group.teacher_resources
   end
 
   test 'has pilot access' do
