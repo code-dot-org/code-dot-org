@@ -1,5 +1,4 @@
-- display_ceos_for_cs_banner = true
-- if request.locale == "en-US" && display_ceos_for_cs_banner
+- if request.locale == "en-US" && !!DCDO.get('ceos-for-cs-banner', false)
   = inline_css 'generated/homepage_ceos_for_cs_banner.css'
 
   %aside.homepage-ceos-for-cs-banner
