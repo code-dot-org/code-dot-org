@@ -643,7 +643,6 @@ class ScriptTest < ActiveSupport::TestCase
     lesson_group = create(:lesson_group, key: 'key1', script: unit)
     lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: unit, lesson: lesson)
-    unit.teacher_resources = [['curriculum', '/link/to/curriculum']]
     create :resource, lessons: [lesson], include_in_pdf: true
     Services::CurriculumPdfs.stubs(:get_script_overview_url).returns('/overview-pdf-url')
     Services::CurriculumPdfs.stubs(:get_unit_resources_url).returns('/resources-pdf-url')
@@ -655,7 +654,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'teacher_led', summary[:instructionType]
     assert_equal 'teacher', summary[:instructorAudience]
     assert_equal 'student', summary[:participantAudience]
-    assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
     assert_equal '/overview-pdf-url', summary[:scriptOverviewPdfUrl]
     assert_equal '/resources-pdf-url', summary[:scriptResourcesPdfUrl]
   end
