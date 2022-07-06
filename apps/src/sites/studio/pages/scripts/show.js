@@ -115,7 +115,7 @@ function initPage() {
         courseTitle={scriptData.course_title}
         courseLink={scriptData.course_link}
         excludeCsfColumnInLegend={!scriptData.csf}
-        migratedTeacherResources={scriptData.migrated_teacher_resources}
+        teacherResources={scriptData.teacher_resources}
         studentResources={scriptData.student_resources || []}
         showCourseUnitVersionWarning={
           scriptData.show_course_unit_version_warning
