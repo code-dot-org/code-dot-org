@@ -5,9 +5,6 @@ require_relative './translation_service'
 module I18n
   module TranslationStatus
     class Updater
-      def initialize
-        super
-      end
       # Redshift table where known normalized_keys are logged to.
       STRING_TRACKING_TABLE = 'analysis.i18n_string_tracking_events'.freeze
       # Redshift table where the translation status of normalized_key is stored.

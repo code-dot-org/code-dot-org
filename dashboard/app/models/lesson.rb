@@ -554,21 +554,6 @@ class Lesson < ApplicationRecord
     }
   end
 
-  # Returns a hash representing i18n strings in scripts.en.yml which may need
-  # to be updated after this object was updated. Currently, this only updates
-  # the lesson name and overviews.
-  def i18n_hash
-    {
-      script.name => {
-        'lessons' => {
-          key => {
-            'name' => name
-          }
-        }
-      }
-    }
-  end
-
   # For a given set of students, determine when the given lesson is locked for
   # each student.
   # The design of a lockable lesson is that there is (optionally) some number of
@@ -919,7 +904,6 @@ class Lesson < ApplicationRecord
     copied_lesson.standards = standards
     copied_lesson.opportunity_standards = opportunity_standards
 
-    Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_unit.name)
     destination_unit.fix_script_level_positions
     destination_unit.write_script_json
     copied_lesson
