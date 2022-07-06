@@ -12,16 +12,6 @@
       %p If specified this error message will be used to replace ALL error
       messages in the puzzle. Be certain this is what you want before using.
       = f.text_field :failure_message_override, style: 'width: 600px;', placeholder: 'Type Override Failure Message Here'
-  -# Dance and Poetry are special types of GamelabJr (Sprite Lab) levels
-  - if @level.is_a?(GamelabJr) && !(@level.is_a?(Dancelab) || @level.is_a?(Poetry))
-    %p
-      Sprite Lab validation can utilize a number of
-      %a{:href => "https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/criterionCommands.js"}
-        criterion commands
-      \. Available feedback strings are located in
-      %a{:href => "https://github.com/code-dot-org/code-dot-org/blob/staging/apps/i18n/spritelab/en_us.json"}
-        spritelab/en_us.json
-      \. Additional criterion functions and feedback strings need to be added by an engineer.
   -# GamelabJr, Dancelab, and Poetry are also Gamelab levels
   - if @level.is_a?(Gamelab)
     %p
@@ -34,6 +24,23 @@
       for the list of valid test results). There is also a `validationProps`
       object that you can stick arbitrary properties on to track state across
       draw loops.
+  -# Dance and Poetry are special types of GamelabJr (Sprite Lab) levels
+  - if @level.is_a?(GamelabJr) && !(@level.is_a?(Dancelab) || @level.is_a?(Poetry))
+    %p
+      Sprite Lab validation can utilize a number of
+      %a{:href => "https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/criterionCommands.js"}
+        criterion commands
+      \. Available feedback strings are located in
+      %a{:href => "https://github.com/code-dot-org/code-dot-org/blob/staging/apps/i18n/spritelab/en_us.json"}
+        spritelab/en_us.json
+      \. Additional criterion functions and feedback strings need to be added by an engineer.
+      %p
+      Click to insert example:
+      - GamelabJr::SAMPLE_VALIDATION_FUNCTIONS.each do |name, value|
+        :javascript
+          var verificationFunction#{name} = '#{value.gsub('\n', "\\n' + '")}';
+        %li
+          %a{style:"cursor: pointer", onclick: "levelbuilder.populateValidationEditor(verificationFunction#{name});"}= name
     = f.text_area :validation_code
 
   = render partial: 'levels/editors/fields/applab_validations', locals: {f: f} if @level.is_a?(Applab)
