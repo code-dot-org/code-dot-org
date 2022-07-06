@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-07-01 15:54:11 UTC",
+    "serialized_at": "2022-07-05 21:49:15 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -55,12 +55,15 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Magpie Lab First Activity",
+      "name": "Introduction to Chatbots (Optional)",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "**What is a chatbot?**  \n\nFrom Eliza in the 1960s to Siri and Alexa today, the idea of talking to computers in natural language\nhas fascinated people. More and more, computer programs allow people to interact with them by speaking and typing in our own language. The field of computer science that addresses how computers can understand human language is called Natural Language Processing (NLP). The most common application of NLP is evidenced by *chatbots*.",
+        "purpose": "Students explore existing chatbots and try them on predefined statements. Ideally, students will\nwork in small groups as they try out the chatbots. Working in pairs encourages more\nexploration. They will finish this exploration lesson by making predictions of the possible algorithms behind the chatbots.",
+        "student_overview": "**What is a chatbot?**  \n\nFrom Siri to Alexa, the idea of talking to computers in our own language\nhas long fascinated people. For this lab, you will explore some of the basics of NLP (Natural Language Processing) through an exploration of *chatbots*. "
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -69,12 +72,72 @@
       }
     },
     {
-      "key": "lesson-2",
-      "name": "Celebrity Lab First Activity",
+      "key": "lesson-3",
+      "name": "Chatbot Investigation",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Better Keyword Detection",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Read and Respond to Statements",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Arrays within Magpie (Optional)",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Celebrity Lab First Activity",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -89,10 +152,88 @@
       "key": "68c4ee61-9661-4e7a-aa67-0975e1540bc6",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "68c4ee61-9661-4e7a-aa67-0975e1540bc6",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "044ec28c-ecd8-4b1e-ba8a-333a3df54ce9",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "044ec28c-ecd8-4b1e-ba8a-333a3df54ce9",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "c645f61c-6d66-4319-be8c-39d0b98a9bb0",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c645f61c-6d66-4319-be8c-39d0b98a9bb0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "d238340b-38f6-4de4-ac44-c841b724f3b9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d238340b-38f6-4de4-ac44-c841b724f3b9",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "4938a3b9-c5cd-40fb-b76f-74fb41e4e4d3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4938a3b9-c5cd-40fb-b76f-74fb41e4e4d3",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "d50e9b82-b867-41bb-b48b-e7370696fe96",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d50e9b82-b867-41bb-b48b-e7370696fe96",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "b67821e9-baf6-455b-b130-b35e999b79e4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b67821e9-baf6-455b-b130-b35e999b79e4",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-labs-2022"
       }
@@ -103,10 +244,146 @@
       "key": "afcec2fb-ae78-45bc-b469-24ce8d498e1c",
       "position": 1,
       "properties": {
+        "description": "**Discuss:** Click through the animated slide to display the prompts.\n\n*  *What do you think a chatbot is?*\n\n**Group:** Place students in groups of 4.\n\n**Distribute:** Give each student 2-3 sticky notes. \n\n**Do This:** Direct students to write a generic answer on each sticky note. Encourage students to be creative and think beyond simple \"yes\" or \"no\" answers. Once they have at least 2 sticky notes, have students fold their sticky notes and place them in a pile in the middle of their group *(you can also choose to provide containers for each group to hold their sticky notes)*.  \n\n**Do This:** Direct students to take turns asking a question out loud and then selecting a sticky note at random for their answer *(example: \"Are we running the mile in PE today?\" or \"Will I have homework in CSA today?\")*.  ",
+        "name": "Exploring the Nature of Chatbots"
       },
       "seeding_key": {
         "activity_section.key": "afcec2fb-ae78-45bc-b469-24ce8d498e1c",
         "lesson_activity.key": "68c4ee61-9661-4e7a-aa67-0975e1540bc6"
+      }
+    },
+    {
+      "key": "3ef89206-ef00-49fa-9f1d-9ca3f24f4d82",
+      "position": 2,
+      "properties": {
+        "description": "Chatbots are programs that are designed to respond like humans to natural language input. Before you\nwrite code to create your own chatbot, you will explore some existing chatbots.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3ef89206-ef00-49fa-9f1d-9ca3f24f4d82",
+        "lesson_activity.key": "68c4ee61-9661-4e7a-aa67-0975e1540bc6"
+      }
+    },
+    {
+      "key": "31cf9ced-4d0e-4b74-8d15-993ff10743bf",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Direct students to go to one of the chatbot links provided. Give students time to try out several of the chatbots and find one to use for this activity. ",
+        "duration": "10",
+        "name": "Finding Your Chatbot",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you are unable to access a usable chatbot, you may choose to show the following videos so that students can still see a chatbot *in action*. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "31cf9ced-4d0e-4b74-8d15-993ff10743bf",
+        "lesson_activity.key": "044ec28c-ecd8-4b1e-ba8a-333a3df54ce9"
+      }
+    },
+    {
+      "key": "e73b37ef-16d3-446f-96aa-b5e035540d9c",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Direct students to have several converstaions with their chatbot. Click through the animated slide to display the prompts that students will discuss/answer about their experience.\n* *How does it respond to \"where do you come from?\"*\n* *What is the most interesting response?*\n* *What is the most peculiar response?*\n* *How does it response to \"asdfghkl;\"?* \n",
+        "duration": "10",
+        "name": "Interrogating the Chatbot"
+      },
+      "seeding_key": {
+        "activity_section.key": "e73b37ef-16d3-446f-96aa-b5e035540d9c",
+        "lesson_activity.key": "044ec28c-ecd8-4b1e-ba8a-333a3df54ce9"
+      }
+    },
+    {
+      "key": "e87f37e1-8079-4fbd-8e44-d4616a03bbcc",
+      "position": 3,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n**Do This:** Work with a partner and have your two chatbots converse with each other. \n",
+        "duration": "10",
+        "name": "Working With Another Group"
+      },
+      "seeding_key": {
+        "activity_section.key": "e87f37e1-8079-4fbd-8e44-d4616a03bbcc",
+        "lesson_activity.key": "044ec28c-ecd8-4b1e-ba8a-333a3df54ce9"
+      }
+    },
+    {
+      "key": "a9dc8924-982a-42c9-9196-5cc898d40be6",
+      "position": 4,
+      "properties": {
+        "description": "Simple chatbots act by looking for key words or phrases and responding to them. \n\nDiscuss the following with your partner:\n\n1. Can you identify keywords to which your chatbot responds?\n2. Think of several keywords and the responses they might cause.",
+        "duration": "5",
+        "name": "Reflection ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a9dc8924-982a-42c9-9196-5cc898d40be6",
+        "lesson_activity.key": "044ec28c-ecd8-4b1e-ba8a-333a3df54ce9"
+      }
+    },
+    {
+      "key": "505fa39a-01e0-4fe6-85c4-49f6e2730bcc",
+      "position": 5,
+      "properties": {
+        "description": "**Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt."
+      },
+      "seeding_key": {
+        "activity_section.key": "505fa39a-01e0-4fe6-85c4-49f6e2730bcc",
+        "lesson_activity.key": "044ec28c-ecd8-4b1e-ba8a-333a3df54ce9"
+      }
+    },
+    {
+      "key": "602e6642-d656-4a05-9b6a-c1acb1a4743a",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Click through the animated slide to display the prompts.\n* *Based on the keywords you identified and your experience with the chatbot today, can you predict the CS concept being used?*\n* *Write an algorithm using pseudo-code that would create an output of one of your interactions with the chatbot.*\n",
+        "name": "Making a Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "602e6642-d656-4a05-9b6a-c1acb1a4743a",
+        "lesson_activity.key": "c645f61c-6d66-4319-be8c-39d0b98a9bb0"
+      }
+    },
+    {
+      "key": "0fde2517-0fed-40c9-925e-f0c39f1ee7ac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0fde2517-0fed-40c9-925e-f0c39f1ee7ac",
+        "lesson_activity.key": "d238340b-38f6-4de4-ac44-c841b724f3b9"
+      }
+    },
+    {
+      "key": "c4ab2b79-6212-449b-a731-db49acdd863e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c4ab2b79-6212-449b-a731-db49acdd863e",
+        "lesson_activity.key": "4938a3b9-c5cd-40fb-b76f-74fb41e4e4d3"
+      }
+    },
+    {
+      "key": "bff02fbf-a5f2-4499-b818-cde569a78464",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bff02fbf-a5f2-4499-b818-cde569a78464",
+        "lesson_activity.key": "d50e9b82-b867-41bb-b48b-e7370696fe96"
+      }
+    },
+    {
+      "key": "e6f8732e-26c2-4cbf-97c1-9919245fbb33",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e6f8732e-26c2-4cbf-97c1-9919245fbb33",
+        "lesson_activity.key": "b67821e9-baf6-455b-b130-b35e999b79e4"
       }
     }
   ],
@@ -117,10 +394,98 @@
 
   ],
   "resources": [
-
+    {
+      "name": "Chatbot 2",
+      "url": "To be determined",
+      "key": "chatbot_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "chatbot_2"
+      }
+    },
+    {
+      "name": "Chatbot 1",
+      "url": "To be determined",
+      "key": "elbot_the_chatbot",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "elbot_the_chatbot"
+      }
+    },
+    {
+      "name": "Magpie Lab Presentation Slides",
+      "url": "https://docs.google.com/presentation/d/1OXVMA9UcC5p6OrSvLF9vJ3ESJ6y06FURtyw1Xve9R0Q/edit?usp=sharing",
+      "key": "magpie_lab_presentation_slides",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "magpie_lab_presentation_slides"
+      }
+    },
+    {
+      "name": "Video 1",
+      "url": "To be determined",
+      "key": "video_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "video_1"
+      }
+    },
+    {
+      "name": "Video 2",
+      "url": "To be determined",
+      "key": "video_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "video_2"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "chatbot_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "elbot_the_chatbot"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "magpie_lab_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "video_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "video_2"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -129,16 +494,75 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "chatbot",
+      "word": "chatbot",
+      "definition": "Software that simulates human-like conversations.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "chatbot"
+      }
+    },
+    {
+      "key": "natural_language_processing",
+      "word": "Natural Language Processing",
+      "definition": "The field of computer science that addresses how computers can understand human language. It is often abbreviated as NLP. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "natural_language_processing"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "chatbot"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "natural_language_processing"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "2e8b36c3-9613-4d57-8e54-7e0953206400",
+      "properties": {
+        "description": "Predict a simple algorithm used in chatbot output"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "2e8b36c3-9613-4d57-8e54-7e0953206400"
+      }
+    },
+    {
+      "key": "90f359a3-c4c9-4e49-9fde-822793b64bbc",
+      "properties": {
+        "description": "Interact with a variety of chatbots"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "90f359a3-c4c9-4e49-9fde-822793b64bbc"
+      }
+    },
+    {
+      "key": "b7768245-1466-4003-a855-a9d0335defbb",
+      "properties": {
+        "description": "Explore the connection between Natural Language Processing and chatbots"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "b7768245-1466-4003-a855-a9d0335defbb"
+      }
+    }
   ],
   "lessons_standards": [
 
