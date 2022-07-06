@@ -11,25 +11,10 @@
           "elements": [
             {
               "type": "radiogroup",
-              "name": "unit_number",
-              "startWithNewLine": false,
-              "choices": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8
-              ]
-            },
-            {
-              "type": "radiogroup",
               "name": "unit_name",
               "startWithNewLine": false,
               "defaultValueExpression": "{unit_number}",
-              "readOnly": true,
+              "readOnly": false,
               "choices": [
                 {
                   "value": 1,
@@ -65,7 +50,8 @@
           "title": "Panel to hold variables for foorm. HIDE AFTER TESTING",
           "startWithNewLine": false,
           "innerIndent": 3,
-          "indent": 3
+          "indent": 3,
+          "visible": "true"
         },
         {
           "type": "html",
@@ -861,6 +847,51 @@
             }
           ],
           "visibleIf": "{unit_number} = 7"
+        },
+        {
+          "type": "html",
+          "name": "adapt_lesson_preamble",
+          "html": "<font size=+1> <strong>Lesson adapations</strong><br/>At several points in this unit, the curriculum encourages you to adapt lessons to your specific community and context.  If you made such an adaptation, we’d love to hear about it!  </font>"
+        },
+        {
+          "type": "panel",
+          "name": "panel1",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "csd_adapt_lessons",
+              "title": "Did you adapt lesson(s) in this unit to your community context?",
+              "choices": [
+                {
+                  "value": "yes",
+                  "text": "Yes"
+                },
+                {
+                  "value": "no",
+                  "text": "No"
+                },
+                {
+                  "value": "unaware",
+                  "text": "Unaware / I didn't see the recommendations"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "permission_adapt_followup",
+              "title": "I would like the Code.org team to follow up with me for more detail about the adaptations I made to this unit.",
+              "choices": [
+                {
+                  "value": "yes",
+                  "text": "Yes, please!"
+                },
+                {
+                  "value": "no",
+                  "text": "No, thanks."
+                }
+              ]
+            }
+          ]
         },
         {
           "type": "html",

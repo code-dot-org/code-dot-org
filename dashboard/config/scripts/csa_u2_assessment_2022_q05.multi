@@ -28,7 +28,7 @@ public class Dog {
   }
 ```
 
-I.   `Dog d = new Dog("Caesar", 2, 0);`
+I.   `Dog d = new Dog("Caesar", 3, 0);`
 
 II.  `Dog d = new Dog("Bailey", 5, 8);`
 
