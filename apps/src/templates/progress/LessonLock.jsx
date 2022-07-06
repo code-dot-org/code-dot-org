@@ -6,7 +6,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button';
 import i18n from '@cdo/locale';
-import LessonLockDialog from '@cdo/apps/code-studio/components/progress/LessonLockDialog';
+import LessonLockDialog from '@cdo/apps/code-studio/components/progress/LessonLockDialog/LessonLockDialog';
 
 const LessonLock = ({unitId, lessonId}) => {
   const [dialogOpen, setDialogOpen] = useState(false);
