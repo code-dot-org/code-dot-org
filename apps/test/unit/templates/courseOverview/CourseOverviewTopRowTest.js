@@ -7,7 +7,7 @@ const defaultProps = {
   sectionsForDropdown: [],
   id: 30,
   title: 'Computer Science Principles',
-  migratedTeacherResources: [
+  teacherResources: [
     {
       key: 'key1',
       name: 'Curriculum',
@@ -42,44 +42,41 @@ describe('CourseOverviewTopRow', () => {
     assert.equal(wrapper.find('Connect(SectionAssigner)').length, 0);
   });
 
-  it('renders migrated teacher resource dropdown', () => {
+  it('renders teacher resource dropdown', () => {
     const wrapper = shallow(<CourseOverviewTopRow {...defaultProps} />);
     assert.equal(wrapper.find('ResourcesDropdown').length, 1);
+    assert.equal(wrapper.find('ResourcesDropdown').props().resources.length, 3);
     assert.equal(
-      wrapper.find('ResourcesDropdown').props().migratedResources.length,
-      3
-    );
-    assert.equal(
-      wrapper.find('ResourcesDropdown').props().migratedResources[0].name,
+      wrapper.find('ResourcesDropdown').props().resources[0].name,
       'Curriculum'
     );
     assert.equal(
-      wrapper.find('ResourcesDropdown').props().migratedResources[0].url,
+      wrapper.find('ResourcesDropdown').props().resources[0].url,
       '/link/to/curriculum'
     );
     assert.equal(
-      wrapper.find('ResourcesDropdown').props().migratedResources[1].name,
+      wrapper.find('ResourcesDropdown').props().resources[1].name,
       'Professional Learning'
     );
     assert.equal(
-      wrapper.find('ResourcesDropdown').props().migratedResources[1].url,
+      wrapper.find('ResourcesDropdown').props().resources[1].url,
       '/link/to/professional/learning'
     );
     assert.equal(
-      wrapper.find('ResourcesDropdown').props().migratedResources[2].name,
+      wrapper.find('ResourcesDropdown').props().resources[2].name,
       'Teacher Forum'
     );
     assert.equal(
-      wrapper.find('ResourcesDropdown').props().migratedResources[2].url,
+      wrapper.find('ResourcesDropdown').props().resources[2].url,
       'https://forum.code.org/'
     );
   });
 
-  it('doesnt render migrated teacher resource dropdown for students', () => {
+  it('doesnt render teacher resource dropdown for students', () => {
     const wrapper = shallow(
       <CourseOverviewTopRow
         {...defaultProps}
-        migratedTeacherResources={[
+        teacherResources={[
           {
             key: 'key1',
             name: 'Curriculum',
@@ -127,32 +124,29 @@ describe('CourseOverviewTopRow', () => {
       />
     );
     assert.equal(wrapper.find('ResourcesDropdown').length, 1);
+    assert.equal(wrapper.find('ResourcesDropdown').props().resources.length, 3);
     assert.equal(
-      wrapper.find('ResourcesDropdown').props().migratedResources.length,
-      3
-    );
-    assert.equal(
-      wrapper.find('ResourcesDropdown').props().migratedResources[0].name,
+      wrapper.find('ResourcesDropdown').props().resources[0].name,
       'Curriculum'
     );
     assert.equal(
-      wrapper.find('ResourcesDropdown').props().migratedResources[0].url,
+      wrapper.find('ResourcesDropdown').props().resources[0].url,
       '/link/to/curriculum'
     );
     assert.equal(
-      wrapper.find('ResourcesDropdown').props().migratedResources[1].name,
+      wrapper.find('ResourcesDropdown').props().resources[1].name,
       'Professional Learning'
     );
     assert.equal(
-      wrapper.find('ResourcesDropdown').props().migratedResources[1].url,
+      wrapper.find('ResourcesDropdown').props().resources[1].url,
       '/link/to/professional/learning'
     );
     assert.equal(
-      wrapper.find('ResourcesDropdown').props().migratedResources[2].name,
+      wrapper.find('ResourcesDropdown').props().resources[2].name,
       'Teacher Forum'
     );
     assert.equal(
-      wrapper.find('ResourcesDropdown').props().migratedResources[2].url,
+      wrapper.find('ResourcesDropdown').props().resources[2].url,
       'https://forum.code.org/'
     );
   });
