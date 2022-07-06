@@ -5,19 +5,9 @@
       "name": "page1",
       "elements": [
         {
-          "type": "text",
-          "name": "script_name",
-          "visible": false
-        },
-        {
-          "type": "text",
-          "name": "lesson_number",
-          "visible": false
-        },
-        {
           "type": "html",
           "name": "heading_with_unit",
-          "html": "<h1>Course: {course_name}</h1><br/><h2>Unit {unit_number}: {unit_name}</h2><br/><h3>Lesson {lesson_number}: {lesson_name}</h3>",
+          "html": "<h3>Course: {course_name}<br/>Unit {unit_number}: {unit_name}<br/>Lesson {lesson_number}: {lesson_name}",
           "visibleIf": "!!{unit_name}"
         },
         {
