@@ -49,13 +49,13 @@ namespace :curriculum_pdfs do
           any_pdf_generated = true
         end
 
-        if !Services::CurriculumPdfs.script_overview_pdf_exists_for?(script) && should_generate_overview_pdf?(script)
+        if !Services::CurriculumPdfs.script_overview_pdf_exists_for?(script) && Services::CurriculumPdfs.should_generate_overview_pdf?(script)
           puts "Generating missing Script Overview PDF for #{script.name}"
           Services::CurriculumPdfs.generate_script_overview_pdf(script, dir)
           any_pdf_generated = true
         end
 
-        if !Services::CurriculumPdfs.script_resources_pdf_exists_for?(script) && should_generate_resource_pdf?(script)
+        if !Services::CurriculumPdfs.script_resources_pdf_exists_for?(script) && Services::CurriculumPdfs.should_generate_resource_pdf?(script)
           puts "Generating missing Script Resources PDF for #{script.name}"
           Services::CurriculumPdfs.generate_script_resources_pdf(script, dir)
           any_pdf_generated = true
