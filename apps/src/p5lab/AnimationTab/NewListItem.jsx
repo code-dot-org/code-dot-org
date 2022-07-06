@@ -24,9 +24,7 @@ class NewListItem extends React.Component {
         type="button"
       >
         <div style={styles.wrapper}>
-          <div
-            style={[styles.dottedBorder, hovered && styles.dottedBorderHovered]}
-          >
+          <div style={[styles.border, hovered && styles.borderHovered]}>
             <i className="fa fa-plus-circle" style={styles.addButton} />
           </div>
         </div>
@@ -57,31 +55,31 @@ const styles = {
     display: 'block',
     paddingTop: '100%'
   },
-  dottedBorder: {
+  border: {
     position: 'absolute',
     top: 0,
     bottom: 0,
     left: 0,
     right: 0,
     borderRadius: 10,
-    border: 'dashed 2px ' + color.light_gray,
+    backgroundColor: color.bootstrap_button_blue,
     textAlign: 'center',
     paddingTop: '50%'
   },
-  dottedBorderHovered: {
-    backgroundColor: color.lighter_purple
+  borderHovered: {
+    backgroundColor: color.twitter_blue
   },
   addButton: {
-    color: color.light_gray,
-    fontSize: 60,
-    marginTop: '-32px'
+    color: color.white,
+    fontSize: 90,
+    marginTop: '-47px'
   },
   animationName: {
     marginTop: 4,
     textAlign: 'center',
     userSelect: 'none',
     fontWeight: 'bold',
-    color: color.light_gray,
+    color: color.bootstrap_button_blue,
     fontSize: '13px'
   }
 };
