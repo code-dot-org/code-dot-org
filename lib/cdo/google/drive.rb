@@ -132,6 +132,15 @@ module Google
       document.acl
     end
 
+    # Return the title for a spreadsheet document
+    # @param [String] document_key
+    # @return [String] Title of the spreadsheet
+    def get_spreadsheet_title(document_key)
+      document = @session.spreadsheet_by_key(document_key)
+      raise "Could not find document #{document_key}" unless document
+      document.title
+    end
+
     private
 
     def path_to_title_array(path)
