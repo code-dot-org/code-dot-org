@@ -274,10 +274,8 @@ Javalab.prototype.init = function(config) {
   // If validation exists and the level is not passing, validationPassed
   // should be false. Otherwise it is true.
   if (hasValidation && !config.level.isPassing) {
-    console.log('setting validation passed to false');
     getStore().dispatch(setValidationPassed(false));
   } else {
-    console.log('setting validation passed to true');
     getStore().dispatch(setValidationPassed(true));
   }
 
