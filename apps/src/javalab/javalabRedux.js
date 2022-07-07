@@ -25,7 +25,6 @@ const SET_BACKPACK_API = 'javalab/SET_BACKPACK_API';
 const SET_BACKPACK_ENABLED = 'javalab/SET_BACKPACK_ENABLED';
 const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
-const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
 const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
 const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
 const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
@@ -60,7 +59,6 @@ export const initialState = {
   backpackEnabled: false,
   isStartMode: false,
   levelName: undefined,
-  disableFinishButton: false,
   isVisualizationCollapsed: false,
   isPhotoPrompterOpen: false,
   photoPrompterPromptText: '',
@@ -198,13 +196,6 @@ export const setLevelName = levelName => ({
   type: SET_LEVEL_NAME,
   levelName
 });
-
-export const setDisableFinishButton = disableFinishButton => {
-  return {
-    type: SET_DISABLE_FINISH_BUTTON,
-    disableFinishButton
-  };
-};
 
 export const openPhotoPrompter = promptText => ({
   type: OPEN_PHOTO_PROMPTER,
@@ -470,12 +461,6 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       levelName: action.levelName
-    };
-  }
-  if (action.type === SET_DISABLE_FINISH_BUTTON) {
-    return {
-      ...state,
-      disableFinishButton: action.disableFinishButton
     };
   }
   if (action.type === TOGGLE_VISUALIZATION_COLLAPSED) {
