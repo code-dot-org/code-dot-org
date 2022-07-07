@@ -210,6 +210,10 @@ class JavalabView extends React.Component {
       !!isCodeReviewing ||
       !validationPassed;
 
+    const finishButtonTooltipText = validationPassed
+      ? null
+      : javalabMsg.testsNotPassing();
+
     return (
       <StudioAppWrapper>
         <div
@@ -271,6 +275,7 @@ class JavalabView extends React.Component {
                     showTestButton={true}
                     isSubmittable={isSubmittable}
                     isSubmitted={isSubmitted}
+                    finishButtonTooltipText={finishButtonTooltipText}
                   />
                 }
               />
