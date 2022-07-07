@@ -25689,7 +25689,7 @@ en:
               name: Overview
             lesson-1:
               name: Overview
-          title: CS Discoveries Deeper Learning Overview
+          title: 2022 CS Discoveries Deeper Learning Overview
           description: Welcome to the 2022 Deeper Learning program for onboarding CS Discoveries facilitators.
           student_description: ''
           description_short: ''
@@ -25978,6 +25978,8 @@ en:
           lessons:
             lesson-1:
               name: 'Module 1 post-work: Reviewing the Unit 3 project'
+            lesson-2:
+              name: 'Module 2 post-work: Understanding Unit 4 content'
           lesson_groups: {}
           name: vpl-csa-2022
           title: CSA Virtual Professional Learning
@@ -25988,9 +25990,17 @@ en:
         csa-labs-2022:
           lessons:
             lesson-1:
-              name: Magpie Lab First Activity
+              name: Introduction to Chatbots (Optional)
             lesson-2:
               name: Celebrity Lab First Activity
+            lesson-3:
+              name: Chatbot Investigation
+            lesson-4:
+              name: Better Keyword Detection
+            lesson-5:
+              name: Read and Respond to Statements
+            lesson-6:
+              name: Arrays within Magpie (Optional)
           lesson_groups:
             lessonGroup-2:
               display_name: Magpie Lab

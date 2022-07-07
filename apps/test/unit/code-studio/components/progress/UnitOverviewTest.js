@@ -8,7 +8,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 const defaultProps = {
   excludeCsfColumnInLegend: true,
-  teacherResources: [],
   studentResources: [],
   isSignedIn: true,
   isVerifiedInstructor: true,
