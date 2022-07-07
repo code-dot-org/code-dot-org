@@ -1,11 +1,17 @@
+@import 'imports/_breakpoints.scss';
+
 .homepage-ceos-for-cs-banner {
-  padding: 3em 1em;
+  padding: 3em 2em;
   background: url('/images/marketing/ceos_for_cs_banner_bg.svg') center center no-repeat;
   background-size: cover;
 
   .wrapper {
-    max-width: 890px;
+    max-width: 850px;
     margin: 0 auto;
+
+    @media screen and (max-width: $width-md) {
+      max-width: 750px;
+    }
   }
 
   .top-wrapper {
@@ -21,12 +27,25 @@
       border-right: 1px solid;
       font-family: 'Gotham 5r', sans-serif;
       font-size: 3.5em;
+
+      @media screen and (max-width: $width-md) {
+        font-size: 2.5em;
+      }
+
+      @media screen and (max-width: $width-sm) {
+        border: none;
+        padding-right: 0;
+      }
     }
 
     a.btn {
       border: 1px solid white;
       font-size: 1.25em;
-      padding: 0.5em 1.5em;
+      padding: 0.5em 1em;
+
+      @media screen and (max-width: $width-sm) {
+        margin-top: 1em;
+      }
 
       &:nth-of-type(1) {
         background: white;
@@ -39,14 +58,17 @@
     }
   }
 
-
-
   p {
     color: white;
     font-family: 'Gotham 4r', sans-serif;
     font-size: 1.5em;
     text-align: center;
     margin-top: 1em;
+
+    @media screen and (max-width: $width-md) {
+      font-size: 1.125em;
+      margin: 1.5em auto 0;
+    }
   }
 }
 
