@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2022-07-05 22:19:01 UTC",
+    "serialized_at": "2022-07-06 15:07:55 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -98,9 +98,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "In this lesson, students will use their planning sheets to program two character’s dialogue in order to portray a moral. ",
-        "preparation": "- Play through the levels and review the lesson slides.\n- Review the List of Fables document\n- It may be helpful to have students choose a fable to retell before this activity. \n",
-        "purpose": "Students will read several fables to examine the characters and what they say. Students will be able to discuss how a character’s dialogue affects the other characters and the events in the story. Students will then remix their own fable through a set of project building levels."
+        "overview": "In this lesson, students will use their planning sheets and knowledge of short story structures. They will program a retelling of a short story to describe the moral and demonstrate how it is conveyed through key details in the text.",
+        "preparation": "- Play through the levels and review the lesson slides.\n- Review the Fables Guide.\n- It may be helpful to have students choose a fable to retell before this activity. \n",
+        "purpose": "Students will preview an example project to examine the characters and what they say or think. Students will be able to discuss how a character’s actions affect the key details in the story. Students will then retell their own short story through a set of project building levels."
       },
       "seeding_key": {
         "lesson.key": "Code Your Fable",
@@ -546,7 +546,7 @@
       "key": "d9c25cc5-67d5-4005-989b-906ca2a88a1e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**\n\n- **Fable** - A short story conveying a moral\n- **Moral** - A lesson learned\n- **Scene** - A small moment in a story that adds meaning \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**\n\n- **Fable** - A short story conveying a moral\n- **Moral** - A lesson learned\n- **Scene** - A small moment in a short story\n"
       },
       "seeding_key": {
         "activity_section.key": "d9c25cc5-67d5-4005-989b-906ca2a88a1e",
@@ -613,7 +613,7 @@
       "key": "dd838c02-ba76-41b5-8f4c-1b3d1bc16219",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\nJournal \n\n**Discuss**: \n_How were the short stories we read similar? How were they different?_\n\n**Discussion Goal**: Encourage Students to give specific examples about the story they read by using titles and specific details. All had a moral of ____________, One short story had a similar problem to  another, etcetera. Students will gain an understanding, that all of these types of stories follow a similar pattern.  \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n_How were the short stories we read similar? How were they different?_\n\n**Discussion Goal**: Encourage students to give specific examples about the story they read by using titles and specific details. All had a moral of ____________, One short story had a similar problem to another, et cetera. Students will gain an understanding, that all of these types of stories follow a similar pattern.  \n",
         "duration": "10",
         "name": "Review Anchor Chart"
       },
@@ -888,7 +888,7 @@
       "key": "3339de28-d1d4-47c2-acac-d21a60793c17",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What is the purpose of reading fables?_\n- _Why are characters important in a fable?_\n\n**Discussion Goal**: Students should understand that the purpose of a fable is to teach a moral or lesson. They should be able to explain that a character and their traits directly relates to the moral of the story, and typically the reader learns the central lesson through the main character's traits and actions. Students can refer back to previous fables as examples, where they learned the moral through the actions of the characters.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n* **Fable** - A short story conveying a moral\n* **Moral** - A lesson learned\n* **Big Idea** - A key detail that moves the story from one part to the next"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What is the purpose of reading or telling fables?_\n- _Why are characters important in a fable?_\n\n**Discussion Goal**: Students should understand that the purpose of a fable is to teach a moral or lesson. They should be able to explain that a character and their traits directly relates to the moral of the story, and typically the reader learns the central lesson through the main character's traits and actions. Students can refer back to previous fables as examples, where they learned the moral through the actions of the characters."
       },
       "seeding_key": {
         "activity_section.key": "3339de28-d1d4-47c2-acac-d21a60793c17",
@@ -896,8 +896,35 @@
       }
     },
     {
-      "key": "7b616f2e-fd32-42f6-95fe-84ea98c77f5d",
+      "key": "3cde9068-98ba-4c1f-bd12-08fa7710780b",
       "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Choose a specific story that you have read as a class, or that is widely popular for your students to help guide the discussion. You can use the example to help explain the purpose of reading fables and why characters are important. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3cde9068-98ba-4c1f-bd12-08fa7710780b",
+        "lesson_activity.key": "3764569d-14e2-4fc5-b6c6-56d6aeb5e849"
+      }
+    },
+    {
+      "key": "9ef24861-6b5a-424a-83ef-106d17493cde",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n* **Fable** - A short story conveying a moral\n* **Key Detail** - An important moment in the story that adds meaning\t\n* **Moral** - A lesson learned"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ef24861-6b5a-424a-83ef-106d17493cde",
+        "lesson_activity.key": "3764569d-14e2-4fc5-b6c6-56d6aeb5e849"
+      }
+    },
+    {
+      "key": "7b616f2e-fd32-42f6-95fe-84ea98c77f5d",
+      "position": 5,
       "properties": {
         "description": "Now that we have reviewed fables and their purpose, we are going to start working on our projects. Let’s get started with Level 1, which has some sample programs to check out. ",
         "remarks": true
@@ -924,7 +951,7 @@
       "key": "1d0f61e0-2d11-4954-9f8c-c57c1f6fa66a",
       "position": 2,
       "properties": {
-        "description": "In Level 1, we are exploring how each of these example programs works. Notice how each program has chosen the best quote that represents the character’s traits. In each level you will be given the character, setting, and moral of the story. Based on this information, you will: \n\n- Read the quote in each `say` block\n- Drag the quote that most closely matches the character’s personality and connect it to the code\n",
+        "description": "In Level 1, we are exploring an example program and looking at how it works. This program retells the story of “The Wizard of Oz”. Notice how this program has chosen the key details to be revealed with the event of Dorothy “touching” another sprite. \n\nYou can move the character with your arrow keys to start and move through the story's key details. At the end of the program, the moral is clearly displayed at the top of the screen. \n",
         "remarks": true
       },
       "seeding_key": {
@@ -936,7 +963,7 @@
       "key": "48a28d14-eb09-48e9-8fa5-9aed3259b86d",
       "position": 3,
       "properties": {
-        "description": "**Do This**: Have students move to their computer and sign in. ",
+        "description": "**Do This**: Have students move to their computer and sign in. Students should begin exploring the example project by moving the character with the arrow keys and reading the key details. ",
         "progression_name": "Example"
       },
       "seeding_key": {
@@ -945,26 +972,10 @@
       }
     },
     {
-      "key": "06a88107-dad0-427f-95f2-e36a78aa0840",
+      "key": "257affb9-b2d9-4e3a-99df-5091da461bb8",
       "position": 4,
       "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "For students who are having difficulties getting started, here are some questions to ask students: \n\n1. What characteristics does the first character have? \n2. How do you think the second character will respond to that?\n\nIf students are having trouble answering those questions, refer them to the Fables Guide to find the fable, characters, and their traits.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "06a88107-dad0-427f-95f2-e36a78aa0840",
-        "lesson_activity.key": "c74598ed-6053-497e-b56e-61c00782aaf5"
-      }
-    },
-    {
-      "key": "257affb9-b2d9-4e3a-99df-5091da461bb8",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Discussion” slide\n\n**Discuss**: \n- _What did you notice about the code?_ \n- _What did you notice about the characters?_\n\n**Discussion Goal**: Students should start to make the connection that each “when sprite clicked” event includes a character’s dialogue that is a “big idea”. A big idea is a key detail that moves the story forward to reveal more of the moral or lesson.\n\n**Do This**: Hand back the Fable Planning Sheet from yesterday’s lesson and make sure students have it available for the remainder of class. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Discussion” slide\n\n**Discuss**: \n- _How did this coder set up the story?_ \n- _What happens when the main character touches another character?_ \n- _How does the story end?_\n\n**Discussion Goal**: Students should start to make the connection that each “when sprite touches” event includes a character’s dialogue that is a “key detail”. a key detail that moves the story forward to reveal more of the moral or lesson. At the end of the story, the moral is clearly displayed. \n\n**Do This**: Hand back the Fable Planning Sheet from yesterday’s lesson and make sure students have it available for the remainder of class. "
       },
       "seeding_key": {
         "activity_section.key": "257affb9-b2d9-4e3a-99df-5091da461bb8",
@@ -973,12 +984,12 @@
     },
     {
       "key": "dd80ad30-ee12-4836-b82c-be2052d1ef9e",
-      "position": 6,
+      "position": 5,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "In the next level, students will begin to program their own fables. Point out to students that each of these examples features characters saying one of the \"big ideas\"."
+            "markdown": "In the next level, students will begin to program their own fables. Point out to students that each of these examples features characters saying one of the \"key details\"."
           }
         ]
       },
@@ -989,9 +1000,9 @@
     },
     {
       "key": "6fb41dc6-00ff-458a-bd42-0c0a2c8ea180",
-      "position": 7,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-6 - Code Your Fable App” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-10 - Code Your Fable” slide"
       },
       "seeding_key": {
         "activity_section.key": "6fb41dc6-00ff-458a-bd42-0c0a2c8ea180",
@@ -1000,9 +1011,9 @@
     },
     {
       "key": "8740863c-a188-42a7-8be8-2814f22a4b0d",
-      "position": 8,
+      "position": 7,
       "properties": {
-        "description": "In the next few lessons, you’ll be coding your own fable! Use the second page of your planning guide to help determine what you should include in your fable! Each level has specific instructions to help you code your fable - by the time you finish Level 6, your fable should be all done!",
+        "description": "In the next few lessons, you’ll be coding your own short story! Use the planning guide to help determine what you should include in your short story! Each level has specific instructions to help you code your short story - by the time you finish Level 9, your short story should be all done!",
         "remarks": true
       },
       "seeding_key": {
@@ -1012,9 +1023,9 @@
     },
     {
       "key": "b1e6c7c6-237f-4422-ad62-04225ce0fabd",
-      "position": 9,
+      "position": 8,
       "properties": {
-        "description": "**Do This**: Release students to begin working on Level 2. Circulate the room to support students and remind them to use their planning guide from yesterday. Once students have completed Level 2, they may move on to the other levels.  \n\n- In **Level 2**, students are thinking about what comes first in their fable. On the planning sheet, they can use the “Level 2” box as a guide. In this level, they will set the scene by choosing the background and two sprites.\n\n- In **Level 3**, students use the “Level 3” box from the planning sheet to code the next part of your fable. They will add some dialogue by making each sprite say or think something that follows their character traits. \n\n- In **Level 4**, students will make a prediction by reading the code and seeing what will happen when two characters touch. Consider regrouping the class at this spot to discuss together to make sure everyone understands how these new blocks work.\n\n- In **Level 5**, students apply what they just learned and use the “when sprite touches” block to code interactions between the two characters. On the planning sheet, they can use the “Level 5” box as a guide\n\n- In **Level 6**, students are able to add more to their project in anyway that you choose. \n"
+        "description": "**Do This**: Release students to begin working on Level 2. Circulate the room to support students and remind them to use their planning guide from yesterday. Once students have completed Level 2, they may move on to the other levels.  \n\n- In **Level 2**, students will add a narration and background.\n\n- In **Level 3**, students will add two new sprites.\n\n- In **Level 4**, students will add a say or think block for their sprites. \n\n- In **Level 5**, students will begin moving the sprite with arrow keys.\n\n- In **Level 6**, students will add an “when touches” events to add more say or think blocks. \n\n- In **Level 7**, students will add a new sprite.\n\n- In **Level 8**, students will add an “when touches” events to add more say or think blocks. \n\n- In **Level 9**, students will add a print block for the moral. \n\n- In **Level 10** students will have free play to add on to their projects. "
       },
       "seeding_key": {
         "activity_section.key": "b1e6c7c6-237f-4422-ad62-04225ce0fabd",
@@ -1023,12 +1034,12 @@
     },
     {
       "key": "9af3bc46-65d2-4298-af48-817b58d97374",
-      "position": 10,
+      "position": 9,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "For Levels 2-6, you may move students from level-to-level as a class, or students may work through these levels independently. "
+            "markdown": "For Levels 2-9, you may move students from level-to-level as a class, or students may work through these levels independently. "
           }
         ]
       },
@@ -1039,7 +1050,7 @@
     },
     {
       "key": "741583d1-0fc7-4004-bbb6-fcb3b0f277a7",
-      "position": 11,
+      "position": 10,
       "properties": {
         "progression_name": "Code Your Fable"
       },
@@ -1050,13 +1061,13 @@
     },
     {
       "key": "bcd5ac75-d26f-4915-8f64-0e8dc5ee4be3",
-      "position": 12,
+      "position": 11,
       "properties": {
         "progression_name": "Free Play",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Remind students during their work time how much class time remains. 15 minutes left reminders, 10 minute left reminders, and 5 minute left reminders helps students keep track and manage their time.\n\n"
+            "markdown": "Remind students during their work time how much class time remains. 15 minutes, 10 minutes, and 5 minutes left reminders help students keep track of and manage their time.\n\n"
           }
         ]
       },
@@ -1079,18 +1090,14 @@
       }
     },
     {
-      "key": "010dfc30-dcaa-49cb-a8c8-9576c13caa1c",
+      "key": "c2a32998-6d05-468d-9086-1971e87135dc",
       "position": 2,
       "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Teachers can choose how students answer these questions. Teachers can choose from whole class, turn and talk, exit slip, etc "
-          }
-        ]
+        "description": "Work time is now over. Next class, we will reflect on our projects and share them with our classmates. To end our time today, I would like you all to think about what you learned. Flip your planning sheets over to the back. Use the blank space on your paper to write your answers to these questions… Once you are finished, we will share out as a class. ",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "010dfc30-dcaa-49cb-a8c8-9576c13caa1c",
+        "activity_section.key": "c2a32998-6d05-468d-9086-1971e87135dc",
         "lesson_activity.key": "910761be-6b7d-441e-88d7-4d5f5597e68c"
       }
     },
@@ -1098,7 +1105,7 @@
       "key": "bbb8a46d-1382-4537-9ade-11d69ee1bf92",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: \n-  _**Three** things that I learned about programming are…_\n- _**Two** things I learned about fables and their characters are…_\n- _**One** thing I would like more information about is…_\n\n**Discussion Goal**:  Students should  reflect on their biggest takeaways from today’s lesson. They should be able to describe how a character’s motivation leads to their actions in a story and illustrate how a character’s actions affect other characters. "
+        "description": "**Discuss**: \n-  _**Three** things that I learned about programming are…_\n- _**Two** things I learned about fables and their characters are…_\n- _**One** thing I would like more information about is…_\n\n**Discussion Goal**:  Students should reflect on their biggest takeaways from today’s lesson. They should be able to describe how a character’s motivation leads to their actions in a short story and illustrate how a character’s actions affect other characters. "
       },
       "seeding_key": {
         "activity_section.key": "bbb8a46d-1382-4537-9ade-11d69ee1bf92",
@@ -1106,14 +1113,18 @@
       }
     },
     {
-      "key": "c2a32998-6d05-468d-9086-1971e87135dc",
+      "key": "010dfc30-dcaa-49cb-a8c8-9576c13caa1c",
       "position": 4,
       "properties": {
-        "description": "Work time is now over. Next class, we will reflect on our projects and share them with our classmates. To end our time today, I would like you all to think about what you learned. Flip your planning sheets over to the back. Use the blank space on your paper to write your answers to these questions… Once you are finished, we will share out as a class. ",
-        "remarks": true
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Teachers can choose how students answer these questions. Teachers can choose from a whole class discussion, turn and talk, exit slip, journal, etc. "
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "c2a32998-6d05-468d-9086-1971e87135dc",
+        "activity_section.key": "010dfc30-dcaa-49cb-a8c8-9576c13caa1c",
         "lesson_activity.key": "910761be-6b7d-441e-88d7-4d5f5597e68c"
       }
     },
@@ -2342,6 +2353,16 @@
       }
     },
     {
+      "key": "key_detail",
+      "word": "Key Detail",
+      "definition": "An important moment in the story that adds meaning ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "key_detail"
+      }
+    },
+    {
       "key": "moral",
       "word": "Moral",
       "definition": "A lesson learned",
@@ -2366,13 +2387,13 @@
     {
       "seeding_key": {
         "lesson.key": "Code Your Fable",
-        "vocabulary.key": "big_idea"
+        "vocabulary.key": "fable"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Code Your Fable",
-        "vocabulary.key": "fable"
+        "vocabulary.key": "key_detail"
       }
     },
     {
@@ -2439,7 +2460,7 @@
     {
       "key": "0f05b46b-6736-4fda-917a-7eb5e931a7f1",
       "properties": {
-        "description": "Program a character’s motivation determines their actions in a story"
+        "description": "Program a character’s motivation to convey key details"
       },
       "seeding_key": {
         "lesson.key": "Code Your Fable",
@@ -2449,7 +2470,7 @@
     {
       "key": "3a8854ba-0ccd-43a6-9fdb-57774a199920",
       "properties": {
-        "description": "Program a character’s actions to affect other characters"
+        "description": "Program a character’s actions in order to convey key details"
       },
       "seeding_key": {
         "lesson.key": "Code Your Fable",
@@ -2499,7 +2520,7 @@
     {
       "key": "a4f00cc8-d5a0-49a3-8a28-9e39766b1668",
       "properties": {
-        "description": "Use knowledge of fables to remix and create their own"
+        "description": "Use knowledge of short stories to retell a moral"
       },
       "seeding_key": {
         "lesson.key": "Code Your Fable",
