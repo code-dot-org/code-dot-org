@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CourseScript from './CourseScript';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import styleConstants from '@cdo/apps/styleConstants';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 import * as utils from '../../utils';
@@ -48,8 +48,8 @@ class CourseOverview extends Component {
         name: PropTypes.string.isRequired
       })
     ).isRequired,
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape),
+    teacherResources: PropTypes.arrayOf(resourceShape),
+    studentResources: PropTypes.arrayOf(resourceShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     scripts: PropTypes.array.isRequired,
     isVerifiedInstructor: PropTypes.bool.isRequired,
@@ -121,7 +121,7 @@ class CourseOverview extends Component {
       descriptionTeacher,
       sectionsInfo,
       sectionsForDropdown,
-      migratedTeacherResources,
+      teacherResources,
       studentResources,
       viewAs,
       scripts,
@@ -211,7 +211,7 @@ class CourseOverview extends Component {
             courseVersionId={courseVersionId}
             id={id}
             title={title}
-            migratedTeacherResources={migratedTeacherResources}
+            teacherResources={teacherResources}
             studentResources={studentResources}
             showAssignButton={showAssignButton}
             isInstructor={viewAs === ViewType.Instructor}
