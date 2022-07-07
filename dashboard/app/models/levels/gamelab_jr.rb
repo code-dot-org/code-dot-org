@@ -176,7 +176,7 @@ class GamelabJr < Gamelab
   SAMPLE_VALIDATION_FUNCTIONS = {
     template:
 'if (World.frameCount == 1) {
-  addCriteria(function(){
+  addCriteria(function() {
     return minimumSprites(1); // Check whether or not the student created a sprite.
   }, "noSprites");  // Failure message: "You need to make a sprite."
 
@@ -190,7 +190,7 @@ check();
   setFailTime(150); // Frames to wait before failing student
   setDelayTime(90); // Frames to wait after success before stopping program
 
-  addCriteria(function(){
+  addCriteria(function() {
     return minimumSprites(1); // Check whether or not the student created a sprite.
   }, "noSprites");  // Failure message: "You need to make a sprite."
 
@@ -202,17 +202,17 @@ check();
     clickSpriteForSpeechExample:
 '//Validate that a student created a sprite, then clicked a sprite to trigger a sprite to speak.
 if (World.frameCount == 1) {
-  addCriteria(function(){
+  addCriteria(function() {
     return minimumSprites(1);
   }, "noSprites");
-  addCriteria(function(){
+  addCriteria(function() {
     return anySpriteClicked();
   }, "clickAnySprite");
   addCriteria(function(){
     return clickEventFound();
   }, "clickButNoEvent");
   addCriteria(function(){
-    return clickEventFound()&&anySpriteSpeaks();
+    return clickEventFound() && anySpriteSpeaks();
   }, "clickButNoSay");
 }
 
