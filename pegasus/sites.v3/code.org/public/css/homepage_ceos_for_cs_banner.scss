@@ -41,6 +41,7 @@
     a.btn {
       border: 1px solid white;
       font-size: 1.25em;
+      font-family: 'Gotham 5r', sans-serif;
       padding: 0.5em 1em;
 
       @media screen and (max-width: $width-sm) {
@@ -71,4 +72,3 @@
     }
   }
 }
-
