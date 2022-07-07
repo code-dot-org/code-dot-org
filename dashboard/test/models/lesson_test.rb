@@ -431,6 +431,7 @@ class LessonTest < ActiveSupport::TestCase
       purpose: 'example purpose'
     )
 
+    lesson.expects(:get_localized_property).with(:name)
     lesson.expects(:get_localized_property).with(:overview)
     lesson.expects(:get_localized_property).with(:purpose)
     lesson.expects(:get_localized_property).with(:preparation)
