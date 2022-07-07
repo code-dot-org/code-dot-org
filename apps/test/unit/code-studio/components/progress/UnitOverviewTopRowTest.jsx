@@ -135,13 +135,13 @@ describe('UnitOverviewTopRow', () => {
   });
 
   describe('instructor resources', () => {
-    it('renders migrated resources for instructor on a migrated script', () => {
+    it('renders resources for instructor on a migrated script', () => {
       const wrapper = shallow(
         <UnitOverviewTopRow
           {...defaultProps}
           viewAs={ViewType.Instructor}
           isMigrated={true}
-          migratedTeacherResources={[
+          teacherResources={[
             {
               id: 1,
               key: 'curriculum',
@@ -160,7 +160,7 @@ describe('UnitOverviewTopRow', () => {
       expect(
         wrapper.containsMatchingElement(
           <ResourcesDropdown
-            migratedResources={[
+            resources={[
               {
                 id: 1,
                 key: 'curriculum',
