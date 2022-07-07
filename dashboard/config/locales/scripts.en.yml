@@ -25775,7 +25775,7 @@ en:
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
           title: 2022 CS Principles Deeper Learning FiT Module
-          description: ''
+          description: "##This module is for training purposes only.  No submissions will be officially evaluated."
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -25792,7 +25792,7 @@ en:
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
           title: 2022 CS Principles Deeper Learning Module A
-          description: ''
+          description: "##This module will be published by August 1, 2022."
           student_description: ''
           description_short: ''
           description_audience: ''
