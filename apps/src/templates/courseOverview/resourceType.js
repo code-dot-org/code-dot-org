@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 
 // We want level builders to be able to specify which of these strings is used,
@@ -29,8 +28,3 @@ export const stringForType = {
   [ResourceType.videos]: i18n.videos(),
   [ResourceType.curriculumGuide]: i18n.curriculumGuide()
 };
-
-export const resourceShape = PropTypes.shape({
-  type: PropTypes.oneOf(Object.values(ResourceType)).isRequired,
-  link: PropTypes.string.isRequired
-});

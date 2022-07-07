@@ -132,6 +132,7 @@ function TopInstructionsHeader(props) {
               onClick={handleDocumentationTabClick}
               selected={tabSelected === TabType.DOCUMENTATION}
               text={i18n.documentation()}
+              teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
             />

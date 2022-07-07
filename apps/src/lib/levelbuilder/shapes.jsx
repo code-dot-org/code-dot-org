@@ -74,8 +74,6 @@ export const activityShape = PropTypes.shape({
   activitySections: PropTypes.arrayOf(activitySectionShape)
 });
 
-// Represents a migrated resource, backed by the
-// Resource model in Rails
 export const resourceShape = PropTypes.shape({
   id: PropTypes.number,
   key: PropTypes.string.isRequired,
