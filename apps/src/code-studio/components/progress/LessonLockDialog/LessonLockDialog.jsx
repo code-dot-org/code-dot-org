@@ -9,6 +9,7 @@ import color from '@cdo/apps/util/color';
 import commonMsg from '@cdo/locale';
 import SectionSelector from '../SectionSelector';
 import {NO_SECTION} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {
   LockStatus,
   useGetLockState,
@@ -16,7 +17,6 @@ import {
 } from '@cdo/apps/code-studio/components/progress/LessonLockDialog/LessonLockDataApi';
 import StudentRow from '@cdo/apps/code-studio/components/progress/LessonLockDialog/StudentRow';
 import SkeletonRows from '@cdo/apps/code-studio/components/progress/LessonLockDialog/SkeletonRows';
-import InstructionsAndButtons from '@cdo/apps/code-studio/components/progress/LessonLockDialog/InstructionsAndButtons';
 
 function LessonLockDialog({
   unitId,
@@ -55,16 +55,21 @@ function LessonLockDialog({
   const lockLesson = () => setAllLockStatus(LockStatus.Locked);
   const showAnswers = () => setAllLockStatus(LockStatus.ReadonlyAnswers);
 
-  const handleRadioChange = event => {
-    const modifiedIndex = parseInt(event.target.name, 10);
-    const value = event.target.value;
+  const viewSection = () => {
+    const assessmentsUrl = teacherDashboardUrl(
+      selectedSectionId,
+      '/assessments'
+    );
+    window.open(assessmentsUrl, '_blank', 'noopener,noreferrer');
+  };
 
+  const handleRadioChange = (modifiedIndex, lockStatus) => {
     setClientLockState(clientLockState =>
       clientLockState.map((item, index) => {
         if (index !== modifiedIndex) {
           return item;
         }
-        return {...item, lockStatus: value};
+        return {...item, lockStatus: lockStatus};
       })
     );
   };
@@ -83,6 +88,78 @@ function LessonLockDialog({
   //
   const hasSelectedSection = selectedSectionId !== NO_SECTION;
   const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
+
+  const renderInstructionsAndButtons = () => (
+    <>
+      <table style={hiddenUnlessSelectedSection}>
+        <tbody>
+          <tr>
+            <td>1. {commonMsg.allowEditingInstructions()}</td>
+            <td>
+              <button
+                type="button"
+                style={progressStyles.orangeButton}
+                onClick={allowEditing}
+              >
+                {commonMsg.allowEditing()}
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>2. {commonMsg.lockStageInstructions()}</td>
+            <td>
+              <button
+                type="button"
+                style={progressStyles.orangeButton}
+                onClick={lockLesson}
+              >
+                {commonMsg.lockStage()}
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>3. {commonMsg.showAnswersInstructions()}</td>
+            <td>
+              <button
+                type="button"
+                style={progressStyles.orangeButton}
+                onClick={showAnswers}
+              >
+                {commonMsg.showAnswers()}
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>4. {commonMsg.relockStageInstructions()}</td>
+            <td>
+              <button
+                type="button"
+                style={progressStyles.orangeButton}
+                onClick={lockLesson}
+              >
+                {commonMsg.relockStage()}
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>5. {commonMsg.reviewResponses()}</td>
+            <td>
+              <button
+                type="button"
+                style={progressStyles.whiteButton}
+                onClick={viewSection}
+              >
+                {commonMsg.viewSection()}
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div style={{...styles.descriptionText, ...hiddenUnlessSelectedSection}}>
+        {commonMsg.autolock()}
+      </div>
+    </>
+  );
 
   const renderStudentTable = () => (
     <>
@@ -140,13 +217,7 @@ function LessonLockDialog({
             requireSelection={hasSelectedSection}
           />
         </div>
-        <InstructionsAndButtons
-          isHidden={!hasSelectedSection}
-          selectedSectionId={selectedSectionId}
-          handleAllowEditing={allowEditing}
-          handleLockLesson={lockLesson}
-          handleShowAnswers={showAnswers}
-        />
+        {renderInstructionsAndButtons()}
         {renderStudentTable()}
       </div>
       <div style={styles.buttonContainer}>

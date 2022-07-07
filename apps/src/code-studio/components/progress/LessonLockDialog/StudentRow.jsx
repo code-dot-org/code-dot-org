@@ -4,6 +4,12 @@ import {LockStatus} from '@cdo/apps/code-studio/components/progress/LessonLockDi
 import color from '@cdo/apps/util/color';
 
 const StudentRow = ({index, name, lockStatus, handleRadioChange}) => {
+  const radioChangeEvent = event => {
+    const modifiedIndex = parseInt(event.target.name, 10);
+    const lockStatus = event.target.value;
+    handleRadioChange(modifiedIndex, lockStatus);
+  };
+
   return (
     <tr>
       <td style={styles.tableCell}>{name}</td>
@@ -19,7 +25,7 @@ const StudentRow = ({index, name, lockStatus, handleRadioChange}) => {
           name={index}
           value={LockStatus.Locked}
           checked={lockStatus === LockStatus.Locked}
-          onChange={handleRadioChange}
+          onChange={radioChangeEvent}
         />
       </td>
       <td
@@ -34,7 +40,7 @@ const StudentRow = ({index, name, lockStatus, handleRadioChange}) => {
           name={index}
           value={LockStatus.Editable}
           checked={lockStatus === LockStatus.Editable}
-          onChange={handleRadioChange}
+          onChange={radioChangeEvent}
         />
       </td>
       <td
@@ -49,7 +55,7 @@ const StudentRow = ({index, name, lockStatus, handleRadioChange}) => {
           name={index}
           value={LockStatus.ReadonlyAnswers}
           checked={lockStatus === LockStatus.ReadonlyAnswers}
-          onChange={handleRadioChange}
+          onChange={radioChangeEvent}
         />
       </td>
     </tr>
