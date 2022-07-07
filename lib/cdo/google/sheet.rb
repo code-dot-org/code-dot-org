@@ -56,7 +56,10 @@ module Google
           Please check with PLC team that this is intentional!
         ERROR_MSG
 
-        Honeybadger.notify error_msg
+        Honeybadger.notify(
+          error_message: error_msg,
+          context: {document_title: @drive.get_spreadsheet_title(@document_key)}
+        )
         puts error_msg
       end
     end
