@@ -1,3 +1,4 @@
+@no_circle
 Feature: Code review V2 Finish Button
   Background:
     Given I set up code review for teacher "Code Review Teacher" with 2 students in a group
