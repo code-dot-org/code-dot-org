@@ -22,7 +22,7 @@ function showCourseEditor() {
   store.dispatch(
     initResources(
       'teacherResource',
-      courseEditorData.course_summary.migrated_teacher_resources || []
+      courseEditorData.course_summary.teacher_resources || []
     ),
     initResources(
       'studentResource',
