@@ -57,10 +57,11 @@ apt_package %w(
   binutils-doc
   bison
   build-essential
+  cmake
   flex
+  gcc-8
   gettext
   ncurses-dev
-  cmake
 )
 
 include_recipe 'cdo-ruby'
