@@ -68,7 +68,8 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "validation_code": "function numberOfSpritesThatAreSpeaking() {\r\n\tvar spriteIds = this.getSpriteIdsInUse();\r\n    var speakingSpritesList = spriteIds.filter(function(id) { return getSpeechForSpriteId(id); });\r\n  \treturn speakingSpritesList.length;\r\n}\r\n\r\nif (World.frameCount == 1) {\r\n  \t// Since we need to track multiple say and print instances across multiple frames we use speaksCounter & printsCounter to track them.\r\n \tvalidationProps.speaksCounter = 0;\r\n   \tvalidationProps.printsCounter = 0;\r\n\r\n\taddCriteria(newSpriteCreated, \"noSprites\");\r\n\r\n  \t// Since anySpriteSpeaks() can't specify how many sprites are speaking, this criteria first checks if more than \tone sprite is speaking and then increments speaksCounter appropriately.\r\n   \taddCriteria(function(){\r\n      \tif (anySpriteSpeaks() && numberOfSpritesThatAreSpeaking() > 1) {\r\n          validationProps.speaksCounter += numberOfSpritesThatAreSpeaking();\r\n          console.log(numberOfSpritesThatAreSpeaking());\r\n        } else if (anySpriteSpeaks()) {\r\n          validationProps.speaksCounter += 1;\r\n        }\r\n    \treturn validationProps.speaksCounter >= 2;\r\n    }, \"sayBlock\");\r\n\r\n  \taddCriteria(function() {\r\n    \tif (printedText()) { validationProps.printsCounter++; }\r\n      \treturn validationProps.printsCounter >= 2;\r\n    }, \"addPrintBlock\");\r\n}\r\n\r\ncheck();"
   },
   "game_id": 64,
   "published": true,
@@ -76,7 +77,7 @@
   "level_num": "custom",
   "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-22T18:25:26.020+00:00\",\"changed\":[\"cloned from \\\"csc_fables_next scene\\\"\"],\"cloned_from\":\"csc_fables_next scene\"},{\"changed_at\":\"2022-06-22 18:29:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-23 20:44:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-22T18:25:26.020+00:00\",\"changed\":[\"cloned from \\\"csc_fables_next scene\\\"\"],\"cloned_from\":\"csc_fables_next scene\"},{\"changed_at\":\"2022-06-22 18:29:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-06-23 20:44:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-07-06 23:18:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
