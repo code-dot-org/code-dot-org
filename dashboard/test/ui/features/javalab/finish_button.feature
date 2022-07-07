@@ -1,3 +1,4 @@
+@no_circle
 Feature: Finish Button
 
 Background:
