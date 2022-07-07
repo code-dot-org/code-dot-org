@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-07-06 23:53:32 UTC",
+    "serialized_at": "2022-07-07 19:41:04 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -114,6 +114,10 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "**Can we evolve our chatbot to listen for specific phrases?**\n\nSingle words can convey a lot of meaning, but these words are directly impacted and modified by other words or phrases in close proximity. In this activity, we will be training our chatbot to look for specific phrases and to respond accordingly, adding more depth and nuance to our emerging conversationalist.",
+        "preparation": "* the API for the `Magpie` class\n\n* the API for the `String` class\n\n* the code for the `Magpie`\n\n* the code for the `MagpieRunner`\n",
+        "purpose": "Our goal with this activity will be to reduce the amount of calls to the `getRandomResponse()` method in the Magpie class. We want our chatbot to be able to respond to simple, yet common, combinations of words and to provide a satisfying answer for the user. In this way, we will heighten the sense of realism of our chatbot.",
+        "student_overview": "**Can we evolve our chatbot to listen for specific phrases?**\n\nIn this activity, we will be training our chatbot to look for combinations of words, or phrases, in order to have deeper and more meaningful conversations with it. Our goal will be to reduce the amount of random responses that the chatbot offers, and to make the ones that it does more applicable to what the user is asking or saying."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -283,6 +287,8 @@
       "key": "d50e9b82-b867-41bb-b48b-e7370696fe96",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "d50e9b82-b867-41bb-b48b-e7370696fe96",
@@ -292,12 +298,70 @@
       }
     },
     {
+      "key": "6f91320b-4c5b-4722-b99a-2b828440ad14",
+      "position": 2,
+      "properties": {
+        "duration": 60,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "c74796de-f3c3-4b1d-a4e1-4e982ea0e00f",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c74796de-f3c3-4b1d-a4e1-4e982ea0e00f",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
       "key": "b67821e9-baf6-455b-b130-b35e999b79e4",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "b67821e9-baf6-455b-b130-b35e999b79e4",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "c92d8fb3-6cfe-4390-86d9-d28d71e5ecda",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c92d8fb3-6cfe-4390-86d9-d28d71e5ecda",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "d247f206-bb36-4d8a-9129-881bb9b0c106",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d247f206-bb36-4d8a-9129-881bb9b0c106",
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-labs-2022"
@@ -415,6 +479,8 @@
       "key": "0fde2517-0fed-40c9-925e-f0c39f1ee7ac",
       "position": 1,
       "properties": {
+        "description": "In this previous lesson, we started discussing how simple chatbots act by looking for key words or phrases and responding to them. Let's chat briefly about the programming concept(s) that we think may be involved in making this happen. ",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "0fde2517-0fed-40c9-925e-f0c39f1ee7ac",
@@ -422,10 +488,40 @@
       }
     },
     {
-      "key": "08a60207-7743-4c62-82b3-5136f69b014d",
+      "key": "f29b07ba-ae81-4a80-b082-cc82fa3153a0",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Click through the animated slide to display the prompts.\n\n* *What programming concept(s) do you think may be involved in causing the chatbot to look for key words or phrases and respond accordingly?*\n\n**Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt"
+      },
+      "seeding_key": {
+        "activity_section.key": "f29b07ba-ae81-4a80-b082-cc82fa3153a0",
+        "lesson_activity.key": "d238340b-38f6-4de4-ac44-c841b724f3b9"
+      }
+    },
+    {
+      "key": "be641c27-419f-48b6-9e45-c890ff1e167e",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Direct students to the Magpie Lab Lesson 2. \n\nThis activity will take from one to two hours. Students should work in small groups, which will help them in developing their own keyword/response pairs.",
+        "description": "In this activity, you will work Magpie, with a simple implementation of a chatbot. You will see how it works with some keywords and add keywords of your own.",
+        "name": "Introduction to the Magpie Class",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This activity will take from one to two hours. Students should work in small groups, which will help them in developing their own keyword/response pairs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "be641c27-419f-48b6-9e45-c890ff1e167e",
+        "lesson_activity.key": "2beb568e-38b3-497f-bd02-674dfae46ffe"
+      }
+    },
+    {
+      "key": "08a60207-7743-4c62-82b3-5136f69b014d",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Direct students to the Magpie Lab Lesson 2. ",
         "progression_name": "Exploration"
       },
       "seeding_key": {
@@ -435,9 +531,10 @@
     },
     {
       "key": "65c9e6ec-9d70-4683-a6f6-2f7e8ed46a9d",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "**Do This:** Use the slide to guide your discussion before moving on to the next levels. \n\n* *How could we check that a statement has at least one character?*\n* *If there are no characters, what would be a good output?* \n\nStudents will go through the next levels and have the code check that the statement has at least one character. They can do this by using the\n`trim` method to remove spaces from the beginning and end, and then checking the length of\nthe trimmed string. If there are no characters, the response should tell the user to enter\nsomething. For example, a possible statement and response would be:\n\n***Statement:**\n\n**Response:** Say something, please.*",
+        "description": "**Do This:** Use the slide to guide your discussion before moving on to the next levels. \n\n* *How could we check that a statement has at least one character?*\n* *If there are no characters, what would be a good output?* \n\nStudents will go through the next levels and have the code check that the statement has at least one character. They can do this by using the `trim` method to remove spaces from the beginning and end, and then checking the length of\nthe trimmed string. If there are no characters, the response should tell the user to enter something. For example, a possible statement and response would be:\n\n**Statement:**\n\n**Response:** *Say something, please.*",
+        "name": "Checking for Characters",
         "progression_name": "getResponse Method"
       },
       "seeding_key": {
@@ -446,9 +543,21 @@
       }
     },
     {
-      "key": "ffa00e10-ebf6-4bb4-8175-33e5380896e2",
+      "key": "47850774-2d85-4302-a8dd-3bf0ce9adfaa",
       "position": 1,
       "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "47850774-2d85-4302-a8dd-3bf0ce9adfaa",
+        "lesson_activity.key": "ad5b5e9d-9e73-4898-97e3-40b505f80018"
+      }
+    },
+    {
+      "key": "ffa00e10-ebf6-4bb4-8175-33e5380896e2",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. You can use these questions as an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
         "progression_name": "Check for Understanding"
       },
       "seeding_key": {
@@ -545,7 +654,8 @@
       "key": "731f6f02-8b4d-4d18-b36f-d609f3f7ae9f",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Direct students to "
+        "description": "**Do This:** Click through the animated slide to have students create a trace table based on the `findKeyword` method in Level 3. The method calls students will use for their trace table and an example are in the slides, however you will need to direct students to Level 3 to see the code for this method. ",
+        "progression_name": "findKeyword Investigation"
       },
       "seeding_key": {
         "activity_section.key": "731f6f02-8b4d-4d18-b36f-d609f3f7ae9f",
@@ -567,10 +677,182 @@
       "key": "bff02fbf-a5f2-4499-b818-cde569a78464",
       "position": 1,
       "properties": {
+        "description": "Since our last interaction with the Magpie chatbot, some additional interactivity has been added to the source code. With a partner, run the code and interact with Magpie using the newly added types of statements: **I want to** [*statement*] & **you** [*statement*] **me**\n",
+        "name": "Breaking the Bot",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "bff02fbf-a5f2-4499-b818-cde569a78464",
         "lesson_activity.key": "d50e9b82-b867-41bb-b48b-e7370696fe96"
+      }
+    },
+    {
+      "key": "ca60a16f-6ad5-49d6-93fe-5b85f8f2e059",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Students should work with a partner for this investigation.\n\n**Do this:** Using the updated Magpie source code, have students experiment with inputting sample statements using the following format:\n\n* \"**I want to**...\" statements <br>  *e.g. \"I want to ask Magpie to loan me a million dollars.\"*\n* \"**you**\" ... \"**me**\" statements <br>  *e.g. \"You energize me!\"*"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca60a16f-6ad5-49d6-93fe-5b85f8f2e059",
+        "lesson_activity.key": "d50e9b82-b867-41bb-b48b-e7370696fe96"
+      }
+    },
+    {
+      "key": "3c5c7714-adde-4f65-b49e-d16ae3443f4c",
+      "position": 3,
+      "properties": {
+        "description": "**Discuss**: What types of statements produce valid responses? What types of statements break the bot and expose its shortcomings?"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c5c7714-adde-4f65-b49e-d16ae3443f4c",
+        "lesson_activity.key": "d50e9b82-b867-41bb-b48b-e7370696fe96"
+      }
+    },
+    {
+      "key": "8c648361-f036-473f-9033-7253bfce720c",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "As the students begin to experiment with entering statements into the revised source code, they may find that some of the statements elicit less-than-ideal responses from Magpie. This is to be expected given the narrow scope of the added methods. \n\nSee if the groups can offer up a general structure that a statement must have in order to produce a valid response."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8c648361-f036-473f-9033-7253bfce720c",
+        "lesson_activity.key": "d50e9b82-b867-41bb-b48b-e7370696fe96"
+      }
+    },
+    {
+      "key": "51fd9eef-c950-464a-ac90-f6a1e8bba02d",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This section can take anywhere from 1 to 2 hours, depending on your students, their knowledge of the `String` class, and the depth in which they want to explore possible additional ways to enrich the Magpie chatbot."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "51fd9eef-c950-464a-ac90-f6a1e8bba02d",
+        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
+      }
+    },
+    {
+      "key": "62297cb0-ea1a-4482-83d2-cb3010fac1f0",
+      "position": 2,
+      "properties": {
+        "description": "In this first portion of the activity, we will be examining how the provided code searches for a multi-word phrase and calls a method accordingly. \n\n**Group:** Students should continue to work with the same partner with whom they completed the *Warm Up*.\n\n**Do This:** Review the `findKeyword()` method that was modified in the prior activity.\n\n**Discuss:** `findKeyword()` is an example of an *overloaded* method. What is the difference between the two versions of this method in the new Magpie code?\n",
+        "name": "Scanning for a Phrase"
+      },
+      "seeding_key": {
+        "activity_section.key": "62297cb0-ea1a-4482-83d2-cb3010fac1f0",
+        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
+      }
+    },
+    {
+      "key": "1c8088b7-d12d-4fe0-b441-3eff14724306",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "When we are searching for a specific word or phrase throughout the whole statement, the initial implementation of the `findKeyword(statement, word)` method might be used.\n\nHowever, the overloaded method `findKeyword(statement, word, startIndex)` will come in handy we only need to test a portion of user input that begins at a starting index that is defined as an argument."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1c8088b7-d12d-4fe0-b441-3eff14724306",
+        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
+      }
+    },
+    {
+      "key": "4467b700-2151-4f3f-9463-3fa8a6bae1fa",
+      "position": 4,
+      "properties": {
+        "description": "**Do This:** Examine the conditional statements within the `getResponse()` method. Find the specific condition that is executed when the user input contains the string \"*I want to*\".\n\n**Do This:** Trace the method `transformIWantToStatement()` that is called when this conditional evaluates as *true*. Do a simple decomposition of the steps that are performed in this method. Use abstraction to describe, in list form, what these steps accomplish.\n\n**Discuss:** What are the steps that are accomplished in the `transformIWantToStatement()` method?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "4467b700-2151-4f3f-9463-3fa8a6bae1fa",
+        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
+      }
+    },
+    {
+      "key": "dc6e68bf-a433-47c2-9a69-fb35e274969f",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Sample Response:\n1. *Remove spaces* from beginning / end of statement\n2. *Remove period*, if one exists\n3. *Find an index value* where \"I want to\" ends in the statement\n4. *Create a substring* from that index value until the end of the statement\n5. *Return a response* with the substring"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc6e68bf-a433-47c2-9a69-fb35e274969f",
+        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
+      }
+    },
+    {
+      "key": "4c6e675c-2b78-45b9-baa7-3a36b906527e",
+      "position": 6,
+      "properties": {
+        "description": "**Do This:** Create a new empty method called `transformIWantStatement()` that takes in the user statement as an argument. Model this method header after the one that we examined previously.\n\n**Do This:** Add a conditional statement that tests for the presence of an \"*I want*\" statement in the user input. Take care in placing this conditional in the proper location to avoid overriding the \"*I want to*\" conditional.\n\n**User Testing:** Use a sample `System.out.println(\"I want!\")` within the `transformIWantStatement()` method to make sure that your program is calling it correctly based on the conditional that you created.\n\n**Do This:** Using the list of decomposed steps that you outlined in the previous discussion, code the `transformIWantStatement()` method using the same algorithmic flow. Try to create this method from memory as much as possible. If you get stuck on how to recreate a step, refer back to the `transformIWantToStatement()` method for guidance.\n\n*  Have it respond to “I want [*something*]” statements with “Would you really be happy if you had\n[*something*]?”\n\n**User Testing:** Use a variety of \"*I want*\" and \"*I want to*\" statements, located at various locations within a statement (*beginning, middle*, or *end*) in order to test the output.\n\n**Discuss:** Is the output consistent with what you and your partner envisioned?"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c6e675c-2b78-45b9-baa7-3a36b906527e",
+        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
+      }
+    },
+    {
+      "key": "130603b1-3433-4120-aeea-53bc32d8155e",
+      "position": 7,
+      "properties": {
+        "description": "Within the starter code, there is additional functionality that covers when a user inputs a common phrase that involves a combination of the words *you* & *me*, such as \"**you** *amaze* **me**\". \n\n**Group:** Continue to work with your partner from the previous activity.\n\n**Discuss:** What makes this type of statement different to interpret than the \"I want...\" type statements that we worked with previously?",
+        "name": "Two Word Combinations"
+      },
+      "seeding_key": {
+        "activity_section.key": "130603b1-3433-4120-aeea-53bc32d8155e",
+        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
+      }
+    },
+    {
+      "key": "6354a819-4fab-446f-90d1-8e351a010bff",
+      "position": 8,
+      "properties": {
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "The main difference is that we must check for the presence of two different words.\n\nThese words will appear separate from one another within the statement and will contain a substring in between that we will access and use in Magpie's response.\n\nAdditionally, the words must appear in a specific order. In this example, **you** must appear before **me** in order to parse the meaning correctly from the statement."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6354a819-4fab-446f-90d1-8e351a010bff",
+        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
+      }
+    },
+    {
+      "key": "294e7df3-1d8e-4fff-aa53-ecaaa658a5be",
+      "position": 9,
+      "properties": {
+        "description": "**Do This:** "
+      },
+      "seeding_key": {
+        "activity_section.key": "294e7df3-1d8e-4fff-aa53-ecaaa658a5be",
+        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
+      }
+    },
+    {
+      "key": "9b9bc147-dd90-4a3a-9ee0-eb8167033c69",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9b9bc147-dd90-4a3a-9ee0-eb8167033c69",
+        "lesson_activity.key": "c74796de-f3c3-4b1d-a4e1-4e982ea0e00f"
       }
     },
     {
@@ -582,6 +864,26 @@
         "activity_section.key": "e6f8732e-26c2-4cbf-97c1-9919245fbb33",
         "lesson_activity.key": "b67821e9-baf6-455b-b130-b35e999b79e4"
       }
+    },
+    {
+      "key": "2f27b619-c555-4460-b966-d99853241a16",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2f27b619-c555-4460-b966-d99853241a16",
+        "lesson_activity.key": "c92d8fb3-6cfe-4390-86d9-d28d71e5ecda"
+      }
+    },
+    {
+      "key": "aea23a5b-b7ac-4133-81d7-56de7965b316",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "aea23a5b-b7ac-4133-81d7-56de7965b316",
+        "lesson_activity.key": "d247f206-bb36-4d8a-9129-881bb9b0c106"
+      }
     }
   ],
   "script_levels": [
@@ -591,6 +893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Get to know the Magpie class"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -613,6 +918,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Exploration"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -635,6 +943,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Alter the code"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -657,6 +968,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Alter more code!"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -679,6 +993,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Check for characters"
+        ],
         "progression": "getResponse Method"
       },
       "bonus": false,
@@ -701,6 +1018,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Add more responses"
+        ],
         "progression": "getResponse Method"
       },
       "bonus": false,
@@ -723,6 +1043,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Edit the getResponse method"
+        ],
         "progression": "getResponse Method"
       },
       "bonus": false,
@@ -745,6 +1068,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Predict"
+        ],
         "progression": "getResponse Method"
       },
       "bonus": false,
@@ -767,6 +1093,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Keywords in another word!"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -789,6 +1118,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Explore indexOf"
+        ],
         "progression": "Investigate indexOf method"
       },
       "bonus": false,
@@ -811,6 +1143,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Test indexOf"
+        ],
         "progression": "Test indexOf method"
       },
       "bonus": false,
@@ -825,6 +1160,28 @@
       },
       "level_keys": [
         "Test indexOf"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "findKeyword Investigation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "findKeyword Method Investigation"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "731f6f02-8b4d-4d18-b36f-d609f3f7ae9f"
+      },
+      "level_keys": [
+        "findKeyword Method Investigation"
       ]
     }
   ],
@@ -959,6 +1316,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-labs-2022",
         "activity_section.key": "0a6707fe-56b8-4bae-a876-da9e5bc2da1c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "findKeyword Method Investigation",
+        "script_level.level_keys": [
+          "findKeyword Method Investigation"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "731f6f02-8b4d-4d18-b36f-d609f3f7ae9f"
       }
     }
   ],
@@ -1125,23 +1494,33 @@
       }
     },
     {
-      "key": "41b6b149-160a-4cff-b8c0-e76548b09c2b",
-      "properties": {
-        "description": "Use two-way selection as an advanced search for keywords"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "objective.key": "41b6b149-160a-4cff-b8c0-e76548b09c2b"
-      }
-    },
-    {
-      "key": "6a36c4dc-9f6f-41ee-a4d3-7f9f1cb554ad",
+      "key": "4152c400-836d-4eaa-89e7-353b672caeb1",
       "properties": {
         "description": "Use more complex String methods to detect keywords"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
-        "objective.key": "6a36c4dc-9f6f-41ee-a4d3-7f9f1cb554ad"
+        "objective.key": "4152c400-836d-4eaa-89e7-353b672caeb1"
+      }
+    },
+    {
+      "key": "6e6c4988-b98f-4424-8129-d8d1a03afe2d",
+      "properties": {
+        "description": "Use two-way selection as an advanced search for keywords"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "6e6c4988-b98f-4424-8129-d8d1a03afe2d"
+      }
+    },
+    {
+      "key": "797fa3af-1d81-4cf0-8bb7-73178a1d329a",
+      "properties": {
+        "description": "Craft a new method that analyzes and responds to a user generated phrase"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "797fa3af-1d81-4cf0-8bb7-73178a1d329a"
       }
     },
     {

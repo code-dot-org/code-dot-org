@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-starquilts",
-    "serialized_at": "2022-04-28 16:51:50 UTC",
+    "serialized_at": "2022-07-07 19:45:12 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -45,7 +45,8 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this Unplugged lesson, students will be introduced to Native American Star Quilts and their significance. Then, students will make a 6-pointed star shape on paper. One of the main goals is to discuss the patterns within the shape. These ideas will be key for the online coding portions of the activity later on. ",
-        "preparation": "- Review the lesson slides\n- Cut out [rhombus shapes](https://docs.google.com/document/d/18FVMGR1NTsxOtl9gaM37arBRHvPDaKyFpx9_lfpCCPs/template/preview) \n- Distribute pattern blocks to students\n- Print copies of the worksheet for each student\n",
+        "preparation": "- Review the lesson slides\n- Print copies of the worksheet for each student\n",
+        "purpose": "Today you will learn all about Star Quilts. Then you will use pencil, paper and colors to start designing your own 6-point star shape. Be on the lookout for patterns!",
         "unplugged": true
       },
       "seeding_key": {
@@ -63,7 +64,8 @@
       "relative_position": 2,
       "properties": {
         "overview": "This skill-building lesson provides an opportunity for students to become familiar with the Artist Tool and to build important coding skills. Students learn how the stamping tool works, how to turn x degrees in an angle, and how to use loops. Students will create a simple star shape. By the end of the levels, students will manipulate angle measurements to see the effect on the number of points on the star. Computers allow for accuracy and precision in studying shapes and patterns because images are generated in a matter of seconds instead of relying on hand-drawn shapes.",
-        "preparation": "- Review the lesson slides.\n- Play through the levels and review the lesson slides.\n- Place pattern blocks at student desks\n"
+        "preparation": "- Review the lesson slides.\n- Play through the levels and review the lesson slides.\n- Place pattern blocks at student desks\n",
+        "purpose": "In this lesson you will be introduced to the Artist. You will program the Artist to create a star shape. It will be important to notice patterns in the shapes. \n"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -221,7 +223,7 @@
       "key": "9ff8d4e7-5ef2-4743-881d-e23d0813c557",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Introduction” slide\n \n**Do This**: Read the following text out loud to the class about Star Quilts, elaborating on the bolded terms:\n\n**Say**: _Star Quilts are a living tradition of many Native American tribes in the **Great Plains** region. Initially, **buffalo** hides were presented when warriors returned from battle, hunters returned with food, or at funerals of loved ones. However, **textiles** have replaced the hides as the buffalo population decreased._\n\n_Star quilts represent **honor** and **generosity**. They are given as a valuable gift to mark important life events such as birth, graduation or marriage. Watch this video to see how they are made!_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Introduction” slide\n \n"
       },
       "seeding_key": {
         "activity_section.key": "9ff8d4e7-5ef2-4743-881d-e23d0813c557",
@@ -229,26 +231,10 @@
       }
     },
     {
-      "key": "426540e7-9334-4156-a12c-e36bc48401bd",
+      "key": "405e6dce-bdaa-4795-83c4-3e4c52e9b6cf",
       "position": 2,
       "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Call and Response**: Consider having students participate in this reading by having them read the bolded / highlighted words from the slide along with you. This can be an opportunity to emphasize the important aspects of the reading while also inviting students to participate in this narrative."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "426540e7-9334-4156-a12c-e36bc48401bd",
-        "lesson_activity.key": "57cb2634-f211-4590-a2ea-10e1d45a61a5"
-      }
-    },
-    {
-      "key": "405e6dce-bdaa-4795-83c4-3e4c52e9b6cf",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Star Quilt” video\n \n**Do This**: Watch the [Star Quilt Video](https://www.youtube.com/watch?v=Q210ko41yqo).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n \n**Reflect**: _What stands out to you about Star Quilts?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Star Quilt” video\n \n**Do This**: Watch the [Star Quilt Video](https://www.youtube.com/watch?v=Q210ko41yqo). Start the video at 1:30 seconds. Stop the video at 2:26 seconds.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n \n**Do This**: Read the article [“Under a Blanket of Stars.”](https://drive.google.com/file/d/1MAcBYUArtNihyt5ZZlwFOraFLhRxZm7G/view) While you read, elaborate on any just-in-time vocabulary words that come up. You have the option to elaborate on rhombuses with the rhombus sort activity on slide 9.\n\n**Reflect**: _What stands out to you about Star Quilts?_"
       },
       "seeding_key": {
         "activity_section.key": "405e6dce-bdaa-4795-83c4-3e4c52e9b6cf",
@@ -257,7 +243,7 @@
     },
     {
       "key": "58ae63c1-6f3b-420e-9941-571fdd34a054",
-      "position": 4,
+      "position": 3,
       "properties": {
         "tips": [
           {
@@ -273,9 +259,9 @@
     },
     {
       "key": "9c55f5d7-cb1d-4975-ad15-4c9f7723dbe1",
-      "position": 5,
+      "position": 4,
       "properties": {
-        "description": "**Discussion Goal**: Student response will vary and can refer to either the introduction passage or the video. Some anticipated responses are:\n- Star Quilts are a Native American tradition from the Great Plains\n- The Great Plains is an area of the United States\n- Star Quilts can be a special gift\n- Star Quilts are intricate, complicated designs\n- Star Quilts are made of rhombus shapes\n- Star Quilts can be made with different colors\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slides\n\n- **Great Plains** - A broad expanse of flat land, much of it covered in prairie and grassland from North Dakota to Texas.\n- **Buffalo** - A large mammal with long legs, hooves, and horns, closely related to cattle\n- **Textile** - Cloth created with needle and thread\n- **Honor** - Recognize and show admiration\n- **Generosity** - Willingness to give or to share\n- **Rhombus** - A polygon with four equal sides, opposite sides are parallel, opposite angles are equal\n- **Pattern** - Something that happens or appears in a regular and repeated way\n\n\n"
+        "description": "**Discussion Goal**: Student response will vary and can refer to either the introduction passage or the video. Some anticipated responses are:\n- Star Quilts are a Native American tradition from the Great Plains\n- The Great Plains is an area of the United States\n- Star Quilts can be a special gift\n- Star Quilts are intricate, complicated designs\n- Star Quilts are made of rhombus shapes\n- Star Quilts can be made with different colors\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Rhombus** - A polygon with four equal sides, opposite sides are parallel, opposite angles are equal\n- **Pattern** - Something that happens or appears in a regular and repeated way\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "9c55f5d7-cb1d-4975-ad15-4c9f7723dbe1",
@@ -286,7 +272,7 @@
       "key": "6182c176-10ae-45ee-82e5-fd7bcd4244ab",
       "position": 1,
       "properties": {
-        "description": "**Overview**: There are two options for this activity that you can choose from depending on the materials in your classroom: using pattern block manipulatives or cutting a rhombus shape out of paper. You will find a worksheet that corresponds with either option. Students will trace a rhombus shape repeatedly on the worksheet in order to create a 6-pointed star. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Task” slides\n\n**Do This**: Cut out rhombus shapes for students in advance of the lesson. Hand out rhombus cutouts (or pattern block manipulatives) and worksheets to students."
+        "description": "**Do This**: Read the instructions out loud for the [worksheet](https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview). Then, hand out the worksheets and coloring utensils. Once students are starting to finish up, have students share their work with their partner. Students should explain the different patterns that they found to their partner."
       },
       "seeding_key": {
         "activity_section.key": "6182c176-10ae-45ee-82e5-fd7bcd4244ab",
@@ -300,7 +286,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Early finishers can:\n- Color or decorate their star shape\n- Help someone else\n- Start looking for different patterns that make up the Star Quilt\n- Create another shape using rhombuses on the back of their paper\n"
+            "markdown": "Early finishers can:\n- Help someone else\n- Start looking for additional patterns that make up the Star Quilt\n- Add additional examples and non-examples of patterns on the back of the worksheet\n"
           }
         ]
       },
@@ -340,7 +326,7 @@
       "key": "f0832f05-9448-4fe0-ae69-2b8e5cc59dc4",
       "position": 3,
       "properties": {
-        "description": "These star quilts have a lot of patterns and repetition! Luckily, computers are really good at drawing based on patterns and repetition! Tomorrow we’ll see how we can use a computer to create different designs based on the patterns we noticed today!",
+        "description": "These star quilts have 96 rhombuses! This would take a long time to draw by hand. And, it would be difficult to get this shape just right if we used paper and pencil. Luckily, since there are so many patterns and repetition we can make it easily on the computer. \n\nComputers are great for designing precise, accurate shapes in an efficient way. You can be done in an instant and it’s possible to go back and modify your work. This means you can change colors or angles with ease. Tomorrow we’ll see how we can use a computer to create different designs based on the patterns we noticed today!\n",
         "remarks": true
       },
       "seeding_key": {
@@ -1217,27 +1203,15 @@
   ],
   "resources": [
     {
-      "name": "Cut a Rhombus Shape",
-      "url": "https://docs.google.com/document/d/18FVMGR1NTsxOtl9gaM37arBRHvPDaKyFpx9_lfpCCPs/template/preview",
-      "key": "cut_a_rhombus_shape",
+      "name": "Star Quilt Article",
+      "url": "https://drive.google.com/file/d/1MAcBYUArtNihyt5ZZlwFOraFLhRxZm7G/view",
+      "key": "star_quilt_article",
       "properties": {
         "audience": "Teacher",
-        "type": "Handout"
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "cut_a_rhombus_shape"
-      }
-    },
-    {
-      "name": "Pattern Blocks",
-      "url": "https://docs.google.com/document/d/1RMSGntFT23MbvteS7eN2dbjFdHoBeIeEXRT5bLccHoM/template/preview",
-      "key": "pattern_blocks",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "pattern_blocks"
+        "resource.key": "star_quilt_article"
       }
     },
     {
@@ -1255,7 +1229,7 @@
     },
     {
       "name": "Star Quilts",
-      "url": "https://www.youtube.com/watch?v=Q210ko41yqo",
+      "url": "https://youtu.be/Q210ko41yqo?t=90",
       "key": "star_quilts_1",
       "properties": {
         "audience": "Teacher",
@@ -1266,11 +1240,23 @@
       }
     },
     {
-      "name": "Virtual Pattern Blocks",
-      "url": "https://www.didax.com/apps/pattern-blocks/",
+      "name": "Star Quilts Worksheet",
+      "url": "https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview",
+      "key": "star_quilts_worksheet",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "star_quilts_worksheet"
+      }
+    },
+    {
+      "name": "Virtual Pattern Blocks (Optional)",
+      "url": "https://mathigon.org/polypad#polygons",
       "key": "virtual_pattern_blocks",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Resource"
       },
       "seeding_key": {
@@ -1282,13 +1268,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "cut_a_rhombus_shape"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "pattern_blocks"
+        "resource.key": "star_quilt_article"
       }
     },
     {
@@ -1301,6 +1281,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "star_quilts_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "star_quilts_worksheet"
       }
     },
     {
@@ -1346,16 +1332,6 @@
       }
     },
     {
-      "key": "buffalo",
-      "word": "Buffalo",
-      "definition": "A large mammal with long legs, hooves, and horns, closely related to cattle",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "buffalo"
-      }
-    },
-    {
       "key": "comments",
       "word": "Comments",
       "definition": "Notes to yourself that explain a section of code. They do not alter the program but help keep your code in order.",
@@ -1363,36 +1339,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "comments"
-      }
-    },
-    {
-      "key": "generosity",
-      "word": "Generosity",
-      "definition": "Willingness to give or to share",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "generosity"
-      }
-    },
-    {
-      "key": "great_plains",
-      "word": "Great Plains",
-      "definition": "A broad expanse of flat land, much of it covered in prairie and grassland from North Dakota to Texas.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "great_plains"
-      }
-    },
-    {
-      "key": "honor",
-      "word": "Honor",
-      "definition": "Recognize and show admiration",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "honor"
       }
     },
     {
@@ -1444,43 +1390,9 @@
       "seeding_key": {
         "vocabulary.key": "row"
       }
-    },
-    {
-      "key": "textile",
-      "word": "Textile",
-      "definition": "Cloth created with needle and thread",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "textile"
-      }
     }
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "vocabulary.key": "buffalo"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "vocabulary.key": "generosity"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "vocabulary.key": "great_plains"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "vocabulary.key": "honor"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -1491,12 +1403,6 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "vocabulary.key": "rhombus"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "vocabulary.key": "textile"
       }
     },
     {
@@ -1508,7 +1414,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "vocabulary.key": "pattern"
+        "vocabulary.key": "loop"
       }
     },
     {
@@ -1520,7 +1426,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "vocabulary.key": "rhombus"
+        "vocabulary.key": "row"
       }
     },
     {
@@ -1611,7 +1517,7 @@
     {
       "key": "ccd41e0c-aeb0-4214-890b-89529d6c1fba",
       "properties": {
-        "description": "Students design their own Star Quilt using shape blocks, pen and paper"
+        "description": "Students design their own Star Quilt using pen and paper"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
