@@ -6,8 +6,6 @@
 
 set -xe
 
-mispipe "echo 'Starting timestamp'" ts
-
 export CI=true
 export RAILS_ENV=test
 export RACK_ENV=test
