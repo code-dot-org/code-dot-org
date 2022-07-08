@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "vpl-csa",
-    "serialized_at": "2022-07-06 21:58:10 UTC",
+    "serialized_at": "2022-07-07 16:07:34 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -200,6 +200,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-1-overview-2022"
+        ],
         "progression": "Module 1 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -297,6 +300,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-1-review-exemplar"
+        ],
         "progression": "Digging deeper into the Unit 3 project (~25 minutes)"
       },
       "bonus": false,
@@ -319,6 +325,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-1-unit3-project-rubric"
+        ],
         "progression": "Digging deeper into the Unit 3 project (~25 minutes)"
       },
       "bonus": false,
@@ -341,6 +350,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-1-daily-tasks-unit-3-project"
+        ],
         "progression": "Digging deeper into the Unit 3 project (~25 minutes)"
       },
       "bonus": false,
@@ -363,6 +375,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-1-one-day-project-reflection"
+        ],
         "progression": "Digging deeper into the Unit 3 project (~25 minutes)"
       },
       "bonus": false,
@@ -385,6 +400,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-1-timing-reflection"
+        ],
         "progression": "Timing and pacing of the course (~10 minutes)"
       },
       "bonus": false,
@@ -407,6 +425,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-1-wrap-up-2022"
+        ],
         "progression": "Module 1 Wrap Up (~5 minutes) "
       },
       "bonus": false,
@@ -429,6 +450,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-overview-2022"
+        ],
         "progression": "Module 2 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -451,6 +475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-wrap-up-2022"
+        ],
         "progression": "Wrap Up (~5 minutes)"
       },
       "bonus": false,
@@ -473,6 +500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-alias-video-2022"
+        ],
         "progression": "Aliases in Java "
       },
       "bonus": false,
@@ -495,6 +525,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-CFU-alias-2022"
+        ],
         "progression": "Aliases in Java "
       },
       "bonus": false,
@@ -517,6 +550,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-equals-video-2022"
+        ],
         "progression": "The equals() method"
       },
       "bonus": false,
@@ -539,6 +575,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-m2-equality-reflection"
+        ],
         "progression": "The equals() method"
       },
       "bonus": false,
@@ -561,6 +600,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-m2-equality-book-reflection"
+        ],
         "progression": "The equals() method"
       },
       "bonus": false,
@@ -583,6 +625,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-equals-book-video-2022"
+        ],
         "progression": "The equals() method"
       },
       "bonus": false,
@@ -597,6 +642,28 @@
       },
       "level_keys": [
         "vpl-csa-module-2-equals-book-video-2022"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "The equals() method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-2-equals-level-from-curriculum-2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "48ef65cc-d6e6-4ac6-a22a-f89be95fdc51"
+      },
+      "level_keys": [
+        "vpl-csa-module-2-equals-level-from-curriculum-2022"
       ]
     }
   ],
@@ -810,6 +877,18 @@
         "level.key": "vpl-csa-module-2-equals-book-video-2022",
         "script_level.level_keys": [
           "vpl-csa-module-2-equals-book-video-2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "48ef65cc-d6e6-4ac6-a22a-f89be95fdc51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-2-equals-level-from-curriculum-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-2-equals-level-from-curriculum-2022"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
