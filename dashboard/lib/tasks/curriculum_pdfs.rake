@@ -10,7 +10,7 @@ namespace :curriculum_pdfs do
   def get_pdfless_lessons(script)
     script.lessons.select(&:has_lesson_plan).select do |lesson|
       !Services::CurriculumPdfs.lesson_plan_pdf_exists_for?(lesson) ||
-        !Services::CurriculumPdfs.lesson_plan_pdf_exists_for?(lesson, true)
+        (script.include_student_lesson_plans && !Services::CurriculumPdfs.lesson_plan_pdf_exists_for?(lesson, true))
     end
   end
 
