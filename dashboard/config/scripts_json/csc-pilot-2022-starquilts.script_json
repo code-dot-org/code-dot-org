@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-starquilts",
-    "serialized_at": "2022-07-07 19:45:12 UTC",
+    "serialized_at": "2022-07-07 19:56:28 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -38,7 +38,7 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Native American Star Quilts",
+      "name": "Nat American Star Quilts",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -338,7 +338,7 @@
       "key": "beee4676-b02d-40c7-bc67-d5be08b7819a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n \n**Discuss**: \n* _What patterns do you see in the flower?_ \n* _What patterns do you see in the turtle shell?_\n\n**Discussion Goal**: Students will have a variety of answers, but emphasize how both natural patterns include repetitions and “growing out” patterns similar to the star quilt designs from yesterday. Other responses may include:\n* All of the petals are the same shape\n* All of the petals perfectly fit together\n* Petals start in the middle and extend out\n* There are less petals in the middle of the flower compared to the outer rows of the flower\n* The same turtle shape is repeated over and over\n* There are smaller turtle shapes within the bigger shapes\n\n**Discuss**: _What other visual patterns can you think of that you’ve seen before?_\n\n**Discussion Goal**:  \nHere are some examples of visual patterns out in the world:\n* Tree trunks\n* Honeycomb\n* Snake scales\n* Corn on the cob\n* Pineapple\n* Brick wall\n* Tile floors\n* Soccer balls\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slides\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n \n**Discuss**: \n* _What patterns do you see in the flower?_ \n* _What patterns do you see in the turtle shell?_\n\n**Discussion Goal**: Students will have a variety of answers, but emphasize how both natural patterns include repetitions and “growing out” patterns similar to the star quilt designs from yesterday. Other responses may include:\n* All of the petals are the same shape\n* All of the petals perfectly fit together\n* Petals start in the middle and extend out\n* There are less petals in the middle of the flower compared to the outer rows of the flower\n* The same turtle shape is repeated over and over\n* There are smaller turtle shapes within the bigger shapes\n\n**Discuss**: _What other visual patterns can you think of that you’ve seen before?_\n\n**Discussion Goal**:  \nHere are some examples of visual patterns out in the world:\n* Tree trunks\n* Honeycomb\n* Snake scales\n* Corn on the cob\n* Pineapple\n* Brick wall\n* Tile floors\n* Soccer balls\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slides\n\n- **Artist** - You can write code to make him draw almost anything\n- **Loop** - a sequence of code that is repeated\n- **Point** - One part of the star shape\n- **Row** - In this case, a orderly line of rhombuses\n"
       },
       "seeding_key": {
         "activity_section.key": "beee4676-b02d-40c7-bc67-d5be08b7819a",
@@ -373,7 +373,7 @@
       "key": "508f8102-cbd5-437d-95f9-7768c5723ad0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-4 - Skill Building” slide\n\n**Do This**: Transition students to their computers, and have them follow the instructions for each level in the skill building section.\n\n**Goal**: In the first few levels of this lesson, students will be programming the Artist to create a 6 point star. Students will start by stamping a rhombus shape. Then they learn how to repeatedly turn the Artist and stamp more rhombus shapes. In Level 4, students will learn looping and add in a repeat block to simplify the code.\n\n**Debugging Tips**:\n\n- **Level 2**: Show students how to drag & drop. Explain that the blocks are like puzzle pieces that must fit together to run. Students may select which color rhombus to use. When finished, students can test their code by pressing “Run.”\n\n- **Level 3**: The Artist must turn 60 degrees before stamping the next rhombus. Explain to students that 60 degrees is the measure of the angle of the rhombus. Students may start anticipating the next lines of code, prompt them to look for patterns.\n\n- **Level 4**: Students must continue coding the rest of the star shape. This includes turning and stamping the rhombus. Prompt students to notice the patterns in the code.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-4 - Skill Building” slide\n\n**Do This**: Transition students to their computers, and have them follow the instructions for each level in the skill building section.\n\n**Goal**: In the first few levels of this lesson, students will be programming the Artist to draw a 6-pointed star. It is a very simple shape that looks like an asterisk. Students will draw a line, jump back to the middle, turn the artist and draw another line. Then they learn how to loop the Artist to repeat a chunk of the code. \n\n**Debugging Tips**:\n\n- **Level 2**: Show students how to drag & drop. Explain that the blocks are like puzzle pieces that must fit together to run. Students may select which color rhombus to use. When finished, students can test their code by pressing “Run.”\n\n- **Level 3**: The Artist must turn 60 degrees before stamping the next rhombus. Explain to students that 60 degrees is the measure of the angle of the rhombus. Students may start anticipating the next lines of code, prompt them to look for patterns.\n\n- **Level 4**: Students must continue coding the rest of the star shape. This includes turning and stamping the rhombus. Prompt students to notice the patterns in the code.\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
