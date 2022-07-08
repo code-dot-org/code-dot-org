@@ -9,9 +9,9 @@ provisioner:
 verifier:
   name:  inspec
 platforms:
-  - name: ubuntu-18.04
+  - name: ubuntu-20.04
     driver:
-      image: dokken/ubuntu-18.04
+      image: dokken/ubuntu-20.04
       pid_one_command: /bin/systemd
 suites:
   - name: default

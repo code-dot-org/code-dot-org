@@ -14,9 +14,9 @@ provisioner:
     environment: integration
 
 platforms:
-- name: ubuntu-18.04
+- name: ubuntu-20.04
   driver:
-    image: dokken/ubuntu-18.04
+    image: dokken/ubuntu-20.04
     pid_one_command: /bin/systemd
   attributes:
     cdo-apps:
