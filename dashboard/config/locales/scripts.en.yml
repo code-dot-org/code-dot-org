@@ -8319,6 +8319,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           name: csc-starquilts-2022
+          lessons: {}
         csc-fables-2022:
           title: Fables
           description: ''
