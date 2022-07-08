@@ -10,9 +10,9 @@ verifier:
   root_path: '/opt/verifier'
   sudo: false
 platforms:
-  - name: ubuntu-18.04
+  - name: ubuntu-20.04
     driver:
-      image: dokken/ubuntu-18.04
+      image: dokken/ubuntu-20.04
       pid_one_command: /bin/systemd
     run_list:
       - recipe[apt]
