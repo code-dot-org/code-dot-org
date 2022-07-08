@@ -12,13 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Setup locals variables
+        run: ./docker/setup_unit_tests_locals.sh
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.5 # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-
-      - name: Setup locals variables
-        run: ./docker/setup_unit_tests_locals.sh
+          bundler-cache: false # runs 'bundle install' and caches installed gems automatically
 
       - run: RAILS_ENV=test RACK_ENV=test bundle exec rake install
 
