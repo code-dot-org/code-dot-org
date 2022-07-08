@@ -51,6 +51,11 @@ apt_package 'libsqlite3-dev'
 # and our git repository.
 apt_package 'unison' if node.chef_environment == 'staging'
 
+# Add Ubuntu Toolchain so we can get access to more modern tools (like gcc 9)
+apt_repository 'ubuntu-toolchain-r' do
+  uri 'ppa:ubuntu-toolchain-r/test'
+end
+
 # Debian-family packages for building Ruby C extensions
 apt_package %w(
   autoconf
@@ -59,7 +64,7 @@ apt_package %w(
   build-essential
   cmake
   flex
-  gcc-8
+  gcc-9-base
   gettext
   ncurses-dev
 )
