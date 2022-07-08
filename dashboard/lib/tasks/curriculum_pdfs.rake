@@ -1,7 +1,7 @@
 namespace :curriculum_pdfs do
   def get_pdf_enabled_scripts
     Script.all.select do |script|
-      next false if [Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development].include?(script.published_state)
+      next false if [Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development].include?(script.get_published_state)
       next false if script.use_legacy_lesson_plans
       script.is_migrated && script.seeded_from.present?
     end
