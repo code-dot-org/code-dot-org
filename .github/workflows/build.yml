@@ -20,7 +20,7 @@ jobs:
       - name: Setup locals variables
         run: ./docker/setup_unit_tests_locals.sh
 
-      - run: bundle exec rake install
+      - run: RAILS_ENV=test RACK_ENV=test bundle exec rake install
 
       # Infer node version from .nvmrc, courtesy of https://github.com/actions/setup-node/issues/32#issuecomment-539794249
       - name: Read .nvmrc
