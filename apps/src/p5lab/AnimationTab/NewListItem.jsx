@@ -1,6 +1,7 @@
 /** List item placeholder for adding a new item */
 import React from 'react';
 import color from '@cdo/apps/util/color';
+import Button from '@cdo/apps/templates/Button';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
@@ -62,7 +63,7 @@ const styles = {
     left: 0,
     right: 0,
     borderRadius: 10,
-    backgroundColor: color.bootstrap_button_blue,
+    backgroundColor: Button.ButtonColor.blue,
     textAlign: 'center',
     paddingTop: '50%'
   },
@@ -79,7 +80,7 @@ const styles = {
     textAlign: 'center',
     userSelect: 'none',
     fontWeight: 'bold',
-    color: color.bootstrap_button_blue,
+    color: Button.ButtonColor.blue,
     fontSize: '13px'
   }
 };
