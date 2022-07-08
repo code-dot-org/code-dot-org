@@ -65,6 +65,7 @@ apt_package %w(
   cmake
   flex
   gcc-9-base
+  gcc-11-base
   gettext
   ncurses-dev
 )
