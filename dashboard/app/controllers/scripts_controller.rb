@@ -324,8 +324,6 @@ class ScriptsController < ApplicationController
       :include_student_lesson_plans,
       :use_legacy_lesson_plans,
       :lesson_groups,
-      resourceTypes: [],
-      resourceLinks: [],
       resourceIds: [],
       studentResourceIds: [],
       project_widget_types: [],
