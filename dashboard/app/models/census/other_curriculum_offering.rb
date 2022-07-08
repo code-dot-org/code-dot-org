@@ -32,8 +32,11 @@ class Census::OtherCurriculumOffering < ApplicationRecord
   def self.seed_from_csv(provider_code, school_year, filename, dry_run = false)
     ActiveRecord::Base.transaction do
       CSV.foreach(filename, {headers: true}) do |row|
+        puts row.inspect
         row_hash = row.to_hash
+        puts row_hash.keys.inspect
         input_school_id = row_hash['School ID']
+        puts input_school_id.inspect
         # Remove leading zero if it looks like an NCES ID (12 digits) because we imported NCES IDs into School.id
         # without the leading zero.
         lookup_school_id = input_school_id.length == 12 ? input_school_id.sub(/^0/, "") : input_school_id
