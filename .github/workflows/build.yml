@@ -18,7 +18,9 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.5 # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+      - name: Bundle install
+        run: bundle install
 
       - run: RAILS_ENV=test RACK_ENV=test bundle exec rake install
 
@@ -31,8 +33,6 @@ jobs:
         with:
           node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
 
-      - name: Bundle install
-        run: bundle install
       - name: Build all
         run: rake build
 
