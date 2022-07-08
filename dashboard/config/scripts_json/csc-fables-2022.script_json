@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2022-07-06 15:07:55 UTC",
+    "serialized_at": "2022-07-07 16:09:57 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -875,8 +875,6 @@
       "position": 1,
       "properties": {
         "description": "Today, we are going to use our plan from the previous class to code our remixed fables. Before we get started, let’s review what we talked about in the previous class.",
-        "duration": "5",
-        "name": "Reflection",
         "remarks": true
       },
       "seeding_key": {
@@ -885,8 +883,21 @@
       }
     },
     {
-      "key": "3339de28-d1d4-47c2-acac-d21a60793c17",
+      "key": "dd181ec2-4915-46e6-b164-51bb4f593fbf",
       "position": 2,
+      "properties": {
+        "description": "**Match**: \n- Check out the example program in Lesson 4\n- In the [Fables Warm Up Activity](https://docs.google.com/document/d/1lAyYd8byvk6dIgoZjW9JCiLpOoC7mJfVR9yeUyYBY4M/template/preview) handout, draw a line to match each block to what it does\n\n**Do This**: Give students time to match the blocks with the corresponding action. Students will review what the blocks do and think about when it is best to use each one.  \n",
+        "duration": "5",
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd181ec2-4915-46e6-b164-51bb4f593fbf",
+        "lesson_activity.key": "3764569d-14e2-4fc5-b6c6-56d6aeb5e849"
+      }
+    },
+    {
+      "key": "3339de28-d1d4-47c2-acac-d21a60793c17",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What is the purpose of reading or telling fables?_\n- _Why are characters important in a fable?_\n\n**Discussion Goal**: Students should understand that the purpose of a fable is to teach a moral or lesson. They should be able to explain that a character and their traits directly relates to the moral of the story, and typically the reader learns the central lesson through the main character's traits and actions. Students can refer back to previous fables as examples, where they learned the moral through the actions of the characters."
       },
@@ -897,7 +908,7 @@
     },
     {
       "key": "3cde9068-98ba-4c1f-bd12-08fa7710780b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "tips": [
           {
@@ -913,7 +924,7 @@
     },
     {
       "key": "9ef24861-6b5a-424a-83ef-106d17493cde",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n* **Fable** - A short story conveying a moral\n* **Key Detail** - An important moment in the story that adds meaning\t\n* **Moral** - A lesson learned"
       },
@@ -924,7 +935,7 @@
     },
     {
       "key": "7b616f2e-fd32-42f6-95fe-84ea98c77f5d",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "Now that we have reviewed fables and their purpose, we are going to start working on our projects. Let’s get started with Level 1, which has some sample programs to check out. ",
         "remarks": true
@@ -2170,7 +2181,7 @@
     },
     {
       "name": "Fable Planning Sheet",
-      "url": "https://docs.google.com/document/d/13axu7RW5o40K4UqUZDDqtws1oMy4LLBPkMzJ65irOts/template/preview",
+      "url": "https://docs.google.com/document/d/1_xyVZjqibwHjiJKHOmPkQeE9YaUeDRTxNf335YlMhQI/template/preview",
       "key": "fable_planning_sheet",
       "properties": {
         "audience": "Student",
@@ -2202,6 +2213,18 @@
       },
       "seeding_key": {
         "resource.key": "fables_guide"
+      }
+    },
+    {
+      "name": "Fables Warm Up Activity",
+      "url": "https://docs.google.com/document/d/1lAyYd8byvk6dIgoZjW9JCiLpOoC7mJfVR9yeUyYBY4M/template/preview",
+      "key": "fables_warm_up_activity",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "fables_warm_up_activity"
       }
     },
     {
@@ -2239,12 +2262,6 @@
     {
       "seeding_key": {
         "lesson.key": "Code Your Fable",
-        "resource.key": "fable_planning_sheet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Your Fable",
         "resource.key": "fable_planning_sheet_key_"
       }
     },
@@ -2252,6 +2269,12 @@
       "seeding_key": {
         "lesson.key": "Code Your Fable",
         "resource.key": "fables_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Code Your Fable",
+        "resource.key": "fables_warm_up_activity"
       }
     },
     {
