@@ -91,26 +91,6 @@ module Services
       !unit.unit_without_lesson_plans? && unit.lessons.map(&:resources).flatten.any?
     end
 
-    # Actually generate PDFs for the given script, and upload the results to S3.
-    def self.generate_pdfs(script)
-      ChatClient.log "Generating PDFs for #{script.name}"
-      pdf_dir = Dir.mktmpdir("pdf_generation")
-
-      # Individual Lesson Plan and Student Lesson Plan PDFs
-      script.lessons.select(&:has_lesson_plan).each do |lesson|
-        generate_lesson_pdf(lesson, pdf_dir)
-        generate_lesson_pdf(lesson, pdf_dir, true) if script.include_student_lesson_plans
-      end
-
-      # Script Resources and Overview PDFs
-      generate_script_resources_pdf(script, pdf_dir) if should_generate_resource_pdf?(script)
-      generate_script_overview_pdf(script, pdf_dir) if should_generate_overview_pdf?(script)
-
-      # Persist PDFs to S3
-      upload_generated_pdfs_to_s3(pdf_dir)
-      FileUtils.remove_entry_secure(pdf_dir) unless DEBUG
-    end
-
     # Uploads all PDFs in the given directory to S3. Will preserve existing
     # organization, including subdirectories.
     def self.upload_generated_pdfs_to_s3(directory)
