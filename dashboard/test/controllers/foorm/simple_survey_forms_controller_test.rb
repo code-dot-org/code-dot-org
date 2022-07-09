@@ -44,7 +44,7 @@ module Foorm
 
       get "/form/#{@simple_survey_form.path}/configuration"
       assert_response :success
-      assert_equal 'application/json', @response.content_type
+      assert_equal 'application/json; charset=utf-8', @response.content_type
     end
 
     test 'renders not a teacher if user is not a teacher' do
