@@ -78,7 +78,7 @@ class RemixTest < ActionDispatch::IntegrationTest
     assert_only_remixes_sources 'minecraft_hero'
   end
 
-  test 'applab only remixes Sources and Assets buckets and Starter assets' do 
+  test 'applab only remixes Sources and Assets buckets and Starter assets' do
     assert_only_remixes_sources_assets_starter_assets 'applab'
   end
 
