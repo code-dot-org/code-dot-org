@@ -69,6 +69,16 @@ module ScriptConstants
       EXPRESS_2021_NAME = 'express-2021'.freeze,
       PRE_READER_EXPRESS_2021_NAME = 'pre-express-2021'.freeze,
     ],
+    csf_2022: [
+      COURSEA_2022_NAME = 'coursea-2022'.freeze,
+      COURSEB_2022_NAME = 'courseb-2022'.freeze,
+      COURSEC_2022_NAME = 'coursec-2022'.freeze,
+      COURSED_2022_NAME = 'coursed-2022'.freeze,
+      COURSEE_2022_NAME = 'coursee-2022'.freeze,
+      COURSEF_2022_NAME = 'coursef-2022'.freeze,
+      EXPRESS_2022_NAME = 'express-2022'.freeze,
+      PRE_READER_EXPRESS_2022_NAME = 'pre-express-2022'.freeze,
+    ],
     csc_2021: [
       POETRY_2021_NAME = 'poetry-2021'.freeze,
       AI_ETHICS_2021_NAME = 'ai-ethics-2021'.freeze,
