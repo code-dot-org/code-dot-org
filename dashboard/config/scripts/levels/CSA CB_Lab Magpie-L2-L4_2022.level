@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA CB_Lab Magpie L2 PBT_2022",
+    "long_instructions": "## Add more to the getResponse method\r\n\r\n**Do This:**\r\n\r\n1. Add another conditional to the `getResponse()`(#e7e8ea) method so that the program will respond favorably when it sees the name of your teacher.\r\n\r\n\tBe sure to use appropriate pronouns!\r\n\r\n\tFor example, a possible statement and response would be:\r\n\r\n\t**Statement:** *Ms. Smith is telling us about robotics.*\r\n\r\n\t**Response:** *She sounds like a good teacher.*",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-07-08T19:48:00.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "audit_log": "[{\"changed_at\":\"2022-07-08 19:48:03 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-09 18:44:16 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Javalab>
