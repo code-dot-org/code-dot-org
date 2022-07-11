@@ -27,7 +27,7 @@ jobs:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
       - name: Bundle install
-        run: bundle install
+        run: bundle install --with test
 
       - name: Start MySQL
         run: sudo /etc/init.d/mysql start
