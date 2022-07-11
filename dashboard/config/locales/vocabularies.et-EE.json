@@ -136,6 +136,24 @@
         },
         "define/coursee/2021": {
           "word": "Määra"
+        },
+        "debugging/csd/2021": {
+          "word": "Debugimine"
+        },
+        "variable/csd/2021": {
+          "word": "Muutuja"
+        },
+        "conditionals/csd/2021": {
+          "word": "Tingimuslaused"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraktsus"
+        },
+        "function/csd/2021": {
+          "word": "Funktsioon"
+        },
+        "copyright/csd/2021": {
+          "word": "Autoriõigus"
         }
       }
     }

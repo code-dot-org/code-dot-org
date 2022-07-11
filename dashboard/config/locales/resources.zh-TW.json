@@ -8,21 +8,57 @@
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
+        "poem_art_celebration/poem-art/2021": {
+          "type": "影片"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "影片"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "影片"
+        },
         "poem_art_introduction/poem-art/2021": {
           "name": "詩歌藝術1 - 介紹",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "影片"
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "藝術家簡介"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "轉向與角度"
+          "name": "轉向與角度",
+          "type": "學生講義"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "轉向與角度"
         },
         "dance-party-playlist/dance/unversioned": {
           "name": "Spotify 播放清單（所有年齡段）"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "加密與公開金鑰",
+          "type": "影片"
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Code Studio 上的加密小工具"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "活動指南 - 文字壓縮"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "活動重溫 - 把這個訊息解密",
+          "type": "活動重溫"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "把這個訊息解碼"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Code Studio 上的文字壓縮小工具",
+          "type": "小工具"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "name": "影片：Aloe Blacc 介紹文字壓縮",
+          "type": "影片"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
           "name": "Spotify 播放清單（所有年齡段）"
@@ -31,13 +67,439 @@
           "name": "Spotify 播放清單（所有年齡段）"
         },
         "ai-ml/oceans/unversioned": {
-          "name": "AI（人工智慧）：機器學習"
+          "name": "AI（人工智慧）：機器學習",
+          "type": "影片"
         },
         "ai-societal/oceans/unversioned": {
-          "name": "AI（人工智慧）：社會影響"
+          "name": "AI（人工智慧）：社會影響",
+          "type": "影片"
         },
         "ai-training/oceans/unversioned": {
-          "name": "AI（人工智慧）：訓練資料與偏見"
+          "name": "AI（人工智慧）：訓練資料與偏見",
+          "type": "影片"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "標準對照"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "教師論壇"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "詞彙"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "詞彙"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "詞彙"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "詞彙"
+        },
+        "lesson_plans/express/2018": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/express/2018": {
+          "name": "標準對照"
+        },
+        "teacher_forum/express/2018": {
+          "name": "教師論壇"
+        },
+        "vocabulary/express/2018": {
+          "name": "詞彙"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "詞彙"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "詞彙"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "引入的代碼"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "標準對照"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "教師論壇"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "詞彙"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "引入的代碼"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "標準對照"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "教師論壇"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "詞彙"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "標準對照"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "教師論壇"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "詞彙"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "引入的代碼"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "標準對照"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "教師論壇"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "詞彙"
+        },
+        "code_introduced/csd/2018": {
+          "name": "引入的代碼"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "標準對照"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "教師論壇"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "詞彙"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "標準對照"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "教師論壇"
+        },
+        "vocabulary/csd/2018": {
+          "name": "詞彙"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "課程指引"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "詞彙"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "課程指引"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "標準對照"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "教師論壇"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "詞彙"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "課程指引"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "詞彙"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "課程指引"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "詞彙"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "課程指引"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "詞彙"
+        },
+        "lesson_plans/express/2019": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/express/2019": {
+          "name": "標準對照"
+        },
+        "teacher_forum/express/2019": {
+          "name": "教師論壇"
+        },
+        "vocabulary/express/2019": {
+          "name": "詞彙"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "課程指引"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "詞彙"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "教師論壇"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "引入的代碼"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "標準對照"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "詞彙"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "引入的代碼"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "標準對照"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "詞彙"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "引入的代碼"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "標準對照"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "詞彙"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "標準對照"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "詞彙"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "標準對照"
+        },
+        "vocabulary/csd/2019": {
+          "name": "詞彙"
+        },
+        "code_introduced/csd/2019": {
+          "name": "引入的代碼"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "標準對照"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "詞彙"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "引入的代碼"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "標準對照"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "教師論壇"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "詞彙"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "引入的代碼"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "標準對照"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "教師論壇"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "詞彙"
+        },
+        "code_introduced/csd/2017": {
+          "name": "引入的代碼"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "標準對照"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "教師論壇"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "詞彙"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "標準對照"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "教師論壇"
+        },
+        "vocabulary/csd/2017": {
+          "name": "詞彙"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "標準對照"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "教師論壇"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "詞彙"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "引入的代碼"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "教學計畫"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "標準對照"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "教師論壇"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "詞彙"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "詩歌列表",
@@ -50,7 +512,8 @@
           "name": "探索應用程式"
         },
         "introducing_sprite_lab_1/coursef/2021": {
-          "name": "Sprite Lab 簡介"
+          "name": "Sprite Lab 簡介",
+          "type": "影片"
         },
         "exploring_apps_1/coursef/2021": {
           "name": "探索應用程式"
@@ -64,8 +527,21 @@
         "sprites_in_action/coursef/2021": {
           "name": "運行中的角色"
         },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "影片"
+        },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "空白區故事"
+        },
+        "blank_space_stories/coursef/2021": {
+          "name": "空白區故事"
+        },
+        "text_and_prompts/coursef/2021": {
+          "name": "文字與提示"
+        },
         "pause_and_think_online/coursef/2021": {
-          "name": "在線上，停一停、想一想"
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "有趣的計次迴圈"
@@ -83,7 +559,8 @@
           "name": "有趣的計次迴圈"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "有趣的計次迴圈"
+          "name": "有趣的計次迴圈",
+          "type": "測驗"
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": "不插電活動積木（課程 C-F）"
@@ -92,13 +569,16 @@
           "name": "執行模擬"
         },
         "ai-ml/coursef/2021": {
-          "name": "AI（人工智慧）：機器學習"
+          "name": "AI（人工智慧）：機器學習",
+          "type": "影片"
         },
         "ai-training/coursef/2021": {
-          "name": "AI（人工智慧）：訓練資料與偏見"
+          "name": "AI（人工智慧）：訓練資料與偏見",
+          "type": "影片"
         },
         "ai-societal/coursef/2021": {
-          "name": "AI（人工智慧）：社會影響"
+          "name": "AI（人工智慧）：社會影響",
+          "type": "影片"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "網際網路"
@@ -107,7 +587,8 @@
           "name": "IP 位址卡與傳遞類型卡"
         },
         "csf-internet-assessment/coursef/2021": {
-          "name": "網際網路 Internet"
+          "name": "網際網路 Internet",
+          "type": "測驗"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "網際網路 Internet"
@@ -119,7 +600,8 @@
           "name": "期末專案設計"
         },
         "rubric-csf-final-projects/coursef/2021": {
-          "name": "電腦科學基礎期末專案"
+          "name": "電腦科學基礎期末專案",
+          "type": "標題 "
         },
         "implementation_guide/coursef/2021": {
           "name": "實施指南"
@@ -136,6 +618,12 @@
         "virtual_lesson_modifications/coursef/2021": {
           "name": "虛擬課程修改",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "type": "學生講義"
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "type": "學生講義"
         },
         "mimi-activity/courseb/2021": {
           "name": "移動它，移動它"
@@ -158,6 +646,9 @@
         "pair-programming-vid/courseb/2021": {
           "name": "結對編程"
         },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "type": "影片"
+        },
         "happy-map-game-pieces/courseb/2021": {
           "name": "「快樂地圖」遊戲物件"
         },
@@ -168,7 +659,8 @@
           "name": "Stevie 和 Big Project"
         },
         "unspotted_bugs/courseb/2021": {
-          "name": "沒被發現的程式的錯誤（Bug）"
+          "name": "沒被發現的程式的錯誤（Bug）",
+          "type": "影片"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "學習迴圈"
@@ -177,7 +669,8 @@
           "name": "學習迴圈"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
-          "name": "學習迴圈"
+          "name": "學習迴圈",
+          "type": "測驗"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "學習迴圈"
@@ -186,13 +679,16 @@
           "name": "電腦科學基礎主要活動秘訣"
         },
         "common-sense-media-pause-think/courseb/2021": {
-          "name": "在線上，停一停、想一想"
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "大事件"
+          "name": "大事件",
+          "type": "影片"
         },
         "csf-the-big-event-assessment/courseb/2021": {
-          "name": "大事件"
+          "name": "大事件",
+          "type": "測驗"
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "大事件"
@@ -213,8 +709,27 @@
           "name": "虛擬課程修改",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "我的網路環境安全:學習頁面"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "我的網路環境安全:我的網路環境"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "我的網路環境安全:安全:它的規則!"
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "我的網路環境安全:暫停&想一想",
+          "type": "學生講義"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "結對編程"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "type": "影片"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "影片"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "快樂地圖"
@@ -231,6 +746,12 @@
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "不插電活動 Blockly 積木（K-1 年級）"
         },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "type": "影片"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "type": "影片"
+        },
         "happy-map-cards-xl/coursea/2021": {
           "name": "加大版「快樂地圖」卡片"
         },
@@ -240,14 +761,19 @@
         "feeling-faces-image/coursea/2021": {
           "name": "各種感受的面孔"
         },
+        "pair-programming/coursea/2021": {
+          "type": "影片"
+        },
         "common-sense-media-pause-think/coursea/2021": {
-          "name": "在線上，停一停、想一想"
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "大事件"
         },
         "csf-the-big-event-assessment/coursea/2021": {
-          "name": "大事件"
+          "name": "大事件",
+          "type": "測驗"
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "大事件"
@@ -271,6 +797,9 @@
           "name": "虛擬課程修改",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
+        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
+          "type": "學生講義"
+        },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "我的機器人朋友"
         },
@@ -290,7 +819,8 @@
           "name": "不插電活動的迷宮積木"
         },
         "pair-programming-vid/coursec/2021": {
-          "name": "結對編程"
+          "name": "結對編程",
+          "type": "影片"
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "電腦科學基礎主要活動秘訣"
@@ -305,13 +835,15 @@
           "name": "轉向與角度"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "轉向與角度"
+          "name": "轉向與角度",
+          "type": "學生講義"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "大事件"
         },
         "csf-the-big-event-assessment/coursec/2021": {
-          "name": "大事件"
+          "name": "大事件",
+          "type": "測驗"
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "大事件"
@@ -320,7 +852,8 @@
           "name": "大事件（課程 C）"
         },
         "pause_and_think_online/coursec/2021": {
-          "name": "在線上，停一停、想一想"
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
         },
         "csf-bit-byte-video/coursec/2021": {
           "name": "位元與位元組"
@@ -335,7 +868,8 @@
           "name": "二進制手環"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
-          "name": "二進制手環"
+          "name": "二進制手環",
+          "type": "測驗"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "二進制手環"
@@ -366,7 +900,8 @@
           "name": "方格紙編程"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "方格紙編程"
+          "name": "方格紙編程",
+          "type": "測驗"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "方格紙編程"
@@ -396,7 +931,8 @@
           "name": "不插電活動積木（課程 C-F）"
         },
         "pause_and_think_online/coursed/2021": {
-          "name": "在線上，停一停、想一想"
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
         },
         "dance-party-playlist/coursed/2021": {
           "name": "Spotify 播放清單（所有年齡段）"
@@ -405,7 +941,8 @@
           "name": "各種感受的面孔"
         },
         "pause_and_think_online_1/coursed/2021": {
-          "name": "在線上，停一停、想一想"
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "用撲克牌學習條件判斷（Conditionals）"
@@ -417,13 +954,17 @@
           "name": "用撲克牌學習條件式（Conditional）計畫範本"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "用撲克牌學習條件判斷（Conditionals）"
+          "name": "用撲克牌學習條件判斷（Conditionals）",
+          "type": "測驗"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "用撲克牌學習條件判斷（Conditionals）"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "用撲克牌學習條件判斷（Conditionals）"
+        },
+        "course-d-project-planning-guide-1/coursed/2021": {
+          "type": "項目指南"
         },
         "implementation_guide/coursed/2021": {
           "name": "實施指南"
@@ -442,13 +983,16 @@
           "name": "不插電活動的迷宮積木"
         },
         "pair_programming/express/2021": {
-          "name": "結對編程"
+          "name": "結對編程",
+          "type": "影片"
         },
         "artist_introduction/express/2021": {
-          "name": "藝術家簡介"
+          "name": "藝術家簡介",
+          "type": "影片"
         },
         "turns_angles/express/2021": {
-          "name": "轉向與角度"
+          "name": "轉向與角度",
+          "type": "影片"
         },
         "turns_angles_1/express/2021": {
           "name": "轉向與角度"
@@ -466,10 +1010,14 @@
           "name": "運行中的角色"
         },
         "pause_and_think_online/express/2021": {
-          "name": "在線上，停一停、想一想"
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
         },
         "dance-party-playlist/express/2021": {
           "name": "Spotify 播放清單（所有年齡段）"
+        },
+        "pair_programming_video/express/2021": {
+          "type": "影片"
         },
         "unplugged_blocks_courses_c-f__4/express/2021": {
           "name": "不插電活動積木（課程 C-F）"
@@ -477,11 +1025,18 @@
         "unplugged_blocks_courses_c-f__5/express/2021": {
           "name": "不插電活動積木（課程 C-F）"
         },
+        "text_and_prompts/express/2021": {
+          "name": "文字與提示"
+        },
         "variables_video/express/2021": {
           "name": "變數"
         },
+        "csf-express-end-of-course-project-planning-guide/express/2021": {
+          "type": "項目指南"
+        },
         "rubric-csf-final-projects/express/2021": {
-          "name": "電腦科學基礎期末專案"
+          "name": "電腦科學基礎期末專案",
+          "type": "標題 "
         },
         "teacher_forum_1/express/2021": {
           "name": "教師論壇"
@@ -492,8 +1047,15 @@
         "feeling-faces-image/pre-express/2021": {
           "name": "各種感受的面孔"
         },
+        "20_20_20_rule/pre-express/2021": {
+          "type": "影片"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "type": "影片"
+        },
         "common-sense-media-pause-think/pre-express/2021": {
-          "name": "在線上，停一停、想一想"
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
         },
         "teacher_forum_1/pre-express/2021": {
           "name": "教師論壇"
@@ -501,11 +1063,19 @@
         "sprite_lab_documentation/coursee/2021": {
           "name": "Sprite Lab 說明文件"
         },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "type": "學生講義"
+        },
         "common-sense-media-pause-think/coursee/2021": {
-          "name": "在線上，停一停、想一想"
+          "name": "在線上，停一停、想一想",
+          "type": "影片"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "type": "影片"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "name": "轉向與角度"
+          "name": "轉向與角度",
+          "type": "學生講義"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "轉向與角度"
@@ -520,7 +1090,8 @@
           "name": "函式（不插電活動）：作曲"
         },
         "csf-songwriting-assessment/coursee/2021": {
-          "name": "函式（不插電活動）：作曲"
+          "name": "函式（不插電活動）：作曲",
+          "type": "測驗"
         },
         "assessment-answer-songwriting/coursee/2021": {
           "name": "函式（不插電活動）：作曲"
@@ -532,7 +1103,8 @@
           "name": "以無障礙為目的設計程式"
         },
         "rubric-csf-final-projects/coursee/2021": {
-          "name": "電腦科學基礎期末專案"
+          "name": "電腦科學基礎期末專案",
+          "type": "標題 "
         },
         "design-process/coursee/2021": {
           "name": "設計流程"
@@ -555,6 +1127,710 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "虛擬課程修改",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "影片"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "看到人工智慧",
+          "type": "影片"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "影片"
+        },
+        "patterns_in_data/csd/2021": {
+          "name": "數據中的規律"
+        },
+        "patterns_in_data_1/csd/2021": {
+          "name": "數據中的規律"
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "AI Lab 的介紹"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "name": "AI Lab 的介紹",
+          "type": "影片"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "AI Lab 的訓練和測試",
+          "type": "影片"
+        },
+        "importing_a_model_in_app_lab/csd/2021": {
+          "name": "從 App Lab 匯入模型"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "AI（人工智慧）：訓練資料與偏見",
+          "type": "影片"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "name": "AI Lab 的模型卡",
+          "type": "影片"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "影片"
+        },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "AI Lab 的數字資料"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "AI Lab 的數字資料"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "AI Lab 的數字資料",
+          "type": "影片"
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "學生講義"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "影片"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "標題 "
+        },
+        "survey_planning/csd/2021": {
+          "name": "設計數據收集"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "影片"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "影片"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "標題 "
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "影片"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "反思"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "紙上原型",
+          "type": "標題 "
+        },
+        "market-research/csd/2021": {
+          "name": "市場研究"
+        },
+        "market_research/csd/2021": {
+          "name": "市場研究"
+        },
+        "design_mode/csd/2021": {
+          "name": "設計模式"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "影片"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "name": "設計模式簡介",
+          "type": "影片"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "設計模式"
+        },
+        "multi-screen_apps/csd/2021": {
+          "name": "多螢幕應用程式"
+        },
+        "responding_to_user_input/csd/2021": {
+          "name": "回應使用者輸入的內容"
+        },
+        "bugs-and-features-planning/csd/2021": {
+          "name": "臭蟲和功能"
+        },
+        "bugs_and_features/csd/2021": {
+          "name": "臭蟲和功能"
+        },
+        "updating-your-prototype/csd/2021": {
+          "name": "更新你的原型"
+        },
+        "app-presentation/csd/2021": {
+          "name": "應用程式簡報",
+          "type": "標題 "
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "應用程式簡報"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "教師論壇"
+        },
+        "computing-innovations/csd/2021": {
+          "name": "計算創新（Computing Innovations）"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "影片"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "計算機科學改變了一切",
+          "type": "影片"
+        },
+        "designing_screens_with_code/csd/2021": {
+          "name": "以程式碼設計螢幕畫面"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "隨機取數"
+        },
+        "responding_to_user_input_1/csd/2021": {
+          "name": "回應使用者輸入的內容"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "電腦工作原理：硬體與軟體",
+          "type": "影片"
+        },
+        "board_events/csd/2021": {
+          "name": "電路板事件"
+        },
+        "physical_input/csd/2021": {
+          "name": "實體輸入"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "影片"
+        },
+        "analog_sensors/csd/2021": {
+          "name": "類比感測器"
+        },
+        "changing_sensor_scale/csd/2021": {
+          "name": "感測器測量值的修改"
+        },
+        "emoji-race-guide/csd/2021": {
+          "type": "項目指南"
+        },
+        "functions_2/csd/2021": {
+          "name": "函式"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "標題 "
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "陣列（Arrays）的介紹",
+          "type": "影片"
+        },
+        "arrays/csd/2021": {
+          "name": "陣列"
+        },
+        "playing_notes/csd/2021": {
+          "name": "遊玩筆記"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "計次迴圈（For Loops）",
+          "type": "影片"
+        },
+        "for_loops/csd/2021": {
+          "name": "計次迴圈（For Loops）"
+        },
+        "modifying_arrays/csd/2021": {
+          "name": "修改陣列"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "加速計事件"
+        },
+        "the_accelerometer/csd/2021": {
+          "name": "加速器"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "電腦工作原理：電路與邏輯",
+          "type": "影片"
+        },
+        "physical-prototyping-project/csd/2021": {
+          "type": "項目指南"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "標題 "
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "項目指南"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "表示事項"
+        },
+        "representation-matters/csd/2021": {
+          "name": "表示事項"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "表示資訊"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "name": "二進位和資料",
+          "type": "影片"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "數字表示法"
+        },
+        "create-a-representation-exemplar-2019/csd/2021": {
+          "name": "建立表示法"
+        },
+        "encode-a-thing/csd/2021": {
+          "name": "建立表示法"
+        },
+        "create_a_representation/csd/2021": {
+          "name": "建立表示法",
+          "type": "標題 "
+        },
+        "structuring_data/csd/2021": {
+          "name": "資料的建構"
+        },
+        "interpreting-data-exemplar-2019/csd/2021": {
+          "name": "解譯數據"
+        },
+        "interpreting-data/csd/2021": {
+          "name": "解譯數據"
+        },
+        "interpreting-data-1/csd/2021": {
+          "name": "解譯數據"
+        },
+        "making-decisions-with-data/csd/2021": {
+          "name": "依數據來做決定"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "name": "自動化數據決策"
+        },
+        "data-decisions-resource/csd/2021": {
+          "name": "自動化數據決策"
+        },
+        "automating-data-decisions-1/csd/2021": {
+          "name": "自動化數據決策"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "影片"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "影片"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "影片"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "name": "在現實生活中的資料"
+        },
+        "data-in-the-real-world/csd/2021": {
+          "name": "在現實生活中的資料"
+        },
+        "video_impact_on_society/csd/2021": {
+          "name": "視訊：對社會的影響",
+          "type": "影片"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "影片：機器學習",
+          "type": "影片"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "name": "視訊：訓練數據和偏差",
+          "type": "影片"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "同儕審查"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "標題 "
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "項目指南"
+        },
+        "drawing-shapes-exemplar-2020/csd/2021": {
+          "name": "圖形的繪製"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "name": "用 Game Lab 繪圖 - 第 1 部分",
+          "type": "影片"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "name": "用 Game Lab 繪圖 - 第 2 部分",
+          "type": "影片"
+        },
+        "drawing_shapes/csd/2021": {
+          "name": "圖形的繪製"
+        },
+        "introduction-to-variables/csd/2021": {
+          "name": "變數介紹",
+          "type": "影片"
+        },
+        "variables_1/csd/2021": {
+          "name": "變數"
+        },
+        "random_numbers/csd/2021": {
+          "name": "隨機取數"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "影片"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "動畫頁籤",
+          "type": "影片"
+        },
+        "sprites_1/csd/2021": {
+          "name": "角色"
+        },
+        "captioned-scenes/csd/2021": {
+          "type": "標題 "
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "影片"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "影片"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "draw（繪圖）迴圈"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "角色動作",
+          "type": "影片"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "標題 "
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "布林表達式",
+          "type": "影片"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "條件陳述式",
+          "type": "影片"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "如果/否則 陳述式",
+          "type": "影片"
+        },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "type": "項目指南"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "同儕審查"
+        },
+        "interactive_card/csd/2021": {
+          "type": "標題 "
+        },
+        "velocity_1/csd/2021": {
+          "name": "速度",
+          "type": "影片"
+        },
+        "velocity_2/csd/2021": {
+          "name": "速度"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "碰撞檢測"
+        },
+        "collision_detection/csd/2021": {
+          "name": "碰撞檢測"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "側邊捲軸",
+          "type": "標題 "
+        },
+        "side-scroller/csd/2021": {
+          "name": "側邊捲軸",
+          "type": "項目指南"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "速度和計數器模式"
+        },
+        "flyer-game-1/csd/2021": {
+          "name": "飛行者遊戲",
+          "type": "標題 "
+        },
+        "flyer-game/csd/2021": {
+          "name": "飛行者遊戲",
+          "type": "項目指南"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "函式",
+          "type": "影片"
+        },
+        "functions_1/csd/2021": {
+          "name": "函式"
+        },
+        "make-your-own-game/csd/2021": {
+          "type": "項目指南"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "同儕審查"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "標題 "
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "教師論壇"
+        },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "問題解決流程"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "問題解決流程",
+          "type": "影片"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "問題解決流程"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "問題解決流程"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "電腦是什麼？"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "影片"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "輸入與輸出"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "輸入與輸出"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "影片"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "App 與問題解決"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "App 與問題解決",
+          "type": "同儕審查"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "App 與問題解決",
+          "type": "標題 "
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "瀏覽網頁"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "瀏覽網頁"
+        },
+        "html_tags/csd/2021": {
+          "name": "HTML 標籤"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "影片"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "影片"
+        },
+        "video_pair_programming/csd/2021": {
+          "name": "視訊：結對編程",
+          "type": "影片"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "標題與段落"
+        },
+        "video_debugging/csd/2021": {
+          "name": "視訊：調試",
+          "type": "影片"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "標題 "
+        },
+        "html-web-page/csd/2021": {
+          "type": "同儕審查"
+        },
+        "html-page/csd/2021": {
+          "type": "項目指南"
+        },
+        "formatting_html/csd/2021": {
+          "name": "格式化 HTML"
+        },
+        "lists/csd/2021": {
+          "name": "清單"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "數位足跡"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "社交偵探"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "社交偵探"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "CSS 介紹 -  第 1 部分",
+          "type": "影片"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "CSS 介紹 -  第 2 部分",
+          "type": "影片"
+        },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "標題 "
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "同儕審查"
+        },
+        "your-personal-style/csd/2021": {
+          "type": "項目指南"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "影片"
+        },
+        "images_in_html/csd/2021": {
+          "name": "在 HTML 中的圖像"
+        },
+        "layout-properties/csd/2021": {
+          "name": "布局属性"
+        },
+        "person-web-page-prepare/csd/2021": {
+          "type": "項目指南"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "同儕審查"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "項目指南"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "標題 "
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "Publishing Your Website",
+          "type": "影片"
+        },
+        "websites-for-a-purpose-2020/csd/2021": {
+          "name": "有目的的網站"
+        },
+        "websites-for-a-purpose/csd/2021": {
+          "name": "有目的的網站"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "視訊：管理分歧",
+          "type": "影片"
+        },
+        "how-teamwork-works/csd/2021": {
+          "name": "視訊：團隊合作",
+          "type": "影片"
+        },
+        "how-search-works-video/csd/2021": {
+          "name": "視訊：研究如何運行",
+          "type": "影片"
+        },
+        "classes/csd/2021": {
+          "name": "類別"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "標題 "
+        },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "項目指南"
+        },
+        "hyperlinks/csd/2021": {
+          "name": "超連結"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "同儕審查"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "項目指南"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "標準對照"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "教師論壇"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "詞彙"
+        },
+        "lesson_plans/express/2020": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/express/2020": {
+          "name": "標準對照"
+        },
+        "teacher_forum/express/2020": {
+          "name": "教師論壇"
+        },
+        "vocabulary/express/2020": {
+          "name": "詞彙"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "課程指引"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "標準對照"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "教師論壇"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "詞彙"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "課程指引"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "詞彙"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "課程指引"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "詞彙"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "課程指引"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "詞彙"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "課程指引"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "詞彙"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "課程指引"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "教學計畫"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "標準對照"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "教師論壇"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "詞彙"
         }
       }
     }

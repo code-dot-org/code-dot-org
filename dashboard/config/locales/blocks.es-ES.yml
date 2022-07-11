@@ -2,12 +2,32 @@
 es:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        text: configurar el tamaño de todos los sprites a {SIZE}
+        options:
+          SIZE:
+            '0.50': extra pequeño
+            '0.75': pequeño
+            '1.00': medio
+            '2.00': grande
+            '3.00': extra grande
+      BadGuys_setSize_dropdown:
+        text: configurar el tamaño de {SPRITE} a {SIZE}
+        options:
+          SIZE:
+            '0.50': extra pequeño
+            '0.75': pequeño
+            '1.00': medio
+            '2.00': grande
+            '3.00': extra grande
       Dancelab_alternateMoves:
         text: "{GROUP} alternar cada {N} compases \nentre {MOVE1} y {MOVE2}"
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -61,7 +81,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -121,7 +141,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -145,7 +165,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -302,7 +322,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -330,7 +350,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -356,6 +376,8 @@ es:
             '"right"': columna derecha
             '"x"': entrecruzado
             '"plus"': signo más
+            '"spiral"': espiral
+            '"infinity"': línea de infinito
             '"random"': aleatorio
       Dancelab_makeAnonymousDanceSprite:
         text: crear un nuevo {COSTUME} en {LOCATION}
@@ -438,8 +460,28 @@ es:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -465,6 +507,8 @@ es:
             '"right"': columna derecha
             '"x"': entrecruzado
             '"plus"': signo más
+            '"spiral"': espiral
+            '"infinity"': línea de infinito
             '"random"': aleatorio
       Dancelab_mixColors:
         text: mezclar {COLOR1} y {COLOR2}
@@ -566,7 +610,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -640,7 +684,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -676,7 +720,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -703,7 +747,7 @@ es:
         options:
           THIS:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -720,7 +764,7 @@ es:
         options:
           THIS:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -745,7 +789,7 @@ es:
         options:
           THIS:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -780,7 +824,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -825,7 +869,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -991,6 +1035,8 @@ es:
             '"y"': posición y
             '"direction"': dirección de movimiento
             '"speed"': velocidad
+      gamelab_changeVarBy:
+        text: cambia {VARIABLE} por {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
         options:
@@ -1000,7 +1046,26 @@ es:
       gamelab_clickedOn:
         text: cuando se hace clic en {SPRITE}
       gamelab_clickedSpritePointer:
-        text: clic en sprite {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): girando a la derecha
+            new Behavior(spinning_left, []): girando a la izquierda
+            new Behavior(fluttering, []): revoloteando
+            new Behavior(jittering, []): nerviosismo
+            new Behavior(wobbling, []): tambaleándose
+            new Behavior(wandering, []): deambulando
+            new Behavior(patrolling, []): patrullando
+            new Behavior(moving_west_and_looping, []): moviéndose hacia el oeste y
+              haciendo un bucle
+            new Behavior(moving_east_and_looping, []): moviéndose hacia el este y
+              haciendo un bucle
+            new Behavior(moving_north_and_looping, []): moviéndose hacia el norte
+              y haciendo un bucle
+            new Behavior(moving_south_and_looping, []): moviéndose hacia el sur y
+              haciendo un bucle
       gamelab_comment:
         text: 'comentario: {COMMENT}'
       gamelab_costumeImage:
@@ -1018,6 +1083,12 @@ es:
         text: dibuja línea {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: limitacion de bloque {SPRITE} para moverse
+      gamelab_everyInterval:
+        text: 'repetir cada {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': segundos
+            '"frames"': fotogramas
       gamelab_followingTargets:
         text: siguientes objetivos
       gamelab_getAllSprites:
@@ -1053,6 +1124,20 @@ es:
         text: |-
           if {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} el disfraz es {COSTUME}"
       gamelab_isKeyPressed:
@@ -1172,6 +1257,13 @@ es:
             '90': abajo
             '180': izquierda
             '270': arriba
+      gamelab_makeSpritesWithSize:
+        text: hacer {NUM} nuevos sprites de {SIZE}
+        options:
+          SIZE:
+            '30': pequeño
+            '50': medio
+            '100': grande
       gamelab_mirrorSprite:
         text: "{SPRITE} hacia {DIRECTION}"
         options:
@@ -1195,7 +1287,7 @@ es:
       gamelab_moveToward:
         text: mover {SPRITE} pixeles {DISTANCE} hacia {TARGET}
       gamelab_newSpritePointer:
-        text: clic en sprite {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: objeto {SPRITE}
       gamelab_patrollingUpDown:
@@ -1217,15 +1309,15 @@ es:
             "'sound://category_background/ocean_waves.mp3'": olas
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": olas en la
               playa
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Burbuja
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": burbuja
             "'sound://category_animals/bear.mp3'": oso
             "'sound://category_animals/cat.mp3'": gato
             "'sound://category_animals/cow.mp3'": vaca
             "'sound://category_animals/pig.mp3'": cerdo
             "'sound://category_animals/sheep.mp3'": oveja
-            "'sound://category_animals/goat.mp3'": Cabra
+            "'sound://category_animals/goat.mp3'": cabra
             "'sound://category_animals/chicken.mp3'": pollo
-            "'sound://category_animals/rooster.mp3'": rejilla
+            "'sound://category_animals/rooster.mp3'": gallo
             "'sound://category_animals/elephant.mp3'": elefante
             "'sound://category_animals/dolphin.mp3'": delfín
             "'sound://category_nature/thunderstorm_1.mp3'": tormenta de truenos
@@ -1243,11 +1335,20 @@ es:
             "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": nave alienígena
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": hechizo
               magico
-            "'sound://category_retro/retro_game_ui_select_6.mp3'": seleccione
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": seleccionar
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bajo peculiar
             "'sound://category_digital/jump_7.mp3'": salta
       gamelab_playSpeech:
         text: reproducir grabación {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): moverse con las flechas del
+              teclado
+            new Behavior(driving_with_arrow_keys, []): conducir con las teclas de
+              flecha
+            draggable(): poder arrastrastrarlos
       gamelab_pointInDirection:
         text: apuntar {SPRITE} {DIRECTION}
         options:
@@ -1272,6 +1373,8 @@ es:
         text: eliminar color de {THIS}
       gamelab_repeatForever:
         text: Repetir para siempre
+      gamelab_resetTimer:
+        text: reiniciar temporizador
       gamelab_setAnimation:
         text: cambiar {THIS} disfraz a {ANIMATION}
       gamelab_setBackground:
@@ -1364,6 +1467,15 @@ es:
             '"scale"': tamaño
             '"width"': ancho
             '"height"': altura
+      gamelab_setSpeed_dropdown:
+        text: ajustar {SPRITE} a velocidad {SIZE}
+        options:
+          SIZE:
+            '1': extra lenta
+            '3': lento
+            '5': normal
+            '7': rápido
+            '9': extra rápida
       gamelab_setTint:
         text: cambiar color de {THIS} a {COLOR}
       gamelab_setupScoreboard:
@@ -1387,6 +1499,50 @@ es:
         text: "{SPRITE} dice {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE} dice {TEXT1} por {NUM} segundos"
+      gamelab_spriteThink:
+        text: "{SPRITE} piensa {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}piensa{TEXT1}en{NUM}segundos"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} piensa {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I am hungry, too."': Yo también tengo hambre.
+            '"I only want the biggest goat."': Sólo quiero la cabra más grande.
+            '"I''m a green troll."': Soy un troll verde.
+            '"No one will cross my bridge."': Nadie cruzará mi puente.
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} piensa {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"Time to make friends with the sheep."': Es hora de hacerse amigo de
+              las ovejas.
+            '"She''ll never recognize me now."': Ahora ella no me reconocerá.
+            '"This costume keeps me warm."': Este disfraz me mantiene caliente.
+            '"I am actually a wolf."': Ahora soy un lobo.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} piensa {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m feeling sleepy."': Tengo sueño.
+            '"No one could ever beat me."': Nadie podría ganarme nunca.
+            '"I''ve done this race before."': Ya he hecho esta carrera antes.
+            '"My feet are bigger than Turtle''s feet."': Mis pies son más grandes
+              que los de Turtle.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} piensa {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m so hungry."': Que hambre tengo.
+            '"I''m a visitor in this town."': Soy un turista en esta ciudad.
+            '"If we share, we''ll all have something to eat. "': Si compartimos, todos
+              tendremos algo que comer.
+            '"I''ll trick everyone into giving me their food."': Engañaré a todos
+              para que me den su comida.
       gamelab_startAvoiding:
         text: "{SPRITE} empieza a evitar {TARGET}"
       gamelab_startFollowing:
@@ -1402,7 +1558,7 @@ es:
       gamelab_stopGliding:
         text: "{SPRITE} para de planear"
       gamelab_subjectSpritePointer:
-        text: clic en sprite {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
@@ -2048,11 +2204,11 @@ es:
             '"moving_south_and_looping"': bucle al sur
             '"moving_east_and_looping"': bucle al este
             '"moving_west_and_looping"': bucle al oeste
-            '"shrinking"': reducción
+            '"shrinking"': reduciendo
             '"spinning_left"': girando a la izquierda
             '"spinning_right"': girando a la derecha
             '"swimming_left_and_right"': natación
-            '"wandering"': vagando
+            '"wandering"': deambulando
             '"wobbling"': tambaleándose
       Poetry_stopBehavior:
         text: sprite {ANIMATION_NAME} para de {BEHAVIOR}
@@ -2065,11 +2221,11 @@ es:
             '"moving_south_and_looping"': bucle al sur
             '"moving_east_and_looping"': bucle al este
             '"moving_west_and_looping"': bucle al oeste
-            '"shrinking"': reducción
+            '"shrinking"': reduciendo
             '"spinning_left"': girando a la izquierda
             '"spinning_right"': girando a la derecha
             '"swimming_left_and_right"': natación
-            '"wandering"': vagando
+            '"wandering"': deambulando
             '"wobbling"': tambaleándose
             '"all"': "--cada comportamiento--"
       Poetry_stringValue:

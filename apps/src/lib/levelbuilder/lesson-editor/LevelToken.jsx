@@ -24,13 +24,18 @@ export class UnconnectedLevelToken extends Component {
     delta: PropTypes.number,
     handleDragStart: PropTypes.func,
     removeLevel: PropTypes.func.isRequired,
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired,
 
     // from redux
     toggleExpand: PropTypes.func
   };
 
   render() {
-    const {draggedLevelPos, scriptLevel} = this.props;
+    const {
+      draggedLevelPos,
+      scriptLevel,
+      allowMajorCurriculumChanges
+    } = this.props;
     const springConfig = {stiffness: 1000, damping: 80};
 
     return (
@@ -66,6 +71,7 @@ export class UnconnectedLevelToken extends Component {
             removeLevel={this.props.removeLevel}
             activitySectionPosition={this.props.activitySectionPosition}
             activityPosition={this.props.activityPosition}
+            allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         )}
       </Motion>
@@ -87,7 +93,8 @@ export class LevelTokenContents extends Component {
     toggleExpand: PropTypes.func.isRequired,
     removeLevel: PropTypes.func.isRequired,
     activitySectionPosition: PropTypes.number.isRequired,
-    activityPosition: PropTypes.number.isRequired
+    activityPosition: PropTypes.number.isRequired,
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired
   };
 
   handleDragStart = e => {
@@ -118,7 +125,7 @@ export class LevelTokenContents extends Component {
   };
 
   render() {
-    const {scriptLevel} = this.props;
+    const {scriptLevel, allowMajorCurriculumChanges} = this.props;
     const hasVariants = scriptLevel.levels.length > 1;
 
     const activeLevel = hasVariants
@@ -147,9 +154,11 @@ export class LevelTokenContents extends Component {
           zIndex: this.props.draggedLevelPos ? 1000 : 500 - scriptLevel.position
         })}
       >
-        <div style={styles.reorder} onMouseDown={this.handleDragStart}>
-          <i className="fa fa-arrows-v" />
-        </div>
+        {allowMajorCurriculumChanges && (
+          <div style={styles.reorder} onMouseDown={this.handleDragStart}>
+            <i className="fa fa-arrows-v" />
+          </div>
+        )}
         <span
           style={styles.levelTokenName}
           onClick={this.toggleExpand}
@@ -192,15 +201,18 @@ export class LevelTokenContents extends Component {
         >
           <i className="fa fa-pencil" />
         </div>
-        <div style={styles.remove} onMouseDown={this.handleRemove}>
-          <i className="fa fa-times" />
-        </div>
+        {allowMajorCurriculumChanges && (
+          <div style={styles.remove} onMouseDown={this.handleRemove}>
+            <i className="fa fa-times" />
+          </div>
+        )}
         {scriptLevel.expand && (
           <LevelTokenDetails
             scriptLevel={scriptLevel}
             activitySectionPosition={this.props.activitySectionPosition}
             activityPosition={this.props.activityPosition}
             inactiveLevelNames={inactiveLevelNames}
+            allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         )}
       </div>

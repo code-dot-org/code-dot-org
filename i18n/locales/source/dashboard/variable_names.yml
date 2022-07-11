@@ -91,6 +91,7 @@ en:
       speed: speed
       startX: startX
       startY: startY
+      stopped-left: stopped-left
       variable: variable
       width: width
       wizard: wizard

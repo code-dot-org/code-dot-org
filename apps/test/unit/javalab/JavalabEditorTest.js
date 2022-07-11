@@ -2,7 +2,10 @@ import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {mount} from 'enzyme';
-import JavalabEditor from '@cdo/apps/javalab/JavalabEditor';
+import JavalabEditor, {
+  editorDarkModeThemeOverride,
+  editorLightModeThemeOverride
+} from '@cdo/apps/javalab/JavalabEditor';
 import {Provider} from 'react-redux';
 import {
   getStore,
@@ -18,14 +21,21 @@ import javalab, {
   setDisplayTheme,
   sourceVisibilityUpdated,
   sourceValidationUpdated,
-  setBackpackApi
+  setBackpackApi,
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview
 } from '@cdo/apps/javalab/javalabRedux';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
-import {setAllSources} from '../../../src/javalab/javalabRedux';
+import {
+  setAllSources,
+  setAllValidation,
+  setBackpackEnabled
+} from '../../../src/javalab/javalabRedux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import {allowConsoleWarnings} from '../../util/throwOnConsole';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
+import javalabMsg from '@cdo/javalab/locale';
 
 describe('Java Lab Editor Test', () => {
   // Warnings allowed due to usage of deprecated componentWillReceiveProps
@@ -65,6 +75,7 @@ describe('Java Lab Editor Test', () => {
         getFileList: backpackGetFileListStub
       })
     );
+    store.dispatch(setBackpackEnabled(true));
   });
 
   afterEach(() => {
@@ -82,20 +93,17 @@ describe('Java Lab Editor Test', () => {
     );
   };
 
+  const backpackHeaderButtonId = '#javalab-editor-backpack';
   const editorHeaderButtonIdentifiers = [
     '#javalab-editor-create-file',
     '#data-mode-versions-header',
     '#javalab-editor-save',
-    '#javalab-editor-backpack'
+    backpackHeaderButtonId
   ];
 
   describe('Editing Mode', () => {
     beforeEach(() => {
-      store.dispatch(
-        setPageConstants({
-          isReadOnlyWorkspace: false
-        })
-      );
+      store.dispatch(setIsReadOnlyWorkspace(false));
     });
 
     describe('toggleTabMenu', () => {
@@ -242,6 +250,44 @@ describe('Java Lab Editor Test', () => {
         });
       });
 
+      it('displays error message on a validation naming collision', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+        store.dispatch(
+          setAllSources({
+            'Class1.java': {text: '', isVisible: true, isValidation: false}
+          })
+        );
+
+        store.dispatch(
+          setAllValidation({
+            'Validation.java': {text: '', isVisible: false, isValidation: true}
+          })
+        );
+
+        javalabEditor.setState({
+          showMenu: false,
+          contextTarget: null,
+          editTabKey: 'file-0',
+          editTabFilename: 'Class1.java',
+          openDialog: 'renameFile',
+          orderedTabKeys: ['file-0'],
+          fileMetadata: {
+            'file-0': 'Class1.java'
+          }
+        });
+        // we are trying to update Class1.java -> Validation.java here
+        javalabEditor.onRenameFile('Validation.java');
+        // after rename with existing filename, dialog should not close and
+        // error message should be populated
+        expect(javalabEditor.state.renameFileError).to.exist;
+        expect(javalabEditor.state.openDialog).to.equal('renameFile');
+        expect(javalabEditor.state.orderedTabKeys).to.deep.equal(['file-0']);
+        expect(javalabEditor.state.fileMetadata).to.deep.equal({
+          'file-0': 'Class1.java'
+        });
+      });
+
       it('displays error message if file name is blank', () => {
         const editor = createWrapper();
         const javalabEditor = editor.find('JavalabEditor').instance();
@@ -327,16 +373,43 @@ describe('Java Lab Editor Test', () => {
         const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
         store.dispatch(setDisplayTheme(DisplayTheme.DARK));
         expect(dispatchSpy).to.have.been.calledWith({
-          effects: javalabEditor.editorModeConfigCompartment.reconfigure(
-            oneDark
-          )
+          effects: [
+            javalabEditor.editorThemeOverrideCompartment.reconfigure(
+              editorDarkModeThemeOverride
+            ),
+            javalabEditor.editorModeConfigCompartment.reconfigure(oneDark)
+          ]
         });
         store.dispatch(setDisplayTheme(DisplayTheme.LIGHT));
         expect(dispatchSpy).to.have.been.calledWith({
-          effects: javalabEditor.editorModeConfigCompartment.reconfigure(
-            lightMode
-          )
+          effects: [
+            javalabEditor.editorThemeOverrideCompartment.reconfigure(
+              editorLightModeThemeOverride
+            ),
+            javalabEditor.editorModeConfigCompartment.reconfigure(lightMode)
+          ]
         });
+        dispatchSpy.restore();
+      });
+
+      it('toggles between read-only and editable', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+        const javalabCodeMirrors = javalabEditor.editors;
+        const firstEditor = Object.values(javalabCodeMirrors)[0];
+
+        const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
+        store.dispatch(setIsReadOnlyWorkspace(true));
+        expect(dispatchSpy).to.have.been.called;
+        expect(firstEditor.state.facet(EditorView.editable)).to.be.false;
+        expect(firstEditor.state.facet(EditorState.readOnly)).to.be.true;
+
+        store.dispatch(setIsReadOnlyWorkspace(false));
+        expect(dispatchSpy).to.have.been.called;
+        expect(firstEditor.state.facet(EditorView.editable)).to.be.true;
+        expect(firstEditor.state.facet(EditorState.readOnly)).to.be.false;
+
+        dispatchSpy.restore();
       });
     });
 
@@ -462,6 +535,32 @@ describe('Java Lab Editor Test', () => {
           'file-0': 'Class1.java',
           'file-1': 'Class2.java'
         });
+      });
+
+      it('displays error message on a validation naming collision', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+        store.dispatch(
+          setAllValidation({
+            'Validation.java': {text: '', isVisible: false, isValidation: true}
+          })
+        );
+
+        javalabEditor.setState({
+          showMenu: false,
+          contextTarget: null,
+          openDialog: 'createFile',
+          orderedTabKeys: [],
+          lastTabKeyIndex: 0,
+          fileMetadata: {}
+        });
+        javalabEditor.onCreateFile('Validation.java');
+        // after create with existing filename, dialog should not close and
+        // error message should be populated
+        expect(javalabEditor.state.newFileError).to.exist;
+        expect(javalabEditor.state.openDialog).to.equal('createFile');
+        expect(javalabEditor.state.orderedTabKeys).to.deep.equal([]);
+        expect(javalabEditor.state.fileMetadata).to.deep.equal({});
       });
 
       it('displays error message if file name is blank', () => {
@@ -667,23 +766,36 @@ describe('Java Lab Editor Test', () => {
     it('header buttons are enabled', () => {
       const editor = createWrapper();
       editorHeaderButtonIdentifiers.forEach(headerButtonId => {
+        const propName =
+          headerButtonId === backpackHeaderButtonId
+            ? 'isButtonDisabled'
+            : 'isDisabled';
         const isButtonDisabled = editor
           .find(headerButtonId)
           .first()
-          .props().isDisabled;
+          .props()[propName];
 
         expect(isButtonDisabled).to.be.false;
       });
+    });
+
+    it('hides backpack button if disabled', () => {
+      store.dispatch(setBackpackEnabled(false));
+      const editor = createWrapper();
+      expect(editor.find(backpackHeaderButtonId)).to.have.lengthOf(0);
+    });
+
+    it('does not display code review readonly banner', () => {
+      const editor = createWrapper();
+      expect(editor.find('div#openCodeReviewWarningBanner')).to.have.lengthOf(
+        0
+      );
     });
   });
 
   describe('View Only Mode', () => {
     beforeEach(() => {
-      store.dispatch(
-        setPageConstants({
-          isReadOnlyWorkspace: true
-        })
-      );
+      store.dispatch(setIsReadOnlyWorkspace(true));
     });
 
     it('is not editable', () => {
@@ -699,13 +811,59 @@ describe('Java Lab Editor Test', () => {
     it('header buttons are disabled', () => {
       const editor = createWrapper();
       editorHeaderButtonIdentifiers.forEach(headerButtonId => {
+        const propName =
+          headerButtonId === backpackHeaderButtonId
+            ? 'isButtonDisabled'
+            : 'isDisabled';
         const isButtonDisabled = editor
           .find(headerButtonId)
           .first()
-          .props().isDisabled;
+          .props()[propName];
 
         expect(isButtonDisabled).to.be.true;
       });
+    });
+
+    it('displays warning message when open for review and being viewed by project owner', () => {
+      store.dispatch(setHasOpenCodeReview(true));
+      store.dispatch(setPageConstants({isViewingOwnProject: true}));
+
+      const editor = createWrapper();
+
+      const banner = editor.find('div#openCodeReviewWarningBanner');
+      expect(banner).to.have.lengthOf(1);
+      expect(banner.contains(javalabMsg.editingDisabledUnderReview())).to.be
+        .true;
+    });
+
+    it('does not display warning message if not open for review', () => {
+      store.dispatch(setHasOpenCodeReview(false));
+      store.dispatch(setPageConstants({isViewingOwnProject: true}));
+
+      const editor = createWrapper();
+
+      expect(editor.find('div#openCodeReviewWarningBanner')).to.have.lengthOf(
+        0
+      );
+    });
+
+    it('displays warning message when viewing a peers project', () => {
+      store.dispatch(setHasOpenCodeReview(true));
+      store.dispatch(
+        setPageConstants({isViewingOwnProject: false, codeOwnersName: 'George'})
+      );
+
+      const editor = createWrapper();
+
+      const banner = editor.find('div#openCodeReviewWarningBanner');
+      expect(banner).to.have.lengthOf(1);
+      expect(
+        banner.contains(
+          javalabMsg.codeReviewingPeer({
+            peerName: 'George'
+          })
+        )
+      ).to.be.true;
     });
   });
 });

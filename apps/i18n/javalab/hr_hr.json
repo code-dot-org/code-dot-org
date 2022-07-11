@@ -1,5 +1,7 @@
 {
   "cancel": "Odustani",
   "delete": "izbriši",
-  "import": "Uvoz"
+  "import": "Uvoz",
+  "rename": "Preimenuj",
+  "submit": "Pošalji"
 }

@@ -9,10 +9,13 @@
     "skip_dialog": true,
     "skip_sound": true,
     "name_suffix": "2022",
-    "parent_level_id": 21185
+    "parent_level_id": 21185,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Taking this out of the artist level in which it was embedded",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:24.323+00:00\",\"changed\":[\"cloned from \\\"courseC_video_artist_2021\\\"\"],\"cloned_from\":\"courseC_video_artist_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:24.323+00:00\",\"changed\":[\"cloned from \\\"courseC_video_artist_2021\\\"\"],\"cloned_from\":\"courseC_video_artist_2021\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

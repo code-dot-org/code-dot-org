@@ -28,8 +28,8 @@ import {
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import progress from '@cdo/apps/code-studio/progress';
 import UnitOverview from '@cdo/apps/code-studio/components/progress/UnitOverview.jsx';
-import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {setStudentDefaultsSummaryView} from '@cdo/apps/code-studio/progressRedux';
+import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
 
@@ -84,33 +84,38 @@ function initPage() {
   if (scriptData.student_detail_progress_view) {
     store.dispatch(setStudentDefaultsSummaryView(false));
   }
-  progress.initViewAs(store, scriptData.user_type);
-  initializeStoreWithSections(store, scriptData.sections, scriptData.section);
+  progress.initViewAs(
+    store,
+    scriptData.user_id !== null,
+    scriptData.is_instructor
+  );
+  if (scriptData.is_instructor) {
+    initializeStoreWithSections(store, scriptData.sections, scriptData.section);
+  }
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
   store.dispatch(setPageType(pageTypes.scriptOverview));
 
   progress.initCourseProgress(scriptData);
 
-  const teacherResources = (scriptData.teacher_resources || []).map(
-    ([type, link]) => ({
-      type,
-      link
-    })
-  );
-
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
+
+  const completedLessonNumber = queryParams('completedLessonNumber');
+  // This query param is immediately removed so that it is not included in the links
+  // rendered on this page
+  updateQueryParam('completedLessonNumber', undefined);
 
   ReactDOM.render(
     <Provider store={store}>
       <UnitOverview
         id={scriptData.id}
         courseId={scriptData.course_id}
+        courseOfferingId={scriptData.courseOfferingId}
+        courseVersionId={scriptData.courseVersionId}
         courseTitle={scriptData.course_title}
         courseLink={scriptData.course_link}
         excludeCsfColumnInLegend={!scriptData.csf}
-        teacherResources={teacherResources}
-        migratedTeacherResources={scriptData.migrated_teacher_resources}
+        teacherResources={scriptData.teacher_resources}
         studentResources={scriptData.student_resources || []}
         showCourseUnitVersionWarning={
           scriptData.show_course_unit_version_warning
@@ -118,7 +123,7 @@ function initPage() {
         showScriptVersionWarning={scriptData.show_script_version_warning}
         showRedirectWarning={scriptData.show_redirect_warning}
         redirectScriptUrl={scriptData.redirect_script_url}
-        versions={convertAssignmentVersionShapeFromServer(scriptData.versions)}
+        versions={scriptData.course_versions}
         courseName={scriptData.course_name}
         showAssignButton={scriptData.show_assign_button}
         userId={scriptData.user_id}
@@ -133,6 +138,7 @@ function initPage() {
           scriptData.show_unversioned_redirect_warning
         }
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
+        completedLessonNumber={completedLessonNumber}
       />
     </Provider>,
     mountPoint

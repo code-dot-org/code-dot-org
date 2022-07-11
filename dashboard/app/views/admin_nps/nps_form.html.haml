@@ -1,0 +1,15 @@
+%h1 NPS Survey
+
+%p User the dropdown menu below to determine the audience of the most recent NPS survey.
+%p This will save as a DCDO flag, which will automatically update the audience.
+%p NOTE: Any audience other than "none" will launch the survey immediately.
+
+%h2 Survey Audience
+
+= form_tag({controller: 'admin_nps', action: 'nps_update', method: "post"}, style: 'display: table-caption;') do
+  %select{:name => "audience"}
+    %option{:value => "all"} all teachers
+    %option{:value => "even"} even ID teachers
+    %option{:value => "odd"} odd ID teachers
+    %option{:value => "none"} no teachers
+  %button.btn{type: 'submit', style: 'margin: 0px'}= "Save"

@@ -51,11 +51,16 @@
     "remove_items_when_actor_collides": "false",
     "short_instructions": "Can you write a program that makes Jorge (actor 1) move to Olive the Cat, and have Olive say \"Hi there.\" when Jorge reaches her?",
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:17.455+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events4_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_events4_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:17.455+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events4_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_events4_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

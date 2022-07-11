@@ -45,8 +45,8 @@ module LevelsHelper
     url_from_path(build_script_level_path(script_level, params))
   end
 
-  def url_from_path(path)
-    "#{root_url.chomp('/')}#{path}"
+  def url_from_path(path, scheme = '')
+    CDO.studio_url(path, scheme)
   end
 
   def readonly_view_options
@@ -130,7 +130,7 @@ module LevelsHelper
 
     autoplay_video = nil
 
-    is_legacy_level = @script_level && @script_level.script.legacy_curriculum?
+    is_legacy_level = @script_level&.script&.legacy_curriculum?
 
     if is_legacy_level
       autoplay_video = @level.related_videos.find {|video| !client_state.video_seen?(video.key)}
@@ -189,24 +189,34 @@ module LevelsHelper
     #   are channel-backed.)
     # - In edit_blocks mode, the source code is saved as a level property and
     #   is not written to the channel.
-    #
-    # Note that Javalab requires a channel to _execute_ the code on Javabuilder
-    # so it always needs a channel, regardless of whether it will be written to.
-    level_requires_channel = @level.is_a?(Javalab) ||
-        (@level.channel_backed? &&
+    level_requires_channel = (@level.channel_backed? &&
           !@level.try(:contained_levels).present? &&
           params[:action] != 'edit_blocks')
+    # Javalab requires a channel if Javabuilder needs to access project-specific assets,
+    # or if we want to access a project's code from S3.
+    # Two special cases are when we edit and view Javalab exemplar code,
+    # where we load the exemplar code from the level definition, edit it locally in Javalab,
+    # and pass the edited code directly to Javabuilder.
+    level_requires_channel = !@is_editing_exemplar && !@is_viewing_exemplar if @level.is_a?(Javalab)
+
+    # When viewing a peer during code review their name is displayed in a banner above the code editor
+    view_options(code_owners_name: @user&.name || @current_user&.name)
 
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching
+      channel = get_channel_for(@level, @script&.id, @user)
       view_options(
-        channel: get_channel_for(@level, @script&.id, @user),
+        channel: channel,
         reduce_channel_updates: @script ?
           !Gatekeeper.allows("updateChannelOnSave", where: {script_name: @script.name}, default: true) :
           false
       )
-      # readonly if viewing another user's channel
-      readonly_view_options if @user
+
+      viewing_another_user = !!@user
+      code_review_open = CodeReview.open_for_project?(channel: channel)
+
+      view_options(is_viewing_own_project: !viewing_another_user, has_open_code_review: code_review_open)
+      readonly_view_options if viewing_another_user || code_review_open
     end
 
     view_options(
@@ -214,8 +224,15 @@ module LevelsHelper
       server_project_level_id: @level.project_template_level.try(:id)
     )
 
-    # For levels with a backpack option (currently all Javalab), get the backpack channel token if it exists
-    if @level.is_a?(Javalab) && (@user || current_user)
+    # Enable backpack for levels with a backpack option (currently all non-standalone Javalab),
+    # and get the backpack channel token if it exists
+    backpack_enabled = !!(@level.is_a?(Javalab) &&
+      (ProjectsController::STANDALONE_PROJECTS["javalab"]["name"] != @level.name) &&
+      (@user || current_user))
+
+    view_options(backpack_enabled: backpack_enabled)
+
+    if backpack_enabled
       user_id = @user&.id || current_user&.id
       backpack = Backpack.find_by_user_id(user_id)
       view_options(backpack_channel: backpack&.channel)
@@ -342,6 +359,7 @@ module LevelsHelper
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
+      @app_options[:level][:programmingEnvironment] = get_programming_environment
 
       if (@user || current_user) && @script
         @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
@@ -358,17 +376,21 @@ module LevelsHelper
         end
       if section && section.first_activity_at.nil?
         section.first_activity_at = DateTime.now
-        section.save(validate: false)
+        # app_options is sometimes referenced from
+        # endpoints that are being redirected to the read
+        # connection (ScriptLevel#show, for example), so
+        # make sure that we're using the write connection
+        # here.
+        ActiveRecord::Base.connected_to(role: :writing) do
+          section.save(validate: false)
+        end
       end
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
+      @app_options[:muteMusic] = current_user.mute_music?
       @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
-    end
-
-    if @level.is_a?(Applab)
-      @app_options[:isJavabuilderConnectionTestEnabled] = DCDO.get('javabuilder_connection_test_enabled', false)
     end
 
     @app_options
@@ -424,7 +446,7 @@ module LevelsHelper
   def widget_options
     app_options = {}
     app_options[:level] ||= {}
-    app_options[:level].merge! @level.properties.camelize_keys
+    app_options[:level].merge! @level.widget_app_options
     app_options.merge! view_options.camelize_keys
     set_puzzle_position_options(app_options[:level])
     app_options
@@ -432,7 +454,7 @@ module LevelsHelper
 
   def set_tts_options(level_options, app_options)
     # Text to speech - set url to empty string if the instructions are empty
-    if @script && @script.text_to_speech_enabled?
+    if @script&.text_to_speech_enabled?
       level_options['ttsShortInstructionsUrl'] = @level.tts_short_instructions_text.empty? ? "" : @level.tts_url(@level.tts_short_instructions_text)
       level_options['ttsLongInstructionsUrl'] = @level.tts_long_instructions_text.empty? ? "" : @level.tts_url(@level.tts_long_instructions_text)
     end
@@ -506,7 +528,7 @@ module LevelsHelper
       sublevelCallback: @sublevel_callback,
     }
 
-    if (@game && @game.owns_footer_for_share?) || @legacy_share_style
+    if @game&.owns_footer_for_share? || @legacy_share_style
       app_options[:copyrightStrings] = build_copyright_strings
     end
 
@@ -584,7 +606,9 @@ module LevelsHelper
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['lesson_total'] = script_level ? script_level.lesson_total : 1
-    level_options['final_level'] = script_level.final_level? if script_level
+    level_options['isLastLevelInLesson'] = script_level.end_of_lesson? if script_level
+    level_options['isLastLevelInScript'] = script_level.end_of_script? if script_level
+    level_options['showEndOfLessonMsgs'] = script.show_unit_overview_between_lessons? if script
 
     # Edit blocks-dependent options
     if level_view_options(@level.id)[:edit_blocks]
@@ -642,12 +666,12 @@ module LevelsHelper
     end
 
     # User/session-dependent options
-    app_options[:disableSocialShare] = true if (current_user && current_user.under_13?) || app_options[:embed]
+    app_options[:disableSocialShare] = true if current_user&.under_13? || app_options[:embed]
     app_options[:legacyShareStyle] = true if @legacy_share_style
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
     app_options.merge!(firebase_options)
-    app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::PROJECT_VALIDATOR)
+    app_options[:canResetAbuse] = true if current_user&.permission?(UserPermission::PROJECT_VALIDATOR)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
@@ -687,7 +711,7 @@ module LevelsHelper
     end
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:isUS]
 
-    if (@game && @game.owns_footer_for_share?) || @legacy_share_style
+    if @game&.owns_footer_for_share? || @legacy_share_style
       app_options[:copyrightStrings] = build_copyright_strings
     end
 
@@ -916,7 +940,7 @@ module LevelsHelper
     # Note that Game.applab includes both App Lab and Maker Toolkit.
     return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
 
-    if current_user && current_user.under_13? && current_user.terms_version.nil?
+    if current_user&.under_13? && current_user.terms_version.nil?
       if current_user.teachers.any?
         error_message = I18n.t("errors.messages.teacher_must_accept_terms")
       else
@@ -1004,6 +1028,19 @@ module LevelsHelper
       POST_MILESTONE_MODE.all
     else
       POST_MILESTONE_MODE.final_level_only
+    end
+  end
+
+  # Get the programming environment for a given level. For now,
+  # getting programming environment information via the level is only
+  # supported by Java Lab, so only Java Lab will return a non-nil value.
+  # This method should return the name of a programming environment, or nil.
+  def get_programming_environment
+    case @level.game
+    when Game.javalab
+      "javalab"
+    else
+      nil
     end
   end
 end

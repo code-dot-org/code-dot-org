@@ -63,11 +63,16 @@
     "tts_short_instructions_override": "Now, add another event block to get Jorge to move right when the right arrow button is clicked. Use the arrow keys or press the arrow buttons to move Jorge to both flags and finish the level!",
     "mini_rubric": "false",
     "default_num_example_blocks": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-07T18:57:03.445+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events4_2021\\\"\"],\"cloned_from\":\"courseA_playLab_events4_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-07T18:57:03.445+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events4_2021\\\"\"],\"cloned_from\":\"courseA_playLab_events4_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "events": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

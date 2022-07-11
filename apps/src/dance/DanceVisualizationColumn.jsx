@@ -8,7 +8,11 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import AgeDialog, {signedOutOver13} from '../templates/AgeDialog';
+import AgeDialog, {
+  ageDialogSelectedOver13,
+  songFilterOn
+} from '../templates/AgeDialog';
+import {getFilteredSongKeys} from '@cdo/apps/dance/songs';
 
 const SongSelector = Radium(
   class extends React.Component {
@@ -17,7 +21,7 @@ const SongSelector = Radium(
       setSong: PropTypes.func.isRequired,
       selectedSong: PropTypes.string,
       songData: PropTypes.objectOf(PropTypes.object).isRequired,
-      filterOff: PropTypes.bool.isRequired
+      filterOn: PropTypes.bool.isRequired
     };
 
     changeSong = event => {
@@ -26,6 +30,15 @@ const SongSelector = Radium(
     };
 
     render() {
+      const {
+        selectedSong,
+        songData,
+        enableSongSelection,
+        filterOn
+      } = this.props;
+
+      const songKeys = getFilteredSongKeys(songData, filterOn);
+
       return (
         <div id="song-selector-wrapper">
           <label>
@@ -35,17 +48,14 @@ const SongSelector = Radium(
             id="song_selector"
             style={styles.selectStyle}
             onChange={this.changeSong}
-            value={this.props.selectedSong}
-            disabled={!this.props.enableSongSelection}
+            value={selectedSong}
+            disabled={!enableSongSelection}
           >
-            {Object.keys(this.props.songData).map(
-              (option, i) =>
-                (this.props.filterOff || !this.props.songData[option].pg13) && (
-                  <option key={i} value={option}>
-                    {this.props.songData[option].title}
-                  </option>
-                )
-            )}
+            {songKeys.map((option, i) => (
+              <option key={i} value={option}>
+                {songData[option].title}
+              </option>
+            ))}
           </select>
         </div>
       );
@@ -62,30 +72,44 @@ class DanceVisualizationColumn extends React.Component {
     levelRunIsStarting: PropTypes.bool,
     isShareView: PropTypes.bool.isRequired,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
-    userType: PropTypes.string.isRequired
+    userType: PropTypes.string.isRequired,
+    under13: PropTypes.bool.isRequired
   };
 
   state = {
-    filterOff: this.setFilterStatus()
+    filterOn: this.getFilterStatus()
   };
 
   /*
     Turn the song filter off
   */
   turnFilterOff = () => {
-    this.setState({filterOff: true});
+    this.setState({filterOn: false});
   };
 
   /*
-    The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off
+    The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off.
    */
-  setFilterStatus() {
-    // userType - 'teacher', assumed age > 13. 'student', age > 13.
-    //            'student_y', age < 13. 'unknown', signed out users
-    const signedInOver13 =
-      this.props.userType === 'teacher' || this.props.userType === 'student';
-    const signedOutAge = signedOutOver13();
-    return signedInOver13 || signedOutAge;
+  getFilterStatus() {
+    const {userType, under13} = this.props;
+
+    // Check if song filter override is triggered and initialize song filter to true.
+    const songFilter = songFilterOn();
+    if (songFilter) {
+      return true;
+    }
+
+    // userType - 'teacher', 'student', 'unknown' - signed out users.
+    // If the user is signed out . . .
+    if (userType === 'unknown') {
+      // Query session key set from user selection in age dialog.
+      // Return false (no filter), if user is over 13.
+      return !ageDialogSelectedOver13();
+    }
+
+    // User is signed in (student or teacher) and the filter override is not turned on.
+    // Return true (filter should be turned on) if the user is under 13. Teachers assumed over13.
+    return under13;
   }
 
   render() {
@@ -110,7 +134,7 @@ class DanceVisualizationColumn extends React.Component {
               setSong={this.props.setSong}
               selectedSong={this.props.selectedSong}
               songData={this.props.songData}
-              filterOff={this.state.filterOff}
+              filterOn={this.state.filterOn}
             />
           )}
           <ProtectedVisualizationDiv>
@@ -173,6 +197,7 @@ export default connect(state => ({
   songData: state.songs.songData,
   selectedSong: state.songs.selectedSong,
   userType: state.currentUser.userType,
+  under13: state.currentUser.under13,
   levelIsRunning: state.runState.isRunning,
   levelRunIsStarting: state.songs.runIsStarting
 }))(DanceVisualizationColumn);

@@ -16,7 +16,7 @@
         Code.org
         %i{:class=>"fa fa-chevron-up"}
   #copyright
-    = hoc_s(:footer_copyright_message).gsub(/%{current_year}/, "#{Time.now.year}")
+    = hoc_s(:footer_copyright_message, locals: {current_year: "#{Time.now.year}"})
     %br
     = hoc_s(:footer_trademark_message)
     %br

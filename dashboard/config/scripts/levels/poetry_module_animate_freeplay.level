@@ -70,23 +70,23 @@
         <category name="Text">
           <block type="Poetry_setTitle">
             <value name="TITLE">
-              <block type="Poetry_stringValue">
+              <shadow type="Poetry_stringValue">
                 <title name="TEXT"/>
-              </block>
+              </shadow>
             </value>
           </block>
           <block type="Poetry_setAuthor">
             <value name="AUTHOR">
-              <block type="Poetry_stringValue">
+              <shadow type="Poetry_stringValue">
                 <title name="TEXT"/>
-              </block>
+              </shadow>
             </value>
           </block>
           <block type="Poetry_addLine">
             <value name="LINE">
-              <block type="Poetry_stringValue">
+              <shadow type="Poetry_stringValue">
                 <title name="TEXT"/>
-              </block>
+              </shadow>
             </value>
           </block>
           <block type="Poetry_animateText"/>
@@ -97,9 +97,9 @@
           </block>
           <block type="Poetry_setFontColor">
             <value name="FILL">
-              <block type="colour_picker">
+              <shadow type="colour_picker">
                 <title name="COLOUR">#99ff99</title>
-              </block>
+              </shadow>
             </value>
           </block>
           <block type="Poetry_setTextEffect">
@@ -107,9 +107,9 @@
           </block>
           <block type="Poetry_addTextHighlight">
             <value name="COLOR">
-              <block type="colour_picker" can_disconnect_from_parent="false">
+              <shadow type="colour_picker" can_disconnect_from_parent="false">
                 <title name="COLOUR">#99ff99</title>
-              </block>
+              </shadow>
             </value>
           </block>
           <block type="Poetry_playSound">
@@ -126,9 +126,9 @@
           </block>
           <block type="Poetry_setBackground">
             <value name="COLOR">
-              <block type="colour_picker">
+              <shadow type="colour_picker">
                 <title name="COLOUR">#cc0000</title>
-              </block>
+              </shadow>
             </value>
           </block>
           <block type="Poetry_setBackgroundImageAs">

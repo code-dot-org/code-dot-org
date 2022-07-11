@@ -1,39 +1,39 @@
 ---
-title: Kódolás Órája útmutató
+title: Kódolás órája útmutató
 ---
 
 {{ signup_button }}
 
-# Hogyan tervezd meg a Kódolás Óráját
+# Hogyan kell a Kódolás óráját megtervezni?
 
-### Csatlakozz a mozgalomhoz és tartsd meg egy csapat diáknak az első számítástudomány óráját az alábbi útmutató alapján.
+### Csatlakozz a mozgalomhoz ,és tarts egy bevezető számítástechnikai órát egy csoport diáknak a következő lépések szerint.
 
-A számítástechnikai gondolkodás segít fejleszteni a problémamegoldó képességeket, a logikát és a kreativitást. És mint jól tudjuk, a technológia átformál minden iparágat a világon. A mai diákoknak meg kell tanulniuk, hogyan kell technológiát létrehozni, nem csak használni azt. Ha korán elkezdessz ismerkedni vele, megalapozhatod a sikered a 21. században.
+A számítástechnikai gondolkodás fejleszti a problémamegoldó képességeket, a logikus gondolkodást és a kreativitást. A technológia átalakít minden iparágat a világon. A diákoknak ma nem csak a technológia használatát kell megtanulniuk, hanem azt is, hogy hogyan kell a technológiát létrehozni. Aki korán megismerkedik a számítástechnikával, az a szamai sikerét alapozza meg a 21. században.
 
-A Kódolás Órája egyszerű és szórakoztató módja annak, hogy elsőkézből ismertesse meg a diákokat az informatikával, mi több, tökéletesen beleilleszthető egy tanórába, illetve az iskola utáni tevékenységekbe. Nézd meg a [résztvevőknek szóló útmutatót, ha még kérdéseid vannak]({{ localized_files/participation_guide }}).
+A Kódolás órája segítségével egyszerűen és szórakoztató módon lehet a diákokat bevezetni a számítástechnika világába, mi több, tökéletesen beleilleszthető egy tanórába, illetve az iskola utáni tevékenységekbe. Ha még van kérdések, nézd meg a [résztvevőknek szóló útmutatót]({{ localized_files/participation_guide }}).
 
-- [Nézd meg a Kódolás Órája videót](#how-to-video)
-- [Fedezz fel feladatokat és gyakorlatokat](#explore-activities)
+- [Nézd meg a Kódolás órája videót](#how-to-video)
+- [Fedezz fel tevékenységeket és a gyakorlatokat](#explore-activities)
 - [Tervezd meg a saját napodat](#create-your-plan)
-- [Népszerűsítsd a Kódolás Órája eseményedet](#promote-your-hour)
-- [Hogyan kezd el saját Kódolás Órádat](#how-to-start)
+- [Népszerűsítsd a Kódolás órája eseményedet](#promote-your-hour)
+- [Hogyan kezd el határozottan a saját Kódolás órádat](#how-to-start)
 - [Kezdj kódolni](#code)
-- [Ünnepeld a diákjaid sikereit](#celebrate)
-- [Egyéb "Hour of Code" forrás anyagok oktatóknak](#other-resources)
+- [Ünnepeld a diákjaid sikerét](#celebrate)
+- [Egyéb, Kódolás órája forrásanyagok oktatóknak](#other-resources)
 
-### A Kódolás Órája távolról is üzemeltethető! A kezdéshez tekintsd meg [ tippjeinket a virtuális óra megrendezéséhez](https://hourofcode.com/us/how-to/virtual).
+### Egy Kódolás óráját távolról is meg lehet tartani! Kezdésként tekintsd meg a [ tippjeinket, hogyan lehet egy Kódolás óráját megtartani](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Nézd meg a Kódolás Órája videó útmutatót <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Nézd meg a Kódolás órája videót <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Fedezz fel feladatokat és gyakorlatokat
+## 2. Fedezz fel a tevékenységeket és a gyakorlatokat
 
 Számos élvezetes[tutorial videót biztosítunk]({{ urls/learn }}) minden korosztálynak és tapasztalati szintnek. Népszerű, hogy a diákok kipróbálják az önálló haladást biztosító oktatóanyagokat, bár sok tevékenység tartalmaz óravázlatot a tanárok számára, hogy irányítsák a beszélgetést vagy kiterjesszék a tevékenységet.
 
@@ -64,7 +64,7 @@ Az emberek szerte a világon csatlakoznak a Kódolás Órája rendezvényhez a C
 
 <a id="promote-your-hour"></a>
 
-## 4. Népszerűsítsd a Kódolás Órája eseményedet
+## 4. Népszerűsítsd a saját Kódolás órádat
 
 Most, hogy megtervezted az eseményt, itt az ideje elkezdeni népszerűsíteni!
 
@@ -88,7 +88,7 @@ További információ a plakátokról, videókról, matricákról és egyéb mó
 
 <a id="how-to-start"></a>
 
-## 5. Hogyan kezd el saját Kódolás Órádat
+## 5. Hogyan kezd el határozottan a saját Kódolás órádat
 
 Miután elkezdődött a Kódolás Órája esemény, győződj meg róla, hogy erősen kezded a rendezvényt ezen eszközök és tippek segítségével.
 
@@ -99,25 +99,25 @@ Mutass egy inspiráló videót az alábbiak közül:
 - Az eredeti Code.org bemutatóvideó Bill Gates, Mark Zuckerbeg és az NBA játékos Chris Bosch szereplésével. (Elérhető [1 perces](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 perces](https://www.youtube.com/watch?v=nKIu9yen5nc) és [9 perces](https://www.youtube.com/watch?v=dU1xS07N-FA) változatban.)
 - Kattints ide még több inspiráló [anyagért]({{ urls/inspire }}) és [videóért](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-Nem baj, ha számodra és a tanulók számára is újdonság a számítógép-tudomány. Itt van néhány ötlet, hogyan vezetheted be a Kódolás Órája tevékenységet:
+Nem baj, ha számodra és a tanulók számára is újdonság a számítástechnika. Itt van néhány ötlet, néhány tevékenység a Kódolás órájához:
 
 - Magyarázd el, hogyan hat az életünkre a technológia, olyan példákkal, amelyek a fiúk és a lányok számára is érdekesek (beszélj életmentésről, emberek segítéséről, az emberek közötti kapcsolatok ápolásáról stb...).
 - Az osztály gyűjtsön olyan mindennapi dolgokat, amelyeket a kódolás tesz lehetővé.
-- Nézd meg [itt](%= codeorg_url('/girls')%), hogy hogyan keltheted fel a lányok érdeklődését a számítástechnika iránt.
+- Nézd meg [itt](%= codeorg_url('/girls')%), hogy hogyan keltheted fel lányok érdeklődését a számítástechnika iránt.
 
 * * *
 
 <a id="code"></a>
 
-## 6. Kezdj kódolni!
+## 6. Kezdj el kódolni!
 
 Vezesd a tanulókat a tevékenységhez
 
-- Írd ki a gyakorlat elérési útját a táblára. A linket megtalálod a [választott tutorial információknál]({{ urls/learn }}) tárolva, a résztvevők száma alatt.
+- Írd fel a gyakorlat linkjét a táblára. A linket megtalálod a [kiválasztott gyakorlatra vonatkozó információk]({{ urls/learn }}) között, a résztvevők száma alatt.
 
 Ha a tanulóknak nehézségeik vannak, lehet így reagálni:
 
-- "Nem tudom. Találjunk együtt megoldást!"
+- "Nem tudom. Találjunk együtt egy megoldást!"
 - "A technika nem mindig úgy működik, mint ahogy azt mi szeretnénk."
 - "Programozni tanulni, olyan mint egy nyelvet tanulni, nem tudsz azonnal folyékonyan beszélni."
 
@@ -130,7 +130,7 @@ Mi történjen, ha egy tanuló korábban végez?
 
 <a id="celebrate"></a>
 
-## 7. Ünnepeld a diákjaid sikereit
+## 7. Ünnepeld meg a diákjaid sikerét
 
 [col-33]
 
@@ -147,13 +147,13 @@ Mi történjen, ha egy tanuló korábban végez?
 
 <a id="other-resources"></a>
 
-## Egyéb Kódolás Órája források tanároknak:
+## Egyéb források a Kódolás órája oktató számára:
 
 - Látogass el a [Kódolás Órája tanári fórumára](http://forum.code.org/c/plc/hour-of-code), hogy tanácsokat, tippeket és támogatást kapj a többi oktatótól.
-- Olvasd át a [Kódolás Órája GYIK](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) részét.
+- Olvasd át a [Kódolás órájával kapcsolatos GYIK-et](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### Mi jön a "Hour of Code" esemény után?
 
-A számítástechnikának nem kell véget érnie a Kódolás Órájával! Tantervünk webalapú és ingyenesen használható, örökre. [ További információt találhatsz itt ](/beyond) arról, hogyan lehet számítástechnikát csempészni a tanórákba.
+A számítástechnikának nincs vége a Kódolás órájával! Tantervünk webalapú és bármikor ingyenesen használható. [hogyan lehet](/beyond) a számítástechnikát bevinni az iskolába és a diákok közé.
 
 {{ signup_button }}

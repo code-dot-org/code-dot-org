@@ -2,10 +2,8 @@ Feature: Applab Project
 
 # as_student to actually perform sign-in/out before/after scenario
 # no_mobile because we don't end up with open-workspace on mobile
-# no_ie because applab is broken on IE9, and on IE10 this test crashes when we
-#   try to execute any JS after our redirect on line 42
 @as_student
-@no_mobile @no_ie
+@no_mobile
 Scenario: Applab Flow
   Given I am on "http://studio.code.org/projects/applab"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"

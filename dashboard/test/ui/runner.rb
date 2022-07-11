@@ -304,9 +304,9 @@ def open_log_files
 end
 
 def close_log_files
-  $success_log.close if $success_log
-  $error_log.close if $error_log
-  $errorbrowsers_log.close if $errorbrowsers_log
+  $success_log&.close
+  $error_log&.close
+  $errorbrowsers_log&.close
 end
 
 def log_success(msg)
@@ -840,10 +840,10 @@ def run_feature(browser, feature, options)
 
   if scenario_count == 0 && !ENV['CI']
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
-    skip_warning += <<EOS
-Check the excluded @tags in the cucumber command line above and in the #{feature} file:
-  - Do the feature or scenario tags exclude #{browser_name}?
-EOS
+    skip_warning += <<~EOS
+      Check the excluded @tags in the cucumber command line above and in the #{feature} file:
+        - Do the feature or scenario tags exclude #{browser_name}?
+    EOS
     unless eyes?
       skip_warning += "  - Are you trying to run --eyes tests?\n"
     end

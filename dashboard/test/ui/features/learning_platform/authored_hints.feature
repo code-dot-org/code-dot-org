@@ -1,4 +1,3 @@
-@no_ie
 Feature: Authored Hints
 
 Scenario: View Authored Hints

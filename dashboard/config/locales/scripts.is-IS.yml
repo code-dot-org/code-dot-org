@@ -2,27 +2,6 @@
 is:
   data:
     script:
-      category:
-        csd_category_name: Uppgötvanir tölvunarfræði ('17-'18)
-        csd_2018_category_name: Uppgötvanir tölvunarfræði ('18-'19)
-        csd_2019_category_name: Uppgötvanir tölvunarfræði ('19-'20)
-        csd_2020_category_name: Uppgötvanir tölvunarfræði ('20-'21)
-        csd_2021_category_name: Uppgötvanir tölvunarfræði ('21-'22)
-        csf_category_name: TF Grunnur
-        csf_international_category_name: Grunnatriði TF - alþjóðlegt
-        csf2_draft_category_name: 'Í þróun: Námskeið A-F'
-        csp_category_name: Grunnhugtök tölvunarfræði ('15-'16)
-        csp_2018_category_name: Grunnhugtök tölvunarfræði ('18-'19)
-        csp_2019_category_name: Grunnhugtök tölvunarfræði ('19-'20)
-        csp_2020_category_name: Grunnhugtök tölvunarfræði ('20-'21)
-        csp_2021_category_name: Grunnhugtök tölvunarfræði ('21-'22)
-        cspexams_category_name: Æfingapróf fyrir Undirstöðuatriði TF
-        csp17_category_name: "'16-'17 TF Grundvöllur"
-        full_course_category_name: Heil námskeið
-        hoc_category_name: Klukkustund kóðunar
-        math_category_name: Reikningur
-        research_studies_category_name: Rannsóknanám
-        other_category_name: Annað
       name:
         course1:
           title: Námskeið 1
@@ -1270,8 +1249,6 @@ is:
           student_description: '2.  áfangi á neti: Blandað sumarnám'
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org fagþróun - Sanngirni
             Necessary Background:
               name: Nauðsynlegur bakgrunnur
         science-PD2:
@@ -2551,18 +2528,6 @@ is:
               name: Skilyrðingar og inntak lykla
             Drawing in Game Lab:
               name: Teikning í Leikjasmiðju
-              description_student: Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab),
-                sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana
-                til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði
-                aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar
-                aðgerðir. Í lok tímans býr hópurinn til netútgáfu af myndinni sem
-                hann hannaði í næsta tíma á undan.
-              description_teacher: Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab),
-                sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana
-                til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði
-                aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar
-                aðgerðir. Í lok tímans verða nemendur færir um að forrita myndir eins
-                og þær sem þeir teiknuðu með teikniverkfærinu í tímanum á undan.
             'Project: Interactive Card':
               name: 'Verkefni: Gagnvirkt kort'
             Sprites and Images:
@@ -2575,137 +2540,22 @@ is:
               name: Breytur og hreyfing
             Velocity:
               name: Hraði
-              description_student: Eftir stutta skoðun á því hvernig teljaramynstrið
-                er notað til að hreyfa kvika, fær hópurinn kynningu á þeim eiginleikum
-                sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju
-                eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til
-                að búa til einfaldan skrunleik (side scroller).
-              description_teacher: Eftir stutta skoðun á því hvernig þeir notuðu teljaramynstrið
-                til að hreyfa kvika í tímanum á undan, fá nemendur kynningu á þeim
-                eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota
-                þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem
-                þarf til að búa til einfaldan skrunleik (side scroller).
             Collision Detection:
               name: Skynjun árekstra
-              description_student: Hópurinn lærir um árekstragreiningu í forritun.  Pör
-                kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð
-                ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn
-                notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar
-                rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni
-                til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma.
-              description_teacher: Hópurinn lærir um árekstragreiningu í forritun.  Pör
-                kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð
-                ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn
-                notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar
-                rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni
-                til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma.
             Complex Sprite Movement:
               name: Samsett kvikahreyfing
-              description_student: 'Hópurinn lærir að samtvinna hraðaeiginleika kvika
-                og teljaramynstrið til að framkalla flóknari hreyfingar kvika, svo
-                sem að líkja eftir þyngdaraflinu, láta kvika stökkva og láta kvika
-                sveima til hægri eða vinstri. Í síðustu áföngunum sameinar hópurinn
-                þetta til að hreyfa og stjórna stökum kvika og smíða einfaldan leik
-                þar sem leikvera flýgur um og safnar peningum. '
-              description_teacher: Nemendur læra að nota hraðaeiginleika kvika ásamt
-                teljaramynstrinu til að kalla fram flóknari hreyfingar kvikanna. Sérstaklega
-                munu nemendur læra að líkja eftir þyngdaraflinu, láta kvika stökkva
-                og láta kvika svífa til hægri og vinstri. Í síðustu áföngum þessarar
-                framvindu í Kóðastúdíóinu nota nemendur þessar hreyfingar saman til
-                að hreyfa og stjórna stökum kvika og búa til einfaldan leik þar sem
-                leikvera flýgur um og safnar peningum. Nemendur eru hvattir til að
-                bæta eigin hugmyndum í leikinn í síðasta áfanganum.
             Collisions:
               name: Árekstrar
-              description_student: Hópurinn forritar kvika til að eiga samskipti á
-                nýjan hátt. Eftir stutta upprifjun á hvernig isTouching kubburinn
-                var notaður, kannar hópurinn hvaða önnur samskipti kvikar gætu átt.
-                Þeir nota síðan isTouching til að láta einn kvika ýta öðrum yfir skjáinn
-                og æfa síðan árekstrarkubbana fjóra (collide, displace, bounce og
-                bounceOff).
-              description_teacher: Nemendur forrita kvika til að eiga samskipti á
-                nýjan hátt. Eftir stutta upprifjun á hvernig `isTouching` kubburinn
-                var notaður, kanna nemendur hvaða önnur samskipti tveir kvikar gætu
-                átt. Þeir nota síðan `isTouching` til að láta einn kvika ýta öðrum
-                yfir skjáinn og æfa síðan árekstrarkubbana fjóra (`collide`, `displace`,
-                `bounce` og `bounceOff`).
             Functions:
               name: Föll
-              description_student: Þessi kennslustund tekur fyrir föll sem aðferð
-                til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar
-                skipanastæður. Hópurinn lærir að það er auðveldara að skilja og útskýra
-                óhlutbundari aðgerðir í forriti og síðan mun hann byrja að búa til
-                föll í Leikjasmiðjunni. Í lok tímans notar hópurinn þessa færni til
-                að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu
-                til.
-              description_teacher: Nemendur læra að búa til föll til að skipuleggja
-                kóða, gera hann læsilegri og losna við endurteknar skipanastæður.
-                Upphitun án tölvu kannar hvernig hægt er að gefa fyrirmæli með mismunandi
-                miklum smáatriðum og hvernig það getur verið gagnlegt eftir aðstæðum.
-                Nemendur læra að það er auðveldara að skilja og útskýra óhlutbundari
-                aðgerðir í forriti. Síðan læra þeir að búa til föll í Leikjasmiðjunni.
-                Þeir munu læra að nota föll í stað langra runa af endurteknum kóða,
-                sem þeir geta þá fjarlægt úr teiknilykkjunni. Í lok tímans notar hópurinn
-                þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins
-                sem þau bjuggu til.
             The Game Design Process:
               name: Ferli leikjahönnunar
-              description_student: Þessi kennslustund kynnir ferlið sem hópurinn mun
-                nota til að hanna leiki það sem eftir er einingarinnar. Hópurinn fer
-                yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta
-                kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans
-                fá þau tækifæri til að betrumbæta leikinn að vild.
-              description_teacher: Þessi kennslustund kynnir ferlið sem hópurinn mun
-                nota til að hanna leiki það sem eftir er einingarinnar. Ferlið er
-                byggt á verkefnishandbók þar sem nemendum er ætlað að skilgreina kvika
-                sína, breytur og föll áður en þeir byrja að forrita leikinn. Í tímanum
-                byrja nemendur á að spila leik í Leikjasmiðjunni þar sem kóðinn er
-                falinn. Þeir ræða hvaða kvika, breytur og föll gæti þurft til að búa
-                til slíkan leik. Þeir fá síðan í hendur tilbúna verkefnishandbók sem
-                sýnir eina leið til að gera leikinn. Hópurinn fer yfir þetta ferli
-                í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota
-                fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri
-                til að betrumbæta leikinn að vild.
             Using the Game Design Process:
               name: Notkun leikjahönnunarferlisins
             'Project: Build a Game':
               name: 'Verkefni: Smíða leik'
             'Project: Design a Game':
               name: 'Verkefni: Hanna leik'
-            Programming for Entertainment:
-              description_student: Hópurinn er beðinn að skoða "vandamálin" leiðindi
-                og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni
-                í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt
-                og forritun sérstaklega hefur hlutverki að gegna annað hvort í tiltekinni
-                tegund afþreyingar eða sem miðill til að tjá sig gegnum.
-              description_teacher: Nemendur eru beðnir að skoða "vandamálin" leiðindi
-                og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni
-                í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt
-                og forritun sérstaklega hefur hlutverki að gegna, annað hvort í tiltekinni
-                tegund afþreyingar eða sem miðill til að tjá sig gegnum.
-            Plotting Shapes:
-              description_student: Nemendur kanna þær áskoranir sem felast í að miðla
-                því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun
-                er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir
-                fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs
-                staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri
-                sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi
-                Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að
-                teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir
-                sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val
-                geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður
-                fara fram.
-              description_teacher: Nemendur kanna þær áskoranir sem felast í að miðla
-                því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun
-                er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir
-                fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs
-                staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri
-                sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi
-                Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að
-                teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir
-                sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val
-                geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður
-                fara fram.
             Variables:
               name: Breytur
             Sprites:
@@ -2714,13 +2564,6 @@ is:
               name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
-              description_student: Hópurinn byrjar á að nota boole-virkja til að bera
-                saman gildið í eiginleika kvika við markgildi og nota þann samanburð
-                til að ákveða hvenær kvikinn hefur náð tilteknum stað á skjánum, náð
-                tiltekinni stærð eða náð öðru tilteknu gildi með því að nota teljaramynstrið.
-                Eftir að hafa nota boole-virkja beint til að kanna gildi í eiginleikum
-                kvika, bætir hópurinn við ef-yrðingum sem nota samanburð með boole-virkjum
-                og skrifar kóða til að vinna úr þessum samanburði.
             Parameters and Randomization:
               name: Stikar og handahóf
             Shapes and Randomization:
@@ -2802,12 +2645,6 @@ is:
             csd1_2:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
           lessons:
-            Intro to Problem Solving:
-              description_student: 'Bekkurinn vinnur í hópum við að hanna báta úr
-                álpappír svo þeir fljóti með sem þyngsta hleðslu. Í lok tímans hugleiða
-                hóparnir hvaða reynslu þeir öðluðust við þetta verkefni og hvernig
-                það gæti tengst þeim tegundum úrlausna sem þeir munu fást við það
-                sem eftir er af námskeiðinu. '
             Input and Output:
               name: Inntak og Úttak
             Processing:
@@ -2859,6 +2696,7 @@ is:
           description_short: Velja lið og búa til körfuboltaleik
           description: Velja lið og búa til körfuboltaleik
           student_description: Velja lið og búa til körfuboltaleik
+          name: körfubolti
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -3087,6 +2925,7 @@ is:
           description_short: Blandaðu saman íþróttum
           description: Blandaðu saman íþróttum
           student_description: Blandaðu saman íþróttum
+          name: íþróttir
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -3378,27 +3217,6 @@ is:
             csd_survey:
               display_name: Könnun eftir námskeið
           lessons:
-            ASCII and Binary Representation:
-              description_teacher: Í þessari kennslustund læra nemendur í fyrsta sinn
-                að nota tvíundarkerfi til að kóða gögn, ASCII kerfið fyrir bókstafi
-                og önnur stafatákn. Í upphafi kynnir kennarinn þá staðreynd að tölvur
-                verða að geyma upplýsingar með "á" eða "af". Síðan fá nemendur kynningu
-                á ASCII kerfinu til að tákna texta með tvíundartáknum. Nemendur æfa
-                að nota þetta kerfi áður en þeir kóða sín eigin skilaboð með ASCII.
-                Í lokin er spjall til að rifja upp og draga saman helstu námsmarkmið
-                æfingarinnar.
-            Representing Images:
-              description_teacher: Í þessari kennslustund læra nemendur hvernig tölvur
-                geyma myndir. Þeir byrja á að hugleiða þá áskorun sem felst í að umbreyta
-                hinum flókna sýnilega heimi í tvíundarmynstur. Með röð mynda sem sýna
-                hvernig þessi umbreyting fer fram eru nemendur kynntir fyrir þeirri
-                hugmynd að skipta mynd upp í ferninga eða "díla" sem síðan er hægt
-                að kveikja eða slökkva á til að skapa myndina. Nemendur glíma síðan
-                við að teikna svart-hvítar með dílamynstursgræjunni (Pixelation Widget).
-                Þrautirnar eru hannaðar til að draga fram nokkrar áskoranir við það
-                að tákna myndir á þennan hátt. Í samantektinni tengja nemendur þetta
-                kerfi til að tákna myndir og kerfið til að tákna texta sem þeir lærðu
-                um síðast.
             8-bit Numbers:
               name: 8-bita Tölur
         csd3-old:
@@ -3557,11 +3375,6 @@ is:
               name: 'Kembing: Ófundnir böggar'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algrím úr raunheimi: Sá fræi'
-            'Loops: Happy Loops':
-              description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í
-                forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að
-                haga því þannig að nemendur vilji fá auðveldari leið til að leysa
-                hversdagsleg verkefni.
           student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
             Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         courseb-2017:
@@ -4072,6 +3885,7 @@ is:
           student_description: |-
             Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!
             Ferðist um Minecraft með kóða.
+          name: hetja
         csp-explore-2017:
           lesson_groups:
             csp_ap_2:
@@ -4225,54 +4039,8 @@ is:
             cspSurvey:
               display_name: Könnun
           lessons:
-            Programming for Entertainment:
-              description_student: Hópurinn er beðinn að skoða "vandamálin" leiðindi
-                og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni
-                í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt
-                og forritun sérstaklega hefur hlutverki að gegna annað hvort í tiltekinni
-                tegund afþreyingar eða sem miðill til að tjá sig gegnum.
-              description_teacher: Nemendur eru beðnir að skoða "vandamálin" leiðindi
-                og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni
-                í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt
-                og forritun sérstaklega hefur hlutverki að gegna, annað hvort í tiltekinni
-                tegund afþreyingar eða sem miðill til að tjá sig gegnum.
-            Plotting Shapes:
-              description_student: Nemendur kanna þær áskoranir sem felast í að miðla
-                því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun
-                er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir
-                fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs
-                staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri
-                sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi
-                Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að
-                teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir
-                sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val
-                geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður
-                fara fram.
-              description_teacher: Nemendur kanna þær áskoranir sem felast í að miðla
-                því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun
-                er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir
-                fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs
-                staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri
-                sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi
-                Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að
-                teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir
-                sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val
-                geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður
-                fara fram.
             Drawing in Game Lab:
               name: Teikning í Leikjasmiðju
-              description_student: Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab),
-                sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana
-                til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði
-                aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar
-                aðgerðir. Í lok tímans býr hópurinn til netútgáfu af myndinni sem
-                hann hannaði í næsta tíma á undan.
-              description_teacher: Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab),
-                sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana
-                til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði
-                aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar
-                aðgerðir. Í lok tímans verða nemendur færir um að forrita myndir eins
-                og þær sem þeir teiknuðu með teikniverkfærinu í tímanum á undan.
             Shapes and Randomization:
               name: Form og handahóf
             Variables:
@@ -4283,106 +4051,18 @@ is:
               name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
-              description_student: Hópurinn byrjar á að nota boole-virkja til að bera
-                saman gildið í eiginleika kvika við markgildi og nota þann samanburð
-                til að ákveða hvenær kvikinn hefur náð tilteknum stað á skjánum, náð
-                tiltekinni stærð eða náð öðru tilteknu gildi með því að nota teljaramynstrið.
-                Eftir að hafa nota boole-virkja beint til að kanna gildi í eiginleikum
-                kvika, bætir hópurinn við ef-yrðingum sem nota samanburð með boole-virkjum
-                og skrifar kóða til að vinna úr þessum samanburði.
             Velocity:
               name: Hraði
-              description_student: Eftir stutta skoðun á því hvernig teljaramynstrið
-                er notað til að hreyfa kvika, fær hópurinn kynningu á þeim eiginleikum
-                sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju
-                eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til
-                að búa til einfaldan skrunleik (side scroller).
-              description_teacher: Eftir stutta skoðun á því hvernig þeir notuðu teljaramynstrið
-                til að hreyfa kvika í tímanum á undan, fá nemendur kynningu á þeim
-                eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota
-                þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem
-                þarf til að búa til einfaldan skrunleik (side scroller).
             Collision Detection:
               name: Skynjun árekstra
-              description_student: Hópurinn lærir um árekstragreiningu í forritun.  Pör
-                kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð
-                ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn
-                notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar
-                rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni
-                til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma.
-              description_teacher: Hópurinn lærir um árekstragreiningu í forritun.  Pör
-                kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð
-                ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn
-                notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar
-                rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni
-                til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma.
             Complex Sprite Movement:
               name: Samsett kvikahreyfing
-              description_student: 'Hópurinn lærir að samtvinna hraðaeiginleika kvika
-                og teljaramynstrið til að framkalla flóknari hreyfingar kvika, svo
-                sem að líkja eftir þyngdaraflinu, láta kvika stökkva og láta kvika
-                sveima til hægri eða vinstri. Í síðustu áföngunum sameinar hópurinn
-                þetta til að hreyfa og stjórna stökum kvika og smíða einfaldan leik
-                þar sem leikvera flýgur um og safnar peningum. '
-              description_teacher: Nemendur læra að nota hraðaeiginleika kvika ásamt
-                teljaramynstrinu til að kalla fram flóknari hreyfingar kvikanna. Sérstaklega
-                munu nemendur læra að líkja eftir þyngdaraflinu, láta kvika stökkva
-                og láta kvika svífa til hægri og vinstri. Í síðustu áföngum þessarar
-                framvindu í Kóðastúdíóinu nota nemendur þessar hreyfingar saman til
-                að hreyfa og stjórna stökum kvika og búa til einfaldan leik þar sem
-                leikvera flýgur um og safnar peningum. Nemendur eru hvattir til að
-                bæta eigin hugmyndum í leikinn í síðasta áfanganum.
             Collisions:
               name: Árekstrar
-              description_student: Hópurinn forritar kvika til að eiga samskipti á
-                nýjan hátt. Eftir stutta upprifjun á hvernig isTouching kubburinn
-                var notaður, kannar hópurinn hvaða önnur samskipti kvikar gætu átt.
-                Þeir nota síðan isTouching til að láta einn kvika ýta öðrum yfir skjáinn
-                og æfa síðan árekstrarkubbana fjóra (collide, displace, bounce og
-                bounceOff).
-              description_teacher: Nemendur forrita kvika til að eiga samskipti á
-                nýjan hátt. Eftir stutta upprifjun á hvernig `isTouching` kubburinn
-                var notaður, kanna nemendur hvaða önnur samskipti tveir kvikar gætu
-                átt. Þeir nota síðan `isTouching` til að láta einn kvika ýta öðrum
-                yfir skjáinn og æfa síðan árekstrarkubbana fjóra (`collide`, `displace`,
-                `bounce` og `bounceOff`).
             Functions:
               name: Föll
-              description_student: Þessi kennslustund tekur fyrir föll sem aðferð
-                til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar
-                skipanastæður. Hópurinn lærir að það er auðveldara að skilja og útskýra
-                óhlutbundari aðgerðir í forriti og síðan mun hann byrja að búa til
-                föll í Leikjasmiðjunni. Í lok tímans notar hópurinn þessa færni til
-                að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu
-                til.
-              description_teacher: Nemendur læra að búa til föll til að skipuleggja
-                kóða, gera hann læsilegri og losna við endurteknar skipanastæður.
-                Upphitun án tölvu kannar hvernig hægt er að gefa fyrirmæli með mismunandi
-                miklum smáatriðum og hvernig það getur verið gagnlegt eftir aðstæðum.
-                Nemendur læra að það er auðveldara að skilja og útskýra óhlutbundari
-                aðgerðir í forriti. Síðan læra þeir að búa til föll í Leikjasmiðjunni.
-                Þeir munu læra að nota föll í stað langra runa af endurteknum kóða,
-                sem þeir geta þá fjarlægt úr teiknilykkjunni. Í lok tímans notar hópurinn
-                þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins
-                sem þau bjuggu til.
             The Game Design Process:
               name: Ferli leikjahönnunar
-              description_student: Þessi kennslustund kynnir ferlið sem hópurinn mun
-                nota til að hanna leiki það sem eftir er einingarinnar. Hópurinn fer
-                yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta
-                kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans
-                fá þau tækifæri til að betrumbæta leikinn að vild.
-              description_teacher: Þessi kennslustund kynnir ferlið sem hópurinn mun
-                nota til að hanna leiki það sem eftir er einingarinnar. Ferlið er
-                byggt á verkefnishandbók þar sem nemendum er ætlað að skilgreina kvika
-                sína, breytur og föll áður en þeir byrja að forrita leikinn. Í tímanum
-                byrja nemendur á að spila leik í Leikjasmiðjunni þar sem kóðinn er
-                falinn. Þeir ræða hvaða kvika, breytur og föll gæti þurft til að búa
-                til slíkan leik. Þeir fá síðan í hendur tilbúna verkefnishandbók sem
-                sýnir eina leið til að gera leikinn. Hópurinn fer yfir þetta ferli
-                í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota
-                fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri
-                til að betrumbæta leikinn að vild.
             Using the Game Design Process:
               name: Notkun leikjahönnunarferlisins
         csd2-2018:
@@ -4427,10 +4107,6 @@ is:
               name: Ferðast í öryggi
             'Loops: Happy Loops':
               name: Lukkulegar lykkjur
-              description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í
-                forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að
-                haga því þannig að nemendur vilji fá auðveldari leið til að leysa
-                hversdagsleg verkefni.
             Loops in Collector:
               name: Lykkjur með Láru
             Programming in Bee:
@@ -4694,12 +4370,6 @@ is:
             csd1_2:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
           lessons:
-            Intro to Problem Solving:
-              description_student: 'Bekkurinn vinnur í hópum við að hanna báta úr
-                álpappír svo þeir fljóti með sem þyngsta hleðslu. Í lok tímans hugleiða
-                hóparnir hvaða reynslu þeir öðluðust við þetta verkefni og hvernig
-                það gæti tengst þeim tegundum úrlausna sem þeir munu fást við það
-                sem eftir er af námskeiðinu. '
             Input and Output:
               name: Inntak og Úttak
             Processing:
@@ -4731,28 +4401,6 @@ is:
               display_name: 'Kafli 2: Lausn vandamála með gögn'
             cspSurvey:
               display_name: Könnun
-          lessons:
-            ASCII and Binary Representation:
-              description_teacher: Í þessari kennslustund læra nemendur í fyrsta sinn
-                að nota tvíundarkerfi til að kóða gögn, ASCII kerfið fyrir bókstafi
-                og önnur stafatákn. Í upphafi kynnir kennarinn þá staðreynd að tölvur
-                verða að geyma upplýsingar með "á" eða "af". Síðan fá nemendur kynningu
-                á ASCII kerfinu til að tákna texta með tvíundartáknum. Nemendur æfa
-                að nota þetta kerfi áður en þeir kóða sín eigin skilaboð með ASCII.
-                Í lokin er spjall til að rifja upp og draga saman helstu námsmarkmið
-                æfingarinnar.
-            Representing Images:
-              description_teacher: Í þessari kennslustund læra nemendur hvernig tölvur
-                geyma myndir. Þeir byrja á að hugleiða þá áskorun sem felst í að umbreyta
-                hinum flókna sýnilega heimi í tvíundarmynstur. Með röð mynda sem sýna
-                hvernig þessi umbreyting fer fram eru nemendur kynntir fyrir þeirri
-                hugmynd að skipta mynd upp í ferninga eða "díla" sem síðan er hægt
-                að kveikja eða slökkva á til að skapa myndina. Nemendur glíma síðan
-                við að teikna svart-hvítar með dílamynstursgræjunni (Pixelation Widget).
-                Þrautirnar eru hannaðar til að draga fram nokkrar áskoranir við það
-                að tákna myndir á þennan hátt. Í samantektinni tengja nemendur þetta
-                kerfi til að tákna myndir og kerfið til að tákna texta sem þeir lærðu
-                um síðast.
         csp2-2018:
           lesson_groups:
             csp2_1_2018:
@@ -5073,6 +4721,7 @@ is:
               name: nýr áfangi
             Dance Party:
               name: Danspartý
+          name: dans
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -5080,6 +4729,7 @@ is:
         aquatic:
           description_short: Notaðu sköpunargáfuna og hæfileika til að leysa þrautir
             til að kanna og byggja neðansjávarheima með kóða!
+          name: sjávar
         dance--draft:
           lessons:
             Dance Party:
@@ -5140,17 +4790,6 @@ is:
               name: Fara yfir verkefnið
             The Artist:
               name: Listamaðurinn
-            Virtual Pet:
-              description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt
-                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
-                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
-                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
-                að blása lífi í gæludýrið!
-              description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt
-                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
-                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
-                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
-                að blása lífi í gæludýrið!
             End of Course Project:
               name: Lokaverkefni námskeiðs
             Internet:
@@ -5288,12 +4927,6 @@ is:
             csd1_2:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
           lessons:
-            Intro to Problem Solving:
-              description_student: 'Bekkurinn vinnur í hópum við að hanna báta úr
-                álpappír svo þeir fljóti með sem þyngsta hleðslu. Í lok tímans hugleiða
-                hóparnir hvaða reynslu þeir öðluðust við þetta verkefni og hvernig
-                það gæti tengst þeim tegundum úrlausna sem þeir munu fást við það
-                sem eftir er af námskeiðinu. '
             Input and Output:
               name: Inntak og Úttak
             Processing:
@@ -5485,54 +5118,8 @@ is:
             cspSurvey:
               display_name: Könnun
           lessons:
-            Programming for Entertainment:
-              description_student: Hópurinn er beðinn að skoða "vandamálin" leiðindi
-                og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni
-                í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt
-                og forritun sérstaklega hefur hlutverki að gegna annað hvort í tiltekinni
-                tegund afþreyingar eða sem miðill til að tjá sig gegnum.
-              description_teacher: Nemendur eru beðnir að skoða "vandamálin" leiðindi
-                og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni
-                í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt
-                og forritun sérstaklega hefur hlutverki að gegna, annað hvort í tiltekinni
-                tegund afþreyingar eða sem miðill til að tjá sig gegnum.
-            Plotting Shapes:
-              description_student: Nemendur kanna þær áskoranir sem felast í að miðla
-                því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun
-                er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir
-                fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs
-                staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri
-                sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi
-                Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að
-                teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir
-                sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val
-                geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður
-                fara fram.
-              description_teacher: Nemendur kanna þær áskoranir sem felast í að miðla
-                því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun
-                er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir
-                fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs
-                staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri
-                sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi
-                Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að
-                teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir
-                sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val
-                geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður
-                fara fram.
             Drawing in Game Lab:
               name: Teikning í Leikjasmiðju
-              description_student: Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab),
-                sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana
-                til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði
-                aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar
-                aðgerðir. Í lok tímans býr hópurinn til netútgáfu af myndinni sem
-                hann hannaði í næsta tíma á undan.
-              description_teacher: Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab),
-                sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana
-                til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði
-                aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar
-                aðgerðir. Í lok tímans verða nemendur færir um að forrita myndir eins
-                og þær sem þeir teiknuðu með teikniverkfærinu í tímanum á undan.
             Shapes and Randomization:
               name: Form og handahóf
             Variables:
@@ -5543,106 +5130,18 @@ is:
               name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
-              description_student: Hópurinn byrjar á að nota boole-virkja til að bera
-                saman gildið í eiginleika kvika við markgildi og nota þann samanburð
-                til að ákveða hvenær kvikinn hefur náð tilteknum stað á skjánum, náð
-                tiltekinni stærð eða náð öðru tilteknu gildi með því að nota teljaramynstrið.
-                Eftir að hafa nota boole-virkja beint til að kanna gildi í eiginleikum
-                kvika, bætir hópurinn við ef-yrðingum sem nota samanburð með boole-virkjum
-                og skrifar kóða til að vinna úr þessum samanburði.
             Velocity:
               name: Hraði
-              description_student: Eftir stutta skoðun á því hvernig teljaramynstrið
-                er notað til að hreyfa kvika, fær hópurinn kynningu á þeim eiginleikum
-                sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju
-                eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til
-                að búa til einfaldan skrunleik (side scroller).
-              description_teacher: Eftir stutta skoðun á því hvernig þeir notuðu teljaramynstrið
-                til að hreyfa kvika í tímanum á undan, fá nemendur kynningu á þeim
-                eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota
-                þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem
-                þarf til að búa til einfaldan skrunleik (side scroller).
             Collision Detection:
               name: Skynjun árekstra
-              description_student: Hópurinn lærir um árekstragreiningu í forritun.  Pör
-                kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð
-                ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn
-                notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar
-                rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni
-                til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma.
-              description_teacher: Hópurinn lærir um árekstragreiningu í forritun.  Pör
-                kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð
-                ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn
-                notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar
-                rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni
-                til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma.
             Complex Sprite Movement:
               name: Samsett kvikahreyfing
-              description_student: 'Hópurinn lærir að samtvinna hraðaeiginleika kvika
-                og teljaramynstrið til að framkalla flóknari hreyfingar kvika, svo
-                sem að líkja eftir þyngdaraflinu, láta kvika stökkva og láta kvika
-                sveima til hægri eða vinstri. Í síðustu áföngunum sameinar hópurinn
-                þetta til að hreyfa og stjórna stökum kvika og smíða einfaldan leik
-                þar sem leikvera flýgur um og safnar peningum. '
-              description_teacher: Nemendur læra að nota hraðaeiginleika kvika ásamt
-                teljaramynstrinu til að kalla fram flóknari hreyfingar kvikanna. Sérstaklega
-                munu nemendur læra að líkja eftir þyngdaraflinu, láta kvika stökkva
-                og láta kvika svífa til hægri og vinstri. Í síðustu áföngum þessarar
-                framvindu í Kóðastúdíóinu nota nemendur þessar hreyfingar saman til
-                að hreyfa og stjórna stökum kvika og búa til einfaldan leik þar sem
-                leikvera flýgur um og safnar peningum. Nemendur eru hvattir til að
-                bæta eigin hugmyndum í leikinn í síðasta áfanganum.
             Collisions:
               name: Árekstrar
-              description_student: Hópurinn forritar kvika til að eiga samskipti á
-                nýjan hátt. Eftir stutta upprifjun á hvernig isTouching kubburinn
-                var notaður, kannar hópurinn hvaða önnur samskipti kvikar gætu átt.
-                Þeir nota síðan isTouching til að láta einn kvika ýta öðrum yfir skjáinn
-                og æfa síðan árekstrarkubbana fjóra (collide, displace, bounce og
-                bounceOff).
-              description_teacher: Nemendur forrita kvika til að eiga samskipti á
-                nýjan hátt. Eftir stutta upprifjun á hvernig `isTouching` kubburinn
-                var notaður, kanna nemendur hvaða önnur samskipti tveir kvikar gætu
-                átt. Þeir nota síðan `isTouching` til að láta einn kvika ýta öðrum
-                yfir skjáinn og æfa síðan árekstrarkubbana fjóra (`collide`, `displace`,
-                `bounce` og `bounceOff`).
             Functions:
               name: Föll
-              description_student: Þessi kennslustund tekur fyrir föll sem aðferð
-                til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar
-                skipanastæður. Hópurinn lærir að það er auðveldara að skilja og útskýra
-                óhlutbundari aðgerðir í forriti og síðan mun hann byrja að búa til
-                föll í Leikjasmiðjunni. Í lok tímans notar hópurinn þessa færni til
-                að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu
-                til.
-              description_teacher: Nemendur læra að búa til föll til að skipuleggja
-                kóða, gera hann læsilegri og losna við endurteknar skipanastæður.
-                Upphitun án tölvu kannar hvernig hægt er að gefa fyrirmæli með mismunandi
-                miklum smáatriðum og hvernig það getur verið gagnlegt eftir aðstæðum.
-                Nemendur læra að það er auðveldara að skilja og útskýra óhlutbundari
-                aðgerðir í forriti. Síðan læra þeir að búa til föll í Leikjasmiðjunni.
-                Þeir munu læra að nota föll í stað langra runa af endurteknum kóða,
-                sem þeir geta þá fjarlægt úr teiknilykkjunni. Í lok tímans notar hópurinn
-                þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins
-                sem þau bjuggu til.
             The Game Design Process:
               name: Ferli leikjahönnunar
-              description_student: Þessi kennslustund kynnir ferlið sem hópurinn mun
-                nota til að hanna leiki það sem eftir er einingarinnar. Hópurinn fer
-                yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta
-                kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans
-                fá þau tækifæri til að betrumbæta leikinn að vild.
-              description_teacher: Þessi kennslustund kynnir ferlið sem hópurinn mun
-                nota til að hanna leiki það sem eftir er einingarinnar. Ferlið er
-                byggt á verkefnishandbók þar sem nemendum er ætlað að skilgreina kvika
-                sína, breytur og föll áður en þeir byrja að forrita leikinn. Í tímanum
-                byrja nemendur á að spila leik í Leikjasmiðjunni þar sem kóðinn er
-                falinn. Þeir ræða hvaða kvika, breytur og föll gæti þurft til að búa
-                til slíkan leik. Þeir fá síðan í hendur tilbúna verkefnishandbók sem
-                sýnir eina leið til að gera leikinn. Hópurinn fer yfir þetta ferli
-                í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota
-                fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri
-                til að betrumbæta leikinn að vild.
             Using the Game Design Process:
               name: Notkun leikjahönnunarferlisins
         csd4-2019:
@@ -5668,28 +5167,6 @@ is:
               display_name: 'Kafli 2: Lausn vandamála með gögn'
             cspSurvey:
               display_name: Könnun
-          lessons:
-            ASCII and Binary Representation:
-              description_teacher: Í þessari kennslustund læra nemendur í fyrsta sinn
-                að nota tvíundarkerfi til að kóða gögn, ASCII kerfið fyrir bókstafi
-                og önnur stafatákn. Í upphafi kynnir kennarinn þá staðreynd að tölvur
-                verða að geyma upplýsingar með "á" eða "af". Síðan fá nemendur kynningu
-                á ASCII kerfinu til að tákna texta með tvíundartáknum. Nemendur æfa
-                að nota þetta kerfi áður en þeir kóða sín eigin skilaboð með ASCII.
-                Í lokin er spjall til að rifja upp og draga saman helstu námsmarkmið
-                æfingarinnar.
-            Representing Images:
-              description_teacher: Í þessari kennslustund læra nemendur hvernig tölvur
-                geyma myndir. Þeir byrja á að hugleiða þá áskorun sem felst í að umbreyta
-                hinum flókna sýnilega heimi í tvíundarmynstur. Með röð mynda sem sýna
-                hvernig þessi umbreyting fer fram eru nemendur kynntir fyrir þeirri
-                hugmynd að skipta mynd upp í ferninga eða "díla" sem síðan er hægt
-                að kveikja eða slökkva á til að skapa myndina. Nemendur glíma síðan
-                við að teikna svart-hvítar með dílamynstursgræjunni (Pixelation Widget).
-                Þrautirnar eru hannaðar til að draga fram nokkrar áskoranir við það
-                að tákna myndir á þennan hátt. Í samantektinni tengja nemendur þetta
-                kerfi til að tákna myndir og kerfið til að tákna texta sem þeir lærðu
-                um síðast.
         csd6-2019:
           lesson_groups:
             csd6_1:
@@ -6074,12 +5551,6 @@ is:
             csd1_2:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
           lessons:
-            Intro to Problem Solving:
-              description_student: 'Bekkurinn vinnur í hópum við að hanna báta úr
-                álpappír svo þeir fljóti með sem þyngsta hleðslu. Í lok tímans hugleiða
-                hóparnir hvaða reynslu þeir öðluðust við þetta verkefni og hvernig
-                það gæti tengst þeim tegundum úrlausna sem þeir munu fást við það
-                sem eftir er af námskeiðinu. '
             Input and Output:
               name: Inntak og Úttak
             Processing:
@@ -6121,54 +5592,8 @@ is:
             cspSurvey:
               display_name: Könnun
           lessons:
-            Programming for Entertainment:
-              description_student: Hópurinn er beðinn að skoða "vandamálin" leiðindi
-                og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni
-                í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt
-                og forritun sérstaklega hefur hlutverki að gegna annað hvort í tiltekinni
-                tegund afþreyingar eða sem miðill til að tjá sig gegnum.
-              description_teacher: Nemendur eru beðnir að skoða "vandamálin" leiðindi
-                og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni
-                í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt
-                og forritun sérstaklega hefur hlutverki að gegna, annað hvort í tiltekinni
-                tegund afþreyingar eða sem miðill til að tjá sig gegnum.
-            Plotting Shapes:
-              description_student: Nemendur kanna þær áskoranir sem felast í að miðla
-                því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun
-                er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir
-                fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs
-                staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri
-                sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi
-                Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að
-                teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir
-                sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val
-                geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður
-                fara fram.
-              description_teacher: Nemendur kanna þær áskoranir sem felast í að miðla
-                því hvernig á að teikna með formum og nota tæki sem kynnir hvaða nálgun
-                er beitt á þetta vandamál í Leikjasmiðjunni. Upphitunarverkefnið leiðir
-                fljótt í ljós vandamálin við gefa upp staðsetningu án sameiginlegs
-                staðsetningarkerfis. Í aðalverkefninu kanna nemendur Leikjasmiðjuverkfæri
-                sem gerir þeim kleift að staðsetja form gagnvirkt í 400 x 400 hnitakerfi
-                Leikjasmiðjunnar. Þeir skiptast síðan á að leiðbeina félaga við að
-                teikna falið form með þessu tæki, sem kallar fram margar þær áskoranir
-                sem nemendur glíma við þegar þeir forrita í Leikjasmiðjunni. Sem val
-                geta nemendur búið til og leiðbeint um eigin mynd áður en lokaumræður
-                fara fram.
             Drawing in Game Lab:
               name: Teikning í Leikjasmiðju
-              description_student: Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab),
-                sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana
-                til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði
-                aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar
-                aðgerðir. Í lok tímans býr hópurinn til netútgáfu af myndinni sem
-                hann hannaði í næsta tíma á undan.
-              description_teacher: Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab),
-                sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana
-                til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði
-                aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar
-                aðgerðir. Í lok tímans verða nemendur færir um að forrita myndir eins
-                og þær sem þeir teiknuðu með teikniverkfærinu í tímanum á undan.
             Shapes and Randomization:
               name: Form og handahóf
             Variables:
@@ -6179,106 +5604,18 @@ is:
               name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
-              description_student: Hópurinn byrjar á að nota boole-virkja til að bera
-                saman gildið í eiginleika kvika við markgildi og nota þann samanburð
-                til að ákveða hvenær kvikinn hefur náð tilteknum stað á skjánum, náð
-                tiltekinni stærð eða náð öðru tilteknu gildi með því að nota teljaramynstrið.
-                Eftir að hafa nota boole-virkja beint til að kanna gildi í eiginleikum
-                kvika, bætir hópurinn við ef-yrðingum sem nota samanburð með boole-virkjum
-                og skrifar kóða til að vinna úr þessum samanburði.
             Velocity:
               name: Hraði
-              description_student: Eftir stutta skoðun á því hvernig teljaramynstrið
-                er notað til að hreyfa kvika, fær hópurinn kynningu á þeim eiginleikum
-                sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju
-                eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til
-                að búa til einfaldan skrunleik (side scroller).
-              description_teacher: Eftir stutta skoðun á því hvernig þeir notuðu teljaramynstrið
-                til að hreyfa kvika í tímanum á undan, fá nemendur kynningu á þeim
-                eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota
-                þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem
-                þarf til að búa til einfaldan skrunleik (side scroller).
             Collision Detection:
               name: Skynjun árekstra
-              description_student: Hópurinn lærir um árekstragreiningu í forritun.  Pör
-                kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð
-                ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn
-                notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar
-                rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni
-                til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma.
-              description_teacher: Hópurinn lærir um árekstragreiningu í forritun.  Pör
-                kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð
-                ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn
-                notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar
-                rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni
-                til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma.
             Complex Sprite Movement:
               name: Samsett kvikahreyfing
-              description_student: 'Hópurinn lærir að samtvinna hraðaeiginleika kvika
-                og teljaramynstrið til að framkalla flóknari hreyfingar kvika, svo
-                sem að líkja eftir þyngdaraflinu, láta kvika stökkva og láta kvika
-                sveima til hægri eða vinstri. Í síðustu áföngunum sameinar hópurinn
-                þetta til að hreyfa og stjórna stökum kvika og smíða einfaldan leik
-                þar sem leikvera flýgur um og safnar peningum. '
-              description_teacher: Nemendur læra að nota hraðaeiginleika kvika ásamt
-                teljaramynstrinu til að kalla fram flóknari hreyfingar kvikanna. Sérstaklega
-                munu nemendur læra að líkja eftir þyngdaraflinu, láta kvika stökkva
-                og láta kvika svífa til hægri og vinstri. Í síðustu áföngum þessarar
-                framvindu í Kóðastúdíóinu nota nemendur þessar hreyfingar saman til
-                að hreyfa og stjórna stökum kvika og búa til einfaldan leik þar sem
-                leikvera flýgur um og safnar peningum. Nemendur eru hvattir til að
-                bæta eigin hugmyndum í leikinn í síðasta áfanganum.
             Collisions:
               name: Árekstrar
-              description_student: Hópurinn forritar kvika til að eiga samskipti á
-                nýjan hátt. Eftir stutta upprifjun á hvernig isTouching kubburinn
-                var notaður, kannar hópurinn hvaða önnur samskipti kvikar gætu átt.
-                Þeir nota síðan isTouching til að láta einn kvika ýta öðrum yfir skjáinn
-                og æfa síðan árekstrarkubbana fjóra (collide, displace, bounce og
-                bounceOff).
-              description_teacher: Nemendur forrita kvika til að eiga samskipti á
-                nýjan hátt. Eftir stutta upprifjun á hvernig `isTouching` kubburinn
-                var notaður, kanna nemendur hvaða önnur samskipti tveir kvikar gætu
-                átt. Þeir nota síðan `isTouching` til að láta einn kvika ýta öðrum
-                yfir skjáinn og æfa síðan árekstrarkubbana fjóra (`collide`, `displace`,
-                `bounce` og `bounceOff`).
             Functions:
               name: Föll
-              description_student: Þessi kennslustund tekur fyrir föll sem aðferð
-                til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar
-                skipanastæður. Hópurinn lærir að það er auðveldara að skilja og útskýra
-                óhlutbundari aðgerðir í forriti og síðan mun hann byrja að búa til
-                föll í Leikjasmiðjunni. Í lok tímans notar hópurinn þessa færni til
-                að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu
-                til.
-              description_teacher: Nemendur læra að búa til föll til að skipuleggja
-                kóða, gera hann læsilegri og losna við endurteknar skipanastæður.
-                Upphitun án tölvu kannar hvernig hægt er að gefa fyrirmæli með mismunandi
-                miklum smáatriðum og hvernig það getur verið gagnlegt eftir aðstæðum.
-                Nemendur læra að það er auðveldara að skilja og útskýra óhlutbundari
-                aðgerðir í forriti. Síðan læra þeir að búa til föll í Leikjasmiðjunni.
-                Þeir munu læra að nota föll í stað langra runa af endurteknum kóða,
-                sem þeir geta þá fjarlægt úr teiknilykkjunni. Í lok tímans notar hópurinn
-                þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins
-                sem þau bjuggu til.
             The Game Design Process:
               name: Ferli leikjahönnunar
-              description_student: Þessi kennslustund kynnir ferlið sem hópurinn mun
-                nota til að hanna leiki það sem eftir er einingarinnar. Hópurinn fer
-                yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta
-                kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans
-                fá þau tækifæri til að betrumbæta leikinn að vild.
-              description_teacher: Þessi kennslustund kynnir ferlið sem hópurinn mun
-                nota til að hanna leiki það sem eftir er einingarinnar. Ferlið er
-                byggt á verkefnishandbók þar sem nemendum er ætlað að skilgreina kvika
-                sína, breytur og föll áður en þeir byrja að forrita leikinn. Í tímanum
-                byrja nemendur á að spila leik í Leikjasmiðjunni þar sem kóðinn er
-                falinn. Þeir ræða hvaða kvika, breytur og föll gæti þurft til að búa
-                til slíkan leik. Þeir fá síðan í hendur tilbúna verkefnishandbók sem
-                sýnir eina leið til að gera leikinn. Hópurinn fer yfir þetta ferli
-                í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota
-                fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri
-                til að betrumbæta leikinn að vild.
             Using the Game Design Process:
               name: Notkun leikjahönnunarferlisins
             Sprite Properties:
@@ -6413,10 +5750,6 @@ is:
               display_name: Innihald
             required:
               display_name: Yfirlit
-        dance-2019:
-          lessons:
-            Dance Party:
-              name: Danspartý
         k5-onlinepd-2019:
           lesson_groups:
             k5_getting_started:
@@ -6662,28 +5995,6 @@ is:
               display_name: 'Kafli 2: Lausn vandamála með gögn'
             cspSurvey:
               display_name: Könnun
-          lessons:
-            ASCII and Binary Representation:
-              description_teacher: Í þessari kennslustund læra nemendur í fyrsta sinn
-                að nota tvíundarkerfi til að kóða gögn, ASCII kerfið fyrir bókstafi
-                og önnur stafatákn. Í upphafi kynnir kennarinn þá staðreynd að tölvur
-                verða að geyma upplýsingar með "á" eða "af". Síðan fá nemendur kynningu
-                á ASCII kerfinu til að tákna texta með tvíundartáknum. Nemendur æfa
-                að nota þetta kerfi áður en þeir kóða sín eigin skilaboð með ASCII.
-                Í lokin er spjall til að rifja upp og draga saman helstu námsmarkmið
-                æfingarinnar.
-            Representing Images:
-              description_teacher: Í þessari kennslustund læra nemendur hvernig tölvur
-                geyma myndir. Þeir byrja á að hugleiða þá áskorun sem felst í að umbreyta
-                hinum flókna sýnilega heimi í tvíundarmynstur. Með röð mynda sem sýna
-                hvernig þessi umbreyting fer fram eru nemendur kynntir fyrir þeirri
-                hugmynd að skipta mynd upp í ferninga eða "díla" sem síðan er hægt
-                að kveikja eða slökkva á til að skapa myndina. Nemendur glíma síðan
-                við að teikna svart-hvítar með dílamynstursgræjunni (Pixelation Widget).
-                Þrautirnar eru hannaðar til að draga fram nokkrar áskoranir við það
-                að tákna myndir á þennan hátt. Í samantektinni tengja nemendur þetta
-                kerfi til að tákna myndir og kerfið til að tákna texta sem þeir lærðu
-                um síðast.
         csd6-2020:
           lesson_groups:
             csd6_1:
@@ -6903,17 +6214,6 @@ is:
               name: Fyndnar frá lykkjur
             Internet:
               name: Internetið
-            Virtual Pet:
-              description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt
-                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
-                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
-                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
-                að blása lífi í gæludýrið!
-              description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt
-                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
-                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
-                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
-                að blása lífi í gæludýrið!
             The Power of Words:
               name: Afl orða
             Crowdsourcing:
@@ -7299,16 +6599,12 @@ is:
           description_short: "  Lærðu hvernig fólk notar tölvur til að leysa vandamál."
           lessons:
             Input and Output:
-              key: Inntak og Úttak
               name: Inntak og Úttak
             Processing:
-              key: Vinnsla
               name: Vinnsla
             Storage:
-              key: Vistun
               name: Vistun
             Project - Propose an App:
-              key: Verkefni - Tillaga að Appi
               name: Verkefni - Tillaga að Appi
           lesson_groups:
             cspSurvey:
@@ -7323,7 +6619,6 @@ is:
           description_short: "  Lærðu að búa til þinn eigin vef í Vefsmiðjunni."
           lessons:
             Intro to HTML:
-              key: Kynning á HTML
               name: Kynning á HTML
           lesson_groups:
             cspSurvey:
@@ -7331,46 +6626,32 @@ is:
         csd3-2021:
           lessons:
             Drawing in Game Lab:
-              key: Teikning í Leikjasmiðju
               name: Teikning í Leikjasmiðju
             Variables:
-              key: Breytur
               name: Breytur
             Sprites:
-              key: Kvikar
               name: Kvikar
             Sprite Properties:
-              key: Eiginleikar kvika
               name: Eiginleikar kvika
             Text:
-              key: texti
               name: texti
             Sprite Movement:
-              key: Hreyfing kvika
               name: Hreyfing kvika
             Conditionals:
-              key: Skilyrði
               name: Skilyrði
             Velocity:
-              key: Hraði
               name: Hraði
             Collision Detection:
-              key: Skynjun árekstra
               name: Skynjun árekstra
             Complex Sprite Movement:
-              key: Samsett kvikahreyfing
               name: Samsett kvikahreyfing
             Collisions:
-              key: Árekstrar
               name: Árekstrar
             Functions:
-              key: Föll
               name: Föll
             The Game Design Process:
-              key: Ferli leikjahönnunar
               name: Ferli leikjahönnunar
             Using the Game Design Process:
-              key: Notkun leikjahönnunarferlisins
               name: Notkun leikjahönnunarferlisins
           lesson_groups:
             csd3_1:
@@ -7382,7 +6663,6 @@ is:
         csd4-2021:
           lessons:
             Identifying User Needs:
-              key: Greining á þörfum notenda
               name: Greining á þörfum notenda
           lesson_groups:
             csd4_1:
@@ -7406,10 +6686,8 @@ is:
         csd6-2021:
           lessons:
             Making Music:
-              key: Lagasmíð
               name: Lagasmíð
             Functions with Parameters:
-              key: Föll með stikum
               name: Föll með stikum
           lesson_groups:
             csd6_1:
@@ -7421,7 +6699,6 @@ is:
         csp1-2021:
           lessons:
             Binary Numbers:
-              key: Tvíundartölur
               name: Tvíundartölur
           lesson_groups:
             cspSurvey:
@@ -7431,10 +6708,8 @@ is:
         csp2-2021:
           lessons:
             The Need for Addressing:
-              key: Þörfin fyrir vistföng
               name: Þörfin fyrir vistföng
             Routers and Redundancy:
-              key: Netbeinar og umfremd
               name: Netbeinar og umfremd
           lesson_groups:
             csp_unit2_2020:
@@ -7444,7 +6719,6 @@ is:
         csp3-2021:
           lessons:
             Debugging:
-              key: Villuleit
               name: Villuleit
           lesson_groups:
             csp_unit3_2020:
@@ -7469,12 +6743,26 @@ is:
               display_name: Yfirferðir
             csp_project:
               display_name: Verkefni
+            lessonGroup-5:
+              display_name: Könnun eftir námskeið
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algrím
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
         csp7-2021:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Stikar og skilagildi
             csp_libraries:
               display_name: Söfn
+            lessonGroup-3:
+              display_name: Könnun
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Könnun
         csp9-2021:
           lessons:
             Machine Learning and Bias:
@@ -7482,10 +6770,14 @@ is:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Kafli 9: Gögn'
+            lessonGroup-2:
+              display_name: Könnun
         csp10-2021:
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Eining 10: Netöryggi og mikilvægi þess'
+            lessonGroup-2:
+              display_name: Könnun
         coursea-2021:
           description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
           description_audience: 'Aldur: 4-7'
@@ -7494,12 +6786,6 @@ is:
               name: Krúttleg kort
             'Loops: Happy Loops':
               name: Lukkulegar lykkjur
-              description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í
-                forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að
-                haga því þannig að nemendur vilji fá auðveldari leið til að leysa
-                hversdagsleg verkefni.
-            Loops in Ice Age:
-              key: Lykkjur í Ísöld
             Loops in Collector:
               name: Lykkjur með Láru
             lesson-1:
@@ -7521,13 +6807,10 @@ is:
           description_audience: 'Aldur: 5 - 8'
           lessons:
             Move It, Move It:
-              key: Hreyfa sig, hreyfa sig
               name: Hreyfa sig, hreyfa sig
             Sequencing in Maze:
-              key: Röð aðgerða í Völundarhúsi
               name: Röð aðgerða með Angry Birds
             Programming in Harvester:
-              key: Forritun með Hirðinum
               name: Forritun með Hirðinum
             'Loops: Getting Loopy':
               name: Lykkjulæti
@@ -7556,10 +6839,8 @@ is:
           description_audience: 'Aldur: 6-10'
           lessons:
             Binary Bracelets:
-              key: Stafræn armbönd
               name: Stafræn armbönd
             Looking Ahead:
-              key: Horft fram á við
               name: Horft fram á við
             'Events: The Big Event':
               name: Stórviðburður
@@ -7587,24 +6868,16 @@ is:
             'Algorithms: Graph Paper Programming':
               name: Forritun rúðublaða
             Relay Programming:
-              key: Boðhlaupsforritun
               name: Boðhlaupsforritun
             Dance Party:
-              key: Danspartý
               name: Danspartý
             Loops in Ice Age:
-              key: Lykkjur í Ísöld
               name: Lykkjur í Ísöld
             Conditionals with Cards:
-              key: Skilyrði með kortum
               name: Skilyrði með kortum
             'Unplugged: Binary':
-              key: 'Verkefni án tölvu: Tvíundir'
               name: Tvíundarmyndir
-            Artist Binary:
-              key: 'Listamaður: Tvíundir'
             End of Course Project:
-              key: Lokaverkefni námskeiðs
               name: Lokaverkefni námskeiðs
             lesson-6:
               name: Horft fram á við
@@ -7630,12 +6903,9 @@ is:
         coursee-2021:
           description_audience: 'Aldur: 8 - 12'
           lessons:
-            Conditionals:
-              key: Skilyrði
             'Functions: Songwriting':
               name: Lagasmíð
             End of Course Project:
-              key: Lokaverkefni námskeiðs
               name: Lokaverkefni námskeiðs
           lesson_groups:
             ramp_up:
@@ -7656,34 +6926,14 @@ is:
           description_audience: 'Aldur: 9-13'
           lessons:
             The Power of Words:
-              key: Afl orða
               name: Afl orða
             Envelope Variables:
-              key: Umslagabreytur
               name: Umslagabreytur
             Internet:
-              key: Internet
               name: Internetið
             For Loop Fun:
-              key: Fyndnar frá lykkjur
               name: Fyndnar frá lykkjur
-            For Loops in Bee:
-              key: Frá-lykkjur með Býflugu
-            For Loops in Artist:
-              key: Frá-lykkjur með Listamanni
-            Virtual Pet:
-              description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt
-                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
-                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
-                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
-                að blása lífi í gæludýrið!
-              description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt
-                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
-                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
-                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
-                að blása lífi í gæludýrið!
             End of Course Project:
-              key: Lokaverkefni námskeiðs
               name: Lokaverkefni námskeiðs
             lesson-6:
               name: Kynning á Kvikasmiðjunni
@@ -7714,23 +6964,10 @@ is:
           description_audience: 'Aldur: 9-18'
           lessons:
             Dance Party:
-              key: Danspartý
               name: Danspartý
             'Looking Ahead with Minecraft ':
               name: Horft fram á við
-            Virtual Pet with Sprite Lab:
-              description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt
-                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
-                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
-                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
-                að blása lífi í gæludýrið!
-              description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt
-                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
-                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
-                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
-                að blása lífi í gæludýrið!
             End of Course Project:
-              key: Lokaverkefni námskeiðs
               name: Lokaverkefni námskeiðs
             lesson-1:
               name: Danspartý
@@ -7762,10 +6999,8 @@ is:
           description_audience: 'Aldur: 4 - 8'
           lessons:
             Programming in Harvester:
-              key: Forritun með Hirðinum
               name: Forritun með Hirðinum
             Loops with Laurel:
-              key: Lykkjur með Láru
               name: Lykkjur með Láru
           lesson_groups:
             csf_sequencing:
@@ -7794,7 +7029,6 @@ is:
         csd4-preview-2021:
           lessons:
             Identifying User Needs:
-              key: Greining á þörfum notenda
               name: Greining á þörfum notenda
           lesson_groups:
             csd4_1:
@@ -7810,28 +7044,6 @@ is:
         csd5-preview-2021:
           description_short: Lærðu um hvernig fólk notar tölvur til að leysa vandamál
             með gögn.
-          lessons:
-            ASCII and Binary Representation:
-              description_teacher: Í þessari kennslustund læra nemendur í fyrsta sinn
-                að nota tvíundarkerfi til að kóða gögn, ASCII kerfið fyrir bókstafi
-                og önnur stafatákn. Í upphafi kynnir kennarinn þá staðreynd að tölvur
-                verða að geyma upplýsingar með "á" eða "af". Síðan fá nemendur kynningu
-                á ASCII kerfinu til að tákna texta með tvíundartáknum. Nemendur æfa
-                að nota þetta kerfi áður en þeir kóða sín eigin skilaboð með ASCII.
-                Í lokin er spjall til að rifja upp og draga saman helstu námsmarkmið
-                æfingarinnar.
-            Representing Images:
-              description_teacher: Í þessari kennslustund læra nemendur hvernig tölvur
-                geyma myndir. Þeir byrja á að hugleiða þá áskorun sem felst í að umbreyta
-                hinum flókna sýnilega heimi í tvíundarmynstur. Með röð mynda sem sýna
-                hvernig þessi umbreyting fer fram eru nemendur kynntir fyrir þeirri
-                hugmynd að skipta mynd upp í ferninga eða "díla" sem síðan er hægt
-                að kveikja eða slökkva á til að skapa myndina. Nemendur glíma síðan
-                við að teikna svart-hvítar með dílamynstursgræjunni (Pixelation Widget).
-                Þrautirnar eru hannaðar til að draga fram nokkrar áskoranir við það
-                að tákna myndir á þennan hátt. Í samantektinni tengja nemendur þetta
-                kerfi til að tákna myndir og kerfið til að tákna texta sem þeir lærðu
-                um síðast.
           lesson_groups:
             csd5_1:
               display_name: 'Kafli 1: Kóðun upplýsinga'
@@ -7880,28 +7092,19 @@ is:
         k5-onlinepd-2021:
           lessons:
             Sequencing:
-              key: Skipanaröð
               name: Skipanaröð
             Loops:
-              key: Lykkjur
               name: Lykkjur
             Events:
-              key: Atvik
               name: Atvik
             Conditionals:
-              key: Skilyrði
               name: Skilyrði
             Functions:
-              key: Föll
               name: Föll
             Variables:
-              key: Breytur
               name: Breytur
             For Loops:
-              key: Frá lykkjur
               name: Frá lykkjur
-            Sprite Lab:
-              key: Kvikasmiðjan
             Getting Started:
               name: Fyrstu skrefin
           lesson_groups:
@@ -7944,37 +7147,26 @@ is:
         kodea-pd-2021:
           lessons:
             Getting Started:
-              key: Fyrstu skrefin
               name: Fyrstu skrefin
             Computer Science Fundamentals:
-              key: Grunnatriði tölvunarfræði
               name: Grunnatriði tölvunarfræði
             Looking Ahead:
-              key: Horft fram á við
               name: Horft fram á við
             'Mastering the Basics: Sequencing':
-              key: 'Grunnfærni: Skipanaröðin'
               name: 'Grunnfærni: Skipanaröðin'
             'Mastering the Basics: Loops':
-              key: 'Grunnfærni: Lykkjur'
               name: 'Grunnfærni: Lykkjur'
             'Mastering the Basics: Conditionals':
-              key: 'Grunnfærni: Skilyrðingar'
               name: 'Grunnfærni: Skilyrðingar'
             'Mastering the Basics: Functions':
-              key: 'Grunnfærni: Föll'
               name: 'Grunnfærni: Föll'
             'Mastering the Basics: Events':
-              key: 'Grunnfærni: Atburðir'
               name: 'Grunnfærni: Atburðir'
             Best Practices for Teaching Computer Science:
-              key: Bestu aðferðir við kennslu tölvunarfræði
               name: Bestu aðferðir við kennslu tölvunarfræði
             Planning:
-              key: Áætlanagerð
               name: Áætlanagerð
             Next Steps:
-              key: Næstu skref
               name: Næstu skref
         self-paced-pl-csd2-2021:
           lessons:
@@ -8072,6 +7264,12 @@ is:
           lesson_groups:
             lessonGroup-3:
               display_name: Verkefni
+        tesstest921:
+          lessons:
+            lesson-2:
+              name: Kennslustund 2
+            lesson-3:
+              name: Kennslustund 3
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -8111,10 +7309,36 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Klukkustund kóðunar
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
+        csf-2022-pilot:
+          lessons:
+            Introducing Sprite Lab:
+              name: Kynning á Kvikasmiðjunni
+            Sprites in Action:
+              name: Kvikar í verki
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kvikar
+            lessonGroup-3:
+              display_name: Breytur
+            lessonGroup-4:
+              display_name: Lokaverkefni námskeiðs
+        csd6-pilot-2022:
+          lessons:
+            Making Music:
+              name: Lagasmíð
+            Functions with Parameters:
+              name: Föll
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -8127,3 +7351,606 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Krúttleg kort
+            Happy Loops:
+              name: Lukkulegar lykkjur
+            Loops with Laurel:
+              name: Lykkjur með Láru
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+            'Programming: Happy Maps':
+              name: Krúttleg kort
+            'Loops: Happy Loops':
+              name: Lukkulegar lykkjur
+            Loops in Collector:
+              name: Lykkjur með Láru
+            lesson-1:
+              name: Lokaverkefni námskeiðs
+          lesson_groups:
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+            lessonGroup-5:
+              display_name: Lokaverkefni námskeiðs
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
+            Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
+          description_audience: 'Aldur: 4-7'
+        express-2022:
+          lessons:
+            Sprites in Action:
+              name: Kvikar í verki
+            Dance Party:
+              name: Danspartý
+            Looking Ahead with Minecraft:
+              name: Horft fram á við
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+            lesson-3:
+              name: Kvikar í verki
+            lesson-1:
+              name: Danspartý
+            'Looking Ahead with Minecraft ':
+              name: Horft fram á við
+          lesson_groups:
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_sprites:
+              display_name: Kvikar
+            lessonGroup-9:
+              display_name: Atvik
+            csf_loops:
+              display_name: Lykkjur
+            csf_conditionals:
+              display_name: Skilyrði
+            csf_functions:
+              display_name: Föll
+            csf_variables:
+              display_name: Breytur
+            csf_for_loops:
+              display_name: Frá lykkjur
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          description_short: 'Kynning á tölvunarfræði: sameinar það besta úr námsefni
+            okkar fyrir eldri nemendur í grunnskóla.'
+          description_audience: 'Aldur: 9-18'
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Tvíundartölur
+          lesson_groups:
+            cspSurvey:
+              display_name: Könnun
+            csp_unit1_2020:
+              display_name: Kafli 1 - Stafrænar upplýsingar
+        csp2-2022:
+          lessons:
+            The Need for Addressing:
+              name: Þörfin fyrir vistföng
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Kafli 2: Internetið'
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Villuleit
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Eining 3: Kynning á gerð appa'
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Breytur
+            csp_conditionals:
+              display_name: Skilyrði
+            csp_functions:
+              display_name: Föll
+            csp_project:
+              display_name: Verkefni
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Listar
+            csp_loops:
+              display_name: Lykkjur
+            csp_traversals:
+              display_name: Yfirferðir
+            csp_project:
+              display_name: Verkefni
+            lessonGroup-5:
+              display_name: Könnun eftir námskeið
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Hreyfa sig, hreyfa sig
+            Sequencing with Angry Birds:
+              name: Röð aðgerða með Angry Birds
+            Programming with Harvester:
+              name: Forritun með Hirðinum
+            Getting Loopy:
+              name: Lykkjulæti
+            Loops with Harvester:
+              name: Lykkjur með Hirðinum
+            Loops with Laurel:
+              name: Lykkjur með Láru
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+            Sequencing in Maze:
+              name: Röð aðgerða með Angry Birds
+            Programming in Harvester:
+              name: Forritun með Hirðinum
+            'Loops: Getting Loopy':
+              name: Lykkjulæti
+            Loops in Harvester:
+              name: Lykkjur með Hirðinum
+            Loops in Collector:
+              name: Lykkjur með Láru
+            lesson-1:
+              name: Lokaverkefni námskeiðs
+          lesson_groups:
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+            lessonGroup-6:
+              display_name: Lokaverkefni námskeiðs
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
+            Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          description_audience: 'Aldur: 5 - 8'
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Stórviðburður
+            Binary Bracelets:
+              name: Stafræn armbönd
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+            'Events: The Big Event':
+              name: Stórviðburður
+            'End of Course Project: Create a Play Lab Game':
+              name: Lokaverkefni námskeiðs
+          lesson_groups:
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+            csf_data:
+              display_name: Gögn
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin
+            myndir, sögur og leiki.
+          description_audience: 'Aldur: 6-10'
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
+        csp7-2022:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Stikar og skilagildi
+            csp_libraries:
+              display_name: Söfn
+            lessonGroup-3:
+              display_name: Könnun eftir námskeið
+        csp8-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Könnun eftir námskeið
+        csp9-2022:
+          lessons:
+            Machine Learning:
+              name: Vélarnám
+            Machine Learning and Bias:
+              name: Vélarnám
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Kafli 9: Gögn'
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
+        csp10-2022:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Eining 10: Netöryggi og mikilvægi þess'
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Forritun rúðublaða
+            Relay Programming:
+              name: Boðhlaupsforritun
+            Dance Party:
+              name: Danspartý
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            Looking Ahead with Minecraft:
+              name: Horft fram á við
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+            'Algorithms: Graph Paper Programming':
+              name: Forritun rúðublaða
+            lesson-6:
+              name: Horft fram á við
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_events:
+              display_name: Atvik
+            csf_loops:
+              display_name: Lykkjur
+            csf_conditionals:
+              display_name: Skilyrði
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          title: Námskeið D (2021)
+          description_audience: 'Aldur: 7-11'
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Lagasmíð
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+            'Functions: Songwriting':
+              name: Lagasmíð
+          lesson_groups:
+            csf_sprites:
+              display_name: Kvikar
+            csf_digcit:
+              display_name: Stafrænn borgari
+            ramp_up:
+              display_name: Innri lykkjur
+            csf_functions:
+              display_name: Föll
+            csf_nested_loops:
+              display_name: Skilyrði
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          description_audience: 'Aldur: 8 - 12'
+        coursef-2022:
+          lessons:
+            Introducing Sprite Lab:
+              name: Kynning á Kvikasmiðjunni
+            Sprites in Action:
+              name: Kvikar í verki
+            The Power of Words:
+              name: Afl orða
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+            The Internet:
+              name: Internetið
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+            lesson-8:
+              name: Kvikar í verki
+            lesson-2:
+              name: Afl orða
+            Internet:
+              name: Internetið
+          lesson_groups:
+            ramp_up:
+              display_name: Kvikar
+            lessonGroup-7:
+              display_name: Stafrænn borgari
+            lessonGroup-8:
+              display_name: Breytur
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu
+            til eigin myndir, sögur og leiki.
+          description_audience: 'Aldur: 9-13'
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Lykkjur
+            lesson-21:
+              name: Skjár
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-5:
+              display_name: Könnun
+        pre-express-2022:
+          lessons:
+            Programming with Harvester:
+              name: Forritun með Hirðinum
+            Loops with Laurel:
+              name: Lykkjur með Láru
+            Programming in Harvester:
+              name: Forritun með Hirðinum
+          lesson_groups:
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+          description_audience: 'Aldur: 4 - 8'
+          description_short: 'Kynning á tölvunarfræði fyrir þá sem ekki eru byrjaðir
+            að lesa: sameinar það besta úr námskeiðum okkar fyrir leikskóla og fyrsta
+            bekk.'
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Breytur
+            lesson-16:
+              name: Skjár
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: Frá lykkjur
+            lesson-16:
+              name: Skjár
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Skilyrði
+            lesson-16:
+              name: Villuleit
+            lesson-19:
+              name: Villuleit
+        csa4-2022:
+          lessons:
+            Console:
+              name: Skjár
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa5-2022:
+          lessons:
+            lesson-2:
+              name: 5.  eining - Mat
+            Console:
+              name: Skjár
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Lykkjur
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: Afl orða
+            Introducing Sprite Lab:
+              name: Kynning á Kvikasmiðjunni
+            Sprites in Action:
+              name: Kvikar í verki
+            The Internet:
+              name: Internetið
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Stafrænn borgari
+            ramp_up:
+              display_name: Kvikar
+            lessonGroup-8:
+              display_name: Breytur
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          description_audience: 'Aldur: 9-13'
+          description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu
+            til eigin myndir, sögur og leiki.
+        csa6-2022:
+          lessons:
+            Console:
+              name: Skjár
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa7-2022:
+          lessons:
+            Console:
+              name: Skjár
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa8-2022:
+          lessons:
+            Console:
+              name: Skjár
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-5:
+              display_name: Könnun
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Gerð kennsluáætlana
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Breytur
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Sequencing:
+              name: Skipanaröð
+            Loops:
+              name: Lykkjur
+            Events:
+              name: Atvik
+            Conditionals:
+              name: Skilyrði
+            Functions:
+              name: Föll
+            Variables:
+              name: Breytur
+            For Loops:
+              name: Frá lykkjur
+            End of Course projects:
+              name: Lokaverkefni námskeiðs
+        csd1-2022:
+          lessons:
+            Input and Output:
+              name: Inntak og Úttak
+            Processing:
+              name: Vinnsla
+            Storage:
+              name: Vistun
+            Project - Propose an App:
+              name: Verkefni - Tillaga að Appi
+          lesson_groups:
+            cspSurvey:
+              display_name: Könnun
+            csd1_1:
+              display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            csd1_2:
+              display_name: 'Kafli 2: Tölvur og lausn vandamála'
+            csd1_3:
+              display_name: Annað kennsluefni
+          description_short: "  Lærðu hvernig fólk notar tölvur til að leysa vandamál."
+        csd2-2022:
+          lessons:
+            Intro to HTML:
+              name: Kynning á HTML
+          lesson_groups:
+            cspSurvey:
+              display_name: Könnun
+          description_short: "  Lærðu að búa til þinn eigin vef í Vefsmiðjunni."
+        csd3-2022:
+          lessons:
+            Drawing in Game Lab:
+              name: Teikning í Leikjasmiðju
+            Variables:
+              name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Properties:
+              name: Eiginleikar kvika
+            Text:
+              name: texti
+            Sprite Movement:
+              name: Hreyfing kvika
+            Conditionals:
+              name: Skilyrði
+            Velocity:
+              name: Hraði
+            Collision Detection:
+              name: Skynjun árekstra
+            Complex Sprite Movement:
+              name: Samsett kvikahreyfing
+            Collisions:
+              name: Árekstrar
+            Functions:
+              name: Föll
+            The Game Design Process:
+              name: Ferli leikjahönnunar
+            Using the Game Design Process:
+              name: Notkun leikjahönnunarferlisins
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kafli 1: Myndir og Hreyfing'
+            csd3_2:
+              display_name: 'Kafli 2: Gerð leikja'
+            cspSurvey:
+              display_name: Könnun
+        csd4-2022:
+          lessons:
+            Identifying User Needs:
+              name: Greining á þörfum notenda
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kafli 1: Notendamiðuð hönnun'
+            csd4_2:
+              display_name: 'Kafli 2: Frumgerðir appa'
+            cspSurvey:
+              display_name: Könnun
+        csd5-2022:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kafli 1: Kóðun upplýsinga'
+            csd5_2:
+              display_name: 'Kafli 2: Lausn vandamála með gögn'
+            cspSurvey:
+              display_name: Könnun
+          description_short: Lærðu um hvernig fólk notar tölvur til að leysa vandamál
+            með gögn.
+        csd7-2022:
+          lessons:
+            Survey Planning:
+              name: Söfnun gagna hönnuð
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Könnun
+        csd6-2022:
+          lessons:
+            Making Music:
+              name: Lagasmíð
+            Functions:
+              name: Föll
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+            lessonGroup-4:
+              display_name: Könnun
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: Könnun eftir námskeið
+        aiml-2022:
+          lessons:
+            Survey Planning:
+              name: Söfnun gagna hönnuð
+        csa9-2022:
+          lessons:
+            Console:
+              name: Skjár
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Yfirlit
+            lesson-1:
+              name: Yfirlit
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Yfirlit
+            lesson-1:
+              name: Yfirlit

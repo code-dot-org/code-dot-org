@@ -38,6 +38,7 @@ class LevelTokenDetails extends Component {
     activitySectionPosition: PropTypes.number.isRequired,
     activityPosition: PropTypes.number.isRequired,
     inactiveLevelNames: PropTypes.arrayOf(PropTypes.string),
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired,
 
     //redux
     setScriptLevelField: PropTypes.func.isRequired,
@@ -100,7 +101,10 @@ class LevelTokenDetails extends Component {
                 style={styles.checkboxInput}
                 checked={!!this.props.scriptLevel[option]}
                 onChange={this.handleCheckboxChange.bind(this, option)}
-                disabled={option === 'bonus' && disableBonus}
+                disabled={
+                  option === 'bonus' &&
+                  (disableBonus || !this.props.allowMajorCurriculumChanges)
+                }
               />
               &nbsp;
               <span style={styles.checkboxText}>{optionText[option]}</span>

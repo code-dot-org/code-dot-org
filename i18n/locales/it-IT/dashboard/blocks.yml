@@ -2,6 +2,24 @@
 it:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra piccolo
+            '0.75': piccolo
+            '1.00': mediamente
+            '2.00': grande
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra piccolo
+            '0.75': piccolo
+            '1.00': mediamente
+            '2.00': grande
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} alternano ogni {N} battute \ntra {MOVE1} e {MOVE2}"
         options:
@@ -24,7 +42,7 @@ it:
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
@@ -37,7 +55,7 @@ it:
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
@@ -83,7 +101,7 @@ it:
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
@@ -102,7 +120,7 @@ it:
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
@@ -170,7 +188,7 @@ it:
             MOVES.Dab: Dab
             MOVES.XFever: Disco
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
@@ -199,7 +217,7 @@ it:
             MOVES.Dab: Dab
             MOVES.XFever: Disco
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
@@ -270,7 +288,7 @@ it:
             MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Roll: Piroetta
@@ -359,6 +377,8 @@ it:
             '"right"': colonna a destra
             '"x"': croce
             '"plus"': più
+            '"spiral"': spirale
+            '"infinity"': Linea dell'infinito
             '"random"': a caso
       Dancelab_makeAnonymousDanceSprite:
         text: |-
@@ -443,6 +463,26 @@ it:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': tutti gli alieni
             '"BEAR"': orsi
@@ -470,6 +510,8 @@ it:
             '"right"': colonna a destra
             '"x"': croce
             '"plus"': più
+            '"spiral"': spirale
+            '"infinity"': Linea dell'infinito
             '"random"': a caso
       Dancelab_mixColors:
         text: mescola {COLOR1} e {COLOR2}
@@ -533,6 +575,7 @@ it:
             '"fireworks"': Fuochi d'artificio
             '"flowers"': Fiori
             '"growing_stars"': Stelle nascenti
+            '"higher_power"': Higher Power
             '"swirl"': Ipnotico
             '"kaleidoscope"': Caleidoscopio
             '"lasers"': Pista da ballo del laser
@@ -1002,6 +1045,21 @@ it:
         text: quando si clicca su {SPRITE}
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): rotazione oraria
+            new Behavior(spinning_left, []): rotazione anti-oraria
+            new Behavior(fluttering, []): ondeggiamento
+            new Behavior(jittering, []): pulsazione
+            new Behavior(wobbling, []): barcollamento
+            new Behavior(wandering, []): movimento casuale
+            new Behavior(patrolling, []): pattugliamento
+            new Behavior(moving_west_and_looping, []): spostamento verso ovest e ciclo
+            new Behavior(moving_east_and_looping, []): spostamento verso est e ciclo
+            new Behavior(moving_north_and_looping, []): spostamento verso nord e ciclo
+            new Behavior(moving_south_and_looping, []): spostamento verso sud e ciclo
       gamelab_comment:
         text: 'commento: {COMMENT}'
       gamelab_costumeImage:
@@ -1018,6 +1076,12 @@ it:
         text: Disegna la linea {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: i bordi impediscono a {SPRITE} di muoversi
+      gamelab_everyInterval:
+        text: 'ripeti ogni {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': secondi
+            '"frames"': frame
       gamelab_followingTargets:
         text: seguendo gli obiettivi
       gamelab_getAllSprites:
@@ -1053,6 +1117,20 @@ it:
         text: |-
           se {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: Il costume di {SPRITE} è {COSTUME}
       gamelab_isKeyPressed:
@@ -1170,6 +1248,12 @@ it:
             '90': in basso
             '180': a sinistra
             '270': in alto
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': piccolo
+            '50': mediamente
+            '100': grande
       gamelab_mirrorSprite:
         text: Orienta {SPRITE} verso {DIRECTION}
         options:
@@ -1242,6 +1326,13 @@ it:
             "'sound://category_digital/jump_7.mp3'": salta
       gamelab_playSpeech:
         text: riproduci discorso {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): movimento con tasti freccia
+            new Behavior(driving_with_arrow_keys, []): guida con tasti freccia
+            draggable(): trascinabile
       gamelab_pointInDirection:
         text: orienta {SPRITE} in direzione {DIRECTION}
         options:
@@ -1266,6 +1357,8 @@ it:
         text: togli il colore da {THIS}
       gamelab_repeatForever:
         text: ripeti per sempre
+      gamelab_resetTimer:
+        text: Azzera il timer
       gamelab_setAnimation:
         text: "{THIS} usa il costume {ANIMATION}"
       gamelab_setBackground:
@@ -1315,9 +1408,9 @@ it:
             '75': mediamente
             '100': grande
       gamelab_setPrompt:
-        text: "{QUESTION} rapida dell'utente per la variabile {VAR}"
+        text: chiedi all'utente {QUESTION} per la variabile {VAR}
       gamelab_setPromptWithChoices:
-        text: "{QUESTION} rapida dell'utente per la variabile {VAR} con scelte {A}{B}{C}"
+        text: chiedi all'utente {QUESTION} per la variabile {VAR} con scelte {A}{B}{C}
       gamelab_setProp:
         text: imposta la {PROPERTY} di {SPRITE} a {VAL}
         options:
@@ -1345,6 +1438,14 @@ it:
             '"scale"': dimensione
             '"width"': larghezza
             '"height"': altezza
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': lenta
+            '5': normale
+            '7': veloce
+            '9': extra fast
       gamelab_setTint:
         text: colora {THIS} di {COLOR}
       gamelab_setupScoreboard:
@@ -1418,7 +1519,7 @@ it:
       gamelab_whenLeftArrow:
         text: quando viene premuta la freccia a sinistra
       gamelab_whenPromptAnswered:
-        text: quando {VAR} ha dato una risposta
+        text: quando {VAR} ha risposto
       gamelab_whenRightArrow:
         text: quando viene premuta la freccia a destra
       gamelab_whenSpriteCreated:
@@ -1485,7 +1586,7 @@ it:
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       Mikelab_beginDataCollection:
-        text: "{QUESTION} rapida dell'utente per la variabile {VAR} con scelte {A}{B}{C}"
+        text: chiedi all'utente {QUESTION} per la variabile {VAR} con scelte {A}{B}{C}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1638,7 +1739,7 @@ it:
             MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
-            MOVES.Drop: Spaccata
+            MOVES.Drop: Rilascia
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Roll: Piroetta
@@ -2010,7 +2111,7 @@ it:
             '9': '9'
             '10': '10'
       Poetry_whenPromptAnswered:
-        text: quando {VAR} ha dato una risposta
+        text: quando {VAR} ha risposto
       RyanLab_moveForward:
         text: vai avanti
       RyanLab_turnLeft:

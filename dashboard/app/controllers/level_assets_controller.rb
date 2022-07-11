@@ -5,10 +5,10 @@ class LevelAssetsController < ApplicationController
   def upload
     authorize! :create, Level
 
-    # Only allow images that are <= 1MB
-    if params[:file].size > 1.megabyte
+    # Only allow images that are <= 2MB
+    if params[:file].size > 2.megabyte
       return render json: {
-        message: "asset too large; images must be no larger than 1MB",
+        message: "asset too large; images must be no larger than 2MB",
         status: :payload_too_large
       }, status: :payload_too_large
     end

@@ -32,7 +32,7 @@ Feature: Libraries
     And I start a new Applab project
     And I wait for the page to fully load
     Then I open the Manage Libraries dialog
-    And I wait until element "h1:contains('Import library from ID')" is visible
+    And I wait until element "h2:contains('Import library from ID')" is visible
     And I type the saved channel id into element "#ui-test-import-library > input"
     And I click selector "#ui-test-import-library > button" to load a new page
 
@@ -49,7 +49,7 @@ Feature: Libraries
 
   Scenario: Assigning a library to a section as a teacher
     Given I create a teacher named "Library_Teacher"
-    And I create a new section
+    And I create a new student section
     Given I publish a basic library in Applab
     When I close the dialog
 

@@ -2,6 +2,234 @@
   "gl-ES": {
     "data": {
       "resources": {
+        "poem_art_celebration/poem-art/2021": {
+          "type": "Vídeo"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "Vídeo"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "Vídeo"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "type": "Vídeo"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "Vídeo"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "Vídeo"
+        },
+        "ai-ml/oceans/unversioned": {
+          "type": "Vídeo"
+        },
+        "ai-societal/oceans/unversioned": {
+          "type": "Vídeo"
+        },
+        "ai-training/oceans/unversioned": {
+          "type": "Vídeo"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/express/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/express/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Vocabulario"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "type": "Vídeo"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "Vídeo"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "type": "Vídeo"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Diversión con bucles \"para\" (for)"
         },
@@ -16,6 +244,15 @@
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Diversión con bucles \"para\" (for)"
+        },
+        "ai-ml/coursef/2021": {
+          "type": "Vídeo"
+        },
+        "ai-training/coursef/2021": {
+          "type": "Vídeo"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "Vídeo"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "A Internet"
@@ -44,6 +281,12 @@
         "pair-programming-vid/courseb/2021": {
           "name": "Programación por parellas"
         },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "type": "Vídeo"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "type": "Vídeo"
+        },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Bucleándose"
         },
@@ -56,8 +299,12 @@
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Bucleándose"
         },
+        "common-sense-media-pause-think/courseb/2021": {
+          "type": "Vídeo"
+        },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "O Gran Evento"
+          "name": "O Gran Evento",
+          "type": "Vídeo"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "O Gran Evento"
@@ -71,8 +318,26 @@
         "pair-programming-vid/coursea/2021": {
           "name": "Programación por parellas"
         },
+        "wiggles-go_noodle/coursea/2021": {
+          "type": "Vídeo"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "Vídeo"
+        },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Mapas Felices"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "type": "Vídeo"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "type": "Vídeo"
+        },
+        "pair-programming/coursea/2021": {
+          "type": "Vídeo"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "type": "Vídeo"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "O Gran Evento"
@@ -102,7 +367,8 @@
           "name": "Os meus amigos robóticos"
         },
         "pair-programming-vid/coursec/2021": {
-          "name": "Programación por parellas"
+          "name": "Programación por parellas",
+          "type": "Vídeo"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "O Gran Evento"
@@ -112,6 +378,9 @@
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "O Gran Evento"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "type": "Vídeo"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Pulseiras Binarias"
@@ -170,6 +439,12 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Programación por relevos"
         },
+        "pause_and_think_online/coursed/2021": {
+          "type": "Vídeo"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "type": "Vídeo"
+        },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Condicionais con cartas"
         },
@@ -189,7 +464,20 @@
           "name": "Guía de implementación"
         },
         "pair_programming/express/2021": {
-          "name": "Programación por parellas"
+          "name": "Programación por parellas",
+          "type": "Vídeo"
+        },
+        "artist_introduction/express/2021": {
+          "type": "Vídeo"
+        },
+        "turns_angles/express/2021": {
+          "type": "Vídeo"
+        },
+        "pause_and_think_online/express/2021": {
+          "type": "Vídeo"
+        },
+        "pair_programming_video/express/2021": {
+          "type": "Vídeo"
         },
         "variables_video/express/2021": {
           "name": "Variables"
@@ -197,8 +485,262 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Programación por parellas"
         },
+        "20_20_20_rule/pre-express/2021": {
+          "type": "Vídeo"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "type": "Vídeo"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "type": "Vídeo"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "type": "Vídeo"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "type": "Vídeo"
+        },
         "implementation_guide/coursee/2021": {
           "name": "Guía de implementación"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "Vídeo"
+        },
+        "seeing_ai/csd/2021": {
+          "type": "Vídeo"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Vídeo"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "Vídeo"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "Vídeo"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "Vídeo"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "Vídeo"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Vídeo"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "Vídeo"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Vídeo"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Vídeo"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Vídeo"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "Vídeo"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "Vídeo"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "Vídeo"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Vídeo"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "Vídeo"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "type": "Vídeo"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "Vídeo"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funcións"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "type": "Vídeo"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Bucles \"Para\" (For)",
+          "type": "Vídeo"
+        },
+        "for_loops/csd/2021": {
+          "name": "Bucles \"Para\" (For)"
+        },
+        "circuits-logic-video/csd/2021": {
+          "type": "Vídeo"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "Vídeo"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "Vídeo"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "Vídeo"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "Vídeo"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "Vídeo"
+        },
+        "video_machine_learning/csd/2021": {
+          "type": "Vídeo"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "Vídeo"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "Vídeo"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "Vídeo"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "Vídeo"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variables"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "Vídeo"
+        },
+        "the_animation_tab/csd/2021": {
+          "type": "Vídeo"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "Vídeo"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "Vídeo"
+        },
+        "animating-sprites/csd/2021": {
+          "type": "Vídeo"
+        },
+        "boolean_expressions/csd/2021": {
+          "type": "Vídeo"
+        },
+        "conditional_statements/csd/2021": {
+          "type": "Vídeo"
+        },
+        "if_else_statements/csd/2021": {
+          "type": "Vídeo"
+        },
+        "velocity_1/csd/2021": {
+          "type": "Vídeo"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funcións",
+          "type": "Vídeo"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funcións"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Vídeo"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "Vídeo"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "Vídeo"
+        },
+        "html_tags/csd/2021": {
+          "name": "Etiquetas HTML"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "Vídeo"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "Vídeo"
+        },
+        "video_pair_programming/csd/2021": {
+          "type": "Vídeo"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Cabeceiras e parágrafos"
+        },
+        "video_debugging/csd/2021": {
+          "type": "Vídeo"
+        },
+        "lists/csd/2021": {
+          "name": "Listas"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "type": "Vídeo"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "type": "Vídeo"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "Vídeo"
+        },
+        "publishing_your_website/csd/2021": {
+          "type": "Vídeo"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "Vídeo"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "Vídeo"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "Vídeo"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/express/2020": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Planificación da lección"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Vocabulario"
         }
       }
     }

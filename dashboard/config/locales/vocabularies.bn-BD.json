@@ -79,6 +79,21 @@
         },
         "define/coursee/2021": {
           "word": "নির্ধারণ করুন"
+        },
+        "variable/csd/2021": {
+          "word": "চলক"
+        },
+        "conditionals/csd/2021": {
+          "word": "শর্তযুক্ত"
+        },
+        "abstraction/csd/2021": {
+          "word": "অপসারণ"
+        },
+        "function/csd/2021": {
+          "word": "ফাংশন"
+        },
+        "copyright/csd/2021": {
+          "word": "কপিরাইট"
         }
       }
     }

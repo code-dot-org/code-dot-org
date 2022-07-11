@@ -18,8 +18,17 @@ MARKDOWN
 markdown <<MARKDOWN
 Consider the following code segment:
 
-![](https://images.code.org/70cb88682c00d1615e068b80737cefd9-image-1634921108510.png)
 ```
+ArrayList<Double> speedRating = new ArrayList<Double>();
+speedRating.add(8.94);
+speedRating.add(7.33);
+speedRating.add(6.56);
+speedRating.add(4.24);
+speedRating.set(0, 2.14);
+speedRating.set(2, 7.63);
+System.out.println(speedRating);
+```
+
 What is printed when this code segment is executed?
 
 MARKDOWN

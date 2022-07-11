@@ -506,7 +506,7 @@ it:
         MC_2018_loops: 'Minecraft: Viaggio Acquatico - Ripeti fino a che'
         mc_2018_conditionals: 'Minecraft: Viaggio Acquatico - Istruzioni condizionali'
         mc_2018_closing: 'Minecraft: Viaggio Acquatico - Congratulazioni'
-        hoc_dance_warmup: Ballando col codice - Riscaldamento
+        hoc_dance_warmup: Ballando col codice - Introduzione
         hoc_dance_events: Ballando col codice - Eventi
         hoc_dance_properties: Ballando col codice - Proprietà
         hoc_dance_congrats: Ballando col codice - Parte la festa!
@@ -601,6 +601,11 @@ it:
         poemart_events: L'arte della poesia - Eventi
         poemart_imagery: L'arte della poesia  - Metafore
         poemart_celebration: L'arte della poesia  - Celebrazione
+        CSA-PL-debugging-temp: Introduzione al Debugging in Sviluppo Java - temp
+        PL_CS_Journeys_Overview: CS Journeys
+        csp_applab_parameters: Funzioni con parametri
+        CSA-PL-intro-to-arrays: Array unidimensionale (1D)
+        CS_Changing_Everything: L'informatica sta cambiando ogni cosa
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

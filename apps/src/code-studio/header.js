@@ -1,5 +1,6 @@
 /* globals dashboard */
 
+import $ from 'jquery';
 import {
   showProjectHeader,
   showMinimalProjectHeader,
@@ -83,7 +84,6 @@ header.build = function(
   lessonData = lessonData || {};
   progressData = progressData || {};
 
-  const linesOfCodeText = progressData.linesOfCodeText;
   let saveAnswersBeforeNavigation = currentPageNumber !== PUZZLE_PAGE_NONE;
 
   // Set up the store immediately. Note that some progress values are populated
@@ -113,7 +113,6 @@ header.build = function(
           lessonData={lessonData}
           scriptData={scriptData}
           currentLevelId={currentLevelId}
-          linesOfCodeText={linesOfCodeText}
         />
       </Provider>,
       document.querySelector('.header_level')
@@ -136,6 +135,36 @@ header.buildProjectInfoOnly = function() {
     </Provider>,
     document.querySelector('.header_level')
   );
+};
+
+// When viewing the level page in code review mode, we want to show only the
+// lesson information (which is displayed by the ScriptName component).
+header.buildScriptNameOnly = function(scriptNameData) {
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <HeaderMiddle scriptNameData={scriptNameData} scriptNameOnly={true} />
+    </Provider>,
+    document.querySelector('.header_level')
+  );
+};
+
+// When the page is cached, this function is called to retrieve and set the
+// sign-in button or user menu in the DOM.
+header.buildUserMenu = function() {
+  // Need to wait until the document is ready so we can accurately check to see
+  // if the create menu is present.
+  $(document).ready(() => {
+    const showCreateMenu = $('.create_menu').length > 0;
+
+    fetch(`/dashboardapi/user_menu?showCreateMenu=${showCreateMenu}`, {
+      credentials: 'same-origin'
+    })
+      .then(response => response.text())
+      .then(data => $('#sign_in_or_user').html(data))
+      .catch(err => {
+        console.log(err);
+      });
+  });
 };
 
 function setupReduxSubscribers(store) {
@@ -179,9 +208,6 @@ function setUpGlobalData(store) {
       if (data.is_signed_in) {
         store.dispatch(setInitialData(data));
         data.is_verified_instructor && store.dispatch(setVerified());
-        ensureHeaderSigninState(true, data.short_name);
-      } else {
-        ensureHeaderSigninState(false);
       }
     })
     .catch(err => {
@@ -190,32 +216,23 @@ function setUpGlobalData(store) {
 }
 setUpGlobalData(getStore());
 
-// Some of our cached pages can become cached by the browser with the
-// wrong sign-in state. This is a temporary patch to ensure that the header
-// displays the correct sign-in state for the user.
-function ensureHeaderSigninState(isSignedIn, shortName) {
-  const userMenu = document.querySelector('#header_user_menu');
-  const signinButton = document.querySelector('#signin_button');
-
-  if (isSignedIn && userMenu.style.display === 'none') {
-    userMenu.style.display = 'block';
-    signinButton.style.display = 'none';
-
-    const displayName = document.querySelector('#header_display_name');
-    displayName.textContent = shortName;
-  } else if (!isSignedIn && signinButton.style.display === 'none') {
-    userMenu.style.display = 'none';
-    signinButton.style.display = 'inline';
-  }
-}
-
 header.showMinimalProjectHeader = function() {
   getStore().dispatch(refreshProjectName());
   getStore().dispatch(showMinimalProjectHeader());
 };
 
-header.showLevelBuilderSaveButton = function(getChanges) {
-  getStore().dispatch(showLevelBuilderSaveButton(getChanges));
+header.showLevelBuilderSaveButton = function(
+  getChanges,
+  overrideHeaderText,
+  overrideOnSaveURL
+) {
+  getStore().dispatch(
+    showLevelBuilderSaveButton(
+      getChanges,
+      overrideHeaderText,
+      overrideOnSaveURL
+    )
+  );
 };
 
 /**

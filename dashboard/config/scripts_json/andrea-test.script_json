@@ -22,9 +22,9 @@
     "family_name": null,
     "serialized_at": "2021-11-22 17:07:58 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "plc_reviewer",
+    "participant_audience": "facilitator",
     "seeding_key": {
       "script.name": "andrea-test"
     }

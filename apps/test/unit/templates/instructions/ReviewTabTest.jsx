@@ -1,7 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import {Factory} from 'rosie';
 import './codeReview/CodeReviewTestHelper';
 import {UnconnectedReviewTab as ReviewTab} from '@cdo/apps/templates/instructions/ReviewTab';
@@ -12,74 +11,72 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import Button from '@cdo/apps/templates/Button';
 
 describe('Code Review Tab', () => {
-  const token = 'token';
   const channelId = 'test123';
   const serverLevelId = 123;
   const serverScriptId = 123;
   const reviewableProjectId = 'reviewableProjectId123';
-  const existingComment = Factory.build('CodeReviewComment');
-  let wrapper, server, clock, onLoadComplete;
+
+  const autoResolveApiCall = () => {
+    return {
+      done: callback => {
+        callback();
+        return {
+          fail: () => {}
+        };
+      }
+    };
+  };
+
+  const autoFailApiCall = () => {
+    return {
+      done: () => {
+        return {
+          fail: errorCallback => errorCallback()
+        };
+      }
+    };
+  };
+
+  let wrapper, mockApi, existingComment;
 
   beforeEach(() => {
-    server = sinon.fakeServer.create();
-    server.respondWith(
-      'GET',
-      `/code_review_comments/project_comments?channel_id=${channelId}`,
-      [
-        200,
-        {
-          'Content-Type': 'application/json',
-          'csrf-token': token
-        },
-        JSON.stringify([existingComment])
-      ]
-    );
-    server.respondWith(
-      'DELETE',
-      `/code_review_comments/${existingComment.id}`,
-      [200, {}, '']
-    );
-    server.respondWith(
-      'PATCH',
-      `/code_review_comments/${existingComment.id}/toggle_resolved`,
-      [200, {}, '']
-    );
+    existingComment = Factory.build('CodeReviewComment');
+    mockApi = {};
 
-    onLoadComplete = sinon.spy();
-  });
+    mockApi.getCodeReviewCommentsForProject = onDone => {
+      onDone([existingComment]);
+    };
 
-  afterEach(() => {
-    if (clock) {
-      clock.restore();
-    }
+    mockApi.deleteCodeReviewComment = autoResolveApiCall;
+    mockApi.resolveCodeReviewComment = autoResolveApiCall;
 
-    server.restore();
+    // Stub with defaults because this API call is always made on mount
+    stubReviewableStatusProjectApiCall({
+      canMarkReviewable: false,
+      reviewEnabled: true
+    });
   });
 
   describe('viewing as code owner with review enabled', () => {
-    beforeEach(() => {
-      wrapper = shallow(
+    function createWrapper() {
+      return shallow(
         <ReviewTab
-          onLoadComplete={onLoadComplete}
           codeReviewEnabled
           viewAsCodeReviewer={false}
           channelId={channelId}
           serverLevelId={serverLevelId}
           serverScriptId={serverScriptId}
+          dataApi={mockApi}
         />
       );
+    }
+
+    beforeEach(() => {
+      wrapper = createWrapper();
     });
 
     it('renders loading spinner before load is completed', () => {
       expect(wrapper.find(Spinner).length).to.equal(1);
-    });
-
-    it('calls onLoadComplete callback after load is completed', () => {
-      onLoadComplete.resetHistory();
-      sinon.assert.notCalled(onLoadComplete);
-
-      wrapper.setState({loadingReviewData: false});
-      sinon.assert.calledOnce(onLoadComplete);
     });
 
     describe('after load', () => {
@@ -88,19 +85,22 @@ describe('Code Review Tab', () => {
       });
 
       it('renders without error if project has no comments', () => {
-        server.respondWith(
-          'GET',
-          `/code_review_comments/project_comments?channel_id=${channelId}`,
-          [200, {'Content-Type': 'application/json'}, JSON.stringify([])]
-        );
-        server.respond();
+        mockApi.getCodeReviewCommentsForProject = onDone => {
+          onDone([]);
+        };
+
+        // Need to recreate the wrapper so the right comments are loaded on mount
+        wrapper = createWrapper();
+        wrapper.setState({loadingReviewData: false});
 
         expect(wrapper.find(Comment).length).to.equal(0);
       });
 
       it('renders a comment fetched on mount if one exists', () => {
-        expect(wrapper.find(Comment).length).to.equal(0);
-        server.respond();
+        // Need to recreate the wrapper so the right comments are loaded on mount
+        wrapper = createWrapper();
+        wrapper.setState({loadingReviewData: false});
+
         expect(wrapper.find(Comment).length).to.equal(1);
       });
 
@@ -110,17 +110,21 @@ describe('Code Review Tab', () => {
           commentText: testCommentText
         });
 
-        server.respondWith('POST', '/code_review_comments', [
-          200,
-          {'Content-Type': 'application/json'},
-          JSON.stringify(newlyCreatedComment)
-        ]);
+        mockApi.submitNewCodeReviewComment = () => {
+          return {
+            then: callback => {
+              callback(newlyCreatedComment);
+              return {
+                catch: () => {}
+              };
+            }
+          };
+        };
 
-        server.respond();
         expect(wrapper.find(Comment).length).to.equal(1);
 
         wrapper.instance().onNewCommentSubmit(testCommentText);
-        server.respond();
+
         const comment = wrapper.find(Comment);
         expect(comment.length).to.equal(2);
         expect(comment.at(1).props().comment.commentText).to.equal(
@@ -130,45 +134,62 @@ describe('Code Review Tab', () => {
 
       it('hides comment box if there is an authorization error on comment', () => {
         // first, enable peer review
-        stubReviewableStatusProjectServerCall({
+        stubReviewableStatusProjectApiCall({
           canMarkReviewable: false,
           reviewEnabled: true
         });
 
         const testCommentText = 'test comment text';
-        server.respond();
 
         // initial server response loads a comment
         expect(wrapper.find(CommentEditor).length).to.equal(1);
         expect(wrapper.find(Comment).length).to.equal(1);
 
         // fake a 404 for saving a comment
-        server.respondWith('POST', '/code_review_comments', [
-          404,
-          {'Content-Type': 'application/json'},
-          'error'
-        ]);
+        stubSubmitCommentError({status: 404});
 
         wrapper.instance().onNewCommentSubmit(testCommentText);
-        server.respond();
         // should still only have 1 comment, not 2
         expect(wrapper.find(Comment).length).to.equal(1);
         expect(wrapper.find(CommentEditor).length).to.equal(0);
         expect(wrapper.state().authorizationError).to.be.true;
       });
 
-      it('removes a comment when one is deleted', () => {
-        server.respond();
+      it('displays error message if comment contains profanity', () => {
+        // first, enable peer review
+        stubReviewableStatusProjectApiCall({
+          canMarkReviewable: false,
+          reviewEnabled: true
+        });
 
+        const testCommentText = 'test comment text';
+        const profanityErrorMessage = 'profanity error';
+
+        // initial server response loads a comment
+        expect(wrapper.find(CommentEditor).length).to.equal(1);
+        expect(wrapper.find(Comment).length).to.equal(1);
+
+        // fake a profanity error
+        stubSubmitCommentError({profanityFoundError: profanityErrorMessage});
+
+        wrapper.instance().onNewCommentSubmit(testCommentText);
+        // should still only have 1 comment, not 2
+        expect(wrapper.find(Comment).length).to.equal(1);
+        // Comment editor should still be visible
+        expect(wrapper.find(CommentEditor).length).to.equal(1);
+        expect(wrapper.state().commentSaveError).to.be.true;
+        expect(wrapper.state().commentSaveErrorMessage).to.equal(
+          profanityErrorMessage
+        );
+      });
+
+      it('removes a comment when one is deleted', () => {
         expect(wrapper.find(Comment).length).to.equal(1);
         wrapper.instance().onCommentDelete(existingComment.id);
-        server.respond();
         expect(wrapper.find(Comment).length).to.equal(0);
       });
 
       it('resolves a comment when one is resolved', () => {
-        server.respond();
-
         expect(
           wrapper
             .find(Comment)
@@ -178,7 +199,6 @@ describe('Code Review Tab', () => {
         wrapper
           .instance()
           .onCommentResolveStateToggle(existingComment.id, true);
-        server.respond();
         expect(
           wrapper
             .find(Comment)
@@ -188,37 +208,22 @@ describe('Code Review Tab', () => {
       });
 
       it('sets hasError to true when comment update request fails and does not update comment', () => {
-        clock = sinon.useFakeTimers();
-        server.respondWith(
-          'PATCH',
-          `/code_review_comments/${existingComment.id}/toggle_resolved`,
-          [400, {}, '']
-        );
-
-        server.respond();
         let firstComment = wrapper.find(Comment).at(0);
         expect(firstComment.props().comment.hasError).to.be.undefined;
         expect(firstComment.props().comment.isResolved).to.be.false;
 
+        mockApi.resolveCodeReviewComment = autoFailApiCall;
+
         wrapper
           .instance()
           .onCommentResolveStateToggle(existingComment.id, true);
-        server.respond();
         firstComment = wrapper.find(Comment).at(0);
         expect(firstComment.props().comment.hasError).to.be.true;
         expect(firstComment.props().comment.isResolved).to.be.false;
       });
 
       it('sets hasError to true when comment delete request fails and does not remove comment from UI', () => {
-        clock = sinon.useFakeTimers();
-
-        server.respondWith(
-          'DELETE',
-          `/code_review_comments/${existingComment.id}`,
-          [400, {}, '']
-        );
-
-        server.respond();
+        mockApi.deleteCodeReviewComment = autoFailApiCall;
 
         expect(
           wrapper
@@ -227,7 +232,6 @@ describe('Code Review Tab', () => {
             .props().comment.hasError
         ).to.be.undefined;
         wrapper.instance().onCommentDelete(existingComment.id, true);
-        server.respond();
         expect(
           wrapper
             .find(Comment)
@@ -237,11 +241,14 @@ describe('Code Review Tab', () => {
       });
 
       it('shows the review checkbox if enabled', () => {
-        stubReviewableStatusProjectServerCall({
+        stubReviewableStatusProjectApiCall({
           canMarkReviewable: true,
           reviewEnabled: true,
           id: reviewableProjectId
         });
+
+        wrapper = createWrapper();
+        wrapper.setState({loadingReviewData: false});
 
         const input = wrapper.find('input');
         expect(input).to.exist;
@@ -249,28 +256,37 @@ describe('Code Review Tab', () => {
       });
 
       it('hides the review checkbox if disabled', () => {
-        stubReviewableStatusProjectServerCall({
+        stubReviewableStatusProjectApiCall({
           canMarkReviewable: false,
           reviewEnabled: false
         });
+
+        wrapper = createWrapper();
+        wrapper.setState({loadingReviewData: false});
 
         expect(wrapper.find('input')).to.be.empty;
       });
 
       it('shows comment input if peer review enabled', () => {
-        stubReviewableStatusProjectServerCall({
+        stubReviewableStatusProjectApiCall({
           canMarkReviewable: false,
           reviewEnabled: true
         });
+
+        wrapper = createWrapper();
+        wrapper.setState({loadingReviewData: false});
 
         expect(wrapper.find(CommentEditor).length).to.equal(1);
       });
 
       it('hides comment input if peer review disabled', () => {
-        stubReviewableStatusProjectServerCall({
+        stubReviewableStatusProjectApiCall({
           canMarkReviewable: false,
           reviewEnabled: false
         });
+
+        wrapper = createWrapper();
+        wrapper.setState({loadingReviewData: false});
 
         expect(wrapper.find(CommentEditor).length).to.equal(0);
       });
@@ -296,7 +312,6 @@ describe('Code Review Tab', () => {
     beforeEach(() => {
       wrapper = shallow(
         <ReviewTab
-          onLoadComplete={onLoadComplete}
           codeReviewEnabled={false}
           viewAsCodeReviewer={false}
           viewAsTeacher={true}
@@ -308,7 +323,7 @@ describe('Code Review Tab', () => {
     });
 
     it('always shows comment input', () => {
-      stubReviewableStatusProjectServerCall({
+      stubReviewableStatusProjectApiCall({
         canMarkReviewable: false,
         reviewEnabled: false
       });
@@ -324,26 +339,35 @@ describe('Code Review Tab', () => {
 
   it('does not render enable code review checkbox when codeReviewEnabled is false', () => {
     wrapper = shallow(
-      <ReviewTab
-        onLoadComplete={onLoadComplete}
-        codeReviewEnabled={false}
-        viewAsCodeReviewer={false}
-      />
+      <ReviewTab codeReviewEnabled={false} viewAsCodeReviewer={false} />
     );
     expect(wrapper.find("input[type='checkbox']").length).to.equal(0);
   });
 
-  function stubReviewableStatusProjectServerCall(reviewableStatus) {
-    server.respondWith(
-      'GET',
-      `/reviewable_projects/reviewable_status?channel_id=${channelId}&level_id=${serverLevelId}&script_id=${serverScriptId}`,
-      [
-        200,
-        {'Content-Type': 'application/json'},
-        JSON.stringify(reviewableStatus)
-      ]
-    );
+  function stubReviewableStatusProjectApiCall(reviewableStatus) {
+    mockApi.getPeerReviewStatus = () => {
+      return {
+        done: callback => {
+          callback(reviewableStatus);
+          return {
+            fail: () => {}
+          };
+        }
+      };
+    };
+  }
 
-    server.respond();
+  function stubSubmitCommentError(error) {
+    mockApi.submitNewCodeReviewComment = () => {
+      return {
+        then: () => {
+          return {
+            catch: callback => {
+              callback(error);
+            }
+          };
+        }
+      };
+    };
   }
 });

@@ -30,6 +30,10 @@ class BucketHelper
     []
   end
 
+  def try_resize_file(body, extension)
+    return body
+  end
+
   # Ignore client-specified mime type. Infer it from file extension when serving
   # assets.
   def category_from_file_type(extension)

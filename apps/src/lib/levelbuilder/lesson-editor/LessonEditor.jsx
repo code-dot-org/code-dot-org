@@ -156,8 +156,16 @@ class LessonEditor extends Component {
       preparation,
       announcements
     } = this.state;
-    const {relatedLessons, standards, opportunityStandards} = this.props;
+    const {
+      relatedLessons,
+      standards,
+      opportunityStandards,
+      unitInfo
+    } = this.props;
     const frameworks = this.props.initialLessonData.frameworks;
+
+    const allowMajorCurriculumChanges = unitInfo.allowMajorCurriculumChanges;
+
     return (
       <div style={styles.editor}>
         <h1>Editing Lesson "{displayName}"</h1>
@@ -189,19 +197,19 @@ class LessonEditor extends Component {
             <input
               type="checkbox"
               checked={lockable}
-              disabled={this.props.unitInfo.isLaunched}
+              disabled={!allowMajorCurriculumChanges}
               style={styles.checkbox}
               onChange={() => this.setState({lockable: !lockable})}
             />
             <HelpTip>
-              {this.props.unitInfo.isLaunched ? (
-                <p>Can't update lockable for visible unit.</p>
-              ) : (
+              {allowMajorCurriculumChanges ? (
                 <p>
                   Check this box if this lesson should be locked for students.
                   If checked, teachers will be able to unlock the lesson for
                   their students.
                 </p>
+              ) : (
+                <p>Can't update lockable for visible unit.</p>
               )}
             </HelpTip>
           </label>
@@ -210,18 +218,18 @@ class LessonEditor extends Component {
             <input
               type="checkbox"
               checked={hasLessonPlan}
-              disabled={this.props.unitInfo.isLaunched}
+              disabled={!allowMajorCurriculumChanges}
               style={styles.checkbox}
               onChange={() => this.setState({hasLessonPlan: !hasLessonPlan})}
             />
             <HelpTip>
-              {this.props.unitInfo.isLaunched ? (
-                <p>Can't update has lesson plan for visible unit.</p>
-              ) : (
+              {allowMajorCurriculumChanges ? (
                 <p>
                   Check this box if this lesson should have a lesson plan for
                   teachers associated with it.
                 </p>
+              ) : (
+                <p>Can't update has lesson plan for visible unit.</p>
               )}
             </HelpTip>
           </label>
@@ -350,29 +358,13 @@ class LessonEditor extends Component {
             </CollapsibleEditorSection>
 
             <CollapsibleEditorSection
-              title="Assessment Opportunities"
-              collapsed={true}
-              fullWidth={true}
-            >
-              <TextareaWithMarkdownPreview
-                markdown={assessmentOpportunities}
-                label={'Assessment Opportunities'}
-                inputRows={5}
-                handleMarkdownChange={e =>
-                  this.setState({assessmentOpportunities: e.target.value})
-                }
-                features={{imageUpload: true, resourceLink: true}}
-              />
-            </CollapsibleEditorSection>
-
-            <CollapsibleEditorSection
               title="Resources"
               collapsed={true}
               fullWidth={true}
             >
-              {this.props.unitInfo.courseVersionId ? (
+              {unitInfo.courseVersionId ? (
                 <ResourcesEditor
-                  courseVersionId={this.props.unitInfo.courseVersionId}
+                  courseVersionId={unitInfo.courseVersionId}
                   resourceContext="lessonResource"
                   resources={this.props.resources}
                 />
@@ -390,9 +382,9 @@ class LessonEditor extends Component {
               collapsed={true}
               fullWidth={true}
             >
-              {this.props.unitInfo.courseVersionId ? (
+              {unitInfo.courseVersionId ? (
                 <VocabulariesEditor
-                  courseVersionId={this.props.unitInfo.courseVersionId}
+                  courseVersionId={unitInfo.courseVersionId}
                 />
               ) : (
                 <h4>
@@ -421,6 +413,23 @@ class LessonEditor extends Component {
                 updateObjectives={this.handleUpdateObjectives}
               />
             </CollapsibleEditorSection>
+
+            <CollapsibleEditorSection
+              title="Assessment Opportunities"
+              collapsed={true}
+              fullWidth={true}
+            >
+              <TextareaWithMarkdownPreview
+                markdown={assessmentOpportunities}
+                label={'Assessment Opportunities'}
+                inputRows={5}
+                handleMarkdownChange={e =>
+                  this.setState({assessmentOpportunities: e.target.value})
+                }
+                features={{imageUpload: true, resourceLink: true}}
+              />
+            </CollapsibleEditorSection>
+
             <CollapsibleEditorSection
               title="Standards"
               collapsed={true}
@@ -446,7 +455,10 @@ class LessonEditor extends Component {
           </div>
         )}
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
-          <ActivitiesEditor hasLessonPlan={hasLessonPlan} />
+          <ActivitiesEditor
+            hasLessonPlan={hasLessonPlan}
+            allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+          />
         </CollapsibleEditorSection>
 
         <SaveBar

@@ -145,6 +145,24 @@
         },
         "define/coursee/2021": {
           "word": "Սահմանել"
+        },
+        "debugging/csd/2021": {
+          "word": "Debugging"
+        },
+        "variable/csd/2021": {
+          "word": "Փոփոխական"
+        },
+        "conditionals/csd/2021": {
+          "word": "conditionals"
+        },
+        "abstraction/csd/2021": {
+          "word": "աբստրակցիա"
+        },
+        "function/csd/2021": {
+          "word": "Ֆունկցիա"
+        },
+        "copyright/csd/2021": {
+          "word": "հեղինակային իրավունք"
         }
       }
     }

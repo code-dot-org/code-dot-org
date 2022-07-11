@@ -2,6 +2,234 @@
   "et-EE": {
     "data": {
       "resources": {
+        "poem_art_celebration/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "type": "Video"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "Video"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "Video"
+        },
+        "ai-ml/oceans/unversioned": {
+          "type": "Video"
+        },
+        "ai-societal/oceans/unversioned": {
+          "type": "Video"
+        },
+        "ai-training/oceans/unversioned": {
+          "type": "Video"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/express/2018": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/express/2019": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Sõnavara"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "type": "Video"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "Video"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "type": "Video"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "For Loop Fun"
         },
@@ -16,6 +244,15 @@
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "For Loop Fun"
+        },
+        "ai-ml/coursef/2021": {
+          "type": "Video"
+        },
+        "ai-training/coursef/2021": {
+          "type": "Video"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "Video"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet"
@@ -44,11 +281,15 @@
         "pair-programming-vid/courseb/2021": {
           "name": "Paarisprogrammeerimine"
         },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "type": "Video"
+        },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie ja suur projekt"
         },
         "unspotted_bugs/courseb/2021": {
-          "name": "Märkamata vead"
+          "name": "Märkamata vead",
+          "type": "Video"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Muutub tsükliliseks"
@@ -62,8 +303,12 @@
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Muutub tsükliliseks"
         },
+        "common-sense-media-pause-think/courseb/2021": {
+          "type": "Video"
+        },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "Suursündmus"
+          "name": "Suursündmus",
+          "type": "Video"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Suursündmus"
@@ -77,8 +322,26 @@
         "pair-programming-vid/coursea/2021": {
           "name": "Paarisprogrammeerimine"
         },
+        "wiggles-go_noodle/coursea/2021": {
+          "type": "Video"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "Video"
+        },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Happy Maps"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "type": "Video"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "type": "Video"
+        },
+        "pair-programming/coursea/2021": {
+          "type": "Video"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "type": "Video"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Suursündmus"
@@ -108,7 +371,8 @@
           "name": "Minu robotsõbrad"
         },
         "pair-programming-vid/coursec/2021": {
-          "name": "Paarisprogrammeerimine"
+          "name": "Paarisprogrammeerimine",
+          "type": "Video"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Suursündmus"
@@ -118,6 +382,9 @@
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "Suursündmus"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "type": "Video"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Binaarsed käevõrud"
@@ -176,6 +443,12 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Relee programmeerimine"
         },
+        "pause_and_think_online/coursed/2021": {
+          "type": "Video"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "type": "Video"
+        },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Tingimuslaused kaartidel"
         },
@@ -195,7 +468,20 @@
           "name": "Rakendamise juhend"
         },
         "pair_programming/express/2021": {
-          "name": "Paarisprogrammeerimine"
+          "name": "Paarisprogrammeerimine",
+          "type": "Video"
+        },
+        "artist_introduction/express/2021": {
+          "type": "Video"
+        },
+        "turns_angles/express/2021": {
+          "type": "Video"
+        },
+        "pause_and_think_online/express/2021": {
+          "type": "Video"
+        },
+        "pair_programming_video/express/2021": {
+          "type": "Video"
         },
         "variables_video/express/2021": {
           "name": "Muutujad"
@@ -203,8 +489,292 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Paarisprogrammeerimine"
         },
+        "20_20_20_rule/pre-express/2021": {
+          "type": "Video"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "type": "Video"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "type": "Video"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "type": "Video"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "type": "Video"
+        },
         "implementation_guide/coursee/2021": {
           "name": "Rakendamise juhend"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "Video"
+        },
+        "seeing_ai/csd/2021": {
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "Video"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "Peegeldus"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "Video"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "Video"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Kuidas arvutid töötavad: riistvara ja tarkvara",
+          "type": "Video"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "Video"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funktsioonid"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "type": "Video"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For tsükkel",
+          "type": "Video"
+        },
+        "for_loops/csd/2021": {
+          "name": "For tsükkel"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Kuidas arvutid töötavad: ahelad ja loogika",
+          "type": "Video"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "Video"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "Video"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "Video"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2021": {
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "Video"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Vastastikune hindamine"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "Video"
+        },
+        "variables_1/csd/2021": {
+          "name": "Muutujad"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "Video"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Animatsioon",
+          "type": "Video"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "Video"
+        },
+        "animating-sprites/csd/2021": {
+          "type": "Video"
+        },
+        "boolean_expressions/csd/2021": {
+          "type": "Video"
+        },
+        "conditional_statements/csd/2021": {
+          "type": "Video"
+        },
+        "if_else_statements/csd/2021": {
+          "type": "Video"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Vastastikune hindamine"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Velocity",
+          "type": "Video"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Velocity"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funktsioonid",
+          "type": "Video"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funktsioonid"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Vastastikune hindamine"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Video"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "Video"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "Video"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "Vastastikune hindamine"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2021": {
+          "type": "Video"
+        },
+        "video_debugging/csd/2021": {
+          "type": "Video"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Vastastikune hindamine"
+        },
+        "lists/csd/2021": {
+          "name": "Loendid"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Sissejuhatus CSS - osa 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Sissejuhatus CSS - osa 2",
+          "type": "Video"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Vastastikune hindamine"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "Video"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Vastastikune hindamine"
+        },
+        "publishing_your_website/csd/2021": {
+          "type": "Video"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "Video"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "Video"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "Video"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Vastastikune hindamine"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/express/2020": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Sõnavara"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Tunniplaan"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Sõnavara"
         }
       }
     }

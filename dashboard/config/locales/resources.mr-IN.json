@@ -6,9 +6,19 @@
           "name": "Spotify प्लेलिस्ट (सर्व वयोगट)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
+        "poem_art_celebration/poem-art/2021": {
+          "type": "व्हिडीओ"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "व्हिडीओ"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "व्हिडीओ"
+        },
         "poem_art_introduction/poem-art/2021": {
           "name": "कविता कला 1 ची ओळख",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "व्हिडीओ"
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "कलाकाराचा परिचय",
@@ -24,6 +34,12 @@
         "dance-party-playlist/dance/unversioned": {
           "name": "Spotify प्लेलिस्ट (सर्व वयोगट)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "व्हिडीओ"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "व्हिडीओ"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "name": "बाउन्समधील इव्हेंट्स - ते कसे घडतात?"
@@ -41,15 +57,441 @@
         },
         "ai-ml/oceans/unversioned": {
           "name": "AI: मशीन लर्निंग",
-          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "व्हिडीओ"
         },
         "ai-societal/oceans/unversioned": {
           "name": "AI: समाजावर परिणाम",
-          "url": "https://youtu.be/ng4c1g3COfs"
+          "url": "https://youtu.be/ng4c1g3COfs",
+          "type": "व्हिडीओ"
         },
         "ai-training/oceans/unversioned": {
           "name": "AI: डेटा ट्रेनिंग करणे आणि पूर्वग्रह",
-          "url": "https://youtu.be/x2mRoFNm22g"
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "व्हिडीओ"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/express/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/express/2018": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/express/2018": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/express/2018": {
+          "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "शब्दसंग्रह"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "शब्दसंग्रह"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "शब्दसंग्रह"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "शब्दसंग्रह"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "शब्दसंग्रह"
+        },
+        "code_introduced/csd/2018": {
+          "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/csd/2018": {
+          "name": "शब्दसंग्रह"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "शब्दसंग्रह"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "शब्दसंग्रह"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "शब्दसंग्रह"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "शब्दसंग्रह"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/express/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/express/2019": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/express/2019": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/express/2019": {
+          "name": "शब्दसंग्रह"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "शब्दसंग्रह"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "शिक्षक फोरम"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "शब्दसंग्रह"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "शब्दसंग्रह"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "शब्दसंग्रह"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "vocabulary/csd/2019": {
+          "name": "शब्दसंग्रह"
+        },
+        "code_introduced/csd/2019": {
+          "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "शब्दसंग्रह"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "शब्दसंग्रह"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "शब्दसंग्रह"
+        },
+        "code_introduced/csd/2017": {
+          "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/csd/2017": {
+          "name": "शब्दसंग्रह"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "शब्दसंग्रह"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "कोडचा परिचय करून दिला"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "शब्दसंग्रह"
         },
         "introducing_sprite_lab/coursef/2021": {
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
@@ -59,7 +501,8 @@
           "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
         },
         "introducing_sprite_lab_1/coursef/2021": {
-          "url": "https://youtu.be/yd-9xZ275dM"
+          "url": "https://youtu.be/yd-9xZ275dM",
+          "type": "व्हिडीओ"
         },
         "exploring_apps_1/coursef/2021": {
           "name": "एक्सप्लोरींग ॲप्स",
@@ -70,6 +513,7 @@
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
+          "name": "स्प्राईट लॅब डॉक्युमेंटेशन",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/coursef/2021": {
@@ -81,7 +525,8 @@
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "name": "शब्दांची ताकद: शब्दांची शक्ती",
-          "url": "https://www.commonsense.org/education/videos/the-power-of-words"
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words",
+          "type": "व्हिडीओ"
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
           "name": "शब्दांची शक्ती:शब्द दुखवू शकतात",
@@ -129,9 +574,11 @@
         },
         "pause_and_think_online/coursef/2021": {
           "name": "पॉज़ आणि थिंक ऑनलाईन ",
-          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
+          "type": "व्हिडीओ"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "फॉर लूप फन ",
           "url": "https://youtu.be/mX857v5B4gE"
         },
         "flf-assessment-teacher-key/coursef/2021": {
@@ -139,16 +586,21 @@
           "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "फॉर लूप फन ",
           "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "फॉर लूप फन ",
           "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "फॉर लूप फन ",
           "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit"
+          "name": "फॉर लूप फन ",
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
+          "type": "मूल्यांकन"
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)",
@@ -160,15 +612,18 @@
         },
         "ai-ml/coursef/2021": {
           "name": "AI: मशीन लर्निंग",
-          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "व्हिडीओ"
         },
         "ai-training/coursef/2021": {
           "name": "AI: डेटा ट्रेनिंग करणे आणि पूर्वग्रह",
-          "url": "https://youtu.be/x2mRoFNm22g"
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "व्हिडीओ"
         },
         "ai-societal/coursef/2021": {
           "name": "AI: समाजावर परिणाम",
-          "url": "https://youtu.be/ng4c1g3COfs"
+          "url": "https://youtu.be/ng4c1g3COfs",
+          "type": "व्हिडीओ"
         },
         "unplugged-video-internet/coursef/2021": {
           "url": "https://youtu.be/mFOUbqYv1Sc"
@@ -178,9 +633,12 @@
           "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
         },
         "csf-internet-assessment/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit"
+          "name": "इंटरनेट",
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
+          "type": "मूल्यांकन"
         },
         "assessment-answer-internet/coursef/2021": {
+          "name": "इंटरनेट",
           "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
         },
         "get-site-ip-com/coursef/2021": {
@@ -197,7 +655,8 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "CS मूलभूत अंतिम प्रोजेक्ट ",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "नियम"
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "CSTA मानक मॅपिंग",
@@ -273,6 +732,7 @@
           "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
         },
         "teacher-video-move-it/courseb/2021": {
+          "name": "हलवा, हलवा",
           "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
         },
         "feeling_faces_emotion_image/courseb/2021": {
@@ -300,7 +760,8 @@
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Wiggles - Go Noodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "व्हिडीओ"
         },
         "20_20_20_rule/courseb/2021": {
           "name": "20/20/20 नियम",
@@ -322,18 +783,24 @@
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view"
         },
         "unspotted_bugs/courseb/2021": {
-          "url": "https://youtu.be/rah3DYlp5nQ"
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "व्हिडीओ"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "लूप्स वापरणे",
           "url": "https://youtu.be/JoKTqHCni0M"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "लूप्स वापरणे",
           "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit"
+          "name": "लूप्स वापरणे",
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "मूल्यांकन"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "लूप्स वापरणे",
           "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
         },
         "csf-lesson-recommend/courseb/2021": {
@@ -342,19 +809,25 @@
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "पॉज़ आणि थिंक ऑनलाईन ",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "व्हिडीओ"
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "राइट अॅप परिदृश्य",
           "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "url": "https://youtu.be/u0WV9shCoak"
+          "name": "मोठा इव्हेंट ",
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "व्हिडीओ"
         },
         "csf-the-big-event-assessment/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "name": "मोठा इव्हेंट ",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "मूल्यांकन"
         },
         "assessment-answer-big-event/courseb/2021": {
+          "name": "मोठा इव्हेंट ",
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "the_big_event_courses_a_b_/courseb/2021": {
@@ -438,13 +911,16 @@
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Wiggles - Go Noodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "व्हिडीओ"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "name": "सुरुवात करणे - वर्ग विभाग तयार करणे",
-          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
+          "type": "व्हिडीओ"
         },
         "unplugged-video-happy-maps/coursea/2021": {
+          "name": "हॅपी मैप्स",
           "url": "https://youtu.be/hrnhiKAQ1_k"
         },
         "happy-map-cards/coursea/2021": {
@@ -473,11 +949,13 @@
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Wiggles - Go Noodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "व्हिडीओ"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
           "name": "स्टेप बटणासह डीबगिंग",
-          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
+          "type": "व्हिडीओ"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा",
@@ -505,7 +983,8 @@
         },
         "pair-programming/coursea/2021": {
           "name": "पेअर- प्रोग्रामिंग",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "व्हिडीओ"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
           "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा",
@@ -517,7 +996,8 @@
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "पॉज़ आणि थिंक ऑनलाईन ",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "व्हिडीओ"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
           "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा",
@@ -528,12 +1008,16 @@
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "unplugged-video-big-event/coursea/2021": {
+          "name": "मोठा इव्हेंट ",
           "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "name": "मोठा इव्हेंट ",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "मूल्यांकन"
         },
         "assessment-answer-big-event/coursea/2021": {
+          "name": "मोठा इव्हेंट ",
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "the_big_event_courses_a_b_/coursea/2021": {
@@ -617,18 +1101,23 @@
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "माझे रोबोटिक मित्र",
           "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
         },
         "csf-mrf-symbol-key/coursec/2021": {
+          "name": "माझे रोबोटिक मित्र",
           "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "माझे रोबोटिक मित्र",
           "url": "https://youtu.be/xaW3PAzHxCU"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "माझे रोबोटिक मित्र",
           "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "माझे रोबोटिक मित्र",
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
         },
         "c2-maze-bridge/coursec/2021": {
@@ -640,7 +1129,8 @@
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "pair-programming-vid/coursec/2021": {
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "व्हिडीओ"
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "सीएस फंडामेंटल्स मुख्य क्रियाकलाप टिपा",
@@ -671,12 +1161,16 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs"
         },
         "unplugged-video-big-event/coursec/2021": {
+          "name": "मोठा इव्हेंट ",
           "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "name": "मोठा इव्हेंट ",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "मूल्यांकन"
         },
         "assessment-answer-big-event/coursec/2021": {
+          "name": "मोठा इव्हेंट ",
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "the_big_event_course_c_/coursec/2021": {
@@ -685,7 +1179,8 @@
         },
         "pause_and_think_online/coursec/2021": {
           "name": "पॉज़ आणि थिंक ऑनलाईन ",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "व्हिडीओ"
         },
         "open-ended_programming_levels/coursec/2021": {
           "name": "ओपन-एंडेड प्रोग्रामिंग लेव्हल्स ",
@@ -704,18 +1199,24 @@
           "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "बायनरी ब्रेसलेट्स",
           "url": "https://youtu.be/3S2YfoO4_CM"
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "बायनरी ब्रेसलेट्स",
           "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "बायनरी ब्रेसलेट्स",
           "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
-          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit"
+          "name": "बायनरी ब्रेसलेट्स",
+          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
+          "type": "मूल्यांकन"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "बायनरी ब्रेसलेट्स",
           "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
         },
         "play-lab-project-planning-guide-exemplar/coursec/2021": {
@@ -811,7 +1312,8 @@
           "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit"
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
+          "type": "मूल्यांकन"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
@@ -847,7 +1349,8 @@
         },
         "pause_and_think_online/coursed/2021": {
           "name": "पॉज़ आणि थिंक ऑनलाईन ",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "व्हिडीओ"
         },
         "open-ended_programming_levels/coursed/2021": {
           "name": "ओपन-एंडेड प्रोग्रामिंग लेव्हल्स ",
@@ -879,12 +1382,15 @@
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "पॉज़ आणि थिंक ऑनलाईन ",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "व्हिडीओ"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "कार्ड्सबरोबर कंडीशनल्स",
           "url": "https://youtu.be/UymN4lTL50s"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "कार्ड्सबरोबर कंडीशनल्स",
           "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
@@ -892,17 +1398,22 @@
           "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit"
+          "name": "कार्ड्सबरोबर कंडीशनल्स",
+          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
+          "type": "मूल्यांकन"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "कार्ड्सबरोबर कंडीशनल्स",
           "url": "https://youtu.be/TbUaEnAYPjI"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "कार्ड्सबरोबर कंडीशनल्स",
           "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "name": "CSF कोर्स D अभ्यासक्रमाचा प्रोजेक्ट प्लॅनिंग गाइडचा शेवट",
-          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
+          "type": "प्रकल्प मार्गदर्शक"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "CSTA मानक मॅपिंग",
@@ -953,7 +1464,8 @@
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "pair_programming/express/2021": {
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "व्हिडीओ"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
           "name": "अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)",
@@ -961,11 +1473,13 @@
         },
         "artist_introduction/express/2021": {
           "name": "कलाकाराचा परिचय",
-          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "व्हिडीओ"
         },
         "turns_angles/express/2021": {
           "name": "वळण आणि कोन",
-          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "व्हिडीओ"
         },
         "turns_angles_1/express/2021": {
           "name": "वळण आणि कोन",
@@ -976,6 +1490,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/express/2021": {
+          "name": "स्प्राईट लॅब डॉक्युमेंटेशन",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
@@ -983,6 +1498,7 @@
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
+          "name": "स्प्राईट लॅब डॉक्युमेंटेशन",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
@@ -990,7 +1506,8 @@
         },
         "pause_and_think_online/express/2021": {
           "name": "पॉज़ आणि थिंक ऑनलाईन ",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "व्हिडीओ"
         },
         "dance-party-project-guide/express/2021": {
           "name": "डांस पार्टी प्रोजेक्ट गाईड ",
@@ -1006,7 +1523,8 @@
         },
         "pair_programming_video/express/2021": {
           "name": "प्रोग्रामिंग व्हिडिओ जोडा",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "व्हिडीओ"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
           "name": "अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)",
@@ -1033,15 +1551,18 @@
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "variables_video/express/2021": {
+          "name": "व्हेरीएबल्स",
           "url": "https://youtu.be/DI7DprN4FtE"
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "CSF एक्सप्रेस अभ्यासक्रमाचा प्रोजेक्ट प्लॅनिंग गाइडचा शेवट",
-          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
+          "type": "प्रकल्प मार्गदर्शक"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "CS मूलभूत अंतिम प्रोजेक्ट ",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "नियम"
         },
         "csta_standards_mapping/express/2021": {
           "name": "CSTA मानक मॅपिंग",
@@ -1072,15 +1593,18 @@
         },
         "20_20_20_rule/pre-express/2021": {
           "name": "20/20/20 नियम",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "व्हिडीओ"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "name": "Wiggles - Go Noodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "व्हिडीओ"
         },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "पॉज़ आणि थिंक ऑनलाईन ",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "व्हिडीओ"
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "CSTA मानक मॅपिंग",
@@ -1107,6 +1631,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/coursee/2021": {
+          "name": "स्प्राईट लॅब डॉक्युमेंटेशन",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
@@ -1139,7 +1664,8 @@
         },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "पॉज़ आणि थिंक ऑनलाईन ",
-          "url": "https://youtu.be/X_duZ-1LApg"
+          "url": "https://youtu.be/X_duZ-1LApg",
+          "type": "व्हिडीओ"
         },
         "about_me_planning_guide/coursee/2021": {
           "name": "माझ्या बद्दल नियोजन मार्गदर्शक",
@@ -1151,7 +1677,8 @@
         },
         "digital-sharing-video/coursee/2021": {
           "name": "डिजिटल शेअरिंग एथिक्स (व्हिडिओ)",
-          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
+          "type": "व्हिडीओ"
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "वळण आणि कोन",
@@ -1175,7 +1702,8 @@
         },
         "csf-songwriting-assessment/coursee/2021": {
           "name": "फंक्शन्स अनप्लग्ड: सॉंग राईटींग",
-          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit"
+          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
+          "type": "मूल्यांकन"
         },
         "assessment-answer-songwriting/coursee/2021": {
           "name": "फंक्शन्स अनप्लग्ड: सॉंग राईटींग",
@@ -1186,6 +1714,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "designing_for_accessibility_1/coursee/2021": {
+          "name": "अॅक्सेसिबिलिटीसाठी डिझाइनिंग",
           "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview"
         },
         "types_of_disabilities/coursee/2021": {
@@ -1198,7 +1727,8 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "CS मूलभूत अंतिम प्रोजेक्ट ",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "नियम"
         },
         "design-process/coursee/2021": {
           "name": "डिझाईन प्रक्रिया",
@@ -1255,6 +1785,472 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "व्हर्च्युअल धड्या मध्ये सुधारणा ",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "व्हिडीओ"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "AI पाहणे",
+          "type": "व्हिडीओ"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "AI: डेटा ट्रेनिंग करणे आणि पूर्वग्रह",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "व्हिडीओ"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "नियम"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "नियम"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "प्रतिबिंब"
+        },
+        "paper-prototypes/csd/2021": {
+          "type": "नियम"
+        },
+        "design_mode/csd/2021": {
+          "name": "डिझाइन मोड"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "डिझाइन मोड"
+        },
+        "app-presentation/csd/2021": {
+          "type": "नियम"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "शिक्षक फोरम"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "संगणक शास्त्रामुळे सगळे काही बदलत आहे",
+          "type": "व्हिडीओ"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "board_events/csd/2021": {
+          "name": "बोर्ड इव्हेंट्स"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "emoji-race-guide/csd/2021": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "नियम"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "playing_notes/csd/2021": {
+          "name": "प्लेइंग नोट्स "
+        },
+        "loops_in_app_lab/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "एक्सीलरोमीटर इव्हेंट्स"
+        },
+        "circuits-logic-video/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "physical-prototyping-project/csd/2021": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "नियम"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "नियम"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "video_impact_on_society/csd/2021": {
+          "name": "व्हिडिओ: समाजावर परिणाम",
+          "type": "व्हिडीओ"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "व्हिडिओ: मशीन अभ्यास",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "व्हिडीओ"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "name": "व्हिडिओ: प्रशिक्षण डेटा आणि पूर्वाग्रह",
+          "type": "व्हिडीओ"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "नियम"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "variables_1/csd/2021": {
+          "name": "व्हेरीएबल्स"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "the_animation_tab/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "स्प्राईट प्रॉपर्टीज"
+        },
+        "captioned-scenes/csd/2021": {
+          "type": "नियम"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "animating-sprites/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "नियम"
+        },
+        "boolean_expressions/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "conditional_statements/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "if_else_statements/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "interactive_card/csd/2021": {
+          "type": "नियम"
+        },
+        "velocity_1/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "साइड स्क्रोलर",
+          "type": "नियम"
+        },
+        "side-scroller/csd/2021": {
+          "name": "साइड स्क्रोलर",
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "वेग आणि काउंटर पॅटर्न"
+        },
+        "flyer-game-1/csd/2021": {
+          "name": "फ्लायर गेम",
+          "type": "नियम"
+        },
+        "flyer-game/csd/2021": {
+          "name": "फ्लायर गेम",
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "make-your-own-game/csd/2021": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "नियम"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "शिक्षक फोरम"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "type": "नियम"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "video_pair_programming/csd/2021": {
+          "name": "व्हिडिओ: पेअर प्रोग्रामिंग",
+          "type": "व्हिडीओ"
+        },
+        "video_debugging/csd/2021": {
+          "name": "व्हिडिओ: डीबगिंग",
+          "type": "व्हिडीओ"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "नियम"
+        },
+        "html-web-page/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "html-page/csd/2021": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "lists/csd/2021": {
+          "name": "याद्या"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "सोशल स्लीथ"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "सोशल स्लीथ"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "नियम"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "your-personal-style/csd/2021": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "person-web-page-prepare/csd/2021": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "नियम"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "आपली वेबसाइट प्रकाशित करणे",
+          "type": "व्हिडीओ"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "व्हिडिओ: असहमती व्यवस्थापित करणे",
+          "type": "व्हिडीओ"
+        },
+        "how-teamwork-works/csd/2021": {
+          "name": "व्हिडिओ: टीमवर्क",
+          "type": "व्हिडीओ"
+        },
+        "how-search-works-video/csd/2021": {
+          "name": "व्हिडिओ: शोध कसे काम करते",
+          "type": "व्हिडीओ"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "नियम"
+        },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "शब्दसंग्रह"
+        },
+        "lesson_plans/express/2020": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/express/2020": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/express/2020": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/express/2020": {
+          "name": "शब्दसंग्रह"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "शब्दसंग्रह"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "शब्दसंग्रह"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "शब्दसंग्रह"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "शब्दसंग्रह"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "शब्दसंग्रह"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "अभ्यासक्रम मार्गदर्शक"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "धड्याचे प्लॅन्स"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "मानक मॅपिंग्ज"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "शिक्षक फोरम"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "शब्दसंग्रह"
         }
       }
     }

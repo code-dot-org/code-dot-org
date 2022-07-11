@@ -4,11 +4,11 @@ title: Paquete de prensa
 
 {{ signup_button }}
 
-# Cómo atraer a los medios de comunicación a tu Hora del Código
+# Cómo atraer a los medios de comunicación a tu actividad de la Hora del Código
 
-### Promueve tu Hora del Código e invita a los medios locales a que vean por qué las ciencias de la computación son importantes en tu escuela.
+### Haz que tu iniciativa de la Hora del Código cause sensación e invita a los medios de comunicación locales a ver por qué la informática es importante en tu escuela.
 
-*Para peticiones de prensa y medios, ponte en contacto con <press@code.org>*
+*Para cualquier consulta de prensa y medios de comunicación, póngase en contacto con <press@code.org>*
 
 * * *
 
@@ -57,7 +57,7 @@ La tecnología transforma todas las industrias del planeta. En 2015, 7 millones 
 
 **Asunto**: Escuela local se une a la misión de introducir a los estudiantes en las ciencias de la computación
 
-Las computadoras están en todas partes, cambian todas las industrias del planeta, pero menos de la mitad de las escuelas enseñan ciencias de la computación. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. La buena noticia es que estamos trabajando para cambiar esto.
+Las computadoras están en todas partes, cambian todas las industrias del planeta, pero menos de la mitad de las escuelas enseñan ciencias de la computación. Las mujeres jóvenes y los estudiantes de grupos raciales y étnicos marginados están muy poco representados en las clases de informática y en la industria tecnológica. La buena noticia es que estamos trabajando para cambiar esto.
 
 Con la Hora del Código, las ciencias de la computación han estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Todos los Apple Store del mundo han organizado una Hora del Código. Incluso el presidente Obama escribió su primera línea de código como parte de la campaña.
 
@@ -77,7 +77,7 @@ Espero tu contacto. <br />
 
 #### Acerca de Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Su visión es que todos los estudiantes, de todas las escuelas, tengan la oportunidad de aprender programación informática. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código, que hasta la fecha ha introducido a más de 100 millones de estudiantes a las ciencias de la computación, y se ha asociado con 70 distritos de escuelas públicas en todo el país para ampliar los programas de ciencias de la computación. Code.org es apoyado por donaciones filantrópicas de corporaciones, fundaciones y personas generosas, como Microsoft, Facebook, Fundación de Infosys USA, Amazon, entre otras. Para obtener más información, visita [code.org]({{ urls/codeorg }}).
+Code.org es una organización pública sin ánimo de lucro (501c3) dedicada a ampliar la difusión de la informática y a aumentar la participación de las mujeres jóvenes y de los estudiantes de otros grupos poco representados. Su visión es que todos los estudiantes, de todas las escuelas, tengan la oportunidad de aprender programación informática. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código, que hasta la fecha ha introducido a más de 100 millones de estudiantes a las ciencias de la computación, y se ha asociado con 70 distritos de escuelas públicas en todo el país para ampliar los programas de ciencias de la computación. Code.org es apoyado por donaciones filantrópicas de corporaciones, fundaciones y personas generosas, como Microsoft, Facebook, Fundación de Infosys USA, Amazon, entre otras. Para obtener más información, visita [code.org]({{ urls/codeorg }}).
 
   
 Encuentra más recursos y ejemplos de correos electrónicos [aquí]({{ promote/sample_emails }}).

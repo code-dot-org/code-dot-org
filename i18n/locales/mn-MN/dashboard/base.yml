@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 mn:
   errors:
     messages:
@@ -1004,7 +1010,7 @@ mn:
         kodable: 'Kodable'
         scratch: 'Ноорог'
         tynker: 'Tynker'
-        other: "Бусад:"
+        other: "Бусад"
       robotics:
         grok: 'Grok сурах'
         kodable: 'Kodable'
@@ -1014,7 +1020,7 @@ mn:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Гайхалтай семинар'
-        other: "Бусад:"
+        other: "Бусад"
       workshop_course:
         csf_af: 'КШУ-ны үндэс (А-F хичээл)'
         csf_express: 'КШУ-ны үндэс (шуурхай сургалтын өмнөх ба шуурхай сургалт)'
@@ -1046,3 +1052,4 @@ mn:
   page_not_found_description: "Таны хайж буй хуудас энэ хаягт байхгүй байна. Вэб хаягийг шалгаад дахин илгээнэ үү. Эсвэл манай нүүр хуудас руу буцна уу."
   page_not_found_button: "Нүүр хуудас руу буцах"
   copy: 'Хуулах'
+  teacher_feedback: "Багшийн хариу үйлдэл"

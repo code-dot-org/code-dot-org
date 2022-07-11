@@ -141,7 +141,7 @@ module Api::V1::Pd::Application
       assert_no_difference "#{PRINCIPAL_APPROVAL_APPLICATION_CLASS.name}.count" do
         put :create, params: @test_params
       end
-      assert_response :success
+      assert_response :conflict
     end
 
     test 'application gets autoscored upon submission' do

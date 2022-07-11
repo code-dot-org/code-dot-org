@@ -39,11 +39,15 @@
     "long_instructions": "Play with these blocks to see what they make Scrat do! \r\n\r\nGet Scrat to the acorn to complete the level.",
     "mini_rubric": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "This should be an angry birds style \"freeplay\"",
-  "audit_log": "[{\"changed_at\":\"2022-01-12T20:47:15.384+00:00\",\"changed\":[\"cloned from \\\"courseB_maze_seq1_2021\\\"\"],\"cloned_from\":\"courseB_maze_seq1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-12T20:47:15.384+00:00\",\"changed\":[\"cloned from \\\"courseB_maze_seq1_2021\\\"\"],\"cloned_from\":\"courseB_maze_seq1_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

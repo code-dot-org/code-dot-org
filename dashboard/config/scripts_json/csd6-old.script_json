@@ -4,17 +4,19 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
       "project_widget_types": [
         "applab"
       ],
       "project_widget_visible": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-22 19:56:27 UTC",
+    "family_name": "csd6-old",
+    "serialized_at": "2022-04-08 15:40:54 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

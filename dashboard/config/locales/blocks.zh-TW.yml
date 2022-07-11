@@ -2,6 +2,24 @@
 zh-TW:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': 超小
+            '0.75': 小
+            '1.00': 中
+            '2.00': 大
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': 超小
+            '0.75': 小
+            '1.00': 中
+            '2.00': 大
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           群組 {GROUP} 每 {N} 小節交替
@@ -371,6 +389,7 @@ zh-TW:
             '"right"': 右排
             '"x"': 十字交叉
             '"plus"': 十字加號
+            '"infinity"': 無窮線
             '"random"': 隨機
       Dancelab_makeAnonymousDanceSprite:
         text: 角色 創建一個新的 {COSTUME} 定位到 {LOCATION}
@@ -453,6 +472,26 @@ zh-TW:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': 全部外星人
             '"BEAR"': 全部熊仔
@@ -480,6 +519,7 @@ zh-TW:
             '"right"': 右排
             '"x"': 十字交叉
             '"plus"': 十字加號
+            '"infinity"': 無窮線
             '"random"': 隨機
       Dancelab_mixColors:
         text: 混合顏色 {COLOR1} 和 {COLOR2}
@@ -543,6 +583,7 @@ zh-TW:
             '"fireworks"': 煙火
             '"flowers"': 花朵
             '"growing_stars"': 星星
+            '"higher_power"': Higher Power
             '"swirl"': 催眠
             '"kaleidoscope"': 萬花筒
             '"lasers"': 鐳射舞池
@@ -1011,7 +1052,22 @@ zh-TW:
       gamelab_clickedOn:
         text: 當角色 {SPRITE} 被點擊
       gamelab_clickedSpritePointer:
-        text: 點擊 {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 向右旋轉
+            new Behavior(spinning_left, []): 向左旋轉
+            new Behavior(fluttering, []): 飄移
+            new Behavior(jittering, []): 抖動
+            new Behavior(wobbling, []): 搖晃
+            new Behavior(wandering, []): 徘徊
+            new Behavior(patrolling, []): 巡邏
+            new Behavior(moving_west_and_looping, []): 向西移動並循環
+            new Behavior(moving_east_and_looping, []): 向東移動並循環
+            new Behavior(moving_north_and_looping, []): 向北移動並迴圈
+            new Behavior(moving_south_and_looping, []): 向南移動並迴圈
       gamelab_comment:
         text: 註解：{COMMENT}
       gamelab_costumeImage:
@@ -1030,6 +1086,12 @@ zh-TW:
         text: 畫線{COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: 角色 {SPRITE} 碰到邊緣就停止
+      gamelab_everyInterval:
+        text: '每隔 {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': 秒
+            '"frames"': 頁框
       gamelab_followingTargets:
         text: 跟隨目標
       gamelab_getAllSprites:
@@ -1065,6 +1127,20 @@ zh-TW:
         text: |-
           如果{NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE}服裝是{COSTUME}"
       gamelab_isKeyPressed:
@@ -1180,6 +1256,13 @@ zh-TW:
             '90': 向下
             '180': " 向左"
             '270': 向上
+      gamelab_makeSpritesWithSize:
+        text: 製作{NUM}個新的{SIZE} {COSTUME}精靈圖
+        options:
+          SIZE:
+            '30': 小
+            '50': 中
+            '100': 大
       gamelab_mirrorSprite:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 向
         options:
@@ -1203,7 +1286,7 @@ zh-TW:
       gamelab_moveToward:
         text: 角色 {SPRITE} 面朝 {TARGET} 移動 {DISTANCE} 像素
       gamelab_newSpritePointer:
-        text: 點擊 {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: 物件 {SPRITE}
       gamelab_patrollingUpDown:
@@ -1247,6 +1330,13 @@ zh-TW:
             "'sound://category_digital/jump_7.mp3'": 定位到
       gamelab_playSpeech:
         text: 游戲言語{SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): 使用方向鍵移動
+            new Behavior(driving_with_arrow_keys, []): 用方向鍵駕駛
+            draggable(): 可拖曳
       gamelab_pointInDirection:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 度
         options:
@@ -1271,6 +1361,8 @@ zh-TW:
         text: 角色 {THIS} 顏色移除
       gamelab_repeatForever:
         text: 重複無限次
+      gamelab_resetTimer:
+        text: 重置計時器
       gamelab_setAnimation:
         text: 角色 {THIS} 造型設為 {ANIMATION}
       gamelab_setBackground:
@@ -1350,6 +1442,14 @@ zh-TW:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': 慢
+            '5': 普通
+            '7': 快
+            '9': extra fast
       gamelab_setTint:
         text: 角色 {THIS} 顏色設為 {COLOR}
       gamelab_setupScoreboard:
@@ -1373,6 +1473,46 @@ zh-TW:
         text: "{SPRITE}說{SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}說{TEXT1}，持續{NUM}秒"
+      gamelab_spriteThink:
+        text: "{SPRITE}思考{SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}思考{TEXT1}，持續{NUM}秒"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE}思考{THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': 哼……
+            '"I am hungry, too."': 我也餓了。
+            '"I only want the biggest goat."': 我只想要最大的山羊。
+            '"I''m a green troll."': 我是一個綠色巨魔。
+            '"No one will cross my bridge."': 沒有誰會越過我的橋。
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE}思考{THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': 哼……
+            '"Time to make friends with the sheep."': 是時候和綿羊做朋友了。
+            '"She''ll never recognize me now."': 她再也認不出我了。
+            '"This costume keeps me warm."': 這套服裝讓我保持溫暖。
+            '"I am actually a wolf."': 我其實是一隻狼。
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE}思考{THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': 哼……
+            '"I''m feeling sleepy."': 我感覺困了。
+            '"No one could ever beat me."': 沒有誰能打敗我。
+            '"I''ve done this race before."': 我以前參加過這個比賽。
+            '"My feet are bigger than Turtle''s feet."': 我的腳比烏龜的腳大。
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE}思考{THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': 哼……
+            '"I''m so hungry."': 我餓極了。
+            '"I''m a visitor in this town."': 我是這個鎮上的遊客。
+            '"If we share, we''ll all have something to eat. "': 如果我們分享，那麼我們大家都有東西吃。
+            '"I''ll trick everyone into giving me their food."': 我會欺騙所有人讓他們把食物給我。
       gamelab_startAvoiding:
         text: "{SPRITE}開始避開{TARGET}"
       gamelab_startFollowing:
@@ -1388,7 +1528,7 @@ zh-TW:
       gamelab_stopGliding:
         text: "{SPRITE}停止滑動"
       gamelab_subjectSpritePointer:
-        text: 點擊 {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:

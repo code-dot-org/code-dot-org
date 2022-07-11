@@ -27,13 +27,14 @@ style_min: true
   - if request.language == "en"
     = view :curriculum_banner
     = view :homepage_below_hero_announcement
-    = view :homepage_below_hero_plane_banner
+    = view :professional_learning_marketing_banner, audience_text: 'you', link_address: '/educate/professional-learning/middle-high', button_label: 'Learn more', homepage: true
+    = view :homepage_ceos_for_cs_banner
     = view :stats_homepage
   - else
     = view :homepage_below_hero_announcement
 
   = view :homepage_sections
   = view :homepage_gallery
-  = view :donor_slider
+  = view :homepage_supporters
 
 = view :homepage_video

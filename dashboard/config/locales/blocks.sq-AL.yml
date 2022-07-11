@@ -2,6 +2,22 @@
 sq:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': mesatar
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': mesatar
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           MOVE1:
@@ -125,6 +141,26 @@ sq:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           LAYOUT:
             '"diamond"': diamant
             '"row"': klasë
@@ -239,6 +275,10 @@ sq:
           CONDITION:
             '"when"': kur
             '"while"': ndërsa
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': sekondat
       gamelab_getProp:
         options:
           PROPERTY:
@@ -248,6 +288,19 @@ sq:
         options:
           UNIT:
             '"seconds"': sekondat
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -282,6 +335,12 @@ sq:
             '90': poshtë
             '180': majtas
             '270': lart
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': mesatar
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

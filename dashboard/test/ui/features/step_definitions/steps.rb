@@ -125,6 +125,11 @@ When /^I switch to the first iframe$/ do
   @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')
 end
 
+When /^I switch to the iframe "([^"]*)"$/ do |iframe_selector|
+  $default_window = @browser.window_handle
+  @browser.switch_to.frame @browser.find_element(:css, iframe_selector)
+end
+
 # Can switch out of iframe content
 When /^I switch to the default content$/ do
   @browser.switch_to.default_content
@@ -152,6 +157,15 @@ end
 
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
   wait_until {@browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';")}
+end
+
+And /^I add another version to the project$/ do
+  steps <<-STEPS
+    And I add code "// comment A" to ace editor
+    And I wait until element "#resetButton" is visible
+    And I press "resetButton"
+    And I click selector "#runButton" once I see it
+  STEPS
 end
 
 When /^I reset the puzzle to the starting version$/ do
@@ -363,6 +377,10 @@ end
 
 When /^I select the "([^"]*)" option in dropdown "([^"]*)"( to load a new page)?$/ do |option_text, element_id, load|
   select_dropdown(@browser.find_element(:id, element_id), option_text, load)
+end
+
+When /^I select the "([^"]*)" option in dropdown with class "([^"]*)"( to load a new page)?$/ do |option_text, class_name, load|
+  select_dropdown(@browser.find_element(:css, ".#{class_name}"), option_text, load)
 end
 
 When /^I select the "([^"]*)" option in dropdown named "([^"]*)"( to load a new page)?$/ do |option_text, element_name, load|
@@ -618,7 +636,7 @@ Then /^I wait to see a congrats dialog with title containing "((?:[^"\\]|\\.)*)"
 end
 
 Then /^I reopen the congrats dialog unless I see the sharing input/ do
-  next if @browser.execute_script("return $('#sharing-input').length > 0;")
+  next if @browser.execute_script("return $('#sharing-dialog-copy-button').length > 0;")
   puts "reopening congrats dialog"
   individual_steps %{
     And I press "again-button"
@@ -730,7 +748,7 @@ Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
   expect(element_displayed?(selector)).to eq(negation.nil?)
 end
 
-And (/^I select age (\d+) in the age dialog/) do |age|
+And(/^I select age (\d+) in the age dialog/) do |age|
   steps %Q{
     And element ".age-dialog" is visible
     And I select the "#{age}" option in dropdown "uitest-age-selector"
@@ -738,12 +756,12 @@ And (/^I select age (\d+) in the age dialog/) do |age|
   }
 end
 
-And (/^I do not see "([^"]*)" option in the dropdown "([^"]*)"/) do |option, selector|
+And(/^I do not see "([^"]*)" option in the dropdown "([^"]*)"/) do |option, selector|
   select_options_text = @browser.execute_script("return $('#{selector} option').val()")
   expect((select_options_text.include? option)).to eq(false)
 end
 
-And (/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |option_alpha, option_beta, selector|
+And(/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |option_alpha, option_beta, selector|
   select_options_text = @browser.execute_script("return $('#{selector} option').text()")
   expect((select_options_text.include? option_alpha) || (select_options_text.include? option_beta)).to eq(true)
 end
@@ -802,11 +820,17 @@ Then /^I print the HTML contents of element "([^"]*)"$/ do |element_to_print|
 end
 
 Then /^I wait to see an image "([^"]*)"$/ do |path|
+  wait_for_jquery
   wait_until {@browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;")}
 end
 
 Then /^I click an image "([^"]*)"$/ do |path|
   @browser.execute_script("$('img[src*=\"#{path}\"]').click();")
+end
+
+Then /^I wait for image "([^"]*)" to load$/ do |selector|
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until {@browser.execute_script("return $('#{selector}').prop('complete');")}
 end
 
 Then /^I see jquery selector (.*)$/ do |selector|
@@ -929,6 +953,14 @@ Given(/^I am assigned to unit "([^"]*)"$/) do |script_name|
   )
 end
 
+Given(/^I am assigned to course "([^"]*)" and unit "([^"]*)"$/) do |course_name, script_name|
+  browser_request(
+    url: '/api/test/assign_course_and_unit_as_student',
+    method: 'POST',
+    body: {script_name: script_name, course_name: course_name}
+  )
+end
+
 Then(/^I fake completion of the assessment$/) do
   browser_request(url: '/api/test/fake_completion_assessment', method: 'POST', code: 204)
 end
@@ -973,10 +1005,10 @@ def js_async(js, *args, callback_fn: 'callback', finished_var: 'window.asyncCall
     js = "var #{callback_fn} = arguments[arguments.length - 1];\n#{js}"
     @browser.execute_async_script(js, *args)
   else
-    js = <<-JS
-#{finished_var} = undefined;
-var #{callback_fn} = function(result) { #{finished_var} = result; };
-#{js}
+    js = <<~JS
+      #{finished_var} = undefined;
+      var #{callback_fn} = function(result) { #{finished_var} = result; };
+      #{js}
     JS
     @browser.execute_script(js, *args)
     wait_short_until {@browser.execute_script("return #{finished_var};")}
@@ -990,23 +1022,23 @@ def browser_request(url:, method: 'GET', headers: {}, body: nil, code: 200, trie
     body = "'#{body.to_param}'" if body
   end
 
-  js = <<-JS
-var xhr = new XMLHttpRequest();
-xhr.open('#{method}', '#{url}', true);
-#{headers.map {|k, v| "xhr.setRequestHeader('#{k}', '#{v}');"}.join("\n")}
-var csrf = document.head.querySelector("meta[name='csrf-token']")
-if (csrf) {
-  xhr.setRequestHeader('X-Csrf-Token', csrf.content)
-}
-xhr.onreadystatechange = function() {
-  if (xhr.readyState === 4) {
-    callback(JSON.stringify({
-      status: xhr.status,
-      response: xhr.responseText
-    }));
-  }
-};
-xhr.send(#{body});
+  js = <<~JS
+    var xhr = new XMLHttpRequest();
+    xhr.open('#{method}', '#{url}', true);
+    #{headers.map {|k, v| "xhr.setRequestHeader('#{k}', '#{v}');"}.join("\n")}
+    var csrf = document.head.querySelector("meta[name='csrf-token']")
+    if (csrf) {
+      xhr.setRequestHeader('X-Csrf-Token', csrf.content)
+    }
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        callback(JSON.stringify({
+          status: xhr.status,
+          response: xhr.responseText
+        }));
+      }
+    };
+    xhr.send(#{body});
   JS
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: tries) do
     result = js_async(js)
@@ -1024,10 +1056,6 @@ And(/^I submit this level$/) do
     And I wait to see ".modal"
     And I press "confirm-button" to load a new page
   }
-end
-
-And(/^I get hidden script access$/) do
-  browser_request(url: '/api/test/hidden_script_access', method: 'POST')
 end
 
 And(/^I wait until I am on the join page$/) do
@@ -1100,9 +1128,7 @@ end
 # Add @no_ie tag to your scenario to skip IE when using this step.
 When /^I press backspace to clear element "([^"]*)"$/ do |selector|
   element = @browser.find_element(:css, selector)
-  while @browser.execute_script("return $('#{selector}').val()") != ""
-    press_keys(element, ":backspace")
-  end
+  press_keys(element, ":backspace") while @browser.execute_script("return $('#{selector}').val()") != ""
 end
 
 When /^I press enter key$/ do
@@ -1302,4 +1328,34 @@ Then /^I click selector "([^"]*)" (\d+(?:\.\d*)?) times?$/ do |selector, times|
     step_list.push("And I wait for 1 seconds")
   end
   steps step_list.join("\n")
+end
+
+When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students in a group$/ do |teacher_name, student_count|
+  add_student_step_list = []
+  student_count.to_i.times do |i|
+    add_student_step_list.push("Given I create a student named \"student_#{i}\"")
+    add_student_step_list.push("And I join the section")
+  end
+
+  add_students_to_group_step_list = []
+  student_count.to_i.times do
+    add_students_to_group_step_list.push("And I add the first student to the first code review group")
+  end
+
+  steps %Q{
+    Given I create a teacher named "#{teacher_name}"
+    And I give user "#{teacher_name}" authorized teacher permission
+    And I create a new student section assigned to "ui-test-csa-family-script"
+    And I sign in as "#{teacher_name}" and go home
+    And I save the student section url
+    And I save the section id from row 0 of the section table
+    #{add_student_step_list.join("\n")}
+    And I wait to see ".alert-success"
+    And I sign out using jquery
+    Given I sign in as "#{teacher_name}" and go home
+    And I create a new code review group for the section I saved
+    #{add_students_to_group_step_list.join("\n")}
+    And I click selector ".uitest-base-dialog-confirm"
+    And I click selector ".toggle-input"
+  }
 end

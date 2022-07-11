@@ -35,12 +35,13 @@ export function getUserSignedInFromCookieAndDom() {
  * Determines signin state and dispatches to the store. Shows a dialog asking
  * the user for their age or to sign in if necessary.
  */
-export default function initSigninState(userType) {
+export default function initSigninState(userType, under13) {
   $(document).ready(() => {
     const store = getStore();
     store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
+
     if (userType) {
-      store.dispatch(setUserType(userType));
+      store.dispatch(setUserType(userType, under13));
     }
 
     const div = document.createElement('div');

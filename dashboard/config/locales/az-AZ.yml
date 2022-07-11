@@ -25,8 +25,8 @@ az:
       messages:
         blank: zəruridir
         blank_plural: tələb olunur
-        invalid: 'səhvdir '
-        invalid_plural: 'səhvdir '
+        invalid: yanlışdır
+        invalid_plural: etibarlı deyil
     attributes:
       user:
         name: Göstərilən adınız
@@ -47,7 +47,7 @@ az:
         age: Yaşınız
         gender: Cins
         edit_header: Hesab Detallarına düzəliş edin
-        finish_sign_up_header: Hesabınızı yaratmağı bitirin
+        finish_sign_up_header: Hesabınızı yaratmağı başa çatdırın
         finish_sign_up_subheader: "<strong>%{email} </strong> Code.org hesabı yaratmağı
           bitirmək üçün aşağıdakı məlumatları doldurun."
         finish_sign_up_subheader_markdown: "**%{email} ** üçün bir Code.org hesabı
@@ -57,33 +57,34 @@ az:
           doldurun."
         finish_sign_up_subheader_provider_markdown: "**%{email}** üçün **%{provider}**
           ilə bir Code.org hesabı yaratmağı bitirmək üçün aşağıdakı məlumatları doldurun."
-        reset_password_token: Hazırki parolunuzu sıfırlayın
+        reset_password_token: İzlədiyiniz parolun sıfırlanması bağlantısı
         error:
           future: gələcəkdə ola bilməz
   beta: beta versiya
   hello: Salam, dünya
   welcome_back: Bir daha xoş gəldiniz, %{name}
-  your_professional_learning_plan: Sizin peşəkar öyrənmə planınız
-  see_your_learning_plan: Öyrənmə planınıza baxın
+  your_professional_learning_plan: peşəkar öyrənmə planınız
+  see_your_learning_plan: Öyrənmə planınıza nəzərdən keçirin
   submit: Göndər
-  unsubmit: Abunə olmamaq
+  unsubmit: Təqdim etməmək
   previous_page: Əvvəlki səhifə
   next_page: Növbəti səhifə
-  next_resource: Növbəti resurs
+  next_resource: Sonrakı resurs
+  done_with_module: Bu Tədris Modulu ilə tamamlanması
   cancel: İmtina et
   okay: Oldu
   or: və ya
   heading_x_of_y: "%{heading} (səhifə %{x} of %{y})"
   join_section:
     code:
-      title: Code.org-un bir hissəsinə qoşulun
+      title: Code.org-un bir bölməsinə qoşulun
       placeholder: Bölmə Kodu (ABCDEF)
-      instructions: 'Zəhmət olmasa onların bölməsinə qoşulmaq üçün müəlliminizin sizinlə
-        bölüşdüyü 6 hərfli kodu daxil edin (nümunə: "ABCDEF").'
+      instructions: 'Zəhmət olmasa bölməyə qoşulmaq üçün müəlliminizin sizinlə göndərdiyi
+        6 hərfli kodu daxil edin (nümunə: "ABCDEF").'
       instructions_short: 6 hərfli bölmə kodunuzu daxil edin
       submit: Qoşulun
   add_hint_form:
-    placeholder: Xahiş olunur ip-ucunu bura daxil edesiniz
+    placeholder: Zəhmət olmasa ipucunu bura daxil edin
     submit: Məsləhət əlavə et
   appname: Code.org
   stage: mərhələ
@@ -92,14 +93,14 @@ az:
   trophies: kuboklar
   courses: marşrutlar
   courses_page:
-    title_student: Kompyuter elmini öyrənin
-    title_teacher: İnformatikanı öyrədin
+    title_student: Komputer elmlərini öyrənin
+    title_teacher: Kompüter elmlərini öyrədin
   unplugged_activity: Sərbəst fəaliyyət
   of: "/"
   more: DAHA ÇOX
   less: DAHA AZ
   try_hoc: Kod Saatında özünüzü sınayın, buraya klikləyin >> 
-  try_k8intro: Bizim K-8 İnformatikaya Giriş kursunu (15-25 saat) sınaqdan keçirin
+  try_k8intro: Bizim K-8 İnformatikaya Giriş kursunu (15-25 saat) nəzərdən keçirin
   k8intro: K-8 yaş qrupu (12-13 yaşlılar) üçün İnformatikaya giriş kursu (15-25 saat)
   already_started: 'Artıq başlamısınız? Burada davam edin >> '
   demos: 'Admin: bütün demolar'
@@ -115,16 +116,16 @@ az:
       dən çıxmaq üçün [buraya vurun] (%{url})."
     already_signedup: Artıq qeydiyyatdan keçmisiniz?
     notyet_signedup: Hələ qoşulmamısınız?
-    google_oauth2: Google Hesabı
+    google_oauth2: Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Hesabı
-    microsoft_v2_auth: Microsoft Hesabı
+    windowslive: Microsoft
+    microsoft_v2_auth: Microsoft
     clever: Ağıllı
-    powerschool: Güc məktəbi
+    powerschool: Powerschool
     forgot_password: Parolunuzu unutmusunuz?
-    migration_success: Uğur! Yeni hesab təcrübəmizi yeniləmisiniz.
-    demigration_success: Yeni hesab təcrübəsi artıq hesabınızda deaktiv edildi.
+    migration_success: Nəaliyyət! Yeni hesab təcrübəmizi yeniləmisiniz.
+    demigration_success: Yeni hesab təcrübəsi hesabınızda deaktiv edildi.
     need_confirmation: Təsdiq göstərişlərini almamisiniz?
     need_unlock: Kilidaçma göstərişlərini almamisiniz?
     not_linked: 'Üzr istəyirik, Code.org hesabınız %{provider} ilə əlaqələndirilməyib.
@@ -160,7 +161,7 @@ az:
       idarə etmək üçün bir hesaba üzv olun. [Hesab olmadan müxtəlif dərslərə və səviyyələrə
       baxa bilərsiniz] (/), ancaq irəliləyişinizi və layihələrinizi saxlamaq üçün
       qeydiyyatdan keçməlisiniz.
-    hoc_already_signed_up_heading: Giriş etmədən başlayın
+    hoc_already_signed_up_heading: Giriş etmədən başla
     hoc_already_signed_up_content: Siz  Kod saatı üçün qeydiyyatdan keçdiniz. Siz
       və şagirdlərinizin bu fəaliyyətdə iştirak etmək üçün Code Studio-a daxil olmağınıza
       ehtiyac yoxdur. Başlamaq üçün,<a href="%{learn_url}">  sinifinizə dərslik seçin
@@ -182,19 +183,19 @@ az:
       nəzərdən keçirə bilərsiniz.
     teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
     title: Code.org da qeydiyyatdan keçin
-    school_name: Məktəbin Adı (vacib deyil)
+    school_name: Təhsil müəssəsinin Adı (vacib deyil)
     school_address: Məktəbin ünvanı (vacib deyil)
     address_placeholder: ünvan, şəhər, vilayət, poçt indeksi
     gender: Cins (vacib deyil)
     birthday: Ad günü (vacib deyil)
     age: Yaşınız
-    user_type: Siz tələbəsiniz ya müəllim?
+    user_type: Siz tələbə yoxsa müəllimsiniz?
     submit: Qeydiyyatdan keçin
     go_to_account: Hesabıma qayıt
     teacher: Müəllimsiniz?
     valid_username: Olar!
     invalid_username: İstifadəçi adı ən azı 5 simvoldan ibarət olmalıdır
-    taken_username: Bu istifadəçi adı artıq götürülüb
+    taken_username: Bu istifadəçi adı artıq mövcuddur
     valid_password: Düzgün parol!
     invalid_password: Parol ən azı 6 simvol olmalıdır
     mismatch_password: Daxil etdiyiniz iki parol üst-üstə düşmür
@@ -218,52 +219,54 @@ az:
     additional_information: Qeydiyyatı davam etdirmək üçün bəzi əlavə məlumatlara
       ehtiyacımız var.
     user_type_button: Hesab növünü yeniləyin
-    user_type_label: Hesab növü
+    user_type_label: Hesab Növü
     user_type_student: şagird
-    user_type_student_desc: 'Bütün kurslarımızı və fəaliyyətlərimizi kəşf edin, üstəlik:'
+    user_type_student_desc: 'Bütün kurslarımızı və fəaliyyətlərimizi kəşf edin, əlavə
+      olaraq:'
     user_type_student_ability_1: Tərəqqinizi və layihələrinizi saxlayın
     user_type_student_ability_2: Müəlliminizin sinif bölməsinə qoşulun
     user_type_teacher: Müəllim
-    user_type_teacher_desc: "Bütün şagirdlərin keçidi var, əlavə olaraq :\n "
+    user_type_teacher_desc: 'Bütün şagirdlərin icazəsi var, əlavə olaraq:'
     user_type_teacher_ability_1: sinif bölmələri yaradın
-    user_type_teacher_ability_2: Tələbə işin təyin etmək və izləmək
-    user_type_teacher_ability_3: Peşəkar dərs üçün qeydiyyatdan keçin
+    user_type_teacher_ability_2: Tələbə işini təyin etmək və izləmək
+    user_type_teacher_ability_3: Peşəkar öyrənmədə iştirak edin
     user_type_teacher_ability_4: Müəllim forumumuzda əlaqə saxlayın
     field_is_required: zəruridir
-    accept_terms: Hesabı yaratmaq üçün razılaşmalısınız.
+    accept_terms: Hesab yaratmaq üçün razılaşmalısınız.
     error: Xəta baş verdi.
     email_preference_question: Kurslarımızdakı yeniliklər, yerli imkanlar və ya digər
-      kompüter elmləri xəbərləri barədə sizə e-poçt göndərə bilərikmi? (təxminən ayda
+      kompüter elmləri xəbərləri barədə sizə e-poçt göndərə bilərik? (təxminən ayda
       bir dəfə)
     email_preference_privacy: "(Gizlilik siyasətimizə baxın)"
     email_preference_yes: Bəli
     email_preference_no: Xeyr
-    email_preference_required: Bir e-poçt təyin etməlisiniz.
+    email_preference_required: Siz e-poçt seçiminizi qeyd etməlisiniz.
     share_teacher_email_reg_partner_question: 'Sizin ərazinizdə, yerli peşəkar inkişaf,
       resurs və hadisələr barəsində xəbər almağınız üçün əlaqə məlumatlarınızın Code.org
       regional əmədaşı%{cdo_regional_partner_desc} ilə paylaşmağımızı istəyirsinizmi? '
     share_teacher_email_reg_partner_preference_yes: Bəli
     share_teacher_email_reg_partner_preference_no: Xeyr
-    share_teacher_email_reg_partner_preference_required: Bir e-poçt təyin etməlisiniz.
-    parent_account_checkbox: Mən övladım adına qeydiyyatdan keçən bir valideyn / qəyyumam
+    share_teacher_email_reg_partner_preference_required: Siz e-poçt seçiminizi qeyd
+      etməlisiniz.
+    parent_account_checkbox: Mən övladımın adından qeydiyyatdan keçən valideyn/qəyyumam.
     parent_account_email_progress_permission: Övladınızın tərəqqisi və layihələri
       haqqında hər hansı bir yeniləmə, kursları və kompüter elmləri ilə bağlı yenilikləri
       sizə göndərə bilərikmi? [(Məxfilik siyasətimizə baxın)] (%{privacy_policy_url})
-    parent_account_email_label: Valideyn / Qəyyum E-poçtu
+    parent_account_email_label: Valideyn /Qəyyum E-poçtu
   school_info:
-    title: Məktəb haqqında məlumat (istəyə görə)
+    title: Təhsil müəssisəsi haqqında məlumat (istəyə görə)
     school_country: Məktəb Ölkəsi
-    select_school_type: Məktəbin Tipi
+    select_school_type: Məktəbin növü
     charter: Nizamnamə
-    private: Gizli
+    private: Şəxsi
     public: İctimai
     homeschool: ev məktəbi
     after_school: Məktəbdən sonra
     other: Digər
-    state: Ştat
-    district: Bölgə
-    other_district_not_listed: Yuxarıda sadalanmayan digər ərazi
-    district_name: Rayon Adı
+    state: dövlət
+    district: Rayon
+    other_district_not_listed: Yuxarıda göstərilməyən digər ərazi
+    district_name: Bölgə Adı
     school: Məktəb
     other_school_not_listed: Digər məktəb yuxarıda göstərilməyib
     school_name: Məktəbin adı
@@ -274,28 +277,28 @@ az:
   signin_form:
     title: Artıq hesabınız var? Daxil olun
     login: E-poçt
-    login_username: Email və ya İstifadəçi adı
+    login_username: E-poçt və ya İstifadəçi adı
     password: Parol
     remember: Məni yadda saxla
     submit: Daxil olun
   signin:
     try_heading: Qeydiyyatdan keçmədən özünüzü proqramlaşdırmada sınamaq istəyirsiniz?
     try_hoc: Əvvəlcə Hour of Code yoxlayın
-    try_20hours: Bizim 20 saatliq İnformatikaya Giriş-i yoxlayın
+    try_20hours: Bizim 20 saatlıq İnformatikaya Giriş-i yoxlayın
   signinsection:
     welcome: "%{section_name} bölməsinə xoş gəldiniz"
     name: Adınızı seçin
     picture: İndi isə gizli şəkilinizi seçin
     words: İndi isə gizli sözünüzü daxil edin
     login: Daxil olun
-    invalid_login: Yanlış giriş, xahiş edirəm yenidən cəhd edin
+    invalid_login: Yanlış giriş, xahiş edirik yenidən cəhd edin
     pair_programming: Kompüterimdə bir ortağım var
     student_privacy_markdown: Niyə tam adınızı görmədiyiniz barədə daha çox məlumat
       əldə edin [here](%{student_privacy_blog}).
   password:
     reset_form:
       title: Parolunuzu unutmusunuz?
-      instructions: Aşağıda e-mail adresinizi daxil edin və biz sizə qurulmanı sıfırlamaq
+      instructions: Aşağıda e-poçt adresinizi daxil edin və biz sizə qurulmanı sıfırlamaq
         üçün şifrə göndərəcəyik.
       email: E-poçt ünvanı
       submit: Göndər
@@ -303,7 +306,7 @@ az:
       captcha_required: Şifrənizi sıfırlamaq üçün xahiş edirəm CAPTCHA-nı doldurun.
       invalid_email: Yalnış bir e-poçt ünvanı ilə qeydiyyatdan keçmiş ola bilərsiniz.
         Şifrə bərpa bağlantısı almaq üçün zəhmət olmasa support@code.org elektron
-        poçtuna göndərin.
+        m'ktub göndərin.
     change_form:
       title: Parolunuzu dəyişin
       new_password: Yeni parol
@@ -324,18 +327,18 @@ az:
     parent_email_added_subject: Code.org-a xoş gəlmisiniz!
   teacher_mailer:
     new_teacher_subject: Code.org-a xoş gəlmisiniz!
-    delete_teacher_subject: 'Code.org bildirişi: Sizin hesabınız silinib'
+    delete_teacher_subject: 'Code.org bildirişi: Sizin hesabınız ləğv olunub'
   section:
     your_section:
-      one: 'Bölməniz:'
-      other: 'Bölmələriniz:'
+      one: 'Sizin Bölməniz:'
+      other: 'Sizin Bölmələriniz:'
     code_with_teacher: "%{section_code} ilə %{teacher_name}"
     confirm:
       remove: Bu bölmədən çıxmaq istədiyinizə əminsiniz?
     default_name: Adsız Bölmə
     remove: " (bölməni sil)"
     type:
-      picture: Şəkil Şifrəsi
+      picture: Şəkil Şifrə
       word: Məxfi söz
       email: E-poçt
       google_classroom: Google Classroom
@@ -355,48 +358,49 @@ az:
         olmasa, onlardan burada qeydiyyatdan keçməyi xahiş edin və sonra onları yenidən
         əlavə etməyə çalışın"
       section_not_found: "'%{section_code}' kodu olan bir bölmə tapılmadı."
-      blank_code: Seçilmiş kodu daxil edin
+      blank_code: Bölmə kodunu daxil edin
       cant_join_own_section: Bağışlayın, öz bölmənizə qoşula bilməzsiniz.
       provider_managed_section: Bu bölmə başqa bir provayder tərəfindən idarə olunur
         və qoşula bilməz. Xahiş edirəm müəlliminizdən sizi%{provider} vasitəsilə əlavə
         etməsini və bölmələrini yenidən sinxronlaşdırmasını istəyin.
-      restricted_section: Kilidli olduğu üçün sizi %{section_code} hissəsinə əlavə
-        edə bilmədik. Xahiş edirəm kömək üçün müəlliminizlə əlaqə saxlayın.
-      full_section: Sizi %{section_code} hissəsinə əlavə edə bilmədik, çünki içərisində
-        %{section_capacity} tələbə var. Xahiş edirəm kömək üçün müəlliminizlə əlaqə
-        saxlayın.
+      restricted_section: Sizi %{section_code} bölməsinə əlavə edə bilmədik, çünki
+        o, kilidlidir. Kömək üçün müəlliminizlə əlaqə saxlayın.
+      full_section: Sizi %{section_code} bölməsinə əlavə edə bilmədik, çünki orada
+        artıq %{section_capacity} tələbə var. Kömək üçün müəlliminizlə əlaqə saxlayın.
+      not_participant_type: 'Bölmə üçün iştirakçı tipinə uyğun gəlmədiyiniz üçün,
+        sizi  %{section_code}  bölməsinə əlavə edə bilmədik. '
     mail:
       student_disassociated:
-        subject: 'Code.org bildirişi: %{student_name} artıq sizin tələbənizlə əlaqələndirilməyib'
+        subject: 'Code.org bildirişi: %{student_name} artıq tələbəniz kimi əlaqələndirilməyib.'
   reports:
     error:
-      access_denied: Bu şəxsin statistikasına icazəniz yoxdur
+      access_denied: Sizin bu şəxsin statistikasına icazəniz yoxdur.
   crud:
     new_model: Yeni %{model}
-    show: Göstər
-    edit: Düzəliş et
-    edit_model: "%{model} düzəliş et"
-    update: Yenilə
+    show: Göstərmək
+    edit: Düzəliş etmək
+    edit_model: "%{model} düzəliş etmək"
+    update: Yeniləmək
     submit: Göndər
-    destroy: Məhv et
-    back: Geri
+    destroy: Məhv etmək
+    back: Geri qayıtmaq
     confirm: Əminsiniz?
     created: "%{model} müvəffəqiyyətlə yaradıldı."
     updated: "%{model} müvəffəqiyyətlə yeniləndi."
-    destroyed: "%{model} uğurla silindi."
+    destroyed: "%{model} uğurla ləğv edildi."
     access_denied: Bu %{model} -ə girişiniz yoxdur.
   devise:
     registrations:
       user:
         user_type_change_email_mismatch: Təqdim etdiyiniz e-poçt ünvanı bu hesab üçün
-          e-poçt ünvanı ilə uyğun gəlmir
-        personal_login_created_email: Şəxsi girişinizi uğurla yaratdınız. Artıq hesabınıza
-          e-poçt və şifrə ilə daxil ola bilərsiniz
+          e-poçt ünvanı ilə uyğun gəlmir.
+        personal_login_created_email: Şəxsi girişinizi uğurla tamamladınız. Artıq
+          hesabınıza e-poçt və şifrə ilə daxil ola bilərsiniz
         personal_login_created_username: Şəxsi girişinizi uğurla yaratdınız. İndi
           istifadəçi adınız (%{username}) və parolunuzla hesabınıza daxil ola bilərsiniz
   nav:
     header:
-      finished_hoc: Kod Saatımı bitirdim
+      finished_hoc: Mən bitirdim!
       sign_in_to_save: Nəticələri itirməmək üçün daxil olun
       my_dashboard: İdarəetmə panelim
       course_catalog: Kurs kataloqu
@@ -405,11 +409,17 @@ az:
       help_support: Kömək və dəstək
       report_bug: Problemi bildirin
       report_abuse: Şikayət etmək
-      teacher_community: Müəllim icması
+      teacher_community: Müəllim forumu
       professional_learning: Peşəkar təhsil
       documentation: Təlimat və sənədlər
       tutorials: Dərsliklər
-      web_lab_documentation: Veb laboratoriyası sənədləri
+      app_lab_documentation: Tətbiq Laboratoriyasının Sənədləri
+      app_lab_tutorials: Tətbiq Laboratoriyası Dərslikləri
+      game_lab_documentation: Oyun Laboratoriya sənədləri
+      game_lab_tutorials: Oyun Laboratoriya Dərslikləri
+      sprite_lab_documentation: Sprite Laboratoriyasının Sənədləri
+      sprite_lab_tutorials: Sprite Laboratoriyası Dərslikləri
+      web_lab_documentation: Veb laboratoriya sənədləri
       educate_overview: Təlimçi üçün xülasə
       educate_elementary: İbtidai məktəb
       educate_middle: Orta məktəb
@@ -417,14 +427,14 @@ az:
       educate_hoc: Kod Saatı
       educate_partner: Bizə tərəfadaş olun
       educate_beyond: Daha çox Code.org
-      educate_inspire: Bir şagirdi həvəsləndirin
+      educate_inspire: Bir şagirdi ruhlandırmaq
       educate_community: Onlayn icma
       educate_tools: Alətlər və videolar
       about_us: Haqqımızda
-      about_leadership: Rəhbərlik
+      about_leadership: Liderlik
       about_donors: Donorlar
       about_partners: Tərəfdaşlar
-      about_team: Tam komanda
+      about_team: Bütün komanda
       about_news: Xəbər otağı
       about_evaluation: Qiymətləndirmə
       about_jobs: Vakansiyalar
@@ -440,19 +450,19 @@ az:
       legal_tos: Xidmət şərtləri
     user:
       classroom: Müəllimin ev səhifəsi
-      district_dashboard: Rayon İdarəetmə paneli
+      district_dashboard: Bölgə İdarəetmə paneli
       label: Salam %{username}
       stats: Mənim nəticələrim
       my_projects: Mənim layihələrim
-      settings: Mənim hesabım
-      logout: Çıxın
+      settings: Hesab parametrləri
+      logout: Çıxış
       signin: Daxil olun
-      signup: Hesab yaradın
+      signup: Hesab yaratmaq
       already_registered: Artıq qeydiyyatdan keçmisiniz?
-      pair_programming: cüt proqramlaşdırma
+      pair_programming: İkili proqramlaşdırma
       team: Komanda
-      driver: Sürücü
-      navigator: Tərəfdaş
+      driver: Daxil oldu
+      navigator: Ortaq
       create: Düzəlt
       algebra_game: Cəbr
       applab: Proqram Labı
@@ -470,10 +480,10 @@ az:
       gumball: 'Heyrətamiz Gumball Dünyası '
       iceage: Buz dövrü
       infinity: Sonsuz sayda
-      makerlab: Maker alət dəsti
+      makerlab: təsisçisi alət dəsti
       minecraft_adventurer: Minecraft Macəraçısı
       minecraft_aquatic: Minecraft Hidrosferi
-      minecraft_codebuilder: 'Minecraft: Kod bağlantısı'
+      minecraft_codebuilder: 'Maynkraft: Kod bağlantısı'
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft Hero
       playlab: Oyun labı
@@ -481,11 +491,13 @@ az:
       poetry: Şeir
       scratch: Cızıq
       sports: İdman
+      spritelab: Sprite Laboratoriyası
       starwars: Star Wars
       starwarsblocks: Star Wars (Blokları)
       starwarsblocks_hour: Star Wars (Blokları)
       loading: Yüklənir...
       weblab: Veb Laboratoriyası
+      view_all: Bütün layihələrə baxın...
     popup:
       progress_for_user: "%{name} adlı şagirdin nəticələri"
       progress: Sizin nəticələriniz
@@ -500,30 +512,30 @@ az:
   teacher:
     answer: Cavab
     dashboard: Müəllimin idarəetmə paneli
-    for_teachers_only: Ancaq müəllimlər üçün
+    for_teachers_only: Yalnız müəllimlər üçün
     title:
-      one: 'Müəlliminiz:'
+      one: 'Sizin müəlliminiz:'
       other: 'Müəllimləriniz:'
     remove: "(müəllimi sil)"
     confirm:
       remove: Bu müəllimi silmək istədiyinizə əminsiniz?
     students:
-      dashboard: Müəllimlər panelinə gedin
+      dashboard: Müəllim panelinə gedin
     user_not_found: Müəllim tapılmadı.
     student_teacher_disassociated: "%{section_code} bölməsini %{teacher_name} ilə
       tərk etmisiniz."
     panel:
       answer_viewer: Müəllim Paneli
       student: şagird
-      viewing_solution: Həllə baxılır
-      try_it_yourself: özünüz edin
+      viewing_solution: Həllə baxın
+      try_it_yourself: Özünüz cəhd edin
       section: Bölmə
       example: Nümunə Həll
       example_with_number: Nümunə Həll %{solution_number}
-      submitted_on: 'Göndərilib:'
-      last_updated: 'Son yenilənmə:'
-      unsubmit: Abunə olmamaq
-      worked_with: Ilə işlədi
+      submitted_on: 'Təqdim edildi:'
+      last_updated: 'Son yeniləndi:'
+      unsubmit: Təqdim etməmək
+      worked_with: İlə işlədi
       update_lock_settings: Kilid parametrlərini buradan yeniləyin.
       clear_response: Cavabı təmizləyin
     student_code_view_diabled: Bu fəaliyyət üçün tələbə kodu görünə bilməz.
@@ -535,27 +547,28 @@ az:
     new_email_hint: "(bu e-poçt ünvanına e-poçt ala biləcəyinizə əmin olun)"
     new_password_hint: "(dəyişmək istəmirsinizsə, boş buraxın)"
     current_password_hint: "(dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)"
-    delete: Hesabı Sil
-    delete_text: Hesabınızı silmək, bu hesabla əlaqəli bütün məlumatları və tərəqqini
+    delete: Hesabı ləğv etmək
+    delete_text: Hesabınızı ləğv etmək, bu hesabla əlaqəli bütün məlumatları və tərəqqini
       siləcəkdir
-    delete_text_teacher_managed_note: Bu hesabı silmək üçün icazəniz yoxdur, çünki
-      müəlliminiz tərəfindən idarə olunur. Hesabınızı silməzdən əvvəl müəllimləriniz
-      sizi bölmələrindən kənarlaşdırmalıdır.
-    delete_text_teacher_note: 'Xahiş edirik unutmayın: hesabınızı silmək tələbələrin
+    delete_text_teacher_managed_note: Bu hesabı silmək icazəniz yoxdur, çünki o, müəlliminiz
+      tərəfindən idarə olunur. Siz hesabınızı silməzdən əvvəl müəllimləriniz sizi
+      öz bölmələrindən çıxarmalı olacaq.
+    delete_text_teacher_note: 'Xahiş edirik unutmayın: hesabınızı ləğv etmək tələbələrin
       hesablarını silməyəcəkdir.'
-    delete_confirm: Hesabınızı silmək istədiyinizə əminsiniz?
+    delete_confirm: Hesabınızı ləğv etmək istədiyinizə əminsiniz?
     deleted_user: istifadəçini sil
     no_password_because_oauth: Üçüncü tərəf təminatçısı ilə daxil olduğunuz üçün parol
       yoxdur.
     no_password_because_sponsored: Şifrənizi idarə etmək üçün müəlliminizə müraciət
       edin.
     create_personal_login: Şəxsi parol girişi yaradın
-    create_personal_login_under_13_info: Tədris ili bitdikdən sonra da Code.org hesabınızı
-      istifadə etməyə davam etmək istəyirsinizsə, valideyninizdən / qəyyumunuzdan
-      aşağıda öz şəxsi girişinizi yaratmağınıza kömək etməsini xahiş edin.
+    create_personal_login_under_13_info: Əgər siz tədris ilinin bitməsindən sonra
+      belə Code.org hesabınızdan istifadə etməyə davam etmək istəyirsinizsə, aşağıda
+      öz şəxsi girişinizi yaratmağınıza kömək etmək üçün valideyn/qəyyumunuzdan xahiş
+      edin.
     create_personal_login_under_13_username: İstifadəçi adı (əsl adınızı istifadə
       etməyin!)
-    create_personal_login_under_13_parent_email: Valideyn / qəyyum elektron poçt ünvanı
+    create_personal_login_under_13_parent_email: Valideyn / qəyyum elektron poçt adresi
     create_personal_login_info: Code.org hesabınızı tədris ili bitdikdən sonra da
       istifadə etməyə davam etmək istəyirsinizsə, aşağıda öz girişinizi yarada bilərsiniz.
     create_personal_login_link_account: Bunun əvəzinə “Bağlı Hesabları İdarə et” bölməsi
@@ -576,7 +589,7 @@ az:
       əlaqə saxlamaq üçün saxlanılmır. Şagirdlər Code.ord-dan şifrə bərpasından başqa
       hallarda E-mail qəbul etməyəcəklər. Daha çox məlumat üçün [gizlilik politikamıza](%{privacy_policy_url})
       baxın.'
-    enter_new_login_info: Yeni giriş məlumatlarınızı daxil edin
+    enter_new_login_info: Yeni giriş məlumatlarınızı daxil etmək
     confirm_secret_words: Mövcud gizli sözlərinizi daxil edərək sizin olduğunuzu təsdiq
       edin
     parent_email_label: Valideyn / qəyyum e-poçtu (istəyə görə)
@@ -587,7 +600,7 @@ az:
     account_successfully_updated: Hesab uğurla güncəlləndi.
     auth_option_saved: "%{provider} hesabınızı %{email} e-poçtu ilə uğurla əlaqələndirdiniz."
     auth_option_saved_no_email: "%{provider} hesabınızı uğurla əlaqələndirdiniz."
-    update_email: Yenilə
+    update_email: Yeniləmək
     for_parents_and_guardians: Valideynlər və qəyyumlar üçün
     link_a_parent_email: Övladınızın irəliləməsi və layihələri haqqında məlumat almaq
       üçün bir valideyn / qəyyum e-poçt ünvanını bu hesaba bağlayın. Parolun bərpası
@@ -615,8 +628,7 @@ az:
     teacher_student_count: Sizin %{count} şagirdiniz var.
     teacher_averages: Şagirdləriniz %{trophy_max} "Anlayışların mənimsənilməsi" kubokundan
       orta hesabla %{trophy_average} dənəsini qazandılar.
-    teacher_print_certificates: Bu kursu bitirən tələbələr üçün sertifikatları çap
-      edin
+    teacher_print_certificates: Kursu bitirən tələbələrin sertifikatları çap edin
     teacher_read_blog: Xəbərləri və materiallarımızdakı yeniləmələri Pedaqoq Bloqumuzda
       oxuyun
     classroom: Sizin sinfiniz
@@ -634,12 +646,12 @@ az:
       Sinif mükafatları üçün $ 1,000-a qədər.'
     tryfirst: 'Yada, siz birinci dəfə üçün yoxlayın, və sonra qeydiyyatdan keçin:'
     trynow: Elə indi sınaqdan keçirin
-    add_hint_help: Zəhmət olmasa Code.org təlimlərinə ağıllı göstərişlər əlavə etməyimizə
+    add_hint_help: Zəhmət olmasa Code.org təlimlərinə ağıllı ipucları əlavə etməyimizə
       kömək edin
     20hour_overview: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın
       əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan
       siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
-    test_videos_help: Yeni video pleyerinizi məktəbinizdə sınayın
+    test_videos_help: Yeni video pleyerinizi məktəbinizdə test edin
     try_beta_courses: Yeni! K-5 tələbələri üçün beta kurslarımızı sınayın
     use_as_teacher: Saytı müəllim olaraq istifadə edin
     heading_elementary_markdown: |-
@@ -647,7 +659,7 @@ az:
 
       # Kompüter Elmləri Əsasları (hər yaşda)
     your_gallery: Qalereya
-    no_primary_course: Code Studiosu kursunu yoxla
+    no_primary_course: Code Studiosu kursunu yoxlayın
     choose_next_course: Aşağıdan birini seçərək Code Studio kursunu sınayın
     print_certificate: Sertifikatı çap edin
   certificate_sponsor_message: "%{sponsor_name} sizin təlim sponsor üçün səxavətli
@@ -658,19 +670,21 @@ az:
     section_code_cant_be_current_section: Mövcud bölmə yeni bölmə ilə eyni ola bilməz.
     current_section_dne: Üzr istəyirik, lakin %{current_section_code} bölməsi mövcud
       deyil. Zəhmət olmasa başqa bir bölmə kodu daxil edin.
-    student_ids_not_entered: Zəhmət olmasa tələbə id-lərini təqdim edin.
-    student_not_found: Bir və ya daha çox tələbə tapıla bilmədi.
+    student_ids_not_entered: Zəhmət olmasa tələbə eyniləşdirmələrini təqdim edin.
+    student_not_found: Bir və ya daha çox tələbə tapılmadı
     all_students_must_be_in_current_section: Hal-hazırda bütün tələbələr bölmənizə
       yazılmalıdır.
-    already_enrolled_in_new_section: Bu tələbələri köçürə bilməzsiniz, çünki onlar
-      artıq yeni hissədədirlər.
-    third_party_login: Siz üçüncü tərəf aracılığı ilə sinxronizasiya edilmiş bölmələrə
-      şagirdləri yönləndirə bilməzsiniz.
+    already_enrolled_in_new_section: Siz bu tələbələri köçürə bilməzsiniz, çünki onlar
+      artıq yeni bölmədədirlər.
+    third_party_login: Siz tələbələri üçüncü tərəf aləti ilə sinxronlaşdırılan bölməyə
+      köçürə bilməzsiniz.
+    not_correct_participant_type: Bu istifadəçiləri köçürə bilməzsiniz, çünki onların
+      yeni bölmədə iştirakçı olmaq icazələri yoxdur.
   share:
     title: Code Studio-da öyrənin
-    description: Hər kəs kompüter elmini öyrənə bilər. Kodlarla oyunlar, proqramlar
+    description: Hər kəs kompüter elmlərini öyrənə bilər. Kodlarla oyunlar, proqramlar
       və sənət hazırlayın.
-    try_hour_of_code: Kodun bir saatını  yoxlayın !
+    try_hour_of_code: Kodun bir saatını yoxlayın !
   gender:
     male: Kişi
     female: Qadın
@@ -685,10 +699,10 @@ az:
       <a href="https://code.org/about/partners">tərəfdaşlarımıza</a>, <a href="https://code.org/about/team">genişləndirilmiş
       komandamıza</a>, video heyyetimıza və <a href="https://code.org/about/advisors">təhsil
       məsləhətçilərimizə</a> təşəkkür edirik.
-    help_from_html: 'Biz, özəlliklə Amazon, Google, və Microsoft materiallarını yaratmaqda
-      kömək edən mühəndisləri tanımaq istərik. '
-    help_from_html_old: Amazon, Google və Microsoft mühəndisləri bu materialların
-      hazırlanmasına kömək etdilər.
+    help_from_html: Biz xüsusilə bu materialların yaradılmasında kömək edən Amazon,
+      Google və Microsoft mühəndislərini tanımaq istəyirik.
+    help_from_html_old: Amazon, Google və Microsoft-dan olan mühəndislər bu materialların
+      yaradılmasına kömək ediblər.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Bütün hüquqlar
       qorunur.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
       Bütün hüquqlar qorunur.<br />Frozen&#8482; &copy; %{current_year} Disney. Bütün
@@ -705,34 +719,34 @@ az:
       Electronic Arts Inc. Bütün hüquqlar qorunur.
     code_from_html: Code.org <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       the GNU LGPL 2.1</a> lisenziyalı p5.play-dən istifadə edir.
-    powered_by_aws: Amazon Web Services və "Powered by AWS" loqotipi Amazon.com, Inc.
-      və ya onun Amerika Birləşmiş Ştatları və/və ya digər ölkələrdəki ticarət nişanlarıdır.
+    powered_by_aws: Amazon Veb Xidmətləri və “Powered by AWS” loqosu Amazon.com, Inc.
+      və ya onun ABŞ və/və ya digər ölkələrdəki filiallarının ticarət nişanlarıdır.
     built_on_github: Microsoft tərəfindən GitHub-da qurulub
-    google_copyright: "&copy; Google Inc. icazəsi ilə istifadə olunur. Google Classroom,
-      Google Inc-in ticarət markasıdır"
+    google_copyright: Google Inc. icazəsi ilə istifadə olunur. Google Classroom Google
+      Inc-in ticarət nişanıdır.
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE loqosu və Hour
       of Code&reg; Code.org'un nişanıdır."
     copyright: Müəllif Haqqı
     more: Daha çox
     feedback: Rəy verin
-    translate: Sizin dilinizə tərcümə etməkdə bizə kömək edin
+    translate: Məzmunumuzu tərcümə etmək üçün könüllü olun.
     support: Dəstək
     support_url: http://support.code.org
     tos_short: Şərtlər
     tos: Xidmət şərtləri
     privacy: Məxfilik siyasəti
     secure: Təhlükəsiz versiya
-    report_abuse: Şikayət et
+    report_abuse: Sui-istifadəni şikayət et
     built_on_code_studio: Code Studio-da inşa edilmişdir
     make_my_own_app: Öz tətbiqimi hazırla
     how_it_works: Necə işləyir (Kodu göstər)
-    try_hour_of_code: Kodun bir saatını  yoxlayın !
+    try_hour_of_code: Kodun bir saatını yoxlayın !
     store: Mağaza
   reference_area:
     title: Kömək lazımdır?
     subtitle: Bu videolara və məsləhətlərə baxın
     teacher: Həllə baxın
-    teacher_no_solution: Həll görməyi dayandırın
+    teacher_no_solution: Həlli görməyi dayandırın
     auth_error: Həlli görməyə səlahiyyətiniz yoxdur.
     submit: Sənətçinin yerini yeniləyin
     direction: Istiqamətə başlayın (dərəcələrdə)
@@ -741,9 +755,9 @@ az:
     notes: Video yoxdur? Qeydləri göstər.
     notes_coming_soon: Bu video üçün qeydlər tezliklə gələcək.
     autoplay_option: Videoların avtoifası
-    download: Videonu endir
+    download: Videonu yükləyin
     show_notes: Qeydləri göstərin
-    show_video: Video göstər
+    show_video: Video göstərin
     label: Video
   compatibility:
     upgrade:
@@ -751,19 +765,19 @@ az:
         dəstəklənən brauzerlətimizdən birinə yüksəldəsiniz%{supported_browsers_url}.
         Siz səhifəni izləyə bilərsiniz, amma funksiyaları işlədə bilməzsiniz.
       link: Daha ətraflı
-      applab_unsupported_tablet: App Lab siçan olan masaüstü və ya dizüstü kompüterlərdə
-        daha yaxşı işlətyir. Siz indi işlətdiyiniz cihaz ilə bu vasitəni işlədəndə
-        problem yaşaya bilərsiniz.
-      gamelab_unsupported_tablet: Game Lab siçan olan masaüstü və ya dizüstü kompüterlərdə
-        daha yaxşı işlətyir. Siz indi işlətdiyiniz cihaz ilə bu vasitəni işlədəndə
-        problem yaşaya bilərsiniz.
-      weblab_unsupported_locale_storage: Siz Web Lab-ı  gizli brauzer rejimində işlədərkən
-        problem yaşaya bilərsiniz. Xahiş edirik proyektinizi normal rejimdə yenidən
-        yükəyin. Narahatçılıq üçün üzr istəyirik.
+      applab_unsupported_tablet: Tətbiq Laboratoriyası siçan və klaviatura ilə masaüstü
+        və ya noutbukda ən yaxşı şəkildə işləyir. Cari cihazınızda bu alətdən istifadə
+        etməklə bağlı problemlərlə üzləşə bilərsiniz.
+      gamelab_unsupported_tablet: Game Lab ən yaxşı şəkildə siçan və klaviatura ilə
+        masaüstü və ya noutbukda işləyir. Cari cihazınızda bu alətdən istifadə etməklə
+        bağlı problemlərlə üzləşə bilərsiniz.
+      weblab_unsupported_locale_storage: Şəxsi Baxış rejimində Veb Laboratoriyasından
+        istifadə etməklə bağlı problemlərlə üzləşə bilərsiniz. Lütfən, layihənizi
+        normal rejimdə yenidən yükləyin. Narahatçılığa görə üzr istəyirik.
   slow_loading: Bu, adi halda olduğundan daha çox vaxt aparır...
   try_reloading: Səhifəni yenidən yükləməyə cəhd edin
-  next_stage: Bitdi! Növbəti dərsə keçin
-  download_pdf: Dərs planını aç
+  next_stage: Bitdi! Növbəti mərhələyə keçin!
+  download_pdf: Dərs planını açın
   lesson_plan: Dərs Planı
   view_lesson_plan: Dərs palnına baxın
   pdf_download: PDF faylını endir
@@ -775,7 +789,7 @@ az:
     flappy_og_title: Flappy Oyunumu yoxlayın
     studio_og_title: Play Lab Tətbiqimi yoxlayın
     check_out_what_i_made: Nə etdiyimi yoxlayın
-    og_description: Kodu özüm Code.org ilə yazdım
+    og_description: Kodu özüm Code.org ilə yazdım.
     phone_number_not_allowed: İçində bir telefon nömrəsi var deyəsən. Mətni dəyişdirməyə
       çalışın.
     address_not_allowed: Görünür içərisində bir ünvan var. Mətni dəyişdirməyə çalışın.
@@ -784,28 +798,30 @@ az:
   builder:
     created: Yeni bir skript yaratdınız.
     destroyed: Bir skripti məhv etdiniz.
-    manage: Səviyyə qurun
+    manage: Səviyyələri qurun.
     view: Görünüş
-    back: Skriptlərə qayıdın
+    back: Skriptlərə qayıdın.
     success: Blokları uğurla düzəltdiniz.
     level:
-      create: Yeni səviyyə yarat
+      create: Yeni səviyyə yaradın
       current: Cari Səviyyələr
       unused: İstifadə olunmamış səviyyə
   upsell:
     applab:
       title: Proqram Labı
-      body: App Lab sadə tətbiqetmələr hazırlaya biləcəyiniz bir proqramlaşdırma mühitidir.
-        Bir tətbiq hazırlayın, işləməsi üçün bloklarla və ya JavaScript ilə kod hazırlayın,
-        sonra tətbiqinizi saniyələr içində paylaşın.
-      body_short: Bir tətbiq dizayn edin, onu işlətmək üçün bloklarla və ya JavaScriptlə
-        kodlaşdırın, sonra tətbiqinizi saniyələr içində paylaşın.
+      body: App Lab sadə proqramlar hazırlaya biləcəyiniz proqramlaşdırma mühitidir.
+        Tətbiq dizayn edin, onu işləməsi üçün bloklar və ya JavaScript ilə kodlayın,
+        sonra tətbiqinizi saniyələr ərzində paylaşın.
+      body_short: Tətbiq dizayn edin, onu işləməsi üçün bloklar və ya JavaScript ilə
+        kodlayın, sonra tətbiqinizi saniyələr ərzində paylaşın.
       audience: 13+ yaş
-      cta: "Öyrənin necə \n"
+      cta: Öyrənin necə
     dance:
       title: Rəqs şənliyi
     dance-2019:
       title: Rəqs şənliyi
+    hello-world:
+      title: Salam Dünya
     hoc:
       title: Ənənəvi labirint
       body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq
@@ -822,7 +838,7 @@ az:
       body_short: İnformatikanın əsaslarını 2-4-cü kursların sürətləndirilmiş versiyası
         ilə öyrənin.
     hoc2014:
-      try_new_tutorial: 'Bizim betadaki yeni Kod Saatı konsultasiyamızı təcrübə edin. '
+      try_new_tutorial: Bizim betadaki yeni Kod Saatı konsultasiyamızı təcrübə edin.
       try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
     gallery:
       title: Qalereya
@@ -830,117 +846,124 @@ az:
         baxın
     gamelab:
       title: Oyun labaratoriyası
-      body: Game Lab, bir-biri ilə qarşılıqlı əlaqədə olan obyektlər və simvollarla
-        sadə animasiyalar və oyunlar yarada biləcəyiniz bir proqramlaşdırma mühitidir.
+      body: Game Lab bir-biri ilə qarşılıqlı əlaqədə olan obyektlər və personajlarla
+        sadə animasiyalar və oyunlar yarada biləcəyiniz proqramlaşdırma mühitidir.
       audience: 13+ yaş
-      cta: "Öyrənin necə \n"
+      cta: Öyrənin necə
     hoc-encryption:
-      body: Şagirdlər şifrəli mesajlar yaratma və sındırma üsullarını öyrənəcəklər.
+      title: Sadə Şifrələmə
+      body: Tələbələr şifrələnmiş mesajların yaradılması və sındırılması üsullarını
+        öyrənəcəklər.
     weblab:
       title: veb-laboratoriya (beta)
-      body: Web Lab sizin HTML və CSSdən istifadə edərək sadə veb səhifələri yarada
-        biləcəyiniz proqramlaşdırma mühitidir. Veb səhifələrinizi dizayn edin və saytınızı
-        saniyələr içində paylaşın.
+      body: Web Laboratoriyası HTML və CSS-dən istifadə edərək sadə veb səhifələr
+        yarada biləcəyiniz proqramlaşdırma mühitidir. Veb səhifələrinizi dizayn edin
+        və saytınızı saniyələr ərzində paylaşın.
       audience: 13+ yaş
-      cta: "Öyrənin necə \n"
+      cta: Öyrənin necə
     frozen:
       title: Buzlu ürək
     starwars:
       title: Star Wars
     infinity:
       title: Infinity oyun laboratoriyası
-      body: Disney Infinity personajlarının oynadığı bir hekayə və ya oyun yaratmaq
-        üçün Play Labdan istifadə edin.
+      body: Disney Infinity personajlarının oynadığı hekayə və ya oyun yaratmaq üçün
+        Play Lab-dan istifadə edin.
     minecraft:
       title: Minecraft
       body: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
     minecraft2016:
       title: Minecraft
-      body: Öz Minecraft versiyanızda heyvanları və başqa Minecraft varlıqlarını proqramlaşdırın.
+      body: Minecraft-ın öz versiyanızda heyvanları və digər Minecraft canlılarını
+        proqramlaşdırın.
     aquatic:
       title: Minecraft
     hero:
       title: Minecraft
+      body: Minecraft yeni fəaliyyətlə Kod Saatı üçün geri döndü! Kod ilə Minecraft-a
+        səyahət.
     sports:
       title: İdman
-      body: Bir basketbol oyunu hazırlayın və ya qarışdırın və idmanlar boyunca uyğunlaşdırın.
+      body: Basketbol oyunu hazırlayın və ya idman növlərini qarışdırın və uyğunlaşdırın.
     text-compression:
-      body: Bu dərsdə şagirdlər qəlibləri simvollarla əvəz etməklə mətni qısaltmaq
-        üçün Mətn Qısaltma Vasitəsindən istifadə edəcəklər.
+      title: Mətnin sıxılması
+      body: Bu dərsdə şagirdlər nümunələri simvollarla əvəz edərək mətni sıxmaq üçün
+        Mətn Sıxılma Vidcetindən istifadə edəcəklər.
     unplugged:
       title: Sərbəst dərslər
       audience: 4+ yaş
-      body: Biz sinfinizdə istifadə etməniz üçün sizə bir siyahı sərbəst işlər toplamışıq.
-        İndi siz sinfinizdə kompüterin olsa da, olmasa da, kompüter elmlərinin əsaslarını
-        öyrədə bilərsiz! Bu dərsləri sərbəst kurs və ya hər hansı kompüter elmi kursu
-        üçün tamamlayıcı dərs kimi istifadə etməyə çalışın.
-      body_short: Əgər kompüterləriniz yoxdursa, sinifdə bu sərbəst işləri etməyə
+      body: Sinifinizdə istifadə etməyiniz üçün şəbəkədən çıxarılan dərslərin siyahısını
+        tərtib etdik. İndi siz sinifinizdə kompüterlərin olub-olmamasından asılı olmayaraq
+        kompüter elminin əsaslarını öyrədə bilərsiniz! Bu dərsləri müstəqil kurs kimi
+        və ya hər hansı kompüter elmləri kursu üçün əlavə dərslər kimi istifadə etməyə
         çalışın.
+      body_short: Əgər kompüteriniz yoxdursa, sinif otağınızda bu şəbəkədən çıxarılan
+        dərsləri sınayın.
     unplugged_conditionals:
       title: Şərti ifadələr
-      body: Kartlar dəstəsindən istifadə etməklə bu sərbəst işdə alqoritmlər və şərti
-        ifadələr haqqında öyrənin.
+      body: Kartların göyərtəsindən istifadə edərək, bu "plugged" fəaliyyətdə alqoritmlər
+        və şərti ifadələr haqqında məlumat əldə edin.
     widgets:
       title: Vidjetlər
-      body: Tələbələr bu rəqəmsal vasitələrdən istifadə edərək Kompüter Elmləri Prinsipləri
-        kursumuzdan anlayışları öyrənə bilərlər. Vidjetləri tək başına istifadə edin
-        və ya sinifiniz üçün tək konseptli bir dərs yaradın.
+      body: Tələbələr bu rəqəmsal alətlərdən istifadə edərək, Kompüter Elmləri Prinsipləri
+        kursumuzdakı anlayışları praktiki olaraq araşdıra bilərlər. Vidcetləri təkbaşına
+        istifadə edin və ya sinifiniz üçün tək konseptual dərs yaradın.
       audience: 14+ yaş
-      cta: "Öyrənin necə \n"
+      cta: Öyrənin necə
   landing:
-    prerelease_tutorial: Bu dərslik ** beta ** dadır. Geribildirim alındıqda və təkmilləşdirmələrdə
-      olduğu üçün yenidən nəzərdən keçirilə bilər.
-    report_bug: Xəta bildirin
-    support: Kömək istə
+    prerelease_tutorial: Bu dərslik **beta**-dadır. Rəy alındıqca və təkmilləşdirmələr
+      aparıldıqca o, yenidən nəzərdən keçirilməlidir.
+    report_bug: Səhvi bildirin
+    support: Kömək alın
     support_url: "//support.code.org"
     help_resources: Kömək və mənbələr
     help_support: Kömək və dəstək
     documentation: Təlimat və sənədlər
     tutorials: Dərsliklər
   free_response:
-    placeholder: Cavabınızı buraya daxil edin
+    placeholder: Cavabınızı buraya daxil edin.
   multi:
-    wrong_title: Yanlış cavab
+    wrong_title: Səhv cavab
     wrong_body: Daxil etdiyiniz cavab yanlışdır. Lütfən, bir daha cəhd edin!
     correct_title: Düzgün
-    correct_body: Bu düzgün cavabdır.
+    correct_body: Bu doğru cavabdır.
   multi-submittable:
     wrong_title: Təşəkkür
-    wrong_body: Cavab göndərdiyiniz üçün təşəkkür edirik.
+    wrong_body: Cavab təqdim etdiyiniz üçün təşəkkür edirik.
     correct_title: Təşəkkür
-    correct_body: Cavab göndərdiyiniz üçün təşəkkür edirik.
+    correct_body: Cavab təqdim etdiyiniz üçün təşəkkür edirik.
   level_group:
     wrong_title: Təşəkkür
-    wrong_body: Cavablar göndərdiyiniz üçün təşəkkür edirik.
+    wrong_body: Cavablar təqdim etdiyiniz üçün təşəkkür edirik.
     correct_title: Təşəkkür
-    correct_body: Cavablar göndərdiyiniz üçün təşəkkür edirik.
-    hide_survey_last_answer: Bu sorğu anonimdir. Zəhmət olmasa ümumi nəticələr üçün
-      müəllimlər panelini ziyarət edin. Nəticələrin yalnız ən azı beş tələbənin anket
-      təqdim etməsi halında göründüyünü unutmayın.
+    correct_body: Cavablar təqdim etdiyiniz üçün təşəkkür edirik.
+    hide_survey_last_answer: Bu sorğu anonimdir. Ümumi nəticələr üçün müəllimin idarə
+      panelinə daxil olun. Nəzərə alın ki, nəticələr yalnız ən azı beş tələbə sorğu
+      təqdim etdikdə görünə bilər.
     survey_submission_thankyou: Bu sorğunu təqdim etdiyiniz üçün təşəkkür edirik!
-      Anket cavablarınızın anonim qalması üçün təmizləndi. Diqqət yetirin ki, müəlliminiz
-      hələ də, adları əlavə edilmədən bütün sinif üçün cavabları görə biləcək.
+      Cavablarınızın anonim qalması üçün sorğu silindi. Nəzərə alın ki, müəlliminiz
+      hələ də bütün sinif üçün cavabları görə biləcək, lakin adlar əlavə olunmadan.
   level_group-submittable:
     wrong_title: Təşəkkür
-    wrong_body: Cavablar göndərdiyiniz üçün təşəkkür edirik.
+    wrong_body: Cavablar təqdim etdiyiniz üçün təşəkkür edirik.
     correct_title: Təşəkkür
-    correct_body: Cavablar göndərdiyiniz üçün təşəkkür edirik.
-    unsubmit-title: Qiymətləndirmənizi göndərməyin
-    unsubmit-body: Qiymətləndirməyinizin göndərilməməsi təqdim olunan vaxtı və tarixi
-      sıfırlayacaqdır. Sən əminsən?
-    submit-incomplete-title: Qiymətləndirməni təqdim edin
-    submit-incomplete-body: Bəzi sualları yarımçıq qoymusan. Qiymətləndirməni təqdim
-      etdikdən sonra redaktə edə bilməzsiniz. Sən əminsən?
-    submit-complete-title: Qiymətləndirməni təqdim edin
-    submit-complete-body: Qiymətləndirməni təqdim etdikdən sonra redaktə edə bilməzsiniz.
+    correct_body: Cavablar təqdim etdiyiniz üçün təşəkkür edirik.
+    unsubmit-title: Qiymətləndirmənizi göndərməyin!
+    unsubmit-body: Qiymətləndirmənin göndərilməsinin ləğv edilməsi təqdim edilmiş
+      vaxt və tarixi sıfırlayacaq. Sən əminsən?
+    submit-incomplete-title: Qiymətləndirməni təqdim edin.
+    submit-incomplete-body: Bəzi sualları yarımçıq qoymuşsunuz. Qiymətləndirmənizi
+      təqdim etdikdən sonra redaktə edə bilməzsiniz. Sən əminsən?
+    submit-complete-title: Qiymətləndirməni təqdim edin.
+    submit-complete-body: Qiymətləndirmənizi təqdim etdikdən sonra redaktə edə bilməzsiniz.
       Sən əminsən?
   match:
     wrong_title: Yanlış həll
     wrong_body: Daxil etdiyiniz həll yanlışdır. Lütfən, bir daha cəhd edin!
     correct_title: Düzgün
-    correct_body: Bu düzgün cavabdır.
+    correct_body: Bu doğru cavabdır.
   contract_match:
-    wrong_title: Yanlış cavab
+    wrong_title: Səhv cavab
     badname: Müqavilənizin adı səhvdir.
     badname_case: Funksiya adları böyük hərflərə həssasdır. Müqavilənin adının vəziyyətini
       dəyişdirməyə çalışın.
@@ -949,18 +972,18 @@ az:
     baddomainname: Bir və ya bir neçə domen adınızın adı səhvdir.
     baddomaintype: Bir və ya bir neçə domeninizin növü yanlışdır və ya səhv sıradadır.
   text_match:
-    placeholder: Cavabınızı buraya daxil edin
-    open_response_title: Təşəkkürlər,
+    placeholder: Cavabınızı buraya daxil edin.
+    open_response_title: Təşəkkürlər.
     open_response_body: Cavabınız  üçün təşəkkürlər!
     correct_title: Düzgün
-    correct_body: Bu düzgün cavabdır.
+    correct_body: Bu doğru cavabdır.
   lesson_extras:
     bonus_level: Bonus mərhələ
   dialog:
     ok: Oldu
     startover_title: Yenidən başlamaq istədiyinizə əminsiniz?
     startover_body: Bu, səviyyəni başlanğıc vəziyyətinə qaytaracaq və əlavə etdiyiniz
-      və ya dəyişdirdiyiniz bütün məlumatları sıfırlayacaq.
+      və ya dəyişdirdiyiniz bütün məlumatları sıfırlayacaq..
     startover_ok: Yenidən başla
     startover_cancel: İmtina et
   time:
@@ -970,35 +993,33 @@ az:
   age_interstitial:
     age: Yaşınız
     header: Hesab Məlumatlarının Yeniləməsi
-    warning: Sizi hətta daha güclü güvənlik qorumaları ilə təmin etmək üçün biz təcrübəmizi
-      güncəlləyirik. Bunu etmək üçün mövcud istifadəçilərin yaşlarını bura yazmalarına
-      ehtiyacımız var.
-    disclaimer: Həmişə olduğu kimi, code.org bu məlumatı heç vaxt üçüncü tərəflərlə
-      kirayəyə verməyəcək, satmayacaq və ya paylaşmayacaq.
+    warning: Sizi daha da güclü məxfilik mühafizəsi ilə təmin etmək üçün təcrübəmizi
+      yeniləmək prosesindəyik. Bunun üçün mövcud istifadəçilərin burada yaşlarını
+      daxil etmələri lazımdır.
+    disclaimer: Həmişə olduğu kimi, code.org heç vaxt bu məlumatı icarəyə götürməyəcək,
+      satmayacaq və ya üçüncü tərəflərlə paylaşmayacaq.
     sign_out_markdown: Əgər yaşınızı əlavə etmək istəmirsinizsə, [hesabınızı bağlaya
       bilərsiniz](%{url}).
   terms_interstitial:
-    title: 'Yenilənmiş Xidmət Şərtləri və Məxfilik Siyasəti
-
-'
-    intro_desc: 'Xidmət Şərtlərimizi və Məxfilik Siyasətimizi aşağıda göstərildiyi
-      kimi yenilədik. Dəyişikliklər 24 Avqust 2016 tarixindən etibarən qüvvəyə minir.
-      Ən böyük dəyişiklik: <i> artıq tələbə hesabları üçün e -poçt ünvanlarını Code
-      Studio -da saxlamayacağıq </i> Bu bizim üçün böyük bir işdir və ümid edirik
-      ki, təhsil texnologiyasında tələbə məxfiliyi üçün yeni standart. Sizə e -poçt
-      vasitəsi ilə digər dəyişikliklərin xülasəsini göndərdik.'
-    intro_desc_markdown: 'Xidmət Şərtlərimizi və Məxfilik Siyasətimizi aşağıda göstərildiyi
-      kimi yenilədik. Dəyişikliklər 24 Avqust 2016 -cı ildən etibarən qüvvəyə minir.
-      Ən böyük dəyişiklik: * tələbə hesabları üçün e -poçt ünvanlarını artıq Kod Studioda
-      saxlamayacağıq. * Bu bizim üçün böyük bir işdir və ümid edirik ki, tələbə məxfiliyi
-      üçün yeni bir standart qoyur. təhsil texnologiyasında. Sizə e -poçt vasitəsi
-      ilə digər dəyişikliklərin xülasəsini göndərdik.'
-    intro_instructions: Code Studio -dakı ən son xüsusiyyətlərə tam giriş əldə etmək
-      üçün sinifinizdəki 13 yaşdan kiçik şagirdlər üçün bu yeni şərtləri qəbul etməlisiniz.
-      13 yaşınadək bir tələbə üçün bir hesab qeydiyyatdan keçirərkən, Code Studio
-      kimi təhsil proqramları da daxil olmaqla, məktəbin istifadəsi və faydası üçün
-      şagirdin şəxsi məlumatlarının toplanması üçün məktəbinizin valideyn razılığının
-      olduğunu təsdiq etməyiniz tələb olunacaq.
+    title: Yenilənmiş Xidmət Şərtləri və Məxfilik Siyasəti
+    intro_desc: 'Aşağıda göstərildiyi kimi Xidmət Şərtlərimizi və Məxfilik Siyasətimizi
+      yenilədik. Dəyişikliklər 24 avqust 2016-cı il tarixindən qüvvəyə minir. Ən böyük
+      dəyişiklik: biz <i>artıq tələbə hesabları üçün e-poçt ünvanlarını Code Studio-da
+      saxlamayacağıq.</i> Bu, bizim üçün böyük bir işdir və ümid edirik ki, o, təhsil
+      texnologiyasında tələbə məxfiliyi üçün yeni standart. Biz sizə e-poçt vasitəsilə
+      digər dəyişikliklərin xülasəsini göndərdik.'
+    intro_desc_markdown: 'Aşağıda göstərildiyi kimi Xidmət Şərtlərimizi və Məxfilik
+      Siyasətimizi yenilədik. Dəyişikliklər 24 avqust 2016-cı il tarixindən qüvvəyə
+      minir. Ən böyük dəyişiklik: biz *artıq Code Studio-da tələbə hesabları üçün
+      e-poçt ünvanlarını saxlamayacağıq.* Bu, bizim üçün böyük bir işdir və ümid edirik
+      ki, bu, tələbə məxfiliyi üçün yeni standart təyin edəcək. təhsil texnologiyasında.
+      Biz sizə e-poçt vasitəsilə digər dəyişikliklərin xülasəsini göndərdik.'
+    intro_instructions: Code Studio-nun bütün ən son xüsusiyyətlərinə tam giriş əldə
+      etmək üçün sinifinizdə 13 yaşından kiçik tələbələr üçün bu yeni şərtləri qəbul
+      etməlisiniz. 13 yaşdan kiçik bir şagird üçün hesab qeydiyyatdan keçirərkən sizdən
+      məktəbinizin Code Studio kimi təhsil proqramları da daxil olmaqla məktəbin istifadəsi
+      və faydası üçün şagirdin şəxsi məlumatlarının toplanması üçün valideyn razılığının
+      olduğunu təsdiq etməyiniz xahiş olunacaq.
     tos: Xidmət şərtləri
     privacy: Məxfilik siyasəti
     privacy_notice: Məxfilik bildirişi
@@ -1008,7 +1029,7 @@ az:
       ilə razıyam.
     accept_tos: Code.org -da qeydiyyatdan keçməklə [Xidmət Şərtləri] (%{tos_url})
       və [Məxfilik Siyasəti] (%{privacy_url}) ilə razılaşırsınız.
-    accept: Qəbul et
+    accept: Qəbul etmək
     print: çap
     reminder_desc: ' <a href="%{tos_url}" target="_blank">Xidmət Şərtlərimizi</a>
       və <a href="%{privacy_url}" target="_blank">Gizlilik Siyasətini</a> yeniləmişik.
@@ -1019,52 +1040,42 @@ az:
       (%{privacy_url}) yenilədik. Zəhmət olmasa bunları qəbul etməzdən əvvəl bunları
       diqqətlə oxuyun. Qeyd edək ki, yenilənmiş şərtləri açıq şəkildə qəbul etməzdən
       əvvəl JavaScript öyrədən vasitələrimiz tələbələriniz üçün əlçatmaz ola bilər."
-    review_terms: yenidən baxış
-  donor_interstitial:
-    title: Pulsuz CS kurslarınız ...
-    subtitle: Code.org -un uğurunu təmin edən dəstəyi olan səxavətli donorlara təşəkkür
-      etmək istərdik. [Donorlarımızın] (%{donors_url}) davamlı səxavəti sayəsində
-      Code.org -u bütün dünyada məktəblər və tələbələr üçün pulsuz saxlamağa qərarlıyıq!
-    local_supporters: Yerli Dəstəkçilər
-    global_supporters: Qlobal dəstəkçilər
-    support_codeorg_1: 'Code.org-a verilən hər dollar çoxlu tələbəyə imkan yaradır '
-    support_codeorg_2: Code.ord-a dəstək olmaq üçün indi bağışla (%{donate_url})
-    get_started: Code.orga başlayın.
+    review_terms: Şərtlərə yenidən baxış
   school_info_interstitial:
-    title: Biz hər bir şagirdə Kompüter Elmlərini öyrətmək istəyirik - irəliləyişimizi
+    title: Biz hər bir tələbəyə Kompüter Elmlərini öyrətmək istəyirik - tərəqqinizi
       izləməkdə bizə kömək edin!
-    message: Zəhmət olmasa, aşağıda məktəb məlumatlarınızı daxil edin.
-    message_with_suggestion: Zəhmət olmasa, növbəti məlumatın düzgünlüyünü yoxlayın
-      və ya lazım olduğu qədər yeniləyin.
+    message: Zəhmət olmasa məktəb məlumatınızı aşağıya daxil edin.
+    message_with_suggestion: Lütfən, aşağıdakı məlumatların düzgün olduğunu yoxlayın
+      və ya lazım olduqda yeniləyin.
     save: Yadda saxla
   race_interstitial:
-    title: 'Qeyri-məcburi: Bize kompüter elmlərinin müxtəlifliyini təkminləşdirmək
-      üçün öz inkişafımızda kömək edin'
+    title: 'Könüllü: Kompüter elmində müxtəlifliyi təkmilləşdirmək istiqamətində irəliləyişimizi
+      izləməkdə bizə kömək edin.'
     message: Zəhmət olmasa, bizə öz irqinizi və ya etnik mənsubiyyətinizi deyin (müraciət
       edənləri yoxlayın)
     races:
       white: Ağ
       black: Qaradərili və ya Afroamerikalı
       hispanic: İspan və ya Latın
-      asian: Asyalı
+      asian: Asiyalı
       hawaiian: Yerli Havayalı və ya başqa Sakit okeanlı
       american_indian: Hindu/Yerli Alaskalı
       other: Digər
       opt_out: Söyləməməyə üstünlük verirəm
     submit: Göndər
     decline: Bağla
-  zendesk_too_young_message: Üzr istəyirik, cavan istifadəçilər bizim dəstək saytımıza
-    daxil ola bilməzlər. Siz <a href="http://support.code.org"> saytına daxil olub
-    code.org</a>-u dəstəkləyə bilərsiniz və yaxud öz müəllimlərinizdən bizimlə əlaqə
-    saxlamalarını xahiş edə bilərsiniz
-  zendesk_too_young_message_markdown: Üzr istəyirik, gənc istifadəçilər dəstək saytına
-    daxil ola bilməzlər. Siz  [support.code.org](http://support.code.org) giriş etmədən
-    göz ata və ya valideyninizdən yaxud müəlliminizdən sizin üçün bizimlə əlaqə saxlamasını
-    istəyə bilərsiniz.
+  zendesk_too_young_message: Üzr istəyirik, gənc istifadəçilər dəstək saytımıza daxil
+    ola bilməz. Siz daxil olmadan <a href="http://support.code.org">support.code.org</a>
+    səhifəsinə baxa və ya valideyninizdən və ya müəlliminizdən sizin üçün bizimlə
+    əlaqə saxlamağı xahiş edə bilərsiniz.
+  zendesk_too_young_message_markdown: Üzr istəyirik, gənc istifadəçilər dəstək saytımıza
+    daxil ola bilməz. Siz daxil olmadan [support.code.org](http://support.code.org)
+    səhifəsinə baxa və ya valideyninizdən və ya müəlliminizdən sizin üçün bizimlə
+    əlaqə saxlamağı xahiş edə bilərsiniz.
   progress:
     not_started: başlanmayıb
-    in_progress: tamamlanmayıb
-    completed_too_many_blocks: tamamlanıb, artıq bloklar var
+    in_progress: davam edir
+    completed_too_many_blocks: tamamlandı, həddən artıq çox blok var
     completed_perfect: tamamlanıb, əladır
     furthest_level_attempted: sonuncu cəhd istifadə edildi.
     assessment: yoxlama
@@ -1080,79 +1091,79 @@ az:
     new: Yenisini düzəlt
     exit: Kursa qayıt
     project_gallery: Layihə qalereyası
-    publish: Nəşr edin
+    publish: Dərc edin
     unpublish: yayımlamamaq
     share_title: Layihənizi paylaşın
     share_copy_link: 'Keçidi köçürün:'
-    share_embed_description: Layihəni veb-səhifədə göstərmək üçün daxil edilmiş kodu
-      HTML səhifəsinə yapışdıra bilərsiniz.
-    share_u13_warning: Paylaşmadan əvvəl müəlliminizdən icazə alın. Yalnız məktəbinizdə
-      olan başqaları ilə paylaşın.
-    embed: Yerləşdir
-    advanced_share: Qabaqcıl seçimləri göstərin
-    no_projects: 'Sizin hal hazırda layihəniz yaxdur. Layihəyə başlamaq üçün yuxarıdakı
-      düymələrdən birinə basın. '
+    share_embed_description: Layihəni veb-səhifədə göstərmək üçün əlavə kodunu HTML
+      səhifəsinə yapışdıra bilərsiniz.
+    share_u13_warning: Ask your teacher before sharing. Only share with others in
+      your school.
+    embed: yerləşdirin
+    advanced_share: Mütərəqqi seçimləri göstərin
+    no_projects: Hazırda heç bir layihəniz yoxdur. Layihəyə başlamaq üçün yuxarıdakı
+      düymələrdən birinə klikləyin.
     name: Ad
-    updated: Yeniləndi
+    updated: Yeniləndi.
     project_type: Layihə növü
     help_text: Yeni layihəyə başlamaq üçün aşağıda <strong>Tətbiq Yarat</strong> və
       ya <strong>Nəsə Çək</strong> klikləyin!<br/>İstənilən vaxt qayıdıb layihələriniz
       üzərində işləyə bilərsiniz.
-    need_help: Yeni layihənizə başlamağınızda kömək almaq üçün bu kursları sınayın
-    thumbnail_help: Layihəniz üçün düzgün şəkilciyi görə bilmirsiniz? Yeni bir şəkilcik
-      yaratmaq üçün tətbiqinizi işə salın. Nəzərinizdə saxlayın ki, şəkilciyin hər
-      yerdə yenilənməsi bir neçə saat çəkə bilər.
+    need_help: Yeni layihənizə başlamağınıza kömək etmək üçün bu kursları sınayın.
+    thumbnail_help: Layihəniz üçün düzgün miniatür görmürsünüz? Yeni miniatür yaratmaq
+      üçün tətbiqinizi işə salın. Nəzərə alın ki, miniatürün hər yerdə təzələnməsi
+      bir neçə saat çəkə bilər.
     saved: Qalereyada yadda saxlandı!
     not_saved: Yadda saxlanmadı
     view_all: Layihələrimi göstər
-    edit_project: Layihəni redaktə edin
-    sharing_disabled: Üzr isteyirik, bu layihə paylaşmaq üçün uyğun deyil. Əgər bu
-      sizin və ya sizin tələbənizin layihəsidirsə, zəhmət olmasa, <a href='https://studio.code.org/users/sign_in'>
-      saytından öz hesabınıza daxil olun.
+    edit_project: Layihəni redaktə edin.
+    sharing_disabled: Üzr istəyirik, bu layihə paylaşmaq üçün əlçatan deyil. Əgər
+      bu sizin layihənizdirsə və ya tələbələrinizdən birinin layihəsidirsə, lütfən,
+      layihəyə baxmaq üçün hesabınıza <a href='https://studio.code.org/users/sign_in'>daxil
+      olun</a>.
     abuse:
-      tos: Bu layihə Code.org -un <a href='http://code.org/tos'> Xidmət Şərtlərini
-        </a> pozduğuna görə bildirilib və başqaları ilə paylaşıla bilməz.
+      tos: Bu layihə Code.org-un <a href='http://code.org/tos'>Xidmət Şərtlərini</a>
+        pozduğu üçün bildirildi və başqaları ilə paylaşıla bilməz.
       policy_violation: Bu layihə başqaları ilə paylaşıla bilməyən məlumatları ehtiva
-        edir. Tətbiqlərinin tərkibini düzəltmək üçün tətbiq sahibi ilə əlaqə saxlayın.
-      contact_us: Əgər bunun xəta olduğuna inanırsansa,zəhmət olmasa<a href='https://code.org/contact'>əlaqə
-        saxlayın</a>
-      go_to_code_studio: Kod Studiyasına keçin
+        edir. Tətbiqinin məzmununu düzəltmək üçün proqram sahibi ilə əlaqə saxlayın.
+      contact_us: Bunun xəta olduğunu düşünürsünüzsə, <a href='https://code.org/contact'>bizimlə
+        əlaqə saxlayın.</a>
+      go_to_code_studio: Kod Studiyasına keçin.
       report_abuse_form:
         intro: Code Studio-da qurulmuş proqramlardan istifadə edərkən təhqiramiz məzmun,
-          təhdidlər, kiber zorakılıq, və ya müəllif hüquqlarının pozulması nümunəsi
-          ilə qarşılaşmısınızsa, zəhmət olmasa, aşağıdakı formanı doldurun. Hesabatınızı
-          qəbul edəcəyik, müvafiq araşdırma aparacağıq və müvafiq tədbirlər görəcəyik.
+          təhdidlər, kiber zorakılıq, təqib və ya müəllif hüquqlarının pozulması nümunəsi
+          ilə qarşılaşmısınızsa, lütfən, aşağıdakı formanı doldurun. Hesabatınızı
+          çox ciddi qəbul edəcəyik, müvafiq araşdırma aparacaq və müvafiq tədbirlər
+          görəcəyik.
         validation:
-          email: Zəhmət olmasa bir e-poçt ünvanı verin
+          email: Zəhmət olmasa bir e-poçt ünvanı verin.
           age: Zəhmət olmasa bir yaş göstərin
           abuse_type: Zəhmət olmasa bu məzmunun Xidmət Şərtlərini necə pozduğuna cavab
             verin
-          abuse_detail: Zəhmət olmasa hesabat verdiyiniz məzmuna dair məlumat verin
-        abusive_url: Bildirilən məzmunun URL
+          abuse_detail: Please provide details regarding the content you are reporting.
+        abusive_url: Bildirilən məzmunun URL.
         abuse_type:
           question: Bu kontent %{link_start} Xidmət Şərtlərini %{link_end} necə pozur?
-          harassment: Təhdidlər, kiber zorakılıq, təqib
+          harassment: Təhdidlər, kiber zorakılıq, təcavüz
           offensive: Təhqiramiz məzmun
           infringement: Müəllif hüquqları pozuntusu
           other: Digər
-        detail: Zəhmət olmasa hesabat verdiyiniz məzmunla bağlı mümkün qədər ətraflı
+        detail: Zəhmət olmasa xəbər verdiyiniz məzmunla bağlı mümkün qədər ətraflı
           məlumat verin.
-        acknowledge: Bu məlumatı təqdim etməklə, bunun %{link_start_privacy}Məxfilik
-          Siyasətinin %{link_end}və%{link_start_tos} Xidmət Şərtlərinin%{link_end}
-          şərtlərinə uyğun işlənəcəyini qəbul edirsiniz.
+        acknowledge: Bu məlumatı təqdim etməklə, onun %{link_start_privacy}Məxfilik
+          Siyasəti%{link_end} və %{link_start_tos}Xidmət Şərtlərinin%{link_end} şərtlərinə
+          uyğun idarə olunacağını təsdiq edirsiniz.
   peer_review:
     accepted:
       name: Qəbul edildi
-      description_markdown: Bəli,bu göndəri tələblərə uyğundur.
+      description_markdown: "**Bəli**, bu təqdimat **tələblərə** cavab verir"
     rejected:
       name: Rədd edildi
-      description_markdown: Xeyr,bu göndəri tələblərə uyğun deyil.
+      description_markdown: "**Xeyr**, bu təqdimat **tələblərə cavab vermir**"
     escalated:
-      name: 'kəskinləşmiş
-
-'
-      description: Təlimatçının bu təqdimatı nəzərdən keçirməsini istərdim
-    instructor_feedback: Təlimatçı ilə əlaqə
+      name: kəskinləşmiş
+      description: Mən bir təlimatçının bu təqdimatı nəzərdən keçirməsini istəyirəm.
+    instructor_feedback: Təlimatçı rəyi
     peer_feedback: Həmyaşıd rəyi
     outdated: Bu rəy əvvəllər təqdim edilmiş bir versiya üçün əlavə edilmişdir
     review_count: Bu bölmə üçün rəyləri tamamlamalısınız%{review_count}.
@@ -1319,11 +1330,12 @@ az:
         math: Riyaziyyat
         science: 'Elm '
         history: Tarixi / Sosial Araşdırmalar
-        la: Dillər
+        la: Dil Elmləri
         efl: İngilis Xarici dil kimi
         music: Musiqi
         art: İncəsənət
         other: 'Başqa:'
+        na: Tətbiq olunmağa uyğun deyil
       resources:
         bootstrap: ilkin yükləmə
         codecademy: Kod Akademiyası
@@ -1332,7 +1344,8 @@ az:
         kodable: Kodlanabilər
         scratch: Cızıq
         tynker: '"Tynker"'
-        other: 'Başqa:'
+        other: Digər
+        na: Tətbiq olunmağa uyğun deyil
       robotics:
         grok: Anlayaraq öyrənmək
         kodable: Kodlanabilər
@@ -1342,7 +1355,8 @@ az:
         sphero: Kürə
         raspberry: Moruq Pi
         wonder: Əla emalatxana
-        other: 'Başqa:'
+        other: Digər
+        na: Tətbiq olunmağa uyğun deyil
       workshop_course:
         csf_af: Kompüter Elmləri əsasları (A-F kursları)
         csf_express: CS (Əvvəldən ifadə etmək və ya ifadə etmək)
@@ -1421,3 +1435,4 @@ az:
     this_sprite: bu sprayt (qrafik obyekt)
   unit_prefix: Vahid %{n}
   code_org_logo_alt: Code.org Evi
+  teacher_feedback: Müəllim rəyi

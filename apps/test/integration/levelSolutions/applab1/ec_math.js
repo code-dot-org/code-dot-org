@@ -11,7 +11,7 @@ module.exports = {
   levelFile: 'levels',
   levelId: 'ec_simple',
   tests: [
-    // These exercise all of the blocks in Turtle category
+    // These exercise all of the blocks in Math category
     // It does not validate that they behave correctly, just that we don't end
     // up with any errors
     {

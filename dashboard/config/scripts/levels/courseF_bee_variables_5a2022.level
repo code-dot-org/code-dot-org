@@ -48,11 +48,17 @@
     "encrypted": "false",
     "long_instructions": "Finish the code to solve this puzzle.\r\n\r\n* What should the value of the variable be at the start?\r\n* How many times should you go through the main loop?\r\n* How much should you change the variable by each time?",
     "hint_prompt_attempts_threshold": "1",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:58.205+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_variables_5a_2021\\\"\"],\"cloned_from\":\"courseF_bee_variables_5a_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:58.205+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_variables_5a_2021\\\"\"],\"cloned_from\":\"courseF_bee_variables_5a_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5,
+    "variables": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

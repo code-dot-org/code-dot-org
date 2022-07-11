@@ -42,11 +42,16 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/0159065c730544c7961e3a8dbca232e3=levelbuilder/27784.png",
     "parent_level_id": 21123,
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:54.730+00:00\",\"changed\":[\"cloned from \\\"courseB_artist_loops_challenge1_2021\\\"\"],\"cloned_from\":\"courseB_artist_loops_challenge1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:54.730+00:00\",\"changed\":[\"cloned from \\\"courseB_artist_loops_challenge1_2021\\\"\"],\"cloned_from\":\"courseB_artist_loops_challenge1_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

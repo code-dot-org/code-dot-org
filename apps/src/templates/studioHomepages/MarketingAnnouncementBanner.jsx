@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {TwoColumnActionBlock} from './TwoColumnActionBlock';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
@@ -8,63 +8,51 @@ import shapes from './shapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-// MarketingAnnouncementBanner is a wrapper around SpecialAnnouncementActionBlock which adds
-// a button to dismiss the banner. It also listens for modifications to the banner through
-// optimizely and checks if the new version of the banner has been dismissed.
+// MarketingAnnouncementBanner is a wrapper around SpecialAnnouncementActionBlock
+// which adds a button to dismiss the banner.
 const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
   const [displayBanner, setDisplayBanner] = useState(true);
   const bannerRef = useRef(null);
 
+  // The banner may be changed via Google Optimize. In order to correctly
+  // record which banner was dismissed, we use the Google Optimize API to
+  // determine if a Personalization experiment is active. If so,
+  // activeExperiementId will be set to the id of the active experiment.
+  // (https://support.google.com/optimize/answer/9059383)
+  //
+  // Note that Optimize supports multiple experiments on the same page, but
+  // there is no supported way to determine which elements on the page were
+  // modified by which experiments. We assume that there will be at most one
+  // Personalization experiment on a given page and that that experiment updates
+  // this banner.
+  const [activeExperimentId, setActiveExperimentId] = useState(null);
   useEffect(() => {
-    if (window['optimizely']) {
-      const optimizelyUtils = window['optimizely'].get('utils');
-      // When modifications are made to the banner through optimizely, check whether
-      // this version of the banner has been dismissed by the teacher
-      optimizelyUtils.observeSelector(
-        `#${bannerRef.current.id}`,
-        checkShouldDisplayBanner
-      );
+    // Sites that use Google Analytics typically have a gtag() function which
+    // is used to push data to Google Ad Platform's data layer. Our site does not
+    // currently globally define this function so we define a private copy here.
+    function _gtag() {
+      if (window.dataLayer) {
+        window.dataLayer.push(arguments);
+      }
     }
-    checkShouldDisplayBanner();
+
+    _gtag('event', 'optimize.callback', {
+      callback: (variant, experimentId) => {
+        // Personalization experiments have variant equal to ''.
+        if (variant === '') {
+          setActiveExperimentId(experimentId);
+        }
+      }
+    });
   }, []);
 
-  const checkShouldDisplayBanner = () => {
-    const bannerKey = getLocalStorageBannerKey();
-    const displayBanner = tryGetLocalStorage(bannerKey, true);
-    if (displayBanner === 'false') {
-      setDisplayBanner(false);
-    }
-  };
-
-  const getLocalStorageBannerKey = () => {
+  const getLocalStorageBannerKey = useCallback(() => {
     let bannerId = announcement.id;
-
-    const optimizelyId = getOptimizelyModifiedElementId();
-    if (optimizelyId) {
-      bannerId = optimizelyId;
+    if (activeExperimentId) {
+      bannerId = activeExperimentId;
     }
-
     return `display-announcement-${bannerId}`;
-  };
-
-  const getOptimizelyModifiedElementId = () => {
-    const allBannerElements = bannerRef.current.querySelectorAll('*');
-
-    const getOptlyDataAttrKey = element => {
-      return Object.keys(element.dataset).find(key => key.includes('optly'));
-    };
-
-    // Finds an element that was modified by optimizely if one exists
-    const optlyModifiedElement = [...allBannerElements].find(el =>
-      getOptlyDataAttrKey(el)
-    );
-
-    if (optlyModifiedElement) {
-      // Returns the optimizely data attribute key for the changed element
-      // will be something like optly-0ef57bf5F12b-4290A4dbA1de95a9b5cd
-      return getOptlyDataAttrKey(optlyModifiedElement);
-    }
-  };
+  }, [activeExperimentId]);
 
   const onDismiss = () => {
     const bannerKey = getLocalStorageBannerKey();
@@ -89,10 +77,16 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
     );
   };
 
+  // Set displayBanner value if the function to get the storage banner key
+  // has changed.
+  useEffect(() => {
+    const bannerKey = getLocalStorageBannerKey();
+    const displayBannerValue = tryGetLocalStorage(bannerKey, true);
+    setDisplayBanner(displayBannerValue !== 'false');
+  }, [getLocalStorageBannerKey]);
+
   // This banner is hidden through css because it still needs to be accessible
-  // in the DOM so that it can be manipulated by Optimizely by marketing.
-  // Once it has been modified through optimizely, checkShouldDisplayBanner is called
-  // and the value of displayBanner may change.
+  // in the DOM so that it can be manipulated by Google Optimize.
   const bannerDisplayStyle = displayBanner ? 'block' : 'none';
 
   const button = {
@@ -112,7 +106,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
         display: bannerDisplayStyle
       }}
     >
-      {/* ID is used for easier targeting in Optimizely */}
+      {/* ID is used for easier targeting in Google Optimize */}
       <div id="special-announcement-action-block" ref={bannerRef}>
         <TwoColumnActionBlock
           imageUrl={pegasus(announcement.image)}

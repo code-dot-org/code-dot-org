@@ -84,7 +84,7 @@ title: Recursos
 
 **Asunto:** Únete a mí y a más 100 millones de estudiantes para una Hora del Código <br />
 
-Las computadoras están en todas partes, cambiando todas las industrias del planeta. But only 51% of all high schools offer computer science. ¡La buena noticia es que estamos trabajando para cambiar esta realidad! Si oíste hablar de la Hora del Código antes, es posible que sepas que hizo historia. Más de 100 millones de estudiantes han participado en una Hora del Código.
+Las computadoras están en todas partes, cambiando todas las industrias del planeta. Pero solo el 51% de los institutos de enseñanza secundaria ofrecen informática. ¡La buena noticia es que estamos trabajando para cambiar esta realidad! Si oíste hablar de la Hora del Código antes, es posible que sepas que hizo historia. Más de 100 millones de estudiantes han participado en una Hora del Código.
 
 Con la Hora del Código, las ciencias de la computación han estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Todos los Apple Store del mundo han organizado una Hora del Código, e incluso líderes como el presidente Obama y el primer ministro canadiense Justin Trudeau escribieron sus primeras líneas de código como parte de la campaña.
 
@@ -92,7 +92,7 @@ Este año, vamos a hacer que sea aún más grande. Acompáñanos en la Hora del 
 
 Corre la voz. Organiza un evento. Pide a una escuela local que se inscriba. O prueba la Hora del Código por ti mismo. Todos pueden beneficiarse de aprender los conceptos básicos.
 
-Get started at http://hourofcode.com/{{ country_language }} <br />
+Empezar en http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -110,7 +110,7 @@ Entre {{ campaign_date/short }}, el diez por ciento de los estudiantes de todo e
 
 Los estudiantes crearán sus propias aplicaciones o juegos, que pueden mostrar a sus padres, y también imprimiremos certificados de la Hora del Código que pueden llevar a sus casas. ¡Y es divertido! Con actividades prácticas e interactivas, los estudiantes aprenderán habilidades de pensamiento informático de una manera simple.
 
-Las computadoras están en todas partes, cambiando todas las industrias del planeta. But only 51% of all high schools offer computer science. ¡La buena noticia es que estamos trabajando para cambiar esta realidad! Si ya has oído hablar sobre la Hora del Código, es posible que sepas que hizo historia: más de 100 millones de estudiantes en todo el mundo han participado en la actividad. Incluso, líderes como el presidente Obama y el primer ministro canadiense Justin Trudeau escribieron sus primeras líneas de código como parte de la campaña.
+Las computadoras están en todas partes, cambiando todas las industrias del planeta. Pero solo el 51% de los institutos de enseñanza secundaria ofrecen informática. ¡La buena noticia es que estamos trabajando para cambiar esta realidad! Si ya has oído hablar sobre la Hora del Código, es posible que sepas que hizo historia: más de 100 millones de estudiantes en todo el mundo han participado en la actividad. Incluso, líderes como el presidente Obama y el primer ministro canadiense Justin Trudeau escribieron sus primeras líneas de código como parte de la campaña.
 
 Puedes leer más sobre el evento en http://hourofcode.com. También puedes planificar una reunión con nosotros para hablar sobre cómo [nombre de la escuela] puede participar. <br />
 
@@ -126,13 +126,13 @@ Estimados padres,
 
 Vivimos en un mundo rodeado de tecnología. Y sabemos que, cualquiera sea la carrera que elijan nuestros estudiantes, su capacidad para tener éxito dependerá cada vez más de comprender cómo funciona la tecnología.
 
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
+Pero sólo una parte de nosotros está aprendiendo **cómo** funciona la tecnología. Solo el 51% de los institutos de enseñanza secundaria ofrecen informática.
 
 Por eso nuestra escuela se une al evento de aprendizaje más grande de la historia: la Hora del Código, durante la Semana por la Educación en Ciencias de la Computación ({{ campaign_date/full }}). Más de 100 millones de estudiantes de todo el mundo ya han participado en una Hora del Código. Nuestra Hora del Código es una declaración de que [NOMBRE DE LA ESCUELA] está preparada para enseñar estas habilidades fundamentales del siglo 21. Queremos que nuestra Hora del Código sea un evento enorme para que tus estudiantes sigan participando de actividades de programación. Es el momento de ser voluntario, contactar a medios locales, compartir las noticias en las redes sociales y organizar otros eventos de la Hora del Código en tu comunidad.
 
 Aprovecha la oportunidad de cambiar el futuro de la educación en [NOMBRE DE LA CIUDAD].
 
-See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
+Consulta http://hourofcode.com/{{ country_language }} para obtener más información y ayudar a difundirla. <br />
 
 * * *
 
@@ -144,11 +144,11 @@ See http://hourofcode.com/{{ country_language }} for details, and help spread th
 
 **Asunto**: Escuela local se une a la misión de introducir a los estudiantes en las ciencias de la computación
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. La buena noticia es que estamos trabajando para cambiar esta realidad.
+Los ordenadores están en todas partes, cambiando todas las industrias del planeta, pero solo el 51% de los institutos de enseñanza secundaria ofrecen informática. Las mujeres jóvenes y los estudiantes de grupos raciales y étnicos marginados están muy poco representados en las clases de informática y en la industria tecnológica. La buena noticia es que estamos trabajando para cambiar esta realidad.
 
 Con la Hora del Código, las ciencias de la computación han estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Todos los Apple Store del mundo han organizado una Hora del Código. Incluso el presidente Obama escribió su primera línea de código como parte de la campaña.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 6-12).
+Por eso cada uno de los [X número] estudiantes de [NOMBRE DE LA ESCUELA] se une al mayor evento de aprendizaje de la historia: La Hora del Código, durante la Semana de la Educación en Ciencias de la Computación (del 6 al 12 de diciembre).
 
 Te escribo para invitarte el [DATE] a nuestra reunión inicial y ver cómo los niños comienzan la actividad.
 
@@ -172,7 +172,7 @@ Estimado [APELLIDO del alcalde/gobernador/representante/senador]:
 
 ¿Sabía que la informática es la primera fuente de salarios en los Estados Unidos? Hay más de 500,000 trabajos de informática en todo el país, pero el año pasado solo se graduaron 42,969 estudiantes de ciencias de la computación.
 
-Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
+La Informática es fundamental para todas las industrias hoy en día, pero la mayoría de las escuelas no la ofrecen. En [NOMBRE DE LA ESCUELA] estamos intentando cambiar esta situación.
 
 Por eso nuestra escuela se une al evento de aprendizaje más grande de la historia: la Hora del Código, durante la Semana por la Educación en Ciencias de la Computación ({{ campaign_date/full }}). Más de 100 millones de estudiantes de todo el mundo ya han participado en una Hora del Código.
 

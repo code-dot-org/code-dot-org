@@ -2,10 +2,12 @@
   "key": "lightSensor.getAveragedValue",
   "name": "lightSensor.getAveragedValue",
   "category": "Circuit",
+  "category_key": "circuit",
   "palette_params": [
     {
       "name": "ms"
     }
   ],
+  "short_description": "lightSensor.getAveragedValue()",
   "syntax": "lightSensor.getAveragedValue(ms)"
 }

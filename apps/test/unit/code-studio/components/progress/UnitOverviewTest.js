@@ -8,7 +8,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 const defaultProps = {
   excludeCsfColumnInLegend: true,
-  teacherResources: [],
   studentResources: [],
   isSignedIn: true,
   isVerifiedInstructor: true,
@@ -26,9 +25,10 @@ const defaultProps = {
   unitHasLockableLessons: false,
   unitAllowsHiddenLessons: false,
   publishedState: 'beta',
-  versions: [],
+  versions: {},
   redirectScriptUrl: null,
-  unitCalendarLessons: []
+  unitCalendarLessons: [],
+  completedLessonNumber: undefined
 };
 
 const setUp = (overrideProps = {}) => {
@@ -37,6 +37,16 @@ const setUp = (overrideProps = {}) => {
 };
 
 describe('UnitOverview', () => {
+  it('renders a EndOfLessonDialog if completedLessonNumber prop is present', () => {
+    const wrapper = setUp({completedLessonNumber: '3'});
+    assert.equal(wrapper.find('Connect(EndOfLessonDialog)').length, 1);
+  });
+
+  it('does not render a EndOfLessonDialog if completedLessonNumber is empty', () => {
+    const wrapper = setUp();
+    assert.equal(wrapper.find('Connect(EndOfLessonDialog)').length, 0);
+  });
+
   it('renders a UnversionedScriptRedirectDialog if showUnversionedRedirectWarning and not displaying dialog', () => {
     const wrapper = setUp({showUnversionedRedirectWarning: true});
     assert.equal(wrapper.find('UnversionedScriptRedirectDialog').length, 1);

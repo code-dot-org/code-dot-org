@@ -45,11 +45,17 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "include_shared_functions": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-07T18:56:54.685+00:00\",\"changed\":[\"cloned from \\\"courseA_artist_loops9_2021\\\"\"],\"cloned_from\":\"courseA_artist_loops9_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-07T18:56:54.685+00:00\",\"changed\":[\"cloned from \\\"courseA_artist_loops9_2021\\\"\"],\"cloned_from\":\"courseA_artist_loops9_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": 2,
+    "repeat_loops": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

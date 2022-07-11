@@ -2,6 +2,24 @@
 ko:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': 매우 작음
+            '0.75': 작음
+            '1.00': 보통
+            '2.00': 큰
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': 매우 작음
+            '0.75': 작음
+            '1.00': 보통
+            '2.00': 큰
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} 이(가) {N} 마디마다 \n{MOVE1} 와(과) {MOVE2} 을(를) 교대"
         options:
@@ -10,7 +28,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -64,7 +82,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -124,7 +142,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -148,7 +166,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -303,7 +321,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -331,7 +349,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -354,6 +372,8 @@ ko:
             '"right"': 오른쪽 열
             '"x"': 교차
             '"plus"': 더하기
+            '"spiral"': 나선
+            '"infinity"': 무한 선
             '"random"': random(랜덤)
       Dancelab_makeAnonymousDanceSprite:
         text: "{LOCATION} 에 새 {COSTUME} 을(를) 만드세요"
@@ -436,11 +456,31 @@ ko:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -463,6 +503,8 @@ ko:
             '"right"': 오른쪽 열
             '"x"': 교차
             '"plus"': 더하기
+            '"spiral"': 나선
+            '"infinity"': 무한 선
             '"random"': random(랜덤)
       Dancelab_mixColors:
         text: "{COLOR1} 및 {COLOR2} 혼합"
@@ -569,7 +611,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -643,7 +685,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -679,7 +721,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -706,7 +748,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -723,7 +765,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -748,7 +790,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -783,7 +825,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -828,7 +870,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -994,7 +1036,22 @@ ko:
       gamelab_clickedOn:
         text: 때 {SPRITE} 클릭
       gamelab_clickedSpritePointer:
-        text: 클릭 {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 오른쪽으로 회전
+            new Behavior(spinning_left, []): 왼쪽으로 회전
+            new Behavior(fluttering, []): 너울거림
+            new Behavior(jittering, []): 지터링
+            new Behavior(wobbling, []): 흔들림
+            new Behavior(wandering, []): 배회
+            new Behavior(patrolling, []): 순찰
+            new Behavior(moving_west_and_looping, []): 서쪽으로 이동 및  반복
+            new Behavior(moving_east_and_looping, []): 동쪽으로 이동 및  반복
+            new Behavior(moving_north_and_looping, []): 북쪽으로 이동 및  반복
+            new Behavior(moving_south_and_looping, []): 남쪽으로 이동 및  반복
       gamelab_comment:
         text: '코멘트: {COMMENT}'
       gamelab_costumeImage:
@@ -1011,6 +1068,12 @@ ko:
         text: 라인 {COLOR}  {LOC1}  {LOC2} 그리기
       gamelab_edgesDisplace:
         text: 모서리 이동에서 블록 {SPRITE}
+      gamelab_everyInterval:
+        text: '매 {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': "~초 기다리기"
+            '"frames"': 프레임
       gamelab_followingTargets:
         text: 다음 목표물
       gamelab_getAllSprites:
@@ -1046,6 +1109,20 @@ ko:
         text: |-
           만약 {NUM} ={VAL}이면
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} 복장은 {COSTUME} 입니다"
       gamelab_isKeyPressed:
@@ -1164,6 +1241,13 @@ ko:
             '90': 아래로
             '180': 왼쪽으로
             '270': 위로
+      gamelab_makeSpritesWithSize:
+        text: "{NUM}개의 새 {SIZE} {COSTUME} 스프라이트를 만드세요"
+        options:
+          SIZE:
+            '30': 작음
+            '50': 보통
+            '100': 큰
       gamelab_mirrorSprite:
         text: "{SPRITE} 얼굴 {DIRECTION}"
         options:
@@ -1187,9 +1271,9 @@ ko:
       gamelab_moveToward:
         text: 이동 {SPRITE} 픽셀 {DISTANCE} 향해 {TARGET}
       gamelab_newSpritePointer:
-        text: 클릭 {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: 클릭 {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: 위 아래로 순찰
       gamelab_playSound:
@@ -1236,6 +1320,13 @@ ko:
             "'sound://category_digital/jump_7.mp3'": 점프
       gamelab_playSpeech:
         text: 스피치 {SOUND} 재생
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): 화살표 키로 이동
+            new Behavior(driving_with_arrow_keys, []): 화살표 키로 운전
+            draggable(): 드래그 가능
       gamelab_pointInDirection:
         text: 지점 {SPRITE} {DIRECTION}
         options:
@@ -1260,6 +1351,8 @@ ko:
         text: "{THIS}에서 색상 제거"
       gamelab_repeatForever:
         text: 무한반복
+      gamelab_resetTimer:
+        text: 타이머 재설정
       gamelab_setAnimation:
         text: 변경 {THIS} 의상을 {ANIMATION}
       gamelab_setBackground:
@@ -1344,6 +1437,14 @@ ko:
             '"scale"': 크기
             '"width"': 너비
             '"height"': '높이:'
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': 느리게
+            '5': 보통
+            '7': 빠르게
+            '9': extra fast
       gamelab_setTint:
         text: 의 색상을 변경 {THIS} 받는 사람 {COLOR}
       gamelab_setupScoreboard:
@@ -1367,6 +1468,48 @@ ko:
         text: "{SPRITE}이(가) {SPEECH}을(를) 말함"
       gamelab_spriteSayTime:
         text: "{SPRITE}이(가){TEXT1}을(를) {NUM}초 동안 말함"
+      gamelab_spriteThink:
+        text: "{SPRITE}이(가) {SPEECH}을(를) 생각합니다"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}이(가) {TEXT1}을(를) {NUM}초 동안 생각합니다"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE}이(가) {THOUGHT}을(를) 생각합니다"
+        options:
+          THOUGHT:
+            '"Hmm..."': 흠……
+            '"I am hungry, too."': 나도 배고파요.
+            '"I only want the biggest goat."': 가장 큰 염소만을 원해요.
+            '"I''m a green troll."': 나는 녹색 트롤입니다.
+            '"No one will cross my bridge."': 아무도 내 다리를 건너가질 못합니다.
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE}이(가) {THOUGHT}을(를) 생각합니다"
+        options:
+          THOUGHT:
+            '"Hmm..."': 흠……
+            '"Time to make friends with the sheep."': 양과 친구가 될 시간.
+            '"She''ll never recognize me now."': 이제 그녀는 나를 알아보지 못할 거예요.
+            '"This costume keeps me warm."': 이 의상이 따뜻해요.
+            '"I am actually a wolf."': 저는 사실 여우예요.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE}이(가) {THOUGHT}을(를) 생각합니다"
+        options:
+          THOUGHT:
+            '"Hmm..."': 흠……
+            '"I''m feeling sleepy."': 졸려요.
+            '"No one could ever beat me."': 아무도 나를 절대 이길 수 없어요.
+            '"I''ve done this race before."': 이 경주를 전에 한 적이 있어요.
+            '"My feet are bigger than Turtle''s feet."': 내 발은 거북이의 발 보다 더 커요.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE}이(가) {THOUGHT}을(를) 생각합니다"
+        options:
+          THOUGHT:
+            '"Hmm..."': 흠……
+            '"I''m so hungry."': 너무 배가 고파요.
+            '"I''m a visitor in this town."': 저는 이 마을의 방문객이예요.
+            '"If we share, we''ll all have something to eat. "': 서로 나누면, 우리 모두 먹을
+              거를 갖게 될 거예요.
+            '"I''ll trick everyone into giving me their food."': 사람들에게 속임수를 써서 나에게
+              음식을 주게 할께요.
       gamelab_startAvoiding:
         text: "{SPRITE}이(가) {TARGET}을(를) 피하기 시작함"
       gamelab_startFollowing:
@@ -1382,7 +1525,7 @@ ko:
       gamelab_stopGliding:
         text: "{SPRITE}은 글라이딩을 중지합니다."
       gamelab_subjectSpritePointer:
-        text: 클릭 {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
@@ -1940,20 +2083,28 @@ ko:
         text: '스프라이트 {ANIMATION_NAME} 는 {BEHAVIOR}을 시작합니다 '
         options:
           BEHAVIOR:
+            '"fluttering"': 너울거림
             '"growing"': 성장
             '"jittering"': 지터링
+            '"shrinking"': 축소
             '"spinning_left"': 왼쪽으로 회전
             '"spinning_right"': 오른쪽으로 회전
+            '"swimming_left_and_right"': 수영
             '"wandering"': 배회
+            '"wobbling"': 흔들림
       Poetry_stopBehavior:
         text: '스프라이트 {ANIMATION_NAME} 는 {BEHAVIOR}을 멈춥니다 '
         options:
           BEHAVIOR:
+            '"fluttering"': 너울거림
             '"growing"': 성장
             '"jittering"': 지터링
+            '"shrinking"': 축소
             '"spinning_left"': 왼쪽으로 회전
             '"spinning_right"': 오른쪽으로 회전
+            '"swimming_left_and_right"': 수영
             '"wandering"': 배회
+            '"wobbling"': 흔들림
             '"all"': "--모든 행동--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

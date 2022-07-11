@@ -323,7 +323,7 @@ module.exports = {
             /* eslint-disable prettier/prettier */
             return (block.type === 'flappy_setBackground' ||
                 block.type === 'flappy_setPlayer') &&
-              block.getTitleValue('VALUE') === 'random';
+              block.getFieldValue('VALUE') === 'random';
             /* eslint-enable prettier/prettier */
           },
           type: 'flappy_setBackground',

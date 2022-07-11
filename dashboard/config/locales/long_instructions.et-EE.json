@@ -195,7 +195,8 @@
         "MC_HOC_2017_Ali_2021": "Vaata funktsioone allpool.  Kuidas saad neid kasutada, et vältida ning Ghasts'e ja aidata {currentPlayerName} ohutult **nõiutud raamatuni** [book_enchanted]?  ",
         "MC_HOC_2017_FP20x20_2021": "\\*\\*Vaba mängimine: \\*\\* Nüüd on kõik sinu kätes! Kasuta Agendi koodi maailma avastamiseks.",
         "Overworld Move to Sheep_2021": "Lisa teine käsk „liigu edasi“, et jõuda lambani.",
-        "courseD_maze_nestedLoops4_2021": "Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\\\r\\\rProovi kasutada 'korda' tsüklit mõne teise tsükli sees, et kasutada vähem koodi."
+        "courseD_maze_nestedLoops4_2021": "Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\\\r\\\rProovi kasutada 'korda' tsüklit mõne teise tsükli sees, et kasutada vähem koodi.",
+        "MC Agent Freeplay": "\\*\\*Vaba mängimine: \\*\\* Nüüd on kõik sinu kätes! Kasuta Agendi koodi maailma avastamiseks."
       }
     }
   }

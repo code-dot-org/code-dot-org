@@ -16,13 +16,10 @@ import {
 } from './sectionProgressRedux';
 import {loadScriptProgress} from './sectionProgressLoader';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
-import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
-import {
-  setScriptId,
-  validScriptPropType
-} from '@cdo/apps/redux/unitSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import ProgressViewHeader from './ProgressViewHeader';
+import logToCloud from '@cdo/apps/logToCloud';
 
 /**
  * Given a particular section, this component owns figuring out which script to
@@ -34,8 +31,8 @@ class SectionProgress extends Component {
   static propTypes = {
     //Provided by redux
     scriptId: PropTypes.number,
-    section: sectionDataPropType.isRequired,
-    validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
+    sectionId: PropTypes.number,
+    coursesWithProgress: PropTypes.array.isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
     scriptData: scriptDataPropType,
@@ -48,79 +45,81 @@ class SectionProgress extends Component {
 
   constructor(props) {
     super(props);
-    this.onChangeScript = this.onChangeScript.bind(this);
-    this.onChangeLevel = this.onChangeLevel.bind(this);
-    this.navigateToScript = this.navigateToScript.bind(this);
+
+    this.state = {
+      reportedInitialRender: false
+    };
   }
 
   componentDidMount() {
-    loadScriptProgress(this.props.scriptId, this.props.section.id);
+    loadScriptProgress(this.props.scriptId, this.props.sectionId);
   }
 
-  onChangeScript(scriptId) {
+  componentDidUpdate() {
+    if (this.levelDataInitialized() && !this.state.reportedInitialRender) {
+      logToCloud.addPageAction(
+        logToCloud.PageAction.SectionProgressRenderedWithData,
+        {
+          sectionId: this.props.sectionId,
+          scriptId: this.props.scriptId
+        }
+      );
+      this.setState({reportedInitialRender: true});
+    }
+  }
+
+  onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    loadScriptProgress(scriptId, this.props.section.id);
+    loadScriptProgress(scriptId, this.props.sectionId);
 
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'change_script',
-        data_json: JSON.stringify({
-          section_id: this.props.section.id,
-          old_script_id: this.props.scriptId,
-          new_script_id: scriptId
-        })
-      },
-      {includeUserId: true}
-    );
-  }
+    this.recordEvent('change_script', {
+      old_script_id: this.props.scriptId,
+      new_script_id: scriptId
+    });
+  };
 
-  onChangeLevel(lessonOfInterest) {
+  onChangeLevel = lessonOfInterest => {
     this.props.setLessonOfInterest(lessonOfInterest);
 
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'jump_to_lesson',
-        data_json: JSON.stringify({
-          section_id: this.props.section.id,
-          script_id: this.props.scriptId,
-          stage_id: this.props.scriptData.lessons[lessonOfInterest].id
-        })
-      },
-      {includeUserId: true}
-    );
-  }
+    this.recordEvent('jump_to_lesson', {
+      script_id: this.props.scriptId,
+      stage_id: this.props.scriptData.lessons[lessonOfInterest].id
+    });
+  };
 
-  navigateToScript() {
+  navigateToScript = () => {
+    this.recordEvent('go_to_script', {script_id: this.props.scriptId});
+  };
+
+  recordEvent = (eventName, dataJson = {}) => {
     firehoseClient.putRecord(
       {
         study: 'teacher_dashboard_actions',
         study_group: 'progress',
-        event: 'go_to_script',
+        event: eventName,
         data_json: JSON.stringify({
-          section_id: this.props.section.id,
-          script_id: this.props.scriptId
+          section_id: this.props.sectionId,
+          ...dataJson
         })
       },
       {includeUserId: true}
     );
-  }
+  };
+
+  levelDataInitialized = () => {
+    const {scriptData, isLoadingProgress, isRefreshingProgress} = this.props;
+    return scriptData && !isLoadingProgress && !isRefreshingProgress;
+  };
 
   render() {
     const {
-      validScripts,
+      coursesWithProgress,
       currentView,
       scriptId,
       scriptData,
-      isLoadingProgress,
-      isRefreshingProgress,
       showStandardsIntroDialog
     } = this.props;
-    const levelDataInitialized =
-      scriptData && !isLoadingProgress && !isRefreshingProgress;
+    const levelDataInitialized = this.levelDataInitialized();
     const lessons = scriptData ? scriptData.lessons : [];
     const scriptWithStandardsSelected =
       levelDataInitialized && scriptData.hasStandards;
@@ -134,7 +133,7 @@ class SectionProgress extends Component {
               {i18n.selectACourse()}
             </div>
             <UnitSelector
-              validScripts={validScripts}
+              coursesWithProgress={coursesWithProgress}
               scriptId={scriptId}
               onChange={this.onChangeScript}
             />
@@ -217,8 +216,8 @@ export const UnconnectedSectionProgress = SectionProgress;
 export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
-    section: state.sectionData.section,
-    validScripts: state.unitSelection.validScripts,
+    sectionId: state.teacherSections.selectedSectionId,
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentUnitData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,

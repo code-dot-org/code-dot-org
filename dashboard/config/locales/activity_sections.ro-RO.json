@@ -1073,6 +1073,46 @@
         "17878891-5c24-412b-b385-35b54fdaeb11": {
           "description": "**Lumea reală: compresia Zip**\n\n-   Experimentați cu zip folosind fișiere text cu conținut diferit. Sunt rezultatele pentru fișierele mici la fel de bune ca și pentru fișierele mari? (Pe Mac, în Finder, alegeți „obține informații” pentru un fișier pentru a vedea numărul real de biți din fișier, deoarece afișajul Finder va afișa 4KB pentru orice fișier care este mai mic decât atât.)\n    -   Atenție: rezultatele pot varia. Zip funcționează foarte bine pentru text, dar s-ar putea să nu comprime foarte bine alte fișiere, deoarece acestea sunt deja comprimate sau nu au aceleași tipuri de modele încorporate pe care le au documentele text.\n\n**Provocare: cercetați algoritmul LZW**\n\n-   Compresia .zip se bazează pe [Schema de compresie LZW](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)\n\n-   În timp ce ideea din spatele instrumentului de compresie a textului este similară cu algoritmul LZW (zip), urmărirea căii de compresie și decompresie este oarecum provocatoare. A afla mai multe despre LZW și ce se întâmplă în cursul acestui algoritm ar fi un proiect de extplorare excelent pentru unele persoane."
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Introducere",
+          "description": "**Discutați:**\n\n-   _Ce știm despre cum se răspândește un virus?_\n-   _Ce poate face ca un virus să se răspândească mai repede printr-un oraș?_\n-   _Ce poate ajuta la încetinirea răspândirii unui virus?_\n\nScopul acestei discuții este ca elevii să aibă ocazia să activeze cunoștințele anterioare și să-și vadă ideile pe tablă. Aceasta este, de asemenea, o oportunitate de a investiga unele concepții greșite despre modul în care virușii se răspândesc."
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Epidemie",
+          "description": "_În lecția de astăzi, vei merge în „Orașul monștrilor”, unde este pe cale să se producă o epidemie de viruși. Dr. Monster are nevoie de ajutorul tău pentru a încetini răspândirea virusului._\n\n_Veți crea un simulator de focar în Sprite Lab și apoi îl veți folosi pentru a înțelege cum se poate răspândi un virus. De asemenea, îi vei ajuta pe toți monștrii să fie sănătoși din nou!_",
+          "progression_name": "Epidemie"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "\\*\\* Citiți _Bine ați venit în Monster Town_ la nivel de clasă.",
+          "progression_name": "Bine ai venit în Orașul Monștrilor"
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": "**Faceți acest lucru:** revizuiți vocabularul, **modelele și simulările** cu elevii, pornind de la lecția anterioară. O simulare este un model computerizat al unui proces sau sistem."
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": "_Astăzi, vom face ca un loc precum Orașul Monștrilor să prindă viață scriind un cod. În această simulare, vei folosi sprite-uri (personaje) pentru a reprezenta diferiții monștri. Aceste personaje vor avea costume diferite pentru a ne spune lucruri precum dacă sunt bolnavi sau sănătoși. De asemenea, vei folosi comportamente pentru a-i face pe monștri să se miște. În cele din urmă, vei folosi evenimente pentru a schimba costumul unui personaj atunci când două personaje ating ecranul. Aceasta va reprezenta un monstru care transmite virusul altuia. Vei face predicții despre ceea ce se va întâmpla cu vecinii din Orașul Monștrilor și îi vei ajuta să se însănătoșească din nou!_"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "**Faceți acest lucru:** Așezați elevii la computerele lor și rugați-i să înceapă să urmeze instrucțiunile pentru fiecare nivel din secțiunea de dezvoltare a abilităților. Dacă elevii termină această secțiune mai devreme, ei pot continua să experimenteze cu codul lor la nivelul 6 până când clasa este gata să meargă mai departe.",
+          "progression_name": "Dezvoltarea aptitudinilor"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "**Faceți acest lucru:** Lăsați elevii la computerele lor și rugații să treacă prin nivelurile rămase. Unele dintre aceste niveluri oferă provocări opționale. Încurajați elevii să citească cu atenție instrucțiunile și să experimenteze cu simulările lor.",
+          "progression_name": "Mini-proiect: Simulator de focar de epidemie"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Joc la liber"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Simulările sunt o modalitate excelentă de a învăța lucruri care pot fi greu de observat în lumea reală. Ele ajută oamenii de știință să rezolve probleme, să prezică cum să rezolve problema și să testeze idei noi în siguranță și în mod eficient. Simularea ta este o modalitate de a arăta cum ar putea arăta un focar de virus în Orașul Monștrilor._"
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": "**Discutați:**\n\n-   Cum pot fi de ajutor simulările în lumea reală?\n-   Cum ne pot ajuta simulările să înțelegem lumea din jurul nostru?\n-   Cum pot simulările să îmbunătățească modul în care testăm ideile?\n\nScopul discuției este ca elevii să înțeleagă că simulările sunt o modalitate de a modela sisteme complexe într-un mod interactiv. De asemenea, ar trebui să vadă cum simulările le permit oamenilor să testeze idei rapid, ieftin și în siguranță."
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Reflecţie",
+          "description": "**Concluzii:**\n\n-   Prin ce se aseamănă această simulare cu lumea reală? Prin ce diferă?\n-   Ce ați dori să schimbați/adăugați la simulare?"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introducere",
           "description": "#### Urați-le Bun venit elevilor în clasă și prezentați pe scurt activitatea ce se va desfășura în ziua respectivă.\n\n_Spuneți-le: „Astăzi vom petrece o oră învățând să codăm. A mai auzit cineva de aici de termenul „cod”? Ce înseamnă?\"_\n\nElevii ar putea menționa că un „cod” este ca un mesaj secret sau că are legătură într-un fel cu computerele.",
@@ -1236,7 +1276,7 @@
           "progression_name": "Mai multe butoane"
         },
         "72e0b520-4c05-4c32-84c3-1a51fd86daad": {
-          "progression_name": "Intră în formaţie"
+          "progression_name": "Intră în Formaţie"
         },
         "d3123d53-f986-4095-a3d7-b9db9ea32c36": {
           "progression_name": "Unde au dispărut?"
@@ -1377,7 +1417,8 @@
           ]
         },
         "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
-          "description": "#### Nivelurile 2-4 - Antrenează AI pentru a curăța oceanul\n\nElevii pot lucra la nivelurile 2-4 singuri sau cu un partener. Pentru a programa Inteligența Artificială, utilizați butoanele pentru a eticheta o imagine fie „pește”, fie „nu pește”. Fiecare imagine și etichetă devine parte a datelor utilizate pentru a antrena Inteligența Artificială să o facă singură. Odată antrenată Inteligența Artificială va încerca să eticheteze singură 100 de imagini noi, apoi să prezinte o selecție despre care a stabilit că are cea mai mare probabilitate de a fi „pește” pe baza pregătirii sale. Elevii care etichetează în mod constant lucrurile corect ar trebui să vadă un ocean plin de diferite tipuri de creaturi marine, fără multe (sau orice) alte obiecte."
+          "description": "#### Nivelurile 2-4 - Antrenează AI pentru a curăța oceanul\n\nElevii pot lucra la nivelurile 2-4 singuri sau cu un partener. Pentru a programa Inteligența Artificială, utilizați butoanele pentru a eticheta o imagine fie „pește”, fie „nu pește”. Fiecare imagine și etichetă devine parte a datelor utilizate pentru a antrena Inteligența Artificială să o facă singură. Odată antrenată Inteligența Artificială va încerca să eticheteze singură 100 de imagini noi, apoi să prezinte o selecție despre care a stabilit că are cea mai mare probabilitate de a fi „pește” pe baza pregătirii sale. Elevii care etichetează în mod constant lucrurile corect ar trebui să vadă un ocean plin de diferite tipuri de creaturi marine, fără multe (sau orice) alte obiecte.",
+          "progression_name": "Antrenează o IA pentru Curățarea Oceanului"
         },
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
           "description": "#### Nivelul 5 - Date de antrenament și părtinire\n\n**Partajare rapidă:** Cât de bine s-a descurcat Inteligența Artificială? Cum crezi că a decis ce să includă în ocean?",
@@ -1429,9 +1470,6 @@
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Exemplul 2: Utilizarea vizualizării Informațiilor pentru a îmbunătăți modelul",
           "description": "Adăugarea mai multor date pentru antrenament nu numai că modifică rezultatele, ci și datele afișate în vizualizarea Informațiilor. Uneori, graficul de rezultate afișat poate clarifica de ce rezultatele nu corespund așteptărilor.\n\nSă luăm în considerare un elev care dorește să pregătească IA pentru a recunoaște un pește **„furios”**.\nEi vor dori să realizeze acest lucru selectând orice pește cu sprâncene îndreptate spre interior și guri încruntate. Ei vor eticheta un pește drept „furios” dacă are o combinație a acestor trăsături:\n\n| Ochi „furios”: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) Gură „furioasă”: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\nPoate IA să-ți dai seama ce face elevul fără a fi programată în mod explicit? Depinde de câte date de antrenament furnizează elevul și de calitatea datelor din set.\n\n| Pește „furios” - antrenament: 30                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Pește „furios” - antrenament: 200                                          |\n| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\">                                                                                                                                                                                                                                                                                                                                                                                                      | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n| _Aici putem observa că IA a preluat imediat pe „ochi” ca fiind cea mai importantă trăsătură, dar urmată îndeaproape de „culoare”, nu „gură”. Există câțiva pești violet în imaginea din stânga care au guri diferite de ceea ce vizează elevul. Poate că mulți dintre peștii „furioși” pe care elevul i-a selectat inițial erau violet? O modalitate de a îmbunătăți modelul ar fi să continuați antrenamentul până când câțiva pești violet „nu supărați” au fost etichetați corect._ | _Rezultate sunt mult îmbunătățite după un antrenament suplimentar._        |"
-        },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Pregătire"
         },
         "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
           "name": "Activitate Principală (Vechi)"
@@ -1485,8 +1523,14 @@
         "128361aa-1832-4581-a686-26ec8d72bc30": {
           "progression_name": "Viteza"
         },
+        "894e68de-6238-4607-90d8-47372189462a": {
+          "progression_name": "Detectarea coliziunilor"
+        },
         "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
           "progression_name": "Funcţii"
+        },
+        "d34707f5-3e1c-4448-b0e4-254a116ac2b7": {
+          "progression_name": "Jocul Colecționarul"
         },
         "d6ed872d-76c1-4f17-a785-1279a9ad0a59": {
           "name": "Reflecţie",
@@ -1546,6 +1590,10 @@
         "0eb10caa-d6c3-4afd-bba1-c28694a1128a": {
           "progression_name": "Corectare erori"
         },
+        "43f5caa8-4b58-4af6-9425-6b642fa30743": {
+          "name": "Provocare",
+          "progression_name": "Provocare"
+        },
         "988b26e3-ab8c-4d5b-b903-982c822e17bd": {
           "name": "Reflecţie",
           "progression_name": "Reflecţie"
@@ -1568,11 +1616,26 @@
         "3fea4a8d-84f4-4f63-a8d2-7085c77b4fef": {
           "progression_name": "Programare în perechi"
         },
+        "c23ccdc3-4f91-4719-8ad1-ae870fbb0b66": {
+          "progression_name": "Provocare"
+        },
         "647fb9ef-1f2f-4552-8785-1a3b2a5850cb": {
           "progression_name": "Programare cu Rey și BB-8"
         },
+        "3328d13e-655b-460a-888b-94567abfe169": {
+          "progression_name": "Provocare"
+        },
+        "96a3f354-7b69-41e7-9100-4523dc83acaf": {
+          "progression_name": "Provocare"
+        },
         "42a28a6d-b136-4659-bdbd-5caed86947d3": {
           "progression_name": "Utilizarea blocului ”repetă” (repeat)"
+        },
+        "928e8522-a5d1-4172-9981-7c812394708d": {
+          "progression_name": "Provocare"
+        },
+        "c1a9472c-1033-4660-8314-6d5c9789ae58": {
+          "progression_name": "Provocare"
         },
         "3ead06ef-2d2b-49b0-b62b-ededeff21bcb": {
           "progression_name": "Joc la liber"
@@ -1583,11 +1646,26 @@
         "282dad48-141f-46bb-9675-9f0629dab0fc": {
           "progression_name": "Programare în perechi"
         },
+        "24ac3487-2bac-447f-a644-c97ed06eb7bc": {
+          "progression_name": "Provocare"
+        },
         "4ab2263d-bf26-4d37-bc0e-88278310cfa7": {
           "progression_name": "Culegătorul"
         },
+        "4a9bb659-a861-4fae-8024-300307f55af4": {
+          "progression_name": "Provocare"
+        },
+        "9b25a500-d3ff-45b0-8e4e-e105361c1f70": {
+          "progression_name": "Provocare"
+        },
         "1509114f-e57a-4100-b4ec-665739adf403": {
           "progression_name": "Utilizarea blocului ”repetă” (repeat)"
+        },
+        "80de6acc-e6ab-48b7-ac35-192fd30fa831": {
+          "progression_name": "Provocare"
+        },
+        "99e3dad7-98a9-4f93-86a3-e78793215495": {
+          "progression_name": "Provocare"
         },
         "ff0bdda6-cf62-4449-a308-76b365386a4c": {
           "progression_name": "Joc la liber"
@@ -1597,6 +1675,12 @@
         },
         "1ebe2c8c-ee7d-405e-927f-cae153b2a188": {
           "progression_name": "Joc la liber"
+        },
+        "07193199-5792-4f3b-a082-cb2a6e3e3688": {
+          "progression_name": "Provocare"
+        },
+        "87fb67e1-deff-4108-87f9-bda43f69ddf0": {
+          "progression_name": "Provocare"
         },
         "eaf5aad1-3ca8-4a7a-82a9-0e62b210afb6": {
           "name": "Joc la liber",
@@ -1609,8 +1693,29 @@
         "f0c21fc1-b243-411a-b177-99f07b95acf3": {
           "progression_name": "Utilizarea blocului ”repetă” (repeat)"
         },
+        "0ce7c02f-f05a-40cf-a5be-87946f72027d": {
+          "progression_name": "Provocare"
+        },
+        "38d68221-32e8-4984-8a39-69073466459f": {
+          "progression_name": "Provocare"
+        },
+        "5f04ced8-6ae3-4d10-aaec-f9ceb4684d69": {
+          "progression_name": "Provocare"
+        },
+        "b7b86177-be53-4ffc-af33-74c5f28cf41c": {
+          "progression_name": "Provocare"
+        },
+        "deb064fb-e848-49e3-8fce-76f6ea0b85ad": {
+          "progression_name": "Provocare"
+        },
+        "15c133ad-c9de-4a2c-8bc3-8dc5ea07f83e": {
+          "progression_name": "Provocare"
+        },
         "502e09e6-3af3-43cb-ae96-e44507f1250c": {
           "progression_name": "Culegătorul"
+        },
+        "6a5e000e-9713-4ba5-a455-501c3806ec4e": {
+          "progression_name": "Provocare"
         },
         "0914c4d0-b269-4072-a1b7-ed41eb2b7224": {
           "progression_name": "Joc la liber"
@@ -1627,7 +1732,7 @@
           "progression_name": "Prezentând Laboratorul de Desen"
         },
         "ee39051b-426b-40d9-b61f-1f180cae8717": {
-          "progression_name": "Cum să Faci un Desen"
+          "progression_name": "Cum se creează un Sprite"
         },
         "18e78998-a305-4084-83a3-df1cd05da78f": {
           "name": "Joc la liber",
@@ -1636,11 +1741,26 @@
         "71c84958-5cc4-467d-8c97-f2f63123c47d": {
           "progression_name": "Video"
         },
+        "2a412b4f-68cb-417f-bd40-716a3cfdf0ff": {
+          "progression_name": "Provocare"
+        },
+        "0948dcbc-ac22-48af-a16e-2c03c5b0d317": {
+          "progression_name": "Provocare"
+        },
+        "b365d5bf-c5bc-462c-895c-3cca05ad79f6": {
+          "progression_name": "Provocare"
+        },
         "b6a63f32-8007-4b17-ae9b-718652243e78": {
           "progression_name": "Artist: Variabile"
         },
+        "caf6bd1c-dbcf-4747-93e5-dcae7eab1896": {
+          "progression_name": "Provocare"
+        },
         "3b6fb751-1751-4a04-9d40-73b9356aa8f6": {
           "progression_name": "Joc la liber"
+        },
+        "25103086-3dd2-4f4a-b8ba-11d66d826e34": {
+          "progression_name": "Provocare"
         },
         "26da0974-cf83-41fe-b6d8-b6c9f7a29c03": {
           "progression_name": "Joc la liber"
@@ -1664,11 +1784,23 @@
           "name": "Proiectul Artist",
           "progression_name": "Proiectul Artist"
         },
+        "b53b7eb1-3aab-44fb-bda0-e658142a7093": {
+          "progression_name": "Provocare"
+        },
+        "b77b5637-ea90-4ae9-bfb9-22810b90bf92": {
+          "progression_name": "Provocare"
+        },
+        "b9a00091-4e59-451c-9be6-c9311e4a4543": {
+          "progression_name": "Provocare"
+        },
+        "acb1431e-7cdb-4448-bf6d-1876d561952e": {
+          "progression_name": "Provocare"
+        },
         "e554878a-7385-4425-9fc6-e0a5f1bb2966": {
           "progression_name": "Prezentând Laboratorul de Desen"
         },
         "4fc6e6fd-3688-4fb0-8985-3aa4cbdf8d18": {
-          "progression_name": "Cum să Faci un Desen"
+          "progression_name": "Cum se creează un Sprite"
         },
         "fe9fe0d9-b57c-45ff-ac09-b7b3cdbd4303": {
           "name": "Joc la liber",
@@ -1680,8 +1812,14 @@
         "a7fbfcf7-5c63-4f6d-a1c4-21540179724d": {
           "progression_name": "Joc la liber"
         },
+        "9f1d586c-1d97-46de-9fe5-6bad58413cb9": {
+          "progression_name": "Provocare"
+        },
         "26d010c0-aeef-49ad-85f9-f06ce1daaa31": {
           "progression_name": "Video"
+        },
+        "269b42b4-fc3f-4a60-828f-0e6b2f73b0c6": {
+          "progression_name": "Provocare"
         },
         "1405ae48-2e0c-4a36-878f-668639ba0f51": {
           "progression_name": "Joc la liber"
@@ -1692,6 +1830,12 @@
         },
         "0b309aa0-00ca-47e2-9f46-288d25694b0d": {
           "progression_name": "Culegătorul"
+        },
+        "5db96562-98cc-4fa4-972d-ff37bcd76287": {
+          "progression_name": "Provocare"
+        },
+        "1437cbd2-75ab-42e4-99c1-a1db6e0f446c": {
+          "progression_name": "Provocare"
         },
         "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
           "progression_name": "Proiectul Prite Lab"
@@ -1707,15 +1851,36 @@
           "name": "Proiectul Artist",
           "progression_name": "Proiectul Artist"
         },
+        "f72e471d-ff91-41d4-9f97-3302b73b5ec5": {
+          "progression_name": "Provocare"
+        },
+        "dec15e5a-6919-45fb-b36a-b009ddc2ea0e": {
+          "progression_name": "Provocare"
+        },
+        "c7cc745e-db84-4914-abff-fba5821a6d51": {
+          "progression_name": "Provocare"
+        },
         "7292a6ea-9eb1-4775-a680-ad1755ee4e59": {
           "name": "Suplimente de lecţie",
           "progression_name": "Suplimente de lecţie"
         },
+        "62eb4fa5-496a-4d2d-ad6a-1618bc2be7f0": {
+          "progression_name": "Provocare"
+        },
         "e0d3988c-bdb0-45b1-9512-354e87118d64": {
           "progression_name": "Programare cu Rey și BB-8"
         },
+        "f42d7b9f-5cd2-4a12-a75d-67af88c45947": {
+          "progression_name": "Provocare"
+        },
         "b4cf29ee-8a4e-48ff-b637-302f650a2ede": {
           "progression_name": "Culegătorul"
+        },
+        "21c1076a-87ae-4316-bd9a-3f6a7c43cba2": {
+          "progression_name": "Provocare"
+        },
+        "5b1c525c-13c6-4dad-b882-d351f0fcd634": {
+          "progression_name": "Provocare"
         },
         "84b14f6c-d011-4e52-8664-233fda16599e": {
           "name": "Joc la liber",
@@ -1747,8 +1912,14 @@
         "1c09bf04-72d5-4d17-8e27-cbc096099cb0": {
           "progression_name": "Viteza"
         },
+        "e6940894-5c4f-454c-b9f5-fe2b6a8e4cc8": {
+          "progression_name": "Detectarea coliziunilor"
+        },
         "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
           "progression_name": "Funcţii"
+        },
+        "49c1d6b1-5bbb-41aa-a6a5-ab66992bbf72": {
+          "progression_name": "Jocul Colecționarul"
         },
         "a93b675e-fb6a-430e-86e6-ffbe77fea72e": {
           "name": "Reflecţie",
@@ -1796,6 +1967,10 @@
           "name": "Reflecţie",
           "progression_name": "Reflecţie"
         },
+        "8044f0e5-2eee-425f-b124-6f80494e5b23": {
+          "name": "Video: Procesul de Rezolvare a Problemei",
+          "progression_name": "Video: Procesul de Rezolvare a Problemei"
+        },
         "3e5ddb5c-d0e4-4022-becc-08bffeec64b2": {
           "name": "Video: Ce face calculatorul, calculator?",
           "progression_name": "Video: Ce face calculatorul, calculator?"
@@ -1812,6 +1987,10 @@
         },
         "9b99bbac-c605-4a93-a573-277dbf0d31fe": {
           "progression_name": "Corectare erori"
+        },
+        "4d3fa0f3-0dea-4ff7-9e48-f2ea1fb5e6b6": {
+          "name": "Provocare",
+          "progression_name": "Provocare"
         },
         "301881e9-8b2a-430a-9bf3-928038396c1f": {
           "name": "Reflecţie",
@@ -1883,6 +2062,9 @@
           "name": "Joc la liber",
           "progression_name": "Joc la liber"
         },
+        "fc1bc192-2615-4271-877b-98aa5925c937": {
+          "progression_name": "Detectarea coliziunilor"
+        },
         "53169820-0257-4ae6-9c9a-9bc618b8f16b": {
           "name": "Joc la liber",
           "progression_name": "Joc la liber"
@@ -1897,6 +2079,9 @@
         },
         "6ab5af14-9b04-48d9-8ca9-8f6f99ebd20b": {
           "progression_name": "Funcţii"
+        },
+        "f650608e-baa7-49b7-a4e9-2f0b12af0d4f": {
+          "progression_name": "Jocul Colecționarul"
         },
         "887f45bd-2611-4441-860d-ac358b2e0d04": {
           "name": "Joc la liber",
@@ -1940,6 +2125,10 @@
         },
         "3fcf676a-373f-41b3-8cf1-ecb10c28ec23": {
           "progression_name": "Corectare erori"
+        },
+        "22367590-f0a2-4c03-8600-8598926280b8": {
+          "name": "Provocare",
+          "progression_name": "Provocare"
         },
         "24f32bdd-aa52-4b1e-9dc3-53b6496ad1e9": {
           "name": "Reflecţie",
@@ -1998,7 +2187,7 @@
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Organizare preliminară\n\nUrați-bun venit elevilor la oră și prezentați-le activitatea zilei.",
           "tips": [
-            "Una dintre modalitățile folosite pentru a prezenta Hour of Code, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale](https://hourofcode.com/promote/resources#videos). Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit](https://youtu.be/FC5FbmsH4fw)."
+            "Una dintre modalitățile folosite pentru a prezenta Hour of Code, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale][0]. Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit][1]."
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
@@ -2011,7 +2200,7 @@
           "description": "Știați că știința calculatoarelor poate fi foarte creativă? Puteți crea artă cu ajutorul codului. Un cod este un set de instrucțiuni pe care un computer le poate înțelege. Așa cum alegeți culorile vopselurilor pe care le folosiți, atunci când alegeți codul pe care vreți să îl scrieți puteți să vă exprimați creativitatea! \n\nAstăzi vom folosi poezia pentru a ne inspira atunci când scriem cod într-un mod creativ. Știe cineva ce este poezia? Aveți o poezie care vă place sau un poet preferat? "
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Citiți poezii împreună:** Citiți împreună [câteva poezii](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) în clasă și faceți câteva exerciții de numire a atmosferei fiecărei poezii. Încurajați elevii să le spună și celorlalți care este interpretarea lor, chiar dacă este diferită de a celorlalți. "
+          "description": "**Citiți poezii împreună:** Citiți împreună [câteva poezii][0] în clasă și faceți câteva exerciții de numire a atmosferei fiecărei poezii. Încurajați elevii să le spună și celorlalți care este interpretarea lor, chiar dacă este diferită de a celorlalți. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Arta Poeziei",
@@ -2028,46 +2217,6 @@
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Aveți două bilete post-it. Pe unul dintre acestea scrieți un lucru pe care l-ați învățat astăzi despre programare. \nPe al doilea, scrieți un lucru pe care l-ați învățat astăzi despre poezie. \n\nSă le spunem și colegilor - ridicați mâna pentru a răspunde la această întrebare: Ce altceva doriți să mai învățați în continuare despre programare și știința calculatoarelor? "
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introducere",
-          "description": "**Discutați:**\n\n-   _Ce știm despre cum se răspândește un virus?_\n-   _Ce poate face ca un virus să se răspândească mai repede printr-un oraș?_\n-   _Ce poate ajuta la încetinirea răspândirii unui virus?_\n\nScopul acestei discuții este ca elevii să aibă ocazia să activeze cunoștințele anterioare și să-și vadă ideile pe tablă. Aceasta este, de asemenea, o oportunitate de a investiga unele concepții greșite despre modul în care virușii se răspândesc."
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "Epidemie",
-          "description": "_În lecția de astăzi, vei merge în „Orașul monștrilor”, unde este pe cale să se producă o epidemie de viruși. Dr. Monster are nevoie de ajutorul tău pentru a încetini răspândirea virusului._\n\n_Veți crea un simulator de focar în Sprite Lab și apoi îl veți folosi pentru a înțelege cum se poate răspândi un virus. De asemenea, îi vei ajuta pe toți monștrii să fie sănătoși din nou!_",
-          "progression_name": "Epidemie"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "description": "\\*\\* Citiți _Bine ați venit în Monster Town_ la nivel de clasă.",
-          "progression_name": "Bine ai venit în Orașul Monștrilor"
-        },
-        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
-          "description": "**Faceți acest lucru:** revizuiți vocabularul, **modelele și simulările** cu elevii, pornind de la lecția anterioară. O simulare este un model computerizat al unui proces sau sistem."
-        },
-        "13a06294-2f2a-4661-9947-46ed5843913f": {
-          "description": "_Astăzi, vom face ca un loc precum Orașul Monștrilor să prindă viață scriind un cod. În această simulare, vei folosi sprite-uri (personaje) pentru a reprezenta diferiții monștri. Aceste personaje vor avea costume diferite pentru a ne spune lucruri precum dacă sunt bolnavi sau sănătoși. De asemenea, vei folosi comportamente pentru a-i face pe monștri să se miște. În cele din urmă, vei folosi evenimente pentru a schimba costumul unui personaj atunci când două personaje ating ecranul. Aceasta va reprezenta un monstru care transmite virusul altuia. Vei face predicții despre ceea ce se va întâmpla cu vecinii din Orașul Monștrilor și îi vei ajuta să se însănătoșească din nou!_"
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "description": "**Faceți acest lucru:** Așezați elevii la computerele lor și rugați-i să înceapă să urmeze instrucțiunile pentru fiecare nivel din secțiunea de dezvoltare a abilităților. Dacă elevii termină această secțiune mai devreme, ei pot continua să experimenteze cu codul lor la nivelul 6 până când clasa este gata să meargă mai departe.",
-          "progression_name": "Dezvoltarea aptitudinilor"
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "description": "**Faceți acest lucru:** Lăsați elevii la computerele lor și rugații să treacă prin nivelurile rămase. Unele dintre aceste niveluri oferă provocări opționale. Încurajați elevii să citească cu atenție instrucțiunile și să experimenteze cu simulările lor.",
-          "progression_name": "Mini-proiect: Simulator de focar de epidemie"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Joc la liber"
-        },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": "_Simulările sunt o modalitate excelentă de a învăța lucruri care pot fi greu de observat în lumea reală. Ele ajută oamenii de știință să rezolve probleme, să prezică cum să rezolve problema și să testeze idei noi în siguranță și în mod eficient. Simularea ta este o modalitate de a arăta cum ar putea arăta un focar de virus în Orașul Monștrilor._"
-        },
-        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Discutați:**\n\n-   Cum pot fi de ajutor simulările în lumea reală?\n-   Cum ne pot ajuta simulările să înțelegem lumea din jurul nostru?\n-   Cum pot simulările să îmbunătățească modul în care testăm ideile?\n\nScopul discuției este ca elevii să înțeleagă că simulările sunt o modalitate de a modela sisteme complexe într-un mod interactiv. De asemenea, ar trebui să vadă cum simulările le permit oamenilor să testeze idei rapid, ieftin și în siguranță."
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflecţie",
-          "description": "**Concluzii:**\n\n-   Prin ce se aseamănă această simulare cu lumea reală? Prin ce diferă?\n-   Ce ați dori să schimbați/adăugați la simulare?"
         },
         "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
           "description": "#### Pregătirea\n\nUrați Bun venit elevilor în clasă și prezentați pe scurt activitatea zilei.\n\nSpuneți-le: _Astăzi vom petrece o oră rezolvând niște puzzle-uri online și învățând abilități specifice laboratorului de informatică._\nScopul acestei discuții este de a-i învăța pe elevi la ce să se aștepte și cum să se comporte atunci când intră în laboratorul de informatică."
@@ -2176,6 +2325,7 @@
           "description": "**Faceți acest lucru:** Folosind diapozitivele cu elemente pregătitoare ale lecției sau acest [exemplu de proiect](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view), arătați-le elevilor animația cu furnica și libelula.**Discutați:** _Cum ați descrie această scenă cu sprites?Dacă vreți ca cineva să creeze această scenă pentru voi pe computer, de ce instrucțiuni ar avea nevoie?_**Obiectiv de discuție:** Elevii trebuie să identifice ambii sprites din acest proiect, să descrie comportamentele (mișcările) acestora și să remarce și fundalul.Acordați-le timp elevilor, pentru ca aceștia să se gândească la idei. Dacă nu sunt siguri de ceea ce vor să spună, spuneți-le că le cereți doar să formuleze observații cu privire la ceea ce văd.Apoi arătați-le codul real utilizat pentru acest proiect și invitați-i să încerce să-l citească.**Reflectați:** Prin ce aseamănă și prin ce se diferențiază instrucțiunile noastre de acest cod?"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
+          "name": "Crearea de sprite-uri",
           "description": "#### Predicție (3 minute)**Faceți acest lucru:** Cereți-le elevilor să citească codul furnizat și să facă o predicție cu privire la ce se va întâmpla. După ce ați apăsat „Rulare”, acordați-le timp elevilor să reflecteze cu privire la orice lucru pe care l-au considerat interesant sau care i-a surprins.",
           "tips": [
             "În cadrul puzzle-urilor de tip predicție, elevii sunt rugați să citească un program care le-a fost pus la dispoziție și să răspundă la o întrebare despre acesta. Trebuie să se răspundă la întrebare înainte ca elevul să poată apăsa butonul „Rulare”. Deși puteți folosi aceste întrebări ca o formă de evaluare, rețineți că acestea se află frecvent la începutul unei lecții, fiind o modalitate de a-i încuraja pe elevi să pună întrebări înainte de a li se arăta cum funcționează ceva nou."
@@ -2296,6 +2446,7 @@
           "description": "**Faceți acest lucru:** Distribuiți și colectați plicurile marcate cu „obiect”, „lichid” și „număr”. Odată colectate, nu le deschideți și începeți să citiți povestea. Când ajungeți la fiecare spațiu necompletat, deschideți plicul și citiți cuvântul."
         },
         "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
+          "name": "Jocuri de petrecere",
           "description": "**Faceți acest lucru:**-   Pregătiți plicurile marcate cu „adjectiv”, „obiect”, „parte a corpului” și „număr”.-   Repetați jocul de mai sus cu cea de-a doua poveste. De data aceasta puteți începe cu etichetele înainte de a prezenta povestea, pentru a crea suspans. Animațiile din diapozitivele lecției sunt deja configurate pentru a face acest lucru.#### (Opțional) Joc de roluriSe poate face o legătură între voluntari și ideea că o aplicație are un „utilizator”. În această analogie, rolul dvs., ca profesor, este asemănător cu cel al unui computer. Veți solicita și stoca informațiile de la „utilizatori”, iar apoi veți încerca să refaceți povestea. Pentru a implica mai mulți elevi și a-i pune să redea acest model, atribuiți roluri:_Computere:_ Distribuiți și colectați plicurile. Deschideți fiecare plic în timp ce se citește povestea pentru a verifica valorile stocate._Utilizatori:_ Transmiteți cuvintele necesare pentru a completa povestea._Cititor:_ Citiți cu voce tare povestea terminată.#### Discuție**Discutați:** Prin ce se deosebește redactarea unei povești cu spații necompletate de redactarea unei povești obișnuite?"
         },
         "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
@@ -2887,6 +3038,9 @@
           "name": "Programare cu Angry Birds",
           "description": "#### Demonstrație suplimentarăAm inclus câteva nivele de predicție cu alegere multiplă care sunt dificile pentru elevii care nu știu să citească. În mod alternativ, acestea pot fi folosite după terminarea etapei ca o recapitulare pentru clasă.Nivelurile de predicție:- [Programare în labirint #1](https://studio.code.org/levels/8730)- [Programare în labirint #2](https://studio.code.org/levels/8729)"
         },
+        "5ca364f2-80c2-4b91-bb51-bf047aac35b5": {
+          "progression_name": "Provocare"
+        },
         "59a20536-707e-4328-88ab-71b1c533cd37": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -2923,6 +3077,9 @@
         },
         "c99faf85-9a98-4efe-8843-65d04bed20f6": {
           "description": "**Circulați:** În timpul activităților online, rolul profesorului este, în principal, de a încuraja și de a sprijini. Pe lângă ideile din ultima lecție, iată câteva idei suplimentare:-   Reamintiți-le elevilor să folosească procesul de depanare înainte de a-i aborda.-   Rugați elevii să descrie problema pe care o văd. Ce ar trebui să facă? Ce face? Ce vă spune acest lucru?-   Reamintiți-le elevilor dezamăgiți că frustrarea este doar un pas pe drumul spre învățare și că perseverența va da roade.-   Dacă totuși un elev este încă blocat după toate acestea, puneți-i întrebări sugestive ca să-l determinați să identifice singur o eroare.**Tranziție:** Cereți-le elevilor să scrie în jurnalul de reflecție note cu privire la lecții."
+        },
+        "fcc74691-719d-415b-87ae-8bc40b436318": {
+          "progression_name": "Provocare"
         },
         "95894838-20b0-41ae-801a-5d3326e39e0b": {
           "name": "Reflecţie",
@@ -2985,6 +3142,9 @@
           "name": "Bucle cu Culegătorul",
           "description": "Pe măsură ce elevii rezolvă puzzle-urile, vedeți dacă își pot da seama câte blocuri folosesc atunci când utilizează o buclă, comparativ cu blocurile folosite fără buclă."
         },
+        "b07cbcb7-9e8e-4a05-a906-8621ce42cb95": {
+          "progression_name": "Provocare"
+        },
         "8342e7d2-b605-4c73-80a9-2d3d97aad783": {
           "name": "Reflecţie",
           "description": "**Subiecte:**-   Despre ce a fost lecția de astăzi?-   Desenează în colțul paginii de jurnal o față care să arate cum te-ai simțit în legătură cu lecția de astăzi.-   Cum te-au ajutat buclele să scrii mai ușor programul?-   Desenează ceva care folosește bucle."
@@ -3005,6 +3165,9 @@
         "080f9c60-77da-4902-a7ba-a5b21efd9aca": {
           "name": "Demonstrația profesorului",
           "description": "Am inclus câteva niveluri de predicție cu alegeri multiple care sunt dificile pentru elevii care nu știu să citească. Opțional, aceste niveluri pot fi revizuite împreună cu clasa dumneavoastră, pentru a vă ajuta elevii să se pregătească pentru puzzle-urile care vor urma. Alternativ, acestea pot fi folosite după terminarea etapei, ca o recapitulare pentru toți elevii.Nivel de predicție:-   [Curs A, Bucle în Colecționar](https://studio.code.org/levels/8746)"
+        },
+        "9b293bbc-d3e3-494d-892e-f90e56347451": {
+          "progression_name": "Provocare"
         },
         "eedc7420-83ed-420a-8bfe-db3e70719c14": {
           "progression_name": "Suplimente de lecţie"
@@ -3031,6 +3194,9 @@
         },
         "6e4b782c-58b7-4079-bec6-7fe157198276": {
           "description": "Am inclus câteva niveluri de predicție cu alegere multiplă care sunt dificile pentru elevii care nu știu să citească. Opțional, aceste niveluri pot fi revizuite împreună cu clasa dumneavoastră, pentru a vă ajuta elevii să se pregătească pentru puzzle-urile care vor urma. Alternativ, acestea pot fi folosite după terminarea etapei, ca o recapitulare pentru toți elevii.**Nivelurile de predicție:** - [Curs B, Bucle în Artist](https://studio.code.org/levels/8745)"
+        },
+        "000254d0-54ca-4866-b12c-f3d4c387cbbc": {
+          "progression_name": "Provocare"
         },
         "22891986-f61f-4e37-aae4-177019581071": {
           "progression_name": "Joc la liber"
@@ -3306,6 +3472,9 @@
           "name": "Programare cu Scrat",
           "description": "Dacă sunteți în căutarea unor puzzle-uri suplimentare pe care să le rezolvați împreună cu clasa, iată câteva puzzle-uri de „predicție” care vă vor permite să parcurgeți codul existent împreună cu elevii dvs. pentru a prezice ce va face _Scrat_. Este o idee bună să le parcurgeți împreună înainte ca elevii să le abordeze pe calculatoarele proprii.#### Niveluri de predicție:-   [Curs B, Programare în labirint #1](https://studio.code.org/levels/12607)-   [Curs B, Programare în labirint #2](https://studio.code.org/levels/12608)"
         },
+        "9bf3aa93-0d30-4dd2-a78e-926066cc64f3": {
+          "progression_name": "Provocare"
+        },
         "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -3333,6 +3502,9 @@
         },
         "71cf3779-677d-4123-8feb-f4c503c32c3e": {
           "name": "Programare cu Rey și BB-8"
+        },
+        "3c2f387d-dde7-4c31-befe-3bf45387d813": {
+          "progression_name": "Provocare"
         },
         "4aebed84-fb26-4d7b-97e8-6bcee3dbb701": {
           "description": "Așa cum am menționat în ultima lecție, vă recomandăm să urmăriți și să folosiți în clasă clipul video pentru elevi numit **\\*Programarea în perechi**. Programarea în perechi conduce la o discuție prin care se poate răspunde la întrebări, poate fi utilizată pentru a recapitula conceptele de bază și poate conduce la o atitudine mai plină de încredere cu privire la subiectul respectiv."
@@ -3395,6 +3567,9 @@
         "bfc26aa9-b856-47f4-86c0-36818d4d9c87": {
           "description": "Pe măsură ce elevii rezolvă puzzle-urile, vedeți dacă își pot da seama câte blocuri folosesc atunci când utilizează o buclă, comparativ cu blocurile folosite fără buclă."
         },
+        "277f1b5f-abbe-4158-9507-d91cce301994": {
+          "progression_name": "Provocare"
+        },
         "3cd2a8cd-efcc-40cd-a541-17ae2c95b14c": {
           "tips": [
             "**Arătați-le elevilor modul _corect_ de a-și ajuta colegii de clasă:**-   Nu te așeza pe scaunul colegului de clasă.-   Nu folosi tastatura colegului de clasă.-   Nu atinge mouse-ul colegului de clasă.-   Asigură-te că colegul de clasă poate descrie soluția cu voce tare înainte de a pleca de lângă el."
@@ -3429,6 +3604,9 @@
         "1bbb191d-3177-490d-99ad-5a0e10e21985": {
           "description": "Niveluri de predicție:-   [Cursul A, Bucle în Colecționar #1](https://studio.code.org/levels/8728)-   [Cursul A, Bucle în Colecționar #2](https://studio.code.org/levels/8727)"
         },
+        "3c97efcf-4bdd-437a-a07d-bcd1f9faad87": {
+          "progression_name": "Provocare"
+        },
         "5580045e-132a-4c17-8c3f-522b7f01f442": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -3449,6 +3627,9 @@
         },
         "8e4ed9a9-b50b-45bf-ac33-86251c7c10a9": {
           "description": "Am inclus câteva niveluri de predicție cu alegere multiplă care sunt dificile pentru elevii care nu știu să citească. Opțional, aceste niveluri pot fi recapitulate împreună cu clasa, pentru a vă ajuta elevii să se pregătească pentru puzzle-urile care vor urma. Alternativ, acestea pot fi folosite după terminarea etapei, ca o recapitulare pentru toți elevii.**Nivelurile de predicție:**-   [Curs A, Bucle în Artist](https://studio.code.org/levels/8726)"
+        },
+        "879f345b-620d-4541-8467-84f00e515229": {
+          "progression_name": "Provocare"
         },
         "1e2c8e78-0b20-48a4-aeba-08cad3060e42": {
           "tips": [
@@ -3647,6 +3828,9 @@
             "Arătați-le elevilor modul corect de a-și ajuta colegii:-   Nu te așeza pe scaunul colegului-   Nu folosi tastatura colegului-   Nu atinge mouse-ul colegului-   Asigură-te că colegul poate descrie soluția cu voce tare înainte de a pleca de lângă el"
           ]
         },
+        "e7df62bb-065d-4eaf-b96a-9726c8c8510a": {
+          "progression_name": "Provocare"
+        },
         "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -3674,6 +3858,9 @@
           "name": "Depanare în Labirint",
           "description": "Înainte de a-i lăsa pe elevi să lucreze la calculator, reamintiți-le care sunt avantajele programării în perechi și cât este de important să ceară ajutorul colegilor. Grupați elevii în perechi și recomandați-le să ceară ajutorul a cel puțin doi colegi înainte de a apela la un profesor."
         },
+        "a7458755-70c4-4b60-b6ad-729468af507f": {
+          "progression_name": "Provocare"
+        },
         "12488a0c-dc91-4ea4-bdc7-28e27145f721": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -3698,6 +3885,9 @@
         "e2aaa332-2426-4380-b14b-cd681477be54": {
           "description": "_Aventuriera Laurel_ încearcă să strângă cât mai multe comori. Cereți-le elevilor să parcurgă puzzle-ul și să strângă tot ce pot. La unele niveluri trebuie să strângă doar o singură bucată de comoară, în timp ce la altele trebuie să strângă toată comoara. Fiți atenți la instrucțiuni ca să știți ce trebuie să faceți!"
         },
+        "e7869029-e0e5-4e0d-a6a8-b73fc0b01246": {
+          "progression_name": "Provocare"
+        },
         "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -3715,7 +3905,8 @@
         "16e320f6-0c67-4992-87a4-0ae6396a1080": {
           "tips": [
             "În puzzle-ul nr. 8, elevii trebuie să deseneze un poligon cu 6 laturi. Aceasta poate fi o sarcină dificilă pentru unii dintre ei. Recomandăm ca elevii să încerce de câteva ori, să întrebe un coleg, și abia apoi să ceară ajutorul profesorului. Mai jos vă prezentăm o imagine care ar putea fi utilă pentru elevi.![](https://images.code.org/6675ec0ae84db90ee699a8be4c7b23a6-hexagon2018.png)"
-          ]
+          ],
+          "progression_name": "Provocare"
         },
         "8d556f84-689c-4046-bd40-a955e56ef116": {
           "progression_name": "Suplimente de lecţie"
@@ -3774,6 +3965,9 @@
         "16139473-0792-46d6-b8f8-77c79ceead5c": {
           "name": "Bucle cu Rey și BB-8"
         },
+        "922cabb8-e8e7-4f94-a72a-c173f9084db9": {
+          "progression_name": "Provocare"
+        },
         "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -3796,6 +3990,9 @@
         },
         "2f87a826-1460-4d5c-9db3-47911c77a56a": {
           "description": "Atunci când elevii folosesc buclele pentru a repeta o acțiune (cum ar fi recoltarea dovlecilor), încurajați-i să se gândească la mișcările de dinainte și de după acea acțiune. Pot fi introduse și aceste acțiuni în buclă?"
+        },
+        "d65f83fb-25b6-45bb-8ca8-1b230b146b66": {
+          "progression_name": "Provocare"
         },
         "f5cc9272-be27-471b-9cdd-f56920c56a34": {
           "progression_name": "Suplimente de lecţie"
@@ -4122,6 +4319,9 @@
         "528f5675-b238-4157-849e-e3c9882d39f5": {
           "description": "Profesorii joacă un rol vital în educația privind știința calculatoarelor și în susținerea unui mediu dinamic și caracterizat de colaborare în rândul elevilor. În timpul activităților online, rolul profesorului este, în principal, unul de încurajare și sprijin. Lecțiile online trebuie să fie axate pe elev, așa că profesorii trebuie să evite să intervină atunci când elevii se blochează. Iată câteva idei despre cum să faceți acest lucru:-   Utilizați Programarea în perechi ori de câte ori este posibil în timpul activității.-   Încurajați-i pe elevii care au întrebări/care se confruntă cu provocări să își întrebe mai întâi partenerul.-   Întrebările fără răspuns pot fi transmise unui grup din apropiere, care poate cunoaște soluția deja.-   Rugați elevii să descrie problema pe care o văd. Ce ar trebui să facă? Ce face? Ce vă spune acest lucru?-   Reamintiți-le elevilor dezamăgiți că frustrarea este doar un pas pe drumul spre învățare și că perseverența va da roade.-   Dacă un elev este încă blocat, puneți-i întrebări sugestive ca să-l ajutați să identifice singur o eroare."
         },
+        "c87409e4-62dc-4155-b1ef-f6329111dd7f": {
+          "progression_name": "Provocare"
+        },
         "44f59c64-44ce-47bb-bcf6-d11a73277e48": {
           "name": "Reflecţie",
           "description": "**Subiecte:**-   Despre ce a fost lecția de astăzi?-   Cum v-ați simțit în timpul lecției de astăzi?-   Enumerați câteva dintre erorile pe care le-ați găsit astăzi în programele voastre.-   Care a fost puzzle-ul vostru preferat? Desenați personajul preferat rezolvând un puzzle."
@@ -4181,6 +4381,9 @@
         "2fb45914-1afa-4483-8fb0-e3e3503fa80b": {
           "name": "Depanare cu Laurel",
           "description": "Este posibil să fie util ca elevii să rămână în echipele formate pentru activitățile de legătură. Fiecare elev trebuie să lucreze la aceste puzzle-uri individual sau în perechi, dar dacă face parte dintr-un grup compact în care să pună întrebări și să răspundă la întrebări, aceasta poate contribui la creșterea încrederii în propriile forțe și la o înțelegere aprofundată a subiectului."
+        },
+        "1921c52c-25f6-457a-8dba-57926c95bfae": {
+          "progression_name": "Provocare"
         },
         "e54eeb6d-ab26-4e65-9cd5-3d97a06733f9": {
           "name": "Reflecţie",
@@ -4328,6 +4531,9 @@
           "name": "Bucle în Ice Age",
           "description": "Pe măsură ce elevii rezolvă puzzle-urile, vedeți dacă își pot da seama câte blocuri folosesc atunci când utilizează o buclă, comparativ cu blocurile folosite fără buclă."
         },
+        "6ecd59e1-35e1-44aa-9a99-1190dc99abd3": {
+          "progression_name": "Provocare"
+        },
         "b2c72983-b5ad-4a39-9f80-e6701c7c6df6": {
           "tips": [
             "**Arătați-le elevilor modul _corect_ de a-și ajuta colegii de clasă:**-   Nu te așeza pe scaunul colegului de clasă.-   Nu folosi tastatura colegului de clasă.-   Nu atinge mouse-ul colegului de clasă.-   Asigură-te că colegul de clasă poate descrie soluția cu voce tare înainte de a pleca de lângă el."
@@ -4350,6 +4556,9 @@
         "2517dd9e-f281-4db3-9cc8-07dc533add33": {
           "name": "Cum să desenăm forme cu ajutorul buclelor"
         },
+        "8ff5abc7-3c4a-42d5-88f6-51f0dd8060ab": {
+          "progression_name": "Provocare"
+        },
         "f3f79fbb-d2e7-410e-9258-ca61b0519fb3": {
           "description": "#### Puzzle-uri onlineUnii elevi pot descoperi unde trebuie să adauge bucle `repeat` scriind programul fără bucle, apoi încercuind secțiunile cu repetiții. Dacă acest lucru este benefic pentru elevii dvs., cereți-le să aibă hârtie și creioane lângă calculator. De asemenea, este posibil să fie utilă pentru elevi desenarea unor forme și figuri pe hârtie înainte de a le programa online."
         },
@@ -4364,6 +4573,9 @@
         "fead1358-5e8f-4b1d-990a-4ee44b3e101b": {
           "name": "Bucle imbricate în Labirint",
           "description": "Pentru această lecție recomandăm programarea în perechi. S-ar putea să nu fie un subiect ușor pentru majoritatea elevilor. Dacă lucrează cu un partener și discută despre potențialele soluții pentru puzzle-uri, activitatea poate fi mai ușoară pentru elevi.De asemenea, puneți-le la îndemână hârtie și creioane, pentru ca elevii să își scrie planul înainte de a programa. Pentru unele puzzle-uri există o limită a numărului de blocuri pe care le puteți folosi, așa că, dacă elevii doresc să scrie răspunsul lung pentru a identifica repetițiile, este posibil ca hârtia să le fie utilă."
+        },
+        "0f7bd996-f5bb-414f-9bd8-b569978307a5": {
+          "progression_name": "Provocare"
         },
         "725a7d9a-35a3-483e-a83b-f88bf0033095": {
           "progression_name": "Suplimente de lecţie"
@@ -4414,6 +4626,9 @@
         "2f024770-481d-43dc-aa55-7133819f6663": {
           "description": "#### Puzzle-uri onlineAceastă lecție va fi o adevărată plăcere pentru elevi. Este probabil ca majoritatea elevilor dumneavoastră să fi auzit de _Minecraft_, dar faceți o scurtă prezentare pentru cei care nu știu despre ce este vorba._Minecraft_ este un joc cu cuburi. Puteți juca rolul lui _Alex_ sau al lui _Steve_ în timp ce străbateți labirinturi. Va trebui să evitați lava, să culegeți obiecte și să explorați o lume alcătuită din cuburi.Rezolvați unul dintre puzzle-uri (vă recomandăm puzzle-ul 11.) După ce s-a răspuns la toate întrebările, rugați elevii să treacă la calculatoare și lăsați-i să înceapă programarea în perechi."
         },
+        "16432484-49b1-47dc-bbd9-60f67bacc790": {
+          "progression_name": "Provocare"
+        },
         "f5e9d0c0-d9c2-40af-b9aa-781078d95fa2": {
           "progression_name": "Joc la liber"
         },
@@ -4434,6 +4649,9 @@
         },
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
           "description": "Aceste puzzle-uri pot duce la întrebări, așa că puneți-i pe elevi să lucreze în perechi sau aplicați regula „Întreabă trei înainte de a mă întreba pe mine” (cereți elevilor să ceară ajutorul altor trei colegi înainte de a se adresa profesorului). Acest lucru va declanșa discuții prin care fiecare elev va înțelege mai bine despre ce este vorba."
+        },
+        "8a1d519d-3579-40dd-8c62-77a2d4abc8ea": {
+          "progression_name": "Provocare"
         },
         "9326c58a-39b6-4f40-a2ba-5c19267c2a3f": {
           "progression_name": "Suplimente de lecţie"
@@ -4457,6 +4675,12 @@
           "name": "Bucle „while” în Fermier",
           "description": "Buclele nu sunt întotdeauna un concept dificil de înțeles de către elevi, dar dacă credeți că aceștia ar putea avea dificultăți cu aceste puzzle-uri, vă recomandăm programarea în perechi. Acest lucru le va permite elevilor să își dea idei unul altuia înainte de a implementa codul. Programarea în perechi funcționează pentru a le crește încrederea în propriile forțe și pentru a înțelege subiecte precum buclele „while”."
         },
+        "b25165f7-abe4-4c2b-a4f2-2a8838986caa": {
+          "progression_name": "Provocare"
+        },
+        "738e5c3b-30c5-4b5c-8c50-295bd44328b7": {
+          "progression_name": "Provocare"
+        },
         "6751c001-d379-4682-8c2e-3eead4acba66": {
           "name": "Reflecţie",
           "description": "Dacă elevii scriu despre ceea ce au învățat, de ce este util și ce simt în legătură cu acest lucru, puteți contribui la consolidarea cunoștințelor pe care le-au obținut astăzi. Puteți folosi această resursă ca o foaie de recapitulare pe care să o consulte în viitor.**Subiecte:**-   Despre ce a fost lecția de astăzi?-   Cum v-ați simțit în timpul lecției de astăzi?-   Care este diferența dintre o buclă while și o buclă normală repeat?-   Dați un exemplu de puzzle în care ați folosi o buclă while, dar nu ați folosi o buclă repeat. Puteți da un exemplu de puzzle în care ați folosi o buclă repeat, dar nu o buclă while?"
@@ -4470,6 +4694,9 @@
         },
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
           "description": "#### Puzzle-uri onlineAsocierea de concepte nu este ușoară, dar acest set de lecții îi va ajuta pe elevi să întrevadă posibilitățile infinite ale programării atunci când se folosesc relațiile de condiționalitate. Dacă elevii întâmpină dificultăți în a înțelege asemănările sau diferențele dintre buclele „while” și „until”, rugați-i să încerce să se gândească la modul în care ar folosi enunțuri similare în viața reală."
+        },
+        "31e87218-76f2-4e0c-9689-9203f3f2bc83": {
+          "progression_name": "Provocare"
         },
         "b9c0e01d-2222-4dca-ad71-dc6068af0439": {
           "name": "Reflecţie",
@@ -4512,6 +4739,12 @@
             "Arătați-le elevilor modul _corect_ de a-și ajuta colegii de clasă:Nu vă așezați pe scaunul lorNu folosiți tastatura lorNu le atingeți mouse-ulAsigurați-vă că respectivul coleg poate descrie soluția înainte de a pleca"
           ]
         },
+        "955d1fd6-b45a-4f4d-8c32-e60031f41935": {
+          "progression_name": "Provocare"
+        },
+        "19367182-a8f0-442e-9a7d-e7852546f961": {
+          "progression_name": "Provocare"
+        },
         "d09eb753-cf01-4cfa-b252-0e6d4faa4f97": {
           "description": "**Circulați:** Profesorii joacă un rol vital în educația privind știința calculatoarelor și în susținerea unui mediu dinamic și caracterizat de colaborare în rândul elevilor. În timpul activităților online, rolul profesorului este, în principal, unul de încurajare și sprijin. Lecțiile online trebuie să fie axate pe elev, așa că profesorii trebuie să evite să intervină atunci când elevii se blochează. Iată câteva idei despre cum să faceți acest lucru:-   Utilizați Programarea în perechi ori de câte ori este posibil în timpul activității.-   Încurajați-i pe elevii care au întrebări/care se confruntă cu provocări să își întrebe mai întâi partenerul.-   Întrebările fără răspuns pot fi transmise unui grup din apropiere, care poate cunoaște soluția deja.-   Rugați elevii să descrie problema pe care o văd. Ce ar trebui să facă? Ce face? Ce înseamnă aceasta?-   Reamintiți-le elevilor dezamăgiți că frustrarea este doar un pas pe drumul spre învățare și că perseverența va da roade.-   Dacă un elev este încă blocat, puneți-i întrebări sugestive ca să-l ajutați să identifice singur o eroare.**Discutați:** După ce le transmiteți elevilor avertismentele cu privire la sfârșitul orei, atrageți atenția tuturor să reflecteze la experiențele pe care le-au avut.-   S-a simțit cineva frustrat în timpul oricăruia dintre puzzle-uri?-   A observat cineva nevoia de a fi perseverent?**Tranziție:** Cereți-le elevilor să ia \\*_\\\\_Jurnalele de reflecție și să reflecteze asupra lecțiilor pentru câteva momente."
         },
@@ -4537,6 +4770,9 @@
           "name": "Depanare cu Scrat",
           "description": "Înainte de a-i lăsa să înceapă să lucreze la calculator, amintiți-le elevilor avantajele clipului video **\\*Programare în perechi** și de a cere ajutorul colegilor. Așezați elevii în perechi și recomandați-le să ceară ajutorul a cel puțin doi colegi înainte de a apela la profesor.După cum s-a menționat în obiectivul acestei lecții, asigurați-vă că elevii sunt conștienți că se vor confrunta cu puzzle-uri frustrante. Spuneți-le că este normal să se simtă frustrați, dar este important să rezolve problema și să ceară ajutor. Pe măsură ce elevii lucrează la puzzle-uri, plimbați-vă printre ei pentru a vă asigura că niciun elev nu se simte atât de blocat încât să nu mai fie dispus să continue."
         },
+        "f6ef0cac-d698-4ba1-9e6d-d6c00538c584": {
+          "progression_name": "Provocare"
+        },
         "509f1df0-4e9b-454e-ae25-a6380f29ab57": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -4558,6 +4794,9 @@
         "44711c15-152c-4e84-9eca-d87c42edd4a8": {
           "description": "_Aventuriera Laurel_ încearcă să strângă cât mai multe comori. Cereți-le elevilor să parcurgă puzzle-ul și să strângă tot ce pot. La unele niveluri trebuie să strângă doar o singură bucată de comoară, în timp ce la altele trebuie să strângă toată comoara. Fiți atenți la instrucțiuni ca să știți ce trebuie să faceți!"
         },
+        "18bc2d27-442d-405b-aafc-c5f9e0c767ca": {
+          "progression_name": "Provocare"
+        },
         "d14ea8ad-6eb8-4142-ad1c-a0f1d7024948": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -4575,7 +4814,8 @@
         "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
           "tips": [
             "În puzzle-ul nr. 8, elevii trebuie să deseneze un poligon cu 6 laturi. Aceasta poate fi o sarcină dificilă pentru unii dintre ei. Recomandăm ca elevii să încerce de câteva ori, să întrebe un coleg, și abia apoi să ceară ajutorul profesorului. Mai jos vă prezentăm o imagine care ar putea fi utilă pentru elevi.![](https://images.code.org/6675ec0ae84db90ee699a8be4c7b23a6-hexagon2018.png)"
-          ]
+          ],
+          "progression_name": "Provocare"
         },
         "35e7e7ca-ecb5-42bb-b3ca-5251508d3e89": {
           "progression_name": "Suplimente de lecţie"
@@ -4625,6 +4865,7 @@
           "description": "**Faceți acest lucru:** Folosind diapozitivele cu elemente pregătitoare ale lecției sau acest [exemplu de proiect](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view), arătați-le elevilor animația cu furnica și libelula.**Discutați:** _Cum ați descrie această scenă cu sprites?Dacă vreți ca cineva să creeze această scenă pentru voi pe computer, de ce instrucțiuni ar avea nevoie?_**Obiectiv de discuție:** Elevii trebuie să identifice ambii sprites din acest proiect, să descrie comportamentele (mișcările) acestora și să remarce și fundalul.Acordați-le timp elevilor, pentru ca aceștia să se gândească la idei. Dacă nu sunt siguri de ceea ce vor să spună, spuneți-le că le cereți doar să formuleze observații cu privire la ceea ce văd.Apoi arătați-le codul real utilizat pentru acest proiect și invitați-i să încerce să-l citească.**Reflectați:** Prin ce aseamănă și prin ce se diferențiază instrucțiunile noastre de acest cod?"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
+          "name": "Crearea de sprite-uri",
           "description": "#### Predicție (3 minute)**Faceți acest lucru:** Cereți-le elevilor să citească codul furnizat și să facă o predicție cu privire la ce se va întâmpla. După ce ați apăsat „Rulare”, acordați-le timp elevilor să reflecteze cu privire la orice lucru pe care l-au considerat interesant sau care i-a surprins.",
           "tips": [
             "În cadrul puzzle-urilor de tip predicție, elevii sunt rugați să citească un program care le-a fost pus la dispoziție și să răspundă la o întrebare despre acesta. Trebuie să se răspundă la întrebare înainte ca elevul să poată apăsa butonul „Rulare”. Deși puteți folosi aceste întrebări ca o formă de evaluare, rețineți că acestea se află frecvent la începutul unei lecții, fiind o modalitate de a-i încuraja pe elevi să pună întrebări înainte de a li se arăta cum funcționează ceva nou."
@@ -4775,6 +5016,9 @@
         "2bb620b7-6107-4b46-b717-117c20503ef0": {
           "name": "Bucle cu Rey și BB-8"
         },
+        "736ef92b-b635-4477-abbb-7d98d171b960": {
+          "progression_name": "Provocare"
+        },
         "be8322ab-77e7-4f99-ad08-40a19edc5c00": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -4822,6 +5066,9 @@
           "name": "Bucle imbricate în Labirint",
           "description": "Pentru această lecție recomandăm programarea în perechi. S-ar putea să nu fie un subiect ușor pentru majoritatea elevilor. Dacă lucrează cu un partener și discută despre potențialele soluții pentru puzzle-uri, activitatea poate fi mai ușoară pentru elevi.De asemenea, puneți-le la îndemână hârtie și creioane, pentru ca elevii să își scrie planul înainte de a programa. Pentru unele puzzle-uri există o limită a numărului de blocuri pe care le puteți folosi, așa că, dacă elevii doresc să scrie răspunsul lung pentru a identifica repetițiile, este posibil ca hârtia să le fie utilă."
         },
+        "59a2568e-bd18-4790-9dd4-e6df4db826ca": {
+          "progression_name": "Provocare"
+        },
         "20282149-72fa-4e24-aa15-5182f21bcf95": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -4848,6 +5095,9 @@
         "db402396-6473-4942-a3b9-e3833beb0cd8": {
           "description": "#### Puzzle-uri onlineAceastă lecție va fi o adevărată plăcere pentru elevi. Este probabil ca majoritatea elevilor dumneavoastră să fi auzit de _Minecraft_, dar faceți o scurtă prezentare pentru cei care nu știu despre ce este vorba._Minecraft_ este un joc cu cuburi. Puteți juca rolul lui _Alex_ sau al lui _Steve_ în timp ce străbateți labirinturi. Va trebui să evitați lava, să culegeți obiecte și să explorați o lume alcătuită din cuburi.Rezolvați unul dintre puzzle-uri (vă recomandăm puzzle-ul 11.) După ce s-a răspuns la toate întrebările, rugați elevii să treacă la calculatoare și lăsați-i să înceapă programarea în perechi."
         },
+        "3ab2228f-c257-4ffd-bcc0-1e5b29118ccf": {
+          "progression_name": "Provocare"
+        },
         "61cffed6-e526-428f-9d2c-e53fbe5b2653": {
           "progression_name": "Joc la liber"
         },
@@ -4864,6 +5114,9 @@
         },
         "22580642-ad9a-48f6-9ad6-8693e42ed9d3": {
           "description": "Aceste puzzle-uri pot duce la întrebări, așa că puneți-i pe elevi să lucreze în perechi sau aplicați regula „Întreabă trei înainte de a mă întreba pe mine” (cereți elevilor să ceară ajutorul altor trei colegi înainte de a se adresa profesorului). Acest lucru va declanșa discuții prin care fiecare elev va înțelege mai bine despre ce este vorba."
+        },
+        "cd33cbb5-8d96-4173-a790-5f3c59c5afff": {
+          "progression_name": "Provocare"
         },
         "fe26d5c2-ccdc-48cc-9678-793d2e491bf5": {
           "progression_name": "Suplimente de lecţie"
@@ -4882,6 +5135,9 @@
         "b6676ce5-2f4a-4761-a053-792853904bd5": {
           "name": "Bucle „while” în Fermier",
           "description": "Buclele nu sunt întotdeauna un concept dificil de înțeles de către elevi, dar dacă credeți că aceștia ar putea avea dificultăți cu aceste puzzle-uri, vă recomandăm programarea în perechi. Acest lucru le va permite elevilor să își dea idei unul altuia înainte de a implementa codul. Programarea în perechi funcționează pentru a le crește încrederea în propriile forțe și pentru a înțelege subiecte precum buclele „while”."
+        },
+        "b0a4f8d2-11ae-416f-a274-e1c3be9dcc22": {
+          "progression_name": "Provocare"
         },
         "c103e631-9559-4d34-9ff9-4227c8fb8baa": {
           "progression_name": "Suplimente de lecţie"
@@ -4918,6 +5174,9 @@
         "3fabd283-0831-412f-8a9f-76e9bf96206f": {
           "description": "Asocierea de concepte nu este ușoară, dar acest set de lecții îi va ajuta pe elevi să întrevadă posibilitățile infinite ale programării atunci când se folosesc relațiile de condiționalitate. Dacă elevii întâmpină dificultăți în a înțelege asemănările sau diferențele dintre buclele „while” și „until”, rugați-i să încerce să se gândească la modul în care ar folosi afirmații similare în viața reală."
         },
+        "db38efa3-e075-41c0-ba59-0e9426393b52": {
+          "progression_name": "Provocare"
+        },
         "8995dda6-6311-4747-a13d-9e793d658e20": {
           "name": "Reflecţie",
           "description": "Dacă elevii scriu despre ceea ce au învățat, de ce este util și ce simt în legătură cu acest lucru, puteți contribui la consolidarea cunoștințelor pe care le-au obținut astăzi. După ce a fost completată, aceasta poate fi folosită ca o foaie de recapitulare pe care să o consulte în viitor.**Subiecte:**-   Despre ce a fost lecția de astăzi?-   Cum v-ați simțit în timpul lecției de astăzi?-   Care este diferența dintre o buclă „until” și o buclă „while”?"
@@ -4928,6 +5187,9 @@
         },
         "26679730-3364-4598-abd8-b07e9d9f9ad9": {
           "description": "Elevii vor continua să lucreze cu instrucțiuni if / else, bucle while și bucle until. Aceste puzzle-uri sunt puțin mai dificile, așa că încurajați-i să lucreze la ele până când vor putea descrie ce trebuie să se întâmple pentru fiecare program."
+        },
+        "f6fcf627-61b6-45f8-ac6b-602a11fb434a": {
+          "progression_name": "Provocare"
         },
         "23df685c-9dd8-48af-9f9a-732ffa1de9c4": {
           "progression_name": "Suplimente de lecţie"
@@ -4963,6 +5225,9 @@
         "dd960de9-43c8-4013-9b55-41e931d458c1": {
           "name": "Funcții cu Artist"
         },
+        "074980cb-1e9f-4fa3-b97d-1467b036062d": {
+          "progression_name": "Provocare"
+        },
         "94ce59c5-2479-4a35-b9f3-acf6615471ce": {
           "progression_name": "Joc la liber"
         },
@@ -4984,6 +5249,9 @@
           "name": "Funcții cu Culegător",
           "description": "#### Puzzle-uri onlineUnele puzzle-uri vor include o funcție pre-declarată, pe care elevii trebuie să o completeze. Elevii pot scrie mai întâi întregul program fără o funcție, apoi pot stabili unde ar fi utilă o funcție în cadrul programului.Este important să vă asigurați că fiecare elev rezolvă fiecare puzzle marcat cu un punct verde închis. În cazul în care unii dintre elevi întâmpină dificultăți atunci când încearcă să simplifice codul și să utilizeze funcții, organizați echipe de elevi experți care să meargă de la un elev la altul și să răspundă la întrebări.Nu uitați să puneți la dispoziție creioane și hârtie pentru a-i ajuta pe elevi să schițeze pe hârtie soluții posibile.",
           "progression_name": "Culegătorul"
+        },
+        "0ee69e3c-cf57-4652-8b39-55a7ff57430f": {
+          "progression_name": "Provocare"
         },
         "3c8c44ae-c181-41c0-9574-54a236e706f9": {
           "name": "Reflecţie",
@@ -5192,6 +5460,9 @@
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
           "name": "Programare cu Angry Birds"
         },
+        "58491b40-8a56-4299-9f91-d96bd0af3ab0": {
+          "progression_name": "Provocare"
+        },
         "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -5217,6 +5488,9 @@
         "5ff6bd4a-2e05-4098-80a6-5e011fa70518": {
           "name": "Programare cu Rey și BB-8"
         },
+        "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa": {
+          "progression_name": "Provocare"
+        },
         "720aa090-bf1d-4934-9c4f-f8cad6b511ac": {
           "description": "Vă recomandăm să urmăriți și să folosiți în clasă clipul video **\\*Programare în perechi**. Programarea în perechi conduce la o discuție prin care se poate răspunde la întrebări, poate fi utilizată pentru a recapitula conceptele de bază și poate conduce la o atitudine mai plină de încredere cu privire la subiectul respectiv."
         },
@@ -5236,6 +5510,9 @@
           "tips": [
             "Arătați-le elevilor modul _corect_ de a-și ajuta colegii de clasă:-   Nu stați pe scaunul lor-   Nu folosiți tastatura lor-   Nu le atingeți mouse-ul-   Asigurați-vă că respectivul coleg poate descrie soluția înainte de a pleca"
           ]
+        },
+        "fc22082b-67fd-47ec-8353-11c902f9ab4c": {
+          "progression_name": "Provocare"
         },
         "465fb2e2-097a-4f1b-a2e1-9dc16c0a15e1": {
           "description": "**Circulați:** În timpul activităților online, rolul profesorului este, în principal, de a încuraja și de a sprijini. Pe lângă ideile din ultima lecție, iată câteva idei suplimentare:-   Reamintiți-le elevilor să folosească procesul de depanare înainte de a-i aborda.-   Rugați elevii să descrie problema pe care o văd. Ce ar trebui să facă? Ce face? Ce vă spune acest lucru?-   Reamintiți-le elevilor dezamăgiți că frustrarea este doar un pas pe drumul spre învățare și că perseverența va da roade.-   Dacă totuși un elev este încă blocat după toate acestea, puneți-i întrebări sugestive ca să-l determinați să identifice singur o eroare.**Tranziție:** Cereți-le elevilor să scrie în jurnalul Thinkspot note cu privire la lecții."
@@ -5265,6 +5542,9 @@
             "**Arătați-le elevilor modul _corect_ de a-și ajuta colegii de clasă:**-   Nu te așeza pe scaunul colegului de clasă.-   Nu folosi tastatura colegului de clasă.-   Nu atinge mouse-ul colegului de clasă.-   Asigură-te că colegul de clasă poate descrie soluția cu voce tare înainte de a pleca de lângă el."
           ]
         },
+        "0a8a7f79-b1b7-436e-8a45-b6190c180164": {
+          "progression_name": "Provocare"
+        },
         "9a875694-a4f4-4cd2-8bf8-31f8441d4a50": {
           "description": "**Circulați:** Profesorii joacă un rol vital în educația privind știința calculatoarelor și în susținerea unui mediu dinamic și caracterizat de colaborare în rândul elevilor. În timpul activităților online, rolul profesorului este, în principal, unul de încurajare și sprijin. Lecțiile online trebuie să fie axate pe elev, așa că profesorii trebuie să evite să intervină atunci când elevii se blochează. Iată câteva idei despre cum să faceți acest lucru:-   Utilizați clipul video **\\*Programare în perechi** ori de câte ori este posibil-   Încurajați-i pe elevii care au întrebări/care se confruntă cu provocări să își întrebe mai întâi partenerul-   Întrebările fără răspuns pot fi transmise unui grup din apropiere, care poate cunoaște soluția deja.-   Reamintiți-le elevilor să folosească procesul de depanare înainte de a-i aborda-   Rugați elevii să descrie problema pe care o văd. Ce ar trebui să facă? Ce face? Ce le spune?-   Reamintiți-le elevilor dezamăgiți că frustrarea este doar un pas pe drumul spre învățare și că persistența va da roade.-   Dacă totuși un elev este încă blocat după toate acestea, puneți i întrebări sugestive ca să-l determinați să identifice singur o eroare."
         },
@@ -5290,6 +5570,9 @@
           "name": "Puzzle-uri online",
           "description": "Pe măsură ce elevii rezolvă puzzle-urile, vedeți dacă își pot da seama câte blocuri folosesc atunci când utilizează o buclă, comparativ cu blocurile folosite fără buclă."
         },
+        "46172f79-e306-4a8f-9ecd-640b05733fb6": {
+          "progression_name": "Provocare"
+        },
         "62dfefbf-589b-46c7-a6ae-2b80bb18b021": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -5313,6 +5596,9 @@
         "bbc61306-32dd-4de2-9a6b-35b47408093f": {
           "description": "Am inclus câteva niveluri de predicție cu alegere multiplă care sunt dificile pentru elevii care nu știu să citească. Opțional, aceste niveluri pot fi recapitulate împreună cu clasa, pentru a vă ajuta elevii să se pregătească pentru puzzle-urile care vor urma. Alternativ, acestea pot fi folosite după terminarea etapei, ca o recapitulare pentru toți elevii.**Nivelurile de predicție:**-   [Bucle în Artist](https://studio.code.org/levels/8726)"
         },
+        "073ef24a-022b-46a3-a900-9a5bd5c2b6fe": {
+          "progression_name": "Provocare"
+        },
         "9501ab3a-0fa4-46d5-88a1-d546663cdffa": {
           "progression_name": "Joc la liber"
         },
@@ -5335,6 +5621,9 @@
           "tips": [
             "Reamintiți-le elevilor să partajeze lucrările doar cu prietenii apropiați sau cu familia. Pentru mai multe informații, urmăriți sau arătați-le elevilor clipul video **\\*Pauză de gândire Online**."
           ]
+        },
+        "77de1bff-b1e2-4956-9ed2-15110f9aa640": {
+          "progression_name": "Provocare"
         },
         "92674c9e-c2dc-4023-a386-8fae5c2b8074": {
           "progression_name": "Joc la liber"
@@ -5589,6 +5878,12 @@
           "name": "Cum să desenăm cu ajutorul buclelor",
           "description": "Unii elevi pot descoperi unde trebuie să adauge bucle `repeat` scriind programul fără bucle, apoi încercuind secțiunile cu repetiții. Dacă acest lucru este benefic pentru elevii dvs., cereți-le să aibă hârtie și creioane lângă calculator. De asemenea, este posibil să fie utilă pentru elevi desenarea unor forme și figuri pe hârtie înainte de a le programa online"
         },
+        "f6df66e2-bc97-403d-a4e1-c015294d94ac": {
+          "progression_name": "Provocare"
+        },
+        "9a64a3f8-16de-4001-82e3-01d9184a0650": {
+          "progression_name": "Provocare"
+        },
         "1cbfaa5e-bd5f-4861-9152-5fd3e6a37d47": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -5609,6 +5904,9 @@
           "tips": [
             "La sfârșitul acestei etape, elevii vor avea ocazia de a partaja propriile creații. Aceste lucrări pot fi partajate virtual sau imprimate. Vă recomandăm să imprimați lucrările elevilor și să le expuneți, pentru a fi văzute de persoanele dragi."
           ]
+        },
+        "70a7d0e6-caa1-439a-a18c-41e5af3daf6f": {
+          "progression_name": "Provocare"
         },
         "a2a794ce-1af9-4258-84ad-352ee9f9f187": {
           "progression_name": "Joc la liber"
@@ -5739,6 +6037,9 @@
           "name": "Funcții cu Artist",
           "description": "#### Puzzle-uri onlinePoate fi util pentru elevi să scrie cod fără funcții și apoi să creeze funcții plecând de la codul repetat. Dacă elevilor nu le place să facă acest lucru în spațiul de lucru Code.org, vă recomandăm să le puneți la dispoziție hârtie și creioane pentru ca elevii să scrie (sau să deseneze) ideile."
         },
+        "2be1256a-b8a6-4ec6-a54d-c1db662af71e": {
+          "progression_name": "Provocare"
+        },
         "761169d4-a60f-4c9d-b011-2e79adcf8b31": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -5777,6 +6078,9 @@
             "Este posibil ca modelele din aceste puzzle-uri să nu fie evidente pentru toți elevii. Vă recomandăm să parcurgeți aceste niveluri în prealabil pentru a înțelege cât mai bine zonele care ar putea fi problematice pentru elevi. De asemenea, vă sugerăm urmărirea și utilizarea tehnicilor din clipul video **\\*Pauză de gândire Online**, acestea pot fi utile pentru elevi."
           ]
         },
+        "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17": {
+          "progression_name": "Provocare"
+        },
         "63757527-5067-4217-9d3b-134aac5a39ab": {
           "name": "Reflecţie",
           "description": "**Subiecte:**-   Ce este o relație de condiționalitate? De ce ați programa o relație de condiționalitate?-   Gândiți-vă la un exemplu de utilizare a relației de condiționalitate în timpul zilei? (de exemplu:  _If_ (dacă) mi-e foame, mănânc ceva; _While_ (Atât timp cât) traversez strada, sunt atent la mașini)."
@@ -5791,6 +6095,9 @@
         "24e49944-567b-4a1a-8f14-8e60585cb81f": {
           "name": "Puzzle-uri online",
           "description": "Unele puzzle-uri vor include o funcție pre-declarată, pe care elevii trebuie să o completeze. Elevii pot scrie mai întâi întregul program fără o funcție, apoi pot stabili unde ar fi utilă o funcție în cadrul programului.Este important să vă asigurați că fiecare elev rezolvă fiecare puzzle marcat cu un punct verde închis. În cazul în care unii dintre elevi întâmpină dificultăți atunci când încearcă să simplifice codul și să utilizeze funcții, organizați echipe de elevi experți care să meargă de la un elev la altul și să răspundă la întrebări.Nu uitați să puneți la dispoziție creioane și hârtie pentru a-i ajuta pe elevi să schițeze pe hârtie soluții posibile."
+        },
+        "7bbfd5d9-bdc8-4db4-9d73-c2885278eff5": {
+          "progression_name": "Provocare"
         },
         "23dd0ba7-6d05-4611-bfa7-3b8eca5102b1": {
           "name": "Reflecţie",
@@ -5863,14 +6170,3307 @@
           "name": "Alte",
           "description": "Dacă elevii dvs. cunosc deja conceptele de programare, încercați să le cereți să creeze proiectele pe o altă platformă, cum ar fi [Scratch](https://scratch.mit.edu/) sau [Alice](http://www.alice.org/index.php)."
         },
+        "1d222524-316a-4988-b206-b1f948cfbee7": {
+          "tips": [
+            null
+          ]
+        },
+        "aa866b7f-747f-49e4-9578-f937dbef61e4": {
+          "tips": [
+            null
+          ]
+        },
+        "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
+          "tips": [
+            null
+          ]
+        },
+        "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
+          "tips": [
+            null
+          ]
+        },
+        "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
+          "name": "Reflecţie"
+        },
+        "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
+          "tips": [
+            null
+          ]
+        },
+        "57d8014b-4da5-4981-b5aa-bd5feb656548": {
+          "tips": [
+            null
+          ]
+        },
+        "14ad319c-b3ec-4f24-a9c7-5f80f29c9ba8": {
+          "tips": [
+            null
+          ]
+        },
+        "c407d4d5-d82f-47d8-a814-76756c052cc5": {
+          "tips": [
+            null
+          ]
+        },
+        "8791201e-af87-456b-8f93-1c4cb8c10099": {
+          "tips": [
+            null
+          ]
+        },
+        "6ca0b1c3-d106-4e70-bdf5-ee0ed4f7dad6": {
+          "tips": [
+            null
+          ]
+        },
+        "48b299c7-bdd4-453e-aa47-d9d2c7622ee8": {
+          "tips": [
+            null
+          ]
+        },
+        "aa9a6902-38d1-4613-8535-7b515b0f7e04": {
+          "tips": [
+            null
+          ]
+        },
+        "1060fa91-ba3a-4d55-9a85-493f9b08e027": {
+          "tips": [
+            null
+          ]
+        },
+        "ec6a94fb-4529-40b5-bee7-42c5d06822e1": {
+          "tips": [
+            null
+          ]
+        },
+        "12acd4ea-a900-4ea1-a353-601a72b83c80": {
+          "tips": [
+            null
+          ]
+        },
+        "4cb7a9fe-2e72-4730-a3e8-5aaca89653e9": {
+          "tips": [
+            null
+          ]
+        },
+        "f25eef96-e4b8-46eb-8187-2f05676a8b22": {
+          "tips": [
+            null
+          ]
+        },
+        "77fbbd0c-9cd9-4764-a872-ac8da9a7871e": {
+          "tips": [
+            null
+          ]
+        },
+        "40e5d7a1-ae14-4585-bdab-1fc0036d91b2": {
+          "tips": [
+            null
+          ]
+        },
+        "d0b76b9b-7d00-488a-9c55-38ef54a4be8d": {
+          "tips": [
+            null
+          ]
+        },
+        "187961bf-44e5-4407-81d7-a47884e32eb6": {
+          "tips": [
+            null
+          ]
+        },
+        "859c17eb-f742-4430-ab49-fe335f6dc3c0": {
+          "tips": [
+            null
+          ]
+        },
+        "cbf336bc-c75f-4710-9ba5-d30782360222": {
+          "tips": [
+            null
+          ]
+        },
+        "42f29ce9-a2d0-4e8a-a60c-870858ba5847": {
+          "tips": [
+            null
+          ]
+        },
+        "948494c6-f9ab-422f-a5e5-1ba0dd2bb690": {
+          "tips": [
+            null
+          ]
+        },
+        "bde096a8-755f-4d46-8e37-2b7c22c6112d": {
+          "tips": [
+            null
+          ]
+        },
+        "bebc0942-fc14-4063-9feb-e47a4a62d9c8": {
+          "tips": [
+            null
+          ]
+        },
+        "73ce1ded-8856-4156-bfc4-c114b2bae063": {
+          "tips": [
+            null
+          ]
+        },
+        "9a6a30be-65eb-4ba0-ac15-d35a4120f163": {
+          "tips": [
+            null
+          ]
+        },
+        "0d89923e-93b3-4a03-b79e-b262c4a71f72": {
+          "tips": [
+            null
+          ]
+        },
+        "d3990be6-8d37-475a-bb3e-5a4f4fc990ca": {
+          "tips": [
+            null
+          ]
+        },
+        "a93eb670-a170-422f-b5cc-1bb0cba75be3": {
+          "tips": [
+            null
+          ]
+        },
+        "35bd3261-9e58-490f-a4f7-6f6188cf278e": {
+          "tips": [
+            null
+          ]
+        },
+        "7cc32c19-2a9a-423f-a8b7-90a739cd379c": {
+          "tips": [
+            null
+          ]
+        },
+        "79f35dc1-bf5e-47ca-b1eb-b726b15859a8": {
+          "tips": [
+            null
+          ]
+        },
+        "189848b1-8798-4d6b-ba64-c7e43f6aa84a": {
+          "tips": [
+            null
+          ]
+        },
+        "43756539-5123-4890-8fb8-651dbb6ee4b2": {
+          "tips": [
+            null
+          ]
+        },
+        "e4ff1e67-0f17-46a7-8d03-26f8a65238c2": {
+          "tips": [
+            null
+          ]
+        },
+        "0f2e1a2e-8982-4393-9048-8910a592aa88": {
+          "tips": [
+            null
+          ]
+        },
+        "db8f4d62-af34-4871-993d-281cacf5ff29": {
+          "tips": [
+            null
+          ]
+        },
+        "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "tips": [
+            null
+          ]
+        },
+        "6dc2399a-dad6-46a3-8124-e6b3d100d4fe": {
+          "tips": [
+            null
+          ]
+        },
+        "0c250e92-85e3-4f85-8a99-44a79fb72c03": {
+          "tips": [
+            null
+          ]
+        },
+        "527dacdb-36d1-4e9e-ad42-b28aab54a395": {
+          "tips": [
+            null
+          ]
+        },
+        "91d7768c-2c1c-4b4b-bb3d-b7646f8144d6": {
+          "tips": [
+            null
+          ]
+        },
+        "aedb156c-9f9c-4214-94aa-a664ce875b23": {
+          "tips": [
+            null
+          ]
+        },
+        "819a4c17-f05f-4298-9cfc-1cb2c0b00f5d": {
+          "tips": [
+            null
+          ]
+        },
+        "2ac899a0-cd0e-4440-89e1-ef4de87b930f": {
+          "tips": [
+            null
+          ]
+        },
+        "209eff96-d559-411e-b8cf-bd6a84923473": {
+          "tips": [
+            null
+          ]
+        },
+        "183a63a0-a03c-4739-8f29-fed89378086e": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "8ded89d7-85cd-4bba-883e-7c4981ce3078": {
+          "tips": [
+            null
+          ]
+        },
+        "61bfa751-8587-4118-84e1-b3870975fad4": {
+          "progression_name": "Provocare"
+        },
+        "b39acb79-1fad-4acd-b3e4-789f32636f46": {
+          "tips": [
+            null
+          ]
+        },
+        "1f38b581-970b-4050-9a0b-b899978773d7": {
+          "tips": [
+            null
+          ]
+        },
+        "e2e484bb-64dd-4917-b336-741e743a8814": {
+          "tips": [
+            null
+          ]
+        },
+        "5d7ce86b-abab-41a9-a0a1-b7954bed02af": {
+          "tips": [
+            null
+          ]
+        },
+        "221c0911-a3eb-4409-be91-e665b43e3fc9": {
+          "tips": [
+            null
+          ]
+        },
+        "5b59847e-71f7-481a-a5ca-aa9ec4511289": {
+          "tips": [
+            null
+          ]
+        },
+        "0c7a96aa-61a7-4cbc-a8e4-36aec7260700": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "4e10be5f-60ad-4bae-913d-7a157e519447": {
+          "tips": [
+            null
+          ]
+        },
+        "c5595f82-fa56-4a48-a7f6-65b97947a7e9": {
+          "tips": [
+            null
+          ]
+        },
+        "4efb646c-4ce2-45f5-bb76-f444af86a9b4": {
+          "tips": [
+            null
+          ]
+        },
+        "a4bd3c09-bdc9-45a3-bcdd-6f54e3d19471": {
+          "tips": [
+            null
+          ]
+        },
+        "489ed446-aa78-47e3-b9f2-30bc9164d6c3": {
+          "name": "Reflecţie",
+          "progression_name": "Reflecţie"
+        },
+        "f2c599ed-2dc6-4fa2-8ebd-5123c77dd9c3": {
+          "tips": [
+            null
+          ]
+        },
+        "38761f3b-2e5b-4626-8f10-3a562e8d0c3b": {
+          "tips": [
+            null
+          ]
+        },
+        "bb1e1371-d01e-43c2-913a-5fe680de2bf4": {
+          "tips": [
+            null
+          ]
+        },
+        "c0c1d052-3e33-4066-a541-356b552d5ec7": {
+          "tips": [
+            null
+          ]
+        },
+        "0fac2a39-1a1e-4c53-a3eb-ef5ababb25f4": {
+          "tips": [
+            null
+          ]
+        },
+        "1ebb0840-0b5b-4ec9-9f95-1ccae266fe92": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "bb917641-be8e-41f9-8ba5-bad758aeb8d5": {
+          "name": "Sondaj"
+        },
+        "9f17132f-2c2e-4f16-bead-88b852b9e33f": {
+          "tips": [
+            null
+          ]
+        },
+        "3c4c7d3e-338a-4934-bc9c-b9e01d0f14cd": {
+          "tips": [
+            null
+          ]
+        },
+        "7f4a57cb-7221-40f4-a60a-2026a13bcba2": {
+          "tips": [
+            null
+          ]
+        },
+        "72daa1e4-2bc1-49f2-b46e-9e007cf78597": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "0644a5d2-d3ae-4dea-8777-47a522955b21": {
+          "tips": [
+            null
+          ]
+        },
+        "97535dd4-2332-47bc-af09-9571d848068d": {
+          "tips": [
+            null
+          ]
+        },
+        "8da670fc-d91b-438b-af07-2227156fdbcd": {
+          "tips": [
+            null
+          ]
+        },
+        "1b28522d-bf63-4f09-94a2-a80833819a38": {
+          "tips": [
+            null
+          ]
+        },
+        "9492e63b-28f6-41b5-89b9-5f1d611186a1": {
+          "name": "Activitate"
+        },
+        "5b3b512d-42b8-4c2f-bbb3-7ebad7908e62": {
+          "tips": [
+            null
+          ]
+        },
+        "fc716fb8-1b76-44d6-9565-f114f18721f1": {
+          "tips": [
+            null
+          ]
+        },
+        "c9458a29-f135-4840-aae0-37c35f2bfa52": {
+          "name": "Încheiere"
+        },
+        "3bc8e042-f19f-4233-bebc-baccef07881b": {
+          "tips": [
+            null
+          ]
+        },
+        "892bacbf-54ca-4447-8e4e-c711765fcd7d": {
+          "name": "Încheiere"
+        },
+        "dc5dddbb-40bf-41e0-be7e-51b41edf1337": {
+          "tips": [
+            null
+          ]
+        },
+        "065f7419-b028-4610-b0c4-671f2ec86590": {
+          "name": "Încheiere"
+        },
+        "4af3f898-21e4-4ed3-bbc6-ca4686c46f7a": {
+          "tips": [
+            null
+          ]
+        },
+        "2df922c9-a79a-4e9f-a4e5-003cee501451": {
+          "name": "Încheiere"
+        },
+        "15cc22f5-50bf-4102-843a-7f9246727869": {
+          "tips": [
+            null
+          ]
+        },
+        "1f35f92d-5556-4137-a1e6-38c31a3a719f": {
+          "name": "Încheiere"
+        },
+        "f5c2056c-f519-4991-a58b-f22058fbaa9d": {
+          "name": "Reflecţie",
+          "progression_name": "Reflecţie"
+        },
+        "9819f2db-593b-4631-96e8-ad45aba59e08": {
+          "tips": [
+            null
+          ]
+        },
+        "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
+          "tips": [
+            null
+          ]
+        },
+        "0aae65e7-d504-4b63-9b0e-f9145959ac27": {
+          "tips": [
+            null
+          ]
+        },
+        "0ffa0382-8df9-42a1-8f6b-62612e26f301": {
+          "tips": [
+            null
+          ]
+        },
+        "0158f751-e444-4cd5-ae72-c6daa9d0f859": {
+          "tips": [
+            null
+          ]
+        },
+        "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
+          "tips": [
+            null
+          ]
+        },
+        "e90bcc9b-7ad0-4e59-9c21-3e80d85c08f4": {
+          "tips": [
+            null
+          ]
+        },
+        "9a00392e-73f9-4bf0-9ca9-fc29a07a6bf1": {
+          "tips": [
+            null
+          ]
+        },
+        "8accf144-8730-45d6-a806-475e5164395c": {
+          "tips": [
+            null
+          ]
+        },
+        "d567345f-60b1-4c26-b5b7-d78d4e4ca1e9": {
+          "tips": [
+            null
+          ]
+        },
+        "aed2c64f-4f98-4bf6-adf7-f7cd80ab941a": {
+          "tips": [
+            null
+          ]
+        },
+        "b1931821-27e8-4550-98c6-ffc17f93cb62": {
+          "tips": [
+            null
+          ]
+        },
+        "d9db5d0e-f332-4e7f-8526-6bf166cae8a7": {
+          "tips": [
+            null
+          ]
+        },
+        "f5c05e62-80c7-422f-b578-b9ba663db140": {
+          "tips": [
+            null
+          ]
+        },
+        "ceaa3d86-c33a-4a0a-b56c-75b2b938786f": {
+          "name": "Defineşte",
+          "tips": [
+            null
+          ]
+        },
+        "a400fd77-feee-4d7d-8be6-7ceb8e378cd0": {
+          "tips": [
+            null
+          ]
+        },
+        "11e8295e-4b2e-4844-91cd-3d02533f89ce": {
+          "tips": [
+            null
+          ]
+        },
+        "8e25228f-7396-4a9d-9dab-ff41c9ceeb53": {
+          "name": "Pregătire"
+        },
+        "6c2b2e0f-0ca5-4f49-b7a4-e90ddc47860d": {
+          "tips": [
+            null
+          ]
+        },
+        "0e79724e-4dc4-491d-ac17-f4839c30ce19": {
+          "tips": [
+            null
+          ]
+        },
+        "ef056da0-16f9-479a-95ea-42f70ae6a9aa": {
+          "tips": [
+            null
+          ]
+        },
+        "667167ce-9c2f-4059-9a2a-71bdd0adccbc": {
+          "tips": [
+            null
+          ]
+        },
+        "3c36a33c-4c3d-4f93-8c89-a1a7dbdfd58c": {
+          "name": "Încercare"
+        },
+        "b640029f-89eb-45d2-a087-e6d57d703c12": {
+          "name": "Reflecție"
+        },
+        "8f2a96ab-2fe4-4799-bf45-5d850c830f97": {
+          "tips": [
+            null
+          ]
+        },
+        "8a310d03-4c27-4b18-b8f7-994c23971fdd": {
+          "tips": [
+            null
+          ]
+        },
+        "889b61a1-6e88-49a4-9250-5e48853f289c": {
+          "tips": [
+            null
+          ]
+        },
+        "6519fc7c-05b3-464d-a3ea-3cd9b239a023": {
+          "tips": [
+            null
+          ]
+        },
+        "b7a9b018-0728-4b91-935e-b3ec7c723623": {
+          "tips": [
+            null
+          ]
+        },
+        "45553c85-cb2b-4763-8875-484919a56ced": {
+          "tips": [
+            null
+          ]
+        },
+        "18ddafa9-e84c-403f-a417-d4516a1ae6a7": {
+          "tips": [
+            null
+          ]
+        },
+        "c5dbb48d-d120-4560-b671-bd507f1685b0": {
+          "tips": [
+            null
+          ]
+        },
+        "2ee54cfb-c1d2-4524-86c2-6ef303a598ea": {
+          "tips": [
+            null
+          ]
+        },
+        "2c2e61bd-0e80-4e8a-8377-5680d0d95f90": {
+          "tips": [
+            null
+          ]
+        },
+        "4a408d6d-8d2f-481e-aafe-e5d81da03a43": {
+          "tips": [
+            null
+          ]
+        },
+        "3fef28ad-87b4-4154-b80f-12b358f2e031": {
+          "tips": [
+            null
+          ]
+        },
+        "1715dc9b-df4c-4292-8b4a-f5cc8aea73a4": {
+          "tips": [
+            null
+          ]
+        },
+        "69cdfd66-ff99-4e25-b8e7-e6d920f36fb1": {
+          "tips": [
+            null
+          ]
+        },
+        "47fe69d8-300c-488d-94ac-616b6fb2fbb8": {
+          "tips": [
+            null
+          ]
+        },
+        "37a98989-bd44-40e0-8606-da8c32dde749": {
+          "tips": [
+            null
+          ]
+        },
+        "a23e57c3-d624-46df-bc76-87d7e4c16ad9": {
+          "tips": [
+            null
+          ]
+        },
+        "54a5e672-f71d-4cd7-9bb7-db4ad99104f5": {
+          "tips": [
+            null
+          ]
+        },
+        "743d6e6b-6320-4157-962e-5789b717aa34": {
+          "name": "Încheiere"
+        },
+        "8672a531-0212-4a3a-9831-5c522d710bd4": {
+          "tips": [
+            null
+          ]
+        },
+        "33e66783-8c6a-4b44-a3ce-7715ffb2307d": {
+          "name": "Reflecție"
+        },
+        "ce9819ba-4ea2-4327-9ed9-6e56f4bf3400": {
+          "tips": [
+            null
+          ]
+        },
+        "beeb8da7-5283-44e8-a1b5-0eb3987e226b": {
+          "tips": [
+            null
+          ]
+        },
+        "a97b7f87-b7d9-4a8d-a68e-35cd489345e2": {
+          "tips": [
+            null
+          ]
+        },
+        "3c6018f8-0048-4c97-9970-72884de4c736": {
+          "progression_name": "Reflecţie"
+        },
+        "86647112-ffd2-4c41-84b4-1ea040590a32": {
+          "tips": [
+            null
+          ]
+        },
+        "233defe7-9977-4539-8a42-7e146979db0e": {
+          "tips": [
+            null
+          ]
+        },
+        "f5bad206-6147-4a6c-af88-bf15c41f6469": {
+          "tips": [
+            null
+          ]
+        },
+        "d12014de-c29c-4d8d-891b-2dca9c37974f": {
+          "tips": [
+            null
+          ]
+        },
+        "eb20582a-3ffa-45d7-8ce4-5505dc1e9f17": {
+          "tips": [
+            null
+          ]
+        },
+        "f8a14811-8528-45d2-970e-71e4c4cdd40e": {
+          "tips": [
+            null
+          ]
+        },
+        "9519ba5f-1e9a-41a3-91a5-10dcaa31b00d": {
+          "tips": [
+            null
+          ]
+        },
+        "99a48707-5d94-418b-a63e-120ef2178c88": {
+          "tips": [
+            null
+          ]
+        },
+        "61333e8c-4c43-4cb8-8a5f-56153ff20170": {
+          "tips": [
+            null
+          ]
+        },
+        "ac59be9d-db06-4340-a5f3-2f74f4d22f72": {
+          "tips": [
+            null
+          ]
+        },
+        "7e704d36-1603-46a8-be78-8f13dcdae93f": {
+          "tips": [
+            null
+          ]
+        },
+        "9e5d6c76-47cf-4853-8bfb-ebfa6005ca71": {
+          "tips": [
+            null
+          ]
+        },
+        "43484e40-619c-44a7-97e1-2612ae402193": {
+          "tips": [
+            null
+          ]
+        },
+        "d7947c4f-5f7c-4011-a004-6fb9cc228706": {
+          "tips": [
+            null
+          ]
+        },
+        "7fd85c65-ad1b-4f7d-a93d-eed09e89386c": {
+          "tips": [
+            null
+          ]
+        },
+        "69c31664-67a3-406f-aef7-9be5281299ee": {
+          "tips": [
+            null
+          ]
+        },
+        "4aec71fb-6cbe-4811-ab72-128f739c84a7": {
+          "tips": [
+            null
+          ]
+        },
+        "580b0187-b553-4031-b073-fa6790bd6f48": {
+          "tips": [
+            null
+          ]
+        },
+        "9e88ce3c-497f-47c8-88b9-717c5747ca41": {
+          "tips": [
+            null
+          ]
+        },
+        "34f8346c-af88-4f9e-b676-566a5aab39d2": {
+          "tips": [
+            null
+          ]
+        },
+        "9073a9fc-550e-48f5-9f00-55bd0c2abf6a": {
+          "tips": [
+            null
+          ]
+        },
+        "4defcbc5-28b7-46a2-81b0-5e1c923dc036": {
+          "tips": [
+            null
+          ]
+        },
+        "bcbc8736-9513-438c-b118-87470fc5f545": {
+          "tips": [
+            null
+          ]
+        },
+        "5299e79c-fbf7-422a-962a-8adee224fd98": {
+          "tips": [
+            null
+          ]
+        },
+        "2974a2b8-24cd-4a3c-bd66-04e92209110b": {
+          "tips": [
+            null
+          ]
+        },
+        "52705132-ae81-4c78-8704-9ffd36b9e5cb": {
+          "tips": [
+            null
+          ]
+        },
+        "9ac26727-d92c-474f-8a18-271e7f494132": {
+          "tips": [
+            null
+          ]
+        },
+        "2e5264db-0d1d-4fc1-adf1-c5bf13967af5": {
+          "tips": [
+            null
+          ]
+        },
+        "648adba7-4a69-4bce-9109-9d50e9d71087": {
+          "tips": [
+            null
+          ]
+        },
+        "3ae6c2fa-0e47-40a3-894b-b1995fe98c91": {
+          "tips": [
+            null
+          ]
+        },
+        "5a82120d-9538-4fd6-b631-86b6d0e8bfc6": {
+          "tips": [
+            null
+          ]
+        },
+        "cc78f5f7-002f-44ed-9f5f-2518a19953e7": {
+          "tips": [
+            null
+          ]
+        },
+        "311288e0-9ddf-4681-a8f2-31ae7d196423": {
+          "tips": [
+            null
+          ]
+        },
+        "045c4fbc-83bd-4cce-a007-ed7ed6ac48bf": {
+          "tips": [
+            null
+          ]
+        },
+        "2f4c69e6-995a-4646-ac24-53f224ef9dd7": {
+          "tips": [
+            null
+          ]
+        },
+        "aec4a036-761c-4015-bdd0-e138372c1847": {
+          "tips": [
+            null
+          ]
+        },
+        "ff9510f7-5db2-48e7-906e-2289e52db678": {
+          "tips": [
+            null
+          ]
+        },
+        "75d3dcbc-e41c-4063-b598-facb3bdc9bcb": {
+          "tips": [
+            null
+          ]
+        },
+        "cda83683-b629-4ed3-a3ee-944691693739": {
+          "tips": [
+            null
+          ]
+        },
+        "1fb9839f-ccd0-4f02-b7b9-44e8ff7ab095": {
+          "tips": [
+            null
+          ]
+        },
+        "66a0329e-9fa3-4294-ba1a-ac918f0e8408": {
+          "tips": [
+            null
+          ]
+        },
+        "24d188db-fc22-41a3-bba4-8ef59a0ddc53": {
+          "tips": [
+            null
+          ]
+        },
+        "14254f0c-651f-4902-88ae-509fe2b77f7e": {
+          "tips": [
+            null
+          ]
+        },
+        "7f6c261c-5cd3-4215-ba2d-bb0db7014f0c": {
+          "tips": [
+            null
+          ]
+        },
+        "ba1c96c9-ff95-432b-8d22-5138a319f4b4": {
+          "tips": [
+            null
+          ]
+        },
+        "f7bad8f1-8f27-48a7-bd98-70d03a7ddf81": {
+          "tips": [
+            null
+          ]
+        },
+        "0e136518-de25-4ad4-a786-e9736f9b4354": {
+          "tips": [
+            null
+          ]
+        },
+        "e4c15ff3-00e4-45d9-b9ad-78e5b332b058": {
+          "tips": [
+            null
+          ]
+        },
+        "9ab8fce2-b661-425e-a015-a671e382a411": {
+          "tips": [
+            null
+          ]
+        },
+        "8c475adc-0786-43a2-9f57-fde314fd24ad": {
+          "tips": [
+            null
+          ]
+        },
+        "b25121aa-b946-4bea-9fdd-6a874ffb4bd7": {
+          "tips": [
+            null
+          ]
+        },
+        "8b41cd86-ab6d-4cc1-b24f-70a9534ba318": {
+          "tips": [
+            null
+          ]
+        },
+        "2e7e6d2b-ce4c-48ee-ab67-a7002104dad7": {
+          "tips": [
+            null
+          ]
+        },
+        "a96b40dd-a27b-4fc0-8c1e-db5584a87c4e": {
+          "tips": [
+            null
+          ]
+        },
+        "fe5c3b17-fe61-4487-97d0-c8cb1c2641c8": {
+          "tips": [
+            null
+          ]
+        },
+        "0b73f454-275c-431b-8325-06c9a32000d1": {
+          "tips": [
+            null
+          ]
+        },
+        "5eb3c3e2-7ebd-4824-b769-14d1244e412b": {
+          "tips": [
+            null
+          ]
+        },
+        "dfe65c27-9f06-4c6f-857e-06f4ae98dcd1": {
+          "tips": [
+            null
+          ]
+        },
+        "cbd1e24c-3232-42ff-bd52-2725517f8697": {
+          "progression_name": "Reflecţie"
+        },
+        "b5282123-46f9-411e-ba2c-d6f5ab3b4ea7": {
+          "tips": [
+            null
+          ]
+        },
+        "d34d3ef7-b3ad-41de-8b49-c7460f8b1450": {
+          "tips": [
+            null
+          ]
+        },
+        "9c23f514-e5e6-45f4-9038-c8c68e26c041": {
+          "name": "Fi inspirat"
+        },
+        "9e9ce748-fed7-4391-a28d-6c9e5da3cf27": {
+          "tips": [
+            null
+          ]
+        },
+        "fe954bee-319a-49ec-a2d1-033dd539a59b": {
+          "tips": [
+            null
+          ]
+        },
+        "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
+          "tips": [
+            null
+          ]
+        },
+        "f14cc941-af61-4deb-8c16-be730ded1849": {
+          "tips": [
+            null
+          ]
+        },
+        "fe4404fa-4e67-4c56-b117-6aa3dd7fd8ef": {
+          "tips": [
+            null
+          ]
+        },
+        "053cf5c9-1dd1-4da7-8fca-82dd5780c4b0": {
+          "tips": [
+            null
+          ]
+        },
+        "8cb231b2-ab63-4868-a949-bc91e701ea7d": {
+          "tips": [
+            null
+          ]
+        },
+        "dafc849e-b1f0-4767-aa97-69090169177e": {
+          "tips": [
+            null
+          ]
+        },
+        "9fc2aec4-9f01-4726-82a7-306e613d936e": {
+          "tips": [
+            null
+          ]
+        },
+        "1890c047-5983-4093-99a8-08fcb099c0e0": {
+          "tips": [
+            null
+          ]
+        },
+        "bc4c9c62-accc-4be6-a733-2a6acf678ec7": {
+          "tips": [
+            null
+          ]
+        },
+        "b297e101-f4cd-4ddd-ae0f-42e87ed683d0": {
+          "tips": [
+            null
+          ]
+        },
+        "c932e879-ed85-4226-b025-a1dbb22da379": {
+          "tips": [
+            null
+          ]
+        },
+        "4c3af8fe-b972-410f-a839-00f38e6a51ce": {
+          "name": "Reflecţie",
+          "tips": [
+            null
+          ]
+        },
+        "7091d49a-c4ac-4c04-aaa4-290efb0ee705": {
+          "tips": [
+            null
+          ]
+        },
+        "2224615d-c083-4694-b797-4b3c8e8d84da": {
+          "tips": [
+            null
+          ]
+        },
+        "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
+          "tips": [
+            null
+          ]
+        },
+        "f5a1e7d6-5715-4050-bfed-a5e0663486c4": {
+          "tips": [
+            null
+          ]
+        },
+        "ef9ec42f-f86e-4636-a45b-5da0d208b714": {
+          "tips": [
+            null
+          ]
+        },
+        "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "0d9ecf02-4bac-4dc3-86c4-ba83c96e8a14": {
+          "tips": [
+            null
+          ]
+        },
+        "01addbef-11df-4c62-a099-ae69c66c7c1c": {
+          "tips": [
+            null
+          ]
+        },
+        "33168786-d600-4b6c-a947-045b8a466d7c": {
+          "tips": [
+            null
+          ]
+        },
+        "8259e743-5c84-4516-8f31-300f06de6ab0": {
+          "tips": [
+            null
+          ]
+        },
+        "9afdcdd9-6cf6-481c-86b4-312da18c7cc3": {
+          "progression_name": "Evenimente"
+        },
+        "b919f5c1-5152-4baa-bddb-112275d049ac": {
+          "progression_name": "Funcţii"
+        },
+        "187cdb02-266e-41c6-a35e-8d31c07cfdff": {
+          "progression_name": "Reflecţie"
+        },
+        "316f977f-5ad8-4565-b6d1-1c62507ba565": {
+          "tips": [
+            null
+          ]
+        },
+        "701df007-2fc2-4907-bdae-63ea39ea0649": {
+          "tips": [
+            null
+          ]
+        },
+        "528b9a48-dd5d-4f52-b455-be650f9ed180": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Introducere în matrice"
+        },
+        "3f472ce9-f1fe-4be7-8849-5ba3155f2d11": {
+          "tips": [
+            null
+          ]
+        },
+        "78b871d6-dd5f-4ad8-b32b-97df938ae849": {
+          "tips": [
+            null
+          ]
+        },
+        "0d6b1fbb-59d1-4a90-a5f7-e6fdbabcdfb6": {
+          "tips": [
+            null
+          ]
+        },
+        "4563c715-0a30-419a-9eca-d5b41089e165": {
+          "tips": [
+            null
+          ]
+        },
+        "28fb99c8-886a-4ed6-859a-1fb1a813c484": {
+          "tips": [
+            null
+          ]
+        },
+        "eb895db7-aeb1-4efe-9eb8-c314cd7a2621": {
+          "tips": [
+            null
+          ]
+        },
+        "0874692e-8e17-4b1d-9232-f11c61106af0": {
+          "tips": [
+            null
+          ]
+        },
+        "d5b2ea3b-4370-4cf8-a9ed-670e789d812f": {
+          "tips": [
+            null
+          ]
+        },
+        "2aed74d8-d9e0-4c5d-b0bc-7bc5e90ce0df": {
+          "progression_name": "Bucle Pentru"
+        },
+        "4eae7990-8111-4f59-a7ef-212acf9f054f": {
+          "tips": [
+            null
+          ]
+        },
+        "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
+          "tips": [
+            null
+          ]
+        },
+        "88fbe9b6-7233-4617-a579-4eea7041c1b0": {
+          "tips": [
+            null
+          ]
+        },
+        "83dadfe8-ec04-4986-9e4b-8fcb301bce51": {
+          "tips": [
+            null
+          ]
+        },
+        "61efbeb1-5fcd-4dec-9265-4628f24745de": {
+          "tips": [
+            null
+          ]
+        },
+        "de64b098-e02d-4a21-9965-1e7217f40ebd": {
+          "progression_name": "Funcții cu Parametrii"
+        },
+        "02b60bab-d184-4bce-859c-5438c9e37cc4": {
+          "tips": [
+            null
+          ]
+        },
+        "3b0572f2-01eb-48b0-96a1-43739f98575a": {
+          "tips": [
+            null
+          ]
+        },
+        "38e26d5e-b651-4c50-b791-10455112e4ba": {
+          "tips": [
+            null
+          ]
+        },
+        "c814528c-f376-440e-849f-19d8790e7d92": {
+          "tips": [
+            null
+          ]
+        },
+        "8521f45a-fff7-43d7-bd5a-d32077c26151": {
+          "tips": [
+            null
+          ]
+        },
+        "420da788-7b37-45e7-b940-ae08c8f90b25": {
+          "tips": [
+            null
+          ]
+        },
+        "672d26f8-cbd5-46ea-8482-d84b0be3e335": {
+          "tips": [
+            null
+          ]
+        },
+        "a3f5dca7-56ea-4d7e-9f37-b1ae9f46aef5": {
+          "tips": [
+            null
+          ]
+        },
+        "0516be14-10b2-4124-af7c-3d76c5177d95": {
+          "tips": [
+            null
+          ]
+        },
+        "7550d329-92cf-4cd3-b0b5-c918c24f2105": {
+          "progression_name": "Reflecţie"
+        },
+        "44000645-7870-4e71-b27e-75cd70b6dbb9": {
+          "tips": [
+            null
+          ]
+        },
+        "a76a28bd-8ddb-4b39-8ce7-6663e81bfd1b": {
+          "name": "Distribuie",
+          "tips": [
+            null
+          ]
+        },
+        "a237ce6e-b99e-4117-afee-b384cfd9fc4f": {
+          "tips": [
+            null
+          ]
+        },
+        "322ad615-5d42-4b54-ab60-5d7b7d36e277": {
+          "tips": [
+            null
+          ]
+        },
+        "3e097460-3cde-4714-ba16-61de8a8439ac": {
+          "tips": [
+            null
+          ]
+        },
+        "cf324018-6258-4c8b-98e8-f5de7f3cec14": {
+          "tips": [
+            null
+          ]
+        },
+        "617e101b-5c13-40e7-be75-6a4626bebe3e": {
+          "tips": [
+            null
+          ]
+        },
+        "e94772c1-7ac5-4e4f-b9b3-021ba4b36ef5": {
+          "tips": [
+            null
+          ]
+        },
+        "c670c339-5f6d-475c-b6cf-ad8a35c2d8a2": {
+          "name": "Reflecţie"
+        },
+        "0d5d0634-6b05-4c47-b187-594dfd30d625": {
+          "tips": [
+            null
+          ]
+        },
+        "c80549fe-fb7e-4eef-ba30-247264bf0e1f": {
+          "tips": [
+            null
+          ]
+        },
+        "7e296c41-f0fb-4d31-8b13-31f6e7abe2f5": {
+          "tips": [
+            null
+          ]
+        },
+        "98a216a1-8aa6-4216-ad6e-b7ab5abca491": {
+          "tips": [
+            null
+          ]
+        },
+        "addfcb6c-dafa-4e9d-b5fc-8d2c400714aa": {
+          "tips": [
+            null
+          ]
+        },
+        "05ef09a7-e47c-4238-b280-31aeb3b4dc00": {
+          "tips": [
+            null
+          ]
+        },
+        "cc06e6ea-b748-4c9d-b201-ccb10cd77cf6": {
+          "tips": [
+            null
+          ]
+        },
+        "cbce24b3-baeb-42f3-978b-e4262e9e38b7": {
+          "tips": [
+            null
+          ]
+        },
+        "d324e413-50c5-4135-97ad-610430cd5a97": {
+          "tips": [
+            null
+          ]
+        },
+        "bb61bac7-12c5-4854-9cce-2450dae006fb": {
+          "tips": [
+            null
+          ]
+        },
+        "604675cc-016d-4706-ad48-32d1547d7a74": {
+          "tips": [
+            null
+          ]
+        },
+        "8aadfdde-40ea-48c0-b369-3e9a0213c31b": {
+          "tips": [
+            null
+          ]
+        },
+        "2c878939-14f1-4cca-a6a5-d1bcc71ffb84": {
+          "name": "Widget de pixelare"
+        },
+        "0cb3b9f4-af2b-43e0-bdaa-4ce6ff013a37": {
+          "tips": [
+            null
+          ]
+        },
+        "2f614323-09fc-4fc3-949a-d8326ea2dedf": {
+          "tips": [
+            null
+          ]
+        },
+        "17536ac7-f578-4492-9a2b-034697748108": {
+          "tips": [
+            null
+          ]
+        },
+        "143b040a-8c9e-4653-92d4-f58ea9ffef72": {
+          "tips": [
+            null
+          ]
+        },
+        "85c49ae4-5b52-40ad-96eb-424f02d8539e": {
+          "tips": [
+            null
+          ]
+        },
+        "7383a881-4001-478a-8e89-5169fc76e2fb": {
+          "tips": [
+            null
+          ]
+        },
+        "5e396df7-105a-46f4-8083-63f1c708ca2a": {
+          "tips": [
+            null
+          ]
+        },
+        "c71003ba-e08d-4d77-b308-5cc6ee941091": {
+          "tips": [
+            null
+          ]
+        },
+        "30ef889b-387b-4dbd-b6bc-96ca25489944": {
+          "tips": [
+            null
+          ]
+        },
+        "59dffdf2-728b-4b66-a29b-7635c858be00": {
+          "tips": [
+            null
+          ]
+        },
+        "5ab922e3-8512-4c62-83c7-e17aa282377d": {
+          "tips": [
+            null
+          ]
+        },
+        "1282f8e7-0fd9-47bc-b7b4-75b4025eedb5": {
+          "tips": [
+            null
+          ]
+        },
+        "13abae06-0500-42e9-a486-940684c9ba87": {
+          "tips": [
+            null
+          ]
+        },
+        "a4df917c-be45-4977-bc95-fbe945f3c3cf": {
+          "tips": [
+            null
+          ]
+        },
+        "38324708-63cb-4738-92c9-af06aed187f7": {
+          "tips": [
+            null
+          ]
+        },
+        "95c12363-142c-4e82-bed6-76541ed021c4": {
+          "tips": [
+            null
+          ]
+        },
+        "2c09cb98-721d-4c28-add5-bc717980da1e": {
+          "tips": [
+            null
+          ]
+        },
+        "e5d5e7ac-2362-41f9-a3ba-b78deaee4edc": {
+          "tips": [
+            null
+          ]
+        },
+        "bc476ecb-65ea-4f30-a970-81feb995c71c": {
+          "tips": [
+            null
+          ]
+        },
+        "112b54ac-5751-4635-8275-23e6acc5947c": {
+          "tips": [
+            null
+          ]
+        },
+        "1fcec88e-f931-4ece-95d2-966a9ce0d0eb": {
+          "tips": [
+            null
+          ]
+        },
+        "317d7606-342d-4068-939d-b4abefb7867f": {
+          "tips": [
+            null
+          ]
+        },
+        "4e8ecb03-3abf-412e-96bb-102eb61294aa": {
+          "tips": [
+            null
+          ]
+        },
+        "89ef6969-5f33-411f-905d-93ffc791d9f8": {
+          "progression_name": "Reflecţie"
+        },
+        "c74f28dc-8f61-443c-b03a-4943b65c8824": {
+          "tips": [
+            null
+          ]
+        },
+        "928ac428-64ef-4359-ad63-12d175fa700e": {
+          "name": "Defineşte"
+        },
+        "d19d7358-a136-4eae-a082-fb508284fb50": {
+          "tips": [
+            null
+          ]
+        },
+        "35745fa0-2097-414b-beb8-eca436c1d5b9": {
+          "name": "Pregătire"
+        },
+        "2cd98702-4332-403a-8ce9-01db36e361ab": {
+          "tips": [
+            null
+          ]
+        },
+        "799529e8-aa6b-44e9-a270-1db8052d7df3": {
+          "name": "Încercare"
+        },
+        "fae06660-56ad-41e5-8af3-bbfbe36ebb97": {
+          "tips": [
+            null
+          ]
+        },
+        "7080a972-d63e-4299-8260-f1df2f234857": {
+          "name": "Reflecție"
+        },
+        "cb6b53c4-832b-4488-b7d8-e235460c633c": {
+          "tips": [
+            null
+          ]
+        },
+        "4701e66f-6c37-4ae3-a6d9-b94b4c45704c": {
+          "tips": [
+            null
+          ]
+        },
+        "28dfd4cd-0d62-4c35-bed0-d6038adf4813": {
+          "tips": [
+            null
+          ]
+        },
+        "2bd9ece8-996d-4561-9ff9-b702ac019d12": {
+          "tips": [
+            null
+          ]
+        },
+        "b22284df-c9d1-4046-93d8-4cd7339b1ec0": {
+          "tips": [
+            null
+          ]
+        },
+        "b65a936d-eb48-4c6f-a0bf-751bb0829269": {
+          "tips": [
+            null
+          ]
+        },
+        "a6b0da50-c2de-4f78-98e0-5f01500c1845": {
+          "tips": [
+            null
+          ]
+        },
+        "a8280172-5d5d-4d29-b6ec-bc98ae0e3e08": {
+          "tips": [
+            null
+          ]
+        },
+        "c72ef18c-8a87-40ab-9a07-260f89fad275": {
+          "tips": [
+            null
+          ]
+        },
+        "45d58868-a7ed-43a5-ae94-c64de3cc4dd5": {
+          "tips": [
+            null
+          ]
+        },
+        "46bfc542-d2d8-4124-a4cd-d7e53fff618e": {
+          "tips": [
+            null
+          ]
+        },
+        "501ce03f-e483-4e6d-bbc8-dc26c9a3a265": {
+          "tips": [
+            null
+          ]
+        },
+        "3cf5b5f5-208d-4801-b616-a877e120f6ca": {
+          "tips": [
+            null
+          ]
+        },
+        "c3c51f8c-dafe-485c-9fb6-9e10a686097d": {
+          "tips": [
+            null
+          ]
+        },
+        "456fda46-f469-47e7-991c-6fd3efb1c0f6": {
+          "tips": [
+            null
+          ]
+        },
+        "1d7c5ce3-6ee6-408f-9723-8fdfb8b2fda3": {
+          "tips": [
+            null
+          ]
+        },
+        "400536e8-3e68-4e2e-a1cb-15abe6e78255": {
+          "tips": [
+            null
+          ]
+        },
+        "1fd332bf-4d3a-4fb3-8585-11aa036c87ff": {
+          "tips": [
+            null
+          ]
+        },
+        "1d708064-9b0b-4a56-bccf-715c91c2cf6d": {
+          "tips": [
+            null
+          ]
+        },
+        "a367b3e1-6f45-49c0-8429-9e2b607560a2": {
+          "tips": [
+            null
+          ]
+        },
+        "e4a6519f-4954-49e6-8914-83043cd945d7": {
+          "tips": [
+            null
+          ]
+        },
+        "e84d2260-141b-4899-971d-0e0e33eb12d2": {
+          "tips": [
+            null
+          ]
+        },
+        "caccc30a-07e9-465a-a077-65788e7b4f1b": {
+          "tips": [
+            null
+          ]
+        },
+        "83b2e7f4-a01c-491f-a3e1-29ac12d01a13": {
+          "tips": [
+            null
+          ]
+        },
+        "f6b744db-baed-4e9d-bdf4-1f1399bf716a": {
+          "tips": [
+            null
+          ]
+        },
+        "1f315b3a-9470-42be-95de-4b2327b9a338": {
+          "name": "Reflecţie"
+        },
+        "85bda82c-51d9-4b18-a377-4ecd142855c0": {
+          "tips": [
+            null
+          ]
+        },
+        "8ff48983-ab23-42db-8ad0-d0d690bafad5": {
+          "tips": [
+            null
+          ]
+        },
+        "7d58d643-efce-44e7-a3e4-7b3492c72250": {
+          "tips": [
+            null
+          ]
+        },
+        "f8f9a770-42a2-4c1d-9b51-52f46ff9360d": {
+          "tips": [
+            null
+          ]
+        },
+        "914c565c-fb6d-490c-a14a-b289ac56d720": {
+          "description": "**Prompt:** Cum credeți că datele dvs. de antrenament au influențat rezultatele pe care Inteligența Artificială le-a produs?",
+          "tips": [
+            null
+          ]
+        },
+        "4ed5db10-7aec-4ab8-802b-10ccc9710ed5": {
+          "tips": [
+            "Peștii din acest tutorial sunt generați aleatoriu pe baza unor componente predefinite, inclusiv guri, cozi, ochi, solzi și aripioare, cu o culoare a corpului, formă și dimensiune alese aleatoriu. În loc să se uite la datele reale ale imaginii, Inteligența Artificială caută acum modele în aceste componente pe baza modului în care elevul clasifică fiecare pește. Va fi mai probabil să eticheteze un pește în același mod în care ar face-o elevul dacă are trăsături care se potrivesc."
+          ]
+        },
+        "92b13324-8ae5-4796-9071-694683704daa": {
+          "tips": [
+            null
+          ]
+        },
+        "7c5c8f29-ab7a-4891-b135-182f4222a591": {
+          "tips": [
+            "Puteți împărtăși aceste povești cu elevii dvs. pentru a-i ajuta să vadă cum va influența Inteligența Artificială viitorul.\n\n-   [Risipirea alimentelor este o problemă serioasă. Inteligența Artificială încearcă să o rezolve](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n-   [Tehnologia Inteligenței Artificiale poate identifica tulburările genetice prin scanare facială](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n-   [Cum un startup bazat pe Inteligență Artificială a conceput un posibil medicament în doar 46 de zile](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n-   [Instrumentul de Inteligență Artificială de la Institutul de Tehnologie Massachusetts poate prezice cancerul de sân cu până la 5 ani mai devreme](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n-   [Armata își accelerează ritmul pe mașinile care se conduc singure](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n-   [San Francisco spune că va folosi inteligența artificială pentru a reduce părtinirea atunci când acuză oamenii pentru infracțiuni](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n-   [Inteligența Artificială ajută oamenii de știință să restaureze texte grecești antice pe tăblițe de piatră](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
+          ]
+        },
+        "375e017e-8620-4d95-a1f5-89fda22729ac": {
+          "tips": [
+            null
+          ]
+        },
+        "24a8f1ab-d8eb-4738-b114-0534be713085": {
+          "tips": [
+            null
+          ]
+        },
+        "ff9b8b39-860d-427b-9a2d-80c537bc539f": {
+          "tips": [
+            null
+          ]
+        },
+        "4bc50ef6-5978-4a80-943a-49fc0cffb23e": {
+          "tips": [
+            null
+          ]
+        },
+        "2d923b7c-56a0-462a-b7c4-5350cfe28ac0": {
+          "tips": [
+            null
+          ]
+        },
+        "92566744-182e-416d-b7c7-2f5b2a92026b": {
+          "tips": [
+            null
+          ]
+        },
+        "22ca7a0f-899a-4cd3-8fbd-14afbf396317": {
+          "progression_name": "Reflecţie"
+        },
+        "ec94d489-2b99-408d-bcce-782db2cdba44": {
+          "tips": [
+            null
+          ]
+        },
+        "2e17eccc-2343-4bde-849c-eaf270f343f8": {
+          "tips": [
+            null
+          ]
+        },
+        "f348d317-252e-4581-b489-fe1bbe700f67": {
+          "tips": [
+            null
+          ]
+        },
+        "caeb42d3-998b-49fd-99ec-4c36e013206f": {
+          "tips": [
+            null
+          ]
+        },
+        "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
+          "tips": [
+            null
+          ]
+        },
+        "e82622fb-a1cf-45c8-a0f2-7929503c4bfe": {
+          "tips": [
+            null
+          ]
+        },
+        "2725045e-4a46-449e-9a1e-ecf266e6755d": {
+          "tips": [
+            null
+          ]
+        },
+        "3c78bafa-e216-4280-a965-d982d319d15a": {
+          "tips": [
+            null
+          ]
+        },
+        "a929ea0c-ccdf-4e2c-9751-3012d428dcd6": {
+          "tips": [
+            null
+          ]
+        },
+        "0a01de04-3b8f-4025-864a-8a2f48f9fd09": {
+          "tips": [
+            null
+          ]
+        },
+        "b0b45a9e-53a8-4d5e-a248-7a7d042dd2b8": {
+          "tips": [
+            null
+          ]
+        },
+        "935fb22e-ea0b-4c9b-92fc-61c39895fca9": {
+          "tips": [
+            null
+          ]
+        },
+        "9663d7f7-168d-4f85-8f8a-cc2d6f86efa3": {
+          "tips": [
+            null
+          ]
+        },
+        "c838ee44-b6fd-467e-8733-9b52d9727b08": {
+          "tips": [
+            null
+          ]
+        },
+        "9612456b-5030-4f4c-a11b-893694130773": {
+          "tips": [
+            null
+          ]
+        },
+        "ea1a9294-f250-4c26-8032-c497088f8206": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "897f445d-23b2-4083-8982-ec4ea7cecbec": {
+          "tips": [
+            null
+          ]
+        },
+        "1f66ca37-97c5-48be-9f14-d7f4938b2632": {
+          "tips": [
+            null
+          ]
+        },
+        "11f4055c-bcd6-4b74-8f9a-5d69502955f2": {
+          "tips": [
+            null
+          ]
+        },
+        "ef33e6f2-c5d9-4d5d-85fc-4434062b105f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "a09c360f-651e-4539-94b3-620914e17cf2": {
+          "tips": [
+            null
+          ]
+        },
+        "5485407f-b2b9-433e-86a4-6da5afa523f5": {
+          "tips": [
+            null
+          ]
+        },
+        "9e754b3d-83a4-4fb3-bdf5-331c02667465": {
+          "tips": [
+            null
+          ]
+        },
+        "df26b7e2-cb48-40b2-b360-d0e9770b8802": {
+          "tips": [
+            null
+          ]
+        },
+        "a14285ec-28bc-4b44-a63c-204c0034c19f": {
+          "tips": [
+            null
+          ]
+        },
+        "58908247-dbee-4578-8155-09f7d934c017": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "ad26b802-3d93-4e28-bf0c-2b04b8127c12": {
+          "name": "Reflecţie"
+        },
+        "e13128cb-3a56-488b-86db-0a2edd7aff6d": {
+          "tips": [
+            null
+          ]
+        },
+        "61d2c0ea-b465-4fe7-8906-7b4d6a8820cd": {
+          "tips": [
+            null
+          ]
+        },
+        "dfafff33-7c5b-4a4a-9d38-647e60b34160": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "e3a151f2-e5d3-4a66-9eed-6bc74f6adecb": {
+          "tips": [
+            null
+          ]
+        },
+        "04061607-035b-48a3-ad8e-33fed692aa2b": {
+          "tips": [
+            null
+          ]
+        },
+        "f52c22d8-72a7-44d1-91d2-66aacf92c1a8": {
+          "tips": [
+            null
+          ]
+        },
+        "8f56a7b9-e17b-4173-bae9-c996824270b4": {
+          "tips": [
+            null
+          ]
+        },
+        "234316a5-009b-44bd-a51d-fdcb54cc8903": {
+          "name": "Evaluare",
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "2057627a-c665-4a63-8aed-c1123ce9796a": {
+          "tips": [
+            null
+          ]
+        },
+        "5989291d-e9d4-4f14-bdf6-399b69b96cec": {
+          "tips": [
+            null
+          ]
+        },
+        "34fcaf28-d278-49ff-877f-a5f79f77af59": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "f455bf72-f2c8-4bf2-970f-af533ef80342": {
+          "tips": [
+            null
+          ]
+        },
+        "2d0fc04c-aa1b-4148-9efd-06764f14c100": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "7e2e7a3e-fd91-4ab5-8b46-f8ae96c91169": {
+          "tips": [
+            null
+          ]
+        },
+        "67d8c4d5-fda2-47c0-a7a3-164eb669718f": {
+          "name": "Revizuire"
+        },
+        "0b250aa0-f3fa-4530-bef8-e328e4d93620": {
+          "tips": [
+            null
+          ]
+        },
+        "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
+          "tips": [
+            null
+          ]
+        },
+        "760b0216-8c5d-4954-ac35-fd42c527ac66": {
+          "tips": [
+            null
+          ]
+        },
+        "c490c403-c5dc-4755-a03b-1532565b1119": {
+          "tips": [
+            null
+          ]
+        },
+        "6cf8f316-c11f-4cc5-85a3-1596303e4317": {
+          "tips": [
+            null
+          ]
+        },
+        "18bcf449-d684-4e93-abbd-5af4e82d1e7b": {
+          "tips": [
+            null
+          ]
+        },
+        "fcb22a6b-b548-4ea4-b2bf-23f3db9dde29": {
+          "tips": [
+            null
+          ]
+        },
+        "d1f93971-c590-43fb-be4d-a3ced983e77a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "c2703579-0081-4ecf-8aa2-500ed370fb99": {
+          "tips": [
+            null
+          ]
+        },
+        "4e97aa36-b285-40f3-83cb-383e83158dc5": {
+          "tips": [
+            null
+          ]
+        },
+        "b8ce874f-8e09-4a78-aa14-7b32de942c69": {
+          "tips": [
+            null
+          ]
+        },
+        "a6ebae49-e1ca-4918-9d7f-4c0e33cdf00e": {
+          "tips": [
+            null
+          ]
+        },
+        "bccfd2b8-dd73-4be5-ab15-2dfa4024312b": {
+          "progression_name": "Evaluare"
+        },
+        "06cad4ef-4d60-42e4-829c-02fd3364c31e": {
+          "tips": [
+            null
+          ]
+        },
+        "eb0d27fe-7158-49fe-9e96-bbc70d2fa158": {
+          "name": "Revizuire"
+        },
+        "a5361b9b-6e15-4bba-9b35-ae31a1e1b525": {
+          "tips": [
+            null
+          ]
+        },
+        "fa1f1ad4-aadd-49d1-9138-887450893813": {
+          "tips": [
+            null
+          ]
+        },
+        "f54152bb-4d02-459d-beea-ceeb422be02a": {
+          "tips": [
+            null
+          ]
+        },
+        "fbcd5bf0-4c6e-4142-934d-e4f4ebe17ad2": {
+          "tips": [
+            null
+          ]
+        },
+        "8ed5e3eb-5ffa-473f-b166-3ea936d0c9e7": {
+          "tips": [
+            null
+          ]
+        },
+        "02bcc907-1476-4a48-90ea-a56c5c91e6d4": {
+          "name": "Condiţionale"
+        },
+        "230cf2d8-bf75-4b73-aa29-4e468f203e78": {
+          "tips": [
+            null
+          ]
+        },
+        "030bb18c-bfaf-4c13-8ca7-9b251c26c162": {
+          "tips": [
+            null
+          ]
+        },
+        "b3b4d1e4-17c7-4933-8ba6-03ac7a46839a": {
+          "tips": [
+            null
+          ]
+        },
+        "461492e7-43b9-4c58-9ee4-b63b716dbded": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "2b5e9944-1e90-4362-98e9-ef74a8d1d48b": {
+          "tips": [
+            null
+          ]
+        },
+        "0ee8704d-9ad3-4a31-816f-555813322a78": {
+          "tips": [
+            null
+          ]
+        },
+        "9345c305-ff75-4d36-a595-b0b7a69c094f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "e016d4b6-9ebd-4c6c-9697-b368a0c90bd8": {
+          "tips": [
+            null
+          ]
+        },
+        "48c9aa57-b904-4660-b629-e49bf606fad7": {
+          "tips": [
+            null
+          ]
+        },
+        "991be916-6a79-484c-95a2-0e6f753d9ac8": {
+          "tips": [
+            null
+          ]
+        },
+        "fb40596d-a877-43f3-87b7-325a2fd79c37": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "957a684d-5930-4823-99fa-0af6c5701b6f": {
+          "name": "Încheiere"
+        },
+        "b9716428-aedc-4578-8328-379b70cb0d50": {
+          "tips": [
+            null
+          ]
+        },
+        "09884749-ea7e-4df2-94f7-f73308052d81": {
+          "tips": [
+            null
+          ]
+        },
+        "4b3c39d2-a62c-43c3-b5ae-048ef270624a": {
+          "tips": [
+            null
+          ]
+        },
+        "187ab288-8997-4b05-90b2-993b1d29c6ba": {
+          "name": "Împerecheaţi dispozitivele"
+        },
+        "4bfb9e2c-557b-464a-9a07-7190bc4dce87": {
+          "tips": [
+            null
+          ]
+        },
+        "b2ad1d43-99f9-40fa-9f88-d8b42f8c723e": {
+          "name": "Reflecție"
+        },
+        "d8f8a198-8cc9-47f1-b6c9-f03f573fe546": {
+          "progression_name": "Reflecţie"
+        },
+        "360d3353-5639-4dfb-a66d-784a152e1794": {
+          "name": "Reflecţie"
+        },
+        "a2fda764-6cf6-419d-a9cb-7d62a2749660": {
+          "tips": [
+            null
+          ]
+        },
+        "42d0eae6-06b2-4aa6-a8f6-6081ce2fa560": {
+          "tips": [
+            null
+          ]
+        },
+        "e8b8a1b0-89e9-4b09-978f-11db835db760": {
+          "tips": [
+            null
+          ]
+        },
+        "a0ba31d0-91f2-4271-aacb-bf5c614aabc3": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "864f7c7f-a19d-4470-8d53-52e790f5e783": {
+          "tips": [
+            null
+          ]
+        },
+        "28c72532-e347-4f43-81ea-7b83a4e336d1": {
+          "tips": [
+            null
+          ]
+        },
+        "57411d29-c010-41c3-82bc-be6b7025c796": {
+          "tips": [
+            null
+          ]
+        },
+        "49cfe240-7090-4fbd-9e61-ef725f8bddb1": {
+          "tips": [
+            null
+          ]
+        },
+        "ef8e8137-1524-4b5d-9e2a-6c6d535cda60": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "1e949591-d103-4f64-9c54-eeac71cc51d3": {
+          "tips": [
+            null
+          ]
+        },
+        "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
+          "tips": [
+            null
+          ]
+        },
+        "c87f7c08-8f60-4810-9e6f-10ae69319288": {
+          "tips": [
+            null
+          ]
+        },
+        "96cef9d3-a478-4852-9dff-061a5fa5dc79": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "443eb6ca-6406-4399-b140-a4d6ec3f0bca": {
+          "tips": [
+            null
+          ]
+        },
+        "136ec817-6a58-41db-aae8-3238b015ce63": {
+          "tips": [
+            null
+          ]
+        },
+        "29881c8e-82cb-4886-8e1f-7f101c91bae9": {
+          "tips": [
+            null
+          ]
+        },
+        "4c0ed738-4808-45b2-aaae-965d536ffc6a": {
+          "tips": [
+            null
+          ]
+        },
+        "0d8cc1e7-4e01-4315-a98c-87fcc7031ca7": {
+          "tips": [
+            null
+          ]
+        },
+        "6b47f10d-a466-436e-ad48-25f2404ae07a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "d2cc216a-b098-4754-bb18-087f42007b46": {
+          "tips": [
+            null
+          ]
+        },
+        "40b22769-f206-4725-b2f4-fd3f71c15101": {
+          "tips": [
+            null
+          ]
+        },
+        "52d53651-705c-47ec-a68f-d014f3499a99": {
+          "tips": [
+            null
+          ]
+        },
+        "085e06bd-a991-42ec-b8e2-2e27712cf7dd": {
+          "tips": [
+            null
+          ]
+        },
+        "e4283f2d-5933-4812-80df-341067426cc8": {
+          "tips": [
+            null
+          ]
+        },
+        "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Jocul Colecționarul"
+        },
+        "3dfe6414-c583-4af9-a55d-7da0d06783ef": {
+          "tips": [
+            null
+          ]
+        },
+        "9fba4c16-6103-4cb5-88a4-1a250ec8abdb": {
+          "tips": [
+            null
+          ]
+        },
+        "e068a067-ade8-4f5c-bfad-661fdff103ed": {
+          "tips": [
+            null
+          ]
+        },
+        "d0d85465-a081-4c09-ae83-8b454e76c2ff": {
+          "tips": [
+            null
+          ]
+        },
+        "4304b5c8-73c0-44c3-bd18-3ec32f1e947d": {
+          "tips": [
+            null
+          ]
+        },
+        "70b55a3a-e9cd-435d-a426-ab6e80a725cb": {
+          "tips": [
+            null
+          ]
+        },
+        "79ced720-4977-4d65-9163-acd0147f2552": {
+          "tips": [
+            null
+          ]
+        },
+        "b29f40dd-4e28-4c22-8aa8-9e387819622c": {
+          "tips": [
+            null
+          ]
+        },
+        "7e64a6bf-73b9-4cd3-be58-402b3da57768": {
+          "tips": [
+            null
+          ]
+        },
+        "686b638e-1a29-49cc-8711-191165d251b9": {
+          "tips": [
+            null
+          ]
+        },
+        "59ca85ff-b7b0-450d-b354-1c9938c4a615": {
+          "tips": [
+            null
+          ]
+        },
+        "d1ae9072-39e7-4cd7-81eb-6434e0b2e39d": {
+          "name": "Distribuie"
+        },
+        "2d58346e-e123-4477-8995-fefc448b3fe3": {
+          "name": "Reflecție",
+          "progression_name": "Reflecţie"
+        },
+        "b44faa8f-43ae-4899-b299-888d85f57d48": {
+          "tips": [
+            null
+          ]
+        },
+        "beb5adaf-44d3-48fe-bb2d-99a2f55caeff": {
+          "tips": [
+            null
+          ]
+        },
+        "1dca60be-eb7f-40ef-8b91-8ca231c1b14a": {
+          "tips": [
+            null
+          ]
+        },
+        "1c951438-4727-4ea5-84d9-560f7dac9204": {
+          "tips": [
+            null
+          ]
+        },
+        "37d397d0-785f-4dc7-b172-2b51e5757ba3": {
+          "tips": [
+            null
+          ]
+        },
+        "5166952d-961b-4ba8-b379-c4101d84b4de": {
+          "tips": [
+            null
+          ]
+        },
+        "79ffacab-f428-4e4f-8f85-e9409b2e43a3": {
+          "tips": [
+            null
+          ]
+        },
+        "6470c3f3-0547-4d23-bede-dbac0704a029": {
+          "tips": [
+            null
+          ]
+        },
+        "e1fdc61e-61b5-4b5d-b46a-62a26f7cca05": {
+          "tips": [
+            null
+          ]
+        },
+        "fc1bd727-4c35-4405-a14f-a713bcd7e532": {
+          "name": "Reflecție"
+        },
+        "82378234-dc3a-4578-a458-e237d6b9b729": {
+          "tips": [
+            null
+          ]
+        },
+        "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "23f003b6-2c1b-4e88-a343-f77714a50d89": {
+          "name": "Procesul de Rezolvare a Problemei",
+          "tips": [
+            null
+          ],
+          "progression_name": "Video: Procesul de Rezolvare a Problemei"
+        },
+        "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "tips": [
+            null
+          ]
+        },
+        "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "tips": [
+            null
+          ]
+        },
+        "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "tips": [
+            null
+          ]
+        },
+        "03418848-4f2d-4f45-8f25-38012b191a2a": {
+          "tips": [
+            null
+          ]
+        },
+        "10aec291-0c45-453c-8609-5386783ff20e": {
+          "tips": [
+            null
+          ]
+        },
+        "11b483ae-c3f6-467d-85c3-9427203e2488": {
+          "tips": [
+            null
+          ]
+        },
+        "d7edf595-a13a-4992-b963-58a034f34112": {
+          "tips": [
+            null
+          ]
+        },
+        "7accdcb0-3787-4a97-9ac5-4044890f8c12": {
+          "tips": [
+            null
+          ]
+        },
+        "555a0b86-988d-4c75-ad9a-e3fc127d44c3": {
+          "tips": [
+            null
+          ]
+        },
+        "7e307eaa-f893-47b4-94ce-38801b41592a": {
+          "tips": [
+            null
+          ]
+        },
+        "4436ad56-59ce-4b60-8e8e-bd0c9f80626a": {
+          "description": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "c21034e8-cca8-4197-9819-081e4114ef36": {
+          "tips": [
+            null
+          ]
+        },
+        "06af5ad1-d9b6-4834-b94a-12f5c46232c7": {
+          "tips": [
+            null
+          ]
+        },
+        "ec21fe96-de6c-4818-bf1a-c02c1f4b66ff": {
+          "tips": [
+            null
+          ]
+        },
+        "ecb7626b-e9dc-4011-b1a2-54f138d54872": {
+          "tips": [
+            null
+          ]
+        },
+        "5733d57d-7dc2-45ba-885b-e223a44ad2af": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Video: Ce face calculatorul, calculator?"
+        },
+        "900764b3-0256-4cc9-b88f-1b8c4992e653": {
+          "tips": [
+            null
+          ]
+        },
+        "e623c176-d684-43c0-ad4b-9f33a3acc00f": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "396fe142-472b-4c62-976b-578e5ff5bff0": {
+          "tips": [
+            null
+          ]
+        },
+        "a52b80a3-f6a7-4e24-8347-1eb0be4ccddf": {
+          "tips": [
+            null
+          ]
+        },
+        "e606d7d3-d552-4db3-91b7-c26f98da237c": {
+          "tips": [
+            null
+          ]
+        },
+        "f1388388-8631-479b-bca9-ffe97206edf8": {
+          "tips": [
+            null
+          ]
+        },
+        "ce77f101-8880-4264-bf0e-b2d95e40c080": {
+          "tips": [
+            null
+          ]
+        },
+        "584f3a53-ab7b-421d-a8a4-bc8c106ead2a": {
+          "tips": [
+            null
+          ]
+        },
+        "4d905d80-5cc4-4017-88ab-904e5092fe0c": {
+          "tips": [
+            null
+          ]
+        },
+        "fb64c101-5e75-4908-9b31-15d964b4ffa9": {
+          "tips": [
+            null
+          ]
+        },
+        "21e51178-7062-468a-b8e1-a9227a0ac5eb": {
+          "tips": [
+            null
+          ]
+        },
+        "95323c16-49dc-4c54-9bf5-c351b458beb7": {
+          "tips": [
+            null
+          ]
+        },
+        "ed3fc57d-be54-4625-bae7-5cac4680d615": {
+          "tips": [
+            null
+          ]
+        },
+        "071466cb-7d6b-4e91-93bb-261e508f89dc": {
+          "tips": [
+            null
+          ]
+        },
+        "9c0439ca-8ac8-463f-889c-47df291b32d9": {
+          "tips": [
+            null
+          ]
+        },
+        "59845bd6-dedc-4283-9cbd-f3c574fd99ab": {
+          "tips": [
+            null
+          ]
+        },
+        "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
+          "tips": [
+            null
+          ]
+        },
+        "4cefb9ba-ffbc-40ba-bc37-dae06e608b67": {
+          "tips": [
+            null
+          ]
+        },
+        "40b16a1c-add1-445a-81de-c281c495fe6f": {
+          "tips": [
+            null
+          ]
+        },
+        "254a27b6-75fb-4f5f-bdf1-2ac909f01f75": {
+          "tips": [
+            null
+          ]
+        },
+        "e7394c68-613b-4772-90c8-dcf1228ba5dc": {
+          "tips": [
+            null
+          ]
+        },
+        "6a60775b-f641-46a0-820d-f6895dd26fed": {
+          "tips": [
+            null
+          ]
+        },
+        "709fc018-84ca-4c5c-af4e-bae11c2867b1": {
+          "tips": [
+            null
+          ]
+        },
+        "06fa61d8-63d0-49d0-b9d1-77ec59c88d72": {
+          "tips": [
+            null
+          ]
+        },
+        "03ad2f47-6f62-4854-b398-3075d952d71e": {
+          "name": "Reflecţie",
+          "progression_name": "Reflecţie"
+        },
+        "7d3700c3-08ad-41e8-bee3-19384d50e4c4": {
+          "tips": [
+            null
+          ]
+        },
+        "68d48a87-2999-499a-962e-a0a177e1c4e6": {
+          "tips": [
+            null
+          ]
+        },
+        "f51c4e46-0b95-4035-bbef-921e12d33e3c": {
+          "tips": [
+            null
+          ]
+        },
+        "922ac8cd-6633-48ac-bcb7-85fb1d2e711a": {
+          "tips": [
+            null
+          ]
+        },
+        "f3726d11-0690-46a9-b742-f48b4a80ab33": {
+          "tips": [
+            null
+          ]
+        },
+        "6cd90ae5-5c64-45e8-a9c5-c1e01bdddd64": {
+          "tips": [
+            null
+          ]
+        },
+        "caf7880a-40b3-4252-865e-a81d22f30d07": {
+          "tips": [
+            null
+          ]
+        },
+        "17a60d00-0762-4796-8bb7-c953b2f53867": {
+          "name": "Reflecție"
+        },
+        "04f7b740-ae5f-4f12-9867-27f7b08eff1e": {
+          "tips": [
+            null
+          ]
+        },
+        "c55fae38-7795-4027-b469-a3238f34efe5": {
+          "tips": [
+            null
+          ]
+        },
+        "418d731c-d516-4e49-8547-9313763526ca": {
+          "tips": [
+            null
+          ]
+        },
+        "c941f0ac-38f6-4828-9ca4-e8b600868807": {
+          "tips": [
+            null
+          ]
+        },
+        "c209191d-c268-4f8e-b40c-93a5de206b76": {
+          "tips": [
+            null
+          ]
+        },
+        "09e4642c-bedd-44e7-a7a7-ed2f85ece6c1": {
+          "tips": [
+            null
+          ]
+        },
+        "740f2761-b6d0-4d82-97ec-2c97d92e2859": {
+          "tips": [
+            null
+          ]
+        },
+        "193961e8-e637-4d45-bb0b-014a3e8d1bbb": {
+          "tips": [
+            null
+          ]
+        },
+        "cebe2e73-7783-4bbf-9469-c2084423900d": {
+          "name": "Reflecție"
+        },
+        "01c916af-970c-4e2f-a98e-38cbc436eefc": {
+          "tips": [
+            null
+          ]
+        },
+        "163d7212-c083-4ba8-bb87-6150a37f8f0f": {
+          "tips": [
+            null
+          ]
+        },
+        "9823b27f-66ca-4ea1-860d-3472e5317340": {
+          "tips": [
+            null
+          ]
+        },
+        "77c22840-b9e9-4426-9894-30f101f2c00e": {
+          "tips": [
+            null
+          ]
+        },
+        "b452ecde-f660-4d52-9ab7-8b33989681f0": {
+          "tips": [
+            null
+          ]
+        },
+        "f5570fab-fdee-464e-b569-ec19142fc35d": {
+          "tips": [
+            null
+          ]
+        },
+        "661c94ca-9d68-45ee-afca-2ff357684bf3": {
+          "tips": [
+            null
+          ]
+        },
+        "bc8e4c54-e3ca-42f2-b613-2b383783dad8": {
+          "tips": [
+            null
+          ]
+        },
+        "ba9df800-646b-4324-9b35-b3f6564ba061": {
+          "name": "Reflecție"
+        },
+        "f25bdc7d-2ab6-493a-a4e7-e46dbeaa01c4": {
+          "tips": [
+            null
+          ]
+        },
+        "48dcb032-0dad-4177-89a7-066d60d785f5": {
+          "tips": [
+            null
+          ]
+        },
+        "7ce61da1-8486-4987-a971-d02802cf3223": {
+          "tips": [
+            null
+          ]
+        },
+        "be784b81-94c2-46a8-9f54-6eb72fa47020": {
+          "tips": [
+            null
+          ]
+        },
+        "90e3e011-8930-435c-8840-88bcb72a94b1": {
+          "tips": [
+            null
+          ]
+        },
+        "e550c27b-967f-46f1-a1bf-96eb4e4ccc2e": {
+          "tips": [
+            null
+          ]
+        },
+        "05109520-cc5d-4422-8447-09b5e315232c": {
+          "tips": [
+            null
+          ]
+        },
+        "8e2e9def-edb6-462f-b068-2be956dcc3c0": {
+          "tips": [
+            null
+          ]
+        },
+        "9844b63f-04a1-4011-87f7-eec3c63a5496": {
+          "tips": [
+            null
+          ]
+        },
+        "59cd3f12-f9b1-4cbd-bf6b-3507adc264bc": {
+          "tips": [
+            null
+          ]
+        },
+        "ed9353fe-9f41-42ef-9c2e-2e07231422ab": {
+          "tips": [
+            null
+          ]
+        },
+        "9ceef85f-40f8-4692-bcb4-1a689968a685": {
+          "tips": [
+            null
+          ]
+        },
+        "ab4371e8-c868-4587-9f32-2a0f857b910d": {
+          "tips": [
+            null
+          ]
+        },
+        "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
+          "tips": [
+            null
+          ]
+        },
+        "1265c20c-95ab-4c34-b8fc-b3532b088415": {
+          "tips": [
+            null
+          ]
+        },
+        "c1050c6d-1379-4f81-ab69-6f00bbfb363a": {
+          "tips": [
+            null
+          ]
+        },
+        "248256b0-de8c-4fcf-8f60-58492ef07802": {
+          "tips": [
+            null
+          ]
+        },
+        "f6a64a6e-ab8a-4258-b3cc-57707696fd6c": {
+          "tips": [
+            null
+          ]
+        },
+        "3af02eab-916a-4774-8a13-5a420dd53fc5": {
+          "tips": [
+            null
+          ]
+        },
+        "2ca0bf9a-5cd6-4beb-8b48-d788ad425fa7": {
+          "tips": [
+            null
+          ]
+        },
+        "08e81098-b771-4c82-bb64-9108ece6c97c": {
+          "tips": [
+            null
+          ]
+        },
+        "693d5350-e425-4ae5-926e-85984858fb31": {
+          "tips": [
+            null
+          ]
+        },
+        "470c3268-f70d-43ac-831f-b37c3103531b": {
+          "tips": [
+            null
+          ]
+        },
+        "1d5ddfcc-e375-4d04-9822-019d51c5272d": {
+          "tips": [
+            null
+          ]
+        },
+        "73435ea5-4c6f-4317-b21a-4fc9c732a4bf": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "579df0b6-aebc-48d8-9ac3-427a2c04e61f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Provocare"
+        },
+        "b883c2e6-ca65-4053-b848-046bdfbb2a38": {
+          "name": "Reflecţie"
+        },
+        "7d15a1cb-357e-419d-b469-608585606064": {
+          "tips": [
+            null
+          ]
+        },
+        "83d7613a-c741-4d4a-9dcd-993ab08aa61d": {
+          "tips": [
+            null
+          ]
+        },
+        "970d404e-3aef-4384-88d6-da840d2bd8ca": {
+          "tips": [
+            null
+          ]
+        },
+        "ec491dbb-ef99-4e6e-9abf-f1f90c22e838": {
+          "name": "Programare în perechi",
+          "tips": [
+            null
+          ]
+        },
+        "8ae3516e-e6e2-4401-afc1-4ddfb1f1312b": {
+          "tips": [
+            null
+          ]
+        },
+        "77578c68-97e0-4ef5-a4a5-75c5c0d5bcc1": {
+          "tips": [
+            null
+          ]
+        },
+        "27e7e382-bef2-4576-94b2-15f081c1c260": {
+          "tips": [
+            null
+          ]
+        },
+        "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
+          "tips": [
+            null
+          ]
+        },
+        "f5c13deb-a9a7-4f04-9daa-ec92ec261b02": {
+          "tips": [
+            null
+          ]
+        },
+        "d3b01200-6f32-4a93-be82-df50df4e8221": {
+          "progression_name": "Evaluare"
+        },
+        "1db390c3-2d64-4581-a038-c4dd0f7226ee": {
+          "tips": [
+            null
+          ]
+        },
+        "016877a1-d391-46b7-998e-fbe9a7c12703": {
+          "tips": [
+            null
+          ]
+        },
+        "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c": {
+          "name": "Trimiteţi o recenzie"
+        },
+        "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
+          "tips": [
+            null
+          ]
+        },
+        "b9efce7e-87cf-466d-8916-1ef98f26db40": {
+          "name": "Amprenta ta Digitală"
+        },
+        "ec53cc7b-755c-461d-a075-16cf2ca7f1dd": {
+          "tips": [
+            null
+          ]
+        },
+        "e9ffa025-70b3-4fdf-a55e-b9324e0470f2": {
+          "tips": [
+            null
+          ]
+        },
+        "69dde422-3372-406e-9efe-b1df46472d00": {
+          "tips": [
+            null
+          ]
+        },
+        "3412213d-9a22-470e-859c-66b9a752d6bb": {
+          "tips": [
+            null
+          ]
+        },
+        "0fb9d1d3-097c-4ce5-b276-aa71c839c82f": {
+          "tips": [
+            null
+          ]
+        },
+        "029f4c9c-3f40-458c-8480-b677aee2c5f5": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9": {
+          "tips": [
+            null
+          ]
+        },
+        "3d52ed72-b57b-4d05-902a-c9daceffadc6": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "3a9a8696-72e3-4e6f-9812-59e180a16192": {
+          "tips": [
+            null
+          ]
+        },
+        "727aa204-0664-456f-b5fc-1f6409b65e88": {
+          "tips": [
+            null
+          ]
+        },
+        "39d79388-46f2-4f41-839d-c2bc3002d969": {
+          "tips": [
+            null
+          ]
+        },
+        "4662cf38-bec5-4f63-9f2d-237617407f0f": {
+          "tips": [
+            null
+          ]
+        },
+        "36889d4b-1b66-4a46-bd52-8e5464d17f96": {
+          "tips": [
+            null
+          ]
+        },
+        "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
+          "name": "Trimiteţi o recenzie"
+        },
+        "8c10515f-4ba5-4629-b5e0-e44975336298": {
+          "tips": [
+            null
+          ]
+        },
+        "3356cda1-c8fe-4475-aaf6-1361379c848f": {
+          "tips": [
+            null
+          ]
+        },
+        "fe6c8d53-4cc0-4bbb-8ffe-8cc1432e522b": {
+          "tips": [
+            null
+          ]
+        },
+        "f8a65f45-b4db-4f6f-9a20-b4ef89910159": {
+          "tips": [
+            null
+          ]
+        },
+        "957ba0ee-6412-418d-bb42-811c2ea546cc": {
+          "tips": [
+            null
+          ]
+        },
+        "353b9fc5-832d-4961-ab5e-4c59f80c104d": {
+          "tips": [
+            null
+          ]
+        },
+        "6ff6d697-74a4-41a2-91a3-4ef817ceff84": {
+          "tips": [
+            null
+          ]
+        },
+        "2c7139b2-bd78-402d-9d57-1191bfcf3d3c": {
+          "tips": [
+            null
+          ]
+        },
+        "42f4e940-4ca1-41ce-9efc-c9147fb84229": {
+          "tips": [
+            null
+          ]
+        },
+        "cf0abcbd-3e9a-4964-9cb3-de8d7b5bec52": {
+          "tips": [
+            null
+          ]
+        },
+        "168bbc11-2203-44d6-88fc-e6be6c05180b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "59343467-2b51-47a0-a2af-2f1357b5e3ba": {
+          "tips": [
+            null
+          ]
+        },
+        "bf7e752c-b96b-4416-b4cd-f3af71a59035": {
+          "tips": [
+            null
+          ]
+        },
+        "f694e569-1f2b-40ac-8e46-0439d6b12551": {
+          "tips": [
+            null
+          ]
+        },
+        "15cd087e-202a-4116-9feb-708690d683a2": {
+          "tips": [
+            null
+          ]
+        },
+        "0c2abb8a-e980-4137-bca7-7af46bb7b629": {
+          "tips": [
+            null
+          ]
+        },
+        "c816e4df-5e8b-4408-844a-1346d1f42700": {
+          "tips": [
+            null
+          ]
+        },
+        "60bf9811-2a1c-4ff5-8986-082f04512e85": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "0bb5cdfb-1e6b-44df-9d3f-7a1f0bfcab33": {
+          "tips": [
+            null
+          ]
+        },
+        "cc6a79fc-1951-4e82-8952-39b9a662aca5": {
+          "tips": [
+            null
+          ]
+        },
+        "b363e7a6-4522-46c8-99b8-c7a1db5936b7": {
+          "tips": [
+            null
+          ]
+        },
+        "710ee97e-1fb7-429d-a724-cb0a92f72425": {
+          "tips": [
+            null
+          ]
+        },
+        "793b6091-27f6-48c5-9b0c-b02534f8bc79": {
+          "tips": [
+            null
+          ]
+        },
+        "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1": {
+          "tips": [
+            null
+          ]
+        },
+        "f82407b3-02da-446b-9c56-6e11c8f2df36": {
+          "tips": [
+            null
+          ]
+        },
+        "ff09ae02-5fc8-4ac3-9e08-18a25ffd0d76": {
+          "name": "Împerecheaţi dispozitivele"
+        },
+        "10b08619-0a72-442e-a75e-13b6cead2e90": {
+          "tips": [
+            null
+          ]
+        },
+        "bb76c259-62ef-49ef-9b8c-d0ca91a380a7": {
+          "progression_name": "Reflecţie"
+        },
+        "20f18101-28c1-43ff-835a-9b098f7a5b9c": {
+          "tips": [
+            null
+          ]
+        },
+        "887eb66a-9701-4ec2-961e-2df7358980f6": {
+          "tips": [
+            null
+          ]
+        },
+        "d2fbc09d-cec0-4514-ba77-b635cc9379d5": {
+          "tips": [
+            null
+          ]
+        },
+        "286dd512-4c7c-42ec-8028-428a89833572": {
+          "tips": [
+            null
+          ]
+        },
+        "f410b7cd-fcb4-42ac-9ba6-517b2a8db144": {
+          "tips": [
+            null
+          ]
+        },
+        "f8ec8428-8030-4f3d-a42a-ace8a6526a70": {
+          "tips": [
+            null
+          ]
+        },
+        "d328ac00-0ae4-43b4-ac6b-09b544bdf673": {
+          "tips": [
+            null
+          ]
+        },
+        "fe322a4b-9393-40e7-92fe-8314928d0203": {
+          "tips": [
+            null
+          ]
+        },
+        "4e9b0621-b725-4913-8938-757f111a9ce6": {
+          "tips": [
+            null
+          ]
+        },
+        "43da857d-e2ac-4797-b205-4bc8e5b274c8": {
+          "tips": [
+            null
+          ]
+        },
+        "52a7434e-fca4-48af-9aa8-61086949bb98": {
+          "tips": [
+            null
+          ]
+        },
+        "4145fe6b-15f3-4528-91b5-726f4cffd9b5": {
+          "tips": [
+            null
+          ]
+        },
+        "49bb4251-eaa1-423c-9bfd-ec0f6113f83e": {
+          "tips": [
+            null
+          ]
+        },
+        "229abe84-ae59-45f1-915e-681805560ab1": {
+          "tips": [
+            null
+          ]
+        },
+        "73c708b0-4bce-4d0c-8aef-d4383cbb24f5": {
+          "tips": [
+            null
+          ]
+        },
+        "136308c1-5aa0-4820-afe0-a16252ba6c74": {
+          "tips": [
+            null
+          ]
+        },
+        "c986ac31-a9e4-4fbb-8203-f8dd207cfed9": {
+          "tips": [
+            null
+          ]
+        },
+        "d22a9dfb-fec1-43bb-add2-c76ec1a76f2a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Evaluare"
+        },
+        "ada4d5c1-50ee-446a-85c6-d61dd4d3221f": {
+          "tips": [
+            null
+          ]
+        },
+        "05ee8316-106b-4b34-9138-d1ceca375a8f": {
+          "name": "Prezentare generală"
+        },
+        "410e0287-5cfd-4bc9-945a-4c1d330d795e": {
+          "tips": [
+            null
+          ]
+        },
+        "754d0467-6e5e-45c8-8692-2fab52c45548": {
+          "tips": [
+            null
+          ]
+        },
+        "85c3804b-17da-40f8-a088-0627011b36e7": {
+          "tips": [
+            null
+          ]
+        },
+        "c78f2804-62f0-4fe5-842f-0ed415de05fc": {
+          "name": "Laboratorul de web"
+        },
+        "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81": {
+          "tips": [
+            null
+          ]
+        },
+        "c881299c-2798-4137-ac19-ba5e05d59340": {
+          "tips": [
+            null
+          ]
+        },
+        "4c27a0e8-612a-478a-a854-aa5a966c8245": {
+          "tips": [
+            null
+          ]
+        },
+        "e1f6d250-92c8-4b01-b970-698a4eb24f7b": {
+          "name": "Laboratorul de web"
+        },
+        "8f6c023a-3dd4-4c70-8cff-a4daa7c7e497": {
+          "tips": [
+            null
+          ]
+        },
+        "35722166-2159-4038-8c7e-7a6cc0580812": {
+          "tips": [
+            null
+          ]
+        },
+        "aca795d4-18ad-434c-91f8-cc29e3d5a96c": {
+          "tips": [
+            null
+          ]
+        },
+        "c11db9e7-9e8e-470f-854b-a56722d138f0": {
+          "progression_name": "Reflecţie"
+        },
+        "938b93c7-1d09-4893-a312-181b8a14a4db": {
+          "tips": [
+            null
+          ]
+        },
         "cef1dcf2-8240-4b77-b667-040c16bc6526": {
           "progression_name": "Programare în perechi"
+        },
+        "26c63e40-009a-4255-bb94-f38466a11e15": {
+          "progression_name": "Provocare"
         },
         "259004b6-d013-48a6-8adb-4da6e8a13e6d": {
           "progression_name": "Culegătorul"
         },
+        "27ded5c7-5ee2-4201-8278-9f66603558a1": {
+          "progression_name": "Provocare"
+        },
+        "78559eec-193a-43db-89bd-bd50ee1dd4c7": {
+          "progression_name": "Provocare"
+        },
         "d40ac398-4f8b-4652-8ec0-503d206ccd17": {
           "progression_name": "Utilizarea blocului ”repetă” (repeat)"
+        },
+        "46706589-fffc-42b0-9f99-580224a061e2": {
+          "progression_name": "Provocare"
+        },
+        "aff2e264-4572-45c0-a518-91d3a41145e3": {
+          "progression_name": "Provocare"
         },
         "eed9001e-67f2-44d8-8704-1f8fd9cf4897": {
           "progression_name": "Joc la liber"
@@ -5880,6 +9480,12 @@
         },
         "6099eea1-c9b0-4572-889e-1bdcc45f9835": {
           "progression_name": "Joc la liber"
+        },
+        "be735a9d-be60-4dd7-ae2d-969cd5d768fb": {
+          "progression_name": "Provocare"
+        },
+        "8f76a97c-6f79-459e-b3ce-4c78f4354c6e": {
+          "progression_name": "Provocare"
         },
         "c0ced3bc-751b-4626-90df-e7037256bf81": {
           "name": "Joc la liber",
@@ -5907,21 +9513,63 @@
         "e2a14e5d-ab2d-41ae-ab3f-133d89bc51f1": {
           "progression_name": "Utilizarea blocului ”repetă” (repeat)"
         },
+        "7f80f442-f41e-48a6-ba87-b2e0f50419ae": {
+          "progression_name": "Provocare"
+        },
+        "5123721b-64b2-41fd-b004-5c971dd870da": {
+          "progression_name": "Provocare"
+        },
+        "91d7659d-e976-4340-afe4-9ed9fe55e127": {
+          "progression_name": "Provocare"
+        },
+        "86d8c418-70b9-47fb-be38-1e1bfd42aafa": {
+          "progression_name": "Provocare"
+        },
+        "c20aa2e0-c032-4ccb-9b00-900781538703": {
+          "progression_name": "Provocare"
+        },
+        "9b8d3fd1-8308-4d91-91ce-150d9ffc82b4": {
+          "progression_name": "Provocare"
+        },
         "68c477cb-6e9a-41d1-9f7e-2b3b84a95f52": {
           "progression_name": "Culegătorul"
         },
+        "906a9824-0a68-4149-bfab-c59f5f759cec": {
+          "progression_name": "Provocare"
+        },
         "d82614b6-8420-4d3f-83c7-b7fb9d353453": {
           "progression_name": "Joc la liber"
+        },
+        "4f8e01e3-039b-4253-992b-d0d3e8343559": {
+          "progression_name": "Provocare"
+        },
+        "c33df6ec-bd36-44de-9f41-dad3fb245d43": {
+          "progression_name": "Provocare"
+        },
+        "37feb4fc-9e9d-411b-b911-229c85aaa55a": {
+          "progression_name": "Provocare"
         },
         "69f7dde3-e970-464a-8255-fa5a68ff1d77": {
           "name": "Suplimente de lecţie",
           "progression_name": "Suplimente de lecţie"
         },
+        "c523e5e0-fe37-4dd6-a9e6-35cfc26415d3": {
+          "progression_name": "Provocare"
+        },
         "61e56a64-227e-422a-9c65-62c927caed06": {
           "progression_name": "Programare cu Rey și BB-8"
         },
+        "63724599-1670-4897-9314-ea0a2e237540": {
+          "progression_name": "Provocare"
+        },
         "e12c3ee1-8c2e-4727-8133-d6dbf630f64d": {
           "progression_name": "Culegătorul"
+        },
+        "4b80ee70-8904-4d2a-8383-b37230de7971": {
+          "progression_name": "Provocare"
+        },
+        "9a523c20-cd9a-4c87-a0d3-94049b24f97f": {
+          "progression_name": "Provocare"
         },
         "8131dce7-4fb6-4612-aef7-24ffa0c07804": {
           "name": "Joc la liber",
@@ -5934,11 +9582,23 @@
         "08f9c234-1d3f-4d54-a1bf-878c064dd68d": {
           "progression_name": "Joc la liber"
         },
+        "64524570-9c1b-4db9-932b-c23bfbf9bddd": {
+          "progression_name": "Provocare"
+        },
+        "b5e93dd6-0f17-4fe0-9628-dd5521588550": {
+          "progression_name": "Provocare"
+        },
+        "66d2de03-1370-4d34-a429-53cd7d0c2d81": {
+          "progression_name": "Provocare"
+        },
+        "34f0eff5-b0dd-4bfc-9629-0b4d87f178b9": {
+          "progression_name": "Provocare"
+        },
         "ec15e557-0de8-49af-ab15-783c0c14e8b3": {
           "progression_name": "Prezentând Laboratorul de Desen"
         },
         "31d7ef1b-967a-40cc-a027-7b4e0e09dc4e": {
-          "progression_name": "Cum să Faci un Desen"
+          "progression_name": "Cum se creează un Sprite"
         },
         "4280e340-3549-4814-9afe-d6c9fe291025": {
           "progression_name": "Joc la liber"
@@ -5949,8 +9609,14 @@
         "84c7f95c-006b-46bc-ba15-67e59c540a18": {
           "progression_name": "Joc la liber"
         },
+        "e1faa5c5-ee21-4108-87ff-c5fd38664034": {
+          "progression_name": "Provocare"
+        },
         "b8c86684-ebd8-441f-ba6e-669457575120": {
           "progression_name": "Video"
+        },
+        "0ddbc582-20ae-4047-8764-565895eed729": {
+          "progression_name": "Provocare"
         },
         "08cf29e4-2239-4519-b813-5d66842379ae": {
           "progression_name": "Joc la liber"
@@ -5962,14 +9628,35 @@
         "f62b5dfa-a6d0-4152-9486-204c989f79d6": {
           "progression_name": "Culegătorul"
         },
+        "a24eea9c-ab22-4155-a800-7bc6eaffebb9": {
+          "progression_name": "Provocare"
+        },
+        "2b6efab0-59d9-4da3-ac2d-06f2f76dd473": {
+          "progression_name": "Provocare"
+        },
         "600a7d5e-a862-4d84-bd9f-0ec3ec9f8223": {
           "progression_name": "Programare în perechi"
+        },
+        "250712fa-af9b-47dd-820d-946f29752fac": {
+          "progression_name": "Provocare"
         },
         "598993a6-e64b-48e3-8002-c617aae9cdab": {
           "progression_name": "Programare cu Rey și BB-8"
         },
+        "bac8e1cc-75c9-4903-be20-67ef3f908699": {
+          "progression_name": "Provocare"
+        },
+        "5971ebbb-7513-4e17-941f-a9b19e7866d3": {
+          "progression_name": "Provocare"
+        },
         "d3456f8d-c77d-4ac0-bc57-d6b0f7adee00": {
           "progression_name": "Utilizarea blocului ”repetă” (repeat)"
+        },
+        "3958ad66-9ec0-4261-8daf-a7914f33756f": {
+          "progression_name": "Provocare"
+        },
+        "a221d837-f004-414a-83e6-daf171d2b173": {
+          "progression_name": "Provocare"
         },
         "9f9f6cf1-1591-4de2-9a70-4e190059f0fe": {
           "progression_name": "Joc la liber"
@@ -5985,7 +9672,7 @@
           "progression_name": "Prezentând Laboratorul de Desen"
         },
         "51a140d6-441e-487b-9e1f-313e842b78c3": {
-          "progression_name": "Cum să Faci un Desen"
+          "progression_name": "Cum se creează un Sprite"
         },
         "0d749e3d-cf8b-4e7e-bb6e-104a1812a49f": {
           "progression_name": "Joc la liber"
@@ -5993,11 +9680,26 @@
         "54fa7040-6612-4012-b595-1f4745f1479d": {
           "progression_name": "Video"
         },
+        "fca63890-3cc5-4821-b6d4-69e65dc80b05": {
+          "progression_name": "Provocare"
+        },
+        "5b6e8418-e430-4ed1-ada4-20de1eaa51da": {
+          "progression_name": "Provocare"
+        },
+        "380a484d-948a-4421-bfe6-5bb303c54971": {
+          "progression_name": "Provocare"
+        },
         "fd7fee3b-f3b5-4866-a223-18e2c76385eb": {
           "progression_name": "Artist: Variabile"
         },
+        "2a9b62a9-5da7-4fb4-8bf5-97f1f0d21dae": {
+          "progression_name": "Provocare"
+        },
         "d3262ee6-45e9-4506-a341-94177402f767": {
           "progression_name": "Joc la liber"
+        },
+        "f12b431c-0b07-4843-9986-d0947ba8ce6b": {
+          "progression_name": "Provocare"
         },
         "d0c8bc0d-00a5-4a23-98f1-36d9b6dd43b9": {
           "progression_name": "Joc la liber"

@@ -42,11 +42,16 @@
     "show_type_hints": "false",
     "short_instructions": "Get at least **5** pieces of treasure!",
     "long_instructions": "*\"Let's hunt for treasure!\"*\r\n\r\nHelp the collector get at least **5** pieces of treasure.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:12.633+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_loops_challenge2_2021\\\"\"],\"cloned_from\":\"courseC_collector_loops_challenge2_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:12.633+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_loops_challenge2_2021\\\"\"],\"cloned_from\":\"courseC_collector_loops_challenge2_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

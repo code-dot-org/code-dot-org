@@ -17,7 +17,7 @@
       =partial("language", :host=>request.host)
     %div{:style=>"clear:both; float: left;"}
       %small.dim
-        = hoc_s(:footer_copyright_message).gsub(/%{current_year}/, "#{Time.now.year}")
+        = hoc_s(:footer_copyright_message, locals: {current_year: "#{Time.now.year}"})
         = hoc_s(:footer_trademark_message)
         %br
         = hoc_s(:footer_built_on_github)

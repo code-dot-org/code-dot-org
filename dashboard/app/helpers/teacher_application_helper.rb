@@ -10,6 +10,10 @@ module TeacherApplicationHelper
   end
 
   def has_incomplete_application?
-    current_application && current_application.status == 'incomplete'
+    !!current_application && current_application.status == 'incomplete'
+  end
+
+  def has_reopened_application?
+    !!current_application && current_application.status == 'reopened'
   end
 end

@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ga:
   errors:
     messages:
@@ -1019,7 +1025,7 @@ ga:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Eile:"
+        other: "Eile"
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1029,7 +1035,7 @@ ga:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Eile:"
+        other: "Eile"
       workshop_course:
         csf_af: 'Buntús na Ríomheolaíochta (Cúrsaí A-F)'
         csf_express: 'Buntús na Ríomheolaíochta (Réamh-luathchúrsa nó luathchúrsa)'
@@ -1074,3 +1080,4 @@ ga:
     text: "**An tuismitheoir nó caomhnóir thú?** Ceangail do sheoladh r-phoist leis an gcuntas seo chun fanacht cothrom le dáta le dul chun cinn do pháiste!"
     link_your_email: "Ceangail do sheoladh r-phoist"
     not_now: "Ná ceangail anois"
+  teacher_feedback: "Aiseolas ó Mhúinteoirí"

@@ -2,6 +2,22 @@
 et:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': keskmine
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': keskmine
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -781,6 +797,11 @@ et:
             '"while"': tingimusel
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_everyInterval:
+        text: 'iga {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': sekundit
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -864,6 +885,12 @@ et:
             '90': alla
             '180': vasakule
             '270': üles
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': keskmine
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -938,6 +965,14 @@ et:
             '"scale"': suurus
             '"width"': laius
             '"height"': kõrgus
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': aeglane
+            '5': tavaline
+            '7': kiire
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

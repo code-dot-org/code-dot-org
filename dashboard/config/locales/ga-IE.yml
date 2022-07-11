@@ -1291,7 +1291,7 @@ ga:
         lightbot: Lightbot
         scratch: Scratch
         tynker: Tynker
-        other: 'Eile:'
+        other: Eile
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1301,7 +1301,7 @@ ga:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Eile:'
+        other: Eile
       workshop_course:
         csf_af: Buntús na Ríomheolaíochta (Cúrsaí A-F)
         csf_express: Buntús na Ríomheolaíochta (Réamh-luathchúrsa nó luathchúrsa)
@@ -1371,3 +1371,4 @@ ga:
       an gcuntas seo chun fanacht cothrom le dáta le dul chun cinn do pháiste!"
     link_your_email: Ceangail do sheoladh r-phoist
     not_now: Ná ceangail anois
+  teacher_feedback: Aiseolas ó Mhúinteoirí

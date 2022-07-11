@@ -2,6 +2,26 @@
 en:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
+      BadGuys_setSizeAll_dropdown:
+        text: set all sprites size to [SIZE][0]
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': medium
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        text: set [SPRITE][0] size to [SIZE][1]
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': medium
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "[GROUP][0] alternate every [N][1] measures \nbetween [MOVE1][2] and [MOVE2][3]"
         options:
@@ -377,6 +397,8 @@ en:
             '"right"': right column
             '"x"': criss-cross
             '"plus"': plus
+            '"spiral"': spiral
+            '"infinity"': infinite line
             '"random"': random
       Dancelab_makeAnonymousDanceSprite:
         text: make a new [COSTUME][0] at [LOCATION][1]
@@ -459,6 +481,26 @@ en:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': aliens
             '"BEAR"': bears
@@ -486,6 +528,8 @@ en:
             '"right"': right column
             '"x"': criss-cross
             '"plus"': plus
+            '"spiral"': spiral
+            '"infinity"': infinite line
             '"random"': random
       Dancelab_mixColors:
         text: mix [COLOR1][0] and [COLOR2][1]
@@ -553,6 +597,7 @@ en:
             '"fireworks"': Fireworks
             '"flowers"': Flowers
             '"growing_stars"': Growing Stars
+            '"higher_power"': Higher Power
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoscope
             '"lasers"': Laser Dance Floor
@@ -1021,6 +1066,8 @@ en:
             '"y"': y position
             '"direction"': movement direction
             '"speed"': speed
+      gamelab_changeVarBy:
+        text: change [VARIABLE][0] by [VAL][1]
       gamelab_checkTouching:
         text: "[CONDITION][0] [SPRITE1][1] touches [SPRITE2][2]"
         options:
@@ -1031,6 +1078,21 @@ en:
         text: when [SPRITE][0] clicked
       gamelab_clickedSpritePointer:
         text: "[SPRITE][0]"
+      gamelab_collectibleBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): spinning right
+            new Behavior(spinning_left, []): spinning left
+            new Behavior(fluttering, []): fluttering
+            new Behavior(jittering, []): jittering
+            new Behavior(wobbling, []): wobbling
+            new Behavior(wandering, []): wandering
+            new Behavior(patrolling, []): patrolling
+            new Behavior(moving_west_and_looping, []): moving west and looping
+            new Behavior(moving_east_and_looping, []): moving east and looping
+            new Behavior(moving_north_and_looping, []): moving north and looping
+            new Behavior(moving_south_and_looping, []): moving south and looping
       gamelab_comment:
         text: 'comment: [COMMENT][0]'
       gamelab_costumeImage:
@@ -1047,6 +1109,12 @@ en:
         text: draw line [COLOR][0]  [LOC1][1]  [LOC2][2]
       gamelab_edgesDisplace:
         text: edges block [SPRITE][0] from moving
+      gamelab_everyInterval:
+        text: 'repeat every [N][0] [UNIT][1] '
+        options:
+          UNIT:
+            '"seconds"': seconds
+            '"frames"': frames
       gamelab_followingTargets:
         text: following targets
       gamelab_getAllSprites:
@@ -1082,6 +1150,20 @@ en:
         text: |-
           if [NUM][0] =[VAL][1]
           [STATEMENT][2]
+      gamelab_int10:
+        text: "[VALUE][0]"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "[SPRITE][0] costume is [COSTUME][1]"
       gamelab_isKeyPressed:
@@ -1163,6 +1245,8 @@ en:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutGrid:
+        text: layout sprites as a grid
       gamelab_locationAt:
         text: 'location x: [X][0] y: [Y][1]'
       gamelab_locationModifier:
@@ -1199,6 +1283,13 @@ en:
             '90': down
             '180': left
             '270': up
+      gamelab_makeSpritesWithSize:
+        text: make [NUM][0] new [SIZE][1] [COSTUME][2] sprites
+        options:
+          SIZE:
+            '30': small
+            '50': medium
+            '100': large
       gamelab_mirrorSprite:
         text: "[SPRITE][0] face [DIRECTION][1]"
         options:
@@ -1271,6 +1362,13 @@ en:
             "'sound://category_digital/jump_7.mp3'": jump
       gamelab_playSpeech:
         text: play speech [SOUND][0]
+      gamelab_playerBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): moving with arrow keys
+            new Behavior(driving_with_arrow_keys, []): driving with arrow keys
+            draggable(): being draggable
       gamelab_pointInDirection:
         text: point [SPRITE][0] [DIRECTION][1]
         options:
@@ -1295,6 +1393,8 @@ en:
         text: remove color from [THIS][0]
       gamelab_repeatForever:
         text: repeat forever
+      gamelab_resetTimer:
+        text: reset timer
       gamelab_setAnimation:
         text: change [THIS][0] costume to [ANIMATION][1]
       gamelab_setBackground:
@@ -1374,6 +1474,15 @@ en:
             '"scale"': size
             '"width"': width
             '"height"': height
+      gamelab_setSpeed_dropdown:
+        text: set [SPRITE][0] speed to [SIZE][1]
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': normal
+            '7': fast
+            '9': extra fast
       gamelab_setTint:
         text: change color of [THIS][0] to [COLOR][1]
       gamelab_setupScoreboard:
@@ -1397,6 +1506,46 @@ en:
         text: "[SPRITE][0] say [SPEECH][1]"
       gamelab_spriteSayTime:
         text: "[SPRITE][0]say[TEXT1][1]for[NUM][2]seconds"
+      gamelab_spriteThink:
+        text: "[SPRITE][0] think [SPEECH][1]"
+      gamelab_spriteThinkTime:
+        text: "[SPRITE][0]think[TEXT1][1]for[NUM][2]seconds"
+      gamelab_spriteThink_fables1:
+        text: "[SPRITE][0] think [THOUGHT][1]"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I am hungry, too."': I am hungry, too.
+            '"I only want the biggest goat."': I only want the biggest goat.
+            '"I''m a green troll."': I'm a green troll.
+            '"No one will cross my bridge."': No one will cross my bridge.
+      gamelab_spriteThink_fables2:
+        text: "[SPRITE][0] think [THOUGHT][1]"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"Time to make friends with the sheep."': Time to make friends with the sheep.
+            '"She''ll never recognize me now."': She'll never recognize me now.
+            '"This costume keeps me warm."': This costume keeps me warm.
+            '"I am actually a wolf."': I am actually a wolf.
+      gamelab_spriteThink_fables3:
+        text: "[SPRITE][0] think [THOUGHT][1]"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m feeling sleepy."': I'm feeling sleepy.
+            '"No one could ever beat me."': No one could ever beat me.
+            '"I''ve done this race before."': I've done this race before.
+            '"My feet are bigger than Turtle''s feet."': My feet are bigger than Turtle's feet.
+      gamelab_spriteThink_fables4:
+        text: "[SPRITE][0] think [THOUGHT][1]"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m so hungry."': I'm so hungry.
+            '"I''m a visitor in this town."': I'm a visitor in this town.
+            '"If we share, we''ll all have something to eat. "': If we share, we'll all have something to eat.
+            '"I''ll trick everyone into giving me their food."': I'll trick everyone into giving me their food.
       gamelab_startAvoiding:
         text: "[SPRITE][0] begins avoiding [TARGET][1]"
       gamelab_startFollowing:

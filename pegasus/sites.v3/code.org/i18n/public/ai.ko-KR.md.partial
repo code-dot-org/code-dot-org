@@ -52,7 +52,7 @@ AI와 기계 학습은 온 세상에 영향을 미쳐 우리가 사는 방식과
 <p>AI 및 기계 학습 모듈은 <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >표준 모듈</a>로서 또는 <a href="https://studio.code.org/s/csd7-2021">CS 발견의 단원</a>에서 선택적으로 가르칠 수 있는 5주 정도 되는 커리큘럼 모듈입니다. AI 윤리에 초점을 맞추고 편향 문제를 분석하며 기초 개념을 탐구하고 설명합니다.</p><p>기계 학습은 대규모 데이터 집합에 의존하기 때문에 새 단원에는 의료, 인구 통계 등에 대한 실제 데이터 집합이 포함되어 있으며, 이는 학생들의 참여를 유도하는 동시에 “기계 학습이 해결에 도움을 줄 수 있는 문제는 무엇인가?” 같은 질문을 탐구하게 합니다. “AI가 어떻게 사회를 돕지?” “AI로 누가 혜택을 받지?” “누가 피해를 보지?” “누가 연관되어 있지?” “누가 제외되어 있지?”  </p>
 <p>윤리적으로 고려할 부분은 이러한 토론들의 화두가 되며, 이 기술들의 영향에 대한 논점이자 수업으로 자주 등장할 것입니다. 학생들은 이를 통해 이 기술들이 작동하는 원리에 대한 기술적 토대를 배우면서 이러한 기술들을 총체적이고 사려 깊게 이해하게 됩니다.</p>
 </div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>모듈 살펴보기</button></a></div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="clear"></div>
 </div>
 

@@ -1,6 +1,22 @@
 fa:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': متوسط
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': متوسط
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           MOVE1:
@@ -216,6 +232,10 @@ fa:
           CONDITION:
             '"when"': وقتی
             '"while"': '"while"'
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': ثانیه
       gamelab_getProp:
         options:
           PROPERTY:
@@ -253,6 +273,12 @@ fa:
             '90': پایین
             '180': سمت چپ
             '270': بالا
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': متوسط
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -310,6 +336,14 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': normal
+            '7': سریع
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

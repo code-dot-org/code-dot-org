@@ -27,7 +27,6 @@ class XhrProxyController < ApplicationController
 
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
-    apex.oracle.com
     api.amadeus.com
     api.blizzard.com
     api.census.gov
@@ -41,6 +40,7 @@ class XhrProxyController < ApplicationController
     api.github.com
     api.mathjs.org
     api.mojang.com
+    api.nal.usda.gov
     api.nasa.gov
     api.nookipedia.com
     api.opencagedata.com
@@ -52,6 +52,7 @@ class XhrProxyController < ApplicationController
     api.randomuser.me
     api.rebrandly.com
     api.scryfall.com
+    api.spoonacular.com
     api.si.edu
     api.spacexdata.com
     api.spotify.com
@@ -60,11 +61,14 @@ class XhrProxyController < ApplicationController
     api.uclassify.com
     api.waqi.info
     api.weather.gov
+    api.wolframalpha.com
     api.zippopotam.us
     bible-api.com
+    ch.tetr.io
     code.org
     covidtracking.com
     cryptonator.com
+    currencyapi.com
     data.austintexas.gov
     data.cityofchicago.org
     data.gv.at
@@ -74,10 +78,8 @@ class XhrProxyController < ApplicationController
     deckofcardsapi.com
     distanza.org
     dweet.io
-    enclout.com
     googleapis.com
     grobchess.com
-    herokuapp.com
     hubblesite.org
     images-api.nasa.gov
     itunes.apple.com
@@ -86,13 +88,15 @@ class XhrProxyController < ApplicationController
     lakeside-cs.org
     maker.ifttt.com
     myschoolapp.com
+    native-land.ca
     newsapi.org
     noaa.gov
     numbersapi.com
+    open.mapquestapi.com
     opentdb.com
-    pastebin.com
     pixabay.com
     pokeapi.co
+    pro-api.coinmarketcap.com
     qrng.anu.edu.au
     quandl.com
     random.org
@@ -101,7 +105,6 @@ class XhrProxyController < ApplicationController
     roblox.com
     runescape.com
     sessionserver.mojang.com
-    spreadsheets.google.com
     stats.minecraftservers.org
     swapi.dev
     textures.minecraft.net
@@ -113,6 +116,7 @@ class XhrProxyController < ApplicationController
     wikipedia.org
     worldclockapi.com
     worldtimeapi.org
+    xeno-canto.org
   ).freeze
 
   # How long the content is allowed to be cached

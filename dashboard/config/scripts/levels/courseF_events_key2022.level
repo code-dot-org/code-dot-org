@@ -76,11 +76,16 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Make the sprite's size, position, or rotation change when the user presses a key. ",
     "instructions_icon": "star",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:50.079+00:00\",\"changed\":[\"cloned from \\\"courseF_events_key\\\"\"],\"cloned_from\":\"courseF_events_key\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:50.079+00:00\",\"changed\":[\"cloned from \\\"courseF_events_key\\\"\"],\"cloned_from\":\"courseF_events_key\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "events": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

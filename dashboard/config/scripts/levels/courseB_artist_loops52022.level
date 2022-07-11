@@ -48,11 +48,17 @@
     "encrypted": "false",
     "long_instructions": "Time to fix the stairs!  Repeat this pattern **5** times so the artist can reach the top of the bushes.",
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:53.602+00:00\",\"changed\":[\"cloned from \\\"courseB_artist_loops5_2021\\\"\"],\"cloned_from\":\"courseB_artist_loops5_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:53.602+00:00\",\"changed\":[\"cloned from \\\"courseB_artist_loops5_2021\\\"\"],\"cloned_from\":\"courseB_artist_loops5_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 2,
+    "debugging": 2,
+    "repeat_loops": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

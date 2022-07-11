@@ -8,15 +8,22 @@ noindex: true
 # Training Materials
 
 ## Table of Contents
-- [Recruitment and Teacher Application Webinars](#recruitment)
-- [2019 Onboarding Webinars](#onboarding)
-- [Virtual Trainings](#virtual)
-- [Regional Partner Summit - Feb 2019](#feb19)
 
-________________
+- [Digital Digests](#digest)
+- [2020 Recruitment & Teacher Application Webinars](#recruitment)
+- [2019 Onboarding Webinars](#onboarding)
+
+
+<a id="digest"></a>
+<br/>
+## Summit Digital Digests
+
+- Fall 2021 [Virtual Regional Partner Summit](bit.ly/VirtualRPSummit2021)
+- Spring 2021 [RP Community Forum](http://bit.ly/RPSpringForum)
+
 <a id="recruitment"></a>
 <br/>
-## Recruitment and Teacher Application Webinars
+## 2020 Recruitment & Teacher Application Webinars
 Code.org offered a series of 3 webinars surrounding the Teacher Application Process, Teacher Application Dashboard, and Recruitment Resources for 2020/21 recruitment. The webinars go over existing and new materials for recruitment and teacher applications. Partners also shared best practices throughout the webinars. These are useful for all partners.
 
 Teacher Application Process Webinar:
@@ -79,40 +86,6 @@ An overview and discussion of the strategies partners are using to work towards 
 - [Recording](https://code.zoom.us/recording/share/xjfuWuyIFb9jQqhcInksdGMKrVgKL-fIwSwfE3M6AS0)
 - [Slides](https://drive.google.com/open?id=1x2VY8aKtOD8TgwGdYehrxxam_rjN6DKB)
 
-
-<a id="virtual"></a>
-<br/>
-## Virtual Trainings
-
-May 2020
-
-- May 07 Post Facilitator Summit Workshops Round-Up [Recording](https://code.zoom.us/rec/play/6MF4frz8qj43G9fA4gSDAvJ_W9TuLPms0XIe8vdZn0rjVSFRZlv0b-ESalGX8n4TsW0bXU8WSZuOxC0?continueMode=true&_x_zm_rtaid=DqD537qsR_ixsfhWIim2Iw.1588886217306.52006ef8aeb074996d1769e6316b0ca5&_x_zm_rhtaid=437))
-- May 07 Post Facilitator Summit Workshops Round-Up ([Slides](https://docs.google.com/presentation/d/19J1ms87_i1_fA5N4ncB8_hbjDMCXninj8Z29UL_UYJ8/edit?usp=sharing))
-- Recoring Password: 7j&$.Q6b
-
-May 2019
-
-- May 22 Scheduling Academic Year Workshops Webinar ([Recording](https://code.zoom.us/recording/share/bbZsr-nLbIF44hXnJqUkp943EOeupoWwxphZksUwh7qwIumekTziMw))
-
-January 2019
-
-- January 9 Facilitator Application Tools Webinar ([Recording](https://code.zoom.us/recording/play/2n-IjhW8o7xCjYAGXY2BpMOx38v0SCA3bsd7tIc1AgLuvc1uNSr4nGNiZbitNcTI?startTime=1547064114000), [Slides](https://docs.google.com/presentation/d/1Bpsx8s3gP-ZUPi_DX-POoYRqT0V0tm8FAb772TJ7bTg/edit#slide=id.g14d6c3396a_0_0))
-- January 11 Facilitator Application Tools Webinar ([Recording](https://code.zoom.us/recording/share/_CtI7t0LlClt0aGOGRdMwyaFpnK_QhTvR7Cn0NzQ9MY), [Slides](https://docs.google.com/presentation/d/1Bpsx8s3gP-ZUPi_DX-POoYRqT0V0tm8FAb772TJ7bTg/edit#slide=id.g14d6c3396a_0_0))
-- January 23 Facilitator Interview Preparation ([Recording](https://code.zoom.us/recording/play/_kbC3EU3s8sHFBPeessecWvewQcZLofgK0dFZXzOFL2BU8SYM-gorH_WBj6vuXQ-?startTime=1548267193000))
-
-<br/>
-</p>
-</details>
-
-[**Back to the top**](#top)
-<br/>
-
-________________
-<a id="feb19"></a>
-<br/>
-
-## Regional Partner Summit (February 2019)
-- [Regional Partner Summit Digest](https://bit.ly/addisondigest)
 
 [**Back to the top**](#top)
 <br/>

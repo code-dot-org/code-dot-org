@@ -12,7 +12,7 @@ Scenario: Version warning announcement on course and script overview pages
 
   # students must be assigned or have progress to view older unit versions
 
-  Given I am assigned to unit "ui-test-script-in-course-2017"
+  Given I am assigned to course "ui-test-course-2017" and unit "ui-test-script-in-course-2017"
   When I am on "http://studio.code.org/courses/ui-test-course-2019"
   And I wait to see ".uitest-CourseScript"
   And element "#uitest-version-selector" is visible

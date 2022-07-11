@@ -18,7 +18,11 @@ import javalab, {
   setDisableFinishButton,
   setIsTesting,
   openPhotoPrompter,
-  closePhotoPrompter
+  closePhotoPrompter,
+  setBackpackEnabled,
+  appendMarkdownLog,
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview
 } from './javalabRedux';
 import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -84,6 +88,8 @@ Javalab.prototype.init = function(config) {
   // Sets display theme based on displayTheme user preference
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
   this.isStartMode = !!config.level.editBlocks;
+  this.isEditingExemplar = !!config.level.isEditingExemplar;
+  this.isViewingExemplar = !!config.level.isViewingExemplar;
   config.makeYourOwn = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
@@ -190,6 +196,7 @@ Javalab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel,
     isEditingStartSources: this.isStartMode,
     isCodeReviewing: !!config.isCodeReviewing,
+    isViewingOwnProject: !!config.isViewingOwnProject,
     isResponsive: true,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted
@@ -205,15 +212,31 @@ Javalab.prototype.init = function(config) {
       validation: getValidation(getStore().getState())
     }));
   }
+  if (this.isEditingExemplar) {
+    showLevelBuilderSaveButton(
+      () => ({
+        exemplar_sources: getSources(getStore().getState())
+      }),
+      'Levelbuilder: edit exemplar',
+      `/levels/${
+        getStore().getState().pageConstants.serverLevelId
+      }/update_exemplar_code`
+    );
+  }
 
   const startSources = config.level.lastAttempt || config.level.startSources;
   const validation = config.level.validation || {};
-  // if startSources exists and contains at least one key, use startSources
-  if (
+  if (config.level.exemplarSources) {
+    // If we have exemplar sources (either for editing or viewing), set initial sources
+    // with the exemplar code saved to the level definition.
+    getStore().dispatch(setAllSources(config.level.exemplarSources));
+  } else if (
     startSources &&
     typeof startSources === 'object' &&
     Object.keys(startSources).length > 0
   ) {
+    // Otherwise, if startSources exists and contains at least one key, use startSources.
+
     if (config.level.editBlocks) {
       Object.keys(startSources).forEach(key => {
         startSources[key].isValidation = false;
@@ -249,12 +272,22 @@ Javalab.prototype.init = function(config) {
   getStore().dispatch(setIsStartMode(this.isStartMode));
   getStore().dispatch(setLevelName(this.level.name));
 
+  // For javalab, we don't use pageConstants.isReadOnlyWorkspace because
+  // the readOnly state can change when a code review is opened or closed
+  getStore().dispatch(setIsReadOnlyWorkspace(!!config.readonlyWorkspace));
+  getStore().dispatch(setHasOpenCodeReview(!!config.hasOpenCodeReview));
+
   // Dispatches a redux update of display theme
   getStore().dispatch(setDisplayTheme(this.displayTheme));
 
-  getStore().dispatch(
-    setBackpackApi(new BackpackClientApi(config.backpackChannel))
-  );
+  const backpackEnabled = !!config.backpackEnabled;
+  getStore().dispatch(setBackpackEnabled(backpackEnabled));
+
+  if (backpackEnabled) {
+    getStore().dispatch(
+      setBackpackApi(new BackpackClientApi(config.backpackChannel))
+    );
+  }
 
   getStore().dispatch(
     setDisableFinishButton(
@@ -267,7 +300,10 @@ Javalab.prototype.init = function(config) {
     )
   );
 
-  fetch('/project_versions/get_token', {
+  // Used for some post requests made in Javalab, namely
+  // when providing overrideSources or commiting code.
+  // Code review manages a csrf token separately.
+  fetch('/project_commits/get_token', {
     method: 'GET'
   }).then(response => (this.csrf_token = response.headers.get('csrf-token')));
 
@@ -337,6 +373,7 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
     options.useNeighborhood = true;
   }
+
   this.javabuilderConnection = new JavabuilderConnection(
     this.level.javabuilderUrl,
     this.onOutputMessage,
@@ -347,11 +384,34 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     this.setIsRunning,
     this.setIsTesting,
     executionType,
-    this.level.csaViewMode
+    this.level.csaViewMode,
+    getStore().getState().currentUser,
+    this.onMarkdownMessage,
+    this.csrf_token,
+    () => this.onValidationPassed(this.studioApp_),
+    () => this.onValidationFailed(this.studioApp_)
   );
-  project.autosave(() => {
-    this.javabuilderConnection.connectJavabuilder();
-  });
+
+  let connectToJavabuilder;
+  if (this.isEditingExemplar || this.isViewingExemplar) {
+    const overrideSources = getSources(getStore().getState());
+    connectToJavabuilder = () =>
+      this.javabuilderConnection.connectJavabuilderWithOverrideSources(
+        overrideSources
+      );
+  } else if (this.isStartMode && executionType === ExecutionType.TEST) {
+    // we only need to override validation if we are in start mode and running tests.
+    const overrideValidation = getValidation(getStore().getState());
+    connectToJavabuilder = () =>
+      this.javabuilderConnection.connectJavabuilderWithOverrideValidation(
+        overrideValidation
+      );
+  } else {
+    connectToJavabuilder = () =>
+      this.javabuilderConnection.connectJavabuilder();
+  }
+
+  project.autosave(connectToJavabuilder);
   postContainedLevelAttempt(this.studioApp_);
 };
 
@@ -415,7 +475,7 @@ Javalab.prototype.afterClearPuzzle = function() {
 
 Javalab.prototype.onCommitCode = function(commitNotes, onSuccessCallback) {
   project.save(true).then(result => {
-    fetch('/project_versions', {
+    fetch('/project_commits', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -457,6 +517,34 @@ Javalab.prototype.closePhotoPrompter = function() {
 Javalab.prototype.onPhotoPrompterFileSelected = function(photo) {
   // Only pass the selected photo to the mini-app if it supports the photo prompter
   this.miniApp?.onPhotoPrompterFileSelected?.(photo);
+};
+
+Javalab.prototype.onMarkdownMessage = function(message) {
+  getStore().dispatch(appendMarkdownLog(message));
+};
+
+Javalab.prototype.onValidationPassed = function(studioApp) {
+  studioApp.report({
+    app: 'javalab',
+    level: this.level.id,
+    result: true,
+    testResult: TestResults.ALL_PASS,
+    program: '',
+    submitted: getStore().getState().pageConstants.isSubmitted,
+    onComplete: () => {}
+  });
+};
+
+Javalab.prototype.onValidationFailed = function(studioApp) {
+  studioApp.report({
+    app: 'javalab',
+    level: this.level.id,
+    result: false,
+    testResult: TestResults.APP_SPECIFIC_FAIL,
+    program: '',
+    submitted: getStore().getState().pageConstants.isSubmitted,
+    onComplete: () => {}
+  });
 };
 
 export default Javalab;

@@ -11,17 +11,11 @@
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd3"
-        ]
-      ],
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csd3-virtual",
-    "serialized_at": "2021-11-22 19:56:23 UTC",
+    "serialized_at": "2022-03-22 21:16:19 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -7366,13 +7360,28 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd3",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd3-virtual"
+      }
+    }
   ],
   "scripts_student_resources": [
 

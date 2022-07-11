@@ -39,11 +39,16 @@
     "encrypted": "false",
     "long_instructions": "Use the blocks in the toolbox to build your program. Get the Scrat to the acorn.",
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:08:41.538+00:00\",\"changed\":[\"cloned from \\\"courseC_maze_debugging9_2021\\\"\"],\"cloned_from\":\"courseC_maze_debugging9_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:08:41.538+00:00\",\"changed\":[\"cloned from \\\"courseC_maze_debugging9_2021\\\"\"],\"cloned_from\":\"courseC_maze_debugging9_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

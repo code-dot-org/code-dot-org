@@ -41,7 +41,7 @@
             {
               "type": "html",
               "name": "variable_testing",
-              "visible": false,
+              "visible": true,
               "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>userId = {userId}</li><li>course = {course} </li><li> pd = {pd} </li></p>"
             },
             {
@@ -50,7 +50,7 @@
               "html": "<p style='background-color: yellow; text-align:center'>-- End of testing panel -- </p>"
             }
           ],
-          "visible": false,
+          "visible": true,
           "title": " "
         },
         {

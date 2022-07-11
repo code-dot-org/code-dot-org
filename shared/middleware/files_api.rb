@@ -47,7 +47,7 @@ class FilesApi < Sinatra::Base
 
     # teachers can see abusive assets of their students
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
 
     teaches_student?(owner_user_id)
   end
@@ -55,15 +55,15 @@ class FilesApi < Sinatra::Base
   def codeprojects_can_view?(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
 
-    # Attempt to find active project in database. This will raise StorageApps::NotFound if
+    # Attempt to find active project in database. This will raise Projects::NotFound if
     # no active project exists, which is handled below.
-    StorageApps.new(owner_storage_id).get(encrypted_channel_id)
+    Projects.new(owner_storage_id).get(encrypted_channel_id)
 
-    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
     !get_user_sharing_disabled(owner_user_id)
 
   # Default to cannot view if there is an error
-  rescue StorageApps::NotFound, ArgumentError, OpenSSL::Cipher::CipherError
+  rescue Projects::NotFound, ArgumentError, OpenSSL::Cipher::CipherError
     false
   end
 
@@ -104,7 +104,7 @@ class FilesApi < Sinatra::Base
     return unless CDO.newrelic_logging
 
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
     event_details = {
       quota_type: quota_type,
       encrypted_channel_id: encrypted_channel_id,
@@ -169,8 +169,22 @@ class FilesApi < Sinatra::Base
   #
   # Read a file. Optionally get a specific version instead of the most recent.
   # Only from codeprojects.org domain
+  # Deprecated in favor of the URL below
   #
   get %r{/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id, filename|
+    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+
+    get_file('files', encrypted_channel_id, filename, true)
+  end
+
+  #
+  # GET /projects/<project-type>/<channel-id>/<filename>?version=<version-id>
+  #
+  # Read a file. Optionally get a specific version instead of the most recent.
+  # Only from codeprojects.org domain
+  #
+  get %r{/projects/([a-z]+)/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |project_type, encrypted_channel_id, filename|
+    not_found unless project_type == 'weblab'
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
 
     get_file('files', encrypted_channel_id, filename, true)
@@ -181,8 +195,22 @@ class FilesApi < Sinatra::Base
   #
   # Redirect to /<channel-id>/
   # Only from codeprojects.org domain
+  # Deprecated in favor of the URL below
   #
   get %r{/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id|
+    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+
+    redirect "#{request.path_info}/"
+  end
+
+  #
+  # GET /projects/<project-type>/<channel-id>
+  #
+  # Redirect to /projects/<project-type>/<channel-id>/
+  # Only from codeprojects.org domain
+  #
+  get %r{/projects/([a-z]+)/([^/]+)$}, {code_projects_domain: true} do |project_type, encrypted_channel_id|
+    not_found unless project_type == 'weblab'
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
 
     redirect "#{request.path_info}/"
@@ -193,8 +221,23 @@ class FilesApi < Sinatra::Base
   #
   # Serve index.html for this project.
   # Only from codeprojects.org domain
+  # Deprecated in favor of the URL below
   #
   get %r{/([^/]+)/$}, {code_projects_domain: true} do |encrypted_channel_id|
+    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+
+    get_file('files', encrypted_channel_id, 'index.html', true)
+  end
+
+  #
+  # GET /projects/<project-type>/<channel-id>/
+  #
+  # Serve index.html for this project.
+  # Only from codeprojects.org domain
+  # Currently only supported for weblab
+  #
+  get %r{/projects/([a-z]+)/([^/]+)/$}, {code_projects_domain: true} do |project_type, encrypted_channel_id|
+    not_found unless project_type == 'weblab'
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
 
     get_file('files', encrypted_channel_id, 'index.html', true)
@@ -312,7 +355,7 @@ class FilesApi < Sinatra::Base
   TEXT_HTML = 'text/html'.freeze
 
   def html?(headers)
-    headers[CONTENT_TYPE] && headers[CONTENT_TYPE].include?(TEXT_HTML)
+    headers[CONTENT_TYPE]&.include?(TEXT_HTML)
   end
 
   def html_file?(filename)
@@ -347,7 +390,7 @@ class FilesApi < Sinatra::Base
 
     # Only validate WebLab HTML files. We need to get the project from the database
     # in order to check whether or not the file belongs to a WebLab project.
-    project = StorageApps.new(get_storage_id).get(encrypted_channel_id)
+    project = Projects.new(get_storage_id).get(encrypted_channel_id)
     return false unless project
     return true unless project[:projectType]&.downcase == 'weblab'
 
@@ -368,14 +411,18 @@ class FilesApi < Sinatra::Base
 
   def put_file(endpoint, encrypted_channel_id, filename, body)
     not_authorized unless owns_channel?(encrypted_channel_id)
+    file_type = File.extname(filename)
+    buckets = get_bucket_impl(endpoint).new
+    if body.length >= max_file_size
+      body = buckets.try_resize_file(body, file_type)
+    end
+
     file_too_large(endpoint) unless body.length < max_file_size
 
-    buckets = get_bucket_impl(endpoint).new
     bad_request unless buckets.allowed_file_name? filename
 
     # verify that file type is in our allowlist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
-    file_type = File.extname(filename)
     unsupported_media_type unless buckets.allowed_file_type?(file_type)
     category = buckets.category_from_file_type(file_type)
 
@@ -388,7 +435,11 @@ class FilesApi < Sinatra::Base
     end
 
     # Block libraries with PII/profanity from being published.
-    if endpoint == 'libraries'
+    #
+    # Javalab's "backpack" feature uses libraries to allow students to share code
+    # between their own projects -- skip this check for .java files, since in this use case
+    # the files are only being used by a single user.
+    if endpoint == 'libraries' && file_type != '.java'
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
       rescue OpenURI::HTTPError => e
@@ -398,6 +449,19 @@ class FilesApi < Sinatra::Base
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
       # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
       return bad_request if share_failure && share_failure[:type] != "address"
+    end
+
+    # Don't allow project to be saved if it contains non-UTF-8 characters (causing error / project to not load when opened).
+    if 'sources' == endpoint
+      body_json = JSON.parse(body)
+      source = body_json["source"]
+      html = body_json["html"]
+
+      source_is_valid = source && has_valid_encoding?(source)
+      # HTML only exists for AppLab projects
+      html_is_valid = html ? source.force_encoding("UTF-8").valid_encoding? : true
+
+      return bad_request unless source_is_valid && html_is_valid
     end
 
     # Replacing a non-current version of main.json could lead to perceived data loss.
@@ -413,7 +477,7 @@ class FilesApi < Sinatra::Base
     tab_id = params['tabId']
     conflict unless buckets.check_current_version(encrypted_channel_id, filename, current_version, should_replace, timestamp, tab_id, current_user_id)
 
-    abuse_score = StorageApps.get_abuse(encrypted_channel_id)
+    abuse_score = Projects.get_abuse(encrypted_channel_id)
 
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace, abuse_score)
 
@@ -424,6 +488,26 @@ class FilesApi < Sinatra::Base
       versionId: response.version_id,
       timestamp: Time.now # for logging purposes
     }.to_json
+  end
+
+  def has_valid_encoding?(source)
+    if source.is_a?(String)
+      return source.force_encoding("UTF-8").valid_encoding?
+    end
+
+    # Handle Multi-file Projects, like Java Lab
+    if source.is_a?(Hash)
+      # Iterate over each file
+      source.each_key do |key|
+        # Multi-file source structure:
+        # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
+        return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?
+      end
+      return true
+    end
+
+    # If source is an unexpected type, return false to trigger a bad_request response
+    return false
   end
 
   #
@@ -716,7 +800,7 @@ class FilesApi < Sinatra::Base
 
     # write the manifest (assuming the entry changed)
     unless manifest_is_unchanged
-      abuse_score = StorageApps.get_abuse(encrypted_channel_id)
+      abuse_score = Projects.get_abuse(encrypted_channel_id)
 
       response = bucket.create_or_replace(
         encrypted_channel_id,
@@ -825,7 +909,7 @@ class FilesApi < Sinatra::Base
     reject_result = manifest.reject! {|e| e['filename'].downcase == manifest_delete_comparison_filename}
     not_found if reject_result.nil?
 
-    abuse_score = StorageApps.get_abuse(encrypted_channel_id)
+    abuse_score = Projects.get_abuse(encrypted_channel_id)
 
     # write the manifest
     response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest.to_json, params['files-version'], abuse_score)
@@ -872,7 +956,7 @@ class FilesApi < Sinatra::Base
       entry['versionId'] = response.version_id
     end
 
-    abuse_score = StorageApps.get_abuse(encrypted_channel_id)
+    abuse_score = Projects.get_abuse(encrypted_channel_id)
 
     # save the new manifest
     manifest_json = manifest.to_json
@@ -947,8 +1031,8 @@ class FilesApi < Sinatra::Base
     file = get_file('files', encrypted_channel_id, s3_prefix)
 
     if THUMBNAIL_FILENAME == filename
-      storage_apps = StorageApps.new(get_storage_id)
-      project_type = storage_apps.project_type_from_channel_id(encrypted_channel_id)
+      project = Projects.new(get_storage_id)
+      project_type = project.project_type_from_channel_id(encrypted_channel_id)
       if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)
         file_mime_type = mime_type(File.extname(filename.downcase))
         rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
@@ -956,7 +1040,7 @@ class FilesApi < Sinatra::Base
         case rating
         when :adult, :racy
           # Incrementing abuse score by 15 to differentiate from manually reported projects
-          new_score = storage_apps.increment_abuse(encrypted_channel_id, 15)
+          new_score = project.increment_abuse(encrypted_channel_id, 15)
           FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
           response.headers['x-cdo-content-rating'] = rating.to_s
           cache_for 1.hour
@@ -1011,7 +1095,7 @@ class FilesApi < Sinatra::Base
   end
 
   def moderate_channel?(encrypted_channel_id)
-    storage_apps = StorageApps.new(get_storage_id)
-    !storage_apps.content_moderation_disabled?(encrypted_channel_id)
+    project = Projects.new(get_storage_id)
+    !project.content_moderation_disabled?(encrypted_channel_id)
   end
 end

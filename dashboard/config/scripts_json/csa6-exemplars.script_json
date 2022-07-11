@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_migrated": true
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-12-03 00:19:37 UTC",
+    "family_name": "csa6-exemplars",
+    "serialized_at": "2022-04-08 15:41:12 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -611,6 +613,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L1 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -632,6 +637,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -653,6 +661,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L3 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -674,6 +685,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L1 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -695,6 +709,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -716,6 +733,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L3 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -737,6 +757,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L4 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -758,6 +781,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L5 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -779,6 +805,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L6 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -800,6 +829,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L1 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -821,6 +853,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -842,6 +877,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L3 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -863,6 +901,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L4 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -884,6 +925,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L5 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -905,6 +949,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L6 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -926,6 +973,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L7 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -947,6 +997,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L1 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -968,6 +1021,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -989,6 +1045,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L3 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1010,6 +1069,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L4 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1031,6 +1093,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L5 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1052,6 +1117,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L6 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1073,6 +1141,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L7 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1094,6 +1165,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L1 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1115,6 +1189,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1136,6 +1213,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L3 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1157,6 +1237,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L4 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1178,6 +1261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L1 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1199,6 +1285,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L2 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1220,6 +1309,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L3 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1241,6 +1333,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L4 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1262,6 +1357,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L5 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1283,6 +1381,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L6 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1304,6 +1405,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L7 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1325,6 +1429,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L1 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1346,6 +1453,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1367,6 +1477,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L3 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1388,6 +1501,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L4 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1409,6 +1525,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L5 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1430,6 +1549,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L6 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1451,6 +1573,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L7 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1472,6 +1597,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L8 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1493,6 +1621,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L1 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1514,6 +1645,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8_l2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1535,6 +1669,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L3 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1556,6 +1693,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L4 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1577,6 +1717,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L5 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1598,6 +1741,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L6 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1619,6 +1765,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L1 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1640,6 +1789,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1661,6 +1813,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L3 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1682,6 +1837,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L1 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1703,6 +1861,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L2 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1724,6 +1885,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L3 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1745,6 +1909,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L4 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1766,6 +1933,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L5 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1787,6 +1957,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L11-L1 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1808,6 +1981,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L12-L1 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1829,6 +2005,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L13-L1 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {

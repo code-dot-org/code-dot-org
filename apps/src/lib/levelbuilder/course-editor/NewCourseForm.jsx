@@ -7,6 +7,9 @@ import NewCourseFields from '../NewCourseFields';
 export default function NewCourseForm(props) {
   const [familyName, setFamilyName] = useState('');
   const [versionYear, setVersionYear] = useState('');
+  const [instructorAudience, setInstructorAudience] = useState('');
+  const [participantAudience, setParticipantAudience] = useState('');
+  const [instructionType, setInstructionType] = useState('');
 
   const getCourseName = () => {
     const name =
@@ -16,6 +19,26 @@ export default function NewCourseForm(props) {
     return name;
   };
 
+  const setFamilyAndCourseType = familyName => {
+    if (familyName === '') {
+      setParticipantAudience('');
+      setInstructorAudience('');
+      setInstructionType('');
+    } else {
+      setParticipantAudience(
+        props.familiesCourseTypes[familyName].participant_audience
+      );
+      setInstructorAudience(
+        props.familiesCourseTypes[familyName].instructor_audience
+      );
+      setInstructionType(
+        props.familiesCourseTypes[familyName].instruction_type
+      );
+    }
+
+    setFamilyName(familyName);
+  };
+
   return (
     <form action="/courses" method="post">
       <RailsAuthenticityToken />
@@ -23,12 +46,17 @@ export default function NewCourseForm(props) {
         families={props.families}
         versionYearOptions={props.versionYearOptions}
         familyName={familyName}
+        setFamilyAndCourseType={setFamilyAndCourseType}
         setFamilyName={setFamilyName}
         versionYear={versionYear}
         setVersionYear={setVersionYear}
+        instructionType={instructionType}
+        instructorAudience={instructorAudience}
+        participantAudience={participantAudience}
       />
       {familyName !== '' && versionYear !== '' && (
         <div>
+          <h2>Course Slug</h2>
           <label>
             The Course Slug for this course will be:
             <HelpTip>
@@ -46,6 +74,27 @@ export default function NewCourseForm(props) {
           </label>
           <input name="family_name" value={familyName} type="hidden" />
           <input name="version_year" value={versionYear} type="hidden" />
+          {instructionType !== '' && (
+            <input
+              name="instruction_type"
+              value={instructionType}
+              type="hidden"
+            />
+          )}
+          {instructorAudience !== '' && (
+            <input
+              name="instructor_audience"
+              value={instructorAudience}
+              type="hidden"
+            />
+          )}
+          {participantAudience !== '' && (
+            <input
+              name="participant_audience"
+              value={participantAudience}
+              type="hidden"
+            />
+          )}
           <br />
           <button
             className="btn btn-primary"
@@ -62,7 +111,8 @@ export default function NewCourseForm(props) {
 
 NewCourseForm.propTypes = {
   families: PropTypes.arrayOf(PropTypes.string).isRequired,
-  versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
+  versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
+  familiesCourseTypes: PropTypes.object.isRequired
 };
 
 const styles = {

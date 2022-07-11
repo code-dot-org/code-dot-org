@@ -2,6 +2,22 @@
 eu:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': ertaina
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': ertaina
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -490,6 +506,11 @@ eu:
         text: 'iruzkina: {COMMENT}'
       gamelab_destroy:
         text: ezabatu {THIS}
+      gamelab_everyInterval:
+        text: "{N} {UNIT} aldiro "
+        options:
+          UNIT:
+            '"seconds"': segundu
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -545,6 +566,12 @@ eu:
             '90': behera
             '180': ezkerrera
             '270': gora
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': ertaina
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -609,6 +636,14 @@ eu:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': arrunta
+            '7': fast
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

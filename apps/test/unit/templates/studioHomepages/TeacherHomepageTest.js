@@ -4,21 +4,25 @@ import sinon from 'sinon';
 import {assert} from 'chai';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
-import {courses, topCourse} from './homepagesTestData';
+import {courses, topCourse, plCourses, topPlCourse} from './homepagesTestData';
 
 const DEFAULT_PROPS = {
   announcements: [],
   censusQuestion: 'how_many_10_hours',
   courses,
   topCourse,
+  plCourses,
+  topPlCourse,
   isEnglish: true,
-  joinedSections: [],
+  joinedStudentSections: [],
+  joinedPlSections: [],
   ncesSchoolId: 'school-id',
   schoolYear: 2021,
   showCensusBanner: false,
   teacherId: 1,
   teacherEmail: 'teacher@code.org',
-  teacherName: 'Teacher'
+  teacherName: 'Teacher',
+  hasFeedback: false
 };
 
 const setUp = (overrideProps = {}) => {
@@ -35,7 +39,6 @@ describe('TeacherHomepage', () => {
   ];
   beforeEach(() => {
     server = sinon.fakeServer.create();
-    server.respondWith('POST', '/dashboardapi/courses', successResponse());
     server.respondWith('POST', '/dashboardapi/sections', successResponse());
   });
   afterEach(() => server.restore());
@@ -65,6 +68,14 @@ describe('TeacherHomepage', () => {
     assert.equal(
       wrapper.find('BorderedCallToAction').props().buttonText,
       'Finish Application'
+    );
+  });
+
+  it('renders a Return to Application call to action if showReturnToReopenedTeacherApplication is true', () => {
+    const wrapper = setUp({showReturnToReopenedTeacherApplication: true});
+    assert.equal(
+      wrapper.find('BorderedCallToAction').props().buttonText,
+      'Return to Application'
     );
   });
 
@@ -114,10 +125,32 @@ describe('TeacherHomepage', () => {
     assert(wrapper.containsMatchingElement(<TeacherSections />));
   });
 
-  it('renders a RecentCourses component', () => {
+  it('renders two RecentCourses component', () => {
     const wrapper = setUp();
     const recentCourses = wrapper.find('RecentCourses');
-    assert.deepEqual(recentCourses.props(), {
+    assert.equal(recentCourses.length, 2);
+    assert.deepEqual(recentCourses.at(0).props(), {
+      showAllCoursesLink: true,
+      isTeacher: true,
+      hasFeedback: false,
+      courses: courses,
+      topCourse: topCourse
+    });
+    assert.deepEqual(recentCourses.at(1).props(), {
+      showAllCoursesLink: true,
+      isTeacher: false,
+      hasFeedback: false,
+      isProfessionalLearningCourse: true,
+      courses: plCourses,
+      topCourse: topPlCourse
+    });
+  });
+
+  it('does not render PL recentCourse if no topPlCourse or plCourses', () => {
+    const wrapper = setUp({plCourses: [], topPlCourse: null});
+    const recentCourses = wrapper.find('RecentCourses');
+    assert.equal(recentCourses.length, 1);
+    assert.deepEqual(recentCourses.at(0).props(), {
       showAllCoursesLink: true,
       isTeacher: true,
       hasFeedback: false,
@@ -126,18 +159,87 @@ describe('TeacherHomepage', () => {
     });
   });
 
+  it('renders PL recentCourse if topPlCourse but no plCourses', () => {
+    const wrapper = setUp({plCourses: [], topPlCourse: topPlCourse});
+    const recentCourses = wrapper.find('RecentCourses');
+    assert.equal(recentCourses.length, 2);
+    assert.deepEqual(recentCourses.at(0).props(), {
+      showAllCoursesLink: true,
+      isTeacher: true,
+      hasFeedback: false,
+      courses: courses,
+      topCourse: topCourse
+    });
+    assert.deepEqual(recentCourses.at(1).props(), {
+      showAllCoursesLink: true,
+      isTeacher: false,
+      hasFeedback: false,
+      isProfessionalLearningCourse: true,
+      courses: [],
+      topCourse: topPlCourse
+    });
+  });
+
+  it('renders PL recentCourse if plCourses but no topPlCourse', () => {
+    const wrapper = setUp({plCourses: plCourses, topPlCourse: null});
+    const recentCourses = wrapper.find('RecentCourses');
+    assert.equal(recentCourses.length, 2);
+    assert.deepEqual(recentCourses.at(0).props(), {
+      showAllCoursesLink: true,
+      isTeacher: true,
+      hasFeedback: false,
+      courses: courses,
+      topCourse: topCourse
+    });
+    assert.deepEqual(recentCourses.at(1).props(), {
+      showAllCoursesLink: true,
+      isTeacher: false,
+      hasFeedback: false,
+      isProfessionalLearningCourse: true,
+      courses: plCourses,
+      topCourse: null
+    });
+  });
+
   it('renders a TeacherResources component', () => {
     const wrapper = setUp();
     assert(wrapper.find('TeacherResources').exists());
   });
 
-  it('renders a StudentSections component', () => {
+  it('renders a JoinSectionArea component', () => {
     const wrapper = setUp();
-    assert(wrapper.find('StudentSections').exists());
+    assert(wrapper.find('JoinSectionArea').exists());
   });
 
   it('renders ProjectWidgetWithData component', () => {
     const wrapper = setUp();
     assert(wrapper.find('ProjectWidgetWithData').exists());
+  });
+
+  it('renders a ParticipantFeedbackNotification component if has feedback and pl courses', () => {
+    const wrapper = setUp({
+      plCourses: plCourses,
+      topPlCourse: topPlCourse,
+      hasFeedback: true
+    });
+    assert.equal(wrapper.find('ParticipantFeedbackNotification').length, 1);
+  });
+
+  it('does not render a ParticipantFeedbackNotification component if there is no feedback', () => {
+    const wrapper = setUp({
+      plCourses: plCourses,
+      topPlCourse: topPlCourse,
+      hasFeedback: false
+    });
+    assert.equal(wrapper.find('ParticipantFeedbackNotification').length, 0);
+  });
+
+  it('does not render a ParticipantFeedbackNotification component if there are no PL courses', () => {
+    const wrapper = setUp({
+      plCourses: [],
+      topPlCourse: null,
+      hasFeedback: true
+    });
+    assert.equal(wrapper.find('ParticipantFeedbackNotification').length, 0);
   });
 });

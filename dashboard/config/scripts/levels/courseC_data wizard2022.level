@@ -61,11 +61,14 @@
     "background": "rainbow",
     "mini_rubric": "false",
     "encrypted": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:25.182+00:00\",\"changed\":[\"cloned from \\\"courseC_data wizard_2021\\\"\"],\"cloned_from\":\"courseC_data wizard_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:25.182+00:00\",\"changed\":[\"cloned from \\\"courseC_data wizard_2021\\\"\"],\"cloned_from\":\"courseC_data wizard_2021\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <initialization_blocks>

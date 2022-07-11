@@ -1,0 +1,14 @@
+{
+  "el-GR": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Αλγοριθμική Σκέψη"
+        },
+        "ccela/L": {
+          "description": "Γλώσσα"
+        }
+      }
+    }
+  }
+}

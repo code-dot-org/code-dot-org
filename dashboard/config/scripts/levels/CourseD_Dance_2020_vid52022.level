@@ -11,10 +11,13 @@
     "skip_sound": true,
     "parent_level_id": 21706,
     "name_suffix": "2022",
-    "encrypted": "false"
+    "encrypted": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:01.553+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_vid5_2021\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_vid5_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:01.553+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_vid5_2021\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_vid5_2021\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

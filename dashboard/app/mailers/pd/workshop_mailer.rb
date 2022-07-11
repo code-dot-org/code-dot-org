@@ -102,6 +102,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @enrollment = enrollment
     @workshop = enrollment.workshop
     @organizer = @workshop.organizer
+    @regional_partner_name = @workshop.regional_partner&.name
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @is_reminder = true
     @pre_workshop_survey_url = enrollment.pre_workshop_survey_url
@@ -154,14 +155,9 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def facilitator_post_workshop(user, workshop)
     @user = user
     @workshop = workshop
-    # TODO: After 9/5/2020 move all workshops to the new survey (9/5 is last 2020 Summer Workshop)
-    if @workshop.local_summer?
-      @survey_url = CDO.studio_url "/pd/misc_survey/facilitator_post", CDO.default_scheme
-    else
-      survey_params = "survey_data[workshop_course]=#{workshop.course}&survey_data[workshop_subject]=#{workshop.subject}"\
-                      "&survey_data[workshop_id]=#{workshop.id}"
-      @survey_url = CDO.studio_url "form/facilitator_post_survey?#{survey_params}", CDO.default_scheme
-    end
+    survey_params = "survey_data[workshop_course]=#{workshop.course}&survey_data[workshop_subject]=#{workshop.subject}"\
+                    "&survey_data[workshop_id]=#{workshop.id}"
+    @survey_url = CDO.studio_url "form/facilitator_post_survey?#{survey_params}", CDO.default_scheme
 
     @regional_partner_name = @workshop.regional_partner&.name
     @deadline = (Time.now + 10.days).strftime('%B %-d, %Y').strip
@@ -237,21 +233,6 @@ class Pd::WorkshopMailer < ActionMailer::Base
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def teacher_virtual_order_form_reminder(enrollment)
-    @enrollment = enrollment
-    @workshop = enrollment.workshop
-    course = @workshop.course
-
-    return unless @workshop.virtual? && @workshop.local_summer? && (course == Pd::Workshop::COURSE_CSP || course == Pd::Workshop::COURSE_CSD)
-
-    # Pre-workshop virtual order form reminder
-    mail content_type: 'text/html',
-      from: from_teacher,
-      subject: 'Tell Code.org where to send materials for your upcoming workshop!',
-      to: email_address(@enrollment.full_name, @enrollment.email),
-      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
-  end
-
   # Exit survey email
   # @param enrollment [Pd::Enrollment]
   def exit_survey(enrollment)
@@ -297,7 +278,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   private
 
   def save_timestamp
-    return unless @enrollment && @enrollment.persisted?
+    return unless @enrollment&.persisted?
     Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
   end
 

@@ -731,6 +731,11 @@ ca:
           CONDITION:
             '"when"': quan
             '"while"': mentres
+      gamelab_everyInterval:
+        text: 'cada {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': segons
       gamelab_getProp:
         options:
           PROPERTY:
@@ -829,6 +834,14 @@ ca:
             '"scale"': mida
             '"width"': amplada
             '"height"': alçcada
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': lent
+            '5': normal
+            '7': ràpid
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

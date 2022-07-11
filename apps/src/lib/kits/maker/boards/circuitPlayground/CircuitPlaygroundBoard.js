@@ -21,18 +21,28 @@ import {
 } from './PlaygroundConstants';
 import Led from './Led';
 import PlaygroundButton from './Button';
-import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
+import {
+  detectBoardTypeFromPort,
+  isWebSerialPort,
+  BOARD_TYPE
+} from '../../util/boardUtils';
 import {isChromeOS, serialPortType} from '../../util/browserChecks';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
 
-/** @const {number} serial port transfer rate */
-const SERIAL_BAUD = 57600;
-
-/** Maps the Circuit Playground Express pins to Circuit Playground Classic*/
-const pinMapping = {A0: 12, A1: 6, A2: 9, A3: 10, A4: 3, A5: 2, A6: 0, A7: 1};
+/** Maps the Circuit Playground Express pins to Circuit Playground Classic. */
+const pinMapping = {
+  A0: 12,
+  A1: 6,
+  A2: 9,
+  A3: 10,
+  A4: 3,
+  A5: 2,
+  A6: 0,
+  A7: 1
+};
 
 /**
  * Controller interface for an Adafruit Circuit Playground board using
@@ -49,7 +59,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     /** @private {SerialPort} serial port controller */
     this.serialPort_ = null;
-    this.logWithFirehose('serial-port-constructor-set-to-null');
 
     /** @private {five.Board} A johnny-five board controller */
     this.fiveBoard_ = null;
@@ -83,33 +92,46 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   connectToFirmware() {
     return new Promise((resolve, reject) => {
-      const name = this.port_ ? this.port_.comName : undefined;
-      const serialPort = CircuitPlaygroundBoard.openSerialPort(name);
-      const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
-        serialPort
-      );
-      const board = new five.Board({io: playground, repl: false, debug: false});
-      board.once('ready', () => {
-        this.serialPort_ = serialPort;
-        this.logWithFirehose(
-          'serial-port-set',
-          JSON.stringify({serialPort, name})
+      if (isWebSerialPort(this.port_)) {
+        const name = this.port_.productId;
+        CircuitPlaygroundBoard.openSerialPortWebSerial(this.port_).then(
+          port => {
+            this.initializePlaygroundAndBoard(port, name, resolve, reject);
+          }
         );
-
-        this.fiveBoard_ = board;
-        this.fiveBoard_.samplingInterval(100);
-        this.boardType_ = detectBoardTypeFromPort(this.port_);
-        if (this.boardType_ === BOARD_TYPE.EXPRESS) {
-          this.fiveBoard_.isExpressBoard = true;
-        }
-        if (experiments.isEnabled('detect-board')) {
-          this.detectFirmwareVersion(playground);
-        }
-        resolve();
-      });
-      board.on('error', reject);
-      playground.on('error', reject);
+      } else {
+        const name = this.port_ ? this.port_.comName : undefined;
+        const serialPort = CircuitPlaygroundBoard.openSerialPort(name);
+        this.initializePlaygroundAndBoard(serialPort, name, resolve, reject);
+      }
     });
+  }
+
+  initializePlaygroundAndBoard(serialPort, name, resolve, reject) {
+    const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
+      serialPort
+    );
+    const board = new five.Board({
+      io: playground,
+      repl: false,
+      debug: false
+    });
+    board.once('ready', () => {
+      this.serialPort_ = serialPort;
+
+      this.fiveBoard_ = board;
+      this.fiveBoard_.samplingInterval(100);
+      this.boardType_ = detectBoardTypeFromPort(this.port_);
+      if (this.boardType_ === BOARD_TYPE.EXPRESS) {
+        this.fiveBoard_.isExpressBoard = true;
+      }
+      if (experiments.isEnabled('detect-board')) {
+        this.detectFirmwareVersion(playground);
+      }
+      resolve();
+    });
+    board.on('error', reject);
+    playground.on('error', reject);
   }
 
   /**
@@ -176,14 +198,16 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   /**
-   * Disconnect and clean up the board controller and all components.
-   * @return {Promise}
+   * Reset dynamic components.
+   * In practical terms, this means that a blinking LED will stop flashing when the app is reset.
    */
-  destroy() {
+  resetDynamicComponents() {
     this.dynamicComponents_.forEach(component => {
       // For now, these are _always_ Leds.  Complain if they're not.
       if (component instanceof Led) {
-        component.stop();
+        // Make sure the LED is turned off.  This will also stop any ongoing activity such as
+        // timer-based blinking.
+        component.off();
       } else if (component instanceof five.Button) {
         // No special cleanup required for five.Button
       } else {
@@ -191,6 +215,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       }
     });
     this.dynamicComponents_.length = 0;
+  }
+
+  /**
+   * Disconnect and clean up the board controller and all components.
+   * @return {Promise}
+   */
+  destroy() {
+    this.resetDynamicComponents();
 
     if (this.prewiredComponents_) {
       cleanupCircuitPlaygroundComponents(
@@ -224,10 +256,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         // node serialport in the Code.org Maker App.
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           this.serialPort_.close();
-          this.logWithFirehose('serial-port-closed');
         }
         this.serialPort_ = null;
-        this.logWithFirehose('serial-port-cleared');
         resolve();
       }, 50);
     });
@@ -261,9 +291,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
      */
     if (this.serialPort_) {
       this.serialPort_.queue = [];
-      this.logWithFirehose('serial-port-queue-cleared');
-    } else {
-      this.logWithFirehose('serial-port-undefined');
     }
 
     if (this.prewiredComponents_) {
@@ -272,6 +299,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         false /* shouldDestroyComponents */
       );
     }
+
+    this.resetDynamicComponents();
   }
 
   /**
@@ -356,18 +385,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     return !!this.fiveBoard_;
   }
 
-  logWithFirehose(eventString, dataJson = null) {
-    firehoseClient.putRecord(
-      {
-        study: 'maker-serial-port',
-        study_group: 'serial-port-lifecycle',
-        event: eventString,
-        data_json: dataJson
-      },
-      {includeUserId: true}
-    );
-  }
-
   /**
    * Create a serial port controller and open the serial port immediately.
    * @param {string} portName
@@ -380,6 +397,24 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       baudRate: SERIAL_BAUD
     });
 
+    this.createPendingQueue(port);
+    return port;
+  }
+
+  /**
+   * Create a serial port controller and open the Web Serial port immediately.
+   * @param {Object} port
+   * @return {Promise<SerialPort>}
+   */
+  static openSerialPortWebSerial(port) {
+    return port.open().then(() => {
+      this.createPendingQueue(port);
+      return port;
+    });
+  }
+
+  // Creates a queue on the port to store pending buffers
+  static createPendingQueue(port) {
     if (!isChromeOS()) {
       port.queue = [];
       let sendPending = false;
@@ -413,8 +448,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
       port.write = (...args) => trySend(...args);
     }
-
-    return port;
   }
 
   /**

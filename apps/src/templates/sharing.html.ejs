@@ -11,8 +11,15 @@
     <div><%= options.appStrings.sharingText %></div>
   <% } %>
 
-  <div>
-    <input type="text" id="sharing-input" value=<%= options.shareLink %> readonly>
+  <div id="sharing-input-container">
+    <button id="sharing-dialog-copy-button" value=<%= options.shareLink %>>
+      <i class="fa fa-clipboard fa-lg"></i>
+        <%= msg.copyLinkToProject() %>
+    </button>
+    <% if (options.downloadReplayVideo) { %>
+      <!-- Mount point for DownloadReplayVideoButton component. -->
+      <span id="download-replay-video-container"></span>
+    <% } %>
   </div>
   <div class='social-buttons'>
     <% if (options.facebookUrl) { -%>
@@ -46,11 +53,7 @@
           <%= msg.publish() %>
       </button>
     <% } %>
-    <% if (options.downloadReplayVideo) { %>
-      <!-- Mount point for DownloadReplayVideoButton component. -->
-      <span id="download-replay-video-container"></span>
-    <% } %>
-    <button id="sharing-phone">
+   <button id="sharing-phone">
       <i class="fa fa-mobile fa-lg"></i>
       &nbsp;
       <%= msg.sendToPhone() %>

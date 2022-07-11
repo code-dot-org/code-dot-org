@@ -70,10 +70,6 @@ class HomeController < ApplicationController
     render 'home/index'
   end
 
-  def certificate_link_test
-    render 'certificate_link_test', formats: [:html]
-  end
-
   # This static page combines TOS and Privacy partials all in one page
   # for easy printing.
   def terms_and_privacy
@@ -82,9 +78,16 @@ class HomeController < ApplicationController
 
   private
 
+  # Determine where student should be redirected upon logging in:
+  # true (redirect to script overview page) - if the user is a student && can access the script
+  #   they were most recently assigned && they either have no recorded recent progress, their most
+  #   recent progress was in the most recently assigned script, or they were assigned the script
+  #   more recently than their last progress in another section.
+  # false (redirect to student homepage) - otherwise.
   def should_redirect_to_script_overview?
     current_user.student? &&
     current_user.can_access_most_recently_assigned_script? &&
+    current_user.most_recent_assigned_script_in_live_section? &&
     (
       !current_user.user_script_with_most_recent_progress ||
       current_user.most_recent_progress_in_recently_assigned_script? ||
@@ -100,8 +103,6 @@ class HomeController < ApplicationController
     view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
 
     @homepage_data = {}
-    @homepage_data[:valid_grades] = Section.valid_grades
-    @homepage_data[:lessonExtrasUnitIds] = Script.lesson_extras_script_ids
     @homepage_data[:isEnglish] = request.language == 'en'
     @homepage_data[:locale] = Script.locale_english_name_map[request.locale]
     @homepage_data[:localeCode] = request.locale
@@ -109,6 +110,9 @@ class HomeController < ApplicationController
     @homepage_data[:providers] = current_user.providers
     @homepage_data[:mapboxAccessToken] = CDO.mapbox_access_token
     @homepage_data[:currentUserId] = current_user.id
+
+    current_user_permissions = UserPermission.where(user_id: current_user.id).pluck(:permission)
+    @homepage_data[:showStudentAsVerifiedTeacherWarning] = current_user.student? && current_user_permissions.include?(UserPermission::AUTHORIZED_TEACHER)
 
     # DCDO Flag - show/hide Lock Section field - Can/Will be overwritten by DCDO.
     @homepage_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
@@ -123,11 +127,11 @@ class HomeController < ApplicationController
     # script, so we don't want to include that script (if it exists) in the
     # regular lists of recent scripts.
     exclude_primary_script = true
-    @homepage_data[:courses] = current_user.recent_courses_and_scripts(exclude_primary_script)
+    @homepage_data[:courses] = current_user.recent_student_courses_and_units(exclude_primary_script)
 
-    @homepage_data[:hasFeedback] = current_user.student? && TeacherFeedback.has_feedback?(current_user.id)
+    @homepage_data[:hasFeedback] = TeacherFeedback.has_feedback?(current_user.id)
 
-    script = Queries::ScriptActivity.primary_script(current_user)
+    script = Queries::ScriptActivity.primary_student_unit(current_user)
     if script
       script_level = current_user.next_unpassed_progression_level(script)
     end
@@ -142,6 +146,26 @@ class HomeController < ApplicationController
     end
 
     if current_user.teacher?
+      # Teachers will receive a topPlCourse for their primary
+      # unit, so we don't want to include that unit (if it exists) in the
+      # regular lists of recent units.
+      exclude_primary_script = true
+      @homepage_data[:plCourses] = current_user.recent_pl_courses_and_units(exclude_primary_script)
+
+      pl_unit = Queries::ScriptActivity.primary_pl_unit(current_user)
+      if pl_unit
+        pl_script_level = current_user.next_unpassed_progression_level(pl_unit)
+      end
+      @homepage_data[:topPlCourse] = nil
+      if pl_unit && pl_script_level
+        @homepage_data[:topPlCourse] = {
+          assignableName: data_t_suffix('script.name', pl_unit[:name], 'title'),
+          lessonName: pl_script_level.lesson.localized_title,
+          linkToOverview: script_path(pl_unit),
+          linkToLesson: script_next_path(pl_unit, 'next')
+        }
+      end
+
       unless current_user.donor_teacher_banner_dismissed
         donor_banner_name = current_user.school_donor_name
       end
@@ -157,15 +181,16 @@ class HomeController < ApplicationController
 
       @homepage_data[:isTeacher] = true
       @homepage_data[:hocLaunch] = DCDO.get('hoc_launch', CDO.default_hoc_launch)
-      @homepage_data[:joined_sections] = student_sections
+      @homepage_data[:joined_student_sections] = current_user&.sections_as_student_participant&.map(&:summarize_without_students)
+      @homepage_data[:joined_pl_sections] = current_user&.sections_as_pl_participant&.map(&:summarize_without_students)
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)
-      @homepage_data[:hiddenScripts] = current_user.get_hidden_script_ids
+      @homepage_data[:hiddenScripts] = current_user.get_hidden_unit_ids
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
       @homepage_data[:showFinishTeacherApplication] = has_incomplete_application?
+      @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
-      @homepage_data[:textToSpeechUnitIds] = Script.text_to_speech_unit_ids
 
       if show_census_banner
         teachers_school = current_user.school_info.school

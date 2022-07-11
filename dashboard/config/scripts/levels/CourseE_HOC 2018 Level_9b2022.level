@@ -50,11 +50,18 @@
     "long_instructions": "You made it to the reef, now search for the **Heart of the Sea** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Use the blue and red coral to reach the treasure **chest** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\r\n\r\n",
     "ideal": "9",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:16.113+00:00\",\"changed\":[\"cloned from \\\"CourseE_HOC 2018 Level_9b_2021\\\"\"],\"cloned_from\":\"CourseE_HOC 2018 Level_9b_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:16.113+00:00\",\"changed\":[\"cloned from \\\"CourseE_HOC 2018 Level_9b_2021\\\"\"],\"cloned_from\":\"CourseE_HOC 2018 Level_9b_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_loops": 5,
+    "repeat_until_while": 4,
+    "conditionals": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

@@ -5,6 +5,7 @@ hu:
       Advanced: Haladó
       Behaviors: Viselkedések
       Brushes: Ecsetek
+      Category: Kategória
       Color: Szín
       Comment: Megjegyzés
       Comments: Megjegyzések
@@ -18,14 +19,14 @@ hu:
       Games/Score: Játékok/pontszám
       Groups: Csoportok
       Input: Bemenet
-      Location: Helyszín
+      Location: Pozíció
       Locations: Helyek
       Logic: Logika
       Loops: hurkok
       Math: Matematika
       Numbers: Számok
       Properties: Tulajdonságok
-      Sprites: manók
+      Sprites: sprite-ok
       Text: szöveg
       Variables: változók
       'Variables ': 'Változók '

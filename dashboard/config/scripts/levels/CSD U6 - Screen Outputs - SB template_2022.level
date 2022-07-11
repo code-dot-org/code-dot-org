@@ -6,7 +6,7 @@
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "// Move the smiley when it is clicked\r\nonEvent(\"smiley\", \"click\", function() {\r\n  \r\n});",
+    "start_blocks": "onEvent(\"smiley\", \"click\", function() {\r\n  //1) When you click the smiley, move it to the center of the screen\r\n  \r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -62,7 +62,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T15:42:24.681+00:00\",\"changed\":[\"cloned from \\\"CSD U6 setProperty clicker template_2021\\\"\"],\"cloned_from\":\"CSD U6 setProperty clicker template_2021\"},{\"changed_at\":\"2021-08-31 15:42:28 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T15:42:24.681+00:00\",\"changed\":[\"cloned from \\\"CSD U6 setProperty clicker template_2021\\\"\"],\"cloned_from\":\"CSD U6 setProperty clicker template_2021\"},{\"changed_at\":\"2021-08-31 15:42:28 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-06 18:11:40 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-06 18:12:30 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -39,7 +39,8 @@ export const COLUMNS = {
  */
 class SubmissionStatusAssessmentsTable extends Component {
   static propTypes = {
-    studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType)
+    studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType),
+    localeCode: PropTypes.string
   };
 
   state = {
@@ -85,21 +86,34 @@ class SubmissionStatusAssessmentsTable extends Component {
   submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
     const isSubmitted = rowData.isSubmitted;
     const inProgress = rowData.inProgress;
-    var submissionTimeStampText;
+    let submissionTimeStampContent;
     switch (true) {
       case isSubmitted:
-        submissionTimeStampText = rowData.submissionTimeStamp.toLocaleString();
+        // Localize timestamp if locale is defined, and use a (Date)Time
+        // Element to preserve specificity.
+        //
+        // If locale is not defined, pass an empty array to use the browser's
+        // default locale.
+        // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString#parameters
+        // and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#parameters
+        submissionTimeStampContent = (
+          <time dateTime={rowData.submissionTimeStamp.toISOString()}>
+            {rowData.submissionTimeStamp.toLocaleString(
+              this.props.localeCode || []
+            )}
+          </time>
+        );
         break;
       case inProgress:
-        submissionTimeStampText = i18n.inProgress();
+        submissionTimeStampContent = i18n.inProgress();
         break;
       default:
-        submissionTimeStampText = i18n.notStarted();
+        submissionTimeStampContent = i18n.notStarted();
     }
 
     return (
-      <div style={styles.main} id="timestampCell">
-        <div style={styles.text}>{submissionTimeStampText}</div>
+      <div style={styles.main} className="timestampCell">
+        <div style={styles.text}>{submissionTimeStampContent}</div>
         {isSubmitted && (
           <div style={styles.icon}>
             <FontAwesome id="checkmark" icon="check-circle" />

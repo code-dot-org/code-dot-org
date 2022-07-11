@@ -111,7 +111,7 @@ class ApiControllerTest < ActionController::TestCase
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: ""}
 
     assert_response :success
-    assert_equal "[\"http://test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?solution=true\"]", @response.body
+    assert_equal "[\"//test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?solution=true\"]", @response.body
   end
 
   test "example_solutions should return expected example solutions when section id is present" do
@@ -128,7 +128,7 @@ class ApiControllerTest < ActionController::TestCase
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
 
     assert_response :success
-    assert_equal "[\"http://test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?section_id=#{section.id}\\u0026solution=true\"]", @response.body
+    assert_equal "[\"//test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?section_id=#{section.id}\\u0026solution=true\"]", @response.body
   end
 
   test "should get text_responses for section with default script" do
@@ -245,7 +245,7 @@ class ApiControllerTest < ActionController::TestCase
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 1a',
-        'url' => "http://test.host/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
+        'url' => "//test-studio.code.org/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
       },
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
@@ -253,7 +253,7 @@ class ApiControllerTest < ActionController::TestCase
         'puzzle' => 1,
         'question' => 'Text Match 2',
         'response' => 'Here is the answer 1b',
-        'url' => "http://test.host/s/#{script.name}/lessons/2/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
+        'url' => "//test-studio.code.org/s/#{script.name}/lessons/2/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
       },
       {
         'student' => {'id' => @student_2.id, 'name' => @student_2.name},
@@ -261,7 +261,7 @@ class ApiControllerTest < ActionController::TestCase
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 2',
-        'url' => "http://test.host/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_2.id}"
+        'url' => "//test-studio.code.org/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_2.id}"
       }
     ]
     assert_equal expected_response, JSON.parse(@response.body)
@@ -819,7 +819,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get signed-in user's user progress" do
-    user = create :user, total_lines: 2
+    user = create :user
     sign_in user
 
     create :user_level, user: user, best_result: 100, script: @script, level: @level
@@ -830,7 +830,6 @@ class ApiControllerTest < ActionController::TestCase
 
     body = JSON.parse(response.body)
     assert_equal true, body['signedIn']
-    assert_equal 2, body['linesOfCode']
     level_progress = body['progress'][@level.id.to_s]
     refute_nil level_progress
     assert_equal 'perfect', level_progress['status']
@@ -875,7 +874,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get signed-in user's user app_options" do
-    user = create :user, total_lines: 2
+    user = create :user
     sign_in user
 
     level_source = create :level_source, level: @level, data: 'level source'
@@ -994,8 +993,10 @@ class ApiControllerTest < ActionController::TestCase
 
   test "user_app_options should return existing channel if one exists" do
     sign_in @student_1
+    storage_id = fake_storage_id_for_user_id(@student_1.id)
+    ApiController.any_instance.stubs(:get_storage_id).returns(storage_id)
 
-    channel_token = create :channel_token, level: @level, script_id: @script.id, storage_id: storage_id_for_user_id(@student_1.id)
+    channel_token = create :channel_token, level: @level, script_id: @script.id, storage_id: storage_id
     expected_channel = channel_token.channel
 
     get :user_app_options, params: {
@@ -1059,8 +1060,9 @@ class ApiControllerTest < ActionController::TestCase
   test "user_app_options should not return channel when param get_channel_id is false" do
     user = @student_1
     sign_in user
+    stub_get_storage_id(user.id)
 
-    create :channel_token, level: @level, script_id: @script.id, storage_id: storage_id_for_user_id(user.id)
+    create :channel_token, level: @level, script_id: @script.id, storage_id: fake_storage_id_for_user_id(user.id)
 
     get :user_app_options, params: {
       script: @script.name,
@@ -1146,7 +1148,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Script.stubs(:should_cache?).returns true
 
-    assert_queries 8 do
+    assert_queries 7 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
@@ -1752,18 +1754,18 @@ class ApiControllerTest < ActionController::TestCase
         expected['answer_texts'] == actual['answer_texts'] &&
         equivalent_bags?(expected['results'], actual['results'])
     end
-    assert match, <<MESSAGE
-Mismatched results:
+    assert match, <<~MESSAGE
+      Mismatched results:
 
-Expected:
+      Expected:
 
-#{expected_results.join("\n")}
+      #{expected_results.join("\n")}
 
-Actual:
+      Actual:
 
-#{actual_results.join("\n")}
+      #{actual_results.join("\n")}
 
-MESSAGE
+    MESSAGE
   end
 
   test 'sign_cookies' do

@@ -49,6 +49,7 @@ describe('LessonOverview', () => {
         },
         id: 1,
         key: 'lesson-1',
+        duration: 45,
         position: 1,
         lockable: false,
         displayName: 'Lesson 1',
@@ -112,6 +113,7 @@ describe('LessonOverview', () => {
     expect(wrapper.find('LessonNavigationDropdown').length).to.equal(1);
 
     expect(wrapper.contains('Lesson 1: Lesson 1'), 'Lesson Name').to.be.true;
+    expect(wrapper.contains('45 minutes'), 'Lesson Duration').to.be.true;
 
     const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
     expect(enhancedSafeMarkdowns.at(0).props().markdown).to.contain(

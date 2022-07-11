@@ -30,7 +30,7 @@ social:
 
 ## சிறப்பு மாணவர் படைப்புகள்
 
-{{ featured_project, title: "உணவு", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
+{{ featured_project, title: "Food", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood2.gif", url: "https://studio.code.org/projects/spritelab/sC_ZiNi_x5GUqsWHE2M4CrcbjU8XvtD3VNT7TM0Y0N8" }}
 {{ featured_project, title: "ஈமோஜி", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
 {{ featured_project, title: "விலங்குகள்", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
 {{ featured_project, title: "ரெட்ரோ", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}

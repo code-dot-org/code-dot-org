@@ -8,10 +8,7 @@ import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWith
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
-import ResourceType, {
-  resourceShape
-} from '@cdo/apps/templates/courseOverview/resourceType';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 import $ from 'jquery';
@@ -48,32 +45,22 @@ class CourseEditor extends Component {
     initialDescriptionTeacher: PropTypes.string,
     initialUnitsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    initialTeacherResources: PropTypes.arrayOf(resourceShape),
     initialHasVerifiedResources: PropTypes.bool.isRequired,
     initialHasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
-    useMigratedResources: PropTypes.bool.isRequired,
     courseVersionId: PropTypes.number,
     coursePath: PropTypes.string.isRequired,
+    courseOfferingEditorLink: PropTypes.string,
 
     // Provided by redux
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape)
+    teacherResources: PropTypes.arrayOf(resourceShape),
+    studentResources: PropTypes.arrayOf(resourceShape)
   };
 
   constructor(props) {
     super(props);
-
-    const teacherResources = [...props.initialTeacherResources];
-
-    if (!props.useMigratedResources) {
-      // add empty entries to get to max
-      while (teacherResources.length < Object.keys(ResourceType).length) {
-        teacherResources.push({type: '', link: ''});
-      }
-    }
 
     this.state = {
       isSaving: false,
@@ -83,7 +70,6 @@ class CourseEditor extends Component {
       descriptionTeacher: this.props.initialDescriptionTeacher,
       announcements: this.props.initialAnnouncements,
       pilotExperiment: this.props.initialPilotExperiment,
-      teacherResources: teacherResources,
       title: this.props.initialTitle,
       versionTitle: this.props.initialVersionTitle,
       descriptionShort: this.props.initialDescriptionShort,
@@ -129,10 +115,8 @@ class CourseEditor extends Component {
       scripts: this.state.unitsInCourse
     };
 
-    if (this.props.migratedTeacherResources) {
-      dataToSave.resourceIds = this.props.migratedTeacherResources.map(
-        r => r.id
-      );
+    if (this.props.teacherResources) {
+      dataToSave.resourceIds = this.props.teacherResources.map(r => r.id);
     }
 
     if (this.props.studentResources) {
@@ -162,6 +146,22 @@ class CourseEditor extends Component {
       return;
     }
 
+    if (this.state.publishedState !== this.props.initialPublishedState) {
+      const msg =
+        'It looks like you are updating the published state. ' +
+        'Are you sure you want to update the published state? ' +
+        'Once you update the published state you can not go back to this published state. ' +
+        'For example once you set the published state to beta you can not go back to in development. ' +
+        'Also once a course as a published state of pilot it can not be fully launched (marked as preview or stable).';
+      if (!window.confirm(msg)) {
+        this.setState({
+          isSaving: false,
+          error: 'Saving cancelled.'
+        });
+        return;
+      }
+    }
+
     $.ajax({
       url: `/courses/${this.props.name}`,
       method: 'PUT',
@@ -187,10 +187,15 @@ class CourseEditor extends Component {
   };
 
   render() {
-    const {name, unitNames, courseFamilies, versionYearOptions} = this.props;
+    const {
+      name,
+      unitNames,
+      courseFamilies,
+      versionYearOptions,
+      initialPublishedState
+    } = this.props;
     const {
       announcements,
-      teacherResources,
       title,
       versionTitle,
       descriptionShort,
@@ -207,6 +212,11 @@ class CourseEditor extends Component {
       instructorAudience,
       participantAudience
     } = this.state;
+
+    const allowMajorCurriculumChanges =
+      initialPublishedState === PublishedState.in_development ||
+      initialPublishedState === PublishedState.pilot;
+
     return (
       <div>
         <h1>{name}</h1>
@@ -312,11 +322,6 @@ class CourseEditor extends Component {
               }
             />
           </label>
-          <AnnouncementsEditor
-            announcements={announcements}
-            inputStyle={styles.input}
-            updateAnnouncements={this.handleUpdateAnnouncements}
-          />
         </CollapsibleEditorSection>
 
         <CourseTypeEditor
@@ -332,6 +337,7 @@ class CourseEditor extends Component {
           handleParticipantAudienceChange={e =>
             this.setState({participantAudience: e.target.value})
           }
+          allowMajorCurriculumChanges={allowMajorCurriculumChanges}
         />
 
         <CollapsibleEditorSection title="Publishing Settings">
@@ -346,6 +352,7 @@ class CourseEditor extends Component {
             updateVersionYear={versionYear => this.setState({versionYear})}
             families={courseFamilies}
             versionYearOptions={versionYearOptions}
+            initialPublishedState={this.props.initialPublishedState}
             publishedState={publishedState}
             updatePublishedState={publishedState =>
               this.setState({publishedState})
@@ -355,6 +362,15 @@ class CourseEditor extends Component {
               this.props.initialFamilyName !== ''
             }
             isCourse
+            courseOfferingEditorLink={this.props.courseOfferingEditorLink}
+          />
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Announcements">
+          <AnnouncementsEditor
+            announcements={announcements}
+            inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
           />
         </CollapsibleEditorSection>
 
@@ -365,28 +381,20 @@ class CourseEditor extends Component {
             <h4>Teacher Resources</h4>
             <ResourcesEditor
               inputStyle={styles.input}
-              resources={teacherResources}
-              migratedResources={this.props.migratedTeacherResources}
-              updateResources={teacherResources =>
-                this.setState({teacherResources})
-              }
+              resources={this.props.teacherResources}
               courseVersionId={this.props.courseVersionId}
-              useMigratedResources={this.props.useMigratedResources}
               getRollupsUrl={`/courses/${this.props.name}/get_rollup_resources`}
             />
           </div>
-          {this.props.useMigratedResources && (
-            <div>
-              <h4>Student Resources</h4>
-              <ResourcesEditor
-                inputStyle={styles.input}
-                migratedResources={this.props.studentResources}
-                courseVersionId={this.props.courseVersionId}
-                useMigratedResources
-                studentFacing
-              />
-            </div>
-          )}
+          <div>
+            <h4>Student Resources</h4>
+            <ResourcesEditor
+              inputStyle={styles.input}
+              resources={this.props.studentResources}
+              courseVersionId={this.props.courseVersionId}
+              studentFacing
+            />
+          </div>
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Units">
@@ -398,11 +406,13 @@ class CourseEditor extends Component {
             </div>
             <CourseUnitsEditor
               inputStyle={styles.input}
+              initialUnitsInCourse={this.props.initialUnitsInCourse}
               unitsInCourse={unitsInCourse}
               updateUnitsInCourse={unitsInCourse =>
                 this.setState({unitsInCourse})
               }
               unitNames={unitNames}
+              allowMajorCurriculumChanges={allowMajorCurriculumChanges}
             />
           </label>
         </CollapsibleEditorSection>
@@ -444,6 +454,6 @@ const styles = {
 export const UnconnectedCourseEditor = CourseEditor;
 
 export default connect(state => ({
-  migratedTeacherResources: state.resources,
+  teacherResources: state.resources,
   studentResources: state.studentResources
 }))(CourseEditor);

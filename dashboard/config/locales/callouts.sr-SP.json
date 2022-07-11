@@ -292,6 +292,12 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Нови блок!",
           "poetry_remove_sprite": "Нови блок!"
+        },
+        "frozen line": {
+          "run": "Kликни на \"Изврши\" да испробаш свој програм!"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "run_button": "Tестирај своју анимацију помоћу овог дугмета."
         }
       }
     }

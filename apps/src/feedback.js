@@ -33,7 +33,7 @@ import {TestResults, KeyCodes} from './constants';
 import QRCode from 'qrcode.react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
-import clientState from '@cdo/apps/code-studio/clientState';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -183,7 +183,7 @@ FeedbackUtils.prototype.displayFeedback = function(
       continueText: options.continueText,
       isK1: options.level.isK1,
       freePlay: options.level.freePlay,
-      finalLevel: this.isFinalLevel(options.response)
+      finalLevel: options.level.isLastLevelInLesson
     })
   );
 
@@ -229,17 +229,13 @@ FeedbackUtils.prototype.displayFeedback = function(
     project.saveIfSourcesChanged();
   }
 
-  var onHidden = onlyContinue
-    ? onContinue
-    : function() {
-        if (!continueButton || feedbackDialog.hideButDontContinue) {
-          this.studioApp_.displayMissingBlockHints(
-            missingRecommendedBlockHints
-          );
-        } else {
-          onContinue();
-        }
-      }.bind(this);
+  // onHidden is called when the dialog is closed: only do something extra
+  // if there are hints for missing blocks.
+  let onHidden = function() {
+    if (!continueButton) {
+      this.studioApp_.displayMissingBlockHints(missingRecommendedBlockHints);
+    }
+  }.bind(this);
 
   var icon;
   if (!options.hideIcon) {
@@ -325,9 +321,7 @@ FeedbackUtils.prototype.displayFeedback = function(
         options,
         idealBlocks === Infinity ? null : isPerfect
       );
-      feedbackDialog.hideButDontContinue = true;
       feedbackDialog.hide();
-      feedbackDialog.hideButDontContinue = false;
     });
   }
 
@@ -422,6 +416,7 @@ FeedbackUtils.prototype.displayFeedback = function(
           level_id: options.response.level_id
         });
       }
+      options.onContinue();
     });
   }
 
@@ -456,9 +451,7 @@ FeedbackUtils.prototype.displayFeedback = function(
   if (publishButton) {
     dom.addClickTouchEvent(publishButton, () => {
       // Hide the current dialog since we're about to show the publish dialog
-      feedbackDialog.hideButDontContinue = true;
       feedbackDialog.hide();
-      feedbackDialog.hideButDontContinue = false;
 
       const store = getStore();
 
@@ -594,15 +587,6 @@ FeedbackUtils.saveThumbnail = function(image) {
     .then(() => project.saveIfSourcesChanged());
 };
 
-FeedbackUtils.isLastLevel = function() {
-  const lesson = getStore().getState().progress.lessons[0];
-  return (
-    lesson.levels[lesson.levels.length - 1].ids.indexOf(
-      window.appOptions.serverLevelId
-    ) !== -1
-  );
-};
-
 /**
  * Counts the number of blocks used.  Blocks are only counted if they are
  * not disabled, are deletable.
@@ -724,13 +708,12 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
   // If a message was explicitly passed in, use that.
   if (
     options.feedbackType < TestResults.ALL_PASS &&
-    options.level &&
-    options.level.failureMessageOverride
+    options.level?.failureMessageOverride
   ) {
     message = options.level.failureMessageOverride;
   } else if (options.message) {
     message = options.message;
-  } else if (options.response && options.response.share_failure) {
+  } else if (options.response?.share_failure) {
     message = msg.shareFailure();
   } else {
     // Otherwise, the message will depend on the test result.
@@ -815,9 +798,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
         break;
       case TestResults.BLOCK_LIMIT_FAIL:
         var exceededBlockType = this.hasExceededLimitedBlocks_();
-        var limit = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.getLimit(
-          exceededBlockType
-        );
+        var limit = Blockly.cdoUtils.getBlockLimit(exceededBlockType);
         var block = `<xml><block type='${exceededBlockType}'></block></xml>`;
         message = msg.errorExceededLimitedBlocks({limit}) + block;
         break;
@@ -874,9 +855,14 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
       case TestResults.FREE_PLAY:
       case TestResults.BETTER_THAN_IDEAL:
       case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
-        var finalLevel = this.isFinalLevel(options.response);
+        var finalLevel = options.level?.isLastLevelInLesson;
+        // End of lesson in CSD/CSP/CSA
+        if (finalLevel && options.level?.showEndOfLessonMsgs) {
+          message = msg.endOfLesson();
+          break;
+        }
         var lessonCompleted = null;
-        if (options.response && options.response.lesson_changing) {
+        if (options.response?.lesson_changing) {
           lessonCompleted = options.response.lesson_changing.previous.name;
         }
         var msgParams = {
@@ -885,12 +871,10 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
           puzzleNumber: options.level.puzzle_number || 0
         };
         if (
-          this.isFreePlay(options.feedbackType) &&
+          TestResults.FREE_PLAY === options.feedbackType &&
           !options.level.disableSharing
         ) {
-          var reinfFeedbackMsg =
-            (options.appStrings && options.appStrings.reinfFeedbackMsg) || '';
-
+          var reinfFeedbackMsg = options.appStrings?.reinfFeedbackMsg || '';
           if (options.level.disableFinalLessonMessage) {
             message = reinfFeedbackMsg;
           } else {
@@ -899,8 +883,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
           }
         } else {
           var nextLevelMsg =
-            (options.appStrings && options.appStrings.nextLevelMsg) ||
-            msg.nextLevel(msgParams);
+            options.appStrings?.nextLevelMsg || msg.nextLevel(msgParams);
           message = finalLevel
             ? msg.finalStage(msgParams)
             : lessonCompleted
@@ -997,12 +980,14 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       .click(window.dashboard.popupWindow);
   }
 
-  var sharingInput = sharingDiv.querySelector('#sharing-input');
-  if (sharingInput) {
-    dom.addClickTouchEvent(sharingInput, function() {
-      sharingInput.focus();
-      sharingInput.select();
-      sharingInput.setSelectionRange(0, 9999);
+  var sharingCopyButton = sharingDiv.querySelector(
+    '#sharing-dialog-copy-button'
+  );
+  if (sharingCopyButton) {
+    dom.addClickTouchEvent(sharingCopyButton, function() {
+      copyToClipboard(options.shareLink, () => {
+        sharingCopyButton.className = 'sharing-dialog-copy-button-shared';
+      });
     });
   }
 
@@ -1117,9 +1102,6 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   challenge = false
 ) {
   const numLinesWritten = this.getNumBlocksUsed();
-  // Use the response from the server if we have one. Otherwise use the client's data.
-  const totalLines =
-    (options.response && options.response.total_lines) || clientState.lines();
 
   const generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription:
@@ -1129,7 +1111,6 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   return (
     <CodeWritten
       numLinesWritten={numLinesWritten}
-      totalNumLinesWritten={totalLines}
       useChallengeStyles={challenge}
     >
       <GeneratedCode
@@ -1438,7 +1419,7 @@ FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
     const emptyBlockInfo = emptyBlock.getProcedureInfo();
     const findUsages = block =>
       block.type === emptyBlockInfo.callType &&
-      block.getTitleValue('NAME') === emptyBlockInfo.name;
+      block.getFieldValue('NAME') === emptyBlockInfo.name;
 
     if (Blockly.mainBlockSpace.getAllUsedBlocks().filter(findUsages).length) {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
@@ -1507,7 +1488,7 @@ FeedbackUtils.prototype.getUserBlocks_ = function() {
     // If Blockly is in readOnly mode, then all blocks are uneditable
     // so this filter would be useless. Ignore uneditable blocks only if
     // Blockly is in edit mode.
-    if (!Blockly.mainBlockSpace.isReadOnly()) {
+    if (!Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)) {
       blockValid = blockValid && block.isEditable();
     }
     return blockValid;
@@ -1859,8 +1840,8 @@ FeedbackUtils.prototype.createModalDialog = function(options) {
  */
 FeedbackUtils.prototype.hasQuestionMarksInNumberField = function() {
   return Blockly.mainBlockSpace.getAllUsedBlocks().some(function(block) {
-    return block.getTitles().some(function(title) {
-      return title.value_ === '???' || title.text_ === '???';
+    return Blockly.cdoUtils.getBlockFields(block).some(function(field) {
+      return field.value_ === '???' || field.text_ === '???';
     });
   });
 };
@@ -1883,7 +1864,7 @@ FeedbackUtils.prototype.hasUnusedParam_ = function() {
             (block.type === 'parameters_get' ||
               block.type === 'functional_parameters_get' ||
               block.type === 'variables_get') &&
-            block.getTitleValue('VAR') === paramName
+            block.getFieldValue('VAR') === paramName
           );
         });
       })
@@ -1918,7 +1899,7 @@ FeedbackUtils.prototype.hasUnusedFunction_ = function() {
   var userDefs = [];
   var callBlocks = {};
   Blockly.mainBlockSpace.getAllUsedBlocks().forEach(function(block) {
-    var name = block.getTitleValue('NAME');
+    var name = block.getFieldValue('NAME');
     if (/^procedures_def/.test(block.type) && block.userCreated) {
       userDefs.push(name);
     } else if (/^procedures_call/.test(block.type)) {
@@ -1971,19 +1952,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function(node, filter) {
  * Ensure that all limited toolbox blocks aren't exceeded.
  */
 FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function() {
-  const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
-  return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
-};
-
-/**
- * Determine if this is the final level in a progression based on server response.
- * For details, see:
- * https://github.com/code-dot-org/code-dot-org/blob/a6d3762e5756e825fef15182042845d01c05f1e6/dashboard/app/helpers/script_levels_helper.rb#L30
- * @param {Object} response
- * @returns {boolean}
- */
-FeedbackUtils.prototype.isFinalLevel = function(response) {
-  return response?.message === 'no more levels';
+  return Blockly.cdoUtils.blockLimitExceeded();
 };
 
 /**

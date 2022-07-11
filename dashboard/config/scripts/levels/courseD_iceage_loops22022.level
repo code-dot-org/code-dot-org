@@ -40,11 +40,16 @@
     "tts_long_instructions_override": "Use a turn left block to get to the acorn!",
     "mini_rubric": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "\"Free Play\"",
-  "audit_log": "[{\"changed_at\":\"2022-01-12T20:48:25.434+00:00\",\"changed\":[\"cloned from \\\"courseD_iceage_loops2_2021\\\"\"],\"cloned_from\":\"courseD_iceage_loops2_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-12T20:48:25.434+00:00\",\"changed\":[\"cloned from \\\"courseD_iceage_loops2_2021\\\"\"],\"cloned_from\":\"courseD_iceage_loops2_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

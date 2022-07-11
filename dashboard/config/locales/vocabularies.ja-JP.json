@@ -68,6 +68,7 @@
           "definition": "コンピューターで実行できる形のプログラムにした一連のステップ。"
         },
         "code/flappy/unversioned": {
+          "word": "コード",
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
         "debugging/flappy/unversioned": {
@@ -168,8 +169,29 @@
           "word": "くりかえし",
           "definition": "何度も何度も何かをするという行為。"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "シーザー暗号 ",
+          "definition": "アルファベットを数文字ずらす暗号化技術"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "サイファー",
+          "definition": "暗号化を行う技術（またはアルゴリズム）の総称。"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "暗号化のクラッキング",
+          "definition": "暗号の詳細をすべて知らずに秘密のメッセージを解読しようとすると、暗号化を「クラック」しようとすることになります。"
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "解読",
+          "definition": "暗号化をさかのぼり、秘密のメッセージをとり、元のプレーンテキストを再現するプロセス"
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "暗号化"
+          "word": "暗号化",
+          "definition": "メッセージを暗号化して秘密にしておくプロセス。"
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "換字式暗号",
+          "definition": "アルファベットの各文字をランダムに選ばれた他の文字にマッピングする暗号化技術。"
         },
         "code/starwars/unversioned": {
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
@@ -216,7 +238,16 @@
           "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "可逆圧縮"
+          "word": "可逆圧縮",
+          "definition": "圧縮されたデータから元のデータを完全に再構築できるようにするデータ圧縮アルゴリズム。 テキスト圧縮にもっとも一般的に使用されます（zip圧縮など）。"
+        },
+        "event/outbreak/unversioned": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "モデルとシミュレーション",
+          "definition": "実生活で実験を行うコスト、時間、またはリスクを気にせず、現実世界のイベントの主要な機能を複製または模倣して、その行動を調査するプログラム。"
         },
         "event/sports/unversioned": {
           "word": "イベント",
@@ -304,14 +335,6 @@
         "line/poem-art/unversioned": {
           "word": "行",
           "definition": "（詩） - 右端が余白で終わるように配された詩の小さな単位。"
-        },
-        "event/outbreak/unversioned": {
-          "word": "イベント",
-          "definition": "何かを引き起こすアクション。"
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "モデルとシミュレーション",
-          "definition": "実生活で実験を行うコスト、時間、またはリスクを気にせず、現実世界のイベントの主要な機能を複製または模倣して、その行動を調査するプログラム。"
         },
         "sprite/coursef/2021": {
           "word": "スプライト",
@@ -838,6 +861,65 @@
         "try/coursee/2021": {
           "word": "試してみる",
           "definition": "何かをしようとすること"
+        },
+        "machine_learning/csd/2021": {
+          "word": "機械学習",
+          "definition": "コンピュータがどのようにパターンを認識し、明示的にプログラムされずに意思決定を行う方法"
+        },
+        "user/csd/2021": {
+          "word": "ユーザー",
+          "definition": "ソフトウェアやハードウェアなどのオブジェクトを使う人。"
+        },
+        "user_interface/csd/2021": {
+          "word": "ユーザーインタフェース"
+        },
+        "bug/csd/2021": {
+          "word": "バグ",
+          "definition": "正常に動作しないプログラムの一部。"
+        },
+        "for_loop/csd/2021": {
+          "word": "Forループ",
+          "definition": "あらかじめ開始、終了、増分（増分間隔）のあるループ。"
+        },
+        "debugging/csd/2021": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/csd/2021": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "variable/csd/2021": {
+          "word": "変数",
+          "definition": "プログラムで使用される情報の一部のラベル。"
+        },
+        "sprite/csd/2021": {
+          "word": "スプライト"
+        },
+        "condition/csd/2021": {
+          "word": "条件"
+        },
+        "conditionals/csd/2021": {
+          "word": "条件"
+        },
+        "abstraction/csd/2021": {
+          "word": "抽象化"
+        },
+        "function/csd/2021": {
+          "word": "関数（かんすう）"
+        },
+        "input/csd/2021": {
+          "word": "入力"
+        },
+        "processing/csd/2021": {
+          "word": "処理"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "デジタルフットプリント"
+        },
+        "copyright/csd/2021": {
+          "word": "著作権",
+          "definition": "文学的、芸術的、または音楽的な素材を印刷、出版、上演、映画化、または録音する独占的な法的権利、および他の人に同じことをすることを許可する権利。"
         }
       }
     }

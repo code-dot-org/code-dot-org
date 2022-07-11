@@ -1,6 +1,0 @@
-{
-  "key": "andOperator",
-  "name": "andOperator",
-  "category": "Math",
-  "syntax": "__ && __"
-}

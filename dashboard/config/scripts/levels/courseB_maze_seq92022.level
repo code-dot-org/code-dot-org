@@ -36,11 +36,15 @@
     "parent_level_id": 20977,
     "name_suffix": "2022",
     "top_level_procedure_autopopulate": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-12T20:47:16.561+00:00\",\"changed\":[\"cloned from \\\"courseB_maze_seq9_2021\\\"\"],\"cloned_from\":\"courseB_maze_seq9_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-12T20:47:16.561+00:00\",\"changed\":[\"cloned from \\\"courseB_maze_seq9_2021\\\"\"],\"cloned_from\":\"courseB_maze_seq9_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

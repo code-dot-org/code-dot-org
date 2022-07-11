@@ -28,8 +28,6 @@ CS Fundamentals is the only program currently funded on a workshop-by-workshop b
 ## Scholarship Payments
 During the 2021-22 year, all Code.org-funded Regional Partners will follow a scholarship model to receive funding for 6-12 cohorts. Additional details are available [here](https://docs.google.com/document/d/1tLPIsFjQh5-kJGG-2OlsYKQcIAnm1tGIVv1p21meXng/edit?userstoinvite=jacqueline@mindspark.org&ts=6019674f&actionButton=1#heading=h.rvt9zhffkj0c) in the K-12 Funding for Regional Partners resource.
 
-Track your unlocked and allocated scholarships by visiting this [dashboard in Tableau](https://us-east-1.online.tableau.com/#/site/codeorg/views/2020-21CSPCSDScholarships/external2020-21CSPCSDScholarshipRecipients?:iid=2). 
-<br/>
 
 ## Facilitator Funding
 
@@ -41,7 +39,7 @@ Track your unlocked and allocated scholarships by visiting this [dashboard in Ta
 
 **Facilitator Travel Policy**
 
-As of June 1, 2021, no funding for facilitator travel is currently available for any professional learning programs. Regional Partners will be notified should funding become available in the future. 
+As of June 1, 2021, no funding for facilitator travel is currently available for professional learning programs with the exception of out-of-region CSA facilitators in the inaugural year of the program. A travel policy will be provided outlining the terms of Code.org funding for summer 2022 CSA facilitator travel by April 1, 2022.
 
 
 [**Back to the top**](#top)

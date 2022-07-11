@@ -1,4 +1,5 @@
 class VocabulariesController < ApplicationController
+  include CurriculumHelper
   load_and_authorize_resource
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:show]
@@ -39,7 +40,7 @@ class VocabulariesController < ApplicationController
         lesson.script.write_script_json
       end
     end
-    if vocabulary && vocabulary.update!(vocabulary_params.except(:lesson_ids))
+    if vocabulary&.update!(vocabulary_params.except(:lesson_ids))
       vocabulary.serialize_scripts
       render json: vocabulary.summarize_for_lesson_edit
     else
@@ -49,7 +50,7 @@ class VocabulariesController < ApplicationController
 
   # GET /courses/:course_name/vocab/edit
   def edit
-    @course_version = find_matching_course_version
+    @course_version = CurriculumHelper.find_matching_course_version(params[:course_name])
     @vocabularies = @course_version.vocabularies.order(:word).map(&:summarize_for_edit)
   end
 
@@ -60,13 +61,5 @@ class VocabulariesController < ApplicationController
     vp = vp.permit(:id, :key, :word, :definition, :common_sense_media, :course_version_id, :lesson_ids)
     vp[:lesson_ids] = JSON.parse(vp[:lesson_ids]) if vp[:lesson_ids]
     vp
-  end
-
-  def find_matching_course_version
-    matching_unit_group = UnitGroup.find_by_name(params[:course_name])
-    return matching_unit_group.course_version if matching_unit_group
-    matching_standalone_course = Script.find_by_name(params[:course_name])
-    return matching_standalone_course.course_version if matching_standalone_course&.is_course
-    return nil
   end
 end

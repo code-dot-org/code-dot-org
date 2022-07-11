@@ -237,6 +237,8 @@ Resources:
               - 'arn:aws:s3:::cdo-data-sharing-internal'
               - 'arn:aws:s3:::cdo-census/*'
               - 'arn:aws:s3:::cdo-census'
+              - 'arn:aws:s3:::cdo-nces/*'
+              - 'arn:aws:s3:::cdo-nces'
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
   FirehoseLambdaRole:
@@ -272,7 +274,7 @@ Resources:
         Statement:
           - Effect: Allow
             Principal:
-              Service: [ec2.amazonaws.com]
+              Service: [ec2.amazonaws.com, ecs-tasks.amazonaws.com]
             Action: ['sts:AssumeRole']
       Policies:
         - PolicyName: PMMRolePolicy
@@ -361,6 +363,10 @@ Outputs:
     Description: Firehose Lambda Role ARN
     Value: !GetAtt FirehoseLambdaRole.Arn
     Export: {Name: !Sub "${AWS::StackName}-FirehoseLambdaRoleARN"}
+  PerconaMonitoringRoleARN:
+    Description: Percona Monitoring Role ARN
+    Value: !GetAtt PMMRole.Arn
+    Export: {Name: !Sub "${AWS::StackName}-PerconaMonitoringRoleARN"}
   SessionPermissions:
     Description: Session Permissions
     Value: !Ref SessionPermissions

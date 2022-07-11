@@ -2,21 +2,484 @@
   "vi-VN": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Danh sách nhạc Spotify (cho mọi lứa tuổi)"
+        },
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
+        "poem_art_celebration/poem-art/2021": {
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
+          "type": "Video"
+        },
+        "poem_art_events/poem-art/2021": {
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
+          "type": "Video"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
+          "type": "Video"
+        },
         "poem_art_introduction/poem-art/2021": {
           "name": "Tranh thơ ca 1 - Giới thiệu",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "Video"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Danh sách nhạc Spotify (cho mọi lứa tuổi)"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "Video"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "Video"
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "url": "https://docs.google.com/presentation/d/199mZZrEbIArDM6Z4dsaOeopnzGeww-uWnfVuDfXD0mY/edit?usp=drivesdk"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "url": "https://docs.google.com/presentation/d/199mZZrEbIArDM6Z4dsaOeopnzGeww-uWnfVuDfXD0mY/edit?usp=drivesdk"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Danh sách nhạc Spotify (cho mọi lứa tuổi)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Danh sách nhạc Spotify (cho mọi lứa tuổi)"
         },
         "ai-ml/oceans/unversioned": {
-          "name": "AI: Máy học"
+          "name": "AI: Máy học",
+          "type": "Video"
         },
         "ai-societal/oceans/unversioned": {
-          "name": "AI: Tác động đến xã hội"
+          "name": "AI: Tác động đến xã hội",
+          "type": "Video"
         },
         "ai-training/oceans/unversioned": {
-          "name": "AI: Dữ liệu đào tạo & Định kiến"
+          "name": "AI: Dữ liệu đào tạo & Định kiến",
+          "type": "Video"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Từ vựng"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Từ vựng"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Từ vựng"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Từ vựng"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/express/2018": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/express/2018": {
+          "name": "Từ vựng"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Từ vựng"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Từ vựng"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Mã lệnh giới thiệu"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Từ vựng"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Mã lệnh giới thiệu"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Từ vựng"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Từ vựng"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Mã lệnh giới thiệu"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Từ vựng"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Mã lệnh giới thiệu"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Từ vựng"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Từ vựng"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "Hướng dẫn giáo trình"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Từ vựng"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Hướng dẫn giáo trình"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Từ vựng"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "Hướng dẫn giáo trình"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Từ vựng"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "Hướng dẫn giáo trình"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Từ vựng"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Hướng dẫn giáo trình"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Từ vựng"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/express/2019": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/express/2019": {
+          "name": "Từ vựng"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "Hướng dẫn giáo trình"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Từ vựng"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Mã lệnh giới thiệu"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Từ vựng"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Mã lệnh giới thiệu"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Từ vựng"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Mã lệnh giới thiệu"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Từ vựng"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Từ vựng"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Từ vựng"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Mã lệnh giới thiệu"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Từ vựng"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Mã lệnh giới thiệu"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Từ vựng"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Mã lệnh giới thiệu"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Từ vựng"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Mã lệnh giới thiệu"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Từ vựng"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Từ vựng"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Từ vựng"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Mã lệnh giới thiệu"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Từ vựng"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Danh sách thơ",
@@ -32,7 +495,8 @@
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "Giới thiệu Sprite Lab",
-          "url": "https://youtu.be/yd-9xZ275dM"
+          "url": "https://youtu.be/yd-9xZ275dM",
+          "type": "Video"
         },
         "exploring_apps_1/coursef/2021": {
           "name": "Khám phá ứng dụng",
@@ -56,7 +520,8 @@
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "name": "Sức mạnh của ngôn từ: Sức mạnh của ngôn từ",
-          "url": "https://www.commonsense.org/education/videos/the-power-of-words"
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words",
+          "type": "Video"
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
           "name": "Sức mạnh của ngôn từ: Lời nói có thể gây tổn thương",
@@ -72,7 +537,7 @@
         },
         "variables_blank_space_stories/coursef/2021": {
           "name": "Biến: Câu chuyện khoảng trống",
-          "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview"
+          "url": "https://docs.google.com/presentation/d/1jvu2DUS50L3xLeXHH_yCSiqS5UduWixBNJ_UDchiyTA"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
           "name": "Câu chuyện khoảng trống",
@@ -104,7 +569,8 @@
         },
         "pause_and_think_online/coursef/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến",
-          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
+          "type": "Video"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Cho vòng lặp vui vẻ",
@@ -128,7 +594,8 @@
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Cho vòng lặp vui vẻ",
-          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit"
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
+          "type": "Đánh giá"
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)",
@@ -139,13 +606,16 @@
           "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
         },
         "ai-ml/coursef/2021": {
-          "name": "AI: Máy học"
+          "name": "AI: Máy học",
+          "type": "Video"
         },
         "ai-training/coursef/2021": {
-          "name": "AI: Dữ liệu đào tạo & Định kiến"
+          "name": "AI: Dữ liệu đào tạo & Định kiến",
+          "type": "Video"
         },
         "ai-societal/coursef/2021": {
-          "name": "AI: Tác động đến xã hội"
+          "name": "AI: Tác động đến xã hội",
+          "type": "Video"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet",
@@ -157,7 +627,8 @@
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "internet",
-          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit"
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
+          "type": "Đánh giá"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "internet",
@@ -177,7 +648,8 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "Dự án cuối cùng về Nguyên tắc cơ bản của KHMT",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Thang điểm"
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "Cấu trúc Tiêu chuẩn CSTA",
@@ -285,7 +757,8 @@
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Ngọ nguậy - GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "20_20_20_rule/courseb/2021": {
           "name": "Quy tắc 20/20/20",
@@ -307,7 +780,8 @@
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view"
         },
         "unspotted_bugs/courseb/2021": {
-          "url": "https://youtu.be/rah3DYlp5nQ"
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "Video"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Tạo vòng lặp",
@@ -319,7 +793,8 @@
         },
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "Tạo vòng lặp",
-          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit"
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "Đánh giá"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Tạo vòng lặp",
@@ -331,19 +806,22 @@
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "Các kịch bản ứng dụng phù hợp",
-          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
+          "url": "https://docs.google.com/presentation/d/1aL8_Rba6663CQWxsF9Ve2IR-CGZRiVpXyEY7zBieF8E/edit?usp=drivesdk"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Sự kiện lớn",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Video"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Sự kiện lớn",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Đánh giá"
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "Sự kiện lớn",
@@ -431,11 +909,13 @@
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Ngọ nguậy - GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "name": "Bắt đầu - Tạo nhóm đào tạo",
-          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
+          "type": "Video"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Bản đồ thú vị",
@@ -467,11 +947,13 @@
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Ngọ nguậy - GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
           "name": "Sửa lỗi bằng nút Bước",
-          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
+          "type": "Video"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "Hình ảnh cảm xúc trên khuôn mặt",
@@ -499,7 +981,8 @@
         },
         "pair-programming/coursea/2021": {
           "name": "Lập trình theo cặp",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
           "name": "Hình ảnh cảm xúc trên khuôn mặt",
@@ -511,7 +994,8 @@
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
           "name": "Hình ảnh cảm xúc trên khuôn mặt",
@@ -527,7 +1011,8 @@
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Sự kiện lớn",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Đánh giá"
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "Sự kiện lớn",
@@ -643,7 +1128,8 @@
         },
         "pair-programming-vid/coursec/2021": {
           "name": "Lập trình đôi",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "Nguyên tắc cơ bản của KHMT Mẹo tiến hành hoạt động chính",
@@ -670,7 +1156,8 @@
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Sự kiện lớn",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Đánh giá"
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "Sự kiện lớn",
@@ -682,7 +1169,8 @@
         },
         "pause_and_think_online/coursec/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "open-ended_programming_levels/coursec/2021": {
           "name": "Các cấp độ lập trình có kết thúc mở",
@@ -714,7 +1202,8 @@
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "Vòng đeo tay nhị phân",
-          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit"
+          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
+          "type": "Đánh giá"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Vòng đeo tay nhị phân",
@@ -818,7 +1307,8 @@
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "lập trình đồ thị trên giấy",
-          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit"
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
+          "type": "Đánh giá"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "lập trình đồ thị trên giấy",
@@ -857,11 +1347,12 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
-          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
+          "url": "https://docs.google.com/presentation/d/199mZZrEbIArDM6Z4dsaOeopnzGeww-uWnfVuDfXD0mY/edit?usp=drivesdk"
         },
         "pause_and_think_online/coursed/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "open-ended_programming_levels/coursed/2021": {
           "name": "Các cấp độ lập trình có kết thúc mở",
@@ -874,6 +1365,9 @@
         "dance-party-project-guide/coursed/2021": {
           "name": "Hướng dẫn dự án Bữa tiệc khiêu vũ",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+        },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Danh sách nhạc Spotify (cho mọi lứa tuổi)"
         },
         "dance_party_unplugged/coursed/2021": {
           "url": "https://curriculum.code.org/hoc/unplugged/4/"
@@ -888,12 +1382,15 @@
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Lệnh điều kiện với lá bài",
           "url": "https://youtu.be/UymN4lTL50s"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Lệnh điều kiện với lá bài",
           "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
@@ -901,17 +1398,22 @@
           "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit"
+          "name": "Lệnh điều kiện với lá bài",
+          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
+          "type": "Đánh giá"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Lệnh điều kiện với lá bài",
           "url": "https://youtu.be/TbUaEnAYPjI"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Lệnh điều kiện với lá bài",
           "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "name": "Hướng dẫn lập kế hoạch dự án tổng kết khóa học NTCB của KHMT Khóa học D",
-          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
+          "type": "Hướng dẫn dự án"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "Cấu trúc Tiêu chuẩn CSTA",
@@ -963,11 +1465,18 @@
         },
         "pair_programming/express/2021": {
           "name": "Lập trình đôi",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
           "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "artist_introduction/express/2021": {
+          "type": "Video"
+        },
+        "turns_angles/express/2021": {
+          "type": "Video"
         },
         "turns_angles_1/express/2021": {
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
@@ -977,6 +1486,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/express/2021": {
+          "name": "Tài liệu Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
@@ -984,6 +1494,7 @@
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
+          "name": "Tài liệu Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
@@ -992,11 +1503,15 @@
         },
         "pause_and_think_online/express/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "dance-party-project-guide/express/2021": {
           "name": "Hướng dẫn dự án Bữa tiệc khiêu vũ",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+        },
+        "dance-party-playlist/express/2021": {
+          "name": "Danh sách nhạc Spotify (cho mọi lứa tuổi)"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "Các cấp độ lập trình có kết thúc mở",
@@ -1004,7 +1519,8 @@
         },
         "pair_programming_video/express/2021": {
           "name": "Video Lập trình theo cặp",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
           "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)",
@@ -1036,11 +1552,13 @@
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "Hướng dẫn lập kế hoạch dự án tổng kết khóa học NTCB của KHMT Cấp tốc",
-          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
+          "type": "Hướng dẫn dự án"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Dự án cuối cùng về Nguyên tắc cơ bản của KHMT",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Thang điểm"
         },
         "csta_standards_mapping/express/2021": {
           "name": "Cấu trúc Tiêu chuẩn CSTA",
@@ -1072,15 +1590,18 @@
         },
         "20_20_20_rule/pre-express/2021": {
           "name": "Quy tắc 20/20/20",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Video"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "name": "Ngọ nguậy - GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "Cấu trúc Tiêu chuẩn CSTA",
@@ -1100,13 +1621,14 @@
         },
         "follow_the_algorithm/coursee/2021": {
           "name": "Làm theo thuật toán",
-          "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview"
+          "url": "https://docs.google.com/presentation/d/1X5-60Z1_ziBfAbgXq3r6bfBd5iXfDPDulaXhYQdMTAM"
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
           "name": "Hộp cát dành cho giáo viên Cá bơi",
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/coursee/2021": {
+          "name": "Tài liệu Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
@@ -1139,7 +1661,8 @@
         },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến",
-          "url": "https://youtu.be/X_duZ-1LApg"
+          "url": "https://youtu.be/X_duZ-1LApg",
+          "type": "Video"
         },
         "about_me_planning_guide/coursee/2021": {
           "name": "Hướng dẫn lập kế hoạch Giới thiệu bản thân",
@@ -1151,7 +1674,8 @@
         },
         "digital-sharing-video/coursee/2021": {
           "name": "Chia sẻ nội dung số có đạo đức (Video)",
-          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
+          "type": "Video"
         },
         "csf-turns-angles-doc/coursee/2021": {
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
@@ -1170,7 +1694,8 @@
         },
         "csf-songwriting-assessment/coursee/2021": {
           "name": "Hàm không dùng thiết bị điện tử: Sáng tác nhạc",
-          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit"
+          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
+          "type": "Đánh giá"
         },
         "assessment-answer-songwriting/coursee/2021": {
           "name": "Hàm không dùng thiết bị điện tử: Sáng tác nhạc",
@@ -1182,7 +1707,7 @@
         },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "Thiết kế cho trợ năng",
-          "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview"
+          "url": "https://docs.google.com/presentation/d/1AguduBLKViRdTQ0z4vc8lRyZWI1CLIxybvj8o4vu08Q"
         },
         "types_of_disabilities/coursee/2021": {
           "name": "Các dạng khuyết tật",
@@ -1194,7 +1719,8 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Dự án cuối cùng về Nguyên tắc cơ bản của KHMT",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Thang điểm"
         },
         "design-process/coursee/2021": {
           "name": "Quy trình thiết kế",
@@ -1251,6 +1777,522 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Sửa đổi bài học trực tuyến",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "Video"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "Quan sát AI",
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "AI: Dữ liệu đào tạo & Định kiến",
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Video"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "survey_planning/csd/2021": {
+          "name": "Bộ sưu tập Thiết kế dữ liệu"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "Video"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "Suy nghĩ"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "Nguyên mẫu giấy",
+          "type": "Thang điểm"
+        },
+        "market-research/csd/2021": {
+          "name": "Nghiên cứu thị trường"
+        },
+        "market_research/csd/2021": {
+          "name": "Nghiên cứu thị trường"
+        },
+        "design_mode/csd/2021": {
+          "name": "Chế độ thiết kế"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "Video"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Chế độ thiết kế"
+        },
+        "multi-screen_apps/csd/2021": {
+          "name": "Ứng dụng đa màn hình"
+        },
+        "app-presentation/csd/2021": {
+          "name": "Trình bày ứng dụng",
+          "type": "Thang điểm"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "Trình bày ứng dụng"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Khoa học máy tính là Thay đổi Tất cả mọi thứ",
+          "type": "Video"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "type": "Video"
+        },
+        "board_events/csd/2021": {
+          "name": "Sự kiện bảng mạch"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "Video"
+        },
+        "emoji-race-guide/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "functions_2/csd/2021": {
+          "name": "Các hàm"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Giới thiệu Danh sách",
+          "type": "Video"
+        },
+        "playing_notes/csd/2021": {
+          "name": "Ghi chú khi chơi"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Cho vòng lặp",
+          "type": "Video"
+        },
+        "for_loops/csd/2021": {
+          "name": "Cho vòng lặp"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "Sự kiện gia tốc kế"
+        },
+        "circuits-logic-video/csd/2021": {
+          "type": "Video"
+        },
+        "physical-prototyping-project/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "Miêu tả thông tin"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "Video"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "Video"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "Video"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2021": {
+          "name": "Video: Tác động đến xã hội",
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Học Máy",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "name": "Video: Dữ liệu đào tạo và Định kiến",
+          "type": "Video"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "Video"
+        },
+        "variables_1/csd/2021": {
+          "name": "Các biến"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "Video"
+        },
+        "the_animation_tab/csd/2021": {
+          "type": "Video"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Nhân vật"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Thuộc tính của nhân vật"
+        },
+        "captioned-scenes/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "Video"
+        },
+        "animating-sprites/csd/2021": {
+          "type": "Video"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "boolean_expressions/csd/2021": {
+          "type": "Video"
+        },
+        "conditional_statements/csd/2021": {
+          "type": "Video"
+        },
+        "if_else_statements/csd/2021": {
+          "type": "Video"
+        },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "interactive_card/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "velocity_1/csd/2021": {
+          "type": "Video"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Phát hiện va chạm"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Phát hiện va chạm"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "Game đi cảnh",
+          "type": "Thang điểm"
+        },
+        "side-scroller/csd/2021": {
+          "name": "Game đi cảnh",
+          "type": "Hướng dẫn dự án"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "Vận tốc và mẫu bộ đếm"
+        },
+        "flyer-game-1/csd/2021": {
+          "name": "Trò chơi Thú bay",
+          "type": "Thang điểm"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Trò chơi Thú bay",
+          "type": "Hướng dẫn dự án"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Các hàm",
+          "type": "Video"
+        },
+        "functions_1/csd/2021": {
+          "name": "Các hàm"
+        },
+        "make-your-own-game/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Video"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Quá trình giải quyết vấn đề"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Máy tính là gì?"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "Video"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "Video"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2021": {
+          "name": "Video: Lập trình theo cặp",
+          "type": "Video"
+        },
+        "video_debugging/csd/2021": {
+          "name": "Video: Sửa lỗi",
+          "type": "Video"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "html-page/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "lists/csd/2021": {
+          "name": "Danh sách"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Dấu vết số"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Thám tử mạng xã hội"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "Thám tử mạng xã hội"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "your-personal-style/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "Video"
+        },
+        "images_in_html/csd/2021": {
+          "name": "Hình ảnh trong HTML"
+        },
+        "person-web-page-prepare/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "Xuất bản trang ",
+          "type": "Video"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "Video: Xử lý sự bất đồng",
+          "type": "Video"
+        },
+        "how-teamwork-works/csd/2021": {
+          "name": "Video: Làm việc theo nhóm",
+          "type": "Video"
+        },
+        "how-search-works-video/csd/2021": {
+          "name": "Video: Cách hoạt động của tính năng tìm kiếm",
+          "type": "Video"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "Hướng dẫn dự án"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Từ vựng"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/express/2020": {
+          "name": "Từ vựng"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "Hướng dẫn giáo trình"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Từ vựng"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Hướng dẫn giáo trình"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Từ vựng"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Hướng dẫn giáo trình"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Từ vựng"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Hướng dẫn giáo trình"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Từ vựng"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "Hướng dẫn giáo trình"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Từ vựng"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Hướng dẫn giáo trình"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Giáo Án"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Khung tiêu chuẩn"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Từ vựng"
         }
       }
     }

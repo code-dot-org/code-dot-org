@@ -1,0 +1,32 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "playerBehaviors",
+    "blockText": "{BEHAVIOR}",
+    "returnType": "Behavior",
+    "color": [
+      136,
+      ".84",
+      ".80"
+    ],
+    "args": [
+      {
+        "name": "BEHAVIOR",
+        "options": [
+          [
+            "moving with arrow keys",
+            "new Behavior(moving_with_arrow_keys, [])"
+          ],
+          [
+            "driving with arrow keys",
+            "new Behavior(driving_with_arrow_keys, [])"
+          ],
+          [
+            "being draggable",
+            "draggable()"
+          ]
+        ]
+      }
+    ]
+  }
+}

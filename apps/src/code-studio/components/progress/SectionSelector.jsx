@@ -6,9 +6,11 @@ import {updateQueryParam} from '../../utils';
 import {reload} from '../../../utils';
 import {
   selectSection,
-  sectionsNameAndId,
-  NO_SECTION
+  sectionsNameAndId
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+// Exported for unit testing
+export const NO_SELECTED_SECTION_VALUE = '';
 
 function SectionSelector({
   style,
@@ -28,7 +30,7 @@ function SectionSelector({
 
     updateQueryParam(
       'section_id',
-      newSectionId === NO_SECTION ? undefined : newSectionId
+      newSectionId === NO_SELECTED_SECTION_VALUE ? undefined : newSectionId
     );
     // If we have a user_id when we switch sections we should get rid of it
     updateQueryParam('user_id', undefined);
@@ -52,11 +54,14 @@ function SectionSelector({
         ...styles.select,
         ...style
       }}
-      value={selectedSectionId}
+      value={selectedSectionId || NO_SELECTED_SECTION_VALUE}
       onChange={handleSelectChange}
     >
       {!requireSelection && (
-        <option key={''} value={''}>
+        <option
+          key={NO_SELECTED_SECTION_VALUE}
+          value={NO_SELECTED_SECTION_VALUE}
+        >
           {i18n.selectSection()}
         </option>
       )}
@@ -86,7 +91,7 @@ SectionSelector.propTypes = {
       id: PropTypes.number.isRequired
     })
   ).isRequired,
-  selectedSectionId: PropTypes.string,
+  selectedSectionId: PropTypes.number,
   selectSection: PropTypes.func.isRequired
 };
 
@@ -100,7 +105,7 @@ export const UnconnectedSectionSelector = SectionSelector;
 
 export default connect(
   state => ({
-    selectedSectionId: state.teacherSections.selectedSectionId.toString(),
+    selectedSectionId: state.teacherSections.selectedSectionId,
     sections: sectionsNameAndId(state.teacherSections)
   }),
   dispatch => ({

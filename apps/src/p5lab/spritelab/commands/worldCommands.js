@@ -24,11 +24,16 @@ export const commands = {
 
   getTime(unit) {
     if (unit === 'seconds') {
-      return this.getAdjustedWorldTime() || 0;
+      return this.getUnpausedWorldTime() - this.timerResetTime.seconds || 0;
     } else if (unit === 'frames') {
-      return this.p5.World.frameCount || 0;
+      return this.p5.World.frameCount - this.timerResetTime.frames || 0;
     }
     return 0;
+  },
+
+  resetTimer() {
+    this.timerResetTime.seconds = this.getUnpausedWorldTime();
+    this.timerResetTime.frames = this.currentFrame();
   },
 
   hideTitleScreen() {

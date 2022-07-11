@@ -48,7 +48,7 @@
       }
     },
     {
-      "key": "Code.org Equity PD",
+      "key": "Codeorg Equity PD",
       "name": "Code.org Equity PD",
       "absolute_position": 2,
       "lockable": false,
@@ -57,7 +57,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
       }
@@ -85,7 +85,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "4851d139-7c43-42a5-b859-555ef8f40189",
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
       }
@@ -225,7 +225,7 @@
         "script_level.level_keys": [
           "equity lead 1"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -249,7 +249,7 @@
         "script_level.level_keys": [
           "equity activity"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -273,7 +273,7 @@
         "script_level.level_keys": [
           "equity vids"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -297,7 +297,7 @@
         "script_level.level_keys": [
           "equity expect"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -321,7 +321,7 @@
         "script_level.level_keys": [
           "equity discuss"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -345,7 +345,7 @@
         "script_level.level_keys": [
           "Equity Resources"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -410,7 +410,7 @@
         "script_level.level_keys": [
           "equity lead 1"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -422,7 +422,7 @@
         "script_level.level_keys": [
           "equity activity"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -434,7 +434,7 @@
         "script_level.level_keys": [
           "equity vids"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -446,7 +446,7 @@
         "script_level.level_keys": [
           "equity expect"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -458,7 +458,7 @@
         "script_level.level_keys": [
           "equity discuss"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -470,7 +470,7 @@
         "script_level.level_keys": [
           "Equity Resources"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"

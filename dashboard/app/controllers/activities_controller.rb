@@ -17,7 +17,7 @@ class ActivitiesController < ApplicationController
   MIN_LINES_OF_CODE = 0
   MAX_LINES_OF_CODE = 1000
 
-  use_database_pool milestone: :persistent
+  use_reader_connection_for_route(:milestone)
 
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
@@ -39,10 +39,10 @@ class ActivitiesController < ApplicationController
     # Keep this logic in sync with code-studio/reporting#sendReport on the client.
     post_milestone = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
     post_failed_run_milestone = Gatekeeper.allows('postFailedRunMilestone', where: {script_name: script_name}, default: true)
-    final_level = @script_level.try(:final_level?)
+    final_level = @script_level.try(:end_of_script?)
     # We should only expect milestone posts if:
     #  - post_milestone is true, AND (we post on failed runs, or this was successful), or
-    #  - this is the final level - we always post on final level
+    #  - this is the final level in the script - we always post on final level
     unless (post_milestone && (post_failed_run_milestone || solved)) || final_level
       head 503
       return
@@ -62,10 +62,13 @@ class ActivitiesController < ApplicationController
       end
 
       unless share_failure || ActivityConstants.skipped?(params[:new_result].to_i)
-        @level_source = LevelSource.find_identical_or_create(
-          @level,
-          params[:program].strip_utf8mb4
-        )
+        # Explicitly use the writer connection to make this write call
+        ActiveRecord::Base.connected_to(role: :writing) do
+          @level_source = LevelSource.find_identical_or_create(
+            @level,
+            params[:program].strip_utf8mb4
+          )
+        end
         if share_filtering_error
           FirehoseClient.instance.put_record(
             :analysis,
@@ -105,23 +108,20 @@ class ActivitiesController < ApplicationController
       params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE
     end
 
-    @level_source_image = find_or_create_level_source_image(params[:image], @level_source)
+    ActiveRecord::Base.connected_to(role: :writing) do
+      @level_source_image = find_or_create_level_source_image(params[:image], @level_source)
 
-    @new_level_completed = false
-    if current_user
-      track_progress_for_user if @script_level
-    else
-      track_progress_in_session
+      @new_level_completed = false
+      if current_user
+        track_progress_for_user if @script_level
+      else
+        track_progress_in_session
+      end
     end
-
-    total_lines = if current_user && current_user.total_lines
-                    current_user.total_lines
-                  end
 
     render json: milestone_response(
       script_level: @script_level,
       level: @level,
-      total_lines: total_lines,
       solved?: solved,
       level_source: @level_source.try(:hidden) ? nil : @level_source,
       level_source_image: @level_source_image,
@@ -216,6 +216,9 @@ class ActivitiesController < ApplicationController
 
     passed = ActivityConstants.passing?(test_result)
     if lines > 0 && passed
+      # TODO: The user's total line count is no longer shown anywhere in the UI.
+      # Remove this as part of LP-2291 to clean up the code that stores and
+      # maintains the total line count.
       current_user.total_lines += lines
       # bypass validations/transactions/etc
       User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)

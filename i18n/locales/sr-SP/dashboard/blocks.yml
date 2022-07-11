@@ -2,6 +2,22 @@
 sr:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': средње
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': средње
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -438,6 +454,10 @@ sr:
           CONDITION:
             '"when"': када
             '"while"': док је
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': секунде
       gamelab_getProp:
         options:
           PROPERTY:
@@ -481,6 +501,12 @@ sr:
             '90': доле
             '180': лево
             '270': горе
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': средње
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -536,6 +562,14 @@ sr:
             '"scale"': величина
             '"width"': Širina
             '"height"': висина
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': нормално
+            '7': fast
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

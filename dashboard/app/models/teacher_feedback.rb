@@ -28,12 +28,12 @@
 class TeacherFeedback < ApplicationRecord
   acts_as_paranoid # use deleted_at column instead of deleting rows
   validates_presence_of :student_id, :script_id, :level_id, :teacher_id, unless: :deleted?
-  belongs_to :student, class_name: 'User'
+  belongs_to :student, class_name: 'User', optional: true
   has_many :user_levels, through: :student
   has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
-  belongs_to :script
-  belongs_to :level
-  belongs_to :teacher, class_name: 'User'
+  belongs_to :script, optional: true
+  belongs_to :level, optional: true
+  belongs_to :teacher, class_name: 'User', optional: true
 
   REVIEW_STATES = OpenStruct.new(
     {
@@ -96,7 +96,11 @@ class TeacherFeedback < ApplicationRecord
     find(
       where(
         query
-      ).group([:student_id, :level_id]).pluck('MAX(teacher_feedbacks.id)')
+      ).group([:student_id, :level_id]).pluck(
+        # This SQL string is not at risk for injection vulnerabilites because
+        # it's just a hardcoded string, so it's safe to wrap in Arel.sql
+        Arel.sql('MAX(teacher_feedbacks.id)')
+      )
     )
   end
 
@@ -106,7 +110,9 @@ class TeacherFeedback < ApplicationRecord
     where(id: joins(:student_sections).
         where('sections.user_id = teacher_id').
         group([:teacher_id, :student_id, :level_id]).
-        pluck('MAX(teacher_feedbacks.id)')
+        # This SQL string is not at risk for injection vulnerabilites because
+        # it's just a hardcoded string, so it's safe to wrap in Arel.sql
+        pluck(Arel.sql('MAX(teacher_feedbacks.id)'))
   )
   end
 

@@ -79,11 +79,16 @@
     "short_instructions": "Change each \"when key pressed\" block to \"while key pressed\" to make the sprite's movement faster and smoother.",
     "hint_prompt_attempts_threshold": "1",
     "instructions_icon": "crab",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:51.795+00:00\",\"changed\":[\"cloned from \\\"courseF_events_choice_penguin\\\"\"],\"cloned_from\":\"courseF_events_choice_penguin\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:51.795+00:00\",\"changed\":[\"cloned from \\\"courseF_events_choice_penguin\\\"\"],\"cloned_from\":\"courseF_events_choice_penguin\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "events": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

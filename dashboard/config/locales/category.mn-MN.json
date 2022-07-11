@@ -1,0 +1,17 @@
+{
+  "mn-MN": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Тооцоолох ухаан"
+        },
+        "ccela/L": {
+          "description": "Хэл"
+        },
+        "csta/IC": {
+          "description": "Тооцооллын нөлөө"
+        }
+      }
+    }
+  }
+}

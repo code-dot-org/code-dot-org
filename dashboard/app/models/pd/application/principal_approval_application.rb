@@ -1,4 +1,3 @@
-
 # == Schema Information
 #
 # Table name: pd_applications
@@ -22,6 +21,7 @@
 #  properties                  :text(65535)
 #  deleted_at                  :datetime
 #  status_timestamp_change_log :text(65535)
+#  applied_at                  :datetime
 #
 # Indexes
 #
@@ -42,8 +42,6 @@ module Pd::Application
 
     belongs_to :teacher_application, class_name: 'Pd::Application::TeacherApplication',
                primary_key: :application_guid, foreign_key: :application_guid
-
-    validates_presence_of :teacher_application
 
     # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
     def year
@@ -217,7 +215,7 @@ module Pd::Application
       end
     end
 
-    def self.filtered_labels(course)
+    def self.filtered_labels(course, status = 'unreviewed')
       ALL_LABELS
     end
 

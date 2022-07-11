@@ -67,11 +67,16 @@
     "encrypted_examples": "8djGGNU/sKWVvresdCJXtl2FrUwCy0Nm+mKgch2970gC9bBRkZYQAg5H24dX\ngjeaZsMyZ3t936f7+5KYzQQoPg==\n",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Add a prompt to the screen.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:32.671+00:00\",\"changed\":[\"cloned from \\\"courseF_text_prompts\\\"\"],\"cloned_from\":\"courseF_text_prompts\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:32.671+00:00\",\"changed\":[\"cloned from \\\"courseF_text_prompts\\\"\"],\"cloned_from\":\"courseF_text_prompts\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "variables": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

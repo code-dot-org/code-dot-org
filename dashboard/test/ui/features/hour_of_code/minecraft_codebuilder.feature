@@ -18,7 +18,7 @@ Scenario: Importing an Agent level from a share link
   And I press "runButton"
   And I wait until element "#finishButton" is visible
   And I press "finishButton"
-  And I wait until element "#sharing-input" is visible
+  And I wait until element "#sharing-dialog-copy-button" is visible
   And I save the share URL
 
   #
@@ -64,7 +64,7 @@ Scenario: Importing an Agent level from a project link
   Then I drag block "1" to block "10"
   And I press "runButton"
   And I click selector ".project_share"
-  And I wait until element "#sharing-input" is visible
+  And I wait until element "#sharing-dialog-copy-button" is visible
   And I save the share URL
 
   #

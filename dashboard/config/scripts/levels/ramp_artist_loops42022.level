@@ -49,11 +49,16 @@
     "bubble_choice_description": "Create this star pattern by looping a sequence",
     "thumbnail_url": "https://images.code.org/bb1466b0d57422a2272223e4c145895a-image-1615564104224.png",
     "validation_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Slow intro to loops.  Start with line...profit.",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:44.810+00:00\",\"changed\":[\"cloned from \\\"ramp_artist_loops4_2021\\\"\"],\"cloned_from\":\"ramp_artist_loops4_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:44.810+00:00\",\"changed\":[\"cloned from \\\"ramp_artist_loops4_2021\\\"\"],\"cloned_from\":\"ramp_artist_loops4_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

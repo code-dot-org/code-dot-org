@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Bring AP® Computer Science A to your students next year!",
+          "details": "Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.",
+          "link": "https://code.org/educate/csa",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -17,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-11 18:21:40 UTC",
+    "serialized_at": "2022-05-20 16:24:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -62,11 +71,20 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "announcements": [
+          {
+            "notice": "Lesson Updated March 4",
+            "details": "Due to a change in Google's privacy policies, the Google Trends tool is no longer accessible to most students. We've updated this lesson to remove the use of the Google Trends tool. If you'd like to reference the old version of this lesson with Google Trends included, please click the \"Learn More\" button.",
+            "link": "https://curriculum.code.org/csp-20/unit9/1/",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students explore the Google Trends tool in order to tell a \"data story\" which explains both what the data shows and why that might be. Following this, students are introduced to the concept of metadata and look for the metadata of datasets on App Lab. ",
-        "preparation": "* Preview Google Trends and prepare for the demo",
-        "purpose": "The three main purposes of this lesson are:\r\n\r\n1. Navigating and using a real data tool (Google Trends, see below) that is external to the course\r\n2. Getting acquainted with talking and writing about data. In particular we want to:\r\n\t* Draw a distinction between describing what the data shows and describing why it might be that way\r\n\t* In other words: describe connections and trends in data separate from drawing conclusions.\r\n\t* We want students to get in the habit of separating the what from the why when it comes to talking and writing about data\r\n3. Introduce the concept of metadata. We want students to understand the value of data about data, that can be used to find, organize, and manage information. It also increases effective use of data by providing extra information. \r\n",
-        "student_overview": "Explore the Google Trends tool in order to tell a \"data story\"."
+        "overview": "In this lesson students explore the “What’s Going on in this Graph?” site in order to tell a \"data story\" which explains both what the data shows and why that might be. Following this, students are introduced to the concept of metadata and look for the metadata of datasets on App Lab.",
+        "preparation": "* Preview [“What’s Going on in this Graph?”](https://www.nytimes.com/2020/06/10/learning/over-60-new-york-times-graphs-for-students-to-analyze.html) and prepare for the demo",
+        "purpose": "The two main purposes of this lesson are:\n\n1. Getting acquainted with talking and writing about data. In particular we want to:\n\t* Draw a distinction between describing what the data shows and describing why it might be that way\n\t* In other words: describe connections and trends in data separate from drawing conclusions.\n\t* We want students to get in the habit of separating the what from the why when it comes to talking and writing about data\n2. Introduce the concept of metadata. We want students to understand the value of data about data, that can be used to find, organize, and manage information. It also increases effective use of data by providing extra information. \n",
+        "student_overview": "In this lesson, you will explore the “What’s Going on in this Graph?” site in order to tell a \"data story\" which explains both what the data shows and why that might be. Following this, you will learn about the concept of metadata and look for the metadata of datasets on App Lab."
       },
       "seeding_key": {
         "lesson.key": "Learning From Data",
@@ -859,7 +877,7 @@
       "key": "7bfefde0-c687-4b38-a1a8-f6926c219768",
       "position": 1,
       "properties": {
-        "description": "Welcome to Unit 9: Data! In this unit, we are going to learn how to organize and visualize data to answer questions. We'll make charts, look for patterns, and consider the impact that data collection has on our world. \r\n\r\nLet's get things started by asking a question.",
+        "description": "Welcome to Unit 9: Data! In this unit, we are going to learn how to organize and visualize data to answer questions. We'll make charts, look for patterns, and consider the impact that data collection has on our world. \n\nLet's get things started by asking some questions.",
         "remarks": true
       },
       "seeding_key": {
@@ -871,7 +889,7 @@
       "key": "d99c8fd8-3e58-4552-bff8-47fc0161571f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What time of year do people tend to search online for chocolate? How could you check your guess?*\n\n**Discussion Goal:** Student answers will vary, but they may include major holidays like Valentine's Day. Students may also have several different ideas for how those answers could be checked, and ultimately you will want to guide your students towards the idea of using a search tool. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What types of data visualizations do you know of? Why do we visualize data? *\n\n**Discussion Goal:** Use this discussion to gauge some of the prior knowledge your students hold about data visualizations. Push students to think about how data visualizations help people answer questions, observe patterns, and generate new ideas and questions."
       },
       "seeding_key": {
         "activity_section.key": "d99c8fd8-3e58-4552-bff8-47fc0161571f",
@@ -879,22 +897,12 @@
       }
     },
     {
-      "key": "2c42a2b7-d1f4-4a7b-9f96-b9d7f8a2ea6f",
-      "position": 3,
-      "properties": {
-        "description": "Search tools are useful for efficiently finding information. How can we analyze our searches to discover patterns or trends? Let's find out!",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "2c42a2b7-d1f4-4a7b-9f96-b9d7f8a2ea6f",
-        "lesson_activity.key": "31102638-cc23-4656-8c44-55fae1b07ae9"
-      }
-    },
-    {
       "key": "8679ac0d-ea53-4b87-8fe6-f8c9618bc293",
       "position": 1,
       "properties": {
-        "description": "When you post information to a social network, watch a video online, or simply search for information on a search engine, some of that data is collected, and you reveal what topics are currently on your mind. When a topic is quickly growing in popularity, it is often said to be trending, but there are many different trends or patterns we might find in this data, including historical trends. These patterns might help us to identify, understand, and predict how our world is changing.\r\n\r\nWe will be using Google Trends which is a tool that allows you to visualize data about search history across different times and locations. We can use it to look for interesting patterns, trends, or relationships between multiple trends and try to tell the story that pattern is showing.",
+        "description": "Today you are going to get practice in telling a data story based on a data visualization. Let's start by looking at an example of a data visualization.",
+        "duration": "20",
+        "name": "What's Going On in This Graph?",
         "remarks": true
       },
       "seeding_key": {
@@ -906,7 +914,7 @@
       "key": "4f2ff903-c95e-4c77-bfc9-99b66a8a2f31",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** The chart relates to the warm-up question and shows searches for chocolate over the past 5 years.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What pattern do you notice? What could be the reason for that pattern? Does this data support your earlier guesses?*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** The graph showing Fast-food restaurants Population 16-19, and Teenage Employment. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder? What might be going on in this graph?*\n\n**Discussion Goal:** Use this discussion to help point out features of the graph like the scale used on the y-axis and the fact that the percentage change is compared with the year 2000. Also, use this discussion to get students started thinking about what is shown in the graph and what outside knowledge they might be bringing in to try and understand what might be going on in this graph."
       },
       "seeding_key": {
         "activity_section.key": "4f2ff903-c95e-4c77-bfc9-99b66a8a2f31",
@@ -917,7 +925,7 @@
       "key": "3b856a9f-01e5-43ef-b3c2-86f9d335a576",
       "position": 3,
       "properties": {
-        "description": "This chart gives us information: a collection of facts and patterns extracted from data. We can use this information to identify trends, make connections and address problems. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> There are two distinctions we need to make when looking at a chart or visualization:\r\n\r\n* What does the data show?\r\n* Why might that be the case?\r\n\r\nThe \"what\" is the facts of the matter. Chocolate searches spike in December. The \"why\" is an informed opinion. Chocolate searches spike around the time of the winter holidays because it's a common gift.",
+        "description": "This chart gives us information: a collection of facts and patterns extracted from data. We can use this information to identify trends, make connections and address problems. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> There are two distinctions we need to make when looking at a chart or visualization:\n\n* What does the data show?\n* Why might that be the case?\n\nThe \"what\" is the facts of the matter. The percentage of teenagers in the workforce has decreased since 2000. The \"why\" is an informed opinion. Fewer teenagers are working because more are focused on their education and earning scholarships.",
         "remarks": true
       },
       "seeding_key": {
@@ -929,7 +937,13 @@
       "key": "2f2debc2-5b96-4dc0-b262-f149521183de",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate how to use Google Trends in front of the class. Add several search items (for example: streaming, mp3, cd) or take suggestions from the class. Demonstrate usage of the dropdowns to narrow focus. As a class look for patterns in the data. Practice stating the *What* and the *Why* as you make charts with the class. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Now students use Google Trends themselves to look for \"data stories\". Depending on class time, allow students to share their data stories with partners or with the class as a whole."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Demo:** Demonstrate how to navigate the “What’s Going On in This Graph?” website in front of the class. Show your students the two ways the graphs are sorted (by topic and by type). Then, show them the page for the [“A Fast-Food Problem: Where Have All the Teenagers Gone?”](https://www.nytimes.com/2018/10/09/learning/whats-going-on-in-this-graph-oct-10-2018.html) and walk them through the structure of the page and instruct them just focus on the questions for now. If time allows, you may choose to demo another graph and model stating the What and the Why as you make look at the charts with the class.\n \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** In pairs, have students use the “What’s Going On in This Graph?” site to look for “data stories” and have them complete the Activity Guide. Depending on class time, allow students to share their data stories with another group or with the class as a whole.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While the resource for this lesson contains 60 graphs, the “What’s Going On in This Graph?” [column](https://www.nytimes.com/column/whats-going-on-in-this-graph) from the New York Times is still updated and may be something you’d like to share with your students for more current graphs."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2f2debc2-5b96-4dc0-b262-f149521183de",
@@ -940,7 +954,7 @@
       "key": "654401e1-26af-4933-a234-4e3537c352ea",
       "position": 5,
       "properties": {
-        "description": "Using Google Trends to find patterns represents an important concept in understanding how programs are used to gain insight and knowledge from data. When you worked with the tool, there were elements of both interaction and iteration. You interacted with the tool trying out several different options, and repeated the process (iteration) until you came to a possible conclusion. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As you were determining the **Why** in your data stories, you may have been tempted to draw concrete connections. However, it's important to remember that correlation (similarities, patterns) does not equal causation (this thing caused that thing). There can be any number of reasons why a pattern or interesting data point may appear in a chart - and our job is to make an informed decision while recognizing that there may be multiple factors at play.  Usually additional research with several data sets is necessary to understand the exact nature of the relationship between data. Did this one thing cause another thing to happen? Do more people search for chocolate because they want to give it as a gift, or could there perhaps be another reason?\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In this unit we will be making charts to help answer questions:\r\n\r\n* *\"I think this visualization tells me this…\"*\r\n\t* Something is more popular than something else\r\n\t* Something is more important than something else\r\n\t* Something has become more or less searched over time\r\n\r\n* *\"... but I'm not sure because…\"*\r\n\t* I don't know exactly how the data was collected\r\n\t* This might tell me people searched for green more than red, but it doesn't tell me why they do that or that green is a better color\r\n\t* We need more data!\r\n\r\nWhen we consider datasets, it's helpful to know as much about those datasets as possible. Where did the data come from? How much data is included? When was it collected?\r\n\r\nAll of this information is considered **metadata** which is defined as \"data about data\". \r\n\r\nWe can have metadata about any digital data. For example, this picture contains metatdata that tells us the when the picture was created, what the resolution is, and how many people have downloaded it. Datasets can also have metadata that explains more about the information in the dataset. You've seen this in App Lab!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As you were determining the **Why** in your data stories, you may have been tempted to draw concrete connections. However, it's important to remember that correlation (similarities, patterns) does not equal causation (this thing caused that thing). There can be any number of reasons why a pattern or interesting data point may appear in a chart - and our job is to make an informed decision while recognizing that there may be multiple factors at play.  Usually additional research with several data sets is necessary to understand the exact nature of the relationship between data. Did this one thing cause another thing to happen? Do more people search for chocolate because they want to give it as a gift, or could there perhaps be another reason?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> These two graphs show examples of visualizations that show a correlation between two factors, but it would be pretty hard to make the case that either of these things caused the other. These are some examples that are meant to be silly, but also they show us the importance of separating out the \"What\" from the \"Why\".\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In this unit we will be making charts to help answer questions:\n\n* *\"I think this visualization tells me this…\"*\n\t* Something is more popular than something else\n\t* Something is more important than something else\n\t* Something has become more or less searched over time\n\n* *\"... but I'm not sure because…\"*\n\t* I don't know exactly how the data was collected\n\t* This might tell me people searched for green more than red, but it doesn't tell me why they do that or that green is a better color\n\t* We need more data!\n\n",
         "remarks": true
       },
       "seeding_key": {
@@ -949,10 +963,24 @@
       }
     },
     {
-      "key": "af5231ee-f66b-495e-856e-4faa8c87ad15",
+      "key": "12f1211c-79b6-4181-bbcf-df47d2a19480",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is the metadata for the chart you created in Google Trends?*\n\n**Discussion Goal:** Students may bring up the sources of the data (Google Searches) or the dropdowns that control how the chart is built. If students want to dig deeper into the metadata, consider pointing them to the [Google Trends Help Page](https://support.google.com/trends/answer/4355213?hl=en&ref_topic=4365599). \n"
+        "description": "When we consider datasets, it's helpful to know as much about those datasets as possible. Where did the data come from? How much data is included? When was it collected?\n\nAll of this information is considered **metadata** which is defined as \"data about data\". \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We can have metadata about any digital data. For example, this picture contains metatdata that tells us the when the picture was created, what the resolution is, and how many people have downloaded it. Datasets can also have metadata that explains more about the information in the dataset. You've seen this in App Lab!",
+        "duration": "10",
+        "name": "Exploring Metadata",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "12f1211c-79b6-4181-bbcf-df47d2a19480",
+        "lesson_activity.key": "23a43089-7330-4740-9e47-fd34fc48126b"
+      }
+    },
+    {
+      "key": "af5231ee-f66b-495e-856e-4faa8c87ad15",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is the metadata for the graph you picked for your data story?*\n\n**Discussion Goal:** If students haven’t already found it, point them to the bottom of the page where they found their graph where the source of the data and some other information about it can be found. If students want to dig deeper, most of the graphs have an article associated with them they could read for more context. \n"
       },
       "seeding_key": {
         "activity_section.key": "af5231ee-f66b-495e-856e-4faa8c87ad15",
@@ -961,7 +989,7 @@
     },
     {
       "key": "3d6b1910-ef80-4321-b15e-75f383924875",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "Now let's explore metadata in App Lab in the datasets you've used in previous units. Where can we find this information? What can it tell us about the data? How can it help us organize the data?",
         "remarks": true
@@ -973,9 +1001,9 @@
     },
     {
       "key": "e09762df-c895-4667-bbdd-9cc8482f16db",
-      "position": 8,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 2 on Code Studio where they open the data tab and look at the metadata for a table. Then they should share with a partner where the data comes from and what they can learn from the metadata.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 1 on Code Studio where they open the data tab and look at the metadata for a table. Then they should share with a partner where the data comes from and what they can learn from the metadata.",
         "progression_name": "Exploring Metadata"
       },
       "seeding_key": {
@@ -987,7 +1015,7 @@
       "key": "02d4cdd5-11d2-4933-bd89-932312dd0bc2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review key takeaways on the slide. Students may want to jot down notes in their journals. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add the following word and definition to their journal: metadata. \r\n\r\n---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Below is an image from Google Trends that plots Cats and Dogs. Choose the most accurate description of what this data is actually showing based on what you know about how Google Trends works."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review key takeaways on the slide. Students may want to jot down notes in their journals. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add the following word and definition to their journal: metadata. \n\n---\n\n## Assessment: Check For Understanding\n    \n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Google Trends which is a tool that allows you to visualize data about search history across different times and locations.\n\nBelow is an image from Google Trends that plots Cats and Dogs.\nChoose the most accurate description of what this data is actually showing based on what you know about how Google Trends works.\n"
       },
       "seeding_key": {
         "activity_section.key": "02d4cdd5-11d2-4933-bd89-932312dd0bc2",
@@ -3070,6 +3098,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -3563,6 +3594,18 @@
       }
     },
     {
+      "name": "Exploring One Column Unit 9 Lesson 2",
+      "url": "https://docs.google.com/document/d/1R6cgFwz6_DRDelbKlX86-frQp2sCijUB4nOY3yTJRh8/edit?usp=sharing",
+      "key": "exploring_one_column_unit_9_lesson_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_one_column_unit_9_lesson_2"
+      }
+    },
+    {
       "name": "Filtering Data Unit 9 Lesson 3",
       "url": "https://docs.google.com/document/d/1AVWPKZcB_FqB0O_MtH6URDPAqnbcdTElmV9V1UJIH38/edit?usp=sharing",
       "key": "filtering_data_unit_9_lesson_3",
@@ -3576,15 +3619,27 @@
       }
     },
     {
-      "name": "Google Trends",
-      "url": "https://www.google.com/trends/",
-      "key": "google-trends",
+      "name": "Filtering Data Unit 9 Lesson 3",
+      "url": "https://docs.google.com/document/d/1gjb51mzUUjIgCPsT95wueh3jhikVl0KsSgKUjhKNgqs/edit?usp=sharing",
+      "key": "filtering_data_unit_9_lesson_3_1",
       "properties": {
-        "audience": "Student",
-        "type": "Link"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
-        "resource.key": "google-trends"
+        "resource.key": "filtering_data_unit_9_lesson_3_1"
+      }
+    },
+    {
+      "name": "Learning From Data",
+      "url": "https://docs.google.com/document/d/11uJjxHRdQwKq0gWJuFEhvPKNCt0_Vw8r62jFlXrj0Ww/edit?usp=sharing",
+      "key": "learning_from_data",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "learning_from_data"
       }
     },
     {
@@ -3626,7 +3681,7 @@
     },
     {
       "name": "U9 Sample Project 1",
-      "url": "https://docs.google.com/document/d/1VJciLn-zKfugkaSoZzQ9RaLWlxZhRoiiyJ_lAnVY_ZA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1sRBpINFb-LXLUKRBdAyRYzHAIAGxW2T3c3Jh8_1ly9c/edit?usp=sharing",
       "key": "u9_sample_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3683,6 +3738,18 @@
       "seeding_key": {
         "resource.key": "virtual_modification_resources"
       }
+    },
+    {
+      "name": "What's Going On in This Graph?",
+      "url": "https://www.nytimes.com/2020/06/10/learning/over-60-new-york-times-graphs-for-students-to-analyze.html",
+      "key": "what_s_going_on_in_this_graph__1",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "what_s_going_on_in_this_graph__1"
+      }
     }
   ],
   "lessons_resources": [
@@ -3718,6 +3785,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "resource.key": "exploring_one_column_unit_9_lesson_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Exploring Two Columns",
         "resource.key": "csp-u9-presentation"
       }
@@ -3748,6 +3821,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "resource.key": "filtering_data_unit_9_lesson_3_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Learning From Data",
         "resource.key": "csp-u9-presentation"
       }
@@ -3755,7 +3834,13 @@
     {
       "seeding_key": {
         "lesson.key": "Learning From Data",
-        "resource.key": "google-trends"
+        "resource.key": "learning_from_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "resource.key": "what_s_going_on_in_this_graph__1"
       }
     },
     {
@@ -4046,16 +4131,6 @@
       "seeding_key": {
         "lesson.key": "Project - Tell a Data Story - Part 2",
         "objective.key": "923cb922-4718-43ed-a135-f3bd078fd3db"
-      }
-    },
-    {
-      "key": "b5c2baeb-5316-4615-ae53-ca10c7a0d567",
-      "properties": {
-        "description": "Use Google Trends to tell a data story"
-      },
-      "seeding_key": {
-        "lesson.key": "Learning From Data",
-        "objective.key": "b5c2baeb-5316-4615-ae53-ca10c7a0d567"
       }
     },
     {

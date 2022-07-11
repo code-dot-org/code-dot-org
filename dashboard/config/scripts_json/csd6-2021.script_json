@@ -36,7 +36,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-11-30 19:29:28 UTC",
+    "serialized_at": "2022-03-23 21:08:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -99,7 +99,7 @@
         "assessment_opportunities": "1. **Identify computing innovations within a given field**\r\n\r\n\tActivity Guide, page 2: The description of the device, its purpose, and the type of innovation should clearly demonstrate what it does and why it is innovative.\r\n\r\n2. **For a given device, articulate the likely inputs and outputs**\r\n\r\n\tActivity Guide, page 2: The description of the user interaction should identify multiple possible inputs and outputs for the device.\r\n\r\n3. **Suggest improvements to help a device better solve a specific problem**\r\n\r\n\tActivity Guide, page 2: The suggested improvements should relate to the purpose of the device and how it is used.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.",
-        "preparation": "* Review the resource pages linked in Code Studio\n* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=1x54GqfL3UY&feature=youtu.be)\t\n* Print out a copy of the activity guide for each student",
+        "preparation": "* Review the resource pages linked in Code Studio\n* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n* Print out a copy of the activity guide for each student",
         "purpose": "This lesson will lay the groundwork for students' understanding of how their Circuit Board could be used to model an innovative computing device. The goal is to get them thinking about how computers can be embedded into just about anything, and to start considering the potential impacts of such applications.",
         "student_overview": "In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.\n"
       },
@@ -1221,7 +1221,7 @@
       "key": "9c23f514-e5e6-45f4-9038-c8c68e26c041",
       "position": 2,
       "properties": {
-        "description": "**Video:** Watch either [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=1x54GqfL3UY&feature=youtu.be) as a class.",
+        "description": "**Video:** Watch either [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY) as a class.",
         "name": "Get Inspired\r"
       },
       "seeding_key": {
@@ -10184,7 +10184,7 @@
       }
     },
     {
-      "name": "How Computers Word: Hardware & Software",
+      "name": "How Computers Work: Hardware & Software",
       "url": "https://www.youtube.com/watch?v=xnyFYiK2rSY",
       "key": "how_computers_word_hardware_software",
       "properties": {
@@ -10210,7 +10210,7 @@
     },
     {
       "name": "Computer Science is Changing Everything",
-      "url": "https://youtu.be/1x54GqfL3UY",
+      "url": "https://www.youtube.com/watch?v=QvyTEx1wyOY",
       "key": "innovation-video-1-1",
       "properties": {
         "audience": "Student",
@@ -11038,7 +11038,7 @@
     {
       "key": "parameter",
       "word": "Parameter",
-      "definition": "An extra piece of information passed to a function to customize it for a specific need",
+      "definition": "Additional information provided as input to a block to customize it's functionality",
       "properties": {
       },
       "seeding_key": {

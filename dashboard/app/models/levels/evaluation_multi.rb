@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -26,12 +26,12 @@
 
 class EvaluationMulti < Multi
   def dsl_default
-    <<~ruby
+    <<~RUBY
       name 'Unique question name here'
       question 'Question'
       answer 'Answer1', weight: 1, lesson_name: 'lesson_name'
       answer 'Answer2', weight: 1, lesson_name: 'lesson_name'
-    ruby
+    RUBY
   end
 
   def answers

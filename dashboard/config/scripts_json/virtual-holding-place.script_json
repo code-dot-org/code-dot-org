@@ -5,11 +5,13 @@
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
-      "is_migrated": true
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-22 19:57:19 UTC",
+    "family_name": "virtual-holding-place",
+    "serialized_at": "2022-04-08 15:41:01 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

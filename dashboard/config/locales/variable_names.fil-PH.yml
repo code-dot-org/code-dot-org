@@ -9,6 +9,7 @@ fil:
       age: edad
       answer: sagot
       binary: binary
+      birds: mga ibon
       cats: mga Pusa
       color: kulay
       counter: taga pag bilang
@@ -20,15 +21,20 @@ fil:
       length: haba
       name: pangalan
       nectar: nectar
+      planet: planeta
       points: mga puntos
       random: nang hindi pinipili
       repeat: ulitin
       right: kanan
       score: Score
+      shout: |2-
+
+        sigaw
       size: sukat
       speed: bilis
       startX: startx
       startY: startY
+      variable: variable
       width: lapad
       wizard: salamangkero
       x: x

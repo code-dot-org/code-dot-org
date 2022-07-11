@@ -16,7 +16,7 @@
   n_have_learned_an_hoc: "<h1>Probieren Sie eine</h1><h2>Hour of Code</h2><h3># mal genutzt</h3>"
   try_hoc_num_served: "<h1>Versuche eine</h1><h2>Hour of Code</h2><h3>%{num} die angeboten wird</h3>"
   try_hoc_num_served_markdown: |-
-    # Veruche eine
+    # Versuche eine
 
     ## Hour of Code
 
@@ -38,9 +38,9 @@
   submit: "Absenden"
   twentyhours_heading: "Testen Sie unseren Kurs \"Einführung in die Informatik\""
   twentyhours_text: "Sie haben Ihre erste „Hour of Code“ beendet? Lernen Sie in diesem Folgekurs weitere Informatik- und Programmierkonzepte."
-  og_title: 'Jedes Kind verdient eine Gelegenheit'
+  og_title: 'Code.org: Jeder kann lernen'
   og_title_soon: "Stunde des Codes kommt bald"
-  og_title_here: "Die Stunde des Codes ist gekommen!"
+  og_title_here: "Die Stunde des Programmierens ist gekommen!"
   og_description: "In jeder Schule sollten Schüler die Gelegenheit erhalten, Informatik zu lernen."
   og_description_celeb: "Probiere die neuen Tutorials aus und gewinne einen Videochat mit einem Promi für dich oder deine Klasse!"
   csedweek_og_title: "Die Stunde des Codes ist hier"
@@ -367,6 +367,7 @@
   homepage_slot_text_link_buy: "Mitmachen"
   homepage_slot_text_link_donate: "Spende"
   homepage_slot_text_link_shop: "T-shirts, Hüte & mehr"
+  homepage_slot_text_link_thebadguys: "Programmieren mit Die Gangster Gang"
   homepage_slot_text_link_administrators: "Bringem Sie Informatik in Ihre Schule"
   homepage_gallery_header: "Über %{project_count} Millionen erstellte Code.org Projekte"
   homepage_header_donors: "Code.org dankt seinen Unterstützern"
@@ -374,6 +375,8 @@
   homepage_donors_donate: "Spenden"
   homepage_below_hero_announcement_text: "Der Schutz deiner Daten ist uns wichtig, weshalb wir unsere Datenschutzerklärung mit Wirkung zum 25. Mai aktualisieren."
   homepage_below_hero_announcement_link_text: "Mehr erfahren"
+  homepage_higher_power_body: "Programmiere einen Tanz zu „Higher Power“ Coldplay, dann kannst du die Band vielleicht live erleben!"
+  homepage_thebadguys_body: "Codiere ein Abenteuer mit Frau Tarantula, Herrn Wolf und den anderen Figuren aus dem Film **Die Gangster Gang**!"
   contact_form_topic_student: "Ich bin ein Schüler"
   contact_form_topic_parent: "Ich bin ein Elternteil"
   contact_form_topic_teacher: "Ich bin Lehrer/Pädagoge"
@@ -505,6 +508,8 @@
   video_title_marco_belinelli: "Hour of Code mit Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh über Informatik"
   video_title_my_name_is_aracely: "Mein Name ist Aracely"
+  video_title_change_face_of_cs: "Das Gesicht der Informatik verändern"
+  video_title_latam_hoc: "Lo Que Falta En Nuestras Escuelas"
   video_1min: "1 Minute"
   video_2min: "2 Minuten"
   video_3min: "3 Minuten"
@@ -969,6 +974,10 @@
   coursed-2021_name: Kurs D (2021)
   coursee-2021_name: Kurs E (2021)
   coursef-2021_name: Kurs F (2021)
+  coursea-2022_name: Kurs A (2021)
+  courseb-2022_name: Kurs B (2021)
+  coursec-2022_name: Kurs C (2021)
+  coursed-2022_name: Kurs D (2021)
   express-2018_name: Expresskurs (2018)
   pre-express-2018_name: Leseanfänger-Expresskurs (2018)
   express-2019_name: Expresskurs (2019)
@@ -1089,6 +1098,12 @@
   coursed-2021_gradelevel: Ab 8. Klasse
   coursee-2021_gradelevel: Alter 8-12
   coursef-2021_gradelevel: Alter 9-13
+  coursea-2022_gradelevel: Alter 4-7
+  courseb-2022_gradelevel: Alter 5-8
+  coursec-2022_gradelevel: Alter 6-10
+  coursed-2022_gradelevel: Ab 8. Klasse
+  coursee-2022_gradelevel: Alter 8-12
+  coursef-2022_gradelevel: Alter 9-13
   accelerated_gradelevel: "Alter: 10-18"
   codeorg_platformtext: "Moderne Browser, Smartphones, Tablets"
   codeintl_platformtext: "Moderne Browser, Smartphones, Tablets"
@@ -1226,6 +1241,12 @@
   coursed-2021_shortdescription_congrats: Die SchülerInnen entwickeln ihr Verständnis für Schleifen, Bedingungen und Ereignisse. Außer der Codierung lernen die SchülerInnen auch etwas über digitale Bürgerschaft.
   coursee-2021_shortdescription_congrats: Beginne mit der Programmierung von Algorithmen, Schleifen, Bedingungen und Ereignissen und dann geht es weiter mit Funktionen. Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt, das du mit deinen Freunden und deiner Familie teilen kannst.
   coursef-2021_shortdescription_congrats: Lerne die Verwendung verschiedener Arten von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein Capstone Projekt, das du mit Freunden und Familie teilen kannst.
+  coursea-2022_shortdescription_congrats: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+  courseb-2022_shortdescription_congrats: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+  coursec-2022_shortdescription_congrats: Erstellen Sie Programme mit Sequenzen, Schleifen und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre eigene Geschichte, die Sie mit anderen teilen können!
+  coursed-2022_shortdescription_congrats: Die SchülerInnen entwickeln ihr Verständnis für Schleifen, Bedingungen und Ereignisse. Außer der Codierung lernen die SchülerInnen auch etwas über digitale Bürgerschaft.
+  coursee-2022_shortdescription_congrats: Beginne mit der Programmierung von Algorithmen, Schleifen, Bedingungen und Ereignissen und dann geht es weiter mit Funktionen. Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt, das du mit deinen Freunden und deiner Familie teilen kannst.
+  coursef-2022_shortdescription_congrats: Lerne die Verwendung verschiedener Arten von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein Capstone Projekt, das du mit Freunden und Familie teilen kannst.
   codeorg_longdescription: "Lerne die Grundlagen der Informatik mit Programmierbausteinen. Dies ist eine spielerische, selbstgesteuerte Einführung mit Videolektionen von Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies. Lerne Wiederholungsschleifen, Wenn-Sonst-Anweisungen und einfache Algorithmen. In 34 Sprachen verfügbar."
   codeintl_longdescription: "Lerne die Grundlagen des Programmierens ganz einfach durch \"Drag & Drop\". Ganz spielerisch kannst Du dich selbst durch unseren Unterricht mit Videos von Bill Gates, Mark Zuckerberg, Angry Birds oder Plants vs. Zombies navigieren.\nLerne, Schleifen zu programmieren, Bedingungen einzusetzen und einfache Algorithmen zu entwickeln. Das Programm ist in 34 Sprachen verfügbar."
   thinkersmithspanish_longdescription: "Mit vordefiniertem \"Roboter-Vokabular\" finden Schüler heraus, wie sie einander führen können, um Aufgaben zu lösen, ohne diese vorher besprochen zu haben. Diese Lektion bringt Schülern die Verbindung zwischen Symbolen und Aktionen als auch die Fähigkeit des Code-Korrigerens bei."
@@ -1464,6 +1485,7 @@
   header_educate_beyond: "Jenseits von Code.org"
   header_educate_inspire: "Inspiriere einen Schüler/eine Schülerin"
   header_educate_community: "Online Community"
+  header_educate_requirements: "Technische Voraussetzungen"
   header_educate_tools: "Hilfsmittel und Videos"
   header_about_us: "Über uns "
   header_about_leadership: "Die Leitung"
@@ -1686,6 +1708,8 @@
   hoc2018_dance_video2: "Tanzparty - Ereignisse"
   hoc2018_dance_video3: "Tanzparty - Eigenschaften"
   hoc2018_dance_video4: "Tanzparty - Glückwünsche"
+  dance_box_higher_power_line_1: "Programmiere einen Tanz zu „Higher Power“ Coldplay, dann kannst du die Band vielleicht live erleben!"
+  dance_box_higher_power_line_2: "Besuche <a href=\"%{path}\">code.org/coldplay</a> und erfahre mehr darüber"
   page_not_found_title: "Seite nicht gefunden"
   page_not_found_header: '404: Seite nicht gefunden'
   page_not_found_description: "Die Seite die Sie suchen gibt es nicht unter dieser Adresse. Prüfen Sie die Adresse und versuchen Sie es noch einmal. Oder, gehen Sie zurück zu unserer Webseite."
@@ -1705,7 +1729,6 @@
   page_not_available_title: "Seite nicht verfügbar"
   page_not_available_description: "Es tut uns leid, die von Ihnen angeforderte Seite ist unter dieser Adresse nicht mehr verfügbar. Wenn Sie weiterhin Zugang benötigen, senden Sie bitte eine E-Mail an [support@code.org] (%{support_email_link})."
   page_not_available_button: "Zurück zur Homepage"
-  ! '': ' '
   hoc2020_mc_available_code_org: "Erhältlich auf Code.org"
   hoc2020_mc_available_mee: 'Erhältlich in Minecraft: Education Edition'
   hoc2020_mc_mee_title: "Minecraft-Geschichte von zwei Dörfern"
@@ -1781,3 +1804,6 @@
   outbreak_tile_title: "Ausbruch"
   outbreak_tile_subtitle: "Ein Virus hat Monster-Town infiziert! Programmieren Sie einen Ausbruchssimulator und prognostizieren Sie, was mit den Nachbarn von Monster-Town geschehen wird."
   outbreak_tile_alt: "Eine Simulation, wie ein Virus sich in einer Gruppe violetter Monster verbreitet."
+  footer_cookie_notice: "Cookie-Meldung"
+  top_hoc_tutorial_applab_alt_text: "Eine braune Hand berührt mit dem Zeigefinger ein Touchscreen-Tablet, das Sterne und Lichtstrahlen vor einem blauen Hintergrund aussendet"
+  minecraft_tile_alt: "Zwei Minecraft-Charaktere, Steve und Alex, vor einem Hintergrund, der eine Minecraft-Szene mit Korallen, Delfinen und Seetang zeigt"

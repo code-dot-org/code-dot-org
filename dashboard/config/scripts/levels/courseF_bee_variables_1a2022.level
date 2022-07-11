@@ -46,11 +46,17 @@
     "show_type_hints": "false",
     "encrypted": "false",
     "hint_prompt_attempts_threshold": "1",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:57.317+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_variables_1a_2021\\\"\"],\"cloned_from\":\"courseF_bee_variables_1a_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:57.317+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_variables_1a_2021\\\"\"],\"cloned_from\":\"courseF_bee_variables_1a_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3,
+    "variables": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

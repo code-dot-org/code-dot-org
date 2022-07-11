@@ -13,21 +13,23 @@ export default function Example({example, programmingEnvironmentName}) {
     </>
   );
   if (example.app) {
-    if (example.appDisplayType === 'displayApp') {
+    if (example.app_display_type === 'codeFromCodeField') {
       const embedUrl = example.app.endsWith('embed')
         ? example.app
         : example.app + '/embed';
       return (
         <div style={styles.example}>
-          <div style={{width: '50%'}}>{content}</div>
-          <iframe
-            src={embedUrl}
-            style={{
-              ...styles.embeddedApp,
-              ...embeddedIdeStyles[programmingEnvironmentName]
-            }}
-          />
-          {example.imageUrl && <img src={example.imageUrl} />}
+          <div style={{flexGrow: 1}}>{content}</div>
+          <div style={embeddedIdeContainerStyles[programmingEnvironmentName]}>
+            <iframe
+              src={embedUrl}
+              style={{
+                ...styles.embeddedApp,
+                ...embeddedIdeStyles[programmingEnvironmentName]
+              }}
+            />
+            {example.image && <img src={example.image} />}
+          </div>
         </div>
       );
     } else {
@@ -42,11 +44,11 @@ export default function Example({example, programmingEnvironmentName}) {
               src={embedUrl}
               style={{
                 width: '100%',
-                height: Number(example.appEmbedHeight) || 310
+                height: Number(example.embed_app_with_code_height) || 310
               }}
             />
           </div>
-          {example.imageUrl && <img src={example.imageUrl} />}
+          {example.image && <img src={example.image} />}
         </div>
       );
     }
@@ -54,7 +56,7 @@ export default function Example({example, programmingEnvironmentName}) {
     return (
       <div>
         {content}
-        {example.imageUrl && <img src={example.imageUrl} />}
+        {example.image && <img src={example.image} />}
       </div>
     );
   }
@@ -68,7 +70,7 @@ Example.propTypes = {
 const styles = {
   example: {
     display: 'flex',
-    gap: 10
+    gap: 20
   },
   embeddedApp: {
     border: 0,
@@ -86,5 +88,18 @@ const embeddedIdeStyles = {
     width: 450,
     height: 781,
     transform: 'scale(0.5)'
+  }
+};
+
+const embeddedIdeContainerStyles = {
+  applab: {
+    width: '280px',
+    height: '450px',
+    paddingTop: '10px'
+  },
+  gamelab: {
+    width: '240px',
+    height: '400px',
+    paddingTop: '20px'
   }
 };

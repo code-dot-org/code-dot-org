@@ -26,6 +26,7 @@ export default function PhotoSelectionView({
       >
         <input
           id={photoInputId}
+          className="uitest-hidden-uploader"
           type="file"
           accept="image/*"
           capture="camera"

@@ -49,11 +49,17 @@
     "hint_prompt_attempts_threshold": "1",
     "validation_enabled": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/b4c3223823ee4d7c812dea31b19e556c=levelbuilder/108345.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:46.429+00:00\",\"changed\":[\"cloned from \\\"courseF_artist_variables9_2021\\\"\"],\"cloned_from\":\"courseF_artist_variables9_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:46.429+00:00\",\"changed\":[\"cloned from \\\"courseF_artist_variables9_2021\\\"\"],\"cloned_from\":\"courseF_artist_variables9_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "variables": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

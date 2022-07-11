@@ -5,7 +5,11 @@
   ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
   "properties": {
+    "family_name": "andrea-test-dlp",
+    "version_year": "unversioned"
   },
   "resources": [
 

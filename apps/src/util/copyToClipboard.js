@@ -1,15 +1,35 @@
-export default function copyToClipboard(str) {
-  window.getSelection().removeAllRanges();
-
-  const tempDiv = document.createElement('pre');
-  tempDiv.innerText = str;
-  document.body.appendChild(tempDiv);
-
-  try {
-    window.getSelection().selectAllChildren(tempDiv);
-    document.execCommand('copy');
+export default function copyToClipboard(
+  str,
+  onSuccess = null,
+  onFailure = null
+) {
+  if (navigator.clipboard && window.isSecureContext) {
+    // Modern technique.
+    navigator.clipboard.writeText(str).then(onSuccess, onFailure);
+  } else {
+    // Legacy technique.
     window.getSelection().removeAllRanges();
-  } finally {
-    document.body.removeChild(tempDiv);
+
+    const tempDiv = document.createElement('pre');
+    tempDiv.innerText = str;
+    document.body.appendChild(tempDiv);
+
+    let errorOccurred = false;
+
+    try {
+      window.getSelection().selectAllChildren(tempDiv);
+      document.execCommand('copy');
+      window.getSelection().removeAllRanges();
+    } catch {
+      if (onFailure) {
+        onFailure();
+      }
+      errorOccurred = true;
+    } finally {
+      document.body.removeChild(tempDiv);
+      if (!errorOccurred && onSuccess) {
+        onSuccess();
+      }
+    }
   }
 }

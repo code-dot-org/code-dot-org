@@ -1,13 +1,16 @@
 class ScriptsController < ApplicationController
   include VersionRedirectOverrider
 
-  before_action :require_levelbuilder_mode, except: [:show, :vocab, :resources, :code, :standards, :edit, :update]
-  before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update]
+  before_action :require_levelbuilder_mode, except: [:show, :vocab, :resources, :code, :standards, :edit, :update, :new, :create]
+  before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
+  before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   authorize_resource
+
+  use_reader_connection_for_route(:show)
 
   def show
     if @script.redirect_to?
@@ -26,7 +29,7 @@ class ScriptsController < ApplicationController
     end
 
     if !params[:section_id] && current_user&.last_section_id
-      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+      redirect_to request.query_parameters.merge({"section_id" => current_user&.last_section_id})
       return
     end
 
@@ -44,7 +47,7 @@ class ScriptsController < ApplicationController
     @show_redirect_warning = params[:redirect_warning] == 'true'
     unless current_user&.student?
       @section = current_user&.sections&.all&.find {|s| s.id.to_s == params[:section_id]}&.summarize
-      sections = current_user.try {|u| u.sections.all.reject(&:hidden).map {|s| s.slice(:id, :name, :script_id, :course_id)}}
+      sections = current_user.try {|u| u.sections.all.reject(&:hidden).map(&:summarize)}
       @sections_with_assigned_info = sections&.map {|section| section.merge!({"isAssigned" => section[:script_id] == @script.id})}
     end
 
@@ -61,6 +64,7 @@ class ScriptsController < ApplicationController
       user_type: current_user&.user_type,
       user_id: current_user&.id,
       user_providers: current_user&.providers,
+      is_instructor: @script.can_be_instructor?(current_user),
       is_verified_instructor: current_user&.verified_instructor?,
       locale: Script.locale_english_name_map[request.locale],
       locale_code: request.locale,
@@ -69,9 +73,9 @@ class ScriptsController < ApplicationController
       sections: @sections_with_assigned_info
     }
 
-    @script_data = @script.summarize(true, current_user).merge(additional_script_data)
+    @script_data = @script.summarize(true, current_user, false, request.locale).merge(additional_script_data)
 
-    if @script.old_professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
+    if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
       @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
     end
   end
@@ -84,12 +88,54 @@ class ScriptsController < ApplicationController
   end
 
   def new
+    @versioned_unit_families = []
+    @unit_families_course_types = []
+    Script.family_names.map do |cf|
+      co = CourseOffering.find_by(key: cf)
+
+      # There are some old family names for connecting between units in a course which will not be a course offering
+      next unless co
+      first_cv = co.course_versions.first
+      next unless first_cv
+      @versioned_unit_families << cf unless first_cv.key == 'unversioned'
+
+      unit = first_cv.content_root
+      next unless unit
+      @unit_families_course_types << [cf, {instruction_type: unit.instruction_type, instructor_audience: unit.instructor_audience, participant_audience: unit.participant_audience}]
+    end
+
+    @unit_families_course_types = @unit_families_course_types.compact.to_h
   end
 
   def create
     return head :bad_request unless general_params[:is_migrated]
-    @script = Script.new(unit_params)
-    if @script.save && @script.update_text(unit_params, i18n_params, general_params)
+
+    # These fields should be set unless a unit is in a unit group
+    # and are required to be set if is_course is true. When creating
+    # a unit it is not yet in a unit group so we set default values here
+    #
+    # Setting default values for the columns would not work because those
+    # are not used when you call new() just when you call create
+    updated_unit_params = unit_params.merge(
+      {
+        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+      }
+    )
+
+    updated_general_params = general_params.merge(
+      {
+        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+      }
+    )
+
+    @script = Script.new(updated_unit_params)
+    if @script.save && @script.update_text(unit_params, i18n_params, updated_general_params)
       redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
     else
       render json: @script.errors
@@ -158,23 +204,19 @@ class ScriptsController < ApplicationController
   end
 
   def vocab
-    return render :forbidden unless can? :read, @script
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def resources
-    return render :forbidden unless can? :read, @script
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def code
-    return render :forbidden unless can? :read, @script
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def standards
-    return render :forbidden unless can? :read, @script
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def get_rollup_resources
@@ -236,12 +278,10 @@ class ScriptsController < ApplicationController
   def set_unit
     @script = get_unit
     raise ActiveRecord::RecordNotFound unless @script
+  end
 
-    if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
-      render :no_access
-    end
-
-    if current_user && @script.in_development? && !current_user.permission?(UserPermission::LEVELBUILDER)
+  def render_no_access
+    if current_user && !current_user.admin? && !can?(:read, @script)
       render :no_access
     end
   end
@@ -284,8 +324,6 @@ class ScriptsController < ApplicationController
       :include_student_lesson_plans,
       :use_legacy_lesson_plans,
       :lesson_groups,
-      resourceTypes: [],
-      resourceLinks: [],
       resourceIds: [],
       studentResourceIds: [],
       project_widget_types: [],
@@ -306,7 +344,6 @@ class ScriptsController < ApplicationController
       :description_short,
       :description,
       :student_description,
-      :stage_descriptions
     ).to_h
   end
 

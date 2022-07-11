@@ -50,11 +50,17 @@
     "bubble_choice_description": "Look for a pattern and make this code shorter using loops.",
     "thumbnail_url": "https://images.code.org/95d79d4cb65b6705b202ad77eda37114-image-1615564135088.png",
     "validation_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Slow intro to loops.  Start with line...profit.",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:45.302+00:00\",\"changed\":[\"cloned from \\\"ramp_artist_loops8_2021\\\"\"],\"cloned_from\":\"ramp_artist_loops8_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:45.302+00:00\",\"changed\":[\"cloned from \\\"ramp_artist_loops8_2021\\\"\"],\"cloned_from\":\"ramp_artist_loops8_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 2,
+    "repeat_loops": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

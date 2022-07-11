@@ -13,24 +13,19 @@ class HttpCache
   DEFAULT_COOKIES = [
     # Language drop-down selection.
     'language_',
+    # Offline experiment flag, to allow users into the pilot
+    'offline_pilot',
+    # Experiment flag used to debug the onetrust cookie experience.
+    'onetrust_cookie_scripts',
     # Page mode, for A/B experiments and feature-flag rollouts.
     'pm'
   ].freeze
 
   # A list of script levels that should not be cached, even though they are
-  # in a cacheable script, because teachers need to be able to review them.
-  # Currently, teachers are not able to review student work on cached levels.
+  # in a cacheable script
   UNCACHED_UNIT_LEVEL_PATHS = [
-    '/s/dance/lessons/1/levels/13',
-    '/s/dance-2019/lessons/1/levels/10',
-    '/s/poem-art-2021/lessons/1/levels/9',
     '/s/poem-art-2021/lessons/1/levels/2', # prediction levels are not cacheable
     '/s/poem-art-2021/lessons/1/levels/5', # prediction levels are not cacheable
-    '/s/hello-world-food-2021/lessons/1/levels/11',
-    '/s/hello-world-animals-2021/lessons/1/levels/11',
-    '/s/hello-world-retro-2021/lessons/1/levels/11',
-    '/s/hello-world-emoji-2021/lessons/1/levels/11',
-    '/s/outbreak/lessons/1/levels/10'
   ]
 
   # A map from script name to script level URL pattern.

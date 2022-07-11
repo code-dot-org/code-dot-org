@@ -41,11 +41,16 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If something isn't working correctly, make sure your blocks are connected to the correct events in the workspace.\",\"hint_id\":\"courseC_flappy_events3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/92b05661c83483b98bdb3d2779251a18/courseC_flappy_events3.mp3\"}]",
     "parent_level_id": 21261,
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:11.632+00:00\",\"changed\":[\"cloned from \\\"courseC_flappy_events3_2021\\\"\"],\"cloned_from\":\"courseC_flappy_events3_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:11.632+00:00\",\"changed\":[\"cloned from \\\"courseC_flappy_events3_2021\\\"\"],\"cloned_from\":\"courseC_flappy_events3_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

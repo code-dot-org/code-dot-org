@@ -2828,6 +2828,28 @@
           "end game": {
             "name": "τέλειωσε το παιχνίδι"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "να σχεδιάζει ένα σχήμα",
+            "parameters": {
+              "sides": "πλευρές",
+              "length": "μήκος"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "συνάρτηση 1"
+          },
+          "function 2": {
+            "name": "συνάρτηση 2"
+          }
         }
       }
     }

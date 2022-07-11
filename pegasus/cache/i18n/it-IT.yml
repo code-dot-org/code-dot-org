@@ -1140,7 +1140,7 @@ it-IT:
   dashboard_overview: Panoramica
   dashboard_sequence: Sequenza
   dashboard_framework: Framework
-  dashboard_standards: Livelli di riferimento
+  dashboard_standards: Mappatura delle competenze
   dashboard_implementation_guide: Implementation Guide
   dashboard_glossary: Glossary
   dashboard_classroom_strategies: Classroom strategies for teachers
@@ -1364,18 +1364,31 @@ it-IT:
   coursed-2020_name: Corso D (2020)
   coursee-2020_name: Corso E (2020)
   coursef-2020_name: Corso F (2020)
+  coursea-2021_name: Corso A (2021)
+  courseb-2021_name: Corso B (2021)
+  coursec-2021_name: Corso C (2021)
   coursed-2021_name: Corso D (2021)
+  coursee-2021_name: Corso E (2021)
+  coursef-2021_name: Corso F (2021)
+  coursea-2022_name: Corso A (2022)
+  courseb-2022_name: Corso B (2022)
+  coursec-2022_name: Corso C (2022)
+  coursed-2022_name: Corso D (2022)
+  coursee-2022_name: Corso E (2022)
+  coursef-2022_name: Corso F (2022)
   express-2018_name: Corso Rapido (2018)
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
-  express-2019_name: Corso Rapido (2017)
+  express-2019_name: Corso Rapido (2019)
   pre-express-2019_name: Corso Rapido pre-scolare (2019)
-  express-2020_name: Corso Rapido (2017)
+  express-2020_name: Corso Rapido (2020)
   pre-express-2020_name: Corso Express Pre-lettore (2020)
+  express-2021_name: Corso Rapido (2021)
   pre-express-2021_name: Corso Rapido pre-scolare (2021)
+  express-2022_name: Corso Rapido (2022)
   csd2_name: 'Unità 2: Sviluppo Web'
   csd3_name: 'Unità 3: Animazioni e Giochi'
   accelerated_name: Corso rapido
-  express_name: Corso Rapido (2018)
+  express_name: Corso Rapido
   pre-express_name: Corso Rapido pre-scolare
   20-hour_name: Corso rapido
   algebra_name: L'informatica in algebra
@@ -1487,6 +1500,12 @@ it-IT:
   coursed-2021_gradelevel: Da 7 a 11 anni
   coursee-2021_gradelevel: Da 8 a 12 anni
   coursef-2021_gradelevel: Da 9 a 13 anni
+  coursea-2022_gradelevel: Da 4 a 7 anni
+  courseb-2022_gradelevel: Da 5 a 8 anni
+  coursec-2022_gradelevel: Da 6 a 10 anni
+  coursed-2022_gradelevel: Da 7 a 11 anni
+  coursee-2022_gradelevel: Da 8 a 12 anni
+  coursef-2022_gradelevel: Da 9 a 13 anni
   accelerated_gradelevel: Da 10 anni in su (dopo il Corso 3)
   codeorg_platformtext: Browser moderni, smartphone, tablet
   codeintl_platformtext: Browser moderni, smartphone, tablet
@@ -1735,6 +1754,36 @@ it-IT:
     con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018,
     è la più aggiornata in italiano ==>'
   coursef-2021_shortdescription_congrats: 'Impara ad usare diversi tipi di cicli,
+    eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
+    dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
+    Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso
+    che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la
+    versione 2018, è la più aggiornata in italiano ==>'
+  coursea-2022_shortdescription_congrats: 'Impara le basi dell''informatica e della
+    sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+    storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018,
+    è la più aggiornata in italiano ==>'
+  courseb-2022_shortdescription_congrats: 'Impara le basi dell''informatica e della
+    sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+    storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018,
+    è la più aggiornata in italiano ==>'
+  coursec-2022_shortdescription_congrats: 'Crea programmi con sequenze di istruzioni,
+    cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche
+    di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo.
+    Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia
+    animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata
+    in italiano ==>'
+  coursed-2022_shortdescription_congrats: 'Gli studenti sviluppano la comprensione
+    dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli
+    eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto
+    di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione 2018, è
+    la più aggiornata in italiano ==>'
+  coursee-2022_shortdescription_congrats: 'Si inizia con algoritmi, cicli, istruzioni
+    condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di
+    questo corso, puoi progettare e creare un progetto finale che potrai condividere
+    con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018,
+    è la più aggiornata in italiano ==>'
+  coursef-2022_shortdescription_congrats: 'Impara ad usare diversi tipi di cicli,
     eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
     dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
     Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso
@@ -2297,7 +2346,7 @@ it-IT:
   header_about: Informazioni
   header_teacher_community: Teacher community
   header_help_support: Help and support
-  header_report_bug: Report a problem
+  header_report_bug: Segnala un errore
   header_report_abuse: Segnala abuso
   header_legal: Privacy & Legale
   header_legal_privacy: Informativa sulla privacy
@@ -2653,8 +2702,9 @@ it-IT:
   hoc2021_mc_mee_ai_title: AI per sempre
   hoc2021_mc_mee_ai_description: 'Esplora l''AI con i tuoi studenti e impara a codificare
     in Minecraft: Education Edition.'
-  footer_powered_by_aws: Eseguito su Amazon Web Services
-  footer_built_on_github: Costruito su GitHub di Microsoft
+  footer_powered_by_aws: Amazon Web Services e il logo “Powered by AWS” sono marchi
+    registrati di Amazon.com, Inc. o delle sue consociate negli USA e/o in altri paesi.
+  footer_built_on_github: Progettato su GitHub da Microsoft
   codebytes_skinny_banner_title: Unisciti a noi dal 7 all'11 dicembre per le nostre
     mini-lezioni dal vivo CodeBytes!
   codebytes_skinny_banner_description: 'Unisciti a noi ogni giorno della CS Education
@@ -2748,3 +2798,4 @@ it-IT:
   outbreak_tile_title: Epidemia
   outbreak_tile_subtitle: Un virus ha infettato Monster Town! Codifica un simulatore
     di epidemia e fai previsioni su ciò che accadrà ai vicini di Monster Town.
+  footer_cookie_notice: Informativa sui cookie

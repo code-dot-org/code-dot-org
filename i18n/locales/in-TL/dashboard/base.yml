@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 in:
   errors:
     messages:
@@ -39,6 +45,7 @@ in:
         personal_email_markdown: "crwdns2067358:0%{url}crwdne2067358:0"
         username: 'crwdns2550:0crwdne2550:0'
         password: 'crwdns2551:0crwdne2551:0'
+        verified_teacher: 'crwdns2929400:0crwdne2929400:0'
         password_confirmation: 'crwdns2552:0crwdne2552:0'
         current_password: 'crwdns2553:0crwdne2553:0'
         locale: 'crwdns2554:0crwdne2554:0'
@@ -290,6 +297,7 @@ in:
       provider_managed_section: "crwdns88682:0%{provider}crwdne88682:0"
       restricted_section: "crwdns2546984:0%{section_code}crwdne2546984:0"
       full_section: "crwdns2547480:0%{section_code}crwdnd2547480:0%{section_capacity}crwdne2547480:0"
+      not_participant_type: "crwdns2864049:0%{section_code}crwdne2864049:0"
     mail:
       student_disassociated:
         subject: "crwdns4337:0%{student_name}crwdne4337:0"
@@ -347,6 +355,7 @@ in:
       educate_beyond: "crwdns84029:0crwdne84029:0"
       educate_inspire: "crwdns84030:0crwdne84030:0"
       educate_community: "crwdns84031:0crwdne84031:0"
+      educate_requirements: "crwdns2917532:0crwdne2917532:0"
       educate_tools: "crwdns84032:0crwdne84032:0"
       about_us: "crwdns84033:0crwdne84033:0"
       about_leadership: "crwdns84034:0crwdne84034:0"
@@ -414,6 +423,7 @@ in:
       starwars: 'crwdns404164:0crwdne404164:0'
       starwarsblocks: 'crwdns404166:0crwdne404166:0'
       starwarsblocks_hour: 'crwdns404168:0crwdne404168:0'
+      thebadguys: 'crwdns2905992:0crwdne2905992:0'
       loading: 'crwdns2715439:0crwdne2715439:0'
       weblab: 'crwdns404170:0crwdne404170:0'
       view_all: 'crwdns245580:0crwdne245580:0'
@@ -549,6 +559,7 @@ in:
     all_students_must_be_in_current_section: "crwdns56527:0crwdne56527:0"
     already_enrolled_in_new_section: "crwdns56528:0crwdne56528:0"
     third_party_login: "crwdns134927:0crwdne134927:0"
+    not_correct_participant_type: "crwdns2864051:0crwdne2864051:0"
   share:
     title: "crwdns45291:0crwdne45291:0"
     description: "crwdns45292:0crwdne45292:0"
@@ -566,8 +577,8 @@ in:
     thank_you: 'crwdns45293:0crwdne45293:0'
     help_from_html: 'crwdns6548:0crwdne6548:0'
     help_from_html_old: 'crwdns45345:0crwdne45345:0'
-    art_from_html: 'crwdns55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdne55877:0'
-    art_from_html_old: 'crwdns55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdne55878:0'
+    art_from_html: 'crwdns55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdne55877:0'
+    art_from_html_old: 'crwdns55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdne55878:0'
     code_from_html: 'crwdns56267:0crwdne56267:0'
     powered_by_aws: 'crwdns24789:0crwdne24789:0'
     built_on_github: 'crwdns2474796:0crwdne2474796:0'
@@ -590,6 +601,8 @@ in:
     how_it_works: 'crwdns55146:0crwdne55146:0'
     try_hour_of_code: 'crwdns55879:0crwdne55879:0'
     store: 'crwdns2689313:0crwdne2689313:0'
+    cookie_notice: 'crwdns2864053:0crwdne2864053:0'
+    view_code: 'crwdns2929402:0crwdne2929402:0'
   reference_area:
     title: 'crwdns2625:0crwdne2625:0'
     subtitle: 'crwdns3090:0crwdne3090:0'
@@ -656,6 +669,12 @@ in:
       title: 'crwdns331054:0crwdne331054:0'
     dance-2019:
       title: 'crwdns2071286:0crwdne2071286:0'
+    hello-world:
+      title: 'crwdns2917534:0crwdne2917534:0'
+      body: 'crwdns2917536:0crwdne2917536:0'
+    poem-art:
+      title: 'crwdns2917538:0crwdne2917538:0'
+      body: 'crwdns2917540:0crwdne2917540:0'
     hoc:
       title: 'crwdns55279:0crwdne55279:0'
       body: 'crwdns4901:0crwdne4901:0'
@@ -818,14 +837,6 @@ in:
     reminder_desc: 'crwdns58518:0%{tos_url}crwdnd58518:0%{privacy_url}crwdne58518:0'
     reminder_desc_markdown: crwdns2067376:0%{tos_url}crwdnd2067376:0%{privacy_url}crwdne2067376:0
     review_terms: "crwdns58519:0crwdne58519:0"
-  donor_interstitial:
-    title: "crwdns2465772:0crwdne2465772:0"
-    subtitle: "crwdns2465774:0[donors]crwdnd2465774:0%{donors_url}crwdne2465774:0"
-    local_supporters: "crwdns2465776:0crwdne2465776:0"
-    global_supporters: "crwdns2465778:0crwdne2465778:0"
-    support_codeorg_1: "crwdns2465780:0crwdne2465780:0"
-    support_codeorg_2: "crwdns2465782:0%{donate_url}crwdne2465782:0"
-    get_started: "crwdns2465784:0crwdne2465784:0"
   school_info_interstitial:
     title: "crwdns83793:0crwdne83793:0"
     message: "crwdns83794:0crwdne83794:0"
@@ -1003,6 +1014,11 @@ in:
   no_course_access_teacher: "crwdns2356842:0crwdne2356842:0"
   no_script_access_student: "crwdns401134:0crwdne401134:0"
   no_script_access_teacher: "crwdns401136:0crwdne401136:0"
+  no_level_access_student: "crwdns2883586:0crwdne2883586:0"
+  no_level_access_teacher: "crwdns2883588:0crwdne2883588:0"
+  no_exemplar: "crwdns2905994:0crwdne2905994:0"
+  no_exemplar_access_student: "crwdns2905996:0crwdne2905996:0"
+  no_exemplar_access_teacher: "crwdns2905998:0crwdne2905998:0"
   return_unit_overview: 'crwdns91105:0crwdne91105:0'
   return_course_overview: 'crwdns60153:0crwdne60153:0'
   view_all_units: 'crwdns84693:0crwdne84693:0'
@@ -1078,6 +1094,7 @@ in:
         israel: 'crwdns136860:0crwdne136860:0'
         malaysia: 'crwdns136861:0crwdne136861:0'
         mexico: 'crwdns136862:0crwdne136862:0'
+        paraguay: 'crwdns2929302:0crwdne2929302:0'
         thailand: 'crwdns136863:0crwdne136863:0'
         uzbekistan: 'crwdns2486286:0crwdne2486286:0'
       ages:
@@ -1100,6 +1117,7 @@ in:
         music: 'crwdns136879:0crwdne136879:0'
         art: 'crwdns136880:0crwdne136880:0'
         other: "crwdns136881:0crwdne136881:0"
+        na: 'crwdns2929304:0crwdne2929304:0'
       resources:
         bootstrap: 'crwdns136882:0crwdne136882:0'
         codecademy: 'crwdns136883:0crwdne136883:0'
@@ -1110,6 +1128,7 @@ in:
         scratch: 'crwdns136888:0crwdne136888:0'
         tynker: 'crwdns136889:0crwdne136889:0'
         other: "crwdns136890:0crwdne136890:0"
+        na: 'crwdns2929306:0crwdne2929306:0'
       robotics:
         grok: 'crwdns136891:0crwdne136891:0'
         kodable: 'crwdns136892:0crwdne136892:0'
@@ -1120,6 +1139,7 @@ in:
         raspberry: 'crwdns136897:0crwdne136897:0'
         wonder: 'crwdns136898:0crwdne136898:0'
         other: "crwdns136899:0crwdne136899:0"
+        na: 'crwdns2929308:0crwdne2929308:0'
       workshop_course:
         csf_af: 'crwdns136900:0crwdne136900:0'
         csf_express: 'crwdns136901:0crwdne136901:0'
@@ -1174,3 +1194,4 @@ in:
     this_sprite: "crwdns2465554:0crwdne2465554:0"
   unit_prefix: "crwdns2465940:0%{n}crwdne2465940:0"
   code_org_logo_alt: "crwdns2481346:0crwdne2481346:0"
+  teacher_feedback: "crwdns2859059:0crwdne2859059:0"

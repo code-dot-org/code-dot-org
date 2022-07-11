@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 pl:
   errors:
     messages:
@@ -39,6 +45,7 @@ pl:
         personal_email_markdown: "Osobisty adres e-mail [(kliknij tutaj, jeśli nie masz adresu e-mail)](%{url})"
         username: 'Nazwa użytkownika'
         password: 'Hasło'
+        verified_teacher: 'Zweryfikowany nauczyciel'
         password_confirmation: 'Potwierdzenie hasła'
         current_password: 'Aktualne hasło'
         locale: 'Język'
@@ -295,6 +302,7 @@ pl:
       provider_managed_section: "Ta sekcja jest zarządzana przez innego dostawcę i nie można do niej dołączyć. Poproś swojego nauczyciela o dodanie Ciebie poprzez %{provider} i ponowną synchronizację sekcji."
       restricted_section: "Nie mogliśmy dodać Cię do sekcji %{section_code}, ponieważ jest zablokowana. Skontaktuj się ze swoim nauczycielem, aby uzyskać pomoc. "
       full_section: "Nie mogliśmy dodać Cię do sekcji %{section_code}, ponieważ jest w niej już %{section_capacity} uczniów. Skontaktuj się ze swoim nauczycielem, aby Ci pomógł."
+      not_participant_type: "Nie mogliśmy dodać Cię do sekcji %{section_code}, ponieważ nie odpowiadasz typowi uczestnika tej sekcji."
     mail:
       student_disassociated:
         subject: "Powiadomienie Code.org: %{student_name} nie jest już powiązany z Tobą jako Twój uczeń."
@@ -352,6 +360,7 @@ pl:
       educate_beyond: "Poza Code.org"
       educate_inspire: "Inspiruj ucznia"
       educate_community: "Społeczność online"
+      educate_requirements: "Wymagania Techniczne"
       educate_tools: "Narzędzia i filmy"
       about_us: "O nas"
       about_leadership: "Przywództwo"
@@ -419,6 +428,7 @@ pl:
       starwars: 'Gwiezdne Wojny'
       starwarsblocks: 'Star Wars (Bloki)'
       starwarsblocks_hour: 'Star Wars (Bloki)'
+      thebadguys: 'Źli faceci'
       loading: 'Trwa pobieranie ...'
       weblab: 'Web Lab'
       view_all: 'Obejrzyj wszystkie projekty...'
@@ -554,6 +564,7 @@ pl:
     all_students_must_be_in_current_section: "Wszyscy uczniowie muszą obecnie być włączeni do sekcji."
     already_enrolled_in_new_section: "Nie możesz przenieść tych uczniów, ponieważ znajduj się oni już w nowej sekcji."
     third_party_login: "Nie możesz przenieść uczniów do sekcji, która jest zsynchronizowana z narzędziem osoby trzeciej."
+    not_correct_participant_type: "Nie możesz przenieść tych użytkowników, ponieważ nie mają oni uprawnień do bycia uczestnikami nowej sekcji."
   share:
     title: "Ucz się z Code Studio"
     description: "Każdy może nauczyć się informatyki. Zakoduj gry, aplikacje i sztukę."
@@ -571,8 +582,8 @@ pl:
     thank_you: 'Dziękujemy naszym <a href="https://code.org/about/donors">darczyńcom</a>, <a href="https://code.org/about/partners"> partnerom</a>, naszemu <a href="https://code.org/about/team"> zespołowi</a>, obsadzie wideo i naszym <a href="https://code.org/about/advisors"> doradcom edukacyjnym </a> za wsparcie przy tworzeniu Code Studio.'
     help_from_html: 'Szczególnie chcielibyśmy podziękować inżynierom z firm Amazon, Google i Microsoft, którzy pomogli nam utworzyć te materiały.'
     help_from_html_old: 'Inżynierowie z Amazon, Google i Microsoft pomogli utworzyć te materiały.'
-    art_from_html: 'Minecraft &#8482; &copy; %{current_year} Microsoft. Wszystkie prawa zastrzeżone. <br /> Star Wars &#8482; &copy; %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone.<br />Frozen&#8482; &copy; %{current_year} Disney. Wszystkie prawa zastrzeżone.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone.<br />Plants vs Zombies &#8482; &copy; %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.<br />The Amazing World of Gumball jest znakiem towarowym i &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft &#8482; &copy; %{current_year} Microsoft. Wszystkie prawa zastrzeżone. Star Wars &#8482; &copy; %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. Frozen&#8482; &copy; %{current_year} Disney. Wszystkie prawa zastrzeżone. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. Plants vs Zombies &#8482; &copy; %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. The Amazing World of Gumball jest znakiem towarowym i &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon Network.'
     code_from_html: 'Code.org używa p5.play, który ma licencję <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: "Amazon Web Services i logo “Powered by AWS” są znakami towarowymi Amazon.com, Inc. lub jej podmiotów zależnych w Stanach Zjednoczonych i / lub innych krajach.\n"
     built_on_github: 'Oparty na GitHub firmy Microsoft'
@@ -595,6 +606,8 @@ pl:
     how_it_works: 'Jak to działa (Zobacz kod)'
     try_hour_of_code: 'Wypróbuj Godzinę Kodowania!'
     store: 'Skład'
+    cookie_notice: 'Informacja o plikach cookie'
+    view_code: 'Obejrzyj kod'
   reference_area:
     title: 'Czy potrzebujesz pomocy?'
     subtitle: 'Zobacz te filmiki i wskazówki'
@@ -661,6 +674,12 @@ pl:
       title: 'Potańcówka'
     dance-2019:
       title: 'Potańcówka'
+    hello-world:
+      title: 'Witaj świecie'
+      body: 'Wybierz jeden z czterech zabawnych motywów, aby zakodować interaktywne postacie w tworzonym przez siebie świecie.'
+    poem-art:
+      title: 'Sztuka poezji '
+      body: 'Wyraź siebie! Użyj kodu do tworzenia animowanych wierszy.'
     hoc:
       title: 'Klasyczny labirynt'
       body: 'Wypróbuj podstawy informatyki. Miliony dały im już szansę.'
@@ -819,14 +838,6 @@ pl:
     reminder_desc: 'Zaktualizowaliśmy nasze <a href="%{tos_url}" target="_blank"> Warunki użytkowania</a> i <a href="%{privacy_url}" target="_blank"> Politykę prywatności</a>. Prosimy przeczytać je uważnie przed ich zaakceptowaniem. Należy zauważyć, że nasze narzędzia do nauki języka JavaScript mogą być niedostępny dla Twoich uczniów przed zaakceptowaniem zaktualizowanych postanowień.'
     reminder_desc_markdown: Zaktualizowaliśmy nasze [Warunki użytkowania](%{tos_url}) i [Politykę prywatności](%{privacy_url}). Prosimy przeczytać je uważnie przed ich zaakceptowaniem. Należy zauważyć, że nasze narzędzia do nauki języka JavaScript mogą być niedostępne dla Twoich uczniów przed zaakceptowaniem zaktualizowanych postanowień.
     review_terms: "Wyświetl zaktualizowane Warunki korzystania"
-  donor_interstitial:
-    title: "Twoje bezpłatne kursy CS są możliwe dzięki ..."
-    subtitle: "Chcielibyśmy podziękować hojnym darczyńcom, których wsparcie umożliwiło sukces Code.org. Dążymy do tego, aby Code.org było bezpłatne dla szkół i uczniów na całym świecie, dzięki nieustającej hojności naszych [darczyńców] (%{donors_url})!\n"
-    local_supporters: "Lokalni zwolennicy"
-    global_supporters: "Globalni zwolennicy"
-    support_codeorg_1: "Każdy dolar przekazany Code.org daje szansę większej liczbie uczniów."
-    support_codeorg_2: "[Przekaż darowiznę teraz] (%{donate_url}), aby wesprzeć Code.org."
-    get_started: "Zacznij korzystać z Code.org"
   school_info_interstitial:
     title: "Chcemy przybliżyć Informatykę każdemu uczniowi - pomóż nam śledzić nasze postępy!"
     message: "Prosimy o wprowadzenie poniżej danych swojej szkoły."
@@ -987,6 +998,11 @@ pl:
   no_course_access_teacher: "Nie masz dostępu do tego kursu. Jeśli wydaje Ci się, że powinieneś mieć dostęp do tego kursu, proszę napisać na adres: support@code.org tak, abyśmy mogli naprawić sytuację."
   no_script_access_student: "Nie masz dostępu do tej jednostki. Proszę spytać swojego nauczyciela, w której jednostce powinieneś być."
   no_script_access_teacher: "Nie masz dostępu do tej jednostki. Jeśli wydaje Ci się, że powinieneś mieć dostęp do tej jednostki, proszę napisać na adres: support@code.org tak, abyśmy mogli naprawić sytuację."
+  no_level_access_student: "Nie masz dostępu do tego poziomu. Proszę spytać swojego nauczyciela, na jakim powinieneś być poziomie."
+  no_level_access_teacher: "Nie masz dostępu do tego poziomu. Jeśli wydaje Ci się, że powinieneś mieć dostęp do tego poziomu, to proszę napisać pod adresem: support@code.org tak, abyśmy mogli naprawić tę sytuację."
+  no_exemplar: "Nie ma żadnego przykładu dla tego poziomu."
+  no_exemplar_access_student: "Studenci nie mają dostępu do przykładowego kodu. Zapytaj swojego nauczyciela, na jakim poziomie powinieneś być."
+  no_exemplar_access_teacher: "Tylko zweryfikowani nauczyciele mają dostęp do przykładowego kodu. Jeśli chcesz zostać zweryfikowanym nauczycielem, napisz na adres support@code.org."
   return_unit_overview: 'Przejdź do przeglądu jednostek'
   return_course_overview: 'Przejdź do omówienia kursu'
   view_all_units: 'Zobacz wszystkie jednostki'
@@ -1034,6 +1050,7 @@ pl:
         israel: 'Izrael'
         malaysia: 'Malezja'
         mexico: 'Meksyk'
+        paraguay: 'Paragwaj'
         thailand: 'Tajlandia'
         uzbekistan: 'Uzbekistan'
       ages:
@@ -1056,6 +1073,7 @@ pl:
         music: 'Muzyka'
         art: 'Sztuka'
         other: "Inne:"
+        na: 'Nie dotyczy'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1065,7 +1083,8 @@ pl:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Inne:"
+        other: "Inni/inne"
+        na: 'Nie dotyczy'
       robotics:
         grok: 'Nauka Grok'
         kodable: 'Kodable'
@@ -1075,7 +1094,8 @@ pl:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Warsztaty Wonder'
-        other: "Inne:"
+        other: "Inni/inne"
+        na: 'Nie dotyczy'
       workshop_course:
         csf_af: 'Podstawy informatyki (Kursy A-F)'
         csf_express: 'Podstawy informatyki (Wstępne ekspresowe lub ekspresowe)'
@@ -1130,3 +1150,4 @@ pl:
     this_sprite: "ten duszek"
   unit_prefix: "Jednostka %{n}"
   code_org_logo_alt: "Strona domowa Code.org"
+  teacher_feedback: "Opinie nauczycieli"

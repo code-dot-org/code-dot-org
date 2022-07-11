@@ -21,6 +21,7 @@
 #  properties                  :text(65535)
 #  deleted_at                  :datetime
 #  status_timestamp_change_log :text(65535)
+#  applied_at                  :datetime
 #
 # Indexes
 #
@@ -84,12 +85,14 @@ module Pd::Application
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
+    before_validation :set_course_from_program, if: -> {form_data_changed?}
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
     validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
-    before_validation :set_course_from_program, unless: -> {program.nil?}
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
+    before_save :set_total_course_hours, if: -> {form_data_changed?}
+    before_save :update_user_school_info!, if: -> {form_data_changed?}
     before_save :log_status, if: -> {status_changed?}
 
     serialized_attrs %w(
@@ -102,11 +105,13 @@ module Pd::Application
     # based on these rules in order:
     # 1. Application has a specific school? always overwrite the user's school info
     # 2. User doesn't have a specific school? overwrite with the custom school info.
+    # Will only update the school info if we have enough information for it because
+    # an incomplete application may not have all the information we need to update
     def update_user_school_info!
-      if school_id || user.school_info.try(&:school).nil?
-        school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
-        user.update_school_info(school_info)
-      end
+      return unless school_id || user.school_info.try(&:school).nil?
+      school_info = school_info_attr
+      return unless school_info
+      user.update_school_info(get_duplicate_school_info(school_info) || SchoolInfo.create!(school_info))
     end
 
     def update_scholarship_status(scholarship_status)
@@ -137,6 +142,27 @@ module Pd::Application
 
     def set_course_from_program
       self.course = PROGRAMS.key(program)
+    end
+
+    def set_total_course_hours
+      hash = sanitize_form_data_hash
+      minutes = hash[:cs_how_many_minutes]
+      days_per_week = hash[:cs_how_many_days_per_week]
+      weeks_per_year = hash[:cs_how_many_weeks_per_year]
+
+      if minutes && days_per_week && weeks_per_year
+        update_form_data_hash(
+          {
+            cs_total_course_hours: [minutes, days_per_week, weeks_per_year].map(&:to_i).reduce(:*) / 60
+          }
+        )
+      else
+        update_form_data_hash(
+          {
+            cs_total_course_hours: nil
+          }
+        )
+      end
     end
 
     def save_partner
@@ -270,6 +296,7 @@ module Pd::Application
         }
       else
         hash = sanitize_form_data_hash
+        return unless hash[:school_type] && hash[:school_state] && hash[:school_zip_code] && hash[:school_name] && hash[:school_address]
         {
           country: 'US',
           # Take the first word in school type, downcased. E.g. "Public school" -> "public"
@@ -342,6 +369,7 @@ module Pd::Application
       %w(
         unreviewed
         incomplete
+        reopened
         pending
         waitlisted
         declined
@@ -857,9 +885,9 @@ module Pd::Application
 
     # @override
     # Filter out extraneous answers based on selected program (course)
-    def self.filtered_labels(course)
-      raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
-      FILTERED_LABELS[course]
+    def self.filtered_labels(course, status = 'unreviewed')
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course) || status == 'incomplete'
+      status == 'incomplete' ? {} : FILTERED_LABELS[course]
     end
 
     # List of columns to be filtered out based on selected program (course)
@@ -1109,6 +1137,7 @@ module Pd::Application
     end
 
     def meets_criteria
+      return if incomplete?
       response_scores = response_scores_hash[:meets_minimum_criteria_scores] || {}
 
       scored_questions = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym]
@@ -1148,31 +1177,15 @@ module Pd::Application
 
     # Called after the application is created. Do any manipulation needed for the form data
     # hash here, as well as send emails
-    # [MEG] TODO: should only do a lot of this on a completed submitted application
     def on_successful_create
-      update_user_school_info!
-      queue_email :confirmation, deliver_now: true unless status == 'incomplete'
+      return if status == 'incomplete'
 
-      form_data_hash = sanitize_form_data_hash
-
-      update_form_data_hash(
-        {
-          cs_total_course_hours: form_data_hash.slice(
-            :cs_how_many_minutes,
-            :cs_how_many_days_per_week,
-            :cs_how_many_weeks_per_year
-          ).values.map(&:to_i).reduce(:*) / 60
-        }
-      )
-
-      auto_score! unless status == 'incomplete'
-      save
-
+      queue_email :confirmation, deliver_now: true
+      auto_score!
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        unless status == 'incomplete'
-          queue_email :principal_approval, deliver_now: true
-        end
+        queue_email :principal_approval, deliver_now: true
       end
+      save
     end
 
     # Called after principal approval has been created. Do any manipulation needed for the

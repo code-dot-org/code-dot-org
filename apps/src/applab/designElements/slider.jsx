@@ -179,11 +179,11 @@ export default {
       case 'sliderValue':
         return parseInt(element.value, 10);
       case 'min':
-        return element.min;
+        return parseInt(element.min, 10);
       case 'max':
-        return element.max;
+        return parseInt(element.max, 10);
       case 'step':
-        return element.step;
+        return parseInt(element.step, 10);
       default:
         throw `unknown property name ${name}`;
     }

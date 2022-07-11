@@ -1,0 +1,20 @@
+{
+  "ms-MY": {
+    "data": {
+      "framework": {
+        "ccela": {
+          "name": "Standard Kesenian Bahasa Inggeris Teras Umum"
+        },
+        "ccmath": {
+          "name": "Standard Matematik Teras Umum"
+        },
+        "csta2011": {
+          "name": "Standard Sains Komputer K-12 CSTA (2011)"
+        },
+        "iste": {
+          "name": "Standard ISTE untuk Pelajar"
+        }
+      }
+    }
+  }
+}

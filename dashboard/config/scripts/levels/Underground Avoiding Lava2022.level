@@ -1,16 +1,14 @@
 <Craft>
   <config><![CDATA[{
-  "game_id": 49,
-  "created_at": "2022-01-06T19:47:43.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "properties": {
     "skin": "craft",
     "ground_plane": "[\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"stone\",\"lava\",\"lava\",\"stone\",\"stone\",\"lava\",\"stone\",\"stone\",\"lava\",\"stone\",\"lava\",\"stone\",\"stone\",\"lava\",\"lava\",\"stone\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\"]",
     "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"lavaPop\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"lavaPop\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
     "action_plane": "[\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"stone\",\"stone\",\"oreCoal\",\"oreCoal\",\"stone\",\"oreIron\",\"oreIron\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\"]",
     "player_start_position": "[1, 4]",
-    "available_blocks": "[\"cobblestone\"]",
+    "available_blocks": [
+      "cobblestone"
+    ],
     "verification_function": "function (verificationAPI) {\r\n      // there are at least 3 logOak blocks on the board\r\n      return verificationAPI.countOfTypeOnMap(\"oreIron\") == 0 && verificationAPI.countOfTypeOnMap(\"oreCoal\") == 0;\r\n}",
     "short_instructions": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An \"if\" command will come in handy here. Add a \"move forward\" command in the correct place to mine these blocks.",
     "is_k1": "false",
@@ -49,14 +47,30 @@
     "level_verification_timeout": "0",
     "use_player": "false",
     "long_instructions": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An `if` command will come in handy here. Add a `move forward` command in the correct place to mine these blocks.",
-    "hint_prompt_attempts_threshold": 5,
+    "hint_prompt_attempts_threshold": "5",
     "parent_level_id": 21244,
     "name_suffix": "2022",
+    "encrypted": "false",
+    "show_type_hints": "false",
+    "agent_start_direction": "0",
+    "is_agent_level": "false",
+    "is_aquatic_level": "false",
+    "boat": "false",
     "preload_asset_list": null
   },
+  "game_id": 49,
   "published": true,
+  "created_at": "2022-01-06T19:47:43.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:43.361+00:00\",\"changed\":[\"cloned from \\\"Underground Avoiding Lava_2021\\\"\"],\"cloned_from\":\"Underground Avoiding Lava_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:43.361+00:00\",\"changed\":[\"cloned from \\\"Underground Avoiding Lava_2021\\\"\"],\"cloned_from\":\"Underground Avoiding Lava_2021\"},{\"changed_at\":\"2022-03-07 17:11:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"available_blocks\",\"never_autoplay_video\",\"hint_prompt_attempts_threshold\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-22 17:20:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 2,
+    "repeat_loops": 1,
+    "conditionals": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

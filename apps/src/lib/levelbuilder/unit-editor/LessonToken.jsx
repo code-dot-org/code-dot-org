@@ -16,7 +16,8 @@ export default class LessonToken extends Component {
     delta: PropTypes.number,
     handleDragStart: PropTypes.func,
     removeLesson: PropTypes.func.isRequired,
-    cloneLesson: PropTypes.func.isRequired
+    cloneLesson: PropTypes.func.isRequired,
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired
   };
 
   render() {
@@ -53,6 +54,7 @@ export default class LessonToken extends Component {
             handleDragStart={this.props.handleDragStart}
             removeLesson={this.props.removeLesson}
             cloneLesson={this.props.cloneLesson}
+            allowMajorCurriculumChanges={this.props.allowMajorCurriculumChanges}
           />
         )}
       </Motion>
@@ -69,7 +71,8 @@ export class LessonTokenContents extends Component {
     lesson: lessonShapeForUnitEdit.isRequired,
     handleDragStart: PropTypes.func.isRequired,
     removeLesson: PropTypes.func.isRequired,
-    cloneLesson: PropTypes.func.isRequired
+    cloneLesson: PropTypes.func.isRequired,
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired
   };
 
   handleEditLesson = () => {
@@ -105,9 +108,11 @@ export class LessonTokenContents extends Component {
             : 500 - this.props.lesson.position
         })}
       >
-        <div style={styles.reorder} onMouseDown={this.handleDragStart}>
-          <i className="fa fa-arrows-v" />
-        </div>
+        {this.props.allowMajorCurriculumChanges && (
+          <div style={styles.reorder} onMouseDown={this.handleDragStart}>
+            <i className="fa fa-arrows-v" />
+          </div>
+        )}
         <span style={styles.lessonTokenName}>
           <span style={styles.lessonArea}>
             <span style={styles.lessonTitle}>{this.props.lesson.name}</span>
@@ -137,9 +142,11 @@ export class LessonTokenContents extends Component {
             <i className="fa fa-clone" />
           </div>
         )}
-        <div style={styles.remove} onMouseDown={this.handleRemove}>
-          <i className="fa fa-times" />
-        </div>
+        {this.props.allowMajorCurriculumChanges && (
+          <div style={styles.remove} onMouseDown={this.handleRemove}>
+            <i className="fa fa-times" />
+          </div>
+        )}
       </div>
     );
   }

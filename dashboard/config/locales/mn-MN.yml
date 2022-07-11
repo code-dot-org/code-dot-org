@@ -1255,7 +1255,7 @@ mn:
         kodable: Kodable
         scratch: Ноорог
         tynker: Tynker
-        other: 'Бусад:'
+        other: Бусад
       robotics:
         grok: Grok сурах
         kodable: Kodable
@@ -1265,7 +1265,7 @@ mn:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Гайхалтай семинар
-        other: 'Бусад:'
+        other: Бусад
       workshop_course:
         csf_af: КШУ-ны үндэс (А-F хичээл)
         csf_express: КШУ-ны үндэс (шуурхай сургалтын өмнөх ба шуурхай сургалт)
@@ -1317,3 +1317,4 @@ mn:
     шалгаад дахин илгээнэ үү. Эсвэл манай нүүр хуудас руу буцна уу.
   page_not_found_button: Нүүр хуудас руу буцах
   copy: Хуулах
+  teacher_feedback: Багшийн хариу үйлдэл

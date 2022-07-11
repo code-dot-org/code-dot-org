@@ -64,11 +64,16 @@
     "hide_pause_button": "true",
     "short_instructions": "Run the code and play with the pet! When you are done, click **Finish**.",
     "instructions_icon": "dog",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:55.024+00:00\",\"changed\":[\"cloned from \\\"Virtual Pet 1_2021\\\"\"],\"cloned_from\":\"Virtual Pet 1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:55.024+00:00\",\"changed\":[\"cloned from \\\"Virtual Pet 1_2021\\\"\"],\"cloned_from\":\"Virtual Pet 1_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

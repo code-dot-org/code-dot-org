@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'testing/storage_apps_test_utils'
+require 'testing/projects_test_utils'
 require 'cdo/delete_accounts_helper'
 require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 
@@ -19,12 +19,16 @@ require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 # reviewed by the product team.
 #
 class DeleteAccountsHelperTest < ActionView::TestCase
-  include StorageAppsTestUtils
+  include ProjectsTestUtils
 
   NULL_STREAM = File.open File::NULL, 'w'
 
   def run(*_args, &_block)
-    PEGASUS_DB.transaction(rollback: :always, auto_savepoint: true) {super}
+    PEGASUS_DB.transaction(rollback: :always, auto_savepoint: true) do
+      DASHBOARD_DB.transaction(rollback: :always, auto_savepoint: true) do
+        super
+      end
+    end
   end
 
   setup do
@@ -911,6 +915,55 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.code_review_requests
+  # Table: dashboard.code_review_notes
+  #
+  test "deletes comment text and soft deletes comments for purged user" do
+    student = create :student
+    review = create :code_review, user_id: student.id
+    student_2 = create :student
+    comment = create :code_review_note, commenter: student_2, code_review: review
+    assert_nil review.deleted_at
+    assert_nil comment.deleted_at
+    refute_nil comment.comment
+
+    purge_user student
+    review.reload
+    comment.reload
+    # assert that the review and comment were soft-deleted, and the comment text was hard-deleted.
+    refute_nil review.deleted_at
+    refute_nil comment.deleted_at
+    assert_nil comment.comment
+    # the commenter was not deleted, so their id should remain on the comment
+    refute_nil comment.commenter
+  end
+
+  test "anonymizes and deletes code review comments written by user" do
+    student = create :student
+    comment = create :code_review_note, commenter: student
+    refute_nil comment.commenter
+    refute_nil comment.comment
+    assert_nil comment.deleted_at
+
+    purge_user student
+    comment.reload
+    assert_nil comment.commenter
+    refute_nil comment.deleted_at
+    assert_nil comment.comment
+  end
+
+  test "soft deletes empty code review" do
+    student = create :student
+    review = create :code_review, user_id: student.id
+    assert_nil review.deleted_at
+
+    purge_user student
+    review.reload
+
+    refute_nil review.deleted_at
+  end
+
+  #
   # Table: dashboard.pd_applications
   #
 
@@ -1600,38 +1653,40 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: pegasus.storage_apps
+  # Table: dashboard.projects
   #
 
   test "soft-deletes all of a soft-deleted user's projects" do
+    skip
     student = create :student
-    with_channel_for student do |storage_app_id, storage_id|
-      assert_equal 'active', storage_apps.where(id: storage_app_id).first[:state]
-      storage_apps.where(storage_id: storage_id).each do |app|
+    with_channel_for student do |project_id, storage_id|
+      assert_equal 'active', projects_table.where(id: project_id).first[:state]
+      projects_table.where(storage_id: storage_id).each do |app|
         assert_equal 'active', app[:state]
       end
 
       student.destroy
 
-      assert_equal 'deleted', storage_apps.where(id: storage_app_id).first[:state]
-      storage_apps.where(storage_id: storage_id).each do |app|
+      assert_equal 'deleted', projects_table.where(id: project_id).first[:state]
+      projects_table.where(storage_id: storage_id).each do |app|
         assert_equal 'deleted', app[:state]
       end
     end
   end
 
   test "soft-deletes all of a purged user's projects" do
+    skip
     student = create :student
-    with_channel_for student do |storage_app_id, storage_id|
-      assert_equal 'active', storage_apps.where(id: storage_app_id).first[:state]
-      storage_apps.where(storage_id: storage_id).each do |app|
+    with_channel_for student do |project_id, storage_id|
+      assert_equal 'active', projects_table.where(id: project_id).first[:state]
+      projects_table.where(storage_id: storage_id).each do |app|
         assert_equal 'active', app[:state]
       end
 
       purge_user student
 
-      assert_equal 'deleted', storage_apps.where(id: storage_app_id).first[:state]
-      storage_apps.where(storage_id: storage_id).each do |app|
+      assert_equal 'deleted', projects_table.where(id: project_id).first[:state]
+      projects_table.where(storage_id: storage_id).each do |app|
         assert_equal 'deleted', app[:state]
       end
     end
@@ -1640,109 +1695,173 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "does not soft-delete anyone else's projects" do
+    skip
     student_a = create :student
     student_b = create :student
-    with_channel_for student_a do |storage_app_id_a|
-      with_channel_for student_b do |storage_app_id_b|
-        assert_equal 'active', storage_apps.where(id: storage_app_id_a).first[:state]
-        assert_equal 'active', storage_apps.where(id: storage_app_id_b).first[:state]
+    with_channel_for student_a do |project_id_a|
+      with_channel_for student_b do |project_id_b|
+        assert_equal 'active', projects_table.where(id: project_id_a).first[:state]
+        assert_equal 'active', projects_table.where(id: project_id_b).first[:state]
 
         purge_user student_a
 
-        assert_equal 'deleted', storage_apps.where(id: storage_app_id_a).first[:state]
-        assert_equal 'active', storage_apps.where(id: storage_app_id_b).first[:state]
+        assert_equal 'deleted', projects_table.where(id: project_id_a).first[:state]
+        assert_equal 'active', projects_table.where(id: project_id_b).first[:state]
       end
     end
   end
 
   test "sets updated_at when soft-deleting projects" do
+    skip
     student = create :student
     Timecop.freeze do
-      with_channel_for student do |storage_app_id|
-        assert_equal 'active', storage_apps.where(id: storage_app_id).first[:state]
-        original_updated_at = storage_apps.where(id: storage_app_id).first[:updated_at]
+      with_channel_for student do |project_id|
+        assert_equal 'active', projects_table.where(id: project_id).first[:state]
+        original_updated_at = projects_table.where(id: project_id).first[:updated_at]
 
         Timecop.travel 10
 
         student.destroy
 
-        assert_equal 'deleted', storage_apps.where(id: storage_app_id).first[:state]
+        assert_equal 'deleted', projects_table.where(id: project_id).first[:state]
         refute_equal original_updated_at.utc.to_s,
-          storage_apps.where(id: storage_app_id).first[:updated_at].utc.to_s
+          projects_table.where(id: project_id).first[:updated_at].utc.to_s
       end
     end
   end
 
   test "soft-delete does not set updated_at on already soft-deleted projects" do
+    skip
     student = create :student
     Timecop.freeze do
-      with_channel_for student do |storage_app_id|
-        storage_apps.where(id: storage_app_id).update(state: 'deleted', updated_at: Time.now)
+      with_channel_for student do |project_id|
+        projects_table.where(id: project_id).update(state: 'deleted', updated_at: Time.now)
 
-        assert_equal 'deleted', storage_apps.where(id: storage_app_id).first[:state]
-        original_updated_at = storage_apps.where(id: storage_app_id).first[:updated_at]
+        assert_equal 'deleted', projects_table.where(id: project_id).first[:state]
+        original_updated_at = projects_table.where(id: project_id).first[:updated_at]
 
         Timecop.travel 10
 
         student.destroy
 
-        assert_equal 'deleted', storage_apps.where(id: storage_app_id).first[:state]
+        assert_equal 'deleted', projects_table.where(id: project_id).first[:state]
         assert_equal original_updated_at.utc.to_s,
-          storage_apps.where(id: storage_app_id).first[:updated_at].utc.to_s
+          projects_table.where(id: project_id).first[:updated_at].utc.to_s
       end
     end
   end
 
   test "user purge does set updated_at on already soft-deleted projects" do
+    skip
     student = create :student
     Timecop.freeze do
-      with_channel_for student do |storage_app_id|
-        storage_apps.where(id: storage_app_id).update(state: 'deleted', updated_at: Time.now)
+      with_channel_for student do |project_id|
+        projects_table.where(id: project_id).update(state: 'deleted', updated_at: Time.now)
 
-        assert_equal 'deleted', storage_apps.where(id: storage_app_id).first[:state]
-        original_updated_at = storage_apps.where(id: storage_app_id).first[:updated_at]
+        assert_equal 'deleted', projects_table.where(id: project_id).first[:state]
+        original_updated_at = projects_table.where(id: project_id).first[:updated_at]
 
         Timecop.travel 10
 
         purge_user student
 
-        assert_equal 'deleted', storage_apps.where(id: storage_app_id).first[:state]
+        assert_equal 'deleted', projects_table.where(id: project_id).first[:state]
         refute_equal original_updated_at.utc.to_s,
-          storage_apps.where(id: storage_app_id).first[:updated_at].utc.to_s
+          projects_table.where(id: project_id).first[:updated_at].utc.to_s
       end
     end
   end
 
   test "clears 'value' for all of a purged user's projects" do
+    skip
     student = create :student
-    with_channel_for student do |storage_app_id, storage_id|
-      refute_nil storage_apps.where(id: storage_app_id).first[:value]
-      storage_apps.where(storage_id: storage_id).each do |app|
+    with_channel_for student do |project_id, storage_id|
+      refute_nil projects_table.where(id: project_id).first[:value]
+      projects_table.where(storage_id: storage_id).each do |app|
         refute_nil app[:value]
       end
 
       purge_user student
 
-      assert_nil storage_apps.where(id: storage_app_id).first[:value]
-      storage_apps.where(storage_id: storage_id).each do |app|
+      assert_nil projects_table.where(id: project_id).first[:value]
+      projects_table.where(storage_id: storage_id).each do |app|
         assert_nil app[:value]
       end
     end
   end
 
   test "clears 'updated_ip' for all of a purged user's projects" do
+    skip
     student = create :student
-    with_channel_for student do |storage_app_id, storage_id|
-      refute_empty storage_apps.where(id: storage_app_id).first[:updated_ip]
-      storage_apps.where(storage_id: storage_id).each do |app|
+    with_channel_for student do |project_id, storage_id|
+      refute_empty projects_table.where(id: project_id).first[:updated_ip]
+      projects_table.where(storage_id: storage_id).each do |app|
         refute_empty app[:updated_ip]
       end
 
       purge_user student
 
-      assert_empty storage_apps.where(id: storage_app_id).first[:updated_ip]
-      storage_apps.where(storage_id: storage_id).each do |app|
+      assert_empty projects_table.where(id: project_id).first[:updated_ip]
+      projects_table.where(storage_id: storage_id).each do |app|
         assert_empty app[:updated_ip]
+      end
+    end
+  end
+
+  #
+  # Table: dashboard.project_versions
+  #
+
+  test "clears 'comment' on any version of all of a purged user's projects" do
+    skip
+    student = create :student
+    with_channel_for student do |project_id|
+      comment_text = 'a comment'
+      ProjectCommit.create(
+        project_id: project_id,
+        object_version_id: 'xyz',
+        comment: comment_text
+      )
+      assert_equal 1, ProjectCommit.where(project_id: project_id).count
+      assert_equal comment_text, ProjectCommit.where(project_id: project_id).first.comment
+
+      purge_user student
+
+      assert_equal 1, ProjectCommit.where(project_id: project_id).count
+      assert_nil ProjectCommit.where(project_id: project_id).first.comment
+      assert_logged "Cleared 1 ProjectCommit comments"
+    end
+  end
+
+  test "does not clear 'comment' on any version of anyone else's projects" do
+    skip
+    student_to_purge = create :student
+    other_student = create :student
+    with_channel_for student_to_purge do |project_id_to_purge|
+      with_channel_for other_student do |project_id_other|
+        comment_text = 'a comment'
+        ProjectCommit.create(
+          project_id: project_id_to_purge,
+          object_version_id: 'xyz',
+          comment: comment_text
+        )
+        ProjectCommit.create(
+          project_id: project_id_other,
+          object_version_id: 'xyz',
+          comment: comment_text
+        )
+
+        assert_equal 1, ProjectCommit.where(project_id: project_id_to_purge).count
+        assert_equal comment_text, ProjectCommit.where(project_id: project_id_to_purge).first.comment
+        assert_equal 1, ProjectCommit.where(project_id: project_id_other).count
+        assert_equal comment_text, ProjectCommit.where(project_id: project_id_other).first.comment
+
+        purge_user student_to_purge
+
+        assert_equal 1, ProjectCommit.where(project_id: project_id_to_purge).count
+        assert_nil ProjectCommit.where(project_id: project_id_to_purge).first.comment
+        assert_equal 1, ProjectCommit.where(project_id: project_id_other).count
+        assert_equal comment_text, ProjectCommit.where(project_id: project_id_other).first.comment
       end
     end
   end
@@ -1752,10 +1871,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "unfeatures any featured projects owned by soft-deleted user" do
+    skip
     student = create :student
-    with_channel_for student do |storage_app_id|
+    with_channel_for student do |project_id|
       featured_project = create :featured_project,
-        storage_app_id: storage_app_id,
+        project_id: project_id,
         featured_at: Time.now
 
       assert featured_project.featured?
@@ -1768,10 +1888,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "unfeatures any featured projects owned by purged user" do
+    skip
     student = create :student
-    with_channel_for student do |storage_app_id|
+    with_channel_for student do |project_id|
       featured_project = create :featured_project,
-        storage_app_id: storage_app_id,
+        project_id: project_id,
         featured_at: Time.now
 
       assert featured_project.featured?
@@ -1784,12 +1905,13 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "does not change unfeature time on previously unfeatured projects" do
+    skip
     student = create :student
     featured_time = Time.now - 20
     unfeatured_time = Time.now - 10
-    with_channel_for student do |storage_app_id|
+    with_channel_for student do |project_id|
       featured_project = create :featured_project,
-        storage_app_id: storage_app_id,
+        project_id: project_id,
         featured_at: featured_time,
         unfeatured_at: unfeatured_time
 
@@ -1817,18 +1939,22 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "SourceBucket: hard-deletes all of user's channels" do
+    skip
     assert_bucket_hard_deletes_contents SourceBucket
   end
 
   test "AssetBucket: hard-deletes all of user's channels" do
+    skip
     assert_bucket_hard_deletes_contents AssetBucket
   end
 
   test "AnimationBucket: hard-deletes all of user's channels" do
+    skip
     assert_bucket_hard_deletes_contents AnimationBucket
   end
 
   test "FileBucket: hard-deletes all of user's channels" do
+    skip
     assert_bucket_hard_deletes_contents FileBucket
   end
 
@@ -1838,16 +1964,16 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     # in this test, we depend on the unit tests for the particular buckets to
     # verify correct hard-delete behavior for that bucket.
     student = create :student
-    with_channel_for student do |storage_app_id_a, _|
-      with_channel_for student do |storage_app_id_b, storage_id|
-        storage_apps.where(id: storage_app_id_a).update(state: 'deleted')
+    with_channel_for student do |project_id_a, _|
+      with_channel_for student do |project_id_b, storage_id|
+        projects_table.where(id: project_id_a).update(state: 'deleted')
 
         bucket.any_instance.
           expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, storage_app_id_a))
+          with(storage_encrypt_channel_id(storage_id, project_id_a))
         bucket.any_instance.
           expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, storage_app_id_b))
+          with(storage_encrypt_channel_id(storage_id, project_id_b))
 
         purge_user student
       end
@@ -1859,13 +1985,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "Firebase: deletes content for all of user's channels" do
+    skip
     student = create :student
-    with_channel_for student do |storage_app_id_a, _|
-      with_channel_for student do |storage_app_id_b, storage_id|
-        storage_apps.where(id: storage_app_id_a).update(state: 'deleted')
+    with_channel_for student do |project_id_a, _|
+      with_channel_for student do |project_id_b, storage_id|
+        projects_table.where(id: project_id_a).update(state: 'deleted')
 
-        student_channels = [storage_encrypt_channel_id(storage_id, storage_app_id_a),
-                            storage_encrypt_channel_id(storage_id, storage_app_id_b)]
+        student_channels = [storage_encrypt_channel_id(storage_id, project_id_a),
+                            storage_encrypt_channel_id(storage_id, project_id_b)]
         FirebaseHelper.
           expects(:delete_channels).
           with(student_channels)
@@ -1901,47 +2028,48 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test 'with_channel_for owns channel' do
+    skip
     student = create :student
 
     with_storage_id_for student do |storage_id|
-      assert_empty storage_apps.where(storage_id: storage_id)
+      assert_empty projects_table.where(storage_id: storage_id)
 
-      with_channel_for student do |storage_app_id|
-        assert_equal storage_app_id, storage_apps.where(storage_id: storage_id).first[:id]
+      with_channel_for student do |project_id|
+        assert_equal project_id, projects_table.where(storage_id: storage_id).first[:id]
       end
 
-      assert_empty storage_apps.where(storage_id: storage_id)
+      assert_empty projects_table.where(storage_id: storage_id)
     end
   end
 
   test 'with_storage_id_for owns id if it does not exist' do
     student = create :student
 
-    assert_empty user_storage_ids.where(user_id: student.id)
+    assert_nil storage_id_for_user_id(student.id)
 
     with_storage_id_for student do |storage_id|
-      assert_equal storage_id, user_storage_ids.where(user_id: student.id).first[:id]
+      assert_equal storage_id, storage_id_for_user_id(student.id)
     end
 
-    assert_empty user_storage_ids.where(user_id: student.id)
+    assert_nil storage_id_for_user_id(student.id)
   end
 
   test 'with_storage_id_for does not own id if it does exist' do
     student = create :student
-    assert_empty user_storage_ids.where(user_id: student.id)
+    assert_nil storage_id_for_user_id(student.id)
 
-    user_storage_ids.insert(user_id: student.id)
+    create_storage_id_for_user(student.id)
 
-    refute_empty user_storage_ids.where(user_id: student.id)
+    refute_nil storage_id_for_user_id(student.id)
 
     with_storage_id_for student do |storage_id|
-      assert_equal storage_id, user_storage_ids.where(user_id: student.id).first[:id]
+      assert_equal storage_id, storage_id_for_user_id(student.id)
     end
 
-    refute_empty user_storage_ids.where(user_id: student.id)
+    refute_nil storage_id_for_user_id(student.id)
 
-    user_storage_ids.where(user_id: student.id).delete
-    assert_empty user_storage_ids.where(user_id: student.id)
+    delete_storage_id_for_user(student.id)
+    assert_nil storage_id_for_user_id(student.id)
   end
 
   #

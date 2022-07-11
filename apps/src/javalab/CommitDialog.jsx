@@ -8,6 +8,7 @@ import StylizedBaseDialog, {
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import CommitDialogBody from './CommitDialogBody';
+import {setCommitSaveStatus} from '@cdo/apps/javalab/javalabRedux';
 
 const PADDING = 8;
 
@@ -17,25 +18,25 @@ export class UnconnectedCommitDialog extends React.Component {
     existingBackpackFiles: [],
     commitNotes: '',
     backpackSaveInProgress: false,
-    commitSaveInProgress: false,
     hasBackpackLoadError: false,
-    hasBackpackSaveError: false,
-    hasCommitSaveError: false
+    hasBackpackSaveError: false
   };
 
   componentDidMount() {
-    this.updateBackpackFileList();
+    if (this.props.backpackEnabled) {
+      this.updateBackpackFileList();
+    }
   }
 
   // Get updated backpack file list every time we open the modal
   componentDidUpdate(prevProps) {
-    if (this.props.isOpen && !prevProps.isOpen) {
+    if (this.props.backpackEnabled && this.props.isOpen && !prevProps.isOpen) {
       this.updateBackpackFileList();
     }
   }
 
   updateBackpackFileList() {
-    if (this.props.backpackApi.hasBackpack()) {
+    if (this.props.backpackEnabled && this.props.backpackApi.hasBackpack()) {
       this.props.backpackApi.getFileList(
         () => this.setState({hasBackpackLoadError: true}),
         filenames => this.setState({existingBackpackFiles: filenames})
@@ -46,18 +47,17 @@ export class UnconnectedCommitDialog extends React.Component {
   renderFooter = () => {
     const {
       backpackSaveInProgress,
-      commitSaveInProgress,
       commitNotes,
       hasBackpackLoadError,
       hasBackpackSaveError,
-      hasCommitSaveError,
       filesToBackpack
     } = this.state;
+    const {isCommitSaveInProgress, hasCommitSaveError} = this.props;
     let footerIcon = '';
     let footerMessageTitle = '';
     let footerMessageText = '';
     let commitText = i18n.commit();
-    const saveInProgress = backpackSaveInProgress || commitSaveInProgress;
+    const saveInProgress = backpackSaveInProgress || isCommitSaveInProgress;
     const hasError =
       hasBackpackSaveError || hasCommitSaveError || hasBackpackLoadError;
     const isCommitButtonDisabled =
@@ -112,7 +112,9 @@ export class UnconnectedCommitDialog extends React.Component {
 
   commitAndSaveToBackpack = () => {
     this.saveCommit();
-    this.saveToBackpack();
+    if (this.props.backpackEnabled) {
+      this.saveToBackpack();
+    }
   };
 
   getConflictingBackpackFiles = () => {
@@ -123,9 +125,9 @@ export class UnconnectedCommitDialog extends React.Component {
   };
 
   saveCommit = () => {
-    this.setState({
-      hasCommitSaveError: false,
-      commitSaveInProgress: true
+    this.props.setCommitSaveStatus({
+      isCommitSaveInProgress: true,
+      hasCommitSaveError: false
     });
     this.props.handleCommit(
       this.state.commitNotes,
@@ -157,7 +159,7 @@ export class UnconnectedCommitDialog extends React.Component {
 
   handleBackpackSaveSuccess = () => {
     const canClose =
-      !this.state.commitSaveInProgress && !this.state.hasCommitSaveError;
+      !this.props.isCommitSaveInProgress && !this.props.hasCommitSaveError;
 
     this.setState({
       hasBackpackSaveError: false,
@@ -174,9 +176,9 @@ export class UnconnectedCommitDialog extends React.Component {
   handleBackpackLoadError = () => this.setState({hasBackpackLoadError: true});
 
   handleCommitSaveError = () => {
-    this.setState({
-      hasCommitSaveError: true,
-      commitSaveInProgress: false
+    this.props.setCommitSaveStatus({
+      isCommitSaveInProgress: false,
+      hasCommitSaveError: true
     });
   };
 
@@ -184,9 +186,11 @@ export class UnconnectedCommitDialog extends React.Component {
     const canClose =
       !this.state.backpackSaveInProgress && !this.state.hasBackpackSaveError;
     this.setState({
-      hasCommitSaveError: false,
-      commitSaveInProgress: false,
       commitNotes: ''
+    });
+    this.props.setCommitSaveStatus({
+      isCommitSaveInProgress: false,
+      hasCommitSaveError: false
     });
     if (canClose) {
       this.props.handleClose();
@@ -197,9 +201,11 @@ export class UnconnectedCommitDialog extends React.Component {
     this.setState({
       hasBackpackSaveError: false,
       hasBackpackLoadError: false,
-      backpackSaveInProgress: false,
-      hasCommitSaveError: false,
-      commitSaveInProgress: false
+      backpackSaveInProgress: false
+    });
+    this.props.setCommitSaveStatus({
+      isCommitSaveInProgress: false,
+      hasCommitSaveError: false
     });
     this.props.handleClose();
   };
@@ -241,6 +247,7 @@ export class UnconnectedCommitDialog extends React.Component {
             notes={commitNotes}
             onToggleFile={this.toggleFileToBackpack}
             onChangeNotes={this.updateNotes}
+            showSaveToBackpackSection={this.props.backpackEnabled}
           />
         }
         renderFooter={this.renderFooter}
@@ -258,7 +265,11 @@ UnconnectedCommitDialog.propTypes = {
   handleCommit: PropTypes.func.isRequired,
   // populated by redux
   sources: PropTypes.object,
-  backpackApi: PropTypes.object
+  backpackApi: PropTypes.object,
+  backpackEnabled: PropTypes.bool,
+  isCommitSaveInProgress: PropTypes.bool,
+  hasCommitSaveError: PropTypes.bool,
+  setCommitSaveStatus: PropTypes.func
 };
 
 const styles = {
@@ -294,7 +305,18 @@ const styles = {
   }
 };
 
-export default connect(state => ({
-  sources: state.javalab.sources,
-  backpackApi: state.javalab.backpackApi
-}))(UnconnectedCommitDialog);
+export default connect(
+  state => ({
+    sources: state.javalab.sources,
+    backpackApi: state.javalab.backpackApi,
+    backpackEnabled: state.javalab.backpackEnabled,
+    isCommitSaveInProgress: state.javalab.isCommitSaveInProgress,
+    hasCommitSaveError: state.javalab.hasCommitSaveError
+  }),
+  dispatch => ({
+    setCommitSaveStatus: ({
+      isCommitSaveInProgress: isSaveInProgress,
+      hasCommitSaveError: hasError
+    }) => dispatch(setCommitSaveStatus(isSaveInProgress, hasError))
+  })
+)(UnconnectedCommitDialog);

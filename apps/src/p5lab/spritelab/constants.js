@@ -50,7 +50,8 @@ export const SpritelabReservedWords = [
   'whileUpArrow',
   'xLocationOf',
   'yLocationOf',
-  'setupSim'
+  'setupSim',
+  'everyInterval'
 ];
 
 export const valueTypeTabShapeMap = function(blockly) {

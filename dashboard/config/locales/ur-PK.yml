@@ -27,7 +27,11 @@ ur:
   submit: جمع کرائیں
   next_page: اگلا صفحہ
   cancel: منسوخ کریں
+  okay: اوکے
   or: یا
+  join_section:
+    code:
+      placeholder: سیکشن کوڈ (ABCDEF)
   add_hint_form:
     placeholder: براے مہربانی اپنا اشارہ یہاں enter کریں
     submit: اشارہ شامل کریں
@@ -80,7 +84,17 @@ ur:
     invalid_password: پاس ورڈ کم از کم ٦ حروف کا ہونا چاہیے
     mismatch_password: داخل کے گئے دونوں پاس ورڈزمختلف ہیں
     additional_information: ہمیں آپ کو sign in کرنے لئے کچھ مزید معلومات درکار ہے.
+    user_type_button: اکاؤنٹ کی قسم اپڈیٹ کریں
+    user_type_label: اکاؤنٹ کی قسم
     user_type_student: Talib-e-ilm
+    user_type_student_desc: 'ہماری تمام کورسیں اور سرگرمیاں دریافت کریں، مزید برآں:'
+    user_type_student_ability_1: اپنی پیشرفت اور پراجیکٹس محفوظ کریں
+    user_type_student_ability_2: اپنے استاد کے کلاسروم سیکشن میں شامل ہوں
+    user_type_teacher_desc: 'وہ سب کچھ جنہیں طلباء کو رسائی حاصل ہو، اور مزید برآں:'
+    user_type_teacher_ability_1: کلاسروم کے سیکشن بنائیں
+    user_type_teacher_ability_2: طلباء کو کام سونپیں اور پیشرفت ٹریک کریں
+    user_type_teacher_ability_3: پیشہ ورانہ سیکھنے کے کورسوں میں داخلے لیں
+    user_type_teacher_ability_4: ہمارے اساتذہ پلیٹ فارم پر روابط قائم کریں
     field_is_required: مطلوب ہے
     email_preference_privacy: "(ہماری رازداری کی پالیسی دیکھیں)"
     email_preference_yes: جی
@@ -129,6 +143,11 @@ ur:
   crud:
     edit: تدوین کریں
     submit: جمع کرائیں
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: آپ کا فراہم کردہ ایمیل ایڈرس اس اکاؤنٹ سے
+          جڑے ایمیل سے مطابقت نہیں رکھتا
   nav:
     header:
       finished_hoc: میں نے ختم کیا!
@@ -150,7 +169,10 @@ ur:
       algebra_game: الجبرا
       artist_k1: آرٹسٹ (پری ریڈر)
       basketball: باسکٹ بال
+      calc: Calc
       dance: ڈانس پارٹی
+      eval: Eval
+      flappy: فلاپی
       frozen: فروزن
       gamelab_jr: کھیل لیب (بیٹا)
       iceage: برفانی عہد
@@ -160,6 +182,7 @@ ur:
       playlab_k1: لیب کھیلیں (پری ریڈر)
       poetry: شاعری
       poetry_hoc: نظم کا فن
+      sports: کھیل کود
       starwars: اسٹار وارز
       starwarsblocks: اسٹار وارز (بلاکس)
       starwarsblocks_hour: اسٹار وارز (بلاکس)
@@ -169,6 +192,7 @@ ur:
   teacher:
     dashboard: ٹیچر کا ڈیش بورڈ
     panel:
+      answer_viewer: ٹیچر پینل
       student: Talib-e-ilm
       last_updated: 'آخری تازہ کاری:'
   user:
@@ -181,6 +205,7 @@ ur:
     none: کوئی نہيں
     only_one_parent_email_supported_warning: 'نوٹ: ہم فعل الحال ایک سٹوڈنٹ اکاؤنٹ
       میں والدین/سرپرست کا ایک ہی ایمیل ایڈرس رکھنے کی سہولت دے پا رہے ہیں۔'
+    encrypted: انکرپٹ کردہ
   home:
     student_reg_link: طالبعلم کا سائن اپ
     teacher_reg_link: استاد کا سائن اپ
@@ -211,6 +236,10 @@ ur:
       title: ڈانس پارٹی
     dance-2019:
       title: ڈانس پارٹی
+    hello-world:
+      title: ہیلو ورلڈ
+    poem-art:
+      title: نظم کا فن
     20-hour:
       title: تیز کردہ کورس
       body_short: 2-4 کورسز کے تیز کردہ ورژن میں بنیادی کمپیوٹر سائنس سیکھیں۔
@@ -220,6 +249,8 @@ ur:
       title: فروزن
     starwars:
       title: اسٹار وارز
+    sports:
+      title: کھیل کود
     unplugged:
       title: ان پلگڈ اسباق
       body_short: اگر آپ کے پاس کمپیوٹر نہیں ہے، تو اپنے کلاس روم میں پلگ نکالا اسباق
@@ -230,6 +261,15 @@ ur:
       audience: عمر 14+
   landing:
     help_support: مدد اور معاونت
+  multi-submittable:
+    wrong_title: آپکا شکریہ
+    correct_title: آپکا شکریہ
+  level_group:
+    wrong_title: آپکا شکریہ
+    correct_title: آپکا شکریہ
+  level_group-submittable:
+    wrong_title: آپکا شکریہ
+    correct_title: آپکا شکریہ
   dialog:
     ok: ٹھیک ہے
     startover_title: کیا آپ یقینی طور پر دوبارہ شروع (اسٹارٹ اوور) کرنا چاہتے ہیں؟
@@ -243,6 +283,8 @@ ur:
       شرائط](%{tos_url}) اور [پرائیویسی پالیسی](%{privacy_url})
       سے اتفاق کرتے ہیں۔.
     print: پرنٹ کریں
+  school_info_interstitial:
+    save: محفوظ کریں
   race_interstitial:
     races:
       other: دیگر
@@ -266,13 +308,20 @@ ur:
   pd:
     form_labels:
       email: Email
+      school_city: سکول سٹی
       school_city_district: سکول سٹی/ضلع
+      colombian_school_city: سکول سٹی
     form_entries:
       subjects:
         cs: کمپیوٹر سائنس
         math: ریاضی
         science: سائنس
         la: لسانی آرٹس
+        other: دیگر
+      resources:
+        other: دیگر
+      robotics:
+        other: دیگر
       workshop_course:
         csf_express: CS بنیادی اصول (پری ایکسپریس یا ایکسپریس)
       email_opt_in:
@@ -287,3 +336,4 @@ ur:
       سے جو‌ڑ لیں۔"
     link_your_email: ایمیل ایڈرس اس اکاؤنٹ سے جو‌ڑ لیں
     not_now: ابھی نہیں
+  teacher_feedback: استاد کے حوالے سے رائے

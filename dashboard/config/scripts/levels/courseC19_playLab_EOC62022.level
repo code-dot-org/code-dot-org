@@ -52,11 +52,18 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:36.313+00:00\",\"changed\":[\"cloned from \\\"courseC19_playLab_EOC6_2021\\\"\"],\"cloned_from\":\"courseC19_playLab_EOC6_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:36.313+00:00\",\"changed\":[\"cloned from \\\"courseC19_playLab_EOC6_2021\\\"\"],\"cloned_from\":\"courseC19_playLab_EOC6_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "events": 1,
+    "conditionals": 1
+  }
 }]]></config>
   <blocks>
     <initialization_blocks>

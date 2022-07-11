@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-01-06T20:02:31.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -21,7 +17,7 @@
     "instructions_important": "false",
     "long_instructions": "# Do This\r\n\r\n* Run this program to see how it works.\r\n* Debug the program so that the smiley face does not go off the screen.",
     "submittable": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "slider_speed": "1.0",
     "hide_share_and_remix": "true",
     "droplet_tooltips_disabled": "false",
@@ -54,9 +50,13 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-01-06T20:02:31.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:02:31.733+00:00\",\"changed\":[\"cloned from \\\"U3 Program Practice Pt 4_2021\\\"\"],\"cloned_from\":\"U3 Program Practice Pt 4_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:02:31.733+00:00\",\"changed\":[\"cloned from \\\"U3 Program Practice Pt 4_2021\\\"\"],\"cloned_from\":\"U3 Program Practice Pt 4_2021\"},{\"changed_at\":\"2022-03-15 05:47:53 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

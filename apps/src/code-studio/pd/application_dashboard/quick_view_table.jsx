@@ -83,18 +83,20 @@ export class QuickViewTable extends React.Component {
         }
       },
       {
-        property: 'created_at',
+        property: 'date_applied',
         header: {
           label: 'Submitted',
           transforms: [sortable]
         },
         cell: {
           formatters: [
-            created_at =>
-              new Date(created_at).toLocaleDateString('en-us', {
-                month: 'long',
-                day: 'numeric'
-              })
+            date_applied =>
+              date_applied
+                ? new Date(date_applied).toLocaleDateString('en-us', {
+                    month: 'long',
+                    day: 'numeric'
+                  })
+                : 'Not Yet Submitted'
           ]
         }
       },
@@ -307,6 +309,7 @@ export class QuickViewTable extends React.Component {
           <span>{principal_approval_state}</span>
           <PrincipalApprovalButtons
             applicationId={props.rowData.id}
+            applicationStatus={props.rowData.status}
             showResendEmailButton={props.rowData.allow_sending_principal_email}
             onChange={this.handlePrincipalApprovalButtonsChange}
           />
@@ -318,6 +321,7 @@ export class QuickViewTable extends React.Component {
       <div>
         <PrincipalApprovalButtons
           applicationId={props.rowData.id}
+          applicationStatus={props.rowData.status}
           showSendEmailButton={true}
           showNotRequiredButton={true}
           onChange={this.handlePrincipalApprovalButtonsChange}

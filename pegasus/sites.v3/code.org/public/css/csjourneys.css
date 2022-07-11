@@ -5,6 +5,7 @@
     rgba(0, 173, 188, 1) 70%
   );
   margin-top: -18px;
+  overflow: hidden;
 }
 
 .csjourneys-banner-container {

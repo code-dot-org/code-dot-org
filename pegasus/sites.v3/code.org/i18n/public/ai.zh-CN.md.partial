@@ -52,7 +52,7 @@ social:
 <p>人工智能和机器学习课程模块大约时长为五周，可以作为<a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >独立模块</a>或作为<a href="https://studio.code.org/s/csd7-2021">计算机科学探索</a>的一个选修单元来教授。 该模块侧重于人工智能伦理、偏见问题研究，及基本概念的探索和阐述。</p><p>由于机器学习依赖于大量的数据，因此新单元中涵盖有关医疗保健、人口统计等现实生活的数据集，让学生们在探索一系列问题时积极参与，此类问题诸如“机器学习可以帮助解决哪些难题？” “人工智能如何协助社会？” “谁可以从人工智能中受益？” “谁会受到不利影响” “谁参与其中？” “谁会被遗漏？”  </p>
 <p>道德考量将是这些讨论的重心，这些科技所产生的的影响将是频繁讨论的要点及课程重点。 这将有助于学生在学习技术原理时，对这些科技产生全面、周密的理解。</p>
 </div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>探索模块</button></a></div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="clear"></div>
 </div>
 

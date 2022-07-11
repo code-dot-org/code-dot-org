@@ -9,6 +9,8 @@ import {
 } from '@cdo/apps/code-studio/headerRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
+import renderProjectNotFound from './renderProjectNotFound';
+import renderVersionNotFound from './renderVersionNotFound';
 var userAgentParser = require('./userAgentParser');
 var clientState = require('../clientState');
 import getScriptData from '../../util/getScriptData';
@@ -24,6 +26,7 @@ import queryString from 'query-string';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
 import msg from '@cdo/locale';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const SHARE_IMAGE_NAME = '_share_image.png';
 
@@ -66,8 +69,14 @@ export function setupApp(appOptions) {
         appOptions.app === 'weblab'
       ) {
         $('#clear-puzzle-header').hide();
-        // Only show Version History button if the user owns this project
-        if (project.isEditable()) {
+        // Only show version history if user is project owner, or teacher viewing student work
+        const isTeacher =
+          getStore().getState().currentUser?.userType === 'teacher';
+        const isViewingStudent = !!queryParams('user_id');
+        if (
+          project.isOwner() ||
+          (isTeacher && isViewingStudent && appOptions.level.isStarted)
+        ) {
           $('#versions-header').show();
         }
       }
@@ -235,26 +244,37 @@ function tryToUploadShareImageToS3({image, level}) {
  */
 function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
-    project.load().then(() => {
-      if (project.hideBecauseAbusive()) {
-        renderAbusive(project, msg.tosLong({url: 'http://code.org/tos'}));
-        return;
-      }
-      if (project.hideBecausePrivacyViolationOrProfane()) {
-        renderAbusive(project, msg.policyViolation());
-        return;
-      }
-      if (project.getSharingDisabled()) {
-        renderAbusive(
-          project,
-          msg.sharingDisabled({
-            sign_in_url: 'https://studio.code.org/users/sign_in'
-          })
-        );
-        return;
-      }
-      resolve(appOptions);
-    });
+    project
+      .load()
+      .then(() => {
+        if (project.hideBecauseAbusive()) {
+          renderAbusive(project, msg.tosLong({url: 'http://code.org/tos'}));
+          return;
+        }
+        if (project.hideBecausePrivacyViolationOrProfane()) {
+          renderAbusive(project, msg.policyViolation());
+          return;
+        }
+        if (project.getSharingDisabled()) {
+          renderAbusive(
+            project,
+            msg.sharingDisabled({
+              sign_in_url: 'https://studio.code.org/users/sign_in'
+            })
+          );
+          return;
+        }
+        resolve(appOptions);
+      })
+      .catch(() => {
+        if (project.channelNotFound()) {
+          renderProjectNotFound();
+          return;
+        } else if (project.sourceNotFound()) {
+          renderVersionNotFound();
+          return;
+        }
+      });
   });
 }
 
@@ -442,7 +462,7 @@ const sourceHandler = {
       let appOptions = getAppOptions();
       if (window.Blockly && Blockly.mainBlockSpace) {
         // If we're readOnly, source hasn't changed at all
-        source = Blockly.mainBlockSpace.isReadOnly()
+        source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
           ? currentLevelSource
           : Blockly.Xml.domToText(
               Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)

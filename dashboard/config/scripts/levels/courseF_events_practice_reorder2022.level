@@ -72,11 +72,17 @@
     "short_instructions": "Change the order of the code underneath \"at 2 seconds\" so that the sprite only stops the old behaviors.",
     "hint_prompt_attempts_threshold": "1",
     "instructions_icon": "bird",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:50.984+00:00\",\"changed\":[\"cloned from \\\"courseF_events_practice_reorder\\\"\"],\"cloned_from\":\"courseF_events_practice_reorder\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:50.984+00:00\",\"changed\":[\"cloned from \\\"courseF_events_practice_reorder\\\"\"],\"cloned_from\":\"courseF_events_practice_reorder\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 4,
+    "events": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

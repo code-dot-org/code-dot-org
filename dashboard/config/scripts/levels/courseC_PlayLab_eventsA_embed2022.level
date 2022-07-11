@@ -59,11 +59,15 @@
     "tts_long_instructions_override": "Let's play a game. Score 5 points by moving the Penguin to the Octopus!",
     "long_instructions": "Let's play a game. Move the penguin to the octopus to score a point. Score 5 points to win.",
     "encrypted": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:17.852+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_eventsA_embed_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_eventsA_embed_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:17.852+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_eventsA_embed_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_eventsA_embed_2021\"}]",
+  "level_concept_difficulty": {
+    "events": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>

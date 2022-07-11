@@ -23,6 +23,10 @@ import {
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {renderTeacherPanel} from './teacherPanelHelpers';
+import {
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
 
 var progress = module.exports;
 
@@ -238,18 +242,17 @@ progress.initCourseProgress = function(scriptData) {
 
 /* Set our initial view type (Participant or Instructor) from current user's user_type
  * or our query string. */
-progress.initViewAs = function(store, userType) {
+progress.initViewAs = function(store, isSignedInUser, isInstructor) {
   // Default to Participant, unless current user is a teacher
   let initialViewAs = ViewType.Participant;
-  if (userType === 'teacher') {
-    //TODO(dmcavoy): Update to check instructor
+  if (isInstructor) {
     initialViewAs = ViewType.Instructor;
+    store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
   }
 
-  // If current user is not a student (ie, a teacher or signed out), allow the
+  // If current user is signed out or an instructor, allow the
   // 'viewAs' query parameter to override;
-  if (userType !== 'student') {
-    //TODO(dmcavoy): Update to check participant
+  if (!isSignedInUser || isInstructor) {
     const query = queryString.parse(location.search);
     initialViewAs = query.viewAs || initialViewAs;
   }
@@ -294,7 +297,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     }
 
     if (
-      (data.isTeacher || data.teacherViewingStudent) &&
+      (data.isInstructor || data.teacherViewingStudent) &&
       !data.professionalLearningCourse
     ) {
       const pageType = currentLevelId
@@ -348,6 +351,7 @@ function initializeStoreWithProgress(
       unitTitle: scriptData.title,
       unitDescription: scriptData.description,
       unitStudentDescription: scriptData.studentDescription,
+      courseVersionId: scriptData.courseVersionId,
       courseId: scriptData.course_id,
       isFullProgress: isFullProgress,
       isLessonExtras: isLessonExtras,

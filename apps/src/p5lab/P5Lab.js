@@ -673,6 +673,8 @@ export default class P5Lab {
    */
   onPause() {}
 
+  reactToExecutionError(msg) {}
+
   onIsRunningChange() {
     this.setCrosshairCursorForPlaySpace();
   }
@@ -1185,7 +1187,6 @@ export default class P5Lab {
     if (this.JSInterpreter) {
       if (this.interpreterStarted) {
         this.JSInterpreter.executeInterpreter();
-
         if (this.p5Wrapper.stepSpeed < 1) {
           this.p5Wrapper.drawDebugSpriteColliders();
         }
@@ -1468,6 +1469,11 @@ export default class P5Lab {
         this.eventHandlers.draw.apply(null);
       }
     }
+
+    if (this.JSInterpreter.executionError) {
+      this.reactToExecutionError(this.JSInterpreter.executionError.message);
+    }
+
     this.completeRedrawIfDrawComplete();
   }
 
@@ -1568,10 +1574,7 @@ export default class P5Lab {
     let msg = this.getMsg();
 
     // Allow P5Labs to decide what string should be rendered in the feedback dialog.
-    const isFinalFreePlayLevel = this.studioApp_.isFinalFreePlayLevel(
-      this.testResults,
-      this.response
-    );
+    const isFinalFreePlayLevel = level.freePlay && level.isLastLevelInLesson;
     const reinfFeedbackMsg = this.getReinfFeedbackMsg(isFinalFreePlayLevel);
 
     const isSignedIn =

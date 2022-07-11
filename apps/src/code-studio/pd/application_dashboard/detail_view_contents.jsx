@@ -68,7 +68,7 @@ export class DetailViewContents extends React.Component {
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
       course: PropTypes.oneOf(Object.values(CourseKeyMap)),
-      course_name: PropTypes.string.isRequired,
+      course_name: PropTypes.string,
       regional_partner_name: PropTypes.string,
       update_emails_sent_by_system: PropTypes.bool,
       regional_partner_id: PropTypes.number,
@@ -455,7 +455,10 @@ export class DetailViewContents extends React.Component {
     return (
       <DetailViewWorkshopAssignmentResponse
         question="Summer Workshop"
-        courseName={this.props.applicationData.course_name}
+        courseName={
+          this.props.applicationData.course_name ||
+          'Course TBD (Incomplete Application)'
+        }
         subjectType="summer"
         year={parseInt(
           this.props.applicationData.application_year.split('-')[0],
@@ -599,9 +602,13 @@ export class DetailViewContents extends React.Component {
   };
 
   renderStatusSelect = () => {
-    const statuses = getApplicationStatuses(
-      this.props.viewType,
-      this.props.applicationData.update_emails_sent_by_system
+    // Only show incomplete in the dropdown if the application is incomplete
+    const statuses = _.omit(
+      getApplicationStatuses(
+        this.props.viewType,
+        this.props.applicationData.update_emails_sent_by_system
+      ),
+      this.state.status === 'incomplete' ? [] : ['incomplete']
     );
     const selectControl = (
       <div>
@@ -681,7 +688,7 @@ export class DetailViewContents extends React.Component {
   renderHeader = () => {
     const rubricURL =
       this.props.applicationData.application_type === ApplicationTypes.teacher
-        ? 'https://drive.google.com/file/d/1UAlJ8zuM8pPza1OPewFrWpnvRo3h8k5W/view'
+        ? 'https://docs.google.com/document/d/19oolyeensn9oX8JAnIeT2M6HbNZQkZqlPhwcaIDx-Us/view'
         : 'https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub';
 
     return (
@@ -891,6 +898,7 @@ export class DetailViewContents extends React.Component {
 
     let scoringDropdowns = [];
     if (
+      this.props.applicationData.course &&
       this.scoreableQuestions[
         `criteriaScoreQuestions${_.startCase(
           this.props.applicationData.course
@@ -1094,6 +1102,7 @@ export class DetailViewContents extends React.Component {
             showSendEmailButton={true}
             showNotRequiredButton={true}
             onChange={this.handlePrincipalApprovalChange}
+            applicationStatus={this.props.applicationData.status}
           />
         </div>
       );
@@ -1112,6 +1121,7 @@ export class DetailViewContents extends React.Component {
             applicationId={this.props.applicationId}
             showSendEmailButton={true}
             onChange={this.handlePrincipalApprovalChange}
+            applicationStatus={this.props.applicationData.status}
           />
         </div>
       );
@@ -1143,6 +1153,7 @@ export class DetailViewContents extends React.Component {
               this.props.applicationData.allow_sending_principal_email
             }
             onChange={this.handlePrincipalApprovalChange}
+            applicationStatus={this.props.applicationData.status}
           />
         </div>
       );

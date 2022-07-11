@@ -26,6 +26,21 @@ export const courses = [
   }
 ];
 
+export const plCourses = [
+  {
+    title: 'PL Course 1',
+    description: 'Teachers learning things about teaching',
+    link: 'https://studio.code.org/s/pl-course1',
+    assignedSections: []
+  },
+  {
+    title: 'Course 2',
+    description: 'Facilitators learning stuff about facilitating',
+    link: 'https://studio.code.org/s/pl-course2',
+    assignedSections: []
+  }
+];
+
 export const moreCourses = [
   ...courses,
   {
@@ -68,7 +83,9 @@ export const taughtSections = [
     studentCount: 25,
     code: 'MRTHUN',
     courseId: 360,
-    scriptId: 361,
+    courseOfferingId: 360,
+    courseVersionId: 362,
+    unitId: 361,
     grade: 'K',
     providerManaged: false,
     hidden: false
@@ -82,7 +99,9 @@ export const taughtSections = [
     studentCount: 18,
     code: 'DINOSAR',
     courseId: 150,
-    scriptId: 13,
+    courseOfferingId: 150,
+    courseVersionId: 151,
+    unitId: 13,
     grade: '7',
     providerManaged: false,
     hidden: false
@@ -140,10 +159,68 @@ export const joinedSections = [
   }
 ];
 
+export const joinedPlSections = [
+  {
+    id: 11,
+    name: 'Period 1',
+    teacherName: 'Ms. Frizzle',
+    linkToProgress: progressUrl,
+    assignedTitle: 'PL Course 1',
+    linkToAssigned: 'https://studio.code.org/s/course1',
+    numberOfStudents: 1,
+    linkToStudents: manageStudentsUrl,
+    code: 'ClassOneCode'
+  },
+  {
+    id: 12,
+    name: 'Period 2',
+    teacherName: 'Ms. Frizzle',
+    linkToProgress: progressUrl,
+    assignedTitle: 'PL Course 2',
+    linkToAssigned: 'https://studio.code.org/s/course2',
+    currentUnitTitle: 'Unit 3',
+    linkToCurrentUnit: 'https://studio.code.org/s/course2-unit3',
+    numberOfStudents: 2,
+    linkToStudents: manageStudentsUrl,
+    code: 'ClassTwoCode'
+  },
+  {
+    id: 13,
+    name: 'Period 3 (Google Classroom)',
+    teacherName: 'Ms. Frizzle',
+    linkToProgress: progressUrl,
+    assignedTitle: 'PL Course 3',
+    linkToAssigned: 'https://studio.code.org/s/course3',
+    numberOfStudents: 3,
+    linkToStudents: manageStudentsUrl,
+    login_type: 'google_classroom',
+    code: 'DoNotShowThis'
+  },
+  {
+    id: 14,
+    name: 'Period 4 (Clever)',
+    teacherName: 'Ms. Frizzle',
+    linkToProgress: progressUrl,
+    assignedTitle: 'PL Course 4',
+    linkToAssigned: 'https://studio.code.org/s/course4',
+    numberOfStudents: 4,
+    linkToStudents: manageStudentsUrl,
+    login_type: 'clever',
+    code: 'OrThisEither'
+  }
+];
+
 export const topCourse = {
   assignableName: 'Course 1',
   lessonName: 'Lesson 3: Learn to drag and drop',
   linkToOverview: 'http://localhost-studio.code.org:3000/s/course1',
   linkToLesson:
     'http://localhost-studio.code.org:3000/s/course1/lessons/3/levels/1'
+};
+
+export const topPlCourse = {
+  assignableName: 'PL Course 1',
+  lessonName: 'Learning how to teacher',
+  linkToOverview: 'http://studio.code.org/s/vpl-csp-2021',
+  linkToLesson: 'http://studio.code.org/s/vpl-csp-2021/lessons/3/levels/1'
 };

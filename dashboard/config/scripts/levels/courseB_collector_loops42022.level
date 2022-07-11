@@ -45,11 +45,17 @@
     "long_instructions": "Fix Laurel's path to get all of this treasure!",
     "mini_rubric": "false",
     "hint_prompt_attempts_threshold": "1",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:48.485+00:00\",\"changed\":[\"cloned from \\\"courseB_collector_loops4_2021\\\"\"],\"cloned_from\":\"courseB_collector_loops4_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:48.485+00:00\",\"changed\":[\"cloned from \\\"courseB_collector_loops4_2021\\\"\"],\"cloned_from\":\"courseB_collector_loops4_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 2,
+    "debugging": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

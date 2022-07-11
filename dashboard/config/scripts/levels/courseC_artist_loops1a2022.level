@@ -47,11 +47,16 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"jumpto_callout\",\r\n  \"callout_text\": \"This block is very important for this project. Be sure to use it!\",\r\n  \"element_id\": \"#jumpTo\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "teacher_markdown": "This lesson contains a **mini-project** called *Sticker Design*. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \r\n\r\n* The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\r\n* These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \r\n* Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "encrypted_examples": "n5JzPYyc7t7tmR19F7VN2oY3W+ZItxhD22pRtBlLFt/GNs/iX0eC84Y/7lyH\nX7ic4z2Bf3RCgp54rE09FYbOL0j/CbOJsCw6jmq2yRCQ1RlqC9EkX4Du4QOE\nO/LHeD+4T5Eh8KaxCc7AyBYry9FH+kWzKUpPwO+C5Z2j9OizF9Cbw272sc9z\nLOKk6gTMV6KJgwuxk0KBXcF7F8oeJlbloA==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:16.751+00:00\",\"changed\":[\"cloned from \\\"courseC_artist_loops1a_2021\\\"\"],\"cloned_from\":\"courseC_artist_loops1a_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:16.751+00:00\",\"changed\":[\"cloned from \\\"courseC_artist_loops1a_2021\\\"\"],\"cloned_from\":\"courseC_artist_loops1a_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

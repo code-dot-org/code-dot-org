@@ -67,11 +67,17 @@
     "encrypted_examples": "bZ/KVk2bSDKmYIWA+igy2dc6sCXVKUZPN1GxFLv3WB2WPAopmrfREAzlXE/S\ni8nV5+7LfWGEo9+x/cyWOjLdNA==\n",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Use the \"when answered\" block to print the text from the variable after the prompt is answered.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:33.010+00:00\",\"changed\":[\"cloned from \\\"courseF_text_answer\\\"\"],\"cloned_from\":\"courseF_text_answer\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:33.010+00:00\",\"changed\":[\"cloned from \\\"courseF_text_answer\\\"\"],\"cloned_from\":\"courseF_text_answer\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 2,
+    "events": 2,
+    "variables": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

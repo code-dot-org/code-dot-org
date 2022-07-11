@@ -11,7 +11,6 @@ import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/Google
  */
 function MiniView(props) {
   const {
-    linesOfCodeText,
     isSummaryView,
     hasGroups,
     scriptName,
@@ -46,7 +45,6 @@ function MiniView(props) {
       {!minimal && (
         <MiniViewTopRow
           scriptName={scriptName}
-          linesOfCodeText={linesOfCodeText}
           selectedSectionId={selectedSectionId}
         />
       )}
@@ -56,7 +54,6 @@ function MiniView(props) {
 }
 
 MiniView.propTypes = {
-  linesOfCodeText: PropTypes.string,
   minimal: PropTypes.bool,
 
   // redux backed
@@ -64,7 +61,7 @@ MiniView.propTypes = {
   hasGroups: PropTypes.bool.isRequired,
   scriptName: PropTypes.string.isRequired,
   hasFullProgress: PropTypes.bool.isRequired,
-  selectedSectionId: PropTypes.string
+  selectedSectionId: PropTypes.number
 };
 
 const styles = {
@@ -85,5 +82,5 @@ export default connect(state => ({
   scriptName: state.progress.scriptName,
   hasFullProgress: state.progress.hasFullProgress,
   hasGroups: hasGroups(state.progress),
-  selectedSectionId: state.teacherSections.selectedSectionId.toString()
+  selectedSectionId: state.teacherSections.selectedSectionId
 }))(MiniView);

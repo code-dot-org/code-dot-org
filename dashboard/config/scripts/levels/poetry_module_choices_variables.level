@@ -58,83 +58,83 @@
           <next>
             <block type="gamelab_setPromptWithChoices" deletable="false">
               <value name="QUESTION">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">Choose a thing:</title>
-                </block>
+                </shadow>
               </value>
               <value name="VAR">
-                <block type="variables_get" can_disconnect_from_parent="false" deletable="false">
+                <block type="variables_get" movable="false" deletable="false">
                   <title name="VAR">noun1</title>
                 </block>
               </value>
               <value name="A">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">rock</title>
-                </block>
+                </shadow>
               </value>
               <value name="B">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">star</title>
-                </block>
+                </shadow>
               </value>
               <value name="C">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">squirrel</title>
                 </block>
               </value>
               <next>
                 <block type="gamelab_setPromptWithChoices" deletable="false">
                   <value name="QUESTION">
-                    <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                    <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                       <title name="TEXT">Choose a verb:</title>
-                    </block>
+                    </shadow>
                   </value>
                   <value name="VAR">
-                    <block type="variables_get" can_disconnect_from_parent="false" deletable="false">
+                    <block type="variables_get" movable="false" deletable="false">
                       <title name="VAR">verb</title>
                     </block>
                   </value>
                   <value name="A">
-                    <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                    <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                       <title name="TEXT">twinkle</title>
-                    </block>
+                    </shadow>
                   </value>
                   <value name="B">
-                    <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                    <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                       <title name="TEXT">twirl</title>
-                    </block>
+                    </shadow>
                   </value>
                   <value name="C">
-                    <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                    <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                       <title name="TEXT">tiptoe</title>
-                    </block>
+                    </shadow>
                   </value>
                   <next>
                     <block type="gamelab_setPromptWithChoices" deletable="false">
                       <value name="QUESTION">
-                        <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                        <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                           <title name="TEXT">Choose another thing:</title>
-                        </block>
+                        </shadow>
                       </value>
                       <value name="VAR">
-                        <block type="variables_get" can_disconnect_from_parent="false" deletable="false">
+                        <block type="variables_get" movable="false" deletable="false">
                           <title name="VAR">noun2</title>
                         </block>
                       </value>
                       <value name="A">
-                        <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                        <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                           <title name="TEXT">ballerina</title>
                         </block>
                       </value>
                       <value name="B">
-                        <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                        <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                           <title name="TEXT">diamond</title>
                         </block>
                       </value>
                       <value name="C">
-                        <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                        <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                           <title name="TEXT">spaceship</title>
-                        </block>
+                        </shadow>
                       </value>
                     </block>
                   </next>
@@ -147,6 +147,9 @@
           <next>
             <block type="Poetry_setTitle" deletable="false">
               <value name="TITLE">
+                <shadow type="text">
+                  <title name="TEXT"/>
+                </shadow>
                 <block type="gamelab_textJoin" deletable="false">
                   <title name="TEXT1">The </title>
                   <value name="TEXT2">
@@ -159,6 +162,9 @@
               <next>
                 <block type="Poetry_setAuthor" deletable="false">
                   <value name="AUTHOR">
+                <shadow type="text">
+                  <title name="TEXT"/>
+                </shadow>
                     <block type="gamelab_textJoin" deletable="false">
                       <title name="TEXT1">Ann Taylor and Jane Taylor</title>
                     </block>
@@ -169,18 +175,27 @@
                         <block type="Poetry_textVariableJoin" deletable="false">
                           <title name="VAR">???</title>
                           <value name="TEXT2">
+                            <shadow type="text">
+                              <title name="TEXT"/>
+                            </shadow>
                             <block type="gamelab_textJoin" deletable="false">
                               <title name="TEXT1">, </title>
                               <value name="TEXT2">
                                 <block type="Poetry_textVariableJoin" deletable="false">
                                   <title name="VAR">???</title>
                                   <value name="TEXT2">
+                                    <shadow type="text">
+                                      <title name="TEXT"/>
+                                    </shadow>
                                     <block type="gamelab_textJoin" deletable="false">
                                       <title name="TEXT1">, little </title>
                                       <value name="TEXT2">
                                         <block type="Poetry_textVariableJoin" deletable="false">
                                           <title name="VAR">???</title>
                                           <value name="TEXT2">
+                                            <shadow type="text">
+                                              <title name="TEXT"/>
+                                            </shadow>
                                             <block type="gamelab_textJoin" deletable="false">
                                               <title name="TEXT1">, </title>
                                             </block>
@@ -198,6 +213,9 @@
                       <next>
                         <block type="Poetry_addLine" deletable="false">
                           <value name="LINE">
+                            <shadow type="text">
+                              <title name="TEXT"/>
+                            </shadow>
                             <block type="gamelab_textJoin" deletable="false">
                               <title name="TEXT1">how I wonder what you are!</title>
                             </block>
@@ -205,6 +223,9 @@
                           <next>
                             <block type="Poetry_addLine" deletable="false">
                               <value name="LINE">
+                                <shadow type="text">
+                                  <title name="TEXT"/>
+                                </shadow>
                                 <block type="gamelab_textJoin" deletable="false">
                                   <title name="TEXT1">up above the world so high,</title>
                                 </block>
@@ -212,12 +233,18 @@
                               <next>
                                 <block type="Poetry_addLine" deletable="false">
                                   <value name="LINE">
+                                    <shadow type="text">
+                                      <title name="TEXT"/>
+                                    </shadow>
                                     <block type="gamelab_textJoin" deletable="false">
                                       <title name="TEXT1">like a </title>
                                       <value name="TEXT2">
                                         <block type="Poetry_textVariableJoin" deletable="false">
                                           <title name="VAR">???</title>
                                           <value name="TEXT2">
+                                            <shadow type="text">
+                                              <title name="TEXT"/>
+                                            </shadow>
                                             <block type="gamelab_textJoin" deletable="false">
                                               <title name="TEXT1"> in the sky.</title>
                                             </block>
@@ -265,9 +292,9 @@
               <next>
                 <block type="Poetry_setFontColor" deletable="false">
                   <value name="FILL">
-                    <block type="colour_picker" deletable="false">
+                    <shadow type="colour_picker" deletable="false">
                       <title name="COLOUR">#ffffff</title>
-                    </block>
+                    </shadow>
                   </value>
                 </block>
               </next>

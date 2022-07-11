@@ -1,9 +1,5 @@
 <Craft>
   <config><![CDATA[{
-  "game_id": 49,
-  "created_at": "2022-01-06T19:47:41.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "craft",
     "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
@@ -98,14 +94,25 @@
     "top_level_procedure_autopopulate": "false",
     "agent_start_direction": "0",
     "is_agent_level": "false",
-    "hint_prompt_attempts_threshold": 3,
+    "hint_prompt_attempts_threshold": "3",
     "parent_level_id": 21234,
     "name_suffix": "2022",
+    "encrypted": "false",
+    "show_type_hints": "false",
+    "is_aquatic_level": "false",
+    "boat": "false",
     "preload_asset_list": null
   },
+  "game_id": 49,
   "published": true,
+  "created_at": "2022-01-06T19:47:41.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:41.624+00:00\",\"changed\":[\"cloned from \\\"Overworld Move to Sheep_2021\\\"\"],\"cloned_from\":\"Overworld Move to Sheep_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:41.624+00:00\",\"changed\":[\"cloned from \\\"Overworld Move to Sheep_2021\\\"\"],\"cloned_from\":\"Overworld Move to Sheep_2021\"},{\"changed_at\":\"2022-03-07 16:59:46 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"hint_prompt_attempts_threshold\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-22 17:17:39 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

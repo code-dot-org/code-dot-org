@@ -20,11 +20,14 @@ th:
       length: ความยาว
       name: ชื่อ
       nectar: น้ำหวาน
+      planet: ดาวเคราะห์
       points: คะแนน
       random: สุ่ม
       repeat: ทำซ้ำ
       right: ขวา
       score: คะแนน
+      shout: ตะโกน
+      sides: ด้านข้าง
       size: ขนาด
       speed: ความเร็ว
       variable: ตัวแปร

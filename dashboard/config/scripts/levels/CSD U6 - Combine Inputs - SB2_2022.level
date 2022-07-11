@@ -62,9 +62,6 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20437,
     "name_suffix": "_2021",
-    "encrypted_examples": [
-
-    ],
     "text_mode_at_start": "false",
     "map_reference": "/docs/concepts/app-lab/taking-input-with-getproperty/",
     "mini_rubric": "false",
@@ -72,7 +69,8 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "pwtiqBNSI4LeeqaWuOADT3FTIN8t3fRgA0GR2hM1HCcwaDejU4X0CkFnc0Kv\nO0nQsn80DLC8vtWGaLfFuL/7WQ==\n"
   },
   "game_id": 41,
   "published": true,
@@ -80,7 +78,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T21:06:53.705+00:00\",\"changed\":[\"cloned from \\\"CSD U6 slider intro_2021\\\"\"],\"cloned_from\":\"CSD U6 slider intro_2021\"},{\"changed_at\":\"2021-08-31 21:07:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-30 03:17:00 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T21:06:53.705+00:00\",\"changed\":[\"cloned from \\\"CSD U6 slider intro_2021\\\"\"],\"cloned_from\":\"CSD U6 slider intro_2021\"},{\"changed_at\":\"2021-08-31 21:07:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-30 03:17:00 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 20:13:52 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

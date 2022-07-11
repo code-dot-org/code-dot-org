@@ -40,6 +40,12 @@
         },
         "define/coursee/2021": {
           "word": "အဓိပ္ပာယ်သတ်မှတ်သည်။"
+        },
+        "variable/csd/2021": {
+          "word": "Variable"
+        },
+        "function/csd/2021": {
+          "word": "လုပ်ဆောင်ချက်"
         }
       }
     }

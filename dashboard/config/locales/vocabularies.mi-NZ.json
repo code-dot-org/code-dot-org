@@ -26,6 +26,9 @@
         "variable/coursef/2021": {
           "word": "Taurangi"
         },
+        "input/coursef/2021": {
+          "word": "Tāuru"
+        },
         "internet/coursef/2021": {
           "word": "Te Ipurangi"
         },
@@ -70,6 +73,24 @@
         },
         "define/coursee/2021": {
           "word": "Whakamahukitia"
+        },
+        "variable/csd/2021": {
+          "word": "Taurangi"
+        },
+        "conditionals/csd/2021": {
+          "word": "Ngā Here"
+        },
+        "abstraction/csd/2021": {
+          "word": "Te Whakawaitara"
+        },
+        "function/csd/2021": {
+          "word": "Taumahi"
+        },
+        "input/csd/2021": {
+          "word": "Tāuru"
+        },
+        "copyright/csd/2021": {
+          "word": "Manatārua"
         }
       }
     }

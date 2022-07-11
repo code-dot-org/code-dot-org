@@ -14,13 +14,15 @@
       ],
       "has_verified_resources": true,
       "hideable_lessons": true,
+      "is_course": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "use_legacy_lesson_plans": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-22 19:56:29 UTC",
+    "family_name": "csp-ap",
+    "serialized_at": "2022-04-08 15:40:43 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

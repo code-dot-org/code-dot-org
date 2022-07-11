@@ -70,11 +70,15 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Use the new block in the Sprites category to change the size of the second sprite.",
     "instructions_icon": "strawberry",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:40.164+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_properties\\\"\"],\"cloned_from\":\"courseF_sprites_properties\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:40.164+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_properties\\\"\"],\"cloned_from\":\"courseF_sprites_properties\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

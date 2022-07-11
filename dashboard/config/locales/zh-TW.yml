@@ -29,6 +29,7 @@ zh-TW:
         personal_email_markdown: 個人電子信箱 [（如果你沒有個人信箱請點擊這裡）](%{url})
         username: 用戶名稱
         password: 密碼
+        verified_teacher: 認證老師
         password_confirmation: 密碼確認
         current_password: 目前的密碼
         locale: 語言
@@ -290,6 +291,7 @@ zh-TW:
       provider_managed_section: 這個學習小組是由另一位提供者管理的，你無法加入。請詢問你的老師是否能透過 %{provider} 將你加入，並重新同步他們的學習小組。
       restricted_section: 我們不能將你加入至課程 %{section_code} ，因為課程已經鎖起來了。請向你的老師尋求幫助。
       full_section: 我們不能將你加入至課程 %{section_code}，因為已經有 %{section_capacity} 個學生在裡面了。請向你的老師尋求幫助。
+      not_participant_type: 我們無法將您添加到%{section_code}部分，因為您不滿足該部分的參與者類型。
     mail:
       student_disassociated:
         subject: Code.org 通知： %{student_name} 已不再是你的學生。
@@ -348,6 +350,7 @@ zh-TW:
       educate_beyond: 超越 Code.org
       educate_inspire: 激勵學生
       educate_community: 線上社群
+      educate_requirements: 技術要求
       educate_tools: 工具和影片
       about_us: 關於我們
       about_leadership: 管理團隊
@@ -415,6 +418,7 @@ zh-TW:
       starwars: 星際大戰
       starwarsblocks: 星際大戰（程式積木）
       starwarsblocks_hour: 星際大戰（程式積木）
+      thebadguys: 壞蛋聯盟
       loading: 正在載入…
       weblab: Web Lab
       view_all: 瀏覽所有專案…
@@ -558,6 +562,7 @@ zh-TW:
     all_students_must_be_in_current_section: 所有的學生都必須在你的學習小組中。
     already_enrolled_in_new_section: 你無法移動這些學生，因為這個教師已經把他們放到另一個學習小組了。
     third_party_login: 你不可將學生移動到與第三方工具同步的學習小組。
+    not_correct_participant_type: 您無法移動這些用戶，因為他們沒有成為新部分的參與者的許可權。
   share:
     title: 在 Code Studio 上學習
     description: 任何人都可以學習計算機科學，用程式來建立遊戲、應用程式及藝術作品。
@@ -615,6 +620,8 @@ zh-TW:
     how_it_works: 它是如何運作的（檢視程式碼）
     try_hour_of_code: 試試「一小時玩程式」！
     store: 商店
+    cookie_notice: Cookie通知
+    view_code: 檢視程式碼
   reference_area:
     title: 需要幫忙？
     subtitle: 看看這些影片和提示
@@ -681,6 +688,12 @@ zh-TW:
       title: 舞蹈派對
     dance-2019:
       title: 舞蹈派對
+    hello-world:
+      title: 你好世界
+      body: 從四個有趣的主題中選擇，在你創建的世界中為交互式角色編碼。
+    poem-art:
+      title: 詩歌藝術
+      body: 表達自己！使用代碼創建動畫詩歌。
     hoc:
       title: 經典迷宮
       body: 試試數百萬人已經體驗過的計算機科學基礎課程。
@@ -845,15 +858,6 @@ zh-TW:
     reminder_desc_markdown: 我們更新了[服務條款](%{tos_url})和[隱私政策](%{privacy_url})。同意前請仔細閱讀。注意，在你的學生接受新條款之前，可能無法使用我們教授
       JavaScript 的工具。
     review_terms: 查看更新後的條款
-  donor_interstitial:
-    title: 您學習的免費電腦科學課程可能是由...組成的
-    subtitle: 我們想要感激這些慷慨又大方的捐贈，這些捐獻讓Code.org離成功的目標又邁進了一大步。我們承諾會讓全球學校的學生免費地使用Code.org網站。再一次地感謝這些持續不斷地
-      [大方捐獻](%{donors_url})!
-    local_supporters: 在地支援
-    global_supporters: 全球支援
-    support_codeorg_1: 捐贈給本網站的每一筆資金，都可以為更多的學生帶來更多的機會。
-    support_codeorg_2: "[現在就捐贈](%{donate_url}) 來贊助、支援本網站（Code.org）"
-    get_started: 開始使用 Code.org
   school_info_interstitial:
     title: 我們想要讓每個學生都能學習計算機科學 - 幫助我們紀錄學生進度！
     message: 請在下方輸入你的學校資訊。
@@ -948,6 +952,7 @@ zh-TW:
     instructor_feedback: 教師回饋
     peer_feedback: 同伴反饋
     outdated: 這是先前版本的回饋內容
+    review_count: 您必須完成本單元的%{review_count}評審
     peer_review: 同儕審查
   external_links:
     disclaimer: 免責聲明
@@ -1016,6 +1021,11 @@ zh-TW:
   no_course_access_teacher: 你沒有權限瀏覽這個課程。如果你認為你應該要有權限，請電郵至 support@code.org 讓我們解決這個問題。
   no_script_access_student: 你沒有權限瀏覽這個單元。請向你的老師查詢指定的單元。
   no_script_access_teacher: 你沒有權限瀏覽這個單元。如果你認為你應該要有權限，請電郵至 support@code.org 讓我們解決這個問題。
+  no_level_access_student: 你無權訪問此級別。請詢問教師應該訪問什麼級別。
+  no_level_access_teacher: 你沒有權限訪問此級別。如果你認為你應該有權限，請發送電子郵件至support@code.org讓我們解決這個問題。
+  no_exemplar: 此級別沒有範例。
+  no_exemplar_access_student: 學生無法訪問範例代碼。請詢教師應該訪問什麼級別。
+  no_exemplar_access_teacher: 只有認證教師才能訪問範例代碼。如果你想成為一名認證教師，請寫信給support@code.org。
   return_unit_overview: 移至單元概覽
   return_course_overview: 移至課程概覽
   view_all_units: 檢視所有單元
@@ -1033,9 +1043,13 @@ zh-TW:
       school_city: 學校所在城市
       school_city_district: 學校城市/區
       school_country: 學校所屬國家
+      school_department_region: 學校部門/區域
       colombian_school_city: 學校所在城市
+      colombian_chilean_school_department: 學校部門/區域
       colombian_school_municipality: 學校當局
       colombian_chilean_school_name: 學校名稱
+      chilean_school_commune: 社群
+      chilean_school_id: 學校ID
       ages: 你今年教授的學生的年齡？
       subjects: 你今年教授的科目？
       resources: 你使用哪些資源來教授計算機科學？
@@ -1059,7 +1073,9 @@ zh-TW:
         israel: Israel
         malaysia: Malaysia
         mexico: Mexico
+        paraguay: 巴拉圭
         thailand: Thailand
+        uzbekistan: 烏茲別克斯坦
       ages:
         ages_under_6: 6 歲以下
         ages_7_8: 7 - 8 歲
@@ -1080,6 +1096,7 @@ zh-TW:
         music: 音樂
         art: 藝術
         other: 其它：
+        na: 不適用
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1088,7 +1105,8 @@ zh-TW:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 其它：
+        other: 其它
+        na: 不適用
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1098,7 +1116,8 @@ zh-TW:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 其它：
+        other: 其它
+        na: 不適用
       workshop_course:
         csf_af: 計算機科學基本原理（課程 A-F）
         csf_express: 計算機科學基礎（速學先修或速學）
@@ -1154,3 +1173,6 @@ zh-TW:
     this_sprite: 這個角色
   unit_prefix: "%{n} 個單位"
   code_org_logo_alt: Code.org 首頁
+  teacher_feedback: '老師的回饋
+
+'

@@ -2,6 +2,23 @@
 ms:
   data:
     shared_functions:
+      driving with arrow keys: memandu dengan kekunci anak panah
+      fluttering: bergetar
+      growing: membesar
+      jittering: terketar
+      moving east: bergerak ke timur
+      moving east and looping: bergerak ke timur dan bergelung
+      moving north: bergerak ke utara
       moving north and looping: bergerak ke utara dan gelung
+      moving south: bergerak ke selatan
       moving south and looping: bergerak ke selatan dan gelung
+      moving west: bergerak ke barat
+      moving west and looping: bergerak ke barat dan bergelung
       moving with arrow keys: bergerak dengan kunci arah
+      patrolling: meronda
+      shrinking: mengecil
+      spinning left: berputar ke kiri
+      spinning right: berputar ke kanan
+      swimming left and right: berenang ke kiri dan ke kanan
+      wandering: merayau
+      wobbling: bergoyang

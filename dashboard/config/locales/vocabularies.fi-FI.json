@@ -38,6 +38,9 @@
         "debugging/aquatic/unversioned": {
           "word": "Virheen etsintä"
         },
+        "condition/aquatic/unversioned": {
+          "word": "Ehtolause"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Ehtolausekkeet"
         },
@@ -74,6 +77,9 @@
         "variable/coursef/2021": {
           "word": "Muuttuja"
         },
+        "input/coursef/2021": {
+          "word": "Syöte"
+        },
         "internet/coursef/2021": {
           "word": "Internet"
         },
@@ -104,8 +110,14 @@
         "conditionals/coursed/2021": {
           "word": "Ehtolausekkeet"
         },
+        "condition/coursed/2021": {
+          "word": "Ehtolause"
+        },
         "debugging/express/2021": {
           "word": "Virheen etsintä"
+        },
+        "condition/express/2021": {
+          "word": "Ehtolause"
         },
         "conditionals/express/2021": {
           "word": "Ehtolausekkeet"
@@ -131,11 +143,38 @@
         "function/coursee/2021": {
           "word": "Funktio"
         },
+        "condition/coursee/2021": {
+          "word": "Ehtolause"
+        },
         "conditionals/coursee/2021": {
           "word": "Ehtolausekkeet"
         },
         "define/coursee/2021": {
           "word": "Määritä"
+        },
+        "debugging/csd/2021": {
+          "word": "Virheen etsintä"
+        },
+        "variable/csd/2021": {
+          "word": "Muuttuja"
+        },
+        "condition/csd/2021": {
+          "word": "Ehtolause"
+        },
+        "conditionals/csd/2021": {
+          "word": "Ehtolausekkeet"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraktio"
+        },
+        "function/csd/2021": {
+          "word": "Funktio"
+        },
+        "input/csd/2021": {
+          "word": "Syöte"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright"
         }
       }
     }

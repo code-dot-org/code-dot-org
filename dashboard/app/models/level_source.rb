@@ -2,7 +2,7 @@
 #
 # Table name: level_sources
 #
-#  id         :integer          not null, primary key
+#  id         :bigint           unsigned, not null, primary key
 #  level_id   :integer
 #  md5        :string(32)       not null
 #  data       :string(20000)    not null
@@ -25,7 +25,7 @@ class LevelSource < ApplicationRecord
   # with this string to a LevelSource without via
   #   data = self.data.gsub(XMLNS_STRING, '')
   # For more context, see https://github.com/code-dot-org/code-dot-org/pull/13579.
-  belongs_to :level
+  belongs_to :level, optional: true
   has_one :level_source_image
   has_many :activities
 

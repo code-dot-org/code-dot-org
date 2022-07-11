@@ -154,6 +154,9 @@ class FilesTest < FilesApiTestBase
     @api.get_root_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
     assert_equal dog_image_body, last_response.body
 
+    @api.get_codeproject_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert_equal dog_image_body, last_response.body
+
     assert_newrelic_metrics %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
@@ -184,7 +187,7 @@ class FilesTest < FilesApiTestBase
     invalid_html_2 = '<meta http-equiv="refresh">'
 
     # WebLab
-    StorageApps.any_instance.stubs(:get).returns({projectType: 'weblab'})
+    Projects.any_instance.stubs(:get).returns({projectType: 'weblab'})
     @api.put_object(filename, valid_html)
     assert successful?
     @api.delete_object(filename)
@@ -198,7 +201,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(filename)
 
     # Not WebLab
-    StorageApps.any_instance.stubs(:get).returns({projectType: 'applab'})
+    Projects.any_instance.stubs(:get).returns({projectType: 'applab'})
     @api.put_object(filename, valid_html)
     assert successful?
     @api.delete_object(filename)
@@ -209,7 +212,7 @@ class FilesTest < FilesApiTestBase
 
     # This means the channel_id does not belong to a valid project.
     # These requests should always return a 400.
-    StorageApps.any_instance.stubs(:get).returns(nil)
+    Projects.any_instance.stubs(:get).returns(nil)
     @api.put_object(filename, valid_html)
     assert bad_request?
     @api.delete_object(filename)
@@ -218,7 +221,7 @@ class FilesTest < FilesApiTestBase
     assert bad_request?
     @api.delete_object(filename)
 
-    StorageApps.any_instance.unstub(:get)
+    Projects.any_instance.unstub(:get)
     delete_all_manifest_versions
   end
 
@@ -249,7 +252,15 @@ class FilesTest < FilesApiTestBase
     assert successful?
     assert_nil last_response['Content-Disposition']
 
+    @api.get_codeproject_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert successful?
+    assert_nil last_response['Content-Disposition']
+
     @api.get_root_object(html_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert successful?
+    assert_nil last_response['Content-Disposition']
+
+    @api.get_codeproject_object(html_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
     assert successful?
     assert_nil last_response['Content-Disposition']
 
@@ -274,6 +285,18 @@ class FilesTest < FilesApiTestBase
 
     @api.delete_object('index.html')
     @api.get_root_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert not_found?
+
+    delete_all_manifest_versions
+  end
+
+  def test_codeprojects_projects_url_get_deleted_project
+    post_file_data(@api, 'index.html', '<div></div>', 'text/html')
+    @api.get_codeproject_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert successful?
+
+    @api.delete_object('index.html')
+    @api.get_codeproject_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
     assert not_found?
 
     delete_all_manifest_versions

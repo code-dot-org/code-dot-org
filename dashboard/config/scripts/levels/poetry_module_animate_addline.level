@@ -60,72 +60,72 @@
           <next>
             <block type="Poetry_setTitle" deletable="false">
               <value name="TITLE">
-                <block type="Poetry_stringValue" deletable="false">
+                <shadow type="Poetry_stringValue" deletable="false">
                   <title name="TEXT">Nothing Gold Can Stay</title>
-                </block>
+                </shadow>
               </value>
               <next>
                 <block type="Poetry_setAuthor" deletable="false">
                   <value name="AUTHOR">
-                    <block type="Poetry_stringValue" deletable="false">
+                    <shadow type="Poetry_stringValue" deletable="false">
                       <title name="TEXT">Robert Frost</title>
-                    </block>
+                    </shadow>
                   </value>
                   <next>
                     <block type="Poetry_addLine" deletable="false">
                       <value name="LINE">
-                        <block type="Poetry_stringValue" deletable="false">
+                        <shadow type="Poetry_stringValue" deletable="false">
                           <title name="TEXT">Nature's first green is gold,</title>
-                        </block>
+                        </shadow>
                       </value>
                       <next>
                         <block type="Poetry_addLine" deletable="false">
                           <value name="LINE">
-                            <block type="Poetry_stringValue" deletable="false">
+                            <shadow type="Poetry_stringValue" deletable="false">
                               <title name="TEXT">Her hardest hue to hold, </title>
-                            </block>
+                            </shadow>
                           </value>
                           <next>
                             <block type="Poetry_addLine" deletable="false">
                               <value name="LINE">
-                                <block type="Poetry_stringValue" deletable="false">
+                                <shadow type="Poetry_stringValue" deletable="false">
                                   <title name="TEXT">Her early leaf's a flower;</title>
-                                </block>
+                                </shadow>
                               </value>
                               <next>
                                 <block type="Poetry_addLine" deletable="false">
                                   <value name="LINE">
-                                    <block type="Poetry_stringValue" deletable="false">
+                                    <shadow type="Poetry_stringValue" deletable="false">
                                       <title name="TEXT">But only so an hour.</title>
-                                    </block>
+                                    </shadow>
                                   </value>
                                   <next>
                                     <block type="Poetry_addLine" deletable="false">
                                       <value name="LINE">
-                                        <block type="Poetry_stringValue" deletable="false">
+                                        <shadow type="Poetry_stringValue" deletable="false">
                                           <title name="TEXT">Then leaf subsides to leaf.</title>
-                                        </block>
+                                        </shadow>
                                       </value>
                                       <next>
                                         <block type="Poetry_addLine" deletable="false">
                                           <value name="LINE">
-                                            <block type="Poetry_stringValue" deletable="false">
+                                            <shadow type="Poetry_stringValue" deletable="false">
                                               <title name="TEXT">So Eden sank to grief,</title>
-                                            </block>
+                                            </shadow>
                                           </value>
                                           <next>
                                             <block type="Poetry_addLine" deletable="false">
                                               <value name="LINE">
-                                                <block type="Poetry_stringValue" deletable="false">
+                                                <shadow type="Poetry_stringValue" deletable="false">
                                                   <title name="TEXT">So dawn goes down to day.</title>
-                                                </block>
+                                                </shadow>
                                               </value>
                                               <next>
                                                 <block type="Poetry_addLine" deletable="false">
                                                   <value name="LINE">
-                                                    <block type="Poetry_stringValue" deletable="false">
+                                                    <shadow type="Poetry_stringValue" deletable="false">
                                                       <title name="TEXT">Nothing gold can stay.</title>
-                                                    </block>
+                                                    </shadow>
                                                   </value>
                                                   <next>
                                                     <block type="Poetry_animateText" deletable="false"/>

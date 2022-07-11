@@ -46,11 +46,16 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "encrypted_examples": "8sJH3P5RgEiI9asf07HQEe7B9XHXl46tzbIiO5BxbMFBN0xso/iwuOH1w1i+\nVtSaj84k06yen9jOPErgIcZKyQ66ZkmBHeNcm87ZmJnInzLVOib68Dhv4qSL\nSVO2jFB5zcEGPFpzPiG/a1EO3hIW9XbcBMuhwRDwB5UNNjw7/gRwGKnCvJUA\nNCvyEvmzd8pkOL/SiaX6sp+zQLVIaSVnqQ==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:54.575+00:00\",\"changed\":[\"cloned from \\\"courseB_artist_loops10_2021\\\"\"],\"cloned_from\":\"courseB_artist_loops10_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:54.575+00:00\",\"changed\":[\"cloned from \\\"courseB_artist_loops10_2021\\\"\"],\"cloned_from\":\"courseB_artist_loops10_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

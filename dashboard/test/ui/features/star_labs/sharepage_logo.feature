@@ -9,7 +9,7 @@ Feature: Lab share page logo
     Given I am on "http://studio.code.org/projects/applab"
     And I wait for the page to fully load
     Then I click selector ".project_share"
-    And I wait until element "#sharing-input" is visible
+    And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
     And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
@@ -21,7 +21,7 @@ Feature: Lab share page logo
     Given I am on "http://studio.code.org/projects/playlab"
     And I wait for the page to fully load
     Then I click selector ".project_share"
-    And I wait until element "#sharing-input" is visible
+    And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
     And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
@@ -33,7 +33,7 @@ Feature: Lab share page logo
     Given I am on "http://studio.code.org/projects/gamelab"
     And I wait for the page to fully load
     Then I click selector ".project_share"
-    And I wait until element "#sharing-input" is visible
+    And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
     And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
@@ -45,7 +45,7 @@ Feature: Lab share page logo
     Given I am on "http://studio.code.org/projects/artist"
     And I wait for the page to fully load
     Then I click selector ".project_share"
-    And I wait until element "#sharing-input" is visible
+    And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
     And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
@@ -57,7 +57,7 @@ Feature: Lab share page logo
     Given I am on "http://studio.code.org/projects/playlab"
     And I wait for the page to fully load
     Then I click selector ".project_share"
-    And I wait until element "#sharing-input" is visible
+    And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
     And I wait to see "#runButton"
     And I am on "http://studio.code.org/users/sign_out"
@@ -72,7 +72,7 @@ Feature: Lab share page logo
     Given I am on "http://studio.code.org/projects/gamelab"
     And I wait for the page to fully load
     Then I click selector ".project_share"
-    And I wait until element "#sharing-input" is visible
+    And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
     And I wait to see "#runButton"
     And I am on "http://studio.code.org/users/sign_out"
@@ -87,7 +87,7 @@ Feature: Lab share page logo
     Given I am on "http://studio.code.org/projects/applab"
     And I wait for the page to fully load
     Then I click selector ".project_share"
-    And I wait until element "#sharing-input" is visible
+    And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
     And I wait to see "#runButton"
     And element "#main_logo" does not exist
@@ -97,7 +97,7 @@ Feature: Lab share page logo
     Given I am on "http://studio.code.org/projects/gamelab"
     And I wait for the page to fully load
     Then I click selector ".project_share"
-    And I wait until element "#sharing-input" is visible
+    And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
     And I wait to see "#runButton"
     And element "#main_logo" does not exist

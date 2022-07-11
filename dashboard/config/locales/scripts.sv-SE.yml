@@ -2,10 +2,6 @@
 sv:
   data:
     script:
-      category:
-        hoc_category_name: Timmen med Kod
-        math_category_name: Matte
-        other_category_name: Annat
       name:
         course1:
           title: Kurs 1
@@ -397,6 +393,8 @@ sv:
               name: K-5 kurser
             Next Steps:
               name: Nästa steg
+            Reflection:
+              name: Reflektion
             Teacher Dashboard:
               name: Lärare Dashboard
             Unplugged lessons:
@@ -605,6 +603,8 @@ sv:
           lessons:
             Introduction to PD:
               name: Introduktion till PD
+            What is CSP?:
+              name: Vad är CSP?
         CSPLessonSamples:
           title: CSP lektionsexempel
           lessons:
@@ -616,10 +616,16 @@ sv:
           lessons:
             Introduction to PD:
               name: Introduktion till PD
+            What is ECS?:
+              name: Vad är ECS?
         sciencePD:
           lessons:
             Introduction to PD:
               name: Introduktion till PD
+        rbo-reference:
+          lessons:
+            reference:
+              name: referens
         cspunit3:
           lessons:
             Creating Functions:
@@ -644,10 +650,14 @@ sv:
           lessons:
             Introduction to PD:
               name: Introduktion till PD
+            What is ECS?:
+              name: Vad är ECS?
         ECSPD-iZone:
           lessons:
             Introduction to PD:
               name: Introduktion till PD
+            What is ECS?:
+              name: Vad är ECS?
         algebraPD-NexTech:
           title: Datavetenskap i Algebra PD
           lessons:
@@ -680,6 +690,10 @@ sv:
               name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
+        sciencePD3:
+          lessons:
+            Welcome Back!:
+              name: Välkommen tillbaka!
         algebraPD2a:
           title: Datavetenskap i Algebra PD
           lessons:
@@ -847,6 +861,15 @@ sv:
           description_audience: Åldrarna 7-13
         algebraPD3a:
           title: Datavetenskap i Algebra PD
+        sciencePD3_pre1:
+          lessons:
+            Welcome Back!:
+              name: Välkommen tillbaka!
+        cspunit4draft:
+          description_short: Data
+          lessons:
+            Search Terms:
+              name: Söktermer
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -910,6 +933,10 @@ sv:
               name: Hour of Code 2015
           student_description: Använd block av kod för att ta Steve eller Alex på
             ett äventyr genom denna Minecraft-värld.
+        oceans:
+          lessons:
+            Oceans:
+              name: Hav
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1005,6 +1032,8 @@ sv:
               name: "'Medan' loopar(slingor)"
         CSDU3-Draft:
           lessons:
+            Collisions:
+              name: Kollisioner
             Functions:
               name: funktioner
         2016_sciencePD_phase1:
@@ -1053,8 +1082,12 @@ sv:
               name: Växla till designläge
         CSDU2-Draft:
           lessons:
+            Classes:
+              name: Klasser
             Peer Review:
               name: Din recension
+        CSDU5-Draft:
+          description_short: Data
         CSF_Secret_Sample_Story:
           description_audience: Åldrarna 8-18+
         MikeTest:
@@ -1077,6 +1110,7 @@ sv:
             'Bee: Conditionals':
               name: 'Biet: Villkor'
         gradeKinder:
+          title: Förskola
           description_audience: Åldrar 5 + (läsförmåga krävs)
           lessons:
             Debugging:
@@ -1147,6 +1181,8 @@ sv:
               name: 'Biet: Felsökning'
             Bounce:
               name: Studsa
+            Build a Game:
+              name: Bygg ett spel
             'Farmer: While Loops':
               name: 'Bonde: ''medan''-slingor'
         alltheplcthings:
@@ -1181,6 +1217,8 @@ sv:
             csd3_2:
               display_name: 'Kapitel 2: Bygga Spel'
           lessons:
+            Collisions:
+              name: Kollisioner
             Functions:
               name: funktioner
             Variables:
@@ -1236,6 +1274,11 @@ sv:
               display_name: 'Kapitel 1: Problemlösnings-processen'
             csd1_2:
               display_name: 'Kapitel 2: Datorer och Problemlösning'
+          lessons:
+            Processing:
+              name: Bearbetar
+            Storage:
+              name: Lagring
         csp-online-test:
           lesson_groups:
             required:
@@ -1257,12 +1300,17 @@ sv:
           description_short: Göra en basketmatch
           description: Göra en basketmatch
           student_description: Göra en basketmatch
+          name: basket
         csd2-2017:
           lessons:
             new stage:
               name: ny etapp
+            Classes:
+              name: Klasser
             Peer Review:
               name: Din recension
+            Intro to HTML:
+              name: Introduktion till HTML
             Lists:
               name: Listor
         csp2-support:
@@ -1385,6 +1433,10 @@ sv:
               name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
+        sciencepd3-2016:
+          lessons:
+            Welcome Back!:
+              name: Välkommen tillbaka!
         csp3-support:
           lesson_groups:
             required:
@@ -1424,6 +1476,8 @@ sv:
           lessons:
             Binary:
               name: Binära
+            Snowflakes:
+              name: Snöflingor
         sciencepd5:
           lessons:
             Welcome!:
@@ -1446,10 +1500,14 @@ sv:
           lessons:
             Lists:
               name: Listor
+            Lights:
+              name: Ljus
             For Loops:
               name: "'För' loopar"
             Map:
               name: Karta
+            Accelerometer:
+              name: Accelerometer
             Functions with Parameters:
               name: Funktioner med parametrar
         workshop-gamelab:
@@ -1468,6 +1526,8 @@ sv:
               name: Automatisera databeslut
             8-bit Numbers:
               name: 8-bitars tal
+            Encryption:
+              name: Kryptering
         applab-1hour:
           lessons:
             Extra:
@@ -1492,10 +1552,16 @@ sv:
           lessons:
             Lists:
               name: Listor
+            Lights:
+              name: Ljus
             For Loops:
               name: "'För' loopar"
+            Accelerometer:
+              name: Accelerometer
             Functions with Parameters:
               name: Funktioner med parametrar
+            Accelerometer_:
+              name: Accelerometer
             Functions with Parameters_:
               name: Funktioner med parametrar
         csd3-draft:
@@ -1505,6 +1571,8 @@ sv:
               name: variabler
             Conditionals:
               name: Villkor
+            Collisions:
+              name: Kollisioner
             Functions:
               name: funktioner
         csd5-2017:
@@ -1517,22 +1585,36 @@ sv:
               name: Automatisera databeslut
             8-bit Numbers:
               name: 8-bitars tal
+            Encryption:
+              name: Kryptering
         csd3-old:
           lessons:
+            Collisions:
+              name: Kollisioner
             Functions:
               name: funktioner
         csd2-draft:
           lessons:
+            Intro to HTML:
+              name: Introduktion till HTML
             Images:
               name: Bilder
             Lists:
               name: Listor
+        csd1-draft:
+          lessons:
+            Processing:
+              name: Bearbetar
+            Storage:
+              name: Lagring
         csd3-chapters:
           lessons:
             Variables:
               name: variabler
             Conditionals:
               name: Villkor
+            Collisions:
+              name: Kollisioner
             Functions:
               name: funktioner
             'null':
@@ -1549,6 +1631,8 @@ sv:
               name: Ice Age Play Lab
         csd2-old:
           lessons:
+            Classes:
+              name: Klasser
             Peer Review:
               name: Din recension
         artist-and-bb8:
@@ -1609,12 +1693,31 @@ sv:
               name: 'Algoritmer: Tangrams'
             Building a Foundation:
               name: Bygga en grund
+        csdnovice:
+          lessons:
+            Tuesday:
+              name: Tisdag
+            Wednesday:
+              name: Onsdag
+            Thursday:
+              name: Torsdag
+            Welcome:
+              name: Välkommen
         cspnovice:
           lesson_groups:
             required:
               display_name: Översikt
             content:
               display_name: Innehåll
+          lessons:
+            Welcome:
+              name: Välkommen
+            Tuesday:
+              name: Tisdag
+            Wednesday:
+              name: Onsdag
+            Thursday:
+              name: Torsdag
         csp1-dlp:
           lesson_groups:
             required:
@@ -1822,6 +1925,7 @@ sv:
             Res genom Minecraft via koden.
           student_description: Minecraft är tillbaka för Hour of Code med en helt
             ny aktivitet! Res genom Minecraft via koden.
+          name: hjälte
         csp-explore-2017:
           lessons:
             new stage:
@@ -1868,6 +1972,8 @@ sv:
           lessons:
             Lists:
               name: Listor
+            Lights:
+              name: Ljus
             For Loops:
               name: "'För' loopar"
         csd3-1819draft:
@@ -1881,12 +1987,18 @@ sv:
               name: variabler
             Conditionals:
               name: Villkor
+            Collisions:
+              name: Kollisioner
             Functions:
               name: funktioner
         textbook:
           lessons:
             new stage:
               name: ny etapp
+        glj-behavior-test:
+          lessons:
+            Cats and Dogs:
+              name: Katter och hundar
         csd3-2018:
           lesson_groups:
             csd3_1:
@@ -1898,10 +2010,14 @@ sv:
               name: variabler
             Conditionals:
               name: Villkor
+            Collisions:
+              name: Kollisioner
             Functions:
               name: funktioner
         csd2-2018:
           lessons:
+            Intro to HTML:
+              name: Introduktion till HTML
             Lists:
               name: Listor
         coursea-2018:
@@ -1988,6 +2104,8 @@ sv:
           lessons:
             Functions with Parameters_:
               name: Funktioner med parametrar\_
+            Accelerometer:
+              name: Accelerometer
             Functions with Parameters:
               name: Funktioner med parametrar
         coursee-2018:
@@ -2043,12 +2161,19 @@ sv:
               name: Binära tal
             The Internet:
               name: Internet
+            Sending Text:
+              name: Skickar text
         csd1-2018:
           lesson_groups:
             csd1_1:
               display_name: 'Kapitel 1: Problemlösnings-processen'
             csd1_2:
               display_name: 'Kapitel 2: Datorer och Problemlösning'
+          lessons:
+            Processing:
+              name: Bearbetar
+            Storage:
+              name: Lagring
         csd5-2018:
           lessons:
             Representing Images:
@@ -2065,6 +2190,7 @@ sv:
           lessons:
             Creating Functions:
               name: Skapa funktioner
+          name: csp3-2018
         csp5-2018:
           lessons:
             While Loops:
@@ -2075,48 +2201,56 @@ sv:
               display_name: Översikt
             content:
               display_name: Innehåll
+          name: csd1-dlp-18
         csd2-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
             content:
               display_name: Innehåll
+          name: csd2-dlp-18
         csd3-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
             content:
               display_name: Innehåll
+          name: csd3-dlp-18
         csd4-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
             content:
               display_name: Innehåll
+          name: csd4-dlp-18
         csd5-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
             content:
               display_name: Innehåll
+          name: csd5-dlp-18
         csd6-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
             content:
               display_name: Innehåll
+          name: csd6-dlp-18
         csp1-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
             content:
               display_name: Innehåll
+          name: csp1-dlp-18
         csp2-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
             content:
               display_name: Innehåll
+          name: csp2-dlp-18
         csp3-dlp-18:
           lesson_groups:
             required:
@@ -2153,24 +2287,92 @@ sv:
               display_name: Översikt
             content:
               display_name: Innehåll
+          lessons:
+            Welcome:
+              name: Välkommen
+            Tuesday:
+              name: Tisdag
+            Wednesday:
+              name: Onsdag
+            Thursday:
+              name: Torsdag
+            Friday:
+              name: Fredag
+            Monday:
+              name: Måndag
+            Day 1:
+              name: Dag 1
+            Day 2:
+              name: Dag 2
+            Day 3:
+              name: Dag 3
+            Day 4:
+              name: Dag 4
         csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Översikt
             content:
               display_name: Innehåll
+          lessons:
+            Tuesday:
+              name: Tisdag
+            Wednesday:
+              name: Onsdag
+            Thursday:
+              name: Torsdag
+            Day 1:
+              name: Dag 1
+            Day 2:
+              name: Dag 2
+            Day 3:
+              name: Dag 3
+            Day 4:
+              name: Dag 4
         csp-novice-18:
           lesson_groups:
             required:
               display_name: Översikt
             content:
               display_name: Innehåll
+          lessons:
+            Tuesday:
+              name: Tisdag
+            Wednesday:
+              name: Onsdag
+            Thursday:
+              name: Torsdag
+            Monday:
+              name: Måndag
+            Day 1:
+              name: Dag 1
+            Day 2:
+              name: Dag 2
+            Day 3:
+              name: Dag 3
+            Day 4:
+              name: Dag 4
         csp-apprentice-18:
           lesson_groups:
             required:
               display_name: Översikt
             content:
               display_name: Innehåll
+          lessons:
+            Tuesday:
+              name: Tisdag
+            Wednesday:
+              name: Onsdag
+            Thursday:
+              name: Torsdag
+            Day 1:
+              name: Dag 1
+            Day 2:
+              name: Dag 2
+            Day 3:
+              name: Dag 3
+            Day 4:
+              name: Dag 4
         pre-express-2018:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -2181,6 +2383,10 @@ sv:
               name: Flytta det, flytta den
             Your Digital Footprint:
               name: Ditt digitala fotavtryck
+        2018hoc-ab:
+          lessons:
+            Labyrinth:
+              name: Labyrint
         fit-test:
           lesson_groups:
             required:
@@ -2205,6 +2411,7 @@ sv:
             Dance Party:
               name: Dansparty
           student_description: Koda ditt egna dansparty som du kan dela med dina vänner.
+          name: dans
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -2216,6 +2423,7 @@ sv:
           lessons:
             Aquatic:
               name: 'Minecraft: Resande vattenlevande'
+          name: Vattenlevande
         dance--draft:
           lessons:
             Dance Party:
@@ -2243,6 +2451,8 @@ sv:
           lesson_groups:
             csf_variables:
               display_name: variabler
+            csf_data:
+              display_name: Data
             csf_for_loops:
               display_name: "'För' loopar"
             csf_internet:
@@ -2357,6 +2567,9 @@ sv:
               display_name: 'Kapitel 1: Problemlösnings-processen'
             csd1_2:
               display_name: 'Kapitel 2: Datorer och Problemlösning'
+          lessons:
+            Processing:
+              name: Bearbetar
         andrea-test:
           lesson_groups:
             required:
@@ -2366,8 +2579,18 @@ sv:
           lessons:
             new stage:
               name: ny etapp
+            module1:
+              name: modul1
+            module2:
+              name: modul2
             'null':
               name: 'null'
+            Part 1:
+              name: Del 1
+            Part 2:
+              name: Del 2
+            part 3:
+              name: del 3
         dance-extras-gallery:
           title: Fortsätt att dansa
           description: Med ytterligare projektidéer kan du fortsätta efter den första
@@ -2384,6 +2607,8 @@ sv:
               display_name: loopar
             csf_events:
               display_name: Händelser
+            csf_data:
+              display_name: Data
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmer i verkliga livet: Pappersflygplan'
@@ -2419,6 +2644,8 @@ sv:
               name: Ditt digitala fotavtryck
             'Loops: Getting Loopy':
               name: Att bli snurrig
+            The Right App:
+              name: Den rätta appen
         pre-express-2019:
           lesson_groups:
             csf_loops:
@@ -2442,6 +2669,8 @@ sv:
               name: ny etapp
         csd2-2019:
           lessons:
+            Intro to HTML:
+              name: Introduktion till HTML
             Lists:
               name: Listor
         csd3-2019:
@@ -2455,6 +2684,8 @@ sv:
               name: variabler
             Conditionals:
               name: Villkor
+            Collisions:
+              name: Kollisioner
             Functions:
               name: funktioner
         csd5-2019:
@@ -2467,6 +2698,8 @@ sv:
               name: Automatisera databeslut
         csd6-2019:
           lessons:
+            Accelerometer:
+              name: Accelerometer
             Functions with Parameters:
               name: Funktioner med parametrar
         csp4-pilot:
@@ -2495,6 +2728,8 @@ sv:
               name: Talsystem
             Binary Numbers:
               name: Binära tal
+            Sending Text:
+              name: Skickar text
             The Internet:
               name: Internet
         csp2-2019:
@@ -2518,6 +2753,10 @@ sv:
               name: ny etapp
             Number Systems:
               name: Talsystem
+            Sending Text:
+              name: Skickar text
+            Color Images:
+              name: Färgbilder
             Sending Binary Messages:
               name: Skicka binära meddelanden
             Binary Numbers:
@@ -2534,6 +2773,8 @@ sv:
               name: Villkorssatser med kort
             Building a Foundation:
               name: Bygga en grund
+            Debate:
+              name: Debatt
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2646,24 +2887,49 @@ sv:
               display_name: Översikt
             content:
               display_name: Innehåll
+          lessons:
+            Day 1:
+              name: Dag 1
+            Day 2:
+              name: Dag 2
+            Day 3:
+              name: Dag 3
+            Day 4:
+              name: Dag 4
         fit2019-apprentice:
           lesson_groups:
             required:
               display_name: Översikt
             content:
               display_name: Innehåll
+          lessons:
+            Day 1:
+              name: Dag 1
+            Day 2:
+              name: Dag 2
+            Day 3:
+              name: Dag 3
+            Day 4:
+              name: Dag 4
         csd1-pilot:
           lesson_groups:
             csd1_1:
               display_name: 'Kapitel 1: Problemlösnings-processen'
             csd1_2:
               display_name: 'Kapitel 2: Datorer och Problemlösning'
+          lessons:
+            Processing:
+              name: Bearbetar
         csd2-pilot:
           lessons:
+            Intro to HTML:
+              name: Introduktion till HTML
             Lists:
               name: Listor
             Images:
               name: Bilder
+            CSS Classes:
+              name: CSS-klasser
         csd3-pilot:
           lesson_groups:
             csd3_1:
@@ -2675,6 +2941,8 @@ sv:
               name: variabler
             Conditionals:
               name: Villkor
+            Collisions:
+              name: Kollisioner
             Functions:
               name: funktioner
         maddie-test:
@@ -2719,6 +2987,13 @@ sv:
               display_name: Översikt
             content:
               display_name: Innehåll
+          lessons:
+            Module 1:
+              name: Modul 1
+            Step 1:
+              name: Steg 1
+            Step 2:
+              name: Steg 2
         dlp19-csd-mod-w2:
           lesson_groups:
             required:
@@ -2768,6 +3043,9 @@ sv:
           lesson_groups:
             csd1_2:
               display_name: 'Kapitel 2: Datorer och Problemlösning'
+          lessons:
+            Processing:
+              name: Bearbetar
         csp2-pilot:
           lesson_groups:
             content:
@@ -2777,6 +3055,10 @@ sv:
           lessons:
             new stage:
               name: ny etapp
+            IP Addresses:
+              name: IP-adresser
+            DNS and HTTP:
+              name: DNS och HTTP
         peru-2019:
           lessons:
             new stage:
@@ -2793,9 +3075,6 @@ sv:
               display_name: Översikt
         dance-2019:
           description: Koda ditt egna dansparty som du kan dela med dina vänner.
-          lessons:
-            Dance Party:
-              name: Dansparty
           student_description: Koda ditt egna dansparty som du kan dela med dina vänner.
         k5-onlinepd-2019:
           lesson_groups:
@@ -2814,6 +3093,12 @@ sv:
               name: Händelser
             Functions:
               name: funktioner
+            Diving Deeper:
+              name: Dyka djupare
+            Next steps:
+              name: Nästa steg
+            Diving deeper:
+              name: Dyka djupare
             Variables:
               name: variabler
             For Loops:
@@ -2844,6 +3129,8 @@ sv:
           lessons:
             Conditionals:
               name: Villkor
+            About Me:
+              name: Om mig
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -2872,6 +3159,8 @@ sv:
           lessons:
             Conditionals:
               name: Villkor
+            About Me:
+              name: Om mig
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -2885,6 +3174,8 @@ sv:
           lessons:
             Conditionals:
               name: Villkor
+            About Me:
+              name: Om mig
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -2905,6 +3196,7 @@ sv:
               display_name: funktioner
             csp_project:
               display_name: Projekt
+          name: csp4-2020
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -2913,24 +3205,46 @@ sv:
               display_name: loopar
             csp_project:
               display_name: Projekt
+          name: csp5-2020
         csp7-2020:
           lesson_groups:
             csp_libraries:
               display_name: Bibliotek
+          name: csp7-2020
+        csd2-projects-temp:
+          lessons:
+            HTML  Project:
+              name: HTML-projekt
+            CSS Project:
+              name: CSS-projekt
         csp9-pilot:
           lessons:
             new stage:
               name: ny etapp
         csd2-2020:
           lessons:
+            Intro to HTML:
+              name: Introduktion till HTML
             Images:
               name: Bilder
+            CSS Classes:
+              name: CSS-klasser
+            Using Images:
+              name: Använda bilder
+          name: csd2-2020
         csd1-2020:
           lesson_groups:
             csd1_1:
               display_name: 'Kapitel 1: Problemlösnings-processen'
             csd1_2:
               display_name: 'Kapitel 2: Datorer och Problemlösning'
+          lessons:
+            Processing:
+              name: Bearbetar
+            Storage:
+              name: Lagring
+        csd4-2020:
+          name: csd4-2020
         csd5-2020:
           lessons:
             Representing Images:
@@ -2941,6 +3255,8 @@ sv:
               name: Automatisera databeslut
         csd6-2020:
           lessons:
+            Accelerometer:
+              name: Accelerometer
             Functions with Parameters:
               name: Funktioner med parametrar
         csd3-2020:
@@ -2954,10 +3270,13 @@ sv:
               name: variabler
             Conditionals:
               name: Villkor
+            Collisions:
+              name: Kollisioner
             Functions:
               name: funktioner
             Text:
               name: text
+          name: csd3-2020
         coursea-2020:
           lesson_groups:
             csf_digcit:
@@ -2986,6 +3305,8 @@ sv:
               name: Flytta det, flytta den
             'Loops: Getting Loopy':
               name: Att bli snurrig
+            The Right App:
+              name: Den rätta appen
         coursec-2020:
           lesson_groups:
             csf_digcit:
@@ -2996,6 +3317,8 @@ sv:
               display_name: loopar
             csf_events:
               display_name: Händelser
+            csf_data:
+              display_name: Data
           lessons:
             Binary Bracelets:
               name: Binära armband
@@ -3043,6 +3366,8 @@ sv:
               display_name: Digitalt medborgarskap
             csf_variables:
               display_name: variabler
+            csf_data:
+              display_name: Data
             csf_for_loops:
               display_name: "'För' loopar"
           lessons:
@@ -3086,36 +3411,55 @@ sv:
               name: ny etapp
             Binary Numbers:
               name: Binära tal
+            Color Images:
+              name: Färgbilder
+          name: csp1-2020
         csp2-2020:
           lessons:
             new stage:
               name: ny etapp
+            DNS and HTTP:
+              name: DNS och HTTP
+          name: csp2-2020
         csp3-2020:
           lessons:
             new stage:
               name: ny etapp
             Debugging:
               name: Felsökning
+          name: csp3-2020
         csp6-2020:
           lessons:
             new stage:
               name: ny etapp
+          name: csp6-2020
         csp8-2020:
           lessons:
             new stage:
               name: ny etapp
+          name: csp8-2020
         csp9-2020:
           lessons:
             new stage:
               name: ny etapp
+          name: csp9-2020
         csp10-2020:
           lessons:
             new stage:
               name: ny etapp
+          name: csp10-2020
         csp-march-virtual:
           lessons:
+            Changes:
+              name: Ändringar
             new stage:
               name: ny etapp
+            Reflections:
+              name: Reflektioner
+            Part 1:
+              name: Del 1
+            Part 2:
+              name: Del 2
         csp3-virtual:
           lessons:
             Creating Functions:
@@ -3124,12 +3468,34 @@ sv:
           lessons:
             new stage:
               name: ny etapp
+            Tools:
+              name: Verktyg
             Debugging:
               name: Felsökning
+            Module 1:
+              name: Modul 1
+            Module 2:
+              name: Modul 2
+            Module 3:
+              name: Modul 3
+            Module 4:
+              name: Modul 4
+            Module 5:
+              name: Modul 5
+            Module 6:
+              name: Modul 6
+            Module 8:
+              name: Modul 8
+            Module 7:
+              name: Modul 7
         csd2-virtual:
           lessons:
+            Intro to HTML:
+              name: Introduktion till HTML
             Images:
               name: Bilder
+            CSS Classes:
+              name: CSS-klasser
         csp5-virtual:
           lessons:
             While Loops:
@@ -3143,6 +3509,8 @@ sv:
             csd3_2:
               display_name: 'Kapitel 2: Bygga Spel'
           lessons:
+            Collisions:
+              name: Kollisioner
             Functions:
               name: funktioner
         code-break:
@@ -3175,13 +3543,27 @@ sv:
               name: variabler
             For Loops:
               name: "'För' loopar"
+            Next steps:
+              name: Nästa steg
           lesson_groups:
             k5_next_steps_1:
               display_name: Nästa steg
+        dani-test-2020:
+          lessons:
+            new lesson:
+              name: ny lektion
+          lesson_groups:
+            lesson group:
+              display_name: visningsnamn
         dani-june-2020-test:
           lessons:
+            new lesson:
+              name: ny lektion
             lesson 2:
               name: lektion 2
+          lesson_groups:
+            lesson group:
+              display_name: visningsnamn
         csd3-virtual:
           lessons:
             Variables:
@@ -3190,6 +3572,8 @@ sv:
               name: text
             Conditionals:
               name: Villkor
+            Collisions:
+              name: Kollisioner
             Functions:
               name: funktioner
           lesson_groups:
@@ -3200,21 +3584,74 @@ sv:
             cspSurvey:
               display_name: Innehåll
         ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: Lektion
           lesson_groups:
             lg_1:
               display_name: Innehåll
         ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: Lektion
           lesson_groups:
             lg_1:
               display_name: Innehåll
         ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: Lektion
           lesson_groups:
             lg_1:
               display_name: Innehåll
         ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: Lektion
           lesson_groups:
             lg_1:
               display_name: Innehåll
+        kaitie-test-script:
+          lessons:
+            new lesson:
+              name: ny lektion
+            Module 1:
+              name: Modul 1
+            Module 2:
+              name: Modul 2
+            Module 3:
+              name: Modul 3
+            Module 4:
+              name: Modul 4
+            Module 5:
+              name: Modul 5
+            Module 6:
+              name: Modul 6
+            Module 7:
+              name: Modul 7
+            Module 8:
+              name: Modul 8
+          lesson_groups:
+            lesson group:
+              display_name: visningsnamn
+        vpl-csd-2020:
+          lessons:
+            Module 1:
+              name: Modul 1
+            Module 2:
+              name: Modul 2
+            Module 3:
+              name: Modul 3
+            Module 4:
+              name: Modul 4
+            Module 5:
+              name: Modul 5
+            Module 6:
+              name: Modul 6
+            Module 7:
+              name: Modul 7
+            Module 8:
+              name: Modul 8
         curriculum-sandbox-levels:
           lessons:
             Course A:
@@ -3229,6 +3666,10 @@ sv:
           title: Simulera ett utbrott
           description_short: Använd Sprite Lab för att skapa en simulering av ett
             virusutbrott.
+        ml-playground:
+          lessons:
+            Ethics:
+              name: Etik
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -3259,68 +3700,82 @@ sv:
               display_name: Utbrottssimulator
             debugging:
               display_name: Felsökning
+            Argentina:
+              display_name: Argentina
         csd1-2021:
+          lessons:
+            Processing:
+              name: Bearbetar
+            Storage:
+              name: Lagring
           lesson_groups:
             csd1_1:
               display_name: 'Kapitel 1: Problemlösnings-processen'
             csd1_2:
               display_name: 'Kapitel 2: Datorer och Problemlösning'
+          name: csd1-2021
+        csd2-2021:
+          lessons:
+            Intro to HTML:
+              name: Introduktion till HTML
+            Using Images:
+              name: Använda bilder
+            CSS Classes:
+              name: CSS-klasser
+          name: csd2-2021
         csd3-2021:
           lessons:
             Variables:
-              key: variabler
               name: variabler
             Text:
-              key: text
               name: text
             Conditionals:
-              key: Villkor
               name: Villkor
             Collisions:
-              description_teacher: "**Dagens fråga: Hur kan programmerare bygga på
-                abstraktioner för att skapa ytterligare abstraktioner?**\\\r\n\\\r\nPå
-                denna lektion, programmerar studenter sina sprites för att interagera
-                på nya sätt. Efter en kort genomgång om hur de använde [`isTouching`(#f78183)](/docs/gamelab/isTouching/)
-                blocket, brainstormar studenter andra sätt som två sprites kan interagera.
-                Sedan använder de [`isTouching`(#f78183)](/docs/gamelab/isTouching/)
-                för att få en sprite att skjuta en annan över skärmen innan de övar
-                med de fyra kollisionsblocken ([`collide`(#f78183)](/docs/gamelab/collide/),
-                [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/),
-                och [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
+              name: Kollisioner
             Functions:
-              key: funktioner
               name: funktioner
           lesson_groups:
             csd3_1:
               display_name: 'Kapitel 1: Bilder och Animationer'
             csd3_2:
               display_name: 'Kapitel 2: Bygga Spel'
+          name: csd3-2021
+        csd4-2021:
+          name: csd4-2021
         csd5-2021:
           lessons:
             Representing Images:
-              key: Representerar bilder
               name: Representerar bilder
             Problem Solving and Data:
-              key: Problemlösning och data
               name: Problemlösning och data
             Automating Data Decisions:
-              key: Automatisera databeslut
               name: Automatisera databeslut
+          name: csd5-2021
         csd6-2021:
           lessons:
+            Accelerometer:
+              name: Accelerometer
             Functions with Parameters:
-              key: Funktioner med parametrar
               name: Funktioner med parametrar
+          name: csd6-2021
         csp1-2021:
           lessons:
             Binary Numbers:
-              key: Binära tal
               name: Binära tal
+            Color Images:
+              name: Färgbilder
+          name: csp1-2021
+        csp2-2021:
+          lessons:
+            DNS and HTTP:
+              name: HTTP och DNS
+          name: csp2-2021
         csp3-2021:
           lessons:
             Debugging:
-              key: Felsökning
               name: Felsökning
+          name: csp3-2021
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -3331,6 +3786,7 @@ sv:
               display_name: funktioner
             csp_project:
               display_name: Projekt
+          name: csp4-2021
         csp5-2021:
           lesson_groups:
             csp_lists:
@@ -3339,10 +3795,21 @@ sv:
               display_name: loopar
             csp_project:
               display_name: Projekt
+          name: csp5-2021
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmer
+          name: csp6-2021
         csp7-2021:
           lesson_groups:
             csp_libraries:
               display_name: Bibliotek
+          name: csp7-2021
+        csp8-2021:
+          name: csp8-2021
+        csp9-2021:
+          name: csp9-2021
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -3357,10 +3824,11 @@ sv:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Flytta det, flytta den
               name: Flytta det, flytta den
             'Loops: Getting Loopy':
               name: Att bli snurrig
+            The Right App:
+              name: Den rätta appen
           lesson_groups:
             csf_digcit:
               display_name: Digitalt medborgarskap
@@ -3368,10 +3836,11 @@ sv:
               display_name: loopar
             csf_events:
               display_name: Händelser
+            lessonGroup-6:
+              description: "![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)"
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Binära armband
               name: Binära armband
             'Events: The Big Event':
               name: Den stora händelsen
@@ -3384,24 +3853,20 @@ sv:
               display_name: loopar
             csf_events:
               display_name: Händelser
+            csf_data:
+              display_name: Data
         coursed-2021:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Kalkyleringsprogrammering
             Relay Programming:
-              key: Stafettprogrammering
               name: Stafettprogrammering
             Dance Party:
-              key: Dansparty
               name: Dansparty
             Conditionals with Cards:
-              key: Villkorssatser med kort
               name: Villkorssatser med kort
             'Unplugged: Binary':
-              key: 'Ouppkopplad: Binärt'
               name: Binära bilder
-            Artist Binary:
-              key: Artist binär
           lesson_groups:
             csf_events:
               display_name: Händelser
@@ -3417,8 +3882,6 @@ sv:
               display_name: Digitalt medborgarskap
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Villkor
             'Functions: Songwriting':
               name: Låtskrivande
           lesson_groups:
@@ -3430,16 +3893,15 @@ sv:
               display_name: Villkor
             csf_functions:
               display_name: funktioner
+            lessonGroup-8:
+              display_name: Borttagen
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Envelope variabler
               name: Envelope variabler
             Internet:
-              key: Internet
               name: Internet
             For Loop Fun:
-              key: "'För' loop skoj"
               name: "'För' loop skoj"
             lesson-5:
               name: Utbrott
@@ -3459,7 +3921,6 @@ sv:
         express-2021:
           lessons:
             Dance Party:
-              key: Dansparty
               name: Dansparty
             lesson-1:
               name: Dansparty
@@ -3498,13 +3959,10 @@ sv:
         csd5-preview-2021:
           lessons:
             Representing Images:
-              key: Representerar bilder
               name: Representerar bilder
             Problem Solving and Data:
-              key: Problemlösning och data
               name: Problemlösning och data
             Automating Data Decisions:
-              key: Automatisera databeslut
               name: Automatisera databeslut
         testtess:
           lessons:
@@ -3522,245 +3980,111 @@ sv:
             intro:
               name: Lektion 1
         csa1-pilot:
+          lessons:
+            lesson-23:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
         csa2-pilot:
+          lessons:
+            lesson-18:
+              name: Teatern
           lesson_groups:
             lesson group:
               display_name: Innehåll
+            lessonGroup-4:
+              display_name: Sandlåda
         csa3-pilot:
+          lessons:
+            lesson-19:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
         csa4-pilot:
+          lessons:
+            lesson-18:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+            lessonGroup-4:
+              display_name: Sandlåda
         csa5-pilot:
+          lessons:
+            The Theater:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+            lessonGroup-4:
+              display_name: Sandlåda
         csa6-pilot:
           lessons:
-            lesson-1:
-              description_student: De projekt du har utvecklat under kursen har inspirerat
-                till mycket kreativitet i samhället! En kvartersfest kommer att hållas
-                för att visa upp kreativa berättelser, manus, sångtexter, brev och
-                dikter. Kvartersfesten är ett stort projekt som du arbetar med i hela
-                studieenheten, och projektledningsstrategier hjälper till att organisera
-                och strukturera ditt arbete. Du utforskar strategier för att skriva
-                och strukturera kod så att andra mjukvaruingenjörer enkelt kan förstå
-                och använda ett Java-verktyg för att skapa programdokumentation.
-              description_teacher: Eleverna introduceras till kvartersfestprojektet
-                och utvärderar krav och exempel för att identifiera frågor och nyckelfunktioner.
-                Innan de börjar arbeta med projektet fördjupar eleverna sin förståelse
-                av programstruktur och kommenterar genom att identifiera bästa praxis
-                och utforska användningen av Javadocs för att generera programdokumentation.
-            lesson-2:
-              description_student: Du konstruerar ”heltal” och ”dubbla” objekt som
-                representerar ”hela” och ”dubbla” primitiva värden som referensvärden.
-                Genom att använda metoderna i klasserna ”heltal” och ”dubbla” returnerar
-                du värdena som dessa objekt lagrar som primitiva värden. Du utforskar
-                även de lägsta och högsta värdena för heltal för att undvika spillfel
-                innan du planerar de uppgifter du behöver slutföra för ditt kvartersfestprojekt.
-              description_teacher: Eleverna konstruerar ”heltal” och ”dubbla” objekt
-                som representerar ”hela” och ”dubbla” primitiva värden som referensvärden.
-                Genom att använda metoderna i klasserna ”heltal” och ”dubbla” returnerar
-                studenterna värdena som dessa objekt lagrar som primitiva värden.
-                Studenterna utforskar även de lägsta och högsta värdena för heltal
-                för att undvika spillfel innan de planerar de uppgifter de behöver
-                slutföra för sitt kvartersfestprojekt.
-            lesson-3:
-              description_student: När vi arbetar med matriser och listor stöter vi
-                ibland på problem där antalet element är okänt eller listans storlek
-                ständigt ändras. I den här lektionen lär du dig om ”matrislistor”
-                och identifierar scenarier där denna datastruktur lämpar sig bättre.
-              description_teacher: Eleverna skapar ”matrislistor” för att lagra ”hela”
-                och ”dubbla” värden. De skiljer mellan ”matrislistor” och endimensionella
-                matriser för att avgöra vilken datastruktur som är bäst lämpad för
-                ett scenario. Eleverna lägger till element i en ”matrislista” och
-                lär sig hur autoboxing konverterar mellan primitiva värden och adapterklasser
-                när de arbetar med lagrade data.
-            lesson-4:
-              description_student: Du använder ”matrisliste”-metoderna ”get()” och
-                ”set()” för att hämta och modifiera element och lära dig om ”sträng”-metoden
-                ”length()” för att räkna antalet tecken i ett ”sträng”-objekt. Du
-                tillämpar standardalgoritmerna du utvecklade med 1D- och 2D-matriser
-                för att modifiera element i en ”matrislista”. Du lär dig hur unboxing
-                utför omvandlingar mellan primitiva värden och adapterklasser när
-                de arbetar med data som lagras i en ”matrislista”.
-              description_teacher: Eleverna använder ”matrisliste”-metoderna ”get()”
-                och ”set()” för att hämta och modifiera element och lära sig om ”sträng”-metoden
-                ”length()” för att räkna antalet tecken i ett ”sträng”-objekt. Eleverna
-                tillämpar standardalgoritmerna de utvecklade med 1D- och 2D-matriser
-                för att modifiera element i en ”matrislista”. De lär sig hur unboxing
-                utför omvandlingar mellan primitiva värden och adapterklasser när
-                de arbetar med data som lagras i en ”matrislista”.
-            lesson-5:
-              description_student: Hittills har du skapat ”matrislistor” för att lagra
-                ”heltal” ”dubbla” och ”strängar”. Precis som med 1D- och 2D-matriser
-                kan du även lagra objekt som du skapar i en ”matrislista”. I den här
-                lektionen skapar du en ”matrislista” av objekt för att tillämpa de
-                standardalgoritmer du har använt under året för att arbeta med data
-                som lagras i den här listan.
-              description_teacher: Elever skapar ”matrislistor” för att lagra objekt
-                och lära sig om generiska typer i Java. De tillämpar algoritmerna
-                de lärt sig med endimensionella matriser på ”matrislistor” för att
-                hitta lägsta och högsta värden, beräkna summor och medelvärden eller
-                hitta element som uppfyller specifika kriterier.
-            lesson-6:
-              description_student: Du utforskar funktionen för metoden ”remove()”
-                i ”matrisliste”-klassen och identifierar potentiella fel när du försöker
-                ta bort objekt medan du går igenom listan. Under processen lär du
-                dig att se när en ”matrislista” är bäst för ett scenario eller problem.
-              description_teacher: Eleverna utforskar funktionen för metoden ”remove()”
-                i ”matrisliste”-klassen och identifierar potentiella fel när de försöker
-                ta bort objekt medan de går igenom listan. Under processen lär de
-                sig att se när en ”matrislista” är bäst för ett scenario eller problem.
-            lesson-7:
-              description_student: Du utforskar strukturen för en ”sträng” och erinrar
-                dig att ”strängar” är objekt. Du använder metoderna ”indexOf()” och
-                ”substring()” för att söka efter delsträngar inom en ”sträng” och
-                för att skapa nya ”sträng”-objekt från en befintlig ”sträng”.
-              description_teacher: Eleverna utforskar strukturen för en ”sträng” och
-                erinrar sig att ”strängar” är objekt. De använder metoderna ”indexOf()”
-                och ”substring()” för att söka efter delsträngar inom en ”sträng”
-                och för att skapa nya ”sträng”-objekt från en befintlig ”sträng”.
-            lesson-8:
-              description_student: Du utforskar användningen av ”compareTo()” för
-                att kontrollera om ”strängar” är i alfabetisk ordning. Du arbetar
-                sedan med ditt kvartersfestprojekt och fokuserar specifikt på de uppgifter
-                du har på din projektplaneringstavla.
-              description_teacher: Eleverna utforskar användningen av ”compareTo()”
-                för att kontrollera om ”strängar” är i alfabetisk ordning. De arbetar
-                sedan med sitt kvartersfestprojekt och fokuserar specifikt på de uppgifter
-                de har på sin projektplaneringstavla.
-            lesson-9:
-              description_student: Du kombinerar dina kunskaper om standardalgoritmer
-                och ”strängar” för att kontrollera om en ”sträng” är en palindrom.
-                Du deltar sedan i en session med feedback från andra elever och reflekterar
-                över de framsteg du har gjort i ditt kvartersfestprojekt.
-              description_teacher: Eleverna kombinerar sina kunskaper om standardalgoritmer
-                och ”strängar” för att kontrollera om en ”sträng” är en palindrom.
-                De deltar sedan i en session med feedback från andra elever och reflekterar
-                över de framsteg de har gjort i sina kvartersfestprojekt.
-            lesson-10:
-              description_student: Du tillämpar standardalgoritmerna du skrev för
-                1D- och 2D-matriser på ”matrislistan”. Du implementerar en ny standardalgoritm
-                för att få individuella siffror från ett heltal innan du ändrar och
-                tillämpar tidigare algoritmer för att byta element, ta bort dubbletter
-                eller hitta element som uppfyller specifika kriterier i ditt kvartersfestprojekt.
-              description_teacher: Eleverna tillämpar standardalgoritmerna de skrev
-                för 1D- och 2D-matriser på ”matrislistan”. De implementerar en ny
-                standardalgoritm för att få individuella siffror från ett heltal innan
-                de ändrar och tillämpar tidigare algoritmer för att byta element,
-                ta bort dubbletter eller hitta element som uppfyller specifika kriterier
-                i deras kvartersfestprojekt.
+            The Theater:
+              name: Teatern
             lesson-11:
               name: Kvartersfestprojekt – Dag 1
-              description_student: Du fortsätter att utveckla ditt kvartersfestprojekt
-                och skapar en berättelse, dikt, låt eller annan form av litteratur
-                baserat på analys av verk från din favoritförfattare eller favoritartist.
-                Du utvärderar först ditt arbete själv för att bedöma hur väl du har
-                slutfört projektkraven, och skriver sedan acceptanskriterier för en
-                funktion i ditt projekt som en annan kursdeltagare testar. Du använder
-                självbedömningen och feedbacken för att prioritera dina återstående
-                uppgifter och fortsätta utveckla ditt projekt.
-              description_teacher: Eleverna fortsätter att utveckla sina kvartersfestprojekt
-                och skapar en berättelse, dikt, låt eller annan form av litteratur
-                baserat på analys av verk från deras favoritförfattare eller favoritartist.
-                Eleverna utvärderar först sitt arbete själva för att bedöma hur väl
-                de har slutfört projektkraven, och skriver sedan acceptanskriterier
-                för en funktion i sina projekt som en annan elev testar. Eleverna
-                använder självbedömningen och feedbacken för att prioritera sina återstående
-                uppgifter och fortsätta utveckla sina projekt.
             lesson-12:
               name: Kvartersfestprojekt – Dag 2
-              description_student: I föregående lektion gjorde du en självbedömning
-                och skrev acceptanskriterier för ditt projekt. I den här lektionen
-                får du feedback från andra kursdeltagare så du kan identifiera vilka
-                uppgifter som återstår för att slutföra och fortsätta utveckla ditt
-                kvartersfestprojekt.
-              description_teacher: I föregående lektion gjorde eleverna självbedömningar
-                och skrev acceptanskriterier för sina projekt. I den här lektionen
-                får eleverna feedback från andra elever så de kan identifiera vilka
-                uppgifter som återstår för att slutföra och fortsätta utveckla sina
-                kvartersfestprojekt.
             lesson-13:
               name: Kvartersfestprojekt – Dag 3
-              description_student: Du gör slutliga revisioner och uppdateringar baserade
-                på dina kodgranskningar och projektplaneringstavlan. Du delar ditt
-                kvartersfestprojekt med dina studiekamrater och firar sedan att du
-                har slutfört projektet och gör en avslutande reflektion av utvecklingsprocessen.
-              description_teacher: Eleverna gör slutliga revisioner och uppdateringar
-                baserade på sina kodgranskningar och projektplaneringstavlan. De delar
-                sina kvartersfestprojekt med sina studiekamrater och firar sedan att
-                de har slutfört projektet och gör en avslutande reflektion av utvecklingsprocessen.
-            lesson-15:
-              description_student: I den här studieenheten använde du ”matrislistor”
-                för att lagra programdata och skilja på när du ska använda 1D- och
-                2D-matriser respektive ”matrislistor”. Du utforskade fördelarna och
-                funktionaliteten med en ”matrislistor”, och använde dessa för att
-                lösa problem som involverar numeriska data och objektdata. Du använde
-                metoder i ”sträng”-klassen för att analysera och bearbeta text erhållen
-                från användar- och filindata. Under hela studieenheten skrev du programdokumentation
-                med kommentarer på en enskild rad, kommentarer på flera rader och
-                Javadoc-kommentarer för att skapa API-dokumentation. I processen identifierade
-                och dokumenterade du förvillkor och eftervillkor för objekt och metoder.
-                Nu utvärderar du hur väl du har uppnått studieenhetens lärandemål
-                och färdigheter i en utvärdering med flervalsalternativ.
-              description_teacher: I den här studieenheten använde eleverna ”matrislistor”
-                för att lagra programdata och skilja på när de ska använda 1D- och
-                2D-matriser respektive ”matrislistor”. Eleverna utforskade fördelarna
-                och funktionaliteten med en ”matrislistor”, och använde dessa för
-                att lösa problem som involverar numeriska data och objektdata. De
-                använde metoder i ”sträng”-klassen för att analysera och bearbeta
-                text erhållen från användar- och filindata. Under hela studieenheten
-                skrev eleverna programdokumentation med kommentarer på en enskild
-                rad, kommentarer på flera rader och Javadoc-kommentarer för att skapa
-                API-dokumentation. I processen identifierade och dokumenterade eleverna
-                förvillkor och eftervillkor för objekt och metoder. Nu utvärderar
-                de hur väl de har uppnått studieenhetens lärandemål och färdigheter
-                i en utvärdering med flervalsalternativ.
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
         csa7-pilot:
+          lessons:
+            The Theater:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
         csa8-pilot:
+          lessons:
+            The Theater:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: loopar
               name: loopar
             Events:
-              key: Händelser
               name: Händelser
             Conditionals:
-              key: Villkor
               name: Villkor
             Functions:
-              key: funktioner
               name: funktioner
             Variables:
-              key: variabler
               name: variabler
             For Loops:
-              key: "'För' loopar"
               name: "'För' loopar"
+            Module 1:
+              name: Modul 1
           lesson_groups:
             k5_getting_started_1:
               display_name: Introduktion
             Introduction:
               display_name: Introduktion
         haikubot-pilot:
+          lessons:
+            write a haiku:
+              name: Skriv en Haiku
           lesson_groups:
+            write a haikut:
+              display_name: Skriv en Haiku
             Lesson 1:
               display_name: Lektion 1
             Lesson 2:
@@ -3775,11 +4099,66 @@ sv:
           lessons:
             lesson-9:
               name: Komma igång 1
+        aiml-2021:
+          name: aiml-2021
+        csd7-2021:
+          name: csd7-2021
         kodea-pd-2021:
           lessons:
             Next Steps:
-              key: Nästa steg
               name: Nästa steg
+        vpl-csd-2021:
+          lessons:
+            Module 1:
+              name: Modul 1
+            Module 2:
+              name: Modul 2
+            Module 3:
+              name: Modul 3
+            Module 4:
+              name: Modul 4
+            Module 5:
+              name: Modul 5
+            Module 6:
+              name: Modul 6
+            Module 7:
+              name: Modul 7
+            Module 8:
+              name: Modul 8
+          lesson_groups:
+            CSD_Module 1:
+              display_name: Modul 1
+            CSD_Module 2:
+              display_name: Modul 2
+            CSD_Module 3:
+              display_name: Modul 3
+            CSD_Module 4:
+              display_name: Modul 4
+            CSD_Module 5:
+              display_name: Modul 5
+            CSD_Module 6:
+              display_name: Modul 6
+            CSD_Module 7:
+              display_name: Modul 7
+            CSD_Module 8:
+              display_name: Modul 8
+        vpl-csp-2021:
+          lessons:
+            Module 1:
+              name: Modul 1
+            Module 2:
+              name: Modul 2
+            Module 3:
+              name: Modul 3
+            Module 4:
+              name: Modul 4
+        self-paced-pl-csd1-2021:
+          lessons:
+            lesson-4:
+              name: Välkommen
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Välkommen
         self-paced-pl-csd2-2021:
           lessons:
             lesson-9:
@@ -3814,8 +4193,12 @@ sv:
               display_name: Innehåll
         tesspltest:
           lessons:
+            lesson-1:
+              name: Lektion1
             lesson-2:
               name: Lektion 2
+        sb-pt-exp:
+          name: sb-pt-exp
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -3825,7 +4208,15 @@ sv:
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
+              display_name: Modul 1
               description: test
+            lessonGroup-3:
+              display_name: Modul 2
+            lessonGroup-4:
+              display_name: Modul 3
+            lessonGroup-5:
+              display_name: Modul 4
+          name: dlp21-csd
         dlp21-csd-overview:
           lessons:
             lesson-1:
@@ -3835,37 +4226,97 @@ sv:
             lesson-1:
               name: Översikt
         csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Verktyg
+            lesson-13:
+              name: Exempel
+            lesson-16:
+              name: Teater
           lesson_groups:
+            lessonGroup-2:
+              display_name: Lektioner
             lessonGroup-3:
               display_name: Projekt
         csa1-pilot-facilitator:
+          lessons:
+            lesson-3:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
         csa2-pilot-facilitator:
+          lessons:
+            lesson-3:
+              name: Teatern
           lesson_groups:
             lesson group:
               display_name: Innehåll
+            lessonGroup-4:
+              display_name: Sandlåda
         csa3-pilot-facilitator:
+          lessons:
+            lesson-3:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
         csa4-pilot-facilitator:
+          lessons:
+            lesson-3:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+            lessonGroup-4:
+              display_name: Sandlåda
         csa5-pilot-facilitator:
+          lessons:
+            The Theater:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+            lessonGroup-4:
+              display_name: Sandlåda
         csdu6-playground:
           lessons:
+            lesson-1:
+              name: Mall
+            lesson-5:
+              name: Sensorer
+            lesson-13:
+              name: Accelerometer
             lesson-19:
               name: Projekt
-        csa-u7-dev:
           lesson_groups:
             lessonGroup-3:
+              display_name: Mallar
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+        csa-u7-dev:
+          lessons:
+            lesson-3:
+              name: Verktyg
+            lesson-4:
+              name: Exempel
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lektioner
+            lessonGroup-3:
               display_name: Projekt
+        tesstest921:
+          lessons:
+            lesson-2:
+              name: Lektion 2
+            lesson-3:
+              name: Lektion 3
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -3876,15 +4327,14 @@ sv:
               display_name: Innehåll
             lessonGroup-2:
               display_name: Innehåll
-        poem-art:
+        csa-u8-dev:
           lessons:
-            lesson-1:
-              description_teacher: |-
-                I den här Datavetenskap- och språkintegrerade lektionen kommer studenterna att animera en dikt med kod för att illustrera stämningen i en dikt. Under denna inledande kodningsaktivitet kommer studenterna att läsa och upptäcka stämningen i en dikt. Sedan hittar de motsvarande effekter och bilder för att illustrera diktens stämning. Till sist kommer eleverna att använda händelser (kod) för att illustrera en förändring i stämningen eller animera introduktionen av nya bilder i en dikt.
-
-                Denna lektion kan genomföras som en 1-timmes fristående lektion. Det finns också ett alternativ att använda den här lektionen som den första lektionen i 5-lektionsmodulen som heter [Coding with Poetry](http://code.org/poetry). I slutet av Coding with Poetry-modulen kommer eleverna att skriva sina egna dikter och skapa en app för diktgenerator att dela med vänner.
-
-                Coding with Poetry är en del av Code.orgs Datavetenskap Sammanhang läroplan, som är tänkt att integrera CS i andra ämnesområden som matematik, ELA och naturvetenskap med anpassning till CCSS, NGSS och CSTA-standarder.
+            lesson-2:
+              name: Verktyg
+            lesson-3:
+              name: Exempel
+        poetry:
+          name: poesi
         spelling-bee:
           lessons:
             lesson-1:
@@ -3915,383 +4365,33 @@ sv:
           title: Stöd med textbaserad programmering
         csa6-pilot-facilitator:
           lessons:
-            Documenting Program Code:
-              description_student: De projekt du har utvecklat under kursen har inspirerat
-                till mycket kreativitet i samhället! En kvartersfest kommer att hållas
-                för att visa upp kreativa berättelser, manus, sångtexter, brev och
-                dikter. Kvartersfesten är ett stort projekt som du arbetar med i hela
-                studieenheten, och projektledningsstrategier hjälper till att organisera
-                och strukturera ditt arbete. Du utforskar strategier för att skriva
-                och strukturera kod så att andra mjukvaruingenjörer enkelt kan förstå
-                och använda ett Java-verktyg för att skapa programdokumentation.
-              description_teacher: Eleverna introduceras till kvartersfestprojektet
-                och utvärderar krav och exempel för att identifiera frågor och nyckelfunktioner.
-                Innan de börjar arbeta med projektet fördjupar eleverna sin förståelse
-                av programstruktur och kommenterar genom att identifiera bästa praxis
-                och utforska användningen av Javadocs för att generera programdokumentation.
-            Exploring Integer and Double Objects:
-              description_student: Du konstruerar ”heltal” och ”dubbla” objekt som
-                representerar ”hela” och ”dubbla” primitiva värden som referensvärden.
-                Genom att använda metoderna i klasserna ”heltal” och ”dubbla” returnerar
-                du värdena som dessa objekt lagrar som primitiva värden. Du utforskar
-                även de lägsta och högsta värdena för heltal för att undvika spillfel
-                innan du planerar de uppgifter du behöver slutföra för ditt kvartersfestprojekt.
-              description_teacher: Eleverna konstruerar ”heltal” och ”dubbla” objekt
-                som representerar ”hela” och ”dubbla” primitiva värden som referensvärden.
-                Genom att använda metoderna i klasserna ”heltal” och ”dubbla” returnerar
-                studenterna värdena som dessa objekt lagrar som primitiva värden.
-                Studenterna utforskar även de lägsta och högsta värdena för heltal
-                för att undvika spillfel innan de planerar de uppgifter de behöver
-                slutföra för sitt kvartersfestprojekt.
-            Using ArrayLists to Store Data:
-              description_student: När vi arbetar med matriser och listor stöter vi
-                ibland på problem där antalet element är okänt eller listans storlek
-                ständigt ändras. I den här lektionen lär du dig om ”matrislistor”
-                och identifierar scenarier där denna datastruktur lämpar sig bättre.
-              description_teacher: Eleverna skapar ”matrislistor” för att lagra ”hela”
-                och ”dubbla” värden. De skiljer mellan ”matrislistor” och endimensionella
-                matriser för att avgöra vilken datastruktur som är bäst lämpad för
-                ett scenario. Eleverna lägger till element i en ”matrislista” och
-                lär sig hur autoboxing konverterar mellan primitiva värden och adapterklasser
-                när de arbetar med lagrade data.
-            Working with ArrayList Data:
-              description_student: Du använder ”matrisliste”-metoderna ”get()” och
-                ”set()” för att hämta och modifiera element och lära dig om ”sträng”-metoden
-                ”length()” för att räkna antalet tecken i ett ”sträng”-objekt. Du
-                tillämpar standardalgoritmerna du utvecklade med 1D- och 2D-matriser
-                för att modifiera element i en ”matrislista”. Du lär dig hur unboxing
-                utför omvandlingar mellan primitiva värden och adapterklasser när
-                de arbetar med data som lagras i en ”matrislista”.
-              description_teacher: Eleverna använder ”matrisliste”-metoderna ”get()”
-                och ”set()” för att hämta och modifiera element och lära sig om ”sträng”-metoden
-                ”length()” för att räkna antalet tecken i ett ”sträng”-objekt. Eleverna
-                tillämpar standardalgoritmerna de utvecklade med 1D- och 2D-matriser
-                för att modifiera element i en ”matrislista”. De lär sig hur unboxing
-                utför omvandlingar mellan primitiva värden och adapterklasser när
-                de arbetar med data som lagras i en ”matrislista”.
-            Storing Objects in an ArrayList:
-              description_student: Hittills har du skapat ”matrislistor” för att lagra
-                ”heltal” ”dubbla” och ”strängar”. Precis som med 1D- och 2D-matriser
-                kan du även lagra objekt som du skapar i en ”matrislista”. I den här
-                lektionen skapar du en ”matrislista” av objekt för att tillämpa de
-                standardalgoritmer du har använt under året för att arbeta med data
-                som lagras i den här listan.
-              description_teacher: Elever skapar ”matrislistor” för att lagra objekt
-                och lära sig om generiska typer i Java. De tillämpar algoritmerna
-                de lärt sig med endimensionella matriser på ”matrislistor” för att
-                hitta lägsta och högsta värden, beräkna summor och medelvärden eller
-                hitta element som uppfyller specifika kriterier.
-            Removing Data from an ArrayList:
-              description_student: Du utforskar funktionen för metoden ”remove()”
-                i ”matrisliste”-klassen och identifierar potentiella fel när du försöker
-                ta bort objekt medan du går igenom listan. Under processen lär du
-                dig att se när en ”matrislista” är bäst för ett scenario eller problem.
-              description_teacher: Eleverna utforskar funktionen för metoden ”remove()”
-                i ”matrisliste”-klassen och identifierar potentiella fel när de försöker
-                ta bort objekt medan de går igenom listan. Under processen lär de
-                sig att se när en ”matrislista” är bäst för ett scenario eller problem.
-            Using String Methods:
-              description_student: Du utforskar strukturen för en ”sträng” och erinrar
-                dig att ”strängar” är objekt. Du använder metoderna ”indexOf()” och
-                ”substring()” för att söka efter delsträngar inom en ”sträng” och
-                för att skapa nya ”sträng”-objekt från en befintlig ”sträng”.
-              description_teacher: Eleverna utforskar strukturen för en ”sträng” och
-                erinrar sig att ”strängar” är objekt. De använder metoderna ”indexOf()”
-                och ”substring()” för att söka efter delsträngar inom en ”sträng”
-                och för att skapa nya ”sträng”-objekt från en befintlig ”sträng”.
-            Comparing Strings:
-              description_student: Du utforskar användningen av ”compareTo()” för
-                att kontrollera om ”strängar” är i alfabetisk ordning. Du arbetar
-                sedan med ditt kvartersfestprojekt och fokuserar specifikt på de uppgifter
-                du har på din projektplaneringstavla.
-              description_teacher: Eleverna utforskar användningen av ”compareTo()”
-                för att kontrollera om ”strängar” är i alfabetisk ordning. De arbetar
-                sedan med sitt kvartersfestprojekt och fokuserar specifikt på de uppgifter
-                de har på sin projektplaneringstavla.
-            Solving Problems with Strings:
-              description_student: Du kombinerar dina kunskaper om standardalgoritmer
-                och ”strängar” för att kontrollera om en ”sträng” är en palindrom.
-                Du deltar sedan i en session med feedback från andra elever och reflekterar
-                över de framsteg du har gjort i ditt kvartersfestprojekt.
-              description_teacher: Eleverna kombinerar sina kunskaper om standardalgoritmer
-                och ”strängar” för att kontrollera om en ”sträng” är en palindrom.
-                De deltar sedan i en session med feedback från andra elever och reflekterar
-                över de framsteg de har gjort i sina kvartersfestprojekt.
-            Solving Problems with ArrayLists:
-              description_student: Du tillämpar standardalgoritmerna du skrev för
-                1D- och 2D-matriser på ”matrislistan”. Du implementerar en ny standardalgoritm
-                för att få individuella siffror från ett heltal innan du ändrar och
-                tillämpar tidigare algoritmer för att byta element, ta bort dubbletter
-                eller hitta element som uppfyller specifika kriterier i ditt kvartersfestprojekt.
-              description_teacher: Eleverna tillämpar standardalgoritmerna de skrev
-                för 1D- och 2D-matriser på ”matrislistan”. De implementerar en ny
-                standardalgoritm för att få individuella siffror från ett heltal innan
-                de ändrar och tillämpar tidigare algoritmer för att byta element,
-                ta bort dubbletter eller hitta element som uppfyller specifika kriterier
-                i deras kvartersfestprojekt.
             Neighborhood Lit Fest Project - Day 1:
               name: Kvartersfestprojekt – Dag 1
-              description_student: Du fortsätter att utveckla ditt kvartersfestprojekt
-                och skapar en berättelse, dikt, låt eller annan form av litteratur
-                baserat på analys av verk från din favoritförfattare eller favoritartist.
-                Du utvärderar först ditt arbete själv för att bedöma hur väl du har
-                slutfört projektkraven, och skriver sedan acceptanskriterier för en
-                funktion i ditt projekt som en annan kursdeltagare testar. Du använder
-                självbedömningen och feedbacken för att prioritera dina återstående
-                uppgifter och fortsätta utveckla ditt projekt.
-              description_teacher: Eleverna fortsätter att utveckla sina kvartersfestprojekt
-                och skapar en berättelse, dikt, låt eller annan form av litteratur
-                baserat på analys av verk från deras favoritförfattare eller favoritartist.
-                Eleverna utvärderar först sitt arbete själva för att bedöma hur väl
-                de har slutfört projektkraven, och skriver sedan acceptanskriterier
-                för en funktion i sina projekt som en annan elev testar. Eleverna
-                använder självbedömningen och feedbacken för att prioritera sina återstående
-                uppgifter och fortsätta utveckla sina projekt.
             Neighborhood Lit Fest Project - Day 2:
               name: Kvartersfestprojekt – Dag 2
-              description_student: I föregående lektion gjorde du en självbedömning
-                och skrev acceptanskriterier för ditt projekt. I den här lektionen
-                får du feedback från andra kursdeltagare så du kan identifiera vilka
-                uppgifter som återstår för att slutföra och fortsätta utveckla ditt
-                kvartersfestprojekt.
-              description_teacher: I föregående lektion gjorde eleverna självbedömningar
-                och skrev acceptanskriterier för sina projekt. I den här lektionen
-                får eleverna feedback från andra elever så de kan identifiera vilka
-                uppgifter som återstår för att slutföra och fortsätta utveckla sina
-                kvartersfestprojekt.
             Neighborhood Lit Fest Project - Day 3:
               name: Kvartersfestprojekt – Dag 3
-              description_student: Du gör slutliga revisioner och uppdateringar baserade
-                på dina kodgranskningar och projektplaneringstavlan. Du delar ditt
-                kvartersfestprojekt med dina studiekamrater och firar sedan att du
-                har slutfört projektet och gör en avslutande reflektion av utvecklingsprocessen.
-              description_teacher: Eleverna gör slutliga revisioner och uppdateringar
-                baserade på sina kodgranskningar och projektplaneringstavlan. De delar
-                sina kvartersfestprojekt med sina studiekamrater och firar sedan att
-                de har slutfört projektet och gör en avslutande reflektion av utvecklingsprocessen.
-            Assessment Day:
-              description_student: I den här studieenheten använde du ”matrislistor”
-                för att lagra programdata och skilja på när du ska använda 1D- och
-                2D-matriser respektive ”matrislistor”. Du utforskade fördelarna och
-                funktionaliteten med en ”matrislistor”, och använde dessa för att
-                lösa problem som involverar numeriska data och objektdata. Du använde
-                metoder i ”sträng”-klassen för att analysera och bearbeta text erhållen
-                från användar- och filindata. Under hela studieenheten skrev du programdokumentation
-                med kommentarer på en enskild rad, kommentarer på flera rader och
-                Javadoc-kommentarer för att skapa API-dokumentation. I processen identifierade
-                och dokumenterade du förvillkor och eftervillkor för objekt och metoder.
-                Nu utvärderar du hur väl du har uppnått studieenhetens lärandemål
-                och färdigheter i en utvärdering med flervalsalternativ.
-              description_teacher: I den här studieenheten använde eleverna ”matrislistor”
-                för att lagra programdata och skilja på när de ska använda 1D- och
-                2D-matriser respektive ”matrislistor”. Eleverna utforskade fördelarna
-                och funktionaliteten med en ”matrislistor”, och använde dessa för
-                att lösa problem som involverar numeriska data och objektdata. De
-                använde metoder i ”sträng”-klassen för att analysera och bearbeta
-                text erhållen från användar- och filindata. Under hela studieenheten
-                skrev eleverna programdokumentation med kommentarer på en enskild
-                rad, kommentarer på flera rader och Javadoc-kommentarer för att skapa
-                API-dokumentation. I processen identifierade och dokumenterade eleverna
-                förvillkor och eftervillkor för objekt och metoder. Nu utvärderar
-                de hur väl de har uppnått studieenhetens lärandemål och färdigheter
-                i en utvärdering med flervalsalternativ.
-            lesson-2:
-              description_student: Du konstruerar ”heltal” och ”dubbla” objekt som
-                representerar ”hela” och ”dubbla” primitiva värden som referensvärden.
-                Genom att använda metoderna i klasserna ”heltal” och ”dubbla” returnerar
-                du värdena som dessa objekt lagrar som primitiva värden. Du utforskar
-                även de lägsta och högsta värdena för heltal för att undvika spillfel
-                innan du planerar de uppgifter du behöver slutföra för ditt kvartersfestprojekt.
-              description_teacher: Eleverna konstruerar ”heltal” och ”dubbla” objekt
-                som representerar ”hela” och ”dubbla” primitiva värden som referensvärden.
-                Genom att använda metoderna i klasserna ”heltal” och ”dubbla” returnerar
-                studenterna värdena som dessa objekt lagrar som primitiva värden.
-                Studenterna utforskar även de lägsta och högsta värdena för heltal
-                för att undvika spillfel innan de planerar de uppgifter de behöver
-                slutföra för sitt kvartersfestprojekt.
-            lesson-3:
-              description_student: När vi arbetar med matriser och listor stöter vi
-                ibland på problem där antalet element är okänt eller listans storlek
-                ständigt ändras. I den här lektionen lär du dig om ”matrislistor”
-                och identifierar scenarier där denna datastruktur lämpar sig bättre.
-              description_teacher: Eleverna skapar ”matrislistor” för att lagra ”hela”
-                och ”dubbla” värden. De skiljer mellan ”matrislistor” och endimensionella
-                matriser för att avgöra vilken datastruktur som är bäst lämpad för
-                ett scenario. Eleverna lägger till element i en ”matrislista” och
-                lär sig hur autoboxing konverterar mellan primitiva värden och adapterklasser
-                när de arbetar med lagrade data.
-            lesson-4:
-              description_student: Du använder ”matrisliste”-metoderna ”get()” och
-                ”set()” för att hämta och modifiera element och lära dig om ”sträng”-metoden
-                ”length()” för att räkna antalet tecken i ett ”sträng”-objekt. Du
-                tillämpar standardalgoritmerna du utvecklade med 1D- och 2D-matriser
-                för att modifiera element i en ”matrislista”. Du lär dig hur unboxing
-                utför omvandlingar mellan primitiva värden och adapterklasser när
-                de arbetar med data som lagras i en ”matrislista”.
-              description_teacher: Eleverna använder ”matrisliste”-metoderna ”get()”
-                och ”set()” för att hämta och modifiera element och lära sig om ”sträng”-metoden
-                ”length()” för att räkna antalet tecken i ett ”sträng”-objekt. Eleverna
-                tillämpar standardalgoritmerna de utvecklade med 1D- och 2D-matriser
-                för att modifiera element i en ”matrislista”. De lär sig hur unboxing
-                utför omvandlingar mellan primitiva värden och adapterklasser när
-                de arbetar med data som lagras i en ”matrislista”.
-            lesson-5:
-              description_student: Hittills har du skapat ”matrislistor” för att lagra
-                ”heltal” ”dubbla” och ”strängar”. Precis som med 1D- och 2D-matriser
-                kan du även lagra objekt som du skapar i en ”matrislista”. I den här
-                lektionen skapar du en ”matrislista” av objekt för att tillämpa de
-                standardalgoritmer du har använt under året för att arbeta med data
-                som lagras i den här listan.
-              description_teacher: Elever skapar ”matrislistor” för att lagra objekt
-                och lära sig om generiska typer i Java. De tillämpar algoritmerna
-                de lärt sig med endimensionella matriser på ”matrislistor” för att
-                hitta lägsta och högsta värden, beräkna summor och medelvärden eller
-                hitta element som uppfyller specifika kriterier.
-            lesson-6:
-              description_student: Du utforskar funktionen för metoden ”remove()”
-                i ”matrisliste”-klassen och identifierar potentiella fel när du försöker
-                ta bort objekt medan du går igenom listan. Under processen lär du
-                dig att se när en ”matrislista” är bäst för ett scenario eller problem.
-              description_teacher: Eleverna utforskar funktionen för metoden ”remove()”
-                i ”matrisliste”-klassen och identifierar potentiella fel när de försöker
-                ta bort objekt medan de går igenom listan. Under processen lär de
-                sig att se när en ”matrislista” är bäst för ett scenario eller problem.
-            lesson-7:
-              description_student: Du utforskar strukturen för en ”sträng” och erinrar
-                dig att ”strängar” är objekt. Du använder metoderna ”indexOf()” och
-                ”substring()” för att söka efter delsträngar inom en ”sträng” och
-                för att skapa nya ”sträng”-objekt från en befintlig ”sträng”.
-              description_teacher: Eleverna utforskar strukturen för en ”sträng” och
-                erinrar sig att ”strängar” är objekt. De använder metoderna ”indexOf()”
-                och ”substring()” för att söka efter delsträngar inom en ”sträng”
-                och för att skapa nya ”sträng”-objekt från en befintlig ”sträng”.
-            lesson-8:
-              description_student: Du utforskar användningen av ”compareTo()” för
-                att kontrollera om ”strängar” är i alfabetisk ordning. Du arbetar
-                sedan med ditt kvartersfestprojekt och fokuserar specifikt på de uppgifter
-                du har på din projektplaneringstavla.
-              description_teacher: Eleverna utforskar användningen av ”compareTo()”
-                för att kontrollera om ”strängar” är i alfabetisk ordning. De arbetar
-                sedan med sitt kvartersfestprojekt och fokuserar specifikt på de uppgifter
-                de har på sin projektplaneringstavla.
-            lesson-9:
-              description_student: Du kombinerar dina kunskaper om standardalgoritmer
-                och ”strängar” för att kontrollera om en ”sträng” är en palindrom.
-                Du deltar sedan i en session med feedback från andra elever och reflekterar
-                över de framsteg du har gjort i ditt kvartersfestprojekt.
-              description_teacher: Eleverna kombinerar sina kunskaper om standardalgoritmer
-                och ”strängar” för att kontrollera om en ”sträng” är en palindrom.
-                De deltar sedan i en session med feedback från andra elever och reflekterar
-                över de framsteg de har gjort i sina kvartersfestprojekt.
-            lesson-10:
-              description_student: Du tillämpar standardalgoritmerna du skrev för
-                1D- och 2D-matriser på ”matrislistan”. Du implementerar en ny standardalgoritm
-                för att få individuella siffror från ett heltal innan du ändrar och
-                tillämpar tidigare algoritmer för att byta element, ta bort dubbletter
-                eller hitta element som uppfyller specifika kriterier i ditt kvartersfestprojekt.
-              description_teacher: Eleverna tillämpar standardalgoritmerna de skrev
-                för 1D- och 2D-matriser på ”matrislistan”. De implementerar en ny
-                standardalgoritm för att få individuella siffror från ett heltal innan
-                de ändrar och tillämpar tidigare algoritmer för att byta element,
-                ta bort dubbletter eller hitta element som uppfyller specifika kriterier
-                i deras kvartersfestprojekt.
+            The Theater:
+              name: Teatern
             lesson-11:
               name: Kvartersfestprojekt – Dag 1
-              description_student: Du fortsätter att utveckla ditt kvartersfestprojekt
-                och skapar en berättelse, dikt, låt eller annan form av litteratur
-                baserat på analys av verk från din favoritförfattare eller favoritartist.
-                Du utvärderar först ditt arbete själv för att bedöma hur väl du har
-                slutfört projektkraven, och skriver sedan acceptanskriterier för en
-                funktion i ditt projekt som en annan kursdeltagare testar. Du använder
-                självbedömningen och feedbacken för att prioritera dina återstående
-                uppgifter och fortsätta utveckla ditt projekt.
-              description_teacher: Eleverna fortsätter att utveckla sina kvartersfestprojekt
-                och skapar en berättelse, dikt, låt eller annan form av litteratur
-                baserat på analys av verk från deras favoritförfattare eller favoritartist.
-                Eleverna utvärderar först sitt arbete själva för att bedöma hur väl
-                de har slutfört projektkraven, och skriver sedan acceptanskriterier
-                för en funktion i sina projekt som en annan elev testar. Eleverna
-                använder självbedömningen och feedbacken för att prioritera sina återstående
-                uppgifter och fortsätta utveckla sina projekt.
             lesson-12:
               name: Kvartersfestprojekt – Dag 2
-              description_student: I föregående lektion gjorde du en självbedömning
-                och skrev acceptanskriterier för ditt projekt. I den här lektionen
-                får du feedback från andra kursdeltagare så du kan identifiera vilka
-                uppgifter som återstår för att slutföra och fortsätta utveckla ditt
-                kvartersfestprojekt.
-              description_teacher: I föregående lektion gjorde eleverna självbedömningar
-                och skrev acceptanskriterier för sina projekt. I den här lektionen
-                får eleverna feedback från andra elever så de kan identifiera vilka
-                uppgifter som återstår för att slutföra och fortsätta utveckla sina
-                kvartersfestprojekt.
             lesson-13:
               name: Kvartersfestprojekt – Dag 3
-              description_student: Du gör slutliga revisioner och uppdateringar baserade
-                på dina kodgranskningar och projektplaneringstavlan. Du delar ditt
-                kvartersfestprojekt med dina studiekamrater och firar sedan att du
-                har slutfört projektet och gör en avslutande reflektion av utvecklingsprocessen.
-              description_teacher: Eleverna gör slutliga revisioner och uppdateringar
-                baserade på sina kodgranskningar och projektplaneringstavlan. De delar
-                sina kvartersfestprojekt med sina studiekamrater och firar sedan att
-                de har slutfört projektet och gör en avslutande reflektion av utvecklingsprocessen.
-            lesson-15:
-              description_student: I den här studieenheten använde du ”matrislistor”
-                för att lagra programdata och skilja på när du ska använda 1D- och
-                2D-matriser respektive ”matrislistor”. Du utforskade fördelarna och
-                funktionaliteten med en ”matrislistor”, och använde dessa för att
-                lösa problem som involverar numeriska data och objektdata. Du använde
-                metoder i ”sträng”-klassen för att analysera och bearbeta text erhållen
-                från användar- och filindata. Under hela studieenheten skrev du programdokumentation
-                med kommentarer på en enskild rad, kommentarer på flera rader och
-                Javadoc-kommentarer för att skapa API-dokumentation. I processen identifierade
-                och dokumenterade du förvillkor och eftervillkor för objekt och metoder.
-                Nu utvärderar du hur väl du har uppnått studieenhetens lärandemål
-                och färdigheter i en utvärdering med flervalsalternativ.
-              description_teacher: I den här studieenheten använde eleverna ”matrislistor”
-                för att lagra programdata och skilja på när de ska använda 1D- och
-                2D-matriser respektive ”matrislistor”. Eleverna utforskade fördelarna
-                och funktionaliteten med en ”matrislistor”, och använde dessa för
-                att lösa problem som involverar numeriska data och objektdata. De
-                använde metoder i ”sträng”-klassen för att analysera och bearbeta
-                text erhållen från användar- och filindata. Under hela studieenheten
-                skrev eleverna programdokumentation med kommentarer på en enskild
-                rad, kommentarer på flera rader och Javadoc-kommentarer för att skapa
-                API-dokumentation. I processen identifierade och dokumenterade eleverna
-                förvillkor och eftervillkor för objekt och metoder. Nu utvärderar
-                de hur väl de har uppnått studieenhetens lärandemål och färdigheter
-                i en utvärdering med flervalsalternativ.
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
-        poem-art-2021:
-          lessons:
-            Poem Art:
-              description_teacher: |-
-                I den här Datavetenskap- och språkintegrerade lektionen för nya kodare kommer studenterna att animera en dikt med kod för att illustrera stämningen i en dikt. Eleverna kommer att läsa och upptäcka stämningen i en dikt. De hittar sedan motsvarande effekter och bilder för att illustrera diktens stämning. Slutligen kommer studenterna att använda händelser (kod) för att illustrera en förändring i stämningen eller animera introduktionen av nya bilder i en dikt.
-
-                Denna lektion kan genomföras som en 1-timmes fristående lektion. Det finns också ett alternativ att använda den här lektionen som den första lektionen i flerlektionsmodulen som heter [Coding with Poetry](http://studio.code.org/s/poetry-2021).(<http://studio.code.org/s/poetry-2021>).
-            lesson-1:
-              description_teacher: |-
-                I den här Datavetenskap- och språkintegrerade lektionen kommer studenterna att animera en dikt med kod för att illustrera stämningen i en dikt. Under denna inledande kodningsaktivitet kommer studenterna att läsa och upptäcka stämningen i en dikt. Sedan hittar de motsvarande effekter och bilder för att illustrera diktens stämning. Till sist kommer eleverna att använda händelser (kod) för att illustrera en förändring i stämningen eller animera introduktionen av nya bilder i en dikt.
-
-                Denna lektion kan genomföras som en 1-timmes fristående lektion. Det finns också ett alternativ att använda den här lektionen som den första lektionen i 5-lektionsmodulen som heter [Coding with Poetry](http://code.org/poetry). I slutet av Coding with Poetry-modulen kommer eleverna att skriva sina egna dikter och skapa en app för diktgenerator att dela med vänner.
-
-                Coding with Poetry är en del av Code.orgs Datavetenskap Sammanhang läroplan, som är tänkt att integrera CS i andra ämnesområden som matematik, ELA och naturvetenskap med anpassning till CCSS, NGSS och CSTA-standarder.
-        poetry-2021:
-          lessons:
-            Poem Art:
-              description_teacher: I den här Datavetenskap- och språkintegrerade lektionen
-                för nya kodare kommer studenterna att animera en dikt med kod för
-                att illustrera stämningen i en dikt. Eleverna kommer att läsa och
-                upptäcka stämningen i en dikt. De hittar sedan motsvarande effekter
-                och bilder för att illustrera diktens stämning. Slutligen kommer studenterna
-                att använda händelser (kod) för att illustrera en förändring i stämningen
-                eller animera introduktionen av nya bilder i en dikt.
+            lessonGroup-5:
+              display_name: Sandlåda
         spelling-bee-2021:
           lessons:
             lesson-1:
               name: Stavnings-bi
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Lektion
         csa6-exemplars:
           lessons:
             lesson-11:
@@ -4307,19 +4407,487 @@ sv:
           lessons:
             lesson-4:
               name: Utbrottssimulator
+            For Loop Fun:
+              name: "'För' loop skoj"
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Timmen med Kod
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: variabler
+        csd6-pilot-2022:
+          lessons:
+            Accelerometer:
+              name: Accelerometer
+            Functions with Parameters:
+              name: funktioner
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
         csa7-pilot-facilitator:
+          lessons:
+            The Theater:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
         csa8-pilot-facilitator:
+          lessons:
+            The Theater:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Glada kartor
+            'Programming: Happy Maps':
+              name: Glada kartor
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Dansparty
+            lesson-1:
+              name: Dansparty
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            csf_conditionals:
+              display_name: Villkor
+            csf_functions:
+              display_name: funktioner
+            csf_variables:
+              display_name: variabler
+            csf_for_loops:
+              display_name: "'För' loopar"
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Binära tal
+            Color Images:
+              name: Färgbilder
+        csp2-2022:
+          lessons:
+            HTTP and DNS:
+              name: HTTP och DNS
+            DNS and HTTP:
+              name: HTTP och DNS
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Felsökning
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: variabler
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Listor
+            csp_loops:
+              display_name: loopar
+            csp_project:
+              display_name: Projekt
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Flytta det, flytta den
+            Getting Loopy:
+              name: Att bli snurrig
+            The Right App:
+              name: Den rätta appen
+            'Loops: Getting Loopy':
+              name: Att bli snurrig
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Den stora händelsen
+            Binary Bracelets:
+              name: Binära armband
+            'Events: The Big Event':
+              name: Den stora händelsen
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+            csf_data:
+              display_name: Data
+        csp7-2022:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotek
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Kalkyleringsprogrammering
+            Relay Programming:
+              name: Stafettprogrammering
+            Dance Party:
+              name: Dansparty
+            Conditionals with Cards:
+              name: Villkorssatser med kort
+            'Algorithms: Graph Paper Programming':
+              name: Kalkyleringsprogrammering
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            csf_conditionals:
+              display_name: Villkor
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Låtskrivande
+            'Functions: Songwriting':
+              name: Låtskrivande
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            ramp_up:
+              display_name: Kapslade slingor(loopar)
+            csf_functions:
+              display_name: funktioner
+            csf_nested_loops:
+              display_name: Villkor
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: "'För' loop skoj"
+            Outbreak:
+              name: Utbrott
+            The Internet:
+              name: Internet
+            Internet:
+              name: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalt medborgarskap
+            lessonGroup-8:
+              display_name: variabler
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: loopar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+          name: csa1-2022
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: variabler
+            lesson-8:
+              name: Attribut
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+          name: csa2-2022
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: "'För' loopar"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+          name: csa3-2022
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Villkor
+            lesson-16:
+              name: Felsökning
+            lesson-17:
+              name: Projektinspiration
+            lesson-19:
+              name: Felsökning
+        csa4-2022:
+          lessons:
+            lesson-3:
+              name: Teatern
+            lesson-16:
+              name: Teatern
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+          name: csa4-2022
+        csa5-2022:
+          lessons:
+            The Theater:
+              name: Teatern
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+          name: csa5-2022
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: loopar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        pltess:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: kurs
+        csa7-pilot-extra:
+          lessons:
+            The Theater:
+              name: Teatern
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa8-pilot-extra:
+          lessons:
+            The Theater:
+              name: Teatern
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        coursef-2022-pilot:
+          lessons:
+            Outbreak:
+              name: Utbrott
+            The Internet:
+              name: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalt medborgarskap
+            lessonGroup-8:
+              display_name: variabler
+        csa6-2022:
+          lessons:
+            Neighborhood Lit Fest Project - Day 1:
+              name: Kvartersfestprojekt – Dag 1
+            Neighborhood Lit Fest Project - Day 2:
+              name: Kvartersfestprojekt – Dag 2
+            Neighborhood Lit Fest Project - Day 3:
+              name: Kvartersfestprojekt – Dag 3
+            The Theater:
+              name: Teatern
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa7-2022:
+          lessons:
+            The Theater:
+              name: Teatern
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa8-2022:
+          lessons:
+            The Theater:
+              name: Teatern
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa-preview:
+          lessons:
+            lesson-2:
+              name: Teatern
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Välkommen
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Välkommen
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Välkommen
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Välkommen
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Välkommen
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: variabler
+            lesson-3:
+              name: Attribut
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: loopar
+            Events:
+              name: Händelser
+            Conditionals:
+              name: Villkor
+            Functions:
+              name: funktioner
+            Variables:
+              name: variabler
+            For Loops:
+              name: "'För' loopar"
+        csd1-2022:
+          lessons:
+            Processing:
+              name: Bearbetar
+            Storage:
+              name: Lagring
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        csd2-2022:
+          lessons:
+            Intro to HTML:
+              name: Introduktion till HTML
+            Using Images:
+              name: Använda bilder
+            CSS Classes:
+              name: CSS-klasser
+        csd3-2022:
+          lessons:
+            Variables:
+              name: variabler
+            Text:
+              name: text
+            Conditionals:
+              name: Villkor
+            Collisions:
+              name: Kollisioner
+            Functions:
+              name: funktioner
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
+        csd5-2022:
+          lessons:
+            Representing Images:
+              name: Representerar bilder
+            Problem Solving and Data:
+              name: Problemlösning och data
+            Automating Data Decisions:
+              name: Automatisera databeslut
+        csd6-2022:
+          lessons:
+            Accelerometer:
+              name: Accelerometer
+            Functions:
+              name: funktioner
+        csd-post-survey-2022:
+          description: Den här enheten innehåller CS Discoveries undersökning efter
+            kursen. Denna enhet kan tilldelas efter att eleverna har slutfört sin
+            sista enhet i CS Discoveries.
+          student_description: Den här enheten innehåller en undersökning för när
+            din klass är klar med enheterna i CS Discoveries. Din lärare kommer att
+            tala om för dig när det är dags att svara på den här undersökningen.
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Modul 1
+            Module 2:
+              name: Modul 2
+            Module 3:
+              name: Modul 3
+            Module 4:
+              name: Modul 4
+            Module 5:
+              name: Modul 5
+            Module 6:
+              name: Modul 6
+            Module 7:
+              name: Modul 7
+            Module 8:
+              name: Modul 8
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Modul 1
+            Module 2:
+              name: Modul 2
+            Module 3:
+              name: Modul 3
+            Module 4:
+              name: Modul 4
+        self-paced-pl-csd1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Välkommen
+        csa9-2022:
+          lessons:
+            The Theater:
+              name: Teatern
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Översikt
+            lesson-1:
+              name: Översikt
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Översikt
+            lesson-1:
+              name: Översikt

@@ -2,6 +2,24 @@
 hu:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': nagyon kicsi
+            '0.75': kicsi
+            '1.00': közepes
+            '2.00': nagy
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': nagyon kicsi
+            '0.75': kicsi
+            '1.00': közepes
+            '2.00': nagy
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} váltakozik {N} ütemenként \n{MOVE1} és {MOVE2} között"
         options:
@@ -352,6 +370,7 @@ hu:
             '"right"': jobb oszlop
             '"x"': keresztezés
             '"plus"': plusz
+            '"spiral"': spirál
             '"random"': véletlen
       Dancelab_makeAnonymousDanceSprite:
         text: 'készíts új {COSTUME} itt: {LOCATION}'
@@ -434,6 +453,26 @@ hu:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': földönkívüliek
             '"BEAR"': összes medve
@@ -461,6 +500,7 @@ hu:
             '"right"': jobb oszlop
             '"x"': keresztezés
             '"plus"': plusz
+            '"spiral"': spirál
             '"random"': véletlen
       Dancelab_mixColors:
         text: "{COLOR1} és {COLOR2} keverése"
@@ -993,6 +1033,20 @@ hu:
         text: amikor {SPRITE} szereplőre klikkel
       gamelab_clickedSpritePointer:
         text: kattintott {SPRITE} szereplőre
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): forgatás jobbra
+            new Behavior(spinning_left, []): forgatás balra
+            new Behavior(fluttering, []): csapkodva
+            new Behavior(jittering, []): remegés
+            new Behavior(wobbling, []): kalimpálva
+            new Behavior(wandering, []): kóborlás
+            new Behavior(patrolling, []): járőrözés
+            new Behavior(moving_west_and_looping, []): nyugat felé menni és ismételgetni
+            new Behavior(moving_east_and_looping, []): kelet felé menni és ismételgetni
+            new Behavior(moving_north_and_looping, []): mozgatás északra és hurkokban
+            new Behavior(moving_south_and_looping, []): mozgatás délre és hurkokban
       gamelab_comment:
         text: 'megjegyzés: {COMMENT}'
       gamelab_costumeImage:
@@ -1009,6 +1063,12 @@ hu:
         text: vonal húzása {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: szélek megakadályozzák {SPRITE} mozgását
+      gamelab_everyInterval:
+        text: 'ismételd meg minden {N} {UNIT} után '
+        options:
+          UNIT:
+            '"seconds"': másodperc
+            '"frames"': keretek
       gamelab_followingTargets:
         text: célpontok követése
       gamelab_getAllSprites:
@@ -1044,6 +1104,19 @@ hu:
         text: |-
           ha {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} ruhája {COSTUME}"
       gamelab_isKeyPressed:
@@ -1142,7 +1215,7 @@ hu:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
-        text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} manókkal"
+        text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} sprite-okkal"
         options:
           EFFECT:
             '"burst"': robbanás
@@ -1161,6 +1234,13 @@ hu:
             '90': le
             '180': balra
             '270': fel
+      gamelab_makeSpritesWithSize:
+        text: "[NUM] új sprite készítése {SIZE} méretben és {COSTUME} öltözetben"
+        options:
+          SIZE:
+            '30': kicsi
+            '50': közepes
+            '100': nagy
       gamelab_mirrorSprite:
         text: "{SPRITE} fordul {DIRECTION}"
         options:
@@ -1170,7 +1250,7 @@ hu:
       gamelab_mouseLocation:
         text: egér helye
       gamelab_moveBackward:
-        text: vidd {SPRITE} manót {DISTANCE} képponttal vissza
+        text: vidd {SPRITE} sprite-ot {DISTANCE} képponttal vissza
       gamelab_moveForward:
         text: "{SPRITE} lépj {DISTANCE} képpontot előre"
       gamelab_moveInDirection:
@@ -1233,6 +1313,12 @@ hu:
             "'sound://category_digital/jump_7.mp3'": Ugorj
       gamelab_playSpeech:
         text: "{SOUND} beszéd eljátszása"
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): mozgatás a nyílbillentyűkkel
+            new Behavior(driving_with_arrow_keys, []): irányítás nyilakkal
+            draggable(): vonszolható
       gamelab_pointInDirection:
         text: "{SPRITE} fordulj {DIRECTION} felé"
         options:
@@ -1298,7 +1384,7 @@ hu:
       gamelab_setBackgroundImageAs:
         text: háttér beállítása {IMG}
       gamelab_setDefaultSpriteSize:
-        text: új manó készítése szokásosról {SIZE} méretben
+        text: új sprite készítése szokásosról {SIZE} méretben
         options:
           SIZE:
             '25': nagyon kicsi
@@ -1336,6 +1422,14 @@ hu:
             '"scale"': méret
             '"width"': szélesség
             '"height"': magasság
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': lassú
+            '5': normál
+            '7': gyors
+            '9': extra fast
       gamelab_setTint:
         text: "{THIS} színének megváltoztatása erre: {COLOR}"
       gamelab_setupScoreboard:
@@ -1359,6 +1453,46 @@ hu:
         text: "{SPRITE} mondja {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}mondja{TEXT1}{NUM}másodpercig"
+      gamelab_spriteThink:
+        text: "{SPRITE} gondolkozik {SPEECH} beszédről"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE} gondolkozik {TEXT1} szövegről {NUM} másodpercig"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} gondolkodik {THOUGHT} gondolaton"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I am hungry, too."': Én is éhes vagyok.
+            '"I only want the biggest goat."': A legnagyobb kecskét akarom.
+            '"I''m a green troll."': Én egy zöld troll vagyok.
+            '"No one will cross my bridge."': Senki nem megy át a hídamon.
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} gondolkodik {THOUGHT} gondolaton"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"Time to make friends with the sheep."': Ideje barátkozni a birkákkal.
+            '"She''ll never recognize me now."': Soha nem fog fölismerni.
+            '"This costume keeps me warm."': Ez az öltözék melegen tart.
+            '"I am actually a wolf."': Valójában farkas vagyok.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} gondolkodik {THOUGHT} gondolaton"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m feeling sleepy."': Álmos vagyok.
+            '"No one could ever beat me."': Senki sem tud engem legyőzni.
+            '"I''ve done this race before."': Ezen a versenyen már korábban is részt vettem.
+            '"My feet are bigger than Turtle''s feet."': Az én lábam nagyobb, mint Teknősé.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} gondolkodik {THOUGHT} gondolaton"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m so hungry."': Olyan éhes vagyok.
+            '"I''m a visitor in this town."': Látogató vagyok ebben a városban.
+            '"If we share, we''ll all have something to eat. "': Ha megosztjuk, mindannyiunknak lesz mit ennünk.
+            '"I''ll trick everyone into giving me their food."': Mindenkit átverek, hogy nekem adják az ételüket.
       gamelab_startAvoiding:
         text: "[SPRITE] kezdi elkerülni a(z) {TARGET} célt"
       gamelab_startFollowing:
@@ -1366,11 +1500,11 @@ hu:
       gamelab_startGliding:
         text: "{SPRITE} kezd siklani"
       gamelab_stopAvoiding:
-        text: "{SPRITE} abbahagyja más manók elkerülését"
+        text: "{SPRITE} abbahagyja más sprite-ok elkerülését"
       gamelab_stopCollectingData:
         text: adatgyűjtés befejezése
       gamelab_stopFollowing:
-        text: "{SPRITE} abbahagyja más manók követését"
+        text: "{SPRITE} abbahagyja más sprite-ok követését"
       gamelab_stopGliding:
         text: "{SPRITE} befejezi a siklást"
       gamelab_subjectSpritePointer:
@@ -1797,7 +1931,7 @@ hu:
       Poetry_hideText:
         text: szöveg elrejtése
       Poetry_makeBurst:
-        text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} manókkal"
+        text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} sprite-okkal"
         options:
           EFFECT:
             '"burst"': robbanás
@@ -1929,14 +2063,26 @@ hu:
         options:
           BEHAVIOR:
             '"fluttering"': csapkodva
+            '"growing"': növekedés
+            '"jittering"': remegés
+            '"shrinking"': zsugorodás
+            '"spinning_left"': forgatás balra
+            '"spinning_right"': forgatás jobbra
             '"swimming_left_and_right"': úszás
+            '"wandering"': kóborlás
             '"wobbling"': kalimpálva
       Poetry_stopBehavior:
         text: sprite {ANIMATION_NAME} abbahagyja a {BEHAVIOR} viselkedést
         options:
           BEHAVIOR:
             '"fluttering"': csapkodva
+            '"growing"': növekedés
+            '"jittering"': remegés
+            '"shrinking"': zsugorodás
+            '"spinning_left"': forgatás balra
+            '"spinning_right"': forgatás jobbra
             '"swimming_left_and_right"': úszás
+            '"wandering"': kóborlás
             '"wobbling"': kalimpálva
             '"all"': "--összes viselkedés--"
       Poetry_stringValue:

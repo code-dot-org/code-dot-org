@@ -55,6 +55,8 @@ az:
         title: ' Yerlərə  Sağ-salamat Gediş'
       GraphPaperProgramming:
         title: Millimetrlik kağızda proqramlaşdırma
+      BinaryBracelets:
+        title: ikili bilərziklər
       ComputationalThinking:
         title: Hesablama təfəkkürü
       FunctionalSuncatchers:
@@ -113,10 +115,14 @@ az:
         title: Təməl qurmaq
       courseC_unplugged_gettingLoopy:
         desc: Bu dərs rəqs fəaliyyəti vasitəsilə loopların proqramlaşdırma konsepsiyasını (təkrarlanan təlimatlar) təqdim edir. Tələbələr sadə xoreoqrafiyanı öyrənəcək, sonra onu təkrarlamaq tapşırılacaq.
+      courseC_unplugged_binaryBracelets:
+        title: ikili bilərziklər
       courseD_unplugged_graphPaperProgramming:
         title: Millimetrlik kağızda proqramlaşdırma
       courseD_unplugged_relayProgramming:
         title: Estafet proqramlaşdırması
+      courseD_unplugged_conditionalsCards:
+        title: Kartlarla şərtlər
       courseD_unplugged_binaryImages:
         title: İkilik təsvirlər
       courseE_unplugged_diceRace:
@@ -162,6 +168,8 @@ az:
         title: İkilik təsvirlər
       GettingLoopy_2018:
         desc: Bu dərs rəqs fəaliyyəti vasitəsilə loopların proqramlaşdırma konsepsiyasını (təkrarlanan təlimatlar) təqdim edir. Tələbələr sadə xoreoqrafiyanı öyrənəcək, sonra onu təkrarlamaq tapşırılacaq.
+      BinaryBracelets_2018:
+        title: ikili bilərziklər
       MoveItMoveIt_2018:
         title: Hərəkət et
       courseE_unplugged_CnC_2018:
@@ -192,6 +200,8 @@ az:
         desc: Bu gün siz biri internetdə kobud olsa nə etməli olduğunuzu öyrənəcəksiniz.
       BigEvent_2019:
         title: Böyük hadisə
+      BinaryBracelets_2019:
+        title: ikili bilərziklər
       PlantASeed_2019:
         title: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
         desc: Bu dərs alqoritmləri gündəlik həyatımızda istifadə etməyə, nümunə olaraq bir toxum əkmə hərəkətindən istifadə yollarımıza çağırır. Həm də kompüter elminin daha böyük mənzərəsinə və alqoritmlərin vacib rol oynadığına diqqət yetirir.

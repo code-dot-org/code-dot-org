@@ -1,0 +1,35 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Gamer Talk Show",
+    "long_instructions": "Look at this project example. What are some of its characteristics and features?\r\n\r\n*While this is an example of a project for this unit, it is not representative of the only way you can approach or develop the project.*",
+    "mini_rubric": "false",
+    "bubble_choice_description": "An example project that creates a title sequence for a gamer's talk show.",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "starter_assets": {
+      "mario.jpeg": "8526e1eb-b2b7-46a7-90b5-b7ad55499c38.jpeg",
+      "playstation.jpeg": "dece9917-54ec-44e1-a0ce-1a06504d25bb.jpeg",
+      "pokemon.jpeg": "3bcf8b0f-38fd-4bf8-b5c9-e06efc951d57.jpeg",
+      "arcade.wav": "5e880bfa-2df9-4233-877a-7c09f23dd1ff.wav",
+      "microphone.png": "e0e421aa-9f99-4f03-8b61-9402375e80b3.png"
+    },
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    \n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "thumbnail_url": "https://images.code.org/26fc4440422ddec2a81b4a3534b4116f-image-1639769651987.jpeg",
+    "name_suffix": "_2022"
+  },
+  "game_id": 68,
+  "created_at": "2022-02-26T00:32:00.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-02-26T00:32:00.157+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1b\\\"\"],\"cloned_from\":\"CSA U7L1-L1b\"},{\"changed_at\":\"2022-05-13 23:07:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -44,6 +44,7 @@ module Cdo::CloudFormation
     # Struct providing arbitrary configuration options used by the template.
     # @return [OpenStruct]
     attr_reader :options
+
     delegate :commit, :frontends, :database, :load_balancer, :alarms, :cdn_enabled, :branch, :domain,
       to: :options
 

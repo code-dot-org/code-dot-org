@@ -42,11 +42,16 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 21035,
     "name_suffix": "_2021",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-07T18:56:54.816+00:00\",\"changed\":[\"cloned from \\\"courseA_artist_loops10_2021\\\"\"],\"cloned_from\":\"courseA_artist_loops10_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-07T18:56:54.816+00:00\",\"changed\":[\"cloned from \\\"courseA_artist_loops10_2021\\\"\"],\"cloned_from\":\"courseA_artist_loops10_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

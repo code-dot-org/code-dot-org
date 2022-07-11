@@ -378,6 +378,7 @@
   homepage_slot_text_link_buy: "Angażuj się"
   homepage_slot_text_link_donate: "Ofiaruj darowiznę"
   homepage_slot_text_link_shop: "Koszulki, czapki i inne"
+  homepage_slot_text_link_thebadguys: "Koduj ze złymi facetami"
   homepage_slot_text_link_administrators: "Wprowadź informatykę do swojej szkoły"
   homepage_gallery_header: "Utworzono ponad %{project_count} mln projektów w Code.org"
   homepage_header_donors: "Code.org dziękuje za wsparcie"
@@ -385,6 +386,10 @@
   homepage_donors_donate: "Podaruj"
   homepage_below_hero_announcement_text: "Dbamy o Twoją prywatność i dokonujemy kilku aktualizacji naszej Polityki prywatności, które wejdą w życie 25 maja."
   homepage_below_hero_announcement_link_text: "Dowiedz się więcej"
+  homepage_higher_power_body: "Twórz z Potańcówką, zyskaj szansę zobaczenia zespołu na żywo."
+  homepage_csa_subhead: "Nowe podejście do"
+  homepage_csa_title: "AP® Computer Science A"
+  homepage_csa_body: "Zapewnij uczniom kreatywne projekty związane ze światem rzeczywistym w naszym programie nauczania opartym na równości."
   contact_form_topic_student: "Jestem uczniem"
   contact_form_topic_parent: "Jestem rodzicem"
   contact_form_topic_teacher: "Jestem nauczycielem/edukatorem"
@@ -516,6 +521,8 @@
   video_title_marco_belinelli: "Godzina Kodowania z Marco Belinellim"
   video_title_chris_bosh: "Chris Bosh o informatyce"
   video_title_my_name_is_aracely: "Nazywam się Aracely"
+  video_title_change_face_of_cs: "Zmień oblicze informatyki"
+  video_title_latam_hoc: "Lo Que Falta En Nuestras Escuelas"
   video_1min: "1 min"
   video_2min: "2 min"
   video_3min: "3 min"
@@ -983,6 +990,9 @@
   coursee-2020_name: Kurs E (2020)
   coursef-2020_name: Kurs F (2020)
   coursed-2021_name: Kurs D (2021)
+  coursed-2022_name: Kurs D (2021)
+  coursee-2022_name: Kurs E (2022)
+  coursef-2022_name: Kurs F (2022)
   express-2018_name: Szybki Kurs (2018)
   pre-express-2018_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2018)
   express-2019_name: Kurs ekspresowy (2019)
@@ -990,6 +1000,7 @@
   express-2020_name: Kurs ekspresowy (2020)
   pre-express-2020_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2020)
   pre-express-2021_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2021)
+  pre-express-2022_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2022)
   csd2_name: 'Jednostka 2: Tworzenie stron'
   csd3_name: 'Jednostka 3: Animacje i gry'
   accelerated_name: "Przyspieszony kurs"
@@ -1102,6 +1113,12 @@
   coursed-2021_gradelevel: Klasa 8+
   coursee-2021_gradelevel: W wieku 8-12
   coursef-2021_gradelevel: W wieku 9-13
+  coursea-2022_gradelevel: W wieku 4-7
+  courseb-2022_gradelevel: W wieku 5-8
+  coursec-2022_gradelevel: W wieku 6-10
+  coursed-2022_gradelevel: Klasa 8+
+  coursee-2022_gradelevel: W wieku 8-12
+  coursef-2022_gradelevel: W wieku 9-13
   accelerated_gradelevel: "W wieku 10-18"
   codeorg_platformtext: "Nowoczesne przeglądarki, smartfony, tablety"
   codeintl_platformtext: "Nowoczesne przeglądarki, smartfony, tablety"
@@ -1240,6 +1257,12 @@
   coursed-2021_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia zagadnień pętli, wyrażeń warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą się o obywatelstwie cyfrowym.
   coursee-2021_shortdescription_congrats: Zacznij kodować przy pomocy algorytmów, pętli, wyrażeń warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
   coursef-2021_shortdescription_congrats: Naucz się używać różnych rodzajów pętli, wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
+  coursea-2022_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
+  courseb-2022_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
+  coursec-2022_shortdescription_congrats: Twórz programy przy pomocy tworzenia sekwencji, pętli i zdarzeń. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
+  coursed-2022_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia zagadnień pętli, wyrażeń warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą się o obywatelstwie cyfrowym.
+  coursee-2022_shortdescription_congrats: Zacznij kodować przy pomocy algorytmów, pętli, wyrażeń warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
+  coursef-2022_shortdescription_congrats: Naucz się używać różnych rodzajów pętli, wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
   codeorg_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   codeintl_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1493,6 +1516,7 @@
   header_educate_beyond: "Poza Code.org"
   header_educate_inspire: "Inspiruj ucznia"
   header_educate_community: "Społeczność online"
+  header_educate_requirements: "Wymagania Techniczne"
   header_educate_tools: "Narzędzia i filmy"
   header_about_us: "O nas"
   header_about_leadership: "Przywództwo"
@@ -1715,6 +1739,8 @@
   hoc2018_dance_video2: "Potańcówka - Zdarzenia"
   hoc2018_dance_video3: "Potańcówka - Właściwości"
   hoc2018_dance_video4: "Potańcówka - Gratulacje"
+  dance_box_higher_power_line_1: "Zakoduj taniec do „Higher Power” Coldplay, a będziesz miał szansę zobaczyć zespół na żywo!"
+  dance_box_higher_power_line_2: "Więcej informacji znajdziesz na <a href=\"%{path}\">code.org/coldplay</a>."
   page_not_found_title: "Strona nie została znaleziona"
   page_not_found_header: '404: Strona nie została znaleziona'
   page_not_found_description: "Strona, której szukasz, nie istnieje pod tym adresem. Sprawdź adres strony i wyślij ponownie. Lub wróć na stronę główną."
@@ -1809,3 +1835,6 @@
   outbreak_tile_title: "Epidemia"
   outbreak_tile_subtitle: "Wirus zainfekował Miasto Potworów! Zakoduj symulator epidemii i przewiduj, co stanie się z sąsiadami tego miasta."
   outbreak_tile_alt: "Symulacja rozprzestrzeniania się wirusa przez grupę fioletowych potworów."
+  footer_cookie_notice: "Informacja o plikach cookie"
+  top_hoc_tutorial_applab_alt_text: "Brązowa dłoń z palcem wskazującym dotykająca tabletu z ekranem dotykowym emitującego gwiazdy i promienie światła na niebieskim tle"
+  minecraft_tile_alt: "Dwie postacie Minecrafta, Steve i Alex na tle przedstawiającym wodną scenę Minecrafta z koralami, delfinami i wodorostami"

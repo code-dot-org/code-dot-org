@@ -41,11 +41,19 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "parent_level_id": 21555,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:14.075+00:00\",\"changed\":[\"cloned from \\\"courseE_farmer_functions3c_2021\\\"\"],\"cloned_from\":\"courseE_farmer_functions3c_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:14.075+00:00\",\"changed\":[\"cloned from \\\"courseE_farmer_functions3c_2021\\\"\"],\"cloned_from\":\"courseE_farmer_functions3c_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 4,
+    "repeat_until_while": 3,
+    "functions": 3,
+    "conditionals": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

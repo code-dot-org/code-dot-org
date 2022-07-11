@@ -26,7 +26,7 @@ Help us change the world, one student at a time
 <div class="col-50" style="padding-right: 10px">
 
 <% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
-<% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
+<% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{CdoDonor.get_random_donor_twitter} for supporting @codeorg)"} %>
 
 
 <%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false", download_path: "http://videos.code.org/social/about-codeorg.mp4" %>
@@ -127,7 +127,7 @@ Growth and Learning Opportunities
 <h1 class="backgroundimage" style="color:white;">
 Come Work with Us
 </h1>
-## We are currently hiring for: 
+## We are currently hiring for:
 <div id='lever-jobs-container'></div>
 <script type='text/javascript'>
 

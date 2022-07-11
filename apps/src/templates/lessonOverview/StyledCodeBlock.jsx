@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import EmbeddedBlock from '@cdo/apps/templates/codeDocs/EmbeddedBlock';
 
 export const buildProgrammingExpressionMarkdown = function(
   programmingExpression
@@ -12,19 +13,16 @@ export const buildProgrammingExpressionMarkdown = function(
   return `[${block}](${programmingExpression.link})`;
 };
 
-export default class StyledCodeBlock extends Component {
-  static propTypes = {
-    programmingExpression: PropTypes.shape({
-      color: PropTypes.string,
-      syntax: PropTypes.string.isRequired,
-      link: PropTypes.string,
-      parameters: PropTypes.array
-    }).isRequired
-  };
-
-  render() {
-    const {programmingExpression} = this.props;
-
+export default function StyledCodeBlock({programmingExpression}) {
+  if (programmingExpression.blockName) {
+    return (
+      <EmbeddedBlock
+        blockName={programmingExpression.blockName}
+        link={programmingExpression.link}
+        ariaLabel={programmingExpression.name}
+      />
+    );
+  } else {
     return (
       <SafeMarkdown
         markdown={buildProgrammingExpressionMarkdown(programmingExpression)}
@@ -32,3 +30,12 @@ export default class StyledCodeBlock extends Component {
     );
   }
 }
+
+StyledCodeBlock.propTypes = {
+  programmingExpression: PropTypes.shape({
+    color: PropTypes.string,
+    syntax: PropTypes.string.isRequired,
+    link: PropTypes.string,
+    parameters: PropTypes.array
+  }).isRequired
+};

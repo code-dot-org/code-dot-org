@@ -48,11 +48,18 @@
     "long_instructions": "Build a wall of **prismarine** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) around the black concrete. This will activate the **conduit** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) and complete your challenge!",
     "ocean": "cold",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:16.413+00:00\",\"changed\":[\"cloned from \\\"CourseE_HOC 2018 Level_11_2021\\\"\"],\"cloned_from\":\"CourseE_HOC 2018 Level_11_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:16.413+00:00\",\"changed\":[\"cloned from \\\"CourseE_HOC 2018 Level_11_2021\\\"\"],\"cloned_from\":\"CourseE_HOC 2018 Level_11_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 4,
+    "repeat_until_while": 4,
+    "conditionals": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

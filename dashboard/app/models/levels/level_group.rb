@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -30,7 +30,7 @@ class LevelGroup < DSLDefined
   )
 
   def dsl_default
-    <<~ruby
+    <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
       title 'title of the assessment here'
       submittable 'true'
@@ -43,7 +43,7 @@ class LevelGroup < DSLDefined
       page
       level 'level 3'
       level 'level 4'
-    ruby
+    RUBY
   end
 
   def icon
@@ -116,8 +116,8 @@ class LevelGroup < DSLDefined
     end
   end
 
-  def self.setup(data)
-    level = super(data)
+  def self.setup(data, md5)
+    level = super(data, md5)
 
     levels_and_texts_by_page = data[:pages].map do |page|
       page[:levels].map do |level_name|
@@ -170,13 +170,18 @@ class LevelGroup < DSLDefined
   # Perform a deep copy of this level by cloning all of its sublevels
   # using the same suffix, and write them to the new level definition file.
   def clone_with_suffix(new_suffix, editor_experiment: nil)
-    new_name = "#{base_name}#{new_suffix}"
+    suffix = new_suffix[0] == '_' ? new_suffix : "_#{new_suffix}"
+    new_name = "#{base_name}#{suffix}"
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
-    level = super(new_suffix, editor_experiment: editor_experiment)
-    level.clone_sublevels_with_suffix(get_levels_and_texts_by_page, new_suffix)
-    level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
-    level
+    begin
+      level = super(suffix, editor_experiment: editor_experiment)
+      level.clone_sublevels_with_suffix(get_levels_and_texts_by_page, suffix)
+      level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
+      level
+    rescue Exception => e
+      raise e, "Failed to clone LevelGroup #{name.inspect} as #{new_name.inspect}. Message:\n#{e.message}", e.backtrace
+    end
   end
 
   # Clone the sublevels, adding the specified suffix to the level name. Also
@@ -185,7 +190,7 @@ class LevelGroup < DSLDefined
   # e.g. [[Multi<id:1>, Match<id:2>],[External<id:4>,FreeResponse<id:4>]]
   def clone_sublevels_with_suffix(old_levels_and_texts_by_page, new_suffix)
     new_levels_and_texts_by_page = old_levels_and_texts_by_page.map do |levels_and_texts|
-      levels_and_texts.map {|level| level.clone_with_suffix(new_suffix)}
+      levels_and_texts.map {|level| level.clone_with_suffix(new_suffix, allow_existing: false)}
     end
     update_levels_and_texts_by_page(new_levels_and_texts_by_page)
   end

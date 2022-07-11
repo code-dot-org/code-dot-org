@@ -69,11 +69,15 @@
     "encrypted_examples": "+NiKqARTsK+jjXfcsp4iQHU2rI8sBKu+snguw3VcrrqkJw+G4lQE2moGMKO7\n9I1CxgsxNoeBqLfj9m1mgn58sA==\n",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Use the \"print\" block to make text appear on the screen.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:32.276+00:00\",\"changed\":[\"cloned from \\\"courseF_text_print\\\"\"],\"cloned_from\":\"courseF_text_print\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:32.276+00:00\",\"changed\":[\"cloned from \\\"courseF_text_print\\\"\"],\"cloned_from\":\"courseF_text_print\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

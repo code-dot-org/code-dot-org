@@ -31,7 +31,7 @@ class FollowersController < ApplicationController
     # Create boolean to confirm if a user already actively exists on a section roster
     is_existing_follower = !!Follower.find_by(section: @section, student_user: @user)
 
-    if current_user && current_user.display_captcha? && !verify_recaptcha
+    if current_user&.display_captcha? && !verify_recaptcha
       flash[:alert] = I18n.t('follower.captcha_required')
       # Concatenate section code so user does not have to type section code again
       # Note that @section will always be defined due to validations in load_section
@@ -46,6 +46,8 @@ class FollowersController < ApplicationController
           # Check for an exiting user, and redirect to course if found
           if is_existing_follower
             redirect_to root_path, notice: I18n.t('follower.already_exists', section_name: @section.name)
+          elsif !@section.can_join_section_as_participant?(@user)
+            redirect_to root_path, alert: I18n.t('follower.error.not_participant_type', section_code: params[:section_code])
           # Check if section is restricted, and redirect with restricted error if true
           elsif @section.restricted?
             redirect_to root_path, alert: I18n.t('follower.error.restricted_section', section_code: params[:section_code])
@@ -90,8 +92,8 @@ class FollowersController < ApplicationController
     @section = Section.find_by_code(params[:section_code].strip)
     # Note that we treat the section as not being found if the section user
     # (i.e., the teacher) does not exist (possibly soft-deleted) or is not a teacher
-    unless @section && @section.user&.teacher?
-      current_user.increment_section_attempts if current_user
+    unless @section&.user&.teacher?
+      current_user&.increment_section_attempts
       redirect_to redirect_url, alert: I18n.t('follower.error.section_not_found', section_code: params[:section_code])
       return
     end

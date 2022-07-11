@@ -6,6 +6,7 @@ FactoryGirl.define do
   factory :course_offering do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
+    assignable true
   end
 
   factory :course_version do
@@ -31,6 +32,9 @@ FactoryGirl.define do
     sequence(:family_name) {|n| "bogus-course-#{n}"}
     version_year "1991"
     published_state "beta"
+    instruction_type "teacher_led"
+    participant_audience "student"
+    instructor_audience "teacher"
   end
 
   factory :experiment do
@@ -317,6 +321,16 @@ FactoryGirl.define do
         end
       end
 
+      trait :migrated_imported_from_clever do
+        clever_sso_provider
+        without_email
+        after(:create) do |user|
+          section = create :section, login_type: Section::LOGIN_TYPE_CLEVER
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
       trait :without_email do
         email ''
         hashed_email nil
@@ -489,8 +503,21 @@ FactoryGirl.define do
     sequence(:name) {|n| "Section #{n}"}
     user {create :teacher}
     login_type 'email'
+    participant_type 'student'
 
     initialize_with {Section.new(attributes)}
+
+    trait :teacher_participants do
+      participant_type 'teacher'
+      login_type 'email'
+      grade 'pl'
+    end
+
+    trait :facilitator_participants do
+      participant_type 'facilitator'
+      login_type 'email'
+      grade 'pl'
+    end
   end
 
   factory :game do
@@ -757,6 +784,12 @@ FactoryGirl.define do
     participant_audience "student"
     instructor_audience "teacher"
 
+    trait :is_course do
+      sequence(:version_year) {|n| "bogus-version-year-#{n}"}
+      sequence(:family_name) {|n| "bogus-family-name-#{n}"}
+      is_course true
+    end
+
     trait :with_lessons do
       transient do
         lessons_count 2
@@ -765,7 +798,7 @@ FactoryGirl.define do
       after(:create) do |script, evaluator|
         lesson_group = create :lesson_group, script: script
         evaluator.lessons_count.times do
-          create :lesson, :with_activity_section, lesson_group: lesson_group
+          create :lesson, :with_activity_section, lesson_group: lesson_group, script: script, has_lesson_plan: true
         end
       end
     end
@@ -790,49 +823,72 @@ FactoryGirl.define do
 
     factory :csf_script do
       after(:create) do |csf_script|
-        csf_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSF
-        csf_script.save
+        csf_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSF
+        csf_script.save!
       end
     end
 
     factory :csd_script do
       after(:create) do |csd_script|
-        csd_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSD
-        csd_script.save
+        csd_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSD
+        csd_script.save!
       end
     end
 
     factory :csp_script do
       after(:create) do |csp_script|
-        csp_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSP
-        csp_script.save
+        csp_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSP
+        csp_script.save!
       end
     end
 
     factory :csa_script do
       after(:create) do |csa_script|
-        csa_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSA
-        csa_script.save
+        csa_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSA
+        csa_script.save!
       end
     end
 
     factory :csc_script do
       after(:create) do |csc_script|
-        csc_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
-        csc_script.save
+        csc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
+        csc_script.save!
       end
     end
 
     factory :hoc_script do
       after(:create) do |hoc_script|
-        hoc_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
-        hoc_script.save
+        hoc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
+        hoc_script.save!
+      end
+    end
+
+    factory :standalone_unit do
+      after(:create) do |standalone_unit|
+        standalone_unit.is_course = true
+        standalone_unit.save!
       end
     end
   end
 
+  factory :project_storage do
+  end
+
+  factory :project do
+    transient do
+      owner create :user
+    end
+
+    updated_ip '127.0.0.1'
+
+    after(:build) do |project, evaluator|
+      project_storage = create :project_storage, user_id: evaluator.owner.id
+      project.storage_id = project_storage.id
+    end
+  end
+
   factory :featured_project do
-    storage_app_id {456}
+    project_id {456}
   end
 
   factory :user_ml_model do
@@ -963,12 +1019,31 @@ FactoryGirl.define do
 
   factory :programming_environment do
     sequence(:name) {|n| "programming-environment-#{n}"}
+    published true
+  end
+
+  factory :programming_environment_category do
+    sequence(:key, 'a') {|n| "programming_environment_category_#{n}"}
+    sequence(:name, 'b') {|n| "programming-environment-category-#{n}"}
+    color '#000000'
   end
 
   factory :programming_expression do
     association :programming_environment
     sequence(:name) {|n| "programming expression #{n}"}
     sequence(:key) {|n| "programming-expression-#{n}"}
+  end
+
+  factory :programming_class do
+    association :programming_environment
+    sequence(:name) {|n| "programming class #{n}"}
+    sequence(:key) {|n| "programming-class-#{n}"}
+  end
+
+  factory :programming_method do
+    association :programming_class
+    sequence(:name) {|n| "programming method #{n}"}
+    sequence(:key) {|n| "programming-method-#{n}"}
   end
 
   factory :callout do
@@ -1058,7 +1133,7 @@ FactoryGirl.define do
 
   factory :user_script do
     user {create :student}
-    script {create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable}
+    script {create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
   end
 
   factory :user_school_info do
@@ -1086,6 +1161,7 @@ FactoryGirl.define do
 
   factory :level_group, class: LevelGroup do
     game {create(:game, app: "level_group")}
+    sequence(:name) {|n| "Level_Group_Level_#{n}"}
     transient do
       title 'title'
       submittable false
@@ -1474,7 +1550,7 @@ FactoryGirl.define do
       country 'United States'
       postal_code '98109'
       latitude 47.620470
-      longitude (-122.349181)
+      longitude(-122.349181)
     end
 
     # Sydney Opera House
@@ -1483,7 +1559,7 @@ FactoryGirl.define do
       state 'New South Wales'
       country 'Australia'
       postal_code '2000'
-      latitude (-33.859100)
+      latitude(-33.859100)
       longitude 151.200200
     end
   end
@@ -1501,11 +1577,29 @@ FactoryGirl.define do
     end
   end
 
+  factory :code_review do
+    user_id 1
+    project_id 1
+    script_id 1
+    level_id 1
+    project_level_id 1
+    project_version "1"
+    storage_id 1
+  end
+
+  factory :code_review_note do
+    association :commenter, factory: :student
+    association :code_review
+
+    is_resolved false
+    comment 'a note about the project'
+  end
+
   factory :code_review_comment do
     association :commenter, factory: :student
     association :project_owner, factory: :student
 
-    storage_app_id 1
+    project_id 1
     comment 'a comment about your project'
   end
 
@@ -1520,10 +1614,16 @@ FactoryGirl.define do
   end
 
   factory :reviewable_project do
-    sequence(:storage_app_id)
+    sequence(:project_id)
     association :user, factory: :student
     association :level
     association :script
+  end
+
+  factory :project_commit do
+    sequence(:project_id)
+    sequence(:object_version_id)
+    comment 'a commit comment'
   end
 
   factory :teacher_score do
@@ -1559,7 +1659,7 @@ FactoryGirl.define do
   end
 
   factory :contact_rollups_pardot_memory do
-    sequence (:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
     sequence(:pardot_id) {|n| n}
     pardot_id_updated_at {Time.now.utc - 1.hour}
     data_synced {{db_Opt_In: 'No'}}

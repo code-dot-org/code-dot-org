@@ -1,5 +1,9 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2021-12-07T19:47:19.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "properties": {
     "video_key": "outbreak_scientist",
     "instructions_important": "false",
@@ -8,13 +12,10 @@
     "skip_sound": true,
     "parent_level_id": 27335,
     "name_suffix": "_2020",
-    "encrypted": "false"
+    "encrypted": "false",
+    "contained_level_names": null
   },
-  "game_id": 54,
   "published": true,
-  "created_at": "2021-12-07T19:47:19.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2021-12-07T19:47:19.845+00:00\",\"changed\":[\"cloned from \\\"courseF_outbreak_events_video\\\"\"],\"cloned_from\":\"courseF_outbreak_events_video\"},{\"changed_at\":\"2021-12-07 19:47:29 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {

@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ka:
   errors:
     messages:
@@ -950,7 +956,7 @@ ka:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "სხვა:"
+        other: "სხვა"
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -959,7 +965,7 @@ ka:
         ozobot: 'Ozobot'
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
-        other: "სხვა:"
+        other: "სხვა"
       workshop_course:
         csf_af: 'CS საფუძვლები (კურსები A-F)'
         csf_express: 'CS საფუძვლები (კითხვამდელი დაჩქარებული ან დაჩქარებული კურსი)'

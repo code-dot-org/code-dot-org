@@ -39,7 +39,7 @@
         {
           "type": "radiogroup",
           "name": "csp_reason_for_selfpaced",
-          "visible": false,
+          "visible": true,
           "title": "My main reason for choosing self-paced professional development, as opposed to facilitator-led professional development, is: ",
           "choices": [
             {

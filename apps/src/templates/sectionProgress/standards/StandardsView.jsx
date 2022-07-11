@@ -7,7 +7,6 @@ import {connect} from 'react-redux';
 import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {scriptDataPropType} from '../sectionProgressConstants';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
-import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import StandardsIntroDialog from './StandardsIntroDialog';
 import StandardsProgressTable from './StandardsProgressTable';
 import StandardsLegend from './StandardsLegend';
@@ -17,14 +16,14 @@ class StandardsView extends Component {
   static propTypes = {
     showStandardsIntroDialog: PropTypes.bool,
     //redux
-    section: sectionDataPropType.isRequired,
+    sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
     scriptData: scriptDataPropType
   };
 
   getLinkToOverview() {
-    const {scriptData, section} = this.props;
-    return scriptData ? `${scriptData.path}?section_id=${section.id}` : null;
+    const {scriptData, sectionId} = this.props;
+    return scriptData ? `${scriptData.path}?section_id=${sectionId}` : null;
   }
 
   render() {
@@ -62,7 +61,7 @@ class StandardsView extends Component {
 export const UnconnectedStandardsView = StandardsView;
 
 export default connect(state => ({
-  section: state.sectionData.section,
+  sectionId: state.teacherSections.selectedSectionId,
   scriptData: getCurrentUnitData(state),
   scriptFriendlyName: getSelectedScriptFriendlyName(state)
 }))(StandardsView);

@@ -63,11 +63,16 @@
     "show_type_hints": "false",
     "remove_items_when_actor_collides": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/bcaf4479ba666f703a66d36583f0cc91=levelbuilder/45308.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-07T18:57:03.244+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events3_2021\\\"\"],\"cloned_from\":\"courseA_playLab_events3_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-07T18:57:03.244+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events3_2021\\\"\"],\"cloned_from\":\"courseA_playLab_events3_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

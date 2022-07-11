@@ -6,6 +6,8 @@ import i18n from '@cdo/locale';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import Button from '../Button';
+import BlueHeader from '@cdo/static/small_blue_icons_fullwidth.png';
+import PurpleHeader from '@cdo/static/small_purple_icons_fullwidth.png';
 
 // While this is named TopCourse, it really refers to the most recent course
 // or script in which the student or teacher has progress.
@@ -16,7 +18,8 @@ class TopCourse extends Component {
     assignableName: PropTypes.string.isRequired,
     lessonName: PropTypes.string.isRequired,
     linkToOverview: PropTypes.string.isRequired,
-    linkToLesson: PropTypes.string.isRequired
+    linkToLesson: PropTypes.string.isRequired,
+    isProfessionalLearningCourse: PropTypes.bool
   };
 
   render() {
@@ -25,14 +28,15 @@ class TopCourse extends Component {
       lessonName,
       linkToOverview,
       linkToLesson,
-      isRtl
+      isRtl,
+      isProfessionalLearningCourse
     } = this.props;
     const localeStyle = isRtl ? styles.ltr : styles.rtl;
 
     return (
       <div style={styles.card}>
         <img
-          src={require('@cdo/static/small_purple_icons_fullwidth.png')}
+          src={isProfessionalLearningCourse ? BlueHeader : PurpleHeader}
           style={styles.image}
           alt=""
         />

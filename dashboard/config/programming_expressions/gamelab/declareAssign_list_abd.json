@@ -1,6 +1,0 @@
-{
-  "key": "declareAssign_list_abd",
-  "name": "declareAssign_list_abd",
-  "category": "Variables",
-  "syntax": "var list = [\"a\", \"b\", \"d\"];"
-}

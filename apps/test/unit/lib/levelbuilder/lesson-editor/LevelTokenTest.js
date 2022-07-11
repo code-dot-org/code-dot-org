@@ -40,6 +40,7 @@ describe('LevelToken', () => {
       activityPosition: 1,
       scriptLevel: _.cloneDeep(defaultScriptLevel),
       dragging: false,
+      allowMajorCurriculumChanges: true,
       delta: 0,
       handleDragStart,
       removeLevel,
@@ -67,6 +68,7 @@ describe('LevelTokenContents', () => {
       activitySectionPosition: 2,
       activityPosition: 3,
       scriptLevel: defaultScriptLevel,
+      allowMajorCurriculumChanges: true,
       handleDragStart,
       removeLevel,
       toggleExpand
@@ -89,6 +91,28 @@ describe('LevelTokenContents', () => {
       .to.be.false;
     expect(wrapper.containsMatchingElement(<span>challenge</span>)).to.be.false;
     expect(wrapper.containsMatchingElement(<span>variants</span>)).to.be.false;
+  });
+
+  it('hides movement and deletion buttons when not allowed to make major curriculum changes', () => {
+    const wrapper = shallow(
+      <LevelTokenContents
+        {...defaultProps}
+        allowMajorCurriculumChanges={false}
+      />
+    );
+    expect(wrapper.find('.fa-arrows-v').length).to.equal(0);
+    expect(wrapper.find('.fa-times').length).to.equal(0);
+  });
+
+  it('show movement and deletion buttons when allowed to make major curriculum changes', () => {
+    const wrapper = shallow(
+      <LevelTokenContents
+        {...defaultProps}
+        allowMajorCurriculumChanges={true}
+      />
+    );
+    expect(wrapper.find('.fa-arrows-v').length).to.equal(1);
+    expect(wrapper.find('.fa-times').length).to.equal(1);
   });
 
   it('shows assessment indicator when assessment', () => {

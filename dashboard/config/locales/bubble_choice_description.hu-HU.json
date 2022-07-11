@@ -9,17 +9,20 @@
         "courseF_extras_sim": "Készítsd el és szerkeszd a saját szimulációdat!",
         "spritelab_extras_repeat": "Készíts sok ugyanolyan karaktert egy hurok haszálatával!",
         "CourseF_outbreak6": "A vírusok nem mindig fertőznek, és a maszkokkal sem lehet megakadályozni teljesen a terjedést. Tökéletesítsd a szimulációdat azzal, hogy a fertőzések véletlenszerűen történnek.",
-        "CourseF_outbreak7": "Védd meg a manóidat a betegségektől azzal, tedd őket védetté.",
-        "helloworld_animals_costumes": "Tanuld meg, hogyan lehet a manók megjelenését megváltoztatni.",
+        "CourseF_outbreak7": "Védd meg a sprite-jaidat a betegségektől azzal, tedd őket védetté.",
+        "helloworld_animals_costumes": "Tanuld meg, hogyan lehet a sprite-ok megjelenését megváltoztatni.",
         "helloworld_animals_sounds": "Tanuld meg, hogany kell hangot lejátszani.",
-        "helloworld_emoji_costumes": "Tanuld meg, hogyan lehet a manók megjelenését megváltoztatni.",
+        "helloworld_emoji_costumes": "Tanuld meg, hogyan lehet a sprite-ok megjelenését megváltoztatni.",
         "helloworld_emoji_sounds": "Tanuld meg, hogany kell hangot lejátszani.",
-        "helloworld_food_costumes": "Tanuld meg, hogyan lehet a manók megjelenését megváltoztatni.",
+        "helloworld_food_costumes": "Tanuld meg, hogyan lehet a sprite-ok megjelenését megváltoztatni.",
         "helloworld_food_sounds": "Tanuld meg, hogany kell hangot lejátszani.",
-        "helloworld_retro_costumes": "Tanuld meg, hogyan lehet a manók megjelenését megváltoztatni.",
-        "helloworld_retro_location": "Vedd rá a manót, hogy egy bizonyos idő elteltével új viselkedésbe kezdjen.",
+        "helloworld_retro_costumes": "Tanuld meg, hogyan lehet a sprite-ok megjelenését megváltoztatni.",
         "helloworld_retro_sounds": "Tanuld meg, hogany kell hangot lejátszani.",
-        "international_outbreak_freeplay": "Folytasd a már látott blokkokkal!"
+        "international_outbreak_freeplay": "Folytasd a már látott blokkokkal!",
+        "CourseF_outbreak5": "Segíts a sprite-jaidnak, hogy idővel automatikusan jobban érezzék magukat!",
+        "CourseF_outbreak8": "Használd a projektedet a mondanivalód megosztására. Mit szeretnél, mit tanuljanak mások ebből?",
+        "courseF_sprites_moreSprites": "Gyakorold a sprite elkészítését és elhelyezését!",
+        "courseF_sprites_positioning": "Gyakorold a sprite elkészítését és elhelyezését!"
       }
     }
   }

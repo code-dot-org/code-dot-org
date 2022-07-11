@@ -288,7 +288,8 @@ module ScriptConstants
     VIGENERE = 'vigenere'.freeze,
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
     K5_ONLINEPD = 'K5-OnlinePD'.freeze,
-    KODEA_PD_2021 = 'kodea-pd-2021'.freeze
+    KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
+    ALLTHETHINGS = 'allthethings'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
@@ -342,64 +343,9 @@ module ScriptConstants
     return CATEGORIES[category].include? script
   end
 
-  def self.categories(script)
-    CATEGORIES.select {|_, scripts| scripts.include? script}.
-        map {|category, _| category.to_s}
-  end
-
-  def self.position_in_category(script, category)
-    CATEGORIES[category.to_sym] ? CATEGORIES[category.to_sym].find_index(script) : nil
-  end
-
-  def self.category_priority(category)
-    if category == OTHER_CATEGORY_NAME
-      CATEGORIES.keys.length # 'other' goes at the end
-    else
-      CATEGORIES.keys.find_index(category.to_sym)
-    end
-  end
-
-  def self.teacher_dashboard_name(script)
-    if script == MINECRAFT_NAME
-      MINECRAFT_TEACHER_DASHBOARD_NAME
-    elsif script == MINECRAFT_DESIGNER_NAME
-      MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME
-    elsif script == HOC_NAME
-      HOC_TEACHER_DASHBOARD_NAME
-    else
-      script
-    end
-  end
-
-  # Sections can be assigned to both courses and scripts. We want to make sure
-  # we give teacher dashboard the same information for both sets of assignables.
-  # We also expect to be in a mixed world for a time where this info is asked for
-  # both by dashboard and pegasus, and we want to keep that in sync. We accomplish
-  # most of that through this shared method, leaving it to dashboard/pegasus
-  # to take care of translating name/cateogry (with the unfortunate effect that
-  # we could have two different translations).
-  # @param course_or_script [Course|Script] A row object from either our courses
-  #   or scripts dashboard db tables.
-  # @param hidden [Boolean] True if the passed in item is hidden
-  # @return {AssignableInfo} without strings translated
-  def self.assignable_info(course_or_script)
-    name = ScriptConstants.teacher_dashboard_name(course_or_script[:name])
-    first_category = ScriptConstants.categories(course_or_script[:name])[0] ||
-        OTHER_CATEGORY_NAME
-    {
-      id: course_or_script[:id],
-      name: name,
-      # Would better be called something like assignable_name
-      script_name: course_or_script[:name],
-      category: first_category,
-      position: ScriptConstants.position_in_category(course_or_script[:name], first_category),
-      category_priority: ScriptConstants.category_priority(first_category),
-    }
-  end
-
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
 
-  def self.has_congrats_page?(script)
+  def self.has_csf_congrats_page?(script)
     script == ACCELERATED_NAME ||
       ScriptConstants.unit_in_category?(:csf_international, script) ||
       CSF_COURSE_PATTERNS.map {|r| r =~ script}.any?
@@ -412,7 +358,7 @@ module ScriptConstants
       "course2" => "course3",
       "course3" => "course4",
       "accelerated" => "course4",
-      "course4" => "applab"
+      "course4" => "applab-intro"
     }
 
     return static_mapping[course_name] if static_mapping.include?(course_name)
@@ -428,7 +374,7 @@ module ScriptConstants
       prefix = match_data[1]
       year = match_data[2]
 
-      return "applab" if %w(coursef express).include?(prefix)
+      return "applab-intro" if %w(coursef express).include?(prefix)
 
       prefix_mapping = {
         "coursea" => "courseb",
@@ -455,6 +401,7 @@ module ScriptConstants
       ScriptConstants.unit_in_category?(:csd, script) ||
       ScriptConstants.unit_in_category?(:csd_2018, script) ||
       ScriptConstants.unit_in_category?(:csd_2019, script) ||
+      ScriptConstants.unit_in_category?(:csd_2021, script) ||
       ScriptConstants.unit_in_category?(:twenty_hour, script) ||
       ScriptConstants.unit_in_category?(:hoc, script) ||
       JIGSAW_NAME == script ||

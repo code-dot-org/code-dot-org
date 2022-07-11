@@ -2,11 +2,6 @@
 he:
   data:
     script:
-      category:
-        csf_category_name: יסודות מדעי המחשב
-        hoc_category_name: שעת הקוד
-        math_category_name: מתמטיקה
-        other_category_name: אחר
       name:
         course1:
           title: מסלול 1
@@ -477,7 +472,6 @@ he:
               name: סטודיו
             Web Lab:
               name: מעבדת האתרים
-            lesson-47: {}
         algebraPD2b:
           lessons:
             Defining Variables:
@@ -956,7 +950,8 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
-        basketball: {}
+        basketball:
+          name: כדורסל
         hoc-encryption: {}
         csd2-2017:
           lesson_groups:
@@ -967,16 +962,8 @@ he:
             csd_survey:
               display_name: סקר שלאחר הקורס
           lessons:
-            Intro to HTML:
-              description_teacher: בשיעור זה תלמידים ילמדו לראשונה HTML כשיטה שתסביר למחשב איך להציג תוכן ומבנה של אתר. השיעור מתחיל עם פעילות ללא מחשב המדגימה את האתגרים בהגדרת מבנה של אתר אינטרנט. התלמידים יסתכלו במבנה דף HTML לדוגמה במעבדת האינטרנט וידונו עם חבריהם לכיתה איך תגיות HTML עוזרות לפתור את הבעיה. לאחר מכן, התלמידים יכתבו את דף ה-HTML הראשון שלהם. לבסוף, יהיה דיון מסכם אשר יעזור לחזק את ההבנה שלהם ביחס שבין התוכן למבנה כפי שנבנה במהלך השיעור.
-            Headers:
-              description_student: שיעור זה ממשיך את ההיכרות עם תגיות HTML, הפעם עם כותרות. הכיתה מתרגלת שימוש בתגיות מסוג כותרת כדי לייצר כותרות דף ומקטעים ולומדים כיצד הכותרות מוצגות כברירת מחדל. לאחר מכן, הכיתה תתכנן כיצד לארגן את התוכן בדפי האינטרנט הפרטיים שלהם אשר יבנו לאורך כל יחידת הלימוד ויתחילו את הדף הראשון בפרויקט שלהם.
-              description_teacher: בשיעור זה, תלמידים ממשיכים להשתמש ב-HTML כדי לשבץ טקסט באתר שלהם, הפעם בעזרת כותרות. התלמידים לומדים איך הכותרות השונות מופיעים כברירת מחדל ומתרגלים שימוש בהם כדי לייצר כותרות דף וכותרות מקטעים. לאחר מכן, התלמידים מתחילים להחליט כיצד הם רוצים לארגן את התוכן שלהם בדפי האינטרנט הפרטיים שלהם. בשלב האחרון, התלמידים יתחילו את הפרויקט שעליו ימשיכו לעבוד לאורך כל יחידת הלימוד.
             Lists:
               name: רשימות
-            Headings:
-              description_student: שיעור זה ממשיך את ההיכרות עם תגיות HTML, הפעם עם כותרות. הכיתה מתרגלת שימוש בתגיות מסוג כותרת כדי לייצר כותרות דף ומקטעים ולומדים כיצד הכותרות מוצגות כברירת מחדל. לאחר מכן, הכיתה תתכנן כיצד לארגן את התוכן בדפי האינטרנט הפרטיים שלהם אשר יבנו לאורך כל יחידת הלימוד ויתחילו את הדף הראשון בפרויקט שלהם.
-              description_teacher: בשיעור זה, תלמידים ממשיכים להשתמש ב-HTML כדי לשבץ טקסט באתר שלהם, הפעם בעזרת כותרות. התלמידים לומדים איך הכותרות השונות מופיעים כברירת מחדל ומתרגלים שימוש בהם כדי לייצר כותרות דף וכותרות מקטעים. לאחר מכן, התלמידים מתחילים להחליט כיצד הם רוצים לארגן את התוכן שלהם בדפי האינטרנט הפרטיים שלהם. בשלב האחרון, התלמידים יתחילו את הפרויקט שעליו ימשיכו לעבוד לאורך כל יחידת הלימוד.
         csp2-support:
           lesson_groups:
             required:
@@ -1041,10 +1028,11 @@ he:
               name: מבוא
         coursee-draft:
           lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             extra_course_content:
               display_name: תוכן נוסף של הקורס
           lessons:
-            Functions in Farmer: {}
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
             Internet:
@@ -1054,6 +1042,9 @@ he:
             Conditionals:
               name: תנאים
         coursef-draft:
+          lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Variables in Play Lab:
               name: משתנים במעבדת הצעצועים
@@ -1079,7 +1070,8 @@ he:
           lessons:
             Hour of Code 2013:
               name: שעת קוד 2013
-        sports: {}
+        sports:
+          name: ספורט
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -1120,6 +1112,9 @@ he:
             Wrap-Up:
               name: אריזה
         csf2harvey:
+          lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Binary:
               name: בינארי
@@ -1201,7 +1196,6 @@ he:
               name: רשימות
             For Loops:
               name: בשביל לולאות
-              description_student: הכיתה לומדת על חזרה על הוראות בעזרת _לולאת עבור_, בתחילה על-ידי שליטה ברובוט בעזרת רשת ואז במעבדת האפליקציות.
             Arrays and For Loops:
               name: מערכים ולולאות עבור
             Functions with Parameters:
@@ -1275,22 +1269,10 @@ he:
               name: להקפיץ
         coursea-2017:
           lessons:
-            'Debugging: Unspotted Bugs': {}
-            'Persistence & Frustration: Stevie and the Marbles': {}
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
-            Learn to Drag and Drop: {}
-            'Programming: Happy Maps': {}
             Programming in Maze:
               name: תכנות במבוך
-            Going Places Safely: {}
-            'Loops: Happy Loops': {}
-            Loops in Collector: {}
-            Loops in Artist:
-              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
-            'Events: The Big Event': {}
-            Events in Play Lab:
-              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
         courseb-2017:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -1317,15 +1299,12 @@ he:
           lessons:
             Introduction:
               name: היכרות עם חידות מבוכים
-              description_teacher: 'בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או חזרה על החומר, תלוי בניסיון הכיתה שלך) עם סביבת הפיתוח של Code.org. יהיו סרטונים המציגים את הפונקציונלית הבסיסית של סביבת העבודה כולל הכפתורים "הרץ", "אפס", ו-"צעד". עוד יעלה בסרטונים: גרירת הבלוקים, מחיקת בלוקים וחיבור בלוקים. לאחר מכן, תלמידים יתרגלו את כישוריהם ב _רצפים_ ו _איתור באגים_ במבוך. משם, תלמידים יראו דוגמאות חדשות של חידות כמו האוסף, האמן והקוצר כאשר הם ילמדו את השלב הבסיסי של _לולאות_.'
             Conditionals & Loops in Maze:
               name: התניות & לולאות במבוך
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
-              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור משחק במעבדת הצעצועים!
             'Unplugged: Binary':
               name: 'מעבר לתכנות: תמונות בינאריות'
-              description_teacher: אומנם רוב האנשים חושבים שהמשמעות של בינארי זה רק אפסים ואחדות, התלמידים ילמדו על הרעיון שמידע יכול להיות מיוצג בעזרת מספר דרכים. השיעור הזה לוקח את הרעיון צעד נוסף קדימה על-ידי הדמיה כיצד המחשב שומר מידע מורכב יותר (כמו תמונות וצבעים) גם בצורה בינארית.
             Artist Binary:
               name: אומן בינארי
         coursee-2017:
@@ -1334,12 +1313,13 @@ he:
               display_name: המשך אל קורס ה (רשות)
             csf_e_2:
               display_name: תכני קורס ה
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             extra_course_content:
               display_name: תוכן נוסף של הקורס
           lessons:
             Introduction:
               name: היכרות עם חידות מבוכים
-              description_teacher: בשלב זה, תלמידים יחלו עם היכרות (או סקירה, תלוי ברמת הידע של כיתתך) לסביבת העבודה המקוונת של Code.org. התלמידים ילמדו את הפונקציונליות הבסיסית של הסביבה האינטראקטיבית כולל כפתורי 'הרץ', 'אפס', ו- 'צעד'. היכרות עם גרירה, מחיקה וחיבור של בלוקי Blockly גם נכללים בהתחלת הסרטון. בתוך החידות, תלמידים יתרגלו את השליטה שלהם ברצפים וניפוי שגיאות בתוך המבוך ובעזרת האמן.
             Ice Age Play Lab:
               name: עידן הקרח Play Lab
             Variables in Play Lab:
@@ -1352,13 +1332,8 @@ he:
               name: לולאות עבור עם האומן
             Songwriting with Parameters:
               name: כתיבת שירים
-            Conditionals:
-              description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
-            Functions in Farmer:
-              description_teacher: תלמידים תרגלו יצירת עיצובים מרשימים עם האמן וניווטו במבוך עם הדבורה, אבל היום הם ישתמשו בפונקציות לקצור את השדה עם החוואי. השיעור הזה יקדם את השימוש בפונקציות בדרך חדשה ע"י חיבור שלהם יחד עם לולאות "כל עוד" והתניות "אם/אחרת".
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
-              description_teacher: שיעור זה כולל שימוש במעבדת הצעצועים, פלטפורמה עבור תלמידים בה הם יכולים ליצור משחקים כראות עיניהם וליצור אינטראקציה בין הדמויות ולקבל קלט מהמשתמש. התלמידים יעבדו עם אירועים שנוצרו מהקשה במקלדת. קבוצת החידות הללו ידריכו את התלמידים בתהליך בניית המשחק אבל גם ישאירו להם חופש להוסיף רעיונות משל עצמם.
             Sequence in Maze:
               name: רצף במבוך
             Debugging with Scrat:
@@ -1369,6 +1344,8 @@ he:
               display_name: המשך אל קורס ו (רשות)
             csf_f_2:
               display_name: תכני קורס ו
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Introduction:
               name: היכרות עם חידות מבוכים
@@ -1378,8 +1355,6 @@ he:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האומן
-            Functions with Parameters in Bee:
-              description_teacher: שיעור זה משתמש בסביבת הדבורה, וממשיך בלימוד הרעיון של שימוש בפונקציות עם פרמטרים אשר נלמד בשלב האמן הקודם. התלמידים יתרגלו כתיבה ושימוש בפונקציות כדי ללכת בנתיבים מורכבים ובאיסוף תבניות של צוף ודבש.
             Sequence in Maze:
               name: רצף במבוך
             Debugging with Scrat:
@@ -1437,6 +1412,9 @@ he:
             required:
               display_name: סקירה
         express-2017:
+          lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Introduction:
               name: מבוא
@@ -1496,6 +1474,8 @@ he:
               display_name: המשך אל קורס ה (רשות)
             csf_e_2:
               display_name: תכני קורס ה
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             extra_course_content:
               display_name: תוכן נוסף של הקורס
           lessons:
@@ -1531,6 +1511,9 @@ he:
             csp3_1:
               display_name: 'פרק 1: שפות תכנות ואלגוריתמים'
         new-express:
+          lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Introduction:
               name: מבוא
@@ -1551,6 +1534,8 @@ he:
               display_name: המשך אל קורס ה (רשות)
             csf_e_2:
               display_name: תכני קורס ה
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             extra_course_content:
               display_name: תוכן נוסף של הקורס
           lessons:
@@ -1570,6 +1555,8 @@ he:
               display_name: המשך אל קורס ו (רשות)
             csf_f_2:
               display_name: תכני קורס ו
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Sequence in Maze:
               name: רצף במבוך
@@ -1649,6 +1636,8 @@ he:
               display_name: המשך אל קורס ה (רשות)
             csf_e_2:
               display_name: תכני קורס ה
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             extra_course_content:
               display_name: תוכן נוסף של הקורס
           lessons:
@@ -1656,7 +1645,6 @@ he:
               name: רצף במבוך
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
-            Loops in Artist: {}
             Introduction:
               name: מבוא
             Conditionals:
@@ -1671,6 +1659,8 @@ he:
               display_name: המשך אל קורס ו (רשות)
             csf_f_2:
               display_name: תכני קורס ו
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Sequence in Maze:
               name: רצף במבוך
@@ -1731,7 +1721,6 @@ he:
             cspSurvey:
               display_name: סקר
           lessons:
-            Shapes and Randomization: {}
             Variables:
               name: משתנים
             Sprites:
@@ -1740,7 +1729,6 @@ he:
               name: תנאים
             Functions:
               name: פונקציות
-            CS Discoveries End of Semester Survey: {}
         csd2-2018:
           lesson_groups:
             csd2_1:
@@ -1750,31 +1738,14 @@ he:
             cspSurvey:
               display_name: סקר
           lessons:
-            Intro to HTML:
-              description_teacher: בשיעור זה תלמידים ילמדו לראשונה HTML כשיטה שתסביר למחשב איך להציג תוכן ומבנה של אתר. השיעור מתחיל עם פעילות ללא מחשב המדגימה את האתגרים בהגדרת מבנה של אתר אינטרנט. התלמידים יסתכלו במבנה דף HTML לדוגמה במעבדת האינטרנט וידונו עם חבריהם לכיתה איך תגיות HTML עוזרות לפתור את הבעיה. לאחר מכן, התלמידים יכתבו את דף ה-HTML הראשון שלהם. לבסוף, יהיה דיון מסכם אשר יעזור לחזק את ההבנה שלהם ביחס שבין התוכן למבנה כפי שנבנה במהלך השיעור.
-            Headings:
-              description_student: שיעור זה ממשיך את ההיכרות עם תגיות HTML, הפעם עם כותרות. הכיתה מתרגלת שימוש בתגיות מסוג כותרת כדי לייצר כותרות דף ומקטעים ולומדים כיצד הכותרות מוצגות כברירת מחדל. לאחר מכן, הכיתה תתכנן כיצד לארגן את התוכן בדפי האינטרנט הפרטיים שלהם אשר יבנו לאורך כל יחידת הלימוד ויתחילו את הדף הראשון בפרויקט שלהם.
-              description_teacher: בשיעור זה, תלמידים ממשיכים להשתמש ב-HTML כדי לשבץ טקסט באתר שלהם, הפעם בעזרת כותרות. התלמידים לומדים איך הכותרות השונות מופיעים כברירת מחדל ומתרגלים שימוש בהם כדי לייצר כותרות דף וכותרות מקטעים. לאחר מכן, התלמידים מתחילים להחליט כיצד הם רוצים לארגן את התוכן שלהם בדפי האינטרנט הפרטיים שלהם. בשלב האחרון, התלמידים יתחילו את הפרויקט שעליו ימשיכו לעבוד לאורך כל יחידת הלימוד.
             Lists:
               name: רשימות
         coursea-2018:
           lessons:
-            'Debugging: Unspotted Bugs': {}
-            'Persistence & Frustration: Stevie and the Marbles': {}
-            'Real-life Algorithms: Plant a Seed': {}
-            Learn to Drag and Drop: {}
             'Programming: Happy Maps':
               name: מפות שמחות
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
-            Going Places Safely: {}
-            'Loops: Happy Loops': {}
-            Loops in Collector: {}
-            Loops in Artist:
-              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
-            'Events: The Big Event': {}
-            Events in Play Lab:
-              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
             Sequencing in Maze:
               name: יצירת רצפים עם ציפורים כועסות
         express-2018:
@@ -1783,42 +1754,12 @@ he:
               name: תכנות לנייר משבצות
             Introduction:
               name: מבוא
-            Building a Foundation: {}
-            Debugging in Collector: {}
-            'Loops: My Loopy Robotic Friends': {}
-            Loops in Artist: {}
-            Nested Loops: {}
-            Nested Loops Project in Frozen: {}
-            'How it Works: The Internet': {}
-            'Common Sense Education: Digital Citizenship': {}
-            'Common Sense Education: Screen Out the Mean': {}
             'Events: The Big Event':
               name: האירוע הגדול
-            Events in Star Wars: {}
-            Events with Flappy: {}
-            Events in Bounce: {}
-            'Conditionals: Conditionals with Cards': {}
-            While Loops in Farmer: {}
             Conditional Loops in Maze:
               name: לולאות עם התניות במבוך
-            Conditionals in Minecraft: {}
-            Conditionals & Loops in Farmer: {}
-            'Variables: Envelope Variables': {}
-            Variables in Artist: {}
             Variables in Play Lab:
               name: משתנים במעבדת הצעצועים
-            'For Loops: For Loop Fun': {}
-            For Loops in Bee: {}
-            For Loops in Artist: {}
-            'Functions: Songwriting with Parameters': {}
-            Functions in Bee: {}
-            Functions with Parameters in Artist: {}
-            Functions with Parameters in Bee: {}
-            Explore Project Ideas: {}
-            The Design Process: {}
-            Build Your Project: {}
-            Revise Your Project: {}
-            Present Your Project: {}
             Until Loops in Maze:
               name: לולאות "עד" במבוך
             Debugging in Maze:
@@ -1843,21 +1784,10 @@ he:
               name: תכנות לנייר משבצות
         courseb-2018:
           lessons:
-            'Debugging: Unspotted Bugs': {}
-            'Persistence & Frustration: Stevie and the Marbles': {}
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
-            Learn to Drag and Drop: {}
-            Your Digital Footprint: {}
-            'Programming: My Robotic Friends': {}
             Programming in Maze:
               name: תכנות במבוך
-            Programming with Rey and BB-8: {}
-            'Loops: My Loopy Robotic Friends': {}
-            Loops in Collector: {}
-            Loops in Artist: {}
-            'Events: The Big Event': {}
-            Events in Play Lab: {}
             Loops in Ice Age:
               name: לולאות עם סקראט
             Move It, Move It:
@@ -1871,26 +1801,16 @@ he:
               name: תכנות לנייר משבצות
             Introduction:
               name: מבוא
-            Building a Foundation: {}
             Debugging in Collector:
               name: ניפוי שגיאות עם לורל
-            Events in Bounce: {}
-            Loops in Artist: {}
             Nested Loops in Bee:
               name: לולאות מקוננות במבוך
-            Nested Loops in Artist: {}
-            While Loops in Farmer: {}
             Conditionals with Cards:
               name: התניות עם כרטיסים
-            Conditionals in Bee: {}
             Conditionals & Loops in Maze:
               name: התניות & לולאות במבוך
-            Conditionals & Loops in Farmer: {}
-            Digital Citizenship: {}
-            Build a Play Lab Game: {}
             'Unplugged: Binary':
               name: תמונות בינאריות
-            Artist Binary: {}
             Loops in Ice Age:
               name: לולאות בעידן הקרח
             Until Loops in Maze:
@@ -1911,25 +1831,16 @@ he:
         csp-exam: {}
         coursec-2018:
           lessons:
-            Building a Foundation: {}
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
               name: איתור באגים במבוך
             'Real-life Algorithms: Paper Planes':
               name: מטוסי נייר
-            Programming in Collector: {}
-            Programming in Artist: {}
             'Loops: Getting Loopy':
               name: עוברים ללולאות
-            Loops with Rey and BB-8: {}
-            Loops in Artist: {}
-            Loops in Harvester: {}
             'Events: The Big Event':
               name: האירוע הגדול
-            Build a Flappy Game: {}
-            Events in Play Lab: {}
-            Screen Out the Mean: {}
             Binary Bracelets:
               name: צמידים בינארים
         csd6-2018:
@@ -1941,24 +1852,10 @@ he:
             cspSurvey:
               display_name: סקר
           lessons:
-            Innovations in Computing_: {}
-            Designing Screens with Code_: {}
-            The Circuit Playground_: {}
-            Input Unplugged_: {}
-            Board Events_: {}
-            Getting Properties_: {}
-            Analog Input_: {}
-            The Program Design Process_: {}
-            'Project: Make a Game__': {}
-            Arrays and Color LEDs__: {}
-            Making Music_: {}
             Arrays and For Loops_:
               name: מערכים ולולאות עבור\_
-            Accelerometer_: {}
             Functions with Parameters_:
               name: פונקציות ופרמטרים\_
-            Circuits and Physical Prototypes_: {}
-            'Project: Prototype an Innovation_': {}
             Arrays and For Loops:
               name: מערכים ולולאות עבור
             Functions with Parameters:
@@ -1969,6 +1866,8 @@ he:
               display_name: המשך אל קורס ה (רשות)
             csf_e_2:
               display_name: תכני קורס ה
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             extra_course_content:
               display_name: תוכן נוסף של הקורס
           lessons:
@@ -1976,26 +1875,16 @@ he:
               name: חברי הרובוטיים
             Sequence in Maze:
               name: קידוד עם הערות
-            Building a Foundation: {}
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
-            Programming in Artist: {}
-            'Loops: My Loopy Robotic Friends': {}
-            Loops in Artist: {}
             Nested Loops:
               name: לולאות מקוננות במבוך
-            Nested Loops with Frozen: {}
             Introduction:
               name: מבוא
-              description_teacher: בשלב זה, תלמידים יחלו עם היכרות (או סקירה, תלוי ברמת הידע של כיתתך) לסביבת העבודה המקוונת של Code.org. התלמידים ילמדו את הפונקציונליות הבסיסית של הסביבה האינטראקטיבית כולל כפתורי 'הרץ', 'אפס', ו- 'צעד'. היכרות עם גרירה, מחיקה וחיבור של בלוקי Blockly גם נכללים בהתחלת הסרטון. בתוך החידות, תלמידים יתרגלו את השליטה שלהם ברצפים וניפוי שגיאות בתוך המבוך ובעזרת האמן.
-            Conditionals:
-              description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
             'Functions: Songwriting':
               name: כתיבת שירים
-            Functions in Harvester: {}
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
-              description_teacher: שיעור זה כולל שימוש במעבדת הצעצועים, פלטפורמה עבור תלמידים בה הם יכולים ליצור משחקים כראות עיניהם וליצור אינטראקציה בין הדמויות ולקבל קלט מהמשתמש. התלמידים יעבדו עם אירועים שנוצרו מהקשה במקלדת. קבוצת החידות הללו ידריכו את התלמידים בתהליך בניית המשחק אבל גם ישאירו להם חופש להוסיף רעיונות משל עצמם.
             Internet:
               name: האינטרנט
             Conditionals with Cards:
@@ -2008,20 +1897,17 @@ he:
               display_name: המשך אל קורס ו (רשות)
             csf_f_2:
               display_name: תכני קורס ו
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             'Programming: My Robotic Friends':
               name: חברי הרובוטיים
             Sequence in Maze:
               name: קידוד עם הערות
-            Building a Foundation: {}
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
-            Programming in Artist: {}
-            'Loops: My Loopy Robotic Friends': {}
-            Loops in Artist: {}
             Nested Loops in Bee/Zombie:
               name: לולאות מקוננות במבוך
-            Nested Loops with Frozen: {}
             Introduction:
               name: מבוא
             Ice Age Play Lab:
@@ -2032,9 +1918,6 @@ he:
               name: כיף עם לולאת "עבור"
             Songwriting with Parameters:
               name: כתיבת שירים
-            Functions in Bee: {}
-            Functions with Parameters in Bee:
-              description_teacher: שיעור זה משתמש בסביבת הדבורה, וממשיך בלימוד הרעיון של שימוש בפונקציות עם פרמטרים אשר נלמד בשלב האמן הקודם. התלמידים יתרגלו כתיבה ושימוש בפונקציות כדי ללכת בנתיבים מורכבים ובאיסוף תבניות של צוף ודבש.
             Conditionals with Cards:
               name: התניות עם כרטיסים
         csp1-2018:
@@ -2046,26 +1929,12 @@ he:
             csp1_2:
               display_name: 'פרק 2: המצאת האינטרנט'
           lessons:
-            CS Principles Pre-survey: {}
-            Personal Innovations: {}
             Sending Binary Messages:
               name: שליחת הודעות בינאריות
             Sending Binary Messages with the Internet Simulator:
               name: שליחת הודעות בינאריות עם סימולטור האינטרנט
-            Number Systems: {}
-            Binary Numbers: {}
-            Sending Numbers: {}
-            Encoding and Sending Formatted Text: {}
-            Unit 1 Chapter 1 Assessment: {}
             The Internet:
               name: האינטרנט
-            The Need for Addressing: {}
-            Routers and Redundancy: {}
-            Packets and Making a Reliable Internet: {}
-            The Need for DNS: {}
-            HTTP and Abstraction: {}
-            Practice PT - The Internet and Society: {}
-            Unit 1 Chapter 2 Assessment: {}
         csd1-2018:
           lesson_groups:
             cspSurvey:
@@ -2074,8 +1943,6 @@ he:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
             csd1_2:
               display_name: 'פרק 2: מחשבים ופתרון בעיות'
-          lessons:
-            CS Discoveries Pre-survey: {}
         csd4-2018:
           lesson_groups:
             csd4_1:
@@ -2099,24 +1966,6 @@ he:
           lesson_groups:
             cspAssessment:
               display_name: הערכה לפרק
-          lessons:
-            Bytes and File Sizes: {}
-            Text Compression: {}
-            Encoding B&W Images: {}
-            Encoding Color Images: {}
-            Lossy Compression and File Formats: {}
-            Practice PT - Encode an Experience: {}
-            Unit 2 Chapter 1 Assessment: {}
-            Intro to Data: {}
-            Finding Trends with Visualizations: {}
-            Check Your Assumptions: {}
-            Good and Bad Data Visualizations: {}
-            Making Data Visualizations: {}
-            Discover a Data Story: {}
-            Cleaning Data: {}
-            Creating Summary Tables: {}
-            Practice PT - Tell a Data Story: {}
-            Unit 2 Chapter 2 Assessment: {}
         csp3-2018:
           lesson_groups:
             csp3_1_2018:
@@ -2125,99 +1974,33 @@ he:
               display_name: הערכה לפרק
             cspSurvey:
               display_name: סקר
-          lessons:
-            The Need For Programming Languages: {}
-            The Need for Algorithms: {}
-            Creativity in Algorithms: {}
-            Using Simple Commands: {}
-            Creating Functions: {}
-            Functions and Top-Down Design: {}
-            APIs and Function Parameters: {}
-            Creating functions with Parameters: {}
-            Looping and Random Numbers: {}
-            Practice PT - Design a Digital Scene: {}
-            Unit 3 Chapter 1 Assessment: {}
-            Please complete the CSP Mid-course survey!: {}
         csp-explore-2018:
           lesson_groups:
             cspSurvey:
               display_name: סקר
-          lessons:
-            Explore PT Prep - Reviewing the Task: {}
-            Explore PT - Making a Plan: {}
-            Explore PT - Complete the Task: {}
         csp-create-2018:
           lesson_groups:
             cspSurvey:
               display_name: סקר
-          lessons:
-            Create PT Prep - Reviewing the Task: {}
-            Create PT Prep - Making a Plan: {}
-            Create PT - Complete the Task: {}
         csp4-2018:
           lesson_groups:
             cspAssessment:
               display_name: הערכה לפרק
             cspSurvey:
               display_name: סקר
-          lessons:
-            What is Big Data?: {}
-            Rapid Research - Data Innovations: {}
-            Identifying People with Data: {}
-            The Cost of Free: {}
-            Simple Encryption: {}
-            Encryption with Keys and Passwords: {}
-            Public Key Crypto: {}
-            Rapid Research - Cybercrime: {}
-            Practice PT - Big Data and Security Dilemmas: {}
-            Unit 4 Chapter 1 Assessment: {}
-            Participate in a longitudinal study!: {}
         csp5-2018:
           lesson_groups:
             cspSurvey:
               display_name: סקר
           lessons:
-            Buttons and Events: {}
-            Multi-screen Apps: {}
-            'Building an App: Multi-Screen App': {}
-            Controlling Memory with Variables: {}
-            'Building an App: Clicker Game': {}
-            Unit 5 Assessment 1: {}
-            User Input and Strings: {}
-            '"If" Statements Unplugged': {}
-            Boolean Expressions and "If" Statements: {}
-            '"if-else-if" and Conditional Logic': {}
-            'Building an App: Color Sleuth': {}
-            Unit 5 Assessment 2: {}
             While Loops:
               name: לולאות "כל עוד"
-            Loops and Simulations: {}
-            Introduction to Arrays: {}
-            'Building an App: Image Scroller': {}
-            Unit 5 Assessment 3: {}
-            Processing Arrays: {}
-            Functions with Return Values: {}
-            'Building an App: Canvas Painter': {}
-            Unit 5 Assessment 4: {}
-            'Practice PT: Create': {}
-            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: {}
-            Participate in a longitudinal study!: {}
         csppostap-2018:
           lesson_groups:
             csp_postap_2:
               display_name: 'פרק 2: אפליקציות ומסדי נתונים'
             cspSurvey:
               display_name: סקר
-          lessons:
-            Creating Javascript Objects: {}
-            Permanent Data Storage: {}
-            Reading Records: {}
-            Deleting Records: {}
-            Updating Records: {}
-            Importing and Exporting Data: {}
-            Visualizing Data: {}
-            Sample Apps: {}
-            Final Project: {}
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -2292,21 +2075,10 @@ he:
               display_name: סקירה
         pre-express-2018:
           lessons:
-            'Debugging: Unspotted Bugs': {}
-            'Persistence & Frustration: Stevie and the Marbles': {}
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
-            Learn to Drag and Drop: {}
-            'Online Safety: Your Digital Footprint': {}
-            'Programming: My Robotic Friends': {}
             Programming in Maze:
               name: תכנות במבוך
-            'Programming: Star Wars': {}
-            'Loops: My Loopy Robotic Friends': {}
-            Loops in Collector: {}
-            Loops in Artist: {}
-            'Events: The Big Event': {}
-            Events in Play Lab: {}
             Spelling Bee:
               name: תחרות איות
             Move It, Move It:
@@ -2320,11 +2092,6 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
-        spritelab-simple:
-          lessons:
-            Fish Tank - Creating Sprites: {}
-            Alien Dance Party - Input: {}
-            Virtual Pet - Interactions: {}
         spritelab-ee: {}
         craft18: {}
         frozen-2018:
@@ -2387,29 +2154,23 @@ he:
               display_name: אינטרנט
             csf_sprites:
               display_name: דמויות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
-            'Programming: My Robotic Friends': {}
             Sequence in Maze:
               name: רצף במבוך
-            Building a Foundation: {}
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
-            Programming in Artist: {}
-            'Loops: My Loopy Robotic Friends': {}
-            Loops in Artist: {}
-            Nested Loops in Bee/Zombie: {}
-            Nested Loops with Frozen: {}
             Conditionals with Cards:
               name: התניות עם כרטיסים
-            Conditionals in Farmer: {}
             For Loop Fun:
               name: כיף עם לולאת "עבור"
-            Alien Dance Party with Sprite Lab: {}
-            Pet Giraffe with Sprite Lab: {}
             The Artist:
               name: האמן
             Nested Loops in the Maze:
               name: לולאות מקוננות במבוך
+            End of Course Project:
+              name: פרויקט סיום קורס
             Internet:
               name: האינטרנט
         dance-low:
@@ -2428,23 +2189,21 @@ he:
               display_name: תנאים
             csf_binary:
               display_name: בינארי
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             'Algorithms: Graph Paper Programming':
               name: תכנות לנייר משבצות
             Introduction to Online Puzzles:
               name: היכרות עם חידות מבוכים
-              description_teacher: 'בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או חזרה על החומר, תלוי בניסיון הכיתה שלך) עם סביבת הפיתוח של Code.org. יהיו סרטונים המציגים את הפונקציונלית הבסיסית של סביבת העבודה כולל הכפתורים "הרץ", "אפס", ו-"צעד". עוד יעלה בסרטונים: גרירת הבלוקים, מחיקת בלוקים וחיבור בלוקים. לאחר מכן, תלמידים יתרגלו את כישוריהם ב _רצפים_ ו _איתור באגים_ במבוך. משם, תלמידים יראו דוגמאות חדשות של חידות כמו האוסף, האמן והקוצר כאשר הם ילמדו את השלב הבסיסי של _לולאות_.'
             Relay Programming:
               name: הרץ פעולה בשנית
-              description_teacher: פעילות זו תחל עם שיעור קצר על איתור באגים ועקביות, אח"כ נעבור בזריזות למירוץ אחר השעון כשהתלמידים יתחלקו לקבוצות ויעבדו יחד כדי לתכנת הוראה אחת בכל פעם.
             Debugging in Collector:
               name: ניפוי שגיאות עם לורל
             Loops in Ice Age:
               name: לולאות בעידן הקרח
             Nested Loops in Bee:
               name: לולאות מקוננות במבוך
-            Nested Loops in Artist: {}
-            Nested Loops in Frozen: {}
             Until Loops in Maze:
               name: לולאות "עד" במבוך
             Conditionals with Cards:
@@ -2453,7 +2212,6 @@ he:
               name: צור משחק במעבדת הצעצועים
             'Unplugged: Binary':
               name: תמונות בינאריות
-              description_teacher: אומנם רוב האנשים חושבים שהמשמעות של בינארי זה רק אפסים ואחדות, התלמידים ילמדו על הרעיון שמידע יכול להיות מיוצג בעזרת מספר דרכים. השיעור הזה לוקח את הרעיון צעד נוסף קדימה על-ידי הדמיה כיצד המחשב שומר מידע מורכב יותר (כמו תמונות וצבעים) גם בצורה בינארית.
             Dance Party:
               name: מסיבת ריקודים
           student_description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
@@ -2465,30 +2223,23 @@ he:
               display_name: דמויות
             csf_functions:
               display_name: פונקציות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
-            'Programming: My Robotic Friends': {}
             Sequence in Maze:
               name: רצף במבוך
-            Building a Foundation: {}
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
-            Programming in Artist: {}
-            'Loops: My Loopy Robotic Friends': {}
-            Loops in Artist: {}
-            Nested Loops: {}
-            Nested Loops with Frozen: {}
             Conditionals with Cards:
               name: התניות עם כרטיסים
-            Conditionals:
-              description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
             'Functions: Songwriting':
               name: כתיבת שירים
-            Copyright and Creativity: {}
-            Pet Giraffe with Sprite Lab: {}
             Internet:
               name: אינטרנט
             Nested Loops in Bee:
               name: לולאות מקוננות במבוך
+            End of Course Project:
+              name: פרויקט סיום קורס
             Songwriting:
               name: כתיבת שירים
         express-2019:
@@ -2508,62 +2259,28 @@ he:
             csf_sprites:
               display_name: דמויות
           lessons:
-            'Algorithms: Graph Paper Programming': {}
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
             Relay Programming:
               name: הרץ פעולה בשנית
             Debugging in Maze:
               name: ניפוי שגיאות עם סקראט
-            Programming in Collector: {}
-            Programming in Artist: {}
-            'Loops: Getting Loopy': {}
-            Loops with Rey and BB-8: {}
-            Loops in Artist: {}
-            Copyright and Creativity: {}
             Nested Loops in Bee:
               name: לולאות מקוננות במבוך
-            Nested Loops in Frozen: {}
-            While Loops in Farmer: {}
             Until Loops in Maze:
               name: לולאות "עד" במבוך
             Conditionals with Cards:
               name: התניות עם כרטיסים
-            Conditionals in Bee: {}
-            Conditionals & Loops in Harvester: {}
-            'Functions: Songwriting': {}
-            Functions in Minecraft: {}
-            Functions in Harvester: {}
-            Functions in Artist: {}
-            Screen Out the Mean: {}
-            Determine the Concept: {}
-            'Events: The Big Event': {}
-            Build a Flappy Game: {}
-            The Power of Words: {}
-            Envelope Variables: {}
-            Variables as Constant in Artist: {}
-            Variables that Change in Bee: {}
-            Variables that Change in Artist: {}
             For Loop Fun:
               name: כיף עם לולאת "עבור"
-            For Loops in Bee: {}
-            For Loops in Artist: {}
-            Learning Sprites with Sprite Lab: {}
-            Alien Dance Party with Sprite Lab: {}
-            Pet Giraffe with Sprite Lab: {}
-            Explore Project Ideas: {}
-            The Design Process: {}
-            Build Your Project: {}
-            Revise Your Project: {}
-            Present Your Project: {}
             Binary Bracelets:
               name: צמידים בינארים
-            'Unplugged: Binary': {}
             Artist Binary:
               name: אומן בינארי
             Internet:
               name: אינטרנט
-            Crowdsourcing: {}
+            Build A Project:
+              name: פרויקט סיום קורס
             Dance Party:
               name: מסיבת ריקודים
         csd1-2019:
@@ -2574,8 +2291,6 @@ he:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
             csd1_2:
               display_name: 'פרק 2: מחשבים ופתרון בעיות'
-          lessons:
-            CS Discoveries Pre-survey: {}
         andrea-test:
           lesson_groups:
             required:
@@ -2595,6 +2310,8 @@ he:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
@@ -2602,12 +2319,12 @@ he:
               name: איתור באגים במבוך
             'Real-life Algorithms: Paper Planes':
               name: 'אלגוריתמים מהחיים: מטוסי נייר'
-            'Loops: Getting Loopy': {}
-            Loops in Artist: {}
             'Events: The Big Event':
               name: האירוע הגדול
             Binary Bracelets:
               name: צמידים בינארים
+            'End of Course Project: Create a Play Lab Game':
+              name: פרויקט סיום קורס
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -2621,18 +2338,10 @@ he:
             csf_events:
               display_name: אירועים
           lessons:
-            Sequencing in Maze: {}
             'Programming: Happy Maps':
               name: מפות שמחות
             Programming in Maze:
               name: תכנות במבוך
-            Programming in Harvester: {}
-            Loops in Artist:
-              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
-            Events in Play Lab:
-              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
-            Ocean Scene with Loops:
-              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
             Loops in Ice Age:
               name: לולאות עם סקראט
         courseb-2019:
@@ -2644,12 +2353,6 @@ he:
           lessons:
             Move It, Move It:
               name: זוזו, זוזו
-            Sequencing with Scrat: {}
-            'Programming: My Robotic Friends': {}
-            Programming in Ice Age: {}
-            Copyright and Creativity: {}
-            Programming with Rey and BB-8: {}
-            'Loops: My Loopy Robotic Friends': {}
             Loops in Ice Age:
               name: לולאות בעידן הקרח
             'Loops: Getting Loopy':
@@ -2665,23 +2368,10 @@ he:
             csf_events:
               display_name: אירועים
           lessons:
-            'Debugging: Unspotted Bugs': {}
-            'Persistence & Frustration: Stevie and the Big Project': {}
             Move It, Move It:
               name: זוזו, זוזו
-            Sequencing with Scrat: {}
-            Your Digital Footprint: {}
-            'Programming: My Robotic Friends': {}
-            Programming in Ice Age: {}
-            Copyright and Creativity: {}
-            Programming with Rey and BB-8: {}
-            'Loops: My Loopy Robotic Friends': {}
             Loops in Ice Age:
               name: לולאות עם סקראט
-            Loops in Collector: {}
-            Loops in Artist: {}
-            'Events: The Big Event': {}
-            Events in Play Lab: {}
             Spelling Bee:
               name: תחרות איות
             Programming in Maze:
@@ -2700,11 +2390,6 @@ he:
             cspSurvey:
               display_name: סקר
           lessons:
-            Intro to HTML:
-              description_teacher: בשיעור זה תלמידים ילמדו לראשונה HTML כשיטה שתסביר למחשב איך להציג תוכן ומבנה של אתר. השיעור מתחיל עם פעילות ללא מחשב המדגימה את האתגרים בהגדרת מבנה של אתר אינטרנט. התלמידים יסתכלו במבנה דף HTML לדוגמה במעבדת האינטרנט וידונו עם חבריהם לכיתה איך תגיות HTML עוזרות לפתור את הבעיה. לאחר מכן, התלמידים יכתבו את דף ה-HTML הראשון שלהם. לבסוף, יהיה דיון מסכם אשר יעזור לחזק את ההבנה שלהם ביחס שבין התוכן למבנה כפי שנבנה במהלך השיעור.
-            Headings:
-              description_student: שיעור זה ממשיך את ההיכרות עם תגיות HTML, הפעם עם כותרות. הכיתה מתרגלת שימוש בתגיות מסוג כותרת כדי לייצר כותרות דף ומקטעים ולומדים כיצד הכותרות מוצגות כברירת מחדל. לאחר מכן, הכיתה תתכנן כיצד לארגן את התוכן בדפי האינטרנט הפרטיים שלהם אשר יבנו לאורך כל יחידת הלימוד ויתחילו את הדף הראשון בפרויקט שלהם.
-              description_teacher: בשיעור זה, תלמידים ממשיכים להשתמש ב-HTML כדי לשבץ טקסט באתר שלהם, הפעם בעזרת כותרות. התלמידים לומדים איך הכותרות השונות מופיעים כברירת מחדל ומתרגלים שימוש בהם כדי לייצר כותרות דף וכותרות מקטעים. לאחר מכן, התלמידים מתחילים להחליט כיצד הם רוצים לארגן את התוכן שלהם בדפי האינטרנט הפרטיים שלהם. בשלב האחרון, התלמידים יתחילו את הפרויקט שעליו ימשיכו לעבוד לאורך כל יחידת הלימוד.
             Lists:
               name: רשימות
         csd3-2019:
@@ -2716,7 +2401,6 @@ he:
             cspSurvey:
               display_name: סקר
           lessons:
-            Shapes and Randomization: {}
             Variables:
               name: משתנים
             Sprites:
@@ -2725,7 +2409,6 @@ he:
               name: תנאים
             Functions:
               name: פונקציות
-            CS Discoveries End of Semester Survey: {}
         csd4-2019:
           lesson_groups:
             csd4_1:
@@ -2756,24 +2439,10 @@ he:
             cspSurvey:
               display_name: סקר
           lessons:
-            Innovations in Computing: {}
-            Designing Screens with Code: {}
-            The Circuit Playground: {}
-            Input Unplugged: {}
-            Board Events: {}
-            Getting Properties: {}
-            Analog Input: {}
-            The Program Design Process: {}
-            'Project: Make a Game': {}
-            Arrays and Color LEDs: {}
-            Making Music: {}
             Arrays and For Loops:
               name: מערכים ולולאות עבור
-            Accelerometer: {}
             Functions with Parameters:
               name: פונקציות ופרמטרים
-            Circuits and Physical Prototypes: {}
-            'Project: Prototype an Innovation': {}
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -2795,40 +2464,18 @@ he:
             csp1_2:
               display_name: 'פרק 2: המצאת האינטרנט'
           lessons:
-            CS Principles Pre-survey: {}
-            Personal Innovations: {}
             Sending Binary Messages:
               name: שליחת הודעות בינאריות
             Sending Binary Messages with the Internet Simulator:
               name: שליחת הודעות בינאריות עם סימולטור האינטרנט
-            Number Systems: {}
-            Binary Numbers: {}
-            Sending Numbers: {}
-            Sending Text: {}
-            Unit 1 Chapter 1 Assessment: {}
             The Internet:
               name: האינטרנט
-            The Need for Addressing: {}
-            Routers and Redundancy: {}
-            Packets and Making a Reliable Internet: {}
-            The Need for DNS: {}
-            HTTP and Abstraction: {}
-            Practice PT - The Internet and Society: {}
-            Unit 1 Chapter 2 Assessment: {}
         csp2-2019:
           lesson_groups:
             cspAssessment:
               display_name: הערכה לפרק
             cspSurvey:
               display_name: סקר
-          lessons:
-            Bytes and File Sizes: {}
-            Text Compression: {}
-            Encoding B&W Images: {}
-            Encoding Color Images: {}
-            Lossy vs Lossless Compression: {}
-            Rapid Research - Format Showdown: {}
-            Unit 2 Assessment: {}
         csp3-2019:
           lesson_groups:
             csp3_1_2018:
@@ -2837,108 +2484,33 @@ he:
               display_name: הערכה לפרק
             cspSurvey:
               display_name: סקר
-          lessons:
-            The Need For Programming Languages: {}
-            The Need for Algorithms: {}
-            Creativity in Algorithms: {}
-            Using Simple Commands: {}
-            Creating Functions: {}
-            Functions and Top-Down Design: {}
-            APIs and Function Parameters: {}
-            Creating functions with Parameters: {}
-            Looping and Random Numbers: {}
-            Practice PT - Design a Digital Scene: {}
-            Unit 3 Chapter 1 Assessment: {}
-            Mid-Year Survey: {}
         csp4-2019:
           lesson_groups:
             cspAssessment:
               display_name: הערכה לפרק
             cspSurvey:
               display_name: סקר
-          lessons:
-            What is Big Data?: {}
-            Finding Trends with Visualizations: {}
-            Check Your Assumptions: {}
-            Rapid Research - Data Innovations: {}
-            Identifying People with Data: {}
-            The Cost of Free: {}
-            Simple Encryption: {}
-            Encryption with Keys and Passwords: {}
-            Public Key Crypto: {}
-            Rapid Research - Cybercrime: {}
-            Unit 4 Assessment: {}
-            Mid-Year Survey: {}
         csp5-2019:
           lesson_groups:
             cspSurvey:
               display_name: סקר
           lessons:
-            Buttons and Events: {}
-            Multi-screen Apps: {}
-            'Building an App: Multi-Screen App': {}
-            Controlling Memory with Variables: {}
-            'Building an App: Clicker Game': {}
-            Unit 5 Assessment 1: {}
-            User Input and Strings: {}
-            '"If" Statements Unplugged': {}
-            Boolean Expressions and "If" Statements: {}
-            '"if-else-if" and Conditional Logic': {}
-            'Building an App: Color Sleuth': {}
-            Unit 5 Assessment 2: {}
             While Loops:
               name: לולאות "כל עוד"
-            Loops and Simulations: {}
-            Introduction to Arrays: {}
-            'Building an App: Image Scroller': {}
-            Unit 5 Assessment 3: {}
-            Processing Arrays: {}
-            Functions with Return Values: {}
-            'Building an App: Canvas Painter': {}
-            Unit 5 Assessment 4: {}
-            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: {}
-            Mid-Year Survey: {}
         csp-explore-2019:
           lesson_groups:
             cspSurvey:
               display_name: סקר
-          lessons:
-            Explore PT Prep - Reviewing the Task: {}
-            Explore PT - Making a Plan: {}
-            Explore PT - Complete the Task: {}
-            Mid-Year Survey: {}
         csp-create-2019:
           lesson_groups:
             cspSurvey:
               display_name: סקר
-          lessons:
-            Create PT Prep - Reviewing the Task: {}
-            Create PT Prep - Making a Plan: {}
-            Create PT - Complete the Task: {}
         csppostap-2019:
           lesson_groups:
             csp_postap_2:
               display_name: 'פרק 2: אפליקציות ומסדי נתונים'
             cspSurvey:
               display_name: סקר
-          lessons:
-            Intro to Data: {}
-            Good and Bad Data Visualizations: {}
-            Making Data Visualizations: {}
-            Discover a Data Story: {}
-            Cleaning Data: {}
-            Creating Summary Tables: {}
-            Project - Tell a Data Story: {}
-            Chapter 1 Assessment: {}
-            Creating Javascript Objects: {}
-            Permanent Data Storage: {}
-            Reading Records: {}
-            Deleting Records: {}
-            Updating Records: {}
-            Importing and Exporting Data: {}
-            Visualizing Data: {}
-            Sample Apps: {}
-            Final Project: {}
         csp1-pilot:
           lesson_groups:
             cspSurvey:
@@ -3088,9 +2660,6 @@ he:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
             csd1_2:
               display_name: 'פרק 2: מחשבים ופתרון בעיות'
-          lessons:
-            CS Discoveries Pre-survey: {}
-            Post-Project Test: {}
         csd2-pilot:
           lesson_groups:
             csd2_1:
@@ -3100,15 +2669,8 @@ he:
             cspSurvey:
               display_name: סקר
           lessons:
-            Intro to HTML:
-              description_teacher: בשיעור זה תלמידים ילמדו לראשונה HTML כשיטה שתסביר למחשב איך להציג תוכן ומבנה של אתר. השיעור מתחיל עם פעילות ללא מחשב המדגימה את האתגרים בהגדרת מבנה של אתר אינטרנט. התלמידים יסתכלו במבנה דף HTML לדוגמה במעבדת האינטרנט וידונו עם חבריהם לכיתה איך תגיות HTML עוזרות לפתור את הבעיה. לאחר מכן, התלמידים יכתבו את דף ה-HTML הראשון שלהם. לבסוף, יהיה דיון מסכם אשר יעזור לחזק את ההבנה שלהם ביחס שבין התוכן למבנה כפי שנבנה במהלך השיעור.
-            Headings:
-              description_student: שיעור זה ממשיך את ההיכרות עם תגיות HTML, הפעם עם כותרות. הכיתה מתרגלת שימוש בתגיות מסוג כותרת כדי לייצר כותרות דף ומקטעים ולומדים כיצד הכותרות מוצגות כברירת מחדל. לאחר מכן, הכיתה תתכנן כיצד לארגן את התוכן בדפי האינטרנט הפרטיים שלהם אשר יבנו לאורך כל יחידת הלימוד ויתחילו את הדף הראשון בפרויקט שלהם.
-              description_teacher: בשיעור זה, תלמידים ממשיכים להשתמש ב-HTML כדי לשבץ טקסט באתר שלהם, הפעם בעזרת כותרות. התלמידים לומדים איך הכותרות השונות מופיעים כברירת מחדל ומתרגלים שימוש בהם כדי לייצר כותרות דף וכותרות מקטעים. לאחר מכן, התלמידים מתחילים להחליט כיצד הם רוצים לארגן את התוכן שלהם בדפי האינטרנט הפרטיים שלהם. בשלב האחרון, התלמידים יתחילו את הפרויקט שעליו ימשיכו לעבוד לאורך כל יחידת הלימוד.
             Lists:
               name: רשימות
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
         csd3-pilot:
           lesson_groups:
             csd3_1:
@@ -3118,7 +2680,6 @@ he:
             cspSurvey:
               display_name: סקר
           lessons:
-            Shapes and Randomization: {}
             Variables:
               name: משתנים
             Sprites:
@@ -3127,13 +2688,9 @@ he:
               name: תנאים
             Functions:
               name: פונקציות
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
             Sprite Properties:
               name: מאפייני ספרייט
-        csd-bugs:
-          lessons:
-            Game Lab Bugs: {}
+        csd-bugs: {}
         maddie-test:
           lessons:
             stage 1:
@@ -3223,33 +2780,21 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
-        denny-science-8:
-          lessons:
-            'Earthquake Detector: Designing Screens': {}
-            'Earthquake Detector: Processing with Events': {}
+        denny-science-8: {}
         dance-2019:
           title: מסיבת ריקודים (2019)
           description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
           lessons:
             Dance Party:
-              name: מסיבת ריקודים
+              name: מסיבת ריקודים (2019)
           student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
               display_name: השלבים הבאים
           lessons:
-            Getting Started: {}
             Computer Science Fundamentals:
               name: יסודות מדעי המחשב
-            Looking Ahead: {}
-            'Mastering the Basics: Sequencing': {}
-            'Mastering the Basics: Loops': {}
-            'Mastering the Basics: Conditionals': {}
-            'Mastering the Basics: Functions': {}
-            'Mastering the Basics: Events': {}
-            Best Practices for Teaching Computer Science: {}
-            Planning: {}
             Next Steps:
               name: השלבים הבאים
             Loops:
@@ -3289,9 +2834,13 @@ he:
               display_name: תנאים
             csf_functions:
               display_name: פונקציות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Conditionals with Cards:
               name: התניות עם כרטיסים
+            End of Course Project:
+              name: פרויקט סיום קורס
         time4cs-experiment-unit-2:
           lessons:
             Nested Loops in Maze:
@@ -3309,19 +2858,8 @@ he:
             ramp_up:
               display_name: העלה רמה
           lessons:
-            Sequencing in Maze: {}
-            Programming and Loops with the Artist: {}
-            'Conditionals in Minecraft: Voyage Aquatic': {}
             Conditionals:
               name: תנאים
-            'Events: The Big Event': {}
-            Simon Says: {}
-            Learning Sprites with Sprite Lab: {}
-            Alien Dance Party with Sprite Lab: {}
-            Private and Personal Information: {}
-            About Me: {}
-            Access Ability: {}
-            Conditionals Review: {}
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -3335,19 +2873,8 @@ he:
             ramp_up:
               display_name: העלה רמה
           lessons:
-            Sequencing in Maze: {}
-            Programming and Loops with the Artist: {}
-            'Conditionals in Minecraft: Voyage Aquatic': {}
             Conditionals:
               name: תנאים
-            'Events: The Big Event': {}
-            Simon Says: {}
-            Learning Sprites with Sprite Lab: {}
-            Alien Dance Party with Sprite Lab: {}
-            Private and Personal Information: {}
-            About Me: {}
-            Access Ability: {}
-            Conditionals Review: {}
         csp7-pilot:
           lesson_groups:
             required:
@@ -3389,10 +2916,6 @@ he:
               display_name: 'פרק 2: עיצוב ו-CSS'
             cspSurvey:
               display_name: סקר
-          lessons:
-            Project - Planning Layout and Style: {}
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
         csd1-2020:
           lesson_groups:
             cspSurvey:
@@ -3401,9 +2924,6 @@ he:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
             csd1_2:
               display_name: 'פרק 2: מחשבים ופתרון בעיות'
-          lessons:
-            CS Discoveries Pre-survey: {}
-            Post-Project Test: {}
         csd4-2020:
           lesson_groups:
             csd4_1:
@@ -3414,9 +2934,6 @@ he:
               display_name: 'פרק 2: פתרון בעיות נתונים'
             cspSurvey:
               display_name: סקר
-          lessons:
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
         csd5-2020:
           lesson_groups:
             csd5_1:
@@ -3428,8 +2945,6 @@ he:
           lessons:
             ASCII and Binary Representation:
               name: ייצוג ASCII וייצוג בינארי
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
         csd6-2020:
           lesson_groups:
             csd6_1:
@@ -3439,26 +2954,10 @@ he:
             cspSurvey:
               display_name: סקר
           lessons:
-            Innovations in Computing: {}
-            Designing Screens with Code: {}
-            The Circuit Playground: {}
-            Input Unplugged: {}
-            Board Events: {}
-            Getting Properties: {}
-            Analog Input: {}
-            The Program Design Process: {}
-            'Project: Make a Game': {}
-            Arrays and Color LEDs: {}
-            Making Music: {}
             Arrays and For Loops:
               name: מערכים ולולאות עבור
-            Accelerometer: {}
             Functions with Parameters:
               name: פונקציות ופרמטרים
-            Circuits and Physical Prototypes: {}
-            'Project: Prototype an Innovation': {}
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
         csd3-2020:
           lesson_groups:
             csd3_1:
@@ -3472,13 +2971,10 @@ he:
               name: משתנים
             Sprite Properties:
               name: מאפייני ספרייט
-            Text and Captioned Scenes: {}
             Conditionals:
               name: תנאים
             Functions:
               name: פונקציות
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
             Text:
               name: טקסט
             Sprites:
@@ -3494,10 +2990,6 @@ he:
               name: מפות שמחות
             Loops in Ice Age:
               name: לולאות עם סקראט
-            Ocean Scene with Loops:
-              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
-            Events in Play Lab:
-              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
         courseb-2020:
           lesson_groups:
             csf_loops:
@@ -3521,6 +3013,8 @@ he:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
@@ -3530,6 +3024,8 @@ he:
               name: צמידים בינארים
             'Events: The Big Event':
               name: האירוע הגדול
+            'End of Course Project: Create a Play Lab Game':
+              name: פרויקט סיום קורס
         coursed-2020:
           title: קורס ד' (2020)
           description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
@@ -3542,15 +3038,15 @@ he:
               display_name: תנאים
             csf_binary:
               display_name: בינארי
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             'Algorithms: Graph Paper Programming':
               name: תכנות לנייר משבצות
             Introduction to Online Puzzles:
               name: היכרות עם חידות מבוכים
-              description_teacher: 'בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או חזרה על החומר, תלוי בניסיון הכיתה שלך) עם סביבת הפיתוח של Code.org. יהיו סרטונים המציגים את הפונקציונלית הבסיסית של סביבת העבודה כולל הכפתורים "הרץ", "אפס", ו-"צעד". עוד יעלה בסרטונים: גרירת הבלוקים, מחיקת בלוקים וחיבור בלוקים. לאחר מכן, תלמידים יתרגלו את כישוריהם ב _רצפים_ ו _איתור באגים_ במבוך. משם, תלמידים יראו דוגמאות חדשות של חידות כמו האוסף, האמן והקוצר כאשר הם ילמדו את השלב הבסיסי של _לולאות_.'
             Relay Programming:
               name: הרץ פעולה בשנית
-              description_teacher: פעילות זו תחל עם שיעור קצר על איתור באגים ועקביות, אח"כ נעבור בזריזות למירוץ אחר השעון כשהתלמידים יתחלקו לקבוצות ויעבדו יחד כדי לתכנת הוראה אחת בכל פעם.
             Debugging in Collector:
               name: ניפוי שגיאות עם לורל
             Loops in Ice Age:
@@ -3563,9 +3059,10 @@ he:
               name: לולאות "עד" במבוך
             'Unplugged: Binary':
               name: תמונות בינאריות
-              description_teacher: אומנם רוב האנשים חושבים שהמשמעות של בינארי זה רק אפסים ואחדות, התלמידים ילמדו על הרעיון שמידע יכול להיות מיוצג בעזרת מספר דרכים. השיעור הזה לוקח את הרעיון צעד נוסף קדימה על-ידי הדמיה כיצד המחשב שומר מידע מורכב יותר (כמו תמונות וצבעים) גם בצורה בינארית.
             Dance Party:
               name: מסיבת ריקודים
+            End of Course Project:
+              name: פרויקט סיום קורס
           student_description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
         coursee-2020:
           lesson_groups:
@@ -3575,13 +3072,15 @@ he:
               display_name: דמויות
             csf_functions:
               display_name: פונקציות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
-            Conditionals:
-              description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
             Nested Loops in Bee:
               name: לולאות מקוננות במבוך
             'Functions: Songwriting':
               name: כתיבת שירים
+            End of Course Project:
+              name: פרויקט סיום קורס
         coursef-2020:
           lesson_groups:
             ramp_up:
@@ -3592,6 +3091,8 @@ he:
               display_name: בשביל לולאות
             csf_sprites:
               display_name: דמויות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Nested Loops in the Maze:
               name: לולאות מקוננות במבוך
@@ -3599,6 +3100,8 @@ he:
               name: כיף עם לולאת "עבור"
             Internet:
               name: האינטרנט
+            End of Course Project:
+              name: פרויקט סיום קורס
         express-2020:
           lesson_groups:
             csf_warmup:
@@ -3615,6 +3118,8 @@ he:
               display_name: בשביל לולאות
             csf_sprites:
               display_name: דמויות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Dance Party:
               name: מסיבת ריקודים
@@ -3622,34 +3127,14 @@ he:
               name: תכנות במבוך
             Debugging in Maze:
               name: איתור באגים במבוך
-            Programming in Collector: {}
-            Programming in Artist: {}
-            Loops with Rey and BB-8: {}
-            Loops in Artist: {}
-            Nested Loops in Bee: {}
-            Nested Loops in Frozen: {}
-            'Concept Practice with Minecraft ': {}
-            Conditionals in Bee: {}
-            While Loops in Farmer: {}
-            'Conditionals in Minecraft: Voyage Aquatic': {}
             Until Loops in Maze:
               name: לולאות "עד" במבוך
-            Conditionals & Loops in Harvester: {}
-            Functions in Minecraft: {}
-            Functions in Harvester: {}
-            Functions in Artist: {}
-            Variables as Constant in Artist: {}
-            Variables that Change in Bee: {}
-            Variables that Change in Artist: {}
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האומן
-            Learning Sprites with Sprite Lab: {}
-            Alien Dance Party with Sprite Lab: {}
-            Editing Behaviors: {}
-            Virtual Pet with Sprite Lab: {}
-            Build A Project: {}
+            End of Course Project:
+              name: פרויקט סיום קורס
             Programming with Angry Birds:
               name: תכנות עם ציפורים כועסות
             Debugging with Scrat:
@@ -3663,23 +3148,12 @@ he:
             csf_events:
               display_name: אירועים
           lessons:
-            Learn to Drag and Drop: {}
-            Sequencing with Scrat: {}
             Programming in Maze:
               name: תכנות במבוך
-            Programming with Rey and BB-8: {}
-            Programming in Harvester: {}
             Spelling Bee:
               name: תחרות איות
             Loops in Ice Age:
               name: לולאות בעידן הקרח
-            Loops in Collector: {}
-            Ocean Scene with Loops:
-              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
-            Loops in Artist: {}
-            Tell a Story in Play Lab:
-              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
-            Make a Game in Play Lab: {}
             Loops with Scrat:
               name: לולאות עם סקראט
         csp1-2020:
@@ -3717,19 +3191,6 @@ he:
           lesson_groups:
             csp3_1_2018:
               display_name: 'יחידה 3: מבוא לתכנות'
-          lessons:
-            The Need For Programming Languages: {}
-            The Need for Algorithms: {}
-            Creativity in Algorithms: {}
-            Using Simple Commands: {}
-            Creating Functions: {}
-            Functions and Top-Down Design: {}
-            APIs and Function Parameters: {}
-            Creating functions with Parameters: {}
-            Looping and Random Numbers: {}
-            Practice PT - Design a Digital Scene: {}
-            Unit 3 Chapter 1 Assessment: {}
-            CS Principles Post Course survey: {}
         jess-test-script:
           lessons:
             Tools:
@@ -3742,53 +3203,10 @@ he:
               display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
             csd2_2:
               display_name: 'פרק 2: עיצוב ו-CSS'
-          lessons:
-            Exploring Web Pages: {}
-            Intro to HTML:
-              description_teacher: בשיעור זה תלמידים ילמדו לראשונה HTML כשיטה שתסביר למחשב איך להציג תוכן ומבנה של אתר. השיעור מתחיל עם פעילות ללא מחשב המדגימה את האתגרים בהגדרת מבנה של אתר אינטרנט. התלמידים יסתכלו במבנה דף HTML לדוגמה במעבדת האינטרנט וידונו עם חבריהם לכיתה איך תגיות HTML עוזרות לפתור את הבעיה. לאחר מכן, התלמידים יכתבו את דף ה-HTML הראשון שלהם. לבסוף, יהיה דיון מסכם אשר יעזור לחזק את ההבנה שלהם ביחס שבין התוכן למבנה כפי שנבנה במהלך השיעור.
-            Headings:
-              description_student: שיעור זה ממשיך את ההיכרות עם תגיות HTML, הפעם עם כותרות. הכיתה מתרגלת שימוש בתגיות מסוג כותרת כדי לייצר כותרות דף ומקטעים ולומדים כיצד הכותרות מוצגות כברירת מחדל. לאחר מכן, הכיתה תתכנן כיצד לארגן את התוכן בדפי האינטרנט הפרטיים שלהם אשר יבנו לאורך כל יחידת הלימוד ויתחילו את הדף הראשון בפרויקט שלהם.
-              description_teacher: בשיעור זה, תלמידים ממשיכים להשתמש ב-HTML כדי לשבץ טקסט באתר שלהם, הפעם בעזרת כותרות. התלמידים לומדים איך הכותרות השונות מופיעים כברירת מחדל ומתרגלים שימוש בהם כדי לייצר כותרות דף וכותרות מקטעים. לאחר מכן, התלמידים מתחילים להחליט כיצד הם רוצים לארגן את התוכן שלהם בדפי האינטרנט הפרטיים שלהם. בשלב האחרון, התלמידים יתחילו את הפרויקט שעליו ימשיכו לעבוד לאורך כל יחידת הלימוד.
-            Intellectual Property: {}
-            Images: {}
-            Project - Planning Layout and Style: {}
-            Project - Building a Webpage: {}
-            Purpose of a  Websites: {}
-            Team Problem Solving: {}
-            Sources and Research: {}
-            CSS Classes: {}
-            Planning a Multi-page Website: {}
-            Linking and Navigation: {}
-            Project - Website for a Purpose: {}
-            Peer Review and Final Touches: {}
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
         csp5-virtual:
           lessons:
-            Buttons and Events: {}
-            Multi-screen Apps: {}
-            'Building an App: Multi-Screen App': {}
-            Controlling Memory with Variables: {}
-            'Building an App: Clicker Game': {}
-            Unit 5 Assessment 1: {}
-            User Input and Strings: {}
-            '"If" Statements Unplugged': {}
-            Boolean Expressions and "If" Statements: {}
-            '"if-else-if" and Conditional Logic': {}
-            'Building an App: Color Sleuth': {}
-            Unit 5 Assessment 2: {}
             While Loops:
               name: לולאות "כל עוד"
-            Loops and Simulations: {}
-            Introduction to Arrays: {}
-            'Building an App: Image Scroller': {}
-            Unit 5 Assessment 3: {}
-            Processing Arrays: {}
-            Functions with Return Values: {}
-            'Building an App: Canvas Painter': {}
-            Unit 5 Assessment 4: {}
-            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: {}
-            CS Principles Post Course survey: {}
             Variables:
               name: משתנים
         virtual-holding-place:
@@ -3814,25 +3232,18 @@ he:
               name: לולאות "כל עוד"
         k5-onlinepd-2020:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals": {}
-            Understanding the Computer Science Fundamentals Courses: {}
-            Sequencing: {}
             Loops:
               name: חזרות
             Events:
               name: אירועים
             Conditionals:
               name: תנאים
-            End of Course projects: {}
             Functions:
               name: פונקציות
             Variables:
               name: משתנים
             For Loops:
               name: בשביל לולאות
-            Sprite Lab: {}
-            Reviewing your reflections: {}
-            Next steps: {}
           lesson_groups:
             k5_next_steps_1:
               display_name: השלבים הבאים
@@ -3855,8 +3266,6 @@ he:
               name: תנאים
             Functions:
               name: פונקציות
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
         ui-test-script-in-course-2017:
           lessons:
             Lesson:
@@ -3903,6 +3312,8 @@ he:
           lessons:
             Virus Simulation for Code Bytes:
               name: קידוד של סימולציה
+            End of Course Project:
+              name: פרויקט סיום קורס
           lesson_groups:
             introduction:
               display_name: מבוא
@@ -3913,9 +3324,6 @@ he:
             debugging:
               display_name: מציאת טעויות
         csd1-2021:
-          lessons:
-            CS Discoveries Pre-survey: {}
-            Post-Project Test: {}
           lesson_groups:
             cspSurvey:
               display_name: סקר
@@ -3924,36 +3332,23 @@ he:
             csd1_2:
               display_name: 'פרק 2: מחשבים ופתרון בעיות'
         csd2-2021:
-          lessons:
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
-            lesson-1: {}
           lesson_groups:
             cspSurvey:
               display_name: סקר
         csd3-2021:
           lessons:
             Variables:
-              key: משתנים
               name: משתנים
             Sprites:
-              key: דמויות
               name: דמויות
             Sprite Properties:
-              key: מאפייני ספרייט
               name: מאפייני ספרייט
             Text:
-              key: טקסט
               name: טקסט
             Conditionals:
-              key: תנאים
               name: תנאים
             Functions:
-              key: פונקציות
               name: פונקציות
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
-            lesson-1: {}
           lesson_groups:
             csd3_1:
               display_name: 'פרק 1: תמונות ואנימציות'
@@ -3962,10 +3357,6 @@ he:
             cspSurvey:
               display_name: סקר
         csd4-2021:
-          lessons:
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
-            CS Discoveries Post-Course Survey: {}
           lesson_groups:
             csd4_1:
               display_name: 'פרק 1: עיצוב מכוון משתמש'
@@ -3978,11 +3369,7 @@ he:
         csd5-2021:
           lessons:
             ASCII and Binary Representation:
-              key: ייצוג ASCII וייצוג בינארי
               name: ייצוג ASCII וייצוג בינארי
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
-            CS Discoveries Post-Course Survey: {}
           lesson_groups:
             csd5_1:
               display_name: 'פרק 1: ייצוג מידע'
@@ -3993,14 +3380,9 @@ he:
         csd6-2021:
           lessons:
             Arrays and For Loops:
-              key: מערכים ולולאות עבור
               name: מערכים ולולאות עבור
             Functions with Parameters:
-              key: פונקציות ופרמטרים
               name: פונקציות ופרמטרים
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
-            CS Discoveries Post-Course Survey: {}
           lesson_groups:
             csd6_1:
               display_name: 'פרק 1: תכנות עם חומרה'
@@ -4009,8 +3391,6 @@ he:
             cspSurvey:
               display_name: סקר
         csp1-2021:
-          lessons:
-            CS Principles Pre-survey: {}
           lesson_groups:
             cspSurvey:
               display_name: סקר
@@ -4021,7 +3401,6 @@ he:
         csp3-2021:
           lessons:
             Debugging:
-              key: מציאת טעויות
               name: מציאת טעויות
         csp4-2021:
           lesson_groups:
@@ -4041,57 +3420,76 @@ he:
               display_name: חזרות
             csp_project:
               display_name: פּרוֹיֶקט
-        csp6-2021: {}
-        csp7-2021: {}
-        csp8-2021: {}
-        csp9-2021: {}
-        csp10-2021: {}
+            lessonGroup-5:
+              display_name: סקר שלאחר הקורס
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: אלגוריתמים
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר
+        csp9-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
               name: מפות שמחות
             Loops in Ice Age:
-              key: לולאות בעידן הקרח
               name: לולאות עם סקראט
-            Ocean Scene with Loops:
-              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
-            Events in Play Lab:
-              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+            lesson-1:
+              name: פרויקט סיום קורס
           lesson_groups:
             csf_loops:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            lessonGroup-5:
+              display_name: פרויקט סיום קורס
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: זוזו, זוזו
               name: זוזו, זוזו
             Sequencing in Maze:
               name: יצירת רצפים עם ציפורים כועסות
             Programming in Maze:
-              key: תכנות במבוך
               name: תכנות עם ציפורים כועסות
             'Loops: Getting Loopy':
               name: עוברים ללולאות
+            lesson-1:
+              name: פרויקט סיום קורס
           lesson_groups:
             csf_loops:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
         coursec-2021:
           lessons:
             Programming in Maze:
-              key: תכנות במבוך
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
-              key: איתור באגים במבוך
               name: איתור באגים במבוך
             Binary Bracelets:
-              key: צמידים בינארים
               name: צמידים בינארים
             'Events: The Big Event':
               name: האירוע הגדול
+            'End of Course Project: Create a Play Lab Game':
+              name: פרויקט סיום קורס
           lesson_groups:
             csf_binary:
               display_name: בינארי
@@ -4099,39 +3497,33 @@ he:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
         coursed-2021:
           title: קורס ד' (2021)
           lessons:
             'Algorithms: Graph Paper Programming':
               name: תכנות לנייר משבצות
             Introduction to Online Puzzles:
-              key: היכרות עם חידות מבוכים
               name: היכרות עם חידות מבוכים
-              description_teacher: 'בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או חזרה על החומר, תלוי בניסיון הכיתה שלך) עם סביבת הפיתוח של Code.org. יהיו סרטונים המציגים את הפונקציונלית הבסיסית של סביבת העבודה כולל הכפתורים "הרץ", "אפס", ו-"צעד". עוד יעלה בסרטונים: גרירת הבלוקים, מחיקת בלוקים וחיבור בלוקים. לאחר מכן, תלמידים יתרגלו את כישוריהם ב _רצפים_ ו _איתור באגים_ במבוך. משם, תלמידים יראו דוגמאות חדשות של חידות כמו האוסף, האמן והקוצר כאשר הם ילמדו את השלב הבסיסי של _לולאות_.'
             Relay Programming:
-              key: הרץ פעולה בשנית
               name: הרץ פעולה בשנית
             Debugging in Collector:
               name: ניפוי שגיאות עם לורל
             Dance Party:
-              key: מסיבת ריקודים
               name: מסיבת ריקודים
             Loops in Ice Age:
-              key: לולאות בעידן הקרח
               name: לולאות בעידן הקרח
             Nested Loops in Bee:
               name: לולאות מקוננות במבוך
             Conditionals with Cards:
-              key: התניות עם כרטיסים
               name: התניות עם כרטיסים
             Until Loops in Maze:
-              key: לולאות "עד" במבוך
               name: לולאות "עד" במבוך
             'Unplugged: Binary':
               name: תמונות בינאריות
-              description_teacher: אומנם רוב האנשים חושבים שהמשמעות של בינארי זה רק אפסים ואחדות, התלמידים ילמדו על הרעיון שמידע יכול להיות מיוצג בעזרת מספר דרכים. השיעור הזה לוקח את הרעיון צעד נוסף קדימה על-ידי הדמיה כיצד המחשב שומר מידע מורכב יותר (כמו תמונות וצבעים) גם בצורה בינארית.
-            Artist Binary:
-              key: אומן בינארי
+            End of Course Project:
+              name: פרויקט סיום קורס
           lesson_groups:
             csf_events:
               display_name: אירועים
@@ -4141,15 +3533,16 @@ he:
               display_name: תנאים
             csf_binary:
               display_name: בינארי
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
         coursee-2021:
           lessons:
-            Conditionals:
-              key: תנאים
-              description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
             Nested Loops in Bee:
               name: לולאות מקוננות במבוך
             'Functions: Songwriting':
               name: כתיבת שירים
+            End of Course Project:
+              name: פרויקט סיום קורס
           lesson_groups:
             csf_sprites:
               display_name: דמויות
@@ -4157,6 +3550,8 @@ he:
               display_name: תנאים
             csf_functions:
               display_name: פונקציות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
         coursef-2021:
           lessons:
             Nested Loops in the Maze:
@@ -4164,15 +3559,11 @@ he:
             AI for Oceans:
               name: בינה מלאכותית למען האוקיינוסים
             Internet:
-              key: אינטרנט
               name: האינטרנט
             For Loop Fun:
-              key: כיף עם לולאת "עבור"
               name: כיף עם לולאת "עבור"
-            For Loops in Bee:
-              key: לולאות עבור עם הדבורה
-            For Loops in Artist:
-              key: לולאות עבור עם האומן
+            End of Course Project:
+              name: פרויקט סיום קורס
             lesson-5:
               name: התפרצות
           lesson_groups:
@@ -4182,6 +3573,8 @@ he:
               display_name: בשביל לולאות
             csf_for_loops:
               display_name: בשביל לולאות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             lessonGroup-8:
               display_name: משתנים
             lessonGroup-9:
@@ -4189,20 +3582,17 @@ he:
         express-2021:
           lessons:
             Dance Party:
-              key: מסיבת ריקודים
               name: מסיבת ריקודים
             Programming with Angry Birds:
-              key: תכנות עם ציפורים כועסות
               name: תכנות עם ציפורים כועסות
             Debugging with Scrat:
-              key: ניפוי שגיאות עם סקראט
               name: איתור באגים במבוך
             Nested Loops in Maze:
-              key: לולאות מקוננות במבוך
               name: לולאות מקוננות במבוך
             Until Loops in Maze:
-              key: לולאות "עד" במבוך
               name: לולאות "עד" במבוך
+            End of Course Project:
+              name: פרויקט סיום קורס
             lesson-1:
               name: מסיבת ריקודים
           lesson_groups:
@@ -4220,21 +3610,16 @@ he:
               display_name: בשביל לולאות
             csf_sprites:
               display_name: דמויות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             lessonGroup-9:
               display_name: אירועים
         pre-express-2021:
           lessons:
             Programming in with Angry Birds:
               name: תכנות עם ציפורים כועסות
-            Programming with Rey and BB-8: {}
             Loops with Scrat:
-              key: לולאות עם סקראט
               name: לולאות עם סקראט
-            Loops with Laurel: {}
-            Ocean Scene with Loops:
-              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
-            On the Move with Events:
-              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
           lesson_groups:
             csf_loops:
               display_name: חזרות
@@ -4256,9 +3641,6 @@ he:
             variables:
               display_name: משתנים
         csd4-preview-2021:
-          lessons:
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
           lesson_groups:
             csd4_1:
               display_name: 'פרק 1: עיצוב מכוון משתמש'
@@ -4273,11 +3655,7 @@ he:
         csd5-preview-2021:
           lessons:
             ASCII and Binary Representation:
-              key: ייצוג ASCII וייצוג בינארי
               name: ייצוג ASCII וייצוג בינארי
-            Project - Make a Recommendation: {}
-            Post-Project Test: {}
-            CS Discoveries Post Course survey: {}
           lesson_groups:
             csd5_1:
               display_name: 'פרק 1: ייצוג מידע'
@@ -4292,98 +3670,35 @@ he:
           student_description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
         contagion-guided-practice: {}
         ai-unit-pilot: {}
-        csa1-pilot:
-          lessons:
-            lesson-21: {}
-            lesson-24: {}
-            lesson-22: {}
-            lesson-23: {}
-        csa2-pilot:
-          lessons:
-            lesson-1: {}
-            lesson-16: {}
-            lesson-17: {}
-            lesson-18: {}
-        csa3-pilot:
-          lessons:
-            lesson-16: {}
-            lesson-17: {}
-            lesson-18: {}
-            lesson-19: {}
-        csa4-pilot:
-          lessons:
-            lesson-16: {}
-            lesson-17: {}
-            lesson-18: {}
-            lesson-19: {}
-            lesson-20: {}
-        csa5-pilot:
-          lessons:
-            Java Lab: {}
-            The Neighborhood: {}
-            The Theater: {}
-            The Playground: {}
-            lesson-16: {}
-        csa6-pilot:
-          lessons:
-            Java Lab: {}
-            The Neighborhood: {}
-            The Theater: {}
-            The Playground: {}
-            lesson-16: {}
-        csa7-pilot:
-          lessons:
-            Java Lab: {}
-            The Neighborhood: {}
-            The Theater: {}
-            The Playground: {}
-            lesson-16: {}
-        csa8-pilot:
-          lessons:
-            Java Lab: {}
-            The Neighborhood: {}
-            The Theater: {}
-            The Playground: {}
-            lesson-16: {}
+        csa1-pilot: {}
+        csa2-pilot: {}
+        csa3-pilot: {}
+        csa4-pilot: {}
+        csa5-pilot: {}
+        csa6-pilot: {}
+        csa7-pilot: {}
+        csa8-pilot: {}
         csa9-pilot: {}
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals": {}
-            Understanding the Computer Science Fundamentals Courses: {}
-            Sequencing: {}
             Loops:
-              key: חזרות
               name: חזרות
             Events:
-              key: אירועים
               name: אירועים
             Conditionals:
-              key: תנאים
               name: תנאים
-            End of Course projects: {}
             Functions:
-              key: פונקציות
               name: פונקציות
             Variables:
-              key: משתנים
               name: משתנים
             For Loops:
-              key: בשביל לולאות
               name: בשביל לולאות
-            Sprite Lab: {}
-            Reviewing your reflections: {}
-            Next steps: {}
           lesson_groups:
             k5_getting_started_1:
               display_name: מבוא
             Introduction:
               display_name: מבוא
-        allthemigratedthings:
-          lessons:
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
+        allthemigratedthings: {}
         fancygeometry-pilot: {}
         ai-classroom-test: {}
         poembot-springforum21: {}
@@ -4394,82 +3709,30 @@ he:
             cspSurvey2020:
               display_name: סקר
         aiml-2021:
-          lessons:
-            lesson-1: {}
           lesson_groups:
             lessonGroup-4:
               display_name: סקר
         csd7-2021:
-          lessons:
-            Post-Unit Survey: {}
-            CS Discoveries Post-Course Survey: {}
           lesson_groups:
             lessonGroup-4:
               display_name: סקר
         kodea-pd-2021:
           lessons:
-            Getting Started: {}
             Computer Science Fundamentals:
-              key: יסודות מדעי המחשב
               name: יסודות מדעי המחשב
-            Looking Ahead: {}
-            'Mastering the Basics: Sequencing': {}
-            'Mastering the Basics: Loops': {}
-            'Mastering the Basics: Conditionals': {}
-            'Mastering the Basics: Functions': {}
-            'Mastering the Basics: Events': {}
-            Best Practices for Teaching Computer Science: {}
-            Planning: {}
             Next Steps:
-              key: השלבים הבאים
               name: השלבים הבאים
-        vpl-csd-2021:
-          lessons:
-            Module 1: {}
-            Module 2: {}
-            Module 3: {}
-            Module 4: {}
-            Module 5: {}
-            Module 6: {}
-            Module 7: {}
-            Module 8: {}
-        vpl-csp-2021:
-          lessons:
-            Module 1: {}
-            Module 2: {}
-            Module 3: {}
-            Module 4: {}
-            Module 5: {}
-            Module 6: {}
-            Module 7: {}
-            Module 8: {}
-        self-paced-pl-csd1-2021:
-          lessons:
-            lesson-4: {}
-            lesson-5: {}
+        vpl-csd-2021: {}
+        vpl-csp-2021: {}
+        self-paced-pl-csd1-2021: {}
         self-paced-pl-csd2-2021:
           lessons:
             lesson-9:
               name: קהילת מורים
         self-paced-pl-csd3-2021: {}
         self-paced-pl-csd4-2021: {}
-        self-paced-pl-csd5-2021:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-        self-paced-pl-csd6-2021:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
+        self-paced-pl-csd5-2021: {}
+        self-paced-pl-csd6-2021: {}
         self-paced-pl-csd7-2021: {}
         self-paced-pl-csd8-2021: {}
         self-paced-pl-csp1-2021: {}
@@ -4484,56 +3747,13 @@ he:
         self-paced-pl-csp10-2021: {}
         self-paced-pl-csp11-2021: {}
         poster: {}
-        poster-draft:
-          lessons:
-            lesson-1: {}
-        poembot:
-          lessons:
-            lesson-1: {}
+        poster-draft: {}
+        poembot: {}
         outbreak-module:
           title: התפרצות
-        csa1-exemplars:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
-            lesson-15: {}
-            lesson-16: {}
-            lesson-17: {}
-            lesson-18: {}
-            lesson-19: {}
-            lesson-20: {}
-        csa2-exemplars:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
-            lesson-15: {}
+        csa1-exemplars: {}
+        csa2-exemplars: {}
         csa-videos:
-          lessons:
-            lesson-24: {}
           lesson_groups:
             lessonGroup-3:
               display_name: משאבים
@@ -4547,87 +3767,32 @@ he:
               display_name: יחידה 4
             lessonGroup-7:
               display_name: יחידה 5
-        csa3-exemplars:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
-            lesson-15: {}
-        ai-lab:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-        poster-experiment:
-          lessons:
-            lesson-1: {}
-        tesspltest:
-          lessons:
-            lesson-1: {}
+        csa3-exemplars: {}
+        ai-lab: {}
+        poster-experiment: {}
+        tesspltest: {}
         tesspl2: {}
-        sb-pt-cont:
-          lessons:
-            lesson-1: {}
-        sb-pt-exp:
-          lessons:
-            lesson-1: {}
-        dc-standalone:
-          lessons:
-            lesson-1: {}
-        sb-chardev-v1:
-          lessons:
-            lesson-1: {}
+        sb-pt-cont: {}
+        sb-pt-exp: {}
+        dc-standalone: {}
+        sb-chardev-v1: {}
         dlp21-csp-mod4:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
           lesson_groups:
             lessonGroup-2:
               display_name: שלב 1
             lessonGroup-3:
               display_name: שלב 2
-        dlp21-csp-mod1:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
+        dlp21-csp-mod1: {}
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
               description: בדיקה
-        dlp21-csd-mod1:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-        dlp21-csd-mod2:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-        dlp21-csd-mod3:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-        dlp21-csd-mod4:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-        dlp21-csp-mod2:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-        dlp21-csp-mod3:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
+        dlp21-csd-mod1: {}
+        dlp21-csd-mod2: {}
+        dlp21-csd-mod3: {}
+        dlp21-csd-mod4: {}
+        dlp21-csp-mod2: {}
+        dlp21-csp-mod3: {}
         dlp21-overview: {}
         dlp21-csd-overview:
           lessons:
@@ -4639,20 +3804,8 @@ he:
               name: סקירה
         csa-u6-dev:
           lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-7: {}
-            lesson-11: {}
             lesson-12:
               name: כלים
-            lesson-13: {}
             lesson-18:
               name: ווידג'טים
           lesson_groups:
@@ -4660,172 +3813,56 @@ he:
               display_name: שיעורים
             lessonGroup-3:
               display_name: פּרוֹיֶקט
-        hello-world-draft:
-          lessons:
-            lesson-1: {}
-        csa-self-paced-pl:
-          lessons:
-            Navigating the Code.org learning platform: {}
-            Navigating lesson plans and resources: {}
-            Navigating support: {}
-            lesson-4: {}
-            lesson-3: {}
-            lesson-8: {}
-        csa1-pilot-facilitator:
-          lessons:
-            Unit 1 Pilot Survey: {}
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-21: {}
-        csa2-pilot-facilitator:
-          lessons:
-            Unit 2 Pilot Survey: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-1: {}
-        csa3-pilot-facilitator:
-          lessons:
-            Unit 3 Pilot Survey: {}
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-16: {}
-        csa4-pilot-facilitator:
-          lessons:
-            lesson-1: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-2: {}
-        csa5-pilot-facilitator:
-          lessons:
-            lesson-1: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
-            lesson-15: {}
-            Java Lab: {}
-            The Neighborhood: {}
-            The Theater: {}
-            The Playground: {}
-        poetry-hoc:
-          lessons:
-            lesson-1: {}
+        hello-world-draft: {}
+        csa-self-paced-pl: {}
+        csa1-pilot-facilitator: {}
+        csa2-pilot-facilitator: {}
+        csa3-pilot-facilitator: {}
+        csa4-pilot-facilitator: {}
+        csa5-pilot-facilitator: {}
+        poetry-hoc: {}
         csdu6-playground:
           lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
-            lesson-15: {}
-            lesson-17: {}
-            lesson-16: {}
-            lesson-18: {}
             lesson-19:
               name: פּרוֹיֶקט
-            lesson-20: {}
         hello-world-food:
           title: 'שלום, עולם: אוכל'
         csa-u7-dev:
           lessons:
-            lesson-1: {}
-            lesson-5: {}
             lesson-2:
               name: ווידג'טים
             lesson-3:
               name: כלים
-            lesson-4: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
           lesson_groups:
             lessonGroup-2:
               display_name: שיעורים
             lessonGroup-3:
               display_name: פּרוֹיֶקט
+        tesstest921: {}
         hello-world-animals:
-          lessons:
-            lesson-1: {}
           title: 'שלום, עולם: חיות'
         hello-world-emoji:
-          lessons:
-            lesson-1: {}
           title: 'שלום, עולם: אמוג''י'
         hello-world-retro:
-          lessons:
-            lesson-1: {}
           name: 'שלום, עולם: רטרו'
           title: 'שלום, עולם: רטרו'
-        hello-world-batman:
-          lessons:
-            lesson-1: {}
-        csa4-exemplars:
-          lessons:
-            new lesson: {}
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
-            lesson-15: {}
-            lesson-16: {}
-        csc-things:
-          lessons:
-            lesson-1: {}
-        poetry-hoc2:
-          lessons:
-            lesson-1: {}
+        hello-world-batman: {}
+        csa4-exemplars: {}
+        csc-things: {}
+        poetry-hoc2: {}
         poetry-hoc3:
           lessons:
             lesson-1:
               name: אווירת לימוד
           name: שירה - שעת הקוד 3
           title: שירה - שעת הקוד גרסה 3
-        spritelab-effects-challenge:
-          lessons:
-            lesson-1: {}
+        spritelab-effects-challenge: {}
         csa-u8-dev:
           lessons:
             lesson-1:
               name: ווידג'טים
             lesson-2:
               name: כלים
-            lesson-3: {}
         poem-art:
           lessons:
             lesson-1:
@@ -4844,33 +3881,8 @@ he:
           title: התפרצות
         explore-data-1: {}
         counting-csc: {}
-        csa5-exemplars:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
-            lesson-15: {}
-        csa-examples-21:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
+        csa5-exemplars: {}
+        csa-examples-21: {}
         csd-post-survey-2021:
           lessons:
             lesson-1:
@@ -4879,13 +3891,7 @@ he:
         csa-pl-module-1-test: {}
         csa-pl-module-2-test: {}
         csa-pl-module-3-test: {}
-        csa6-pilot-facilitator:
-          lessons:
-            Java Lab: {}
-            The Neighborhood: {}
-            The Theater: {}
-            The Playground: {}
-            lesson-1: {}
+        csa6-pilot-facilitator: {}
         poem-art-2021:
           lessons:
             Poem Art:
@@ -4908,19 +3914,16 @@ he:
           lessons:
             Hello World:
               name: 'שלום, עולם: אמוג''י'
-            lesson-1: {}
           title: 'שלום, עולם: אמוג''י'
         hello-world-animals-2021:
           lessons:
             Hello World:
               name: 'שלום, עולם: חיות'
-            lesson-1: {}
           title: 'שלום, עולם: חיות'
         hello-world-retro-2021:
           lessons:
             Hello World:
               name: 'שלום, עולם: רטרו'
-            lesson-1: {}
           title: 'שלום, עולם: רטרו'
           name: 'שלום, עולם: רטרו 2021'
         spelling-bee-2021:
@@ -4933,86 +3936,504 @@ he:
           lessons:
             lesson-1:
               name: שיעור
-        csa6-exemplars:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
-            lesson-15: {}
+        csa6-exemplars: {}
         2022drafting:
           lessons:
             lesson-4:
               name: לנצח את הקורונה
-            lesson-5: {}
-        csa7-exemplars:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
-            lesson-15: {}
+            Programming with the Bee:
+              name: לולאות מקוננות במבוך
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
+            'Hello World: Food':
+              name: 'שלום, עולם: אוכל'
+          lesson_groups:
+            lessonGroup-8:
+              display_name: שעת הקוד
+        csa7-exemplars: {}
         csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: דמויות
+            lessonGroup-3:
+              display_name: משתנים
+            lessonGroup-4:
+              display_name: פרויקט סיום קורס
+        csd6-pilot-2022:
           lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-        csd6-pilot-2022: {}
-        csa8-exemplars:
-          lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
-            lesson-15: {}
-        alltheselfpacedplthings:
-          lessons:
-            Instructor In Training Levels: {}
-            Dani Test Lesson 2: {}
-        csa7-pilot-facilitator:
-          lessons:
-            Unit 7 Pilot Survey: {}
-            Java Lab: {}
-            The Neighborhood: {}
-            The Theater: {}
-            The Playground: {}
-            lesson-16: {}
-        csa8-pilot-facilitator:
-          lessons:
-            Unit 8 Pilot Survey: {}
-            Java Lab: {}
-            The Neighborhood: {}
-            The Theater: {}
-            The Playground: {}
-            lesson-16: {}
+            Functions with Parameters:
+              name: פונקציות
+        csa8-exemplars: {}
+        alltheselfpacedplthings: {}
+        csa7-pilot-facilitator: {}
+        csa8-pilot-facilitator: {}
         csa9-pilot-facilitator: {}
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: מפות שמחות
+            Loops with Scrat:
+              name: לולאות עם סקראט
+            End of Course Project:
+              name: פרויקט סיום קורס
+            'Programming: Happy Maps':
+              name: מפות שמחות
+            Loops in Ice Age:
+              name: לולאות עם סקראט
+            lesson-1:
+              name: פרויקט סיום קורס
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+            lessonGroup-5:
+              display_name: פרויקט סיום קורס
+        express-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+            Debugging in Maze:
+              name: איתור באגים במבוך
+            Dance Party:
+              name: מסיבת ריקודים
+            Nested Loops in Maze:
+              name: לולאות מקוננות במבוך
+            Until Loops in Maze:
+              name: לולאות "עד" במבוך
+            End of Course Project:
+              name: פרויקט סיום קורס
+            Debugging with Scrat:
+              name: איתור באגים במבוך
+            lesson-1:
+              name: מסיבת ריקודים
+          lesson_groups:
+            csf_sprites:
+              display_name: דמויות
+            lessonGroup-9:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            csf_functions:
+              display_name: פונקציות
+            csf_variables:
+              display_name: משתנים
+            csf_for_loops:
+              display_name: בשביל לולאות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        csp1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp2-2022: {}
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: מציאת טעויות
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: רשימות
+            csp_loops:
+              display_name: חזרות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            lessonGroup-5:
+              display_name: סקר שלאחר הקורס
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: זוזו, זוזו
+            Sequencing with Angry Birds:
+              name: יצירת רצפים עם ציפורים כועסות
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+            Getting Loopy:
+              name: עוברים ללולאות
+            End of Course Project:
+              name: פרויקט סיום קורס
+            Sequencing in Maze:
+              name: יצירת רצפים עם ציפורים כועסות
+            Programming in Maze:
+              name: תכנות עם ציפורים כועסות
+            'Loops: Getting Loopy':
+              name: עוברים ללולאות
+            lesson-1:
+              name: פרויקט סיום קורס
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
+        coursec-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+            Debugging in Maze:
+              name: איתור באגים במבוך
+            The Big Event:
+              name: האירוע הגדול
+            Binary Bracelets:
+              name: צמידים בינארים
+            End of Course Project:
+              name: פרויקט סיום קורס
+            Programming in Maze:
+              name: תכנות עם ציפורים כועסות
+            'Events: The Big Event':
+              name: האירוע הגדול
+            'End of Course Project: Create a Play Lab Game':
+              name: פרויקט סיום קורס
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp7-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp8-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp9-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp10-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: תכנות לנייר משבצות
+            Introduction to Online Puzzles:
+              name: היכרות עם חידות מבוכים
+            Relay Programming:
+              name: הרץ פעולה בשנית
+            Debugging with Laurel:
+              name: ניפוי שגיאות עם לורל
+            Dance Party:
+              name: מסיבת ריקודים
+            Loops in Ice Age:
+              name: לולאות בעידן הקרח
+            Nested Loops in Maze:
+              name: לולאות מקוננות במבוך
+            Conditionals with Cards:
+              name: התניות עם כרטיסים
+            Until Loops in Maze:
+              name: לולאות "עד" במבוך
+            End of Course Project:
+              name: פרויקט סיום קורס
+            'Algorithms: Graph Paper Programming':
+              name: תכנות לנייר משבצות
+            Debugging in Collector:
+              name: ניפוי שגיאות עם לורל
+            Nested Loops in Bee:
+              name: לולאות מקוננות במבוך
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+          title: קורס ד' (2021)
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: כתיבת שירים
+            End of Course Project:
+              name: פרויקט סיום קורס
+            'Functions: Songwriting':
+              name: כתיבת שירים
+          lesson_groups:
+            csf_sprites:
+              display_name: דמויות
+            csf_functions:
+              display_name: פונקציות
+            csf_nested_loops:
+              display_name: תנאים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursef-2022:
+          lessons:
+            Programming with the Bee:
+              name: לולאות מקוננות במבוך
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
+            Outbreak:
+              name: התפרצות
+            AI For Oceans:
+              name: בינה מלאכותית למען האוקיינוסים
+            The Internet:
+              name: האינטרנט
+            End of Course Project:
+              name: פרויקט סיום קורס
+            Nested Loops in the Maze:
+              name: לולאות מקוננות במבוך
+            AI for Oceans:
+              name: בינה מלאכותית למען האוקיינוסים
+            Internet:
+              name: האינטרנט
+          lesson_groups:
+            ramp_up:
+              display_name: דמויות
+            lessonGroup-8:
+              display_name: משתנים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        csp-post-survey-2021: {}
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: חזרות
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        pre-express-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+            Loops with Scrat:
+              name: לולאות עם סקראט
+            Programming in with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: משתנים
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: בשביל לולאות
+        tessplayground: {}
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: תנאים
+            lesson-16:
+              name: מציאת טעויות
+            lesson-19:
+              name: מציאת טעויות
+        csa4-2022: {}
+        csa5-2022: {}
+        tess-test-csa: {}
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: חזרות
+        pltess: {}
+        self-paced-pl-csa1-2022: {}
+        self-paced-pl-csa2-2022: {}
+        self-paced-pl-csa3-2022: {}
+        csa7-pilot-extra: {}
+        csa8-pilot-extra: {}
+        csa-backpack-2022: {}
+        csd6-projects: {}
+        coursef-2022-pilot:
+          lessons:
+            Outbreak:
+              name: התפרצות
+            AI For Oceans:
+              name: בינה מלאכותית למען האוקיינוסים
+            The Internet:
+              name: האינטרנט
+            End of Course Project:
+              name: פרויקט סיום קורס
+          lesson_groups:
+            ramp_up:
+              display_name: דמויות
+            lessonGroup-8:
+              display_name: משתנים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        csa6-2022: {}
+        csa7-2022: {}
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        ui-test-csa-family-script: {}
+        csa-preview: {}
+        vpl-csd1-summer-pilot-2022: {}
+        vpl-csd2-summer-pilot-2022: {}
+        vpl-csd3-summer-pilot-2022: {}
+        vpl-csd4-summer-pilot-2022: {}
+        vpl-csd5-summer-pilot-2022: {}
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: משתנים
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: חזרות
+            Events:
+              name: אירועים
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות
+            Variables:
+              name: משתנים
+            For Loops:
+              name: בשביל לולאות
+        vpl-csd1-ci-pilot-2022: {}
+        vpl-csd2-ci-pilot-2022: {}
+        vpl-csd3-ci-pilot-2022: {}
+        vpl-csd4-ci-pilot-2022: {}
+        vpl-csd5-ci-pilot-2022: {}
+        vpl-csd6-ci-pilot-2022: {}
+        vpl-csd7-ci-pilot-2022: {}
+        hello-world-csc: {}
+        csd-playground: {}
+        csc-pilot-2022-ecosystems: {}
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              name: אומנות השירה
+        csc-pilot-2022-starquilts: {}
+        csc-pilot-2022-fables: {}
+        csd1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            csd1_1:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+        csd2-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csd3-2022:
+          lessons:
+            Variables:
+              name: משתנים
+            Sprites:
+              name: דמויות
+            Sprite Properties:
+              name: מאפייני ספרייט
+            Text:
+              name: טקסט
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+        csd4-2022:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            cspSurvey:
+              display_name: סקר
+        csd5-2022:
+          lessons:
+            ASCII and Binary Representation:
+              name: ייצוג ASCII וייצוג בינארי
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
+        csd6-2022:
+          lessons:
+            Functions:
+              name: פונקציות
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            lessonGroup-4:
+              display_name: סקר
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: סקר שלאחר הקורס
+        testtess2: {}
+        csp-post-survey-2022: {}
+        aiml-2022: {}
+        vpl-csd-2022: {}
+        vpl-csp-2022: {}
+        self-paced-pl-csd1-2022: {}
+        self-paced-pl-csd2-2022: {}
+        self-paced-pl-csd3-2022: {}
+        self-paced-pl-csd4-2022: {}
+        self-paced-pl-csp1-2022: {}
+        self-paced-pl-csp2-2022: {}
+        self-paced-pl-csp3-2022: {}
+        self-paced-pl-csp4-2022: {}
+        csa9-2022: {}
+        csa-pl-standalone-code-2022: {}
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: סקירה
+            lesson-1:
+              name: סקירה
+        dlp-csd-mod1-2022: {}
+        dlp-csd-mod2-2022: {}
+        dlp-csd-mod3-2022: {}
+        dlp-csd-mod4-2022: {}
+        dlp-csp-mod1-2022: {}
+        dlp-csp-mod2-2022: {}
+        dlp-csp-mod3-2022: {}
+        dlp-csp-mod4-2022: {}
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: סקירה
+            lesson-1:
+              name: סקירה
+        csc-ecosystems-2022: {}
+        csc-starquilts-2022: {}
+        csc-fables-2022: {}
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: אומנות השירה
+        alltheblocklythings: {}
+        self-paced-pl-csd5-2022: {}

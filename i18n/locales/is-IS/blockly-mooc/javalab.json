@@ -27,5 +27,7 @@
   "duplicateProjectFilenameError": "Skráin {filename} er þegar í notkun í þessu verkefni. Veldu eitthvað annað heiti",
   "genericErrorMessage": "Vinsamlegast reyndu aftur.",
   "import": "Flytja inn",
+  "rename": "Endurnefna",
+  "submit": "Staðfesta",
   "saving": "Vista..."
 }

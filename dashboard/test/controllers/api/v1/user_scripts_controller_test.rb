@@ -28,7 +28,7 @@ class Api::V1::UserScriptsControllerTest < ActionDispatch::IntegrationTest
   test "raises for nonexistent script" do
     user = create :user
     sign_in user
-    bogus_script_id = 99
+    bogus_script_id = 10_000_000
     patch "/api/v1//user_scripts/#{bogus_script_id}", params: {
       version_warning_dismissed: true
     }

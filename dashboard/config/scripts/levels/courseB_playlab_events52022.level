@@ -57,11 +57,16 @@
     "show_type_hints": "false",
     "include_shared_functions": "false",
     "remove_items_when_actor_collides": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:08:09.069+00:00\",\"changed\":[\"cloned from \\\"courseB_playlab_events5_2021\\\"\"],\"cloned_from\":\"courseB_playlab_events5_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:08:09.069+00:00\",\"changed\":[\"cloned from \\\"courseB_playlab_events5_2021\\\"\"],\"cloned_from\":\"courseB_playlab_events5_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "events": 2
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

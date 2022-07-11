@@ -320,7 +320,7 @@ export default connect(
     );
 
     let lessonNames = {};
-    state.progress.lessons.forEach(lesson => {
+    state.progress.lessons?.forEach(lesson => {
       lessonNames[lesson.id] = lesson.name;
     });
 
@@ -349,6 +349,7 @@ export default connect(
     loadLevelsWithProgress: () => dispatch(loadLevelsWithProgress()),
     selectUser: (userId, isAsync = false) => {
       updateQueryParam('user_id', userId);
+      updateQueryParam('version');
       isAsync ? dispatch(queryUserProgress(userId)) : reload();
     },
     setStudentsForCurrentSection: (sectionId, students) => {

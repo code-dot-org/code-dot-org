@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-11 20:24:50 UTC",
+    "serialized_at": "2022-01-20 18:00:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -452,6 +452,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-21-CSP-mod3-LevelType-practice-lc"
         ],
@@ -627,6 +628,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-21-mod3-AppLab-practice-lc-CSP"
         ],

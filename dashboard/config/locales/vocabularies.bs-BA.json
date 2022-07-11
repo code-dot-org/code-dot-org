@@ -136,6 +136,24 @@
         },
         "define/coursee/2021": {
           "word": "Definiši"
+        },
+        "debugging/csd/2021": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "variable/csd/2021": {
+          "word": "Varijabla"
+        },
+        "conditionals/csd/2021": {
+          "word": "Uvjeti"
+        },
+        "abstraction/csd/2021": {
+          "word": "Apstrakcija"
+        },
+        "function/csd/2021": {
+          "word": "Funkcija"
+        },
+        "copyright/csd/2021": {
+          "word": "Autorska prava"
         }
       }
     }

@@ -1,15 +1,24 @@
 bg:
   data:
     parameter_names:
+      "???": "???"
       actor: актьор
       color: цвят
       counter: брояч
+      dir: посока
+      direction: посока
       height: височина
       honey: мед
       left: наляво
       length: дължина
       min: min
+      nectar units: брой нектар
+      nectars: нектар
+      numOctagons: бройОсмоъгълници
       points: точки
+      radius: радиус
+      sides: страни
       size: размер
       speed: скорост
+      theGuess: предположението
       width: широчина

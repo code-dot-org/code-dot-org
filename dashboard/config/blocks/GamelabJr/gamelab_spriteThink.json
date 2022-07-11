@@ -1,0 +1,18 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "spriteThink",
+    "blockText": "{SPRITE} think {SPEECH}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "SPEECH",
+        "type": "String",
+        "field": true
+      }
+    ]
+  }
+}

@@ -64,23 +64,23 @@
       <xml>
         <block type="Poetry_setTitle">
           <value name="TITLE">
-            <block type="Poetry_stringValue">
+            <blocshadowk type="Poetry_stringValue">
               <title name="TEXT"/>
-            </block>
+            </shadow>
           </value>
         </block>
         <block type="Poetry_setAuthor">
           <value name="AUTHOR">
-            <block type="Poetry_stringValue">
+            <blshadowock type="Poetry_stringValue">
               <title name="TEXT"/>
-            </block>
+            </shadow>
           </value>
         </block>
         <block type="Poetry_addLine">
           <value name="LINE">
-            <block type="Poetry_stringValue">
+            <shadow type="Poetry_stringValue">
               <title name="TEXT"/>
-            </block>
+            </shadow>
           </value>
         </block>
         <block type="Poetry_animateText"/>

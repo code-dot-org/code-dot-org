@@ -8,9 +8,7 @@ import {UnconnectedSetUpSections as SetUpSections} from '@cdo/apps/templates/stu
 
 describe('SetUpSections', () => {
   it('renders as expected', () => {
-    const wrapper = shallow(
-      <SetUpSections beginEditingNewSection={() => {}} />
-    );
+    const wrapper = shallow(<SetUpSections beginEditingSection={() => {}} />);
     const instance = wrapper.instance();
 
     expect(
@@ -20,15 +18,15 @@ describe('SetUpSections', () => {
           headingText="Set up your classroom"
           descriptionText="Create a new classroom section to start assigning courses and seeing your student progress."
           buttonText="Create a section"
-          onClick={instance.beginEditingNewSection}
+          onClick={instance.beginEditingSection}
         />
       )
     );
   });
 
-  it('calls beginEditingNewSection with no arguments when button is clicked', () => {
+  it('calls beginEditingSection with no arguments when button is clicked', () => {
     const spy = sinon.spy();
-    const wrapper = mount(<SetUpSections beginEditingNewSection={spy} />);
+    const wrapper = mount(<SetUpSections beginEditingSection={spy} />);
     expect(spy).not.to.have.been.called;
 
     wrapper.find(Button).simulate('click', {fake: 'event'});

@@ -1232,7 +1232,7 @@ nn:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Anna:'
+        other: Anna
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1242,7 +1242,7 @@ nn:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Anna:'
+        other: Anna
       workshop_course:
         csf_af: CS Fundamentals (Kurs A-F)
         csf_express: CS Fundamentals (Pre-ekspresskurs og ekspresskurs)
@@ -1293,3 +1293,4 @@ nn:
   page_not_found_button: Gå heim
   copy: Kopier
   confirm: Bekreft
+  teacher_feedback: Tilbakemeldingar frå lærarar

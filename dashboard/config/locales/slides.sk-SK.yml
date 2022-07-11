@@ -1715,10 +1715,11 @@ sk:
           aplikácie.
       2:
         image: notes/applab_intro_share_2.png
-        text: Na ďalšej úrovni nájdeš svoju dokončenú aplikáciu. S trochou kreativity
-          ju môžeš zmeniť na kvíz pre svojich priateľov, blahoželania pre svoju rodinu
-          alebo vytvoriť dobrodružnú hru. Všetky tieto aplikácie sú kombináciou zručností,
-          ktoré už vieš a verím, že zvládneš ešte viac.
+        text: V ďalšej úrovni nájdeš svoju dokončenú aplikáciu. S trochou kreativity
+          z nej môžeš spraviť kvíz pre svojich priateľov, blahoželania pre rodinu
+          alebo vytvoriť dobrodružný interaktívny príbeh. Všetky tieto aplikácie sú
+          vlastne len kombináciou zručností, ktoré už vieš, a verím, že zvládneš ešte
+          viac.
       3:
         image: notes/applab_intro_share_3.png
         text: Po dokončení aplikácie si ju môžeš poslať do telefónu a zistiť, ako
@@ -2169,8 +2170,8 @@ sk:
         text: Aby to tvoji tanečníci roztočili, budeš potrebovať zelený blok s udalosťou.
           Tento blok s udalosťou hovorí "po 4 taktoch".
       8:
-        text: Ak vytiahneš fialový blok "nekonečne krát", môžeš zvoliť tanec, ktorý
-          bude tvoj tanečník tancovať. Keďže sme ho umiestnili po blok "po 4 taktoch",
+        text: Ak vytiahneš fialový blok „rob donekonečna“, môžeš zvoliť tanec, ktorý
+          bude tvoj tanečník tancovať. Keďže sme ho umiestnili po blok „po 4 taktoch“,
           tvoj tanečník bude čakať štyri takty pesničky pred tým, ako začne tancovať.
       9:
         text: Sleduj počítadlo taktov (Measure) na vrchu hracej plochy.
@@ -2393,8 +2394,8 @@ sk:
         text: Aby to tvoji tanečníci roztočili, budeš potrebovať zelený blok s udalosťou.
           Tento blok s udalosťou hovorí "po 4 taktoch".
       6:
-        text: Ak vytiahneš fialový blok "nekonečne krát", môžeš zvoliť tanec, ktorý
-          bude tvoj tanečník tancovať. Keďže sme ho umiestnili po blok "po 4 taktoch",
+        text: Ak vytiahneš fialový blok „rob donekonečna“, môžeš zvoliť tanec, ktorý
+          bude tvoj tanečník tancovať. Keďže sme ho umiestnili po blok „po 4 taktoch“,
           tvoj tanečník bude čakať štyri takty pesničky pred tým, ako začne tancovať.
       7:
         text: Sleduj počítadlo taktov (Measure) na vrchu hracej plochy.

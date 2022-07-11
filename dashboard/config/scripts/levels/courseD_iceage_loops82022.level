@@ -38,11 +38,16 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Are the `turn` blocks right? What else can you change?\",\"hint_id\":\"courseD_iceage_loops8_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/88e537b36cf3a180fe50689f72b6e905/courseD_iceage_loops8.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"The first loop should repeat **3** times, the second should repeat **5** times, the third loop should repeat **4** times, and the last loop should repeat **4** times.\",\"hint_id\":\"courseD_iceage_loops8_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/145446b8c4fdff02db57006f31356e15/courseD_iceage_loops8.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Use loops to help Scrat follow this path.\",\"hint_id\":\"courseD_iceage_loops8_c\",\"hint_type\":\"general\",\"hint_path\":\"[[2,6],[5,6],[5,1],[1,1],[1,5]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ca2ab0a162e907702a751ec7e9a8c16b/courseD_iceage_loops8.mp3\"}]",
     "show_type_hints": "false",
     "include_shared_functions": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-12T20:48:26.355+00:00\",\"changed\":[\"cloned from \\\"courseD_iceage_loops8_2021\\\"\"],\"cloned_from\":\"courseD_iceage_loops8_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-12T20:48:26.355+00:00\",\"changed\":[\"cloned from \\\"courseD_iceage_loops8_2021\\\"\"],\"cloned_from\":\"courseD_iceage_loops8_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>

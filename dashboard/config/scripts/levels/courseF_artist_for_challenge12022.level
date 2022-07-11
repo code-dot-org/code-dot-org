@@ -40,11 +40,18 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/21b776c3c3769458330cd84dfea40f12=levelbuilder/27796.png",
     "name_suffix": "2022",
     "parent_level_id": 21644,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:50:29.826+00:00\",\"changed\":[\"cloned from \\\"courseF_artist_for_challenge1_2021\\\"\"],\"cloned_from\":\"courseF_artist_for_challenge1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:50:29.826+00:00\",\"changed\":[\"cloned from \\\"courseF_artist_for_challenge1_2021\\\"\"],\"cloned_from\":\"courseF_artist_for_challenge1_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "for_loops": 1,
+    "variables": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

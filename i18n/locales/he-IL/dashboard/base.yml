@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 he:
   errors:
     messages:
@@ -581,6 +587,8 @@ he:
       title: 'מסיבת ריקודים'
     dance-2019:
       title: 'מסיבת ריקודים'
+    poem-art:
+      title: 'אומנות השירה'
     hoc:
       title: 'מבוך קלאסי'
       body: 'נסה את הבסיס של מדעי המחשב.מיליונים כבר ניסו.'
@@ -935,10 +943,10 @@ he:
         other: "אחר:"
       resources:
         kodable: 'Kodable'
-        other: "אחר:"
+        other: "אחר"
       robotics:
         kodable: 'Kodable'
-        other: "אחר:"
+        other: "אחר"
       email_opt_in:
         opt_in_yes: 'כן'
         opt_in_no: 'לא'
@@ -947,3 +955,4 @@ he:
     accept: 'מסכים'
   copy: 'העתק'
   confirm: 'אשר'
+  teacher_feedback: "משוב מורה"

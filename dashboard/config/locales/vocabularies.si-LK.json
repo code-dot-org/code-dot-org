@@ -139,6 +139,21 @@
         },
         "define/coursee/2021": {
           "word": "අර්ථ දක්වන්න"
+        },
+        "variable/csd/2021": {
+          "word": "විචල්‍යය"
+        },
+        "conditionals/csd/2021": {
+          "word": "කන්ඩිෂනලස්"
+        },
+        "abstraction/csd/2021": {
+          "word": "ඇබ්ස්ට්‍රැක්ෂන්"
+        },
+        "function/csd/2021": {
+          "word": "ශ්‍රිතය"
+        },
+        "copyright/csd/2021": {
+          "word": "ප්‍රකාශන හිමිකම"
         }
       }
     }

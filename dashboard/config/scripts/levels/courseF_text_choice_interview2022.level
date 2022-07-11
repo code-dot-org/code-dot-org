@@ -68,11 +68,17 @@
     "hide_pause_button": "false",
     "short_instructions": "Fix the bug so the text prints correctly.",
     "encrypted_examples": "P6tbaS59dvK7rn4Ov1ZIPLyGBqrwRZYgznvoRiuLFaVlTg98nH4h5gd1fVEz\ne/CaSm8X/U09MzfXvpCJTxImZw==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:34.127+00:00\",\"changed\":[\"cloned from \\\"courseF_text_choice_interview\\\"\"],\"cloned_from\":\"courseF_text_choice_interview\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:34.127+00:00\",\"changed\":[\"cloned from \\\"courseF_text_choice_interview\\\"\"],\"cloned_from\":\"courseF_text_choice_interview\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 2,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

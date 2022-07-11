@@ -142,7 +142,7 @@ var IF_ELSE = {test: '} else {', type: 'karel_ifElse'};
 var fill = function(num) {
   return {
     test: function(block) {
-      return block.getTitleValue('NAME') === msg.fillN({shovelfuls: num});
+      return block.getFieldValue('NAME') === msg.fillN({shovelfuls: num});
     },
     type: 'procedures_callnoreturn',
     titles: {NAME: msg.fillN({shovelfuls: num})}
@@ -153,7 +153,7 @@ var fill = function(num) {
 var remove = function(num) {
   return {
     test: function(block) {
-      return block.getTitleValue('NAME') === msg.removeN({shovelfuls: num});
+      return block.getFieldValue('NAME') === msg.removeN({shovelfuls: num});
     },
     type: 'procedures_callnoreturn',
     titles: {NAME: msg.removeN({shovelfuls: num})}
@@ -163,7 +163,7 @@ var remove = function(num) {
 // This tests for and creates the "avoid the cow and remove 1" block.
 var AVOID_OBSTACLE_AND_REMOVE = {
   test: function(block) {
-    return block.getTitleValue('NAME') === msg.avoidCowAndRemove();
+    return block.getFieldValue('NAME') === msg.avoidCowAndRemove();
   },
   type: 'procedures_callnoreturn',
   titles: {NAME: msg.avoidCowAndRemove()}
@@ -172,7 +172,7 @@ var AVOID_OBSTACLE_AND_REMOVE = {
 // This tests for and creates the "remove piles" block.
 var REMOVE_PILES = {
   test: function(block) {
-    return block.getTitleValue('NAME') === msg.removeStack({shovelfuls: 4});
+    return block.getFieldValue('NAME') === msg.removeStack({shovelfuls: 4});
   },
   type: 'procedures_callnoreturn',
   titles: {NAME: msg.removeStack({shovelfuls: 4})}
@@ -181,7 +181,7 @@ var REMOVE_PILES = {
 // This tests for and creates the "fill holes" block.
 var FILL_HOLES = {
   test: function(block) {
-    return block.getTitleValue('NAME') === msg.fillStack({shovelfuls: 2});
+    return block.getFieldValue('NAME') === msg.fillStack({shovelfuls: 2});
   },
   type: 'procedures_callnoreturn',
   titles: {NAME: msg.fillStack({shovelfuls: 2})}

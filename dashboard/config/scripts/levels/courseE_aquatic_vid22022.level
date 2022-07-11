@@ -11,10 +11,13 @@
     "instructions_important": "false",
     "name_suffix": "2022",
     "parent_level_id": 27693,
-    "encrypted": "false"
+    "encrypted": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:15.077+00:00\",\"changed\":[\"cloned from \\\"courseE_aquatic_vid2\\\"\"],\"cloned_from\":\"courseE_aquatic_vid2\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:15.077+00:00\",\"changed\":[\"cloned from \\\"courseE_aquatic_vid2\\\"\"],\"cloned_from\":\"courseE_aquatic_vid2\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

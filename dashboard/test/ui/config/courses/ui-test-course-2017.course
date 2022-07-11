@@ -4,6 +4,9 @@
     "ui-test-script-in-course-2017"
   ],
   "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
   "properties": {
     "family_name": "ui-test-course",
     "version_year": "2017"

@@ -20,11 +20,11 @@
   "properties": {
     "announcements": [
       {
-        "notice": "Student opportunity: $40,000 for college and a paid internship",
-        "details": "Amazon Future Engineer is offering 100 qualifying high school seniors across the US $40K for tuition and a coding internship at Amazon. Applications are open to students who plan to study CS in college and close January 25, 2022. Click \"Learn more\" to see the full criteria.",
-        "link": "https://bit.ly/AFEScholarshipLB2022",
+        "notice": "Bring AP® Computer Science A to your students next year!",
+        "details": "Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall. ",
+        "link": "https://code.org/educate/csa",
         "type": "bullhorn",
-        "visibility": "Teacher and student"
+        "visibility": "Teacher-only"
       }
     ],
     "family_name": "csp",

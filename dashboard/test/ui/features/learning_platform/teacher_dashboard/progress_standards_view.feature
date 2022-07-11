@@ -8,12 +8,13 @@ Feature: Viewing and Printing Standards Progress
     Given I am assigned to unit "allthethings"
 
     When I sign in as "Teacher_Sally" and go home
-    And I get hidden script access
+    And I get levelbuilder access
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
-    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
     # Check that you can't switch to standards when not on CSF course
     And I wait until element "#uitest-toggle-detail-view" is visible

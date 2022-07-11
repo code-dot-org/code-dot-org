@@ -2,6 +2,24 @@
 sv:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra liten
+            '0.75': liten
+            '1.00': medel
+            '2.00': stor
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra liten
+            '0.75': liten
+            '1.00': medel
+            '2.00': stor
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} växla varje {N} takter \nmellan {MOVE1} och {MOVE2}"
         options:
@@ -353,6 +371,8 @@ sv:
             '"column"': kolumn
             '"right"': högra kolumnen
             '"x"': korsvis
+            '"plus"': plus
+            '"spiral"': spiral
             '"random"': slumpad
       Dancelab_makeAnonymousDanceSprite:
         text: skapa en ny {COSTUME} på {LOCATION}
@@ -435,6 +455,26 @@ sv:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': alla aliens
             '"BEAR"': björnar
@@ -461,6 +501,8 @@ sv:
             '"column"': kolumn
             '"right"': högra kolumnen
             '"x"': korsvis
+            '"plus"': plus
+            '"spiral"': spiral
             '"random"': slumpad
       Dancelab_mixColors:
         text: blanda {COLOR1} och {COLOR2}
@@ -495,6 +537,7 @@ sv:
             '"text"': Låttitel
             '"galaxy"': Mellanslag
             '"sparkles"': Gnistror
+            '"spiral"': Spiral
             '"disco"': Fyrkanter
             '"stars"': Stjärnor
           PALETTE:
@@ -535,6 +578,7 @@ sv:
             '"squiggles"': Krumelurer
             '"galaxy"': Mellanslag
             '"sparkles"': Gnistror
+            '"spiral"': Spiral
             '"disco"': Fyrkanter
             '"stars"': Stjärnor
             '"music_wave"': Vågor
@@ -597,6 +641,7 @@ sv:
             '"smile_face"': Leenden
             '"spotlight"': Strålkastare
             '"color_lights"': Scenljus
+            '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
         text: ställ in förgrundseffekt {EFFECT}
         options:
@@ -619,6 +664,7 @@ sv:
             '"spotlight"': Strålkastare
             '"color_lights"': Scenljus
             '"exploding_stars"': Stjärnfall
+            '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'Ställ in {SPRITE} {PROPERTY} till {VAL} '
         options:
@@ -986,7 +1032,13 @@ sv:
       gamelab_clickedOn:
         text: när {SPRITE} klickade
       gamelab_clickedSpritePointer:
-        text: klickade {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(patrolling, []): patrullerar
+            new Behavior(moving_west_and_looping, []): flyttar västerut och loopar
+            new Behavior(moving_east_and_looping, []): flyttar österut och loopar
       gamelab_comment:
         text: 'kommentar: {COMMENT}'
       gamelab_costumeImage:
@@ -1003,6 +1055,12 @@ sv:
         text: rita linje {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: kanter blockera {SPRITE} från att flytta
+      gamelab_everyInterval:
+        text: 'varje {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': sekunder
+            '"frames"': ramar
       gamelab_followingTargets:
         text: följ mål
       gamelab_getAllSprites:
@@ -1038,6 +1096,19 @@ sv:
         text: |-
           om {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} kostym är {COSTUME}"
       gamelab_isKeyPressed:
@@ -1157,6 +1228,12 @@ sv:
             '90': ner
             '180': vänster
             '270': upp
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': liten
+            '50': medel
+            '100': stor
       gamelab_mirrorSprite:
         text: "{SPRITE} Ansikte {DIRECTION}"
         options:
@@ -1230,6 +1307,11 @@ sv:
             "'sound://category_digital/jump_7.mp3'": hoppa
       gamelab_playSpeech:
         text: spela tal {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): flytta med piltangenter
+            draggable(): vara dragbar
       gamelab_pointInDirection:
         text: Punkt {SPRITE} {DIRECTION}
         options:
@@ -1339,6 +1421,14 @@ sv:
             '"scale"': storlek
             '"width"': bredd
             '"height"': höjd
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra långsam
+            '3': långsam
+            '5': normal
+            '7': snabb
+            '9': extra snabb
       gamelab_setTint:
         text: ändra färg på {THIS} Att {COLOR}
       gamelab_setupScoreboard:
@@ -1663,6 +1753,10 @@ sv:
         text: 'plats x: {X} Y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_poemTextJoin:
+        options:
+          TEXT2:
+            '""': '""'
       Mikelab_randomColor:
         text: slumpad färg
       Mikelab_removeBehaviorSimple:
@@ -1687,6 +1781,7 @@ sv:
               framsida
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': kök
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': vardagsrum
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': äng
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': parkutsikt
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': tall
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': fotbollsplan
@@ -1716,6 +1811,11 @@ sv:
           CORNER:
             '"right"': höger
             '"left"': vänster
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"above"': över
+            '"below"': under
       Mikelab_sprite:
         text: Nya {COSTUME} Sprite på {LOCATION}
         options:
@@ -1776,18 +1876,28 @@ sv:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"bamboo"': bambu
+            '"brick"': tegelsten
+            '"fire"': brand
+            '"flowers"': blommor
             '"hearts"': hjärtan
             '"iceCream"': Glass
+            '"leaves"': löv
             '"rainbow"': regnbåge
             '"stars"': stjärnor
+            '"waves"': vågor
       Poetry_glideTo:
         text: "{SPRITE} glid till {LOCATION}"
+      Poetry_hideText:
+        text: dölj text
       Poetry_makeBurst:
         text: skapa {EFFECT} effekt med {NUM} {ANIMATION_NAME} sprites
         options:
           EFFECT:
+            '"burst"': brista
             '"pop"': pop
             '"rain"': regn
+            '"spiral"': spiral
       Poetry_makeNewSpriteAnon:
         text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
       Poetry_makeNumSprites:
@@ -1798,12 +1908,18 @@ sv:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Lugn
             '"sound://category_nature/steady_campfire_loop.mp3"': Lägereld
             '"sound://category_nature/rain_loop.mp3"': Duggregn
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': skog
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Hemsökt
             '"sound://category_background/inside_plane.mp3"': Gnola
             '"sound://category_loops/red_flag_loop1.mp3"': Uppdrag
             '"sound://category_nature/summer_night_loop.mp3"': natt
+            '"sound://category_background/ocean_waves.mp3"': hav
+            '"sound://category_background/rain_thunderstorm_calm.mp3"': regnig
+            '"sound://category_background/rainforest_ambient_sound.mp3"': regnskog
             '"sound://category_background/repitition.mp3"': Ridning
+            '"sound://category_background/wavering_wind.mp3"': sömnig
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Långsam
+            '"sound://category_background/waterfall.mp3"': vattenfall
       Poetry_playSound:
         text: spelljud {SOUND}
         options:
@@ -1819,6 +1935,7 @@ sv:
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Hoppa
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Poff
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Avsöka
+            '"sound://category_background/typewriter.mp3"': skrivmaskin
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Livfull
             '"sound://category_achievements/peaceful_win_1.mp3"': Vinna
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Virvla
@@ -1839,7 +1956,12 @@ sv:
             '"stars"': Stjärnor
             '"squiggles"': Krumelurer
           PALETTE:
+            '"autumn"': höst
+            '"ocean"': hav
             '"rainbow"': regnbåge
+            '"roses"': rosor
+            '"sky"': himmel
+            '"summer"': sommar
             '"winter"': vinter
       Poetry_setBackgroundImageAs:
         text: ställa in bakgrunden till {IMG}
@@ -1864,6 +1986,32 @@ sv:
             '"hearts"': hjärtan
             '"rain"': regn
             '"starburst"': Stjärnfall
+      Poetry_setTextEffect:
+        options:
+          EFFECT:
+            '"typewriter"': skrivmaskin
+      Poetry_showText:
+        text: visa text
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            '"growing"': växer
+            '"moving_north_and_looping"': loopar norrut
+            '"moving_south_and_looping"': loopar söderut
+            '"moving_east_and_looping"': loopar österut
+            '"moving_west_and_looping"': loopar västerut
+            '"shrinking"': krymper
+            '"swimming_left_and_right"': simmar
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            '"growing"': växer
+            '"moving_north_and_looping"': loopar norrut
+            '"moving_south_and_looping"': loopar söderut
+            '"moving_east_and_looping"': loopar österut
+            '"moving_west_and_looping"': loopar västerut
+            '"shrinking"': krymper
+            '"swimming_left_and_right"': simmar
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
@@ -1929,6 +2077,8 @@ sv:
             '0.75': most
             '0.5': half of
             '0.25': few
+          RATE:
+            '"immediately"': omedelbart
       aalab_someStartIntervention:
         options:
           PORTION:

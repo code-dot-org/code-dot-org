@@ -529,6 +529,8 @@ ga:
         codebreak_e01: 'Códbhriseadh 1.0: Algartaim le Hill Harper'
         playlab_2021: Buneolas ar an Spraotharlann
         playlab_2021_reader: Buneolas ar an Spraotharlann
+        csp_applab_parameters: Feidhmeanna a ghlacann le Paraiméadair
+        CS_Changing_Everything: Tá an Ríomheolaíocht ag athrú an domhain
     callout:
       text:
         drag_blocks: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile é

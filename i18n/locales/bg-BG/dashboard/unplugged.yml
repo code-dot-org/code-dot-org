@@ -302,6 +302,8 @@ bg:
       BuildingAFoundation_2019:
         title: 'превод липсва: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'превод липсва: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: Моите Циклични Приятели Роботи
       Conditionals_2019:
         title: Условия
         desc: За да научат за условията, учениците играят на карти и трябва да създадат правила като "Ако изтеглиш червена карта, аз получавам точка" и "Ако изтеглиш черна карта, ще получиш точка."
@@ -325,6 +327,8 @@ bg:
       BinaryImages_2019:
         title: Бинарни образи(картини)
         desc: Въпреки че много хора мислят за бинарния код като за нули и единици, в нашите предишни курсове учениците научиха, че информацията може да бъде представена в различни варианти.  Този урок развива тази концепция с една стъпка напред, тъй като илюстрира как  компютърът може да съхранява още по-сложна информация (като изображения и цветове) с двоичен код.
+      courseE_unplugged_privateInformation_2019:
+        title: Лична Информация
       SongwritingParameters_2019:
         title: 'превод липсва: en-US.data.unplugged.SongwritingParameters_2018.title'
         desc: 'превод липсва: en-US.data.unplugged.SongwritingParameters_2018.desc'

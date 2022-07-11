@@ -10,10 +10,13 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 20983,
-    "name_suffix": "_2021"
+    "name_suffix": "_2021",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-07T18:56:39.320+00:00\",\"changed\":[\"cloned from \\\"bb8_skinOverview_K-1_video_2021\\\"\"],\"cloned_from\":\"bb8_skinOverview_K-1_video_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-07T18:56:39.320+00:00\",\"changed\":[\"cloned from \\\"bb8_skinOverview_K-1_video_2021\\\"\"],\"cloned_from\":\"bb8_skinOverview_K-1_video_2021\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

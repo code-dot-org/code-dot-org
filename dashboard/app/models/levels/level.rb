@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -30,11 +30,11 @@ class Level < ApplicationRecord
   include SharedConstants
   include Levels::LevelsWithinLevels
 
-  belongs_to :game
+  belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
-  belongs_to :ideal_level_source, class_name: "LevelSource" # "see the solution" link uses this
-  belongs_to :user
+  belongs_to :ideal_level_source, class_name: "LevelSource", optional: true # "see the solution" link uses this
+  belongs_to :user, optional: true
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
@@ -56,7 +56,6 @@ class Level < ApplicationRecord
   validate :validate_game, on: [:create, :update]
 
   after_save :write_custom_level_file
-  after_save :update_key_list
   after_destroy :delete_custom_level_file
 
   accepts_nested_attributes_for :level_concept_difficulty, update_only: true
@@ -130,16 +129,6 @@ class Level < ApplicationRecord
     @@specified_autoplay_video[video_key + ":" + I18n.locale.to_s] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?
   end
 
-  def self.key_list
-    @@all_level_keys ||= Level.all.map {|l| [l.id, l.key]}.to_h
-    @@all_level_keys
-  end
-
-  def update_key_list
-    @@all_level_keys ||= nil
-    @@all_level_keys[id] = key if @@all_level_keys
-  end
-
   def summarize_concepts
     concepts.pluck(:name).map {|c| "'#{c}'"}.join(', ')
   end
@@ -161,7 +150,7 @@ class Level < ApplicationRecord
   end
 
   def unplugged?
-    game && game.unplugged?
+    game&.unplugged?
   end
 
   def finishable?
@@ -213,8 +202,8 @@ class Level < ApplicationRecord
       unless callout_json.blank?
         return JSON.parse(callout_json).map do |callout_definition|
           i18n_key = "data.callouts.#{name}.#{callout_definition['localization_key']}"
-          callout_text = should_localize? &&
-            I18n.t(i18n_key, default: nil) ||
+          callout_text = (should_localize? &&
+            I18n.t(i18n_key, default: nil)) ||
             callout_definition['callout_text']
 
           Callout.new(
@@ -256,8 +245,7 @@ class Level < ApplicationRecord
   end
 
   def should_write_custom_level_file?
-    changed = saved_changes? || (level_concept_difficulty && level_concept_difficulty.saved_changes?)
-    changed && write_to_file? && published
+    write_to_file? && published
   end
 
   def write_custom_level_file
@@ -391,7 +379,7 @@ class Level < ApplicationRecord
   ).freeze
 
   def self.where_we_want_to_calculate_ideal_level_source
-    where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
+    where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
     where('ideal_level_source_id is null').
     to_a.reject {|level| level.try(:free_play)}
   end
@@ -649,32 +637,70 @@ class Level < ApplicationRecord
   #   name_suffix if one exists.
   # @param [String] editor_experiment Optional value to set the
   #   editor_experiment property to on the newly-created level.
-  def clone_with_suffix(new_suffix, editor_experiment: nil)
+  # @param [Boolean] allow_existing Whether to return an existing level if one
+  #   with a matching name is found. If false, the suffix will be modified to
+  #   make the new name unique.
+  def clone_with_suffix(new_suffix, editor_experiment: nil, allow_existing: true)
     # explicitly don't clone blockly levels (will cause a validation failure on non-unique level_num)
     return self if key.start_with?('blockly:')
 
     # Make sure we don't go over the 70 character limit.
-    max_index = 70 - new_suffix.length - 1
-    new_name = "#{base_name[0..max_index]}#{new_suffix}"
+    suffix = new_suffix[0] == '_' ? new_suffix : "_#{new_suffix}"
+    max_index = 70 - suffix.length - 1
+    prefix = base_name[0..max_index]
+    new_name = "#{prefix}#{suffix}"
 
-    return Level.find_by_name(new_name) if Level.find_by_name(new_name)
+    level = Level.find_by_name(new_name)
+    if level
+      return level if allow_existing
+      new_name = next_unused_name_for_copy(suffix)
+    end
 
-    level = clone_with_name(new_name, editor_experiment: editor_experiment)
+    begin
+      level = clone_with_name(new_name, editor_experiment: editor_experiment)
 
-    update_params = {name_suffix: new_suffix}
-    update_params[:editor_experiment] = editor_experiment if editor_experiment
+      update_params = {name_suffix: suffix}
+      update_params[:editor_experiment] = editor_experiment if editor_experiment
 
-    child_params_to_update = Level.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
-    update_params.merge!(child_params_to_update)
+      # Cloning of level group sublevels is handled by
+      # LevelGroup.clone_sublevels_with_suffix. In order to be able to customize
+      # that cloning logic, we must skip initially cloning child levels here.
+      unless is_a? LevelGroup
+        child_params_to_update = Level.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
+        update_params.merge!(child_params_to_update)
+      end
 
-    level.update!(update_params)
+      level.update!(update_params)
 
-    # Copy the level_concept_difficulty of the parent level to the new level
-    new_lcd = level_concept_difficulty.dup
-    level.level_concept_difficulty = new_lcd
-    level.save! if level.changed?
+      # Copy the level_concept_difficulty of the parent level to the new level
+      new_lcd = level_concept_difficulty.dup
+      level.level_concept_difficulty = new_lcd
+      # trigger a save to rewrite the custom level file
+      level.save!
 
-    level
+      level
+    rescue Exception => e
+      raise e, "Failed to clone Level #{name.inspect} as #{new_name.inspect}. Message:\n#{e.message}", e.backtrace
+    end
+  end
+
+  COPY_SUFFIX_LENGTH = 8 # '_copy999'.length
+
+  # Returns the first level name of the form "<base_name>_copy<num>_<suffix>" which
+  # is not already used by another level.
+  # @param [String] suffix
+  def next_unused_name_for_copy(suffix)
+    # Make sure we don't go over the 70 character limit.
+    max_index = 70 - COPY_SUFFIX_LENGTH - suffix.length - 1
+    prefix = base_name[0..max_index]
+
+    i = 1
+    loop do
+      new_name = "#{prefix}_copy#{i}#{suffix}"
+      level = Level.find_by_name(new_name)
+      return new_name unless level
+      i += 1
+    end
   end
 
   def age_13_required?

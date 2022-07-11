@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:09:11 UTC",
+    "serialized_at": "2022-01-29 00:54:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -451,6 +451,19 @@
       }
     },
     {
+      "key": "7b2bfba0-2be1-4c53-8653-de63fe10facf",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b2bfba0-2be1-4c53-8653-de63fe10facf",
+        "lesson.key": "Defining Attributes",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
       "key": "7e6a5f45-c3bf-4cbb-bc8a-ed7cbfb2ceb3",
       "position": 1,
       "properties": {
@@ -487,6 +500,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "833dc71d-c5db-4f3a-93db-ead35f2e0a75",
+        "lesson.key": "Using Variables",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
+      "key": "991d3e53-963a-4c51-a259-6809b78c7638",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "991d3e53-963a-4c51-a259-6809b78c7638",
         "lesson.key": "Using Variables",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot-facilitator"
@@ -535,6 +561,19 @@
       }
     },
     {
+      "key": "81ac9269-d97e-445f-93ba-9105ffc8527a",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "81ac9269-d97e-445f-93ba-9105ffc8527a",
+        "lesson.key": "Writing Constructors",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
       "key": "6ef5ad55-388d-4982-9116-a952524da40f",
       "position": 1,
       "properties": {
@@ -571,6 +610,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "d92893ec-8ab6-4f92-8bd4-5cc5c790c5c4",
+        "lesson.key": "Adding Multiple Constructors",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
+      "key": "6d0c5045-3242-4216-a037-466ba3896da0",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6d0c5045-3242-4216-a037-466ba3896da0",
         "lesson.key": "Adding Multiple Constructors",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot-facilitator"
@@ -619,6 +671,19 @@
       }
     },
     {
+      "key": "12d1a41e-7396-445b-ace6-c3f8ecb479ca",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12d1a41e-7396-445b-ace6-c3f8ecb479ca",
+        "lesson.key": "Manipulating Variables and Object Data",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
       "key": "6ade01bf-8194-4759-a50f-0bc11c948151",
       "position": 1,
       "properties": {
@@ -655,6 +720,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "a7a76c6b-09d9-488b-a36c-5dc244449dd4",
+        "lesson.key": "Minimizing Errors in Initialization",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
+      "key": "4db487bd-a5d6-4904-a8db-f4f8f8f73906",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4db487bd-a5d6-4904-a8db-f4f8f8f73906",
         "lesson.key": "Minimizing Errors in Initialization",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot-facilitator"
@@ -703,6 +781,19 @@
       }
     },
     {
+      "key": "9880ac29-bcdf-49ca-8d3e-93d40f20d549",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9880ac29-bcdf-49ca-8d3e-93d40f20d549",
+        "lesson.key": "Writing Constructors for Hierarchies",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
       "key": "b5a1dd47-a2c4-452a-ab93-a5d4a046e187",
       "position": 1,
       "properties": {
@@ -739,6 +830,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f8aa3ea0-fe5b-4951-bca5-2efcedd8dfa6",
+        "lesson.key": "Accessing Object Data",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
+      "key": "5fa7e5b0-2b3b-494e-8c25-ae3b8853f192",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5fa7e5b0-2b3b-494e-8c25-ae3b8853f192",
         "lesson.key": "Accessing Object Data",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot-facilitator"
@@ -787,6 +891,19 @@
       }
     },
     {
+      "key": "3368be3a-cac4-4bbf-bba0-a7abb34585df",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3368be3a-cac4-4bbf-bba0-a7abb34585df",
+        "lesson.key": "Modifying Object Data",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
       "key": "efd91027-f077-406b-9135-db834518f649",
       "position": 1,
       "properties": {
@@ -823,6 +940,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "563154c3-6cd0-4918-af21-7ea5c4a0e4f7",
+        "lesson.key": "Displaying Object Information",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
+      "key": "e92f41c9-7a55-44dc-910c-b04bb97f69b3",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e92f41c9-7a55-44dc-910c-b04bb97f69b3",
         "lesson.key": "Displaying Object Information",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot-facilitator"
@@ -1227,6 +1357,17 @@
       }
     },
     {
+      "key": "4dff76a7-3913-4396-8ead-74b70a2284a9",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "4dff76a7-3913-4396-8ead-74b70a2284a9",
+        "lesson_activity.key": "7b2bfba0-2be1-4c53-8653-de63fe10facf"
+      }
+    },
+    {
       "key": "5205e4a3-1367-4e1b-87c3-ab846e42a515",
       "position": 1,
       "properties": {
@@ -1565,6 +1706,17 @@
       }
     },
     {
+      "key": "9edcf608-f081-4857-bd30-0e7cc94e01f0",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.3\n* Topic Questions 1.4\n* Topic Questions 2.6\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "9edcf608-f081-4857-bd30-0e7cc94e01f0",
+        "lesson_activity.key": "991d3e53-963a-4c51-a259-6809b78c7638"
+      }
+    },
+    {
       "key": "e54148e5-03d3-40c7-9ac6-adae983e9365",
       "position": 1,
       "properties": {
@@ -1727,8 +1879,20 @@
       }
     },
     {
-      "key": "a8d8f606-2dc0-4f40-b8b1-697de2de577d",
+      "key": "7c3cc275-9387-4511-9bba-b907c40fe466",
       "position": 11,
+      "properties": {
+        "description": "When we call the constructor to create a `Painter` object, the constructor call interrupts the sequential execution of statements, causing the program to first execute the statements in the method or constructor before continuing. Once the last statement in the method or constructor has executed or a return statement is executed, flow of control is returned to the point immediately following where the method or constructor was called. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7c3cc275-9387-4511-9bba-b907c40fe466",
+        "lesson_activity.key": "046137f0-f0ea-4d22-8776-d383da52c3b8"
+      }
+    },
+    {
+      "key": "a8d8f606-2dc0-4f40-b8b1-697de2de577d",
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 3 and 4 on Code Studio. Students create a `Dessert` object and use Scanner to get user input for values for the instance variables.",
         "progression_name": "Creating a Dessert Object",
@@ -1784,6 +1948,17 @@
       "seeding_key": {
         "activity_section.key": "e764a287-254d-4a8d-96a7-9aeb5e9c8b88",
         "lesson_activity.key": "79890174-9899-42f8-a260-4fcf5c0d7e6c"
+      }
+    },
+    {
+      "key": "45a9c243-4494-45d3-9d88-e55d3361e3ea",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "45a9c243-4494-45d3-9d88-e55d3361e3ea",
+        "lesson_activity.key": "81ac9269-d97e-445f-93ba-9105ffc8527a"
       }
     },
     {
@@ -2000,6 +2175,17 @@
       }
     },
     {
+      "key": "2413200a-2954-4685-b6f0-8f98626fc9b4",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "2413200a-2954-4685-b6f0-8f98626fc9b4",
+        "lesson_activity.key": "6d0c5045-3242-4216-a037-466ba3896da0"
+      }
+    },
+    {
       "key": "6af56e40-a160-4d27-a671-c55779660113",
       "position": 1,
       "properties": {
@@ -2153,6 +2339,17 @@
       "seeding_key": {
         "activity_section.key": "282c983b-7fc4-49ae-94be-ffaf6b09bb08",
         "lesson_activity.key": "13f5754c-5c03-4633-8d2c-76632e51148d"
+      }
+    },
+    {
+      "key": "e5376c9e-6a96-4210-9040-34f6f4e6bdbe",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5376c9e-6a96-4210-9040-34f6f4e6bdbe",
+        "lesson_activity.key": "12d1a41e-7396-445b-ace6-c3f8ecb479ca"
       }
     },
     {
@@ -2546,6 +2743,17 @@
       }
     },
     {
+      "key": "6b20c42b-7b56-4eee-a718-9b75e0b3c86e",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.2\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b20c42b-7b56-4eee-a718-9b75e0b3c86e",
+        "lesson_activity.key": "4db487bd-a5d6-4904-a8db-f4f8f8f73906"
+      }
+    },
+    {
       "key": "8db7f441-7d5e-4e91-aa2f-72343c0a9f72",
       "position": 1,
       "properties": {
@@ -2758,6 +2966,17 @@
       "seeding_key": {
         "activity_section.key": "4b61fe4c-5ab2-4b06-8baf-dc1096541532",
         "lesson_activity.key": "8cda79d1-8e93-4177-ba84-9a642fb75121"
+      }
+    },
+    {
+      "key": "0a0ba72c-ed42-49fb-afbc-5c6c387a33d8",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.5\n* Topic Questions 5.4\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a0ba72c-ed42-49fb-afbc-5c6c387a33d8",
+        "lesson_activity.key": "9880ac29-bcdf-49ca-8d3e-93d40f20d549"
       }
     },
     {
@@ -3091,6 +3310,17 @@
       }
     },
     {
+      "key": "9ca0af87-fbf7-49f6-8393-c43ad1692695",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.4\n* Topic Questions 5.5\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ca0af87-fbf7-49f6-8393-c43ad1692695",
+        "lesson_activity.key": "5fa7e5b0-2b3b-494e-8c25-ae3b8853f192"
+      }
+    },
+    {
       "key": "d4258a3b-4edc-49db-bbc5-cf475964070d",
       "position": 1,
       "properties": {
@@ -3400,6 +3630,17 @@
       }
     },
     {
+      "key": "95bcd010-3882-4263-8985-1f31c67cef46",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.3\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "95bcd010-3882-4263-8985-1f31c67cef46",
+        "lesson_activity.key": "3368be3a-cac4-4bbf-bba0-a7abb34585df"
+      }
+    },
+    {
       "key": "0cd2b81a-07d4-4bf2-83dd-652ffb447974",
       "position": 1,
       "properties": {
@@ -3536,8 +3777,20 @@
       }
     },
     {
-      "key": "df3d2c80-f14d-482c-aa4a-7b86cc1cedf9",
+      "key": "22836880-7961-4ae4-bdd4-9c7ba3dbb0e2",
       "position": 7,
+      "properties": {
+        "description": "When we wrote our `toString()` method to print the values stored in the instance variables, we concatenated those primitive values with a `String` object. This causes implicit conversion of these values to `String` objects.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "22836880-7961-4ae4-bdd4-9c7ba3dbb0e2",
+        "lesson_activity.key": "db41289d-0d0a-4930-8c00-16633dcc791f"
+      }
+    },
+    {
+      "key": "df3d2c80-f14d-482c-aa4a-7b86cc1cedf9",
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** After students have written their `toString()` method and refactored `printInfo()`, remind students how to print information to the console using the `System.out.print()` Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 2 on Code Studio to test their implementations."
       },
@@ -3548,7 +3801,7 @@
     },
     {
       "key": "fae897c2-c4a6-4256-872c-e3e03315d126",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce formatted output using escape sequences.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define escape sequences.\n* Have students predict the output before clicking through the animated slides to reveal the answer.\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> String formatted with a quote\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> String formatted with new lines\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> String formatted with backslashes"
       },
@@ -3559,7 +3812,7 @@
     },
     {
       "key": "a9f8dfd6-6047-442d-8bb2-4e1ebea87e1f",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students refactor `toString()` and `printInfo()` to include formatting. Have students proceed to Level 4 to complete the Check for Understanding.",
         "progression_name": "Formatting toString()"
@@ -3571,7 +3824,7 @@
     },
     {
       "key": "ef13e97c-121c-4fef-8578-db78f7e588a9",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "While `printInfo()` always prints the string, `toString()` creates the string. This subtle difference is something we can leverage to write DRY code: When writing `toString()` methods for objects with a “has-a” relationship, we can call the `toString()` of objects stored as instance variables when writing the class’s own `toString()`.",
         "remarks": true
@@ -3583,7 +3836,7 @@
     },
     {
       "key": "2150a0ab-24e6-4b40-b58d-0699f2a4ea8d",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students write a `toString()` method for `FoodTruck`, which calls the `toString()` of the `Dessert`.",
         "progression_name": "FoodTruck toString()"
@@ -3595,7 +3848,7 @@
     },
     {
       "key": "d5f2f788-53c5-4390-8955-b3f18ca6313a",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the alternate approach to Level 5. Instead of calling `toString()` of the `Dessert`, when an object is concatenated with a `String`, the object’s `toString()` is implicitly called."
       },
@@ -3657,6 +3910,17 @@
       "seeding_key": {
         "activity_section.key": "b64fd1a6-9282-4b2c-a12b-519176e34f6c",
         "lesson_activity.key": "563154c3-6cd0-4918-af21-7ea5c4a0e4f7"
+      }
+    },
+    {
+      "key": "3eb790d6-aa6f-4591-a627-7c84cb3fbef7",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.8\n* Topic Questions 5.9\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "3eb790d6-aa6f-4591-a627-7c84cb3fbef7",
+        "lesson_activity.key": "e92f41c9-7a55-44dc-910c-b04bb97f69b3"
       }
     },
     {

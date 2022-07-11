@@ -43,8 +43,8 @@ ms:
   social_hoc2020_global_movement: Jam Kod ialah pergerakan global yang mencapai puluhan
     juta pelajar. Tutorial selama sejam tersedia dalam 45+ bahasa untuk semua peringkat
     umur.
-  social_hoc2020_coming_dates: Acara Jam Kod akan tiba pada 7-13 Disember 2020. Sains
-    komputer ialah asas untuk setiap pelajar mempelajarinya.
+  social_hoc2020_coming_dates: Acara Hour of Code akan tiba pada 7-13 Disember 2020.
+    Sains komputer ialah asas untuk setiap pelajar mempelajarinya.
   hoc2020_ai_subheader: Acara Jam Kod 2020 akan tiba!
   hoc2020_ai_header: Terokai Kecerdasan Buatan
   hoc2020_ai_description: AI dan Pembelajaran Mesin memberikan kesan kepada seluruh
@@ -144,6 +144,9 @@ ms:
     masalah dunia. Sains komputer ialah kursus lebih daripada pengekodan semata-mata!
     Nikmati langkah pertama Code.org dalam perjalanan baharu mengajar lebih banyak
     tentang AI sepanjang kurikulum kami.  '
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Siaran Langsung Acara Jam Kod
   hoc_live_sign_up_title: Sila daftar untuk Siaran Langsung Jam Kod
   hoc_live_learn_title: Belajar dengan Siaran Langsung Acara Jam Kod
@@ -168,6 +171,11 @@ ms:
     studies. Through these modules, projects, and lessons, classrooms can explore
     their usual subjects in exciting new ways!
   hoc_overview_csc_learn_more: Learn more about CS Connections
+  hoc_danceparty_alt_text: Animated characters dancing to music underneath the text
+    'Code your own dance party'
+  hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
+    a scanner on the bottom, and an LED face
+  hoc_banner_alt_text: Hour of Code banner
   ai_video_title_what_is_ai: Apakah AI?
   ai_video_title_algorithm_bias: Memerangi kepincangan di dalam algoritma
   ai_video_title_phone_knows_dog: Bagaimanakah telefon anda tahu ini ialah anjing?
@@ -276,7 +284,7 @@ ms:
   front_volunteers: Sukarelawan teknikal diperlukan
   front_start_learning: Memulakan pembelajaran
   header_menu_resources: Sumber
-  header_menu_faq: Soalan lazim
+  header_menu_faq: Soalan Lazim
   header_menu_how_to: Panduan Cara
   header_menu_promote: Menggalakkan
   header_menu_activities: Aktiviti
@@ -657,7 +665,7 @@ ms:
     berkembang kepada semua jenis usaha komuniti. Lihat [tutorials and activities](%{tutorials}).
     Kempen akar umbi ini disokong oleh lebih daripada [400 partners](%{partners})
     dan 200,000 pendidik di seluruh dunia.
-  hoc_faq_last_year: Cublah tutorial itu
+  hoc_faq_last_year: Cuba tutorial itu
   hoc_faq_when_is_hoc_q: Bilakah acara Hour of Code diadakan?
   hoc_faq_when_is_hoc_a: Acara Hour of Code diadakan pada setiap tahun semasa <a href='%{csedweek_url}'>
     Minggu Pendidikan Sains Komputer</a>. Minggu Pendidikan Sains Kumputer %{campaign_date_year}
@@ -731,7 +739,7 @@ ms:
     boleh didapati pada [%{partner_url}/learn](%{codeorg_url}/learn) di dalam huraian
     khusus tutorial. Jangan lupa bahawa kami juga menawarkan [unplugged activities](%{unplugged_url})
     jika sekolah anda tidak dapat memuatkan tutorial!
-  hoc_faq_need_computers_q: Adakah saya memerlukan komputer untuk setiap peserta?
+  hoc_faq_need_computers_q: Adakah saya memerlukan komputer untuk setiap penyertaan?
   hoc_faq_need_computers_a: Tidak. Kami menyediakan tutorial Hour of Code yang boleh
     dilakukan pada PC, telefon pintar, tablet malah ada yang tidak memerlukan komputer
     sama sekali! Anda boleh turut serta walau di mana sahaja anda berada, dengan apa
@@ -808,9 +816,9 @@ ms:
     awal). Jika anda melihat tutorial pada <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
     anda boleh menemui tutorial lain yang berfungsi dengan baik pada iPad - daripada
     Code.org, Tynker, Lightbot, atau CodeSpark.
-  hoc_faq_scratch_a_markdown: Scratch tidak dijalankan pada tablet. Jika pelajar anda
-    ialah golongan muda, mereka boleh menggunakan aplikasi iPad ScratchJR (untuk pembaca
-    awal). Jika anda melihat tutorial pada [%{partner_url}/learn](%{codeorg_url}/learn),
+  hoc_faq_scratch_a_markdown: Scratch tidak dapat dijalankan pada tablet. Jika pelajar
+    anda ialah golongan muda, mereka boleh menggunakan aplikasi iPad ScratchJR (untuk
+    pembaca awal). Jika anda melihat tutorial pada [%{partner_url}/learn](%{codeorg_url}/learn),
     anda boleh menemui tutorial lain yang berfungsi dengan baik pada iPad - daripada
     Code.org, Tynker, Lightbot, atau CodeSpark.
   hoc_faq_count_hoc_q: Bagaimanakah anda mengira Hour of Code?
@@ -871,7 +879,7 @@ ms:
     Selain pelajar, "pelajar" lain ialah pendidik yang memperoleh keyakinan selepas sejam bahawa mereka mereka boleh mengajar sains komputer walaupun mereka mungkin tidak mempunyai ijazah kolej sebagai saintis komputer. Puluhan ribu guru memutuskan untuk melanjutkan pelajaran dalam bidang sains komputer, sama ada menghadiri PD atau menawarkan kursus susulan dalam talian, atau kedua-duanya sekali. Dan ini juga diterima pakai kepada pentadbir sekolah, yang menyedari bahawa sains komputer ialah sesuatu yang dikehendaki oleh pelajar dan guru mereka berkebolehan melakukannya.
 
     Paling utama sekali, perkara yang boleh dipelajari oleh semua peserta dalam satu jam, kita pun boleh lakukannya.
-  hoc_faq_more_questions_q: Masih mempunyai soalan lagi?
+  hoc_faq_more_questions_q: Ada soalan lagi?
   hoc_faq_more_questions_a: Cuba dapatkan jawapan di dalam <a href='http://support.code.org'>forum
     sokongan</a> kami.
   hoc_faq_more_questions_a_markdown: Cuba dapatkan jawapan di dalam [support forum](http://support.code.org)
@@ -897,7 +905,7 @@ ms:
     kami bagi membolehkan anda mencetak sijil untuk seluruh kelas anda dengan lebih
     awal. Anda juga boleh mencetak [special certificates](%{codeorg_url}/certificates?course=mc)
     untuk pelajar yang melakukan tutorial Minecraft.
-  hoc_faq_logo_q: Adakah terdapat pengehadan kepada cara saya boleh menggunakan logo
+  hoc_faq_logo_q: Adakah terdapat pengehadan tentang cara saya boleh menggunakan logo
     atau nama Hour of Code?
   hoc_faq_logo_a: Hour of Code sudah menjadi tanda dagangan. Kami tidak mahu menghalang
     penggunaannya, tetapi kami mahu memastikan penggunaannya sesuai mengikut had yang
@@ -948,7 +956,7 @@ ms:
   resources_stickers: Pelekat
   resources_how_to_guides: Panduan cara
   resources_promote: Menggalakkan
-  resources_nav_tutorials: Cublah tutorial itu
+  resources_nav_tutorials: Cuba tutorial itu
   resources_nav_promote: Sebarkan berita ini
   resources_nav_spread_word: Bagaimanakah untuk melibatkan diri
   resources_banner_promote_text: Menggalakkan
@@ -1049,6 +1057,7 @@ ms:
   footer_menu_support: Sokongan
   footer_menu_terms: Terma
   footer_menu_privacy: Dasar Privasi
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: 1 Jam Pengaturacaraan
   learn_banner_blurb: Cubalah suatu tutorial sejam yang direka bagi semua peringkat
     umur dalam lebih daripada 45 bahasa. Sertai berjuta-juta pelajar dan guru dari
@@ -11088,86 +11097,167 @@ ms:
   all: Semua
   dont_know: Saya tidak tahu
   language_label: Bahasa
-  ar: Arabic
-  az: Azerbaijani
-  bg: Bulgarian
-  bn: Bangla
-  br: Breton
-  bs: Bosnian
-  ca: Catalan
-  cs: Czech
-  cs-cz: Czech (Czechia)
-  da: Danish
-  da-dk: Danish (Denmark)
-  de: German
-  de-de: German (Germany)
-  el: Greek
-  el-gr: Greek (Greece)
-  en: Bahasa Inggeris
-  en-gb: English (United Kingdom)
-  es: Spanish
-  es-es: Spanish (Spain)
-  es-mx: Spanish (Mexico)
-  et: Estonian
-  eu: Basque
-  fa: Persian
-  fa-ir: Persian (Iran)
-  fi: Finnish
-  fi-fi: Finnish (Finland)
-  fil-ph: Filipino (Philippines)
-  fr: French
-  gl: Galician
-  he: Hebrew
-  hi: Hindi
-  hi-in: Hindi (India)
-  hr: Croatian
-  hu: Hungarian
-  ia: Interlingua (International Auxiliary Language Association)
-  id: Bahasa Indonesian
-  is: Icelandic
-  it: Italian
-  it-it: Italian (Italy)
-  ja: Japanese
-  ja-jp: Japanese (Japan)
-  ka: Georgian
-  kk: Kazakh
-  ko: Korean
-  lt: Lithuanian
-  lv: Latvian
-  mk: Macedonian
-  mr: Marathi
-  ms: Malay
-  my: Burmese
-  nl: Dutch
-  nl-nl: Dutch (Netherlands)
-  nn: Norwegian (Nynorsk)
-  false: Norwegian
-  pl: Polish
-  pl-pl: Polish (Poland)
-  pt: Portuguese
-  pt-br: Portuguese (Brazil)
-  pt-pt: Portuguese (Portugal)
-  ro: Romanian
-  ru: Russian
-  sk: Slovak
-  sl: Slovenian
-  sq: Albanian
-  sr: Serbian
-  sv: Swedish
-  sv-se: Swedish (Sweden)
-  sw: Kiswahili
-  ta: Tamil
-  te: Telugu
-  th: Thai
-  tl: Tagalog
-  tr: Turkish
-  uk: Ukrainian
-  ur: Urdu
-  ur-in: Urdu (India)
-  ur-pk: Urdu (Islamic Republic of Pakistan)
-  vi: Vietnamese
-  zh: Chinese (Simplified)
-  zh-cn: Chinese (Simplified, People's Republic of China)
-  zh-hans: Chinese (Simplified) (zh-Hans)
-  zh-hant: Chinese (Traditional) (zh-Hant)
-  zh-tw: Chinese (Traditional, Taiwan)
+  language_code:
+    ar: Arabic
+    az: Azerbaijani
+    bg: Bulgarian
+    bn: Bengali
+    br: Breton
+    bs: Bosnian
+    ca: Catalan
+    co: Corsican
+    cs: Czech
+    da: Danish
+    de: German
+    dv: Dhivehi
+    el: Greek
+    en: Bahasa Inggeris
+    es: Spanish
+    et: Estonian
+    eu: Basque
+    fa: Persian
+    fi: Finnish
+    fil: Filipino
+    fr: French
+    ga: Irish
+    gl: Galician
+    haw: Hawaiian
+    he: Hebrew
+    hi: Hindi
+    hr: Croatian
+    hu: Hungarian
+    hy: Armenian
+    ia: Interlingua (International Auxiliary Language Association)
+    id: Indonesian
+    is: Icelandic
+    it: Italian
+    ja: Japanese
+    ka: Georgian
+    kk: Kazakh
+    km: Khmer
+    kn: Kannada
+    ko: Korean
+    ku: Kurdish
+    ky: Kyrgyz
+    lt: Lithuanian
+    lv: Latvian
+    mi: Maori
+    mk: Macedonian
+    mn: Mongolian
+    mr: Marathi
+    ms: Malay
+    mt: Maltese
+    my: Burmese
+    ne: Nepali
+    nl: Dutch
+    nn: Norwegian (Nynorsk)
+    false: Norwegian (Bokmål)
+    pl: Polish
+    ps: Pashto
+    pt: Portuguese
+    ro: Romanian
+    ru: Russian
+    se: Northern Sami
+    si: Sinhalese
+    sk: Slovak
+    sl: Slovenian
+    sq: Albanian
+    sr: Serbian
+    sv: Swedish
+    sw: Kiswahili
+    ta: Tamil
+    te: Telugu
+    tg: Tajik
+    th: Thai
+    tl: Tagalog
+    tr: Turkish
+    uk: Ukrainian
+    ur: Urdu
+    uz: Uzbek
+    vi: Vietnamese
+    zh: Chinese (Simplified)
+    zu: Zulu
+  locale_code:
+    ar-sa: Arabic
+    az-az: Azerbaijani
+    bg-bg: Bulgarian
+    bn-bd: Bengali
+    bs-ba: Bosnian
+    ca-es: Catalan
+    co-co: Corsican
+    cs-cz: Czech
+    da-dk: Danish
+    de-de: German
+    dv-mv: Dhivehi
+    el-gr: Greek
+    en-gb: English (United Kingdom)
+    en-us: Bahasa Inggeris
+    es-es: Spanish (Spain)
+    es-mx: Spanish (Mexico)
+    et-ee: Estonian
+    eu-es: Basque
+    fa-af: Dari
+    fa-ir: Persian
+    fi-fi: Finnish
+    fil-ph: Filipino
+    fr-fr: French
+    ga-ie: Irish
+    gl-es: Galician
+    haw-hi: Hawaiian
+    he-il: Hebrew
+    hi-in: Hindi
+    hr-hr: Croatian
+    hu-hu: Hungarian
+    hy-am: Armenian
+    id-id: Indonesian
+    is-is: Icelandic
+    it-it: Italian
+    ja-jp: Japanese
+    ka-ge: Georgian
+    kk-kz: Kazakh
+    km-kh: Khmer
+    kn-in: Kannada
+    ko-kr: Korean
+    ku-iq: Kurdish
+    ky-kg: Kyrgyz
+    lt-lt: Lithuanian
+    lv-lv: Latvian
+    mi-nz: Maori
+    mk-mk: Macedonian
+    mn-mn: Mongolian
+    mr-in: Marathi
+    ms-my: Malay
+    mt-mt: Maltese
+    my-mm: Burmese
+    ne-np: Nepali
+    nl-nl: Dutch
+    nn-no: Norwegian (Nynorsk)
+    no-no: Norwegian (Bokmål)
+    pl-pl: Polish
+    ps-af: Pashto
+    pt-br: Portuguese (Brazil)
+    pt-pt: Portuguese (Portugal)
+    ro-ro: Romanian
+    ru-ru: Russian
+    se-fi: Northern Sami
+    si-lk: Sinhalese
+    sk-sk: Slovak
+    sl-si: Slovenian
+    sq-al: Albanian
+    sr-sp: Serbian
+    sv-se: Swedish
+    ta-in: Tamil
+    te-in: Telugu
+    tg-tj: Tajik
+    th-th: Thai
+    tr-tr: Turkish
+    uk-ua: Ukrainian
+    ur-in: Urdu (India)
+    ur-pk: Urdu (Pakistan)
+    uz-uz: Uzbek
+    vi-vn: Vietnamese
+    zh-cn: Chinese (Simplified)
+    zh-hans: Chinese (Simplified)
+    zh-hant: Chinese (Traditional)
+    zh-tw: Chinese (Traditional)
+    zu-za: Zulu

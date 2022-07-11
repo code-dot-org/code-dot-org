@@ -7,8 +7,8 @@ import Notification from '../Notification';
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
-import StudentSections from './StudentSections';
 import TeacherResources from './TeacherResources';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -19,27 +19,33 @@ import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import Button from '@cdo/apps/templates/Button';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 
 export const UnconnectedTeacherHomepage = ({
   announcement,
   canViewAdvancedTools,
   censusQuestion,
+  plCourses,
   courses,
   donorBannerName,
   isEnglish,
-  joinedSections,
+  joinedStudentSections,
+  joinedPlSections,
   ncesSchoolId,
   queryStringOpen,
   schoolYear,
   showCensusBanner,
   showFinishTeacherApplication,
+  showReturnToReopenedTeacherApplication,
   showNpsSurvey,
   specialAnnouncement,
   teacherEmail,
   teacherId,
   teacherName,
   topCourse,
-  beginGoogleImportRosterFlow
+  topPlCourse,
+  beginGoogleImportRosterFlow,
+  hasFeedback
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
@@ -141,7 +147,6 @@ export const UnconnectedTeacherHomepage = ({
 
   const showDonorBanner = isEnglish && donorBannerName;
 
-  // [MEG] TODO: Once experiment is complete, modify buttonUrl not to use experiment
   return (
     <div>
       <HeaderBanner
@@ -181,7 +186,17 @@ export const UnconnectedTeacherHomepage = ({
             descriptionText="Finish applying for our Professional Learning Program"
             buttonText="Finish Application"
             buttonColor={Button.ButtonColor.orange}
-            buttonUrl="/pd/application/teacher?enableExperiments=teacher-application-saving-reopening"
+            buttonUrl="/pd/application/teacher"
+            solidBorder={true}
+          />
+        )}
+        {showReturnToReopenedTeacherApplication && (
+          <BorderedCallToAction
+            headingText="Return to Your Application"
+            descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
+            buttonText="Return to Application"
+            buttonColor={Button.ButtonColor.orange}
+            buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
         )}
@@ -227,13 +242,33 @@ export const UnconnectedTeacherHomepage = ({
           topCourse={topCourse}
           showAllCoursesLink={true}
           isTeacher={true}
+          hasFeedback={false}
         />
+        {hasFeedback && (plCourses?.length > 0 || topPlCourse) && (
+          <ParticipantFeedbackNotification
+            studentId={teacherId}
+            isProfessionalLearningCourse={true}
+          />
+        )}
+        {(plCourses?.length > 0 || topPlCourse) && (
+          <RecentCourses
+            courses={plCourses}
+            topCourse={topPlCourse}
+            showAllCoursesLink={true}
+            isProfessionalLearningCourse={true}
+            hasFeedback={hasFeedback}
+          />
+        )}
         <TeacherResources />
         <ProjectWidgetWithData
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />
-        <StudentSections initialSections={joinedSections} isTeacher={true} />
+        <JoinSectionArea
+          initialJoinedStudentSections={joinedStudentSections}
+          initialJoinedPlSections={joinedPlSections}
+          isTeacher={true}
+        />
       </div>
     </div>
   );
@@ -243,23 +278,28 @@ UnconnectedTeacherHomepage.propTypes = {
   announcement: shapes.teacherAnnouncement,
   canViewAdvancedTools: PropTypes.bool,
   censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
+  plCourses: shapes.courses,
   courses: shapes.courses,
   donorBannerName: PropTypes.string,
   hocLaunch: PropTypes.string,
   isEnglish: PropTypes.bool.isRequired,
-  joinedSections: shapes.sections,
+  joinedStudentSections: shapes.sections,
+  joinedPlSections: shapes.sections,
   ncesSchoolId: PropTypes.string,
   queryStringOpen: PropTypes.string,
   schoolYear: PropTypes.number,
   showCensusBanner: PropTypes.bool.isRequired,
   showNpsSurvey: PropTypes.bool,
   showFinishTeacherApplication: PropTypes.bool,
+  showReturnToReopenedTeacherApplication: PropTypes.bool,
   specialAnnouncement: shapes.specialAnnouncement,
   teacherEmail: PropTypes.string,
   teacherId: PropTypes.number,
   teacherName: PropTypes.string,
   topCourse: shapes.topCourse,
-  beginGoogleImportRosterFlow: PropTypes.func
+  topPlCourse: shapes.topCourse,
+  beginGoogleImportRosterFlow: PropTypes.func,
+  hasFeedback: PropTypes.bool
 };
 
 const styles = {

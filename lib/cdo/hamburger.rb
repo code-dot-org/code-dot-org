@@ -149,6 +149,7 @@ class Hamburger
       {title: "educate_beyond", url: CDO.code_org_url("/educate/curriculum/3rd-party")},
       {title: "educate_inspire", url: CDO.code_org_url("/educate/resources/inspire")},
       {title: "educate_community", url: CDO.code_org_url("/educate/community")},
+      {title: "educate_requirements", url: CDO.code_org_url("/educate/it")},
       {title: "educate_tools", url: CDO.code_org_url("/educate/resources/videos")},
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")

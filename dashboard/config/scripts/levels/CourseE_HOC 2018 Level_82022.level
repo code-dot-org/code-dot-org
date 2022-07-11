@@ -47,11 +47,18 @@
     "long_instructions": "First icebergs, now lava? Get through this volcanic island and find the **tropical fish** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) in the coral reef.\r\n\r\n",
     "ideal": "7",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:15.966+00:00\",\"changed\":[\"cloned from \\\"CourseE_HOC 2018 Level_8_2021\\\"\"],\"cloned_from\":\"CourseE_HOC 2018 Level_8_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:15.966+00:00\",\"changed\":[\"cloned from \\\"CourseE_HOC 2018 Level_8_2021\\\"\"],\"cloned_from\":\"CourseE_HOC 2018 Level_8_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 2,
+    "repeat_loops": 2,
+    "repeat_until_while": 3,
+    "conditionals": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

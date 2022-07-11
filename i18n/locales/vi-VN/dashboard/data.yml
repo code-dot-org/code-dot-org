@@ -39,6 +39,7 @@ vi:
         Custom: Họa sĩ
         CustomStudio: Phòng trò chơi
         Gamelab: Phòng thí nghiệm trò chơi
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Đồng
@@ -397,7 +398,11 @@ vi:
         mc_2018_conditionals: 'Minecraft: Chuyến thám hiểm đại dương - Điều kiện'
         mc_2018_closing: 'Minecraft: Chuyến thám hiểm đại dương - Chúc mừng'
         hoc_dance_warmup: Bữa Tiệc Khiêu Vũ - Khởi động
+        hoc_dance_events: Bữa tiệc khiêu vũ – Sự kiện
+        hoc_dance_properties: Bữa tiệc khiêu vũ – Thuộc tính
         hoc_dance_congrats: Bữa Tiệc Khiêu Vũ - Quẩy lên!
+        c_and_c_great_to_create: Sáng tạo và vui chơi công bằng thật tuyệt vời
+        c_and_c_digital_sharing: Chia sẻ nội dung số
         csd_pair_programming: Lập trình đôi
         csd_applab_parameters: Hàm và tham số
         csd_problem_solving_process: Quá trình giải quyết vấn đề
@@ -408,6 +413,7 @@ vi:
         hoc_dance_events_2019: Bữa Tiệc Khiêu Vũ 2019 - Sự kiện
         hoc_dance_measures_2019: Bữa Tiệc Khiêu Vũ 2019 - Nhịp
         hoc_dance_properties_2019: Bữa Tiệc Khiêu Vũ 2019 - Thuộc tính
+        csf_private_and_personal_information: Thông tin cá nhân và riêng tư
         csd_what_computers_are: Máy tính là gì?
         outbreak_mike: CodeBytes Tập 3 cùng Mike - Trình mô phỏng dịch bệnh bùng phát
         csf_lots_of_sprites: 'Sprite Lab: Rất nhiều nhân vật'
@@ -435,6 +441,26 @@ vi:
         poetry_module_multichoiceprompts: Lời nhắc nhiều lựa chọn - Code và Thơ
         poetry_module_conditionals: Điều kiện - Code và Thơ
         poemart_intro: Giới thiệu Tranh thơ ca
+        CSA-PL-debugging-temp: Giới thiệu về Gỡ lỗi trong Java Lab - tạm thời
+        CSA-PL-for-loops: Vòng lặp for trong Java
+        CSA-PL-variables: Tạo biến trong Java
+        PL_CS_Journeys_Overview: Hành trình KHMT
+        CSA-PL-intro-to-java-lab: Java Lab Căn bản
+        CSA-PL-first-program: Viết chương trình trong Java
+        CSD_u6_variables_part1: 'CSD: Biến'
+        csd_u6_if_statements: 'CSD: Câu lệnh if'
+        csc-poem-art-intro: Video giới thiệu
+        csc-poem-art-outro: Video kết thúc
+        csd_u6_call_define_functions: 'CSD: Gọi và định nghĩa hàm'
+        csp_applab_parameters: Hàm và tham số
+        starquilts_intro_artist: Giới thiệu về Ghép vải hình ngôi sao
+        CSA-PL-intro-to-arrays: Mảng một chiều (1D)
+        CSA-PL-1d-arrays-new-values: Nhập giá trị theo các dãy 1 chiều
+        CSA-PL-conditionals: Câu lệnh điều kiện trong Java
+        CSA-PL-two-way-selection: Lựa chọn hai hướng
+        CSA-PL-Printing-in-Java: Hiển thị văn bản trong Java
+        CSA-PL-multi-selection-statements: Câu lệnh nhiều lựa chọn
+        CS_Changing_Everything: Khoa học máy tính là Thay đổi Tất cả mọi thứ
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

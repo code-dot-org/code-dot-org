@@ -251,9 +251,9 @@ es-MX:
     share_teacher_email_reg_partner_preference_required: Debes especificar una preferencia
       de correo electrónico.
     parent_account_checkbox: Soy padre o tutor registrándose en lugar de mi hijo
-    parent_account_email_progress_permission: "¿Podríamos enviarte emails con actualizaciones
-      ocasionales del progreso y proyectos de tus hijos, y actualizaciones sobre sus
-      cursos de ciencias de la computación? [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
+    parent_account_email_progress_permission: "¿Podemos enviarle emails con para contarle
+      sobre el rendimiento y los proyectos de su hijo? Tambien mandaremos informacion
+      sobre los cursos de ciencias computacionales [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
     parent_account_email_label: Correo electrónico del padre o tutor
   school_info:
     title: Información de la escuela (opcional)
@@ -370,6 +370,8 @@ es-MX:
       full_section: No hemos podido añadirte a la sección %{section_code} porque ya
         existen %{section_capacity} alumnos en ella. Ponte en contacto con tu profesor
         para que te ayude.
+      not_participant_type: No hemos podido añadirte a la sección %{section_code}
+        porque no reúnes el criterio de participante para la sección.
     mail:
       student_disassociated:
         subject: 'Aviso de Code.org: %{student_name} ya no está asociado como tu estudiante.'
@@ -431,6 +433,7 @@ es-MX:
       educate_beyond: Más allá de Code.org
       educate_inspire: Inspira a un estudiante
       educate_community: Comunidad en línea
+      educate_requirements: Requisitos Técnicos
       educate_tools: Herramientas y videos
       about_us: Acerca de nosotros
       about_leadership: Liderazgo
@@ -498,6 +501,7 @@ es-MX:
       starwars: Star Wars
       starwarsblocks: Star Wars (bloques)
       starwarsblocks_hour: Star Wars (bloques)
+      thebadguys: Los Tipos Malos
       loading: Cargando...
       weblab: Web Lab
       view_all: Ver todos los proyectos...
@@ -686,6 +690,8 @@ es-MX:
       están en la nueva sección.
     third_party_login: No puedes mover estudiantes a una sección sincronizada con
       una herramienta de otro proveedor.
+    not_correct_participant_type: No puedes mover a estos usuarios porque no tienen
+      permisos para ser participantes en la nueva sección.
   share:
     title: Aprender en Code Studio
     description: Cualquier persona puede aprender Ciencias de la Computación. Crear
@@ -752,6 +758,7 @@ es-MX:
     how_it_works: Cómo funciona (ver el código)
     try_hour_of_code: "¡Prueba una Hora del Código!"
     store: Tienda
+    cookie_notice: Aviso de Cookies
   reference_area:
     title: "¿Necesitas ayuda?"
     subtitle: Mira estos videos y sugerencias
@@ -833,6 +840,13 @@ es-MX:
       title: Fiesta de baile
     dance-2019:
       title: Fiesta de baile
+    hello-world:
+      title: Hola Mundo
+      body: Elige entre cuatro temas divertidos para codificar personajes interactivos
+        en un mundo creado por ti.
+    poem-art:
+      title: El Arte del Poema
+      body: "¡Exprésate! Utiliza el código para crear poemas animados."
     hoc:
       title: Laberinto clásico
       body: Prueba los fundamentos de la ciencia de la computación. Millones ya lo
@@ -1056,16 +1070,6 @@ es-MX:
       podrían no estar disponibles para tus estudiantes si no aceptas explícitamente
       los términos actualizados.
     review_terms: Revisa los términos actualizados
-  donor_interstitial:
-    title: Tus cursos gratis de Ciencia de Computación son posible por...
-    subtitle: Agradecemos los donantes generosos cuyos apoyos hizo posible el éxito
-      de Code.org. Cometemos a hacer Code.org gratis para todas las escuelas y los
-      estudiantes, globalmente, ¡gracias a la generosidad de nuestros [donors](%{donors_url})!
-    local_supporters: Simpatizantes Locales
-    global_supporters: Simpatizantes Globales
-    support_codeorg_1: Cada dólar dado a Code.org trae oportunidad a más estudiantes.
-    support_codeorg_2: "[Dona ahora](%{donate_url}) para apoyar Code.org."
-    get_started: Empieza en Code.org
   school_info_interstitial:
     title: Queremos que cada estudiante pueda acceder a las Ciencias de la Computación.
       ¡Ayúdanos a seguir nuestro progreso!
@@ -1272,6 +1276,15 @@ es-MX:
     tu docente a qué unidad deberías estar asignado.
   no_script_access_teacher: No tienes acceso a esta unidad. Si crees que debes tenerlo,
     por favor escribe a support@code.org para que podamos solucionar el problema.
+  no_level_access_student: No tienes acceso a este nivel. Por favor, pregunta a tu
+    profesor en qué nivel deberías estar.
+  no_level_access_teacher: No tienes acceso a este nivel. Si crees que deberías tener
+    acceso a este nivel, escribe a support@code.org para que podamos resolver la situación.
+  no_exemplar: No existe ningún ejemplo para este nivel.
+  no_exemplar_access_student: Los alumnos no pueden acceder al código de ejemplo.
+    Por favor, pregunta a tu profesor en qué nivel debes estar.
+  no_exemplar_access_teacher: Sólo los profesores verificados pueden acceder al código
+    de ejemplo. Si quieres convertirte en profesor verificado, escribe a support@code.org.
   return_unit_overview: Ir al resumen de la unidad
   return_course_overview: Ir al resumen del curso
   view_all_units: Ver todas las unidades
@@ -1331,6 +1344,7 @@ es-MX:
         israel: Israel
         malaysia: Malasia
         mexico: México
+        paraguay: Paraguay
         thailand: Tailandia
         uzbekistan: Uzbekistán
       ages:
@@ -1353,6 +1367,7 @@ es-MX:
         music: Música
         art: Arte
         other: 'Otros:'
+        na: No Aplicable
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1362,7 +1377,8 @@ es-MX:
         lightbot: Lightbot
         scratch: Scratch
         tynker: Tynker
-        other: 'Otros:'
+        other: Otro
+        na: No Aplicable
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1372,7 +1388,8 @@ es-MX:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Otros:'
+        other: Otro
+        na: No Aplicable
       workshop_course:
         csf_af: Fundamentos de Ciencias de la Computación (cursos A-F)
         csf_express: Fundamentos de Ciencias de la Computación (Pre-Express o Express)
@@ -1451,3 +1468,4 @@ es-MX:
     this_sprite: este sprite
   unit_prefix: Unidad %{n}
   code_org_logo_alt: Inicio de Code.org
+  teacher_feedback: Retroalimentación del docente

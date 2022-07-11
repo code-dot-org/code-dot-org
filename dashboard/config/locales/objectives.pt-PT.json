@@ -1027,6 +1027,12 @@
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Explicar o processo de design e como ele ajudou a moldar o projeto final acabado."
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Treinar e testar um modelo de aprendizado de máquina."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "Raciocinar sobre o papel do viés humano no aprendizado de máquina."
         }
       }
     }

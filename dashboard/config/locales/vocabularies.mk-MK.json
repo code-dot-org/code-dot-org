@@ -40,6 +40,12 @@
         },
         "define/coursee/2021": {
           "word": "Дефинирајте"
+        },
+        "variable/csd/2021": {
+          "word": "Променлива"
+        },
+        "function/csd/2021": {
+          "word": "Функција"
         }
       }
     }

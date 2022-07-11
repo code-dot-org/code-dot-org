@@ -145,6 +145,24 @@
         },
         "define/coursee/2021": {
           "word": "Анықта"
+        },
+        "debugging/csd/2021": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "variable/csd/2021": {
+          "word": "Айнымалы"
+        },
+        "conditionals/csd/2021": {
+          "word": "Шарттар"
+        },
+        "abstraction/csd/2021": {
+          "word": "Абстракция"
+        },
+        "function/csd/2021": {
+          "word": "Функция"
+        },
+        "copyright/csd/2021": {
+          "word": "Авторлық құқық"
         }
       }
     }

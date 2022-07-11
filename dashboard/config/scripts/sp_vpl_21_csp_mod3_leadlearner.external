@@ -3,43 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Modeling a lead learner mindset
-##
+# Video: Teacher Tips - Lead Learner
+## Consider the following when watching this video:
+### What will be most challenging for you as you take on the lead learner role? What will you do to overcome this challenge?
 
-<div style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">
-
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">
-I remember my first year when I was teaching computer science, I didn't know anything more than my students did. I'd never actually taken a course on computer programming, and that was something that I just leaned into. It's not something that you should hide from your students. You should let them know that this is a problem-solving experience that you are going through together. And you want to go through that together fearlessly. Being able to lean in with those students and solve problems with them, to sit next to them and try to figure out what's going on with their code - it can be something really fun! You need to let it be fun and embrace that experience together.
- </p>
-<p style="font-size: 70px; text-align: right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%; font-style: italic; margin-right: 70px; margin-top: -20px; ">
-Eamon Marchant, California
-</p>
-
-</div>
-<br>
-
-<div style="background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;">
-
-
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">So when I started teaching computer science,  I'd been a math teacher for almost 10 years, so I was very comfortable in the classroom. But computer science, not so much. As I transitioned to the computer science classroom, I learned to be honest with my students that I am not an expert and that we could all learn it together. And it was okay to have questions! That curiosity is something we should embrace. And if I didn't know the answer, we would find it together. And so I'm still learning every day.</p>
-<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-Joanna Stevens, Kentucky
-</p>
-</div>
-<br>
-
-<div style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">
-
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">In a traditional classroom, you state the learning targets the beginning, you do the work. It's backwards in a CS classroom. And although that's really scary, it does take the pressure off, because you're allowed to be confused. And you can show that as modeling to students like, "Look, I'm confused as to how this works." That's something that you're teaching them and they get more comfortable with.</p>
-
-<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-Anna Mora, Washington
-</p>
-</div>
+<a href="https://youtu.be/6FoozfJ2WDk" target="blank" rel="noopener noreferrer">![](https://images.code.org/2de4416023c140e207cc46e889d7c2e9-image-1643328695113.56.37 PM.jpg)</a>
 MARKDOWN

@@ -1,4 +1,3 @@
-import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 import {
   SET_SCRIPT,
   getSelectedScriptName
@@ -164,16 +163,6 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
 };
 
 export default function sectionAssessments(state = initialState, action) {
-  if (action.type === SET_SECTION) {
-    /**
-     * Setting the section is the first action to be called when switching
-     * sections, which requires us to reset our state. This might need to change
-     * once switching sections is in react/redux.
-     */
-    return {
-      ...initialState
-    };
-  }
   if (action.type === SET_SCRIPT) {
     return {
       ...state,
@@ -714,9 +703,9 @@ export const getStudentsMCandMatchSummaryForCurrentAssessment = state => {
     return [];
   }
 
-  // Get a set of all students from sectionDataRedux.
+  // Get a set of all students from teacherSectionsRedux.
   let allStudentsByIds = {};
-  state.sectionData.section.students.forEach(student => {
+  state.teacherSections.selectedStudents.forEach(student => {
     allStudentsByIds[student.id] = {
       student_name: student.name,
       responses_by_assessment: {}

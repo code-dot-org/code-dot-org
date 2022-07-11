@@ -39,6 +39,7 @@
 @media screen and (max-width: 600px)
 {
   .tablet-feature { display: none; }
+  .tablet-restrictive-feature { display: none; }
 }
 
 /* 971px and up: regular headers */
@@ -47,6 +48,7 @@
 {
   /* large screens */
   .mobile-feature { display: none }
+  .tablet-restrictive-feature { display: none; }
   .desktop-feature { }
 
   .col-10 { width: 10%; float:left; }
@@ -65,6 +67,7 @@
   .col-60 { width: 60%; float:left; }
   .col-63 { width: 63%; float:left; }
   .col-66 { width: 66%; float:left; }
+  .col-66-center { width: 66%; margin: 0 auto; }
   .col-75 { width: 75%; float:left; }
   .col-80 { width: 80%; float:left; }
   .col-95 { width: 95%; float:left; }

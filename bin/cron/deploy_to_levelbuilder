@@ -4,7 +4,8 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 # A script that performs a merge of the test branch into the levelbuilder branch.
 #
-# NOTE: This script assumes it is only run from the test environment.
+# NOTE: This script assumes it is only run from an environment with a git worktree
+# called deploy-management-repo.
 
 require_relative '../../deployment'
 require 'cdo/chat_client'
@@ -18,29 +19,6 @@ TOPIC_DTL_FAILED = 'no (DTL failed [see levelbuilder])'.freeze
 MESSAGE_DTL_SKIPPED_NOTHING = 'robo-DTL is being skipped (nothing new to deploy).'.freeze
 MESSAGE_DTL_SKIPPED_TOPIC = 'robo-DTL is being skipped (developers DTL was not yes). ' \
   'Please contact the DOTD for a manual deploy, if desired.'.freeze
-
-# Creates a new branch with the given name from the given commit on the test server
-# (without checking it out) and pushes it to GitHub.
-# @param [String] branch_name The name of the branch to create.
-# @param [String] commit The sha of the commit to base the branch at.
-# TODO(asher): Move this to a location for better reuse, deduplicating existing copies of it.
-def create_branch_from_commit(branch_name, commit)
-  system [
-    'cd ~/test',
-    "git branch --no-track #{branch_name} #{commit}",
-    "git push origin #{branch_name}"
-  ].join(' && ')
-end
-
-# Deletes a branch with the given name, both locally and on GitHub.
-# @param [String] branch_name The name of the branch to delete.
-def delete_branch(branch_name)
-  system [
-    'cd ~/test',
-    'git branch -D branch_name',
-    'git push origin --delete branch_name'
-  ].join(' && ')
-end
 
 # Returns whether the Slack#developers topic specifies "DTL: yes". If it does not, messages
 # Slack#levelbuilder that robo-DTL is being skipped.
@@ -81,7 +59,12 @@ def main
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull request
   # from a commit hash (only a branch name), we create and push a branch.
   branch_name = "dtl_candidate_#{test_green_commit}"
-  create_branch_from_commit branch_name, test_green_commit
+  success = GitHub.create_branch_from_commit(
+    branch_name: branch_name,
+    commit: test_green_commit,
+    base_branch: 'origin/levelbuilder'
+  )
+  raise Exception.new('GitHub.create_pull_request failed.') unless success
 
   # Create the PR, raising an exception if doing so failed.
   pr_number = GitHub.create_pull_request(
@@ -104,7 +87,10 @@ def main
   DevelopersTopic.set_dtl(TOPIC_DTL_IN_PROGRESS)
   GitHub.merge_pull_request(pr_number)
 
-  delete_branch(branch_name)
+  GitHub.delete_branch(
+    branch_name: branch_name,
+    base_branch: 'origin/levelbuilder'
+  )
 rescue Exception => e
   ChatClient.message(
     'levelbuilder',

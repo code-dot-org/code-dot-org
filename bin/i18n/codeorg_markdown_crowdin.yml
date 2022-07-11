@@ -1,6 +1,6 @@
 "project_identifier" : "codeorg-markdown"
 "project_id" : "314545"
-"base_path" : "../.."
+"base_path" : ""
 
 # API Credentials must be loaded from a separate identity file. See
 # https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials

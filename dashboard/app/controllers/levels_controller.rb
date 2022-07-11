@@ -141,12 +141,20 @@ class LevelsController < ApplicationController
   # GET /levels/1/edit
   def edit
     # Make sure that the encrypted property is a boolean
-    @level.properties['encrypted'] = @level.properties['encrypted'].to_bool if @level.properties['encrypted']
-    @in_script = @level.script_levels.any?
+    if @level.properties['encrypted']&.is_a?(String)
+      @level.properties['encrypted'] = @level.properties['encrypted'].to_bool
+    end
+    bubble_choice_parents = BubbleChoice.parent_levels(@level.name)
+    any_parent_in_script = bubble_choice_parents.any? {|pl| pl.script_levels.any?}
+    @in_script = @level.script_levels.any? || any_parent_in_script
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
-    fb = FirebaseHelper.new('shared')
-    @dataset_library_manifest = fb.get_library_manifest
+    if @level.is_a? Applab
+      fb = FirebaseHelper.new('shared')
+      @dataset_library_manifest = fb.get_library_manifest
+    end
   end
+
+  use_reader_connection_for_route(:get_rubric)
 
   # GET /levels/:id/get_rubric
   # Get all the information for the mini rubric
@@ -172,6 +180,8 @@ class LevelsController < ApplicationController
   # GET /levels/:id/edit_blocks/:type
   # Action for using blockly workspace as a toolbox/startblock editor.
   # Expects params[:type] which can be either 'toolbox_blocks' or 'start_blocks'
+  # Javalab also uses this route to edit starter code, and sets the type param
+  # to 'start_sources'
   def edit_blocks
     type = params[:type]
     blocks_xml = @level.properties[type].presence || @level[type] || EMPTY_XML
@@ -185,20 +195,23 @@ class LevelsController < ApplicationController
     # Levels which support (and have )solution blocks use those blocks
     # as the toolbox for required and recommended block editors, plus
     # the special "pick one" block
-    can_use_solution_blocks = @level.respond_to?("get_solution_blocks") &&
+    can_use_solution_blocks = @level.respond_to?(:get_solution_blocks) &&
         @level.properties['solution_blocks']
-    should_use_solution_blocks = type == 'required_blocks' || type == 'recommended_blocks'
+    should_use_solution_blocks = ['required_blocks', 'recommended_blocks'].include?(type)
     if can_use_solution_blocks && should_use_solution_blocks
       blocks = @level.get_solution_blocks + ["<block type=\"pick_one\"></block>"]
       toolbox_blocks = "<xml>#{blocks.join('')}</xml>"
     end
+
+    validation = @level.respond_to?(:validation) ? @level.validation : nil
 
     level_view_options(
       @level.id,
       start_blocks: blocks_xml,
       toolbox_blocks: toolbox_blocks,
       edit_blocks: type,
-      skip_instructions_popup: true
+      skip_instructions_popup: true,
+      validation: validation
     )
     view_options(full_width: true)
     @game = @level.game
@@ -213,6 +226,18 @@ class LevelsController < ApplicationController
     end
 
     @is_start_mode = type == 'start_blocks'
+
+    show
+    render :show
+  end
+
+  # GET /levels/:id/edit_exemplar
+  def edit_exemplar
+    @game = @level.game
+    @is_editing_exemplar = true
+
+    exemplar_sources = @level.try(:exemplar_sources)
+    level_view_options(@level.id, {is_editing_exemplar: true, exemplar_sources: exemplar_sources})
 
     show
     render :show
@@ -233,9 +258,10 @@ class LevelsController < ApplicationController
     render json: {redirect: level_url(@level)}
   end
 
-  def update_properties
+  def update_properties(ignored_keys: [])
     changes = JSON.parse(request.body.read)
     changes.each do |key, value|
+      next if ignored_keys.include?(key)
       @level.properties[key] = value
     end
 
@@ -268,6 +294,35 @@ class LevelsController < ApplicationController
       log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
     end
+  rescue ArgumentError, ActiveRecord::RecordInvalid => e
+    render status: :not_acceptable, plain: e.message
+  end
+
+  # POST /levels/:id/update_start_code
+  # Update start code for a level. If params contains "validation",
+  # set validation directly to ensure it is encrypted.
+  # Then set any remaining properties with update_properties.
+  def update_start_code
+    changes = JSON.parse(request.body.read)
+    if @level.respond_to?(:validation)
+      @level.validation = changes["validation"]
+    end
+    return update_properties(ignored_keys: ["validation"])
+  end
+
+  # POST /levels/:id/update_exemplar_code
+  def update_exemplar_code
+    changes = JSON.parse(request.body.read)
+    if @level.respond_to?(:exemplar_sources)
+      @level.exemplar_sources = changes["exemplar_sources"]
+    end
+
+    @level.log_changes(current_user)
+    @level.save!
+
+    # We tend to respond with a redirect URL in this controller,
+    # but it is not used in this case.
+    render json: {redirect: level_url(@level)}
   end
 
   # POST /levels

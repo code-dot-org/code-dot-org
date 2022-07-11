@@ -17,4 +17,13 @@ class Api::V1::SectionLibrariesControllerTest < ActionController::TestCase
     get :index
     assert_response :success
   end
+
+  test 'student in hidden section can list libraries' do
+    hidden_section = create(:section, hidden: true)
+    student = create(:follower, section: hidden_section).student_user
+
+    sign_in student
+    get :index
+    assert_response :success
+  end
 end

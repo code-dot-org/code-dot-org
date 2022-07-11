@@ -66,11 +66,16 @@
     "hide_pause_button": "false",
     "encrypted_examples": "KenCbxOt2GJ1Oih1oG6jkxsAlWCbw0JpjV1HeKbxCuK8cXyK9X9C9DSOtC5t\nuMegXYvSoVvTZEx0VrcOPh0is0aMFW1UmKPj87qlOJi5BQCwibsfdLQTK7sC\nb3Q/o+eGgzW11l+TufRutNbsNraKSQ==\n",
     "instructions_icon": "crab",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:34.802+00:00\",\"changed\":[\"cloned from \\\"Fish Tank 6-validated_2021\\\"\"],\"cloned_from\":\"Fish Tank 6-validated_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:34.802+00:00\",\"changed\":[\"cloned from \\\"Fish Tank 6-validated_2021\\\"\"],\"cloned_from\":\"Fish Tank 6-validated_2021\"},{\"changed_at\":\"2022-01-19 17:39:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-20 19:39:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "functions": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -214,7 +219,7 @@
                       <value name="BEHAVIOR">
                         <block type="gamelab_behavior_get">
                           <mutation/>
-                          <title name="VAR">swimming left and right</title>
+                          <title name="VAR" id="swimming left and right">swimming left and right</title>
                         </block>
                       </value>
                       <next>
@@ -235,7 +240,7 @@
                               <value name="BEHAVIOR">
                                 <block type="gamelab_behavior_get">
                                   <mutation/>
-                                  <title name="VAR">spinning right</title>
+                                  <title name="VAR" id="spinning right">spinning right</title>
                                 </block>
                               </value>
                             </block>
@@ -253,7 +258,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">swimming left and right</title>
+          <title name="NAME" id="swimming left and right">swimming left and right</title>
           <statement name="STACK">
             <block type="controls_if">
               <mutation elseif="1"/>
@@ -623,7 +628,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving east</title>
+          <title name="NAME" id="moving east">moving east</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"East"</title>
@@ -644,7 +649,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving north</title>
+          <title name="NAME" id="moving north">moving north</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"North"</title>
@@ -665,7 +670,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving south</title>
+          <title name="NAME" id="moving south">moving south</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"South"</title>
@@ -686,7 +691,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving west</title>
+          <title name="NAME" id="moving west">moving west</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"West"</title>
@@ -707,7 +712,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">spinning right</title>
+          <title name="NAME" id="spinning right">spinning right</title>
           <statement name="STACK">
             <block type="gamelab_turn">
               <title name="DIRECTION">"right"</title>

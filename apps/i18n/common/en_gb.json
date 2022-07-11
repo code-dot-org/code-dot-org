@@ -135,6 +135,8 @@
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
   "continue": "Continue",
   "copy": "Copy",
+  "courseOfferingHOC": "The Hour of Code",
+  "courseOfferingMath": "Mathematics",
   "create": "Create",
   "currentVersion": "Current Version",
   "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
@@ -270,8 +272,10 @@
   "or": "or",
   "orientationLock": "Turn off orientation lock in device settings.",
   "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team.",
+  "participantTypeTeacherTitle": "Teachers",
   "password": "Password",
   "passwordConfirmation": "Password confirmation",
+  "petitionMessage": "Every student in every school should have the opportunity to learn computer science",
   "play": "play",
   "predictionInstructions": "Make a prediction before you run the program.",
   "projectGroupMath": "Mathematics",
@@ -363,10 +367,12 @@
   "viewSection": "View section",
   "visible": "Visible",
   "wantToLearn": "Want to learn to code?",
+  "warningUploadingPersonalInformation": "Warning: Do not upload anything that contains personal information.",
   "watchVideo": "Watch the Video",
   "when": "when",
   "whenRun": "when run",
   "workspaceHeaderShort": "Workspace: ",
   "yes": "Yes",
-  "yourSchoolHeading": "Expand computer science in your school or district"
+  "yourSchoolHeading": "Expand computer science in your school or district",
+  "zipOrCountry": "ZIP code or country"
 }

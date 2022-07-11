@@ -4,7 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "deprecated": true,
       "is_migrated": true,
       "peer_reviews_to_complete": 6,
       "professional_learning_course": "CS Principles Facilitator in Training 2018-2019",
@@ -13,7 +12,7 @@
     "new_name": null,
     "family_name": null,
     "serialized_at": "2021-12-06 19:10:25 UTC",
-    "published_state": "beta",
+    "published_state": "deprecated",
     "instruction_type": "teacher_led",
     "instructor_audience": "plc_reviewer",
     "participant_audience": "facilitator",

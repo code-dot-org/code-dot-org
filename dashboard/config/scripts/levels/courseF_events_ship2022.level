@@ -73,11 +73,16 @@
     "hide_pause_button": "false",
     "short_instructions": "Use an event to make the ship begin moving forward after 8 seconds.",
     "hint_prompt_attempts_threshold": "1",
-    "instructions_icon": "astro"
+    "instructions_icon": "astro",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:50.810+00:00\",\"changed\":[\"cloned from \\\"courseF_events_ship\\\"\"],\"cloned_from\":\"courseF_events_ship\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:50.810+00:00\",\"changed\":[\"cloned from \\\"courseF_events_ship\\\"\"],\"cloned_from\":\"courseF_events_ship\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "events": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

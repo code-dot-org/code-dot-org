@@ -44,11 +44,18 @@
     "show_type_hints": "false",
     "encrypted": "false",
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:51.432+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_conditionals3_2021\\\"\"],\"cloned_from\":\"courseD_bee_conditionals3_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:51.432+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_conditionals3_2021\\\"\"],\"cloned_from\":\"courseD_bee_conditionals3_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 3,
+    "repeat_until_while": 1,
+    "conditionals": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

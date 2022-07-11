@@ -1,14 +1,18 @@
 id:
   data:
     shared_functions:
+      driving with arrow keys: bergerak dengan tanda panah
+      fluttering: sempoyongan
       growing: pertumbuhan
       jittering: gugup
       moving east: bergerak ke timur
+      moving east and looping: bergerak ke timur dan looping
       moving north: bergerak ke utara
       moving north and looping: bergerak ke utara dan berulang
       moving south: bergerak ke selatan
       moving south and looping: bergerak ke selatan dan berulang
       moving west: bergerak ke barat
+      moving west and looping: bergerak ke barat dan looping
       moving with arrow keys: bergerak dengan tanda panah
       patrolling: perondaan
       shrinking: penyusutan
@@ -16,3 +20,4 @@ id:
       spinning right: berputar ke kanan
       swimming left and right: berenang ke kiri dan kanan
       wandering: pengembaraan
+      wobbling: terhuyung-huyung

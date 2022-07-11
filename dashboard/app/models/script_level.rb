@@ -39,12 +39,12 @@ class ScriptLevel < ApplicationRecord
   include SharedConstants
   include Rails.application.routes.url_helpers
 
-  belongs_to :script
-  belongs_to :lesson, foreign_key: 'stage_id'
+  belongs_to :script, optional: true
+  belongs_to :lesson, foreign_key: 'stage_id', optional: true
 
   # This field will only be present in scripts which are being edited in the
   # new script / lesson edit GUI.
-  belongs_to :activity_section
+  belongs_to :activity_section, optional: true
 
   has_and_belongs_to_many :levels
   has_many :callouts, inverse_of: :script_level
@@ -144,10 +144,6 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def final_level?
-    !has_another_level_to_go_to?
-  end
-
   def next_level_or_redirect_path_for_user(
     user,
     extras_lesson=nil,
@@ -191,11 +187,11 @@ class ScriptLevel < ApplicationRecord
       # To help teachers have more control over the pacing of certain
       # scripts, we send students on the last level of a lesson to the unit
       # overview page.
-      if end_of_lesson? && script.show_unit_overview_between_lessons?(user)
+      if end_of_lesson? && script.show_unit_overview_between_lessons?
         if script.lesson_extras_available
           script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
         else
-          script_path(script)
+          script_path(script) + "?completedLessonNumber=#{lesson.relative_position}"
         end
       else
         level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
@@ -223,7 +219,7 @@ class ScriptLevel < ApplicationRecord
 
   def valid_progression_level?(user=nil)
     return false if level.unplugged?
-    return false if lesson && lesson.unplugged_lesson?
+    return false if lesson&.unplugged_lesson?
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && lesson && lesson.spelling_bee?
     return false if locked_or_hidden?(user)
@@ -679,7 +675,23 @@ class ScriptLevel < ApplicationRecord
 
     return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
 
-    if level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
+    # exemplar_sources is used by Javalab levels to store level solutions
+    if level.try(:exemplar_sources).present? && current_user&.verified_instructor?
+      if oldest_active_level.is_a? BubbleChoice
+        # If the script level has sublevels, get a link for the sublevel that looks like
+        # /csa1/lessons/6/levels/5/sublevel/1?exemplar=true
+        sublevel_position = oldest_active_level.sublevel_position(level)
+        return [] unless sublevel_position
+
+        path = build_script_level_path(self, {sublevel_position: sublevel_position})
+        level_example_links = [build_exemplar_url(path)]
+      else
+        # Otherwise, exemplar link should look like
+        # csa1/lessons/2/levels/1?exemplar=true
+        path = build_script_level_path(self)
+        level_example_links = [build_exemplar_url(path)]
+      end
+    elsif level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
       level_example_links = level.examples.map do |example|
         # We treat Sprite Lab levels as a sub-set of game lab levels right now which breaks their examples solutions
         # as level.game.app gets "gamelab" which makes the examples for sprite lab try to open in game lab.
@@ -701,6 +713,8 @@ class ScriptLevel < ApplicationRecord
         elsif level.is_a?(Studio) # playlab
           send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(Javalab)
+          # TO DO: remove this statement after switching over to use new Javalab exemplars
+          # https://codedotorg.atlassian.net/browse/JAVA-525
           example
         else
           send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
@@ -723,5 +737,9 @@ class ScriptLevel < ApplicationRecord
     else
       LEVEL_KIND.puzzle
     end
+  end
+
+  def build_exemplar_url(path)
+    CDO.studio_url(path, CDO.default_scheme) + '?exemplar=true'
   end
 end

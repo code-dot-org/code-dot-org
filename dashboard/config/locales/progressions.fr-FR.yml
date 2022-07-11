@@ -20,10 +20,11 @@ fr:
       Artist Intro with JR Hildebrande: Intro Artiste avec JR Hildebrande
       Artist Project: Projet d’Artiste
       'Artist: Variables': 'Artiste: Variables'
+      Assessment: Évaluation
       Attribution: Attribution
-      Back and Forth: Va et viens
+      Back and Forth: Va et vient
       Basic Conditionals: Conditions de base
-      Bass, Mid, and Treble: Grave, médium et aigü
+      Bass, Mid, and Treble: Basse, médium et aigu
       Be a Super Digital Citizen: Soyez un Super Citoyen Numérique
       Begin planning your project: Commencez à planifier votre projet
       Begin planning your project_2018: Commencez à planifier votre projet_2018
@@ -147,6 +148,7 @@ fr:
       'Exploration: For Loops': 'Exploration: Boucles « Pour »'
       'Exploration: Sample Apps': " Exemples d'Aplications"
       Explore HTML: Explorer le HTML
+      Extra: Supplémentaire
       Finish a Screen: Terminer l'écran
       Finish the Prototype: Terminer le prototype
       Finishing Functions: Terminer les fonctions
@@ -157,11 +159,11 @@ fr:
       For Loops and Repeat Blocks: Les Boucles « Pour » et Les Blocs « Répéter »
       Formatting HTML: Mise en forme HTML
       Free Play: Activité libre
-      Functions: fonctions
+      Functions: Fonctions
       Functions Review: Révision des fonctions
       Functions with Parameters: Fonctions avec Paramètres
       Geometric Sun: Soleil géométrique
-      Get In Formation: Entrons en formation
+      Get In Formation: Tous en formation
       Getters and Setters: Accesseurs en lecture et en écriture
       Getting Properties: Lire les propriétés
       HTML Tags: Balises HTML
@@ -187,7 +189,7 @@ fr:
       Keyboard Input: Entrée Au Clavier
       Layout Properties: Propriétés de la mise en page
       Learning from Simulations: Apprendre à l'aide de simulations
-      Lesson Extras: Les Extras de la Leçon
+      Lesson Extras: Activités bonus
       Lesson Overview: Aperçu de la leçon
       Levels: Niveaux
       Linking Pages: Relier des Pages
@@ -202,6 +204,7 @@ fr:
       'Mini-Project: About Me': À propos de Moi avec le Labo des Lutins
       'Mini-Project: Alien Dance Party': " Soirée Dansante des Extraterrestres"
       'Mini-Project: Outbreak Simulator': " Simulateur d'épidémie"
+      'Mini-Project: Royal Battle': 'Mini-projet : Bataille Royale'
       'Mini-Project: Virtual Pet': 'Mini-projet : animal de compagnie virtuel '
       'Mini-project: Chase Game': 'Mini-projet : Jeu Chase'
       'Mini-project: Flappy Game': 'Mini-projet : Jeu Flappy'
@@ -269,7 +272,7 @@ fr:
       Project Work: Travail projet
       Properties: Propriétés
       Publishing Your Website: Publiez votre site Web
-      Quarter Notes: Noires
+      Quarter Notes: Notes noires
       RGB Exploration: Exploration RVB
       RGB Widget: Widget RVB
       Random Numbers: Nombres aléatoires
@@ -298,13 +301,14 @@ fr:
       Sensor Experiment: Expérience des capteurs
       Shapes and Parameters: Formes et paramètres
       Skill Building: Renforcement Des Compétences
-      Speed it Up, Slow it Down: Accélére la, ralenti la
+      Speed it Up, Slow it Down: Accélère et ralentis
       Sprite Interactions: Interactions de sprite
       Sprite Interactions Review: Révision des interactions de sprite
       Sprite Lab Example Project: 'Exemple de Projet du Labo des Lutins
 
 '
       Sprite Lab Project: Projet Labo du Lutin
+      Sprite Movement: Le Déplacement du Lutin
       Sprite Properties: Propriétés du sprite
       Sprite Scenes: Scènes de sprites
       Sprite Velocity: Vélocité des sprites
@@ -313,8 +317,9 @@ fr:
       The Accelerometer: L’accéléromètre
       The Animation Tab: L’onglet Animation
       The Draw Loop: La Boucle Dessiner
-      The Harvester: La Moissonneuse
+      The Harvester: L'Agricultrice
       Tour of Design Mode: Visite du mode création
+      Train an AI to Clean the Ocean: Entraîner l'IA pour rendre l'océan propre
       Using the Grid: Utiliser la grille
       Using the Repeat Block: Utiliser le Bloc Répéter
       Variables: variables
@@ -322,8 +327,12 @@ fr:
       Velocity and the Counter Pattern: Vélocité et le contre-modèle
       Velocity and the Counter Pattern Review: Révision de la vélocité et du contre-modèle
       Video: Vidéo
+      'Video:  Minecraft - The Agent': 'Vidéo : Minecraft - L''agent'
+      'Video:  Text  and Prompts': 'Vidéo : Texte et invites '
       'Video: "If/Else"': 'Video: « Si/Sinon »'
       'Video: "If/Else" Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
+      'Video: AI: What is Machine Learning?': 'Vidéo : IA : Qu''est-ce que l''apprentissage
+        automatique ? '
       'Video: Artist Intro with JR Hildebrand': 'Vidéo : Intro l''Artiste avec JR
         Hildebrand'
       'Video: Artist Intro with JR Hildebrande': 'Vidéo : Intro l''Artiste avec JR
@@ -353,6 +362,7 @@ fr:
       'Video: Events': " Événements"
       'Video: Follow The Digital Trail': 'Vidéo :  Suivez la piste numérique'
       'Video: For Loops': 'Video: Les Boucles « Pour »'
+      'Video: Functions': 'Vidéo: Les Fonctions'
       'Video: Getting Loopy': 'Vidéo : Faire des boucles '
       'Video: Happy Maps - Unplugged Activity': 'Vidéo : Happy Maps - Activité hors
         ligne'
@@ -370,7 +380,7 @@ fr:
       'Video: Introducing Sprite Lab': " Introduction au Labo des Lutins"
       'Video: Introduction to Play Lab': " Introduction au Labo de jeux"
       'Video: Introduction to Sprites': 'Vidéo : Introduction aux sprites'
-      'Video: Introduction to the Draw Loop': 'Vidéo : Introduction à la boucle draw'
+      'Video: Introduction to the Draw Loop': 'Vidéo : Introduction à la boucle dessine'
       'Video: Loops in Artist': " Les Boucles dans Artiste"
       'Video: Loops with the Artist': 'Vidéo : Les Boucles avec l''Artiste'
       'Video: Maze Intro - Programming with Blocks': 'Vidéo - Intro Maze : Programmation
@@ -414,7 +424,7 @@ fr:
       'Video: The Big Event - Unplugged Activity': 'Vidéo : Le grand événement – Activité
         hors ligne'
       'Video: The Collector': 'Vidéo : Le collectionneur '
-      'Video: The Harvester': " La Moissonneuse"
+      'Video: The Harvester': 'Video: l''Agricultrice'
       'Video: Training Data & Bias': 'Vidéo : Données de formation et préférences'
       'Video: Unplugged Variables in Envelopes': 'Vidéo : Variables débranchées dans
         les enveloppes '
@@ -424,12 +434,14 @@ fr:
       'Video: Warm Up': 'Vidéo : échauffement'
       'Video: What Makes a Computer, a Computer?': 'Vidéo : De quoi est fait un ordinateur
         ?'
+      'Video: What is Machine Learning?': 'Vidéo : Qu''est-ce que l''apprentissage
+        automatique ?'
       'Video: While Loops with the Farmer': " Les Boucles Tant Que avec la Fermière"
       'Video: Wrap-up': 'Vidéo : Conclusion '
       Warm Up: Warm-up (Séance d’échauffement)
       Website Project: Projet de site Web
       Welcome to Monster Town: Bienvenue à Monstreville
-      Where'd They Go?: Où iraient-ils ?
+      Where'd They Go?: Is sont passés où ?
       While Loops with the Farmer: Les Boucles Tant Que avec la Fermière
       'Widget: Text Compression': 'Widget : Compression de texte'
       Wrap-up: Résumé et ouverture

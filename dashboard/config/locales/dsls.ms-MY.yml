@@ -672,6 +672,7 @@ ms-MY:
         - correct: true
         questions:
         - {}
+        title: Buat Ramalan
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -680,6 +681,7 @@ ms-MY:
         - correct: true
         questions:
         - {}
+        title: Buat Ramalan
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -688,6 +690,7 @@ ms-MY:
         - correct: true
         questions:
         - {}
+        title: Buat Ramalan
       Dance_Party_extras_intro:
         markdown: "# Teruskan Menari! \n\nUntuk bahagian 2, anda akan mencipta projek
           anda sendiri. Tiada teka-teki di sini - sebaliknya terdapat banyak projek
@@ -993,106 +996,154 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
-        - {}
+        - feedback: Salah
         questions:
         - {}
       behaviors 1 predict_2020:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
-        - {}
+        - feedback: Salah
         questions:
         - {}
       behaviors 4 predict:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
-        - {}
+        - feedback: Salah
         questions:
         - {}
       behaviors 4 predict_2020:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
-        - {}
+        - feedback: Salah
         questions:
         - {}
       courseC_multi_artist_prog6_predict1:
         answers:
-        - {}
-        - {}
+        - text: Artis akan melukis segi tiga dengan tiga sisi yang sama.
+          feedback: Salah. Artis melukis segi empat sama.
+        - text: Artis akan melukis garisan tunggal.
+          feedback: Salah. Artis melukis segi empat sama.
         - correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku apabila
+            anda mengklik "Jalankan"?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Artis akan melukis segi tiga dengan tiga sisi yang sama.
+          feedback: Salah. Artis melukis segi empat sama.
+        - text: Artis akan melukis garisan tunggal.
+          feedback: Salah. Artis melukis segi empat sama.
+        - text: Artis akan melukis segi empat sama.
+          correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku apabila
+            anda mengklik "Jalankan"?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Artis akan melukis segi tiga dengan tiga sisi yang sama.
+          feedback: Salah. Artis melukis segi empat sama.
+        - text: Artis akan melukis garisan tunggal.
+          feedback: Salah. Artis melukis segi empat sama.
+        - text: Artis akan melukis segi empat sama.
+          correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku apabila
+            anda mengklik "Jalankan"?
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Artis akan melukis segi tiga dengan tiga sisi yang sama.
+          feedback: Salah. Artis melukis segi empat sama.
+        - text: Artis akan melukis garisan tunggal.
+          feedback: Salah. Artis melukis segi empat sama.
+        - text: Artis akan melukis segi empat sama.
+          correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku apabila
+            anda mengklik "Jalankan"?
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
+          feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
         - text: '12'
           correct: true
+          feedback: Betul!
         - text: '15'
+          feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Berapa banyak labu yang akan
+            dikutip oleh petani selepas anda mengklik "Jalankan"?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
+          feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
         - text: '12'
           correct: true
+          feedback: Betul!
         - text: '15'
+          feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Berapa banyak labu yang akan
+            dikutip oleh petani selepas anda mengklik "Jalankan"?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
+          feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
         - text: '12'
           correct: true
+          feedback: Betul!
         - text: '15'
+          feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Berapa banyak labu yang akan
+            dikutip oleh petani selepas anda mengklik "Jalankan"?
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
+          feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
         - text: '12'
           correct: true
+          feedback: Betul!
         - text: '15'
+          feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Berapa banyak labu yang akan
+            dikutip oleh petani selepas anda mengklik "Jalankan"?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
@@ -1101,6 +1152,7 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
@@ -1109,498 +1161,979 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
+        - text: Scrat akan sampai kepada buah oak. Tiada pepijat dalam kod.
+          feedback: Tidak betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
+            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
+        - text: Scrat tidak akan sampai kepada buah oak kerana ia berpusing ke arah
+            yang salah.
+          correct: true
+          feedback: Betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
+            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
+        - text: Scrat tidak akan sampai kepada buah oak kerana blok `bergerak ke hadapan`
+            tidak mencukupi.
+          correct: true
+          feedback: Betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
+            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
+        - feedback: Terdapat dua pepijat dalam kod. Mula-mula, Scrat berpusing ke
+            arah yang salah, kemudian Scrat tidak sempat bergerak ke hadapan untuk
+            mencapai buah oak itu.
         questions:
-        - {}
+        - text: Cari pepijat dalam kod ini. Adakah Scrat akan mencapai buah oak atau
+            terdapat masalah?
       courseC_multi_maze_programming8_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Burung itu akan ketinggalan selangkah berbanding khinzir.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
+        - text: Burung itu akan sampai kepada khinzir.
+          correct: true
+          feedback: Betul!
+        - text: Burung itu akan terserempak dengan TNT.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
         - {}
         questions:
-        - {}
+        - text: Baca keseluruhan kod di bawah dengan amat teliti. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Burung itu akan ketinggalan selangkah berbanding khinzir.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
+        - text: Burung itu akan sampai kepada khinzir.
+          correct: true
+          feedback: Betul!
+        - text: Burung itu akan terserempak dengan TNT.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
         - {}
         questions:
-        - {}
+        - text: Baca keseluruhan kod di bawah dengan amat teliti. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Burung itu akan ketinggalan selangkah berbanding khinzir.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
+        - text: Burung itu akan sampai kepada khinzir.
+          correct: true
+          feedback: Betul!
+        - text: Burung itu akan terserempak dengan TNT.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
         - {}
         questions:
-        - {}
+        - text: Baca keseluruhan kod di bawah dengan amat teliti. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Burung itu akan ketinggalan selangkah berbanding khinzir.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
+        - text: Burung itu akan sampai kepada khinzir.
+          correct: true
+          feedback: Betul!
+        - text: Burung itu akan terserempak dengan TNT.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
         - {}
         questions:
-        - {}
+        - text: Baca keseluruhan kod di bawah dengan amat teliti. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_starWars_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: BB-8 tidak akan bergerak.
+          feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
+        - text: BB-8 akan bergerak ke satu ruang sahaja
+          feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
+        - text: BB-8 akan bergerak 5 kali dan mendapatkan semua logam sekerap
+          correct: true
+          feedback: Betul!
+        - text: Saya tidak tahu
         questions:
-        - {}
+        - text: Apakah yang anda fikirkan akan berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_starWars_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: BB-8 tidak akan bergerak.
+          feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
+        - text: BB-8 akan bergerak ke satu ruang sahaja
+          feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
+        - text: BB-8 akan bergerak 5 kali dan mendapatkan semua logam sekerap
+          correct: true
+          feedback: Betul!
+        - text: Saya tidak tahu
         questions:
-        - {}
+        - text: Apakah yang anda fikirkan akan berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: BB-8 tidak akan bergerak.
+          feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
+        - text: BB-8 akan bergerak ke satu ruang sahaja
+          feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
+        - text: BB-8 akan bergerak 5 kali dan mendapatkan semua logam sekerap
+          correct: true
+          feedback: Betul!
+        - text: Saya tidak tahu
         questions:
-        - {}
+        - text: Apakah yang anda fikirkan akan berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: BB-8 tidak akan bergerak.
+          feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
+        - text: BB-8 akan bergerak ke satu ruang sahaja
+          feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
+        - text: BB-8 akan bergerak 5 kali dan mendapatkan semua logam sekerap
+          correct: true
+          feedback: Betul!
+        - text: Saya tidak tahu
         questions:
-        - {}
+        - text: Apakah yang anda fikirkan akan berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_starWars_predict2:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: BB-8 akan berjalan terlalu jauh dalam gelung pertama.
+          feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
+        - text: BB-8 tidak akan berjalan cukup jauh di dalam gelung pertama untuk
+            mendapatkan semua logam sekerap.
+          correct: true
+          feedback: Betul!
+        - text: BB-8 akan mengumpulkan semua logam sekerap tanpa mengalami masalah.
+          feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku apabila
+            anda mengklik "Jalankan"?
       courseC_multi_starWars_predict2_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: BB-8 akan berjalan terlalu jauh dalam gelung pertama.
+          feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
+        - text: BB-8 tidak akan berjalan cukup jauh di dalam gelung pertama untuk
+            mendapatkan semua logam sekerap.
+          correct: true
+          feedback: Betul!
+        - text: BB-8 akan mengumpulkan semua logam sekerap tanpa mengalami masalah.
+          feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku apabila
+            anda mengklik "Jalankan"?
       courseC_multi_starWars_predict2_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: BB-8 akan berjalan terlalu jauh dalam gelung pertama.
+          feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
+        - text: BB-8 tidak akan berjalan cukup jauh di dalam gelung pertama untuk
+            mendapatkan semua logam sekerap.
+          correct: true
+          feedback: Betul!
+        - text: BB-8 akan mengumpulkan semua logam sekerap tanpa mengalami masalah.
+          feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku apabila
+            anda mengklik "Jalankan"?
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: BB-8 akan berjalan terlalu jauh dalam gelung pertama.
+          feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
+        - text: BB-8 tidak akan berjalan cukup jauh di dalam gelung pertama untuk
+            mendapatkan semua logam sekerap.
+          correct: true
+          feedback: Betul!
+        - text: BB-8 akan mengumpulkan semua logam sekerap tanpa mengalami masalah.
+          feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku apabila
+            anda mengklik "Jalankan"?
       courseD_multi_artist_binary8_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
+          feedback: Betul!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
+          feedback: Betul!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
+          feedback: Betul!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
+          feedback: Betul!
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+          feedback: Betul!
+        - text: B
+          feedback: Salah. Gelung dalam membuat pentagon dan gelung luar mengulanginya
+            4 kali dalam bulatan.
+        - text: C
+          feedback: Salah. Gelung dalam membuat pentagon dan gelung luar mengulanginya
+            4 kali dalam bulatan.
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti pada kod di bawah. Lukisan yang manakah akan
+            dibuat oleh atur cara ini apabila anda mengklik "Jalankan"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+          feedback: Betul!
+        - text: B
+          feedback: Salah. Gelung dalam membuat pentagon dan gelung luar mengulanginya
+            4 kali dalam bulatan.
+        - text: C
+          feedback: Salah. Gelung dalam membuat pentagon dan gelung luar mengulanginya
+            4 kali dalam bulatan.
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti pada kod di bawah. Lukisan yang manakah akan
+            dibuat oleh atur cara ini apabila anda mengklik "Jalankan"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+          feedback: Betul!
+        - text: B
+          feedback: Salah. Gelung dalam membuat pentagon dan gelung luar mengulanginya
+            4 kali dalam bulatan.
+        - text: C
+          feedback: Salah. Gelung dalam membuat pentagon dan gelung luar mengulanginya
+            4 kali dalam bulatan.
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti pada kod di bawah. Lukisan yang manakah akan
+            dibuat oleh atur cara ini apabila anda mengklik "Jalankan"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+          feedback: Betul!
+        - text: B
+          feedback: Salah. Gelung dalam membuat pentagon dan gelung luar mengulanginya
+            4 kali dalam bulatan.
+        - text: C
+          feedback: Salah. Gelung dalam membuat pentagon dan gelung luar mengulanginya
+            4 kali dalam bulatan.
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti pada kod di bawah. Lukisan yang manakah akan
+            dibuat oleh atur cara ini apabila anda mengklik "Jalankan"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_bee_conditionals1_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: 'Lebah akan bergerak ke awan dan cuba mendapatkan nektar, walau apa
+            pun yang berlaku. '
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            hanya akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          correct: true
+          feedback: Betul!
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
         - {}
         questions:
-        - {}
+        - text: Awan menghalang pandangan. Mungkin terdapat bunga di bawah awan ini.
+            Jika terdapat bunga, lebah perlu mengumpul nektar sekali. Jika tiada bunga,
+            lebah tidak boleh melakukan apa-apa. Perhatikan dengan teliti pada kod
+            di bawah. Apakah yang anda fikir akan berlaku selepas anda mengklik "Jalankan"?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: 'Lebah akan bergerak ke awan dan cuba mendapatkan nektar, walau apa
+            pun yang berlaku. '
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            hanya akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          correct: true
+          feedback: Betul!
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
         - {}
         questions:
-        - {}
+        - text: Awan menghalang pandangan. Mungkin terdapat bunga di bawah awan ini.
+            Jika terdapat bunga, lebah perlu mengumpul nektar sekali. Jika tiada bunga,
+            lebah tidak boleh melakukan apa-apa. Perhatikan dengan teliti pada kod
+            di bawah. Apakah yang anda fikir akan berlaku selepas anda mengklik "Jalankan"?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: 'Lebah akan bergerak ke awan dan cuba mendapatkan nektar, walau apa
+            pun yang berlaku. '
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            hanya akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          correct: true
+          feedback: Betul!
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
         - {}
         questions:
-        - {}
+        - text: Awan menghalang pandangan. Mungkin terdapat bunga di bawah awan ini.
+            Jika terdapat bunga, lebah perlu mengumpul nektar sekali. Jika tiada bunga,
+            lebah tidak boleh melakukan apa-apa. Perhatikan dengan teliti pada kod
+            di bawah. Apakah yang anda fikir akan berlaku selepas anda mengklik "Jalankan"?
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: 'Lebah akan bergerak ke awan dan cuba mendapatkan nektar, walau apa
+            pun yang berlaku. '
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            hanya akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          correct: true
+          feedback: Betul!
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
         - {}
         questions:
-        - {}
+        - text: Awan menghalang pandangan. Mungkin terdapat bunga di bawah awan ini.
+            Jika terdapat bunga, lebah perlu mengumpul nektar sekali. Jika tiada bunga,
+            lebah tidak boleh melakukan apa-apa. Perhatikan dengan teliti pada kod
+            di bawah. Apakah yang anda fikir akan berlaku selepas anda mengklik "Jalankan"?
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: 'Lebah akan bergerak ke awan dan cuba mendapatkan nektar, walau apa
+            pun yang berlaku. '
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            hanya akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          correct: true
+          feedback: Betul!
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
         - {}
         questions:
-        - {}
+        - text: Awan menghalang pandangan. Mungkin terdapat bunga di bawah awan ini.
+            Jika terdapat bunga, lebah perlu mengumpul nektar sekali. Jika tiada bunga,
+            lebah tidak boleh melakukan apa-apa. Perhatikan dengan teliti pada kod
+            di bawah. Apakah yang anda fikir akan berlaku selepas anda mengklik "Jalankan"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
-        - {}
-        - {}
+          feedback: Betul!
+        - text: Lebah akan cuba mendapatkan nektar daripada kedua-dua bunga dan sarang
+            lebah.
+        - text: Lebah akan cuba mendapatkan madu daripada kedua-dua bunga dan sarang
+            lebah.
         - {}
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
-        - {}
-        - {}
+          feedback: Betul!
+        - text: Lebah akan cuba mendapatkan nektar daripada kedua-dua bunga dan sarang
+            lebah.
+        - text: Lebah akan cuba mendapatkan madu daripada kedua-dua bunga dan sarang
+            lebah.
         - {}
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: Lebah akan dapatkan nektar pada setiap bunga dan buat madu di setiap
+            sarang lebah.
+          correct: true
+          feedback: Betul!
+        - text: Lebah akan cuba mendapatkan nektar daripada kedua-dua bunga dan sarang
+            lebah.
+          feedback: Salah. Blok `jika pada bunga` membolehkan lebah mendapatkan nektar
+            pada setiap bunga dan membuat madu di setiap sarang lebah.
+        - text: Lebah akan cuba mendapatkan madu daripada kedua-dua bunga dan sarang
+            lebah.
+          feedback: Salah. Salah. Blok `jika pada bunga` membolehkan lebah mendapatkan
+            nektar pada setiap bunga dan membuat madu di setiap sarang lebah..
         - {}
         questions:
-        - {}
+        - text: 'Lihat dengan teliti kod di bawah. Apakah yang anda fikir akan berlaku
+            selepas anda mengklik "Jalankan"? Perlu diingat: hanya akan terdapat *satu*
+            sarang lebah atau *satu* bunga di belakang setiap awan.'
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: Lebah akan dapatkan nektar pada setiap bunga dan buat madu di setiap
+            sarang lebah.
+          correct: true
+          feedback: Betul!
+        - text: Lebah akan cuba mendapatkan nektar daripada kedua-dua bunga dan sarang
+            lebah.
+          feedback: Salah. Blok `jika pada bunga` membolehkan lebah mendapatkan nektar
+            pada setiap bunga dan membuat madu di setiap sarang lebah.
+        - text: Lebah akan cuba mendapatkan madu daripada kedua-dua bunga dan sarang
+            lebah.
+          feedback: Salah. Salah. Blok `jika pada bunga` membolehkan lebah mendapatkan
+            nektar pada setiap bunga dan membuat madu di setiap sarang lebah..
         - {}
         questions:
-        - {}
+        - text: 'Lihat dengan teliti kod di bawah. Apakah yang anda fikir akan berlaku
+            selepas anda mengklik "Jalankan"? Perlu diingat: hanya akan terdapat *satu*
+            sarang lebah atau *satu* bunga di belakang setiap awan.'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Lebah akan bergerak ke hadapan dan mendapatkan nektar hanya sekali.
+          feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+        - text: Lebah akan mendapat hanya 2 unit nektar.
+          feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+        - text: Lebah akan mendapat semua nektar.
+          correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti gelung bersarang di bawah. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Lebah akan bergerak ke hadapan dan mendapatkan nektar hanya sekali.
+          feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+        - text: Lebah akan mendapat hanya 2 unit nektar.
+          feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+        - text: Lebah akan mendapat semua nektar.
+          correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti gelung bersarang di bawah. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Lebah akan bergerak ke hadapan dan mendapatkan nektar hanya sekali.
+          feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+        - text: Lebah akan mendapat hanya 2 unit nektar.
+          feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+        - text: Lebah akan mendapat semua nektar.
+          correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti gelung bersarang di bawah. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Lebah akan bergerak ke hadapan dan mendapatkan nektar hanya sekali.
+          feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+        - text: Lebah akan mendapat hanya 2 unit nektar.
+          feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+        - text: Lebah akan mendapat semua nektar.
+          correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti gelung bersarang di bawah. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
+          feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
         - text: '8'
           correct: true
+          feedback: Betul!
         - text: '12'
+          feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Berapa banyak madu yang akan
+            dibuat oleh lebah apabila anda mengklik "Jalankan"?
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - text: '4'
+          feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
         - text: '8'
           correct: true
+          feedback: Betul!
         - text: '12'
+          feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Berapa banyak madu yang akan
+            dibuat oleh lebah apabila anda mengklik "Jalankan"?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - text: '4'
+          feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
         - text: '8'
           correct: true
+          feedback: Betul!
         - text: '12'
+          feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Berapa banyak madu yang akan
+            dibuat oleh lebah apabila anda mengklik "Jalankan"?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
+          feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
         - text: '8'
           correct: true
+          feedback: Betul!
         - text: '12'
+          feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Berapa banyak madu yang akan
+            dibuat oleh lebah apabila anda mengklik "Jalankan"?
       courseD_multi_collector_debugging10_predict1:
         answers:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         answers:
-        - {}
+        - text: Penuai akan mengumpulkan semua tanaman.
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
+        markdown: Salah. Kod ini akan meminta penuai berulang kali membuat corak anak
+          tangga dan memilih sebanyak mana jagung atau salad yang dia temui. Dia tidak
+          akan mengutip labu.
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Penuai akan mengumpulkan semua tanaman.
+          feedback: Salah. Tiada kod di sini untuk mengutip labu.
+        - text: Penuai tidak akan mengutip mana-mana tanaman dengan laluan yang dipilihnya.
+          feedback: Salah. Kod ini akan meminta penuai berulang kali membuat corak
+            anak tangga dan memilih sebanyak mana jagung atau salad yang dia temui.
+            Dia tidak akan mengutip labu.
+        - text: Penuai akan mengutip semua tanaman, kecuali labu.
+          correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
+        markdown: Salah. Kod ini akan meminta penuai berulang kali membuat corak anak
+          tangga dan memilih sebanyak mana jagung atau salad yang dia temui. Dia tidak
+          akan mengutip labu.
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Penuai akan mengumpulkan semua tanaman.
+          feedback: Salah. Tiada kod di sini untuk mengutip labu.
+        - text: Penuai tidak akan mengutip mana-mana tanaman dengan laluan yang dipilihnya.
+          feedback: Salah. Kod ini akan meminta penuai berulang kali membuat corak
+            anak tangga dan memilih sebanyak mana jagung atau salad yang dia temui.
+            Dia tidak akan mengutip labu.
+        - text: Penuai akan mengutip semua tanaman, kecuali labu.
+          correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
+        markdown: Salah. Kod ini akan meminta penuai berulang kali membuat corak anak
+          tangga dan memilih sebanyak mana jagung atau salad yang dia temui. Dia tidak
+          akan mengutip labu.
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Penuai akan mengumpulkan semua tanaman.
+          feedback: Salah. Tiada kod di sini untuk mengutip labu.
+        - text: Penuai tidak akan mengutip mana-mana tanaman dengan laluan yang dipilihnya.
+          feedback: Salah. Kod ini akan meminta penuai berulang kali membuat corak
+            anak tangga dan memilih sebanyak mana jagung atau salad yang dia temui.
+            Dia tidak akan mengutip labu.
+        - text: Penuai akan mengutip semua tanaman, kecuali labu.
+          correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
+        markdown: Salah. Kod ini akan meminta penuai berulang kali membuat corak anak
+          tangga dan memilih sebanyak mana jagung atau salad yang dia temui. Dia tidak
+          akan mengutip labu.
       courseD_multi_farmer_ramp13:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Tiada apa. Kod ini hanya akan meninggalkan tanah yang rata.
+          feedback: Salah. Tiada kod untuk membuang tanah dari longgokan.
+        - text: Kod ini akan meninggalkan longgokan tanpa disentuh langsung.
+          correct: true
+          feedback: Betul!
+        - text: Kod ini akan meninggalkan lubang tanpa disentuh langsung.
+          feedback: Salah. Gelung `semasa` akan mengendalikan apa-apa saiz gelung,
+            tetapi tiada kod untuk membuang tanah dari longgokan.
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti pada kod di bawah. Apakah yang akan ditinggalkan
+            pada akhir teka-teki ini?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Tiada apa. Kod ini hanya akan meninggalkan tanah yang rata.
+          feedback: Salah. Tiada kod untuk membuang tanah dari longgokan.
+        - text: Kod ini akan meninggalkan longgokan tanpa disentuh langsung.
+          correct: true
+          feedback: Betul!
+        - text: Kod ini akan meninggalkan lubang tanpa disentuh langsung.
+          feedback: Salah. Gelung `semasa` akan mengendalikan apa-apa saiz gelung,
+            tetapi tiada kod untuk membuang tanah dari longgokan.
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti pada kod di bawah. Apakah yang akan ditinggalkan
+            pada akhir teka-teki ini?
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Tiada apa. Kod ini hanya akan meninggalkan tanah yang rata.
+          feedback: Salah. Tiada kod untuk membuang tanah dari longgokan.
+        - text: Kod ini akan meninggalkan longgokan tanpa disentuh langsung.
+          correct: true
+          feedback: Betul!
+        - text: Kod ini akan meninggalkan lubang tanpa disentuh langsung.
+          feedback: Salah. Gelung `semasa` akan mengendalikan apa-apa saiz gelung,
+            tetapi tiada kod untuk membuang tanah dari longgokan.
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti pada kod di bawah. Apakah yang akan ditinggalkan
+            pada akhir teka-teki ini?
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Tiada apa. Kod ini hanya akan meninggalkan tanah yang rata.
+          feedback: Salah. Tiada kod untuk membuang tanah dari longgokan.
+        - text: Kod ini akan meninggalkan longgokan tanpa disentuh langsung.
+          correct: true
+          feedback: Betul!
+        - text: Kod ini akan meninggalkan lubang tanpa disentuh langsung.
+          feedback: Salah. Gelung `semasa` akan mengendalikan apa-apa saiz gelung,
+            tetapi tiada kod untuk membuang tanah dari longgokan.
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti pada kod di bawah. Apakah yang akan ditinggalkan
+            pada akhir teka-teki ini?
       courseD_multi_farmer_while4_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Tiada apa yang akan berlaku.
+          feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
+            kemudian berhenti apabila longgokan tersebut tiada
+        - text: Petani tidak akan sesekali berhenti membuang tanah.
+          feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
+            kemudian berhenti apabila longgokan tersebut tiada
+        - text: Petani akan membuang kotoran selagi terdapat longgokan, kemudian berhenti
+            apabila longgokan sudah tiada.
+          correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
       courseD_multi_farmer_while4_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Tiada apa yang akan berlaku.
+          feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
+            kemudian berhenti apabila longgokan tersebut tiada
+        - text: Petani tidak akan sesekali berhenti membuang tanah.
+          feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
+            kemudian berhenti apabila longgokan tersebut tiada
+        - text: Petani akan membuang kotoran selagi terdapat longgokan, kemudian berhenti
+            apabila longgokan sudah tiada.
+          correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Tiada apa yang akan berlaku.
+          feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
+            kemudian berhenti apabila longgokan tersebut tiada
+        - text: Petani tidak akan sesekali berhenti membuang tanah.
+          feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
+            kemudian berhenti apabila longgokan tersebut tiada
+        - text: Petani akan membuang kotoran selagi terdapat longgokan, kemudian berhenti
+            apabila longgokan sudah tiada.
+          correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Tiada apa yang akan berlaku.
+          feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
+            kemudian berhenti apabila longgokan tersebut tiada
+        - text: Petani tidak akan sesekali berhenti membuang tanah.
+          feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
+            kemudian berhenti apabila longgokan tersebut tiada
+        - text: Petani akan membuang kotoran selagi terdapat longgokan, kemudian berhenti
+            apabila longgokan sudah tiada.
+          correct: true
+          feedback: Betul!
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
-        - {}
-        - {}
+          feedback: Betul!
+        - text: Zombi akan berjaya sampai kepada bunga matahari.
+        - text: Zombi akan pusing kanan di laluan pertama dan berpusing-pusing dalam
+            bulatan untuk selama-lamanya.
         - {}
         questions:
-        - {}
+        - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik untuk
+            selama-lamanya.
+          correct: true
+          feedback: Betul!
+        - text: Zombi akan berjaya sampai kepada bunga matahari.
+          feedback: Salah. Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik
+            untuk selama-lamanya.
+        - text: Zombi akan pusing kanan di laluan pertama dan berpusing-pusing dalam
+            bulatan untuk selama-lamanya.
+          feedback: Salah. Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik
+            untuk selama-lamanya.
+        - feedback: Dalam kod ini, zombi akan melepasi laluan yang betul dan berkesudahan
+            dengan ia bergerak berulang-alik selama-lamanya.
         questions:
-        - {}
+        - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik untuk
+            selama-lamanya.
+          correct: true
+          feedback: Betul!
+        - text: Zombi akan berjaya sampai kepada bunga matahari.
+          feedback: Salah. Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik
+            untuk selama-lamanya.
+        - text: Zombi akan pusing kanan di laluan pertama dan berpusing-pusing dalam
+            bulatan untuk selama-lamanya.
+          feedback: Salah. Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik
+            untuk selama-lamanya.
+        - feedback: Dalam kod ini, zombi akan melepasi laluan yang betul dan berkesudahan
+            dengan ia bergerak berulang-alik selama-lamanya.
         questions:
-        - {}
+        - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik untuk
+            selama-lamanya.
+          correct: true
+          feedback: Betul!
+        - text: Zombi akan berjaya sampai kepada bunga matahari.
+          feedback: Salah. Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik
+            untuk selama-lamanya.
+        - text: Zombi akan pusing kanan di laluan pertama dan berpusing-pusing dalam
+            bulatan untuk selama-lamanya.
+          feedback: Salah. Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik
+            untuk selama-lamanya.
+        - feedback: Dalam kod ini, zombi akan melepasi laluan yang betul dan berkesudahan
+            dengan ia bergerak berulang-alik selama-lamanya.
         questions:
-        - {}
+        - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
       courseD_multi_maze_until2_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Burung itu tidak akan bergerak langsung.
+          feedback: Salah. Kod itu membuatkan burung bergerak ke hadapan semasa ada
+            laluan, kemudian pusing kiri. Burung itu terus melakukan ini sehingga
+            ia sampai kepada khinzir!
+        - text: Burung itu akan sampai kepada khinzir.
+          correct: true
+          feedback: Betul!
+        - text: Burung itu akan bergerak ke hadapan dan terserempak dengan TNT.
+          feedback: Salah. Kod itu membuatkan burung bergerak ke hadapan semasa ada
+            laluan, kemudian pusing kiri. Burung itu terus melakukan ini sehingga
+            ia sampai kepada khinzir!
+        - feedback: Kod itu membuatkan burung bergerak ke hadapan semasa ada laluan,
+            kemudian pusing kiri. Burung itu terus melakukan ini sehingga ia sampai
+            kepada khinzir!
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang anda fikirkan akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseD_multi_maze_until2_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Burung itu tidak akan bergerak langsung.
+          feedback: Salah. Kod itu membuatkan burung bergerak ke hadapan semasa ada
+            laluan, kemudian pusing kiri. Burung itu terus melakukan ini sehingga
+            ia sampai kepada khinzir!
+        - text: Burung itu akan sampai kepada khinzir.
+          correct: true
+          feedback: Betul!
+        - text: Burung itu akan bergerak ke hadapan dan terserempak dengan TNT.
+          feedback: Salah. Kod itu membuatkan burung bergerak ke hadapan semasa ada
+            laluan, kemudian pusing kiri. Burung itu terus melakukan ini sehingga
+            ia sampai kepada khinzir!
+        - feedback: Kod itu membuatkan burung bergerak ke hadapan semasa ada laluan,
+            kemudian pusing kiri. Burung itu terus melakukan ini sehingga ia sampai
+            kepada khinzir!
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang anda fikirkan akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Burung itu tidak akan bergerak langsung.
+          feedback: Salah. Kod itu membuatkan burung bergerak ke hadapan semasa ada
+            laluan, kemudian pusing kiri. Burung itu terus melakukan ini sehingga
+            ia sampai kepada khinzir!
+        - text: Burung itu akan sampai kepada khinzir.
+          correct: true
+          feedback: Betul!
+        - text: Burung itu akan bergerak ke hadapan dan terserempak dengan TNT.
+          feedback: Salah. Kod itu membuatkan burung bergerak ke hadapan semasa ada
+            laluan, kemudian pusing kiri. Burung itu terus melakukan ini sehingga
+            ia sampai kepada khinzir!
+        - feedback: Kod itu membuatkan burung bergerak ke hadapan semasa ada laluan,
+            kemudian pusing kiri. Burung itu terus melakukan ini sehingga ia sampai
+            kepada khinzir!
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang anda fikirkan akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Burung itu tidak akan bergerak langsung.
+          feedback: Salah. Kod itu membuatkan burung bergerak ke hadapan semasa ada
+            laluan, kemudian pusing kiri. Burung itu terus melakukan ini sehingga
+            ia sampai kepada khinzir!
+        - text: Burung itu akan sampai kepada khinzir.
+          correct: true
+          feedback: Betul!
+        - text: Burung itu akan bergerak ke hadapan dan terserempak dengan TNT.
+          feedback: Salah. Kod itu membuatkan burung bergerak ke hadapan semasa ada
+            laluan, kemudian pusing kiri. Burung itu terus melakukan ini sehingga
+            ia sampai kepada khinzir!
+        - feedback: Kod itu membuatkan burung bergerak ke hadapan semasa ada laluan,
+            kemudian pusing kiri. Burung itu terus melakukan ini sehingga ia sampai
+            kepada khinzir!
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang anda fikirkan akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseD_multi_scrat_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
@@ -1615,80 +2148,151 @@ ms-MY:
         - {}
       courseE_multi_farmer_functions11_predict:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Penuai akan mengutip dua biji labu.
+        - text: Penuai akan mengutip semua labu.
+        - text: Penuai akan mengutip salad.
+        - text: Penuai akan memetik jagung.
+          correct: true
+          feedback: Betul!
         questions:
-        - {}
+        - text: Lihat fungsi yang ditakrifkan di bawah. Apakah yang akan diambil oleh
+            penuai?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Penuai akan mengutip dua biji labu.
+          feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
+        - text: Penuai akan mengutip semua labu.
+          feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
+        - text: Penuai akan mengutip salad.
+          correct: true
+          feedback: Betul!
+        - text: Penuai akan memetik jagung.
+          feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
         questions:
-        - {}
+        - text: Lihat fungsi yang ditakrifkan di bawah. Apakah yang akan diambil oleh
+            penuai?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Penuai akan mengutip dua biji labu.
+          feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
+        - text: Penuai akan mengutip semua labu.
+          feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
+        - text: Penuai akan mengutip salad.
+          correct: true
+          feedback: Betul!
+        - text: Penuai akan memetik jagung.
+          feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
         questions:
-        - {}
+        - text: Lihat fungsi yang ditakrifkan di bawah. Apakah yang akan diambil oleh
+            penuai?
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Penuai akan mengutip dua biji labu.
+          feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
+        - text: Penuai akan mengutip semua labu.
+          feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
+        - text: Penuai akan mengutip salad.
+          correct: true
+          feedback: Betul!
+        - text: Penuai akan memetik jagung.
+          feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
         questions:
-        - {}
+        - text: Lihat fungsi yang ditakrifkan di bawah. Apakah yang akan diambil oleh
+            penuai?
       courseE_prediction_artistFunction1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Tiada apa-apa. Fungsi ini tidak dipanggil dalam atur cara.
+          feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+        - text: Artis akan melukis segi empat sama tunggal.
+          feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+        - text: Artis akan melukiskan dua segi empat sama yang bertindih.
+          feedback: Salah. Panjang setiap sisi segi empat sama hanya 100 piksel, tetapi
+            artis menaikkan sebanyak 175 piksel antara fungsi.
+        - text: Artis akan melukiskan dua segi empat sama dengan jurang kecil di antara
+            kedua-duanya.
+          correct: true
+          feedback: Betul! Fungsi itu dipanggil dua kali dalam atur cara, bersama
+            lompatan di antaranya.
         questions:
-        - {}
+        - text: Apakah yang akan berlaku apabila anda menekan "Jalankan"?
       courseE_prediction_artistFunction1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Tiada apa-apa. Fungsi ini tidak dipanggil dalam atur cara.
+          feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+        - text: Artis akan melukis segi empat sama tunggal.
+          feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+        - text: Artis akan melukiskan dua segi empat sama yang bertindih.
+          feedback: Salah. Panjang setiap sisi segi empat sama hanya 100 piksel, tetapi
+            artis menaikkan sebanyak 175 piksel antara fungsi.
+        - text: Artis akan melukiskan dua segi empat sama dengan jurang kecil di antara
+            kedua-duanya.
+          correct: true
+          feedback: Betul! Fungsi itu dipanggil dua kali dalam atur cara, bersama
+            lompatan di antaranya.
         questions:
-        - {}
+        - text: Apakah yang akan berlaku apabila anda menekan "Jalankan"?
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Tiada apa-apa. Fungsi ini tidak dipanggil dalam atur cara.
+          feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+        - text: Artis akan melukis segi empat sama tunggal.
+          feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+        - text: Artis akan melukiskan dua segi empat sama yang bertindih.
+          feedback: Salah. Panjang setiap sisi segi empat sama hanya 100 piksel, tetapi
+            artis menaikkan sebanyak 175 piksel antara fungsi.
+        - text: Artis akan melukiskan dua segi empat sama dengan jurang kecil di antara
+            kedua-duanya.
+          correct: true
+          feedback: Betul! Fungsi itu dipanggil dua kali dalam atur cara, bersama
+            lompatan di antaranya.
         questions:
-        - {}
+        - text: Apakah yang akan berlaku apabila anda menekan "Jalankan"?
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Tiada apa-apa. Fungsi ini tidak dipanggil dalam atur cara.
+          feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+        - text: Artis akan melukis segi empat sama tunggal.
+          feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+        - text: Artis akan melukiskan dua segi empat sama yang bertindih.
+          feedback: Salah. Panjang setiap sisi segi empat sama hanya 100 piksel, tetapi
+            artis menaikkan sebanyak 175 piksel antara fungsi.
+        - text: Artis akan melukiskan dua segi empat sama dengan jurang kecil di antara
+            kedua-duanya.
+          correct: true
+          feedback: Betul! Fungsi itu dipanggil dua kali dalam atur cara, bersama
+            lompatan di antaranya.
         questions:
-        - {}
+        - text: Apakah yang akan berlaku apabila anda menekan "Jalankan"?
       courseE_prediction_artistFunction1_copy:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Tiada apa-apa. Fungsi ini tidak dipanggil dalam atur cara.
+          feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+        - text: Artis akan melukis segi empat sama tunggal.
+          feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+        - text: Artis akan melukiskan dua segi empat sama yang bertindih.
+          feedback: Salah. Panjang setiap sisi segi empat sama hanya 100 piksel, tetapi
+            artis menaikkan sebanyak 175 piksel antara fungsi.
+        - text: Artis akan melukiskan dua segi empat sama dengan jurang kecil di antara
+            kedua-duanya.
+          correct: true
+          feedback: Betul! Fungsi itu dipanggil dua kali dalam atur cara, bersama
+            lompatan di antaranya.
         questions:
-        - {}
+        - text: Apakah yang akan berlaku apabila anda menekan "Jalankan"?
       courseF_bee_variables_8a_2018:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
@@ -1697,6 +2301,7 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
@@ -1705,6 +2310,7 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
@@ -1714,6 +2320,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
@@ -1722,6 +2329,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
@@ -1730,6 +2338,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
@@ -1738,12 +2347,14 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
         answers:
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         - {}
@@ -1751,84 +2362,198 @@ ms-MY:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Artis akan melukis segi tiga dengan sisi yang terdiri daripada 50
+            piksel.
+          correct: true
+          feedback: Betul!
+        - text: Artis akan melukis poligon 50 sisi dengan sisi yang terdiri daripada
+            3 piksel.
+          feedback: Salah. Pemboleh ubah `panjang` perlu berada di dalam gelung `berulang`
+            untuk perkara tersebut berlaku.
+        - text: Artis akan melukis tiga sisi terbuka dengan pusingan 50 darjah.
+          feedback: Salah. Pemboleh ubah `panjang` perlu digunakan dalam blok `pusing`
+            untuk perkara tersebut berlaku.
+        - feedback: Pemboleh ubah `panjang` ditetapkan kepada 50 dan sedang digunakan
+            dalam blok `bergerak ke hadapan sebanyak`, oleh itu artis akan melukis
+            segi tiga dengan sisi yang terdiri daripada 50 piksel.
         questions:
-        - {}
+        - text: Kita telah tetapkan pemboleh ubah "panjang" kepada 50. Apakah yang
+            akan berlaku apabila anda mengklik "Jalankan"?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Artis akan melukis segi tiga dengan sisi yang terdiri daripada 50
+            piksel.
+          correct: true
+          feedback: Betul!
+        - text: Artis akan melukis poligon 50 sisi dengan sisi yang terdiri daripada
+            3 piksel.
+          feedback: Salah. Pemboleh ubah `panjang` perlu berada di dalam gelung `berulang`
+            untuk perkara tersebut berlaku.
+        - text: Artis akan melukis tiga sisi terbuka dengan pusingan 50 darjah.
+          feedback: Salah. Pemboleh ubah `panjang` perlu digunakan dalam blok `pusing`
+            untuk perkara tersebut berlaku.
+        - feedback: Pemboleh ubah `panjang` ditetapkan kepada 50 dan sedang digunakan
+            dalam blok `bergerak ke hadapan sebanyak`, oleh itu artis akan melukis
+            segi tiga dengan sisi yang terdiri daripada 50 piksel.
         questions:
-        - {}
+        - text: Kita telah tetapkan pemboleh ubah "panjang" kepada 50. Apakah yang
+            akan berlaku apabila anda mengklik "Jalankan"?
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Artis akan melukis segi tiga dengan sisi yang terdiri daripada 50
+            piksel.
+          correct: true
+          feedback: Betul!
+        - text: Artis akan melukis poligon 50 sisi dengan sisi yang terdiri daripada
+            3 piksel.
+          feedback: Salah. Pemboleh ubah `panjang` perlu berada di dalam gelung `berulang`
+            untuk perkara tersebut berlaku.
+        - text: Artis akan melukis tiga sisi terbuka dengan pusingan 50 darjah.
+          feedback: Salah. Pemboleh ubah `panjang` perlu digunakan dalam blok `pusing`
+            untuk perkara tersebut berlaku.
+        - feedback: Pemboleh ubah `panjang` ditetapkan kepada 50 dan sedang digunakan
+            dalam blok `bergerak ke hadapan sebanyak`, oleh itu artis akan melukis
+            segi tiga dengan sisi yang terdiri daripada 50 piksel.
         questions:
-        - {}
+        - text: Kita telah tetapkan pemboleh ubah "panjang" kepada 50. Apakah yang
+            akan berlaku apabila anda mengklik "Jalankan"?
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Artis akan melukis segi tiga dengan sisi yang terdiri daripada 50
+            piksel.
+          correct: true
+          feedback: Betul!
+        - text: Artis akan melukis poligon 50 sisi dengan sisi yang terdiri daripada
+            3 piksel.
+          feedback: Salah. Pemboleh ubah `panjang` perlu berada di dalam gelung `berulang`
+            untuk perkara tersebut berlaku.
+        - text: Artis akan melukis tiga sisi terbuka dengan pusingan 50 darjah.
+          feedback: Salah. Pemboleh ubah `panjang` perlu digunakan dalam blok `pusing`
+            untuk perkara tersebut berlaku.
+        - feedback: Pemboleh ubah `panjang` ditetapkan kepada 50 dan sedang digunakan
+            dalam blok `bergerak ke hadapan sebanyak`, oleh itu artis akan melukis
+            segi tiga dengan sisi yang terdiri daripada 50 piksel.
         questions:
-        - {}
+        - text: Kita telah tetapkan pemboleh ubah "panjang" kepada 50. Apakah yang
+            akan berlaku apabila anda mengklik "Jalankan"?
       courseF_multi_bee_conditionals1_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: 'Lebah akan bergerak ke awan dan cuba mendapatkan nektar, walau apa
+            pun yang berlaku. '
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            hanya akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          correct: true
+          feedback: Betul!
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
         - {}
         questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
-        - {}
-        - {}
+          feedback: Betul!
+        - text: Lebah akan cuba mendapatkan nektar daripada kedua-dua bunga dan sarang
+            lebah.
+        - text: Lebah akan cuba mendapatkan madu daripada kedua-dua bunga dan sarang
+            lebah.
         - {}
         questions:
         - {}
       courseF_multi_bee_for3_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga, kecuali satu bunga. '
+          correct: true
+          feedback: Betul!
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul satu nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+        - feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
         questions:
-        - {}
+        - text: Baca kod di bawah. Apakah yang akan berlaku apabila anda mengklik
+            "Jalankan"?
+        markdown: Ah! Penggunaan gelung `untuk` membuatkan teka-teki ini menjadi lebih
+          mudah!
       courseF_multi_bee_for3_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga, kecuali satu bunga. '
+          correct: true
+          feedback: Betul!
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul satu nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
         - {}
         questions:
-        - {}
+        - text: Baca kod di bawah. Apakah yang akan berlaku apabila anda mengklik
+            "Jalankan"?
+        markdown: Ah! Penggunaan gelung `untuk` membuatkan teka-teki ini menjadi lebih
+          mudah!
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga, kecuali satu bunga. '
+          correct: true
+          feedback: Betul!
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul satu nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
         - {}
         questions:
-        - {}
+        - text: Baca kod di bawah. Apakah yang akan berlaku apabila anda mengklik
+            "Jalankan"?
+        markdown: Ah! Penggunaan gelung `untuk` membuatkan teka-teki ini menjadi lebih
+          mudah!
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga, kecuali satu bunga. '
+          correct: true
+          feedback: Betul!
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul satu nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
         - {}
         questions:
-        - {}
+        - text: Baca kod di bawah. Apakah yang akan berlaku apabila anda mengklik
+            "Jalankan"?
+        markdown: Ah! Penggunaan gelung `untuk` membuatkan teka-teki ini menjadi lebih
+          mudah!
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -1847,68 +2572,127 @@ ms-MY:
         - {}
       coursee_prediction_artistfunction2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Artis akan menyelesaikan teka-teki dengan betul.
+          feedback: Salah. Gelung menggunakan "lukiskan poligon" dan bukannya "lukiskan
+            garisan poligon".
+        - text: Artis akan melukiskan empat segi empat sama dalam corak tingkap.
+          correct: true
+          feedback: Betul!
+        - text: Artis akan melukiskan hanya satu garisan segi empat sama.
+          feedback: Salah. Atur cara tidak memanggil "lukiskan garisan poligon".
+        - text: Artis akan melukiskan empat segi empat sama di atas satu sama lain.
+          feedback: Salah. Gelung berpusing 90 darjah antara panggilan untuk "lukiskan
+            poligon".
         questions:
-        - {}
+        - text: Apakah yang akan berlaku apabila anda menekan butang "Jalankan"?
       coursee_prediction_artistfunction2_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Artis akan menyelesaikan teka-teki dengan betul.
+          feedback: Salah. Gelung menggunakan "lukiskan poligon" dan bukannya "lukiskan
+            garisan poligon".
+        - text: Artis akan melukiskan empat segi empat sama dalam corak tingkap.
+          correct: true
+          feedback: Betul!
+        - text: Artis akan melukiskan hanya satu garisan segi empat sama.
+          feedback: Salah. Atur cara tidak memanggil "lukiskan garisan poligon".
+        - text: Artis akan melukiskan empat segi empat sama di atas satu sama lain.
+          feedback: Salah. Gelung berpusing 90 darjah antara panggilan untuk "lukiskan
+            poligon".
         questions:
-        - {}
+        - text: Apakah yang akan berlaku apabila anda menekan butang "Jalankan"?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Artis akan menyelesaikan teka-teki dengan betul.
+          feedback: Salah. Gelung menggunakan "lukiskan poligon" dan bukannya "lukiskan
+            garisan poligon".
+        - text: Artis akan melukiskan empat segi empat sama dalam corak tingkap.
+          correct: true
+          feedback: Betul!
+        - text: Artis akan melukiskan hanya satu garisan segi empat sama.
+          feedback: Salah. Atur cara tidak memanggil "lukiskan garisan poligon".
+        - text: Artis akan melukiskan empat segi empat sama di atas satu sama lain.
+          feedback: Salah. Gelung berpusing 90 darjah antara panggilan untuk "lukiskan
+            poligon".
         questions:
-        - {}
+        - text: Apakah yang akan berlaku apabila anda menekan butang "Jalankan"?
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Artis akan menyelesaikan teka-teki dengan betul.
+          feedback: Salah. Gelung menggunakan "lukiskan poligon" dan bukannya "lukiskan
+            garisan poligon".
+        - text: Artis akan melukiskan empat segi empat sama dalam corak tingkap.
+          correct: true
+          feedback: Betul!
+        - text: Artis akan melukiskan hanya satu garisan segi empat sama.
+          feedback: Salah. Atur cara tidak memanggil "lukiskan garisan poligon".
+        - text: Artis akan melukiskan empat segi empat sama di atas satu sama lain.
+          feedback: Salah. Gelung berpusing 90 darjah antara panggilan untuk "lukiskan
+            poligon".
         questions:
-        - {}
+        - text: Apakah yang akan berlaku apabila anda menekan butang "Jalankan"?
       grade2_multi_collector_A_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Laurel akan mengumpulkan 4 harta karun dengan menggunakan kod ini.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+        - text: Laurel akan cuba mengumpulkan harta karun tetapi tiada apa-apa ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+          correct: true
+          feedback: Betul!
+        - text: Laurel akan mengumpulkan semua harta karun itu.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
         - {}
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Laurel akan mengumpulkan 4 harta karun dengan menggunakan kod ini.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+        - text: Laurel akan cuba mengumpulkan harta karun tetapi tiada apa-apa ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+          correct: true
+          feedback: Betul!
+        - text: Laurel akan mengumpulkan semua harta karun itu.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
         - {}
         questions:
-        - {}
+        - text: Lihat pada kod ini dengan teliti. Pada pendapat anda, apakah yang
+            akan berlaku apabila atur cara ini dijalankan?
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Laurel akan mengumpulkan 4 harta karun dengan menggunakan kod ini.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+        - text: Laurel akan cuba mengumpulkan harta karun tetapi tiada apa-apa ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+          correct: true
+          feedback: Betul!
+        - text: Laurel akan mengumpulkan semua harta karun itu.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
         - {}
         questions:
-        - {}
+        - text: Lihat pada kod ini dengan teliti. Pada pendapat anda, apakah yang
+            akan berlaku apabila atur cara ini dijalankan?
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Laurel akan mengumpulkan 4 harta karun dengan menggunakan kod ini.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+        - text: Laurel akan cuba mengumpulkan harta karun tetapi tiada apa-apa ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+          correct: true
+          feedback: Betul!
+        - text: Laurel akan mengumpulkan semua harta karun itu.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
         - {}
         questions:
-        - {}
+        - text: Lihat pada kod ini dengan teliti. Pada pendapat anda, apakah yang
+            akan berlaku apabila atur cara ini dijalankan?
       outbreak_story:
         markdown: "# Wabak: Kod Simulasi Anda Yang Tersendiri\n\n## Selamat datang
           ke Bandar Raksasa!\nBandar Raksasa dulunya tempat yang gembira dan sihat.
@@ -2056,6 +2840,7 @@ ms-MY:
           Setelah berlatih beberapa kali,  berapa lama kah anda perlu untuk meneka
           kata laluan dengan betul dengan mengantikan huruf dengan rawak?\n* Is this
           good or not  Adakah teknik ini sesuai digunakan?"
+        content1: penerangan di sini
       OPD-K5 CS Courses:
         markdown: "# Merancang > Langkah permulaan di Code.org\n\n\n## Langkah 1:
           Pilih kursus\nSemua kursus kami -- daripada prapembaca sehingga peringkat
@@ -2182,12 +2967,18 @@ ms-MY:
           tanpa menggunakan komputer dan forum untuk menyambung kepada guru lain."
       courseD_EOC_2020:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada pelajaran terakhir Kursus D! Pilih projek
+          untuk dicipta.
       courseE_EOC_2020:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
+          dicipta.
       courseExpress_EOC_2020:
         display_name: Akhir Projek Kursus
       courseF_EOC_2020:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus F! Pilih projek untuk
+          dicipta.
       CourseF_outbreak_story2:
         markdown: "# Wabak: Berfikir Seperti Saintis\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nSimulasi adalah cara yang hebat untuk
@@ -2200,7 +2991,7 @@ ms-MY:
           rawak, jadi anda tidak tahu sekiranya virus itu akan tersebar dengan cepat
           atau lambat. Setiap kali anda menukar kod anda, pastikan untuk menjalankan
           simulasi anda lebih dari sekali. Perkara tidak akan berlaku dengan cara
-          yang sama dua kali!\n\n## Mengumpul Data\nCuba tuliskan pemerhatian anda
+          yang sama dua kali!\n\n## Mengumpul Data\nCuba menulis pemerhatian anda
           semasa menjalankan simulasi anda. Anda boleh mengira bilangan raksasa yang
           jatuh sakit atau menggunakan pemasa untuk melihat seberapa cepat perkara
           itu berlaku. Contohnya, berapa lama biasanya semua raksasa jatuh sakit jika
@@ -2223,293 +3014,591 @@ ms-MY:
           dengan orang lain, atau berkongsi mesej tentang apa yang anda rasa dapat
           kami lakukan untuk membantu menjaga kesihatan orang lain ketika virus merebak
           ke bandar. "
-      OPD-K5 CS Courses_dani:
-        markdown: "# Merancang > Langkah permulaan di Code.org\n\n\n## Langkah 1:
-          Pilih kursus\nSemua kursus kami -- daripada prapembaca sehingga peringkat
-          sekolah menengah -- disenaraikan dalam **[katalog kursus](https://studio.code.org/courses)**.
-          Untuk mencari pelajaran Asas CS yang anda telah amalkan, sila pergi ke **[halaman
-          sekolah rendah] kami (https://code.org/educate/curriculum/elementary-school)**
-          dan tatal ke bawah sehingga sampai ke bahagian \"Kursus\". Semua kursus
-          kami tersedia tanpa sebarang kos. Sila bersembang dengan dengan rakan anda
-          di sekolah untuk menentukan sejauh mana kurikulum kursus boleh diintegrasikan
-          dengan pelbagai mata pelajaran.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
-          Langkah 2: Sediakan bahagian kelas anda\nSediakan bahagian kelas untuk melihat
-          kemajuan pelajar anda, cetak kad log masuk untuk pelajar anda, uruskan akaun
-          mereka dan cetak sijil yang boleh mereka bawa pulang apabila mereka menyelesaikan
-          kursus itu. Klik pautan ini untuk **[menonton video pendek](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
-          yang menunjukkan cara menyediakan kelas sains komputer pertama anda di Code.org.
-          Anda juga boleh mengikuti langkah dalam **[artikel sokongan ini](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
-          Langkah 3: Tetapkan kursus kepada bahagian anda\nKlik pada kursus yang anda
-          sedang mengajar -- anda sepatutnya melihat skrin yang kelihatan seperti
-          di bawah. Kemudian, anda boleh mengklik pada \"Tetapkan Kursus\" dan tetapkan
-          kursus itu kepada satu daripada bahagian anda. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
-          Langkah 4: Mula mengajar! \nSemua yang diperlukan ialah hanya satu pelajaran
-          untuk membawa konsep sains komputer ke dalam kelas anda. Sebaik sahaja anda
-          dapat lihat minat pelajar terhadap CS, lakukan lebih lanjut dengan rancangan
-          pelajaran harian bertujuan membimbing pelajar anda, aktiviti nirplag yang
-          boleh anda lakukan tanpa menggunakan komputer dan forum untuk menyambung
-          kepada guru lain.\n\n\n\n"
+        content1: penerangan di sini
       courseAB_EOC_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada pelajaran terakhir! Pilih projek untuk
+          dicipta.
       courseB_EOC_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada pelajaran terakhir! Pilih projek untuk
+          dicipta.
       courseC_multi_artist_prog6_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Artis akan melukis segi tiga dengan tiga sisi yang sama.
+          feedback: Salah. Artis melukis segi empat sama.
+        - text: Artis akan melukis garisan tunggal.
+          feedback: Salah. Artis melukis segi empat sama.
+        - text: Artis akan melukis segi empat sama.
+          correct: true
+          feedback: Betul!
+        - text: Artis akan melukis pentagon
+          feedback: Salah. Artis melukis segi empat sama.
         questions:
-        - {}
+        - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku apabila
+            anda mengklik "Jalankan"?
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
+          feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
         - text: '12'
           correct: true
+          feedback: Betul!
         - text: '15'
+          feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
         - text: '20'
+          feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Berapa banyak labu yang akan
+            dikutip oleh petani selepas anda mengklik "Jalankan"?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
+        - text: Scrat akan sampai kepada buah oak. Tiada pepijat dalam kod.
+          feedback: Tidak betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
+            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
+        - text: Scrat tidak akan sampai kepada buah oak kerana ia berpusing ke arah
+            yang salah.
+          correct: true
+          feedback: Betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
+            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
+        - text: Scrat tidak akan sampai kepada buah oak kerana blok `bergerak ke hadapan`
+            tidak mencukupi.
+          correct: true
+          feedback: Betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
+            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
+        - text: Scrat tidak akan bergerak daripada blok pertama.
+          feedback: Terdapat dua pepijat dalam kod. Mula-mula, Scrat berpusing ke
+            arah yang salah, kemudian Scrat tidak sempat bergerak ke hadapan untuk
+            mencapai buah oak itu.
         questions:
-        - {}
+        - text: Cari pepijat dalam kod ini. Adakah Scrat akan mencapai buah oak atau
+            terdapat masalah?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Burung itu akan ketinggalan selangkah berbanding khinzir.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
+        - text: Burung itu akan sampai kepada khinzir.
+          correct: true
+          feedback: Betul!
+        - text: Burung itu akan terserempak dengan TNT.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
+        - text: Burung itu akan merempuh dinding.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
         questions:
-        - {}
+        - text: Baca keseluruhan kod di bawah dengan amat teliti. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_starWars_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: BB-8 tidak akan bergerak.
+          feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
+        - text: BB-8 akan bergerak ke satu ruang sahaja
+          feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
+        - text: BB-8 akan bergerak 5 kali dan mendapatkan semua logam sekerap
+          correct: true
+          feedback: Betul!
+        - text: BB-8 akan bergerak ke 3 ruang sahaja.
+          feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
         questions:
-        - {}
+        - text: Apakah yang anda fikirkan akan berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_starWars_predict2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: BB-8 akan berjalan terlalu jauh dalam gelung pertama.
+          feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
+        - text: BB-8 tidak akan berjalan cukup jauh di dalam gelung pertama untuk
+            mendapatkan semua logam sekerap.
+          correct: true
+          feedback: Betul!
+        - text: BB-8 akan mengumpulkan semua logam sekerap tanpa mengalami masalah.
+          feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
+        - text: BB-8 akan berpusing ke arah yang salah selepas gelung pertama.
+          feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku apabila
+            anda mengklik "Jalankan"?
       courseD_EOC_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada pelajaran terakhir Kursus D! Pilih projek
+          untuk dicipta.
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: A
+          correct: true
+          feedback: Betul!
+        - text: B
+          feedback: Salah. Gelung dalam membuat pentagon dan gelung luar mengulanginya
+            4 kali dalam bulatan.
+        - text: C
+          feedback: Salah. Gelung dalam membuat pentagon dan gelung luar mengulanginya
+            4 kali dalam bulatan.
+        - text: Tiada satu pun di atas
+          feedback: Salah. Gelung dalam membuat pentagon dan gelung luar mengulanginya
+            4 kali dalam bulatan.
         questions:
-        - {}
+        - text: Perhatikan dengan teliti pada kod di bawah. Lukisan yang manakah akan
+            dibuat oleh atur cara ini apabila anda mengklik "Jalankan"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_bee_conditionals1_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 'Lebah akan bergerak ke awan dan cuba mendapatkan nektar, walau apa
+            pun yang berlaku. '
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            hanya akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          correct: true
+          feedback: Betul!
+        - text: 'Lebah akan bergerak ke awan dan kemudian tidak melakukan apa-apa,
+            walau apa pun yang berlaku. '
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
+        - text: 'Lebah tidak akan sampai ke awan. '
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            hanya akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
         questions:
-        - {}
+        - text: Awan menghalang pandangan. Mungkin terdapat bunga di bawah awan ini.
+            Jika terdapat bunga, lebah perlu mengumpul nektar sekali. Jika tiada bunga,
+            lebah tidak boleh melakukan apa-apa. Perhatikan dengan teliti pada kod
+            di bawah. Apakah yang anda fikir akan berlaku selepas anda mengklik "Jalankan"?
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: 'Lebah akan bergerak ke awan dan cuba mendapatkan nektar, walau apa
+            pun yang berlaku. '
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            hanya akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          correct: true
+          feedback: Betul!
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
         - {}
         questions:
-        - {}
+        - text: Awan menghalang pandangan. Mungkin terdapat bunga di bawah awan ini.
+            Jika terdapat bunga, lebah perlu mengumpul nektar sekali. Jika tiada bunga,
+            lebah tidak boleh melakukan apa-apa. Perhatikan dengan teliti pada kod
+            di bawah. Apakah yang anda fikir akan berlaku selepas anda mengklik "Jalankan"?
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Lebah akan dapatkan nektar pada setiap bunga dan buat madu di setiap
+            sarang lebah.
+          correct: true
+          feedback: Betul!
+        - text: Lebah akan cuba mendapatkan nektar daripada kedua-dua bunga dan sarang
+            lebah.
+          feedback: Salah. Blok `jika pada bunga` membolehkan lebah mendapatkan nektar
+            pada setiap bunga dan membuat madu di setiap sarang lebah.
+        - text: Lebah akan cuba mendapatkan madu daripada kedua-dua bunga dan sarang
+            lebah.
+          feedback: Salah. Salah. Blok `jika pada bunga` membolehkan lebah mendapatkan
+            nektar pada setiap bunga dan membuat madu di setiap sarang lebah..
+        - text: Lebah akan cuba mendapatkan madu dan nektar daripada kedua-dua bunga
+            dan sarang lebah.
+          feedback: Salah. Salah. Blok `jika pada bunga` membolehkan lebah mendapatkan
+            nektar pada setiap bunga dan membuat madu di setiap sarang lebah..
         questions:
-        - {}
+        - text: 'Lihat dengan teliti kod di bawah. Apakah yang anda fikir akan berlaku
+            selepas anda mengklik "Jalankan"? Perlu diingat: hanya akan terdapat *satu*
+            sarang lebah atau *satu* bunga di belakang setiap awan.'
       courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Lebah akan bergerak ke hadapan dan mendapatkan nektar hanya sekali.
+          feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+        - text: Lebah akan mendapat hanya 2 unit nektar.
+          feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+        - text: Lebah akan mendapat semua nektar.
+          correct: true
+          feedback: Betul!
+        - text: Lebah akan berpusing ke arah yang salah.
+          feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
         questions:
-        - {}
+        - text: Perhatikan dengan teliti gelung bersarang di bawah. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - text: '4'
+          feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
         - text: '8'
           correct: true
+          feedback: Betul!
         - text: '10'
+          feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
         - text: '12'
+          feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Berapa banyak madu yang akan
+            dibuat oleh lebah apabila anda mengklik "Jalankan"?
       courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Penuai akan mengumpulkan semua tanaman.
+          feedback: Salah. Tiada kod di sini untuk mengutip labu.
+        - text: Penuai tidak akan mengutip mana-mana tanaman dengan laluan yang dipilihnya.
+          feedback: Salah. Kod ini akan meminta penuai berulang kali membuat corak
+            anak tangga dan memilih sebanyak mana jagung atau salad yang dia temui.
+            Dia tidak akan mengutip labu.
+        - text: Penuai akan mengutip semua tanaman, kecuali labu.
+          correct: true
+          feedback: Betul!
+        - text: Penuai hanya akan mengutip labu.
+          feedback: Salah. Kod ini akan meminta penuai berulang kali membuat corak
+            anak tangga dan memilih sebanyak mana jagung atau salad yang dia temui.
+            Dia tidak akan mengutip labu.
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
+        markdown: |
+          Pucuk dalam teka-teki ini sama ada jagung atau salad.
+          <br/>
       courseD_multi_farmer_while10_predict2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Tiada apa. Kod ini hanya akan meninggalkan tanah yang rata.
+          feedback: Salah. Tiada kod untuk membuang tanah dari longgokan.
+        - text: Kod ini akan meninggalkan longgokan tanpa disentuh langsung.
+          correct: true
+          feedback: Betul!
+        - text: Kod ini akan meninggalkan lubang tanpa disentuh langsung.
+          feedback: Salah. Gelung `semasa` akan mengendalikan apa-apa saiz gelung,
+            tetapi tiada kod untuk membuang tanah dari longgokan.
+        - text: Kod ini akan meninggalkan lubang terakhir tanpa disentuh.
+          feedback: Salah. Tiada kod untuk membuang tanah dari longgokan.
         questions:
-        - {}
+        - text: Perhatikan dengan teliti pada kod di bawah. Apakah yang akan ditinggalkan
+            pada akhir teka-teki ini?
       courseD_multi_farmer_while4_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Tiada apa yang akan berlaku.
+          feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
+            kemudian berhenti apabila longgokan tersebut tiada
+        - text: Petani tidak akan sesekali berhenti membuang tanah.
+          feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
+            kemudian berhenti apabila longgokan tersebut tiada
+        - text: Petani akan membuang kotoran selagi terdapat longgokan, kemudian berhenti
+            apabila longgokan sudah tiada.
+          correct: true
+          feedback: Betul!
+        - text: Petani akan membuang tanah sekali sahaja.
+          feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
+            kemudian berhenti apabila longgokan tersebut tiada
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
       courseD_multi_maze_until10_predict2_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik untuk
+            selama-lamanya.
+          correct: true
+          feedback: Betul!
+        - text: Zombi akan berjaya sampai kepada bunga matahari.
+          feedback: Salah. Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik
+            untuk selama-lamanya.
+        - text: Zombi akan pusing kanan di laluan pertama dan berpusing-pusing dalam
+            bulatan untuk selama-lamanya.
+          feedback: Salah. Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik
+            untuk selama-lamanya.
+        - text: Zombi akan menghadapi kesulitan di hujung laluan ke hadapan.
+          feedback: Dalam kod ini, zombi akan melepasi laluan yang betul dan berkesudahan
+            dengan ia bergerak berulang-alik selama-lamanya.
         questions:
-        - {}
+        - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
       courseD_multi_maze_until2_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Burung itu tidak akan bergerak langsung.
+          feedback: Salah. Kod itu membuatkan burung bergerak ke hadapan semasa ada
+            laluan, kemudian pusing kiri. Burung itu terus melakukan ini sehingga
+            ia sampai kepada khinzir!
+        - text: Burung itu akan sampai kepada khinzir.
+          correct: true
+          feedback: Betul!
+        - text: Burung itu akan bergerak ke hadapan dan terserempak dengan TNT.
+          feedback: Salah. Kod itu membuatkan burung bergerak ke hadapan semasa ada
+            laluan, kemudian pusing kiri. Burung itu terus melakukan ini sehingga
+            ia sampai kepada khinzir!
+        - text: Burung berpusing ke arah yang salah.
+          feedback: Kod itu membuatkan burung bergerak ke hadapan semasa ada laluan,
+            kemudian pusing kiri. Burung itu terus melakukan ini sehingga ia sampai
+            kepada khinzir!
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang anda fikirkan akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseE_EOC_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
+          dicipta.
       courseE_EOC_examples_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
+          dicipta.
       courseE_multi_dance_events_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Tiada apa yang akan berlaku.
+          feedback: Salah. Makhluk asing akan mula bergerak ke atas dan ke bawah pada
+            skrin.
+        - text: Makhluk asing akan mula meronda dari kanan ke kiri.
+          feedback: Salah. Makhluk asing akan mula bergerak ke atas dan ke bawah pada
+            skrin.
+        - text: Makhluk asing akan mula bergerak ke atas dan ke bawah pada skrin.
+          correct: true
+          feedback: Betul!
+        - text: Makhluk asing akan hilang pada bahagian atas skrin.
+          feedback: Salah. Makhluk asing biru akan mula bergerak ke atas dan ke bawah
+            pada skrin.
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik pada makhluk asing?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Penuai akan mengutip dua biji labu.
+          feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
+        - text: Penuai akan mengutip semua labu.
+          feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
+        - text: Penuai akan mengutip salad.
+          correct: true
+          feedback: Betul!
+        - text: Penuai akan memetik jagung.
+          feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
         questions:
-        - {}
+        - text: Lihat fungsi yang ditakrifkan di bawah. Apakah yang akan diambil oleh
+            penuai?
       courseE_prediction_artistFunction1_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Tiada apa-apa. Fungsi ini tidak dipanggil dalam atur cara.
+          feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+        - text: Artis akan melukis segi empat sama tunggal.
+          feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+        - text: Artis akan melukiskan dua segi empat sama yang bertindih.
+          feedback: Salah. Panjang setiap sisi segi empat sama hanya 100 piksel, tetapi
+            artis menaikkan sebanyak 175 piksel antara fungsi.
+        - text: Artis akan melukiskan dua segi empat sama dengan jurang kecil di antara
+            kedua-duanya.
+          correct: true
+          feedback: Betul! Fungsi itu dipanggil dua kali dalam atur cara, bersama
+            lompatan di antaranya.
         questions:
-        - {}
+        - text: Apakah yang akan berlaku apabila anda menekan "Jalankan"?
       courseE_prediction_artistFunction1_dani:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Tiada apa-apa. Fungsi ini tidak dipanggil dalam atur cara.
+          feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+        - text: Artis akan melukis segi empat sama tunggal.
+          feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+        - text: Artis akan melukiskan dua segi empat sama yang bertindih.
+          feedback: Salah. Panjang setiap sisi segi empat sama hanya 100 piksel, tetapi
+            artis menaikkan sebanyak 175 piksel antara fungsi.
+        - text: Artis akan melukiskan dua segi empat sama dengan jurang kecil di antara
+            kedua-duanya.
+          correct: true
+          feedback: Betul! Fungsi itu dipanggil dua kali dalam atur cara, bersama
+            lompatan di antaranya.
         questions:
-        - {}
+        - text: Apakah yang akan berlaku apabila anda menekan "Jalankan"?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Tiada apa yang akan berlaku.
+          feedback: Salah. Rumpai bergolek akan mula bergolek.
+        - text: Rumpai bergolek akan terapung pada bahagian atas skrin.
+          feedback: Salah. Rumpai bergolek akan mula bergolek.
+        - text: Rumpai bergolek akan mula bergolek.
+          correct: true
+          feedback: Betul!
+        - text: Rumpai bergolek akan berkelip-kelip.
+          feedback: Salah. Rumpai bergolek akan mula bergolek.
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
       courseF_EOC_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus F! Pilih projek untuk
+          dicipta.
       courseF_EOC_examples_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus F! Pilih projek untuk
+          dicipta.
       courseF_EOC_samples_2021:
         display_name: Akhir Projek Kursus
+        description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
+          luangkan sedikit masa dengan melihat projek contoh.
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Peperi hanya akan berputar ke kanan.
+          feedback: Salah. Peperi juga akan bergerak ke timur.
+        - text: Peperi hanya akan bergerak ke timur.
+          feedback: Salah. Peperi tidak pernah berhenti berputar, oleh itu ia akan
+            melakukan kedua-duanya serentak.
+        - text: Peperi akan berputar dan bergerak pada masa yang sama.
+          correct: true
+          feedback: Betul! Kedua-dua tingkah laku akan berlaku secara serentak.
+        - text: Sprite akan berputar terlebih dahulu dan kemudian bergerak nanti.
+          feedback: Salah. Di dalam Makmal Peperi, blok bersambung berlaku dengan
+            serta-merta selepas setiap blok yang terakhir, oleh itu kedua-dua tingkah
+            laku akan berlaku secara serentak.
         questions:
-        - {}
+        - text: Baca kod, kemudian buat ramalan.
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '"Satu piza datang dengan segera!"'
+          feedback: Salah. Label pemboleh ubah tidak sepadan.
+        - text: '"Satu hidangan datang dengan segera!"'
+          feedback: Salah. Label pemboleh ubah tidak pernah dicetak.
+        - text: '"Satu makanan datang dengan segera!"'
+          feedback: Salah. Label pemboleh ubah tidak pernah dicetak.
+        - text: '"Satu datang dengan segera!"'
+          correct: true
+          feedback: Betul!. Label pemboleh ubah tidak sepadan.
+        - text: Tiada apa-apa yang akan dicetak.
+          feedback: Salah. Blok peristiwa dan cetakan masih akan berfungsi.
         questions:
-        - {}
+        - text: Kod ini mungkin kelihatan seperti biasa tetapi sila baca dengan teliti.
+            Apakah yang akan dicetak jika pengguna menaip "piza"?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Artis akan melukis segi tiga dengan sisi yang terdiri daripada 50
+            piksel.
+          correct: true
+          feedback: Betul!
+        - text: Artis akan melukis poligon 50 sisi dengan sisi yang terdiri daripada
+            3 piksel.
+          feedback: Salah. Pemboleh ubah `panjang` perlu berada di dalam gelung `berulang`
+            untuk perkara tersebut berlaku.
+        - text: Artis akan melukis tiga sisi terbuka dengan pusingan 50 darjah.
+          feedback: Salah. Pemboleh ubah `panjang` perlu digunakan dalam blok `pusing`
+            untuk perkara tersebut berlaku.
+        - text: Komputer akan mengingatkan pengguna untuk nombor.
+          feedback: Pemboleh ubah `panjang` ditetapkan kepada 50 dan sedang digunakan
+            dalam blok `bergerak ke hadapan sebanyak`, oleh itu artis akan melukis
+            segi tiga dengan sisi yang terdiri daripada 50 piksel.
         questions:
-        - {}
+        - text: Kita telah tetapkan pemboleh ubah "panjang" kepada 50. Apakah yang
+            akan berlaku apabila anda mengklik "Jalankan"?
       courseF_multi_bee_for3_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga, kecuali satu bunga. '
+          correct: true
+          feedback: Betul!
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul satu nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul satu nektar daripada
+            bunga nombor 1 dan 4. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
         questions:
-        - {}
+        - text: Baca kod di bawah. Apakah yang akan berlaku apabila anda mengklik
+            "Jalankan"?
+        markdown: Ah! Penggunaan gelung `untuk` membuatkan teka-teki ini menjadi lebih
+          mudah!
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Kedua-dua pesawat akan bergerak satu ruang di sepanjang grid, kemudian
+            berhenti.
+          feedback: Salah. Peperi ini mempunyai "tingkah laku" iaitu terus berlari
+            sehingga diberitahu untuk berhenti.
+        - text: Kedua-dua pesawat akan mula bergerak dan bukan berhenti.
+          correct: true
+          feedback: Betul! Tingkah laku ini memberitahu pesawat supaya mula bergerak
+            dan teruskan.
+        - text: Satu pesawat akan bergerak terlebih dahulu dan satu lagi pesawat akan
+            bergerak nanti.
+          feedback: Salah. Setiap blok kod dalam di dalam Makmal Peperi berjalan serta-merta
+            selepas yang seterusnya.
+        - text: Pesawat akan terhempas.
+          feedback: Salah. Pesawat tidak ditempatkan dengan cara yang akan membuatkan
+            ia bersentuhan.
         questions:
-        - {}
+        - text: Baca kod, kemudian buat ramalan.
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Atur cara ini akan mencetak "Helo nama!"
+          feedback: Salah. Blok nama akan digantikan dengan apa sahaja yang anda taipkan.
+        - text: Atur cara ini akan menyambut anda dengan nama yang anda taipkan.
+          correct: true
+          feedback: Betul! Perkara yang anda taip digunakan di tempat blok nama.
+        - text: Peperi akan berubah saiz.
+          feedback: Salah. Teks dicetak pada skrin.
+        - text: Komputer akan bertanya soalan lain.
+          feedback: Salah. Hanya satu soalan ditanya, sebaik sahaja apabila atur cara
+            bermula.
         questions:
-        - {}
+        - text: 'Atur cara ini membolehkan anda menjawab soalan dengan menaip menggunakan
+            papan kekunci anda. Blok `cetakan` menunjukkan teks pada skrin. Buat ramalan:
+            Apakah yang akan berlaku selepas menjawab soalan?'
       coursee_prediction_artistfunction2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Artis akan menyelesaikan teka-teki dengan betul.
+          feedback: Salah. Gelung menggunakan "lukiskan poligon" dan bukannya "lukiskan
+            garisan poligon".
+        - text: Artis akan melukiskan empat segi empat sama dalam corak tingkap.
+          correct: true
+          feedback: Betul!
+        - text: Artis akan melukiskan hanya satu garisan segi empat sama.
+          feedback: Salah. Atur cara tidak memanggil "lukiskan garisan poligon".
+        - text: Artis akan melukiskan empat segi empat sama di atas satu sama lain.
+          feedback: Salah. Gelung berpusing 90 darjah antara panggilan untuk "lukiskan
+            poligon".
         questions:
-        - {}
+        - text: Apakah yang akan berlaku apabila anda menekan butang "Jalankan"?
       express_EOC_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
+          dicipta.
       grade2_multi_collector_A_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel akan mengumpulkan 4 harta karun dengan menggunakan kod ini.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+        - text: Laurel akan cuba mengumpulkan harta karun tetapi tiada apa-apa ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+          correct: true
+          feedback: Betul!
+        - text: Laurel akan mengumpulkan semua harta karun itu.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+        - text: Laurel akan mengumpulkan 1 harta karun dengan menggunakan kod ini.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
         questions:
-        - {}
+        - text: Lihat pada kod ini dengan teliti. Pada pendapat anda, apakah yang
+            akan berlaku apabila atur cara ini dijalankan?
       CourseF_outbreak_story:
         markdown: "# Wabak: Kod Simulasi Anda Yang Tersendiri\n\n## Selamat datang
           ke Bandar Raksasa!\nBandar Raksasa dulunya tempat yang gembira dan sihat.
@@ -2585,6 +3674,7 @@ ms-MY:
           selesai, kongsi simulasi anda dengan orang lain. Kongsi mesej anda mengenai
           apa yang boleh kami lakukan untuk membantu menjaga kesihatan orang lain
           ketika virus merebak ke bandar."
+        content1: penerangan di sini
       CSD U3 Collisions SFLP:
         markdown: |-
           # Gambaran keseluruhan
@@ -2647,3 +3737,1098 @@ ms-MY:
           ## Sumber
 
           * [Pengenalan kepada Pembolehubah](https://youtu.be/G41G_PEWFjE) - Video ([muat turun](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      Internet Simulator Setup:
+        markdown: "# Simulator Internet Code.org\n\n_Nota: Arahan yang disenaraikan
+          dalam tutorial ini adalah untuk guru yang ingin menggunakan Simulator Internet
+          sebagai alat kendiri, berasingan daripada kurikulum Prinsip Sains Komputer
+          Code.org. Jika anda merancang untuk menggunakan aktiviti yang direka sebagai
+          sebahagian daripada kurikulum CSP Code.org, sila pergi ke [halaman kurikulum
+          CSP.] (Https://code.org/educate/csp) _\n\n### Kandungan\nTerdapat 3 halaman
+          latar belakang dan maklumat yang terkandung di sini:\n\n* Apakah Simulator
+          Internet? Gambaran keseluruhan (lihat di bawah)\n* [arahan persediaan] (/s/netsim/lesons/1/levels/2)\n*
+          [Soalan Lazim] (/s/netsim/pelajaran/1/peringkat/3)\n \n### Apakah itu Simulator
+          Internet? Gambaran keseluruhan:\n\nSimulator Internet ialah alat yang dibangunkan
+          oleh Code.org untuk kelas [Prinsip Sains Komputer] (https://code.org/educate/csp)
+          sekolah menengah baharu kami. Alat ini direka bentuk untuk membolehkan pelajar
+          mendapatkan pengalaman bereksperimen dengan (dan menyelesaikan) pelbagai
+          jenis masalah yang berkaitan dengan komputer rangkaian. Simulator Internet
+          digunakan dalam berbilang pelajaran di seluruh Unit 1 dan 2 dalam kurikulum
+          kami untuk membina lapisan Internet yang berbeza secara berturut-turut.\n\nJika
+          anda sedang mempertimbangkan untuk menggunakan alat dalam bilik darjah anda
+          dengan aktiviti yang anda reka, kami akan mengesyorkan anda membiasakan
+          diri dengan alat tersebut melalui [rancangan pelajaran] kami (https://curriculum.code.org/csp/unit1).
+          ** Arahan persediaan ** pada halaman seterusnya adalah untuk guru yang ingin
+          menggunakan Simulator Internet yang berasingan daripada kurikulum CSP Code.org.\n\nAlat
+          itu sendiri tidak _mengajar_ konsep ini, sebaliknya menyediakan persekitaran
+          untuk berbilang pelajar untuk berkumpul dan menghantar mesej berasaskan
+          perduaan, perpuluhan atau ascii kepada satu sama lain atau rakan sekelas
+          yang lain. ** Persekitaran boleh dikonfigurasikan ** dalam pelbagai cara
+          untuk mendedahkan pelbagai jenis masalah, menggambarkan data dan sambungan
+          antara hos, dan menyokong pembelajaran pelbagai konsep yang berkaitan dengan
+          Internet.\n\nSimulator Internet telah direka bentuk untuk digunakan dalam
+          * bilik darjah * dengan pelajar bekerja secara kolaboratif secara bersemuka
+          untuk menyelesaikan masalah. Selalunya masalah ini melibatkan mencipta protokol
+          komunikasi, atau mencipta cara untuk mengekod maklumat dengan cara berstruktur
+          yang menjadikan pengangkutannya melalui Internet boleh dilaksanakan.\n\n**
+          Dalam kurikulum Prinsip Sains Komputer Code.org ** kami biasanya menstruktur
+          pelajaran dan aktiviti dengan cara berikut:\n\n*** Mula-mula berikan pelajar
+          cabaran **\n * cth. Internet fizikal sememangnya tidak boleh dipercayai
+          dan boleh menggugurkan mesej\n*** Beri peluang untuk bereksperimen dengan
+          simulator untuk memahami isu **\n * cth. lihat log penghala untuk mengetahui
+          bahawa 10-20% daripada semua mesej digugurkan dan paket boleh dialihkan
+          ke luar susunan\n*** Beri peluang untuk mencipta penyelesaian mereka sendiri
+          untuk cabaran **\n  * cth. mencipta protokol mereka sendiri untuk cara menghantar
+          mesej dengan pasti pada rangkaian yang tidak boleh dipercayai ini\n*** Akhir
+          sekali, pelajar menyelidik bagaimana protokol atau ciptaan itu berfungsi
+          \"di dunia nyata\" **\n * cth. Selidik cara TCP benar-benar berfungsi dan
+          tonton video\n\n### Apakah Simulator Internet Boleh Dikonfigurasikan Untuk
+          Dilakukan?\n\nPada asasnya, Simulator Internet boleh menyampaikan sedikit
+          maklumat melalui wayar kongsi tunggal tanpa penyelarasan atau penyegerakan.
+          Pada tahap yang paling maju, ia boleh mensimulasikan sambungan yang tidak
+          boleh dipercayai melalui berbilang penghala, menggunakan alamat IP, DNS,
+          dan paket bersaiz tetap yang memerlukan penciptaan protokol yang serupa
+          dengan TCP/IP atau HTTP.\n\nKami telah menyediakan Simulator Internet dalam
+          pelbagai konfigurasi yang sesuai untuk mengajar topik tertentu. Tetapi jika
+          menggunakan Simulator Internet untuk kelas, anda harus mengetahui beberapa
+          tetapan antara muka pengguna yang anda mungkin ingin mengawal atau memberitahu
+          pelajar anda untuk menyediakan dengan cara tertentu.\n\nContohnya: salah
+          satu ciri Simulator Internet ialah anda boleh menunjukkan perwakilan perduaan,
+          perpuluhan, heks dan ASCII bagi sebarang data yang anda hantar ke sekeliling.
+          Dalam sesetengah konfigurasi, pengguna juga boleh menetapkan \"saiz ketulan\"
+          untuk menentukan cara bit ditafsirkan. Untuk pelajaran reka bentuk anda
+          sendiri, anda mungkin memilih salah satu konfigurasi yang telah kami sediakan,
+          tetapi mungkin perlu memberi mandat bahawa pelajar hanya menunjukkan perwakilan
+          tertentu bit, atau mungkin anda mahu saiz ketulan ditetapkan kepada nilai
+          tertentu.\n\nPerkara yang lebih besar ialah konfigurasi yang disediakan
+          di sini bertujuan untuk menjadi titik permulaan untuk mengajar topik tertentu.
+          Anda mungkin perlu menggunakan beberapa kepintaran dan strategi pengajaran
+          untuk memperhalusi lagi penggunaan Simulator agar sesuai dengan keperluan
+          anda.\n\n\n <br> <br>\n<img src = \"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
+          width = \"600px\" style = \"margin: 0 100px\"/\n<br> <br>\n\n\n\n    \n\n\n_Seterusnya:
+          Arahan persediaan_"
+        content1: penerangan di sini
+      Internet Simulator Setup 2:
+        markdown: |-
+          # Simulator Internet: Arahan Persediaan
+
+          1. **Buat bahagian dalam Code Studio.** Untuk pelajar dalam kelas anda dapat berkomunikasi antara satu sama lain, mereka semua perlu dikaitkan dengan bahagian yang sama dalam Code Studio. Dilog masuk sebagai akaun guru, anda perlu membuat bahagian yang disertai oleh semua pelajar anda. Untuk membuat bahagian:
+           * Navigasi ke kawasan [sections](https://code.org/teacher-dashboard#/sections) pada papan pemuka guru
+           * Klik butang 'Bahagian Baharu'. Kami mengesyorkan memilih Log Masuk Jenis 'E-mel' dan 'cspunit1' untuk kursus.
+           <br>
+          <img src="https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png" width="600px" />
+          <br><br>
+          2. **Suruh pelajar menyertai bahagian anda.** Setelah bahagian itu dibuat, klik pautan 'Urus Pelajar' untuk bahagian tersebut. Anda akan melihat kod bahagian yang anda boleh minta pelajar sertai setelah mereka membuat akaun Code Studio mereka sendiri.
+          <br>
+          <img src="https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png" width="400px" />
+          <br><br>
+          3. **Berikan kepada pelajar URL kepada versi Simulator Internet yang anda mahu gunakan.** Kami telah mencipta beberapa konfigurasi berbeza bagi Simulator Internet tersedia di [code.org/internetsimulator](http://code.org/internetsimulator ). Apabila anda menemui konfigurasi yang sesuai untuk aktiviti anda, kongsi URL dengan pelajar. Jika mereka semua berada dalam bahagian yang sama, maka mereka secara automatik akan dapat berhubung antara satu sama lain apabila mereka tiba di URL yang sama.
+
+          _Seterusnya: Soalan Lazim_
+        content1: penerangan di sini
+      Internet Simulator Setup 3:
+        markdown: |-
+          # Simulator Internet: Soalan Lazim
+
+          #### Di manakah saya boleh mencari aktiviti yang anda reka bentuk untuk digunakan dengan Simulator Internet?
+          Aktiviti yang telah kami reka bentuk untuk kurikulum Prinsip Sains Komputer kami, termasuk konfigurasi Simulator Internet khusus boleh didapati dalam rancangan pelajaran Unit [di sini](https://code.org/educate/csp). Kebanyakan rancangan pengajaran mempunyai video sokongan "Petua & Trik Guru" yang menunjukkan demonstrasi Simulator Internet yang digunakan sebagai sebahagian daripada aktiviti bilik darjah. Anda boleh menggunakan aktiviti ini sebagaimana adanya, atau berasa bebas untuk mengubah suai agar sesuai dengan kelas anda!
+
+          #### Bolehkah saya menyesuaikan Simulator Internet untuk kelas saya?
+          Pada masa ini, malangnya kami tidak mempunyai cara untuk orang di luar Code.org membuat konfigurasi dan arahan khusus untuk Simulator Internet. Kami telah cuba mendedahkan pelbagai konfigurasi berbeza yang diharapkan dapat berfungsi untuk bilik darjah dan aktiviti anda. Jangka panjang, kami ingin mempunyai cara untuk membenarkan orang lain mengkonfigurasi alat tersebut.
+
+          #### Pelajar saya tidak dapat melihat satu sama lain apabila mereka pergi ke URL yang saya berikan kepada mereka untuk Simulator Internet. Apa yang boleh saya buat?
+          Untuk pelajar melihat satu sama lain di lobi Simulator Internet, mereka perlu berada di bahagian yang sama. Semak semula sama ada anda telah melengkapkan arahan persediaan bahagian dari halaman sebelumnya dan bahawa pelajar yang berkenaan telah menyertai kod bahagian tertentu itu. Selain itu, sesetengah pelajar mungkin berada dalam berbilang bahagian jika mereka pernah membuat kerja kursus dengan Code.org sebelum ini, jadi pastikan mereka mengetahui nama bahagian anda dan telah memilihnya dalam menu lungsur sebelum memasuki lobi.
+        content1: penerangan di sini
+      Begin planning your project:
+        content1: penerangan di sini
+      Begin planning your project_2018:
+        content1: penerangan di sini
+      Begin planning your project_2018_2019:
+        content1: penerangan di sini
+      Begin planning your project_2018_2019_2020:
+        content1: penerangan di sini
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 Design Project:
+        content1: penerangan di sini
+      CSD U2 Design Project_2018:
+        content1: penerangan di sini
+      CSD U2 Design Project_2018_2019:
+        content1: penerangan di sini
+      CSD U2 L1 Overview:
+        content1: penerangan di sini
+      CSD U2 L2 Overview:
+        content1: penerangan di sini
+      CSD U2 L3 Overview:
+        content1: penerangan di sini
+      CSD U2 L4 Overview:
+        content1: penerangan di sini
+      CSD U2 L5 Overview:
+        content1: penerangan di sini
+      CSD U2 L6 Overview:
+        content1: penerangan di sini
+      CSD U2 Lesson 6 Overview:
+        content1: penerangan di sini
+      CSD U2 expand project:
+        content1: penerangan di sini
+      CSD U2 expand project_2018:
+        content1: penerangan di sini
+      CSD U2 expand project_2018_2019:
+        content1: penerangan di sini
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide:
+        content1: penerangan di sini
+      CSD U2 project guide_2018:
+        content1: penerangan di sini
+      CSD U2 project guide_2018_2019:
+        content1: penerangan di sini
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: penerangan di sini
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: tajuk
+      CSD U3 Card Examples_2018:
+        content1: penerangan di sini
+      CSD U3 Card Examples_2018_2019:
+        content1: penerangan di sini
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: penerangan di sini
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 combining rep:
+        content1: penerangan di sini
+      CSD U3 combining rep_2018:
+        content1: penerangan di sini
+      CSD U3 combining rep_2018_2019:
+        content1: penerangan di sini
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro:
+        content1: penerangan di sini
+      CSD U3 game intro_2018:
+        content1: penerangan di sini
+      CSD U3 game intro_2018_2019:
+        content1: penerangan di sini
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: penerangan di sini
+      CSD U3 platform intro:
+        content1: penerangan di sini
+      CSD U3 platform intro_2018:
+        content1: penerangan di sini
+      CSD U3 platform intro_2018_2019:
+        content1: penerangan di sini
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: penerangan di sini
+      CSD U5 Encryption 1:
+        content1: penerangan di sini
+      CSD U5 Encryption 1_2018:
+        content1: penerangan di sini
+      CSD U5 Encryption 1_2018_2019:
+        content1: penerangan di sini
+      CSD U5 Encryption 2:
+        content1: penerangan di sini
+      CSD U5 Encryption 2_2018:
+        content1: penerangan di sini
+      CSD U5 Encryption 2_2018_2019:
+        content1: penerangan di sini
+      CSD U5 L13 SFLP Interpreting Data:
+        content1: penerangan di sini
+      CSD U5 crosstab warmup:
+        content1: penerangan di sini
+      CSD U5 crosstab warmup_2018:
+        content1: penerangan di sini
+      CSD U5 crosstab warmup_2018_2019:
+        content1: penerangan di sini
+      CSD U5 data visualization:
+        content1: penerangan di sini
+      CSD U5 data visualization_2018:
+        content1: penerangan di sini
+      CSD U5 data visualization_2018_2019:
+        content1: penerangan di sini
+      CSD U5 student record:
+        content1: penerangan di sini
+      CSD U5 student record_2018:
+        content1: penerangan di sini
+      CSD U5 student record_2018_2019:
+        content1: penerangan di sini
+      CSD U6 LED create intro:
+        content1: penerangan di sini
+      CSD U6 LED create intro_2018:
+        content1: penerangan di sini
+      CSD U6 LED create intro_2018_2019:
+        content1: penerangan di sini
+      CSD U6 LED create intro_2021:
+        content1: penerangan di sini
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro:
+        content1: penerangan di sini
+      CSD U6 final intro_2018:
+        content1: penerangan di sini
+      CSD U6 final intro_2018_2019:
+        content1: penerangan di sini
+      CSD U6 final intro_2021:
+        content1: penerangan di sini
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: Buat Ramalan
+      Multi-Screen Apps:
+        content1: penerangan di sini
+      New Challenge Introduction:
+        content1: penerangan di sini
+        markdown: "### Cabaran Baharu: Pecah Sifir Penggantian Rawak...dengan widget
+          baharu \n\nBagaimana jika daripada mengalihkan keseluruhan abjad, kami memetakan
+          setiap huruf abjad kepada huruf rawak abjad yang berbeza? Ini dipanggil
+          **sifir penggantian rawak.** \n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)
+          \n\nKini, bukannya mesej rahsia dikodkan dengan anjakan abjad yang mudah,
+          anda akan menghadapi mesej yang dikodkan dengan **penggantian rawak**. \n\n\nIni
+          lebih sukar untuk dipecahkan dan memerlukan alat yang lebih canggih, jadi...\n\nApabila
+          anda mengklik teruskan, anda akan melihat **versi alat penyulitan yang baharu
+          dan lebih canggih** yang menunjukkan kepada anda banyak perkara yang berbeza.
+          \n\nTetapi apa yang dilakukannya adalah sedikit misteri!"
+      OPD-K5 Reviewing Reflections:
+        content1: penerangan di sini
+      OPD-K5 Stage3aGo:
+        content1: penerangan di sini
+      OPD-K5 Stage3aGo_copy:
+        content1: penerangan di sini
+      OPD-K5 Stage3aGo_dani:
+        content1: penerangan di sini
+      OPD-K5 conditionals introduced:
+        content1: penerangan di sini
+      OPD-K5 debugging:
+        content1: penerangan di sini
+      OPD-K5 diving deeper intro:
+        content1: penerangan di sini
+      OPD-K5 events introduced:
+        content1: penerangan di sini
+      OPD-K5 for loops:
+        content1: penerangan di sini
+      OPD-K5 for loops intro:
+        content1: penerangan di sini
+      OPD-K5 for loops introduction:
+        content1: penerangan di sini
+      OPD-K5 functions introduced:
+        content1: penerangan di sini
+      OPD-K5 journaling:
+        content1: penerangan di sini
+      OPD-K5 lesson implementation planning:
+        content1: penerangan di sini
+      OPD-K5 lesson plans:
+        content1: penerangan di sini
+      OPD-K5 loops introduced:
+        content1: penerangan di sini
+      OPD-K5 project:
+        content1: penerangan di sini
+      OPD-K5 projects introduction:
+        content1: penerangan di sini
+      OPD-K5 role_of_teacher:
+        content1: penerangan di sini
+      OPD-K5 sequencing introduced:
+        content1: penerangan di sini
+      OPD-K5 sprite lab:
+        content1: penerangan di sini
+      OPD-K5 sprite lab introduction:
+        content1: penerangan di sini
+      OPD-K5 sprite lab unplugged:
+        content1: penerangan di sini
+      OPD-K5 sprite lab video:
+        content1: penerangan di sini
+      OPD-K5 types of lessons:
+        content1: penerangan di sini
+      OPD-K5 using lesson plans:
+        content1: penerangan di sini
+      OPD-K5 variables:
+        content1: penerangan di sini
+      OPD-K5 variables introduction:
+        content1: penerangan di sini
+      OPD-K5 variables unplugged:
+        content1: penerangan di sini
+      OPD-K5 where to next:
+        content1: penerangan di sini
+      OPD-K5-projects-1:
+        content1: penerangan di sini
+      Prepare for your presentation:
+        content1: penerangan di sini
+      Terminology Recap:
+        content1: penerangan di sini
+        markdown: '# Jeda dan Rekap Mesej yang disulitkan dengan **Sifir Caesar**
+          sangat mudah untuk dipecahkan, terutamanya dengan alat pengiraan. Sekarang
+          setelah anda mempunyai sedikit latihan memecahkan sifir anjakan abjad (agak
+          mudah, ya?) mari cuba sesuatu yang lebih sukar. **Istilah ikhtisar:** *
+          **Penyulitan** - satu proses pengekodan mesej untuk merahsiakannya, jadi
+          hanya pihak "yang diberi kuasa" boleh membacanya. * **Penyahsulitan** -
+          proses yang membalikkan penyulitan, mengambil mesej rahsia dan menghasilkan
+          semula teks biasa asal * **Sifir** - istilah generik untuk teknik (atau
+          algoritma) yang melakukan penyulitan * **Caesar''s Cipher** - teknik untuk
+          penyulitan yang mengalihkan abjad dengan beberapa bilangan aksara. * **Penyulitan
+          retak** - Apabila anda cuba menyahkod mesej rahsia *tanpa* mengetahui semua
+          butiran sifir, anda cuba **memecahkan** penyulitan itu. Klik Teruskan untuk
+          melihat **Cabaran Seterusnya**...'
+      courseF_variables_stop:
+        content1: penerangan di sini
+        markdown: "# Berhenti!\n\n## Adakah anda pasti yang anda sudah bersedia meneruskan?
+          \n\n\nPada tahap seterusnya, anda akan mula menulis kod untuk projek anda.
+          Ini berfungsi paling baik jika anda sudah mempunyai rancangan.\n\nRancangan
+          lengkap anda mesti termasuk:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* Jenis projek yang
+          anda sedang bina. Sebagai contoh, kad ucapan, robot sembang, atau cerita
+          ruang kosong.\n* Senarai soalan yang akan anda tanya kepada pengguna.\n*
+          Teks lain yang anda akan paparkan kepada skrin.\n* Huraian atau lukisan
+          peperi yang anda perlukan (dan tingkah laku peperi tersebut).\n\nJika anda
+          tidak pasti sama ada anda sudah bersedia untuk meneruskan atau tidak, sila
+          semak dengan guru anda!\n"
+      csf_be_a_super_digital_citizen:
+        content1: penerangan di sini
+        markdown: |
+          # Warga Digital Super
+
+          ## Bagaimanakah kita boleh menjadi individu bertanggungjawab apabila kita melihat buli siber?
+      csf_be_a_super_digital_citizen_2021:
+        content1: penerangan di sini
+        markdown: |
+          # Warga Digital Super
+
+          ## Bagaimanakah kita boleh menjadi individu bertanggungjawab apabila kita melihat buli siber?
+      csf_password_power-up:
+        content1: penerangan di sini
+        markdown: |
+          #  Kukuhkan Kata Laluan Anda
+
+          ## Petua Kata Laluan untuk Diingati
+
+          * Mulakan dengan **frasa** yang sukar dilupakan.
+          * Hanya **ibu bapa** anda yang sepatutnya mengetahui kata laluan anda.
+          * Jangan sesekali menggunakan mana-mana maklumat identiti **peribadi** dalam kata laluan anda.
+          * Cipta kata laluan dengan sekurang-kurangnya **lapan** aksara.
+          * Gunakan huruf, nombor dan **simbol** dalam kata laluan anda.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up_2021:
+        content1: penerangan di sini
+        markdown: |
+          #  Kukuhkan Kata Laluan Anda
+
+          ## Petua Kata Laluan untuk Diingati
+
+          * Mulakan dengan **frasa** yang sukar dilupakan.
+          * Hanya **ibu bapa** anda yang sepatutnya mengetahui kata laluan anda.
+          * Jangan sesekali menggunakan mana-mana maklumat identiti **peribadi** dalam kata laluan anda.
+          * Cipta kata laluan dengan sekurang-kurangnya **lapan** aksara.
+          * Gunakan huruf, nombor dan **simbol** dalam kata laluan anda.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_putting_a_stop_to_online_meanness:
+        content1: penerangan di sini
+        markdown: |
+          # HENTIKAN Kezaliman
+
+          ## Apakah yang perlu anda lakukan jika seseorang bertindak zalim kepada anda dalam talian?
+
+          * **S**tep away - Jauhkan diri.
+          * **T**ell a trusted adult - Beritahu orang dewasa yang dipercayai.
+          * **O**K sites first - Layari laman web yang OK terlebih dahulu.
+          * **P**ause and think online - Berhenti sementara dan berfikir dalam talian.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: penerangan di sini
+        markdown: |
+          # HENTIKAN Kezaliman
+
+          ## Apakah yang perlu anda lakukan jika seseorang bertindak zalim kepada anda dalam talian?
+
+          * **S**tep away - Jauhkan diri.
+          * **T**ell a trusted adult - Beritahu orang dewasa yang dipercayai.
+          * **O**K sites first - Layari laman web yang OK terlebih dahulu.
+          * **P**ause and think online - Berhenti sementara dan berfikir dalam talian.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      courseF_intro_apps:
+        description: Selamat datang ke Asas CS! Semua projek ini telah dicipta dengan
+          Makmal Peperi. Cuba projek ini sekarang untuk melihat perkara yang boleh
+          dilakukan. Pada akhir kursus ini, anda akan dapat membuat projek anda sendiri
+          seperti ini...dan banyak lagi!
+        display_name: Aplikasi Makmal Peperi
+        teacher_markdown: |
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Pilihan di sini membawa pelajar kepada sampel aplikasi yang boleh mereka terokai. Aktiviti ini bertujuan menyelaras dengan lembaran kerja Meneroka Aplikasi, yang terdapat dalam [lesson plan](.././).
+      Internet-Unplugged_2021:
+        markdown: |
+          # Internet
+
+          Bina Internet anda sendiri di dalam kelas hanya menggunakan helaian kertas.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |
+          # Cepat, Cepat
+
+          Gunakan peta dan berikan perintah untuk mencapai matlamat.
+      PowerOfWords-Unplugged_2021:
+        markdown: |
+          # Kuasa Kata-kata
+
+          ## Apakah yang perlu anda lakukan apabila seseorang menggunakan bahasa kesat atau menyakitkan hati dalam internet?
+      courseD_EOC_examples_2021:
+        description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
+          luangkan sedikit masa dengan melihat projek contoh.
+        display_name: Contoh Projek
+      courseF_beeFor_practice:
+        display_name: Latihan Lebah
+        description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
+          Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan gelung
+          untuk dan lebah!
+      courseF_beeVar_practice:
+        display_name: Latihan Lebah
+        description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
+          Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan pemboleh
+          ubah dan lebah!
+      courseF_events_practice:
+        teacher_markdown: |+
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Anda boleh menggunakan huraian di bawah untuk membantu pelajar memilih sendiri pilihan mereka, atau menetapkan jangkaan sekitar bilangan subtahap yang perlu mereka lengkapkan.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Dilancarkan!|Belajar menerbangkan pesawat|Lakukan gerakan aerobatik terbalik|Mengecil dan Membesar|Mengembungkan ikan!|Penguin sedang bergerak|
+          |-|-|-|-|-|-|-|
+          | ***Taip*** |**Semak**|**Nyahpepijat**|**Nyahpepijat**|**Nyahpepijat**|**Kandungan Pilihan**|**Kandungan Pilihan**
+          | ***Konsep***|*peristiwa, tingkah laku*|*peristiwa, tingkah laku*|*peristiwa, tingkah laku*|*peristiwa, tingkah laku*|*apabila/semasa peristiwa*|*apabila/semasa peristiwa*|
+
+
+        description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
+          Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan peristiwa!
+        display_name: Latihan Peristiwa
+      courseF_sprites_practice:
+        teacher_markdown: |+
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Anda boleh menggunakan huraian di bawah untuk membantu pelajar memilih sendiri pilihan mereka, atau menetapkan jangkaan sekitar bilangan subtahap yang perlu mereka lengkapkan.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Pemandangan Gurun|Mengubah saiz buah.|Menganimasikan Kapal Layar|Hari yang Berangin|
+          |-|-|-|-|-|
+          | ***Taip*** |**Semak**|**Semak**|**Semak**|**Semak**|
+          | ***Konsep***|*peperi, lokasi*|*peperi, sifat*|*peperi, lokasi, tingkah laku*|*tingkah laku*|
+
+
+        description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
+          Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan peperi
+          dan tingkah laku!
+        display_name: Latihan Peperi
+      courseF_text_practice:
+        teacher_markdown: |+
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Anda boleh menggunakan huraian di bawah untuk membantu pelajar memilih sendiri pilihan mereka, atau menetapkan jangkaan sekitar bilangan subtahap yang perlu mereka lengkapkan.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Menggunakan Pertuturan untuk Teks|Teks untuk Prom|Namakan robot!|Label Pemboleh Ubah|Teks Besar|Menggesa untuk warna|Memulakan tanpa apa-apa asas|
+          |-|-|-|-|-|-|-|-|
+          | ***Taip*** |**Semak**|**Nyapepijat**|**Nyapepijat**|**Nyapepijat**|**Kandungan Pilihan**|**Kandungan Pilihan**|**Permainan Bebas**
+          | ***Konsep***|*blok cetak, peristiwa*|*prom, peristiwa*|*menambahkan ruangan*|*padanan label pemboleh ubah*|*tajuk blok skrin*|*menyimpan warna*|*tiada kandungan baharu*
+
+
+        description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
+          Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan teks
+          dan prom!
+        display_name: Latihan Teks dan Prom
+      courseF_variables_projects:
+        teacher_markdown: |
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi perlu digalakkan melengkapkan **dua** tahap untuk projek yang sama.
+
+          Pelajar mungkin memerlukan arahan yang amat jelas untuk memahami cara menavigasi pilihan di sini. Untuk setiap pilihan projek, terdapat dua subtahap di sini. Untuk mulakan, pelajar perlu memilih satu daripada tahap yang ditandakan sebagai "Bahagian 1". Sebaik sahaja mereka menamatkan tahap itu, mereka perlu kembali ke sini dan memilih "Bahagian 2" daripada projek yang *sama*. Tahap pertama untuk setiap pilihan akan memberikan maklum balas kepada pelajar semasa mereka menggabungkan komponen asas projek mereka. Tahap kedua ialah "permainan bebas" yang bertujuan membolehkan pelajar membuat apa-apa perubahan kepada kod mereka yang mereka suka.
+        description: Anda akan mencipta sama ada kad ucapan, robot sembang, atau cerita
+          ruang kosong. Jika anda sudah menyelesaikan \"Bahagian 1\" projek anda,
+          teriskan kepada \"Bahagian 2\".
+        display_name: Pilih Projek
+      courseF_variables_samples:
+        teacher_markdown: |
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Anda boleh menggunakan huraian di bawah untuk membantu pelajar memilih sendiri pilihan mereka, atau menetapkan jangkaan sekitar bilangan subtahap yang perlu mereka lengkapkan.
+        description: Anda akan mencipta sama ada kad ucapan, robot sembang, atau cerita
+          ruang kosong. Sebelum anda bermula, terokai contoh projek di bawah untuk
+          melihat perkara yang anda berminat untuk mencipta. Tekan \"Selesai\" apabila
+          anda bersedia untuk mula merancang atur cara anda sendiri.
+        display_name: Penerokaan - Atur Cara Sampel
+      csf_digital_trails_2021:
+        markdown: |
+          # Ikuti Jejak Digital
+
+          ## Apakah maklumat yang OK untuk ada dalam jejak digital anda?
+      express_EOC_examples_2021:
+        description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
+          luangkan sedikit masa dengan melihat projek contoh.
+        display_name: Contoh Projek
+      ForLoopFun-Unplugged_2021:
+        markdown: |
+          # Gelung Untuk yang Menyeronokkan
+
+          Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan terbina di dalam.
+      BigEvent-Unplugged_2021:
+        markdown: |
+          # Peristiwa Besar
+
+          Dalam sains komputer, peristiwa ialah tindakan yang dipantau oleh komputer. Dalam pelajaran ini anda akan bertindak balas dengan berbeza bergantung pada butang yang ditekan.
+      GettingLoopy-Unplugged_2021:
+        markdown: |
+          # Menjadi Bergelung
+
+          Pelajaran ini memperkenalkan konsep pengaturcaraan gelung melalui aktiviti menari.
+      HappyMaps-Unplugged_2021:
+        markdown: |
+          # Peta Bahagia
+
+          Cipta algoritma untuk menggerakkan watak melalui pagar sesat.
+      TheRightAppMarkdownLevel_2021:
+        markdown: |
+          # Aplikasi yang Betul
+
+          * Pada masa kini, semua individu menggunakan komputer terutamanya telefon pintar.
+          * Aplikasi telefon pintar membantu orang ramai melakukan banyak perkara seperti bercakap dengan rakan, mendengar muzik, membeli-belah, atau hanya melayari laman web.
+          * Adalah penting untuk pengatur cara memahami keperluan individu lain dan mereka bentuk aplikasi dengan mengambil kira perkara tersebut!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |
+          # Kejiranan Dalam Talian Saya
+
+          ## Bagaimanakah anda pergi ke tempat dengan selamat secara dalam talian?
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Rakan Robotik Bergelung Saya
+
+          Buatkan atur cara anda lebih pendek dengan menggunakan gelung!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Rakan Robotik Saya
+
+          Belajar mengatur cara dengan menulis kod untuk rakan anda!
+      BinaryBracelets-Unplugged_2021:
+        markdown: |
+          # Gelang Binari
+
+          Cipta gelang yang mewakili nama anda dalam sistem yang difahami oleh komputer!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |
+          # Bersyarat dengan Kad
+
+          Main permainan kad dan cipta peraturan seperti "Jika saya mencabut kad merah, saya dapat mata" dan "Jika saya mencabut kad hitam, anda akan dapat mata."
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |
+          # Pengaturcaraan Kertas Graf
+
+          Tuliskan algoritma yang boleh digunakan oleh rakan sekelas anda untuk melukis gambar.
+      RelayProgramming-Unplugged_2021:
+        markdown: |
+          # Pengaturcaraan Geganti
+
+          Pecah kepada pasukan dan bekerjasama untuk menulis atur cara yang melukis gambar.
+      BigEvent-Unplugged:
+        markdown: |
+          # Peristiwa Besar
+
+          Dalam sains komputer, peristiwa ialah tindakan yang dipantau oleh komputer. Dalam pelajaran ini anda akan bertindak balas dengan berbeza bergantung pada butang yang ditekan.
+      BigEvent-Unplugged_2020:
+        markdown: |
+          # Peristiwa Besar
+
+          Dalam sains komputer, peristiwa ialah tindakan yang dipantau oleh komputer. Dalam pelajaran ini anda akan bertindak balas dengan berbeza bergantung pada butang yang ditekan.
+      BinaryBracelets-Unplugged:
+        markdown: |
+          # Gelang Binari
+
+          Cipta gelang yang mewakili nama anda dalam sistem yang difahami oleh komputer!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2020:
+        markdown: |
+          # Gelang Binari
+
+          Cipta gelang yang mewakili nama anda dalam sistem yang difahami oleh komputer!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      CSD Games Properties practice_2021:
+        display_name: Sifat Peperi
+      CSDU6 Innovation_2021:
+        markdown: |
+          # Penyelidikan Inovasi
+
+          Pilih satu daripada topik berikut untuk dilihat. Anda perlu mencari maklumat tentang beberapa peranti pengkomputeran berinovatif terkini yang berkaitan dengan kategori anda.
+
+          ## Teknologi Peranti Boleh Pakai
+          Teknologi peranti boleh pakai termasuk apa-apa bentuk pengkomputeran yang direka bentuk untuk dipakai oleh pengguna, sama ada ia dibenamkan ke dalam pakaian atau dipakai sebagai aksesori. Banyak peranti boleh pakai, seperti pedometer pintar, agak bertindih dengan kesihatan dan keselamatan kerana kedua-duanya boleh dipakai _dan_ digunakan bertujuan membantu menambah baik kesihatan peribadi anda.
+
+          ## Kesihatan dan Keselamatan
+          Topik cakupan yang luas merangkumi teknologi pengguna (sesuatu yang mungkin anda gunakan untuk menambah baik kesihatan atau keselamatan anda) dan teknologi profesional (peralatan yang mungkin digunakan oleh doktor atau profesional lain).
+
+          ## Pertanian
+          Pertanian mungkin bukan topik yang jelas, tetapi inovasi teknologi mempunyai kesan yang besar terhadap cara kita mendekati perladangan. Ini termasuk menggabungkan komputer ke dalam kelengkapan ladang sedia ada, menggunakan sensor dan robotik untuk memantau tanaman dan menganalisis data bagi menambah baik kecekapan dan kelestarian.
+
+          ## Pembuatan
+          Kemajuan dalam prototaip pantas, robotik industri dan automasi telah memberikan impak besar terhadap cara barangan dihasilkan. Sama ada teknologi untuk membolehkan pembuatan berskala kecil mampu milik (seperti pencetak 3D dan pemotong laser) atau penyepaduan komputer ke dalam kerja kilang, terdapat banyak bidang menarik untuk diselidiki di sini.
+
+          ## Seni dan Reka Bentuk
+          Persilangan ungkapan artistik dan pengkomputeran boleh menghasilkan pencapaian yang mengagumkan dan tidak dijangkakan. Walaupun anda berkemungkinan kecil untuk menemui produk tersedia secara komersial yang berkaitan dengan seni dan reka bentuk, anda akan menemui pelbagai jenis ciptaan buatan sendiri yang menggunakan semua jenis peranti pengkomputeran dengan cara yang kreatif dan penuh perasaan.
+
+          ## Rumah Pintar
+          Impian memiliki rumah yang memahami dan malah mampu menjangka keperluan anda menjadi semakin hampir berbanding sebelum ini. Sama ada dikawal secara eksplisit melalui perintah suara atau dengan menggunakan sensor untuk memantau dan bertindak balas terhadap keadaan yang berubah-ubah, peranti rumah pintar melakukan apa-apa jenis tugasan biasa atau berulang di sekeliling rumah.
+
+
+          # Pertimbangan Penyelidikan
+
+          Semasa anda menyelidik peranti mengenai topik anda, pastikan untuk memberi pertimbangan kepada perkara berikut:
+
+          * Tumpuan kepada penyelesaian berasaskan perkakasan berbanding atur cara perisian
+          * Tumpuan kepada inovasi terkini berbanding berita lama
+          * Ikuti perkara yang menarik minat anda
+
+          # Memulakan Penyelidikan Anda
+
+          Semak dengan guru anda untuk laman web yang disarankan bagi memulakan penyelidikan anda. Anda juga boleh menggunakan beberapa kata kunci di atas untuk mula mencari idea khusus melalui internet. Sebagai contoh, sila pertimbangkan untuk memberikan tumpuan ke arah pelbagai laman web pendanaan awam (seperti Kickstarter dan Indiegogo) untuk melihat produk yang masih belum muncul lagi.
+        teacher_markdown: |+
+          Di bawah ialah beberapa laman web yang boleh digunakan oleh pelajar untuk memulakan penyelidikan mereka. Kami tidak menyediakan maklumat ini terus kepada pelajar kerana kadang-kadang laman web ini disekat oleh atur cara penyaringan daerah, atau inovasi terkini yang sesuai dengan berita tetapi mungkin tidak sesuai kepada sekolah menengah. **Kami amat menyarankan anda menyemak setiap laman web untuk kandungan yang tidak sesuai dan memastikan ia akan dimuatkan di dalam komputer kelas sebelum dikongsi dengan pelajar**.
+
+          Dengan menggunakan senarai di bawah sebagai titik permulaan, kami menyarankan agar disediakan senarai digital laman web penyelidikan kepada pelajar. ini boleh termasuk laman web di bawah dan mana-mana sumber tambahan yang mungkin anda temui dalam penyelidikan anda sendiri.
+
+          ### Teknologi Peranti Boleh Pakai
+
+          * [Wareable.com](https://www.wareable.com/)
+
+          ### Kesihatan dan Keselamatan
+
+          * [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### Pertanian
+
+          * [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Farm Industry News](http://www.farmindustrynews.com/technology)
+
+          ### Pembuatan
+
+          * [Industry Week](https://www.industryweek.com/technology-and-iiot)
+          * [3D Printing](https://3dprinting.com/)
+
+          ### Seni dan Reka Bentuk
+
+          * [ArtFab](http://artfab.art.cmu.edu/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### Rumah Pintar
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+
+
+      ConditionalsWithCards-Unplugged:
+        markdown: |
+          # Bersyarat dengan Kad
+
+          Main permainan kad dan cipta peraturan seperti "Jika saya mencabut kad merah, saya dapat mata" dan "Jika saya mencabut kad hitam, anda akan dapat mata."
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: |
+          # Bersyarat dengan Kad
+
+          Main permainan kad dan cipta peraturan seperti "Jika saya mencabut kad merah, saya dapat mata" dan "Jika saya mencabut kad hitam, anda akan dapat mata."
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |
+          # Mereka Bentuk untuk Aksesibiliti
+
+          * Dalam dunia sains komputer, **aksesibiliti** ialah tmengenai mencipta teknologi untuk individu kurang upaya.
+          * Ketidakupayaan termasuk fizikal, pendengaran, penglihatan dan lain-lain.
+          * Ketidakupayaan adalah pelbagai dan memberi kesan kepada individu dalam cara berbeza, termasuk cara mereka menggunakan teknologi seperti **aplikasi telefon pintar**.
+          * Mereka bentuk aplikasi yang boleh diakses untuk individu kurang upaya membuatkan aplikasi tersebut menjadi lebih baik untuk individu lain juga!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: |
+          # Mereka Bentuk untuk Aksesibiliti
+
+          * Dalam dunia sains komputer, **aksesibiliti** ialah tmengenai mencipta teknologi untuk individu kurang upaya.
+          * Ketidakupayaan termasuk fizikal, pendengaran, penglihatan dan lain-lain.
+          * Ketidakupayaan adalah pelbagai dan memberi kesan kepada individu dalam cara berbeza, termasuk cara mereka menggunakan teknologi seperti **aplikasi telefon pintar**.
+          * Mereka bentuk aplikasi yang boleh diakses untuk individu kurang upaya membuatkan aplikasi tersebut menjadi lebih baik untuk individu lain juga!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |
+          # Mereka Bentuk untuk Aksesibiliti
+
+          * Dalam dunia sains komputer, **aksesibiliti** ialah tmengenai mencipta teknologi untuk individu kurang upaya.
+          * Ketidakupayaan termasuk fizikal, pendengaran, penglihatan dan lain-lain.
+          * Ketidakupayaan adalah pelbagai dan memberi kesan kepada individu dalam cara berbeza, termasuk cara mereka menggunakan teknologi seperti **aplikasi telefon pintar**.
+          * Mereka bentuk aplikasi yang boleh diakses untuk individu kurang upaya membuatkan aplikasi tersebut menjadi lebih baik untuk individu lain juga!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged:
+        markdown: |
+          # Perkongsian Digital
+
+          Dalam pelajaran ini, anda akan memberikan pertimbangan kepada cabaran dan manfaat menghormati pemilikan dan hak cipta, terutamanya dalam persekitaran digital.
+      DigitalSharing-Unplugged_2020:
+        markdown: |
+          # Perkongsian Digital
+
+          Dalam pelajaran ini, anda akan memberikan pertimbangan kepada cabaran dan manfaat menghormati pemilikan dan hak cipta, terutamanya dalam persekitaran digital.
+      DigitalSharing-Unplugged_2021:
+        markdown: |
+          # Perkongsian Digital
+
+          Dalam pelajaran ini, anda akan memberikan pertimbangan kepada cabaran dan manfaat menghormati pemilikan dan hak cipta, terutamanya dalam persekitaran digital.
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |
+          # Cerita Ruang Kosong
+
+          Dalam pelajaran ini, anda akan belajar menggunakan dan menulis cerita ruang kosong. Tonton video ini untuk mengetahui cara perkara ini mempunyai kaitan dengan sains komputer.
+      ForLoopFun-Unplugged:
+        markdown: |
+          # Gelung Untuk yang Menyeronokkan
+
+          Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan terbina di dalam.
+      ForLoopFun-Unplugged_2020:
+        markdown: |
+          # Gelung Untuk yang Menyeronokkan
+
+          Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan terbina di dalam.
+      GettingLoopy-Unplugged:
+        markdown: |-
+          # Menjadi Bergelung
+
+          Pelajaran ini memperkenalkan konsep pengaturcaraan gelung melalui aktiviti menari.
+      GettingLoopy-Unplugged_2020:
+        markdown: |-
+          # Menjadi Bergelung
+
+          Pelajaran ini memperkenalkan konsep pengaturcaraan gelung melalui aktiviti menari.
+      GraphPaperProgramming-Unplugged:
+        markdown: |
+          # Pengaturcaraan Kertas Graf
+
+          Tuliskan algoritma yang boleh digunakan oleh rakan sekelas anda untuk melukis gambar.
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: |
+          # Pengaturcaraan Kertas Graf
+
+          Tuliskan algoritma yang boleh digunakan oleh rakan sekelas anda untuk melukis gambar.
+      HappyMaps-Unplugged:
+        markdown: |
+          # Peta Bahagia
+
+          Cipta algoritma untuk menggerakkan watak melalui pagar sesat.
+      HappyMaps-Unplugged_2020:
+        markdown: |
+          # Peta Bahagia
+
+          Cipta algoritma untuk menggerakkan watak melalui pagar sesat.
+      Internet-Unplugged:
+        markdown: |-
+          # Internet
+
+          Bina Internet anda sendiri di dalam kelas hanya menggunakan helaian kertas.
+      Internet-Unplugged_2020:
+        markdown: |-
+          # Internet
+
+          Bina Internet anda sendiri di dalam kelas hanya menggunakan helaian kertas.
+      MoveItMoveIt-Unplugged:
+        markdown: |-
+          # Cepat, Cepat
+
+          Gunakan peta dan berikan perintah untuk mencapai matlamat.
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |-
+          # Cepat, Cepat
+
+          Gunakan peta dan berikan perintah untuk mencapai matlamat.
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |
+          # Rakan Robotik Bergelung Saya
+
+          Buatkan atur cara anda lebih pendek dengan menggunakan gelung!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |
+          # Rakan Robotik Bergelung Saya
+
+          Buatkan atur cara anda lebih pendek dengan menggunakan gelung!
+      MyRoboticFriends-Unplugged:
+        markdown: |
+          # Rakan Robotik Saya
+
+          Belajar mengatur cara dengan menulis kod untuk rakan anda!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |
+          # Rakan Robotik Saya
+
+          Belajar mengatur cara dengan menulis kod untuk rakan anda!
+      PowerOfWords-Unplugged_2020:
+        markdown: |
+          # Kuasa Kata-kata
+
+          ## Apakah yang perlu anda lakukan apabila seseorang menggunakan bahasa kesat atau menyakitkan hati dalam internet?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |
+          # Maklumat Sulit dan Peribadi
+
+          ## Apakah maklumat tentang diri anda yang BOLEH dikongsi dalam talian?
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |
+          # Maklumat Sulit dan Peribadi
+
+          ## Apakah maklumat tentang diri anda yang BOLEH dikongsi dalam talian?
+      RelayProgramming-Unplugged:
+        markdown: |
+          # Pengaturcaraan Geganti
+
+          Pecah kepada pasukan dan bekerjasama untuk menulis atur cara yang melukis gambar.
+      RelayProgramming-Unplugged_2020:
+        markdown: |
+          # Pengaturcaraan Geganti
+
+          Pecah kepada pasukan dan bekerjasama untuk menulis atur cara yang melukis gambar.
+      SimonSays-Unplugged_2021:
+        markdown: |-
+          # Ikuti Algoritma
+
+          Main permainan dan fikirkan tentang perintah yang diperlukan untuk mendapatkan hasil yang betul
+      Songwriting-Unplugged:
+        markdown: |
+          # Penulisan Lagu
+
+          Gunakan konsep korus dalam lagu untuk belajar tentang mentakrifkan dan memanggil fungsi.
+      Songwriting-Unplugged_2020:
+        markdown: |
+          # Penulisan Lagu
+
+          Gunakan konsep korus dalam lagu untuk belajar tentang mentakrifkan dan memanggil fungsi.
+      Songwriting-Unplugged_2021:
+        markdown: |
+          # Penulisan Lagu
+
+          Gunakan konsep korus dalam lagu untuk belajar tentang mentakrifkan dan memanggil fungsi.
+      TheRightAppMarkdownLevel_2019:
+        markdown: |
+          # Aplikasi yang Betul
+
+          * Pada masa kini, semua individu menggunakan komputer terutamanya telefon pintar.
+          * Aplikasi telefon pintar membantu orang ramai melakukan banyak perkara seperti bercakap dengan rakan, mendengar muzik, membeli-belah, atau hanya melayari laman web.
+          * Adalah penting untuk pengatur cara memahami keperluan individu lain dan mereka bentuk aplikasi dengan mengambil kira perkara tersebut!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: |
+          # Aplikasi yang Betul
+
+          * Pada masa kini, semua individu menggunakan komputer terutamanya telefon pintar.
+          * Aplikasi telefon pintar membantu orang ramai melakukan banyak perkara seperti bercakap dengan rakan, mendengar muzik, membeli-belah, atau hanya melayari laman web.
+          * Adalah penting untuk pengatur cara memahami keperluan individu lain dan mereka bentuk aplikasi dengan mengambil kira perkara tersebut!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      courseF_artist_practice:
+        description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
+          Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan gelung
+          dan Artis!
+        display_name: Latihan Artis
+      courseF_bee_practice:
+        description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
+          Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan gelung
+          dan lebah!
+        display_name: Latihan Lebah
+      courseF_events_freeplay:
+        description: Kini anda boleh menggunakan perkara yang telah anda pelajari
+          untuk membuat projek anda dengan lebih baik! Teruskan menambah atur cara
+          anda atau mulakan sesuatu yang baharu!
+        display_name: Peristiwa - Permainan Bebas
+      courseF_sprites_freeplay:
+        description: Sudah tiba giliran anda untuk mencipta apa sahaja yang anda mahukan!
+          Apakah jenis projek yang anda akan buat?
+        display_name: Peperi - Permainan Bebas
+      csf_digital_trails:
+        markdown: |-
+          # Ikuti Jejak Digital
+
+          ## Apakah maklumat yang OK untuk ada dalam jejak digital anda?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |
+          # Kejiranan Dalam Talian Saya
+
+          ## Bagaimanakah anda pergi ke tempat dengan selamat secara dalam talian?
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: biru
+        - text: hijau
+        - {}
+        - text: kuning
+        - correct: true
+        - text: merah
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: penerangan di sini
+      allthethings_external_not_displayed_as_unplugged:
+        content1: penerangan di sini
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+        title: Pilihan berbagai
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - text: Tiada satu pun di atas
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Menambah Imej
+      CSD U2 Image practice_pilot_2021:
+        display_name: Menambah Imej
+      CSD U3 drawing practice choice_2021:
+        display_name: Latihan
+      CSD games cake challenge choice_2021:
+        display_name: Cabaran
+      CSD games platform challenge choice_2021:
+        display_name: Cabaran
+      CSD web draw loop practice choice_2021:
+        display_name: Latihan
+      CSD web movement practice choice_2021:
+        display_name: Latihan
+      CSD web text practice choice_2021:
+        display_name: Latihan
+      ml-club app-choice parent:
+        display_name: Sesuaikan Aplikasi Anda
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Sesuaikan Aplikasi Anda

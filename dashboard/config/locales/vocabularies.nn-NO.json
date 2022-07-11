@@ -145,6 +145,27 @@
         },
         "define/coursee/2021": {
           "word": "Definer"
+        },
+        "debugging/csd/2021": {
+          "word": "Feilsøking"
+        },
+        "variable/csd/2021": {
+          "word": "Variabel"
+        },
+        "conditionals/csd/2021": {
+          "word": "Betingelser"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraksjon"
+        },
+        "function/csd/2021": {
+          "word": "Funksjon"
+        },
+        "input/csd/2021": {
+          "word": "Inngang"
+        },
+        "copyright/csd/2021": {
+          "word": "Opphavsrett"
         }
       }
     }

@@ -3,7 +3,7 @@ import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeRevie
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import Button from '@cdo/apps/templates/Button';
-import {isolateComponent} from 'isolate-components';
+import {isolateComponent} from 'isolate-react';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 

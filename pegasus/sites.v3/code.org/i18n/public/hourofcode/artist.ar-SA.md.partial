@@ -1,28 +1,28 @@
 ---
-title: موارد المعلم - Artist
+title: موارد المعلم - الفنان
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Artist: دورة تعليمية لـAn Hour of Code
+# الفنان: دورة تعليمية لساعة البرمجة
 
 {{ hoc_artist_video }}
 
 [col-50]
 
-## Teacher Resources
+## مصادر المعلم
 
-### أنشطة الامتداد:
+### أنشطة إضافية
 
-- [ما وراء Hour of Code](http://code.org/learn/beyond)
-- [أسس علوم الكمبيوتر: الدورة التدريبية 2](https://studio.code.org/s/course2)
+- [ما بعد "ساعة من البرمجة"](http://code.org/learn/beyond)
+- [أسس علوم الكمبيوتر: الدورة التدريبية ٢](https://studio.code.org/s/course2)
 
 ### موارد أخرى للمُعلِّم:
 
-- [Hour of Code: كيفية الإرشاد للمعلمين](https://hourofcode.com/how-to)
+- [دليل "ساعة من البرمجة" الإرشادي للمعلمين ](https://hourofcode.com/how-to)
 - [أفضل الممارسات لمعلمين ناجحين](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- حدث يثب مباشرةً[دليل المعلم لـHour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- حدث يُبث مباشرةً: [ دليل المعلم لـساعة البرمجة](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -30,9 +30,9 @@ video_player: true
 
 ## نظرة عامة
 
-اسحب صور وتصميمات رائعة مع الـArtist!
+ارسم صور وتصميمات رائعة مع الفنّان!
 
-**الفئة العمرية الموصى بها:** 4-104
+**الفئة العمرية الموصى بها:** ٤-١٠٤
 
 **متطلبات التكنولوجيا:** متصفحات حديثة + هواتف لوحية
 

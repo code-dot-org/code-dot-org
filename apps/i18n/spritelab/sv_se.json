@@ -3,6 +3,8 @@
   "cardAddtext": "Nu när din prompt är inställd kan du använda utskriftsblock för att få chatboten att svara på användaren:\n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"></title></block></value></block></xml>",
   "chatbotAddtext": "Nu när din prompt är inställd kan du använda utskriftsblock för att få chatboten att svara på användaren:\n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"></title></block></value></block></xml>\n",
   "madlibAddtext": "Nu när din prompt är inställd kan du använda utskriftsblock för att få chatboten att svara på användaren:\n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"></title></block></value></block></xml>\n",
+  "new": "ny",
+  "object": "objekt ",
   "outbreakChangeHealthy": "Försök att ändra antalet monster-sprites.",
   "outbreakChangeSize": "Försök att ställa in alla sprites på en annan storlek.",
   "outbreakClickHealthy": "Inga friska monster hade munskydd på sig. Klicka på sprites efter att ha tryckt på *\"Run\"* och se till att du har rätt kod:\n <xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>",

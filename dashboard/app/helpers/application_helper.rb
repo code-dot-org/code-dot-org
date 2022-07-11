@@ -198,14 +198,6 @@ module ApplicationHelper
     html.html_safe
   end
 
-  def script_certificate_image_url(user, script)
-    certificate_image_url(
-      name: user.name,
-      course: script.name,
-      course_title: data_t_suffix('script.name', script.name, 'title')
-    )
-  end
-
   # Returns a client state object for the current session and cookies.
   def client_state
     @client_state ||= ClientState.new(session, cookies)
@@ -245,16 +237,16 @@ module ApplicationHelper
 
   def share_failure_message(failure_type)
     case failure_type
-      when ShareFiltering::FailureType::EMAIL
-        t('share_code.email_not_allowed')
-      when ShareFiltering::FailureType::ADDRESS
-        t('share_code.address_not_allowed')
-      when ShareFiltering::FailureType::PHONE
-        t('share_code.phone_number_not_allowed')
-      when ShareFiltering::FailureType::PROFANITY
-        t('share_code.profanity_not_allowed')
-      else
-        raise ArgumentError.new("Unknown share failure type #{failure_type}")
+    when ShareFiltering::FailureType::EMAIL
+      t('share_code.email_not_allowed')
+    when ShareFiltering::FailureType::ADDRESS
+      t('share_code.address_not_allowed')
+    when ShareFiltering::FailureType::PHONE
+      t('share_code.phone_number_not_allowed')
+    when ShareFiltering::FailureType::PROFANITY
+      t('share_code.profanity_not_allowed')
+    else
+      raise ArgumentError.new("Unknown share failure type #{failure_type}")
     end
   end
 end

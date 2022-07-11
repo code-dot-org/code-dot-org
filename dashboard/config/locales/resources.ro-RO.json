@@ -12,19 +12,23 @@
         },
         "poem_art_celebration/poem-art/2021": {
           "name": "Arta Poemului 4 - Celebrare",
-          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5"
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
+          "type": "Video"
         },
         "poem_art_events/poem-art/2021": {
           "name": "Arta Poemului 2 - Evenimente",
-          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3"
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
+          "type": "Video"
         },
         "poem_art_imagery/poem-art/2021": {
           "name": "Arta Poemului 3 - Imagini",
-          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4"
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
+          "type": "Video"
         },
         "poem_art_introduction/poem-art/2021": {
           "name": "Arta Poemului 1 - Introducere",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "Video"
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Introducere Artist",
@@ -44,7 +48,8 @@
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "name": "Criptarea şi cheile publice",
-          "url": "https://youtu.be/ZghMPWGXexs"
+          "url": "https://youtu.be/ZghMPWGXexs",
+          "type": "Video"
         },
         "hocencryption/hoc-encryption/unversioned": {
           "name": "Dispozitive de criptare în Code Studio",
@@ -68,7 +73,8 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "name": "Video: Compresia textului cu Aloe Blacc",
-          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be"
+          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
+          "type": "Video"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "name": "Evenimente în Bounce - Cum se petrec?",
@@ -88,15 +94,441 @@
         },
         "ai-ml/oceans/unversioned": {
           "name": "IA: Învățarea automată",
-          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
         },
         "ai-societal/oceans/unversioned": {
           "name": "IA: Impactul asupra societății",
-          "url": "https://youtu.be/ng4c1g3COfs"
+          "url": "https://youtu.be/ng4c1g3COfs",
+          "type": "Video"
         },
         "ai-training/oceans/unversioned": {
           "name": "IA: Antrenament Date & Prejudecăți",
-          "url": "https://youtu.be/x2mRoFNm22g"
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/express/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/express/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Vocabular"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Vocabular"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Vocabular"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Vocabular"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/express/2019": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/express/2019": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Vocabular"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "Forum profesori"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Mapări standard"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Vocabular"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Mapări standard"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Vocabular"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Mapări standard"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Vocabular"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Mapări standard"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Mapări standard"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Vocabular"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Mapări standard"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Vocabular"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Vocabular"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Vocabular"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Vocabular"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Vocabular"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Vocabular"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Lista poeziilor",
@@ -111,12 +543,14 @@
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "Prezentând Laboratorul de Desen",
-          "url": "https://youtu.be/yd-9xZ275dM"
+          "url": "https://youtu.be/yd-9xZ275dM",
+          "type": "Video"
         },
         "exploring_apps_1/coursef/2021": {
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "making_sprites/coursef/2021": {
+          "name": "Crearea de sprite-uri",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
@@ -133,7 +567,8 @@
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "name": "Puterea cuvintelor: Puterea cuvintelor",
-          "url": "https://www.commonsense.org/education/videos/the-power-of-words"
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words",
+          "type": "Video"
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
           "name": "Puterea cuvintelor: cuvintele pot răni",
@@ -178,7 +613,8 @@
         },
         "pause_and_think_online/coursef/2021": {
           "name": "Întrerupeţi şi gândiţi online",
-          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
+          "type": "Video"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Pentru distracția cu bucle",
@@ -202,7 +638,8 @@
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Pentru distracția cu bucle",
-          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit"
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
+          "type": "Evaluare"
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": "Blocuri offline (Cursurile C-F)",
@@ -214,15 +651,18 @@
         },
         "ai-ml/coursef/2021": {
           "name": "IA: Învățarea automată",
-          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
         },
         "ai-training/coursef/2021": {
           "name": "IA: Antrenament Date & Prejudecăți",
-          "url": "https://youtu.be/x2mRoFNm22g"
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
         },
         "ai-societal/coursef/2021": {
           "name": "IA: Impactul asupra societății",
-          "url": "https://youtu.be/ng4c1g3COfs"
+          "url": "https://youtu.be/ng4c1g3COfs",
+          "type": "Video"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internetul",
@@ -234,7 +674,8 @@
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet",
-          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit"
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
+          "type": "Evaluare"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "Internet",
@@ -254,7 +695,8 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "Proiectul final din Fundamentele CS",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrică"
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "Cartografierea standardelor CSTA",
@@ -362,7 +804,8 @@
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Wiggles - GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "20_20_20_rule/courseb/2021": {
           "name": "Regula 20/20/20",
@@ -386,7 +829,8 @@
         },
         "unspotted_bugs/courseb/2021": {
           "name": "Bug-uri neidentificate",
-          "url": "https://youtu.be/rah3DYlp5nQ"
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "Video"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Transformând în Buclă",
@@ -398,7 +842,8 @@
         },
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "Transformând în Buclă",
-          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit"
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "Evaluare"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Transformând în Buclă",
@@ -410,7 +855,8 @@
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "Întrerupeţi şi gândiţi online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "Scenarii pentru „Aplicația potrivită”",
@@ -418,11 +864,13 @@
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Marele eveniment",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Video"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Marele eveniment",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Evaluare"
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "Marele eveniment",
@@ -510,10 +958,13 @@
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Wiggles-Go Noodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
+          "name": "Noțiuni de bază - Crearea Secțiunii de Clasă",
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
+          "type": "Video"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Hărţi Fericite",
@@ -545,11 +996,13 @@
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Wiggles - GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
           "name": "Depanarea cu butonul Etapă",
-          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
+          "type": "Video"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "Fețe expresive - Imagine care ilustrează o emoție",
@@ -577,7 +1030,8 @@
         },
         "pair-programming/coursea/2021": {
           "name": "Programare în perechi",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
           "name": "Fețe expresive - Imagine care ilustrează o emoție",
@@ -589,7 +1043,8 @@
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "Întrerupeţi şi gândiţi online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
           "name": "Fețe expresive - Imagine care ilustrează o emoție",
@@ -605,7 +1060,8 @@
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Marele eveniment",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Evaluare"
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "Marele eveniment",
@@ -721,7 +1177,8 @@
         },
         "pair-programming-vid/coursec/2021": {
           "name": "Programare în perechi",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "Sugestii pentru activitatetea principală din Fundamentele CS",
@@ -757,7 +1214,8 @@
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Marele eveniment",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Evaluare"
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "Marele eveniment",
@@ -769,7 +1227,8 @@
         },
         "pause_and_think_online/coursec/2021": {
           "name": "Întrerupeţi şi gândiţi online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "open-ended_programming_levels/coursec/2021": {
           "name": "Niveluri deschise de programare",
@@ -801,7 +1260,8 @@
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "Brăţări Binare",
-          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit"
+          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
+          "type": "Evaluare"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Brăţări Binare",
@@ -905,7 +1365,8 @@
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Programare pe Hârtie Milimetrică",
-          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit"
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
+          "type": "Evaluare"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Programare pe Hârtie Milimetrică",
@@ -949,7 +1410,8 @@
         },
         "pause_and_think_online/coursed/2021": {
           "name": "Întrerupeţi şi gândiţi online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "open-ended_programming_levels/coursed/2021": {
           "name": "Niveluri deschise de programare",
@@ -980,7 +1442,8 @@
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "Întrerupeţi şi gândiţi online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Condiționale cu Carduri",
@@ -996,7 +1459,8 @@
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Condiționale cu Carduri",
-          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit"
+          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
+          "type": "Evaluare"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Condiționale cu Carduri",
@@ -1060,7 +1524,8 @@
         },
         "pair_programming/express/2021": {
           "name": "Programare în perechi",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
           "name": "Blocuri offline (Cursurile C-F)",
@@ -1068,11 +1533,13 @@
         },
         "artist_introduction/express/2021": {
           "name": "Introducere Artist",
-          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "Video"
         },
         "turns_angles/express/2021": {
           "name": "Întoarceri & Unghiuri",
-          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "Video"
         },
         "turns_angles_1/express/2021": {
           "name": "Întoarceri & Unghiuri",
@@ -1087,6 +1554,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
+          "name": "Crearea de sprite-uri",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
@@ -1099,7 +1567,8 @@
         },
         "pause_and_think_online/express/2021": {
           "name": "Întrerupeţi şi gândiţi online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "dance-party-project-guide/express/2021": {
           "name": "Ghidul proiectului Petrecere dansantă",
@@ -1115,7 +1584,8 @@
         },
         "pair_programming_video/express/2021": {
           "name": "Clip video Programare în perechi",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
           "name": "Blocuri offline (Cursurile C-F)",
@@ -1150,7 +1620,8 @@
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Proiectul final din Fundamentele CS",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrică"
         },
         "csta_standards_mapping/express/2021": {
           "name": "Cartografierea standardelor CSTA",
@@ -1182,15 +1653,18 @@
         },
         "20_20_20_rule/pre-express/2021": {
           "name": "Regula 20/20/20",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Video"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "name": "Wiggles-Go Noodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "Întrerupeţi şi gândiţi online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "Cartografierea standardelor CSTA",
@@ -1250,7 +1724,8 @@
         },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "Întrerupeţi şi gândiţi online",
-          "url": "https://youtu.be/X_duZ-1LApg"
+          "url": "https://youtu.be/X_duZ-1LApg",
+          "type": "Video"
         },
         "about_me_planning_guide/coursee/2021": {
           "name": "Ghid de planificare Despre mine",
@@ -1262,7 +1737,8 @@
         },
         "digital-sharing-video/coursee/2021": {
           "name": "Principiile etice ale partajării digitale (clip video)",
-          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
+          "type": "Video"
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "Întoarceri & Unghiuri",
@@ -1286,7 +1762,8 @@
         },
         "csf-songwriting-assessment/coursee/2021": {
           "name": "Funcţii fără conectare: Scrierea de cântece",
-          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit"
+          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
+          "type": "Evaluare"
         },
         "assessment-answer-songwriting/coursee/2021": {
           "name": "Funcţii fără conectare: Scrierea de cântece",
@@ -1310,7 +1787,8 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Proiectul final din Fundamentele CS",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrică"
         },
         "design-process/coursee/2021": {
           "name": "Procesul de proiectare",
@@ -1367,6 +1845,441 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Modificări Lecție Virtuală",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "seeing_ai/csd/2021": {
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "IA: Antrenament Date & Prejudecăți",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Video"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "Rubrică"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "Rubrică"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "Video"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "Reflecţie"
+        },
+        "paper-prototypes/csd/2021": {
+          "type": "Rubrică"
+        },
+        "design_mode/csd/2021": {
+          "name": "Mod proiectare"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "Video"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Mod proiectare"
+        },
+        "app-presentation/csd/2021": {
+          "type": "Rubrică"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Forum profesori"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Știința calculatoarelor schimbă totul",
+          "type": "Video"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Cum funcționează calculatoarele: Hardware și Software (aparatură și programe)",
+          "type": "Video"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "Video"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funcţii"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "Rubrică"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Introducere în matrice",
+          "type": "Video"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Bucle Pentru",
+          "type": "Video"
+        },
+        "for_loops/csd/2021": {
+          "name": "Bucle Pentru"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Cum funcționează calculatoarele: Circuite și logică",
+          "type": "Video"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "Rubrică"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "Video"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "Rubrică"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "Video"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "Video"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Videoclip: Învățarea Automată",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "Video"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "Rubrică"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "Video"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variabile"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "Video"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Fila de animație",
+          "type": "Video"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Spiriduși"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Proprietăți spiriduș"
+        },
+        "captioned-scenes/csd/2021": {
+          "type": "Rubrică"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "Video"
+        },
+        "animating-sprites/csd/2021": {
+          "type": "Video"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "Rubrică"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Expresii booleene",
+          "type": "Video"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Declarații condiționale",
+          "type": "Video"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Declarațiile Dacă/Altfel (if/else)",
+          "type": "Video"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "interactive_card/csd/2021": {
+          "type": "Rubrică"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Viteza",
+          "type": "Video"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Viteza"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Detectarea coliziunilor"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Detectarea coliziunilor"
+        },
+        "side-scroller-1/csd/2021": {
+          "type": "Rubrică"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "Rubrică"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funcţii",
+          "type": "Video"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funcţii"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "Rubrică"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Forum profesori"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Video"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Procesul de Rezolvare a Problemei"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Ce Este un Computer?"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "Video"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "Video"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "type": "Rubrică"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2021": {
+          "type": "Video"
+        },
+        "video_debugging/csd/2021": {
+          "type": "Video"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "Rubrică"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "lists/csd/2021": {
+          "name": "Liste"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Amprenta digitală"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Introducere în CSS - partea 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Introducere în CSS - partea 2",
+          "type": "Video"
+        },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "Rubrică"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "Video"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "Rubrică"
+        },
+        "publishing_your_website/csd/2021": {
+          "type": "Video"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "Video"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "Video"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "Video"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "Rubrică"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Împerecheaţi dispozitivele"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/express/2020": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Vocabular"
         }
       }
     }

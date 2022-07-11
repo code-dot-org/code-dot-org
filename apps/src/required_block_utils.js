@@ -109,9 +109,13 @@ exports.makeTestsFromBuilderRequiredBlocks = function(customRequiredBlocks) {
 function testFromBlock(node) {
   return {
     test: function(userBlock) {
-      // Encode userBlock while ignoring child statements
-      var userElement = Blockly.Xml.blockToDom(userBlock, true);
-      return elementsEquivalent(node, userElement);
+      var userElement = Blockly.Xml.blockToDom(userBlock);
+      // Check for equivalence while ignoring child blocks
+      return elementsEquivalent(
+        node,
+        userElement,
+        true /* ignoreChildBlocks */
+      );
     },
     blockDisplayXML: xml.serialize(node)
   };
@@ -213,7 +217,7 @@ function testsFromFunctionalCall(node, blocksXml) {
  * We consider them equivalent if they have the same tagName, attributes,
  * and children
  */
-export function elementsEquivalent(expected, given) {
+export function elementsEquivalent(expected, given, ignoreChildBlocks) {
   if (!(expected instanceof Element && given instanceof Element)) {
     // if we expect ???, allow match with anything
     if (expected instanceof Text && expected.textContent === '???') {
@@ -244,7 +248,7 @@ export function elementsEquivalent(expected, given) {
     return false;
   }
 
-  if (!childrenEquivalent(expected, given)) {
+  if (!childrenEquivalent(expected, given, ignoreChildBlocks)) {
     return false;
   }
 
@@ -303,9 +307,15 @@ function attributesEquivalent(expected, given) {
 /**
  * Checks whether the children of two different elements are equivalent
  */
-function childrenEquivalent(expected, given) {
-  var children1 = expected.childNodes;
-  var children2 = given.childNodes;
+function childrenEquivalent(expected, given, ignoreChildBlocks) {
+  var filterFn = function(node) {
+    // CDO Blockly returns tag names in all caps
+    var tagName = node.tagName && node.tagName.toLowerCase();
+    return ignoreChildBlocks && tagName !== 'next' && tagName !== 'statement';
+  };
+  var children1 = Array.prototype.filter.call(expected.childNodes, filterFn);
+  var children2 = Array.prototype.filter.call(given.childNodes, filterFn);
+
   if (expected.getAttribute('inputcount') === '???') {
     // If required block ignores inputcount, allow arbitrary children
     return true;
@@ -314,7 +324,7 @@ function childrenEquivalent(expected, given) {
     return false;
   }
   for (var i = 0; i < children1.length; i++) {
-    if (!elementsEquivalent(children1[i], children2[i])) {
+    if (!elementsEquivalent(children1[i], children2[i], ignoreChildBlocks)) {
       return false;
     }
   }
@@ -323,39 +333,39 @@ function childrenEquivalent(expected, given) {
 
 /**
  * Checks if two blocks are "equivalent"
- * Currently means their type and all of their titles match exactly
+ * Currently means their type and all of their fields match exactly
  * @param blockA
  * @param blockB
  */
 exports.blocksMatch = function(blockA, blockB) {
   var typesMatch = blockA.type === blockB.type;
-  var titlesMatch = exports.blockTitlesMatch(blockA, blockB);
-  return typesMatch && titlesMatch;
+  var fieldsMatch = exports.blockFieldsMatch(blockA, blockB);
+  return typesMatch && fieldsMatch;
 };
 
 /**
- * Compares two blocks' titles, returns true if they all match
+ * Compares two blocks' fields, returns true if they all match
  * @returns {boolean}
  * @param blockA
  * @param blockB
  */
-exports.blockTitlesMatch = function(blockA, blockB) {
-  var blockATitles = blockA.getTitles();
-  var blockBTitles = blockB.getTitles();
+exports.blockFieldsMatch = function(blockA, blockB) {
+  var blockAFields = Blockly.cdoUtils.getBlockFields(blockA);
+  var blockBFields = Blockly.cdoUtils.getBlockFields(blockB);
 
   var nameCompare = function(a, b) {
     return a.name < b.name;
   };
-  blockATitles.sort(nameCompare);
-  blockBTitles.sort(nameCompare);
+  blockAFields.sort(nameCompare);
+  blockBFields.sort(nameCompare);
 
-  for (var i = 0; i < blockATitles.length || i < blockBTitles.length; i++) {
-    var blockATitle = blockATitles[i];
-    var blockBTitle = blockBTitles[i];
+  for (var i = 0; i < blockAFields.length || i < blockBFields.length; i++) {
+    var blockAField = blockAFields[i];
+    var blockBField = blockBFields[i];
     if (
-      !blockATitle ||
-      !blockBTitle ||
-      !titlesMatch(blockATitle, blockBTitle)
+      !blockAField ||
+      !blockBField ||
+      !fieldsMatch(blockAField, blockBField)
     ) {
       return false;
     }
@@ -363,6 +373,6 @@ exports.blockTitlesMatch = function(blockA, blockB) {
   return true;
 };
 
-var titlesMatch = function(titleA, titleB) {
-  return titleB.name === titleA.name && titleB.getValue() === titleA.getValue();
+var fieldsMatch = function(fieldA, fieldB) {
+  return fieldB.name === fieldA.name && fieldB.getValue() === fieldA.getValue();
 };

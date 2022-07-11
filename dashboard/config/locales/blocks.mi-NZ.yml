@@ -2,6 +2,22 @@
 mi:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': wawaenga
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': wawaenga
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} tinihiaia wāhanga e {N}
@@ -430,6 +446,26 @@ mi:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': ngā kaituarangi
             '"BEAR"': ngā pea
@@ -971,9 +1007,14 @@ mi:
       gamelab_clickedOn:
         text: ina pāwhiria {SPRITE}
       gamelab_clickedSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_costumeImage:
         text: "{COSTUME}"
+      gamelab_everyInterval:
+        text: 'māhia ia {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': ngā hēkona
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -987,6 +1028,19 @@ mi:
         options:
           UNIT:
             '"seconds"': ngā hēkona
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1071,15 +1125,21 @@ mi:
             '90': raro
             '180': mauī
             '270': runga
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': wawaenga
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': matau
             '"left"': mauī
       gamelab_newSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSoundOptions:
         options:
           SOUND:
@@ -1144,13 +1204,21 @@ mi:
             '"scale"': te rahi
             '"width"': whānui
             '"height"': teitei
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': pōturi
+            '5': noa
+            '7': tere
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': ina
             '"while"': i te
       gamelab_subjectSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         options:
           DIRECTION:

@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -93,8 +93,8 @@ class Blockly < Level
     num_fields = xml_doc.xpath('//field').count
     num_titles = xml_doc.xpath('//title').count
     raise "unexpected error: XML contains both field and title elements" if num_fields > 0 && num_titles > 0
-    return "title" unless num_titles == 0
-    "field"
+    return "field" unless num_fields == 0
+    "title"
   end
 
   # These serialized fields will be serialized/deserialized as straight XML
@@ -383,7 +383,7 @@ class Blockly < Level
 
       if is_a?(Maze) && step_mode
         step_mode_value = JSONValue.value(step_mode)
-        level_prop['step'] = step_mode_value == 1 || step_mode_value == 2
+        level_prop['step'] = [1, 2].include?(step_mode_value)
         level_prop['stepOnly'] = step_mode_value == 2
       end
 
@@ -801,9 +801,16 @@ class Blockly < Level
         arg["name"] = I18n.t('behaviors.this_sprite')
       end
 
-      behavior.xpath(".//#{tag}[@name=\"NAME\"]").each do |name|
-        localized_name = I18n.t(name.content, scope: [:data, :shared_functions], default: nil, smart: true)
-        name.content = localized_name if localized_name
+      behavior.xpath(".//#{tag}[@name=\"NAME\"]").each do |name_element|
+        localized_name = I18n.t(name_element.content, scope: [:data, :shared_functions], default: nil, smart: true)
+        name_element.content = localized_name if localized_name
+
+        mutation.xpath('.//description').each do |description|
+          # Using name_element['id'] so we still access the correct translation key even if the
+          # content has been translated in a previous step
+          localized_description = I18n.t(name_element['id'], scope: [:data, :behavior_descriptions, name], default: nil, smart: true)
+          description.content = localized_description if localized_description
+        end
       end
     end
 

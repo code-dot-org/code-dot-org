@@ -66,7 +66,7 @@ module Poste
       unless messages.where(name: name).first
         id = messages.insert(name: name)
         raise StandardError, "Couldn't create poste_message row for '#{name}'" unless id > 0
-        logger.info "Registered new message template '#{name}' as #{id}" if logger
+        logger&.info "Registered new message template '#{name}' as #{id}"
       end
 
       return path
@@ -182,7 +182,7 @@ module Poste
       @@renderer ||= begin
         require 'cdo/markdown/handler'
         Cdo::Markdown::Handler.register
-        ActionView::Base.new
+        ActionView::Base.with_empty_template_cache.empty
       end
     end
   end
@@ -196,7 +196,7 @@ class Deliverer
   end
 
   def reset_connection
-    @smtp.finish if @smtp
+    @smtp&.finish
     @smtp = smtp_connect unless rack_env?(:development)
   end
 
@@ -479,6 +479,8 @@ module Poste2
     timestamp = DateTime.now.strftime('%Y%m%d_%H%M_%S%L')
     {}.tap do |saved|
       attachments.each do |name, content|
+        # Prevent saving certificates - they are unecessarily filling storage.
+        next if name.include?('certificate')
         filename = File.expand_path "#{attachment_dir}/#{timestamp}-#{name}"
         File.open(filename, 'w+b') {|f| f.write content}
         saved[name] = filename

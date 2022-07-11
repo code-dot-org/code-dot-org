@@ -40,6 +40,12 @@
         },
         "define/coursee/2021": {
           "word": "Define"
+        },
+        "variable/csd/2021": {
+          "word": "Variable"
+        },
+        "function/csd/2021": {
+          "word": "Function"
         }
       }
     }

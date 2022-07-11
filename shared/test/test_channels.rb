@@ -381,18 +381,18 @@ class ChannelsTest < Minitest::Test
     # User is not the owner, should return owner sharing_disabled
     ChannelsApi.any_instance.stubs(:current_user_id).returns(123)
     # Stub sharing_disabled to false for user.
-    StorageApps.any_instance.stubs(:get_user_sharing_disabled).returns(false)
+    Projects.any_instance.stubs(:get_user_sharing_disabled).returns(false)
     get "/v3/channels/#{channel_id}/sharing_disabled"
     assert last_response.ok?
     assert_equal false, JSON.parse(last_response.body)['sharing_disabled']
-    StorageApps.any_instance.unstub(:get_user_sharing_disabled)
+    Projects.any_instance.unstub(:get_user_sharing_disabled)
 
     # Stub sharing_disabled to true for user.
-    StorageApps.any_instance.stubs(:get_user_sharing_disabled).returns(true)
+    Projects.any_instance.stubs(:get_user_sharing_disabled).returns(true)
     get "/v3/channels/#{channel_id}/sharing_disabled"
     assert last_response.ok?
     assert_equal true, JSON.parse(last_response.body)['sharing_disabled']
-    StorageApps.any_instance.unstub(:get_user_sharing_disabled)
+    Projects.any_instance.unstub(:get_user_sharing_disabled)
   end
 
   def test_abuse_frozen
@@ -428,8 +428,8 @@ class ChannelsTest < Minitest::Test
 
     user_storage_id = storage_decrypt_id CGI.unescape @session.cookie_jar[storage_id_cookie_name]
 
-    assert_equal abc_channel_id, StorageApps.new(user_storage_id).most_recent('abc')
-    assert_equal xyz_channel_id, StorageApps.new(user_storage_id).most_recent('xyz')
+    assert_equal abc_channel_id, Projects.new(user_storage_id).most_recent('abc')
+    assert_equal xyz_channel_id, Projects.new(user_storage_id).most_recent('xyz')
   ensure
     Timecop.return
   end
@@ -456,18 +456,18 @@ class ChannelsTest < Minitest::Test
 
     _, storage_app_id = storage_decrypt_channel_id(response['id'])
     _, parent_storage_app_id = storage_decrypt_channel_id(encrypted_parent_channel_id)
-    assert_equal parent_storage_app_id, PEGASUS_DB[:storage_apps].where(id: storage_app_id).first[:remix_parent_id]
+    assert_equal parent_storage_app_id, Projects.table.where(id: storage_app_id).first[:remix_parent_id]
   end
 
   def test_update_project_type
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     encrypted_channel_id = last_response.location.split('/').last
     _, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-    assert_nil PEGASUS_DB[:storage_apps].where(id: storage_app_id).first[:project_type]
+    assert_nil Projects.table.where(id: storage_app_id).first[:project_type]
 
     post "/v3/channels/#{encrypted_channel_id}", {projectType: 'gamelab'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.successful?
-    assert_equal 'gamelab', PEGASUS_DB[:storage_apps].where(id: storage_app_id).first[:project_type]
+    assert_equal 'gamelab', Projects.table.where(id: storage_app_id).first[:project_type]
   end
 
   private

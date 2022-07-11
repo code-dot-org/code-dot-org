@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ru:
   errors:
     messages:
@@ -295,6 +301,7 @@ ru:
       provider_managed_section: "Этот раздел добавлен другим провайдер и не может быть добавлен. Пожалуйста, попросите Вашего учителя, что он добавил Вас через %{provider}, и перезагрузите раздел."
       restricted_section: "Мы не можем присоединить вас к сессии %{section_code} потому что она закрыта. Пожалуйста свяжитесь с вашим учителем для помощи."
       full_section: "Мы не можем пустить вас в сессию %{section_code} потому что в ней уже %{section_capacity}. Пожалуйста свяжитесь с вашим учителем для помощи."
+      not_participant_type: "Мы не можем присоединить вас к разделу %{section_code}, поскольку вы не соответствуете типу участника для этого раздела."
     mail:
       student_disassociated:
         subject: "Уведомление от Code.org: %{student_name} больше не является вашим учеником."
@@ -552,6 +559,7 @@ ru:
     all_students_must_be_in_current_section: "Все ученики должны быть зачислены в вашу группу."
     already_enrolled_in_new_section: "Вы не можете переместить этих учеников, потому что этот учитель зарегистрировал их в другой группе."
     third_party_login: "Вы не можете перемещать студентов на секцию которая синхронизированна при помоши третьей стороны."
+    not_correct_participant_type: "Вы не можете переместить этих пользователей, так как у вас нет разрешений на то, чтобы быть участниками в новом разделе."
   share:
     title: "Учиться в студии кода"
     description: "Каждый может изучать информатику. Создавайте игры, приложения и произведения искусства с помощью программирования."
@@ -590,6 +598,7 @@ ru:
     make_my_own_app: 'Создать своё собственное приложение'
     how_it_works: 'Как это работает'
     try_hour_of_code: 'Попробуйте Час кода!'
+    cookie_notice: 'Уведомление о cookie'
   reference_area:
     title: 'Нужна помощь?'
     subtitle: 'Смотрите эти видео и подсказки'
@@ -656,6 +665,8 @@ ru:
       title: 'Танцевальная вечеринка'
     dance-2019:
       title: 'Танцевальная вечеринка'
+    hello-world:
+      title: 'Привет, мир'
     hoc:
       title: 'Классический лабиринт'
       body: 'Постигайте азы программирования. Миллионы людей воспользовались этим шансом.'
@@ -814,14 +825,6 @@ ru:
     reminder_desc: 'Мы обновили наши <a href="%{tos_url}" target="_blank">Условия обслуживания</a> и <a href="%{privacy_url}" target="_blank"> Политику конфиденциальности</a>. Пожалуйста, прочитайте их внимательно, прежде чем принимать их. Обратите внимание, что наши инструменты преподавания JavaScript могут быть недоступны для ваших студентов, если не принять обновленные условия.'
     reminder_desc_markdown: Мы обновили наши [Условия обслуживания](%{tos_url}) и [Политику конфиденциальности](%{privacy_url}). Пожалуйста, прочитайте их внимательно, прежде чем принимать их. Обратите внимание, что наши инструменты преподавания JavaScript могут быть недоступны для ваших студентов, если не принять обновленные условия.
     review_terms: "Просмотр обновленных условий"
-  donor_interstitial:
-    title: "Ваши бесплатные курсы CS стали возможными благодаря этому..."
-    subtitle: "Мы хотели бы поблагодарить щедрых спонсоров, чья поддержка сделала существование Code.org возможным. Мы стремимся к тому, чтобы сохранить Code.org бесплатным для школ и студентов по всему миру, благодаря постоянной щедрости наших [donors](%{donors_url})!"
-    local_supporters: "Локальные спонсоры"
-    global_supporters: "Глобальные спонсоры"
-    support_codeorg_1: "Каждый доллар, отданный Code.org, даёт новые возможности большому количеству студентов."
-    support_codeorg_2: "[Donate now] (%{donate_url}), чтобы поддержать Code.org."
-    get_started: "Приступайте к работе с Code.org"
   school_info_interstitial:
     title: "Мы хотим принести Computer Science каждому студенту - помогите нам отслеживтаь наш прогресс!"
     message: "Пожалуйста, введите данные вашей школы."
@@ -1052,6 +1055,7 @@ ru:
         music: 'Музыка'
         art: 'Искусство'
         other: "Другое:"
+        na: 'Не применимо'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1060,7 +1064,8 @@ ru:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Другое:"
+        other: "Другое"
+        na: 'Не применимо'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1070,7 +1075,8 @@ ru:
         sphero: 'Спиро'
         raspberry: 'Raspberry Pi'
         wonder: 'Чудесная мастерская'
-        other: "Другое:"
+        other: "Другое"
+        na: 'Не применимо'
       workshop_course:
         csf_af: 'Основы Информатики (Курсы A-F)'
         csf_express: 'Основы информатики (Полу-Ускоренные или Ускоренные)'
@@ -1125,3 +1131,4 @@ ru:
     this_sprite: "этот спрайт"
   unit_prefix: "Блок %{n}"
   code_org_logo_alt: "Code.org Home"
+  teacher_feedback: "Оценки учителя"

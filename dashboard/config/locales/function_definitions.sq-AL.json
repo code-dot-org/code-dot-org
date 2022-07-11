@@ -1954,6 +1954,18 @@
               "binary": "binare"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "vizato një katror"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "gjatesi"
+            }
+          }
         }
       }
     }

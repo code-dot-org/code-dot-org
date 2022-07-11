@@ -243,6 +243,13 @@
   english: "Khmer"
   native: "ភាសាខ្មែរ"
   webfonts: false
+  
+"kn": "kn-IN"
+"kn-IN":
+  english: "Kannada"
+  native: "ಕನ್ನಡ"
+  debug: true
+  webfonts: false
 
 "ku": "ku-IQ"
 "ku-IQ":
@@ -369,7 +376,6 @@
 "se-FI":
   english: "Northern Sami"
   native: "Davvisámegiella"
-  debug: true
 
 "si": "si-LK"
 "si-LK":

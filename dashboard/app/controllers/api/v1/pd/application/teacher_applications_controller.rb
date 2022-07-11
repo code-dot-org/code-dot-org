@@ -13,15 +13,23 @@ module Api::V1::Pd::Application
 
     # PATCH /api/v1/pd/application/teacher/<applicationId>
     def update
-      form_data_hash = params.try(:[], :form_data) || {}
-      form_data_json = form_data_hash.to_unsafe_h.to_json.strip_utf8mb4
+      form_data_hash = params[:form_data]
+      if form_data_hash
+        form_data_json = form_data_hash.to_unsafe_h.to_json.strip_utf8mb4
+        @application.form_data_hash = JSON.parse(form_data_json)
+      end
 
-      # [MEG] TODO: See if update is coming from hitting the submit button (do validations)
-      # or the save button (ignore validations)
-      @application.form_data_hash = JSON.parse(form_data_json)
+      status = params[:status]
+      previous_status = @application.status
+      if status
+        @application.status = status
+      end
 
       if @application.save
         render json: @application, status: :ok
+
+        # send confirmation email only if user is submitting their application for the first time
+        on_successful_create if previous_status == 'incomplete' && status == 'unreviewed'
       else
         return render json: {errors: @application.errors.full_messages}, status: :bad_request
       end

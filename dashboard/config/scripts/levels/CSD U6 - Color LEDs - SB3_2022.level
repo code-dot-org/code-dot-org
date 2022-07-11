@@ -48,7 +48,7 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "palette_category_at_start": "Circuit",
-    "encrypted_examples": "AxUcm/ksRD9Ed3d3fOxOJTd0bC1XY13InJaXbkcaaH82Ejeg+AqOhJGHzwXZ\nfY2IQDSu/Ml6oYv94EfP59R1UA==\n",
+    "encrypted_examples": "jJqIsG3ZpzBC4CFN8nomEmr0iWCRhjsXa9rM4CLJqehdSdA1wQK2olJkutH6\nQIRonxe9rObPHrXnQhD2m4Twgg==\n",
     "parent_level_id": 20512,
     "name_suffix": "_2021",
     "show_type_hints": "false",
@@ -70,7 +70,7 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T18:11:00.187+00:00\",\"changed\":[\"cloned from \\\"CSD U6 colorLeds debug_2021\\\"\"],\"cloned_from\":\"CSD U6 colorLeds debug_2021\"},{\"changed_at\":\"2021-08-31 18:11:15 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-18 23:40:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T18:11:00.187+00:00\",\"changed\":[\"cloned from \\\"CSD U6 colorLeds debug_2021\\\"\"],\"cloned_from\":\"CSD U6 colorLeds debug_2021\"},{\"changed_at\":\"2021-08-31 18:11:15 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-18 23:40:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 19:58:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

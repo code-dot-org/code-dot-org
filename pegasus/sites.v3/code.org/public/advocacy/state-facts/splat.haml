@@ -35,7 +35,7 @@ state-facts: true
       Computer science drives job growth and innovation throughout our economy and society. Computing occupations are the
       %b
         number 1 source of all new wages in the U.S.
-      and make up over half of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. Only 51% of U.S. high schools teach any computer science courses and only 11% of bachelor's degrees are in Computer Science. We need to improve access for all students, including groups who have traditionally been underrepresented.
+      and make up over half of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. Only 51% of U.S. high schools teach any computer science courses and only 4% of bachelor's degrees are in Computer Science. We need to improve access for all students, including groups who have traditionally been underrepresented.
 
   .clear
   #top-stats{style: "margin-top: 20px; margin-bottom: -20px;"}
@@ -55,10 +55,10 @@ state-facts: true
     %h3.graduates
       Yet, there were only 
       = format_integer_with_commas(state_info[:cs_graduates_i])
-      graduates in computer science in 2018 and only 
+      graduates in computer science in 2019 and only 
       = succeed "%" do
         = state_info[:count_schools_teach_cs_i]
-      of all public high schools teach a foundational course. 
+      of all public high schools teach a foundational computer science course. 
 
   %div
     %h2.together
@@ -468,7 +468,7 @@ state-facts: true
             provide dedicated funding for rigorous computer science professional development and course support. Although funds may be available via broader programs, the state can strengthen its computer science programs by creating specific opportunities to bring computer science to school districts, such as matching fund programs.
         - elsif state_info[:pd_funding_s] == 'Other'
           %div
-            %i.fa.fa-check-square-o
+            %i.fa.fa-square-o
             %b Funding - 
             = state_info[:funding_t]
 
@@ -544,7 +544,7 @@ state-facts: true
             require that all secondary schools offer computer science. The state can support the expansion of computer science courses by adopting policies that require schools to offer a computer science course based on rigorous standards, with appropriate implementation timelines and allowing for remote and/or in-person courses.
         - elsif state_info[:require_hs_s] == 'Other'
           %div
-            %i.fa.fa-check-square-o
+            %i.fa.fa-square-o
             %b Require High Schools to Offer - 
             = state_info[:hs_t]
 

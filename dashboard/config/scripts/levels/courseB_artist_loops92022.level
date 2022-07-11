@@ -45,11 +45,16 @@
     "mini_rubric": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:54.375+00:00\",\"changed\":[\"cloned from \\\"courseB_artist_loops9_2021\\\"\"],\"cloned_from\":\"courseB_artist_loops9_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:54.375+00:00\",\"changed\":[\"cloned from \\\"courseB_artist_loops9_2021\\\"\"],\"cloned_from\":\"courseB_artist_loops9_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

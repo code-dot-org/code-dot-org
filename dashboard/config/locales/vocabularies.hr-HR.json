@@ -142,6 +142,30 @@
         },
         "define/coursee/2021": {
           "word": "Definirati"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Strojno učenje"
+        },
+        "debugging/csd/2021": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "variable/csd/2021": {
+          "word": "Varijabla"
+        },
+        "conditionals/csd/2021": {
+          "word": "Uvjeti"
+        },
+        "abstraction/csd/2021": {
+          "word": "Apstrakcija"
+        },
+        "function/csd/2021": {
+          "word": "Funkcija"
+        },
+        "input/csd/2021": {
+          "word": "Ulaz"
+        },
+        "copyright/csd/2021": {
+          "word": "Autorska prava"
         }
       }
     }
