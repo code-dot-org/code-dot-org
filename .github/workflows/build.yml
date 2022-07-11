@@ -9,14 +9,23 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
+  env:
+      CI: true
+      RAILS_ENV: test
+      RACK_ENV: test
+      DISABLE_SPRING: 1
+      LD_LIBRARY_PATH: /usr/local/lib
+  steps:
       - uses: actions/checkout@v2
 
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6 # Not needed with a .ruby-version file
+          ruby-version: 2.5 # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - run: bundle exec rake
+
+      - name: Bundle install
+        run: bundle install
+      - run: bundle exec rake install
 
       # Infer node version from .nvmrc, courtesy of https://github.com/actions/setup-node/issues/32#issuecomment-539794249
       - name: Read .nvmrc
@@ -27,8 +36,6 @@ jobs:
         with:
           node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
 
-      - name: Bundle install
-        run: bundle install      
       - name: Build all
         run: rake build
 
