@@ -49,7 +49,7 @@ module DataIOHelper
   # @param spreadsheet_name [String]
   # @param sheet_name [String]
   # @credential_json [String] Google credential json file
-  def append_to_gsheet(rows_with_headers, spreadsheet_name, sheet_name, credential_json)
+  def append_to_gsheet(rows_with_headers, spreadsheet_name, sheet_name, credential_json, overwrite = false)
     raise 'Input params cannot be nil or empty!' if rows_with_headers.nil? || spreadsheet_name.empty? || sheet_name.empty? || credential_json.empty?
     @gdrive_session ||= GoogleDrive::Session.from_service_account_key(credential_json)
 
@@ -59,9 +59,14 @@ module DataIOHelper
     worksheet = spreadsheet.worksheet_by_title(sheet_name)
     worksheet ||= spreadsheet.add_worksheet(sheet_name, 200)
 
-    # Delete new data headers if the worksheet already has data
-    rows_with_headers.shift if worksheet.num_rows > 0
-    worksheet.insert_rows(worksheet.num_rows + 1, rows_with_headers)
+    if overwrite
+      worksheet.delete_rows(1, worksheet.num_rows)
+      worksheet.update_cells(1, 1, rows_with_headers)
+    else
+      # Delete new data headers if the worksheet already has data
+      rows_with_headers.shift if worksheet.num_rows > 0
+      worksheet.insert_rows(worksheet.num_rows + 1, rows_with_headers)
+    end
     worksheet.save
   end
 end
