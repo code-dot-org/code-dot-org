@@ -2,7 +2,6 @@ require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
-require 'benchmark'
 
 namespace :build do
   desc 'Builds apps.'
@@ -101,16 +100,10 @@ namespace :build do
         # will be unable to find them.
         raise "do not optimize rails assets without optimized webpack assets" unless CDO.optimize_webpack_assets
 
-        # temporarily measure elapsed time, for debugging purposes.
-        # TODO: remove this before merging
-        time = Benchmark.measure do
-          ChatClient.log 'Cleaning <b>dashboard</b> assets...'
-          RakeUtils.rake 'assets:clean'
-          ChatClient.log 'Precompiling <b>dashboard</b> assets...'
-          RakeUtils.rake 'assets:precompile'
-        end
-        ChatClient.log "Time spent cleaning and precompiling assets: #{time}"
-        puts "Time spent cleaning and precompiling assets: #{time}"
+        ChatClient.log 'Cleaning <b>dashboard</b> assets...'
+        RakeUtils.rake 'assets:clean'
+        ChatClient.log 'Precompiling <b>dashboard</b> assets...'
+        RakeUtils.rake 'assets:precompile'
       end
 
       ChatClient.log 'Upgrading <b>dashboard</b>.'

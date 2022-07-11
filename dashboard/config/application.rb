@@ -26,8 +26,9 @@ module Dashboard
     # Explicitly load appropriate defaults for this version of Rails.
     # Eventually, we want to simply call:
     #config.load_defaults 6.0
-    config.active_record.belongs_to_required_by_default = true
     config.action_dispatch.return_only_media_type_on_content_type = false
+    config.active_record.belongs_to_required_by_default = true
+    config.assets.unknown_asset_fallback = false
     config.autoloader = :zeitwerk
 
     unless CDO.chef_managed
@@ -125,7 +126,6 @@ module Dashboard
 
     # Whether to fallback to assets pipeline if a precompiled asset is missed.
     config.assets.compile = !CDO.optimize_rails_assets
-    config.assets.unknown_asset_fallback = !CDO.optimize_rails_assets
 
     # Generate digests for assets URLs which do not contain webpack hashes.
     config.assets.digest = CDO.optimize_rails_assets
