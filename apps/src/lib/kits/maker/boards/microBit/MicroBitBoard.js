@@ -98,11 +98,20 @@ export default class MicroBitBoard extends EventEmitter {
       .then(() => this.openSerialPort())
       .then(serialPort => this.boardClient_.connectBoard(serialPort))
       .then(() => {
+        // Delay for 0.25 seconds to ensure we have time to determine the firmware version.
+        return delay(250);
+      })
+      .then(() => {
         if (
           this.boardClient_.firmwareVersion.includes(MICROBIT_FIRMWARE_VERSION)
         ) {
           return Promise.resolve();
         } else {
+          if (this.boardClient_.firmwareVersion === '') {
+            console.warn(
+              'Firmware version not detected in time. Try refreshing the page.'
+            );
+          }
           return Promise.reject('Incorrect firmware detected');
         }
       })
@@ -252,3 +261,5 @@ export default class MicroBitBoard extends EventEmitter {
     );
   }
 }
+
+const delay = t => new Promise(resolve => setTimeout(resolve, t));
