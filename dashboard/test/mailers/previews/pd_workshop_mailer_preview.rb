@@ -1,4 +1,4 @@
-# This can be viewed on non-production environments at /rails/mailers/pd/workshop_mailer
+# This can be viewed on non-production environments at /rails/mailers/pd_workshop_mailer
 class PdWorkshopMailerPreview < ActionMailer::Preview
   include FactoryGirl::Syntax::Methods
 
