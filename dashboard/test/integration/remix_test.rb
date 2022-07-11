@@ -78,8 +78,8 @@ class RemixTest < ActionDispatch::IntegrationTest
     assert_only_remixes_sources 'minecraft_hero'
   end
 
-  test 'applab only remixes Sources and Assets buckets' do
-    assert_only_remixes_sources_assets 'applab'
+  test 'applab only remixes Sources and Assets buckets and Starter assets' do 
+    assert_only_remixes_sources_assets_starter_assets 'applab'
   end
 
   test 'gamelab only remixes Sources, Assets and Animations buckets' do
@@ -122,7 +122,7 @@ class RemixTest < ActionDispatch::IntegrationTest
     assert_only_remixes_sources 'eval'
   end
 
-  test 'javalab only remixes Sources and Assets buckets, and starter assets' do
+  test 'javalab only remixes Sources and Assets buckets, and Starter assets' do
     assert_only_remixes_sources_assets_starter_assets 'javalab'
   end
 
