@@ -150,19 +150,6 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-1. For Apple Silicon (M1), return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. After cloning, you will need to make the changes below to your [Gemfile.lock](Gemfile.lock) file to switch from `libv8` to `libv8-node` and upgrade `mini_racer`. These changes should not be committed and will unfortunately clutter your `git status`.
-
-   ```text
-   ...
-   libv8-node (15.14.0.0)
-   ...
-   mini_racer (0.4.0)
-     libv8-node (~> 15.14.0.0)
-   ...
-   ```
-
-Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
-
 ### OS X Catalina
 
 1. Choose shell. Starting in Catalina, [the default shell for new users is zsh](https://support.apple.com/en-us/HT208050). Most developers at Code.org are still using bash so that may be a smoother experience for now.
@@ -461,32 +448,26 @@ Please also see our other documentation, including our:
 Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) for more information on helping us out.
 
 ---
+
 ### Bundle Install Tips
 
 #### rmagick
+
 If rmagick doesn't install, check your version of imagemagick, and downgrade if >= 7
+
 - `convert --version`
 - `brew install imagemagick@6`
 - `brew unlink imagemagick`
 - `brew link imagemagick@6 --force`
+
 If you continue to have issues with rmagick, after changing your imagemagick version, you may need to uninstall/reinstall the gem
+
 - `gem uninstall rmagick`
 - `gem install rmagick -v 2.16.0`
 
 #### Apple Silicon (M1) bundle install steps
 
-On Apple Silicon, additional steps are required to get `bundle install` to work.
-
-In Gemfile.lock, replace the two occurrences of libv8 (8.4.255.0) with libv8-node (15.14.0.0). Also update mini_racer to 0.4.0 (from 0.3.1):
-
-```
-libv8-node (15.14.0.0)
-...
-mini_racer (0.4.0)
-  libv8-node (~> 15.14.0.0)
-```
-
-Then run the following commands to successfully complete a bundle install:
+On Apple Silicon, additional steps are required to get `bundle install` to work. Specifically, if the install fails with complaints like `directory not found for option '-L/usr/local/opt/openssl@3/lib'`, then run the following commands to successfully complete a bundle install:
 
 ```sh
 gem install bundler -v 1.17.3
@@ -500,7 +481,6 @@ After `bundle install` completes successfully, before attempting the `bundle exe
 ```sh
 bundle update ffi
 ```
-
 
 ### ImageMagick with Pango
 
