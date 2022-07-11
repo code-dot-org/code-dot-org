@@ -26,11 +26,6 @@ module Dashboard
     # Explicitly load appropriate defaults for this version of Rails.
     config.load_defaults 6.0
 
-    # temporarily disable some default values that we aren't yet ready for
-    # TODO infra: remove this
-    config.action_dispatch.return_only_media_type_on_content_type = true
-    config.assets.unknown_asset_fallback = true
-
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
