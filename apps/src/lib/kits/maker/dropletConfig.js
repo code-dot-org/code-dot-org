@@ -24,6 +24,8 @@ config.MAKER_CATEGORY = MAKER_CATEGORY;
 const CIRCUIT_CATEGORY = 'Circuit';
 const MICROBIT_CATEGORY = 'micro:bit';
 
+const emptySocketPrefix = '__.';
+
 const pixelType = '[ColorLed].';
 const colorPixelVariables = _.range(N_COLOR_LEDS).map(
   index => `colorLeds[${index}]`
@@ -71,6 +73,56 @@ function createMakerPinProps(defaultParam) {
     paletteParams: ['pin'],
     params: [defaultParam]
   };
+}
+
+// LED-related blocks that we'll reuse in multiple categories
+function sharedLedBlocks({category, blockPrefix, objectDropdown}) {
+  return [
+    {
+      func: 'on',
+      blockPrefix,
+      category,
+      tipPrefix: pixelType,
+      modeOptionName: '*.on',
+      objectDropdown
+    },
+    {
+      func: 'off',
+      blockPrefix,
+      category,
+      tipPrefix: pixelType,
+      modeOptionName: '*.off',
+      objectDropdown
+    },
+    {
+      func: 'toggle',
+      blockPrefix,
+      category,
+      tipPrefix: pixelType,
+      modeOptionName: '*.toggle',
+      objectDropdown
+    },
+    {
+      func: 'blink',
+      blockPrefix,
+      category,
+      paletteParams: ['interval'],
+      params: ['100'],
+      tipPrefix: pixelType,
+      modeOptionName: '*.blink',
+      objectDropdown
+    },
+    {
+      func: 'pulse',
+      blockPrefix,
+      category,
+      paletteParams: ['interval'],
+      params: ['300'],
+      tipPrefix: pixelType,
+      modeOptionName: '*.pulse',
+      objectDropdown
+    }
+  ];
 }
 
 /**
@@ -143,6 +195,11 @@ function getMakerBlocks(boardType) {
       docFunc: 'createLed'
     },
 
+    ...sharedLedBlocks({
+      category: MAKER_CATEGORY,
+      blockPrefix: emptySocketPrefix
+    }),
+
     {
       func: 'createButton',
       ...createMakerPinProps(defaultPin),
@@ -202,41 +259,13 @@ const circuitPlaygroundBlocks = [
   },
 
   {func: 'colorLeds', category: CIRCUIT_CATEGORY, type: 'readonlyproperty'},
-  {
-    func: 'on',
-    blockPrefix: colorLedBlockPrefix,
-    category: CIRCUIT_CATEGORY,
-    tipPrefix: pixelType,
-    modeOptionName: '*.on',
-    objectDropdown: {options: colorPixelVariables}
-  },
-  {
-    func: 'off',
-    blockPrefix: colorLedBlockPrefix,
-    category: CIRCUIT_CATEGORY,
-    tipPrefix: pixelType,
-    modeOptionName: '*.off',
-    objectDropdown: {options: colorPixelVariables}
-  },
 
-  {
-    func: 'toggle',
-    blockPrefix: colorLedBlockPrefix,
+  ...sharedLedBlocks({
     category: CIRCUIT_CATEGORY,
-    tipPrefix: pixelType,
-    modeOptionName: '*.toggle',
-    objectDropdown: {options: colorPixelVariables}
-  },
-  {
-    func: 'blink',
     blockPrefix: colorLedBlockPrefix,
-    category: CIRCUIT_CATEGORY,
-    paletteParams: ['interval'],
-    params: ['100'],
-    tipPrefix: pixelType,
-    modeOptionName: '*.blink',
     objectDropdown: {options: colorPixelVariables}
-  },
+  }),
+
   {
     func: 'intensity',
     blockPrefix: colorLedBlockPrefix,
@@ -255,16 +284,6 @@ const circuitPlaygroundBlocks = [
     paramButtons: {minArgs: 1, maxArgs: 3},
     tipPrefix: pixelType,
     modeOptionName: '*.color',
-    objectDropdown: {options: colorPixelVariables}
-  },
-  {
-    func: 'pulse',
-    blockPrefix: colorLedBlockPrefix,
-    category: CIRCUIT_CATEGORY,
-    paletteParams: ['interval'],
-    params: ['300'],
-    tipPrefix: pixelType,
-    modeOptionName: '*.pulse',
     objectDropdown: {options: colorPixelVariables}
   },
 
