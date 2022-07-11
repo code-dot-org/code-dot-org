@@ -163,10 +163,6 @@ Lint/StructNewOverride:
 Lint/SymbolConversion:
   Enabled: false
 
-# Offense count: 2
-Lint/UnreachableCode:
-  Enabled: false
-
 # Offense count: 119
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods, IgnoreNotImplementedMethods.
