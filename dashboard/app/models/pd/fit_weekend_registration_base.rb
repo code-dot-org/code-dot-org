@@ -91,10 +91,6 @@ class Pd::FitWeekendRegistrationBase < ApplicationRecord
     ].freeze
   end
 
-  def validate_required_fields
-    super
-  end
-
   def dynamic_required_fields(hash)
     requireds = []
 

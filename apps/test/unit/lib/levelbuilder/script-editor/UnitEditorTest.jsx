@@ -71,7 +71,6 @@ describe('UnitEditor', () => {
       locales: [],
       name: 'test-unit',
       unitFamilies: [],
-      teacherResources: [],
       versionYearOptions: [],
       initialFamilyName: '',
       initialVersionYear: '',

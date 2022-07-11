@@ -1,14 +1,16 @@
 #!/usr/bin/env ruby
 
+time_started = Time.now
 require_relative '../../dashboard/config/environment'
+puts "Dashboard environment loaded in #{Time.now - time_started}"
 
 DRY_RUN = true
 
-authorized_teacher_student_permissions = UserPermission.where(permission: UserPermission::AUTHORIZED_TEACHER).left_joins(:user).where('users.user_type': 'student')
+authorized_teacher_student_permissions = UserPermission.where(permission: UserPermission::AUTHORIZED_TEACHER)
 
 removed_permissions = 0
 
-authorized_teacher_student_permissions.each do |permission|
+authorized_teacher_student_permissions.find_each do |permission|
   user = permission.user
   next unless user.student?
   permission.destroy! unless DRY_RUN
