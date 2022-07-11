@@ -14,26 +14,6 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
     end
   end
 
-  def teacher_enrollment_receipt__csf_intro
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101
-  end
-
-  def teacher_enrollment_receipt__csf_deepdive
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201
-  end
-
-  def teacher_enrollment_receipt__csd_summer_workshop
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
-  end
-
-  def teacher_enrollment_receipt__csp_summer_workshop
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
-  end
-
-  def teacher_enrollment_receipt__csa_summer_workshop
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSA, Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP
-  end
-
   def teacher_enrollment_receipt__csd_summer_workshop_virtual
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
       workshop_params: {
@@ -59,14 +39,6 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
         location_name: 'zoom_link',
         location_address: nil
       }
-  end
-
-  def teacher_enrollment_receipt__csp_1
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
-  end
-
-  def teacher_enrollment_receipt_csd_1
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
   end
 
   def teacher_enrollment_receipt__csp_1_virtual
