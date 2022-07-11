@@ -9,13 +9,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-  env:
+    env:
       CI: true
       RAILS_ENV: test
       RACK_ENV: test
       DISABLE_SPRING: 1
       LD_LIBRARY_PATH: /usr/local/lib
-  steps:
+    steps:
       - uses: actions/checkout@v2
 
       - uses: ruby/setup-ruby@v1
