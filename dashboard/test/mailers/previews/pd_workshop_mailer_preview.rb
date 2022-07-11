@@ -5,58 +5,21 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
   DEFAULT_COURSE = Pd::Workshop::COURSE_ECS
   DEFAULT_SUBJECT = Pd::Workshop::SUBJECT_ECS_PHASE_2
 
-  # Dynamically define teacher_enrollment_receipt methods with all available partials
+  # Dynamically define teacher_enrollment_receipt methods with all available partials, including virtual
   Pd::WorkshopMailer::DETAILS_PARTIALS.each do |course, partials_by_subject|
     partials_by_subject.each do |subject, partial|
       define_method("teacher_enrollment_receipt__#{partial}") do
         mail :teacher_enrollment_receipt, course, subject
       end
+      define_method("teacher_enrollment_receipt__#{partial}_virtual") do
+        mail :teacher_enrollment_receipt, course, subject,
+             workshop_params: {
+               virtual: true,
+               location_name: 'zoom_link',
+               location_address: nil
+             }
+      end
     end
-  end
-
-  def teacher_enrollment_receipt__csd_summer_workshop_virtual
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
-      workshop_params: {
-        virtual: true,
-        location_name: 'zoom_link',
-        location_address: nil
-      }
-  end
-
-  def teacher_enrollment_receipt__csp_summer_workshop_virtual
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
-      workshop_params: {
-        virtual: true,
-        location_name: 'zoom_link',
-        location_address: nil
-      }
-  end
-
-  def teacher_enrollment_receipt__csa_summer_workshop_virtual
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSA, Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP,
-      workshop_params: {
-        virtual: true,
-        location_name: 'zoom_link',
-        location_address: nil
-      }
-  end
-
-  def teacher_enrollment_receipt__csp_1_virtual
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1,
-      workshop_params: {
-        virtual: true,
-        location_name: 'zoom_link',
-        location_address: nil
-      }
-  end
-
-  def teacher_enrollment_receipt_csd_1_virtual
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
-      workshop_params: {
-        virtual: true,
-        location_name: 'zoom_link',
-        location_address: nil
-      }
   end
 
   def teacher_enrollment_receipt__admin
