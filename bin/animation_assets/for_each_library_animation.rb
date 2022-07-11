@@ -92,13 +92,17 @@ cli_parser = OptionParser.new do |opts|
 end
 cli_parser.parse!(ARGV)
 
-puts <<~NOTE
-  This script is checked in for archival purposes.
+enabled = false
+unless enabled
+  puts <<~NOTE
+    This script is checked in for archival purposes.
 
-  It was originally designed as a one-use update to all the animation library
-  metadata on S3, to set "looping": true in every metadata file.
+    It was originally designed as a one-use update to all the animation library
+    metadata on S3, to set "looping": true in every metadata file.
 
-  If you'd like to use it, you'll need to open it up and re-enable its behavior.
-NOTE
-exit(0)
+    If you'd like to use it, you'll need to open it up and re-enable its behavior.
+  NOTE
+  exit(0)
+end
+
 AnimationIterator.new(options).iterate_animations
