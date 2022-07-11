@@ -896,7 +896,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # find localized test strings for custom lesson names in script
     assert response.key?('lesson_changing'), "No key 'lesson_changing' in response #{response.inspect}"
-    assert_equal('milestone-lesson-1', response['lesson_changing']['previous']['name'])
+    assert_equal('Milestone Lesson 1', response['lesson_changing']['previous']['name'])
   end
 
   test 'milestone post respects level_id for active level' do

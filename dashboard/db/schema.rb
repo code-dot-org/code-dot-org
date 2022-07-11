@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_27_214005) do
+ActiveRecord::Schema.define(version: 2022_07_01_192307) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1470,14 +1470,14 @@ ActiveRecord::Schema.define(version: 2022_06_27_214005) do
     t.index ["programming_class_id", "overload_of"], name: "index_programming_methods_on_class_id_and_overload_of"
   end
 
-  create_table "project_versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+  create_table "project_commits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.integer "storage_app_id", null: false
     t.string "object_version_id", null: false
     t.text "comment", size: :medium
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["storage_app_id", "object_version_id"], name: "index_project_versions_on_storage_app_id_and_object_version_id", unique: true
-    t.index ["storage_app_id"], name: "index_project_versions_on_storage_app_id"
+    t.index ["storage_app_id", "object_version_id"], name: "index_project_commits_on_storage_app_id_and_object_version_id", unique: true
+    t.index ["storage_app_id"], name: "index_project_commits_on_storage_app_id"
   end
 
   create_table "projects", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -2246,6 +2246,9 @@ ActiveRecord::Schema.define(version: 2022_06_27_214005) do
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
 
+  create_view "project_versions", sql_definition: <<-SQL
+      select `project_commits`.`id` AS `id`,`project_commits`.`storage_app_id` AS `storage_app_id`,`project_commits`.`object_version_id` AS `object_version_id`,`project_commits`.`comment` AS `comment`,`project_commits`.`created_at` AS `created_at`,`project_commits`.`updated_at` AS `updated_at` from `project_commits`
+  SQL
   create_view "users_view", sql_definition: <<-SQL
       select `users`.`id` AS `id`,`users`.`studio_person_id` AS `studio_person_id`,if((`users`.`provider` = 'migrated'),`authentication_options`.`email`,`users`.`email`) AS `email`,`users`.`parent_email` AS `parent_email`,`users`.`encrypted_password` AS `encrypted_password`,`users`.`reset_password_token` AS `reset_password_token`,`users`.`reset_password_sent_at` AS `reset_password_sent_at`,`users`.`remember_created_at` AS `remember_created_at`,`users`.`sign_in_count` AS `sign_in_count`,`users`.`current_sign_in_at` AS `current_sign_in_at`,`users`.`last_sign_in_at` AS `last_sign_in_at`,`users`.`current_sign_in_ip` AS `current_sign_in_ip`,`users`.`last_sign_in_ip` AS `last_sign_in_ip`,`users`.`created_at` AS `created_at`,`users`.`updated_at` AS `updated_at`,`users`.`username` AS `username`,`users`.`provider` AS `provider`,`users`.`uid` AS `UID`,`users`.`admin` AS `ADMIN`,`users`.`gender` AS `gender`,`users`.`name` AS `name`,`users`.`locale` AS `locale`,`users`.`birthday` AS `birthday`,`users`.`user_type` AS `user_type`,`users`.`school` AS `school`,`users`.`full_address` AS `full_address`,`users`.`school_info_id` AS `school_info_id`,`users`.`total_lines` AS `total_lines`,`users`.`secret_picture_id` AS `secret_picture_id`,`users`.`active` AS `active`,if((`users`.`provider` = 'migrated'),`authentication_options`.`hashed_email`,`users`.`hashed_email`) AS `hashed_email`,`users`.`deleted_at` AS `deleted_at`,`users`.`purged_at` AS `purged_at`,`users`.`secret_words` AS `secret_words`,`users`.`properties` AS `properties`,`users`.`invitation_token` AS `invitation_token`,`users`.`invitation_created_at` AS `invitation_created_at`,`users`.`invitation_sent_at` AS `invitation_sent_at`,`users`.`invitation_accepted_at` AS `invitation_accepted_at`,`users`.`invitation_limit` AS `invitation_limit`,`users`.`invited_by_id` AS `invited_by_id`,`users`.`invited_by_type` AS `invited_by_type`,`users`.`invitations_count` AS `invitations_count`,`users`.`terms_of_service_version` AS `terms_of_service_version`,`users`.`urm` AS `urm`,`users`.`races` AS `races`,`users`.`primary_contact_info_id` AS `primary_contact_info_id` from (`users` left join `authentication_options` on((`users`.`primary_contact_info_id` = `authentication_options`.`id`)))
   SQL
