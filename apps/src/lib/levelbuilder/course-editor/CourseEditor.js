@@ -8,7 +8,7 @@ import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWith
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 import $ from 'jquery';
@@ -55,8 +55,8 @@ class CourseEditor extends Component {
     courseOfferingEditorLink: PropTypes.string,
 
     // Provided by redux
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape)
+    teacherResources: PropTypes.arrayOf(resourceShape),
+    studentResources: PropTypes.arrayOf(resourceShape)
   };
 
   constructor(props) {
@@ -115,10 +115,8 @@ class CourseEditor extends Component {
       scripts: this.state.unitsInCourse
     };
 
-    if (this.props.migratedTeacherResources) {
-      dataToSave.resourceIds = this.props.migratedTeacherResources.map(
-        r => r.id
-      );
+    if (this.props.teacherResources) {
+      dataToSave.resourceIds = this.props.teacherResources.map(r => r.id);
     }
 
     if (this.props.studentResources) {
@@ -383,7 +381,7 @@ class CourseEditor extends Component {
             <h4>Teacher Resources</h4>
             <ResourcesEditor
               inputStyle={styles.input}
-              migratedResources={this.props.migratedTeacherResources}
+              resources={this.props.teacherResources}
               courseVersionId={this.props.courseVersionId}
               getRollupsUrl={`/courses/${this.props.name}/get_rollup_resources`}
             />
@@ -392,7 +390,7 @@ class CourseEditor extends Component {
             <h4>Student Resources</h4>
             <ResourcesEditor
               inputStyle={styles.input}
-              migratedResources={this.props.studentResources}
+              resources={this.props.studentResources}
               courseVersionId={this.props.courseVersionId}
               studentFacing
             />
@@ -456,6 +454,6 @@ const styles = {
 export const UnconnectedCourseEditor = CourseEditor;
 
 export default connect(state => ({
-  migratedTeacherResources: state.resources,
+  teacherResources: state.resources,
   studentResources: state.studentResources
 }))(CourseEditor);

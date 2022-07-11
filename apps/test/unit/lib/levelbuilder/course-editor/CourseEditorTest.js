@@ -44,7 +44,7 @@ const defaultProps = {
   initialInstructionType: InstructionType.teacher_led,
   initialInstructorAudience: InstructorAudience.teacher,
   initialParticipantAudience: ParticipantAudience.student,
-  migratedTeacherResources: [],
+  teacherResources: [],
   studentResources: []
 };
 
@@ -78,11 +78,11 @@ describe('CourseEditor', () => {
   };
 
   describe('Teacher Resources', () => {
-    it('uses the migrated resource component for migrated resources', () => {
+    it('uses the resource component for resources', () => {
       const wrapper = shallow(
         <CourseEditor
           {...defaultProps}
-          migratedTeacherResources={[
+          teacherResources={[
             {id: 1, key: 'curriculum', name: 'Curriculum', url: '/foo'}
           ]}
         />

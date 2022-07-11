@@ -30,10 +30,7 @@ export default function initPage(unitEditorData) {
   const store = getStore();
   store.dispatch(init(lessonGroups));
   store.dispatch(
-    initResources(
-      'teacherResource',
-      scriptData.migrated_teacher_resources || []
-    ),
+    initResources('teacherResource', scriptData.teacher_resources || []),
     initResources('studentResource', scriptData.student_resources || [])
   );
 
