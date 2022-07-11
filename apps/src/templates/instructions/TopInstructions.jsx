@@ -74,6 +74,7 @@ class TopInstructions extends Component {
     isViewingAsInstructorInTraining: PropTypes.bool,
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number,
+    maxNeededHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
     dynamicInstructions: PropTypes.object,
@@ -346,7 +347,7 @@ class TopInstructions extends Component {
       shortInstructions,
       longInstructions,
       hasContainedLevels,
-      maxHeight,
+      maxNeededHeight,
       setInstructionsMaxHeightNeeded
     } = this.props;
 
@@ -361,15 +362,15 @@ class TopInstructions extends Component {
     const refForSelectedTab = this.refForSelectedTab();
 
     if (refForSelectedTab) {
-      const maxNeededHeight =
+      const maxNeededHeightMeasured =
         $(ReactDOM.findDOMNode(refForSelectedTab)).outerHeight(true) +
         HEADER_HEIGHT +
         RESIZER_HEIGHT;
 
-      if (maxHeight !== maxNeededHeight) {
-        setInstructionsMaxHeightNeeded(maxNeededHeight);
+      if (maxNeededHeight !== maxNeededHeightMeasured) {
+        setInstructionsMaxHeightNeeded(maxNeededHeightMeasured);
       }
-      return maxNeededHeight;
+      return maxNeededHeightMeasured;
     } else {
       return 0;
     }
@@ -876,6 +877,7 @@ export default connect(
     isBlockly: !!state.pageConstants.isBlockly,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
+    maxNeededHeight: state.instructions.maxNeededHeight,
     maxHeight: Math.min(
       state.instructions.maxAvailableHeight,
       state.instructions.maxNeededHeight

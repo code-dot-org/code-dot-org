@@ -2,7 +2,6 @@ import React from 'react';
 import {mount} from 'enzyme';
 import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
 import {assert, expect} from '../../../../util/reconfiguredChai';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import {Provider} from 'react-redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import reducers, {
@@ -72,11 +71,9 @@ describe('UnitEditor', () => {
       locales: [],
       name: 'test-unit',
       unitFamilies: [],
-      teacherResources: [],
       versionYearOptions: [],
       initialFamilyName: '',
       initialVersionYear: '',
-      initialTeacherResources: [],
       initialProjectSharing: false,
       initialLocales: [],
       isMigrated: false,
@@ -228,68 +225,11 @@ describe('UnitEditor', () => {
     });
 
     describe('Teacher Resources', () => {
-      it('adds empty resources if passed none', () => {
-        const wrapper = createWrapper({});
-        assert.deepEqual(wrapper.find('UnitEditor').state('teacherResources'), [
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''}
-        ]);
-      });
-
-      it('adds empty resources if passed fewer than max', () => {
-        const wrapper = createWrapper({
-          initialTeacherResources: [
-            {type: ResourceType.curriculum, link: '/foo'}
-          ]
-        });
-
-        assert.deepEqual(wrapper.find('UnitEditor').state('teacherResources'), [
-          {type: ResourceType.curriculum, link: '/foo'},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''}
-        ]);
-      });
-
       it('uses new resource editor for migrated units', () => {
         const wrapper = createWrapper({
           isMigrated: true
         });
-        expect(
-          wrapper
-            .find('ResourcesEditor')
-            .first()
-            .props().useMigratedResources
-        ).to.be.true;
-      });
-
-      it('uses old resource editor for migrated units when legacy teacher resources are present', () => {
-        const wrapper = createWrapper({
-          isMigrated: true,
-          initialTeacherResources: [
-            {type: ResourceType.curriculum, link: '/foo'}
-          ]
-        });
-        expect(
-          wrapper
-            .find('ResourcesEditor')
-            .first()
-            .props().useMigratedResources
-        ).to.be.false;
+        expect(wrapper.find('ResourcesEditor').first()).to.exist;
       });
     });
 
