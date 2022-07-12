@@ -400,6 +400,7 @@ GEM
     dotiw (4.0.1)
       actionpack (>= 4)
       i18n
+    e2mmap (0.1.0)
     erubi (1.10.0)
     erubis (2.7.0)
     eventmachine (1.2.7)
@@ -844,6 +845,8 @@ GEM
       rack (>= 1, < 3)
     thor (1.1.0)
     thread_safe (0.3.6)
+    thwait (0.2.0)
+      e2mmap
     tilt (2.0.10)
     timecop (0.8.1)
     trailblazer-option (0.1.1)
@@ -1066,6 +1069,7 @@ DEPENDENCIES
   sshkit
   stringex (~> 2.5.2)
   thin
+  thwait
   timecop
   twilio-ruby
   uglifier (>= 1.3.0)
