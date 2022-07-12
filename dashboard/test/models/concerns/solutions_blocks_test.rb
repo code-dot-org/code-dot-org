@@ -2,29 +2,29 @@ require 'test_helper'
 
 class SolutionBlocksTest < ActiveSupport::TestCase
   setup do
-    @simple_solution_blocks = <<XML
-<xml>
-  <block type="when_run" deletable="false" movable="false">
-    <next>
-      <block type="controls_repeat">
-        <title name="TIMES">2</title>
-        <statement name="DO">
-          <block type="maze_move">
-            <title name="DIR">moveForward</title>
-            <next>
-              <block type="maze_nectar">
-                <next>
-                  <block type="maze_nectar"></block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </statement>
-      </block>
-    </next>
-  </block>
-</xml>
-XML
+    @simple_solution_blocks = <<~XML
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="maze_nectar">
+                      <next>
+                        <block type="maze_nectar"></block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    XML
 
     @simple_level = Level.create(short_instructions: 'test', type: 'Karel', solution_blocks: @simple_solution_blocks)
 
@@ -42,85 +42,85 @@ XML
       '<block type="maze_nectar"/>'
     ]
 
-    @function_solution_blocks = <<XML
-<xml>
-  <block type="procedures_defnoreturn" editable="false">
-    <mutation></mutation>
-    <title name="NAME">draw a line of squares</title>
-    <statement name="STACK">
-      <block type="controls_repeat_ext" inline="true">
-        <value name="TIMES">
-          <block type="math_number">
-            <title name="NUM">6</title>
-          </block>
-        </value>
-        <statement name="DO">
-          <block type="procedures_callnoreturn">
-            <mutation name="draw a square 20"></mutation>
-            <next>
-              <block type="jump" inline="true">
-                <title name="DIR">jumpForward</title>
-                <value name="VALUE">
-                  <block type="math_number">
-                    <title name="NUM">20</title>
-                  </block>
-                </value>
-              </block>
-            </next>
-          </block>
-        </statement>
-      </block>
-    </statement>
-  </block>
-  <block type="procedures_defnoreturn" editable="false">
-    <mutation>
-      <description>Draw a square with sides 20 pixels long</description>
-    </mutation>
-    <title name="NAME">draw a square 20</title>
-    <statement name="STACK">
-      <block type="draw_width" inline="false">
-        <value name="WIDTH">
-          <block type="math_number">
-            <title name="NUM">1</title>
-          </block>
-        </value>
-        <next>
-          <block type="controls_repeat">
-            <title name="TIMES">4</title>
-            <statement name="DO">
-              <block type="draw_move" inline="true">
-                <title name="DIR">moveForward</title>
-                <value name="VALUE">
-                  <block type="math_number">
-                    <title name="NUM">20</title>
-                  </block>
-                </value>
-                <next>
-                  <block type="draw_turn" inline="true">
-                    <title name="DIR">turnLeft</title>
-                    <value name="VALUE">
-                      <block type="math_number">
-                        <title name="NUM">90</title>
-                      </block>
-                    </value>
-                  </block>
-                </next>
-              </block>
-            </statement>
-          </block>
-        </next>
-      </block>
-    </statement>
-  </block>
-  <block type="when_run" deletable="false" movable="false">
-    <next>
-      <block type="procedures_callnoreturn">
-        <mutation name="draw a line of squares"></mutation>
-      </block>
-    </next>
-  </block>
-</xml>
-XML
+    @function_solution_blocks = <<~XML
+      <xml>
+        <block type="procedures_defnoreturn" editable="false">
+          <mutation></mutation>
+          <title name="NAME">draw a line of squares</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true">
+              <value name="TIMES">
+                <block type="math_number">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw a square 20"></mutation>
+                  <next>
+                    <block type="jump" inline="true">
+                      <title name="DIR">jumpForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">20</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" editable="false">
+          <mutation>
+            <description>Draw a square with sides 20 pixels long</description>
+          </mutation>
+          <title name="NAME">draw a square 20</title>
+          <statement name="STACK">
+            <block type="draw_width" inline="false">
+              <value name="WIDTH">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">20</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">90</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="draw a line of squares"></mutation>
+            </block>
+          </next>
+        </block>
+      </xml>
+    XML
 
     @function_level = Level.create(short_instructions: 'test', type: 'Artist', solution_blocks: @function_solution_blocks)
 

@@ -19,20 +19,20 @@ syslog_size = node['cdo-syslog']['syslog_size']
 script_path = '/usr/local/bin'
 file 'rotate_syslog' do
   path "#{script_path}/#{name}"
-  content <<BASH
-#!/bin/sh
-mv -f #{syslog_file} #{syslog_file}.1
-BASH
+  content <<~BASH
+    #!/bin/sh
+    mv -f #{syslog_file} #{syslog_file}.1
+  BASH
   mode '0755'
 end
 
 file '50-default.conf' do
   path "/etc/rsyslog.d/#{name}"
-  content <<RSYSLOG
-# Log everything to a fixed-size syslog file.
-$outchannel log_rotation, #{syslog_file}, #{syslog_size}, #{script_path}/rotate_syslog
-*.* :omfile:$log_rotation
-RSYSLOG
+  content <<~RSYSLOG
+    # Log everything to a fixed-size syslog file.
+    $outchannel log_rotation, #{syslog_file}, #{syslog_size}, #{script_path}/rotate_syslog
+    *.* :omfile:$log_rotation
+  RSYSLOG
 end
 
 file '99-cdo.conf' do

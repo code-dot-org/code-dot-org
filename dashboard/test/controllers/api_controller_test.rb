@@ -819,7 +819,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get signed-in user's user progress" do
-    user = create :user, total_lines: 2
+    user = create :user
     sign_in user
 
     create :user_level, user: user, best_result: 100, script: @script, level: @level
@@ -830,7 +830,6 @@ class ApiControllerTest < ActionController::TestCase
 
     body = JSON.parse(response.body)
     assert_equal true, body['signedIn']
-    assert_equal 2, body['linesOfCode']
     level_progress = body['progress'][@level.id.to_s]
     refute_nil level_progress
     assert_equal 'perfect', level_progress['status']
@@ -875,7 +874,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get signed-in user's user app_options" do
-    user = create :user, total_lines: 2
+    user = create :user
     sign_in user
 
     level_source = create :level_source, level: @level, data: 'level source'
@@ -1755,18 +1754,18 @@ class ApiControllerTest < ActionController::TestCase
         expected['answer_texts'] == actual['answer_texts'] &&
         equivalent_bags?(expected['results'], actual['results'])
     end
-    assert match, <<MESSAGE
-Mismatched results:
+    assert match, <<~MESSAGE
+      Mismatched results:
 
-Expected:
+      Expected:
 
-#{expected_results.join("\n")}
+      #{expected_results.join("\n")}
 
-Actual:
+      Actual:
 
-#{actual_results.join("\n")}
+      #{actual_results.join("\n")}
 
-MESSAGE
+    MESSAGE
   end
 
   test 'sign_cookies' do

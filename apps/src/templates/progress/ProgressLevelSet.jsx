@@ -15,6 +15,7 @@ import {connect} from 'react-redux';
 class ProgressLevelSet extends React.Component {
   static propTypes = {
     name: PropTypes.string,
+    lessonName: PropTypes.string,
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
     selectedSectionId: PropTypes.number,
@@ -30,7 +31,8 @@ class ProgressLevelSet extends React.Component {
       disabled,
       selectedSectionId,
       onBubbleClick,
-      isRtl
+      isRtl,
+      lessonName
     } = this.props;
 
     const multiLevelStep = levels.length > 1;
@@ -95,6 +97,7 @@ class ProgressLevelSet extends React.Component {
                   disabled={disabled}
                   selectedSectionId={selectedSectionId}
                   onBubbleClick={onBubbleClick}
+                  lessonName={lessonName}
                 />
               </td>
             </tr>

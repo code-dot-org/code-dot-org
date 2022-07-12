@@ -12,11 +12,12 @@
       "lesson_extras_available": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-09 18:09:35 UTC",
+    "serialized_at": "2022-06-27 19:42:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

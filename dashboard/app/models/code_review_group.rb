@@ -15,5 +15,6 @@
 class CodeReviewGroup < ApplicationRecord
   # use dependent: :delete_all here because code_review_group_members is a join table and has no id column.
   has_many :members, class_name: 'CodeReviewGroupMember', dependent: :delete_all
-  belongs_to :section
+  has_many :followers, through: :members
+  belongs_to :section, optional: true
 end

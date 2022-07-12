@@ -23,10 +23,6 @@ class HintViewRequest < ApplicationRecord
   belongs_to :script
   belongs_to :level
 
-  validates :user, presence: true
-  validates :script, presence: true
-  validates :level, presence: true
-
   include HintsUsed
 
   def self.enabled?

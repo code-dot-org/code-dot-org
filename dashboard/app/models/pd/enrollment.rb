@@ -41,9 +41,9 @@ class Pd::Enrollment < ApplicationRecord
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
-  belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
-  belongs_to :school_info
-  belongs_to :user
+  belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id, optional: true
+  belongs_to :school_info, optional: true
+  belongs_to :user, optional: true
   has_one :pre_workshop_survey, class_name: 'Pd::PreWorkshopSurvey', foreign_key: :pd_enrollment_id
   has_many :attendances, class_name: 'Pd::Attendance', foreign_key: :pd_enrollment_id
   auto_strip_attributes :first_name, :last_name
@@ -340,6 +340,11 @@ class Pd::Enrollment < ApplicationRecord
       break if application_id
     end
     self.application_id = application_id
+  end
+
+  def application
+    return nil unless application_id
+    Pd::Application::ApplicationBase.find_by(id: application_id)
   end
 
   # Removes the name and email information stored within this Pd::Enrollment.

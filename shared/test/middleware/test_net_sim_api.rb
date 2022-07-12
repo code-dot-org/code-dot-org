@@ -653,7 +653,6 @@ class NetSimApiTest < Minitest::Test
         }
       }
     )
-
   ensure
     delete_node(node_a['id'])
     delete_node(node_b['id'])
@@ -716,7 +715,6 @@ class NetSimApiTest < Minitest::Test
     refute record_exists(TABLE_NAMES[:node], node_a['id'])
     assert record_exists(TABLE_NAMES[:node], node_b['id'])
     refute record_exists(TABLE_NAMES[:node], node_c['id'])
-
   ensure
     delete_node(node_a['id'])
     delete_node(node_b['id'])

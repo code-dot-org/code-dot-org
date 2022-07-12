@@ -197,7 +197,7 @@ class S3Packaging
       # https://github.com/aws/aws-sdk-ruby/issues/1149
       url = Aws::S3::Bucket.new(BUCKET_NAME, credentials: 0).object(s3_key).public_url
       File.open(package, 'wb') do |file|
-        IO.copy_stream open(url), file
+        IO.copy_stream URI.open(url), file
       rescue OpenURI::HTTPError
         raise Aws::S3::Errors::NoSuchKey.new(nil, file.path)
       end

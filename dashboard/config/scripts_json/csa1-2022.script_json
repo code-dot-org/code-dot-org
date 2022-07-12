@@ -6,13 +6,6 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
           "notice": "More Opportunities for Feedback",
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
           "link": "",
@@ -27,11 +20,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-09 19:40:43 UTC",
+    "serialized_at": "2022-06-27 19:34:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2061,7 +2055,7 @@
       "key": "25a23994-1623-4997-981b-0642327ed487",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax for importing The Neighborhood package and creating a `Painter` object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *state* and explain the default state of a `Painter` object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify the state of the `Painter` object, then click through the animated slide to display the solution."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax for importing The Neighborhood package and creating a `Painter` object."
       },
       "seeding_key": {
         "activity_section.key": "25a23994-1623-4997-981b-0642327ed487",
@@ -2069,8 +2063,31 @@
       }
     },
     {
-      "key": "52070ff8-041e-45be-9555-5ba5bfeecfc8",
+      "key": "b12fdd24-71c8-41cd-a27e-650dfc867799",
       "position": 11,
+      "properties": {
+        "description": "A class contains constructors that we call to create objects. Constructors have the same name as the class. So to create a `Painter` object, we call the constructor in the `Painter` class. When we call the constructor, we set the state of the object we want to create.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b12fdd24-71c8-41cd-a27e-650dfc867799",
+        "lesson_activity.key": "d34aefe6-2e15-4344-8dcd-2555785f3404"
+      }
+    },
+    {
+      "key": "23cb4177-dc89-4163-89a5-7bb5f1ced814",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *state* and explain the default state of a `Painter` object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify the state of the `Painter` object, then click through the animated slide to display the solution."
+      },
+      "seeding_key": {
+        "activity_section.key": "23cb4177-dc89-4163-89a5-7bb5f1ced814",
+        "lesson_activity.key": "d34aefe6-2e15-4344-8dcd-2555785f3404"
+      }
+    },
+    {
+      "key": "52070ff8-041e-45be-9555-5ba5bfeecfc8",
+      "position": 13,
       "properties": {
         "description": "Sometimes, we may encounter errors in our programs when we don't correctly instantiate an object. When this happens, we can use the console to help identify the cause of these errors.",
         "remarks": true
@@ -2082,9 +2099,9 @@
     },
     {
       "key": "0ed956fe-34c3-4807-b2c7-87fdd75a5099",
-      "position": 12,
+      "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *bug* and *debugging* and explain a possible error and potential console message that can occur if an object is not instantiated correctly.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *debugging*.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *bug* and *debugging* and explain a possible error and potential console message that can occur if an object is not instantiated correctly.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2099,7 +2116,7 @@
     },
     {
       "key": "1717b325-12cf-4895-a5ff-adf47b01d3c8",
-      "position": 13,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Have students run the program first to see the resulting error, then create the missing `Painter` object.",
         "progression_name": "Instantiate a Painter Object"
@@ -2340,10 +2357,22 @@
       }
     },
     {
-      "key": "17da768e-fb81-40a2-a5e2-03769b2768d2",
+      "key": "16d01c82-9f8c-4ab5-802f-1d5bb866a4b7",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to call a method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the `paint()` method."
+        "description": "We can use methods that have already been written for us without needing to know how it was written. This is thanks to a concept called procedural abstraction.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "16d01c82-9f8c-4ab5-802f-1d5bb866a4b7",
+        "lesson_activity.key": "988dfce3-4d3c-40fb-a00c-1f1557b26f42"
+      }
+    },
+    {
+      "key": "17da768e-fb81-40a2-a5e2-03769b2768d2",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *procedural abstraction*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to call a method."
       },
       "seeding_key": {
         "activity_section.key": "17da768e-fb81-40a2-a5e2-03769b2768d2",
@@ -2351,8 +2380,54 @@
       }
     },
     {
+      "key": "ae798c5b-522d-4ac0-aa9a-6adade80754f",
+      "position": 11,
+      "properties": {
+        "description": "Some of the methods in the `Painter` class need additional information to perform its task. For example, we need to specify what color we want to paint with when we use the `paint()` method. We specify the color we want to paint with using a string literal.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ae798c5b-522d-4ac0-aa9a-6adade80754f",
+        "lesson_activity.key": "988dfce3-4d3c-40fb-a00c-1f1557b26f42"
+      }
+    },
+    {
+      "key": "e0629c8c-b59c-49be-9c6e-abb03ad8626b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the `paint()` method."
+      },
+      "seeding_key": {
+        "activity_section.key": "e0629c8c-b59c-49be-9c6e-abb03ad8626b",
+        "lesson_activity.key": "988dfce3-4d3c-40fb-a00c-1f1557b26f42"
+      }
+    },
+    {
+      "key": "1ef9322e-a09a-4b37-9278-8910fa32050c",
+      "position": 13,
+      "properties": {
+        "description": "When we call a method or constructor, the program has to first execute the statements in the method or constructor before continuing.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1ef9322e-a09a-4b37-9278-8910fa32050c",
+        "lesson_activity.key": "988dfce3-4d3c-40fb-a00c-1f1557b26f42"
+      }
+    },
+    {
+      "key": "05c7c689-6361-42b8-aba7-937920b5871a",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the flow of control when calling a method or constructor."
+      },
+      "seeding_key": {
+        "activity_section.key": "05c7c689-6361-42b8-aba7-937920b5871a",
+        "lesson_activity.key": "988dfce3-4d3c-40fb-a00c-1f1557b26f42"
+      }
+    },
+    {
       "key": "32de7f8f-5764-488e-888d-908b6f7f4abb",
-      "position": 10,
+      "position": 15,
       "properties": {
         "description": "Let's practice calling these methods to move around and paint The Neighborhood!",
         "duration": "15",
@@ -2366,7 +2441,7 @@
     },
     {
       "key": "f453b0d5-c881-42b3-a6f4-f18f212ed238",
-      "position": 11,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students debug the program on Level 2, then continue to complete Level 3. Students complete a choice level on Level 4. Students debug the program on Level 5.",
         "progression_name": "Moving and Painting",
@@ -2835,7 +2910,7 @@
       "key": "e68d3c68-64b4-4942-b1a5-59fcc0b78237",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show how to create a new class in Java Lab.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the constructor for the `Painter` class and how it is called to create a `Painter` object.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show how to create a new class in Java Lab.",
         "duration": "20",
         "name": "Creating PainterPlus Objects"
       },
@@ -2845,8 +2920,31 @@
       }
     },
     {
-      "key": "8fc43332-d085-4206-b210-cea8e30071ad",
+      "key": "110bab6b-e7af-4254-b555-3c346e126d87",
       "position": 7,
+      "properties": {
+        "description": "While a subclass inherits the attributes and behaviors of the superclass, it does not inherit the constructors in a superclass. We will need to write a constructor in the `PainterPlus` class so we can create `PainterPlus` objects.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "110bab6b-e7af-4254-b555-3c346e126d87",
+        "lesson_activity.key": "acbfe4b1-e47f-4e52-aa73-936d110ac6f2"
+      }
+    },
+    {
+      "key": "8cb2a8c5-fa57-4559-abd6-796b2cc661bc",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the constructor for the `Painter` class and how it is called to create a `Painter` object."
+      },
+      "seeding_key": {
+        "activity_section.key": "8cb2a8c5-fa57-4559-abd6-796b2cc661bc",
+        "lesson_activity.key": "acbfe4b1-e47f-4e52-aa73-936d110ac6f2"
+      }
+    },
+    {
+      "key": "8fc43332-d085-4206-b210-cea8e30071ad",
+      "position": 9,
       "properties": {
         "description": "Let's make our `PainterPlus` class!",
         "remarks": true
@@ -2858,7 +2956,7 @@
     },
     {
       "key": "15043e85-db16-4a84-9335-1b219d652f52",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students complete a Check for Understanding on Level 1, then continue to Level 2 to write the `PainterPlus` class by creating a new file and writing the class header and constructor. Students create a `PainterPlus` object on Level 3.",
         "progression_name": "Creating PainterPlus"
@@ -2944,7 +3042,7 @@
       "key": "559a8698-c2f7-4302-8c25-1335bd03c516",
       "position": 1,
       "properties": {
-        "description": "We created a `PainterPlus` class to have a new type of `Painter` with additional behaviors. Before adding new methods to the `PainterPlus` class, we need to know how to write a method.",
+        "description": "Software engineers often create subclasses to have additional methods or attributes. We created a `PainterPlus` class to have a new type of `Painter` with additional behaviors. Before adding new methods to the `PainterPlus` class, we need to know how to write a method.",
         "duration": "10",
         "name": "Writing Methods",
         "remarks": true
@@ -3062,6 +3160,18 @@
       },
       "seeding_key": {
         "activity_section.key": "42ceec14-172c-45fb-8273-267d5897719b",
+        "lesson_activity.key": "82aece15-8e5e-4234-8ece-aed67f302fa9"
+      }
+    },
+    {
+      "key": "bc61278b-4df7-4e23-a3ad-db67b8142708",
+      "position": 10,
+      "properties": {
+        "description": "The `Painter` class cannot use any methods that are written in the `PainterPlus` class. Any method that is called must be defined within its own class or its superclass.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bc61278b-4df7-4e23-a3ad-db67b8142708",
         "lesson_activity.key": "82aece15-8e5e-4234-8ece-aed67f302fa9"
       }
     },
@@ -3443,8 +3553,20 @@
       }
     },
     {
-      "key": "bebd8a6d-d957-4aa8-adb1-101a5218a790",
+      "key": "b0a847d2-59d8-4245-a191-fed3ae1bc732",
       "position": 7,
+      "properties": {
+        "description": "In these examples, we saw that if the condition is initially `false`, the body of the loop does not execute at all. On the other hand, if the condition is always `true`, the loop is an infinite loop.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b0a847d2-59d8-4245-a191-fed3ae1bc732",
+        "lesson_activity.key": "3074148b-bee1-47f8-974e-48ff354b1a51"
+      }
+    },
+    {
+      "key": "bebd8a6d-d957-4aa8-adb1-101a5218a790",
+      "position": 8,
       "properties": {
         "description": "How do we plan an algorithm before writing Java code? Software engineers use pseudocode to plan their algorithms then translate their pseudocode to Java.",
         "duration": "15",
@@ -3458,7 +3580,7 @@
     },
     {
       "key": "85ae7d08-f221-404d-af64-557293dfa08f",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *pseudocode*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode for the methods and add them to the `PainterPlus` UML diagram.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to complete Levels 3 and 4 to implement their algorithms in the `PainterPlus` class.",
         "progression_name": "Using Loops and Boolean Methods"
@@ -3470,7 +3592,7 @@
     },
     {
       "key": "d7fd5d3a-456e-4233-a704-a083116f2800",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "This is a good time to commit our code and save our new version of the `PainterPlus` class to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
         "remarks": true
@@ -3482,7 +3604,7 @@
     },
     {
       "key": "f82d2023-0efa-4f4f-ad73-dffe463d1235",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the new version of the `PainterPlus` class to the Backpack."
       },
@@ -3493,7 +3615,7 @@
     },
     {
       "key": "680fd383-834b-45e2-b609-eebe362390e1",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
         "remarks": true
@@ -3505,7 +3627,7 @@
     },
     {
       "key": "e629dc77-e83e-4d18-a842-fc2e8ac56e3e",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *efficient*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 5.",
         "progression_name": "Code Review: New PainterPlus Methods"
@@ -5824,7 +5946,7 @@
       "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U1L4-L2_2022"
@@ -8559,6 +8681,18 @@
       }
     },
     {
+      "name": "Calling Methods",
+      "url": "https://youtu.be/CPE_lYGCw3A",
+      "key": "calling_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "calling_methods"
+      }
+    },
+    {
       "name": "Change the Face of Computer Science",
       "url": "https://youtu.be/uhcA6K8rWp0",
       "key": "change_the_face_of_computer_science",
@@ -8604,6 +8738,42 @@
       },
       "seeding_key": {
         "resource.key": "code_studio_setup"
+      }
+    },
+    {
+      "name": "Commits and the Backpack",
+      "url": "https://youtu.be/uDyiBgZD0sI",
+      "key": "commits_and_the_backpack",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "commits_and_the_backpack"
+      }
+    },
+    {
+      "name": "Conditional Statements",
+      "url": "https://youtu.be/2rQmLwYVYpw",
+      "key": "conditional_statements",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "conditional_statements"
+      }
+    },
+    {
+      "name": "Creating Objects",
+      "url": "https://youtu.be/C5Ks_u87Ltg",
+      "key": "creating_objects",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "creating_objects"
       }
     },
     {
@@ -8655,6 +8825,42 @@
       }
     },
     {
+      "name": "Inheritance",
+      "url": "https://youtu.be/H0htNTwNvrY",
+      "key": "inheritance",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "inheritance"
+      }
+    },
+    {
+      "name": "Java Lab Basics",
+      "url": "https://youtu.be/Dk50QTwp6Bw",
+      "key": "java_lab_basics",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "java_lab_basics"
+      }
+    },
+    {
+      "name": "Object-Oriented Programming",
+      "url": "https://youtu.be/Wok4Xw_5cyY",
+      "key": "object-oriented_programming",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "object-oriented_programming"
+      }
+    },
+    {
       "name": "PatternPainter",
       "url": "https://docs.google.com/presentation/d/1yCQwrqoQNp28pRMJ-Z-ZKT-S4AWQWRguUaLoXDNHJUU/edit?usp=sharing",
       "key": "patternpainter",
@@ -8664,6 +8870,18 @@
       },
       "seeding_key": {
         "resource.key": "patternpainter"
+      }
+    },
+    {
+      "name": "Printing in Java",
+      "url": "https://youtu.be/XjswJsUj2wQ",
+      "key": "printing_in_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "printing_in_java"
       }
     },
     {
@@ -8688,6 +8906,30 @@
       },
       "seeding_key": {
         "resource.key": "software_engineering_characteristics"
+      }
+    },
+    {
+      "name": "Software Engineering: Code Reviews",
+      "url": "https://youtu.be/dWddHWU3_YM",
+      "key": "software_engineering_code_reviews",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "software_engineering_code_reviews"
+      }
+    },
+    {
+      "name": "Software Engineering: Skills and Characteristics",
+      "url": "https://youtu.be/VJFZejhRKjk",
+      "key": "software_engineering_skills_and_characteristics",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "software_engineering_skills_and_characteristics"
       }
     },
     {
@@ -8724,6 +8966,18 @@
       },
       "seeding_key": {
         "resource.key": "teacher_toolkit_10_000_pyramid_high_school_"
+      }
+    },
+    {
+      "name": "Two-Way Selection and NOT",
+      "url": "https://youtu.be/EjypsirssII",
+      "key": "two-way_selection_and_not",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "two-way_selection_and_not"
       }
     },
     {
@@ -8979,6 +9233,42 @@
       }
     },
     {
+      "name": "Welcome to The Neighborhood",
+      "url": "https://youtu.be/XCa735V08lQ",
+      "key": "welcome_to_the_neighborhood",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "welcome_to_the_neighborhood"
+      }
+    },
+    {
+      "name": "While Loops",
+      "url": "https://youtu.be/qnz0LVpUr88",
+      "key": "while_loops",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "while_loops"
+      }
+    },
+    {
+      "name": "Writing a Method",
+      "url": "https://youtu.be/pdNf1O9BTYM",
+      "key": "writing_a_method",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "writing_a_method"
+      }
+    },
+    {
       "name": "Writing Algorithms",
       "url": "https://docs.google.com/document/d/1JmEN9yfj-kr5txjuRCRlIkTmbbAziAHfnvErMSXKH-8/edit?usp=sharing",
       "key": "writing_algorithms",
@@ -8988,6 +9278,18 @@
       },
       "seeding_key": {
         "resource.key": "writing_algorithms"
+      }
+    },
+    {
+      "name": "Writing Our First Program",
+      "url": "https://youtu.be/G2kCDIIRFU8",
+      "key": "writing_our_first_program",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "writing_our_first_program"
       }
     }
   ],
@@ -9002,6 +9304,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "software_engineering_characteristics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "software_engineering_skills_and_characteristics"
       }
     },
     {
@@ -9031,6 +9339,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "resource.key": "two-way_selection_and_not"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "u1l10_extra_practice"
       }
     },
@@ -9050,6 +9364,12 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "_key_u1l11_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "printing_in_java"
       }
     },
     {
@@ -9271,6 +9591,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "java_lab_basics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "u1l2_extra_practice"
       }
     },
@@ -9284,6 +9610,12 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "unit_1_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "writing_our_first_program"
       }
     },
     {
@@ -9307,6 +9639,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "creating_objects"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "object-oriented_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "u1l3_extra_practice"
       }
     },
@@ -9318,8 +9662,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "welcome_to_the_neighborhood"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_u1l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "calling_methods"
       }
     },
     {
@@ -9338,6 +9694,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "_key_u1l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "conditional_statements"
       }
     },
     {
@@ -9362,6 +9724,12 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_key_u1l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "inheritance"
       }
     },
     {
@@ -9396,6 +9764,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "writing_a_method"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "_key_u1l8_extra_practice"
       }
@@ -9415,6 +9789,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "commits_and_the_backpack"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "cs_bingo_cards"
       }
     },
@@ -9422,6 +9802,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "cs_bingo_definitions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "software_engineering_code_reviews"
       }
     },
     {
@@ -9458,6 +9844,12 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "unit_1_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "while_loops"
       }
     },
     {
@@ -9940,6 +10332,16 @@
       }
     },
     {
+      "key": "procedural_abstraction",
+      "word": "Procedural Abstraction",
+      "definition": "allows a programmer to use a method by knowing what the method does even if they do not know how the method was written",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "procedural_abstraction"
+      }
+    },
+    {
       "key": "programming_style",
       "word": "programming style",
       "definition": "a set of guidelines for formatting program code",
@@ -10251,6 +10653,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "procedural_abstraction"
       }
     },
     {
@@ -11182,13 +11590,6 @@
         "lesson.key": "lesson-6",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-1.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.4"
       }
     },
     {

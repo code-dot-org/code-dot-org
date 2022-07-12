@@ -1,4 +1,3 @@
-
 # Unit tests for redis-slave-read gem
 # Hopefully the gem is well-tested and reliable, but we are changing our
 # configuration and wanted to verify that traffic would be distributed as

@@ -26,6 +26,7 @@ class ProgressBubbleSet extends React.Component {
     lessonExtrasEnabled: PropTypes.bool,
     showSublevels: PropTypes.bool,
     onBubbleClick: PropTypes.func,
+    lessonName: PropTypes.string,
     // Redux
     isRtl: PropTypes.bool
   };
@@ -83,6 +84,7 @@ class ProgressBubbleSet extends React.Component {
             selectedStudentId={selectedStudentId}
             hideToolTips={this.props.hideToolTips}
             onClick={this.props.onBubbleClick}
+            lessonName={this.props.lessonName}
           />
         </div>
       </div>

@@ -70,8 +70,22 @@ Dashboard::Application.routes.draw do
   # with the rest falling back to the old proxying logic.
   get 'docs/', to: 'programming_environments#docs_index'
   get 'docs/:programming_environment_name', to: 'programming_environments#docs_show', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/}
-  get 'docs/:programming_environment_name/:programming_expression_key', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/}, to: 'programming_expressions#docs_show'
-  get 'docs/:programming_environment_name/:programming_expression_key/index.html', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/}, to: 'programming_expressions#docs_show'
+  get 'docs/:programming_environment_name/:programming_expression_key', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'programming_expressions#docs_show'
+  get 'docs/:programming_environment_name/:programming_expression_key/index.html', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'programming_expressions#docs_show'
+
+  resources :programming_environments, only: [:index, :show], param: 'name', path: '/docs/ide/' do
+    resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, path: '/expressions' do
+      member do
+        get :show, to: 'programming_expressions#show_by_keys'
+      end
+    end
+    resources :programming_classes, param: 'programming_class_key', constraints: {programming_class_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, path: '/classes' do
+      member do
+        get :show, to: 'programming_classes#show_by_keys'
+      end
+    end
+  end
+
   get 'docs/*path', to: 'curriculum_proxy#get_doc'
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
@@ -202,12 +216,25 @@ Dashboard::Application.routes.draw do
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
   put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
+  # Routes needed for the footer on weblab share links on codeprojects
+  get '/weblab/footer', to: 'projects#weblab_footer', constraints: {host: CDO.codeprojects_hostname}
+  get '/scripts/hosted.js', constraints: {host: CDO.codeprojects_hostname}, to: redirect('/weblab/footer.js')
+  get '/style.css', constraints: {host: CDO.codeprojects_hostname}, to: redirect('/assets/weblab/footer.css')
+
   resources :projects, path: '/projects/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, _|
         get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
         get "/#{key}/new", to: 'projects#create_new', key: key.to_s, as: "#{key}_project_create_new"
-        get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
+
+        # Weblab projects are shared on a codeprojects path. The share URL on code studio doesn't mean anything and instead
+        # should be redirected to the corresponding codeprojects path.
+        if key == 'weblab'
+          get "/#{key}/:channel_id", constraints: {host: CDO.dashboard_hostname}, to: redirect("//#{CDO.site_host('codeprojects.org')}/%{channel_id}/")
+        else
+          get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
+        end
+
         get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
@@ -336,12 +363,19 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_classes, only: [:new, :create, :edit, :update, :show]
+  resources :programming_classes, only: [:new, :create, :edit, :update, :show, :destroy] do
+    collection do
+      get :get_filtered_results
+    end
+    member do
+      post :clone
+    end
+  end
 
   resources :programming_expressions, only: [:index, :new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :search
-      get :get_filtered_expressions
+      get :get_filtered_results
     end
     member do
       post :clone
@@ -352,7 +386,7 @@ Dashboard::Application.routes.draw do
     member do
       get :get_summary_by_name
     end
-    resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/} do
+    resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o} do
       member do
         get :show, to: 'programming_expressions#show_by_keys'
       end
@@ -371,9 +405,11 @@ Dashboard::Application.routes.draw do
   get '/s/:script_name/stage/:position/extras', to: redirect(path: '/s/%{script_name}/lessons/%{position}/extras')
 
   # Redirects from old /stage/x/puzzle url to new /lessons/x/levels url
+  get '/s/:script_name/stage/:position/puzzle', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels')
   get '/s/:script_name/stage/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels/%{all}')
 
   # Redirects from old /lockable/x/puzzle url to new /lockable/x/levels url
+  get '/s/:script_name/lockable/:position/puzzle', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels')
   get '/s/:script_name/lockable/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels/%{all}')
 
   resources :scripts, path: '/s/' do
@@ -381,7 +417,6 @@ Dashboard::Application.routes.draw do
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
     get 'hidden_lessons', to: 'script_levels#hidden_lesson_ids'
-    get 'hidden_stages', to: 'script_levels#hidden_lesson_ids' #TODO: Remove once launched
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
     member do
@@ -892,7 +927,6 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
-  get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
   post '/dashboardapi/v1/text_to_speech/azure', to: 'api/v1/text_to_speech#azure', defaults: {format: 'json'}
 
@@ -910,8 +944,8 @@ Dashboard::Application.routes.draw do
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
-  get '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#get_access_token_with_override_sources'
-  get '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#get_access_token_with_override_validation'
+  post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
+  post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
 
   resources :sprites, only: [:index], controller: 'sprite_management' do
     collection do
@@ -951,7 +985,11 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :code_reviews, only: [:index, :create, :update]
+  resources :code_reviews, only: [:index, :create, :update] do
+    get :peers_with_open_reviews, on: :collection
+  end
+
+  resources :code_review_notes, only: [:create, :update, :destroy]
 
   resources :code_review_comments, only: [:create, :destroy] do
     patch :toggle_resolved, on: :member
@@ -960,9 +998,9 @@ Dashboard::Application.routes.draw do
 
   get '/backpacks/channel', to: 'backpacks#get_channel'
 
-  resources :project_versions, only: [:create]
-  get 'project_versions/get_token', to: 'project_versions#get_token'
-  get 'project_commits/:channel_id', to: 'project_versions#project_commits'
+  resources :project_commits, only: [:create]
+  get 'project_commits/get_token', to: 'project_commits#get_token'
+  get 'project_commits/:channel_id', to: 'project_commits#project_commits'
 
   resources :reviewable_projects, only: [:create, :destroy]
   get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'

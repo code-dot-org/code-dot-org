@@ -6,11 +6,12 @@
     "properties": {
       "has_verified_resources": true,
       "is_migrated": true,
+      "pilot_experiment": "vpl-csd-summer-pilot-ci-2022",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-10 20:02:22 UTC",
+    "serialized_at": "2022-06-09 03:04:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

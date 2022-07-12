@@ -386,4 +386,14 @@ describe('ProgressBubble', () => {
       utils.currentLocation.restore();
     });
   });
+
+  it('it has a title with the levelNumber in it', () => {
+    const wrapper = mount(<ProgressBubble {...defaultProps} />);
+
+    // The 'title' property on an <a> is read out screen readers, so it's important we include
+    // contextual information to the user about where the link will lead them.
+    expect(wrapper.find('a').prop('title')).to.include(
+      defaultProps.level.levelNumber
+    );
+  });
 });

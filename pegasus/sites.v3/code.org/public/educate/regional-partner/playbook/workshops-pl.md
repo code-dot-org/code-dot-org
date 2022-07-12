@@ -27,7 +27,6 @@ ________________
 See these resources to plan and run CS Fundamentals workshops. Partners should work with an approved CS Fundamentals facilitator when organizing one of these workshops.
 
 - <a href="https://docs.google.com/document/d/1hmaqhTvLjl7b_TKjaGF8O3RgirGYMJLA-AZ9yDGBLEw/edit?usp=sharing"target=_blank>CS Fundamentals Workshop Organizer Guide</a>
-- <a href="https://docs.google.com/document/d/1NJHr2B469TqUjIOFSGomN5yUyu9Pqg9jTI_aYPFmGlY/edit?ts=5c61ef7a"target=_blank>K-12 Supplies Plan</a>
 - <a href="https://docs.google.com/document/d/1E3-0OajPte60A4IFovfmO0W7zRufDwJ7n-SHZCeSK_8/edit" target=_blank>Mimeo Marketplace Guidelines</a> for ordering materials & swag
 
 [**Back to the top**](#top)
@@ -53,7 +52,6 @@ Updated guidance for hosting 2022 Summer Workshops is now available!
 
 - <a href="https://docs.google.com/document/d/1IETwhJmN1lVNo85wQ9d9fxgGxs5KlV7ZDhMj0Toq3eI/edit#" target=_blank>2022 Summer Workshop Process Doc</a> 
 - [Sample Logistics Questions for Registration](https://docs.google.com/document/d/1PPnxnoWYim-8qWqOEdwHi0fadx2y-Hc2PWd4QWKd3p8/edit?ts=5c5dc1e6#heading=h.9xw1ckl4l6ru)
-- <a href="https://docs.google.com/document/d/1NJHr2B469TqUjIOFSGomN5yUyu9Pqg9jTI_aYPFmGlY/edit?ts=5c61ef7a"target=_blank>K-12 Supplies Plan</a>
 
 <a id="academic"></a>
 

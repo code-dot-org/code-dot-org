@@ -23,13 +23,16 @@
 #
 class ProgrammingClass < ApplicationRecord
   include CurriculumHelper
+  include Rails.application.routes.url_helpers
 
-  belongs_to :programming_environment
-  belongs_to :programming_environment_category
+  belongs_to :programming_environment, optional: true
+  belongs_to :programming_environment_category, optional: true
   has_many :programming_methods, -> {order(:position)}, dependent: :destroy
 
   validates_uniqueness_of :key, scope: :programming_environment_id, case_sensitive: false
   validate :validate_key_format
+
+  after_destroy :remove_serialization
 
   def self.properties_from_file(path, content)
     expression_config = JSON.parse(content)
@@ -107,7 +110,20 @@ class ProgrammingClass < ApplicationRecord
       tips: tips || '',
       syntax: syntax || '',
       externalDocumentation: external_documentation || '',
-      categoryKey: programming_environment_category&.key || ''
+      categoryKey: programming_environment_category&.key || '',
+      showUrl: programming_environment_programming_class_path(programming_environment.name, key)
+    }
+  end
+
+  def summarize_for_all_code_docs
+    {
+      id: id,
+      key: key,
+      name: name,
+      environmentId: programming_environment.id,
+      environmentTitle: programming_environment.title,
+      categoryName: programming_environment_category&.name,
+      editPath: edit_programming_class_url(self)
     }
   end
 
@@ -134,7 +150,7 @@ class ProgrammingClass < ApplicationRecord
       key: key,
       name: name,
       syntax: syntax,
-      link: "/programming_classes/#{id}"
+      link: programming_environment_programming_class_path(programming_environment.name, key)
     }
   end
 
@@ -147,6 +163,14 @@ class ProgrammingClass < ApplicationRecord
       methods += [m.summarize_for_show]
     end
     methods
+  end
+
+  def self.get_from_cache(programming_environment_name, key)
+    cache_key = "programming_class/#{programming_environment_name}/#{key}"
+    Rails.cache.fetch(cache_key, force: !Script.should_cache?) do
+      env = ProgrammingEnvironment.find_by_name(programming_environment_name)
+      ProgrammingClass.includes([:programming_environment, :programming_environment_category, :programming_methods]).find_by(programming_environment_id: env.id, key: key)
+    end
   end
 
   private

@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import _ from 'lodash';
+
 import ProjectsList from './ProjectsList';
 import StudentFilterDropdown, {ALL_STUDENTS} from './StudentFilterDropdown';
-import _ from 'lodash';
 
 class SectionProjectsList extends Component {
   static propTypes = {
+    localeCode: PropTypes.string,
     projectsData: PropTypes.array.isRequired,
+    showProjectThumbnails: PropTypes.bool.isRequired,
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
-    studioUrlPrefix: PropTypes.string.isRequired,
-    showProjectThumbnails: PropTypes.bool.isRequired
+    studioUrlPrefix: PropTypes.string.isRequired
   };
 
   constructor(props) {
@@ -69,9 +71,10 @@ class SectionProjectsList extends Component {
           <div style={styles.clearDiv} />
         </div>
         <ProjectsList
+          localeCode={this.props.localeCode}
           projectsData={filteredProjectsData}
-          studioUrlPrefix={this.props.studioUrlPrefix}
           showProjectThumbnails={this.props.showProjectThumbnails}
+          studioUrlPrefix={this.props.studioUrlPrefix}
         />
       </div>
     );
@@ -89,4 +92,5 @@ const styles = {
     clear: 'both'
   }
 };
+
 export default SectionProjectsList;

@@ -13,7 +13,12 @@ const DEFAULT_PROPS = {
   serverScriptId: 2,
   viewAsCodeReviewer: true,
   viewAsTeacher: false,
-  codeReviewEnabled: true
+  userIsTeacher: false,
+  codeReviewEnabled: true,
+  locale: 'en_us',
+  isReadOnlyWorkspace: false,
+  setIsReadOnlyWorkspace: () => {},
+  setHasOpenCodeReview: () => {}
 };
 
 const setUp = (overrideProps = {}) => {
@@ -51,5 +56,29 @@ describe('CommitsAndReviewTab', () => {
   it('displays a CodeReviewTimeline', () => {
     const wrapper = setUp();
     expect(wrapper.find(CodeReviewTimeline)).to.have.length(1);
+  });
+
+  it('displays the open review button if there is no open review data loaded and it is not readonly workspace', () => {
+    const wrapper = setUp();
+    const openReviewButton = wrapper.find(Button).at(1);
+    expect(openReviewButton).to.have.length(1);
+    expect(openReviewButton.props().text).to.equal(javalabMsg.startReview());
+  });
+
+  it('hides the open review button if it is a readonly workspace', () => {
+    const wrapper = setUp({isReadOnlyWorkspace: true});
+    const openReviewButton = wrapper.find(Button).at(1);
+    expect(openReviewButton).to.have.length(0);
+  });
+
+  it('disables the open review button when prop codeReviewEnabled is false', () => {
+    const wrapper = setUp({codeReviewEnabled: false});
+    const openReviewButton = wrapper.find(Button).at(1);
+    expect(openReviewButton.props().disabled).to.be.true;
+  });
+
+  it('displays code review disabled message when prop codeReviewEnabled is false', () => {
+    const wrapper = setUp({codeReviewEnabled: false});
+    expect(wrapper.contains(javalabMsg.codeReviewDisabledMessage())).to.be.true;
   });
 });

@@ -1,5 +1,5 @@
 class AddFirstAndLastNamesToPdEnrollments < ActiveRecord::Migration[5.0]
-  class Pd::Enrollment < ActiveRecord::Base
+  class Pd::Enrollment < ApplicationRecord
   end
 
   def change

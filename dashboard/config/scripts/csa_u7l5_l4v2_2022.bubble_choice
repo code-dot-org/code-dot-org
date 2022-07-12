@@ -1,6 +1,6 @@
 name 'CSA U7L5-L4v2_2022'
 display_name 'Overriding Methods'
-description 'level description here'
+description 'Practice overriding methods using the console, The Neighborhood, or The Theater.'
 
 sublevels
 level 'CSA U7L5-L4a_2022'

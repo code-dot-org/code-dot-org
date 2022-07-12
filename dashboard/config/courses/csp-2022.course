@@ -13,13 +13,14 @@
     "csp10-2022",
     "csp-post-survey-2022"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csp",
     "has_numbered_units": true,
+    "has_verified_resources": true,
     "version_year": "2022"
   },
   "resources": [

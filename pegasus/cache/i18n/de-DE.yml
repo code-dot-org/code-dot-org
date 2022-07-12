@@ -481,6 +481,7 @@ de-DE:
   homepage_slot_text_link_buy: Mitmachen
   homepage_slot_text_link_donate: Spende
   homepage_slot_text_link_shop: T-shirts, Hüte & mehr
+  homepage_slot_text_link_thebadguys: Programmieren mit Die Gangster Gang
   homepage_slot_text_link_administrators: Bringem Sie Informatik in Ihre Schule
   homepage_gallery_header: Über %{project_count} Millionen erstellte Code.org Projekte
   homepage_header_donors: Code.org dankt seinen Unterstützern
@@ -491,6 +492,8 @@ de-DE:
   homepage_below_hero_announcement_link_text: Mehr erfahren
   homepage_higher_power_body: Programmiere einen Tanz zu „Higher Power“ Coldplay,
     dann kannst du die Band vielleicht live erleben!
+  homepage_thebadguys_body: Codiere ein Abenteuer mit Frau Tarantula, Herrn Wolf und
+    den anderen Figuren aus dem Film **Die Gangster Gang**!
   contact_form_topic_student: Ich bin ein Schüler
   contact_form_topic_parent: Ich bin ein Elternteil
   contact_form_topic_teacher: Ich bin Lehrer/Pädagoge
@@ -675,6 +678,8 @@ de-DE:
   video_title_marco_belinelli: Hour of Code mit Marco Belinelli
   video_title_chris_bosh: Chris Bosh über Informatik
   video_title_my_name_is_aracely: Mein Name ist Aracely
+  video_title_change_face_of_cs: Das Gesicht der Informatik verändern
+  video_title_latam_hoc: Lo Que Falta En Nuestras Escuelas
   video_1min: 1 Minute
   video_2min: 2 Minuten
   video_3min: 3 Minuten
@@ -1316,6 +1321,10 @@ de-DE:
   coursed-2021_name: Kurs D (2021)
   coursee-2021_name: Kurs E (2021)
   coursef-2021_name: Kurs F (2021)
+  coursea-2022_name: Kurs A (2021)
+  courseb-2022_name: Kurs B (2021)
+  coursec-2022_name: Kurs C (2021)
+  coursed-2022_name: Kurs D (2021)
   express-2018_name: Expresskurs (2018)
   pre-express-2018_name: Leseanfänger-Expresskurs (2018)
   express-2019_name: Expresskurs (2019)
@@ -1438,6 +1447,12 @@ de-DE:
   coursed-2021_gradelevel: Ab 8. Klasse
   coursee-2021_gradelevel: Alter 8-12
   coursef-2021_gradelevel: Alter 9-13
+  coursea-2022_gradelevel: Alter 4-7
+  courseb-2022_gradelevel: Alter 5-8
+  coursec-2022_gradelevel: Alter 6-10
+  coursed-2022_gradelevel: Ab 8. Klasse
+  coursee-2022_gradelevel: Alter 8-12
+  coursef-2022_gradelevel: Alter 9-13
   accelerated_gradelevel: 'Alter: 10-18'
   codeorg_platformtext: Moderne Browser, Smartphones, Tablets
   codeintl_platformtext: Moderne Browser, Smartphones, Tablets
@@ -1662,6 +1677,29 @@ de-DE:
     Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt,
     das du mit deinen Freunden und deiner Familie teilen kannst.
   coursef-2021_shortdescription_congrats: Lerne die Verwendung verschiedener Arten
+    von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene
+    Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von
+    Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein
+    Capstone Projekt, das du mit Freunden und Familie teilen kannst.
+  coursea-2022_shortdescription_congrats: Erlernen der Grundlagen der Informatik und
+    der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte
+    am Ende des Kurses, die mit anderen geteilt werden kann.
+  courseb-2022_shortdescription_congrats: Erlernen der Grundlagen der Informatik und
+    der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte
+    am Ende des Kurses, die mit anderen geteilt werden kann.
+  coursec-2022_shortdescription_congrats: Erstellen Sie Programme mit Sequenzen, Schleifen
+    und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie
+    verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing
+    umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre
+    eigene Geschichte, die Sie mit anderen teilen können!
+  coursed-2022_shortdescription_congrats: Die SchülerInnen entwickeln ihr Verständnis
+    für Schleifen, Bedingungen und Ereignisse. Außer der Codierung lernen die SchülerInnen
+    auch etwas über digitale Bürgerschaft.
+  coursee-2022_shortdescription_congrats: Beginne mit der Programmierung von Algorithmen,
+    Schleifen, Bedingungen und Ereignissen und dann geht es weiter mit Funktionen.
+    Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt,
+    das du mit deinen Freunden und deiner Familie teilen kannst.
+  coursef-2022_shortdescription_congrats: Lerne die Verwendung verschiedener Arten
     von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene
     Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von
     Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein
@@ -2189,6 +2227,7 @@ de-DE:
   header_educate_beyond: Jenseits von Code.org
   header_educate_inspire: Inspiriere einen Schüler/eine Schülerin
   header_educate_community: Online Community
+  header_educate_requirements: Technische Voraussetzungen
   header_educate_tools: Hilfsmittel und Videos
   header_about_us: 'Über uns '
   header_about_leadership: Die Leitung
@@ -2674,3 +2713,9 @@ de-DE:
     geschehen wird.
   outbreak_tile_alt: Eine Simulation, wie ein Virus sich in einer Gruppe violetter
     Monster verbreitet.
+  footer_cookie_notice: Cookie-Meldung
+  top_hoc_tutorial_applab_alt_text: Eine braune Hand berührt mit dem Zeigefinger ein
+    Touchscreen-Tablet, das Sterne und Lichtstrahlen vor einem blauen Hintergrund
+    aussendet
+  minecraft_tile_alt: Zwei Minecraft-Charaktere, Steve und Alex, vor einem Hintergrund,
+    der eine Minecraft-Szene mit Korallen, Delfinen und Seetang zeigt

@@ -93,8 +93,7 @@ export default function ProgrammingClassEditor({
       })
       .then(json => {
         if (shouldCloseAfterSave) {
-          // TODO: update this when we have a show page for classes
-          navigateToHref('/');
+          navigateToHref(programmingClass.showUrl);
         } else {
           setLastUpdated(Date.now());
           setError(null);
@@ -114,10 +113,6 @@ export default function ProgrammingClassEditor({
   return (
     <div>
       <h1>{`Editing Class "${initialProgrammingClass.key}"`}</h1>
-      <h2>
-        This feature is in development. Please continue to use curriculum
-        builder to edit code documentation.
-      </h2>
       <label>
         Display Name
         <input
@@ -230,7 +225,7 @@ export default function ProgrammingClassEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() => navigateToHref('/')}
+        handleView={() => navigateToHref(programmingClass.showUrl)}
       />
     </div>
   );

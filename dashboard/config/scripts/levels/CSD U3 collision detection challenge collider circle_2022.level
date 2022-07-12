@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:41:04.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -32,10 +28,6 @@
       "console.log": null,
       "comment_Variables": null,
       "stopSound": null,
-      "createGroup": null,
-      "setVelocityEach": null,
-      "setAnimationEach": null,
-      "add": null,
       "randomNumber_min_max": null,
       "setCollider": null,
       "debug": null
@@ -96,11 +88,16 @@
     "bubble_choice_description": "Improve collisions for sprites with circular animations.",
     "thumbnail_url": "https://images.code.org/a42ba3dcc666047d26145a7832493f70-image-1589906306820.2020-05-19 12_37_36.gif",
     "encrypted_examples": "pkZI3tnt7hqE8oM3EsK1CT2NZCl68J31kd09eg8/32jMGMMYMIOmWM7/rzl/\nRpQRZ+GX/CynLqqB11uNw2SfcA==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "validation_enabled": "false"
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-03-30T23:41:04.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:41:04.173+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collision detection challenge collider circle_2021\\\"\"],\"cloned_from\":\"CSD U3 collision detection challenge collider circle_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:41:04.173+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collision detection challenge collider circle_2021\\\"\"],\"cloned_from\":\"CSD U3 collision detection challenge collider circle_2021\"},{\"changed_at\":\"2022-05-11 16:47:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

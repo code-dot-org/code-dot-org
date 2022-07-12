@@ -31,8 +31,8 @@ class Lesson < ApplicationRecord
   include Rails.application.routes.url_helpers
   include SerializedProperties
 
-  belongs_to :script, inverse_of: :lessons
-  belongs_to :lesson_group
+  belongs_to :script, inverse_of: :lessons, optional: true
+  belongs_to :lesson_group, optional: true
   has_many :lesson_activities, -> {order(:position)}, dependent: :destroy
   has_many :activity_sections, through: :lesson_activities
   has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
@@ -175,16 +175,7 @@ class Lesson < ApplicationRecord
   # user-facing rendering. Currently does localization and markdown
   # preprocessing, could in the future be expanded to do more.
   def render_property(property_name)
-    unless MARKDOWN_FIELDS.include?(property_name.to_s)
-      Honeybadger.notify(
-        error_message: "Rendering #{property_name} which is not in MARKDOWN_FIELDS",
-        error_class: "Lesson.render_property",
-        context: {
-          property_name: property_name,
-          markdown_fields: MARKDOWN_FIELDS
-        }
-      )
-    end
+    raise "Rendering #{property_name} which is not in MARKDOWN_FIELDS" unless MARKDOWN_FIELDS.include?(property_name.to_s)
     result = get_localized_property(property_name)
     result = Services::MarkdownPreprocessor.process(result || '')
     return result
@@ -230,14 +221,14 @@ class Lesson < ApplicationRecord
     # using legacy lesson plans, remove this condition and consolidate with
     # localized_name_for_lesson_show.
     if script.lessons.many? || (script.is_migrated && !script.use_legacy_lesson_plans)
-      I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
+      get_localized_property(:name) || ''
     else
       I18n.t "data.script.name.#{script.name}.title"
     end
   end
 
   def localized_name_for_lesson_show
-    I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
+    get_localized_property(:name) || ''
   end
 
   def localized_lesson_plan
@@ -256,6 +247,16 @@ class Lesson < ApplicationRecord
 
   def lesson_plan_html_url
     localized_lesson_plan || "#{lesson_plan_base_url}/Teacher"
+  end
+
+  def lesson_feedback_url
+    url = "https://studio.code.org/form/teacher_lesson_feedback?survey_data[script_name]=#{script.name}&survey_data[lesson_number]=#{relative_position}&survey_data[lesson_name]=#{CGI.escape(localized_name)}"
+    url += if script.unit_group
+             "&survey_data[course_name]=#{CGI.escape(script.unit_group.localized_title)}&survey_data[unit_name]=#{CGI.escape(script.localized_title)}&survey_data[unit_number]=#{script.unit_group_units&.first&.position}"
+           else
+             "&survey_data[course_name]=#{CGI.escape(script.localized_title)}"
+           end
+    url
   end
 
   def lesson_plan_pdf_url
@@ -328,6 +329,8 @@ class Lesson < ApplicationRecord
       end
 
       if has_lesson_plan
+        # only collect lesson feedback on the most recent stable english version of the course
+        lesson_data[:lesson_feedback_url] = lesson_feedback_url if script.get_course_version&.recommended?
         lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
         if script.include_student_lesson_plans && script.is_migrated
@@ -464,7 +467,7 @@ class Lesson < ApplicationRecord
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
-      is_teacher: user&.teacher?,
+      is_instructor: script.can_be_instructor?(user),
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
       courseVersionStandardsUrl: course_version_standards_url,
@@ -539,21 +542,6 @@ class Lesson < ApplicationRecord
 
         level_json
       end
-    }
-  end
-
-  # Returns a hash representing i18n strings in scripts.en.yml which may need
-  # to be updated after this object was updated. Currently, this only updates
-  # the lesson name and overviews.
-  def i18n_hash
-    {
-      script.name => {
-        'lessons' => {
-          key => {
-            'name' => name
-          }
-        }
-      }
     }
   end
 
@@ -809,7 +797,7 @@ class Lesson < ApplicationRecord
 
     copied_lesson.absolute_position = destination_unit.lessons.count + 1
     copied_lesson.relative_position =
-      destination_unit.lessons.select {|l| copied_lesson.numbered_lesson? == l.numbered_lesson?}.length + 1
+      destination_unit.lessons.count {|l| copied_lesson.numbered_lesson? == l.numbered_lesson?} + 1
 
     copied_lesson.save!
 
@@ -907,7 +895,6 @@ class Lesson < ApplicationRecord
     copied_lesson.standards = standards
     copied_lesson.opportunity_standards = opportunity_standards
 
-    Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_unit.name)
     destination_unit.fix_script_level_positions
     destination_unit.write_script_json
     copied_lesson
