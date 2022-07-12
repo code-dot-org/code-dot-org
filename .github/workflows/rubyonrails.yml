@@ -36,6 +36,10 @@ jobs:
         with:
           ruby-version: 2.5
           bundler-cache: true
+          
+      - name: Bundle Install
+      - run: bundle install --with test
+  
       # Add or replace database setup steps here
       - name: Set up database schema
         run: |
