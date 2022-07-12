@@ -20,6 +20,7 @@ jobs:
           MYSQL_DB: dashboard_test
           MYSQL_USER: root
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
+          EXPLICIT_DEFAULTS_FOR_TIMESTAMP: true
         ports:
           - 3306
     env:
