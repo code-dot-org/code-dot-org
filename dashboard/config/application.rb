@@ -26,7 +26,7 @@ module Dashboard
     # Explicitly load appropriate defaults for this version of Rails.
     # Eventually, we want to simply call:
     #config.load_defaults 6.0
-    config.load_defaults 5.0
+    config.load_defaults 5.1
     config.action_dispatch.return_only_media_type_on_content_type = false
     config.autoloader = :zeitwerk
 
