@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  bethany-build-test:
+  build:
     runs-on: ubuntu-latest
     env:
         CI: true
@@ -20,13 +20,11 @@ jobs:
       mysql:
         image: mysql:5.7
         env:
-          MYSQL_HOST: 127.0.0.1
           MYSQL_DB: dashboard_test
           MYSQL_USER: root
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
-          MYSQL_PASSWORD:
         ports:
-          - "3306:3306"
+          - 3306
     steps:
       - uses: actions/checkout@v2
 
@@ -48,6 +46,7 @@ jobs:
         run: bundle exec rake install
         env:
           DATABASE_PORT: 3306
+          RAILS_ENV: test
 
       # Infer node version from .nvmrc, courtesy of https://github.com/actions/setup-node/issues/32#issuecomment-539794249
       - name: Read .nvmrc
