@@ -5,9 +5,10 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
-  build:
+  bethany-build-test:
     runs-on: ubuntu-latest
     env:
         CI: true
