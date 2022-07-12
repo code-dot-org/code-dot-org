@@ -41,7 +41,7 @@
   %script{src: webpack_asset_path('js/tooltipster/jquery.tooltipster.js')}
 -# Asset uploader script dependencies (not in share mode)
 - if (use_applab || use_gamelab || use_weblab || use_javalab) && !hide_source
-  %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.js')}
+  %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.min.js')}
   %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.js')}
 
 - if use_phaser
