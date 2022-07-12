@@ -1,5 +1,9 @@
 import $ from 'jquery';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import getScriptData from '@cdo/apps/util/getScriptData';
+
+const data = getScriptData('map');
+console.log(data);
 
 $(initPage);
 
