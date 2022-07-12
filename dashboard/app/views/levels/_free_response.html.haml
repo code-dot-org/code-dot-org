@@ -40,7 +40,7 @@
     .markdown-container{data: {markdown: long_instructions}}
 
   - if level.allow_user_uploads?
-    %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.js')}
+    %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.min.js')}
     %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.js')}
     %p#free-response-upload
     :ruby
