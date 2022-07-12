@@ -37,6 +37,14 @@ namespace :install do
     end
   end
 
+  def database_exists?
+    ActiveRecord::Base.connection
+  rescue ActiveRecord::NoDatabaseError
+    false
+  else
+    true
+  end
+
   desc 'Install Dashboard rubygems and setup database.'
   task :dashboard do
     if RakeUtils.local_environment?
@@ -46,7 +54,9 @@ namespace :install do
         if ENV['CI']
           # Prepare for dashboard unit tests to run. We can't seed UI test data
           # yet because doing so would break unit tests.
-          RakeUtils.rake 'db:create --trace'
+          unless database_exists?
+            RakeUtils.rake 'db:create --trace'
+          end
           RakeUtils.rake 'db:test:prepare'
         else
           RakeUtils.rake_stream_output 'dashboard:setup_db', ([:adhoc, :development].include?(rack_env) ? '--trace' : nil)
