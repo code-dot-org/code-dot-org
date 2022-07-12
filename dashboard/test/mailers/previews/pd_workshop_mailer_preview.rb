@@ -70,11 +70,6 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, workshop_params: {notes: notes}
   end
 
-  def teacher_enrollment_reminder_csd_unit_6_3_day
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_WORKSHOP_4,
-      options: {days_before: 3}
-  end
-
   def teacher_enrollment_reminder__admin
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
   end
