@@ -1,7 +1,7 @@
 {
   "key": "vpl-csa",
-  "display_name": "vpl-csa",
-  "category": "other",
+  "display_name": "CSA Virtual Professional Learning",
+  "category": "pl_virtual",
   "is_featured": false,
   "assignable": true
 }
