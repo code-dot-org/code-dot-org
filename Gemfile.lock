@@ -372,8 +372,13 @@ GEM
       cucumber-tag_expressions (~> 1.1.0)
       gherkin (>= 5.0.0)
     cucumber-expressions (6.0.1)
+    cucumber-gherkin (24.0.0)
+      cucumber-messages (~> 19.0, >= 19.0.0)
+    cucumber-messages (19.1.2)
     cucumber-tag_expressions (1.1.1)
     cucumber-wire (0.0.1)
+    cuke_modeler (3.17.0)
+      cucumber-gherkin (< 25.0)
     daemons (1.4.1)
     dalli (2.7.6)
     dalli-elasticache (0.2.0)
@@ -945,6 +950,7 @@ DEPENDENCIES
   composite_primary_keys (~> 12.0)
   crowdin-api (~> 1.2.1)
   cucumber
+  cuke_modeler (~> 3.0)
   daemons
   dalli
   dalli-elasticache
@@ -1013,7 +1019,7 @@ DEPENDENCIES
   open_uri_redirections
   os
   parallel
-  parallel_tests
+  parallel_tests (~> 3.11.0)
   paranoia (~> 2.4.2)
   pdf-reader
   petit!

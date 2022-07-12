@@ -100,7 +100,8 @@ group :development, :test do
   gem 'webdrivers', '~> 3.0'
 
   # For pegasus PDF generation / merging testing.
-  gem 'parallel_tests'
+  gem 'cuke_modeler', "~> 3.0"
+  gem 'parallel_tests', "~> 3.11.0"
   gem 'pdf-reader', require: false
 end
 
