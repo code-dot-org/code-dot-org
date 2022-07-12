@@ -51,9 +51,26 @@ class ActivitySection < ApplicationRecord
       duration: duration,
       remarks: remarks,
       description: Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description),
-      tips: tips,
+      tips: localized_tips,
       progressionName: localized_progression_name
     }
+  end
+
+  # Translates the content of tips in the adequate format.
+  # @attr [Array<Hash>] tips each Hash contains a "type" and a "markdown". get_localized_property returns the same
+  # [Array<Hash>] when the locale is the default_locale, otherwise, it returns or Array of to translated "markdown"
+  # content [Array<String or NilClass>].
+  #
+  # @return [Array <Hash>] copy of tips containing translated content
+  def localized_tips
+    return nil unless tips
+    all_localized_tips = Services::I18n::CurriculumSyncUtils.get_localized_property(self, :tips)
+    tips_clone = tips.map(&:clone)
+    tips_clone.each_with_index do |tip, index|
+      puts all_localized_tips[index].class
+      tip["markdown"] = all_localized_tips[index] unless (all_localized_tips[index] == tip) || all_localized_tips[index].nil?
+    end
+    tips_clone
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown, current_user)
