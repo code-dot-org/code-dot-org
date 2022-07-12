@@ -42,7 +42,7 @@
 -# Asset uploader script dependencies (not in share mode)
 - if (use_applab || use_gamelab || use_weblab || use_javalab) && !hide_source
   %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.min.js')}
-  %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.js')}
+  %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.min.js')}
 
 - if use_phaser
   %script{src: webpack_asset_path('js/phaser/phaser.js')}
