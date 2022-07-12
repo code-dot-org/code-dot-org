@@ -67,7 +67,6 @@ class ActivitySection < ApplicationRecord
     all_localized_tips = Services::I18n::CurriculumSyncUtils.get_localized_property(self, :tips)
     tips_clone = tips.map(&:clone)
     tips_clone.each_with_index do |tip, index|
-      puts all_localized_tips[index].class
       tip["markdown"] = all_localized_tips[index] unless (all_localized_tips[index] == tip) || all_localized_tips[index].nil?
     end
     tips_clone
