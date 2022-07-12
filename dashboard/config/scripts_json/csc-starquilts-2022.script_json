@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-starquilts",
-    "serialized_at": "2022-07-07 20:06:50 UTC",
+    "serialized_at": "2022-07-11 20:10:40 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -80,7 +80,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "The final lesson for this activity students are ready to build their own Star Quilt. Students will build one point of the star and then loop their code to end up with a 8 point traditional Star Quilt. Star Quilts are meant to be gifted so students can share their project with someone special.",
+        "overview": "In the final lesson for this activity, students are ready to build their own Star Quilt. Students will build one point of the star and then loop their code to end up with a 8 point traditional Star Quilt. Star Quilts are meant to be gifted so students can share their project with someone special.",
         "preparation": "- Review the lesson slides.\n- Play through the levels and review the lesson slides.\n- Create your own Star Quilt as an example for students\n"
       },
       "seeding_key": {
@@ -194,7 +194,7 @@
       "position": 2,
       "properties": {
         "duration": 30,
-        "name": "Activity"
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "b3e70b5a-4465-4c1e-b881-21cd877e7d06",
@@ -207,6 +207,7 @@
       "key": "96bb226e-2b76-4ca3-9a0e-1c90c6ac793c",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -472,7 +473,7 @@
       "key": "3a2a14db-0db1-4f42-9538-e43ba0be80a6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n \n**Discuss**: _What is the difference between a 6-point star shape and a 8-point Star Quilt?_\n\n**Discussion Goal**: The class looks at an image of a 6-pointed star shape, just like they created in Lesson 2. Students compare the image to a 8-pointed Star Quilt, which they will create today. Students should notice:\nStar shape has 6 points and Star Quilt has 8 points\nStar Quilt has more rows \n\nAnticipated student responses (similarities):\nThey are both stars\nThey are both made out of rhombus shapes\nThe rhombus shapes are in a pattern\nThe rhombus shapes fit together perfectly\nThe Artist can be used to create both of these shapes\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next “Share Out” slide\n\n**Discuss**: _What is the difference between these two rhombuses?_\n\n**Discussion Goal**: The class looks at images of two rhombuses, one for a 6-pointed star and the other for an 8-pointed star. They should recognize that the rhombus for the 6-pointed star is wider than the rhombus for the 8-pointed star. However, their side lengths are the same. \n\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**:\n* **Rhombus** - A polygon with four equal sides, opposite sides are parallel, opposite angles are equal\n* **Point** - One part of the star shape\n* **Row** - In this case, a orderly line of rhombuses\n* **Loop** - A sequence of code that is repeated\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n \n**Discuss**: _What is the difference between a 6-point star shape and a 8-point Star Quilt?_\n\n**Discussion Goal**: The class looks at an image of a 6-pointed star shape, just like they created in Lesson 2. Students compare the image to a 8-pointed Star Quilt, which they will create today. Students should notice:\nStar shape has 6 points and Star Quilt has 8 points\nStar Quilt has more rows \n\nAnticipated student responses (similarities):\nThey are both stars\nThey are both made out of rhombus shapes\nThe rhombus shapes are in a pattern\nThe rhombus shapes fit together perfectly\nThe Artist can be used to create both of these shapes\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next “Share Out” slide\n\n**Discuss**: _What is the difference between these two rhombuses?_\n\n**Discussion Goal**: The class looks at images of two rhombuses, one for a 6-pointed star and the other for an 8-pointed star. They should recognize that the rhombus for the 6-pointed star is wider than the rhombus for the 8-pointed star. However, their side lengths are the same. \n\n \n\n",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -485,7 +486,7 @@
       "key": "86f30342-9d84-4738-a14f-cc6372b546b4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Adding Comments” slide\n\n**Say**: _In this lesson there will be a lot of rhombuses!_ \n\n_In order to stay organized you will use comments._ \n\n_**Comments** - Notes to yourself that explain a section of code. They do not alter the program but help keep your code in order._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-5 - Skill Building” slide\n \n**Do This**: Transition students to their computers, and have them begin following the instructions for each level in the skill building section.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Adding Comments” slide\n\n**Say**: _In this lesson there will be a lot of rhombuses!_ \n\n_In order to stay organized you will use comments._ \n\n_**Comments** - Notes to yourself that explain a section of code. They do not alter the program but help keep your code in order._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-6 - Skill Building” slide\n \n**Do This**: Transition students to their computers, and have them begin following the instructions for each level in the skill building section.",
         "name": "Star Quilts - Skill Building"
       },
       "seeding_key": {
@@ -497,7 +498,7 @@
       "key": "e0d49072-23fc-43cf-908c-e54eee0f0ce9",
       "position": 2,
       "properties": {
-        "description": "**Overview**:  In the first few levels of this lesson, students will be programming just one point of their Star Quilt. Students will add rhombuses row by row. There are a lot of rhombuses to keep track of so students will use `comment` blocks to organize their code. Students will be using a functions like `diagonalLeft`, `diagonalRight`, `bumpLeft`, and `bumpRight` to make the Artist jump to the correct position to start drawing a new rhombus. \n\n**Debugging Tips**:\n\n**Level 1**: This level is just to get the project setup. Remind students that their code will carry over from level to level so they can keep building their project from where they left off. \n\n**Level 2**: Remind students of the work they did in Lesson 2. Remind students of the importance of using the `comment` blocks to stay organized. Click on the lightbulb next to the Artist icon to see what the code should look like. \n\n**Level 3**: Here is where students will try out the new function blocks - `diagonalRight` and `bumpLeft`. Help students understand what it is that these functions do. `diagonalRight` makes the artist jump diagonally to the right of the rhombus he just drew. `bumpLeft` makes the Artist jump left to setup for the next rhombus. Because this is row 2 and the point is widening, the Artist will need to stamp two rhombuses.\n\n**Level 4**: In row 3 the point is still widening, this time the Artist should stamp three rhombuses. There are two new functions. `diagonalLeft` makes the artist jump diagonally to the left of the rhombus he just drew. `bumpRight` makes the Artist jump right to setup for the next rhombus. \n\n**Level 5**: In row 4 the point is starting to taper in, so the Artist should only stamp two rhombuses.\n\n",
+        "description": "**Overview**:  In the first few levels of this lesson, students will be programming just one point of their Star Quilt. Students will add rhombuses row by row. There are a lot of rhombuses to keep track of so students will use `comment` blocks to organize their code. Students will be using a functions like `diagonalLeft`, `diagonalRight`, `bumpLeft`, and `bumpRight` to make the Artist jump to the correct position to start drawing a new rhombus. \n\n**Debugging Tips**:\n\n**Level 1**: This level is just to get the project setup. Remind students that their code will carry over from level to level so they can keep building their project from where they left off. \n\n**Level 2**: Remind students of the work they did in Lesson 2. Remind students of the importance of using the `comment` blocks to stay organized. Click on the lightbulb next to the Artist icon to see what the code should look like. \n\n**Level 3**: Here is where students will try out the new function blocks - `diagonalRight` and `bumpLeft`. Help students understand what it is that these functions do. `diagonalRight` makes the artist jump diagonally to the right of the rhombus he just drew. `bumpLeft` makes the Artist jump left to setup for the next rhombus. Because this is row 2 and the point is widening, the Artist will need to stamp two rhombuses.\n\n**Level 4**: In row 3 the point is still widening, this time the Artist should stamp three rhombuses. There are two new functions. `diagonalLeft` makes the artist jump diagonally to the left of the rhombus he just drew. `bumpRight` makes the Artist jump right to setup for the next rhombus. \n\n**Level 5**: In row 4 the point is starting to taper in, so the Artist should only stamp two rhombuses.\n\n**Level 6**: There is only one rhombus in row 5. Students are done creating their point! Early finishers can experiment with colors and can start anticipating how to create the full Star Quilt.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -506,20 +507,8 @@
       }
     },
     {
-      "key": "9b1745f8-bf46-4154-87f4-627e26dde8a2",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - Skill Building” slide\n\n**Level 6**: There is only one rhombus in row 5. Students are done creating their point! Early finishers can experiment with colors. Early finishers can start anticipating how to create the full Star Quilt.\n",
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "9b1745f8-bf46-4154-87f4-627e26dde8a2",
-        "lesson_activity.key": "b3e70b5a-4465-4c1e-b881-21cd877e7d06"
-      }
-    },
-    {
       "key": "83fa7e91-cd8e-4777-bc1d-8507666d2c85",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7 - Repeat Blocks\" video\n\n**Overview**: Students have finished making one point of their star. Now they need the Artist to repeat this point several times to create the other points in the star. Students will be re-watching a video about looping. This will be familiar from Lesson 2. Stop and discuss looping as a class.\n",
         "progression_name": "Video - Repeat Blocks"
@@ -531,7 +520,7 @@
     },
     {
       "key": "229bcb31-29c4-48f6-b18b-44fd2ef14eac",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Skill Building\" slide\n\n**Level 8**: Before the Artist can repeat the point it needs to turn. Set the loop to repeat 8 times. ",
         "progression_name": "Skill Building"
@@ -543,9 +532,9 @@
     },
     {
       "key": "b5ad76d1-2fe5-4e4e-b889-32cb0a9b2348",
-      "position": 6,
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play\" slide\n\n**Level 9**: Early finishers can move on to level 9 and free play. Make sure the Artist has jumped back to the middle center and turned 45 degrees so the loop works. \n\n**Overview**: This is a free play level for students to make an awesome Star Quilt. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles, borders, loops to make a unique star shape.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play\" slide\n\n**Level 9**: Early finishers can move on to Level 9 and free play. There is a great opportunity for students to connect their finished projects to the purpose of star quilts in Native American culture. Have students consider choosing specific colors that would represent the recipient of their gift if they were making a real quilt.\n\n**Overview**: This is a free play level for students to make an awesome Star Quilt. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles, borders, loops to make a unique star shape. Star Quilts are very special gifts, when designing your Star Quilt think of someone special and select meaningful colors.",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -896,12 +885,9 @@
     {
       "chapter": 14,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-starquilts-row5_2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -912,7 +898,7 @@
         "lesson.key": "Code Your Star Quilt",
         "lesson_group.key": "",
         "script.name": "csc-starquilts-2022",
-        "activity_section.key": "9b1745f8-bf46-4154-87f4-627e26dde8a2"
+        "activity_section.key": "e0d49072-23fc-43cf-908c-e54eee0f0ce9"
       },
       "level_keys": [
         "csc-starquilts-row5_2022"
@@ -1160,7 +1146,7 @@
         "lesson.key": "Code Your Star Quilt",
         "lesson_group.key": "",
         "script.name": "csc-starquilts-2022",
-        "activity_section.key": "9b1745f8-bf46-4154-87f4-627e26dde8a2"
+        "activity_section.key": "e0d49072-23fc-43cf-908c-e54eee0f0ce9"
       }
     },
     {
@@ -1215,11 +1201,11 @@
     },
     {
       "name": "Star Quilts",
-      "url": "https://docs.google.com/presentation/d/1PkCYLYVyqHk6iM4dyysrXWNNTWV5h-s3POK84hORQA0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1-qEC3vVRD6hUyx1RcYjoBTl16uxJXYOIyCdk-LnVZ3k/edit#slide=id.gb5df23a5d7_0_77/template/preview",
       "key": "star_quilts",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1PkCYLYVyqHk6iM4dyysrXWNNTWV5h-s3POK84hORQA0/export/pdf",
+        "download_url": "https://docs.google.com/presentation/d/1-qEC3vVRD6hUyx1RcYjoBTl16uxJXYOIyCdk-LnVZ3k/edit#slide=id.gb5df23a5d7_0_77/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -1251,6 +1237,18 @@
       }
     },
     {
+      "name": "Virtual Pattern Blocks",
+      "url": "https://www.didax.com/apps/pattern-blocks/",
+      "key": "virtual_pattern_blocks",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_pattern_blocks"
+      }
+    },
+    {
       "name": "Virtual Pattern Blocks (Optional)",
       "url": "https://mathigon.org/polypad#polygons",
       "key": "virtual_pattern_blocks_optional_",
@@ -1268,6 +1266,12 @@
       "seeding_key": {
         "lesson.key": "Code Your Star Quilt",
         "resource.key": "star_quilts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Code Your Star Quilt",
+        "resource.key": "virtual_pattern_blocks"
       }
     },
     {
@@ -1400,30 +1404,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Code Your Star Quilt",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Your Star Quilt",
-        "vocabulary.key": "point"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Your Star Quilt",
-        "vocabulary.key": "rhombus"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Code Your Star Quilt",
-        "vocabulary.key": "row"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Getting Started with The Artist",
         "vocabulary.key": "artist"
       }
@@ -1496,7 +1476,7 @@
     {
       "key": "361cb8c1-b8c7-4f28-9996-6c1c2e25df64",
       "properties": {
-        "description": "Use preset functions to help position The Artist quicker"
+        "description": "Use preset functions to help position The Artist more quickly"
       },
       "seeding_key": {
         "lesson.key": "Code Your Star Quilt",
