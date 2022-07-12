@@ -1,0 +1,40 @@
+  <%
+    # This template component creates an S3 bucket configured to perform 301 redirection for the given domain.\
+    #
+    # Parameters:
+    # - domain: The FQDN to redirect, must have a hosted zone in this AWS Account.
+    # - redirect_to: The URL to redirect the user to.
+
+    resource_prefix = domain.split(/\./).map(&:capitalize).join("Dot")
+    hosted_zone_id = CDO.hostedzone_id(domain)
+  -%>
+
+  # TODO: Route53 DNS record pointing to S3 bucket.
+
+  <%=resource_prefix%>S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: <%=domain%>
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        RedirectAllRequestsTo:
+          HostName: <%=redirect_to%>
+          Protocol: https
+
+  <%=resource_prefix%>BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref S3Bucket
+      PolicyDocument:
+        Id: PublicAccessPolicy
+        Version: 2012-10-17
+        Statement:
+          - Sid: PublicReadForGetBucketObjects
+            Effect: Allow
+            Principal: '*'
+            Action: 's3:GetObject'
+            Resource: !Join 
+              - ''
+              - - 'arn:aws:s3:::'
+                - !Ref S3Bucket
+                - /*
