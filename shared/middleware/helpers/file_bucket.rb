@@ -19,7 +19,7 @@ class FileBucket < BucketHelper
     if manifest_result[:status] == 'NOT_FOUND'
       return []
     end
-    JSON.parse manifest_result[:body]
+    JSON.parse(manifest_result[:body].read)
   end
 
   def copy_files(src_channel, dest_channel, options={})
