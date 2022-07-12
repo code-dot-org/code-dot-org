@@ -8334,6 +8334,9 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: csc-timecapsule-2022
         vpl-csd1-ayw-pilot-2022:
           lesson_groups: {}
         alltheblocklythings:
@@ -8366,6 +8369,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         csa-labs-2022:
           lesson_groups:
             lessonGroup-2:
@@ -8378,3 +8382,6 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        csa-draft-pl:
+          lessons: {}
+          lesson_groups: {}
