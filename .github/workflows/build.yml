@@ -11,9 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: codedotorg/code-dot-org:1.3
-      volumes:
-        - rbenv:/home/circleci/.rbenv
-        - mysql:/var/lib/mysql
+        #volumes:
+        #- rbenv:/home/circleci/.rbenv
+        #- mysql:/var/lib/mysql
+      options: --user 1001
     env:
         CI: true
         RAILS_ENV: test
