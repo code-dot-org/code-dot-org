@@ -15,7 +15,7 @@
     },
     "new_name": "csp4-2017",
     "family_name": "csp4",
-    "serialized_at": "2022-03-22 21:16:32 UTC",
+    "serialized_at": "2022-07-12 20:27:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2971,96 +2971,13 @@
     }
   ],
   "resources": [
-    {
-      "name": "Lesson Plans",
-      "url": "https://curriculum.code.org/csp/unit4/",
-      "key": "lesson_plans_5",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "lesson_plans_5"
-      }
-    },
-    {
-      "name": "Professional Learning",
-      "url": "https://studio.code.org/s/csp4-support",
-      "key": "professional_learning_3",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "professional_learning_3"
-      }
-    },
-    {
-      "name": "Standard Mappings",
-      "url": "https://curriculum.code.org/csp/unit4/standards/",
-      "key": "standard_mappings_5",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "standard_mappings_5"
-      }
-    },
-    {
-      "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csp4",
-      "key": "teacher_forum_4",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "teacher_forum_4"
-      }
-    },
-    {
-      "name": "Vocabulary",
-      "url": "https://curriculum.code.org/csp/unit4/vocab/",
-      "key": "vocabulary_3",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "vocabulary_3"
-      }
-    }
+
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "lesson_plans_5",
-        "script.name": "csp4-2017"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "professional_learning_3",
-        "script.name": "csp4-2017"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "standard_mappings_5",
-        "script.name": "csp4-2017"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum_4",
-        "script.name": "csp4-2017"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "vocabulary_3",
-        "script.name": "csp4-2017"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 

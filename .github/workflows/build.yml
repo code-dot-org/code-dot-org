@@ -25,6 +25,11 @@ jobs:
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
         ports:
           - 3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
     steps:
       - uses: actions/checkout@v2
 
@@ -39,8 +44,8 @@ jobs:
       - name: Bundle install
         run: bundle install --with test
 
-      - name: Start MySQL
-        run: sudo /etc/init.d/mysql start
+      - name: Check mysql
+        run: mysql -u root --database=dashboard_test -e 'SHOW TABLES;'
 
       - name: rake install
         run: bundle exec rake install
