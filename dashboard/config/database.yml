@@ -91,7 +91,7 @@ test:
     password: <%= writer.password || '' %>
     pool: <%= ENV['CI'] ? 20 : 5 %>
     port: <%= writer.port || 3306 %>
-    username: <%= writer.user || 'root' %>
+    username: <%= ENV['CI'] ? 'user' : (writer.user || 'root') %>
 
 production:
   <<: *environment_defaults
