@@ -15,7 +15,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
       Pd::Workshop::SUBJECT_CSF_201 => 'csf_deepdive'
     },
     Pd::Workshop::COURSE_CSA => {
-      Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP => 'csa_summer_workshop'
+      Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP => 'csa_summer_workshop',
+      Pd::Workshop::SUBJECT_CSA_WORKSHOP_1 => 'csa_ayw1'
     },
     Pd::Workshop::COURSE_CSD => {
       Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP => 'csd_summer_workshop',
