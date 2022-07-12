@@ -37,15 +37,15 @@
   %script{src: "#{static_asset_base_path}js/ace/ace.js"}
   %script{src: "#{static_asset_base_path}js/ace/mode-javascript.js"}
   %script{src: "#{static_asset_base_path}js/ace/ext-language_tools.js"}
-  %script{src: webpack_asset_path('js/droplet/droplet-full.js')}
-  %script{src: webpack_asset_path('js/tooltipster/jquery.tooltipster.js')}
+  %script{src: webpack_asset_path('js/droplet/droplet-full.min.js')}
+  %script{src: webpack_asset_path('js/tooltipster/jquery.tooltipster.min.js')}
 -# Asset uploader script dependencies (not in share mode)
 - if (use_applab || use_gamelab || use_weblab || use_javalab) && !hide_source
   %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.min.js')}
   %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.min.js')}
 
 - if use_phaser
-  %script{src: webpack_asset_path('js/phaser/phaser.js')}
+  %script{src: webpack_asset_path('js/phaser/phaser.min.js')}
 
 -# Blockly script dependencies
 - if use_blockly
