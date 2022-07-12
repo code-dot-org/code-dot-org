@@ -681,11 +681,11 @@ Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expected_value|
 end
 
 Then /^element "([^"]*)" has escaped value "([^"]*)"$/ do |selector, expected_value|
-  element_value_is(selector, YAML.load(%Q(---\n"#{expected_value}"\n)))
+  element_value_is(selector, YAML.safe_load(%Q(---\n"#{expected_value}"\n)))
 end
 
 Then /^element "([^"]*)" has escaped value '([^']*)'$/ do |selector, expected_value|
-  element_value_is(selector, YAML.load(%Q(---\n"#{expected_value.gsub('"', '\"')}"\n)))
+  element_value_is(selector, YAML.safe_load(%Q(---\n"#{expected_value.gsub('"', '\"')}"\n)))
 end
 
 Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
