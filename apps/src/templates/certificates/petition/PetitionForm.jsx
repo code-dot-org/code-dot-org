@@ -15,7 +15,7 @@ import PropTypes from 'prop-types';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 /* global ga */
 
-const PetitionForm = ({tutorial}) => {
+const PetitionForm = ({tutorial, style}) => {
   // data starts with all fields having an empty value to ensure consistent data shape
   const [data, setData] = useState(mapValues(keyValidation, () => ''));
   const [invalidFields, setInvalidFields] = useState([]);
@@ -84,10 +84,10 @@ const PetitionForm = ({tutorial}) => {
     <>
       <form
         id="petition-form"
-        className="petition-form"
+        className={style['petition-form']}
         onSubmit={handleSubmit}
       >
-        <div className={'petition-space'}>{errorMessage}</div>
+        <div className={style['petition-space']}>{errorMessage}</div>
         <ControlledFieldGroup
           id="name"
           name="name_s"
@@ -95,6 +95,7 @@ const PetitionForm = ({tutorial}) => {
           isErrored={invalidFields.includes('name_s')}
           onChange={handleChange}
           value={data.name_s || ''}
+          style={style}
         />
         <ControlledFieldGroup
           id="email"
@@ -104,6 +105,7 @@ const PetitionForm = ({tutorial}) => {
           helpText={i18n.usedForInfrequentUpdates()}
           onChange={handleChange}
           value={data.email_s || ''}
+          style={style}
         />
         <ControlledFieldGroup
           id="zip-or-country"
@@ -113,6 +115,7 @@ const PetitionForm = ({tutorial}) => {
           helpText={i18n.enterCountry()}
           onChange={handleChange}
           value={data.zip_code_or_country_s || ''}
+          style={style}
         />
         <ControlledFieldGroup
           id="age"
@@ -127,6 +130,7 @@ const PetitionForm = ({tutorial}) => {
           componentClass="select"
           onChange={handleChange}
           value={data.age_i || ''}
+          style={style}
         >
           {['-', ...range(1, 101)].map((age, index) => (
             <option key={index} value={age}>
@@ -142,6 +146,7 @@ const PetitionForm = ({tutorial}) => {
           componentClass="select"
           onChange={handleChange}
           value={data.role_s || ''}
+          style={style}
         >
           {professionOptions.map(({text}) => (
             <option key={text} value={text}>
@@ -150,7 +155,7 @@ const PetitionForm = ({tutorial}) => {
           ))}
         </ControlledFieldGroup>
         <Button
-          className="petition-button"
+          className={style['petition-button']}
           bsStyle="primary"
           key="submit"
           id="submit"

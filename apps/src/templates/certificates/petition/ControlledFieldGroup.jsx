@@ -13,17 +13,18 @@ const FieldGroup = ({
   id,
   isErrored,
   label,
+  style,
   ...props
 }) => {
   return (
     <FormGroup controlId={id}>
-      {label && <span className="dropdown-label">{label}</span>}
+      {label && <span className={style['dropdown-label']}>{label}</span>}
       <FormControl
         componentClass={componentClass}
         className={classNames(
-          'field',
-          isErrored ? 'has-error' : '',
-          stylingForComponent(componentClass)
+          style['field'],
+          isErrored ? style['has-error'] : '',
+          style[stylingForComponent(componentClass)]
         )}
         {...props}
       >
@@ -31,7 +32,10 @@ const FieldGroup = ({
       </FormControl>
       {helpText && (
         <HelpBlock
-          className={classNames('help', stylingForComponent(componentClass))}
+          className={classNames(
+            style['help'],
+            stylingForComponent(componentClass)
+          )}
         >
           {helpText}
         </HelpBlock>
