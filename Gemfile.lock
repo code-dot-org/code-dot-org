@@ -1040,7 +1040,7 @@ DEPENDENCIES
   rest-client (~> 2.0.1)
   retryable
   rinku
-  rmagick (~> 3.2)
+  rmagick (~> 4.2.5)
   rspec
   rubocop (= 1.28)
   rubocop-performance
