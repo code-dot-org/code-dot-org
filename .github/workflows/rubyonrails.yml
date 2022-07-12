@@ -42,7 +42,7 @@ jobs:
   
       # Add or replace database setup steps here
       - name: Install Dashboard
-        run: bundle exec rake install:dashboard
+        run: bundle exec rake install:dashboard --trace
       # Add or replace test runners here
       - name: Run tests
         run: |
