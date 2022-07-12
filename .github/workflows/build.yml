@@ -43,7 +43,7 @@ jobs:
       - name: Start MySQL
         run: sudo /etc/init.d/mysql start
 
-      - name: rake install
+      - name: bundle exec rake install
         run: rake install
         env:
           DATABASE_PORT: 3306
