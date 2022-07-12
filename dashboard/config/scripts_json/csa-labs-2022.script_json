@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-07-09 19:09:58 UTC",
+    "serialized_at": "2022-07-12 04:05:36 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -626,8 +626,8 @@
       "key": "886d09b0-7613-40a2-a05b-43657bbcd19f",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Direct students to the Magpie Lab Lesson 3, Level 1. Students should open the program StringExplorer. It currently has code to illustrate the use of the `indexOf` and `toLowerCase` methods.\n\n**Do This:** Direct students to open the API for `String`. Students should scroll down to the Method Summary section and find the `indexOf(String str)` method. Have student follow the link and read the description of the `indexOf` method. \n\n**Discuss:** What value is returned by `indexOf` if the substring does not occur in the string?\n\n",
-        "progression_name": "Investigate indexOf method"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Magpie Lab Lesson 3, Level 1. Students should see the `StringExplorer` class. It currently has code to illustrate the use of the `indexOf` and `toLowerCase` methods.\n\nStudents will follow the instruction in Level 1 to investigate the `indexOf()` method. ",
+        "progression_name": "Investigate indexOf() Method"
       },
       "seeding_key": {
         "activity_section.key": "886d09b0-7613-40a2-a05b-43657bbcd19f",
@@ -635,10 +635,21 @@
       }
     },
     {
-      "key": "0a6707fe-56b8-4bae-a876-da9e5bc2da1c",
+      "key": "b2f66d89-1f74-4eb4-8f7e-68677dc1fcc8",
       "position": 3,
       "properties": {
-        "description": "**Do This:** Direct students to follow the directions on Level 2 to add code to StringExplorer in order to see that indexOf behaves as specified.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** As students are investigating the code in level 1, bring them together for a class discussion to ensure understanding of the `indexOf()` method. \n\n* *What value is returned by `indexOf()` if the substring does not occur in the string?*"
+      },
+      "seeding_key": {
+        "activity_section.key": "b2f66d89-1f74-4eb4-8f7e-68677dc1fcc8",
+        "lesson_activity.key": "5d865943-8c1d-4ceb-bcdd-7c8668caf218"
+      }
+    },
+    {
+      "key": "0a6707fe-56b8-4bae-a876-da9e5bc2da1c",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to follow the directions on Level 2 to add code to `StringExplorer` in order to see that `indexOf()` behaves as specified.",
         "progression_name": "Test indexOf method"
       },
       "seeding_key": {
@@ -648,9 +659,10 @@
     },
     {
       "key": "09da8649-180b-4770-b5b2-d42555e24841",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "This lab activity will use a variety of different `String` methods. Consult the API whenever you see one with which you are unfamiliar.",
+        "progression_name": "Test indexOf() Method",
         "remarks": true
       },
       "seeding_key": {
@@ -660,9 +672,9 @@
     },
     {
       "key": "7ca92032-3e5a-4c51-8a8f-b8bb238a829c",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "description": "This version of the Magpie class has a method named `findKeyword` to detect keywords. This method will only find exact matches of the keyword, instead of cases where the keyword is embedded in a longer word. ",
+        "description": "This version of the Magpie class has a method named `findKeyword()` to detect keywords. This method will only find exact matches of the keyword, instead of cases where the keyword is embedded in a longer word. ",
         "name": "Exploration: Understand the new method",
         "remarks": true
       },
@@ -673,9 +685,9 @@
     },
     {
       "key": "731f6f02-8b4d-4d18-b36f-d609f3f7ae9f",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students create a trace table based on the `findKeyword` method in Level 3. The method calls students will use for their trace table and an example are in the slides, however you will need to direct students to Level 3 to see the code for this method. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** give each student the [r findkeyword_trace_table_activity_guide/csa-labs/unversioned]. Have students work with a partner to complete the worksheet before moving on to Level 3. \n",
         "progression_name": "findKeyword Investigation"
       },
       "seeding_key": {
@@ -684,25 +696,14 @@
       }
     },
     {
-      "key": "5541ce79-7328-4541-9fa6-095412391afa",
-      "position": 7,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "5541ce79-7328-4541-9fa6-095412391afa",
-        "lesson_activity.key": "5d865943-8c1d-4ceb-bcdd-7c8668caf218"
-      }
-    },
-    {
-      "key": "d1f37ba8-49aa-4902-badb-10082abd68c8",
+      "key": "ee68fe21-01a3-4a3a-9bf4-53d2ebbf8a51",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving to the Backpack"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to follow the instructions in Level 3 where they will repeat the modifications made in Lesson 2, this time using this new method to detect keywords. ",
+        "name": "Implementation: Use the new method"
       },
       "seeding_key": {
-        "activity_section.key": "d1f37ba8-49aa-4902-badb-10082abd68c8",
+        "activity_section.key": "ee68fe21-01a3-4a3a-9bf4-53d2ebbf8a51",
         "lesson_activity.key": "5d865943-8c1d-4ceb-bcdd-7c8668caf218"
       }
     },
@@ -988,6 +989,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L2-L1_2022"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1010,6 +1014,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L2-L2_2022"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1032,6 +1039,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L2-L3_2022"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1054,6 +1064,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L2-L4_2022"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1076,6 +1089,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L2-L5_2022"
+        ],
         "progression": "More responses!"
       },
       "bonus": false,
@@ -1098,6 +1114,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L2-L6_2022"
+        ],
         "progression": "More responses!"
       },
       "bonus": false,
@@ -1120,6 +1139,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L2-L7_2022"
+        ],
         "progression": "More responses!"
       },
       "bonus": false,
@@ -1142,6 +1164,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L2-L8_2022"
+        ],
         "progression": "More responses!"
       },
       "bonus": false,
@@ -1164,6 +1189,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L2-L9_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1186,15 +1214,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Explore indexOf"
-        ],
-        "progression": "Investigate indexOf method"
+        "progression": "Investigate indexOf() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Explore indexOf"
+          "CSA CB_Lab Magpie-L3-L1_2022"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
@@ -1202,7 +1227,7 @@
         "activity_section.key": "886d09b0-7613-40a2-a05b-43657bbcd19f"
       },
       "level_keys": [
-        "Explore indexOf"
+        "CSA CB_Lab Magpie-L3-L1_2022"
       ]
     },
     {
@@ -1211,23 +1236,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Test indexOf"
-        ],
-        "progression": "Test indexOf method"
+        "progression": "Test indexOf() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Test indexOf"
+          "CSA CB_Lab Magpie-L3-L2_2022"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-labs-2022",
-        "activity_section.key": "0a6707fe-56b8-4bae-a876-da9e5bc2da1c"
+        "activity_section.key": "09da8649-180b-4770-b5b2-d42555e24841"
       },
       "level_keys": [
-        "Test indexOf"
+        "CSA CB_Lab Magpie-L3-L2_2022"
       ]
     },
     {
@@ -1236,23 +1258,19 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "findKeyword Method Investigation"
-        ],
-        "progression": "findKeyword Investigation"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "findKeyword Method Investigation"
+          "CSA CB_Lab Magpie-L3-L3_2022"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-labs-2022",
-        "activity_section.key": "731f6f02-8b4d-4d18-b36f-d609f3f7ae9f"
+        "activity_section.key": "ee68fe21-01a3-4a3a-9bf4-53d2ebbf8a51"
       },
       "level_keys": [
-        "findKeyword Method Investigation"
+        "CSA CB_Lab Magpie-L3-L3_2022"
       ]
     },
     {
@@ -1261,6 +1279,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L4-L1_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1388,9 +1409,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Explore indexOf",
+        "level.key": "CSA CB_Lab Magpie-L3-L1_2022",
         "script_level.level_keys": [
-          "Explore indexOf"
+          "CSA CB_Lab Magpie-L3-L1_2022"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
@@ -1400,26 +1421,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "Test indexOf",
+        "level.key": "CSA CB_Lab Magpie-L3-L2_2022",
         "script_level.level_keys": [
-          "Test indexOf"
+          "CSA CB_Lab Magpie-L3-L2_2022"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-labs-2022",
-        "activity_section.key": "0a6707fe-56b8-4bae-a876-da9e5bc2da1c"
+        "activity_section.key": "09da8649-180b-4770-b5b2-d42555e24841"
       }
     },
     {
       "seeding_key": {
-        "level.key": "findKeyword Method Investigation",
+        "level.key": "CSA CB_Lab Magpie-L3-L3_2022",
         "script_level.level_keys": [
-          "findKeyword Method Investigation"
+          "CSA CB_Lab Magpie-L3-L3_2022"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-labs-2022",
-        "activity_section.key": "731f6f02-8b4d-4d18-b36f-d609f3f7ae9f"
+        "activity_section.key": "ee68fe21-01a3-4a3a-9bf4-53d2ebbf8a51"
       }
     },
     {
@@ -1458,6 +1479,18 @@
       },
       "seeding_key": {
         "resource.key": "elbot_the_chatbot"
+      }
+    },
+    {
+      "name": "findKeyword Trace Table Activity Guide",
+      "url": "https://docs.google.com/document/d/1Ltb7g9l-ACf2PyPDmwEvOZCVPSfx2-LdFym4kqscJ9E/edit?usp=sharing",
+      "key": "findkeyword_trace_table_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "findkeyword_trace_table_activity_guide"
       }
     },
     {
@@ -1532,6 +1565,12 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "magpie_lab_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "findkeyword_trace_table_activity_guide"
       }
     },
     {

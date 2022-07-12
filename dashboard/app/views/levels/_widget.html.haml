@@ -1,6 +1,6 @@
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/_widget.js')}
-  = stylesheet_link_tag asset_path('blockly/css/common.css'), media: 'all'
+  = stylesheet_link_tag asset_path('blockly/css/common.css', skip_pipeline: true), media: 'all'
   = stylesheet_link_tag 'css/leveltype_widget', media: 'all'
 
 = render partial: 'levels/dialog', locals: {app: 'external'}
