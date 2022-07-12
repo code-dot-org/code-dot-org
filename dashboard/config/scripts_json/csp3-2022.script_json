@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-22 15:35:31 UTC",
+    "serialized_at": "2022-06-09 23:48:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1874,7 +1874,7 @@
       "key": "f6745fcf-3de5-4ac6-8c83-5068708dae40",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Your friend calls and says \"I can't get music to come out of my speakers, can you help?\". Write a quick list of everything you'd ask them or have them check to try to fix the problem.*\n\n**Optional Warmup Discussion:** This discussionis optional and included for instances where you need a warm up discussion on the board when students walk in. If your classroom is able to move directly to main activity you should feel free to skip this discussion in the interest of time.\n\n**Discussion Goal:** This prompt should help get students in the mindset of debugging. If students ask for more details tell them that this is all the information they have and that they should feel free to \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Your friend calls and says \"I can't get music to come out of my speakers, can you help?\". Write a quick list of everything you'd ask them or have them check to try to fix the problem.*\n\n**Discussion Goal:** This prompt should help get students in the mindset of debugging. If students ask for more details tell them that this is all the information they have and that they should feel free to \n",
         "name": "Preview the Lesson\r"
       },
       "seeding_key": {
@@ -1898,7 +1898,7 @@
       "key": "e7aae2bf-0c1a-4776-b50e-4fd058c1de78",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Debugging video and then show the debugging process.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the [Debugging video](https://youtu.be/auv10y-dN4s\t\n) and then show the debugging process.",
         "name": "Practice Time\r"
       },
       "seeding_key": {
@@ -1985,7 +1985,13 @@
       "position": 3,
       "properties": {
         "description": "Debugging is an important and entirely normal part of programming. Your code won't always work the first time, and that's OK! Debugging is a skill that you can practice and get better at. Using documentation and leaving comments for yourself are important skills, but so is working with classmates or learning to more effectively search for bugs. We'll keep using these skills.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Class Chats Video** If time allows, consider showing [this clip](https://drive.google.com/file/d/1Z9L6przjSwWZcP4lnF0w1jJBf-w-FdqB/view?usp=sharing) of Amazon Web Service's Olawale Oladehin discussing the value of creating bugs on purpose!"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "65fd5b45-b0ec-498e-986f-44afeb63feab",
@@ -3999,6 +4005,19 @@
       }
     },
     {
+      "name": "Class Chats: Olawale Oladehin",
+      "url": "https://drive.google.com/file/d/1Z9L6przjSwWZcP4lnF0w1jJBf-w-FdqB/view?usp=sharing",
+      "key": "class_chats_olawale_oladehin",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://drive.google.com/file/d/1Z9L6przjSwWZcP4lnF0w1jJBf-w-FdqB/view?usp=sharing",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "class_chats_olawale_oladehin"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_vocabulary",
@@ -4156,6 +4175,12 @@
       "seeding_key": {
         "lesson.key": "Assessment Day",
         "resource.key": "csp_unit_3_-_intro_to_app_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "resource.key": "class_chats_olawale_oladehin"
       }
     },
     {

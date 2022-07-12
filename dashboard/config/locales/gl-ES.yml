@@ -791,10 +791,13 @@ gl:
         math: Matemáticas
         science: Ciencia
         la: Lingua
+        other: Outros
       resources:
         kodable: Kodable
+        other: Outros
       robotics:
         kodable: Kodable
+        other: Outros
       email_opt_in:
         opt_in_yes: Si
         opt_in_no: Non

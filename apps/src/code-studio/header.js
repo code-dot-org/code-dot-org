@@ -84,7 +84,6 @@ header.build = function(
   lessonData = lessonData || {};
   progressData = progressData || {};
 
-  const linesOfCodeText = progressData.linesOfCodeText;
   let saveAnswersBeforeNavigation = currentPageNumber !== PUZZLE_PAGE_NONE;
 
   // Set up the store immediately. Note that some progress values are populated
@@ -114,7 +113,6 @@ header.build = function(
           lessonData={lessonData}
           scriptData={scriptData}
           currentLevelId={currentLevelId}
-          linesOfCodeText={linesOfCodeText}
         />
       </Provider>,
       document.querySelector('.header_level')
@@ -134,6 +132,17 @@ header.buildProjectInfoOnly = function() {
   ReactDOM.render(
     <Provider store={getStore()}>
       <HeaderMiddle projectInfoOnly={true} />
+    </Provider>,
+    document.querySelector('.header_level')
+  );
+};
+
+// When viewing the level page in code review mode, we want to show only the
+// lesson information (which is displayed by the ScriptName component).
+header.buildScriptNameOnly = function(scriptNameData) {
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <HeaderMiddle scriptNameData={scriptNameData} scriptNameOnly={true} />
     </Provider>,
     document.querySelector('.header_level')
   );

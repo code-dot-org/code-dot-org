@@ -702,6 +702,11 @@ en:
         PL_CSP_TeacherTips_APExam: 'Teacher Tips: Preparing for the AP Exam'
         PL_CSP_TeacherTips_EIPM: 'Teacher Tips: The EIPM Process'
         PL_CSD_CircuitPlayground_Overview: Circuit Playground Overview
+        CSA-PL-debugging-22: Debugging in Java Lab
+        CSD_Unit6_InteractiveArtExemplar: Interactive Art Exemplar
+        CS_Changing_Everything: Computer Science is Changing Everything
+        csa-alias-video: Equals and Aliases
+        csa-equals-video: The equals() method
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

@@ -855,7 +855,7 @@ mr-IN:
         - correct: true
           feedback: बरोबर!
         - {}
-        - {}
+        - feedback: चूक
         questions:
         - {}
       behaviors 1 predict_2020:
@@ -864,7 +864,7 @@ mr-IN:
         - correct: true
           feedback: बरोबर!
         - {}
-        - {}
+        - feedback: चूक
         questions:
         - {}
       behaviors 4 predict:
@@ -873,7 +873,7 @@ mr-IN:
         - correct: true
           feedback: बरोबर!
         - {}
-        - {}
+        - feedback: चूक
         questions:
         - {}
       behaviors 4 predict_2020:
@@ -882,7 +882,7 @@ mr-IN:
         - correct: true
           feedback: बरोबर!
         - {}
-        - {}
+        - feedback: चूक
         questions:
         - {}
       courseC_multi_artist_prog6_predict1:

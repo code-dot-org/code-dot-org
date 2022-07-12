@@ -8039,6 +8039,8 @@ ru:
               name: Переменные
             For Loops:
               name: Циклы с параметром
+            End of Course projects:
+              name: Конец проектов курса
         vpl-csd1-ci-pilot-2022:
           title: 'Модуль 1: Подготовка к преподаванию по теме "Решения задач и вычисления"'
           description: "Этот модуль профессионального обучения поможет вам подготовиться
@@ -8367,3 +8369,11 @@ ru:
               name: Краткий обзор
             lesson-1:
               name: Краткий обзор
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Привет, мир CSC!
+        self-paced-pl-csd5-2022:
+          lessons:
+            Engage with machine learning apps:
+              name: Процесс разработки схемы

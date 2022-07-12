@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-05 18:46:23 UTC",
+    "serialized_at": "2022-06-03 14:32:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

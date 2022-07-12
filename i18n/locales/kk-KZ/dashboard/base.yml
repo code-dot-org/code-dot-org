@@ -603,10 +603,13 @@ kk:
         math: 'Математика'
         science: 'Ғылым'
         la: 'Тіл Өнерлері'
+        other: "Басқасы"
       resources:
         kodable: 'Kodable'
+        other: "Басқасы"
       robotics:
         kodable: 'Kodable'
+        other: "Басқасы"
       email_opt_in:
         opt_in_yes: 'Иә'
         opt_in_no: 'Жоқ'

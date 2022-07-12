@@ -5,7 +5,7 @@ import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
-import {commentShape} from '@cdo/apps/templates/instructions/codeReview/commentShape';
+import {reviewCommentShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
@@ -19,9 +19,9 @@ function Comment({
   comment,
   onResolveStateToggle,
   onDelete,
-  viewAsCodeReviewer,
   viewAsTeacher,
-  currentUserId
+  currentUserId,
+  viewingAsOwner
 }) {
   const isMounted = useRef(false);
   const [isCommentResolved, setIsCommentResolved] = useState(
@@ -79,7 +79,7 @@ function Comment({
   };
 
   const handleToggleResolved = () => {
-    const newIsResolvedStatus = !comment.isResolved;
+    const newIsResolvedStatus = !isCommentResolved;
     onResolveStateToggle(
       comment.id,
       newIsResolvedStatus,
@@ -102,7 +102,7 @@ function Comment({
         iconClass: hideResolved ? 'eye' : 'eye-slash'
       });
     }
-    if (!viewAsCodeReviewer) {
+    if (viewingAsOwner) {
       // Code owners can resolve/unresolve comment
       // TODO: Allow teachers to resolve/unresolve comments too
       menuItems.push({
@@ -212,10 +212,7 @@ function Comment({
             ...(isCommentResolved && styles.lessVisibleBackgroundColor)
           }}
         >
-          <SafeMarkdown
-            markdown={commentText}
-            className="code-custom-background"
-          />
+          <SafeMarkdown markdown={commentText} className="comment-content" />
         </div>
       )}
       {displayError && (
@@ -226,10 +223,10 @@ function Comment({
 }
 
 Comment.propTypes = {
-  comment: commentShape.isRequired,
+  comment: reviewCommentShape.isRequired,
   onResolveStateToggle: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
-  viewAsCodeReviewer: PropTypes.bool.isRequired,
+  viewingAsOwner: PropTypes.bool.isRequired,
   // Populated by Redux
   viewAsTeacher: PropTypes.bool,
   currentUserId: PropTypes.number

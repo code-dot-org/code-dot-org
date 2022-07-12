@@ -107,7 +107,7 @@ def main
       COURSE_OFFERING_CATEGORIES
       PARTICIPANT_AUDIENCES_BY_TYPE
     ),
-      source_module: SharedCourseConstants, transform_keys: false
+      source_module: Curriculum::SharedCourseConstants, transform_keys: false
     ),
     "#{REPO_DIR}/apps/src/generated/curriculum/sharedCourseConstants.js"
   )

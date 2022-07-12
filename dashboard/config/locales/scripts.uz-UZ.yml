@@ -17113,6 +17113,8 @@ uz:
               name: O‘zgaruvchilar
             For Loops:
               name: For sikllari
+            End of Course projects:
+              name: Kurs yakuni loyihalari
         vpl-csd1-ci-pilot-2022:
           lessons:
             lesson-4:
@@ -17474,3 +17476,11 @@ uz:
               name: Overview
             lesson-1:
               name: Overview
+        self-paced-pl-csd5-2022:
+          lessons:
+            Engage with machine learning apps:
+              name: The Design Process
+            Consider real world implications:
+              name: Ma'lumotlar va jamiyat
+            Unit wrap up:
+              name: Jismoniy hisoblash

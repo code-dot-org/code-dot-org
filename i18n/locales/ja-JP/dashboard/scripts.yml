@@ -17134,7 +17134,7 @@ ja:
             For Loops:
               name: ループ用
             End of Course projects:
-              name: コース最後のプロジェクト
+              name: 付録
             Reviewing your reflections:
               name: 復習内容をレビューする
         vpl-csd1-ci-pilot-2022:
@@ -17611,3 +17611,35 @@ ja:
               name: 概要
             lesson-1:
               name: 概要
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: ハローワールドCSC
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] 寓話の概要"
+            Plan Your Fable:
+              name: あなたの寓話を計画
+            Share Your Fable:
+              name: あなたの寓話を共有
+            lesson-4:
+              name: "[Optional] 寓話の概要"
+            lesson-5:
+              name: あなたの寓話を計画
+            lesson-6:
+              name: あなたの寓話を共有
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: 詩のアート
+        self-paced-pl-csd5-2022:
+          lessons:
+            Train a machine learning model:
+              name: インタラクティブなアニメーションとゲーム
+            Engage with machine learning apps:
+              name: 設計プロセス
+            Consider real world implications:
+              name: データと社会
+            Unit wrap up:
+              name: 物理コンピューティング

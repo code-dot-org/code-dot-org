@@ -24212,7 +24212,7 @@ en:
             For Loops:
               name: For Loops
             End of Course projects:
-              name: End of Course projects
+              name: End of Course Projects
             Reviewing your reflections:
               name: Reviewing your reflections
             Taking next steps:
@@ -24350,11 +24350,11 @@ en:
             lesson-1:
               name: Introduction to Physical Computing
             lesson-2:
-              name: Get to know the circuit playground
+              name: Get to know the Circuit Playground
             lesson-3:
               name: Experiment with inputs and outputs
             lesson-4:
-              name: Engage with maker-based prototypes
+              name: Engage with prototypes
             lesson-5:
               name: Unit wrap up
           lesson_groups: {}
@@ -24412,6 +24412,8 @@ en:
               name: Level Updates
             Innovations in Computing:
               name: Innovations in Computing
+            lesson-3:
+              name: Crypto Playground
           lesson_groups: {}
           name: csd-playground
           title: CSD Playground
@@ -25113,13 +25115,13 @@ en:
         vpl-csp-2022:
           lessons:
             Module 1:
-              name: Module 1
+              name: 'Module 1: Wrapping Up Unit 3 & EIPM'
             Module 2:
-              name: Module 2
+              name: 'Module 2: Variables Practice & Make Lessons'
             Module 3:
-              name: Module 3
+              name: 'Module 3: Wrapping Up Unit 4 & Lists in Unit 5'
             Module 4:
-              name: Module 4
+              name: 'Module 4: Mental Models, Datasets, & Assessment'
             'Module 5: Unit 7 and Understanding Functions with Parameters and Return':
               name: 'Module 5: Unit 7 and Understanding Functions with Parameters and Return'
             'Module 6: Introduction to the Create Performance Task':
@@ -25136,11 +25138,13 @@ en:
               name: 'Module 7: Tools and Structure in Unit 9 - Data'
             Module 8:
               name: 'Module 8: Building Community and Preparing Students for the AP Exam'
-          title: CS Principles Virtual Professional Learning 21 - 22
+          title: CS Principles Virtual Professional Learning 22 - 23
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: vpl-csp-2022
         self-paced-pl-csd1-2022:
           lessons:
             Welcome to Codeorg:
@@ -25563,3 +25567,132 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Hello World CSC
+            Overfishing Simulation:
+              name: Overfishing Simulation
+            Model Animal Adaptations:
+              name: Model Animal Adaptations
+            lesson-2:
+              name: Overfishing Simulation
+            lesson-3:
+              name: Model Animal Adaptations
+          title: Ecosystems
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: csc-ecosystems-2022
+        csc-starquilts-2022:
+          lessons:
+            Native American Star Quilts:
+              name: Native American Star Quilts
+            Getting Started with The Artist:
+              name: Getting Started with The Artist
+            Code Your Star Quilt:
+              name: Code Your Star Quilt
+            lesson-1:
+              name: Native American Star Quilts
+            lesson-2:
+              name: Getting Started with The Artist
+            lesson-3:
+              name: Code Your Star Quilt
+          title: Star Quilts Module
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: csc-starquilts-2022
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Introduction to Fables"
+            Hello World CSC:
+              name: Hello World of Stories
+            Plan Your Fable:
+              name: Plan Your Story
+            Code Your Fable:
+              name: Code Your Story
+            Share Your Fable:
+              name: Share Your Fable
+            lesson-4:
+              name: "[Optional] Introduction to Fables"
+            lesson-5:
+              name: Common Stories
+            lesson-3:
+              name: Code Your Fable
+            lesson-6:
+              name: Share Your Fable
+          title: Fables
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: csc-fables-2022
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Poem Art
+            The Time We Live In:
+              name: The Time We Live In
+            Coding My Time Capsule:
+              name: Coding My Time Capsule
+            Gallery Walk:
+              name: Gallery Walk
+            lesson-2:
+              name: The Time We Live In
+            lesson-3:
+              name: Coding My Time Capsule
+            lesson-4:
+              name: Gallery Walk
+          title: Time Capsule
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csd1-ayw-pilot-2022:
+          lessons: {}
+          lesson_groups: {}
+        alltheblocklythings:
+          lessons:
+            lesson-1:
+              name: Project Levels
+            lesson-2:
+              name: Project Levels
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Google Blockly
+            lessonGroup-3:
+              display_name: CDO Blockly
+          name: alltheblocklythings
+          title: All the Blockly Things!
+          description_audience: ''
+          description_short: A selection of Blockly levels for internal testing
+          description: ''
+          student_description: ''
+        self-paced-pl-csd5-2022:
+          lessons:
+            Introduction to AI and machine learning:
+              name: Introduction to AI and machine learning
+            Train a machine learning model:
+              name: Train a machine learning model
+            Engage with machine learning apps:
+              name: Engage with machine learning apps
+            Consider real world implications:
+              name: Consider real world implications
+            Unit wrap up:
+              name: Unit wrap up
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching Artificial Intelligence and Machine Learning
+          name: self-paced-pl-csd5-2022
+          title: Teaching AI and Machine Learning
+          description_audience: ''
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"

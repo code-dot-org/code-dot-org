@@ -164,6 +164,9 @@
           "purpose": "이 레슨은 코딩과 이벤트 프로그래밍 (블록을 사용하는)의 핵심 CS 개념을 소개합니다. ",
           "student_overview": "모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 계속해서 소개합니다."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
+        },
         "dance-2019/Dance Party": {
           "name": "댄스 파티 (2019)",
           "overview": "이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 모든 연령의 학습자를 위해 고안되었으나 읽기 능력을 요구합니다. 이 활동에서 사용하는 툴은 음악에 반응하므로 사운드가 필요합니다.",
@@ -176,8 +179,176 @@
           "purpose": "이 튜토리얼은 학생들에게 일종의 **인공지능**인 **머신 러닝**을 빠르게 소개하도록 고안되었습니다. 학생들은 머신 학습 모델이 새 데이터를 분류할 수 있도록 **교육 데이터**가 사용되는 방식을 탐구할 것입니다. 학생들은 튜토리얼 동안 긍정적인 경험을 해야 하고 더 중요하게는 컴퓨터 과학을 계속 공부하겠다는 동기 유발이 되어야 합니다. ",
           "student_overview": "튜토리얼 요약: 첫 번째 학생이 바다에서 쓰레기를 제거하기 위해 대상을 \"물고기\" 또는 \"물고기가 아님\"으로 분류합니다. 그 다음, 학생들은 물 속에 사는 다른 바다 생명체를 포함시키기 위해 그들의 교육 데이터 세트를 확장하여야 합니다. 활동의 두 번째 부분에서, 학생들은 무작위로 생성된 물고기 이미지에 붙일 라벨을 선택합니다. 이 교육 데이터는 머신 학습 모델을 위해 사용되며 그 결과 머신 학습 모델은 새 이미지에 라벨을 붙일 수 있어야 합니다."
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "\"컴퓨터 과학 기초\"에 오신 걸 환영합니다"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "컴퓨터 과학의 기초 과정 이해"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "시퀸싱"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "반복"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "이벤트"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "조건"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "과정말 프로젝트"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "함수"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "변수"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "반복을 위한"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "스프라이트 연구소"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "성찰 검토"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "다음 단계"
+        },
+        "vigenere/Vigenere": {
+          "name": "비즈네르"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "분위기 연구"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "디지털 설계"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "이벤트 중심 프로그래밍"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "기초 앱 기능 "
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "게터 및 세터"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "시작하기"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "컴퓨터 과학 기초"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "미리 준비"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "기초 마스터링: 시퀸싱"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "기초 마스터링: 루프"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "기초 마스터링: 조건"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "기초 마스터링: 함수"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "기초 마스터링: 이벤트"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "컴퓨터 과학 교습을 위한 우수 관행"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "계획"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "다음 단계"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "개관 및 설정 설명"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "피어 투 피어 - 공유 와이어에서 비트 전송"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "피어 투 피어 - 숫자 전송"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "피어 투 피어 -아스키 전송"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "메시지 방송"
+        },
+        "netsim/Routers and addresses": {
+          "name": "라우터 및 주소"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "패킷 및 신뢰성"
+        },
+        "netsim/Manual DNS": {
+          "name": "수동 DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "자동 DNS 노드"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "인터넷 시뮬레이터 프리플레이"
+        },
+        "odometer/Odometer Widget": {
+          "name": "주행 거리계 위젯"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "방 탈출"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "시작 및 종료 화면"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "시작 및 종료 화면2"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "시작하기"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "컴퓨터 과학 기초"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "미리 준비"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "기초 마스터링: 시퀸싱"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "기초 마스터링: 루프"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "기초 마스터링: 조건"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "기초 마스터링: 함수"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "기초 마스터링: 이벤트"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "컴퓨터 과학 교습을 위한 우수 관행"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "계획"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "다음 단계"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "수집가 아워오브코드 2017"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "빈도 분석"
         },
         "courseb-2018/Move It, Move It": {
           "name": "빨리 빨리 움직이자!"
@@ -723,7 +894,7 @@
           "name": "말하는 꿀벌"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "CS 발견 학기말 설문조사"
+          "name": "엔터테인먼트를 위한 프로그래밍"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "모양 플롯팅"
@@ -1416,10 +1587,10 @@
           "name": "이벤트가 있는 왕가의 전투"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "프로젝트 후 테스트"
+          "name": "엔터테인먼트를 위한 프로그래밍"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "CS 발견 과정 후 설문 조사"
+          "name": "모양 플롯팅"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "게임 랩 내 그리기"
@@ -1478,12 +1649,6 @@
         "csd3-2019/Project - Design a Game": {
           "name": " 프로젝트 - 게임 설계"
         },
-        "csd6-2019/Innovations in Computing": {
-          "name": "프로젝트 후 테스트"
-        },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "CS 발견 과정 후 설문 조사"
-        },
         "csd6-2019/The Circuit Playground": {
           "name": "써킷 플레이그라운드"
         },
@@ -1524,10 +1689,10 @@
           "name": "프로젝트 - 혁신 프로토타입"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "프로젝트 후 테스트"
+          "name": "설계 분석"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "CS 발견 과정 후 설문 조사"
+          "name": "사용자 이해"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "사용자 중심 설계 마이크로 활동"
@@ -1572,10 +1737,10 @@
           "name": "프로젝트 - 앱 프레젠테이션"
         },
         "csd5-2019/Representation Matters": {
-          "name": "프로젝트 후 테스트"
+          "name": "표현 문제"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "CS 발견 과정 후 설문 조사"
+          "name": "패턴과 표현"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "아스키와 바이너리 표현"
@@ -1620,7 +1785,7 @@
           "name": "문제해결 소개"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "프로젝트 후 테스트"
+          "name": "문제 해결 과정"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "문제해결 탐구"
@@ -1641,10 +1806,10 @@
           "name": "프로젝트 -앱 제안"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "프로젝트 후 테스트"
+          "name": "웹사이트 탐구"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "CS 발견 과정 후 설문 조사"
+          "name": "표현을 위한 웹사이트 "
         },
         "csd2-2019/Intro to HTML": {
           "name": "HTML 소개"
@@ -2163,10 +2328,10 @@
           "name": "프로젝트 발표"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "CS 발견 학기말 설문조사"
+          "name": "엔터테인먼트를 위한 프로그래밍"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "CSD 과정 후 설문조사 "
+          "name": "모양 플롯팅"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "게임 랩 내 그리기"
@@ -2225,9 +2390,6 @@
         "csd3-2017/Project - Design a Game": {
           "name": " 프로젝트 - 게임 설계"
         },
-        "csd6-2017/Innovations in Computing_": {
-          "name": "CSD 과정 후 설문조사 "
-        },
         "csd6-2017/The Circuit Playground_": {
           "name": "써킷 플레이그라운드"
         },
@@ -2268,7 +2430,7 @@
           "name": "프로젝트 - 혁신 프로토타입"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "CSD 과정 후 설문조사 "
+          "name": "웹사이트 탐구"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "표현을 위한 웹사이트 "
@@ -2337,7 +2499,7 @@
           "name": "프로젝트 -앱 제안"
         },
         "csd5-2017/Representation Matters": {
-          "name": "CSD 과정 후 설문조사 "
+          "name": "표현 문제"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "패턴과 표현"
@@ -2382,7 +2544,7 @@
           "name": "프로젝트: 데이터 문제 해결"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "CSD 과정 후 설문조사 "
+          "name": "설계 분석"
         },
         "csd4-2017/Understanding Your User": {
           "name": "사용자 이해"
@@ -2428,6 +2590,27 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "프로젝트 - 앱 프레젠테이션"
+        },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "AB 교육자를 위한 디버깅"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "CDEF 교육자를 위한 디버깅"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "흑백 픽셀화 튜토리얼"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "흑백 픽셀화 프리플레이"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "컬러 픽셀화 튜토리얼"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "컬러 픽셀화 예"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "컬러 픽셀화 프리플레이"
         },
         "course4/Unplugged: Tangrams": {
           "name": "언플러그드: 탱그램"
@@ -2494,6 +2677,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "슈퍼 챌린지 - 종합"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "컴퓨터과학(정보과학) 소개"
+        },
+        "20-hour/The Maze": {
+          "name": "미로 퍼즐"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "컴퓨터과학(정보과학)적 사고"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "모눈 종이 프로그래밍"
+        },
+        "20-hour/The Artist": {
+          "name": "화가"
+        },
+        "20-hour/Algorithms": {
+          "name": "알고리즘"
+        },
+        "20-hour/The Artist 2": {
+          "name": "화가2"
+        },
+        "20-hour/Functions": {
+          "name": "함수"
+        },
+        "20-hour/The Farmer": {
+          "name": "농부"
+        },
+        "20-hour/Conditionals": {
+          "name": "조건"
+        },
+        "20-hour/The Artist 3": {
+          "name": "화가3"
+        },
+        "20-hour/Song Writing": {
+          "name": "노래 만들기"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "농부2"
+        },
+        "20-hour/Abstraction": {
+          "name": "추상화"
+        },
+        "20-hour/The Artist 4": {
+          "name": "화가4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "릴레이 프로그래밍"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "농부3"
+        },
+        "20-hour/The Internet": {
+          "name": "인터넷"
+        },
+        "20-hour/The Artist 5": {
+          "name": "화가5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "마무리"
         },
         "course2/Graph Paper Programming": {
           "name": "모눈 종이 프로그래밍"
@@ -2675,6 +2918,138 @@
           "preparation": "-   온라인 안전 콘텐츠에 관한 더 자세한 내용은 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship) 웹사이트를 검토하세요.",
           "purpose": "이 레슨의 주요 목표는 학생들에게 컴퓨터를 경험하게 하는 것입니다. 클릭과 드래그 앤 드롭 등과 같은 가장 기본적인 컴퓨터 기능을 다룸으로써, 우리는 미래 퍼즐을 위해 학급에 더 공평한 경쟁의 장을 마련하고 있습니다. 이 레슨은 또한 기기에 따라 \"마우스\" 또는 \"트랙패드\", \"터치 스크린\" 등을 포함하여 기본 컴퓨터 하드웨어 용어를 소개할 기회를 줍니다.",
           "student_overview": "클릭 및 드래그하여 퍼즐을 완성하세요."
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "CSD 학생 과정 후 설문조사 ('18-'19)"
+        },
+        "allthethings/Jigsaw": {
+          "name": "직소퍼즐"
+        },
+        "allthethings/Maze": {
+          "name": "미로"
+        },
+        "allthethings/Artist": {
+          "name": "예술가"
+        },
+        "allthethings/Bee": {
+          "name": "꿀벌"
+        },
+        "allthethings/PlayLab": {
+          "name": "플레이랩"
+        },
+        "allthethings/Farmer": {
+          "name": "농부"
+        },
+        "allthethings/Flappy": {
+          "name": "플래피"
+        },
+        "allthethings/Bounce": {
+          "name": "바운스"
+        },
+        "allthethings/Multi": {
+          "name": "객관식"
+        },
+        "allthethings/Multi2": {
+          "name": "멀티2"
+        },
+        "allthethings/Match": {
+          "name": "짝 맞추기"
+        },
+        "allthethings/TextMatch": {
+          "name": "TextMatch"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "주행 거리계"
+        },
+        "allthethings/Text Compression": {
+          "name": "텍스트 압축"
+        },
+        "allthethings/AppLab": {
+          "name": "앱 랩"
+        },
+        "allthethings/Gamelab": {
+          "name": "게임랩"
+        },
+        "allthethings/Online PD": {
+          "name": "온라인 PD"
+        },
+        "allthethings/Markdown Details": {
+          "name": "마크다운 상세정보"
+        },
+        "allthethings/Studio": {
+          "name": "스튜디오"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "멀티 페이지 평가"
+        },
+        "allthethings/Star wars": {
+          "name": "스타워즈"
+        },
+        "allthethings/Minecraft": {
+          "name": "마인크래프트"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "풍부하고 긴 평가"
+        },
+        "allthethings/Free Response": {
+          "name": "자유 응답"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "샘플 PLC 평가"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "교체된 레벨"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "익명 학생 설문조사"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "공개키 암호화"
+        },
+        "allthethings/Web Lab": {
+          "name": "웹 랩"
+        },
+        "allthethings/Single page assessment": {
+          "name": "단일 페이지 평가"
+        },
+        "allthethings/Standalone video": {
+          "name": "동영상"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "커리큘럼 참조"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "스프라이트 연구소"
+        },
+        "allthethings/Dance Lab": {
+          "name": "댄스 랩"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "미니 채점판"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "언플러그드로서 선택사항으로서 표시된 외부"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "버블 초이스"
+        },
+        "allthethings/Contained Levels": {
+          "name": "포함된 레벨"
+        },
+        "allthethings/ML Fish": {
+          "name": "ML 피쉬"
+        },
+        "allthethings/AI Lab": {
+          "name": "AI 랩"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java 연구소"
         },
         "coursef-2021/lesson-6": {
           "name": "스프라이트 랩 소개",
@@ -3601,7 +3976,7 @@
           "name": "CS 발견 과정 후 설문 조사"
         },
         "csd4-2021/Analysis of Design": {
-          "name": "프로젝트 후 테스트"
+          "name": "공감으로 설계하기"
         },
         "csd4-2021/Understanding Your User": {
           "name": "사용자 이해"
@@ -3667,7 +4042,6 @@
           "name": "CS 발견 과정 후 설문 조사"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "프로젝트 후 테스트",
           "overview": "이 과정의 최종 단원을 시작하기 위해, 학생들은 컴퓨팅에 흥미로운 혁신을 가져다 줄 몇 가지 리서치를 할 것입니다. 이 레슨은 학생들을 더 넓은 다양한 컴퓨팅 형태 요소 (컴퓨터가 어떻게 보이는지)와 컴퓨팅에 의해 영향을 받는 분야에 노출시킬 것입니다. 이 단원의 뒷부분에서, 학생들은 자신의 물리적 컴퓨팅 기기를 개발하며 이 레슨에서 접하게 된 여러 기기를 되돌아 볼 것입니다. "
         },
         "csd6-2021/The Circuit Playground": {
@@ -3718,7 +4092,7 @@
           "name": "CS 발견 과정 후 설문 조사"
         },
         "csd5-2021/Representation Matters": {
-          "name": "프로젝트 후 테스트"
+          "name": "표현 문제"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "패턴과 표현"
@@ -3769,7 +4143,7 @@
           "name": "CS 발견 과정 후 설문 조사"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "프로젝트 후 테스트"
+          "name": "엔터테인먼트를 위한 프로그래밍"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "모양 플롯팅"
@@ -3848,7 +4222,7 @@
           "name": "문제해결 소개"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "프로젝트 후 테스트"
+          "name": "문제 해결 과정"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "문제해결 탐구"
@@ -3884,7 +4258,7 @@
           "name": "문제해결 탐구- 게임 테마 (대체 레슨 3)"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "프로젝트 후 테스트"
+          "name": "웹 페이지 탐구"
         },
         "csd2-2021/Intro to HTML": {
           "name": "HTML 소개"

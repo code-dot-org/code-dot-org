@@ -132,6 +132,9 @@
           "name": "Pesta Dansa - Maju Terus",
           "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman event (menggunakan blok)."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Koding satu jam 2013"
+        },
         "dance-2019/Dance Party": {
           "name": "Pesta Dansa (2019)",
           "overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan ini membutuhkan suara karena alatnya dibuat untuk merespon musik.",
@@ -144,8 +147,173 @@
           "purpose": "Tutorial ini dirancang untuk memperkenalkan murid dengan **pembelajaran mesin**, semacam **kecerdasan buatan**. Murid akan menjelajahi cara menggunakan **data latihan** untuk memudahkan model pembelajaran mesin dalam mengelompokkan data baru. Murid hendaknya mendapatkan pengalaman positif selama tutorial dan lebih penting lagi harus termotivasi untuk tetap belajar ilmu komputer. ",
           "student_overview": "Ringkasan Tutorial: Pertama murid menggolongkan objek sebagai “ikan” atau “bukan ikan” sebagai upaya untuk membuang sampah dari lautan. Lalu, murid perlu memperluas himpunan data latihan agar mencakup makhluk laut lainnya yang tergolong hewan air. Di bagian kedua aktivitas, murid akan memilih label sendiri untuk diterapkan pada gambar ikan yang dibuat secara acak. Data latihan ini digunakan untuk sebuah model mesin pembelajaran yang lantas dapat melabeli sendiri gambar baru."
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Selamat Datang di \"Mengajarkan Dasar-Dasar Ilmu Komputer\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Memahami Kursus Dasar Ilmu Komputer"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Urutan"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Loop"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "kegiatan"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Kondisi"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Proyek Akhir-Kursus"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "fungsi"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "variabel"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For Loop"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Meninjau kembali renungan Anda"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Langkah berikutnya"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Studi Mood"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Desain Digital"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Pemrograman Berdasarkan Event"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Fungsionalitas Aplikasi Dasar"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Penghasil dan Pengatur"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Dapat Dimulai"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Computer Science Fundamentals"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Melihat ke depan"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Menguasai Dasar-dasar: Pengurutan"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Menguasai Dasar-dasar: Loop "
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Menguasai Dasar-dasar: Kondisional"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Menguasai Dasar-dasar: Fungsi"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Menguasai Dasar-dasar: Peristiwa"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Perencanaan"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Langkah berikutnya"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Peninjauan dan petunjuk pemasangan"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Pengiriman Bit pada Ruang Kawat"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Mengirim Nomor"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Mengirim Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Pesan siaran"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Router dan alamat"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Paket dan dapat dipercaya"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manual DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Node DNS otomatis"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Simulator Internet Freeplay"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Room Escape"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Layar Mulai dan Akhir"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Layar2 Mulai dan Akhir"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Dapat Dimulai"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Computer Science Fundamentals"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Melihat ke depan"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Menguasai Dasar-dasar: Pengurutan"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Menguasai Dasar-dasar: Loop "
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Menguasai Dasar-dasar: Kondisional"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Menguasai Dasar-dasar: Fungsi"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Menguasai Dasar-dasar: Peristiwa"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Perencanaan"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Langkah berikutnya"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Kolektor Hour of Code 2017"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Analisis frekuensi"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Gerakkan itu, Gerakkan itu"
@@ -691,7 +859,7 @@
           "name": "Spelling Bee"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "Survei Akhir Semester CS Discoveries"
+          "name": "Pemrograman untuk Hiburan"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Merancang Bentuk"
@@ -1396,10 +1564,10 @@
           "name": "Pertempuran Besar dengan Event"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Pemrograman untuk Hiburan"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Survei Pascakursus CS Discoveries"
+          "name": "Merancang Bentuk"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Menggambar dalam lab permaianan"
@@ -1462,10 +1630,10 @@
           "name": "Proyek - merancang sebuah permainan"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Inovasi dalam Komputasi"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "Survei Pascakursus CS Discoveries"
+          "name": "Perancangan Layar dengan Kode"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "Sirkuit Bermain Anak"
@@ -1510,10 +1678,10 @@
           "name": "Proyek: Buat Prototipe Inovasi"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Analisis desain"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Survei Pascakursus CS Discoveries"
+          "name": "Memahami pengguna anda"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Aktivitas Mikro Desain Berpusat-Pengguna"
@@ -1558,10 +1726,10 @@
           "name": "Proyek - Presentasi Aplikasi"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Representasi Itu Penting"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Survei Pascakursus CS Discoveries"
+          "name": "Pola dan Representasi"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII dan Representasi Binary"
@@ -1606,7 +1774,7 @@
           "name": "Pengenalan Pemecahan Masalah"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Proses Pemecahan Masalah"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Eksplorasi Pemecahan Masalah"
@@ -1627,10 +1795,10 @@
           "name": "Proyek - Pengajuan Aplikasi"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Mengeksplorasi Situs Web"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Survei Pascakursus CS Discoveries"
+          "name": "Situs-situs untuk Ekspresi "
         },
         "csd2-2019/Intro to HTML": {
           "name": "Pengenalan HTML"
@@ -2152,10 +2320,10 @@
           "name": "Menyajikan Proyek Anda"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "Survei Akhir Semester CS Discoveries"
+          "name": "Pemrograman untuk Hiburan"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "Survei Pascakursus CSD"
+          "name": "Merancang Bentuk"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Menggambar dalam lab permaianan"
@@ -2218,7 +2386,7 @@
           "name": "Proyek - merancang sebuah permainan"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "Survei Pascakursus CSD"
+          "name": "Inovasi dalam Komputasi"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Perancangan Layar dengan Kode"
@@ -2266,7 +2434,7 @@
           "name": "Proyek: Buat Prototipe Inovasi"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "Survei Pascakursus CSD"
+          "name": "Mengeksplorasi Situs Web"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Situs-situs untuk Ekspresi "
@@ -2335,7 +2503,7 @@
           "name": "Proyek - Pengajuan Aplikasi"
         },
         "csd5-2017/Representation Matters": {
-          "name": "Survei Pascakursus CSD"
+          "name": "Representasi Itu Penting"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Pola dan Representasi"
@@ -2380,7 +2548,7 @@
           "name": "Proyek - Memecahkan Masalah Data"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "Survei Pascakursus CSD"
+          "name": "Analisis desain"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Memahami pengguna anda"
@@ -2426,6 +2594,27 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "Proyek - Presentasi Aplikasi"
+        },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "Debugging untuk Pendidik AB"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "Debugging untuk Pendidik CDEF"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Tutorial Pixelation Hitam & Putih"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Hitam & Putih Pixelation Freeplay"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Tutorial warna Pixelation"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Contoh-contoh warna Pixelation"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Warna Pixelation Freeplay"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Dicabut: Tangram"
@@ -2492,6 +2681,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Tantangan Ekstrim - Komprehensif (Luas)"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Perkenalan ilmu komputer"
+        },
+        "20-hour/The Maze": {
+          "name": "Labirin"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Berpikir secara komputasi"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Pemrograman grafis diatas kertas"
+        },
+        "20-hour/The Artist": {
+          "name": "Artis"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritma"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Artis 2"
+        },
+        "20-hour/Functions": {
+          "name": "fungsi"
+        },
+        "20-hour/The Farmer": {
+          "name": "Petani"
+        },
+        "20-hour/Conditionals": {
+          "name": "Kondisi"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Artis 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Menulis lagu"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Petani 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstraksi"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Artis 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Pemrograman bergiliran"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Petani 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Artis 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Penutupan"
         },
         "course2/Graph Paper Programming": {
           "name": "Pemrograman grafis diatas kertas"
@@ -2673,6 +2922,138 @@
           "preparation": "-   Lihat situs web [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) untuk konten keamanan online lainnya.",
           "purpose": "Tujuan utama pelajaran ini adalah memupuk pengalaman siswa dengan komputer. Dengan membahas fungsi-fungsi komputer paling dasar, seperti mengklik, men-drag, dan men-drop, kita membuat tempat bermain yang lebih setara di kelas untuk puzzle-puzzle ke depan. Pelajaran ini juga memberi kesempatan yang bagus untuk memperkenalkan terminologi dasar perangkat keras komputer, seperti \"mouse\", \"trackpad\", atau \"layar sentuh\", sesuai perangkat Anda.",
           "student_overview": "Klik dan drag untuk menyelesaikan puzzle."
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "Survei Pascakursus Murid CSD  ('18-'19)"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Teka-teki"
+        },
+        "allthethings/Maze": {
+          "name": "Labirin"
+        },
+        "allthethings/Artist": {
+          "name": "Artis"
+        },
+        "allthethings/Bee": {
+          "name": "Lebah"
+        },
+        "allthethings/PlayLab": {
+          "name": "PlayLab"
+        },
+        "allthethings/Farmer": {
+          "name": "Petani"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Terpental"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Pertandingan"
+        },
+        "allthethings/TextMatch": {
+          "name": "Teks Pertandingan"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "Odometer"
+        },
+        "allthethings/Text Compression": {
+          "name": "kompresi Teks"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pixelation / pikselasi"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Gamelab": {
+          "name": "Gamelab"
+        },
+        "allthethings/Online PD": {
+          "name": "Online PD"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Rincian Penurunan harga"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Multi halaman penilaian"
+        },
+        "allthethings/Star wars": {
+          "name": "Perang bintang"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "Kaya penilaian panjang"
+        },
+        "allthethings/Free Response": {
+          "name": "Respon Gratis"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "Penilaian Sampel PLC"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Tingkat bertukar"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Survei siswa tanpa nama"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Kriptografi Kunci Umum"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web lab"
+        },
+        "allthethings/Single page assessment": {
+          "name": "Satu halaman penilaian"
+        },
+        "allthethings/Standalone video": {
+          "name": "Video mandiri"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Referensi kurikulum"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Dance Lab"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Mini Rubric"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "Eksternal yang Boleh Ditampilkan sebagai Unplugged"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "Bubble Choice"
+        },
+        "allthethings/Contained Levels": {
+          "name": "Tingkat yang terkandung"
+        },
+        "allthethings/ML Fish": {
+          "name": "ML Fish"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java Lab"
         },
         "coursef-2021/lesson-6": {
           "name": "Memperkenalkan Sprite Lab",
@@ -3581,9 +3962,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Survei Pascakursus CS Discoveries"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "Pengujian Pascaproyek"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "Memahami pengguna anda"
         },
@@ -3618,7 +3996,7 @@
           "name": "Survei Pascakursus CS Discoveries"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Pengujian Pascaproyek",
+          "name": "Inovasi dalam Komputasi",
           "overview": "Untuk memulai unit terakhir kursus ini, murid akan melakukan penelitian tentang beberapa inovasi menarik di dunia komputasi. Pelajaran ini akan menyingkap beraneka ragam faktor bentuk komputasi (tampilan fisik komputer) dan bidang yang terdampak oleh komputasi kepada murid. Dalam unit ini selanjutnya, murid akan melihat kembali perangkat yang mereka jumpai dalam pelajaran ini pada saat mereka mengembangkan perangkat komputasi fisik mereka sendiri."
         },
         "csd6-2021/Designing Screens with Code": {
@@ -3676,7 +4054,7 @@
           "name": "Survei Pascakursus CS Discoveries"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Representasi Itu Penting"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Pola dan Representasi"
@@ -3721,7 +4099,7 @@
           "name": "Survei Pascakursus CS Discoveries"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Pemrograman untuk Hiburan"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Merancang Bentuk"
@@ -3790,7 +4168,7 @@
           "name": "Pengenalan Pemecahan Masalah"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Proses Pemecahan Masalah"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Eksplorasi Pemecahan Masalah"
@@ -3826,7 +4204,7 @@
           "name": "Mengeksplorasi Pemecahan Masalah - Tema Permainan (Pelajaran 3 Alternatif)"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Pengujian Pascaproyek"
+          "name": "Mengeksplorasi Halaman Web"
         },
         "csd2-2021/Intro to HTML": {
           "name": "Pengenalan HTML"

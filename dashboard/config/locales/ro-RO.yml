@@ -1328,6 +1328,7 @@ ro:
         music: Muzică
         art: Artă
         other: 'Altele:'
+        na: Nu se aplică
       resources:
         bootstrap: |2-
 
@@ -1338,7 +1339,8 @@ ro:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Altele:'
+        other: Alte
+        na: Nu se aplică
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1348,7 +1350,8 @@ ro:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Atelierul minune
-        other: 'Altele:'
+        other: Alte
+        na: Nu se aplică
       workshop_course:
         csf_af: Fundamentele informaticii (Cursuri A-F)
         csf_express: Fundamentele informaticii (pre-Express sau Express)

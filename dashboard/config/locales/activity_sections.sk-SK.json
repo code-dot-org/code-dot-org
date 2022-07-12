@@ -1583,11 +1583,21 @@
         "80638f32-a3e0-46c4-99fa-74d740d9ff1d": {
           "progression_name": "Prehľad lekcie"
         },
+        "b9d672f4-d86c-45ef-9203-d62f69ebf28b": {
+          "name": "Kreslenie tvarov",
+          "progression_name": "Kreslenie tvarov"
+        },
         "5e520688-3496-4589-958b-0e5560b783c1": {
           "progression_name": "Prehľad lekcie"
         },
+        "2bc2e284-7c4e-4db0-93e1-557ee7ef6c7a": {
+          "progression_name": "Úvod do Game Labu"
+        },
         "78487cb4-f224-4753-81c2-df924d996d9b": {
           "progression_name": "Video: Kreslenie v Game Labe - 1. časť"
+        },
+        "6c0110bb-f32b-426c-9f9f-fba56f763171": {
+          "progression_name": "Používanie mriežky"
         },
         "0c63e064-c9b6-4d9e-89ee-0322c3fe32d4": {
           "progression_name": "Video: Kreslenie v Game Labe - 2. časť"
@@ -1607,8 +1617,14 @@
         "40225249-89e9-4677-9820-761de98201c9": {
           "progression_name": "Nové tvary"
         },
+        "10047599-0a86-466e-9b9f-d66726c566eb": {
+          "progression_name": "Tvary a parametre"
+        },
         "54794f39-e51b-4038-befd-6b8db76eb6ff": {
           "progression_name": "Ďalšie parametre"
+        },
+        "d3dd0108-0a50-46d8-b7b7-60086d0a8dda": {
+          "progression_name": "Náhodné čísla"
         },
         "cdff8625-d4f2-4357-b8b2-8fe8a9e2ff5a": {
           "progression_name": "Používanie náhodných čísel"
@@ -1635,7 +1651,7 @@
           "progression_name": "Prehľad lekcie"
         },
         "7b0d3ea8-0ebd-4893-b63a-f7e106350484": {
-          "progression_name": "Video: Predstavenie objeku Sprite"
+          "progression_name": "Video: Predstavenie sprajtov"
         },
         "ac9962af-c594-428a-8aca-016b794e0c00": {
           "progression_name": "Predstavenie \"sprite\" objektov"
@@ -1652,11 +1668,17 @@
         "0f6d3640-c10a-497b-a1ce-7dcca920ca0d": {
           "progression_name": "Vytvávaranie scén"
         },
+        "be2d8bd4-15d7-421c-9a7b-ffd13ab3f274": {
+          "progression_name": "Scény so sprajtmi"
+        },
         "07292173-4754-438e-8e54-6ed886d79779": {
           "progression_name": "Vytvávaranie scén"
         },
         "61e3ec44-af7c-436f-aca6-4e46a91f6542": {
           "progression_name": "Prehľad lekcie"
+        },
+        "039d7065-387d-437a-9d2f-fe2be655434e": {
+          "progression_name": "Video: Predstavujeme cyklus draw()"
         },
         "23ab6af6-1209-49cd-9a80-45b112fb2cf8": {
           "progression_name": "Tvary  a vykresľovací cyklus"
@@ -3402,11 +3424,21 @@
         "bb6a2b90-0730-48ab-b10d-325b0f37b6af": {
           "progression_name": "Prehľad lekcie"
         },
+        "122c7721-3946-460b-905c-aaf2a8315a7a": {
+          "name": "Kreslenie tvarov",
+          "progression_name": "Kreslenie tvarov"
+        },
         "31ea1300-575e-4f67-9fba-ffccd705a373": {
           "progression_name": "Prehľad lekcie"
         },
+        "495fcc03-4c32-4a02-8104-dde4ba8e64a8": {
+          "progression_name": "Úvod do Game Labu"
+        },
         "95278d60-fdcd-4e26-b8c3-85f66c91f510": {
           "progression_name": "Video: Kreslenie v Game Labe - 1. časť"
+        },
+        "c1956796-6ad7-45c7-95fb-c3d61030e4cf": {
+          "progression_name": "Používanie mriežky"
         },
         "e4bb69ec-e58a-4445-9f49-0c8ceafe7ebe": {
           "progression_name": "Video: Kreslenie v Game Labe - 2. časť"
@@ -3429,11 +3461,17 @@
         "62f6b478-10f1-41c0-b3d9-c8538dd7e2eb": {
           "progression_name": "Ďalšie parametre"
         },
+        "c7a839b0-71da-41ac-af2d-a8e5084040cc": {
+          "progression_name": "Tvary a parametre"
+        },
         "0893f8dd-fe78-4cde-9f44-76ce38edb0af": {
           "progression_name": "Ďalšie parametre"
         },
         "1bcac68c-1997-43a5-bc7c-a99f303f7bc0": {
           "progression_name": "Používanie náhodných čísel"
+        },
+        "06529421-f2f5-4ecc-b960-e5ad918d55a5": {
+          "progression_name": "Náhodné čísla"
         },
         "2d59194a-6738-49ec-8bbb-3e13f3648cc3": {
           "progression_name": "Prehľad lekcie"
@@ -3454,7 +3492,7 @@
           "progression_name": "Prehľad lekcie"
         },
         "6ba9de0a-29fa-4fd8-98c8-0d85178ea684": {
-          "progression_name": "Video: Predstavenie objeku Sprite"
+          "progression_name": "Video: Predstavenie sprajtov"
         },
         "5136ca8d-00e2-4fa2-8563-f2edd7bc46d6": {
           "progression_name": "Predstavenie \"sprite\" objektov"
@@ -3471,11 +3509,17 @@
         "659bc6e3-ae3c-44c3-83f1-816afa3a113d": {
           "progression_name": "Vytvávaranie scén"
         },
+        "0bb0b37f-e6d5-4d39-928f-4fbbbd791fde": {
+          "progression_name": "Scény so sprajtmi"
+        },
         "25308bbe-f78f-4d88-90f6-2a88b35c7fbf": {
           "progression_name": "Vytvávaranie scén"
         },
         "220fbb14-03e2-4b6b-966d-0fb9607a7c0d": {
           "progression_name": "Prehľad lekcie"
+        },
+        "832dbd27-6b24-4512-9ab3-2e932bb1c988": {
+          "progression_name": "Video: Predstavujeme cyklus draw()"
         },
         "9d10f9c7-aa20-4ed7-826f-dfaef530dd61": {
           "progression_name": "Tvary  a vykresľovací cyklus"
@@ -4310,11 +4354,21 @@
         "c6e24cc7-63f3-4893-95d6-7f4974b6214e": {
           "progression_name": "Prehľad lekcie"
         },
+        "a4e22b77-a871-48dd-b56a-c73055f6ba15": {
+          "name": "Kreslenie tvarov",
+          "progression_name": "Kreslenie tvarov"
+        },
         "74674f27-4080-468a-b72c-5eedcd9b0148": {
           "progression_name": "Prehľad lekcie"
         },
+        "6c3fca58-2c3c-4b29-9ec3-ba3426ab48cf": {
+          "progression_name": "Úvod do Game Labu"
+        },
         "1509843f-2d27-434d-afa5-8678d006fdaf": {
           "progression_name": "Video: Kreslenie v Game Labe - 1. časť"
+        },
+        "eb60220a-bd3b-45a9-bea3-08e2f7bce363": {
+          "progression_name": "Používanie mriežky"
         },
         "76f4a490-ba17-4487-8dee-bc8264c6870d": {
           "progression_name": "Video: Kreslenie v Game Labe - 2. časť"
@@ -4338,8 +4392,14 @@
         "fdd422c2-71f0-46ba-992b-e84a5036881e": {
           "progression_name": "Nové tvary"
         },
+        "4b39d5c9-0c98-44d5-9761-011f93ad0721": {
+          "progression_name": "Tvary a parametre"
+        },
         "951b3300-bbab-4862-9403-fe40353a2189": {
           "progression_name": "Ďalšie parametre"
+        },
+        "8b2d6e79-7e2d-44c6-b048-e458f01608c8": {
+          "progression_name": "Náhodné čísla"
         },
         "b188c296-ff87-409b-8540-2143ded296bf": {
           "progression_name": "Používanie náhodných čísel"
@@ -4374,7 +4434,7 @@
           "progression_name": "Prehľad lekcie"
         },
         "21279214-0c29-48a8-8158-7d3f96726320": {
-          "progression_name": "Video: Predstavenie objeku Sprite"
+          "progression_name": "Video: Predstavenie sprajtov"
         },
         "e9c923af-0bf2-42f6-8330-02d063158fa5": {
           "progression_name": "Predstavenie \"sprite\" objektov"
@@ -4388,6 +4448,9 @@
         "1893f672-0984-4956-a657-90f4a8a4ecb2": {
           "progression_name": "Pridanie obrázkov"
         },
+        "64957b25-c71b-4b9c-ab40-16fc9845944d": {
+          "progression_name": "Scény so sprajtmi"
+        },
         "7837e5c4-b7a2-4b7b-a19b-d88da6f1c973": {
           "progression_name": "Vytvávaranie scén"
         },
@@ -4397,6 +4460,9 @@
         },
         "bd35dacd-835c-497c-a32c-7ec91b544e3f": {
           "progression_name": "Prehľad lekcie"
+        },
+        "1d24300b-6ff3-4ae7-8721-c201e189e481": {
+          "progression_name": "Video: Predstavujeme cyklus draw()"
         },
         "dc64960a-61a1-492a-9019-267233fa287d": {
           "progression_name": "Tvary  a vykresľovací cyklus"
@@ -12400,6 +12466,9 @@
             null
           ]
         },
+        "d4d92cde-d8c2-4f5d-89bb-6aac7ec2de59": {
+          "progression_name": "Kreslenie tvarov"
+        },
         "e82622fb-a1cf-45c8-a0f2-7929503c4bfe": {
           "tips": [
             null
@@ -12433,13 +12502,17 @@
         "935fb22e-ea0b-4c9b-92fc-61c39895fca9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Úvod do Game Labu"
         },
         "9663d7f7-168d-4f85-8f8a-cc2d6f86efa3": {
           "tips": [
             null
           ],
           "progression_name": "Video: Kreslenie v Game Labe - 1. časť"
+        },
+        "9b7caf32-0737-4382-be8b-66460fc06c42": {
+          "progression_name": "Používanie mriežky"
         },
         "c838ee44-b6fd-467e-8733-9b52d9727b08": {
           "tips": [
@@ -12515,7 +12588,8 @@
         "df26b7e2-cb48-40b2-b360-d0e9770b8802": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Predstavenie premenných"
         },
         "a14285ec-28bc-4b44-a63c-204c0034c19f": {
           "tips": [
@@ -12583,7 +12657,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Video: Predstavenie objeku Sprite"
+          "progression_name": "Video: Predstavenie sprajtov"
         },
         "31324d8c-8187-4b66-b0fe-ff74bbb6077e": {
           "progression_name": "Budovanie zručností"
@@ -12681,6 +12755,21 @@
             null
           ]
         },
+        "d4865d33-6382-4b57-b532-6949d5621973": {
+          "progression_name": "Scény so sprajtmi"
+        },
+        "9a593b91-9cd2-48ff-a733-2943aa535ceb": {
+          "progression_name": "Vytvor pozadie"
+        },
+        "853974f1-7e3b-4403-a475-5af28d960115": {
+          "progression_name": "Pridaj sprajty"
+        },
+        "c0fc532b-e6eb-4858-af5b-5032cd917616": {
+          "progression_name": "Pridaj text"
+        },
+        "53f44c86-807a-412c-a436-ed4235537ed4": {
+          "progression_name": "Skontroluj si scénu"
+        },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
             null
@@ -12707,7 +12796,8 @@
         "18bcf449-d684-4e93-abbd-5af4e82d1e7b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Predstavujeme cyklus draw()"
         },
         "09ba5105-6934-4a31-9684-3e62192e7542": {
           "progression_name": "Objavovanie"
@@ -12786,6 +12876,27 @@
             null
           ]
         },
+        "d77db66e-6e3a-4e3a-82df-2499a5ad0efd": {
+          "progression_name": "Príklad animovanej scény"
+        },
+        "3b4e9eb3-a29a-432e-b6dd-0c525bfaedf2": {
+          "progression_name": "Naplánuj si scénu"
+        },
+        "2e883502-c179-45a9-a313-6ec995831ed2": {
+          "progression_name": "Nakresli pozadie"
+        },
+        "68f06aee-a50d-4b3e-9323-16f4812eb23a": {
+          "progression_name": "Pridaj sprajty"
+        },
+        "6e3a6230-12e7-4b7f-90a7-ec8574647b3b": {
+          "progression_name": "Pridaj text"
+        },
+        "08bedf45-b2d1-4147-8479-22a9c5f20d51": {
+          "progression_name": "Pridaj pohyby"
+        },
+        "7de39108-1c8b-4602-9afe-cfde5d7f3ed4": {
+          "progression_name": "Skontroluj svoju animovanú scénu"
+        },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
             null
@@ -12820,6 +12931,9 @@
             null
           ],
           "progression_name": "Video: Logické výrazy"
+        },
+        "6eac26fe-a47a-4dbc-b225-c006efd6c418": {
+          "progression_name": "Rýchla kontrola"
         },
         "ba88e2d6-49b9-4e4b-a34f-3a7804ea1ce5": {
           "progression_name": "Budovanie zručností"
@@ -12927,10 +13041,14 @@
             null
           ]
         },
+        "00e65ea4-8a6e-408e-bb09-2fcb9f1a27d6": {
+          "progression_name": "Ukážková aplikácia: Interaktívna pohľadnica"
+        },
         "4b3c39d2-a62c-43c3-b5ae-048ef270624a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vytvor si interaktívnu pohľadnicu"
         },
         "1f6b91fb-f2a1-4585-bb33-4ede2232a20d": {
           "progression_name": "Projektová práca"
@@ -13095,7 +13213,7 @@
           ]
         },
         "a7af5fa7-b9bc-4779-bf77-e349bd07d0f2": {
-          "progression_name": "Pohyb \"sprite\" objektu"
+          "progression_name": "Pohyb sprajtov"
         },
         "40b22769-f206-4725-b2f4-fd3f71c15101": {
           "tips": [
@@ -13122,6 +13240,9 @@
             null
           ],
           "progression_name": "Cvičenie"
+        },
+        "46206978-44fa-44f3-a4b3-746a30a86dce": {
+          "progression_name": "Rýchla kontrola"
         },
         "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
           "tips": [
@@ -14353,7 +14474,8 @@
         "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Rýchla kontrola"
         },
         "f5c13deb-a9a7-4f04-9daa-ec92ec261b02": {
           "tips": [
@@ -14384,6 +14506,9 @@
           "tips": [
             null
           ]
+        },
+        "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c": {
+          "name": "Spätná väzba spoluriešiteľa"
         },
         "a167e87b-c7c9-4adc-a70d-c49dcb309bc8": {
           "name": "Denník"

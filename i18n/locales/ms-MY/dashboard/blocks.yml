@@ -1239,6 +1239,7 @@ ms:
             '180': kiri
             '270': atas
       gamelab_makeSpritesWithSize:
+        text: jadikan {NUM} {SIZE} {COSTUME} sprite baharu
         options:
           SIZE:
             '30': kecil
@@ -1461,6 +1462,46 @@ ms:
         text: "{SPRITE} katakan {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE} katakan {TEXT1} untuk {NUM} saat"
+      gamelab_spriteThink:
+        text: "{SPRITE} fikir {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}fikir{TEXT1}selama{NUM}saat"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} fikir {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I am hungry, too."': Saya juga lapar.
+            '"I only want the biggest goat."': Saya hanya mahu kambing yang paling besar.
+            '"I''m a green troll."': Saya troll hijau.
+            '"No one will cross my bridge."': Tiada siapa yang akan menyeberangi jambatan saya
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} fikir {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"Time to make friends with the sheep."': Masa untuk berkawan dengan biri-biri.
+            '"She''ll never recognize me now."': Dia tidak akan mengenali saya sekarang.
+            '"This costume keeps me warm."': Kostum ini membuatkan saya tetap hangat.
+            '"I am actually a wolf."': Saya sebenarnya seekor serigala.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} fikir {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m feeling sleepy."': Saya rasa mengantuk.
+            '"No one could ever beat me."': Tiada siapa yang boleh mengalahkan saya.
+            '"I''ve done this race before."': Saya pernah melakukan perlumbaan ini sebelum ini.
+            '"My feet are bigger than Turtle''s feet."': Kaki saya lebih besar daripada kaki Penyu.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} fikir {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m so hungry."': Saya sangat lapar.
+            '"I''m a visitor in this town."': Saya seorang pelawat di bandar ini.
+            '"If we share, we''ll all have something to eat. "': Jika kita berkongsi, kita semua akan mempunyai sesuatu untuk dimakan.
+            '"I''ll trick everyone into giving me their food."': Saya akan menipu semua orang supaya mereka memberi saya makanan mereka.
       gamelab_startAvoiding:
         text: "{SPRITE} mula mengelak {TARGET}"
       gamelab_startFollowing:

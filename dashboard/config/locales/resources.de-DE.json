@@ -816,7 +816,7 @@
           "type": "Ressource"
         },
         "feeling-faces-image/courseb/2021": {
-          "name": "Fühlende Gesichter",
+          "name": "Gefühlsgesichter",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Emotionale Bilder"
         },
@@ -825,11 +825,11 @@
           "url": "https://studio.code.org/s/jigsaw"
         },
         "class-section-video/courseb/2021": {
-          "name": "Wie man einen Klassenabschnitt auf Code.org erstellt",
+          "name": "Erstellen eines Klassenabschnitt auf Code.org",
           "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "course-ab-blockly-blocks/courseb/2021": {
-          "name": "Unplugged Blockly Blocks (Klassenstufe K-1)",
+          "name": "Blockly Blocks ohne Computer (Klasse 1)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
           "type": "Manipulatoren"
         },
@@ -849,7 +849,7 @@
           "type": "Ressource"
         },
         "happy-map-game-pieces/courseb/2021": {
-          "name": "Happy Map Spielfiguren",
+          "name": "Fröhliche Karten - Spielfiguren",
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
           "type": "Manipulatoren"
         },
@@ -1047,7 +1047,7 @@
           "type": "Arbeitsblatt Antwortschlüssel"
         },
         "happy-map-game-pieces/coursea/2021": {
-          "name": "Happy Map Spielfiguren",
+          "name": "Fröhliche Karten - Spielfiguren",
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
           "type": "Manipulatoren"
         },
@@ -1057,7 +1057,7 @@
           "type": "Ressource"
         },
         "course-ab-blockly-blocks/coursea/2021": {
-          "name": "Unplugged Blockly Blocks (Klassenstufe K-1)",
+          "name": "Blockly Blocks ohne Computer (Klasse 1)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
           "type": "Manipulatoren"
         },
@@ -1102,7 +1102,7 @@
           "type": "Ressource"
         },
         "feeling-faces-image/coursea/2021": {
-          "name": "Fühlende Gesichter",
+          "name": "Gefühlsgesichter",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Emotionale Bilder"
         },
@@ -1598,7 +1598,7 @@
           "type": "Antwortschlüssel"
         },
         "feeling-faces-image/coursed/2021": {
-          "name": "Fühlende Gesichter",
+          "name": "Gefühlsgesichter",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Emotionale Bilder"
         },
@@ -1836,12 +1836,12 @@
           "type": "Studenten-Video"
         },
         "class-section-video/pre-express/2021": {
-          "name": "Wie man einen Klassenabschnitt auf Code.org erstellt",
+          "name": "Erstellen eines Klassenabschnitt auf Code.org",
           "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
           "type": "Video für Lehrkräfte"
         },
         "feeling-faces-image/pre-express/2021": {
-          "name": "Fühlende Gesichter",
+          "name": "Gefühlsgesichter",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Emotionale Bilder"
         },

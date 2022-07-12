@@ -49,7 +49,6 @@ class CodeReviewsControllerTest < ActionController::TestCase
     response_json = JSON.parse(response.body)
     assert_not_nil response_json['id']
     assert_equal project_version, response_json['version']
-    assert_equal false, response_json['isVersionExpired']
     assert_equal true, response_json['isOpen']
     assert_not_nil response_json['createdAt']
   end

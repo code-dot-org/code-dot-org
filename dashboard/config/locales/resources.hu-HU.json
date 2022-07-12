@@ -1013,7 +1013,11 @@
           "type": "Videó"
         },
         "video_training_data_and_bias/csd/2021": {
+          "name": "Videó: Képzési adatok és torzítások",
           "type": "Videó"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Társ értékelése"
         },
         "make-a-recommendation-1/csd/2021": {
           "type": "Rubrika"
@@ -1088,6 +1092,9 @@
         "interactive-card-project-guide-2019/csd/2021": {
           "type": "Projektútmutató"
         },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Társ értékelése"
+        },
         "interactive_card/csd/2021": {
           "type": "Rubrika"
         },
@@ -1095,9 +1102,11 @@
           "type": "Videó"
         },
         "side-scroller-1/csd/2021": {
+          "name": "Oldalsó görgető",
           "type": "Rubrika"
         },
         "side-scroller/csd/2021": {
+          "name": "Oldalsó görgető",
           "type": "Projektútmutató"
         },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
@@ -1121,6 +1130,9 @@
         "make-your-own-game/csd/2021": {
           "type": "Projektútmutató"
         },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Társ értékelése"
+        },
         "make_your_own_game/csd/2021": {
           "type": "Rubrika"
         },
@@ -1142,6 +1154,9 @@
         "what-do-computers-do/csd/2021": {
           "type": "Videó"
         },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "Társ értékelése"
+        },
         "apps_and_problem_solving/csd/2021": {
           "type": "Rubrika"
         },
@@ -1155,6 +1170,7 @@
           "type": "Videó"
         },
         "video_pair_programming/csd/2021": {
+          "name": "Videó: Páros programozás",
           "type": "Videó"
         },
         "headings_and_paragraphs/csd/2021": {
@@ -1167,6 +1183,9 @@
         "html-web-page-1/csd/2021": {
           "type": "Rubrika"
         },
+        "html-web-page/csd/2021": {
+          "type": "Társ értékelése"
+        },
         "html-page/csd/2021": {
           "type": "Projektútmutató"
         },
@@ -1176,6 +1195,12 @@
         "lists/csd/2021": {
           "name": "Listák"
         },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Közösségi nyomozó"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "Közösségi nyomozó"
+        },
         "intro_to_css_-_part_1/csd/2021": {
           "type": "Videó"
         },
@@ -1184,6 +1209,9 @@
         },
         "your-personal-style-1-2-3/csd/2021": {
           "type": "Rubrika"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Társ értékelése"
         },
         "your-personal-style/csd/2021": {
           "type": "Projektútmutató"
@@ -1196,6 +1224,9 @@
         },
         "person-web-page-prepare/csd/2021": {
           "type": "Projektútmutató"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Társ értékelése"
         },
         "person-web-page-reflect/csd/2021": {
           "type": "Projektútmutató"
@@ -1212,6 +1243,7 @@
           "type": "Videó"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "Videó: Csoportmunka",
           "type": "Videó"
         },
         "how-search-works-video/csd/2021": {
@@ -1226,6 +1258,9 @@
         },
         "hyperlinks/csd/2021": {
           "name": "Hiperhivatkozások"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Társ értékelése"
         },
         "website-for-a-purpose-reflect/csd/2021": {
           "type": "Projektútmutató"

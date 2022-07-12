@@ -722,6 +722,7 @@ hr:
         music: Glazba
         art: Umjetnost
         other: 'Ostalo:'
+        na: Nije primjenjivo
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -730,7 +731,8 @@ hr:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Ostalo:'
+        other: Ostalo
+        na: Nije primjenjivo
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -740,7 +742,8 @@ hr:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Ostalo:'
+        other: Ostalo
+        na: Nije primjenjivo
       workshop_course:
         csf_af: Osnove RZ (Tečajevi A-F)
         csf_express: Osnove RZ (Pred-Brzi ili Brzi)

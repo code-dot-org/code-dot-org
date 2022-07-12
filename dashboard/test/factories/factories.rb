@@ -823,42 +823,42 @@ FactoryGirl.define do
 
     factory :csf_script do
       after(:create) do |csf_script|
-        csf_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSF
+        csf_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSF
         csf_script.save!
       end
     end
 
     factory :csd_script do
       after(:create) do |csd_script|
-        csd_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSD
+        csd_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSD
         csd_script.save!
       end
     end
 
     factory :csp_script do
       after(:create) do |csp_script|
-        csp_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSP
+        csp_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSP
         csp_script.save!
       end
     end
 
     factory :csa_script do
       after(:create) do |csa_script|
-        csa_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSA
+        csa_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSA
         csa_script.save!
       end
     end
 
     factory :csc_script do
       after(:create) do |csc_script|
-        csc_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
+        csc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
         csc_script.save!
       end
     end
 
     factory :hoc_script do
       after(:create) do |hoc_script|
-        hoc_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
+        hoc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
         hoc_script.save!
       end
     end
@@ -1133,7 +1133,7 @@ FactoryGirl.define do
 
   factory :user_script do
     user {create :student}
-    script {create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable}
+    script {create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
   end
 
   factory :user_school_info do
@@ -1620,7 +1620,7 @@ FactoryGirl.define do
     association :script
   end
 
-  factory :project_version do
+  factory :project_commit do
     sequence(:project_id)
     sequence(:object_version_id)
     comment 'a commit comment'

@@ -4,11 +4,11 @@ import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const CodeReviewError = ({messageTitle, messageText}) => {
+const CodeReviewError = ({messageTitle, messageText, style = {}}) => {
   const title = messageTitle || javalabMsg.genericError();
   const text = messageText || javalabMsg.genericErrorMessage();
   return (
-    <div style={styles.saveStatus}>
+    <div style={{...styles.saveStatus, ...style}}>
       <FontAwesome icon="exclamation-circle" style={styles.iconError} />
       <div>
         <p style={styles.messageTitle}>{title}</p>
@@ -46,5 +46,6 @@ export default CodeReviewError;
 
 CodeReviewError.propTypes = {
   messageTitle: PropTypes.string,
-  messageText: PropTypes.string
+  messageText: PropTypes.string,
+  style: PropTypes.object
 };

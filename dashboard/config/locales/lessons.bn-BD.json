@@ -20,6 +20,24 @@
         "playlab/Play Lab": {
           "name": "প্লে ল্যাব"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "চক্র"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "ঘটনাবলী"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "শর্তযুক্ত"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "ফাংশনগুলি"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "চলকগুলো"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "ফর লুপ"
+        },
         "coursea-2018/Programming: Happy Maps": {
           "name": "আনন্দের মানচিত্র"
         },
@@ -176,6 +194,66 @@
         "course4/Artist Binary": {
           "name": "শিল্পী দ্বিমিক"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "কম্পিউটার বিজ্ঞান পরিচিতি"
+        },
+        "20-hour/The Maze": {
+          "name": "গোলকধাঁধা"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "গণিতিক চিন্তা-ভাবনা"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "20-hour/The Artist": {
+          "name": "শিল্পী"
+        },
+        "20-hour/Algorithms": {
+          "name": "অ্যালগরিদম"
+        },
+        "20-hour/The Artist 2": {
+          "name": "চিত্রকর ২"
+        },
+        "20-hour/Functions": {
+          "name": "ফাংশনগুলি"
+        },
+        "20-hour/The Farmer": {
+          "name": "কৃষক"
+        },
+        "20-hour/Conditionals": {
+          "name": "শর্তযুক্ত"
+        },
+        "20-hour/The Artist 3": {
+          "name": "পটুয়া ৩"
+        },
+        "20-hour/Song Writing": {
+          "name": "গান লিখা"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "কৃষক ২"
+        },
+        "20-hour/Abstraction": {
+          "name": "অপসারণ"
+        },
+        "20-hour/The Artist 4": {
+          "name": "চিত্রকর ৪"
+        },
+        "20-hour/Relay Programming": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "কৃষক ৩"
+        },
+        "20-hour/The Internet": {
+          "name": "ইন্টারনেট"
+        },
+        "20-hour/The Artist 5": {
+          "name": "চিত্রকর ৫"
+        },
+        "20-hour/Wrap-up": {
+          "name": "গুটিয়ে নেয়া"
+        },
         "course2/Graph Paper Programming": {
           "name": "ছক-কাগজে প্রোগ্রামিং"
         },
@@ -259,6 +337,27 @@
         },
         "jigsaw/Jigsaw": {
           "name": "টুকরো কাঠের ধাঁধা"
+        },
+        "allthethings/Jigsaw": {
+          "name": "টুকরো কাঠের ধাঁধা"
+        },
+        "allthethings/Maze": {
+          "name": "গোলকধাঁধা"
+        },
+        "allthethings/Artist": {
+          "name": "শিল্পী"
+        },
+        "allthethings/Bee": {
+          "name": "মৌমাছি"
+        },
+        "allthethings/Flappy": {
+          "name": "ফ্লাপি"
+        },
+        "allthethings/Bounce": {
+          "name": "বল লাফানো"
+        },
+        "allthethings/Minecraft": {
+          "name": "মাইনক্র্যাফট"
         },
         "coursef-2021/Internet": {
           "name": "ইন্টারনেট"

@@ -116,7 +116,10 @@
           "student_overview": "V určitém bodě narazíme na hranici fyzických možností ohledně rychlosti posílání bitů. Pokud chceme posílat větší množství informací rychleji, musíme najít způsob, jak reprezentovat stejnou informaci pomocí menšího množství bitů – musíme komprimovat data. "
         },
         "outbreak/Outbreak": {
-          "purpose": "V předchozí lekci studenti shromažďovali a interpretovali data z jedné jednoduché simulace. V této lekci budou studenti postupovat podle návodu k naprogramování svého vlastního simulačního modelu. Předchozí znalosti studentů o virových epidemiích v reálném světě budou aplikovány na fiktivní scénář. "
+          "overview": "Tato lekce kombinuje **rozvíjení dovedností** u událostí s **miniprojektem**, kde si studenti vyzkoušejí vytváření vlastní počítačové simulace v Laboratoři sprajtů. Bližší prozkoumání simulace má studentům ukázat, jak rychle se může šířit virus a jakými prostředky je možné toto šíření zpomalit. ",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
+          "purpose": "V předchozí lekci studenti shromažďovali a interpretovali data z jedné jednoduché simulace. V této lekci budou studenti postupovat podle návodu k naprogramování svého vlastního simulačního modelu. Předchozí znalosti studentů o virových epidemiích v reálném světě budou aplikovány na fiktivní scénář. ",
+          "student_overview": "Do Města příšerek přišel virus! Naučte se vytvořit simulátor viru a pomozte příšerkám znovu se uzdravit."
         },
         "sports/Sports": {
           "overview": "V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. ",
@@ -134,6 +137,9 @@
         "dance-extras-2019/Dance Party - Go Further": {
           "purpose": "Tato lekce představuje základní koncepty informatiky, a to kódování a událostmi řízení programování (pomocí bloků)."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hodina kódu 2013"
+        },
         "dance-2019/Dance Party": {
           "name": "Taneční večírek (2019)",
           "overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu.",
@@ -146,8 +152,59 @@
           "purpose": "Tento výukový kurz je navržen tak, aby studentům poskytl stručný úvod do **strojového učení**, což je typ **umělé inteligence**. Studenti budou zkoumat, jak se používají **školící data** k tomu, aby bylo modelu strojového učení umožněno klasifikovat nová data. Studenti by měli během absolvování výukového kurzu prožívat příjemný prožitek, a co je ještě důležitější, mělo by je to motivovat k výuce počítačových věd. ",
           "student_overview": "Shrnutí výukového kurzu: Nejprve studenti zařadí předměty jako buďto „ryba“ nebo „neryba“, aby se pokusili odstranit odpad z oceánu. Pak budou studenti muset rozšířit svůj cvičný datový soubor tak, aby zahrnoval i jiné mořské tvory patřící do vody. V druhé části aktivity budou studenti vybírat své vlastní značky, které aplikují na obrázky náhodně vytvořených ryb. Tato cvičná data se používají pro model strojového učení, který by měl být schopen označovat nové obrázky sám od sebe."
         },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sekvence"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Cykly"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Události"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Podmínky"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Projekty k ukončení kurzu"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkce"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Proměnné"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Cykly \"For\""
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laboratoř Sprite"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Studie nálady"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Začínáme"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Základy informatiky"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Plánování"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routery a adresy"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pakety a spolehlivost"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Začínáme"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Základy informatiky"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Plánování"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Pohyb, pohyb"
@@ -163,6 +220,9 @@
         },
         "courseb-2018/Programming in Ice Age": {
           "name": "Programování se Scratem"
+        },
+        "courseb-2018/Copyright and Creativity": {
+          "name": "Tvoření a férová hra jsou super"
         },
         "courseb-2018/Programming with Rey and BB-8": {
           "name": "Programování s Rey a BB-8"
@@ -500,6 +560,9 @@
         "coursee-2018/Conditionals": {
           "name": "Podmínky s Farmářkou"
         },
+        "coursee-2018/Private and Personal Information": {
+          "name": "Soukromé a osobní informace"
+        },
         "coursee-2018/Build a Star Wars Game": {
           "name": "Vytvoř Star Wars hru"
         },
@@ -511,6 +574,9 @@
         },
         "coursee-2018/Functions in Harvester": {
           "name": "Funkce s farmářkou"
+        },
+        "coursee-2018/Copyright and Creativity": {
+          "name": "Digitální sdílení"
         },
         "coursee-2018/Functions in Artist": {
           "name": "Funkce s Artist"
@@ -605,6 +671,9 @@
         "pre-express-2018/Programming in Ice Age": {
           "name": "Programování se Scratem"
         },
+        "pre-express-2018/Copyright and Creativity": {
+          "name": "Tvoření a férová hra jsou super"
+        },
         "pre-express-2018/Programming with Rey and BB-8": {
           "name": "Programování s Rey a BB-8"
         },
@@ -638,11 +707,26 @@
         "csd3-2018/Conditionals": {
           "name": "Podmínky"
         },
+        "csd3-2018/Keyboard Input": {
+          "name": "Vstup z klávesnice"
+        },
         "csd3-2018/Velocity": {
           "name": "Rychlost"
         },
+        "csd3-2018/Collisions": {
+          "name": "Kolize"
+        },
         "csd3-2018/Functions": {
           "name": "Funkce"
+        },
+        "csd3-2018/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd6-2018/Board Events": {
+          "name": "Události desky"
+        },
+        "csd6-2018/Getting Properties": {
+          "name": "Načtení vlastností"
         },
         "csd6-2018/Analog Input": {
           "name": "Analogový vstup"
@@ -650,8 +734,35 @@
         "csd6-2018/Functions with Parameters": {
           "name": "Funkce s Parametry"
         },
+        "csd6-2018/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd5-2018/Representing Images": {
+          "name": "Reprezentace obrázků"
+        },
+        "csd5-2018/Keeping Data Secret": {
+          "name": "Udržování dat v tajnosti"
+        },
+        "csd5-2018/Combining Representations": {
+          "name": "Kombinování reprezentací"
+        },
+        "csd5-2018/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd4-2018/Linking Screens": {
+          "name": "Propojení obrazovek"
+        },
+        "csd4-2018/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd2-2018/Headings": {
+          "name": "Záhlaví"
+        },
         "csd2-2018/Lists": {
           "name": "Seznamy"
+        },
+        "csd2-2018/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Cestování bezpečně"
@@ -824,6 +935,9 @@
         "coursef-2019/Crowdsourcing": {
           "name": "Crowdsourcing"
         },
+        "coursef-2019/Digital Sharing": {
+          "name": "Digitální sdílení"
+        },
         "coursef-2019/End of Course Project": {
           "name": "Projekt na zakončení kurzu"
         },
@@ -847,6 +961,9 @@
         },
         "coursee-2019/Alien Dance Party with Sprite Lab": {
           "name": "Taneční večírek vetřelců s Laboratoří sprajtů"
+        },
+        "coursee-2019/Private and Personal Information": {
+          "name": "Soukromé a osobní informace"
         },
         "coursee-2019/About Me": {
           "name": "O mě s Laboratoří sprajtů"
@@ -1049,17 +1166,44 @@
         "csd3-2019/Conditionals": {
           "name": "Podmínky"
         },
+        "csd3-2019/Keyboard Input": {
+          "name": "Vstup z klávesnice"
+        },
         "csd3-2019/Velocity": {
           "name": "Rychlost"
         },
+        "csd3-2019/Collisions": {
+          "name": "Kolize"
+        },
         "csd3-2019/Functions": {
           "name": "Funkce"
+        },
+        "csd6-2019/Board Events": {
+          "name": "Události desky"
+        },
+        "csd6-2019/Getting Properties": {
+          "name": "Načtení vlastností"
         },
         "csd6-2019/Analog Input": {
           "name": "Analogový vstup"
         },
         "csd6-2019/Functions with Parameters": {
           "name": "Funkce s Parametry"
+        },
+        "csd4-2019/Linking Screens": {
+          "name": "Propojení obrazovek"
+        },
+        "csd5-2019/Representing Images": {
+          "name": "Reprezentace obrázků"
+        },
+        "csd5-2019/Keeping Data Secret": {
+          "name": "Udržování dat v tajnosti"
+        },
+        "csd5-2019/Combining Representations": {
+          "name": "Kombinování reprezentací"
+        },
+        "csd2-2019/Headings": {
+          "name": "Záhlaví"
         },
         "csd2-2019/Lists": {
           "name": "Seznamy"
@@ -1541,11 +1685,23 @@
         "csd3-2017/Conditionals": {
           "name": "Podmínky"
         },
+        "csd3-2017/Keyboard Input": {
+          "name": "Vstup z klávesnice"
+        },
         "csd3-2017/Velocity": {
           "name": "Rychlost"
         },
+        "csd3-2017/Collisions": {
+          "name": "Kolize"
+        },
         "csd3-2017/Functions": {
           "name": "Funkce"
+        },
+        "csd6-2017/Board Events_": {
+          "name": "Události desky"
+        },
+        "csd6-2017/Getting Properties_": {
+          "name": "Načtení vlastností"
         },
         "csd6-2017/Analog Input_": {
           "name": "Analogový vstup"
@@ -1553,8 +1709,23 @@
         "csd6-2017/Functions with Parameters_": {
           "name": "Funkce s Parametry"
         },
+        "csd2-2017/Headings": {
+          "name": "Záhlaví"
+        },
         "csd2-2017/Lists": {
           "name": "Seznamy"
+        },
+        "csd5-2017/Representing Images": {
+          "name": "Reprezentace obrázků"
+        },
+        "csd5-2017/Keeping Data Secret": {
+          "name": "Udržování dat v tajnosti"
+        },
+        "csd5-2017/Combining Representations": {
+          "name": "Kombinování reprezentací"
+        },
+        "csd4-2017/Linking Screens": {
+          "name": "Propojení obrazovek"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Nezapojené: Tangramy"
@@ -1621,6 +1792,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extrémní výzva - souhrnná"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Úvod do informatiky"
+        },
+        "20-hour/The Maze": {
+          "name": "Bludiště"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Aritmetické Myšlení"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programování na čtverečkovaném papíru"
+        },
+        "20-hour/The Artist": {
+          "name": "Umělec"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmy"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Umělec 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funkce"
+        },
+        "20-hour/The Farmer": {
+          "name": "Farmář"
+        },
+        "20-hour/Conditionals": {
+          "name": "Podmínky"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Umělec 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Psaní Písně"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Farmářka 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstrakce"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Malíř 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Štafetové programování"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Farmář 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Umělec 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Shrnutí"
         },
         "course2/Graph Paper Programming": {
           "name": "Programování na čtverečkovaném papíru"
@@ -1803,6 +2034,51 @@
           "purpose": "Hlavním cílem této lekce je prohloubit zkušenosti studentů s počítači. Tím, že si studenti osvojí nejzákladnější funkce ovládání počítače, jako je klikání a přetahování, vytvoří se ve třídě rovnější podmínky pro práci na budoucích zadáních. Tato lekce je také skvělou příležitostí k představení základní terminologie počítačového hardwaru – a k seznámení žáků s myší, trackpadem nebo dotykovou obrazovkou – podle toho, jaké zařízení používáte.",
           "student_overview": " Hlavolamy dokončete kliknutím a potažením."
         },
+        "allthethings/Jigsaw": {
+          "name": "Skládačka"
+        },
+        "allthethings/Maze": {
+          "name": "Bludiště"
+        },
+        "allthethings/Artist": {
+          "name": "Umělec"
+        },
+        "allthethings/Bee": {
+          "name": "Včela"
+        },
+        "allthethings/Farmer": {
+          "name": "Farmář"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Bounce"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Match": {
+          "name": "Shoda"
+        },
+        "allthethings/Text Compression": {
+          "name": "Komprese textu"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Laboratoř Sprite"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java Lab"
+        },
         "coursef-2021/lesson-6": {
           "overview": "V této lekci pro navození **kontextu** budou studenti diskutovat o roli počítačů a technologií v jejich životě a zaměří se na to, jak aplikace a nástroje dávají uživatelům možnost volby, jak je používat. Studenti také prozkoumají aplikace podobné těm, které si později sami vytvoří.",
           "preparation": "-   Určete, jak se budou studenti přihlašovat do Code.org.\n-   V případě potřeby vytvořte studentům účty na Code.org.\n-   Přiřaďte studentům představení laboratoře sprajtů.\n-   Vytiskněte kopie pracovního listu **\\*Zkoumání aplikací** (nebo umístěte digitální verzi do systému LMS).",
@@ -1819,6 +2095,8 @@
           "purpose": "Tato lekce je určena k posílení dovedností z předchozí lekce a seznámení studentů s programováním pomocí událostí. V průběhu celého kurzu budou události hlavním způsobem, jakým studenti mění chod svých programů v čase nebo v reakci na uživatele."
         },
         "coursef-2021/Virtual Pet": {
+          "name": "Miniprojekt: Virtuální zvířátko",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Tato lekce umožňuje studentům aplikovat koncepty programování z předchozích lekcí v jiném tvůrčím kontextu. "
         },
         "coursef-2021/lesson-2": {
@@ -1839,28 +2117,33 @@
           "purpose": "Proměnné se v tomto kurzu používají k ukládání a úpravě dat. V tomto okamžiku budou studenti pouze ukládat a načítat hodnoty, aniž by je měnili. V pozdějších lekcích budou studenti ukládat číselné hodnoty a měnit je v čase, aby mohli sledovat například skóre hráče ve hře."
         },
         "coursef-2021/lesson-11": {
+          "name": "Miniprojekt: Programy vstupu uživatele",
           "preparation": "-   Vytiskněte průvodce plánováním nebo každému studentovi dejte jeho digitální kopii. Projděte si ji předem pro případ, že byste ji chtěli upravit tak, aby vyhovovala vaší třídě.\n\n-   Předem si projděte možnosti v úrovni 3, abyste se seznámili s průběhem, který budou muset studenti dodržovat.\n\n-   Tato lekce může být rozvržena na více vyučovacích hodin. Předem zvažte důsledky pro rozvrhování.",
           "purpose": "Tato lekce nepředstavuje nové dovednosti nebo pojmy, ale dává studentům příležitost tvůrčím způsobem uplatnit to, co se naučili."
         },
         "coursef-2021/Loops with the Artist": {
           "name": "Kreslení s cykly",
           "overview": "Tato lekce **budování dovedností** přenáší důraz od Laboratoře sprajtů k Umělci, novému nástroji, který budou  studenti zkoumat v průběhu ostatku tohoto kurzu.",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Studenti si procvičí používání cyklů, což je koncept, ke kterému se budou vracet v dalších lekcích."
         },
         "coursef-2021/Variables that Change in Artist": {
           "overview": "V této lekci **budování dovedností** budou studenti zkoumat vytváření opakujících se návrhů pomocí proměnných v prostředí Umělec. Studenti se dozvědí, jak proměnné usnadňují psaní programového kódu a zvyšují jeho čitelnost. Po hlavolamech s nápovědou budou studenti končit na úrovni volného hraní tak, aby ukázali, co se naučili, a aby vytvářeli nové návrhy.",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Proměnné jsou v podstatě zástupci hodnot, které mohou být v době spuštění programu neznámé, nebo hodnot, které se mohou během provádění programu změnit. Jsou důležité pro vytváření dynamického kódu, protože umožňují, aby se váš program měnil a rostl na základě libovolného počtu potenciálních změn. Tato fáze posiluje používání proměnných a využívá nejzákladnější možnosti jejich nastavování a používání.",
           "student_overview": "V této lekci budete vytvářet kresby pomocí proměnných, které se budou měnit za chodu programu."
         },
         "coursef-2021/Nested Loops in the Maze": {
           "name": "Vnořené cykly v bludišti",
           "overview": "V této online aktivitě dostanou studenti příležitost posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Tato lekce představuje (nebo shrnuje), jak fungují včelí hádanky, a uvede studenty do problematiky _vnořených cyklů_. Další lekce se vrací k proměnným.",
           "student_overview": "Tato lekce Vás naučí, co se stane, když dáte cyklus dovnitř jiného cyklu."
         },
         "coursef-2021/Variables that Change in Bee": {
           "name": "Proměnná s včelou",
           "overview": "Tato lekce **budování dovedností** pomůže ilustrovat, jak mohou proměnné dělat programy dynamičtějšími tím, že umožňují změnu hodnoty za chodu kódu.",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Tato lekce ukáže, jak může být užitečný kód s měnícími se hodnotami, a připraví studenty na pochopení fungování cyklů „pro“ v následujících lekcích.",
           "student_overview": "Včela miluje proměnné!"
         },
@@ -1870,10 +2153,12 @@
           "purpose": "V tomto okamžiku studenti mistrně zvládají cykly. Dnes se seznámí s dalším cyklem, který se v programování běžně používá. Cyklus „pro“ opakuje příkazy po určitý počet opakování, ale také sleduje hodnoty, nad kterými iteruje. Například cyklus „pro“, který začíná příkazem 4, končí příkazem 8 a má hodnotu kroku 1, se bude opakovat čtyřikrát, ale hodnoty 4, 5, 6 a 7 budou také zachyceny pro použití jinde. Použitím této struktury s proměnnými lze vytvořit docela fantastické programy. Dnes se studenti jednoduše naučí základy cyklu „pro“, než se s nimi příště ponoří do programování!"
         },
         "coursef-2021/For Loops in Bee": {
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Dnešní pojem, cykly pro, je v informatice velmi důležitým tématem. Nejenže se hojně používají, ale proces učení se cykům pro zlepšuje osvojování si dalších důležitých pojmů (jako jsou proměnné a parametry.) Studenti si procvičí kritické myšlení při řešení problémů určováním počátečních, koncových a krokových hodnot pro každý cyklus pro. Tento pojem využívá také spoustu matematiky, takže jej klidně spojte s hodinou matematiky, abyste ještě více prohloubili výuku."
         },
         "coursef-2021/For Loops in Artist": {
           "name": "Na cykly s Artist",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "V této lekci se krásně snoubí kreativita a kritické myšlení. Studenti budou pokračovat v procvičování cyklů „pro“ a proměnných a zároveň vytvoří úchvatné obrázky. Tato lekce inspiruje kreativní myšlení a zároveň učí základní pojmy informatiky."
         },
         "coursef-2021/Simulating Experiments": {
@@ -1884,7 +2169,10 @@
         },
         "coursef-2021/lesson-5": {
           "name": "Epidemie",
-          "purpose": "V předchozí lekci studenti shromažďovali a interpretovali data z jedné jednoduché simulace. V této lekci budou studenti postupovat podle návodu k naprogramování svého vlastního simulačního modelu. Předchozí znalosti studentů o virových epidemiích v reálném světě budou aplikovány na fiktivní scénář. "
+          "overview": "Tato lekce kombinuje **rozvíjení dovedností** u událostí s **miniprojektem**, kde si studenti vyzkoušejí vytváření vlastní počítačové simulace v Laboratoři sprajtů. Bližší prozkoumání simulace má studentům ukázat, jak rychle se může šířit virus a jakými prostředky je možné toto šíření zpomalit. ",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
+          "purpose": "V předchozí lekci studenti shromažďovali a interpretovali data z jedné jednoduché simulace. V této lekci budou studenti postupovat podle návodu k naprogramování svého vlastního simulačního modelu. Předchozí znalosti studentů o virových epidemiích v reálném světě budou aplikovány na fiktivní scénář. ",
+          "student_overview": "Do Města příšerek přišel virus! Naučte se vytvořit simulátor viru a pomozte příšerkám znovu se uzdravit."
         },
         "coursef-2021/AI for Oceans": {
           "name": "AI pomáhá oceánům",
@@ -2105,6 +2393,7 @@
         "coursec-2021/Loops in Harvester": {
           "name": "Sběr úrody s cykly",
           "overview": "V této lekci **budování dovedností** budou studenti cyklovat nové úkony tak, aby umožnili sklízeči sesbírat více kusů zeleniny rostoucích ve velkých trsech.",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "V této lekci budou studenti používat smyčky k opakování činností, jako je sklizeň dýní. Vzniknou nové vzorce a studenti využijí kreativitu a logické myšlení, aby určili, jaký kód je třeba opakovat a kolikrát.",
           "student_overview": "Použijme cyklů k tomu, abychom pomohli sklízeči nasbírat nějakou zeleninu!"
         },
@@ -2122,10 +2411,12 @@
         },
         "coursec-2021/Build a Flappy Game": {
           "name": "Vytvoř hru Flappy Bird",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Události jsou v počítačových programech velmi běžné. V této lekci budou studenti dále rozvíjet své znalosti o událostech tím, že vytvoří hru _Flappy Bird_. Studenti se naučí, jak přimět svou postavu, aby se pohybovala po obrazovce, vydávala zvuky a reagovala na překážky na základě událostí iniciovaných uživatelem.",
           "student_overview": "Vybudujte si svou vlastní hru „Plácavý pták“ jakkoli chcete a poté ji sdílejte se svými přáteli!"
         },
         "coursec-2021/Events in Play Lab": {
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Studenti zde budou dále rozvíjet své porozumění událostem pomocí Play Lab. Studenti budou používat události k tomu, aby se postava pohybovala po obrazovce, vydávala zvuky a měnila pozadí na základě událostí iniciovaných uživatelem. Na konci sekvence hádanek budou mít studenti možnost podělit se o své projekty.  ",
           "student_overview": "Je čas být kreativní a vytvořit hru v Laboratoři her!"
         },
@@ -2162,6 +2453,7 @@
         },
         "coursed-2021/Introduction to Online Puzzles": {
           "name": "Představení online úloh",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Uvědomujeme si, že v každé třídě existuje spektrum znalostí pro každý předmět. Někteří studenti ve vaší třídě mohou být počítačoví mistři, zatímco jiní nemají s počítačem vůbec žádné zkušenosti. Abychom vytvořili rovné podmínky pro všechny (a pro učení), vytvořili jsme tuto \"etapu náběhu\" pro kurz D. Lze ji použít jako úvod nebo jako přehled o tom, jak používat Code.org a základní pojmy z oblasti informatiky. Tato etapa pokrývá všechny předpoklady potřebné k zahájení kurzu D.",
           "student_overview": "Tato lekce Vám dá praxi v dovednostech, které budete potřebovat pro tento kurz."
         },
@@ -2174,6 +2466,7 @@
         "coursed-2021/Debugging in Collector": {
           "name": "Ladění s Laurel",
           "overview": "V této online aktivitě si studenti procvičí ladění kódu v prostředí \"sběratele\". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly. ",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Cílem této lekce je naučit studenty, že neúspěch je při učení se nové dovednosti normální. Studenti dostanou předem napsané programy, které NEFUNGUJÍ. Budou požádáni, aby tyto programy opravili. Tento proces, nazývaný ladění, učí studenty základním dovednostem řešení problémů a kritického myšlení. Tyto dovednosti se přenášejí, když studenti postupují ke stále těžším a těžším programátorským projektům.",
           "student_overview": "Dostali jste se někdy při programování do problémů? V této lekci se naučíte tajemství ladění. Ladění je proces vyhledávání a opravování problémů ve Vašem kódu."
         },
@@ -2208,12 +2501,14 @@
         "coursed-2021/Loops in Artist": {
           "name": "Kreslení tvarů s cykly",
           "overview": "Tato lekce staví na pochopení cyklů z předchozí lekce a dává studentům možnost být opravdu kreativní. Tato aktivita se dá využít i pro procvičování ladění, aby si studenti dále vyzkoušeli svoje schopnosti řešit problémy. ",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Tato série zdůrazňuje sílu cyklů pomocí řady hádanek, které mají studenty přimět přemýšlet o tom, proč jsou „opakovací“ cykly lepší než běžné písmo.",
           "student_overview": "V této lekci cykly umožňují snadnou tvorbu pěkných obrázků s Umělcem!"
         },
         "coursed-2021/Nested Loops in Bee": {
           "name": "Vnořené cykly v bludišti",
           "overview": "V této online aktivitě dostanou studenti příležitost posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "V tomto úvodu do vnořených cyklů se studenti dostanou mimo svou komfortní zónu a vytvoří efektivnější řešení hádanek.  \n\nV dřívějších hádankách cykly nutily studenty rozpoznat opakování. Zde se studenti naučí rozpoznávat vzorce _v_ opakujících se vzorcích, aby mohli tyto vnořené cykly vyvíjet. Tato fáze začíná tím, že studenty povzbudí, aby se pokusili vyřešit hádanku, kde je kód otravný a příliš složitý na dlouhý zápis. Poté, co video představí vnořené cykly, je studentům ukázán příklad a jsou požádáni, aby předpověděli, co se stane, když je cyklus vložen do jiného cyklu. Tento postup vede ke spoustě cvičení, při kterých si studenti upevňují a rozvíjejí své znalosti o cyklech v programování."
         },
         "coursed-2021/Conditionals with Cards": {
@@ -2231,18 +2526,21 @@
         "coursed-2021/Conditionals in Bee": {
           "name": "Pokud/jinak se včelkou",
           "overview": "Dosud psali studenti kód, který fungoval pořád stejně vždy, když byl spuštěn. Spolehlivé, ale ne moc flexibilní. V této lekci začne vaše třída programovat s podmínkami, což jim umožní napsat kód, který funguje odlišně podle konkrétních podmínek, s nimiž se program setká.",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Po představení podmínek v části „Podmínky s kartami“ si studenti si procvičí používání podmínek ve svých programech. Bloky pokud / jinak umožní vytvořit flexibilnější program. Včela bude sbírat nektar, pouze _pokud_ existuje květ, nebo vyrábět med _pokud_ existuje plást. ",
           "student_overview": "Teď když rozumíte podmínkám, je čas začít programovat Včelu a používat je při sbírání medu a nektaru."
         },
         "coursed-2021/While Loops in Farmer": {
           "name": "Cykly pokud (while) s farmářkou",
           "overview": "V této lekci **budování dovedností** budou studenti pracovat na zaplňování děr a kopání půdy ve Farmářce, ale nebudou znát velikost těch děr ani výšku hromad půdy. Aby tyto hlavolamy vyřešili, budou studenti muset používat cykly nového druhu.",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "S tím, jak si budou vaši studenti prohlubovat své znalosti o cyklech, budou se setkávat s problémy, kdy je třeba příkaz opakovat, ale není známo, kolikrát je třeba jej opakovat. Zde přicházejí na řadu cykly zatímco. V dnešní lekci si studenti prohloubí začátečnické znalosti o cyklech založených na podmínkách a také si rozšíří znalosti o cyklech obecně. ",
           "student_overview": "Cykly jsou při programování tak užitečné. Tato lekce Vás naučí nový druh cyklu: cykly `while`!"
         },
         "coursed-2021/Until Loops in Maze": {
           "name": "Cykly dokud (until) v bludišti",
           "overview": "V této lekci se studenti naučí o cyklech `opakuj dokud nenastane` (until). Studenti budou stavět programy, v nichž hlavní postavy opakují akce, `dokud` se nedostanou do požadovaného bodu.",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Tato sada hádanek slouží k upevnění a prohloubení znalostí o smyčkách přidáním podmíněného příkazu „do“. Spojením těchto pojmů dohromady budou studenti moci prozkoumat možnosti tvorby složitých a inovativních programů.",
           "student_overview": "Když použij cykly `dokud`, můžeš udělat úžasné věci!"
         },
@@ -2481,16 +2779,19 @@
         },
         "coursee-2021/Simon Says": {
           "name": "Postupujte podle algoritmu",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Cílem této lekce je připravit studenty na uvažování o jednom ze základních konceptů programování v laboratoři sprajtů, o chování. ",
           "student_overview": "Zahrajte si hru a zamyslete se nad tím, jakých příkazů je potřeba k dosažení správného výsledku."
         },
         "coursee-2021/Learning Sprites with Sprite Lab": {
           "name": "Plovoucí ryby s Laboratoří sprajtů",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Cílem této lekce je seznámit studenty se základní slovní zásobou Laboratoře sprajtů a umožnit jim aplikovat na tento nástroj pojmy, které se naučili v jiných prostředích. Vytvořením akvária si studenti začnou vytvářet představu o programovacím modelu tohoto nástroje a prozkoumají způsoby, jak jej mohou využít k vyjádření svých názorů.",
           "student_overview": "Naučte se vytvářet a upravovat sprajty."
         },
         "coursee-2021/Alien Dance Party with Sprite Lab": {
           "name": "Taneční večírek vetřelců s Laboratoří sprajtů",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Tato lekce nabízí skvělý úvod do událostí v programování a dokonce dává studentům možnost projevit kreativitu! Na konci lekce budou mít studenti možnost podělit se o své projekty.",
           "student_overview": "Vytvořte interaktivní projekt, který budete moci sdílet se spolužáky."
         },
@@ -2502,23 +2803,27 @@
           "student_overview": "Naučte se stát si za svým, když se setkáte s kybernetickou šikanou."
         },
         "coursee-2021/Private and Personal Information": {
+          "name": "Soukromé a osobní informace",
           "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTuto lekci původně vytvořila společnost Common Sense Education. [Více informací.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nV povaze našich studentů je sdílet věci a kontaktovat ostatní. Ale se sdílením online jsou spojena určitá rizika. Jak můžeme dětem pomoci budovat si silné, pozitivní a bezpečné vztahy online? Pomozte svým studentům naučit se poznat rozdíl mezi tím, o je osobní, a tím, co by mělo ideálně zůstat soukromé.",
           "preparation": "-   Projděte výukové materiály.\n-   Vytiskněte pro každého studenta leták (letáky).",
           "purpose": "Společnost Common Sense Education vytvořila tuto lekci, aby studenty poučila, jaké informace o nich lze sdílet na internetu.",
           "student_overview": "Internet je zábavný a vzrušující, ale důležité je také zůstávat v bezpečí. Tato lekce Vás naučí rozdíl mezi informacemi, které je bezpečné sdílet, a informacemi, které jsou soukromé."
         },
         "coursee-2021/About Me": {
+          "name": "Miniprojekt: Informace o mně",
           "overview": "V tomto **miniprojektu** studenti uplatní své znalosti o sdílení osobních a soukromých informací na webu vytvořením interaktivního plakátu.",
           "preparation": "-   (Volitelně) Vytiskněte kopie **\\*průvodce plánováním** pro studenty nebo rozdejte digitální kopie.\n-   Zvažte možnost, že byste sami vytvořili ukázkový projekt a podělili se o něj se třídou. \n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Tato lekce má studentům přiblížit předchozí lekci o osobních a soukromých informacích, které jsou pro ně osobně relevantní. S ohledem na příklady BEZPEČNÝCH (osobní) a NEBEZPEČNÝCH (soukromé) si studenti procvičí bezpečné sebevyjádření na webu a pomocí programu SpriteLab si vytvoří vlastní kostýmy sprajt a vygenerují text."
         },
         "coursee-2021/Digital Sharing": {
+          "name": "Digitální sdílení",
           "preparation": "-   Najděte **\\*Video se sdílením autorských práv** v „Odkazech“ níže.\n-   Stáhněte si a prohlédněte si kompletní **\\*Plán výuky sdílení digitálních dat** z webu Autorská práva a tvořivost\n-   Jako učitel vytvořte pro tuto lekci umělecké dílo (obrázek, píseň, prezentaci atd.). \n-   Ujistěte se, že každý student má deník reflexí.\n-   K replikaci sdílení tohoto předmětu budete potřebovat tablet nebo chytrý telefon.",
           "purpose": "Studenti budou brzy vytvářet projekty, které budou sdílet, z nichž většina bude obsahovat kód nebo obrázky, které studenti sami nevytvořili. Tato lekce má studentům ukázat, jak správně zacházet s použitím obsahu, který není jejich vlastní.",
           "student_overview": "V této lekci se dozvíte o výzvách a výhodách vlastnictví a autorských práv. "
         },
         "coursee-2021/Programming and Loops with the Artist": {
           "name": "Kreslení s cykly",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Studenti si procvičí používání cyklů, což je koncept, ke kterému se budou vracet v dalších lekcích."
         },
         "coursee-2021/Nested Loops in Artist": {
@@ -2540,11 +2845,13 @@
         },
         "coursee-2021/Functions in Minecraft": {
           "name": "Funkce v Minecraft",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Studenti objeví všestrannost programování tím, že si procvičí funkce v různých prostředích. Studenti zde rozpoznají opakovaně použitelné vzorce a budou schopni začlenit pojmenované bloky pro volání předem definovaných funkcí.",
           "student_overview": "Umíte přijít na to, jak používat funkce pro co nejefektivnější kód?"
         },
         "coursee-2021/Functions in Artist": {
           "name": "Funkce s Artist",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Jednou z nejdůležitějších součástí této lekce je poskytnout studentům prostor k vytvoření něčeho, na co jsou hrdí. Tyto hádanky postupují ke stále složitějším obrázkům, ale každá nová hádanka jen navazuje na tu předchozí. Na konci této lekce se budou studenti cítit sebevědomě a budou hrdí na svou náročnou práci.",
           "student_overview": "S funkcemi snadněji uděláte složité kresby!"
         },
@@ -2555,10 +2862,12 @@
         },
         "coursee-2021/Conditionals": {
           "name": "Podmínky s Farmářkou",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Tato lekce seznamuje studenty s cykly while a příkazy „if / else“."
         },
         "coursee-2021/Functions in Harvester": {
           "name": "Funkce s farmářkou",
+          "preparation": "-   Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "Tato lekce má studenty dále přimět k používání podmiňovacího způsobu s funkcemi. Tyto hádanky jsou určeny ke zvýšení schopnosti řešit problémy a kriticky myslet.",
           "student_overview": "Funkce Vám ušetří spoustu práce, až budete pomáhat farmářce s její úrodou!"
         },
@@ -2576,11 +2885,38 @@
         "csd7-2021/Similarity Models": {
           "overview": "V této lekci se studenti zapojí do offline aktivity spočívající v simulaci epidemie zombies. Studenti musí pomocí údajů ze sousedního města předpovědět, které části města budou mít nejméně zombies. Studenti budou používat stupňů shody a průměrů k vytváření předpovědí počtu zombies na určitém konkrétním místě. Pak budou studenti zachráněni a bude jim dána příležitost porovnat své předpovědi se skutečnými počty, aby mohli diskutovat o tom, jak pro číselné údaje a kategorické údaje bývá přesnost odlišná.\n\n**Otázka dne:** Jak se počítače naučí dělat předpovědi na základě číselných údajů?"
         },
+        "csd7-2021/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd4-2021/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd6-2021/Board Events": {
+          "name": "Události desky"
+        },
+        "csd6-2021/Getting Properties": {
+          "name": "Načtení vlastností"
+        },
         "csd6-2021/Analog Input": {
           "name": "Analogový vstup"
         },
         "csd6-2021/Functions with Parameters": {
           "name": "Funkce s Parametry"
+        },
+        "csd6-2021/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd5-2021/Representing Images": {
+          "name": "Reprezentace obrázků"
+        },
+        "csd5-2021/Combining Representations": {
+          "name": "Kombinování reprezentací"
+        },
+        "csd5-2021/Keeping Data Secret": {
+          "name": "Udržování dat v tajnosti"
+        },
+        "csd5-2021/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
         },
         "csd3-2021/Variables": {
           "name": "Proměnné"
@@ -2600,11 +2936,29 @@
         "csd3-2021/Conditionals": {
           "name": "Podmínky"
         },
+        "csd3-2021/Keyboard Input": {
+          "name": "Vstup z klávesnice"
+        },
         "csd3-2021/Velocity": {
           "name": "Rychlost"
         },
+        "csd3-2021/Collisions": {
+          "name": "Kolize"
+        },
         "csd3-2021/Functions": {
           "name": "Funkce"
+        },
+        "csd3-2021/lesson-1": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd2-2021/Headings": {
+          "name": "Záhlaví"
+        },
+        "csd2-2021/Linking Pages": {
+          "name": "Propojení stránek"
+        },
+        "csd2-2021/lesson-1": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
         },
         "pre-express-2020/Learn to Drag and Drop": {
           "name": "Naučte se přetahovat a upouštět"
@@ -2867,8 +3221,14 @@
         "coursee-2020/Alien Dance Party with Sprite Lab": {
           "name": "Taneční večírek vetřelců s Laboratoří sprajtů"
         },
+        "coursee-2020/Private and Personal Information": {
+          "name": "Soukromé a osobní informace"
+        },
         "coursee-2020/About Me": {
           "name": "O mě s Laboratoří sprajtů"
+        },
+        "coursee-2020/Digital Sharing": {
+          "name": "Digitální sdílení"
         },
         "coursee-2020/Nested Loops in Bee": {
           "name": "Vnořené cykly v bludišti"

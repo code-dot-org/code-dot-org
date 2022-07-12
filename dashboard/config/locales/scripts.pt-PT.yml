@@ -18298,7 +18298,7 @@ pt:
             For Loops:
               name: Ciclos "for"
             End of Course projects:
-              name: Projetos de fim de curso
+              name: Projetos de conclusão de curso
             Reviewing your reflections:
               name: Revendo suas reflexões
         vpl-csd1-ci-pilot-2022:
@@ -18879,3 +18879,21 @@ pt:
               name: Visão geral
             lesson-1:
               name: Visão geral
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Olá, Mundo CSC
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Arte poética
+        self-paced-pl-csd5-2022:
+          lessons:
+            Train a machine learning model:
+              name: Animações interativas e jogos
+            Engage with machine learning apps:
+              name: O processo de design
+            Consider real world implications:
+              name: Dados e Sociedade
+            Unit wrap up:
+              name: Computação Física

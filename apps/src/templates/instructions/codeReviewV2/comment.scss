@@ -1,4 +1,9 @@
-.code-custom-background {
+.comment-content {
+  & > * {
+    margin: 0;
+  }
+
+  // gray background for block formatted code comments
   pre {
     background-color: rgba(255, 255, 255, 0.5);
   }

@@ -1248,6 +1248,7 @@
   "nextStage": "Parabéns! Você completou {stageName}.",
   "nextStageTrophies": "Parabéns! Você completou {stageName} e ganhou {numTrophies, plural, one {um troféu} other {# troféus}}.",
   "no": "Não",
+  "pdNotApplicable": "Não aplicável",
   "noAssessments": "Parece que não há avaliações ou pesquisas de múltipla escolha neste curso. Ao invés disto, você pode medir o progresso dos estudantes utilizando a guia 'Progresso'. Se você estiver interessado em dar a seus estudantes avaliações adicionais, você pode encontrar questões e áreas recomendadas nos planos de lição.",
   "noClassroomsFound": "Nenhuma turma encontrada.",
   "noIconsFound": "Nenhum ícone encontrado",

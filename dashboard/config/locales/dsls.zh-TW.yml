@@ -6246,3 +6246,7 @@ zh-TW:
         - {}
         - {}
         - text: 以上都不是
+      ml-club app-choice parent:
+        display_name: 自訂你的應用程式
+      ml-intro app lab-book recommender 5-2021:
+        display_name: 自訂你的應用程式

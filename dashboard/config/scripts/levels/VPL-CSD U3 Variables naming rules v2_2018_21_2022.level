@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-04-26T18:52:38.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -51,7 +47,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "long_instructions": "**Note:** This is the same level that students will complete in Unit 3 Lesson 5 Level 4 of the CS Discoveries curriculum. \r\n\r\n<img style=\"float: right\" src=\"https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38 AM.png\">\r\n\r\n# Debug: Naming Variables\r\n\r\nThis program has multiple errors caused by bad label names.  The errors prevent the program from being viewed in block mode, so the code is in text.\r\n\r\n# Do This\r\n\r\n* Find the rule each variable label violates.\r\n* **Correct the errors by picking new names that follow the rules you learned in the last level.**\r\n* If your program works it should draw the image on the right.\r\n\r\n::: details [*Hint: Click the arrow for a quick review of the rules.*]\r\n\r\n* Labels can't have spaces.\r\n* Labels can't start with a number.\r\n* Capitalization and spelling must be exactly the same.\r\n\r\n:::",
+    "long_instructions": "**Note:** This is the same level that students will complete in Interactive Animations and Games, Lesson 5 Level 4 of the CS Discoveries curriculum. \r\n\r\n<img style=\"float: right\" src=\"https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38 AM.png\">\r\n\r\n# Debug: Naming Variables\r\n\r\nThis program has multiple errors caused by bad label names.  The errors prevent the program from being viewed in block mode, so the code is in text. Below are a few rules for naming variables. Click **\"Help & Tips\"** above to read more.\r\n\r\n* Labels can't have spaces.\r\n* Labels can't start with a number.\r\n* Capitalization and spelling must be exactly the same.\r\n\r\n# Do This\r\n\r\n* Find the rule each variable label violates.\r\n* **Correct the errors by picking new names that follow the rules above.**\r\n\r\nIf your program works it should draw the image on the right. You should also be able to switch back to blocks mode.",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 24274,
@@ -61,7 +57,7 @@
       "/docs/concepts/game-lab/drawing-shapes/",
       "/docs/concepts/game-lab/shapes-and-parameters/"
     ],
-    "map_reference": "/docs/csd-1718/naming_variables/index.html",
+    "map_reference": "/docs/concepts/javascript/naming-variables/",
     "video_key": "csd_gamelab_variables_1",
     "show_type_hints": "false",
     "name_suffix": "_2022",
@@ -70,9 +66,13 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-04-26T18:52:38.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-26T18:52:38.404+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD U3 Variables naming rules v2_2018_21\\\"\"],\"cloned_from\":\"VPL-CSD U3 Variables naming rules v2_2018_21\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-26T18:52:38.404+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD U3 Variables naming rules v2_2018_21\\\"\"],\"cloned_from\":\"VPL-CSD U3 Variables naming rules v2_2018_21\"},{\"changed_at\":\"2022-06-02 20:07:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2022-06-15 19:53:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"reference_links\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-06-15 19:54:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-06-17 22:47:15 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-07-07 19:50:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -583,10 +583,13 @@ km:
         math: 'គណិត​វិទ្យា'
         science: 'វិទ្យាសាស្រ្ត'
         la: 'អក្សរសាស្រ្ត'
+        other: "ផ្សេងៗ"
       resources:
         kodable: 'Kodable'
+        other: "ផ្សេងៗ"
       robotics:
         kodable: 'Kodable'
+        other: "ផ្សេងៗ"
       email_opt_in:
         opt_in_yes: 'យល់ព្រម'
         opt_in_no: 'ទេ'

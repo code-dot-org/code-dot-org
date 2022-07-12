@@ -731,24 +731,24 @@
           "craft_callout_preplaced": "Hemos colocado algunos bloques para que empieces."
         },
         "Overworld House Frame Chosen": {
-          "craft_callout_preplaced_house": "Este código comenzará a construir tu casa. ¿Puedes terminarlo?"
+          "craft_callout_preplaced_house": "Este código comenzará a construir tu casa. ¿Puedes terminarla?"
         },
         "Overworld House Frame Chosen_2019": {
-          "craft_callout_preplaced_house": "Este código comenzará a construir tu casa. ¿Puedes terminarlo?"
+          "craft_callout_preplaced_house": "Este código comenzará a construir tu casa. ¿Puedes terminarla?"
         },
         "Overworld House Frame Chosen_2020": {
-          "craft_callout_preplaced_house": "Este código comenzará a construir tu casa. ¿Puedes terminarlo?"
+          "craft_callout_preplaced_house": "Este código comenzará a construir tu casa. ¿Puedes terminarla?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Dale a \"Ejecutar\" para probar el programa.",
+          "craft_run_button_callout": "Haz clic en \"Ejecutar\" para probar tu programa",
           "craft_drag_block_callout": "Arrastra un bloque \"avanzar\" y colócalo debajo del otro bloque"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Dale a \"Ejecutar\" para probar el programa.",
+          "craft_run_button_callout": "Haz clic en \"Ejecutar\" para probar tu programa",
           "craft_drag_block_callout": "Arrastra un bloque \"avanzar\" y colócalo debajo del otro bloque"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Dale a \"Ejecutar\" para probar el programa.",
+          "craft_run_button_callout": "Haz clic en \"Ejecutar\" para probar tu programa",
           "craft_drag_block_callout": "Arrastra un bloque \"avanzar\" y colócalo debajo del otro bloque"
         },
         "Overworld Place Wall": {
@@ -1323,13 +1323,13 @@
           "courseD_collector_ramp8_1": "Usa este bloque para recolectar una sola pieza del tesoro.  "
         },
         "courseD_farmer_while7_2018": {
-          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar el bloque 'mientras haya camino delante' para resolver este rompecabezas."
+          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar el bloque 'mientras camino por delante' para resolver este rompecabezas."
         },
         "courseD_farmer_while7_2019": {
-          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar el bloque 'mientras haya camino delante' para resolver este rompecabezas."
+          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar el bloque 'mientras camino por delante' para resolver este rompecabezas."
         },
         "courseD_farmer_while7_2020": {
-          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar el bloque 'mientras haya camino delante' para resolver este rompecabezas."
+          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar el bloque 'mientras camino por delante' para resolver este rompecabezas."
         },
         "courseD_maze_intro4_2019": {
           "courseC_maze_programming4_1": "Este es el límite de tus bloques. Te dice cuántos bloques te quedan por usar."
@@ -1465,19 +1465,19 @@
           "courseD_artist_functions1_1": "Comencemos usando este bloque para ayudar a crear el primer cuadrado."
         },
         "courseE_artist_functions2": {
-          "courseD_artist_functions2_1": "Cuando este bloque verde se ejecuta, todos los códigos en la función se ejecutarán. ¿Qué deberían hacer el artista después de dibujar la primera plaza?"
+          "courseD_artist_functions2_1": "Cuando se ejecuta este bloque verde, todo el código de la función se iniciará- ¿Qué debería hacer el artista después de dibujar el primer cuadrado?"
         },
         "courseE_artist_functions2_2018": {
-          "courseD_artist_functions2_1": "Cuando este bloque verde se ejecuta, todos los códigos en la función se ejecutarán. ¿Qué deberían hacer el artista después de dibujar la primera plaza?"
+          "courseD_artist_functions2_1": "Cuando se ejecuta este bloque verde, todo el código de la función se iniciará- ¿Qué debería hacer el artista después de dibujar el primer cuadrado?"
         },
         "courseE_artist_functions2_2019": {
-          "courseD_artist_functions2_1": "Cuando este bloque verde se ejecuta, todos los códigos en la función se ejecutarán. ¿Qué deberían hacer el artista después de dibujar la primera plaza?"
+          "courseD_artist_functions2_1": "Cuando se ejecuta este bloque verde, todo el código de la función se iniciará- ¿Qué debería hacer el artista después de dibujar el primer cuadrado?"
         },
         "courseE_artist_functions2_2020": {
-          "courseD_artist_functions2_1": "Cuando este bloque verde se ejecuta, todos los códigos en la función se ejecutarán. ¿Qué deberían hacer el artista después de dibujar la primera plaza?"
+          "courseD_artist_functions2_1": "Cuando se ejecuta este bloque verde, todo el código de la función se iniciará- ¿Qué debería hacer el artista después de dibujar el primer cuadrado?"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_1": "Cuando este bloque verde se ejecuta, todos los códigos en la función se ejecutarán. ¿Qué deberían hacer el artista después de dibujar la primera plaza?"
+          "courseD_artist_functions2_1": "Cuando se ejecuta este bloque verde, todo el código de la función se iniciará- ¿Qué debería hacer el artista después de dibujar el primer cuadrado?"
         },
         "courseE_artist_functions8": {
           "courseD_artist_functions8_1": "Tus bloques para crear funciones se han ubicado bajo esta etiqueta en la caja de herramientas."
@@ -1695,13 +1695,13 @@
           "courseF_bee_fwp_challenge2_callout1": "Esta función hará un buen trabajo con el maiz, pero ¿y las otras verduras?"
         },
         "courseF_bee_variables_1_2018": {
-          "courseF_bee_functions_1_2018_1": "¡Puedes encontrar tus variables aquí!"
+          "courseF_bee_functions_1_2018_1": "¡Puedes encontrar tus variables aquí debajo!"
         },
         "courseF_bee_variables_1_2019": {
-          "courseF_bee_functions_1_2018_1": "¡Puedes encontrar tus variables aquí!"
+          "courseF_bee_functions_1_2018_1": "¡Puedes encontrar tus variables aquí debajo!"
         },
         "courseF_bee_variables_1_2020": {
-          "courseF_bee_functions_1_2018_1": "¡Puedes encontrar tus variables aquí!"
+          "courseF_bee_functions_1_2018_1": "¡Puedes encontrar tus variables aquí debajo!"
         },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_1": "La caja de herramientas se ha organizado en categorías para que sea más fácil encontrar los bloques que necesitas."
@@ -1831,16 +1831,16 @@
           "spritelab_comment": "Usa este bloque para dejarte notas a ti o al docente sobre cómo funciona tu código."
         },
         "Function intro Ryan_2021": {
-          "Function_intro_Ryan_1": "Esta pequeña instrucción le indica al ordenador que ejecute el gran pedazo de código con el mismo nombre en el área de trabajo."
+          "Function_intro_Ryan_1": "Esta pequeña instrucción le indica a la computadora que ejecute el GRAN pedazo de código con el mismo nombre en el área de trabajo."
         },
         "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "¡Este es un bucle \"Repetir\"!  Haz clic en el área de trabajo y añade el código que quieras ejecutar una y otra vez."
+          "MC_HOC_2017_03_Cole_1": "¡Este es un bucle (loop) de \"repetir\"!  Haz clic en el área de trabajo y añade el código que quieras ejecutar una y otra vez."
         },
         "MC_HOC_2017_04_Cole_2021": {
           "MC_HOC_2017_04_Cole_a": "El Agente puede flotar sobre el agua, ¡pero el jugador no!"
         },
         "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_1": "No puedes tirar esos bloques, pero ¡puedes editarlos!"
+          "MC_HOC_2017_06_Cole_1": "¡No puedes eliminar estos bloques, pero puedes editarlos!"
         },
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "El Agente puede flotar sobre la lava, ¡pero Steve y Alex no!"
@@ -1849,10 +1849,10 @@
           "craft_callout_preplaced": "Hemos colocado algunos bloques para que empieces."
         },
         "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Este código empezará a construir tu casa. ¿Puedes acabarlo?"
+          "craft_callout_preplaced_house": "Este código comenzará a construir tu casa. ¿Puedes terminarla?"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Dale a \"Ejecutar\" para probar el programa.",
+          "craft_run_button_callout": "Haz clic en \"Ejecutar\" para probar tu programa",
           "craft_drag_block_callout": "Arrastra un bloque \"avanzar\" y colócalo debajo del otro bloque"
         },
         "Overworld Place Wall_2021": {
@@ -1997,13 +1997,13 @@
           "4_5_Bee_Conditionals_2_2": "¿Necesitas ayuda? ¡Haz click aquí para un VIDEO de ayuda!"
         },
         "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge2_1": "Usa este loop para recolectar todo el néctar (o miel) de una flor (o panal)."
+          "courseD_bee_conditionals_challenge2_1": "Usa este bucle (loop) para recolectar todo el néctar (o miel) de una flor (o panal)."
         },
         "courseD_bee_nestedLoops1a_2021": {
           "stepButton": "Intenta recorrer tu código bloque a bloque."
         },
         "courseD_farmer_while7_2021": {
-          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar un bloque \"mientras camino adelante\" para resolver este desafío."
+          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar el bloque 'mientras camino por delante' para resolver este rompecabezas."
         },
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "Este es el límite de tus bloques. Te dice cuántos bloques te quedan por usar."
@@ -2031,20 +2031,20 @@
           "courseD_artist_functions1_1": "Comencemos usando este bloque para ayudar a crear el primer cuadrado."
         },
         "courseE_artist_functions2_2021": {
-          "courseD_artist_functions2_1": "Cuando este bloque verde se ejecuta, todos los códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después de dibujar la primera plaza?"
+          "courseD_artist_functions2_1": "Cuando este bloque verde se ejecuta, todos los códigos en la función se ejecutarán. ¿Qué deberían hacer el artista después de dibujar la primera plaza?"
         },
         "courseE_artist_functions2_dani": {
-          "courseD_artist_functions2_1": "Cuando este bloque verde se ejecuta, todos los códigos en la función se ejecutarán. ¿Qué deberían hacer el artista después de dibujar la primera plaza?"
+          "courseD_artist_functions2_1": "Cuando se ejecuta este bloque verde, todo el código de la función se iniciará- ¿Qué debería hacer el artista después de dibujar el primer cuadrado?"
         },
         "courseE_artist_functions8a_2021": {
           "courseD_artist_functions8_1": "Tus bloques para crear funciones se han ubicado bajo esta etiqueta en la caja de herramientas."
         },
         "courseE_artist_functions_challenge1_2021": {
-          "courseE_artist_functions_challenge1_callout1": "Mantén este programa funcionando agregando más códigos al final.",
+          "courseE_artist_functions_challenge1_callout1": "Mantén este programa funcionando agregando más código al final.",
           "courseE_artist_functions_challenge1_callout2": "Si no te gusta este diseño, ¡cámbialo por el que quieras!"
         },
         "courseE_artist_functions_challenge2_2021": {
-          "courseE_artist_functions_challenge2_callout1": "Mantén este programa funcionando agregando más códigos al final.",
+          "courseE_artist_functions_challenge2_callout1": "Mantén este programa funcionando agregando más código al final.",
           "courseE_artist_functions_challenge2_callout2": "Si no te gusta este diseño, ¡cámbialo por el que quieras!"
         },
         "courseE_farmer_functions13_2021": {
@@ -2082,16 +2082,16 @@
           "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
         },
         "courseF_artist_for1_2021": {
-          "courseF_artist_for1_1": "La caja de herramientas está en modo de \"categoría\" para hacer más espacio para tu código. Los bulcles \"desde\" viven aquí."
+          "courseF_artist_for1_1": "La caja de herramientas está en modo de \"categoría\" para hacer más espacio para tu código. Los bucles (loops) \"para\" viven aquí."
         },
         "courseF_bee_for4_2021": {
-          "courseF_bee_for4_1": "¡Aquí encontrarás el bucle 'desde´'!"
+          "courseF_bee_for4_1": "¡Aquí encontrarás el bucle (loop) 'para´'!"
         },
         "courseF_bee_for9_2021": {
-          "courseF_bee_for9_1": "Aquí encontrarás el bucle 'matemáticas'."
+          "courseF_bee_for9_1": "Encontrarás el bloque 'matemáticas' aquí."
         },
         "courseF_bee_variables_1a_2021": {
-          "courseF_bee_functions_1_2018_1": "¡Puedes encontrar tus variables aquí!"
+          "courseF_bee_functions_1_2018_1": "¡Puedes encontrar tus variables aquí debajo!"
         },
         "courseF_editable_card": {
           "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
@@ -2139,7 +2139,7 @@
           "answered_block": "¡Busca un nuevo bloque aquí!"
         },
         "courseF_text_choice_color": {
-          "text_color_finish": "¿Ha cambiado de color el fondo cuando has respondido a la pregunta? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia el código y vuelve a pulsar \"Ejecutar\"."
+          "text_color_finish": "¿El fondo cambió de color cuando respondiste a la pregunta? Si es así, pulsa 'Finalizar'. Si no, pulsa 'Reiniciar', cambia el código y vuelve a pulsar 'Ejecutar'."
         },
         "courseF_text_choice_conversation": {
           "text_generic_finish": "¿Ha terminado? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia el código y vuelve a pulsar \"Ejecutar\"."
@@ -2159,7 +2159,7 @@
           "text_print_finish": "¿Se imprimió el mensaje anterior? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia tu código y pulsa \"Ejecutar\" de nuevo."
         },
         "courseF_text_prompts": {
-          "prompt_block": "Encuentra aquí el bloque de avisos."
+          "prompt_block": "¡Encuentra el bloque de solicitud aquí!"
         },
         "courseF_variables_predict": {
           "variablesPredict": "Fíjate bien en el código que hay debajo de este punto."
@@ -2593,6 +2593,15 @@
         "New Sprite Lab Project": {
           "costumes_tab": "Pulsa aquí para añadir disfraces a tu proyecto.",
           "make_sprite": "¡Utiliza los bloques aquí para hacer un sprite!"
+        },
+        "Calc Circles of Eval .2": {
+          "calc_question_marks": "Selecciona el número correcto en este desplegable"
+        },
+        "Calc Vars 1": {
+          "Calc Vars 1_edit_option": "Pulsa en editar para cambiar el valor de esta variable"
+        },
+        "Eval Strings Images .2": {
+          "": "Los bloques de color turquesa, como éste, devuelven valores de cadena"
         }
       }
     }

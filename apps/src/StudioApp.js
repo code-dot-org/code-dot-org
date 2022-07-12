@@ -1046,7 +1046,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
 
   if (showRun) {
     if (this.editDuringRunAlert !== undefined) {
-      ReactDOM.unmountComponentAtNode(this.editDuringRunAlert);
+      this.closeAlert(this.editDuringRunAlert);
       this.editDuringRunAlert = undefined;
     }
     getStore().dispatch(setIsEditWhileRun(false));
@@ -1395,17 +1395,17 @@ function resizePinnedBelowVisualizationArea() {
 }
 
 /**
- * Debounced onResize operations that update the layout to support sizing
+ * Throttled onResize operations that update the layout to support sizing
  * to viewport height and using the small footer.
  * @type {Function}
  */
-var onResizeSmallFooter = _.debounce(function() {
+var onResizeSmallFooter = _.throttle(function() {
   resizePinnedBelowVisualizationArea();
-}, 10);
+}, 1000 / 60);
 
 /**
  * Passthrough to local static resizePinnedBelowVisualizationArea, which needs
- * to be static so it can be statically debounced as onResizeSmallFooter
+ * to be static so it can be statically throttled as onResizeSmallFooter.
  */
 StudioApp.prototype.resizePinnedBelowVisualizationArea = function() {
   resizePinnedBelowVisualizationArea();
@@ -3117,7 +3117,7 @@ StudioApp.prototype.displayWorkspaceAlert = function(
       type: type,
       onClose: () => {
         onClose();
-        ReactDOM.unmountComponentAtNode(container[0]);
+        this.closeAlert(container[0]);
       },
       isBlockly: this.usingBlockly_,
       displayBottom: bottom
@@ -3151,9 +3151,7 @@ StudioApp.prototype.displayPlayspaceAlert = function(type, alertContents) {
   var renderElement = container[0];
 
   let alertProps = {
-    onClose: () => {
-      ReactDOM.unmountComponentAtNode(renderElement);
-    },
+    onClose: () => this.closeAlert(renderElement),
     type: type
   };
 
@@ -3166,6 +3164,14 @@ StudioApp.prototype.displayPlayspaceAlert = function(type, alertContents) {
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
   ReactDOM.render(playspaceAlert, renderElement);
+};
+
+/**
+ * Remove an alert from the DOM. This is just an alias for ReactDOM.unmountComponentAtNode.
+ * @param {Node} alert
+ */
+StudioApp.prototype.closeAlert = function(alert) {
+  ReactDOM.unmountComponentAtNode(alert);
 };
 
 /**
@@ -3351,7 +3357,8 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
         !config.readonlyWorkspace,
       serverScriptId: config.serverScriptId,
       serverLevelId: config.serverLevelId,
-      serverProjectLevelId: config.serverProjectLevelId
+      serverProjectLevelId: config.serverProjectLevelId,
+      codeOwnersName: config.codeOwnersName
     },
     appSpecificConstants
   );

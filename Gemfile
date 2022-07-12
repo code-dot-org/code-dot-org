@@ -21,10 +21,7 @@ gem 'sprockets-rails'
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 3.0'
 
-# Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
-# breaks some firebase URIs. See
-# https://github.com/code-dot-org/code-dot-org/pull/31614
-gem 'sinatra', '2.0.2', require: 'sinatra/base'
+gem 'sinatra', '2.1.0', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
 
@@ -32,7 +29,6 @@ gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive'
 gem 'jumphash'
-gem 'le', '~> 2.2'
 gem 'os'
 gem 'parallel'
 gem 'redis', '~> 3.3.3'
@@ -75,7 +71,7 @@ group :development, :test do
 
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.7.0'
   gem 'binding_of_caller'
   gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
@@ -92,7 +88,7 @@ group :development, :test do
   # For UI testing.
   gem 'cucumber'
   gem 'eyes_selenium', '3.18.4'
-  gem 'minitest', '~> 5.5'
+  gem 'minitest', '~> 5.15'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'net-http-persistent'
@@ -172,7 +168,7 @@ gem 'nokogiri', '>= 1.10.0'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger' # error monitoring
+gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'newrelic_rpm', group: [:staging, :development, :production], # perf/error/etc monitoring
   # Ref:
@@ -186,7 +182,7 @@ gem 'redcarpet', '~> 3.3.4'
 gem 'geocoder'
 
 gem 'mini_magick', ">=4.9.4"
-gem 'rmagick'
+gem 'rmagick', '~> 3.2'
 
 gem 'acts_as_list'
 
@@ -294,7 +290,7 @@ gem 'octokit'
 
 # Used to create a prefix trie of student names within a section
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
-gem 'rambling-trie'
+gem 'rambling-trie', '>= 2.1.1'
 
 gem 'omniauth-openid'
 gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: 'cdo'
@@ -314,8 +310,6 @@ gem 'auto_strip_attributes', '~> 2.1'
 
 # Used to sort UTF8 strings properly
 gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
-
-gem 'StreetAddress', require: "street_address"
 
 gem 'recaptcha', require: 'recaptcha/rails'
 

@@ -1242,6 +1242,8 @@ pl:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutGrid:
+        text: układ duszków jako siatka
       gamelab_locationAt:
         text: 'pozycja x: {X} y: {Y}'
       gamelab_locationModifier:

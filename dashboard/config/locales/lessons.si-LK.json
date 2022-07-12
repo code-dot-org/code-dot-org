@@ -32,6 +32,48 @@
         "infinity/Infinity": {
           "name": "ඩිස්නි අසීමිත ක්‍රීඩා විද්‍යාගාරය"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "පැයේ කේතය 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "ලූපයන්"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "වැඩසටහන්"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "කන්ඩිෂනලස්"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "විචල්‍යන්"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "ලූපයන් සඳහා"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "ඉදිරි පියවර"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "දළ විශ්ලේෂණය සහ පිහිටුවීමේ උපදෙස්"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "ප්‍රචාරණ පණිවිඩ"
+        },
+        "netsim/Manual DNS": {
+          "name": "හස්තීය DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "ස්වයංක්‍රීය DNS නෝඩුව"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "අන්තර්ජාල සමාකෘති නිදහස්ව ක්‍රීඩා කිරීම"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "ඉදිරි පියවර"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "එය ගෙන යන්න, ගෙන යන්න"
         },
@@ -350,6 +392,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "දැඩි අභියෝගය - පුළුල්"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "පරිඝණක විද්‍යාව හැදින්වීම"
+        },
+        "20-hour/The Maze": {
+          "name": "වංකගිරිය"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "සංඛ්‍යාත්මක සිතීම"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "20-hour/The Artist": {
+          "name": "කලාකරුවා"
+        },
+        "20-hour/Algorithms": {
+          "name": "ඇල්ගොරිතම්"
+        },
+        "20-hour/The Artist 2": {
+          "name": "කලාකරුවා 2"
+        },
+        "20-hour/Functions": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "20-hour/The Farmer": {
+          "name": "ගොවියා"
+        },
+        "20-hour/Conditionals": {
+          "name": "කන්ඩිෂනලස්"
+        },
+        "20-hour/The Artist 3": {
+          "name": "කලාකරුවා 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "ගීත රචනය"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "ගොවියා 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "ඇබ්ස්ට්‍රැක්ෂන්"
+        },
+        "20-hour/The Artist 4": {
+          "name": "කලාකරුවා 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "ගොවියා 3"
+        },
+        "20-hour/The Internet": {
+          "name": "අන්තර්ජාලය"
+        },
+        "20-hour/The Artist 5": {
+          "name": "කලාකරුවා 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "වෙළනවා"
+        },
         "course2/Graph Paper Programming": {
           "name": "ප්‍රස්තාර රටා වැඩසටහන්"
         },
@@ -526,6 +628,33 @@
         },
         "jigsaw/Jigsaw": {
           "name": "පින්තූර ප්‍රෙහේලිකාව"
+        },
+        "allthethings/Jigsaw": {
+          "name": "පින්තූර ප්‍රෙහේලිකාව"
+        },
+        "allthethings/Maze": {
+          "name": "පැටලිලි සහිත මාර්ගය"
+        },
+        "allthethings/Artist": {
+          "name": "කලාකරු"
+        },
+        "allthethings/Flappy": {
+          "name": "ෆ්ලැපි"
+        },
+        "allthethings/Bounce": {
+          "name": "Bounce"
+        },
+        "allthethings/Multi": {
+          "name": "බහුවිධ"
+        },
+        "allthethings/Match": {
+          "name": "ගළපන්න"
+        },
+        "allthethings/Studio": {
+          "name": "ස්ටූඩියෝව"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "coursef-2021/For Loop Fun": {
           "name": "For ලුපයේ සතුට"

@@ -32,6 +32,27 @@
         "infinity/Infinity": {
           "name": "Disney Infinity Play Lab"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Ժամ օրենսգրքի 2013-"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "loops"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Իրադարձություններ"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "conditionals"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "գործառույթները"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "փոփոխականների"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For Loops"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Տեղափոխել այն, տեղափոխել այն"
         },
@@ -353,6 +374,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extreme Challenge - Comprehensive"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Ներածություն համակարգչային գիտության"
+        },
+        "20-hour/The Maze": {
+          "name": "The Maze"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "հաշվողական Մտածմունք"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "20-hour/The Artist": {
+          "name": "The Artist"
+        },
+        "20-hour/Algorithms": {
+          "name": "ալգորիթմները"
+        },
+        "20-hour/The Artist 2": {
+          "name": "The Artist 2"
+        },
+        "20-hour/Functions": {
+          "name": "գործառույթները"
+        },
+        "20-hour/The Farmer": {
+          "name": "The Farmer"
+        },
+        "20-hour/Conditionals": {
+          "name": "conditionals"
+        },
+        "20-hour/The Artist 3": {
+          "name": "The Artist 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Song Writing"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Ագարակատեր 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "աբստրակցիա"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Նկարիչը 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Relay programming"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Ագարակատեր 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Համացանց"
+        },
+        "20-hour/The Artist 5": {
+          "name": "The Artist 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Փաթեթավորեք-up"
+        },
         "course2/Graph Paper Programming": {
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
@@ -529,6 +610,33 @@
         },
         "jigsaw/Jigsaw": {
           "name": "ոլորահատ սղոց"
+        },
+        "allthethings/Jigsaw": {
+          "name": "ոլորահատ սղոց"
+        },
+        "allthethings/Maze": {
+          "name": "Maze"
+        },
+        "allthethings/Artist": {
+          "name": "Արտիստ"
+        },
+        "allthethings/Bee": {
+          "name": "Bee"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Ցատկում"
+        },
+        "allthethings/Multi": {
+          "name": "Մուլտի"
+        },
+        "allthethings/Match": {
+          "name": "Համապատասխան"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "coursef-2021/For Loop Fun": {
           "name": "For Loop Fun"

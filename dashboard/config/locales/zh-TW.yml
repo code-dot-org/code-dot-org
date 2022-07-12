@@ -29,6 +29,7 @@ zh-TW:
         personal_email_markdown: 個人電子信箱 [（如果你沒有個人信箱請點擊這裡）](%{url})
         username: 用戶名稱
         password: 密碼
+        verified_teacher: 認證老師
         password_confirmation: 密碼確認
         current_password: 目前的密碼
         locale: 語言
@@ -620,6 +621,7 @@ zh-TW:
     try_hour_of_code: 試試「一小時玩程式」！
     store: 商店
     cookie_notice: Cookie通知
+    view_code: 檢視程式碼
   reference_area:
     title: 需要幫忙？
     subtitle: 看看這些影片和提示
@@ -1071,6 +1073,7 @@ zh-TW:
         israel: Israel
         malaysia: Malaysia
         mexico: Mexico
+        paraguay: 巴拉圭
         thailand: Thailand
         uzbekistan: 烏茲別克斯坦
       ages:
@@ -1093,6 +1096,7 @@ zh-TW:
         music: 音樂
         art: 藝術
         other: 其它：
+        na: 不適用
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1101,7 +1105,8 @@ zh-TW:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 其它：
+        other: 其它
+        na: 不適用
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1111,7 +1116,8 @@ zh-TW:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 其它：
+        other: 其它
+        na: 不適用
       workshop_course:
         csf_af: 計算機科學基本原理（課程 A-F）
         csf_express: 計算機科學基礎（速學先修或速學）

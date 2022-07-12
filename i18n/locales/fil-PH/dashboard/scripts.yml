@@ -1587,6 +1587,11 @@ fil:
             Hour of Code 2015:
               name: Hour of Code 2015
           student_description: Gamitin ang mga bloke ng code para madala sina Steve o Alex sa isang pakikipagsapalaran sa mundo ng Minecraft na ito.
+        oceans:
+          title: AI para sa mga Karagatan
+          lessons:
+            Oceans:
+              name: AI para sa mga Karagatan
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -9661,6 +9666,8 @@ fil:
               name: Pag-crowdsourcing
             Digital Sharing:
               name: Digital na Pagbabahagi
+            AI for Oceans:
+              name: AI para sa mga Karagatan
           student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
         express-2020:
           title: Pinabilis na Kurso (2020)
@@ -10089,6 +10096,8 @@ fil:
           description_short: 'Gumamit ng Sprite Lab upang gumawa ng isang simulasyon mula sa isang lumitaw na virus. '
         ml-playground:
           lessons:
+            AI for Oceans:
+              name: AI para sa mga Karagatan
             visualizing:
               name: Pagpapakita ng mga Datos
             CSP Tester:
@@ -12117,3 +12126,25 @@ fil:
               name: Buod
             lesson-1:
               name: Buod
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Panimula sa Pabula"
+            Plan Your Fable:
+              name: Planuhin ang Iyong Pabula
+            Share Your Fable:
+              name: Ibahagi ang Iyong Pabula
+            lesson-4:
+              name: "[Optional] Panimula sa Pabula"
+            lesson-5:
+              name: Planuhin ang Iyong Pabula
+            lesson-6:
+              name: Ibahagi ang Iyong Pabula
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Sining ng Tula
+        self-paced-pl-csd5-2022:
+          lessons:
+            Engage with machine learning apps:
+              name: Ang Proseso ng Pag-Disenyo

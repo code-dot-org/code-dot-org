@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-26T18:56:22.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -81,8 +77,8 @@
     "encrypted": "false",
     "start_blocks": "// Call function\r\ncompliment(\"Jesse\");\r\n\r\n// Call the function with two more names\r\n\r\n// Declare function\r\nfunction compliment(name){\r\n  console.log(name + \", you're the best!\");\r\n}",
     "reference_links": [
-      "/docs/concepts/patterns/list-filter-pattern/",
-      "/docs/concepts/patterns/list-reduce-pattern/"
+      "/courses/vpl-csp-2022/guides/list-filter-pattern",
+      "/courses/vpl-csp-2022/guides/list-reduce-pattern"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",
@@ -91,6 +87,10 @@
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-26T18:56:22.000Z",
+  "user_id": 832,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-26T18:56:22.512+00:00\",\"changed\":[\"cloned from \\\"PL U7 Param Return Practice Part 1\\\"\"],\"cloned_from\":\"PL U7 Param Return Practice Part 1\"}]"

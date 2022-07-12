@@ -7,6 +7,12 @@ ms:
           title: Kursus 1
           description_audience: Peringkat umur 4-6 tahun
           lessons:
+            Building a Foundation:
+              name: Membina Asas
+            Getting Loopy:
+              name: Getting Loopy
+            Going Places Safely:
+              name: Going Places Safely
             Happy Maps:
               name: Peta-peta Gembira
             'Jigsaw: Learn to drag and drop':
@@ -15,10 +21,16 @@ ms:
               name: 'Simpang Siur: Debugging'
             'Maze: Sequence':
               name: 'SImpang Siur: Turutan'
+            Move it, Move it:
+              name: Move it, Move it
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritma kehidupan sebenar: Menanam Benih'
             Spelling Bee:
               name: Lebah Ejaan
             'Studio: Create a Story':
               name: 'Studio: Reka Cerita'
+            The Big Event:
+              name: The Big Event
         course2:
           title: Kursus 2
           lessons:
@@ -26,18 +38,28 @@ ms:
               name: 'Artis: Penyahpepijatan'
             'Artist: Nested Loops':
               name: 'Artis: Gelung Bersarang'
+            Binary Bracelets:
+              name: Binary Bracelets
             Conditionals:
               name: Bersyarat
             Flappy:
               name: Flappy
+            Getting Loopy:
+              name: Getting Loopy
             Graph Paper Programming:
               name: Pengaturcaraan kertas graf
             'Maze: Sequence':
               name: 'SImpang Siur: Turutan'
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritma Kehidupan Sebenar: Paper Planes'
             Relay programming:
               name: Pengaturcaraan penyampai
             'Studio: Create a Story':
               name: 'Studio: Reka Cerita'
+            The Big Event:
+              name: The Big Event
+            Your Digital Footprint:
+              name: Your Digital Footprint
         course3:
           title: Kursus 3
           description_audience: Umur 8-18 tahun
@@ -54,12 +76,20 @@ ms:
               name: Lantunan
             Computational Thinking:
               name: Pengiraan pemikiran
+            Crowdsourcing:
+              name: Crowdsourcing
             Dice Race:
               name: Perlumbaan Dadu
+            Digital Citizenship:
+              name: Kewarganegaraan Digital
+            Functional Suncatchers:
+              name: Functional Suncatchers
             Internet:
               name: Internet
             Maze:
               name: Maze
+            Songwriting:
+              name: Songwriting
             'Studio: Create a Story':
               name: 'Studio: Reka Cerita'
         playlab:
@@ -121,8 +151,9 @@ ms:
             Intro:
               name: Intro
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
         algebra:
+          title: Sains Komputer dalam Algebra
           lessons:
             'Eval: Conditionals':
               name: Bersyarat
@@ -131,8 +162,16 @@ ms:
           description_short: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
           student_description: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
           name: infiniti
+        algebrademo:
+          lessons:
+            The Design Recipe:
+              name: Resipi Rekaan
         K5PD:
           lessons:
+            Reflection:
+              name: Refleksi
+            Teacher Dashboard:
+              name: Papan Pemuka Guru
             Unplugged lessons:
               name: Pelajaran nirplag
         20-hour:
@@ -223,19 +262,45 @@ ms:
           student_description: Cuba asas sains komputer dengan watak daripada Angry Birds dan Tumbuhan lwn. Zombi!
         cspunit1:
           lessons:
+            Binary Numbers:
+              name: Nombor Perduaan
             Sending Numbers:
               name: Menghantar nombor
             Text Compression:
               name: Pemampatan Teks
+        algebraPD:
+          lessons:
+            Teacher Dashboard:
+              name: Papan Pemuka Guru
         text-compression:
           title: Pemampatan Teks
           lessons:
             Text Compression:
               name: Pemampatan Teks
+        algebraPD3:
+          lessons:
+            Teacher Dashboard:
+              name: Papan Pemuka Guru
+            The Design Recipe:
+              name: Resipi Rekaan
+        algebraPD-NexTech:
+          lessons:
+            Teacher Dashboard:
+              name: Papan Pemuka Guru
+        algebraPD-iZone:
+          lessons:
+            Teacher Dashboard:
+              name: Papan Pemuka Guru
         sciencePD2:
           lessons:
             Wrap-Up:
               name: Wrap-up
+        algebraPD2a:
+          lessons:
+            Free Play:
+              name: Permainan Bebas
+            The Design Recipe:
+              name: Resipi Rekaan
         allthethings:
           lessons:
             Artist:
@@ -250,14 +315,22 @@ ms:
               name: Suaikan
             Maze:
               name: Maze
+            Minecraft:
+              name: Minecraft
             Multi:
               name: Pelbagai
             Text Compression:
               name: Pemampatan Teks
             Web Lab:
               name: Makmal Web
+            Sprite Lab:
+              name: Sprite Lab
             Java Lab:
               name: Java Lab
+        algebraPD2b:
+          lessons:
+            Teacher Dashboard:
+              name: Papan Pemuka Guru
         cspfacilitator:
           lessons:
             Text Compression Lesson:
@@ -268,10 +341,18 @@ ms:
           lessons:
             Computer Science Fundamentals:
               name: Asas Sains Komputer
+            Planning:
+              name: Merancang
         ECSPD2:
           lessons:
             Wrap-up:
               name: Wrap-up
+        algebraPD2:
+          lessons:
+            Teacher Dashboard:
+              name: Papan Pemuka Guru
+            The Design Recipe:
+              name: Resipi Rekaan
         sciencePD2b:
           lessons:
             Wrap-Up:
@@ -299,10 +380,24 @@ ms:
         asUnplugged:
           description_audience: Umur 6-13 tahun
           lessons:
+            Binary Bracelets:
+              name: Binary Bracelets
+            Building a Foundation:
+              name: Membina Asas
+            Getting Loopy:
+              name: Getting Loopy
             Graph Paper Programming:
               name: Pengaturcaraan kertas graf
             Happy Maps:
               name: Peta-peta Gembira
+            Move it, Move it:
+              name: Move it, Move it
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritma kehidupan sebenar: Menanam Benih'
+            Songwriting:
+              name: Songwriting
+            The Big Event:
+              name: The Big Event
         afterschool1:
           description_audience: Umur 7-13 tahun
         cspunit4draft:
@@ -330,9 +425,12 @@ ms:
           student_description: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
         mc:
           title: Jam Kod Minecraft
+          description: Gunakan blok kod untuk membawa Steve atau Alex mengembara melalui dunia Minecraft ini.
+          description_short: Terokai dunia Minecraft melalui pengekodan.
           lessons:
             Hour of Code 2015:
               name: Jam Kod Minecraft
+          student_description: Gunakan blok kod untuk membawa Steve atau Alex mengembara melalui dunia Minecraft ini.
         oceans:
           title: Kecerdasan Buatan (AI) untuk Lautan
           lessons:
@@ -343,8 +441,14 @@ ms:
           lessons:
             Wrap-Up:
               name: Wrap-up
+        algebraPD1:
+          lessons:
+            Teacher Dashboard:
+              name: Papan Pemuka Guru
         csp1-2017:
           lessons:
+            Binary Numbers:
+              name: Nombor Perduaan
             Sending Numbers:
               name: Menghantar nombor
             The Internet:
@@ -360,6 +464,8 @@ ms:
         CSDU3-Draft:
           description_short: Pengaturcaraan
           lessons:
+            Collisions:
+              name: Perlanggaran
             Functions:
               name: Fungsi
         TEMP CSD Unit 3:
@@ -370,6 +476,10 @@ ms:
           lessons:
             Wrap Up:
               name: Penggulungan
+        algebraFacilitator:
+          lessons:
+            Teacher Dashboard:
+              name: Papan Pemuka Guru
         cspunit1-support:
           lesson_groups:
             required:
@@ -382,10 +492,19 @@ ms:
           lessons:
             Introduction to Text Compression:
               name: Pengenalan kepada Pemampatan Teks
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Mod Reka Bentuk
         CSDU1-Draft:
+          description_short: Penyelesaian Masalah
           lessons:
             Exploring Apps:
               name: Meneroka Aplikasi
+        CSDU2-Draft:
+          lessons:
+            Peer Review:
+              name: Semakan Rakan Sebaya
         CSDU5-Draft:
           description_short: Data
         CSF_Secret_Sample_Story:
@@ -415,15 +534,23 @@ ms:
               name: 'Jigsaw: Belajar untuk drag and drop'
             Loops:
               name: Gelung
+            Loops Unplugged:
+              name: Nirplag Gelung
             Programming:
               name: Pengaturcaraan
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritma kehidupan sebenar: Menanam Benih'
         grade4:
           description_audience: Peringkat umur 9-99 tahun
           lessons:
             Build a Star Wars Game!:
               name: Membina Permainan Star Wars!
+            Digital Citizenship:
+              name: Kewarganegaraan Digital
             'New Artist: Functions':
               name: 'Artis Baharu: Fungsi'
+            Songwriting:
+              name: Songwriting
         grade1:
           description_audience: Umur 5-18 tahun
           lessons:
@@ -435,6 +562,8 @@ ms:
               name: 'Jigsaw: Belajar untuk drag and drop'
             Loops:
               name: Gelung
+            Loops Unplugged:
+              name: Nirplag Gelung
             Programming:
               name: Pengaturcaraan
             'Debugging: Unspotted Bugs':
@@ -448,6 +577,8 @@ ms:
               name: 'Artis: Fungsi dengan Parameter'
             'Artist: Variables':
               name: 'Artis: Pemboleh Ubah'
+            Digital Citizenship:
+              name: Kewarganegaraan Digital
         ecs-unit1:
           lessons:
             Wrap-up:
@@ -465,19 +596,29 @@ ms:
               display_name: Gambaran Keseluruhan
         csd3-2017:
           lessons:
+            Collisions:
+              name: Perlanggaran
             Functions:
               name: Fungsi
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
             Sprites:
               name: Jin
             Conditionals:
               name: Bersyarat
+            Keyboard Input:
+              name: Input Papan Kekunci
         grade2:
           description_audience: Umur 5-18 tahun
           lessons:
             Flappy:
               name: Flappy
+            Binary Bracelets:
+              name: Binary Bracelets
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritma Kehidupan Sebenar: Paper Planes'
+            The Big Event:
+              name: The Big Event
         k5concepts:
           lessons:
             Conditionals:
@@ -493,7 +634,13 @@ ms:
             Nested Loops:
               name: Gelung Bersarang
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
+        algebrapdnext:
+          lessons:
+            Teacher Dashboard:
+              name: Papan Pemuka Guru
+            The Design Recipe:
+              name: Resipi Rekaan
         csp-online-test:
           lesson_groups:
             required:
@@ -513,8 +660,12 @@ ms:
               name: Penyulitan Mudah
         csd2-2017:
           lessons:
+            Peer Review:
+              name: Semakan Rakan Sebaya
             Lists:
               name: Senarai
+            Headings:
+              name: Headings
         csp2-support:
           lesson_groups:
             required:
@@ -522,7 +673,16 @@ ms:
           lessons:
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
               name: 'Pelajaran 1 - 2: Bait, Saiz Fail dan Pemampatan Teks'
+        csd4-2017:
+          lessons:
+            Linking Screens:
+              name: Memautkan Skrin
+        minecraft:
+          description_short: Program haiwan dan makhluk Minecraft lain dalam versi Minecraft anda sendiri.
+          description: Program haiwan dan makhluk Minecraft lain dalam versi Minecraft anda sendiri.
+          student_description: Program haiwan dan makhluk Minecraft lain dalam versi Minecraft anda sendiri.
         flappy-impact-study:
+          title: Flappy Code with Survey
           lessons:
             Flappy Code:
               name: Kod Flappy
@@ -533,6 +693,8 @@ ms:
               name: 'Penyahpepijatan: Pepijat di dalam Codeville'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Kegigihan & Kekecewaan: Stevie dan Guli'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritma kehidupan sebenar: Menanam Benih'
             Learn to Drag and Drop:
               name: Pelajari Tarik dan Lepas
             'Programming: Happy Maps':
@@ -549,6 +711,8 @@ ms:
               name: 'Peristiwa: Peristiwa Besar'
             Events in Play Lab:
               name: Peristiwa di dalam Makmal Mainan
+            Going Places Safely:
+              name: Going Places Safely
             'Debugging: Unspotted Bugs':
               name: 'Penyahpepijatan: Pepijat Tidak Dikesan'
         courseb-draft:
@@ -578,11 +742,17 @@ ms:
               name: Peristiwa di dalam Makmal Mainan
             Keep it Private:
               name: Pastikan ia Dirahsiakan
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritma kehidupan sebenar: Menanam Benih'
+            Your Digital Footprint:
+              name: Your Digital Footprint
         coursec-draft:
           description_short: Pelajari asas sains komputer dan cipta seni, cerita dan permainan anda sendiri.
           lessons:
             Programming in Maze:
               name: Pengaturcaraan di dalam Pagar Sesat
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritma Kehidupan Sebenar: Paper Planes'
             Programming in Collector:
               name: Pengaturcaraan di dalam Pengumpul
             Programming in Artist:
@@ -595,8 +765,14 @@ ms:
               name: 'Peristiwa: Peristiwa Besar'
             Build a Flappy Game:
               name: Membina Permainan Kibasan
+            Binary Bracelets:
+              name: Binary Bracelets
             Events in Play Lab:
               name: Peristiwa di dalam Makmal Mainan
+            Your Digital Footprint:
+              name: Your Digital Footprint
+            Building a Foundation:
+              name: Membina Asas
             Screen Out the Mean:
               name: Keluarkan Maksudnya
             Debugging in Maze:
@@ -618,6 +794,8 @@ ms:
               name: Penyahpepijatan di dalam Lebah
             While Loops in Farmer:
               name: Gelung Semasa di dalam Peladang
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
             Conditionals with Bee:
               name: Bersyarat dengan Lebah
             Conditionals & Loops in Maze:
@@ -630,6 +808,8 @@ ms:
               name: Membina Permainan Makmal Mainan
             Conditionals in Bee:
               name: Bersyarat di dalam Lebah
+            Digital Citizenship:
+              name: Kewarganegaraan Digital
             Artist Binary:
               name: Binari Artis
             Nested Loops:
@@ -646,6 +826,8 @@ ms:
             extra_course_content:
               display_name: Kandungan Kursus Tambahan
           lessons:
+            Digital Citizenship:
+              name: Kewarganegaraan Digital
             Build a Star Wars Game:
               name: Membina Permainan Star Wars
             'Functions: Songwriting':
@@ -668,8 +850,12 @@ ms:
               name: Membina Projek Anda
             Present Your Project:
               name: Bentangkan Projek Anda
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             Internet:
               name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
             Determine the Concept:
               name: Tentukan Konsep
             Conditionals:
@@ -682,10 +868,16 @@ ms:
             end_of_course_project:
               display_name: Akhir Projek Kursus
           lessons:
+            Digital Citizenship:
+              name: Kewarganegaraan Digital
+            Envelope Variables:
+              name: Envelope Variables
             Variables in Play Lab:
               name: Pemboleh Ubah di dalam Makmal Mainan
             Variables in Artist:
               name: Pemboleh Ubah di dalam Artis
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Bee:
               name: Untuk Gelung di dalam Lebah
             For Loops in Artist:
@@ -715,8 +907,13 @@ ms:
         classic-hoc-impact-study:
           description_short: Cuba asas sains komputer dengan banyak watak yang menyeronokkan!
         hoc-impact-study:
+          title: Classic Maze with Survey
           description_short: Cuba asas sains komputer dengan banyak watak yang menyeronokkan!
         sports:
+          title: Mengekod permainan sukan anda sendiri
+          description_short: Gaul dan padan merentasi sukan
+          description: Gaul dan padan merentasi sukan
+          student_description: Gaul dan padan merentasi sukan
           name: sukan
         2016_sciencePD-phase2b:
           lessons:
@@ -771,6 +968,10 @@ ms:
               name: Senarai
             Map:
               name: Peta
+            Board Events:
+              name: Acara Papan
+            Getting Properties:
+              name: Mendapatkan Harta
             Functions with Parameters:
               name: Fungsi-fungsi dengan parameter
         workshop-gamelab:
@@ -779,31 +980,61 @@ ms:
               name: Jin
             Input:
               name: Input
+        csd5-draft:
+          lessons:
+            Combining Representations:
+              name: Menggabungkan Perwakilan
+            Representing Images:
+              name: Mewakili Imej
         coursee-ramp:
           title: kursuse-tanjakan
           lessons:
             Conditionals:
               name: Bersyarat
+            'Real Life Algorithms: Dice Race':
+              name: 'Algoritma Kehidupan Sebenar: Dice Race'
         csd6-2017:
           lessons:
             Lists:
               name: Senarai
+            Board Events:
+              name: Acara Papan
+            Getting Properties:
+              name: Mendapatkan Harta
             Functions with Parameters:
               name: Fungsi-fungsi dengan parameter
+            Board Events_:
+              name: Acara Papan
+            Getting Properties_:
+              name: Mendapatkan Harta
             Functions with Parameters_:
               name: Fungsi-fungsi dengan parameter
         csd3-draft:
           lessons:
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
             Sprites:
               name: Jin
             Conditionals:
               name: Bersyarat
+            Keyboard Input:
+              name: Input Papan Kekunci
+            Collisions:
+              name: Perlanggaran
             Functions:
               name: Fungsi
+        csd5-2017:
+          lessons:
+            Representing Images:
+              name: Mewakili Imej
+            Combining Representations:
+              name: Menggabungkan Perwakilan
+            Keeping Data Secret:
+              name: Menyimpan Rahsia Data
         csd3-old:
           lessons:
+            Collisions:
+              name: Perlanggaran
             Functions:
               name: Fungsi
         csd2-draft:
@@ -813,11 +1044,15 @@ ms:
         csd3-chapters:
           lessons:
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
             Sprites:
               name: Jin
             Conditionals:
               name: Bersyarat
+            Keyboard Input:
+              name: Input Papan Kekunci
+            Collisions:
+              name: Perlanggaran
             Functions:
               name: Fungsi
             'null':
@@ -830,6 +1065,10 @@ ms:
               name: Fungsi di dalam Peladang
             Conditionals and Functions in Bee:
               name: Bersyarat dan Fungsi di dalam Lebah
+        csd2-old:
+          lessons:
+            Peer Review:
+              name: Semakan Rakan Sebaya
         artist-and-bb8:
           lessons:
             C9 Artist Loops:
@@ -849,6 +1088,8 @@ ms:
               name: 'Penyahpepijatan: Pepijat Tidak Dikesan'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Kegigihan: Stevie dan Projek Besar'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritma kehidupan sebenar: Menanam Benih'
             Learn to Drag and Drop:
               name: Penjujukan dengan Tarik dan Lepas
             'Programming: Happy Maps':
@@ -880,6 +1121,8 @@ ms:
               name: 'Penyahpepijatan: Pepijat Tidak Dikesan'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Kegigihan: Stevie dan Projek Besar'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritma kehidupan sebenar: Menanam Benih'
             Learn to Drag and Drop:
               name: Penjujukan dengan Tarik dan Lepas
             Your Digital Footprint:
@@ -917,6 +1160,8 @@ ms:
               name: Pengaturcaraan di dalam Pagar Sesat
             Debugging in Maze:
               name: Penyahpepijatan di dalam Pagar Sesat
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritma Kehidupan Sebenar: Paper Planes'
             Programming in Collector:
               name: Pengaturcaraan di dalam Pengumpul
             Programming in Artist:
@@ -1008,10 +1253,14 @@ ms:
               name: Pengenalan kepada Teka-teki dalam Talian
             The Power of Words:
               name: Kuasa Perkataan
+            Envelope Variables:
+              name: Envelope Variables
             Variables in Artist:
               name: Pemboleh Ubah di dalam Artis
             Variables in Play Lab:
               name: Pemboleh Ubah di dalam Makmal Mainan
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Bee:
               name: Untuk Gelung di dalam Lebah
             For Loops in Artist:
@@ -1062,6 +1311,8 @@ ms:
               name: 'Pengaturcaraan: Rakan Robotik Saya'
             Sequence in Maze:
               name: Jujukan di dalam Pagar Sesat
+            Building a Foundation:
+              name: Membina Asas
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
             Programming in Artist:
@@ -1142,6 +1393,8 @@ ms:
               name: 'Pengaturcaraan: Rakan Robotik Saya'
             Sequence in Maze:
               name: Jujukan di dalam Pagar Sesat
+            Building a Foundation:
+              name: Membina Asas
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
             Programming in Artist:
@@ -1212,6 +1465,8 @@ ms:
             required:
               display_name: Gambaran Keseluruhan
         express-2017:
+          title: Kursus Ekspres
+          assignment_family_title: Kursus Ekspres
           description_audience: 'Umur: 9-18 tahun'
           description_short: 'Pengenalan kepada sains komputer: menggabungkan kurikulum sekolah rendah yang terbaik untuk pelajar yang lebih tua.'
           description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
@@ -1231,6 +1486,8 @@ ms:
               name: Projek Gelung Bersarang di dalam Artis
             Internet:
               name: Internet
+            Digital Citizenship:
+              name: Kewarganegaraan Digital
             Screen Out the Mean:
               name: Keluarkan Maksudnya
             'Events: The Big Event':
@@ -1241,16 +1498,22 @@ ms:
               name: Peristiwa dalam Lantunan
             Build a Flappy Game:
               name: Membina Permainan Kibasan
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
             While Loops in Farmer:
               name: Gelung Semasa di dalam Peladang
             Conditionals & Loops in Maze:
               name: Bersyarat & Gelung di dalam Pagar Sesat
             Conditionals in Minecraft:
               name: Bersyarat dalam Minecraft
+            Envelope Variables:
+              name: Envelope Variables
             Variables in Artist:
               name: Pemboleh Ubah di dalam Artis
             Variables in Play Lab:
               name: Pemboleh Ubah di dalam Makmal Mainan
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Bee:
               name: Untuk Gelung di dalam Lebah
             For Loops in Artist:
@@ -1287,6 +1550,8 @@ ms:
               name: 'Gelung Untuk: Gelung Untuk yang Menyeronokkan'
             'Functions: Songwriting with Parameters':
               name: 'Fungsi : Penulisan Lagu bersama Parameter'
+            Building a Foundation:
+              name: Membina Asas
             Nested Loops:
               name: Gelung Bersarang
             Conditionals & Loops in Harvester:
@@ -1301,6 +1566,8 @@ ms:
               name: 'Penyahpepijatan: Pepijat Tidak Dikesan'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Kegigihan: Stevie dan Projek Besar'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritma kehidupan sebenar: Menanam Benih'
             Learn to Drag and Drop:
               name: Penjujukan dengan Tarik dan Lepas
             'Online Safety: Your Digital Footprint':
@@ -1328,6 +1595,10 @@ ms:
               name: lain
             Thanks:
               name: Terima kasih
+        csd4-draft:
+          lessons:
+            Linking Screens:
+              name: Memautkan Skrin
         applab-intro:
           title: Pengenalan kepada Makmal Aplikasi
           lessons:
@@ -1346,6 +1617,8 @@ ms:
           lessons:
             'Programming: My Robotic Friends':
               name: 'Pengaturcaraan: Rakan Robotik Saya'
+            Building a Foundation:
+              name: Membina Asas
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
             Programming in Artist:
@@ -1362,6 +1635,8 @@ ms:
               name: 'Algoritma: Perlumbaan Dadu'
             Conditionals:
               name: Bersyarat
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             Build a Star Wars Game:
               name: Membina Permainan Star Wars
             'Functions: Songwriting':
@@ -1386,6 +1661,8 @@ ms:
               name: Bentangkan Projek Anda
             Internet:
               name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
             Nested Loops in Bee/Zombie:
               name: Gelung Bersarang di dalam Lebah/Zombi
             Sequence in Maze:
@@ -1408,14 +1685,20 @@ ms:
               name: Penyahpepijatan di dalam Pengumpul
             While Loops in Farmer:
               name: Gelung Semasa di dalam Peladang
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
             Conditionals in Bee:
               name: Bersyarat di dalam Lebah
             Conditionals & Loops in Maze:
               name: Bersyarat & Gelung di dalam Pagar Sesat
+            Digital Citizenship:
+              name: Kewarganegaraan Digital
             Build a Play Lab Game:
               name: Membina Permainan Makmal Mainan
             Artist Binary:
               name: Binari Artis
+            Building a Foundation:
+              name: Membina Asas
             Loops in Artist:
               name: Gelung di dalam Artis
         new-express:
@@ -1473,6 +1756,8 @@ ms:
               name: Semak Semula Projek Anda
             Present Your Project:
               name: Bentangkan Projek Anda
+            Building a Foundation:
+              name: Membina Asas
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
             Nested Loops:
@@ -1498,6 +1783,8 @@ ms:
               name: 'Pengaturcaraan: Rakan Robotik Saya'
             Sequence in Maze:
               name: Jujukan di dalam Pagar Sesat
+            Building a Foundation:
+              name: Membina Asas
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
             Programming in Artist:
@@ -1514,6 +1801,8 @@ ms:
               name: 'Algoritma: Perlumbaan Dadu'
             Conditionals:
               name: Bersyarat
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             Build a Star Wars Game:
               name: Membina Permainan Star Wars
             'Functions: Songwriting':
@@ -1538,6 +1827,8 @@ ms:
               name: Bentangkan Projek Anda
             Internet:
               name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         new-f:
           lesson_groups:
             csf_f_1:
@@ -1551,6 +1842,8 @@ ms:
               name: 'Pengaturcaraan: Rakan Robotik Saya'
             Sequence in Maze:
               name: Jujukan di dalam Pagar Sesat
+            Building a Foundation:
+              name: Membina Asas
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
             Programming in Artist:
@@ -1569,10 +1862,14 @@ ms:
               name: Kuasa Perkataan
             Conditionals in Minecraft:
               name: Bersyarat dalam Minecraft
+            Envelope Variables:
+              name: Envelope Variables
             Variables in Artist:
               name: Pemboleh Ubah di dalam Artis
             Variables in Play Lab:
               name: Pemboleh Ubah di dalam Makmal Mainan
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Bee:
               name: Untuk Gelung di dalam Lebah
             For Loops in Artist:
@@ -1593,6 +1890,12 @@ ms:
               name: Semak Semula Projek Anda
             Present Your Project:
               name: Bentangkan Projek Anda
+        csd5-old:
+          lessons:
+            Representing Images:
+              name: Mewakili Imej
+            Combining Representations:
+              name: Menggabungkan Perwakilan
         pwc:
           lessons:
             Simple Encryption:
@@ -1607,8 +1910,17 @@ ms:
               name: Pra-tinjauan CSP 21-22
             CSD pre-survey 21-2:
               name: Pra-kaji selidik CSD 21-22
+            CS Principles Pre-survey:
+              name: Draf Prakajian CSA
+            Course Survey:
+              name: Draf Kajian Pasca Kursus CSA
         hero:
+          title: 'Minecraft: Hero''s Journey'
+          description_short: Minecraft kembali dengan aktiviti baharu untuk Hour of Code!
           description: Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan merentasi Minecraft dengan kod.
+          lessons:
+            Minecraft Hour of Code:
+              name: 'Minecraft: Hero''s Journey'
           student_description: Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan merentasi Minecraft dengan kod.
           name: hero
         applab-intro-staging:
@@ -1636,6 +1948,8 @@ ms:
               name: 'Pengaturcaraan: Rakan Robotik Saya'
             Sequence in Maze:
               name: Jujukan di dalam Pagar Sesat
+            Building a Foundation:
+              name: Membina Asas
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
             Programming in Artist:
@@ -1652,6 +1966,8 @@ ms:
               name: 'Algoritma: Perlumbaan Dadu'
             Conditionals:
               name: Bersyarat
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             'Functions: Songwriting':
               name: 'Fungsi : Penulisan Lagu'
             Functions in Artist:
@@ -1674,6 +1990,8 @@ ms:
               name: Bentangkan Projek Anda
             Internet:
               name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
             Build a Star Wars Game:
               name: Membina Permainan Star Wars
             Functions in Harvester:
@@ -1691,6 +2009,8 @@ ms:
               name: 'Pengaturcaraan: Rakan Robotik Saya'
             Sequence in Maze:
               name: Jujukan di dalam Pagar Sesat
+            Building a Foundation:
+              name: Membina Asas
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
             Programming in Artist:
@@ -1709,10 +2029,14 @@ ms:
               name: Kuasa Perkataan
             Conditionals in Minecraft:
               name: Bersyarat dalam Minecraft
+            Envelope Variables:
+              name: Envelope Variables
             Variables in Artist:
               name: Pemboleh Ubah di dalam Artis
             Variables in Play Lab:
               name: Pemboleh Ubah di dalam Makmal Mainan
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Bee:
               name: Untuk Gelung di dalam Lebah
             For Loops in Artist:
@@ -1740,27 +2064,41 @@ ms:
         csd3-1819draft:
           lessons:
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
             Sprites:
               name: Jin
             Conditionals:
               name: Bersyarat
+            Keyboard Input:
+              name: Input Papan Kekunci
+            Collisions:
+              name: Perlanggaran
             Functions:
               name: Fungsi
         csd3-2018:
           lessons:
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
             Sprites:
               name: Jin
             Conditionals:
               name: Bersyarat
+            Keyboard Input:
+              name: Input Papan Kekunci
+            Collisions:
+              name: Perlanggaran
             Functions:
               name: Fungsi
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
         csd2-2018:
           lessons:
+            Headings:
+              name: Headings
             Lists:
               name: Senarai
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
         coursea-2018:
           title: Kursus A (2018)
           assignment_family_title: Kursus A
@@ -1776,6 +2114,8 @@ ms:
               name: Peta-peta Gembira
             Programming in Maze:
               name: Pengaturcaraan dengan Angry Birds
+            Going Places Safely:
+              name: Going Places Safely
             'Loops: Happy Loops':
               name: Gelung Bahagia
             Loops in Collector:
@@ -1796,12 +2136,16 @@ ms:
               name: Penjujukan dengan Angry Birds
           student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
         express-2018:
+          title: Kursus Ekspres
+          assignment_family_title: Kursus Ekspres
           description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
           description_short: 'Pengenalan kepada sains komputer: menggabungkan kurikulum sekolah rendah yang terbaik untuk pelajar yang lebih tua.'
           description_audience: 'Umur: 9-18 tahun'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Pengaturcaraan kertas graf
+            Building a Foundation:
+              name: Membina Asas
             Debugging in Collector:
               name: Penyahpepijatan di dalam Pengumpul
             'Loops: My Loopy Robotic Friends':
@@ -1812,8 +2156,12 @@ ms:
               name: Gelung Bersarang
             Nested Loops Project in Frozen:
               name: Projek Gelung Bersarang di dalam Frozen
+            'Events: The Big Event':
+              name: The Big Event
             Events in Bounce:
               name: Peristiwa dalam Lantunan
+            While Loops in Farmer:
+              name: While Loops with the Farmer
             Conditionals in Minecraft:
               name: Bersyarat dalam Minecraft
             'Variables: Envelope Variables':
@@ -1850,10 +2198,16 @@ ms:
               name: Mengumpul Harta Karun bersama Laurel
             Programming in Artist:
               name: Mencipta Seni dengan Kod
+            'Loops: Getting Loopy':
+              name: Getting Loopy
             Loops with Rey and BB-8:
               name: Gelung dengan Rey dan BB-8
             Nested Loops in Frozen:
               name: Gelung Bersarang bersama Anna dan Elsa
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
+            'Functions: Songwriting':
+              name: Songwriting
             Functions in Artist:
               name: Fungsi di dalam Artis
             Screen Out the Mean:
@@ -1864,14 +2218,24 @@ ms:
               name: Membina Permainan Kibasan
             The Power of Words:
               name: Kuasa Perkataan
+            Envelope Variables:
+              name: Envelope Variables
             Variables as Constant in Artist:
               name: Pemboleh Ubah dengan Artis
             Variables that Change in Artist:
               name: Menukar Pemboleh Ubah dengan Artis
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
+            Binary Bracelets:
+              name: Binary Bracelets
+            'Unplugged: Binary':
+              name: Imej Binari
             Artist Binary:
               name: Imej Binari dengan Artis
             Internet:
               name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
             Relay Programming:
               name: Pengaturcaraan penyampai
             Graph Paper Programming:
@@ -1888,8 +2252,12 @@ ms:
               name: 'Penyahpepijatan: Pepijat Tidak Dikesan'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Kegigihan & Kekecewaan: Stevie dan Guli'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritma kehidupan sebenar: Menanam Benih'
             Learn to Drag and Drop:
               name: Pelajari Tarik dan Lepas
+            Your Digital Footprint:
+              name: Your Digital Footprint
             'Programming: My Robotic Friends':
               name: Rakan Robotik Junior Saya
             Programming in Maze:
@@ -1912,6 +2280,8 @@ ms:
               name: Gelung dengan Scrat
             Sequencing with Scrat:
               name: Penjujukan dengan Scrat
+            Copyright and Creativity:
+              name: Sangat Hebat untuk Mencipta dan Bermain dengan Adil
           student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
         coursed-2018:
           title: Kursus D (2018)
@@ -1922,6 +2292,8 @@ ms:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Pengaturcaraan kertas graf
+            Building a Foundation:
+              name: Membina Asas
             Debugging in Collector:
               name: Penyahpijatan dengan Laurel
             Events in Bounce:
@@ -1934,10 +2306,16 @@ ms:
               name: Bentuk Beragam dengan Menggunakan Gelung Bersarang
             While Loops in Farmer:
               name: Gelung Semasa di dalam Peladang
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
             Conditionals & Loops in Maze:
               name: Bersyarat & Gelung di dalam Pagar Sesat
+            Digital Citizenship:
+              name: Kewarganegaraan Digital
             Build a Play Lab Game:
               name: Permainan Ninja lwn. Lanun
+            'Unplugged: Binary':
+              name: Imej Binari
             Artist Binary:
               name: Imej Binari dengan Artis
             Nested Loops in Frozen:
@@ -1964,6 +2342,8 @@ ms:
           description_short: Pelajari asas sains komputer dan cipta seni, cerita dan permainan anda sendiri.
           description_audience: 'Umur: 6-10 tahun'
           lessons:
+            Building a Foundation:
+              name: Membina Asas
             Programming in Maze:
               name: Pengaturcaraan dengan Angry Birds
             Debugging in Maze:
@@ -1974,25 +2354,37 @@ ms:
               name: Mengumpul Harta Karun bersama Laurel
             Programming in Artist:
               name: Mencipta Seni dengan Kod
+            'Loops: Getting Loopy':
+              name: Getting Loopy
             Loops with Rey and BB-8:
               name: Gelung dengan Rey dan BB-8
             Loops in Artist:
               name: Seni Pelekat dengan Gelung
             Loops in Harvester:
               name: Menuai Tanaman dengan Gelung
+            'Events: The Big Event':
+              name: The Big Event
             Build a Flappy Game:
               name: Membina Permainan Kibasan
             Events in Play Lab:
               name: Permainan Mengejar dengan Peristiwa
             Screen Out the Mean:
               name: Keluarkan Maksudnya
+            Binary Bracelets:
+              name: Binary Bracelets
           student_description: Cipta atur cara dengan penjujukan, gelung dan peristiwa. Terjemahkan tanda nama anda kepada binari, selidik teknik penyelesaian masalah yang berbeza dan pelajari cara bertindak balas terhadap buli siber. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan!
         csd6-2018:
           lessons:
             Functions with Parameters_:
               name: Fungsi-fungsi dengan parameter\_
+            Board Events:
+              name: Acara Papan
+            Getting Properties:
+              name: Mendapatkan Harta
             Functions with Parameters:
               name: Fungsi-fungsi dengan parameter
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
         coursee-2018:
           title: Kursus E (2018)
           assignment_family_title: Kursus E
@@ -2009,12 +2401,18 @@ ms:
             extra_course_content:
               display_name: Kandungan Kursus Tambahan
           lessons:
+            'Programming: My Robotic Friends':
+              name: Rakan-rakan Robotik Saya
             Sequence in Maze:
               name: Mengekod dengan Komen
+            Building a Foundation:
+              name: Membina Asas
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
             Programming in Artist:
               name: Mencipta Seni dengan Kod
+            'Loops: My Loopy Robotic Friends':
+              name: My Loopy Robotic Friends
             Loops in Artist:
               name: Melukis Bentuk dengan Gelung
             Nested Loops:
@@ -2025,8 +2423,12 @@ ms:
               name: 'Algoritma: Perlumbaan Dadu'
             Conditionals:
               name: Bersyarat dengan Peladang
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             Build a Star Wars Game:
               name: Membina Permainan Star Wars
+            'Functions: Songwriting':
+              name: Songwriting
             Functions in Artist:
               name: Fungsi dengan Artis
             Functions in Bee:
@@ -2047,10 +2449,16 @@ ms:
               name: Bentangkan Projek Anda
             Internet:
               name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
             Minecraft Hour of Code:
               name: Jam Kod Minecraft
             Functions in Minecraft:
               name: Fungsi dalam Minecraft
+            Copyright and Creativity:
+              name: Perkongsian Digital
           student_description: Mulakan pengekodan dengan algoritma, gelung, bersyarat dan peristiwa dan kemudian anda akan bergerak kepada fungsi. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga anda.
         coursef-2018:
           title: Kursus F (2018)
@@ -2066,12 +2474,18 @@ ms:
             end_of_course_project:
               display_name: Akhir Projek Kursus
           lessons:
+            'Programming: My Robotic Friends':
+              name: Rakan-rakan Robotik Saya
             Sequence in Maze:
               name: Mengekod dengan Komen
+            Building a Foundation:
+              name: Membina Asas
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
             Programming in Artist:
               name: Mencipta Seni dengan Kod
+            'Loops: My Loopy Robotic Friends':
+              name: My Loopy Robotic Friends
             Loops in Artist:
               name: Melukis Bentuk dengan Gelung
             Nested Loops in Bee/Zombie:
@@ -2084,10 +2498,14 @@ ms:
               name: Kuasa Perkataan
             Conditionals in Minecraft:
               name: Bersyarat dalam Minecraft
+            Envelope Variables:
+              name: Envelope Variables
             Variables in Artist:
               name: Pemboleh Ubah di dalam Artis
             Variables in Play Lab:
               name: Pemboleh Ubah di dalam Makmal Mainan
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Artist:
               name: Untuk Gelung dengan Artis
             Functions in Bee:
@@ -2106,6 +2524,8 @@ ms:
               name: Semak Semula Projek Anda
             Present Your Project:
               name: Bentangkan Projek Anda
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
             Conditionals:
               name: Bersyarat dengan Peladang
             Variables as Constant in Artist:
@@ -2117,10 +2537,28 @@ ms:
           student_description: Pelajari menggunakan pelbagai jenis gelung, peristiwa, fungsi dan bersyarat. Selidik teknik penyelesaian masalah yang berbeza dan bincangkan kesan pengkomputeran dan internet terhadap kemasyarakatan. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga.
         csp1-2018:
           lessons:
+            Binary Numbers:
+              name: Nombor Perduaan
             Sending Numbers:
               name: Menghantar nombor
             The Internet:
               name: Internet
+        csd4-2018:
+          lessons:
+            Linking Screens:
+              name: Memautkan Skrin
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
+        csd5-2018:
+          lessons:
+            Representing Images:
+              name: Mewakili Imej
+            Keeping Data Secret:
+              name: Menyimpan Rahsia Data
+            Combining Representations:
+              name: Menggabungkan Perwakilan
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
         csp2-2018:
           lessons:
             Text Compression:
@@ -2215,6 +2653,8 @@ ms:
           description_short: 'Pengenalan kepada sains komputer untuk prapembaca: menggabungkan kursus tadika dan gred satu yang terbaik.'
           description_audience: 'Umur: 4-8 tahun'
           lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritma kehidupan sebenar: Menanam Benih'
             Learn to Drag and Drop:
               name: Pelajari Tarik dan Lepas
             'Programming: My Robotic Friends':
@@ -2235,8 +2675,12 @@ ms:
               name: Lebah Ejaan
             Sequencing with Scrat:
               name: Penjujukan dengan Scrat
+            Your Digital Footprint:
+              name: Your Digital Footprint
             Programming in Ice Age:
               name: Pengaturcaraan dengan Scrat
+            Copyright and Creativity:
+              name: Sangat Hebat untuk Mencipta dan Bermain dengan Adil
             Programming with Rey and BB-8:
               name: Pengaturcaraan dengan Rey dan BB-8
             Loops in Ice Age:
@@ -2270,8 +2714,16 @@ ms:
             Artist:
               name: Artis
         aquatic:
+          title: 'Minecraft: Voyage Aquatic'
           description_short: Gunakan kreativiti dan kemahiran menyelesaikan masalah anda untuk meneroka dan membina dunia di bawah permukaan air dengan kod!
+          lessons:
+            Aquatic:
+              name: 'Minecraft: Voyage Aquatic'
           name: akuatik
+        sconyers:
+          lessons:
+            Linking Screens:
+              name: Memautkan Skrin
         dance--draft:
           lessons:
             Dance Party:
@@ -2283,11 +2735,13 @@ ms:
         cspplayground:
           lesson_groups:
             csp_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csp_conditionals:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            csp_project:
+              display_name: Projek
         dance-extras:
           title: Teruskan Menari (2018)
           description: Melampaui jam pertama dengan idea projek lanjutan.
@@ -2301,13 +2755,15 @@ ms:
             ramp_up:
               display_name: Tingkatkan
             csf_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csf_data:
               display_name: Data
             csf_internet:
               display_name: Internet
             csf_sprites:
               display_name: Jin
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             end_of_course_project:
               display_name: Akhir Projek Kursus
           lessons:
@@ -2315,6 +2771,8 @@ ms:
               name: 'Pengaturcaraan: Rakan Robotik Saya'
             Sequence in Maze:
               name: Jujukan di dalam Pagar Sesat
+            Building a Foundation:
+              name: Membina Asas
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
             Programming in Artist:
@@ -2327,16 +2785,22 @@ ms:
               name: Gelung Bersarang di dalam Lebah/Zombi
             Nested Loops with Frozen:
               name: Gelung Bersarang dengan Frozen
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
             Conditionals in Farmer:
               name: Bersyarat di dalam Peladang
             Functions in Minecraft:
               name: Fungsi dalam Minecraft
             The Power of Words:
               name: Kuasa Perkataan
+            Envelope Variables:
+              name: Envelope Variables
             Variables as Constant in Artist:
               name: Pemboleh Ubah dengan Artis
             Variables that Change in Artist:
               name: Menukar Pemboleh Ubah dengan Artis
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Artist:
               name: Untuk Gelung dengan Artis
             Learning Sprites with Sprite Lab:
@@ -2375,6 +2839,10 @@ ms:
               name: Akhir Projek Kursus
             Internet:
               name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+            Digital Sharing:
+              name: Perkongsian Digital
             Running Simulations:
               name: Menjalankan Simulasi
             Simulating Experiments:
@@ -2399,6 +2867,8 @@ ms:
               display_name: Gelung
             csf_conditionals:
               display_name: Bersyarat
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             end_of_course_project:
               display_name: Akhir Projek Kursus
           lessons:
@@ -2422,8 +2892,14 @@ ms:
               name: Gelung Bersarang dalam Frozen
             While Loops in Farmer:
               name: Gelung Semasa di dalam Peladang
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
+            Digital Citizenship:
+              name: Kewarganegaraan Digital
             Build a Play Lab Game:
               name: Membina Permainan Makmal Mainan
+            'Unplugged: Binary':
+              name: Imej Binari
             Artist Binary:
               name: Imej Binari dengan Artis
             Build a Star Wars Game:
@@ -2441,6 +2917,8 @@ ms:
               display_name: Tingkatkan
             csf_sprites:
               display_name: Jin
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_impacts:
               display_name: Kesan Pengkomputeran
             csf_nested_loops:
@@ -2454,6 +2932,8 @@ ms:
               name: 'Pengaturcaraan: Rakan Robotik Saya'
             Sequence in Maze:
               name: Jujukan di dalam Pagar Sesat
+            Building a Foundation:
+              name: Membina Asas
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
             Programming in Artist:
@@ -2466,10 +2946,16 @@ ms:
               name: Gelung Bersarang
             Nested Loops with Frozen:
               name: Gelung Bersarang dengan Frozen
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
             Conditionals:
               name: Bersyarat dengan Peladang
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             Build a Star Wars Game:
               name: Membina Permainan Star Wars
+            'Functions: Songwriting':
+              name: Songwriting
             Functions in Minecraft:
               name: Fungsi dalam Minecraft
             Functions in Harvester:
@@ -2492,6 +2978,8 @@ ms:
               name: Bentangkan Projek Anda
             Internet:
               name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
             Nested Loops in Bee:
               name: Gelung Bersarang di dalam Pagar Sesat
             Nested Loops in Artist:
@@ -2512,12 +3000,18 @@ ms:
               name: Bersyarat Akuatik dalam Minecraft
             Access Ability:
               name: Mereka Bentuk untuk Aksesibiliti
+            Digital Sharing:
+              name: Perkongsian Digital
+            Simon Says:
+              name: Simon Says
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Bersyarat dalam Minecraft: Pelayaran Akuatik'
             Swimming Fish with Sprite Lab:
               name: Ikan Berenang dengan Makmal Peperi
             Designing for Accessibility:
               name: Mereka Bentuk untuk Aksesibiliti
+            Songwriting:
+              name: Songwriting
           student_description: Mulakan pengekodan dengan algoritma, gelung, bersyarat dan peristiwa dan kemudian anda akan bergerak kepada fungsi. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga anda.
         express-2019:
           title: Kursus Dipercepatkan (2019)
@@ -2536,7 +3030,7 @@ ms:
             csf_functions:
               display_name: Fungsi
             csf_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csf_sprites:
               display_name: Jin
           lessons:
@@ -2562,6 +3056,10 @@ ms:
               name: Gelung Bersarang di dalam Pagar Sesat
             Nested Loops in Frozen:
               name: Emping Salji dengan Anna dan Elsa
+            While Loops in Farmer:
+              name: While Loops with the Farmer
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
             'Functions: Songwriting':
               name: 'Fungsi : Penulisan Lagu'
             Functions in Minecraft:
@@ -2580,10 +3078,14 @@ ms:
               name: Membina Permainan Kibasan
             The Power of Words:
               name: Kuasa Perkataan
+            Envelope Variables:
+              name: Envelope Variables
             Variables as Constant in Artist:
               name: Pemboleh Ubah dengan Artis
             Variables that Change in Artist:
               name: Menukar Pemboleh Ubah dengan Artis
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Artist:
               name: Untuk Gelung dengan Artis
             Explore Project Ideas:
@@ -2596,10 +3098,14 @@ ms:
               name: Semak Semula Projek Anda
             Present Your Project:
               name: Bentangkan Projek Anda
+            Binary Bracelets:
+              name: Binary Bracelets
             Artist Binary:
               name: Binari Artis
             Internet:
               name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
             Editing Behaviors:
               name: Tingkah Laku di dalam Makmal Peperi
             Virtual Pet with Sprite Lab:
@@ -2628,6 +3134,8 @@ ms:
           description_short: Pelajari asas sains komputer dan cipta seni, cerita dan permainan anda sendiri.
           description_audience: 'Umur: 6-10 tahun'
           lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -2643,6 +3151,8 @@ ms:
               name: Pengaturcaraan dengan Angry Birds
             Debugging in Maze:
               name: Penyahpepijatan di dalam Pagar Sesat
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritma Kehidupan Sebenar: Paper Planes'
             Programming in Collector:
               name: Mengumpul Harta Karun bersama Laurel
             Programming in Artist:
@@ -2655,12 +3165,16 @@ ms:
               name: Gelung di dalam Artis
             Loops in Harvester:
               name: Menuai Tanaman dengan Gelung
+            'Events: The Big Event':
+              name: The Big Event
             Build a Flappy Game:
               name: Membina Permainan Kibasan
             Screen Out the Mean:
               name: Keluarkan Maksudnya
             Events in Play Lab:
               name: Permainan Mengejar dengan Peristiwa
+            Binary Bracelets:
+              name: Binary Bracelets
             Create a Design with Loops:
               name: Cipta Reka Bentuk dengan Gelung
             'End of Course Project: Create a Play Lab Game':
@@ -2671,8 +3185,12 @@ ms:
               name: Rakan Robotik Bergelung Junior Saya
             Graphing Data:
               name: Memetakan Data
+            Powerful Passwords:
+              name: Powerful Passwords
             Sticker Art with Loops:
               name: Seni Pelekat dengan Gelung
+            Picturing Data:
+              name: Memotret Data
           student_description: Cipta atur cara dengan penjujukan, gelung dan peristiwa. Terjemahkan tanda nama anda kepada binari, selidik teknik penyelesaian masalah yang berbeza dan pelajari cara bertindak balas terhadap buli siber. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan!
         coursea-2019:
           title: Kursus A (2019)
@@ -2680,6 +3198,8 @@ ms:
           description_short: Pengenalan kepada sains komputer untuk prapembaca.
           description_audience: 'Umur: 4-7 tahun'
           lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -2691,6 +3211,8 @@ ms:
               name: Peta-peta Gembira
             Programming in Maze:
               name: Pengaturcaraan di dalam Pagar Sesat
+            Going Places Safely:
+              name: Going Places Safely
             'Loops: Happy Loops':
               name: Gelung Bahagia
             Loops in Collector:
@@ -2720,6 +3242,8 @@ ms:
           description_short: Pengenalan kepada sains komputer untuk prapembaca. Serupa dengan Kursus A, tetapi dengan kedalaman konsep tambahan.
           description_audience: 'Umur: 5-8 tahun'
           lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -2731,6 +3255,8 @@ ms:
           lessons:
             Sequencing with Scrat:
               name: Penjujukan dengan Scrat
+            Your Digital Footprint:
+              name: Your Digital Footprint
             'Programming: My Robotic Friends':
               name: 'Pengaturcaraan: Rakan Robotik Saya'
             Programming in Ice Age:
@@ -2747,6 +3273,8 @@ ms:
               name: Jr. Peristiwa Besar
             Events in Play Lab:
               name: Pertempuran Diraja bersama Acara
+            'Loops: Getting Loopy':
+              name: Getting Loopy
             Loops in Harvester:
               name: Gelung dengan Penuai
             Programming in Maze:
@@ -2773,6 +3301,8 @@ ms:
               name: 'Penyahpepijatan: Pepijat Tidak Dikesan'
             Sequencing with Scrat:
               name: Penjujukan dengan Scrat
+            Your Digital Footprint:
+              name: Your Digital Footprint
             'Programming: My Robotic Friends':
               name: 'Pengaturcaraan: Rakan Robotik Saya'
             Programming in Ice Age:
@@ -2810,36 +3340,67 @@ ms:
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'Penyahpepijatan: Pepijat Tidak Dikesan'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritma kehidupan sebenar: Menanam Benih'
         csd2-2019:
           lessons:
+            Headings:
+              name: Headings
             Lists:
               name: Senarai
         csd3-2019:
           lessons:
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
             Sprites:
               name: Jin
             Conditionals:
               name: Bersyarat
+            Keyboard Input:
+              name: Input Papan Kekunci
+            Collisions:
+              name: Perlanggaran
             Functions:
               name: Fungsi
+        csd4-2019:
+          lessons:
+            Linking Screens:
+              name: Memautkan Skrin
+        csd5-2019:
+          lessons:
+            Representing Images:
+              name: Mewakili Imej
+            Keeping Data Secret:
+              name: Menyimpan Rahsia Data
+            Combining Representations:
+              name: Menggabungkan Perwakilan
         csd6-2019:
           lessons:
+            Board Events:
+              name: Acara Papan
+            Getting Properties:
+              name: Mendapatkan Harta
             Functions with Parameters:
               name: Fungsi-fungsi dengan parameter
         csp4-pilot:
           lesson_groups:
             csp_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csp_conditionals:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            csp_project:
+              display_name: Projek
             required:
               display_name: Gambaran Keseluruhan
+          lessons:
+            Surveys:
+              name: Kaji Selidik
         csp1-2019:
           lessons:
+            Binary Numbers:
+              name: Nombor Perduaan
             Sending Numbers:
               name: Menghantar nombor
             The Internet:
@@ -2856,6 +3417,9 @@ ms:
           lesson_groups:
             required:
               display_name: Gambaran Keseluruhan
+          lessons:
+            Binary Numbers:
+              name: Nombor Perduaan
         time4csdemo:
           lesson_groups:
             ramp_up:
@@ -2863,10 +3427,16 @@ ms:
             csf_sprites:
               display_name: Jin
           lessons:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
             'Programming: My Robotic Friends':
               name: 'Pengaturcaraan: Rakan Robotik Saya'
             Sequence in Maze:
               name: Jujukan di dalam Pagar Sesat
+            Building a Foundation:
+              name: Membina Asas
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
             Programming in Artist:
@@ -2900,65 +3470,81 @@ ms:
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csp_conditionals:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            csp_project:
+              display_name: Projek
         csp2-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csp_conditionals:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            csp_project:
+              display_name: Projek
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csp_conditionals:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            csp_project:
+              display_name: Projek
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Senarai
             csp_loops:
               display_name: Gelung
+            csp_project:
+              display_name: Projek
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csp_conditionals:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            csp_project:
+              display_name: Projek
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csp_conditionals:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            csp_project:
+              display_name: Projek
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csp_conditionals:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            csp_project:
+              display_name: Projek
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csp_conditionals:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            csp_project:
+              display_name: Projek
         express-2018-vn:
           lessons:
             Graph Paper Programming:
@@ -2973,6 +3559,8 @@ ms:
               display_name: Senarai
             csp_loops:
               display_name: Gelung
+            csp_project:
+              display_name: Projek
             required:
               display_name: Gambaran Keseluruhan
         fit2019-novice:
@@ -2991,16 +3579,24 @@ ms:
               name: Penggulungan
         csd2-pilot:
           lessons:
+            Headings:
+              name: Headings
             Lists:
               name: Senarai
+            Linking Pages:
+              name: Memautkan Halaman
         csd3-pilot:
           lessons:
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
             Sprites:
               name: Jin
             Conditionals:
               name: Bersyarat
+            Keyboard Input:
+              name: Input Papan Kekunci
+            Collisions:
+              name: Perlanggaran
             Functions:
               name: Fungsi
             Sprite Properties:
@@ -3037,6 +3633,9 @@ ms:
           lesson_groups:
             required:
               display_name: Gambaran Keseluruhan
+          lessons:
+            Focus Area 1:
+              name: Kurikulum
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -3105,6 +3704,8 @@ ms:
           lessons:
             Computer Science Fundamentals:
               name: Asas Sains Komputer
+            Planning:
+              name: Merancang
             Sequencing:
               name: Penjujukan
             Loops:
@@ -3115,8 +3716,10 @@ ms:
               name: Acara-acara
             Functions:
               name: Fungsi
+            Sprite Lab:
+              name: Sprite Lab
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
         dance-extras-2019:
           title: Teruskan Menari (2019)
           description: Melampaui jam pertama dengan idea projek lanjutan.
@@ -3124,11 +3727,13 @@ ms:
         csp4-preview:
           lesson_groups:
             csp_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csp_conditionals:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            csp_project:
+              display_name: Projek
         time4cs-original-unit-1:
           lessons:
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -3137,12 +3742,20 @@ ms:
               name: Bersyarat
             'Events: The Big Event':
               name: 'Peristiwa: Peristiwa Besar'
+            Simon Says:
+              name: Simon Says
             Alien Dance Party with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
+            Access Ability:
+              name: Access Ability
             Drawing with Loops:
               name: Melukis dengan Gelung
         time4cs-control-unit-2:
           lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_conditionals:
               display_name: Bersyarat
             csf_nested_loops:
@@ -3152,6 +3765,10 @@ ms:
             end_of_course_project:
               display_name: Akhir Projek Kursus
           lessons:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
             Nested Loops in Artist:
               name: Gelung Bersarang di dalam Artis
             Nested Loops in Frozen:
@@ -3192,6 +3809,8 @@ ms:
               display_name: Acara-acara
             csf_sprites:
               display_name: Jin
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_impacts:
               display_name: Kesan Pengkomputeran
             ramp_up:
@@ -3203,8 +3822,14 @@ ms:
               name: Bersyarat
             'Events: The Big Event':
               name: 'Peristiwa: Peristiwa Besar'
+            Simon Says:
+              name: Simon Says
             Alien Dance Party with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
+            Access Ability:
+              name: Access Ability
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -3217,6 +3842,8 @@ ms:
               display_name: Acara-acara
             csf_sprites:
               display_name: Jin
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_impacts:
               display_name: Kesan Pengkomputeran
             ramp_up:
@@ -3228,8 +3855,14 @@ ms:
               name: Bersyarat
             'Events: The Big Event':
               name: 'Peristiwa: Peristiwa Besar'
+            Simon Says:
+              name: Simon Says
             Alien Dance Party with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
+            Access Ability:
+              name: Access Ability
         csp7-pilot:
           lesson_groups:
             required:
@@ -3237,29 +3870,59 @@ ms:
         csp4-2020:
           lesson_groups:
             csp_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csp_conditionals:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            csp_project:
+              display_name: Projek
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Senarai
             csp_loops:
               display_name: Gelung
+            csp_project:
+              display_name: Projek
+        csd2-2020:
+          lessons:
+            Headings:
+              name: Headings
+            Linking Pages:
+              name: Memautkan Halaman
+        csd4-2020:
+          lessons:
+            Linking Screens:
+              name: Memautkan Skrin
+        csd5-2020:
+          lessons:
+            Representing Images:
+              name: Mewakili Imej
+            Keeping Data Secret:
+              name: Menyimpan Rahsia Data
+            Combining Representations:
+              name: Menggabungkan Perwakilan
         csd6-2020:
           lessons:
+            Board Events:
+              name: Acara Papan
+            Getting Properties:
+              name: Mendapatkan Harta
             Functions with Parameters:
               name: Fungsi-fungsi dengan parameter
         csd3-2020:
           lessons:
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
             Sprite Properties:
               name: Sifat Peperi
             Conditionals:
               name: Bersyarat
+            Keyboard Input:
+              name: Input Papan Kekunci
+            Collisions:
+              name: Perlanggaran
             Functions:
               name: Fungsi
             Text:
@@ -3272,6 +3935,8 @@ ms:
           description_short: Pengenalan kepada sains komputer untuk prapembaca.
           description_audience: 'Umur: 4-7 tahun'
           lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -3279,6 +3944,8 @@ ms:
             csf_events:
               display_name: Acara-acara
           lessons:
+            Going Places Safely:
+              name: Going Places Safely
             Learn to Drag and Drop:
               name: Pelajari Tarik dan Lepas
             'Programming: Happy Maps':
@@ -3310,6 +3977,8 @@ ms:
           description_short: Pengenalan kepada sains komputer untuk prapembaca. Serupa dengan Kursus A, tetapi dengan kedalaman konsep tambahan.
           description_audience: 'Umur: 5-8 tahun'
           lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -3319,12 +3988,16 @@ ms:
             csf_events:
               display_name: Acara-acara
           lessons:
+            Your Digital Footprint:
+              name: Your Digital Footprint
             Sequencing in Maze:
               name: Penjujukan dengan Angry Birds
             Programming in Maze:
               name: Pengaturcaraan dengan Angry Birds
             Programming in Harvester:
               name: Pengaturcaraan dengan Penuai
+            'Loops: Getting Loopy':
+              name: Getting Loopy
             Loops in Harvester:
               name: Gelung dengan Penuai
             Loops in Collector:
@@ -3344,6 +4017,8 @@ ms:
           description_short: Pelajari asas sains komputer dan cipta seni, cerita dan permainan anda sendiri.
           description_audience: 'Umur: 6-10 tahun'
           lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -3357,6 +4032,8 @@ ms:
           lessons:
             Screen Out the Mean:
               name: Keluarkan Maksudnya
+            Powerful Passwords:
+              name: Powerful Passwords
             'Programming: My Robotic Friends':
               name: Rakan Robotik Junior Saya
             Programming in Maze:
@@ -3367,6 +4044,8 @@ ms:
               name: Mengumpul Harta Karun bersama Laurel
             Programming in Artist:
               name: Mencipta Seni dengan Kod
+            Binary Bracelets:
+              name: Binary Bracelets
             'Loops: My Loopy Robotic Friends':
               name: Rakan Robotik Bergelung Junior Saya
             Loops with Rey and BB-8:
@@ -3375,10 +4054,14 @@ ms:
               name: Menuai Tanaman dengan Gelung
             Sticker Art with Loops:
               name: Seni Pelekat dengan Gelung
+            'Events: The Big Event':
+              name: The Big Event
             Build a Flappy Game:
               name: Membina Permainan Kibasan
             Events in Play Lab:
               name: Permainan Mengejar dengan Peristiwa
+            Picturing Data:
+              name: Memotret Data
             'End of Course Project: Create a Play Lab Game':
               name: Akhir Projek Kursus
             Putting a STOP to Online Meanness:
@@ -3400,6 +4083,8 @@ ms:
               display_name: Gelung
             csf_conditionals:
               display_name: Bersyarat
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             end_of_course_project:
               display_name: Akhir Projek Kursus
           lessons:
@@ -3419,10 +4104,16 @@ ms:
               name: Melukis Bentuk dengan Gelung
             Nested Loops in Bee:
               name: Gelung Bersarang di dalam Pagar Sesat
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
             While Loops in Farmer:
               name: Gelung Semasa di dalam Peladang
+            'Unplugged: Binary':
+              name: Imej Binari
             Artist Binary:
               name: Imej Binari dengan Artis
+            Digital Citizenship:
+              name: Kewarganegaraan Digital
             Dance Party:
               name: Majlis Tari-Menari
             Dance Part:
@@ -3442,6 +4133,8 @@ ms:
               display_name: Tingkatkan
             csf_sprites:
               display_name: Jin
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_nested_loops:
               display_name: Gelung Bersarang
             csf_functions:
@@ -3459,10 +4152,14 @@ ms:
               name: 'Bersyarat dalam Minecraft: Pelayaran Akuatik'
             Conditionals:
               name: Bersyarat dengan Peladang
+            Simon Says:
+              name: Simon Says
             Learning Sprites with Sprite Lab:
               name: Ikan Berenang dengan Makmal Peperi
             Alien Dance Party with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
             About Me:
               name: Tentang Saya dengan Makmal Peperi
             Access Ability:
@@ -3473,6 +4170,8 @@ ms:
               name: Bentuk Beragam dengan Menggunakan Gelung Bersarang
             Nested Loops in Frozen:
               name: Gelung Bersarang dengan Frozen
+            'Functions: Songwriting':
+              name: Songwriting
             Functions in Minecraft:
               name: Fungsi dalam Minecraft
             Functions in Harvester:
@@ -3481,6 +4180,8 @@ ms:
               name: Fungsi dengan Artis
             End of Course Project:
               name: Akhir Projek Kursus
+            Digital Sharing:
+              name: Perkongsian Digital
             Designing for Accessibility:
               name: Mereka Bentuk untuk Aksesibiliti
           student_description: Mulakan pengekodan dengan algoritma, gelung, bersyarat dan peristiwa dan kemudian anda akan bergerak kepada fungsi. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga anda.
@@ -3492,8 +4193,10 @@ ms:
           lesson_groups:
             ramp_up:
               display_name: Tingkatkan
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csf_data:
               display_name: Data
             csf_sprites:
@@ -3511,12 +4214,16 @@ ms:
               name: Melukis dengan Gelung
             Nested Loops in the Maze:
               name: Gelung Bersarang di dalam Pagar Sesat
+            Envelope Variables:
+              name: Envelope Variables
             Variables as Constant in Artist:
               name: Pemboleh Ubah dengan Artis
             Variables that Change in Artist:
               name: Menukar Pemboleh Ubah dengan Artis
             Simulating Experiments:
               name: Mensimulasikan Eksperimen
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Artist:
               name: Untuk Gelung dengan Artis
             Internet:
@@ -3527,6 +4234,10 @@ ms:
               name: Haiwan Peliharaan Maya dengan Makmal Peperi
             The Power of Words:
               name: Kuasa Perkataan
+            Crowdsourcing:
+              name: Crowdsourcing
+            Digital Sharing:
+              name: Perkongsian Digital
             End of Course Project:
               name: Akhir Projek Kursus
             AI for Oceans:
@@ -3549,7 +4260,7 @@ ms:
             csf_functions:
               display_name: Fungsi
             csf_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csf_sprites:
               display_name: Jin
             end_of_course_project:
@@ -3611,6 +4322,8 @@ ms:
               name: Gelung Bersarang di dalam Pagar Sesat
             Snowflakes with Anna and Elsa:
               name: Emping Salji dengan Anna dan Elsa
+            While Loops with the Farmer:
+              name: While Loops with the Farmer
             Functions with Harvester:
               name: Fungsi dengan Penuai
             Functions with Artist:
@@ -3664,6 +4377,10 @@ ms:
             A Royal Battle with Events:
               name: Pertempuran Diraja bersama Acara
           student_description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
+        csp1-2020:
+          lessons:
+            Binary Numbers:
+              name: Nombor Perduaan
         csp2-2020:
           lessons:
             Packets:
@@ -3682,14 +4399,22 @@ ms:
               name: "[TEMPLATE] Isi pelajaran"
             "[TEMPLATE] Unit Wrap Up":
               name: "[TEMPLATE] Unit Penyelesai"
+        csd2-virtual:
+          lessons:
+            Headings:
+              name: Headings
         csp5-virtual:
           lessons:
             Intro to App Lab:
               name: Pengenalan kepada Makmal Aplikasi
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
         virtual-holding-place:
           lessons:
+            Example Projects:
+              name: Contoh Projek
+            Collisions:
+              name: Perlanggaran
             Functions:
               name: Fungsi
         code-break:
@@ -3711,11 +4436,13 @@ ms:
             Functions:
               name: Fungsi
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
+            Sprite Lab:
+              name: Sprite Lab
         csd3-virtual:
           lessons:
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
             Sprites:
               name: Jin
             Sprite Properties:
@@ -3724,6 +4451,10 @@ ms:
               name: teks
             Conditionals:
               name: Bersyarat
+            Keyboard Input:
+              name: Input Papan Kekunci
+            Collisions:
+              name: Perlanggaran
             Functions:
               name: Fungsi
         ui-test-script-in-course-2017:
@@ -3748,6 +4479,8 @@ ms:
               name: Kursus A
             Course B:
               name: Kursus B
+            CS Discoveries:
+              name: Penemuan CS
             Course E:
               name: Kursus E
             Course F:
@@ -3796,6 +4529,8 @@ ms:
           lessons:
             lesson-2:
               name: Teks dan Prom
+            lesson-3:
+              name: 'Projek Mini: Program Input Pengguna'
             Virus Simulation for Code Bytes:
               name: Mengekod Simulasi
             Making Sprites:
@@ -3806,15 +4541,23 @@ ms:
               name: Akhir Projek Kursus
           lesson_groups:
             lessonGroup-3:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             outbreak:
               display_name: Simulator Wabak
             debugging:
               display_name: Penyahpepijatan
+        csd2-2021:
+          lessons:
+            Headings:
+              name: Headings
+            Linking Pages:
+              name: Memautkan Halaman
+            lesson-1:
+              name: Kajian Pasca Kursus CS Discoveries
         csd3-2021:
           lessons:
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
             Sprites:
               name: Jin
             Sprite Properties:
@@ -3823,12 +4566,42 @@ ms:
               name: teks
             Conditionals:
               name: Bersyarat
+            Keyboard Input:
+              name: Input Papan Kekunci
+            Collisions:
+              name: Perlanggaran
             Functions:
               name: Fungsi
+            lesson-1:
+              name: Kajian Pasca Kursus CS Discoveries
+        csd4-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
+        csd5-2021:
+          lessons:
+            Representing Images:
+              name: Mewakili Imej
+            Keeping Data Secret:
+              name: Menyimpan Rahsia Data
+            Combining Representations:
+              name: Menggabungkan Perwakilan
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
         csd6-2021:
           lessons:
+            Board Events:
+              name: Acara Papan
+            Getting Properties:
+              name: Mendapatkan Harta
             Functions with Parameters:
               name: Fungsi-fungsi dengan parameter
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              name: Nombor Perduaan
         csp2-2021:
           lessons:
             Packets:
@@ -3840,17 +4613,21 @@ ms:
         csp4-2021:
           lesson_groups:
             csp_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csp_conditionals:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            csp_project:
+              display_name: Projek
         csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: Senarai
             csp_loops:
               display_name: Gelung
+            csp_project:
+              display_name: Projek
         csp6-2021:
           lesson_groups:
             csp_unit6_2020:
@@ -3889,6 +4666,8 @@ ms:
             lesson-1:
               name: Akhir Projek Kursus
           lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -3912,6 +4691,8 @@ ms:
               name: Pengaturcaraan dengan Angry Birds
             Programming in Harvester:
               name: Pengaturcaraan dengan Penuai
+            'Loops: Getting Loopy':
+              name: Getting Loopy
             Loops in Harvester:
               name: Gelung dengan Penuai
             Loops in Collector:
@@ -3923,6 +4704,8 @@ ms:
             lesson-1:
               name: Akhir Projek Kursus
           lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -3954,17 +4737,25 @@ ms:
               name: Mengumpul Harta Karun bersama Laurel
             Programming in Artist:
               name: Mencipta Seni dengan Kod
+            Binary Bracelets:
+              name: Binary Bracelets
             'Loops: My Loopy Robotic Friends':
               name: Rakan Robotik Bergelung Junior Saya
             Loops with Rey and BB-8:
               name: Gelung dengan Rey dan BB-8
             Loops in Harvester:
               name: Menuai Tanaman dengan Gelung
+            'Events: The Big Event':
+              name: The Big Event
             Build a Flappy Game:
               name: Membina Permainan Kibasan
+            Picturing Data:
+              name: Memotret Data
             'End of Course Project: Create a Play Lab Game':
               name: Akhir Projek Kursus
           lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -4000,10 +4791,14 @@ ms:
               name: Melukis Bentuk dengan Gelung
             Nested Loops in Bee:
               name: Gelung Bersarang di dalam Pagar Sesat
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
             While Loops in Farmer:
               name: Gelung Semasa di dalam Peladang
             Conditionals & Loops in Harvester:
               name: Menuai dengan Bersyarat " "Perlu Dipadamkan"
+            'Unplugged: Binary':
+              name: Imej Binari
             Artist Binary:
               name: Imej Binari dengan Artis
             Be A Super Digital Citizen:
@@ -4023,8 +4818,12 @@ ms:
               display_name: Gelung
             csf_conditionals:
               display_name: Bersyarat
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             end_of_course_project:
               display_name: Akhir Projek Kursus
+            lessonGroup-6:
+              display_name: Kewarganegaraan Digital
           name: kursusd-2021
         coursee-2021:
           title: Kursus E (2021)
@@ -4044,10 +4843,18 @@ ms:
               name: Ikan Berenang dengan Makmal Peperi
             Alien Dance Party with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
+            About Me:
+              name: 'Projek Mini: Tentang Saya'
+            Digital Sharing:
+              name: Perkongsian Digital
             Nested Loops in Bee:
               name: Gelung Bersarang di dalam Pagar Sesat
             Nested Loops in Artist:
               name: Bentuk Beragam dengan Menggunakan Gelung Bersarang
+            'Functions: Songwriting':
+              name: Songwriting
             Functions in Minecraft:
               name: Fungsi dalam Minecraft
             Functions in Harvester:
@@ -4067,6 +4874,8 @@ ms:
               display_name: Gelung Bersarang
             csf_sprites:
               display_name: Jin
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_nested_loops:
               display_name: Bersyarat
             csf_functions:
@@ -4097,6 +4906,8 @@ ms:
               name: Pengaturcaraan dengan Lebah
             The Power of Words:
               name: Kuasa Perkataan
+            Envelope Variables:
+              name: Envelope Variables
             Variables as Constant in Artist:
               name: Pemboleh Ubah dengan Artis
             Variables that Change in Bee:
@@ -4107,10 +4918,14 @@ ms:
               name: Kecerdasan Buatan (AI) Untuk Lautan
             Internet:
               name: Internet
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops in Artist:
               name: Untuk Gelung dengan Artis
             Editing Behaviors:
               name: Tingkah Laku di dalam Makmal Peperi
+            Virtual Pet:
+              name: 'Projek Mini: Haiwan Peliharaan Maya'
             End of Course Project:
               name: Akhir Projek Kursus
             lesson-1:
@@ -4125,17 +4940,23 @@ ms:
               name: Wabak
             lesson-2:
               name: Kuasa Perkataan
+            lesson-11:
+              name: 'Projek Mini: Program Input Pengguna'
           lesson_groups:
             ramp_up:
               display_name: Jin
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_sprites:
               display_name: Kesan Pengkomputeran
             end_of_course_project:
               display_name: Akhir Projek Kursus
             lessonGroup-8:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             lessonGroup-9:
               display_name: alihkan
+            lessonGroup-7:
+              display_name: Kewarganegaraan Digital
           name: kursusf-2021
         express-2021:
           description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
@@ -4187,6 +5008,8 @@ ms:
             lesson-4:
               name: Teks dan Prom
           lesson_groups:
+            csf_warmup:
+              display_name: Mula Memanas
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -4196,7 +5019,7 @@ ms:
             csf_functions:
               display_name: Fungsi
             csf_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csf_sprites:
               display_name: Jin
             end_of_course_project:
@@ -4253,15 +5076,29 @@ ms:
               name: Teks dan Prom
             blank-space-stories:
               name: Cerita Ruang Kosong
+            user-input-programs:
+              name: 'Projek Mini: Program Input Pengguna'
           lesson_groups:
             outbreak:
               display_name: Simulasi Wabak
             lessonGroup-3:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             Sprites:
               display_name: Jin
             variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
+        csd4-preview-2021:
+          lessons:
+            Linking Screens:
+              name: Memautkan Skrin
+        csd5-preview-2021:
+          lessons:
+            Representing Images:
+              name: Mewakili Imej
+            Keeping Data Secret:
+              name: Menyimpan Rahsia Data
+            Combining Representations:
+              name: Menggabungkan Perwakilan
         testtess:
           lessons:
             lesson-2:
@@ -4373,15 +5210,21 @@ ms:
             Functions:
               name: Fungsi
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
         pl-playground:
           lessons:
             lesson-9:
               name: Langkah Permulaan 1
+        csd7-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
               name: Asas Sains Komputer
+            Planning:
+              name: Merancang
         self-paced-pl-csd2-2021:
           lessons:
             lesson-9:
@@ -4416,6 +5259,10 @@ ms:
           lesson_groups:
             lessonGroup-3:
               display_name: Sumber
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: Ujian
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -4445,6 +5292,8 @@ ms:
           lesson_groups:
             lessonGroup-2:
               display_name: Pelajaran
+            lessonGroup-3:
+              display_name: Projek
             lessonGroup-4:
               display_name: Demo dan Sumber
         csa-self-paced-pl:
@@ -4567,6 +5416,8 @@ ms:
               name: Pembolehubah + Penyata Jika
             lesson-8:
               name: 'Projek Mini: On The Go Apps'
+            lesson-9:
+              name: LED berwarna
             lesson-10:
               name: Input Makmal Apl (getProperty, getText) (Peluncur Input Dropdown?)
             lesson-11:
@@ -4583,6 +5434,8 @@ ms:
               name: Input Fizikal
             lesson-18:
               name: Prototaip
+            lesson-19:
+              name: Projek
           lesson_groups:
             lessonGroup-3:
               display_name: Template
@@ -4608,6 +5461,8 @@ ms:
           lesson_groups:
             lessonGroup-2:
               display_name: Pelajaran
+            lessonGroup-3:
+              display_name: Projek
             lessonGroup-4:
               display_name: Demo dan Sumber
         tesstest921:
@@ -4719,6 +5574,7 @@ ms:
           title: Unit 5 - Organisasi Objek Pemberian [Exemplars]
         csd-post-survey-2021:
           name: csd-tinjauan-pascakursus-2021
+          title: Kajian Pasca Kursus CS Discoveries
           description: Unit ini mengandungi Tinjauan Pascakursus Penemuan CS. Unit ini boleh ditugaskan selepas pelajar melengkapkan unit terakhir mereka dalam Penemuan CS.
           student_description: Unit ini mengandungi tinjauan untuk apabila kelas anda selesai dengan unit dalam Penemuan CS. Guru anda akan memberitahu anda masa yang sesuai untuk mengambil tinjauan ini.
         csa-pl-test:
@@ -4799,8 +5655,11 @@ ms:
               name: Lebah Ejaan
         explore-data-1-2021:
           lessons:
+            Exploring Box Plots and Histograms:
+              name: Visualisasi Data
             lesson-1:
               name: Meneroka Plot dan Histogram Kotak
+          title: Visualisasi Data
         counting-csc-2021:
           lessons:
             Counting with Laurel:
@@ -4824,12 +5683,16 @@ ms:
           lessons:
             lesson-4:
               name: Simulator Wabak
+            lesson-5:
+              name: 'Projek Mini: Tentang Saya'
             Drawing with Loops:
               name: Melukis dengan Gelung
             Programming with the Bee:
               name: Pengaturcaraan dengan Lebah
             Variables with the Bee:
               name: Pemboleh ubah dengan Lebah
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops with Artist:
               name: Untuk Gelung dengan Artis
             Follow the Algorithm:
@@ -4849,21 +5712,29 @@ ms:
           lessons:
             Making Sprites:
               name: Membuat Peperi
+            'Mini-Project: Virtual Pet':
+              name: 'Projek Mini: Haiwan Peliharaan Maya'
             Blank Space Stories:
               name: Cerita Ruang Kosong
             Text and Prompts:
               name: Teks dan Prom
+            'Mini-Project: User Input Programs':
+              name: 'Projek Mini: Program Input Pengguna'
             Simulating Experiments:
               name: Mensimulasikan Eksperimen
           lesson_groups:
             lessonGroup-2:
               display_name: Jin
             lessonGroup-3:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             lessonGroup-4:
               display_name: Akhir Projek Kursus
         csd6-pilot-2022:
           lessons:
+            Board Events:
+              name: Acara Papan
+            Arrays and Color LEDs:
+              name: LED berwarna
             lesson-10:
               name: Menggabungkan Input
             Functions with Parameters:
@@ -4928,6 +5799,8 @@ ms:
             lesson-1:
               name: Akhir Projek Kursus
           lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -5006,7 +5879,7 @@ ms:
             csf_functions:
               display_name: Fungsi
             csf_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             end_of_course_project:
               display_name: Akhir Projek Kursus
           description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
@@ -5014,6 +5887,10 @@ ms:
           description_short: 'Pengenalan kepada sains komputer: menggabungkan kurikulum sekolah rendah yang terbaik untuk pelajar yang lebih tua.'
           description_audience: 'Umur: 9-18 tahun'
           name: ekspres-2022
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Nombor Perduaan
         csp2-2022:
           lessons:
             Packets:
@@ -5025,17 +5902,21 @@ ms:
         csp4-2022:
           lesson_groups:
             csp_variables:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             csp_conditionals:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            csp_project:
+              display_name: Projek
         csp5-2022:
           lesson_groups:
             csp_lists:
               display_name: Senarai
             csp_loops:
               display_name: Gelung
+            csp_project:
+              display_name: Projek
         courseb-2022:
           lessons:
             Digital Trails:
@@ -5046,6 +5927,8 @@ ms:
               name: Pengaturcaraan dengan Angry Birds
             Programming with Harvester:
               name: Pengaturcaraan dengan Penuai
+            Getting Loopy:
+              name: Getting Loopy
             Loops with Harvester:
               name: Gelung dengan Penuai
             Loops with Laurel:
@@ -5062,6 +5945,8 @@ ms:
               name: Pengaturcaraan dengan Angry Birds
             Programming in Harvester:
               name: Pengaturcaraan dengan Penuai
+            'Loops: Getting Loopy':
+              name: Getting Loopy
             Loops in Harvester:
               name: Gelung dengan Penuai
             Loops in Collector:
@@ -5073,6 +5958,8 @@ ms:
             lesson-1:
               name: Akhir Projek Kursus
           lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -5107,8 +5994,14 @@ ms:
               name: Gelung dengan Rey dan BB-8
             Harvesting Crops with Loops:
               name: Menuai Tanaman dengan Gelung
+            The Big Event:
+              name: The Big Event
             Build a Flappy Game:
               name: Membina Permainan Kibasan
+            Picturing Data:
+              name: Memotret Data
+            Binary Bracelets:
+              name: Binary Bracelets
             End of Course Project:
               name: Akhir Projek Kursus
             'Programming: My Robotic Friends':
@@ -5123,9 +6016,13 @@ ms:
               name: Rakan Robotik Bergelung Junior Saya
             Loops in Harvester:
               name: Menuai Tanaman dengan Gelung
+            'Events: The Big Event':
+              name: The Big Event
             'End of Course Project: Create a Play Lab Game':
               name: Akhir Projek Kursus
           lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
             csf_loops:
@@ -5168,6 +6065,8 @@ ms:
               name: Melukis Bentuk dengan Gelung
             Nested Loops in Maze:
               name: Gelung Bersarang di dalam Pagar Sesat
+            Conditionals with Cards:
+              name: Bersyarat dengan Kad
             While Loops in Farmer:
               name: Gelung Semasa di dalam Peladang
             End of Course Project:
@@ -5183,6 +6082,8 @@ ms:
             Nested Loops in Bee:
               name: Gelung Bersarang di dalam Pagar Sesat
           lesson_groups:
+            lessonGroup-6:
+              display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
             csf_events:
@@ -5206,10 +6107,18 @@ ms:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
             Be A Super Digital Citizen:
               name: Jadilah Warganegara Super Digital
+            Private and Personal Information:
+              name: Sulit dan Maklumat Peribadi
+            'Mini-Project: About Me':
+              name: 'Projek Mini: Tentang Saya'
+            Digital Sharing:
+              name: Perkongsian Digital
             Drawing with Loops:
               name: Melukis dengan Gelung
             Fancy Shapes using Nested Loops:
               name: Bentuk Beragam dengan Menggunakan Gelung Bersarang
+            Songwriting:
+              name: Songwriting
             Functions in Minecraft:
               name: Fungsi dalam Minecraft
             Functions with Artist:
@@ -5230,10 +6139,14 @@ ms:
               name: Ikan Berenang dengan Makmal Peperi
             lesson-4:
               name: Jadilah Warganegara Super Digital
+            About Me:
+              name: 'Projek Mini: Tentang Saya'
             Programming and Loops with the Artist:
               name: Melukis dengan Gelung
             Nested Loops in Artist:
               name: Bentuk Beragam dengan Menggunakan Gelung Bersarang
+            'Functions: Songwriting':
+              name: Songwriting
             Functions in Artist:
               name: Fungsi dengan Artis
             Conditionals:
@@ -5247,6 +6160,8 @@ ms:
           lesson_groups:
             csf_sprites:
               display_name: Jin
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
             ramp_up:
               display_name: Gelung Bersarang
             csf_functions:
@@ -5262,18 +6177,24 @@ ms:
           lessons:
             Making Sprites:
               name: Membuat Peperi
+            'Mini-Project: Virtual Pet':
+              name: 'Projek Mini: Haiwan Peliharaan Maya'
             The Power of Words:
               name: Kuasa Perkataan
             Blank Space Stories:
               name: Cerita Ruang Kosong
             Text and Prompts:
               name: Teks dan Prom
+            'Mini-Project: User Input Programs':
+              name: 'Projek Mini: Program Input Pengguna'
             Drawing with Loops:
               name: Melukis dengan Gelung
             Programming with the Bee:
               name: Pengaturcaraan dengan Lebah
             Variables with the Bee:
               name: Pemboleh ubah dengan Lebah
+            For Loop Fun:
+              name: Gelung Untuk yang Menyeronokkan
             For Loops with Artist:
               name: Untuk Gelung dengan Artis
             Simulating Experiments:
@@ -5288,12 +6209,16 @@ ms:
               name: Akhir Projek Kursus
             lesson-7:
               name: Membuat Peperi
+            Virtual Pet:
+              name: 'Projek Mini: Haiwan Peliharaan Maya'
             lesson-2:
               name: Kuasa Perkataan
             lesson-9:
               name: Cerita Ruang Kosong
             lesson-10:
               name: Teks dan Prom
+            lesson-11:
+              name: 'Projek Mini: Program Input Pengguna'
             Loops with the Artist:
               name: Melukis dengan Gelung
             Nested Loops in the Maze:
@@ -5309,8 +6234,10 @@ ms:
           lesson_groups:
             ramp_up:
               display_name: Jin
+            lessonGroup-7:
+              display_name: Kewarganegaraan Digital
             lessonGroup-8:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             end_of_course_project:
               display_name: Akhir Projek Kursus
           description_short: Pelajari semua konsep dalam Asas Sains Komputer dan cipta seni, cerita atau permainan anda sendiri.
@@ -5323,6 +6250,8 @@ ms:
               name: Gelung
             lesson-21:
               name: Konsol
+            lesson-23:
+              name: Pra-tinjauan CSP
           lesson_groups:
             lessonGroup-4:
               display_name: Sandbox
@@ -5368,7 +6297,7 @@ ms:
         csa2-2022:
           lessons:
             lesson-6:
-              name: Pembolehubah
+              name: Pemboleh ubah
             lesson-16:
               name: Konsol
         csa3-2022:
@@ -5453,16 +6382,26 @@ ms:
           lesson_groups:
             lessonGroup-5:
               display_name: Sandbox
+        csa-backpack-2022:
+          lessons:
+            lesson-4:
+              name: TextProcessor
+            lesson-3:
+              name: ImagePlus dan ScenePlus
         coursef-2022-pilot:
           lessons:
             The Power of Words:
               name: Kuasa Perkataan
             Making Sprites:
               name: Membuat Peperi
+            'Mini-Project: Virtual Pet':
+              name: 'Projek Mini: Haiwan Peliharaan Maya'
             Blank Space Stories:
               name: Cerita Ruang Kosong
             Text and Prompts:
               name: Teks dan Prom
+            'Mini-Project: User Input Programs':
+              name: 'Projek Mini: Program Input Pengguna'
             Simulating Experiments:
               name: Mensimulasikan Eksperimen
             Outbreak:
@@ -5474,10 +6413,12 @@ ms:
             End of Course Project:
               name: Akhir Projek Kursus
           lesson_groups:
+            lessonGroup-7:
+              display_name: Kewarganegaraan Digital
             ramp_up:
               display_name: Jin
             lessonGroup-8:
-              display_name: Pembolehubah
+              display_name: Pemboleh ubah
             end_of_course_project:
               display_name: Akhir Projek Kursus
           description_audience: 'Umur: 9-13 tahun'
@@ -5561,7 +6502,7 @@ ms:
         csa2-2022-exemplars:
           lessons:
             lesson-1:
-              name: Pembolehubah
+              name: Pemboleh ubah
         k5-onlinepd-2022:
           lessons:
             Sequencing:
@@ -5575,7 +6516,7 @@ ms:
             Functions:
               name: Fungsi
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
         vpl-csd1-ci-pilot-2022:
           title: 'Modul 1: Persediaan untuk Mengajar Penyelesaian Masalah dan Pengkomputeran'
           description: |-
@@ -5716,10 +6657,26 @@ ms:
           lessons:
             Hello World CSC:
               name: Helo CSC Dunia
+            lesson-4:
+              name: "[Optional] Pengenalan kepada Cerita Dongeng"
+            lesson-5:
+              name: Rancang Cerita Dongeng Anda
+            lesson-6:
+              name: Kongsi Cerita Dongeng Anda
+        csd2-2022:
+          lessons:
+            Headings:
+              name: Headings
+            Linking Pages:
+              name: Memautkan Halaman
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
+            lesson-1:
+              name: Kajian Pasca Kursus CS Discoveries
         csd3-2022:
           lessons:
             Variables:
-              name: Pembolehubah
+              name: Pemboleh ubah
             Sprites:
               name: Jin
             Sprite Properties:
@@ -5728,17 +6685,55 @@ ms:
               name: teks
             Conditionals:
               name: Bersyarat
+            Keyboard Input:
+              name: Input Papan Kekunci
+            Collisions:
+              name: Perlanggaran
             Functions:
               name: Fungsi
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
+            lesson-1:
+              name: Kajian Pasca Kursus CS Discoveries
+        csd4-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
+        csd5-2022:
+          lessons:
+            Representing Images:
+              name: Mewakili Imej
+            Combining Representations:
+              name: Menggabungkan Perwakilan
+            Keeping Data Secret:
+              name: Menyimpan Rahsia Data
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
+        csd7-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
         csd6-2022:
           lessons:
+            Board Events:
+              name: Acara Papan
+            Color LEDs:
+              name: LED berwarna
             Combining Inputs and Outputs:
               name: Menggabungkan Input
             Functions:
               name: Fungsi
+            CS Discoveries Post-Course Survey:
+              name: Kajian Pasca Kursus CS Discoveries
         csd-post-survey-2022:
+          title: Kajian Pasca Kursus CS Discoveries
           description: Unit ini mengandungi Tinjauan Pascakursus Penemuan CS. Unit ini boleh ditugaskan selepas pelajar melengkapkan unit terakhir mereka dalam Penemuan CS.
           student_description: Unit ini mengandungi tinjauan untuk apabila kelas anda selesai dengan unit dalam Penemuan CS. Guru anda akan memberitahu anda masa yang sesuai untuk mengambil tinjauan ini.
+        testtess2:
+          name: testtess2
+        aiml-2022:
+          name: aiml-2022
+          description_short: Ketahui tentang Kepintaran Buatan dan Pembelajaran Mesin
         csa9-2022:
           lessons:
             Console:
@@ -5763,3 +6758,29 @@ ms:
               name: Gambaran Keseluruhan
             lesson-1:
               name: Gambaran Keseluruhan
+        csc-ecosystems-2022:
+          lessons:
+            Hello World CSC:
+              name: Helo CSC Dunia
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Pengenalan kepada Cerita Dongeng"
+            Plan Your Fable:
+              name: Rancang Cerita Dongeng Anda
+            Share Your Fable:
+              name: Kongsi Cerita Dongeng Anda
+            lesson-4:
+              name: "[Optional] Pengenalan kepada Cerita Dongeng"
+            lesson-5:
+              name: Rancang Cerita Dongeng Anda
+            lesson-6:
+              name: Kongsi Cerita Dongeng Anda
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Seni Puisi
+        self-paced-pl-csd5-2022:
+          lessons:
+            Engage with machine learning apps:
+              name: Proses Reka Bentuk

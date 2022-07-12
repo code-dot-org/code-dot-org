@@ -724,10 +724,13 @@ ne:
         math: 'Math'
         science: 'Science'
         la: 'Language Arts'
+        other: "अन्य"
       resources:
         kodable: 'Kodable'
+        other: "अन्य"
       robotics:
         kodable: 'Kodable'
+        other: "अन्य"
       workshop_course:
         csp: '''16-''17 CS Principles'
       email_opt_in:

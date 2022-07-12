@@ -1562,11 +1562,11 @@
           "courseA_collector_loops3_b": "Ricorda: puoi mettere più di un blocco dentro un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseA_collector_loops3_2019": {
-          "courseA_collector_loops3_a": "Prova ad usare un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>.",
+          "courseA_collector_loops3_a": "Prova ad usare un ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n .",
           "courseA_collector_loops3_b": "Ricorda: puoi mettere più di un blocco dentro un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseA_collector_loops3_2020": {
-          "courseA_collector_loops3_a": "Prova ad usare un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>.",
+          "courseA_collector_loops3_a": "Prova ad usare un ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n .",
           "courseA_collector_loops3_b": "Ricorda: puoi mettere più di un blocco dentro un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseA_collector_loops4": {
@@ -1743,7 +1743,7 @@
         },
         "courseA_harvester_loops3_2020": {
           "courseA_harvester_loops3_a": "Usa un blocco `ripeti` come questo per aiutarti!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
-          "courseA_harvester_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) quindi inserisci al suo interno i blocchi che vuoi ripetere. "
+          "courseA_harvester_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> quindi inserisci al suo interno i blocchi che vuoi ripetere. "
         },
         "courseA_harvester_loops4": {
           "courseA_harvester_loops4_a": "Non aver paura di premere \"Esegui\" per vedere cosa succede!",
@@ -1769,22 +1769,22 @@
         },
         "courseA_harvester_loops5_2020": {
           "courseA_harvester_loops5_a": "Se ti blocchi, prova a risolvere l'esercizio in due parti, una parte prima della curva e l'altra dopo la curva.",
-          "courseA_harvester_loops5_b": "Il programma finale dovrà avere **un** ciclo `repeat`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **un** blocco `vai verso Sud`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e **un** blocco `vai verso Est`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
+          "courseA_harvester_loops5_b": "Il programma finale dovrà avere **un** ciclo <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **un** blocco <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e **un** blocco <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
           "courseA_harvester_loops5_c": "Usa questo percorso per raccogliere tutte le pannocchie!"
         },
         "courseA_harvester_loops5a": {
-          "courseA_harvester_loops5a_a": "Avrai bisogno di due cicli `repeat` <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>, uno dopo l'altro.",
-          "courseA_harvester_loops5a_b": "Un ciclo ripeterà `vai verso Sud`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e l'altro ripeterà `vai verso Est` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_a": "Avrai bisogno di due cicli <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>, uno dopo l'altro.",
+          "courseA_harvester_loops5a_b": "Un ciclo ripeterà il blocco <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e l'altro ripeterà il blocco <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "Usa questo percorso per andare avanti in una direzione e poi nell'altra."
         },
         "courseA_harvester_loops5a_2019": {
-          "courseA_harvester_loops5a_a": "Avrai bisogno di due cicli `repeat` <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>, uno dopo l'altro.",
-          "courseA_harvester_loops5a_b": "Un ciclo ripeterà `vai verso Sud`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e l'altro ripeterà `vai verso Est` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_a": "Avrai bisogno di due cicli <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>, uno dopo l'altro.",
+          "courseA_harvester_loops5a_b": "Un ciclo ripeterà il blocco <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e l'altro ripeterà il blocco <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "Usa questo percorso per andare avanti in una direzione e poi nell'altra."
         },
         "courseA_harvester_loops5a_2020": {
-          "courseA_harvester_loops5a_a": "Avrai bisogno di due cicli `repeat` <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>, uno dopo l'altro.",
-          "courseA_harvester_loops5a_b": "Un ciclo ripeterà `vai verso Sud`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e l'altro ripeterà `vai verso Est` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_a": "Avrai bisogno di due cicli <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>, uno dopo l'altro.",
+          "courseA_harvester_loops5a_b": "Un ciclo ripeterà il blocco <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e l'altro ripeterà il blocco <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "Usa questo percorso per andare avanti in una direzione e poi nell'altra."
         },
         "courseA_harvester_loops5b": {
@@ -1815,15 +1815,15 @@
           "courseA_harvester_loops6_b": "Questo è il percorso che dovresti seguire per raccogliere tutte le pannocchie."
         },
         "courseA_harvester_loops7": {
-          "courseA_harvester_loops7_a": "Avrai bisogno di due cicli `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>, uno dopo l'altro!",
+          "courseA_harvester_loops7_a": "Avrai bisogno di due cicli <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>, uno dopo l'altro!",
           "courseA_harvester_loops7_b": "Usa due cicli per seguire questo percorso."
         },
         "courseA_harvester_loops7_2019": {
-          "courseA_harvester_loops7_a": "Avrai bisogno di due cicli `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>, uno dopo l'altro!",
+          "courseA_harvester_loops7_a": "Avrai bisogno di due cicli <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>, uno dopo l'altro!",
           "courseA_harvester_loops7_b": "Usa due cicli per seguire questo percorso."
         },
         "courseA_harvester_loops7_2020": {
-          "courseA_harvester_loops7_a": "Avrai bisogno di due cicli `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>, uno dopo l'altro!",
+          "courseA_harvester_loops7_a": "Avrai bisogno di due cicli <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>, uno dopo l'altro!",
           "courseA_harvester_loops7_b": "Usa due cicli per seguire questo percorso."
         },
         "courseA_harvester_loops9": {
@@ -2445,13 +2445,13 @@
           "courseB_artist_loops5_a": "Trascina nell'area di lavoro un blocco `ripeti` e mettici dentro i blocchi grigi che trovi già pronti. Quante volte dovrà essere ripetuto questo ciclo?"
         },
         "courseB_artist_loops5_2018": {
-          "courseB_artist_loops5_a": "Trascina fuori un ciclo `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, poi metti gli altri blocchi al suo interno. Quante volte dovrà essere ripetuto questo ciclo?"
+          "courseB_artist_loops5_a": "Trascina fuori un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, poi metti gli altri blocchi al suo interno. Quante volte dovrà essere ripetuto questo ciclo?"
         },
         "courseB_artist_loops5_2019": {
-          "courseB_artist_loops5_a": "Trascina fuori un ciclo `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, poi metti gli altri blocchi al suo interno. Quante volte dovrà essere ripetuto questo ciclo?"
+          "courseB_artist_loops5_a": "Trascina fuori un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, poi metti gli altri blocchi al suo interno. Quante volte dovrà essere ripetuto questo ciclo?"
         },
         "courseB_artist_loops5_2020": {
-          "courseB_artist_loops5_a": "Trascina fuori un ciclo `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, poi metti gli altri blocchi al suo interno. Quante volte dovrà essere ripetuto questo ciclo?"
+          "courseB_artist_loops5_a": "Trascina fuori un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, poi metti gli altri blocchi al suo interno. Quante volte dovrà essere ripetuto questo ciclo?"
         },
         "courseB_artist_loops6": {
           "courseB_artist_loops6_b": "Prova a scrivere le mosse su un pezzo di carta e cerca una sequenza che si ripete."
@@ -2625,17 +2625,17 @@
         "courseB_collector_loops4_2018": {
           "courseB_collector_loops4_a": "Prova ad usare il pulsante \"Fai un passo\" per capire dove c'è qualcosa di sbagliato.",
           "courseB_collector_loops4_b": "Per modificare di quante caselle deve spostarsi Laura, cambia il numero di volte che il ciclo viene eseguito.",
-          "courseB_collector_loops4_c": "Laura deve spostarsi verso il basso e raccogliere i diamanti, una volta concluso il ciclo `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
+          "courseB_collector_loops4_c": "Laura deve spostarsi verso il basso e raccogliere i diamanti, una volta concluso il ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
         },
         "courseB_collector_loops4_2019": {
           "courseB_collector_loops4_a": "Prova ad usare il pulsante \"Fai un passo\" per capire dove c'è qualcosa di sbagliato.",
           "courseB_collector_loops4_b": "Per modificare di quante caselle deve spostarsi Laura, cambia il numero di volte che il ciclo viene eseguito.",
-          "courseB_collector_loops4_c": "Laura deve spostarsi verso il basso e raccogliere i diamanti, una volta concluso il ciclo `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
+          "courseB_collector_loops4_c": "Laura deve spostarsi verso il basso e raccogliere i diamanti, una volta concluso il ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
         },
         "courseB_collector_loops4_2020": {
           "courseB_collector_loops4_a": "Prova ad usare il pulsante \"Fai un passo\" per capire dove c'è qualcosa di sbagliato.",
           "courseB_collector_loops4_b": "Per modificare di quante caselle deve spostarsi Laura, cambia il numero di volte che il ciclo viene eseguito.",
-          "courseB_collector_loops4_c": "Laura deve spostarsi verso il basso e raccogliere i diamanti, una volta concluso il ciclo `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
+          "courseB_collector_loops4_c": "Laura deve spostarsi verso il basso e raccogliere i diamanti, una volta concluso il ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
         },
         "courseB_collector_loops5": {
           "courseB_collector_loops5_a": "Devi usare più di un ciclo per risolvere bene l'esercizio.",
@@ -2662,19 +2662,19 @@
         "courseB_collector_loops6_2018": {
           "courseB_collector_loops6_a": "Non riesci a capire in che punto il programma inizia a sbagliare? Usa il pulsante \"Fai un passo\" per eseguire il programma un'istruzione alla volta.",
           "courseB_collector_loops6_b": "Puoi modificare il numero di volte che il ciclo viene ripetuto cliccando sul numero \"3\" e scegliendo un altro numero.",
-          "courseB_collector_loops6_c": "Dovrai utilizzare 3 cicli `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per risolvere l'esercizio.",
+          "courseB_collector_loops6_c": "Dovrai utilizzare 3 cicli <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per risolvere l'esercizio.",
           "courseB_collector_loops6_d": "Se sei confuso, prova a suddividere questo percorso in 3 parti."
         },
         "courseB_collector_loops6_2019": {
           "courseB_collector_loops6_a": "Non riesci a capire in che punto il programma inizia a sbagliare? Usa il pulsante \"Fai un passo\" per eseguire il programma un'istruzione alla volta.",
           "courseB_collector_loops6_b": "Puoi modificare il numero di volte che il ciclo viene ripetuto cliccando sul numero \"3\" e scegliendo un altro numero.",
-          "courseB_collector_loops6_c": "Dovrai utilizzare 3 cicli `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per risolvere l'esercizio.",
+          "courseB_collector_loops6_c": "Dovrai utilizzare 3 cicli <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per risolvere l'esercizio.",
           "courseB_collector_loops6_d": "Se sei confuso, prova a suddividere questo percorso in 3 parti."
         },
         "courseB_collector_loops6_2020": {
           "courseB_collector_loops6_a": "Non riesci a capire in che punto il programma inizia a sbagliare? Usa il pulsante \"Fai un passo\" per eseguire il programma un'istruzione alla volta.",
           "courseB_collector_loops6_b": "Puoi modificare il numero di volte che il ciclo viene ripetuto cliccando sul numero \"3\" e scegliendo un altro numero.",
-          "courseB_collector_loops6_c": "Dovrai utilizzare 3 cicli `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per risolvere l'esercizio.",
+          "courseB_collector_loops6_c": "Dovrai utilizzare 3 cicli <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per risolvere l'esercizio.",
           "courseB_collector_loops6_d": "Se sei confuso, prova a suddividere questo percorso in 3 parti."
         },
         "courseB_collector_loops7": {
@@ -2815,11 +2815,11 @@
         },
         "courseB_iceage_loops3_2019": {
           "courseB_iceage_loops3_a": "Usa questo nuovo blocco!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> `ripeti` e inserisci al suo interno i blocchi che vuoi ripetere."
+          "courseB_iceage_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> ripeti e inserisci al suo interno i blocchi che vuoi ripetere."
         },
         "courseB_iceage_loops3_2020": {
           "courseB_iceage_loops3_a": "Usa questo nuovo blocco!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> `ripeti` e inserisci al suo interno i blocchi che vuoi ripetere."
+          "courseB_iceage_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> ripeti e inserisci al suo interno i blocchi che vuoi ripetere."
         },
         "courseB_iceage_loops4": {
           "courseB_iceage_loops4_a": "Prova a scrivere i passaggi necessari per fare in modo che Scrat raggiunga la ghianda. Noti uno schema che si ripete?",
@@ -3589,12 +3589,12 @@
         "courseC_PlayLab_eventsFP_2019": {
           "idea3": "_Serve un idea?_\n\n**Flipper** - Fai in modo di muovere un personaggio con le frecce (usa gli eventi `quando si preme sulla freccia verso l'alto` e `quando si preme sulla freccia verso il basso`), quindi riproduci un suono casuale quando il personaggio sbatte contro gli altri.",
           "idea1": "_Serve un'idea?_\n\n**Chi va là?** Fai comparire i personaggi con immagini casuali, così che nessuno possa sapere chi comparirà dopo.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
-          "idea2": "_Serve un'idea?_\n\n**Partire per un'avventura** - Cambia lo sfondo, poi fai raccontare ai personaggi su dove si trovano ora.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
+          "idea2": "_Serve un'idea?_\n\n**Partire per un'avventura** - Cambia lo sfondo, poi fai dire ai personaggi dove si trovano adesso.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
         },
         "courseC_PlayLab_eventsFP_2020": {
           "idea3": "_Serve un idea?_\n\n**Flipper** - Fai in modo di muovere un personaggio con le frecce (usa gli eventi `quando si preme sulla freccia verso l'alto` e `quando si preme sulla freccia verso il basso`), quindi riproduci un suono casuale quando il personaggio sbatte contro gli altri.",
           "idea1": "_Serve un'idea?_\n\n**Chi va là?** Fai comparire i personaggi con immagini casuali, così che nessuno possa sapere chi comparirà dopo.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
-          "idea2": "_Serve un'idea?_\n\n**Partire per un'avventura** - Cambia lo sfondo, poi fai raccontare ai personaggi su dove si trovano ora.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
+          "idea2": "_Serve un'idea?_\n\n**Partire per un'avventura** - Cambia lo sfondo, poi fai dire ai personaggi dove si trovano adesso.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
         },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge_a": "Puoi usare questo blocco per posizionare dove vuoi i personaggi nell'area di gioco.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
@@ -3798,19 +3798,19 @@
         },
         "courseC_artist_prog3": {
           "courseC_artist_prog3_a": "Per creare il finestrino, devi solo disegnare un quadrato con i lati di 100 pixel:\n\n-   vai avanti\n-   gira\n-   vai avanti\n-   gira\n-   vai avanti\n-   gira\n-   vai avanti",
-          "courseC_artist_prog3_b": "Vuoi fare un programma più breve? Prova ad usare un ciclo `ripeti ... volte`."
+          "courseC_artist_prog3_b": "Vuoi fare un programma più breve? Prova ad usare un ciclo."
         },
         "courseC_artist_prog3_2018": {
           "courseC_artist_prog3_a": "Per creare il finestrino, devi solo disegnare un quadrato con i lati di 100 pixel:\n\n-   vai avanti\n-   gira\n-   vai avanti\n-   gira\n-   vai avanti\n-   gira\n-   vai avanti",
-          "courseC_artist_prog3_b": "Vuoi fare un programma più breve? Prova ad usare un ciclo `ripeti ... volte`."
+          "courseC_artist_prog3_b": "Vuoi fare un programma più breve? Prova ad usare un ciclo."
         },
         "courseC_artist_prog3_2019": {
           "courseC_artist_prog3_a": "Per creare il finestrino, devi solo disegnare un quadrato con i lati di 100 pixel:\n\n-   vai avanti\n-   gira\n-   vai avanti\n-   gira\n-   vai avanti\n-   gira\n-   vai avanti",
-          "courseC_artist_prog3_b": "Vuoi fare un programma più breve? Prova ad usare un ciclo `ripeti ... volte`."
+          "courseC_artist_prog3_b": "Vuoi fare un programma più breve? Prova ad usare un ciclo."
         },
         "courseC_artist_prog3_2020": {
           "courseC_artist_prog3_a": "Per creare il finestrino, devi solo disegnare un quadrato con i lati di 100 pixel:\n\n-   vai avanti\n-   gira\n-   vai avanti\n-   gira\n-   vai avanti\n-   gira\n-   vai avanti",
-          "courseC_artist_prog3_b": "Vuoi fare un programma più breve? Prova ad usare un ciclo `ripeti ... volte`."
+          "courseC_artist_prog3_b": "Vuoi fare un programma più breve? Prova ad usare un ciclo."
         },
         "courseC_artist_prog4": {
           "courseC_artist_prog4_a": "Per finire il razzo, basta disegnare il triangolo in cima!",
@@ -5865,7 +5865,7 @@
           "courseD_bounce_events2s_a": "Dovrai programmare due gestori di eventi di movimento per completare questo esercizio:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_bounce_events2s_2020": {
-          "courseD_bounce_events2s_a": "Dovrai programmare due gestori di eventi di movimento `vai` per completare questo esercizio:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+          "courseD_bounce_events2s_a": "Dovrai programmare due gestori di eventi di movimento per completare questo esercizio:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_bounce_events5s_2018": {
           "courseD_bounce_events5s_a": "Non avrai bisogno di far muovere la mano per risolvere questo esercizio.",
@@ -6557,22 +6557,22 @@
           "courseD_maze_nestedLoops3_c": "Prova a scrivere il codice per completare un tratto dritto di percorso e una curva. Puoi ripetere questo schema per arrivare fino al girasole?"
         },
         "courseD_maze_nestedLoops4": {
-          "courseD_maze_nestedLoops4_a": "Prova a seguire questo percorso per attraversare il labirinto.\n\n![][0]",
+          "courseD_maze_nestedLoops4_a": "Prova a seguire questo percorso per attraversare il labirinto.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)",
           "courseD_maze_nestedLoops4_b": "Se fai fatica a capire lo schema che si ripete, prova prima a risolvere l'esercizio usando tutti i singoli blocchi, poi cerca di vedere quali sono le parti che si ripetono per inserirle nel blocco `ripeti ... volte`.",
           "courseD_maze_nestedLoops4_c": "Prova ad usare un ciclo `ripeti ... volte` all'interno di un altro per ridurre la quantità di blocchi che ti servono."
         },
         "courseD_maze_nestedLoops4_2018": {
-          "courseD_maze_nestedLoops4_a": "Prova a seguire questo percorso per attraversare il labirinto.\n\n![][0]",
+          "courseD_maze_nestedLoops4_a": "Prova a seguire questo percorso per attraversare il labirinto.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)",
           "courseD_maze_nestedLoops4_b": "Se fai fatica a capire lo schema che si ripete, prova prima a risolvere l'esercizio usando tutti i singoli blocchi, poi cerca di vedere quali sono le parti che si ripetono per inserirle nel blocco `ripeti ... volte`.",
           "courseD_maze_nestedLoops4_c": "Prova ad usare un ciclo `ripeti ... volte` all'interno di un altro per ridurre la quantità di blocchi che ti servono."
         },
         "courseD_maze_nestedLoops4_2019": {
-          "courseD_maze_nestedLoops4_a": "Prova a seguire questo percorso per attraversare il labirinto.\n\n![][0]",
+          "courseD_maze_nestedLoops4_a": "Prova a seguire questo percorso per attraversare il labirinto.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)",
           "courseD_maze_nestedLoops4_b": "Se fai fatica a capire lo schema che si ripete, prova prima a risolvere l'esercizio usando tutti i singoli blocchi, poi cerca di vedere quali sono le parti che si ripetono per inserirle nel blocco `ripeti ... volte`.",
           "courseD_maze_nestedLoops4_c": "Prova ad usare un ciclo `ripeti ... volte` all'interno di un altro per ridurre la quantità di blocchi che ti servono."
         },
         "courseD_maze_nestedLoops4_2020": {
-          "courseD_maze_nestedLoops4_a": "Prova a seguire questo percorso per attraversare il labirinto.\n\n![][0]",
+          "courseD_maze_nestedLoops4_a": "Prova a seguire questo percorso per attraversare il labirinto.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)",
           "courseD_maze_nestedLoops4_b": "Se fai fatica a capire lo schema che si ripete, prova prima a risolvere l'esercizio usando tutti i singoli blocchi, poi cerca di vedere quali sono le parti che si ripetono per inserirle nel blocco `ripeti ... volte`.",
           "courseD_maze_nestedLoops4_c": "Prova ad usare un ciclo `ripeti ... volte` all'interno di un altro per ridurre la quantità di blocchi che ti servono."
         },
@@ -8701,24 +8701,24 @@
           "courseD_harvester_nested_loops_challenge1_a": "Hai probabilmente già usato un ciclo per creare uno schema a zig zag. Se ricordi quell'algoritmo, puoi aggiungergli qualcosa qui."
         },
         "courseC_PlayLab_eventsA_embed_2019": {
-          "courseC_PlayLab_eventsA_a": "Usa i tasti freccia per spostare il pinguino. Non è necessario scrivere alcun codice per completare questo livello."
+          "courseC_PlayLab_eventsA_a": "Usa i tasti freccia per spostare il pinguino. Non è necessario scrivere alcun codice per completare questo esercizio."
         },
         "courseC_PlayLab_eventsA_embed_2020": {
-          "courseC_PlayLab_eventsA_a": "Usa i tasti freccia per spostare il pinguino. Non è necessario scrivere alcun codice per completare questo livello."
+          "courseC_PlayLab_eventsA_a": "Usa i tasti freccia per spostare il pinguino. Non è necessario scrivere alcun codice per completare questo esercizio."
         },
         "courseC_artist_loops1b_2019": {
-          "courseC_artist_loops1b_a": "Questo è il primo blocco che ti servirà:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nPuoi scegliere sinistra o destra ed ogni numero di gradi."
+          "courseC_artist_loops1b_a": "Questo è il primo blocco di cui avrai bisogno:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nPuoi scegliere sinistra o destra e ogni numero di gradi."
         },
         "courseC_artist_loops1b_2020": {
-          "courseC_artist_loops1b_a": "Questo è il primo blocco che ti servirà:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nPuoi scegliere sinistra o destra ed ogni numero di gradi."
+          "courseC_artist_loops1b_a": "Questo è il primo blocco di cui avrai bisogno:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nPuoi scegliere sinistra o destra e ogni numero di gradi."
         },
         "courseD_bee_conditionals5_2019": {
           "courseD_bee_conditionals5_a": "Se usi un blocco `se c'è un fiore`, puoi risolverlo usando un ciclo continuo nidificato. Scrivi un programma per i percorsi sinistro e in basso, poi ripeti tutto due volte!",
-          "courseD_bee_conditionals5_c": "Per continuare lungo il percorso, l'ape dovrà `andare avanti`. Mentre si sposta, l'ape deve controllare la presenza di un fiore. `se c'è un fiore`, l'ape dovrebbe `prendere il nettare`."
+          "courseD_bee_conditionals5_c": "Per continuare lungo il percorso, l'ape avrà bisogno di un'istruzione `vai avanti`. Mentre si sposta, l'ape deve controllare la presenza di un fiore. `se c'è un fiore`, l'ape dovrebbe `prendere il nettare`."
         },
         "courseD_bee_conditionals5_2020": {
           "courseD_bee_conditionals5_a": "Se usi un blocco `se c'è un fiore`, puoi risolverlo usando un ciclo continuo nidificato. Scrivi un programma per i percorsi sinistro e in basso, poi ripeti tutto due volte!",
-          "courseD_bee_conditionals5_c": "Per continuare lungo il percorso, l'ape dovrà `andare avanti`. Mentre si sposta, l'ape deve controllare la presenza di un fiore. `se c'è un fiore`, l'ape dovrebbe `prendere il nettare`."
+          "courseD_bee_conditionals5_c": "Per continuare lungo il percorso, l'ape avrà bisogno di un'istruzione `vai avanti`. Mentre si sposta, l'ape deve controllare la presenza di un fiore. `se c'è un fiore`, l'ape dovrebbe `prendere il nettare`."
         },
         "outbreak1": {
           "step1": "Usa questi blocchi per creare i tuoi personaggi:\n\n[blockly block][0]\n\n[blockly block][1]\n\nQuesto blocco si trova nella categoria **Personaggi** della cassetta degli attrezzi.",
@@ -9007,7 +9007,7 @@
           "courseA_collector_loops2_b": "Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops3_2021": {
-          "courseA_collector_loops3_a": "Prova ad usare un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>.",
+          "courseA_collector_loops3_a": "Prova ad usare un ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n .",
           "courseA_collector_loops3_b": "Ricorda: puoi mettere più di un blocco dentro un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseA_collector_loops4_2021": {
@@ -9066,8 +9066,8 @@
           "courseA_harvester_loops5_c": "Usa questo percorso per raccogliere tutte le pannocchie!"
         },
         "courseA_harvester_loops5a_2021": {
-          "courseA_harvester_loops5a_a": "Avrai bisogno di due cicli `repeat` <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>, uno dopo l'altro.",
-          "courseA_harvester_loops5a_b": "Un ciclo ripeterà `vai verso Sud`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e l'altro ripeterà `vai verso Est` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_a": "Avrai bisogno di due cicli <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>, uno dopo l'altro.",
+          "courseA_harvester_loops5a_b": "Un ciclo ripeterà il blocco <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e l'altro ripeterà il blocco <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "Usa questo percorso per andare avanti in una direzione e poi nell'altra."
         },
         "courseA_harvester_loops5b_2021": {
@@ -9080,7 +9080,7 @@
           "courseA_harvester_loops6_b": "Questo è il percorso che dovresti seguire per raccogliere tutte le pannocchie."
         },
         "courseA_harvester_loops7_2021": {
-          "courseA_harvester_loops7_a": "Avrai bisogno di due cicli `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>, uno dopo l'altro!",
+          "courseA_harvester_loops7_a": "Avrai bisogno di due cicli <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>, uno dopo l'altro!",
           "courseA_harvester_loops7_b": "Usa due cicli per seguire questo percorso."
         },
         "courseA_harvester_loops9_2021": {
@@ -9268,7 +9268,7 @@
           "courseB_artist_loops4_c": "Non dimenticare di cambiare il numero di ripetizioni nel blocco del ciclo."
         },
         "courseB_artist_loops5_2021": {
-          "courseB_artist_loops5_a": "Trascina fuori un ciclo `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, poi metti gli altri blocchi al suo interno. Quante volte dovrà essere ripetuto questo ciclo?"
+          "courseB_artist_loops5_a": "Trascina fuori un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, poi metti gli altri blocchi al suo interno. Quante volte dovrà essere ripetuto questo ciclo?"
         },
         "courseB_artist_loops6_2021": {
           "courseB_artist_loops6_b": "Prova a scrivere le mosse su un pezzo di carta e cerca una sequenza che si ripete."
@@ -9314,7 +9314,7 @@
         "courseB_collector_loops4_2021": {
           "courseB_collector_loops4_a": "Prova ad usare il pulsante \"Fai un passo\" per capire dove c'è qualcosa di sbagliato.",
           "courseB_collector_loops4_b": "Per modificare di quante caselle deve spostarsi Laura, cambia il numero di volte che il ciclo viene eseguito.",
-          "courseB_collector_loops4_c": "Laura deve spostarsi verso il basso e raccogliere i diamanti, una volta concluso il ciclo `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
+          "courseB_collector_loops4_c": "Laura deve spostarsi verso il basso e raccogliere i diamanti, una volta concluso il ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
         },
         "courseB_collector_loops5_2021": {
           "courseB_collector_loops5_a": "Devi usare più di un ciclo per risolvere bene l'esercizio.",
@@ -9323,7 +9323,7 @@
         "courseB_collector_loops6_2021": {
           "courseB_collector_loops6_a": "Non riesci a capire in che punto il programma inizia a sbagliare? Usa il pulsante \"Fai un passo\" per eseguire il programma un'istruzione alla volta.",
           "courseB_collector_loops6_b": "Puoi modificare il numero di volte che il ciclo viene ripetuto cliccando sul numero \"3\" e scegliendo un altro numero.",
-          "courseB_collector_loops6_c": "Dovrai utilizzare 3 cicli `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per risolvere l'esercizio.",
+          "courseB_collector_loops6_c": "Dovrai utilizzare 3 cicli <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per risolvere l'esercizio.",
           "courseB_collector_loops6_d": "Se sei confuso, prova a suddividere questo percorso in 3 parti."
         },
         "courseB_collector_loops7_2021": {
@@ -9363,7 +9363,7 @@
         },
         "courseB_iceage_loops3_2021": {
           "courseB_iceage_loops3_a": "Usa questo nuovo blocco!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> `ripeti` e inserisci al suo interno i blocchi che vuoi ripetere."
+          "courseB_iceage_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> ripeti e inserisci al suo interno i blocchi che vuoi ripetere."
         },
         "courseB_iceage_loops4_2021": {
           "courseB_iceage_loops4_a": "Prova a scrivere i passaggi necessari per fare in modo che Scrat raggiunga la ghianda. Noti uno schema che si ripete?",
@@ -9566,11 +9566,11 @@
           "courseC_PlayLab_eventsA_b": "Per risolvere questo esercizio, dovrai trascinare tu nell'area di lavoro il blocco evento `quando si clicca su \"Esegui\"`."
         },
         "courseC_PlayLab_eventsA_embed_2021": {
-          "courseC_PlayLab_eventsA_a": "Usa i tasti freccia per spostare il pinguino. Non è necessario scrivere alcun codice per completare questo livello."
+          "courseC_PlayLab_eventsA_a": "Usa i tasti freccia per spostare il pinguino. Non è necessario scrivere alcun codice per completare questo esercizio."
         },
         "courseC_PlayLab_eventsFP_2021": {
           "idea1": "_Serve un'idea?_\n\n**Chi va là?** Fai comparire i personaggi con immagini casuali, così che nessuno possa sapere chi comparirà dopo.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
-          "idea2": "_Serve un'idea?_\n\n**Partire per un'avventura** - Cambia lo sfondo, poi fai raccontare ai personaggi su dove si trovano ora.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
+          "idea2": "_Serve un'idea?_\n\n**Partire per un'avventura** - Cambia lo sfondo, poi fai dire ai personaggi dove si trovano adesso.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
           "idea3": "_Serve un idea?_\n\n**Flipper** - Fai in modo di muovere un personaggio con le frecce (usa gli eventi `quando si preme sulla freccia verso l'alto` e `quando si preme sulla freccia verso il basso`), quindi riproduci un suono casuale quando il personaggio sbatte contro gli altri."
         },
         "courseC_PlayLab_events_challenge1_2021": {
@@ -9583,7 +9583,7 @@
           "courseC_artist_loops1a_b": "Usa questo blocco per disegnare l'adesivo!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops1b_2021": {
-          "courseC_artist_loops1b_a": "Questo è il primo blocco che ti servirà:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nPuoi scegliere sinistra o destra ed ogni numero di gradi."
+          "courseC_artist_loops1b_a": "Questo è il primo blocco di cui avrai bisogno:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nPuoi scegliere sinistra o destra e ogni numero di gradi."
         },
         "courseC_artist_loops2a_2021": {
           "courseC_artist_loops2a_a": "All'interno del ciclo dovresti saltare a \"200 avanti 200 in basso\" (per raggiungere il centro dello schermo), quindi disegnare l'adesivo dell'uccello e poi girare di 30 gradi.",
@@ -9614,7 +9614,7 @@
         },
         "courseC_artist_prog3_2021": {
           "courseC_artist_prog3_a": "Per creare il finestrino, devi solo disegnare un quadrato con i lati di 100 pixel:\n\n-   vai avanti\n-   gira\n-   vai avanti\n-   gira\n-   vai avanti\n-   gira\n-   vai avanti",
-          "courseC_artist_prog3_b": "Vuoi fare un programma più breve? Prova ad usare un ciclo `ripeti ... volte`."
+          "courseC_artist_prog3_b": "Vuoi fare un programma più breve? Prova ad usare un ciclo."
         },
         "courseC_artist_prog4_2021": {
           "courseC_artist_prog4_a": "Per finire il razzo, basta disegnare il triangolo in cima!",
@@ -10055,7 +10055,7 @@
         },
         "courseD_bee_conditionals5_2021": {
           "courseD_bee_conditionals5_a": "Se usi un blocco `se c'è un fiore`, puoi risolverlo usando un ciclo continuo nidificato. Scrivi un programma per i percorsi sinistro e in basso, poi ripeti tutto due volte!",
-          "courseD_bee_conditionals5_c": "Per continuare lungo il percorso, l'ape dovrà `andare avanti`. Mentre si sposta, l'ape deve controllare la presenza di un fiore. `se c'è un fiore`, l'ape dovrebbe `prendere il nettare`."
+          "courseD_bee_conditionals5_c": "Per continuare lungo il percorso, l'ape avrà bisogno di un'istruzione `vai avanti`. Mentre si sposta, l'ape deve controllare la presenza di un fiore. `se c'è un fiore`, l'ape dovrebbe `prendere il nettare`."
         },
         "courseD_bee_conditionals5_dani": {
           "courseD_bee_conditionals5_hintVid1": "Hai bisogno di aiuto per iniziare? Guarda il video-suggerimento!",
@@ -10121,7 +10121,7 @@
           "courseD_bounce_events1s_b": "Per risolvere questo esercizio, dopo aver premuto \"Esegui\", devi muovere la mano fino al canestro disegnato sulla sinistra."
         },
         "courseD_bounce_events2s_2021": {
-          "courseD_bounce_events2s_a": "Dovrai programmare due gestori di eventi di movimento `vai` per completare questo esercizio:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+          "courseD_bounce_events2s_a": "Dovrai programmare due gestori di eventi di movimento per completare questo esercizio:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_bounce_events5s_2021": {
           "courseD_bounce_events5s_a": "Non avrai bisogno di far muovere la mano per risolvere questo esercizio.",
@@ -10553,7 +10553,7 @@
         },
         "courseF_artist_variables9_2021": {
           "courseF_artist_variables9_a": "Per questo esercizio, tutto quello che devi fare è modificare quante volte il ciclo si ripete.",
-          "courseF_artist_variables9_b": "Assicurati che il blocco che incrementa la variabile `length` (_lunghezza_) siano all'interno del ciclo in modo che le linee continuino ad allungarsi."
+          "courseF_artist_variables9_b": "Assicurati che il blocco che incrementa la variabile `lunghezza` sia all'interno del ciclo in modo che le linee continuino ad allungarsi."
         },
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "Riesci a trovare una relazione tra il numero di passi che l'ape fa per arrivare al fiore ed il numero di dosi di nettare che deve raccogliere?",
@@ -10629,12 +10629,12 @@
           "behavior_list": "Prova ad utilizare i comportamenti tra cui \"spostamento verso est e ciclo\", \"rotazione oraria\" e \"movimento casuale\"."
         },
         "courseF_variables_madlib_finish": {
-          "card_idea2": "Puoi fare un cambio da un comportamento a un altro, utilizzando un blocco \"il personaggio si ferma\" con un blocco \"il personaggio inizia\" in un evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">gira a sinistra</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">gira a destra</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "card_idea1": "Puoi aggiungere un secondo (terzo o quarto) comando utilizzando un nuovo blocco comando con una variabile diversa.\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Inserisci una parola azione:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">verbo</title>\n          </block>\n        </value>\n      </block>\n    </xml>",
+          "card_idea2": "Puoi modificare un comportamento in un altro utilizzando un blocco `il personaggio si ferma` con un blocco `il personaggio inizia` in un evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"gira a sinistra\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">gira a destra</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea1": "Puoi aggiungere una seconda (o terza o quarta) richiesta all'utente collegando un nuovo blocco di richeste all'utente con una variabile diversa.\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Inserisci una parola azione:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">verbo</title>\n          </block>\n        </value>\n      </block>\n    </xml>",
           "card_idea3": "Puoi rendere interattivo il tuo programma, facendo succedere altre cose quando l'utente preme un tasto, oppure dopo un certo periodo di tempo.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"quando\"</title>\n    <title name=\"KEY\">\"fino a\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"ridimensiona\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseF_artist_variablesFP_2021": {
-          "polygon_table": "Vuoi provare altri poligoni? \n\nUsa il numero dei lati nella tua \"ripetizione\" e forma un angolo nel tuo blocco \"gira\".\nProva questi:\n\n|   Forma   | Lati | Angolo |\n| :-------: | :--: | :----: |\n| triangolo |   3  |  120°  |\n|  quadrato |   4  |   90°  |\n| pentagono |   5  |   72°  |\n|  esagono  |   6  |   60°  |\n|  ottagono |   8  |   45°  |\n|  ennagono |   9  |   40°  |\n|  decagono |  10  |   36°  |"
+          "polygon_table": "Vuoi provare con altri poligoni? \n\nUsa il numero dei lati nel blocco `ripeti` e l'angolo nel blocco `gira`.\n\nProva questi:\n\n|   Forma   | Lati | Angolo |\n| :-------: | :--: | :----: |\n| triangolo |   3  |  120°  |\n|  quadrato |   4  |   90°  |\n| pentagono |   5  |   72°  |\n|  esagono  |   6  |   60°  |\n|  ottagono |   8  |   45°  |\n|  ennagono |   9  |   40°  |\n|  decagono |  10  |   36°  |"
         },
         "courseF_bee_variables_3a_2021": {
           "courseF_bee_variables_3_2021_1": "Per continuare lo schema, aumenta il numero delle ripetizioni:\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -10652,16 +10652,16 @@
           "changePropBlock": "Avrai bisogno anche di questo blocco:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
         },
         "courseF_text_choice_multiprompt": {
-          "when_answered_var": "Prova a cambaire l'etichett della variabile nel blocco \"quando si risponde\". Poiché ci sono molti progetti, usa l'etichetta per _l'ultimo_comando a cui viene data una risposta."
+          "when_answered_var": "Prova a cambiare il nome della variabile nel blocco `quando ... ha risposto`. Dal momento che ci sono diverse richieste all'utente, usa il nome dell'_ultima_ variabile richiesta.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_variables_card_finish": {
-          "card_idea1": "Puoi aggiungere un secondo (terzo o quarto) comando collegando un nuovo blocco comandi con una variabile diversa al tuo primo evento \"quando c'è una risposta\".\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">cosa desideri ricevere per il tuo compleanno?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">regalo</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
-          "card_idea2": "Puoi cambiare un comportamento a un altro utilizzando un blocco \"il personaggio si ferma\" con un blocco \"il personaggio inizia\" in un evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"gira a sinistra\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">gira a destra</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea1": "Puoi aggiungere una seconda (o terza o quarta) richiesta all'utente collegando un nuovo blocco di richeste all'utente con una variabile diversa al tuo primo evento `quando ... ha risposto`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">cosa desideri ricevere per il tuo compleanno?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">regalo</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "card_idea2": "Puoi modificare un comportamento in un altro utilizzando un blocco `il personaggio si ferma` con un blocco `il personaggio inizia` in un evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"gira a sinistra\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">gira a destra</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
           "card_idea3": "Puoi rendere interattivo il tuo programma, facendo succedere altre cose quando l'utente preme un tasto, oppure dopo un certo periodo di tempo.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"quando\"</title>\n    <title name=\"KEY\">\"fino a\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"ridimensiona\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseF_variables_chatbot_finish": {
-          "chatbot_idea1": "Puoi aggiungere un secondo (terzo o quarto) comando collegando un nuovo blocco comandi con una variabile diversa al tuo primo evento \"quando c'è una risposta\".\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Quanti anni hai?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">età</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
-          "chatbot_idea2": "Puoi cambiare un comportamento a un altro utilizzando un blocco \"il personaggio si ferma\" con un blocco \"il personaggio inizia\" in un evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"gira a sinistra\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">gira a destra</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "chatbot_idea1": "Puoi aggiungere una seconda (o terza o quarta) richiesta all'utente collegando un nuovo blocco di richeste all'utente con una variabile diversa al tuo primo evento `quando ... ha risposto`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Quanti anni hai?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">età</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "chatbot_idea2": "Puoi modificare un comportamento in un altro utilizzando un blocco `il personaggio si ferma` con un blocco `il personaggio inizia` in un evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"gira a sinistra\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">gira a destra</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
           "chatbot_idea3": "Puoi rendere interattivo il tuo programma, facendo succedere altre cose quando l'utente preme un tasto, oppure dopo un certo periodo di tempo.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"quando\"</title>\n    <title name=\"KEY\">\"fino a\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"ridimensiona\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
           "chatbot_idea4": "Puoi segnalare la fine del tuo programma con un blocco della schermata del titolo.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Fine</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Grazie per la conversazione!</title>\n        </block>\n      </value>\n      </block></xml>"
         },

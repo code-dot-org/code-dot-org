@@ -61,7 +61,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
   def destroy
     user_id = params[:user_id]
     attendance = Pd::Attendance.find_by(session: @session, teacher_id: user_id)
-    attendance.destroy! if attendance
+    attendance&.destroy!
 
     head :no_content
   end
@@ -71,7 +71,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
     enrollment_id = params[:enrollment_id]
     enrollment = @workshop.enrollments.find(enrollment_id)
     attendance = Pd::Attendance.find_by(session: @session, enrollment: enrollment)
-    attendance.destroy! if attendance
+    attendance&.destroy!
 
     head :no_content
   end
