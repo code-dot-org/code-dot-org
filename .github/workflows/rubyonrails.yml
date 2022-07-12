@@ -18,7 +18,7 @@ jobs:
         image: mysql:5.7.32
         env:
           MYSQL_DB: dashboard_test
-          MYSQL_USER: root
+          MYSQL_USER: user
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
           EXPLICIT_DEFAULTS_FOR_TIMESTAMP: true
         ports:
@@ -40,7 +40,7 @@ jobs:
           
       - name: Bundle Install
         run: bundle install --with test
-  
+          
       # Add or replace database setup steps here
       - name: Install Dashboard
         run: bundle exec rake install:dashboard --trace
