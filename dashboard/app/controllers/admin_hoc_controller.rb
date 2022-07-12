@@ -8,7 +8,7 @@ class AdminHocController < ApplicationController
   check_authorization
 
   def students_served
-    SeamlessDatabasePool.use_persistent_read_connection do
+    ActiveRecord::Base.connected_to(role: :reading) do
       @data = Properties.get(:hoc_metrics)
     end
   end

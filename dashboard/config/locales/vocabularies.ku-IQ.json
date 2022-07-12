@@ -2,6 +2,27 @@
   "ku-IQ": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "فرمان"
+        },
+        "code/poem-art/2021": {
+          "word": "کۆد"
+        },
+        "code/artist/unversioned": {
+          "word": "کۆد"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "مەرجیەکان"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "گرێکان"
+        },
+        "code/sports/unversioned": {
+          "word": "کۆد"
+        },
+        "code/poem-art/unversioned": {
+          "word": "کۆد"
+        },
         "variable/coursef/2021": {
           "word": "گۆڕاو"
         },
@@ -43,6 +64,21 @@
         },
         "define/coursee/2021": {
           "word": "پێناسە بکە"
+        },
+        "variable/csd/2021": {
+          "word": "گۆڕاو"
+        },
+        "conditionals/csd/2021": {
+          "word": "مەرجیەکان"
+        },
+        "abstraction/csd/2021": {
+          "word": "پوختە"
+        },
+        "function/csd/2021": {
+          "word": "فرمان"
+        },
+        "input/csd/2021": {
+          "word": "داخڵکردن"
         }
       }
     }

@@ -228,11 +228,12 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
+    "slider_speed": "0.5",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "slider_speed": "0.7"
+    "teacher_markdown": "Students are familiar with design mode to set up the user interface of their app, but this level introduces how to change design elements with code. Students can hover over elements to see their IDs and use that to inform their guesses. When they press Run, the code will run slowly and highlight each line as it runs so students can see step-by-step what each line does. This can be helpful when discussing their prediction and matching the result to specific lines of code."
   },
   "game_id": 41,
   "published": true,
@@ -240,7 +241,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T15:35:48.700+00:00\",\"changed\":[\"cloned from \\\"CSD U6 setProperty predict app_2021\\\"\"],\"cloned_from\":\"CSD U6 setProperty predict app_2021\"},{\"changed_at\":\"2021-08-31 15:36:04 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-14 17:24:10 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-14 17:26:49 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T15:35:48.700+00:00\",\"changed\":[\"cloned from \\\"CSD U6 setProperty predict app_2021\\\"\"],\"cloned_from\":\"CSD U6 setProperty predict app_2021\"},{\"changed_at\":\"2021-08-31 15:36:04 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-14 17:24:10 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-14 17:26:49 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-29 21:36:11 +0000\",\"changed\":[\"code_functions\",\"slider_speed\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-29 21:38:24 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

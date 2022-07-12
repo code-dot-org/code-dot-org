@@ -174,7 +174,7 @@
     ],
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "lightSensor.setScale(0, 450);\nonBoardEvent(lightSensor, \"data\", function() {\n  setProperty(\"smiley\", \"y\", lightSensor.value);\n});\n",
+    "start_blocks": "lightSensor.setScale(0, 450);\r\nonBoardEvent(lightSensor, \"data\", function() {\r\n  setProperty(\"smiley\", \"y\", lightSensor.value);\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -223,15 +223,19 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img data-canonical-image-url=\"icon://fa-smile-o\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"smiley\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 110px; top: 140px; margin: 0px;\" data-icon-color=\"#1b0cfc\"></div></div>",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "teacher_markdown": "Students should notice two new blocks in this code - `setScale()` and `onBoardEvent` which refers to the `lightSensor`. Students might predict that something will change on the screen related to the light sensor, but they may not be sure how the board event works. They may notice that `setScale` includes the value 450 which is the height of the screen. Once students run the program and see the emoji moving up and down on the screen, they may be able to make the connection between the scale value and the screen height. It's okay if students still aren't sure about the new board event, since this is introduced in the following level."
   },
   "game_id": 41,
+  "published": true,
   "created_at": "2021-09-01T22:15:33.000Z",
   "level_num": "custom",
   "user_id": 1,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-01T22:15:33.284+00:00\",\"changed\":[\"cloned from \\\"CSD U6 analog predict_2021\\\"\"],\"cloned_from\":\"CSD U6 analog predict_2021\"},{\"changed_at\":\"2021-09-01 22:15:41 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-01 22:17:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-01 22:19:27 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-01T22:15:33.284+00:00\",\"changed\":[\"cloned from \\\"CSD U6 analog predict_2021\\\"\"],\"cloned_from\":\"CSD U6 analog predict_2021\"},{\"changed_at\":\"2021-09-01 22:15:41 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-01 22:17:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-01 22:19:27 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-01 00:20:02 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

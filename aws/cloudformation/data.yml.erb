@@ -65,16 +65,16 @@ Resources:
       PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
-  TableauSync:
+  DMSReplicationInstance:
     Type: AWS::DMS::ReplicationInstance
     Properties:
+      ReplicationInstanceIdentifier: export-mysql-to-redshift
       AllowMajorVersionUpgrade: true
       AllocatedStorage: 250
-      EngineVersion: 3.1.3
+      EngineVersion: 3.4.6
       MultiAZ: true
       PubliclyAccessible: false
-      ReplicationInstanceClass: dms.c4.4xlarge
-      ReplicationInstanceIdentifier: !Ref AWS::StackName
+      ReplicationInstanceClass: dms.r4.4xlarge
       ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
       VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
   # Note that this is an incomplete set of Policies attached to the
@@ -152,8 +152,8 @@ Resources:
     Type: AWS::DMS::ReplicationTask
     Properties:
       MigrationType: full-load
-      ReplicationInstanceArn: !Ref TableauSync
-      ReplicationTaskIdentifier: <%= task_name %>-task
+      ReplicationInstanceArn: !Ref DMSReplicationInstance
+      ReplicationTaskIdentifier: <%= task_name %>
       SourceEndpointArn: !Ref AuroraCloneEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
       ReplicationTaskSettings: !Sub |

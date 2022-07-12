@@ -1,32 +1,32 @@
 ---
-title: Teacher Resources - Infinity Play Lab
+title: 教师资源 - 《无限》游戏实验室
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Infinity Play Lab: An Hour of Code Tutorial
+# 《无限》游戏实验室：《编程一小时》教程
 
 {{ hoc_infinity_video }}
 
 [col-50]
 
-## Teacher Resources
+## 教师资源
 
-### Lesson Plans:
+### 教案：
 
-- [Play Lab](/files/hoc-playlab-lp.pdf)
+- [游戏实验室](/files/hoc-playlab-lp.pdf)
 
-### Extension Activities:
+### 拓展活动：
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [《编程一小时》之外](http://code.org/learn/beyond)
+- [计算机科学基础知识：课程2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### 其他教师资源：
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [《编程一小时》：教师指南](https://hourofcode.com/how-to)
+- [成功教育者的最佳实践](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- 直播事件：[《编程一小时》教师指南](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -34,12 +34,12 @@ video_player: true
 
 ## 概述
 
-Use Play Lab to create a story or game starring Disney Infinity characters.
+在游戏实验室中，借用《迪士尼：无限》中的角色开启一段故事或游戏。
 
-**Recommended Age Range:** 4-104
+**推荐年龄段：** 4-104岁
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**技术要求：**现代浏览器、智能手机 + 平板电脑
 
-<a href="http://studio.code.org/s/infinity/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/infinity/reset"><button>试用教程</button></a>
 
 [/col-50]

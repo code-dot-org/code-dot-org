@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 import {expect} from '../../util/deprecatedChai';
 import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/CodeWorkspace';
 import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
@@ -46,5 +46,23 @@ describe('CodeWorkspace', () => {
     workspace.find(ShowCodeToggle).simulate('click');
     let counter = workspace.find('#blockCounter');
     expect(counter).to.have.style('display', 'none');
+  });
+
+  it('displays old version warning when displayOldVersionBanner is true', () => {
+    const props = {
+      ...MINIMUM_PROPS,
+      ...{displayOldVersionBanner: true}
+    };
+    const wrapper = shallow(<CodeWorkspace {...props} />);
+    expect(wrapper.find('div#oldVersionBanner')).to.have.lengthOf(1);
+  });
+
+  it('displays not started warning when displayNotStartedBanner is true', () => {
+    const props = {
+      ...MINIMUM_PROPS,
+      ...{displayNotStartedBanner: true}
+    };
+    const wrapper = shallow(<CodeWorkspace {...props} />);
+    expect(wrapper.find('div#notStartedBanner')).to.have.lengthOf(1);
   });
 });

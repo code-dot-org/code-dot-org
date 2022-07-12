@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "Poetry - Effects",
   "config": {
     "func": "setFont",
     "blockText": "set font {FONT}",
@@ -17,36 +17,28 @@
             "\"Arial\""
           ],
           [
-            "Georgia",
-            "\"Georgia\""
-          ],
-          [
-            "Palatino",
-            "\"Palatino\""
-          ],
-          [
-            "Times",
-            "\"Times\""
+            "Arial Black",
+            "\"Arial Black\""
           ],
           [
             "Courier",
             "\"Courier\""
           ],
           [
-            "Arial Black",
-            "\"Arial Black\""
+            "Handwriting",
+            "\"Cursive\""
           ],
           [
             "Impact",
             "\"Impact\""
           ],
           [
-            "Tahoma",
-            "\"Tahoma\""
+            "Georgia",
+            "\"Georgia\""
           ],
           [
-            "Verdana",
-            "\"Verdana\""
+            "Times",
+            "\"Times\""
           ]
         ]
       }

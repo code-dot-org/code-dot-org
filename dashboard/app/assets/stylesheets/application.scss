@@ -205,17 +205,6 @@ img.video_thumbnail {
       float: left;
       clear: left;
     }
-    // TODO: Remove when Game Lab is no longer in beta
-    .beta-notice {
-      float: left;
-      margin-left: 10px;
-      display: inline-block;
-      padding: 7px 0;
-      font-family: $gotham-extra-bold;
-      font-size: 20px;
-      line-height: 20px;
-      color: $droplet_yellow;
-    }
   }
 
   .header_text {
@@ -359,6 +348,19 @@ img.video_thumbnail {
   }
 }
 
+.levelbuilder-header {
+  .header {
+    background-color: $purple;
+  }
+}
+
+.local-header {
+  .header {
+    background-color: $orange;
+  }
+}
+
+
 #language_dir.rtl #pageheader-wrapper {
   .create_options {
     direction: rtl;
@@ -471,10 +473,9 @@ img.video_thumbnail {
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
-$footer_height: 216px;
+$footer_min_height: 236px;
 $footer_padding-top: 20px;
-$footer_padding-bottom: 20px;
-$footer_fullheight: $footer_height + $footer_padding-top + $footer_padding-bottom;
+$footer_fullheight: $footer_min_height + $footer_padding-top;
 html, body {
   height: 100%;
 }
@@ -493,9 +494,8 @@ html, body {
 }
 
 .footer {
-  height: $footer_height;                 /* A height is required to push this footer to the bottom of the page. */
+  min-height: $footer_min_height;
   padding-top: $footer_padding-top;
-  padding-bottom: $footer_padding-bottom;
   font-size: 14px;
   background-color: $dark_color;
   color: $header_text;
@@ -876,7 +876,7 @@ $default-modal-width: 640px;
     top: 50px; // top of the dialog
 
     width: $default-modal-width;
-    margin-left: -($default-modal-width / 2);
+    margin-left: -($default-modal-width * 0.5);
 
     // margin-bottom is reused in JavaScript to determine
     // how close to get to the bottom of the viewport.
@@ -892,7 +892,7 @@ $default-modal-width: 640px;
 
 .dash_modal {
   width: $default-modal-width;
-  margin-left: -($default-modal-width / 2);
+  margin-left: -($default-modal-width * 0.5);
 }
 
 .dash_modal_body {
@@ -1021,17 +1021,6 @@ $default-modal-width: 640px;
   .project_name_wrapper .header_text {
     float: left;
     clear: left;
-  }
-  // TODO: Remove when Game Lab is no longer in beta
-  .beta-notice {
-    float: left;
-    margin-left: 10px;
-    display: inline-block;
-    padding: 7px 0;
-    font-family: $gotham-extra-bold;
-    font-size: 20px;
-    line-height: 20px;
-    color: $droplet_yellow;
   }
 }
 
@@ -1279,8 +1268,8 @@ body.iframe_embed_app_and_code {
 #codeApp.pin_bottom {
   position: absolute;
   top: 60px;
-  left: $codeApp-left-margin;
-  right: 25px;
+  left: 10px;
+  right: 10px;
   bottom: 10px;
 
   &.centered_embed {
@@ -1393,7 +1382,7 @@ body.iframe_embed_app_and_code {
 
   position: absolute;
   cursor: pointer;
-  z-index: 1;
+  z-index: 10;
   background: image-url("x_button.png") no-repeat center center;
   background-size: 100% auto;
 
@@ -1493,7 +1482,7 @@ html[dir=rtl] .qtip-content {
 }
 
 .cdo-qtips {
-  z-index: 1;
+  z-index: 1030 !important;
 }
 
 .tooltip-x-close.qtip-icon {
@@ -1762,29 +1751,35 @@ a.download-video {
     color: $selectUserTypeButtonTextColor;
     border-radius: 15px;
     border-color: $selectUserTypeButtonBorderColor;
+    display: flex;
+    flex-direction: column;
 
     .user-type-name {
-      position: absolute;
-      left: 35%;
-      top: 20px;
+      width: 100%;
       text-align: center;
+      margin-top: 10px;
     }
 
     .user-type-desc {
-      position: absolute;
-      top: 55px;
-      text-align: left;
+      text-align: start;
+      margin-top: 10px;
       margin-left: 5px;
       margin-right: 5px;
     }
 
     .user-type-abilities-unordered-list {
-      position: absolute;
-      text-align: left;
-      margin-left: 30px;
-      margin-right: 5px;
-      top: 100px;
+      text-align: start;
+      width: 85%;
+      margin-inline-start: 10%;
     }
+  }
+
+  #select-user-type-original {
+    display: flex;
+  }
+
+  #select-user-type-variant {
+    display: none;
   }
 
   .select-user-type-teacher-button:hover, .select-user-type-student-button:hover {
@@ -1941,7 +1936,7 @@ a.download-video {
     }
 
     #signup-select-user-type-label {
-      width: 135px;
+      width: 220px;
     }
 
     .padded-container {
@@ -2973,6 +2968,11 @@ $modal-no-icon-gap: 22px;
     float: left;
     padding-right: 10px;
   }
+
+  .instructor-image-end {
+    float: right;
+    padding-left: 10px;
+  }
 }
 
 .dynamic-instructions-markdown {
@@ -2987,6 +2987,12 @@ html[dir="rtl"] .instructions-markdown {
     float: right;
     padding-left: 10px;
     padding-right: 0;
+  }
+
+  .instructor-image-end {
+    float: left;
+    padding-right: 10px;
+    padding-left: 0;
   }
 }
 
@@ -3218,6 +3224,18 @@ $width: 400px;
   right: 0;
   color: $white;
   background-color: $light_purple;
+  padding: 3px;
+  z-index: 100;
+  cursor: pointer;
+  box-shadow: 0 0 7px 2px $shadow;
+}
+
+#instructor_in_training_tag {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  color: $white;
+  background-color: $teal;
   padding: 3px;
   z-index: 100;
   cursor: pointer;
@@ -3497,8 +3515,12 @@ h2.danger {
   background-color: $orange !important;
 }
 
+.foorm-button-left {
+  float: left !important;
+}
+
 .foorm-button-right {
-  float: right;
+  float: right !important;
 }
 
 .foorm-survey-rating-question-sample {

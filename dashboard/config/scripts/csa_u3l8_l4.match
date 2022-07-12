@@ -1,6 +1,7 @@
 name 'CSA U3L8-L4'
 title 'Check for Understanding'
 description 'Match the term to the correct definition.'
+height 'auto'
 
 question 'traverse'
 answer 'the act of moving through an array'

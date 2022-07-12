@@ -8,6 +8,7 @@ import withReduxStore from '../test/util/withReduxStore';
 import '../style/common.scss';
 import '../style/netsim/style.scss';
 import '../style/applab/style.scss';
+import '../style/code-studio/petition.scss';
 import '../src/templates/GameButtons.story.scss';
 
 const styles = {

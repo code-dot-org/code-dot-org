@@ -87,6 +87,17 @@ class InternationalOptInComponent extends FormComponent {
   }
 
   /**
+   * We also have some special logic in place for Uzbekistan, so define a
+   * helper here to let us easily detect if we're in a state where that logic
+   * should be applied.
+   *
+   * @returns {boolean}
+   */
+  isUzbekistanSelected() {
+    return this.props.data?.schoolCountry?.toLowerCase() === 'uzbekistan';
+  }
+
+  /**
    * If Colombia or Chile is selected as the school's country, we use a hierarchy of
    * select elements to carefully control the school selection (rather than the
    * freeform text inputs we use for other countries). In this scenario, we
@@ -98,7 +109,11 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {Object} - modified state
    */
   handleSchoolDataChange(newState) {
-    if (!this.isColombiaSelected() && !this.isChileSelected()) {
+    if (
+      !this.isColombiaSelected() &&
+      !this.isChileSelected() &&
+      !this.isUzbekistanSelected()
+    ) {
       return newState;
     }
 
@@ -114,8 +129,9 @@ class InternationalOptInComponent extends FormComponent {
       newState.schoolCommune = undefined;
     }
     if ('schoolMunicipality' in newState) {
-      // school municipality changed, clearing city
+      // school municipality changed, clearing city and school name
       newState.schoolCity = undefined;
+      newState.schoolName = undefined;
     }
     if ('schoolCity' in newState || 'schoolCommune' in newState) {
       // school city/commune changed, clearing name
@@ -160,19 +176,27 @@ class InternationalOptInComponent extends FormComponent {
       selectedMunicipality && this.props.data && this.props.data.schoolCity;
 
     const departments = this.props.options.colombianSchoolData;
+    const departmentOptions = Object.keys(departments);
+    departmentOptions.unshift(i18n.pdNotApplicable());
     const selectDepartment = this.buildSelectFieldGroup({
       name: 'schoolDepartment',
       label: this.props.labels.colombianChileanSchoolDepartment,
-      options: Object.keys(departments),
+      options: departmentOptions,
       placeholder: i18n.selectAnOption(),
       required: true
     });
 
     const municipalities = departments[selectedDepartment] || {};
+    let municipalityOptions = [i18n.pdNotApplicable()];
+    if (selectedDepartment !== i18n.pdNotApplicable()) {
+      municipalityOptions = municipalityOptions.concat(
+        Object.keys(municipalities)
+      );
+    }
     const selectMunicipality = this.buildSelectFieldGroup({
       name: 'schoolMunicipality',
       label: this.props.labels.colombianSchoolMunicipality,
-      options: Object.keys(municipalities),
+      options: municipalityOptions,
       disabled: !selectedDepartment,
       placeholder: selectedDepartment
         ? i18n.selectAnOption()
@@ -181,10 +205,14 @@ class InternationalOptInComponent extends FormComponent {
     });
 
     const cities = municipalities[selectedMunicipality] || {};
+    let cityOptions = [i18n.pdNotApplicable()];
+    if (selectedMunicipality !== i18n.pdNotApplicable()) {
+      cityOptions = cityOptions.concat(Object.keys(cities));
+    }
     const selectCity = this.buildSelectFieldGroup({
       name: 'schoolCity',
       label: this.props.labels.colombianSchoolCity,
-      options: Object.keys(cities),
+      options: cityOptions,
       disabled: !selectedMunicipality,
       placeholder: selectedMunicipality
         ? i18n.selectAnOption()
@@ -193,10 +221,14 @@ class InternationalOptInComponent extends FormComponent {
     });
 
     const names = cities[selectedCity] || [];
+    let nameOptions = [i18n.pdNotApplicable()];
+    if (selectedCity !== i18n.pdNotApplicable()) {
+      nameOptions = nameOptions.concat(Object.keys(names));
+    }
     const selectName = this.buildSelectFieldGroup({
       name: 'schoolName',
       label: this.props.labels.colombianChileanSchoolName,
-      options: names,
+      options: nameOptions,
       disabled: !selectedCity,
       placeholder: selectedCity
         ? i18n.selectAnOption()
@@ -229,19 +261,25 @@ class InternationalOptInComponent extends FormComponent {
       selectedCommune && this.props.data && this.props.data.schoolName;
 
     const departments = this.props.options.chileanSchoolData || {};
+    const departmentOptions = Object.keys(departments);
+    departmentOptions.unshift(i18n.pdNotApplicable());
     const selectDepartment = this.buildSelectFieldGroup({
       name: 'schoolDepartment',
       label: this.props.labels.colombianChileanSchoolDepartment,
-      options: Object.keys(departments),
+      options: departmentOptions,
       placeholder: i18n.selectAnOption(),
       required: true
     });
 
     const communes = departments[selectedDepartment] || {};
+    let communeOptions = [i18n.pdNotApplicable()];
+    if (selectedDepartment !== i18n.pdNotApplicable()) {
+      communeOptions = communeOptions.concat(Object.keys(communes));
+    }
     const selectCommune = this.buildSelectFieldGroup({
       name: 'schoolCommune',
       label: this.props.labels.chileanSchoolCommune,
-      options: Object.keys(communes),
+      options: communeOptions,
       disabled: !selectedDepartment,
       placeholder: selectedDepartment
         ? i18n.selectAnOption()
@@ -250,10 +288,14 @@ class InternationalOptInComponent extends FormComponent {
     });
 
     const names = communes[selectedCommune] || {};
+    let nameOptions = [i18n.pdNotApplicable()];
+    if (selectedCommune !== i18n.pdNotApplicable()) {
+      nameOptions = nameOptions.concat(Object.keys(names));
+    }
     const selectName = this.buildSelectFieldGroup({
       name: 'schoolName',
       label: this.props.labels.colombianChileanSchoolName,
-      options: Object.keys(names),
+      options: nameOptions,
       disabled: !selectedCommune,
       placeholder: selectedCommune
         ? i18n.selectAnOption()
@@ -262,10 +304,14 @@ class InternationalOptInComponent extends FormComponent {
     });
 
     const ids = names[selectedName] || [];
+    let idOptions = [i18n.pdNotApplicable()];
+    if (selectedName !== i18n.pdNotApplicable()) {
+      idOptions = idOptions.concat(Object.keys(ids));
+    }
     const selectId = this.buildSelectFieldGroup({
       name: 'schoolId',
       label: this.props.labels.chileanSchoolId,
-      options: ids,
+      options: idOptions,
       disabled: !selectedName,
       placeholder: selectedName
         ? i18n.selectAnOption()
@@ -283,21 +329,90 @@ class InternationalOptInComponent extends FormComponent {
     );
   }
 
+  /**
+   * Similarly, if they have selected Uzbekistan as their country, we want to display dropdowns
+   * for city/district and school.
+   *
+   * @returns {Component}
+   */
+  renderUzebekistanSchoolDataFieldGroup() {
+    const selectedDepartment =
+      this.props.data && this.props.data.schoolDepartment;
+    const selectedDistrict =
+      selectedDepartment &&
+      this.props.data &&
+      this.props.data.schoolMunicipality;
+
+    const departments = this.props.options.uzbekistanSchoolData || {};
+    const departmentOptions = Object.keys(departments);
+    departmentOptions.unshift(i18n.pdNotApplicable());
+    const selectDepartment = this.buildSelectFieldGroup({
+      name: 'schoolDepartment',
+      label: this.props.labels.schoolDepartmentRegion,
+      options: departmentOptions,
+      placeholder: i18n.selectAnOption(),
+      required: true
+    });
+
+    const districts = departments[selectedDepartment] || {};
+    let districtOptions = [i18n.pdNotApplicable()];
+    if (selectedDepartment !== i18n.pdNotApplicable()) {
+      districtOptions = districtOptions.concat(Object.keys(districts));
+    }
+    const selectDistrict = this.buildSelectFieldGroup({
+      name: 'schoolMunicipality',
+      label: this.props.labels.schoolCityDistrict,
+      options: districtOptions,
+      disabled: !selectedDepartment,
+      placeholder: selectedDepartment
+        ? i18n.selectAnOption()
+        : i18n.selectDepartmentFirst(),
+      required: true
+    });
+
+    const schools = districts[selectedDistrict] || [];
+    let schoolOptions = [i18n.pdNotApplicable()];
+    if (selectDistrict !== i18n.pdNotApplicable()) {
+      schoolOptions = schoolOptions.concat(Object.keys(schools));
+    }
+    const selectSchool = this.buildSelectFieldGroup({
+      name: 'schoolName',
+      label: this.props.labels.school,
+      options: schoolOptions,
+      disabled: !selectedDistrict,
+      placeholder: selectedDistrict
+        ? i18n.selectAnOption()
+        : i18n.selectDistrictFirst(),
+      required: true
+    });
+
+    return (
+      <FormGroup>
+        {selectDepartment}
+        {selectDistrict}
+        {selectSchool}
+      </FormGroup>
+    );
+  }
+
   renderSchoolFieldGroups() {
     let schoolDataFieldGroup;
+    const selectedCountry = this.props.data?.schoolCountry?.toLowerCase();
     if (this.isColombiaSelected()) {
       schoolDataFieldGroup = this.renderColombianSchoolDataFieldGroup();
     } else if (
       this.isChileSelected() &&
-      this.props.data.workshopFacilitator !== 'Centro de Innovación - Mineduc' //we want the free text fields in this case
+      this.props.options.workshopFacilitator[selectedCountry] !==
+        'Centro de Innovación - Mineduc' //we want the free text fields in this case
     ) {
       schoolDataFieldGroup = this.renderChileanSchoolDataFieldGroup();
+    } else if (this.isUzbekistanSelected()) {
+      schoolDataFieldGroup = this.renderUzebekistanSchoolDataFieldGroup();
     } else {
       // If no country has been selected, display the inputs disabled with a
       // placeholder text asking the user to select their country first.
       // Otherwise, if they've selected a non-Colombian/Chilean country, just render
       // the inputs normally.
-      const selectedCountry = this.props.data && this.props.data.schoolCountry;
       const placeholder = selectedCountry
         ? undefined
         : i18n.selectCountryFirst();
@@ -338,6 +453,44 @@ class InternationalOptInComponent extends FormComponent {
     );
   }
 
+  renderWorkshopFieldGroups() {
+    // If no country has been selected, display the inputs disabled with a
+    // placeholder text asking the user to select their country first.
+    const selectedCountry = this.props.data?.schoolCountry?.toLowerCase();
+    const placeholder = selectedCountry ? undefined : i18n.selectCountryFirst();
+
+    const organizers = this.props.options.workshopOrganizer[
+      selectedCountry
+    ] || [i18n.organizerNotListed()];
+    const selectOrganizer = this.buildSelectFieldGroup({
+      name: 'workshopOrganizer',
+      label: this.props.labels.workshopOrganizer,
+      options: organizers,
+      disabled: !selectedCountry,
+      placeholder: selectedCountry ? i18n.selectAnOption() : placeholder,
+      required: true
+    });
+
+    const facilitators = this.props.options.workshopFacilitator[
+      selectedCountry
+    ] || [i18n.facilitatorNotListed()];
+    const selectFacilitator = this.buildSelectFieldGroup({
+      name: 'workshopFacilitator',
+      label: this.props.labels.workshopFacilitator,
+      options: facilitators,
+      disabled: !selectedCountry,
+      placeholder: selectedCountry ? i18n.selectAnOption() : placeholder,
+      required: true
+    });
+
+    return (
+      <FormGroup>
+        {selectOrganizer}
+        {selectFacilitator}
+      </FormGroup>
+    );
+  }
+
   render() {
     const labels = this.props.labels;
 
@@ -358,6 +511,8 @@ class InternationalOptInComponent extends FormComponent {
 
     return (
       <FormGroup>
+        <br />
+        <h4>{i18n.tellUsAboutYourself()}</h4>
         {/* Personal */}
         {this.buildFieldGroup({
           name: 'firstName',
@@ -396,52 +551,6 @@ class InternationalOptInComponent extends FormComponent {
           required: true
         })}
 
-        {/* Workshop */}
-        <FormGroup
-          id="date"
-          controlId="date"
-          validationState={this.getValidationState('date')}
-        >
-          <Row>
-            <Col md={6}>
-              <ControlLabel>
-                {i18n.workshopDate()}
-                <span style={{color: 'red'}}> *</span>
-              </ControlLabel>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <DatePicker
-                date={dateStringToMoment(
-                  this.props.data && this.props.data.date
-                )}
-                onChange={this.handleDateChange}
-                onBlur={this.handleDateBlur}
-                readOnly={false}
-              />
-            </Col>
-          </Row>
-        </FormGroup>
-        {this.buildSelectFieldGroupFromOptions({
-          name: 'workshopOrganizer',
-          label: labels.workshopOrganizer,
-          required: true,
-          placeholder: i18n.selectAnOption()
-        })}
-        {this.buildSelectFieldGroupFromOptions({
-          name: 'workshopFacilitator',
-          label: labels.workshopFacilitator,
-          required: true,
-          placeholder: i18n.selectAnOption()
-        })}
-        {this.buildSelectFieldGroupFromOptions({
-          name: 'workshopCourse',
-          label: labels.workshopCourse,
-          required: true,
-          placeholder: i18n.selectAnOption()
-        })}
-
         {/* School */}
         {this.renderSchoolFieldGroups()}
 
@@ -472,6 +581,43 @@ class InternationalOptInComponent extends FormComponent {
           type: 'check',
           required: false,
           textFieldMap: textFieldMapRobotics
+        })}
+
+        <br />
+        <h4>{i18n.tellUsAboutWorkshop()}</h4>
+        {/* Workshop */}
+        <FormGroup
+          id="date"
+          controlId="date"
+          validationState={this.getValidationState('date')}
+        >
+          <Row>
+            <Col md={6}>
+              <ControlLabel>
+                {i18n.workshopDate()}
+                <span style={{color: 'red'}}> *</span>
+              </ControlLabel>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <DatePicker
+                date={dateStringToMoment(
+                  this.props.data && this.props.data.date
+                )}
+                onChange={this.handleDateChange}
+                onBlur={this.handleDateBlur}
+                readOnly={false}
+              />
+            </Col>
+          </Row>
+        </FormGroup>
+        {this.renderWorkshopFieldGroups()}
+        {this.buildSelectFieldGroupFromOptions({
+          name: 'workshopCourse',
+          label: labels.workshopCourse,
+          required: true,
+          placeholder: i18n.selectAnOption()
         })}
 
         {/* Opt-Ins */}

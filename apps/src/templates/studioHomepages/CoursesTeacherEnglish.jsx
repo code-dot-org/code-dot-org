@@ -3,11 +3,15 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
-import {AdministratorResourcesActionBlock} from './TwoColumnActionBlock';
+import {
+  AdministratorResourcesActionBlock,
+  CscInfoActionBlock
+} from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksTools from './CourseBlocksTools';
 import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import CsaSkinnyBanner from '../CsaSkinnyBanner';
 import i18n from '@cdo/locale';
 
 /**
@@ -30,6 +34,8 @@ class CoursesTeacherEnglish extends Component {
     return (
       <div>
         <div>
+          <CsaSkinnyBanner />
+
           <ContentContainer
             heading={i18n.courseExplorerHeading()}
             description={i18n.courseExplorerDescription()}
@@ -40,6 +46,8 @@ class CoursesTeacherEnglish extends Component {
           </ContentContainer>
 
           <CourseBlocksTeacherGradeBands />
+
+          <CscInfoActionBlock />
 
           <CourseBlocksHoc />
 

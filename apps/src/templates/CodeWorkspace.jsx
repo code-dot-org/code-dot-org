@@ -20,6 +20,7 @@ import {queryParams} from '../code-studio/utils';
 class CodeWorkspace extends React.Component {
   static propTypes = {
     displayNotStartedBanner: PropTypes.bool,
+    displayOldVersionBanner: PropTypes.bool,
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -212,8 +213,13 @@ class CodeWorkspace extends React.Component {
           />
         )}
         {this.props.displayNotStartedBanner && !inCsfExampleSolution && (
-          <div style={styles.studentNotStartedWarning}>
+          <div id="notStartedBanner" style={styles.studentNotStartedWarning}>
             {i18n.levelNotStartedWarning()}
+          </div>
+        )}
+        {this.props.displayOldVersionBanner && (
+          <div id="oldVersionBanner" style={styles.oldVersionWarning}>
+            {i18n.oldVersionWarning()}
           </div>
         )}
         {props.showDebugger && (
@@ -240,6 +246,15 @@ const styles = {
   runningIcon: {
     color: color.dark_charcoal
   },
+  oldVersionWarning: {
+    zIndex: 99,
+    backgroundColor: color.lightest_red,
+    textAlign: 'center',
+    height: 20,
+    padding: 5,
+    opacity: 0.8,
+    position: 'relative'
+  },
   studentNotStartedWarning: {
     zIndex: 99,
     backgroundColor: color.lightest_red,
@@ -253,6 +268,7 @@ const styles = {
 export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
 export default connect(state => ({
   displayNotStartedBanner: state.pageConstants.displayNotStartedBanner,
+  displayOldVersionBanner: state.pageConstants.displayOldVersionBanner,
   editCode: state.pageConstants.isDroplet,
   isRtl: state.isRtl,
   readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,

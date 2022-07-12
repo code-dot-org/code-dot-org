@@ -1,5 +1,6 @@
 /* globals dashboard */
 
+import $ from 'jquery';
 import {
   showProjectHeader,
   showMinimalProjectHeader,
@@ -12,13 +13,18 @@ import {
   refreshProjectName,
   setShowTryAgainDialog
 } from './headerRedux';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {Provider} from 'react-redux';
 import progress from './progress';
 import {getStore} from '../redux';
+import {
+  setUserSignedIn,
+  setInitialData
+} from '@cdo/apps/templates/currentUserRedux';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import logToCloud from '../logToCloud';
 
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
@@ -34,7 +40,6 @@ var header = {};
 /**
  * @param {object} scriptData
  * @param {boolean} scriptData.disablePostMilestone
- * @param {boolean} scriptData.isHocScript
  * @param {string} scriptData.name
  * @param {object} lessonData{{
  *   script_id: number,
@@ -80,7 +85,6 @@ header.build = function(
   lessonData = lessonData || {};
   progressData = progressData || {};
 
-  const linesOfCodeText = progressData.linesOfCodeText;
   let saveAnswersBeforeNavigation = currentPageNumber !== PUZZLE_PAGE_NONE;
 
   // Set up the store immediately. Note that some progress values are populated
@@ -110,14 +114,13 @@ header.build = function(
           lessonData={lessonData}
           scriptData={scriptData}
           currentLevelId={currentLevelId}
-          linesOfCodeText={linesOfCodeText}
         />
       </Provider>,
       document.querySelector('.header_level')
     );
     // Only render sign in callout if the course is CSF and the user is
     // not signed in
-    if (scriptData.is_csf && signedIn === false) {
+    if (scriptData.show_sign_in_callout && signedIn === false) {
       ReactDOM.render(
         <SignInCalloutWrapper />,
         document.querySelector('.signin_callout_wrapper')
@@ -133,6 +136,36 @@ header.buildProjectInfoOnly = function() {
     </Provider>,
     document.querySelector('.header_level')
   );
+};
+
+// When viewing the level page in code review mode, we want to show only the
+// lesson information (which is displayed by the ScriptName component).
+header.buildScriptNameOnly = function(scriptNameData) {
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <HeaderMiddle scriptNameData={scriptNameData} scriptNameOnly={true} />
+    </Provider>,
+    document.querySelector('.header_level')
+  );
+};
+
+// When the page is cached, this function is called to retrieve and set the
+// sign-in button or user menu in the DOM.
+header.buildUserMenu = function() {
+  // Need to wait until the document is ready so we can accurately check to see
+  // if the create menu is present.
+  $(document).ready(() => {
+    const showCreateMenu = $('.create_menu').length > 0;
+
+    fetch(`/dashboardapi/user_menu?showCreateMenu=${showCreateMenu}`, {
+      credentials: 'same-origin'
+    })
+      .then(response => response.text())
+      .then(data => $('#sign_in_or_user').html(data))
+      .catch(err => {
+        console.log(err);
+      });
+  });
 };
 
 function setupReduxSubscribers(store) {
@@ -166,13 +199,43 @@ function setupReduxSubscribers(store) {
 }
 setupReduxSubscribers(getStore());
 
+function setUpGlobalData(store) {
+  fetch('/api/v1/users/current', {
+    credentials: 'same-origin'
+  })
+    .then(response => response.json())
+    .then(data => {
+      store.dispatch(setUserSignedIn(data.is_signed_in));
+      if (data.is_signed_in) {
+        store.dispatch(setInitialData(data));
+        data.is_verified_instructor && store.dispatch(setVerified());
+
+        logToCloud.setCustomAttribute('userId', data.id);
+      }
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
+setUpGlobalData(getStore());
+
 header.showMinimalProjectHeader = function() {
   getStore().dispatch(refreshProjectName());
   getStore().dispatch(showMinimalProjectHeader());
 };
 
-header.showLevelBuilderSaveButton = function(getChanges) {
-  getStore().dispatch(showLevelBuilderSaveButton(getChanges));
+header.showLevelBuilderSaveButton = function(
+  getChanges,
+  overrideHeaderText,
+  overrideOnSaveURL
+) {
+  getStore().dispatch(
+    showLevelBuilderSaveButton(
+      getChanges,
+      overrideHeaderText,
+      overrideOnSaveURL
+    )
+  );
 };
 
 /**

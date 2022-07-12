@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 es-MX:
   errors:
     messages:
@@ -63,6 +69,7 @@ es-MX:
   previous_page: Página anterior
   next_page: Página siguiente
   next_resource: Siguiente recurso
+  done_with_module: Hecho con este Módulo de Aprendizaje
   cancel: "Cancelar"
   okay: "De acuerdo"
   or: "o"
@@ -173,10 +180,10 @@ es-MX:
     user_type_student_ability_2: "Únete a la sección de la clase de tu profesor"
     user_type_teacher: "Docente"
     user_type_teacher_desc: "Todo aquello a lo que tienen acceso los estudiantes, además de:"
-    user_type_teacher_ability_1: "Crear secciones de clase"
+    user_type_teacher_ability_1: "Crear secciones para la clase"
     user_type_teacher_ability_2: "Asignar y seguir el trabajo de un estudiante"
-    user_type_teacher_ability_3: "Inscribirse en el aprendizaje profesional"
-    user_type_teacher_ability_4: "Interactúa en el foro de profesores"
+    user_type_teacher_ability_3: "Involucrarse en el aprendizaje profesional"
+    user_type_teacher_ability_4: "Interactúa en el foro de nuestro profesor"
     field_is_required: "es obligatorio"
     accept_terms: "Debes estar de acuerdo para crear una cuenta."
     error: "Ocurrió un error."
@@ -185,11 +192,12 @@ es-MX:
     email_preference_yes: "Sí"
     email_preference_no: "No"
     email_preference_required: "Debes especificar una preferencia de correo electrónico."
+    share_teacher_email_reg_partner_question: "¿Te gustaría que compartiéramos tu información de contacto con el [socio regional de Code.org](%{cdo_regional_partner_desc}) de tu zona para que pueda informarte sobre el desarrollo profesional, los recursos y los eventos locales?"
     share_teacher_email_reg_partner_preference_yes: "Sí"
     share_teacher_email_reg_partner_preference_no: "No"
     share_teacher_email_reg_partner_preference_required: "Debes especificar una preferencia de correo electrónico."
     parent_account_checkbox: "Soy padre o tutor registrándose en lugar de mi hijo"
-    parent_account_email_progress_permission: "¿Podríamos enviarte emails con actualizaciones ocasionales del progreso y proyectos de tus hijos, y actualizaciones sobre sus cursos de ciencias de la computación? [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
+    parent_account_email_progress_permission: "¿Podemos enviarle emails con para contarle sobre el rendimiento y los proyectos de su hijo? Tambien mandaremos informacion sobre los cursos de ciencias computacionales [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
     parent_account_email_label: "Correo electrónico del padre o tutor"
   school_info:
     title: 'Información de la escuela (opcional)'
@@ -275,7 +283,7 @@ es-MX:
     invite_sent: 'Se envió la invitación'
     added_teacher: '%{name} añadido como tu docente'
     registered: "Te has registrado en %{section_name}."
-    captcha_required: 'Por favor, rellena el CAPTCHA para entrar en esta sección.'
+    captcha_required: 'Por favor, rellene el CAPTCHA para entrar en esta sección.'
     already_exists: 'Ya te has unido a la sección %{section_name}.'
     error:
       signed_in: 'Cierra la sesión antes de proceder'
@@ -286,8 +294,9 @@ es-MX:
       blank_code: "Ingresa un código de sección"
       cant_join_own_section: "Lo sentimos, no te puedes unir a tu propia sección."
       provider_managed_section: "No puedes unirte a esta sección, porque está a cargo de otro proveedor. Consulta con tu docente para que te agregue a través de %{provider} y vuelve a sincronizar la sección."
-      restricted_section: "No hemos podido añadirte a la sección %{section_code}, porque está bloqueada. Por favor, ponte en contacto con tu docente para obtener ayuda."
-      full_section: "No hemos podido añadirte a la sección %{section_code}, porque ya existen %{section_capacity} estudiantes en ella. Ponte en contacto con tu docente para que te ayude."
+      restricted_section: "No hemos podido añadirte a la sección %{section_code} porque está bloqueada. Por favor, póngase en contacto con su profesor para obtener ayuda."
+      full_section: "No hemos podido añadirte a la sección %{section_code} porque ya existen %{section_capacity} alumnos en ella. Ponte en contacto con tu profesor para que te ayude."
+      not_participant_type: "No hemos podido añadirte a la sección %{section_code} porque no reúnes el criterio de participante para la sección."
     mail:
       student_disassociated:
         subject: "Aviso de Code.org: %{student_name} ya no está asociado como tu estudiante."
@@ -335,7 +344,7 @@ es-MX:
       game_lab_tutorials: "Tutoriales del Laboratorio de juegos"
       sprite_lab_documentation: "Documentación del Laboratorio de sprites"
       sprite_lab_tutorials: "Tutoriales del Laboratorio de sprites"
-      web_lab_documentation: "Documentación del Laboratorio de web"
+      web_lab_documentation: "Documentación del Laboratorio Web"
       educate_overview: "Descripción del educador"
       educate_elementary: "Escuela primaria"
       educate_middle: "Escuela secundaria"
@@ -345,6 +354,7 @@ es-MX:
       educate_beyond: "Más allá de Code.org"
       educate_inspire: "Inspira a un estudiante"
       educate_community: "Comunidad en línea"
+      educate_requirements: "Requisitos Técnicos"
       educate_tools: "Herramientas y videos"
       about_us: "Acerca de nosotros"
       about_leadership: "Liderazgo"
@@ -404,12 +414,16 @@ es-MX:
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Laboratorio de juegos'
       playlab_k1: 'Play Lab ( Pre-lector)'
+      poetry: 'Poesía'
+      poetry_hoc: 'El Arte del Poema'
       scratch: 'Scratch'
       sports: 'Deportes'
       spritelab: 'Laboratorio de sprites'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (bloques)'
       starwarsblocks_hour: 'Star Wars (bloques)'
+      thebadguys: 'Los Tipos Malos'
+      loading: 'Cargando...'
       weblab: 'Web Lab'
       view_all: 'Ver todos los proyectos...'
     popup:
@@ -425,6 +439,7 @@ es-MX:
       prizes_link: 'más información'
   teacher:
     answer: Respuesta
+    dashboard: 'Panel del docente'
     for_teachers_only: Solo para docentes
     title:
       one: 'Tu docente:'
@@ -490,7 +505,7 @@ es-MX:
     for_parents_and_guardians: "Para padres y tutores"
     link_a_parent_email: "Conecta tu correo electrónico como padre o tutor a esta cuenta para mantenerte al tanto del progreso y proyectos de tu hijo/hija"
     parent_guardian_email_label: "Correo electrónico del padre o tutor"
-    remove_parent_email_label: "Eliminar"
+    remove_parent_email_label: "Quitar"
     none: "Ninguna"
     only_one_parent_email_supported_warning: "Nota: en este momento sólo podemos incluir el correo electrónico de un padre o tutor por cada cuenta de estudiante. "
     encrypted: "encriptado"
@@ -543,6 +558,7 @@ es-MX:
     all_students_must_be_in_current_section: "Todos los estudiantes deben estar inscritos en tu sección."
     already_enrolled_in_new_section: "No puedes mover a estos estudiantes, porque ya están en la nueva sección."
     third_party_login: "No puedes mover estudiantes a una sección sincronizada con una herramienta de otro proveedor."
+    not_correct_participant_type: "No puedes mover a estos usuarios porque no tienen permisos para ser participantes en la nueva sección."
   share:
     title: "Aprender en Code Studio"
     description: "Cualquier persona puede aprender Ciencias de la Computación. Crear juegos, aplicaciones y arte con código."
@@ -584,6 +600,7 @@ es-MX:
     how_it_works: 'Cómo funciona (ver el código)'
     try_hour_of_code: '¡Prueba una Hora del Código!'
     store: 'Tienda'
+    cookie_notice: 'Aviso de Cookies'
   reference_area:
     title: '¿Necesitas ayuda?'
     subtitle: 'Mira estos videos y sugerencias'
@@ -650,6 +667,12 @@ es-MX:
       title: 'Fiesta de baile'
     dance-2019:
       title: 'Fiesta de baile'
+    hello-world:
+      title: 'Hola Mundo'
+      body: 'Elige entre cuatro temas divertidos para codificar personajes interactivos en un mundo creado por ti.'
+    poem-art:
+      title: 'El Arte del Poema'
+      body: '¡Exprésate! Utiliza el código para crear poemas animados.'
     hoc:
       title: 'Laberinto clásico'
       body: 'Prueba los fundamentos de la ciencia de la computación. Millones ya lo han intentado.'
@@ -779,7 +802,7 @@ es-MX:
   dialog:
     ok: "Aceptar"
     startover_title: "¿Seguro que quieres empezar de nuevo?"
-    startover_body: "Esto reiniciará el rompecabezas a su estado inicial y borrará todos los datos que hayas agregado o cambiado."
+    startover_body: "Esto reiniciará el rompecabeza a su estado inicial y borrará todos los datos que hayas agregado o cambiado."
     startover_ok: "Volver a empezar"
     startover_cancel: "Cancelar"
   time:
@@ -808,14 +831,6 @@ es-MX:
     reminder_desc: 'Hemos actualizado nuestros <a href="%{tos_url}" target="_blank">términos de servicio</a> y la <a href="%{privacy_url}" target="_blank">política de privacidad</a>. Por favor, lee con atención antes de aceptarlos. Ten en cuenta que nuestras herramientas para aprender JavaScript podrían no estar disponibles para tus estudiantes si no aceptas explícitamente los términos actualizados.'
     reminder_desc_markdown: Hemos actualizado nuestros [términos de servicio](%{tos_url}) y la [política de privacidad](%{privacy_url}). Por favor, lee con atención antes de aceptarlos. Ten en cuenta que nuestras herramientas para aprender JavaScript podrían no estar disponibles para tus estudiantes si no aceptas explícitamente los términos actualizados.
     review_terms: "Revisa los términos actualizados"
-  donor_interstitial:
-    title: "Tus cursos gratis de Ciencias de Computación son posibles gracias a..."
-    subtitle: "Agradecemos los donantes generosos cuyos apoyos hizo posible el éxito de Code.org. Nos comprometemos a  hacer que Code.org sea gratuito para todas las escuelas y los estudiantes, globalmente, ¡gracias a la generosidad de nuestros [donors](%{donors_url})!"
-    local_supporters: "Promotores locales"
-    global_supporters: "Promotores locales"
-    support_codeorg_1: "Cada dólar dado a Code.org trae oportunidades a más estudiantes."
-    support_codeorg_2: "[Dona ahora](%{donate_url}) para apoyar Code.org."
-    get_started: "Empieza en Code.org"
   school_info_interstitial:
     title: "Queremos que cada estudiante pueda acceder a las Ciencias de la Computación. ¡Ayúdanos a seguir nuestro progreso!"
     message: "Ingresa la información de la escuela a continuación."
@@ -910,6 +925,7 @@ es-MX:
     instructor_feedback: 'Comentarios del instructor'
     peer_feedback: 'Comentarios de los compañeros'
     outdated: 'Se añadieron estos comentarios a una versión presentada anteriormente'
+    review_count: 'Debes completar %{review_count} revisiones para esta unidad'
     peer_review: 'Revisión Por Pares'
   external_links:
     disclaimer: Descargo de responsabilidad
@@ -976,6 +992,11 @@ es-MX:
   no_course_access_teacher: "No tienes acceso a este curso. Si crees que deberías tener acceso a este curso, escribe a support@code.org para que podamos solucionar la situación."
   no_script_access_student: "No tienes acceso a esta unidad. Por favor, pregunta a tu docente a qué unidad deberías estar asignado."
   no_script_access_teacher: "No tienes acceso a esta unidad. Si crees que debes tenerlo, por favor escribe a support@code.org para que podamos solucionar el problema."
+  no_level_access_student: "No tienes acceso a este nivel. Por favor, pregunta a tu profesor en qué nivel deberías estar."
+  no_level_access_teacher: "No tienes acceso a este nivel. Si crees que deberías tener acceso a este nivel, escribe a support@code.org para que podamos resolver la situación."
+  no_exemplar: "No existe ningún ejemplo para este nivel."
+  no_exemplar_access_student: "Los alumnos no pueden acceder al código de ejemplo. Por favor, pregunta a tu profesor en qué nivel debes estar."
+  no_exemplar_access_teacher: "Sólo los profesores verificados pueden acceder al código de ejemplo. Si quieres convertirte en profesor verificado, escribe a support@code.org."
   return_unit_overview: 'Ir al resumen de la unidad'
   return_course_overview: 'Ir al resumen del curso'
   view_all_units: 'Ver todas las unidades'
@@ -988,15 +1009,18 @@ es-MX:
       email: 'Correo electrónico'
       email_alternate: 'Correo electrónico alternativo'
       gender: 'Identidad de género'
+      school: 'Escuela'
       school_name: 'Nombre de la escuela'
       school_city: 'Ciudad de la escuela'
+      school_city_district: 'Escuela Ciudad/Distrito'
       school_country: 'País en el que está la escuela'
+      school_department_region: 'Departamento/región del colegio'
       colombian_school_city: 'Establecimiento'
-      colombian_chilean_school_department: 'Departamento/Región'
+      colombian_chilean_school_department: 'Departamento/región del colegio'
       colombian_school_municipality: 'Municipio'
       colombian_chilean_school_name: 'Nombre de la escuela'
       chilean_school_commune: 'Comuna'
-      chilean_school_id: 'Identificación de Escuela'
+      chilean_school_id: 'ID de colegio'
       ages: '¿A qué grupos de edades enseñas este año?'
       subjects: '¿Qué materias enseñas este año?'
       resources: '¿Cuáles de los siguientes recursos educativos de ciencias de la computación utilizas?'
@@ -1020,6 +1044,7 @@ es-MX:
         israel: 'Israel'
         malaysia: 'Malasia'
         mexico: 'México'
+        paraguay: 'Paraguay'
         thailand: 'Tailandia'
         uzbekistan: 'Uzbekistán'
       ages:
@@ -1042,6 +1067,7 @@ es-MX:
         music: 'Música'
         art: 'Arte'
         other: "Otros:"
+        na: 'No Aplicable'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1051,7 +1077,8 @@ es-MX:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Otros:"
+        other: "Otro"
+        na: 'No Aplicable'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1061,7 +1088,8 @@ es-MX:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Otros:"
+        other: "Otro"
+        na: 'No Aplicable'
       workshop_course:
         csf_af: 'Fundamentos de Ciencias de la Computación (cursos A-F)'
         csf_express: 'Fundamentos de Ciencias de la Computación (Pre-Express o Express)'
@@ -1116,3 +1144,4 @@ es-MX:
     this_sprite: "este sprite"
   unit_prefix: "Unidad %{n}"
   code_org_logo_alt: "Inicio de Code.org"
+  teacher_feedback: "Retroalimentación del docente"

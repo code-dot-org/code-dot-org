@@ -100,6 +100,8 @@ let initialSaveComplete = false;
 let initialCaptureComplete = false;
 let thumbnailChanged = false;
 let thumbnailPngBlob = null;
+let fetchChannelResponseCode = null;
+let fetchSourceResponseCode = null;
 
 /**
  * Current state of our sources API data
@@ -109,7 +111,8 @@ var currentSources = {
   html: null,
   makerAPIsEnabled: null,
   animations: null,
-  selectedSong: null
+  selectedSong: null,
+  selectedPoem: null
 };
 
 /**
@@ -134,6 +137,7 @@ function unpackSources(data) {
     makerAPIsEnabled: data.makerAPIsEnabled,
     generatedProperties: data.generatedProperties,
     selectedSong: data.selectedSong,
+    selectedPoem: data.selectedPoem,
     libraries: data.libraries
   };
 }
@@ -499,6 +503,14 @@ var projects = (module.exports = {
     return hasEditPermissions && isEditOrViewPage;
   },
 
+  channelNotFound() {
+    return fetchChannelResponseCode >= 400 && fetchChannelResponseCode < 500;
+  },
+
+  sourceNotFound() {
+    return fetchSourceResponseCode >= 400 && fetchSourceResponseCode < 500;
+  },
+
   __TestInterface: {
     // Used by UI tests
     getCurrent() {
@@ -515,6 +527,9 @@ var projects = (module.exports = {
     },
     setCurrentSources(data) {
       currentSources = data;
+    },
+    setInitialSaveComplete(value) {
+      initialSaveComplete = value;
     },
     setSourceVersionInterval(seconds) {
       newSourceVersionInterval = seconds * 1000;
@@ -655,7 +670,9 @@ var projects = (module.exports = {
   },
   setTitle(newName) {
     if (newName && appOptions.gameDisplayName) {
-      document.title = newName + ' - ' + appOptions.gameDisplayName;
+      document.title = `${newName} - ${appOptions.gameDisplayName} - ${
+        appOptions.appName
+      }`;
     }
   },
 
@@ -677,6 +694,7 @@ var projects = (module.exports = {
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.setSelectedSong
+   * @param {function(): boolean} sourceHandler.setSelectedPoem
    */
   init(sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -697,6 +715,10 @@ var projects = (module.exports = {
 
       if (currentSources.selectedSong) {
         sourceHandler.setSelectedSong(currentSources.selectedSong);
+      }
+
+      if (currentSources.selectedPoem) {
+        sourceHandler.setSelectedPoem(currentSources.selectedPoem);
       }
 
       if (currentSources.animations) {
@@ -797,6 +819,7 @@ var projects = (module.exports = {
       case 'gamelab':
         return msg.defaultProjectNameGameLab();
       case 'spritelab':
+      case 'thebadguys':
         return msg.defaultProjectNameSpriteLab();
       case 'weblab':
         return msg.defaultProjectNameWebLab();
@@ -860,6 +883,7 @@ var projects = (module.exports = {
       case 'weblab':
       case 'gamelab':
       case 'spritelab':
+      case 'thebadguys':
       case 'javalab':
         return appOptions.app; // Pass through type exactly
       case 'turtle':
@@ -906,6 +930,8 @@ var projects = (module.exports = {
           return 'basketball';
         }
         return 'bounce';
+      case 'poetry':
+        return appOptions.level.standaloneAppName;
       default:
         return null;
     }
@@ -962,7 +988,7 @@ var projects = (module.exports = {
   },
   /**
    * Saves the project only if the sources {source, html, animations,
-   * makerAPIsEnabled, selectedSong} have changed.
+   * makerAPIsEnabled, selectedSong, selectedPoem} have changed.
    * @returns {Promise} A promise containing the project data if the project
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
@@ -1036,14 +1062,18 @@ var projects = (module.exports = {
      */
     const completeAsyncSave = () =>
       new Promise((resolve, reject) =>
-        this.getUpdatedSourceAndHtml_(sourceAndHtml =>
-          this.saveSourceAndHtml_(
-            sourceAndHtml,
-            (err, result) => (err ? reject(err) : resolve()),
-            forceNewVersion,
-            preparingRemix
-          )
-        )
+        this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+          try {
+            this.saveSourceAndHtml_(
+              sourceAndHtml,
+              (err, result) => (err ? reject(err) : resolve()),
+              forceNewVersion,
+              preparingRemix
+            );
+          } catch (err) {
+            reject(err);
+          }
+        })
       );
 
     if (preparingRemix) {
@@ -1124,22 +1154,23 @@ var projects = (module.exports = {
         function(err, response) {
           if (err) {
             if (err.message.includes('httpStatusCode: 401')) {
-              this.showSaveError_(
+              this.showSaveError_();
+              this.logError_(
                 'unauthorized-save-sources-reload',
                 saveSourcesErrorCount,
                 err.message
-              );
-              utils.reload();
+              ).finally(() => utils.reload());
             } else if (err.message.includes('httpStatusCode: 409')) {
-              this.showSaveError_(
+              this.showSaveError_();
+              this.logError_(
                 'conflict-save-sources-reload',
                 saveSourcesErrorCount,
                 err.message
-              );
-              utils.reload();
+              ).finally(() => utils.reload());
             } else {
               saveSourcesErrorCount++;
-              this.showSaveError_(
+              this.showSaveError_();
+              this.logError_(
                 'save-sources-error',
                 saveSourcesErrorCount,
                 err.message
@@ -1147,8 +1178,8 @@ var projects = (module.exports = {
               if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
                 header.showTryAgainDialog();
               }
-              return;
             }
+            return;
           } else if (saveSourcesErrorCount > 0) {
             // If the previous errors occurred due to network problems, we may not
             // have been able to report them. Try to report them once more, now that
@@ -1167,7 +1198,19 @@ var projects = (module.exports = {
           replaceCurrentSourceVersion = !forceNewVersion;
           current.migratedToS3 = true;
 
-          this.updateChannels_(callback);
+          // Normally, reduceChannelUpdates is false and we update the channel
+          // metadata every time source code is saved. When in emergency mode,
+          // reduceChannelUpdates is true for HoC levels and we only update
+          // channel metadata on the initial save to reduce write pressure on
+          // the database. The main user-visible effect of this is that the
+          // project's 'last saved' time shown in the UI may be inaccurate for
+          // all projects that were saved while emergency mode was active.
+          if (appOptions.reduceChannelUpdates && initialSaveComplete) {
+            console.log('Skipping channel metadata update');
+            this.onUpdateChannel(callback, null, current);
+          } else {
+            this.updateChannels_(callback);
+          }
         }.bind(this)
       );
     } else {
@@ -1180,6 +1223,11 @@ var projects = (module.exports = {
     return this.save();
   },
 
+  saveSelectedPoem(poem) {
+    this.sourceHandler.setSelectedPoem(poem);
+    return this.save();
+  },
+
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
@@ -1187,15 +1235,15 @@ var projects = (module.exports = {
    * @private
    */
   updateChannels_(callback) {
-    channels.update(
-      current.id,
-      current,
-      function(err, data) {
-        initialSaveComplete = true;
-        this.updateCurrentData_(err, data, false);
-        executeCallback(callback, err, data);
-      }.bind(this)
+    channels.update(current.id, current, (err, data) =>
+      this.onUpdateChannel(callback, err, data)
     );
+  },
+
+  onUpdateChannel(callback, err, data) {
+    initialSaveComplete = true;
+    this.updateCurrentData_(err, data);
+    executeCallback(callback, err, data);
   },
 
   getSourceForChannel(channelId, callback) {
@@ -1254,6 +1302,7 @@ var projects = (module.exports = {
           const html = this.sourceHandler.getLevelHtml();
           const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
           const selectedSong = this.sourceHandler.getSelectedSong();
+          const selectedPoem = this.sourceHandler.getSelectedPoem();
           const generatedProperties = this.sourceHandler.getGeneratedProperties();
           const libraries = this.sourceHandler.getLibrariesList();
           callback({
@@ -1262,6 +1311,7 @@ var projects = (module.exports = {
             animations,
             makerAPIsEnabled,
             selectedSong,
+            selectedPoem,
             generatedProperties,
             libraries
           });
@@ -1339,16 +1389,15 @@ var projects = (module.exports = {
     name = name || appOptions.level.name;
     return name;
   },
-  showSaveError_(errorType, errorCount, errorText) {
+  showSaveError_() {
     header.showProjectSaveError();
-    this.logError_(errorType, errorCount, errorText);
   },
   logError_: function(errorType, errorCount, errorText) {
     // Share URLs only make sense for standalone app types.
     // This includes most app types, but excludes pixelation.
     const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
 
-    firehoseClient.putRecord(
+    return firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
         study_group: 'v4',
@@ -1375,11 +1424,8 @@ var projects = (module.exports = {
     const {shouldNavigate} = options;
     if (err) {
       saveChannelErrorCount++;
-      this.showSaveError_(
-        'save-channel-error',
-        saveChannelErrorCount,
-        err + ''
-      );
+      this.showSaveError_();
+      this.logError_('save-channel-error', saveChannelErrorCount, err + '');
       if (saveChannelErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
         header.showTryAgainDialog();
       }
@@ -1655,21 +1701,12 @@ var projects = (module.exports = {
       // Load the project ID, if one exists
       return this.fetchChannel(pathInfo.channelId)
         .catch(err => {
-          if (err.message.includes('error: Not Found')) {
-            // Project not found. Redirect to the most recent project of this
-            // type, or a new project of this type if none exists.
-            const newPath = utils
-              .currentLocation()
-              .pathname.split('/')
-              .slice(PathPart.START, PathPart.APP + 1)
-              .join('/');
-            utils.navigateToHref(newPath);
-          }
-          // Reject even after navigation, to allow unit tests which stub
-          // navigateToHref to confirm that navigation has happened.
           return Promise.reject(err);
         })
         .then(this.fetchSource.bind(this))
+        .catch(err => {
+          return Promise.reject(err);
+        })
         .then(() => {
           if (current.isOwner && pathInfo.action === 'view') {
             isEditing = true;
@@ -1690,7 +1727,13 @@ var projects = (module.exports = {
   loadProjectBackedLevel_: function() {
     isEditing = true;
     return this.fetchChannel(appOptions.channel)
+      .catch(err => {
+        return Promise.reject(err);
+      })
       .then(this.fetchSource.bind(this))
+      .catch(err => {
+        return Promise.reject(err);
+      })
       .then(() => {
         projects.showHeaderForProjectBacked();
         return fetchAbuseScoreAndPrivacyViolations(this);
@@ -1788,9 +1831,10 @@ var projects = (module.exports = {
    */
   fetchChannel(channelId) {
     return new Promise((resolve, reject) => {
-      channels.fetch(channelId, (err, data) =>
-        err ? reject(err) : resolve(data)
-      );
+      channels.fetch(channelId, (err, data, jqXhr, response) => {
+        fetchChannelResponseCode = response?.status;
+        err ? reject(err) : resolve(data);
+      });
     }).catch(err => {
       this.logError_(
         'load-channel-error',
@@ -1827,9 +1871,10 @@ var projects = (module.exports = {
         url += '?version=' + version;
       }
       return new Promise((resolve, reject) => {
-        sourcesApi.fetch(url, (err, data, jqXHR) =>
-          err ? reject(err) : resolve({data, jqXHR})
-        );
+        sourcesApi.fetch(url, (err, data, jqXHR, response) => {
+          fetchSourceResponseCode = response?.status;
+          err ? reject(err) : resolve({data, jqXHR});
+        });
       })
         .catch(err => {
           this.logError_(

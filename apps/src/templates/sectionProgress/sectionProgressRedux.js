@@ -9,8 +9,6 @@ const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const START_REFRESHING_PROGRESS = 'sectionProgress/START_REFRESHING_PROGRESS';
 const FINISH_REFRESHING_PROGRESS = 'sectionProgress/FINISH_REFRESHING_PROGRESS';
 const ADD_DATA_BY_UNIT = 'sectionProgress/ADD_DATA_BY_UNIT';
-const SET_SHOW_SECTION_PROGRESS_DETAILS =
-  'teacherDashboard/SET_SHOW_SECTION_PROGRESS_DETAILS';
 
 // Action creators
 export const startLoadingProgress = () => ({type: START_LOADING_PROGRESS});
@@ -30,10 +28,6 @@ export const addDataByUnit = data => ({
   type: ADD_DATA_BY_UNIT,
   data
 });
-export const setShowSectionProgressDetails = showSectionProgressDetails => ({
-  type: SET_SHOW_SECTION_PROGRESS_DETAILS,
-  showSectionProgressDetails
-});
 
 const INITIAL_LESSON_OF_INTEREST = 1;
 
@@ -46,9 +40,7 @@ const initialState = {
   studentLastUpdateByUnit: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
-  isRefreshingProgress: false,
-  // pilot flag for showing time spent and last updated in the progress table
-  showSectionProgressDetails: false
+  isRefreshingProgress: false
 };
 
 export default function sectionProgress(state = initialState, action) {
@@ -94,12 +86,6 @@ export default function sectionProgress(state = initialState, action) {
       lessonOfInterest: action.lessonOfInterest
     };
   }
-  if (action.type === SET_SHOW_SECTION_PROGRESS_DETAILS) {
-    return {
-      ...state,
-      showSectionProgressDetails: action.showSectionProgressDetails
-    };
-  }
   if (action.type === ADD_DATA_BY_UNIT) {
     return {
       ...state,
@@ -136,7 +122,7 @@ export const jumpToLessonDetails = lessonOfInterest => {
         study_group: 'progress',
         event: 'view_change_toggle',
         data_json: JSON.stringify({
-          section_id: state.sectionData.section.id,
+          section_id: state.teacherSections.selectedSectionId,
           old_view: ViewType.SUMMARY,
           new_view: ViewType.DETAIL,
           script_id: state.unitSelection.scriptId

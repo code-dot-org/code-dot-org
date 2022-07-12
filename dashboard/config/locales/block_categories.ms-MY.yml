@@ -6,6 +6,7 @@ ms:
       Advanced: Lanjutan
       Behaviors: Tingkah laku
       Brushes: Berus
+      Category: Kategori
       Color: Warna
       Comment: Komen
       Comments: Komen
@@ -19,6 +20,7 @@ ms:
       Games/Score: Permainan/Skor
       Groups: Kumpulan
       Input: Input
+      Location: Lokasi
       Locations: Lokasi
       Logic: Logik
       Loops: Gelung
@@ -27,6 +29,7 @@ ms:
       Properties: Hartanah
       Sprites: Jin
       Text: teks
-      Variables: Pembolehubah
+      Variables: Pemboleh ubah
       'Variables ': 'Pembolehubah '
+      'Variables  ': 'Pembolehubah  '
       World: Dunia

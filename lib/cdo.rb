@@ -10,7 +10,6 @@ module Cdo
   class Impl < Config
     prepend SecretsConfig
     include Singleton
-    @slog = nil
 
     # Match CDO_*, plus RACK_ENV and RAILS_ENV.
     ENV_PREFIX = /^(CDO|(RACK|RAILS)(?=_ENV))_/
@@ -87,6 +86,20 @@ module Cdo
       canonical_hostname('advocacy.code.org')
     end
 
+    def codeprojects_hostname
+      canonical_hostname('codeprojects.org')
+    end
+
+    def hostedzone_id(domain)
+      hosted_zone = Aws::Route53::Client.new.list_hosted_zones_by_name(dns_name: domain).hosted_zones.first
+      raise "Could not find #{domain} in hosted zones" unless hosted_zone.name.delete_suffix('.') == domain
+      return hosted_zone.id.delete_prefix("/hostedzone/")
+    end
+
+    def codeprojects_hostedzone_id
+      hostedzone_id('codeprojects.org')
+    end
+
     def site_host(domain)
       host = canonical_hostname(domain)
       if (rack_env?(:development) && !https_development) ||
@@ -124,11 +137,23 @@ module Cdo
         # DNS record that redirects requests to localhost. Javabuilder, as a
         # separate service, uses a different port. Therefore, we can access the
         # the service directly.
+        # To use a developer instance of Javabuilder instead, replace this url with
+        # 'wss://<your-javabuilder-domain>.dev-code.org'
         'ws://localhost:8080/javabuilder'
       else
         # TODO: Update to use this URL once we have Route53 set up for API Gateway
         # site_url('javabuilder.code.org', '', 'wss')
         'wss://javabuilderbeta.code.org'
+      end
+    end
+
+    def javabuilder_upload_url(path = '', scheme = '')
+      if rack_env?(:development)
+        # To use a developer instance of Javabuilder instead, replace this url with
+        # 'https://<your-javabuilder-domain>-http.dev-code.org/seedsources/sources.json'
+        'http://localhost:8080/javabuilderfiles/seedsources'
+      else
+        'https://javabuilderbeta-http.code.org/seedsources/sources.json'
       end
     end
 
@@ -162,9 +187,7 @@ module Cdo
         # the content for that language not updated regularly, but new content is not
         # added automatically. This means if you try to link to a recently-added
         # lesson plan, it may not be there for any of these languages.
-        additional_languages = [
-          'de-de', 'id-id', 'ko-kr', 'tr-tr', 'zh-cn', 'zh-tw'
-        ]
+        additional_languages = %w(de-de id-id ko-kr tr-tr zh-cn zh-tw)
         @@curriculum_languages.merge(additional_languages)
 
         # Don't include English; we do of course _support_ English, but only as
@@ -205,24 +228,6 @@ module Cdo
     # with RACK_ENV=test do not carry out actions on behalf of the managed test system.
     def test_system?
       rack_env?(:test) && pegasus_hostname == 'test.code.org'
-    end
-
-    # Sets the slogger to use in a test.
-    # slogger must support a `write` method.
-    def set_slogger_for_test(slogger)
-      @@slog = slogger
-      # Set a fake slog token so that the slog method will actually call
-      # the test slogger.
-      stubs(slog_token: 'fake_slog_token')
-    end
-
-    def slog(params)
-      return unless slog_token
-      require 'dynamic_config/gatekeeper'
-      return unless Gatekeeper.allows('slogging', default: true)
-      require 'cdo/slog'
-      @@slog ||= Slog::Writer.new(secret: slog_token)
-      @@slog.write params
     end
 
     def shared_image_url(path)

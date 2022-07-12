@@ -1,5 +1,5 @@
 # This can be viewed on non-production environments at /rails/mailers/pd/teacher_application_mailer
-class Pd::TeacherApplicationMailerPreview < ActionMailer::Preview
+class PdTeacherApplicationMailerPreview < ActionMailer::Preview
   include FactoryGirl::Syntax::Methods
   include Pd::Application::ActiveApplicationModels
 
@@ -17,9 +17,6 @@ class Pd::TeacherApplicationMailerPreview < ActionMailer::Preview
   ).each do |mail_type|
     define_method "#{mail_type}__with_partner".to_sym do
       Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: true)
-    end
-    define_method "#{mail_type}__with_partner_no_contact".to_sym do
-      Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: true, partner_contact_info: false)
     end
     define_method "#{mail_type}__without_partner".to_sym do
       Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: false)

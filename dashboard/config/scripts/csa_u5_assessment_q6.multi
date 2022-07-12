@@ -23,11 +23,8 @@ Consider the following code segment:
 String[][] letters = {{"A", "B", "C"},
                       {"D", "E", "F”},
                       {"G", "H", "I"}};
-
-System.out.println(letters[1]);
-
-
 ```
-What is printed as a result of executing this code segment?
+
+What is contained in `letters[1]`?
 
 MARKDOWN

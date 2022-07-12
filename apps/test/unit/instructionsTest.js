@@ -280,7 +280,10 @@ describe('instructions', () => {
             teacherMarkdown: undefined,
             levelVideos: undefined,
             mapReference: undefined,
-            referenceLinks: undefined
+            referenceLinks: undefined,
+            muteBackgroundMusic: undefined,
+            unmuteBackgroundMusic: undefined,
+            programmingEnvironment: undefined
           });
         });
       });
@@ -312,7 +315,10 @@ describe('instructions', () => {
             teacherMarkdown: undefined,
             levelVideos: undefined,
             mapReference: undefined,
-            referenceLinks: undefined
+            referenceLinks: undefined,
+            muteBackgroundMusic: undefined,
+            unmuteBackgroundMusic: undefined,
+            programmingEnvironment: undefined
           });
         }
       );
@@ -402,7 +408,10 @@ describe('instructions', () => {
           hasContainedLevels: undefined,
           levelVideos: ['notEmpty'],
           mapReference: undefined,
-          referenceLinks: undefined
+          referenceLinks: undefined,
+          muteBackgroundMusic: undefined,
+          unmuteBackgroundMusic: undefined,
+          programmingEnvironment: undefined
         });
       });
 
@@ -429,7 +438,10 @@ describe('instructions', () => {
           hasContainedLevels: undefined,
           levelVideos: undefined,
           mapReference: '/test/abc.html',
-          referenceLinks: undefined
+          referenceLinks: undefined,
+          muteBackgroundMusic: undefined,
+          unmuteBackgroundMusic: undefined,
+          programmingEnvironment: undefined
         });
       });
 
@@ -456,7 +468,10 @@ describe('instructions', () => {
           hasContainedLevels: undefined,
           levelVideos: undefined,
           mapReference: undefined,
-          referenceLinks: ['/test/alpha.html', '/test/beta.html']
+          referenceLinks: ['/test/alpha.html', '/test/beta.html'],
+          muteBackgroundMusic: undefined,
+          unmuteBackgroundMusic: undefined,
+          programmingEnvironment: undefined
         });
       });
     });

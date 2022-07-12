@@ -2,6 +2,7 @@ require 'test_helper'
 
 class BubbleChoiceTest < ActiveSupport::TestCase
   include Rails.application.routes.url_helpers
+  include LevelsHelper
   self.use_transactional_test_case = true
   include SharedConstants
 
@@ -14,19 +15,24 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     sublevels = [@sublevel1, @sublevel2]
     @bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: sublevels
     @script_level = create :script_level, levels: [@bubble_choice]
+
+    @sublevel_with_contained = create :level, name: 'sublevel_with_contained', display_name: 'Sublevel with contained', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
+    @sublevel_contained_level = create :free_response, name: 'Sublevel contained level'
+    @sublevel_with_contained.contained_level_names = [@sublevel_contained_level.name]
+    @sublevel_with_contained.save!
   end
 
   test 'create_from_level_builder creates level from DSL input' do
     sublevel = create :level, name: 'level for bubble choice'
 
-    input_dsl = <<DSL
-name 'bubble choice 1'
-display_name 'Choose a Bubble'
-description 'Choose the level you want to complete.'
+    input_dsl = <<~DSL
+      name 'bubble choice 1'
+      display_name 'Choose a Bubble'
+      description 'Choose the level you want to complete.'
 
-sublevels
-level 'level for bubble choice'
-DSL
+      sublevels
+      level 'level for bubble choice'
+    DSL
 
     level = BubbleChoice.create_from_level_builder({}, {name: 'bubble choice 1', dsl_text: input_dsl})
     assert_equal 'bubble choice 1', level.name
@@ -36,12 +42,12 @@ DSL
   end
 
   test 'create_from_level_builder fails if a sublevel does not exist' do
-    input_dsl = <<DSL
-name 'bubble choice'
+    input_dsl = <<~DSL
+      name 'bubble choice'
 
-sublevels
-level 'some nonexistent level'
-DSL
+      sublevels
+      level 'some nonexistent level'
+    DSL
 
     error = assert_raises do
       BubbleChoice.create_from_level_builder({}, {name: 'bubble choice', dsl_text: input_dsl})
@@ -52,13 +58,13 @@ DSL
   test 'create_from_level_builder fails if a sublevel is used twice' do
     create :level, name: 'level for bubble choice'
 
-    input_dsl = <<DSL
-name 'bubble choice'
+    input_dsl = <<~DSL
+      name 'bubble choice'
 
-sublevels
-level 'level for bubble choice'
-level 'level for bubble choice'
-DSL
+      sublevels
+      level 'level for bubble choice'
+      level 'level for bubble choice'
+    DSL
 
     error = assert_raises do
       BubbleChoice.create_from_level_builder({}, {name: 'bubble choice', dsl_text: input_dsl})
@@ -71,14 +77,14 @@ DSL
     sublevel2 = create :level, name: 'bubble choice level 2'
     sublevel3 = create :level, name: 'bubble choice level 3'
 
-    input_dsl = <<DSL
-name 'bubble choice'
+    input_dsl = <<~DSL
+      name 'bubble choice'
 
-sublevels
-level 'bubble choice level 1'
-level 'bubble choice level 2'
-level 'bubble choice level 3'
-DSL
+      sublevels
+      level 'bubble choice level 1'
+      level 'bubble choice level 2'
+      level 'bubble choice level 3'
+    DSL
 
     level = BubbleChoice.create_from_level_builder({}, {name: 'bubble choice', dsl_text: input_dsl})
     assert_equal [sublevel1, sublevel2, sublevel3], level.sublevels
@@ -206,6 +212,85 @@ DSL
     assert_equal expected_summary, sublevel_summary
   end
 
+  test 'summarize_sublevels with sublevel with contained level' do
+    student = create :student
+
+    bubble_choice = create :bubble_choice_level, name: 'sublevels', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: [@sublevel_with_contained, @sublevel2]
+    script_level = create :script_level, levels: [bubble_choice]
+    script = script_level.script
+
+    create :user_level, user: student, level: @sublevel_contained_level, script: script, best_result: 100
+    create :user_level, user: student, level: @sublevel2, script: script, best_result: 20
+
+    sublevel_summary = bubble_choice.summarize_sublevels(script_level: script_level, user_id: student.id)
+    expected_summary = [
+      {
+        # level_id and id are used by different features so keeping both
+        level_id: @sublevel_with_contained.id.to_s,
+        type: @sublevel_with_contained.type,
+        name: @sublevel_with_contained.name,
+        display_name: @sublevel_with_contained.display_name,
+        contained_levels: [{
+          level_id: @sublevel_contained_level.id.to_s,
+          type: "FreeResponse",
+          name: "Sublevel contained level",
+          display_name: nil
+        }],
+        id: @sublevel_with_contained.id.to_s,
+        description: @sublevel_with_contained.bubble_choice_description,
+        thumbnail_url: @sublevel_with_contained.thumbnail_url,
+        position: 1,
+        letter: 'a',
+        icon: nil,
+        url: build_script_level_url(script_level, {sublevel_position: 1}),
+        perfect: true,
+        status: 'perfect',
+        teacher_feedback_review_state: nil,
+        exampleSolutions: []
+      },
+      {
+        level_id: @sublevel2.id.to_s,
+        type: @sublevel2.type,
+        name: @sublevel2.name,
+        display_name: @sublevel2.name,
+        short_instructions: @sublevel2.short_instructions,
+        id: @sublevel2.id.to_s,
+        description: @sublevel2.bubble_choice_description,
+        thumbnail_url: nil,
+        position: 2,
+        letter: 'b',
+        icon: nil,
+        url: build_script_level_url(script_level, {sublevel_position: 2}),
+        perfect: false,
+        status: 'passed',
+        teacher_feedback_review_state: nil,
+        exampleSolutions: []
+      }
+    ]
+
+    assert_equal expected_summary, sublevel_summary
+  end
+
+  test 'summarize_sublevels includes exampleSolutions' do
+    STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    script_with_examples = create(:script)
+    lesson_group_with_examples = create(:lesson_group, script: script_with_examples)
+    lesson_with_examples = create(:lesson, lesson_group: lesson_group_with_examples, script: script_with_examples)
+    sublevel1_with_examples = create :dance, :with_example_solutions
+    sublevel2_with_examples = create :dance, :with_example_solutions
+    sublevels_with_examples = [sublevel1_with_examples, sublevel2_with_examples]
+    bubble_choice_with_examples = create :bubble_choice_level, name: 'bubble_choices_with_examples', display_name: 'Bubble Choices With Examples', description: 'Choose one or more!', sublevels: sublevels_with_examples
+    script_level_with_examples = create :script_level, levels: [bubble_choice_with_examples], script: script_with_examples, lesson: lesson_with_examples
+
+    authorized_teacher = create :authorized_teacher
+    sublevels_summary = bubble_choice_with_examples.summarize_sublevels(script_level: script_level_with_examples, user_id: authorized_teacher.id)
+
+    assert_equal ['https://studio.code.org/projects/dance/example-1/view', 'https://studio.code.org/projects/dance/example-2/view'], sublevels_summary[0][:exampleSolutions]
+    assert_equal ['https://studio.code.org/projects/dance/example-1/view', 'https://studio.code.org/projects/dance/example-2/view'], sublevels_summary[1][:exampleSolutions]
+  end
+
   test 'summarize_sublevels with script_level' do
     sublevel_summary = @bubble_choice.summarize_sublevels(script_level: @script_level)
     assert_equal 2, sublevel_summary.length
@@ -256,6 +341,19 @@ DSL
     assert_equal @sublevel2, @bubble_choice.get_sublevel_for_progress(student, script)
   end
 
+  test 'get_sublevel_for_progress returns level contained within the sublevel with highest best_result for user when there is no teacher feedback' do
+    student = create :student
+
+    bubble_choice = create :bubble_choice_level, name: 'Bubble choice with contained', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: [@sublevel_with_contained, @sublevel2]
+    script_level = create :script_level, levels: [bubble_choice]
+    script = script_level.script
+
+    create :user_level, user: student, level: @sublevel_contained_level, script: script, best_result: 100
+    create :user_level, user: student, level: @sublevel2, script: script, best_result: 50
+
+    assert_equal @sublevel_contained_level, bubble_choice.get_sublevel_for_progress(student, script)
+  end
+
   test 'get_sublevel_for_progress returns sublevel where the latest feedback has keepWorking review state' do
     teacher = create :teacher
     student = create :student
@@ -295,9 +393,9 @@ DSL
   end
 
   test 'clone with suffix copies sublevels' do
-    sublevel1 = create :level, name: 'sublevel_1', level_num: 'custom'
-    sublevel2 = create :level, name: 'sublevel_2', level_num: 'custom'
-    sublevel3 = create :level, name: 'sublevel_3', level_num: 'custom'
+    sublevel1 = create :level, name: 'sublevel_1'
+    sublevel2 = create :level, name: 'sublevel_2'
+    sublevel3 = create :level, name: 'sublevel_3'
 
     # clone_with_suffix needs to be able to access the level object as well as
     # its DSL text. Rather than create an actual DSL file, we stub the level's
@@ -366,9 +464,9 @@ DSL
 
   test 'only actual sublevels are considered sublevels' do
     sublevel = create :level
-    contained_level = create :level
+    contained_level = create :free_response
     bubble_choice = create :bubble_choice_level, sublevels: [sublevel]
-    ParentLevelsChildLevel.create(
+    ParentLevelsChildLevel.create!(
       parent_level: bubble_choice,
       child_level: contained_level,
       kind: ParentLevelsChildLevel::CONTAINED,
@@ -391,8 +489,8 @@ DSL
 
   test 'setup_sublevels will not remove non-sublevel child levels' do
     bubble_choice = create :bubble_choice_level
-    contained_level = create :level
-    ParentLevelsChildLevel.create(
+    contained_level = create :free_response
+    ParentLevelsChildLevel.create!(
       parent_level: bubble_choice,
       child_level: contained_level,
       kind: ParentLevelsChildLevel::CONTAINED
@@ -401,5 +499,30 @@ DSL
     bubble_choice.setup_sublevels([@sublevel1.name])
     assert_equal [@sublevel1], bubble_choice.sublevels
     assert_equal [contained_level, @sublevel1], bubble_choice.child_levels.to_a
+  end
+
+  test 'bubble choice cannot contain another bubble choice level' do
+    bubble_choice = create :bubble_choice_level
+    e = assert_raises(ActiveRecord::RecordInvalid) do
+      create :bubble_choice_level, sublevels: [bubble_choice]
+    end
+    assert_includes e.message, 'cannot contain BubbleChoice level'
+  end
+
+  test 'bubble choice level cannot contain level group' do
+    level_group = create :level_group
+    e = assert_raises(ActiveRecord::RecordInvalid) do
+      create :bubble_choice_level, sublevels: [level_group]
+    end
+    assert_includes e.message, 'cannot contain LevelGroup level'
+  end
+
+  test 'level_for_progress_for_sublevel returns the sublevel if it does not have a contained level' do
+    sublevel = create :level
+    assert_equal sublevel, BubbleChoice.level_for_progress_for_sublevel(sublevel)
+  end
+
+  test 'level_for_progress_for_sublevel returns the contained level if it has a contained level' do
+    assert_equal @sublevel_contained_level, BubbleChoice.level_for_progress_for_sublevel(@sublevel_with_contained)
   end
 end

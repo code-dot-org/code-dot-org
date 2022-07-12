@@ -10,6 +10,10 @@ require 'cdo/google/sheet'
 # a spreadsheet in Google Drive (with permissions locked down to our organization) for exploration
 # by our programs team.
 #
+
+EARLIEST_WORKSHOP_START_DATE = Date.new(2022, 5, 1)
+LATEST_WORKSHOP_START_DATE = Date.new(2022, 9, 16)
+
 def get_rows
   subjects = [
     Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP
@@ -21,17 +25,18 @@ def get_rows
   workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(Pd::Workshop.first).attributes.keys.map(&:to_s)
 
   # Subsequent rows are for each workshop.
-  Pd::Workshop.where(subject: subjects).find_each do |w|
-    if w.workshop_starting_date && w.workshop_starting_date >= Date.new(2021, 5, 1) && w.workshop_starting_date <= Date.new(2021, 9, 16)
-      workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes.values
+  Pd::Workshop.
+    where(subject: subjects).
+    scheduled_start_on_or_after(EARLIEST_WORKSHOP_START_DATE).
+    scheduled_start_on_or_before(LATEST_WORKSHOP_START_DATE).find_each do |workshop|
+      workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(workshop).attributes.values
     end
-  end
 
   workshops
 end
 
 def main
-  sheet = Google::Sheet.new CDO.applications_2021_2022_gsheet_key
+  sheet = Google::Sheet.new CDO.applications_2022_2023_gsheet_key
   sheet.export(tab_name: 'summer_workshops', rows: get_rows)
 end
 

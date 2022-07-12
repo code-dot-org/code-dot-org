@@ -21,8 +21,8 @@ social:
 # कृत्रिम बुद्धिमत्तेबद्दल (AI) शिका
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">NEW AI and Machine Learning Module</h2><p>Our new curriculum module focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts through a number of online and unplugged activities and full-group discussions.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Explore the module</button></a></div>
-<div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="AI Lab"/></div>
+<h2 style="color:#ffffff; margin-top:25px">नवीन AI आणि मशीन लर्निंग मॉड्यूल</h2><p>आमचे नवीन मॉड्यूल AI च्या नीतिमत्तेवर लक्ष देते, पक्षपाताच्या समस्यांचे विश्लेषण करते आणि अनेक ऑनलाइन आणि अनप्लग गतिविधींमधून, तसेच मोठ्या सामूहिक चर्चेतून मूलभूत संकल्पनांचे विश्लेषण करून समजावून सांगते.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Explore the module</button></a></div>
+<div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="AI लॅब"/></div>
 <div class="clear"></div>
 </div>
 
@@ -46,17 +46,17 @@ AI आणि मशीन लर्निंगचा परिणाम आप�
 
 <a id="about-aimodule"></a>
 
-## NEW AI and Machine Learning Module
+## नवीन AI आणि मशीन लर्निंग मॉड्यूल
 <div>
 <div class="col-50">
-<p>The AI and Machine Learning Module is roughly a five week curriculum module that can be taught as a <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >standalone module</a> or as an optional <a href="https://studio.code.org/s/csd7-2021">unit in CS Discoveries</a>. It focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts</p><p>Because machine learning depends on large sets of data, the new unit includes real life datasets on healthcare, demographics, and more to engage students while exploring questions like, “What is a problem Machine Learning can help solve?” “How can AI help society?” “Who is benefiting from AI?” “Who is being harmed?” “Who is involved?” “Who is missing?”  </p>
-<p>Ethical considerations will be at the forefront of these discussions, with frequent discussion points and lessons around the impacts of these technologies. This will help students develop a holistic, thoughtful understanding of these technologies while they learn the technical underpinnings of how the technologies work.</p>
+<p>AI आणि मशीन लर्निंग मॉड्यूल हा एक साधारणपणे पाच आठवड्यांचा अभ्यासक्रम आहे ज्याला <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >मानक मॉड्यूल</a> म्हणून किंवा <a href="https://studio.code.org/s/csd7-2021">CS Discoveries मधील ऐच्छिक युनिट</a> म्हणून शिकवले जाऊ शकते. यामध्ये AI च्या नीतिमत्तेवर लक्ष दिले जाते, पक्षपाताच्या समस्यांवचे विश्लेषण केले जाते आणि मूलभूत संकल्पनांचे विश्लेषण करून त्यांना समजावून सांगितले जाते</p><p>मशीन लर्निंगमध्ये डेटाच्या खूप मोठ्या सेटवर अवलंबून रहावे लागते, त्यामुळे नवीन युनिटमध्ये वास्तविक जीवनातील डेटासेट आहेत ज्यांत इतर डेटासोबतच आरोग्यसेवा, जनसांख्यिकीय डेटा यांचाही समावेश आहे ज्यामुळे खालीलसारख्या प्रश्नांवर चर्चा करताना विद्यार्थ्यांना गुंतवून ठेवता येईल, जसे, "मशीन लर्निंग द्वारे कुठल्या प्रकारच्या समस्या सोडवता येऊ शकतात?" “AI समाजाची मदत कशाप्रकारे करू शकते?” “AI पासून कोणाला फायदा होतो आहे?” “कोणाला नुकसान होते आहे?” “यात कोण सामील आहेत?” “यात कोणाला वगळले आहे?”  </p>
+<p>या चर्चांमध्ये नीतिमत्तेवरील विचार सर्वात पुढे असतील आणि या तंत्रज्ञानांच्या प्रभावावर चर्चेचे अनेक मुद्दे आणि बोध असतील. अशाने विद्यार्थ्यांना या तंत्रज्ञानांची एक संपूर्ण आणि विचारपूर्ण अशी समज विकसित करता येईल आणि त्याच वेळी ते हे तंत्रज्ञान कसे काम करते याची तांत्रिक समज सुद्धा विकसित करतील.</p>
 </div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>Explore the module</button></a></div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="clear"></div>
 </div>
 
-## How AI Works
+## AI कसे काम करते
 
 मायक्रोसॉफ्टचे सीईओ सत्या नाडेला यांची प्रस्तावना असलेली ही छोट्या व्हिडिओजची मालिका तुम्हाला कृत्रिम बुद्धिमत्ता कशी काम करते आणि तिचे काय महत्त्व आहे, याची ओळख करून देईल. न्युरल नेटवर्क्स किंवा AI कसे काम करते याबद्दल जाणून घ्या आणि अल्गोरिदममधील पूर्वग्रह आणि AI मधील निर्णय प्रक्रियेची नीतीमत्ता यासारख्या समस्यांचा अभ्यास करा.
 
@@ -91,19 +91,19 @@ AI आणि मशीन लर्निंगचा परिणाम आप�
 - [मशीन लर्निंग: मोठ्या, लहान आणि कठीण समस्या सोडवणे](https://youtu.be/_rdINNHLYaQ) (5:19)
 - [तुमच्या फोनला कसे कळते की हा कुत्रा आहे?](https://youtu.be/bHvf7Tagt18) (5:57)
 - [AI म्हणजे काय?](https://youtu.be/mJeNghZXtMo) (6:14)
-- [Machine Learning Explained in 5 Minutes](https://youtu.be/3bJ7RChxMWQ) (5:14)
-- [Types of Machine Learning](https://youtu.be/wy-m6sd1BOA) (6:37)
-- [What is Machine Learning and How does it Work?](https://youtu.be/xr5LeWKbVnY) (3:51)
+- [मशीन लर्निंगबद्दल फक्त 5 मिनिटांत माहिती घ्या](https://youtu.be/3bJ7RChxMWQ) (5:14)
+- [मशीन लर्निंगचे प्रकार](https://youtu.be/wy-m6sd1BOA) (6:37)
+- [मशीन लर्निंग काय आहे आणि ते कसे काम करते?](https://youtu.be/xr5LeWKbVnY) (3:51)
 
 
-## More resources
+## इतर संसाधने
 
 {{ ai_resource_tiles }}
 
-## Activities Powered by AI and ML
+## AI आणि मशीन लर्निंग समर्थित गतिविधी
 {{ ai_activities_table }}
 
-## Teach and Learn about AI
+## AI बद्दल शिका आणि शिकवा
 {{ ai_teach_and_learn_table }}
 
 

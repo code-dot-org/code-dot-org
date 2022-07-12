@@ -21,6 +21,7 @@
 #  properties                  :text(65535)
 #  deleted_at                  :datetime
 #  status_timestamp_change_log :text(65535)
+#  applied_at                  :datetime
 #
 # Indexes
 #
@@ -37,6 +38,7 @@
 module Pd::Application
   class Facilitator1920Application < FacilitatorApplicationBase
     include Pd::Facilitator1920ApplicationConstants
+    include Pd::SharedApplicationConstants
 
     has_one :pd_fit_weekend1920_registration,
       class_name: 'Pd::FitWeekend1920Registration',
@@ -169,7 +171,7 @@ module Pd::Application
 
     # @override
     # Filter out extraneous answers, based on selected program (course)
-    def self.filtered_labels(course)
+    def self.filtered_labels(course, status = 'unreviewed')
       raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
       FILTERED_LABELS[course]
     end

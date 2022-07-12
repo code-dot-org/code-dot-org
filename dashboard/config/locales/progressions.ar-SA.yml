@@ -2,16 +2,23 @@
 ar:
   data:
     progressions:
+      AI Machine Learning - Video: تعلم الآلة بالذكاء الاصطناعي - فيديو
+      'AI: Impact on Society - Video': 'الذكاء الاصطناعي: التأثير على المجتمع - فيديو'
+      'AI: Training Data & Bias - Video': 'الذكاء الاصطناعي: بيانات التدريب والتحيز
+        - فيديو'
       Alien Defender: مدافع غريب
+      App Lab Intro - Video: مقدمة إلى مختبر التطبيقات - فيديو
       Arrays: المصفوفات
       Artist Project: مشروع الرسام
       'Artist: Variables': 'الفنان: المتغيرات'
+      Assessment: التقييم
       Back and Forth: للخلف وللأمام
       Bass, Mid, and Treble: صوت الجهير والنغمة متوسطة الطبقة والطنين الثلاثي
       Binary Numbers: أرقام ثنائية
       Board Events: أحداث اللوحة
       'Bunny ': " باني "
       CS Discoveries Post-Course Survey: استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب
+      Challenge: تحدي
       Collision Detection: كشف التصادم
       Collisions: التصادمات
       Combining Representations: الجمع بين التمثيلات
@@ -30,8 +37,10 @@ ar:
       End of Course Projects: نهاية مشروعات الدورة
       Event Types: أنواع الحدث
       Events: الأحداث
+      Example: مثال
       Example Projects: مشاريع كمثال
       Exploration: استكشاف
+      Extra: إضافي
       For Loops: للحلقات
       Free Play: اللعب الحر
       Functions: دوال
@@ -41,6 +50,7 @@ ar:
       Getters and Setters: أدوات الاستخلاص والضبط
       Getting Properties: الحصول على الخصائص
       Headings: العناوين
+      Hello World: مرحبًا أيها العالم
       How to Make a Sprite: كيف تصنع "سبرايت"
       Images in HTML: الصور بصيغة HTML
       Inspiration!: التلميح!
@@ -50,11 +60,13 @@ ar:
       Keyboard Input: مدخلات لوحة المفاتيح
       Learning from Simulations: التعلّم من المحاكاة
       Lesson Extras: الدروس الإضافية
+      Levels: المستويات
       Linking Pages: ربط الصفحات
       Linking Screens: ربط الشاشات
       Lists: القوائم
       Making Music: إنشاء موسيقى
       Measures: الإجراءات
+      'Minecraft: Hero''s Journey': 'ماين كرافت: رحلة البطل'
       'Mini-Project: About Me': نبذة عني مع مختبر النقوش المتحركة
       More Buttons: أزرار إضافية
       Multi-Screen Apps: التطبيقات متعددة الشاشات
@@ -81,15 +93,21 @@ ar:
       Speed it Up, Slow it Down: التسريع والإبطاء
       Sprite Lab Example Project: عينة من مشاريع مختبر الرسوم المتحركة
       Sprite Lab Project: مشروع Sprite Lab
+      Sprite Movement: حركة الرسوم المتحركة
+      Sprite Properties: خصائص الكائنات
+      Teach AI a New Word: تدريس نشاط الذكاء الاصطناعي - كلمة جديدة
       Text Compression: ضغط النص
       The Animation Tab: تبويب الرسوم المتحركة
       The Draw Loop: حلقة الرسم
       The Harvester: عامِلة الحصاد
+      Train an AI to Clean the Ocean: تدريب الذكاء الاصطناعي لتنظيف المحيط
       Using the Repeat Block: استخدام حلقة "التكرار"
       Variables: المتغيرات
       Velocity: السرعة
       Video: فيديو
       'Video: CS Matters': 'فيديو: أهمية علم الحاسوب'
+      'Video: Outbreak Simulator: Introduction': 'فيديو: انفجار المحاكاة: مقدمة'
+      'Video: Programming with Blocks': البرمجة بالقطع البرمجية
       Warm Up: نشاط تحضيري
       Welcome to Monster Town: مرحبًا بك في Monster Town
       Where'd They Go?: أين ذهبوا؟

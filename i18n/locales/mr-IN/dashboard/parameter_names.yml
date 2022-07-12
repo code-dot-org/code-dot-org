@@ -1,7 +1,16 @@
 mr:
   data:
     parameter_names:
+      actor: पात्र
+      counter: काऊंटर
       height: उंची
+      honey: मध
       left: डावा
+      length: लांबी
+      min: किमान
+      points: गुण
+      radius: त्रिज्या
+      sides: बाजू
       size: आकार
+      speed: वेग 
       width: रुंदी

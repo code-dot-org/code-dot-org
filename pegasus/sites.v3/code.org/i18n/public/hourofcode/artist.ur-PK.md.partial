@@ -1,41 +1,41 @@
 ---
-title: Teacher Resources - Artist
+title: اساتذہ کے لیے ذرائع - فنکار
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Artist: An Hour of Code Tutorial
+# فنکار: آور آف کوڈ ٹیوٹوریل
 
 {{ hoc_artist_video }}
 
 [col-50]
 
-## Teacher Resources
+## اساتذہ کے لیے ذرائع
 
-### Extension Activities:
+### توسیعی سرگرمیاں:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [آور آف کوڈ کے اُس پار](http://code.org/learn/beyond)
+- [کمپیوٹر سائنس کے بنیادی اصول: کورس 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### اساتذہ کے لیے دیگر ذرائع:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [آور آف کوڈ: معلمین کے لیے کیسے کریں گائیڈ](https://hourofcode.com/how-to)
+- [کامیاب معلمین کی بہترین پریکٹس](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- لائیو ایونٹ: [آور آف کوڈ کے لیے ایک معلم کا گائیڈ](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## عمومی جائزہ
 
-Draw cool pictures and designs with the Artist!
+آرٹسٹ کے ساتھ شاندار تصاویر اور ڈیزائن بنائیں!
 
-**Recommended Age Range:** 4-104
+**سفارش کردہ عمر کی حد:** 4-104
 
-**Technology Requirements:** Modern browsers + tablets
+**ٹیکنالوجی کے تقاضے:** جدید براؤزرز + ٹیبلٹس
 
-<a href="http://studio.code.org/s/artist/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/artist/reset"><button>ٹیوٹوریل کو آزمائیں</button></a>
 
 [/col-50]

@@ -12,11 +12,18 @@ export default class ProgressLessonContent extends React.Component {
     description: PropTypes.string,
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.number,
+    lessonName: PropTypes.string
   };
 
   render() {
-    const {description, levels, disabled, selectedSectionId} = this.props;
+    const {
+      description,
+      levels,
+      disabled,
+      selectedSectionId,
+      lessonName
+    } = this.props;
     const progressions = progressionsFromLevels(levels);
 
     let bubbles;
@@ -39,6 +46,7 @@ export default class ProgressLessonContent extends React.Component {
         <ProgressLevelSet
           key={index}
           name={progression.displayName}
+          lessonName={lessonName}
           levels={progression.levels}
           disabled={disabled}
           selectedSectionId={selectedSectionId}
@@ -48,10 +56,12 @@ export default class ProgressLessonContent extends React.Component {
 
     return (
       <div>
-        <div style={styles.summary}>
-          <SafeMarkdown markdown={description || ''} />
-        </div>
-        {bubbles}
+        {description && (
+          <div style={styles.summary}>
+            <SafeMarkdown markdown={description} />
+          </div>
+        )}
+        <div> {bubbles} </div>
       </div>
     );
   }

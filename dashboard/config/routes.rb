@@ -62,7 +62,30 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
-  get 'docs/', to: 'curriculum_proxy#get_doc_landing'
+  # We moved code docs off of curriculum builder in spring 2022.
+  # In that move, we wanted to preserve the previous /docs routes for these
+  # pages. However, there are a lot of other /docs URLs that did not move over
+  # so we're allow-listing the four IDEs that lived on curriculum builder to be
+  # served by ProgrammingEnvironmentsController and ProgrammingExpressionsController,
+  # with the rest falling back to the old proxying logic.
+  get 'docs/', to: 'programming_environments#docs_index'
+  get 'docs/:programming_environment_name', to: 'programming_environments#docs_show', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/}
+  get 'docs/:programming_environment_name/:programming_expression_key', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'programming_expressions#docs_show'
+  get 'docs/:programming_environment_name/:programming_expression_key/index.html', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'programming_expressions#docs_show'
+
+  resources :programming_environments, only: [:index, :show], param: 'name', path: '/docs/ide/' do
+    resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, path: '/expressions' do
+      member do
+        get :show, to: 'programming_expressions#show_by_keys'
+      end
+    end
+    resources :programming_classes, param: 'programming_class_key', constraints: {programming_class_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, path: '/classes' do
+      member do
+        get :show, to: 'programming_classes#show_by_keys'
+      end
+    end
+  end
+
   get 'docs/*path', to: 'curriculum_proxy#get_doc'
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
@@ -88,11 +111,14 @@ Dashboard::Application.routes.draw do
         post 'join'
         post 'leave'
         post 'update_sharing_disabled'
-        get 'student_script_ids'
+        get 'code_review_groups'
+        post 'code_review_groups', to: 'sections#set_code_review_groups'
+        post 'code_review_enabled', to: 'sections#set_code_review_enabled'
       end
       collection do
         get 'membership'
-        get 'valid_scripts'
+        get 'valid_course_offerings'
+        get 'available_participant_types'
         get 'require_captcha'
       end
     end
@@ -190,12 +216,25 @@ Dashboard::Application.routes.draw do
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
   put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
+  # Routes needed for the footer on weblab share links on codeprojects
+  get '/weblab/footer', to: 'projects#weblab_footer', constraints: {host: CDO.codeprojects_hostname}
+  get '/scripts/hosted.js', constraints: {host: CDO.codeprojects_hostname}, to: redirect('/weblab/footer.js')
+  get '/style.css', constraints: {host: CDO.codeprojects_hostname}, to: redirect('/assets/weblab/footer.css')
+
   resources :projects, path: '/projects/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, _|
         get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
         get "/#{key}/new", to: 'projects#create_new', key: key.to_s, as: "#{key}_project_create_new"
-        get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
+
+        # Weblab projects are shared on a codeprojects path. The share URL on code studio doesn't mean anything and instead
+        # should be redirected to the corresponding codeprojects path.
+        if key == 'weblab'
+          get "/#{key}/:channel_id", constraints: {host: CDO.dashboard_hostname}, to: redirect("//#{CDO.site_host('codeprojects.org')}/%{channel_id}/")
+        else
+          get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
+        end
+
         get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
@@ -255,10 +294,13 @@ Dashboard::Application.routes.draw do
       get 'get_rubric'
       get 'embed_level'
       get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+      get 'edit_exemplar', to: 'levels#edit_exemplar', as: 'edit_exemplar'
       get 'get_serialized_maze'
       post 'update_properties'
       post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
       post 'clone'
+      post 'update_start_code'
+      post 'update_exemplar_code'
     end
   end
 
@@ -272,8 +314,12 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :course_offerings, only: [:edit, :update], param: 'key'
+
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
   get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
+  # these routes use course_course_name to match generated routes below that are nested within courses
+  get '/courses/:course_course_name/guides/edit', to: 'reference_guides#edit_all', as: :edit_all_reference_guides
 
   resources :courses, param: 'course_name' do
     member do
@@ -283,6 +329,8 @@ Dashboard::Application.routes.draw do
       get 'standards'
       get 'get_rollup_resources'
     end
+
+    resources :reference_guides, param: 'key', path: 'guides'
   end
 
   # CSP 20-21 lockable lessons with lesson plan redirects
@@ -315,11 +363,37 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_expressions, only: [:new, :create] do
+  resources :programming_classes, only: [:new, :create, :edit, :update, :show, :destroy] do
     collection do
-      get :search
+      get :get_filtered_results
+    end
+    member do
+      post :clone
     end
   end
+
+  resources :programming_expressions, only: [:index, :new, :create, :edit, :update, :show, :destroy] do
+    collection do
+      get :search
+      get :get_filtered_results
+    end
+    member do
+      post :clone
+    end
+  end
+
+  resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show, :destroy], param: 'name' do
+    member do
+      get :get_summary_by_name
+    end
+    resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o} do
+      member do
+        get :show, to: 'programming_expressions#show_by_keys'
+      end
+    end
+  end
+
+  resources :programming_methods, only: [:edit, :update]
 
   resources :standards, only: [] do
     collection do
@@ -331,9 +405,11 @@ Dashboard::Application.routes.draw do
   get '/s/:script_name/stage/:position/extras', to: redirect(path: '/s/%{script_name}/lessons/%{position}/extras')
 
   # Redirects from old /stage/x/puzzle url to new /lessons/x/levels url
+  get '/s/:script_name/stage/:position/puzzle', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels')
   get '/s/:script_name/stage/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels/%{all}')
 
   # Redirects from old /lockable/x/puzzle url to new /lockable/x/levels url
+  get '/s/:script_name/lockable/:position/puzzle', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels')
   get '/s/:script_name/lockable/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels/%{all}')
 
   resources :scripts, path: '/s/' do
@@ -341,7 +417,6 @@ Dashboard::Application.routes.draw do
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
     get 'hidden_lessons', to: 'script_levels#hidden_lesson_ids'
-    get 'hidden_stages', to: 'script_levels#hidden_lesson_ids' #TODO: Remove once launched
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
     member do
@@ -388,6 +463,12 @@ Dashboard::Application.routes.draw do
     get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
 
+  get '/certificate_images/:filename', to: 'certificate_images#show'
+
+  get '/print_certificates/:encoded_params', to: 'print_certificates#show'
+
+  get '/certificates/:encoded_params', to: 'certificates#show'
+
   get '/beta', to: redirect('/')
 
   get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
@@ -415,6 +496,10 @@ Dashboard::Application.routes.draw do
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
+
+  # NPS dashboards
+  get '/admin/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
+  post '/admin/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
 
   # internal report dashboards
   get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
@@ -455,6 +540,8 @@ Dashboard::Application.routes.draw do
   post '/admin/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
   post '/admin/studio_person_add_email_to_emails', to: 'admin_users#studio_person_add_email_to_emails', as: 'studio_person_add_email_to_emails'
   get '/admin/user_progress', to: 'admin_users#user_progress_form', as: 'user_progress_form'
+  get '/admin/user_projects', to: 'admin_users#user_projects_form', as: 'user_projects_form'
+  put '/admin/user_project', to: 'admin_users#user_project_restore_form', as: 'user_project_restore_form'
   get '/admin/delete_progress', to: 'admin_users#delete_progress_form', as: 'delete_progress_form'
   post '/admin/delete_progress', to: 'admin_users#delete_progress', as: 'delete_progress'
   get '/census/review', to: 'census_reviewers#review_reported_inaccuracies', as: 'review_reported_inaccuracies'
@@ -465,8 +552,6 @@ Dashboard::Application.routes.draw do
   get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
-  get '/admin/standards', to: 'admin_standards#index', as: 'admin_standards_index'
-  post '/admin/standards', to: 'admin_standards#import_standards', as: 'admin_standards_import'
 
   get '/notes/:key', to: 'notes#index'
 
@@ -565,7 +650,7 @@ Dashboard::Application.routes.draw do
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
 
-        resources :teacher, controller: 'teacher_applications', only: :create do
+        resources :teacher, controller: 'teacher_applications', only: [:create, :update] do
           member do
             post :send_principal_approval
             post :principal_approval_not_required
@@ -580,7 +665,6 @@ Dashboard::Application.routes.draw do
           get :cohort_view
           get :search
           get :fit_cohort
-          get :applications_closed
         end
       end
 
@@ -601,7 +685,7 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
   get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
-  get '/dashboardapi/v1/pd/applications/applications_closed', to: 'api/v1/pd/applications#applications_closed'
+  get '/dashboardapi/v1/pd/application/applications_closed', to: 'pd/professional_learning_landing#applications_closed'
   post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
   post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
@@ -720,10 +804,11 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/script_standards/:script', to: 'api#script_standards'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/teacher_panel_progress/:section_id', to: 'api#teacher_panel_progress'
+  get '/api/teacher_panel_section', to: 'api#teacher_panel_section'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
-  get '/api/user_progress/:script/:lesson_position/:level_position', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson'
-  get '/api/user_progress/:script/:lesson_position/:level_position/:level', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson_and_level'
+  get '/api/user_app_options/:script/:lesson_position/:level_position/:level', to: 'api#user_app_options', as: 'user_app_options'
+  get '/api/example_solutions/:script_level_id/:level_id', to: 'api#example_solutions'
   put '/api/firehose_unreachable', to: 'api#firehose_unreachable'
   namespace :api do
     api_methods.each do |action|
@@ -748,11 +833,15 @@ Dashboard::Application.routes.draw do
       concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       post 'users/:user_id/display_theme', to: 'users#update_display_theme'
+      post 'users/:user_id/mute_music', to: 'users#post_mute_music'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
       get 'users/:user_id/display_theme', to: 'users#get_display_theme'
+      get 'users/:user_id/mute_music', to: 'users#get_mute_music'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
+      get 'users/current', to: 'users#current'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
       get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
+      get 'users/:user_id/tos_version', to: 'users#get_tos_version'
 
       patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
@@ -838,7 +927,6 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
-  get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
   post '/dashboardapi/v1/text_to_speech/azure', to: 'api/v1/text_to_speech#azure', defaults: {format: 'json'}
 
@@ -856,12 +944,16 @@ Dashboard::Application.routes.draw do
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
+  post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
+  post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
 
-  get '/sprites', to: 'sprite_management#sprite_management_directory'
-
-  get '/sprites/sprite_upload', to: 'sprite_management#sprite_upload'
-
-  get '/sprites/default_sprites_editor', to: 'sprite_management#default_sprites_editor'
+  resources :sprites, only: [:index], controller: 'sprite_management' do
+    collection do
+      get 'sprite_upload'
+      get 'default_sprites_editor'
+      get 'select_start_animations'
+    end
+  end
 
   # These really belong in the foorm namespace,
   # but we leave them outside so that we can easily use the simple "/form" paths.
@@ -893,6 +985,12 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :code_reviews, only: [:index, :create, :update] do
+    get :peers_with_open_reviews, on: :collection
+  end
+
+  resources :code_review_notes, only: [:create, :update, :destroy]
+
   resources :code_review_comments, only: [:create, :destroy] do
     patch :toggle_resolved, on: :member
     get :project_comments, on: :collection
@@ -900,10 +998,19 @@ Dashboard::Application.routes.draw do
 
   get '/backpacks/channel', to: 'backpacks#get_channel'
 
-  resources :project_versions, only: [:create]
-  get 'project_versions/get_token', to: 'project_versions#get_token'
+  resources :project_commits, only: [:create]
+  get 'project_commits/get_token', to: 'project_commits#get_token'
+  get 'project_commits/:channel_id', to: 'project_commits#project_commits'
 
   resources :reviewable_projects, only: [:create, :destroy]
   get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'
   get 'reviewable_projects/reviewable_status', to: 'reviewable_projects#reviewable_status'
+
+  # offline-service-worker*.js needs to be loaded the the root level of the
+  # domain('studio.code.org/').
+  # Matches on ".js" or ".map" in order to serve source-map files for the service worker javascript.
+  get '/s/express-2021/lessons/1/:file', action: :offline_service_worker, controller: :offline, constraints: {file: /offline-service-worker.*\.(js|map)/}
+  # Adds the experiment cookie in the User's browser which allows them to experience offline features
+  get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
+  get '/offline-files.json', action: :offline_files, controller: :offline
 end

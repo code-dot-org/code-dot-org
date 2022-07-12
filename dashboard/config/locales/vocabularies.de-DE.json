@@ -2,63 +2,503 @@
   "de-DE": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "event/dance-extras/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "code/hero/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/hero/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/hero/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "function/hero/unversioned": {
+          "word": "Funktion",
+          "definition": "Ein Stück Code, welches du auf einfache Weise wieder und wieder aufrufen kannst."
+        },
+        "code/poem-art/2021": {
+          "word": "Code",
+          "definition": "(v) Anweisungen für einen Computer schreiben."
+        },
+        "event/poem-art/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "line/poem-art/2021": {
+          "word": "Zeile",
+          "definition": "(Poesie) - ein Teil eines Gedichtes, das in einer Reihe angeordnet ist und am rechten Rand endet."
+        },
+        "mood/poem-art/2021": {
+          "word": "Stimmung",
+          "definition": "der Ausdruck eines Gefühls, einer Atmosphäre oder einer Emotion, dargestellt in Kunst oder Text."
+        },
+        "program/poem-art/2021": {
+          "word": "Programm",
+          "definition": "Eine Schrittabfolge, die so kodiert wurde, das sie von einer Maschine ausgeführt werden kann."
+        },
+        "code/flappy/unversioned": {
+          "word": "Code",
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/flappy/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/frozen/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/frozen/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/iceage/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/iceage/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/artist/unversioned": {
+          "word": "Code",
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/artist/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/artist/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/gumball/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/gumball/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "event/dance/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "program/dance/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/dance/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "condition/aquatic/unversioned": {
+          "word": "Bedingung",
+          "definition": "Etwas das von einem Programm überprüft wird, um zu sehen ob es wahr ist, bevor eine bestimmte Aktion ausgeführt werden kann."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Bedingungen",
+          "definition": "Statements that only run under certain conditions."
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Schleifen",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Caesar-Verschlüsselung",
+          "definition": "Eine Technik der Verschlüsselung, die das Alphabet um eine Anzahl von Zeichen verschiebt"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Verschlüsselungsverfahren (Chiffre)",
+          "definition": "Der generische Namen für eine Technik (oder einen Algorithmus) die den Prozess der Verschlüsselung ausführt"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Knacken der Verschlüsselung",
+          "definition": "Wenn du probierst eine geheime Nachricht zu dekodieren, ohne alle Einzelheiten der Chiffreschrift zu kennen, dann versuchst du die Verschlüsselung zu \"knacken“."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Entschlüsselung",
+          "definition": "Ein Prozess der eine Verschlüsselung umkehrt, wodurch eine geheime Botschaft in dem originellen Klartext wiedergegeben wird."
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Verschlüsselung",
+          "definition": "Ein Prozess um Botschaften zu verschlüsseln, sodass diese geheim bleiben und, dass diese nur durch \"genehmigtes“ Personal gelesen werden kann."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Verschlüsselungsverfahren mit zufälligem Austausch",
+          "definition": "Eine Verschlüsselungstechnik, die jeden Buchstaben des Alphabets mit einem anderen, zufällig ausgewählten Buchstaben des Alphabets verbindet."
+        },
+        "code/starwars/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/starwars/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/mc/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/mc/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/mc/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/playlab/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/playlab/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Verlustlose Kompression",
+          "definition": "Ein Algorithmus für die Datenkompression, der eine perfekte Rekonstruktion der originellen Daten aus komprimierten Daten möglich macht. Meistens für die Komprimierung von Text benutzt  (z.B. ZIP-Komprimierung)"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modelle und Simulationen",
+          "definition": "ein Programm, das die wichtigsten Merkmale eines realen Ereignisses nachbildet oder nachahmt, um das Verhalten des Ereignisses ohne die Kosten, den Zeitaufwand oder die Gefahren eines Experiments in der realen Welt zu untersuchen."
+        },
+        "event/sports/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "code/sports/unversioned": {
+          "word": "Code"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/sports/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/infinity/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/infinity/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "event/basketball/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "code/basketball/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/basketball/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Maschinelles Lernen",
+          "definition": "Wie Computer Muster erkennen und Entscheidungen machen können, ohne dass sie dafür explizit programmiert wurden."
+        },
+        "code/poem-art/unversioned": {
+          "word": "Code",
+          "definition": "(v) Anweisungen für einen Computer schreiben."
+        },
+        "event/poem-art/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Programm",
+          "definition": "Eine Schrittabfolge, die so kodiert wurde, das sie von einer Maschine ausgeführt werden kann."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Stimmung",
+          "definition": "der Ausdruck eines Gefühls, einer Atmosphäre oder einer Emotion, dargestellt in Kunst oder Text."
+        },
+        "line/poem-art/unversioned": {
+          "word": "Zeile",
+          "definition": "(Poesie) - ein Teil eines Gedichtes, das in einer Reihe angeordnet ist und am rechten Rand endet."
+        },
+        "sprite/coursef/2021": {
+          "word": "Sprite",
+          "definition": "Eine Grafik auf dem Bildschirm mit einer bestimmten Position, Größe und einem bestimmten Aussehen."
+        },
+        "user/coursef/2021": {
+          "word": "Benutzer",
+          "definition": "Die Person, die ein Objekt verwendet, einschließlich Software und Hardware."
+        },
         "behavior/coursef/2021": {
-          "word": "Verhalten"
+          "word": "Verhalten",
+          "definition": "Eine Aktion, die ein Sprite kontinuierlich ausführt, bis ihm gesagt wird, dass es aufhören soll."
+        },
+        "program/coursef/2021": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algorithmus",
+          "definition": "Eine Liste der Schritten zur Ausführung einer Aufgabe."
+        },
+        "event/coursef/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "variable/coursef/2021": {
-          "word": "Variable"
+          "word": "Variable",
+          "definition": "Eine Bezeichnung für eine Information, die in einem Programm verwendet wird."
+        },
+        "prompt/coursef/2021": {
+          "word": "Eingabeaufforderung",
+          "definition": "Eine Meldung auf dem Computerbildschirm, die auf eine Eingabe des Benutzers wartet."
         },
         "input/coursef/2021": {
-          "word": "Eingabe"
+          "word": "Eingabe",
+          "definition": "Die Informationen, die Computer von den Benutzern erhalten."
+        },
+        "loop/coursef/2021": {
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "repeat/coursef/2021": {
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
+        },
+        "for_loop/coursef/2021": {
+          "word": "\"for“-Schleife",
+          "definition": "Schleifen, die einen festgelegten Anfang, ein festgelegtes Ende und eine festgelegte Schrittgröße (Schrittintervall) haben."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Modelle und Simulationen",
+          "definition": "ein Programm, das die wichtigsten Merkmale eines realen Ereignisses nachbildet oder nachahmt, um das Verhalten des Ereignisses ohne die Kosten, den Zeitaufwand oder die Gefahren eines Experiments in der realen Welt zu untersuchen."
         },
         "machine_learning/coursef/2021": {
-          "word": "Maschinelles Lernen"
+          "word": "Maschinelles Lernen",
+          "definition": "Wie Computer Muster erkennen und Entscheidungen machen können, ohne dass sie dafür explizit programmiert wurden."
         },
         "dns/coursef/2021": {
-          "word": "DNS"
+          "word": "DNS",
+          "definition": "Abkürzung für Domain Name System, dieses System übersetzt Domänennamen (wie example.com) in IP-Adressen (wie 93.184.216.34)"
         },
         "internet/coursef/2021": {
-          "word": "Internet"
+          "word": "Internet",
+          "definition": "Eine Gruppe von Computern und Servern, die miteinander verbunden sind."
         },
         "packets/coursef/2021": {
-          "word": "Pakete"
+          "word": "Pakete",
+          "definition": "Kleine Informationsfragmente, die sorgfältig aus größeren Informationsfragmenten zusammengestellt wurden."
+        },
+        "servers/coursef/2021": {
+          "word": "Server",
+          "definition": "Computer die nur dazu dienen, um anderen etwas zur Verfügung zu stellen."
+        },
+        "url/coursef/2021": {
+          "word": "URL",
+          "definition": "Eine leicht zu merkende Adresse für den Aufruf einer Webseite (wie www.code.org)."
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/Kabel",
+          "definition": "Ein Verfahren zur Übertragung von Informationen über Telefon- oder Fernsehkabel."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Glasfaserkabel",
+          "definition": "Eine Verbindung, die Licht zur Übertragung von Informationen nutzt"
+        },
+        "ip_address/coursef/2021": {
+          "word": "IP-Adresse",
+          "definition": "Eine Nummer, die jedem Objekt zugewiesen wird, das mit dem Internet verbunden ist."
+        },
+        "wi_fi/coursef/2021": {
+          "word": "WLAN",
+          "definition": "Ein drahtloses Verfahren zur Übertragung von Informationen über Funkwellen."
         },
         "define/coursef/2021": {
-          "word": "Definiere"
+          "word": "Definiere",
+          "definition": "Finden Sie die Details der Probleme heraus, die Sie zu lösen versuchen"
+        },
+        "prepare/coursef/2021": {
+          "word": "Vorbereiten",
+          "definition": "Recherchieren, planen und beschaffen Sie Materialien für die Aktivität, die Sie durchführen möchten"
+        },
+        "reflect/coursef/2021": {
+          "word": "Reflektieren",
+          "definition": "Sorgfältig über etwas nachdenken, um das Ergebnis in der Zukunft zu verbessern"
+        },
+        "try/coursef/2021": {
+          "word": "Versuche",
+          "definition": "Versuchen, etwas zu tun"
         },
         "algorithm/courseb/2021": {
-          "word": "Algorithmus"
+          "word": "Algorithmus",
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "bug/courseb/2021": {
-          "word": "Fehler"
+          "word": "Fehler",
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/courseb/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
         },
         "click/courseb/2021": {
-          "word": "Klick"
+          "word": "Klick",
+          "definition": "Drücken der Maustaste"
         },
         "drag/courseb/2021": {
-          "word": "Ziehen"
+          "word": "Ziehen",
+          "definition": "Maustaste drücken und gedrückt halten, während Sie den Mauszeiger an eine andere Stelle bewegen"
         },
         "drop/courseb/2021": {
-          "word": "Fallen lassen"
+          "word": "Fallen lassen",
+          "definition": "Die Maustaste loslassem, um das Element, das man zieht, abzulegen"
         },
         "double_click/courseb/2021": {
-          "word": "Doppelklick"
+          "word": "Doppelklick",
+          "definition": "Zweimaliges, sehr schnelles Drücken der Maustaste."
         },
         "program/courseb/2021": {
-          "word": "Programm"
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "programming/courseb/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": "Die Kunst der Erstellung eines Programms."
+        },
+        "persistence/courseb/2021": {
+          "word": "Persistenz",
+          "definition": "Es immer wieder zu versuchen, auch wenn etwas sehr schwer ist."
         },
         "loop/courseb/2021": {
-          "word": "Schleife"
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "repeat/courseb/2021": {
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
+        },
+        "event/courseb/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "algorithm/coursea/2021": {
           "word": "Algorithmus",
-          "definition": "Eine Liste von Schritten zum Abschließen einer Aufgabe."
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "debugging/coursea/2021": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -73,165 +513,413 @@
           "definition": "Drücken der Maustaste"
         },
         "drag/coursea/2021": {
-          "word": "-   Ziehen:",
-          "definition": "Klicken mit der Maus und die Maustaste gedrückt halten, während man den Mauszeiger an einen anderen Ort bewegt"
+          "word": "Ziehen",
+          "definition": "Maustaste drücken und gedrückt halten, während Sie den Mauszeiger an eine andere Stelle bewegen"
         },
         "drop/coursea/2021": {
           "word": "Fallen lassen",
           "definition": "Die Maustaste loslassem, um das Element, das man zieht, abzulegen"
         },
         "double_click/coursea/2021": {
-          "word": "-   Doppelklicken:",
+          "word": "Doppelklick",
           "definition": "Zweimaliges, sehr schnelles Drücken der Maustaste."
         },
         "bug/coursea/2021": {
-          "word": "Bug/Fehler",
-          "definition": "Teil eines Programms, der nicht korrekt funktioniert."
+          "word": "Fehler",
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "programming/coursea/2021": {
           "word": "Programmierung",
-          "definition": "Die Kunst, ein Programm zu erstellen."
+          "definition": "Die Kunst der Erstellung eines Programms."
         },
         "loop/coursea/2021": {
-          "word": "Schleifen",
+          "word": "Schleife",
           "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
         "repeat/coursea/2021": {
-          "word": "Wiederholen:",
-          "definition": "Um wieder etwas zu tun."
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
         },
         "event/coursea/2021": {
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "algorithm/coursec/2021": {
-          "word": "Algorithmus"
+          "word": "Algorithmus",
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "bug/coursec/2021": {
-          "word": "Fehler"
+          "word": "Fehler",
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/coursec/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
         },
         "program/coursec/2021": {
-          "word": "Programm"
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "sequencing/coursec/2021": {
-          "word": "Sequencing"
+          "word": "Sequencing",
+          "definition": "Befehle in die richtige Reihenfolge bringen, damit Computer die Befehle lesen können."
         },
         "programming/coursec/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": "Die Kunst der Erstellung eines Programms."
         },
         "loop/coursec/2021": {
-          "word": "Schleife"
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "repeat/coursec/2021": {
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
+        },
+        "event/coursec/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "binary/coursec/2021": {
-          "word": "Binärdatei"
+          "word": "Binärdatei",
+          "definition": "Eine Art der Darstellung von Informationen mit nur zwei Optionen."
         },
         "algorithm/coursed/2021": {
-          "word": "Algorithmus"
+          "word": "Algorithmus",
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "program/coursed/2021": {
-          "word": "Programm"
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "bug/coursed/2021": {
-          "word": "Fehler"
+          "word": "Fehler",
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/coursed/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
         },
         "loop/coursed/2021": {
-          "word": "Schleife"
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
         "programming/coursed/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": "Die Kunst der Erstellung eines Programms."
         },
         "frustrated/coursed/2021": {
-          "word": "Frustriert"
+          "word": "Frustriert",
+          "definition": "Sich verärgert oder wütend zu fühlen, weil etwas nicht so ist, wie man es sich wünscht."
+        },
+        "persistence/coursed/2021": {
+          "word": "Persistenz",
+          "definition": "Es immer wieder zu versuchen, auch wenn etwas sehr schwer ist."
+        },
+        "event/coursed/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "code/coursed/2021": {
-          "word": "Code"
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "repeat/coursed/2021": {
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
         },
         "command/coursed/2021": {
-          "word": "Befehl"
+          "word": "Befehl",
+          "definition": "Eine Anweisung für den Computer. Viele Befehle zusammengenommen ergeben Algorithmen und Computerprogramme."
         },
         "conditionals/coursed/2021": {
-          "word": "Bedingungen"
+          "word": "Bedingungen",
+          "definition": "Statements that only run under certain conditions."
+        },
+        "pseudocode/coursed/2021": {
+          "word": "pseudocode",
+          "definition": "Eine Beschreibung der Schritte eines Algorithmus in einfacher Sprache"
         },
         "condition/coursed/2021": {
-          "word": "Bedingung"
+          "word": "Bedingung",
+          "definition": "Etwas das von einem Programm überprüft wird, um zu sehen ob es wahr ist, bevor eine bestimmte Aktion ausgeführt werden kann."
+        },
+        "while_loop/coursed/2021": {
+          "word": "While-Schleife",
+          "definition": "Eine Schleife, die sich wiederholt, solange eine Bedingung erfüllt ist."
+        },
+        "until/coursed/2021": {
+          "word": "Bis",
+          "definition": "Ein Befehl, der Ihnen sagt, dass Sie etwas tun sollen, nur bis zu dem Punkt, an dem etwas wahr wird."
+        },
+        "algorithm/express/2021": {
+          "word": "Algorithmus",
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "bug/express/2021": {
-          "word": "Fehler"
+          "word": "Fehler",
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/express/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
         },
         "sequencing/express/2021": {
-          "word": "Sequencing"
+          "word": "Sequencing",
+          "definition": "Befehle in die richtige Reihenfolge bringen, damit Computer die Befehle lesen können."
+        },
+        "program/express/2021": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "programming/express/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": "Die Kunst der Erstellung eines Programms."
         },
         "behavior/express/2021": {
-          "word": "Verhalten"
+          "word": "Verhalten",
+          "definition": "Eine Aktion, die ein Sprite kontinuierlich ausführt, bis ihm gesagt wird, dass es aufhören soll."
+        },
+        "sprite/express/2021": {
+          "word": "Sprite",
+          "definition": "Eine Grafik auf dem Bildschirm mit einer bestimmten Position, Größe und einem bestimmten Aussehen."
+        },
+        "event/express/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "code/express/2021": {
+          "definition": "code zu schreiben, oder Anweisungen für einen Computer zu schreiben."
+        },
+        "loop/express/2021": {
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "repeat/express/2021": {
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
         },
         "command/express/2021": {
-          "word": "Befehl"
+          "word": "Befehl",
+          "definition": "Eine Anweisung für den Computer. Viele Befehle zusammengenommen ergeben Algorithmen und Computerprogramme."
         },
         "condition/express/2021": {
-          "word": "Bedingung"
+          "word": "Bedingung",
+          "definition": "Etwas das von einem Programm überprüft wird, um zu sehen ob es wahr ist, bevor eine bestimmte Aktion ausgeführt werden kann."
         },
         "conditionals/express/2021": {
-          "word": "Bedingungen"
+          "word": "Bedingungen",
+          "definition": "Statements that only run under certain conditions."
+        },
+        "while_loop/express/2021": {
+          "word": "While-Schleife",
+          "definition": "Eine Schleife, die sich wiederholt, solange eine Bedingung erfüllt ist."
+        },
+        "until/express/2021": {
+          "word": "Bis",
+          "definition": "Ein Befehl, der Ihnen sagt, dass Sie etwas tun sollen, nur bis zu dem Punkt, an dem etwas wahr wird."
         },
         "function/express/2021": {
-          "word": "Funktion"
+          "word": "Funktion",
+          "definition": "Ein Stück Code, welches du auf einfache Weise wieder und wieder aufrufen kannst."
         },
         "variable/express/2021": {
-          "word": "Variable"
+          "word": "Variable",
+          "definition": "Eine Bezeichnung für eine Information, die in einem Programm verwendet wird."
+        },
+        "prompt/express/2021": {
+          "word": "aufforderung",
+          "definition": "Eine Meldung auf dem Computerbildschirm, die auf eine Eingabe des Benutzers wartet."
+        },
+        "for_loop/express/2021": {
+          "word": "\"for“-Schleife",
+          "definition": "Schleifen, die einen festgelegten Anfang, ein festgelegtes Ende und eine festgelegte Schrittgröße (Schrittintervall) haben."
         },
         "define/express/2021": {
-          "word": "Definiere"
+          "word": "Definiere",
+          "definition": "Finden Sie die Details der Probleme heraus, die Sie zu lösen versuchen"
+        },
+        "prepare/express/2021": {
+          "word": "Vorbereiten",
+          "definition": "Recherchieren, planen und beschaffen Sie Materialien für die Aktivität, die Sie durchführen möchten"
+        },
+        "reflect/express/2021": {
+          "word": "Reflektieren",
+          "definition": "Sorgfältig über etwas nachdenken, um das Ergebnis in der Zukunft zu verbessern"
+        },
+        "try/express/2021": {
+          "word": "Versuche",
+          "definition": "Versuchen, etwas zu tun"
         },
         "click/pre-express/2021": {
-          "word": "Klick"
+          "word": "Klick",
+          "definition": "Drücken der Maustaste"
         },
         "drag/pre-express/2021": {
-          "word": "Ziehen"
+          "word": "Ziehen",
+          "definition": "Maustaste drücken und gedrückt halten, während Sie den Mauszeiger an eine andere Stelle bewegen"
         },
         "drop/pre-express/2021": {
-          "word": "Fallen lassen"
+          "word": "Fallen lassen",
+          "definition": "Die Maustaste loslassem, um das Element, das man zieht, abzulegen"
         },
         "double_click/pre-express/2021": {
-          "word": "Doppelklick"
+          "word": "Doppelklick",
+          "definition": "Zweimaliges, sehr schnelles Drücken der Maustaste."
+        },
+        "algorithm/pre-express/2021": {
+          "word": "Algorithmus",
+          "definition": "Eine Liste der Schritten zu Erledigung einer Aufgabe."
         },
         "bug/pre-express/2021": {
-          "word": "Fehler"
+          "word": "Fehler",
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
         },
         "debugging/pre-express/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/pre-express/2021": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "programming/pre-express/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": "Die Kunst der Erstellung eines Programms."
+        },
+        "persistence/pre-express/2021": {
+          "word": "Persistenz",
+          "definition": "Es immer wieder zu versuchen, auch wenn etwas sehr schwer ist."
+        },
+        "loop/pre-express/2021": {
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "repeat/pre-express/2021": {
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
+        },
+        "event/pre-express/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "behavior/coursee/2021": {
-          "word": "Verhalten"
+          "word": "Verhalten",
+          "definition": "Eine Aktion, die ein Sprite kontinuierlich ausführt, bis ihm gesagt wird, dass es aufhören soll."
+        },
+        "algorithm/coursee/2021": {
+          "word": "algorithmus",
+          "definition": "Eine Liste von Schritten zur Erledigung einer Aufgabe"
+        },
+        "sprite/coursee/2021": {
+          "word": "Sprite",
+          "definition": "Eine Grafik auf dem Bildschirm mit einer bestimmten Position, Größe und einem bestimmten Aussehen."
+        },
+        "event/coursee/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "copyright/coursee/2021": {
-          "word": "Copyright"
+          "word": "Copyright",
+          "definition": "das ausschließliche Recht, literarisches, künstlerisches oder musikalisches Material zu drucken, zu veröffentlichen, aufzuführen, zu verfilmen oder aufzuzeichnen und andere zu ermächtigen, dasselbe zu tun"
+        },
+        "loop/coursee/2021": {
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "repeat/coursee/2021": {
+          "word": "Wiederholen",
+          "definition": "Etwas erneut tun."
         },
         "function/coursee/2021": {
-          "word": "Funktion"
+          "word": "Funktion",
+          "definition": "Ein Stück Code, welches du auf einfache Weise wieder und wieder aufrufen kannst."
         },
         "condition/coursee/2021": {
-          "word": "Bedingung"
+          "word": "Bedingung",
+          "definition": "Etwas das von einem Programm überprüft wird, um zu sehen ob es wahr ist, bevor eine bestimmte Aktion ausgeführt werden kann."
         },
         "conditionals/coursee/2021": {
-          "word": "Bedingungen"
+          "word": "Bedingungen",
+          "definition": "Statements that only run under certain conditions."
+        },
+        "while_loop/coursee/2021": {
+          "word": "While-Schleife",
+          "definition": "Eine Schleife, die sich wiederholt, solange eine Bedingung erfüllt ist."
         },
         "define/coursee/2021": {
-          "word": "Definiere"
+          "word": "Definiere",
+          "definition": "Finden Sie die Details der Probleme heraus, die Sie zu lösen versuchen"
+        },
+        "prepare/coursee/2021": {
+          "word": "Vorbereiten",
+          "definition": "Recherchieren, planen und beschaffen Sie Materialien für die Aktivität, die Sie durchführen möchten"
+        },
+        "reflect/coursee/2021": {
+          "word": "Reflektieren",
+          "definition": "Sorgfältig über etwas nachdenken, um das Ergebnis in der Zukunft zu verbessern"
+        },
+        "try/coursee/2021": {
+          "word": "Versuche",
+          "definition": "Versuchen, etwas zu tun"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Maschinelles Lernen",
+          "definition": "Wie Computer Muster erkennen und Entscheidungen machen können, ohne dass sie dafür explizit programmiert wurden."
+        },
+        "user/csd/2021": {
+          "word": "Benutzer",
+          "definition": "Die Person, die ein Objekt verwendet, einschließlich Software und Hardware."
+        },
+        "user_interface/csd/2021": {
+          "word": "Benutzeroberfläche"
+        },
+        "bug/csd/2021": {
+          "word": "Fehler",
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
+        },
+        "for_loop/csd/2021": {
+          "word": "\"for“-Schleife",
+          "definition": "Schleifen, die einen festgelegten Anfang, ein festgelegtes Ende und eine festgelegte Schrittgröße (Schrittintervall) haben."
+        },
+        "debugging/csd/2021": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/csd/2021": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "variable/csd/2021": {
+          "word": "Variable",
+          "definition": "Eine Bezeichnung für eine Information, die in einem Programm verwendet wird."
+        },
+        "sprite/csd/2021": {
+          "word": "Sprite"
+        },
+        "condition/csd/2021": {
+          "word": "Bedingung"
+        },
+        "conditionals/csd/2021": {
+          "word": "Bedingungen"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraktion"
+        },
+        "function/csd/2021": {
+          "word": "Funktion"
+        },
+        "input/csd/2021": {
+          "word": "Eingabe"
+        },
+        "processing/csd/2021": {
+          "word": "Verarbeitung"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Digitaler Fußabdruck"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright",
+          "definition": "das ausschließliche Recht, literarisches, künstlerisches oder musikalisches Material zu drucken, zu veröffentlichen, aufzuführen, zu verfilmen oder aufzuzeichnen und andere zu ermächtigen, dasselbe zu tun"
         }
       }
     }

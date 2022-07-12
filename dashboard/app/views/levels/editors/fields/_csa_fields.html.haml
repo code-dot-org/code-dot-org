@@ -11,10 +11,10 @@
       = f.label :start_direction
       = f.select :start_direction, options_for_select(@level.class.start_directions, @level.start_direction)
 
-  .field
-    = f.label :serialized_maze
-    - maze_value = @level.serialized_maze ? JSON.pretty_generate(@level.serialized_maze) : ''
-    = f.text_area :serialized_maze, value: maze_value, rows: 20, class: 'input-block-level'
+    .field
+      = f.label :serialized_maze
+      - maze_value = @level.serialized_maze ? JSON.pretty_generate(@level.serialized_maze) : ''
+      = f.text_area :serialized_maze, value: maze_value, rows: 20, class: 'input-block-level'
 
 -# This element exists instead of the _encrypted_examples element as a temporary workaround in order
 -# to facilitate level urls instead of project urls in the example solutions. This is needed because

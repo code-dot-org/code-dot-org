@@ -1,4 +1,5 @@
 /* global Blockly */
+import sinon from 'sinon';
 import GoogleBlockly from 'blockly/core';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
 import {expect} from '../../util/reconfiguredChai';
@@ -6,12 +7,21 @@ import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load B
 
 describe('Google Blockly Wrapper', () => {
   const cdoBlockly = Blockly;
+  // Reset context menu registry.
+  const registry = JSON.parse(
+    JSON.stringify(GoogleBlockly.ContextMenuRegistry.registry.registry_)
+  );
   beforeEach(() => {
+    GoogleBlockly.JavaScript = sinon.spy();
     Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly); // eslint-disable-line no-global-assign
   });
   afterEach(() => {
-    // reset Blockly for other tests
+    // Reset Blockly for other tests.
     Blockly = cdoBlockly; // eslint-disable-line no-global-assign
+    // Reset content menu for other tests.
+    GoogleBlockly.ContextMenuRegistry.registry.registry_ = JSON.parse(
+      JSON.stringify(registry)
+    );
   });
 
   it('readOnly properties cannot be set', () => {
@@ -20,7 +30,6 @@ describe('Google Blockly Wrapper', () => {
       'ALIGN_LEFT',
       'ALIGN_RIGHT',
       'applab_locale',
-      'bindEvent_',
       'blockRendering',
       'Block',
       'BlockFieldHelper',
@@ -100,15 +109,5 @@ describe('Google Blockly Wrapper', () => {
     expect(Blockly.blockly_.CONNECTING_SNAP_RADIUS).to.equal(0);
     Blockly.SNAP_RADIUS = 100;
     expect(Blockly.blockly_.CONNECTING_SNAP_RADIUS).to.equal(100);
-  });
-
-  it('fieldToDom_ creates title tags', () => {
-    const field = new Blockly.blockly_.Field(null);
-    field.SERIALIZABLE = true;
-    field.name = 'test';
-    const expectedXml = `<title xmlns="https://developers.google.com/blockly/xml" name="test"></title>`;
-    expect(Blockly.Xml.domToText(Blockly.Xml.fieldToDom_(field))).to.equal(
-      expectedXml
-    );
   });
 });

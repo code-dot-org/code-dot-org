@@ -2,16 +2,23 @@
 ru:
   data:
     shared_functions:
-      growing: увеличение
+      driving with arrow keys: передвижение клавишами со стрелками
+      fluttering: дрожание
+      growing: рост
       jittering: дрожание
       moving east: движение на восток
+      moving east and looping: движение на восток и зацикливание
       moving north: движение на север
-      moving south: движущийся на юг
+      moving north and looping: движение на север и действие в цикле
+      moving south: движение на юг
+      moving south and looping: движение на юг и действие в цикле
       moving west: движение на запад
-      moving with arrow keys: передвижение клавишами со стрелками
+      moving west and looping: движение на запад и зацикливание
+      moving with arrow keys: перемещение клавишами со стрелками
       patrolling: патрулирование
-      shrinking: уменьшение
-      spinning left: левостороннее вращение
-      spinning right: правостороннее вращение
+      shrinking: сжимание
+      spinning left: вращение влево
+      spinning right: вращение вправо
       swimming left and right: плавание налево и направо
-      wandering: блуждание
+      wandering: хождение
+      wobbling: колебание

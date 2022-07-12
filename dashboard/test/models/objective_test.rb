@@ -40,4 +40,10 @@ class ObjectiveTest < ActiveSupport::TestCase
     assert_equal("Translated description", objective.summarize_for_lesson_show[:description])
     I18n.locale = I18n.default_locale
   end
+
+  test 'description is required' do
+    assert_raises ActiveRecord::RecordInvalid do
+      create :objective, description: nil
+    end
+  end
 end

@@ -1,3 +1,8 @@
+export const PoetryStandaloneApp = {
+  Poetry: 'poetry',
+  PoetryHoc: 'poetry_hoc'
+};
+
 export const PALETTES = {
   grayscale: [
     '#000000',
@@ -21,207 +26,151 @@ export const PALETTES = {
   roses: ['#4C0606', '#86003C', '#E41F7B', '#FF8BA0 ', '#FFB6B3']
 };
 
+// Notes:
+// - author is not translated.
+// - Poems are shown in all languages, unless there is a locales attribute, in which case
+//   the poem is shown in the dropdown only for users with a current locale that is included
+//   in the array.
+// - If the locales attribute is set, then title is used and is not translated.
+// - If the locales attribute is set, then linesSplit is used and is not translated.
 export const POEMS = {
-  hafez: {
-    author: 'Hafez',
-    title: 'My Brilliant Image',
-    lines: [
-      'I wish I could show you',
-      'When you are lonely or in darkness, ',
-      'The Astonishing Light ',
-      'Of your own Being!'
+  hafez: {author: 'Hafez'},
+  field: {author: 'Eugene Field'},
+  twain: {author: 'Mark Twain'},
+  wordsworth: {author: 'William Wordsworth'},
+  hughes: {author: 'Langston Hughes'},
+  rios: {author: 'Alberto Rios'},
+  hopler: {author: 'Jay Hopler'},
+  singer: {author: 'Marilyn Singer\nfrom CENTRAL HEATING (Knopf, 2005)'},
+  ewing: {author: 'Eve L. Ewing'},
+  alexander: {
+    author:
+      'Kwame Alexander\nfrom "Booked" used by permission of Kwame Alexander'
+  },
+  harjo: {
+    author:
+      'Joy Harjo  Copyright © 1983\nfrom SHE HAD SOME HORSES by Joy Harjo.\nUsed by permission of W. W. Norton & Company, Inc.'
+  },
+  po: {author: 'Li Po'},
+  tzu: {author: 'Lao Tzu'},
+  taylor: {author: 'Ann Taylor and Jane Taylor'},
+  carroll2: {author: 'Lewis Carroll'},
+  carroll3: {author: 'Lewis Carroll'},
+  rumi1: {author: 'Rumi'},
+  rumi2: {author: 'Rumi'},
+  hughes1: {author: 'Langston Hughes'},
+  lomeli1: {author: 'Caia Lomeli'},
+  lomeli2: {author: 'Caia Lomeli'},
+  frost: {author: 'Robert Frost'},
+  cb: {
+    locales: ['en_us'],
+    author: 'C. B.',
+    title: 'My City',
+    linesSplit: [
+      'My city.',
+      'I love the smell of the donuts',
+      'on Avenue 6.',
+      'The sound of the cats screeching',
+      'at five in the morning.',
+      'The feeling of my favorite song playing',
+      'over and over again.',
+      'When I go to a new city',
+      'with different smells, sounds, and feelings,',
+      'I’ll still remember everything my city had.'
     ]
   },
-  carroll_1: {
-    author: 'Lewis Carroll',
-    title: 'Twinkle, Twinkle Little Star',
-    lines: [
-      'Twinkle, twinkle little star,',
-      'How I wonder what you are',
-      'Up above the world so high',
-      'Like a diamond in the sky '
-    ]
-  },
-  carroll_2: {
-    author: 'Lewis Carroll',
-    title: 'Crocodile',
-    lines: [
-      'How doth the little crocodile',
-      'Improve his shining tail,',
-      'And pour the waters of the Nile',
-      'On every golden scale!',
+  rusinek1: {
+    locales: ['pl_pl'],
+    author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
+    title: 'WIESZAKI',
+    linesSplit: [
+      'Wszystkie dzieciaki',
+      'wiedzą, co to wieszaki',
+      'i że służą one zwłaszcza',
+      'do wieszania płaszcza',
+      'lub kurtki, lub pelerynki',
+      'chłopczyka i dziewczynki.',
       '',
-      'How cheerfully he seems to grin,',
-      'How neatly spreads his claws,',
-      'And welcomes little fishes in,',
-      'With gently smiling jaws!'
+      'Lecz tak naprawdę wieszaki',
+      'to są dzikie zwierzaki:',
+      'zaczepne, rogate',
+      'i okropnie pyskate!',
+      'Kto słyszy ich awantury,',
+      'chowa się do mysiej dziury.'
     ]
   },
-  carroll_3: {
-    author: 'Lewis Carroll',
-    title: 'Jabberwocky',
-    lines: [
-      "'Twas brillig, and the slithy toves",
-      'Did gyre and gimble in the wabe;',
-      'All mimsy were the borogoves,',
-      'And the mome raths outgrabe.',
-      '',
-      '“Beware the Jabberwock, my son!',
-      'The jaws that bite, the claws that catch!',
-      'Beware the Jubjub bird, and shun',
-      'The frumious Bandersnatch!”'
+  rusinek2: {
+    locales: ['pl_pl'],
+    author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
+    title: 'PRYSZNIC',
+    linesSplit: [
+      'Prysznic to nie jest zabawka.',
+      'Prysznic to taka słuchawka',
+      'do rozmów międzywannowych',
+      'i międzyprysznicowych.',
+      ' ',
+      'Ważne, by podczas rozmowy',
+      'nie przyszło ci czasem do głowy',
+      'kręcić kurkiem, uparciuszku,',
+      'bo będziesz mieć wodę w uszku!'
     ]
   },
-  rumi_1: {
-    author: 'Rumi',
-    title: 'Sing',
-    lines: [
-      'I want to sing',
-      'Like the birds sing,',
-      'Not worrying about',
-      'Who hears or',
-      'What they think.'
+  rusinek3: {
+    locales: ['pl_pl'],
+    author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
+    title: 'TOSTER',
+    linesSplit: [
+      'Do czego służy toster?',
+      'To bardzo, bardzo proste:',
+      'do opiekania grzanek,',
+      'kiedy nadchodzi ranek.',
+      '  ',
+      'A kiedy się pozmienia',
+      'tostera ustawienia,',
+      'to służyć mu jest dane',
+      'i do zwęglania grzanek.',
+      '  ',
+      'Ech, męczą się górnicy',
+      'tak trochę po próżnicy,',
+      'bo gdyby mieli toster,',
+      'życie by było proste:',
+      '  ',
+      'Ustawiałby górnik na full',
+      'swój toster – i siadał jak król.',
+      'A węgiel by robił się sam.',
+      'No, mówię wam!'
     ]
   },
-  rumi_2: {
-    author: 'Rumi',
-    title: 'Ocean',
-    lines: [
-      'You are not a drop in the ocean,',
-      'You are the entire ocean in one drop'
+  rusinek4: {
+    locales: ['pl_pl'],
+    author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
+    title: 'WAZON',
+    linesSplit: [
+      'Bez względu na to, czy w wazonie',
+      'stoją żonkile, czy piwonie,',
+      'wazon jest przede wszystkim po to,',
+      'by dać się czasem rozbić kotom.'
     ]
   },
-  field: {
-    author: 'Eugene Field',
-    title: 'Wynken, Blynken, and Nod',
-    lines: [
-      'Wynken, Blynken, and Nod one night',
-      'Sailed off in a wooden shoe,—',
-      'Sailed on a river of crystal light',
-      'Into a sea of dew.',
-      '',
-      '"Where are you going, and what do you wish?"',
-      'The old moon asked the three.',
-      '"We have come to fish for the herring-fish',
-      'That live in this beautiful sea.'
-    ]
-  },
-  twain: {
-    author: 'Mark Twain',
-    title: 'Warm Summer Sun',
-    lines: [
-      'Warm summer sun,',
-      'Shine kindly here,',
-      'Warm southern wind,',
-      'Blow softly here.',
-      'Green sod above,',
-      'Lie light, lie light.',
-      'Good night, dear heart,',
-      'Good night, good night.'
-    ]
-  },
-  wordsworth: {
-    author: 'William Wordsworth',
-    title: 'I Wandered Lonely as a Cloud',
-    lines: [
-      'I wandered lonely as a cloud',
-      "That floats on high o'er vales and hills,",
-      'When all at once I saw a crowd,',
-      'A host, of golden daffodils;',
-      'Beside the lake, beneath the trees,',
-      'Fluttering and dancing in the breeze.'
-    ]
-  },
-  hughes: {
-    author: 'Langston Hughes',
-    title: 'Harlem',
-    lines: [
-      'What happens to a dream deferred? ',
-      'Does it dry up',
-      'LIke a raisin in the sun? ',
-      'Or fester like a sore -- ',
-      'And then run? ',
-      'Does it stink like rotten meat? ',
-      'Or crust and sugar over -- ',
-      'Like a syrupy sweet? ',
-      'Maybe it just sags ',
-      'Like a heavy load. '
-    ]
-  },
-  rios: {
-    author: 'Alberto Rios',
-    title: "Don't Go Into the Library",
-    lines: [
-      'The library is the book of books,',
-      'Its concrete and wood and glass covers',
-      '',
-      'Keeping within them the very big,',
-      'Very long story of everything.',
-      '',
-      'The library is dangerous, full',
-      'Of answers. If you go inside,',
-      '',
-      'You may not come out',
-      'The same person who went in.'
-    ]
-  },
-  hughes_1: {
-    author: 'Langston Hughes',
-    title: 'Dream Variations',
-    lines: [
-      'To fling my arms wide',
-      'In the face of the sun,',
-      'Dance! Whirl! Whirl!',
-      'Till the quick day is done.',
-      'Rest at pale evening...',
-      'A tall, slim tree...',
-      'Night coming tenderly',
-      '  Black like me.'
-    ]
-  },
-  hopler: {
-    author: 'Jay Hopler',
-    title: 'In the Garden',
-    lines: [
-      'And the sky!',
-      'Nooned with the steadfast blue enthusiasm',
-      'Of an empty nursery.',
-      'Crooked lizards grassed in yellow shade.',
-      'The grass was lizarding,',
-      'Green and on a rampage.',
-      'Shade tenacious in the crook of a bent stem.',
-      'Noon. This noon—',
-      'Skyed, blue and full of hum, full of bloom.',
-      'The grass was lizarding.'
-    ]
-  },
-  lomeli: {
-    author: 'Caia Lomeli',
-    title: 'Return',
-    lines: [
-      'Anywhere the air settles its hand on your head like a gentle father',
-      'And the morning sings to you —',
-      'or',
-      'When you find your reflection in another breathing body',
-      'And carry a calm pebble in your chest ',
-      '',
-      'Here',
-      'you are home'
-    ]
-  },
-  singer: {
-    author: 'Marilyn Singer\nfrom CENTRAL HEARTING (Knopf, 2005)',
-    title: 'Toasting Marshmallows',
-    lines: [
-      'It hinges on a second, an inch.',
-      'A shade too long, a hair too close, ',
-      'and perfect crisp brown ',
-      'turns to bitter charcoal,',
-      'gentle melting ',
-      'becomes ooze. ',
-      'And you lose the game, ',
-      'the marshmallow ',
-      'to the flame. '
+  rusinek5: {
+    locales: ['pl_pl'],
+    author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
+    title: 'SŁOIKI',
+    linesSplit: [
+      'Stoją w piwnicy puste słoiki.',
+      'W jednym z nich były raz borowiki,',
+      'w innym pieczarki marynowane,',
+      'a w jeszcze innym ćwikła wraz z chrzanem.',
+      '  ',
+      'Gdy ze słoików wszystko zjedzono,',
+      'to je umyto i wysuszono.',
+      'Zniesiono tutaj ich zapas spory*,',
+      'bo mogą przydać się na przetwory.',
+      '  ',
+      'Ten, kto na podróż w czasie ma chętkę,',
+      'może odkręcić jedną zakrętkę:',
+      'wtedy ze środka uleci wokół',
+      'trochę powietrza – z zeszłego roku!'
     ]
   }
 };

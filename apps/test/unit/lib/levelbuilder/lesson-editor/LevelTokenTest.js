@@ -24,7 +24,8 @@ const defaultScriptLevel = {
   kind: 'puzzle',
   assessment: false,
   challenge: false,
-  bonus: false
+  bonus: false,
+  instructor_in_training: false
 };
 
 describe('LevelToken', () => {
@@ -39,6 +40,7 @@ describe('LevelToken', () => {
       activityPosition: 1,
       scriptLevel: _.cloneDeep(defaultScriptLevel),
       dragging: false,
+      allowMajorCurriculumChanges: true,
       delta: 0,
       handleDragStart,
       removeLevel,
@@ -66,6 +68,7 @@ describe('LevelTokenContents', () => {
       activitySectionPosition: 2,
       activityPosition: 3,
       scriptLevel: defaultScriptLevel,
+      allowMajorCurriculumChanges: true,
       handleDragStart,
       removeLevel,
       toggleExpand
@@ -84,8 +87,32 @@ describe('LevelTokenContents', () => {
     expect(wrapper.containsMatchingElement(<span>assessment</span>)).to.be
       .false;
     expect(wrapper.containsMatchingElement(<span>bonus</span>)).to.be.false;
+    expect(wrapper.containsMatchingElement(<span>instructor in training</span>))
+      .to.be.false;
     expect(wrapper.containsMatchingElement(<span>challenge</span>)).to.be.false;
     expect(wrapper.containsMatchingElement(<span>variants</span>)).to.be.false;
+  });
+
+  it('hides movement and deletion buttons when not allowed to make major curriculum changes', () => {
+    const wrapper = shallow(
+      <LevelTokenContents
+        {...defaultProps}
+        allowMajorCurriculumChanges={false}
+      />
+    );
+    expect(wrapper.find('.fa-arrows-v').length).to.equal(0);
+    expect(wrapper.find('.fa-times').length).to.equal(0);
+  });
+
+  it('show movement and deletion buttons when allowed to make major curriculum changes', () => {
+    const wrapper = shallow(
+      <LevelTokenContents
+        {...defaultProps}
+        allowMajorCurriculumChanges={true}
+      />
+    );
+    expect(wrapper.find('.fa-arrows-v').length).to.equal(1);
+    expect(wrapper.find('.fa-times').length).to.equal(1);
   });
 
   it('shows assessment indicator when assessment', () => {
@@ -104,6 +131,16 @@ describe('LevelTokenContents', () => {
       <LevelTokenContents {...defaultProps} scriptLevel={tempScriptLevel} />
     );
     expect(wrapper.containsMatchingElement(<span>bonus</span>)).to.be.true;
+  });
+
+  it('shows instructor in training indicator when instructor in training', () => {
+    let tempScriptLevel = _.cloneDeep(defaultScriptLevel);
+    tempScriptLevel.instructor_in_training = true;
+    const wrapper = shallow(
+      <LevelTokenContents {...defaultProps} scriptLevel={tempScriptLevel} />
+    );
+    expect(wrapper.containsMatchingElement(<span>instructor in training</span>))
+      .to.be.true;
   });
 
   it('shows challenge indicator when challenge', () => {

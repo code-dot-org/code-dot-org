@@ -18,11 +18,11 @@ nav: how_to_nav
 
 * * *
 
-## 1. Посмотрите эту видео-инструкцию <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Посмотрите эту видео-инструкцию <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Выберите учебное пособие
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+У нас есть большое разнообразие [веселых, часовых обучений]({{ urls/learn }}) для обучающихся разных возрастов, созданных нашими партнёрами. [Попробуйте сами!]({{ urls/learn }})
 
 **Все уроки Часа Программирования** требуют минимального времени на подготовку для организаторов и предназначены для самостоятельной работы, позволяя детям работать в своем собственном темпе и на своем уровне подготовки.
 
@@ -83,7 +83,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 - Ознакомьтесь[ с лучшими методиками](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) от организаторов прошлого Часа Программирования.
 - Посмотрите запись нашего[ вебинара - учебного пособия для преподавателей Часа Программирования](https://youtu.be/EJeMeSW2-Mw).
 - Посетите [форум Часа кода](http://forum.code.org/c/plc/hour-of-code), чтобы получить совет, идею и помощь от других организаторов.
-- Просмотрите [Часто задаваемые вопросы по Часу Программирования](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Просмотрите [Часто задаваемые вопросы по Часу кода](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Час Кода: а что дальше?
 

@@ -257,7 +257,8 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_one_year_ago_teaches_yes,
       :with_two_years_ago_teaches_yes,
       :with_three_years_ago_teaches_yes,
-      school_year: school_year
+      school_year: school_year,
+      state: 'WA'
     validate_summary(school, school_year, "NO")
   end
 

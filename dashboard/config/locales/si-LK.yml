@@ -259,6 +259,7 @@ si:
       starwars: Star Wars
       starwarsblocks: Star Wars (කොටස්)
       starwarsblocks_hour: Star Wars (කොටස්)
+      loading: පූරණය වෙමින්...
     popup:
       progress_for_user: "%{name} ගේ ප්‍රගතිය"
       progress: ඔබගේ ප්‍රගතිය
@@ -272,6 +273,7 @@ si:
       prizes_link: වැඩිදුර තොරතුරු
   teacher:
     answer: පිළිතුර
+    dashboard: ගුරු උපකරණ පුවරුව
     for_teachers_only: ගුරුවරුන්ට පමණි
     title:
       one: 'ඔබගේ ගුරුවරයා:'
@@ -815,12 +817,15 @@ si:
         math: ගණිත
         science: විද්‍යාව
         la: භාෂා අධ්‍යනය
+        other: වෙනත්
       resources:
         khan: ඛාන් ඇකඩමිය
         kodable: කෝඩබල්
         lightbot: Lightbot
+        other: වෙනත්
       robotics:
         kodable: කෝඩබල්
+        other: වෙනත්
       workshop_course:
         csp: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
       email_opt_in:

@@ -5,7 +5,7 @@ import {
   processResults
 } from '@cdo/apps/code-studio/levels/dialogHelper';
 import {getResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {UnsubmitDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {LegacyUnsubmitDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 
 /**
  * This file does some handling of submit button interactions.
@@ -34,7 +34,7 @@ $(document).ready(() => {
 
   // Unsubmit button should only be available when this is a standalone level.
   $('.unsubmitButton').click(function() {
-    showDialog(UnsubmitDialog, function() {
+    showDialog(LegacyUnsubmitDialog, function() {
       $.post(
         window.appOptions.unsubmitUrl,
         {_method: 'PUT', user_level: {submitted: false}},

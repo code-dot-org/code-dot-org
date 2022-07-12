@@ -4,15 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "iceage",
-    "serialized_at": "2021-09-29 22:04:40 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-03-17 22:46:10 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "iceage"
     }
@@ -279,6 +282,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_hello1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -300,6 +306,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_hello2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -321,6 +330,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_move_to_flag"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -342,6 +354,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_move_to_actor"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -363,6 +378,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_repeat"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -384,6 +402,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_click_hello"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -405,6 +426,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_move_events"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -426,6 +450,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_sound_and_points"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -447,6 +474,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_warn_ice_age"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -468,6 +498,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_throw_hearts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -489,6 +522,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_free_play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -708,16 +744,6 @@
   ],
   "objectives": [
     {
-      "key": "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa",
-      "properties": {
-        "description": "Define “coding” and “computer science”"
-      },
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "objective.key": "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa"
-      }
-    },
-    {
       "key": "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e",
       "properties": {
         "description": "Identify key computer science vocabulary"
@@ -725,6 +751,16 @@
       "seeding_key": {
         "lesson.key": "Ice Age Play Lab",
         "objective.key": "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e"
+      }
+    },
+    {
+      "key": "59992d8c-d194-4063-82fa-001a0b6482d9",
+      "properties": {
+        "description": "Identify places to go to continue learning computer science and coding"
+      },
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "objective.key": "59992d8c-d194-4063-82fa-001a0b6482d9"
       }
     },
     {
@@ -738,17 +774,115 @@
       }
     },
     {
-      "key": "59992d8c-d194-4063-82fa-001a0b6482d9",
+      "key": "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa",
       "properties": {
-        "description": "Identify places to go to continue learning computer science and coding"
+        "description": "Define “coding” and “computer science”"
       },
       "seeding_key": {
         "lesson.key": "Ice Age Play Lab",
-        "objective.key": "59992d8c-d194-4063-82fa-001a0b6482d9"
+        "objective.key": "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa"
       }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "11-12.W.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.W.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "6.W.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "7.W.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "7.W.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "8.W.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "9-10.W.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.8"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Ice Age Play Lab",
@@ -866,104 +1000,6 @@
         "lesson.key": "Ice Age Play Lab",
         "framework.shortcode": "iste",
         "standard.shortcode": "6.d"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "11-12.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "4.W.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "6.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "7.W.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "7.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "8.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "9-10.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ice Age Play Lab",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.8"
       }
     }
   ],

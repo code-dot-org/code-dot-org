@@ -19,6 +19,18 @@
   color: black;
 }
 
+.ctabutton-white-border {
+  font-size: 18px;
+  font-weight: 500;
+  height: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 5px 0px;
+  background-color: white;
+  border-color: black;
+  color: black;
+}
+
 .ctabutton-white-inverse {
   font-size: 18px;
   font-weight: 500;

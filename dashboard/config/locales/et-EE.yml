@@ -297,6 +297,7 @@ et:
       starwars: Star Wars
       starwarsblocks: Star Wars (plokid)
       starwarsblocks_hour: Star Wars (plokid)
+      loading: Laadimine...
     popup:
       progress_for_user: "%{name} edusammud"
       progress: Sinu progress
@@ -310,6 +311,7 @@ et:
       prizes_link: rohkem infot
   teacher:
     answer: Vastus
+    dashboard: Õpetaja töölaud
     for_teachers_only: Ainult õpetajatele
     title:
       one: 'Sinu õpetaja:'
@@ -896,6 +898,7 @@ et:
   pd:
     form_labels:
       email: E-post
+      school: Kool
       school_name: Kooli nimi
       colombian_chilean_school_name: Kooli nimi
     form_entries:
@@ -908,12 +911,15 @@ et:
         math: Matemaatika
         science: Teadus
         la: Keeled
+        other: Muu
       resources:
         khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
+        other: Muu
       robotics:
         kodable: Kodable
+        other: Muu
       email_opt_in:
         opt_in_yes: Jah
         opt_in_no: Ei

@@ -19,7 +19,7 @@ module Pd::Application
   class Email < ApplicationRecord
     self.table_name = 'pd_application_emails'
 
-    belongs_to :application, class_name: 'Pd::Application::ApplicationBase', foreign_key: 'pd_application_id'
+    belongs_to :application, class_name: 'Pd::Application::ApplicationBase', foreign_key: 'pd_application_id', optional: true
     scope :unsent, -> {where(sent_at: nil)}
 
     def send!
@@ -43,8 +43,8 @@ module Pd::Application
 
       if errors.any?
         msg = "Error sending emails for applications. Errors:\n"
-        errors.each do |application_id, error|
-          msg << "    Application #{application_id}: #{error}\n"
+        errors.each do |email_id, error|
+          msg << "    Email #{email_id}: #{error}\n"
         end
         raise msg
       end

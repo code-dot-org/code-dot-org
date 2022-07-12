@@ -29,6 +29,9 @@ module UsersHelper
       return false
     end
 
+    # TODO: Remove this call https://codedotorg.atlassian.net/browse/FND-1927
+    log_self_takeover_investigation_to_firehose(firehose_params.merge({type: 'self'})) if source_user&.id == destination_user&.id
+
     ActiveRecord::Base.transaction do
       # Move over sections that source_user follows
       Follower.where(student_user_id: source_user.id).each do |followed|
@@ -47,7 +50,18 @@ module UsersHelper
 
     log_account_takeover_to_firehose(firehose_params)
     true
-  rescue
+  rescue => e
+    # TODO: Remove this block https://codedotorg.atlassian.net/browse/FND-1927
+    if source_user && destination_user
+      firehose_params = {
+        source_user: source_user,
+        destination_user: destination_user,
+        type: takeover_type,
+        provider: provider,
+        error: "Type: #{e.class} Message: #{e.message}"
+      }
+      log_self_takeover_investigation_to_firehose(firehose_params)
+    end
     false
   end
 
@@ -68,28 +82,58 @@ module UsersHelper
     )
   end
 
-  # Summarize a user and their progress within a certain script.
+  # TODO: Remove this function https://codedotorg.atlassian.net/browse/FND-1927
+  def log_self_takeover_investigation_to_firehose(source_user:, destination_user:, type:, provider:, error: nil)
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'self-takeover-investigation',
+        event: "#{type}-account-takeover", # Silent or OAuth takeover
+        user_id: source_user.id, # User account being "taken over" (deleted)
+        data_int: destination_user.id, # User account after takeover
+        data_string: provider,
+        error: error,   # Move error outside of data_json to query easier
+        data_json: {
+          session_sign_up_type: session[:sign_up_type],
+          destination_user_hashed_email: destination_user.hashed_email,
+          source_user_hashed_email: source_user.hashed_email,
+          # Including the auth_option_ids for reference, but not confident they will reveal much
+          destination_user_auth_option_ids: destination_user.authentication_options.map(&:id).join(', '),
+          source_user_auth_option_ids: source_user.authentication_options.map(&:id).join(', ')
+        }.to_json
+      }
+    )
+  end
+
+  # Summarize a user and their progress within a certain unit.
   # Example return value:
   # {
-  #   "linesOfCode": 34,
-  #   "linesOfCodeText": "Total lines of code: 34",
   #   "disableSocialShare": true,
   #   "lockableAuthorized": true,
   #   "levels": {
   #     "135": {"status": "perfect", "result": 100}
   #   }
   # }
-  def summarize_user_progress(script, user = current_user, exclude_level_progress = false)
-    user_data = user_summary(user)
-    merge_script_progress(user_data, user, script, exclude_level_progress)
+  def summarize_user_progress(unit, user = current_user, exclude_level_progress = false)
+    user_data = {}
+    if user
+      is_instructor = unit.can_be_instructor?(user)
 
-    if script.has_peer_reviews?
-      user_data[:peerReviewsPerformed] = PeerReview.get_peer_review_summaries(user, script).try(:map) do |summary|
-        summary.merge(url: summary.key?(:id) ? peer_review_path(summary[:id]) : script_pull_review_path(script))
+      user_data[:disableSocialShare] = true if user.under_13?
+      user_data[:lockableAuthorized] = is_instructor ? user.verified_instructor? : user.student_of_verified_instructor?
+      user_data[:isTeacher] = true if user.teacher?
+      user_data[:isInstructor] = is_instructor
+      user_data[:isVerifiedInstructor] = true if user.verified_instructor?
+    end
+
+    merge_unit_progress(user_data, user, unit, exclude_level_progress)
+    if unit.has_peer_reviews?
+      user_data[:peerReviewsPerformed] = PeerReview.get_peer_review_summaries(user, unit).try(:map) do |summary|
+        summary.merge(url: summary.key?(:id) ? peer_review_path(summary[:id]) : script_pull_review_path(unit))
       end
     end
 
-    user_data[:current_lesson] = user.next_unpassed_progression_level(script)&.lesson&.id unless exclude_level_progress || script.script_levels.empty?
+    user_data[:current_lesson] = user.next_unpassed_progression_level(unit)&.lesson&.id unless exclude_level_progress || unit.script_levels.empty?
 
     user_data.compact
   end
@@ -109,23 +153,9 @@ module UsersHelper
     return ids[0]
   end
 
-  # Some summary user data we include in user_progress requests
-  def user_summary(user)
-    user_data = {}
-    if user
-      user_data[:disableSocialShare] = true if user.under_13?
-      user_data[:lockableAuthorized] = user.teacher? ? user.authorized_teacher? : user.student_of_authorized_teacher?
-      user_data[:isTeacher] = true if user.teacher?
-      user_data[:isVerifiedTeacher] = true if user.authorized_teacher?
-      user_data[:linesOfCode] = user.total_lines
-      user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
-    end
-    user_data
-  end
-
-  # Get level progress for a set of users within this script.
+  # Get level progress for a set of users within this unit.
   # @param [Enumerable<User>] users
-  # @param [Script] script
+  # @param [Script] unit
   # @return [Hash]
   # Example return value (where 1 and 2 are userIds and 135 and 136 are levelIds):
   #   {
@@ -138,13 +168,13 @@ module UsersHelper
   #       "136": {"status": "perfect", "result": 100}
   #     }
   #   }
-  def script_progress_for_users(users, script)
-    user_levels = User.user_levels_by_user_by_level(users, script)
-    teacher_feedbacks = teacher_feedbacks_by_student_by_level(users, script)
+  def script_progress_for_users(users, unit)
+    user_levels = User.user_levels_by_user_by_level(users, unit)
+    teacher_feedbacks = teacher_feedbacks_by_student_by_level(users, unit)
     paired_user_levels_by_user = PairedUserLevel.pairs_by_user(users)
     progress_by_user = users.inject({}) do |progress, user|
       progress[user.id] = merge_user_progress_by_level(
-        script: script,
+        script: unit,
         user: user,
         user_levels_by_level: user_levels[user.id],
         teacher_feedback_by_level: teacher_feedbacks[user.id],
@@ -161,9 +191,9 @@ module UsersHelper
   end
 
   # Retrieve all teacher feedback for the designated set of users in the given
-  # script, with a single query.
+  # unit, with a single query.
   # @param [Enumerable<User>] users
-  # @param [Script] script
+  # @param [Script] unit
   # @return [Hash] TeacherFeedbacks by user id by level id
   # Example return value (where 1,2,3 are user ids and 101, 102 are level ids):
   # {
@@ -177,10 +207,10 @@ module UsersHelper
   #   },
   #   3: {}
   # }
-  private def teacher_feedbacks_by_student_by_level(users, script)
+  private def teacher_feedbacks_by_student_by_level(users, unit)
     initial_hash = Hash[users.map {|user| [user.id, {}]}]
     TeacherFeedback.
-      get_latest_feedbacks_received(users.map(&:id), nil, script.id).
+      get_latest_feedbacks_received(users.map(&:id), nil, unit.id).
       group_by(&:student_id).
       inject(initial_hash) do |memo, (student_id, teacher_feedbacks)|
         memo[student_id] = teacher_feedbacks.index_by(&:level_id)
@@ -188,26 +218,26 @@ module UsersHelper
       end
   end
 
-  # Merge the progress for the specified script and user into the user_data result hash.
-  private def merge_script_progress(user_data, user, script, exclude_level_progress = false)
+  # Merge the progress for the specified unit and user into the user_data result hash.
+  private def merge_unit_progress(user_data, user, unit, exclude_level_progress = false)
     return user_data unless user
 
-    if script.professional_learning_course?
+    if unit.old_professional_learning_course?
       user_data[:professionalLearningCourse] = true
-      unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: script.plc_course_unit)
+      unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: unit.plc_course_unit)
       if unit_assignment
         user_data[:focusAreaLessonIds] = unit_assignment.focus_area_lesson_ids
-        user_data[:changeFocusAreaPath] = script_preview_assignments_path script
+        user_data[:changeFocusAreaPath] = script_preview_assignments_path unit
       end
     end
 
     unless exclude_level_progress
-      user_levels_by_level = user.user_levels_by_level(script)
-      teacher_feedback_by_level = teacher_feedbacks_by_student_by_level([user], script)
+      user_levels_by_level = user.user_levels_by_level(unit)
+      teacher_feedback_by_level = teacher_feedbacks_by_student_by_level([user], unit)
       paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
-      user_data[:completed] = Policies::ScriptActivity.completed?(user, script)
+      user_data[:completed] = Policies::ScriptActivity.completed?(user, unit)
       user_data[:progress] = merge_user_progress_by_level(
-        script: script,
+        script: unit,
         user: user,
         user_levels_by_level: user_levels_by_level,
         teacher_feedback_by_level: teacher_feedback_by_level[user.id],
@@ -218,8 +248,8 @@ module UsersHelper
     user_data
   end
 
-  # Merges and summarizes a user's level progress for a particular script.
-  # @param [Script] script
+  # Merges and summarizes a user's level progress for a particular unit.
+  # @param [Script] unit
   # @param [User] user
   # @param [Hash<Integer, UserLevel>] user_levels_by_level
   #   A map from level id to UserLevel instance for the provided user, passed
@@ -261,7 +291,15 @@ module UsersHelper
             sum_time_spent = bubble_choice_progress.values.reduce(0) do |sum, sublevel_progress|
               sublevel_progress[:time_spent] ? sum + sublevel_progress[:time_spent] : sum
             end
-            level_progress[:time_spent] = sum_time_spent if sum_time_spent > 0
+
+            # The existence of level_progress needs to be checked due to a race condition where the user makes sublevel
+            # progress between when user_levels_by_level is fetched and when level_for_progress is fetched. In this
+            # case, user_levels_by_level may not include the user level for the new level_for_progress, resulting in nil
+            # level_progress. This may manifest for the user as a bubble choice bubble looking as though it hasn't been tried
+            # even though there is progress on a sublevel and should be resolved by a page refresh.
+            if level_progress && sum_time_spent > 0
+              level_progress[:time_spent] = sum_time_spent
+            end
           end
         end
 
@@ -333,7 +371,8 @@ module UsersHelper
 
     # get progress for sublevels to save in levels hash
     level.sublevels.each do |sublevel|
-      ul = user_levels_by_level.try(:[], sublevel.id)
+      level_for_progress = BubbleChoice.level_for_progress_for_sublevel(sublevel)
+      ul = user_levels_by_level.try(:[], level_for_progress.id)
       feedback = teacher_feedback_by_level.try(:[], sublevel.id)
       sublevel_progress = get_level_progress(user.id, ul, feedback&.review_state, script_level, paired_user_levels, include_timestamp)
       next unless sublevel_progress
@@ -374,7 +413,7 @@ module UsersHelper
         level_id = embedded_level.id
 
         # Do we have a valid result for this level in the LevelGroup last_attempt?
-        if last_attempt && last_attempt.key?(level_id.to_s) && last_attempt[level_id.to_s]["valid"]
+        if last_attempt&.key?(level_id.to_s) && last_attempt[level_id.to_s]["valid"]
           page_valid_result_count += 1
         end
       end
@@ -396,10 +435,10 @@ module UsersHelper
   end
 
   # @return [Float] The percentage, between 0.0 and 100.0, of the levels in the
-  #   script that were passed or perfected.
-  def percent_complete_total(script, user = current_user)
-    summary = summarize_user_progress(script, user)
-    levels = script.script_levels.map(&:level)
+  #   unit that were passed or perfected.
+  def percent_complete_total(unit, user = current_user)
+    summary = summarize_user_progress(unit, user)
+    levels = unit.script_levels.map(&:level)
     completed = levels.count do |l|
       sum = summary[:progress][l.id]; sum && %w(perfect passed).include?(sum[:status])
     end

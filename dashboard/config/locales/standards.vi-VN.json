@@ -1,0 +1,41 @@
+{
+  "vi-VN": {
+    "data": {
+      "standards": {
+        "ccmath/MP.1": {
+          "description": "Nhận thức vấn đề và kiên trì giải quyết"
+        },
+        "ccmath/MP.2": {
+          "description": "Lý do trừu tượng và định lượng"
+        },
+        "ccmath/MP.5": {
+          "description": "Sử dụng công cụ thích hợp có chiến lược"
+        },
+        "ccmath/MP.6": {
+          "description": "Quản lý độ chính xác"
+        },
+        "ccela/11-12.RI.4": {
+          "description": "Xác định ý nghĩa của từ và cụm từ khi sử dụng trong văn bản, bao gồm nghĩa bóng, hàm ý và nghĩa đen; phân tích cách tác giả sử dụng và tinh chỉnh ý nghĩa của một thuật ngữ chính hoặc các thuật ngữ trong toàn bộ văn bản (Ví dụ: cách Madison định nghĩa"
+        },
+        "ccmath/1.OA.1": {
+          "description": "Sử dụng phép cộng và phép trừ trong phạm vi 20 để giải các bài toán liên quan đến các tình huống cộng, trừ, gộp ;aok, tách ra và so sánh, với các ẩn số ở tất cả các vị trí, ví dụ bằng cách sử dụng các đối tượng, hình vẽ và phương trình có ký hiệu cho"
+        },
+        "ccmath/2.OA.1": {
+          "description": "Sử dụng phép cộng và phép trừ trong phạm vi 100 để giải các bài toán một và hai bước liên quan đến các tình huống cộng, trừ, gộp lại, tách biệt và so sánh với các ẩn số ở tất cả các vị trí, ví dụ bằng cách sử dụng hình vẽ và phương trình với một"
+        },
+        "ccela/11-12.L.6": {
+          "description": "Tiếp thu và sử dụng chính xác các từ và cụm từ học thuật chung và theo lĩnh vực cụ thể, đủ để đọc, viết, nói và nghe ở cấp độ sẵn sàng đi làm và học đại học; thể hiện khả năng độc lập thu thập kiến thức từ vựng khi xem xét"
+        },
+        "ccela/4.L.6": {
+          "description": "Tiếp thu và sử dụng chính xác các từ và cụm từ học thuật chung phù hợp với trình độ và theo lĩnh vực cụ thể, bao gồm những từ và cụm từ báo hiệu hành động, cảm xúc hoặc trạng thái chính xác (Ví dụ: thắc mắc, than vãn, lắp bắp) và cơ bản cho một chủ đề cụ thể (Ví dụ:"
+        },
+        "ccmath/4.NBT.5": {
+          "description": "Nhân một số nguyên có tối đa bốn chữ số với một số nguyên có một chữ số và nhân hai số có hai chữ số, sử dụng các chiến lược dựa trên giá trị vị trí và các thuộc tính của phép toán. Minh họa và giải thích phép tính bằng cách sử dụng phương trình, ar hình chữ nhật"
+        },
+        "ccmath/7.G.2": {
+          "description": "Hãy vẽ (bằng tay, bằng thước và thước đo góc và bằng thiết bị điện tử) các hình khối hình học với các điều kiện cho trước. Hãy tập trung vào việc tạo dựng hình tam giác từ ba số đo góc hoặc cạnh, lưu ý khi các điều kiện xác định một tam giác duy nhất, nhiều hơn một tam giác"
+        }
+      }
+    }
+  }
+}

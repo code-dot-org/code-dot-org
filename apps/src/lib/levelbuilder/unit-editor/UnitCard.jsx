@@ -14,6 +14,8 @@ import {lessonGroupShape} from './shapes';
 
 class UnitCard extends Component {
   static propTypes = {
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired,
+
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
     addGroup: PropTypes.func.isRequired,
@@ -81,7 +83,7 @@ class UnitCard extends Component {
   };
 
   render() {
-    const {lessonGroups} = this.props;
+    const {lessonGroups, allowMajorCurriculumChanges} = this.props;
 
     let lessonKeys = [];
     lessonGroups.forEach(lessonGroup => {
@@ -91,7 +93,7 @@ class UnitCard extends Component {
     });
 
     return (
-      <div>
+      <div className="uitest-unit-card">
         <div style={styles.unitHeader}>Unit</div>
         <div style={styles.unitBody}>
           {lessonGroups.map((lessonGroup, index) => (
@@ -112,6 +114,7 @@ class UnitCard extends Component {
               setTargetLessonGroup={this.setTargetLessonGroup}
               targetLessonGroupPos={this.state.targetLessonGroupPos}
               generateLessonGroupKey={this.generateLessonGroupKey}
+              allowMajorCurriculumChanges={allowMajorCurriculumChanges}
             />
           ))}
           <div style={styles.addGroupWithWarning}>

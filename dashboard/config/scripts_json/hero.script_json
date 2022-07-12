@@ -4,15 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "hero",
-    "serialized_at": "2021-09-29 16:18:22 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-03-17 22:39:20 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "hero"
     }
@@ -767,16 +770,6 @@
       }
     },
     {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
       "key": "function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
@@ -784,6 +777,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "function"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
       }
     }
   ],
@@ -803,13 +806,13 @@
     {
       "seeding_key": {
         "lesson.key": "Minecraft Hour of Code",
-        "vocabulary.key": "program"
+        "vocabulary.key": "function"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Minecraft Hour of Code",
-        "vocabulary.key": "function"
+        "vocabulary.key": "program"
       }
     }
   ],
@@ -828,16 +831,6 @@
       }
     },
     {
-      "key": "f149f330-032b-40db-a3db-62ff2a8c04fb",
-      "properties": {
-        "description": "Identify key computer science vocabulary"
-      },
-      "seeding_key": {
-        "lesson.key": "Minecraft Hour of Code",
-        "objective.key": "f149f330-032b-40db-a3db-62ff2a8c04fb"
-      }
-    },
-    {
       "key": "e68fca49-de4c-4e93-85e3-05bcc2f9a779",
       "properties": {
         "description": "Identify places to go to continue learning computer science and coding"
@@ -845,6 +838,16 @@
       "seeding_key": {
         "lesson.key": "Minecraft Hour of Code",
         "objective.key": "e68fca49-de4c-4e93-85e3-05bcc2f9a779"
+      }
+    },
+    {
+      "key": "f149f330-032b-40db-a3db-62ff2a8c04fb",
+      "properties": {
+        "description": "Identify key computer science vocabulary"
+      },
+      "seeding_key": {
+        "lesson.key": "Minecraft Hour of Code",
+        "objective.key": "f149f330-032b-40db-a3db-62ff2a8c04fb"
       }
     }
   ],

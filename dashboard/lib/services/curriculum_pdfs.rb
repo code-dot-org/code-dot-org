@@ -22,7 +22,7 @@ require 'dynamic_config/dcdo'
 # - unit calendar
 # - four rollup pages for unit, unit group, one for each of:
 #   - vocab
-#   - resouces
+#   - resources
 #   - standards
 #   - programming expressions
 #
@@ -89,17 +89,26 @@ module Services
     #    process themselves.
     # 2. Is the script one for which we care about PDFs? Right now, we only
     #    want to generate PDFs for "migrated" scripts.
-    # 3. Is the script actually being updated? The overall seed process is
+    # 3. Is the unit able to be seen by a signed out user?
+    #    We rely on being able to see the unit overview page as a signed out user
+    #    in order to generate the overview pdf. When a course is in-development or pilot
+    #    signed out users can not see the unit overview page
+    # 4. Is the script actually being updated? The overall seed process is
     #    indiscriminate, and will happily re-seed content even without
     #    changes. This is fine for database upserts, but we want to be more
     #    cautious with the more-expensive PDFs generation process.
     #
     # In addition, we support manually disabling this feature with DCDO
+    #
+    # IMPORTANT: If you make updates to this method make sure to update the rake task for
+    # generate_missing_pdfs as well.
     def self.generate_pdfs?(script_data)
       return true if DEBUG
 
       return false unless rack_env?(:staging)
       return false unless script_data['properties'].fetch('is_migrated', false)
+      return false if [Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development].include?(script_data['published_state'])
+      return false if script_data['properties'].fetch('use_legacy_lesson_plans', false)
       return false if DCDO.get('disable_curriculum_pdf_generation', false)
 
       script = Script.find_by(name: script_data['name'])
@@ -110,14 +119,9 @@ module Services
       !timestamps_equal(new_timestamp, existing_timestamp)
     end
 
-    # We do not want to generate an overview pdf in a couple cases:
-    # 1) There are no lesson plans in the unit
-    # 2) The unit's published state is in-development or pilot. This is because
-    # we rely on being able to see the unit overview page as a signed out user
-    # in order to generate the overview pdf. When a course is in-development or pilot
-    # signed out users can not see the unit overview page
+    # Do no generate the overview pdf is there are no lesson plans
     def self.should_generate_overview_pdf?(unit)
-      !(unit.unit_without_lesson_plans? || [SharedConstants::PUBLISHED_STATE.pilot, SharedConstants::PUBLISHED_STATE.in_development].include?(unit.get_published_state))
+      !unit.unit_without_lesson_plans?
     end
 
     # Do no generate the resources pdf is there are no lesson plans since

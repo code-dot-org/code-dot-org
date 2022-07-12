@@ -2,10 +2,6 @@
 gl:
   data:
     script:
-      category:
-        hoc_category_name: Hora de Código
-        math_category_name: Matemáticas
-        other_category_name: Outros
       name:
         course1:
           title: Curso 1
@@ -211,7 +207,7 @@ gl:
             xeo con Anna e Elsa.
           lessons:
             Artist:
-              name: Artista
+              name: Programa con Ana e Elsa
           student_description: Imos usar código para unirnos a Ana e Elsa mentres
             exploran a maxia e a beleza do xeo. Crearás flocos de neve e padróns a
             medida que patinas sobre xeo e farás unha paisaxe invernal que logo podes
@@ -338,7 +334,7 @@ gl:
             ou xogo protagonizada por personaxes de Disney Infinity.
           lessons:
             Infinity:
-              name: Infinito
+              name: Laboratorio de Xogo Disney Infinity
           student_description: Utiliza o laboratorio de xogos para crear unha historia
             ou xogo protagonizada por personaxes de Disney Infinity.
         algebrademo:
@@ -699,9 +695,6 @@ gl:
             Wars nunha galaxia moi, moi afastada.
           description_short: Aprende a programar androides e crea o teu propio xogo
             Star Wars nunha galaxia moi, moi afastada.
-          lessons:
-            Hour of Code 2015:
-              name: Hora do Co\*digo 2015
           student_description: Aprende a programar androides e crea o teu propio xogo
             Star Wars nunha galaxia moi, moi afastada.
         mc:
@@ -938,9 +931,7 @@ gl:
             required:
               display_name: Visión xeral
         basketball:
-          lessons:
-            Bounce:
-              name: Rebote
+          name: pelota de baloncesto
         csd2-2017:
           lessons:
             Lists:
@@ -1333,10 +1324,6 @@ gl:
           lessons:
             Creating Functions:
               name: Creando funcións
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Hora do Código Minecraft
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -2286,21 +2273,16 @@ gl:
         csd3-2021:
           lessons:
             Variables:
-              key: Variables
               name: Variables
             Text:
-              key: Texto
               name: Texto
             Conditionals:
-              key: Condicionais
               name: Condicionais
             Functions:
-              key: Funcións
               name: Funcións
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Funcións con parámetros
               name: Funcións con parámetros
         csp4-2021:
           lesson_groups:
@@ -2316,6 +2298,10 @@ gl:
               display_name: Listas
             csp_loops:
               display_name: Bucles
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmos
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2330,7 +2316,6 @@ gl:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Creando camiños
               name: Creando camiños
             'Loops: Getting Loopy':
               name: Bucleándose
@@ -2344,7 +2329,6 @@ gl:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Pulseiras Binarias
               name: Pulseiras Binarias
             'Events: The Big Event':
               name: O Gran Evento
@@ -2362,16 +2346,11 @@ gl:
             'Algorithms: Graph Paper Programming':
               name: Programación en Papel Cadriculado
             Relay Programming:
-              key: Programación por relevos
               name: Programación por relevos
             Conditionals with Cards:
-              key: Condicionais con cartas
               name: Condicionais con cartas
             'Unplugged: Binary':
-              key: 'Desconectado: binario'
               name: Imaxes binárias
-            Artist Binary:
-              key: Artista binario
           lesson_groups:
             csf_events:
               display_name: Eventos
@@ -2387,8 +2366,6 @@ gl:
               display_name: Cidadanía dixital
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Condicionais
             'Functions: Songwriting':
               name: Composición
           lesson_groups:
@@ -2403,13 +2380,10 @@ gl:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Variábeis de sobre
               name: Variábeis de sobre
             Internet:
-              key: Internet
               name: A Internet
             For Loop Fun:
-              key: Diversión con bucles "para" (for)
               name: Diversión con bucles "para" (for)
           lesson_groups:
             csf_digcit:
@@ -2455,22 +2429,16 @@ gl:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Bucles
               name: Bucles
             Events:
-              key: Eventos
               name: Eventos
             Conditionals:
-              key: Condicionais
               name: Condicionais
             Functions:
-              key: Funcións
               name: Funcións
             Variables:
-              key: Variables
               name: Variables
             For Loops:
-              key: Bucles "Para" (For)
               name: Bucles "Para" (For)
           lesson_groups:
             k5_getting_started_1:
@@ -2480,7 +2448,6 @@ gl:
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
-              key: Fundamentos de Informática
               name: Fundamentos de Informática
         csa-videos:
           lesson_groups:
@@ -2510,5 +2477,226 @@ gl:
               name: Visión xeral
         dlp21-csp-overview:
           lessons:
+            lesson-1:
+              name: Visión xeral
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Abella que Soletrea
+          title: Abella que Soletrea
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Abella que Soletrea
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Diversión con bucles "para" (for)
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hora de Código
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funcións
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Mapas Felices
+            'Programming: Happy Maps':
+              name: Mapas Felices
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_functions:
+              display_name: Funcións
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Bucles
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Creando camiños
+            Getting Loopy:
+              name: Bucleándose
+            'Loops: Getting Loopy':
+              name: Bucleándose
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: O Gran Evento
+            Binary Bracelets:
+              name: Pulseiras Binarias
+            'Events: The Big Event':
+              name: O Gran Evento
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Programación en Papel Cadriculado
+            Relay Programming:
+              name: Programación por relevos
+            Conditionals with Cards:
+              name: Condicionais con cartas
+            'Algorithms: Graph Paper Programming':
+              name: Programación en Papel Cadriculado
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Composición
+            'Functions: Songwriting':
+              name: Composición
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            ramp_up:
+              display_name: Bucles aniñados
+            csf_functions:
+              display_name: Funcións
+            csf_nested_loops:
+              display_name: Condicionais
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Diversión con bucles "para" (for)
+            The Internet:
+              name: A Internet
+            Internet:
+              name: A Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Cidadanía dixital
+            lessonGroup-8:
+              display_name: Variables
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Bucles
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Variables
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: Bucles "Para" (For)
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Condicionais
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Bucles
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: A Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Cidadanía dixital
+            lessonGroup-8:
+              display_name: Variables
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variables
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Bucles
+            Events:
+              name: Eventos
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións
+            Variables:
+              name: Variables
+            For Loops:
+              name: Bucles "Para" (For)
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: Texto
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funcións
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Visión xeral
+            lesson-1:
+              name: Visión xeral
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Visión xeral
             lesson-1:
               name: Visión xeral

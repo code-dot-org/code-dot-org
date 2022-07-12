@@ -2,6 +2,524 @@
   "ja-JP": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Spotifyプレイリスト（全年齢）",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "list_of_poems/poem-art/2021": {
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
+        "poem_art_celebration/poem-art/2021": {
+          "type": "ビデオ"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "ビデオ"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "ビデオ"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "name": "ポエムアート 1 - 入門",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "ビデオ"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "アーティスト紹介",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "回転と角度",
+          "type": "学生用資料"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "回転と角度",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Spotifyプレイリスト（全年齢）",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "暗号化と公開鍵",
+          "type": "ビデオ"
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Code Studioの暗号化ウィジェット"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "アクティビティガイド-テキスト圧縮"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "アクティビティのまとめ-このメッセージをデコードする",
+          "type": "アクティビティのまとめ"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "このメッセージをデコード"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Code Studioのテキスト圧縮ウィジェット",
+          "type": "ウィジェット"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "name": "ビデオ：Aloe Blaccによるテキスト圧縮",
+          "type": "ビデオ"
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "バウンスのイベント - 起こり方"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "バウンスのイベント - 起こり方"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Spotifyプレイリスト（全年齢）",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Spotifyプレイリスト（全年齢）",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": " 機械学習",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk><https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "ビデオ"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "人工知能（AI）：社会への影響",
+          "url": "https://youtu.be/ng4c1g3COfs",
+          "type": "ビデオ"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "人工知能（AI）：トレーニングデータとバイアス",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "ビデオ"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "授業計画"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "語彙"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "語彙"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "語彙"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "語彙"
+        },
+        "lesson_plans/express/2018": {
+          "name": "授業計画"
+        },
+        "standard_mappings/express/2018": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/express/2018": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/express/2018": {
+          "name": "語彙"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "語彙"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "語彙"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "紹介コード"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "授業計画"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "語彙"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "紹介コード"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "授業計画"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "語彙"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "授業計画"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "語彙"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "紹介コード"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "授業計画"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "語彙"
+        },
+        "code_introduced/csd/2018": {
+          "name": "紹介コード"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "授業計画"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "語彙"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "授業計画"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/csd/2018": {
+          "name": "語彙"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "カリキュラム ガイド"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "語彙"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "カリキュラム ガイド"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "授業計画"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "語彙"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "カリキュラム ガイド"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "語彙"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "カリキュラム ガイド"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "語彙"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "カリキュラム ガイド"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "語彙"
+        },
+        "lesson_plans/express/2019": {
+          "name": "授業計画"
+        },
+        "standard_mappings/express/2019": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/express/2019": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/express/2019": {
+          "name": "語彙"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "カリキュラム ガイド"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "語彙"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "先生用フォーラム"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "紹介コード"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "授業計画"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "標準マッピング"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "語彙"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "紹介コード"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "授業計画"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "標準マッピング"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "語彙"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "紹介コード"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "授業計画"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "標準マッピング"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "語彙"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "授業計画"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "標準マッピング"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "語彙"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "授業計画"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "標準マッピング"
+        },
+        "vocabulary/csd/2019": {
+          "name": "語彙"
+        },
+        "code_introduced/csd/2019": {
+          "name": "紹介コード"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "授業計画"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "標準マッピング"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "語彙"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "紹介コード"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "授業計画"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "語彙"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "紹介コード"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "授業計画"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "語彙"
+        },
+        "code_introduced/csd/2017": {
+          "name": "紹介コード"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "授業計画"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "語彙"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "授業計画"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/csd/2017": {
+          "name": "語彙"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "授業計画"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "語彙"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "紹介コード"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "授業計画"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "語彙"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "詩のリスト",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "スプライトラボの紹介",
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
@@ -12,7 +530,8 @@
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "スプライトラボの紹介",
-          "url": "https://youtu.be/yd-9xZ275dM"
+          "url": "https://youtu.be/yd-9xZ275dM",
+          "type": "ビデオ"
         },
         "exploring_apps_1/coursef/2021": {
           "name": "アプリを探索",
@@ -36,7 +555,8 @@
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "name": "言葉の力：言葉の力\t",
-          "url": "https://www.commonsense.org/education/videos/the-power-of-words"
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words",
+          "type": "ビデオ"
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
           "name": "言葉の力：言葉が人の心を傷つける",
@@ -84,7 +604,8 @@
         },
         "pause_and_think_online/coursef/2021": {
           "name": "オンラインでたちどまって考える",
-          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
+          "type": "ビデオ"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Forループを楽しむ",
@@ -108,7 +629,8 @@
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Forループを楽しむ",
-          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit"
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
+          "type": "評価"
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": "アンプラグドブロック（コースC-F）",
@@ -120,15 +642,18 @@
         },
         "ai-ml/coursef/2021": {
           "name": " 機械学習",
-          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk><https://www.youtube.com/watch?v=OeU5m6vRyCk"
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk><https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "ビデオ"
         },
         "ai-training/coursef/2021": {
           "name": "人工知能（AI）：トレーニングデータとバイアス",
-          "url": "https://youtu.be/x2mRoFNm22g"
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "ビデオ"
         },
         "ai-societal/coursef/2021": {
           "name": "人工知能（AI）：社会への影響",
-          "url": "https://youtu.be/ng4c1g3COfs"
+          "url": "https://youtu.be/ng4c1g3COfs",
+          "type": "ビデオ"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "インターネット",
@@ -140,7 +665,8 @@
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "インターネット",
-          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit"
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
+          "type": "評価"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "インターネット",
@@ -160,7 +686,8 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "コンピュータサイエンスの基礎 最終プロジェクト",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "ルーブリック"
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "CSTA標準マッピング",
@@ -220,11 +747,13 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "デジタル証跡：デジタル証跡スクエア",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "学生用資料"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "デジタル証跡：動物の足あと",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "学生用資料"
         },
         "mimi-activity/courseb/2021": {
           "name": "動かせ！動かせ！",
@@ -267,8 +796,9 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "wiggles_-_gonoodle/courseb/2021": {
-          "name": "Wiggles - GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "name": "体を動かす - GoNoodle",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "ビデオ"
         },
         "20_20_20_rule/courseb/2021": {
           "name": "20/20/20ルール",
@@ -292,7 +822,8 @@
         },
         "unspotted_bugs/courseb/2021": {
           "name": "気づかれていないバグ",
-          "url": "https://youtu.be/rah3DYlp5nQ"
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "ビデオ"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "ルーピーをゲット",
@@ -304,7 +835,8 @@
         },
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "ルーピーをゲット",
-          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit"
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "評価"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "ルーピーをゲット",
@@ -316,7 +848,8 @@
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "オンラインでたちどまって考える",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ビデオ"
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "「ぴったりのアプリ」のシナリオ",
@@ -324,11 +857,13 @@
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "ビッグイベント",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "ビデオ"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "ビッグイベント",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "評価"
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "ビッグイベント",
@@ -404,7 +939,8 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "オンラインのご近所の安全：たちどまって考える",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "学生用資料"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "ペアプログラミング",
@@ -416,11 +952,13 @@
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "体を動かす - GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "ビデオ"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "name": "スタートしましょう - クラスセクションの作成",
-          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
+          "type": "ビデオ"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "ハッピーマップ",
@@ -452,11 +990,13 @@
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "体を動かす - GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "ビデオ"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
           "name": "ステップボタンでデバッグする",
-          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4><https://videos.code.org/csf/debugging-k1-blocks.mp4"
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4><https://videos.code.org/csf/debugging-k1-blocks.mp4",
+          "type": "ビデオ"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "フィーリングフェイス絵文字",
@@ -484,7 +1024,8 @@
         },
         "pair-programming/coursea/2021": {
           "name": "ペアプログラミング",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "ビデオ"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
           "name": "フィーリングフェイス絵文字",
@@ -496,7 +1037,8 @@
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "オンラインでたちどまって考える",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ビデオ"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
           "name": "フィーリングフェイス絵文字",
@@ -512,7 +1054,8 @@
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "ビッグイベント",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "評価"
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "ビッグイベント",
@@ -596,26 +1139,27 @@
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "ネット上での意地悪を食い止める：ネット上の意地悪への4つの対策",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "学生用資料"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "ロボットのお友だち",
+          "name": "私のロボットの友だち",
           "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
         },
         "csf-mrf-symbol-key/coursec/2021": {
-          "name": "ロボットのお友だち",
+          "name": "私のロボットの友だち",
           "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
-          "name": "ロボットのお友だち",
+          "name": "私のロボットの友だち",
           "url": "https://youtu.be/xaW3PAzHxCU"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "ロボットのお友だち",
+          "name": "私のロボットの友だち",
           "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "ロボットのお友だち",
+          "name": "私のロボットの友だち",
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
         },
         "c2-maze-bridge/coursec/2021": {
@@ -628,7 +1172,8 @@
         },
         "pair-programming-vid/coursec/2021": {
           "name": "ペアプログラミング",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "ビデオ"
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "コンピュータサイエンスの基礎 メインアクティビティのヒント",
@@ -652,7 +1197,8 @@
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "回転と角度",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "学生用資料"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "フィーリングフェイス絵文字",
@@ -664,7 +1210,8 @@
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "ビッグイベント",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "評価"
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "ビッグイベント",
@@ -676,7 +1223,8 @@
         },
         "pause_and_think_online/coursec/2021": {
           "name": "オンラインでたちどまって考える",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ビデオ"
         },
         "open-ended_programming_levels/coursec/2021": {
           "name": "オープンエンド型プログラミングのレベル",
@@ -708,7 +1256,8 @@
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "バイナリ ブレスレット",
-          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit"
+          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
+          "type": "評価"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "バイナリ ブレスレット",
@@ -812,7 +1361,8 @@
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "グラフ用紙のプログラミング",
-          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit"
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
+          "type": "評価"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "グラフ用紙のプログラミング",
@@ -856,7 +1406,8 @@
         },
         "pause_and_think_online/coursed/2021": {
           "name": "オンラインでたちどまって考える",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ビデオ"
         },
         "open-ended_programming_levels/coursed/2021": {
           "name": "オープンエンド型プログラミングのレベル",
@@ -888,7 +1439,8 @@
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "オンラインでたちどまって考える",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ビデオ"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "カードと条件",
@@ -904,7 +1456,8 @@
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "カードと条件",
-          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit"
+          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
+          "type": "評価"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "カードと条件",
@@ -916,7 +1469,8 @@
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "name": "CSFコースD コース最終プロジェクト計画ガイド",
-          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
+          "type": "プロジェクトガイド"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "CSTA標準マッピング",
@@ -968,7 +1522,8 @@
         },
         "pair_programming/express/2021": {
           "name": "ペアプログラミング",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "ビデオ"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
           "name": "アンプラグドブロック（コースC-F）",
@@ -976,11 +1531,13 @@
         },
         "artist_introduction/express/2021": {
           "name": "アーティスト紹介",
-          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "ビデオ"
         },
         "turns_angles/express/2021": {
           "name": "回転と角度",
-          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "ビデオ"
         },
         "turns_angles_1/express/2021": {
           "name": "回転と角度",
@@ -1008,7 +1565,8 @@
         },
         "pause_and_think_online/express/2021": {
           "name": "オンラインでたちどまって考える",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ビデオ"
         },
         "dance-party-project-guide/express/2021": {
           "name": "ダンスパーティープロジェクトガイド",
@@ -1024,7 +1582,8 @@
         },
         "pair_programming_video/express/2021": {
           "name": "ペアプログラミング",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "ビデオ"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
           "name": "アンプラグドブロック（コースC-F）",
@@ -1056,11 +1615,13 @@
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "CSFエクスプレスコース最終プロジェクト計画ガイド",
-          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
+          "type": "プロジェクトガイド"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "コンピュータサイエンスの基礎 最終プロジェクト",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "ルーブリック"
         },
         "csta_standards_mapping/express/2021": {
           "name": "CSTA標準マッピング",
@@ -1092,15 +1653,18 @@
         },
         "20_20_20_rule/pre-express/2021": {
           "name": "20/20/20ルール",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "ビデオ"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "name": "体を動かす - GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "ビデオ"
         },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "オンラインでたちどまって考える",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ビデオ"
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "CSTA標準マッピング",
@@ -1131,34 +1695,56 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "name": "スーパーデジタルシティズンになる：レッスンスライド",
           "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
           "name": " スーパー デジタル市民",
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "name": "プライベート情報および個人情報：レッスンスライド",
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+        },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": "プライベート情報および個人情報：プライベート情報および個人情報",
           "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
         },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "name": "プライベート情報および個人情報：退室チケット",
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "学生用資料"
+        },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "name": "プライベート情報および個人情報：レッスンスクイズ",
           "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy"
         },
         "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "name": "プライベート情報および個人情報：レッスンスクイズ",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz"
         },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "オンラインでたちどまって考える",
-          "url": "https://youtu.be/X_duZ-1LApg"
+          "url": "https://youtu.be/X_duZ-1LApg",
+          "type": "ビデオ"
         },
         "about_me_planning_guide/coursee/2021": {
+          "name": "「私について」計画ガイド",
           "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview"
         },
+        "digital-sharing-lesson/coursee/2021": {
+          "name": "「デジタルシェアリング」レッスンプラン",
+          "url": "https://docs.google.com/document/d/1YZCCjahQ9_3jYaCeZU4J4-Y_e7_6xP_XMJ7bNw1au1w/edit?usp=sharing"
+        },
         "digital-sharing-video/coursee/2021": {
-          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
+          "name": "デジタルシェアリングの倫理（ビデオ）",
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
+          "type": "ビデオ"
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "回転と角度",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "学生用資料"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "回転と角度",
@@ -1178,7 +1764,8 @@
         },
         "csf-songwriting-assessment/coursee/2021": {
           "name": "関数アンプラグド：ソングライティング",
-          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit"
+          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
+          "type": "評価"
         },
         "assessment-answer-songwriting/coursee/2021": {
           "name": "関数アンプラグド：ソングライティング",
@@ -1202,15 +1789,16 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "コンピュータサイエンスの基礎 最終プロジェクト",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "ルーブリック"
         },
         "design-process/coursee/2021": {
           "name": "設計プロセス",
           "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "生徒が知っていることを示すための72の創造的な方法",
-          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/><http://minds-in-bloom.com/72-creative-ways-for-students-to-show/"
+          "name": "生徒の知識を確認する72の創造的な方法",
+          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/"
         },
         "csta_standards_mapping/coursee/2021": {
           "name": "CSTA標準マッピング",
@@ -1259,6 +1847,613 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "バーチャルレッスンの変更",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk><https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "ビデオ"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "人工知能を見る",
+          "type": "ビデオ"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "ビデオ"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "ビデオ"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "ビデオ"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "人工知能（AI）：トレーニングデータとバイアス",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "ビデオ"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "ビデオ"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "ビデオ"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "ビデオ"
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "学生用資料"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "ビデオ"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "ルーブリック"
+        },
+        "survey_planning/csd/2021": {
+          "name": "データ収集の設計"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "ビデオ"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "ビデオ"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "ルーブリック"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "ビデオ"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "復習"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "紙のプロトタイプ",
+          "type": "ルーブリック"
+        },
+        "market-research/csd/2021": {
+          "name": "市場調査"
+        },
+        "market_research/csd/2021": {
+          "name": "市場調査"
+        },
+        "design_mode/csd/2021": {
+          "name": "設計モード"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "ビデオ"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "ビデオ"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "設計モード"
+        },
+        "multi-screen_apps/csd/2021": {
+          "name": "マルチスクリーンアプリ"
+        },
+        "responding_to_user_input/csd/2021": {
+          "name": "ユーザー情報に返答"
+        },
+        "app-presentation/csd/2021": {
+          "name": "アプリのプレゼンテーション",
+          "type": "ルーブリック"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "アプリのプレゼンテーション"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "先生用フォーラム"
+        },
+        "computing-innovations/csd/2021": {
+          "name": "コンピューティングイノベーション"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "ビデオ"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "コンピューター サイエンスはすべてを変えています",
+          "type": "ビデオ"
+        },
+        "responding_to_user_input_1/csd/2021": {
+          "name": "ユーザー情報に返答"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "コンピューターの仕組み：ハードウェア＆ソフトウェア",
+          "type": "ビデオ"
+        },
+        "board_events/csd/2021": {
+          "name": "ボードイベント"
+        },
+        "physical_input/csd/2021": {
+          "name": "物理的な入力"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "ビデオ"
+        },
+        "emoji-race-guide/csd/2021": {
+          "type": "プロジェクトガイド"
+        },
+        "functions_2/csd/2021": {
+          "name": "関数(かんすう) "
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "ルーブリック"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Introduction to Arrays",
+          "type": "ビデオ"
+        },
+        "playing_notes/csd/2021": {
+          "name": "音符で遊ぶ"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "ループ用",
+          "type": "ビデオ"
+        },
+        "for_loops/csd/2021": {
+          "name": "ループ用"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "加速度計イベント"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "コンピューターの仕組み：回路＆ロジック",
+          "type": "ビデオ"
+        },
+        "physical-prototyping-project/csd/2021": {
+          "type": "プロジェクトガイド"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "ルーブリック"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "プロジェクトガイド"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "表現が重要"
+        },
+        "representation-matters/csd/2021": {
+          "name": "表現が重要"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "情報の表現"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "ビデオ"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "数値の表現"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "ルーブリック"
+        },
+        "structuring_data/csd/2021": {
+          "name": "データの構造化"
+        },
+        "interpreting-data-exemplar-2019/csd/2021": {
+          "name": "データの解釈"
+        },
+        "interpreting-data/csd/2021": {
+          "name": "データの解釈"
+        },
+        "interpreting-data-1/csd/2021": {
+          "name": "データの解釈"
+        },
+        "making-decisions-with-data/csd/2021": {
+          "name": "データを使った決定"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "name": "データ決定の自動化"
+        },
+        "data-decisions-resource/csd/2021": {
+          "name": "データ決定の自動化"
+        },
+        "automating-data-decisions-1/csd/2021": {
+          "name": "データ決定の自動化"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "ビデオ"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "ビデオ"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "ビデオ"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "name": "現実世界のデータ"
+        },
+        "data-in-the-real-world/csd/2021": {
+          "name": "現実世界のデータ"
+        },
+        "video_impact_on_society/csd/2021": {
+          "name": "ビデオ: 社会への影響",
+          "type": "ビデオ"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "ビデオ: 機械学習",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk><https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "ビデオ"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "name": "ビデオ:トレーニングデータとバイアス",
+          "type": "ビデオ"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "ピア ・ レビュー"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "ルーブリック"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "プロジェクトガイド"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "ビデオ"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "ビデオ"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "ビデオ"
+        },
+        "variables_1/csd/2021": {
+          "name": "変数（へんすう）"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "ビデオ"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "[アニメーション] タブ",
+          "type": "ビデオ"
+        },
+        "sprites_1/csd/2021": {
+          "name": "スプライト"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "スプライトのプロパティ"
+        },
+        "captioned-scenes/csd/2021": {
+          "type": "ルーブリック"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "ビデオ"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "ビデオ"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "スプライトの動き",
+          "type": "ビデオ"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "ルーブリック"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "ブール式",
+          "type": "ビデオ"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "条件文",
+          "type": "ビデオ"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "If/Else 文",
+          "type": "ビデオ"
+        },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "type": "プロジェクトガイド"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "ピア ・ レビュー"
+        },
+        "interactive_card/csd/2021": {
+          "type": "ルーブリック"
+        },
+        "velocity_1/csd/2021": {
+          "name": "速度",
+          "type": "ビデオ"
+        },
+        "velocity_2/csd/2021": {
+          "name": "速度"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "スライドスクローラー",
+          "type": "ルーブリック"
+        },
+        "side-scroller/csd/2021": {
+          "name": "スライドスクローラー",
+          "type": "プロジェクトガイド"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "速度とカウンターパターン"
+        },
+        "flyer-game-1/csd/2021": {
+          "name": "フライヤーゲーム",
+          "type": "ルーブリック"
+        },
+        "flyer-game/csd/2021": {
+          "name": "フライヤーゲーム",
+          "type": "プロジェクトガイド"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "関数(かんすう) ",
+          "type": "ビデオ"
+        },
+        "functions_1/csd/2021": {
+          "name": "関数(かんすう) "
+        },
+        "make-your-own-game/csd/2021": {
+          "type": "プロジェクトガイド"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "ピア ・ レビュー"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "ルーブリック"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "先生用フォーラム"
+        },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "問題解決プロセス"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "問題解決プロセス",
+          "type": "ビデオ"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "The Problem Solving Process"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "問題解決プロセス"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "ビデオ"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "入出力"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "入出力"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "ビデオ"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "アプリと問題解決"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "アプリと問題解決",
+          "type": "ピア ・ レビュー"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "アプリと問題解決",
+          "type": "ルーブリック"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "ウェブページの探索"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "ウェブページの探索"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "ビデオ"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "ビデオ"
+        },
+        "video_pair_programming/csd/2021": {
+          "name": " ペアプログラミング",
+          "type": "ビデオ"
+        },
+        "video_debugging/csd/2021": {
+          "name": "ビデオ: デバッグ",
+          "type": "ビデオ"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "ルーブリック"
+        },
+        "html-web-page/csd/2021": {
+          "type": "ピア ・ レビュー"
+        },
+        "html-page/csd/2021": {
+          "type": "プロジェクトガイド"
+        },
+        "lists/csd/2021": {
+          "name": "リスト"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "デジタルフットプリント"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "社会的な警告"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "社会的な警告"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "CSS - パート 1 はじめに",
+          "type": "ビデオ"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "CSS - パート 2 はじめに",
+          "type": "ビデオ"
+        },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "ルーブリック"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "ピア ・ レビュー"
+        },
+        "your-personal-style/csd/2021": {
+          "type": "プロジェクトガイド"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "ビデオ"
+        },
+        "person-web-page-prepare/csd/2021": {
+          "type": "プロジェクトガイド"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "ピア ・ レビュー"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "プロジェクトガイド"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "ルーブリック"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "ウェブサイトの公開",
+          "type": "ビデオ"
+        },
+        "websites-for-a-purpose-2020/csd/2021": {
+          "name": "ある目的のためのウェブサイト"
+        },
+        "websites-for-a-purpose/csd/2021": {
+          "name": "ある目的のためのウェブサイト"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": " ビデオ: 不一致の管理",
+          "type": "ビデオ"
+        },
+        "how-teamwork-works/csd/2021": {
+          "name": "ビデオ: チームワーク",
+          "type": "ビデオ"
+        },
+        "how-search-works-video/csd/2021": {
+          "name": "ビデオ: 検索の仕組み",
+          "type": "ビデオ"
+        },
+        "classes/csd/2021": {
+          "name": "クラス"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "ルーブリック"
+        },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "プロジェクトガイド"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "ピア ・ レビュー"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "プロジェクトガイド"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "授業計画"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "語彙"
+        },
+        "lesson_plans/express/2020": {
+          "name": "授業計画"
+        },
+        "standard_mappings/express/2020": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/express/2020": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/express/2020": {
+          "name": "語彙"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "カリキュラム ガイド"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "授業計画"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "語彙"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "カリキュラム ガイド"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "語彙"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "カリキュラム ガイド"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "語彙"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "カリキュラム ガイド"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "語彙"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "カリキュラム ガイド"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "語彙"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "カリキュラム ガイド"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "授業計画"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "標準マッピング"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "先生用フォーラム"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "語彙"
         }
       }
     }

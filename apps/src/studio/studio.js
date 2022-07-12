@@ -55,6 +55,7 @@ import project from '../code-studio/initApp/project';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import {parseElement} from '../xml';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
+import {muteCookieWithLevel} from '../util/muteCookieHelpers';
 import {
   showArrowButtons,
   dismissSwipeOverlay
@@ -2200,8 +2201,18 @@ Studio.init = function(config) {
   Studio.musicController = new MusicController(
     Sounds.getSingleton(),
     skin.assetUrl,
-    levelTracks
+    levelTracks,
+    undefined,
+    muteCookieWithLevel(config.level)
   );
+
+  config.muteBackgroundMusic = function() {
+    Studio.musicController.setMuteMusic(true);
+  };
+
+  config.unmuteBackgroundMusic = function() {
+    Studio.musicController.setMuteMusic(false);
+  };
 
   /**
    * Defines the set of possible movement sound effects for each playlab actor.
@@ -2246,6 +2257,8 @@ Studio.init = function(config) {
     );
     showInstructions();
   };
+
+  config.level.levelTracks = levelTracks;
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -3050,7 +3063,6 @@ Studio.displayFeedback = function() {
     const saveToProjectGallery = PUBLISHABLE_SKINS.includes(skin.id);
     const isSignedIn =
       getStore().getState().currentUser.signInState === SignInState.SignedIn;
-
     studioApp().displayFeedback({
       feedbackType: Studio.testResults,
       executionError: Studio.executionError,
@@ -3070,7 +3082,8 @@ Studio.displayFeedback = function() {
       disableSaveToGallery: !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
-      disablePrinting: level.disablePrinting
+      // Currently only true for Artist levels
+      enablePrinting: level.enablePrinting
     });
   }
 };
@@ -3130,8 +3143,8 @@ var registerHandlers = function(
     var block = blocks[x];
     // default title values to '0' for case when there is only one sprite
     // and no title value is set through a dropdown
-    var titleVal1 = block.getTitleValue(nameParam1) || '0';
-    var titleVal2 = block.getTitleValue(nameParam2) || '0';
+    var titleVal1 = block.getFieldValue(nameParam1) || '0';
+    var titleVal2 = block.getFieldValue(nameParam2) || '0';
     if (
       block.type === blockName &&
       (!nameParam1 || matchParam1Val === titleVal1) &&
@@ -3392,7 +3405,7 @@ Studio.checkExamples_ = function() {
     var name = unfilled
       .getRootBlock()
       .getInputTargetBlock('ACTUAL')
-      .getTitleValue('NAME');
+      .getFieldValue('NAME');
     outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
     return outcome;
   }

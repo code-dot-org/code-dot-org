@@ -4,15 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "flappy",
-    "serialized_at": "2021-09-29 21:38:44 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-03-17 22:44:20 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "flappy"
     }
@@ -279,6 +282,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -300,6 +306,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -321,6 +330,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -342,6 +354,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -363,6 +378,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -384,6 +402,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -405,6 +426,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -426,6 +450,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -447,6 +474,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -468,6 +498,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -675,16 +708,6 @@
   ],
   "objectives": [
     {
-      "key": "6394fdc5-50c3-423e-8135-a64594824db3",
-      "properties": {
-        "description": "Define “coding” and “computer science”"
-      },
-      "seeding_key": {
-        "lesson.key": "Flappy Code",
-        "objective.key": "6394fdc5-50c3-423e-8135-a64594824db3"
-      }
-    },
-    {
       "key": "36208a0a-f319-4d09-ad20-46f8d68c0ff4",
       "properties": {
         "description": "Identify key computer science vocabulary"
@@ -692,6 +715,16 @@
       "seeding_key": {
         "lesson.key": "Flappy Code",
         "objective.key": "36208a0a-f319-4d09-ad20-46f8d68c0ff4"
+      }
+    },
+    {
+      "key": "6394fdc5-50c3-423e-8135-a64594824db3",
+      "properties": {
+        "description": "Define “coding” and “computer science”"
+      },
+      "seeding_key": {
+        "lesson.key": "Flappy Code",
+        "objective.key": "6394fdc5-50c3-423e-8135-a64594824db3"
       }
     },
     {
@@ -716,6 +749,62 @@
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Flappy Code",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "6.SL.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Flappy Code",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "7.SL.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Flappy Code",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Flappy Code",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Flappy Code",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Flappy Code",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Flappy Code",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Flappy Code",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.8"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Flappy Code",
@@ -805,62 +894,6 @@
         "lesson.key": "Flappy Code",
         "framework.shortcode": "iste",
         "standard.shortcode": "6.d"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Flappy Code",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "6.SL.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Flappy Code",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "7.SL.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Flappy Code",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Flappy Code",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Flappy Code",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Flappy Code",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Flappy Code",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Flappy Code",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.8"
       }
     }
   ],

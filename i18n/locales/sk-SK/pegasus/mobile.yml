@@ -15,7 +15,7 @@
   csedweek_banner_teachers_text: "Učíte informatiku? Pozrite sa aj na naše ďalšie materiály "
   n_have_learned_an_hoc: "<h1>Skús</h1> <h2>Hodinu Kódu</h2> <h3># účastníkov</h3>"
   try_hoc_num_served: "<h1>Skús</h1><h2>Hodinu Kódu</h2><h3>%{num} účastníkov</h3>"
-  anybody_can_learn: "Každý sa môže naučiť."
+  anybody_can_learn: "Učiť sa môže každý"
   learn_now: "Nauč sa teraz"
   petition_message: "Aby každý študent na každej škole dostal možnosť študovať informatiku"
   petition_sign_message: 'Ak súhlasíš, zapíš sa a pridaj sa k nášmu mailing listu spolu s # ďalšími.'
@@ -28,7 +28,7 @@
   submit: "Odoslať"
   twentyhours_heading: "Vyskúšajte nás kurz Úvod do informatiky"
   twentyhours_text: "Hotový s prvou Hodinou Kódu? Nauč sa viac o informatike a základné koncepty programovania v nasledujúcom kurze."
-  og_title: 'Code.org: Ktokoľvek sa môže naučiť'
+  og_title: 'Code.org: Učiť sa môže každý'
   og_title_soon: "Hodina Kódu sa blíži"
   og_title_here: "Hodina Kódu je tu!"
   og_description: "Každý študent v každej škole si zaslúži možnosť študovať informatiku."
@@ -152,7 +152,9 @@
   thanks_for_submitting: "Ďakujeme za odoslanie!"
   if_you_enjoyed: "Ak sa ti hodina páčila, opýtaj sa priateľov či to chcú skúsiť tiež! Chceme, aby sa celý svet mohol učiť."
   personalize_certificate: "Prispôsob si svoj certifikát"
+  print_batch_certificates: "Vytlačiť viacero certifikátov"
   print_certificates: "Vytlačiť certifikáty"
+  certificate_sponsor_message: "%{sponsor_name} prispel(a) štedrým darom na podporu tvojho učenia."
   share_achievement: "Zdieľaj svoj úspech"
   beyond_hour_message: "Pokračujte s našimi <a href='http://studio.code.org'>ďalšími kurzami</a> alebo si prezrite možnosti ako pokračovať vo <a href='/learn/beyond'>výučbe po prvej hodine</a>."
   leaderboards_for_hoc: "Rebríčky pre Hour of Code."
@@ -169,7 +171,7 @@
   thanks_for_voting: "Vďaka za hlasovanie!"
   share_on_facebook: "Zdieľať na Facebooku"
   share_on_twitter: "Zdieľať na Twitteri"
-  beyond_an_hour: "Ako ďalej po Hodine Kódu"
+  beyond_an_hour: "Ako ďalej po Hodine kódu"
   get_started: "Spustiť"
   i_agree: "Súhlasím"
   participant_select: "-Vybrať-"
@@ -238,7 +240,7 @@
   studiobar_hoc_title: "Hodina Kódu"
   studiobar_hoc_body: "Nauč sa programovať s Angry Birds"
   studiobar_flappy_title: "Flappy kód"
-  studiobar_flappy_body: "Vytvor a zdieľaj svoju vlastnú hru Flappy"
+  studiobar_flappy_body: "Vytvor a zdieľaj svoju vlastnú hru v štýle Flappy Bird"
   studiobar_teacher_title: "Pripravené pre učitelov"
   studiobar_teacher_body: "Predstavte Code.org vašej triede"
   studiobar_frozen_title: "Hodina Kódu"
@@ -337,7 +339,7 @@
   homepage_banner_emailprivacy_link: "Prečítaj si viac"
   homepage_banner_40k_teachers_link: "Zistiť viac"
   homepage_slot_text_title_hoc: "Hodina Kódu"
-  homepage_slot_text_blurb_hoc: "Učiť sa môže každý. Začni dnes"
+  homepage_slot_text_blurb_hoc: "Učiť sa môže každý. Začni už dnes!"
   homepage_slot_text_link_hoc: "Vyskúšaj Hodinu Kódu"
   homepage_slot_text_link_about_hoc: "O Hodine Kódu"
   homepage_slot_text_link_host: "Usporiadaj u vás Hodinu kódu"
@@ -429,7 +431,7 @@
   mc_specs: "Mnoho jazykov| Moderné prehliadače a tablety | Vek 6-106 rokov"
   minecraft_agent: "Minecraft Cesta Hrdinu"
   minecraft_designer: "Minecraft Dizajnér"
-  minecraft_adventurer: "Minecraft Objavovateľ"
+  minecraft_adventurer: "Minecraft: Dobrodruh"
   minecraft_tutorials: "Kurz Minecraft Hodina Kódu"
   minecraft_specs: "Veľa jazykov | Moderné prehliadače a tablety | Ročník 2+"
   minecraft_start_tutorial: "Spustiť kurz"
@@ -440,7 +442,7 @@
   minecraft_adventurer_description: "Pomocou kódu vezmi Alex alebo Steva na cestu za dobrodružstvom."
   minecraft_adventurer_button: "Spustiť"
   minecraft_no_internet: "Nemáš internet?"
-  minecraft_download_adventurer: "Stiahni si offline verziu Minecraft Objavovateľa."
+  minecraft_download_adventurer: "Stiahni si offline verziu kurzu Minecraft: Dobrodruh."
   minecraft_subtitle: "Minecraft Hodina Kódu"
   minecraft_store_camps: "Bezplatné kempy Hodiny Kódu s Minecraftom v Microsoft Obchode"
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Prihláste sa </a> na semináre Minecraft - Hodina Kódu zadarmo v Microsoft Obchodoch v Austrálii, Kanade, Portoriku alebo v USA. Zistíte, že programovanie je vhodné pre každého, že kombinuje kreativitu so schopnosťou riešiť problémy a že zároveň prináša veľa zábavy."
@@ -456,11 +458,11 @@
   minecraft_og_designer: "Minecraft je späť s novou aktivitou pre Hodinu Kódu. Naprogramuj zvieratá a iné postavy z Minecraftu v tvojej vlastnej verzii Minecraftu."
   minecraft_og_agent: "Minecraft je späť v Hodine Kódu a ty sa stávaš hrdinom! Napíš kód, ktorý ti umožní cestovať svetom Minecraftu."
   sports_page_title: "Hodina Kódu Športy"
-  sports_og_title: "Premôž sa. Každý sa dokáže naučiť."
+  sports_og_title: "Prekonávaj svoje limity. Učiť sa môže každý!"
   sports_og_description: "Majstri aj zlatí medajlisti ťa vyzývajú k Hodine Kódu. Nakóduj si vlastný zápas."
   sports_title: "Naprogramuj si vlastný zápas"
   sports_watch_video: "Pozri si video"
-  sports_video_title: "Premôž sa. Každý sa dokáže naučiť."
+  sports_video_title: "Prekonávaj svoje limity. Učiť sa môže každý!"
   sports_select_theme: "Zvoľ si vlastnú tému kurzu"
   sports_basketball_title: "Vytvor basketbalový zápas"
   sports_all_sports_title: "Pomiešaj športy"
@@ -489,9 +491,9 @@
   video_title_cs_intro: "Úvod do Sveta Technológií"
   video_title_schools_dont_teach: "Čo väčšina škôl nevyučuje"
   video_title_obama: "Prezident Obama na informatike"
-  video_title_hoc_is_here: "Hodina Kódu je tu - učiť sa môže každý"
-  video_title_anybody_can_learn: "Ktokoľvek sa môže učiť"
-  video_title_steph_curry: "Hodina Kódu so Steph Curry"
+  video_title_hoc_is_here: "Hodina Kódu je tu – učiť sa môže každý"
+  video_title_anybody_can_learn: "Učiť sa môže každý"
+  video_title_steph_curry: "Hodina Kódu so Stephom Currym"
   video_title_draymond_green: "Hodine Kódu s Draymond Green"
   video_title_russell_okung: "Hodina Kódu s Russell Okung"
   video_title_real_madrid: "Hodinu Kódu s Real Madrid"
@@ -758,7 +760,7 @@
   dashboard_implementation_guide: "Implementačná Príručka"
   dashboard_glossary: "Slovník pojmov"
   dashboard_classroom_strategies: "Stratégie výučby pre učiteľov"
-  dashboard_debugging: 'Hľadanie a odstraňovanie chýb:'
+  dashboard_debugging: 'Ladenie:'
   dashboard_puzzle_solving: 'Riešenie úloh:'
   dashboard_student_worksheet: "pracovný zošit študenta"
   dashboard_teacher_worksheet: "pracovný zošit učiteľa"
@@ -789,7 +791,7 @@
   dashboard_multi_count: "# otázok s výberom odpovede"
   dashboard_multi_correct_percent: "% správnych odpovedí"
   dashboard_submission_timestamp: "Časová pečiatka odoslania"
-  stats_hoc_2013_heading: 'Neuveriteľná štatistika z minuloročnej Hodiny Kódu. Behom jediného týždňa:'
+  stats_hoc_2013_heading: 'Neuveriteľné štatistiky z minuloročnej Hodiny Kódu. Za jediný týždeň:'
   stats_hoc_2013_image_alt: "Štatistika z Hodiny Kódu 2013"
   dashboard_teacher: "Učiteľ"
   dashboard_student: "Študent"
@@ -950,6 +952,7 @@
   coursee-2020_name: Kurz E (2019)
   coursef-2020_name: Kurz F (2019)
   coursed-2021_name: Kurz D (2021)
+  coursed-2022_name: Kurz D (2021)
   express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
   express-2019_name: Zrýchlený kurz (2019)
@@ -1062,6 +1065,18 @@
   coursed-2020_gradelevel: Vek 7-11
   coursee-2020_gradelevel: Vek 8-12
   coursef-2020_gradelevel: Vek 9-13
+  coursea-2021_gradelevel: Vek 4-7
+  courseb-2021_gradelevel: Vek 5-8
+  coursec-2021_gradelevel: Vek 6-10
+  coursed-2021_gradelevel: Vek 7-11
+  coursee-2021_gradelevel: Vek 8-12
+  coursef-2021_gradelevel: Vek 9-13
+  coursea-2022_gradelevel: Vek 4-7
+  courseb-2022_gradelevel: Vek 5-8
+  coursec-2022_gradelevel: Vek 6-10
+  coursed-2022_gradelevel: Vek 7-11
+  coursee-2022_gradelevel: Vek 8-12
+  coursef-2022_gradelevel: Vek 9-13
   accelerated_gradelevel: "Vek 10-18"
   codeorg_platformtext: "Moderné prehliadače, smartfóny, tablety"
   codeintl_platformtext: "Moderné prehliadače, smartfóny, tablety"
@@ -1196,6 +1211,11 @@
   coursec-2021_shortdescription_congrats: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
   coursed-2021_shortdescription_congrats: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania sa oboznámia aj s významom pojmu "digitálne občianstvo".
   coursee-2021_shortdescription_congrats: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
+  coursea-2022_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
+  courseb-2022_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
+  coursec-2022_shortdescription_congrats: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
+  coursed-2022_shortdescription_congrats: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania sa oboznámia aj s významom pojmu "digitálne občianstvo".
+  coursee-2022_shortdescription_congrats: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
   codeorg_longdescription: "Nauč sa základné koncepty informatiky pomocou vizuálneho blokového programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč sa príkazy opakovania, rozhodovania a základné algoritmy. Dostupné v 34 jazykoch."
   codeintl_longdescription: "Nauč sa základné koncepty informatiky pomocou vizuálneho blokového programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč sa príkazy opakovania, rozhodovania a základné algoritmy. Dostupné v 34 jazykoch."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1382,6 +1402,7 @@
   compatibility_hide_this_warning: "Skryť toto upozornenie"
   compatibility_unsupported_browser: "Váš ineternetový prehliadač nepodporujeme. Prosím aktualizujte si váš ineternetový prehliadač, <a href='%{supported_browsers_url}', target='_blank'> na jeden z našich podporovaných prehliadačov</a>. Môžete si pozrieť stránku, ale očakávajte poruchy niektorých funckionalít."
   compatibility_unsupported_browser_markdown: "Váš ineternetový prehliadač nepodporujeme. Prosím aktualizujte si váš ineternetový prehliadač, <a href='%{supported_browsers_url}', target='_blank'> na jeden z našich podporovaných prehliadačov</a>. Môžete si pozrieť stránku, ale očakávajte poruchy niektorých funckionalít."
+  hourofcode_shortcode: "Kódovanie"
   flappy_shortcode: "mávni"
   infinity_shortcode: "inf"
   header_home: "Domov"
@@ -1468,13 +1489,13 @@
   syncing_students: "Synchronizujeme vašich študentov"
   syncing_students_instructions: 'Ak zoznam študentov vo vašej Code.org triede nie je aktuálny oproti vašej Google Classroom, kliknite na tlačidlo "Sunchronizovať študentov z Google Classroom" na záložke "Správa študentov":'
   google_sign_in_instruct: 'Odtiaľto by si mali vybrať možnosť "Prihlásiť sa Google kontom":'
-  hero_name: 'Minecraft: Cesta Hrdinu'
+  hero_name: 'Minecraft: Cesta hrdinu'
   applab-intro_name: Úvod do App Lab
   applab_tile_title: "Úvod do App Labu (Vek 13+)"
   applab_tile_subtitle: "Vytvor vlastnú appku v JavaScripte pomocou blokového programovania. Alebo sa posuň ešte ďalej a program napíš v texte."
   applab_tile_start_tutorial: "Spustiť"
   applab_tile_teacher_guide: "Zobraziť príručku pre učiteľa"
-  aquatic_name: 'Minecraft Vodné Dobrodužstvo'
+  aquatic_name: 'Minecraft: Vodné dobrodužstvo'
   account_sign_up_email_opt_in: "Môžeme vám zasielať emailom aktualizácie o lekciách, možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike? (približne raz za mesiac)"
   account_sign_up_child_accept_terms: "Potvrdzujem, že mám súhlas rodiča alebo zákonného zástupcu používať stránkua služby Code.org."
   hoc_overview_dance_title: "Tanečná Párty"
@@ -1507,11 +1528,11 @@
   hoc2018_mc_hero_description: "Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po Minecrafte s kódom."
   hoc2018_mc_designer_title: "Minecraft Dizajnér"
   hoc2018_mc_designer_description: "Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft."
-  hoc2018_mc_adventurer_title: "Minecraft Objavovateľ"
+  hoc2018_mc_adventurer_title: "Minecraft: Dobrodruh"
   hoc2018_mc_adventurer_description: "Pomocou kódu vezmi Alex alebo Steva na cestu za dobrodružstvom."
   hoc2018_mc_start: "Spustiť"
   hoc2018_mc_no_internet: "Nemáš internet?"
-  hoc2018_mc_download_adventurer: "Stiahni si offline verziu Minecraft Objavovateľa."
+  hoc2018_mc_download_adventurer: "Stiahni si offline verziu kurzu Minecraft: Dobrodruh."
   hoc2018_mc_educators: "Pre učiteľov"
   hoc2018_mc_educators_box1_title: "Programovať s Minecraftom"
   hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition obsahuje kompletné učebné osnovy pre vyučovanie programovania v Minecrafte.'
@@ -1532,15 +1553,15 @@
   hoc2018_mc_video_2min: "2 min"
   hoc2018_mc_video_3min: "3 minúty"
   hoc2018_mc_video_5min: "5 min"
-  hoc2018_mc_video_title_steph_curry: "Hodina Kódu so Steph Curry"
-  hoc2018_mc_video_title_sports: "Premôž sa. Každý sa dokáže naučiť."
+  hoc2018_mc_video_title_steph_curry: "Hodina Kódu so Stephom Currym"
+  hoc2018_mc_video_title_sports: "Prekonávaj svoje limity. Učiť sa môže každý!"
   hoc2018_mc_video_title_cs_is_everything: "Informatika mení svet okolo nás"
   hoc2018_mc_video_title_inspire_girl: "Inšpiruj dievča"
   hoc2018_mc_video_title_cs_intro: "Úvod do Sveta Technológií"
   hoc2018_mc_video_title_schools_dont_teach: "Čo väčšina škôl nevyučuje"
   hoc2018_mc_video_title_obama: "Prezident Obama na informatike"
-  hoc2018_mc_video_title_hoc_is_here: "Hodina Kódu je tu - učiť sa môže každý"
-  hoc2018_mc_video_title_anybody_can_learn: "Ktokoľvek sa môže učiť"
+  hoc2018_mc_video_title_hoc_is_here: "Hodina Kódu je tu – učiť sa môže každý"
+  hoc2018_mc_video_title_anybody_can_learn: "Učiť sa môže každý"
   hoc2018_mc_video_title_my_name_is_aracely: "Volám sa Aracely"
   hoc2018_mc_homepage_hoc_coming: "Hodina Kódu sa blíži..."
   hoc2018_mc_homepage_what_create: "Čo vytvoríš ty?"
@@ -1564,7 +1585,7 @@
   hoc2018_dance_party_box_description: "Nakóduj si vlastnú Tanečnú párty a zdieľaj ju kamarátmi!"
   hoc2018_dance_party_specs: "Jazyk | Formát | Vek 6-106"
   hoc2018_dance_party_button: "Spustiť"
-  hoc2018_dance_keep_on_dancing_box_title: "Pokračuj v tancovaní"
+  hoc2018_dance_keep_on_dancing_box_title: "Neprestávaj tancovať"
   hoc2018_dance_keep_on_dancing_description: "Pokračuj za hranice prvej hodiny s nápadmi na ďalšie projekty."
   hoc2018_dance_keep_on_dancing_specs: "Jazyk | Formát | Vek 13+"
   hoc2018_dance_keep_on_dancing_button: "Spustiť časť 2"
@@ -1600,17 +1621,34 @@
   page_not_found_description: "Stránka, ktorú hľadáte na tejto adrese neexistuje. Skontrolujte adresu a zadajte ju znova. Alebo prejdite na našu domovskú stránku."
   page_not_found_button: "Späť na domovskú stránku"
   hoc2018_mc_with_microsoft: "V spolupráci s"
+  homepage_slot_text_title_at_home: "Učenie na doma"
+  page_not_available_title: "Stránka je nedostupná"
   page_not_available_button: "Späť na domovskú stránku"
+  hoc2020_mc_available_mee: 'Dostupné v Minecrafte: verzia pre vzdelávanie'
+  hoc2021_mc_mee_title: "Minecraft TimeCraft"
+  hoc2021_mc_mee_description: 'Cestujte späť v čase a naučte sa programovať! Nový tutoriál Minecraft Hour of Code je teraz dostupný v hre Minecraft: vzdelávacie vydanie pre Windows, Mac, Chromebook a iPad. Začnite s bezplatnými zdrojmi pre pedagógov a videami.'
+  hoc2021_mc_mee_villages_title: "Rozprávka o dvoch dedinách"
+  hoc2021_mc_mee_villages_description: 'Naučte sa základy programovania a objavte diverzitu a inklúziu so svojimi žiakmi v hre Minecraft: vzdelávacie vydanie'
+  hoc2021_mc_mee_ai_title: "Umelá inteligencia pre dobro"
+  hoc2021_mc_mee_ai_description: 'Objavte AI so svojimi žiakmi a naučte sa programovať v hre Minecraft: vzdelávacie vydanie'
   footer_powered_by_aws: "Poháňaný službami Amazon Web Services"
   codebytes_skinny_banner_english_only: "Len v anglickom jazyku"
   footer_privacy_policy: "Zásady ochrany súkromia"
   footer_about: "O nás"
   footer_partners: "Partneri"
+  footer_blog: "Blog"
   footer_donate: "Prispejte"
+  footer_store: "Obchod"
   footer_support: "Podpora"
   footer_terms: "Podmienky"
   ai_for_oceans: "AI pomáha oceánom"
   ai_for_oceans_lesson_plan: "učebný plán"
+  how_ai_works: "Ako funguje umelá inteligencia"
+  view_lesson_plan: "Zobraziť plán lekcie"
   ai_in_partnership_with: "V spolupráci s"
+  cs_for_good: "Počítačová veda na dobré účely"
   ai_activity: "Aktivita"
   ai_description: "Popis"
+  ai_ibm_machine_learning_for_kids: 'IBM: strojové učenie pre deti'
+  outbreak_tile_title: "Nákaza"
+  outbreak_tile_subtitle: "Mesto Monster Town napadol vírus! Naprogramujte simulátor ohniska a skúste urobiť predpovede, čo sa stane so susedmi mesta Monster Town."

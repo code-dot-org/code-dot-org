@@ -25,16 +25,16 @@ class Pd::ScholarshipInfo < ApplicationRecord
   include Pd::Application::ApplicationConstants
   include Pd::WorkshopConstants
   include Pd::ScholarshipInfoConstants
+  include Pd::SharedApplicationConstants
 
   # We began using scholarships in 2019-2020, so remove 2018-2019 from this list
   SCHOLARSHIP_YEARS = APPLICATION_YEARS.drop(1).freeze
 
   belongs_to :user
-  belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
-  belongs_to :application, class_name: 'Pd::Application::TeacherApplication', foreign_key: :pd_application_id
+  belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id, optional: true
+  belongs_to :application, class_name: 'Pd::Application::TeacherApplication', foreign_key: :pd_application_id, optional: true
 
   validate :scholarship_must_be_valid_for_course
-  validates_presence_of :user_id
   validates_inclusion_of :application_year, in: SCHOLARSHIP_YEARS
   validates_inclusion_of :course, in: COURSE_KEY_MAP.values
 

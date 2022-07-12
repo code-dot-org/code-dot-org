@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
-import {PublishedState} from '@cdo/apps/util/sharedConstants';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import Button from '../../templates/Button';
 
 export default class CourseVersionPublishingEditor extends Component {
   static propTypes = {
@@ -17,9 +18,11 @@ export default class CourseVersionPublishingEditor extends Component {
     isCourse: PropTypes.bool,
     updateIsCourse: PropTypes.func,
     showIsCourseSelector: PropTypes.bool,
+    initialPublishedState: PropTypes.string.isRequired,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
     updatePublishedState: PropTypes.func.isRequired,
-    preventCourseVersionChange: PropTypes.bool
+    preventCourseVersionChange: PropTypes.bool,
+    courseOfferingEditorLink: PropTypes.string
   };
 
   constructor(props) {
@@ -33,6 +36,7 @@ export default class CourseVersionPublishingEditor extends Component {
 
   handlePublishedStateChange = event => {
     const newPublishedState = event.target.value;
+
     this.props.updatePublishedState(newPublishedState);
     if (newPublishedState !== PublishedState.pilot) {
       this.props.updatePilotExperiment('');
@@ -52,6 +56,53 @@ export default class CourseVersionPublishingEditor extends Component {
   onFamilyNameSelect = e => {
     this.setState({selectedFamilyName: e.target.value});
     this.props.updateFamilyName(e.target.value);
+  };
+
+  /*
+   * We only want a course to be able to progress
+   * forward in published states. So as the editor updates the
+   * published start of the course the options to update in the
+   * future should get smaller.
+   */
+  getAvailablePublishedStates = currentState => {
+    const availablePublishedStates = {
+      in_development: [
+        PublishedState.in_development,
+        PublishedState.pilot,
+        PublishedState.beta,
+        PublishedState.preview,
+        PublishedState.stable,
+        PublishedState.sunsetting,
+        PublishedState.deprecated
+      ],
+      pilot: [
+        PublishedState.pilot,
+        PublishedState.sunsetting,
+        PublishedState.deprecated
+      ],
+      beta: [
+        PublishedState.beta,
+        PublishedState.preview,
+        PublishedState.stable,
+        PublishedState.sunsetting,
+        PublishedState.deprecated
+      ],
+      preview: [
+        PublishedState.preview,
+        PublishedState.stable,
+        PublishedState.sunsetting,
+        PublishedState.deprecated
+      ],
+      stable: [
+        PublishedState.stable,
+        PublishedState.sunsetting,
+        PublishedState.deprecated
+      ],
+      sunsetting: [PublishedState.sunsetting, PublishedState.deprecated],
+      deprecated: [PublishedState.deprecated]
+    };
+
+    return availablePublishedStates[currentState];
   };
 
   render() {
@@ -158,7 +209,9 @@ export default class CourseVersionPublishingEditor extends Component {
             style={styles.dropdown}
             onChange={this.handlePublishedStateChange}
           >
-            {Object.values(PublishedState).map(state => (
+            {this.getAvailablePublishedStates(
+              this.props.initialPublishedState
+            ).map(state => (
               <option key={state} value={state}>
                 {state}
               </option>
@@ -208,6 +261,22 @@ export default class CourseVersionPublishingEditor extends Component {
                     course in your language it will be the recommended course.
                   </td>
                 </tr>
+                <tr>
+                  <td style={styles.tableBorder}>Sunsetting</td>
+                  <td style={styles.tableBorder}>
+                    A course that is in the process of being deprecated.
+                  </td>
+                </tr>
+                <tr>
+                  <td style={styles.tableBorder}>Deprecated</td>
+                  <td style={styles.tableBorder}>
+                    A course that has been deprecated. <br />
+                    <br />
+                    For Deeper Learning Courses, deprecation prevents Peer
+                    Reviews conducted as part of this unit from being displayed
+                    in the admin-only Peer Review Dashboard.
+                  </td>
+                </tr>
               </tbody>
             </table>
           </HelpTip>
@@ -231,6 +300,27 @@ export default class CourseVersionPublishingEditor extends Component {
               }
             />
           </label>
+        )}
+        {this.props.courseOfferingEditorLink && (
+          <div style={styles.buttonAndHelpTip}>
+            <Button
+              __useDeprecatedTag
+              color={Button.ButtonColor.gray}
+              href={this.props.courseOfferingEditorLink}
+              target="_blank"
+              text={'Edit Course Offering'}
+            />
+            <HelpTip>
+              <p>
+                The course offering is the thing that groups all the different
+                course versions of a course together. For example for csd all
+                versions of csd (csd-2020, csd-2021, etc.) are all part of the
+                csd course offering. On the course offering edit page you can
+                change the display name for the course offering as well as its
+                location in the assignment dropdown.
+              </p>
+            </HelpTip>
+          </div>
         )}
       </div>
     );
@@ -265,5 +355,9 @@ const styles = {
   tableBorder: {
     border: '1px solid ' + color.white,
     padding: 5
+  },
+  buttonAndHelpTip: {
+    display: 'flex',
+    alignItems: 'center'
   }
 };

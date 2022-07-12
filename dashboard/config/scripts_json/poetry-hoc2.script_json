@@ -8,8 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-21 19:01:21 UTC",
+    "serialized_at": "2021-11-22 19:57:46 UTC",
     "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "poetry-hoc2"
     }
@@ -77,6 +80,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_predict_mood1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -98,6 +104,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetryHoC_addBackground_v2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -119,6 +128,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_predict_mood2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -140,6 +152,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetryHoC_events1_v2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -161,6 +176,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetryHoC_addForeground_v2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,6 +200,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetryHoC_textEffect_v2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -203,6 +224,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetryHoC_addSprites_v2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -224,6 +248,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetryHoC_spriteProperties_v2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -245,6 +272,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetryHoC_spriteBehaviors_v2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -266,6 +296,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetryHoC_freePlay_v2"
+        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
-import SetUpMessage from './SetUpMessage';
+import BorderedCallToAction from './BorderedCallToAction';
 
 const SetUpCourses = ({isTeacher, hasCourse}) => (
-  <SetUpMessage
+  <BorderedCallToAction
     type="courses"
     headingText={hasCourse ? i18n.findCourse() : i18n.startLearning()}
     descriptionText={

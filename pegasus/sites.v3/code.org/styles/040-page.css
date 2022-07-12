@@ -597,3 +597,11 @@ a.btn-default:active, a.btn-default:hover, a.btn-default:link, a.btn-default:vis
   height: 1px;
   overflow: hidden;
 }
+
+.float-ltr-rtl {
+  float: left;
+}
+
+html[dir= 'rtl'] .float-ltr-rtl {
+  float: right;
+}

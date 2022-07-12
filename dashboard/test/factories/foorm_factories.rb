@@ -19,6 +19,26 @@ FactoryGirl.define do
         ]
     }'
 
+    trait :with_rating_question do
+      questions '{
+        "pages":[
+          {
+            "name":"page_1",
+            "elements":[
+              {
+                "type": "rating",
+                "name": "teacher_comfort",
+                "title": "I feel comfortable collaborating with teachers in my cohort and asking for support.",
+                "rateMax": 7,
+                "minRateDescription": "Strongly Disagree",
+                "maxRateDescription": "Strongly Agree"
+              }
+            ]
+          }
+        ]
+      }'
+    end
+
     trait :with_multi_select_question do
       questions '{
         "pages":[
@@ -67,6 +87,12 @@ FactoryGirl.define do
     trait :with_multi_select_answer do
       answers '{
         "not_members_spice_girls": ["radical", "spicy"]
+      }'
+    end
+
+    trait :with_rating_answer do
+      answers '{
+        "teacher_comfort": 1
       }'
     end
   end

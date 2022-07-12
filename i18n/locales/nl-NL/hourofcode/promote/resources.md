@@ -8,7 +8,7 @@ title: Middelen
 
 # Promoot het CodeUur
 
-### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
+### Ontdek alle middelen die u nodig hebt om de aandacht te vestigen op uw 'Hour of Code'. Weet u niet zeker waarmee te beginnen? Begin met onze [Gebruiksaanwijzing voor het hosten van een 'Hour of Code']({{ how_to_url }}).
 
 * * *
 
@@ -16,123 +16,123 @@ title: Middelen
 
 <a id="posters"></a>
 
-## Hang deze posters in je school
+## Hang deze posters in uw school
 
-A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
+Er is een nieuwe set aan posters beschikbaar met daarop Malala, Stephen Curry, Shakira en meer. Dit jaar bestaat elke set uit 6 posters en 126 "I did the Hour of Code" stickers. De voorraad is beperkt, dusbestel uw posters" snel. Klik gewoon op een van de onderstaande afbeeldingen om een afdrukbare versie te bekijken en op te slaan als u zelf posters wilt afdrukken.</p> 
 
 {{ promote_new_posters }}
 
-* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
+* Bent u op zoek naar posters van voorafgaande jaren? [Die vindt u hier]({{ promote/previous_posters_url }}).
 
 <a id="social"></a>
 
 ## Post dit op sociale media
 
-[![afbeelding](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![afbeelding](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![afbeelding](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![afbeelding](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 [![afbeelding](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="logo"></a>
 
-## Gebruik het logo van CodeUur om het woord te verspreiden
+## Gebruik het logo van 'Hour of Code'' om het woord te verspreiden
 
 [![afbeelding]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![afbeelding]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Download Hi-res versies](http://images.code.org/share/hour-of-code-logo.zip)
+[Download Hi-res versies](https://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
+**"Hour of Code' en "Hora del Código" zijn handelsmerken. Wij willen het gebruik daarvan niet voorkomen, maar we willen er wel voor zorgen dat het gebruik past binnen een paar grenzen:**
 
-1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
+1. Elke verwijzing naar "Hour of Code" of "Hora del Código" dient op zodanige wijze te zijn dat dit niet suggereert dat het uw merknaam is, maar dient te verwijzen naar de 'Hour of Code' als een organisatie.
 
 <ul style="margin-top: 0px">
   <li>
-    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
+    <strong>Goed voorbeeld</strong>: "Doe mee met de Hour of Code™ bij UW-BEDRIJF.com." 
   </li>
   <li>
-    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
+    <strong>Slecht voorbeeld</strong>: "Probeer de Hour of Code door UW-BEDRIJF." 
   </li>
 </ul>
 
-1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
-2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
+1. Gebruik "TM" in superscript op de meest prominente plekken waar u "Hour of Code" noemt, en een "Ⓡ" in superscript op de meest prominente plekken waar u "Hora del Código" noemt; zowel op uw website en in de beschrijvingen van de app.
+2. Plaats op uw pagina (of in de voettekst) de volgende tekst, waaronder links naar de CSEdWeek en websites van [Code.org]({{ codeorg_link }}):
     
-    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *"'De 'Hour of Code™' / 'Hora de Código®' is een wereldwijd initiatief van Computer Science Education Week [csedweek.org] en Code.org [code.org] om miljoenen studenten kennis te laten maken met één uur aan informatica en programmeren."*
 
-3. No use of "Hour of Code" or "Hora del Código" in app names.
+3. Gebruik 'Hour of Code' of 'Hora del Código' niet in de namen van apps.
 
 <a id="stickers"></a>
 
-## Print deze stickers om ze aan de leerlingen te geven
+## Druk deze stickers af om ze aan de leerlingen te geven
 
-(Stickers are 1" diameter, 63 per sheet) <br />
+(De stikers hebben een diameter van 2,54 cm, 63 per vel) <br />
 
 [![afbeelding](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## Invite people in your community to your Hour of Code and promote your event through email
+## Nodig mensen uit uw gemeenschap uit op uw 'Hour of Code' en promoot uw evenement via e-mail. 
 
-### Find [more information and language you can use]({{ promote/stats_url }}) when talking about the Hour of Code.
+### Raadpleeg [aanvullende informatie en de teksten die u kunt gebruiken]({{ promote/stats_url }}) als u over de 'Hour of Code' spreekt.
 
 * * *
 
 <a id="email"></a>
 
-### Ask your school, employer, or friends to sign up:
+### Vraag aan uw school, werkgeer, of vrienden om zich aan te melden:
 
-**Subject line:** Join me and over 100 million students for an Hour of Code <br />
+**Onderwerpregel:** Doe samen met mij en 100 miljoen studenten mee aan een 'Hour of Code'. <br />
 
-Computers zijn overal en veranderen elke industrie op deze planeet. But only 47% of all high schools teach computer science. Good news is, we’re on our way to change this! Als u al eerder van het CodeUur heeft gehoord, dan weet u dat het geschiedenis heeft gemaakt. Meer dan 100 miljoen leerlingen hebben meegedaan aan een CodeUur.
+Computers zijn overal en veranderen elke industrie op deze planeet. But only 51% of all high schools offer computer science. Het goede nieuws is, dat we op weg zijn dit te veranderen. Als u al eerder van het 'Hour of Code' heeft gehoord, dan weet u dat het geschiedenis heeft gemaakt. Meer dan 100 miljoen leerlingen hebben meegedaan aan een 'Hour of Code'.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Meer dan 100 organisaties ondersteunen de stichting CodeUur. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Meer dan 100 organisaties ondersteunen de stichting CodeUur. Elke Apple Store in de wereld heeft een 'Hour of Code' gehost, en wereldleiders zoals President Obama en de Canadese premier Justin Trudeau schreven hun eerste programmaregels als onderdeel van de campagne.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
+Laten we het dit jaar nog grootser aanpakken. Ik nodig u uit mee te doen met de 'Hour of Code' {{ campaign_date/year }}. Doe mee met een 'Hour of Code'-evenement tijdens de Computer Science Education Week, {{ campaign_date/full }}
 
-Zegt het voort. Begin zelf een event. Vraag een lokale school om zich aan te melden. Of probeer het Code Uur zelf - iedereen kan voordeel uit de basis krijgen.
+Zegt het voort. Begin zelf een event. Vraag een lokale school om zich aan te melden. Of probeer 'Hour of Code' zelf - iedereen kan voordeel uit de basis krijgen.
 
-Get started at http://hourofcode.com/{{ country_language }} <br />
+Begin bij http://hourofcode.com/{{ country_language }}<br />
 
 * * *
 
 <a id="help-schools"></a>
 
-### Volunteer at a school:
+### Doe vrijwilligerswerk op een school:
 
-#### [Find more resources and information about volunteering in schools here]({{ how_to_volunteers_url }}).
+#### Ontdek hier meer middelen en informatie over vrijwilligerswerk in scholen.</h4> 
 
-**Subject line:** Can we help you host an Hour of Code?
+**Onderwerpregel:** Kunnen wij u helpen met het hosten van een 'Hour of Code'?
 
-Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
+Tegen {{ campaign_date/short }} zal tien procent van de studenten wereldwijd Computer Science Education Week vieren door een 'Hour of Code' te doen op hun school. Het is voor elk kind een kans om te leren hoe de technologie om ons heen werkt.
 
-[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+[Onze organisatie/Mijn naam] wil de [naam school] helpen bij het geven van een uur 'Hour of Code'. Wij kunnen leraren helpen een 'Hour of Code' in hun klaslokalen te organiseren (we hebben zelfs geen computers nodig) of als u een schoolbijeenkomst wilt hosten, dan kunnen wij een spreker voor u regelen om te spreken over hoe technologie werkt en wat het is om een software-engineer te zijn.
 
-The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+De studenten zullen hun eigen apps of spelletjes creëren die ze aan hun ouders kunnen laten zien, en wij zullen tevens 'Hour of Code'-certificaten afdrukken die ze mee naar huis kunnen nemen. En het is leuk! Dankzij interactieve, praktische vaardigheden, zullen studenten op een makkelijke manier rekenkundige denkvaardigheden opdoen. 
 
-Computers zijn overal en veranderen elke industrie op deze planeet. But only 47% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Computers zijn overal en veranderen elke industrie op deze planeet. But only 51% of all high schools offer computer science. Het goede nieuws is, dat we op weg zijn dit te veranderen. Als u eerder gehoord heeft over de 'Hour of Code', dan weet u misschien dat het geschiedenis heeft geschreven - meer dan 100 miljoen studenten werendwijd hebben een 'Hour of Code' geprobeerd. Zelfs leiders zoals de Amerikaanse president Barack Obama en de Canadese premier Justin Trudeau schreven hun eerste programmaregels als onderdeel van de campagne.
 
-You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
+Ga naar http://hourofcode.com voor meer informatie over het evenment, of laat het ons weten of u wat tijd wilt vrijmaken om te praten over hoe de [naam van de school] kan deelnemen.<br />
 
 * * *
 
 <a id="parents"></a>
 
-### Vertel ouders over het evenement op je school:
+### Vertel ouders over het evenement op uw school:
 
-**Subject line:** Our students are changing the future with an Hour of Code
+**Onderwerpregel:** Onze studenten veranderen de toekomst dankzij een 'Hour of Code'.
 
 Beste ouders,
 
-We leven in een wereld omringd door technologie. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+We leven in een wereld omringd door technologie. En we weten dat, welk vakgebied onze studenten ook kiezen om zich te ontwikkelen als volwassenen, hun vermogen om succes te hebben in toenemende mate zal afhangen van hun kennis over hoe technologie werkt.
 
-But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). Meer dan 100 miljoen leerlingen wereldwijd hebben al meegedaan aan CodeUur. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. Om door te gaan met het brengen van programmeer activiteiten aan je leerlingen willen we het Uur Code event enorm maken. Ik wil u aanmoedigen om vrijwilliger te worden, de lokale media in te schakelen, het nieuws op social media te delen en te overwegen meer 'CodeUur'-evenementen te organiseren in de gemeenschap.
+Dat is de reden waarom onze hele school meedoet met het grootste leerevenement in de geschiedenis: de 'Hour of Code' tijdens de week van het programmeren van ({{ campaign_date/full }}). Meer dan 100 miljoen leerlingen wereldwijd hebben al meegedaan aan 'Hour of Code'. Ons 'Hour of Code' verklaart dat [SCHOOL NAAM] er klaar voor is onze leerlingen belangrijke vaardigheden voor de 21ste eeuw te leren. Wij willen van het 'Hour of Code'-evenement iets groots maken om door te gaan met het brengen van programmeeractiviteiten aan uw leerlingen. Ik wil u aanmoedigen om vrijwilliger te worden, de lokale media in te schakelen, het nieuws op social media te delen en te overwegen meer 'Hour of Code'-evenementen te organiseren in de gemeenschap.
 
 Dit is een kans om de toekomst te veranderen in [PLAATSNAAM].
 
-See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
+Ga naar http://hourofcode.com/{{ country_language }} voor informatie, en zegt het voort!<br />
 
 * * *
 
@@ -140,15 +140,15 @@ See http://hourofcode.com/{{ country_language }} for details, and help spread th
 
 ### Vraag de media uw evenement bij te wonen:
 
-#### [Check out our press kit for more information on inviting media to your event.]({{ promote/press_kit_url }})
+#### [Bekijk onze persmap voor meer informatie over het uitnodigen van media voor uw evenement.]({{ promote/press_kit_url }})
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Het goede nieuws is dat we zijn op weg om dit te veranderen.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Het goede nieuws is dat we zijn op weg om dit te veranderen.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Meer dan 100 organisaties ondersteunen de stichting CodeUur. Elke Apple winkel in de wereld heeft een CodeUur georganiseerd. Even President Obama wrote his first line of code as part of the campaign.
 
-Daarom doen alle [X-getal] leerlingen van [SCHOOL NAME] mee aan het grootste leerevenement in de geschiedenis: De Hour of Code tijdens de computerwetenschappelijke onderwijsweek (3-9 december).
+Daarom doet elk van de [X getal] studenten op de [NAAM SCHOOL] mee met het grootste leerevenement in de geschiedenis: de 'Hour of Code' tijdens de week van het programmeren (6 - 12 december).
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
@@ -162,21 +162,21 @@ I look forward to being in touch. <br />
 
 <a id="politicians"></a>
 
-### Nodig een politicus uit voor het evenement op jouw school:
+### Nodig een politicus uit voor het evenement op uw school:
 
-#### [Need more info? Take a look at our resources for inviting politicians to attend your event]({{ how_to_public_officials_url }}).
+#### [Meer informatie nodig? Bekijk onze middelen voor het uitnodigen van politici om uw evenement bij te wonen]({{ how_to_public_officials_url }}).
 
-**Subject line**: Join our school as we change the future with an Hour of Code
+**Onderwerpregel**: doe mee met onze school terwijl we onze toekomst veranderen met een 'Hour of Code'.
 
 Geachte heer/mevrouw [ACHTERNAAM]:
 
-Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
+Wist u dat informatica de hoogste positie heeft als het gaat om lonen in de VS? Er zijn landelijk meer dan 500.000 banen gerelateerd aan computers beschikbaar, maar het afgelopen jaar studeerde slechts 42.969 studenten af in informatica. 
 
-Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). Meer dan 100 miljoen leerlingen wereldwijd hebben al meegedaan aan CodeUur.
+Dat is de reden waarom onze hele school meedoet met het grootste leerevenement in de geschiedenis: de 'Hour of Code' tijdens de week van het programmeren van ({{ campaign_date/full }}). Meer dan 100 miljoen leerlingen wereldwijd hebben al meegedaan aan 'Hour of Code'.
 
-I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+Ik schrijf u om u uit te nodigen mee te doen met ons 'Hour of Code'-evenement en een toespraak te houden tijdens de aftrap van de campagne. Het evenement zal plaatsvinden op [DATUM, TIJD, PLAATS] en zal laten dat [NAAM GEMEENTE OF STAD] er klaar voor is onze studente belangrijke vaardigheden voor de 21ste eeuw te leren. Wij willen er zeker van zijn dat onze studenten op de voorgrond staan bij het creëren van toekomstige technologie - en deze niet alleen consumeren.
 
 Ik ben te bereiken op [TELEFOONNUMMER EN MAILADRES]. Ik kijk uit naar uw antwoord.
 

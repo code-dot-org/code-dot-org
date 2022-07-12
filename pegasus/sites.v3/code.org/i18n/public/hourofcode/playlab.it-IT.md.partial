@@ -1,11 +1,11 @@
 ---
-title: Teacher Resources - Play Lab
+title: Risorse per gli insegnanti - Play Lab
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Play Lab: An Hour of Code Tutorial
+# Play Lab: un'ora di lezione di codice
 
 {{ hoc_playlab_video }}
 
@@ -13,20 +13,20 @@ video_player: true
 
 ## Risorse per l'insegnante
 
-### Lesson Plans:
+### Schema delle lezioni:
 
 - [Play Lab]({{ hoc_playlab_cb_url }})
 
 ### Attività di approfondimento:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
+- [Oltre Hour of Code](http://code.org/learn/beyond)
 - [Fondamenti di Scienze Informatiche: Corso 2](https://studio.code.org/s/course2)
 
 ### Altre risorse per l'insegnante:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: guida per gli educatori](https://hourofcode.com/how-to)
+- [Le migliori pratiche degli educatori di successo](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Evento live: [Una guida per educatori all’Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -34,7 +34,7 @@ video_player: true
 
 ## Panoramica
 
-Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+Crea una storia o crea un gioco con Play Lab! Fai muovere animali, pirati, zombie, ninja e molti altri personaggi, emetti suoni, segna punti e lancia anche palle di fuoco!
 
 **Età raccomandata:** 4-104
 

@@ -1,33 +1,33 @@
 ---
-title: Teacher Resources - Conditionals with Cards
+title: 先生のリソース - カードによるIF文
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Conditionals With Cards: An Hour of Code Tutorial
+# カードによるIF文：1時間のコードチュートリアル
 
 {{ hoc_unplugged_video }}
 
 [col-50]
 
-## Teacher Resources
+## 先生のリソース
 
-### Lesson Plans:
+### レッスンプラン:
 
-- [Conditionals with Cards](/files/ConditionalsHoC.pdf)
-- Video: [How to Facilitate Conditionals with Cards in Your Classroom](https://youtu.be/IcEL5ibSvTs)
+- [カードによるIF文](/files/ConditionalsHoC.pdf)
+- 動画: [あなたのクラスルームでカードによりIF文を使いやすくする方法](https://youtu.be/IcEL5ibSvTs)
 
-### Extension Activities:
+### 延長アクティビティ:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [1時間コードを超えて](http://code.org/learn/beyond)
+- [コンピューターサイエンスの基礎: コース 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### その他の先生のリソース
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [1時間コード: 教育者をどのように導くか](https://hourofcode.com/how-to)
+- [成功教育者からのベストプラクティス](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- ライブイベント: [教育者の1時間コードへのご案内](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -35,12 +35,12 @@ video_player: true
 
 ## 概要
 
-Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.
+一組のカードを使用して この「アンプラグド」アクティビティでアルゴリズムおよび IF文のステートメントを学びましょう。 学生はこのアクティビティをチームで行い、一チームにつき一組のカードが必要です。
 
-**Recommended Age Range:** 8-12
+**推奨される年齢範囲:** 8～12
 
-**Technology Requirements:** None! This is an "unplugged" activity that can be taught with nothing more than a deck of cards.
+**技術要件:** なし! これは一組のカード以上のことを教えることのない「アンプラグドアクティビティ」です。
 
-<a href="/files/ConditionalsHoC.pdf"><button>Download the activity</button></a>
+<a href="/files/ConditionalsHoC.pdf"><button>アクティビティをダウンロード</button></a>
 
 [/col-50]

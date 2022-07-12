@@ -23,6 +23,7 @@ def sync_in
   localize_block_content
   localize_animation_library
   localize_shared_functions
+  localize_course_offerings
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
@@ -69,7 +70,15 @@ def get_i18n_strings(level)
       authored_hints = JSON.parse(level.authored_hints)
       i18n_strings['authored_hints'] = Hash.new unless authored_hints.empty?
       authored_hints.each do |hint|
-        i18n_strings['authored_hints'][hint['hint_id']] = hint['hint_markdown']
+        markdown = hint['hint_markdown']
+        i18n_strings['authored_hints'][hint['hint_id']] = markdown
+        # parse and store placeholder texts
+        processed_markdown = Nokogiri::HTML(markdown, &:noblanks)
+        placeholders = get_all_placeholder_text_types(processed_markdown)
+        if placeholders.present?
+          i18n_strings['placeholder_texts'] = Hash.new
+          i18n_strings['placeholder_texts'].merge! placeholders
+        end
       end
     end
 
@@ -80,6 +89,20 @@ def get_i18n_strings(level)
       callouts.each do |callout|
         i18n_strings['callouts'][callout['localization_key']] = callout['callout_text']
       end
+    end
+
+    # parse markdown properties for potential placeholder texts
+    documents = []
+    %w(
+      short_instructions
+      long_instructions
+    ).each do |prop|
+      documents.push level.try(prop) if level.try(prop)
+    end
+    i18n_strings['placeholder_texts'] = i18n_strings['placeholder_texts'] || Hash.new unless documents.empty?
+    documents.each do |document|
+      processed_doc = Nokogiri::HTML(document, &:noblanks)
+      i18n_strings['placeholder_texts'].merge! get_all_placeholder_text_types(processed_doc)
     end
 
     level_xml = Nokogiri::XML(level.to_xml, &:noblanks)
@@ -111,10 +134,15 @@ def get_i18n_strings(level)
 
       # Spritelab behaviors
       behaviors = blocks.xpath("//block[@type=\"behavior_definition\"]")
-      i18n_strings['behavior_names'] = Hash.new unless behaviors.empty?
+      unless behaviors.empty?
+        i18n_strings['behavior_names'] = Hash.new
+        i18n_strings['behavior_descriptions'] = Hash.new
+      end
       behaviors.each do |behavior|
         name = behavior.at_xpath('./title[@name="NAME"]')
+        description = behavior.at_xpath('./mutation/description')
         i18n_strings['behavior_names'][name.content] = name.content if name
+        i18n_strings['behavior_descriptions'][description.content] = description.content if description
       end
 
       ## Variable Names
@@ -136,10 +164,8 @@ def get_i18n_strings(level)
       end
 
       ## Placeholder texts
-      i18n_strings['placeholder_texts'] = Hash.new
-      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'text', ['TEXT'])
-      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'studio_ask', ['TEXT'])
-      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'studio_showTitleScreen', %w(TEXT TITLE))
+      i18n_strings['placeholder_texts'] = i18n_strings['placeholder_texts'] || Hash.new
+      i18n_strings['placeholder_texts'].merge! get_all_placeholder_text_types(blocks)
     end
   end
 
@@ -161,9 +187,17 @@ def get_i18n_strings(level)
   i18n_strings.delete_if {|_, value| value.blank?}
 end
 
-def get_placeholder_texts(blocks, block_type, title_names)
+def get_all_placeholder_text_types(blocks)
   results = {}
-  blocks.xpath("//block[@type=\"#{block_type}\"]").each do |block|
+  results.merge! get_placeholder_texts(blocks, 'text', ['TEXT'])
+  results.merge! get_placeholder_texts(blocks, 'studio_ask', ['TEXT'])
+  results.merge! get_placeholder_texts(blocks, 'studio_showTitleScreen', %w(TEXT TITLE))
+  results
+end
+
+def get_placeholder_texts(document, block_type, title_names)
+  results = {}
+  document.xpath("//block[@type=\"#{block_type}\"]").each do |block|
     title_names.each do |title_name|
       title = block.at_xpath("./title[@name=\"#{title_name}\"]")
 
@@ -257,7 +291,7 @@ def localize_level_content(variable_strings, parameter_strings)
       # We want to make sure to categorize HoC scripts as HoC scripts even if
       # they have a version year, so this ordering is important
       script_i18n_directory =
-        if ScriptConstants.unit_in_category?(:hoc, script.name)
+        if Script.unit_in_category?('hoc', script.name)
           File.join(level_content_directory, "Hour of Code")
         elsif script.unversioned?
           File.join(level_content_directory, "other")
@@ -345,6 +379,20 @@ def localize_shared_functions
   end
   File.open("i18n/locales/source/dashboard/shared_functions.yml", "w+") do |f|
     f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
+  end
+end
+
+# Aggregate every CourseOffering record's `key` as the translation key, and
+# each record's `display_name` as the translation string.
+def localize_course_offerings
+  puts "Preparing course offerings"
+
+  hash = {}
+  CourseOffering.all.sort.each do |co|
+    hash[co.key] = co.display_name
+  end
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/course_offerings.json"), "w+") do |f|
+    f.write(JSON.pretty_generate(hash))
   end
 end
 
@@ -444,9 +492,13 @@ def localize_markdown_content
     ai.md.partial
     athome.md.partial
     break.md.partial
+    coldplay.md.partial
     csforgood.md
     curriculum/unplugged.md.partial
+    educate/csc.md.partial
     educate/curriculum/csf-transition-guide.md
+    educate/it.md
+    helloworld.md.partial
     hourofcode/artist.md.partial
     hourofcode/flappy.md.partial
     hourofcode/frozen.md.partial
@@ -457,6 +509,7 @@ def localize_markdown_content
     hourofcode/starwars.md.partial
     hourofcode/unplugged-conditionals-with-cards.md.partial
     international/about.md.partial
+    poetry.md.partial
   ]
   markdown_files_to_localize.each do |path|
     original_path = File.join('pegasus/sites.v3/code.org/public', path)

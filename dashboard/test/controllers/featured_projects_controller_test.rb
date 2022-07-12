@@ -3,13 +3,13 @@ require 'test_helper'
 class FeaturedProjectsControllerTest < ActionController::TestCase
   setup do
     @project_validator = create :project_validator
-    # @featured_project has a storage_app_id of 456
+    # @featured_project has a project_id of 456
     @featured_project = create :featured_project
     @teacher = create :teacher
   end
 
   test 'project validators can feature projects' do
-    skip 'Investigate flaky test failures'
+    skip 'Investigate flaky test'
     sign_in @project_validator
     @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 654])
     put :feature, params: {project_id: "789"}
@@ -36,19 +36,19 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
   end
 
   test 'featuring a never featured project creates a new feature project' do
-    skip 'Investigate flaky test failures'
+    skip 'Investigate flaky test'
     sign_in @project_validator
     @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 654])
     assert_creates(FeaturedProject) do
       put :feature, params: {project_id: "789"}
     end
-    assert FeaturedProject.last.storage_app_id == 654
+    assert FeaturedProject.last.project_id == 654
     assert FeaturedProject.last.unfeatured_at.nil?
     assert FeaturedProject.last.featured?
   end
 
   test 'featuring a currently unfeatured project should update the correct featured project' do
-    skip 'Investigate flaky test failures'
+    skip 'Investigate flaky test'
     sign_in @project_validator
     @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
     @featured_project.update! unfeatured_at: DateTime.now

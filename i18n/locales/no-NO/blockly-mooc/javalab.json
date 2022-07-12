@@ -2,5 +2,7 @@
   "cancel": "Avbryt",
   "delete": "Slett",
   "import": "Importer",
+  "rename": "Gi nytt navn",
+  "submit": "Send",
   "saving": "Lagrer..."
 }

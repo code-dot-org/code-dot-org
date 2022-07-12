@@ -27,7 +27,7 @@ Thử Giờ lập trình là một cách đơn giản và thú vị để giới
 
 <a id="how-to-video"></a>
 
-## 1. Xem video hướng dẫn Giờ lập trình <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Xem video hướng dẫn Giờ lập trình <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

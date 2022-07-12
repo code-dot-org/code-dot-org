@@ -28,7 +28,7 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. Promote your Hour of Code
+## 3. Kod Saatınızı təbliğ edin
 
 Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
 
@@ -76,7 +76,7 @@ Sənin sinfiniz üçün qulaqlıq təmin edin və ya seçdiyiniz təlimçi səs 
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
-## Tədrisçilər üçün digər Kod qaynaqları
+## Təlimçilər üçün digər Kod Saatı materialları
 
 - Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).

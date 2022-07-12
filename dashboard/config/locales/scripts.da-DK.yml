@@ -2,10 +2,6 @@
 da:
   data:
     script:
-      category:
-        hoc_category_name: Hour of Code
-        math_category_name: Matematik
-        other_category_name: Andre
       name:
         course1:
           title: Kursus 1
@@ -202,7 +198,7 @@ da:
             Elsa, når de går på opdagelse i magien og isens skønhed.
           lessons:
             Artist:
-              name: Kunstner
+              name: Kod med Anna og Elsa
           student_description: Lad os bruge kode til at udforske isens magi og skønhed
             sammen med Anna og Elsa. Du kan tegne snefnug og mønstre, mens du skøjter
             og laver et vinterlandskab, som du derefter kan dele med dine venner!
@@ -334,7 +330,7 @@ da:
             med karakterer fra Disneys Infinity
           lessons:
             Infinity:
-              name: Uendelig
+              name: Disney Infinity Play Lab
           student_description: Brug Play Lab til at skabe en historie eller et spil
             med karakterer fra Disneys Infinity
         algebrademo:
@@ -707,9 +703,6 @@ da:
             i en galakse langt, langt herfra.
           description_short: Lær at programmere droider, og lav dit eget Star Wars
             spil i en galakse langt, langt herfra.
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Lær at programmere droider, og lav dit eget Star Wars
             spil i en galakse langt, langt herfra.
         mc:
@@ -987,9 +980,7 @@ da:
             required:
               display_name: Oversigt
         basketball:
-          lessons:
-            Bounce:
-              name: Hoppe
+          name: basketball
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -1410,9 +1401,6 @@ da:
         hero:
           description: Minecraft er tilbage med en splinterny aktivitet i En Times
             Kodning! En rejse gennem Minecraft ved hjælp af kode.
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft Hour of Code
           student_description: Minecraft er tilbage med en splinterny aktivitet i
             En Times Kodning! En rejse gennem Minecraft ved hjælp af kode.
         course-e-2018:
@@ -1719,7 +1707,7 @@ da:
             En Times Kodning!
           lessons:
             Aquatic:
-              name: Akvatisk
+              name: 'Minecraft: Akvatisk rejse'
         dance--draft:
           lessons:
             Dance Party:
@@ -2169,9 +2157,6 @@ da:
               display_name: Oversigt
         dance-2019:
           description: Lav din egen dansefest sammen med dine venner.
-          lessons:
-            Dance Party:
-              name: Dance Party
           student_description: Lav din egen dansefest sammen med dine venner.
         k5-onlinepd-2019:
           lessons:
@@ -2479,6 +2464,8 @@ da:
           lessons:
             Virus Simulation for Code Bytes:
               name: Kodning af en simulation
+            Outbreak:
+              name: Kodning af en simulation
           lesson_groups:
             outbreak:
               display_name: Udbrud Simulering
@@ -2506,29 +2493,22 @@ da:
         csd3-2021:
           lessons:
             Variables:
-              key: Variabler
               name: Variabler
             Sprites:
-              key: figure
               name: figure
             Text:
-              key: Tekst
               name: Tekst
             Conditionals:
-              key: Betingelser
               name: Betingelser
             Functions:
-              key: Funktioner
               name: Funktioner
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Funktioner med parametre
               name: Funktioner med parametre
         csp3-2021:
           lessons:
             Debugging:
-              key: Fejlfinding
               name: Fejlfinding
         csp4-2021:
           lesson_groups:
@@ -2544,6 +2524,10 @@ da:
               display_name: Lister
             csp_loops:
               display_name: Løkker
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmer
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2558,7 +2542,6 @@ da:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Flyt det, flyt det
               name: Flyt det, flyt det
             'Loops: Getting Loopy':
               name: Blive Svimmel
@@ -2572,7 +2555,6 @@ da:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Binære armbånd
               name: Binære armbånd
             'Events: The Big Event':
               name: Den store begivenhed
@@ -2590,19 +2572,13 @@ da:
             'Algorithms: Graph Paper Programming':
               name: Programmering på millimeterpapir
             Relay Programming:
-              key: Stafet-programmering
               name: Stafet-programmering
             Dance Party:
-              key: Dance Party
               name: Dance Party
             Conditionals with Cards:
-              key: Betingelser med kortspil
               name: Betingelser med kortspil
             'Unplugged: Binary':
-              key: 'Unplugged: Binære'
               name: Binære billeder
-            Artist Binary:
-              key: Kunstner binære
           lesson_groups:
             csf_events:
               display_name: Hændelser
@@ -2618,8 +2594,6 @@ da:
               display_name: Digital statsborgerskab
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Betingelser
             'Functions: Songwriting':
               name: Sangskrivning
           lesson_groups:
@@ -2636,14 +2610,13 @@ da:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Omslut variabler
               name: Omslut variabler
             Internet:
-              key: Internet
               name: Internettet
             For Loop Fun:
-              key: For loop sjov
               name: For loop sjov
+            lesson-5:
+              name: Udbrud
           lesson_groups:
             ramp_up:
               display_name: figure
@@ -2662,7 +2635,6 @@ da:
         express-2021:
           lessons:
             Dance Party:
-              key: Dance Party
               name: Dance Party
             lesson-1:
               name: Dance Party
@@ -2715,30 +2687,24 @@ da:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Løkker
               name: Løkker
             Events:
-              key: Hændelser
               name: Hændelser
             Conditionals:
-              key: Betingelser
               name: Betingelser
             Functions:
-              key: Funktioner
               name: Funktioner
             Variables:
-              key: Variabler
               name: Variabler
             For Loops:
-              key: For Loops
               name: For Loops
-            Sprite Lab:
-              key: SpriteLab
           lesson_groups:
             k5_getting_started_1:
               display_name: Introduktion
             Introduction:
               display_name: Introduktion
+        outbreak-module:
+          title: Udbrud
         csa-videos:
           lesson_groups:
             lessonGroup-2:
@@ -2777,3 +2743,263 @@ da:
           lessons:
             lesson-3:
               name: Værktøjer
+        csa-u8-dev:
+          lessons:
+            lesson-2:
+              name: Værktøjer
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stave-bien
+          title: Stave-bien
+        outbreak-csc:
+          title: Udbrud
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Stave-bien
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Udbrud Simulator
+            For Loop Fun:
+              name: For loop sjov
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hour of Code
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: figure
+            lessonGroup-3:
+              display_name: Variabler
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funktioner
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Glade Kort
+            'Programming: Happy Maps':
+              name: Glade Kort
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Dance Party
+            lesson-1:
+              name: Dance Party
+          lesson_groups:
+            csf_sprites:
+              display_name: figure
+            lessonGroup-9:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_functions:
+              display_name: Funktioner
+            csf_variables:
+              display_name: Variabler
+            csf_for_loops:
+              display_name: For Loops
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Fejlfinding
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Lister
+            csp_loops:
+              display_name: Løkker
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Flyt det, flyt det
+            Getting Loopy:
+              name: Blive Svimmel
+            'Loops: Getting Loopy':
+              name: Blive Svimmel
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Den store begivenhed
+            Binary Bracelets:
+              name: Binære armbånd
+            'Events: The Big Event':
+              name: Den store begivenhed
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir
+            Relay Programming:
+              name: Stafet-programmering
+            Dance Party:
+              name: Dance Party
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            'Algorithms: Graph Paper Programming':
+              name: Programmering på millimeterpapir
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Sangskrivning
+            'Functions: Songwriting':
+              name: Sangskrivning
+          lesson_groups:
+            csf_sprites:
+              display_name: figure
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            ramp_up:
+              display_name: Indlejret Løkker
+            csf_functions:
+              display_name: Funktioner
+            csf_nested_loops:
+              display_name: Betingelser
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: For loop sjov
+            Outbreak:
+              name: Udbrud
+            The Internet:
+              name: Internettet
+            Internet:
+              name: Internettet
+          lesson_groups:
+            ramp_up:
+              display_name: figure
+            lessonGroup-7:
+              display_name: Digital statsborgerskab
+            lessonGroup-8:
+              display_name: Variabler
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Løkker
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Variabler
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: For Loops
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Betingelser
+            lesson-16:
+              name: Fejlfinding
+            lesson-19:
+              name: Fejlfinding
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Løkker
+        coursef-2022-pilot:
+          lessons:
+            Outbreak:
+              name: Udbrud
+            The Internet:
+              name: Internettet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digital statsborgerskab
+            ramp_up:
+              display_name: figure
+            lessonGroup-8:
+              display_name: Variabler
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variabler
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Løkker
+            Events:
+              name: Hændelser
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+            Variables:
+              name: Variabler
+            For Loops:
+              name: For Loops
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Variabler
+            Sprites:
+              name: figure
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funktioner
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Oversigt
+            lesson-1:
+              name: Oversigt
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Oversigt
+            lesson-1:
+              name: Oversigt

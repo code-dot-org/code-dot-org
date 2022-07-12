@@ -1,38 +1,38 @@
 ---
-title: Teacher Resources - MINECRAFT
+title: 教师资源 - 《我的世界》
 nav: hoc_teacher_resources_nav
 video_player: true
 theme: responsive
 style_min: true
 ---
 
-# MINECRAFT Hour of Code
+# 《我的世界》编程一小时
 
 {{ hoc_mc_video }}
 
 [col-50]
 
-## Teacher Resources
+## 教师资源
 
-### Lesson Plans:
+### 教案：
 
-- [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Voyage Aquatic](/files/minecraft-aquatic-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Adventurer](/files/minecraft-adventurer-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
-- [Extra Challenges](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
+- [《我的世界》教案](/files/minecraft-lp.pdf)
+- [《编程一小时》《我的世界》水域冒险的答卷和教师提示](/files/minecraft-aquatic-answer-sheet.pdf)
+- [《编程一小时》《我的世界》冒险模式的答卷和教师提示](/files/minecraft-adventurer-answer-sheet.pdf)
+- [《编程一小时》《我的世界》设计模式的答卷和教师提示](/files/minecraft-designer-answer-sheet.pdf)
+- [附加挑战](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
 
-### Extension Activities:
+### 拓展活动：
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [《编程一小时》之外](http://code.org/learn/beyond)
+- [计算机科学基础知识：课程2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### 其他教师资源：
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
-- [Resources to help you plan and lead an event](https://docs.com/hourofcode2016)
+- [《编程一小时》：教师指南](https://hourofcode.com/how-to)
+- [成功教育者的最佳实践](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- 直播事件：[《编程一小时》教师指南](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [帮助规划和引导活动的资源](https://docs.com/hourofcode2016)
 
 [/col-50]
 
@@ -40,12 +40,12 @@ style_min: true
 
 ## 概述
 
-Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+使用代码块，带领史蒂夫或阿莱克斯踏上《我的世界》冒险之旅。
 
-**Recommended Age Range:** 6+
+**推荐年龄段：** 6岁以上
 
-**Technology Requirements:** Modern browsers + tablets
+**技术要求：**现代浏览器 + 平板电脑
 
-<a href="/mc"><button>Try the tutorial</button></a>
+<a href="/mc"><button>试用教程</button></a>
 
 [/col-50]

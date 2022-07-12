@@ -13,7 +13,8 @@ import {Provider} from 'react-redux';
 import resourceTestData from './resourceTestData';
 import {sampleActivities, searchOptions} from './activitiesTestData';
 import reducers, {
-  init
+  initActivities,
+  initLevelSearching
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import createResourcesReducer, {
   initResources
@@ -49,7 +50,13 @@ describe('ActivitySectionCard', () => {
     });
 
     store = getStore();
-    store.dispatch(init(sampleActivities, searchOptions, [], false));
+    store.dispatch(initActivities(sampleActivities));
+    store.dispatch(
+      initLevelSearching({
+        searchOptions: searchOptions,
+        programmingEnvironments: []
+      })
+    );
     store.dispatch(initResources('lessonResource', resourceTestData));
     store.dispatch(initVocabularies([]));
 
@@ -75,6 +82,7 @@ describe('ActivitySectionCard', () => {
       setTargetActivitySection,
       targetActivitySectionPos: 1,
       hasLessonPlan: true,
+      allowMajorCurriculumChanges: true,
 
       //redux
       moveActivitySection,
@@ -100,6 +108,37 @@ describe('ActivitySectionCard', () => {
     expect(wrapper.find('OrderControls').length).to.equal(1);
     expect(wrapper.contains('Remarks')).to.be.true;
     expect(wrapper.contains('Progression Title:')).to.be.false;
+  });
+
+  it('show OrderControls when allowed to make major curriculum changes', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        allowMajorCurriculumChanges={true}
+      />
+    );
+    expect(wrapper.find('OrderControls').length).to.equal(1);
+  });
+
+  it('hides OrderControls when not allowed to make major curriculum changes and levels in activity section', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        allowMajorCurriculumChanges={false}
+        activitySection={sampleActivities[0].activitySections[2]}
+      />
+    );
+    expect(wrapper.find('OrderControls').length).to.equal(0);
+  });
+
+  it('show OrderControls when not allowed to make major curriculum changes and no levels in activity section', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        allowMajorCurriculumChanges={false}
+      />
+    );
+    expect(wrapper.find('OrderControls').length).to.equal(1);
   });
 
   it('renders activity section with levels', () => {

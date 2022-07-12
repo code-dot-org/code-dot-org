@@ -1,71 +1,71 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: Hour of Code バーチャルイベントのハウツーガイド
 ---
 
 サインアップ
 
-# Tips for a virtual Hour of Code event
+# Hour of Codeバーチャル式イベント開催のヒント
 
-### You don't have to be in-person to run a successful Hour of Code!
+### Hour of Codeを成功させるために対面方式を採用する必要はありません！
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
+これまでHour of Code のイベントは世界どこでも授業にて開催されてきましたが、このような対面方式を採用せずにイベントを開催できるようになりました。 これらの推奨事項の一部を使えば生徒向けの対話型の心を動かすHour of Codeをリモートで開催できます。  不明な点がある場合は、[バーチャル式イベントガイド]({{ localized_files/participation_guide_virtual }}) をご覧ください。
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## You may be apart, but you can still start together
-Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
+## 離れていても一緒に始められます
+生徒にイベントのアクティビティを個別に行わせる予定であったとしても、より多くの生徒の参加を促すにはオンラインのバーチャル式イベントがおすすめです。 イベント開催に当たり、以下の方法をとるとよいでしょう。 
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li> 
-<li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li> 
-<li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
+<li><b>ゲストスピーカーを招く</b>: さまざまな経験をもつ何千ものボランティアがイベント主催者からの連絡を待っています！ <a href="https://code.org/volunteer/local">ボランティアマップ</a> で簡単に検索可能です。 バーチャルのHour of Codeであれば距離に関係なく実施できます。リモートでボランティアをしてもらえる人がいるかどうか、自分の地域以外の人を探してみましょう。 ボランティアとインターネット接続できたら、イベントでのトピック、ディスカッションでの質問などボランティアと打ち合わせするためのガイドとして <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code ボランティア・ハウツーガイド</a> をご利用ください。</li> 
+<li><b>学習意欲を高めるビデオを見せる</b>: イベント開始に当たり、もう一つの有効な方法は、多くの <a href="http://hourofcode.com/us/promote/resources#videos">学習意欲を高めるビデオ</a>の中から1本を参加者に見せることです。 ビデオの多くは5分以内で、生徒がよく知っている有名人の激励のことばが収録されています。</li> 
+<li><b>コンピューターサイエンスについて話し合う</b>: 生活に大きな影響を与えるテクノロジーを念頭に、Hour of Codeイベントはコンピューターサイエンスを深く理解する場になります。 生徒にガイダンス的な質問をして、イベントの始まりをインタラクティブなディスカッションに変えましょう。 ディスカッションのやり方のヒントについては、<a href="https://code.org/csforgood#prompts">ディスカッション時の質問</a>をご覧ください。</li>
 </ul>
 
 ---
 
-## What to prepare ahead of time
+## 事前準備
 
-### 1. Determine your video conferencing platform
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
+### 1. テレビ会議プラットフォームを選定
+よく知られているプラットフォームにはCisco Webex、Google Meet、Microsoft Teams、Skype、 Zoom などがあります。 どのプラットフォームを選定した場合であっても、そのプラットフォームを熟知し、機能をテストすることをお勧めます。また、イベント開始前にHour of Code アジェンダを簡単に目を通しておきましょう。
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Plan how students will participate
-**Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
+### 2. 生徒の参加方法について考える
+**Hour of Codeの自主的アクティビティ**<br> イベント開始後、生徒のテレビ会議を止めて、それぞれの <a href="https://hourofcode.com/us/learn">Hour of Codeアクティビティ</a>を自主的に行わせます。 こうすることによって、生徒は自分達のプロジェクトに専念し、CSの概念を深く理解できるようになります。 その上、テレビ会議のウィンドウを開けたままにする煩わしさも軽減されます。
 
-It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
+生徒が選ぶチュートリアルは事前に1～3種類ほど用意しておくとよいでしょう。 そうすることで、生徒のレベルにぴったりのアクティビティが選べます。 その上、あなたの手助けが必要な質問を生徒がもっている場合、その生徒が取り掛かっているチュートリアルの内容をすでに知っていると生徒の質問にすぐに対応できます。
 
-If your class is expected to do their activity immediately after kickoff, you might consider keeping a virtual conference room, chat platform, or other means of communication open so they can reconnect with you with questions as needed.
+生徒がイベント開始直後にそれぞれアクティビティをすることが予想される場合、生徒が必要に応じて質問をするためにインターネットを再接続できるよう、バーチャル会議室、チャットルーム、その他の通信手段を使えるようにしておきます。
 
-**Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
+**オンラインでHour of Codeアクティビティ**<br> イベント開催中、生徒には同じテレビ電話を使えるようにしたい場合、ビデオ会議プラットフォーム用と学生がアクティビティに取り組むため、ウィンドウを2つ常に開いておく必要があることにご注意ください。
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+**保護者と一緒に**<br> 4年生以下の生徒の場合、保護者が自宅でHour of Code を主催するよう勧めてみましょう。 保護者には、推奨のチュートリアルおよび便利な <a href="https://hourofcode.com/us/how-to/parents">保護者向けハウツーガイド</a>でサポートできます。
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
-### 3. Enlist a volunteer
-You can find a volunteer suited to your needs by visiting our <a href="https://code.org/volunteer/local">volunteer map</a>. Many are available for remote participation and are more than willing to speak about their experience in computer science, how technology impacts their roles, or simply to help you with troubleshooting student questions. Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+### 3. ボランティアを募る
+あなたの希望に合ったボランティアは<a href="https://code.org/volunteer/local">ボランティアマップ</a>で探せます。 多くのボランティアはリモートで参加できます。これらのボランティアはコンピューターサイエンスでの経験、仕事にテクノロジーがどう役立つのかなどについて積極的に語ってくれますし、また生徒の質問への回答に困ったときには助けてくれるでしょう。 ボランティアを見つけたら、事前に打ち合せをしてボランティアのイベントでの役割について話し合い、技術的な問題があれば解決に努め、またオンライン参加に必要な機器を用意しておきます。
 
-### 4. Celebration supplies
-Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://code.org/certificates">certificates</a> for all of your participants.
+### 4. お祝いに必要なもの
+以下をお読みになり、バーチャルHour of Codeのお祝いについての情報をご確認ください。 参加者全員の<a href="https://code.org/certificates">修了証明書</a>を作成するなど、事前の準備が必要なこともあります。
 
 ---
 
-## Celebrate together
+## 全員で祝う
 
-Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
+全員でイベントを開始したときと同じように、完了も全員で祝いましょう！ バーチャル認定をインタラクティブで特別なものにするためのヒントがこちらです。
 
-- Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
-- Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
-- <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- クラスの他の生徒にも完了したプロジェクトを見せるよう伝えます。 テレビ会議プラットフォームの機能が許せば、生徒に完了プロジェクトのスクリーンショットをとるよう指示してそれをバーチャル背景にしてみましょう！
+- 学んだことについて話し合う：コンピューターサイエンス、テクノロジーについて学んだことは何でしょうか？ 問題に直面したとき生徒は何をしましたか？どのようにして解決しましたか？
+- 参加した生徒に<a href="https://code.org/certificates">認定証を作成して贈ります</a>。
+- バーチャルHour of Codeの写真と動画をソーシャルメディアで共有します。 Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
+最後に、今回のイベントで<a href="https://code.org/volunteer/local">ゲストスピーカー</a>、 <a href="https://hourofcode.com/us/promote/resources#">学習意欲を高めるビデオ</a>、<a href="https://code.org/csforgood#prompts">ディスカッション時の質問</a>を用意しなかった方は、次回これらのうちどれが1つでも追加してみましょう。
 
 サインアップ

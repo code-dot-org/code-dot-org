@@ -61,6 +61,14 @@ sl-SI:
         questions:
         - text: Kateri komplet kart je po pravilniku igre točkovan pravilno?
         title: Izbirno vprašanje
+        teacher_markdown: |-
+          ## Učitelji:
+
+          Študentje morda delujejo napačno, in to je odličen kraj, da to razkrijete. Če študentje mislijo, da *ni* pravilnega odgovora, potem verjetno še ne razumejo pogojnikov.
+
+          Tukaj je videoposnetek, ki pomaga razložiti, kaj se dogaja v tem vprašanju:
+
+          https://youtu.be/TbUaEnAYPjI
       2-3 Getting Loopy Multi 1:
         answers:
         - {}
@@ -68,7 +76,7 @@ sl-SI:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kako bi poenostavil/-a to zaporedje z zankami?
         title: Izbirno vprašanje
       2-3 Graph Paper Match 1:
         answers:
@@ -836,7 +844,7 @@ sl-SI:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kako bi poenostavil/-a to zaporedje z zankami?
         title: Izbirno vprašanje
       K-1 Happy Maps Multi 1:
         answers:
@@ -2152,4 +2160,167 @@ sl-SI:
         - {}
         - {}
         questions:
+        - {}
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: naslov
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Choose 2 Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: modra
+        - text: zelena
+        - {}
+        - {}
+        - {}
+        - text: rdeča
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Katera puščica pripelje Flurba do zaklada?
+        title: Izbirno vprašanje
+      test questionless single multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
         - {}

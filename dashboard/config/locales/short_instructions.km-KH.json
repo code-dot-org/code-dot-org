@@ -1332,7 +1332,31 @@
         "ramp_artist_loops6_2021": "កែសម្រួលរង្វិលជុំ (Loop) របស់អ្នកដើម្បីគូរជណ្តើរនេះ",
         "ramp_artist_loops7_2021": "រកមើលលំនាំហើយធ្វើឱ្យកូដនេះខ្លីជាងដោយប្រើរង្វិលជុំ (loop) !",
         "ramp_artist_loops8_2021": "រកមើលលំនាំហើយធ្វើឱ្យកូដនេះខ្លីជាងដោយប្រើរង្វិលជុំ (Loop)!",
-        "ramp_artist_loops9_2021": "ដោះស្រាយល្បែងផ្គុំរូបនេះដោយគូរការ៉េ។"
+        "ramp_artist_loops9_2021": "ដោះស្រាយល្បែងផ្គុំរូបនេះដោយគូរការ៉េ។",
+        "New Gumball Project": "ឥឡូវនេះបង្កើតអ្វីមួយដែលអ្នកចូលចិត្តរួចចែករំលែកវាទៅ!",
+        "New Ice Age Project": "ឥឡូវនេះបង្កើតអ្វីមួយដែលអ្នកចូលចិត្តរួចចែករំលែកវាទៅ!",
+        "New Infinity Project": "ឥឡូវនេះបង្កើតអ្វីមួយដែលអ្នកចូលចិត្តរួចចែករំលែកវាទៅ!",
+        "New Sports Project": "អ្នកអាចបង្កើតហ្គេមខ្លួនឯងបានហើយ! អ្នកមានសិទ្ធិសម្រេចហើយនៅទីនេះ៖ អ្នកអាចប្ដូរលក្ខខណ្ឌនៃហ្គេម លាយឡំប្រភេទកីឡា និងប្រើប្រាសភាពឆ្នៃប្រឌិតរបស់អ្នកបាន! នៅពេលដែលអ្នករួចរាល់ ចុចលើប៊ូតុងបញ្ចប់ដើម្បីអោយមិត្តអ្នកអាចសាកល្បងលេងហ្គេមរបស់អ្នកនៅលើទូរស័ព្ទដែរបស់គេបាន។",
+        "CSD U3 L5 Freeplay_2021": "កែប្រែតម្លៃនៃ petalSize ឲ្យបានច្រើនដង។ តើវាធ្វើអោយការគូររបស់អ្នកប្រែប្រួលយ៉ាងដូចម្ដេច?",
+        "CSD U3 Sprites intro sprites_2021": "ធ្វើបែបនេះ",
+        "CSD U3 Variables change circle size_2021": "កែប្រែតម្លៃនៃ petalSize ឲ្យបានច្រើនដង។ តើវាធ្វើអោយការគូររបស់អ្នកប្រែប្រួលយ៉ាងដូចម្ដេច?",
+        "CSD U3 Variables naming rules v2_2021": "កែប្រែតម្លៃនៃ petalSize ឲ្យបានច្រើនដង។ តើវាធ្វើអោយការគូររបស់អ្នកប្រែប្រួលយ៉ាងដូចម្ដេច?",
+        "CSD U3 Variables random with assignment_2021": "កែប្រែតម្លៃនៃ petalSize ឲ្យបានច្រើនដង។ តើវាធ្វើអោយការគូររបស់អ្នកប្រែប្រួលយ៉ាងដូចម្ដេច?",
+        "CSD U6 params modify planes_2021": "# Multi-plane Controller\\\r\n\n\\\r\nThis\nprogram moves the three planes using the board accelerometer and the on-screen\ncheck boxes.  Right now, only the red plane works.\\\r\n\\\r\n\n# Do This\\\r\n\n-   Create\n    a new `movePlane(name)` function that can move any plane.\\\r\n-   Call the `movePlane(name)`\n    function inside the event block, such that it only moves when its checkbox\n    is checked.\\\r\n    \\\r\n    _Challenge: Right now the planes move way too fast.  Can\n    you figure out how to change the code so they move more slowly?_",
+        "courseA_harvester_seq6_2021": "សាកល្បងដោយខ្លួនឯង!",
+        "courseA_harvester_seq7_2021": "សាកល្បងដោយខ្លួនឯង!",
+        "courseD_maze_ramp5d": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_ramp5d_2018": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_ramp5d_2019": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_ramp5d_2020": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_ramp5d_2021": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_until3": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_until3_2018": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_until3_2019": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_until3_2020": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_until3_2021": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "MC Agent Freeplay": "**លេងដោយសេរី** វាជាពេលដែលអ្នកស្រាវជ្រាវដោយខ្លួនឯង!",
+        "U1L13 Text Compression": "ចូរសង្កេតមើលលើលំនាំ​ (ពាក្យឬប្រយេាគដែលកើតឡើងម្តងហើយម្តងទៀត) នៅក្នុងអត្ថបទ។ សូមបញ្ចូលនូវលំនាំដែលអ្នកបានឃើញទៅក្នុងតំបន់វចនានុក្រមដែលស្ថិតនៅផ្នែកខាងស្តាំរបស់អ្នក។ រាល់ពេលដែលអ្នកបញ្ចូលទិន្នន័យទៅក្នុងតំបន់វចនានុក្រម នោះនឺងមាននូវរូបសញ្ញាដែលនឹងត្រូវជំនួសកន្លែងលំនាំនោះ។"
       }
     }
   }

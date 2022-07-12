@@ -7,7 +7,6 @@ import {
   ViewType,
   scriptDataPropType
 } from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
-import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {
   studentLessonProgressType,
   studentLevelProgressType
@@ -29,6 +28,7 @@ import {
 } from './progressTableHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import classnames from 'classnames';
+import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 /**
  * Since our progress tables are built out of standard HTML table elements,
@@ -70,7 +70,8 @@ class ProgressTableView extends React.Component {
     currentView: PropTypes.oneOf([ViewType.SUMMARY, ViewType.DETAIL]),
 
     // redux
-    section: sectionDataPropType.isRequired,
+    sectionId: PropTypes.number.isRequired,
+    students: PropTypes.arrayOf(studentShape),
     scriptData: scriptDataPropType.isRequired,
     lessonProgressByStudent: PropTypes.objectOf(
       PropTypes.objectOf(studentLessonProgressType)
@@ -81,8 +82,7 @@ class ProgressTableView extends React.Component {
     onClickLesson: PropTypes.func.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     studentTimestamps: PropTypes.object.isRequired,
-    localeCode: PropTypes.string,
-    showSectionProgressDetails: PropTypes.bool
+    localeCode: PropTypes.string
   };
 
   constructor(props) {
@@ -98,7 +98,7 @@ class ProgressTableView extends React.Component {
 
     this.detailCellFormatters = getDetailCellFormatters(
       props.levelProgressByStudent,
-      props.section
+      props.sectionId
     );
 
     // the primary table rows are represented by the students in the section,
@@ -107,7 +107,7 @@ class ProgressTableView extends React.Component {
     // objects also include an `expansionIndex` to determine which lesson
     // formatter to use to render the row.
     this.state = {
-      rows: props.section.students.map((student, index) => {
+      rows: props.students.map((student, index) => {
         return {
           id: idForExpansionIndex(student.id, 0),
           student: student,
@@ -205,10 +205,7 @@ class ProgressTableView extends React.Component {
    * account for the horizontal space used by the vertical scrollbar.
    */
   needsContentHeaderGutter() {
-    return (
-      this.props.section.students.length >
-      parseInt(progressTableStyles.MAX_ROWS)
-    );
+    return this.props.students.length > parseInt(progressTableStyles.MAX_ROWS);
   }
 
   onToggleRow(studentId) {
@@ -233,7 +230,7 @@ class ProgressTableView extends React.Component {
         event: 'toggle_details',
         data_json: JSON.stringify({
           student_id: studentId,
-          section_id: this.props.section.id,
+          section_id: this.props.sectionId,
           visible: expanding
         })
       },
@@ -332,12 +329,11 @@ class ProgressTableView extends React.Component {
               headers={studentListHeaders}
               rows={this.state.rows}
               onRow={this.onRow}
-              sectionId={this.props.section.id}
+              sectionId={this.props.sectionId}
               scriptData={this.props.scriptData}
               studentTimestamps={this.props.studentTimestamps}
               localeCode={this.props.localeCode}
               onToggleRow={this.onToggleRow}
-              showSectionProgressDetails={this.props.showSectionProgressDetails}
             />
           </div>
           <div style={styles.contentView} className="content-view">
@@ -387,7 +383,8 @@ export const UnconnectedProgressTableView = ProgressTableView;
 
 export default connect(
   state => ({
-    section: state.sectionData.section,
+    sectionId: state.teacherSections.selectedSectionId,
+    students: state.teacherSections.selectedStudents,
     scriptData: getCurrentUnitData(state),
     lessonProgressByStudent:
       state.sectionProgress.studentLessonProgressByUnit[
@@ -402,8 +399,7 @@ export default connect(
       state.sectionProgress.studentLastUpdateByUnit[
         state.unitSelection.scriptId
       ],
-    localeCode: state.locales.localeCode,
-    showSectionProgressDetails: state.sectionProgress.showSectionProgressDetails
+    localeCode: state.locales.localeCode
   }),
   dispatch => ({
     onClickLesson(lessonPosition) {

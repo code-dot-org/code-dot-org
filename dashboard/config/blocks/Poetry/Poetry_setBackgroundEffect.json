@@ -1,47 +1,63 @@
 {
-  "category": "",
+  "category": "Poetry - Effects",
   "config": {
     "func": "setBackgroundEffect",
-    "blockText": "set background effect {EFFECT} {PALETTE}",
+    "blockText": "set background to {EFFECT} {PALETTE}",
     "args": [
       {
         "name": "EFFECT",
         "options": [
           [
-            "Shifting",
-            "\"colors\""
-          ],
-          [
-            "Wavy",
-            "\"squiggles\""
-          ],
-          [
-            "Hyper Speed",
-            "\"space\""
-          ],
-          [
-            "Starry",
-            "\"stars\""
-          ],
-          [
-            "Fading",
-            "\"darkCircles\""
-          ],
-          [
-            "Frosted",
-            "\"fadeColors\""
-          ],
-          [
-            "Blooming",
+            "blooming",
             "\"blooming\""
           ],
           [
-            "Rippling",
+            "bubbles",
+            "\"bubbles\""
+          ],
+          [
+            "cloudy",
+            "\"clouds\""
+          ],
+          [
+            "confetti",
+            "\"confetti\""
+          ],
+          [
+            "fading",
+            "\"darkCircles\""
+          ],
+          [
+            "frosted",
+            "\"fadeColors\""
+          ],
+          [
+            "hearts",
+            "\"hearts\""
+          ],
+          [
+            "hyper speed",
+            "\"space\""
+          ],
+          [
+            "rain",
+            "\"rain\""
+          ],
+          [
+            "rippling",
             "\"ripples\""
           ],
           [
-            "Cloudy",
-            "\"clouds\""
+            "shifting",
+            "\"colors\""
+          ],
+          [
+            "starry",
+            "\"stars\""
+          ],
+          [
+            "wavy",
+            "\"squiggles\""
           ]
         ]
       },
@@ -49,48 +65,48 @@
         "name": "PALETTE",
         "options": [
           [
-            "Rainbow",
-            "\"rainbow\""
-          ],
-          [
-            "Grays",
-            "\"grayscale\""
-          ],
-          [
-            "Sky",
-            "\"sky\""
-          ],
-          [
-            "Ocean",
-            "\"ocean\""
-          ],
-          [
-            "Sunrise",
-            "\"sunrise\""
-          ],
-          [
-            "Sunset",
-            "\"sunset\""
-          ],
-          [
-            "Spring",
-            "\"spring\""
-          ],
-          [
-            "Summer",
-            "\"summer\""
-          ],
-          [
-            "Autumn",
+            "autumn",
             "\"autumn\""
           ],
           [
-            "Winter",
-            "\"winter\""
+            "dawn",
+            "\"sunrise\""
           ],
           [
-            "Roses",
+            "dusk",
+            "\"sunset\""
+          ],
+          [
+            "grays",
+            "\"grayscale\""
+          ],
+          [
+            "ocean",
+            "\"ocean\""
+          ],
+          [
+            "rainbow",
+            "\"rainbow\""
+          ],
+          [
+            "roses",
             "\"roses\""
+          ],
+          [
+            "sky",
+            "\"sky\""
+          ],
+          [
+            "spring",
+            "\"spring\""
+          ],
+          [
+            "summer",
+            "\"summer\""
+          ],
+          [
+            "winter",
+            "\"winter\""
           ]
         ]
       }

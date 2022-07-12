@@ -1,65 +1,65 @@
 ---
-title: Ako na udalosť Hodina hódu
+title: Ako zorganizovať podujatie Hodina kódu
 ---
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# Ako zorganizovať stretnutie alebo podujatie v rámci Hodiny kódu
 
-### Get your entire school or community involved in an Hour of Code!
+### Zapojte do Hodiny kódu celú školu alebo komunitu!
 
 * * *
 
-## 1. Pripravte sa na akciu
+## 1. Pripravte sa na podujatie
 
 - Zabezpečte priestory, vyberte dátum a čas.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- Pošlite [list](https://hourofcode.com/promote/resources#sample-emails) s pozvánkou pre starostu, poslanca, člena vlády alebo vplyvného podnikateľa, aby na Hodine kódu vystúpil ako rečník. Pozrite si [našu príručku]({{ localized_files/elected_official }}), ako Hodinu kódu spojiť s návštevou verejného činiteľa.
+- Pozvite zástupcov tlače alebo iných médií, napríklad lokálnu televíziu, rádio, regionálne noviny, blogerov píšucich o vzdelávaní či technológiách. Viac informácií nájdete v našom [balíčku propagačných materiálov pre tlač]({{ promote/press_kit_url }}).
 
-## 2. Počas Vašej akcie
+## 2. Počas podujatia
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- Odštartujte podujatie s jedným z našich [inšpiratívnych videí]({{ promote/videos }}).
+- V úvode vysvetlite dôležitosť informatiky použitím týchto [štatistík a infografík]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
-    - Pozvite významného miestneho podnikateľa, aby porozprával o svojich pracovných činnostiach a využívaní informatiky počas nich.
-    - Pozvite miestneho politika, aby ho študenti naučili, ako sa programuje.
-    - Skupina študentov nech predvedie aktivity, ktoré nevyžadujú počítače.
-    - Študenti môžu naučit riaditeľa školy alebo skupinu učiteľov ako programovať.
-    - Ak už na škole vyučujete informatiku, nechajte študentov predstaviť vzorové projekty.
+- **Iné námety na podujatia**: 
+    - Pozvite významného miestneho podnikateľa, aby porozprával o tom, ako pri svojej práci využíva informatiku.
+    - Pozvite miestneho politika, aby ho žiaci naučili niečo o programovaní.
+    - Skupina žiakov môže predviesť aktivitu bez počítača.
+    - Žiaci môžu učiť riaditeľa školy alebo skupinu učiteľov programovať.
+    - Ak už na škole vyučujete informatiku, nechajte žiakov predviesť svoje existujúce projekty.
 
-## 3. Zdieľajte priebeh
+## 3. Podeľte sa s výsledkami
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
-
-* * *
-
-## Zorganizujte rodinnú Noc Kódu s Hodinou Kódu a pozvite aj rodičov
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. Je to skvelý spôsob, ako zapojiť väčšie množstvo ľudí a motivovať rodičov, aby podporovali výučbu informatiky na Vašej škole. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Kliknite sem pre stiahnutie Balíčka pre Noc Kódu](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Fotky zo svojho podujatia zdieľajte na Facebooku a Twitteri pomocou hashtagov **#HodinaKodu a #HourOfCode**.
 
 * * *
 
-## Example plan for a school assembly or event
+## Usporiadate Hodinu kódu počas Rodinnej noci kódu, na ktorú pozvete aj rodičov
 
-**Udalosť:** Školský týždeň informatického vzdelávania - úvodné zhromaždenie
+Skúste zorganizovať večerné podujatie pre žiakov prvého stupňa základnej školy. Pozvite naň aj rodičov, aby spolu s deťmi absolvovali hodinu informatiky. Je to skvelý spôsob, ako zapojiť väčšie množstvo ľudí a motivovať rodičov, aby podporovali výučbu informatiky na vašej škole. Naši partneri z Rodinnej noci kódu (Family Code Night) vytvorili kompletný balíček na organizáciu takéhoto podujatia. Nájdete v ňom kontrolný zoznam k plánovaniu, scenár podujatia pre prezentujúceho, e-mailové pozvánky, plagáty, prezentácie a ďalšie pomôcky, ktoré vám pomôžu zorganizovať vlastné podujatie. [Kliknite sem a stiahnite si balíček na zorganizovanie Rodinnej noci kódu](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+* * *
 
-**Čas:** Počas školského vyučovania. Ideálne počas predpoludnia. Trvanie približne 1 hodinu.
+## Vzorový plán celoškolského zhromaždenia alebo podujatia
 
-**Miesto:** Školská aula (napr. divadlo, telocvičňa, jedáleň)
+**Podujatie:** Celoškolský Týždeň informatiky – úvodné stretnutie
 
-## Priebeh akcie
+**Dátum:** {{ campaign_date/start_short }} (začiatok Týždňa informatiky)
 
-| Čas           | Činnosť                                                                                                                                                            |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00 - 10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                 |
-| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                              |
-| 10:15 - 10:30 | Špeciálny hosť porozpráva o svojom zázemí a o tom, akú dôležitú úlohu zohrávajú technológie a informatika v jeho každodennom živote.                               |
-| 10:30 - 10:40 | Študenti predvedú vzorovú Hodinu Kódu na škole. Pre spestrenie môžete nechať študentov, aby naučili programovať riaditeľa, prítomných hostí alebo iných študentov! |
-| 10:40 - 11:00 | Študenti predvedú aktivity bez počítačov a ukážu, ako sa dá informatika učiť bez použitia počítačov.                                                               |
-| 11:00 - 11:05 | Učiteľ, ktorý organizuje toto podujatie, prednesie záverečné slová.                                                                                                |
+**Čas:** Počas školského vyučovania. Ideálne v rámci predpoludnia. Trvanie približne 1 hodinu.
+
+**Miesto:** Priestor s veľkou kapacitou (napríklad aula, telocvičňa, jedáleň)
+
+## Priebeh podujatia
+
+| Čas           | Program                                                                                                                                         |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 – 10:05 | Odštartujte podujatie s jedným z našich [inšpiratívnych videí]({{ promote/videos }}).                                                           |
+| 10:05 – 10:15 | Riaditeľ na úvod vysvetlí dôležitosť informatiky použitím týchto [štatistík a infografík]({{ promote/stats_url }}).                             |
+| 10:15 – 10:30 | Špeciálny hosť porozpráva o svojom pozadí a o tom, akú dôležitú úlohu zohrávajú technológie a informatika v jeho každodennom živote.            |
+| 10:30 – 10:40 | Žiaci predvedú vzorovú Hodinu kódu. Pre spestrenie môžete žiakov nechať, aby učili programovať riaditeľa, špeciálneho hosťa alebo iných žiakov. |
+| 10:40 – 11:00 | Žiaci predvedú aktivitu bez počítačov a ukážu, že informatika sa dá učiť aj takto.                                                              |
+| 11:00 – 11:05 | Učiteľ, ktorý toto celoškolské podujatie zorganizoval, prednesie záverečné slová.                                                               |
 
 {{ signup_button }}

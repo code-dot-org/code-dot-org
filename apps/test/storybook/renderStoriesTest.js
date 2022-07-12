@@ -10,11 +10,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
 
-// Add story files here to exclude them from the storybook render tests.
-const DENYLIST = [
-  // 'templates/progress/ProgressLessonTeacherInfo.story.jsx',
-];
-
 describe('react-storybook stories render without errors or warnings', function() {
   throwOnConsoleErrorsEverywhere();
 
@@ -40,14 +35,11 @@ describe('react-storybook stories render without errors or warnings', function()
 
   // Test all the *.story.jsx files that aren't denylisted
   const context = require.context('../../src/', true, /.*\.story\.jsx?$/);
-  context
-    .keys()
-    .filter(storyFile => !DENYLIST.some(taboo => storyFile.includes(taboo)))
-    .forEach(storyFile => {
-      describe(storyFile, () => {
-        testStorybook(context(storyFile));
-      });
+  context.keys().forEach(storyFile => {
+    describe(storyFile, () => {
+      testStorybook(context(storyFile));
     });
+  });
 });
 
 class FakeAudio {

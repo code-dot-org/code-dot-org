@@ -9,7 +9,9 @@ tr:
       moving east: doğuya ilerleme
       moving east and looping: doğuya doğru hareket ve döngü
       moving north: kuzeye ilerleme
+      moving north and looping: kuzeye hareket ve döngü
       moving south: güneye ilerleme
+      moving south and looping: güneye hareket ve döngü
       moving west: batıya ilerleme
       moving west and looping: batıya doğru hareket ve döngü
       moving with arrow keys: ok tuşları ile hareket

@@ -8,6 +8,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ApplicationLoader from './application_loader';
+import {getPathToApplication} from '@cdo/apps/code-studio/pd/application_dashboard/pathToApplicationHelper';
 
 export default class DetailViewRedirect extends React.Component {
   static propTypes = {
@@ -26,7 +27,7 @@ export default class DetailViewRedirect extends React.Component {
 
     // Redirect to the specific course_type route, e.g. csf_facilitators
     this.context.router.replace(
-      `/${course}_${application_type.toLowerCase()}s/${applicationId}`
+      getPathToApplication(course, application_type, applicationId)
     );
   };
 

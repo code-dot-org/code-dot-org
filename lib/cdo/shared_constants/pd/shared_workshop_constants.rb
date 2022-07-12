@@ -1,18 +1,23 @@
 module Pd
   module SharedWorkshopConstants
-    COURSES = [
+    ACTIVE_COURSES = [
       COURSE_CSF = 'CS Fundamentals'.freeze,
       COURSE_CSP = 'CS Principles'.freeze,
+      COURSE_CSD = 'CS Discoveries'.freeze,
+      COURSE_CSA = 'Computer Science A'.freeze,
+      COURSE_FACILITATOR = 'Facilitator'.freeze,
+      COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze,
+    ].freeze
+
+    ARCHIVED_COURSES = [
       COURSE_ECS = 'Exploring Computer Science'.freeze,
       COURSE_CS_IN_A = 'CS in Algebra'.freeze,
       COURSE_CS_IN_S = 'CS in Science'.freeze,
-      COURSE_CSD = 'CS Discoveries'.freeze,
-      COURSE_CSA = 'Computer Science A'.freeze,
       COURSE_COUNSELOR = 'Counselor'.freeze,
-      COURSE_ADMIN = 'Admin'.freeze,
-      COURSE_FACILITATOR = 'Facilitator'.freeze,
-      COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze
+      COURSE_ADMIN = 'Admin'.freeze
     ].freeze
+
+    COURSES = ACTIVE_COURSES + ARCHIVED_COURSES
 
     STATES = [
       STATE_NOT_STARTED = 'Not Started'.freeze,
@@ -37,11 +42,17 @@ module Pd
     SUBJECT_NAMES = {
       SUBJECT_CSF_101: SUBJECT_CSF_101 = 'Intro'.freeze,
       SUBJECT_CSF_201: SUBJECT_CSF_201 = 'Deep Dive'.freeze,
+      SUBJECT_CSF_DISTRICT: SUBJECT_CSF_DISTRICT = 'District'.freeze,
       SUBJECT_FIT: SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze,
       SUBJECT_SUMMER_WORKSHOP: SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze,
       SUBJECT_VIRTUAL_KICKOFF: SUBJECT_VIRTUAL_KICKOFF = 'Virtual Workshop Kickoff'.freeze,
       SUBJECT_CSP_FOR_RETURNING_TEACHERS: SUBJECT_CSP_FOR_RETURNING_TEACHERS = 'Workshop for Returning Teachers'.freeze,
-      SUBJECT_ADMIN_COUNSELOR_WELCOME: SUBJECT_ADMIN_COUNSELOR_WELCOME = 'Welcome'.freeze
+      SUBJECT_ADMIN_COUNSELOR_WELCOME: SUBJECT_ADMIN_COUNSELOR_WELCOME = 'Welcome'.freeze,
+      SUBJECT_ADMIN_COUNSELOR_SLP_INTRO: SUBJECT_ADMIN_COUNSELOR_SLP_INTRO = 'SLP Intro'.freeze,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL1: SUBJECT_ADMIN_COUNSELOR_SLP_CALL1 = 'SLP Quarterly Call 1'.freeze,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL2: SUBJECT_ADMIN_COUNSELOR_SLP_CALL2 = 'SLP Quarterly Call 2'.freeze,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL3: SUBJECT_ADMIN_COUNSELOR_SLP_CALL3 = 'SLP Quarterly Call 3'.freeze,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4: SUBJECT_ADMIN_COUNSELOR_SLP_CALL4 = 'SLP Quarterly Call 4'.freeze
     }
 
     SUBJECTS = {
@@ -101,10 +112,16 @@ module Pd
       COURSE_CSF => [
         SUBJECT_CSF_101,
         SUBJECT_CSF_201,
+        SUBJECT_CSF_DISTRICT,
         SUBJECT_CSF_FIT = SUBJECT_FIT
       ],
       COURSE_ADMIN_COUNSELOR => [
-        SUBJECT_ADMIN_COUNSELOR_WELCOME
+        SUBJECT_ADMIN_COUNSELOR_WELCOME,
+        SUBJECT_ADMIN_COUNSELOR_SLP_INTRO,
+        SUBJECT_ADMIN_COUNSELOR_SLP_CALL1,
+        SUBJECT_ADMIN_COUNSELOR_SLP_CALL2,
+        SUBJECT_ADMIN_COUNSELOR_SLP_CALL3,
+        SUBJECT_ADMIN_COUNSELOR_SLP_CALL4
       ]
     }.freeze
 
@@ -113,7 +130,20 @@ module Pd
     ].freeze
 
     NOT_FUNDED_SUBJECTS = [
-      SUBJECT_ADMIN_COUNSELOR_WELCOME
+      SUBJECT_ADMIN_COUNSELOR_WELCOME,
+      SUBJECT_ADMIN_COUNSELOR_SLP_INTRO,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL1,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL2,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL3,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4
+    ].freeze
+
+    HIDE_FEE_INFORMATION_SUBJECTS = [
+      SUBJECT_CSF_DISTRICT
+    ].freeze
+
+    HIDE_ON_WORKSHOP_MAP_SUBJECTS = [
+      SUBJECT_CSF_DISTRICT
     ].freeze
 
     ACADEMIC_YEAR_WORKSHOP_SUBJECTS = [
@@ -128,15 +158,18 @@ module Pd
 
     # Used to suppress post-workshop emails and in create/edit workshop UI
     MUST_SUPPRESS_EMAIL_SUBJECTS = [
-      SUBJECT_VIRTUAL_KICKOFF,
-      SUBJECT_WORKSHOP_1,
-      SUBJECT_WORKSHOP_2,
-      SUBJECT_WORKSHOP_3,
-      SUBJECT_WORKSHOP_4,
-      SUBJECT_WORKSHOP_1_2,
-      SUBJECT_WORKSHOP_3_4,
-      SUBJECT_ADMIN_COUNSELOR_WELCOME
-    ]
+      SUBJECT_CSP_TEACHER_CON,
+      SUBJECT_CSP_FIT,
+      SUBJECT_CSD_TEACHER_CON,
+      SUBJECT_CSD_FIT,
+      SUBJECT_CSF_FIT,
+      SUBJECT_ADMIN_COUNSELOR_WELCOME,
+      SUBJECT_ADMIN_COUNSELOR_SLP_INTRO,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL1,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL2,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL3,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4
+    ].freeze
 
     LEGACY_SUBJECTS = {
       COURSE_CSP => [
@@ -201,6 +234,19 @@ module Pd
       no_state: "no_state",
       unknown: "unknown"
     }.freeze
+
+    ACTIVE_COURSE_WORKSHOPS = {
+      CSD: COURSE_CSD,
+      CSP: COURSE_CSP,
+      CSA: COURSE_CSA
+    }.freeze
+
+    ACTIVE_COURSES_WITH_SURVEYS = [
+      COURSE_CSD,
+      COURSE_CSP,
+      COURSE_CSA,
+      COURSE_CSF
+    ].freeze
 
     WORKSHOP_TYPES = {
       teachercon: SUBJECT_TEACHER_CON,

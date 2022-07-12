@@ -3,13 +3,12 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {scriptDataPropType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
-import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import color from '@cdo/apps/util/color';
 import {cstaStandardsURL} from './standardsConstants';
 
 export default class StandardsReportCurrentCourseInfo extends Component {
   static propTypes = {
-    section: sectionDataPropType.isRequired,
+    sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
     scriptData: scriptDataPropType,
     unitDescription: PropTypes.string.isRequired,
@@ -19,8 +18,8 @@ export default class StandardsReportCurrentCourseInfo extends Component {
   };
 
   getLinkToOverview() {
-    const {scriptData, section} = this.props;
-    return scriptData ? `${scriptData.path}?section_id=${section.id}` : null;
+    const {scriptData, sectionId} = this.props;
+    return scriptData ? `${scriptData.path}?section_id=${sectionId}` : null;
   }
 
   render() {

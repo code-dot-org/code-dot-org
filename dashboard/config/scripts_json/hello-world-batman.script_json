@@ -4,12 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-09-13 21:17:05 UTC",
+    "family_name": "hello-world-batman",
+    "serialized_at": "2022-04-08 15:41:11 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "hello-world-batman"
     }
@@ -77,6 +82,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_batman_say"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -98,6 +106,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_batman_location"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -119,6 +130,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_batman_multi"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -140,6 +154,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_batman_click"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -161,6 +178,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_batman_events"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,6 +202,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_batman_backgrounds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -203,6 +226,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_batman_costumes"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -224,6 +250,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_batman_sizes"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -245,6 +274,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_batman_behaviors"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -266,6 +298,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_batman_sounds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -287,6 +322,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_batman_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {

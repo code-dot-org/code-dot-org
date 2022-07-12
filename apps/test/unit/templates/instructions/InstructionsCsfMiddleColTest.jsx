@@ -52,7 +52,7 @@ describe('InstructionsCsfMiddleCol', () => {
       collapsed: true,
       shortInstructions
     });
-    expect(wrapper.find(Instructions).props().longInstructions).to.equal(
+    expect(wrapper.find(Instructions).prop('instructions')).to.equal(
       shortInstructions
     );
   });
@@ -66,7 +66,7 @@ describe('InstructionsCsfMiddleCol', () => {
       shortInstructions,
       longInstructions
     });
-    expect(wrapper.find(Instructions).props().longInstructions).to.equal(
+    expect(wrapper.find(Instructions).prop('instructions')).to.equal(
       shortInstructions
     );
   });
@@ -78,7 +78,7 @@ describe('InstructionsCsfMiddleCol', () => {
       collapsed: false,
       longInstructions
     });
-    expect(wrapper.find(Instructions).props().longInstructions).to.equal(
+    expect(wrapper.find(Instructions).prop('instructions')).to.equal(
       longInstructions
     );
   });

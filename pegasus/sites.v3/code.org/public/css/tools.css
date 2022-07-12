@@ -50,12 +50,14 @@ h1.tools-title {
 
 .tutorial-tile-img {
   width: 100%;
+  border: 1px solid #949ca2;
+  border-bottom: 0;
 }
 
 .tutorial-info {
   border: 1px solid #949ca2;
   padding: 20px;
-  min-height: 200px;
+  min-height: 240px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

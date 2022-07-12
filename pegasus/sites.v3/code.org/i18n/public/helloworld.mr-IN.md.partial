@@ -1,0 +1,37 @@
+---
+title: हॅलो वर्ल्ड
+theme: responsive
+set_dir: true
+social:
+  og:title: Hello World!
+  twitter:title: Hello World!
+  og:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity!
+  twitter:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity
+  og:image: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+---
+
+# हॅलो वर्ल्ड!
+
+कॉम्प्युटर सायन्स 101 मध्ये, अनेक विद्यार्थ्यांनी तयार केलेला पहिला प्रोग्राम हा एक सोपा आहे जो मजकुराची एक आयकॉनीक ओळ आउटपुट करतो: "हॅलो वर्ल्ड!" विद्यार्थ्यांना मूलभूत कोडिंग कौशल्ये आणि अ‍ॅप्स तयार करण्याचा आत्मविश्वास देणार्‍या या प्रास्ताविक क्रियाकलापासह संगणक विज्ञान जगताला हॅलो सांगा. तुम्ही तयार केलेल्या जगात इंटरएक्टिव्ह पात्र कोड करण्यासाठी चार मजेदार थीममधून निवडा!
+
+# आपली हॅलो वर्ल्ड थीम निवडा
+
+{{ spritelab_module, title: "खाद्य", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "प्राणी", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "रेट्रो", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "इमोजी", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{ clearfix }}
+
+{{ teacher_info, heading: "शिक्षक माहिती", title: "हॅलो वर्ल्ड नंतर शिकणे कसे सुरू ठेवावे", description: "हॅलो वर्ल्ड हे आमच्या नवीन अभ्यासक्रमातील ओपन-एंडेड प्रकल्प, सीएस कनेक्शन्सचा प्रयत्न करण्याआधी क्लासरूमसाठी योग्य पहिले पाऊल आहे! काही कोडिंग मूलभूत गोष्टी शिकल्यानंतर, विद्यार्थी CS कनेक्शन्सच्या क्रॉस-करिक्युलर प्रोजेक्ट्समध्ये प्रगती करू शकतील.", button_text: "अधिक जाणून घ्या", url: "/educate/csc" }}
+
+## निवडक विद्यार्थ्यांची निर्मिती
+
+{{ featured_project, title: "Food", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood2.gif", url: "https://studio.code.org/projects/spritelab/sC_ZiNi_x5GUqsWHE2M4CrcbjU8XvtD3VNT7TM0Y0N8" }}
+{{ featured_project, title: "इमोजी", author: "डी", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "प्राणी", author: "बी", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "रेट्रो ", author: "डब्ल्यु", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ clearfix }}

@@ -4,11 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-08-03 22:46:59 UTC",
+    "family_name": "artistexemplar",
+    "serialized_at": "2022-04-08 15:40:36 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "artistExemplar"
     }
@@ -44,16 +50,37 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "00d83f4e-e481-4d85-a689-0499f6f82d90",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "00d83f4e-e481-4d85-a689-0499f6f82d90",
+        "lesson.key": "Artist Exemplar",
+        "lesson_group.key": "",
+        "script.name": "artistExemplar"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "f882618a-b2d2-4d67-9fa2-414679f6c645",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645",
+        "lesson_activity.key": "00d83f4e-e481-4d85-a689-0499f6f82d90"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -67,7 +94,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       },
       "level_keys": [
         "aEstory1"
@@ -76,7 +104,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -90,7 +118,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       },
       "level_keys": [
         "aE1"
@@ -99,7 +128,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -113,7 +142,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       },
       "level_keys": [
         "aE2"
@@ -122,7 +152,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -136,7 +166,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       },
       "level_keys": [
         "aE3"
@@ -145,7 +176,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -159,7 +190,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       },
       "level_keys": [
         "aE3alternate"
@@ -168,7 +200,7 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -182,7 +214,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       },
       "level_keys": [
         "aE3alternateB"
@@ -191,7 +224,7 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -205,7 +238,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       },
       "level_keys": [
         "aE4"
@@ -214,7 +248,7 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -228,7 +262,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       },
       "level_keys": [
         "aE5"
@@ -237,7 +272,7 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -251,7 +286,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       },
       "level_keys": [
         "aE6"
@@ -260,7 +296,7 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -274,7 +310,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       },
       "level_keys": [
         "aE7"
@@ -283,7 +320,7 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -297,7 +334,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       },
       "level_keys": [
         "aE8"
@@ -306,7 +344,7 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -320,7 +358,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       },
       "level_keys": [
         "aEfreeplay"
@@ -336,7 +375,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       }
     },
     {
@@ -347,7 +387,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       }
     },
     {
@@ -358,7 +399,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       }
     },
     {
@@ -369,7 +411,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       }
     },
     {
@@ -380,7 +423,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       }
     },
     {
@@ -391,7 +435,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       }
     },
     {
@@ -402,7 +447,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       }
     },
     {
@@ -413,7 +459,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       }
     },
     {
@@ -424,7 +471,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       }
     },
     {
@@ -435,7 +483,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       }
     },
     {
@@ -446,7 +495,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       }
     },
     {
@@ -457,7 +507,8 @@
         ],
         "lesson.key": "Artist Exemplar",
         "lesson_group.key": "",
-        "script.name": "artistExemplar"
+        "script.name": "artistExemplar",
+        "activity_section.key": "f882618a-b2d2-4d67-9fa2-414679f6c645"
       }
     }
   ],

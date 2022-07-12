@@ -75,7 +75,7 @@ Apabila anda menganjurkan acara Jam Kod, sila ikuti contoh agenda di bawah untuk
 - Cuba sediakan profil anda selengkap yang mungkin untuk meningkatkan peluang guru memilih anda.
 - Apabila terpilih, pihak guru akan menghubungi anda melalui borang ini (e-mel anda tidak akan dikongsikan dengan guru). *Jika anda menerima terlalu banyak permintaan daripada guru, anda sentiasa boleh mengemas kini keutamaan anda dengan mengklik pautan untuk mengedit maklumat anda atau berhenti melanggan, seperti yang disediakan di bahagian bawah mana-mana e-mel daripada guru.*
 
-## Menjadi Sukarelawan semasa Sesi Soalan Lazim Jam Kod
+## Menjadi Sukarelawan semasa Sesi Soalan Lazim Hour of Code
 
 ### Saya masih belum dihubungi oleh pihak guru. Bagaimanakah saya masih boleh menjadi sukarelawan?
 Cuba mencari sekolah tempatan dan menghubungi pengetua/guru/pejabat depan dan bertanya cara anda boleh membantu.
@@ -84,7 +84,7 @@ Cuba mencari sekolah tempatan dan menghubungi pengetua/guru/pejabat depan dan be
 Kunjungan ke kelas secara bersemuka kebiasaannya mengambil masa selama 60-90 minit manakala kunjungan ke kelas maya pula kebiasaannya berlangsung selama 20-30 minit.
 
 ### Apakah kumpulan peringkat umur yang sesuai untuk melakukan aktiviti Jam Kod?
-Code.org dan rakan kongsi kami mereka bentuk semua aktiviti Jam Kod untuk menarik minat pelajar semua peringkat gred (K-12), lelaki dan perempuan, daripada pelbagai latar belakang. Semua individu, malah orang dewasa boleh merasakan keseronokan semasa bermain!
+Code.org dan rakan kongsi kami mereka bentuk semua aktiviti dalam Hour of Code untuk menarik minat pelajar semua peringkat gred (K-12), lelaki dan perempuan, daripada pelbagai latar belakang. Semua orang, malah orang dewasa boleh merasakan keseronokan semasa bermain!
 
 
 

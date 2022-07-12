@@ -4,14 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "professional_learning_course": "FIT Weekend In Person",
+      "is_migrated": true,
       "peer_reviews_to_complete": 2,
+      "professional_learning_course": "FIT Weekend In Person",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:35 UTC",
+    "serialized_at": "2021-11-22 19:56:58 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "plc_reviewer",
+    "participant_audience": "facilitator",
     "seeding_key": {
       "script.name": "fit-test"
     }
@@ -75,16 +79,95 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "1044f0d7-6b72-48da-9073-db04d7e8d29e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1044f0d7-6b72-48da-9073-db04d7e8d29e",
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "fit-test"
+      }
+    },
+    {
+      "key": "c4d3dac7-4b7d-4f4d-b091-108918baa6e7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c4d3dac7-4b7d-4f4d-b091-108918baa6e7",
+        "lesson.key": "Complete Practice Question",
+        "lesson_group.key": "content",
+        "script.name": "fit-test"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "922a7e5d-c17b-43cd-8881-217a92ba0d3d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Background"
+      },
+      "seeding_key": {
+        "activity_section.key": "922a7e5d-c17b-43cd-8881-217a92ba0d3d",
+        "lesson_activity.key": "1044f0d7-6b72-48da-9073-db04d7e8d29e"
+      }
+    },
+    {
+      "key": "c136cca7-f9d6-4108-addd-f53e76b5ece9",
+      "position": 2,
+      "properties": {
+        "progression_name": "Deadlines and Payment"
+      },
+      "seeding_key": {
+        "activity_section.key": "c136cca7-f9d6-4108-addd-f53e76b5ece9",
+        "lesson_activity.key": "1044f0d7-6b72-48da-9073-db04d7e8d29e"
+      }
+    },
+    {
+      "key": "4339d8cb-fb04-4fef-883b-da98f9572ebb",
+      "position": 3,
+      "properties": {
+        "progression_name": "Resource Recommendations"
+      },
+      "seeding_key": {
+        "activity_section.key": "4339d8cb-fb04-4fef-883b-da98f9572ebb",
+        "lesson_activity.key": "1044f0d7-6b72-48da-9073-db04d7e8d29e"
+      }
+    },
+    {
+      "key": "1e9d7023-e4e1-4e24-ac44-af7b5342c1ae",
+      "position": 4,
+      "properties": {
+        "name": "Guidelines For Peer Review",
+        "progression_name": "Guidelines For Peer Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e9d7023-e4e1-4e24-ac44-af7b5342c1ae",
+        "lesson_activity.key": "1044f0d7-6b72-48da-9073-db04d7e8d29e"
+      }
+    },
+    {
+      "key": "58d34c4c-15e7-47a3-94b7-9755b126f530",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "58d34c4c-15e7-47a3-94b7-9755b126f530",
+        "lesson_activity.key": "c4d3dac7-4b7d-4f4d-b091-108918baa6e7"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -99,7 +182,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "fit-test"
+        "script.name": "fit-test",
+        "activity_section.key": "922a7e5d-c17b-43cd-8881-217a92ba0d3d"
       },
       "level_keys": [
         "Deeper Learning Overview"
@@ -108,7 +192,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -123,7 +207,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "fit-test"
+        "script.name": "fit-test",
+        "activity_section.key": "c136cca7-f9d6-4108-addd-f53e76b5ece9"
       },
       "level_keys": [
         "csd deeper learning timeline 2018-2019"
@@ -132,7 +217,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -147,7 +232,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "fit-test"
+        "script.name": "fit-test",
+        "activity_section.key": "4339d8cb-fb04-4fef-883b-da98f9572ebb"
       },
       "level_keys": [
         "dlp supports - csd"
@@ -156,7 +242,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -171,7 +257,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "fit-test"
+        "script.name": "fit-test",
+        "activity_section.key": "1e9d7023-e4e1-4e24-ac44-af7b5342c1ae"
       },
       "level_keys": [
         "peer review recommendations 18-19"
@@ -180,7 +267,7 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -194,7 +281,8 @@
         ],
         "lesson.key": "Complete Practice Question",
         "lesson_group.key": "content",
-        "script.name": "fit-test"
+        "script.name": "fit-test",
+        "activity_section.key": "58d34c4c-15e7-47a3-94b7-9755b126f530"
       },
       "level_keys": [
         "fit-dlp-example"
@@ -203,7 +291,7 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -217,7 +305,8 @@
         ],
         "lesson.key": "Complete Practice Question",
         "lesson_group.key": "content",
-        "script.name": "fit-test"
+        "script.name": "fit-test",
+        "activity_section.key": "58d34c4c-15e7-47a3-94b7-9755b126f530"
       },
       "level_keys": [
         "fit-dlp-example-2"
@@ -233,7 +322,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "fit-test"
+        "script.name": "fit-test",
+        "activity_section.key": "922a7e5d-c17b-43cd-8881-217a92ba0d3d"
       }
     },
     {
@@ -244,7 +334,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "fit-test"
+        "script.name": "fit-test",
+        "activity_section.key": "c136cca7-f9d6-4108-addd-f53e76b5ece9"
       }
     },
     {
@@ -255,7 +346,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "fit-test"
+        "script.name": "fit-test",
+        "activity_section.key": "4339d8cb-fb04-4fef-883b-da98f9572ebb"
       }
     },
     {
@@ -266,7 +358,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "fit-test"
+        "script.name": "fit-test",
+        "activity_section.key": "1e9d7023-e4e1-4e24-ac44-af7b5342c1ae"
       }
     },
     {
@@ -277,7 +370,8 @@
         ],
         "lesson.key": "Complete Practice Question",
         "lesson_group.key": "content",
-        "script.name": "fit-test"
+        "script.name": "fit-test",
+        "activity_section.key": "58d34c4c-15e7-47a3-94b7-9755b126f530"
       }
     },
     {
@@ -288,7 +382,8 @@
         ],
         "lesson.key": "Complete Practice Question",
         "lesson_group.key": "content",
-        "script.name": "fit-test"
+        "script.name": "fit-test",
+        "activity_section.key": "58d34c4c-15e7-47a3-94b7-9755b126f530"
       }
     }
   ],

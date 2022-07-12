@@ -1,4 +1,6 @@
-@import "color";
+@use "sass:math";
+
+@import "color.scss";
 @import "font";
 @import "curriculum/markdown";
 @import "responsive-visualization";
@@ -232,8 +234,8 @@ button.arrow {
   border: 1px solid #FFA000;
   background-color: #FFA000;
   color: #fff;
-  margin-left: 9px;
-  margin-right: 0px;
+  margin: 5px 0px;
+  margin-inline-end: 9px;
   display: none;
 }
 button.arrow>img {
@@ -251,35 +253,37 @@ button.arrow:disabled {
 #soft-buttons {
   display: inline-block;
   vertical-align: top;
-  margin-left: -9px;
   -webkit-touch-callout: none;
   &.soft-buttons-compact {
     margin: 0;
     button {
-      margin: 0 4px 0 0;
+      margin: 0;
+      margin-inline-end: 4px;
     }
+  }
+  :last-child{
+    margin-inline-end: 0px;
+  }
+  @supports not (gap: 0 9px) {
+    padding-inline-end: 9px;
   }
 }
 
 .soft-buttons-1 {
   display: table-cell;
   vertical-align: top;
-  min-width: 51px;
 }
 .soft-buttons-2 {
   display: table-cell;
   vertical-align: top;
-  min-width: 102px;
 }
 .soft-buttons-3 {
   display: table-cell;
   vertical-align: top;
-  min-width: 153px;
 }
 .soft-buttons-4 {
   display: table-cell;
   vertical-align: top;
-  min-width: 204px;
 }
 
 /* Set z-index to one here so that .droplet-dropdown (z-index 500) appears in front of
@@ -292,7 +296,7 @@ button.arrow:disabled {
   top: $workspace-headers-height;
   bottom: 0px;
   font-size: 14px;
-  min-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+  min-height: calc(50% - #{($workspace-headers-height * 0.5) + 1}) !important;
   direction: ltr;
   z-index: 1;
 }
@@ -414,8 +418,8 @@ html[dir='rtl'] div#visualizationResizeBar {
 }
 
 .karel-counter-text.paint {
-  font-size: 13px;
-  stroke-width: 0.8;
+  font-size: 33px;
+  stroke-width: 2;
 }
 
 /* Shrink the visualization area on small displays. */
@@ -456,7 +460,7 @@ html[dir='rtl'] div#visualizationResizeBar {
 }
 
 @mixin studio-dpad-container-width($width) {
-  $scale: $width / 400px;
+  $scale: math.div($width, 400px);
   #studio-dpad-container.responsive > * {
     -webkit-transform: scale($scale);
     -ms-transform: scale($scale);
@@ -499,7 +503,7 @@ html[dir='rtl'] div#visualizationResizeBar {
   @include karel-counter(32px, 2px);
 
   #soft-buttons {
-    margin: 5px -8px 0 0;
+    margin: 5px 0 0 0;
     button {
       margin: 0 4px 0 0;
     }
@@ -671,6 +675,11 @@ input[type="radio"] {
   text-align: justify;
   -ms-text-justify: distribute-all-lines;
   text-justify: distribute-all-lines;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 9px;
 }
 
 #gameButtons:after{
@@ -755,9 +764,7 @@ input[type="radio"] {
   color: #7E5BA0;
   font-family: $gotham-extra-bold;
   font-weight: normal;
-
 }
-
 #show-code {
   margin-bottom: 5px;
 }
@@ -961,7 +968,7 @@ html[dir="RTL"] .prompt-icon-cell {
 }
 
 $workspace-header-button-height: 24px;
-$workspace-header-button-margin: ($workspace-headers-height - $workspace-header-button-height) / 2;
+$workspace-header-button-margin: ($workspace-headers-height - $workspace-header-button-height) * 0.5;
 .workspace-header-button {
   cursor: pointer;
   float: right;
@@ -1118,7 +1125,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   td {
     vertical-align: middle;
   }
-  tr:nth-child(even){
+  tr.highlight{
     background-color: $lightest_purple;
   }
 
@@ -1328,7 +1335,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   div {
-    margin: 10px 0;
+    margin: 5px 0;
     &.sharing-content {
       margin-left: $image_width + 15px;
       margin-right: 25px;
@@ -1412,11 +1419,24 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     font-family: "Gotham 4i";
   }
 
+  #sharing-input-container {
+    overflow: hidden;
+  }
+
   #sharing-input {
     margin: 0;
-    width: 100%;
+    width: calc(100% - 70px);
     padding: 10px;
     cursor: text;
+  }
+
+  #sharing-dialog-copy-button {
+    margin-top: 1px;
+    box-sizing: border-box;
+  }
+
+  .sharing-dialog-copy-button-shared {
+    background-color: $light_purple;
   }
 
   #copy-button {

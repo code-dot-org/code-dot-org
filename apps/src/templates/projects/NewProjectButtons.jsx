@@ -109,6 +109,14 @@ const PROJECT_INFO = {
   dance: {
     label: i18n.projectTypeDance(),
     thumbnail: '/shared/images/fill-70x70/courses/logo_dance.png'
+  },
+  poetry: {
+    label: i18n.projectTypePoetry(),
+    thumbnail: '/shared/images/fill-70x70/courses/logo_poetry.png'
+  },
+  thebadguys: {
+    label: i18n.projectTypeThebadguys(),
+    thumbnail: '/shared/images/fill-70x70/courses/logo_thebadguys.png'
   }
 };
 

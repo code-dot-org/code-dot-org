@@ -2,6 +2,84 @@
   "ka-GE": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "გამართვა"
+        },
+        "debugging/hero/unversioned": {
+          "word": "გამართვა"
+        },
+        "function/hero/unversioned": {
+          "word": "ფუნქცია"
+        },
+        "code/poem-art/2021": {
+          "word": "კოდი"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "გამართვა"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "გამართვა"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "გამართვა"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "გამართვა"
+        },
+        "code/artist/unversioned": {
+          "word": "კოდი"
+        },
+        "debugging/artist/unversioned": {
+          "word": "გამართვა"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "გამართვა"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "გამართვა"
+        },
+        "condition/aquatic/unversioned": {
+          "word": "პირობა"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "ციკლები"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "დაშიფრვა"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "გამართვა"
+        },
+        "debugging/mc/unversioned": {
+          "word": "გამართვა"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "გამართვა"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "გამართვა"
+        },
+        "code/sports/unversioned": {
+          "word": "კოდი"
+        },
+        "debugging/sports/unversioned": {
+          "word": "გამართვა"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "გამართვა"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "გამართვა"
+        },
+        "code/poem-art/unversioned": {
+          "word": "კოდი"
+        },
+        "sprite/coursef/2021": {
+          "word": "სპრაიტი"
+        },
         "variable/coursef/2021": {
           "word": "ცვლადი"
         },
@@ -10,6 +88,9 @@
         },
         "internet/coursef/2021": {
           "word": "ინტერნეტი"
+        },
+        "url/coursef/2021": {
+          "word": "ბმული"
         },
         "define/coursef/2021": {
           "word": "განსაზღვრეთ"
@@ -44,11 +125,20 @@
         "conditionals/coursed/2021": {
           "word": "პირობითი ბრძანებები"
         },
+        "condition/coursed/2021": {
+          "word": "პირობა"
+        },
         "debugging/express/2021": {
           "word": "გამართვა"
         },
         "programming/express/2021": {
           "word": "პროგრამირება"
+        },
+        "sprite/express/2021": {
+          "word": "სპრაიტი"
+        },
+        "condition/express/2021": {
+          "word": "პირობა"
         },
         "conditionals/express/2021": {
           "word": "პირობითი ბრძანებები"
@@ -68,17 +158,56 @@
         "programming/pre-express/2021": {
           "word": "პროგრამირება"
         },
+        "sprite/coursee/2021": {
+          "word": "სპრაიტი"
+        },
         "copyright/coursee/2021": {
           "word": "საავტორო უფლება"
         },
         "function/coursee/2021": {
           "word": "ფუნქცია"
         },
+        "condition/coursee/2021": {
+          "word": "პირობა"
+        },
         "conditionals/coursee/2021": {
           "word": "პირობითი ბრძანებები"
         },
         "define/coursee/2021": {
           "word": "განსაზღვრეთ"
+        },
+        "debugging/csd/2021": {
+          "word": "გამართვა"
+        },
+        "variable/csd/2021": {
+          "word": "ცვლადი"
+        },
+        "sprite/csd/2021": {
+          "word": "სპრაიტი"
+        },
+        "condition/csd/2021": {
+          "word": "პირობა"
+        },
+        "conditionals/csd/2021": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "abstraction/csd/2021": {
+          "word": "აბსტრაქცია"
+        },
+        "function/csd/2021": {
+          "word": "ფუნქცია"
+        },
+        "input/csd/2021": {
+          "word": "შემომავალი ინფორმაცია"
+        },
+        "processing/csd/2021": {
+          "word": "დამუშავება"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "ციფრული ნაკვალევი"
+        },
+        "copyright/csd/2021": {
+          "word": "საავტორო უფლება"
         }
       }
     }

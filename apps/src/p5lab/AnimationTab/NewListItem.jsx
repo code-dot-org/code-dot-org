@@ -17,10 +17,11 @@ class NewListItem extends React.Component {
   render() {
     const hovered = Radium.getState(this.state, 'main', ':hover');
     return (
-      <div
+      <button
         style={styles.tile}
         onClick={this.props.onClick}
         className="newListItem"
+        type="button"
       >
         <div style={styles.wrapper}>
           <div
@@ -32,7 +33,7 @@ class NewListItem extends React.Component {
         <div className="animation-name" style={styles.animationName}>
           {this.props.label}
         </div>
-      </div>
+      </button>
     );
   }
 }
@@ -40,12 +41,16 @@ class NewListItem extends React.Component {
 const styles = {
   tile: {
     width: '100%',
-    paddingTop: 4,
-    paddingBottom: 4,
-    marginBottom: 4,
+    padding: '0 0 4px 0',
+    marginBottom: 0,
+    boxShadow: 'none',
     ':hover': {
       cursor: 'pointer'
-    }
+    },
+    background: 'none',
+    border: 0,
+    marginRight: 0,
+    marginLeft: 0
   },
   wrapper: {
     position: 'relative',
@@ -76,7 +81,8 @@ const styles = {
     textAlign: 'center',
     userSelect: 'none',
     fontWeight: 'bold',
-    color: color.light_gray
+    color: color.light_gray,
+    fontSize: '13px'
   }
 };
 

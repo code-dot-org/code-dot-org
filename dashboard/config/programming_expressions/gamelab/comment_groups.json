@@ -1,0 +1,8 @@
+{
+  "key": "comment_Groups",
+  "name": "comment",
+  "category": "Groups",
+  "category_key": "groups",
+  "short_description": "// Comment",
+  "syntax": "// Comment"
+}

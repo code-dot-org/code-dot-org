@@ -4,7 +4,7 @@ import {
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {CSF, CSD, CSP, CSA} from '../application/ApplicationConstants';
 
-export function useFoormSurvey(subject, lastSessionDate) {
+export function shouldUseFoormSurvey(subject, lastSessionDate) {
   // Local summer workshop, CSF Intro workshop, CSP workshop for returning teachers, and academic year workshops for CSP and CSD
   // after 5/8/2020 will use Foorm for survey completion.
   // CSF Deep Dive workshops after 9/1 will also use Foorm
@@ -21,7 +21,8 @@ export function useFoormSurvey(subject, lastSessionDate) {
 
 export function shouldShowSurveyResults(state, course, subject, date) {
   const pegasusBasedCsfIntro =
-    subject === SubjectNames.SUBJECT_CSF_101 && !useFoormSurvey(subject, date);
+    subject === SubjectNames.SUBJECT_CSF_101 &&
+    !shouldUseFoormSurvey(subject, date);
   return (
     (state === 'Ended' && !pegasusBasedCsfIntro) ||
     ([CSD, CSP, CSA].includes(course) &&

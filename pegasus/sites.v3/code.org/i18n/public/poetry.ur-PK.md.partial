@@ -1,0 +1,37 @@
+---
+title: شاعری کے ساتھ کوڈ لکھنا
+theme: responsive
+set_dir: true
+social:
+  og:title: Coding with Poetry
+  twitter:title: Coding with Poetry
+  og:description: Students learn about computer science concepts and writing poetry in this CS Connections module.
+  twitter:description: Students learn about computer science concepts and writing poetry in this CS Connections module.
+  og:image: https://code.org/images/social-media/poetry-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/poetry-og-image-1200x630.png
+---
+
+# شاعری کے ساتھ کوڈ لکھنا
+
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "نظم کا فن", left_description: "آور آف کوڈ کی اس سرگرمی میں ایک کلاسیکی نظم میں آرٹ اور اینیمیشن کا اضافہ کریں!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Coding with Poetry", right_description: "اپنے کلاس روم میں اسباق کے اس سلسلے کے ساتھ کمپیوٹر سائنس اور شاعری میں ربط پیدا کریں.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "View module" }}
+
+## شاعری کے کوڈ لکھنے کے بارے میں مزید جانیں
+
+CS کنکشنز میں کوڈنگ ود پوئٹری ماڈیول میں، طلبہ دو مضامین - کمپیوٹر سائنس اور شاعری - کو ایک نئے انداز میں دیکھ سکیں گے۔ ان پانچ اسباق کے ذریعے، 4-8 گریڈ کے طلباء ایک نظمیں بنانے والا پروگرام بنائیں گے کہ ان کے تحریر کردہ نظموں کے مختلف نسخے پڑھے۔ اس کے بعد، طلباء اپنے ہم جماعتوں کے ساتھ اپنے پروگراموں کی جانچ کرتے ہیں اور شاعری کے حلقے میں اپنی صارف کی تخلیق کردہ نظموں کا اشتراک کرکے پروجیکٹ مکمل کرتے ہیں۔
+
+ایک نظم جنریٹر بنا کر، طلباء اس بارے میں سیکھتے ہیں کہ کمپیوٹر کس طرح صارف کا ان پٹ لیتے ہیں، اسے میموری میں کیسے ذخیرہ کرتے ہیں، اور مطلوبہ پروڈکٹ آؤٹ پٹ کرتے ہیں۔ اپنے نظمیں لکھنے سے، طلباء کو گرامر، موڈ، اور الفاظ کے انتخاب پر غور کرنے کا موقع ملتا ہے۔
+
+<em>ہمارا پوئم آرٹ آور آف کوڈ ایکٹیویٹی بھی ہمارے کمپیوٹر سائنس کنکشنز نصاب کے کوڈنگ مع پوئٹری ماڈیول کا پہلا سبق ہے۔ <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">کوڈ بائٹس کے ایک خصوصی سیشن کے لیے یہاں رجسٹر کریں</a> بروز منگل، 7 دسمبر، صبح 10 بجے۔ ET اور دوبارہ صبح 10 بجے۔ PT؛ ہم طلباء کو دکھائیں گے کہ پوئم آرٹ آور آف کوڈ سرگرمی کے ساتھ کیسے آغاز کیا جائے۔</em>
+
+{{ teacher_info, heading: "معلومات برائے استاد", title: "How to continue learning after Coding with Poetry", description: "ہمارے کمپیوٹر سائنس کنکشنز کے نئے نصاب میں، مزید سرگرمیوں کا تجربہ کریں جو انگریزی زبان کے فنون (ELA) اور کمپوٹر سائنس کو جوڑتی ہیں، اور کمپیوٹر سائنس اور دوسرے مضامین جیسے ریاضی، سائنس، اور معاشرتی مطالعات کے درمیان مزید ایسی کنکشنز دیکھ لیں جنہیں آپ اپنے کلاس روم میں لا سکتے ہیں.", button_text: "مزید جانیں", url: "/educate/csc" }}
+
+## طلباء کی نمایاں تخلیقات
+
+{{ featured_project, title: "سہ پہر", author: "M", age: "13+", image: "images/csc/poetry/cscpoetry_afternoon.gif", url: "https://studio.code.org/projects/poetry_hoc/s____JHnjOEbsnZDxh4taek1sSVd-mNVGqjt5dxyx4g" }}
+{{ featured_project, title: "بادل", author: "D", age: "8+", image: "images/csc/poetry/cscpoetry_cloud.gif", url: "https://studio.code.org/projects/poetry_hoc/LYtB5mpvemKdVlza_kC3AUHSGdVHh_KjWFQfv9mJdw8" }}
+{{ featured_project, title: "ستارہ", author: "B", age: "18+", image: "images/csc/poetry/cscpoetry_star.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocyS8UULutWk0lZfbK7-o41e4" }}
+{{ featured_project, title: "گائیں", author: "W", age: "13+", image: "images/csc/poetry/cscpoetry_sing.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocye7a3gSe86YxTcGwWjCfOX8" }}
+{{ clearfix }}

@@ -11,6 +11,8 @@ cs:
       length: délka
       min: min
       points: body
+      radius: poloměr
+      sides: strany
       size: velikost
       speed: rychlost
       width: šířka

@@ -2,6 +2,27 @@
   "bn-BD": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "ফাংশন"
+        },
+        "code/poem-art/2021": {
+          "word": "কোড"
+        },
+        "code/artist/unversioned": {
+          "word": "কোড"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "শর্তযুক্ত"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "চক্র"
+        },
+        "code/sports/unversioned": {
+          "word": "কোড"
+        },
+        "code/poem-art/unversioned": {
+          "word": "কোড"
+        },
         "variable/coursef/2021": {
           "word": "চলক"
         },
@@ -58,6 +79,21 @@
         },
         "define/coursee/2021": {
           "word": "নির্ধারণ করুন"
+        },
+        "variable/csd/2021": {
+          "word": "চলক"
+        },
+        "conditionals/csd/2021": {
+          "word": "শর্তযুক্ত"
+        },
+        "abstraction/csd/2021": {
+          "word": "অপসারণ"
+        },
+        "function/csd/2021": {
+          "word": "ফাংশন"
+        },
+        "copyright/csd/2021": {
+          "word": "কপিরাইট"
         }
       }
     }

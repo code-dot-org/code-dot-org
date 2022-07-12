@@ -1,4 +1,9 @@
 %h1 Listing videos
+
+- if can? :create, Video
+  %div= link_to t('crud.new_model', model: Video.model_name.human), new_video_path
+  &nbsp;
+
 %table
   %thead
     %tr
@@ -21,6 +26,3 @@
         %td= link_to('Download', video.download)
         - if can? :update, video
           %td= link_to t('crud.edit'), edit_video_path(video)
-%br/
-- if can? :create, Video
-  = link_to t('crud.new_model', model: Video.model_name.human), new_video_path

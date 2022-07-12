@@ -72,6 +72,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                       ? styles.subHeadingSmallFont
                       : styles.subHeading
                   }
+                  id="two-column-action-block--sub-heading"
                 >
                   {subHeading}
                 </div>
@@ -86,6 +87,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                     text={button.text}
                     target={button.target}
                     id={button.id}
+                    onClick={button.onClick}
                   />
                   &nbsp; &nbsp; &nbsp;
                 </span>
@@ -151,6 +153,25 @@ export class AdministratorResourcesActionBlock extends Component {
             id: 'your_school_administrators',
             url: pegasus('/administrators'),
             text: i18n.yourSchoolAdminButton()
+          }
+        ]}
+      />
+    );
+  }
+}
+
+export class CscInfoActionBlock extends Component {
+  render() {
+    return (
+      <TwoColumnActionBlock
+        imageUrl={'/shared/images/fit-970/banners/csc-banner.png'}
+        heading={i18n.courseInfoCscHeading()}
+        description={i18n.courseInfoCscDescription()}
+        buttons={[
+          {
+            id: 'course_info_csc',
+            url: pegasus('/educate/csc'),
+            text: i18n.learnMore()
           }
         ]}
       />

@@ -11,13 +11,11 @@ import {getStore} from '@cdo/apps/redux';
 export default class MiniViewTopRow extends React.Component {
   static propTypes = {
     scriptName: PropTypes.string.isRequired,
-    // May not have this (i.e if not logged in)
-    linesOfCodeText: PropTypes.string,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.number
   };
 
   render() {
-    const {scriptName, linesOfCodeText, selectedSectionId} = this.props;
+    const {scriptName, selectedSectionId} = this.props;
     const isRtl = getStore().getState().isRtl;
 
     const sectionId = queryParams('section_id');
@@ -42,13 +40,12 @@ export default class MiniViewTopRow extends React.Component {
           color={Button.ButtonColor.gray}
           style={isRtl ? styles.buttonRtl : styles.button}
         />
-        <span
-          style={isRtl ? styles.linesOfCodeTextRtl : styles.linesOfCodeText}
-        >
-          {linesOfCodeText}
-        </span>
         <div style={isRtl ? styles.toggleRtl : styles.toggle}>
-          <ProgressDetailToggle activeColor={color.teal} whiteBorder={true} />
+          <ProgressDetailToggle
+            activeColor={color.teal}
+            whiteBorder={true}
+            toggleStudyGroup="mini-view"
+          />
         </div>
       </div>
     );
@@ -74,14 +71,6 @@ const styles = {
   buttonRtl: {
     position: 'absolute',
     right: 15
-  },
-  linesOfCodeText: {
-    position: 'absolute',
-    right: 115
-  },
-  linesOfCodeTextRtl: {
-    position: 'absolute',
-    left: 115
   },
   toggle: {
     position: 'absolute',

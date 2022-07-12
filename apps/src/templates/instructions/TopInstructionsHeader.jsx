@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PaneHeader, {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import InstructionsTab from '@cdo/apps/templates/instructions/InstructionsTab';
+import BackgroundMusicMuteButton from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import InlineAudio from '@cdo/apps/templates/instructions/InlineAudio';
 import {TabType} from './TopInstructions';
@@ -20,7 +21,9 @@ function TopInstructionsHeader(props) {
     levelHasRubric,
     displayDocumentationTab,
     displayReviewTab,
+    displayReviewV2Tab,
     isViewingAsTeacher,
+    hasBackgroundMusic,
     fetchingData,
     handleDocumentationClick,
     handleInstructionTabClick,
@@ -28,6 +31,7 @@ function TopInstructionsHeader(props) {
     handleCommentTabClick,
     handleDocumentationTabClick,
     handleReviewTabClick,
+    handleReviewV2TabClick,
     handleTeacherOnlyTabClick,
     handleClickCollapser,
     isMinecraft,
@@ -37,6 +41,8 @@ function TopInstructionsHeader(props) {
     isRtl,
     documentationUrl,
     teacherMarkdown,
+    exampleSolutions,
+    isViewingAsInstructorInTraining,
     isEmbedView,
     isCollapsed,
     collapsible
@@ -81,6 +87,7 @@ function TopInstructionsHeader(props) {
             headerHasFocus={false}
             onClick={handleDocumentationClick}
             isMinecraft={isMinecraft}
+            style={styles.documentationButton}
           />
         )}
         <div
@@ -125,12 +132,14 @@ function TopInstructionsHeader(props) {
               onClick={handleDocumentationTabClick}
               selected={tabSelected === TabType.DOCUMENTATION}
               text={i18n.documentation()}
+              teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
             />
           )}
           {displayReviewTab && (
             <InstructionsTab
+              className="uitest-reviewTab"
               onClick={handleReviewTabClick}
               selected={tabSelected === TabType.REVIEW}
               text={i18n.review()}
@@ -138,8 +147,21 @@ function TopInstructionsHeader(props) {
               isRtl={isRtl}
             />
           )}
-          {isViewingAsTeacher &&
-            (teacherMarkdown || showContainedLevelAnswer) && (
+          {displayReviewV2Tab && (
+            <InstructionsTab
+              className="uitest-reviewTab"
+              onClick={handleReviewV2TabClick}
+              selected={tabSelected === TabType.REVIEW_V2}
+              text={i18n.review()}
+              teacherOnly={teacherOnly}
+              isMinecraft={isMinecraft}
+              isRtl={isRtl}
+            />
+          )}
+          {(isViewingAsTeacher || isViewingAsInstructorInTraining) &&
+            (teacherMarkdown ||
+              showContainedLevelAnswer ||
+              exampleSolutions.length > 0) && (
               <InstructionsTab
                 className="uitest-teacherOnlyTab"
                 onClick={handleTeacherOnlyTabClick}
@@ -151,6 +173,13 @@ function TopInstructionsHeader(props) {
               />
             )}
         </div>
+        {hasBackgroundMusic && (
+          <BackgroundMusicMuteButton
+            className="uitest-mute-music-button"
+            isMinecraft={isMinecraft}
+            isRtl={isRtl}
+          />
+        )}
         {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
         {collapsible &&
           !isEmbedView &&
@@ -170,11 +199,14 @@ function TopInstructionsHeader(props) {
 
 const styles = {
   paneHeaderOverride: {
-    color: color.default_text
+    color: color.default_text,
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'space-between'
   },
   audioRTL: {
     wrapper: {
-      float: 'left'
+      order: 5
     }
   },
   audio: {
@@ -191,18 +223,20 @@ const styles = {
   },
   audioLTR: {
     wrapper: {
-      float: 'right'
+      order: 5
     }
   },
   helpTabs: {
-    paddingTop: 6
+    paddingTop: 6,
+    width: '100%',
+    boxSizing: 'border-box',
+    display: 'flex',
+    minWidth: 100
   },
   helpTabsLtr: {
-    float: 'left',
     paddingLeft: 30
   },
   helpTabsRtl: {
-    float: 'right',
     paddingRight: 30
   },
   collapserIcon: {
@@ -231,6 +265,11 @@ const styles = {
         color: color.default_text
       }
     }
+  },
+  documentationButton: {
+    order: 4,
+    whiteSpace: 'nowrap',
+    minWidth: 'fit-content'
   }
 };
 
@@ -243,7 +282,9 @@ TopInstructionsHeader.propTypes = {
   levelHasRubric: PropTypes.bool,
   displayDocumentationTab: PropTypes.bool,
   displayReviewTab: PropTypes.bool,
+  displayReviewV2Tab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
+  hasBackgroundMusic: PropTypes.bool.isRequired,
   fetchingData: PropTypes.bool,
   handleDocumentationClick: PropTypes.func.isRequired,
   handleInstructionTabClick: PropTypes.func.isRequired,
@@ -251,6 +292,7 @@ TopInstructionsHeader.propTypes = {
   handleCommentTabClick: PropTypes.func.isRequired,
   handleDocumentationTabClick: PropTypes.func.isRequired,
   handleReviewTabClick: PropTypes.func.isRequired,
+  handleReviewV2TabClick: PropTypes.func.isRequired,
   handleTeacherOnlyTabClick: PropTypes.func.isRequired,
   handleClickCollapser: PropTypes.func.isRequired,
   isMinecraft: PropTypes.bool.isRequired,
@@ -260,6 +302,8 @@ TopInstructionsHeader.propTypes = {
   isRtl: PropTypes.bool.isRequired,
   documentationUrl: PropTypes.string,
   teacherMarkdown: PropTypes.string,
+  exampleSolutions: PropTypes.array,
+  isViewingAsInstructorInTraining: PropTypes.bool,
   isEmbedView: PropTypes.bool.isRequired,
   isCollapsed: PropTypes.bool.isRequired,
   collapsible: PropTypes.bool.isRequired

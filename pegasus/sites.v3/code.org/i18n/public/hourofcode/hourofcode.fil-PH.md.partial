@@ -1,45 +1,45 @@
 ---
-title: Teacher Resources - Write your first computer program
+title: Mga Mapagkukunan ng Guro - Isulat ang iyong unang computer program
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Write your first computer program: An Hour of Code Tutorial
+# Isulat ang iyong unang computer program: Isang Hour of Code na Tutorial
 
 {{ hoc_maze_video }}
 
 [col-50]
 
-## Teacher Resources
+## Mga Mapagkukunan ng Guro
 
-### Lesson Plans:
+### Mga Lesson Plan:
 
-- [Write your first computer program]({{ hoc_hourofcode_cb_url }})
+- [Isulat ang iyong unang computer program]({{ hoc_hourofcode_cb_url }})
 
-### Extension Activities:
+### Mga Extension na Aktibidad:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Lampas sa isang Hour of Code](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Ika-2 na Kurso](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Iba pang Mapagkukunan ng Guro:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: Paano Gumabay para sa mga Educator o Tagapagturo](https://hourofcode.com/how-to)
+- [Pinakamahuhusay na Mga Kasanayan mula sa Mga Matagumpay na Educator](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live na Kaganapan: [Isang Gabay ng Educator sa Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Pangkalahatang-ideya
 
-Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages.
+Matutunan ang mga pangunahing konsepto ng Computer Science gamit ang drag and drop na programming. Ito ay isang parang laro, nakadirekta sa sarili na tutorial na pinagbibidahan ng mga video lecture nina Bill Gates, Mark Zuckerberg, Angry Birds at Plants vs. Zombies. Matutunan ang mga repeat-loop, konsiyonal, at basic algorithm. Available sa 37 wika.
 
-**Recommended Age Range:** 4-104
+**Inirerekomendang Saklaw ng Edad:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Mga Kinakailangan sa Teknolohiya:** Mga modernong browser, smartphone + tablet
 
-<a href="http://studio.code.org/hoc/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/hoc/reset"><button>Subukan ang tutorial</button></a>
 
 [/col-50]

@@ -840,6 +840,7 @@ el-GR:
         - correct: true
         questions:
         - {}
+        title: Κάντε μια Πρόβλεψη
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -848,6 +849,7 @@ el-GR:
         - correct: true
         questions:
         - {}
+        title: Κάντε μια Πρόβλεψη
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -856,6 +858,7 @@ el-GR:
         - correct: true
         questions:
         - {}
+        title: Κάντε μια Πρόβλεψη
       Dance_Party_extras_intro:
         markdown: "#Συνεχίστε να \n\nχορεύετε! Για το μέρος 2, θα δημιουργήσετε το
           δικό σας έργο. Δεν υπάρχουν παζλ εδώ - αντ 'αυτού υπάρχει μια δέσμη έργων
@@ -1404,7 +1407,7 @@ el-GR:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Δεν ξέρω.
         questions:
         - {}
       courseC_multi_starWars_predict1_2018:
@@ -1412,7 +1415,7 @@ el-GR:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Δεν ξέρω.
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
@@ -1420,7 +1423,7 @@ el-GR:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Δεν ξέρω.
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019_2020:
@@ -1428,7 +1431,7 @@ el-GR:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Δεν ξέρω.
         questions:
         - {}
       courseC_multi_starWars_predict2:
@@ -2499,6 +2502,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστό!
         - {}
         - {}
         questions:
@@ -2722,3 +2726,202 @@ el-GR:
         - {}
         questions:
         - {}
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Ιδιότητες Χαρακτήρα
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: περιγραφή εδώ
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: τίτλος
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: περιγραφή εδώ
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: περιγραφή εδώ
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: περιγραφή εδώ
+      CSD U6 LED create intro_2021:
+        content1: περιγραφή εδώ
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: περιγραφή εδώ
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: Κάντε μια Πρόβλεψη
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: μπλε
+        - text: πράσινο
+        - {}
+        - text: κίτρινο
+        - correct: true
+        - text: κόκκινο
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: περιγραφή εδώ
+      allthethings_external_not_displayed_as_unplugged:
+        content1: περιγραφή εδώ
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Ποιο βέλος πάει τον Flurb στο θησαυρό;
+        title: Πολλαπλή Επιλογή
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Προσθέτοντας Εικόνας
+      CSD U2 Image practice_pilot_2021:
+        display_name: Προσθέτοντας Εικόνας
+      CSD U3 drawing practice choice_2021:
+        display_name: Εξάσκηση
+      CSD games cake challenge choice_2021:
+        display_name: Προκλήσεις
+      CSD games platform challenge choice_2021:
+        display_name: Προκλήσεις
+      CSD web draw loop practice choice_2021:
+        display_name: Εξάσκηση
+      CSD web movement practice choice_2021:
+        display_name: Εξάσκηση
+      CSD web text practice choice_2021:
+        display_name: Εξάσκηση

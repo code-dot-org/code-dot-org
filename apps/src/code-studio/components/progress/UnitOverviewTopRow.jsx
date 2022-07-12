@@ -6,8 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -16,6 +15,7 @@ import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/Resourc
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import FontAwesome from '../../../templates/FontAwesome';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -29,27 +29,31 @@ const NEXT_BUTTON_TEXT = {
 
 class UnitOverviewTopRow extends React.Component {
   static propTypes = {
-    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    selectedSectionId: PropTypes.number,
     assignedSectionId: PropTypes.number,
-    currentCourseId: PropTypes.number,
-    professionalLearningCourse: PropTypes.bool,
-    unitProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
-    scriptId: PropTypes.number.isRequired,
-    scriptName: PropTypes.string.isRequired,
-    unitTitle: PropTypes.string.isRequired,
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    isRtl: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
+    studentResources: PropTypes.arrayOf(resourceShape).isRequired,
     showAssignButton: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool,
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
-    scriptResourcesPdfUrl: PropTypes.string
+    scriptResourcesPdfUrl: PropTypes.string,
+    courseOfferingId: PropTypes.number,
+    courseVersionId: PropTypes.number,
+
+    // redux provided
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    selectedSectionId: PropTypes.number,
+    professionalLearningCourse: PropTypes.bool,
+    hasPerLevelResults: PropTypes.bool.isRequired,
+    unitCompleted: PropTypes.bool.isRequired,
+    scriptId: PropTypes.number.isRequired,
+    scriptName: PropTypes.string.isRequired,
+    unitTitle: PropTypes.string.isRequired,
+    currentCourseId: PropTypes.number,
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isRtl: PropTypes.bool.isRequired
   };
 
   recordAndNavigateToPdf = (e, firehoseKey, url) => {
@@ -100,21 +104,23 @@ class UnitOverviewTopRow extends React.Component {
       selectedSectionId,
       currentCourseId,
       professionalLearningCourse,
-      unitProgress,
       scriptId,
       scriptName,
       unitTitle,
       viewAs,
       isRtl,
       teacherResources,
-      migratedTeacherResources,
       studentResources,
       showAssignButton,
       assignedSectionId,
       showCalendar,
       unitCalendarLessons,
       weeklyInstructionalMinutes,
-      isMigrated
+      isMigrated,
+      unitCompleted,
+      hasPerLevelResults,
+      courseOfferingId,
+      courseVersionId
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -125,9 +131,16 @@ class UnitOverviewTopRow extends React.Component {
       ? styles.buttonMarginRTL
       : styles.buttonMarginLTR;
 
+    let unitProgress = NOT_STARTED;
+    if (unitCompleted) {
+      unitProgress = COMPLETED;
+    } else if (hasPerLevelResults) {
+      unitProgress = IN_PROGRESS;
+    }
+
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">
-        {!professionalLearningCourse && viewAs === ViewType.Student && (
+        {!professionalLearningCourse && viewAs === ViewType.Participant && (
           <div style={styles.buttonsInRow}>
             <Button
               __useDeprecatedTag
@@ -138,9 +151,8 @@ class UnitOverviewTopRow extends React.Component {
             />
             {studentResources.length > 0 && (
               <ResourcesDropdown
-                migratedResources={studentResources}
+                resources={studentResources}
                 unitId={scriptId}
-                useMigratedResources={true}
                 studentFacing
               />
             )}
@@ -158,20 +170,24 @@ class UnitOverviewTopRow extends React.Component {
 
         <div style={styles.resourcesRow}>
           {!professionalLearningCourse &&
-            viewAs === ViewType.Teacher &&
-            ((!isMigrated && teacherResources.length > 0) ||
-              (isMigrated && migratedTeacherResources.length > 0)) && (
+            viewAs === ViewType.Instructor &&
+            (isMigrated && teacherResources.length > 0) && (
               <ResourcesDropdown
                 resources={teacherResources}
-                migratedResources={migratedTeacherResources}
                 unitId={scriptId}
-                useMigratedResources={isMigrated}
               />
             )}
-          {pdfDropdownOptions.length > 0 && viewAs === ViewType.Teacher && (
+          {pdfDropdownOptions.length > 0 && viewAs === ViewType.Instructor && (
             <div style={{marginRight: 5}}>
               <DropdownButton
-                text={i18n.printingOptions()}
+                customText={
+                  <div>
+                    <FontAwesome icon="print" style={styles.icon} />
+                    <span style={styles.customText}>
+                      {i18n.printingOptions()}
+                    </span>
+                  </div>
+                }
                 color={Button.ButtonColor.blue}
               >
                 {pdfDropdownOptions.map(option => (
@@ -188,7 +204,7 @@ class UnitOverviewTopRow extends React.Component {
               </DropdownButton>
             </div>
           )}
-          {showCalendar && viewAs === ViewType.Teacher && (
+          {showCalendar && viewAs === ViewType.Instructor && (
             <UnitCalendarButton
               lessons={unitCalendarLessons}
               weeklyInstructionalMinutes={weeklyInstructionalMinutes}
@@ -196,20 +212,23 @@ class UnitOverviewTopRow extends React.Component {
             />
           )}
         </div>
-        {!professionalLearningCourse && viewAs === ViewType.Teacher && (
+        {!professionalLearningCourse && viewAs === ViewType.Instructor && (
           <SectionAssigner
             sections={sectionsForDropdown}
             selectedSectionId={selectedSectionId}
             assignmentName={unitTitle}
             showAssignButton={showAssignButton}
             courseId={currentCourseId}
+            courseOfferingId={courseOfferingId}
+            courseVersionId={courseVersionId}
             scriptId={scriptId}
             forceReload={true}
+            buttonLocationAnalytics={'unit-overview-top'}
           />
         )}
         <div style={isRtl ? styles.left : styles.right}>
           <span>
-            <ProgressDetailToggle />
+            <ProgressDetailToggle toggleStudyGroup="unit-overview" />
           </span>
         </div>
       </div>
@@ -228,6 +247,17 @@ const styles = {
   buttonsInRow: {
     display: 'flex',
     alignItems: 'center'
+  },
+  customText: {
+    margin: '0px 2px'
+  },
+  icon: {
+    margin: '0px 2px',
+    fontSize: 16,
+    // we want our icon text to be a different size than our button text, which
+    // requires we manually offset to get it centered properly
+    position: 'relative',
+    top: 1
   },
   right: {
     position: 'absolute',
@@ -256,10 +286,20 @@ const styles = {
 export const UnconnectedUnitOverviewTopRow = UnitOverviewTopRow;
 
 export default connect((state, ownProps) => ({
+  selectedSectionId: state.teacherSections.selectedSectionId,
   sectionsForDropdown: sectionsForDropdown(
     state.teacherSections,
-    ownProps.scriptId,
-    ownProps.currentCourseId,
-    false
-  )
+    ownProps.courseOfferingId,
+    ownProps.courseVersionId,
+    state.progress.scriptId
+  ),
+  professionalLearningCourse: state.progress.professionalLearningCourse,
+  hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,
+  unitCompleted: !!state.progress.unitCompleted,
+  scriptId: state.progress.scriptId,
+  scriptName: state.progress.scriptName,
+  unitTitle: state.progress.unitTitle,
+  currentCourseId: state.progress.courseId,
+  viewAs: state.viewAs,
+  isRtl: state.isRtl
 }))(UnitOverviewTopRow);

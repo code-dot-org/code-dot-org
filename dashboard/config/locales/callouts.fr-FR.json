@@ -115,7 +115,7 @@
           "arrow_buttons": "Appuie sur les boutons fléchés pour contrôler ton danseur."
         },
         "CourseD_Dance_2020_04": {
-          "dance_callout_02": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_02": "Ajoute ce bloc à ton programme ! "
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "Ajoute un nouvel événement à ton programme."
@@ -131,23 +131,23 @@
           "new_block_4": "Nouveau bloc !"
         },
         "CourseD_Dance_Party_01": {
-          "dance_callout_01": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_01": "Ajoute ce bloc à ton programme ! "
         },
         "CourseD_Dance_Party_02": {
-          "dance_callout_02": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_02": "Ajoute ce bloc à ton programme ! "
         },
         "CourseD_Dance_Party_04": {
-          "dance_callout_04": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_04": "Ajoute ce bloc à ton programme ! "
         },
         "CourseD_Dance_Party_06": {
-          "dance_callout_06": "Ajoutez votre nouveau danseur ici"
+          "dance_callout_06": "Ajoute ton nouveau danseur ici"
         },
         "CourseD_Dance_Party_11": {
           "dance_callout_11_a": "Nouveau bloc !",
           "dance_callout_11_b": "Nouveau bloc !"
         },
         "CourseD_Dance_Party_11_5": {
-          "dance_party_11_5_groups": "Regardez ici les blocs « tous les canards »"
+          "dance_party_11_5_groups": "Retrouve les blocs « tous les canards » ici"
         },
         "Dance_2019_01": {
           "dance_callout_01": "Choisis le type de danseur ici."
@@ -157,7 +157,7 @@
           "arrow_buttons": "Appuie sur les boutons fléchés pour contrôler ton danseur."
         },
         "Dance_2019_04": {
-          "dance_callout_02": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_02": "Ajoute ce bloc à ton programme ! "
         },
         "Dance_2019_05": {
           "dance_callout_05": "Ajoute un nouvel événement à ton programme."
@@ -173,23 +173,23 @@
           "new_block_4": "Nouveau bloc !"
         },
         "Dance_Party_01": {
-          "dance_callout_01": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_01": "Ajoute ce bloc à ton programme ! "
         },
         "Dance_Party_02": {
-          "dance_callout_02": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_02": "Ajoute ce bloc à ton programme ! "
         },
         "Dance_Party_04": {
-          "dance_callout_04": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_04": "Ajoute ce bloc à ton programme ! "
         },
         "Dance_Party_06": {
-          "dance_callout_06": "Ajoutez votre nouveau danseur ici"
+          "dance_callout_06": "Ajoute ton nouveau danseur ici"
         },
         "Dance_Party_11": {
           "dance_callout_11_a": "Nouveau bloc !",
           "dance_callout_11_b": "Nouveau bloc !"
         },
         "Dance_Party_11_5": {
-          "dance_party_11_5_groups": "Regardez ici les blocs « tous les canards »"
+          "dance_party_11_5_groups": "Retrouve les blocs « tous les canards » ici"
         },
         "Fish Tank 3-validated_2019": {
           "spritelab_comment": "Utilise ce bloc pour laisser, à ton professeur ou toi-même, des notes sur le fonctionnement de ton code.\n"
@@ -1404,7 +1404,7 @@
           "arrow_buttons": "Appuie sur les boutons fléchés pour contrôler ton danseur."
         },
         "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_02": "Ajoute ce bloc à ton programme ! "
         },
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Ajoute un nouvel événement à ton programme."
@@ -1421,7 +1421,7 @@
         },
         "CourseF_outbreak2": {
           "minitoolbox": "Cliques ici pour agrandir le bloc.",
-          "pointerlocation": "Faites glisser un bloc sujet ici."
+          "pointerlocation": "Fais glisser un bloc sujet ici."
         },
         "CourseF_outbreak7": {
           "costumes_callout": "Cliquez pour créer un nouveau déguisement"
@@ -1494,10 +1494,10 @@
           "courseA_playLab_events6_1": "Ceci te permet de choisir un son \"aléatoire\", ce qui veut dire que tu ne sais pas ce que tu auras jusqu'à ce que tu l'entende!"
         },
         "courseB_Scrat_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur \"Exécuter\" pour démarrer ton programme."
+          "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur \"Exécuter\" pour lancer ton programme."
         },
         "courseB_Scrat_ramp3a_2021": {
-          "courseC_maze_programming2_1": "Voici la boite à outils. C'est ici que tu trouveras les blocs supplémentaires pour terminer tes énigmes."
+          "courseC_maze_programming2_1": "Voici la boîte à outils. On peut y trouver des blocs supplémentaires pour compléter les puzzles."
         },
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_1": "Il y a un seul de ces blocs dans la boîte à outils. Comment vas-tu l'utiliser ?"
@@ -1773,7 +1773,8 @@
           "hello_world_new": "Nouveau bloc !"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Nouveau bloc !"
+          "hello_world_new": "Nouveau bloc !",
+          "hello_world_new_block": "Nouveau bloc!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Nouveau bloc !"
@@ -1807,6 +1808,152 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Nouveau bloc !"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Nouveau bloc !"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Nouveau bloc !",
+          "poetry_foreground": "Nouveau bloc !"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_new_block": "Nouveau bloc !",
+          "poetry_selector": "Sélectionnez n'importe quel poème ou ajoutez le vôtre !"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Nouveau bloc !",
+          "poetry_music": "Nouveau bloc !"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Nouveau bloc !",
+          "poetry_sprite_stops": "Nouveau bloc !"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Nouveau bloc !",
+          "poetry_remove_sprite": "Nouveau bloc !"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Utilisez ce bloc pour définir un nouvel arrière-plan."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Utilisez ce bloc associé à l'un des comportements ci-dessous."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Cliquez ici pour valider le code."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Ajoutez ce bloc d'événements à votre espace de travail."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+        },
+        "helloworld_animals_location": {
+          "pin": "épingle"
+        },
+        "helloworld_animals_multi": {
+          "pin": "épingle"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Utilisez ce bloc pour faire parler les sprites.",
+          "hello_world_make_sprite": "Utilisez ce bloc pour créer un sprite."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Utilisez ce bloc pour définir un nouvel arrière-plan."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Utilisez ce bloc associé à l'un des comportements ci-dessous."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Cliquez ici pour valider le code."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Ajoutez ce bloc d'événements à votre espace de travail."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+        },
+        "helloworld_emoji_location": {
+          "pin": "épingle"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "épingle"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Utilisez ce bloc pour faire parler les sprites.",
+          "hello_world_make_sprite": "Utilisez ce bloc pour créer un sprite."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Utilisez ce bloc pour définir un nouvel arrière-plan."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Utilisez ce bloc associé à l'un des comportements ci-dessous."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Cliquez ici pour valider le code."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Ajoutez ce bloc d'événements à votre espace de travail."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+        },
+        "helloworld_food_location": {
+          "pin": "épingle"
+        },
+        "helloworld_food_multi": {
+          "pin": "épingle"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Utilisez ce bloc pour faire parler les sprites.",
+          "hello_world_make_sprite": "Utilisez ce bloc pour créer un sprite."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Utilisez ce bloc pour définir un nouvel arrière-plan."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Utilisez ce bloc associé à l'un des comportements ci-dessous."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Cliquez ici pour valider le code."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Ajoutez ce bloc d'événements à votre espace de travail."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
+        },
+        "helloworld_retro_location": {
+          "pin": "épingle"
+        },
+        "helloworld_retro_multi": {
+          "pin": "épingle"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Utilisez ce bloc pour faire parler les sprites.",
+          "hello_world_make_sprite": "Utilisez ce bloc pour créer un sprite."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "Trouvez les blocs de code ici. ",
+          "pause_button": "Testez l'animation que vous avez créée avec ce bouton.",
+          "run_button": "Testez l'animation que vous avez créée avec ce bouton."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Ajoute tes blocs ici"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Que fait cette ligne?"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Définie startGame ici"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Définie movePlayer() ici"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Vérifie si un joueur a gagné"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
         }
       }
     }

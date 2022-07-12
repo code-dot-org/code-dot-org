@@ -4,15 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "hoc-encryption",
-    "serialized_at": "2021-09-21 22:02:59 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-03-17 22:46:47 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "hoc-encryption"
     }
@@ -82,8 +85,20 @@
       }
     },
     {
-      "key": "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf",
+      "key": "70f79fb7-2d4a-47aa-815f-34bf7edc6dc2",
       "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "70f79fb7-2d4a-47aa-815f-34bf7edc6dc2",
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      }
+    },
+    {
+      "key": "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf",
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap-up"
@@ -97,26 +112,12 @@
     },
     {
       "key": "10b66543-86a4-459e-bc67-a31d688547ce",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "duration": 0,
         "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "10b66543-86a4-459e-bc67-a31d688547ce",
-        "lesson.key": "Simple Encryption",
-        "lesson_group.key": "",
-        "script.name": "hoc-encryption"
-      }
-    },
-    {
-      "key": "70f79fb7-2d4a-47aa-815f-34bf7edc6dc2",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "70f79fb7-2d4a-47aa-815f-34bf7edc6dc2",
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "",
         "script.name": "hoc-encryption"
@@ -130,7 +131,6 @@
       "properties": {
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "If necessary provide context of some facts about the Internet:\r\n\r\n* The Internet is not inherently secure. \r\n* Packets traveling across the Internet move through many routers, each of which could be owned by different people or organizations.\r\n* So we should *assume* all information traveling across the Internet to be public, as if written on a postcard and sent through the mail. \r\n"
           }
@@ -171,7 +171,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Resist the urge to give students a tool or device to aid in cracking this message -- that's coming in the next part of the lesson! Part of the point here is that it's possible without tools.  With tools it becomes trivial, as we'll see next.\r\n\r\nIf students are struggling to start here are a few strategy suggestions:\r\n\r\n* Find a small word and try alphabetic shifts until it's clear that it's an English word\r\n* Remember the letters aren't randomly substituted - the alphabet is just shifted.\r\n* Once you have found the amount of shift the rest comes easily. \t\t  \r\n\r\n"
           }
@@ -199,9 +198,8 @@
       "properties": {
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
-            "markdown": "If you'd like your students to read a little bit about **Historical Cryptography** and cracking ciphers, check out 'Substitution Ciphers and Frequency Analaysis' in [r blown-to-bits-chapter-5] pp. 165-169.\r\n"
+            "markdown": "If you'd like your students to read a little bit about **Historical Cryptography** and cracking ciphers, check out 'Substitution Ciphers and Frequency Analaysis' in [Blown to Bits, Chapter 5 - Reading](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf) pp. 165-169.\n"
           }
         ]
       },
@@ -224,7 +222,7 @@
       "key": "529245c0-b1fc-416b-aee4-77f322d85c58",
       "position": 3,
       "properties": {
-        "description": "In this set of activities students will use two different versions of a simple widget in Code Studio to \"crack\" a messages encoded with substitution ciphers, including an alphabetic shift and random substitution.\r\n\r\n![](csp/code-studio-icon.png) **Transition to Code Studio**: [r hocencryption]"
+        "description": "In this set of activities students will use two different versions of a simple widget in Code Studio to \"crack\" a messages encoded with substitution ciphers, including an alphabetic shift and random substitution.\n\n![](https://code.org/curriculum/docs/csp/code-studio-icon.png) **Transition to Code Studio**: [Encryption Widgets on Code Studio](https://studio.code.org/s/hoc-encryption)"
       },
       "seeding_key": {
         "activity_section.key": "529245c0-b1fc-416b-aee4-77f322d85c58",
@@ -249,7 +247,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Don't rush it, but don't linger on cracking caesar ciphers. Presenting and cracking a caesar cipher should go **pretty fast**.\r\n\r\n**The widget** is pretty self-explanatory. Let students figure out how to use it on their own.\r\n\r\nThe goal here is make points about cracking encryption with computational tools, and start to use some common terms.\r\n\r\nYou should move on to cracking random substitution relatively quickly.\r\n\r\n\r\n"
           }
@@ -299,7 +296,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**REMINDER: Discovery-based introduction of tools in a nutshell:**\r\n\r\n* Get students into to the tool without much or any introduction\r\n* Give students working in partners a fixed amount of time (5 minutes or so) to poke around and see if they can figure out what it does and doesn’t do – typically this might be presented as a mystery worth investigating\r\n* Ask the group to report what they found\r\n* Teacher fill in any gaps or explanations of how the tool works afterwards\r\n\r\nThis widget, like all others, are meant as a learning tool. You cannot break it so you are encouraged to let students play and investigate to figure out how the tools work.\r\n\r\nThese discovery-based methods of introducing tools have been tested in professional development and have worked well for teachers who use this curriculum. This method is effective for a few reasons, but overall students find this approach more engaging and fun, and they tend to be more receptive to, and motivated to hear, explanations of how the tool works after trying to “solve the mystery” themselves.\r\n"
           }
@@ -319,75 +315,6 @@
       "seeding_key": {
         "activity_section.key": "66d1a328-68c1-4006-b013-4d42e91c7360",
         "lesson_activity.key": "9b93e20e-e9d8-4407-a1a4-83844434c1e0"
-      }
-    },
-    {
-      "key": "c6e4a8c3-e36b-4a1f-9620-d892af9535f3",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "The video re-iterates a number of points that came out in this lesson.\r\n\r\nIn wrapping-up, make sure students:\r\n\r\n**Understand the relationship between cryptographic keys and passwords.**\r\n\r\n* A *Key* is an input to an encryption algorithm.  A password is basically the same thing.\r\n\r\n**Understand why using longer passwords makes them harder to guess.**\r\n\r\n* Longer passwords increase the number of possible keys making it **Computationally hard** to guess what the key is.\t\r\n\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "c6e4a8c3-e36b-4a1f-9620-d892af9535f3",
-        "lesson_activity.key": "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf"
-      }
-    },
-    {
-      "key": "a09a8861-0c7d-433f-9fd6-d10220a44624",
-      "position": 2,
-      "properties": {
-        "description": "* Show the [r the-internet-encryption-public-keys-1]\r\n\r\nYou should know about this video:\r\n\r\n* **0:00 to 4:11** covers Caesar and Vigenere ciphers and explains why they are hard to crack \r\n* **After 4:11**...it explains the difference between encryption that uses *symmetric* v. *asymmetric* keys which is **related to material on public key encryption** and is intended as a preview/teaser for more modern encryption techniques.",
-        "name": "Video: Encryption and Public Keys\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "a09a8861-0c7d-433f-9fd6-d10220a44624",
-        "lesson_activity.key": "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf"
-      }
-    },
-    {
-      "key": "fc172d97-57ec-446d-bd3b-fd4f79aad8bf",
-      "position": 3,
-      "properties": {
-        "description": "As part of wrap up **the major points we want to draw out are:**\r\n\r\n* Encryption is essential for every day life and activity\r\n* The \"strength\" of encryption is related to how easy it is to crack a message, assuming adversary  knows the technique but not the exact \"key\"\r\n* A random substitution cipher is very crackable by hand though it might take some time, trial and error.\r\n* However, when aided with computational tools, a random substitution cipher can be cracked by a novice in a matter of minutes.\r\n* Simple substitution ciphers give insight into encryption algorithms, but as we've seen fall way short when a potential adversary is aided with computational tools...our understanding must become more sophisticated.\r\n* If we are to create a secure Internet, we will need to develop tools and protocols which can resist the enormous computational power of modern computers.\r\n\r\n\r\nHere are a couple of thought-provoking prompts you can use to bring closure to the lesson and as an avenue to draw out the points above.  Choose one or more.\r\n\r\n**Prompts:**\r\n\r\n**How much easier is it to crack a caesar cipher than a random substitution cipher?  Can you put a number on it?**\r\n\r\n* *For Caesar's Cipher there are only 25 possible ways to shift the alphabet.  Worst case, you only need to try 25 different possibilites.  A random substitution cipher has MANY more possibilities (26 factorial = 4x10 <sup>26</sup> possibilities).  However, as we learned, with frequency analysis we can avoid having to try all of them blindly.*\r\n\r\n**Was it difficult to crack a Random Substitution cipher? Did it take longer than you thought? shorter? Why?**\r\n\r\n* *Computational tools aid humans in the implementation of encryption, decryption, and cracking algorithms. In other words, using a computer changes the speed and complexity of the types of encryption we can do, but it also increases our ability to break or circumvent encryption.*\r\n\r\n**Any encryption cipher is an **algorithm** for transforming plaintext into ciphertext.  What about the other way around? Can you write out an algorithm for cracking a Ceasar cipher? What about a random substitution cipher?**\r\n\r\n * *An algorithm for cracking a Caesar cipher is pretty easy - for each possible alphabetic shift, try it, see if the words come out as english.*\r\n * *An algorithm for cracking random substitution is trickier and more nunanced.  There might not be a single great answer but through thinking about it you realize how tricky it is to codify human intelligence and intuition for doing something like frequency analysis into a process that a machine can follow. It probably requires some human intervention which is an interesting point to make.*\r\n\r\n   \r\n** Review of Terminolgoy -- you can use this opportunity to review new vocabulary introduced in the activity and respond to questions students may have encountered during the activity.**\r\n\r\n  * Definitions of cryptography, encryption, decryption, cracking/breaking an encryption, cipher, etc.",
-        "name": "Discussion\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "fc172d97-57ec-446d-bd3b-fd4f79aad8bf",
-        "lesson_activity.key": "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf"
-      }
-    },
-    {
-      "key": "c694a6e6-b265-4802-bfca-bbc9180c8407",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "Students should be encouraged to chat with their partner while completing the worksheet. The questions are fairly straightforward and the point is more to use the questions as a guide to the reading, than to find all the answers as quickly as possible.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "c694a6e6-b265-4802-bfca-bbc9180c8407",
-        "lesson_activity.key": "10b66543-86a4-459e-bc67-a31d688547ce"
-      }
-    },
-    {
-      "key": "cec5b790-610d-4bb9-8868-a71c39f63329",
-      "position": 2,
-      "properties": {
-        "description": "**Read Blown to Bits**\r\n\r\n* Read pp. 165-169 of [r Blown to Bits, Chapter 5].\r\n* Answer the questions provided in the reading guide and worksheet [r reading-guide-for-encryption]\t\t\r\n\r\n**More Blown to Bits**\r\n\r\n* The earlier sections of Chapter 5 of Blown to Bits make reference to the significance of and controversies surrounding encryption in the aftermath of September 11th. This reading may be a useful tool for further introducing the impact of cryptography on many aspects of modern life.\r\n\r\n* Ask students to review the history of their Internet browsing and calculate roughly what percentage they conduct with the assumption that it is “private.” Do they have any way of being sure this is the case? Are there any websites they visit where they feel more confident in the secrecy of their traffic than others? Are they justified in this conclusion?"
-      },
-      "seeding_key": {
-        "activity_section.key": "cec5b790-610d-4bb9-8868-a71c39f63329",
-        "lesson_activity.key": "10b66543-86a4-459e-bc67-a31d688547ce"
       }
     },
     {
@@ -456,6 +383,73 @@
         "activity_section.key": "38ff7ecd-0a0f-4332-802c-cfa62c64beb5",
         "lesson_activity.key": "70f79fb7-2d4a-47aa-815f-34bf7edc6dc2"
       }
+    },
+    {
+      "key": "c6e4a8c3-e36b-4a1f-9620-d892af9535f3",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "The video re-iterates a number of points that came out in this lesson.\r\n\r\nIn wrapping-up, make sure students:\r\n\r\n**Understand the relationship between cryptographic keys and passwords.**\r\n\r\n* A *Key* is an input to an encryption algorithm.  A password is basically the same thing.\r\n\r\n**Understand why using longer passwords makes them harder to guess.**\r\n\r\n* Longer passwords increase the number of possible keys making it **Computationally hard** to guess what the key is.\t\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c6e4a8c3-e36b-4a1f-9620-d892af9535f3",
+        "lesson_activity.key": "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf"
+      }
+    },
+    {
+      "key": "a09a8861-0c7d-433f-9fd6-d10220a44624",
+      "position": 2,
+      "properties": {
+        "description": "* Show [The Internet: Encryption & Public Keys - Video](https://www.youtube.com/watch?v=ZghMPWGXexs)\n\nYou should know about this video:\n\n* **0:00 to 4:11** covers Caesar and Vigenere ciphers and explains why they are hard to crack \n* **After 4:11**...it explains the difference between encryption that uses *symmetric* v. *asymmetric* keys which is **related to material on public key encryption** and is intended as a preview/teaser for more modern encryption techniques.",
+        "name": "Video: Encryption and Public Keys\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "a09a8861-0c7d-433f-9fd6-d10220a44624",
+        "lesson_activity.key": "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf"
+      }
+    },
+    {
+      "key": "fc172d97-57ec-446d-bd3b-fd4f79aad8bf",
+      "position": 3,
+      "properties": {
+        "description": "As part of wrap up **the major points we want to draw out are:**\n\n* Encryption is essential for every day life and activity\n* The \"strength\" of encryption is related to how easy it is to crack a message, assuming adversary  knows the technique but not the exact \"key\"\n* A random substitution cipher is very crackable by hand though it might take some time, trial and error.\n* However, when aided with computational tools, a random substitution cipher can be cracked by a novice in a matter of minutes.\n* Simple substitution ciphers give insight into encryption algorithms, but as we've seen fall way short when a potential adversary is aided with computational tools...our understanding must become more sophisticated.\n* If we are to create a secure Internet, we will need to develop tools and protocols which can resist the enormous computational power of modern computers.\n\n\nHere are a couple of thought-provoking prompts you can use to bring closure to the lesson and as an avenue to draw out the points above.  Choose one or more.\n\n**Prompts:**\n\n**How much easier is it to crack a caesar cipher than a random substitution cipher?  Can you put a number on it?**\n\n* *For Caesar's Cipher there are only 25 possible ways to shift the alphabet.  Worst case, you only need to try 25 different possibilites.  A random substitution cipher has MANY more possibilities (26 factorial = 4x10 <sup>26</sup> possibilities).  However, as we learned, with frequency analysis we can avoid having to try all of them blindly.*\n\n**Was it difficult to crack a Random Substitution cipher? Did it take longer than you thought? shorter? Why?**\n\n* *Computational tools aid humans in the implementation of encryption, decryption, and cracking algorithms. In other words, using a computer changes the speed and complexity of the types of encryption we can do, but it also increases our ability to break or circumvent encryption.*\n\n**Any encryption cipher is an algorithm** for transforming plaintext into ciphertext.  What about the other way around? Can you write out an algorithm for cracking a Ceasar cipher? What about a random substitution cipher?**\n\n * *An algorithm for cracking a Caesar cipher is pretty easy - for each possible alphabetic shift, try it, see if the words come out as english.*\n * *An algorithm for cracking random substitution is trickier and more nunanced.  There might not be a single great answer but through thinking about it you realize how tricky it is to codify human intelligence and intuition for doing something like frequency analysis into a process that a machine can follow. It probably requires some human intervention which is an interesting point to make.*\n\n   \n**Review of Terminology -- you can use this opportunity to review new vocabulary introduced in the activity and respond to questions students may have encountered during the activity.**\n\n  * Definitions of cryptography, encryption, decryption, cracking/breaking an encryption, cipher, etc.",
+        "name": "Discussion\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc172d97-57ec-446d-bd3b-fd4f79aad8bf",
+        "lesson_activity.key": "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf"
+      }
+    },
+    {
+      "key": "c694a6e6-b265-4802-bfca-bbc9180c8407",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students should be encouraged to chat with their partner while completing the worksheet. The questions are fairly straightforward and the point is more to use the questions as a guide to the reading, than to find all the answers as quickly as possible.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c694a6e6-b265-4802-bfca-bbc9180c8407",
+        "lesson_activity.key": "10b66543-86a4-459e-bc67-a31d688547ce"
+      }
+    },
+    {
+      "key": "cec5b790-610d-4bb9-8868-a71c39f63329",
+      "position": 2,
+      "properties": {
+        "description": "**Read Blown to Bits**\n\n* Read pp. 165-169 of [Blown to Bits, Chapter 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)\n* Answer the questions provided in the reading guide and worksheet [Reading Guide for Encryption](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/) Worksheet.\t\t\n\n**More Blown to Bits**\n\n* The earlier sections of Chapter 5 of Blown to Bits make reference to the significance of and controversies surrounding encryption in the aftermath of September 11th. This reading may be a useful tool for further introducing the impact of cryptography on many aspects of modern life.\n\n* Ask students to review the history of their Internet browsing and calculate roughly what percentage they conduct with the assumption that it is “private.” Do they have any way of being sure this is the case? Are there any websites they visit where they feel more confident in the secrecy of their traffic than others? Are they justified in this conclusion?"
+      },
+      "seeding_key": {
+        "activity_section.key": "cec5b790-610d-4bb9-8868-a71c39f63329",
+        "lesson_activity.key": "10b66543-86a4-459e-bc67-a31d688547ce"
+      }
     }
   ],
   "script_levels": [
@@ -465,6 +459,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack a Caesar Cipher"
+        ],
         "progression": "Crack a Caesar Cipher"
       },
       "bonus": false,
@@ -487,6 +484,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Terminology Recap"
+        ],
         "progression": "Terminology Recap"
       },
       "bonus": false,
@@ -509,6 +509,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Challenge Introduction"
+        ],
         "progression": "New Challenge Introduction"
       },
       "bonus": false,
@@ -531,6 +534,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack Random Substitution"
+        ],
         "progression": "Crack Random Substitution"
       },
       "bonus": false,
@@ -553,6 +559,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Technique: Frequency Analysis"
+        ],
         "progression": "Technique: Frequency Analysis"
       },
       "bonus": false,
@@ -575,6 +584,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Encryption and Public Keys"
+        ],
         "progression": "Video - Encryption and Public Keys"
       },
       "bonus": false,
@@ -672,9 +684,9 @@
       "url": "https://youtu.be/ZghMPWGXexs",
       "key": "encryption-and-public-keys-optional-1",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2015/csp/concept_encryption.mp4"
+        "download_url": "http://videos.code.org/2015/csp/concept_encryption.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "encryption-and-public-keys-optional-1"
@@ -817,16 +829,6 @@
   ],
   "objectives": [
     {
-      "key": "5d9905b6-0dbe-4624-9184-8fa076dad2bb",
-      "properties": {
-        "description": "Explain why encryption is an important need for everyday life on the Internet."
-      },
-      "seeding_key": {
-        "lesson.key": "Simple Encryption",
-        "objective.key": "5d9905b6-0dbe-4624-9184-8fa076dad2bb"
-      }
-    },
-    {
       "key": "0bd7545d-60d4-4515-8d4e-6c66531e1f7d",
       "properties": {
         "description": "Crack a message encrypted with a Caesar cipher using a Caesar Cipher Widget"
@@ -847,6 +849,16 @@
       }
     },
     {
+      "key": "5d9905b6-0dbe-4624-9184-8fa076dad2bb",
+      "properties": {
+        "description": "Explain why encryption is an important need for everyday life on the Internet."
+      },
+      "seeding_key": {
+        "lesson.key": "Simple Encryption",
+        "objective.key": "5d9905b6-0dbe-4624-9184-8fa076dad2bb"
+      }
+    },
+    {
       "key": "f6a523a0-0d22-47e5-97b9-6c325a5cecb6",
       "properties": {
         "description": "Explain the weaknesses and security flaws of substitution ciphers"
@@ -861,36 +873,29 @@
     {
       "seeding_key": {
         "lesson.key": "Simple Encryption",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CI.L3A:10"
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.5"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Simple Encryption",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CL.L2:2"
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Simple Encryption",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CPP.L3A:9"
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-07"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Simple Encryption",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CPP.L3B:5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simple Encryption",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CT.L3B:4"
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-NI-04"
       }
     }
   ],

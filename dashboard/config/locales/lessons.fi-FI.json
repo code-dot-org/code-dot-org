@@ -2,817 +2,824 @@
   "fi-FI": {
     "data": {
       "lessons": {
-        "coursef-2021/lesson-6": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "dance-extras/Dance Party - Go Further": {
+          "name": "Jatka tanssimista (2018)"
         },
-        "coursef-2021/lesson-7": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Koodaustunti Minecraft Suunnittelija"
         },
-        "coursef-2021/lesson-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "flappy/Flappy Code": {
+          "name": "Flappy Code"
         },
-        "coursef-2021/Virtual Pet": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "hourofcode/Maze": {
+          "name": "Sokkelo"
         },
-        "coursef-2021/lesson-2": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "frozen/Artist": {
+          "name": "Koodaa Annan ja Elsan kanssa"
         },
-        "coursef-2021/lesson-9": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "iceage/Ice Age Play Lab": {
+          "name": "Ice Age Pelilabra"
         },
-        "coursef-2021/lesson-10": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "artist/Artist": {
+          "name": "Taiteilija"
         },
-        "coursef-2021/lesson-11": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "gumball/Gumball Play Lab": {
+          "name": "Gumball Pelilabra"
         },
-        "coursef-2021/Loops with the Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "dance/Dance Party": {
+          "name": "Tanssibileet"
         },
-        "coursef-2021/Variables that Change in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "aquatic/Aquatic": {
+          "name": "Minecraft: Merellinen matka"
         },
-        "coursef-2021/Nested Loops in the Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "starwars/Hour of Code 2015": {
+          "name": "Tähtien sota: Rakenna galaksi koodaten (JavaScript)"
         },
-        "coursef-2021/Variables that Change in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft Koodaustunti"
+        },
+        "playlab/Play Lab": {
+          "name": "Pelilabra"
+        },
+        "infinity/Infinity": {
+          "name": "Disneyn Infinity-Pelilabra"
+        },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "name": "Jatka tanssimista"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kooditunti 2013"
+        },
+        "dance-2019/Dance Party": {
+          "name": "Tanssibileet (2019)"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Silmukat"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Tapahtumat"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Ehtolausekkeet"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funktiot"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Muuttujat"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Silmukat"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Tietojenkäsittelyn Perusteet"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Tietojenkäsittelyn Perusteet"
+        },
+        "courseb-2018/Move It, Move It": {
+          "name": "Liikuta, liikuta"
+        },
+        "courseb-2018/Your Digital Footprint": {
+          "name": "Digitaalinen jalanjälkesi"
+        },
+        "coursea-2018/Debugging: Unspotted Bugs": {
+          "name": "Huomaamattomia vikoja"
+        },
+        "coursea-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Stevie ja iso projekti"
+        },
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "Iloiset kartat"
+        },
+        "coursea-2018/Going Places Safely": {
+          "name": "Menossa turvallisesti"
+        },
+        "coursed-2018/Algorithms: Graph Paper Programming": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "coursed-2018/Relay Programming": {
+          "name": "Releohjelmointi"
+        },
+        "coursed-2018/Conditionals with Cards": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "coursed-2018/Digital Citizenship": {
+          "name": "Digitaalinen kansalaisuus"
+        },
+        "coursed-2018/Unplugged: Binary": {
+          "name": "Binäärikuvat"
+        },
+        "coursef-2018/Programming: My Robotic Friends": {
+          "name": "Robottiystäväni"
+        },
+        "coursef-2018/Building a Foundation": {
+          "name": "Rakennetaan perustus"
+        },
+        "coursef-2018/Conditionals with Cards": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "coursef-2018/Envelope Variables": {
+          "name": "Kirjekuorimuuttujat"
+        },
+        "coursef-2018/For Loop Fun": {
+          "name": "Silmukkahupia"
+        },
+        "express-2018/Graph Paper Programming": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "express-2018/Relay Programming": {
+          "name": "Releohjelmointi"
+        },
+        "express-2018/Loops: Getting Loopy": {
+          "name": "Mennään silmukoille"
+        },
+        "express-2018/Conditionals with Cards": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "express-2018/Functions: Songwriting": {
+          "name": "Säveltäminen"
+        },
+        "express-2018/Events: The Big Event": {
+          "name": "Suuri tapahtuma"
+        },
+        "express-2018/Envelope Variables": {
+          "name": "Kirjekuorimuuttujat"
+        },
+        "express-2018/For Loop Fun": {
+          "name": "Silmukkahupia"
+        },
+        "express-2018/Binary Bracelets": {
+          "name": "Binäärikorut"
+        },
+        "express-2018/Unplugged: Binary": {
+          "name": "Binäärikuvat"
+        },
+        "express-2018/Internet": {
+          "name": "Internetti"
+        },
+        "express-2018/Crowdsourcing": {
+          "name": "Joukkoistaminen"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Robottiystäväni"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Rakennetaan perustus"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Säveltäminen"
+        },
+        "coursee-2018/Internet": {
+          "name": "Internetti"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Joukkoistaminen"
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "Rakennetaan perustus"
+        },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Mennään silmukoille"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "Suuri tapahtuma"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Binäärikorut"
+        },
+        "pre-express-2018/Debugging: Unspotted Bugs": {
+          "name": "Huomaamattomia vikoja"
+        },
+        "pre-express-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Stevie ja iso projekti"
+        },
+        "pre-express-2018/Move It, Move It": {
+          "name": "Liikuta, liikuta"
+        },
+        "pre-express-2018/Your Digital Footprint": {
+          "name": "Digitaalinen jalanjälkesi"
+        },
+        "pre-express-2018/Spelling Bee": {
+          "name": "Kirjurimehiläinen"
+        },
+        "csd3-2018/Variables": {
+          "name": "Muuttujat"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Ehtolausekkeet"
+        },
+        "csd3-2018/Velocity": {
+          "name": "Nopeus"
+        },
+        "csd3-2018/Functions": {
+          "name": "Funktiot"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Parametrilliset funktiot"
+        },
+        "csd2-2018/Lists": {
+          "name": "Listat"
+        },
+        "coursea-2019/Going Places Safely": {
+          "name": "Menossa turvallisesti"
+        },
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "Iloiset kartat"
+        },
+        "courseb-2019/Your Digital Footprint": {
+          "name": "Digitaalinen jalanjälkesi"
+        },
+        "courseb-2019/Move It, Move It": {
+          "name": "Liikuta, liikuta"
+        },
+        "courseb-2019/Loops: Getting Loopy": {
+          "name": "Mennään silmukoille"
+        },
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "coursed-2019/Relay Programming": {
+          "name": "Releohjelmointi"
+        },
+        "coursed-2019/Conditionals with Cards": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "Binäärikuvat"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "Digitaalinen kansalaisuus"
+        },
+        "coursed-2019/Dance Party": {
+          "name": "Tanssibileet"
+        },
+        "coursef-2019/Envelope Variables": {
+          "name": "Kirjekuorimuuttujat"
+        },
+        "coursef-2019/For Loop Fun": {
+          "name": "Silmukkahupia"
+        },
+        "coursef-2019/Internet": {
+          "name": "Internetti"
+        },
+        "coursef-2019/Crowdsourcing": {
+          "name": "Joukkoistaminen"
+        },
+        "coursee-2019/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Säveltäminen"
+        },
+        "express-2019/Dance Party": {
+          "name": "Tanssibileet"
+        },
+        "express-2019/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Binäärikorut"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "Suuri tapahtuma"
+        },
+        "pre-express-2019/Spelling Bee": {
+          "name": "Kirjurimehiläinen"
+        },
+        "csd3-2019/Variables": {
+          "name": "Muuttujat"
+        },
+        "csd3-2019/Conditionals": {
+          "name": "Ehtolausekkeet"
+        },
+        "csd3-2019/Velocity": {
+          "name": "Nopeus"
+        },
+        "csd3-2019/Functions": {
+          "name": "Funktiot"
+        },
+        "csd6-2019/Functions with Parameters": {
+          "name": "Parametrilliset funktiot"
+        },
+        "csd2-2019/Lists": {
+          "name": "Listat"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Rakennetaan perustus"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Algoritmit: tantagrammit"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Tosielämän algoritmit: kylvä siemen"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Tosielämän algoritmit: kylvä siemen"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Kirjurimehiläinen"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Rakennetaan perustus"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Sisäkkäiset silmukat"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Tosielämän algoritmit: paperilentokoneet"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Tosielämän algoritmit: kylvä siemen"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Sisäkkäiset silmukat"
+        },
+        "express-2017/Introduction": {
+          "name": "Johdanto"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Rakennetaan perustus"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Sisäkkäiset silmukat"
+        },
+        "csd3-2017/Variables": {
+          "name": "Muuttujat"
+        },
+        "csd3-2017/Conditionals": {
+          "name": "Ehtolausekkeet"
+        },
+        "csd3-2017/Velocity": {
+          "name": "Nopeus"
+        },
+        "csd3-2017/Functions": {
+          "name": "Funktiot"
+        },
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Parametrilliset funktiot"
+        },
+        "csd2-2017/Lists": {
+          "name": "Listat"
+        },
+        "course4/Unplugged: Tangrams": {
+          "name": "Tietokoneeton tekeminen: tantagrammit"
+        },
+        "course4/Maze and Bee": {
+          "name": "Sokkelo ja mehiläinen"
+        },
+        "course4/Artist": {
+          "name": "Taiteilija"
+        },
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Tietokoneeton tekeminen: Kirjekuorimuuttujat"
+        },
+        "course4/Unplugged: Madlibs": {
+          "name": "Tietokoneeton tekeminen: Madlibs"
+        },
+        "course4/Artist: Variables": {
+          "name": "Taiteilija: muuttujat"
+        },
+        "course4/Play Lab: Variables": {
+          "name": "Pelilabra: muuttujat"
+        },
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Tietokoneeton tekeminen: silmukkahauskaa"
+        },
+        "course4/Bee: For Loops": {
+          "name": "Mehiläinen: silmukat"
+        },
+        "course4/Artist: For Loops": {
+          "name": "Taiteilija: silmukat"
+        },
+        "course4/Play Lab: For Loops": {
+          "name": "Pelilabra: silmukat"
+        },
+        "course4/Artist: Functions": {
+          "name": "Taiteilija: funktiot"
+        },
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Tietokoneeton tekeminen: parametroitu sävellys"
+        },
+        "course4/Artist: Functions with Parameters": {
+          "name": "Taiteilija: parametrilliset funktiot"
+        },
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Pelilabra: parametrilliset funktiot"
+        },
+        "course4/Bee: Functions with Parameters": {
+          "name": "Mehiläinen: parametrilliset funktiot"
+        },
+        "course4/Unplugged: Binary": {
+          "name": "Tietokoneeton tekeminen: binääri"
+        },
+        "course4/Artist Binary": {
+          "name": "Taiteilija: binääri"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Superhaaste - muuttujat"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Superhaaste - For-silmukat"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Superhaaste - Funktioita ja parametreja"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Äärimmäinen haaste - Kokonaisuus"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Johdanto tietotekniikkaan"
+        },
+        "20-hour/The Maze": {
+          "name": "Sokkelo"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Laskennallinen ajattelu"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "20-hour/The Artist": {
+          "name": "Taiteilija"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmit"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Taiteilija 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funktiot"
+        },
+        "20-hour/The Farmer": {
+          "name": "Maanviljelijä"
+        },
+        "20-hour/Conditionals": {
+          "name": "Ehtolausekkeet"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Taiteilija 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Sävellys"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Maanviljelijä 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstraktio"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Taiteilija 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Releohjelmointi"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Maanviljelijä 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internetti"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Taiteilija 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Yhteenveto"
+        },
+        "course2/Graph Paper Programming": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "course2/Real-life Algorithms: Paper Planes": {
+          "name": "Tosielämän algoritmit: paperilentokoneet"
+        },
+        "course2/Maze: Sequence": {
+          "name": "Sokkelo: komentosarja"
+        },
+        "course2/Artist: Sequence": {
+          "name": "Taiteilija: komentosarja"
+        },
+        "course2/Getting Loopy": {
+          "name": "Mennään silmukoille"
+        },
+        "course2/Maze: Loops": {
+          "name": "Sokkelo: silmukat"
+        },
+        "course2/Artist: Loops": {
+          "name": "Taiteilija: silmukat"
+        },
+        "course2/Bee: Loops": {
+          "name": "Mehiläinen: silmukoita"
+        },
+        "course2/Relay programming": {
+          "name": "Releohjelmointi"
+        },
+        "course2/Bee: Debugging": {
+          "name": "Mehiläinen: virheenkorjaus"
+        },
+        "course2/Artist: Debugging": {
+          "name": "Taiteilija: virheenkorjaus"
+        },
+        "course2/Conditionals": {
+          "name": "Ehtolausekkeet"
+        },
+        "course2/Bee: Conditionals": {
+          "name": "Mehiläinen: ehtolauseet"
+        },
+        "course2/Binary Bracelets": {
+          "name": "Binäärikorut"
+        },
+        "course2/The Big Event": {
+          "name": "Suuri tapahtuma"
+        },
+        "course2/Flappy": {
+          "name": "Flappy"
+        },
+        "course2/Studio: Create a Story": {
+          "name": "Pelilabra: Luo tarina"
+        },
+        "course2/Your Digital Footprint": {
+          "name": "Digitaalinen jalanjälkesi"
+        },
+        "course2/Artist: Nested Loops": {
+          "name": "Taiteilija: sisäkkäiset silmukat"
+        },
+        "course3/Computational Thinking": {
+          "name": "Laskennallinen ajattelu"
+        },
+        "course3/Maze": {
+          "name": "Sokkelo"
+        },
+        "course3/Artist": {
+          "name": "Taiteilija"
+        },
+        "course3/Functional Suncatchers": {
+          "name": "Funktionaaliset auringonkerääjät"
+        },
+        "course3/Artist: Functions": {
+          "name": "Taiteilija: funktiot"
+        },
+        "course3/Bee: Functions": {
+          "name": "Mehiläinen: funktiot"
+        },
+        "course3/Bee: Conditionals": {
+          "name": "Mehiläinen: ehtolauseet"
+        },
+        "course3/Maze: Conditionals": {
+          "name": "Sokkelo: ehtolauseet"
+        },
+        "course3/Songwriting": {
+          "name": "Säveltäminen"
+        },
+        "course3/Dice Race": {
+          "name": "Noppakisa"
+        },
+        "course3/Artist: Nested Loops": {
+          "name": "Taiteilija: sisäkkäiset silmukat"
+        },
+        "course3/Farmer: While Loops": {
+          "name": "Maanviljelijä: \"niin kauan kuin\" -silmukka"
+        },
+        "course3/Bee: Nested Loops": {
+          "name": "Mehiläinen: sisäkkäiset silmukat"
+        },
+        "course3/Bee: Debugging": {
+          "name": "Mehiläinen: virheenkorjaus"
+        },
+        "course3/Bounce": {
+          "name": "Bounce"
+        },
+        "course3/Studio: Create a Story": {
+          "name": "Pelilabra: Luo tarina"
+        },
+        "course3/Studio: Create a Game": {
+          "name": "Pelilabra: Luo peli"
+        },
+        "course3/Internet": {
+          "name": "Internet"
+        },
+        "course3/Crowdsourcing": {
+          "name": "Joukkoistaminen"
+        },
+        "course3/Digital Citizenship": {
+          "name": "Digitaalinen kansalaisuus"
+        },
+        "course3/Artist: Patterns": {
+          "name": "Taiteilija: kuviot"
+        },
+        "course1/Happy Maps": {
+          "name": "Iloiset kartat"
+        },
+        "course1/Move it, Move it": {
+          "name": "Liikuta, liikuta"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Palapeli: Opettele \"vedä ja pudota\""
+        },
+        "course1/Maze: Sequence": {
+          "name": "Sokkelo: komentosarja"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Sokkelo: virheenkorjaus"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Tosielämän algoritmit: kylvä siemen"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Mehiläinen: komentosarja"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Taiteilija: komentosarja"
+        },
+        "course1/Building a Foundation": {
+          "name": "Rakennetaan perustus"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Taiteilija: muodot"
+        },
+        "course1/Spelling Bee": {
+          "name": "Kirjurimehiläinen"
+        },
+        "course1/Getting Loopy": {
+          "name": "Mennään silmukoille"
+        },
+        "course1/Maze: Loops": {
+          "name": "Sokkelo: silmukat"
+        },
+        "course1/Bee: Loops": {
+          "name": "Mehiläinen: silmukoita"
+        },
+        "course1/The Big Event": {
+          "name": "Suuri tapahtuma"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Pelilabra: Luo tarina"
+        },
+        "course1/Going Places Safely": {
+          "name": "Menossa turvallisesti"
+        },
+        "course1/Artist: Loops": {
+          "name": "Taiteilija: silmukat"
+        },
+        "jigsaw/Jigsaw": {
+          "name": "Palapeli"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Palapeli"
+        },
+        "allthethings/Maze": {
+          "name": "Sokkelo"
+        },
+        "allthethings/Artist": {
+          "name": "Taiteilija"
+        },
+        "allthethings/Bee": {
+          "name": "Mehiläinen"
+        },
+        "allthethings/Farmer": {
+          "name": "Maanviljelijä"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Bounce"
+        },
+        "allthethings/Multi": {
+          "name": "Moni"
+        },
+        "allthethings/Match": {
+          "name": "Vastaavat"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pikselöityminen"
+        },
+        "allthethings/Star wars": {
+          "name": "Tähtien Sota"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Web Lab": {
+          "name": "Nettilabra"
         },
         "coursef-2021/For Loop Fun": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/For Loops in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/For Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/Simulating Experiments": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/lesson-5": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/AI for Oceans": {
-          "overview": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Silmukkahupia"
         },
         "coursef-2021/Internet": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Digital Trails": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Internetti"
         },
         "courseb-2021/Move It, Move It": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Sequencing in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Programming in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Programming in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Liikuta, liikuta"
         },
         "courseb-2021/Loops: Getting Loopy": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/The Right App": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Safety in My Online Neighborhood": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Learn to Drag and Drop": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Mennään silmukoille"
         },
         "coursea-2021/Programming: Happy Maps": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Sequencing with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Programming in Ice Age": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Programming with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Loops: Happy Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Loops in Ice Age": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Loops in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Ocean Scene with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Putting a STOP to Online Meanness": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming: My Robotic Friends": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Debugging in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops: My Loopy Robotic Friends": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Sticker Art with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Iloiset kartat"
         },
         "coursec-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Build a Flappy Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Picturing Data": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Suuri tapahtuma"
         },
         "coursec-2021/Binary Bracelets": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/End of Course Project: Create a Play Lab Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/lesson-5": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Binäärikorut"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Introduction to Online Puzzles": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Ruutupaperiohjelmointi"
         },
         "coursed-2021/Relay Programming": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Debugging in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Events in Bounce": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Build a Star Wars Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Releohjelmointi"
         },
         "coursed-2021/Dance Party": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Loops in Ice Age": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Nested Loops in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Tanssibileet"
         },
         "coursed-2021/Conditionals with Cards": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/lesson-6": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Conditionals in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/While Loops in Farmer": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Until Loops in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Programming with Angry Birds": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Debugging with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Collecting Treasure with Laurel": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Creating Art with Code": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Swimming Fish in Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/lesson-2": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/lesson-3": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Virtual Pet with Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Ehtolauseet pelikorteilla"
         },
         "express-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Loops with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Sticker Art with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Nested Loops in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Snowflakes with Anna and Elsa": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Looking Ahead with Minecraft ": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/If/Else with Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/While Loops with the Farmer": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Tanssibileet"
         },
         "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Until Loops in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Harvesting with Conditionals": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Functions in Minecraft": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Functions with Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Functions with Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/lesson-4": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Variables with Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Changing Variables with Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/For Loops with Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/For Loops with Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Learn to Drag and Drop": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Sequencing with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Programming in with Angry Birds": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Programming with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Programming in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Loops with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Loops with Laurel": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Ocean Scene with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Drawing Gardens with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/On the Move with Events": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/A Royal Battle with Events": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Simon Says": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Learning Sprites with Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Alien Dance Party with Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/lesson-4": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Private and Personal Information": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/About Me": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Digital Sharing": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Programming and Loops with the Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Nested Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Nested Loops in Frozen": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
         },
         "coursee-2021/Functions: Songwriting": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Functions in Minecraft": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Functions in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Säveltäminen"
         },
         "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
         },
-        "coursee-2021/Conditionals": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd6-2021/Functions with Parameters": {
+          "name": "Parametrilliset funktiot"
         },
-        "coursee-2021/Functions in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Variables": {
+          "name": "Muuttujat"
         },
-        "coursee-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Text": {
+          "name": "teksti"
         },
-        "coursee-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Conditionals": {
+          "name": "Ehtolausekkeet"
+        },
+        "csd3-2021/Velocity": {
+          "name": "Nopeus"
+        },
+        "csd3-2021/Functions": {
+          "name": "Funktiot"
+        },
+        "express-2020/Dance Party": {
+          "name": "Tanssibileet"
+        },
+        "express-2020/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "Liikuta, liikuta"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Mennään silmukoille"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Releohjelmointi"
+        },
+        "coursed-2020/Dance Party": {
+          "name": "Tanssibileet"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Binäärikuvat"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Binäärikorut"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "Suuri tapahtuma"
+        },
+        "coursee-2020/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Säveltäminen"
+        },
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Iloiset kartat"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Kirjekuorimuuttujat"
+        },
+        "coursef-2020/Internet": {
+          "name": "Internetti"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "Silmukkahupia"
         }
       }
     }

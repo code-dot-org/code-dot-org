@@ -5,14 +5,15 @@ import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
 import {levelWithProgressType} from './progressTypes';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
-import {stringifyQueryParams} from '../../utils';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {isLevelAssessment} from './progressHelpers';
 import {connect} from 'react-redux';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {
   BubbleShape,
-  BubbleSize
+  BubbleSize,
+  getBubbleUrl
 } from '@cdo/apps/templates/progress/BubbleFactory';
 
 /**
@@ -27,7 +28,7 @@ class ProgressPill extends React.Component {
     text: PropTypes.string,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.number,
     progressStyle: PropTypes.bool,
     onSingleLevelClick: PropTypes.func,
     // Redux
@@ -49,13 +50,8 @@ class ProgressPill extends React.Component {
       return;
     }
 
-    let url = levels[0].url;
-
-    if (selectedSectionId) {
-      url += stringifyQueryParams({section_id: selectedSectionId});
-    }
-
-    return url;
+    const userId = queryParams('user_id');
+    return getBubbleUrl(levels[0].url, userId, selectedSectionId);
   }
 
   getTooltipProps() {

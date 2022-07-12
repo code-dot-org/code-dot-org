@@ -1,8 +1,0 @@
-login_required true
-hideable_lessons true
-has_verified_resources true
-
-lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CSD post-course survey', display_name: 'CSD Student Post-Course Survey (\'18-\'19)', has_lesson_plan: true
-level 'csd-post-survey-levelgroup-2018', progression: 'CS Discoveries Post-Course Survey', assessment: true
-

@@ -67,6 +67,7 @@ de:
       nectar: Nektar
       nectars: Nektar
       padYOffset: padYOffset
+      planet: Planet
       player_score: player_score
       points: Punkte
       punchLine: punchLine
@@ -84,6 +85,7 @@ de:
       set sides: Festgelegte Seiten
       setupSimScore1: setupSimScore1
       setupSimScore2: setupSimScore2
+      shout: schreien
       sides: Kanten
       size: Größe
       speed: Geschwindigkeit

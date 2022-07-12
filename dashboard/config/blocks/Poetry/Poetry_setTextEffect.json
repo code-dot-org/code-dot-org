@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "Poetry - Effects",
   "config": {
     "func": "setTextEffect",
     "blockText": "set text effect {EFFECT}",
@@ -10,10 +10,6 @@
           [
             "fade",
             "\"fade\""
-          ],
-          [
-            "typewriter",
-            "\"typewriter\""
           ],
           [
             "fly from left",
@@ -30,6 +26,10 @@
           [
             "fly from bottom",
             "\"flyBottom\""
+          ],
+          [
+            "typewriter",
+            "\"typewriter\""
           ]
         ]
       }

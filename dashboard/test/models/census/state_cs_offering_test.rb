@@ -41,4 +41,21 @@ class Census::StateCsOfferingTest < ActiveSupport::TestCase
     assert update == 2
     assert extension == 'test2'
   end
+
+  test "seeding attempts to seed all updates in order" do
+    # mock out s3 call
+    AWS::S3.stubs(:find_objects_with_ext).returns(
+      [
+        'state_cs_offerings/WA/2021-2022.2.csv',
+        'state_cs_offerings/WA/2021-2022.csv',
+        'state_cs_offerings/WA/2021-2022.3.csv'
+      ]
+    )
+
+    results = Census::StateCsOffering.find_all_updates_for_state_year('WA', 2021, 'csv')
+
+    assert results[0] == 'state_cs_offerings/WA/2021-2022.csv'
+    assert results[1] == 'state_cs_offerings/WA/2021-2022.2.csv'
+    assert results[2] == 'state_cs_offerings/WA/2021-2022.3.csv'
+  end
 end

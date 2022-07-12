@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
+import {DisplayTheme} from './DisplayTheme';
 
 export default class NameFileDialog extends Component {
   static propTypes = {
@@ -10,7 +11,7 @@ export default class NameFileDialog extends Component {
     handleSave: PropTypes.func.isRequired,
     inputLabel: PropTypes.string.isRequired,
     saveButtonText: PropTypes.string.isRequired,
-    isDarkMode: PropTypes.bool.isRequired,
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
     errorMessage: PropTypes.string,
     filename: PropTypes.string
   };
@@ -23,6 +24,20 @@ export default class NameFileDialog extends Component {
     };
   }
 
+  componentDidUpdate(prevProps) {
+    if (!prevProps.isOpen && this.props.isOpen) {
+      this.textInput.setSelectionRange(0, 0);
+    }
+  }
+
+  onKeyDown = event => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      event.stopPropagation();
+      this.props.handleSave(this.textInput.value);
+    }
+  };
+
   render() {
     const {
       isOpen,
@@ -30,7 +45,7 @@ export default class NameFileDialog extends Component {
       handleSave,
       inputLabel,
       saveButtonText,
-      isDarkMode,
+      displayTheme,
       errorMessage,
       filename
     } = this.props;
@@ -40,21 +55,24 @@ export default class NameFileDialog extends Component {
         handleClose={handleClose}
         style={{
           ...styles.dialog,
-          ...(isDarkMode && styles.darkDialog)
+          ...(displayTheme === DisplayTheme.DARK && styles.darkDialog)
         }}
         useUpdatedStyles
         hideCloseButton
       >
         <label
           htmlFor="filenameInput"
-          style={{...styles.label, ...(isDarkMode && styles.darkDialog)}}
+          style={{
+            ...styles.label,
+            ...(displayTheme === DisplayTheme.DARK && styles.darkDialog)
+          }}
         >
           {inputLabel}
         </label>
         <div
           style={{
             ...styles.dialogContent,
-            ...(isDarkMode && styles.darkDialog)
+            ...(displayTheme === DisplayTheme.DARK && styles.darkDialog)
           }}
         >
           <input
@@ -64,15 +82,19 @@ export default class NameFileDialog extends Component {
             ref={this.setTextInputRef}
             style={{
               ...styles.dialogInput,
-              ...(isDarkMode && styles.darkDialog)
+              ...(displayTheme === DisplayTheme.DARK && styles.darkDialog)
             }}
+            onKeyDown={this.onKeyDown}
+            autoFocus
           />
           <div>
             <button
               type="button"
               style={{
                 ...styles.button,
-                ...(isDarkMode ? styles.darkButton : styles.lightSave)
+                ...(displayTheme === DisplayTheme.DARK
+                  ? styles.darkButton
+                  : styles.lightSave)
               }}
               onClick={() => handleSave(this.textInput.value)}
             >
@@ -82,7 +104,9 @@ export default class NameFileDialog extends Component {
               type="button"
               style={{
                 ...styles.button,
-                ...(isDarkMode ? styles.darkButton : styles.lightCancel)
+                ...(displayTheme === DisplayTheme.DARK
+                  ? styles.darkButton
+                  : styles.lightCancel)
               }}
               onClick={handleClose}
             >
@@ -92,7 +116,11 @@ export default class NameFileDialog extends Component {
         </div>
         {errorMessage && (
           <div
-            style={isDarkMode ? styles.darkErrorMessage : styles.errorMessage}
+            style={
+              displayTheme === DisplayTheme.DARK
+                ? styles.darkErrorMessage
+                : styles.errorMessage
+            }
           >
             {errorMessage}
           </div>

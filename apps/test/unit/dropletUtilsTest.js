@@ -132,7 +132,8 @@ const BASE_DROPLET_CONFIG = Object.freeze({
       color: '#BB77C7'
     }
   },
-  paramButtonsForUnknownFunctions: true
+  paramButtonsForUnknownFunctions: true,
+  createSocketForKnownBlock: true
 });
 
 describe('dropletUtils', () => {

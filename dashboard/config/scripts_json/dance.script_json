@@ -4,16 +4,19 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
-      "tts": true,
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "tts": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "dance",
-    "serialized_at": "2021-09-28 23:02:33 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-03-17 22:41:44 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "dance"
     }
@@ -936,6 +939,16 @@
   ],
   "vocabularies": [
     {
+      "key": "code",
+      "word": "code",
+      "definition": "(v) to write code, or to write instructions for a computer.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
@@ -954,19 +967,15 @@
       "seeding_key": {
         "vocabulary.key": "program"
       }
-    },
-    {
-      "key": "code",
-      "word": "code",
-      "definition": "(v) to write code, or to write instructions for a computer.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "code"
-      }
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "vocabulary.key": "code"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Dance Party",
@@ -977,12 +986,6 @@
       "seeding_key": {
         "lesson.key": "Dance Party",
         "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Dance Party",
-        "vocabulary.key": "code"
       }
     }
   ],
@@ -1001,16 +1004,6 @@
       }
     },
     {
-      "key": "efcad81f-908b-4e31-8602-02c5ef16ab26",
-      "properties": {
-        "description": "Develop programs that respond to user input"
-      },
-      "seeding_key": {
-        "lesson.key": "Dance Party",
-        "objective.key": "efcad81f-908b-4e31-8602-02c5ef16ab26"
-      }
-    },
-    {
       "key": "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b",
       "properties": {
         "description": "Create dance animations with code"
@@ -1018,6 +1011,16 @@
       "seeding_key": {
         "lesson.key": "Dance Party",
         "objective.key": "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b"
+      }
+    },
+    {
+      "key": "efcad81f-908b-4e31-8602-02c5ef16ab26",
+      "properties": {
+        "description": "Develop programs that respond to user input"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "objective.key": "efcad81f-908b-4e31-8602-02c5ef16ab26"
       }
     }
   ],

@@ -6,13 +6,13 @@ title: Hour of Code How-to Guide for After-school
 
 # จะสอนกิจกรรมชั่วโมงเขียนโค้ด 1 ชั่วโมงในช่วงหลังเลิกเรียนและภายในชมรมได้อย่างไร
 
-### Join the movement and introduce your students to computer science with these steps.
+### เข้าร่วมการเคลื่อนไหวและแนะนำนักเรียนให้รู้จักวิทยาการคอมพิวเตอร์โดยปฏิบัติตามขั้นตอนเหล่านี้
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+แนวคิดเชิงคำนวณจะช่วยเสริมทักษะด้านการแก้ไขปัญหา ตรรกะและความคิดสร้างสรรค์ และเทคโนโลยีกำลังจะเข้ามาเปลี่ยนแปลงทุกอุตสาหกรรมบนโลกใบนี้ ไม่เพียงแต่เรียนรู้วิธีใช้แต่นักเรียนยุคปัจจุบันจึงควรเรียนรู้วิธีการสร้างเทคโนโลยีไปด้วย ด้วยการเริ่มต้นอย่างรวดเร็วนี้นั้นจะเป็นรากฐานแห่งความสำเร็จด้านอาชีพของพวกเขาในศตวรรษที่ 21
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### นอกจากนี้ Hour of Code ยังสามารถใช้ทำงานจากระยะไกลได้อีกด้วย! ดูข้อมูลเพิ่มเติม [เพื่อเริ่มใช้งาน Hour of Code แบบเสมือนจริงในอีเวนต์](https://hourofcode.com/us/how-to/virtual)
 
 * * *
 

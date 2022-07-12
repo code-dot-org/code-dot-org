@@ -42,6 +42,7 @@ export default class LessonExtrasProgressBubble extends Component {
         data-tip
         data-for={tooltipId}
         aria-describedby={tooltipId}
+        title={i18n.stageExtras()}
       >
         <LessonExtrasFlagIcon
           isPerfect={isPerfect}

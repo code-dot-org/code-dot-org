@@ -101,6 +101,7 @@ class User < ApplicationRecord
     ops_gender
     using_text_mode
     display_theme
+    mute_music
     last_seen_school_info_interstitial
     has_seen_standards_report_info_dialog
     oauth_refresh_token
@@ -148,7 +149,7 @@ class User < ApplicationRecord
   ].freeze
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
-  belongs_to :studio_person
+  belongs_to :studio_person, optional: true
   has_many :hint_view_requests
 
   # courses a facilitator is able to teach
@@ -165,7 +166,7 @@ class User < ApplicationRecord
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
 
   has_many :authentication_options, dependent: :destroy
-  belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
+  belongs_to :primary_contact_info, class_name: 'AuthenticationOption', optional: true
 
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
@@ -194,7 +195,7 @@ class User < ApplicationRecord
 
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
 
-  belongs_to :school_info
+  belongs_to :school_info, optional: true
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
 
   has_many :user_school_infos
@@ -207,8 +208,10 @@ class User < ApplicationRecord
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
 
+  has_many :pd_attendances, class_name: 'Pd::Attendance', foreign_key: :teacher_id
+
   has_many :sign_ins
-  has_many :user_geos, -> {order 'updated_at desc'}
+  has_many :user_geos, -> {order(updated_at: :desc)}
 
   before_validation :normalize_parent_email
   validate :validate_parent_email
@@ -313,7 +316,7 @@ class User < ApplicationRecord
     end
   end
 
-  belongs_to :invited_by, polymorphic: true
+  belongs_to :invited_by, polymorphic: true, optional: true
 
   validate :admins_must_be_teachers_without_followeds
 
@@ -414,7 +417,7 @@ class User < ApplicationRecord
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
-  has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
+  has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
 
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections, dependent: :destroy
@@ -427,7 +430,7 @@ class User < ApplicationRecord
   has_many :sections_as_student, through: :followeds, source: :section
   has_many :teachers, through: :sections_as_student, source: :user
 
-  belongs_to :secret_picture
+  belongs_to :secret_picture, optional: true
   before_create :generate_secret_picture
 
   before_create :generate_secret_words
@@ -435,7 +438,9 @@ class User < ApplicationRecord
   before_create :update_default_share_setting
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
-  has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
+  # This SQL string is not at risk for injection vulnerabilites because it's
+  # just a hardcoded string, so it's safe to wrap in Arel.sql
+  has_many :user_scripts, -> {order Arel.sql("-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc")}
   has_many :scripts, through: :user_scripts, source: :script
 
   validates :name, presence: true, unless: -> {purged_at}
@@ -484,6 +489,10 @@ class User < ApplicationRecord
 
   def parent_email_preference_setup
     self.parent_email = parent_email_preference_email
+  end
+
+  def memoized_teachers
+    @memoized_teachers ||= teachers.to_a
   end
 
   validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
@@ -566,7 +575,7 @@ class User < ApplicationRecord
       self.email = ''
       self.full_address = nil
       self.school_info = nil
-      studio_person.destroy! if studio_person
+      studio_person&.destroy!
       self.studio_person_id = nil
     end
 
@@ -654,7 +663,7 @@ class User < ApplicationRecord
 
   def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
+    user_id = user_id_for_storage_id(owner_storage_id)
     User.find(user_id)
   rescue ArgumentError, OpenSSL::Cipher::CipherError, ActiveRecord::RecordNotFound
     nil
@@ -875,13 +884,13 @@ class User < ApplicationRecord
   def update_with_password(params, *options)
     if encrypted_password.blank?
       params.delete(:current_password) # user does not have password so current password is irrelevant
-      update_attributes(params, *options)
+      update(params, *options)
     else
       super
     end
   end
 
-  def update_email_for(provider: nil, uid: nil, email:)
+  def update_email_for(email:, provider: nil, uid: nil)
     if migrated?
       # Provider and uid are required to update email on AuthenticationOption for migrated user.
       return unless provider.present? && uid.present?
@@ -1079,10 +1088,41 @@ class User < ApplicationRecord
     )
   end
 
+  # There is a bug (fix: https://codedotorg.atlassian.net/browse/INF-571) where some users have
+  # duplicate user levels for the same level. To ensure that we return the relevant user level for
+  # each level and not one of the duplicates, the list is first sorted so that the
+  # most relevant user levels are at the end. The list is then indexed by level ID, which will
+  # pick up the last matching user level in the list.
+  def self.index_user_levels_by_level_id(user_levels)
+    # Sorts by updated_at asc then id desc
+    # the correct user level is the one most recently updated or the first created
+    relevant_user_levels_last = user_levels.sort {|a, b| [a.updated_at, b.id] <=> [b.updated_at, a.id]}
+    relevant_user_levels_last.index_by(&:level_id)
+  end
+
   def user_levels_by_level(script)
-    user_levels.
-      where(script_id: script.id).
-      index_by(&:level_id)
+    user_levels_for_script = user_levels.
+      where(script_id: script.id)
+    User.index_user_levels_by_level_id(user_levels_for_script)
+  end
+
+  # Retrieves all user_level objects for the given users, script, and levels.
+  # The return value is a hash from user_id to an array of UserLevel objects
+  # sorted in descending order by updated_at:
+  # {
+  #   1: [<UserLevel>, <UserLevel>, ...],
+  #   2: [<UserLevel>, <UserLevel>, ...]
+  # }
+  #
+  # A given user with no UserLevel matching the given criteria is omitted from
+  # the returned hash. The associated LevelSource data for each UserLevel is also
+  # prefetched to prevent n+1 query issues.
+  def self.user_levels_by_user(user_ids, script_id, level_ids)
+    UserLevel.
+      includes(:level_source).
+      where({user_id: user_ids, script_id: script_id, level_id: level_ids}).
+      order('updated_at DESC').
+      group_by(&:user_id)
   end
 
   # Retrieve all user levels for the designated set of users in the given
@@ -1110,7 +1150,7 @@ class User < ApplicationRecord
     ).
       group_by(&:user_id).
       inject(initial_hash) do |memo, (user_id, user_levels)|
-        memo[user_id] = user_levels.index_by(&:level_id)
+        memo[user_id] = User.index_user_levels_by_level_id(user_levels)
         memo
       end
   end
@@ -1234,7 +1274,7 @@ class User < ApplicationRecord
   def last_attempt(level, script = nil)
     query = UserLevel.where(user_id: id, level_id: level.id)
     query = query.where(script_id: script.id) unless script.nil?
-    query.order('updated_at DESC').first
+    query.order(updated_at: :desc).first
   end
 
   # Returns the most recent (via updated_at) user_level for any of the specified
@@ -1247,14 +1287,14 @@ class User < ApplicationRecord
     }
     conditions[:script_id] = script_id unless script_id.nil?
     UserLevel.where(conditions).
-      order('updated_at DESC').
+      order(updated_at: :desc).
       first
   end
 
   # Is the provided script_level hidden, on account of the section(s) that this
   # user is enrolled in
   def script_level_hidden?(script_level)
-    return false if try(:teacher?)
+    return false if script_level.script.can_be_instructor?(self)
 
     sections = sections_as_student
     return false if sections.empty?
@@ -1278,38 +1318,40 @@ class User < ApplicationRecord
     end
   end
 
-  # Is the given script hidden for this user (based on the sections that they are in)
-  def script_hidden?(script)
-    return false if try(:teacher?)
+  # Is the given unit hidden for this user (based on the sections that they are in)
+  def unit_hidden?(unit)
+    return false if unit.can_be_instructor?(self)
 
     return false if sections_as_student.empty?
 
-    # Can't hide a script that isn't part of a course
-    unit_group = script.try(:unit_group)
+    # Can't hide a unit that isn't part of a course
+    unit_group = unit.try(:unit_group)
     return false unless unit_group
 
-    get_student_hidden_ids(unit_group.id, false).include?(script.id)
+    get_participant_hidden_ids(unit_group.id, false).include?(unit.id)
   end
 
   # @return {Hash<string,number[]>|number[]}
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   lesson ids for that section.
   #   For students this will just be a list of lesson ids that are hidden for them.
-  def get_hidden_lesson_ids(script_name)
-    script = Script.get_from_cache(script_name)
-    return [] if script.nil?
+  def get_hidden_lesson_ids(unit_name)
+    unit = Script.get_from_cache(unit_name)
+    return [] if unit.nil?
 
-    teacher? ? get_teacher_hidden_ids(true) : get_student_hidden_ids(script.id, true)
+    unit.can_be_instructor?(self) ? get_instructor_hidden_ids(true) : get_participant_hidden_ids(unit.id, true)
   end
 
   # @return {Hash<string,number[]>|number[]}
   #   For teachers, this will be a hash mapping from section id to a list of hidden
-  #   script ids for that section.
-  #   For students this will just be a list of script ids that are hidden for them.
-  def get_hidden_script_ids(unit_group = nil)
+  #   unit ids for that section.
+  #   For students this will just be a list of unit ids that are hidden for them.
+  def get_hidden_unit_ids(unit_group = nil)
     return [] if !teacher? && unit_group.nil?
 
-    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(unit_group.id, false)
+    # If there isn't a unit_group then we are on the homepage and looking for all the hidden units for an instructor
+    return get_instructor_hidden_ids(false) if unit_group.nil?
+    unit_group.can_be_instructor?(self) ? get_instructor_hidden_ids(false) : get_participant_hidden_ids(unit_group.id, false)
   end
 
   def student?
@@ -1320,20 +1362,27 @@ class User < ApplicationRecord
     user_type == TYPE_TEACHER
   end
 
-  def authorized_teacher?
-    # You are an authorized teacher if you are an admin, have the AUTHORIZED_TEACHER or the
-    # LEVELBUILDER permission.
-    return true if admin?
-    if permission?(UserPermission::AUTHORIZED_TEACHER) || permission?(UserPermission::LEVELBUILDER)
-      return true
-    end
-    false
+  # This method just checks if a user has the authorized teacher permission
+  # if you are hoping to know if someone can access content for verified instructors
+  # you should use the verified_instructor? method instead which includes checks for a
+  # couple different permissions that should have access instructor only content such
+  # as levelbuilders
+  def verified_teacher?
+    permission?(UserPermission::AUTHORIZED_TEACHER)
   end
 
-  alias :verified_teacher? :authorized_teacher?
+  # A user is a verified instructor if you are a universal_instructor, plc_reviewer,
+  # facilitator, authorized_teacher, or levelbuilder. All of these permissions tell us someone
+  # should be trusted with locked down instructor only content. It is important to use this
+  # method instead of verified_teacher? as teachers will not be instructors for all courses
+  def verified_instructor?
+    permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || permission?(UserPermission::PLC_REVIEWER) ||
+      permission?(UserPermission::FACILITATOR) || permission?(UserPermission::AUTHORIZED_TEACHER) ||
+      permission?(UserPermission::LEVELBUILDER)
+  end
 
-  def student_of_authorized_teacher?
-    teachers.any?(&:authorized_teacher?)
+  def student_of_verified_instructor?
+    teachers.any?(&:verified_instructor?)
   end
 
   def student_of?(teacher)
@@ -1383,9 +1432,13 @@ class User < ApplicationRecord
     age.nil? || age.to_i < 13
   end
 
+  def mute_music?
+    !!mute_music
+  end
+
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
-    return if name.blank? || name.utf8mb4? || (email && email.utf8mb4?)
+    return if name.blank? || name.utf8mb4? || (email&.utf8mb4?)
     self.username = UserHelpers.generate_username(User.with_deleted, name)
   end
 
@@ -1453,6 +1506,7 @@ class User < ApplicationRecord
   # reset their password with their email (by looking up the hash)
 
   attr_accessor :raw_token
+
   def self.send_reset_password_instructions(attributes={})
     # override of Devise method
     if attributes[:email].blank?
@@ -1467,6 +1521,7 @@ class User < ApplicationRecord
   end
 
   attr_accessor :child_users
+
   def send_reset_password_for_users(email, users)
     if users.empty?
       not_found_user = User.new(email: email)
@@ -1568,7 +1623,7 @@ class User < ApplicationRecord
   end
 
   # Returns the set of courses the user has been assigned to or has progress in.
-  def courses_as_student
+  def courses_as_participant
     visible_scripts.map(&:unit_group).compact.concat(section_courses).uniq
   end
 
@@ -1586,6 +1641,7 @@ class User < ApplicationRecord
     visible_assigned_scripts.any?
   end
 
+  # Query to get the user_script the user was most recently assigned.
   def most_recently_assigned_user_script
     user_scripts.
     where("assigned_at").
@@ -1593,6 +1649,8 @@ class User < ApplicationRecord
     first
   end
 
+  # Get script object of the user_script the user was most recently
+  # assigned.
   def most_recently_assigned_script
     most_recently_assigned_user_script.script
   end
@@ -1603,6 +1661,8 @@ class User < ApplicationRecord
     !script.pilot? || script.has_pilot_access?(self)
   end
 
+  # Query to get the user_script the user made the most recent progress
+  # in.
   def user_script_with_most_recent_progress
     user_scripts.
     where("last_progress_at").
@@ -1610,17 +1670,30 @@ class User < ApplicationRecord
     first
   end
 
+  # Get script object of the user_script the user made the most recent
+  # progress in.
   def script_with_most_recent_progress
     user_script_with_most_recent_progress.script
   end
 
+  # Check if the user's most recently-assigned script is the same one
+  # that they've most recently made progress in.
   def most_recent_progress_in_recently_assigned_script?
     script_with_most_recent_progress == most_recently_assigned_script
   end
 
+  # Check if the user has been assigned a new script since their most
+  # recent progress in a script.
   def last_assignment_after_most_recent_progress?
     most_recently_assigned_user_script[:assigned_at] >=
     user_script_with_most_recent_progress[:last_progress_at]
+  end
+
+  # Check if the user's most recently assigned script is associated with at least
+  # 1 live section they are enrolled in.
+  def most_recent_assigned_script_in_live_section?
+    recent_assigned_script_id = most_recently_assigned_script.id
+    sections_as_student.any? {|section| section.script_id == recent_assigned_script_id && section.hidden == false}
   end
 
   # Checks if there are any launched scripts or courses assigned to the user.
@@ -1636,16 +1709,18 @@ class User < ApplicationRecord
   # Example: true when the primary_script is being used for a TopCourse on /home
   # @return [Array{CourseData, ScriptData}] an array of hashes of script and
   # course data
-  def recent_courses_and_scripts(exclude_primary_script)
-    primary_script_id = Queries::ScriptActivity.primary_script(self).try(:id)
+  def recent_pl_courses_and_units(exclude_primary_script)
+    primary_script_id = Queries::ScriptActivity.primary_pl_unit(self).try(:id)
 
     # Filter out user_scripts that are already covered by a course
-    unit_group_units_script_ids = courses_as_student.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
+    unit_group_units_script_ids = courses_as_participant.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
 
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
       select {|user_script| !unit_group_units_script_ids.include?(user_script.script_id)}
 
-    user_script_data = user_scripts.map do |user_script|
+    pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
+
+    user_script_data = pl_user_scripts.map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
       # primary script.
       if exclude_primary_script && user_script[:script_id] == primary_script_id
@@ -1662,31 +1737,81 @@ class User < ApplicationRecord
       end
     end.compact
 
-    user_course_data = courses_as_student.map(&:summarize_short)
+    user_course_data = courses_as_participant.select(&:pl_course?).map(&:summarize_short)
 
     user_course_data + user_script_data
+  end
+
+  # Return a collection of courses and scripts for the user.
+  # First in the list will be courses enrolled in by the user's sections.
+  # Following that will be all scripts in which the user has made progress that # are not in any of the enrolled courses.
+  # @param exclude_primary_script [boolean]
+  # Example: true when the primary_script is being used for a TopCourse on /home
+  # @return [Array{CourseData, ScriptData}] an array of hashes of script and
+  # course data
+  def recent_student_courses_and_units(exclude_primary_script)
+    primary_script_id = Queries::ScriptActivity.primary_student_unit(self).try(:id)
+
+    # Filter out user_scripts that are already covered by a course
+    unit_group_units_script_ids = courses_as_participant.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
+
+    user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
+      select {|user_script| !unit_group_units_script_ids.include?(user_script.script_id)}
+
+    user_student_scripts = user_scripts.select {|us| !us.script.pl_course?}
+
+    user_script_data = user_student_scripts.map do |user_script|
+      # Skip this script if we are excluding the primary script and this is the
+      # primary script.
+      if exclude_primary_script && user_script[:script_id] == primary_script_id
+        nil
+      else
+        script_id = user_script[:script_id]
+        script = Script.get_from_cache(script_id)
+        {
+          name: script[:name],
+          title: data_t_suffix('script.name', script[:name], 'title'),
+          description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
+          link: script_path(script),
+        }
+      end
+    end.compact
+
+    user_course_data = courses_as_participant.select {|c| !c.pl_course?}.map(&:summarize_short)
+
+    user_course_data + user_script_data
+  end
+
+  def sections_as_student_participant
+    sections_as_student.select {|s| !s.pl_section?}
+  end
+
+  def sections_as_pl_participant
+    sections_as_student.select(&:pl_section?)
+  end
+
+  def all_sections
+    sections_as_teacher = student? ? [] : sections.to_a
+    sections_as_teacher.concat(sections_as_student).uniq
   end
 
   # Figures out the unique set of courses assigned to sections that this user
   # is a part of.
   # @return [Array<Course>]
   def section_courses
-    all_sections = sections.to_a.concat(sections_as_student).uniq
-
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
     all_sections.map(&:unit_group).compact.uniq
   end
 
   def visible_scripts
-    scripts.map(&:cached).select {|s| [SharedConstants::PUBLISHED_STATE.stable, SharedConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
+    scripts.map(&:cached).select {|s| [Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
   end
 
   # Figures out the unique set of scripts assigned to sections that this user
   # is a part of. Includes default scripts for any assigned courses as well.
   # @return [Array<Script>]
   def section_scripts
-    all_sections = sections.to_a.concat(sections_as_student).uniq
     all_scripts = []
     all_sections.each do |section|
       if section.script.present?
@@ -1890,7 +2015,6 @@ class User < ApplicationRecord
       user_type: user_type,
       gender: gender,
       birthday: birthday,
-      total_lines: total_lines,
       secret_words: secret_words,
       secret_picture_name: secret_picture&.name,
       secret_picture_path: secret_picture&.path,
@@ -1988,6 +2112,14 @@ class User < ApplicationRecord
     sections_as_student.empty?
   end
 
+  def shared_sections_with(other_user)
+    sections_as_student & other_user.sections_as_student
+  end
+
+  def in_code_review_group_with?(other_user)
+    (code_review_groups & other_user.code_review_groups).any?
+  end
+
   # Users who might otherwise have orphaned accounts should have the option
   # to create personal logins (using e-mail/password or oauth) so they can
   # continue to use our site without losing progress.
@@ -2037,12 +2169,12 @@ class User < ApplicationRecord
       sections.find {|section| section.script_id == script.id}
   end
 
-  def lesson_extras_enabled?(script)
-    return false unless script.lesson_extras_available?
-    return true if teacher?
+  def lesson_extras_enabled?(unit)
+    return false unless unit.lesson_extras_available?
+    return true if unit.can_be_instructor?(self)
 
     sections_as_student.any? do |section|
-      section.script_id == script.id && section.lesson_extras
+      section.script_id == unit.id && section.lesson_extras
     end
   end
 
@@ -2067,6 +2199,20 @@ class User < ApplicationRecord
     TERMS_OF_SERVICE_VERSIONS.last
   end
 
+  # Updates user's most recently accepted Terms of Service version to the latest version
+  def update_user_tos_version_accept
+    terms_of_service_version = latest_terms_version
+    self.terms_of_service_version = terms_of_service_version
+
+    save!
+  end
+
+  # Ideally this would just be called school, but school is already a column
+  # on the user table representing the school name
+  def school_info_school
+    Queries::SchoolInfo.last_complete(self)&.school
+  end
+
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
@@ -2076,7 +2222,7 @@ class User < ApplicationRecord
   # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
   # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
   def school_donor_name
-    school_id = Queries::SchoolInfo.last_complete(self)&.school&.id
+    school_id = school_info_school&.id
     donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
 
     donor_name
@@ -2226,43 +2372,21 @@ class User < ApplicationRecord
   private def soft_delete_channels
     return unless user_storage_id
 
-    channel_ids = PEGASUS_DB[:storage_apps].
-      where(storage_id: user_storage_id).
-      map(:id)
+    project = Projects.new(user_storage_id)
+    project_ids = project.get_all_project_ids
 
     # Unfeature any featured projects owned by the user
     FeaturedProject.
-      where(storage_app_id: channel_ids, unfeatured_at: nil).
+      where(project_id: project_ids, unfeatured_at: nil).
       where.not(featured_at: nil).
       update_all(unfeatured_at: Time.now)
 
-    # Soft-delete all of the user's channels
-    PEGASUS_DB[:storage_apps].
-      where(id: channel_ids).
-      exclude(state: 'deleted').
-      update(state: 'deleted', updated_at: Time.now)
+    # Soft-delete all of the user's projects
+    project.soft_delete_all
   end
 
-  # Restores all of this user's projects that were soft-deleted after the given time
-  # Called after undestroy
-  private def restore_channels_deleted_after(deleted_at)
-    return unless user_storage_id
-
-    channel_ids = PEGASUS_DB[:storage_apps].
-      where(storage_id: user_storage_id).
-      map(:id)
-
-    PEGASUS_DB[:storage_apps].
-      where(id: channel_ids, state: 'deleted').
-      where(Sequel.lit('updated_at >= ?', deleted_at.localtime)).
-      update(state: 'active', updated_at: Time.now)
-  end
-
-  # Gets the user's user_storage_id from the pegasus database, if it's available.
-  # Note: Known that this duplicates some logic in storage_id_for_user_id, but
-  # that method is globally stubbed in tests :cry: and therefore not very helpful.
   def user_storage_id
-    @user_storage_id ||= PEGASUS_DB[:user_storage_ids].where(user_id: id).first&.[](:id)
+    @user_storage_id ||= storage_id_for_user_id(id)
   end
 
   # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
@@ -2276,7 +2400,8 @@ class User < ApplicationRecord
 
     # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
     result = restore(recursive: true, recovery_window: 5.minutes)
-    restore_channels_deleted_after(soft_delete_time - 5.minutes)
+    deleted_time = soft_delete_time - 5.minutes
+    Projects.new(user_storage_id).restore_if_deleted_after(deleted_time) if user_storage_id
     result
   end
 
@@ -2342,39 +2467,88 @@ class User < ApplicationRecord
     save! if persisted?
   end
 
+  # The data returned by this method is set to cookies for the marketing team to
+  # use in Google Optimize for segmenting teacher user experience.
+  def marketing_segment_data
+    return unless teacher?
+
+    {
+      locale: read_attribute(:locale),
+      account_age_in_years: account_age_in_years,
+      grades: grades_being_taught.any? ? grades_being_taught.to_json : nil,
+      curriculums: curriculums_being_taught.any? ? curriculums_being_taught.to_json : nil,
+      has_attended_pd: has_attended_pd?,
+      within_us: within_united_states?,
+      school_percent_frl_40_plus: school_stats&.frl_eligible_percent.present? ? school_stats.frl_eligible_percent >= 40 : nil,
+      school_title_i: school_stats&.title_i_status,
+      school_state: school_info_school&.state
+    }
+  end
+
+  def self.marketing_segment_data_keys
+    %w(locale account_age_in_years grades curriculums has_attended_pd within_us school_percent_frl_40_plus school_title_i school_state)
+  end
+
+  def code_review_groups
+    followeds.map(&:code_review_group).compact
+  end
+
   private
+
+  def account_age_in_years
+    ((Time.now - created_at.to_time) / 1.year).round
+  end
+
+  # Returns a list of all grades that the teacher currently has sections for
+  def grades_being_taught
+    @grades_being_taught ||= sections.map(&:grade).uniq
+  end
+
+  # Returns a list of all curriculums that the teacher currently has sections for
+  # ex: ["csf", "csd"]
+  def curriculums_being_taught
+    @curriculums_being_taught ||= sections.map {|section| section.script&.curriculum_umbrella}.compact.uniq
+  end
+
+  def has_attended_pd?
+    pd_attendances.any?
+  end
+
+  def school_stats
+    @school_stats ||= school_info_school&.most_recent_school_stats
+  end
 
   def hidden_lesson_ids(sections)
     return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
-  def hidden_script_ids(sections)
+  def hidden_unit_ids(sections)
     return sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
   end
 
   # This method will extract a list of hidden ids by section. The type of ids depends
-  # on the input. If hidden_lessons is true, id is expected to be a script id and
+  # on the input. If hidden_lessons is true, id is expected to be a unit id and
   # we look for lessons that are hidden. If hidden_lessons is false, id is expected
-  # to be a course_id, and we look for hidden scripts.
+  # to be a course_id, and we look for hidden units.
   # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
-  #   if we're looking for hidden scripts.
+  #   if we're looking for hidden units.
   # @return {Hash<string,number[]>
-  def get_teacher_hidden_ids(hidden_lessons)
+  def get_instructor_hidden_ids(hidden_lessons)
     # If we're a teacher, we want to go through each of our sections and return
-    # a mapping from section id to hidden lessons/scripts in that section
+    # a mapping from section id to hidden lessons/units in that section
     hidden_by_section = {}
     sections.each do |section|
-      hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_script_ids([section])
+      hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_unit_ids([section])
     end
     hidden_by_section
   end
 
   # This method method will go through each of the sections in which we're a member
-  # and determine which lessons/scripts should be hidden
+  # and determine which lessons/units should be hidden
   # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
-  #   if we're looking for hidden scripts.
-  # @return {number[]} Set of lesson/script ids that should be hidden
-  def get_student_hidden_ids(assign_id, hidden_lessons)
+  #   if we're looking for hidden units.
+  # @return {number[]} Set of lesson/unit ids that should be hidden
+  def get_participant_hidden_ids(assign_id, hidden_lessons)
     sections = sections_as_student
     return [] if sections.empty?
 
@@ -2384,14 +2558,14 @@ class User < ApplicationRecord
     end
 
     if assigned_sections.empty?
-      # if we have no sections matching this assignment, we consider a lesson/script
+      # if we have no sections matching this assignment, we consider a lesson/unit
       # hidden if any of our sections hides it
-      return (hidden_lessons ? hidden_lesson_ids(sections) : hidden_script_ids(sections)).uniq
+      return (hidden_lessons ? hidden_lesson_ids(sections) : hidden_unit_ids(sections)).uniq
     else
-      # if we do have sections matching this assignment, we consider a lesson/script
+      # if we do have sections matching this assignment, we consider a lesson/unit
       # hidden only if it is hidden in every one of the sections the student belongs
       # to that match this assignment
-      all_ids = hidden_lessons ? hidden_lesson_ids(assigned_sections) : hidden_script_ids(assigned_sections)
+      all_ids = hidden_lessons ? hidden_lesson_ids(assigned_sections) : hidden_unit_ids(assigned_sections)
 
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       return counts.select {|_, val| val == assigned_sections.length}.keys

@@ -1,4 +1,4 @@
-require 'cdo/redis'
+require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 require 'uri'
 require 'active_support/core_ext/numeric/time'
@@ -17,8 +17,7 @@ class I18nStringUrlTracker
 
   # The amount of time which will pass before the buffered i18n usage data is uploaded to Firehose.
   # Select a random interval time between the MIN and MAX so we can avoid all the servers flushing data at the same time.
-  # TODO - Set MIN to 8 hours once we have proven this works.
-  FLUSH_INTERVAL_MIN = 1.hour
+  FLUSH_INTERVAL_MIN = 8.hours
   FLUSH_INTERVAL_MAX = 16.hours
 
   MAX_BUFFER_SIZE = 250.megabytes
@@ -29,7 +28,7 @@ class I18nStringUrlTracker
     # It will be in the following form:
     # {
     #   <url>: {
-    #     <string_key>: [<source>, ...],
+    #     <normalized_key>: [<source>, ...],
     #     ...
     #   },
     #   ...
@@ -59,34 +58,83 @@ class I18nStringUrlTracker
   end
 
   # Records the given string_key and URL so we can analyze later what strings are present on what pages.
-  # @param string_key [String] The key used to review the translated string from our i18n system.
   # @param url [String] The url which required the translation of the given string_key.
   # @param source [String] Context about where the string lives e.g. 'ruby', 'maze', 'turtle', etc
-  def log(string_key, url, source)
+  # @param string_key [String] The key used to locate the desired string.
+  # @param scope [Array|String] Array of strings representing the hierarchy leading up to the string_key. OR
+  #                             String with values separated by the separator value.
+  # @param separator [String] The separator string used by I18n to concatenate the string_key hierarchy
+  #        into a single normalized string.
+  def log(url, source, string_key, scope = [], separator = I18n.default_separator)
+    # Return if DCDO flag is unset, or we get incomplete info
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
+    return unless url && source
+    return unless self.class.string_exists? string_key, scope, I18n.default_locale
+
     # Skip URLs we are not interested in.
     return unless allowed(url)
-
     url = normalize_url(url)
-    return unless string_key && url && source
+
+    # Scope could come in as a normalized string, so make sure it's an array
+    scope = scope.split(separator) if scope.is_a? String
+
+    # We use -> as the separator in the normalized_key for ease of searching in Crowdin, and to prevent keys
+    # that include a . from getting split in two.
+    normalized_key = I18n.normalize_keys(nil, string_key, scope, ' -> ').join(' -> ')
 
     # Reverse the URL encoding on special characters so the human readable characters are logged.
     logged_url = CGI.unescape(url)
-    add_to_buffer(string_key, logged_url, source)
+
+    # Stringify all items in the scope array so we can JSON stringify and parse it.
+    stringified_scope = scope&.map(&:to_s).to_s
+    add_to_buffer(normalized_key, logged_url, source, string_key.to_s, stringified_scope, separator)
+  end
+
+  # Checks if a source string or a translation exists.
+  # @param string_key [String]
+  # @param scope [Array, String]
+  # @param locale [Symbol, String]
+  # @return [Boolean]
+  def self.string_exists?(string_key, scope = nil, locale = I18n.default_locale)
+    # By default, I18n.exists? returns true if the input key is nil,
+    # but raises exception if the key is an empty string.
+    return false if string_key.nil? || string_key.empty?
+
+    if scope.nil? || scope.empty?
+      I18n.exists? string_key, locale: locale
+    else
+      options = {
+        locale: locale,
+        scope: scope,
+        # don't report error if there is unused interpolation pattern in the translation
+        safe_interpolation: false,
+        # don't track string translation request
+        tracking: false,
+        # raise error if translation is missing
+        raise: true
+      }
+      source_string = I18n.t(string_key, **options) rescue nil
+      !source_string.nil?
+    end
   end
 
   private
 
   # Records the log data to a buffer which will eventually be flushed
-  def add_to_buffer(string_key, url, source)
+  def add_to_buffer(normalized_key, url, source, string_key, scope, separator)
     # make sure this is the only thread modifying @buffer
     @buffer.synchronize do
       # update the buffer size if we are adding any new data to it
       # duplicate data will not increase the buffer size
       buffer_url = @buffer[url] ||= {}.tap {@buffer_size += url.bytesize}
-      buffer_string_key = buffer_url[string_key] ||= Set.new.tap {@buffer_size += string_key.bytesize}
+      buffer_normalized_key = buffer_url[normalized_key] ||= Set.new.tap {@buffer_size += normalized_key.bytesize}
       # add the new data to the buffer
-      @buffer_size += source.bytesize if buffer_string_key.add?(source)
+      buffer_values = [source, string_key, scope, separator]
+
+      if buffer_normalized_key.add?(buffer_values)
+        buffer_values_size = buffer_values.reduce(0) {|sum, s| sum + (s ? s.bytesize : 0)}
+        @buffer_size += buffer_values_size
+      end
     end
 
     # if the buffer is too large, trigger an early flush
@@ -120,14 +168,14 @@ class I18nStringUrlTracker
     # If the DCDO flag has changed since data was buffered, we want to clear the buffer and not log/flush the data.
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
 
-    # log every <string_key>:<url>:<source> combination to Firehose
+    # log every <url>:<normalized_key>:<source>:<string_key>:<scope>:<separator> combination to Firehose
     buffer&.each_key do |url|
-      buffer[url].each_key do |string_key|
-        buffer[url][string_key].each do |source|
-          # record the string : url association.
-          RedisClient.instance.put_record(
+      buffer[url].each_key do |normalized_key|
+        buffer[url][normalized_key].each do |values|
+          # record the <url>:<normalized_key>:<source>:<string_key>:<scope>:<separator> association.
+          FirehoseClient.instance.put_record(
             :i18n,
-            {url: url, string_key: string_key, source: source}
+            {url: url, normalized_key: normalized_key, source: values[0], string_key: values[1], scope: values[2], separator: values[3]}
           )
         end
       end

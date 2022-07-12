@@ -1,144 +1,144 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: కంప్యూటర్ సైన్స్ ప్రాధమిక అంశాలు పరివర్తన గైడు
 theme: responsive
 style_min: true
 ---
 
-# Teaching Courses A-F
+# బోధన కోర్సులు A-F
 
-## Table of Contents
+## విషయ సూచిక
 
-* [Overview](#overview)
-* [Teaching the new courses](#newcourses)
-* [Circle-Time Stories (Courses A and B)](#circletime)
-* [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
-* [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
-* [End of Course Projects (Courses E & F)](#endofcourse)
-* [Conclusion](#conclusion)
-* [FAQs](#faq)
+* [అవలోకనం](#overview)
+* [కొత్త కోర్సులు బోధించడం](#newcourses)
+* [సర్కిల్-టైమ్ స్టోరీస్ (కోర్సులు A మరియు B)](#circletime)
+* [పాఠము స్కాఫ్‌ఫోల్డింగ్ & ఛాలెంజ్ ఫజిల్‌లు (అన్ని వయస్సులు)](#scaffolding)
+* [అన్‌ప్లగ్డ్ పాఠాలకు యాక్టివిటీలు బ్రిడ్జ్ చేయడం (అన్ని వయస్సులు)](#unplugged)
+* [కోర్సు ముగింపు ప్రాజెక్టులు (కోర్సులు E & F)](#endofcourse)
+* [ముగింపు](#conclusion)
+* [తరచూ అడిగే ప్రశ్నలు](#faq)
 
 <a id="overview"></a>
 
-## Overview
-The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline.  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
+## అవలోకనం
+మొదటి కంప్యూటర్ సైన్స్ పాధమిక అంశాల కోర్సులు సృష్టించబడినప్పటి నుండి కంప్యూటర్ సైన్స్ విద్య ముఖచిత్రం అపారంగా మారింది. మొదట్లో, ఈ రంగం లోనికి వచ్చే విద్యార్థి వయస్సు ఎంత అనేదానితో సంబంధం లేకుండా, ప్రాధమిక అంశాలను నేర్చుకోవడానికి ప్రారంభ బిందువుగా కోర్సులు 1-4 రూపొందించబడ్డాయి.  ఇప్పుడు కిండర్‌గార్టన్‌తో మొదలుపెట్టి చాలా ఎక్కువ జిల్లాలు, నగరాలు మరియు రాష్ట్రాలు కంప్యూటర్ సైన్స్ కోర్సులను అమలు చేశాయి కాబట్టి, మిడిల్ స్కూల్/జూనియర్ హై వరకు విద్యార్థులకు బోధించడానికి ఉపాధ్యాయులు ఎక్కువ కంటెంట్ కోసం అడుతుతున్నారు.
 
-Computer Science Fundamentals Courses A-F, are our answer to that issue.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
+కంప్యూటర్ సైన్స్ ప్రాధమిక అంశాల కోర్సులు A-F, ఆ సమస్యకు మా సమాధానం.  గ్రేడ్ తరువాత గ్రేడ్ వారీగా పాఠ్యప్రణాళికలు సృష్టించడం అనేది మనం ఒక అడుగు వెనక్కు వేసి సామగ్రిని ప్రజంట్ చేస్తున్న విధానం గురించి మనం పునరాలోచించడానికి వీలుకల్పించింది.  ఈ ఉద్యమంలో మాకు మద్దతు ఇచ్చిన అంకితభావంగల ఉపాధ్యాయ కమ్యూనిటీ నుండి ఫీడ్‌బ్యాక్ హృదయపూర్వకంగా చేర్చే అవకాశం కూడా ఇది మాకు ఇచ్చింది. దేశవ్యాప్తంగా ఉన్న అత్యుత్తమ ప్రాధమిక పాఠశాల CS విద్యా నిపుణుల సహాయంతో రూపొందించబడిన, A-F కోర్సులు ఎటువంటి అదనపు వృత్తిపరమైన అభివృద్ధి లేకుండా అమలు చేయడానికి తగినంతగా సుపరిచితంగా, కానీ గతంలో మా పాఠాలు చదివిన విద్యార్థులకు ప్రజంట్ చేయడానికి తగినంత తాజాగా అనిపించాలి.
 
-* Course A: Kindergarten
-* Course B: 1st Grade
-* Course C: 2nd Grade
-* Course D: 3rd Grade
-* Course E: 4th Grade
-* Course F: 5th Grade
-* Pre-reader Express Course: Kindergarten - 1st Grade
-* Express Course: 2nd Grade - 5th Grade
+* కోర్సు A: కిండర్‌గార్టన్
+* కోర్సు B: 1వ గ్రేడ్
+* కోర్సు C: 2వ గ్రేడ్
+* కోర్సు D: 3వ గ్రేడ్
+* కోర్సు E: 4వ గ్రేడ్
+* కోర్సు F: 5వ గ్రేడ్
+* ప్రీ-రీడర్ ఎక్స్‌ప్రెస్ కోర్సు: కిండర్‌గార్టన్ - 1వ గ్రేడ్
+* ఎక్స్‌ప్రెస్ కోర్సు: 2వ గ్రేడ్ - 5వ గ్రేడ్
 
-The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F).  In doing so, the lessons have become more tailored to the appropriate levels for reading, math, and overall cognitive development.  Note the addition of two different “Express” courses, one for pre-readers and one for all other grades.  These are similar to the previous suite’s “accelerated” version.
+CS ప్రాధమిక అంశాలకు అతిపెద్ద అప్‌డేట్ ఏమిటంటే కంటెంట్ నాలుగు కోర్సుల (కోర్సులు 1-4) నుండి ప్రతి K-5 గ్రేడ్ లెవల్‌కు సమంగా చేసిన ఆరు కోర్సులకు (కోర్సులు A-F) వెళ్తాయి.  అలా చేయడం ద్వారా, పాఠాలు తగిన లెవల్స్ కోసం చదవడానికి, లెక్కించడానికి మరియు మొత్తం మీద గ్రాహ్యతా అభివృద్ధికి మరింత అనుకూలం చేయబడ్డాయి.  రెండు వేర్వేరు "ఎక్స్‌ప్రెస్" కోర్సులను గమనించండి, ఒకటి ప్రీ-రీడర్ల కోసం మరియు మరొకటి ఇతర గ్రేడ్‌ల కోసం.  ఇవి ముందటి సూట్ యొక్క "యాక్సిలరేటెడ్" వెర్షన్‌ను లాగే ఉంటాయి.
 
 <a id="newcourses"></a>
 
-## Teaching the new courses
-As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+## కొత్త కోర్సులు బోధించడం
+ముందుగా పేర్కొన్నట్లు, కోర్సులు సుపరిచితంగా, కాని విభిన్నంగా అనిపించాలి.  మీరు Code.org వృత్తిపరమైన అభివృద్ధి వర్క్‌షాప్‌కు వెళ్లి ఉంటే, మీరు కొత్త కోర్సులను బోధించడానికి సిద్ధంగా ఉంటారు. చిన్న సంఖ్యలో మార్పు ఉన్నాయి, కానీ మొత్తం మీద ప్లాట్‌ఫామ్, పాఠ్యప్రణాళిక మరియు బోధనాపరమైన సిద్ధాంతం మారలేదు. మీరు ఇంకా వెళ్లకపోతే, పాఠ్యప్రణాళికను ఎలా అర్థం చేసుకోవాలి, Code.org ప్లాట్‌ఫామ్‌లో ఎలా నేవిగేట్ చేయాలి మరియు అన్‌ప్లగ్డ్ పాఠాలను ఎలా బోధించాలి అనేవి నేర్చుకోవడంలో మీకు తోడ్పడటానికి ఖర్చు లేకుండా 1 రోజు వర్క్‌షాపులను Code.org అందిస్తుంది.
 
-The main updates to the courses are:
+కోర్సులకు ప్రధాన అప్‌డేట్స్:
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* చిన్న వయస్సు అభ్యాసకుల కోసం సర్కిల్-టైమ్ స్టోరీలు
+* స్కాఫ్‌ఫోల్డింగ్ మరియు కాన్సెప్ట్‌లను ప్రాక్టీస్ చేయడం/వర్తింపజేయడం కోసం కొత్త విధానం
+* అన్‌ప్లగ్డ్ పాఠాల నుండి ప్లగ్డ్ పాఠాలకు పరివర్తనను పెంచడానికి యాక్టివిటీలు బ్రిడ్జింగ్ చేయడం
+* పెద్ద వయస్సు విద్యార్థుల కోసం కోర్సు ముగింపు పాజెక్టులు
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+ఈ గైడులో మిగతా భాగం, మీ క్లాస్ రూములో మార్పులను అమలు చేయడానికి టిప్స్ మరియు ట్రిక్స్ అందిస్తూ, ప్రతి ఆలోచనను మరింత వివరంగా ప్రజంట్ చేస్తుంది.
 
 <a id="circletime"></a>
 
-## Circle-Time Stories (Courses A and B)
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+## సర్కిల్-టైమ్ స్టోరీస్ (కోర్సులు A మరియు B)
+కొన్ని కాన్సెప్ట్‌లను యాక్టివిటీలు మరియు ఫజిల్స్ ద్వారా మాత్రమే బోధించడం కష్టం, ప్రత్యేకంగా చిన్న వయస్సు విద్యార్థులకు.  అందుచేతనే మేము తక్కువ సంఖ్యలో కిండర్‌గార్టన్ మరియు మొదటి గ్రేడ్ పాఠ్యప్రణాళికలో సర్కిల్-టైమ్ స్టోరీలు ప్రవేశపెట్టాము. ఈ స్టోరీలు ఉపాధ్యాయుడు మొత్తం క్లాసుకు చదివి వినిపించడానికి ఉద్దేశించినవి, డీబగ్గింగ్, పెర్సిస్టెన్స్ మరియు ఫ్రస్ట్రేషన్ లాంటి కీలక ఆలోచనలను చర్చించడానికి మధ్యలో స్టాప్‌లతో.  స్టోరీ పాత్రల ద్వారా ఈ కఠినమైన కాన్సెప్ట్‌లను అనుభవించడానికి విద్యార్థులను అనుమతించడం అనేది భవిష్యత్తు పాఠాలలో అవి తలెత్తినప్పుడు అవే భావాలను గుర్తించడంలో వారికి సహాయపడుతుందని మా ఆశ.
 
-Here is how the circle-time stories are intended to be used:
+సర్కిల్-టైమ్ స్టోరీలు ఎలా ఉపయోగించడానికి ఉద్దేశించబడినవో ఇక్కడ ఇవ్వబడింది:
 
-### Read the appropriate story to your class
-  - Make sure to check for understanding along the way with questions and comments at useful moments during the action.
-  - Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
-  - Try to get students to identify with the characters.  Is there anything that they do in their lives that remind them of one of the characters in the story?
+### తగిన స్టోరీని మీ క్లాసుకు చదివి వినిపించండి
+  - ఈ పని చేసే సమయంలో మధ్యమధ్యలో ఉపయోగపడే సమయాలలో ప్రశ్నలు మరియు కామెంట్లతో అర్థం చేసుకున్నారని తనిఖీ చేసేలా జాగ్రత్త తీసుకోండి.
+  - తర్వాత స్టోరీలను చర్చించండి. మీ విద్యార్థులు ఏమి విన్నారు? వారికి తట్టిన ఆలోచనలు ఏవైనా ఉన్నాయా?
+  - విద్యార్థులు పాత్రలతో తమను గుర్తించుకునేలా ప్రయత్నించండి.  స్టోరీలో ఉన్న పాత్రలలో ఒకదానిని వారికి గుర్తుకు తెచ్చేది ఏదైనా వారి జీవితాలలో వారు చేసేది ఉందా?
 
-### Remind students about the story before they begin the next activity.
-  - Do you remember the main ideas we discussed?
-  - How will you know if you see that idea today?
-  - What did the character do to handle that idea? What would you do?
+### తరువాతి యాక్టివిటీని వారు ప్రారంభించడానికి ముందు స్టోరీని గురించి విద్యార్థులకు గుర్తు చేయండి.
+  - మనం చర్చించిన ప్రధాన ఆలోచనలు మీకు గుర్తున్నాయా?
+  - ఆ ఆలోచనను మీరు ఈరోజు చూస్తే మీకు ఎలా తెలుస్తుంది?
+  - ఆ ఆలోచనతో వ్యవహరించడానికి పాత్ర ఏమి చేసింది? మీరు ఏమి చేస్తారు?
 
-### Point out similarities between the story and the student’s situations when they intersect during an activity.
-  - Describe for a student how the position that they are in resembles a situation from the book.
-  - Ask a student to think about the characters and figure out what they might do.  Does that help the student figure out a next step?
+### ఒక యాక్టివిటీ సమయలో స్టోరీ మరియు విద్యార్థి పరిస్థితులు ఒకదానితో ఒకటి భేటీ అయినప్పుడు వాటి మధ్య ఉన్న సారూప్యతలను ఎత్తి చూపండి.
+  - వారు ఉన్న స్థితి పుస్తకం లోని పరిస్థితితో ఎలా సారూప్యత కలిగి ఉందో ఒక విద్యార్థికి వివరించండి.
+  - పాత్రలను గురించి ఆలోచించి, అవి ఏమి చేయవచ్చో గుర్తించమని విద్యార్థులను అడగండి.  తరువాతి చర్యను గుర్తించడానికి అది విద్యార్థికి సహాయ పడుతుందా?
 
-If you are unable to gather your entire class together, Code.org has provided a video option at the beginning of the appropriate lesson that presents the stories with limited animations. While these videos don’t offer quite the same experience, they will allow students to get exposure to the concepts and characters before continuing on with the rest of the course.
+మీరు మీ క్లాసు మొత్తాన్ని ఒకచోట చేర్చలేక పోతే, Code.org సంబంధిత పాఠం ప్రారంభంలో పరిమిత అనిమేషన్లతో స్టోరీలను ప్రదర్శించే ఒక వీడియో ఎంపిక ఇచ్చింది. ఈ వీడియోలు సరిగ్గా అలాంటి అనుభవాన్నే ఇవ్వకపోయినప్పటికీ, మిగతా కోర్సుకు కొనసాగడానికి ముందు అవి కాన్సెప్ట్‌లు మరియు పాత్రలను విద్యార్థులు తెలుసుకునేలా చేస్తాయి.
 
 <a id="scaffolding"></a>
 
-## Lesson Scaffolding & Challenge Puzzles (All Ages)
-Courses A-F are less scaffolded overall than our previous courses.  That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug.  As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath.  Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
+## పాఠము స్కాఫ్‌ఫోల్డింగ్ & ఛాలెంజ్ ఫజిల్‌లు (అన్ని వయస్సులు)
+కోర్సులు A-F మా ముందటి కోర్సుల కంటే మొత్తం మీద తక్కువ స్కాఫ్‌ఫోల్డెడ్‌గా ఉన్నాయి.  అంటే విద్యార్థులు ప్రత్యేకంగా డీబగ్ చేయడం నేర్చుకుంటుంటే తప్ప, వారు ప్రారంభం నుండి వీలైనంత తరచుగా తమ సొంత కోడ్ సృష్టించేలా చేయడానికి మేము ప్రయత్నిస్తాము అని అర్థం.  ఈ డిజైన్‌లో భాగంగా, పాఠాన్ని మేము ఒక సరళమైన ఫజిల్‌తో ప్రారంభించే ధోరణిని మా అత్యధిక ఆన్‌లైన్ పాఠాలు అనుసరిస్తాయి, తర్వాత విద్యార్థులు ఒక కొత్త కాన్సెప్ట్‌లో అంతర్గతంగా ఉన్న ఆలోచనను అర్థం చేసుకునే అవకాశం పొందే బిందువు వరకు దానిలోని లోనికి నెమ్మదిగా చొచ్చుకుపోతాయి.  తర్వాత, ఒక కొత్త మరియు సంక్లిష్ట విధానంలో కాన్సెప్ట్‌ను గురించి విద్యార్థులు ఆలోచించేలా చేసే ఉద్దేశంగల ఒక ఛాలెంజ్ ఫజిల్ వారికి ఇస్తాము.
 
-Challenge puzzles are new in Courses A-F.  The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought.  Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe.  This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
+కోర్సులు A-F లో ఛాలెంజ్ ఫజిల్స్ కొత్తవి.  ఛాలెంజ్ ఫజిల్స్ ఉద్దేశం నిరంతర ప్రయత్నాన్ని మరియు స్వతంత్ర ఆలోచనను అభ్యాసం చేయగల ఒక హై బార్‌కు విద్యార్థులను గురి చేయడం.  ఛాలెంజ్ ఫజిల్స్ ఉద్దేశపూర్వకంగా కఠినంగా ఉంటాయి మరియు కాన్సెప్ట్‌ను నిజంగా అర్థం చేసుకున్న విద్యార్థులు మాత్రమే ఒక సహేతుకమైన కాలపరిమితిలో పాస్ అయ్యేలా రూపొందించబడ్డాయి.  దీని అర్థం అధిక సంఖ్యలో విద్యార్థులు తమ మొదటిసారి ఛాలెంజ్‌లలో విజయం సాధించలేరు. దీనిని పూర్తి చేయడానికి విద్యార్థి మరియు ఉపాధ్యాయుడు ఇద్దరి నుండి ఒక ప్రత్యేక వైఖరి అవసరం అవుతుంది.
 
-1. Students should give these challenges a hearty try, then put them aside and carry on.  That practice allows for two very important things to happen:
-2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
+1. విద్యార్థులు ఈ ఛాలెంజ్‌లకు హృదయపూర్వక ప్రయత్నం చేయాలి, తర్వాత వాటిని పక్కన పెట్టి ముందుకు కొనసాగాలి.  ఆ అభ్యాసం రెండు చాలా ముఖ్యమైన విషయాలు జరిగడానికి వీలుకల్పిస్తుంది:
+2. చదువుతున్న కాన్సెప్ట్‌ను ఎప్పుడు మరియు ఎందుకు ఉపయోగించాలో విద్యార్థులు మంచి అవగాహన పొందుతారు. ఛాలెంజ్ తర్వాత కింది ఫజిల్స్, అవి స్వయంగా సీరియస్ ఫజిల్స్ అయినప్పటికీ, సులభమైనవిగా అనిపిస్తాయి.
 
-Keep in mind that students can go through lessons and reattempt incomplete puzzles at any time.  Sometimes it can be quite helpful to get a good night’s sleep before revisiting a tough problem.
+విద్యార్థులు పాఠాలను ఏ సమయంలోనైనా చదవవచ్చు మరియు పూర్తికాని ఫజిల్స్‌ను తిరిగి ప్రయత్నించవచ్చని మనసులో ఉంచుకోండి.  ఒక కఠినమైన సమస్యను తిరిగి చేయడానికి ముందు కొన్నిసార్లు ఒక మంచి రాత్రి నిద్ర చాలా సహాయకరంగా ఉండవచ్చు.
 
-Once students make it past the challenge, they will find a handful of exercises waiting for them that are similar to what they may have experienced in the first half of the stage. These puzzles were placed intentionally to test a student’s clarity on the subject being studied.  They might seem far too easy, given the puzzles that were experienced beforehand, but they were created to demonstrate the exact level of competence desired from the corresponding stage.
+విద్యార్థులు ఛాలెంజ్‌ని పూర్తి చేసిన తర్వాత, వారికి కోసం కొన్ని అభ్యాసాలు ఎదురుచూస్తూ ఉంటాయి, ఇవి ఈ దశ మొదటి సగంలో వారు అనుభవించిన వాటి లాగానే ఉంటాయి. చదువుతున్న సబ్జెక్ట్ మీద విద్యార్థి స్పష్టతను పరీక్షించడానికి ఈ ఫజిల్స్ ఉద్దేశపూర్వకంగా ఇవ్వబడతాయి.  ఇంతకు ముందు అనుభవించిన ఫలిజ్స్ కారణంగా, అవి మరీ చాలా సులువైనవిగా అనిపించవచ్చు, కానీ సంబంధిత దశ నుండి ఆశించిన ఖచ్చితమైన స్థాయి సామర్థ్యాన్ని ప్రదర్శించడానికి అవి సృష్టించబడ్డాయి.
 
-In some instances, we end our lessons with free-play style levels.  These levels might either have no “wrong” answer, or they might allow several different ways to solve their core problem.  Please encourage students to give them their best shot and not just click “Continue” even though they can.
+కొన్న సందర్భాలలో, మేము మా పాఠాలను ఫ్రీ-ప్లే స్టైల్ స్థాయిలతో ముగిస్తాము.  ఈ స్థాయిలు "తప్పు" జవాబు లేనివిగా ఉండవచ్చు లేదా వాటి ప్రధాన సమస్యను పరిష్కరించడానికి అనేక వేర్వేరు మార్గాలను అవి అనుమతించవచ్చు.  విద్యార్థులు తమ అత్యుత్తమ ప్రయత్నం చేసేలా ప్రోత్సహించండి, అంతేకానీ వారు చేయగలిగినప్పటికీ ఊరకే "కొనసాగించు" క్లిక్ చేయడం కాదు.
 
-Some final notes for this area:
+ఈ రంగం కోసం కొన్ని అంతిమ గమనికలు:
 
-* Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful.  When students get stuck, have them rewatch the video a second, third, or even fourth time.
-* Require students to read the instructions.  If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints!  Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* నిరంతరం ప్రయత్నిస్తూ ఉండమని మరియు కఠినంగా అనిపించిన సమస్యలపై వారి డీబగ్గింగ్ నైపుణ్యాలను ఉపయోగించేటట్లు విద్యార్థులకు దయచేసి గుర్తు చేయండి.
+* తరచూ వీడియోలు సహాయకరంగా ఉంటాయి.  విద్యార్థులు చిక్కుకుపోతే, వారిని వీడియోను రెండవ, మూడవ లేదా నాల్గవసారి కూడా తిరిగి చూసేలా చేయండి.
+* విద్యార్థులు సూచనలు చదవడం అవసరం.  వారికి కష్టంగా ఉంటే, సూచనలను ఒక క్లాస్‌మేట్‌కు బిగ్గరగా చదివి వినిపించనీయండి.
+* హింట్స్ ఉపయోగించడం పర్వాలేదు!  విద్యార్థులు వారికి అవసరమైనన్ని హింట్స్ ఉపయోగించాలి, కానీ ప్రతి కొత్త ఆఫరింగ్ మధ్య కనీసం ఒక ఫజిల్ తిరిగి పరిష్కరించడానికి పయత్నించేలా సునిశ్చితపర్చుకోండి.
 
 <a id="unplugged"></a>
 
-## Bridging Activities For Unplugged Lessons (All Ages)
-Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
+## అన్‌ప్లగ్డ్ పాఠాలకు యాక్టివిటీలు బ్రిడ్జ్ చేయడం (అన్ని వయస్సులు)
+అన్‌ప్లగ్డ్ యాక్టివిటీస్ విద్యార్థులు తమ రోజువారీ జీవితంలో ఇప్పటికే ముఖ్యమైన CS కాన్సెప్ట్‌లను ఎలా ఉపయోగిస్తున్నారో సూచించే పరంగా వారు ఎక్కడ ఉన్నారో అక్కడ వారిని కలుసుకుంటాయి.  విద్యార్థులు లూప్‌లు, షరతుల వంటి ప్రాథమిక ఆలోచనలను గుర్తించగలిగిన తర్వాత, మొదటిసారి ఆన్‌లైన్‌లో ప్రోగ్రామింగ్ చేయడానికి ప్రయత్నించినప్పుడు కలిగ మెంటల్ బ్లాక్‌లను వారు అధిగమిస్తారు.
 
-Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
+అన్‌ప్లగ్డ్ అనుభవాలు చాలా ముఖ్యమైనవి కాబట్టి వాటిని ఒక అడుగు ముందుకు తీసుకెళ్లి, అన్‌ప్లగ్డ్ పాఠాలను వారి ఆన్‌లైన్ కౌంటర్‌పార్ట్‌లతో కలిపే యాక్టివిటీలలో సమ్మిశ్రమం చేయాలని మేము ఎంచుకున్నాము.  కోర్సులు A-F లలో, ఆఫ్‌లైన్ అభ్యాసాలను ఎలా చేయాలో మరియు ఈ పాఠాలను కింది ఆన్‌లైన్ ఫజిల్స్‌కు ఎలా అన్వయించాలో ఉదాహరణలను పాఠ్యప్రణాళికలు అందించడం ఇప్పుడు మీరు చూస్తారు.  సముచితంగా, వీటిని మేము "బ్రిడ్జింగ్ యాక్టివిటీలు" అని పిలుస్తాము
 
-For the most part, bridging activities can be created either by taking the subject of the unplugged exercise and executing it with paper Blockly blocks, or by taking an online puzzle and solving it using the language from the unplugged exercise.  In some cases, a different relationship is introduced, but all of the examples are meant to keep the offline experiences from feeling too abstract or unrelated.
+అత్యంతధిక భాగంలో, అన్‌ప్లగ్డ్ అభ్యాసం యొక్క సబ్జెక్ట్‌ను తీసుకుని, దాన్ని పేపర్ బ్లాక్లీ బ్లాక్స్‌తో అమలు చేయడ ద్వారాగానీ లేదా ఒక ఆన్‌లైన్ ఫజిల్ తీసుకుని, దాన్ని అన్‌ప్లగ్డ్ అభ్యాసం నుండి భాష ఉపయోగించి పరిష్కరించడం ద్వారాగానీ బ్రిడ్జింగ్ యాక్టివిటీలు సృష్టించబడవచ్చు.  కొన్ని సందర్భాలలో, భిన్నమైన సంబంధం పరిచయం చేయబడింది, కానీ అన్ని ఉదాహరణలు ఆఫ్‌లైన్ అనుభవాలను మరీ సంక్షిప్త లేదా సంబంధం లేని అనుభూతిని కలిగించకుండా ఉంచడానికి ఉద్దేశించబడ్డాయి.
 
 <a id="endofcourse"></a>
 
-## End of Course Projects (Courses E & F)
-For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
+## కోర్సు ముగింపు ప్రాజెక్టులు (కోర్సులు E & F)
+పెద్ద వయస్సు విద్యార్థుల కోసం, కోర్సులు E & F లలో మేము గణనీయమైన కోర్సు ముగింపు ప్రాజెక్టులను ప్రవేశపెట్టాము. Code.org చాలా కాలంగా "ప్రాజెక్ట్‌లు" నిర్మించగల సామర్థ్యాన్ని అందించినప్పటికీ, విద్యార్థులు తమ ప్రాజెక్ట్‌లను ఫార్మల్ సందర్భంలో ప్లాన్ మరియు అమలు చేయడానికి ఇది కొంత చాలా అవసరమైన దృక్పథాన్ని జోడిస్తుందని మేము భావించాము.
 
-The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
+కోర్సు ముగింపు పాజెక్టులు సాపేక్షంగా సూటిగా ఉంటాయి.  నాలుగు నుండి ఐదు వారాల వ్యవధిలో విద్యార్థులు ప్రాజెక్ట్ ఆలోచనలను సమీక్షిస్తారు, వారి అప్లికేషన్‌ను ప్లాన్ చేస్తారు, వారి ప్రోగ్రామ్‌ను కోడ్ చేస్తారు, ఫీడ్‌బ్యాక్ (5వ గ్రేడ్) ఆధారంగా సవరిస్తారు చేస్తారు, తర్వాత పూర్తి చేసిన వారి పనిని ప్రజంట్ చేస్తారు.  ఈ దశలలో ప్రతి ఒక్కటీ ఒక సహాయకారి అయిన కరపత్రంతో పాటు పెద్ద చిత్రాన్ని హైలైట్ చేసే ఒక ఉపాధ్యాయుని పాఠ్యప్రణాళికతో గైడ్ చేయబడుతుంది.
 
-**Review:** Students will take a look at a handful of aspirational projects, built to showcase the amazing things that can be done with the skills that they have learned up to this point.  These projects have been built either in Play Lab or Artist, but students are free to review projects from Tynker, Scratch, or even text-based languages if the teacher sees fit.
+**సమీక్ష:** విద్యార్థులు ఇప్పటి వరకు నేర్చుకున్న నైపుణ్యాలతో చేయగల అద్భుతమైన విషయాలను ప్రదర్శించడానికి నిర్మించిన కొన్ని ఆకాంక్షాత్మక ప్రాజెక్ట్‌లను పరిశీలిస్తారు.  ఈ ప్రాజెక్టులు ప్లే ల్యాబ్‌లోగానీ లేదా ఆర్టిస్ట్‌లోగానీ నిర్మించబడ్డాయి, కానీ ఉపాధ్యాయుడు తగినది అని భావిస్తే, విద్యార్థులు ఈ ప్రాజెక్టులను టింకర్, స్క్రాచ్ లేదా టెక్స్ట్-ఆధారిత భాషల నుండి కూడా సమీక్షించడానికి స్వేచ్ఛ కలిగి ఉంటారు.
 
-**Plan:** The intention here is for students to sit back and think about what is really possible.  They will need to think about the games that they saw, and the limitations that they faced when editing them.  Afterward, they will sketch out a plan to create something unique.  Students might need to be reminded to stay realistic, as they will have limited time and resources when bringing their visions to life.  The materials here assume the use of Artist or Play Lab, but projects can be moved to whatever platform works for each particular classroom.
+**ప్లాన్:** ఇక్కడ ఉద్దేశం విద్యార్థులు విశ్రాంతిగా కూర్చొని, నిజంగా ఏది సాధ్యం అనేదాన్ని గురించి ఆలోచించడం.  వారు చూసిన గేమ్స్ మరియు వాటిని ఎడిట్ చేయడంలో వారు ఎదుర్కొన్న పరిమితుల గురించి వారు ఆలోచించవలసి ఉంటుంది.  ఆతర్వాత, ఏదైనా విలక్షణమైనది సృష్టించడానికి వారు ఒక ప్లాన్‌ను రూపొందిస్తారు.  విద్యార్థులు వారి ఆలోచనలకు జీవం ఇచ్చేటప్పుడు వారికి పరిమిత సమయం మరియు వనరులు ఉంటాయి కాబట్టి, వారిని దృష్టితో ఉండవలసిందిగా గుర్తు చేయడం అవసరం కావచ్చు.  ఇక్కడ ఉన్న సామగ్రి ఆర్టిస్ట్ లేదా ప్లే ల్యాబ్ ఉపయోగించడానికి ఉద్దేశించబడినవి, కానీ ప్రతి నిర్దిష్ట తరగతి గదికి పనిచేసే ఏదైనా ప్లాట్‌ఫామ్‌కు ప్రాజెక్టులు మార్చవచ్చు.
 
-**Build:** One day is not a whole lot of time to execute a plan that has been laid out on paper.  Students will face tough choices when it comes to trying to make things work as they run into one barrier after another.  They will learn to edit and adapt as bugs and program limitations change their perceptions of what can comfortably be accomplished in a restricted timeframe.
+**బిల్డ్:** పేపర్ మీద రూపొందించిన ఒక ప్లాన్‌ను అమలు చేయడానికి ఒక రోజు చాలా ఎక్కువ సమయం కాదు.  విషయాలు పనిచేసేలా ప్రయత్నించేటప్పడు విద్యార్థులు కఠిన ఎంపికలను ఎదుర్కొంటారు, ఎందుకంటే వారికి ఒకదాని తర్వాత మరొక అవరోధాలు ఎదురు అవుతాయి.  పరిమిత కాలపరిమితిలో తాము సునాయాసంగా చేయగలమనే వారి భావనలను బగ్స్ మరియు ప్రోగ్రామ్ పరిమితులు మార్చుతున్నప్పుడు వారు ఎడిట్ చేయడం మరియు అడాప్ట్ చేయడం నేర్చుకుంటారు.
 
-**Revise:** For older students, a day of revising their programs based on the feedback of classmates can help them improve their final product, and lets them inspire others with the things that they have achieved.  Students will practice constructive critique, as well as group brainstorming and persistence.
+**రివైజ్:** పెద్ద వయస్సు విద్యార్థుల కోసం, క్లాస్‌మేట్స్ నుండి ఫీడ్‌బ్యాక్ ఆధారంగా వారి ప్రోగ్రామ్‌లను ఒక రోజు రివైజ్ చేయడం అనేది వారి అంతిమ ప్రోడక్ట్‌ను మెరుగుపరచడానికి సహాయపడవచ్చు మరియు వారు సాధించిన వాటితో వారు ఇతరులను ప్రేరేపించేలా చేస్తుంది.  విద్యార్థులు నిర్మాణాత్మకమైన విమర్శతోపాటు, గ్రూపు మేధోమధనం మరియు నిరంతర ప్రయత్నాన్ని ప్రాక్టీస్ చేస్తారు.
 
-**Present:** Nearly a month in the making, this is the chance for students to stand-up and be proud of how far they have come.  Our lesson plan assumes an oral presentation, but teachers have the option of suggesting written or multimedia presentations instead.
+**ప్రజంట్:** దాదాపు నెల రోజులుగా ప్రయత్నం తర్వాత, విద్యార్థులు నిలబడి, తాము ఎంత దూరం వచ్చామో చూడి గర్వపడే అవకాశం ఇది.  మా పాఠ్యప్రణాళిక మౌఖిక ప్రజంటేషన్ కోసం ఉద్దేశించబడింది, కానీ దానికి బదులుగా లిఖిత లేదా మల్టీమీడియా ప్రజంటేషన్‌ను సూచించే వికల్పం ఉపాధ్యాయులకు ఉంది.
 
-No matter how thoroughly students embed themselves in their projects, they are sure to learn something useful about the processes of creativity and problem solving in computer science.
+విద్యార్థులు తమ ప్రాజెక్ట్‌లలో తమను తాము ఎంత పరిపూర్ణంగా లీనం చేసుకున్నా, వారు కంప్యూటర్ సైన్స్‌లో సృజనాత్మకత మరియు సమస్య పరిష్కార ప్రక్రియల గురించి ఉపయోగకరమైన ఏదైనా ఖచ్చితంగా నేర్చుకుంటారు.
 
 <a id="conclusion"></a>
 
-## Conclusion
-As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
+## ముగింపు
+మీరు చూడగలిగినట్లుగా, పెద్దయెత్తున CS ప్రాధమిక అంశాల ఉపాధ్యాయులు మరియు ఫెసిలిటేటర్ కమ్యూనిటీల నుండి ఫీడ్‌బ్యాక్‌తో ప్రేరణ పొందిన ఉత్తేజపూర్వక మెరుగుదలల& ను కంప్యూటర్ సైన్స్ ప్రాధమిక అంశాలలో A-F కోర్సులు కలిగి ఉంటాయి.
 
-We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.
+ఈ అవలోకనం అంతర్దృష్టితో కూడి ఉన్నదని మేము ఆశిస్తున్నాము.  ఈ మార్పు గురించి మీకు ఏవైనా ప్రశ్నలు లేదా కామెంట్లు ఉంటే, దయచేసి http://forum.code.org/c/csf సందర్శించండి మరియు వాటిని మా ఫోరమ్‌లో పోస్ట్ చేయండి.  మేము ఖచ్చితంగా మీ ప్రశ్నలకు వీలైనంత త్వరగా జవాబులు పొందుతాము.  అంతవరకు, కోర్సులు A-F గురించి ఇక్కడ కొన్ని తరచూ అడిగే ప్రశ్నలు ఇవ్వబడ్డాయి.
 
 <a id="faq"></a>
 
-## FAQs
+## తరచూ అడిగే ప్రశ్నలు
 
-| Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                                | No. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                        |
-| **When can we start using Courses A-F?**                                                                                                                    | Courses A-F are available now!                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Some of my favorite lessons/puzzles are missing from Courses A-F!**                                                                                       | Have no fear! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                           |
-| **These puzzles seem much harder.  I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence.  None of these things are required when puzzles are too easy to complete.  For this reason, we’ve had to make puzzles more difficult.  Please refer to the teacher guide for help with leading your class in building these skills.  As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.    |
-| **Some puzzles only allow a certain number of specific blocks.  What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding.  It is a way of giving direction, without over scaffolding the pieces in the workspace itself.  For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
+| ప్రశ్న                                                                                                                                                                               | జవాబు                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **మీరు కొత్త సెట్ కోర్సులు ప్రారంభిస్తున్నారు-- అంటే కోర్సులు 1-4 తీసివేయబడుతున్నాయా?**                                                                                              | లేదు. మా మొదటి 20-గంటల కోర్సు మా వెబ్‌సైట్‌లో ఇంకా అందుబాటులో మరియు ఉపయోగంలో ఉన్నట్లే, తమ విద్యార్థులు/పిల్లలకు అవసరమైన అనుభవాన్ని ఇవి మెరుగ్గా రెప్రజంట్ చేస్తాయని భావించే వారి కోసం, మేము కోర్సులు 1-4 లను వాటి దగ్గరే ఉంచాలని యోచిస్తున్నాము.                                                                                                                                                                                                                                                                                     |
+| **మేము ఎప్పుడు కోర్సులు A-F ఉపయోగించడం ప్రారంభించవచ్చు?**                                                                                                                            | కోర్సులు A-F ఇప్పుడు అందుబాటులో ఉన్నాయి!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **కోర్సులు A-F లో నాకు ఇష్టమైన కొన్ని పాఠాలు/ఫజిల్స్ కనిపించడం లేదు!**                                                                                                               | భయపడకండి! అవి మీరు వదిలి వెళ్లిన దగ్గరే కోర్సులు 1-4 లేదా యాక్సిలెరేటెడ్ 20-గంటల కోర్సులో ఇప్పటికీ ఉన్నాయి.                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **ఈ ఫజిల్స్ ఎక్కువ కఠినంగా ఉన్నట్లు అనిపిస్తున్నాయి.  అవి నా చిన్నారులకు చాలా కష్టమైనవి అని నేను ఆందోళన పడుతున్నాను.**                                                               | ఈ కొత్త కోర్సుల వెన్నెముక విద్యార్థులు ఆలోచించేలా, సమస్య పరిష్కరించేలా మరియు నిరంతర ప్రయత్నం ప్రాక్టీస్ చేసేలా వారిలో కోరిక పుట్టించడం.  పూర్తి చేయడానికి ఫజిల్స్ మరీ సులువుగా ఉన్నప్పుడు వీటిలో ఏవీ అవసరం ఉండదు.  ఈ కారణం వల్లనే, మేము ఫజిల్స్‌ను మరింత కష్టమైనవిగా చేయవలసి వచ్చింది.  ఈ నైపుణ్యాలను నిర్మించడానికి మీ తరగతికి నాయకత్వం వహించడంలో మీకు సహాయం కోసం దయచేసి ఉపాధ్యాయ గైడు చూడండి.  ఎప్పటిలాగే, ఆన్‌లైన్ ఫజిల్స్ లోకి జంప్ చేయడానికి ముందు అన్‌ప్లగ్డ్ పాఠాలను ఉపయోగించడానికి ఉన్న ప్రాముఖ్యతను తక్కువగా అంచనా వేయకండి. |
+| **కొన్ని ఫజిల్స్ నిర్దిష్ట సంఖ్యలో మాత్రమే నిర్దిష్ట బ్లాక్‌లను అనుమతిస్తాయి.  నా విద్యార్థులు లూప్‌లను గుర్తించడానికి ముందు చాలా దూర మార్గంలో ఏదైనా కోడ్ చేయాలనుకుంటే ఏమి చేయాలి?** | నిర్దిష్ట బ్లాక్‌లను పరిమితం చేసే కొన్ని ఫజిల్స్ ఉన్నాయి. ఇది స్కాఫ్‌ఫోల్డింగ్ యొక్క మా కొత్త విధానాలలో ఒకటి.  వర్క్‌స్పేస్‌లోని ముక్కలను ఎక్కువ స్కాఫ్‌ఫోల్డింగ్ చేయకుండా, మార్గదర్శనం చేసే మార్గం ఇది.  వారు జత అవ్వడానికి చాలా కాలం ముందు పజిల్‌లను కోడ్ చేయాలనుకుంటున్న విద్యార్థులకు (మరియు, వాస్తవానికి విద్యార్థులందరికీ, అన్ని సమయాలలో) కీబోర్డ్ పక్కన జర్నల్ లేదా స్క్రాచ్ పేపర్ కలిగి ఉండటం ఉపయోగకరంగా ఉంటుంది, దానిపై వారు అల్గారిథమ్‌ను అత్యంత సహజంగా ఏ విధంగా వచ్చినా గుర్తించవచ్చు.                                    |
 

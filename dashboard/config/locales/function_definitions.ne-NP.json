@@ -1954,6 +1954,18 @@
               "binary": "binary"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "draw a square"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          }
         }
       }
     }

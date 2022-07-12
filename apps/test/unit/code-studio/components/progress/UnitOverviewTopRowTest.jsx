@@ -3,16 +3,10 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {
-  UnconnectedUnitOverviewTopRow as UnitOverviewTopRow,
-  NOT_STARTED,
-  IN_PROGRESS,
-  COMPLETED
-} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
+import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
@@ -20,25 +14,26 @@ import {testLessons} from './unitCalendarTestData';
 
 const defaultProps = {
   sectionsForDropdown: [],
-  unitProgress: NOT_STARTED,
   scriptId: 42,
   scriptName: 'test-script',
   unitTitle: 'Unit test script title',
-  viewAs: ViewType.Student,
+  viewAs: ViewType.Participant,
   isRtl: false,
-  teacherResources: [],
   studentResources: [],
   showAssignButton: true,
-  isMigrated: false
+  isMigrated: false,
+  unitCompleted: false,
+  hasPerLevelResults: false
 };
 
 describe('UnitOverviewTopRow', () => {
-  it('renders "Try Now" for student', () => {
+  it('renders "Try Now" for participant if not unitCompleted and not hasPerLevelResults', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
-        viewAs={ViewType.Student}
-        unitProgress={NOT_STARTED}
+        viewAs={ViewType.Participant}
+        unitCompleted={false}
+        hasPerLevelResults={false}
       />
     );
 
@@ -71,12 +66,13 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders "Continue" for student', () => {
+  it('renders "Continue" for participant if has level results and not unitCompleted', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
-        viewAs={ViewType.Student}
-        unitProgress={IN_PROGRESS}
+        viewAs={ViewType.Participant}
+        unitCompleted={false}
+        hasPerLevelResults={true}
       />
     );
 
@@ -92,12 +88,12 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders "Print Certificate" for student', () => {
+  it('renders "Print Certificate" for participant', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
-        viewAs={ViewType.Student}
-        unitProgress={COMPLETED}
+        viewAs={ViewType.Participant}
+        unitCompleted={true}
       />
     );
 
@@ -113,9 +109,9 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders SectionAssigner for teacher', () => {
+  it('renders SectionAssigner for instructor', () => {
     const wrapper = shallow(
-      <UnitOverviewTopRow {...defaultProps} viewAs={ViewType.Teacher} />
+      <UnitOverviewTopRow {...defaultProps} viewAs={ViewType.Instructor} />
     );
 
     expect(
@@ -138,68 +134,14 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders resources for teacher', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        viewAs={ViewType.Teacher}
-        teacherResources={[
-          {
-            type: ResourceType.curriculum,
-            link: 'https://example.com/a'
-          },
-          {
-            type: ResourceType.vocabulary,
-            link: 'https://example.com/b'
-          }
-        ]}
-      />
-    );
-    expect(
-      wrapper.containsMatchingElement(
-        <ResourcesDropdown
-          resources={[
-            {
-              type: ResourceType.curriculum,
-              link: 'https://example.com/a'
-            },
-            {
-              type: ResourceType.vocabulary,
-              link: 'https://example.com/b'
-            }
-          ]}
-          useMigratedResources={false}
-        />
-      )
-    ).to.be.true;
-  });
-
-  it('renders migrated resources for teacher on a migrated script', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        viewAs={ViewType.Teacher}
-        isMigrated={true}
-        migratedTeacherResources={[
-          {
-            id: 1,
-            key: 'curriculum',
-            name: 'Curriculum',
-            url: 'https://example.com/a'
-          },
-          {
-            id: 2,
-            key: 'vocabulary',
-            name: 'Vocabulary',
-            url: 'https://example.com/b'
-          }
-        ]}
-      />
-    );
-    expect(
-      wrapper.containsMatchingElement(
-        <ResourcesDropdown
-          migratedResources={[
+  describe('instructor resources', () => {
+    it('renders resources for instructor on a migrated script', () => {
+      const wrapper = shallow(
+        <UnitOverviewTopRow
+          {...defaultProps}
+          viewAs={ViewType.Instructor}
+          isMigrated={true}
+          teacherResources={[
             {
               id: 1,
               key: 'curriculum',
@@ -213,20 +155,39 @@ describe('UnitOverviewTopRow', () => {
               url: 'https://example.com/b'
             }
           ]}
-          useMigratedResources={true}
         />
-      )
-    ).to.be.true;
+      );
+      expect(
+        wrapper.containsMatchingElement(
+          <ResourcesDropdown
+            resources={[
+              {
+                id: 1,
+                key: 'curriculum',
+                name: 'Curriculum',
+                url: 'https://example.com/a'
+              },
+              {
+                id: 2,
+                key: 'vocabulary',
+                name: 'Vocabulary',
+                url: 'https://example.com/b'
+              }
+            ]}
+          />
+        )
+      ).to.be.true;
+    });
   });
 
-  it('renders the unit calendar when showCalendar true for teacher', () => {
+  it('renders the unit calendar when showCalendar true for instructor', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
         showCalendar
         unitCalendarLessons={testLessons}
         weeklyInstructionalMinutes={90}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
       />
     );
     expect(
@@ -240,13 +201,13 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('does not render the unit calendar when showCalendar false for teacher', () => {
+  it('does not render the unit calendar when showCalendar false for instructor', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
         unitCalendarLessons={testLessons}
         weeklyInstructionalMinutes={90}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
       />
     );
     expect(
@@ -260,14 +221,14 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.false;
   });
 
-  it('does not render the unit calendar for student', () => {
+  it('does not render the unit calendar for participant', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
         showCalendar
         unitCalendarLessons={testLessons}
         weeklyInstructionalMinutes={90}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
       />
     );
     expect(
@@ -287,7 +248,7 @@ describe('UnitOverviewTopRow', () => {
         {...defaultProps}
         scriptOverviewPdfUrl="/link/to/script_overview.pdf"
         scriptResourcesPdfUrl="/link/to/script_resources.pdf"
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
       />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
@@ -305,13 +266,13 @@ describe('UnitOverviewTopRow', () => {
     ]);
   });
 
-  it('does not render printing option dropdown for students', () => {
+  it('does not render printing option dropdown for participants', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
         scriptOverviewPdfUrl="/link/to/script_overview.pdf"
         scriptResourcesPdfUrl="/link/to/script_resources.pdf"
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
       />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(0);

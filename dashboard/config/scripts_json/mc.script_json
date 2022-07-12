@@ -4,15 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "mc",
-    "serialized_at": "2021-09-29 16:16:18 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-03-18 18:41:15 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "mc"
     }
@@ -33,7 +36,7 @@
   "lessons": [
     {
       "key": "Hour of Code 2015",
-      "name": "Minecraft: Adventurer",
+      "name": "Minecraft Hour of Code",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -842,16 +845,6 @@
   ],
   "objectives": [
     {
-      "key": "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5",
-      "properties": {
-        "description": "Define “coding” and “computer science”"
-      },
-      "seeding_key": {
-        "lesson.key": "Hour of Code 2015",
-        "objective.key": "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5"
-      }
-    },
-    {
       "key": "74f6b7a3-df1b-4f98-9619-30b2c2118c14",
       "properties": {
         "description": "Identify key computer science vocabulary"
@@ -869,6 +862,16 @@
       "seeding_key": {
         "lesson.key": "Hour of Code 2015",
         "objective.key": "d1660224-18b1-4e70-b7fc-b0fce29c8cd6"
+      }
+    },
+    {
+      "key": "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5",
+      "properties": {
+        "description": "Define “coding” and “computer science”"
+      },
+      "seeding_key": {
+        "lesson.key": "Hour of Code 2015",
+        "objective.key": "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5"
       }
     }
   ],

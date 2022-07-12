@@ -17,7 +17,10 @@ const PageAction = makeEnum(
   'JotFormFrameLoaded',
   'JotFormLoadFailed',
   'BlockLoadFailed',
-  'MapboxMarkerLoadError'
+  'MapboxMarkerLoadError',
+  'LoadScriptProgressStarted',
+  'LoadScriptProgressFinished',
+  'SectionProgressRenderedWithData'
 );
 
 const MAX_FIELD_LENGTH = 4095;

@@ -4,16 +4,19 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
-      "tts": true,
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "tts": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "artist",
-    "serialized_at": "2021-09-29 18:15:19 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-03-17 22:46:28 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "artist"
     }
@@ -584,8 +587,8 @@
       "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
       "key": "csf-artist-intro-video",
       "properties": {
-        "type": "Student Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Student Video"
       },
       "seeding_key": {
         "resource.key": "csf-artist-intro-video"
@@ -596,9 +599,9 @@
       "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
       "key": "csf-turns-angles-doc",
       "properties": {
-        "type": "Student Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Student Handout"
       },
       "seeding_key": {
         "resource.key": "csf-turns-angles-doc"
@@ -609,8 +612,8 @@
       "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
       "key": "csf-turns-angles-video",
       "properties": {
-        "type": "Student Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Student Video"
       },
       "seeding_key": {
         "resource.key": "csf-turns-angles-video"
@@ -700,16 +703,6 @@
   ],
   "objectives": [
     {
-      "key": "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc",
-      "properties": {
-        "description": "Create a program to complete an image using sequential steps."
-      },
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "objective.key": "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc"
-      }
-    },
-    {
       "key": "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085",
       "properties": {
         "description": "Break complex shapes into simple parts."
@@ -717,6 +710,16 @@
       "seeding_key": {
         "lesson.key": "Artist",
         "objective.key": "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085"
+      }
+    },
+    {
+      "key": "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc",
+      "properties": {
+        "description": "Create a program to complete an image using sequential steps."
+      },
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "objective.key": "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc"
       }
     }
   ],

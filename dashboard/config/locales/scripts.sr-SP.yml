@@ -2,10 +2,6 @@
 sr:
   data:
     script:
-      category:
-        hoc_category_name: Час кода
-        math_category_name: Математика
-        other_category_name: Други
       name:
         course1:
           title: Курс 1
@@ -187,7 +183,7 @@ sr:
             Ани и Елзи у истраживању магије и лепоте леда.
           lessons:
             Artist:
-              name: Уметник
+              name: Програмирај са Аном и Елзом
           student_description: Хајде да искористимо програмирање да би се придружили
             Ани и Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце
             док клижете по леду и направићете зимску чаролију коју можете поделити
@@ -310,7 +306,7 @@ sr:
           description_short: Креирај приче и игре са Дизнијевим ликовима у Играоници.
           lessons:
             Infinity:
-              name: Бесконачно
+              name: Дизнијева Играоница
           student_description: Креирај приче и игре са Дизнијевим ликовима у Играоници.
         algebrademo:
           lessons:
@@ -663,9 +659,6 @@ sr:
             звезда у галаксији далеко, далеко.
           description_short: Научите да програмирате дроиде и креирате сопствену игру
             Ратова звезда у галаксији далеко, далеко.
-          lessons:
-            Hour of Code 2015:
-              name: Час кода 2015
           student_description: Научите да програмирате дроиде и креирате сопствену
             игру Ратова звезда у галаксији далеко, далеко.
         mc:
@@ -910,10 +903,6 @@ sr:
           lesson_groups:
             required:
               display_name: Преглед
-        basketball:
-          lessons:
-            Bounce:
-              name: одбиј се
         csd2-2017:
           lessons:
             Lists:
@@ -1239,10 +1228,6 @@ sr:
               name: 'Algorithms: Tangrams'
             Ice Age Play Lab:
               name: Ледено доба - Играоница
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Мајнкрафт час програмирања
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -1497,6 +1482,9 @@ sr:
               display_name: Кондиционали
             csp_functions:
               display_name: Функције
+        dance-extras:
+          description: Иди даље од првог часа са новим идејама за пројекте.
+          student_description: Иди даље од првог часа са новим идејама за пројекте.
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -1588,6 +1576,10 @@ sr:
           lessons:
             'null':
               name: ништа
+        dance-extras-gallery:
+          title: Настави плес
+          description: Иди даље од првог часа са новим идејама за пројекте.
+          student_description: Иди даље од првог часа са новим идејама за пројекте.
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -1874,6 +1866,9 @@ sr:
               name: Променљиве
             For Loops:
               name: Бројачке петље
+        dance-extras-2019:
+          description: Иди даље од првог часа са новим идејама за пројекте.
+          student_description: Иди даље од првог часа са новим идејама за пројекте.
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -2126,29 +2121,22 @@ sr:
         csd3-2021:
           lessons:
             Variables:
-              key: Променљиве
               name: Променљиве
             Text:
-              key: текст
               name: текст
             Conditionals:
-              key: Кондиционали
               name: Кондиционали
             Velocity:
-              key: Брзина
               name: Брзина
             Functions:
-              key: Функције
               name: Функције
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Функције са параметрима
               name: Функције са параметрима
         csp3-2021:
           lessons:
             Debugging:
-              key: Отклањање грешака
               name: Отклањање грешака
         csp4-2021:
           lesson_groups:
@@ -2164,6 +2152,10 @@ sr:
               display_name: Листе
             csp_loops:
               display_name: Петље
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Алгоритми
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2178,7 +2170,6 @@ sr:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Помери га, помери
               name: Помери га, помери
             'Loops: Getting Loopy':
               name: Запетљанције
@@ -2192,7 +2183,6 @@ sr:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Бинарне наруквице
               name: Бинарне наруквице
             'Events: The Big Event':
               name: Велики догађај
@@ -2208,16 +2198,11 @@ sr:
             'Algorithms: Graph Paper Programming':
               name: Графиконско - Папирно Програмирање
             Relay Programming:
-              key: Relay programming
               name: Relay programming
             Conditionals with Cards:
-              key: Услови са картама
               name: Услови са картама
             'Unplugged: Binary':
-              key: 'Unplugged: Binary'
               name: Binarne slike
-            Artist Binary:
-              key: Уметник Бинарно
           lesson_groups:
             csf_events:
               display_name: Догађаји
@@ -2230,9 +2215,6 @@ sr:
             lessonGroup-6:
               display_name: Дигитално држављанство
         coursee-2021:
-          lessons:
-            Conditionals:
-              key: Кондиционали
           lesson_groups:
             csf_digcit:
               display_name: Дигитално држављанство
@@ -2243,7 +2225,6 @@ sr:
         coursef-2021:
           lessons:
             Internet:
-              key: Интернет
               name: Интернет
           lesson_groups:
             csf_digcit:
@@ -2287,22 +2268,16 @@ sr:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Петље
               name: Петље
             Events:
-              key: Догађаји
               name: Догађаји
             Conditionals:
-              key: Кондиционали
               name: Кондиционали
             Functions:
-              key: Функције
               name: Функције
             Variables:
-              key: Променљиве
               name: Променљиве
             For Loops:
-              key: Бројачке петље
               name: Бројачке петље
         csa-videos:
           lesson_groups:
@@ -2332,5 +2307,224 @@ sr:
               name: Преглед
         dlp21-csp-overview:
           lessons:
+            lesson-1:
+              name: Преглед
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Пчелица словарица
+          title: Пчелица словарица
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Пчелица словарица
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Час кода
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Променљиве
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Функције
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Веселе мапе
+            'Programming: Happy Maps':
+              name: Веселе мапе
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+            csf_conditionals:
+              display_name: Кондиционали
+            csf_functions:
+              display_name: Функције
+            csf_variables:
+              display_name: Променљиве
+            csf_for_loops:
+              display_name: Бројачке петље
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Отклањање грешака
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Променљиве
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Листе
+            csp_loops:
+              display_name: Петље
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Помери га, помери
+            Getting Loopy:
+              name: Запетљанције
+            'Loops: Getting Loopy':
+              name: Запетљанције
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Велики догађај
+            Binary Bracelets:
+              name: Бинарне наруквице
+            'Events: The Big Event':
+              name: Велики догађај
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Графиконско - Папирно Програмирање
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Услови са картама
+            'Algorithms: Graph Paper Programming':
+              name: Графиконско - Папирно Програмирање
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+            csf_conditionals:
+              display_name: Кондиционали
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_functions:
+              display_name: Функције
+            csf_nested_loops:
+              display_name: Кондиционали
+        coursef-2022:
+          lessons:
+            The Internet:
+              name: Интернет
+            Internet:
+              name: Интернет
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Дигитално држављанство
+            lessonGroup-8:
+              display_name: Променљиве
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Петље
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Променљиве
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: Бројачке петље
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Кондиционали
+            lesson-16:
+              name: Отклањање грешака
+            lesson-19:
+              name: Отклањање грешака
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Петље
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Интернет
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Дигитално држављанство
+            lessonGroup-8:
+              display_name: Променљиве
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Променљиве
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Петље
+            Events:
+              name: Догађаји
+            Conditionals:
+              name: Кондиционали
+            Functions:
+              name: Функције
+            Variables:
+              name: Променљиве
+            For Loops:
+              name: Бројачке петље
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Променљиве
+            Text:
+              name: текст
+            Conditionals:
+              name: Кондиционали
+            Velocity:
+              name: Брзина
+            Functions:
+              name: Функције
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Функције
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Преглед
+            lesson-1:
+              name: Преглед
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Преглед
             lesson-1:
               name: Преглед

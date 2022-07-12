@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 sr:
   errors:
     messages:
@@ -277,6 +283,7 @@ sr:
       iceage: 'Ледено доба'
       infinity: 'Бесконачно'
       playlab: 'Играоница'
+      loading: 'Учитава се...'
     popup:
       progress_for_user: "Напредак %{name}"
       progress: 'Напредак'
@@ -290,6 +297,7 @@ sr:
       prizes_link: 'Више информација'
   teacher:
     answer: Одговор
+    dashboard: 'Контролна табла за наставнике'
     for_teachers_only: Само за наставнике
     title:
       one: 'Твој учитељ:'
@@ -468,6 +476,7 @@ sr:
   pd:
     form_labels:
       email: 'Електронска пошта'
+      school: 'Школа'
       school_name: 'Име школе'
       colombian_chilean_school_name: 'Име школе'
     form_entries:
@@ -480,6 +489,11 @@ sr:
         math: 'Математика'
         science: 'Наука'
         la: 'Уметност језика'
+        other: "Други"
+      resources:
+        other: "Други"
+      robotics:
+        other: "Други"
       email_opt_in:
         opt_in_yes: 'Да'
         opt_in_no: 'не'

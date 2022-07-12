@@ -519,11 +519,11 @@
           "challenges": "**可选挑战**\n\n-   选择另一首歌曲播放。\n-   将舞者移到新位置。\n-   创建多个舞者。"
         },
         "CourseD_Dance_2020_02": {
-          "validation": "**如何通过此关？**\n\n-   舞者必须做出一个动作。\n-   必须按方向键。\n\n_此关在4个小节后结束。_",
+          "validation": "**如何通过此关？**\n\n-   舞者必须做出一个动作。\n-   必须按方向键。\n\n_此关在4个节拍后结束。_",
           "challenges": "**可选挑战**\n\n使用多个 <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> 模块。"
         },
         "CourseD_Dance_2020_03": {
-          "validation": "**如何通过这关？**\n\n-   两个舞者都必须做出动作。\n-   必须按下方向键。\n\n_此关在 6 个小节后结束。_",
+          "validation": "**如何通过这关？**\n\n-   两个舞者都必须做出动作。\n-   必须按下方向键。\n\n_此关在 6 个节拍后结束。_",
           "challenges": "**可选挑战**\n\n-   让舞者响应左右方向键。"
         },
         "CourseD_Dance_2020_04": {
@@ -534,15 +534,15 @@
           "challenges": "**可选挑战**\n\n-   每当舞者换动作时，更换背景。"
         },
         "CourseD_Dance_2020_06": {
-          "validation": "**如何通过这一关？**\n\n-   创建一个领舞者和一组伴舞演员。\n\n_此关在 7 个小节后结束。_",
+          "validation": "**如何通过这一关？**\n\n-   创建一个领舞者和一组伴舞演员。\n\n_此关在 7 个节拍后结束。_",
           "challenges": "**可选挑战**\n\n-   创建多组伴舞演员。"
         },
         "CourseD_Dance_2020_07": {
-          "validation": "**如何通过这关？**\n\n-   音乐开始后，更改至少一个舞者的大小。\n\n_此关在 6 个小节后结束。_",
+          "validation": "**如何通过这关？**\n\n-   音乐开始后，更改至少一个舞者的大小。\n\n_此关在 6 个节拍后结束。_",
           "challenges": "**可选挑战**\n\n\\*通过更改其他属性（宽度、高度、旋转等）来尝试"
         },
         "CourseD_Dance_2020_08": {
-          "validation": "**如何通过此关？**\n\n-   更改至少一个舞者的色彩。\n\n_此关在 6 个小节后结束。_",
+          "validation": "**如何通过此关？**\n\n-   更改至少一个舞者的色彩。\n\n_此关在 6 个节拍后结束。_",
           "tint_hint": "是否注意到舞者没有完全变为选择的颜色？这是因为 **色彩** 会将选择的颜色与舞者本身的颜色混合在一起。"
         },
         "CourseD_Dance_2020_09": {
@@ -613,11 +613,11 @@
           "challenges": "**可选挑战**\n\n-   选择另一首歌曲播放。\n-   将舞者移到新位置。\n-   创建多个舞者。"
         },
         "Dance_2019_02": {
-          "validation": "**如何通过此关？**\n\n-   舞者必须做出一个动作。\n-   必须按方向键。\n\n_此关在4个小节后结束。_",
+          "validation": "**如何通过此关？**\n\n-   舞者必须做出一个动作。\n-   必须按方向键。\n\n_此关在4个节拍后结束。_",
           "challenges": "**可选挑战**\n\n使用多个 <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> 模块。"
         },
         "Dance_2019_03": {
-          "validation": "**如何通过这关？**\n\n-   两个舞者都必须做出动作。\n-   必须按下方向键。\n\n_此关在 6 个小节后结束。_",
+          "validation": "**如何通过这关？**\n\n-   两个舞者都必须做出动作。\n-   必须按下方向键。\n\n_此关在 6 个节拍后结束。_",
           "challenges": "**可选挑战**\n\n-   让舞者响应左右方向键。"
         },
         "Dance_2019_04": {
@@ -628,15 +628,15 @@
           "challenges": "**可选挑战**\n\n-   每当舞者换动作时，更换背景。"
         },
         "Dance_2019_06": {
-          "validation": "**如何通过这一关？**\n\n-   创建一个领舞者和一组伴舞演员。\n\n_此关在 7 个小节后结束。_",
+          "validation": "**如何通过这一关？**\n\n-   创建一个领舞者和一组伴舞演员。\n\n_此关在 7 个节拍后结束。_",
           "challenges": "**可选挑战**\n\n-   创建多组伴舞演员。"
         },
         "Dance_2019_07": {
-          "validation": "**如何通过这关？**\n\n-   音乐开始后，更改至少一个舞者的大小。\n\n_此关在 6 个小节后结束。_",
+          "validation": "**如何通过这关？**\n\n-   音乐开始后，更改至少一个舞者的大小。\n\n_此关在 6 个节拍后结束。_",
           "challenges": "**可选挑战**\n\n\\*通过更改其他属性（宽度、高度、旋转等）来尝试"
         },
         "Dance_2019_08": {
-          "validation": "**如何通过此关？**\n\n-   更改至少一个舞者的色彩。\n\n_此关在 6 个小节后结束。_",
+          "validation": "**如何通过此关？**\n\n-   更改至少一个舞者的色彩。\n\n_此关在 6 个节拍后结束。_",
           "tint_hint": "是否注意到舞者没有完全变为选择的颜色？这是因为 **色彩** 会将选择的颜色与舞者本身的颜色混合在一起。"
         },
         "Dance_2019_09": {
@@ -9363,10 +9363,10 @@
           "courseE_playLab_scaffold1_a": "打开`当按____方向键时` 事件的下拉菜单来更改模块控制的方向。",
           "courseE_playLab_scaffold1_b": "您应该有四个`当按下方向键`事件模块，它们在每个之下朝着一个方向向前移动。",
           "courseE_playLab_scaffold1_c": "当你完成后，你应该能够用方向键来移动你的英雄!",
-          "playlab_up": "为了让你的行动者向上移动，你可以连接这些模块：\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_down": "为了让你的行动者向下移动，你可以连接这些模块：\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_up": "为了让你的角色向上移动，你可以连接这些模块：\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "为了让你的角色向下移动，你可以连接这些模块：\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
           "playlab_left": "为了让你的行动者向左移动，你可以连接这些模块：\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_right": "为了让你的行动者向右移动，你可以连接这些模块：\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml>\n "
+          "playlab_right": "为了让你的角色向右移动，你可以连接这些模块：\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml>\n "
         },
         "courseC19_playLab_EOC4_2021": {
           "courseE_playLab_scaffold4_a": "使用`得分`添加一分, 并用`扣分`减去一分。"
@@ -9755,7 +9755,7 @@
         "courseC_starWars_loops8_dani": {
           "course_starWars_loops8_a": "试着将问题分成更小的部分来思考。别着急。你不需要第一次就全做对！",
           "course_starWars_loops8_b": "把这个问题的前半部分看成是台阶步进问题。你以前是怎么解决的？",
-          "course_starWars_loops8_c": "看看这条路。\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "看看这条路。\n\n[][0]"
         },
         "courseC_starWars_loops9_2021": {
           "course_starWars_loops9_b": "您可以在`重复`循环中放置多个模块。",
@@ -9782,7 +9782,7 @@
           "courseD_bee_conditionals4_hintVid1": "需要入门帮助吗？ 看视频!",
           "courseD_bee_conditionals4_a": "哪怕可以看到整条路径，仍然可以当作每个空间上面有朵云来处理。",
           "courseD_bee_conditionals4_b": "在循环中使用`如果`语句检查每个空间是否有花蜜。 ",
-          "courseD_bee_conditionals4_c": "使用<xml><block type=\"maze_untilBlocked\"/></xml>模块，您应该向前移动并找一朵花。如果有一朵花, 蜜蜂该怎么办？",
+          "courseD_bee_conditionals4_c": "使用[blockly block][0]模块，您应该向前移动并找一朵花。如果有一朵花, 蜜蜂该怎么办？",
           "courseD_bee_conditionals4_hintVid2": "观看此视频帮助解决这个难题。"
         },
         "courseD_bee_conditionals5_dani": {
@@ -9964,11 +9964,11 @@
           "challenges": "**可选挑战**\n\n-   选择另一首歌曲播放。\n-   将舞者移到新位置。\n-   创建多个舞者。"
         },
         "CourseD_Dance_2020_02_2021": {
-          "validation": "**如何通过此关？**\n\n-   舞者必须做出一个动作。\n-   必须按方向键。\n\n_此关在4个小节后结束。_",
+          "validation": "**如何通过此关？**\n\n-   舞者必须做出一个动作。\n-   必须按方向键。\n\n_此关在4个节拍后结束。_",
           "challenges": "**可选挑战**\n\n使用多个 <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> 模块。"
         },
         "CourseD_Dance_2020_03_2021": {
-          "validation": "**如何通过这关？**\n\n-   两个舞者都必须做出动作。\n-   必须按下方向键。\n\n_此关在 6 个小节后结束。_",
+          "validation": "**如何通过这关？**\n\n-   两个舞者都必须做出动作。\n-   必须按下方向键。\n\n_此关在 6 个节拍后结束。_",
           "challenges": "**可选挑战**\n\n-   让舞者响应左右方向键。"
         },
         "CourseD_Dance_2020_04_2021": {
@@ -9979,15 +9979,15 @@
           "challenges": "**可选挑战**\n\n-   每当舞者换动作时，更换背景。"
         },
         "CourseD_Dance_2020_06_2021": {
-          "validation": "**如何通过这一关？**\n\n-   创建一个领舞者和一组伴舞演员。\n\n_此关在 7 个小节后结束。_",
+          "validation": "**如何通过这一关？**\n\n-   创建一个领舞者和一组伴舞演员。\n\n_此关在 7 个节拍后结束。_",
           "challenges": "**可选挑战**\n\n-   创建多组伴舞演员。"
         },
         "CourseD_Dance_2020_07_2021": {
-          "validation": "**如何通过这关？**\n\n-   音乐开始后，更改至少一个舞者的大小。\n\n_此关在 6 个小节后结束。_",
+          "validation": "**如何通过这关？**\n\n-   音乐开始后，更改至少一个舞者的大小。\n\n_此关在 6 个节拍后结束。_",
           "challenges": "**可选挑战**\n\n\\*通过更改其他属性（宽度、高度、旋转等）来尝试"
         },
         "CourseD_Dance_2020_08_2021": {
-          "validation": "**如何通过此关？**\n\n-   更改至少一个舞者的色彩。\n\n_此关在 6 个小节后结束。_",
+          "validation": "**如何通过此关？**\n\n-   更改至少一个舞者的色彩。\n\n_此关在 6 个节拍后结束。_",
           "tint_hint": "是否注意到舞者没有完全变为选择的颜色？这是因为 **色彩** 会将选择的颜色与舞者本身的颜色混合在一起。"
         },
         "CourseD_Dance_2020_09_2021": {
@@ -10482,7 +10482,7 @@
           "courseC_maze_programming2_b": "确保所有3个模块都被点击了，并连接到`运行时`块。"
         },
         "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n若要从代码中间删除模块, 请将所有模块拖到工作区的右边，并先暂时放在那里。\n\n点击要删除的块，并将它拖回工具箱。\n\n最后，把其它模块放回它们应该在的地方。"
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n若要从代码中间删除模块, 把要删除模块下面的所有模块拖到工作区域的右边，先暂时放在那里。\n\n点击要删除的块，并将它拖回工具箱。\n\n最后，把其它模块放回它们应该在的地方。"
         },
         "courseD_maze_ramp5_2021": {
           "courseC_maze_programming5_a": "尝试使用\"步进\"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？",
@@ -10673,6 +10673,154 @@
           "card_idea1": "你可以通过使用具有不同变量的新提示模块来添加第二个（或第三个、第四个）提示。\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Enter an action word:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">verb</title>\n          </block>\n        </value>\n      </block>\n    </xml>",
           "card_idea2": "你可以通过使用事件下的“精灵图停止”模块和“精灵图开始”模块从一种行为改为另一种行为。\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
           "card_idea3": "当用户按下一个键或经过一段时间后，你可以通过使其他事情发生来使你的程序具有交互性。\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_animals_backgrounds": {
+          "hello_world_background": "你可以通过在`when clicked`事件模块下连接`set background`模块来改变背景：\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_animals_behaviors": {
+          "storyboard_behavior_example": "_注意：_为了给精灵图一个行为，你需要使用一个带绿色行为模块的`sprite begins`模块，如`spinning right`。\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_animals_click": {
+          "hw_no_changes": "你不需要更改这一级别中的任何代码。",
+          "hw_click_sprites": "在程序运行时点击精灵图。"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_costumes": "尝试在`when clicked`事件模块下连接一个`change costume`模块。\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click": "在`when click`事件模块下连接一个`say`模块：\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_animals_location": {
+          "location_pin_hint": "要改变精灵图的位置，点击位置模块上的针脚，然后点击你想让它去的地方。\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_animals_multi": {
+          "cat_xml": "确保每个模块的服装是匹配。\n\n<xml>\n  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_cat_hello\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Meow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_cat_hello\"</title>\n      </block>\n    </value>\n    </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_say": {
+          "hello-world-first-solution-bear": "为了让熊说点什么，把代码模块像这样连接起来：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_sizes": {
+          "storyboard_setProp": "若要一次性设置精灵图的大小，你可以使用这个代码模块：\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "如果你想反复改变精灵图的大小（通过事件），请使用这个代码模块：\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hello_world_background": "你可以通过在`when clicked`事件模块下连接`set background`模块来改变背景：\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_35_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_17_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_emoji_behaviors": {
+          "storyboard_behavior_example": "_注意：_为了给精灵图一个行为，你需要使用一个带绿色行为模块的`sprite begins`模块，如`spinning right`。\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"emoji_05_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_emoji_click": {
+          "hw_no_changes": "你不需要更改这一级别中的任何代码。",
+          "hw_click_sprites": "在程序运行时点击精灵图。"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_costumes": "尝试在`when clicked`事件模块下连接一个`change costume`模块。\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"emoji_25_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click": "在`when click`事件模块下连接一个`say`模块：\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Look at that!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_emoji_location": {
+          "location_pin_hint": "要改变精灵图的位置，点击位置模块上的针脚，然后点击你想让它去的地方。\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_emoji_multi": {
+          "storyboard_costume": "确保每个精灵图的服装相匹配。\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Look at me!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_14_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_emoji_say": {
+          "hello-world-first-solution-emoji": "为了让表情符号说点什么，把代码模块像这样连接起来：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_emoji_sizes": {
+          "storyboard_setProp": "若要一次性设置精灵图的大小，你可以使用这个代码模块：\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_17_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "如果你想反复改变精灵图的大小（通过事件），请使用这个代码模块：\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_33_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_backgrounds": {
+          "hello_world_background": "你可以通过在`when clicked`事件模块下连接`set background`模块来改变背景：\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_behaviors": {
+          "storyboard_behavior_example": "_注意：_为了给精灵图一个行为，你需要使用一个带绿色行为模块的`sprite begins`模块，如`spinning right`。\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_click": {
+          "hw_no_changes": "你不需要更改这一级别中的任何代码。",
+          "hw_click_sprites": "在程序运行时点击精灵图。"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_costumes": "尝试在`when clicked`事件模块下连接一个`change costume`模块。\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_events": {
+          "hello_world_click": "在`when click`事件模块下连接一个`say`模块：\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_location": {
+          "location_pin_hint": "要改变精灵图的位置，点击位置模块上的针脚，然后点击你想让它去的地方。\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_multi": {
+          "storyboard_costume": "确保每个精灵图的服装相匹配。\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_say": {
+          "hello-world-first-solution-pizza": "为了让披萨说点什么，把代码模块像这样连接起来：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_sizes": {
+          "storyboard_setProp": "若要一次性设置精灵图的大小，你可以使用这个代码模块：\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "如果你想反复改变精灵图的大小（通过事件），请使用这个代码模块：\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_retro_backgrounds": {
+          "hello_world_background": "你可以通过在`when clicked`事件模块下连接`set background`模块来改变背景：\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_retro_behaviors": {
+          "storyboard_behavior_example": "_注意：_为了给精灵图一个行为，你需要使用一个带绿色行为模块的`sprite begins`模块，如`spinning right`。\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_retro_click": {
+          "hw_no_changes": "你不需要更改这一级别中的任何代码。",
+          "hw_click_sprites": "在程序运行时点击精灵图。"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_costumes": "尝试在`when clicked`事件模块下连接一个`change costume`模块。\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_20_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click": "在`when click`事件模块下连接一个`say`模块：\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">POWERUP!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_retro_location": {
+          "location_pin_hint": "要改变精灵图的位置，点击位置模块上的针脚，然后点击你想让它去的地方。\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_retro_multi": {
+          "storyboard_costume": "确保每个精灵图的服装相匹配。\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_retro_say": {
+          "hello-world-first-solution-retrocreature": "为了让这个生物说点什么，像这样连接代码模块：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_retro_sizes": {
+          "hw_retro_setProp": "若要一次性设置精灵图的大小，你可以使用这个代码模块：\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
+          "hw_retro_changePropBy": "如果你想反复改变精灵图的大小（通过事件），请使用这个代码模块：\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "poetry_hoc_addSprites": {
+          "location_hint": "每个精灵图都有一个**位置**。你可以通过点击这个模块上的针脚来设置位置： \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   点击位置模块上的针脚![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>)，然后在屏幕上为你的精灵图选择一个新位置。\n-   当你的代码完成时，按“运行”按钮。",
+          "remove_hint": "你可以在一个特定行号移除一个精灵图。你可以添加一个新精灵图来取代它： \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "add_background_effect": "寻找一个像这样的背景模块：\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\n寻找一个像这样的文本效果模块： \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\n在工作区的`when run`下连接这些模块。",
+          "add_more_effects": "添加更多颜色或效果来帮助创造这首诗的气氛。 \n\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"squiggles\"</title><title name=\"PALETTE\">\"sky\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value><next><block type=\"Poetry_setFont\"><title name=\"FONT\">\"Courier\"</title><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"typewriter\"</title></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        "poetry_hoc_events1": {
+          "do_effect_hint": "这个新的`do effect`模块将添加一个新效果。 \n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">1</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></xml>\n\n你可以将多个`do effect`彼此堆叠在一起，使效果持续更久。 \n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">0</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></next></block></next></block></xml>",
+          "background_effect_hint": "你可以使用像这样的代码在事件模块下添加其他效果：\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setBackgroundEffect\">\n    <title name=\"EFFECT\">\"ripples\"</title>\n    <title name=\"PALETTE\">\"sky\"</title>\n  </block></next></block></xml>",
+          "more_events_hint": "你可以在程序中使用多个事件。尝试用两个具有不同效果的事件来匹配诗中的新行。 \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound_hint": "寻找这个模块：\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\n或这个模块： \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\n在工作区的`when run`下连接它。",
+          "more_code": "添加更多效果和颜色来配合你选择的声音。 \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "add_behavior": "向你的代码添加一个`sprite begins`模块。确保你已经制作了你要给予行为的精灵图。 \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+        },
+        "poetry_hoc_spriteSizes": {
+          "size hint": "寻找这个模块并点击`150`。\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\n当数字是`25`时会发生什么？ \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "有两种方法来解决这个难题 ！"
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "艺术家需要在每个方块之间旋转 120 度来完成这个设计。"
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "尝试让代理人建造一些桥梁，这样艾莉克斯和史蒂夫就可以在地图边缘以外的地区走动了。"
         }
       }
     }

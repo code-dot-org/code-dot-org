@@ -1,0 +1,37 @@
+---
+title: 헬로 월드
+theme: responsive
+set_dir: true
+social:
+  og:title: Hello World!
+  twitter:title: Hello World!
+  og:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity!
+  twitter:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity
+  og:image: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+---
+
+# 헬로 월드!
+
+컴퓨터 과학 101에서 수많은 학생들이 만들게 되는 첫 프로그램은 상징적인 텍스트 문구 “헬로 월드!”가 출력되는 간단한 프로그램입니다. 학생들에게 기본적인 코딩 기술과 앱 제작에 대한 자신감을 갖출 수 있는 입문 활동을 통해 컴퓨터 과학의 세계에 인사를 전하십시오. 네 가지 재미있는 테마 중에서 선택하여 자신이 만든 세상에서 인터랙티브 캐릭터를 코딩하세요!
+
+# 헬로 월드 테마를 선택하세요
+
+{{ spritelab_module, title: "음식", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "동물", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "레트로", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "이모티콘", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{ clearfix }}
+
+{{ teacher_info, heading: "선생님 정보", title: "헬로 월드 이후 계속해서 학습하는 방법", description: "헬로 월드 새로운 커리큘럼인 CS 연결의 개방형 플트를 해보지 않은 학급을 위한 완벽한 첫 단계입니다! 일부 코딩 기본을 학습한 후, 학생들은 CS 커넥션의 범교과 프로젝트로 진도를 나갈 수 있습니다", button_text: "더 보기", url: "/educate/csc" }}
+
+## 주요 학생 작품
+
+{{ featured_project, title: "Food", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood2.gif", url: "https://studio.code.org/projects/spritelab/sC_ZiNi_x5GUqsWHE2M4CrcbjU8XvtD3VNT7TM0Y0N8" }}
+{{ featured_project, title: "이모티콘", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "동물", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "레트로", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ clearfix }}

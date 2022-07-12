@@ -411,7 +411,7 @@ FactoryGirl.define do
     association :user, factory: :teacher
 
     course Pd::Workshop::COURSE_KEY_MAP[Pd::Workshop::COURSE_CSP]
-    application_year Pd::Application::ApplicationConstants::YEAR_19_20
+    application_year Pd::SharedApplicationConstants::YEAR_19_20
     scholarship_status Pd::ScholarshipInfoConstants::YES_CDO
   end
 
@@ -773,6 +773,9 @@ FactoryGirl.define do
     phone '5558675309'
     gender_identity 'Male'
     race ['Other']
+    street_address '333 Hogwarts Place'
+    city 'Magic City'
+    state 'Washington'
     add_attribute :zip_code, '98101'
     association :school
     principal_first_name 'Albus'
@@ -782,6 +785,7 @@ FactoryGirl.define do
     principal_confirm_email 'socks@hogwarts.edu'
     principal_phone_number '5555882300'
     current_role 'Teacher'
+    previous_used_curriculum ['Neither']
     previous_yearlong_cdo_pd ['CS in Science']
     committed 'Yes'
     willing_to_travel 'Up to 50 miles'
@@ -805,6 +809,10 @@ FactoryGirl.define do
       school_type 'Public school'
     end
 
+    trait :with_no_school do
+      school(-1)
+    end
+
     trait :with_multiple_workshops do
       able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
 
@@ -815,25 +823,21 @@ FactoryGirl.define do
 
     pay_fee Pd::Application::TeacherApplication.options[:pay_fee].first
     plan_to_teach Pd::Application::TeacherApplication.options[:plan_to_teach].first
-    interested_in_online_program 'Yes'
     completing_on_behalf_of_someone_else 'No'
-    cs_how_many_minutes 45
-    cs_how_many_days_per_week 5
-    cs_how_many_weeks_per_year 20
-    cs_total_course_hours 75
+    cs_how_many_minutes '45'
+    cs_how_many_days_per_week '5'
+    cs_how_many_weeks_per_year '20'
     replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
 
     trait :csp do
       program Pd::Application::TeacherApplication::PROGRAMS[:csp]
       csp_which_grades ['11', '12']
-      csp_which_units ['Unit 1: Digital Information', 'Unit 2: The Internet']
       csp_how_offer 'As an AP course'
     end
 
     trait :csd do
       program Pd::Application::TeacherApplication::PROGRAMS[:csd]
       csd_which_grades ['6', '7']
-      csd_which_units ['Unit 1: Problem Solving', 'Unit 2: Web Development']
     end
   end
 

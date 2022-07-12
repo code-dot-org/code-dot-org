@@ -9,7 +9,9 @@ it:
       moving east: spostamento verso est
       moving east and looping: spostamento verso est e ciclo
       moving north: spostamento verso nord
+      moving north and looping: spostamento verso nord e ciclo
       moving south: spostamento verso sud
+      moving south and looping: spostamento verso sud e ciclo
       moving west: spostamento verso ovest
       moving west and looping: spostamento verso ovest e ciclo
       moving with arrow keys: movimento con tasti freccia

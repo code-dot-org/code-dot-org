@@ -2,6 +2,75 @@
   "bs-BA": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "function/hero/unversioned": {
+          "word": "Funkcija"
+        },
+        "code/poem-art/2021": {
+          "word": "Kôd"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "code/artist/unversioned": {
+          "word": "Kôd"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Uvjeti"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Petlje"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "code/sports/unversioned": {
+          "word": "Kôd"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kôd"
+        },
         "variable/coursef/2021": {
           "word": "Varijabla"
         },
@@ -67,6 +136,24 @@
         },
         "define/coursee/2021": {
           "word": "Definiši"
+        },
+        "debugging/csd/2021": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "variable/csd/2021": {
+          "word": "Varijabla"
+        },
+        "conditionals/csd/2021": {
+          "word": "Uvjeti"
+        },
+        "abstraction/csd/2021": {
+          "word": "Apstrakcija"
+        },
+        "function/csd/2021": {
+          "word": "Funkcija"
+        },
+        "copyright/csd/2021": {
+          "word": "Autorska prava"
         }
       }
     }

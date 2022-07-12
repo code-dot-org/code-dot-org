@@ -4,15 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "aquatic",
-    "serialized_at": "2021-09-29 16:19:15 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-03-17 22:40:48 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "aquatic"
     }
@@ -745,26 +748,6 @@
       }
     },
     {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
       "key": "condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
@@ -785,6 +768,16 @@
       }
     },
     {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
       "key": "loops",
       "word": "Loops",
       "definition": "The action of doing something over and over again.",
@@ -793,6 +786,16 @@
       "seeding_key": {
         "vocabulary.key": "loops"
       }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -800,18 +803,6 @@
       "seeding_key": {
         "lesson.key": "Aquatic",
         "vocabulary.key": "code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Aquatic",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Aquatic",
-        "vocabulary.key": "program"
       }
     },
     {
@@ -829,7 +820,19 @@
     {
       "seeding_key": {
         "lesson.key": "Aquatic",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Aquatic",
         "vocabulary.key": "loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Aquatic",
+        "vocabulary.key": "program"
       }
     }
   ],
@@ -837,6 +840,16 @@
 
   ],
   "objectives": [
+    {
+      "key": "19f72ae3-7b2b-4028-84e5-8e5e66fcf397",
+      "properties": {
+        "description": "Identify places to go to continue learning computer science and coding"
+      },
+      "seeding_key": {
+        "lesson.key": "Aquatic",
+        "objective.key": "19f72ae3-7b2b-4028-84e5-8e5e66fcf397"
+      }
+    },
     {
       "key": "586fecaa-52c0-4889-adaf-cc11a172d4a7",
       "properties": {
@@ -855,16 +868,6 @@
       "seeding_key": {
         "lesson.key": "Aquatic",
         "objective.key": "e2745118-9d93-4e33-a607-c1927403c0c3"
-      }
-    },
-    {
-      "key": "19f72ae3-7b2b-4028-84e5-8e5e66fcf397",
-      "properties": {
-        "description": "Identify places to go to continue learning computer science and coding"
-      },
-      "seeding_key": {
-        "lesson.key": "Aquatic",
-        "objective.key": "19f72ae3-7b2b-4028-84e5-8e5e66fcf397"
       }
     }
   ],

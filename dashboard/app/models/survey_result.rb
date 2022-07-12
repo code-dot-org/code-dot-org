@@ -53,7 +53,7 @@ class SurveyResult < ApplicationRecord
   ALL_ATTRS = (DIVERSITY_ATTRS + NET_PROMOTER_SCORE_ATTRS).freeze
 
   serialized_attrs ALL_ATTRS
-  belongs_to :user
+  belongs_to :user, optional: true
 
   KINDS = [
     DIVERSITY_2016 = 'Diversity2016'.freeze,
@@ -61,6 +61,7 @@ class SurveyResult < ApplicationRecord
     DIVERSITY_2018 = 'Diversity2018'.freeze,
     DIVERSITY_2019 = 'Diversity2019'.freeze,
     DIVERSITY_2021 = 'Diversity2021'.freeze,
+    DIVERSITY_2022 = 'Diversity2022'.freeze,
     NET_PROMOTER_SCORE_2015 = 'NetPromoterScore2015'.freeze,
     NET_PROMOTER_SCORE_2017 = 'NetPromoterScore2017'.freeze,
     NET_PROMOTER_SCORE_2019 = 'NetPromoterScore2019'.freeze,

@@ -18,6 +18,8 @@ style_min: false
   @header["social"]["og:description"] = hoc_s(:social_hoc2018_global_movement)
   @header["social"]["og:image"] = 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png'
 
+  hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+
 :css
   .noFocusButton:focus {
     outline: 0;
@@ -66,27 +68,29 @@ style_min: false
     }
   }
 
-  @media screen and (min-width: 992px) {
-    #fullwidth {
-      background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background.png')});
-      background-position: 70% 70%;
+- unless ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
+  :css
+    @media screen and (min-width: 992px) {
+      #fullwidth {
+        background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background.png')});
+        background-position: 70% 70%;
+      }
     }
-  }
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-    #fullwidth {
-      background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_tablet.png')});
-      background-position: 67% 50%;
-      padding-bottom: 200px;
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      #fullwidth {
+        background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_tablet.png')});
+        background-position: 67% 50%;
+        padding-bottom: 200px;
+      }
     }
-  }
-  /* Use the narrow image for narrower screens */
-  @media screen and (max-width: 767px) {
-    #fullwidth {
-      background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_narrow.png')});
-      background-position: 50% 80%;
-      padding-bottom: 160px;
+    /* Use the narrow image for narrower screens */
+    @media screen and (max-width: 767px) {
+      #fullwidth {
+        background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_narrow.png')});
+        background-position: 50% 80%;
+        padding-bottom: 160px;
+      }
     }
-  }
 
 #fullwidth
   - if request.site == 'code.org'
@@ -100,15 +104,29 @@ style_min: false
       - else
         = view :mobile_header_responsive
 
-  .banner.container_responsive
-    .col-sm-12.col-md-6{style: "text-align: center"}
-      .bannerHeading= hoc_s(:learn_banner_heading)
-      = hoc_s(:learn_banner_blurb)
-      .bannerBeyond
-        != hoc_s(:learn_banner_beyond_markdown, markdown: :inline, locals: {url: "https://hourofcode.com/beyond"})
-      .bannerTeachers
-        %i{:class=>"fa fa-graduation-cap", :style=>"font-size: larger"}
-        != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/#join", howto_url: "https://hourofcode.com/how-to"})
+  - if ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
+    .banner.container_responsive{style: "display: flex"}
+      .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-left-fade.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat"}
+      .col-33
+        .bannerHeading= hoc_s(:learn_banner_heading)
+        = hoc_s(:learn_banner_blurb)
+        .bannerBeyond
+          != hoc_s(:learn_banner_beyond_markdown, markdown: :inline, locals: {url: "https://hourofcode.com/beyond"})
+        .bannerTeachers
+          %i{:class=>"fa fa-graduation-cap", :style=>"font-size: larger"}
+          != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/#join", howto_url: "https://hourofcode.com/how-to"})
+      .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-right-fade.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat"}
+
+  - else
+    .banner.container_responsive
+      .col-sm-12.col-md-6{style: "text-align: center"}
+        .bannerHeading= hoc_s(:learn_banner_heading)
+        = hoc_s(:learn_banner_blurb)
+        .bannerBeyond
+          != hoc_s(:learn_banner_beyond_markdown, markdown: :inline, locals: {url: "https://hourofcode.com/beyond"})
+        .bannerTeachers
+          %i{:class=>"fa fa-graduation-cap", :style=>"font-size: larger"}
+          != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/#join", howto_url: "https://hourofcode.com/how-to"})
 
   .clear{style: "clear:both"}
 
@@ -117,19 +135,23 @@ style_min: false
 %script{src: webpack_asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
 %script{src: webpack_asset_path("js/tutorialExplorer.js")}
 
-- tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
+- tutorial_sheet_id = request.params["preview"] ? :tutorials_preview : :tutorials
+- no_cache = !!request.params["preview"]
+- tutorials_contents = Tutorials.new(tutorial_sheet_id, no_cache).contents(request.host_with_port)
 
 - tutorials_contents.each do |tutorial|
   - tutorial[:contact] = nil
   - prefix = "tutorial_#{tutorial[:short_code]}_"
-  - tutorial[:name]                                 = hoc_s(prefix + "name")
-  - tutorial[:shortdescription]                     = hoc_s(prefix + "shortdescription")
-  - tutorial[:longdescription]                      = hoc_s(prefix + "longdescription")
-  - tutorial[:language]                             = hoc_s(prefix + "language")
-  - tutorial[:string_detail_grades]                 = hoc_s(prefix + "string_detail_grades")
-  - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
-  - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
-  - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
+  -# Unless showing a preview, look up localized versions of strings.
+  - unless request.params["preview"]
+    - tutorial[:name]                                 = hoc_s(prefix + "name")
+    - tutorial[:shortdescription]                     = hoc_s(prefix + "shortdescription")
+    - tutorial[:longdescription]                      = hoc_s(prefix + "longdescription")
+    - tutorial[:language]                             = hoc_language(tutorial[:languages_supported])
+    - tutorial[:string_detail_grades]                 = hoc_s(prefix + "string_detail_grades")
+    - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
+    - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
+    - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
   - tutorial[:teachers_notes]                       = CDO.curriculum_url(request.locale, tutorial[:teachers_notes], false)
 
 #tutorials

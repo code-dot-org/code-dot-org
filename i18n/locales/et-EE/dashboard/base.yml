@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 et:
   errors:
     messages:
@@ -276,6 +282,7 @@ et:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (plokid)'
       starwarsblocks_hour: 'Star Wars (plokid)'
+      loading: 'Laadimine...'
     popup:
       progress_for_user: "%{name} edusammud"
       progress: 'Sinu progress'
@@ -289,6 +296,7 @@ et:
       prizes_link: 'rohkem infot'
   teacher:
     answer: Vastus
+    dashboard: 'Õpetaja töölaud'
     for_teachers_only: Ainult õpetajatele
     title:
       one: 'Sinu õpetaja:'
@@ -762,6 +770,7 @@ et:
   pd:
     form_labels:
       email: 'E-post'
+      school: 'Kool'
       school_name: 'Kooli nimi'
       colombian_chilean_school_name: 'Kooli nimi'
     form_entries:
@@ -774,12 +783,15 @@ et:
         math: 'Matemaatika'
         science: 'Teadus'
         la: 'Keeled'
+        other: "Muu"
       resources:
         khan: 'Khan Academy'
         kodable: 'Kodable'
         lightbot: 'Lightbot'
+        other: "Muu"
       robotics:
         kodable: 'Kodable'
+        other: "Muu"
       email_opt_in:
         opt_in_yes: 'Jah'
         opt_in_no: 'Ei'

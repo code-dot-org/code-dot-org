@@ -229,7 +229,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     render json: @workshop, serializer: Api::V1::Pd::WorkshopSummarySerializer
   end
 
-  use_database_pool potential_organizers: :persistent
+  use_reader_connection_for_route(:potential_organizers)
 
   # Users who could be re-assigned to be the organizer of this workshop
   def potential_organizers
@@ -289,7 +289,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
       # Since these ids are supplied by the caller, make sure they each actually represent a real user
       # and that the user is actually a facilitator before adding.
-      next unless facilitator && facilitator.facilitator?
+      next unless facilitator&.facilitator?
       @workshop.facilitators << facilitator
     end
   end

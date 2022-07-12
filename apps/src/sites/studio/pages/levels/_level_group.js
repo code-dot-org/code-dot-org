@@ -5,7 +5,7 @@ import React from 'react';
 import throttle from 'lodash/throttle';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {SingleLevelGroupDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {LegacySingleLevelGroupDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import i18n from '@cdo/locale';
 import Match from '@cdo/apps/code-studio/levels/match';
 window.Match = Match;
@@ -150,19 +150,20 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
       appOptions.level.anonymous === true ||
       appOptions.level.anonymous === 'true';
     title = isSurvey ? i18n.submitSurvey() : i18n.submitAssessment();
-    if (validCount === requiredCount) {
+
+    if (!isSurvey && validCount !== requiredCount) {
+      // For assessments, warn if some questions were not completed
+      id = 'levelgroup-submit-incomplete-dialogcontent';
+      body = i18n.submittableIncomplete();
+    } else {
       id = 'levelgroup-submit-complete-dialogcontent';
       body = isSurvey
         ? i18n.submittableSurveyComplete()
         : i18n.submittableComplete();
-    } else {
-      id = 'levelgroup-submit-incomplete-dialogcontent';
-      body = isSurvey
-        ? i18n.submittableSurveyIncomplete()
-        : i18n.submittableIncomplete();
     }
+
     const confirmationDialog = (
-      <SingleLevelGroupDialog id={id} title={title} body={body} />
+      <LegacySingleLevelGroupDialog id={id} title={title} body={body} />
     );
 
     return {

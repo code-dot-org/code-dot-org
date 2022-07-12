@@ -2,6 +2,7 @@
   width: 100%;
   padding-left: 5px;
   position: relative;
+  margin: 20px 0px;
 }
 
 .background-img {
@@ -13,6 +14,7 @@
 .tutorial-heading {
   margin-top: 0px;
   margin-bottom: 10px;
+  margin-right: 20px;
   color: white;
   position: absolute;
   top: 20px;
@@ -25,23 +27,24 @@
   top: 70px;
 }
 
-.left-tutorial  {
+.right-tutorial  {
   right: 20px;
 }
-.left-tutorial.right-to-left{
-  left: 20px;
-  right: auto;
-}
-.right-tutorial {
+html[dir= 'rtl'] .right-tutorial {
   right: 270px;
 }
-.right-tutorial.right-to-left{
-  left: 270px;
-  right: auto;
+
+.left-tutorial {
+  right: 270px;
 }
+
+html[dir= 'rtl']  .left-tutorial{
+  right: 20px;
+}
+
 .tutorial-promo-container .tutorial-box {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
+  background-color: rgb(226, 241, 243);
+  color: black;
   padding: 20px;
   border-radius: 5px;
 }
@@ -49,12 +52,29 @@
 .specific-tutorial-heading {
   margin-top: 0px;
   margin-bottom: 10px;
-  color: white;
+  color: black;
+}
+
+.specific-tutorial-heading em {
+  font-family: 'Gotham 5i', sans-serif;
+}
+
+.tutorial-promo-container button {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media screen and (min-width: 970px) {
-  .tutorial-details {
-      _height: 100px;
+  .tutorial-heading {
+    top: 15px;
+  }
+
+  html[dir= 'rtl'] .tutorial-heading {
+    right: 464px;
+    left: auto;
+    margin-right: 0px;
   }
 }
 
@@ -73,21 +93,25 @@
     font-size: 17px;
   }
 
+  .tutorial-heading {
+    left: auto;
+    right: auto;
+  }
+
   .specific-tutorial {
     width: 100%;
-    _height: 220px;
     padding: 5px;
     position: static;
     margin-bottom: 10px;
   }
 
-  .tutorial-heading {
-    top: 15px;
-    left: 290px;
-  }
-
   .img-container {
     padding: 0px 5px;
+  }
+
+  .tutorial-promo-container h1 {
+    margin-left: 25px;
+    margin-right: 25px;
   }
 }
 
@@ -100,7 +124,6 @@
 @media screen and (min-width: 0px) and (max-width: 512px) {
   .specific-tutorial {
     width: 100%;
-    _height: 220px;
     position: static;
   }
 

@@ -14,10 +14,6 @@ function showCourseEditor() {
   const unitData = document.querySelector('script[data-course-editor]');
   const courseEditorData = JSON.parse(unitData.dataset.courseEditor);
 
-  const teacherResources = (
-    courseEditorData.course_summary.teacher_resources || []
-  ).map(([type, link]) => ({type, link}));
-
   registerReducers({
     resources: createResourcesReducer('teacherResource'),
     studentResources: createResourcesReducer('studentResource')
@@ -26,7 +22,7 @@ function showCourseEditor() {
   store.dispatch(
     initResources(
       'teacherResource',
-      courseEditorData.course_summary.migrated_teacher_resources || []
+      courseEditorData.course_summary.teacher_resources || []
     ),
     initResources(
       'studentResource',
@@ -46,6 +42,15 @@ function showCourseEditor() {
         initialFamilyName={courseEditorData.course_summary.family_name}
         initialVersionYear={courseEditorData.course_summary.version_year}
         initialPublishedState={courseEditorData.course_summary.published_state}
+        initialInstructionType={
+          courseEditorData.course_summary.instruction_type
+        }
+        initialInstructorAudience={
+          courseEditorData.course_summary.instructor_audience
+        }
+        initialParticipantAudience={
+          courseEditorData.course_summary.participant_audience
+        }
         initialPilotExperiment={
           courseEditorData.course_summary.pilot_experiment || ''
         }
@@ -62,7 +67,6 @@ function showCourseEditor() {
           unit => unit.name
         )}
         unitNames={courseEditorData.script_names.sort()}
-        initialTeacherResources={teacherResources}
         initialHasVerifiedResources={
           courseEditorData.course_summary.has_verified_resources
         }
@@ -72,12 +76,11 @@ function showCourseEditor() {
         courseFamilies={courseEditorData.course_families}
         versionYearOptions={courseEditorData.version_year_options}
         initialAnnouncements={announcements}
-        useMigratedResources={courseEditorData.course_summary.is_migrated}
         courseVersionId={courseEditorData.course_summary.course_version_id}
-        preventCourseVersionChange={
-          courseEditorData.course_summary.prevent_course_version_change
-        }
         coursePath={courseEditorData.course_summary.course_path}
+        courseOfferingEditorLink={
+          courseEditorData.course_summary.course_offering_edit_path
+        }
       />
     </Provider>,
     document.getElementById('course_editor')

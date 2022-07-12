@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 si:
   errors:
     messages:
@@ -248,6 +254,7 @@ si:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (කොටස්)'
       starwarsblocks_hour: 'Star Wars (කොටස්)'
+      loading: 'පූරණය වෙමින්...'
     popup:
       progress_for_user: "%{name} ගේ ප්‍රගතිය"
       progress: 'ඔබගේ ප්‍රගතිය'
@@ -261,6 +268,7 @@ si:
       prizes_link: 'වැඩිදුර තොරතුරු'
   teacher:
     answer: පිළිතුර
+    dashboard: 'ගුරු උපකරණ පුවරුව'
     for_teachers_only: ගුරුවරුන්ට පමණි
     title:
       one: 'ඔබගේ ගුරුවරයා:'
@@ -688,12 +696,15 @@ si:
         math: 'ගණිත'
         science: 'විද්‍යාව'
         la: 'භාෂා අධ්‍යනය'
+        other: "වෙනත්"
       resources:
         khan: 'ඛාන් ඇකඩමිය'
         kodable: 'කෝඩබල්'
         lightbot: 'Lightbot'
+        other: "වෙනත්"
       robotics:
         kodable: 'කෝඩබල්'
+        other: "වෙනත්"
       workshop_course:
         csp: '''16-''17 පරිගණක විද්‍යාවේ මූලිකාංග'
       email_opt_in:

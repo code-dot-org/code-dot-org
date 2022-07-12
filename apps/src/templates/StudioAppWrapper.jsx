@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import FixZoomHelper from '../templates/FixZoomHelper';
-import HideToolbarHelper from '../templates/HideToolbarHelper';
-import RotateContainer from '../templates/RotateContainer';
+import FixZoomHelper from '@cdo/apps/templates/FixZoomHelper';
+import HideToolbarHelper from '@cdo/apps/templates/HideToolbarHelper';
+import RotateContainer from '@cdo/apps/templates/RotateContainer';
 import {connect} from 'react-redux';
+import StudioAppIdleTimer from '@cdo/apps/templates/StudioAppIdleTimer';
 
 /**
  * Wrapper component for all Code Studio app types, which provides rotate
@@ -29,12 +30,15 @@ class StudioAppWrapper extends React.Component {
         {this.requiresLandscape() && (
           <RotateContainer assetUrl={this.props.assetUrl} />
         )}
+        <StudioAppIdleTimer />
         {this.props.children}
         <div className="clear" />
       </div>
     );
   }
 }
+
+export const UnconnectedStudioAppWrapper = StudioAppWrapper;
 
 export default connect(state => ({
   assetUrl: state.pageConstants.assetUrl,

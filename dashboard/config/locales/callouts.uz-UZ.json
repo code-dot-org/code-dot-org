@@ -1572,6 +1572,133 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Yangi blok!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Yangi blok!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Yangi blok!",
+          "poetry_foreground": "Yangi blok!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Yangi blok!",
+          "poetry_multiple_sprites": "Yangi blok!",
+          "poetry_new_block": "Yangi blok!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Yangi blok!",
+          "poetry_music": "Yangi blok!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Yangi blok!",
+          "poetry_sprite_stops": "Yangi blok!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Yangi blok!",
+          "poetry_remove_sprite": "Yangi blok!"
+        },
+        "CSD U3 Variables Predict Where X": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "CSD U3 Variables Predict Where X_2018": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "CSD U3 Variables Predict Where X_2019": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "CSD U6 tugowar variables 1": {
+          "CSD_U6_startGame": "startGame funksiyasini shu yerda sozlang"
+        },
+        "CSD U6 tugowar variables 1_2018": {
+          "CSD_U6_startGame": "startGame funksiyasini shu yerda sozlang"
+        },
+        "CSD U6 tugowar variables 1_2019": {
+          "CSD_U6_startGame": "startGame funksiyasini shu yerda sozlang"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Artist Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "Ushbu dropdaun menyudan turli xil qor parchalarini yaratish uchun foydalaning!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Play Lab Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "startGame funksiyasini shu yerda sozlang"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "courseC_artist_loops1a_2019": {
+          "jumpto_callout": "Bu blok bu loyiha uchun juda muhim. Uni ishlatishga ishonch hosil qiling!"
+        },
+        "courseC_artist_loops1a_2020": {
+          "jumpto_callout": "Bu blok bu loyiha uchun juda muhim. Uni ishlatishga ishonch hosil qiling!"
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Bu blok bu loyiha uchun juda muhim. Uni ishlatishga ishonch hosil qiling!"
+        },
+        "courseC_artist_loops1b_2019": {
+          "sticker2": "Buni dasturingizning o'rtasiga qo'shing."
+        },
+        "courseC_artist_loops1b_2020": {
+          "sticker2": "Buni dasturingizning o'rtasiga qo'shing."
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Buni dasturingizning o'rtasiga qo'shing."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Bu yerda siz dasturni sekinlashtira olasiz."
+        },
+        "courseC_maze_debugging5_2019": {
+          "courseC_maze_debugging5_1": "Ushbu bloklar bloklangan va ularni o'chirib bo'lmaydi!"
+        },
+        "courseC_maze_debugging5_2020": {
+          "courseC_maze_debugging5_1": "Ushbu bloklar bloklangan va ularni o'chirib bo'lmaydi!"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Ushbu bloklar bloklangan va ularni o'chirib bo'lmaydi!"
+        },
+        "courseC_maze_debugging9_2019": {
+          "courseC_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "courseC_maze_debugging9_2020": {
+          "courseC_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "courseC_maze_debugging9_copy_2020": {
+          "courseC_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Kod orqali birma-bir bloklardan o'tishga harakat qiling."
+        },
+        "express_maze_debugging9_2019": {
+          "express_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
         }
       }
     }

@@ -1744,8 +1744,30 @@ zh-TW:
           *如：去觀察路由器的紀錄擋，來發現大約有10~20%的訊息是被丟掉且封包能不按照預定順序發送
       Internet Simulator Setup 2:
         content1: 在此描述
+        markdown: "# 互聯網模擬器：設置說明\n\n1. **在代碼工作室中創建小組。** 為了班級中的學生能相互通訊，需要在代碼工作室關聯到同一個小組中。作為教師帳號登錄後，需要為所有學生的加入創建小組。要創建小組：\n
+          * 流覽至教師面板的[sections](https://code.org/teacher-dashboard#/sections)部分\n *
+          點擊“新建小組”按鈕。推薦講登錄類型選為“電子郵箱”並將課程選為“cspunit1”。 \n <br>\n<img src=\"https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png\"
+          width=\"600px\" />\n<br><br>\n2. **讓學生加入小組。** 小組創建好後，點擊小組的“管理學生”連結。學生創建了自己的代碼工作室帳號後，就可以讓他們通過頁面中的小組代碼來加入。\n<br>\n<img
+          src=\"https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png\"
+          width=\"400px\" />\n<br><br>\n3. **將要使用的互聯網模擬器版本的位址共用給學生。** 在 [code.org/internetsimulator](http://code.org/internetsimulator)
+          上已經有了幾個不同的互聯網模擬器配置。當找到自己的活動可以使用的配置後，將位址共用給學生。如果學生們都在同一個小組裡，會在打開同樣的位址後，自動連接到一起。
+          \ \n\n_下一個：常見問題_\n\n\n\n"
       Internet Simulator Setup 3:
         content1: 在此描述
+        markdown: |+
+          # 互聯網模擬器：常見問題
+
+          #### 哪裡有設計用來使用互聯網模擬器的活動？
+          為電腦科學原理課程設計的活動，包括特定的互聯網模擬器，可以在[here](https://code.org/educate/csp)的單元課程計劃中找到。許多課程計劃都有“教師提示和技巧”的支援視訊，這些視訊演示了在課堂活動中，如何將互聯網模擬器作為一部分來使用。可以按原樣使用這些活動，或者隨時修改以適合自己的課堂！
+
+          #### 是否能為自己的班級定制互聯網模擬器？
+          很遺憾，當前不能為Code.org之外的人員創建互聯網模擬器的特殊配置和說明。我們已嘗試提供了大量的配置，希望能適合您的課堂和活動。長期來看，希望能讓其他人有辦法配置此工具。
+
+          #### 當學生訪問提供的互聯網模擬器網址時，彼此看不見。該怎麼辦？
+          為了讓學生們能在互聯網模擬器的大廳裡相互看到，他們需要在同一個小組中。再檢查一下是否完成了前一頁的小組設定說明，並確定有問題的學生都用特定的小組代碼加入了。同時，有的學生可能已經使用過Code.org，並存在於多個小組中，因此確保他們知道本小組的名稱，並在進入大廳前，從下拉清單中選擇了此小組。
+
+
+
       Internet-Unplugged:
         markdown: |
           "# 網際網路
@@ -5714,7 +5736,7 @@ zh-TW:
         - text: 外星人將從螢幕頂部消失。
           feedback: 不正確。藍色外星人將開始在螢幕上上下移動。
         questions:
-        - {}
+        - text: 仔細查看下方的程式碼。點擊外星人後會發生什麼事呢？
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: 收割機將採收兩顆南瓜。
@@ -5905,3 +5927,326 @@ zh-TW:
           * [最終個人網站](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/edit?usp=sharing) - 同儕審查範例 ([PDF](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/export?format=doc))
 
           [/key]
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # 概述
+
+          學生進行程式設計，讓精靈圖以新的方式互動。在簡要回顧了如何使用isTouching積木後，學生思考兩個精靈圖互動的其他方式。 然後學生使用isTouching讓一個精靈圖在螢幕上推動另一個精靈圖，然後練習4個碰撞積木（碰撞、替代、反彈和彈開）。
+          ## 詞彙
+
+          * **抽象概念** - 找出特定的差異，使一個解決方案適用於多個問題。
+
+          ## 引進代碼
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # 概述
+
+          本課將介紹組織代碼、提高代碼可讀性和移除重複代碼積木的方法。 學生學習更高層次或更抽象的步驟，從而更容易理解和推理步驟，然後開始在游戲實驗室中創建函數。 在課程結束時，學生使用這些技能來向側面卷軸遊戲的最終版本組織和添加功能。
+          ## 詞彙
+
+          * **函數** - 一段可以輕鬆地反覆調用的代碼。
+
+          ## 引進代碼
+
+          * [Define a function](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Call a function](//studio.code.org/docs/gamelab/callMyFunction/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # 概述
+
+          這節課擴展了繪圖技能，包括寬度和高度，並介紹了隨機數生成的概念。學生學習使用包含寬度和高度參數的ellipse()和rect()版本繪製，並使用background()積木填充螢幕的顏色。 在進程結束時，將向學生介紹randomNumber()積木，並使用新積木隨機繪製彩虹蛇。
+          ## 詞彙
+
+          * **參數** - 你傳遞給函數的額外資料，以根據特定需要定製它。
+
+          ## 引進代碼
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # 概述
+
+          這節課介紹變量，作為在程式中標記數字或儲存隨機生成值的方法。 本課程從一個非常基本的變量用途描述開始，練習使用新積木。 然後，學生使用變量來儲存一個隨機數，允許程式多次使用相同的隨機數。
+          ## 詞彙
+
+          * **變量** - 可變訊息的佔位符。
+
+          ## 引進代碼
+
+          * [Declare a variable](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Declare and assign a value to a variable](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## 資源
+
+          * [變量介紹](https://youtu.be/G41G_PEWFjE) - 視訊 ([下載](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games variables practice_2021:
+        display_name: 變數的練習
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: 查看以下的程式碼，並且預測網頁內容的標題會如何顯示。從右側的選項中選擇正確的答案。
+        markdown: |
+          <pre>
+          &lt;h3&gt; 蛋 &lt;/h3&gt;
+          &lt;h1&gt; 培根 &lt;/h1&gt;
+          &lt;h6&gt; 鬆餅 &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Level Types:** This multiple choice question that asks students to choose how HTML headings will display on a web page. You can see which students have answered the question correctly by going to that level and pulling out the Teacher Panel from the right hand side.  Students who have successfully answered the question will have a green bubble.  Students have as many chances as they like to answer correctly, so guessing and checking can also lead to a correct answer.
+
+          <div class="clear"></div>
+      CSD U2 CSS practice_pilot_2021:
+        display_name: 透過 CSS 修改文字樣式
+      CSD U2 Image challenge_pilot_2021:
+        display_name: 增加圖像
+      CSD U2 Image practice_pilot_2021:
+        display_name: 增加圖像
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
+        content1: Match the buggy HTML code with the description of its bug.
+        questions:
+        - text: The `src` attribute is spelled incorrectly.
+        - text: The `src` and `alt` attributes are switched
+        - text: The file extension (.jpg) is missing from the image address
+        - text: The image address is not given as a `src` attribute
+        - text: There is a space in the file name
+        teacher_markdown: 'Although this level can be used to assess student understanding
+          of the syntax of the `<img>` tag, its main purpose is to make students aware
+          of the most common types of bugs they may encounter when adding images to
+          web pages.
+
+'
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: 在此描述
+        teacher_markdown: |
+          # 計畫檢查點
+
+          在同意讓學生們繼續剩下的階段之前，檢查他們的計畫。
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: 標題
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: 在此描述
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif'
+            style='border: 1px solid #ccc'>"
+          correct: true
+        - text: "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif'
+            style='border: 1px solid #ccc'>"
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: 練習
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: 在此描述
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: 在此描述
+      CSD U6 LED create intro_2021:
+        content1: 在此描述
+        markdown: |
+          # LED 應用程式
+
+          在上一個等級中, 你完成了一個APP, 其在螢幕上有許多不同的按紐可用來控制LED. 在接下來的兩個等級中, 你將會看到其他應用程式的範例, 並且有機會自己動作做一個.
+
+          看完這些範例後, 思考有哪些代碼可能對這個應用程式是有用的並與你的夥伴一起完成它.
+          As you look at the examples, think of what code might be useful for the app that you and your partner want to create.
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: 在此描述
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: 閱讀這份程式並且預測這個應用程式將會如何執行
+        title: 預測一下
+      CSD games cake challenge choice_2021:
+        display_name: 挑戰
+      CSD games functions practice choice_2021:
+        display_name: 函式的練習
+      CSD games platform challenge choice_2021:
+        display_name: 挑戰
+      CSD web conditionals practice choice_2021:
+        display_name: 條件判斷的練習
+      CSD web draw loop practice choice_2021:
+        display_name: 練習
+      CSD web movement practice choice_2021:
+        display_name: 練習
+      CSD web text practice choice_2021:
+        display_name: 練習
+      csd-pre-survey-levelgroup_21_22:
+        title: 發現計算機科學, 學生先修課程調查
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: 藍
+        - text: 綠
+        - {}
+        - text: 黃色
+        - correct: true
+        - text: 紅
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: 在此描述
+      allthethings_external_not_displayed_as_unplugged:
+        content1: 在此描述
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        questions:
+        - text: 哪個箭頭可以讓 Flurb 拿到寶藏？
+        title: 選擇題
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - text: 以上都不是
+      ml-club app-choice parent:
+        display_name: 自訂你的應用程式
+      ml-intro app lab-book recommender 5-2021:
+        display_name: 自訂你的應用程式

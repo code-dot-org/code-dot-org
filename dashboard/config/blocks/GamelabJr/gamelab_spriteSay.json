@@ -1,5 +1,5 @@
 {
-  "category": "Experimental",
+  "category": "Sprites",
   "config": {
     "func": "spriteSay",
     "blockText": "{SPRITE} say {SPEECH}",

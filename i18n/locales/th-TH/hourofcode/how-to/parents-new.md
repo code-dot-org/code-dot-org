@@ -50,7 +50,7 @@ title: How-to guide for parents
 
 - สร้างแรงบันดาลใจให้เด็กๆ ผ่านวิดีโอ<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">อาชีพมากมาย</a>ที่มาจากทักษะด้านวิทยาการคอมพิวเตอร์
 - <a href="https://store.code.org/">สั่งซื้อสินค้า</a>!
-- คุณสามารถเลือกสั่งเป็นเสื้อทีเชิร์ต สติ๊กเกอร์หรือแม้แต่สติ๊กเกอร์รอยสัก   You can choose from t-shirts, stickers, or even temporary tattoos.   แชร์กับเพื่อนๆ ทันทีเพื่อให้พวกเขาตื่นเต้น หรือบันทึกไว้เพื่อใช้เป็นของรางวัลสุดพิเศษในตอนท้ายของกิจกรรม Hour of Code  
+- คุณสามารถเลือกสั่งเป็นเสื้อทีเชิร์ต สติ๊กเกอร์หรือแม้แต่สติ๊กเกอร์รอยสัก   คุณเลือกได้ตั้งแต่เสื้อเชิ้ต สติ๊กเกอร์หรือแม้แต่รอยสักแบบชั่วคราว   แชร์กับเพื่อนๆ ทันทีเพื่อให้พวกเขาตื่นเต้น หรือบันทึกไว้เพื่อใช้เป็นของรางวัลสุดพิเศษในตอนท้ายของกิจกรรม Hour of Code  
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 

@@ -1,8 +1,0 @@
-{
-  "func": "stopTimedLoop",
-  "category": "Control",
-  "paramButtons": {
-    "minArgs": 0,
-    "maxArgs": 1
-  }
-}

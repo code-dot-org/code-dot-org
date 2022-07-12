@@ -2,6 +2,102 @@
   "ca-ES": {
     "data": {
       "resources": {
+        "lesson_plans/courseb/2018": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Plans d'estudi"
+        },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet"
         },
@@ -184,6 +280,60 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Guia d'implementació"
+        },
+        "design_mode/csd/2021": {
+          "name": "Mode de disseny"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Mode de disseny"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "La informàtica ho està canviant tot"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funcions"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Per bucles"
+        },
+        "for_loops/csd/2021": {
+          "name": "Per bucles"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variables"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funcions"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funcions"
+        },
+        "lists/csd/2021": {
+          "name": "Llistes"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Plans d'estudi"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Plans d'estudi"
         }
       }
     }

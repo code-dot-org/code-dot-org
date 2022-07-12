@@ -3,6 +3,7 @@ require 'test_helper'
 module Pd::Application
   class TeacherApplicationTest < ActiveSupport::TestCase
     include Pd::TeacherApplicationConstants
+    include Pd::Application::ActiveApplicationModels
     include ApplicationConstants
     include RegionalPartnerTeacherconMapping
 
@@ -46,7 +47,37 @@ module Pd::Application
       assert_equal 'Albus Dumbledore', application_without_principal_title.principal_greeting
     end
 
-    test 'meets criteria says an application meets critera when all YES_NO fields are marked yes' do
+    test 'set_total_course_hours calculates total course hours when there is info for it' do
+      custom_minutes_hours_weeks = {
+        cs_how_many_minutes: '45',
+        cs_how_many_days_per_week: '5',
+        cs_how_many_weeks_per_year: '30'
+      }
+
+      application = create :pd_teacher_application, form_data_hash: (
+        build :pd_teacher_application_hash, custom_minutes_hours_weeks
+      ), status: 'incomplete'
+
+      assert_equal 112, application.sanitize_form_data_hash[:cs_total_course_hours]
+    end
+
+    test 'set_total_course_hours does nothing when there is not enough info for it' do
+      empty_minutes_hours_weeks = {
+        cs_how_many_minutes: nil,
+        cs_how_many_days_per_week: nil,
+        cs_how_many_weeks_per_year: nil
+      }
+
+      %i(cs_how_many_minutes cs_how_many_days_per_week cs_how_many_weeks_per_year).each do |attribute|
+        application = create :pd_teacher_application, form_data_hash: (
+          build :pd_teacher_application_hash, empty_minutes_hours_weeks.slice(attribute)
+        ), status: 'incomplete'
+
+        assert_nil application.sanitize_form_data_hash[:cs_total_course_hours]
+      end
+    end
+
+    test 'meets criteria says an application meets criteria when all YES_NO fields are marked yes' do
       teacher_application = build :pd_teacher_application, course: 'csd',
                                   response_scores: {
                                     meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csd].map {|x| [x, 'Yes']}.to_h
@@ -69,7 +100,7 @@ module Pd::Application
       assert_equal 'No', teacher_application.meets_criteria
     end
 
-    test 'meets criteria returns incomplete when an application does not have YES on all YES_NO fields but has no NOs' do
+    test 'meets criteria returns reviewing incomplete when an application does not have YES on all YES_NO fields but has no NOs' do
       teacher_application = build :pd_teacher_application, response_scores: {
         meets_minimum_criteria_scores: {
           committed: 'Yes'
@@ -107,14 +138,7 @@ module Pd::Application
 
     test 'school_info_attr for custom school' do
       application = create :pd_teacher_application, form_data_hash: (
-      build :pd_teacher_application_hash,
-        :with_custom_school,
-        school_name: 'Code.org',
-        school_address: '1501 4th Ave',
-        school_city: 'Seattle',
-        school_state: 'Washington',
-        school_zip_code: '98101',
-        school_type: 'Public school'
+        build :pd_teacher_application_hash, :with_custom_school
       )
       assert_equal(
         {
@@ -131,21 +155,24 @@ module Pd::Application
     end
 
     test 'update_user_school_info with specific school overwrites user school info' do
-      user = create :teacher, school_info: create(:school_info)
+      user = create :teacher
       application_school_info = create :school_info
+      original_user_school_info = user.school_info
+
       application = create :pd_teacher_application, user: user, form_data_hash: (
-      build :pd_teacher_application_hash, school: application_school_info.school
+        build :pd_teacher_application_hash, school: application_school_info.school
       )
 
       application.update_user_school_info!
+      refute_equal original_user_school_info, user.school_info
       assert_equal application_school_info, user.school_info
     end
 
-    test 'update_user_school_info with custom school does nothing when the user already a specific school' do
+    test 'update_user_school_info with custom school does nothing when the user already has a specific school' do
       original_school_info = create :school_info
       user = create :teacher, school_info: original_school_info
       application = create :pd_teacher_application, user: user, form_data_hash: (
-      build :pd_teacher_application_hash, :with_custom_school
+        build :pd_teacher_application_hash, :with_custom_school
       )
 
       application.update_user_school_info!
@@ -153,15 +180,34 @@ module Pd::Application
     end
 
     test 'update_user_school_info with custom school updates user info when user does not have a specific school' do
-      original_school_info = create :school_info_us_other
-      user = create :teacher, school_info: original_school_info
+      user = create :teacher, school_info: nil
+      original_user_school_info_id = user.school_info_id
       application = create :pd_teacher_application, user: user, form_data_hash: (
-      build :pd_teacher_application_hash, :with_custom_school
+        build :pd_teacher_application_hash, :with_custom_school
       )
 
       application.update_user_school_info!
-      refute_equal original_school_info.id, user.school_info_id
+      refute_equal original_user_school_info_id, user.school_info_id
       assert_not_nil user.school_info_id
+    end
+
+    test 'update_user_school_info does nothing when user has no school info and does not have enough info for new school' do
+      user = create :teacher, school_info: nil
+      completed_custom_school_info = {
+        school_name: 'Code.org',
+        school_address: '1501 4th Ave',
+        school_state: 'Washington',
+        school_zip_code: '98101',
+        school_type: 'Public school'
+      }
+      %i(school_name school_address school_state school_zip_code school_type).each do |attribute|
+        application = create :pd_teacher_application, user: user, form_data_hash: (
+          build :pd_teacher_application_hash, :with_no_school, completed_custom_school_info.except(attribute)
+        )
+
+        application.update_user_school_info!
+        assert_nil user.school_info
+      end
     end
 
     test 'get_first_selected_workshop single local workshop' do
@@ -304,14 +350,14 @@ module Pd::Application
 
     test 'csv_header' do
       csv_header_csd = CSV.parse(TeacherApplication.csv_header('csd'))[0]
-      assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2021-2022 school year?"
-      refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2021-2022 school year?"
-      assert_equal 93, csv_header_csd.length
+      assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
+      refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
+      assert_equal 96, csv_header_csd.length
 
       csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
-      refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2021-2022 school year?"
-      assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2021-2022 school year?"
-      assert_equal 95, csv_header_csp.length
+      refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
+      assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
+      assert_equal 98, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -479,7 +525,6 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: ['6'],
-        csd_which_units: ['Unit 1: Problem Solving'],
         previous_yearlong_cdo_pd: ['CS Principles'],
         plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
@@ -596,7 +641,6 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: %w(11 12),
-        csd_which_units: ['Unit 1: Problem Solving'],
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
@@ -753,9 +797,14 @@ module Pd::Application
         # Updates the application with principal's responses and run auto_score! again
         application.on_successful_principal_approval_create(principal_approval)
 
-        assert_equal test_case[:meet_requirement],
-          application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing],
-          "Test case index #{index} failed"
+        # Written as a conditional to address Minitest 6 deprecation: `DEPRECATED: Use assert_nil if expecting nil`
+        if test_case[:meet_requirement]
+          assert application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing],
+                 "Test case index #{index} failed"
+        else
+          refute application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing],
+                 "Test case index #{index} failed"
+        end
       end
     end
 
@@ -792,6 +841,8 @@ module Pd::Application
         assert_equal incomplete, application.reload.principal_approval_state
       end
 
+      refute application.reload.principal_approval_not_required
+
       # even if it's not required, when an email was sent display incomplete
       application.update!(principal_approval_not_required: true)
       assert_equal incomplete, application.reload.principal_approval_state
@@ -804,21 +855,21 @@ module Pd::Application
     end
 
     test 'require assigned workshop for registration-related statuses when emails sent by system' do
-      statuses = TeacherApplication::WORKSHOP_REQUIRED_STATUSES
+      workshop_required_statuses = TeacherApplication::WORKSHOP_REQUIRED_STATUSES
       partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM
       workshop = create :workshop
       application = create :pd_teacher_application, {
         regional_partner: partner
       }
 
-      statuses.each do |status|
+      workshop_required_statuses.each do |status|
         application.status = status
         refute application.valid?
         assert_equal ["#{status} requires workshop to be assigned"], application.errors.messages[:status]
       end
 
       application.pd_workshop_id = workshop.id
-      statuses.each do |status|
+      workshop_required_statuses.each do |status|
         application.status = status
         assert application.valid?
       end

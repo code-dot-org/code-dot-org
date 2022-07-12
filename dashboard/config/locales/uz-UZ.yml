@@ -480,6 +480,7 @@ uz:
       starwars: Yulduzlar urushi
       starwarsblocks: Star Wars (Blocks)
       starwarsblocks_hour: Star Wars (Blocks)
+      loading: Yuklanyapti...
       weblab: Web Lab
       view_all: Barcha loyihalarni ko‘rish...
     popup:
@@ -495,6 +496,7 @@ uz:
       prizes_link: Batafsil
   teacher:
     answer: Javob
+    dashboard: Teacher Dashboard
     for_teachers_only: Faqat o'qituvchilar uchun
     title:
       one: 'Oʻqituvchingiz:'
@@ -1042,18 +1044,6 @@ uz:
       JavaScript-ni o'qitadigan vositalardan foydalanish imkoniyati sizning o'quvchilaringiz
       bo'lmasligi mumkin.
     review_terms: Yangilangan shartlarni ko'rib chiqish
-  donor_interstitial:
-    title: Sizning bepul CS kurslaringiz bular orqali amalga oshiriladi...
-    subtitle: Biz qo'llab-quvvatlagan Code.org-ning muvaffaqiyatini ta'minlagan saxovatli
-      donorlarga minnatdorchilik bildiramiz. [Donorlar](%{donors_url}) ning doimiy
-      saxovati tufayli biz Code.org-ni dunyo bo'ylab maktablar va talabalar uchun
-      bepul taqdim etib boramiz!
-    local_supporters: Mahalliy qo'llab-quvvatlovchilar
-    global_supporters: Global qo'llab-quvvatlovchilar
-    support_codeorg_1: Code.org-ga berilgan har bir dollar ko'proq talabalarga imkoniyatlar
-      yaratadi.
-    support_codeorg_2: " Code.org-ni qo'llab-quvvatlash uchun [hoziroq xayriya qiling](%{donate_url})."
-    get_started: Code.org saytidan boshlang
   school_info_interstitial:
     title: Biz har bir o'quvchini kompyuter fanlariga jalb qilmoqchimiz - bizning
       rivojlanishimizni kuzatishda yordam bering!
@@ -1285,6 +1275,7 @@ uz:
       email: E-mail
       email_alternate: Alternativ Email
       gender: Jinsiy identifikatsiya
+      school: Maktab
       school_name: Maktab nomi
       school_city: Maktab shahri
       school_country: Maktab davlati
@@ -1348,6 +1339,7 @@ uz:
         music: Musiqa
         art: San'at
         other: 'Boshqa:'
+        na: Mavjud emas
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1356,7 +1348,8 @@ uz:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Boshqa:'
+        other: Boshqa
+        na: Mavjud emas
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1366,7 +1359,8 @@ uz:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Boshqa:'
+        other: Boshqa
+        na: Mavjud emas
       workshop_course:
         csf_af: CS Fundamentals - Informatika asoslari (A-F kurslar)
         csf_express: CS Fundamentals  - Informatika asoslari (Pre-Express yoki Express)
@@ -1450,3 +1444,4 @@ uz:
   behaviors:
     this_sprite: bu sprayt
   unit_prefix: Bo'lim %{n}
+  teacher_feedback: O‘qituvchilarning fikri

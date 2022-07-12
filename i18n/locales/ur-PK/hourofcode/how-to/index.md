@@ -1,39 +1,39 @@
 ---
-title: Hour of Code How-to Guide
+title: آور آف کوڈ کے طریقہ کار کا رہنما
 ---
 
 {{ signup_button }}
 
 # "کوڈ کا وقت" نامی تقریب کی منصوبہ بندی کیسے کریں
 
-### Join the movement and introduce your students to computer science with these steps.
+### تحریک میں شامل ہوں اور ان اقدامات کے ساتھ اپنے طلباء کو کمپیوٹر سائنس سے متعارف کروائیں۔
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+کمپیوٹیشنل سوچ مسائل کو حل کرنے کی مہارت، منطق اور تخلیقی صلاحیتوں کو پروان چڑھانے میں مدد کرتی ہے۔ اور ٹیکنالوجی سیارے کی ہر انڈسٹری کو تبدیل کر رہی ہے۔ آج کے طالب علموں کو نہ صرف ٹیکنالوجی استمعال کرنا بلکہ بنانا بھی سیکھنا چاہیئے۔ جلد شروع کرنے سے، ان کے پاس 21ویں صدی کے کیریئر کے کسی بھی راستے میں کامیابی کی بنیاد ہوگی۔
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+آور آف کوڈ کی آزمائش طلباء کو کمپیوٹر سائنس سے متعارف کرانے کا ایک آسان اور پرلطف طریقہ ہے، شاید پہلی بار، اور یہ کلاس میں اور بعد از سکول دونوں ترتیبات کے لیے بالکل مناسب ہے۔ Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [آور آف کوڈ کے طریقہ کار کا ویڈیو دیکھیں](#how-to-video)
+- [سرگرمیاں اور ٹیوٹوریل تلاش کریں](#explore-activities)
+- [دن کے لیے اپنا پلان بنائیں](#create-your-plan)
 - [اپنے Hour of Code تقریب کا پرچار کریں](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [آور آف کوڈ کی مضبوط شروعات کیسے کریں](#how-to-start)
+- [کوڈنگ شروع کریں!](#code)
+- [7. اپنے طلباء کی کامیابی کا جشن منائیں](#celebrate)
 - [دیگر وسائل کوڈ وسائل کے لئے وسائل](#other-resources)
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### آور آف کوڈ کی میزبانی ریموٹ طریقے سے بھی کی جا سکتی ہے! شروع کرنے کے لیے، یہاں دیکھیئے [ایک آور آف کوڈ کی میزبانی کرنے کے لیے ہمارے مشورے](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. آور آف کوڈ کے طریقہ کار کا ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. سرگرمیاں اور ٹیوٹوریل تلاش کریں
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. طلبہ ازخود بھی دیے گئے اسباق سے استفادہ حاصل کر سکتے ہیں جبکہ اساتذہ کیلئے ان سرگرمیوں میں lesson Plan دیے گئے ہیں جن کی مدد سے وہ طلبہ کی بہتر رہنمائی کر سکتے ہیں.
 
@@ -45,7 +45,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. دن کے لیے اپنا پلان بنائیں
 
 ### دیکھیں کون کون سی ٹیکنالوجی اس سلسلے میں مددگار ثابت ہو سکتی ہے۔ کمپیوٹرز کو فی الحال اختیاری ضرورت کے طور پر دیکھیں۔!
 
@@ -64,7 +64,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. آور آف کوڈ کو پروموٹ کریں
 
 اب جبکہ آپ Hour of Code کی منصوبہ بندی مکمل کر چکے ہیں، تواب لازم ہے کہ اب آپ اس کی تشہیر کرنا شروع کریں!
 
@@ -88,7 +88,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. آور آف کوڈ کی مضبوط شروعات کیسے کریں
 
 مندرجہ ذیل نکات پر عمل کرتے ہوئے آپ تقریب کا آغاز ایک شاندار اور جاندار طریقے سے کر سکتے ہیں.
 
@@ -103,17 +103,17 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 - ایسے طریقوں کی وضاحت کریں جو ٹیکنالوجی ہماری زندگیوں پر اثر انداز کرتی ہے، مثال کے ساتھ لڑکوں اور لڑکیوں دونوں کی پرواہ کرے گی (زندگی کو بچانے، لوگوں کی مدد کرنے، لوگوں سے منسلک کرنے وغیرہ وغیرہ).
 - بطور ایک کلاس، روزمرہ زندگی میں کوڈ استعمال کرنے والی اشیاء درج فہرست کریں۔.
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- کمپیوٹر سائنس میں نوجوان خواتین کی دلچسپی بڑھانے کے لیے تجاویز دیکھیں​ [یہاں]({{ urls/girls }}).
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## کوڈنگ شروع کریں!
 
 ایکٹیویٹی کے لیے اسٹوڈینٹس کو ہدایات دیں
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- ٹیوٹوریل کا لنک وائٹ بورڈ پر لکھیں۔ لنک​[​آپ کے منتخب کردہ ٹیوٹوریل کے لیے معلومات کی فہرست میں]({{ urls/learn }}) شرکاء کی تعداد کے تحت ملے گی.
 
 :اگر آپ کے اسٹوڈینٹس مشکلات پیش آئیں تو کہیں
 
@@ -130,7 +130,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. اپنے طلباء کی کامیابی کا جشن منائیں
 
 [کال -33]
 
@@ -154,6 +154,6 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 ### آور-آف-کوڈ کے بعد کیا ہو گا?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+کمپیوٹر سائنس کا آور آف کوڈ کے ساتھ ختم ہونا ضروری نہیں ہے! ہمارا نصاب ویب پر ہے اور استعمال کے لیے ہمیشہ کے لیے مفت ہے۔ [​جانیں کہ کس طرح​](/beyond) اپنے اسکول اور طلباء تک CS پہنچا سکتے ہیں۔
 
 {{ signup_button }}

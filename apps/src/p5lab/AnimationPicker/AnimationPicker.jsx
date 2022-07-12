@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {createUuid} from '@cdo/apps/utils';
+import {createUuid, makeEnum} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 var msg = require('@cdo/locale');
@@ -17,10 +17,12 @@ import {
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
-
+import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 // Some operating systems round their file sizes, so max size is 101KB even
 // though our error message says 100KB, to help users avoid confusion.
 const MAX_UPLOAD_SIZE = 101000;
+
+export const PICKER_TYPE = makeEnum('spritelab', 'gamelab', 'backgrounds');
 
 /**
  * Dialog used for finding/selecting/uploading one or more assets to add to a
@@ -48,6 +50,7 @@ class AnimationPicker extends React.Component {
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
     canDraw: PropTypes.bool.isRequired,
+    pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
@@ -65,7 +68,32 @@ class AnimationPicker extends React.Component {
     onAnimationSelectionComplete: PropTypes.func.isRequired
   };
 
+  state = {
+    exitingDialog: false
+  };
+
   onUploadClick = () => this.refs.uploader.openFileChooser();
+
+  onClose = () => {
+    // If the user has not selected any animations yet, close immediately
+    if (this.props.selectedAnimations.length > 0) {
+      this.setState({exitingDialog: true});
+    } else {
+      this.props.onClose();
+    }
+  };
+
+  contextSpecificName = () => {
+    // Return text depending on the context of the animation picker
+    switch (this.props.pickerType) {
+      case PICKER_TYPE.spritelab:
+        return msg.costume();
+      case PICKER_TYPE.gamelab:
+        return msg.animation();
+      case PICKER_TYPE.backgrounds:
+        return msg.background();
+    }
+  };
 
   renderVisibleBody() {
     if (this.props.uploadError) {
@@ -75,23 +103,54 @@ class AnimationPicker extends React.Component {
     } else if (this.props.uploadInProgress) {
       return <h1 style={styles.title}>{msg.animationPicker_uploading()}</h1>;
     }
+
+    const contextName = this.contextSpecificName();
+
     return (
-      <AnimationPickerBody
-        is13Plus={this.props.is13Plus}
-        onDrawYourOwnClick={this.props.onPickNewAnimation}
-        onPickLibraryAnimation={this.props.onPickLibraryAnimation}
-        onUploadClick={this.onUploadClick}
-        onAnimationSelectionComplete={this.props.onAnimationSelectionComplete}
-        playAnimations={this.props.playAnimations}
-        libraryManifest={this.props.libraryManifest}
-        hideUploadOption={this.props.hideUploadOption}
-        hideAnimationNames={this.props.hideAnimationNames}
-        navigable={this.props.navigable}
-        defaultQuery={this.props.defaultQuery}
-        hideBackgrounds={this.props.hideBackgrounds}
-        canDraw={this.props.canDraw}
-        selectedAnimations={this.props.selectedAnimations}
-      />
+      <div>
+        <AnimationPickerBody
+          is13Plus={this.props.is13Plus}
+          onDrawYourOwnClick={this.props.onPickNewAnimation}
+          onPickLibraryAnimation={this.props.onPickLibraryAnimation}
+          onUploadClick={this.onUploadClick}
+          onAnimationSelectionComplete={this.props.onAnimationSelectionComplete}
+          playAnimations={this.props.playAnimations}
+          libraryManifest={this.props.libraryManifest}
+          hideUploadOption={this.props.hideUploadOption}
+          hideAnimationNames={this.props.hideAnimationNames}
+          navigable={this.props.navigable}
+          defaultQuery={this.props.defaultQuery}
+          hideBackgrounds={this.props.hideBackgrounds}
+          canDraw={this.props.canDraw}
+          selectedAnimations={this.props.selectedAnimations}
+          pickerType={this.props.pickerType}
+        />
+        <StylizedBaseDialog
+          title={msg.animationPicker_leaveSelectionTitle()}
+          isOpen={this.state.exitingDialog}
+          backdropStyle={{
+            top: -15,
+            right: -15,
+            bottom: -15,
+            left: -15
+          }}
+          hideCloseButton={true}
+          handleClose={() => {
+            this.setState({exitingDialog: false});
+          }}
+          cancellationButtonText={msg.animationPicker_discardSelection()}
+          handleCancellation={() => {
+            this.props.onClose();
+            this.setState({exitingDialog: false});
+          }}
+          confirmationButtonText={msg.animationPicker_returnToLibrary()}
+          handleConfirmation={() => {
+            this.setState({exitingDialog: false});
+          }}
+          style={styles.dialog}
+          body={<p>{msg.animationPicker_leaveSelectionText({contextName})}</p>}
+        />
+      </div>
     );
   }
 
@@ -103,7 +162,7 @@ class AnimationPicker extends React.Component {
     return (
       <BaseDialog
         isOpen
-        handleClose={this.props.onClose}
+        handleClose={this.onClose}
         uncloseable={this.props.uploadInProgress}
         fullWidth={true}
         style={styles.dialog}
@@ -128,6 +187,10 @@ class AnimationPicker extends React.Component {
   }
 }
 
+AnimationPicker.defaultProps = {
+  allowedExtensions: ['.png', '.jpg', '.jpeg'].join(',')
+};
+
 export default connect(
   state => ({
     visible: state.animationPicker.visible,
@@ -144,8 +207,8 @@ export default connect(
     onPickNewAnimation() {
       dispatch(pickNewAnimation());
     },
-    onPickLibraryAnimation(animation, isMultiSelectEnabled) {
-      dispatch(pickLibraryAnimation(animation, isMultiSelectEnabled));
+    onPickLibraryAnimation(animation) {
+      dispatch(pickLibraryAnimation(animation));
     },
     onUploadStart(data) {
       if (data.files[0].size >= MAX_UPLOAD_SIZE) {

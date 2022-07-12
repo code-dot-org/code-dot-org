@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ca:
   errors:
     messages:
@@ -287,6 +293,7 @@ ca:
       playlab: 'Play Lab'
       spritelab: 'Laboratori de personatges'
       starwars: 'Star Wars'
+      loading: 'Carregant...'
       view_all: 'Mostra tots els projectes...'
     popup:
       progress_for_user: "Progrés de %{name}"
@@ -630,10 +637,13 @@ ca:
         math: 'Matemàtiques'
         science: 'Ciència'
         la: 'Arts del llenguatge'
+        other: "Altres"
       resources:
         kodable: 'Kodable'
+        other: "Altres"
       robotics:
         kodable: 'Kodable'
+        other: "Altres"
       email_opt_in:
         opt_in_yes: 'Sí'
         opt_in_no: 'No'

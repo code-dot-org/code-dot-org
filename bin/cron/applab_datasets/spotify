@@ -3,101 +3,155 @@ require_relative '../only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 # This script fetches spotify data from api.spotify and uploads to the shared firebase channel.
+#
+# TESTING LOCALLY (Code.org engineers only)
+# In order to run this file locally, you'll need to temporarily configure your locals.yml file to include
+# development/cdo/spotify_api_client_id and development/cdo/spotify_api_client_secret values
+#
+
 require_relative '../../../deployment'
-require 'net/http'
-require 'csv'
 require 'ostruct'
 require_relative '../../../shared/middleware/helpers/firebase_helper'
 require 'cdo/profanity_filter'
+require 'rest-client'
 
-TOP_200_US_URL = 'https://spotifycharts.com/regional/us/daily/latest/download'
-TOP_200_WORLD_URL = 'https://spotifycharts.com/regional/global/daily/latest/download'
-VIRAL_50_US_URL = 'https://spotifycharts.com/viral/us/daily/latest/download'
-VIRAL_50_WORLD_URL = 'https://spotifycharts.com/viral/global/daily/latest/download'
+BASE_URL = 'https://api.spotify.com/v1'
+TOKEN_URL = 'https://accounts.spotify.com/api/token'
+
+# PLAYLIST IDs
+VIRAL_50_GLOBAL_ID = '37i9dQZEVXbLiRSasKsNU9'
+VIRAL_50_USA_ID = '37i9dQZEVXbKuaTI1Z1Afx'
+TOP_50_GLOBAL_ID = '37i9dQZEVXbMDoHDwVN2tF'
+TOP_50_USA_ID = '37i9dQZEVXbLRQDuF5jeBp'
+
 PROFANITY_LOCALE = 'en-US'
 
-def get_top200_data(url)
+CHART_TYPE = {
+  TOP: 'TOP',
+  VIRAL: 'VIRAL',
+}
+
+SPOTIFY_CHARTS = [
+  {'id' => TOP_50_GLOBAL_ID, 'title' => 'Top 50 Worldwide', 'type' => CHART_TYPE[:TOP]},
+  {'id' => TOP_50_USA_ID, 'title' => 'Top 50 USA', 'type' => CHART_TYPE[:TOP]},
+  {'id' => VIRAL_50_GLOBAL_ID, 'title' => 'Viral 50 Worldwide', 'type' => CHART_TYPE[:VIRAL]},
+  {'id' => VIRAL_50_USA_ID, 'title' => 'Viral 50 USA', 'type' => CHART_TYPE[:VIRAL]}
+]
+
+def get_token
+  client_id = CDO.spotify_api_client_id
+  client_secret = CDO.spotify_api_client_secret
+
+  if CDO.spotify_api_client_id.blank? || CDO.spotify_api_client_secret.blank?
+    Honeybadger.notify_cronjob_error(error_message: "Environment not configured for Spotify API.")
+    return
+  end
+
+  begin
+    headers = {
+      'authorization' => 'Basic ' + Base64.strict_encode64(client_id + ':' + client_secret),
+      'content-type' => 'application/x-www-form-urlencoded',
+    }
+    form = {
+      'grant_type' => 'client_credentials'
+    }
+    auth_response = JSON.parse(RestClient.post(TOKEN_URL, form, headers))
+    $token = auth_response['access_token']
+  rescue RestClient::Exception => e
+    Honeybadger.notify_cronjob_error(
+      e,
+      error_message: "Failed to retrieve OAuth token from Spotify for use in App Lab Datasets.",
+      context: {
+        tenant_id: client_id,
+        url: url
+      }
+    )
+  end
+end
+
+def get_playlist_data(chart_type, playlist_id)
+  # Filters for the query: a comma-separated list of the fields to return
+  field_query = 'fields=tracks.items(track(name,href,artists,popularity))'
+
+  begin
+    url = "#{BASE_URL}/playlists/#{playlist_id}?#{field_query}"
+    response = RestClient.get(url, {authorization: "Bearer #{$token}"})
+  rescue RestClient::Exception => e
+    Honeybadger.notify_cronjob_error(
+      e,
+      error_message: "Failed to retrieve playlist data from Spotify for use in App Lab Datasets.",
+      context: {
+        playlist_id: playlist_id,
+        chart_type: chart_type
+      }
+    )
+    return
+  end
+
+  items = JSON.parse(response)['tracks']['items']
+  columns = ['id', 'Track Name', 'Artist', 'Position']
+  columns.insert(4, 'Popularity') if chart_type === CHART_TYPE[:TOP] # Only include Popularity for Top Charts
+
+  regex = generate_profanity_regex(items)
   records = {}
-  columns = ['id', 'Track Name', 'Artist', 'Position', 'Streams', 'URL']
-  response = Net::HTTP.get_response(URI(url))
-  return unless response.code == '200'
   id = 1
-  response.body.force_encoding('utf-8')
-  csv = CSV.new(response.body)
-  lines = csv.read
-  lines.shift # first line just contains a note
-  lines.shift # second line is column names
-  regex = generate_profanity_regex(lines)
-  lines.each do |line|
-    next if regex&.match?(get_string_to_check(line)) # skip record if it contains profanity
+
+  items.each do |item|
+    track = item['track']
+    next if track.nil? || regex&.match?(get_track_info_string(track)) # Skip track if it is nil or contains profanity
 
     record = OpenStruct.new
     record.id = id
-    record.Position = line[0].to_i
-    record['Track Name'] = line[1]
-    record.Artist = line[2]
-    record.Streams = line[3].to_i
-    record.URL = line[4]
+    record.Position = id
+    record['Track Name'] = track['name']
+    record.Artist = track['artists'][0]['name'] # First will be main artist, featured artists included in record name
+    record.Popularity = track['popularity'] if chart_type === CHART_TYPE[:TOP]
 
     records[id] = record.to_h.to_json
     id += 1
   end
+
   return records, columns
 end
 
-def get_viral50_data(url)
-  records = {}
-  columns = ['id', 'Track Name', 'Artist', 'Position', 'URL']
-  response = Net::HTTP.get_response(URI(url))
-  return unless response.code == '200'
-  id = 1
-  response.body.force_encoding('utf-8')
-  csv = CSV.new(response.body)
-  lines = csv.read
-  lines.shift # first line is column names
-  regex = generate_profanity_regex(lines)
-  lines.each do |line|
-    next if regex&.match?(get_string_to_check(line)) # skip record if it contains profanity
-
-    record = OpenStruct.new
-    record.id = id
-    record.Position = line[0].to_i
-    record['Track Name'] = line[1]
-    record.Artist = line[2]
-    record.URL = line[3]
-
-    records[id] = record.to_h.to_json
-    id += 1
-  end
-  return records, columns
-end
-
-# Only check artist and song names for profanity
-def get_string_to_check(line)
-  "#{line[2]} - #{line[1]} "
+# Only check artist and track names for profanity
+def get_track_info_string(track)
+  return '' if track.nil?
+  "#{track['name']} - #{track['artists'][0]['name']} "
 end
 
 # Generates a case-insensitive regex of profanities in the entire dataset
-# to match each line against.
-def generate_profanity_regex(lines)
-  str = lines.reduce('') {|acc, line| acc + get_string_to_check(line)}
+# to match each item against.
+def generate_profanity_regex(items)
+  str = items.reduce('') {|acc, item| acc + get_track_info_string(item['track'])}
   profanities = ProfanityFilter.find_potential_profanities(str, PROFANITY_LOCALE) || []
   profanities.empty? ? nil : /(#{profanities.join("|")})/i
 end
 
 def main
+  get_token
   fb = FirebaseHelper.new('shared')
-  records, columns = get_top200_data(TOP_200_US_URL)
-  fb.upload_live_table('Top 200 USA', records, columns)
 
-  records, columns = get_top200_data(TOP_200_WORLD_URL)
-  fb.upload_live_table('Top 200 Worldwide', records, columns)
+  if $token.nil_or_empty?
+    Honeybadger.notify_cronjob_error(error_message: "Did not to retrieve Spotify playlist data due to missing authentication token.")
+    return
+  end
 
-  records, columns = get_viral50_data(VIRAL_50_US_URL)
-  fb.upload_live_table('Viral 50 USA', records, columns)
-
-  records, columns = get_viral50_data(VIRAL_50_WORLD_URL)
-  fb.upload_live_table('Viral 50 Worldwide', records, columns)
+  SPOTIFY_CHARTS.each do |chart|
+    records, columns = get_playlist_data(chart['type'], chart['id'])
+    if records.nil_or_empty?
+      Honeybadger.notify_cronjob_error(
+        error_message: "Did not to upload Spotify playlist data due to nil or empty list of records.",
+        context: {
+          chart_id: chart['id'],
+          chart_title: chart['title'],
+          chart_type: chart['type']
+        }
+      )
+      next
+    end
+    fb.upload_live_table(chart['title'], records, columns)
+  end
 end
 
 main

@@ -39,7 +39,7 @@ module Cdo
     end
 
     def shutdown
-      @task && @task.shutdown
+      @task&.shutdown
     end
 
     def spawn_reporting_task
@@ -80,8 +80,6 @@ module Cdo
   # This allows us to record the peak number of currently-executing
   # worker-processes at any point, which a one-second sampling interval
   # might not otherwise capture.
-  #
-  # rubocop:disable Style/StructInheritance
   class StatsWithMax < Raindrops::Struct.new(:calling, :writing, :max_calling)
     # Override incr_calling to keep max_calling updated.
     def incr_calling
@@ -89,5 +87,4 @@ module Cdo
       self.max_calling = calling if calling > max_calling
     end
   end
-  # rubocop:enable Style/StructInheritance
 end

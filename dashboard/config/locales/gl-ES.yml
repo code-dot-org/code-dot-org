@@ -366,6 +366,7 @@ gl:
       playlab: Laboratorio de Xogos
       playlab_k1: Play Lab (para Educación Infantil)
       starwars: Star Wars
+      loading: Cargando...
     popup:
       progress_for_user: progreso de %{name}'s
       progress: O teu progreso
@@ -776,6 +777,7 @@ gl:
   pd:
     form_labels:
       email: E-mail
+      school: Escola
       school_name: Nome da escola
       school_country: País da escola
       colombian_chilean_school_name: Nome da escola
@@ -789,10 +791,13 @@ gl:
         math: Matemáticas
         science: Ciencia
         la: Lingua
+        other: Outros
       resources:
         kodable: Kodable
+        other: Outros
       robotics:
         kodable: Kodable
+        other: Outros
       email_opt_in:
         opt_in_yes: Si
         opt_in_no: Non

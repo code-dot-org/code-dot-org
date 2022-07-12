@@ -24,8 +24,9 @@ module Pd::Application
         principal_last_name: application_hash[:principal_last_name],
         principal_title: application_hash[:principal_title],
         principal_email: application_hash[:principal_email],
-        school_id: teacher_application.school_id,
-        school_zip_code: School.find_by_id(teacher_application.school_id)&.zip
+        school_id: teacher_application.school_id || "-1",
+        school_state: teacher_application.school_state,
+        school_zip_code: teacher_application.school_zip_code
       }
 
       # Return submitted if the approval exists and is not a placeholder

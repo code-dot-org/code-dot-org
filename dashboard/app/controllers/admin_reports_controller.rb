@@ -13,7 +13,7 @@ class AdminReportsController < ApplicationController
   end
 
   def level_answers
-    SeamlessDatabasePool.use_persistent_read_connection do
+    ActiveRecord::Base.connected_to(role: :reading) do
       @headers = ['Level ID', 'User Email', 'Data']
       @responses = {}
       @response_limit = 100
@@ -101,7 +101,7 @@ class AdminReportsController < ApplicationController
     page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').rows]
 
     data_array = output_data.map do |key, value|
-      {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
+      {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key]&.to_i)
     end
     require 'naturally'
     data_array = data_array.select {|x| x['TotalAttempt'].to_i > 10}.sort_by {|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
@@ -132,7 +132,7 @@ class AdminReportsController < ApplicationController
       ) && return
     end
 
-    SeamlessDatabasePool.use_persistent_read_connection do
+    ActiveRecord::Base.connected_to(role: :reading) do
       locals_options = Properties.get("pd_progress_#{script.id}")
       if locals_options
         render locals: locals_options.symbolize_keys

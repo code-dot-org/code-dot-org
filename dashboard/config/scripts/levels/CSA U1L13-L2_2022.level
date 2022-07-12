@@ -1,0 +1,1347 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "neighborhood",
+    "start_sources": {
+      "MyNeighborhood.java": {
+        "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\n    P\n    \n  }\n}",
+        "isVisible": true
+      },
+      "PainterPlus.java": {
+        "text": "import org.code.neighborhood.Painter;\n\n/*\n * Creates a PainterPlus\n * PainterPlus is a subclass of Painter.\n */\npublic class PainterPlus extends Painter {\n\n  /*\n   * Constructor to create a PainterPlus object\n   */\n  public PainterPlus() {\n    super();  // Calls the Painter constructor\n  }\n\n  /*\n   * Turns a PainterPlus object to the right\n   * by turning left three times\n   */\n  public void turnRight() {\n    turnLeft();\n    turnLeft();\n    turnLeft();\n  }\n\n  /*\n   * Unit 1 Lesson 9 - Choice A\n   */\n  public void takeAllPaint() {\n    while (isOnBucket()) {\n      takePaint();\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 9 - Choice B\n   */\n  public void paintLine(String color) {\n    while (canMove()) {\n      paint(color);\n      move();\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 9 - Choice C\n   */\n  public void paintBorder(String color) {\n    while (canMove()) {\n      paint(color);\n      move();\n    }\n\n    turnRight();\n\n    while (canMove()) {\n      paint(color);\n      move();\n    }\n\n    turnRight();\n\n    while (canMove()) {\n      paint(color);\n      move();\n    }\n\n    turnRight();\n\n    while (canMove()) {\n      paint(color);\n      move();\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 9 - Choice D\n   */\n  public void paintDiagonal(String color) {\n    while (canMove()) {\n      paint(color);\n      move();\n      turnLeft();\n      move();\n      turnRight();\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 10 - Choice A\n   */\n  public void paintOrTake(String color) {\n    while (canMove()) {\n      if (!isOnBucket()) {\n        move();\n      }\n      else {\n        takeAllPaint();\n      }\n\n      if (hasPaint()) {\n        paint(color);\n      }\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 10 - Choice B\n   */\n  public void navigate(String color) {\n    while (canMove()) {\n      move();\n\n      if (!canMove()) {\n        turnRight();\n      }\n      else {\n        paint(color);\n      }\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 10 - Choice C\n   */\n  public void moveAndPaintSouth(String color) {\n    while (canMove(\"south\")) {\n      if (!facingSouth()) {\n        turnRight();\n      }\n      else {\n        move();\n\n        if (hasPaint()) {\n          paint(color);\n        }\n      }\n    }\n  }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ]
+    ],
+    "project_template_level_name": "CSA U1L13 PBT_2022",
+    "long_instructions": "##Getting Started\r\n1. Import `PainterPlus.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from <a href=\"http://studio.code.org/s/csa-backpack-2022/lessons/1/levels/5\" target=\"_blank\">**here**</a>.*\r\n\r\n##Create the PatternPainter Class:\r\n\r\n2. Create a new Java file called `PatternPainter.java`(#e7e8ea).\r\n\r\n##In PatternPainter.java:\r\n\r\n3. Import The Neighborhood package on the first line using `import org.code.neighborhood.Painter;`(#e7e8ea)\r\n\r\n4. Write the class header for the `PatternPainter`(#e7e8ea) class, which is a subclass of `PainterPlus`(#e7e8ea).\r\n\r\n**Note:** Don't forget to extend the `PainterPlus`(#e7e8ea) class!\r\n\r\n5. Write the constructor signature for the `PatternPainter`(#e7e8ea) class.\r\n\r\n6. Inside the constructor, call `super()`(#e7e8ea) to call the superclass constructor.\r\n\r\n7. Write your method to create your pattern that you planned on your [**PatternPainter**](https://docs.google.com/presentation/d/1yCQwrqoQNp28pRMJ-Z-ZKT-S4AWQWRguUaLoXDNHJUU/edit?usp=sharing) handout!\r\n\r\n![](https://images.code.org/2d6cad962aec264c2b71b25d2bd7bfdf-image-1655822891953.gif)\r\n\r\n::: details [**Show Me How**]\r\nA subclass uses the following syntax:\r\n  \r\n  ```\r\n  public class Subclass extends SuperClass {\r\n  \r\n     public Subclass() {\r\n        super();\r\n     }\r\n  }\r\n  ```\r\n\r\nBe sure to replace `Subclass`(#e7e8ea) with the name of the subclass and `SuperClass`(#e7e8ea) with the name of the superclass.\r\n:::",
+    "encrypted_exemplar_sources": "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\nSN0Gn6zo9P/5AoPUe2EQ98mk\n",
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-02-18T14:26:25.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-02-18T14:26:25.856+00:00\",\"changed\":[\"cloned from \\\"CSA U1L13 PBT_2022\\\"\"],\"cloned_from\":\"CSA U1L13 PBT_2022\"},{\"changed_at\":\"2022-02-18 14:28:24 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 14:46:10 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 14:48:49 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 15:27:07 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 15:28:34 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-25 23:06:16 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 14:06:21 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 15:49:34 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-01 17:09:11 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 14:14:06 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 14:15:02 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 14:16:39 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 14:16:52 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 18:47:02 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 19:05:49 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-16 15:48:42 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 14:48:15 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-24 14:45:39 +0000\",\"changed\":[\"serialized_maze\",\"map_reference\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-27 12:45:56 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

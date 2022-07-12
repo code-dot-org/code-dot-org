@@ -25,7 +25,7 @@ class ReportAbuseController < ApplicationController
   def protected_project?
     return false if params[:channel_id].blank?
     owner_storage_id, _ = storage_decrypt_channel_id(params[:channel_id])
-    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
     return false unless owner_user_id
     project_owner = User.find(owner_user_id)
     project_owner.permission?(UserPermission::PROJECT_VALIDATOR)
@@ -104,9 +104,9 @@ class ReportAbuseController < ApplicationController
 
   def report_abuse_form
     @react_props = {
-      name: (current_user.name unless current_user.nil?),
-      email: (current_user.email unless current_user.nil?),
-      age: (current_user.age unless current_user.nil?),
+      name: current_user&.name,
+      email: current_user&.email,
+      age: current_user&.age,
     }
   end
 end

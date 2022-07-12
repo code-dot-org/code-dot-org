@@ -126,20 +126,20 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for moving forward or backward the internal number of pixels.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(MOVE_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
-        .appendTitle(
+        .appendField(
           new blockly.FieldTextInput(
             '100',
             blockly.FieldTextInput.numberValidator
           ),
           'VALUE'
         )
-        .appendTitle(msg.dots());
+        .appendField(msg.dots());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -151,14 +151,14 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for moving forward or backward the internal number of pixels.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(MOVE_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(), 'VALUE')
-        .appendTitle(msg.dots());
+        .appendField(new blockly.FieldDropdown(), 'VALUE')
+        .appendField(msg.dots());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -169,10 +169,10 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_move_by_constant = function() {
     // Generate JavaScript for moving forward or backward the internal number of
     // pixels.
-    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
+    var value = window.parseFloat(this.getFieldValue('VALUE')) || 0;
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -186,20 +186,20 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for turning either left or right from among a fixed set of angles.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
-        .appendTitle(
+        .appendField(
           new blockly.FieldAngleDropdown({
             directionTitleName: 'DIR',
             menuGenerator: this.VALUE
           }),
           'VALUE'
         )
-        .appendTitle(msg.degrees());
+        .appendField(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -223,10 +223,10 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_turn_by_constant_restricted = function() {
     // Generate JavaScript for turning either left or right from among a fixed
     // set of angles.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getFieldValue('VALUE'));
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -239,19 +239,19 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for turning left or right any number of degrees.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
-        .appendTitle(
+        .appendField(
           new blockly.FieldAngleTextInput('90', {
             directionTitle: 'DIR'
           }),
           'VALUE'
         )
-        .appendTitle(msg.degrees());
+        .appendField(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -263,19 +263,19 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for turning left or right any number of degrees.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
-        .appendTitle(
+        .appendField(
           new blockly.FieldAngleDropdown({
             directionTitleName: 'DIR'
           }),
           'VALUE'
         )
-        .appendTitle(msg.degrees());
+        .appendField(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -285,10 +285,10 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.draw_turn_by_constant = function() {
     // Generate JavaScript for turning left or right.
-    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
+    var value = window.parseFloat(this.getFieldValue('VALUE')) || 0;
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -301,10 +301,10 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_move_inline = function() {
     // Generate JavaScript for moving forward or backward the internal number of
     // pixels.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getFieldValue('VALUE'));
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -317,20 +317,20 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for turning either left or right from among a fixed set of angles.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
-        .appendTitle(
+        .appendField(
           new blockly.FieldAngleDropdown({
             directionTitleName: 'DIR',
             menuGenerator: this.VALUE
           }),
           'VALUE'
         )
-        .appendTitle(msg.degrees());
+        .appendField(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -354,10 +354,10 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_turn_inline_restricted = function() {
     // Generate JavaScript for turning either left or right from among a fixed
     // set of angles.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getFieldValue('VALUE'));
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -370,19 +370,19 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for turning left or right any number of degrees.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
-        .appendTitle(
+        .appendField(
           new blockly.FieldAngleTextInput('90', {
             directionTitle: 'DIR'
           }),
           'VALUE'
         )
-        .appendTitle(msg.degrees());
+        .appendField(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -394,12 +394,12 @@ exports.install = function(blockly, blockInstallOptions) {
     return {
       helpUrl: '',
       init: function() {
-        this.setHSV(184, 1.0, 0.74);
+        Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
         this.setPreviousStatement(true);
         this.setInputsInline(true);
         this.setNextStatement(true);
         this.setTooltip(msg.pointTo());
-        this.appendDummyInput().appendTitle(msg.pointTo());
+        this.appendDummyInput().appendField(msg.pointTo());
         if (onInit) {
           onInit(this);
         }
@@ -411,17 +411,17 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for pointing to a specified direction
     block
       .appendDummyInput()
-      .appendTitle(
+      .appendField(
         new blockly.FieldAngleTextInput('0', {
           direction: 'turnRight'
         }),
         'DIRECTION'
       )
-      .appendTitle(msg.degrees());
+      .appendField(msg.degrees());
   });
 
   generator.point_to = function() {
-    let value = window.parseFloat(this.getTitleValue('DIRECTION')) || 0;
+    let value = window.parseFloat(this.getFieldValue('DIRECTION')) || 0;
     return `Turtle.pointTo(${value}, 'block_id_${this.id}');\n`;
   };
 
@@ -434,7 +434,7 @@ exports.install = function(blockly, blockInstallOptions) {
         block,
         direction: 'turnRight'
       });
-    block.appendDummyInput().appendTitle(msg.degrees());
+    block.appendDummyInput().appendField(msg.degrees());
   });
 
   generator.point_to_param = function() {
@@ -451,14 +451,14 @@ exports.install = function(blockly, blockInstallOptions) {
   ) {
     block
       .appendDummyInput()
-      .appendTitle(
+      .appendField(
         new blockly.FieldAngleDropdown({
           direction: 'turnRight',
           menuGenerator: block.VALUE
         }),
         'VALUE'
       )
-      .appendTitle(msg.degrees());
+      .appendField(msg.degrees());
   });
 
   blockly.Blocks.point_to_by_constant_restricted.VALUE = [
@@ -476,16 +476,16 @@ exports.install = function(blockly, blockInstallOptions) {
   });
 
   generator.point_to_by_constant_restricted = function() {
-    let value = window.parseFloat(this.getTitleValue('VALUE'));
+    let value = window.parseFloat(this.getFieldValue('VALUE'));
     return `Turtle.pointTo(${value}, 'block_id_${this.id}');\n`;
   };
 
   generator.draw_turn_inline = function() {
     // Generate JavaScript for turning left or right.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getFieldValue('VALUE'));
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -499,10 +499,10 @@ exports.install = function(blockly, blockInstallOptions) {
     category: null, // Variables are handled specially.
     helpUrl: blockly.Msg.VARIABLES_GET_HELPURL,
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       this.appendDummyInput()
-        .appendTitle(blockly.Msg.VARIABLES_GET_TITLE)
-        .appendTitle(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
+        .appendField(blockly.Msg.VARIABLES_GET_TITLE)
+        .appendField(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
@@ -516,10 +516,10 @@ exports.install = function(blockly, blockInstallOptions) {
     category: null, // Variables are handled specially.
     helpUrl: blockly.Msg.VARIABLES_GET_HELPURL,
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       this.appendDummyInput()
-        .appendTitle(blockly.Msg.VARIABLES_GET_TITLE)
-        .appendTitle(new blockly.FieldLabel(msg.lengthParameter()), 'VAR');
+        .appendField(blockly.Msg.VARIABLES_GET_TITLE)
+        .appendField(new blockly.FieldLabel(msg.lengthParameter()), 'VAR');
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
@@ -533,10 +533,10 @@ exports.install = function(blockly, blockInstallOptions) {
     category: null, // Variables are handled specially.
     helpUrl: blockly.Msg.VARIABLES_GET_HELPURL,
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       this.appendDummyInput()
-        .appendTitle(blockly.Msg.VARIABLES_GET_TITLE)
-        .appendTitle(new blockly.FieldLabel('sides'), 'VAR');
+        .appendField(blockly.Msg.VARIABLES_GET_TITLE)
+        .appendField(new blockly.FieldLabel('sides'), 'VAR');
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
@@ -550,12 +550,12 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.draw_a_square = {
     // Draw a square.
     init: function() {
-      this.setHSV(94, 0.84, 0.6);
-      this.appendDummyInput().appendTitle(msg.drawASquare());
+      Blockly.cdoUtils.setHSV(this, 94, 0.84, 0.6);
+      this.appendDummyInput().appendField(msg.drawASquare());
       this.appendValueInput('VALUE')
         .setAlign(blockly.ALIGN_RIGHT)
         .setCheck(blockly.BlockValueType.NUMBER)
-        .appendTitle(msg.lengthParameter() + ':');
+        .appendField(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setInputsInline(true);
@@ -584,12 +584,12 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.draw_a_snowman = {
     // Draw a circle in front of the turtle, ending up on the opposite side.
     init: function() {
-      this.setHSV(94, 0.84, 0.6);
-      this.appendDummyInput().appendTitle(msg.drawASnowman());
+      Blockly.cdoUtils.setHSV(this, 94, 0.84, 0.6);
+      this.appendDummyInput().appendField(msg.drawASnowman());
       this.appendValueInput('VALUE')
         .setAlign(blockly.ALIGN_RIGHT)
         .setCheck(blockly.BlockValueType.NUMBER)
-        .appendTitle(msg.lengthParameter() + ':');
+        .appendField(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip('');
@@ -659,10 +659,10 @@ exports.install = function(blockly, blockInstallOptions) {
     // For loop with hardcoded loop variable.
     helpUrl: blockly.Msg.CONTROLS_FOR_HELPURL,
     init: function() {
-      this.setHSV(322, 0.9, 0.95);
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput()
-        .appendTitle(blockly.Msg.CONTROLS_FOR_INPUT_WITH)
-        .appendTitle(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
+        .appendField(blockly.Msg.CONTROLS_FOR_INPUT_WITH)
+        .appendField(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
       this.interpolateMsg(
         blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY,
         ['FROM', 'Number', blockly.ALIGN_RIGHT],
@@ -670,7 +670,7 @@ exports.install = function(blockly, blockInstallOptions) {
         ['BY', 'Number', blockly.ALIGN_RIGHT],
         blockly.ALIGN_RIGHT
       );
-      this.appendStatementInput('DO').appendTitle(
+      this.appendStatementInput('DO').appendField(
         Blockly.Msg.CONTROLS_FOR_INPUT_DO
       );
       this.setPreviousStatement(true);
@@ -679,7 +679,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setTooltip(
         blockly.Msg.CONTROLS_FOR_TOOLTIP.replace(
           '%1',
-          this.getTitleValue('VAR')
+          this.getFieldValue('VAR')
         )
       );
     },
@@ -688,7 +688,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // different locales
     mutationToDom: function() {
       var container = document.createElement('mutation');
-      var counter = this.getTitleValue('VAR');
+      var counter = this.getFieldValue('VAR');
       container.setAttribute('counter', counter);
       return container;
     },
@@ -711,11 +711,11 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for moving forward or backwards.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.interpolateMsg(
         msg.moveDirectionByPixels(),
         () => {
-          this.appendDummyInput().appendTitle(
+          this.appendDummyInput().appendField(
             new blockly.FieldDropdown(DIRECTION_VALUES),
             'DIR'
           );
@@ -736,7 +736,7 @@ exports.install = function(blockly, blockInstallOptions) {
       generator.valueToCode(this, 'VALUE', generator.ORDER_NONE) || '0';
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -749,11 +749,11 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for moving forward or backwards.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.interpolateMsg(
         msg.jumpByDirection(),
         () => {
-          this.appendDummyInput().appendTitle(
+          this.appendDummyInput().appendField(
             new blockly.FieldDropdown(JUMP_DIRECTION_VALUES),
             'DIR'
           );
@@ -974,19 +974,19 @@ exports.install = function(blockly, blockInstallOptions) {
       return {
         helpUrl: '',
         init: function() {
-          this.setHSV(184, 1.0, 0.74);
+          Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
           var input = this.appendDummyInput();
           if (directionConfig.isJump) {
-            input.appendTitle(commonMsg.jump());
+            input.appendField(commonMsg.jump());
           }
-          input.appendTitle(
+          input.appendField(
             new blockly.FieldLabel(directionConfig.title, {
               fixedSize: {width: directionLetterWidth, height: 18}
             })
           );
 
           if (directionConfig.imageDimensions) {
-            input.appendTitle(
+            input.appendField(
               new blockly.FieldImage(
                 directionConfig.image,
                 directionConfig.imageDimensions.width,
@@ -994,7 +994,7 @@ exports.install = function(blockly, blockInstallOptions) {
               )
             );
           } else {
-            input.appendTitle(new blockly.FieldImage(directionConfig.image));
+            input.appendField(new blockly.FieldImage(directionConfig.image));
           }
           this.setPreviousStatement(true);
           this.setNextStatement(true);
@@ -1004,7 +1004,7 @@ exports.install = function(blockly, blockInstallOptions) {
               directionConfig.lengths
             );
             dropdown.setValue(directionConfig.defaultDropdownValue);
-            input.appendTitle(dropdown, 'length');
+            input.appendField(dropdown, 'length');
           }
         }
       };
@@ -1015,7 +1015,7 @@ exports.install = function(blockly, blockInstallOptions) {
         var length = directionConfig.defaultLength;
 
         if (hasLengthInput) {
-          length = SimpleMove[this.getTitleValue('length')];
+          length = SimpleMove[this.getFieldValue('length')];
         }
         return (
           'Turtle.' +
@@ -1039,7 +1039,7 @@ exports.install = function(blockly, blockInstallOptions) {
       generator.valueToCode(this, 'VALUE', generator.ORDER_NONE) || '0';
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -1053,20 +1053,20 @@ exports.install = function(blockly, blockInstallOptions) {
     // without drawing.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(JUMP_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
-        .appendTitle(
+        .appendField(
           new blockly.FieldTextInput(
             '100',
             blockly.FieldTextInput.numberValidator
           ),
           'VALUE'
         )
-        .appendTitle(msg.dots());
+        .appendField(msg.dots());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1079,14 +1079,14 @@ exports.install = function(blockly, blockInstallOptions) {
     // without drawing.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(JUMP_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(), 'VALUE')
-        .appendTitle(msg.dots());
+        .appendField(new blockly.FieldDropdown(), 'VALUE')
+        .appendField(msg.dots());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1097,10 +1097,10 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.jump_by_constant = function() {
     // Generate JavaScript for moving forward or backward the internal number
     // of pixels without drawing.
-    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
+    var value = window.parseFloat(this.getFieldValue('VALUE')) || 0;
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -1116,11 +1116,11 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.interpolateMsg(
         msg.jumpToPosition(),
         () => {
-          this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+          this.appendDummyInput().appendField(dropdown, 'VALUE');
         },
         blockly.ALIGN_RIGHT
       );
@@ -1134,7 +1134,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.jump_to.VALUES = POSITION_VALUES;
 
   generator.jump_to = function() {
-    let value = this.getTitleValue('VALUE');
+    let value = this.getFieldValue('VALUE');
     if (value === RANDOM_VALUE) {
       let possibleValues = this.VALUES.map(item => item[1]).filter(
         item => item !== RANDOM_VALUE
@@ -1148,11 +1148,11 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for jumping to specified XY location.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.interpolateMsg(
         msg.jumpToOverDown(),
         () => {
-          this.appendDummyInput().appendTitle(
+          this.appendDummyInput().appendField(
             new blockly.FieldTextInput(
               '0',
               blockly.FieldTextInput.numberValidator
@@ -1161,7 +1161,7 @@ exports.install = function(blockly, blockInstallOptions) {
           );
         },
         () => {
-          this.appendDummyInput().appendTitle(
+          this.appendDummyInput().appendField(
             new blockly.FieldTextInput(
               '0',
               blockly.FieldTextInput.numberValidator
@@ -1179,8 +1179,8 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.jump_to_xy = function() {
-    const xParam = window.parseFloat(this.getTitleValue('XPOS')) || 0;
-    const yParam = window.parseFloat(this.getTitleValue('YPOS')) || 0;
+    const xParam = window.parseFloat(this.getFieldValue('XPOS')) || 0;
+    const yParam = window.parseFloat(this.getFieldValue('YPOS')) || 0;
     return `Turtle.jumpToXY(${xParam}, ${yParam}, 'block_id_${this.id}');\n`;
   };
 
@@ -1188,11 +1188,11 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for turning left or right.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.interpolateMsg(
         msg.turnDirection(),
         () => {
-          this.appendDummyInput().appendTitle(
+          this.appendDummyInput().appendField(
             new blockly.FieldDropdown(TURN_DIRECTION_VALUES),
             'DIR'
           );
@@ -1221,7 +1221,7 @@ exports.install = function(blockly, blockInstallOptions) {
       generator.valueToCode(this, 'VALUE', generator.ORDER_NONE) || '0';
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -1236,10 +1236,10 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for setting the pen width.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendValueInput('WIDTH')
         .setCheck(blockly.BlockValueType.NUMBER)
-        .appendTitle(msg.setWidth());
+        .appendField(msg.setWidth());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.widthTooltip());
@@ -1258,10 +1258,10 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for setting the pen width.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.setInputsInline(true);
-      this.appendDummyInput().appendTitle(msg.setWidth());
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(msg.setWidth());
+      this.appendDummyInput().appendField(
         new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator),
         'WIDTH'
       );
@@ -1273,7 +1273,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.draw_width_inline = function() {
     // Generate JavaScript for setting the pen width.
-    var width = this.getTitleValue('WIDTH');
+    var width = this.getFieldValue('WIDTH');
     return 'Turtle.penWidth(' + width + ", 'block_id_" + this.id + "');\n";
   };
 
@@ -1281,8 +1281,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for pen up/down.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.STATE),
         'PEN'
       );
@@ -1300,7 +1300,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_pen = function() {
     // Generate JavaScript for pen up/down.
     return (
-      'Turtle.' + this.getTitleValue('PEN') + "('block_id_" + this.id + "');\n"
+      'Turtle.' + this.getFieldValue('PEN') + "('block_id_" + this.id + "');\n"
     );
   };
 
@@ -1308,10 +1308,10 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for setting the colour.
     helpUrl: '',
     init: function() {
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendValueInput('COLOUR')
         .setCheck(blockly.BlockValueType.COLOUR)
-        .appendTitle(msg.setColour());
+        .appendField(msg.setColour());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.colourTooltip());
@@ -1326,10 +1326,10 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.appendValueInput('VALUE')
         .setCheck('Number')
-        .appendTitle(msg.setAlpha());
+        .appendField(msg.setAlpha());
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.setTooltip('');
     }
   };
@@ -1365,11 +1365,11 @@ exports.install = function(blockly, blockInstallOptions) {
         Colours.AQUAMARINE,
         Colours.PLUM
       ];
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       var colourField = new Blockly.FieldColourDropdown(colours, 45, 35);
       this.appendDummyInput()
-        .appendTitle(msg.setColour())
-        .appendTitle(colourField, 'COLOUR');
+        .appendField(msg.setColour())
+        .appendField(colourField, 'COLOUR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.colourTooltip());
@@ -1378,7 +1378,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.draw_colour_simple = function() {
     // Generate JavaScript for setting the colour.
-    var colour = this.getTitleValue('COLOUR') || "'#000000'";
+    var colour = this.getFieldValue('COLOUR') || "'#000000'";
     return 'Turtle.penColour("' + colour + '", \'block_id_' + this.id + "');\n";
   };
 
@@ -1386,12 +1386,12 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when an arrow button is pressed.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.appendDummyInput()
-        .appendTitle(msg.setPattern())
-        .appendTitle(
+        .appendField(msg.setPattern())
+        .appendField(
           new blockly.FieldImageDropdown(skin.lineStylePatternOptions, 150, 20),
           'VALUE'
         );
@@ -1401,7 +1401,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.draw_line_style_pattern = function() {
     // Generate JavaScript for setting the image for a patterned line.
-    var pattern = this.getTitleValue('VALUE') || "'DEFAULT'";
+    var pattern = this.getFieldValue('VALUE') || "'DEFAULT'";
     return (
       'Turtle.penPattern("' + pattern + '", \'block_id_' + this.id + "');\n"
     );
@@ -1410,10 +1410,10 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.up_big = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.STATE),
         'VISIBILITY'
       );
@@ -1433,10 +1433,10 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for changing turtle visiblity.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.STATE),
         'VISIBILITY'
       );
@@ -1453,7 +1453,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Generate JavaScript for changing turtle visibility.
     return (
       'Turtle.' +
-      this.getTitleValue('VISIBILITY') +
+      this.getFieldValue('VISIBILITY') +
       "('block_id_" +
       this.id +
       "');\n"
@@ -1464,10 +1464,10 @@ exports.install = function(blockly, blockInstallOptions) {
     return {
       helpUrl: '',
       init: function() {
-        this.setHSV(184, 1.0, 0.74);
+        Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
         var dropdown;
         var input = this.appendDummyInput();
-        input.appendTitle(msg.drawSticker());
+        input.appendField(msg.drawSticker());
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -1480,7 +1480,7 @@ exports.install = function(blockly, blockInstallOptions) {
         }
         dropdown = new blockly.FieldImageDropdown(values, 40, 40);
 
-        input.appendTitle(dropdown, 'VALUE');
+        input.appendField(dropdown, 'VALUE');
 
         appendToDrawStickerBlock(blockName, this);
       }
@@ -1490,22 +1490,22 @@ exports.install = function(blockly, blockInstallOptions) {
   // Add size input to the draw sticker block (text input & socket)
   function appendToDrawStickerBlock(blockName, block) {
     if (blockName === 'turtle_sticker_with_size') {
-      block.appendDummyInput().appendTitle(msg.withSize());
+      block.appendDummyInput().appendField(msg.withSize());
       block.appendValueInput('SIZE').setCheck(blockly.BlockValueType.NUMBER);
-      block.appendDummyInput().appendTitle(msg.pixels());
+      block.appendDummyInput().appendField(msg.pixels());
       block.setTooltip(msg.drawStickerWithSize());
     } else if (blockName === 'turtle_sticker_with_size_non_param') {
-      block.appendDummyInput().appendTitle(msg.withSize());
+      block.appendDummyInput().appendField(msg.withSize());
       block
         .appendDummyInput()
-        .appendTitle(
+        .appendField(
           new blockly.FieldTextInput(
             '0',
             blockly.FieldTextInput.numberValidator
           ),
           'SIZE'
         )
-        .appendTitle(msg.pixels());
+        .appendField(msg.pixels());
       block.setTooltip(msg.drawStickerWithSize());
     } else {
       block.setTooltip(msg.drawSticker());
@@ -1519,7 +1519,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.sticker = generator.turtle_stamp = function() {
     return (
       'Turtle.drawSticker("' +
-      this.getTitleValue('VALUE') +
+      this.getFieldValue('VALUE') +
       '", null, \'block_id_' +
       this.id +
       "');\n"
@@ -1536,7 +1536,7 @@ exports.install = function(blockly, blockInstallOptions) {
       'SIZE',
       Blockly.JavaScript.ORDER_NONE
     );
-    return `Turtle.drawSticker('${this.getTitleValue('VALUE')}',${size},
+    return `Turtle.drawSticker('${this.getFieldValue('VALUE')}',${size},
         'block_id_${this.id}');\n`;
   };
 
@@ -1545,22 +1545,110 @@ exports.install = function(blockly, blockInstallOptions) {
   );
 
   generator.turtle_sticker_with_size_non_param = function() {
-    let size = window.parseFloat(this.getTitleValue('SIZE')) || 0;
-    return `Turtle.drawSticker('${this.getTitleValue('VALUE')}',${size},
+    let size = window.parseFloat(this.getFieldValue('SIZE')) || 0;
+    return `Turtle.drawSticker('${this.getFieldValue('VALUE')}',${size},
+        'block_id_${this.id}');\n`;
+  };
+
+  function createDrawShapeBlock(blockName) {
+    return {
+      helpUrl: '',
+      init: function() {
+        this.setHSV(184, 1.0, 0.74);
+        var dropdown;
+        var input = this.appendDummyInput();
+        input.appendField(msg.drawShape());
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+
+        // Generates a list of pairs of the form [[url, name]]
+        var values = [];
+        for (var name in skin.shapes) {
+          var url = skin.shapes[name];
+          values.push([url, name]);
+        }
+        dropdown = new blockly.FieldImageDropdown(values, 40, 40);
+
+        input.appendField(dropdown, 'VALUE');
+
+        appendToDrawShapeBlock(blockName, this);
+      }
+    };
+  }
+
+  // Add size input to the draw shape block (text input & socket)
+  function appendToDrawShapeBlock(blockName, block) {
+    if (blockName === 'turtle_shape_with_side_length') {
+      block.appendDummyInput().appendField(msg.withSideLength());
+      block.appendValueInput('SIZE').setCheck(blockly.BlockValueType.NUMBER);
+      block.appendDummyInput().appendField(msg.pixels());
+      block.setTooltip(msg.drawShapeWithSideLength());
+    } else if (blockName === 'turtle_shape_with_side_length_non_param') {
+      block.appendDummyInput().appendField(msg.withSideLength());
+      block
+        .appendDummyInput()
+        .appendField(
+          new blockly.FieldTextInput(
+            '0',
+            blockly.FieldTextInput.numberValidator
+          ),
+          'SIZE'
+        )
+        .appendField(msg.pixels());
+      block.setTooltip(msg.drawShapeWithSideLength());
+    } else {
+      block.setTooltip(msg.drawShape());
+    }
+  }
+
+  blockly.Blocks.shape = createDrawShapeBlock();
+
+  generator.shape = function() {
+    return (
+      'Turtle.drawShape("' +
+      this.getFieldValue('VALUE') +
+      '", null, \'block_id_' +
+      this.id +
+      "');\n"
+    );
+  };
+
+  blockly.Blocks.turtle_shape_with_side_length = createDrawShapeBlock(
+    'turtle_shape_with_side_length'
+  );
+
+  generator.turtle_shape_with_side_length = function() {
+    let size = generator.valueToCode(
+      this,
+      'SIZE',
+      Blockly.JavaScript.ORDER_NONE
+    );
+    return `Turtle.drawShape('${this.getFieldValue('VALUE')}',${size},
+        'block_id_${this.id}');\n`;
+  };
+
+  blockly.Blocks.turtle_shape_with_side_length_non_param = createDrawShapeBlock(
+    'turtle_shape_with_side_length_non_param'
+  );
+
+  generator.turtle_shape_with_side_length_non_param = function() {
+    let size = window.parseFloat(this.getFieldValue('SIZE')) || 0;
+    return `Turtle.drawShape('${this.getFieldValue('VALUE')}',${size},
         'block_id_${this.id}');\n`;
   };
 
   blockly.Blocks.turtle_setArtist = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       var values = (skin.artistOptions || ['default']).map(artist => [
         msg.setCharacter({
           character: artist.charAt(0).toUpperCase() + artist.slice(1)
         }),
         artist
       ]);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(values),
         'VALUE'
       );
@@ -1570,7 +1658,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.turtle_setArtist = function() {
-    return `Turtle.setArtist('${this.getTitleValue('VALUE')}',
+    return `Turtle.setArtist('${this.getFieldValue('VALUE')}',
       'block_id_${this.id}');\n`;
   };
 

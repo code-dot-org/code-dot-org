@@ -45,4 +45,8 @@ class DCDOTest < ActiveSupport::TestCase
       DCDO.set(key, RandomClass.new)
     end
   end
+
+  test 'frontend_config should return a hash' do
+    assert_instance_of(Hash, DCDO.frontend_config)
+  end
 end

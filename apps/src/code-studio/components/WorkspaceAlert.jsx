@@ -9,26 +9,15 @@ export default class WorkspaceAlert extends React.Component {
     children: PropTypes.element.isRequired,
     onClose: PropTypes.func.isRequired,
     isBlockly: PropTypes.bool,
-    isCraft: PropTypes.bool,
     displayBottom: PropTypes.bool
   };
 
   render() {
-    const {
-      displayBottom,
-      isBlockly,
-      isCraft,
-      onClose,
-      type,
-      children
-    } = this.props;
+    const {displayBottom, isBlockly, onClose, type, children} = this.props;
     var toolbarWidth;
-    if (isBlockly && isCraft) {
-      // craft has a slightly different way of constructing the toolbox so we need to use
-      // the toolbox header's width to get the width of the actual toolbox.
+    if (isBlockly) {
+      // use the toolbox header's width to get the width of the actual toolbox.
       toolbarWidth = $('#toolbox-header').width();
-    } else if (isBlockly) {
-      toolbarWidth = $('.blocklyToolboxDiv').width();
     } else {
       toolbarWidth =
         $('.droplet-palette-element').width() + $('.droplet-gutter').width();

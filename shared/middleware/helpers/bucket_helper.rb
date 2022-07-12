@@ -30,6 +30,10 @@ class BucketHelper
     []
   end
 
+  def try_resize_file(body, extension)
+    return body
+  end
+
   # Ignore client-specified mime type. Infer it from file extension when serving
   # assets.
   def category_from_file_type(extension)
@@ -347,7 +351,7 @@ class BucketHelper
       versions.
       map do |version|
         comment = with_comments ?
-          DASHBOARD_DB[:project_versions].
+          DASHBOARD_DB[:project_commits].
           select(:comment).
           where(storage_app_id: storage_app_id, object_version_id: version.version_id).
           first&.

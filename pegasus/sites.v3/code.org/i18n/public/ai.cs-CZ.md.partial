@@ -21,8 +21,8 @@ social:
 # Učte se o umělé inteligenci (AI)
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">NEW AI and Machine Learning Module</h2><p>Our new curriculum module focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts through a number of online and unplugged activities and full-group discussions.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Explore the module</button></a></div>
-<div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="AI Lab"/></div>
+<h2 style="color:#ffffff; margin-top:25px">NOVÝ modul AI a strojové učení</h2><p>Náš nový výukový modul se zaměřuje na etiku AI, zkoumá otázky zkreslení a prochází a vysvětluje základní koncepty prostřednictvím několika aktivit online i bez počítačů a pomocí diskuzí v celé skupině.</p><a  href="#about-aimodule"><button>Další informace</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Prozkoumat modul</button></a></div>
+<div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="Laboratoř AI"/></div>
 <div class="clear"></div>
 </div>
 
@@ -46,17 +46,17 @@ Přidejte se k nám a probádejte umělou inteligenci v nové řadě videí, cvi
 
 <a id="about-aimodule"></a>
 
-## NEW AI and Machine Learning Module
+## NOVÝ modul AI a strojové učení
 <div>
 <div class="col-50">
-<p>The AI and Machine Learning Module is roughly a five week curriculum module that can be taught as a <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >standalone module</a> or as an optional <a href="https://studio.code.org/s/csd7-2021">unit in CS Discoveries</a>. It focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts</p><p>Because machine learning depends on large sets of data, the new unit includes real life datasets on healthcare, demographics, and more to engage students while exploring questions like, “What is a problem Machine Learning can help solve?” “How can AI help society?” “Who is benefiting from AI?” “Who is being harmed?” “Who is involved?” “Who is missing?”  </p>
-<p>Ethical considerations will be at the forefront of these discussions, with frequent discussion points and lessons around the impacts of these technologies. This will help students develop a holistic, thoughtful understanding of these technologies while they learn the technical underpinnings of how the technologies work.</p>
+<p>AI a strojové učení je zhruba pětitýdenní výukový modul, který je možné probírat jako <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >samostatný modul</a> or as an optional <a href="https://studio.code.org/s/csd7-2021">unit in CS Discoveries</a>. Zaměřuje se na etiku AI, zkoumá otázky zkreslení a prochází a vysvětluje základní koncepty</p><p>Protože strojové učení závisí na velkých souborech dat, jsou součástí nové jednotky skutečné datové soubory ze zdravotní péče, demografie a dalších oborů, které zapojují studenty a zkoumají otázky jako „Jaké problémy nám může strojové učení pomáhat řešit?“ „Jak může umělá inteligence pomoci společnosti?“ „Komu je umělá inteligence prospěšná?“ „Komu škodí?“ „Koho se týká?“ „Koho se netýká?“  </p>
+<p>V popředí těchto diskusí budou etické úvahy a jejich součástí je mnoho diskusních témat a lekcí o dopadech těchto technologií. To pomůže studentům získat ucelené a uvědomělé pochopení těchto technologií a naučit se technické základy jejich principu.</p>
 </div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>Explore the module</button></a></div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="clear"></div>
 </div>
 
-## How AI Works
+## Jak funguje umělá inteligence
 
 Tato série krátkých videí, k níž úvod poskytl CEO Microsoftu Satya Nadella, Vám poskytne úvod k tomu, jak funguje umělá inteligence a proč na tom záleží. Učte se o neuronových sítích o tom, jak funguje umělá inteligence, a ponořte se do otázek, jako je podjatost algoritmů a etika rozhodování pomocí umělé inteligence.
 
@@ -91,19 +91,19 @@ Tato série krátkých videí, k níž úvod poskytl CEO Microsoftu Satya Nadell
 - [Strojové učení: řešení problémů velkých, malých a trnitých](https://youtu.be/_rdINNHLYaQ) (5:19)
 - [Jak Váš telefon pozná, že toto je pes?](https://youtu.be/bHvf7Tagt18) (5:57)
 - [Co je to umělá inteligence?](https://youtu.be/mJeNghZXtMo) (6:14)
-- [Machine Learning Explained in 5 Minutes](https://youtu.be/3bJ7RChxMWQ) (5:14)
-- [Types of Machine Learning](https://youtu.be/wy-m6sd1BOA) (6:37)
-- [What is Machine Learning and How does it Work?](https://youtu.be/xr5LeWKbVnY) (3:51)
+- [Vysvětlení strojového učení v 5 minutách](https://youtu.be/3bJ7RChxMWQ) (5:14)
+- [Typy strojového učení](https://youtu.be/wy-m6sd1BOA) (6:37)
+- [Co je to strojové učení a jak funguje?](https://youtu.be/xr5LeWKbVnY) (3:51)
 
 
-## More resources
+## Další zdroje
 
 {{ ai_resource_tiles }}
 
-## Activities Powered by AI and ML
+## Aktivity s umělou inteligencí a strojovým učením
 {{ ai_activities_table }}
 
-## Teach and Learn about AI
+## Učte sebe i ostatní o umělé inteligenci
 {{ ai_teach_and_learn_table }}
 
 

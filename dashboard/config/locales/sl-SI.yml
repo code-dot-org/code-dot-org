@@ -276,6 +276,7 @@ sl:
       starwars: Star Wars
       starwarsblocks: Vojna Zvezd (Kocke)
       starwarsblocks_hour: Vojna Zvezd (Kocke)
+      loading: Nalaganje...
     popup:
       progress_for_user: Napredek od %{name}
       progress: Tvoj napredek
@@ -661,6 +662,7 @@ sl:
   pd:
     form_labels:
       email: Elektronska pošta
+      school: Šola
       school_name: Ime šole
       colombian_chilean_school_name: Ime šole
     form_entries:
@@ -673,10 +675,13 @@ sl:
         math: Matematika
         science: Znanost
         la: Jezikoslovje
+        other: Drugi
       resources:
         kodable: Kodable
+        other: Drugi
       robotics:
         kodable: Kodable
+        other: Drugi
       email_opt_in:
         opt_in_yes: Da
         opt_in_no: Ne

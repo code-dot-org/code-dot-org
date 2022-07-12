@@ -1404,11 +1404,5 @@ NetSim.prototype.resetShard = function() {
  * Show the instrutions modal dialog on top of the NetSim interface.
  */
 NetSim.prototype.showInstructionsDialog = function() {
-  getStore().dispatch(
-    openInstructionsDialog({
-      autoClose: false,
-      imgOnly: false,
-      hintsOnly: false
-    })
-  );
+  getStore().dispatch(openInstructionsDialog({imgOnly: false}));
 };

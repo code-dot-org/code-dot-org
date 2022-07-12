@@ -4,15 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "infinity",
-    "serialized_at": "2021-09-29 22:05:43 UTC",
+    "serialized_at": "2022-03-17 18:01:30 UTC",
     "published_state": "preview",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "infinity"
     }
@@ -276,6 +279,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Infinity_move_right"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -297,6 +303,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Infinity_say"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -318,6 +327,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Infinity_move_directions"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -339,6 +351,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Infinity_move_collide"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -360,6 +375,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Infinity_touch_score"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -381,6 +399,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Infinity_shoot"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -402,6 +423,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Infinity_shoot_directions"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -423,6 +447,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Infinity_repeat"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -444,6 +471,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Infinity_catch"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -465,6 +495,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Infinity_finale"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -672,16 +705,6 @@
   ],
   "objectives": [
     {
-      "key": "63be9575-1232-47a5-991c-8bd03ac7c949",
-      "properties": {
-        "description": "Define “coding” and “computer science”"
-      },
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "objective.key": "63be9575-1232-47a5-991c-8bd03ac7c949"
-      }
-    },
-    {
       "key": "0b17cf0a-2614-40be-afbc-1045245d0a38",
       "properties": {
         "description": "Identify key computer science vocabulary"
@@ -689,16 +712,6 @@
       "seeding_key": {
         "lesson.key": "Infinity",
         "objective.key": "0b17cf0a-2614-40be-afbc-1045245d0a38"
-      }
-    },
-    {
-      "key": "b655e0ef-f98f-4db9-93f1-5d842b470c5d",
-      "properties": {
-        "description": "Make connections between computer science concepts and the real world"
-      },
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "objective.key": "b655e0ef-f98f-4db9-93f1-5d842b470c5d"
       }
     },
     {
@@ -710,9 +723,127 @@
         "lesson.key": "Infinity",
         "objective.key": "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1"
       }
+    },
+    {
+      "key": "63be9575-1232-47a5-991c-8bd03ac7c949",
+      "properties": {
+        "description": "Define “coding” and “computer science”"
+      },
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "objective.key": "63be9575-1232-47a5-991c-8bd03ac7c949"
+      }
+    },
+    {
+      "key": "b655e0ef-f98f-4db9-93f1-5d842b470c5d",
+      "properties": {
+        "description": "Make connections between computer science concepts and the real world"
+      },
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "objective.key": "b655e0ef-f98f-4db9-93f1-5d842b470c5d"
+      }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "11-12.W.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.W.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "6.W.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "7.W.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "7.W.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "8.W.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "9-10.W.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Infinity",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.8"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Infinity",
@@ -830,104 +961,6 @@
         "lesson.key": "Infinity",
         "framework.shortcode": "iste",
         "standard.shortcode": "6.d"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "11-12.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "4.W.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "6.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "7.W.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "7.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "8.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "9-10.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Infinity",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.8"
       }
     }
   ],

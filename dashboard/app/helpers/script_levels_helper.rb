@@ -12,7 +12,7 @@ module ScriptLevelsHelper
         # users in or teaching sections with an enabled "lesson extras" flag
         enabled_for_lesson = script_level.script.lesson_extras_available &&
           !script_level.end_of_script?
-        enabled_for_user = current_user && current_user.section_for_script(script_level.script) &&
+        enabled_for_user = current_user&.section_for_script(script_level.script) &&
             current_user.section_for_script(script_level.script).lesson_extras
         enabled_for_teacher = current_user.try(:teacher?) &&
             current_user.sections.where(
@@ -27,8 +27,6 @@ module ScriptLevelsHelper
         end
       end
     else
-      response[:message] = 'no more levels' # used by blockly to show a different feedback message on the last level
-
       if script_level.script.wrapup_video
         response[:video_info] = wrapup_video_then_redirect_response(
           script_level.script.wrapup_video,

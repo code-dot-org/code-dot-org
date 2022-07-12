@@ -300,19 +300,19 @@
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">growing</title>
+            <title name="VAR" id="growing">growing</title>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">jittering</title>
+            <title name="VAR" id="jittering">jittering</title>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">shrinking</title>
+            <title name="VAR" id="shrinking">shrinking</title>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">patrolling</title>
+            <title name="VAR" id="patrolling">patrolling</title>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
@@ -332,7 +332,7 @@
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">wandering</title>
+            <title name="VAR" id="wandering">wandering</title>
           </block>
         </category>
         <category name="Variables" custom="VARIABLE"/>

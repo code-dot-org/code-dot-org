@@ -16,12 +16,17 @@ module Services
         # default.
         def self.serialize
           Script.all.each do |script|
-            next unless script.is_migrated? && !script.use_legacy_lesson_plans?
+            next unless script.is_migrated?
             next unless ScriptConstants.i18n? script.name
 
             # prepare data
-            data = ScriptCrowdinSerializer.new(script).as_json.compact
-            data.delete(:crowdin_key) # don't need this for top-level data
+            # Select only lessons that pass `numbered_lesson?` for consistent `relative_position` values
+            # throughout our translation pipeline
+            data = Serializers::ScriptCrowdinSerializer.new(script, scope: {only_numbered_lessons: true}).as_json.compact
+            # The JSON object will have the script's crowdin_key as the top level key, but we don't
+            # need that, so we will discard the crowdin_key and set data to be the object it is
+            # pointing to.
+            data = data.first[1] unless data.first.nil?
 
             # we expect that some migrated scripts won't have any lesson plan content
             # at all; that's fine, we can just skip those.
@@ -52,7 +57,7 @@ module Services
         # script for the sync in. Note this may be a nested directory like "2021/csf"
         def self.get_script_subdirectory(script)
           # special-case Hour of Code scripts.
-          return "Hour of Code" if ScriptConstants.unit_in_category?(:hoc, script.name)
+          return "Hour of Code" if Script.unit_in_category?('hoc', script.name)
 
           # catchall for scripts without courses
           return 'other' unless script.get_course_version.present?

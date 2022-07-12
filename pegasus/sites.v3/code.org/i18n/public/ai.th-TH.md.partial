@@ -21,8 +21,8 @@ social:
 # เรียนรู้เรื่องปัญญาประดิษฐ์ (AI)
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">NEW AI and Machine Learning Module</h2><p>Our new curriculum module focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts through a number of online and unplugged activities and full-group discussions.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Explore the module</button></a></div>
-<div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="AI Lab"/></div>
+<h2 style="color:#ffffff; margin-top:25px">โมดูลปัญญาประดิษฐ์และการเรียนรู้ของระบบใหม่</h2><p>โมดูลหลักสูตรใหม่ของเราเน้นที่จริยธรรมของปัญญาประดิษฐ์ สำรวจประเด็นอคติ ศึกษาและอธิบายถึงแนวคิดพื้นฐานผ่านกิจกรรมมากมายทั้งแบบออนไลน์และออฟไลน์ รวมถึงการสนทนาร่วมกับนักเรียนทั้งชั้น</p><a  href="#about-aimodule"><button>เรียนรู้เพิ่มเติม</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>สำรวจโมดูล</button></a></div>
+<div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="ห้องปฏิบัติการ AI"/></div>
 <div class="clear"></div>
 </div>
 
@@ -46,17 +46,17 @@ AI และการเรียนรู้ของระบบมีผล�
 
 <a id="about-aimodule"></a>
 
-## NEW AI and Machine Learning Module
+## โมดูลปัญญาประดิษฐ์และการเรียนรู้ของระบบใหม่
 <div>
 <div class="col-50">
-<p>The AI and Machine Learning Module is roughly a five week curriculum module that can be taught as a <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >standalone module</a> or as an optional <a href="https://studio.code.org/s/csd7-2021">unit in CS Discoveries</a>. It focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts</p><p>Because machine learning depends on large sets of data, the new unit includes real life datasets on healthcare, demographics, and more to engage students while exploring questions like, “What is a problem Machine Learning can help solve?” “How can AI help society?” “Who is benefiting from AI?” “Who is being harmed?” “Who is involved?” “Who is missing?”  </p>
-<p>Ethical considerations will be at the forefront of these discussions, with frequent discussion points and lessons around the impacts of these technologies. This will help students develop a holistic, thoughtful understanding of these technologies while they learn the technical underpinnings of how the technologies work.</p>
+<p>โมดูล AI และการเรียนรู้ของระบบเป็นโมดูลหลักสูตรที่ใช้เวลาประมาณ 5 สัปดาห์ ที่นำมาสอนแบบ<a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >โมดูลเดี่ยว ๆ</a> หรือเป็น<a href="https://studio.code.org/s/csd7-2021">โมดูลทางเลือกใน CS Discoveries</a> ก็ย่อมได้ โมดูลนี้จะเน้นที่จริยธรรมของ AI, สำรวจเรื่องอคติ และอธิบายถึงแนวคิดพื้นฐาน</p><p>การเรียนรู้ของระบบต้องใช้ชุดข้อมูลขนาดใหญ่ หน่วยการเรียนรู้ใหม่นี้จะครอบคลุมชุดข้อมูลในชีวิตจริงทั้งในเรื่องของการดูแลสุขภาพ สถิติประชากร และอีกหลายหัวข้อ เพื่อให้นักเรียนมีส่วนร่วม พร้อม ๆ กับหาคำตอบต่าง ๆ เช่น “การเรียนรู้ของระบบช่วยแก้ปัญหาใดได้บ้าง” “AI ช่วยสังคมได้อย่างไร” “ใครจะได้ประโยชน์จาก AI” “ใครจะได้รับอันตราย” “ใครมีส่วนเกี่ยวข้อง” “ใครหายไป”  </p>
+<p>หัวข้อหลักที่จะใช้หารือร่วมกันคือจริยธรรม พร้อมประเด็นที่พูดคุยกันบ่อยและบทเรียนที่เชื่อมโยงกับผลกระทบของเทคโนโลยีนี้ นักเรียนจะได้พัฒนาให้เกิดความเข้าใจเทคโนโลยีเหล่านี้ในองค์รวมที่ผ่านการไตร่ตรองขณะที่ศึกษารายละเอียดสนับสนุนทางเทคนิคเกี่ยวกับวิธีการทำงานของเทคโนโลยีดังกล่าว</p>
 </div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>Explore the module</button></a></div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="clear"></div>
 </div>
 
-## How AI Works
+## AI ทำงานอย่างไร
 
 วิดีโอสั้นชุดนี้เปิดตัวด้วยคำทักทายจาก Satya Nadella ซีอีโอของ Microsoft เนื้อหาในวิดีโอจะแนะนำให้คุณรู้จักกับวิธีการทำงานของปัญญาประดิษฐ์และความสำคัญของเรื่องนี้ ศึกษาเรื่องโครงข่ายประสาทเทียม หรือลักษณะการเรียนรู้ของ AI ก่อนลงรายละเอียดในเรื่องต่าง ๆ เช่น อคติในอัลกอริทึมและหลักจริยรรมในการตัดสินใจของ AI
 
@@ -91,19 +91,19 @@ AI และการเรียนรู้ของระบบมีผล�
 - [การเรียนรู้ของระบบ: การแก้ไขปัญหาใหญ่ เล็กและสุดโหด](https://youtu.be/_rdINNHLYaQ) (5:19)
 - [โทรศัพท์ของคุณทราบได้อย่างไรว่านี่คือน้องหมา](https://youtu.be/bHvf7Tagt18) (5:57)
 - [AI คืออะไร](https://youtu.be/mJeNghZXtMo) (6:14)
-- [Machine Learning Explained in 5 Minutes](https://youtu.be/3bJ7RChxMWQ) (5:14)
-- [Types of Machine Learning](https://youtu.be/wy-m6sd1BOA) (6:37)
-- [What is Machine Learning and How does it Work?](https://youtu.be/xr5LeWKbVnY) (3:51)
+- [การเรียนรู้ของระบบที่อธิบายใน 5 นาที](https://youtu.be/3bJ7RChxMWQ) (5:14)
+- [การเรียนรู้ของระบบประเภทต่าง ๆ](https://youtu.be/wy-m6sd1BOA) (6:37)
+- [การเรียนรู้ของระบบคืออะไรและทำงานอย่างไร](https://youtu.be/xr5LeWKbVnY) (3:51)
 
 
-## More resources
+## แหล่งข้อมูลเพิ่มเติม
 
 {{ ai_resource_tiles }}
 
-## Activities Powered by AI and ML
+## กิจกรรมที่ดำเนินการโดย AI และ ML
 {{ ai_activities_table }}
 
-## Teach and Learn about AI
+## สอนและเรียนรู้เกี่ยวกับ AI
 {{ ai_teach_and_learn_table }}
 
 

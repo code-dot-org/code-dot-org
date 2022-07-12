@@ -1,0 +1,150 @@
+{
+  "script": {
+    "name": "test-plc",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "peer_reviews_to_complete": 42,
+      "professional_learning_course": "Test plc course"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-11-01 23:56:37 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "plc_reviewer",
+    "participant_audience": "facilitator",
+    "seeding_key": {
+      "script.name": "test-plc"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "content",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "content",
+        "script.name": "test-plc"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Sample Module",
+      "name": "Sample Module",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sample Module",
+        "lesson_group.key": "content",
+        "script.name": "test-plc"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "04ca2912-1c34-4a04-9b21-42077ca85e22",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04ca2912-1c34-4a04-9b21-42077ca85e22",
+        "lesson.key": "Sample Module",
+        "lesson_group.key": "content",
+        "script.name": "test-plc"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "bbe64968-5b06-49ab-a81b-24aef444143c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bbe64968-5b06-49ab-a81b-24aef444143c",
+        "lesson_activity.key": "04ca2912-1c34-4a04-9b21-42077ca85e22"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Level 1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Level 1"
+        ],
+        "lesson.key": "Sample Module",
+        "lesson_group.key": "content",
+        "script.name": "test-plc",
+        "activity_section.key": "bbe64968-5b06-49ab-a81b-24aef444143c"
+      },
+      "level_keys": [
+        "Level 1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Level 1",
+        "script_level.level_keys": [
+          "Level 1"
+        ],
+        "lesson.key": "Sample Module",
+        "lesson_group.key": "content",
+        "script.name": "test-plc",
+        "activity_section.key": "bbe64968-5b06-49ab-a81b-24aef444143c"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

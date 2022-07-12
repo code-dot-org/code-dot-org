@@ -318,7 +318,8 @@ const styles = {
 
   wrapper: {
     marginLeft: '3px',
-    marginRight: '3px'
+    marginRight: '3px',
+    display: 'flex'
   },
 
   button: {
@@ -366,6 +367,6 @@ export default connect(function propsFromStore(state) {
     userId: state.pageConstants.userId,
     puzzleNumber: state.pageConstants.puzzleNumber,
     isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed,
-    ttsAutoplayEnabled: state.sectionData.section.ttsAutoplayEnabled
+    ttsAutoplayEnabled: state.instructions.ttsAutoplayEnabledForLevel
   };
 })(StatelessInlineAudio);

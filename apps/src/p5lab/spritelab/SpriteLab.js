@@ -7,8 +7,15 @@ import {getStore} from '@cdo/apps/redux';
 import {clearConsole} from '../redux/textConsole';
 import {clearPrompts, popPrompt} from '../redux/spritelabInput';
 import CoreLibrary from './CoreLibrary';
+import React from 'react';
+import {singleton as studioApp} from '../../StudioApp';
 
 export default class SpriteLab extends P5Lab {
+  getAvatarUrl(levelInstructor) {
+    const defaultAvatar = 'avatar';
+    return `/blockly/media/spritelab/${levelInstructor || defaultAvatar}.png`;
+  }
+
   getMsg() {
     return msg;
   }
@@ -23,6 +30,20 @@ export default class SpriteLab extends P5Lab {
       return;
     }
     return new CoreLibrary(args.p5);
+  }
+
+  async preloadSpriteImages_() {
+    await this.whenAnimationsAreReady();
+    return this.p5Wrapper.preloadSpriteImages(
+      getStore().getState().animationList
+    );
+  }
+
+  preloadLabAssets() {
+    return Promise.all([
+      this.preloadSpriteImages_(),
+      this.p5Wrapper.preloadBackgrounds()
+    ]);
   }
 
   preview() {
@@ -56,21 +77,55 @@ export default class SpriteLab extends P5Lab {
   reset() {
     super.reset();
     getStore().dispatch(clearPrompts());
+    this.clearExecutionErrorWorkspaceAlert();
     this.preview();
   }
 
   onPause(isPaused) {
     const current = new Date().getTime();
     if (isPaused) {
-      this.spritelabLibrary.endPause(current);
+      this.library.endPause(current);
+      Sounds.getSingleton().restartPausedSounds();
     } else {
-      this.spritelabLibrary.startPause(current);
+      this.library.startPause(current);
+      Sounds.getSingleton().pauseSounds();
     }
+  }
+
+  /**
+   * If there is an executionError, display a WorkspaceAlert.
+   * We do this because Sprite Lab has no user-facing console.
+   */
+  reactToExecutionError(msg) {
+    if (!msg) {
+      return;
+    }
+
+    this.executionErrorWorkspaceAlert = studioApp().displayWorkspaceAlert(
+      'error',
+      React.createElement(
+        'div',
+        {},
+        this.getMsg().workspaceAlertError({
+          error: msg || ''
+        })
+      ),
+      true /* bottom */
+    );
+  }
+
+  clearExecutionErrorWorkspaceAlert() {
+    if (!this.executionErrorWorkspaceAlert) {
+      return;
+    }
+
+    studioApp().closeAlert(this.executionErrorWorkspaceAlert);
+    this.executionErrorWorkspaceAlert = undefined;
   }
 
   onPromptAnswer(variableName, value) {
     getStore().dispatch(popPrompt());
-    this.spritelabLibrary.onPromptAnswer(variableName, value);
+    this.library.onPromptAnswer(variableName, value);
   }
 
   setupReduxSubscribers(store) {
@@ -91,5 +146,16 @@ export default class SpriteLab extends P5Lab {
         }
       }
     });
+  }
+
+  /**
+   * Override the string rendered by the feedback dialog, which always displays
+   * another string for final freeplay levels, so this implementation is tightly coupled to
+   * that. See FeedbackUtils.prototype.getFeedbackMessage for implementation details.
+   * @param {boolean} isFinalFreePlayLevel
+   * @returns {string|null}
+   */
+  getReinfFeedbackMsg(isFinalFreePlayLevel) {
+    return isFinalFreePlayLevel ? null : this.getMsg().reinfFeedbackMsg();
   }
 }

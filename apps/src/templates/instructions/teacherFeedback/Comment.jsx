@@ -7,7 +7,7 @@ class Comment extends React.Component {
     isEditable: PropTypes.bool,
     comment: PropTypes.string,
     placeholderText: PropTypes.string,
-    onCommentChange: PropTypes.func.isRequired
+    onCommentChange: PropTypes.func
   };
 
   commentChanged = event => {

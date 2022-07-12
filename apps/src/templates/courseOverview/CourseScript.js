@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import Button from '../Button';
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 import AssignButton from '@cdo/apps/templates/AssignButton';
-import UnassignButton from '@cdo/apps/templates/UnassignButton';
+import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
 import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -20,10 +20,12 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 class CourseScript extends Component {
   static propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     name: PropTypes.string,
     id: PropTypes.number.isRequired,
     courseId: PropTypes.number,
+    courseOfferingId: PropTypes.number,
+    courseVersionId: PropTypes.number,
     description: PropTypes.string,
     assignedSectionId: PropTypes.number,
     showAssignButton: PropTypes.bool,
@@ -66,6 +68,8 @@ class CourseScript extends Component {
       hasNoSections,
       assignedSectionId,
       courseId,
+      courseOfferingId,
+      courseVersionId,
       sectionsForDropdown,
       showAssignButton
     } = this.props;
@@ -76,18 +80,19 @@ class CourseScript extends Component {
       id
     );
 
-    if (isHidden && viewAs === ViewType.Student) {
+    if (isHidden && viewAs === ViewType.Participant) {
       return null;
     }
 
-    const assignedToStudent = viewAs === ViewType.Student && assignedSectionId;
+    const assignedToStudent =
+      viewAs === ViewType.Participant && assignedSectionId;
     const selectedSection = sectionsForDropdown.find(
       section => section.id === selectedSectionId
     );
     const assignedByTeacher =
-      viewAs === ViewType.Teacher &&
+      viewAs === ViewType.Instructor &&
       selectedSection &&
-      selectedSection.scriptId === id;
+      selectedSection.unitId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
 
     return (
@@ -112,25 +117,33 @@ class CourseScript extends Component {
               color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
             />
-            {isAssigned && viewAs === ViewType.Student && <Assigned />}
-            {isAssigned && viewAs === ViewType.Teacher && selectedSectionId && (
-              <UnassignButton sectionId={selectedSectionId} />
-            )}
+            {isAssigned && viewAs === ViewType.Participant && <Assigned />}
+            {isAssigned &&
+              viewAs === ViewType.Instructor &&
+              selectedSectionId && (
+                <UnassignSectionButton
+                  courseName={title}
+                  sectionId={selectedSectionId}
+                  buttonLocationAnalytics={'course-overview-unit'}
+                />
+              )}
             {!isAssigned &&
-              viewAs === ViewType.Teacher &&
+              viewAs === ViewType.Instructor &&
               showAssignButton &&
               selectedSection && (
                 <AssignButton
                   sectionId={selectedSection.id}
                   scriptId={id}
                   courseId={courseId}
+                  courseOfferingId={courseOfferingId}
+                  courseVersionId={courseVersionId}
                   assignmentName={title}
                   sectionName={selectedSection.name}
                 />
               )}
           </span>
         </div>
-        {viewAs === ViewType.Teacher && !hasNoSections && (
+        {viewAs === ViewType.Instructor && !hasNoSections && (
           <CourseScriptTeacherInfo
             disabled={!selectedSectionId}
             isHidden={isHidden}
@@ -184,12 +197,12 @@ export const UnconnectedCourseScript = CourseScript;
 export default connect(
   (state, ownProps) => ({
     viewAs: state.viewAs,
-    selectedSectionId: parseInt(state.teacherSections.selectedSectionId),
+    selectedSectionId: state.teacherSections.selectedSectionId,
     sectionsForDropdown: sectionsForDropdown(
       state.teacherSections,
-      ownProps.id,
-      ownProps.courseId,
-      true
+      ownProps.courseOfferingId,
+      ownProps.courseVersionId,
+      ownProps.id
     ),
     hiddenLessonState: state.hiddenLesson,
     hasNoSections:

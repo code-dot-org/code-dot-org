@@ -32,7 +32,10 @@ export const PROJECT_TYPE_MAP = {
   calc: i18n.projectTypeCalc(),
   dance: i18n.projectTypeDance(),
   spritelab: i18n.projectTypeSpriteLab(),
-  javalab: i18n.projectTypeJavalab()
+  javalab: i18n.projectTypeJavalab(),
+  poetry: i18n.projectTypePoetry(),
+  poetry_hoc: i18n.projectTypePoetry(),
+  thebadguys: i18n.projectTypeThebadguys()
 };
 
 export const FEATURED_PROJECT_TYPE_MAP = {
@@ -57,5 +60,7 @@ export const FEATURED_PROJECT_TYPE_MAP = {
   artist_k1: i18n.projectTypeK1(),
   playlab_k1: i18n.projectTypeK1(),
   dance: i18n.projectTypeDance(),
+  poetry: i18n.projectTypePoetry(),
+  thebadguys: i18n.projectTypeThebadguys(),
   spritelab: i18n.projectTypeSpriteLab()
 };

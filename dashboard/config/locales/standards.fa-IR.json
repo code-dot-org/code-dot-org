@@ -1,0 +1,464 @@
+{
+  "fa-IR": {
+    "data": {
+      "standards": {
+        "ccela/3.RL.4": {
+          "description": ""
+        },
+        "ccela/4.RL.7": {
+          "description": ""
+        },
+        "ccela/5.RL.4": {
+          "description": ""
+        },
+        "ccela/5.RL.7": {
+          "description": ""
+        },
+        "csta/1B-AP-10": {
+          "description": ""
+        },
+        "csta/1B-AP-12": {
+          "description": ""
+        },
+        "csta/1B-AP-15": {
+          "description": ""
+        },
+        "ccela/6.SL.1": {
+          "description": ""
+        },
+        "ccela/7.SL.1": {
+          "description": ""
+        },
+        "ccmath/MP.1": {
+          "description": ""
+        },
+        "ccmath/MP.2": {
+          "description": ""
+        },
+        "ccmath/MP.5": {
+          "description": ""
+        },
+        "ccmath/MP.6": {
+          "description": ""
+        },
+        "ccmath/MP.7": {
+          "description": ""
+        },
+        "ccmath/MP.8": {
+          "description": ""
+        },
+        "csta2011/CPP.L1:6-06": {
+          "description": ""
+        },
+        "csta2011/CT.L2:1": {
+          "description": ""
+        },
+        "csta2011/CT.L2:12": {
+          "description": ""
+        },
+        "csta2011/CT.L2:6": {
+          "description": ""
+        },
+        "csta2011/CT.L2:7": {
+          "description": ""
+        },
+        "csta2011/CT.L2:8": {
+          "description": ""
+        },
+        "iste/1.a": {
+          "description": ""
+        },
+        "iste/1.b": {
+          "description": ""
+        },
+        "iste/1.c": {
+          "description": ""
+        },
+        "iste/4.b": {
+          "description": ""
+        },
+        "iste/6.a": {
+          "description": ""
+        },
+        "iste/6.c": {
+          "description": ""
+        },
+        "iste/6.d": {
+          "description": ""
+        },
+        "ccela/1.L.6": {
+          "description": ""
+        },
+        "ccela/1.SL.1": {
+          "description": ""
+        },
+        "ccela/11-12.RI.4": {
+          "description": ""
+        },
+        "ccela/2.L.6": {
+          "description": ""
+        },
+        "ccela/2.SL.1": {
+          "description": ""
+        },
+        "ccela/3.L.6": {
+          "description": ""
+        },
+        "ccela/3.SL.1": {
+          "description": ""
+        },
+        "ccmath/1.OA.1": {
+          "description": ""
+        },
+        "ccmath/2.OA.1": {
+          "description": ""
+        },
+        "ccmath/3.OA.3": {
+          "description": ""
+        },
+        "csta2011/CD.L1:3-01": {
+          "description": ""
+        },
+        "csta2011/CI.L1:3-01": {
+          "description": ""
+        },
+        "csta2011/CPP.L1:6-01": {
+          "description": ""
+        },
+        "ccela/11-12.L.6": {
+          "description": ""
+        },
+        "ccela/4.L.6": {
+          "description": ""
+        },
+        "ccela/5.L.6": {
+          "description": ""
+        },
+        "ccmath/4.MD.6": {
+          "description": ""
+        },
+        "ccmath/4.NBT.4": {
+          "description": ""
+        },
+        "ccmath/4.NBT.5": {
+          "description": ""
+        },
+        "ccmath/7.G.2": {
+          "description": ""
+        },
+        "csta2011/CPP.L1:3-02": {
+          "description": ""
+        },
+        "csta2011/CPP.L1:3-04": {
+          "description": ""
+        },
+        "ccela/11-12.W.6": {
+          "description": ""
+        },
+        "ccela/4.W.3": {
+          "description": ""
+        },
+        "ccela/6.W.6": {
+          "description": ""
+        },
+        "ccela/7.W.3": {
+          "description": ""
+        },
+        "ccela/7.W.6": {
+          "description": ""
+        },
+        "ccela/8.W.6": {
+          "description": ""
+        },
+        "ccela/9-10.W.6": {
+          "description": ""
+        },
+        "ccmath/MP.4": {
+          "description": ""
+        },
+        "csta2011/CL.L1:6-02": {
+          "description": ""
+        },
+        "csta2011/CPP.L1:3-01": {
+          "description": ""
+        },
+        "csta2011/CPP.L2:3": {
+          "description": ""
+        },
+        "iste/2.a": {
+          "description": ""
+        },
+        "iste/2.b": {
+          "description": ""
+        },
+        "iste/4.d": {
+          "description": ""
+        },
+        "csta/1A-AP-11": {
+          "description": ""
+        },
+        "csta/1A-IC-17": {
+          "description": ""
+        },
+        "csta/1A-AP-09": {
+          "description": ""
+        },
+        "csta/1A-AP-14": {
+          "description": ""
+        },
+        "csp2021/IOC-2.B.5": {
+          "description": ""
+        },
+        "csta/3A-NI-06": {
+          "description": ""
+        },
+        "csta/3A-NI-07": {
+          "description": ""
+        },
+        "csta/3B-NI-04": {
+          "description": ""
+        },
+        "csp2021/DAT-1.D.1": {
+          "description": ""
+        },
+        "csp2021/DAT-1.D.2": {
+          "description": ""
+        },
+        "csp2021/DAT-1.D.3": {
+          "description": ""
+        },
+        "csp2021/DAT-1.D.4": {
+          "description": ""
+        },
+        "csta/3A-DA-10": {
+          "description": ""
+        },
+        "csta/1B-CS-01": {
+          "description": ""
+        },
+        "csta/1B-CS-02": {
+          "description": ""
+        },
+        "csta/1A-IC-18": {
+          "description": ""
+        },
+        "csta/1A-CS-02": {
+          "description": ""
+        },
+        "csta/1A-CS-03": {
+          "description": ""
+        },
+        "csta/1A-AP-08": {
+          "description": ""
+        },
+        "csta/1A-AP-12": {
+          "description": ""
+        },
+        "csta/1A-AP-10": {
+          "description": ""
+        },
+        "csta/1A-NI-04": {
+          "description": ""
+        },
+        "csta/1B-IC-18": {
+          "description": ""
+        },
+        "csta/1A-CS-01": {
+          "description": ""
+        },
+        "csta/1A-IC-16": {
+          "description": ""
+        },
+        "csta/1B-AP-11": {
+          "description": ""
+        },
+        "csta/1B-NI-05": {
+          "description": ""
+        },
+        "csta/1B-AP-08": {
+          "description": ""
+        },
+        "csta/1B-AP-09": {
+          "description": ""
+        },
+        "csta/1B-DA-06": {
+          "description": ""
+        },
+        "csta/1B-DA-07": {
+          "description": ""
+        },
+        "csta/1B-NI-04": {
+          "description": ""
+        },
+        "csta/1B-IC-20": {
+          "description": ""
+        },
+        "csta/1B-IC-21": {
+          "description": ""
+        },
+        "csta/1B-AP-13": {
+          "description": ""
+        },
+        "csta/1B-AP-14": {
+          "description": ""
+        },
+        "csta/1B-AP-16": {
+          "description": ""
+        },
+        "csta/1B-AP-17": {
+          "description": ""
+        },
+        "csta/1B-CS-03": {
+          "description": ""
+        },
+        "csta/1B-IC-19": {
+          "description": ""
+        },
+        "csta/1A-DA-05": {
+          "description": ""
+        },
+        "csta/1A-DA-06": {
+          "description": ""
+        },
+        "csta/1A-DA-07": {
+          "description": ""
+        },
+        "csta/1A-AP-13": {
+          "description": ""
+        },
+        "csta/1A-AP-15": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-ii.3-5": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-iv.3-5": {
+          "description": ""
+        },
+        "csta/2-AP-17": {
+          "description": ""
+        },
+        "csta/2-IC-21": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-i.6-8": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-i.9-12": {
+          "description": ""
+        },
+        "csta/2-IC-20": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-ii.K-2": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-i.K-2": {
+          "description": ""
+        },
+        "csta/2-DA-09": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-iii.6-8": {
+          "description": ""
+        },
+        "csta/3A-DA-12": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-i.3-5": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-i.6-8": {
+          "description": ""
+        },
+        "csta/3B-DA-05": {
+          "description": ""
+        },
+        "csta/2-AP-13": {
+          "description": ""
+        },
+        "csta/3A-AP-16": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-iii.3-5": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-i.9-12": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-iii.3-5": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-iii.6-8": {
+          "description": ""
+        },
+        "csta/3A-IC-25": {
+          "description": ""
+        },
+        "csta/2-AP-19": {
+          "description": ""
+        },
+        "csta/2-AP-11": {
+          "description": ""
+        },
+        "csta/2-AP-12": {
+          "description": ""
+        },
+        "csta/3A-IC-24": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-ii.9-12": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-iv.9-12": {
+          "description": ""
+        },
+        "csta/2-AP-15": {
+          "description": ""
+        },
+        "csta/2-IC-22": {
+          "description": ""
+        },
+        "csta/2-DA-08": {
+          "description": ""
+        },
+        "csta/2-CS-01": {
+          "description": ""
+        },
+        "csta/2-CS-02": {
+          "description": ""
+        },
+        "csta/2-AP-10": {
+          "description": ""
+        },
+        "csta/2-AP-16": {
+          "description": ""
+        },
+        "csta/2-AP-18": {
+          "description": ""
+        },
+        "csta/2-AP-14": {
+          "description": ""
+        },
+        "csta/2-CS-03": {
+          "description": ""
+        },
+        "csta/2-DA-07": {
+          "description": ""
+        },
+        "csta/2-NI-05": {
+          "description": ""
+        },
+        "csta/2-NI-06": {
+          "description": ""
+        },
+        "csta/2-IC-23": {
+          "description": ""
+        },
+        "csta/3A-AP-20": {
+          "description": ""
+        }
+      }
+    }
+  }
+}

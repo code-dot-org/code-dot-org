@@ -1,1 +1,24 @@
---- {}
+---
+pt:
+  data:
+    shared_functions:
+      driving with arrow keys: dirigindo com as teclas de setas
+      fluttering: tremulando
+      growing: crescendo
+      jittering: tremendo
+      moving east: movendo para o leste
+      moving east and looping: movendo-se para o Leste em loop
+      moving north: movendo para o norte
+      moving north and looping: movendo-se para o Norte em loop
+      moving south: movendo para o sul
+      moving south and looping: movendo-se para o Sul em loop
+      moving west: movendo para o oeste
+      moving west and looping: movendo-se para o Oeste em loop
+      moving with arrow keys: utilizando as setas
+      patrolling: patrulhando
+      shrinking: encolhendo
+      spinning left: girando para a esquerda
+      spinning right: girando para a direita
+      swimming left and right: nadando para a esquerda e para a direita
+      wandering: vagando
+      wobbling: balançando

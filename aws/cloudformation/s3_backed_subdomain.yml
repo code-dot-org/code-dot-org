@@ -1,40 +1,47 @@
 ---
 AWSTemplateFormatVersion: 2010-09-09
-Description:
-  "Basic template for provisioning subdomains which serve content from S3 via
-  CloudFront, like we do for the TTS audio files. We need three distinct
-  components for this functionality.
- 
-  1. Route53 record mapping subdomain to CloudFront distribution (ie, tts.code.org)
-  2. CloudFront distribution with the domain of the S3 Bucket as origin (ie, cdo-tts.s3.amazonaws.com)
-  3. S3 Bucket with a BucketPolicy which grants global read access (ie, cdo-tts)
- 
-  Notes:
+Description: Basic template for provisioning subdomains which serve content from S3 via CloudFront.
 
-  - The resources provisioned by this template are not environment-specific;
-    each subdomain should be provisioned once and then used by all
-    environments, including test and development.
-  - Changes to this template are not automatically applied by our Continuous
-    Integration / Deployment process, and will need to be manually applied to
-    each stack that's using it.
-
-  For more, see:
- 
-  https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html
-  https://github.com/aws-samples/amazon-cloudfront-secure-static-site"
+# We need three distinct components for this functionality.
+#
+# 1. Route53 record mapping subdomain to CloudFront distribution (ie,
+#    tts.code.org)
+# 2. CloudFront distribution with the domain of the S3 Bucket as origin (ie,
+#    cdo-tts.s3.amazonaws.com)
+# 3. S3 Bucket with a BucketPolicy which grants global read access (ie, cdo-tts)
+#
+# Notes:
+# - The resources provisioned by this template are not environment-specific;
+#   each subdomain should be provisioned once and then used by all environments,
+#   including test and development.
+# - Changes to this template are not automatically applied by our Continuous
+#   Integration / Deployment process, and will need to be manually applied to
+#   each stack that's using it.
+#
+# Known stacks using this template:
+# - s3-backed-subdomain-dsco
+# - s3-backed-subdomain-lesson-plans
+#
+# For more, see:
+# - https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html
+# - https://github.com/aws-samples/amazon-cloudfront-secure-static-site"
 
 Parameters:
   BucketName:
     Type: String
     Default: cdo-dev-s3-backed-subdomain
+    Description: The name of the s3 bucket, often the same as the domain.
   CertificateArn:
     Type: String
+    Description: The ARN of a certificate for the selected Domain.
   Domain:
     Type: String
     Default: dev-code.org
+    Description: The top level domain name, e.g. 'code.org', 'dev-code.org'
   Subdomain:
     Type: String
     Default: s3-backed-subdomain
+    Description: The subdomain under the Domain to use for the site.
 
 Resources:
   Bucket:
@@ -42,6 +49,15 @@ Resources:
     Properties:
       AccessControl: PublicRead
       BucketName: !Ref BucketName
+      CorsConfiguration:
+        CorsRules:
+          - AllowedMethods: [GET]
+            AllowedOrigins:
+              - !Sub "*.${Domain}"
+              # Permit local host development environments
+              - '*.code.org:3000'
+              - 'http://localhost-studio.code.org:*'
+            AllowedHeaders: ['*']
       Tags:
         - Key: environment
           Value: production

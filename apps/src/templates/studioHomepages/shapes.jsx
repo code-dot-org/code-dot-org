@@ -42,6 +42,7 @@ const shapes = {
     id: PropTypes.string.isRequired
   }),
   specialAnnouncement: PropTypes.shape({
+    id: PropTypes.string,
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,

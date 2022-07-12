@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 kk:
   errors:
     messages:
@@ -225,6 +231,7 @@ kk:
       playlab: 'Ойындар Лабораториясы'
       sports: 'Спорттар'
       starwars: 'Жұлдызды Соғыстар'
+      loading: 'ЖҮКТЕЛУДЕ...'
     popup:
       progress_for_user: "%{name} сабақ оқу барысы"
       progress: 'Сіздің сабақ оқу барысыңыз'
@@ -596,10 +603,13 @@ kk:
         math: 'Математика'
         science: 'Ғылым'
         la: 'Тіл Өнерлері'
+        other: "Басқасы"
       resources:
         kodable: 'Kodable'
+        other: "Басқасы"
       robotics:
         kodable: 'Kodable'
+        other: "Басқасы"
       email_opt_in:
         opt_in_yes: 'Иә'
         opt_in_no: 'Жоқ'

@@ -137,11 +137,17 @@
         "2-3 Artist Functions 2": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "2-3 Artist Functions 4": {
@@ -1114,20 +1120,23 @@
             "parameters": {
               "points": "punkty",
               "length": "długość"
-            }
+            },
+            "description": "narysuj gwiazdę o danej liczbie ramion i ich długości"
           },
           "draw a circle": {
             "name": "narysuj okrąg",
             "parameters": {
               "radius": "promień"
-            }
+            },
+            "description": "narysuj okrąg o danym promieniu"
           },
           "draw a pinwheel": {
             "parameters": {
               "sides": "boki",
               "length": "długość",
               "repeat": "powtarzaj"
-            }
+            },
+            "name": "narysuj rozetę"
           },
           "draw a triangle": {
             "name": "narysuj trójkąt",
@@ -1139,7 +1148,8 @@
             "parameters": {
               "sides": "boki",
               "length": "długość"
-            }
+            },
+            "name": "narysuj wielokąt foremny"
           },
           "draw a house": {
             "name": "narysuj dom",
@@ -1160,14 +1170,16 @@
             "parameters": {
               "height": "wysokość",
               "actor": "postać"
-            }
+            },
+            "description": "blok funkcji skoku z parametrami wysokości i aktora"
           },
           "patrol": {
             "description": "funkcja patrolu, która ma parametr aktora i prędkości",
             "parameters": {
               "actor": "postać",
               "speed": "prędkość"
-            }
+            },
+            "name": "patroluj"
           }
         },
         "Standalone_Artist_7": {
@@ -2006,26 +2018,41 @@
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions3_2018": {
@@ -2416,26 +2443,41 @@
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions_predict2": {
@@ -4062,6 +4104,9 @@
         "courseE_artist_functions2_2021": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions3_2021": {
@@ -4173,6 +4218,9 @@
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions_predict2_2021": {
@@ -4346,6 +4394,9 @@
         "courseE_artist_functions2_dani": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions4_dani": {
@@ -4361,6 +4412,69 @@
         "courseE_artist_functions_predict1_dani": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "zresetuj grę"
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "funkcja 1"
+          },
+          "function 2": {
+            "name": "funkcja 2"
+          }
+        },
+        "2-3 Artist Functions 1": {
+          "draw ear stems": {
+            "name": "narysuj łodygi"
+          }
+        },
+        "courseE_artist_functions1": {
+          "draw ear stems": {
+            "name": "narysuj łodygi"
+          }
+        },
+        "courseE_artist_functions1_copy": {
+          "draw ear stems": {
+            "name": "narysuj łodygi"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "narysuj łodygi"
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "narysuj kwadrat"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "narysuj wielokąt foremny",
+            "parameters": {
+              "sides": "boki",
+              "length": "długość"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "funkcja 1"
+          },
+          "function 2": {
+            "name": "funkcja 2"
+          }
+        },
+        "2-3 Artist Loops 2": {
+          "draw 3 hexagons": {
+            "name": "narysuj 3 sześciokąty"
           }
         }
       }

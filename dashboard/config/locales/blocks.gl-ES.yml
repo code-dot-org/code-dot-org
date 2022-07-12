@@ -154,6 +154,10 @@ gl:
           CONDITION:
             '"when"': cando
             '"while"': mentras
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_getProp:
         options:
           PROPERTY:
@@ -200,6 +204,8 @@ gl:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": triture
+            "'sound://category_animals/cat.mp3'": gato
+            "'sound://category_animals/dog.mp3'": can
             "'sound://category_digital/jump_7.mp3'": saltar
       gamelab_randColor:
         text: cor aleatoria
@@ -358,6 +364,31 @@ gl:
             '"down"': frecha cara abaixo
             '"left"': frecha esquerda
             '"right"': frecha dereita
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': corazóns
+            '"rainbow"': arco da vella
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': noite
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': saltar
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': nubrado
+            '"hearts"': corazóns
+          PALETTE:
+            '"rainbow"': arco da vella
+            '"winter"': inverno
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': corazóns
       RyanLab_moveForward:
         text: avance
       RyanLab_turnLeft:

@@ -4170,3 +4170,26 @@ ru:
         image: notes/hoc_dance_congrats_7.png
         text: В конце урока ты сможешь поделиться с друзьями ссылкой на свое творение.
           Дай волю воображению и просто получи удовольствие!
+    poemart_intro:
+      1:
+        image: notes/hoc_poem_art_2021_introduction_01.jpg
+      2:
+        image: notes/hoc_poem_art_2021_introduction_02.jpg
+      3:
+        image: notes/hoc_poem_art_2021_introduction_03.jpg
+      4:
+        image: notes/hoc_poem_art_2021_introduction_04.jpg
+      5:
+        image: notes/hoc_poem_art_2021_introduction_05.jpg
+      6:
+        image: notes/hoc_poem_art_2021_introduction_06.jpg
+      7:
+        image: notes/hoc_poem_art_2021_introduction_07.jpg
+      8:
+        image: notes/hoc_poem_art_2021_introduction_08.jpg
+      9:
+        image: notes/hoc_poem_art_2021_introduction_09.jpg
+      10:
+        image: notes/hoc_poem_art_2021_introduction_10.jpg
+      11:
+        image: notes/hoc_poem_art_2021_introduction_11.jpg

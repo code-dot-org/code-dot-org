@@ -1,9 +1,0 @@
-{
-  "func": "Math.round",
-  "category": "Math",
-  "type": "value",
-  "params": [
-    "__"
-  ],
-  "docFunc": "mathRound"
-}

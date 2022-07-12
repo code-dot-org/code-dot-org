@@ -1520,6 +1520,30 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Шинэ блок!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Шинэ блок!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Шинэ блок!",
+          "poetry_foreground": "Шинэ блок!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Шинэ блок!",
+          "poetry_multiple_sprites": "Шинэ блок!",
+          "poetry_new_block": "Шинэ блок!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Шинэ блок!",
+          "poetry_music": "Шинэ блок!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Шинэ блок!",
+          "poetry_sprite_stops": "Шинэ блок!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Шинэ блок!",
+          "poetry_remove_sprite": "Шинэ блок!"
         }
       }
     }

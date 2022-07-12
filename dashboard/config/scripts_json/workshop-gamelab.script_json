@@ -4,11 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-08-03 22:47:06 UTC",
+    "family_name": "workshop-gamelab",
+    "serialized_at": "2022-04-08 15:40:40 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "workshop-gamelab"
     }
@@ -89,16 +95,216 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "4a28d903-b7ed-442b-a334-b74c0ae5ec77",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4a28d903-b7ed-442b-a334-b74c0ae5ec77",
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "key": "340c4448-4557-4bbf-8c17-41b2f80aaa1d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "340c4448-4557-4bbf-8c17-41b2f80aaa1d",
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "key": "20a08cf7-8e52-409f-91dd-0c82120692c6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "20a08cf7-8e52-409f-91dd-0c82120692c6",
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "key": "c3073ac0-325d-4ac9-b28c-b8229ed8c319",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c3073ac0-325d-4ac9-b28c-b8229ed8c319",
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "db8d3c0f-e86e-485e-a960-1365920a7f7c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Workshop Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "db8d3c0f-e86e-485e-a960-1365920a7f7c",
+        "lesson_activity.key": "4a28d903-b7ed-442b-a334-b74c0ae5ec77"
+      }
+    },
+    {
+      "key": "d4e92aa1-3dd7-4dc7-81f2-53d48252222d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Video: Drawing in Game Lab - Part 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "d4e92aa1-3dd7-4dc7-81f2-53d48252222d",
+        "lesson_activity.key": "4a28d903-b7ed-442b-a334-b74c0ae5ec77"
+      }
+    },
+    {
+      "key": "936d3c60-55ae-4262-89e4-2783b9f2a0b7",
+      "position": 3,
+      "properties": {
+        "progression_name": "The Draw Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "936d3c60-55ae-4262-89e4-2783b9f2a0b7",
+        "lesson_activity.key": "4a28d903-b7ed-442b-a334-b74c0ae5ec77"
+      }
+    },
+    {
+      "key": "7424d275-6bec-4dc4-baff-1173f72d859c",
+      "position": 4,
+      "properties": {
+        "progression_name": "Video: Introduction to the Draw Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "7424d275-6bec-4dc4-baff-1173f72d859c",
+        "lesson_activity.key": "4a28d903-b7ed-442b-a334-b74c0ae5ec77"
+      }
+    },
+    {
+      "key": "abde0e89-e1bb-47a3-8850-6a37ac2ece89",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "abde0e89-e1bb-47a3-8850-6a37ac2ece89",
+        "lesson_activity.key": "4a28d903-b7ed-442b-a334-b74c0ae5ec77"
+      }
+    },
+    {
+      "key": "88e33749-4f59-4f94-8b6f-2c23fe19e140",
+      "position": 1,
+      "properties": {
+        "progression_name": "Fast-Forward: Variables to Sprites"
+      },
+      "seeding_key": {
+        "activity_section.key": "88e33749-4f59-4f94-8b6f-2c23fe19e140",
+        "lesson_activity.key": "340c4448-4557-4bbf-8c17-41b2f80aaa1d"
+      }
+    },
+    {
+      "key": "9bc9a719-5386-4394-ae05-974376358ce9",
+      "position": 2,
+      "properties": {
+        "progression_name": "Video: Introduction to Sprites"
+      },
+      "seeding_key": {
+        "activity_section.key": "9bc9a719-5386-4394-ae05-974376358ce9",
+        "lesson_activity.key": "340c4448-4557-4bbf-8c17-41b2f80aaa1d"
+      }
+    },
+    {
+      "key": "dff199b9-4a3e-4be3-ae19-c1a5938e5b16",
+      "position": 3,
+      "properties": {
+        "progression_name": "Video: The Animation Tab"
+      },
+      "seeding_key": {
+        "activity_section.key": "dff199b9-4a3e-4be3-ae19-c1a5938e5b16",
+        "lesson_activity.key": "340c4448-4557-4bbf-8c17-41b2f80aaa1d"
+      }
+    },
+    {
+      "key": "73f54a21-5d8a-4edd-9ea5-8e44d4d259a3",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "73f54a21-5d8a-4edd-9ea5-8e44d4d259a3",
+        "lesson_activity.key": "340c4448-4557-4bbf-8c17-41b2f80aaa1d"
+      }
+    },
+    {
+      "key": "efcf375f-b24a-47ce-89a3-1831d205958c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Video: Booleans"
+      },
+      "seeding_key": {
+        "activity_section.key": "efcf375f-b24a-47ce-89a3-1831d205958c",
+        "lesson_activity.key": "20a08cf7-8e52-409f-91dd-0c82120692c6"
+      }
+    },
+    {
+      "key": "06ac8470-eb56-4a23-b54d-0f017c11944e",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e",
+        "lesson_activity.key": "20a08cf7-8e52-409f-91dd-0c82120692c6"
+      }
+    },
+    {
+      "key": "3336117b-4b46-4232-99f7-3a625af28250",
+      "position": 1,
+      "properties": {
+        "progression_name": "CSD U3 SFLP Card Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "3336117b-4b46-4232-99f7-3a625af28250",
+        "lesson_activity.key": "c3073ac0-325d-4ac9-b28c-b8229ed8c319"
+      }
+    },
+    {
+      "key": "6e869c2a-f85c-4eaf-8847-82e39b6303c4",
+      "position": 2,
+      "properties": {
+        "progression_name": "CSD U3 Interactive Card Exemplar"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e869c2a-f85c-4eaf-8847-82e39b6303c4",
+        "lesson_activity.key": "c3073ac0-325d-4ac9-b28c-b8229ed8c319"
+      }
+    },
+    {
+      "key": "f6981500-557e-4748-a2db-60f79bf3f95c",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f6981500-557e-4748-a2db-60f79bf3f95c",
+        "lesson_activity.key": "c3073ac0-325d-4ac9-b28c-b8229ed8c319"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -113,7 +319,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "db8d3c0f-e86e-485e-a960-1365920a7f7c"
       },
       "level_keys": [
         "Game Lab Workshop: Introduction"
@@ -122,7 +329,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -137,7 +344,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "d4e92aa1-3dd7-4dc7-81f2-53d48252222d"
       },
       "level_keys": [
         "CSD: Drawing in Game Lab 1"
@@ -146,12 +354,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3 - Simple Drawing - Rectangle"
-        ]
+        ],
+        "progression": "The Draw Loop"
       },
       "bonus": false,
       "seeding_key": {
@@ -160,7 +369,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "936d3c60-55ae-4262-89e4-2783b9f2a0b7"
       },
       "level_keys": [
         "U3 - Simple Drawing - Rectangle"
@@ -169,12 +379,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3 - Simple Drawing - Order of Blocks"
-        ]
+        ],
+        "progression": "The Draw Loop"
       },
       "bonus": false,
       "seeding_key": {
@@ -183,7 +394,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "936d3c60-55ae-4262-89e4-2783b9f2a0b7"
       },
       "level_keys": [
         "U3 - Simple Drawing - Order of Blocks"
@@ -192,12 +404,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U3 - Simple Drawing - Fill"
-        ]
+        ],
+        "progression": "The Draw Loop"
       },
       "bonus": false,
       "seeding_key": {
@@ -206,7 +419,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "936d3c60-55ae-4262-89e4-2783b9f2a0b7"
       },
       "level_keys": [
         "U3 - Simple Drawing - Fill"
@@ -215,12 +429,13 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Game Lab Workshop: Random"
-        ]
+        ],
+        "progression": "The Draw Loop"
       },
       "bonus": false,
       "seeding_key": {
@@ -229,7 +444,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "936d3c60-55ae-4262-89e4-2783b9f2a0b7"
       },
       "level_keys": [
         "Game Lab Workshop: Random"
@@ -238,7 +454,7 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -253,7 +469,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "936d3c60-55ae-4262-89e4-2783b9f2a0b7"
       },
       "level_keys": [
         "Game Lab Workshop: Draw Loop"
@@ -262,7 +479,7 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -277,7 +494,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "7424d275-6bec-4dc4-baff-1173f72d859c"
       },
       "level_keys": [
         "CSD: Introduction to the Draw Loop"
@@ -286,7 +504,7 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -300,7 +518,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "abde0e89-e1bb-47a3-8850-6a37ac2ece89"
       },
       "level_keys": [
         "GameLab Workshop: Draw Loop Shapes"
@@ -309,7 +528,7 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -323,7 +542,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "abde0e89-e1bb-47a3-8850-6a37ac2ece89"
       },
       "level_keys": [
         "CSD U3 Random Animation"
@@ -332,7 +552,7 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -346,7 +566,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "abde0e89-e1bb-47a3-8850-6a37ac2ece89"
       },
       "level_keys": [
         "CSD U3 Variables make a square"
@@ -355,7 +576,7 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -369,7 +590,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "abde0e89-e1bb-47a3-8850-6a37ac2ece89"
       },
       "level_keys": [
         "U3 Variables misconceptions try it"
@@ -378,7 +600,7 @@
     {
       "chapter": 13,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -392,7 +614,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "abde0e89-e1bb-47a3-8850-6a37ac2ece89"
       },
       "level_keys": [
         "CSD U3 Counters counter square movement"
@@ -401,7 +624,7 @@
     {
       "chapter": 14,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -416,7 +639,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "88e33749-4f59-4f94-8b6f-2c23fe19e140"
       },
       "level_keys": [
         "Game Lab Workshop: Variables to Sprites"
@@ -425,7 +649,7 @@
     {
       "chapter": 15,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -440,7 +664,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "9bc9a719-5386-4394-ae05-974376358ce9"
       },
       "level_keys": [
         "CSD: Sprites in Game Lab"
@@ -449,12 +674,13 @@
     {
       "chapter": 16,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U3 Sprites intro sprites"
-        ]
+        ],
+        "progression": "Video: The Animation Tab"
       },
       "bonus": false,
       "seeding_key": {
@@ -463,7 +689,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "dff199b9-4a3e-4be3-ae19-c1a5938e5b16"
       },
       "level_keys": [
         "CSD U3 Sprites intro sprites"
@@ -472,12 +699,13 @@
     {
       "chapter": 17,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U3 Sprites animating with sprites"
-        ]
+        ],
+        "progression": "Video: The Animation Tab"
       },
       "bonus": false,
       "seeding_key": {
@@ -486,7 +714,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "dff199b9-4a3e-4be3-ae19-c1a5938e5b16"
       },
       "level_keys": [
         "CSD U3 Sprites animating with sprites"
@@ -495,12 +724,13 @@
     {
       "chapter": 18,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U3 Sprites debug watchers"
-        ]
+        ],
+        "progression": "Video: The Animation Tab"
       },
       "bonus": false,
       "seeding_key": {
@@ -509,7 +739,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "dff199b9-4a3e-4be3-ae19-c1a5938e5b16"
       },
       "level_keys": [
         "CSD U3 Sprites debug watchers"
@@ -518,12 +749,13 @@
     {
       "chapter": 19,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U3 Sprites debug background"
-        ]
+        ],
+        "progression": "Video: The Animation Tab"
       },
       "bonus": false,
       "seeding_key": {
@@ -532,7 +764,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "dff199b9-4a3e-4be3-ae19-c1a5938e5b16"
       },
       "level_keys": [
         "CSD U3 Sprites debug background"
@@ -541,7 +774,7 @@
     {
       "chapter": 20,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -556,7 +789,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "dff199b9-4a3e-4be3-ae19-c1a5938e5b16"
       },
       "level_keys": [
         "CSD: Animation Tab"
@@ -565,7 +799,7 @@
     {
       "chapter": 21,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -579,7 +813,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "73f54a21-5d8a-4edd-9ea5-8e44d4d259a3"
       },
       "level_keys": [
         "CSD U3 - images - first sprite with image"
@@ -588,7 +823,7 @@
     {
       "chapter": 22,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -602,7 +837,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "73f54a21-5d8a-4edd-9ea5-8e44d4d259a3"
       },
       "level_keys": [
         "CSD U3 - images - changing scene"
@@ -611,7 +847,7 @@
     {
       "chapter": 23,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -625,7 +861,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "73f54a21-5d8a-4edd-9ea5-8e44d4d259a3"
       },
       "level_keys": [
         "U3 - Sprites and Mod - Mouse X and Y"
@@ -634,7 +871,7 @@
     {
       "chapter": 24,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -649,7 +886,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "efcf375f-b24a-47ce-89a3-1831d205958c"
       },
       "level_keys": [
         "CSD U3 - Booleans Video"
@@ -658,7 +896,7 @@
     {
       "chapter": 25,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -672,7 +910,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       },
       "level_keys": [
         "CSD U3 Boolean Modify"
@@ -681,7 +920,7 @@
     {
       "chapter": 26,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -695,7 +934,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       },
       "level_keys": [
         "CSD U3 - conditionals - Matching"
@@ -704,7 +944,7 @@
     {
       "chapter": 27,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -718,7 +958,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       },
       "level_keys": [
         "CSD U3 Keypress Boolean"
@@ -727,7 +968,7 @@
     {
       "chapter": 28,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -741,7 +982,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       },
       "level_keys": [
         "CSD U3 UP_ARROW"
@@ -750,7 +992,7 @@
     {
       "chapter": 29,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -764,7 +1006,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       },
       "level_keys": [
         "CSD U3 Direction Arrows"
@@ -773,7 +1016,7 @@
     {
       "chapter": 30,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -787,7 +1030,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       },
       "level_keys": [
         "CSD U3 If Else"
@@ -796,7 +1040,7 @@
     {
       "chapter": 31,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -810,7 +1054,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       },
       "level_keys": [
         "CSD U3 Keypress Watchers"
@@ -819,7 +1064,7 @@
     {
       "chapter": 32,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -833,7 +1078,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       },
       "level_keys": [
         "CSD U3 Keypress Matching"
@@ -842,7 +1088,7 @@
     {
       "chapter": 33,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -857,7 +1103,8 @@
         ],
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "3336117b-4b46-4232-99f7-3a625af28250"
       },
       "level_keys": [
         "CSD U3 SFLP Card Project"
@@ -866,7 +1113,7 @@
     {
       "chapter": 34,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -881,7 +1128,8 @@
         ],
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "6e869c2a-f85c-4eaf-8847-82e39b6303c4"
       },
       "level_keys": [
         "CSD U3 Interactive Card Exemplar"
@@ -890,7 +1138,7 @@
     {
       "chapter": 35,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -904,7 +1152,8 @@
         ],
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "f6981500-557e-4748-a2db-60f79bf3f95c"
       },
       "level_keys": [
         "CSD U3 Interactive Card Background"
@@ -913,7 +1162,7 @@
     {
       "chapter": 36,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -927,7 +1176,8 @@
         ],
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "f6981500-557e-4748-a2db-60f79bf3f95c"
       },
       "level_keys": [
         "CSD U3 Interactive Card Sprites"
@@ -936,7 +1186,7 @@
     {
       "chapter": 37,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -950,7 +1200,8 @@
         ],
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "f6981500-557e-4748-a2db-60f79bf3f95c"
       },
       "level_keys": [
         "CSD U3 Interactive Card User Input"
@@ -959,7 +1210,7 @@
     {
       "chapter": 38,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -973,7 +1224,8 @@
         ],
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "f6981500-557e-4748-a2db-60f79bf3f95c"
       },
       "level_keys": [
         "CSD U3 Interactive Card Other Conditionals"
@@ -982,7 +1234,7 @@
     {
       "chapter": 39,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -996,7 +1248,8 @@
         ],
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "f6981500-557e-4748-a2db-60f79bf3f95c"
       },
       "level_keys": [
         "CSD U3 Interactive Card Final"
@@ -1012,7 +1265,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "db8d3c0f-e86e-485e-a960-1365920a7f7c"
       }
     },
     {
@@ -1023,7 +1277,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "d4e92aa1-3dd7-4dc7-81f2-53d48252222d"
       }
     },
     {
@@ -1034,7 +1289,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "936d3c60-55ae-4262-89e4-2783b9f2a0b7"
       }
     },
     {
@@ -1045,7 +1301,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "936d3c60-55ae-4262-89e4-2783b9f2a0b7"
       }
     },
     {
@@ -1056,7 +1313,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "936d3c60-55ae-4262-89e4-2783b9f2a0b7"
       }
     },
     {
@@ -1067,7 +1325,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "936d3c60-55ae-4262-89e4-2783b9f2a0b7"
       }
     },
     {
@@ -1078,7 +1337,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "936d3c60-55ae-4262-89e4-2783b9f2a0b7"
       }
     },
     {
@@ -1089,7 +1349,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "7424d275-6bec-4dc4-baff-1173f72d859c"
       }
     },
     {
@@ -1100,7 +1361,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "abde0e89-e1bb-47a3-8850-6a37ac2ece89"
       }
     },
     {
@@ -1111,7 +1373,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "abde0e89-e1bb-47a3-8850-6a37ac2ece89"
       }
     },
     {
@@ -1122,7 +1385,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "abde0e89-e1bb-47a3-8850-6a37ac2ece89"
       }
     },
     {
@@ -1133,7 +1397,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "abde0e89-e1bb-47a3-8850-6a37ac2ece89"
       }
     },
     {
@@ -1144,7 +1409,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "abde0e89-e1bb-47a3-8850-6a37ac2ece89"
       }
     },
     {
@@ -1155,7 +1421,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "88e33749-4f59-4f94-8b6f-2c23fe19e140"
       }
     },
     {
@@ -1166,7 +1433,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "9bc9a719-5386-4394-ae05-974376358ce9"
       }
     },
     {
@@ -1177,7 +1445,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "dff199b9-4a3e-4be3-ae19-c1a5938e5b16"
       }
     },
     {
@@ -1188,7 +1457,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "dff199b9-4a3e-4be3-ae19-c1a5938e5b16"
       }
     },
     {
@@ -1199,7 +1469,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "dff199b9-4a3e-4be3-ae19-c1a5938e5b16"
       }
     },
     {
@@ -1210,7 +1481,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "dff199b9-4a3e-4be3-ae19-c1a5938e5b16"
       }
     },
     {
@@ -1221,7 +1493,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "dff199b9-4a3e-4be3-ae19-c1a5938e5b16"
       }
     },
     {
@@ -1232,7 +1505,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "73f54a21-5d8a-4edd-9ea5-8e44d4d259a3"
       }
     },
     {
@@ -1243,7 +1517,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "73f54a21-5d8a-4edd-9ea5-8e44d4d259a3"
       }
     },
     {
@@ -1254,7 +1529,8 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "73f54a21-5d8a-4edd-9ea5-8e44d4d259a3"
       }
     },
     {
@@ -1265,7 +1541,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "efcf375f-b24a-47ce-89a3-1831d205958c"
       }
     },
     {
@@ -1276,7 +1553,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       }
     },
     {
@@ -1287,7 +1565,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       }
     },
     {
@@ -1298,7 +1577,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       }
     },
     {
@@ -1309,7 +1589,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       }
     },
     {
@@ -1320,7 +1601,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       }
     },
     {
@@ -1331,7 +1613,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       }
     },
     {
@@ -1342,7 +1625,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       }
     },
     {
@@ -1353,7 +1637,8 @@
         ],
         "lesson.key": "Input",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "06ac8470-eb56-4a23-b54d-0f017c11944e"
       }
     },
     {
@@ -1364,7 +1649,8 @@
         ],
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "3336117b-4b46-4232-99f7-3a625af28250"
       }
     },
     {
@@ -1375,7 +1661,8 @@
         ],
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "6e869c2a-f85c-4eaf-8847-82e39b6303c4"
       }
     },
     {
@@ -1386,7 +1673,8 @@
         ],
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "f6981500-557e-4748-a2db-60f79bf3f95c"
       }
     },
     {
@@ -1397,7 +1685,8 @@
         ],
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "f6981500-557e-4748-a2db-60f79bf3f95c"
       }
     },
     {
@@ -1408,7 +1697,8 @@
         ],
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "f6981500-557e-4748-a2db-60f79bf3f95c"
       }
     },
     {
@@ -1419,7 +1709,8 @@
         ],
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "f6981500-557e-4748-a2db-60f79bf3f95c"
       }
     },
     {
@@ -1430,7 +1721,8 @@
         ],
         "lesson.key": "Project: Interactive Card",
         "lesson_group.key": "",
-        "script.name": "workshop-gamelab"
+        "script.name": "workshop-gamelab",
+        "activity_section.key": "f6981500-557e-4748-a2db-60f79bf3f95c"
       }
     }
   ],

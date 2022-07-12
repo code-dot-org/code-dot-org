@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2022-05-18T15:25:07.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "long_instructions": "> **Reflect on Unit 5:**\r\n>\r\n> 1. To what depth are students expected to understand binary representation systems? How does the order and structure of the lessons support this understanding?\r\n\r\n\r\n## Use the space below to take notes and record your thoughts.  This level is for your use only.\r\n ",
+    "instructions_important": "false",
+    "display_name": "Assessment",
+    "height": "300",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "optional": "true",
+    "parent_level_id": 19250,
+    "encrypted": "false",
+    "name_suffix": "_2022"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2022-05-18T15:25:07.083+00:00\",\"changed\":[\"cloned from \\\"dlp21-csd-mod3-pre\\\"\"],\"cloned_from\":\"dlp21-csd-mod3-pre\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

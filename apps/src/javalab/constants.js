@@ -1,3 +1,7 @@
+/**
+ * NOTE: Constants in this file are generally shared by Javabuilder.
+ * Check their use in the Javabuilder repo before editing.
+ */
 import {makeEnum} from '@cdo/apps/utils';
 
 export const CsaViewMode = {
@@ -14,7 +18,10 @@ export const WebSocketMessageType = {
   SYSTEM_OUT: 'SYSTEM_OUT',
   EXCEPTION: 'EXCEPTION',
   DEBUG: 'DEBUG',
-  STATUS: 'STATUS'
+  STATUS: 'STATUS',
+  TEST_RESULT: 'TEST_RESULT',
+  AUTHORIZER: 'AUTHORIZER',
+  CONNECTED: 'CONNECTED'
 };
 
 export const JavabuilderExceptionType = {
@@ -25,9 +32,11 @@ export const JavabuilderExceptionType = {
   INTERNAL_COMPILER_EXCEPTION: 'INTERNAL_COMPILER_EXCEPTION',
   INTERNAL_EXCEPTION: 'INTERNAL_EXCEPTION',
   INTERNAL_RUNTIME_EXCEPTION: 'INTERNAL_RUNTIME_EXCEPTION',
+  INVALID_CLASS: 'INVALID_CLASS',
   INVALID_JAVA_FILE_NAME: 'INVALID_JAVA_FILE_NAME',
   JAVA_EXTENSION_MISSING: 'JAVA_EXTENSION_MISSING',
   MISSING_PROJECT_FILE_NAME: 'MISSING_PROJECT_FILE_NAME',
+  NO_FILES_TO_COMPILE: 'NO_FILES_TO_COMPILE',
   NO_MAIN_METHOD: 'NO_MAIN_METHOD',
   RUNTIME_ERROR: 'RUNTIME_ERROR',
   TWO_MAIN_METHODS: 'TWO_MAIN_METHODS',
@@ -70,8 +79,12 @@ export const NeighborhoodExceptionType = makeEnum(
 );
 
 export const TheaterSignalType = {
+  // This message contains the url to an audio element
   AUDIO_URL: 'AUDIO_URL',
-  VISUAL_URL: 'VISUAL_URL'
+  // This message contains the url to a visual element
+  VISUAL_URL: 'VISUAL_URL',
+  // Get an image from the user via Prompter
+  GET_IMAGE: 'GET_IMAGE'
 };
 
 export const StatusMessageType = {
@@ -79,12 +92,26 @@ export const StatusMessageType = {
   COMPILATION_SUCCESSFUL: 'COMPILATION_SUCCESSFUL',
   RUNNING: 'RUNNING',
   GENERATING_RESULTS: 'GENERATING_RESULTS',
-  EXITED: 'EXITED'
+  GENERATING_PROGRESS: 'GENERATING_PROGRESS',
+  SENDING_VIDEO: 'SENDING_VIDEO',
+  TIMEOUT_WARNING: 'TIMEOUT_WARNING',
+  TIMEOUT: 'TIMEOUT',
+  EXITED: 'EXITED',
+  RUNNING_VALIDATION: 'RUNNING_VALIDATION',
+  RUNNING_PROJECT_TESTS: 'RUNNING_PROJECT_TESTS',
+  NO_TESTS_FOUND: 'NO_TESTS_FOUND'
 };
 
 export const InputMessageType = {
   SYSTEM_IN: 'SYSTEM_IN',
-  PLAYGROUND: 'PLAYGROUND'
+  PLAYGROUND: 'PLAYGROUND',
+  THEATER: 'THEATER'
+};
+
+export const InputMessage = {
+  // Theater-specific messages
+  UPLOAD_SUCCESS: 'UPLOAD_SUCCESS',
+  UPLOAD_ERROR: 'UPLOAD_ERROR'
 };
 
 export const SoundExceptionType = makeEnum(
@@ -96,17 +123,21 @@ export const MediaExceptionType = makeEnum('IMAGE_LOAD_ERROR');
 
 export const TheaterExceptionType = makeEnum(
   'DUPLICATE_PLAY_COMMAND',
-  'INVALID_SHAPE'
+  'INVALID_SHAPE',
+  'VIDEO_TOO_LONG',
+  'VIDEO_TOO_LARGE'
 );
 
 export const PlaygroundExceptionType = {
   PLAYGROUND_RUNNING: 'PLAYGROUND_RUNNING',
-  PLAYGROUND_NOT_RUNNING: 'PLAYGROUND_NOT_RUNNING'
+  PLAYGROUND_NOT_RUNNING: 'PLAYGROUND_NOT_RUNNING',
+  INVALID_MESSAGE: 'INVALID_MESSAGE'
 };
 
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
 
 export const STATUS_MESSAGE_PREFIX = '[JAVALAB]';
+export const EXCEPTION_PREFIX = '[EXCEPTION]';
 
 export const PlaygroundSignalType = {
   // Indicate that the Playground game has started
@@ -126,7 +157,11 @@ export const PlaygroundSignalType = {
   // Play a sound
   PLAY_SOUND: 'PLAY_SOUND',
   // Set the background image of the Playground
-  SET_BACKGROUND_IMAGE: 'SET_BACKGROUND_IMAGE'
+  SET_BACKGROUND_IMAGE: 'SET_BACKGROUND_IMAGE',
+  // Set of updates to the playground
+  UPDATE: 'UPDATE',
+  // Indicate that the current update cycle has completed
+  UPDATE_COMPLETE: 'UPDATE_COMPLETE'
 };
 
 export const PlaygroundFontTypeFontFamilies = {
@@ -145,4 +180,29 @@ export const PlaygroundFontStyleType = makeEnum(
 export const PlaygroundItemType = {
   IMAGE: 'image',
   TEXT: 'text'
+};
+
+export const ExecutionType = {
+  // Compile and run the main method
+  RUN: 'RUN',
+  // Compile and run tests
+  TEST: 'TEST'
+};
+
+export const UserTestResultSignalType = {
+  TEST_STATUS: 'TEST_STATUS',
+  STATUS_DETAILS: 'STATUS_DETAILS'
+};
+
+export const TestStatus = {
+  SUCCESSFUL: 'SUCCESSFUL',
+  FAILED: 'FAILED',
+  ABORTED: 'ABORTED'
+};
+
+export const AuthorizerSignalType = {
+  TOKEN_USED: 'TOKEN_USED',
+  NEAR_LIMIT: 'NEAR_LIMIT',
+  USER_BLOCKED: 'USER_BLOCKED',
+  CLASSROOM_BLOCKED: 'CLASSROOM_BLOCKED'
 };

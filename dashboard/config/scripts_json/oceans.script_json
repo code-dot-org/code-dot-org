@@ -4,15 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "oceans",
-    "serialized_at": "2021-09-28 17:18:13 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-03-18 18:40:07 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "oceans"
     }
@@ -33,7 +36,7 @@
   "lessons": [
     {
       "key": "Oceans",
-      "name": "Oceans",
+      "name": "AI for Oceans",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -171,7 +174,8 @@
       "key": "5d09fa3e-63ce-4142-ac59-d893889ce78d",
       "position": 2,
       "properties": {
-        "description": "####Levels 2-4 - Train AI to Clean the Ocean\n\nStudents can work through levels 2-4 on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects."
+        "description": "####Levels 2-4 - Train AI to Clean the Ocean\n\nStudents can work through levels 2-4 on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.",
+        "progression_name": "Train an AI to Clean the Ocean"
       },
       "seeding_key": {
         "activity_section.key": "5d09fa3e-63ce-4142-ac59-d893889ce78d",
@@ -352,6 +356,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Machine_Learning"
+        ],
         "progression": "AI Machine Learning - Video"
       },
       "bonus": false,
@@ -374,6 +381,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash"
+        ],
+        "progression": "Train an AI to Clean the Ocean"
       },
       "bonus": false,
       "seeding_key": {
@@ -395,6 +406,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo"
+        ],
+        "progression": "Train an AI to Clean the Ocean"
       },
       "bonus": false,
       "seeding_key": {
@@ -416,6 +431,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash"
+        ],
+        "progression": "Train an AI to Clean the Ocean"
       },
       "bonus": false,
       "seeding_key": {
@@ -437,6 +456,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Training_Data"
+        ],
         "progression": "AI: Training Data & Bias - Video"
       },
       "bonus": false,
@@ -459,6 +481,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short"
+        ],
         "progression": "Using Training Data"
       },
       "bonus": false,
@@ -481,6 +506,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Societal_Implications"
+        ],
         "progression": "AI: Impact on Society - Video"
       },
       "bonus": false,
@@ -503,6 +531,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long"
+        ],
         "progression": "Teach AI a New Word"
       },
       "bonus": false,
@@ -624,9 +655,9 @@
       "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
       "key": "ai-ml",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ai-ml"
@@ -637,9 +668,9 @@
       "url": "https://youtu.be/ng4c1g3COfs",
       "key": "ai-societal",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/03-ai-impactonsociety-sm-mp4.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/03-ai-impactonsociety-sm-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ai-societal"
@@ -650,9 +681,9 @@
       "url": "https://youtu.be/x2mRoFNm22g",
       "key": "ai-training",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ai-training"
@@ -710,13 +741,13 @@
   ],
   "objectives": [
     {
-      "key": "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09",
+      "key": "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b",
       "properties": {
-        "description": "Discuss the role artificial intelligence plays in their lives."
+        "description": "Reason about how human bias plays a role in machine learning."
       },
       "seeding_key": {
         "lesson.key": "Oceans",
-        "objective.key": "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09"
+        "objective.key": "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b"
       }
     },
     {
@@ -730,13 +761,13 @@
       }
     },
     {
-      "key": "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b",
+      "key": "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09",
       "properties": {
-        "description": "Reason about how human bias plays a role in machine learning."
+        "description": "Discuss the role artificial intelligence plays in their lives."
       },
       "seeding_key": {
         "lesson.key": "Oceans",
-        "objective.key": "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b"
+        "objective.key": "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09"
       }
     }
   ],

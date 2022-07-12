@@ -61,7 +61,7 @@
   "left": "balra",
   "lengthFeedback": "Majdnem tökéletes, csak a mozgás hosszát gondold át újra.",
   "lengthParameter": "length",
-  "loopVariable": "számláló",
+  "loopVariable": "counter",
   "moveBackward": "menj visszafelé",
   "moveEastTooltip": "A művészt kelet felé mozgatja.",
   "moveDirectionByPixels": "menj %1 %2 képpontnyit",

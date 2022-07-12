@@ -2,6 +2,9 @@
   "mt-MT": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "Funzjoni"
+        },
         "variable/coursef/2021": {
           "word": "Varjabbli"
         },
@@ -25,6 +28,15 @@
         },
         "define/coursee/2021": {
           "word": "Idefinixxi"
+        },
+        "variable/csd/2021": {
+          "word": "Varjabbli"
+        },
+        "function/csd/2021": {
+          "word": "Funzjoni"
+        },
+        "copyright/csd/2021": {
+          "word": "Drittijiet tal-Awtur"
         }
       }
     }

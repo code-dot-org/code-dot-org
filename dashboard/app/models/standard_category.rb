@@ -19,12 +19,20 @@
 class StandardCategory < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :framework
-  belongs_to :parent_category, class_name: 'StandardCategory'
+  belongs_to :framework, optional: true
+  belongs_to :parent_category, class_name: 'StandardCategory', optional: true
 
   serialized_attrs %w(
     description
   )
+
+  def crowdin_key
+    [framework.shortcode, shortcode].join('/')
+  end
+
+  def localized_description
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description, crowdin_key)
+  end
 
   def self.seed_all
     Framework.all.each do |framework|

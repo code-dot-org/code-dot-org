@@ -117,6 +117,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
   blocklyWrapper.wrapReadOnlyProperty('html');
   blocklyWrapper.wrapReadOnlyProperty('inject');
+  blocklyWrapper.wrapReadOnlyProperty('Input');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
   blocklyWrapper.wrapReadOnlyProperty('mainBlockSpace');
@@ -128,6 +129,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Procedures');
   blocklyWrapper.wrapReadOnlyProperty('removeChangeListener');
   blocklyWrapper.wrapReadOnlyProperty('RTL');
+  blocklyWrapper.wrapReadOnlyProperty('selected');
   blocklyWrapper.wrapReadOnlyProperty('SVG_NS');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
@@ -150,6 +152,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
 
   blocklyWrapper.BlockSpace.prototype.registerGlobalVariables = function() {}; // Not implemented.
+
+  blocklyWrapper.BlockSpace.prototype.getContainer = function() {
+    return this.blockSpaceEditor.getSVGElement().parentNode;
+  };
+
+  blocklyWrapper.getFieldForInputType = function(type) {
+    return blocklyWrapper.FieldTextInput;
+  };
 
   blocklyWrapper.getGenerator = function() {
     return blocklyWrapper.Generator.get('JavaScript');
@@ -193,6 +203,57 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return strip(code);
   };
 
+  // The second argument to Google Blockly's blockToCode specifies whether to
+  // generate code for the whole block stack or just the single block. The
+  // second argument to Cdo Blockly's blockToCode specifies whether to generate
+  // code for hidden blocks. However, across all apps code, opt_showHidden is
+  // always true. So we can just ignore the second argument and pass true to Cdo
+  // Blockly, which allows us to change the usage across apps code to treat the
+  // second argument as opt_thisOnly rather than opt_showHidden.
+  const originalBlockToCode = blocklyWrapper.JavaScript.blockToCode;
+  blocklyWrapper.JavaScript.blockToCode = function(block, opt_thisOnly) {
+    return originalBlockToCode.call(this, block, true /* opt_showHidden */);
+  };
+
+  blocklyWrapper.Input.prototype.getFieldRow = function() {
+    return this.titleRow;
+  };
+
+  // Code.org's old Blockly fork uses title in place of all field tags.
+  blocklyWrapper.Input.prototype.appendField =
+    blocklyWrapper.Input.prototype.appendTitle;
+  blocklyWrapper.Block.prototype.getFieldValue =
+    blocklyWrapper.Block.prototype.getTitleValue;
+
+  blocklyWrapper.cdoUtils = {
+    blockLimitExceeded: function(blockType) {
+      const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
+      return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
+    },
+    getBlockFields: function(block) {
+      return block.getTitles();
+    },
+    getToolboxWidth: function() {
+      return Blockly.mainBlockSpaceEditor.getToolboxWidth();
+    },
+    getBlockLimit: function(blockType) {
+      return Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.getLimit(
+        blockType
+      );
+    },
+    isWorkspaceReadOnly: function(workspace) {
+      return workspace.isReadOnly();
+    },
+    setHSV: function(block, h, s, v) {
+      block.setHSV(h, s, v);
+    },
+    workspaceSvgResize: function(workspace) {
+      return workspace.blockSpaceEditor.svgResize();
+    },
+    bindBrowserEvent: function(element, name, thisObject, func, useCapture) {
+      return Blockly.bindEvent_(element, name, thisObject, func, useCapture);
+    }
+  };
   return blocklyWrapper;
 }
 

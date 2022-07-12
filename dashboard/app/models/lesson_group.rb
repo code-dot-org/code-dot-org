@@ -19,7 +19,7 @@
 class LessonGroup < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :script
+  belongs_to :script, optional: true
   def script
     Script.get_from_cache(script_id)
   end
@@ -54,7 +54,7 @@ class LessonGroup < ApplicationRecord
   # for that key matches the already saved display name
   # 3. PLC courses use certain lesson group keys for module types. We reserve those
   # keys so they can only map to the display_name for their PLC purpose
-  def self.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
+  def self.add_lesson_groups(raw_lesson_groups, script)
     lesson_group_position = 0
 
     counters = Counters.new(0, 0, 0, 0)
@@ -92,9 +92,7 @@ class LessonGroup < ApplicationRecord
       end
 
       new_lessons =
-        script.is_migrated ?
-          Lesson.update_lessons_in_migrated_unit(script, lesson_group, raw_lesson_group[:lessons], counters) :
-          Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], counters, new_suffix, editor_experiment)
+        Lesson.update_lessons_in_migrated_unit(script, lesson_group, raw_lesson_group[:lessons], counters)
       lesson_group.lessons = new_lessons
       lesson_group.save!
 
@@ -237,7 +235,7 @@ class LessonGroup < ApplicationRecord
   def copy_to_unit(destination_script, new_level_suffix = nil)
     return if script == destination_script
     raise 'Both lesson group and script must be migrated' unless script.is_migrated? && destination_script.is_migrated?
-    raise 'Destination script and lesson group must be in a course version' if destination_script.get_course_version.nil?
+    raise 'Destination script and lesson group must be in a course version' if destination_script.get_course_version.nil? && !destination_script.old_professional_learning_course?
 
     copied_lesson_group = dup
     copied_lesson_group.script = destination_script

@@ -1,52 +1,52 @@
 ---
-title: Blurbs and useful stats
+title: Fakta a užitečné statistiky
 ---
 
 <a id="blurb"></a>
 
 {{ signup_button }}
 
-# Blurbs and useful stats
+# Fakta a užitečné statistiky
 
-### Use the following messaging if you're looking for ways to promote the Hour of Code in your newsletters and communications.
+### Jestli hledáte způsob, jak propagovat Hodinu kódu ve svých newsletterech nebo jiné komunikaci, použijte následující zprávy.
 
 * * *
 
-## Použijte tuto krátkou záložku v bulletinu
+## Použijte v newsletterech toto krátké konstatování
 
-#### Přineste programování do vaší školy. Začněte s hodinou kódu!
+#### Dostaňtě počítačovou vědu do vaší školy. Začněte Hodinou kódu!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. Ale méně než polovina všech škol vyučuje programování! Dobrou zprávou je, že jsme na cestě, jak to změnit. Pokuď jste slyšeli o Hodině kódu dříve, mohli byste vědět, že se dostala do historie. 100 milionů studentů už objevilo, jak přístupné a zábavné učení může být s pomocí Hodiny kódu.
+Technologie mění prakticky všechny obory na této planetě, takže znalost programování se stává nezbytnou součástí všeobecného vzdělání. Ale jen polovina škol počítačovou vědu vyučuje. Dobrá zpráva je, že se to chystáme změnit. Pokud jste slyšeli o loňské Hodině kódu, možná víte, že se zapsala do historie. Už 100 milionů studentů objevilo, jak přístupné a zábavné může být učení při Hodině kódu.
 
-Hodina kódu je jedna hodina Úvodu do informatiky s cílem odstranit záhadnost kódu a ukázat, že kdokoliv se může naučit základům. Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+Hodina kódu představuje hodinový úvod do informatiky. Jejím cílem je demystifikovat kód a ukázat, že základy se může naučit kdokoli. Další informace najdete na [http://HourOfCode.com](http://HourofCode.com), vyzkoušejte si hodinu sami nebo připravte událost Hodina kódu, kde představíte svět počítačů ostatním.
 
-## Messaging for frequently asked questions
+## Zprávy pro často kladené dotazy
 
-#### Proč zrovna vaše škola dělá Hodinu kódu?
+#### Proč zrovna vaše škola pořádá Hodinu kódu?
 
-Zatímco všichni znás ví, jak moc důležité je pro naše studenty, aby věděli, jak se vyznat v dnešním technicky vyspělém světe, mnoho učitelů nemá s informatikou zkušenosti a neví kde začít. Tato událost je šance pro nás všechny, abychom mohli vidět o čem informatika je.
+Všichni víme, jak důležité je pro studenty, aby se dokázali vyznat v dnešním světě plném technologií, jenže mnoho učitelů nemá s informatikou zkušenosti a neví, kde začít. Tato událost je šance pro nás všechny, abychom se dozvěděli, o čem že ta informatika je.
 
-Doufáme, že to zažehne plamen zájmu v studentech, aby se učili dál. Research also shows that kids can pick up programming concepts before they know how to read and write. Ve skutečnosti, jejich mozek příjímá více počítačové jazyky v mladém věku, než zahraniční jazyky. <br /> <br />
+Doufáme, že událost podnítí zájem studentů, aby se učili dál. Výzkumy také ukazují, že děti dokážou pochopit koncepty programování dřív, než se naučí číst a psát. Ve skutečnosti jejich mozek příjímá počítačové jazyky v mladém věku snadněji – stejně jako cizí jazyky. <br /> <br />
 
-#### Proč je toto důležité?
+#### Proč je to důležité?
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 53 percent of schools in the U.S. don't teach computer science. Je čas pro nás doběhnout 21. století. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge. <br /> <br />
+Technologie proměňují každičký obor na planetě. Sedm milionů volných pracovních míst ve Spojených státech v roce 2015 bylo v povoláních, ve kterých se uplatní znalosti programování – včetně umění a designu. Přesto 49 % škol ve Spojených státech počítačovou vědu nevyučuje. Je čas přizpůsobit se životu ve 21. století. Nehledě na to, co budou studenti dělat, až vyrostou, ať už se budou věnovat medicíně, obchodu, politice, nebo umění, schopnost vytvářet technologie jim dodá sebejistotu a zvýší jejich konkurenceschopnost. <br /> <br />
 
-#### A quote you can use in materials
+#### Citace, kterou můžete použít v materiálech
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "přes 100 milionů studentů po celém světě vyzkoušelo Hodinu kódu. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+„Hodina kódu je navržená tak, aby demystifikovala programování a ukázala, že počítačová věda není astrofyzika – že základy se může naučit každý“, řekl zakladatel a CEO Code.org, Hadi Partovi. „Přes 100 milionů studentů po celém světě už vyzkoušelo Hodinu kódu. Poptávka po relevantní výuce počítačových věd pro 21. století překračuje všechny hranice a nezná mezí.“ <br /> <br />
 
 #### O Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Po zahájení v roce 2013, Code.org zorganizovalo kampaň Hodina kódu - který představil informatiku přes 100 miliónu studentů do teď - a spojili se s 70 veřejnými školními okresy celostátně, k expanzi informatiky,. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org je veřejná nezisková organizace ustanovená podle zákona 501c3, která se věnuje zvyšování zapojení mladých žen a studentů z jiných přehlížených skupin do počítačových věd. Vize společnosti je, aby každý student v každé škole měl příležitost naučit se programovat. Po zahájení činnosti v roce 2013 zorganizovala společnost Code.org kampaň Hodina kódu – ta už představila informatiku více než 100 miliónu studentů – a spojila se se 70 obvody státních škol po celém světě, které informatiku pomáhají přiblížit studentům. Společnost Code.org je podporována dobročinnými dary od korporací, nadací a štědrých jednotlivců – patří mezi ně mimo jiné Microsoft, Facebook, Infosys Foundation USA, Amazon a další. Další informace najdete tady: [code.org]({{ codeorg_link }}).
 
-## Share these on social media and in emails
+## Sdílejte tento obsah na sociálních médiích a v e-mailech
 
 [![obrázek](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![obrázek](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![obrázek](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
-## Infografiky
+## Infografika
 
 {{ stats_carousel }}
 

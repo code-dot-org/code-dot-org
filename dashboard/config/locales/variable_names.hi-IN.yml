@@ -2,34 +2,98 @@
 hi:
   data:
     variable_names:
+      "???": "???"
+      Actor_1_Counter: अभिनेता_1_काउंटर
+      Actor_2_Counter: अभिनेता_2_काउंटर
       Blue: नीला
       Green: हरा
       Red: लाल
       actor: अभिनेता
       age: उम्र
+      animal1score: animal1score
+      animal1speed: animal1speed
+      animal2score: animal2score
+      animal2speed: animal2speed
       answer: जवाब
+      armlength: armlength
       binary: युग्मक
+      birds: पक्षी
+      bit: बिट
+      blue1: blue1
+      blue2: blue2
+      bodylength: bodylength
+      buttonHeight: buttonHeight
+      buttonMargin: buttonMargin
+      buttonWidth: buttonWidth
+      cat_score: cat_score
+      cat_speed: cat_speed
       cats: सभी बिल्लियां
+      centerToPadLeft: centerToPadLeft
+      choice: विकल्प
+      circ: circ
+      codeName: codeName
       color: रंग
+      controllerHeight: controllerHeight
+      controllerWidth: controllerWidth
       counter: काउंटर
+      counter2: counter2
+      currentActor: currentActor
+      direction: दिशा
+      dog_score: dog_score
+      dog_speed: dog_speed
       dogs: सभी कुत्ते
+      dragons: ड्रैगन्स
+      enemy_speed: enemy_speed
       energy: ऊर्जा
+      firstName: firstName
+      footlength: footlength
+      gather: एकत्र करें
+      green1: green1
+      green2: green2
+      guess: अंदाजा लगाएं
       height: ऊंचाई
       honey: शहद
       i: i
       left: बाएं
+      legangle: legangle
+      leglength: leglength
       length: लंबाई
       level: स्तर
+      marginX: marginX
+      marginY: marginY
+      meal: भोजन
+      myName: myName
       name: नाम
       nectar: मधुरस
+      nectars: मधुरस
+      padYOffset: padYOffset
+      planet: ग्रह
+      player_score: player_score
       points: अंक
+      punchLine: punchLine
       random: यादृच्छिक
+      red1: red1
+      red2: red2
       repeat: दोहराएँ
+      repetitions: दोहराव
       right: सही
       score: स्कोर
+      score1: स्कोर1
+      score2: score2
+      screenHeight: screenHeight
+      screenWidth: screenWidth
+      set sides: भुजाएं सेट करें
+      setupSimScore1: setupSimScore1
+      setupSimScore2: setupSimScore2
+      shout: चिल्लाना
+      sides: भुजाएं
       size: आकार
       speed: गति
+      startX: startX
+      startY: startY
       variable: चर / वेरीयबल
       width: चौड़ाई
       wizard: जादूगर
       x: x
+      your var 1: आपका var 1
+      your var 2: आपका var 2

@@ -6,6 +6,8 @@ social:
   "og:description": "Expand computer science at your school or district. Join the thousands of schools who have already incorporated high quality computer science education into their curriculum and provide opportunities for the students in your local area."
 ---
 
+=view :professional_learning_marketing_banner, audience_text: 'you', link_address: '/educate/professional-learning/middle-high', button_label: 'Learn more'
+
 %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/yourschool.css'}
 
 - require 'country_codes'
@@ -26,7 +28,6 @@ social:
 - census_announcement['school_year'] = current_census_year
 - census_announcement['locale'] = request.locale
 - teacher_application_mode  = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode)
-- census_announcement['show_professional_learning_banner'] = (request.locale == 'en-US' && %w(open closing-soon).include?(teacher_application_mode)).to_s
 - census_announcement['teacher_application_mode'] = teacher_application_mode
 
 = inline_css 'trophy_announcement_sparkle.css'
@@ -52,8 +53,11 @@ social:
   %hr
   %center
     %h3{style: 'margin: 40px 0 50px 0; font-size: 16px;'}
-      Your pledge and information about your school helps expand computer science education across the United States.
-      See K-12 Computer Science Access Report data in the
+      Your pledge and information about your school helps expand computer science education across the United States. See K-12 Computer Science Access Report data on an
+      = " "
+      %a{href: CDO.code_org_url("/yourschool/accessreport"), target: "_blank"}> interactive data visualization
+      = " "
+      and in the
       = " "
       %a{href: CDO.advocacy_url("/stateofcs"), target: "_blank"}> annual State of Computer Science Education
       , published each fall.

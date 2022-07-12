@@ -11,6 +11,7 @@ require 'fileutils'
 require 'require_all'
 
 require_relative '../../lib/cdo/shared_constants'
+require_relative '../../lib/cdo/shared_constants/curriculum/shared_course_constants'
 autoload_all File.expand_path('../../lib/cdo/shared_constants/pd', File.dirname(__FILE__))
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
@@ -37,9 +38,17 @@ end
 # @param [Boolean] transform_keys: (optional, default false) if true, transform the hash keys into js style lowerCamelCase.
 def generate_constants(shared_const_name, source_module: SharedConstants, transform_keys: false)
   raw = source_module.const_get(shared_const_name)
-  hash_or_array = parse_raw(raw)
-  hash_or_array = hash_or_array.deep_transform_keys {|k| k.to_s.camelize(:lower)} if transform_keys && hash_or_array.is_a?(Hash)
-  "export const #{shared_const_name.downcase.camelize} = #{JSON.pretty_generate(hash_or_array)};"
+  begin
+    hash_or_array = parse_raw(raw)
+    hash_or_array = hash_or_array.deep_transform_keys {|k| k.to_s.camelize(:lower)} if transform_keys && hash_or_array.is_a?(Hash)
+    "export const #{shared_const_name.downcase.camelize} = #{JSON.pretty_generate(hash_or_array)};"
+  rescue JSON::ParserError
+    if raw.is_a?(String)
+      "export const #{shared_const_name.downcase.camelize} = '#{raw}';"
+    else
+      raise "unrecognized raw type: #{raw.class}"
+    end
+  end
 end
 
 # Generate a set of JS objects from their ruby equivalents
@@ -72,8 +81,9 @@ def main
     LEVEL_KIND
     LEVEL_STATUS
     SECTION_LOGIN_TYPE
+    STUDENT_GRADE_LEVELS
+    PL_GRADE_VALUE
     POST_MILESTONE_MODE
-    PUBLISHED_STATE
     ALWAYS_PUBLISHABLE_PROJECT_TYPES
     ALL_PUBLISHABLE_PROJECT_TYPES
     CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
@@ -88,18 +98,40 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
+        %w(
+      PUBLISHED_STATE
+      INSTRUCTION_TYPE
+      PARTICIPANT_AUDIENCE
+      INSTRUCTOR_AUDIENCE
+      CURRICULUM_UMBRELLA
+      COURSE_OFFERING_CATEGORIES
+      PARTICIPANT_AUDIENCES_BY_TYPE
+    ),
+      source_module: Curriculum::SharedCourseConstants, transform_keys: false
+    ),
+    "#{REPO_DIR}/apps/src/generated/curriculum/sharedCourseConstants.js"
+  )
+
+  generate_shared_js_file(
+    generate_multiple_constants(
       %w(
         COURSES
+        ACTIVE_COURSES
+        ARCHIVED_COURSES
         COURSE_KEY_MAP
         SUBJECT_NAMES
         SUBJECTS
         VIRTUAL_ONLY_SUBJECTS
+        HIDE_FEE_INFORMATION_SUBJECTS
+        HIDE_ON_WORKSHOP_MAP_SUBJECTS
         MUST_SUPPRESS_EMAIL_SUBJECTS
         ACADEMIC_YEAR_WORKSHOP_SUBJECTS
         LEGACY_SUBJECTS
         STATES
         WORKSHOP_APPLICATION_STATES
         WORKSHOP_SEARCH_ERRORS
+        ACTIVE_COURSE_WORKSHOPS
+        ACTIVE_COURSES_WITH_SURVEYS
         WORKSHOP_TYPES
         NOT_FUNDED_SUBJECTS
       ),
@@ -129,7 +161,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
+      %w(YEAR SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
       source_module: Pd::TeacherApplicationConstants,
       transform_keys: true
     ),

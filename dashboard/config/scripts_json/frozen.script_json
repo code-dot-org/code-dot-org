@@ -4,15 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "frozen",
-    "serialized_at": "2021-09-29 21:14:21 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-03-17 22:42:54 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "frozen"
     }
@@ -303,6 +306,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen line"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -324,6 +330,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen perpendicular"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -345,6 +354,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen square iterative"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -366,6 +378,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen square loop"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -387,6 +402,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen square loop 3x"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -408,6 +426,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen square snowflake"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -429,6 +450,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen cross"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -450,6 +474,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen cross rotate"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -471,6 +498,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen cross rotate dense"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -492,6 +522,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen diamond"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -513,6 +546,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen diamond mini snowflake"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -534,6 +570,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen diamond snowflake"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -555,6 +594,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen circle"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -576,6 +618,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen circle function"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -597,6 +642,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen circle function in circle"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -618,6 +666,9 @@
       "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen circle function with parameter"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -639,6 +690,9 @@
       "activity_section_position": 17,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen snowflower"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -660,6 +714,9 @@
       "activity_section_position": 18,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen snowflake branch"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -681,6 +738,9 @@
       "activity_section_position": 19,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen snowflake full"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -702,6 +762,9 @@
       "activity_section_position": 20,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1029,23 +1092,13 @@
   ],
   "objectives": [
     {
-      "key": "e23f32e6-7d12-41e6-a601-bcf0825f0e30",
+      "key": "0de7aa41-13ea-4a30-a45d-701df2a562c8",
       "properties": {
-        "description": "Define “coding” and “computer science”"
+        "description": "Identify places to go to continue learning computer science and coding"
       },
       "seeding_key": {
         "lesson.key": "Artist",
-        "objective.key": "e23f32e6-7d12-41e6-a601-bcf0825f0e30"
-      }
-    },
-    {
-      "key": "a5bebcad-7295-4ecd-af0d-4012f97de704",
-      "properties": {
-        "description": "Identify key computer science vocabulary"
-      },
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "objective.key": "a5bebcad-7295-4ecd-af0d-4012f97de704"
+        "objective.key": "0de7aa41-13ea-4a30-a45d-701df2a562c8"
       }
     },
     {
@@ -1059,17 +1112,125 @@
       }
     },
     {
-      "key": "0de7aa41-13ea-4a30-a45d-701df2a562c8",
+      "key": "a5bebcad-7295-4ecd-af0d-4012f97de704",
       "properties": {
-        "description": "Identify places to go to continue learning computer science and coding"
+        "description": "Identify key computer science vocabulary"
       },
       "seeding_key": {
         "lesson.key": "Artist",
-        "objective.key": "0de7aa41-13ea-4a30-a45d-701df2a562c8"
+        "objective.key": "a5bebcad-7295-4ecd-af0d-4012f97de704"
+      }
+    },
+    {
+      "key": "e23f32e6-7d12-41e6-a601-bcf0825f0e30",
+      "properties": {
+        "description": "Define “coding” and “computer science”"
+      },
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "objective.key": "e23f32e6-7d12-41e6-a601-bcf0825f0e30"
       }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "11-12.L.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "11-12.RI.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.L.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.L.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "4.MD.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "4.NBT.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "4.NBT.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "7.G.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "MP.8"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Artist",
@@ -1138,104 +1299,6 @@
         "lesson.key": "Artist",
         "framework.shortcode": "iste",
         "standard.shortcode": "6.d"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "11-12.L.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "4.L.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "5.L.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "11-12.RI.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "7.G.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "4.MD.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "4.NBT.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "4.NBT.5"
       }
     }
   ],

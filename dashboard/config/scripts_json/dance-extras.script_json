@@ -4,16 +4,19 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
-      "tts": true,
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "tts": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "dance-extras",
-    "serialized_at": "2021-09-29 00:44:19 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-03-17 22:42:27 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "dance-extras"
     }
@@ -704,13 +707,13 @@
   ],
   "objectives": [
     {
-      "key": "d48452ca-5cba-4bc4-b52c-424f10d43bab",
+      "key": "69ffb469-2601-46aa-bc80-82043d8dcd1e",
       "properties": {
-        "description": "Define \"coding\" and \"computer science\"."
+        "description": "Identify places to go to continue learning computer science and coding."
       },
       "seeding_key": {
         "lesson.key": "Dance Party - Go Further",
-        "objective.key": "d48452ca-5cba-4bc4-b52c-424f10d43bab"
+        "objective.key": "69ffb469-2601-46aa-bc80-82043d8dcd1e"
       }
     },
     {
@@ -724,13 +727,13 @@
       }
     },
     {
-      "key": "69ffb469-2601-46aa-bc80-82043d8dcd1e",
+      "key": "d48452ca-5cba-4bc4-b52c-424f10d43bab",
       "properties": {
-        "description": "Identify places to go to continue learning computer science and coding."
+        "description": "Define \"coding\" and \"computer science\"."
       },
       "seeding_key": {
         "lesson.key": "Dance Party - Go Further",
-        "objective.key": "69ffb469-2601-46aa-bc80-82043d8dcd1e"
+        "objective.key": "d48452ca-5cba-4bc4-b52c-424f10d43bab"
       }
     }
   ],

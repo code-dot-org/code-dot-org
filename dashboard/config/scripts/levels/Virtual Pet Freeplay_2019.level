@@ -50,7 +50,6 @@
     "parent_level_id": 14157,
     "long_instructions": "What more can you make your pet do? Try these ideas:\r\n* Change the background to something more habitable for your pet.\r\n* Add another food sprite, and modify `happiness` by any value you want when your pet eats it.\r\n* Edit the **wandering** behavior so that your pet moves slower or faster (hint: distance).\r\n* Make your pet perform a different behavior at the start, or change behaviors when certain foods are eaten.\r\n* Make one of your food sprites controllable by adding keypress events (example: press up to go up, down to go down).",
     "show_type_hints": "true",
-    "project_template_level_name": "Virtual Pet 2_2019",
     "short_instructions": "**Free Play:** What more can you make your pet do? Try anything you like!",
     "block_pool": "gamelab",
     "block_pools": [
@@ -130,7 +129,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">shrinking</title>
+          <title name="NAME" id="shrinking">shrinking</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy" inline="true">
               <title name="PROPERTY">"scale"</title>
@@ -152,7 +151,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>Moves back and forth in one direction. To change the direction a sprite is patrolling, change its "movement direction"</description>
           </mutation>
-          <title name="NAME">patrolling</title>
+          <title name="NAME" id="patrolling">patrolling</title>
           <statement name="STACK">
             <block type="gamelab_moveForward" inline="true">
               <value name="SPRITE">
@@ -209,7 +208,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">wandering</title>
+          <title name="NAME" id="wandering">wandering</title>
           <statement name="STACK">
             <block type="controls_if" inline="false">
               <value name="IF0">
@@ -327,7 +326,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">growing</title>
+          <title name="NAME" id="growing">growing</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy" inline="true">
               <title name="PROPERTY">"scale"</title>
@@ -348,7 +347,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">jittering</title>
+          <title name="NAME" id="jittering">jittering</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy" inline="true">
               <title name="PROPERTY">"scale"</title>
@@ -674,16 +673,16 @@
             <title name="VAR">spinning right</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">growing</title>
+            <title name="VAR" id="growing">growing</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">jittering</title>
+            <title name="VAR" id="jittering">jittering</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">shrinking</title>
+            <title name="VAR" id="shrinking">shrinking</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">patrolling</title>
+            <title name="VAR" id="patrolling">patrolling</title>
           </block>
           <block type="gamelab_behavior_get">
             <title name="VAR">moving north</title>
@@ -698,7 +697,7 @@
             <title name="VAR">moving west</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">wandering</title>
+            <title name="VAR" id="wandering">wandering</title>
           </block>
         </category>
         <category name="Variables" custom="VARIABLE"/>

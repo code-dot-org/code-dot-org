@@ -8,13 +8,19 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 sk:
   errors:
     messages:
-      not_saved: 'Opravte prosím nasledujúce chyby:'
-      too_young: 'Tento obsah má vekové obmedzenia a nie je k dispozícii pre mladších študentov.'
+      not_saved: 'Opravte tieto chyby:'
+      too_young: 'Tento obsah má vekové obmedzenia a nie je k dispozícii pre mladších žiakov.'
       teacher_must_accept_terms: 'Tento obsah má vekové obmedzenia a nie je dostupný pre mladších študentov. Požiadaj svojho učiteľa, aby akceptoval nové "Podmienky používania služby" a umožnil ti prístup k tomuto obsahu. Tvoj učiteľ to môže spraviť prihlásením do Code Studia a kliknutím na tlačítko "Prezrieť aktualizované podmienky" v hornej časti domovskej stránky Code Štúdia.'
       pair_programmer: 'Aktuálne pracuješ v páre so študentom, ktorý nemá prístup k tomuto obsahu. Aby si sa sem mohol dostať, zruš párové programovanie a začni odznova.'
   activerecord:
@@ -168,7 +174,15 @@ sk:
     user_type_button: "Zmeniť typ účtu"
     user_type_label: "Typ účtu"
     user_type_student: "Študent"
+    user_type_student_desc: "Preskúmajte všetky naše kurzy a aktivity plus:"
+    user_type_student_ability_1: "Uložte si svoju prácu a projekty"
+    user_type_student_ability_2: "Pripojte sa k triede svojho učiteľa"
     user_type_teacher: "Učiteľ"
+    user_type_teacher_desc: "Všetko, k čomu majú študenti prístup, plus:"
+    user_type_teacher_ability_1: "Vytvorte triedy"
+    user_type_teacher_ability_2: "Priraďte a sledujte prácu študentov"
+    user_type_teacher_ability_3: "Prihláste sa na odborné vzdelávanie"
+    user_type_teacher_ability_4: "Komunikujte na našom fóre pre učiteľov"
     field_is_required: "je povinné"
     accept_terms: "Musíte súhlasiť s vytvorením účtu."
     error: "Vyskytla sa chyba."
@@ -177,6 +191,7 @@ sk:
     email_preference_yes: "Áno"
     email_preference_no: "Nie"
     email_preference_required: "Musíte zadať emailové preferencie."
+    share_teacher_email_reg_partner_question: "Chceli by ste, aby sme zdieľali vaše kontaktné údaje s partnerom [Code.org regional partner](%{cdo_regional_partner_desc}) vo vašom štáte, aby vás mohol informovať o miestnych príležitostiach, akciách a zdrojoch profesijného rozvoja?"
     share_teacher_email_reg_partner_preference_yes: "Áno"
     share_teacher_email_reg_partner_preference_no: "Nie"
     share_teacher_email_reg_partner_preference_required: "Musíte zadať emailové preferencie."
@@ -223,7 +238,7 @@ sk:
     login: 'Prihlásiť sa'
     invalid_login: 'Neplatné prihlasovacie meno, prosím, skús to ešte raz'
     pair_programming: 'Mám partnera pri počítači'
-    student_privacy_markdown: "Zisti, prečo nevidíš svoje plné meno [here](%{student_privacy_blog})."
+    student_privacy_markdown: "Zisti, prečo nevidíš svoje celé meno [tu](%{student_privacy_blog})."
   password:
     reset_form:
       title: 'Zabudli ste heslo?'
@@ -280,12 +295,12 @@ sk:
       username_not_found: 'Užívateľské meno %{username} nebolo nájdené'
       username_in_use: '%{username} je už obsadené, prosím vyberte si iné'
       no_teacher: "Nepodarilo sa nájsť žiadne prihlásenie pomocou \"%{teacher_email_or_code}\". Prosím požiadajte ich, aby sa zaregistrovali a následne sa ich pokúste znovu pridať"
-      section_not_found: "Nepodarilo sa nájsť sekciu s kódom \"%{section_code}\"."
+      section_not_found: "Nepodarilo sa nájsť triedu s kódom \"%{section_code}\"."
       blank_code: "Zadajte, prosím, kód triedy"
       cant_join_own_section: "Prepáčte, nemôžete sa pridať do vlastnej sekcie."
       provider_managed_section: "Túto triedu spravuje iný poskytovateľ a nie je možné sa k nej pripojiť. Požiadajte prosím vášho školiteľa o pridanie pomocou %{provider} a opätovné synchronizovanie ich triedy."
-      restricted_section: "Do sekcie %{section_code} ťa nevieme pridať, pretože je uzamknutá. Kontaktuj prosím svojho učiteľa pre pomoc."
-      full_section: "Do sekcie %{section_code} ťa nebolo možné pridať, pretože je tam prihlásených už %{section_capacity} študentov.  Kontaktuj prosím svojho učiteľa pre pomoc."
+      restricted_section: "Do triedy %{section_code} ťa nevieme pridať, pretože je uzamknutá. Kontaktuj prosím svojho učiteľa pre pomoc."
+      full_section: "Do triedy  %{section_code} ťa nebolo možné pridať, pretože je tam prihlásených už %{section_capacity} študentov. Kontaktuj svojho učiteľa so žiadosťou o pomoc."
     mail:
       student_disassociated:
         subject: "Code.org upozornenie: %{student_name} už nie je Vaším študentom."
@@ -387,19 +402,22 @@ sk:
       iceage: 'Doba ľadová'
       infinity: 'nekonečne'
       makerlab: 'Výrobcovo náradie'
-      minecraft_adventurer: 'Minecraft Objavovateľ'
+      minecraft_adventurer: 'Minecraft: Dobrodruh'
       minecraft_aquatic: 'Minecraft Aquatic'
       minecraft_codebuilder: 'Minecraft: Prepájanie kódu'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft hrdina'
       playlab: 'Play Lab'
       playlab_k1: 'Play Lab (predškolský vek)'
+      poetry: 'Poézia'
+      poetry_hoc: 'Básnické umenie'
       scratch: 'Scratch'
       sports: 'Športy'
       spritelab: 'Sprite Lab'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Bloky)'
       starwarsblocks_hour: 'Star Wars (Bloky)'
+      loading: 'Načítavanie...'
       weblab: 'Web Lab'
       view_all: 'Zobraziť všetky projekty...'
     popup:
@@ -415,6 +433,7 @@ sk:
       prizes_link: 'viac info'
   teacher:
     answer: Odpoveď
+    dashboard: 'Nástenka učiteľa'
     for_teachers_only: Iba pre učiteľov
     title:
       one: 'Tvoj učiteľ:'
@@ -523,15 +542,16 @@ sk:
     no_primary_course: "Vyskúšaj kurz v Code Studiu"
     choose_next_course: "Vyskúšaj kurz Code Štúdia výberom niektorého z kurzov nižšie"
     print_certificate: "Vytlačiť certifikát"
+  certificate_sponsor_message: "%{sponsor_name} prispel(a) štedrým darom na podporu tvojho učenia."
   move_students:
-    new_section_dne: "Ospravedlňujeme sa, ale sekcia %{new_section_code} neexistuje. Zadajte kód inej sekcie."
-    section_code_cant_be_current_section: "Aktuálna sekcia nemôže byť rovnaká ako nová sekcia."
-    current_section_dne: "Ospravedlňujeme sa, ale sekcia %{current_section_code} neexistuje. Zadajte kód inej sekcie."
+    new_section_dne: "Ospravedlňujeme sa, ale trieda %{new_section_code} neexistuje. Zadajte kód inej triedy."
+    section_code_cant_be_current_section: "Aktuálna trieda nemôže byť rovnaká ako nová trieda."
+    current_section_dne: "Ospravedlňujeme sa, ale trieda  %{current_section_code} neexistuje. Zadajte kód inej triedy."
     student_ids_not_entered: "Uveďte, prosím, študentove ids."
     student_not_found: "Jedného, alebo viacerých študentov sme nenašli."
-    all_students_must_be_in_current_section: "Všetci študenti musia byť v súčasnosti zapísaní v sekcii."
-    already_enrolled_in_new_section: "Nemôžete premiestniť týchto študentov, pretože už sú v novej sekcii."
-    third_party_login: "Nemôžete presunúť študentov do sekcie, ktorá je spojená s nástrojom tretej strany."
+    all_students_must_be_in_current_section: "Všetci študenti musia byť v zapísaní do vašej triedy."
+    already_enrolled_in_new_section: "Nemôžete premiestniť týchto študentov, pretože už sú v novej triede."
+    third_party_login: "Nemôžete presunúť študentov do triedy, ktorá je spojená s nástrojom tretej strany."
   share:
     title: "Informácie o Code štúdiu"
     description: "Ktokoľvek sa môže naučiť informatiku. Programujte hry a aplikácie s Code štúdiom."
@@ -570,6 +590,7 @@ sk:
     make_my_own_app: 'Urob svoju vlastnú aplikáciu'
     how_it_works: 'Ako to funguje (Pozrite si kód)'
     try_hour_of_code: 'Vyskúšaj Hodinu Kódu!'
+    store: 'Obchod'
   reference_area:
     title: 'Potrebujete pomôcť?'
     subtitle: 'Pozrite si tieto videá a tipy'
@@ -606,7 +627,7 @@ sk:
   share_code:
     title: "Klikni na 'Spustiť' pre zobrazenie tvojho kódu v akcii"
     bounce_og_title: "Pozri si moju hru Bounce"
-    flappy_og_title: "Pozri si moju Flappy hru"
+    flappy_og_title: "Pozri si moju hru v štýle Flappy Bird"
     studio_og_title: "Pozri si moju Play Lab appku"
     check_out_what_i_made: "Pozrite, čo som vytvoril/a"
     og_description: "Tento kód som napísal/a sama s Code.org"
@@ -636,6 +657,10 @@ sk:
       title: 'Tanečná Párty'
     dance-2019:
       title: 'Tanečná Párty'
+    hello-world:
+      title: 'Ahoj Svet'
+    poem-art:
+      title: 'Básnické umenie'
     hoc:
       title: 'Klasické bludisko'
       body: 'Vyskúšaj si základy informatiky. Milióny študentov jej dali šancu.'
@@ -695,7 +720,7 @@ sk:
       body: "Pripravili sme pre vás zoznam hodín, ktoré môžete vo svojej triede realizovať aj bez použitia počítača alebo iných zariadení. Teraz môžete učiť základy informatiky či v triede máte počítače alebo nie! Vyskúšajte tieto hodiny ako samostatné kurzy alebo doplnkové hodiny v iných kurzoch informatiky."
       body_short: "Ak nemáte počítač, vyskúšajte s triedou tieto Lekcie bez počítača."
     unplugged_conditionals:
-      title: "Podmienky"
+      title: "Podmienené príkazy"
       body: "Nauč sa viac o algoritmoch a podmienkach pomocou balíčka kariet. Počítač nepotrebuješ!"
     widgets:
       title: "Widgety"
@@ -794,14 +819,6 @@ sk:
     reminder_desc: 'Aktualizovali sme naše <a href="%{tos_url}" target="_blank"> Zmluvné podmienky</a> a <a href="%{privacy_url}" target="_blank"> Zásady ochrany osobných údajov</a>. Prečítajte si ich starostlivo predtým, než s nimi budete súhlasiť. Všimnite si, že ak výslovne neakceptujete aktualizované podmienky, naše nástroje výučby JavaScript môžu byť nedostupné vašim študentom.'
     reminder_desc_markdown: Aktualizovali sme naše [Zmluvné podmienky](%{tos_url}) a [Zásady ochrany osobných údajov](%{privacy_url}). Prečítajte si ich starostlivo predtým, než s nimi budete súhlasiť. Všimnite si, že ak výslovne neakceptujete aktualizované podmienky, naše nástroje výučby JavaScript môžu byť nedostupné vašim študentom.
     review_terms: "Prezrieť aktualizované podmienky"
-  donor_interstitial:
-    title: "Bezplatné kurzy Informatiky vám prinášajú..."
-    subtitle: "Ďakujeme štedrým darcom, ktorých podpora umožnila úspech Code.org. Zaviazali sme sa, že udržíme Code.org zadarmo pre školy a študentov na celom svete, a to vďaka neustálej štedrosti našich [donors](%{donors_url})!"
-    local_supporters: "Miestni podporovatelia"
-    global_supporters: "Svetoví podporovatelia"
-    support_codeorg_1: "Každý príspevok pre Code.org prináša príležitosť ďalším študentom."
-    support_codeorg_2: "[Prispejte teraz](%{donate_url}) na podporu Code.org."
-    get_started: "Začnite s Code.org"
   school_info_interstitial:
     title: "Chceme priniesť informatiku ku každému študentovi - pomôžte nám sledovať náš pokrok!"
     message: "Zadajte informácie o Vašej škole nižšie."
@@ -896,7 +913,7 @@ sk:
     instructor_feedback: 'Spätná väzba inštruktora'
     peer_feedback: 'Spätná väzba spoluriešiteľa'
     outdated: 'Táto spätná väzba bola pridaná k predchádzajúcej verzii'
-    peer_review: 'Recenzia'
+    peer_review: 'Vzájomné hodnotenie'
   external_links:
     disclaimer: Upozornenie
     leaving_domain: Opúštate túto doménu na stránku, ktorá nie je prevádzkovaná spoločnosťou Code.org.
@@ -974,8 +991,10 @@ sk:
       email: 'Email'
       email_alternate: 'Ďaľšia emailová adresa'
       gender: 'Rodová identita'
+      school: 'Škola'
       school_name: 'Názov školy'
       school_city: 'Mesto'
+      school_city_district: 'Mesto / školský obvod'
       school_country: 'Krajina'
       colombian_school_city: 'Mesto'
       colombian_school_municipality: 'Okres školy'
@@ -1017,7 +1036,7 @@ sk:
       subjects:
         cs: 'Informatika'
         ict: 'IT'
-        math: 'Matematické'
+        math: 'Matematika'
         science: 'Veda'
         history: 'História / Sociálne vedy'
         la: 'Jazyky'
@@ -1025,6 +1044,7 @@ sk:
         music: 'Hudba'
         art: 'Umenie'
         other: "Iné:"
+        na: 'Neuplatňuje sa'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1033,7 +1053,8 @@ sk:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Iné:"
+        other: "Ostatné"
+        na: 'Neuplatňuje sa'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1043,7 +1064,8 @@ sk:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Seminár Wonder'
-        other: "Iné:"
+        other: "Ostatné"
+        na: 'Neuplatňuje sa'
       workshop_course:
         csf_af: 'Základy informatiky (kurzy A-F)'
         csf_express: 'Základy informatiky (zrýchlený kurz)'
@@ -1096,5 +1118,6 @@ sk:
     not_now: "Teraz nie"
   behaviors:
     this_sprite: "tento objekt"
-  unit_prefix: "Jednotka %{n}"
+  unit_prefix: "Tematický celok %{n}"
   code_org_logo_alt: "Code.org Domov"
+  teacher_feedback: "Spätná väzba od učiteľa"

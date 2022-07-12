@@ -14,7 +14,7 @@ var FLAPPY_VALUE = '"flappy"';
 var RANDOM_VALUE = 'random';
 
 var generateSetterCode = function(ctx, name) {
-  var value = ctx.getTitleValue('VALUE');
+  var value = ctx.getFieldValue('VALUE');
   if (value === RANDOM_VALUE) {
     var possibleValues = _(ctx.VALUES)
       .map(function(item) {
@@ -41,13 +41,13 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event where mouse is clicked
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       if (isK1) {
         this.appendDummyInput()
-          .appendTitle(commonMsg.when())
-          .appendTitle(new blockly.FieldImage(skin.clickIcon));
+          .appendField(commonMsg.when())
+          .appendField(new blockly.FieldImage(skin.clickIcon));
       } else {
-        this.appendDummyInput().appendTitle(msg.whenClick());
+        this.appendDummyInput().appendField(msg.whenClick());
       }
       this.setPreviousStatement(false);
       this.setNextStatement(true);
@@ -64,13 +64,13 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event where flappy hits ground
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       if (isK1) {
         this.appendDummyInput()
-          .appendTitle(commonMsg.when())
-          .appendTitle(new blockly.FieldImage(skin.collideGroundIcon));
+          .appendField(commonMsg.when())
+          .appendField(new blockly.FieldImage(skin.collideGroundIcon));
       } else {
-        this.appendDummyInput().appendTitle(msg.whenCollideGround());
+        this.appendDummyInput().appendField(msg.whenCollideGround());
       }
       this.setPreviousStatement(false);
       this.setNextStatement(true);
@@ -87,13 +87,13 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event where flappy hits a Obstacle
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       if (isK1) {
         this.appendDummyInput()
-          .appendTitle(commonMsg.when())
-          .appendTitle(new blockly.FieldImage(skin.collideObstacleIcon));
+          .appendField(commonMsg.when())
+          .appendField(new blockly.FieldImage(skin.collideObstacleIcon));
       } else {
-        this.appendDummyInput().appendTitle(msg.whenCollideObstacle());
+        this.appendDummyInput().appendField(msg.whenCollideObstacle());
       }
       this.setPreviousStatement(false);
       this.setNextStatement(true);
@@ -110,13 +110,13 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event where flappy enters a Obstacle
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       if (isK1) {
         this.appendDummyInput()
-          .appendTitle(commonMsg.when())
-          .appendTitle(new blockly.FieldImage(skin.enterObstacleIcon));
+          .appendField(commonMsg.when())
+          .appendField(new blockly.FieldImage(skin.enterObstacleIcon));
       } else {
-        this.appendDummyInput().appendTitle(msg.whenEnterObstacle());
+        this.appendDummyInput().appendField(msg.whenEnterObstacle());
       }
       this.setPreviousStatement(false);
       this.setNextStatement(true);
@@ -133,13 +133,13 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for flapping (flying upwards)
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       if (isK1) {
         this.appendDummyInput()
-          .appendTitle(msg.flap())
-          .appendTitle(new blockly.FieldImage(skin.flapIcon));
+          .appendField(msg.flap())
+          .appendField(new blockly.FieldImage(skin.flapIcon));
       } else {
-        this.appendDummyInput().appendTitle(msg.flap());
+        this.appendDummyInput().appendField(msg.flap());
       }
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -163,8 +163,8 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.flapTooltip());
@@ -205,14 +205,14 @@ exports.install = function(blockly, blockInstallOptions) {
 
       if (isK1) {
         this.appendDummyInput()
-          .appendTitle(commonMsg.play())
-          .appendTitle(new blockly.FieldImage(skin.soundIcon))
-          .appendTitle(soundDropdown, 'VALUE');
+          .appendField(commonMsg.play())
+          .appendField(new blockly.FieldImage(skin.soundIcon))
+          .appendField(soundDropdown, 'VALUE');
       } else {
-        this.appendDummyInput().appendTitle(soundDropdown, 'VALUE');
+        this.appendDummyInput().appendField(soundDropdown, 'VALUE');
       }
 
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.playSoundTooltip());
@@ -261,13 +261,13 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for incrementing the player's score.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       if (isK1) {
         this.appendDummyInput()
-          .appendTitle(commonMsg.score())
-          .appendTitle(new blockly.FieldImage(skin.scoreCard));
+          .appendField(commonMsg.score())
+          .appendField(new blockly.FieldImage(skin.scoreCard));
       } else {
-        this.appendDummyInput().appendTitle(msg.incrementPlayerScore());
+        this.appendDummyInput().appendField(msg.incrementPlayerScore());
       }
 
       this.setPreviousStatement(true);
@@ -284,13 +284,13 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.flappy_endGame = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       if (isK1) {
         this.appendDummyInput()
-          .appendTitle(commonMsg.end())
-          .appendTitle(new blockly.FieldImage(skin.endIcon));
+          .appendField(commonMsg.end())
+          .appendField(new blockly.FieldImage(skin.endIcon));
       } else {
-        this.appendDummyInput().appendTitle(msg.endGame());
+        this.appendDummyInput().appendField(msg.endGame());
       }
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -309,7 +309,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setSpeed = {
     helpUrl: '',
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       if (isK1) {
         var fieldImageDropdown = new blockly.FieldImageDropdown(
           this.K1_VALUES,
@@ -318,12 +318,12 @@ exports.install = function(blockly, blockInstallOptions) {
         );
         fieldImageDropdown.setValue(this.K1_VALUES[1][1]); // default to normal
         this.appendDummyInput()
-          .appendTitle(msg.setSpeed())
-          .appendTitle(fieldImageDropdown, 'VALUE');
+          .appendField(msg.setSpeed())
+          .appendField(fieldImageDropdown, 'VALUE');
       } else {
         var dropdown = new blockly.FieldDropdown(this.VALUES);
         dropdown.setValue(this.VALUES[3][1]); // default to normal
-        this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+        this.appendDummyInput().appendField(dropdown, 'VALUE');
       }
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -360,8 +360,8 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
-      this.setHSV(312, 0.32, 0.62);
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
+      this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -388,11 +388,11 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setBackground = {
     helpUrl: '',
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       var dropdown;
       var input = this.appendDummyInput();
       if (isK1) {
-        input.appendTitle(msg.setBackground());
+        input.appendField(msg.setBackground());
         dropdown = new blockly.FieldImageDropdown(this.K1_CHOICES, 50, 30);
         dropdown.setValue(FLAPPY_VALUE);
       } else {
@@ -400,7 +400,7 @@ exports.install = function(blockly, blockInstallOptions) {
         dropdown.setValue(FLAPPY_VALUE);
       }
 
-      input.appendTitle(dropdown, 'VALUE');
+      input.appendField(dropdown, 'VALUE');
 
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -439,18 +439,18 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setPlayer = {
     helpUrl: '',
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       var dropdown;
       var input = this.appendDummyInput();
       if (isK1) {
-        input.appendTitle(msg.setPlayer());
+        input.appendField(msg.setPlayer());
         dropdown = new blockly.FieldImageDropdown(this.K1_CHOICES, 34, 24);
         dropdown.setValue(FLAPPY_VALUE);
       } else {
         dropdown = new blockly.FieldDropdown(this.VALUES);
         dropdown.setValue(FLAPPY_VALUE);
       }
-      input.appendTitle(dropdown, 'VALUE');
+      input.appendField(dropdown, 'VALUE');
 
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -505,11 +505,11 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setObstacle = {
     helpUrl: '',
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       var dropdown;
       var input = this.appendDummyInput();
       if (isK1) {
-        input.appendTitle(msg.setObstacle());
+        input.appendField(msg.setObstacle());
         dropdown = new blockly.FieldImageDropdown(this.K1_CHOICES, 50, 30);
         dropdown.setValue(FLAPPY_VALUE);
       } else {
@@ -517,7 +517,7 @@ exports.install = function(blockly, blockInstallOptions) {
         dropdown.setValue(FLAPPY_VALUE);
       }
 
-      input.appendTitle(dropdown, 'VALUE');
+      input.appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -555,18 +555,18 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setGround = {
     helpUrl: '',
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       var dropdown;
       var input = this.appendDummyInput();
       if (isK1) {
-        input.appendTitle(msg.setGround());
+        input.appendField(msg.setGround());
         dropdown = new blockly.FieldImageDropdown(this.K1_CHOICES, 50, 30);
         dropdown.setValue(FLAPPY_VALUE);
       } else {
         dropdown = new blockly.FieldDropdown(this.VALUES);
         dropdown.setValue(FLAPPY_VALUE);
       }
-      input.appendTitle(dropdown, 'VALUE');
+      input.appendField(dropdown, 'VALUE');
 
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -608,8 +608,8 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
-      this.setHSV(312, 0.32, 0.62);
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
+      this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -633,10 +633,10 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setScore = {
     // Block for moving forward or backward the internal number of pixels.
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       this.appendDummyInput()
-        .appendTitle(msg.setScore())
-        .appendTitle(
+        .appendField(msg.setScore())
+        .appendField(
           new blockly.FieldTextInput(
             '0',
             blockly.FieldTextInput.numberValidator
@@ -653,7 +653,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.flappy_setScore = function() {
     // Generate JavaScript for moving forward or backward the internal number of
     // pixels.
-    var value = window.parseInt(this.getTitleValue('VALUE'), 10);
+    var value = window.parseInt(this.getFieldValue('VALUE'), 10);
     return "Flappy.setScore('block_id_" + this.id + "', " + value + ');\n';
   };
 

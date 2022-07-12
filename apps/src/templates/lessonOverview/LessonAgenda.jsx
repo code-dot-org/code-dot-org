@@ -38,7 +38,7 @@ export default class LessonAgenda extends Component {
                 {section.duration > 0 && (
                   <a href={`#section-${section.key}`}>{`${
                     section.displayName
-                  } (${section.duration} ${i18n.minutes()})`}</a>
+                  }`}</a>
                 )}
                 {section.duration === 0 && (
                   <a href={`#section-${section.key}`}>{`${

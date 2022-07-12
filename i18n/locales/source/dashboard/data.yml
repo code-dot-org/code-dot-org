@@ -645,6 +645,66 @@ en:
         poembot-playtest-intro: PoemBot Playtest Intro
         poembot-playtest-sprites: PoemBot Playtest Sprites
         poembot-playtest-events: PoemBot Playtest Events
+        hello_world_intro: Hello World - Welcome to Sprite Lab
+        hello_world_events: Hello World - Programming with Events
+        hello_world_congrats: Hello World - Do What You Want
+        csp_global_vs_local: Debugging Global vs. Local Variables
+        rough_poemart_intro: v1 Poem Art Intro
+        rough_poemart_events: v1 Poem Art Events
+        rough_poemart_imagery: v1 Poem Art Imagery
+        rough_poemart_congrats: v1 Poem Art Congrats
+        poetry_module_variables: Variables - Coding with Poetry
+        poetry_module_textandvariables: Text & Variables - Coding with Poetry
+        poetry_module_planningapp: Planning Your Poem Generator App - Coding with Poetry
+        poetry_module_multichoiceprompts: Multiple Choice Prompts - Coding with Poetry
+        poetry_module_conditionals: Conditionals - Coding with Poetry
+        poemart_intro: Poem Art Introduction
+        poemart_events: Poem Art Events
+        poemart_imagery: Poem Art Imagery
+        poemart_celebration: Poem Art Celebration
+        csd_u6_variables_part2: Variables - Part 2
+        csd_ml_ethics_ai: 'Ethics and AI '
+        outbreak_intro: 'Outbreak Simulation: Introduction'
+        outbreak_events: 'Outbreak Simulator: Events'
+        outbreak_scientist: 'Outbreak Simulator: Thinking Like a Scientist'
+        outbreak_outro: 'Outbreak Simulator: Free Play'
+        PL_overview_CSP: What is Computer Science Principles?
+        PL_CSP_EIPMOverview: Guide to EIPM Lessons
+        tesstest: Tesstes
+        CSA-PL-debugging-temp: Introduction to Debugging in Java Lab - temp
+        csd_app_lab_design_mode: CSD App Lab Design Mode
+        csd_app_lab_events: CSD App Lab Events
+        PL_CSD_Unit4_AppTesting: Paper Prototype Testing
+        csd_u6_circuit_playground: Physical Computing
+        csd_u6_input_output: Input and Output
+        CSA-PL-for-loops: For loops in Java
+        CSA-PL-variables: Creating Variables in Java
+        PL_CS_Journeys_Overview: CS Journeys
+        CSA-PL-intro-to-java-lab: Java Lab Basics
+        CSA-PL-first-program: Writing a Program in Java
+        CSD_u6_variables_part1: 'CSD: Variables'
+        csd_u6_if_statements: 'CSD: If Statements'
+        csc-poem-art-intro: Intro Video
+        csc-poem-art-outro: Outro Video
+        csd_u6_call_define_functions: 'CSD: Calling and Defining Functions'
+        csp_applab_parameters: Functions with Parameters
+        starquilts_intro_artist: Intro to Star Quilts
+        CSA-PL-intro-to-arrays: One-Dimensional (1D) Arrays
+        CSA-PL-1d-arrays-new-values: Entering values in 1D arrays
+        CSA-PL-conditionals: Conditional Statements in Java
+        CSA-PL-two-way-selection: Two-way selection
+        CSA-PL-Printing-in-Java: Printing in Java
+        CSA-PL-multi-selection-statements: Multi-selection Statements
+        PL_CSP_TeacherTips_Advice: 'Teacher Tips: Advice to New CS Teachers'
+        PL_CSP_TeacherTips_IntroToCSP: 'Teacher Tips: Intro to CS Principles'
+        PL_CSP_TeacherTips_Debugging: 'Teacher Tips: Help with Debugging'
+        PL_CSP_TeacherTips_LeadLearner: 'Teacher Tips: How to be a Lead Learner'
+        PL_CSP_TeacherTips_APExam: 'Teacher Tips: Preparing for the AP Exam'
+        PL_CSP_TeacherTips_EIPM: 'Teacher Tips: The EIPM Process'
+        PL_CSD_CircuitPlayground_Overview: Circuit Playground Overview
+        CSA-PL-debugging-22: Debugging in Java Lab
+        CSD_Unit6_InteractiveArtExemplar: Interactive Art Exemplar
+        CS_Changing_Everything: Computer Science is Changing Everything
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

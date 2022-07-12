@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 fi:
   errors:
     messages:
@@ -377,6 +383,7 @@ fi:
       minecraft_hero: 'Minecraft sankari'
       playlab: 'Pelilabra'
       starwars: 'Tähtien sota'
+      loading: 'Lataa...'
       weblab: 'Nettilabra'
       view_all: 'Kaikki projektit...'
     popup:
@@ -392,6 +399,7 @@ fi:
       prizes_link: 'lisätietoja'
   teacher:
     answer: Vastaus
+    dashboard: 'Opettajan päänäyttö'
     for_teachers_only: Vain opettajille
     title:
       one: 'Opettajasi:'
@@ -841,6 +849,7 @@ fi:
   pd:
     form_labels:
       email: 'Sähköposti'
+      school: 'Koulu'
       school_name: 'Koulun nimi'
       school_country: 'Koulun maa'
       colombian_chilean_school_name: 'Koulun nimi'
@@ -855,10 +864,13 @@ fi:
         math: 'Matematiikka'
         science: 'Tiede'
         la: 'Kielet'
+        other: "Muut"
       resources:
         kodable: 'Kodable'
+        other: "Muut"
       robotics:
         kodable: 'Kodable'
+        other: "Muut"
       email_opt_in:
         opt_in_yes: 'Kyllä'
         opt_in_no: 'Ei'

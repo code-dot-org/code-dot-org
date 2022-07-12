@@ -110,9 +110,12 @@ class Documents < Sinatra::Base
       settings.template_extnames +
       settings.exclude_extnames +
       ['.fetch']
+    # Note: shared_resources.rb has additional configuration for Sass::Plugin
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
-    Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
-    Sass::Plugin.options[:template_location] = shared_dir('css')
+    Sass::Plugin.add_template_location(
+      sites_v3_dir('code.org', 'public', 'css'),
+      sites_v3_dir('code.org', 'public', 'css', 'generated')
+    )
     set :mustermann_opts, check_anchors: false, ignore_unknown_options: true
 
     # Haml/Temple engine doesn't recognize the `path` option
@@ -173,11 +176,11 @@ class Documents < Sinatra::Base
       # This is similar to the lazy loading we need to do for Haml:
       # https://github.com/code-dot-org/code-dot-org/blob/8a49e0f39e1bc98aac462a3eb049d0eeb6af3e06/lib/cdo/pegasus/text_render.rb#L82-L97
       require 'cdo/pegasus/actionview_sinatra'
-      ActionViewSinatra::Base.new(self)
+      ActionViewSinatra.create_view(self)
     end
 
     update_actionview_assigns
-    @actionview.instance_variable_set("@_request", request)
+    @actionview.instance_variable_set(:@_request, request)
   end
 
   # This will make all instance variables on our sinatra controller also
@@ -411,7 +414,7 @@ class Documents < Sinatra::Base
           locals = split[1].scan(/("(?:\\.|[^"])*"|[^\s]*):\s*("(?:\\.|[^"])*"|[^\s]*)/).
             map(&:compact).
             to_h.
-            transform_values {|v| @actionview.sanitize(v.undump)}
+            transform_values {|v| @actionview.sanitize(v.delete_prefix('"').delete_suffix('"').gsub('\"', '"'))}
 
           if locals.present?
             path = resolve_view_template(uri)
@@ -546,7 +549,7 @@ class Documents < Sinatra::Base
       # IE, "foo.md.erb" will be processed as an ERB template, then the result
       # of that will be processed as a MD template
       result = body
-      extensions.reverse.each do |extension|
+      extensions.reverse_each do |extension|
         case extension
         when '.erb', '.html', '.haml', '.md'
           # Symbolize the keys of the locals hash; previously, we supported

@@ -2,6 +2,75 @@
   "nn-NO": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Feilsøking"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Feilsøking"
+        },
+        "function/hero/unversioned": {
+          "word": "Funksjon"
+        },
+        "code/poem-art/2021": {
+          "word": "Kode"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Feilsøking"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Feilsøking"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Feilsøking"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Feilsøking"
+        },
+        "code/artist/unversioned": {
+          "word": "Kode"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Feilsøking"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Feilsøking"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Feilsøking"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Betingelser"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Løkker"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Feilsøking"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Feilsøking"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Feilsøking"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Feilsøking"
+        },
+        "code/sports/unversioned": {
+          "word": "Kode"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Feilsøking"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Feilsøking"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Feilsøking"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kode"
+        },
         "variable/coursef/2021": {
           "word": "Variabel"
         },
@@ -76,6 +145,27 @@
         },
         "define/coursee/2021": {
           "word": "Definer"
+        },
+        "debugging/csd/2021": {
+          "word": "Feilsøking"
+        },
+        "variable/csd/2021": {
+          "word": "Variabel"
+        },
+        "conditionals/csd/2021": {
+          "word": "Betingelser"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraksjon"
+        },
+        "function/csd/2021": {
+          "word": "Funksjon"
+        },
+        "input/csd/2021": {
+          "word": "Inngang"
+        },
+        "copyright/csd/2021": {
+          "word": "Opphavsrett"
         }
       }
     }

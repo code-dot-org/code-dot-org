@@ -4,12 +4,29 @@ mr:
       Blue: निळा
       Green: हिरवा
       Red: लाल
+      actor: पात्र
+      birds: पक्षी
       cats: मांजरी
+      counter: काऊंटर
       dogs: कुत्री
       height: उंची
+      honey: मध
       i: i
       left: डावा
+      length: लांबी
+      name: नाव
+      nectar: ' परागकण'
+      planet: ग्रह
+      points: गुण
+      random: कोणताही
       repeat: पुन्हा करा
       right: उजवा
+      score: गुण
+      shout: ओरडणे
+      sides: बाजू
       size: आकार
+      speed: वेग 
+      variable: व्हेरीएबल
       width: रुंदी
+      wizard: जादूगार
+      x: x

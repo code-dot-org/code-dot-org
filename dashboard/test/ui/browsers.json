@@ -5,7 +5,7 @@
     "name": "Chrome",
     "browserName": "chrome",
     "version": "75",
-    "platform": "Windows 7",
+    "platform": "Windows 10",
     "screenResolution": "1280x1024",
     "extendedDebugging": true
   },
@@ -15,12 +15,6 @@
     "platform": "macOS 10.14",
     "version": "12.0",
     "w3c": true
-  },
-  {
-    "name": "IE11",
-    "browserName": "Internet Explorer",
-    "version": "11.0",
-    "platform": "Windows 10"
   },
   {
     "name": "Firefox",

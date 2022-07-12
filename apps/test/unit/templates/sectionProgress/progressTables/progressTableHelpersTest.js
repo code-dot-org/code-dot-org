@@ -7,7 +7,6 @@ import {
 } from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
 import {
   fakeLessonWithLevels,
-  fakeSection,
   fakeStudents,
   fakeStudentLevelProgress
 } from '@cdo/apps/templates/progress/progressTestHelpers';
@@ -98,7 +97,7 @@ describe('progressTableHelpers', () => {
     const lesson = fakeLessonWithLevels({}, 3); // 3 levels
     const students = fakeStudents(1);
     const student = students[0];
-    const section = fakeSection(students);
+    const sectionId = 1;
 
     // creates progress with last updated = 3/4 and time spent = 5 minutes
     const levelProgressByStudent = fakeStudentLevelProgress(
@@ -109,7 +108,7 @@ describe('progressTableHelpers', () => {
 
     const detailCellformatters = getDetailCellFormatters(
       levelProgressByStudent,
-      section
+      sectionId
     );
 
     it('returns an array of 3 formatters', () => {

@@ -4,15 +4,19 @@ var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 var envConstants = require('./envConstants');
 var WebpackNotifierPlugin = require('webpack-notifier');
+var sass = require('sass');
 
 // Certain packages ship in ES6 and need to be transpiled for our purposes.
 var toTranspileWithinNodeModules = [
-  // All of our @cdo-aliased files should get transpiled as they are our own
+  // All of our @cdo- and @dsco_-aliased files should get transpiled as they are our own
   // source files.
   path.resolve(__dirname, 'node_modules', '@cdo'),
+  path.resolve(__dirname, 'node_modules', '@dsco_'),
   // playground-io ships in ES6 as of 0.3.0
   path.resolve(__dirname, 'node_modules', 'playground-io'),
   path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
+  path.resolve(__dirname, 'node_modules', '@blockly', 'field-grid-dropdown'),
+  path.resolve(__dirname, 'node_modules', '@blockly', 'plugin-scroll-options'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'dance-party'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'remark-plugins'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'snack-sdk'),
@@ -26,14 +30,13 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'ml-distance-euclidean'),
   path.resolve(__dirname, 'node_modules', '@codemirror'),
   path.resolve(__dirname, 'node_modules', 'style-mod'),
-  path.resolve(__dirname, 'node_modules', 'lezer-tree'),
-  path.resolve(__dirname, 'node_modules', 'lezer-java'),
-  path.resolve(__dirname, 'node_modules', 'lezer'),
+  path.resolve(__dirname, 'node_modules', '@lezer'),
   path.resolve(
     __dirname,
     'node_modules',
     'microsoft-cognitiveservices-speech-sdk'
-  )
+  ),
+  path.resolve(__dirname, 'node_modules', 'slate')
 ];
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
@@ -134,7 +137,14 @@ var baseConfig = {
         use: [
           {loader: 'style-loader'},
           {loader: 'css-loader'},
-          {loader: 'sass-loader', options: {includePaths: [scssIncludePath]}}
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: [scssIncludePath],
+              implementation: sass,
+              quietDeps: true
+            }
+          }
         ]
       },
       {test: /\.interpreted.js$/, loader: 'raw-loader'},

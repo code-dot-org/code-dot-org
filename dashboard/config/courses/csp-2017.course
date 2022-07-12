@@ -24,27 +24,48 @@
     }
   ],
   "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
   "properties": {
-    "teacher_resources": [
-      [
-        "curriculum",
-        "https://curriculum.code.org/csp/"
-      ],
-      [
-        "teacherForum",
-        "http://forum.code.org/c/csp"
-      ],
-      [
-        "professionalLearning",
-        "https://studio.code.org/courses/CSP%20Support"
-      ]
-    ],
-    "has_verified_resources": true,
     "family_name": "csp",
+    "has_verified_resources": true,
     "version_year": "2017"
   },
   "resources": [
-
+    {
+      "name": "Curriculum",
+      "url": "https://curriculum.code.org/csp/",
+      "key": "curriculum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "curriculum"
+      }
+    },
+    {
+      "name": "Professional Learning",
+      "url": "https://studio.code.org/courses/CSP%20Support",
+      "key": "professional_learning_5",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "professional_learning_5"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "http://forum.code.org/c/csp",
+      "key": "teacher_forum_6",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_6"
+      }
+    }
   ],
   "student_resources": [
 

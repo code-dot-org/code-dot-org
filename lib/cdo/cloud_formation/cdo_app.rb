@@ -2,6 +2,7 @@ require_relative './stack_template'
 require_relative './vpc'
 
 require 'aws-sdk-acm'
+require 'aws-sdk-route53'
 
 require 'active_support/core_ext/numeric/bytes'
 require 'ostruct'
@@ -43,6 +44,7 @@ module Cdo::CloudFormation
     # Struct providing arbitrary configuration options used by the template.
     # @return [OpenStruct]
     attr_reader :options
+
     delegate :commit, :frontends, :database, :load_balancer, :alarms, :cdn_enabled, :branch, :domain,
       to: :options
 

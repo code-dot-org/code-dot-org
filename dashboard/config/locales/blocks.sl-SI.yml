@@ -2,6 +2,22 @@
 sl:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': srednje
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': srednje
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -369,6 +385,10 @@ sl:
           CONDITION:
             '"when"': ko
             '"while"': dokler
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': sekund(e)
       gamelab_getProp:
         options:
           PROPERTY:
@@ -414,6 +434,12 @@ sl:
             '90': dol
             '180': levo
             '270': gor
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': srednje
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -423,6 +449,11 @@ sl:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": hrustati
+            "'sound://category_animals/cat.mp3'": muca
+            "'sound://category_animals/cow.mp3'": krava
+            "'sound://category_animals/sheep.mp3'": ovca
+            "'sound://category_animals/chicken.mp3'": piščanec
+            "'sound://category_animals/dog.mp3'": kuža
             "'sound://category_digital/jump_7.mp3'": skoči
       gamelab_randColor:
         text: naključna barva
@@ -620,9 +651,36 @@ sl:
             '"down"': puščica dol
             '"left"': puščica levo
             '"right"': puščica desno
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': srca
+            '"rainbow"': mavrica
       Poetry_makeBurst:
         options:
           EFFECT:
+            '"rain"': dež
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': noč
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': skoči
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': oblačno
+            '"hearts"': srca
+            '"rain"': dež
+          PALETTE:
+            '"rainbow"': mavrica
+            '"winter"': zima
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': srca
             '"rain"': dež
       RyanLab_moveForward:
         text: premakni se naprej

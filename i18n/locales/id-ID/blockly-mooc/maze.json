@@ -64,6 +64,7 @@
   "moveBackward": "bergerak mundur",
   "moveEastTooltip": "Pindahkan saya ke Timur satu langkah.",
   "moveNForward": "Bergerak maju %1 satu kotak",
+  "moveNForwardTooltip": "Pindahkan saya ke depan jumlah ruang yang ditentukan.",
   "moveForward": "Gerak maju",
   "moveForwardTooltip": "Bergerak maju satu kotak.",
   "moveNorthTooltip": "Pindahkan saya ke Utara satu langkah.",

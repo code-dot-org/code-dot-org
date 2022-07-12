@@ -228,7 +228,15 @@ it:
     user_type_button: Aggiorna Tipologia di Account
     user_type_label: Tipo di account
     user_type_student: Studente
+    user_type_student_desc: 'Esplora tutti i tuoi corsi e attività, più:'
+    user_type_student_ability_1: Salva i tuoi progressi e progetti
+    user_type_student_ability_2: Partecipa alla sezione della classe del tuo insegnante
     user_type_teacher: Insegnante
+    user_type_teacher_desc: 'Tutto ciò a cui hanno accesso gli studenti, più:'
+    user_type_teacher_ability_1: Crea le sezioni della classe
+    user_type_teacher_ability_2: Assegna e tieni traccia del lavoro degli studenti
+    user_type_teacher_ability_3: Iscriviti all'apprendimento professionale
+    user_type_teacher_ability_4: Interagisci sul nostro forum per insegnanti
     field_is_required: è un dato obbligatorio
     accept_terms: Devi accettare le condizioni per creare un account
     error: Si è verificato un errore.
@@ -239,6 +247,10 @@ it:
     email_preference_no: 'No'
     email_preference_required: Devi specificare una preferenza relativa all'indirizzo
       email.
+    share_teacher_email_reg_partner_question: Desideri che noi condividiamo le tue
+      informazioni con  [partner regionale Code.org](%{cdo_regional_partner_desc})
+      nel tuo Stato, in modo da poterti inviare una notifica sul tuo sviluppo professionale
+      locale, risorse ed eventi?
     share_teacher_email_reg_partner_preference_yes: Sì
     share_teacher_email_reg_partner_preference_no: 'No'
     share_teacher_email_reg_partner_preference_required: Devi specificare una preferenza
@@ -355,6 +367,10 @@ it:
       provider_managed_section: Questa sezione è gestita da un altro provider e non
         può essere unita. Chiedi al tuo insegnante di aggiungerti via %{provider}
         e risincronizza la loro sezione.
+      restricted_section: Non siamo riusciti ad aggiungerti alla sezione %{section_code}
+        perché é bloccata. Perfavore contatta il / la tua insegnante per aiuto.
+      not_participant_type: Non siamo riusciti ad aggiungerti alla sezione %{section_code}
+        perché non soddisfi la tipologia di partecipante per la sezione.
     mail:
       student_disassociated:
         subject: 'Notifica da Code.org: %{student_name} non è più iscritto come tuo
@@ -394,7 +410,7 @@ it:
       project_gallery: Progetti
       sections: Classi
       help_support: Help and support
-      report_bug: Report a problem
+      report_bug: Segnala un errore
       report_abuse: Segnala abuso
       teacher_community: Teacher community
       professional_learning: Professional learning
@@ -475,12 +491,15 @@ it:
       minecraft_hero: L'Eroe di Minecraft
       playlab: Laboratorio
       playlab_k1: Laboratorio (pre-scolare)
+      poetry: Poesia
+      poetry_hoc: L'arte della poesia
       scratch: Scratch
       sports: Sport
       spritelab: Laboratorio dei Personaggi
       starwars: Guerre Stellari
       starwarsblocks: Guerre Stellari (Blocchi)
       starwarsblocks_hour: Guerre Stellari (Blocchi)
+      loading: Sto caricando...
       weblab: Sviluppo Web
       view_all: Guarda tutti i progetti...
     popup:
@@ -496,6 +515,7 @@ it:
       prizes_link: Più informazioni
   teacher:
     answer: Rispondi
+    dashboard: Cruscotto dell'Insegnante
     for_teachers_only: Per gli insegnanti
     title:
       one: 'Il tuo insegnante:'
@@ -665,10 +685,12 @@ it:
       già ad una classe di questo insegnante.
     third_party_login: Non puoi spostare gli studenti in una classe sincronizzata
       con un strumento di terze parti.
+    not_correct_participant_type: Non puoi spostare questi utenti perché non hanno
+      le autorizzazioni a partecipare alla nuova sezione.
   share:
     title: Impara su Code Studio
-    description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
-      artistici con la programmazione.
+    description: Chiunque può imparare l'informatica. Crea giochi, app e lavori artistici
+      con la programmazione.
     try_hour_of_code: Prova l'Ora del Codice!
   gender:
     male: Maschile
@@ -682,31 +704,37 @@ it:
   footer:
     thank_you: Ringraziamo i nostri <a href="https://code.org/about/donors"> donatori</a>,
       <a href="https://code.org/about/partners"> partner</a>, il nostro <a href="https://code.org/about/team">
-      team</a>, il nostro cast video e i nostri <a href="https://code.org/about/advisors">
-      consulenti di formazione</a> per il loro supporto nella creazione di Code Studio.
+      team allargato</a>, il nostro cast video e i nostri <a href="https://code.org/about/advisors">
+      consulenti di formazione</a> per il loro contributo nella realizzazione di Code
+      Studio.
     help_from_html: Siamo particolarmente riconoscenti agli ingegneri di Amazon, Google
       e Microsoft che hanno aiutato a creare questi corsi.
     help_from_html_old: Gli ingegneri di Amazon, Google e Microsoft hanno contribuito
       a creare questi materiali.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Tutti i diritti
-      riservati.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm.
+      riservati.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
       Tutti i diritti riservati.<br />Frozen&#8482; &copy; %{current_year} Disney.
       Tutti i diritti riservati.<br />Ice Age&#8482; &copy; %{current_year} 20th Century
       Fox. Tutti i diritti riservati.<br />Angry Birds&#8482; &copy; 2009-%{current_year}
       Rovio Entertainment Ltd. Tutti i diritti riservati.<br />Plants vs. Zombies&#8482;
-      &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati.<br />The
-      Amazing World of Gumball è un marchio registrato e &copy; 2015 Cartoon Network.
-    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
-      Reserved. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Tutti
-      i diritti riservati. Frozen&#8482; &copy; %{current_year} Disney. Tutti i diritti
-      riservati. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tutti i diritti
-      riservati. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
-      Ltd. Tutti i diritti riservati. Plants vs. Zombies&#8482; &copy; %{current_year}
-      Electronic Arts Inc. Tutti i diritti riservati. The Amazing World of Gumball
-      è un marchio registrato e &copy; 2015 Cartoon Network.
+      &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati.<br />DreamWorks
+      The Bad Guys &copy; %{current_year} DreamWorks Animation LLC. Tutti i diritti
+      riservati.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Tutti i
+      diritti riservati. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
+      Tutti i diritti riservati. Frozen&#8482; &copy; %{current_year} Disney. Tutti
+      i diritti riservati. Ice Age&#8482; &copy; %{current_year} 20th Century Fox.
+      Tutti i diritti riservati. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Tutti i diritti riservati. Plants vs. Zombies&#8482; &copy;
+      %{current_year} Electronic Arts Inc. Tutti i diritti riservati. DreamWorks The
+      Bad Guys &copy; %{current_year} DreamWorks Animation LLC. Tutti i diritti riservati.
     code_from_html: Code.org usa p5.play, il quale è sotto licenza <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
-    powered_by_aws: Eseguito su Amazon Web Services
+    powered_by_aws: Amazon Web Services e il logo “Powered by AWS” sono marchi registrati
+      di Amazon.com, Inc. o delle sue consociate negli USA e/o in altri paesi.
+    built_on_github: Progettato su GitHub da Microsoft
+    google_copyright: "&copy; Google Inc. utilizzato previa autorizzazione. Google
+      Classroom è un marchio registrato di Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, il logo CODE e Hour
       of Code&reg; sono marchi registrati di Code.org."
     copyright: Copyright
@@ -718,12 +746,15 @@ it:
     tos_short: Condizioni
     tos: Termini di servizio
     privacy: Informativa sulla privacy
+    privacy_updated: Informativa sulla privacy (aggiornata)
     secure: Versione sicura
     report_abuse: Segnala un abuso
     built_on_code_studio: Costruito con Code Studio
     make_my_own_app: Creo la mia App
     how_it_works: Come funziona
     try_hour_of_code: Prova l'Ora del Codice!
+    store: Negozio
+    cookie_notice: Informativa sui cookie
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
@@ -744,9 +775,8 @@ it:
   compatibility:
     upgrade:
       unsupported_message: Il tuo browser non è supportato. Si prega di aggiornare
-        il browser ad <a href='%{supported_browsers_url}', target='_blank'> uno dei
-        nostri browser supportati</a>. Puoi provare a visualizzare la pagina, ma aspettati
-        qualche malfunzionamento.
+        il browser a [uno dei nostri browser supportati](%{supported_browsers_url}).
+        Puoi provare a visualizzare la pagina, ma aspettati qualche malfunzionamento.
       link: Ulteriori informazioni
       applab_unsupported_tablet: Sviluppo App funziona meglio su un PC o un portatile
         con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo
@@ -806,6 +836,10 @@ it:
       title: Ballando col codice
     dance-2019:
       title: Ballando col codice
+    hello-world:
+      title: Ciao Mondo
+    poem-art:
+      title: L'arte della poesia
     hoc:
       title: Labirinto Classico
       body: Impara i concetti base dell'informatica. Milioni di persone l'hanno già
@@ -1029,20 +1063,6 @@ it:
       potrebbero essere inaccessibili ai tuoi studenti prima di accettare esplicitamente
       i termini aggiornati.
     review_terms: Rivedi i termini dell'aggiornamento
-  donor_interstitial:
-    title: Questi corsi di informatica sono gratuiti grazie a...
-    subtitle: 'Ringraziamo i generosi finanziatori il cui sostegno ha reso possibile
-      il successo di Code.org. Ci impegniamo a mantenere Code.org gratuito sia per
-      le scuole sia per gli studenti, in tutto il mondo, grazie alla continua generosità
-      dei nostri [donors](%{donors_url})!
-
-'
-    local_supporters: Sostenitori locali
-    global_supporters: Sostenitori globali
-    support_codeorg_1: Ogni dollaro donato a Code.org permette di dare un'opportunità
-      a tantissimi studenti.
-    support_codeorg_2: "[Dona ora](%{donate_url}) per sostenere Code.org."
-    get_started: Inizia con Code.org
   school_info_interstitial:
     title: Vogliamo portare l'Informatica ad ogni studente - aiutaci a tenere traccia
       dei nostri progressi!
@@ -1269,8 +1289,10 @@ it:
       email: Indirizzo email
       email_alternate: Email alternativa
       gender: Identità di genere
+      school: Scuola
       school_name: Nome della scuola
       school_city: Città della scuola
+      school_city_district: Città/Quartiere della scuola
       school_country: Paese della Scuola
       colombian_school_city: Città della scuola
       colombian_school_municipality: Provincia della Scuola
@@ -1331,6 +1353,7 @@ it:
         music: Musica
         art: Arte
         other: 'Altro:'
+        na: Non applicabile
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy - l'Accademia del Codice
@@ -1339,7 +1362,8 @@ it:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Altro:'
+        other: Altro
+        na: Non applicabile
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1349,7 +1373,8 @@ it:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Laboratorio di meraviglie
-        other: 'Altro:'
+        other: Altro
+        na: Non applicabile
       workshop_course:
         csf_af: Fondamenti di Informatica (Corsi A-F)
         csf_express: Fondamenti di Informatica (Corsi rapidi)
@@ -1431,3 +1456,4 @@ it:
     this_sprite: questo personaggio
   unit_prefix: Unità %{n}
   code_org_logo_alt: Code.org Home
+  teacher_feedback: Commento dell'insegnante

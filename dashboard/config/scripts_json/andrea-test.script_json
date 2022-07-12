@@ -4,8 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
-      "professional_learning_course": "Andrea Test",
       "announcements": [
         {
           "notice": "Announcing",
@@ -15,12 +13,18 @@
           "visibility": "Teacher-only"
         }
       ],
-      "only_instructor_review_required": true
+      "is_migrated": true,
+      "only_instructor_review_required": true,
+      "professional_learning_course": "Andrea Test",
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:39 UTC",
+    "serialized_at": "2021-11-22 17:07:58 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "plc_reviewer",
+    "participant_audience": "facilitator",
     "seeding_key": {
       "script.name": "andrea-test"
     }
@@ -114,16 +118,123 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "6571fb45-ba11-4c03-98b5-3c1e88b5504e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6571fb45-ba11-4c03-98b5-3c1e88b5504e",
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "andrea-test"
+      }
+    },
+    {
+      "key": "4b66b7cf-a93c-4d9e-92ca-3a0fc925ff9d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4b66b7cf-a93c-4d9e-92ca-3a0fc925ff9d",
+        "lesson.key": "Part 1",
+        "lesson_group.key": "content",
+        "script.name": "andrea-test"
+      }
+    },
+    {
+      "key": "5aea265c-b86e-41b3-9f3d-da0c246e106d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5aea265c-b86e-41b3-9f3d-da0c246e106d",
+        "lesson.key": "Part 2",
+        "lesson_group.key": "content",
+        "script.name": "andrea-test"
+      }
+    },
+    {
+      "key": "ec149064-a9a2-4344-b05c-50d9905c1b66",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec149064-a9a2-4344-b05c-50d9905c1b66",
+        "lesson.key": "part 3",
+        "lesson_group.key": "content",
+        "script.name": "andrea-test"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "d2100381-dd78-4dd1-a359-b34bd981009a",
+      "position": 1,
+      "properties": {
+        "name": "What is Deeper Learning",
+        "progression_name": "What is Deeper Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "d2100381-dd78-4dd1-a359-b34bd981009a",
+        "lesson_activity.key": "6571fb45-ba11-4c03-98b5-3c1e88b5504e"
+      }
+    },
+    {
+      "key": "132039f6-bf39-4dde-926c-483444688628",
+      "position": 1,
+      "properties": {
+        "progression_name": "President Question"
+      },
+      "seeding_key": {
+        "activity_section.key": "132039f6-bf39-4dde-926c-483444688628",
+        "lesson_activity.key": "4b66b7cf-a93c-4d9e-92ca-3a0fc925ff9d"
+      }
+    },
+    {
+      "key": "56242e2a-eacc-43b1-a093-89d10ad91793",
+      "position": 2,
+      "properties": {
+        "name": "Vice President Question",
+        "progression_name": "Vice President Question"
+      },
+      "seeding_key": {
+        "activity_section.key": "56242e2a-eacc-43b1-a093-89d10ad91793",
+        "lesson_activity.key": "4b66b7cf-a93c-4d9e-92ca-3a0fc925ff9d"
+      }
+    },
+    {
+      "key": "e0b130d9-f5e3-4b72-bfe7-a2329309caf3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e0b130d9-f5e3-4b72-bfe7-a2329309caf3",
+        "lesson_activity.key": "5aea265c-b86e-41b3-9f3d-da0c246e106d"
+      }
+    },
+    {
+      "key": "c0a7f757-a2f3-4200-9d65-80a6408a914a",
+      "position": 1,
+      "properties": {
+        "name": "Sandwich",
+        "progression_name": "Sandwich"
+      },
+      "seeding_key": {
+        "activity_section.key": "c0a7f757-a2f3-4200-9d65-80a6408a914a",
+        "lesson_activity.key": "ec149064-a9a2-4344-b05c-50d9905c1b66"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -138,7 +249,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "andrea-test"
+        "script.name": "andrea-test",
+        "activity_section.key": "d2100381-dd78-4dd1-a359-b34bd981009a"
       },
       "level_keys": [
         "andrea_test1"
@@ -147,7 +259,7 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -162,7 +274,8 @@
         ],
         "lesson.key": "Part 1",
         "lesson_group.key": "content",
-        "script.name": "andrea-test"
+        "script.name": "andrea-test",
+        "activity_section.key": "132039f6-bf39-4dde-926c-483444688628"
       },
       "level_keys": [
         "andrea-test2"
@@ -171,7 +284,7 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -186,7 +299,8 @@
         ],
         "lesson.key": "Part 1",
         "lesson_group.key": "content",
-        "script.name": "andrea-test"
+        "script.name": "andrea-test",
+        "activity_section.key": "56242e2a-eacc-43b1-a093-89d10ad91793"
       },
       "level_keys": [
         "andrea-test3"
@@ -195,33 +309,34 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "andrea_test1",
-          "andrea-test2"
+          "andrea-test2",
+          "andrea_test1"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "andrea_test1",
-          "andrea-test2"
+          "andrea-test2",
+          "andrea_test1"
         ],
         "lesson.key": "Part 2",
         "lesson_group.key": "content",
-        "script.name": "andrea-test"
+        "script.name": "andrea-test",
+        "activity_section.key": "e0b130d9-f5e3-4b72-bfe7-a2329309caf3"
       },
       "level_keys": [
-        "andrea_test1",
-        "andrea-test2"
+        "andrea-test2",
+        "andrea_test1"
       ]
     },
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -236,7 +351,8 @@
         ],
         "lesson.key": "part 3",
         "lesson_group.key": "content",
-        "script.name": "andrea-test"
+        "script.name": "andrea-test",
+        "activity_section.key": "c0a7f757-a2f3-4200-9d65-80a6408a914a"
       },
       "level_keys": [
         "dlp-hold1"
@@ -252,7 +368,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "andrea-test"
+        "script.name": "andrea-test",
+        "activity_section.key": "d2100381-dd78-4dd1-a359-b34bd981009a"
       }
     },
     {
@@ -263,7 +380,8 @@
         ],
         "lesson.key": "Part 1",
         "lesson_group.key": "content",
-        "script.name": "andrea-test"
+        "script.name": "andrea-test",
+        "activity_section.key": "132039f6-bf39-4dde-926c-483444688628"
       }
     },
     {
@@ -274,31 +392,34 @@
         ],
         "lesson.key": "Part 1",
         "lesson_group.key": "content",
-        "script.name": "andrea-test"
+        "script.name": "andrea-test",
+        "activity_section.key": "56242e2a-eacc-43b1-a093-89d10ad91793"
       }
     },
     {
       "seeding_key": {
         "level.key": "andrea_test1",
         "script_level.level_keys": [
-          "andrea_test1",
-          "andrea-test2"
+          "andrea-test2",
+          "andrea_test1"
         ],
         "lesson.key": "Part 2",
         "lesson_group.key": "content",
-        "script.name": "andrea-test"
+        "script.name": "andrea-test",
+        "activity_section.key": "e0b130d9-f5e3-4b72-bfe7-a2329309caf3"
       }
     },
     {
       "seeding_key": {
         "level.key": "andrea-test2",
         "script_level.level_keys": [
-          "andrea_test1",
-          "andrea-test2"
+          "andrea-test2",
+          "andrea_test1"
         ],
         "lesson.key": "Part 2",
         "lesson_group.key": "content",
-        "script.name": "andrea-test"
+        "script.name": "andrea-test",
+        "activity_section.key": "e0b130d9-f5e3-4b72-bfe7-a2329309caf3"
       }
     },
     {
@@ -309,7 +430,8 @@
         ],
         "lesson.key": "part 3",
         "lesson_group.key": "content",
-        "script.name": "andrea-test"
+        "script.name": "andrea-test",
+        "activity_section.key": "c0a7f757-a2f3-4200-9d65-80a6408a914a"
       }
     }
   ],

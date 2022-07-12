@@ -1,0 +1,8 @@
+{
+  "key": "mathPow",
+  "name": "Math.pow()",
+  "category": "Math",
+  "category_key": "math",
+  "short_description": "Game Lab - Math.pow()",
+  "syntax": "Math.pow(__, __)"
+}

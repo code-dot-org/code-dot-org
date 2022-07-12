@@ -16,7 +16,8 @@
   Now it's time to register!
 
 %p
-  Please read on for more details, and then make sure to register using the link below
+  Please read on for more details, and then make sure to register using
+  = link_to('this link', registration_url)
   %strong within two weeks
   of receiving this message
   %strong to register for your summer workshop.
@@ -33,10 +34,6 @@
     and confirm your seat in this program.
     = link_to('Register Here', registration_url) + '.'
   %li
-    If you want to decline your seat, let me know as soon as possible,
-    using the contact information in my signature
-    so we can accommodate another teacher.
-  %li
     %strong Mark your calendar for your summer workshop!
     Details about the dates/location of your workshop can be found at
     = link_to('this registration link', registration_url) + '.'
@@ -50,6 +47,13 @@
     welcome kit complete with recruitment tips and tools. In the meantime,
     please check out these
     = link_to('recruitment resources', 'https://code.org/educate/resources/recruit') + '.'
+
+%p
+  %em
+    %center
+      If you want to decline your seat, let me know as soon as possible,
+      using the contact information in my signature so we can accommodate
+      another teacher.
 
 %p
   Congratulations again! We look forward to receiving your registration

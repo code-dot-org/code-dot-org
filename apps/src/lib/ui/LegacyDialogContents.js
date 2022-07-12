@@ -1,6 +1,6 @@
 /**
- * This file contains a set of dialogs used by showDialog in dialogHelper.js to
- * create LegacyDialogs. LegacyDialog expects a semi-specific format.
+ * This file contains a set of dialogs used to create LegacyDialogs.
+ * LegacyDialog expects a semi-specific format.
  */
 
 import PropTypes from 'prop-types';
@@ -9,7 +9,7 @@ import i18n from '@cdo/locale';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-export const SingleLevelGroupDialog = ({id, title, body}) => (
+export const LegacySingleLevelGroupDialog = ({id, title, body}) => (
   <ProtectedStatefulDiv id={id}>
     <div className="modal-content no-modal-icon">
       <p className="dialog-title">{title}</p>
@@ -23,21 +23,21 @@ export const SingleLevelGroupDialog = ({id, title, body}) => (
     </div>
   </ProtectedStatefulDiv>
 );
-SingleLevelGroupDialog.propTypes = {
+LegacySingleLevelGroupDialog.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired
 };
 
-export const UnsubmitDialog = (
-  <SingleLevelGroupDialog
+export const LegacyUnsubmitDialog = (
+  <LegacySingleLevelGroupDialog
     id="unsubmit-dialogcontent"
     title={i18n.unsubmitAssessment()}
     body={i18n.submittableUnsubmit()}
   />
 );
 
-export const MatchAngiGifDialog = () => (
+export const LegacyMatchAngiGifDialog = () => (
   <ProtectedStatefulDiv>
     <div className="modal-content no-modal-icon scrollable-element">
       <p className="dialog-title">{i18n.instructions()}</p>
@@ -54,7 +54,7 @@ export const MatchAngiGifDialog = () => (
   </ProtectedStatefulDiv>
 );
 
-export const TooFewDialog = () => (
+export const LegacyTooFewDialog = () => (
   <ProtectedStatefulDiv>
     <div className="modal-content no-modal-icon scrollable-element">
       <p className="dialog-title">{i18n.tooFewTitle()}</p>
@@ -68,7 +68,7 @@ export const TooFewDialog = () => (
   </ProtectedStatefulDiv>
 );
 
-export const ContractMatchErrorDialog = ({text}) => (
+export const LegacyContractMatchErrorDialog = ({text}) => (
   <ProtectedStatefulDiv>
     <div className="modal-content no-modal-icon">
       <p className="dialog-title">{i18n.incorrectAnswer()}</p>
@@ -81,11 +81,11 @@ export const ContractMatchErrorDialog = ({text}) => (
     </div>
   </ProtectedStatefulDiv>
 );
-ContractMatchErrorDialog.propTypes = {
+LegacyContractMatchErrorDialog.propTypes = {
   text: PropTypes.string
 };
 
-export const MatchErrorDialog = () => (
+export const LegacyMatchErrorDialog = () => (
   <ProtectedStatefulDiv>
     <div className="modal-content no-modal-icon scrollable-element">
       <p className="dialog-title">{i18n.incorrectSolution()}</p>
@@ -99,7 +99,7 @@ export const MatchErrorDialog = () => (
   </ProtectedStatefulDiv>
 );
 
-export const ErrorDialog = () => (
+export const LegacyErrorDialog = () => (
   <ProtectedStatefulDiv>
     <div className="modal-content no-modal-icon scrollable-element">
       <p className="dialog-title">{i18n.incorrectAnswer()}</p>
@@ -113,7 +113,7 @@ export const ErrorDialog = () => (
   </ProtectedStatefulDiv>
 );
 
-export const StartOverDialog = () => (
+export const LegacyStartOverDialog = () => (
   <ProtectedStatefulDiv>
     <div className="modal-content no-modal-icon scrollable-element">
       <p className="dialog-title">{i18n.startOverTitle()}</p>
@@ -135,7 +135,7 @@ export const StartOverDialog = () => (
   </ProtectedStatefulDiv>
 );
 
-export const InstructionsDialog = ({title, markdown}) => (
+export const LegacyInstructionsDialog = ({title, markdown}) => (
   <ProtectedStatefulDiv>
     <div className="modal-content no-modal-icon markdown-instructions-container">
       <p className="dialog-title">{title}</p>
@@ -151,12 +151,12 @@ export const InstructionsDialog = ({title, markdown}) => (
     </div>
   </ProtectedStatefulDiv>
 );
-InstructionsDialog.propTypes = {
+LegacyInstructionsDialog.propTypes = {
   title: PropTypes.string.isRequired,
   markdown: PropTypes.string.isRequired
 };
 
-export const SuccessDialog = ({title, body}) => (
+export const LegacySuccessDialog = ({title, body}) => (
   <ProtectedStatefulDiv>
     <div className="modal-content no-modal-icon scrollable-element">
       <p className="dialog-title">{title}</p>
@@ -169,7 +169,7 @@ export const SuccessDialog = ({title, body}) => (
     </div>
   </ProtectedStatefulDiv>
 );
-SuccessDialog.propTypes = {
+LegacySuccessDialog.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired
 };

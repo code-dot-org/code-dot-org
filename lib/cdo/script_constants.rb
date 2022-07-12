@@ -69,18 +69,42 @@ module ScriptConstants
       EXPRESS_2021_NAME = 'express-2021'.freeze,
       PRE_READER_EXPRESS_2021_NAME = 'pre-express-2021'.freeze,
     ],
+    csf_2022: [
+      COURSEA_2022_NAME = 'coursea-2022'.freeze,
+      COURSEB_2022_NAME = 'courseb-2022'.freeze,
+      COURSEC_2022_NAME = 'coursec-2022'.freeze,
+      COURSED_2022_NAME = 'coursed-2022'.freeze,
+      COURSEE_2022_NAME = 'coursee-2022'.freeze,
+      COURSEF_2022_NAME = 'coursef-2022'.freeze,
+      EXPRESS_2022_NAME = 'express-2022'.freeze,
+      PRE_READER_EXPRESS_2022_NAME = 'pre-express-2022'.freeze,
+    ],
+    csc_2021: [
+      POETRY_2021_NAME = 'poetry-2021'.freeze,
+      AI_ETHICS_2021_NAME = 'ai-ethics-2021'.freeze,
+      COUNTING_CSC_2021_NAME = 'counting-csc-2021'.freeze,
+      EXPLORE_DATA_1_2021_NAME = 'explore-data-1-2021'.freeze,
+      SPELLING_BEE_2021_NAME = 'spelling-bee-2021'.freeze
+    ],
     aiml_2021: [
       AIML_2021_NAME = 'aiml-2021'.freeze,
     ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
-      # If adding a script here,
-      # you must also update the cdo-tutorials gsheet so the end of script API works
+      # If adding a script here, you must also update the cdo-tutorials gsheet
+      # so the end of script API works; specifically, there needs to be a row
+      # with code_s matching the script name (in quotes) in this list.
 
       nil,
+      POEM_ART_2021_NAME = 'poem-art-2021'.freeze, # 2021 hour of code
+      HELLO_WORLD_FOOD_2021_NAME = 'hello-world-food-2021'.freeze, # 2021 hour of code
+      HELLO_WORLD_ANIMALS_2021_NAME = 'hello-world-animals-2021'.freeze, # 2021 hour of code
+      HELLO_WORLD_EMOJI_2021_NAME = 'hello-world-emoji-2021'.freeze, # 2021 hour of code
+      HELLO_WORLD_RETRO_2021_NAME = 'hello-world-retro-2021'.freeze, # 2021 hour of code
       DANCE_PARTY_2019_NAME = 'dance-2019'.freeze, # 2019 hour of code
       DANCE_PARTY_EXTRAS_2019_NAME = 'dance-extras-2019'.freeze, # 2019 hour of code
       OCEANS_NAME = 'oceans'.freeze,
+      OUTBREAK_NAME = 'outbreak'.freeze,
       MINECRAFT_AQUATIC_NAME = 'aquatic'.freeze,
       MINECRAFT_HERO_NAME = 'hero'.freeze,
       MINECRAFT_NAME = 'mc'.freeze,
@@ -118,14 +142,6 @@ module ScriptConstants
     research_studies: [
       HOC_IMPACT_STUDY_NAME = 'hoc-impact-study'.freeze,
       FLAPPY_IMPACT_STUDY_NAME = 'flappy-impact-study'.freeze
-    ],
-    csf2_draft: [
-      COURSEA_DRAFT_NAME = 'coursea-draft'.freeze,
-      COURSEB_DRAFT_NAME = 'courseb-draft'.freeze,
-      COURSEC_DRAFT_NAME = 'coursec-draft'.freeze,
-      COURSED_DRAFT_NAME = 'coursed-draft'.freeze,
-      COURSEE_DRAFT_NAME = 'coursee-draft'.freeze,
-      COURSEF_DRAFT_NAME = 'coursef-draft'.freeze,
     ],
     csd_pilot: [
       CSD1_PILOT_NAME = 'csd1-pilot'.freeze,
@@ -277,10 +293,13 @@ module ScriptConstants
     ODOMETER = 'odometer'.freeze,
     OUTBREAK = 'outbreak'.freeze,
     PIXELATION = 'pixelation'.freeze,
+    POEM_ART = 'poem-art'.freeze,
+    POETRY_HOC3 = 'poetry-hoc3'.freeze,
     VIGENERE = 'vigenere'.freeze,
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
     K5_ONLINEPD = 'K5-OnlinePD'.freeze,
-    KODEA_PD_2021 = 'kodea-pd-2021'.freeze
+    KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
+    ALLTHETHINGS = 'allthethings'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
@@ -334,70 +353,9 @@ module ScriptConstants
     return CATEGORIES[category].include? script
   end
 
-  def self.script_in_any_category?(script)
-    CATEGORIES.keys.any? do |category|
-      unit_in_category?(category, script)
-    end
-  end
-
-  def self.categories(script)
-    CATEGORIES.select {|_, scripts| scripts.include? script}.
-        map {|category, _| category.to_s}
-  end
-
-  def self.position_in_category(script, category)
-    CATEGORIES[category.to_sym] ? CATEGORIES[category.to_sym].find_index(script) : nil
-  end
-
-  def self.category_priority(category)
-    if category == OTHER_CATEGORY_NAME
-      CATEGORIES.keys.length # 'other' goes at the end
-    else
-      CATEGORIES.keys.find_index(category.to_sym)
-    end
-  end
-
-  def self.teacher_dashboard_name(script)
-    if script == MINECRAFT_NAME
-      MINECRAFT_TEACHER_DASHBOARD_NAME
-    elsif script == MINECRAFT_DESIGNER_NAME
-      MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME
-    elsif script == HOC_NAME
-      HOC_TEACHER_DASHBOARD_NAME
-    else
-      script
-    end
-  end
-
-  # Sections can be assigned to both courses and scripts. We want to make sure
-  # we give teacher dashboard the same information for both sets of assignables.
-  # We also expect to be in a mixed world for a time where this info is asked for
-  # both by dashboard and pegasus, and we want to keep that in sync. We accomplish
-  # most of that through this shared method, leaving it to dashboard/pegasus
-  # to take care of translating name/cateogry (with the unfortunate effect that
-  # we could have two different translations).
-  # @param course_or_script [Course|Script] A row object from either our courses
-  #   or scripts dashboard db tables.
-  # @param hidden [Boolean] True if the passed in item is hidden
-  # @return {AssignableInfo} without strings translated
-  def self.assignable_info(course_or_script)
-    name = ScriptConstants.teacher_dashboard_name(course_or_script[:name])
-    first_category = ScriptConstants.categories(course_or_script[:name])[0] ||
-        OTHER_CATEGORY_NAME
-    {
-      id: course_or_script[:id],
-      name: name,
-      # Would better be called something like assignable_name
-      script_name: course_or_script[:name],
-      category: first_category,
-      position: ScriptConstants.position_in_category(course_or_script[:name], first_category),
-      category_priority: ScriptConstants.category_priority(first_category),
-    }
-  end
-
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
 
-  def self.has_congrats_page?(script)
+  def self.has_csf_congrats_page?(script)
     script == ACCELERATED_NAME ||
       ScriptConstants.unit_in_category?(:csf_international, script) ||
       CSF_COURSE_PATTERNS.map {|r| r =~ script}.any?
@@ -410,7 +368,7 @@ module ScriptConstants
       "course2" => "course3",
       "course3" => "course4",
       "accelerated" => "course4",
-      "course4" => "applab"
+      "course4" => "applab-intro"
     }
 
     return static_mapping[course_name] if static_mapping.include?(course_name)
@@ -426,7 +384,7 @@ module ScriptConstants
       prefix = match_data[1]
       year = match_data[2]
 
-      return "applab" if %w(coursef express).include?(prefix)
+      return "applab-intro" if %w(coursef express).include?(prefix)
 
       prefix_mapping = {
         "coursea" => "courseb",
@@ -453,6 +411,7 @@ module ScriptConstants
       ScriptConstants.unit_in_category?(:csd, script) ||
       ScriptConstants.unit_in_category?(:csd_2018, script) ||
       ScriptConstants.unit_in_category?(:csd_2019, script) ||
+      ScriptConstants.unit_in_category?(:csd_2021, script) ||
       ScriptConstants.unit_in_category?(:twenty_hour, script) ||
       ScriptConstants.unit_in_category?(:hoc, script) ||
       JIGSAW_NAME == script ||

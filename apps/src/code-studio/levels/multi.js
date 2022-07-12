@@ -3,7 +3,7 @@ import React from 'react';
 import {registerGetResult, onAnswerChanged} from './codeStudioLevels';
 import {sourceForLevel} from '../clientState';
 import Sounds from '../../Sounds';
-import {TooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {LegacyTooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 
 var Multi = function(
   levelId,
@@ -206,7 +206,7 @@ Multi.prototype.getResult = function(dontAllowSubmit) {
   let valid;
 
   if (this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers) {
-    errorDialog = <TooFewDialog />;
+    errorDialog = <LegacyTooFewDialog />;
   }
 
   if (this.numAnswers === 1) {

@@ -67,6 +67,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
       '16',
       '24',
       '32',
+      '80'
     )
   end
 

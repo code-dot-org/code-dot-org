@@ -23,7 +23,7 @@ module UserHelpers
     # Throw random darts of increasing length (3 to 7 digits) to find an unused suffix.
     (2..6).each do |exponent|
       min_index = 10**exponent
-      max_index = 10**(exponent + 1) - 1
+      max_index = (10**(exponent + 1)) - 1
       2.times do |_i|
         suffix = Random.rand(min_index..max_index)
         # Truncate generated username to max allowed length.
@@ -39,18 +39,18 @@ module UserHelpers
     # Use CAST() and SUBSTRING() to parse the suffix as an integer.
     cast = lambda {|t| "CAST(SUBSTRING(#{t}, #{prefix.length + 1}) as unsigned)"}
 
-    query = <<SQL
-SELECT #{cast.call('username')} + 1
-  FROM users u
-  WHERE username LIKE "#{prefix}%"
-    AND username RLIKE "^#{prefix}[0-9]+$"
-    AND NOT EXISTS (
-      SELECT 1
-      FROM users u2
-      WHERE u2.username = CONCAT("#{prefix}", #{cast.call('u.username')} + 1)
-    )
-  LIMIT 1;
-SQL
+    query = <<~SQL
+      SELECT #{cast.call('username')} + 1
+        FROM users u
+        WHERE username LIKE "#{prefix}%"
+          AND username RLIKE "^#{prefix}[0-9]+$"
+          AND NOT EXISTS (
+            SELECT 1
+            FROM users u2
+            WHERE u2.username = CONCAT("#{prefix}", #{cast.call('u.username')} + 1)
+          )
+        LIMIT 1;
+    SQL
     # Execute raw query using either ActiveRecord or Sequel object.
     next_id = queryable.respond_to?(:connection) ?
       queryable.connection.execute(query).first.first :

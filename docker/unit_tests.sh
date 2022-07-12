@@ -35,6 +35,7 @@ skip_seed_all: true
 optimize_webpack_assets: false
 optimize_rails_assets: false
 google_maps_api_key: boguskey
+dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
 set -x

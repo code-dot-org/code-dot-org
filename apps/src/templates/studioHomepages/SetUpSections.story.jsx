@@ -12,7 +12,7 @@ export default storybook =>
         description: `Information box if the teacher doesn't have any sections yet`,
         story: () => (
           <SetUpSections
-            beginEditingNewSection={action('beginEditingNewSection')}
+            beginEditingSection={action('beginEditingSection')}
             hasSections={false}
           />
         )
@@ -22,7 +22,7 @@ export default storybook =>
         description: `Information box if the teacher does have sections already`,
         story: () => (
           <SetUpSections
-            beginEditingNewSection={action('beginEditingNewSection')}
+            beginEditingSection={action('beginEditingSection')}
             hasSections={true}
           />
         )

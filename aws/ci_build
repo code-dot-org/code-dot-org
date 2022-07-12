@@ -129,10 +129,10 @@ def main
     # Upload build log to S3
     log_link = upload_log_and_get_link(
       start_time.strftime('%Y%m%dT%H%M%S%z'),
-      <<-LOG,
-#{log}
-#{status}
-#{projects} #{status == 0 ? 'built' : 'failed'} in #{formatted_duration}
+      <<~LOG,
+        #{log}
+        #{status}
+        #{projects} #{status == 0 ? 'built' : 'failed'} in #{formatted_duration}
       LOG
       {
         commit: commit_hash,
@@ -162,11 +162,9 @@ def main
         ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
         DevelopersTopic.set_dtp 'yes'
         InfraProductionTopic.set_dtp_commit GitHub.sha('production')
-        ChatClient.set_reminder(
-          'developers',
-          "@#{DevelopersTopic.dotd}",
-          "to check Zendesk in 2 hours"
-         )
+
+        # Schedule a reminder for the dotd to check Zendesk in 2 hours
+        Slack.remind(Slack.user_id(DevelopersTopic.dotd), Time.now.to_i + 7200, 'Reminder: check <https://codeorg.zendesk.com/agent/filters/44863373|Zendesk>')
 
         # Check hoc_mode and hoc_launch only on successful DTPs, so that we get about 1 reminder per
         # day to bring staging, test and production to the same hoc_mode and hoc_launch after a
@@ -178,7 +176,7 @@ def main
     else
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
       ChatClient.log message, color: 'red'
-      ChatClient.log "<@#{DevelopersTopic.dotd}> build failure", color: 'red' unless rack_env?(:adhoc)
+      ChatClient.log "<@#{DevelopersTopic.dotd}> build failure", color: 'red' unless rack_env?(:adhoc, :development)
 
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'

@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 sv:
   errors:
     messages:
@@ -91,6 +97,7 @@ sv:
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
     microsoft_v2_auth: 'Microsoft Account'
+    clever: 'Smart'
     forgot_password: 'Glömt ditt lösenord?'
     need_confirmation: "Har du inte fått bekräftelseinstruktioner?"
     need_unlock: "Har du inte fått instruktioner för att låsa upp?"
@@ -201,6 +208,7 @@ sv:
       picture: 'Bild-lösenord'
       word: 'Hemligt ord'
       email: 'E-post'
+      clever: 'Smart'
   follower:
     invite_sent: 'Inbjuda skickades'
     added_teacher: '%{name} är tillagd som din lärare'
@@ -276,6 +284,7 @@ sv:
       district_dashboard: 'Distriktets kontrollpanel'
       label: 'Hej %{username}'
       stats: 'Mina framsteg'
+      my_projects: 'Mina projekt'
       settings: 'Mitt konto'
       logout: 'Logga ut'
       signin: 'Logga in'
@@ -289,6 +298,7 @@ sv:
       algebra_game: 'Algebra'
       applab: 'App Lab'
       artist: 'Konstnären'
+      basketball: 'Basket'
       bounce: 'Studsa'
       calc: 'Calc'
       dance: 'Dansparty'
@@ -300,8 +310,10 @@ sv:
       infinity: 'Oändligt'
       minecraft_designer: 'Minecraft'
       playlab: 'Spel-labb'
+      poetry: 'Poesi'
       sports: 'Sport'
       starwars: 'Star Wars'
+      loading: 'Laddar...'
       weblab: 'Web Lab'
     popup:
       progress_for_user: "%{name}s framsteg"
@@ -316,6 +328,7 @@ sv:
       prizes_link: 'Mer information'
   teacher:
     answer: Svar
+    dashboard: 'Lärare Dashboard'
     for_teachers_only: Endast för lärare
     title:
       one: 'Din lärare:'
@@ -364,6 +377,7 @@ sv:
     remove_parent_email_label: "Ta bort"
     none: "Ingen"
     only_one_parent_email_supported_warning: "Obs! Vi kan för närvarande endast stödja en e-postadress till förälder / vårdnadshavare per konto."
+    encrypted: "krypterad"
   user_level:
     completed: 'Avklarade'
     tried: 'Försökte'
@@ -616,6 +630,8 @@ sv:
     open_response_body: "Tack för ditt svar!"
     correct_title: "Rätt"
     correct_body: "Det är det rätta svaret."
+  lesson_extras:
+    bonus_level: "Bonusnivå"
   dialog:
     ok: "Ok"
     startover_title: "Är du säker på att du vill börja om?"
@@ -791,7 +807,9 @@ sv:
   pd:
     form_labels:
       first_name: 'Förnamn'
+      last_name: 'Efternamn'
       email: 'E-post'
+      school: 'Skola'
       school_name: 'Skolnamn'
       school_country: 'Skolans land'
       colombian_chilean_school_name: 'Skolnamn'
@@ -801,6 +819,16 @@ sv:
         female: 'Kvinna'
         non_binary: 'Icke-binär'
         none: 'Föredrar att inte svara'
+      school_country:
+        canada: 'Kanada'
+        chile: 'Chile'
+        israel: 'Israel'
+        mexico: 'Mexiko'
+        thailand: 'Thailand'
+        uzbekistan: 'Uzbekistan'
+      ages:
+        ages_under_6: '< 6 år gammal'
+        ages_7_8: '7-8 år gammal'
       subjects:
         cs: 'Datavetenskap'
         math: 'Matte'
@@ -814,16 +842,18 @@ sv:
         codecademy: 'CodeCademy'
         khan: 'Khan Academy'
         kodable: 'Kodable'
-        other: "Övrigt:"
+        other: "Annat"
       robotics:
         kodable: 'Kodable'
+        microbit: 'Microbit'
         raspberry: 'Raspberry Pi'
-        other: "Övrigt:"
+        other: "Annat"
       email_opt_in:
         opt_in_yes: 'Ja'
         opt_in_no: 'Nej'
   cookie_banner:
     accept: 'Jag håller med'
+  page_not_found_button: "Återvänd hem"
   copy: 'Kopiera'
   confirm: 'Bekräfta'
   parent_email_banner:

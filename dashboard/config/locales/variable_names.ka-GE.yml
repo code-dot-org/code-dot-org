@@ -2,6 +2,9 @@
 ka:
   data:
     variable_names:
+      Blue: ლურჯი
+      Green: მწვანე
+      Red: წითელი
       actor: პერსონაჟი
       age: ასაკი
       answer: პასუხი

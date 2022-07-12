@@ -105,7 +105,7 @@ var turnRight = function(degrees) {
   return {
     test: function(block) {
       return (
-        block.type === 'draw_turn' && block.getTitleValue('DIR') === 'turnRight'
+        block.type === 'draw_turn' && block.getFieldValue('DIR') === 'turnRight'
       );
     },
     type: 'draw_turn',
@@ -121,7 +121,7 @@ var turnLeft = function(degrees) {
   return {
     test: function(block) {
       return (
-        block.type === 'draw_turn' && block.getTitleValue('DIR') === 'turnLeft'
+        block.type === 'draw_turn' && block.getFieldValue('DIR') === 'turnLeft'
       );
     },
     type: 'draw_turn',
@@ -196,7 +196,7 @@ var defineWithArg = function(func_name, arg_name) {
     test: function(block) {
       return (
         block.type === 'procedures_defnoreturn' &&
-        block.getTitleValue('NAME') === func_name &&
+        block.getFieldValue('NAME') === func_name &&
         block.parameterNames_ &&
         block.parameterNames_.length &&
         block.parameterNames_[0] === arg_name

@@ -1,28 +1,28 @@
 ---
-title: Teacher Resources - Artist
+title: 教师资源 - 小小艺术家
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Artist: An Hour of Code Tutorial
+# 小小艺术家：《编程一小时》教程
 
 {{ hoc_artist_video }}
 
 [col-50]
 
-## Teacher Resources
+## 教师资源
 
-### Extension Activities:
+### 拓展活动：
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [《编程一小时》之外](http://code.org/learn/beyond)
+- [计算机科学基础知识：课程2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### 其他教师资源：
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [《编程一小时》：教师指南](https://hourofcode.com/how-to)
+- [成功教育者的最佳实践](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- 直播事件：[《编程一小时》教师指南](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -32,10 +32,10 @@ video_player: true
 
 与“小艺术家”一起画出炫酷的图画和设计！
 
-**Recommended Age Range:** 4-104
+**推荐年龄段：** 4-104岁
 
-**Technology Requirements:** Modern browsers + tablets
+**技术要求：**现代浏览器 + 平板电脑
 
-<a href="http://studio.code.org/s/artist/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/artist/reset"><button>试用教程</button></a>
 
 [/col-50]

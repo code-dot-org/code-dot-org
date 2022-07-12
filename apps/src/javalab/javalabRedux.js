@@ -7,6 +7,7 @@ const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
 const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
 const SOURCE_VALIDATION_UPDATED = 'javalab/SOURCE_VALIDATION_UPDATED';
+const SOURCE_TEXT_UPDATED = 'javalab/SOURCE_TEXT_UPDATED';
 const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
 const SET_ALL_VALIDATION = 'javalab/SET_ALL_VALIDATION';
 const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
@@ -17,18 +18,32 @@ const SET_INSTRUCTIONS_HEIGHT = 'javalab/SET_INSTRUCTIONS_HEIGHT';
 const SET_INSTRUCTIONS_FULL_HEIGHT = 'javalab/SET_INSTRUCTIONS_FULL_HEIGHT';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
+const SET_IS_TESTING = 'javalab/SET_IS_TESTING';
 const SET_CONSOLE_HEIGHT = 'javalab/SET_CONSOLE_HEIGHT';
 const EDITOR_COLUMN_HEIGHT = 'javalab/EDITOR_COLUMN_HEIGHT';
 const SET_BACKPACK_API = 'javalab/SET_BACKPACK_API';
+const SET_BACKPACK_ENABLED = 'javalab/SET_BACKPACK_ENABLED';
 const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
 const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
 const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
+const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
+const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
+const SET_IS_READONLY_WORKSPACE = 'javalab/SET_IS_READONLY_WORKSPACE';
+const SET_HAS_OPEN_CODE_REVIEW = 'javalab/SET_HAS_OPEN_CODE_REVIEW';
+const SET_COMMIT_SAVE_STATUS = 'javalab/SET_COMMIT_SAVE_STATUS';
 
-const initialState = {
+// Exported for test
+export const initialState = {
   consoleLogs: [],
-  sources: {'MyClass.java': {text: '', isVisible: true, isValidation: false}},
-  isDarkMode: false,
+  sources: {
+    'MyClass.java': {
+      text: '',
+      isVisible: true,
+      isValidation: false
+    }
+  },
+  displayTheme: DisplayTheme.LIGHT,
   validation: {},
   renderedEditorHeight: 400,
   leftWidth: 400,
@@ -36,13 +51,21 @@ const initialState = {
   instructionsHeight: 200,
   instructionsFullHeight: 200,
   isRunning: false,
+  isTesting: false,
   consoleHeight: 200,
   editorColumnHeight: 600,
   backpackApi: null,
+  backpackEnabled: false,
   isStartMode: false,
   levelName: undefined,
   disableFinishButton: false,
-  isVisualizationCollapsed: false
+  isVisualizationCollapsed: false,
+  isPhotoPrompterOpen: false,
+  photoPrompterPromptText: '',
+  isReadOnlyWorkspace: false,
+  hasOpenCodeReview: false,
+  isCommitSaveInProgress: false,
+  hasCommitSaveError: false
 };
 
 // Action Creators
@@ -59,6 +82,11 @@ export const appendOutputLog = output => ({
 export const appendNewlineToConsoleLog = () => ({
   type: APPEND_CONSOLE_LOG,
   log: {type: 'newline'}
+});
+
+export const appendMarkdownLog = log => ({
+  type: APPEND_CONSOLE_LOG,
+  log: {type: 'markdown', text: log}
 });
 
 export const clearConsoleLogs = () => ({
@@ -94,6 +122,13 @@ export const setSource = (
   isValidation
 });
 
+// Handles updates to text within Code Mirror (ie, when text is edited)
+export const sourceTextUpdated = (filename, text) => ({
+  type: SOURCE_TEXT_UPDATED,
+  filename,
+  text
+});
+
 export const sourceVisibilityUpdated = (filename, isVisible) => ({
   type: SOURCE_VISIBILITY_UPDATED,
   filename,
@@ -107,12 +142,10 @@ export const sourceValidationUpdated = (filename, isValidation) => ({
 });
 
 // Updates the user preferences to reflect change
-export const setIsDarkMode = isDarkMode => {
-  new UserPreferences().setDisplayTheme(
-    isDarkMode ? DisplayTheme.DARK : DisplayTheme.LIGHT
-  );
+export const setDisplayTheme = displayTheme => {
+  new UserPreferences().setDisplayTheme(displayTheme);
   return {
-    isDarkMode: isDarkMode,
+    displayTheme: displayTheme,
     type: COLOR_PREFERENCE_UPDATED
   };
 };
@@ -127,9 +160,19 @@ export const setIsRunning = isRunning => ({
   isRunning
 });
 
+export const setIsTesting = isTesting => ({
+  type: SET_IS_TESTING,
+  isTesting
+});
+
 export const setBackpackApi = backpackApi => ({
   type: SET_BACKPACK_API,
   backpackApi
+});
+
+export const setBackpackEnabled = backpackEnabled => ({
+  type: SET_BACKPACK_ENABLED,
+  backpackEnabled
 });
 
 export const toggleVisualizationCollapsed = () => ({
@@ -158,6 +201,15 @@ export const setDisableFinishButton = disableFinishButton => {
     disableFinishButton
   };
 };
+
+export const openPhotoPrompter = promptText => ({
+  type: OPEN_PHOTO_PROMPTER,
+  promptText
+});
+
+export const closePhotoPrompter = () => ({
+  type: CLOSE_PHOTO_PROMPTER
+});
 
 // Selectors
 export const getSources = state => {
@@ -218,6 +270,25 @@ export const setEditorColumnHeight = editorColumnHeight => ({
   editorColumnHeight
 });
 
+export const setIsReadOnlyWorkspace = isReadOnlyWorkspace => ({
+  type: SET_IS_READONLY_WORKSPACE,
+  isReadOnlyWorkspace
+});
+
+export const setHasOpenCodeReview = hasOpenCodeReview => ({
+  type: SET_HAS_OPEN_CODE_REVIEW,
+  hasOpenCodeReview
+});
+
+export const setCommitSaveStatus = (
+  isCommitSaveInProgress,
+  hasCommitSaveError
+) => ({
+  type: SET_COMMIT_SAVE_STATUS,
+  isCommitSaveInProgress,
+  hasCommitSaveError
+});
+
 // Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
@@ -255,6 +326,14 @@ export default function reducer(state = initialState, action) {
   if (action.type === SOURCE_VALIDATION_UPDATED) {
     let newSources = {...state.sources};
     newSources[action.filename].isValidation = action.isValidation;
+    return {
+      ...state,
+      sources: newSources
+    };
+  }
+  if (action.type === SOURCE_TEXT_UPDATED) {
+    let newSources = {...state.sources};
+    newSources[action.filename].text = action.text;
     return {
       ...state,
       sources: newSources
@@ -298,7 +377,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === COLOR_PREFERENCE_UPDATED) {
     return {
       ...state,
-      isDarkMode: action.isDarkMode
+      displayTheme: action.displayTheme
     };
   }
   if (action.type === EDITOR_HEIGHT_UPDATED) {
@@ -337,6 +416,12 @@ export default function reducer(state = initialState, action) {
       isRunning: action.isRunning
     };
   }
+  if (action.type === SET_IS_TESTING) {
+    return {
+      ...state,
+      isTesting: action.isTesting
+    };
+  }
   if (action.type === SET_CONSOLE_HEIGHT) {
     return {
       ...state,
@@ -353,6 +438,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       backpackApi: action.backpackApi
+    };
+  }
+  if (action.type === SET_BACKPACK_ENABLED) {
+    return {
+      ...state,
+      backpackEnabled: action.backpackEnabled
     };
   }
   if (action.type === SET_IS_START_MODE) {
@@ -377,6 +468,39 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isVisualizationCollapsed: !state.isVisualizationCollapsed
+    };
+  }
+  if (action.type === OPEN_PHOTO_PROMPTER) {
+    return {
+      ...state,
+      isPhotoPrompterOpen: true,
+      photoPrompterPromptText: action.promptText
+    };
+  }
+  if (action.type === CLOSE_PHOTO_PROMPTER) {
+    return {
+      ...state,
+      isPhotoPrompterOpen: false,
+      photoPrompterPromptText: ''
+    };
+  }
+  if (action.type === SET_IS_READONLY_WORKSPACE) {
+    return {
+      ...state,
+      isReadOnlyWorkspace: action.isReadOnlyWorkspace
+    };
+  }
+  if (action.type === SET_HAS_OPEN_CODE_REVIEW) {
+    return {
+      ...state,
+      hasOpenCodeReview: action.hasOpenCodeReview
+    };
+  }
+  if (action.type === SET_COMMIT_SAVE_STATUS) {
+    return {
+      ...state,
+      isCommitSaveInProgress: action.isCommitSaveInProgress,
+      hasCommitSaveError: action.hasCommitSaveError
     };
   }
   return state;

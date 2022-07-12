@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
-import {P5LabInterfaceMode, P5LabType, APP_WIDTH} from './constants';
+import {P5LabInterfaceMode, APP_WIDTH} from './constants';
 import {
   SpritelabReservedWords,
   valueTypeTabShapeMap
@@ -78,7 +78,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -102,7 +102,8 @@ const DRAW_LOOP_MEASURE = 'drawLoop';
  * @implements LogTarget
  */
 export default class P5Lab {
-  constructor() {
+  constructor(defaultSprites = []) {
+    this.defaultAnimations = defaultSprites;
     this.skin = null;
     this.level = null;
     this.tickIntervalId = 0;
@@ -186,32 +187,6 @@ export default class P5Lab {
     }
   }
 
-  loadAndSetInitialAnimationList(config, defaultSprites) {
-    // Push project-sourced animation metadata into store. Always use the
-    // animations specified by the level definition for embed and contained
-    // levels.
-    const useConfig =
-      config.initialAnimationList &&
-      !config.embed &&
-      !config.hasContainedLevels;
-    let initialAnimationList = useConfig
-      ? config.initialAnimationList
-      : this.startAnimations;
-    initialAnimationList = this.loadAnyMissingDefaultAnimations(
-      initialAnimationList,
-      defaultSprites
-    );
-
-    getStore().dispatch(
-      setInitialAnimationList(
-        initialAnimationList,
-        this.isBlockly /* shouldRunV3Migration */,
-        this.isBlockly,
-        defaultSprites
-      )
-    );
-  }
-
   /**
    * Inject the studioApp singleton.
    */
@@ -236,24 +211,11 @@ export default class P5Lab {
     this.isBlockly = this.studioApp_.isUsingBlockly();
 
     this.skin = config.skin;
-    let mediaUrl;
-    switch (this.getLabType()) {
-      case P5LabType.GAMELAB:
-        mediaUrl = null;
-        break;
-      case P5LabType.SPRITELAB:
-        mediaUrl = `/blockly/media/spritelab/${config.level.instructionsIcon ||
-          'avatar'}.png`;
-        break;
-      case P5LabType.POETRY:
-        mediaUrl = `/blockly/media/poetry/${config.level.instructionsIcon ||
-          'avatar'}.png`;
-        break;
-    }
-    this.skin.smallStaticAvatar = mediaUrl;
-    this.skin.staticAvatar = mediaUrl;
-    this.skin.winAvatar = mediaUrl;
-    this.skin.failureAvatar = mediaUrl;
+    const avatarUrl = this.getAvatarUrl(config.level.instructionsIcon);
+    this.skin.smallStaticAvatar = avatarUrl;
+    this.skin.staticAvatar = avatarUrl;
+    this.skin.winAvatar = avatarUrl;
+    this.skin.failureAvatar = avatarUrl;
 
     if (this.isBlockly) {
       // SpriteLab projects don't allow users to include dpad controls
@@ -273,23 +235,18 @@ export default class P5Lab {
 
     this.level.softButtons = this.level.softButtons || [];
 
-    this.startAnimations = null;
-
-    getDefaultListMetadata().then(defaultSprites => {
-      if (this.level.useDefaultSprites) {
-        this.startAnimations = defaultSprites;
-      } else if (
-        this.level.startAnimations &&
-        this.level.startAnimations.length > 0
-      ) {
-        try {
-          this.startAnimations = JSON.parse(this.level.startAnimations);
-        } catch (err) {
-          console.error('Unable to parse default animation list', err);
-        }
+    if (this.level.useDefaultSprites) {
+      this.startAnimations = this.defaultAnimations;
+    } else if (
+      this.level.startAnimations &&
+      this.level.startAnimations.length > 0
+    ) {
+      try {
+        this.startAnimations = JSON.parse(this.level.startAnimations);
+      } catch (err) {
+        console.error('Unable to parse default animation list', err);
       }
-      this.loadAndSetInitialAnimationList(config, defaultSprites);
-    });
+    }
 
     config.usesAssets = true;
 
@@ -320,7 +277,7 @@ export default class P5Lab {
       getStore().dispatch(
         setInitialAnimationList(
           this.startAnimations,
-          false /* shouldRunV3Migration */,
+          null /* spritesForV3Migration */,
           this.isBlockly
         )
       );
@@ -513,6 +470,29 @@ export default class P5Lab {
       validationEnabled: !!config.level.validationEnabled
     });
 
+    // Push project-sourced animation metadata into store. Always use the
+    // animations specified by the level definition for embed and contained
+    // levels.
+    const useConfig =
+      config.initialAnimationList &&
+      !config.embed &&
+      !config.hasContainedLevels;
+    let initialAnimationList = useConfig
+      ? config.initialAnimationList
+      : this.startAnimations;
+    initialAnimationList = this.loadAnyMissingDefaultAnimations(
+      initialAnimationList,
+      this.defaultAnimations
+    );
+
+    getStore().dispatch(
+      setInitialAnimationList(
+        initialAnimationList,
+        this.defaultAnimations /* spritesForV3Migration */,
+        this.isBlockly
+      )
+    );
+
     this.generatedProperties = {
       ...config.initialGeneratedProperties
     };
@@ -698,6 +678,8 @@ export default class P5Lab {
    * Override to change pause behavior.
    */
   onPause() {}
+
+  reactToExecutionError(msg) {}
 
   onIsRunningChange() {
     this.setCrosshairCursorForPlaySpace();
@@ -1109,13 +1091,13 @@ export default class P5Lab {
       }
 
       if (this.isBlockly) {
-        this.spritelabLibrary = this.createLibrary({p5: this.p5Wrapper.p5});
+        this.library = this.createLibrary({p5: this.p5Wrapper.p5});
 
-        const spritelabCommands = this.spritelabLibrary.commands;
-        for (const command in spritelabCommands) {
+        const libraryCommands = this.library.commands;
+        for (const command in libraryCommands) {
           this.JSInterpreter.createGlobalProperty(
             command,
-            spritelabCommands[command].bind(this.spritelabLibrary),
+            libraryCommands[command].bind(this.library),
             null
           );
         }
@@ -1211,7 +1193,6 @@ export default class P5Lab {
     if (this.JSInterpreter) {
       if (this.interpreterStarted) {
         this.JSInterpreter.executeInterpreter();
-
         if (this.p5Wrapper.stepSpeed < 1) {
           this.p5Wrapper.drawDebugSpriteColliders();
         }
@@ -1256,15 +1237,9 @@ export default class P5Lab {
    *         loading the game.
    */
   onP5Preload() {
-    Promise.all([
-      this.isBlockly
-        ? this.preloadSpriteImages_()
-        : this.preloadAnimations_(this.level.pauseAnimationsByDefault),
-      this.maybePreloadBackgrounds_(),
-      this.runPreloadEventHandler_()
-    ]).then(() => {
-      this.p5Wrapper.notifyPreloadPhaseComplete();
-    });
+    this.preloadLabAssets()
+      .then(this.runPreloadEventHandler_())
+      .then(() => this.p5Wrapper.notifyPreloadPhaseComplete());
     return false;
   }
 
@@ -1277,39 +1252,6 @@ export default class P5Lab {
     }
   }
 
-  // Preloads background images if this is Sprite Lab
-  maybePreloadBackgrounds_() {
-    if (!this.isBlockly) {
-      return Promise.resolve();
-    }
-    return this.p5Wrapper.preloadBackgrounds();
-  }
-
-  /**
-   * Wait for animations to be loaded into memory and ready to use, then pass
-   * those animations to P5 to be loaded into the engine as animations.
-   * @param {Boolean} pauseAnimationsByDefault whether animations should be paused
-   * @returns {Promise} which resolves once animations are in memory in the redux
-   *          store and we've started loading them into P5.
-   *          Loading to P5 is also an async process but it has its own internal
-   *          effect on the P5 preloadCount, so we don't need to track it here.
-   * @private
-   */
-  async preloadAnimations_(pauseAnimationsByDefault) {
-    await this.whenAnimationsAreReady();
-    // Animations are ready - send them to p5 to be loaded into the engine.
-    return this.p5Wrapper.preloadAnimations(
-      getStore().getState().animationList,
-      pauseAnimationsByDefault
-    );
-  }
-
-  async preloadSpriteImages_() {
-    await this.whenAnimationsAreReady();
-    return this.p5Wrapper.preloadSpriteImages(
-      getStore().getState().animationList
-    );
-  }
   /**
    * Check whether all animations in the project animation list have been loaded
    * into memory and are ready to use.
@@ -1533,6 +1475,11 @@ export default class P5Lab {
         this.eventHandlers.draw.apply(null);
       }
     }
+
+    if (this.JSInterpreter.executionError) {
+      this.reactToExecutionError(this.JSInterpreter.executionError.message);
+    }
+
     this.completeRedrawIfDrawComplete();
   }
 
@@ -1605,12 +1552,43 @@ export default class P5Lab {
   }
 
   /**
+   * Override to change whether the current app wants to show the
+   * save & publish buttons in the "finish" feedback dialog, shown
+   * by calling this.studioApp_.displayFeedback() in
+   * displayFeedback_(), below.
+   */
+  saveToProjectGallery() {
+    return false;
+  }
+
+  /**
+   * Get the feedback message for the feedback dialog.
+   * Subclasses can override this behavior.
+   * @param {boolean} _isFinalFreePlayLevel Unused by this implementation
+   * @returns {string}
+   */
+  getReinfFeedbackMsg(_isFinalFreePlayLevel) {
+    return this.getMsg().reinfFeedbackMsg();
+  }
+
+  /**
    * App specific displayFeedback function that calls into
    * this.studioApp_.displayFeedback when appropriate
    */
   displayFeedback_() {
     var level = this.level;
     let msg = this.getMsg();
+
+    // Allow P5Labs to decide what string should be rendered in the feedback dialog.
+    const isFinalFreePlayLevel = level.freePlay && level.isLastLevelInLesson;
+    const reinfFeedbackMsg = this.getReinfFeedbackMsg(isFinalFreePlayLevel);
+
+    const isSignedIn =
+      getStore().getState().currentUser.signInState === SignInState.SignedIn;
+
+    // Find out whether the current app (e.g. SpriteLab, GameLab, or Poetry) wants
+    // to show the save & publish buttons in this dialog.
+    const saveToProjectGallery = this.saveToProjectGallery();
 
     this.studioApp_.displayFeedback({
       feedbackType: this.testResults,
@@ -1620,10 +1598,12 @@ export default class P5Lab {
       // feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png")
       showingSharing: !level.disableSharing && level.freePlay,
       appStrings: {
-        reinfFeedbackMsg: msg.reinfFeedbackMsg(),
+        reinfFeedbackMsg,
         sharingText: msg.shareGame()
       },
-      hideXButton: true
+      hideXButton: true,
+      saveToProjectGallery: saveToProjectGallery,
+      disableSaveToGallery: !isSignedIn
     });
   }
 

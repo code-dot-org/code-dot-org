@@ -112,6 +112,9 @@
         },
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "Molsašuvvan-blohkka lea kategoriijas \"Dánsárat\"."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "add_background_effect": "Găsește un bloc de fundal precum acesta: \n\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\nși găsește un bloc de efect text precum acesta:\n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nConectează aceste blocuri sub „când este rulat” din Spațiul tău de Lucru."
         }
       }
     }

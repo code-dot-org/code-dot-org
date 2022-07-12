@@ -21,10 +21,12 @@ describe('the level builder page init script', () => {
         lessons: [],
         is_migrated: false,
         scriptPath: '/s/test-script',
-        publishedState: 'beta'
+        coursePublishedState: 'beta',
+        instructionType: 'teacher_led',
+        instructorAudience: 'teacher',
+        participantAudience: 'student'
       },
       i18n: {
-        lessonDescriptions: [],
         description:
           '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
         studentDescription:

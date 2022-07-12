@@ -373,6 +373,7 @@ ku:
   pd:
     form_labels:
       email: پۆستی ئەلیكترۆنی
+      school: قوتابخانە
       school_name: ناوی قوتابخانە
       school_country: وڵاتی قوتابخانە
       colombian_chilean_school_name: ناوی قوتابخانە
@@ -383,5 +384,10 @@ ku:
       subjects:
         cs: زانستی كۆمپیوتەر
         math: بیرکاری
+        other: هی تر
+      resources:
+        other: هی تر
+      robotics:
+        other: هی تر
   cookie_banner:
     accept: من ڕازیم

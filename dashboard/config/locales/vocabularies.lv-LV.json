@@ -2,6 +2,75 @@
   "lv-LV": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "function/hero/unversioned": {
+          "word": "Funkcija"
+        },
+        "code/poem-art/2021": {
+          "word": "Kods"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "code/artist/unversioned": {
+          "word": "Kods"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Sazarojumi"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Cikli"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "code/sports/unversioned": {
+          "word": "Kods"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Atkļūdošana"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kods"
+        },
         "variable/coursef/2021": {
           "word": "Mainīgais"
         },
@@ -55,6 +124,21 @@
         },
         "define/coursee/2021": {
           "word": "Definēt"
+        },
+        "debugging/csd/2021": {
+          "word": "Atkļūdošana"
+        },
+        "variable/csd/2021": {
+          "word": "Mainīgais"
+        },
+        "conditionals/csd/2021": {
+          "word": "Sazarojumi"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstrakcija"
+        },
+        "function/csd/2021": {
+          "word": "Funkcija"
         }
       }
     }

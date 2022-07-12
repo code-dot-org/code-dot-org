@@ -4,11 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-08-03 22:46:44 UTC",
+    "family_name": "usability",
+    "serialized_at": "2022-04-08 15:40:29 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "usability"
     }
@@ -104,16 +110,129 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "f93da88b-ab2e-4098-a77a-f6373ae3c886",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f93da88b-ab2e-4098-a77a-f6373ae3c886",
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "key": "8d240e07-d37a-4709-8c2e-4697cdeaeb4f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8d240e07-d37a-4709-8c2e-4697cdeaeb4f",
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "key": "a8d47e04-7e2a-433f-bfb0-7c7d518167a2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8d47e04-7e2a-433f-bfb0-7c7d518167a2",
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "key": "b7f37892-98e0-4d2f-a965-3db8fa812c8b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b7f37892-98e0-4d2f-a965-3db8fa812c8b",
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "key": "8f4d2636-6aa2-4cda-aaf3-3b958ce13829",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8f4d2636-6aa2-4cda-aaf3-3b958ce13829",
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "ae11c667-121b-40ea-9c27-9484727de4d1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1",
+        "lesson_activity.key": "f93da88b-ab2e-4098-a77a-f6373ae3c886"
+      }
+    },
+    {
+      "key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99",
+        "lesson_activity.key": "8d240e07-d37a-4709-8c2e-4697cdeaeb4f"
+      }
+    },
+    {
+      "key": "7764bc2b-7684-41e2-87fe-ff01b53b5676",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7764bc2b-7684-41e2-87fe-ff01b53b5676",
+        "lesson_activity.key": "a8d47e04-7e2a-433f-bfb0-7c7d518167a2"
+      }
+    },
+    {
+      "key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a",
+        "lesson_activity.key": "b7f37892-98e0-4d2f-a965-3db8fa812c8b"
+      }
+    },
+    {
+      "key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c",
+        "lesson_activity.key": "8f4d2636-6aa2-4cda-aaf3-3b958ce13829"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -127,7 +246,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       },
       "level_keys": [
         "Course 4 Maze 6"
@@ -136,7 +256,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -150,7 +270,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       },
       "level_keys": [
         "Course 4 Bee 1"
@@ -159,7 +280,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -173,7 +294,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       },
       "level_keys": [
         "Course 4 Bee 2"
@@ -182,7 +304,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -196,7 +318,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       },
       "level_keys": [
         "Course 4 Bee 3"
@@ -205,7 +328,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -219,7 +342,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       },
       "level_keys": [
         "Course 4 Bee 4"
@@ -228,7 +352,7 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -242,7 +366,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       },
       "level_keys": [
         "Course 4 Artist 7"
@@ -251,7 +376,7 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -265,7 +390,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       },
       "level_keys": [
         "Course 4 Artist 8"
@@ -274,7 +400,7 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -288,7 +414,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       },
       "level_keys": [
         "Course 4 Artist 9"
@@ -297,7 +424,7 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -311,7 +438,8 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99"
       },
       "level_keys": [
         "Course 4 Play Lab Vars 1"
@@ -320,7 +448,7 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -334,7 +462,8 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99"
       },
       "level_keys": [
         "Course 4 Play Lab Vars 2"
@@ -343,7 +472,7 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -357,7 +486,8 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99"
       },
       "level_keys": [
         "Course 4 Artist Vars 2"
@@ -366,7 +496,7 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -380,7 +510,8 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99"
       },
       "level_keys": [
         "Course 4 Artist Vars 3"
@@ -389,7 +520,7 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -403,7 +534,8 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99"
       },
       "level_keys": [
         "Course 4 Artist Vars 4"
@@ -412,7 +544,7 @@
     {
       "chapter": 14,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -426,7 +558,8 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99"
       },
       "level_keys": [
         "Course 4 Artist Vars 5"
@@ -435,7 +568,7 @@
     {
       "chapter": 15,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -449,7 +582,8 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99"
       },
       "level_keys": [
         "Course 4 Artist Vars 6"
@@ -458,7 +592,7 @@
     {
       "chapter": 16,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -472,7 +606,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "7764bc2b-7684-41e2-87fe-ff01b53b5676"
       },
       "level_keys": [
         "Course 4 Bee For Loops 4"
@@ -481,7 +616,7 @@
     {
       "chapter": 17,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -495,7 +630,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "7764bc2b-7684-41e2-87fe-ff01b53b5676"
       },
       "level_keys": [
         "Course 4 Bee For Loops 5"
@@ -504,7 +640,7 @@
     {
       "chapter": 18,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -518,7 +654,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "7764bc2b-7684-41e2-87fe-ff01b53b5676"
       },
       "level_keys": [
         "Course 4 Bee For Loops 6"
@@ -527,7 +664,7 @@
     {
       "chapter": 19,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -541,7 +678,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "7764bc2b-7684-41e2-87fe-ff01b53b5676"
       },
       "level_keys": [
         "Course 4 Play Labs For Loops 1"
@@ -550,7 +688,7 @@
     {
       "chapter": 20,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -564,7 +702,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "7764bc2b-7684-41e2-87fe-ff01b53b5676"
       },
       "level_keys": [
         "Course 4 Play Labs For Loops 2"
@@ -573,7 +712,7 @@
     {
       "chapter": 21,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -587,7 +726,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "7764bc2b-7684-41e2-87fe-ff01b53b5676"
       },
       "level_keys": [
         "Course 4 Play Labs For Loops 3"
@@ -596,7 +736,7 @@
     {
       "chapter": 22,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -610,7 +750,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       },
       "level_keys": [
         "Course 4 Artist Functions 2"
@@ -619,7 +760,7 @@
     {
       "chapter": 23,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -633,7 +774,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       },
       "level_keys": [
         "Course 4 Artist Functions 4"
@@ -642,7 +784,7 @@
     {
       "chapter": 24,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -656,7 +798,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       },
       "level_keys": [
         "Course 4 Artist Functions 5"
@@ -665,7 +808,7 @@
     {
       "chapter": 25,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -679,7 +822,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       },
       "level_keys": [
         "Course 4 Artist Params 1"
@@ -688,7 +832,7 @@
     {
       "chapter": 26,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -702,7 +846,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       },
       "level_keys": [
         "Course 4 Artist Params 2"
@@ -711,7 +856,7 @@
     {
       "chapter": 27,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -725,7 +870,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       },
       "level_keys": [
         "Course 4 Artist Params 3"
@@ -734,7 +880,7 @@
     {
       "chapter": 28,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -748,7 +894,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       },
       "level_keys": [
         "Course 4 Artist Params 4"
@@ -757,7 +904,7 @@
     {
       "chapter": 29,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -771,7 +918,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       },
       "level_keys": [
         "Course 4 Play Lab Params 1"
@@ -780,7 +928,7 @@
     {
       "chapter": 30,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -794,7 +942,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       },
       "level_keys": [
         "Course 4 Play Lab Params 2"
@@ -803,7 +952,7 @@
     {
       "chapter": 31,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -817,7 +966,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       },
       "level_keys": [
         "Course 4 Play Lab Params 3"
@@ -826,7 +976,7 @@
     {
       "chapter": 32,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -840,7 +990,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       },
       "level_keys": [
         "Course 4 Artist Binary 1"
@@ -849,7 +1000,7 @@
     {
       "chapter": 33,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -863,7 +1014,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       },
       "level_keys": [
         "Course 4 Artist Binary 2"
@@ -872,7 +1024,7 @@
     {
       "chapter": 34,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -886,7 +1038,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       },
       "level_keys": [
         "Course 4 Artist Binary 3"
@@ -895,7 +1048,7 @@
     {
       "chapter": 35,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -909,7 +1062,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       },
       "level_keys": [
         "Course 4 Artist Binary 4"
@@ -918,7 +1072,7 @@
     {
       "chapter": 36,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -932,7 +1086,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       },
       "level_keys": [
         "Course 4 Artist Binary 5"
@@ -941,7 +1096,7 @@
     {
       "chapter": 37,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -955,7 +1110,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       },
       "level_keys": [
         "Course 4 Artist Binary 6"
@@ -964,7 +1120,7 @@
     {
       "chapter": 38,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -978,7 +1134,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       },
       "level_keys": [
         "Course 4 Artist Binary 7"
@@ -987,7 +1144,7 @@
     {
       "chapter": 39,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1001,7 +1158,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       },
       "level_keys": [
         "Course 4 Artist Binary Free Play"
@@ -1010,7 +1168,7 @@
     {
       "chapter": 40,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1024,7 +1182,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       },
       "level_keys": [
         "Course 4 Artist Binary Free Play 2"
@@ -1040,7 +1199,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       }
     },
     {
@@ -1051,7 +1211,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       }
     },
     {
@@ -1062,7 +1223,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       }
     },
     {
@@ -1073,7 +1235,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       }
     },
     {
@@ -1084,7 +1247,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       }
     },
     {
@@ -1095,7 +1259,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       }
     },
     {
@@ -1106,7 +1271,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       }
     },
     {
@@ -1117,7 +1283,8 @@
         ],
         "lesson.key": "Intro",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "ae11c667-121b-40ea-9c27-9484727de4d1"
       }
     },
     {
@@ -1128,7 +1295,8 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99"
       }
     },
     {
@@ -1139,7 +1307,8 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99"
       }
     },
     {
@@ -1150,7 +1319,8 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99"
       }
     },
     {
@@ -1161,7 +1331,8 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99"
       }
     },
     {
@@ -1172,7 +1343,8 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99"
       }
     },
     {
@@ -1183,7 +1355,8 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99"
       }
     },
     {
@@ -1194,7 +1367,8 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "f5dc293d-d721-4f9c-8551-89f8bdf21c99"
       }
     },
     {
@@ -1205,7 +1379,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "7764bc2b-7684-41e2-87fe-ff01b53b5676"
       }
     },
     {
@@ -1216,7 +1391,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "7764bc2b-7684-41e2-87fe-ff01b53b5676"
       }
     },
     {
@@ -1227,7 +1403,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "7764bc2b-7684-41e2-87fe-ff01b53b5676"
       }
     },
     {
@@ -1238,7 +1415,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "7764bc2b-7684-41e2-87fe-ff01b53b5676"
       }
     },
     {
@@ -1249,7 +1427,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "7764bc2b-7684-41e2-87fe-ff01b53b5676"
       }
     },
     {
@@ -1260,7 +1439,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "7764bc2b-7684-41e2-87fe-ff01b53b5676"
       }
     },
     {
@@ -1271,7 +1451,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       }
     },
     {
@@ -1282,7 +1463,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       }
     },
     {
@@ -1293,7 +1475,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       }
     },
     {
@@ -1304,7 +1487,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       }
     },
     {
@@ -1315,7 +1499,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       }
     },
     {
@@ -1326,7 +1511,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       }
     },
     {
@@ -1337,7 +1523,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       }
     },
     {
@@ -1348,7 +1535,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       }
     },
     {
@@ -1359,7 +1547,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       }
     },
     {
@@ -1370,7 +1559,8 @@
         ],
         "lesson.key": "Functions and Functions with Parameters",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "b9dbda24-cfce-423f-9c6f-9bf07494e76a"
       }
     },
     {
@@ -1381,7 +1571,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       }
     },
     {
@@ -1392,7 +1583,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       }
     },
     {
@@ -1403,7 +1595,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       }
     },
     {
@@ -1414,7 +1607,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       }
     },
     {
@@ -1425,7 +1619,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       }
     },
     {
@@ -1436,7 +1631,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       }
     },
     {
@@ -1447,7 +1643,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       }
     },
     {
@@ -1458,7 +1655,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       }
     },
     {
@@ -1469,7 +1667,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "",
-        "script.name": "usability"
+        "script.name": "usability",
+        "activity_section.key": "1266a256-cfd3-4b0a-94ab-f1ec199a439c"
       }
     }
   ],

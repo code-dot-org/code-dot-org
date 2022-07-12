@@ -21,6 +21,7 @@
 #  properties                  :text(65535)
 #  deleted_at                  :datetime
 #  status_timestamp_change_log :text(65535)
+#  applied_at                  :datetime
 #
 # Indexes
 #
@@ -37,6 +38,7 @@
 module Pd::Application
   class TeacherApplication < ApplicationBase
     include Pd::TeacherApplicationConstants
+    include Pd::SharedApplicationConstants
     include PdWorkshopHelper
     include Rails.application.routes.url_helpers
     include SchoolInfoDeduplicator
@@ -46,6 +48,7 @@ module Pd::Application
     PROGRAMS = {
       csd: 'Computer Science Discoveries (appropriate for 6th - 10th grade)',
       csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)',
+      csa: 'Computer Science A (appropriate for 10th - 12th grade, and can be implemented as an AP or non-AP introductory Java programming course)'
     }.freeze
     PROGRAM_OPTIONS = PROGRAMS.values
 
@@ -82,13 +85,14 @@ module Pd::Application
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
+    before_validation :set_course_from_program, if: -> {form_data_changed?}
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
-    validates :course, presence: true, inclusion: {in: VALID_COURSES}
-    validates_uniqueness_of :user_id
+    validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
-    before_validation :set_course_from_program
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
+    before_save :set_total_course_hours, if: -> {form_data_changed?}
+    before_save :update_user_school_info!, if: -> {form_data_changed?}
     before_save :log_status, if: -> {status_changed?}
 
     serialized_attrs %w(
@@ -101,11 +105,13 @@ module Pd::Application
     # based on these rules in order:
     # 1. Application has a specific school? always overwrite the user's school info
     # 2. User doesn't have a specific school? overwrite with the custom school info.
+    # Will only update the school info if we have enough information for it because
+    # an incomplete application may not have all the information we need to update
     def update_user_school_info!
-      if school_id || user.school_info.try(&:school).nil?
-        school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
-        user.update_school_info(school_info)
-      end
+      return unless school_id || user.school_info.try(&:school).nil?
+      school_info = school_info_attr
+      return unless school_info
+      user.update_school_info(get_duplicate_school_info(school_info) || SchoolInfo.create!(school_info))
     end
 
     def update_scholarship_status(scholarship_status)
@@ -118,27 +124,45 @@ module Pd::Application
       end
     end
 
-    # @return a valid year (see ApplicationConstants.APPLICATION_YEARS)
+    # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
     def year
-      self.class.year
+      application_year
     end
 
-    def self.year
-      YEAR_21_22
-    end
-
-    def self.next_year
-      YEAR_22_23
+    def self.next_year(year)
+      current_year_index = APPLICATION_YEARS.index(year)
+      current_year_index >= 0 ? APPLICATION_YEARS[current_year_index + 1] : nil
     end
 
     # @override
     def set_type_and_year
       self.application_type = TEACHER_APPLICATION
-      self.application_year = year
+      self.application_year = ActiveApplicationModels::APPLICATION_CURRENT_YEAR unless application_year
     end
 
     def set_course_from_program
       self.course = PROGRAMS.key(program)
+    end
+
+    def set_total_course_hours
+      hash = sanitize_form_data_hash
+      minutes = hash[:cs_how_many_minutes]
+      days_per_week = hash[:cs_how_many_days_per_week]
+      weeks_per_year = hash[:cs_how_many_weeks_per_year]
+
+      if minutes && days_per_week && weeks_per_year
+        update_form_data_hash(
+          {
+            cs_total_course_hours: [minutes, days_per_week, weeks_per_year].map(&:to_i).reduce(:*) / 60
+          }
+        )
+      else
+        update_form_data_hash(
+          {
+            cs_total_course_hours: nil
+          }
+        )
+      end
     end
 
     def save_partner
@@ -272,6 +296,7 @@ module Pd::Application
         }
       else
         hash = sanitize_form_data_hash
+        return unless hash[:school_type] && hash[:school_state] && hash[:school_zip_code] && hash[:school_name] && hash[:school_address]
         {
           country: 'US',
           # Take the first word in school type, downcased. E.g. "Public school" -> "public"
@@ -343,6 +368,8 @@ module Pd::Application
     def self.statuses
       %w(
         unreviewed
+        incomplete
+        reopened
         pending
         waitlisted
         declined
@@ -421,7 +448,7 @@ module Pd::Application
     end
 
     # @override
-    def self.options
+    def self.options(year = APPLICATION_CURRENT_YEAR)
       {
         country: [
           'United States',
@@ -492,6 +519,13 @@ module Pd::Application
           'Physical Education',
           'I am not currently licensed',
           TEXT_FIELDS[:other_please_list]
+        ],
+
+        previous_used_curriculum: [
+          'CS Discoveries',
+          'CS Principles',
+          'Both',
+          'Neither'
         ],
 
         previous_yearlong_cdo_pd: [
@@ -584,16 +618,27 @@ module Pd::Application
           "No, I don't plan for my students to take the AP CS Principles exam"
         ],
 
+        csa_already_know: [YES, NO],
+
+        csa_phone_screen: [YES, NO],
+
+        csa_which_grades: (9..12).map(&:to_s) <<
+          "Not sure yet if my school plans to offer CSA in the #{year} school year",
+
+        csa_how_offer: [
+          'As a non-AP introductory Java programming course',
+          'As an AP course',
+          'We will offer both non-AP Java introductory and AP-level courses'
+        ],
+
         plan_to_teach: [
-          "Yes, I plan to teach this course this year (#{year}) and my administrator approves of me teaching the course",
-          "I hope to teach this course this year (#{year}) but it is not yet on the master schedule and/or my administrator has not confirmed that I will be assigned to this course",
-          "No, I don’t plan to teach this course this year (#{year}), but I hope to teach this course the following year (#{next_year})",
-          "No, someone else from my school will teach this course this year (#{year})",
+          "Yes, I plan to teach this course this year (#{year})",
+          "No, I don’t plan to teach this course this year (#{year})",
           TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
         ],
 
         pay_fee: [
-          'Yes, my school/district will be able to pay the full program fee.',
+          'Yes, my school/district would be able to pay the full program fee.',
           TEXT_FIELDS[:no_pay_fee],
           "I don't know."
         ],
@@ -625,30 +670,6 @@ module Pd::Application
           "No, computer science is new to my school",
           TEXT_FIELDS[:i_dont_know_explain]
         ],
-        csd_which_units: [
-          'Unit 1: Problem Solving',
-          'Unit 2: Web Development',
-          'Unit 3: Interactive Animations & Games',
-          'Unit 4: The Design Process',
-          'Unit 5: Data and Society',
-          'Unit 6: Physical Computing',
-          'All units',
-          "I'm not sure"
-        ],
-        csp_which_units: [
-          'Unit 1: Digital Information',
-          'Unit 2: The Internet',
-          'Unit 3: Intro App Design',
-          'Unit 4: Variables, Conditionals, and Functions',
-          'Unit 5: Lists, Loops and Traversals',
-          'Unit 6: Algorithms',
-          'Unit 7: Parameters, Return, and Libraries',
-          'Unit 8: AP Create Performance Task',
-          'Unit 9: Data',
-          'Unit 10: Cybersecurity and Global Impacts',
-          'All units',
-          "I'm not sure"
-        ],
         replace_which_course: [
           'CodeHS',
           'Codesters',
@@ -667,8 +688,7 @@ module Pd::Application
           'Technology Foundations',
           'We’ve created our own course',
           TEXT_FIELDS[:other_please_explain]
-        ],
-        interested_in_online_program: [YES, NO]
+        ]
       }
     end
 
@@ -680,6 +700,9 @@ module Pd::Application
         first_name
         last_name
         phone
+        street_address
+        city
+        state
         zip_code
         principal_first_name
         principal_last_name
@@ -688,6 +711,8 @@ module Pd::Application
         principal_phone_number
         completing_on_behalf_of_someone_else
         current_role
+        previous_used_curriculum
+        previous_yearlong_cdo_pd
 
         program
         cs_how_many_minutes
@@ -695,10 +720,6 @@ module Pd::Application
         cs_how_many_weeks_per_year
         plan_to_teach
         replace_existing
-
-        previous_yearlong_cdo_pd
-
-        interested_in_online_program
 
         gender_identity
         race
@@ -723,11 +744,12 @@ module Pd::Application
 
         if hash[:program] == PROGRAMS[:csd]
           required << :csd_which_grades
-          required << :csd_which_units
         elsif hash[:program] == PROGRAMS[:csp]
           required << :csp_which_grades
-          required << :csp_which_units
           required << :csp_how_offer
+        elsif hash[:program] == PROGRAMS[:csa]
+          required << :csa_which_grades
+          required << :csa_how_offer
         end
 
         if hash[:regional_partner_workshop_ids].presence
@@ -759,6 +781,7 @@ module Pd::Application
         [:committed, TEXT_FIELDS[:no_explain], :committed_other],
         [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
+        [:replace_which_course, TEXT_FIELDS[:other_please_explain]],
         [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend], :able_to_attend_multiple_unable_to_attend],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
@@ -767,7 +790,7 @@ module Pd::Application
 
     # @override
     def check_idempotency
-      TeacherApplication.find_by(user: user)
+      TeacherApplication.where(application_year: APPLICATION_CURRENT_YEAR).find_by(user: user)
     end
 
     def assigned_workshop
@@ -827,14 +850,27 @@ module Pd::Application
       if key == 'csd'
         [
           :csp_which_grades,
-          :csp_which_units,
           :csp_how_offer,
           :csp_ap_exam,
+          :csa_which_grades,
+          :csa_how_offer,
+          :csa_already_know,
+          :csa_phone_screen
         ]
-      else
+      elsif key == 'csp'
         [
           :csd_which_grades,
-          :csd_which_units
+          :csa_which_grades,
+          :csa_how_offer,
+          :csa_already_know,
+          :csa_phone_screen
+        ]
+      elsif key == 'csa'
+        [
+          :csp_which_grades,
+          :csp_how_offer,
+          :csp_ap_exam,
+          :csd_which_grades
         ]
       end
       )
@@ -849,9 +885,9 @@ module Pd::Application
 
     # @override
     # Filter out extraneous answers based on selected program (course)
-    def self.filtered_labels(course)
-      raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
-      FILTERED_LABELS[course]
+    def self.filtered_labels(course, status = 'unreviewed')
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course) || status == 'incomplete'
+      status == 'incomplete' ? {} : FILTERED_LABELS[course]
     end
 
     # List of columns to be filtered out based on selected program (course)
@@ -860,22 +896,46 @@ module Pd::Application
         {
           teacher: [
             :csp_which_grades,
-            :csp_which_units,
             :csp_how_offer,
+            :csa_which_grades,
+            :csa_how_offer,
+            :csa_already_know,
+            :csa_phone_screen
           ],
           principal: [
             :share_ap_scores,
             :replace_which_course_csp,
-            :csp_implementation
+            :replace_which_course_csa,
+            :csp_implementation,
+            :csa_implementation
           ]
         }
-      else
+      elsif course == 'csp'
         {
           teacher: [
             :csd_which_grades,
-            :csd_which_units
+            :csa_which_grades,
+            :csa_how_offer,
+            :csa_already_know,
+            :csa_phone_screen
           ],
           principal: [
+            :replace_which_course_csd,
+            :replace_which_course_csa,
+            :csd_implementation,
+            :csa_implementation
+          ]
+        }
+      elsif course == 'csa'
+        {
+          teacher: [
+            :csp_which_grades,
+            :csp_how_offer,
+            :csd_which_grades
+          ],
+          principal: [
+            :replace_which_course_csp,
+            :csp_implementation,
             :replace_which_course_csd,
             :csd_implementation
           ]
@@ -973,8 +1033,8 @@ module Pd::Application
     def auto_score!
       responses = sanitize_form_data_hash
 
-      options = self.class.options
-      principal_options = Pd::Application::PrincipalApprovalApplication.options
+      options = self.class.options(year)
+      principal_options = Pd::Application::PrincipalApprovalApplication.options(year)
 
       meets_minimum_criteria_scores = {}
       meets_scholarship_criteria_scores = {}
@@ -986,10 +1046,13 @@ module Pd::Application
       elsif course == 'csp'
         meets_minimum_criteria_scores[:csp_which_grades] =
           (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
+      elsif course == 'csa'
+        meets_minimum_criteria_scores[:csa_which_grades] =
+          (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
       end
 
-      if responses[:plan_to_teach].in? options[:plan_to_teach].first(4)
-        meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(2)) ? YES : NO
+      if responses[:plan_to_teach].in? options[:plan_to_teach].first(2)
+        meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(1)) ? YES : NO
       end
 
       meets_minimum_criteria_scores[:replace_existing] =
@@ -1074,6 +1137,7 @@ module Pd::Application
     end
 
     def meets_criteria
+      return if incomplete?
       response_scores = response_scores_hash[:meets_minimum_criteria_scores] || {}
 
       scored_questions = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym]
@@ -1112,29 +1176,16 @@ module Pd::Application
     end
 
     # Called after the application is created. Do any manipulation needed for the form data
-    # hash here, as well as wend emails
+    # hash here, as well as send emails
     def on_successful_create
-      update_user_school_info!
+      return if status == 'incomplete'
+
       queue_email :confirmation, deliver_now: true
-
-      form_data_hash = sanitize_form_data_hash
-
-      update_form_data_hash(
-        {
-          cs_total_course_hours: form_data_hash.slice(
-            :cs_how_many_minutes,
-            :cs_how_many_days_per_week,
-            :cs_how_many_weeks_per_year
-          ).values.map(&:to_i).reduce(:*) / 60
-        }
-      )
-
       auto_score!
-      save
-
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
         queue_email :principal_approval, deliver_now: true
       end
+      save
     end
 
     # Called after principal approval has been created. Do any manipulation needed for the
@@ -1144,7 +1195,7 @@ module Pd::Application
       principal_response = principal_approval.sanitize_form_data_hash
 
       response = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ")
-      replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd).compact.join(', ')
+      replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd, :replace_which_course_csa).compact.join(', ')
       # Sub out :: for : because "I don't know:" has a colon on the end
       replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
 

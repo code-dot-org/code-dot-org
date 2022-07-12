@@ -1,33 +1,33 @@
 ---
-title: Teacher Resources - Conditionals with Cards
+title: Ресурсы для учителя — Условные операторы с картами
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Conditionals With Cards: An Hour of Code Tutorial
+# Условные операторы с картами: урок «Часа кода»
 
 {{ hoc_unplugged_video }}
 
 [col-50]
 
-## Teacher Resources
+## Ресурсы для учителя
 
-### Lesson Plans:
+### Планы уроков:
 
-- [Conditionals with Cards](/files/ConditionalsHoC.pdf)
-- Video: [How to Facilitate Conditionals with Cards in Your Classroom](https://youtu.be/IcEL5ibSvTs)
+- [Условные операторы с картами](/files/ConditionalsHoC.pdf)
+- Видео: [Как лучше использовать Условные операторы с картами в вашем классе](https://youtu.be/IcEL5ibSvTs)
 
-### Extension Activities:
+### Дополнительные занятия:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Помимо часа кода](http://code.org/learn/beyond)
+- [Основы программирования: курс 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Прочие ресурсы для учителя:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [«Часа кода»: практическое руководство для преподавателей](https://hourofcode.com/how-to)
+- [Передовые методы преподавания от успешных педагогов](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Прямая трансляция: [«Час кода», руководство для педагогов](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -35,12 +35,12 @@ video_player: true
 
 ## Общие Сведения
 
-Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.
+Узнайте о алгоритмах и условных операторах в рамках этого урока без компьютера с использованием колоды карт. Учащиеся выполняют эту работу в командах, и им понадобится по одной колоде карт на команду.
 
-**Recommended Age Range:** 8-12
+**Рекомендуемая возрастная группа:** 8-12
 
-**Technology Requirements:** None! This is an "unplugged" activity that can be taught with nothing more than a deck of cards.
+**Технологические требования:** Отсутствуют! Это урок без компьютера, который можно преподавать, используя только колоду карт.
 
-<a href="/files/ConditionalsHoC.pdf"><button>Download the activity</button></a>
+<a href="/files/ConditionalsHoC.pdf"><button>Скачать занятие</button></a>
 
 [/col-50]

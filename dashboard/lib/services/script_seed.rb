@@ -46,20 +46,33 @@ module Services
       activities = script.lessons.map(&:lesson_activities).flatten
       sections = activities.map(&:activity_sections).flatten
       resources = script.lessons.map(&:resources).flatten.concat(script.resources).concat(script.student_resources).uniq.sort_by(&:key)
+      frameworks = Framework.all
+      standards = Standard.all
+      vocabularies = script.lessons.map(&:vocabularies).flatten.sort_by(&:key).uniq
+      programming_environments = ProgrammingEnvironment.all
+      programming_expressions = ProgrammingExpression.all
 
-      # Use the existing seeding_key code to efficiently sort LessonsResource
-      # and ScriptsResource objects in a manner that will be stable across environments.
-      lr_seed_context = SeedContext.new(lessons: script.lessons, resources: resources)
-      lessons_resources = script.lessons.map(&:lessons_resources).flatten.sort_by {|lr| lr.seeding_key(lr_seed_context).to_json}
-      sr_seed_context = SeedContext.new(script: script, resources: resources)
-      scripts_resources = script.scripts_resources.sort_by {|sr| sr.seeding_key(sr_seed_context).to_json}
+      # Use existing seeding_key code to efficiently sort join model objects
+      # in a manner that will be stable across environments.
+      sort_context = SeedContext.new(
+        script: script,
+        lessons: script.lessons,
+        resources: resources,
+        frameworks: frameworks,
+        standards: standards,
+        vocabularies: vocabularies,
+        programming_environments: programming_environments,
+        programming_expressions: programming_expressions,
+      )
+      lessons_resources = script.lessons.map(&:lessons_resources).flatten.sort_by {|lr| lr.seeding_key(sort_context).to_json}
+      scripts_resources = script.scripts_resources.sort_by {|sr| sr.seeding_key(sort_context).to_json}
+      scripts_student_resources = script.scripts_student_resources.sort_by {|ssr| ssr.seeding_key(sort_context).to_json}
+      lessons_standards = script.lessons.map(&:lessons_standards).flatten.sort_by {|ls| ls.seeding_key(sort_context).to_json}
+      lessons_opportunity_standards = script.lessons.map(&:lessons_opportunity_standards).flatten.sort_by {|lo| lo.seeding_key(sort_context).to_json}
+      lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten.sort_by {|lv| lv.seeding_key(sort_context).to_json}
+      lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten.sort_by {|lpe| lpe.seeding_key(sort_context).to_json}
 
-      vocabularies = script.lessons.map(&:vocabularies).flatten
-      lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten
-      lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten
-      objectives = script.lessons.map(&:objectives).flatten
-      lessons_standards = script.lessons.map(&:lessons_standards).flatten
-      lessons_opportunity_standards = script.lessons.map(&:lessons_opportunity_standards).flatten
+      objectives = script.lessons.map(&:objectives).flatten.sort_by(&:key)
 
       seed_context = SeedContext.new(
         script: script,
@@ -73,15 +86,15 @@ module Services
         resources: resources,
         lessons_resources: lessons_resources,
         scripts_resources: scripts_resources,
-        scripts_student_resources: script.scripts_student_resources,
+        scripts_student_resources: scripts_student_resources,
         vocabularies: vocabularies,
         lessons_vocabularies: lessons_vocabularies,
-        programming_environments: ProgrammingEnvironment.all,
-        programming_expressions: ProgrammingExpression.all,
+        programming_environments: programming_environments,
+        programming_expressions: programming_expressions,
         lessons_programming_expressions: lessons_programming_expressions,
         objectives: objectives,
-        frameworks: Framework.all,
-        standards: Standard.all,
+        frameworks: frameworks,
+        standards: standards,
         lessons_standards: lessons_standards,
         lessons_opportunity_standards: lessons_opportunity_standards
       )
@@ -106,7 +119,7 @@ module Services
         lessons_standards: lessons_standards.map {|ls| ScriptSeed::LessonsStandardSerializer.new(ls, scope: scope).as_json},
         lessons_opportunity_standards: lessons_opportunity_standards.map {|ls| ScriptSeed::LessonsOpportunityStandardSerializer.new(ls, scope: scope).as_json},
       }
-      JSON.pretty_generate(data)
+      JSON.pretty_generate(data) + "\n"
     end
 
     # Convenience wrapper around seed_from_json. Reads the content from the given file and then seeds using it.
@@ -233,6 +246,9 @@ module Services
         seed_context.standards = Standard.all
         seed_context.lessons_standards = import_lessons_standards(lessons_standards_data, seed_context)
         seed_context.lessons_opportunity_standards = import_lessons_opportunity_standards(lessons_opportunity_standards_data, seed_context)
+
+        # generate_plc_objects must be run after lessons are added.
+        seed_context.script.generate_plc_objects
 
         seed_context.script
       end
@@ -678,13 +694,16 @@ module Services
         :family_name,
         :serialized_at,
         :published_state,
+        :instruction_type,
+        :instructor_audience,
+        :participant_audience,
         :seeding_key
       )
 
       # The "seeded_from" property is set by the seeding process; we don't need
       # to include it in the serialization.
       attribute :properties do
-        object.properties.except("seeded_from")
+        object.properties.except("seeded_from").sort.to_h
       end
 
       # A simple field to track when the script was most recently serialized.
@@ -825,6 +844,10 @@ module Services
 
     class ResourceSerializer < ActiveModel::Serializer
       attributes :name, :url, :key, :properties, :seeding_key
+
+      def properties
+        object.properties.sort.to_h
+      end
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])

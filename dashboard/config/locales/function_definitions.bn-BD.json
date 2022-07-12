@@ -1896,6 +1896,18 @@
               "width": "চওড়া"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          }
         }
       }
     }

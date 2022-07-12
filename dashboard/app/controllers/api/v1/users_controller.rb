@@ -1,8 +1,9 @@
 require 'cdo/firehose'
 
-class Api::V1::UsersController < Api::V1::JsonApiController
+class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
+  skip_before_action :load_user, only: [:current]
 
   def load_user
     user_id = params[:user_id]
@@ -10,6 +11,27 @@ class Api::V1::UsersController < Api::V1::JsonApiController
       raise CanCan::AccessDenied
     end
     @user = current_user
+  end
+
+  # GET /api/v1/users/current
+  def current
+    prevent_caching
+    if current_user
+      render json: {
+        id: current_user.id,
+        username: current_user.username,
+        user_type: current_user.user_type,
+        is_signed_in: true,
+        short_name: current_user.short_name,
+        is_verified_instructor: current_user.verified_instructor?,
+        mute_music: current_user.mute_music?,
+        under_13: current_user.under_13?
+      }
+    else
+      render json: {
+        is_signed_in: false
+      }
+    end
   end
 
   # GET /api/v1/users/<user_id>/school_name
@@ -30,12 +52,17 @@ class Api::V1::UsersController < Api::V1::JsonApiController
 
   # GET /api/v1/users/<user_id>/using_text_mode
   def get_using_text_mode
-    render json: {using_text_mode: !!@user.using_text_mode}
+    render json: {using_text_mode: !!@user&.using_text_mode}
   end
 
   # GET /api/v1/users/<user_id>/display_theme
   def get_display_theme
     render json: {display_theme: @user&.display_theme}
+  end
+
+  # GET /api/v1/users/<user_id>/mute_music
+  def get_mute_music
+    render json: {mute_music: !!@user&.mute_music}
   end
 
   # GET /api/v1/users/<user_id>/get_donor_teacher_banner_details
@@ -68,12 +95,25 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     render json: @user.school_donor_name.nil? ? 'null' : @user.school_donor_name.inspect
   end
 
+  # GET /api/v1/users/<user_id>/tos_version
+  def get_tos_version
+    render json: @user.terms_of_service_version.nil? ? -1 : @user.terms_of_service_version.inspect
+  end
+
   # POST /api/v1/users/<user_id>/using_text_mode
   def post_using_text_mode
     @user.using_text_mode = !!params[:using_text_mode].try(:to_bool)
     @user.save
 
-    render json: {using_text_mode: !!@user.using_text_mode}
+    render json: {using_text_mode: !!@user&.using_text_mode}
+  end
+
+  # POST /api/v1/users/<user_id>/mute_music
+  def post_mute_music
+    @user.mute_music = !!params[:mute_music].try(:to_bool)
+    @user.save
+
+    render json: {mute_music: !!@user&.mute_music}
   end
 
   # POST /api/v1/users/<user_id>/display_theme

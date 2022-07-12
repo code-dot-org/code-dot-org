@@ -2,6 +2,102 @@
   "si-LK": {
     "data": {
       "resources": {
+        "lesson_plans/courseb/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/express/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/express/2019": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "පාඩම් සැලසුම්"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "For ලුපයේ සතුට"
         },
@@ -199,6 +295,81 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "අන්තරාවලෝකනය"
+        },
+        "functions_2/csd/2021": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "ලූපයන් සඳහා"
+        },
+        "for_loops/csd/2021": {
+          "name": "ලූපයන් සඳහා"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "වීඩියෝ: යන්ත්‍ර ඉගෙනීම"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "variables_1/csd/2021": {
+          "name": "විචල්‍යන්"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "functions_1/csd/2021": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "html-web-page/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "lists/csd/2021": {
+          "name": "ලැයිස්තු"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/express/2020": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "පාඩම් සැලසුම්"
         }
       }
     }

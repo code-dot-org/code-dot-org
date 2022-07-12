@@ -2,6 +2,102 @@
   "nl-NL": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "function/hero/unversioned": {
+          "word": "Functie"
+        },
+        "code/poem-art/2021": {
+          "word": "Code",
+          "definition": "(v) instructies voor een computer schrijven."
+        },
+        "line/poem-art/2021": {
+          "word": "Regel",
+          "definition": "(poëzie) - een onderverdeling van een gedicht, gerangschikt in een rij die eindigt in de rechtermarge."
+        },
+        "mood/poem-art/2021": {
+          "word": "Stemming",
+          "definition": "de uitdrukking van een gevoel, sfeer of emotie in kunst of geschrift."
+        },
+        "program/poem-art/2021": {
+          "definition": "Een reeks stappen die zijn gecodeerd tot iets dat door een machine kan worden uitgevoerd."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "code/artist/unversioned": {
+          "word": "Code"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Lussen"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Lossless Compressie"
+        },
+        "code/sports/unversioned": {
+          "word": "Code"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Code",
+          "definition": "(v) instructies voor een computer schrijven."
+        },
+        "program/poem-art/unversioned": {
+          "definition": "Een reeks stappen die zijn gecodeerd tot iets dat door een machine kan worden uitgevoerd."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Stemming",
+          "definition": "de uitdrukking van een gevoel, sfeer of emotie in kunst of geschrift."
+        },
+        "line/poem-art/unversioned": {
+          "word": "Regel",
+          "definition": "(poëzie) - een onderverdeling van een gedicht, gerangschikt in een rij die eindigt in de rechtermarge."
+        },
         "behavior/coursef/2021": {
           "word": "Gedrag"
         },
@@ -100,6 +196,30 @@
         },
         "define/coursee/2021": {
           "word": "Definiëren"
+        },
+        "user_interface/csd/2021": {
+          "word": "Gebruikersinterface"
+        },
+        "debugging/csd/2021": {
+          "word": "Foutopsporing"
+        },
+        "variable/csd/2021": {
+          "word": "Variabele"
+        },
+        "conditionals/csd/2021": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstractie"
+        },
+        "function/csd/2021": {
+          "word": "Functie"
+        },
+        "input/csd/2021": {
+          "word": "Invoer"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright"
         }
       }
     }

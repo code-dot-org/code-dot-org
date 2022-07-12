@@ -34,14 +34,14 @@ class TransfersController < ApplicationController
     end
     # Verify the destination section is not managed by a third-party login
     new_section = Section.find_by_code(new_section_code)
-    if new_section && new_section.externally_rostered?
+    if new_section&.externally_rostered?
       render json: {
         error: I18n.t('move_students.third_party_login')
       }, status: :bad_request
       return
     end
     # Verify the destination section and destination teacher exist (are not soft-deleted).
-    unless new_section && new_section.user
+    unless new_section&.user
       render json: {
         error: I18n.t('move_students.new_section_dne', new_section_code: new_section_code)
       }, status: :not_found
@@ -136,12 +136,20 @@ class TransfersController < ApplicationController
       return
     end
 
+    # Verify user can be participant in destination section.
+    if students.any? {|student| !new_section.can_join_section_as_participant?(student)}
+      render json: {
+        error: I18n.t('move_students.not_correct_participant_type')
+      }, status: :forbidden
+      return
+    end
+
     stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section] &&
       params[:stay_enrolled_in_current_section] != 'false'
     students.each do |student|
       if new_section.user == current_user
         follower_same_user_teacher = student.followeds.find_by_section_id(current_section.id)
-        follower_same_user_teacher.update_attributes!(section_id: new_section.id)
+        follower_same_user_teacher.update!(section_id: new_section.id)
       else
         unless student.followeds.exists?(section_id: new_section.id)
           student.followeds.create!(user: new_section.user, section: new_section)

@@ -1,0 +1,94 @@
+{
+  "https://studio.code.org/s/csd1-2021/lockable/1/levels/1": {
+    "dsls": {
+      "title": "CS Discoveries Student Pre-Course Survey"
+    }
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/2/levels/1": {
+    "display_name": "Video: Problem Solving Process",
+    "long_instructions": "## Questions to consider:\n\n-   How did you follow the problem solving process in the last lesson?\n-   How could you use this process on a problem in your everyday life?",
+    "teacher_markdown": "## Discussion Goals\n\nThe first discussion question is part of the core activity in the rest of the lesson.  Students should take time working in their groups to think of specific things that they did that follow each step of the process.   The goal of this discussion is to make the abstract steps more concrete and accessible to students by relating them to a shared activity.\n\nThe second question gives students a chance to expand their understanding of the process to a different problem, seeing how the different steps may look in different domains.  The goal of this discussion is to make sure students have a general enough understanding of the process that they can apply it to a wider variety of problems, since the process will be used throughout the course in various domains."
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/4/levels/1": {
+    "display_name": "Video: What Makes a Computer, a Computer?",
+    "long_instructions": "## Questions to think about:\n\n-   What made computers different from machines that came before them?",
+    "teacher_markdown": "## Discussion Goals\n\nAfter watching the video, students should understand that computers are machines designed to help people with thinking work, as opposed to physical work.  Within a problem solving context, computers are designed to solve information problems.  Subtleties may come up in the discussion around computers that have output mechanisms that allow them to do physical work (e.g. robots).  It's okay if students do not come to a particular conclusion about every device they can think of."
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/5/levels/1": {
+    "display_name": "Pet Chooser App",
+    "long_instructions": "# Pet Chooser\n\nTry playing this pet chooser app a few times.\n\n-   What are the inputs?\n-   What are the outputs?\n\n* * *\n\n_To start using the app, press the orange \"Run\" button._"
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/5/levels/2": {
+    "display_name": "Story Creator App",
+    "long_instructions": "# Story Creator\n\nTry out this app that writes a custom story for you.\n\n-   What are its inputs?\n-   What are its outputs?"
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/5/levels/3": {
+    "display_name": "Improved Pet Chooser App",
+    "long_instructions": "# Improved Pet Chooser\n\nThis new version of the pet choose also tells you where you can find a pet.\n\n-   What are the new inputs?\n-   What is the source of the new inputs?"
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/6/levels/1": {
+    "display_name": "Pet Chooser App",
+    "long_instructions": "# Is it Your Birthday?\n\nTry out this app that tells you whether or not it is your birthday.\n\n1.  What input does this app use?\n\n2.  What output does it display?\n\n3.  How does it decide which output message to display?\n\n* * *\n\n_To start using the app, press the orange \"Run\" button._"
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/6/levels/2": {
+    "display_name": "Pet Chooser App",
+    "long_instructions": "# National Park Quiz\n\nTry out this quiz about America's national parks.\n\n**Inputs:**\n\n1.  Which answer is chosen (user mouse click)\n2.  The right answer (Internet or stored in the app)\n\n**Outputs:**\n\n1.  Message that the user is correct\n2.  Message that the user is incorrect\n\n**Processing:**\n\n-   What types of processing are needed to turn the input into the output?",
+    "teacher_markdown": "[][0]\n\nThere are two distinct forms of processing.\n\n1.  Comparing - the user's choice is compared to the correct answer\n2.  If/then - if they are the same, the app displays the \"correct\" message; if they are different, the app displays the \"incorrect\" message\n\nNote that this app is very similar to the birthday app students saw on the last level in that it uses the same two types of processing.  Use this similarity to compare how the same types of processing can be used in very different types of apps.\n\n[/][0]"
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/6/levels/3": {
+    "display_name": "Pet Chooser App",
+    "long_instructions": "# How Many Countries?\n\nThis app tells you some fun facts about different countries.  Ask it a question and it will tell you how many countries meet that requirement.\n\n**Input:**\n\n1.  The question that the user chose (user mouse click)\n2.  List of countries and facts about them (Internet or stored in app)\n\n**Output:**\n\n1.  The number of countries that meet the requirement.\n\n**Processing:**\n\n-   What types of processing are needed for this app to work?",
+    "teacher_markdown": "[][0]\n\nThis app uses searching/find a match and counting.\n\n-   The app searches the list of countries for ones that meet the requirement.\n-   The app counts the number of matches that it has found.\n\nAlthough this explanation leaves out much of the detail of how this sort of processing works, the main point of the execise is that searching/finding a match and counting are two of the main types of processing that students will need to be familiar with in this course.\n\n[/][0]"
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/6/levels/4": {
+    "display_name": "Pet Chooser App",
+    "long_instructions": "# My Famous Birthday\n\nThis app uses your birthdate to tell you a famous writer that was born on the same day of the week.\n\n**Input:**\n\n1.  User's birthday (user input)\n2.  Calendar of dates, including the day of the week (Internet)\n3.  List of authors and the day they were born (Internet or stored in the app)\n\n**Output:**\n\n1.  An author born on the same day as the user\n\n**Processing:**\n\n-   Out of the four types of processing that you have learned about, pick one and explain how it can be used to change the input into output.\n    -   if/then\n    -   counting\n    -   finding a match\n    -   comparing",
+    "teacher_markdown": "[][0]\n\nThe processing used in this app is searching or finding a match.   \n\n-   Find a match for the user's birthday in the calendar, and use the day of the week.\n-   Find a match for the day of the week in the list of authors and the days they were born.\n\nThere is, of course, some more processing that happens in this app, but the focus in this exercise is on the searching/finding a match part of the process.\n\n[/][0]"
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/6/levels/5": {
+    "display_name": "Pet Chooser App",
+    "long_instructions": "# Stamp Notebook\n\nIn this app, the user can stamp different color icons on the notebook.  Choose an icon by clicking on its image, then click the image again to change the color.\n\n**Inputs:**\n\n1.  Which icon the user clicked on (user clicks)\n2.  Where on the paper the user clicks (user clicks)\n\n**Outputs:**\n\n1.  Change the color of the icons at the bottom\n2.  Draw an icon on the paper\n\n**Processing:**\n\n-   Out of the four types of processing that you have learned about, pick one and explain how it can be used to change the input into output.\n    -   if/then\n    -   counting\n    -   finding a match\n    -   comparing",
+    "teacher_markdown": "[][0]\n\nThis app uses if/then processing in a few different ways.\n\n-   If the user clicks on a new icon (not the current one), then choose that for the stamp and make it the current color, and make the old icon black.\n-   If the user clicks on the same icon, then change its color.\n-   If the user clicks on the notebook paper, then draw a stamp there of the current shape and color.\n\n[/][0]"
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/6/levels/6": {
+    "display_name": "Pet Chooser App",
+    "long_instructions": "# The Fastest Finger\n\nThis app tells you which finger is the fastest, the one that presses the 's' key or the one that presses the 'k' key.  Run the app and press each key as many times as you can.\n\n**Inputs:**\n\n1.  Whether the 's' key is pressed (user key press)\n2.  Whether the 'k' key is pressed (user key press)\n\n**Outputs:**\n\n1.  Display of how many times the 's' key has been pressed\n2.  Display of how many times the 'k' key has been pressed\n3.  Display of which key has been pressed the most, or if it's a tie\n\n**Processing:**\n\n-   Out of the four types of processing that you have learned about, pick at least two and explain how they can be used to change the input into output.\n    -   if/then\n    -   counting\n    -   finding a match\n    -   comparing",
+    "teacher_markdown": "[][0]\n\nThis app uses counting and comparing.\n\n-   The app counts how many times each key has been clicked.\n-   The app compares the two numbers.\n\n[/][0]"
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/6/levels/7": {
+    "display_name": "Pet Chooser App",
+    "long_instructions": "# Guess the Number\n\nIn this app, you try to guess the computer's number.\n\n**Inputs:**\n\n1.  The number you are guessing (user dropdown)\n\n**Outputs:**\n\n1.  Number of tries left.\n2.  Display that tells you if you are too low or too high.\n3.  Display that tells you that you got it right.\n4.  Display that tells you that you are out of tries.\n\n**Processing:**\n\n-   Out of the four types of processing that you have learned about, pick at least two and explain how they can be used to change the input into output.\n    -   if/then\n    -   counting\n    -   finding a match\n    -   comparing"
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/6/levels/8": {
+    "display_name": "Pet Chooser App",
+    "long_instructions": "# Where Should I Live?\n\nThis app gives you advice on where to live based on your answers to a few questions.\n\n**Inputs:**\n\n1.  User answers to questions (user clicks)\n\n**Outputs:**\n\n1.  Advice on where the users should live\n\n**Processing:**\n\n-   Out of the four types of processing that you have learned about, pick at least two and explain how they can be used to change the input into output.\n    -   if/then\n    -   counting\n    -   finding a match\n    -   comparing",
+    "teacher_markdown": "[][0]\n\nThe app uses comparing, finding a match, and counting.\n\n-   The app finds a match for chosen characteristics in the list of places.\n-   The app counts how many matches have been made for each place.\n-   The app compares the number of matches for each place and displays the place with the highest count.\n\n[/][0]"
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/7/levels/1": {
+    "display_name": "Outfit Picker",
+    "long_instructions": "# Outfit Picker\n\n **Input**\n\n-   Favorite color\n-   Season\n-   Weather\n\n**Output**\n\n-   Shirt\n-   Pants\n-   Items to bring (e.g. umbrella)\n\n**Processing**\n\n-   IF it is raining, THEN carry an umbrella.\n-   IF it is autumn or winter, THEN wear long pants.\n-   MATCH favorite color to shirt color.\n\n* * *\n\n_To start using the app, press the orange \"Run\" button._"
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/7/levels/2": {
+    "display_name": "Friend Finder",
+    "long_instructions": "# Friend Finder\n\n**Input:**\n\n-   Friend list\n-   Friend requests\n-   Adding a friend\n-   Removing a friend\n\n**Output:**\n\n-   Friend locations\n\n**Processing:**\n\n-   IF this person is a friend THEN find their location"
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/7/levels/3": {
+    "display_name": "Kids Movie Recommender",
+    "long_instructions": "# Kids Movie Recommender\n\n**Input:**\n\n-   Favorite movie\n-   Genre\n-   Animated movie or not?\n\n**Output:**\n\n-   Movie recommendation\n\n**Processing:**\n\n-   IF they want an animated movie THEN choose from the animated movies ELSE choose from the live action movies\n-   MATCH the genre they want with a movie of that genre"
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/7/levels/4": {
+    "display_name": "IOSP Model",
+    "long_instructions": "## Questions to think about:\n\n-   Think of something you do on the computer. What sort of input, output, storage, and processing are happening?",
+    "teacher_markdown": "## Discussion Goals\n\nThis discussion should allow students to review the input, output, storage, and processing model that they have been exploring in the past few lessons.  While they should be familiar with how the model works with apps, there may still be questions around other computing devices, and around the examples shown later in the lesson.  For example, one common source of controversy around processing is whether some devices are processing information themselves, or whether the user is processing the information, while the device simply stores information (e.g. the abacus)."
+  },
+  "https://studio.code.org/s/csd1-2021/lessons/8/levels/1": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
+  },
+  "https://studio.code.org/s/csd1-2021/lockable/2/levels/1": {
+    "dsls": {
+      "title": "Computers and Problem Solving Post-Project Test"
+    }
+  }
+}

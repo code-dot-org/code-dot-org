@@ -9,8 +9,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.4.4'
+gem 'rails', '6.0.4.1'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -22,20 +21,14 @@ gem 'sprockets-rails'
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 3.0'
 
-# Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
-# breaks some firebase URIs. See
-# https://github.com/code-dot-org/code-dot-org/pull/31614
-gem 'sinatra', '2.0.2', require: 'sinatra/base'
+gem 'sinatra', '2.1.0', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
-
-gem 'seamless_database_pool', '>= 1.0.20'
 
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive'
 gem 'jumphash'
-gem 'le', '~> 2.2'
 gem 'os'
 gem 'parallel'
 gem 'redis', '~> 3.3.3'
@@ -78,26 +71,24 @@ group :development, :test do
 
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.7.0'
   gem 'binding_of_caller'
   gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
   gem 'vcr', require: false
   # For unit testing.
-  gem 'webmock', require: false
+  gem 'webmock', '~> 3.8', require: false
 
-  gem 'codecov', require: false
   gem 'fakeredis', require: false
   gem 'mocha', require: false
-  gem 'simplecov', '~> 0.9', require: false
   gem 'sqlite3'
   gem 'timecop'
 
   # For UI testing.
   gem 'cucumber'
   gem 'eyes_selenium', '3.18.4'
-  gem 'minitest', '~> 5.5'
+  gem 'minitest', '~> 5.15'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'net-http-persistent'
@@ -111,11 +102,6 @@ group :development, :test do
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
   gem 'pdf-reader', require: false
-end
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
@@ -174,10 +160,7 @@ gem 'omniauth-rails_csrf_protection', '~> 0.1'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 
-# Ref: https://github.com/haml/haml/issues/940
-# https://github.com/haml/haml/issues/982
-# https://github.com/haml/haml/issues/985
-gem 'haml', github: 'wjordan/haml', ref: 'cdo'
+gem 'haml', '~> 5.2.0'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
 
@@ -185,7 +168,7 @@ gem 'nokogiri', '>= 1.10.0'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger' # error monitoring
+gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'newrelic_rpm', group: [:staging, :development, :production], # perf/error/etc monitoring
   # Ref:
@@ -199,7 +182,7 @@ gem 'redcarpet', '~> 3.3.4'
 gem 'geocoder'
 
 gem 'mini_magick', ">=4.9.4"
-gem 'rmagick'
+gem 'rmagick', '~> 4.2.5'
 
 gem 'acts_as_list'
 
@@ -258,7 +241,9 @@ gem 'aws-sdk-secretsmanager'
 # Lint tools
 group :development, :staging, :levelbuilder do
   gem 'haml_lint', require: false
-  gem 'rubocop', '~> 0.52', require: false
+  gem 'rubocop', '1.28', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
   gem 'scss_lint', require: false
 end
 
@@ -297,7 +282,7 @@ gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
-gem 'composite_primary_keys', '~> 11.0'
+gem 'composite_primary_keys', '~> 12.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
@@ -305,7 +290,7 @@ gem 'octokit'
 
 # Used to create a prefix trie of student names within a section
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
-gem 'rambling-trie'
+gem 'rambling-trie', '>= 2.1.1'
 
 gem 'omniauth-openid'
 gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: 'cdo'
@@ -326,8 +311,6 @@ gem 'auto_strip_attributes', '~> 2.1'
 # Used to sort UTF8 strings properly
 gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
 
-gem 'StreetAddress', require: "street_address"
-
 gem 'recaptcha', require: 'recaptcha/rails'
 
 gem 'loofah', ' ~> 2.2.1'
@@ -342,8 +325,8 @@ install_if require_pg do
   gem 'pg', require: false
 end
 
-gem 'active_record_union'
 gem 'activerecord-import'
+gem 'active_record_union'
 gem 'scenic'
 gem 'scenic-mysql_adapter'
 
@@ -361,3 +344,8 @@ gem 'datapackage'
 gem 'ruby-progressbar'
 
 gem 'pry'
+
+# Google's Compact Language Detector
+gem 'cld'
+
+gem 'crowdin-api', '~> 1.2.1'

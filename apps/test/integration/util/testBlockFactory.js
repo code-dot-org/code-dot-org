@@ -10,9 +10,9 @@ exports.installTestBlocks = function(blockly) {
     init: function() {
       var displayText = 'dummy text';
       this.appendDummyInput()
-        .appendTitle(displayText, 'A')
-        .appendTitle(displayText, 'B')
-        .appendTitle(displayText, 'C');
+        .appendField(displayText, 'A')
+        .appendField(displayText, 'B')
+        .appendField(displayText, 'C');
     }
   };
 };

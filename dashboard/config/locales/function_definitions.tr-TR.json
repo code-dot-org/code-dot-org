@@ -828,7 +828,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -981,16 +982,23 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
-            "name": "bir çember çiz"
+            "name": "bir çember çiz",
+            "description": "verilen yarıçapta bir daire çizin",
+            "parameters": {
+              "radius": "yarıçap"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "uzunluk",
-              "repeat": "bu işlemleri"
-            }
+              "repeat": "bu işlemleri",
+              "sides": "kenarlar"
+            },
+            "name": "bir fırıldak çizin"
           },
           "draw a triangle": {
             "name": "bir üçgen çiz",
@@ -1001,7 +1009,8 @@
           "draw a shape": {
             "name": "bir şekil çiz",
             "parameters": {
-              "length": "uzunluk"
+              "length": "uzunluk",
+              "sides": "kenarlar"
             }
           },
           "draw a house": {
@@ -1067,11 +1076,17 @@
         "course3_artist_functions_challenge1": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "course3_artist_functions_challenge2": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "course3_bee_functions_challenge1": {
@@ -1114,6 +1129,9 @@
         "course4_artist_functions_challenge2": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "course4_artist_fwp_challenge1": {
@@ -2231,41 +2249,65 @@
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge1_2018": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge1_2019": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge1_2020": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge2": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge2_2018": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge2_2019": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge2_2020": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_predict1": {
@@ -2956,7 +2998,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -3404,7 +3447,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -3488,7 +3532,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -3530,6 +3575,18 @@
               "length": "uzunluk",
               "sides": "kenarlar"
             }
+          },
+          "small flower": {
+            "name": "küçük çiçek"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "LOGIC FLOWERS2"
+          },
+          "LOGIC FLOWER": {
+            "name": "LOGIC FLOWER"
+          },
+          "LOGIC FLOWERS": {
+            "name": "LOGIC FLOWERS"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -3538,7 +3595,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -3587,7 +3645,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -3636,7 +3695,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -3866,11 +3926,17 @@
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_predict1_2021": {
@@ -4000,6 +4066,103 @@
         "courseF_apps_collector": {
           "end game": {
             "name": "oyunu bitir"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "oyunu sıfırla"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "fonksiyon 1"
+          },
+          "function 2": {
+            "name": "fonksiyon 2\n"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "hareket et ve sayaç ile nektar al"
+          }
+        },
+        "MC_HOC_2017_FP20x20": {
+          "function 1": {
+            "name": "fonksiyon 1"
+          },
+          "function 2": {
+            "name": "fonksiyon 2\n"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "function 1": {
+            "name": "fonksiyon 1"
+          },
+          "function 2": {
+            "name": "fonksiyon 2\n"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "function 1": {
+            "name": "fonksiyon 1"
+          },
+          "function 2": {
+            "name": "fonksiyon 2\n"
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "fonksiyon 1"
+          },
+          "function 2": {
+            "name": "fonksiyon 2\n"
+          }
+        },
+        "course4_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "hareket et ve sayaç ile nektar al"
+          }
+        },
+        "courseF_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "hareket et ve sayaç ile nektar al"
+          }
+        },
+        "courseF_bee_for_challenge1_2018": {
+          "move and get nectar with counter": {
+            "name": "hareket et ve sayaç ile nektar al"
+          }
+        },
+        "courseF_bee_for_challenge1_2019": {
+          "move and get nectar with counter": {
+            "name": "hareket et ve sayaç ile nektar al"
+          }
+        },
+        "courseF_bee_for_challenge1_2020": {
+          "move and get nectar with counter": {
+            "name": "hareket et ve sayaç ile nektar al"
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "bir kare çiz"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "bir şekil çiz",
+            "parameters": {
+              "sides": "kenarlar",
+              "length": "uzunluk"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "fonksiyon 1"
+          },
+          "function 2": {
+            "name": "fonksiyon 2\n"
           }
         }
       }

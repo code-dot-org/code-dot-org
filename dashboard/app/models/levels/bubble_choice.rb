@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -37,7 +37,7 @@ class BubbleChoice < DSLDefined
   ALPHABET = ('a'..'z').to_a
 
   def dsl_default
-    <<~ruby
+    <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
       display_name 'level display_name here'
       description 'level description here'
@@ -45,7 +45,7 @@ class BubbleChoice < DSLDefined
       sublevels
       level 'level1'
       level 'level2'
-    ruby
+    RUBY
   end
 
   # Returns all of the sublevels for this BubbleChoice level in order.
@@ -143,8 +143,9 @@ class BubbleChoice < DSLDefined
         level_url(level.id)
 
       if user_id
+        level_for_sublevel_progress = BubbleChoice.level_for_progress_for_sublevel(level)
         user_level = UserLevel.find_by(
-          level: level,
+          level: level_for_sublevel_progress,
           script: script_level.try(:script),
           user_id: user_id
           )
@@ -153,6 +154,7 @@ class BubbleChoice < DSLDefined
 
         level_feedback = TeacherFeedback.get_latest_feedbacks_received(user_id, level.id, script_level.try(:script)).first
         level_info[:teacher_feedback_review_state] = level_feedback&.review_state
+        level_info[:exampleSolutions] = script_level.get_example_solutions(level, User.find_by(id: user_id)) if script_level
       else
         # Pass an empty status if the user is not logged in so the ProgressBubble
         # in the sublevel display can render correctly.
@@ -204,9 +206,9 @@ class BubbleChoice < DSLDefined
     level
   end
 
-  def self.setup(data)
+  def self.setup(data, md5)
     sublevel_names = data[:properties].delete(:sublevels)
-    level = super(data)
+    level = super(data, md5)
     level.setup_sublevels(sublevel_names)
     level
   end
@@ -229,6 +231,11 @@ class BubbleChoice < DSLDefined
     reload
   end
 
+  # Some BubbleChoice sublevels also have a contained level
+  def self.level_for_progress_for_sublevel(sublevel)
+    sublevel.contained_levels.any? ? sublevel.contained_levels.first : sublevel
+  end
+
   private
 
   # Returns the sublevel for a user that has the highest best_result.
@@ -236,7 +243,8 @@ class BubbleChoice < DSLDefined
   # @param [Script]
   # @return [Level]
   def best_result_sublevel(user, script)
-    ul = user.user_levels.where(level: sublevels, script: script).max_by(&:best_result)
+    sublevels_for_progress = sublevels.map {|sublevel| BubbleChoice.level_for_progress_for_sublevel(sublevel)}
+    ul = user.user_levels.where(level: sublevels_for_progress, script: script).max_by(&:best_result)
     ul&.level
   end
 

@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "Poetry - Effects",
   "config": {
     "func": "playSound",
     "blockText": "play sound {SOUND}",
@@ -13,52 +13,72 @@
         "name": "SOUND",
         "options": [
           [
-            "Bell",
-            "\"sound://category_bell/bells_win_low.mp3\""
+            "bell",
+            "\"sound://category_bell/long_bell_notification.mp3\""
           ],
           [
-            "Bright",
-            "\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\""
+            "break",
+            "\"sound://category_explosion/puzzle_game_break_magic_05.mp3\""
           ],
           [
-            "Fireside",
-            "\"sound://category_background/fire_burning.mp3\""
+            "boing",
+            "\"sound://category_digital/boing_2.mp3\""
           ],
           [
-            "Forest",
-            "\"sound://category_nature/forest_woodland_ambience_2.mp3\""
+            "bubble",
+            "\"sound://category_pop/bubble_pop_cluster_2.mp3\""
           ],
           [
-            "Harps",
-            "\"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3\""
+            "chatter",
+            "\"sound://category_accent/puzzle_game_accent_chatter_02.mp3\""
           ],
           [
-            "Night",
-            "\"sound://category_nature/summer_night_loop.mp3\""
+            "deflate",
+            "\"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3\""
           ],
           [
-            "Ocean",
-            "\"sound://category_background/ocean_waves.mp3\""
+            "fail",
+            "\"sound://category_jump/retro_game_enemy_jump_3.mp3\""
           ],
           [
-            "Rainy",
-            "\"sound://category_background/rain_thunderstorm_calm.mp3\""
+            "flutter",
+            "\"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3\""
           ],
           [
-            "Rainforest",
-            "\"sound://category_background/rainforest_ambient_sound.mp3\""
+            "jump",
+            "\"sound://category_jump/vibrant_game_jumping_up_1.mp3\""
           ],
           [
-            "Sleepy",
-            "\"sound://category_background/wavering_wind.mp3\""
+            "light",
+            "\"sound://category_achievements/lighthearted_bonus_objective_5.mp3\""
           ],
           [
-            "Typewriter",
+            "poof",
+            "\"sound://category_poof/puzzle_game_poof_04.mp3\""
+          ],
+          [
+            "scan",
+            "\"sound://category_achievements/puzzle_game_achievement_big_03.mp3\""
+          ],
+          [
+            "typewriter",
             "\"sound://category_background/typewriter.mp3\""
           ],
           [
-            "Waterfall",
-            "\"sound://category_background/waterfall.mp3\""
+            "vibrant",
+            "\"sound://category_achievements/vibrant_virtcal_achievment.mp3\""
+          ],
+          [
+            "win",
+            "\"sound://category_achievements/peaceful_win_1.mp3\""
+          ],
+          [
+            "whirl",
+            "\"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3\""
+          ],
+          [
+            "wind chimes",
+            "\"sound://category_achievements/peaceful_win_6.mp3\""
           ]
         ]
       }

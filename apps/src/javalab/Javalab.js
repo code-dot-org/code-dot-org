@@ -8,26 +8,33 @@ import javalab, {
   getValidation,
   setAllSources,
   setAllValidation,
-  setIsDarkMode,
+  setDisplayTheme,
   appendOutputLog,
   setBackpackApi,
   setIsStartMode,
   setLevelName,
   appendNewlineToConsoleLog,
   setIsRunning,
-  setDisableFinishButton
+  setDisableFinishButton,
+  setIsTesting,
+  openPhotoPrompter,
+  closePhotoPrompter,
+  setBackpackEnabled,
+  appendMarkdownLog,
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview
 } from './javalabRedux';
-import playground from './playgroundRedux';
+import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './JavabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
-import Neighborhood from './Neighborhood';
-import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
-import TheaterVisualizationColumn from './TheaterVisualizationColumn';
-import Theater from './Theater';
-import {CsaViewMode, InputMessageType} from './constants';
-import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
+import Neighborhood from './neighborhood/Neighborhood';
+import NeighborhoodVisualizationColumn from './neighborhood/NeighborhoodVisualizationColumn';
+import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
+import Theater from './theater/Theater';
+import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
+import {getDisplayThemeFromString} from './DisplayTheme';
 import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
   getContainedLevelResultInfo,
@@ -36,8 +43,8 @@ import {
 } from '../containedLevels';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
-import Playground from './Playground';
-import PlaygroundVisualizationColumn from './PlaygroundVisualizationColumn';
+import Playground from './playground/Playground';
+import PlaygroundVisualizationColumn from './playground/PlaygroundVisualizationColumn';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -78,10 +85,11 @@ Javalab.prototype.init = function(config) {
 
   this.skin = config.skin;
   this.level = config.level;
-  // Sets dark mode based on displayTheme user preference
-  this.isDarkMode =
-    getDisplayThemeFromString(config.displayTheme) === DisplayTheme.DARK;
+  // Sets display theme based on displayTheme user preference
+  this.displayTheme = getDisplayThemeFromString(config.displayTheme);
   this.isStartMode = !!config.level.editBlocks;
+  this.isEditingExemplar = !!config.level.isEditingExemplar;
+  this.isViewingExemplar = !!config.level.isViewingExemplar;
   config.makeYourOwn = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
@@ -103,10 +111,14 @@ Javalab.prototype.init = function(config) {
   config.afterClearPuzzle = this.afterClearPuzzle.bind(this);
   const onRun = this.onRun.bind(this);
   const onStop = this.onStop.bind(this);
+  const onTest = this.onTest.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
   const onJavabuilderMessage = this.onJavabuilderMessage.bind(this);
+  const onPhotoPrompterFileSelected = this.onPhotoPrompterFileSelected.bind(
+    this
+  );
 
   switch (this.level.csaViewMode) {
     case CsaViewMode.NEIGHBORHOOD:
@@ -125,7 +137,13 @@ Javalab.prototype.init = function(config) {
       this.visualization = <NeighborhoodVisualizationColumn />;
       break;
     case CsaViewMode.THEATER:
-      this.miniApp = new Theater(this.onOutputMessage, this.onNewlineMessage);
+      this.miniApp = new Theater(
+        this.onOutputMessage,
+        this.onNewlineMessage,
+        this.openPhotoPrompter,
+        this.closePhotoPrompter,
+        onJavabuilderMessage
+      );
       this.visualization = <TheaterVisualizationColumn />;
       break;
     case CsaViewMode.PLAYGROUND:
@@ -178,6 +196,7 @@ Javalab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel,
     isEditingStartSources: this.isStartMode,
     isCodeReviewing: !!config.isCodeReviewing,
+    isViewingOwnProject: !!config.isViewingOwnProject,
     isResponsive: true,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted
@@ -193,15 +212,31 @@ Javalab.prototype.init = function(config) {
       validation: getValidation(getStore().getState())
     }));
   }
+  if (this.isEditingExemplar) {
+    showLevelBuilderSaveButton(
+      () => ({
+        exemplar_sources: getSources(getStore().getState())
+      }),
+      'Levelbuilder: edit exemplar',
+      `/levels/${
+        getStore().getState().pageConstants.serverLevelId
+      }/update_exemplar_code`
+    );
+  }
 
   const startSources = config.level.lastAttempt || config.level.startSources;
   const validation = config.level.validation || {};
-  // if startSources exists and contains at least one key, use startSources
-  if (
+  if (config.level.exemplarSources) {
+    // If we have exemplar sources (either for editing or viewing), set initial sources
+    // with the exemplar code saved to the level definition.
+    getStore().dispatch(setAllSources(config.level.exemplarSources));
+  } else if (
     startSources &&
     typeof startSources === 'object' &&
     Object.keys(startSources).length > 0
   ) {
+    // Otherwise, if startSources exists and contains at least one key, use startSources.
+
     if (config.level.editBlocks) {
       Object.keys(startSources).forEach(key => {
         startSources[key].isValidation = false;
@@ -237,20 +272,38 @@ Javalab.prototype.init = function(config) {
   getStore().dispatch(setIsStartMode(this.isStartMode));
   getStore().dispatch(setLevelName(this.level.name));
 
-  // Dispatches a redux update of isDarkMode
-  getStore().dispatch(setIsDarkMode(this.isDarkMode));
+  // For javalab, we don't use pageConstants.isReadOnlyWorkspace because
+  // the readOnly state can change when a code review is opened or closed
+  getStore().dispatch(setIsReadOnlyWorkspace(!!config.readonlyWorkspace));
+  getStore().dispatch(setHasOpenCodeReview(!!config.hasOpenCodeReview));
 
-  getStore().dispatch(
-    setBackpackApi(new BackpackClientApi(config.backpackChannel))
-  );
+  // Dispatches a redux update of display theme
+  getStore().dispatch(setDisplayTheme(this.displayTheme));
+
+  const backpackEnabled = !!config.backpackEnabled;
+  getStore().dispatch(setBackpackEnabled(backpackEnabled));
+
+  if (backpackEnabled) {
+    getStore().dispatch(
+      setBackpackApi(new BackpackClientApi(config.backpackChannel))
+    );
+  }
 
   getStore().dispatch(
     setDisableFinishButton(
-      !!config.readonlyWorkspace && !config.level.submittable
+      // The "submit" button overrides the finish button on a submittable level. A submittable level
+      // that has been submitted will be considered "readonly" but a student must still be able to
+      // unsubmit it. That is generally the only exception to a readonly workspace. However if a
+      // student is reviewing another student's code, we'd always want to disable the finish button.
+      (!!config.readonlyWorkspace && !config.level.submittable) ||
+        !!config.isCodeReviewing
     )
   );
 
-  fetch('/project_versions/get_token', {
+  // Used for some post requests made in Javalab, namely
+  // when providing overrideSources or commiting code.
+  // Code review manages a csrf token separately.
+  fetch('/project_commits/get_token', {
     method: 'GET'
   }).then(response => (this.csrf_token = response.headers.get('csrf-token')));
 
@@ -260,6 +313,7 @@ Javalab.prototype.init = function(config) {
         onMount={onMount}
         onRun={onRun}
         onStop={onStop}
+        onTest={onTest}
         onContinue={onContinue}
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
@@ -269,6 +323,7 @@ Javalab.prototype.init = function(config) {
         handleClearPuzzle={() => {
           return this.studioApp_.handleClearPuzzle(config);
         }}
+        onPhotoPrompterFileSelected={onPhotoPrompterFileSelected}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -292,6 +347,20 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
+  if (this.studioApp_.hasContainedLevels) {
+    lockContainedLevelAnswers();
+    getStore().dispatch(setDisableFinishButton(false));
+  }
+
+  this.miniApp?.reset?.();
+  this.executeJavabuilder(ExecutionType.RUN);
+};
+
+Javalab.prototype.onTest = function() {
+  this.executeJavabuilder(ExecutionType.TEST);
+};
+
+Javalab.prototype.executeJavabuilder = function(executionType) {
   if (this.studioApp_.attempts === 0) {
     // ensure we save to S3 on the first run.
     // Javabuilder requires code to be saved to S3.
@@ -299,16 +368,12 @@ Javalab.prototype.onRun = function() {
   }
 
   this.studioApp_.attempts++;
-  if (this.studioApp_.hasContainedLevels) {
-    lockContainedLevelAnswers();
-    getStore().dispatch(setDisableFinishButton(false));
-  }
 
-  this.miniApp?.reset?.();
   const options = {};
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
     options.useNeighborhood = true;
   }
+
   this.javabuilderConnection = new JavabuilderConnection(
     this.level.javabuilderUrl,
     this.onOutputMessage,
@@ -316,11 +381,37 @@ Javalab.prototype.onRun = function() {
     getStore().getState().pageConstants.serverLevelId,
     options,
     this.onNewlineMessage,
-    this.setIsRunning
+    this.setIsRunning,
+    this.setIsTesting,
+    executionType,
+    this.level.csaViewMode,
+    getStore().getState().currentUser,
+    this.onMarkdownMessage,
+    this.csrf_token,
+    () => this.onValidationPassed(this.studioApp_),
+    () => this.onValidationFailed(this.studioApp_)
   );
-  project.autosave(() => {
-    this.javabuilderConnection.connectJavabuilder();
-  });
+
+  let connectToJavabuilder;
+  if (this.isEditingExemplar || this.isViewingExemplar) {
+    const overrideSources = getSources(getStore().getState());
+    connectToJavabuilder = () =>
+      this.javabuilderConnection.connectJavabuilderWithOverrideSources(
+        overrideSources
+      );
+  } else if (this.isStartMode && executionType === ExecutionType.TEST) {
+    // we only need to override validation if we are in start mode and running tests.
+    const overrideValidation = getValidation(getStore().getState());
+    connectToJavabuilder = () =>
+      this.javabuilderConnection.connectJavabuilderWithOverrideValidation(
+        overrideValidation
+      );
+  } else {
+    connectToJavabuilder = () =>
+      this.javabuilderConnection.connectJavabuilder();
+  }
+
+  project.autosave(connectToJavabuilder);
   postContainedLevelAttempt(this.studioApp_);
 };
 
@@ -384,7 +475,7 @@ Javalab.prototype.afterClearPuzzle = function() {
 
 Javalab.prototype.onCommitCode = function(commitNotes, onSuccessCallback) {
   project.save(true).then(result => {
-    fetch('/project_versions', {
+    fetch('/project_commits', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -409,6 +500,51 @@ Javalab.prototype.onNewlineMessage = function() {
 
 Javalab.prototype.setIsRunning = function(isRunning) {
   getStore().dispatch(setIsRunning(isRunning));
+};
+
+Javalab.prototype.setIsTesting = function(isTesting) {
+  getStore().dispatch(setIsTesting(isTesting));
+};
+
+Javalab.prototype.openPhotoPrompter = function(promptText) {
+  getStore().dispatch(openPhotoPrompter(promptText));
+};
+
+Javalab.prototype.closePhotoPrompter = function() {
+  getStore().dispatch(closePhotoPrompter());
+};
+
+Javalab.prototype.onPhotoPrompterFileSelected = function(photo) {
+  // Only pass the selected photo to the mini-app if it supports the photo prompter
+  this.miniApp?.onPhotoPrompterFileSelected?.(photo);
+};
+
+Javalab.prototype.onMarkdownMessage = function(message) {
+  getStore().dispatch(appendMarkdownLog(message));
+};
+
+Javalab.prototype.onValidationPassed = function(studioApp) {
+  studioApp.report({
+    app: 'javalab',
+    level: this.level.id,
+    result: true,
+    testResult: TestResults.ALL_PASS,
+    program: '',
+    submitted: getStore().getState().pageConstants.isSubmitted,
+    onComplete: () => {}
+  });
+};
+
+Javalab.prototype.onValidationFailed = function(studioApp) {
+  studioApp.report({
+    app: 'javalab',
+    level: this.level.id,
+    result: false,
+    testResult: TestResults.APP_SPECIFIC_FAIL,
+    program: '',
+    submitted: getStore().getState().pageConstants.isSubmitted,
+    onComplete: () => {}
+  });
 };
 
 export default Javalab;

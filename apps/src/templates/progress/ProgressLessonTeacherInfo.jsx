@@ -84,10 +84,12 @@ class ProgressLessonTeacherInfo extends React.Component {
       isLessonHiddenForSection(hiddenLessonState, sectionId, lesson.id);
     const courseId =
       (section && section.code && parseInt(section.code.substring(2))) || null;
+    const loginRequiredLessonStartUrl =
+      lesson.lessonStartUrl + '?login_required=true';
     const shouldRender =
       lesson.lesson_plan_html_url ||
       (lesson.lockable && !hasNoSections) ||
-      lesson.lessonStartUrl ||
+      loginRequiredLessonStartUrl ||
       showHiddenForSectionToggle;
     if (!shouldRender) {
       return null;
@@ -128,11 +130,25 @@ class ProgressLessonTeacherInfo extends React.Component {
         {lesson.lessonStartUrl && !(lesson.lockable && !lockableAuthorized) && (
           <div style={styles.buttonContainer}>
             <SendLesson
-              lessonUrl={lesson.lessonStartUrl}
+              lessonUrl={loginRequiredLessonStartUrl}
               lessonTitle={lesson.name}
               courseid={courseId}
               analyticsData={JSON.stringify(this.firehoseData())}
               buttonStyle={styles.button}
+            />
+          </div>
+        )}
+        {lesson.lesson_feedback_url && (
+          <div style={styles.buttonContainer}>
+            <Button
+              __useDeprecatedTag
+              href={lesson.lesson_feedback_url}
+              text={i18n.rateThisLesson()}
+              icon="bar-chart"
+              color={Button.ButtonColor.gray}
+              target="_blank"
+              style={styles.button}
+              className="rate-lesson-button"
             />
           </div>
         )}
@@ -166,7 +182,7 @@ export default connect(
   state => ({
     section:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
-    unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed,
+    unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed || false,
     hiddenLessonState: state.hiddenLesson,
     unitName: state.progress.scriptName,
     lockableAuthorized: state.lessonLock.lockableAuthorized,

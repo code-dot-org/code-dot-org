@@ -6,28 +6,28 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Get your community involved in the Hour of Code
+# Uključite svoju zajednicu u Sat kodiranja
 
-## Proširite riječ
+## 1. Proširite informaciju
 
-Tell your friends about the **#HourOfCode**!
+Recite svojim prijateljima o **#HourOfCode**!
 
 {{ promote/share_buttons }}
 
-## 2. Zatražite da cijela škola sudjeluje u Satu Kodiranja
+## 2. Zatražite da cijela škola sudjeluje u Satu kodiranja
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+[Pošaljite ovu e-poruku]({{ promote/sample_emails }}) svom ravnatelju i izazovite svaku učionicu u vašoj školi da se prijavi.
 
 ## 3. Zamolite svog poslodavca da sudjeluje
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+[Pošaljite ovu e-poruku]({{ promote/sample_emails }}) svom direktoru ili izvršnom direktoru tvrtke.
 
-## 4. Promote Hour of Code in your community
+## 4. Promovirajte Sat Kodiranja u svojoj zajednici
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Ne morate biti u školi da biste naučili nove vještine. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+Regrutirajte lokalnu skupinu - klub izviđača, crkvu, sveučilište, veteransku skupinu, sindikat ili čak neke prijatelje. Ne morate biti u školi da biste naučili nove vještine. Upotrijebite ove [postere, bannere, naljepnice, videozapise i još mnogo toga]({{ promote/resources }}) za svoj događaj.
 
-## 5. Zamolite mjesnog dužnosnika da podrži Sat Kodiranja
+## 5. Zamolite lokalnog dužnosnika da podrži Sat kodiranja
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Možda ih taj jedan sat osvijesti da pripomognu u izgradnji podrške za računalne znanosti na vašem području.
+[Pošaljite ovu e-poruku]({{ promote/sample_emails }}) svojim lokalnim predstavnicima, gradskom vijeću ili školskom odboru i pozovite ih da posjete vašu školu na Satu kodiranja. Možda ih taj jedan sat osvijesti da pripomognu u izgradnji podrške za računalne znanosti na vašem području.
 
 {{ signup_button }}

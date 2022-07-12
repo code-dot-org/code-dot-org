@@ -10,8 +10,8 @@ import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import animationList, {
   setInitialAnimationList
 } from '@cdo/apps/p5lab/redux/animationList';
-import {getStore, registerReducers} from '@cdo/apps/redux';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';
@@ -20,57 +20,61 @@ let poolField, nameField, helperEditor, configEditor, validationDiv;
 
 $(document).ready(() => {
   registerReducers({animationList: animationList});
-  getDefaultListMetadata().then(defaultSprites => {
-    getStore().dispatch(setInitialAnimationList(defaultSprites));
-
-    poolField = document.getElementById('block_pool');
-    nameField = document.getElementById('block_name');
-    Blockly.inject(document.getElementById('blockly-container'), {
-      assetUrl,
-      valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
-      typeHints: true
+  getDefaultListMetadata()
+    .then(initializeEditPage)
+    .catch(() => {
+      console.error(
+        'Unable to render sprite costumes in block preview. Please refresh the page.'
+      );
     });
-
-    const blockConfigElement = document.getElementById('block_config');
-
-    // Pretty print the config
-    let blocks = blockConfigElement.value;
-    if (blocks) {
-      blockConfigElement.value = JSON.stringify(JSON.parse(blocks), null, 2);
-    }
-
-    validationDiv = $(
-      blockConfigElement.parentNode.insertBefore(
-        document.createElement('div'),
-        blockConfigElement.nextSibling
-      )
-    );
-
-    const helperCodeElement = document.getElementById('block_helper_code');
-    configEditor = initializeCodeMirror(
-      blockConfigElement,
-      'application/json',
-      {
-        callback: validateBlockConfig,
-        onUpdateLinting: onUpdateLinting
-      }
-    );
-
-    helperEditor = initializeCodeMirror(helperCodeElement, 'javascript', {
-      callback: _ => validateBlockConfig(),
-      onUpdateLinting: onUpdateLinting
-    });
-    poolField.addEventListener('change', updateBlockPreview);
-
-    if (blocks) {
-      updateBlockPreview();
-    }
-
-    $('.alert.alert-success')
-      .delay(5000)
-      .fadeOut(1000);
-  });
 });
+
+function initializeEditPage(defaultSprites) {
+  getStore().dispatch(setInitialAnimationList(defaultSprites));
+
+  poolField = document.getElementById('block_pool');
+  nameField = document.getElementById('block_name');
+  Blockly.inject(document.getElementById('blockly-container'), {
+    assetUrl,
+    valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
+    typeHints: true
+  });
+
+  const blockConfigElement = document.getElementById('block_config');
+
+  // Pretty print the config
+  let blocks = blockConfigElement.value;
+  if (blocks) {
+    blockConfigElement.value = JSON.stringify(JSON.parse(blocks), null, 2);
+  }
+
+  validationDiv = $(
+    blockConfigElement.parentNode.insertBefore(
+      document.createElement('div'),
+      blockConfigElement.nextSibling
+    )
+  );
+
+  const helperCodeElement = document.getElementById('block_helper_code');
+  configEditor = initializeCodeMirror(blockConfigElement, 'application/json', {
+    callback: validateBlockConfig,
+    onUpdateLinting: onUpdateLinting
+  });
+
+  helperEditor = initializeCodeMirror(helperCodeElement, 'javascript', {
+    callback: _ => validateBlockConfig(),
+    onUpdateLinting: onUpdateLinting
+  });
+  poolField.addEventListener('change', updateBlockPreview);
+
+  if (blocks) {
+    updateBlockPreview();
+  }
+
+  $('.alert.alert-success')
+    .delay(5000)
+    .fadeOut(1000);
+}
 
 function onUpdateLinting(_, errors) {
   const submitButton = document.querySelector('#block_submit');

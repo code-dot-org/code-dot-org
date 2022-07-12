@@ -16,15 +16,31 @@ import {registerReducers} from '@cdo/apps/redux';
 import {
   setVerified,
   setVerifiedResources
-} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
+import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import CloneLessonDialogButton from '@cdo/apps/lib/levelbuilder/CloneLessonDialogButton';
+import {
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
 
 $(document).ready(function() {
+  prepareBlockly();
   displayLessonOverview();
   prepareExpandableImageDialog();
   tooltipifyVocabulary();
+  renderCopyLessonButton();
 });
+
+function prepareBlockly() {
+  const customBlocksConfig = getScriptData('customBlocksConfig');
+  if (!customBlocksConfig) {
+    return;
+  }
+  prepareBlocklyForEmbedding(customBlocksConfig);
+}
 
 /**
  * Collect and preprocess all data for the lesson and its activities, and
@@ -33,7 +49,7 @@ $(document).ready(function() {
 function displayLessonOverview() {
   const lessonData = getScriptData('lesson');
   const activities = lessonData['activities'];
-  const isTeacher = lessonData['is_teacher'];
+  const isInstructor = lessonData['is_instructor'];
 
   // Rename any keys that are different on the backend.
   activities.forEach(activity => {
@@ -78,10 +94,11 @@ function displayLessonOverview() {
     store.dispatch(setVerifiedResources());
   }
 
-  if (isTeacher) {
-    store.dispatch(setViewType(ViewType.Teacher));
+  if (isInstructor) {
+    store.dispatch(setViewType(ViewType.Instructor));
+    store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
 
-    if (lessonData.isVerifiedTeacher) {
+    if (lessonData.isVerifiedInstructor) {
       store.dispatch(setVerified());
     }
   }
@@ -128,3 +145,23 @@ function prepareExpandableImageDialog() {
     container
   );
 }
+
+const renderCopyLessonButton = () => {
+  const element = document.getElementById('copy-lesson-button');
+
+  // this will only be present for levelbuilders, in the extra links box
+  if (element) {
+    const lessonData = getScriptData('lesson');
+    const lessonId = lessonData['id'];
+    const lessonName = lessonData['displayName'];
+
+    ReactDOM.render(
+      <CloneLessonDialogButton
+        lessonId={lessonId}
+        lessonName={lessonName}
+        buttonText="Copy"
+      />,
+      element
+    );
+  }
+};

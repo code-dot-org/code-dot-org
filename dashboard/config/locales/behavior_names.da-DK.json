@@ -2289,7 +2289,9 @@
           "moving north": "bevæger sig nordpå",
           "moving south": "bevæger sig sydpå",
           "moving west": "bevæger sig vestpå",
-          "spinning right": "spinning til højre"
+          "spinning right": "spinning til højre",
+          "spinning left": "spinning til venstre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
         },
         "helloworld_animals_behaviors": {
           "wandering": "vandrende",
@@ -2339,7 +2341,9 @@
           "moving north": "bevæger sig nordpå",
           "moving south": "bevæger sig sydpå",
           "moving west": "bevæger sig vestpå",
-          "spinning right": "spinning til højre"
+          "spinning right": "spinning til højre",
+          "spinning left": "spinning til venstre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
         },
         "helloworld_emoji_backgrounds": {
           "shrinking": "krymper",
@@ -2351,7 +2355,9 @@
           "moving north": "bevæger sig nordpå",
           "moving south": "bevæger sig sydpå",
           "moving west": "bevæger sig vestpå",
-          "spinning right": "spinning til højre"
+          "spinning right": "spinning til højre",
+          "spinning left": "spinning til venstre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "vandrende",
@@ -2401,7 +2407,9 @@
           "moving north": "bevæger sig nordpå",
           "moving south": "bevæger sig sydpå",
           "moving west": "bevæger sig vestpå",
-          "spinning right": "spinning til højre"
+          "spinning right": "spinning til højre",
+          "spinning left": "spinning til venstre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
         },
         "helloworld_food_backgrounds": {
           "shrinking": "krymper",
@@ -2413,7 +2421,9 @@
           "moving north": "bevæger sig nordpå",
           "moving south": "bevæger sig sydpå",
           "moving west": "bevæger sig vestpå",
-          "spinning right": "spinning til højre"
+          "spinning right": "spinning til højre",
+          "spinning left": "spinning til venstre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
         },
         "helloworld_food_costumes": {
           "moving east": "bevæger sig østpå",
@@ -2449,7 +2459,9 @@
           "moving north": "bevæger sig nordpå",
           "moving south": "bevæger sig sydpå",
           "moving west": "bevæger sig vestpå",
-          "spinning right": "spinning til højre"
+          "spinning right": "spinning til højre",
+          "spinning left": "spinning til venstre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
         },
         "helloworld_retro_backgrounds": {
           "shrinking": "krymper",
@@ -2461,7 +2473,9 @@
           "moving north": "bevæger sig nordpå",
           "moving south": "bevæger sig sydpå",
           "moving west": "bevæger sig vestpå",
-          "spinning right": "spinning til højre"
+          "spinning right": "spinning til højre",
+          "spinning left": "spinning til venstre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
         },
         "helloworld_retro_behaviors": {
           "wandering": "vandrende",
@@ -2502,6 +2516,130 @@
           "spinning left": "spinning til venstre"
         },
         "helloworld_retro_sounds": {
+          "shrinking": "krymper",
+          "patrolling": "patruljerer",
+          "wandering": "vandrende",
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "spinning right": "spinning til højre",
+          "spinning left": "spinning til venstre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "vandrende",
+          "moving east": "bevæger sig østpå",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "shrinking": "krymper",
+          "growing": "vokser",
+          "moving south": "bevæger sig sydpå",
+          "moving north": "bevæger sig nordpå",
+          "jittering": "rystende",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "vandrende",
+          "moving east": "bevæger sig østpå",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "shrinking": "krymper",
+          "growing": "vokser",
+          "moving south": "bevæger sig sydpå",
+          "moving north": "bevæger sig nordpå",
+          "jittering": "rystende",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "poetry_hoc_addSprites": {
+          "wandering": "vandrende",
+          "moving east": "bevæger sig østpå",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "shrinking": "krymper",
+          "growing": "vokser",
+          "moving south": "bevæger sig sydpå",
+          "moving north": "bevæger sig nordpå",
+          "jittering": "rystende",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "poetry_hoc_exemplar1": {
+          "wandering": "vandrende",
+          "moving east": "bevæger sig østpå",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "shrinking": "krymper",
+          "growing": "vokser",
+          "moving south": "bevæger sig sydpå",
+          "moving north": "bevæger sig nordpå",
+          "jittering": "rystende",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "poetry_hoc_exemplar2": {
+          "wandering": "vandrende",
+          "moving east": "bevæger sig østpå",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "shrinking": "krymper",
+          "growing": "vokser",
+          "moving south": "bevæger sig sydpå",
+          "moving north": "bevæger sig nordpå",
+          "jittering": "rystende",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "poetry_hoc_freeplay": {
+          "wandering": "vandrende",
+          "moving east": "bevæger sig østpå",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "shrinking": "krymper",
+          "growing": "vokser",
+          "moving south": "bevæger sig sydpå",
+          "moving north": "bevæger sig nordpå",
+          "jittering": "rystende",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "wandering": "vandrende",
+          "moving east": "bevæger sig østpå",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "shrinking": "krymper",
+          "growing": "vokser",
+          "moving south": "bevæger sig sydpå",
+          "moving north": "bevæger sig nordpå",
+          "jittering": "rystende",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "AllTheThings sprite lab with video": {
+          "shrinking": "krymper",
+          "patrolling": "patruljerer",
+          "wandering": "vandrende",
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "spinning right": "spinning til højre"
+        },
+        "allthethings_fish_tank": {
           "shrinking": "krymper",
           "patrolling": "patruljerer",
           "wandering": "vandrende",

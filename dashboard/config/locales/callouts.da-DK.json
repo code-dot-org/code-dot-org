@@ -555,6 +555,30 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Ny blok!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Ny blok!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Ny blok!",
+          "poetry_foreground": "Ny blok!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Ny blok!",
+          "poetry_multiple_sprites": "Ny blok!",
+          "poetry_new_block": "Ny blok!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Ny blok!",
+          "poetry_music": "Ny blok!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Ny blok!",
+          "poetry_sprite_stops": "Ny blok!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Ny blok!",
+          "poetry_remove_sprite": "Ny blok!"
         }
       }
     }

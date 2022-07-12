@@ -2,29 +2,6 @@
 uk:
   data:
     script:
-      category:
-        csd_category_name: Відкриття інформатики (2017-2018)
-        csd_2018_category_name: Відкриття інформатики (2018-2019)
-        csd_2019_category_name: Відкриття інформатики (2019-2020)
-        csd_2020_category_name: Відкриття інформатики (2020-2021)
-        csd_2021_category_name: Відкриття інформатики (2120-2022)
-        csd_pilot_category_name: Відкриття інформатики. Пілотний курс
-        csf_category_name: Основи інформатики
-        csf2_draft_category_name: 'В розробці: курси А—Д'
-        csp_category_name: "'15-'16 принципи інформатики"
-        csp_2018_category_name: "'18-'19 принципи інформатики"
-        csp_2019_category_name: "'19-'20 принципи інформатики"
-        csp_2020_category_name: "'20-'21 принципи інформатики"
-        csp_2021_category_name: "'21-'22 принципи інформатики"
-        cspexams_category_name: Практичний тест з принципів інформатики
-        csp17_category_name: "'16-'17 принципи інформатики"
-        full_course_category_name: Всі курси
-        hoc_category_name: Година коду
-        math_category_name: Математика
-        research_studies_category_name: Наукові дослідження
-        twenty_hour_category_name: 20-годин
-        tts_category_name: Озвучення тексту
-        other_category_name: Інше
       name:
         course1:
           title: Курс 1
@@ -221,7 +198,7 @@ uk:
             у подорожі чарівною зимовою казкою.
           lessons:
             Artist:
-              name: Художник
+              name: Програмуємо з Анною та Ельзою
           student_description: Скористаємось вмінням програмувати, щоб допомогти Анні
             та Ельзі познайомитись із красою чарівних крижинок. Ви складете сніжинки
             та узори, покатаєтесь на ковзанах та створите зимову казку, якою зможете
@@ -367,7 +344,7 @@ uk:
             за участі персонажів Діснея Infiinty.
           lessons:
             Infinity:
-              name: Infinity
+              name: Ігрова лабораторія Діснея Infinity
           student_description: За допомогою Ігрової лабораторії створіть гру або історію
             за участі персонажів Діснея Infiinty.
         algebrademo:
@@ -977,7 +954,7 @@ uk:
             воєн у далекій-далекій галактиці.
           lessons:
             Hour of Code 2015:
-              name: Година коду 2015
+              name: 'Зоряні війни: Закодуємо далеку Галактику'
           student_description: Навчись програмувати дроїдів, створи власну гру Зоряних
             воєн у далекій-далекій галактиці.
         mc:
@@ -1415,19 +1392,6 @@ uk:
               name: Спрайти
             Conditionals:
               name: Умови
-            Project - Design a Game:
-              description_teacher: Студенти планують і будують власну гру, використовуючи
-                керівництво проектом із попередніх двох уроків, щоб керувати своїм
-                проектом. Працюючи індивідуально або в парах, студенти спочатку визначаться
-                з типом гри, яку вони хотіли б побудувати, беручи для натхнення набір
-                зразків ігор. Потім вони заповнюють пустий посібник проекту, де описують
-                поведінку гри та застосовують змінні, спрайти та функції, які їм потрібно
-                буде створити. У Code Studio ряд рівнів підказує їм загальну послідовність,
-                яку вони можуть використовувати для реалізації цього плану. Повернувшись
-                до цього процесу, студенти поділяться своїми проектами для рецензування
-                та включатимуть відгуки, коли вони закінчать свою гру. Наприкінці
-                уроку учні поділяться своїми завершеними іграми зі своїми однокласниками.
-                Цей проект охоплюватиме декілька занять і може легко тривати 3-5 занять.
             CS Discoveries End of Semester Survey:
               name: Опитування по закінченню курсу Відкриття інформатики
           student_description: " У блоці 3 ви будете спиратися на свій досвід кодування
@@ -1538,10 +1502,8 @@ uk:
           title: Обери команду та створи гру в баскетбол
           description_short: Обери команду та створи гру в баскетбол
           description: Обери команду та створи гру в баскетбол
-          lessons:
-            Bounce:
-              name: Арканоід
           student_description: Обери команду та створи гру в баскетбол
+          name: баскетбол
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -1568,17 +1530,6 @@ uk:
               name: Рецензування
             Intellectual Property:
               name: Інтелектуальна власність
-            'Websites for Expression ':
-              description_teacher: На цьому уроці учні досліджують способи використання
-                веб-сайтів як засобу вираження особистості та розробляють перелік
-                тем та інтересів, які вони хочуть включити на свій веб-сайт. На початку
-                уроку учні обмірковують різні способи, якими люди виражають та обмінюються
-                своїми інтересами та ідеями. Після цього учні переглядають кілька
-                зразків веб-сайтів, щоб визначити способи висловлення своїх ідей.
-                Врешті-решт студенти проводять мозковий штурм та обмінюються переліком
-                тем та інтересів, які вони, можливо, захочуть включити на особистий
-                веб-сайт, на який вони зможуть розміщувати ідеї під час опрацювання
-                матеріалу данної частини курсу.
             Intro to HTML:
               name: Вступ до HTML
             Headers:
@@ -1744,9 +1695,6 @@ uk:
           title: Закодуй власну спортивну гру
           description_short: Закодуй власний спорт
           description: Закодуй власний спорт
-          lessons:
-            Sports:
-              name: Спорт
           student_description: Закодуй власний спорт
         2016_sciencePD-phase2b:
           lessons:
@@ -2023,15 +1971,21 @@ uk:
           title: Курс А
           assignment_family_title: Курс А
           description_audience: 'Вік: 4-7'
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Життєві алгоритми: посадити насіння'
             Loops in Artist:
               name: Художник - Цикли
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         courseb-2017:
           title: Курс Б
           assignment_family_title: Курс Б
           description_audience: 'Вік: 5-8'
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Життєві алгоритми: посадити насіння'
@@ -2041,6 +1995,8 @@ uk:
               name: 'Цикли: Мої циклічні друзі-роботи '
             Loops in Artist:
               name: Художник - Цикли
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         coursec-2017:
           title: Курс В
           assignment_family_title: Курс В
@@ -2079,9 +2035,6 @@ uk:
               name: Ігри з циклами
             Songwriting with Parameters:
               name: Пісні з параметрами
-            Functions in Bee:
-              description_student: Не пишіть занадто багато коду, щоб зібрати весь
-                нектар і мед. Натомість використовуйте функції!
             'Programming: My Robotic Friends':
               name: 'Програмування: Мої друзі-роботи'
             Building a Foundation:
@@ -2104,19 +2057,6 @@ uk:
           lessons:
             'Algorithms: Tangrams':
               name: 'Алгоритми: Танграми'
-              description_student: Тут ви дізнаєтесь про алгоритми з використанням
-                головоломок, які називаються танграмами!
-              description_teacher: Цей урок показує нам дещо важливе щодо алгоритмів.
-                Поки ви маєте простий алгоритм, існує безліч способів його використання.
-                Однак, якщо ви хочете переконатися, що у всіх будуть однакові результати,
-                ваш алгоритм потребує деталей. Студенти дізнаються про різницю між
-                детальним та загальним алгоритмом під час гри з танграмами.
-            Introduction:
-              description_student: Цей урок дасть вам невеличке уявлення про деякі
-                дивовижні речі, про які ви дізнаєтесь на цьому курсі!
-            The Power of Words:
-              description_student: Залякування - це завжди погано. Цей урок навчить
-                вас про те, що можна і не можна говорити в Інтернеті.
             'Programming: My Robotic Friends':
               name: 'Програмування: Мої друзі-роботи'
             Building a Foundation:
@@ -2255,6 +2195,8 @@ uk:
               display_name: Зміст
         express-2017:
           description_audience: 'Вік: 9-18'
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           lesson_groups:
             content:
               display_name: Зміст
@@ -2281,8 +2223,12 @@ uk:
               name: Закладання основ
             Nested Loops:
               name: Вкладені цикли
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         pre-express-2017:
           description_audience: 'Вік: 4-8'
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Життєві алгоритми: посадити насіння'
@@ -2294,6 +2240,8 @@ uk:
               name: Художник - Цикли
             Spelling Bee:
               name: Грамотна Бджілка
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         subgoal-labels-opt-in:
           lessons:
             deprecated:
@@ -2506,11 +2454,9 @@ uk:
         hero:
           description: Майнкрафт повернувся до Години коду з новеньким підручником!
             Подорожуйте Майнкрафтом з кодом.
-          lessons:
-            Minecraft Hour of Code:
-              name: Година коду від Майнкрафт
           student_description: Майнкрафт повернувся до Години коду з новеньким підручником!
             Подорожуйте Майнкрафтом з кодом.
+          name: герой
         csp-explore-2017:
           lesson_groups:
             csp_ap_2:
@@ -2666,19 +2612,6 @@ uk:
               name: Зіткнення
             Functions:
               name: Функції
-            Project - Design a Game:
-              description_teacher: Студенти планують і будують власну гру, використовуючи
-                керівництво проектом із попередніх двох уроків, щоб керувати своїм
-                проектом. Працюючи індивідуально або в парах, студенти спочатку визначаться
-                з типом гри, яку вони хотіли б побудувати, беручи для натхнення набір
-                зразків ігор. Потім вони заповнюють пустий посібник проекту, де описують
-                поведінку гри та застосовують змінні, спрайти та функції, які їм потрібно
-                буде створити. У Code Studio ряд рівнів підказує їм загальну послідовність,
-                яку вони можуть використовувати для реалізації цього плану. Повернувшись
-                до цього процесу, студенти поділяться своїми проектами для рецензування
-                та включатимуть відгуки, коли вони закінчать свою гру. Наприкінці
-                уроку учні поділяться своїми завершеними іграми зі своїми однокласниками.
-                Цей проект охоплюватиме декілька занять і може легко тривати 3-5 занять.
             CS Discoveries End of Semester Survey:
               name: Опитування по закінченню курсу Відкриття інформатики
             CS Discoveries Post-Course Survey:
@@ -2705,17 +2638,6 @@ uk:
             cspSurvey:
               display_name: Опитування
           lessons:
-            'Websites for Expression ':
-              description_teacher: На цьому уроці учні досліджують способи використання
-                веб-сайтів як засобу вираження особистості та розробляють перелік
-                тем та інтересів, які вони хочуть включити на свій веб-сайт. На початку
-                уроку учні обмірковують різні способи, якими люди виражають та обмінюються
-                своїми інтересами та ідеями. Після цього учні переглядають кілька
-                зразків веб-сайтів, щоб визначити способи висловлення своїх ідей.
-                Врешті-решт студенти проводять мозковий штурм та обмінюються переліком
-                тем та інтересів, які вони, можливо, захочуть включити на особистий
-                веб-сайт, на який вони зможуть розміщувати ідеї під час опрацювання
-                матеріалу данної частини курсу.
             Intro to HTML:
               name: Вступ до HTML
             Lists:
@@ -2731,6 +2653,8 @@ uk:
         coursea-2018:
           title: Курс А (2018)
           assignment_family_title: Курс А
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 4-7'
           lessons:
             'Debugging: Unspotted Bugs':
@@ -2743,7 +2667,11 @@ uk:
               name: Безпечне добирання
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стів і Великий проект
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         express-2018:
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 9-18'
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -2780,9 +2708,13 @@ uk:
               name: Естафетне програмування
             Graph Paper Programming:
               name: Програмування по клітинках
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         courseb-2018:
           title: Курс В (2018)
           assignment_family_title: Курс Б
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 5-8'
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -2791,6 +2723,8 @@ uk:
               name: Твій цифровий слід
             Move It, Move It:
               name: Рухайся, рухайся
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         coursed-2018:
           title: Курс D (2018)
           assignment_family_title: Курс Г
@@ -2868,9 +2802,6 @@ uk:
               name: Приватна та Особиста інформація
             'Functions: Songwriting':
               name: Написання пісень
-            Functions in Bee:
-              description_student: Не пишіть занадто багато коду, щоб зібрати весь
-                нектар і мед. Натомість використовуйте функції!
             Internet:
               name: Інтернет
             Crowdsourcing:
@@ -2897,20 +2828,8 @@ uk:
               name: Мої циклічні друзі-роботи
             'Algorithms: Tangrams':
               name: 'Алгоритми: Танграми'
-              description_student: Тут ви дізнаєтесь про алгоритми з використанням
-                головоломок, які називаються танграмами!
-              description_teacher: Цей урок показує нам дещо важливе щодо алгоритмів.
-                Поки ви маєте простий алгоритм, існує безліч способів його використання.
-                Однак, якщо ви хочете переконатися, що у всіх будуть однакові результати,
-                ваш алгоритм потребує деталей. Студенти дізнаються про різницю між
-                детальним та загальним алгоритмом під час гри з танграмами.
             Introduction:
               name: Вступ
-              description_student: Цей урок дасть вам невеличке уявлення про деякі
-                дивовижні речі, про які ви дізнаєтесь на цьому курсі!
-            The Power of Words:
-              description_student: Залякування - це завжди погано. Цей урок навчить
-                вас про те, що можна і не можна говорити в Інтернеті.
             Ice Age Play Lab:
               name: Ігрова студія Льодовикового періоду
             Envelope Variables:
@@ -3269,6 +3188,8 @@ uk:
             Day 4:
               name: День 4
         pre-express-2018:
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 4-8'
           lessons:
             'Debugging: Unspotted Bugs':
@@ -3285,6 +3206,8 @@ uk:
               name: Твій цифровий слід
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стів і Великий проект
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         2018hoc-ab:
           lessons:
             Labyrinth:
@@ -3323,10 +3246,11 @@ uk:
             та збудувати підводні світи за допомогою коду.
           lessons:
             Aquatic:
-              name: Водні
+              name: 'Minecraft: Водна подорож'
           student_description: Майнкрафт повертається в Годину коду з новим підручником!
             Скористайтесь своєю креативністю та вміннями розв'язання проблем для того,
             щоб дослідити та збудувати підводні світи за допомогою коду.
+          name: водний
         dance--draft:
           lessons:
             Dance Party:
@@ -3378,9 +3302,6 @@ uk:
               name: Художник - Цикли
             Conditionals with Cards:
               name: Листівки та умови
-            The Power of Words:
-              description_student: Залякування - це завжди погано. Цей урок навчить
-                вас про те, що можна і не можна говорити в Інтернеті.
             Envelope Variables:
               name: Конвертні змінні
             For Loop Fun:
@@ -3576,14 +3497,6 @@ uk:
               name: Велика подія
             Binary Bracelets:
               name: Двійкові браслети
-            Powerful Passwords:
-              description_teacher: "У співпраці з **Common Sense Education** на цьому
-                уроці учні дізнаються навіщо люди використовують паролі, вивчать переваги
-                використання паролів та визначать стратегії створення та збереження
-                надійних, безпечних паролів.\\\r\n\\\r\nУчні ознайомляться з порадами
-                щодо паролів, за допомогою інтерактивної гри протестують свої існуючі
-                паролі, та створять нові паролі користуючись вказівками щодо сильних
-                паролів.\\\r"
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -3592,6 +3505,8 @@ uk:
           title: Ігрова лабораторія
         coursea-2019:
           title: Курс А (2019)
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 4-7'
           lesson_groups:
             csf_digcit:
@@ -3609,8 +3524,12 @@ uk:
               name: Безпечне добирання
             Loops in Artist:
               name: Художник - Цикли
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         courseb-2019:
           title: Курс В (2019)
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 5-8'
           lesson_groups:
             csf_digcit:
@@ -3634,6 +3553,8 @@ uk:
               name: Петлі в Ice Age
             'Loops: Getting Loopy':
               name: Економія на повторах
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         pre-express-2019:
           description_audience: 'Вік: 4-8'
           lesson_groups:
@@ -3674,17 +3595,6 @@ uk:
             cspSurvey:
               display_name: Опитування
           lessons:
-            'Websites for Expression ':
-              description_teacher: На цьому уроці учні досліджують способи використання
-                веб-сайтів як засобу вираження особистості та розробляють перелік
-                тем та інтересів, які вони хочуть включити на свій веб-сайт. На початку
-                уроку учні обмірковують різні способи, якими люди виражають та обмінюються
-                своїми інтересами та ідеями. Після цього учні переглядають кілька
-                зразків веб-сайтів, щоб визначити способи висловлення своїх ідей.
-                Врешті-решт студенти проводять мозковий штурм та обмінюються переліком
-                тем та інтересів, які вони, можливо, захочуть включити на особистий
-                веб-сайт, на який вони зможуть розміщувати ідеї під час опрацювання
-                матеріалу данної частини курсу.
             Intro to HTML:
               name: Вступ до HTML
             Lists:
@@ -3726,19 +3636,6 @@ uk:
               name: Зіткнення
             Functions:
               name: Функції
-            Project - Design a Game:
-              description_teacher: Студенти планують і будують власну гру, використовуючи
-                керівництво проектом із попередніх двох уроків, щоб керувати своїм
-                проектом. Працюючи індивідуально або в парах, студенти спочатку визначаться
-                з типом гри, яку вони хотіли б побудувати, беручи для натхнення набір
-                зразків ігор. Потім вони заповнюють пустий посібник проекту, де описують
-                поведінку гри та застосовують змінні, спрайти та функції, які їм потрібно
-                буде створити. У Code Studio ряд рівнів підказує їм загальну послідовність,
-                яку вони можуть використовувати для реалізації цього плану. Повернувшись
-                до цього процесу, студенти поділяться своїми проектами для рецензування
-                та включатимуть відгуки, коли вони закінчать свою гру. Наприкінці
-                уроку учні поділяться своїми завершеними іграми зі своїми однокласниками.
-                Цей проект охоплюватиме декілька занять і може легко тривати 3-5 занять.
             CS Discoveries End of Semester Survey:
               name: Опитування по закінченню курсу Відкриття інформатики
             CS Discoveries Post Course survey:
@@ -4144,17 +4041,6 @@ uk:
             cspSurvey:
               display_name: Опитування
           lessons:
-            'Websites for Expression ':
-              description_teacher: На цьому уроці учні досліджують способи використання
-                веб-сайтів як засобу вираження особистості та розробляють перелік
-                тем та інтересів, які вони хочуть включити на свій веб-сайт. На початку
-                уроку учні обмірковують різні способи, якими люди виражають та обмінюються
-                своїми інтересами та ідеями. Після цього учні переглядають кілька
-                зразків веб-сайтів, щоб визначити способи висловлення своїх ідей.
-                Врешті-решт студенти проводять мозковий штурм та обмінюються переліком
-                тем та інтересів, які вони, можливо, захочуть включити на особистий
-                веб-сайт, на який вони зможуть розміщувати ідеї під час опрацювання
-                матеріалу данної частини курсу.
             Intro to HTML:
               name: Вступ до HTML
             Lists:
@@ -4202,19 +4088,6 @@ uk:
               name: Зіткнення
             Functions:
               name: Функції
-            Project - Design a Game:
-              description_teacher: Студенти планують і будують власну гру, використовуючи
-                керівництво проектом із попередніх двох уроків, щоб керувати своїм
-                проектом. Працюючи індивідуально або в парах, студенти спочатку визначаться
-                з типом гри, яку вони хотіли б побудувати, беручи для натхнення набір
-                зразків ігор. Потім вони заповнюють пустий посібник проекту, де описують
-                поведінку гри та застосовують змінні, спрайти та функції, які їм потрібно
-                буде створити. У Code Studio ряд рівнів підказує їм загальну послідовність,
-                яку вони можуть використовувати для реалізації цього плану. Повернувшись
-                до цього процесу, студенти поділяться своїми проектами для рецензування
-                та включатимуть відгуки, коли вони закінчать свою гру. Наприкінці
-                уроку учні поділяться своїми завершеними іграми зі своїми однокласниками.
-                Цей проект охоплюватиме декілька занять і може легко тривати 3-5 занять.
             CS Discoveries Post Course survey:
               name: Опитування після курсу Відкриття інформатики
           student_description: " У блоці 3 ви будете спиратися на свій досвід кодування
@@ -4374,9 +4247,8 @@ uk:
             required:
               display_name: Огляд
         dance-2019:
-          lessons:
-            Dance Party:
-              name: Танцювальна вечірка
+          description_short: За участі Katy Perry, Shawn Mendes, Panic! At The Disco,
+            Lil Nas X, Jonas Brothers, Nicki Minaj, і 34 інших!
         k5-onlinepd-2019:
           title: Викладання основ інформатики
           description: Дізнайтеся, як викладати інформатику за допомогою безкоштовного
@@ -4574,19 +4446,6 @@ uk:
             cspSurvey:
               display_name: Опитування
           lessons:
-            Exploring Web Pages:
-              description_student: "**Питання дня: Чому люди створюють веб-сторінки?**\\\r\n\\\r\nЦей
-                урок розповість вам, для чого потрібні веб-сторінкі, як для користувачів,
-                так і для творців. Клас досліджує кілька зразків веб-сторінок, як
-                кожна з цих сторінок корисна для користувачів, а також як вона може
-                служити своїм творцям. "
-              description_teacher: "**Питання дня: Чому люди створюють веб-сторінки?**
-                \\\r\n\\\r\n\\\r\nКожен веб-сайт має мету, причини, з яких його хтось
-                створив, а інші використовують. На цьому уроці студенти розглянуть,
-                чому саме веб-сайт може бути корисним як користувачам, так і творцям.
-                Студенти будуть вивчати кілька зразків веб-сайтів та обговорювати
-                цілі, які вони виконують для творців, після чого їм пропонується подумати
-                про причини, чому хтось може захотіти створити веб-сайт."
             Intro to HTML:
               name: Вступ до HTML
             Intellectual Property:
@@ -4715,6 +4574,8 @@ uk:
             проекті ви розробитьте персоналізовану інтерактивну програму."
         coursea-2020:
           title: Курс А (2020)
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 4-7'
           lesson_groups:
             csf_digcit:
@@ -4730,8 +4591,12 @@ uk:
               name: Безпечне добирання
             'Programming: Happy Maps':
               name: Щасливі карти
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         courseb-2020:
           title: Курс В (2020)
+          description: Вивчення основ інформатики та безпеки в інтернеті. At the end
+            of the course, create your very own game or story you can share.
           description_audience: 'Вік: 5-8'
           lesson_groups:
             csf_digcit:
@@ -4749,6 +4614,8 @@ uk:
               name: Рухайся, рухайся
             'Loops: Getting Loopy':
               name: Економія на повторах
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         coursec-2020:
           title: Курс С (2020)
           description_audience: 'Вік: 6-10'
@@ -4766,13 +4633,6 @@ uk:
             csf_data:
               display_name: Дані
           lessons:
-            Powerful Passwords:
-              description_teacher: "Учні дізнаються навіщо люди використовують паролі,
-                вивчать переваги використання паролів та визначать стратегії створення
-                та збереження надійних, безпечних паролів.\\\r\n\\\r\nУчні ознайомляться
-                з порадами щодо паролів, за допомогою інтерактивної гри протестують
-                свої існуючі паролі, та створять нові паролі користуючись вказівками
-                щодо сильних паролів.\\\r"
             Binary Bracelets:
               name: Двійкові браслети
             'Events: The Big Event':
@@ -4850,9 +4710,6 @@ uk:
               name: Ігри з циклами
             Internet:
               name: Інтернет
-            The Power of Words:
-              description_student: Залякування - це завжди погано. Цей урок навчить
-                вас про те, що можна і не можна говорити в Інтернеті.
             Crowdsourcing:
               name: Краудсорсинг
         express-2020:
@@ -4999,17 +4856,6 @@ uk:
               name: Інтелектуальна власність
             Images:
               name: Зображення
-            'Websites for Expression ':
-              description_teacher: На цьому уроці учні досліджують способи використання
-                веб-сайтів як засобу вираження особистості та розробляють перелік
-                тем та інтересів, які вони хочуть включити на свій веб-сайт. На початку
-                уроку учні обмірковують різні способи, якими люди виражають та обмінюються
-                своїми інтересами та ідеями. Після цього учні переглядають кілька
-                зразків веб-сайтів, щоб визначити способи висловлення своїх ідей.
-                Врешті-решт студенти проводять мозковий штурм та обмінюються переліком
-                тем та інтересів, які вони, можливо, захочуть включити на особистий
-                веб-сайт, на який вони зможуть розміщувати ідеї під час опрацювання
-                матеріалу данної частини курсу.
             CSS Classes:
               name: Класи CSS
             CS Discoveries Post Course survey:
@@ -5213,6 +5059,8 @@ uk:
           lessons:
             Virus Simulation for Code Bytes:
               name: Моделювання симуляції
+            Outbreak:
+              name: Моделювання симуляції
           lesson_groups:
             outbreak:
               display_name: Симуляція спалаху
@@ -5248,19 +5096,14 @@ uk:
             проблем."
           lessons:
             CS Discoveries Pre-survey:
-              key: Вступне опитування до курсу Відкриття інформатики
               name: Вступне опитування до курсу Відкриття інформатики
             The Problem Solving Process:
-              key: Процес вирішення проблем
               name: Процес вирішення проблем
             What is a Computer?:
-              key: Що таке комп’ютер?
               name: Що таке комп’ютер?
             Processing:
-              key: В обробці
               name: В обробці
             Storage:
-              key: Сховище
               name: Сховище
           lesson_groups:
             cspSurvey:
@@ -5273,16 +5116,14 @@ uk:
           description_short: "  Навчіться створювати свій власний вебсайт у Веб-лабораторії."
           lessons:
             Intro to HTML:
-              key: Вступ до HTML
               name: Вступ до HTML
             Intellectual Property:
-              key: Інтелектуальна власність
               name: Інтелектуальна власність
             CSS Classes:
-              key: Класи CSS
               name: Класи CSS
             CS Discoveries Post Course survey:
-              key: Опитування після курсу Відкриття інформатики
+              name: Опитування після курсу Відкриття інформатики
+            lesson-1:
               name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             cspSurvey:
@@ -5297,28 +5138,22 @@ uk:
             та ігри в Game Lab."
           lessons:
             Variables:
-              key: Змінні
               name: Змінні
             Sprites:
-              key: Спрайти
               name: Спрайти
             Text:
-              key: Текст
               name: Текст
             Conditionals:
-              key: Умови
               name: Умови
             Velocity:
-              key: Швидкість
               name: Швидкість
             Collisions:
-              key: Зіткнення
               name: Зіткнення
             Functions:
-              key: Функції
               name: Функції
             CS Discoveries Post Course survey:
-              key: Опитування після курсу Відкриття інформатики
+              name: Опитування після курсу Відкриття інформатики
+            lesson-1:
               name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd3_1:
@@ -5338,18 +5173,14 @@ uk:
             потребам користувачів."
           lessons:
             Identifying User Needs:
-              key: Визначення потреб користувачів
               name: Визначення потреб користувачів
             Project - Paper Prototype:
-              key: Проект - Паперовий прототип
               name: Проект - Паперовий прототип
-            Paper Prototypes:
-              key: Паперові прототипи
             Prototype Testing:
-              key: Випробування прототипів
               name: Випробування прототипів
             CS Discoveries Post Course survey:
-              key: Опитування після курсу Відкриття інформатики
+              name: Опитування після курсу Відкриття інформатики
+            CS Discoveries Post-Course Survey:
               name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd4_1:
@@ -5365,7 +5196,8 @@ uk:
         csd5-2021:
           lessons:
             CS Discoveries Post Course survey:
-              key: Опитування після курсу Відкриття інформатики
+              name: Опитування після курсу Відкриття інформатики
+            CS Discoveries Post-Course Survey:
               name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd5_1:
@@ -5377,13 +5209,12 @@ uk:
         csd6-2021:
           lessons:
             Accelerometer:
-              key: Акселерометр
               name: Акселерометр
             Functions with Parameters:
-              key: Функції з параметрами
               name: Функції з параметрами
             CS Discoveries Post Course survey:
-              key: Опитування після курсу Відкриття інформатики
+              name: Опитування після курсу Відкриття інформатики
+            CS Discoveries Post-Course Survey:
               name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd6_1:
@@ -5395,16 +5226,12 @@ uk:
         csp1-2021:
           lessons:
             Binary Numbers:
-              key: Двійкові Числа
               name: Двійкові Числа
             Color Images:
-              key: Робота з кольорами зображень
               name: Робота з кольорами зображень
             Lossless Compression:
-              key: Стискання без втрат
               name: Стискання без втрат
             Intellectual Property:
-              key: Інтелектуальна власність
               name: Інтелектуальна власність
           lesson_groups:
             cspSurvey:
@@ -5414,7 +5241,6 @@ uk:
         csp2-2021:
           lessons:
             Packets:
-              key: Пакет
               name: Пакет
           lesson_groups:
             csp_unit2_2020:
@@ -5424,7 +5250,6 @@ uk:
         csp3-2021:
           lessons:
             Debugging:
-              key: Налагодження
               name: Налагодження
         csp4-2021:
           lesson_groups:
@@ -5446,12 +5271,26 @@ uk:
               display_name: Переходи
             csp_project:
               display_name: Проект
+            lessonGroup-5:
+              display_name: Опитування після закінчення курсу
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Алгоритми
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
         csp7-2021:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Параметри і значення, які повертаються
             csp_libraries:
               display_name: Бібліотеки
+            lessonGroup-3:
+              display_name: Опитування
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Опитування
         csp9-2021:
           lessons:
             Machine Learning and Bias:
@@ -5459,19 +5298,17 @@ uk:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Розділ 9: Дані'
+            lessonGroup-2:
+              display_name: Опитування
         csp10-2021:
-          lessons:
-            'Project: Innovation Simulation Part 6':
-              description_student: Огляд уроку
-            'Project: Innovation Simulation Part 7':
-              description_student: Огляд уроку
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування
         coursea-2021:
           description_audience: 'Вік: 4-7'
           lessons:
             'Programming: Happy Maps':
               name: Щасливі карти
-            Loops in Ice Age:
-              key: Петлі в Ice Age
           lesson_groups:
             csf_digcit:
               display_name: Цифрове громадянство
@@ -5481,16 +5318,15 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         courseb-2021:
           description_audience: 'Вік: 5-8'
           lessons:
             Move It, Move It:
-              key: Рухайся, рухайся
               name: Рухайся, рухайся
             'Loops: Getting Loopy':
               name: Економія на повторах
-            Loops in Artist:
-              key: Художник - Цикли
           lesson_groups:
             csf_digcit:
               display_name: Цифрове громадянство
@@ -5498,20 +5334,19 @@ uk:
               display_name: Послідовність дій
             csf_loops:
               display_name: Цикли
+            csf_impacts:
+              display_name: Вплив інформатики
             csf_events:
               display_name: Події
+            lessonGroup-6:
+              display_name: Фінальний проєкт
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
         coursec-2021:
           description_audience: 'Вік: 6-10'
           lessons:
-            'Programming: My Robotic Friends':
-              key: 'Програмування: Мої друзі-роботи'
             Binary Bracelets:
-              key: Двійкові браслети
               name: Двійкові браслети
-            'Loops: My Loopy Robotic Friends':
-              key: 'Цикли: Мої циклічні друзі-роботи '
-            Looking Ahead:
-              key: Дивлячись вперед
             'Events: The Big Event':
               name: Велика подія
           lesson_groups:
@@ -5527,6 +5362,8 @@ uk:
               display_name: Події
             csf_data:
               display_name: Дані
+            end_of_course_project:
+              display_name: Фінальний проєкт
         coursed-2021:
           title: Курс D (2021)
           description_audience: 'Вік: 7-11'
@@ -5534,27 +5371,15 @@ uk:
             'Algorithms: Graph Paper Programming':
               name: Програмування по клітинках
             Relay Programming:
-              key: Естафетне програмування
               name: Естафетне програмування
             Dance Party:
-              key: Танцювальна вечірка
               name: Танцювальна вечірка
             Loops in Ice Age:
-              key: Петлі в Ice Age
-              name: Петлі в Ice Age
-            Loops in Artist:
-              key: Художник - Цикли
+              name: Цикли Льодовикового періоду
             Conditionals with Cards:
-              key: Листівки та умови
               name: Листівки та умови
             'Unplugged: Binary':
-              key: 'Безмашинні вправи: двійкова система'
               name: Двійкові зображення
-            Artist Binary:
-              key: 'Художник: двійкова система'
-            lesson-1:
-              description_student: Залякування - це завжди погано. Цей урок навчить
-                вас про те, що можна і не можна говорити в Інтернеті.
           lesson_groups:
             csf_sequencing:
               display_name: Послідовність дій
@@ -5573,13 +5398,8 @@ uk:
         coursee-2021:
           description_audience: 'Вік: 8-12'
           lessons:
-            Conditionals:
-              key: Умови
             Private and Personal Information:
-              key: Приватна та Особиста інформація
               name: Приватна та Особиста інформація
-            About Me:
-              key: Про мене
             'Functions: Songwriting':
               name: Написання пісень
           lesson_groups:
@@ -5596,29 +5416,26 @@ uk:
         coursef-2021:
           description_audience: 'Вік: 9-13'
           lessons:
-            Loops with the Artist:
-              key: Петлі з художником
-            The Power of Words:
-              description_student: Залякування - це завжди погано. Цей урок навчить
-                вас про те, що можна і не можна говорити в Інтернеті.
             Envelope Variables:
-              key: Конвертні змінні
               name: Конвертні змінні
             Internet:
-              key: Інтернет
               name: Інтернет
             For Loop Fun:
-              key: Ігри з циклами
               name: Ігри з циклами
+            For Loops in Bee:
+              name: Цикл For з Бджілкою
+            For Loops in Artist:
+              name: Цикл For з Художником
             Virtual Pet:
               name: 'Міні-проект: Віртуальний вихованець'
             lesson-6:
               name: Представляємо Лабораторію спрайтів
             lesson-8:
               name: Спрайт в Дії
+            lesson-5:
+              name: Спалах
             lesson-2:
-              description_student: Залякування - це завжди погано. Цей урок навчить
-                вас про те, що можна і не можна говорити в Інтернеті.
+              name: Сила Слів
           lesson_groups:
             ramp_up:
               display_name: Спрайти
@@ -5626,6 +5443,8 @@ uk:
               display_name: Цифрове громадянство
             csf_variables:
               display_name: Цикли For
+            csf_data:
+              display_name: Дані та моделювання
             csf_for_loops:
               display_name: Цикли For
             lessonGroup-8:
@@ -5638,7 +5457,6 @@ uk:
           description_audience: 'Вік: 9-18'
           lessons:
             Dance Party:
-              key: Танцювальна вечірка
               name: Танцювальна вечірка
             lesson-1:
               name: Танцювальна вечірка
@@ -5698,19 +5516,14 @@ uk:
             потребам користувачів."
           lessons:
             Identifying User Needs:
-              key: Визначення потреб користувачів
               name: Визначення потреб користувачів
             Project - Paper Prototype:
-              key: Проект - Паперовий прототип
               name: Проект - Паперовий прототип
             Paper Prototypes:
-              key: Паперові прототипи
               name: Паперові прототипи
             Prototype Testing:
-              key: Випробування прототипів
               name: Випробування прототипів
             CS Discoveries Post Course survey:
-              key: Опитування після курсу Відкриття інформатики
               name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd4_1:
@@ -5728,7 +5541,6 @@ uk:
         csd5-preview-2021:
           lessons:
             CS Discoveries Post Course survey:
-              key: Опитування після курсу Відкриття інформатики
               name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd5_1:
@@ -5764,31 +5576,34 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
         k5-onlinepd-2021:
           lessons:
             Sequencing:
-              key: Послідовність дій
               name: Послідовність дій
             Loops:
-              key: Цикли
               name: Цикли
             Events:
-              key: Події
               name: Події
             Conditionals:
-              key: Умови
               name: Умови
             Functions:
-              key: Функції
               name: Функції
             Variables:
-              key: Змінні
               name: Змінні
             For Loops:
-              key: Цикли For
               name: Цикли For
-            Next steps:
-              key: Наступні кроки
             Module 1:
               name: Модуль 1.
             Getting Started:
@@ -5815,6 +5630,9 @@ uk:
             lessonGroup-4:
               display_name: Опитування
         csd7-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             lessonGroup-4:
               display_name: Опитування
@@ -5830,48 +5648,34 @@ uk:
             у довільному темпі.
           lessons:
             Getting Started:
-              key: Починаємо
               name: Починаємо
             Computer Science Fundamentals:
-              key: Основи інформатики
               name: Основи інформатики
             Looking Ahead:
-              key: Дивлячись вперед
               name: Дивлячись вперед
             Best Practices for Teaching Computer Science:
-              key: Успішні методики викладання інформатики
               name: Успішні методики викладання інформатики
             Planning:
-              key: Планування
               name: Планування
             Next Steps:
-              key: Наступні Кроки
               name: Наступні Кроки
         vpl-csd-2021:
           lessons:
             Module 1:
-              key: Модуль 1.
               name: Модуль 1.
             Module 2:
-              key: Модуль 2.
               name: Модуль 2.
             Module 3:
-              key: Модуль 3.
               name: Модуль 3.
             Module 4:
-              key: Модуль 4.
               name: Модуль 4.
             Module 5:
-              key: Модуль 5.
               name: Модуль 5.
             Module 6:
-              key: Модуль 6.
               name: Модуль 6.
             Module 7:
-              key: Модуль 7.
               name: Модуль 7.
             Module 8:
-              key: Модуль 8.
               name: Модуль 8.
           lesson_groups:
             CSD_Module 1:
@@ -5893,25 +5697,13 @@ uk:
         vpl-csp-2021:
           lessons:
             Module 1:
-              key: Модуль 1.
               name: Модуль 1.
             Module 2:
-              key: Модуль 2.
               name: Модуль 2.
             Module 3:
-              key: Модуль 3.
               name: Модуль 3.
             Module 4:
-              key: Модуль 4.
               name: Модуль 4.
-            Module 5:
-              key: Модуль 5.
-            Module 6:
-              key: Модуль 6.
-            Module 7:
-              key: Модуль 7.
-            Module 8:
-              key: Модуль 8.
         self-paced-pl-csd1-2021:
           lessons:
             lesson-4:
@@ -5919,10 +5711,12 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Ласкаво просимо
-        self-paced-pl-csd6-2021:
+        self-paced-pl-csd2-2021:
           lessons:
-            lesson-3:
-              name: 'Блок 2: Веб-розробка'
+            lesson-9:
+              name: Спільнота вчителів
+        outbreak-module:
+          title: Спалах
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -6028,6 +5822,10 @@ uk:
               display_name: Уроки
             lessonGroup-3:
               display_name: Проект
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: Урок 3
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -6038,3 +5836,668 @@ uk:
               display_name: Зміст
             lessonGroup-2:
               display_name: Зміст
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Віджети
+            lesson-2:
+              name: Інструменти
+            lesson-3:
+              name: Приклади
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Грамотна Бджілка
+          title: Грамотна Бджілка
+        outbreak-csc:
+          title: Спалах
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Опитування після закінчення курсу
+          title: Опитування після курсу Відкриття інформатики
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Грамотна Бджілка
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Візуалізація даних
+          title: Візуалізація даних
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Урок
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Симулятор спалаху
+            For Loop Fun:
+              name: Ігри з циклами
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Година коду
+          description_short: Внутрішній
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csf-2022-pilot:
+          lessons:
+            Introducing Sprite Lab:
+              name: Представляємо Лабораторію спрайтів
+            Sprites in Action:
+              name: Спрайт в Дії
+            'Mini-Project: Virtual Pet':
+              name: 'Міні-проект: Віртуальний вихованець'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайти
+            lessonGroup-3:
+              display_name: Змінні
+        csd6-pilot-2022:
+          lessons:
+            Arrays and Color LEDs:
+              name: Кольорові LEDи
+            Accelerometer:
+              name: Акселерометр
+            Functions with Parameters:
+              name: Функції
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Щасливі карти
+            'Programming: Happy Maps':
+              name: Щасливі карти
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
+          description_audience: 'Вік: 4-7'
+        express-2022:
+          lessons:
+            Sprites in Action:
+              name: Спрайт в Дії
+            Dance Party:
+              name: Танцювальна вечірка
+            lesson-3:
+              name: Спрайт в Дії
+            lesson-1:
+              name: Танцювальна вечірка
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_sprites:
+              display_name: Спрайти
+            lessonGroup-9:
+              display_name: Події
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+            csf_functions:
+              display_name: Функції
+            csf_variables:
+              display_name: Змінні
+            csf_for_loops:
+              display_name: Цикли For
+          description_audience: 'Вік: 9-18'
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Двійкові Числа
+            Color Images:
+              name: Робота з кольорами зображень
+            Lossless Compression:
+              name: Стискання без втрат
+            Intellectual Property:
+              name: Інтелектуальна власність
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csp_unit1_2020:
+              display_name: 'Розділ 1: Цифрова інформація'
+        csp2-2022:
+          lessons:
+            Packets:
+              name: Пакет
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Розділ 2: Інтернет'
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Налагодження
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: Функції
+            csp_project:
+              display_name: Проект
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Списки
+            csp_loops:
+              display_name: Цикли
+            csp_traversals:
+              display_name: Переходи
+            csp_project:
+              display_name: Проект
+            lessonGroup-5:
+              display_name: Опитування після закінчення курсу
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Рухайся, рухайся
+            Getting Loopy:
+              name: Економія на повторах
+            'Loops: Getting Loopy':
+              name: Економія на повторах
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
+          description_audience: 'Вік: 5-8'
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Велика подія
+            Binary Bracelets:
+              name: Двійкові браслети
+            'Events: The Big Event':
+              name: Велика подія
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+            csf_data:
+              display_name: Дані
+          description_audience: 'Вік: 6-10'
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
+        csp7-2022:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметри і значення, які повертаються
+            csp_libraries:
+              display_name: Бібліотеки
+            lessonGroup-3:
+              display_name: Опитування після закінчення курсу
+        csp8-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Опитування після закінчення курсу
+        csp9-2022:
+          lessons:
+            Machine Learning:
+              name: Машинне навчання
+            Machine Learning and Bias:
+              name: Машинне навчання
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Розділ 9: Дані'
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
+        csp10-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Програмування по клітинках
+            Relay Programming:
+              name: Естафетне програмування
+            Dance Party:
+              name: Танцювальна вечірка
+            Loops in Ice Age:
+              name: Петлі в Ice Age
+            Conditionals with Cards:
+              name: Листівки та умови
+            'Algorithms: Graph Paper Programming':
+              name: Програмування по клітинках
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_events:
+              display_name: Події
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+          title: Курс D (2021)
+          description_audience: 'Вік: 7-11'
+        coursee-2022:
+          lessons:
+            Private and Personal Information:
+              name: Приватна та Особиста інформація
+            Songwriting:
+              name: Написання пісень
+            'Functions: Songwriting':
+              name: Написання пісень
+          lesson_groups:
+            csf_sprites:
+              display_name: Спрайти
+            csf_digcit:
+              display_name: Цифрове громадянство
+            ramp_up:
+              display_name: Вкладені цикли
+            csf_functions:
+              display_name: Функції
+            csf_nested_loops:
+              display_name: Умови
+          description_audience: 'Вік: 8-12'
+        coursef-2022:
+          lessons:
+            Introducing Sprite Lab:
+              name: Представляємо Лабораторію спрайтів
+            Sprites in Action:
+              name: Спрайт в Дії
+            'Mini-Project: Virtual Pet':
+              name: 'Міні-проект: Віртуальний вихованець'
+            For Loop Fun:
+              name: Ігри з циклами
+            Outbreak:
+              name: Спалах
+            The Internet:
+              name: Інтернет
+            lesson-8:
+              name: Спрайт в Дії
+            Virtual Pet:
+              name: 'Міні-проект: Віртуальний вихованець'
+            Internet:
+              name: Інтернет
+          lesson_groups:
+            ramp_up:
+              display_name: Спрайти
+            lessonGroup-7:
+              display_name: Цифрове громадянство
+            lessonGroup-8:
+              display_name: Змінні
+            csf_data:
+              display_name: Дані та моделювання
+          description_audience: 'Вік: 9-13'
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Цикли
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+            lessonGroup-5:
+              display_name: Опитування
+        pre-express-2022:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+          description_audience: 'Вік: 4-8'
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Змінні
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: Цикли For
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Умови
+            lesson-16:
+              name: Налагодження
+            lesson-19:
+              name: Налагодження
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Цикли
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        coursef-2022-pilot:
+          lessons:
+            Introducing Sprite Lab:
+              name: Представляємо Лабораторію спрайтів
+            Sprites in Action:
+              name: Спрайт в Дії
+            'Mini-Project: Virtual Pet':
+              name: 'Міні-проект: Віртуальний вихованець'
+            Outbreak:
+              name: Спалах
+            The Internet:
+              name: Інтернет
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Цифрове громадянство
+            ramp_up:
+              display_name: Спрайти
+            lessonGroup-8:
+              display_name: Змінні
+            csf_data:
+              display_name: Дані та моделювання
+          description_audience: 'Вік: 9-13'
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa7-2022:
+          lessons:
+            lesson-6:
+              name: Інтелектуальна власність
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+            lessonGroup-5:
+              display_name: Опитування
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Ласкаво просимо
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Ласкаво просимо
+            lesson-3:
+              name: Планування уроку
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Ласкаво просимо
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Ласкаво просимо
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Ласкаво просимо
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Змінні
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Починаємо
+            Sequencing:
+              name: Послідовність дій
+            Loops:
+              name: Цикли
+            Events:
+              name: Події
+            Conditionals:
+              name: Умови
+            Functions:
+              name: Функції
+            Variables:
+              name: Змінні
+            For Loops:
+              name: Цикли For
+            End of Course projects:
+              name: Кінець курсових проектів
+        csd1-2022:
+          lessons:
+            CS Discoveries Pre-survey:
+              name: Вступне опитування до курсу Відкриття інформатики
+            The Problem Solving Process:
+              name: Процес вирішення проблем
+            What is a Computer?:
+              name: Що таке комп’ютер?
+            Processing:
+              name: В обробці
+            Storage:
+              name: Сховище
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csd1_1:
+              display_name: 'Глава 1: Процес вирішення проблем'
+            csd1_2:
+              display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+          description_short: "  Дізнайтеся, як люди працюють з комп'ютерами для вирішення
+            проблем."
+        csd2-2022:
+          lessons:
+            Intro to HTML:
+              name: Вступ до HTML
+            Intellectual Property:
+              name: Інтелектуальна власність
+            CSS Classes:
+              name: Класи CSS
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
+            lesson-1:
+              name: Опитування після курсу Відкриття інформатики
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+          student_description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися
+            його на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися
+            зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки
+            за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування,
+            такі як налагодження, використання ресурсів і командна робота.  "
+          description_short: "  Навчіться створювати свій власний вебсайт у Веб-лабораторії."
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Змінні
+            Sprites:
+              name: Спрайти
+            Text:
+              name: Текст
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Collisions:
+              name: Зіткнення
+            Functions:
+              name: Функції
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
+            lesson-1:
+              name: Опитування після курсу Відкриття інформатики
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Зображення та анімації'
+            csd3_2:
+              display_name: 'Глава 2: Побудова ігор'
+            cspSurvey:
+              display_name: Опитування
+          student_description: " У блоці 3 ви будете спиратися на свій досвід кодування
+            під час програми анімації, інтерактивного мистецтва та ігор у Game Lab.
+            Пристрій починається з простих форм і будує до більш складних ігор на
+            основі спрайтів, використовуючи ті ж концепції програмування та процес
+            проектування, який комп'ютерні вчені використовують щодня. У фінальному
+            проекті ви розробитьте персоналізовану інтерактивну програму."
+          description_short: " Навчіться програмувати анімацію, інтерактивне мистецтво
+            та ігри в Game Lab."
+        csd4-2022:
+          lessons:
+            Identifying User Needs:
+              name: Визначення потреб користувачів
+            Project - Paper Prototype:
+              name: Проект - Паперовий прототип
+            Prototype Testing:
+              name: Випробування прототипів
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
+          lesson_groups:
+            csd4_1:
+              display_name: |-
+                Глава 1: Використуйте
+                Центрований дизайн
+            csd4_2:
+              display_name: 'Глава 2: Прототипування додатків'
+            cspSurvey:
+              display_name: Опитування
+          description_short: "  Дізнайтеся, як розробити програму, яка відповідає
+            потребам користувачів."
+        csd5-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представлення інформації'
+            csd5_2:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+            cspSurvey:
+              display_name: Опитування
+        csd7-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Опитування
+        csd6-2022:
+          lessons:
+            Color LEDs:
+              name: Кольорові LEDи
+            Accelerometer:
+              name: Акселерометр
+            Functions:
+              name: Функції
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+            lessonGroup-4:
+              display_name: Опитування
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
+          title: Опитування після курсу Відкриття інформатики
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Модуль 1.
+            Module 2:
+              name: Модуль 2.
+            Module 3:
+              name: Модуль 3.
+            Module 4:
+              name: Модуль 4.
+            Module 5:
+              name: Модуль 5.
+            Module 6:
+              name: Модуль 6.
+            Module 7:
+              name: Модуль 7.
+            Module 8:
+              name: Модуль 8.
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Модуль 1.
+            Module 2:
+              name: Модуль 2.
+            Module 3:
+              name: Модуль 3.
+            Module 4:
+              name: Модуль 4.
+        self-paced-pl-csd1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ласкаво просимо
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Огляд
+            lesson-1:
+              name: Огляд
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Огляд
+            lesson-1:
+              name: Огляд

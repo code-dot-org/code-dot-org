@@ -1,0 +1,24 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#poetry_fields"}}
+  Poetry Fields
+
+#poetry_fields
+  .field
+    = f.label :standalone_app_name, 'Level Subtype'
+    %p Poetry HOC levels have a poem dropdown above the playspace and auto-animate the poem.
+    - if local_assigns[:warning]
+      %p= "WARNING: #{warning}"
+    = f.select :standalone_app_name, options_for_select(@level.class.standalone_app_names, @level.standalone_app_name), {}, onchange: 'toggleFields(this.value);'
+
+  #defaultPoem{class: ('collapse' if @level.standalone_app_name != 'poetry_hoc')}
+    = f.label :default_poem, 'Default Poem'
+    = f.select :default_poem, options_for_select(@level.class.hoc_poems, @level.default_poem)
+
+:javascript
+  function toggleFields(val) {
+    const defaultPoem = document.getElementById('defaultPoem');
+    if (val.toLowerCase() === 'poetry_hoc') {
+      defaultPoem.classList.remove('collapse');
+    } else {
+      defaultPoem.classList.add('collapse');
+    }
+  }

@@ -1,0 +1,12 @@
+.pl-apply-banner-columns {
+  display: flex;
+  flex-direction: column;
+  background: #ebe8f1;
+  padding: 5px;
+}
+
+@media screen and (min-width: 970px) {
+  .pl-apply-banner-columns {
+    flex-direction: row;
+  }
+}

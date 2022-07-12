@@ -1,32 +1,32 @@
 ---
-title: Teacher Resources - Infinity Play Lab
+title: Materi Pembelajaran Guru - Infinity Play Lab
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Infinity Play Lab: An Hour of Code Tutorial
+# Infinity Play Lab: Tutorial Hour of Code
 
 {{ hoc_infinity_video }}
 
 [col-50]
 
-## Teacher Resources
+## Materi Pembelajaran Guru
 
-### Lesson Plans:
+### Paket Pelajaran:
 
 - [Play Lab](/files/hoc-playlab-lp.pdf)
 
-### Extension Activities:
+### Aktivitas Ekstensi:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Melampaui Hour of Code](http://code.org/learn/beyond)
+- [Dasar-Dasar Ilmu Komputer: Kursus 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Materi Pembelajaran Guru Lainnya:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: Cara Memandu bagi Pendidik](https://hourofcode.com/how-to)
+- [Praktik Terbaik dari Para Pendidik Sukses](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Event Siaran Langsung: [Panduan Pendidik tentang Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -34,12 +34,12 @@ video_player: true
 
 ## Gambaran
 
-Use Play Lab to create a story or game starring Disney Infinity characters.
+Gunakan Play Lab untuk membuat cerita atau game dengan menampilkan karakter Disney Infinity.
 
-**Recommended Age Range:** 4-104
+**Rentang Usia yang Dianjurkan:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Persyaratan Teknologi:** Browser modern, smartphone + tablet
 
-<a href="http://studio.code.org/s/infinity/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/infinity/reset"><button>Coba tutorial</button></a>
 
 [/col-50]

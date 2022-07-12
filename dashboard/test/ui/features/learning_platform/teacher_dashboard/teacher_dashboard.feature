@@ -6,16 +6,17 @@ Feature: Using the teacher dashboard
     And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
-    And I get hidden script access
+    And I get levelbuilder access
     When I click selector "a:contains(Untitled Section)" once I see it to load a new page
     And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
-    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
     And I wait until element "a:contains(Sally)" is visible
     When I click selector "a:contains(Sally)" to load a new page
     And I wait until element "#teacher-panel-container" is visible
     And check that the URL contains "/s/allthethings"
-    And check that the URL contains "viewAs=Teacher"
+    And check that the URL contains "viewAs=Instructor"
 
   Scenario: Viewing a student
     Given I create an authorized teacher-associated student named "Sally"
@@ -25,11 +26,12 @@ Feature: Using the teacher dashboard
 
     # Progress tab
     When I sign in as "Teacher_Sally" and go home
-    And I get hidden script access
+    And I get levelbuilder access
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
     # Stats tab
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Stats)" once I see it
@@ -47,13 +49,15 @@ Feature: Using the teacher dashboard
 
     # Text responses tab
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Text Responses)" once I see it
-    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
     And I wait until element "#text-responses-table" is visible
     And element "#text-responses-table tr:contains(Sally)" contains text "hello world"
 
     # Assessments/Surveys tab: anonymous survey
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
-    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
     And I wait until element "div:contains(no submissions for this assessment)" is visible
     And I wait until element "div:contains(this survey is anonymous)" is not visible
     And I select the "Lesson 30: Anonymous student survey" option in dropdown "assessment-selector"
@@ -99,11 +103,12 @@ Feature: Using the teacher dashboard
 
     # Progress tab
     When I sign in as "Teacher_Sally" and go home
-    And I get hidden script access
+    And I get levelbuilder access
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
     And I press the first ".uitest-summary-cell" element
     And I see ".uitest-detail-cell"
 
@@ -217,13 +222,11 @@ Feature: Using the teacher dashboard
 
   Scenario: Attempt to join a section you own redirects to dashboard with error message
     Given I am a teacher
-    And I create a new section and go home
+    And I create a new student section and go home
     And I attempt to join the section
     Then I wait until element "#flashes" is visible
     And element "div.alert" contains text matching "Sorry, you can't join your own section"
 
-  # Omit IE because it does not respond to press keys step for React forms
-  @no_ie
   Scenario: Attempt to join an invalid section through the homepage
     Given I am a teacher and go home
     And I wait until element "div.ui-test-join-section" is visible
@@ -232,10 +235,9 @@ Feature: Using the teacher dashboard
     Then I wait until element ".announcement-notification" is visible
     And element ".announcement-notification" contains text matching "Section INVALID doesn't exist"
 
-  @no_ie
   Scenario: Attempt to join a section you own from teacher dashboard provides notification
     Given I am a teacher
-    And I create a new section and go home
+    And I create a new student section and go home
     And I wait until element "div.ui-test-join-section" is visible
     And I enter the section code into "input.ui-test-join-section"
     And I click selector "div.ui-test-join-section"

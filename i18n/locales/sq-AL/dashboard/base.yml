@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 sq:
   errors:
     messages:
@@ -288,6 +294,7 @@ sq:
       minecraft_designer: 'Minecraft'
       playlab: 'Play Lab'
       starwars: 'Lufta e Yjeve'
+      loading: 'Në ngarkim...'
     popup:
       progress_for_user: "Progresi i %{name}"
       progress: 'Progresi yt'
@@ -301,6 +308,7 @@ sq:
       prizes_link: 'Më shumë informacion'
   teacher:
     answer: Përgjigje
+    dashboard: 'Dërrasa e zezë '
     for_teachers_only: Vetëm për mësuesit
     title:
       one: 'Mësuesi yt:'
@@ -717,6 +725,7 @@ sq:
   pd:
     form_labels:
       email: 'Email'
+      school: 'Shkolla'
       school_name: 'Emri i shkollës'
       school_country: 'Qyteti i shkollës'
       colombian_chilean_school_name: 'Emri i shkollës'
@@ -730,11 +739,14 @@ sq:
         math: 'Matematikë'
         science: 'Shkencë'
         la: 'Gjuha e arteve'
+        other: "Të tjera/ë"
       resources:
         kodable: 'Kodable'
         lightbot: 'Lightbot'
+        other: "Të tjera/ë"
       robotics:
         kodable: 'Kodable'
+        other: "Të tjera/ë"
       email_opt_in:
         opt_in_yes: 'Po'
         opt_in_no: 'Jo'

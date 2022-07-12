@@ -246,13 +246,16 @@
           "craft_callout_preplaced_house": "Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι σου. Μπορείς να τον ολοκληρώσεις;"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου"
+          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου",
+          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου"
+          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου",
+          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου"
+          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου",
+          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών"
         },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ"
@@ -381,7 +384,8 @@
           "craft_callout_preplaced_house": "Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι σου. Μπορείς να τον ολοκληρώσεις;"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου"
+          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου",
+          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ"
@@ -430,6 +434,33 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Νέο μπλοκ*!",
+          "poetry_foreground": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Νέο μπλοκ*!",
+          "poetry_multiple_sprites": "Νέο μπλοκ*!",
+          "poetry_new_block": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Νέο μπλοκ*!",
+          "poetry_music": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Νέο μπλοκ*!",
+          "poetry_sprite_stops": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Νέο μπλοκ*!",
+          "poetry_remove_sprite": "Νέο μπλοκ*!"
+        },
+        "New Sprite Lab Project": {
+          "make_sprite": "Χρησιμοποιήστε τα κυβάκια εδώ για να δημιουργήσετε ένα χαρακτήρα ήρωα!"
         }
       }
     }

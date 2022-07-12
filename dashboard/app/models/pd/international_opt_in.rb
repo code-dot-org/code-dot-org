@@ -30,9 +30,15 @@ class Pd::InternationalOptIn < ApplicationRecord
     )
   ).freeze
 
+  UZBEKISTAN_SCHOOL_DATA = JSON.parse(
+    File.read(
+      File.join(Rails.root, 'config', 'uzbekistanSchoolData.json')
+    )
+  ).freeze
+
   belongs_to :user
 
-  validates_presence_of :user_id, :form_data
+  validates_presence_of :form_data
 
   def self.required_fields
     [
@@ -40,7 +46,6 @@ class Pd::InternationalOptIn < ApplicationRecord
       :last_name,
       :gender,
       :school_name,
-      :school_city,
       :school_country,
       :ages,
       :subjects,
@@ -81,11 +86,11 @@ class Pd::InternationalOptIn < ApplicationRecord
   def self.options
     entry_keys = {
       gender: %w(male female non_binary not_listed none),
-      schoolCountry: %w(canada chile colombia israel malaysia mexico thailand uzbekistan),
+      schoolCountry: %w(canada chile colombia israel malaysia mexico paraguay thailand uzbekistan),
       ages: %w(ages_under_6 ages_7_8 ages_9_10 ages_11_12 ages_13_14 ages_15_16 ages_17_18 ages_19_over),
-      subjects: %w(cs ict math science history la efl music art other),
-      resources: %w(bootstrap codecademy csfirst khan kodable lightbot scratch tynker other),
-      robotics: %w(grok kodable lego microbit ozobot sphero raspberry wonder other),
+      subjects: %w(cs ict math science history la efl music art other na),
+      resources: %w(bootstrap codecademy csfirst khan kodable lightbot scratch tynker other na),
+      robotics: %w(grok kodable lego microbit ozobot sphero raspberry wonder other na),
       workshopCourse: %w(csf_af csf_express csd csp not_applicable),
       emailOptIn: %w(opt_in_yes opt_in_no),
       legalOptIn: %w(opt_in_yes opt_in_no)
@@ -112,8 +117,29 @@ class Pd::InternationalOptIn < ApplicationRecord
 
     entries[:colombianSchoolData] = COLOMBIAN_SCHOOL_DATA
     entries[:chileanSchoolData] = CHILEAN_SCHOOL_DATA
+    entries[:uzbekistanSchoolData] = UZBEKISTAN_SCHOOL_DATA
 
     super.merge(entries)
+  end
+
+  # @override
+  def dynamic_required_fields(hash)
+    [].tap do |required|
+      if hash[:school_country] == "Colombia"
+        required << :school_department
+        required << :school_municipality
+        required << :school_city
+      elsif hash[:school_country] == "Chile"
+        required << :school_department
+        required << :school_commune
+        required << :school_id
+      elsif hash[:school_country] == "Uzbekistan"
+        required << :school_department
+        required << :school_municipality
+      else
+        required << :school_city
+      end
+    end
   end
 
   def self.labels
@@ -124,8 +150,11 @@ class Pd::InternationalOptIn < ApplicationRecord
       email
       emailAlternate
       gender
+      school
       schoolCity
+      schoolCityDistrict
       schoolCountry
+      schoolDepartmentRegion
       schoolName
       ages
       subjects

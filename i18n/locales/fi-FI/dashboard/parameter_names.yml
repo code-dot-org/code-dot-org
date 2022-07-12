@@ -10,6 +10,8 @@ fi:
       length: pituus
       min: min
       points: pisteet
+      radius: säde
+      sides: sivut
       size: koko
       speed: nopeus
       width: leveys

@@ -17,7 +17,7 @@ import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progr
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {createStore, combineReducers} from 'redux';
 import progress from '@cdo/apps/code-studio/progressRedux';
-import sectionData from '@cdo/apps/redux/sectionDataRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
@@ -47,7 +47,7 @@ const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
   const store = createStore(
     combineReducers({
       progress,
-      sectionData,
+      teacherSections,
       sectionProgress,
       unitSelection,
       locales
@@ -95,14 +95,6 @@ describe('ProgressTableView', () => {
 
     expect(wrapper.find(ProgressTableContentView).props().needsGutter).to.be
       .false;
-  });
-
-  it('passes showSectionProgressDetails down to ProgressTableStudentList', () => {
-    const overrideState = {sectionProgress: {showSectionProgressDetails: true}};
-    const wrapper = setUp(ViewType.SUMMARY, overrideState);
-    expect(
-      wrapper.find(ProgressTableStudentList).props().showSectionProgressDetails
-    ).to.be.true;
   });
 
   describe('summary view', () => {

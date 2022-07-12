@@ -15,7 +15,7 @@
 #
 
 class Census::StateCsOffering < ApplicationRecord
-  belongs_to :school, foreign_key: :state_school_id, primary_key: :state_school_id, required: true
+  belongs_to :school, foreign_key: :state_school_id, primary_key: :state_school_id
 
   validates_presence_of :course
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2015, less_than_or_equal_to: 2030}
@@ -75,8 +75,6 @@ class Census::StateCsOffering < ApplicationRecord
     WV
     WY
   ).freeze
-
-  SUPPORTED_UPDATES = [1, 2, 3].freeze
 
   # The following states use the "V2" format for CSV files in 2017-2018.
   # (The expectation is that all states will use the new format as of 2019-20.)
@@ -181,7 +179,15 @@ class Census::StateCsOffering < ApplicationRecord
   # indication that the school doesn't teach cs. We aren't as confident
   # that the state data is complete for the following states so we do
   # not want to treat the lack of data as a no for those.
-  INFERRED_NO_EXCLUSION_LIST = [].freeze
+  INFERRED_NO_EXCLUSION_LIST = %w(
+    AK
+    CO
+    DC
+    HI
+    ME
+    MI
+    MN
+  ).freeze
 
   def self.infer_no(state_code)
     INFERRED_NO_EXCLUSION_LIST.exclude? state_code.upcase
@@ -1544,6 +1550,17 @@ class Census::StateCsOffering < ApplicationRecord
     end
   end
 
+  def self.find_all_updates_for_state_year(state_code, school_year, file_extension)
+    prefix = construct_object_key(state_code, school_year, 1, "") # "state_cs_offerings/AL/2020-2021."
+    # sort updates by integer value of the update part of the key
+    all_updates = AWS::S3.find_objects_with_ext(CENSUS_BUCKET_NAME, file_extension, prefix).sort do |a, b|
+      _, _, update_a = deconstruct_object_key(a)
+      _, _, update_b = deconstruct_object_key(b)
+      update_a.to_i <=> update_b.to_i
+    end
+    all_updates
+  end
+
   def self.seed_from_s3(file_extension: 'csv', dry_run: false)
     # State CS Offering data files in S3 are named
     # "state_cs_offerings/<STATE_CODE>/<SCHOOL_YEAR_START>-<SCHOOL_YEAR_END>.csv"
@@ -1552,13 +1569,13 @@ class Census::StateCsOffering < ApplicationRecord
     current_year = Date.today.year
     (2015..current_year).each do |school_year|
       SUPPORTED_STATES.each do |state_code|
-        SUPPORTED_UPDATES.each do |update|
-          object_key = construct_object_key(state_code, school_year, update, file_extension)
-          begin
-            AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key, dry_run) do |filename|
-              seed_from_csv(state_code, school_year, update, filename, dry_run)
-              seeded_objects << object_key
-            end
+        all_updates = find_all_updates_for_state_year(state_code, school_year, file_extension)
+        # seed each update file
+        all_updates.each do |object_key|
+          _, _, update, _ = deconstruct_object_key(object_key)
+          AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key, dry_run) do |filename|
+            seed_from_csv(state_code, school_year, update, filename, dry_run)
+            seeded_objects << object_key
           rescue Aws::S3::Errors::NotFound
             # We don't expect every school year to be there so skip anything that isn't found.
             # Note: Don't print out this warning in a dry run to reduce noises.

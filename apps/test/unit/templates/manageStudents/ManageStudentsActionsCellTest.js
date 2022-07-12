@@ -3,7 +3,6 @@ import $ from 'jquery';
 import sinon from 'sinon';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/deprecatedChai';
-import * as client from '@cdo/apps/util/userSectionClient';
 import {UnconnectedManageStudentsActionsCell as ManageStudentsActionsCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
 
 const DEFAULT_PROPS = {
@@ -14,7 +13,8 @@ const DEFAULT_PROPS = {
   startEditingStudent: () => {},
   cancelEditingStudent: () => {},
   removeStudent: () => {},
-  canEdit: true
+  canEdit: true,
+  loadSectionData: () => {}
 };
 
 describe('ManageStudentsActionsCell', () => {
@@ -74,20 +74,21 @@ describe('ManageStudentsActionsCell', () => {
           .callsArg(0)
           .returns({fail: () => {}})
       });
-      sinon.stub(client, 'getCurrentSection').callsArgWith(1, 'testSection');
     });
 
     afterEach(() => {
-      client.getCurrentSection.restore();
       $.ajax.restore();
     });
 
     it('Updates the section information', () => {
-      const setSectionSpy = sinon.spy();
-      const props = {...DEFAULT_PROPS, ...{setSection: setSectionSpy}};
+      const loadSectionSpy = sinon.spy();
+      const props = {
+        ...DEFAULT_PROPS,
+        ...{loadSectionData: loadSectionSpy}
+      };
       const wrapper = shallow(<ManageStudentsActionsCell {...props} />);
       wrapper.instance().onConfirmDelete();
-      expect(setSectionSpy).to.have.been.calledOnceWith('testSection');
+      expect(loadSectionSpy).to.have.been.calledOnceWith(10);
     });
   });
 });

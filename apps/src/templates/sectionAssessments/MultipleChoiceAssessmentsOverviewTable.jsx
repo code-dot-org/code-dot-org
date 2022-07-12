@@ -162,7 +162,6 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          ...styles.questionCell,
           maxWidth:
             styleConstants['content-width'] -
             numAnswers * (ANSWER_COLUMN_WIDTH + PADDING)
@@ -230,13 +229,12 @@ const styles = {
     padding: 0,
     height: 40
   },
-  questionCell: {
+  link: {
+    color: color.teal,
+    display: 'block',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap'
-  },
-  link: {
-    color: color.teal
   }
 };
 

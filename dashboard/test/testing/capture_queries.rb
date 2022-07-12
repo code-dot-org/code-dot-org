@@ -30,7 +30,7 @@ module CaptureQueries
   end
 
   def assert_cached_queries(num, *args, &block)
-    Retryable.retryable(on: Minitest::Assertion, tries: 2, sleep: 0) do
+    Retryable.retryable(on: Minitest::Assertion, matching: /Wrong query count/, tries: 2, sleep: 0) do
       assert_queries(num, *args, &block)
     end
   end
@@ -41,8 +41,6 @@ module CaptureQueries
     /(script|unit_group)\.rb.*all_(scripts|courses)/,
     # Level-cache queries don't count.
     /script\.rb.*cache_find_(script_level|level)/,
-    # Ignore cached script id lookup
-    /lesson_extras_script_ids/,
     # Ignore random updates to experiment cache.
     /experiment\.rb.*update_cache/
   ]

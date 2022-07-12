@@ -217,6 +217,7 @@ kk:
       playlab: Ойындар Лабораториясы
       sports: Спорттар
       starwars: Жұлдызды Соғыстар
+      loading: ЖҮКТЕЛУДЕ...
     popup:
       progress_for_user: "%{name} сабақ оқу барысы"
       progress: Сіздің сабақ оқу барысыңыз
@@ -654,10 +655,13 @@ kk:
         math: Математика
         science: Ғылым
         la: Тіл Өнерлері
+        other: Басқасы
       resources:
         kodable: Kodable
+        other: Басқасы
       robotics:
         kodable: Kodable
+        other: Басқасы
       email_opt_in:
         opt_in_yes: Иә
         opt_in_no: Жоқ

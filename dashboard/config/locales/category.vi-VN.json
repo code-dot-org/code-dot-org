@@ -1,0 +1,29 @@
+{
+  "vi-VN": {
+    "data": {
+      "category": {
+        "csta2011/CPP": {
+          "description": "Luyện tập sử dụng máy tính & lập trình"
+        },
+        "csta2011/CT": {
+          "description": "Tư duy máy tính"
+        },
+        "ccela/L": {
+          "description": "Ngôn ngữ"
+        },
+        "csta2011/CD": {
+          "description": "Máy tính & Thiết bị liên lạc"
+        },
+        "csta2011/CI": {
+          "description": "Cộng đồng, toàn cầu và tác động đạo đức "
+        },
+        "csta2011/CL": {
+          "description": "Hợp tác"
+        },
+        "csta/IC": {
+          "description": "Tác động của máy tính"
+        }
+      }
+    }
+  }
+}

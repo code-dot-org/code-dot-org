@@ -2,6 +2,75 @@
   "sq-AL": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Rregullimi"
+        },
+        "function/hero/unversioned": {
+          "word": "Funksion"
+        },
+        "code/poem-art/2021": {
+          "word": "Kod"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Rregullimi"
+        },
+        "code/artist/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Rregullimi"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Kushtet"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "cikle "
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Rregullimi"
+        },
+        "code/sports/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Rregullimi"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kod"
+        },
         "behavior/coursef/2021": {
           "word": "Sjellja"
         },
@@ -67,6 +136,24 @@
         },
         "define/coursee/2021": {
           "word": "Përcakto"
+        },
+        "debugging/csd/2021": {
+          "word": "Rregullimi"
+        },
+        "variable/csd/2021": {
+          "word": "Variabël"
+        },
+        "conditionals/csd/2021": {
+          "word": "Kushtet"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraksioni"
+        },
+        "function/csd/2021": {
+          "word": "Funksion"
+        },
+        "copyright/csd/2021": {
+          "word": "E drejta e autorit"
         }
       }
     }

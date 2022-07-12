@@ -2,6 +2,75 @@
   "da-DK": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "function/hero/unversioned": {
+          "word": "Funktion"
+        },
+        "code/poem-art/2021": {
+          "word": "Kode"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "code/artist/unversioned": {
+          "word": "Kode"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Betingelser"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Løkker"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "code/sports/unversioned": {
+          "word": "Kode"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Fejlfinding"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kode"
+        },
         "variable/coursef/2021": {
           "word": "Variabel"
         },
@@ -88,6 +157,27 @@
         },
         "define/coursee/2021": {
           "word": "Definer"
+        },
+        "debugging/csd/2021": {
+          "word": "Fejlfinding"
+        },
+        "variable/csd/2021": {
+          "word": "Variabel"
+        },
+        "conditionals/csd/2021": {
+          "word": "Betingelser"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraktion"
+        },
+        "function/csd/2021": {
+          "word": "Funktion"
+        },
+        "input/csd/2021": {
+          "word": "input"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright"
         }
       }
     }

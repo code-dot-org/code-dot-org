@@ -21,6 +21,7 @@
   "filterPlatformIos": "iPad/iPhone",
   "filterPlatformNoInternet": "Gan ceangal idirlín nó ceangal bocht",
   "filterPlatformNoComputers": "Gan ríomhairí ná gléasanna",
+  "filterPlatformScreenReader": "Léitheoir scáileáin",
   "filterTopics": "Topaicí",
   "filterTopicsScience": "Eolaíocht",
   "filterTopicsMath": "Matamaitic",

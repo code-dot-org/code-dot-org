@@ -22,7 +22,8 @@ import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
 import NoSectionCodeDialog from './NoSectionCodeDialog';
 import {
   sectionCode,
-  sectionName
+  sectionName,
+  selectedSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   convertStudentDataToArray,
@@ -41,6 +42,8 @@ import AddMultipleStudents from './AddMultipleStudents';
 import MoveStudents from './MoveStudents';
 import DownloadParentLetter from './DownloadParentLetter';
 import PrintLoginCards from './PrintLoginCards';
+import CodeReviewGroupsDialog from './CodeReviewGroupsDialog';
+import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import Button from '../Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -86,75 +89,6 @@ export const COLUMNS = {
   ACTIONS: 4
 };
 
-// The "add row" should always be pinned to the top when sorting.
-// The "new student rows" should always be next.
-// This function takes into account having multiple "add rows"
-export const sortRows = (data, columnIndexList, orderList) => {
-  let addRows = [];
-  let newStudentRows = [];
-  let studentRows = [];
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].rowType === RowType.ADD) {
-      addRows.push(data[i]);
-    } else if (data[i].rowType === RowType.NEW_STUDENT) {
-      newStudentRows.push(data[i]);
-    } else {
-      studentRows.push(data[i]);
-    }
-  }
-  addRows = orderBy(addRows, columnIndexList, orderList);
-  newStudentRows = orderBy(newStudentRows, columnIndexList, orderList);
-  studentRows = orderBy(studentRows, columnIndexList, orderList);
-  return addRows.concat(newStudentRows).concat(studentRows);
-};
-
-export const ManageStudentsNotificationFull = ({manageStatus}) => {
-  const {sectionCapacity, sectionCode, sectionStudentCount} = manageStatus;
-
-  const sectionSpotsRemaining =
-    sectionCapacity - sectionStudentCount > 0
-      ? sectionCapacity - sectionStudentCount
-      : 0;
-
-  const notificationParams = {
-    studentLimit: sectionCapacity,
-    currentStudentCount: sectionStudentCount,
-    sectionCode: sectionCode,
-    availableSpace: sectionSpotsRemaining
-  };
-
-  const notification = {
-    notice: i18n.manageStudentsNotificationCannotVerb({
-      numStudents: manageStatus.numStudents,
-      verb: manageStatus.verb || 'add'
-    }),
-    details: `${
-      sectionSpotsRemaining === 0
-        ? i18n.manageStudentsNotificationFull(notificationParams)
-        : i18n.manageStudentsNotificationWillBecomeFull(notificationParams)
-    } 
-          ${i18n.contactSupportFullSection({
-            supportLink: 'https://support.code.org/hc/en-us/requests/new'
-          })}`
-  };
-
-  return (
-    <Notification
-      type={NotificationType.failure}
-      notice={notification.notice}
-      details={
-        // SafeMarkedown required to convert i18n string to clickable link
-        <SafeMarkdown markdown={notification.details} />
-      }
-      dismissible={false}
-    />
-  );
-};
-
-ManageStudentsNotificationFull.propTypes = {
-  manageStatus: PropTypes.object.isRequired
-};
-
 class ManageStudentsTable extends Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string,
@@ -165,6 +99,7 @@ class ManageStudentsTable extends Component {
     sectionName: PropTypes.string,
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
+    isSectionAssignedCSA: PropTypes.bool,
     editingData: PropTypes.object,
     addStatus: PropTypes.object,
     saveAllStudents: PropTypes.func,
@@ -202,7 +137,8 @@ class ManageStudentsTable extends Component {
       }
     },
     showCopiedMsg: false,
-    showSectionCodeDialog: false
+    showSectionCodeDialog: false,
+    showPasswordLengthFailure: false
   };
 
   renderTransferSuccessNotification() {
@@ -307,6 +243,9 @@ class ManageStudentsTable extends Component {
                 sectionId={sectionId}
                 studentId={rowData.id}
                 resetDisabled={resetDisabled}
+                setPasswordLengthFailure={isFailing =>
+                  this.setState({showPasswordLengthFailure: isFailing})
+                }
               />
             )}
             {(rowData.loginType === SectionLoginType.word ||
@@ -725,7 +664,8 @@ class ManageStudentsTable extends Component {
       sectionId,
       sectionName,
       sectionCode,
-      studentData
+      studentData,
+      isSectionAssignedCSA
     } = this.props;
 
     const noSectionCode = [
@@ -742,6 +682,14 @@ class ManageStudentsTable extends Component {
             details={i18n.manageStudentsNotificationAddSuccess({
               numStudents: addStatus.numStudents
             })}
+            dismissible={false}
+          />
+        )}
+        {this.state.showPasswordLengthFailure && (
+          <Notification
+            type={NotificationType.failure}
+            notice={i18n.passwordsMustBeSixChars()}
+            details={i18n.passwordUpdateFailed()}
             dismissible={false}
           />
         )}
@@ -799,6 +747,16 @@ class ManageStudentsTable extends Component {
               }
             />
           </div>
+          {/* Passes button style to CodeReviewGroupsDialog to avoid extra div,
+            but is otherwise similar to other button/modal components here.
+            Despite being unused in this component, we pass the dataApi object
+            so that it can be more easily stubbed in tests. */}
+          {isSectionAssignedCSA && (
+            <CodeReviewGroupsDialog
+              dataApi={new CodeReviewGroupsDataApi(sectionId)}
+              buttonContainerStyle={styles.button}
+            />
+          )}
           {LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) && (
             <div
               style={styles.sectionCodeBox}
@@ -901,15 +859,91 @@ const styles = {
   }
 };
 
+// The "add row" should always be pinned to the top when sorting.
+// The "new student rows" should always be next.
+// This function takes into account having multiple "add rows"
+export const sortRows = (data, columnIndexList, orderList) => {
+  // Add secondary and tertiary sorting factors
+  columnIndexList.push('name');
+  orderList.push(orderList[0]);
+  columnIndexList.push('id');
+  orderList.push(orderList[0]);
+  // Organize student rows
+  let addRows = [];
+  let newStudentRows = [];
+  let studentRows = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].rowType === RowType.ADD) {
+      addRows.push(data[i]);
+    } else if (data[i].rowType === RowType.NEW_STUDENT) {
+      newStudentRows.push(data[i]);
+    } else {
+      studentRows.push(data[i]);
+    }
+  }
+  addRows = orderBy(addRows, columnIndexList, orderList);
+  newStudentRows = orderBy(newStudentRows, columnIndexList, orderList);
+  studentRows = orderBy(studentRows, columnIndexList, orderList);
+  return addRows.concat(newStudentRows).concat(studentRows);
+};
+
+export const ManageStudentsNotificationFull = ({manageStatus}) => {
+  const {sectionCapacity, sectionCode, sectionStudentCount} = manageStatus;
+
+  const sectionSpotsRemaining =
+    sectionCapacity - sectionStudentCount > 0
+      ? sectionCapacity - sectionStudentCount
+      : 0;
+
+  const notificationParams = {
+    studentLimit: sectionCapacity,
+    currentStudentCount: sectionStudentCount,
+    sectionCode: sectionCode,
+    availableSpace: sectionSpotsRemaining
+  };
+
+  const notification = {
+    notice: i18n.manageStudentsNotificationCannotVerb({
+      numStudents: manageStatus.numStudents,
+      verb: manageStatus.verb || 'add'
+    }),
+    details: `${
+      sectionSpotsRemaining === 0
+        ? i18n.manageStudentsNotificationFull(notificationParams)
+        : i18n.manageStudentsNotificationWillBecomeFull(notificationParams)
+    }
+          ${i18n.contactSupportFullSection({
+            supportLink: 'https://support.code.org/hc/en-us/requests/new'
+          })}`
+  };
+
+  return (
+    <Notification
+      type={NotificationType.failure}
+      notice={notification.notice}
+      details={
+        // SafeMarkedown required to convert i18n string to clickable link
+        <SafeMarkdown markdown={notification.details} />
+      }
+      dismissible={false}
+    />
+  );
+};
+
+ManageStudentsNotificationFull.propTypes = {
+  manageStatus: PropTypes.object.isRequired
+};
+
 export const UnconnectedManageStudentsTable = ManageStudentsTable;
 
 export default connect(
   state => ({
-    sectionId: state.sectionData.section.id,
-    sectionCode: sectionCode(state, state.sectionData.section.id),
-    sectionName: sectionName(state, state.sectionData.section.id),
+    sectionId: state.teacherSections.selectedSectionId,
+    sectionCode: sectionCode(state, state.teacherSections.selectedSectionId),
+    sectionName: sectionName(state, state.teacherSections.selectedSectionId),
     loginType: state.manageStudents.loginType,
     studentData: convertStudentDataToArray(state.manageStudents.studentData),
+    isSectionAssignedCSA: selectedSection(state).isAssignedCSA,
     editingData: state.manageStudents.editingData,
     showSharingColumn: state.manageStudents.showSharingColumn,
     addStatus: state.manageStudents.addStatus,

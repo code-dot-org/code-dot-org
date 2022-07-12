@@ -131,4 +131,20 @@ describe('Sprite Commands', () => {
 
     expect(coreLibrary.getAnimationsInUse()).to.deep.equal(['costume_label']);
   });
+
+  describe('makeNumSprites', () => {
+    it('creates multiple sprites with the same costume', () => {
+      commands.makeNumSprites.apply(coreLibrary, [10, 'costume_label']);
+      expect(
+        coreLibrary.getSpriteArray({costume: 'costume_label'}).length
+      ).to.equal(10);
+    });
+
+    it('caps at 500 sprites', () => {
+      commands.makeNumSprites.apply(coreLibrary, [100000000, 'costume_label']);
+      expect(
+        coreLibrary.getSpriteArray({costume: 'costume_label'}).length
+      ).to.equal(500);
+    });
+  });
 });

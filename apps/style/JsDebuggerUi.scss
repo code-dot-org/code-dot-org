@@ -1,5 +1,5 @@
 // Style rules associated with our visual debugger for the JSInterpreter.
-@import "color";
+@import "color.scss";
 @import "mixins";
 @import "style-constants";
 
@@ -55,7 +55,7 @@ $debug-area-initial-height: 43px;
   left: 0;
   right: 0;
   z-index: 2;
-  max-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+  max-height: calc(50% - #{($workspace-headers-height * 0.5) + 1}) !important;
 }
 
 // Make sure the workspace default lines up with the debug area default
@@ -198,12 +198,4 @@ $debug-header-border-width: 1px;
 .step-over-btn {
   background-position: 0px 21px;
   margin-right: 3px;
-}
-
-.Select-input {
-  height: 28px !important;
-}
-
-.Select-arrow-zone {
-  display: none !important;
 }

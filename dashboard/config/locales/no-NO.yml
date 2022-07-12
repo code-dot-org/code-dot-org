@@ -412,6 +412,7 @@
       starwars: Star Wars
       starwarsblocks: Star Wars (blokker)
       starwarsblocks_hour: Star Wars (blokker)
+      loading: Laster...
       weblab: Weblaboratoriet
       view_all: Vis alle prosjekter...
     popup:
@@ -427,6 +428,7 @@
       prizes_link: Mer info
   teacher:
     answer: Svar
+    dashboard: Lærersider
     for_teachers_only: Kun for lærere
     title:
       one: 'Din lærer:'
@@ -1106,6 +1108,7 @@
       email: E-post
       email_alternate: Alternativ e-post
       gender: Kjønnsidentitet
+      school: Skole
       school_name: Skolens navn
       school_city: Skolens poststed
       school_country: Landet til skolen
@@ -1147,13 +1150,13 @@
         khan: Khan akademiet
         kodable: Kodbart
         scratch: Scratch
-        other: 'Annet:'
+        other: Andre
       robotics:
         grok: Grok-læring
         kodable: Kodbart
         microbit: Microbit
         raspberry: Raspberry Pi
-        other: 'Annet:'
+        other: Andre
       workshop_course:
         csp: Prinsipper i informatikk
       email_opt_in:

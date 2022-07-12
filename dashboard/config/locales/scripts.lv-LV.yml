@@ -2,10 +2,6 @@
 lv:
   data:
     script:
-      category:
-        hoc_category_name: Programmēšanas stunda
-        math_category_name: Matemātika
-        other_category_name: Citi
       name:
         course1:
           title: Kurss 1
@@ -200,7 +196,7 @@ lv:
             un burvību.
           lessons:
             Artist:
-              name: Mākslinieks
+              name: Programmē ar Annu un Elzu
           student_description: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt
             ledus burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot
             un taisot ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
@@ -299,10 +295,6 @@ lv:
               name: 'Atvienots: Dizaina recepte'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Atvienots: Videospēles un koordinātu plaksnes'
-        infinity:
-          lessons:
-            Infinity:
-              name: Bezgalība
         algebrademo:
           lessons:
             The Design Recipe:
@@ -774,9 +766,7 @@ lv:
             required:
               display_name: Pārskats
         basketball:
-          lessons:
-            Bounce:
-              name: Atlekt
+          name: basketbols
         csd2-2017:
           lessons:
             Lists:
@@ -2174,29 +2164,22 @@ lv:
         csd3-2021:
           lessons:
             Variables:
-              key: Mainīgie
               name: Mainīgie
             Text:
-              key: Teksts
               name: Teksts
             Conditionals:
-              key: Sazarojumi
               name: Sazarojumi
             Velocity:
-              key: Ātrums
               name: Ātrums
             Functions:
-              key: Funkcijas
               name: Funkcijas
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Funkcijas ar parametriem
               name: Funkcijas ar parametriem
         csp3-2021:
           lessons:
             Debugging:
-              key: Atkļūdošana
               name: Atkļūdošana
         csp4-2021:
           lesson_groups:
@@ -2212,6 +2195,10 @@ lv:
               display_name: Saraksti
             csp_loops:
               display_name: Cikli
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmi
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2226,7 +2213,6 @@ lv:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Ej, ej
               name: Ej, ej
             'Loops: Getting Loopy':
               name: Kļūst ciklisks
@@ -2240,7 +2226,6 @@ lv:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Binārās aproces
               name: Binārās aproces
             'Events: The Big Event':
               name: Lielais notikums
@@ -2258,16 +2243,11 @@ lv:
             'Algorithms: Graph Paper Programming':
               name: Rūtiņpapīra programmēšana
             Relay Programming:
-              key: Releju programmēšana
               name: Releju programmēšana
             Conditionals with Cards:
-              key: nosacījumi ar kārtēm
               name: nosacījumi ar kārtēm
             'Unplugged: Binary':
-              key: 'Atvienots: binārs'
               name: Binārie Attēli
-            Artist Binary:
-              key: 'Mākslinieks: Binārais'
           lesson_groups:
             csf_events:
               display_name: Pasākumi
@@ -2283,8 +2263,6 @@ lv:
               display_name: Digitālā pilsonība
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Sazarojumi
             'Functions: Songwriting':
               name: Dziesmu rakstīšana
           lesson_groups:
@@ -2299,13 +2277,10 @@ lv:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Aplokšņu mainīgie
               name: Aplokšņu mainīgie
             Internet:
-              key: Internets
               name: Internets
             For Loop Fun:
-              key: Jautrība ar "For" Cikliem
               name: Jautrība ar "For" Cikliem
           lesson_groups:
             csf_digcit:
@@ -2353,22 +2328,16 @@ lv:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Cikli
               name: Cikli
             Events:
-              key: Pasākumi
               name: Pasākumi
             Conditionals:
-              key: Sazarojumi
               name: Sazarojumi
             Functions:
-              key: Funkcijas
               name: Funkcijas
             Variables:
-              key: Mainīgie
               name: Mainīgie
             For Loops:
-              key: '"par" cikli'
               name: '"par" cikli'
           lesson_groups:
             k5_getting_started_1:
@@ -2403,5 +2372,236 @@ lv:
               name: Pārskats
         dlp21-csp-overview:
           lessons:
+            lesson-1:
+              name: Pārskats
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Burtošanas bite
+          title: Burtošanas bite
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Burtošanas bite
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Programmēšanas stunda
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mainīgie
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funkcijas
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Laimīgās kartes
+            'Programming: Happy Maps':
+              name: Laimīgās kartes
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_loops:
+              display_name: Cikli
+            csf_events:
+              display_name: Pasākumi
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+            csf_conditionals:
+              display_name: Sazarojumi
+            csf_functions:
+              display_name: Funkcijas
+            csf_variables:
+              display_name: Mainīgie
+            csf_for_loops:
+              display_name: '"par" cikli'
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Atkļūdošana
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Mainīgie
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Saraksti
+            csp_loops:
+              display_name: Cikli
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Ej, ej
+            Getting Loopy:
+              name: Kļūst ciklisks
+            'Loops: Getting Loopy':
+              name: Kļūst ciklisks
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_loops:
+              display_name: Cikli
+            csf_events:
+              display_name: Pasākumi
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Lielais notikums
+            Binary Bracelets:
+              name: Binārās aproces
+            'Events: The Big Event':
+              name: Lielais notikums
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_loops:
+              display_name: Cikli
+            csf_events:
+              display_name: Pasākumi
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Rūtiņpapīra programmēšana
+            Relay Programming:
+              name: Releju programmēšana
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            'Algorithms: Graph Paper Programming':
+              name: Rūtiņpapīra programmēšana
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+            csf_conditionals:
+              display_name: Sazarojumi
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Dziesmu rakstīšana
+            'Functions: Songwriting':
+              name: Dziesmu rakstīšana
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            ramp_up:
+              display_name: Cikls ciklā
+            csf_functions:
+              display_name: Funkcijas
+            csf_nested_loops:
+              display_name: Sazarojumi
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+            The Internet:
+              name: Internets
+            Internet:
+              name: Internets
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitālā pilsonība
+            lessonGroup-8:
+              display_name: Mainīgie
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Cikli
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Cikli
+            csf_events:
+              display_name: Pasākumi
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Mainīgie
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: '"par" cikli'
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Sazarojumi
+            lesson-16:
+              name: Atkļūdošana
+            lesson-19:
+              name: Atkļūdošana
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Cikli
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Internets
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitālā pilsonība
+            lessonGroup-8:
+              display_name: Mainīgie
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Mainīgie
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Cikli
+            Events:
+              name: Pasākumi
+            Conditionals:
+              name: Sazarojumi
+            Functions:
+              name: Funkcijas
+            Variables:
+              name: Mainīgie
+            For Loops:
+              name: '"par" cikli'
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Mainīgie
+            Text:
+              name: Teksts
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funkcijas
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Pārskats
+            lesson-1:
+              name: Pārskats
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Pārskats
             lesson-1:
               name: Pārskats

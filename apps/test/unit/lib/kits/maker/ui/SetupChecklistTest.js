@@ -19,30 +19,63 @@ describe('SetupChecklist', () => {
   const WAITING_ICON = '.fa-clock-o';
   const SUCCESS_ICON = '.fa-check-circle';
   const FAILURE_ICON = '.fa-times-circle';
+  const error = new Error('test error');
 
   beforeEach(() => {
     sinon.stub(utils, 'reload');
     sinon.stub(window.console, 'error');
-    checker = new StubSetupChecker();
+    sinon
+      .stub(SetupChecker.prototype, 'detectSupportedBrowser')
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'detectChromeAppInstalled')
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'detectBoardPluggedIn')
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'detectCorrectFirmware')
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'detectBoardType')
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'detectComponentsInitialize')
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'celebrate')
+      .callsFake(() => Promise.resolve());
   });
 
   afterEach(() => {
     window.console.error.restore();
     utils.reload.restore();
+    SetupChecker.prototype.detectSupportedBrowser.restore();
+    SetupChecker.prototype.detectChromeAppInstalled.restore();
+    SetupChecker.prototype.detectBoardPluggedIn.restore();
+    SetupChecker.prototype.detectCorrectFirmware.restore();
+    SetupChecker.prototype.detectBoardType.restore();
+    SetupChecker.prototype.detectComponentsInitialize.restore();
+    SetupChecker.prototype.celebrate.restore();
   });
 
   describe('on Chrome OS', () => {
-    before(() => sinon.stub(browserChecks, 'isChromeOS').returns(true));
-    before(() => sinon.stub(browserChecks, 'isCodeOrgBrowser').returns(false));
-    after(() => browserChecks.isCodeOrgBrowser.restore());
-    after(() => browserChecks.isChromeOS.restore());
+    before(() => {
+      sinon.stub(browserChecks, 'isChrome').returns(true);
+      sinon.stub(browserChecks, 'isCodeOrgBrowser').returns(false);
+    });
+
+    after(() => {
+      browserChecks.isCodeOrgBrowser.restore();
+      browserChecks.isChrome.restore();
+    });
 
     it('renders success', async () => {
       const wrapper = mount(
         <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
       );
       expect(wrapper.find(REDETECT_BUTTON)).to.be.disabled;
-      expect(wrapper.find(WAITING_ICON)).to.have.length(4);
+      expect(wrapper.find(WAITING_ICON)).to.have.length(1);
       await yieldUntilDoneDetecting(wrapper);
       expect(wrapper.find(REDETECT_BUTTON)).not.to.be.disabled;
       expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
@@ -50,46 +83,52 @@ describe('SetupChecklist', () => {
     });
 
     describe('test with expected console.error', () => {
+      it('does not reload the page on re-detect if successful', async () => {
+        const wrapper = mount(
+          <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
+        );
+        await yieldUntilDoneDetecting(wrapper);
+        expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
+        wrapper.find(REDETECT_BUTTON).simulate('click');
+        expect(wrapper.find(WAITING_ICON)).to.have.length(1);
+        await yieldUntilDoneDetecting(wrapper);
+        expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
+        expect(utils.reload).not.to.have.been.called;
+      });
+
       it('reloads the page on re-detect if plugin not installed', async () => {
-        checker.detectChromeAppInstalled.rejects(new Error('not installed'));
+        SetupChecker.prototype.detectChromeAppInstalled.restore();
+        sinon
+          .stub(SetupChecker.prototype, 'detectChromeAppInstalled')
+          .callsFake(() => Promise.reject(error));
         const wrapper = mount(
           <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
         );
         await yieldUntilDoneDetecting(wrapper);
         expect(wrapper.find(SUCCESS_ICON)).to.have.length(0);
         expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
-        expect(wrapper.find(WAITING_ICON)).to.have.length(3);
+        expect(wrapper.find(WAITING_ICON)).to.have.length(0);
         wrapper.find(REDETECT_BUTTON).simulate('click');
         expect(utils.reload).to.have.been.called;
       });
     });
-
-    it('does not reload the page on re-detect if successful', async () => {
-      const wrapper = mount(
-        <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
-      );
-      await yieldUntilDoneDetecting(wrapper);
-      expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
-      wrapper.find(REDETECT_BUTTON).simulate('click');
-      expect(wrapper.find(WAITING_ICON)).to.have.length(4);
-      await yieldUntilDoneDetecting(wrapper);
-      expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
-      expect(utils.reload).not.to.have.been.called;
-    });
   });
 
   describe('on Code.org Browser', () => {
-    before(() => sinon.stub(browserChecks, 'isChrome').returns(false));
-    before(() => sinon.stub(browserChecks, 'isCodeOrgBrowser').returns(true));
-    after(() => browserChecks.isCodeOrgBrowser.restore());
-    after(() => browserChecks.isChrome.restore());
+    before(() => {
+      sinon.stub(browserChecks, 'isChrome').returns(false);
+      sinon.stub(browserChecks, 'isCodeOrgBrowser').returns(true);
+    });
+
+    after(() => {
+      browserChecks.isCodeOrgBrowser.restore();
+      browserChecks.isChrome.restore();
+    });
 
     it('renders success', async () => {
-      const wrapper = mount(
-        <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
-      );
+      const wrapper = mount(<SetupChecklist stepDelay={STEP_DELAY_MS} />);
       expect(wrapper.find(REDETECT_BUTTON)).to.be.disabled;
-      expect(wrapper.find(WAITING_ICON)).to.have.length(4);
+      expect(wrapper.find(WAITING_ICON)).to.have.length(1);
       await yieldUntilDoneDetecting(wrapper);
       expect(wrapper.find(REDETECT_BUTTON)).not.to.be.disabled;
       expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
@@ -98,40 +137,39 @@ describe('SetupChecklist', () => {
 
     describe('test with expected console.error', () => {
       it('fails if Code.org browser version is wrong', async () => {
-        const error = new Error('test error');
-        checker.detectSupportedBrowser.rejects(error);
-        const wrapper = mount(
-          <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
-        );
-        expect(wrapper.find(WAITING_ICON)).to.have.length(4);
+        SetupChecker.prototype.detectSupportedBrowser.restore();
+        sinon
+          .stub(SetupChecker.prototype, 'detectSupportedBrowser')
+          .callsFake(() => Promise.reject(error));
+        const wrapper = mount(<SetupChecklist stepDelay={STEP_DELAY_MS} />);
+        expect(wrapper.find(WAITING_ICON)).to.have.length(1);
         await yieldUntilDoneDetecting(wrapper);
         expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
-        expect(wrapper.find(WAITING_ICON)).to.have.length(3);
+        expect(wrapper.find(WAITING_ICON)).to.have.length(0);
         expect(window.console.error).to.have.been.calledWith(error);
       });
 
       it('reloads the page on re-detect if browser check fails', async () => {
-        checker.detectSupportedBrowser.rejects(new Error('test error'));
-        const wrapper = mount(
-          <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
-        );
+        SetupChecker.prototype.detectSupportedBrowser.restore();
+        sinon
+          .stub(SetupChecker.prototype, 'detectSupportedBrowser')
+          .callsFake(() => Promise.reject(error));
+        const wrapper = mount(<SetupChecklist stepDelay={STEP_DELAY_MS} />);
         await yieldUntilDoneDetecting(wrapper);
         expect(wrapper.find(SUCCESS_ICON)).to.have.length(0);
         expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
-        expect(wrapper.find(WAITING_ICON)).to.have.length(3);
+        expect(wrapper.find(WAITING_ICON)).to.have.length(0);
         wrapper.find(REDETECT_BUTTON).simulate('click');
         expect(utils.reload).to.have.been.called;
       });
     });
 
     it('does not reload the page on re-detect if successful', async () => {
-      const wrapper = mount(
-        <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
-      );
+      const wrapper = mount(<SetupChecklist stepDelay={STEP_DELAY_MS} />);
       await yieldUntilDoneDetecting(wrapper);
       expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
       wrapper.find(REDETECT_BUTTON).simulate('click');
-      expect(wrapper.find(WAITING_ICON)).to.have.length(4);
+      expect(wrapper.find(WAITING_ICON)).to.have.length(1);
       await yieldUntilDoneDetecting(wrapper);
       expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
       expect(utils.reload).not.to.have.been.called;
@@ -172,24 +210,4 @@ function yieldUntil(wrapper, predicate, timeoutMs = 2000, intervalMs = 5) {
       }
     }, intervalMs);
   });
-}
-
-/**
- * SetupChecker with all methods stubbed and by default everything succeeds.
- * Since methods are sinon stubs, individual tests can modify stub behavior
- * as needed.
- * @see http://sinonjs.org/releases/v2.1.0/stubs/#defining-stub-behavior-on-consecutive-calls
- */
-class StubSetupChecker extends SetupChecker {
-  constructor() {
-    super();
-    sinon.stub(this, 'detectSupportedBrowser').resolves();
-    sinon.stub(this, 'detectChromeAppInstalled').resolves();
-    sinon.stub(this, 'detectBoardPluggedIn').resolves();
-    sinon.stub(this, 'detectCorrectFirmware').resolves();
-    sinon.stub(this, 'detectBoardType').resolves();
-    sinon.stub(this, 'detectComponentsInitialize').resolves();
-    sinon.stub(this, 'celebrate').resolves();
-    sinon.stub(this, 'teardown');
-  }
 }

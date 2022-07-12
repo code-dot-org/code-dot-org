@@ -6,11 +6,14 @@ uz:
       Adding Images: Rasm qo'shish
       Adding Screens: Ekran qo'shish
       Alien Defender: O'zga sayyoralik himoyachisi
+      Analog Sensors: Analog Sensorlar
       Animate Your Scene: Sahnani jonlantiring
+      Arrays: Massivlar
       Artist Intro with JR Hildebrand: JR Hildebrand bilan Rassomga muqaddima
       Artist Intro with JR Hildebrande: R Hildebrand bilan Rassomga muqaddima
       Artist Project: Rassom loyihasi
       'Artist: Variables': 'Rassom: O''zgaruvchilar'
+      Assessment: Baholash
       Attribution: Atributlar
       Back and Forth: Oldinga va orqaga
       Basic Conditionals: Shartli bayonorlar asoslari
@@ -23,6 +26,7 @@ uz:
       'Bunny ': 'Bunny quyon'
       CS Discoveries Post-Course Survey: CS Discoveries Post-Course Survey
       CS Discoveries Post-course Survey: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+      CSS Classes: CSS sinflari
       CSS Text Properties: CSS matn xususiyatlari
       CSS and Style Sheets: CSS va stillar
       Cake Defender: Tort himoyachisi
@@ -30,6 +34,7 @@ uz:
       Challenge Levels: Chaqiriq bosqichlari
       Challenges: Chaqiriqlar
       Change: O'zgarish
+      Changing Sensor Scale: Sensor Shkalasini o'zgartirish
       Checking for a Winner: G'olibni tekshirish
       Code Your Own Flappy Game: O'z Flappy o'yiningizni yasang
       Collector Game: Kollektor o'yini
@@ -61,12 +66,17 @@ uz:
       Events: Hodisalar
       Events and Linking Screens: Hodisalar va bog'langan ekranlar
       Events and Properties: Hodisalar va xususiyatlar
+      Example: Misol
       Example projects: Namunaviy loyihalar
       Expanding Personal Website: Shaxsiy veb-saytni kengaytirish
       Expanding Your Website: Veb-saytingizni kengaytirish
       Experiment with Web Lab: Web Lab bilan tajribalar
       Exploration: O‘rganish
+      'Exploration: Adding Style': 'O''rganish: uslub qo''shish'
+      Explore HTML: HTML kodni o'rganing
       Exploring more CSS: CSS-ni ko'proq o'rganish
+      Extra: Extra
+      Final Personal Website: Yakuniy shaxsiy veb-sayt
       Finish a Screen: Ekranni yakunlash
       Finish the Prototype: Prototipni yakunlash
       Finishing Functions: Funksiyalarni yakunlash
@@ -77,13 +87,16 @@ uz:
       For Loops: For sikllari
       For Loops and Color LEDs: For sikllari va LED ranglari
       For Loops and Repeat Blocks: For sikllari va Repeat bloki
+      Formatting HTML: HTML-da formatlash
       Functions: Funksiyalar
       Functions with Parameters: Funksiyalar (parameterlari bilan)
       Geometric Sun: Geometrik Quyosh
       Get In Formation: Formatsiyaga kirish
       Getters and Setters: Getters and Setters
       Getting Properties: Getting Properties
+      HTML Tags: HTML Teglar
       Headings: Headings
+      Headings in HTML: HTML-da sarlavhalar
       How to Create a Simple Function: Oddiy funksiya qanday yasaladi
       How to Make a Sprite: Sprite qanday qilinadi
       Hyperlinks: Giperhavolalar
@@ -98,16 +111,20 @@ uz:
       Intro to Variables: O'zgaruvchilarda kirish
       Introducing Sprite Lab: Sprite laboratoriyasi bilan tanishish
       Introduction to Arrays: Massivlar bilan tanishish
+      Introduction to Variables: Oʻzgaruvchilar mavzusiga kirish
       Iteration and Parameters: Iteratsiya va Parametrlar
       Keeping Data Secret: Keeping Data Secret
       Keyboard Input: Keyboard Input
       LED Apps: LED ilovalar
+      Layout Properties: Maket (Layout) xususiyatlari
       Layout with CSS: CSS bilan ko'rinishlar (layout)
       Learning from Simulations: Simulyatsiya yordamida o'rganish
       Lesson Extras: Dars qo‘shimchalari
+      Levels: Darajalar
       Light Show: Chiroqlar shousi
       Linking Screens: Linking Screens
       Lists: Ro‘yxatlar
+      Lists in HTML: HTML-da ro'yxatlar
       Loops with the Artist: Rassom bilan sikllar
       Make it Interactive: Interfaollik qo'shish
       Making Scenes: Sahna yaratish
@@ -115,6 +132,7 @@ uz:
       Making Sounds: Tovush yaratish
       'Maze Intro: Programming with Blocks': 'Labirintga kirish: Blocklar bilan dasturlash'
       Measures: O'lchovlar
+      'Minecraft: Hero''s Journey': 'Minecraft: Hero''s Journey'
       'Mini-Project: About Me': 'Men haqimda Sprite Lab bilan'
       'Mini-Project: Alien Dance Moves': 'Mini-loyiha: Alien Dance Moves'
       'Mini-Project: Alien Dance Party': 'Mini-loyiha: Alien Dance Party'
@@ -164,6 +182,8 @@ uz:
       Properties: Xususiyatlar
       Quarter Notes: Chorak notalar
       RGB Exploration: RGB bilan tanishish
+      RGB Widget: RGB vidjet
+      Random Numbers: Tasodifiy sonlar
       Reading Sensors: Sensorlarni o'qish
       Reflection: Reflection
       Repeat Blocks: Repeat bloklari
@@ -177,6 +197,7 @@ uz:
       Revise Sprite Lab Project: Sprite Lab loyihasini qayta ko'rib chiqish
       Robot Doodle: Robot Doodle
       Run a simulation: Simulyatorni ishga tushurish
+      Sample Program: Dastur shabloni
       Sample Programs: Dastur shabloni
       Screen Design: Ekran dizayni
       Sensor Events: Sensor Hodisalari
@@ -192,7 +213,9 @@ uz:
       Speed it Up, Slow it Down: Tezlashtiring, sekinlashtiring
       Sprite Lab Example Project: Sprite Lab namuna uchun loyiha
       Sprite Lab Project: Sprite Lab loyihasi
+      Sprite Movement: Sprite Movement
       Sprite Properties: Sprait hususiyatlari
+      Sprite Velocity: Sprayt tezligi
       Sprites and the Draw Loop: Spraytlar va Draw sikli
       Star Chaser: Yulduzli poyga
       Styling Text: Matn stilini sozlash
@@ -201,6 +224,7 @@ uz:
       Text Compression: Matnni Zichlash
       The Animation Tab: Animatsiya yorlig‘i
       The Artist in Code Studio: '"Code Studio"da Rassom'
+      The Body Element: Body elementi
       The Buzzer: Buzzer
       The Collector: Kollektor
       The Harvester: Terimchi (Harvester)
@@ -216,6 +240,14 @@ uz:
       Velocity: Tezlik
       Video: Video
       'Video: CS Matters': 'Video: Kompyuter fanlari muhim'
+      'Video: For Loops': 'Video: For sikli'
+      'Video: Intro to CSS': 'Video: CSS-ga kirish'
+      'Video: Intro to CSS Part 2': 'Video: CSS-ga kirish - 2-qism'
+      'Video: Intro to Web Lab - Part 1': 'Video: Web Lab-ga kirish - 1-qism'
+      'Video: Intro to Web Lab - Part 2': 'Video: Web Lab-ga kirish - 2-qism'
+      'Video: Introduction to Arrays': 'Video: Massivlar bilan tanishish'
+      'Video: Problem Solving Process': 'Video: Muammoni yechish jarayoni'
+      'Video: Velocity': 'Video: Tezlik'
       'Video: What Makes a Computer, a Computer?': 'Video: Kompyuter kompyuter boʻlishi uchun nima kerak?'
       Warm Up: Qizdirish
       Website Project: Veb-sayt loyihasi
@@ -224,4 +256,5 @@ uz:
       While Loops with the Farmer: While Loops with the Farmer
       Wrap-up: Yakun
       Your Personal Website: O'z shaxsiy veb-saytingiz
+      getProperty: getProperty
       isTouching: isTouching

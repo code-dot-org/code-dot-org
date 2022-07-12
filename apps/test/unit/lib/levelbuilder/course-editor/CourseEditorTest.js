@@ -11,11 +11,15 @@ import {
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import createResourcesReducer from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {Provider} from 'react-redux';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
-import {PublishedState} from '@cdo/apps/util/sharedConstants';
+import {
+  PublishedState,
+  InstructionType,
+  InstructorAudience,
+  ParticipantAudience
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 const defaultProps = {
@@ -31,14 +35,17 @@ const defaultProps = {
     '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   initialUnitsInCourse: ['CSP Unit 1', 'CSP Unit 2'],
   unitNames: ['CSP Unit 1', 'CSP Unit 2'],
-  initialTeacherResources: [],
   initialHasVerifiedResources: false,
   initialHasNumberedUnits: false,
   courseFamilies: ['CSP', 'CSD', 'CSF'],
   versionYearOptions: ['2017', '2018', '2019'],
   initialAnnouncements: [],
-  useMigratedResources: false,
-  coursePath: '/courses/test-course'
+  coursePath: '/courses/test-course',
+  initialInstructionType: InstructionType.teacher_led,
+  initialInstructorAudience: InstructorAudience.teacher,
+  initialParticipantAudience: ParticipantAudience.student,
+  teacherResources: [],
+  studentResources: []
 };
 
 describe('CourseEditor', () => {
@@ -71,61 +78,16 @@ describe('CourseEditor', () => {
   };
 
   describe('Teacher Resources', () => {
-    it('adds empty resources if passed none', () => {
-      const wrapper = shallow(<CourseEditor {...defaultProps} />);
-      assert.deepEqual(wrapper.state('teacherResources'), [
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''}
-      ]);
-    });
-
-    it('adds empty resources if passed fewer than max', () => {
+    it('uses the resource component for resources', () => {
       const wrapper = shallow(
         <CourseEditor
           {...defaultProps}
-          initialTeacherResources={[
-            {type: ResourceType.curriculum, link: '/foo'}
-          ]}
-        />
-      );
-      assert.deepEqual(wrapper.state('teacherResources'), [
-        {type: ResourceType.curriculum, link: '/foo'},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''}
-      ]);
-    });
-
-    it('uses the migrated resource component for migrated resources', () => {
-      const wrapper = shallow(
-        <CourseEditor
-          {...defaultProps}
-          useMigratedResources
-          initialMigratedTeacherResources={[
+          teacherResources={[
             {id: 1, key: 'curriculum', name: 'Curriculum', url: '/foo'}
           ]}
         />
       );
-      expect(
-        wrapper
-          .find('ResourcesEditor')
-          .first()
-          .props().useMigratedResources
-      ).to.be.true;
+      expect(wrapper.find('ResourcesEditor').first()).to.exist;
     });
   });
 
@@ -133,11 +95,12 @@ describe('CourseEditor', () => {
     const wrapper = createWrapper({});
     assert.equal(wrapper.find('textarea').length, 3);
     assert.equal(wrapper.find('CourseUnitsEditor').length, 1);
-    assert.equal(wrapper.find('ResourcesEditor').length, 1);
-    assert.equal(wrapper.find('ResourcesDropdown').length, 1);
-    assert.equal(wrapper.find('CollapsibleEditorSection').length, 4);
+    assert.equal(wrapper.find('ResourcesEditor').length, 2);
+    assert.equal(wrapper.find('ResourcesDropdown').length, 0);
+    assert.equal(wrapper.find('CollapsibleEditorSection').length, 6);
     assert.equal(wrapper.find('AnnouncementsEditor').length, 1);
     assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
+    assert.equal(wrapper.find('CourseTypeEditor').length, 1);
   });
 
   it('has correct markdown for preview of course teacher and student description', () => {
@@ -351,5 +314,71 @@ describe('CourseEditor', () => {
 
       $.ajax.restore();
     });
+  });
+
+  it('shows error when version year is set but family name is not', () => {
+    sinon.stub($, 'ajax');
+    const wrapper = createWrapper({});
+
+    const courseEditor = wrapper.find('CourseEditor');
+    courseEditor.setState({
+      versionYear: '1991',
+      familyName: ''
+    });
+
+    const saveBar = wrapper.find('SaveBar');
+
+    const saveAndKeepEditingButton = saveBar.find('button').at(1);
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+      .true;
+    saveAndKeepEditingButton.simulate('click');
+
+    expect($.ajax).to.not.have.been.called;
+
+    expect(courseEditor.state().isSaving).to.equal(false);
+    expect(courseEditor.state().error).to.equal(
+      'Please set both version year and family name.'
+    );
+
+    expect(
+      wrapper
+        .find('.saveBar')
+        .contains('Error Saving: Please set both version year and family name.')
+    ).to.be.true;
+
+    $.ajax.restore();
+  });
+
+  it('shows error when family name is set but version year is not', () => {
+    sinon.stub($, 'ajax');
+    const wrapper = createWrapper({});
+
+    const courseEditor = wrapper.find('CourseEditor');
+    courseEditor.setState({
+      versionYear: '',
+      familyName: 'new-family-name'
+    });
+
+    const saveBar = wrapper.find('SaveBar');
+
+    const saveAndKeepEditingButton = saveBar.find('button').at(1);
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+      .true;
+    saveAndKeepEditingButton.simulate('click');
+
+    expect($.ajax).to.not.have.been.called;
+
+    expect(courseEditor.state().isSaving).to.equal(false);
+    expect(courseEditor.state().error).to.equal(
+      'Please set both version year and family name.'
+    );
+
+    expect(
+      wrapper
+        .find('.saveBar')
+        .contains('Error Saving: Please set both version year and family name.')
+    ).to.be.true;
+
+    $.ajax.restore();
   });
 });

@@ -85,6 +85,17 @@ class LevelLoader
       update_columns = Level.columns.map(&:name).map(&:to_sym).
         reject {|column| %i(id name created_at).include? column}
       Level.import! changed_levels, on_duplicate_key_update: update_columns
+
+      # now we want to run some after_save callbacks, which didn't get run when
+      # by run_callbacks earlier. it seems too risky to run all after_save
+      # callbacks automatically, because someone modifying the level edit
+      # experience of any individual level could add an after_save callback
+      # which modifies the DB and which they expect to get run only on
+      # levelbuilder. so, just run the callbacks we're sure we need instead.
+      changed_levels.each do |level|
+        level.setup_contained_levels
+        level.setup_project_template_level
+      end
     end
   end
 

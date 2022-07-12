@@ -2,55 +2,31 @@
   "fa-AF": {
     "data": {
       "vocabularies": {
-        "click/pre-express/2021": {
+        "caesar_cipher_/hoc-encryption/unversioned": {
           "word": "",
           "definition": ""
         },
-        "drag/pre-express/2021": {
+        "cipher/hoc-encryption/unversioned": {
           "word": "",
           "definition": ""
         },
-        "drop/pre-express/2021": {
+        "cracking_encryption/hoc-encryption/unversioned": {
           "word": "",
           "definition": ""
         },
-        "double_click/pre-express/2021": {
+        "decryption/hoc-encryption/unversioned": {
           "word": "",
           "definition": ""
         },
-        "algorithm/pre-express/2021": {
+        "encryption/hoc-encryption/unversioned": {
           "word": "",
           "definition": ""
         },
-        "bug/pre-express/2021": {
+        "random_substitution_cipher/hoc-encryption/unversioned": {
           "word": "",
           "definition": ""
         },
-        "debugging/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/pre-express/2021": {
+        "lossless_compression/text-compression/unversioned": {
           "word": "",
           "definition": ""
         }

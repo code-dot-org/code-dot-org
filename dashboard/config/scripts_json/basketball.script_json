@@ -4,16 +4,19 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
-      "tts": true,
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "tts": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "basketball",
-    "serialized_at": "2021-09-29 17:42:25 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-03-17 22:44:11 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "basketball"
     }
@@ -536,8 +539,8 @@
       "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing",
       "key": "events-in-bounce-how-do-they-happen",
       "properties": {
-        "type": "Slide Deck",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slide Deck"
       },
       "seeding_key": {
         "resource.key": "events-in-bounce-how-do-they-happen"
@@ -560,16 +563,6 @@
   ],
   "vocabularies": [
     {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
       "key": "code",
       "word": "code",
       "definition": "(v) to write code, or to write instructions for a computer.",
@@ -590,6 +583,16 @@
       }
     },
     {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
       "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
@@ -601,12 +604,6 @@
     }
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Bounce",
-        "vocabulary.key": "event"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Bounce",
@@ -622,6 +619,12 @@
     {
       "seeding_key": {
         "lesson.key": "Bounce",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bounce",
         "vocabulary.key": "program"
       }
     }
@@ -630,46 +633,6 @@
 
   ],
   "objectives": [
-    {
-      "key": "901c5c67-68b8-4eef-9d36-2966bbe0ce05",
-      "properties": {
-        "description": "Identify actions that correlate to input events."
-      },
-      "seeding_key": {
-        "lesson.key": "Bounce",
-        "objective.key": "901c5c67-68b8-4eef-9d36-2966bbe0ce05"
-      }
-    },
-    {
-      "key": "73964b0e-cea1-43cf-a130-410017addf73",
-      "properties": {
-        "description": "Create an interactive game using sequence and event-handlers."
-      },
-      "seeding_key": {
-        "lesson.key": "Bounce",
-        "objective.key": "73964b0e-cea1-43cf-a130-410017addf73"
-      }
-    },
-    {
-      "key": "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f",
-      "properties": {
-        "description": "Share a creative artifact with other students."
-      },
-      "seeding_key": {
-        "lesson.key": "Bounce",
-        "objective.key": "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f"
-      }
-    },
-    {
-      "key": "8b4629a9-0621-4442-9801-e3b61e4fbaf3",
-      "properties": {
-        "description": "Define “coding” and “computer science.”"
-      },
-      "seeding_key": {
-        "lesson.key": "Bounce",
-        "objective.key": "8b4629a9-0621-4442-9801-e3b61e4fbaf3"
-      }
-    },
     {
       "key": "16a00a1c-4559-4e9c-95e1-1cd1e542fe68",
       "properties": {
@@ -688,6 +651,46 @@
       "seeding_key": {
         "lesson.key": "Bounce",
         "objective.key": "5e05fbeb-12c6-437c-b0c4-5e2057d3d975"
+      }
+    },
+    {
+      "key": "73964b0e-cea1-43cf-a130-410017addf73",
+      "properties": {
+        "description": "Create an interactive game using sequence and event-handlers."
+      },
+      "seeding_key": {
+        "lesson.key": "Bounce",
+        "objective.key": "73964b0e-cea1-43cf-a130-410017addf73"
+      }
+    },
+    {
+      "key": "8b4629a9-0621-4442-9801-e3b61e4fbaf3",
+      "properties": {
+        "description": "Define “coding” and “computer science.”"
+      },
+      "seeding_key": {
+        "lesson.key": "Bounce",
+        "objective.key": "8b4629a9-0621-4442-9801-e3b61e4fbaf3"
+      }
+    },
+    {
+      "key": "901c5c67-68b8-4eef-9d36-2966bbe0ce05",
+      "properties": {
+        "description": "Identify actions that correlate to input events."
+      },
+      "seeding_key": {
+        "lesson.key": "Bounce",
+        "objective.key": "901c5c67-68b8-4eef-9d36-2966bbe0ce05"
+      }
+    },
+    {
+      "key": "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f",
+      "properties": {
+        "description": "Share a creative artifact with other students."
+      },
+      "seeding_key": {
+        "lesson.key": "Bounce",
+        "objective.key": "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f"
       }
     }
   ],

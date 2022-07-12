@@ -4,14 +4,19 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_course": true,
       "is_migrated": true,
-      "weekly_instructional_minutes": 225,
-      "project_sharing": true
+      "project_sharing": true,
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-07-20 22:21:31 UTC",
+    "family_name": "poster-draft",
+    "serialized_at": "2022-04-08 15:41:09 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "poster-draft"
     }

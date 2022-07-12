@@ -34,10 +34,12 @@ class Resource < ApplicationRecord
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
   validates_format_of :key, with: KEY_RE, message: "must contain only lowercase alphanumeric characters, dashes, and underscores; got \"%{value}\"."
 
+  validates_presence_of :name
+
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
   has_and_belongs_to_many :scripts, join_table: :scripts_resources
   has_and_belongs_to_many :unit_groups, join_table: :unit_groups_resources
-  belongs_to :course_version
+  belongs_to :course_version, optional: true
 
   before_validation :generate_key, on: :create
 
@@ -95,7 +97,7 @@ class Resource < ApplicationRecord
       url: get_localized_property(:url),
       download_url: download_url,
       audience: audience || 'All',
-      type: type
+      type: get_localized_property(:type)
     }
   end
 
@@ -153,7 +155,7 @@ class Resource < ApplicationRecord
     # to do something manual.
     key_prefix = name.strip.downcase.chars.map do |character|
       KEY_CHAR_RE.match(character) ? character : '_'
-    end.join.gsub(/_+/, '_')
+    end.join.squeeze('_')
     potential_clashes = course_version_id ? Resource.where(course_version_id: course_version_id) : Resource.all
     potential_clashes = potential_clashes.where("resources.key like '#{key_prefix}%'").pluck(:key)
     return key_prefix unless potential_clashes.include?(key_prefix)

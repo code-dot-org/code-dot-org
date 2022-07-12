@@ -4,11 +4,11 @@ title 'Terminology Matching'
 height '75'
 
 question 'Big Data'
-answer 'Internet Protocol (IP)'
+answer 'Collect huge amounts of data so we can learn even more from it'
 question 'Open Data'
-answer 'Transmission Control Protocol (TCP)'
+answer 'Sharing data with others so they can can analyze it'
 question 'Crowdsourced Data'
-answer 'And'
+answer 'Collecting data from others so you can analyze it'
 
 
 markdown <<MARKDOWN

@@ -23,6 +23,9 @@ RUN_ALL_TESTS_TAG = 'test all'.freeze
 # Only run apps tests on container 0
 RUN_APPS_TESTS_TAG = 'test apps'.freeze
 
+# Don't run any apps tests
+SKIP_APPS_TESTS_FLAG = 'skip apps'.freeze
+
 # Don't run any UI or Eyes tests.
 SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 
@@ -34,10 +37,6 @@ SKIP_CHROME_TAG = 'skip chrome'.freeze
 
 # Run UI tests against Firefox
 TEST_FIREFOX_TAG = 'test firefox'.freeze
-
-# Run UI tests against IE11
-TEST_IE_TAG = 'test ie'.freeze
-TEST_IE_VERBOSE_TAG = 'test internet explorer'.freeze
 
 # Run UI tests against Safari
 TEST_SAFARI_TAG = 'test safari'.freeze
@@ -68,6 +67,9 @@ namespace :circle do
     elsif CircleUtils.tagged?(RUN_APPS_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
       RakeUtils.rake_stream_output 'test:apps'
+      RakeUtils.rake_stream_output 'test:changed:all_but_apps'
+    elsif CircleUtils.tagged?(SKIP_APPS_TESTS_FLAG)
+      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_APPS_TESTS_FLAG}], skipping apps tests."
       RakeUtils.rake_stream_output 'test:changed:all_but_apps'
     elsif CircleUtils.tagged?(SKIP_UNIT_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UNIT_TESTS_TAG}], skipping unit tests."
@@ -122,7 +124,7 @@ namespace :circle do
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
             " --eyes" \
             " --feature #{container_eyes_features.join(',')}" \
-            " --config Chrome,iPhone,IE11" \
+            " --config Chrome,iPhone" \
             " --pegasus localhost.code.org:3000" \
             " --dashboard localhost-studio.code.org:3000" \
             " --circle" \
@@ -177,7 +179,6 @@ def browsers_to_run
   browsers = []
   browsers << 'Chrome' unless CircleUtils.tagged?(SKIP_CHROME_TAG)
   browsers << 'Firefox' if CircleUtils.tagged?(TEST_FIREFOX_TAG) || CircleUtils.tagged?(TEST_ALL_BROWSERS_TAG)
-  browsers << 'IE11' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG) || CircleUtils.tagged?(TEST_ALL_BROWSERS_TAG)
   browsers << 'Safari' if CircleUtils.tagged?(TEST_SAFARI_TAG) || CircleUtils.tagged?(TEST_ALL_BROWSERS_TAG)
   browsers << 'iPad' if CircleUtils.tagged?(TEST_IPAD_TAG) || CircleUtils.tagged?(TEST_IOS_TAG) || CircleUtils.tagged?(TEST_ALL_BROWSERS_TAG)
   browsers << 'iPhone' if CircleUtils.tagged?(TEST_IPHONE_TAG) || CircleUtils.tagged?(TEST_IOS_TAG) || CircleUtils.tagged?(TEST_ALL_BROWSERS_TAG)

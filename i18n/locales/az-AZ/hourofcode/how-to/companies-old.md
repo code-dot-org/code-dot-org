@@ -85,7 +85,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 - They can try another Hour of Code activity at hourofcode.com/learn.
 - Or, ask them to help a friend who are having trouble with the activity.
 
-## 7) Bayram etmək
+## 7) Bayram edin
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.

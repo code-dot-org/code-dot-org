@@ -2,12 +2,6 @@
 hu:
   data:
     script:
-      category:
-        csf_category_name: A számítógép-tudomány alapjai
-        csf_international_category_name: A számítógép-tudomány alapjai - nemzetközi
-        hoc_category_name: A kódolás órája
-        math_category_name: Matematika
-        other_category_name: Egyéb
       name:
         course1:
           title: 1.  tanfolyam
@@ -176,7 +170,7 @@ hu:
           description_short: Használj kódot, és csatlakozz Annához és Elsához, akik felfedezik a jég varázslatos és szépséges világát.
           lessons:
             Artist:
-              name: Művész
+              name: Kódolás Annával és Elsával
           student_description: Használjuk a programozást, hogy csatlakozzunk Annához és Elsához, ahogy felfedezik a jég varázsát és szépségét. Hópihéket fogsz készíteni és mintákat ahogy jégkorcsolyázol, és így egy téli csodaországot készítesz, amelyet majd megoszthatsz a barátaiddal!
         course4:
           title: 4.  tanfolyam
@@ -287,7 +281,7 @@ hu:
           description_short: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney Infinity szereplőkkel.
           lessons:
             Infinity:
-              name: Végtelen
+              name: Disney Infinity játéklabor
           student_description: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney Infinity szereplőkkel.
         algebrademo:
           lessons:
@@ -301,6 +295,8 @@ hu:
           lessons:
             K-5 Courses:
               name: Alsó tagozatos tanfolyamok
+            Reflection:
+              name: Tükrözés
             Teacher Dashboard:
               name: Tanári nyitólap
             Unplugged lessons:
@@ -422,6 +418,12 @@ hu:
           lessons:
             Puzzles:
               name: Feladványok
+        cspunit1:
+          lessons:
+            Binary Numbers:
+              name: Bináris számok
+            Text Compression:
+              name: Szöveg tömörítése
         algebraPD:
           lessons:
             Evaluation Blocks:
@@ -436,6 +438,11 @@ hu:
               name: Értékelési blokk
             Strings and Images:
               name: Húrok és Képek
+        text-compression:
+          title: Szöveg tömörítése
+          lessons:
+            Text Compression:
+              name: Szöveg tömörítése
         CSPPD:
           lessons:
             Teaching Strategies:
@@ -567,12 +574,16 @@ hu:
               name: Star Wars
             Studio:
               name: Studio
+            Text Compression:
+              name: Szöveg tömörítése
             Web Lab:
               name: Web-Lab
             Sprite Lab:
               name: Sprite labor
             Dance Lab:
               name: Tánc Labor
+            Java Lab:
+              name: Java laboratórium
         algebraPD2b:
           description: '2.  Fázis: Online összetett nyári tanulmány'
           description_short: '2.  Fázis: Online összetett nyári tanulmány'
@@ -606,6 +617,8 @@ hu:
               name: A számítógép-tudomány alapjai
             Getting Started:
               name: Első lépések
+            Planning:
+              name: Tervezés
         ECSPD2:
           description: '2.  Fázis: Online összetett nyári tanulmány'
           description_short: '2.  Fázis: Online összetett nyári tanulmány'
@@ -782,9 +795,6 @@ hu:
         starwarsblocks:
           description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
           description_short: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
-          lessons:
-            Hour of Code 2015:
-              name: A kódolás órája 2015
           student_description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
         mc:
           title: Minecraft Kódolás Órája
@@ -794,6 +804,11 @@ hu:
             Hour of Code 2015:
               name: A kódolás órája 2015
           student_description: Használj blokkokat a programozáshoz és kalandozz el Steve-vel vagy Alexszel a Minecraft világába
+        oceans:
+          title: AI óceánok
+          lessons:
+            Oceans:
+              name: AI óceánok
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -865,6 +880,8 @@ hu:
             csp1_2:
               display_name: '2.  fejezet: Az internet feltalálása'
           lessons:
+            Binary Numbers:
+              name: Bináris számok
             The Internet:
               name: Az internet
             Unit 1 Chapter 1 Assessment:
@@ -877,6 +894,9 @@ hu:
               display_name: '2.  fejezet: Adatok manipulálása és megjelenítése'
             cspSurvey:
               display_name: Kérdőív
+          lessons:
+            Text Compression:
+              name: Szöveg tömörítése
         csp3-2017:
           lesson_groups:
             csp3_1:
@@ -906,6 +926,9 @@ hu:
               display_name: Fejezet végi értékelés
             cspSurvey:
               display_name: Kérdőív
+          lessons:
+            Simple Encryption:
+              name: Egyszerű titkosítás
         csp5-2017:
           lesson_groups:
             csp5_1:
@@ -922,6 +945,8 @@ hu:
         CSDU3-Draft:
           description_short: Programozás
           lessons:
+            Collisions:
+              name: Ütközések
             Sprite Movement Methods:
               name: Sprite mozgatási módszerek
             Functions:
@@ -972,6 +997,12 @@ hu:
           lessons:
             Design Mode:
               name: Tervező mód
+        CSDU1-Draft:
+          description_short: Problémamegoldás
+        CSDU2-Draft:
+          lessons:
+            Peer Review:
+              name: Társ értékelése
         CSDU5-Draft:
           description_short: Adat
         CSF_Secret_Sample_Story:
@@ -1136,14 +1167,18 @@ hu:
             cspSurvey:
               display_name: Kérdőív
           lessons:
+            Collisions:
+              name: Ütközések
             Functions:
               name: funkciók
             Variables:
               name: változók
             Sprites:
-              name: manók
+              name: sprite-ok
             Conditionals:
               name: Feltételek
+            Keyboard Input:
+              name: Billentyűzetbemenet
         grade2:
           description_audience: 5-tól 18 éves korig
           lessons:
@@ -1207,11 +1242,8 @@ hu:
           lessons:
             Intro to Problem Solving:
               name: Bevezetés a problémamegoldásba
-              description_student: 'A tanulók csoportokban dolgoznak, és alufóliából készült hajókat terveznek úgy, hogy azok minél több pénzérmét elbírjanak. A tanóra végén a csoportok reflektálnak a tevékenység során szerzett tapasztalataikra, és összefüggést keresnek azokkal a problémamegoldási helyzetekkel, amelyekkel a kurzus folyamán találkozni fognak. '
-              description_teacher: 'Ebben a leckében a tanulók csoportokban alufóliából kis hajókat készítenek azokat úgy megtervezve, hogy minél több pénzérmét elbírjanak. A csoportoknak két lehetősége lesz dolgozni a hajókon, természetesen a céljuk az lesz, hogy a második körben több érmét bírjon el a hajójuk, mint az első körben. A tevékenység felépítése előrevetíti azokat a problémamegoldási lépéseket, amelyekkel a tanulók részletesebben is megismerkednek a következő órán. A tanóra végén a csoportok reflektálnak a tevékenység során szerzett tapasztalataikra, és összefüggést keresnek azokkal a problémamegoldási helyzetekkel, amelyekkel a kurzus folyamán találkozni fognak. '
             The Problem Solving Process:
               name: A probléma-megoldási folyamat
-              description_student: 'Ez a tanóra bemutatja a problémamegoldási folyamatot, amit az osztály a tanév során használni fog: Meghatározás - Felkészülés - Próba - Reflektálás. Az osztály ezeket a lépéseket összekapcsolja az előző órai alufólia-csónak tervezési problémával, majd egy olyan problémával, aminek a megoldásában ők is jók, majd egy olyan problémával, amelynek a megoldásán javítani szeretnének. A tanóra végére az osztály a folyamat minden lépéséhez összegyűjti az általában használható stratégiákat, és elhelyezi ezeket egy poszteren, amit a fejezet és a tanév során referenciaként használ.'
             What is a Computer?:
               name: Mi az a számítógép?
             Representing Information:
@@ -1246,14 +1278,20 @@ hu:
           title: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
           description_short: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
           description: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
-          lessons:
-            Bounce:
-              name: Ugrál
           student_description: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
+          name: kosárlabda
+        hoc-encryption:
+          lessons:
+            Simple Encryption:
+              name: Egyszerű titkosítás
         csd2-2017:
           lessons:
+            Peer Review:
+              name: Társ értékelése
             Lists:
               name: Listák
+            Headings:
+              name: Címsorok
         csp2-support:
           lesson_groups:
             required:
@@ -1262,6 +1300,10 @@ hu:
               display_name: Tartalom
             practice:
               display_name: Tanítási gyakorlatok
+        csd4-2017:
+          lessons:
+            Linking Screens:
+              name: Képernyők összekapcsolása
         minecraft:
           title: Minecraft Kódolás órája tervező
           description_short: Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban.
@@ -1271,6 +1313,7 @@ hu:
               name: Minecraft Kódolás órája tervező
           student_description: Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban.
         flappy-impact-study:
+          title: Flappy kód felméréssel
           lessons:
             Flappy Code:
               name: Flappy kód
@@ -1287,6 +1330,7 @@ hu:
             Your Digital Footprint:
               name: A digitális lábnyomod
         coursec-draft:
+          description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre saját műalkotásokat, történeteket és játékokat.
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Hétköznapi algoritmusok: Papírrepülők'
@@ -1297,6 +1341,7 @@ hu:
             Building a Foundation:
               name: Az alap megépítése
         coursed-draft:
+          description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre saját műalkotásokat, történeteket és játékokat.
           lessons:
             Conditionals with Cards:
               name: Feltételek kártyákkal
@@ -1311,6 +1356,7 @@ hu:
             Introduction:
               name: Bevezető
         coursee-draft:
+          description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre saját műalkotásokat, történeteket és játékokat.
           lesson_groups:
             content:
               display_name: Tartalom
@@ -1330,6 +1376,7 @@ hu:
             Conditionals:
               name: Feltételek
         coursef-draft:
+          description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre saját műalkotásokat, történeteket és játékokat.
           lesson_groups:
             content:
               display_name: Tartalom
@@ -1356,6 +1403,7 @@ hu:
             Hour of Code 2013:
               name: Kódolás órája 2013
         hoc-impact-study:
+          title: Klasszikus labirintus felméréssel
           description_short: Ismerd meg a számítógép-tudomány alapjait közösen a sok szórakoztató karakterrel!
           lessons:
             Hour of Code 2013:
@@ -1365,6 +1413,7 @@ hu:
           description_short: Kombinálj össze különböző sportágakat
           description: Kombinálj össze különböző sportágakat
           student_description: Kombinálj össze különböző sportágakat
+          name: sportok
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -1442,6 +1491,10 @@ hu:
               name: Számláló ciklusok
             Map:
               name: Térkép
+            Board Events:
+              name: Táblás események
+            Getting Properties:
+              name: Tulajdonságok szerzése
             Functions with Parameters:
               name: Paraméteres függvények
         workshop-gamelab:
@@ -1449,9 +1502,15 @@ hu:
             Introduction:
               name: Bevezető
             Sprites:
-              name: manók
+              name: sprite-ok
             Input:
               name: Bemenet
+        csd5-draft:
+          lessons:
+            Combining Representations:
+              name: Ábrázolások kombinálása
+            Representing Images:
+              name: Képek ábrázolása
         coursed-ramp:
           lessons:
             Introduction:
@@ -1474,8 +1533,16 @@ hu:
               name: Listák
             For Loops:
               name: Számláló ciklusok
+            Board Events:
+              name: Táblás események
+            Getting Properties:
+              name: Tulajdonságok szerzése
             Functions with Parameters:
               name: Paraméteres függvények
+            Board Events_:
+              name: Táblás események
+            Getting Properties_:
+              name: Tulajdonságok szerzése
             Functions with Parameters_:
               name: Paraméteres függvények
         csd3-draft:
@@ -1483,13 +1550,27 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: manók
+              name: sprite-ok
             Conditionals:
               name: Feltételek
+            Keyboard Input:
+              name: Billentyűzetbemenet
+            Collisions:
+              name: Ütközések
             Functions:
               name: funkciók
+        csd5-2017:
+          lessons:
+            Representing Images:
+              name: Képek ábrázolása
+            Combining Representations:
+              name: Ábrázolások kombinálása
+            Keeping Data Secret:
+              name: Adatok titokban tartása
         csd3-old:
           lessons:
+            Collisions:
+              name: Ütközések
             Functions:
               name: funkciók
         csd1-old:
@@ -1527,9 +1608,13 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: manók
+              name: sprite-ok
             Conditionals:
               name: Feltételek
+            Keyboard Input:
+              name: Billentyűzetbemenet
+            Collisions:
+              name: Ütközések
             Functions:
               name: funkciók
             'null':
@@ -1546,6 +1631,10 @@ hu:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+        csd2-old:
+          lessons:
+            Peer Review:
+              name: Társ értékelése
         artist-and-bb8:
           lessons:
             Programming with BB-8:
@@ -1557,26 +1646,48 @@ hu:
             Bounce:
               name: Ugrál
         coursea-2017:
+          title: A tanfolyam
+          assignment_family_title: A tanfolyam
+          description_short: Bevezetés a számítástechnikába az előolvasók számára.
+          description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Valós algoritmusok: Ültess el egy magot!'
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         courseb-2017:
+          title: B tanfolyam
+          assignment_family_title: B tanfolyam
+          description_short: Bevezetés a számítástechnikába az előolvasók számára. (Hasonló az A kurzushoz, de több változatossággal az idősebb diákok számára.)
+          description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Valós algoritmusok: Ültess el egy magot!'
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         coursec-2017:
+          title: C tanfolyam
+          assignment_family_title: C tanfolyam
+          description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre saját műalkotásokat, történeteket és játékokat.
+          description: Hozzon létre programokat szekvenálással, hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Hétköznapi algoritmusok: Papírrepülők'
             Loops with Rey and BB-8:
               name: Ciklusok Reyjel és BB-8-tel
+          student_description: Hozzon létre programokat szekvenálással, hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
         coursed-2017:
+          title: D tanfolyam
+          assignment_family_title: D tanfolyam
+          description_short: Gyorsan fedezze le a C kurzusból származó fogalmakat, majd lépjen tovább algoritmusokkal, beágyazott hurkokkal, feltételekkel stb.
           lessons:
             Nested Loops:
               name: Egymásba ágyazott ciklusok
         coursee-2017:
+          title: E tanfolyam
+          assignment_family_title: E tanfolyam
+          description_short: Gyorsan fedezze le a C és D kurzus fogalmait, majd lépjen tovább a funkciókkal.
+          description: Kezdje el a kódolást algoritmusokkal, hurkokkal, feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
           lesson_groups:
             end_of_course_project:
               display_name: Kurzus Projekt vége
@@ -1595,7 +1706,12 @@ hu:
               name: Az alap megépítése
             Nested Loops:
               name: Egymásba ágyazott ciklusok
+          student_description: Kezdje el a kódolást algoritmusokkal, hurkokkal, feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
         coursef-2017:
+          title: F tanfolyam
+          assignment_family_title: F tanfolyam
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
+          description: Ismerje meg a különböző típusú hurkok, események, függvények és feltételrendszerek használatát. Vizsgálja meg a különböző problémamegoldó technikákat, és vitassa meg a számítástechnika és az internet társadalmi hatásait. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
           lesson_groups:
             end_of_course_project:
               display_name: Kurzus Projekt vége
@@ -1604,6 +1720,7 @@ hu:
               name: 'Algoritmusok: tangram'
             Building a Foundation:
               name: Az alap megépítése
+          student_description: Ismerje meg a különböző típusú hurkok, események, függvények és feltételrendszerek használatát. Vizsgálja meg a különböző problémamegoldó technikákat, és vitassa meg a számítástechnika és az internet társadalmi hatásait. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
         cspnovice:
           lesson_groups:
             required:
@@ -1677,6 +1794,9 @@ hu:
             content:
               display_name: Tartalom
         express-2017:
+          title: Expressz tanfolyam
+          assignment_family_title: Expressz tanfolyam
+          description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
           lesson_groups:
             content:
               display_name: Tartalom
@@ -1701,12 +1821,15 @@ hu:
               name: Az alap megépítése
             Nested Loops:
               name: Egymásba ágyazott ciklusok
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         pre-express-2017:
+          description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Valós algoritmusok: Ültess el egy magot!'
             Spelling Bee:
               name: Betüző méh
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         subgoal-labels-opt-in:
           lessons:
             other:
@@ -1732,6 +1855,10 @@ hu:
               name: Paraméteres függvények készítése
             Unit 3 Chapter 1 Assessment:
               name: 3.  lecke 1. fejezet végi értékelés
+        csd4-draft:
+          lessons:
+            Linking Screens:
+              name: Képernyők összekapcsolása
         e-f-ramp:
           lesson_groups:
             end_of_course_project:
@@ -1814,6 +1941,12 @@ hu:
               name: Szórakozás a For ciklussal
             Songwriting with Parameters:
               name: Dalszerzés paraméterekkel
+        csd5-old:
+          lessons:
+            Representing Images:
+              name: Képek ábrázolása
+            Combining Representations:
+              name: Ábrázolások kombinálása
         csp3-staging:
           lesson_groups:
             csp3_1:
@@ -1835,12 +1968,27 @@ hu:
           lessons:
             What is a Computer?:
               name: Mi az a számítógép?
+            Simple Encryption:
+              name: Egyszerű titkosítás
+        allthesurveys:
+          lessons:
+            CSP pre-survey 21-2:
+              name: CSP előzetes felmérés 21-22
+            CSD pre-survey 21-2:
+              name: CSD előzetes felmérés 21-22
+            CS Principles Pre-survey:
+              name: CSA előzetes felmérés tervezete
+            Course Survey:
+              name: CSA tanfolyam utáni felmérés tervezete
         hero:
+          title: 'Minecraft: Hős utazás'
+          description_short: A Minecraft visszatért egy vadonatúj tevékenységgel a Hour of Code játékhoz!
           description: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével.
           lessons:
             Minecraft Hour of Code:
-              name: Minecraft Kódolás Órája
+              name: 'Minecraft: Hős utazás'
           student_description: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével.
+          name: hős
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -1901,9 +2049,13 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: manók
+              name: sprite-ok
             Conditionals:
               name: Feltételek
+            Keyboard Input:
+              name: Billentyűzetbemenet
+            Collisions:
+              name: Ütközések
             Functions:
               name: funkciók
         glj-behavior-test:
@@ -1918,25 +2070,43 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: manók
+              name: sprite-ok
             Conditionals:
               name: Feltételek
+            Keyboard Input:
+              name: Billentyűzetbemenet
+            Collisions:
+              name: Ütközések
             Functions:
               name: funkciók
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
         csd2-2018:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
           lessons:
+            Headings:
+              name: Címsorok
             Lists:
               name: Listák
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
         coursea-2018:
+          title: A tanfolyam (2018)
+          assignment_family_title: A tanfolyam
+          description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
+          description_short: Bevezetés a számítástechnikába az előolvasók számára.
           lessons:
             'Programming: Happy Maps':
               name: Vidám térképek
             Going Places Safely:
               name: Biztonságos utazás
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         express-2018:
+          title: Expressz tanfolyam
+          assignment_family_title: Expressz tanfolyam
+          description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Grafikus programozás
@@ -1948,6 +2118,8 @@ hu:
               name: Egymásba ágyazott ciklusok
             'Events: The Big Event':
               name: A nagy esemény
+            While Loops in Farmer:
+              name: 'Videó: While hurkok a farmerrel'
             'Loops: Getting Loopy':
               name: Ciklikusság
             Loops with Rey and BB-8:
@@ -1972,7 +2144,11 @@ hu:
               name: Váltó programozás
             Graph Paper Programming:
               name: Grafikus programozás
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         courseb-2018:
+          title: B tanfolyam (2018)
+          assignment_family_title: B tanfolyam
+          description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Valós algoritmusok: Ültess el egy magot!'
@@ -1984,7 +2160,10 @@ hu:
               name: Gyerünk, gyerünk!
             Copyright and Creativity:
               name: Remek dolog tisztességesen alkotni és játszani
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         coursed-2018:
+          title: D tanfolyam (2018)
+          assignment_family_title: D tanfolyam
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Grafikus programozás
@@ -2007,6 +2186,10 @@ hu:
             Using Behaviors:
               name: Viselkedések használata
         coursec-2018:
+          title: C tanfolyam (2018)
+          assignment_family_title: C tanfolyam
+          description: Hozzon létre programokat szekvenálással, hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
+          description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre saját műalkotásokat, történeteket és játékokat.
           lessons:
             Building a Foundation:
               name: Az alap megépítése
@@ -2018,6 +2201,7 @@ hu:
               name: A nagy esemény
             Binary Bracelets:
               name: Bináris karkötők
+          student_description: Hozzon létre programokat szekvenálással, hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
         csd6-2018:
           lesson_groups:
             cspSurvey:
@@ -2025,9 +2209,18 @@ hu:
           lessons:
             Functions with Parameters_:
               name: Paraméteres függvények\_
+            Board Events:
+              name: Táblás események
+            Getting Properties:
+              name: Tulajdonságok szerzése
             Functions with Parameters:
               name: Paraméteres függvények
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
         coursee-2018:
+          title: E tanfolyam (2018)
+          assignment_family_title: E tanfolyam
+          description: Kezdje el a kódolást algoritmusokkal, hurkokkal, feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
           lesson_groups:
             end_of_course_project:
               display_name: Kurzus Projekt vége
@@ -2054,7 +2247,12 @@ hu:
               name: Minecraft Kódolás Órája
             Copyright and Creativity:
               name: Digitális megosztás
+          student_description: Kezdje el a kódolást algoritmusokkal, hurkokkal, feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
         coursef-2018:
+          title: F tanfolyam (2018)
+          assignment_family_title: F tanfolyam
+          description: Ismerje meg a különböző típusú hurkok, események, függvények és feltételrendszerek használatát. Vizsgálja meg a különböző problémamegoldó technikákat, és vitassa meg a számítástechnika és az internet társadalmi hatásait. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
           lesson_groups:
             end_of_course_project:
               display_name: Kurzus Projekt vége
@@ -2079,6 +2277,7 @@ hu:
               name: Dalszerzés paraméterekkel
             Conditionals with Cards:
               name: Feltételek kártyákkal
+          student_description: Ismerje meg a különböző típusú hurkok, események, függvények és feltételrendszerek használatát. Vizsgálja meg a különböző problémamegoldó technikákat, és vitassa meg a számítástechnika és az internet társadalmi hatásait. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
         csp1-2018:
           lesson_groups:
             cspSurvey:
@@ -2088,6 +2287,8 @@ hu:
             csp1_2:
               display_name: '2.  fejezet: Az internet feltalálása'
           lessons:
+            Binary Numbers:
+              name: Bináris számok
             Unit 1 Chapter 1 Assessment:
               name: 1.  lecke 1. fejezet végi értékelés
             The Internet:
@@ -2104,26 +2305,41 @@ hu:
           lessons:
             Intro to Problem Solving:
               name: Bevezetés a problémamegoldásba
-              description_student: 'A tanulók csoportokban dolgoznak, és alufóliából készült hajókat terveznek úgy, hogy azok minél több pénzérmét elbírjanak. A tanóra végén a csoportok reflektálnak a tevékenység során szerzett tapasztalataikra, és összefüggést keresnek azokkal a problémamegoldási helyzetekkel, amelyekkel a kurzus folyamán találkozni fognak. '
             The Problem Solving Process:
               name: A probléma-megoldási folyamat
-              description_student: 'Ez a tanóra bemutatja a problémamegoldási folyamatot, amit az osztály a tanév során használni fog: Meghatározás - Felkészülés - Próba - Reflektálás. Az osztály ezeket a lépéseket összekapcsolja az előző órai alufólia-csónak tervezési problémával, majd egy olyan problémával, aminek a megoldásában ők is jók, majd egy olyan problémával, amelynek a megoldásán javítani szeretnének. A tanóra végére az osztály a folyamat minden lépéséhez összegyűjti az általában használható stratégiákat, és elhelyezi ezeket egy poszteren, amit a fejezet és a tanév során referenciaként használ.'
             What is a Computer?:
               name: Mi az a számítógép?
         csd4-2018:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          lessons:
+            Linking Screens:
+              name: Képernyők összekapcsolása
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
         csd5-2018:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          lessons:
+            Representing Images:
+              name: Képek ábrázolása
+            Keeping Data Secret:
+              name: Adatok titokban tartása
+            Combining Representations:
+              name: Ábrázolások kombinálása
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
         csp2-2018:
           lesson_groups:
             csp2_1_2018:
               display_name: '2.  fejezet: Digitális információ'
             cspAssessment:
               display_name: Fejezet végi értékelés
+          lessons:
+            Text Compression:
+              name: Szöveg tömörítése
         csp3-2018:
           lesson_groups:
             cspAssessment:
@@ -2157,6 +2373,9 @@ hu:
               display_name: Fejezet végi értékelés
             cspSurvey:
               display_name: Kérdőív
+          lessons:
+            Simple Encryption:
+              name: Egyszerű titkosítás
         csp5-2018:
           lesson_groups:
             csp5_1:
@@ -2275,6 +2494,7 @@ hu:
             content:
               display_name: Tartalom
         pre-express-2018:
+          description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Valós algoritmusok: Ültess el egy magot!'
@@ -2288,6 +2508,7 @@ hu:
               name: Remek dolog tisztességesen alkotni és játszani
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         fit-test:
           lesson_groups:
             required:
@@ -2309,6 +2530,7 @@ hu:
             Dance Party:
               name: Táncos buli
           student_description: Kódold le saját táncos bulidat, és oszd meg az ismerőseiddel!
+          name: tánc
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -2318,7 +2540,12 @@ hu:
           description_short: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára!
           lessons:
             Aquatic:
-              name: Tengeri
+              name: 'Minecraft: Tengeri utazás'
+          name: vízi
+        sconyers:
+          lessons:
+            Linking Screens:
+              name: Képernyők összekapcsolása
         dance--draft:
           lessons:
             Dance Party:
@@ -2335,10 +2562,15 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         dance-extras:
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
           student_description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
         coursef-2019:
+          title: F tanfolyam (2019)
+          description: Ismerje meg a különböző típusú hurkok, események, függvények és feltételrendszerek használatát. Vizsgálja meg a különböző problémamegoldó technikákat, és vitassa meg a számítástechnika és az internet társadalmi hatásait. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
           lesson_groups:
             csf_variables:
               display_name: változók
@@ -2349,7 +2581,7 @@ hu:
             csf_internet:
               display_name: Internet
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             csf_digcit:
               display_name: Digitális állampolgárság
             end_of_course_project:
@@ -2375,11 +2607,14 @@ hu:
               name: Csoportos megoldás
             Digital Sharing:
               name: Digitális megosztás
+          student_description: Ismerje meg a különböző típusú hurkok, események, függvények és feltételrendszerek használatát. Vizsgálja meg a különböző problémamegoldó technikákat, és vitassa meg a számítástechnika és az internet társadalmi hatásait. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
         dance-low:
           lessons:
             Dance Party:
               name: Táncos buli
         coursed-2019:
+          title: D tanfolyam (2019)
+          description: A diákok fejlesztik a hurkok, feltételrendszerek és események megértését. A kódoláson túl a diákok megismerik a digitális állampolgárságot.
           lesson_groups:
             csf_events:
               display_name: Események
@@ -2398,7 +2633,6 @@ hu:
               name: Grafikus programozás
             Relay Programming:
               name: Váltó programozás
-              description_teacher: Ez a tevékenység egy rövid leckével kezdődik a hibakeresésről és a kitartásról, majd gyorsan átalakul a verseny az idővel játékká, a diákok csapatokra osztódnak és együtt dolgoznak, hogy programot írjanak egy-egy utasításra.
             Conditionals with Cards:
               name: Feltételek kártyákkal
             Digital Citizenship:
@@ -2407,10 +2641,13 @@ hu:
               name: Bináris képek
             Dance Party:
               name: Táncos buli
+          student_description: A diákok fejlesztik a hurkok, feltételrendszerek és események megértését. A kódoláson túl a diákok megismerik a digitális állampolgárságot.
         coursee-2019:
+          title: E tanfolyam (2019)
+          description: Kezdje el a kódolást algoritmusokkal, hurkokkal, feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
           lesson_groups:
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_nested_loops:
@@ -2436,13 +2673,19 @@ hu:
               name: Csoportos megoldás
             End of Course Project:
               name: Kurzus Projekt vége
+            Access Ability:
+              name: Hozzáférhetőség tervezése
             Digital Sharing:
               name: Digitális megosztás
             Simon Says:
               name: Simon mondja
+            Designing for Accessibility:
+              name: Hozzáférhetőség tervezése
             Songwriting:
               name: Dalszerzés paraméterekkel
+          student_description: Kezdje el a kódolást algoritmusokkal, hurkokkal, feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
         express-2019:
+          title: Expressz tanfolyam (2019)
           lesson_groups:
             csf_loops:
               display_name: hurkok
@@ -2455,12 +2698,14 @@ hu:
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
           lessons:
             Relay Programming:
               name: Váltó programozás
             Loops with Rey and BB-8:
               name: Ciklusok Reyjel és BB-8-tel
+            While Loops in Farmer:
+              name: 'Videó: While hurkok a farmerrel'
             Conditionals with Cards:
               name: Feltételek kártyákkal
             Envelope Variables:
@@ -2493,10 +2738,8 @@ hu:
           lessons:
             Intro to Problem Solving:
               name: Bevezetés a problémamegoldásba
-              description_student: 'A tanulók csoportokban dolgoznak, és alufóliából készült hajókat terveznek úgy, hogy azok minél több pénzérmét elbírjanak. A tanóra végén a csoportok reflektálnak a tevékenység során szerzett tapasztalataikra, és összefüggést keresnek azokkal a problémamegoldási helyzetekkel, amelyekkel a kurzus folyamán találkozni fognak. '
             The Problem Solving Process:
               name: A probléma-megoldási folyamat
-              description_student: 'Ez a tanóra bemutatja a problémamegoldási folyamatot, amit az osztály a tanév során használni fog: Meghatározás - Felkészülés - Próba - Reflektálás. Az osztály ezeket a lépéseket összekapcsolja az előző órai alufólia-csónak tervezési problémával, majd egy olyan problémával, aminek a megoldásában ők is jók, majd egy olyan problémával, amelynek a megoldásán javítani szeretnének. A tanóra végére az osztály a folyamat minden lépéséhez összegyűjti az általában használható stratégiákat, és elhelyezi ezeket egy poszteren, amit a fejezet és a tanév során referenciaként használ.'
             What is a Computer?:
               name: Mi az a számítógép?
         andrea-test:
@@ -2513,6 +2756,9 @@ hu:
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
           student_description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
         coursec-2019:
+          title: C tanfolyam (2019)
+          description: Hozzon létre programokat szekvenálással, hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
+          description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre saját műalkotásokat, történeteket és játékokat.
           lesson_groups:
             csf_digcit:
               display_name: Digitális állampolgárság
@@ -2531,8 +2777,6 @@ hu:
               name: 'Hétköznapi algoritmusok: Papírrepülők'
             Loops with Rey and BB-8:
               name: Ciklusok Reyjel és BB-8-tel
-              description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! '
-              description_teacher: A „Getting Loopy” című utasítások ismétlődésének koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak, amiben BB-8 lesz a segítségükre.
             'Events: The Big Event':
               name: A nagy esemény
             Binary Bracelets:
@@ -2543,6 +2787,7 @@ hu:
               name: Erős jelszavak
             Picturing Data:
               name: Az adatok leképezése
+          student_description: Hozzon létre programokat szekvenálással, hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -2550,6 +2795,9 @@ hu:
         gamelab:
           title: Játék Labor
         coursea-2019:
+          title: A tanfolyam (2019)
+          description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
+          description_short: Bevezetés a számítástechnikába az előolvasók számára.
           lesson_groups:
             csf_digcit:
               display_name: Digitális állampolgárság
@@ -2564,9 +2812,10 @@ hu:
               name: Biztonságos utazás
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
-              description_student: Segíts BB-8-nek begyűjteni a fémdarabokat
-              description_teacher: Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         courseb-2019:
+          title: B tanfolyam (2019)
+          description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
           lesson_groups:
             csf_digcit:
               display_name: Digitális állampolgárság
@@ -2585,6 +2834,7 @@ hu:
               name: Ciklikusság
             The Right App:
               name: A megfelelő alkalmazás
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         pre-express-2019:
           lesson_groups:
             csf_loops:
@@ -2609,6 +2859,8 @@ hu:
             cspSurvey:
               display_name: Kérdőív
           lessons:
+            Headings:
+              name: Címsorok
             Lists:
               name: Listák
         csd3-2019:
@@ -2619,24 +2871,42 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: manók
+              name: sprite-ok
             Conditionals:
               name: Feltételek
+            Keyboard Input:
+              name: Billentyűzetbemenet
+            Collisions:
+              name: Ütközések
             Functions:
               name: funkciók
         csd4-2019:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          lessons:
+            Linking Screens:
+              name: Képernyők összekapcsolása
         csd5-2019:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          lessons:
+            Representing Images:
+              name: Képek ábrázolása
+            Keeping Data Secret:
+              name: Adatok titokban tartása
+            Combining Representations:
+              name: Ábrázolások kombinálása
         csd6-2019:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
           lessons:
+            Board Events:
+              name: Táblás események
+            Getting Properties:
+              name: Tulajdonságok szerzése
             Functions with Parameters:
               name: Paraméteres függvények
         csp4-pilot:
@@ -2647,8 +2917,13 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
             required:
               display_name: Összefoglaló
+          lessons:
+            Surveys:
+              name: Felmérések
         csp1-2019:
           lesson_groups:
             cspSurvey:
@@ -2658,6 +2933,8 @@ hu:
             csp1_2:
               display_name: '2.  fejezet: Az internet feltalálása'
           lessons:
+            Binary Numbers:
+              name: Bináris számok
             Unit 1 Chapter 1 Assessment:
               name: 1.  lecke 1. fejezet végi értékelés
             The Internet:
@@ -2670,6 +2947,9 @@ hu:
               display_name: Fejezet végi értékelés
             cspSurvey:
               display_name: Kérdőív
+          lessons:
+            Text Compression:
+              name: Szöveg tömörítése
         csp3-2019:
           lesson_groups:
             cspAssessment:
@@ -2693,6 +2973,9 @@ hu:
               display_name: Fejezet végi értékelés
             cspSurvey:
               display_name: Kérdőív
+          lessons:
+            Simple Encryption:
+              name: Egyszerű titkosítás
         csp5-2019:
           lesson_groups:
             csp5_1:
@@ -2723,12 +3006,14 @@ hu:
             required:
               display_name: Összefoglaló
           lessons:
+            Binary Numbers:
+              name: Bináris számok
             Representing Information:
               name: Az információ ábrázolása
         time4csdemo:
           lesson_groups:
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
           lessons:
             Crowdsourcing:
               name: Csoportos megoldás
@@ -2744,6 +3029,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp2-pilot-staging:
           title: '2.  lecke: Az internet'
           lesson_groups:
@@ -2753,6 +3040,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2761,12 +3050,16 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Listák
             csp_loops:
               display_name: hurkok
+            csp_project:
+              display_name: Projekt
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2775,6 +3068,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2783,6 +3078,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2791,6 +3088,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2799,6 +3098,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         express-2018-vn:
           lessons:
             Graph Paper Programming:
@@ -2819,6 +3120,8 @@ hu:
               display_name: Listák
             csp_loops:
               display_name: hurkok
+            csp_project:
+              display_name: Projekt
             required:
               display_name: Összefoglaló
         fit2019-novice:
@@ -2849,10 +3152,8 @@ hu:
           lessons:
             Intro to Problem Solving:
               name: Bevezetés a problémamegoldásba
-              description_student: 'A tanulók csoportokban dolgoznak, és alufóliából készült hajókat terveznek úgy, hogy azok minél több pénzérmét elbírjanak. A tanóra végén a csoportok reflektálnak a tevékenység során szerzett tapasztalataikra, és összefüggést keresnek azokkal a problémamegoldási helyzetekkel, amelyekkel a kurzus folyamán találkozni fognak. '
             The Problem Solving Process:
               name: A probléma-megoldási folyamat
-              description_student: 'Ez a tanóra bemutatja a problémamegoldási folyamatot, amit az osztály a tanév során használni fog: Meghatározás - Felkészülés - Próba - Reflektálás. Az osztály ezeket a lépéseket összekapcsolja az előző órai alufólia-csónak tervezési problémával, majd egy olyan problémával, aminek a megoldásában ők is jók, majd egy olyan problémával, amelynek a megoldásán javítani szeretnének. A tanóra végére az osztály a folyamat minden lépéséhez összegyűjti az általában használható stratégiákat, és elhelyezi ezeket egy poszteren, amit a fejezet és a tanév során referenciaként használ.'
             What is a Computer?:
               name: Mi az a számítógép?
         csd2-pilot:
@@ -2860,10 +3161,14 @@ hu:
             cspSurvey:
               display_name: Kérdőív
           lessons:
+            Headings:
+              name: Címsorok
             Lists:
               name: Listák
             CSS Classes:
               name: CSS osztályok
+            Linking Pages:
+              name: Oldalak összekapcsolása
         csd3-pilot:
           lesson_groups:
             cspSurvey:
@@ -2872,9 +3177,13 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: manók
+              name: sprite-ok
             Conditionals:
               name: Feltételek
+            Keyboard Input:
+              name: Billentyűzetbemenet
+            Collisions:
+              name: Ütközések
             Functions:
               name: funkciók
             Random Numbers:
@@ -2998,9 +3307,6 @@ hu:
               display_name: Összefoglaló
         dance-2019:
           description: Kódold le saját táncos bulidat, és oszd meg az ismerőseiddel!
-          lessons:
-            Dance Party:
-              name: Táncos buli
           student_description: Kódold le saját táncos bulidat, és oszd meg az ismerőseiddel!
         k5-onlinepd-2019:
           lesson_groups:
@@ -3011,6 +3317,8 @@ hu:
               name: Első lépések
             Computer Science Fundamentals:
               name: A számítógép-tudomány alapjai
+            Planning:
+              name: Tervezés
             Loops:
               name: hurkok
             Conditionals:
@@ -3036,6 +3344,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         time4cs-original-unit-1:
           lessons:
             Conditionals:
@@ -3074,7 +3384,7 @@ hu:
             csf_events:
               display_name: Események
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             csf_digcit:
               display_name: Digitális állampolgárság
           lessons:
@@ -3095,7 +3405,7 @@ hu:
             csf_events:
               display_name: Események
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             csf_digcit:
               display_name: Digitális állampolgárság
           lessons:
@@ -3119,19 +3429,27 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Listák
             csp_loops:
               display_name: hurkok
+            csp_project:
+              display_name: Projekt
         csd2-2020:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
           lessons:
+            Headings:
+              name: Címsorok
             CSS Classes:
               name: CSS osztályok
+            Linking Pages:
+              name: Oldalak összekapcsolása
         csd1-2020:
           description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a számítógépek a problémák megoldásában."
           lesson_groups:
@@ -3152,15 +3470,29 @@ hu:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          lessons:
+            Linking Screens:
+              name: Képernyők összekapcsolása
         csd5-2020:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+          lessons:
+            Representing Images:
+              name: Képek ábrázolása
+            Keeping Data Secret:
+              name: Adatok titokban tartása
+            Combining Representations:
+              name: Ábrázolások kombinálása
         csd6-2020:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
           lessons:
+            Board Events:
+              name: Táblás események
+            Getting Properties:
+              name: Tulajdonságok szerzése
             Functions with Parameters:
               name: Paraméteres függvények
         csd3-2020:
@@ -3176,13 +3508,20 @@ hu:
               name: Sprite tulajdonságok
             Conditionals:
               name: Feltételek
+            Keyboard Input:
+              name: Billentyűzetbemenet
+            Collisions:
+              name: Ütközések
             Functions:
               name: funkciók
             Text:
               name: szöveg
             Sprites:
-              name: manók
+              name: sprite-ok
         coursea-2020:
+          title: A tanfolyam (2020)
+          description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
+          description_short: Bevezetés a számítástechnikába az előolvasók számára.
           lesson_groups:
             csf_digcit:
               display_name: Digitális állampolgárság
@@ -3197,9 +3536,10 @@ hu:
               name: Vidám térképek
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
-              description_student: Segíts BB-8-nek begyűjteni a fémdarabokat
-              description_teacher: Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         courseb-2020:
+          title: B tanfolyam (2020)
+          description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
           lesson_groups:
             csf_digcit:
               display_name: Digitális állampolgárság
@@ -3216,7 +3556,11 @@ hu:
               name: Ciklikusság
             The Right App:
               name: A megfelelő alkalmazás
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         coursec-2020:
+          title: C tanfolyam (2020)
+          description: Hozzon létre programokat szekvenálással, hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
+          description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre saját műalkotásokat, történeteket és játékokat.
           lesson_groups:
             csf_digcit:
               display_name: Digitális állampolgárság
@@ -3237,15 +3581,16 @@ hu:
               name: Bináris karkötők
             Loops with Rey and BB-8:
               name: Ciklusok Reyjel és BB-8-tel
-              description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! '
-              description_teacher: A „Getting Loopy” című utasítások ismétlődésének koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak, amiben BB-8 lesz a segítségükre.
             'Events: The Big Event':
               name: A nagy esemény
             Picturing Data:
               name: Az adatok leképezése
             'End of Course Project: Create a Play Lab Game':
               name: Kurzus Projekt vége
+          student_description: Hozzon létre programokat szekvenálással, hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
         coursed-2020:
+          title: D tanfolyam (2020)
+          description: A diákok fejlesztik a hurkok, feltételrendszerek és események megértését. A kódoláson túl a diákok megismerik a digitális állampolgárságot.
           lesson_groups:
             csf_events:
               display_name: Események
@@ -3264,7 +3609,6 @@ hu:
               name: Grafikus programozás
             Relay Programming:
               name: Váltó programozás
-              description_teacher: Ez a tevékenység egy rövid leckével kezdődik a hibakeresésről és a kitartásról, majd gyorsan átalakul a verseny az idővel játékká, a diákok csapatokra osztódnak és együtt dolgoznak, hogy programot írjanak egy-egy utasításra.
             Conditionals with Cards:
               name: Feltételek kártyákkal
             'Unplugged: Binary':
@@ -3275,10 +3619,13 @@ hu:
               name: Táncos buli
             End of Course Project:
               name: Kurzus Projekt vége
+          student_description: A diákok fejlesztik a hurkok, feltételrendszerek és események megértését. A kódoláson túl a diákok megismerik a digitális állampolgárságot.
         coursee-2020:
+          title: E tanfolyam (2020)
+          description: Kezdje el a kódolást algoritmusokkal, hurkokkal, feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
           lesson_groups:
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_nested_loops:
@@ -3292,13 +3639,21 @@ hu:
               name: Simon mondja
             Private and Personal Information:
               name: Magán és személyes információk
+            Access Ability:
+              name: Hozzáférhetőség tervezése
             'Functions: Songwriting':
               name: Dalszerzés paraméterekkel
             End of Course Project:
               name: Kurzus Projekt vége
             Digital Sharing:
               name: Digitális megosztás
+            Designing for Accessibility:
+              name: Hozzáférhetőség tervezése
+          student_description: Kezdje el a kódolást algoritmusokkal, hurkokkal, feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
         coursef-2020:
+          title: F tanfolyam (2020)
+          description: Ismerje meg a különböző típusú hurkok, események, függvények és feltételrendszerek használatát. Vizsgálja meg a különböző problémamegoldó technikákat, és vitassa meg a számítástechnika és az internet társadalmi hatásait. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
           lesson_groups:
             csf_digcit:
               display_name: Digitális állampolgárság
@@ -3309,7 +3664,7 @@ hu:
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             end_of_course_project:
               display_name: Kurzus Projekt vége
           lessons:
@@ -3325,7 +3680,11 @@ hu:
               name: Digitális megosztás
             End of Course Project:
               name: Kurzus Projekt vége
+            AI for Oceans:
+              name: AI óceánok
+          student_description: Ismerje meg a különböző típusú hurkok, események, függvények és feltételrendszerek használatát. Vizsgálja meg a különböző problémamegoldó technikákat, és vitassa meg a számítástechnika és az internet társadalmi hatásait. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
         express-2020:
+          title: Expressz tanfolyam (2020)
           lesson_groups:
             csf_loops:
               display_name: hurkok
@@ -3338,7 +3697,7 @@ hu:
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             end_of_course_project:
               display_name: Kurzus Projekt vége
           lessons:
@@ -3348,6 +3707,8 @@ hu:
               name: Ciklusok Reyjel és BB-8-tel
             End of Course Project:
               name: Kurzus Projekt vége
+            While Loops with the Farmer:
+              name: 'Videó: While hurkok a farmerrel'
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -3357,7 +3718,6 @@ hu:
           lessons:
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
-              description_teacher: Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.
             Spelling Bee:
               name: Betüző méh
         csp1-2020:
@@ -3369,6 +3729,8 @@ hu:
           lessons:
             Representing Information:
               name: Az információ ábrázolása
+            Binary Numbers:
+              name: Bináris számok
         csp2-2020:
           lesson_groups:
             csp_unit2_2020:
@@ -3397,6 +3759,8 @@ hu:
               name: Hibakeresés
         csd2-virtual:
           lessons:
+            Headings:
+              name: Címsorok
             CSS Classes:
               name: CSS osztályok
         csp5-virtual:
@@ -3410,6 +3774,10 @@ hu:
             content:
               display_name: Tartalom
           lessons:
+            Example Projects:
+              name: Példa projektekre
+            Collisions:
+              name: Ütközések
             Functions:
               name: funkciók
         code-break:
@@ -3462,13 +3830,17 @@ hu:
             Random Numbers:
               name: Véletlen számok
             Sprites:
-              name: manók
+              name: sprite-ok
             Sprite Properties:
               name: Sprite tulajdonságok
             Text:
               name: szöveg
             Conditionals:
               name: Feltételek
+            Keyboard Input:
+              name: Billentyűzetbemenet
+            Collisions:
+              name: Ütközések
             Functions:
               name: funkciók
           lesson_groups:
@@ -3508,10 +3880,28 @@ hu:
               display_name: Tartalom
         curriculum-sandbox-levels:
           lessons:
+            Course A:
+              name: A tanfolyam
+            Course B:
+              name: B tanfolyam
+            CS Discoveries:
+              name: Számítástechnika felfedezése
+            Course E:
+              name: E tanfolyam
+            Course F:
+              name: F tanfolyam
             csf:
               name: A számítógép-tudomány alapjai
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI óceánok
+            CSP Tester:
+              name: CSP tesztelés
         2021drafting:
           lessons:
+            lesson-3:
+              name: 'Miniprojekt: Felhasználói adatbeviteli programok'
             End of Course Project:
               name: Kurzus Projekt vége
           lesson_groups:
@@ -3525,13 +3915,10 @@ hu:
           description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a számítógépek a problémák megoldásában."
           lessons:
             Intro to Problem Solving:
-              key: Bevezetés a problémamegoldásba
               name: Bevezetés a problémamegoldásba
             The Problem Solving Process:
-              key: A probléma-megoldási folyamat
               name: A probléma-megoldási folyamat
             What is a Computer?:
-              key: Mi az a számítógép?
               name: Mi az a számítógép?
           lesson_groups:
             cspSurvey:
@@ -3542,59 +3929,81 @@ hu:
               display_name: '2.  fejezet: Számítógépek és problémamegoldás'
         csd2-2021:
           lessons:
+            Headings:
+              name: Címsorok
             CSS Classes:
-              key: CSS osztályok
               name: CSS osztályok
+            Linking Pages:
+              name: Oldalak összekapcsolása
+            lesson-1:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
         csd3-2021:
           lessons:
             Variables:
-              key: változók
               name: változók
             Random Numbers:
-              key: Véletlen számok
               name: Véletlen számok
             Sprites:
-              key: manók
-              name: manók
+              name: sprite-ok
             Sprite Properties:
-              key: Sprite tulajdonságok
               name: Sprite tulajdonságok
             Text:
-              key: szöveg
               name: szöveg
             Conditionals:
-              key: Feltételek
               name: Feltételek
+            Keyboard Input:
+              name: Billentyűzetbemenet
+            Collisions:
+              name: Ütközések
             Functions:
-              key: funkciók
               name: funkciók
+            lesson-1:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
         csd4-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
         csd5-2021:
+          lessons:
+            Representing Images:
+              name: Képek ábrázolása
+            Keeping Data Secret:
+              name: Adatok titokban tartása
+            Combining Representations:
+              name: Ábrázolások kombinálása
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
         csd6-2021:
           lessons:
+            Board Events:
+              name: Táblás események
+            Getting Properties:
+              name: Tulajdonságok szerzése
             Functions with Parameters:
-              key: Paraméteres függvények
               name: Paraméteres függvények
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
         csp1-2021:
           lessons:
             Representing Information:
-              key: Az információ ábrázolása
               name: Az információ ábrázolása
+            Binary Numbers:
+              name: Bináris számok
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
@@ -3609,7 +4018,6 @@ hu:
         csp3-2021:
           lessons:
             Debugging:
-              key: Hibakeresés
               name: Hibakeresés
         csp4-2021:
           lesson_groups:
@@ -3619,27 +4027,43 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: Listák
             csp_loops:
               display_name: hurkok
+            csp_project:
+              display_name: Projekt
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: algoritmusok
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kérdőív
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kérdőív
+        csp9-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kérdőív
         csp10-2021:
-          lessons:
-            'Project: Innovation Simulation Part 6':
-              description_student: Lecke áttekintése
-            'Project: Innovation Simulation Part 7':
-              description_student: Lecke áttekintése
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kérdőív
         coursea-2021:
+          description_short: Bevezetés a számítástechnikába az előolvasók számára.
           lessons:
             'Programming: Happy Maps':
               name: Vidám térképek
             Programming with Rey and BB-8:
-              key: Programozás Rey és BB-8 segítségével
               name: Programozás Rey és BB-8 segítségével
-              description_student: Segíts BB-8-nek begyűjteni a fémdarabokat
-              description_teacher: Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.
             lesson-1:
               name: Kurzus Projekt vége
           lesson_groups:
@@ -3651,15 +4075,14 @@ hu:
               display_name: Események
             lessonGroup-5:
               display_name: Kurzus Projekt vége
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Gyerünk, gyerünk!
               name: Gyerünk, gyerünk!
             'Loops: Getting Loopy':
               name: Ciklikusság
             The Right App:
-              key: A megfelelő alkalmazás
               name: A megfelelő alkalmazás
             lesson-1:
               name: Kurzus Projekt vége
@@ -3672,20 +4095,17 @@ hu:
               display_name: Események
             lessonGroup-6:
               display_name: Kurzus Projekt vége
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         coursec-2021:
+          description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre saját műalkotásokat, történeteket és játékokat.
           lessons:
             Binary Bracelets:
-              key: Bináris karkötők
               name: Bináris karkötők
             Loops with Rey and BB-8:
-              key: Ciklusok Reyjel és BB-8-tel
               name: Ciklusok Reyjel és BB-8-tel
-              description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! '
-              description_teacher: A „Getting Loopy” című utasítások ismétlődésének koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak, amiben BB-8 lesz a segítségükre.
             'Events: The Big Event':
               name: A nagy esemény
             Picturing Data:
-              key: Az adatok leképezése
               name: Az adatok leképezése
             'End of Course Project: Create a Play Lab Game':
               name: Kurzus Projekt vége
@@ -3702,26 +4122,20 @@ hu:
               display_name: Adat
             end_of_course_project:
               display_name: Kurzus Projekt vége
+          student_description: Hozzon létre programokat szekvenálással, hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
         coursed-2021:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Grafikus programozás
             Relay Programming:
-              key: Váltó programozás
               name: Váltó programozás
             Dance Party:
-              key: Táncos buli
               name: Táncos buli
             Conditionals with Cards:
-              key: Feltételek kártyákkal
               name: Feltételek kártyákkal
             'Unplugged: Binary':
-              key: 'Gép nélküli feladatok: kettes számrendszer'
               name: Bináris képek
-            Artist Binary:
-              key: 'Művész: a kettes számrendszer'
             End of Course Project:
-              key: Kurzus Projekt vége
               name: Kurzus Projekt vége
           lesson_groups:
             csf_events:
@@ -3740,26 +4154,25 @@ hu:
               display_name: Digitális állampolgárság
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Feltételek
-            Simon Says:
-              key: Simon mondja
             Private and Personal Information:
-              key: Magán és személyes információk
               name: Magán és személyes információk
+            About Me:
+              name: 'Miniprojekt: Rólam'
             Digital Sharing:
-              key: Digitális megosztás
               name: Digitális megosztás
             'Functions: Songwriting':
               name: Dalszerzés paraméterekkel
+            Designing for Accessibility:
+              name: Hozzáférhetőség tervezése
             End of Course Project:
-              key: Kurzus Projekt vége
               name: Kurzus Projekt vége
+            lesson-1:
+              name: Hozzáférhetőség tervezése
           lesson_groups:
             ramp_up:
               display_name: Egymásba ágyazott ciklusok
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_nested_loops:
@@ -3769,22 +4182,25 @@ hu:
             end_of_course_project:
               display_name: Kurzus Projekt vége
         coursef-2021:
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
           lessons:
             Envelope Variables:
-              key: Boríték változók
               name: Boríték változók
             Internet:
-              key: Internet
               name: Az internet
             For Loop Fun:
-              key: Szórakozás a For ciklussal
               name: Szórakozás a For ciklussal
+            Virtual Pet:
+              name: 'Miniprojekt: Virtuális kisállat'
             End of Course Project:
-              key: Kurzus Projekt vége
               name: Kurzus Projekt vége
+            lesson-1:
+              name: Hozzáférhetőség tervezése
+            lesson-11:
+              name: 'Miniprojekt: Felhasználói adatbeviteli programok'
           lesson_groups:
             ramp_up:
-              display_name: manók
+              display_name: sprite-ok
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_variables:
@@ -3802,18 +4218,16 @@ hu:
         express-2021:
           lessons:
             Dance Party:
-              key: Táncos buli
               name: Táncos buli
             Loops with Rey and BB-8:
-              key: Ciklusok Reyjel és BB-8-tel
               name: Ciklusok Reyjel és BB-8-tel
-              description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! '
             End of Course Project:
-              key: Kurzus Projekt vége
               name: Kurzus Projekt vége
             lesson-1:
               name: Táncos buli
           lesson_groups:
+            csf_warmup:
+              display_name: Bemelegítés
             csf_loops:
               display_name: hurkok
             csf_conditionals:
@@ -3825,7 +4239,7 @@ hu:
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             end_of_course_project:
               display_name: Kurzus Projekt vége
             lessonGroup-9:
@@ -3833,76 +4247,145 @@ hu:
         pre-express-2021:
           lessons:
             Programming with Rey and BB-8:
-              key: Programozás Rey és BB-8 segítségével
               name: Programozás Rey és BB-8 segítségével
-              description_teacher: Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.
           lesson_groups:
             csf_loops:
               display_name: hurkok
             csf_events:
               display_name: Események
         csf-2021-pilot:
+          lessons:
+            user-input-programs:
+              name: 'Miniprojekt: Felhasználói adatbeviteli programok'
           lesson_groups:
             ramp_up:
               display_name: Bevezető
             lessonGroup-3:
               display_name: változók
             Sprites:
-              display_name: manók
+              display_name: sprite-ok
             variables:
               display_name: változók
         csd4-preview-2021:
+          lessons:
+            Linking Screens:
+              name: Képernyők összekapcsolása
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
             csdSurvey:
               display_name: Kérdőív
         csd5-preview-2021:
+          lessons:
+            Representing Images:
+              name: Képek ábrázolása
+            Keeping Data Secret:
+              name: Adatok titokban tartása
+            Combining Representations:
+              name: Ábrázolások kombinálása
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+        testtess:
+          lessons:
+            lesson-2:
+              name: 1.  új lecke
         csa1-pilot:
+          lessons:
+            lesson-24:
+              name: Java laboratórium
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
         csa2-pilot:
+          lessons:
+            lesson-1:
+              name: '2.  rész: Próbafelmérés'
+            lesson-16:
+              name: Java laboratórium
           lesson_groups:
             lesson group:
               display_name: Tartalom
+            lessonGroup-4:
+              display_name: Homokozó
         csa3-pilot:
+          lessons:
+            lesson-16:
+              name: '3.  rész: Próbafelmérés'
+            lesson-17:
+              name: Java laboratórium
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
         csa4-pilot:
+          lessons:
+            lesson-16:
+              name: Java laboratórium
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+            lessonGroup-4:
+              display_name: Homokozó
         csa5-pilot:
+          lessons:
+            Java Lab:
+              name: Java laboratórium
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+            lessonGroup-4:
+              display_name: Homokozó
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java laboratórium
+            lesson-11:
+              name: Szomszédsági irodalmi fesztivál projekt - 1. nap
+            lesson-12:
+              name: Szomszédsági irodalmi fesztivál projekt - 2. nap
+            lesson-13:
+              name: Szomszédsági irodalmi fesztivál projekt - 3. nap
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Java laboratórium
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        csa8-pilot:
+          lessons:
+            Java Lab:
+              name: Java laboratórium
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: hurkok
               name: hurkok
             Events:
-              key: Események
               name: Események
             Conditionals:
-              key: Feltételek
               name: Feltételek
             Functions:
-              key: funkciók
               name: funkciók
             Variables:
-              key: változók
               name: változók
             For Loops:
-              key: Számláló ciklusok
               name: Számláló ciklusok
-            Sprite Lab:
-              key: Sprite labor
             Getting Started:
               name: Első lépések
           lesson_groups:
@@ -3918,6 +4401,10 @@ hu:
               display_name: Lecke 4
             Lesson 5:
               display_name: Lecke 5
+        pl-playground:
+          lessons:
+            lesson-9:
+              name: 1.  Kezdő lépések
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -3927,17 +4414,20 @@ hu:
             lessonGroup-4:
               display_name: Kérdőív
         csd7-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
           lesson_groups:
             lessonGroup-4:
               display_name: Kérdőív
         kodea-pd-2021:
           lessons:
             Getting Started:
-              key: Első lépések
               name: Első lépések
             Computer Science Fundamentals:
-              key: A számítógép-tudomány alapjai
               name: A számítógép-tudomány alapjai
+            Planning:
+              name: Tervezés
         self-paced-pl-csd2-2021:
           lessons:
             lesson-9:
@@ -3968,6 +4458,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: Teszt
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -3992,36 +4486,181 @@ hu:
               name: Eszközök
             lesson-17:
               name: Konzol
+            lesson-18:
+              name: Widgetek
           lesson_groups:
             lessonGroup-2:
               display_name: Leckék
+            lessonGroup-3:
+              display_name: Projekt
+            lessonGroup-4:
+              display_name: Bemutatók és erőforrások
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Helló, világ!
+          title: '"Helló, világ!"'
+        csa-self-paced-pl:
+          title: Navigálás a Code.org platformon a CSA kísérletben résztvevő tanárok számára
+          description: |-
+            A modul célja azoknak az eszközöknek a megismerése, amelyeket a CSA tanítása során a diákok tanulásának támogatására használnak.
+
+            **Megtanulja a hogyant:**
+
+            -   Navigálás a Code.org weboldalon és a tanári eszközök között.
+            -   Óravázlatok és tanári erőforrások helyének megkeresése és azok használata.
+
+            **Javasolt időtartam:** 1 óra
+          name: csa-self-paced-pl
         csa1-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java laboratórium
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+          name: csa1-pilot-facilitator
         csa2-pilot-facilitator:
+          lessons:
+            Unit 2 Pilot Survey:
+              name: '2.  rész: Próbafelmérés'
+            lesson-1:
+              name: Java laboratórium
           lesson_groups:
             lesson group:
               display_name: Tartalom
+            lessonGroup-4:
+              display_name: Homokozó
+          name: csa2-pilot-facilitator
         csa3-pilot-facilitator:
+          lessons:
+            Unit 3 Pilot Survey:
+              name: '3.  rész: Próbafelmérés'
+            lesson-1:
+              name: Java laboratórium
+            lesson-16:
+              name: '3.  rész: Próbafelmérés'
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+          name: csa3-pilot-facilitator
         csa4-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java laboratórium
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+            lessonGroup-4:
+              display_name: Homokozó
+          name: csa4-pilot-facilitator
         csa5-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java laboratórium
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+            lessonGroup-4:
+              display_name: Homokozó
+          name: csa5-pilot-facilitator
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: Hangulatok és attitűdök
+          name: poetry-hoc
+          title: Poetry HoC
+          description_short: Kódolás órája aktivitás - V2
+        csdu6-playground:
+          lessons:
+            lesson-1:
+              name: Sablon
+            lesson-3:
+              name: Kimenetek a táblán (LED-csengő)
+            lesson-4:
+              name: App Lab kimenetek (setProperty)
+            lesson-5:
+              name: Szenzorok
+            lesson-6:
+              name: Bemenetek a táblán (váltókapcsoló-gomb)
+            lesson-7:
+              name: Változók + If utasítások
+            lesson-8:
+              name: 'Mini projekt: On The Go alkalmazások'
+            lesson-9:
+              name: Színes LED-ek
+            lesson-10:
+              name: App Lab bemenetek (getProperty, getText) (legördülő bemeneti csúszkák?)
+            lesson-11:
+              name: Bemenetek kombinálása
+            lesson-12:
+              name: 'Projekt: Maker'
+            lesson-14:
+              name: Zene + tömbök
+            lesson-15:
+              name: 'Mini projekt: Szenzorok'
+            lesson-17:
+              name: Fizikai bemenetek (LED-ek)
+            lesson-16:
+              name: Fizikai kimenet
+            lesson-18:
+              name: Prototípus készítése
+            lesson-19:
+              name: Projekt
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sablonok
+            lessonGroup-2:
+              display_name: 1.  fejezet
+            lessonGroup-4:
+              display_name: 2.  fejezet
+          name: csdu6-playground
+          title: 'CSD 6. egység: Playground'
+          description_short: 'CSD 6. egység: Péayground. Kérdésekkel forduljon Dan Schneiderhez'
+          student_description: 'CSD 6. egység: Péayground. Kérdésekkel forduljon Dan Schneiderhez'
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: Helló világ
+          name: helló-világ-étel
         csa-u7-dev:
           lessons:
+            lesson-2:
+              name: Widgetek
             lesson-3:
               name: Eszközök
           lesson_groups:
             lessonGroup-2:
               display_name: Leckék
+            lessonGroup-3:
+              display_name: Projekt
+            lessonGroup-4:
+              display_name: Bemutatók és erőforrások
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: Lecke 3
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: Helló világ
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: Helló világ
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: Helló világ
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: Helló világ
+          title: Helló világ
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -4032,3 +4671,833 @@ hu:
               display_name: Tartalom
             lessonGroup-2:
               display_name: Tartalom
+        csc-things:
+          lessons:
+            lesson-1:
+              name: Verspiszkozatok
+          name: csc-things
+          title: 'CSC információk tárháza '
+          description: 'Ezek csak egy folyamatban lévő munkák :) '
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: Poetry HoC v2
+          name: poetry-hoc2
+          title: Poetry HoC v2
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: Hangulat tanulmányozása
+          name: poetry-hoc3
+          title: Poetry HoC v3
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: Sprite effekt kihívás
+          name: spritelab-effects-challenge
+          title: Sprite effekt kihívás
+          description_audience: Középhaladó/haladó Sprite Lab felhasználók
+          description_short: Fogadd el a kihívást, és készítsd el saját sprite effektet a Sprite Lab segítségével!
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgetek
+            lesson-2:
+              name: Eszközök
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bemutatók és erőforrások
+          name: csa-u8-dev
+          title: 'CSA 8. rész: Fejlesztés'
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Versművészet
+          name: poem-art
+          title: Versművészet
+        poetry:
+          lessons:
+            lesson-1:
+              name: Versművészet
+            lesson-2:
+              name: Saját vers kódolása
+            lesson-4:
+              name: Versgeneráló alkalmazás építése
+            lesson-5:
+              name: Szavak gondos megválasztása
+          name: költészet
+          title: Számítástechnika és költészet
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Betüző méh
+          name: spelling-bee
+          title: Betüző méh
+        outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Kitörés 1. nap
+            lesson-2:
+              name: Kitörés 2. nap
+          name: outbreak-csc
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Dobozdiagramok és hisztogramok felfedezése
+          name: explore-data-1
+          title: Dobozdiagramok és hisztogramok felfedezése
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Számolás Laurer segítségével
+          name: counting-csc
+          title: Számolás Laurer segítségével
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+          name: csa5-exemplars
+          title: 5.  rész  - Tárgyak rendszerezése [Exemplars]
+        csd-post-survey-2021:
+          name: csd-post-survey-2021
+          title: Számítástechnika felfedezése c. tanfolyam utáni felmérés
+          description: Ez az egység tartalmazza a CS Discoveries Kurzus utáni felmérést. Ezt az egységet azután lehet kijelölni, hogy a tanulók befejezték a CS Discoveries utolsó egységét.
+          student_description: Ez az egység egy felmérést tartalmaz, ha az osztályod befejezte a CS Discoveries egységeit. A tanárod megmondja, mikor kell elvégezni ezt a felmérést.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: 1.  modul – Kezdő lépések
+          name: csa-pl-test
+        csa-pl-module-1-test:
+          name: csa-pl-module-1-test
+          title: A Code.org és a CSA bemutatása
+        csa-pl-module-2-test:
+          name: csa-pl-module-2-test
+          title: Navigálás a Code.org eszközeiben
+        csa-pl-module-3-test:
+          name: csa-pl-module-3-test
+          title: Támogatás szöveg alapú programozással
+        csa6-pilot-facilitator:
+          lessons:
+            Neighborhood Lit Fest Project - Day 1:
+              name: Szomszédsági irodalmi fesztivál projekt - 1. nap
+            Neighborhood Lit Fest Project - Day 2:
+              name: Szomszédsági irodalmi fesztivál projekt - 2. nap
+            Neighborhood Lit Fest Project - Day 3:
+              name: Szomszédsági irodalmi fesztivál projekt - 3. nap
+            Java Lab:
+              name: Java laboratórium
+            lesson-11:
+              name: Szomszédsági irodalmi fesztivál projekt - 1. nap
+            lesson-12:
+              name: Szomszédsági irodalmi fesztivál projekt - 2. nap
+            lesson-13:
+              name: Szomszédsági irodalmi fesztivál projekt - 3. nap
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              name: Versművészet
+            lesson-1:
+              name: Versművészet
+          title: Versművészet
+        poetry-2021:
+          lessons:
+            Poem Art:
+              name: Versművészet
+            Code Your Own Poem:
+              name: Saját vers kódolása
+            Build a Poem Generator:
+              name: Versgeneráló alkalmazás építése
+            Choosing Words Carefully:
+              name: Szavak gondos megválasztása
+            lesson-1:
+              name: Versművészet
+            lesson-2:
+              name: Saját vers kódolása
+            lesson-5:
+              name: Szavak gondos megválasztása
+        hello-world-food-2021:
+          lessons:
+            lesson-1:
+              name: Helló világ
+        hello-world-emoji-2021:
+          lessons:
+            lesson-1:
+              name: Helló világ
+        hello-world-animals-2021:
+          lessons:
+            lesson-1:
+              name: Helló világ
+        hello-world-retro-2021:
+          lessons:
+            lesson-1:
+              name: Helló világ
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Betüző méh
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Adatvizualizáció
+            lesson-1:
+              name: Dobozdiagramok és hisztogramok felfedezése
+          title: Adatvizualizáció
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: Számolás Laurer segítségével
+            lesson-1:
+              name: Számolás Laurer segítségével
+          title: Számolás Laurer segítségével
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Lecke
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Szomszédsági irodalmi fesztivál projekt - 1. nap
+            lesson-12:
+              name: Szomszédsági irodalmi fesztivál projekt - 2. nap
+            lesson-13:
+              name: Szomszédsági irodalmi fesztivál projekt - 3. nap
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        2022drafting:
+          lessons:
+            lesson-5:
+              name: 'Miniprojekt: Rólam'
+            For Loop Fun:
+              name: Szórakozás a For ciklussal
+          lesson_groups:
+            lessonGroup-8:
+              display_name: A kódolás órája
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csf-2022-pilot:
+          lessons:
+            'Mini-Project: Virtual Pet':
+              name: 'Miniprojekt: Virtuális kisállat'
+            'Mini-Project: User Input Programs':
+              name: 'Miniprojekt: Felhasználói adatbeviteli programok'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: sprite-ok
+            lessonGroup-3:
+              display_name: változók
+            lessonGroup-4:
+              display_name: Kurzus Projekt vége
+        csd6-pilot-2022:
+          lessons:
+            Board Events:
+              name: Táblás események
+            Arrays and Color LEDs:
+              name: Színes LED-ek
+            lesson-10:
+              name: Bemenetek kombinálása
+            Functions with Parameters:
+              name: funkciók
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  fejezet
+            lessonGroup-3:
+              display_name: 2.  fejezet
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa7-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java laboratórium
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        csa8-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java laboratórium
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Vidám térképek
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
+            End of Course Project:
+              name: Kurzus Projekt vége
+            'Programming: Happy Maps':
+              name: Vidám térképek
+            lesson-1:
+              name: Kurzus Projekt vége
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+            lessonGroup-5:
+              display_name: Kurzus Projekt vége
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
+          description_short: Bevezetés a számítástechnikába az előolvasók számára.
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Táncos buli
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
+            End of Course Project:
+              name: Kurzus Projekt vége
+            lesson-1:
+              name: Táncos buli
+          lesson_groups:
+            csf_sprites:
+              display_name: sprite-ok
+            lessonGroup-9:
+              display_name: Események
+            csf_loops:
+              display_name: hurkok
+            csf_conditionals:
+              display_name: Feltételek
+            csf_functions:
+              display_name: funkciók
+            csf_variables:
+              display_name: változók
+            csf_for_loops:
+              display_name: Számláló ciklusok
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+        csp1-2022:
+          lessons:
+            Representing Information:
+              name: Az információ ábrázolása
+            Binary Numbers:
+              name: Bináris számok
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csp_unit1_2020:
+              display_name: '1.  fejezet: Digitális információ'
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '2.  lecke: Az internet'
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Hibakeresés
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
+            csp_project:
+              display_name: Projekt
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Listák
+            csp_loops:
+              display_name: hurkok
+            csp_project:
+              display_name: Projekt
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Gyerünk, gyerünk!
+            Getting Loopy:
+              name: Ciklikusság
+            The Right App:
+              name: A megfelelő alkalmazás
+            End of Course Project:
+              name: Kurzus Projekt vége
+            'Loops: Getting Loopy':
+              name: Ciklikusság
+            lesson-1:
+              name: Kurzus Projekt vége
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+            lessonGroup-6:
+              display_name: Kurzus Projekt vége
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
+        coursec-2022:
+          lessons:
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
+            The Big Event:
+              name: A nagy esemény
+            Picturing Data:
+              name: Az adatok leképezése
+            Binary Bracelets:
+              name: Bináris karkötők
+            End of Course Project:
+              name: Kurzus Projekt vége
+            'Events: The Big Event':
+              name: A nagy esemény
+            'End of Course Project: Create a Play Lab Game':
+              name: Kurzus Projekt vége
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+            csf_data:
+              display_name: Adat
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+          student_description: Hozzon létre programokat szekvenálással, hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
+          description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre saját műalkotásokat, történeteket és játékokat.
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Grafikus programozás
+            Relay Programming:
+              name: Váltó programozás
+            Dance Party:
+              name: Táncos buli
+            Conditionals with Cards:
+              name: Feltételek kártyákkal
+            End of Course Project:
+              name: Kurzus Projekt vége
+            'Algorithms: Graph Paper Programming':
+              name: Grafikus programozás
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitális állampolgárság
+            csf_events:
+              display_name: Események
+            csf_loops:
+              display_name: hurkok
+            csf_conditionals:
+              display_name: Feltételek
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+        coursee-2022:
+          lessons:
+            Private and Personal Information:
+              name: Magán és személyes információk
+            'Mini-Project: About Me':
+              name: 'Miniprojekt: Rólam'
+            Digital Sharing:
+              name: Digitális megosztás
+            Songwriting:
+              name: Dalszerzés paraméterekkel
+            Designing for Accessibility:
+              name: Hozzáférhetőség tervezése
+            End of Course Project:
+              name: Kurzus Projekt vége
+            About Me:
+              name: 'Miniprojekt: Rólam'
+            'Functions: Songwriting':
+              name: Dalszerzés paraméterekkel
+            lesson-1:
+              name: Hozzáférhetőség tervezése
+            'Hello World: Food':
+              name: Helló világ
+          lesson_groups:
+            csf_sprites:
+              display_name: sprite-ok
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            ramp_up:
+              display_name: Egymásba ágyazott ciklusok
+            csf_functions:
+              display_name: funkciók
+            csf_nested_loops:
+              display_name: Feltételek
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+        coursef-2022:
+          lessons:
+            'Mini-Project: Virtual Pet':
+              name: 'Miniprojekt: Virtuális kisállat'
+            'Mini-Project: User Input Programs':
+              name: 'Miniprojekt: Felhasználói adatbeviteli programok'
+            For Loop Fun:
+              name: Szórakozás a For ciklussal
+            The Internet:
+              name: Az internet
+            End of Course Project:
+              name: Kurzus Projekt vége
+            Virtual Pet:
+              name: 'Miniprojekt: Virtuális kisállat'
+            lesson-11:
+              name: 'Miniprojekt: Felhasználói adatbeviteli programok'
+            Internet:
+              name: Az internet
+          lesson_groups:
+            ramp_up:
+              display_name: sprite-ok
+            lessonGroup-7:
+              display_name: Digitális állampolgárság
+            lessonGroup-8:
+              display_name: változók
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
+        csa1-2022:
+          lessons:
+            lesson-2:
+              name: Java laboratórium
+            lesson-9:
+              name: hurkok
+            lesson-21:
+              name: Konzol
+            lesson-23:
+              name: CSA előzetes felmérés
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Kérdőív
+        pre-express-2022:
+          lessons:
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
+          lesson_groups:
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: változók
+            lesson-16:
+              name: Konzol
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: Számláló ciklusok
+            lesson-16:
+              name: Konzol
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Feltételek
+            lesson-16:
+              name: Hibakeresés
+            lesson-17:
+              name: Projekt inspiráció
+            lesson-19:
+              name: Hibakeresés
+        csa4-2022:
+          lessons:
+            Console:
+              name: Konzol
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa5-2022:
+          lessons:
+            Console:
+              name: Konzol
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java laboratórium
+            lesson-9:
+              name: hurkok
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java laboratórium
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java laboratórium
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        csa-backpack-2022:
+          lessons:
+            lesson-4:
+              name: TextProcessor
+            lesson-3:
+              name: ImagePlus és ScenePlus
+        coursef-2022-pilot:
+          lessons:
+            'Mini-Project: Virtual Pet':
+              name: 'Miniprojekt: Virtuális kisállat'
+            'Mini-Project: User Input Programs':
+              name: 'Miniprojekt: Felhasználói adatbeviteli programok'
+            The Internet:
+              name: Az internet
+            End of Course Project:
+              name: Kurzus Projekt vége
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitális állampolgárság
+            ramp_up:
+              display_name: sprite-ok
+            lessonGroup-8:
+              display_name: változók
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
+        csa6-2022:
+          lessons:
+            Neighborhood Lit Fest Project - Day 1:
+              name: Szomszédsági irodalmi fesztivál projekt - 1. nap
+            Neighborhood Lit Fest Project - Day 2:
+              name: Szomszédsági irodalmi fesztivál projekt - 2. nap
+            Neighborhood Lit Fest Project - Day 3:
+              name: Szomszédsági irodalmi fesztivál projekt - 3. nap
+            Java Lab:
+              name: Java laboratórium
+            Console:
+              name: Konzol
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        csa7-2022:
+          lessons:
+            Java Lab:
+              name: Java laboratórium
+            Console:
+              name: Konzol
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        csa8-2022:
+          lessons:
+            Java Lab:
+              name: Java laboratórium
+            Console:
+              name: Konzol
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Kérdőív
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: változók
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Első lépések
+            Loops:
+              name: hurkok
+            Events:
+              name: Események
+            Conditionals:
+              name: Feltételek
+            Functions:
+              name: funkciók
+            Variables:
+              name: változók
+            For Loops:
+              name: Számláló ciklusok
+            End of Course projects:
+              name: Tanfolyam végi projektek
+        hello-world-csc:
+          title: Helló világ
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              name: Versművészet
+        csc-pilot-2022-fables:
+          lessons:
+            lesson-4:
+              name: "[Optional] Bevezetés a mesékbe"
+            lesson-5:
+              name: Saját mese tervezése
+            lesson-6:
+              name: Saját mese megosztása
+        csd1-2022:
+          lessons:
+            Intro to Problem Solving:
+              name: Bevezetés a problémamegoldásba
+            The Problem Solving Process:
+              name: A probléma-megoldási folyamat
+            What is a Computer?:
+              name: Mi az a számítógép?
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csd1_1:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            csd1_2:
+              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+          description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a számítógépek a problémák megoldásában."
+        csd2-2022:
+          lessons:
+            Headings:
+              name: Címsorok
+            CSS Classes:
+              name: CSS osztályok
+            Linking Pages:
+              name: Oldalak összekapcsolása
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
+            lesson-1:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd3-2022:
+          lessons:
+            Variables:
+              name: változók
+            Random Numbers:
+              name: Véletlen számok
+            Sprites:
+              name: sprite-ok
+            Sprite Properties:
+              name: Sprite tulajdonságok
+            Text:
+              name: szöveg
+            Conditionals:
+              name: Feltételek
+            Keyboard Input:
+              name: Billentyűzetbemenet
+            Collisions:
+              name: Ütközések
+            Functions:
+              name: funkciók
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
+            lesson-1:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd4-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd5-2022:
+          lessons:
+            Representing Images:
+              name: Képek ábrázolása
+            Combining Representations:
+              name: Ábrázolások kombinálása
+            Keeping Data Secret:
+              name: Adatok titokban tartása
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd7-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        csd6-2022:
+          lessons:
+            Board Events:
+              name: Táblás események
+            Color LEDs:
+              name: Színes LED-ek
+            Combining Inputs and Outputs:
+              name: Bemenetek kombinálása
+            Functions:
+              name: funkciók
+            CS Discoveries Post-Course Survey:
+              name: Számítástechnika felfedezése c. tanfolyam utáni felmérés
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        csd-post-survey-2022:
+          title: Számítástechnika felfedezése c. tanfolyam utáni felmérés
+          description: Ez az egység tartalmazza a CS Discoveries Kurzus utáni felmérést. Ezt az egységet azután lehet kijelölni, hogy a tanulók befejezték a CS Discoveries utolsó egységét.
+          student_description: Ez az egység egy felmérést tartalmaz, ha az osztályod befejezte a CS Discoveries egységeit. A tanárod megmondja, mikor kell elvégezni ezt a felmérést.
+        testtess2:
+          name: testtess2
+        aiml-2022:
+          name: aiml-2022
+          description_short: Ismerkedés a mesterséges intelligenciával és a gépi tanulással
+        csa9-2022:
+          lessons:
+            Console:
+              name: Konzol
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Összefoglaló
+            lesson-1:
+              name: Összefoglaló
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Összefoglaló
+            lesson-1:
+              name: Összefoglaló
+        csc-fables-2022:
+          lessons:
+            "[Optional] Introduction to Fables":
+              name: "[Optional] Bevezetés a mesékbe"
+            Plan Your Fable:
+              name: Saját mese tervezése
+            Share Your Fable:
+              name: Saját mese megosztása
+            lesson-4:
+              name: "[Optional] Bevezetés a mesékbe"
+            lesson-5:
+              name: Saját mese tervezése
+            lesson-6:
+              name: Saját mese megosztása
+        csc-timecapsule-2022:
+          lessons:
+            Poem Art:
+              name: Versművészet

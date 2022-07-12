@@ -42,7 +42,8 @@ export const scriptLevelShape = PropTypes.shape({
   // other script level options
   bonus: PropTypes.bool,
   assessment: PropTypes.bool,
-  challenge: PropTypes.bool
+  challenge: PropTypes.bool,
+  isViewingAsInstructorInTraining: PropTypes.bool
 });
 
 export const tipShape = PropTypes.shape({
@@ -73,8 +74,6 @@ export const activityShape = PropTypes.shape({
   activitySections: PropTypes.arrayOf(activitySectionShape)
 });
 
-// Represents a migrated resource, backed by the
-// Resource model in Rails
 export const resourceShape = PropTypes.shape({
   id: PropTypes.number,
   key: PropTypes.string.isRequired,

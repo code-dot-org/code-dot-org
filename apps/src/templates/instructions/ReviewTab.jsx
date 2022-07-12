@@ -5,12 +5,12 @@ import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {currentLocation, navigateToHref} from '@cdo/apps/utils';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
 import CodeReviewDataApi from './codeReview/CodeReviewDataApi';
 import ReviewNavigator from './codeReview/ReviewNavigator';
+import Button from '@cdo/apps/templates/Button';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
@@ -18,11 +18,13 @@ const FLASH_ERROR_TIME_MS = 5000;
 
 class ReviewTab extends Component {
   static propTypes = {
-    onLoadComplete: PropTypes.func,
+    // Used only in tests
+    dataApi: PropTypes.object,
     // Populated by redux
     codeReviewEnabled: PropTypes.bool,
     viewAsCodeReviewer: PropTypes.bool.isRequired,
     viewAsTeacher: PropTypes.bool,
+    userIsTeacher: PropTypes.bool,
     channelId: PropTypes.string,
     serverLevelId: PropTypes.number,
     serverScriptId: PropTypes.number
@@ -30,71 +32,48 @@ class ReviewTab extends Component {
 
   state = {
     initialLoadCompleted: false,
+    loadingReviewData: true,
     reviewCheckboxEnabled: false,
     isReadyForReview: false,
     reviewableProjectId: '',
     loadingReviewableState: false,
     errorSavingReviewableProject: false,
-    errorLoadingReviewablePeers: false,
     comments: [],
     forceRecreateEditorKey: 0,
-    reviewablePeers: [],
     projectOwnerName: '',
     authorizationError: false,
     commentSaveError: false,
     commentSaveInProgress: false,
-    dataApi: {}
+    commentSaveErrorMessage: ''
   };
-
-  onSelectPeer = peer => {
-    if (!peer.id) {
-      return;
-    }
-
-    navigateToHref(
-      this.generateLevelUrlWithCodeReviewParam() + `&user_id=${peer.id}`
-    );
-  };
-
-  onClickBackToProject = () => {
-    navigateToHref(this.generateLevelUrlWithCodeReviewParam());
-  };
-
-  generateLevelUrlWithCodeReviewParam = () =>
-    currentLocation().origin +
-    currentLocation().pathname +
-    `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
 
   componentDidMount() {
-    const {
-      channelId,
-      serverLevelId,
-      serverScriptId,
-      viewAsCodeReviewer,
-      viewAsTeacher
-    } = this.props;
+    this.loadReviewData();
+  }
 
+  loadReviewData = () => {
+    this.setState({loadingReviewData: true});
+    const {channelId, serverLevelId, serverScriptId} = this.props;
     // If there's no channelId (happens when a teacher is viewing as a student who has not done any work on a level),
     // do not make API calls that require a channelId
     if (!channelId) {
-      this.setState({initialLoadCompleted: true});
+      this.setState({loadingReviewData: false});
       return;
     }
 
-    this.dataApi = new CodeReviewDataApi(
-      channelId,
-      serverLevelId,
-      serverScriptId
-    );
+    // API should only be passed via props for testing purposes
+    this.dataApi =
+      this.props.dataApi ||
+      new CodeReviewDataApi(channelId, serverLevelId, serverScriptId);
 
-    const initialLoadPromises = [];
+    const loadPromises = [];
 
     const setComments = data => this.setState({comments: data});
-    initialLoadPromises.push(
+    loadPromises.push(
       this.dataApi.getCodeReviewCommentsForProject(setComments)
     );
 
-    initialLoadPromises.push(
+    loadPromises.push(
       this.dataApi
         .getPeerReviewStatus()
         .done(data => {
@@ -114,34 +93,27 @@ class ReviewTab extends Component {
         })
     );
 
-    if (!(viewAsCodeReviewer || viewAsTeacher)) {
-      initialLoadPromises.push(
-        this.dataApi
-          .getReviewablePeers()
-          .done(data => this.setState({reviewablePeers: data}))
-          .fail(() => {
-            this.setState({
-              errorLoadingReviewablePeers: true
-            });
-          })
-      );
-    }
-
-    Promise.all(initialLoadPromises).finally(() => {
-      this.setState({initialLoadCompleted: true});
+    Promise.all(loadPromises).finally(() => {
+      this.setState({loadingReviewData: false});
     });
-  }
+  };
 
-  componentDidUpdate(prevProps, prevState) {
-    if (!prevState.initialLoadCompleted && this.state.initialLoadCompleted) {
-      this.props.onLoadComplete();
-    }
-  }
+  onClickRefresh = () => {
+    this.loadReviewData();
+  };
+
+  loadPeers = (onSuccess, onFailure) => {
+    this.dataApi
+      .getReviewablePeers()
+      .done(onSuccess)
+      .fail(onFailure);
+  };
 
   onNewCommentCancel = () => {
     this.setState({
       commentSaveError: false,
-      commentSaveInProgress: false
+      commentSaveInProgress: false,
+      commentSaveErrorMessage: ''
     });
   };
 
@@ -154,7 +126,7 @@ class ReviewTab extends Component {
 
     this.dataApi
       .submitNewCodeReviewComment(commentText)
-      .done(newComment => {
+      .then(newComment => {
         const newComments = comments;
         newComments.push(newComment);
 
@@ -164,8 +136,14 @@ class ReviewTab extends Component {
           commentSaveInProgress: false
         });
       })
-      .fail(result => {
-        if (result.status === 404) {
+      .catch(result => {
+        if (result.profanityFoundError) {
+          this.setState({
+            commentSaveError: true,
+            commentSaveInProgress: false,
+            commentSaveErrorMessage: result.profanityFoundError
+          });
+        } else if (result.status === 404) {
           this.setState({
             authorizationError: true,
             commentSaveInProgress: false
@@ -178,7 +156,7 @@ class ReviewTab extends Component {
 
   onCommentDelete = deletedCommentId => {
     const {comments} = this.state;
-    this.dataApi
+    return this.dataApi
       .deleteCodeReviewComment(deletedCommentId)
       .done(() => {
         const updatedComments = [...comments];
@@ -191,18 +169,19 @@ class ReviewTab extends Component {
 
   onCommentResolveStateToggle = (resolvedCommentId, newResolvedStatus) => {
     const {comments} = this.state;
-    this.dataApi
+    return this.dataApi
       .resolveCodeReviewComment(resolvedCommentId, newResolvedStatus)
       .done(() => {
-        const updatedComments = [...comments];
-        const resolvedCommentIndex = comments.findIndex(
+        const toggledCommentIndex = comments.findIndex(
           comment => comment.id === resolvedCommentId
         );
-        updatedComments[resolvedCommentIndex].isResolved = !updatedComments[
-          resolvedCommentIndex
-        ].isResolved;
-
-        this.setState({comments: updatedComments});
+        // Making a deep copy of the comment allows us to update state
+        // explicitly when setState is called. This is used by child elements
+        // such as Comment.
+        const toggledComment = {...comments[toggledCommentIndex]};
+        toggledComment.isResolved = !toggledComment.isResolved;
+        comments[toggledCommentIndex] = toggledComment;
+        this.setState({comments});
       })
       .fail(() => this.flashErrorOnComment(resolvedCommentId));
   };
@@ -226,6 +205,13 @@ class ReviewTab extends Component {
     this.setState({comments: updatedComments});
   };
 
+  clearCommentError = () => {
+    this.setState({
+      commentSaveError: false,
+      commentSaveErrorMessage: ''
+    });
+  };
+
   renderReadyForReviewCheckbox() {
     const {isReadyForReview, loadingReviewableState} = this.state;
 
@@ -237,6 +223,7 @@ class ReviewTab extends Component {
               <Spinner size="small" style={styles.checkbox} />
             ) : (
               <input
+                className="enable-review-checkbox"
                 type="checkbox"
                 checked={isReadyForReview}
                 onChange={() => {
@@ -317,16 +304,19 @@ class ReviewTab extends Component {
       authorizationError,
       isReadyForReview,
       commentSaveInProgress,
-      commentSaveError
+      commentSaveError,
+      commentSaveErrorMessage
     } = this.state;
     if (!authorizationError && (isReadyForReview || this.props.viewAsTeacher)) {
       return (
         <CommentEditor
           onNewCommentSubmit={this.onNewCommentSubmit}
           onNewCommentCancel={this.onNewCommentCancel}
+          onCommentUpdate={this.clearCommentError}
           key={forceRecreateEditorKey}
           saveInProgress={commentSaveInProgress}
           saveError={commentSaveError}
+          saveErrorMessage={commentSaveErrorMessage}
         />
       );
     }
@@ -354,18 +344,17 @@ class ReviewTab extends Component {
       viewAsCodeReviewer,
       viewAsTeacher,
       codeReviewEnabled,
-      channelId
+      channelId,
+      userIsTeacher
     } = this.props;
     const {
-      initialLoadCompleted,
+      loadingReviewData,
       comments,
       forceRecreateEditorKey,
       isReadyForReview,
       errorSavingReviewableProject,
       projectOwnerName,
-      reviewCheckboxEnabled,
-      reviewablePeers,
-      errorLoadingReviewablePeers
+      reviewCheckboxEnabled
     } = this.state;
 
     // channelId is not available on projects where the student has not edited the starter code.
@@ -378,7 +367,7 @@ class ReviewTab extends Component {
       );
     }
 
-    if (!initialLoadCompleted) {
+    if (loadingReviewData) {
       return (
         <div style={styles.loadingContainer}>
           <Spinner size="large" />
@@ -388,15 +377,26 @@ class ReviewTab extends Component {
 
     return (
       <div style={styles.reviewsContainer}>
+        <div style={styles.refreshButtonContainer}>
+          <Button
+            key="refresh"
+            icon="refresh"
+            text={javalabMsg.refresh()}
+            onClick={this.onClickRefresh}
+            color={Button.ButtonColor.blue}
+            style={styles.refreshButtonStyle}
+            className="review-refresh-button"
+          />
+        </div>
         <div style={styles.reviewHeader}>
           {codeReviewEnabled && !viewAsTeacher && (
             <>
               <ReviewNavigator
-                peers={reviewablePeers}
-                onSelectPeer={this.onSelectPeer}
-                onReturnToProject={this.onClickBackToProject}
                 viewPeerList={!viewAsCodeReviewer}
-                loadError={errorLoadingReviewablePeers}
+                loadPeers={this.loadPeers}
+                teacherAccountViewingAsParticipant={
+                  userIsTeacher && !viewAsTeacher
+                }
               />
               {reviewCheckboxEnabled &&
                 !viewAsCodeReviewer &&
@@ -427,9 +427,10 @@ class ReviewTab extends Component {
 
 export const UnconnectedReviewTab = ReviewTab;
 export default connect(state => ({
-  codeReviewEnabled: state.sectionData.section.codeReviewEnabled,
+  codeReviewEnabled: state.instructions.codeReviewEnabledForLevel,
   viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
-  viewAsTeacher: state.viewAs === ViewType.Teacher,
+  viewAsTeacher: state.viewAs === ViewType.Instructor,
+  userIsTeacher: state.currentUser.userType === 'teacher',
   channelId: state.pageConstants.channelId,
   serverLevelId: state.pageConstants.serverLevelId,
   serverScriptId: state.pageConstants.serverScriptId
@@ -442,7 +443,7 @@ const styles = {
     justifyContent: 'center'
   },
   reviewsContainer: {
-    margin: '25px 5%'
+    margin: '0px 5% 25px 5%'
   },
   reviewCheckboxRow: {
     margin: 0,
@@ -481,5 +482,13 @@ const styles = {
   },
   reviewDisabledText: {
     fontStyle: 'italic'
+  },
+  refreshButtonContainer: {
+    display: 'flex',
+    justifyContent: 'end'
+  },
+  refreshButtonStyle: {
+    margin: '10px 0',
+    fontSize: 13
   }
 };

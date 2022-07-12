@@ -103,7 +103,7 @@ end
 cli_parser.parse!
 if ARGV.empty?
   puts cli_parser
-  exit (-1)
+  exit(-1)
 else
   MetadataBuilder.new(options).build_sound_metadatas(ARGV)
 end

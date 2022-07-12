@@ -48,6 +48,30 @@ describe('ProgressLessonTeacherInfo', () => {
     assert.equal(wrapperWithPlan.find('Button').props().color, 'blue');
   });
 
+  it('updates the lesson url to require login', () => {
+    const lessonWithoutPlan = {
+      ...fakeLesson('Maze', 1)
+    };
+    const wrapper = shallow(
+      <ProgressLessonTeacherInfo
+        lesson={lessonWithoutPlan}
+        section={MOCK_SECTION}
+        unitAllowsHiddenLessons={false}
+        hiddenLessonState={Immutable.fromJS({
+          lessonsBySection: {11: {}}
+        })}
+        unitName="My Unit"
+        hasNoSections={false}
+        toggleHiddenLesson={() => {}}
+        lockableAuthorized={false}
+      />
+    );
+    assert.equal(
+      wrapper.find('SendLesson').props().lessonUrl,
+      'code.org?login_required=true'
+    );
+  });
+
   it('renders a purple Button if and only if we have a student lesson plan', () => {
     const lessonWithoutPlan = {
       ...fakeLesson('Maze', 1)
@@ -204,6 +228,30 @@ describe('ProgressLessonTeacherInfo', () => {
     );
 
     assert.equal(wrapper.find('SendLesson').length, 0);
+  });
+
+  it('renders Rate This Lesson only if lesson feedback url', () => {
+    const lesson = {
+      ...fakeLesson('Maze', 1),
+      lesson_feedback_url: 'foo/bar/feedback'
+    };
+
+    const wrapper = shallow(
+      <ProgressLessonTeacherInfo
+        lesson={lesson}
+        section={MOCK_SECTION}
+        unitAllowsHiddenLessons={false}
+        hiddenLessonState={Immutable.fromJS({
+          lessonsBySection: {11: {}}
+        })}
+        unitName="My Unit"
+        hasNoSections={true}
+        toggleHiddenLesson={() => {}}
+        lockableAuthorized={true}
+      />
+    );
+
+    assert.equal(wrapper.find('.rate-lesson-button').length, 1);
   });
 
   it('renders our HiddenForSectionToggle when we have a section', () => {

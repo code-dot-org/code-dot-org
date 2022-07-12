@@ -6,7 +6,7 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
+import {orderBy, sortBy} from 'lodash';
 import {getSectionRows} from './teacherSectionsRedux';
 import {sortableSectionShape} from './shapes';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
@@ -15,6 +15,7 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import SectionActionDropdown from './SectionActionDropdown';
 import Button from '@cdo/apps/templates/Button';
 import {stringifyQueryParams} from '../../utils';
+import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -25,6 +26,11 @@ export const COLUMNS = {
   STUDENTS: 4,
   LOGIN_INFO: 5,
   EDIT_DELETE: 6
+};
+
+const participantNames = {
+  facilitator: i18n.participantTypeFacilitatorTitle(),
+  teacher: i18n.participantTypeTeacherTitle()
 };
 
 // Cell formatters for sortable OwnedSectionsTable.
@@ -71,10 +77,6 @@ export const courseLinkFormatter = function(course, {rowData}) {
       )}
     </div>
   );
-};
-
-export const gradeFormatter = function(grade, {rowData}) {
-  return <div>{rowData.grade}</div>;
 };
 
 export const loginInfoFormatter = function(loginType, {rowData}) {
@@ -137,6 +139,7 @@ class OwnedSectionsTable extends Component {
   static propTypes = {
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     onEdit: PropTypes.func.isRequired,
+    isPlSections: PropTypes.bool,
 
     //Provided by redux
     sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired,
@@ -150,6 +153,29 @@ class OwnedSectionsTable extends Component {
         position: 0
       }
     }
+  };
+
+  determineSorter = (data, activeColumn, directionArray) => {
+    // If we are sorting on grade
+    const gradeCol = COLUMNS.GRADE.toString();
+    if (this.state.sortingColumns[gradeCol] && !this.props.isPlSections) {
+      const mult = directionArray[0] === 'asc' ? 1 : -1;
+      return sortBy(data, function(obj) {
+        return mult * StudentGradeLevels.concat(null).indexOf(obj.grade);
+      });
+    } else {
+      return orderBy(data, activeColumn, directionArray);
+    }
+  };
+
+  gradeFormatter = (grade, {rowData}) => {
+    return (
+      <div>
+        {this.props.isPlSections
+          ? participantNames[rowData.participantType]
+          : rowData.grade}
+      </div>
+    );
   };
 
   actionCellFormatter = (temp, {rowData}) => {
@@ -198,7 +224,6 @@ class OwnedSectionsTable extends Component {
           props: {style: styles.hiddenCol}
         }
       },
-
       {
         property: 'name',
         header: {
@@ -212,14 +237,19 @@ class OwnedSectionsTable extends Component {
         }
       },
       {
-        property: 'grade',
+        property: this.props.isPlSections ? 'participantType' : 'grade',
         header: {
-          label: i18n.grade(),
-          props: {style: tableLayoutStyles.headerCell},
+          label: this.props.isPlSections ? i18n.participants() : i18n.grade(),
+          props: {
+            className: this.props.isPlSections
+              ? 'uitest-participant-type-header'
+              : 'uitest-grade-header',
+            style: tableLayoutStyles.headerCell
+          },
           transforms: [sortable]
         },
         cell: {
-          formatters: [gradeFormatter],
+          formatters: [this.gradeFormatter],
           props: {style: colStyle}
         }
       },
@@ -286,13 +316,19 @@ class OwnedSectionsTable extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: (x, y, z) => {
+        return this.determineSorter(x, y, z);
+      }
     })(this.props.sectionRows);
 
     return (
       <Table.Provider columns={columns} style={tableLayoutStyles.table}>
         <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id" />
+        <Table.Body
+          className="uitest-sorted-rows"
+          rows={sortedRows}
+          rowKey="id"
+        />
       </Table.Provider>
     );
   }

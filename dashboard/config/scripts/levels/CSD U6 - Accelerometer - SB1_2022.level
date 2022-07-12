@@ -229,15 +229,16 @@
     "long_instructions": "# Pitch and Roll\r\n\r\nThis program displays the board's pitch and roll, and it will also change colors depending on their values.  \r\n\r\n# Do This\r\n\r\nMake the program change the following colors by tilting the board to the correct pitch and roll.\r\n\r\n<div style=\"display:inline-block; background-color: skyblue; height: 30px; width:30px\">&nbsp;</div> Pitch: 0 | Roll: -20\r\n\r\n<p/>\r\n\r\n<div style=\"display:inline-block; background-color: burlywood; height: 30px; width:30px\">&nbsp;</div> Pitch: 30 | Roll: 0\r\n\r\n<p/>\r\n\r\n<div style=\"display:inline-block; background-color: mistyrose; height: 30px; width:30px\">&nbsp;</div> Pitch: -15 | Roll: 10\r\n\r\n<p/>\r\n\r\n<div style=\"display:inline-block; background-color: yellowgreen; height: 30px; width:30px\">&nbsp;</div> Pitch: 5 | Roll: -25\r\n\r\n<p/>\r\n\r\n<div style=\"display:inline-block; background-color: thistle; height: 30px; width:30px\">&nbsp;</div> Pitch: 10 | Roll: 30\r\n\r\n<p/>\r\n\r\nWhich way should you tilt to get a positive pitch?\r\n\r\nWhich way should you tilt to get a negative roll?",
     "map_reference": "/docs/concepts/maker-toolkit/the-accelerometer/",
     "mini_rubric": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "widget_mode": "false",
     "libraries_enabled": "false",
     "validation_enabled": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "teacher_markdown": "The last two questions depend on how students are holding their circuit playgrounds. Encourage students to all hold their devices the same way:\r\n\r\n- The board starts flat and level to the ground\r\n- The USB cable is pointed away from students so if you looked down on the device, all of the letters and numbers would appear rightside-up"
   },
   "game_id": 41,
   "published": true,
@@ -245,7 +246,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-01T22:38:51.485+00:00\",\"changed\":[\"cloned from \\\"CSD U6 investigate orientation_2021\\\"\"],\"cloned_from\":\"CSD U6 investigate orientation_2021\"},{\"changed_at\":\"2021-09-01 22:39:00 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-01T22:38:51.485+00:00\",\"changed\":[\"cloned from \\\"CSD U6 investigate orientation_2021\\\"\"],\"cloned_from\":\"CSD U6 investigate orientation_2021\"},{\"changed_at\":\"2021-09-01 22:39:00 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-01 00:47:14 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

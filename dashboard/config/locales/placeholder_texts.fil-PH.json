@@ -232,10 +232,19 @@
         },
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "isda",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "iba"
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "iba",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "nilalang"
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Panalo ka!"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "I-click ang mga tiyanak upang bigyan sila ng mga mask.",
+          "968c8b54671ab303d48320f86937c40b": "Nakakatulong ang mga mask na mapabagal ang pagkalat ng mga virus!"
         }
       }
     }

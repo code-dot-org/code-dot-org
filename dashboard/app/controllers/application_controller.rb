@@ -8,8 +8,7 @@ class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
 
-  include SeamlessDatabasePool::ControllerFilter
-  # use_database_pool :all => :master
+  include Services::DatabaseConnections::ControllerFilter
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -93,7 +92,13 @@ class ApplicationController < ActionController::Base
   end
 
   def prevent_caching
-    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
+    # Rails has some logic to normalize the cache-control header that varies
+    # from version to version. Ideally, we would include 'no-cache' here but
+    # that causes Rails (starting in 5.2, still true as of 6.0) to remove
+    # 'must-revalidate' which causes issues on older mobile Safari browsers.
+    # See Rails logic at
+    # https://github.com/rails/rails/blob/v6.0.4.4/actionpack/lib/action_dispatch/http/cache.rb#L184
+    response.headers["Cache-Control"] = "no-store, max-age=0, must-revalidate"
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
@@ -182,7 +187,6 @@ class ApplicationController < ActionController::Base
 
       # if they solved it, figure out next level
       if options[:solved?]
-        response[:total_lines] = options[:total_lines]
         response[:new_level_completed] = options[:new_level_completed]
         response[:level_path] = build_script_level_path(script_level)
         script_level_solved_response(response, script_level)
@@ -218,10 +222,6 @@ class ApplicationController < ActionController::Base
     response[:activity_id] = options[:activity] && options[:activity].id
 
     response
-  end
-
-  def current_user
-    super
   end
 
   def set_locale_cookie(locale)

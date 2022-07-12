@@ -32,10 +32,10 @@ class UserLevel < ApplicationRecord
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
-  belongs_to :user
-  belongs_to :level
-  belongs_to :script
-  belongs_to :level_source
+  belongs_to :user, optional: true
+  belongs_to :level, optional: true
+  belongs_to :script, optional: true
+  belongs_to :level_source, optional: true
 
   after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
@@ -122,20 +122,31 @@ class UserLevel < ApplicationRecord
     latest_paired_user_level&.driver_level_source_id
   end
 
-  # Returns the names of the (other) navigators of the pairing group if this
-  # UserLevel represents progress completed when in a pairing group. If this
-  # UserLevel represents the driver's progress, this method will return the
-  # names of all navigators in the pairing group. If this UserLevel represents
-  # a navigator's progress, that navigator will be omitted from the returned
-  # list. Navigators whose user account or progress was deleted are omitted from
-  # the list.
-  def navigators_names
-    latest_paired_user_level&.navigators_names(exclude_self: navigator?)
+  # Returns the names of the partners (i.e. other students) in the pairing group
+  # if this UserLevel represents progress completed when in a pairing group.
+  # Partners whose user account or progress was deleted are omitted from the
+  # returned list.
+  def partner_names
+    return nil unless latest_paired_user_level
+
+    if navigator?
+      driver = latest_paired_user_level.driver&.name
+      other_navigators = latest_paired_user_level.navigators_names(exclude_self: true)
+      return driver ?
+        [driver] + other_navigators :
+        other_navigators
+    else
+      return latest_paired_user_level.navigators_names(exclude_self: false)
+    end
   end
 
-  # Returns the number of navigators in the pairing group if this UserLevel
+  # Returns the number of partners in the pairing group if this UserLevel
   # represents progress completed when in a pairing group.
-  def navigator_count
+  def partner_count
+    # Regardless of whether this user level represents the driver or the
+    # navigator, the total number of people in the pairing group is
+    # (latest_paired_user_level.navigator_count + 1) and the number of partners
+    # is latest_paired_user_level.navigator_count.
     latest_paired_user_level&.navigator_count
   end
 

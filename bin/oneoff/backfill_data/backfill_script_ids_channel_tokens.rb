@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 # This script backfills existing ChannelTokens to set script_id
 #
+# This backfill was completed 10/27/21, about 3% of channel tokens could not be backfilled most of which were for signed-out
+# users. It was run on production-daemon, which is where the CSV of unfilled channel tokens can be found:
+# production/bin/oneoff/backfill_data/channel-token-backfill-failures.csv
+#
 # Background: previously, the channel token for a level was identified by the level_id column. However,
 # levels are shared across scripts, so we need to identify the channel token by both level_id and script_id.
 # A script_id column was added the the channel tokens table here: https://github.com/code-dot-org/code-dot-org/pull/39835

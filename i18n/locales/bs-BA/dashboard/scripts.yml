@@ -2,10 +2,6 @@
 bs:
   data:
     script:
-      category:
-        hoc_category_name: Sat Kodiranja
-        math_category_name: Matematika
-        other_category_name: Ostalo
       name:
         course1:
           title: Kurs 1
@@ -173,7 +169,7 @@ bs:
           description_short: Hajde da se kodiranjem pridružimo Anni i Elsi dok istražuju čaroliju i ljepotu leda.
           lessons:
             Artist:
-              name: Umjetnik
+              name: Programiraj sa Anna i Elsa
           student_description: Hajde da programiramo sa Anna-om i Elsom pri njihovom istraživanju magičnog i predivnog leda. Napraviti ćeš pahulje snijega dok se kližeš i praviš zimsku idilu koju možeš onda podijeliti sa svojim prijateljima!
         course4:
           title: Kurs 4
@@ -315,7 +311,7 @@ bs:
           description_short: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili igru u kojoj igraju karakteri Disney Beskonačnost.
           lessons:
             Infinity:
-              name: Beskonačnost
+              name: Disney Beskonačni Laboratorij Igranja
           student_description: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili igru u kojoj igraju karakteri Disney Beskonačnost.
         algebrademo:
           title: Algebra Demo
@@ -839,9 +835,6 @@ bs:
         starwarsblocks:
           description: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
           description_short: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
-          lessons:
-            Hour of Code 2015:
-              name: Sat Kodiranja 2015
           student_description: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
         mc:
           title: Sata Kodiranja Minecraft-a
@@ -1240,9 +1233,6 @@ bs:
           title: Napravi igru košarke
           description_short: Napravi igru košarke
           description: Napravi igru košarke
-          lessons:
-            Bounce:
-              name: Odskok
           student_description: Napravi igru košarke
         csd2-2017:
           lessons:
@@ -1528,10 +1518,6 @@ bs:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi u stvarnom životu: Posadi sjeme'
-            Learn to Drag and Drop:
-              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
-            'Programming: Happy Maps':
-              description_teacher: Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.
           student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         courseb-2017:
           title: Kurs B
@@ -1549,8 +1535,6 @@ bs:
               name: Petlje u labirintu
         coursed-2017:
           lessons:
-            'Algorithms: Graph Paper Programming':
-              description_student: U ovoj lekciji, ti ćeš programirati svog prijatelja da crta slike!
             Nested Loops:
               name: Ugniježdene Petlje
         coursee-2017:
@@ -1573,9 +1557,6 @@ bs:
           lessons:
             'Algorithms: Tangrams':
               name: 'Algoritmi: Tangrami'
-            Ice Age Play Lab:
-              description_student: Zamisli svoju omiljenu video igru. Jesi li se ikad pitao kako je napravljena? U ovim slagalicama ti ćeš razviti vlastitu video igru sa prijateljima iz Ledenog Doba!
-              description_teacher: U ovoj lekciji, učenici su vođeni kroz priču sa likove iz Ledenog Doba. Učenici će raditi sa događajima i petljama da učine da se likovi kreću po ekranu, i dobiti će šansi da naprave vlastitu igru ili priču nakon razina na kojima su vođeni.
             Build Your Project:
               name: Napravite Vaš projekat
             Present Your Project:
@@ -1757,10 +1738,6 @@ bs:
               name: Kreativnost u algoritmima
             Creating Functions:
               name: Kreiranje Funkcija
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Sata Kodiranja Minecraft-a
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -1835,11 +1812,8 @@ bs:
           lessons:
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stivi i veliki projekat
-            Learn to Drag and Drop:
-              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             'Programming: Happy Maps':
               name: Vesele Mape
-              description_teacher: Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.
             Going Places Safely:
               name: Sigurna Putovanja
             'Persistence & Frustration: Stevie and the Big Project':
@@ -1960,8 +1934,6 @@ bs:
               name: Uvod
             Ice Age Play Lab:
               name: Ledeno doba Play Lab
-              description_student: Zamisli svoju omiljenu video igru. Jesi li se ikad pitao kako je napravljena? U ovim slagalicama ti ćeš razviti vlastitu video igru sa prijateljima iz Ledenog Doba!
-              description_teacher: U ovoj lekciji, učenici su vođeni kroz priču sa likove iz Ledenog Doba. Učenici će raditi sa događajima i petljama da učine da se likovi kreću po ekranu, i dobiti će šansi da naprave vlastitu igru ili priču nakon razina na kojima su vođeni.
             Songwriting with Parameters:
               name: Pisanje pjesama
             Build Your Project:
@@ -2296,8 +2268,6 @@ bs:
               name: Vesele Mape
             Going Places Safely:
               name: Sigurna Putovanja
-            Learn to Drag and Drop:
-              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
           student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         courseb-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -2600,10 +2570,6 @@ bs:
           lesson_groups:
             required:
               display_name: Pregled
-        dance-2019:
-          lessons:
-            Dance Party:
-              name: Plesna zabava
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
@@ -2742,8 +2708,6 @@ bs:
           lessons:
             Going Places Safely:
               name: Sigurna Putovanja
-            Learn to Drag and Drop:
-              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             'Programming: Happy Maps':
               name: Vesele Mape
           student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -2848,8 +2812,6 @@ bs:
             csf_events:
               display_name: Događaji
           lessons:
-            Learn to Drag and Drop:
-              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             Spelling Bee:
               name: Spelovanje
         csp1-2020:
@@ -2952,19 +2914,14 @@ bs:
         csd3-2021:
           lessons:
             Variables:
-              key: Varijable
               name: Varijable
             Text:
-              key: Tekst
               name: Tekst
             Conditionals:
-              key: Uvjeti
               name: Uvjeti
             Velocity:
-              key: Brzina
               name: Brzina
             Functions:
-              key: Funkcije
               name: Funkcije
         csd4-2021:
           lesson_groups:
@@ -2978,15 +2935,12 @@ bs:
         csd6-2021:
           lessons:
             Making Music:
-              key: Pravljenje muzike
               name: Pravljenje muzike
             Functions with Parameters:
-              key: Funkcije sa Parametrima
               name: Funkcije sa Parametrima
         csp1-2021:
           lessons:
             Binary Numbers:
-              key: Binarni Brojevi
               name: Binarni Brojevi
         csp2-2021:
           lesson_groups:
@@ -2995,7 +2949,6 @@ bs:
         csp3-2021:
           lessons:
             Debugging:
-              key: Otklanjanje pogrešaka
               name: Otklanjanje pogrešaka
         csp4-2021:
           lesson_groups:
@@ -3011,15 +2964,14 @@ bs:
               display_name: Liste
             csp_loops:
               display_name: Petlje
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmi
         coursea-2021:
           lessons:
-            Learn to Drag and Drop:
-              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             'Programming: Happy Maps':
               name: Vesele Mape
-              description_teacher: Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.
-            Sequencing with Scrat:
-              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
           lesson_groups:
             csf_digcit:
               display_name: Digitalno Državljanstvo
@@ -3031,10 +2983,7 @@ bs:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Pomakni, Pomakni
               name: Pomakni, Pomakni
-            Sequencing in Maze:
-              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             'Loops: Getting Loopy':
               name: Zapetljavanje
           lesson_groups:
@@ -3048,7 +2997,6 @@ bs:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Binarne narukvice
               name: Binarne narukvice
             'Events: The Big Event':
               name: Veliki Događaj
@@ -3066,18 +3014,11 @@ bs:
             'Algorithms: Graph Paper Programming':
               name: Papirno Programiranje Grafikona
             Relay Programming:
-              key: Prijenos programiranja
               name: Prijenos programiranja
             Dance Party:
-              key: Plesna zabava
               name: Plesna zabava
             Conditionals with Cards:
-              key: Uvjeti s Kartama
               name: Uvjeti s Kartama
-            'Unplugged: Binary':
-              key: 'Izvanmrežno: Binarni'
-            Artist Binary:
-              key: Umjetnik Binarno
           lesson_groups:
             csf_events:
               display_name: Događaji
@@ -3093,8 +3034,6 @@ bs:
               display_name: Digitalno Državljanstvo
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Uvjeti
             'Functions: Songwriting':
               name: Pisanje pjesama
           lesson_groups:
@@ -3109,7 +3048,6 @@ bs:
         coursef-2021:
           lessons:
             Internet:
-              key: Internet
               name: Internet
           lesson_groups:
             csf_digcit:
@@ -3127,7 +3065,6 @@ bs:
         express-2021:
           lessons:
             Dance Party:
-              key: Plesna zabava
               name: Plesna zabava
             lesson-1:
               name: Plesna zabava
@@ -3145,11 +3082,6 @@ bs:
             lessonGroup-9:
               display_name: Događaji
         pre-express-2021:
-          lessons:
-            Learn to Drag and Drop:
-              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
-            Sequencing with Scrat:
-              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
           lesson_groups:
             csf_loops:
               display_name: Petlje
@@ -3181,22 +3113,16 @@ bs:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Petlje
               name: Petlje
             Events:
-              key: Događaji
               name: Događaji
             Conditionals:
-              key: Uvjeti
               name: Uvjeti
             Functions:
-              key: Funkcije
               name: Funkcije
             Variables:
-              key: Varijable
               name: Varijable
             For Loops:
-              key: Od-Do-Za Petlje
               name: Od-Do-Za Petlje
           lesson_groups:
             k5_getting_started_1:
@@ -3218,10 +3144,8 @@ bs:
         kodea-pd-2021:
           lessons:
             Planning:
-              key: Planiranje
               name: Planiranje
             Next Steps:
-              key: Slijedeći Koraci
               name: Slijedeći Koraci
         csa-videos:
           lesson_groups:
@@ -3255,5 +3179,263 @@ bs:
               name: Pregled
         dlp21-csp-overview:
           lessons:
+            lesson-1:
+              name: Pregled
+        tesstest921:
+          lessons:
+            lesson-2:
+              name: Lekcija 2
+            lesson-3:
+              name: Lekcija 3
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spelovanje
+          title: Spelovanje
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Spelovanje
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Sat Kodiranja
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Varijable
+        csd6-pilot-2022:
+          lessons:
+            Making Music:
+              name: Pravljenje muzike
+            Functions with Parameters:
+              name: Funkcije
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Vesele Mape
+            'Programming: Happy Maps':
+              name: Vesele Mape
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Plesna zabava
+            lesson-1:
+              name: Plesna zabava
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Varijable
+            csf_for_loops:
+              display_name: Od-Do-Za Petlje
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Binarni Brojevi
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Jedinica 2: internet'
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Otklanjanje pogrešaka
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Petlje
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Pomakni, Pomakni
+            Getting Loopy:
+              name: Zapetljavanje
+            'Loops: Getting Loopy':
+              name: Zapetljavanje
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Veliki Događaj
+            Binary Bracelets:
+              name: Binarne narukvice
+            'Events: The Big Event':
+              name: Veliki Događaj
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Papirno Programiranje Grafikona
+            Relay Programming:
+              name: Prijenos programiranja
+            Dance Party:
+              name: Plesna zabava
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            'Algorithms: Graph Paper Programming':
+              name: Papirno Programiranje Grafikona
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalno Državljanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Pisanje pjesama
+            'Functions: Songwriting':
+              name: Pisanje pjesama
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            ramp_up:
+              display_name: Ugniježdene Petlje
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Uvjeti
+        coursef-2022:
+          lessons:
+            The Internet:
+              name: Internet
+            Internet:
+              name: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-8:
+              display_name: Varijable
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Petlje
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Varijable
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: Od-Do-Za Petlje
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Uvjeti
+            lesson-16:
+              name: Otklanjanje pogrešaka
+            lesson-19:
+              name: Otklanjanje pogrešaka
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Petlje
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-8:
+              display_name: Varijable
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Varijable
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Petlje
+            Events:
+              name: Događaji
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Od-Do-Za Petlje
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Varijable
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
+        csd5-2022:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
+        csd6-2022:
+          lessons:
+            Making Music:
+              name: Pravljenje muzike
+            Functions:
+              name: Funkcije
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Pregled
+            lesson-1:
+              name: Pregled
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Pregled
             lesson-1:
               name: Pregled

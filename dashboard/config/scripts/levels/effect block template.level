@@ -72,13 +72,41 @@
   "level_num": "custom",
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-29T20:55:35.890+00:00\",\"changed\":[\"cloned from \\\"New Sprite Lab Project\\\"\"],\"cloned_from\":\"New Sprite Lab Project\"},{\"changed_at\":\"2021-09-29 20:59:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"use_default_sprites\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 21:01:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 21:02:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 21:03:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 21:03:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 21:13:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 21:15:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 21:18:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-29T20:55:35.890+00:00\",\"changed\":[\"cloned from \\\"New Sprite Lab Project\\\"\"],\"cloned_from\":\"New Sprite Lab Project\"},{\"changed_at\":\"2021-09-29 20:59:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"use_default_sprites\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 21:01:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 21:02:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 21:03:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 21:03:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 21:13:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 21:15:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 21:18:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-01 14:39:00 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-01 14:39:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="gamelab_comment">
+              <title name="COMMENT">Edit this function to set up your sprites:</title>
+              <next>
+                <block type="procedures_callnoreturn">
+                  <mutation name="make a special sprite">
+                    <arg name="spriteCount"/>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="math_number">
+                      <title name="NUM">5</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_comment">
+                      <title name="COMMENT">Edit the "new effect" behavior to animate your sprites.</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_behavior_get">
+          <mutation/>
+          <title name="VAR" id="new effect">new effect</title>
+        </block>
         <block type="behavior_definition" editable="false" uservisible="false" usercreated="true">
           <mutation>
             <arg name="this sprite" type="Sprite"/>
@@ -277,32 +305,6 @@
             </block>
           </statement>
         </block>
-        <block type="when_run" deletable="false">
-          <next>
-            <block type="gamelab_comment">
-              <title name="COMMENT">Edit this function to set up your sprites:</title>
-              <next>
-                <block type="procedures_callnoreturn">
-                  <mutation name="make a special sprite">
-                    <arg name="spriteCount"/>
-                  </mutation>
-                  <value name="ARG0">
-                    <block type="math_number">
-                      <title name="NUM">5</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_comment">
-          <title name="COMMENT">Edit this behavior to animate the sprites.</title>
-        </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="new effect">new effect</title>
-        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -318,9 +320,8 @@
               </block>
             </value>
           </block>
-          <block type="gamelab_randomColor"/>
           <block type="gamelab_getTime">
-            <title name="UNIT">"seconds"</title>
+            <title name="UNIT">"frames"</title>
           </block>
           <block type="gamelab_isKeyPressed">
             <title name="KEY">"up"</title>
@@ -329,7 +330,7 @@
         </category>
         <category name="Sprites">
           <block type="gamelab_createNewSprite">
-            <title name="NAME">mySprite</title>
+            <title name="NAME">temporarySprite</title>
             <title name="COSTUME">"cuteanimals_bear_1"</title>
             <value name="LOCATION">
               <block type="gamelab_location_picker">
@@ -338,7 +339,7 @@
             </value>
           </block>
           <block type="sprite_variables_get">
-            <title name="VAR">mySprite</title>
+            <title name="VAR">temporarySprite</title>
           </block>
           <block type="gamelab_destroy"/>
           <block type="gamelab_setProp">
@@ -352,6 +353,13 @@
           <block type="gamelab_changePropBy">
             <title name="PROPERTY">"scale"</title>
             <value name="VAL">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_moveForward">
+            <value name="DISTANCE">
               <block type="math_number">
                 <title name="NUM">10</title>
               </block>
@@ -376,26 +384,13 @@
           <block type="gamelab_mirrorSprite">
             <title name="DIRECTION">"right"</title>
           </block>
-          <block type="gamelab_jumpTo">
-            <value name="LOCATION">
-              <block type="gamelab_randomLocation"/>
-            </value>
-          </block>
+          <block type="gamelab_jumpTo"/>
           <block type="gamelab_setTint">
             <value name="COLOR">
-              <block type="colour_picker">
-                <title name="COLOUR">#ff0000</title>
-              </block>
+              <block type="gamelab_randomColor"/>
             </value>
           </block>
           <block type="gamelab_removeTint"/>
-          <block type="gamelab_moveForward">
-            <value name="DISTANCE">
-              <block type="math_number">
-                <title name="NUM">10</title>
-              </block>
-            </value>
-          </block>
           <block type="gamelab_moveToward">
             <value name="DISTANCE">
               <block type="math_number">
@@ -408,40 +403,63 @@
           </block>
           <block type="gamelab_edgesDisplace"/>
           <block type="gamelab_bounceOff"/>
-          <block type="gamelab_setAnimation">
-            <title name="ANIMATION">"cuteanimals_bear_1"</title>
-          </block>
-          <block type="gamelab_getAllSprites"/>
           <block type="gamelab_getProp">
             <title name="PROPERTY">"scale"</title>
           </block>
-          <block type="gamelab_isCostumeEqual">
-            <title name="COSTUME">"cuteanimals_bear_1"</title>
-          </block>
           <block type="gamelab_isTouchingEdges"/>
           <block type="gamelab_isTouchingSprite"/>
+          <block type="gamelab_getAllSprites"/>
+          <block type="gamelab_allSpritesWithAnimation">
+            <title name="ANIMATION">"face_pizza_1"</title>
+          </block>
         </category>
         <category name="Locations">
-          <block type="gamelab_randomLocation"/>
-          <block type="gamelab_location_picker">
-            <title name="LOCATION">{"x":200,"y":200}</title>
-          </block>
           <block type="gamelab_locationAt">
             <value name="X">
               <block type="math_number">
-                <title name="NUM">100</title>
+                <title name="NUM">200</title>
               </block>
             </value>
             <value name="Y">
               <block type="math_number">
-                <title name="NUM">100</title>
+                <title name="NUM">200</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_locationAt">
+            <value name="X">
+              <block type="math_random_int">
+                <value name="FROM">
+                  <block type="math_number">
+                    <title name="NUM">0</title>
+                  </block>
+                </value>
+                <value name="TO">
+                  <block type="math_number">
+                    <title name="NUM">400</title>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="Y">
+              <block type="math_random_int">
+                <value name="FROM">
+                  <block type="math_number">
+                    <title name="NUM">0</title>
+                  </block>
+                </value>
+                <value name="TO">
+                  <block type="math_number">
+                    <title name="NUM">400</title>
+                  </block>
+                </value>
               </block>
             </value>
           </block>
           <block type="gamelab_locationOf">
             <value name="SPRITE">
               <block type="sprite_variables_get">
-                <title name="VAR">mySprite</title>
+                <title name="VAR">temporarySprite</title>
               </block>
             </value>
           </block>
@@ -470,14 +488,6 @@
               </block>
             </value>
           </block>
-          <block type="gamelab_whenPromptAnswered">
-            <value name="VAR">
-              <block type="variables_get" can_disconnect_from_parent="false">
-                <title name="VAR">???</title>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_whenAllPromptsAnswered"/>
           <block type="gamelab_whenSpriteCreated"/>
         </category>
         <category name="Behaviors" custom="Behavior">
@@ -521,23 +531,10 @@
               </block>
             </value>
           </block>
-          <block type="gamelab_textVariableJoin">
-            <title name="VAR">???</title>
-          </block>
         </category>
         <category name="Math">
           <block type="math_arithmetic">
             <title name="OP">ADD</title>
-            <value name="A">
-              <block type="math_number">
-                <title name="NUM">0</title>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number">
-                <title name="NUM">0</title>
-              </block>
-            </value>
           </block>
           <block type="math_random_int">
             <value name="FROM">
@@ -557,12 +554,12 @@
           <block type="gamelab_countByAnimation">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"cuteanimals_bear_1"</title>
+                <title name="ANIMATION">"face_pizza_1"</title>
               </block>
             </value>
           </block>
           <block type="gamelab_getTime">
-            <title name="UNIT">"seconds"</title>
+            <title name="UNIT">"frames"</title>
           </block>
           <block type="math_round">
             <title name="OP">ROUND</title>
@@ -603,7 +600,7 @@
           <block type="gamelab_isTouchingEdges">
             <value name="SPRITE">
               <block type="sprite_variables_get">
-                <title name="VAR">mySprite</title>
+                <title name="VAR">temporarySprite</title>
               </block>
             </value>
           </block>

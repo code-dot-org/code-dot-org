@@ -10,16 +10,21 @@ export default class CommentEditor extends Component {
   static propTypes = {
     onNewCommentSubmit: PropTypes.func.isRequired,
     onNewCommentCancel: PropTypes.func.isRequired,
+    onCommentUpdate: PropTypes.func,
     saveError: PropTypes.bool,
-    saveInProgress: PropTypes.bool
+    saveInProgress: PropTypes.bool,
+    saveErrorMessage: PropTypes.string
   };
 
   state = {comment: ''};
 
-  commentChanged = event => this.setState({comment: event.target.value});
+  commentChanged = event => {
+    this.props.onCommentUpdate();
+    this.setState({comment: event.target.value});
+  };
 
   renderSaveStatus() {
-    const {saveError, saveInProgress} = this.props;
+    const {saveError, saveInProgress, saveErrorMessage} = this.props;
     let icon = '';
     let saveMessageTitle = '';
     let saveMessageText = '';
@@ -32,16 +37,16 @@ export default class CommentEditor extends Component {
         <span className="fa fa-exclamation-circle" style={styles.iconError} />
       );
       saveMessageTitle = javalabMsg.genericSaveErrorTitle();
-      saveMessageText = javalabMsg.genericErrorMessage();
+      saveMessageText = saveErrorMessage || javalabMsg.genericErrorMessage();
     }
 
     return (
       <div style={styles.saveStatus}>
-        <div style={styles.saveStatusIcon}>{icon}</div>
-        <div style={styles.saveMessage}>
+        <div style={styles.saveStatusHeader}>
+          <div style={styles.saveStatusIcon}>{icon}</div>
           <p style={styles.saveMessageTitle}>{saveMessageTitle}</p>
-          <p style={styles.saveMessageText}>{saveMessageText}</p>
         </div>
+        <p style={styles.saveMessageText}>{saveMessageText}</p>
       </div>
     );
   }
@@ -58,13 +63,14 @@ export default class CommentEditor extends Component {
     return (
       <div>
         <textarea
+          className="code-review-comment-input"
           style={{width: '100%', boxSizing: 'border-box'}}
           placeholder={`${javalabMsg.addAComment()}...`}
           onChange={this.commentChanged}
           value={this.state.comment}
         />
+        {comment && this.renderSaveStatus()}
         <div style={styles.commentFooter}>
-          {comment && this.renderSaveStatus()}
           <div style={styles.buttonContainer}>
             {comment && (
               <Button
@@ -84,6 +90,7 @@ export default class CommentEditor extends Component {
                 color="orange"
                 style={{...styles.buttons.all, ...styles.buttons.submit}}
                 disabled={saveInProgress}
+                id="code-review-comment-submit"
               />
             )}
           </div>
@@ -117,23 +124,29 @@ const styles = {
   },
   commentFooter: {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
     alignItems: 'center',
     padding: '10px 0'
   },
   saveStatus: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  saveStatusHeader: {
     display: 'flex',
     alignItems: 'center'
   },
   saveMessageTitle: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
-    marginBottom: 0
+    marginBottom: 0,
+    color: color.dark_charcoal
   },
   saveMessageText: {
     fontStyle: 'italic',
     fontSize: 12,
-    marginBottom: 0
+    marginBottom: 0,
+    color: color.dark_charcoal
   },
   saveMessage: {
     color: color.dark_charcoal

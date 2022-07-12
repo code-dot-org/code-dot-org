@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 eu:
   errors:
     messages:
@@ -216,6 +222,7 @@ eu:
       eval: 'Ebal'
       flappy: 'Flappy'
       frozen: 'Frozen'
+      gamelab: 'Jolas laborategia'
       gamelab_jr: 'Game Lab (beta)'
       gumball: 'Gumball'
       iceage: 'Izotz Aroa'
@@ -223,6 +230,7 @@ eu:
       minecraft_designer: 'Minecraft'
       playlab: 'Jolas Laborategia'
       starwars: 'Star Wars'
+      loading: 'Kargatzen...'
       weblab: 'Web Lab'
     popup:
       progress_for_user: "%{name}'ren aurrerapenak"
@@ -237,6 +245,7 @@ eu:
       prizes_link: 'informazio gehiago'
   teacher:
     answer: Erantzuna
+    dashboard: 'Irakaslearen arbela'
     for_teachers_only: Irakasleentzat soilik
     title:
       one: 'Zure irakaslea:'
@@ -409,6 +418,8 @@ eu:
     gallery:
       title: "Galeria"
       body: "Begira ezazu gure erabiltzaileek sortutako app eta irudi artistikoen bilduma bat"
+    gamelab:
+      title: "Jolas laborategia"
     frozen:
       title: "Frozen"
     starwars:
@@ -557,11 +568,14 @@ eu:
         math: 'Matematika'
         science: 'Zientzia'
         la: 'Hizkuntzalaritza'
+        other: "Beste bat"
       resources:
         kodable: 'Kodable'
         lightbot: 'Argibot'
+        other: "Beste bat"
       robotics:
         kodable: 'Kodable'
+        other: "Beste bat"
       email_opt_in:
         opt_in_yes: 'Bai'
         opt_in_no: 'Ez'

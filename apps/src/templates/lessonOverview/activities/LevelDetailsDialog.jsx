@@ -124,6 +124,13 @@ class LevelDetailsDialog extends Component {
       level.long_instructions ||
       level.shortInstructions
     ) {
+      let exampleSolutions = [];
+      if (this.state.scriptLevel.exampleSolutions?.length > 0) {
+        exampleSolutions = this.state.scriptLevel.exampleSolutions;
+      } else if (level.exampleSolutions?.length > 0) {
+        exampleSolutions = level.exampleSolutions;
+      }
+
       // TODO: calculate more of these parameters based on the level and pages
       return (
         <UnconnectedTopInstructions
@@ -151,6 +158,7 @@ class LevelDetailsDialog extends Component {
           isCollapsed={false}
           hidden={false}
           isEmbedView={false}
+          hasBackgroundMusic={false}
           mainStyle={{paddingBottom: 5, position: 'static'}}
           containerStyle={{
             overflowY: 'auto',
@@ -166,6 +174,7 @@ class LevelDetailsDialog extends Component {
           resizable={false}
           serverLevelId={parseInt(level.id)}
           serverScriptId={this.state.scriptLevel.scriptId}
+          exampleSolutions={exampleSolutions}
         />
       );
     } else {

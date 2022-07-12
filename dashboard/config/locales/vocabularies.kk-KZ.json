@@ -2,6 +2,75 @@
   "kk-KZ": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "function/hero/unversioned": {
+          "word": "Функция"
+        },
+        "code/poem-art/2021": {
+          "word": "Код"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "code/artist/unversioned": {
+          "word": "Код"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Шарттар"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Ілмек"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "code/sports/unversioned": {
+          "word": "Код"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Код"
+        },
         "variable/coursef/2021": {
           "word": "Айнымалы"
         },
@@ -76,6 +145,24 @@
         },
         "define/coursee/2021": {
           "word": "Анықта"
+        },
+        "debugging/csd/2021": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "variable/csd/2021": {
+          "word": "Айнымалы"
+        },
+        "conditionals/csd/2021": {
+          "word": "Шарттар"
+        },
+        "abstraction/csd/2021": {
+          "word": "Абстракция"
+        },
+        "function/csd/2021": {
+          "word": "Функция"
+        },
+        "copyright/csd/2021": {
+          "word": "Авторлық құқық"
         }
       }
     }

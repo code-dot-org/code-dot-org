@@ -206,7 +206,7 @@ describe('animationList', function() {
     });
   });
 
-  let createAnimationList = function(count) {
+  let createAnimationList = function(count, v3Sources = false) {
     let orderedKeys = [];
     let propsByKey = {};
     let baseKey = 'animation';
@@ -216,28 +216,7 @@ describe('animationList', function() {
 
       propsByKey[key] = {
         name: key,
-        sourceUrl: null,
-        frameSize: {x: 100, y: 100},
-        frameCount: 1,
-        looping: true,
-        frameDelay: 4,
-        version: null
-      };
-    }
-    return {orderedKeys: orderedKeys, propsByKey: propsByKey};
-  };
-
-  let createAnimationListToMigrate = function(count) {
-    let orderedKeys = [];
-    let propsByKey = {};
-    let baseKey = 'animation';
-    for (let i = 1; i <= count; i++) {
-      let key = baseKey + '_' + i;
-      orderedKeys.push(key);
-
-      propsByKey[key] = {
-        name: key,
-        sourceUrl: 'source/v3/url',
+        sourceUrl: v3Sources ? 'source/v3/url' : null,
         frameSize: {x: 100, y: 100},
         frameCount: 1,
         looping: true,
@@ -251,7 +230,7 @@ describe('animationList', function() {
   describe('action: set initial animationList', function() {
     let server, store;
     beforeEach(function() {
-      project.getCurrentId.returns('alpha');
+      project.getCurrentId.returns('123');
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
       store = createStore(
@@ -325,12 +304,12 @@ describe('animationList', function() {
     });
 
     it('when animationList has migratable animations, check that animation is substituted', function() {
-      let animationList = createAnimationListToMigrate(2);
+      let animationList = createAnimationList(2, true);
       let defaultSprites = createAnimationList(2);
       defaultSprites.propsByKey['animation_1'].sourceUrl = 'cat';
 
       store.dispatch(
-        setInitialAnimationList(animationList, true, true, defaultSprites)
+        setInitialAnimationList(animationList, defaultSprites, true)
       );
       expect(
         store.getState().animationList.propsByKey['animation_1'].sourceUrl
@@ -390,6 +369,20 @@ describe('animationList', function() {
       );
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(deleteAnimation(key0));
+      expect(store.getState().animationTab.selectedAnimation).to.equal('');
+    });
+
+    it('deleting an animation deselects when there are no other non-background animations in the spritelab animationList', function() {
+      const key0 = 'animation_1';
+      const key1 = 'animation_2';
+      let animationList = createAnimationList(2);
+      animationList.propsByKey[key1].categories = ['backgrounds'];
+      let store = createStore(
+        combineReducers({animationList: reducer, animationTab}),
+        {}
+      );
+      store.dispatch(setInitialAnimationList(animationList));
+      store.dispatch(deleteAnimation(key0, true));
       expect(store.getState().animationTab.selectedAnimation).to.equal('');
     });
   });

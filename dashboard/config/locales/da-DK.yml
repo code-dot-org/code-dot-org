@@ -441,6 +441,7 @@ da:
       starwars: Star Wars
       starwarsblocks: Star Wars (Blocks)
       starwarsblocks_hour: Star Wars (Blocks)
+      loading: Indlæser...
     popup:
       progress_for_user: "%{name}s fremskridt"
       progress: Dine fremskridt
@@ -893,10 +894,6 @@ da:
       for personvern](%{privacy_url}). Ver venleg å les desse nøye før du aksepterer
       dei. Merk at våre verktøy for å undervise i JavaScript kan vere utilgjengeleg
       for dine elevar før dei oppdaterte vilkåre er akseptert.
-  donor_interstitial:
-    title: Dine gratis datalogikurser er blevet muliggjort af...
-    support_codeorg_2: "[Doner nu](%{donate_url}) for at støtte Code.org."
-    get_started: Kom i gang med Code.org
   school_info_interstitial:
     save: Gem
   race_interstitial:
@@ -1047,6 +1044,7 @@ da:
       email: E-mail
       email_alternate: Anden e-mail
       gender: Køn
+      school: Skole
       school_name: Skolens navn
       school_country: Skolens land
       colombian_chilean_school_name: Skolens navn
@@ -1093,12 +1091,15 @@ da:
         math: Matematik
         science: Videnskab
         la: Sprog kunst
+        other: Andre
       resources:
         bootstrap: Bootstrap
         khan: Khan Academy
         kodable: Kodable
+        other: Andre
       robotics:
         kodable: Kodable
+        other: Andre
       email_opt_in:
         opt_in_yes: Ja
         opt_in_no: Nej

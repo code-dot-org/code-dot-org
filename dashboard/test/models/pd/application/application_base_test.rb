@@ -4,6 +4,7 @@ module Pd::Application
   class ApplicationBaseTest < ActiveSupport::TestCase
     include ApplicationConstants
     include Pd::Application::ActiveApplicationModels
+    include Pd::SharedApplicationConstants
 
     freeze_time
 
@@ -17,22 +18,31 @@ module Pd::Application
           'Application type is not included in the list',
           'Application year is not included in the list',
           'Type is required'
-        ],
-        application.errors.full_messages
+        ].sort,
+        application.errors.full_messages.sort
       )
     end
 
     test 'derived classes override type and year' do
-      application = TEACHER_APPLICATION_CLASS.new
+      application = create TEACHER_APPLICATION_FACTORY
       assert_equal TEACHER_APPLICATION, application.application_type
-      assert_equal TEACHER_APPLICATION_CLASS.year, application.application_year
+      assert_equal APPLICATION_CURRENT_YEAR, application.application_year
     end
 
     test 'default status is unreviewed' do
-      application = ApplicationBase.new
+      application = create TEACHER_APPLICATION_FACTORY
 
       assert_equal 'unreviewed', application.status
       assert application.unreviewed?
+    end
+
+    test 'can set a different status from the default' do
+      application = create TEACHER_APPLICATION_FACTORY, status: 'incomplete'
+      application.update_status_timestamp_change_log(nil)
+
+      assert application.incomplete?
+      assert_equal application.sanitize_status_timestamp_change_log.length, 1
+      assert application.sanitize_status_timestamp_change_log[0].value?('incomplete')
     end
 
     test 'can update status' do
@@ -201,6 +211,26 @@ module Pd::Application
       # March 9, 2018 10:15am
       application.accepted_at = DateTime.new(2018, 3, 9, 10, 15)
       assert_equal '2018-03-09', application.date_accepted
+    end
+
+    test 'applied_at and date_applied have the first unreviewed status' do
+      application = create :pd_teacher_application, status: 'incomplete'
+      assert_nil application.applied_at
+
+      tomorrow = Date.tomorrow.to_time
+      next_day = tomorrow + 1.day
+
+      Timecop.freeze(tomorrow) do
+        application.update!(status: 'unreviewed')
+      end
+
+      Timecop.freeze(next_day) do
+        application.update!(status: 'reopened')
+        application.update!(status: 'unreviewed')
+      end
+
+      assert_equal tomorrow, application.applied_at
+      assert_equal tomorrow, application.date_applied.to_time
     end
 
     test 'memoized full_answers' do

@@ -1,11 +1,42 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {Row} from 'react-bootstrap';
-import {Summary} from '@cdo/apps/code-studio/pd/application_dashboard/summary';
+import {
+  Summary,
+  removeIncompleteApplications
+} from '@cdo/apps/code-studio/pd/application_dashboard/summary';
 import {expect} from 'chai';
 import sinon from 'sinon';
 
 describe('Summary', () => {
+  const dataWithoutIncompleteApps = {
+    unreviewed: {locked: 0, total: 0},
+    reopened: {locked: 0, total: 0},
+    pending: {locked: 0, total: 0},
+    waitlisted: {locked: 0, total: 0},
+    declined: {locked: 0, total: 0},
+    accepted_not_notified: {locked: 0, total: 0},
+    accepted_notified_by_partner: {locked: 0, total: 0},
+    accepted_no_cost_registration: {locked: 0, total: 0},
+    registration_sent: {locked: 0, total: 0},
+    paid: {locked: 0, total: 0}
+  };
+
+  const data = {
+    csd_teachers: {
+      ...dataWithoutIncompleteApps,
+      incomplete: {locked: 0, total: 0}
+    },
+    csp_teachers: {
+      ...dataWithoutIncompleteApps,
+      incomplete: {locked: 0, total: 0}
+    },
+    csa_teachers: {
+      ...dataWithoutIncompleteApps,
+      incomplete: {locked: 0, total: 0}
+    }
+  };
+
   const fakeRouter = {
     createHref() {}
   };
@@ -32,41 +63,7 @@ describe('Summary', () => {
     server.respondWith('GET', '/api/v1/pd/applications', [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify({
-        csd_teachers: {
-          unreviewed: {locked: 0, total: 1},
-          pending: {locked: 0, total: 0},
-          waitlisted: {locked: 0, total: 0},
-          declined: {locked: 0, total: 0},
-          accepted_not_notified: {locked: 0, total: 0},
-          accepted_notified_by_partner: {locked: 0, total: 0},
-          accepted_no_cost_registration: {locked: 0, total: 0},
-          registration_sent: {locked: 0, total: 0},
-          paid: {locked: 0, total: 0}
-        },
-        csp_teachers: {
-          unreviewed: {locked: 0, total: 1},
-          pending: {locked: 0, total: 0},
-          waitlisted: {locked: 0, total: 0},
-          declined: {locked: 0, total: 0},
-          accepted_not_notified: {locked: 0, total: 0},
-          accepted_notified_by_partner: {locked: 0, total: 0},
-          accepted_no_cost_registration: {locked: 0, total: 0},
-          registration_sent: {locked: 0, total: 0},
-          paid: {locked: 0, total: 0}
-        },
-        csa_teachers: {
-          unreviewed: {locked: 0, total: 1},
-          pending: {locked: 0, total: 0},
-          waitlisted: {locked: 0, total: 0},
-          declined: {locked: 0, total: 0},
-          accepted_not_notified: {locked: 0, total: 0},
-          accepted_notified_by_partner: {locked: 0, total: 0},
-          accepted_no_cost_registration: {locked: 0, total: 0},
-          registration_sent: {locked: 0, total: 0},
-          paid: {locked: 0, total: 0}
-        }
-      })
+      JSON.stringify(data)
     ]);
 
     let summary = createSummary();
@@ -80,5 +77,19 @@ describe('Summary', () => {
     expect(summary.find('Spinner')).to.have.length(0);
 
     server.restore();
+  });
+
+  it('removeIncompleteApplications strips incomplete applications from data', () => {
+    expect(removeIncompleteApplications(data)).to.deep.equal({
+      csd_teachers: {
+        ...dataWithoutIncompleteApps
+      },
+      csp_teachers: {
+        ...dataWithoutIncompleteApps
+      },
+      csa_teachers: {
+        ...dataWithoutIncompleteApps
+      }
+    });
   });
 });

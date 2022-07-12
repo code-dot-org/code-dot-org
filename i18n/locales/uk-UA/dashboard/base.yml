@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 uk:
   errors:
     messages:
@@ -320,6 +326,7 @@ uk:
       report_bug: "Сповістити про проблему"
       report_abuse: "Повідомити про порушення"
       teacher_community: "Спільнота вчителів"
+      professional_learning: "Підвищення кваліфікації"
       documentation: "Документація"
       tutorials: "Навчальні матеріали"
       web_lab_documentation: "Документація веб-лабораторії"
@@ -347,7 +354,7 @@ uk:
       stats: "Статистика"
       help_us: "Допомога нам"
       teach: "Вчити"
-      about: "Про"
+      about: "Про нас"
       legal: "Конфіденційність та юридична інформація"
       legal_privacy: "Політика конфіденційності"
       legal_tos: "Умови надання послуг"
@@ -390,6 +397,7 @@ uk:
       starwars: 'Зоряні війни'
       starwarsblocks: 'Зоряні війни (блоки)'
       starwarsblocks_hour: 'Зоряні війни (блоки)'
+      loading: 'Завантаження...'
       view_all: 'Переглянути всі проекти...'
     popup:
       progress_for_user: "Прогрес %{name}"
@@ -404,6 +412,7 @@ uk:
       prizes_link: 'Детальніше'
   teacher:
     answer: Відповідь
+    dashboard: 'Панель вчителя'
     for_teachers_only: Лише для вчителів
     title:
       one: 'Ваш вчитель:'
@@ -559,6 +568,7 @@ uk:
     make_my_own_app: 'Створити власну програму'
     how_it_works: 'Як це працює (Переглянути код)'
     try_hour_of_code: 'Спробуйте Годину коду!'
+    store: 'Магазин'
   reference_area:
     title: 'Потрібна допомога?'
     subtitle: 'Переглянути ці відео та підказки'
@@ -575,6 +585,7 @@ uk:
     download: 'Завантажити відео'
     show_notes: 'Показати замітки'
     show_video: 'Показати відео'
+    label: 'Відео'
   compatibility:
     upgrade:
       unsupported_message: "Ваш браузер не підтримується. Оновіть свій браузер до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>. Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть."
@@ -782,19 +793,11 @@ uk:
     reminder_desc: 'Увага! Ми оновили <a href="%{tos_url}" target="_blank">Правила використання сервісу</a> та <a href="%{privacy_url}" target="_blank">Конфеденційність</a>. Будь ласка, прочитайте це перед тим, як погоджуватися з цип. Зверніть увагу на те, що інструменти для навчання JavaScript можуть бути недоступні для ваших учнів(студентів, дітей), через оновлення умов.'
     reminder_desc_markdown: Увага! Ми оновили [Правила використання сервісу](%{tos_url}) та [Конфеденційність](%{privacy_url}). Будь ласка, прочитайте це перед тим, як погоджуватися з цип. Зверніть увагу на те, що інструменти для навчання JavaScript можуть бути недоступні для ваших учнів(студентів, дітей), через оновлення умов.
     review_terms: "Переглянути оновлені домовленості"
-  donor_interstitial:
-    title: "Ваші безкоштовні курси з Інформатики стали можливими завдяки ..."
-    subtitle: "Ми хотіли б подякувати щедрим донорам, підтримка яких зробила можливим успіх Code.org. Ми прагнемо залишати Code.org безкоштовним для шкіл та студентів у всьому світі, завдяки постійній щедрості наших [донорів](%{donors_url})!"
-    local_supporters: "Місцеві спонсори"
-    global_supporters: "Глобальні спонсори"
-    support_codeorg_1: "Кожен долар, наданий Code.org, дає можливість більшій кількості учнів."
-    support_codeorg_2: "[Пожертвуйте зараз](%{donate_url}) для підтримки Code.org."
-    get_started: "Розпочинайте з Code.org"
   school_info_interstitial:
     title: "Ми хочемо принести Computer Science кожному студенту - допоможіть нам відслідковувати наш прогрес!"
     message: "Будь ласка, введіть дані вашої школи."
     message_with_suggestion: "Будь ласка, переконайтеся, що наступна інформація вірна, внесіть зміни, якщо необхідно."
-    save: "зберегти"
+    save: "Зберегти"
   race_interstitial:
     title: "За бажанням: Допоможіть нам відстежувати прогрес для підвищення різноманіття у галузі інформатики"
     message: "Вкажіть свою расову приналежність (позначте всі потрібні варіанти)"
@@ -962,6 +965,7 @@ uk:
       email: 'Електронна пошта'
       email_alternate: 'Додаткова адреса електронної пошти'
       gender: 'Гендерна приналежність'
+      school: 'Школа'
       school_name: 'Назва школи'
       school_country: 'Країна твоєї школи'
       colombian_school_municipality: 'Навчальний муніципалітет'
@@ -1011,6 +1015,7 @@ uk:
         music: 'Музика'
         art: 'Мистецтво'
         other: "Інше:"
+        na: 'Не застосовується'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1020,7 +1025,8 @@ uk:
         lightbot: 'Світлячок'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Інше:"
+        other: "Інше"
+        na: 'Не застосовується'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1030,7 +1036,8 @@ uk:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Інше:"
+        other: "Інше"
+        na: 'Не застосовується'
       workshop_course:
         csf_af: 'Основи інформатики (Курси A-F)'
         csf_express: 'Основи інформатики (Вступ до прискорених та Прискорені)'
@@ -1070,3 +1077,4 @@ uk:
     text: "**Ви один з батьків або опікун? **Прив’яжіть до цього облікового запису свою електронну пошту, щоб бути в курсі успіхів і проектів вашої дитини!"
     link_your_email: "Прив'яжіть вашу ел. пошту"
     not_now: "Не зараз"
+  teacher_feedback: "Відгук викладача"

@@ -8,13 +8,14 @@ import {
   fakeTeacherAndStudentAnnouncement,
   fakeTeacherAnnouncement
 } from './FakeAnnouncementsTestData';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const defaultProps = {
   plcHeaderProps: undefined,
   announcements: [],
   isSignedIn: true,
-  viewAs: ViewType.Teacher,
-  isVerifiedTeacher: true,
+  viewAs: ViewType.Instructor,
+  isVerifiedInstructor: true,
   hasVerifiedResources: false,
   scriptId: 99,
   scriptName: 'course1',
@@ -23,7 +24,8 @@ const defaultProps = {
     '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
   unitStudentDescription:
     '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
-  versions: []
+  versions: courseOfferings['1'].course_versions,
+  courseVersionId: 1
 };
 
 describe('UnitOverviewHeader', () => {
@@ -61,12 +63,12 @@ describe('UnitOverviewHeader', () => {
     assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
   });
 
-  it('includes a single notification default for non-verified teachers', () => {
+  it('includes a single notification default for non-verified instructors', () => {
     const wrapper = shallow(
       <UnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
-        isVerifiedTeacher={false}
+        isVerifiedInstructor={false}
         verificationCheckComplete={true}
       />,
       {disableLifecycleMethods: true}
@@ -74,12 +76,12 @@ describe('UnitOverviewHeader', () => {
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
-  it('has non-verified and provided teacher announcements if necessary', () => {
+  it('has non-verified and provided instructor announcements if necessary', () => {
     const wrapper = shallow(
       <UnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
-        isVerifiedTeacher={false}
+        isVerifiedInstructor={false}
         verificationCheckComplete={true}
         announcements={[
           fakeTeacherAnnouncement,
@@ -92,13 +94,13 @@ describe('UnitOverviewHeader', () => {
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
-  it('has student announcement if viewing as student', () => {
+  it('has participant announcement if viewing as participant', () => {
     const wrapper = shallow(
       <UnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
-        isVerifiedTeacher={false}
-        viewAs={ViewType.Student}
+        isVerifiedInstructor={false}
+        viewAs={ViewType.Participant}
         announcements={[fakeStudentAnnouncement]}
       />,
       {disableLifecycleMethods: true}
@@ -106,57 +108,18 @@ describe('UnitOverviewHeader', () => {
     assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
   });
 
-  it('passes properly-formatted versions to AssignmentVersionSelector', () => {
-    const versions = [
-      {
-        name: 'coursea-2017',
-        year: '2017',
-        title: '2017',
-        isStable: true,
-        locales: ['English', 'Italian'],
-        localeCodes: ['en-US', 'it-IT'],
-        canViewVersion: true
-      },
-      {
-        name: 'coursea-2018',
-        year: '2018',
-        title: '2018',
-        isStable: true,
-        locales: ['English'],
-        localeCodes: ['en-US'],
-        canViewVersion: true
-      },
-      {
-        name: 'coursea-2019',
-        year: '2019',
-        title: '2019',
-        isStable: false,
-        locales: [],
-        localeCodes: [],
-        canViewVersion: false
-      }
-    ];
-    const wrapper = shallow(
-      <UnitOverviewHeader
-        {...defaultProps}
-        scriptName="coursea-2018"
-        versions={versions}
-        localeCode="it-IT"
-      />,
-      {disableLifecycleMethods: true}
-    );
+  it('passes versions to AssignmentVersionSelector', () => {
+    const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
+      disableLifecycleMethods: true
+    });
 
     const versionSelector = wrapper.find('AssignmentVersionSelector');
     assert.equal(1, versionSelector.length);
-    const renderedVersions = versionSelector.props().versions;
-    assert.equal(2, renderedVersions.length);
-    const coursea2017 = renderedVersions.find(v => v.name === 'coursea-2017');
-    assert.equal(true, coursea2017.isRecommended);
-    const coursea2018 = renderedVersions.find(v => v.name === 'coursea-2018');
-    assert.equal(true, coursea2018.isSelected);
+    const renderedVersions = versionSelector.props().courseVersions;
+    assert.equal(2, Object.values(renderedVersions).length);
   });
 
-  it('has correct unit description for teacher', () => {
+  it('has correct unit description for instructor', () => {
     const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
       disableLifecycleMethods: true
     });
@@ -165,9 +128,9 @@ describe('UnitOverviewHeader', () => {
     );
   });
 
-  it('has correct unit description for student', () => {
+  it('has correct unit description for participant', () => {
     const wrapper = shallow(
-      <UnitOverviewHeader {...defaultProps} viewAs={ViewType.Student} />,
+      <UnitOverviewHeader {...defaultProps} viewAs={ViewType.Participant} />,
       {
         disableLifecycleMethods: true
       }

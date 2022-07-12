@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 pt:
   errors:
     messages:
@@ -121,7 +127,9 @@ pt:
     need_unlock: "Não recebeu as instruções de desbloqueio?"
     not_linked: "Desculpe, sua conta de Code.org não está ligada ao seu %{provider}. Você terá que entrar digitando sua senha abaixo."
     use_clever: "Desculpe, sua conta do Code.org não está ligada à sua %{provider}. Por favor entre através do seu Portal Clever."
+    invalid_provider: "Desculpe-nos, contas do(a) empresa %{provider} não podem ser associadas à contas do Code.org."
     unable_to_connect_provider: "Não foi possível conecta sua conta do Code.org ao seu %{provider}. Por favor tente novamente."
+    disconnect_successful: "Sucesso! Desconectamos a conta externa da sua conta do Code.org."
     already_in_use: "Seu %{provider} já está conectado a outra conta do Code.org."
     already_linked: "Seu %{provider} já está lincado a outra conta do Code.org."
     existing_account:
@@ -157,13 +165,24 @@ pt:
     invalid_password: "A senha deve ter pelo menos 6 caracteres"
     mismatch_password: "As duas senhas que você digitou são diferentes"
     student_consent: "Confirmo que tenho autorização dos meus pais ou do tutor legal para usar os serviços do Code.org."
+    agree_us_data_transfer_student: '**Concordo que o Code.org pode transferir dados (incluindo dados pessoais) do meu uso deste site para os Estados Unidos** com a finalidade de hospedar e processar esses dados.'
+    agree_us_data_transfer_teacher: '**Concordo que o Code.org pode transferir dados (incluindo dados pessoais) do meu uso (e do uso dos meus alunos) deste site para os Estados Unidos** com a finalidade de hospedar e processar esses dados.'
+    data_collection_us: "Entendo que o Code.org é um site sem fins lucrativos com sede nos EUA e que as leis que regem a coleta de dados nos EUA podem diferir das leis do meu país."
+    visit_privacy: 'Visite a [Política de Privacidade](%{privacy_url}) do Code.org para saber mais.'
     student_terms_markdown: "Os endereços de email não são armazenados em um formulário que nos permita entrar em contato com os alunos. Os alunos nunca receberão emails do Code.org, exceto para recuperação de senha. Veja nossa [política de privacidade] (http://code.org/privacy) para mais informações."
     additional_information: "Precisamos de mais informações para continuar com o processo de inscrição."
     user_type_button: "Atualizar Tipo de Conta"
     user_type_label: "Tipo de conta"
     user_type_student: "Estudante"
+    user_type_student_desc: "Explore todos os nossos curso e atividades, e mais:"
     user_type_student_ability_1: "Salvar seu progresso e projetos"
+    user_type_student_ability_2: "Participe de uma seção na sala de aula do seu professor"
     user_type_teacher: "Professor"
+    user_type_teacher_desc: "Tudo a que os alunos têm acesso, e mais:"
+    user_type_teacher_ability_1: "Crie seções de salas de aula"
+    user_type_teacher_ability_2: "Passe trabalho para os alunos e monitore seu desempenho"
+    user_type_teacher_ability_3: "Inscreva-se em uma aprendizagem profissional"
+    user_type_teacher_ability_4: "Interaja no nosso fórum de professores"
     field_is_required: "é obrigatório"
     accept_terms: "Você precisa aceitar para criar uma conta."
     error: "Ocorreu um erro."
@@ -172,6 +191,7 @@ pt:
     email_preference_yes: "Sim"
     email_preference_no: "Não"
     email_preference_required: "Você deve especificar um e-mail de preferência."
+    share_teacher_email_reg_partner_question: "Você gostaria de nós compartilhássemos seus dados para contato com o[Code.org regional partner](%{cdo_regional_partner_desc}) em seu estado, para que eles possam enviar notificações de desenvolvimentos de profissionais, recursos e eventos locais?"
     share_teacher_email_reg_partner_preference_yes: "Sim"
     share_teacher_email_reg_partner_preference_no: "Não"
     share_teacher_email_reg_partner_preference_required: "Você deve especificar um e-mail de preferência."
@@ -268,6 +288,7 @@ pt:
     invite_sent: 'Convite enviado'
     added_teacher: '%{name} foi adicionado como seu professor'
     registered: "Você já está registrado para %{section_name}."
+    captcha_required: 'Por favor, preencha o CAPTCHA para participar desta seção.'
     already_exists: 'Você já se juntou à seção %{section_name}.'
     error:
       signed_in: 'Saia antes de prosseguir'
@@ -278,6 +299,9 @@ pt:
       blank_code: "Insira um código de seção"
       cant_join_own_section: "Desculpe, você não pode entrar em sua própria seção."
       provider_managed_section: "Esta turma é dirigida por outro provedor e não pode ser entrada. Por favor pergunte a seu professor via %{provider} e re-sincronize a turma."
+      restricted_section: "Não foi possível adicionar você à seção %{section_code} porque ela está bloqueada. Entre em contato com seu professor para obter ajuda."
+      full_section: "Não foi possível adicionar você à seção %{section_code} porque já existem %{section_capacity} alunos nela. Entre em contato com seu professor para obter ajuda."
+      not_participant_type: "Não foi possível adicioná-lo à seção %{section_code}, porque você não é o tipo de participante esperado."
     mail:
       student_disassociated:
         subject: "Notificação Code.org: %{student_name} não é mais seu aluno."
@@ -324,6 +348,7 @@ pt:
       game_lab_tutorials: "Tutoriais Game Lab"
       sprite_lab_documentation: "Documentação do Sprite Lab"
       sprite_lab_tutorials: "Tutoriais do Sprite Lab"
+      web_lab_documentation: "Documentação do Web Lab"
       educate_overview: "Visão Geral do Educador"
       educate_elementary: "Ensino Fundamental"
       educate_middle: "Ensino Fundamental II"
@@ -391,12 +416,16 @@ pt:
       minecraft_hero: 'Herói de Minecraft'
       playlab: 'Laboratório'
       playlab_k1: 'Laboratório de Jogos (Pré-leitor)'
+      poetry: 'Poesia'
+      poetry_hoc: 'Arte poética'
       scratch: 'Scratch'
       sports: 'Esportes'
       spritelab: 'Laboratório de Sprite'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Blocos)'
       starwarsblocks_hour: 'Star Wars (Blocos)'
+      thebadguys: 'Os caras maus'
+      loading: 'Carregando...'
       weblab: 'Laboratório Web'
       view_all: 'Ver todos os projetos...'
     popup:
@@ -412,6 +441,7 @@ pt:
       prizes_link: 'Mais informação'
   teacher:
     answer: Resposta
+    dashboard: 'Painel de controle do professor'
     for_teachers_only: Somente para professores
     title:
       one: 'Seu professor:'
@@ -437,6 +467,7 @@ pt:
       worked_with: 'Trabalhou com'
       update_lock_settings: 'Atualize as configurações de bloqueio aqui.'
       clear_response: 'Apagar resposta'
+    student_code_view_diabled: 'O código do aluno não pode ser visualizado para esta atividade.'
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -529,6 +560,7 @@ pt:
     all_students_must_be_in_current_section: "Todos os alunos devem estar inscritos em sua seção atualmente."
     already_enrolled_in_new_section: "Não é possível mover esses alunos porque eles já estão em outra seção deste professor."
     third_party_login: "Você não pode mover alunos para uma turma que está sincronizada com uma ferramenta de terceiros."
+    not_correct_participant_type: "Não é permitido movimentar esses usuários, porque eles não têm permissão para participar na nova seção."
   share:
     title: "Aprenda no Code Studio"
     description: "Qualquer pessoa pode aprender ciência da computação. Crie jogos, aplicativos e arte com a programação."
@@ -550,6 +582,7 @@ pt:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados. A Era do Gelo&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. O Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.'
     code_from_html: 'A Code.org usa o p5.play, que tem a licensa <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: 'Powered by Amazon Web Services'
+    google_copyright: '© Google Inc. usado com permissão. Google Classroom é uma marca registrada de Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE e Hora do Código&reg; são marcas registradas da Code.org.'
     copyright: 'Direitos Autorais'
     more: 'Mais'
@@ -566,6 +599,7 @@ pt:
     make_my_own_app: 'Criar meu próprio aplicativo'
     how_it_works: 'Como funciona (Ver o Código)'
     try_hour_of_code: 'Faça uma Hora do Código!'
+    cookie_notice: 'Aviso sobre Cookies'
   reference_area:
     title: 'Precisa de ajuda?'
     subtitle: 'Veja os vídeos e as dicas'
@@ -632,6 +666,10 @@ pt:
       title: 'Festa dançante'
     dance-2019:
       title: 'Festa dançante'
+    hello-world:
+      title: 'Olá Mundo'
+    poem-art:
+      title: 'Arte poética'
     hoc:
       title: 'Labirinto clássico'
       body: 'Experimente as noções básicas de ciência da computação. Milhões de pessoas já experimentaram.'
@@ -964,8 +1002,10 @@ pt:
       email: 'E-mail'
       email_alternate: 'Email Alternativo'
       gender: 'Identidade de Gênero'
+      school: 'Escola'
       school_name: 'Nome da escola'
       school_city: 'Cidade da Escola'
+      school_city_district: 'Cidade/Distrito da escola'
       school_country: 'País da Escola'
       colombian_school_city: 'Cidade da Escola'
       colombian_chilean_school_name: 'Nome da escola'
@@ -1013,6 +1053,7 @@ pt:
         music: 'Música'
         art: 'Arte'
         other: "Outro:"
+        na: 'Não aplicável'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1022,7 +1063,8 @@ pt:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Outro:"
+        other: "Outros"
+        na: 'Não aplicável'
       robotics:
         grok: 'Grok Learning (Aprendizagem Grok)'
         kodable: 'Kodable'
@@ -1032,7 +1074,8 @@ pt:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Oficina de Maravilhas'
-        other: "Outro:"
+        other: "Outros"
+        na: 'Não aplicável'
       workshop_course:
         csf_af: 'Fundamentos de Ciência da Computação (Cursos A-F)'
         csf_express: 'Fundamentos de Ciência da Computação (Pré-Expresso ou Expresso)'
@@ -1082,3 +1125,4 @@ pt:
     not_now: "Agora não"
   behaviors:
     this_sprite: "este personagem"
+  teacher_feedback: "Feedback do Professor"
