@@ -41,11 +41,8 @@ jobs:
         run: bundle install --with test
   
       # Add or replace database setup steps here
-      - name: Set up database schema
-        run: |
-          cd dashboard/
-          bin/rails db:schema:load
-          cd ../
+      - name: Install Dashboard
+        run: bundle exec rake install:dashboard
       # Add or replace test runners here
       - name: Run tests
         run: |
