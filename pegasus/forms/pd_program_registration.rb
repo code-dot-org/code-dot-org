@@ -35,7 +35,7 @@ class PdProgramRegistration < Form
 
       result[:dietary_needs_ss] = required_multi_enum data, :dietary_needs_ss
       if result[:dietary_needs_ss].class != FieldError
-        result[:dietary_needs_other_s] = stripped data [:dietary_needs_other_s] if result[:dietary_needs_ss].include? OTHER
+        result[:dietary_needs_other_s] = stripped data[:dietary_needs_other_s] if result[:dietary_needs_ss].include? OTHER
         result[:allergy_list_s] = stripped data[:allergy_list_s] if result[:dietary_needs_ss].include? FOOD_ALLERGY
       end
 

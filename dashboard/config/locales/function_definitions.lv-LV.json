@@ -2748,6 +2748,27 @@
           "end game": {
             "name": "spēles beigas"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "zīmēt kvadrātu"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "uzzīmēt formu",
+            "parameters": {
+              "length": "garums"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "funkcija 1"
+          },
+          "function 2": {
+            "name": "funkcija 2"
+          }
         }
       }
     }

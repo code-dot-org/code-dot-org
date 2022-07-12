@@ -9,7 +9,8 @@ import {
   appendOutputLog,
   setDisplayTheme,
   setIsRunning,
-  setIsTesting
+  setIsTesting,
+  setDisableFinishButton
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
@@ -40,6 +41,7 @@ class JavalabView extends React.Component {
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     handleClearPuzzle: PropTypes.func.isRequired,
     onPhotoPrompterFileSelected: PropTypes.func.isRequired,
+    isCodeReviewing: PropTypes.bool,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
@@ -55,16 +57,28 @@ class JavalabView extends React.Component {
     setIsTesting: PropTypes.func,
     canRun: PropTypes.bool,
     canTest: PropTypes.bool,
-    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     longInstructions: PropTypes.string,
     hasContainedLevels: PropTypes.bool,
     awaitingContainedResponse: PropTypes.bool,
     isSubmittable: PropTypes.bool,
-    isSubmitted: PropTypes.bool
+    isSubmitted: PropTypes.bool,
+    setDisableFinishButton: PropTypes.func,
+    isReadOnlyWorkspace: PropTypes.bool
   };
 
   componentDidMount() {
     this.props.onMount();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
+      // Whether the finish button is disabled in studioApp is dependent on whether the workspace
+      // is readonly, so if the readonly state changes, the disabled finish button state changes
+      const disableFinishButton =
+        (!!this.props.isReadOnlyWorkspace && !this.props.isSubmittable) ||
+        !!this.props.isCodeReviewing;
+      this.props.setDisableFinishButton(disableFinishButton);
+    }
   }
 
   compile = () => {
@@ -128,20 +142,24 @@ class JavalabView extends React.Component {
   };
 
   isLeftSideVisible = () => {
-    const {longInstructions, hasContainedLevels} = this.props;
     // It's possible that a console level without instructions won't have
     // anything to show on the left side.
     return (
-      this.props.viewMode !== CsaViewMode.CONSOLE ||
-      hasInstructions(null, longInstructions, hasContainedLevels)
+      this.props.viewMode !== CsaViewMode.CONSOLE || this.hasInstructions()
     );
+  };
+
+  hasInstructions = () => {
+    const {longInstructions, hasContainedLevels} = this.props;
+    return hasInstructions(null, longInstructions, hasContainedLevels);
   };
 
   renderVisualization = width => {
     const {visualization} = this.props;
     if (visualization) {
+      const previewStyle = this.hasInstructions() ? styles.preview : {};
       return (
-        <div id="visualization-container" style={styles.preview}>
+        <div id="visualization-container" style={previewStyle}>
           {visualization}
         </div>
       );
@@ -173,7 +191,6 @@ class JavalabView extends React.Component {
       isEditingStartSources,
       isRunning,
       isTesting,
-      showProjectTemplateWorkspaceIcon,
       disableFinishButton,
       awaitingContainedResponse,
       isSubmittable,
@@ -206,13 +223,13 @@ class JavalabView extends React.Component {
               <TopInstructions
                 mainStyle={styles.instructions}
                 standalone
-                displayDocumentationTab={experiments.isEnabled(
-                  experiments.JAVALAB_DOCUMENTATION
-                )}
+                displayDocumentationTab
                 displayReviewTab
                 initialSelectedTab={
                   queryParams(VIEWING_CODE_REVIEW_URL_PARAM) === 'true'
-                    ? TabType.REVIEW
+                    ? experiments.isEnabled('code_review_v2')
+                      ? TabType.REVIEW_V2
+                      : TabType.REVIEW
                     : null
                 }
                 explicitHeight={height}
@@ -223,12 +240,10 @@ class JavalabView extends React.Component {
             topRightPanel={height => (
               <JavalabEditor
                 onCommitCode={onCommitCode}
-                showProjectTemplateWorkspaceIcon={
-                  showProjectTemplateWorkspaceIcon
-                }
                 height={height}
                 isProjectTemplateLevel={isProjectTemplateLevel}
                 handleClearPuzzle={handleClearPuzzle}
+                viewMode={viewMode}
               />
             )}
             bottomRightPanel={() => (
@@ -251,10 +266,7 @@ class JavalabView extends React.Component {
                     disableTestButton={awaitingContainedResponse || !canTest}
                     onContinue={() => onContinue(isSubmittable)}
                     renderSettings={this.renderSettings}
-                    showTestButton={
-                      isEditingStartSources ||
-                      experiments.isEnabled(experiments.JAVALAB_UNIT_TESTS)
-                    }
+                    showTestButton={true}
                     isSubmittable={isSubmittable}
                     isSubmitted={isSubmitted}
                   />
@@ -325,20 +337,22 @@ export default connect(
     isTesting: state.javalab.isTesting,
     canRun: !state.javalab.isTesting,
     canTest: !state.javalab.isRunning,
-    showProjectTemplateWorkspaceIcon: !!state.pageConstants
-      .showProjectTemplateWorkspaceIcon,
     editorColumnHeight: state.javalab.editorColumnHeight,
     longInstructions: state.instructions.longInstructions,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     disableFinishButton: state.javalab.disableFinishButton,
     isSubmittable: state.pageConstants.isSubmittable,
-    isSubmitted: state.pageConstants.isSubmitted
+    isSubmitted: state.pageConstants.isSubmitted,
+    isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
+    isCodeReviewing: state.pageConstants.isCodeReviewing
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
     setDisplayTheme: displayTheme => dispatch(setDisplayTheme(displayTheme)),
     setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
-    setIsTesting: isTesting => dispatch(setIsTesting(isTesting))
+    setIsTesting: isTesting => dispatch(setIsTesting(isTesting)),
+    setDisableFinishButton: disabled =>
+      dispatch(setDisableFinishButton(disabled))
   })
 )(UnconnectedJavalabView);

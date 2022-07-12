@@ -1150,13 +1150,13 @@
         khan: Khan akademiet
         kodable: Kodbart
         scratch: Scratch
-        other: 'Annet:'
+        other: Andre
       robotics:
         grok: Grok-læring
         kodable: Kodbart
         microbit: Microbit
         raspberry: Raspberry Pi
-        other: 'Annet:'
+        other: Andre
       workshop_course:
         csp: Prinsipper i informatikk
       email_opt_in:

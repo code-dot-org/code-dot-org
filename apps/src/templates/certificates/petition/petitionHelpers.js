@@ -1,22 +1,25 @@
 import {isEmail, isInt} from '@cdo/apps/util/formatValidation';
-import {forEach, has} from 'lodash';
+import {forEach, has, merge} from 'lodash';
 import i18n from '@cdo/locale';
 
 export const keyValidation = {
-  name: {
+  name_s: {
     isValid: value => !!value
   },
-  email: {
+  email_s: {
     isValid: isEmail
   },
-  age: {
+  zip_code_or_country_s: {
+    isValid: () => true
+  },
+  age_i: {
     isValid: isInt
+  },
+  role_s: {
+    isValid: () => true
   }
 };
 
-// Returns an error message of "Please (do x), ..., and (do y)."
-// or "Please (do x)." based on the errors found in the data from
-// keyValidation. If there are no errors, returns an empty string.
 export const getInvalidFields = data => {
   if (!Object.keys(keyValidation).every(key => has(data, key))) {
     throw new Error('The data must have keys from all fields in keyValidation');
@@ -42,3 +45,21 @@ export const getErrorMessage = data => {
     return i18n.formErrorsBelow();
   }
 };
+
+export const getAgeSafeData = data => {
+  const safeData = {
+    email_s: 'anonymous@code.org',
+    name_s: ''
+  };
+  return data.age_i < 16 ? merge(data, safeData) : data;
+};
+
+export const professionOptions = [
+  {text: '-', dataString: 'other'},
+  {text: i18n.student(), dataString: 'student'},
+  {text: i18n.parent(), dataString: 'parent'},
+  {text: i18n.educator(), dataString: 'educator'},
+  {text: i18n.administrator(), dataString: 'administrator'},
+  {text: i18n.softwareEngineer(), dataString: 'engineer'},
+  {text: i18n.noneOfTheAbove(), dataString: 'other'}
+];

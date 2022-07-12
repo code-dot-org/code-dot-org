@@ -12,8 +12,15 @@ theme: responsive
   }
 </style>
 
-# Professional Learning for Middle and High School Teachers	
+# Professional Learning for Middle and High School Teachers
+
+<!-- Skinny banners -->
+<% if !!DCDO.get('csa-skinny-banner', false) %>
+<%= view :csa_skinny_banner, link_address: '/educate/csa', button_label: 'Learn more' %>
+<% else %>
 <%= view :professional_learning_marketing_banner, audience_text: 'you', link_address: '/educate/professional-learning/program-information', button_label: 'Apply now' %>
+<% end %>
+
 
 <a name="scholarships"></a>
 <div class="col-50">

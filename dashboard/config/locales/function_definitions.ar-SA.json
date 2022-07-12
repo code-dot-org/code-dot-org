@@ -4265,6 +4265,28 @@
           "garden square": {
             "name": "مربع الحديقة"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "ارسم شكل",
+            "parameters": {
+              "sides": "جوانب",
+              "length": "الطول"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "الوظيفة  1"
+          },
+          "function 2": {
+            "name": "الوظيفة 2"
+          }
         }
       }
     }

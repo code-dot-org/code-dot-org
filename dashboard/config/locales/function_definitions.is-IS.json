@@ -4446,6 +4446,28 @@
           "move and get nectar with counter": {
             "name": "færa og ná blómasafa með teljara"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "teikna ferning"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "teikna form",
+            "parameters": {
+              "sides": "hliðar",
+              "length": "lengd"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "fall 1"
+          },
+          "function 2": {
+            "name": "fall 2"
+          }
         }
       }
     }

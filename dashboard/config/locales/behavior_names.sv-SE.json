@@ -1990,6 +1990,24 @@
           "shrinking": "krymper",
           "moving west and looping": "flyttar västerut och loopar",
           "moving east and looping": "flyttar österut och loopar"
+        },
+        "AllTheThings sprite lab with video": {
+          "shrinking": "krymper",
+          "patrolling": "patrullerar",
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst"
+        },
+        "allthethings_fish_tank": {
+          "shrinking": "krymper",
+          "patrolling": "patrullerar",
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst"
         }
       }
     }

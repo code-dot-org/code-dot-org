@@ -2784,7 +2784,23 @@
         "ramp_artist_loops9_2018": "Selesaikan teka-teki ini dengan melukis segi empat sama.",
         "ramp_artist_loops9_2019": "Selesaikan teka-teki ini dengan melukis segi empat sama.",
         "ramp_artist_loops9_2020": "Selesaikan teka-teki ini dengan melukis segi empat sama.",
-        "simcustom_2021": "Cuba buatkan beberapa perubahan kepada kostum peperi atau kod di bawah. "
+        "simcustom_2021": "Cuba buatkan beberapa perubahan kepada kostum peperi atau kod di bawah. ",
+        "AllTheThings sprite lab with video": "Ubah rumpai bergolek kepada mana-mana jenis ikan!",
+        "MC Agent Freeplay": "**Mainbebas:** Masa untuk meneroka sendiri!",
+        "Overworld Chop Tree - allthethings": "Hutan adalah sumber yang sangat penting. Banyak perkara dibuat daripadanya. Berjalan ke pokok dan gunakan perintah \"musnahkan blok\" untuk menebangnya.",
+        "Test embedded K1 Blockly in instructions": "Gunakan tiga blok `bergerak ke barat` dan satu blok `petik jagung` untuk menyelesaikan teka-teki ini.",
+        "U1L13 Text Compression": "Cari pola (perkataan atau frasa berulang) dalam teks. Masukkan corak yang anda lihat ke dalam kamus di sebelah kanan. Semasa anda menaip entri ke dalam kamus, simbol untuk entri dimasukkan ke dalam teks sebagai mengganti corak.",
+        "U2L10 NetSim Automatic DNS": "Dalam versi Simulator Internet ini, Sistem Nama Domain (DNS) disediakan untuk anda dan mengetahui alamat IP semua komputer yang disambungkan. Hantar mesej dalam borang GET [hostname] kepada perkhidmatan DNS di alamat <yourRouterNumber>.15 untuk mendapatkan alamat pelajar.",
+        "AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4": "# Piksel Warna: Tugas 2\n\n**Arahan:**\n<img src='https://images.code.org/548d1daa698a17b1005b1747f152587f-image-1439476855059.png' gaya=\"lebar: 150px; float:right\">Kami memulakan anda dengan baris warna merah yang dicipta oleh Maddie dalam video. Eksperimen dengan warna 6-bit dengan mengisi baris bawah imej dengan warna warna yang berbeza.  Berikut adalah contoh dengan beberapa warna biru.  Cuba warna anda sendiri!",
+        "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "Kami memulakan anda dengan imej 4x2 yang dicipta Maddie, tetapi kami telah meninggalkan dua petak terakhir. Selesaikan imej dengan mengetahui dua warna mana yang hilang dan mengekodnya.",
+        "Frequency Analysis": "Ujian",
+        "Pixelation - Lesson 15 - Color Shades": "Kami memulakan anda dengan barisan warna merah yang dibuat oleh Maddie dalam video. Eksperimen dengan warna 6-bit dengan mengisi baris bawah imej dengan warna warna yang berbeza. Berikut adalah contoh dengan beberapa warna biru. Cuba warna anda sendiri!",
+        "Pixelation - Lesson 15 - Color Shades 4x4": "# Piksel Warna: Tugas 2\n\n**Arahan:**\n<img src='https://images.code.org/548d1daa698a17b1005b1747f152587f-image-1439476855059.png' gaya=\"lebar: 150px; float:right\">Kami memulakan anda dengan baris warna merah yang dicipta oleh Maddie dalam video. Eksperimen dengan warna 6-bit dengan mengisi baris bawah imej dengan warna warna yang berbeza.  Berikut adalah contoh dengan beberapa warna biru.  Cuba warna anda sendiri!",
+        "Pixelation - Lesson 15 - Complete 3-bit color": "Kami memulakan anda dengan imej 4x2 yang dicipta Maddie, tetapi kami telah meninggalkan dua petak terakhir. Selesaikan imej dengan mengetahui dua warna mana yang hilang dan mengekodnya.",
+        "Pixelation 4x4 Empty": "Lebar dan tinggi kini dikodkan dalam data piksel. Bolehkah anda memikirkan cara menyesuaikan dimensi?",
+        "Pixelation Bee": "Imej lebah yang lebih besar ini mengekod warna dengan 12 bit per piksel, tetapi melihat dalam hex menjadikannya lebih mudah untuk melihat warna setiap piksel. Jika anda beralih ke mod binari - tahan pada topi anda - ia adalah banyak bit. Berikut adalah satu lagi perkara yang menarik untuk dicuba: slaid bit per piksel sehingga 24 bit setiap piksel. Apa yang berlaku? Bolehkah anda menerangkan tingkah laku ini?",
+        "Pixelation Flappy": "Berikut ialah imej yang lebih besar pada 9 bit setiap piksel. Dengan 9 bit setiap piksel anda boleh menyatakan 512 warna yang berbeza. Klik melalui untuk melihat imej seterusnya yang lebih canggih, tetapi lebih mudah difahami.",
+        "Vigenere": "Ujian"
       }
     }
   }

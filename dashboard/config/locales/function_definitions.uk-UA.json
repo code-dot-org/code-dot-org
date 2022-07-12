@@ -3096,6 +3096,28 @@
           "rowOfNectar": {
             "name": "рядНектару"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "намалювати квадрат"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "намалювати фігуру",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "функція 1"
+          },
+          "function 2": {
+            "name": "функція 2"
+          }
         }
       }
     }

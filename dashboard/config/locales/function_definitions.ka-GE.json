@@ -3517,6 +3517,27 @@
           "fix short path": {
             "name": "მოკლე გზის შეკეთება"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "კვადრატის დახატვა"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "ფორმის დახატვა",
+            "parameters": {
+              "length": "ხანგრძლივობა"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "ფუნქცია 1"
+          },
+          "function 2": {
+            "name": "ფუნქცია 2"
+          }
         }
       }
     }

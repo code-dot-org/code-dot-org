@@ -87,6 +87,7 @@
   "runtimeError": "Une erreur s'est produite lors de l'exécution de votre code.{cause}",
   "saveToBackpack": "Sauvegarder dans le sac à dos",
   "startingPainter": "Commencer la peinture.",
+  "submit": "Envoyer",
   "timeoutWarning": "Attention : votre projet sera interrompu dans 15 secondes.",
   "timeout": "Votre projet a été interrompu.",
   "twoMainMethods": "Erreur : Votre code ne peut avoir qu'une seule méthode principale. Nous avons trouvé au moins deux classes avec des méthodes principales.",

@@ -17,7 +17,6 @@
 
 class Census::CensusSummary < ApplicationRecord
   belongs_to :school
-  validates_presence_of :school_id
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2015, less_than_or_equal_to: 2030}
 
   TEACHES = {
@@ -440,7 +439,6 @@ class Census::CensusSummary < ApplicationRecord
         eager_load(:school_stats_by_year).
         eager_load(:census_overrides).
         find_each do |school|
-
         summarize_school_data(
           {
             school: school,

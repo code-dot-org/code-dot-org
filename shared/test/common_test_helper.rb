@@ -40,7 +40,7 @@ VCR.configure do |c|
 end
 
 # Truncate database tables to ensure repeatable tests.
-DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects).freeze
+DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects code_review_comments reviewable_projects project_commits).freeze
 DASHBOARD_TEST_TABLES.each do |table|
   DASHBOARD_DB[table.to_sym].truncate
 end.freeze
@@ -78,7 +78,7 @@ module SetupTest
     VCR.use_cassette(cassette_name, record: record_mode) do
       PEGASUS_DB.transaction(rollback: :always) do
         DASHBOARD_DB.transaction(rollback: :always) do
-          AWS::S3.stub(:random, proc {random.bytes(16).unpack('H*')[0]}, &block)
+          AWS::S3.stub(:random, proc {random.bytes(16).unpack1('H*')}, &block)
         end
       end
     end

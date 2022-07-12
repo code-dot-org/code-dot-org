@@ -138,6 +138,20 @@ class ProgressLessonTeacherInfo extends React.Component {
             />
           </div>
         )}
+        {lesson.lesson_feedback_url && (
+          <div style={styles.buttonContainer}>
+            <Button
+              __useDeprecatedTag
+              href={lesson.lesson_feedback_url}
+              text={i18n.rateThisLesson()}
+              icon="bar-chart"
+              color={Button.ButtonColor.gray}
+              target="_blank"
+              style={styles.button}
+              className="rate-lesson-button"
+            />
+          </div>
+        )}
         {showHiddenForSectionToggle && (
           <HiddenForSectionToggle
             hidden={!!isHidden}

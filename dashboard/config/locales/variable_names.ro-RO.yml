@@ -29,6 +29,7 @@ ro:
       right: dreapta
       score: scor
       shout: țipăt
+      sides: laturi
       size: dimensiune
       speed: viteză
       startX: startX

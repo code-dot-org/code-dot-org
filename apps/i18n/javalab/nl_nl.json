@@ -87,6 +87,7 @@
   "runtimeError": "Je code heeft een uitzondering gemaakt tijdens het uitvoeren.\n{cause}",
   "saveToBackpack": "Opslaan in de backpack",
   "startingPainter": "Painter wordt gestart.",
+  "submit": "Insturen",
   "timeoutWarning": "Waarschuwing; uw project zal over 15 seconden stoppen!",
   "timeout": "Uw project is gestopt.",
   "twoMainMethods": "Fout: uw code mag slechts één hoofdmethode bevatten. We hebben ten miste twee klassen met hoofdmethoden aangetroffen.",

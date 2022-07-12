@@ -1766,7 +1766,8 @@
           "express_maze_debugging9_2019_1": "Kéo các khối từ hộp công cụ vào không gian làm việc của bạn."
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "Nhấp chuột vào đây để thêm trang phục vào dự án."
+          "costumes_tab": "Nhấp chuột vào đây để thêm trang phục vào dự án.",
+          "make_sprite": "Dùng các khối ở đây để tạo nhân vật nhé!"
         }
       }
     }

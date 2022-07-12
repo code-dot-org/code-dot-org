@@ -1590,6 +1590,10 @@
         "0eb10caa-d6c3-4afd-bba1-c28694a1128a": {
           "progression_name": "Corectare erori"
         },
+        "43f5caa8-4b58-4af6-9425-6b642fa30743": {
+          "name": "Provocare",
+          "progression_name": "Provocare"
+        },
         "988b26e3-ab8c-4d5b-b903-982c822e17bd": {
           "name": "Reflecţie",
           "progression_name": "Reflecţie"
@@ -1612,11 +1616,26 @@
         "3fea4a8d-84f4-4f63-a8d2-7085c77b4fef": {
           "progression_name": "Programare în perechi"
         },
+        "c23ccdc3-4f91-4719-8ad1-ae870fbb0b66": {
+          "progression_name": "Provocare"
+        },
         "647fb9ef-1f2f-4552-8785-1a3b2a5850cb": {
           "progression_name": "Programare cu Rey și BB-8"
         },
+        "3328d13e-655b-460a-888b-94567abfe169": {
+          "progression_name": "Provocare"
+        },
+        "96a3f354-7b69-41e7-9100-4523dc83acaf": {
+          "progression_name": "Provocare"
+        },
         "42a28a6d-b136-4659-bdbd-5caed86947d3": {
           "progression_name": "Utilizarea blocului ”repetă” (repeat)"
+        },
+        "928e8522-a5d1-4172-9981-7c812394708d": {
+          "progression_name": "Provocare"
+        },
+        "c1a9472c-1033-4660-8314-6d5c9789ae58": {
+          "progression_name": "Provocare"
         },
         "3ead06ef-2d2b-49b0-b62b-ededeff21bcb": {
           "progression_name": "Joc la liber"
@@ -1627,11 +1646,26 @@
         "282dad48-141f-46bb-9675-9f0629dab0fc": {
           "progression_name": "Programare în perechi"
         },
+        "24ac3487-2bac-447f-a644-c97ed06eb7bc": {
+          "progression_name": "Provocare"
+        },
         "4ab2263d-bf26-4d37-bc0e-88278310cfa7": {
           "progression_name": "Culegătorul"
         },
+        "4a9bb659-a861-4fae-8024-300307f55af4": {
+          "progression_name": "Provocare"
+        },
+        "9b25a500-d3ff-45b0-8e4e-e105361c1f70": {
+          "progression_name": "Provocare"
+        },
         "1509114f-e57a-4100-b4ec-665739adf403": {
           "progression_name": "Utilizarea blocului ”repetă” (repeat)"
+        },
+        "80de6acc-e6ab-48b7-ac35-192fd30fa831": {
+          "progression_name": "Provocare"
+        },
+        "99e3dad7-98a9-4f93-86a3-e78793215495": {
+          "progression_name": "Provocare"
         },
         "ff0bdda6-cf62-4449-a308-76b365386a4c": {
           "progression_name": "Joc la liber"
@@ -1641,6 +1675,12 @@
         },
         "1ebe2c8c-ee7d-405e-927f-cae153b2a188": {
           "progression_name": "Joc la liber"
+        },
+        "07193199-5792-4f3b-a082-cb2a6e3e3688": {
+          "progression_name": "Provocare"
+        },
+        "87fb67e1-deff-4108-87f9-bda43f69ddf0": {
+          "progression_name": "Provocare"
         },
         "eaf5aad1-3ca8-4a7a-82a9-0e62b210afb6": {
           "name": "Joc la liber",
@@ -1653,8 +1693,29 @@
         "f0c21fc1-b243-411a-b177-99f07b95acf3": {
           "progression_name": "Utilizarea blocului ”repetă” (repeat)"
         },
+        "0ce7c02f-f05a-40cf-a5be-87946f72027d": {
+          "progression_name": "Provocare"
+        },
+        "38d68221-32e8-4984-8a39-69073466459f": {
+          "progression_name": "Provocare"
+        },
+        "5f04ced8-6ae3-4d10-aaec-f9ceb4684d69": {
+          "progression_name": "Provocare"
+        },
+        "b7b86177-be53-4ffc-af33-74c5f28cf41c": {
+          "progression_name": "Provocare"
+        },
+        "deb064fb-e848-49e3-8fce-76f6ea0b85ad": {
+          "progression_name": "Provocare"
+        },
+        "15c133ad-c9de-4a2c-8bc3-8dc5ea07f83e": {
+          "progression_name": "Provocare"
+        },
         "502e09e6-3af3-43cb-ae96-e44507f1250c": {
           "progression_name": "Culegătorul"
+        },
+        "6a5e000e-9713-4ba5-a455-501c3806ec4e": {
+          "progression_name": "Provocare"
         },
         "0914c4d0-b269-4072-a1b7-ed41eb2b7224": {
           "progression_name": "Joc la liber"
@@ -1671,7 +1732,7 @@
           "progression_name": "Prezentând Laboratorul de Desen"
         },
         "ee39051b-426b-40d9-b61f-1f180cae8717": {
-          "progression_name": "Cum să Faci un Desen"
+          "progression_name": "Cum se creează un Sprite"
         },
         "18e78998-a305-4084-83a3-df1cd05da78f": {
           "name": "Joc la liber",
@@ -1680,11 +1741,26 @@
         "71c84958-5cc4-467d-8c97-f2f63123c47d": {
           "progression_name": "Video"
         },
+        "2a412b4f-68cb-417f-bd40-716a3cfdf0ff": {
+          "progression_name": "Provocare"
+        },
+        "0948dcbc-ac22-48af-a16e-2c03c5b0d317": {
+          "progression_name": "Provocare"
+        },
+        "b365d5bf-c5bc-462c-895c-3cca05ad79f6": {
+          "progression_name": "Provocare"
+        },
         "b6a63f32-8007-4b17-ae9b-718652243e78": {
           "progression_name": "Artist: Variabile"
         },
+        "caf6bd1c-dbcf-4747-93e5-dcae7eab1896": {
+          "progression_name": "Provocare"
+        },
         "3b6fb751-1751-4a04-9d40-73b9356aa8f6": {
           "progression_name": "Joc la liber"
+        },
+        "25103086-3dd2-4f4a-b8ba-11d66d826e34": {
+          "progression_name": "Provocare"
         },
         "26da0974-cf83-41fe-b6d8-b6c9f7a29c03": {
           "progression_name": "Joc la liber"
@@ -1708,11 +1784,23 @@
           "name": "Proiectul Artist",
           "progression_name": "Proiectul Artist"
         },
+        "b53b7eb1-3aab-44fb-bda0-e658142a7093": {
+          "progression_name": "Provocare"
+        },
+        "b77b5637-ea90-4ae9-bfb9-22810b90bf92": {
+          "progression_name": "Provocare"
+        },
+        "b9a00091-4e59-451c-9be6-c9311e4a4543": {
+          "progression_name": "Provocare"
+        },
+        "acb1431e-7cdb-4448-bf6d-1876d561952e": {
+          "progression_name": "Provocare"
+        },
         "e554878a-7385-4425-9fc6-e0a5f1bb2966": {
           "progression_name": "Prezentând Laboratorul de Desen"
         },
         "4fc6e6fd-3688-4fb0-8985-3aa4cbdf8d18": {
-          "progression_name": "Cum să Faci un Desen"
+          "progression_name": "Cum se creează un Sprite"
         },
         "fe9fe0d9-b57c-45ff-ac09-b7b3cdbd4303": {
           "name": "Joc la liber",
@@ -1724,8 +1812,14 @@
         "a7fbfcf7-5c63-4f6d-a1c4-21540179724d": {
           "progression_name": "Joc la liber"
         },
+        "9f1d586c-1d97-46de-9fe5-6bad58413cb9": {
+          "progression_name": "Provocare"
+        },
         "26d010c0-aeef-49ad-85f9-f06ce1daaa31": {
           "progression_name": "Video"
+        },
+        "269b42b4-fc3f-4a60-828f-0e6b2f73b0c6": {
+          "progression_name": "Provocare"
         },
         "1405ae48-2e0c-4a36-878f-668639ba0f51": {
           "progression_name": "Joc la liber"
@@ -1736,6 +1830,12 @@
         },
         "0b309aa0-00ca-47e2-9f46-288d25694b0d": {
           "progression_name": "Culegătorul"
+        },
+        "5db96562-98cc-4fa4-972d-ff37bcd76287": {
+          "progression_name": "Provocare"
+        },
+        "1437cbd2-75ab-42e4-99c1-a1db6e0f446c": {
+          "progression_name": "Provocare"
         },
         "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
           "progression_name": "Proiectul Prite Lab"
@@ -1751,15 +1851,36 @@
           "name": "Proiectul Artist",
           "progression_name": "Proiectul Artist"
         },
+        "f72e471d-ff91-41d4-9f97-3302b73b5ec5": {
+          "progression_name": "Provocare"
+        },
+        "dec15e5a-6919-45fb-b36a-b009ddc2ea0e": {
+          "progression_name": "Provocare"
+        },
+        "c7cc745e-db84-4914-abff-fba5821a6d51": {
+          "progression_name": "Provocare"
+        },
         "7292a6ea-9eb1-4775-a680-ad1755ee4e59": {
           "name": "Suplimente de lecţie",
           "progression_name": "Suplimente de lecţie"
         },
+        "62eb4fa5-496a-4d2d-ad6a-1618bc2be7f0": {
+          "progression_name": "Provocare"
+        },
         "e0d3988c-bdb0-45b1-9512-354e87118d64": {
           "progression_name": "Programare cu Rey și BB-8"
         },
+        "f42d7b9f-5cd2-4a12-a75d-67af88c45947": {
+          "progression_name": "Provocare"
+        },
         "b4cf29ee-8a4e-48ff-b637-302f650a2ede": {
           "progression_name": "Culegătorul"
+        },
+        "21c1076a-87ae-4316-bd9a-3f6a7c43cba2": {
+          "progression_name": "Provocare"
+        },
+        "5b1c525c-13c6-4dad-b882-d351f0fcd634": {
+          "progression_name": "Provocare"
         },
         "84b14f6c-d011-4e52-8664-233fda16599e": {
           "name": "Joc la liber",
@@ -1866,6 +1987,10 @@
         },
         "9b99bbac-c605-4a93-a573-277dbf0d31fe": {
           "progression_name": "Corectare erori"
+        },
+        "4d3fa0f3-0dea-4ff7-9e48-f2ea1fb5e6b6": {
+          "name": "Provocare",
+          "progression_name": "Provocare"
         },
         "301881e9-8b2a-430a-9bf3-928038396c1f": {
           "name": "Reflecţie",
@@ -2000,6 +2125,10 @@
         },
         "3fcf676a-373f-41b3-8cf1-ecb10c28ec23": {
           "progression_name": "Corectare erori"
+        },
+        "22367590-f0a2-4c03-8600-8598926280b8": {
+          "name": "Provocare",
+          "progression_name": "Provocare"
         },
         "24f32bdd-aa52-4b1e-9dc3-53b6496ad1e9": {
           "name": "Reflecţie",
@@ -2646,7 +2775,7 @@
           ]
         },
         "919543ed-3f8f-4a49-ba9e-c34d0d3cfaa3": {
-          "description": "### Impactul asupra societățiiFaceți acest lucru:\\_ Urmăriți clipul video Impactul asupra societății.**Spuneți:** _Sistemele de inteligență artificială învață din datele furnizate de noi, dar uneori este posibil să nu-i furnizăm suficiente date sau să-i furnizăm date care îl fac să se comporte ciudat._.**Spuneți:** Gândiți-vă la exemplele de inteligență artificială pe care le-am discutat la început. Puteți da exemple de momente în care învățarea programată a înțeles ceva greșit, în lumea reală? (De exemplu, aplicațiile de recunoaștere vocală care nu vă înțeleg.)\\*.**Subiect:** \\_Ar putea datele de instruire să creeze probleme? Cum?**\\*Discutați:** Elevii vor partaja răspunsurile cu colegii, începând în grupuri mici, apoi în fața întregii clase.**Obiectiv:** Obiectivul acestei discuții este de a reveni cu elevii la contextul inteligenței artificiale în lumea reală.**Spuneți:** _Una dintre modalitățile de a rezolva această problemă este de a utiliza multe date de instruire, asigurându-ne că înțelegem bine problema, pentru a oferi tipurile de date potrivite.În ultima parte a activității, IA va trebui să învățe de la voi un cuvânt care poate fi interpretat în diferite moduri._."
+          "description": "### Impactul asupra societățiiFaceți acest lucru:\\_ Urmăriți clipul video Impactul asupra societății.**Spuneți:** _Sistemele de inteligență artificială învață din datele furnizate de noi, dar uneori este posibil să nu-i furnizăm suficiente date sau să-i furnizăm date care îl fac să se comporte ciudat._.**Spuneți:** Gândiți-vă la exemplele de inteligență artificială pe care le-am discutat la început. Puteți da exemple de momente în care învățarea programată a înțeles ceva greșit, în lumea reală? (De exemplu, aplicațiile de recunoaștere vocală care nu vă înțeleg.)*.**Subiect:** \\_Ar putea datele de instruire să creeze probleme? Cum?***Discutați:** Elevii vor partaja răspunsurile cu colegii, începând în grupuri mici, apoi în fața întregii clase.**Obiectiv:** Obiectivul acestei discuții este de a reveni cu elevii la contextul inteligenței artificiale în lumea reală.**Spuneți:** _Una dintre modalitățile de a rezolva această problemă este de a utiliza multe date de instruire, asigurându-ne că înțelegem bine problema, pentru a oferi tipurile de date potrivite.În ultima parte a activității, IA va trebui să învățe de la voi un cuvânt care poate fi interpretat în diferite moduri._."
         },
         "833ae7ce-6703-495b-b010-224f0d32134f": {
           "description": "### IA învață un cuvânt nouCa în secțiunile anterioare, elevii vor utiliza și aici date de instruire pentru a ca IA să recunoască diferite tipuri de pești. Cuvintele din această listă sunt în mod intenționat mai subiective decât cele pe care le-au folosit elevii până acum. Încurajați elevii să decidă singuri ce face ca un pește să pară „furios” sau „amuzant”. Este posibil ca doi elevi să aleagă aceeași etichetă și să obțină un set de rezultate foarte diferite, în funcție de trăsăturile peștilor pe care au pus accentul. Încurajați-i pe elevi să discute între ei despre rezultatele obținute sau să revină la etapa anterioară și să aleagă cuvinte noi. Fiecare elev se va baza pe propriile opinii pentru a instrui I.A., ceea ce înseamnă că, atunci când învață cuvinte, I.A. le va asocia aceleași erori sistematice pe care le asociază și elevii. Pe măsură ce elevii încep să vadă rolul pe care îl joacă opinia lor, rugați-i să reflecteze dacă acest lucru este bun sau rău și cum ar putea fi abordat."
@@ -2663,7 +2792,7 @@
           "description": "**Discutați:**  Elevii vor partaja răspunsurile cu colegii, începând în grupuri mici, apoi în fața întregii clase.**Obiectiv:** Familiarizați-i pe elevi cu lumea inteligenței artificiale."
         },
         "840e5bd9-37cf-44f5-bfd4-ab83d7ea117d": {
-          "description": "**Spuneți:** \\_**Învățarea programată** se referă la un computer care poate recunoaște tipare și poate lua decizii pe cont propriu pe baza datelor. În cadrul acestei activități, veți pune la dispoziția computerului date pentru a-l instrui. Imaginați-vă un ocean care conține viețuitoare, cum ar fi peștii, dar și gunoaie aruncate de oameni. Ce-ar fi dacă am putea instrui un computer să le diferențieze și apoi să folosim această tehnologie pentru a curăța oceanul?**\\*\\***\\_\\_**\\*\\***."
+          "description": "**Spuneți:** \\_**Învățarea programată** se referă la un computer care poate recunoaște tipare și poate lua decizii pe cont propriu pe baza datelor. În cadrul acestei activități, veți pune la dispoziția computerului date pentru a-l instrui. Imaginați-vă un ocean care conține viețuitoare, cum ar fi peștii, dar și gunoaie aruncate de oameni. Ce-ar fi dacă am putea instrui un computer să le diferențieze și apoi să folosim această tehnologie pentru a curăța oceanul?******\\_\\_******."
         },
         "f06209ef-3a44-433c-9f9f-78803376b321": {
           "name": "Reflecţie",
@@ -2789,7 +2918,7 @@
           "description": "-   **Urma digitală**: o evidență a ceea ce faceți online, inclusiv a site-urilor pe care le vizitați și a lucrurilor pe care le partajați.- **permanent**: ceva care durează pentru totdeauna.- **informații private**: informații despre voi care pot fi folosite pentru a vă identifica.- **urmă**: o cărare sau o pistă**Înainte de lecție**: Decupați în prealabil [Pătrate pentru urma digitală](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit), punând pătratele pentru fiecare animal în două teancuri separate.Spuneți\\*\\*: Astăzi vom urmări un clip video intitulat „Urma digitală\".  Ați mai auzit de cuvântul „urmă” până acum?Invitați elevii să răspundă și definiți urma ca fiind _o cale pe care cineva o poate urma_. ([Diapozitivul 3](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g524b55ab78_0_23))"
         },
         "854c6fa9-6eda-4b41-8b7f-f7f0839f37ef": {
-          "description": "**Afișați** clipul video [Urma digitală](https://www.commonsense.org/education/videos/follow-the-digital-trail) de pe [Diapozitivul 4](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g56a0663814_5_26). În timp ce urmăresc clipul, rugați-i pe elevi să fie foarte atenți la tipurile de informații care pot și care nu pot fi partajate online.**Spuneți**: În clipul video, Feet vorbește despre o urmă digitală. Ce este urma digitală?Invitați elevii să răspundă. Precizați că o **urmă digitală** este _o înregistrare (sau o urmă) a ceea ce faceți online, inclusiv a site-urilor pe care le vizitați și a lucrurilor pe care le partajați_. ([Diapozitiv 5](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_19))**Întrebați**: _Ce informații spune Feet că NU trebuie partajate online?_.După ce elevii au avut ocazia să partajeze informațiile, proiectați [Diapozitivul 6](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g513c004c7f_0_192) și analizați: _Informații private_ cum ar fi \\*numele complet, adresa, numărul de telefon, vârsta, ziua de naștere, numele școlii.Definiți **informațiile private** ca fiind \\_informații despre voi care pot fi folosite pentru a vă identifica\\*. ([Diapozitiv 7](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5af742ae8d_0_0))**Întrebați**: _Ce informații crede Feet că pot fi partajate online?_După ce elevii au avut ocazia de a partaja informațiile, proiectați [Diapozitivul 8](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_27) și analizați: _Informații personale_, cum ar fi _hobby-uri, lucruri preferate._."
+          "description": "**Afișați** clipul video [Urma digitală](https://www.commonsense.org/education/videos/follow-the-digital-trail) de pe [Diapozitivul 4](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g56a0663814_5_26). În timp ce urmăresc clipul, rugați-i pe elevi să fie foarte atenți la tipurile de informații care pot și care nu pot fi partajate online.**Spuneți**: În clipul video, Feet vorbește despre o urmă digitală. Ce este urma digitală?Invitați elevii să răspundă. Precizați că o **urmă digitală** este _o înregistrare (sau o urmă) a ceea ce faceți online, inclusiv a site-urilor pe care le vizitați și a lucrurilor pe care le partajați_. ([Diapozitiv 5](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_19))**Întrebați**: _Ce informații spune Feet că NU trebuie partajate online?_.După ce elevii au avut ocazia să partajeze informațiile, proiectați [Diapozitivul 6](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g513c004c7f_0_192) și analizați: _Informații private_ cum ar fi *numele complet, adresa, numărul de telefon, vârsta, ziua de naștere, numele școlii.Definiți **informațiile private** ca fiind \\_informații despre voi care pot fi folosite pentru a vă identifica*. ([Diapozitiv 7](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5af742ae8d_0_0))**Întrebați**: _Ce informații crede Feet că pot fi partajate online?_După ce elevii au avut ocazia de a partaja informațiile, proiectați [Diapozitivul 8](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_27) și analizați: _Informații personale_, cum ar fi _hobby-uri, lucruri preferate._."
         },
         "732166f3-fa43-4af1-ae51-fa6136a7a8e7": {
           "description": "Așezați **Pătratele urmei digitale** pe podea, formând două trasee diferite; traseele stabilite pentru șoricelul Mervin și elefănțica Ellie vor fi separate unul de celălalt. De asemenea, le puteți plasa în diferite locuri din clasă pentru a vedea dacă elevii le pot găsi.Spuneți**: _Șoricelul Mervin și elefănțica Ellie jucau un joc online și au observat că există o căsuță de chat. S-au gândit că ar fi amuzant să vorbească cu ceilalți jucători și au început să partajeze câteva informații despre ei. Problema este că au uitat să-și întrebe mai întâi părinții dacă este în regulă._.\\_Sunteți detectivi la Agenția de detectivi Little Foot. Sarcina voastră este să aflați cât mai multe despre Mervin și Ellie.**Împărțiți\\*\\* elevii în grupuri cu câte patru membri. Distribuiți **Documentația pentru elevi - Urme de animale** fiecărui elev și explicați-le că, deși lucrează împreună, fiecare dintre ei ar trebui să ia notițe detaliate și să răspundă la întrebările de reflecție din propria documentație. ([Diapozitiv 9](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g513c004c7f_0_10))**Invitați-i** pe elevi să pornească la o vânătoare de informații în clasă. Spuneți-le că informațiile postate de Mervin și Ellie pot fi văzute de oricine pe internet, inclusiv de detectivi. Fiecare grup trebuie să urmărească urma digitală a celor două animale. Solicitați grupurilor să înceapă să lucreze în momente diferite, astfel încât să urmeze traseele în momente ușor diferite. Rugați-i să răspundă la cele două întrebări din documentație după ce au terminat."
@@ -2909,6 +3038,9 @@
           "name": "Programare cu Angry Birds",
           "description": "#### Demonstrație suplimentarăAm inclus câteva nivele de predicție cu alegere multiplă care sunt dificile pentru elevii care nu știu să citească. În mod alternativ, acestea pot fi folosite după terminarea etapei ca o recapitulare pentru clasă.Nivelurile de predicție:- [Programare în labirint #1](https://studio.code.org/levels/8730)- [Programare în labirint #2](https://studio.code.org/levels/8729)"
         },
+        "5ca364f2-80c2-4b91-bb51-bf047aac35b5": {
+          "progression_name": "Provocare"
+        },
         "59a20536-707e-4328-88ab-71b1c533cd37": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -2945,6 +3077,9 @@
         },
         "c99faf85-9a98-4efe-8843-65d04bed20f6": {
           "description": "**Circulați:** În timpul activităților online, rolul profesorului este, în principal, de a încuraja și de a sprijini. Pe lângă ideile din ultima lecție, iată câteva idei suplimentare:-   Reamintiți-le elevilor să folosească procesul de depanare înainte de a-i aborda.-   Rugați elevii să descrie problema pe care o văd. Ce ar trebui să facă? Ce face? Ce vă spune acest lucru?-   Reamintiți-le elevilor dezamăgiți că frustrarea este doar un pas pe drumul spre învățare și că perseverența va da roade.-   Dacă totuși un elev este încă blocat după toate acestea, puneți-i întrebări sugestive ca să-l determinați să identifice singur o eroare.**Tranziție:** Cereți-le elevilor să scrie în jurnalul de reflecție note cu privire la lecții."
+        },
+        "fcc74691-719d-415b-87ae-8bc40b436318": {
+          "progression_name": "Provocare"
         },
         "95894838-20b0-41ae-801a-5d3326e39e0b": {
           "name": "Reflecţie",
@@ -3007,6 +3142,9 @@
           "name": "Bucle cu Culegătorul",
           "description": "Pe măsură ce elevii rezolvă puzzle-urile, vedeți dacă își pot da seama câte blocuri folosesc atunci când utilizează o buclă, comparativ cu blocurile folosite fără buclă."
         },
+        "b07cbcb7-9e8e-4a05-a906-8621ce42cb95": {
+          "progression_name": "Provocare"
+        },
         "8342e7d2-b605-4c73-80a9-2d3d97aad783": {
           "name": "Reflecţie",
           "description": "**Subiecte:**-   Despre ce a fost lecția de astăzi?-   Desenează în colțul paginii de jurnal o față care să arate cum te-ai simțit în legătură cu lecția de astăzi.-   Cum te-au ajutat buclele să scrii mai ușor programul?-   Desenează ceva care folosește bucle."
@@ -3027,6 +3165,9 @@
         "080f9c60-77da-4902-a7ba-a5b21efd9aca": {
           "name": "Demonstrația profesorului",
           "description": "Am inclus câteva niveluri de predicție cu alegeri multiple care sunt dificile pentru elevii care nu știu să citească. Opțional, aceste niveluri pot fi revizuite împreună cu clasa dumneavoastră, pentru a vă ajuta elevii să se pregătească pentru puzzle-urile care vor urma. Alternativ, acestea pot fi folosite după terminarea etapei, ca o recapitulare pentru toți elevii.Nivel de predicție:-   [Curs A, Bucle în Colecționar](https://studio.code.org/levels/8746)"
+        },
+        "9b293bbc-d3e3-494d-892e-f90e56347451": {
+          "progression_name": "Provocare"
         },
         "eedc7420-83ed-420a-8bfe-db3e70719c14": {
           "progression_name": "Suplimente de lecţie"
@@ -3053,6 +3194,9 @@
         },
         "6e4b782c-58b7-4079-bec6-7fe157198276": {
           "description": "Am inclus câteva niveluri de predicție cu alegere multiplă care sunt dificile pentru elevii care nu știu să citească. Opțional, aceste niveluri pot fi revizuite împreună cu clasa dumneavoastră, pentru a vă ajuta elevii să se pregătească pentru puzzle-urile care vor urma. Alternativ, acestea pot fi folosite după terminarea etapei, ca o recapitulare pentru toți elevii.**Nivelurile de predicție:** - [Curs B, Bucle în Artist](https://studio.code.org/levels/8745)"
+        },
+        "000254d0-54ca-4866-b12c-f3d4c387cbbc": {
+          "progression_name": "Provocare"
         },
         "22891986-f61f-4e37-aae4-177019581071": {
           "progression_name": "Joc la liber"
@@ -3088,7 +3232,7 @@
         },
         "616fe3f0-31f4-4d6c-a96b-c2fea538d981": {
           "name": "Introducere",
-          "description": "#### Vocabular**Spuneți**: Această lecție are un cuvânt de vocabular nou și important:\\*.-   **Eveniment** - \\_Spuneți cu mine: E-ve-ni-ment\\*O acțiune în urma căreia se întâmplă ceva."
+          "description": "#### Vocabular**Spuneți**: Această lecție are un cuvânt de vocabular nou și important:*.-   **Eveniment** - \\_Spuneți cu mine: E-ve-ni-ment*O acțiune în urma căreia se întâmplă ceva."
         },
         "3f1252e1-8de9-4a19-bdac-cf63006671e5": {
           "description": "#### O serie de evenimente**Discutați**: Pregătiți-vă clasa pentru a răspunde la o întrebare:-   _„Vă voi pune o întrebare. Vreau să ridicați mâna dacă vreți să vă strig numele ca să răspundeți.”_.-   Puneți o întrebare simplă, la care majoritatea elevilor ar trebui să poată răspunde, cum ar fi:-   Câte degete mari am?-   Ce este mai mare, o pasăre sau un cal?-   Spuneți numele unui elev care are mâna ridicată și lăsați-l să dea răspunsul.-   După ce ați terminat cu materialele afișate, întrebați clasa cum ați știut că elevul a vrut să îi spuneți numele pentru a răspunde.-   Elevii vor menționa probabil faptul că au ridicat mâinile.-   Explicați-le tuturor că atunci când elevii ridică mâna, este un „eveniment” în urma căruia aflați că aceștia vor să răspundă.-   Întrebați-i pe elevii dacă se pot gândi la alte evenimente prin care semnalează ceva.-   Este posibil să fie nevoie să le reamintiți că nu vorbiți despre un eveniment cum ar fi o petrecere de ziua cuiva sau o excursie.-   În cazul în care întâmpină probleme, le puteți reaminti că un eveniment este o acțiune în urma căreia se întâmplă ceva.-   Ce credeți despre un ceas deșteptător care sună? Ce se întâmplă după aceasta?-   Dar despre apăsarea butonului „Start” de pe cuptorul cu microunde? Ce face acesta?-   Dar apăsarea butonului de pornire de pe telecomanda televizorului?-   _Astăzi vom crea programe cu evenimente._"
@@ -3191,10 +3335,10 @@
           "progression_name": "Cartierul meu online"
         },
         "66dc5fd4-eacf-41f8-9d21-196b81d35d7a": {
-          "description": "### Vocabular esențial-   **online**: utilizarea unui computer, telefon sau tabletă pentru a vizita un site web sau o aplicație.-   **site web sau aplicație**: un loc pe care îl puteți vizita pe internet.**Întrebați**: Ce trebuie să faci pentru a fi în siguranță atunci când vizitezi locuri noi?\\_ ([Diapozitiv 3](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_54))Invitați elevii să răspundă. Răspunsurile vor varia, dar subliniați următoarele reguli de siguranță:-   Vizitați întotdeauna locuri necunoscute împreună cu un adult.-   Nu vă plimbați pe cont propriu.-   Vorbiți doar cu persoane pe care le cunoașteți.**Spuneți**: Astăzi vom vorbi despre cum vizitarea unor locuri de pe internet se aseamănă cu vizitarea unor locuri în viața reală. La fel cum există reguli pentru a fi în siguranță atunci când vizitați locuri noi în lumea reală, există și modalități de a vă fi în siguranță online.**\\*.**Proiectați\\*\\* [Diapozitivul 4](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5c15fa078c_0_0) și definiți **online** ca fiind \\_utilizarea unui computer, telefon sau tabletă pentru a vizita un site web sau o aplicație\\*.**Redați** clipul video [Cartierul meu online](https://www.commonsense.org/education/videos/my-online-neighborhood) de pe [Diapozitivul 5](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_93) și apoi întrebați: _Ce i-a plăcut lui Arms cu privire la internet? Ce fel de lucruri poate face pe internet?_**.Invitați elevii să răspundă. Exemple de răspunsuri:-   Îi place să viziteze locuri interesante.-   Poate vorbi cu familia și cu prietenii.-   Poate învăța o mulțime de lucruri noi.-   Poate crea lucruri pe internet.**Întrebați\\*\\*: _Care sunt cele trei reguli pe care le respectă Arms atunci când vizitează locuri online?_.Invitați elevii să răspundă. Proiectați [Diapozitivul 6](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_141) și subliniați cele trei reguli principale:1. Întrebați-vă întotdeauna părinții (sau un adult în care ai încredere) mai întâi.2. Vorbiți doar cu persoane pe care le cunoașteți.3. Rămâneți în locurile potrivite.Explicați-le că a rămâne în locurile „potrivite” înseamnă să se asigure că este vorba de un site web sau de o aplicație potrivită pentru copii și că au permisiunea de a le vizita."
+          "description": "### Vocabular esențial-   **online**: utilizarea unui computer, telefon sau tabletă pentru a vizita un site web sau o aplicație.-   **site web sau aplicație**: un loc pe care îl puteți vizita pe internet.**Întrebați**: Ce trebuie să faci pentru a fi în siguranță atunci când vizitezi locuri noi?\\_ ([Diapozitiv 3](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_54))Invitați elevii să răspundă. Răspunsurile vor varia, dar subliniați următoarele reguli de siguranță:-   Vizitați întotdeauna locuri necunoscute împreună cu un adult.-   Nu vă plimbați pe cont propriu.-   Vorbiți doar cu persoane pe care le cunoașteți.**Spuneți**: Astăzi vom vorbi despre cum vizitarea unor locuri de pe internet se aseamănă cu vizitarea unor locuri în viața reală. La fel cum există reguli pentru a fi în siguranță atunci când vizitați locuri noi în lumea reală, există și modalități de a vă fi în siguranță online.***.**Proiectați** [Diapozitivul 4](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5c15fa078c_0_0) și definiți **online** ca fiind \\_utilizarea unui computer, telefon sau tabletă pentru a vizita un site web sau o aplicație*.**Redați** clipul video [Cartierul meu online](https://www.commonsense.org/education/videos/my-online-neighborhood) de pe [Diapozitivul 5](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_93) și apoi întrebați: _Ce i-a plăcut lui Arms cu privire la internet? Ce fel de lucruri poate face pe internet?_**.Invitați elevii să răspundă. Exemple de răspunsuri:-   Îi place să viziteze locuri interesante.-   Poate vorbi cu familia și cu prietenii.-   Poate învăța o mulțime de lucruri noi.-   Poate crea lucruri pe internet.**Întrebați**: _Care sunt cele trei reguli pe care le respectă Arms atunci când vizitează locuri online?_.Invitați elevii să răspundă. Proiectați [Diapozitivul 6](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_141) și subliniați cele trei reguli principale:1. Întrebați-vă întotdeauna părinții (sau un adult în care ai încredere) mai întâi.2. Vorbiți doar cu persoane pe care le cunoașteți.3. Rămâneți în locurile potrivite.Explicați-le că a rămâne în locurile „potrivite” înseamnă să se asigure că este vorba de un site web sau de o aplicație potrivită pentru copii și că au permisiunea de a le vizita."
         },
         "fc3baf69-3ed1-46de-af6c-bed50ffd6757": {
-          "description": "**Spuneți**: _Acum vom învăța o scurtă poezie care ne va ajuta să ne amintim regulile de care avem nevoie pentru a fi în siguranță online. Mai întâi voi citi poezia, apoi o vom citi împreună._.**Proiectați** [Diapozitivul 7](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_196) și exemplificați acțiunile din poezie în timp ce o citiți cu voce tare. Aceasta este o poezie de tip apel-și-răspuns, cu diferite acțiuni care corespund fiecăreia dintre cele trei reguli de siguranță.**Citiți** poezia cu voce tare împreună cu elevii. Pe măsură ce elevii citesc, aceștia trebuie să realizeze acțiunile la rândul lor. De asemenea, pentru această poezie, unul dintre elevi poate juca rolul profesorului și restul clasei trebuie să îi răspundă.**Siguranța este importantă! de Jenny Pritchett\\***Trebuie să fim în siguranță**Când suntem online**Așa că vom urma aceste reguli.\\_\\_Pentru a ne distra!_[Ridică 1 deget]\\\\_Întotdeauna întrebați-vă părinții mai întâi!\\*[Ridică 2 degete]\\*Nu vorbi decât cu oamenii pe care îi cunoști!\\*[Ridică 3 degete] *Rămâi pe site-urile potrivite pentru tine!\\_\\_Și vom fi în siguranță*Oriunde mergem!Notă: [Afișul cu poezia](https://docs.google.com/document/d/10SHj9Xh4JJPwJJrjzJ48mpLhm3PM8orzJbWCTHY6VUo/edit) poate fi utilizat pentru poezia din fiecare săptămână sau ca activitate cu care începeți intervalele de timp petrecute la calculator sau pe dispozitive."
+          "description": "**Spuneți**: _Acum vom învăța o scurtă poezie care ne va ajuta să ne amintim regulile de care avem nevoie pentru a fi în siguranță online. Mai întâi voi citi poezia, apoi o vom citi împreună._.**Proiectați** [Diapozitivul 7](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_196) și exemplificați acțiunile din poezie în timp ce o citiți cu voce tare. Aceasta este o poezie de tip apel-și-răspuns, cu diferite acțiuni care corespund fiecăreia dintre cele trei reguli de siguranță.**Citiți** poezia cu voce tare împreună cu elevii. Pe măsură ce elevii citesc, aceștia trebuie să realizeze acțiunile la rândul lor. De asemenea, pentru această poezie, unul dintre elevi poate juca rolul profesorului și restul clasei trebuie să îi răspundă.**Siguranța este importantă! de Jenny Pritchett***Trebuie să fim în siguranță**Când suntem online**Așa că vom urma aceste reguli.\\_\\_Pentru a ne distra!*[Ridică 1 deget]\\*Întotdeauna întrebați-vă părinții mai întâi!\\*[Ridică 2 degete]\\*Nu vorbi decât cu oamenii pe care îi cunoști!\\*[Ridică 3 degete] *Rămâi pe site-urile potrivite pentru tine!\\_\\_Și vom fi în siguranță*Oriunde mergem!Notă: [Afișul cu poezia](https://docs.google.com/document/d/10SHj9Xh4JJPwJJrjzJ48mpLhm3PM8orzJbWCTHY6VUo/edit) poate fi utilizat pentru poezia din fiecare săptămână sau ca activitate cu care începeți intervalele de timp petrecute la calculator sau pe dispozitive."
         },
         "39a4de29-4980-411c-9999-90a2bb94b72b": {
           "description": "**Spuneți**: _Calculatorul îți dă posibilitatea să vizitezi locuri îndepărtate fără să părăsești sala de clasă._Definiți un **site web** ca fiind _un loc pe care îl puteți vizita pe internet._ ([Diapozitivul 8](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_245)) Explicați-le elevilor că pe internet pot vizita site-uri sau aplicații pentru locuri reale, cum ar fi grădini zoologice și muzee. Aceste locuri pot fi departe de locul în care locuiesc, dar ei le pot vizita online.**Alegeți** un site web pe care să îl explorați împreună cu elevii. Dacă nu știți ce să alegeți, încercați unul dintre următoarele site-uri:- [Grădina zoologică din San Diego](http://kids.sandiegozoo.org/)- [National Geographic Kids Explore the World](https://kids.nationalgeographic.com/explore/countries/)**Întrebați**: Care este prima regulă înainte de a porni un dispozitiv sau de a deschide un site web sau o aplicație?*.Invitați elevii să le spună și celorlalți, reamintindu-le că trebuie să ceară întotdeauna permisiunea unui adult înainte de a utiliza un dispozitiv sau de a vizita un site web sau o aplicație.**Explorați** site-ul web pe care l-ați selectat împreună cu elevii, permițându-le să aleagă paginile și activitățile care îi interesează cel mai mult. Pe măsură ce parcurgeți site-ul, subliniați modul în care elevii respectă celelalte două reguli de siguranță pentru a petrece timp online: să vorbească doar cu persoane pe care le cunosc și să se limiteze la locurile care sunt potrivite pentru ei.Notă: Dacă vă aflați în laboratorul cu calculatoare sau dacă aveți suficiente dispozitive în clasă, cereți-le elevilor să exploreze individual sau în perechi.**Întrebați** elevii ce au învățat în excursia pe internet. De asemenea, întrebați: \\_Cum ați respectat cele trei reguli de siguranță atunci când ați vizitat site-ul?*"
@@ -3328,6 +3472,9 @@
           "name": "Programare cu Scrat",
           "description": "Dacă sunteți în căutarea unor puzzle-uri suplimentare pe care să le rezolvați împreună cu clasa, iată câteva puzzle-uri de „predicție” care vă vor permite să parcurgeți codul existent împreună cu elevii dvs. pentru a prezice ce va face _Scrat_. Este o idee bună să le parcurgeți împreună înainte ca elevii să le abordeze pe calculatoarele proprii.#### Niveluri de predicție:-   [Curs B, Programare în labirint #1](https://studio.code.org/levels/12607)-   [Curs B, Programare în labirint #2](https://studio.code.org/levels/12608)"
         },
+        "9bf3aa93-0d30-4dd2-a78e-926066cc64f3": {
+          "progression_name": "Provocare"
+        },
         "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -3355,6 +3502,9 @@
         },
         "71cf3779-677d-4123-8feb-f4c503c32c3e": {
           "name": "Programare cu Rey și BB-8"
+        },
+        "3c2f387d-dde7-4c31-befe-3bf45387d813": {
+          "progression_name": "Provocare"
         },
         "4aebed84-fb26-4d7b-97e8-6bcee3dbb701": {
           "description": "Așa cum am menționat în ultima lecție, vă recomandăm să urmăriți și să folosiți în clasă clipul video pentru elevi numit **\\*Programarea în perechi**. Programarea în perechi conduce la o discuție prin care se poate răspunde la întrebări, poate fi utilizată pentru a recapitula conceptele de bază și poate conduce la o atitudine mai plină de încredere cu privire la subiectul respectiv."
@@ -3417,6 +3567,9 @@
         "bfc26aa9-b856-47f4-86c0-36818d4d9c87": {
           "description": "Pe măsură ce elevii rezolvă puzzle-urile, vedeți dacă își pot da seama câte blocuri folosesc atunci când utilizează o buclă, comparativ cu blocurile folosite fără buclă."
         },
+        "277f1b5f-abbe-4158-9507-d91cce301994": {
+          "progression_name": "Provocare"
+        },
         "3cd2a8cd-efcc-40cd-a541-17ae2c95b14c": {
           "tips": [
             "**Arătați-le elevilor modul _corect_ de a-și ajuta colegii de clasă:**-   Nu te așeza pe scaunul colegului de clasă.-   Nu folosi tastatura colegului de clasă.-   Nu atinge mouse-ul colegului de clasă.-   Asigură-te că colegul de clasă poate descrie soluția cu voce tare înainte de a pleca de lângă el."
@@ -3451,6 +3604,9 @@
         "1bbb191d-3177-490d-99ad-5a0e10e21985": {
           "description": "Niveluri de predicție:-   [Cursul A, Bucle în Colecționar #1](https://studio.code.org/levels/8728)-   [Cursul A, Bucle în Colecționar #2](https://studio.code.org/levels/8727)"
         },
+        "3c97efcf-4bdd-437a-a07d-bcd1f9faad87": {
+          "progression_name": "Provocare"
+        },
         "5580045e-132a-4c17-8c3f-522b7f01f442": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -3471,6 +3627,9 @@
         },
         "8e4ed9a9-b50b-45bf-ac33-86251c7c10a9": {
           "description": "Am inclus câteva niveluri de predicție cu alegere multiplă care sunt dificile pentru elevii care nu știu să citească. Opțional, aceste niveluri pot fi recapitulate împreună cu clasa, pentru a vă ajuta elevii să se pregătească pentru puzzle-urile care vor urma. Alternativ, acestea pot fi folosite după terminarea etapei, ca o recapitulare pentru toți elevii.**Nivelurile de predicție:**-   [Curs A, Bucle în Artist](https://studio.code.org/levels/8726)"
+        },
+        "879f345b-620d-4541-8467-84f00e515229": {
+          "progression_name": "Provocare"
         },
         "1e2c8e78-0b20-48a4-aeba-08cad3060e42": {
           "tips": [
@@ -3669,6 +3828,9 @@
             "Arătați-le elevilor modul corect de a-și ajuta colegii:-   Nu te așeza pe scaunul colegului-   Nu folosi tastatura colegului-   Nu atinge mouse-ul colegului-   Asigură-te că colegul poate descrie soluția cu voce tare înainte de a pleca de lângă el"
           ]
         },
+        "e7df62bb-065d-4eaf-b96a-9726c8c8510a": {
+          "progression_name": "Provocare"
+        },
         "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -3696,6 +3858,9 @@
           "name": "Depanare în Labirint",
           "description": "Înainte de a-i lăsa pe elevi să lucreze la calculator, reamintiți-le care sunt avantajele programării în perechi și cât este de important să ceară ajutorul colegilor. Grupați elevii în perechi și recomandați-le să ceară ajutorul a cel puțin doi colegi înainte de a apela la un profesor."
         },
+        "a7458755-70c4-4b60-b6ad-729468af507f": {
+          "progression_name": "Provocare"
+        },
         "12488a0c-dc91-4ea4-bdc7-28e27145f721": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -3720,6 +3885,9 @@
         "e2aaa332-2426-4380-b14b-cd681477be54": {
           "description": "_Aventuriera Laurel_ încearcă să strângă cât mai multe comori. Cereți-le elevilor să parcurgă puzzle-ul și să strângă tot ce pot. La unele niveluri trebuie să strângă doar o singură bucată de comoară, în timp ce la altele trebuie să strângă toată comoara. Fiți atenți la instrucțiuni ca să știți ce trebuie să faceți!"
         },
+        "e7869029-e0e5-4e0d-a6a8-b73fc0b01246": {
+          "progression_name": "Provocare"
+        },
         "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -3737,7 +3905,8 @@
         "16e320f6-0c67-4992-87a4-0ae6396a1080": {
           "tips": [
             "În puzzle-ul nr. 8, elevii trebuie să deseneze un poligon cu 6 laturi. Aceasta poate fi o sarcină dificilă pentru unii dintre ei. Recomandăm ca elevii să încerce de câteva ori, să întrebe un coleg, și abia apoi să ceară ajutorul profesorului. Mai jos vă prezentăm o imagine care ar putea fi utilă pentru elevi.![](https://images.code.org/6675ec0ae84db90ee699a8be4c7b23a6-hexagon2018.png)"
-          ]
+          ],
+          "progression_name": "Provocare"
         },
         "8d556f84-689c-4046-bd40-a955e56ef116": {
           "progression_name": "Suplimente de lecţie"
@@ -3796,6 +3965,9 @@
         "16139473-0792-46d6-b8f8-77c79ceead5c": {
           "name": "Bucle cu Rey și BB-8"
         },
+        "922cabb8-e8e7-4f94-a72a-c173f9084db9": {
+          "progression_name": "Provocare"
+        },
         "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -3818,6 +3990,9 @@
         },
         "2f87a826-1460-4d5c-9db3-47911c77a56a": {
           "description": "Atunci când elevii folosesc buclele pentru a repeta o acțiune (cum ar fi recoltarea dovlecilor), încurajați-i să se gândească la mișcările de dinainte și de după acea acțiune. Pot fi introduse și aceste acțiuni în buclă?"
+        },
+        "d65f83fb-25b6-45bb-8ca8-1b230b146b66": {
+          "progression_name": "Provocare"
         },
         "f5cc9272-be27-471b-9cdd-f56920c56a34": {
           "progression_name": "Suplimente de lecţie"
@@ -4144,6 +4319,9 @@
         "528f5675-b238-4157-849e-e3c9882d39f5": {
           "description": "Profesorii joacă un rol vital în educația privind știința calculatoarelor și în susținerea unui mediu dinamic și caracterizat de colaborare în rândul elevilor. În timpul activităților online, rolul profesorului este, în principal, unul de încurajare și sprijin. Lecțiile online trebuie să fie axate pe elev, așa că profesorii trebuie să evite să intervină atunci când elevii se blochează. Iată câteva idei despre cum să faceți acest lucru:-   Utilizați Programarea în perechi ori de câte ori este posibil în timpul activității.-   Încurajați-i pe elevii care au întrebări/care se confruntă cu provocări să își întrebe mai întâi partenerul.-   Întrebările fără răspuns pot fi transmise unui grup din apropiere, care poate cunoaște soluția deja.-   Rugați elevii să descrie problema pe care o văd. Ce ar trebui să facă? Ce face? Ce vă spune acest lucru?-   Reamintiți-le elevilor dezamăgiți că frustrarea este doar un pas pe drumul spre învățare și că perseverența va da roade.-   Dacă un elev este încă blocat, puneți-i întrebări sugestive ca să-l ajutați să identifice singur o eroare."
         },
+        "c87409e4-62dc-4155-b1ef-f6329111dd7f": {
+          "progression_name": "Provocare"
+        },
         "44f59c64-44ce-47bb-bcf6-d11a73277e48": {
           "name": "Reflecţie",
           "description": "**Subiecte:**-   Despre ce a fost lecția de astăzi?-   Cum v-ați simțit în timpul lecției de astăzi?-   Enumerați câteva dintre erorile pe care le-ați găsit astăzi în programele voastre.-   Care a fost puzzle-ul vostru preferat? Desenați personajul preferat rezolvând un puzzle."
@@ -4203,6 +4381,9 @@
         "2fb45914-1afa-4483-8fb0-e3e3503fa80b": {
           "name": "Depanare cu Laurel",
           "description": "Este posibil să fie util ca elevii să rămână în echipele formate pentru activitățile de legătură. Fiecare elev trebuie să lucreze la aceste puzzle-uri individual sau în perechi, dar dacă face parte dintr-un grup compact în care să pună întrebări și să răspundă la întrebări, aceasta poate contribui la creșterea încrederii în propriile forțe și la o înțelegere aprofundată a subiectului."
+        },
+        "1921c52c-25f6-457a-8dba-57926c95bfae": {
+          "progression_name": "Provocare"
         },
         "e54eeb6d-ab26-4e65-9cd5-3d97a06733f9": {
           "name": "Reflecţie",
@@ -4350,6 +4531,9 @@
           "name": "Bucle în Ice Age",
           "description": "Pe măsură ce elevii rezolvă puzzle-urile, vedeți dacă își pot da seama câte blocuri folosesc atunci când utilizează o buclă, comparativ cu blocurile folosite fără buclă."
         },
+        "6ecd59e1-35e1-44aa-9a99-1190dc99abd3": {
+          "progression_name": "Provocare"
+        },
         "b2c72983-b5ad-4a39-9f80-e6701c7c6df6": {
           "tips": [
             "**Arătați-le elevilor modul _corect_ de a-și ajuta colegii de clasă:**-   Nu te așeza pe scaunul colegului de clasă.-   Nu folosi tastatura colegului de clasă.-   Nu atinge mouse-ul colegului de clasă.-   Asigură-te că colegul de clasă poate descrie soluția cu voce tare înainte de a pleca de lângă el."
@@ -4372,6 +4556,9 @@
         "2517dd9e-f281-4db3-9cc8-07dc533add33": {
           "name": "Cum să desenăm forme cu ajutorul buclelor"
         },
+        "8ff5abc7-3c4a-42d5-88f6-51f0dd8060ab": {
+          "progression_name": "Provocare"
+        },
         "f3f79fbb-d2e7-410e-9258-ca61b0519fb3": {
           "description": "#### Puzzle-uri onlineUnii elevi pot descoperi unde trebuie să adauge bucle `repeat` scriind programul fără bucle, apoi încercuind secțiunile cu repetiții. Dacă acest lucru este benefic pentru elevii dvs., cereți-le să aibă hârtie și creioane lângă calculator. De asemenea, este posibil să fie utilă pentru elevi desenarea unor forme și figuri pe hârtie înainte de a le programa online."
         },
@@ -4386,6 +4573,9 @@
         "fead1358-5e8f-4b1d-990a-4ee44b3e101b": {
           "name": "Bucle imbricate în Labirint",
           "description": "Pentru această lecție recomandăm programarea în perechi. S-ar putea să nu fie un subiect ușor pentru majoritatea elevilor. Dacă lucrează cu un partener și discută despre potențialele soluții pentru puzzle-uri, activitatea poate fi mai ușoară pentru elevi.De asemenea, puneți-le la îndemână hârtie și creioane, pentru ca elevii să își scrie planul înainte de a programa. Pentru unele puzzle-uri există o limită a numărului de blocuri pe care le puteți folosi, așa că, dacă elevii doresc să scrie răspunsul lung pentru a identifica repetițiile, este posibil ca hârtia să le fie utilă."
+        },
+        "0f7bd996-f5bb-414f-9bd8-b569978307a5": {
+          "progression_name": "Provocare"
         },
         "725a7d9a-35a3-483e-a83b-f88bf0033095": {
           "progression_name": "Suplimente de lecţie"
@@ -4436,6 +4626,9 @@
         "2f024770-481d-43dc-aa55-7133819f6663": {
           "description": "#### Puzzle-uri onlineAceastă lecție va fi o adevărată plăcere pentru elevi. Este probabil ca majoritatea elevilor dumneavoastră să fi auzit de _Minecraft_, dar faceți o scurtă prezentare pentru cei care nu știu despre ce este vorba._Minecraft_ este un joc cu cuburi. Puteți juca rolul lui _Alex_ sau al lui _Steve_ în timp ce străbateți labirinturi. Va trebui să evitați lava, să culegeți obiecte și să explorați o lume alcătuită din cuburi.Rezolvați unul dintre puzzle-uri (vă recomandăm puzzle-ul 11.) După ce s-a răspuns la toate întrebările, rugați elevii să treacă la calculatoare și lăsați-i să înceapă programarea în perechi."
         },
+        "16432484-49b1-47dc-bbd9-60f67bacc790": {
+          "progression_name": "Provocare"
+        },
         "f5e9d0c0-d9c2-40af-b9aa-781078d95fa2": {
           "progression_name": "Joc la liber"
         },
@@ -4456,6 +4649,9 @@
         },
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
           "description": "Aceste puzzle-uri pot duce la întrebări, așa că puneți-i pe elevi să lucreze în perechi sau aplicați regula „Întreabă trei înainte de a mă întreba pe mine” (cereți elevilor să ceară ajutorul altor trei colegi înainte de a se adresa profesorului). Acest lucru va declanșa discuții prin care fiecare elev va înțelege mai bine despre ce este vorba."
+        },
+        "8a1d519d-3579-40dd-8c62-77a2d4abc8ea": {
+          "progression_name": "Provocare"
         },
         "9326c58a-39b6-4f40-a2ba-5c19267c2a3f": {
           "progression_name": "Suplimente de lecţie"
@@ -4479,6 +4675,12 @@
           "name": "Bucle „while” în Fermier",
           "description": "Buclele nu sunt întotdeauna un concept dificil de înțeles de către elevi, dar dacă credeți că aceștia ar putea avea dificultăți cu aceste puzzle-uri, vă recomandăm programarea în perechi. Acest lucru le va permite elevilor să își dea idei unul altuia înainte de a implementa codul. Programarea în perechi funcționează pentru a le crește încrederea în propriile forțe și pentru a înțelege subiecte precum buclele „while”."
         },
+        "b25165f7-abe4-4c2b-a4f2-2a8838986caa": {
+          "progression_name": "Provocare"
+        },
+        "738e5c3b-30c5-4b5c-8c50-295bd44328b7": {
+          "progression_name": "Provocare"
+        },
         "6751c001-d379-4682-8c2e-3eead4acba66": {
           "name": "Reflecţie",
           "description": "Dacă elevii scriu despre ceea ce au învățat, de ce este util și ce simt în legătură cu acest lucru, puteți contribui la consolidarea cunoștințelor pe care le-au obținut astăzi. Puteți folosi această resursă ca o foaie de recapitulare pe care să o consulte în viitor.**Subiecte:**-   Despre ce a fost lecția de astăzi?-   Cum v-ați simțit în timpul lecției de astăzi?-   Care este diferența dintre o buclă while și o buclă normală repeat?-   Dați un exemplu de puzzle în care ați folosi o buclă while, dar nu ați folosi o buclă repeat. Puteți da un exemplu de puzzle în care ați folosi o buclă repeat, dar nu o buclă while?"
@@ -4492,6 +4694,9 @@
         },
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
           "description": "#### Puzzle-uri onlineAsocierea de concepte nu este ușoară, dar acest set de lecții îi va ajuta pe elevi să întrevadă posibilitățile infinite ale programării atunci când se folosesc relațiile de condiționalitate. Dacă elevii întâmpină dificultăți în a înțelege asemănările sau diferențele dintre buclele „while” și „until”, rugați-i să încerce să se gândească la modul în care ar folosi enunțuri similare în viața reală."
+        },
+        "31e87218-76f2-4e0c-9689-9203f3f2bc83": {
+          "progression_name": "Provocare"
         },
         "b9c0e01d-2222-4dca-ad71-dc6068af0439": {
           "name": "Reflecţie",
@@ -4534,6 +4739,12 @@
             "Arătați-le elevilor modul _corect_ de a-și ajuta colegii de clasă:Nu vă așezați pe scaunul lorNu folosiți tastatura lorNu le atingeți mouse-ulAsigurați-vă că respectivul coleg poate descrie soluția înainte de a pleca"
           ]
         },
+        "955d1fd6-b45a-4f4d-8c32-e60031f41935": {
+          "progression_name": "Provocare"
+        },
+        "19367182-a8f0-442e-9a7d-e7852546f961": {
+          "progression_name": "Provocare"
+        },
         "d09eb753-cf01-4cfa-b252-0e6d4faa4f97": {
           "description": "**Circulați:** Profesorii joacă un rol vital în educația privind știința calculatoarelor și în susținerea unui mediu dinamic și caracterizat de colaborare în rândul elevilor. În timpul activităților online, rolul profesorului este, în principal, unul de încurajare și sprijin. Lecțiile online trebuie să fie axate pe elev, așa că profesorii trebuie să evite să intervină atunci când elevii se blochează. Iată câteva idei despre cum să faceți acest lucru:-   Utilizați Programarea în perechi ori de câte ori este posibil în timpul activității.-   Încurajați-i pe elevii care au întrebări/care se confruntă cu provocări să își întrebe mai întâi partenerul.-   Întrebările fără răspuns pot fi transmise unui grup din apropiere, care poate cunoaște soluția deja.-   Rugați elevii să descrie problema pe care o văd. Ce ar trebui să facă? Ce face? Ce înseamnă aceasta?-   Reamintiți-le elevilor dezamăgiți că frustrarea este doar un pas pe drumul spre învățare și că perseverența va da roade.-   Dacă un elev este încă blocat, puneți-i întrebări sugestive ca să-l ajutați să identifice singur o eroare.**Discutați:** După ce le transmiteți elevilor avertismentele cu privire la sfârșitul orei, atrageți atenția tuturor să reflecteze la experiențele pe care le-au avut.-   S-a simțit cineva frustrat în timpul oricăruia dintre puzzle-uri?-   A observat cineva nevoia de a fi perseverent?**Tranziție:** Cereți-le elevilor să ia \\*_\\\\_Jurnalele de reflecție și să reflecteze asupra lecțiilor pentru câteva momente."
         },
@@ -4559,6 +4770,9 @@
           "name": "Depanare cu Scrat",
           "description": "Înainte de a-i lăsa să înceapă să lucreze la calculator, amintiți-le elevilor avantajele clipului video **\\*Programare în perechi** și de a cere ajutorul colegilor. Așezați elevii în perechi și recomandați-le să ceară ajutorul a cel puțin doi colegi înainte de a apela la profesor.După cum s-a menționat în obiectivul acestei lecții, asigurați-vă că elevii sunt conștienți că se vor confrunta cu puzzle-uri frustrante. Spuneți-le că este normal să se simtă frustrați, dar este important să rezolve problema și să ceară ajutor. Pe măsură ce elevii lucrează la puzzle-uri, plimbați-vă printre ei pentru a vă asigura că niciun elev nu se simte atât de blocat încât să nu mai fie dispus să continue."
         },
+        "f6ef0cac-d698-4ba1-9e6d-d6c00538c584": {
+          "progression_name": "Provocare"
+        },
         "509f1df0-4e9b-454e-ae25-a6380f29ab57": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -4580,6 +4794,9 @@
         "44711c15-152c-4e84-9eca-d87c42edd4a8": {
           "description": "_Aventuriera Laurel_ încearcă să strângă cât mai multe comori. Cereți-le elevilor să parcurgă puzzle-ul și să strângă tot ce pot. La unele niveluri trebuie să strângă doar o singură bucată de comoară, în timp ce la altele trebuie să strângă toată comoara. Fiți atenți la instrucțiuni ca să știți ce trebuie să faceți!"
         },
+        "18bc2d27-442d-405b-aafc-c5f9e0c767ca": {
+          "progression_name": "Provocare"
+        },
         "d14ea8ad-6eb8-4142-ad1c-a0f1d7024948": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -4597,7 +4814,8 @@
         "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
           "tips": [
             "În puzzle-ul nr. 8, elevii trebuie să deseneze un poligon cu 6 laturi. Aceasta poate fi o sarcină dificilă pentru unii dintre ei. Recomandăm ca elevii să încerce de câteva ori, să întrebe un coleg, și abia apoi să ceară ajutorul profesorului. Mai jos vă prezentăm o imagine care ar putea fi utilă pentru elevi.![](https://images.code.org/6675ec0ae84db90ee699a8be4c7b23a6-hexagon2018.png)"
-          ]
+          ],
+          "progression_name": "Provocare"
         },
         "35e7e7ca-ecb5-42bb-b3ca-5251508d3e89": {
           "progression_name": "Suplimente de lecţie"
@@ -4798,6 +5016,9 @@
         "2bb620b7-6107-4b46-b717-117c20503ef0": {
           "name": "Bucle cu Rey și BB-8"
         },
+        "736ef92b-b635-4477-abbb-7d98d171b960": {
+          "progression_name": "Provocare"
+        },
         "be8322ab-77e7-4f99-ad08-40a19edc5c00": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -4845,6 +5066,9 @@
           "name": "Bucle imbricate în Labirint",
           "description": "Pentru această lecție recomandăm programarea în perechi. S-ar putea să nu fie un subiect ușor pentru majoritatea elevilor. Dacă lucrează cu un partener și discută despre potențialele soluții pentru puzzle-uri, activitatea poate fi mai ușoară pentru elevi.De asemenea, puneți-le la îndemână hârtie și creioane, pentru ca elevii să își scrie planul înainte de a programa. Pentru unele puzzle-uri există o limită a numărului de blocuri pe care le puteți folosi, așa că, dacă elevii doresc să scrie răspunsul lung pentru a identifica repetițiile, este posibil ca hârtia să le fie utilă."
         },
+        "59a2568e-bd18-4790-9dd4-e6df4db826ca": {
+          "progression_name": "Provocare"
+        },
         "20282149-72fa-4e24-aa15-5182f21bcf95": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -4871,6 +5095,9 @@
         "db402396-6473-4942-a3b9-e3833beb0cd8": {
           "description": "#### Puzzle-uri onlineAceastă lecție va fi o adevărată plăcere pentru elevi. Este probabil ca majoritatea elevilor dumneavoastră să fi auzit de _Minecraft_, dar faceți o scurtă prezentare pentru cei care nu știu despre ce este vorba._Minecraft_ este un joc cu cuburi. Puteți juca rolul lui _Alex_ sau al lui _Steve_ în timp ce străbateți labirinturi. Va trebui să evitați lava, să culegeți obiecte și să explorați o lume alcătuită din cuburi.Rezolvați unul dintre puzzle-uri (vă recomandăm puzzle-ul 11.) După ce s-a răspuns la toate întrebările, rugați elevii să treacă la calculatoare și lăsați-i să înceapă programarea în perechi."
         },
+        "3ab2228f-c257-4ffd-bcc0-1e5b29118ccf": {
+          "progression_name": "Provocare"
+        },
         "61cffed6-e526-428f-9d2c-e53fbe5b2653": {
           "progression_name": "Joc la liber"
         },
@@ -4887,6 +5114,9 @@
         },
         "22580642-ad9a-48f6-9ad6-8693e42ed9d3": {
           "description": "Aceste puzzle-uri pot duce la întrebări, așa că puneți-i pe elevi să lucreze în perechi sau aplicați regula „Întreabă trei înainte de a mă întreba pe mine” (cereți elevilor să ceară ajutorul altor trei colegi înainte de a se adresa profesorului). Acest lucru va declanșa discuții prin care fiecare elev va înțelege mai bine despre ce este vorba."
+        },
+        "cd33cbb5-8d96-4173-a790-5f3c59c5afff": {
+          "progression_name": "Provocare"
         },
         "fe26d5c2-ccdc-48cc-9678-793d2e491bf5": {
           "progression_name": "Suplimente de lecţie"
@@ -4905,6 +5135,9 @@
         "b6676ce5-2f4a-4761-a053-792853904bd5": {
           "name": "Bucle „while” în Fermier",
           "description": "Buclele nu sunt întotdeauna un concept dificil de înțeles de către elevi, dar dacă credeți că aceștia ar putea avea dificultăți cu aceste puzzle-uri, vă recomandăm programarea în perechi. Acest lucru le va permite elevilor să își dea idei unul altuia înainte de a implementa codul. Programarea în perechi funcționează pentru a le crește încrederea în propriile forțe și pentru a înțelege subiecte precum buclele „while”."
+        },
+        "b0a4f8d2-11ae-416f-a274-e1c3be9dcc22": {
+          "progression_name": "Provocare"
         },
         "c103e631-9559-4d34-9ff9-4227c8fb8baa": {
           "progression_name": "Suplimente de lecţie"
@@ -4941,6 +5174,9 @@
         "3fabd283-0831-412f-8a9f-76e9bf96206f": {
           "description": "Asocierea de concepte nu este ușoară, dar acest set de lecții îi va ajuta pe elevi să întrevadă posibilitățile infinite ale programării atunci când se folosesc relațiile de condiționalitate. Dacă elevii întâmpină dificultăți în a înțelege asemănările sau diferențele dintre buclele „while” și „until”, rugați-i să încerce să se gândească la modul în care ar folosi afirmații similare în viața reală."
         },
+        "db38efa3-e075-41c0-ba59-0e9426393b52": {
+          "progression_name": "Provocare"
+        },
         "8995dda6-6311-4747-a13d-9e793d658e20": {
           "name": "Reflecţie",
           "description": "Dacă elevii scriu despre ceea ce au învățat, de ce este util și ce simt în legătură cu acest lucru, puteți contribui la consolidarea cunoștințelor pe care le-au obținut astăzi. După ce a fost completată, aceasta poate fi folosită ca o foaie de recapitulare pe care să o consulte în viitor.**Subiecte:**-   Despre ce a fost lecția de astăzi?-   Cum v-ați simțit în timpul lecției de astăzi?-   Care este diferența dintre o buclă „until” și o buclă „while”?"
@@ -4951,6 +5187,9 @@
         },
         "26679730-3364-4598-abd8-b07e9d9f9ad9": {
           "description": "Elevii vor continua să lucreze cu instrucțiuni if / else, bucle while și bucle until. Aceste puzzle-uri sunt puțin mai dificile, așa că încurajați-i să lucreze la ele până când vor putea descrie ce trebuie să se întâmple pentru fiecare program."
+        },
+        "f6fcf627-61b6-45f8-ac6b-602a11fb434a": {
+          "progression_name": "Provocare"
         },
         "23df685c-9dd8-48af-9f9a-732ffa1de9c4": {
           "progression_name": "Suplimente de lecţie"
@@ -4986,6 +5225,9 @@
         "dd960de9-43c8-4013-9b55-41e931d458c1": {
           "name": "Funcții cu Artist"
         },
+        "074980cb-1e9f-4fa3-b97d-1467b036062d": {
+          "progression_name": "Provocare"
+        },
         "94ce59c5-2479-4a35-b9f3-acf6615471ce": {
           "progression_name": "Joc la liber"
         },
@@ -5007,6 +5249,9 @@
           "name": "Funcții cu Culegător",
           "description": "#### Puzzle-uri onlineUnele puzzle-uri vor include o funcție pre-declarată, pe care elevii trebuie să o completeze. Elevii pot scrie mai întâi întregul program fără o funcție, apoi pot stabili unde ar fi utilă o funcție în cadrul programului.Este important să vă asigurați că fiecare elev rezolvă fiecare puzzle marcat cu un punct verde închis. În cazul în care unii dintre elevi întâmpină dificultăți atunci când încearcă să simplifice codul și să utilizeze funcții, organizați echipe de elevi experți care să meargă de la un elev la altul și să răspundă la întrebări.Nu uitați să puneți la dispoziție creioane și hârtie pentru a-i ajuta pe elevi să schițeze pe hârtie soluții posibile.",
           "progression_name": "Culegătorul"
+        },
+        "0ee69e3c-cf57-4652-8b39-55a7ff57430f": {
+          "progression_name": "Provocare"
         },
         "3c8c44ae-c181-41c0-9574-54a236e706f9": {
           "name": "Reflecţie",
@@ -5215,6 +5460,9 @@
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
           "name": "Programare cu Angry Birds"
         },
+        "58491b40-8a56-4299-9f91-d96bd0af3ab0": {
+          "progression_name": "Provocare"
+        },
         "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -5240,6 +5488,9 @@
         "5ff6bd4a-2e05-4098-80a6-5e011fa70518": {
           "name": "Programare cu Rey și BB-8"
         },
+        "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa": {
+          "progression_name": "Provocare"
+        },
         "720aa090-bf1d-4934-9c4f-f8cad6b511ac": {
           "description": "Vă recomandăm să urmăriți și să folosiți în clasă clipul video **\\*Programare în perechi**. Programarea în perechi conduce la o discuție prin care se poate răspunde la întrebări, poate fi utilizată pentru a recapitula conceptele de bază și poate conduce la o atitudine mai plină de încredere cu privire la subiectul respectiv."
         },
@@ -5259,6 +5510,9 @@
           "tips": [
             "Arătați-le elevilor modul _corect_ de a-și ajuta colegii de clasă:-   Nu stați pe scaunul lor-   Nu folosiți tastatura lor-   Nu le atingeți mouse-ul-   Asigurați-vă că respectivul coleg poate descrie soluția înainte de a pleca"
           ]
+        },
+        "fc22082b-67fd-47ec-8353-11c902f9ab4c": {
+          "progression_name": "Provocare"
         },
         "465fb2e2-097a-4f1b-a2e1-9dc16c0a15e1": {
           "description": "**Circulați:** În timpul activităților online, rolul profesorului este, în principal, de a încuraja și de a sprijini. Pe lângă ideile din ultima lecție, iată câteva idei suplimentare:-   Reamintiți-le elevilor să folosească procesul de depanare înainte de a-i aborda.-   Rugați elevii să descrie problema pe care o văd. Ce ar trebui să facă? Ce face? Ce vă spune acest lucru?-   Reamintiți-le elevilor dezamăgiți că frustrarea este doar un pas pe drumul spre învățare și că perseverența va da roade.-   Dacă totuși un elev este încă blocat după toate acestea, puneți-i întrebări sugestive ca să-l determinați să identifice singur o eroare.**Tranziție:** Cereți-le elevilor să scrie în jurnalul Thinkspot note cu privire la lecții."
@@ -5288,6 +5542,9 @@
             "**Arătați-le elevilor modul _corect_ de a-și ajuta colegii de clasă:**-   Nu te așeza pe scaunul colegului de clasă.-   Nu folosi tastatura colegului de clasă.-   Nu atinge mouse-ul colegului de clasă.-   Asigură-te că colegul de clasă poate descrie soluția cu voce tare înainte de a pleca de lângă el."
           ]
         },
+        "0a8a7f79-b1b7-436e-8a45-b6190c180164": {
+          "progression_name": "Provocare"
+        },
         "9a875694-a4f4-4cd2-8bf8-31f8441d4a50": {
           "description": "**Circulați:** Profesorii joacă un rol vital în educația privind știința calculatoarelor și în susținerea unui mediu dinamic și caracterizat de colaborare în rândul elevilor. În timpul activităților online, rolul profesorului este, în principal, unul de încurajare și sprijin. Lecțiile online trebuie să fie axate pe elev, așa că profesorii trebuie să evite să intervină atunci când elevii se blochează. Iată câteva idei despre cum să faceți acest lucru:-   Utilizați clipul video **\\*Programare în perechi** ori de câte ori este posibil-   Încurajați-i pe elevii care au întrebări/care se confruntă cu provocări să își întrebe mai întâi partenerul-   Întrebările fără răspuns pot fi transmise unui grup din apropiere, care poate cunoaște soluția deja.-   Reamintiți-le elevilor să folosească procesul de depanare înainte de a-i aborda-   Rugați elevii să descrie problema pe care o văd. Ce ar trebui să facă? Ce face? Ce le spune?-   Reamintiți-le elevilor dezamăgiți că frustrarea este doar un pas pe drumul spre învățare și că persistența va da roade.-   Dacă totuși un elev este încă blocat după toate acestea, puneți i întrebări sugestive ca să-l determinați să identifice singur o eroare."
         },
@@ -5313,6 +5570,9 @@
           "name": "Puzzle-uri online",
           "description": "Pe măsură ce elevii rezolvă puzzle-urile, vedeți dacă își pot da seama câte blocuri folosesc atunci când utilizează o buclă, comparativ cu blocurile folosite fără buclă."
         },
+        "46172f79-e306-4a8f-9ecd-640b05733fb6": {
+          "progression_name": "Provocare"
+        },
         "62dfefbf-589b-46c7-a6ae-2b80bb18b021": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -5336,6 +5596,9 @@
         "bbc61306-32dd-4de2-9a6b-35b47408093f": {
           "description": "Am inclus câteva niveluri de predicție cu alegere multiplă care sunt dificile pentru elevii care nu știu să citească. Opțional, aceste niveluri pot fi recapitulate împreună cu clasa, pentru a vă ajuta elevii să se pregătească pentru puzzle-urile care vor urma. Alternativ, acestea pot fi folosite după terminarea etapei, ca o recapitulare pentru toți elevii.**Nivelurile de predicție:**-   [Bucle în Artist](https://studio.code.org/levels/8726)"
         },
+        "073ef24a-022b-46a3-a900-9a5bd5c2b6fe": {
+          "progression_name": "Provocare"
+        },
         "9501ab3a-0fa4-46d5-88a1-d546663cdffa": {
           "progression_name": "Joc la liber"
         },
@@ -5358,6 +5621,9 @@
           "tips": [
             "Reamintiți-le elevilor să partajeze lucrările doar cu prietenii apropiați sau cu familia. Pentru mai multe informații, urmăriți sau arătați-le elevilor clipul video **\\*Pauză de gândire Online**."
           ]
+        },
+        "77de1bff-b1e2-4956-9ed2-15110f9aa640": {
+          "progression_name": "Provocare"
         },
         "92674c9e-c2dc-4023-a386-8fae5c2b8074": {
           "progression_name": "Joc la liber"
@@ -5524,7 +5790,7 @@
           "description": "-   **înnăscut**: ceva cu care te naști-   **date personale**: informații despre tine care nu pot fi folosite pentru a te identifica, deoarece sunt valabile și pentru multe alte persoane (de exemplu, culoarea părului sau orașul în care locuiești)-   **informații private**: informații despre tine care pot fi folosite pentru a te identifica, deoarece sunt unice (de exemplu, numele tău complet sau adresa ta)-   **înregistrare (online)**: introducerea informațiilor tale pentru a te înregistra și a obține acces la un site web sau la o aplicație**Înainte de lecție**: Ca activitate opțională înainte de lecție, rugați elevii să joace jocul [Share Jumper](https://www.digitalpassport.org/share-jumper.html) din Digital Passport™ creat de Common Sense Education. Acest joc va fi util pentru prezentarea conceptelor cheie ale acestei lecții. Pentru a afla mai multe, consultați [Ghidul educatorului pentru Digital Passport](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).**Spuneți**: _Astăzi vom începe cu un joc. Pentru fiecare afirmație pe care o citesc, dacă este adevărată, ridică-te în picioare. Dacă nu este adevărată, rămâi așezat. După fiecare afirmație, privește în jur pentru a vedea cine stă în picioare sau cine stă jos._ ([Diapozitivul 4](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_283))**Citiți** afirmațiile de mai jos în clasă, acordându-le timp elevilor să se ridice sau să se așeze după fiecare dintre ele. Invitați toți elevii să se așeze înainte de a trece la următorul enunț.-   _Ridică-te în picioare dacă tu sau familia ta vorbiți o altă limbă în afară de engleză.._-   _Ridică-te în picioare dacă ai doi sau mai mulți frați (sau surori)._-   _Ridică-te în picioare dacă ai un animal de companie._-   _Ridică-te în picioare dacă ai accesat vreodată YouTube._-   _Ridică-te în picioare dacă ai partajat vreodată ceva despre tine online._**Cereți-le** elevilor să se așeze și întrebați: _Ce ați învățat din această activitate? V-a plăcut? De ce? De ce nu?_Invitați voluntari să partajeze răspunsurile. Dacă este necesar, continuați cu elevii care partajează  răspunsuri, cerându-le să explice ce li s-a părut amuzant și ce nu li s-a părut amuzant.**Spuneți**: _Scopul acestei activități a fost să ne distrăm și să ne cunoaștem mai bine. Există multe situații în care partajarea de informații despre voi poate fi amuzantă și pozitivă. Una dintre aceste situații este pe internet, unde partajarea gusturilor, opiniilor și a altor informații personale - dar nu private - poate fi pozitivă și distractivă._"
         },
         "d27c13c6-7296-49ce-a80c-b1a33cd4f57a": {
-          "description": "**Spuneți**: În lecția de astăzi vom vorbi despre mediul online și despre modalitățile prin care puteți partaja lucruri despre voi care sunt amuzante și care vă conectează cu ceilalți. Vom vorbi și despre modalitățile prin care vă puteți proteja, pentru a u partaja mai multe informații decât ar trebui.**\\*Proiect** „Știați că?” - [Diapozitivul 5](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_93).**Întrebați**: \\_Ce observați în acest diapozitiv? Care este ideea principală? Faceți schimb de idei cu partenerul vostru.\\*.Invitați-i pe elevi să partajeze răspunsurile. Dacă este necesar, clarificați sensul cuvântului **înnăscut** ca fiind _ceva cu care te naști_, faptul că partajarea este ceva ce oamenii fac în mod natural și că există multe beneficii ale partajării.**Spuneți**: _Există informații despre voi pe care le puteți partaja cu alte persoane de pe urma cărora ați avea unul dintre aceste beneficii? Lucrați cu un coleg și partajați pe rând._Invitați elevii să partajeze răspunsurile. În continuare, rugați-i să explice ce beneficii ar avea (se simt bine, învață, relaționează cu alte persoane, îi conving pe alții). În cazul în care elevul nu este sigur, puneți întrebarea și celorlalți elevi din clasă. Exemplele pot avea legătură cu mai multe beneficii."
+          "description": "**Spuneți**: În lecția de astăzi vom vorbi despre mediul online și despre modalitățile prin care puteți partaja lucruri despre voi care sunt amuzante și care vă conectează cu ceilalți. Vom vorbi și despre modalitățile prin care vă puteți proteja, pentru a u partaja mai multe informații decât ar trebui.***Proiect** „Știați că?” - [Diapozitivul 5](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_93).**Întrebați**: \\_Ce observați în acest diapozitiv? Care este ideea principală? Faceți schimb de idei cu partenerul vostru.*.Invitați-i pe elevi să partajeze răspunsurile. Dacă este necesar, clarificați sensul cuvântului **înnăscut** ca fiind _ceva cu care te naști_, faptul că partajarea este ceva ce oamenii fac în mod natural și că există multe beneficii ale partajării.**Spuneți**: _Există informații despre voi pe care le puteți partaja cu alte persoane de pe urma cărora ați avea unul dintre aceste beneficii? Lucrați cu un coleg și partajați pe rând._Invitați elevii să partajeze răspunsurile. În continuare, rugați-i să explice ce beneficii ar avea (se simt bine, învață, relaționează cu alte persoane, îi conving pe alții). În cazul în care elevul nu este sigur, puneți întrebarea și celorlalți elevi din clasă. Exemplele pot avea legătură cu mai multe beneficii."
         },
         "5fdf93a4-2be8-4e07-9b54-85fd0daa04ce": {
           "description": "**Spuneți**: _Există o mulțime de motive pentru a partaja informații despre voi. Cu toate acestea, nu toate informațiile despre voi pot fi partajate. Vom urmări un scurt videoclip despre partajarea online. În timp ce-l urmărim, gândiți-vă ce informații pot fi sau nu partajate._**Proiectați** [diapozitivul 6](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3ed1f0b992_10_0) și redați clipul video **Informații private și personale**. După urmărirea clipului video, invitați elevii să răspundă la întrebare și cereți-le să dea exemple de informații private și personale. Precizați că partajarea **informațiilor private** este cea mai riscantă, deoarece acestea pot fi folosite pentru a vă identifica. ([Diapozitivul 7](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_376))**Spuneți**: _Acum vom juca un alt joc. Pentru fiecare exemplu pe care îl voi da, discutați cu partenerul vostru și decideți dacă este privată sau personală. Pentru a decide, întrebați-vă: „Este aceasta o informație care este adevărată și pentru multe alte persoane?”. Dacă da, aceasta este personală. Dacă nu, este privată._ ([Diapozitivul 8](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_501))Citiți cu voce tare primul exemplu - „Vârstă”. Reamintiți-le elevilor să se gândească dacă aceasta este o informație care este adevărată pentru multe alte persoane. Dacă da, atunci informația este personală. Dacă nu, informația este privată. Acordați-le elevilor un minut pentru a discuta și a decide.**Spuneți**: _Dacă sunteți de părere că acestea sunt informații private, ridicați-vă în picioare. Dacă sunteți de părere că sunt informații personale, stați jos._După ce elevii se ridică în picioare sau rămân așezați, invitați-i să explice de ce au ales răspunsul pe care l-au ales. Continuați, invitându-i să consulte definițiile pentru „privat” și „personal”. Dacă este necesar, ajutați-i să clarifice faptul că există multe persoane (în școala lor, în orașul lor, chiar și în clasă) de aceeași vârstă cu ei.**Spuneți**: _Toți cei care au rămas așezați, aveți dreptate! Aceste informații sunt personale, nu private._Repetați jocul de mai sus pentru fiecare dintre exemplele următoare:-   adresa de domiciliu (**informație privată**)-   adresa de e-mail (**informație privată**)-   data nașterii (**informație privată**)-   muzica preferată (**informație personală**)-   numărul de frați/surori (**informație personală**)-   numere de telefon (**informație privată**)-   datele cardului de credit (**informație privată**)-   mâncarea preferată (**informație personală**)-   numele animalului de companie (**informație personală**)-   numele școlii (**informație privată**) (Explicați faptul că, deși numele școlii este o informație care este adevărată pentru un număr mare de persoane, este riscant să o partajați cu o persoană pe care nu o  cunoașteți și că trebuie să cereți mai întâi permisiunea unui adult în care aveți încredere.)"
@@ -5577,7 +5843,7 @@
           ]
         },
         "a0c0c4ee-7e5a-4f4f-a085-49ea2a791169": {
-          "description": "#### Partajare etică**Activitate:** Cereți-le elevilor să se ridice în picioare. Începeți să citiți lista de modalități de creare de conținut de mai jos. Spuneți-le elevilor să se așeze imediat ce pot răspunde „Da” la una dintre întrebări.-   _Ați făcut vreodată o filmare video (cu o cameră foto, telefon, iPad sau calculator) și l-ați trimis unui membru al familiei sau l-ați postat online?_-   _Ați făcut o fotografie și ați trimis-o unui membru al familiei sau ați postat-o pe internet?_-   _Ați conceput o creație artistică pe care ați partajat-o cu familia și prietenii?_-   _Ai compus un cântecel pentru a vă face prietenii să râdă? Sau un cântecel trist pentru a-i face să plângă?_-   _Ați scris o poezie pentru mama sau tata, de ziua lor?_Continuați să puneți întrebări similare până când toată clasa stă jos.**Discutați:**-   _Cum v-ați simțit când ați produs ceva creativ?_-   _Cum v-ați simțit când ați partajat creația cu alte persoane?_-   _Cum vă simțiți atunci când vedeți sau ascultați creațiile altora?_Încurajați toate răspunsurile.Ajutați-i pe elevi să simtă bucuria de a crea ceva. Această activitate poate fi dificilă, dar aduce extrem de multă bucurie și satisfacție. Este amuzant să partajăm ceea ce creăm, iar aceasta ne poate încuraja să dăm dovadă de și mai multă creativitate și să creăm opere de artă în continuare. Pe măsură ce creștem, avem din ce în ce mai multe oportunități de a partaja creațiile și de a explora mediile și arta pe care au creat-o alți oameni. Trebuie să ne asigurăm că dăm dovadă întotdeauna de corectitudine atunci când folosim arta și creațiile altora.**Spuneți:** Amintiți-vă că drepturile de autor protejează toate tipurile de creații, astfel încât artiștii/creatorii să poată fi plătiți pentru efortul depus. Aici sunt include lucrările literare originale (povestiri), operele de artă, fotografiile, materialele audio, imaginile, muzica, versurile cântecelor, chiar și mâzgălelile desenate pe șervețel la prânz. Nu contează dacă au fost create de un artist celebru sau de voi. Atunci când creați o lucrare originală, voi decideți cine poate:*-   \\_să realizeze copii ale acesteia*-   _să distribuie copiiale acesteia_-   _să expună sau să intepreteze lucrarea în public_-   _să creeze lucrări derivate (de exemplu, ecranizarea unei cărți)_Aceste drepturi sunt acordate artiștilor și creatorilor pentru a-i încuraja să creeze și alte opere.**\\*Reflectați:** Invitați-i pe elevi să se gândească la momentul în care s-au așezat pentru prima dată atunci când le-ați pus întrebări despre creațiile artistice. Informați-i că au creat o lucrare originală care este protejată din punct de vedere legal. Felicitări!\\*\\*Lucrați în perechi: \\*\\*-   \\_Cum puteți ști dacă o creație este protejată de drepturi de autor?_-   \\\\_Cercul © înseamnă copyright și indică existența drepturilor de autor, dar protecția drepturilor de autor există chiar și fără acest simbol. Creatorii sunt proprietarii operelor lor, cu excepția cazului în care o vând altcuiva.-   \\_Unde ai văzut simbolul copyright-ului?_-   \\\\_În cărți, în filme, pe imagini, postere etc.**Partajați:** Încurajați-i pe elevi să partajeze răspunsurile lor cu restul clasei.**Demonstrați:** Arătați-le elevilor cum să deseneze un simbol al drepturilor de autor și să scrie anul lângă el. Atunci când creați ceva, creația voastră este automat protejată de drepturile de autor, chiar și fără simbolul de copyright.**Discutați:**-   \\_Cum vă simțiți când partajați lucrurile cu altcineva?\\*-   _Cum vă simțiți când cineva vă ia lucrurile și le partajează cu alții fără permisiunea voastră?_Aceleași principii de respect și corectitudine se aplică atunci când partajăm online munca noastră sau a altcuiva.\\_"
+          "description": "#### Partajare etică**Activitate:** Cereți-le elevilor să se ridice în picioare. Începeți să citiți lista de modalități de creare de conținut de mai jos. Spuneți-le elevilor să se așeze imediat ce pot răspunde „Da” la una dintre întrebări.-   _Ați făcut vreodată o filmare video (cu o cameră foto, telefon, iPad sau calculator) și l-ați trimis unui membru al familiei sau l-ați postat online?_-   _Ați făcut o fotografie și ați trimis-o unui membru al familiei sau ați postat-o pe internet?_-   _Ați conceput o creație artistică pe care ați partajat-o cu familia și prietenii?_-   _Ai compus un cântecel pentru a vă face prietenii să râdă? Sau un cântecel trist pentru a-i face să plângă?_-   _Ați scris o poezie pentru mama sau tata, de ziua lor?_Continuați să puneți întrebări similare până când toată clasa stă jos.**Discutați:**-   _Cum v-ați simțit când ați produs ceva creativ?_-   _Cum v-ați simțit când ați partajat creația cu alte persoane?_-   _Cum vă simțiți atunci când vedeți sau ascultați creațiile altora?_Încurajați toate răspunsurile.Ajutați-i pe elevi să simtă bucuria de a crea ceva. Această activitate poate fi dificilă, dar aduce extrem de multă bucurie și satisfacție. Este amuzant să partajăm ceea ce creăm, iar aceasta ne poate încuraja să dăm dovadă de și mai multă creativitate și să creăm opere de artă în continuare. Pe măsură ce creștem, avem din ce în ce mai multe oportunități de a partaja creațiile și de a explora mediile și arta pe care au creat-o alți oameni. Trebuie să ne asigurăm că dăm dovadă întotdeauna de corectitudine atunci când folosim arta și creațiile altora.**Spuneți:** Amintiți-vă că drepturile de autor protejează toate tipurile de creații, astfel încât artiștii/creatorii să poată fi plătiți pentru efortul depus. Aici sunt include lucrările literare originale (povestiri), operele de artă, fotografiile, materialele audio, imaginile, muzica, versurile cântecelor, chiar și mâzgălelile desenate pe șervețel la prânz. Nu contează dacă au fost create de un artist celebru sau de voi. Atunci când creați o lucrare originală, voi decideți cine poate:*-   \\_să realizeze copii ale acesteia*-   _să distribuie copiiale acesteia_-   _să expună sau să intepreteze lucrarea în public_-   _să creeze lucrări derivate (de exemplu, ecranizarea unei cărți)_Aceste drepturi sunt acordate artiștilor și creatorilor pentru a-i încuraja să creeze și alte opere.***Reflectați:** Invitați-i pe elevi să se gândească la momentul în care s-au așezat pentru prima dată atunci când le-ați pus întrebări despre creațiile artistice. Informați-i că au creat o lucrare originală care este protejată din punct de vedere legal. Felicitări!\\*\\*Lucrați în perechi: \\*\\*-   \\_Cum puteți ști dacă o creație este protejată de drepturi de autor?*-   *Cercul © înseamnă copyright și indică existența drepturilor de autor, dar protecția drepturilor de autor există chiar și fără acest simbol. Creatorii sunt proprietarii operelor lor, cu excepția cazului în care o vând altcuiva.-   \\_Unde ai văzut simbolul copyright-ului?*-   *În cărți, în filme, pe imagini, postere etc.**Partajați:** Încurajați-i pe elevi să partajeze răspunsurile lor cu restul clasei.**Demonstrați:** Arătați-le elevilor cum să deseneze un simbol al drepturilor de autor și să scrie anul lângă el. Atunci când creați ceva, creația voastră este automat protejată de drepturile de autor, chiar și fără simbolul de copyright.**Discutați:**-   \\_Cum vă simțiți când partajați lucrurile cu altcineva?*-   _Cum vă simțiți când cineva vă ia lucrurile și le partajează cu alții fără permisiunea voastră?_Aceleași principii de respect și corectitudine se aplică atunci când partajăm online munca noastră sau a altcuiva.\\_"
         },
         "2bab17fa-7a64-4ae1-a9c3-30d942674dd1": {
           "description": "#### Să partajăm sau să nu partajăm?**Demonstrați:** Arătați creația instructorului: imagine, cântec, poveste, video, rețetă.**Urmăriți:** Invitați-i pe elevi să urmărească clipul video **\\*Principiile etice ale partajării digitale** (1 minut).*Este posibil să fie nevoie să-l redați de 2-3 ori.**Obiectivul discuției:**### Nu e OK să partajezi-   \\_Ați transferat vreodată melodii pe playerul MP3 al unui prieten? Este această acțiune OK?*-   *Dacă este un cântec pe care îl auziți la radio, acesta este cel mai probabil protejat de drepturi de autor și NU este OK să îl partajați, să îl copiați și să îl oferiți altcuiva.-   \\_Ce se întâmplă dacă un prieten vă invită la el acasă pentru a urmări un film care tocmai a apărut pe DVD? Acesta este unul dintre filmele voastre preferate. Vreți să-l aveți pe telefon, ca să-l puteți urmări oricând. Așa că scoateți telefonul și înregistrați filmul. Este acesta un mod corect de a obține o copie a filmului?-   \\_Nu. Nu este OK să distribuim/copiem. De ce? Pentru că nu avem dreptul de a face o copie și de a o oferi altcuiva.-   \\_Cum altfel putem obține o copie autorizată (legală) a filmului pe telefon?-   \\_iTunes sau Amazon vând filme în mod legal.### E OK să partajezi-   \\_Eu am creat asta. Asta înseamnă că este creația și proprietatea mea. Cred că o voi partaja. Voi folosi telefonul (iPad-ul, aparatul foto etc.) pentru a face o fotografie. Cred că o voi distribui pe blogul meu, unde aș putea face bani din publicitate, pe [site-ul ales de voi]. Este OK?-   \\_Da, este OK să partajați creația, pentru că vă aparține, ați făcut-o, deci dețineți drepturile de autor.-   \\_Dar un cântec compus de mine? Pot să-l distribui? . . . Cine decide?*-   _„Corect, așa este, eu sunt cel care decide.”_-   *Ce se va întâmpla când îl voi partaja?-   \\_Înregistrați răspunsurile: „Este amuzant, . . . . Voi primi multe aprecieri” ... ... „Alte persoane vor dori să îl folosească pentru mashup-uri.”-   \\_Să zicem că ai făcut un desen pe care vrei să-l vinzi la o expoziție de artă organizată la școală. Banii obținuți în urma vânzării vor fi folosiți pentru a cumpăra cărți noi pentru bibliotecă. Este aceasta o acțiune pozitivă de partajare... este etică?-   \\_Da.*-   _De ce este o acțiune OK?_-   \\_Înregistrați răspunsurile: „Este creația ta!”, „Tu ai făcut-o. Îți aparține. Poți alege să o partajezi.”"
@@ -5612,6 +5878,12 @@
           "name": "Cum să desenăm cu ajutorul buclelor",
           "description": "Unii elevi pot descoperi unde trebuie să adauge bucle `repeat` scriind programul fără bucle, apoi încercuind secțiunile cu repetiții. Dacă acest lucru este benefic pentru elevii dvs., cereți-le să aibă hârtie și creioane lângă calculator. De asemenea, este posibil să fie utilă pentru elevi desenarea unor forme și figuri pe hârtie înainte de a le programa online"
         },
+        "f6df66e2-bc97-403d-a4e1-c015294d94ac": {
+          "progression_name": "Provocare"
+        },
+        "9a64a3f8-16de-4001-82e3-01d9184a0650": {
+          "progression_name": "Provocare"
+        },
         "1cbfaa5e-bd5f-4861-9152-5fd3e6a37d47": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -5632,6 +5904,9 @@
           "tips": [
             "La sfârșitul acestei etape, elevii vor avea ocazia de a partaja propriile creații. Aceste lucrări pot fi partajate virtual sau imprimate. Vă recomandăm să imprimați lucrările elevilor și să le expuneți, pentru a fi văzute de persoanele dragi."
           ]
+        },
+        "70a7d0e6-caa1-439a-a18c-41e5af3daf6f": {
+          "progression_name": "Provocare"
         },
         "a2a794ce-1af9-4258-84ad-352ee9f9f187": {
           "progression_name": "Joc la liber"
@@ -5762,6 +6037,9 @@
           "name": "Funcții cu Artist",
           "description": "#### Puzzle-uri onlinePoate fi util pentru elevi să scrie cod fără funcții și apoi să creeze funcții plecând de la codul repetat. Dacă elevilor nu le place să facă acest lucru în spațiul de lucru Code.org, vă recomandăm să le puneți la dispoziție hârtie și creioane pentru ca elevii să scrie (sau să deseneze) ideile."
         },
+        "2be1256a-b8a6-4ec6-a54d-c1db662af71e": {
+          "progression_name": "Provocare"
+        },
         "761169d4-a60f-4c9d-b011-2e79adcf8b31": {
           "progression_name": "Suplimente de lecţie"
         },
@@ -5800,6 +6078,9 @@
             "Este posibil ca modelele din aceste puzzle-uri să nu fie evidente pentru toți elevii. Vă recomandăm să parcurgeți aceste niveluri în prealabil pentru a înțelege cât mai bine zonele care ar putea fi problematice pentru elevi. De asemenea, vă sugerăm urmărirea și utilizarea tehnicilor din clipul video **\\*Pauză de gândire Online**, acestea pot fi utile pentru elevi."
           ]
         },
+        "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17": {
+          "progression_name": "Provocare"
+        },
         "63757527-5067-4217-9d3b-134aac5a39ab": {
           "name": "Reflecţie",
           "description": "**Subiecte:**-   Ce este o relație de condiționalitate? De ce ați programa o relație de condiționalitate?-   Gândiți-vă la un exemplu de utilizare a relației de condiționalitate în timpul zilei? (de exemplu:  _If_ (dacă) mi-e foame, mănânc ceva; _While_ (Atât timp cât) traversez strada, sunt atent la mașini)."
@@ -5814,6 +6095,9 @@
         "24e49944-567b-4a1a-8f14-8e60585cb81f": {
           "name": "Puzzle-uri online",
           "description": "Unele puzzle-uri vor include o funcție pre-declarată, pe care elevii trebuie să o completeze. Elevii pot scrie mai întâi întregul program fără o funcție, apoi pot stabili unde ar fi utilă o funcție în cadrul programului.Este important să vă asigurați că fiecare elev rezolvă fiecare puzzle marcat cu un punct verde închis. În cazul în care unii dintre elevi întâmpină dificultăți atunci când încearcă să simplifice codul și să utilizeze funcții, organizați echipe de elevi experți care să meargă de la un elev la altul și să răspundă la întrebări.Nu uitați să puneți la dispoziție creioane și hârtie pentru a-i ajuta pe elevi să schițeze pe hârtie soluții posibile."
+        },
+        "7bbfd5d9-bdc8-4db4-9d73-c2885278eff5": {
+          "progression_name": "Provocare"
         },
         "23dd0ba7-6d05-4611-bfa7-3b8eca5102b1": {
           "name": "Reflecţie",
@@ -6144,6 +6428,9 @@
           "tips": [
             null
           ]
+        },
+        "61bfa751-8587-4118-84e1-b3870975fad4": {
+          "progression_name": "Provocare"
         },
         "b39acb79-1fad-4acd-b3e4-789f32636f46": {
           "tips": [
@@ -8719,7 +9006,8 @@
         "579df0b6-aebc-48d8-9ac3-427a2c04e61f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Provocare"
         },
         "b883c2e6-ca65-4053-b848-046bdfbb2a38": {
           "name": "Reflecţie"
@@ -8782,6 +9070,9 @@
           "tips": [
             null
           ]
+        },
+        "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c": {
+          "name": "Trimiteţi o recenzie"
         },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
           "tips": [
@@ -9160,11 +9451,26 @@
         "cef1dcf2-8240-4b77-b667-040c16bc6526": {
           "progression_name": "Programare în perechi"
         },
+        "26c63e40-009a-4255-bb94-f38466a11e15": {
+          "progression_name": "Provocare"
+        },
         "259004b6-d013-48a6-8adb-4da6e8a13e6d": {
           "progression_name": "Culegătorul"
         },
+        "27ded5c7-5ee2-4201-8278-9f66603558a1": {
+          "progression_name": "Provocare"
+        },
+        "78559eec-193a-43db-89bd-bd50ee1dd4c7": {
+          "progression_name": "Provocare"
+        },
         "d40ac398-4f8b-4652-8ec0-503d206ccd17": {
           "progression_name": "Utilizarea blocului ”repetă” (repeat)"
+        },
+        "46706589-fffc-42b0-9f99-580224a061e2": {
+          "progression_name": "Provocare"
+        },
+        "aff2e264-4572-45c0-a518-91d3a41145e3": {
+          "progression_name": "Provocare"
         },
         "eed9001e-67f2-44d8-8704-1f8fd9cf4897": {
           "progression_name": "Joc la liber"
@@ -9174,6 +9480,12 @@
         },
         "6099eea1-c9b0-4572-889e-1bdcc45f9835": {
           "progression_name": "Joc la liber"
+        },
+        "be735a9d-be60-4dd7-ae2d-969cd5d768fb": {
+          "progression_name": "Provocare"
+        },
+        "8f76a97c-6f79-459e-b3ce-4c78f4354c6e": {
+          "progression_name": "Provocare"
         },
         "c0ced3bc-751b-4626-90df-e7037256bf81": {
           "name": "Joc la liber",
@@ -9201,21 +9513,63 @@
         "e2a14e5d-ab2d-41ae-ab3f-133d89bc51f1": {
           "progression_name": "Utilizarea blocului ”repetă” (repeat)"
         },
+        "7f80f442-f41e-48a6-ba87-b2e0f50419ae": {
+          "progression_name": "Provocare"
+        },
+        "5123721b-64b2-41fd-b004-5c971dd870da": {
+          "progression_name": "Provocare"
+        },
+        "91d7659d-e976-4340-afe4-9ed9fe55e127": {
+          "progression_name": "Provocare"
+        },
+        "86d8c418-70b9-47fb-be38-1e1bfd42aafa": {
+          "progression_name": "Provocare"
+        },
+        "c20aa2e0-c032-4ccb-9b00-900781538703": {
+          "progression_name": "Provocare"
+        },
+        "9b8d3fd1-8308-4d91-91ce-150d9ffc82b4": {
+          "progression_name": "Provocare"
+        },
         "68c477cb-6e9a-41d1-9f7e-2b3b84a95f52": {
           "progression_name": "Culegătorul"
         },
+        "906a9824-0a68-4149-bfab-c59f5f759cec": {
+          "progression_name": "Provocare"
+        },
         "d82614b6-8420-4d3f-83c7-b7fb9d353453": {
           "progression_name": "Joc la liber"
+        },
+        "4f8e01e3-039b-4253-992b-d0d3e8343559": {
+          "progression_name": "Provocare"
+        },
+        "c33df6ec-bd36-44de-9f41-dad3fb245d43": {
+          "progression_name": "Provocare"
+        },
+        "37feb4fc-9e9d-411b-b911-229c85aaa55a": {
+          "progression_name": "Provocare"
         },
         "69f7dde3-e970-464a-8255-fa5a68ff1d77": {
           "name": "Suplimente de lecţie",
           "progression_name": "Suplimente de lecţie"
         },
+        "c523e5e0-fe37-4dd6-a9e6-35cfc26415d3": {
+          "progression_name": "Provocare"
+        },
         "61e56a64-227e-422a-9c65-62c927caed06": {
           "progression_name": "Programare cu Rey și BB-8"
         },
+        "63724599-1670-4897-9314-ea0a2e237540": {
+          "progression_name": "Provocare"
+        },
         "e12c3ee1-8c2e-4727-8133-d6dbf630f64d": {
           "progression_name": "Culegătorul"
+        },
+        "4b80ee70-8904-4d2a-8383-b37230de7971": {
+          "progression_name": "Provocare"
+        },
+        "9a523c20-cd9a-4c87-a0d3-94049b24f97f": {
+          "progression_name": "Provocare"
         },
         "8131dce7-4fb6-4612-aef7-24ffa0c07804": {
           "name": "Joc la liber",
@@ -9228,11 +9582,23 @@
         "08f9c234-1d3f-4d54-a1bf-878c064dd68d": {
           "progression_name": "Joc la liber"
         },
+        "64524570-9c1b-4db9-932b-c23bfbf9bddd": {
+          "progression_name": "Provocare"
+        },
+        "b5e93dd6-0f17-4fe0-9628-dd5521588550": {
+          "progression_name": "Provocare"
+        },
+        "66d2de03-1370-4d34-a429-53cd7d0c2d81": {
+          "progression_name": "Provocare"
+        },
+        "34f0eff5-b0dd-4bfc-9629-0b4d87f178b9": {
+          "progression_name": "Provocare"
+        },
         "ec15e557-0de8-49af-ab15-783c0c14e8b3": {
           "progression_name": "Prezentând Laboratorul de Desen"
         },
         "31d7ef1b-967a-40cc-a027-7b4e0e09dc4e": {
-          "progression_name": "Cum să Faci un Desen"
+          "progression_name": "Cum se creează un Sprite"
         },
         "4280e340-3549-4814-9afe-d6c9fe291025": {
           "progression_name": "Joc la liber"
@@ -9243,8 +9609,14 @@
         "84c7f95c-006b-46bc-ba15-67e59c540a18": {
           "progression_name": "Joc la liber"
         },
+        "e1faa5c5-ee21-4108-87ff-c5fd38664034": {
+          "progression_name": "Provocare"
+        },
         "b8c86684-ebd8-441f-ba6e-669457575120": {
           "progression_name": "Video"
+        },
+        "0ddbc582-20ae-4047-8764-565895eed729": {
+          "progression_name": "Provocare"
         },
         "08cf29e4-2239-4519-b813-5d66842379ae": {
           "progression_name": "Joc la liber"
@@ -9256,14 +9628,35 @@
         "f62b5dfa-a6d0-4152-9486-204c989f79d6": {
           "progression_name": "Culegătorul"
         },
+        "a24eea9c-ab22-4155-a800-7bc6eaffebb9": {
+          "progression_name": "Provocare"
+        },
+        "2b6efab0-59d9-4da3-ac2d-06f2f76dd473": {
+          "progression_name": "Provocare"
+        },
         "600a7d5e-a862-4d84-bd9f-0ec3ec9f8223": {
           "progression_name": "Programare în perechi"
+        },
+        "250712fa-af9b-47dd-820d-946f29752fac": {
+          "progression_name": "Provocare"
         },
         "598993a6-e64b-48e3-8002-c617aae9cdab": {
           "progression_name": "Programare cu Rey și BB-8"
         },
+        "bac8e1cc-75c9-4903-be20-67ef3f908699": {
+          "progression_name": "Provocare"
+        },
+        "5971ebbb-7513-4e17-941f-a9b19e7866d3": {
+          "progression_name": "Provocare"
+        },
         "d3456f8d-c77d-4ac0-bc57-d6b0f7adee00": {
           "progression_name": "Utilizarea blocului ”repetă” (repeat)"
+        },
+        "3958ad66-9ec0-4261-8daf-a7914f33756f": {
+          "progression_name": "Provocare"
+        },
+        "a221d837-f004-414a-83e6-daf171d2b173": {
+          "progression_name": "Provocare"
         },
         "9f9f6cf1-1591-4de2-9a70-4e190059f0fe": {
           "progression_name": "Joc la liber"
@@ -9279,7 +9672,7 @@
           "progression_name": "Prezentând Laboratorul de Desen"
         },
         "51a140d6-441e-487b-9e1f-313e842b78c3": {
-          "progression_name": "Cum să Faci un Desen"
+          "progression_name": "Cum se creează un Sprite"
         },
         "0d749e3d-cf8b-4e7e-bb6e-104a1812a49f": {
           "progression_name": "Joc la liber"
@@ -9287,11 +9680,26 @@
         "54fa7040-6612-4012-b595-1f4745f1479d": {
           "progression_name": "Video"
         },
+        "fca63890-3cc5-4821-b6d4-69e65dc80b05": {
+          "progression_name": "Provocare"
+        },
+        "5b6e8418-e430-4ed1-ada4-20de1eaa51da": {
+          "progression_name": "Provocare"
+        },
+        "380a484d-948a-4421-bfe6-5bb303c54971": {
+          "progression_name": "Provocare"
+        },
         "fd7fee3b-f3b5-4866-a223-18e2c76385eb": {
           "progression_name": "Artist: Variabile"
         },
+        "2a9b62a9-5da7-4fb4-8bf5-97f1f0d21dae": {
+          "progression_name": "Provocare"
+        },
         "d3262ee6-45e9-4506-a341-94177402f767": {
           "progression_name": "Joc la liber"
+        },
+        "f12b431c-0b07-4843-9986-d0947ba8ce6b": {
+          "progression_name": "Provocare"
         },
         "d0c8bc0d-00a5-4a23-98f1-36d9b6dd43b9": {
           "progression_name": "Joc la liber"

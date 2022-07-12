@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-11 02:00:09 UTC",
+    "serialized_at": "2022-05-12 21:22:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -343,6 +343,17 @@
       }
     },
     {
+      "key": "19d6cc88-4fb8-435d-978c-bcff277440c3",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap up"
+      },
+      "seeding_key": {
+        "activity_section.key": "19d6cc88-4fb8-435d-978c-bcff277440c3",
+        "lesson_activity.key": "40cb45be-646c-42ba-93ec-1d40ada947e2"
+      }
+    },
+    {
       "key": "4312517c-5982-4e4a-9743-65f019aa76d3",
       "position": 1,
       "properties": {
@@ -548,6 +559,28 @@
       "level_keys": [
         "VPL-CSD-PILOT-S22-task-PrepareForDay1"
       ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod1-async1-WrapUp"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "19d6cc88-4fb8-435d-978c-bcff277440c3"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-SP-VPL-21-mod1-async1-WrapUp"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -633,6 +666,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "vpl-csd5-summer-pilot-2022",
         "activity_section.key": "465869aa-2987-4443-b436-633b23f4514e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-SP-VPL-21-mod1-async1-WrapUp",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod1-async1-WrapUp"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "19d6cc88-4fb8-435d-978c-bcff277440c3"
       }
     }
   ],

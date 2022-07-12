@@ -129,10 +129,10 @@ def main
     # Upload build log to S3
     log_link = upload_log_and_get_link(
       start_time.strftime('%Y%m%dT%H%M%S%z'),
-      <<-LOG,
-#{log}
-#{status}
-#{projects} #{status == 0 ? 'built' : 'failed'} in #{formatted_duration}
+      <<~LOG,
+        #{log}
+        #{status}
+        #{projects} #{status == 0 ? 'built' : 'failed'} in #{formatted_duration}
       LOG
       {
         commit: commit_hash,

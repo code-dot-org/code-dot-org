@@ -88,21 +88,21 @@ end
 file "#{data_dir}/update_servers.sh" do
   owner 'proxysql'
   mode '0700'
-  content <<BASH
-#!/bin/bash -e
+  content <<~BASH
+    #!/bin/bash -e
 
-DIFF=$(#{mysql_admin} -rN <#{data_dir}/diff.sql)
-if [ "$DIFF" -ne 0 ]; then
-  #{mysql_admin} -e 'SAVE MYSQL SERVERS FROM RUNTIME'
-fi
+    DIFF=$(#{mysql_admin} -rN <#{data_dir}/diff.sql)
+    if [ "$DIFF" -ne 0 ]; then
+      #{mysql_admin} -e 'SAVE MYSQL SERVERS FROM RUNTIME'
+    fi
 
-#{mysql_admin} -rN < #{data_dir}/update_servers.sql
+    #{mysql_admin} -rN < #{data_dir}/update_servers.sql
 
-DIFF=$(#{mysql_admin} -rN <#{data_dir}/diff.sql)
-if [ "$DIFF" -ne 0 ]; then
-  #{mysql_admin} -e 'LOAD MYSQL SERVERS TO RUNTIME'
-fi
-BASH
+    DIFF=$(#{mysql_admin} -rN <#{data_dir}/diff.sql)
+    if [ "$DIFF" -ne 0 ]; then
+      #{mysql_admin} -e 'LOAD MYSQL SERVERS TO RUNTIME'
+    fi
+  BASH
 end
 
 # Configure ProxySQL scheduler to run update_servers every second.

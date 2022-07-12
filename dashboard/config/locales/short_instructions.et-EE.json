@@ -17,7 +17,7 @@
         "2-3 Bee Loops 2A": "Seekord kasuta kogu nektari kokku kogumiseks tsüklit.",
         "2-3 Bee Loops 3A": "Kasuta 'korda' tsüklit, et kogu nektar kokku koguda.",
         "2-3 Maze 10": "Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)",
-        "2-3 Maze 2": "See siga ajab mul suled turri. Aita mul ta kätte saada!",
+        "2-3 Maze 2": "Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)",
         "2-3 Maze 4": "Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)",
         "2-3 Maze 6": "Ole rahulik ja aita mul paha siga üles leida. Muidu ma saan vihaseks!",
         "2-3 Maze 7": "Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)",
@@ -526,7 +526,12 @@
         "courseD_maze_nestedLoops6_2021": "Teeme asja keerulisemaks!\\\r Kasuta võimalikult vähe tsükleid, et mind päevalilleni viia.",
         "courseE_artist_functions1_dani": "Aita zombile joonistada prilid, kasutades 100 piksli pikkuste külgedega ruute.\\\r\nKaar klaaside vahel on 75 piksli pikkune.",
         "iceage_move_events_dani": "Kirjutage kood, mille abil saab Scrat kõik tammetõrud kätte!",
-        "CSD U5 black white images pixelation 5_2021": "Joonista nüüd ükskõik mida soovid"
+        "CSD U5 black white images pixelation 5_2021": "Joonista nüüd ükskõik mida soovid",
+        "2-3 Maze 1": "Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)",
+        "2-3 Maze 3": "Ole rahulik ja aita mul paha siga üles leida. Muidu ma saan vihaseks!",
+        "MC Agent Freeplay": "\\*\\* Vabamäng: \\*\\* Aeg uurida ise edasi!",
+        "Overworld Chop Tree - allthethings": "Puit on väga oluline materjal. Paljud asjad on sellest tehtud. Kõnni puu juurde ja kasuta „purusta plokki“, et see maha raiuda.",
+        "allthethings-anigif-instructions": "Liiguta mind ida suunas, et jõuaksin põrsani!"
       }
     }
   }

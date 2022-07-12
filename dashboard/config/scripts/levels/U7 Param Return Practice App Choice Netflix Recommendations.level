@@ -87,9 +87,7 @@
     "bubble_choice_description": "Rewrite a function so that it uses parameters and reduces the number of global variables necessary.",
     "thumbnail_url": "https://images.code.org/ce14142a95d86c27a38c7b411af32c20-image-1649450062452.png",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "ai/O42LBNbqUq1kHCrIlAoygnVUzUz8Ema6Ev+RfrCzFlMpEsbRejhjz6hj2\nbUu52bKo2pWMnzCA/j8vP4OPzg==\n"
   },
   "game_id": 41,
   "published": true,
@@ -97,7 +95,7 @@
   "level_num": "custom",
   "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T20:31:04.683+00:00\",\"changed\":[\"cloned from \\\"U7 Param Return Practice App Choice Sign Language\\\"\"],\"cloned_from\":\"U7 Param Return Practice App Choice Sign Language\"},{\"changed_at\":\"2022-04-08 20:35:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"data_library_tables\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 21:49:19 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 22:02:21 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 22:07:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 22:13:43 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 22:16:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T20:31:04.683+00:00\",\"changed\":[\"cloned from \\\"U7 Param Return Practice App Choice Sign Language\\\"\"],\"cloned_from\":\"U7 Param Return Practice App Choice Sign Language\"},{\"changed_at\":\"2022-04-08 20:35:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"data_library_tables\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 21:49:19 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 22:02:21 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 22:07:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 22:13:43 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 22:16:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-05-20 21:33:28 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

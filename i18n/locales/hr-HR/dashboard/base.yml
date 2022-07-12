@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 hr:
   errors:
     messages:
@@ -669,6 +675,7 @@ hr:
         music: 'Glazba'
         art: 'Umjetnost'
         other: "Ostalo:"
+        na: 'Nije primjenjivo'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -677,7 +684,8 @@ hr:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Ostalo:"
+        other: "Ostalo"
+        na: 'Nije primjenjivo'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -687,7 +695,8 @@ hr:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Ostalo:"
+        other: "Ostalo"
+        na: 'Nije primjenjivo'
       workshop_course:
         csf_af: 'Osnove RZ (Tečajevi A-F)'
         csf_express: 'Osnove RZ (Pred-Brzi ili Brzi)'

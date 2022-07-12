@@ -168,6 +168,9 @@
           "preparation": "-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Dancy Party](https://hourofcode.com/us/how-to)\n\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun.\n\n-   Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl nəyisə həll etməyiniz lazım olub-olmadığına qərar verin.",
           "purpose": "Bu dərs kodlaşdırma və hadisə proqramlaşdırmasının (bloklardan istifadə etməklə) əsas CS konsepsiyalarını təqdim edir."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kod Saatı 2013"
+        },
         "dance-2019/Dance Party": {
           "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Kod Saatı Tərbiyəçisi Bələdçisi](http://hourofcode.com/resources/how-to/) və [Müvəffəqiyyətli Tərbiyəçilərin Ən Yaxşı Təcrübələri](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   Sinif dəstəyi, endirimli posterlər əldə etmək və ya robototexnika hədiyyəsində iştirak etmək istəyirsinizsə, [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com) (yalnız ABŞ).\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Dance Party](https://studio.code.org/s/dance-2019)\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n-   Kod Saatı başlamazdan əvvəl bu dərsə rəhbərlik etmək istəyib-istəmədiyinizi müəyyən etmək üçün əlavə dərs planını, [\"The Big Dance Party\"] [4] nəzərdən keçirin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Fəaliyyəti tamamlayan hər bir tələbə sertifikat almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər kəs üçün [birini çap edin](http://code.org/certificates).\n-   (istəyə görə) Tələbələri fəaliyyət zamanı istifadə etmək üçün qulaqlıq gətirməyə həvəsləndirin.",
           "purpose": "Bu dərs kodlaşdırma və hadisə proqramlaşdırmasının (bloklardan istifadə etməklə) əsas CS konsepsiyalarını təqdim edir."
@@ -177,6 +180,123 @@
           "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Hour of Code Pedagogator Guide](http://hourofcode.com/resources/how-to/)-ı nəzərdən keçirin.\n-   [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com).\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın.\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Fəaliyyəti tamamlayan hər bir tələbə sertifikat almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər bir tələbə üçün bir [sertifikat](https://code.org/certificates?script=oceans) çap edin.təlimçi üçün göstərişlər",
           "purpose": "Bu dərs vəsaiti tələbələri **süni intellektin** bir növü olan **maşın öyrənməsi** ilə tez bir zamanda tanış etmək üçün nəzərdə tutulmuşdur. Tələbələr yeni məlumatları təsnif etmək üçün maşın öyrənmə modelini aktivləşdirmək üçün **təlim məlumatlarının** necə istifadə edildiyini araşdıracaqlar. Tələbələr dərs zamanı müsbət təcrübəyə malik olmalı və ən əsası kompüter elmlərini öyrənməyə davam etməlidirlər.",
           "student_overview": "İlk tələbələr okeandan zibil çıxarmaq üçün obyektləri \"balıq\" və ya \"balıq deyil\" kimi təsnif edirlər. Daha sonra tələbələr suya aid olan digər dəniz canlılarını da daxil etmək üçün təlim məlumat dəstini genişləndirməli olacaqlar. Fəaliyyətin ikinci hissəsində tələbələr təsadüfi yaradılan balıq şəkillərinə tətbiq etmək üçün öz etiketlərini seçəcəklər. Bu təlim datası sonra özü yeni şəkilləri etiketləyə bilən maşın öyrənmə modeli üçün istifadə olunur."
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Ardıcıllıq qurmaq"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "dövrlər"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Tədbirlər"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Şərti ifadələr"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funksiyalar"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "dəyişənlər"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "\"For\" dövrü"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Laboratoriyası"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Növbəti addımlar"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Rəqəmsal Dizayn"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Başlanğıc"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Kompüter Elmləri Əsasları."
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "İrəliyə Baxmaq"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Əsasları mənimsəmək: Ardıcıllıq"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Əsasları mənimsəmək: Döngələr"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Əsasları mənimsəmək: Şərtlər"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Əsaslara yiyələnmək: funksiyalar"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Əsasları mənimsəmək: Hadisələr"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Kompüter Elmlərinin Tədrisi üçün Ən Yaxşı Təcrübələr"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planlama"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Növbəti addımlar"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Baxış və Quraşdırma Təlimatları"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Mesajların yayımlanması"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routerlər və adreslər"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Paketlər və Etibarlılıq"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Avtomatik DNS düyünü"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Başlanğıc"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Kompüter Elmləri Əsasları."
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "İrəliyə Baxmaq"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Əsasları mənimsəmək: Ardıcıllıq"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Əsasları mənimsəmək: Döngələr"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Əsasları mənimsəmək: Şərtlər"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Əsaslara yiyələnmək: funksiyalar"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Əsasları mənimsəmək: Hadisələr"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Kompüter Elmlərinin Tədrisi üçün Ən Yaxşı Təcrübələr"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planlama"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Növbəti addımlar"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Tezlik Analizi"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Hərəkət et"
@@ -363,9 +483,6 @@
         },
         "pre-express-2018/Spelling Bee": {
           "name": "Yazı yoxlayan arı"
-        },
-        "csd3-2018/Programming for Entertainment": {
-          "name": "CS Discoveries Semestr Sonu Sorğusu"
         },
         "csd3-2018/Drawing in Game Lab": {
           "name": "Oyun laboratoriyasında rəsm"
@@ -673,6 +790,9 @@
         "csd3-2019/Project - Design a Game": {
           "name": "Layihə - Oyun dizayn edin"
         },
+        "csd6-2019/Designing Screens with Code": {
+          "name": "Kod ilə ekran dizaynı "
+        },
         "csd6-2019/Board Events": {
           "name": "İdarə Heyətinin Tədbirləri"
         },
@@ -684,6 +804,12 @@
         },
         "csd6-2019/Functions with Parameters": {
           "name": "Parametrli funksiyalar"
+        },
+        "csd4-2019/Analysis of Design": {
+          "name": "Dizaynın təhlili"
+        },
+        "csd4-2019/Understanding Your User": {
+          "name": "İstifadəçinizi Anlamaq"
         },
         "csd4-2019/User Interfaces": {
           "name": "İstifadəçi Araüzü"
@@ -729,6 +855,9 @@
         },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Problem Həllinə giriş"
+        },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Məsələnin həlli prosesi"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Problemin həllini araşdırmaq"
@@ -889,12 +1018,6 @@
         "express-2017/Present Your Project": {
           "name": "Layihənizi Təqdim edin"
         },
-        "csd3-2017/Programming for Entertainment": {
-          "name": "CS Discoveries Semestr Sonu Sorğusu"
-        },
-        "csd3-2017/Plotting Shapes": {
-          "name": "CSD Kursdan Sonra Sorğu"
-        },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Oyun laboratoriyasında rəsm"
         },
@@ -937,9 +1060,6 @@
         "csd3-2017/Project - Design a Game": {
           "name": "Layihə - Oyun dizayn edin"
         },
-        "csd6-2017/Innovations in Computing_": {
-          "name": "CSD Kursdan Sonra Sorğu"
-        },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Kod ilə ekran dizaynı "
         },
@@ -954,9 +1074,6 @@
         },
         "csd6-2017/Functions with Parameters_": {
           "name": "Parametrli funksiyalar"
-        },
-        "csd2-2017/Exploring Websites": {
-          "name": "CSD Kursdan Sonra Sorğu"
         },
         "csd2-2017/Intro to HTML": {
           "name": "HTML-ə giriş"
@@ -985,9 +1102,6 @@
         "csd1-2017/Apps and Problem Solving": {
           "name": "Tətbiqlər və Problemlərin Həlli"
         },
-        "csd5-2017/Representation Matters": {
-          "name": "CSD Kursdan Sonra Sorğu"
-        },
         "csd5-2017/Representing Images": {
           "name": "Şəkilləri təmsil edir"
         },
@@ -1004,7 +1118,7 @@
           "name": "Data ilə bağlı qərar vermək"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "CSD Kursdan Sonra Sorğu"
+          "name": "Dizaynın təhlili"
         },
         "csd4-2017/Understanding Your User": {
           "name": "İstifadəçinizi Anlamaq"
@@ -1035,6 +1149,12 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "Layihə - Proqram Təqdimatı"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Ağ və Qara piksel oyunu"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Rəng Pikselləndirmə Dərsliyi"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Sərbəst: Tanqramlar"
@@ -1101,6 +1221,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Həddindən artıq çətinlik - Hərtərəfli"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "İnformatikaya giriş"
+        },
+        "20-hour/The Maze": {
+          "name": "Labirint"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Hesablama təfəkkürü"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Millimetrlik kağızda proqramlaşdırma"
+        },
+        "20-hour/The Artist": {
+          "name": "Rəssam"
+        },
+        "20-hour/Algorithms": {
+          "name": "Alqoritmlər"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Rəssam 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funksiyalar"
+        },
+        "20-hour/The Farmer": {
+          "name": "Fermer"
+        },
+        "20-hour/Conditionals": {
+          "name": "Şərti ifadələr"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Rəssam 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Mahnı bəstələmə"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Fermer 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Mücərrədlik"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Rəssam 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Fermer 3"
+        },
+        "20-hour/The Internet": {
+          "name": "İnternet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Rəssam 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Yekun"
         },
         "course2/Graph Paper Programming": {
           "name": "Millimetrlik kağızda proqramlaşdırma"
@@ -1266,6 +1446,123 @@
           "preparation": "-   Daha çox onlayn təhlükəsizlik məzmunu üçün [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) vebsaytını nəzərdən keçirin.",
           "purpose": "Bu dərsin əsas məqsədi tələbələrin kompüterlərlə təcrübəsini formalaşdırmaqdır. Klikləmək, sürükləmək və atmaq kimi ən əsas kompüter funksiyalarını əhatə etməklə biz gələcək bulmacalar üçün sinifdə daha bərabər oyun sahəsi yaradırıq. Bu dərs həmçinin cihazlarınızdan asılı olaraq \"siçan\", \"trackpad\" və ya \"toxunma ekranı\" daxil olmaqla, əsas kompüter avadanlıqları terminologiyasını təqdim etmək üçün əla fürsət təqdim edir.",
           "student_overview": "Məsələni bitirmək üçün seçin və sürüşdürün."
+        },
+        "allthethings/Jigsaw": {
+          "name": "Mozaika"
+        },
+        "allthethings/Maze": {
+          "name": "Labirint"
+        },
+        "allthethings/Artist": {
+          "name": "Rəssam"
+        },
+        "allthethings/Bee": {
+          "name": "Arı"
+        },
+        "allthethings/Farmer": {
+          "name": "Fermer"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Tullan"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Uyğunluq"
+        },
+        "allthethings/TextMatch": {
+          "name": "Mətn Uyğunluğu"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "Odometr"
+        },
+        "allthethings/Text Compression": {
+          "name": "Mətnin sıxılması"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pikselləmə"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Gamelab": {
+          "name": "Oyunlabı"
+        },
+        "allthethings/Studio": {
+          "name": "Studiya"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Çox səhifəli qiymətləndirmə"
+        },
+        "allthethings/Star wars": {
+          "name": "Ulduz Müharibələri"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "Zəngin uzun qiymətləndirmə"
+        },
+        "allthethings/Free Response": {
+          "name": "Azad Cavab"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "Nümunə PLC Qiymətləndirilməsi"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Dəyişdirilmiş Səviyyələr"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Anonim tələbə sorğusu"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Açıq Açarlı Kriptoqrafiya"
+        },
+        "allthethings/Web Lab": {
+          "name": "Veb Laboratoriyası"
+        },
+        "allthethings/Single page assessment": {
+          "name": "Tək səhifəlik qiymətləndirmə"
+        },
+        "allthethings/Standalone video": {
+          "name": "Bağımsız video"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Kurrikuluma istinad"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite Laboratoriyası"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Rəqs laboratoriyası"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Mini rubrika"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "Qabarcıq seçimi"
+        },
+        "allthethings/Contained Levels": {
+          "name": "Tərkibindəki Səviyyələr"
+        },
+        "allthethings/ML Fish": {
+          "name": "ML balıq"
+        },
+        "allthethings/AI Lab": {
+          "name": "Suni İntellekt Labaratoriyası"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java Lab"
         },
         "coursef-2021/lesson-6": {
           "name": "Sprite Laboratoriyasını təqdim edirik",
@@ -1834,6 +2131,9 @@
         "csd1-2021/Intro to Problem Solving": {
           "name": "Problem Həllinə giriş",
           "overview": "**Günün Sualı: Bizə birlikdə işləmək və komanda şəklində problemləri həll etmək üçün nə kömək edə bilər?**\n\nBu dərsdə tələbələr mümkün qədər çox qəpikləri dəstəkləyəcək alüminium folqa qayıqları dizayn etmək üçün qruplar şəklində işləyirlər. Qrupların qayıqlarında işləmək üçün iki dövrə var, məqsədi 1-ci dövrədə olduğundan daha çox qəpik tutmağa çalışmaqdır. Fəaliyyətin strukturu tələbələrin növbəti dərsdə daha ətraflı tanış olacaqları problemin həlli prosesinin müxtəlif mərhələlərindən xəbər verir. Dərsin sonunda tələbələr fəaliyyətlə bağlı təcrübələrini əks etdirir və kursun qalan hissəsində görəcəkləri problemin həlli növləri ilə əlaqələndirirlər.\n**Bu dərsin alternativ versiyaları da mövcuddur.**\n\n-   [Qəzet Cədvəli](/s/csd1-2021/lessons/9/)\n-   [Spagetti Körpüsü](/s/csd1-2021/lessons/10/)\n-   [Kağız Qüllə](/s/csd1-2021/lessons/11/)"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Məsələnin həlli prosesi"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Problemin həllini araşdırmaq"

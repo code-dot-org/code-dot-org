@@ -2,6 +2,9 @@
   "tr-TR": {
     "data": {
       "category": {
+        "csta/AP": {
+          "description": "Algoritmalar ve Programlama"
+        },
         "ccela/SL": {
           "description": "Konuşma & Dinleme"
         },
@@ -29,6 +32,9 @@
         "ccela/RI": {
           "description": "Bilgilendirici Okuma"
         },
+        "ccmath/MD": {
+          "description": "Karar Vermek İçin Olasılığı Kullanma"
+        },
         "ccela/W": {
           "description": "Yazma"
         },
@@ -40,6 +46,15 @@
         },
         "csta/IC": {
           "description": "Bilgisayarın Etkileri"
+        },
+        "csta/NI": {
+          "description": "Ağlar ve İnternet"
+        },
+        "csta/CS": {
+          "description": "Bilişim Sistemleri"
+        },
+        "ngss/ETS1": {
+          "description": "Mühendislik Tasarımı"
         }
       }
     }

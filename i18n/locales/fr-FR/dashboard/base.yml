@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 fr:
   errors:
     messages:
@@ -63,6 +69,7 @@ fr:
   previous_page: Page précédente
   next_page: Page suivante
   next_resource: Ressource suivante
+  done_with_module: Module d'apprentissage terminé
   cancel: "Annuler"
   okay: "OK"
   or: "ou"
@@ -79,7 +86,7 @@ fr:
     submit: 'Ajouter un indice'
   appname: "Code.org"
   stage: "étape"
-  stage_number: "Leçon %{number}"
+  stage_number: "Leçon %{number} "
   puzzle: "Énigme"
   trophies: "trophées"
   courses: 'Cours'
@@ -293,6 +300,8 @@ fr:
       blank_code: "Saisis un code de section."
       cant_join_own_section: "Désolé, tu ne peux pas te joindre à ta propre section."
       provider_managed_section: "Cette section est gérée par un autre fournisseur et ne peut pas être rejointe. Demande à ton professeur de t’ajouter via %{provider} et de resynchroniser sa section."
+      restricted_section: "Nous n'avons pas pu vous ajouter à la section %{section_code}, car elle est verrouillée. Veuillez contacter votre professeur pour obtenir de l'aide."
+      full_section: "Nous n'avons pas pu vous ajouter à la section %{section_code}, car elle contient déjà %{section_capacity} élèves. Veuillez contacter votre professeur pour obtenir de l'aide."
       not_participant_type: "Nous n'avons pas pu vous ajouter à la section %{section_code}, vous ne remplissez pas les conditions pour y participer."
     mail:
       student_disassociated:
@@ -328,8 +337,8 @@ fr:
       course_catalog: "Catalogue des cours"
       project_gallery: "Projets"
       sections: "Sections"
-      help_support: "Aide et Support"
-      report_bug: "Rapporter un problème"
+      help_support: "Aide et assistance technique"
+      report_bug: "Signaler un problème"
       report_abuse: "Signaler un abus"
       teacher_community: "Communauté des enseignants"
       professional_learning: "Apprentissage professionnel"
@@ -418,6 +427,7 @@ fr:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blocs)'
       starwarsblocks_hour: 'Star Wars (blocs)'
+      thebadguys: 'Les Bad Guys'
       loading: 'Chargement...'
       weblab: 'Lab du Web'
       view_all: 'Afficher tous les projets...'
@@ -570,9 +580,9 @@ fr:
   footer:
     thank_you: 'Nous remercions nos <a href="https://code.org/about/donors"> donateurs</a>, <a href="https://code.org/about/partners"> partenaires</a>, notre <a href="https://code.org/about/team"> équipe étendue</a>, notre casting vidéo et nos <a href="https://code.org/about/advisors"> conseillers d''éducation</a> pour leur soutien à la création de Code Studio.'
     help_from_html: 'Nous tenons particulièrement à remercier les ingénieurs d’Amazon, de Google et de Microsoft,qui ont contribué à créer ce matériel.'
-    help_from_html_old: 'Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué à créer ces documents de formation.'
+    help_from_html_old: 'Des ingénieurs de chez Google, Microsoft, Facebook et Twitter ont contribué à créer ces documents de formation.'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. <br />Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés.<br />La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. <br /> L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. <br /> Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. <br /> Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. <br /> Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés. La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. Plantes vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés. La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. Plantes contre Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org utilise p5.play, qui est distribué sous la licence <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Fourni par Amazon Web Services'
     built_on_github: 'Construit sur GitHub de Microsoft'
@@ -612,7 +622,7 @@ fr:
     download: 'Télécharger la vidéo'
     show_notes: 'Afficher les Notes'
     show_video: 'Afficher la Vidéo'
-    label: 'Vidéo'
+    label: 'Vidéo '
   compatibility:
     upgrade:
       unsupported_message: "Votre navigateur n'est pas supporté. Merci de mettre votre navigateur à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page mais la fonctionnalité risque d’être rompue."
@@ -664,8 +674,10 @@ fr:
       title: 'Soirée Dansante'
     hello-world:
       title: 'Bonjour tout le monde !'
+      body: 'Choisis entre quatre activités amusantes pour programmer des personnages interactifs dans un monde que tu as créé!'
     poem-art:
       title: 'Art du poème'
+      body: 'Exprime-toi! Programme un poème animé.'
     hoc:
       title: 'Labyrinthe classique'
       body: 'Essaie les fondamentaux de l''informatique. Des millions ont essayé.'
@@ -738,7 +750,7 @@ fr:
     support: "Obtenir de l'aide"
     support_url: "//support.code.org"
     help_resources: "Aide et ressources"
-    help_support: "Aide et Support"
+    help_support: "Aide et assistance technique"
     documentation: "Documentation"
     tutorials: "Didacticiels"
   free_response:
@@ -922,6 +934,7 @@ fr:
     instructor_feedback: 'Commentaires de l’instructeur'
     peer_feedback: 'Commentaire par les pairs'
     outdated: 'Ce commentaire a été émis pour une version précédente'
+    review_count: 'Tu dois compléter %{review_count} révisions pour cette unité.'
     peer_review: 'Commentaire par un pair'
   external_links:
     disclaimer: Clause de non-responsabilité
@@ -988,6 +1001,11 @@ fr:
   no_course_access_teacher: "Vous n'avez pas accès à ce cours. Si vous penser que vous devriez avoir accès à ce cours, s'il vous plaît écrivez à support@code.org afin que nous puissions arranger la situation."
   no_script_access_student: "Tu n’as pas accès à cette unité. Merci de demander à ton professeur quelle unité tu devrais suivre."
   no_script_access_teacher: "Tu n’as pas accès à cette unité. Si tu penses que tu devrais avoir accès à cette unité, merci d’écrire à support@code.org afin que nous puissions corriger la situation."
+  no_level_access_student: "Tu n’as pas accès à cette unité. Merci de demander à ton professeur quelle unité tu devrais suivre."
+  no_level_access_teacher: "Tu n’as pas accès à cette unité. Si tu penses que tu devrais y avoir accès, merci d’écrire à support@code.org afin que nous puissions corriger la situation."
+  no_exemplar: "Aucun exemple n'existe pour ce niveau."
+  no_exemplar_access_student: "Les élèves ne peuvent accéder aux programmes d'exemple. Merci de demander à ton professeur quelle unité tu devrais suivre."
+  no_exemplar_access_teacher: "Seul les professeurs peuvent accéder aux programmes exemples. Si vous voulez devenir un professeur autorisé, prière d'écrire à support@code.org."
   return_unit_overview: 'Accéder à l’aperçu de l''unité'
   return_course_overview: 'Accéder à l’aperçu du cours'
   view_all_units: 'Afficher toutes les unités'
@@ -1005,9 +1023,13 @@ fr:
       school_city: 'Ville de l’École'
       school_city_district: 'École de ville/ district'
       school_country: 'Pays de l’École'
+      school_department_region: 'Département/région scolaire'
       colombian_school_city: 'Ville de l’École'
+      colombian_chilean_school_department: 'Département/région scolaire'
+      colombian_school_municipality: 'Municipalité scolaire'
       colombian_chilean_school_name: 'Nom de l''école'
       chilean_school_commune: 'Commune'
+      chilean_school_id: 'Identifiant d''école'
       ages: 'Quelle est la tranche d''âge de vos étudiants, cette année ?'
       subjects: 'Quelle(s) matière(s) enseignez-vous, cette année ?'
       resources: 'Parmi les ressources d’éducation en informatique suivantes, lesquelles utilisez-vous ?'
@@ -1053,6 +1075,7 @@ fr:
         music: 'Musique'
         art: 'Art'
         other: "Autre :"
+        na: 'Non applicable'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1061,7 +1084,8 @@ fr:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Autre :"
+        other: "Autre"
+        na: 'Non applicable'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1071,7 +1095,8 @@ fr:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Autre :"
+        other: "Autre"
+        na: 'Non applicable'
       workshop_course:
         csf_af: 'Les Fondamentaux de l’Informatique (Cours A-F)'
         csf_express: 'Les Fondamentaux de l’Informatique (Pré-Express ou Express)'

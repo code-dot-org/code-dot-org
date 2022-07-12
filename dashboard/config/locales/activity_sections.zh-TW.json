@@ -13,6 +13,9 @@
         "7de94e25-7e33-4258-af1c-1e792ba78c5f": {
           "name": "舞蹈派對 - 深入學習"
         },
+        "473c0737-e82d-49ec-bffa-5b738ba06438": {
+          "progression_name": "繼續跳舞！"
+        },
         "1f7acf41-57a9-4dc5-8cbb-945faffbdc41": {
           "progression_name": "加入陣形"
         },
@@ -383,6 +386,25 @@
             null
           ]
         },
+        "87dc9b80-1d14-4b71-b281-d2c67bba67a4": {
+          "progression_name": "破解凱撒密碼"
+        },
+        "eaccf571-0358-4756-b0c7-2349901065d4": {
+          "progression_name": "術語回顧"
+        },
+        "1c8bec9c-af39-4dce-826c-a2ead77100c5": {
+          "progression_name": "新挑戰簡介"
+        },
+        "9ad445d9-3385-460d-97f8-396f069b456d": {
+          "progression_name": "破解隨機替換"
+        },
+        "761cdcc6-546c-4a87-8f96-8555cdf01e99": {
+          "progression_name": "技術：頻率分析"
+        },
+        "38ff7ecd-0a0f-4332-802c-cfa62c64beb5": {
+          "name": "視訊 - 加密和公開金鑰",
+          "progression_name": "視訊 - 加密和公開金鑰"
+        },
         "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
           "tips": [
             null
@@ -556,11 +578,15 @@
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "文字壓縮"
         },
+        "789f83b4-45b7-4145-9d8c-e2a2429efec2": {
+          "progression_name": "小部件：文本壓縮"
+        },
         "17878891-5c24-412b-b385-35b54fdaeb11": {
           "description": "\"**現實世界：Zip 壓縮**\n\n-   用不同內容的文字檔案進行 zip 實驗。  小檔案的效果和大檔案的效果一樣好嗎？（在 Mac 上，要在 Finder 中選擇「獲取資訊」來檢視檔案的實際位元組數，因為 Finder 對小於 4KB 的檔案都會顯示成 4KB。)\n    -   警告：結果可能會有差異。  Zip 對文字檔案非常有效，但它可能不能很有效地壓縮其他檔案，因為它們本身已經被壓縮過了，或者沒有像文字檔案那樣有相同的內嵌規律。\n\n**挑戰：  研究 LZW 演算法**\n\n-   .zip 壓縮是基於 [LZW Compression Scheme](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) 實現的\n\n-   雖然這個文字壓縮工具背後的思路與 LZW(zip) 演算法類似，但追蹤壓縮和解壓縮的路徑有點難度。  學習 LZW 以及在這個演算法的過程中會發生什麼，對於某些人來說是一個很好的拓展專案。\""
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "介紹"
+          "name": "介紹",
+          "description": "**討論：**\n\n-   _我們對病毒如何傳播有什麼瞭解？_\n-   _什麼能使病毒在城鎮中傳播得更快？_\n-   _什麼可以説明減緩病毒的傳播？_\n\n此次討論的目的是讓學生有機會啟動之前的知識，並在黑板上看到他們的想法。這也是一個調查關於病毒如何傳播的一些誤解的機會。"
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "疫情爆發",
@@ -568,12 +594,21 @@
           "progression_name": "疫情爆發"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "**這樣做：** 全班閱讀 _歡迎來到怪物城鎮_。",
           "progression_name": "歡迎來到怪物鎮"
         },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": "**這樣做：**在前一課的基礎上，與學生一起複習詞彙、模型和模擬。模擬是一個過程或系統的電腦模型。"
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": "_今天，我們將通過編寫一些代碼讓像怪獸城鎮這樣的地方變得生動起來。在這個模擬中，你將使用精靈圖來代表不同的怪物。精靈圖會有不同的服裝，告訴我們他們是生病還是健康。你還將使用行為來讓怪物移動。最後，當兩個精靈圖在螢幕上觸碰時，你將使用事件去改變精靈的服裝。這代表一個怪物把病毒傳染給另一個怪物。你將預測怪物城鎮的鄰居將會發生什麼，並幫助他們恢復健康！_"
+        },
         "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "**這樣做：**讓學生過渡到他們的電腦，並讓他們開始遵循技能建設部分的每個級別的指導。如果學生提前完成這個部分，他們可以繼續在級別6試驗他們的代碼，直到班級準備好繼續。",
           "progression_name": "技能發展"
         },
         "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "**這樣做：**讓學生回到電腦，完成剩下的級別。其中有些級別提供可選挑戰。鼓勵學生認真閱讀說明，並用模擬來試驗。",
           "progression_name": "小項目：疫情爆發模擬器"
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
@@ -582,8 +617,12 @@
         "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
           "description": "_模擬是學習現實世界中難以觀察的事物的好方法。模擬可以幫助科學家解決問題，預測如何解決問題，並安全有效地測試新想法。你的模擬是展示怪物城鎮病毒疫情爆發的一種方法。_"
         },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": "**討論：**\n\n-   模擬如何在現實世界中發揮作用？\n-   模擬如何幫助我們理解周圍的世界？\n-   類比如何改善我們測試想法的方式？ \n\n討論的目的是讓學生瞭解，模擬是一種以交互模式模擬複雜系統的方法。他們還應該看到模擬如何讓人們快速、廉價和安全地測試想法。"
+        },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "反思"
+          "name": "反思",
+          "description": "**提示：**\n\n-   這個模擬與現實世界有什麼相似之處？有什麼不同？\n-   你想對你的模擬做出什麼改變/添加什麼？"
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "介紹",
@@ -595,6 +634,9 @@
           "tips": [
             null
           ]
+        },
+        "2123b1ad-42d8-4c2f-87f6-4300fe7dd741": {
+          "name": "編寫屬於你的運動遊戲程式"
         },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
           "tips": [
@@ -655,6 +697,9 @@
           "tips": [
             null
           ]
+        },
+        "ef4b8eed-a408-4dfa-919f-b5575e3cdea5": {
+          "progression_name": "繼續跳舞！"
         },
         "ef068b27-a180-4c77-8254-b150c8499acb": {
           "progression_name": "不斷重複"
@@ -728,7 +773,8 @@
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "訓練數據的使用"
         },
         "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
           "progression_name": "人工智慧：對社會的影響 - 視訊"
@@ -767,6 +813,12 @@
           "name": "反思",
           "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections][0]瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程][1]。"
         },
+        "d6c0f379-8c4b-44a4-a027-b1b0d67a9605": {
+          "progression_name": "使用設計模式構建UI"
+        },
+        "5baa2f9a-16b7-412f-b3cb-4fb126c06add": {
+          "progression_name": "選擇好的標識"
+        },
         "7197ddf8-89bf-4b3a-86d9-1f424a1d1b0a": {
           "progression_name": "回應使用者輸入的內容"
         },
@@ -779,12 +831,40 @@
         "330f29ec-379e-4f4e-ae58-4163b1afca6c": {
           "progression_name": "使用 取屬性函式（Getters） 跟設定屬性函式（Setters）"
         },
+        "4e481fb1-126e-41df-bd8b-7358c3bf23fc": {
+          "progression_name": "getText與getNumber"
+        },
         "432cf1e5-be20-4ba1-a6b5-617481522694": {
           "progression_name": "getNumber"
+        },
+        "04db6cce-94f1-43ba-ad97-05a8fcd32541": {
+          "progression_name": "setProperty"
         },
         "f090c505-7c09-4e19-bcf4-b219f24eae45": {
           "name": "操作介面元素屬性",
           "progression_name": "操作介面元素屬性"
+        },
+        "0bb9cc9e-e99a-4f86-af29-44e022052307": {
+          "progression_name": "密室逃脫示例"
+        },
+        "04b9d0f5-a42b-4700-ba6d-cf352558897a": {
+          "progression_name": "概覽：設計模式"
+        },
+        "25be4c6b-89f1-467b-b126-100d0ea60e4d": {
+          "progression_name": "概覽：圖像"
+        },
+        "041660a1-c3ea-4701-ade4-b4e7d30f0f49": {
+          "progression_name": "概覽：onEvent"
+        },
+        "20ad1c05-99cf-4117-8963-86d325b6f48d": {
+          "progression_name": "概覽：setPosition"
+        },
+        "fca2ad77-7fc0-4d43-9b2c-8ebe8ced8f31": {
+          "progression_name": "概覽：If語句"
+        },
+        "dfb84fa6-32ca-4ab5-9810-e28e155bf132": {
+          "name": "終極密室逃脫App",
+          "progression_name": "終極密室逃脫App"
         },
         "8861ee5b-45f9-4428-a2f7-344e940b4430": {
           "progression_name": "影片：計算機科學很重要"
@@ -859,6 +939,9 @@
         },
         "6f0c4f43-6167-42df-b2f8-717a5ecc23d1": {
           "progression_name": "教學內容概覽"
+        },
+        "f573a627-ebb0-443a-a0a1-6b4b64c933d5": {
+          "progression_name": "在娛樂中探索電腦科學"
         },
         "6e6ad22a-99d2-434c-abab-b6d4a6962027": {
           "name": "範例程式",
@@ -1044,6 +1127,9 @@
         "68142075-7449-406e-b2b2-4370bd7243b9": {
           "progression_name": "教學內容概覽"
         },
+        "98100ce0-2d79-4e10-816b-20a518c80030": {
+          "progression_name": "製作一個互動卡片"
+        },
         "34c5b91b-e055-4f51-b902-f87fd9bd69f1": {
           "progression_name": "專案: 工作"
         },
@@ -1084,8 +1170,11 @@
         "f6edd166-54e2-4bff-857f-be13d6cd7c67": {
           "progression_name": "教學內容概覽"
         },
+        "4422f3ba-71cf-484b-ba3e-dd4ffdbdbbf8": {
+          "progression_name": "速度和計數器模式"
+        },
         "388edd20-6e40-48c9-9b12-826b0ae27f1e": {
-          "progression_name": "飛行遊戲"
+          "progression_name": "飛行者遊戲"
         },
         "75a15f95-d9ab-486e-8ef5-7701fabe63a1": {
           "progression_name": "教學內容概覽"
@@ -1097,7 +1186,7 @@
           "progression_name": "碰撞"
         },
         "2c1a8a7a-4d36-4e64-afcc-c67cb7a2fcf2": {
-          "progression_name": "飛行遊戲"
+          "progression_name": "飛行者遊戲"
         },
         "bbaf2c50-a1db-4497-9238-aee27d5e8095": {
           "progression_name": "教學內容概覽"
@@ -1111,6 +1200,9 @@
         "03859b57-0593-4ee9-8e02-bb71caba9c7f": {
           "progression_name": "教學內容概覽"
         },
+        "0f38f023-d475-4389-bcce-150972b6e1b7": {
+          "progression_name": "計劃你的項目"
+        },
         "464831b9-b4dd-4ced-a50a-6b4204d3c843": {
           "progression_name": "多視窗動畫"
         },
@@ -1120,6 +1212,9 @@
         },
         "62a65044-e84a-4423-87c4-58a1a284f13f": {
           "progression_name": "教學內容概覽"
+        },
+        "7cee437f-0aa0-4131-9d81-d5cac21d1cab": {
+          "progression_name": "構建一個跳臺者"
         },
         "f0cc8898-9190-4844-9010-7229bb0a652a": {
           "progression_name": "平台跳跳人 - 背景與變數"
@@ -1135,6 +1230,9 @@
         },
         "dc433b08-56bf-4f84-8a15-0646cf34b298": {
           "progression_name": "教學內容概覽"
+        },
+        "d6752180-35a9-4d1f-b5f6-234cea717d67": {
+          "progression_name": "設計你的游戲"
         },
         "d004ae7c-e575-44e3-903d-e65e7d543e9b": {
           "progression_name": "專案-背景以及變數"
@@ -1152,6 +1250,10 @@
         },
         "3713a54a-d7a0-43e5-9e78-6fd2938d98eb": {
           "progression_name": "教學內容概覽"
+        },
+        "4982d155-a371-46b1-a85b-e31a7a715f2c": {
+          "name": "創新研究",
+          "progression_name": "創新研究"
         },
         "96dd6f2e-0a60-40fc-b9b7-40773ccc4039": {
           "progression_name": "教學內容概覽"
@@ -1252,6 +1354,9 @@
         "90e014bf-0211-4fa7-afab-c8754efde892": {
           "progression_name": "範例程式"
         },
+        "3d7eccb7-d5a1-47bf-a9eb-44cefb698b4a": {
+          "progression_name": "計劃你的項目"
+        },
         "7a41f30c-554f-4cb4-a10d-8aa3ddfd37d2": {
           "progression_name": "畫面設計"
         },
@@ -1266,6 +1371,9 @@
         },
         "62402722-68ea-46f9-a126-f91cdef4edf5": {
           "progression_name": "演示 - 錯誤抓取"
+        },
+        "93ae73de-b840-4ca3-aa1d-72407d108a3f": {
+          "progression_name": "計劃你的項目"
         },
         "a0fb0b5a-6467-404c-927d-a34a13cef6de": {
           "progression_name": "畫面設計"
@@ -1383,6 +1491,9 @@
         "9970bff6-49d5-4c0d-9ce6-4dfd66cdc24a": {
           "progression_name": "教學內容概覽"
         },
+        "1f9a7737-aeb5-4e67-b973-f7ffc56f7c55": {
+          "progression_name": "設計你的原型"
+        },
         "6c74246c-0b89-4ae5-9ded-fefb997392d7": {
           "progression_name": "使用者介面"
         },
@@ -1475,6 +1586,10 @@
         "053cd782-5fe7-4438-b780-a79fb441d383": {
           "progression_name": "教學內容概覽"
         },
+        "9608412e-93a7-49c2-bb11-95906561502f": {
+          "name": "蛋糕調查",
+          "progression_name": "蛋糕調查"
+        },
         "0b21869f-fed5-4d9a-ae12-336c623bf20f": {
           "name": "教學內容概覽",
           "progression_name": "教學內容概覽"
@@ -1539,6 +1654,9 @@
         "37c289c0-8359-41dd-a93c-ffc4ebbddc3d": {
           "progression_name": "教學內容概覽"
         },
+        "c94f593e-4b76-4a2c-9e24-5b06f8c91a47": {
+          "progression_name": "示例App類型"
+        },
         "75c655ea-684c-41b8-a9a6-5004023d49a7": {
           "name": "展示手機應用程式",
           "progression_name": "展示手機應用程式"
@@ -1558,6 +1676,13 @@
         },
         "c9aeae9b-309e-464f-a6b9-7ed39e5f3833": {
           "progression_name": "完成一個畫面"
+        },
+        "0f071b2f-3a55-4d67-a3a9-1770c5c1456a": {
+          "progression_name": "為你的應用設計一個螢幕"
+        },
+        "aae0a3cd-a0e4-4945-b7fb-f9b4e54cc9c4": {
+          "name": "App項目：螢幕設計",
+          "progression_name": "App項目：螢幕設計"
         },
         "ae32291b-bce5-4e45-ac78-5e24b891f867": {
           "progression_name": "教學內容概覽"
@@ -1592,8 +1717,16 @@
         "a8669b83-40c9-4ca2-b06a-c9c8a84d3ce6": {
           "progression_name": "教學內容概覽"
         },
+        "205ad491-68ca-460c-93f5-8384b6f44d70": {
+          "name": "頂級網站",
+          "progression_name": "頂級網站"
+        },
         "c7d20caa-7535-4a80-aa80-d366665477b9": {
           "progression_name": "教學內容概覽"
+        },
+        "fc25253c-af43-45ae-8a3a-26330b2135c3": {
+          "name": "範例個人網站",
+          "progression_name": "範例個人網站"
         },
         "0b825c84-5262-4bcd-87b1-ee718df381fa": {
           "progression_name": "教學內容概覽"
@@ -1626,12 +1759,19 @@
         "972406a9-7dc2-4751-a1bf-01b58f25fd7f": {
           "progression_name": "標題"
         },
+        "f7cd8199-4745-4421-937f-e99bfc44e9f6": {
+          "progression_name": "編程中的問題解決過程"
+        },
         "119ae877-c310-40c1-b609-1219caf3ce6f": {
           "name": "你的個人主頁",
           "progression_name": "你的個人主頁"
         },
         "c3f41c2b-e482-413f-9e6f-8c5c2c131f50": {
           "progression_name": "教學內容概覽"
+        },
+        "88de5450-db07-4123-9f95-38f890e20d4d": {
+          "name": "社交偵探",
+          "progression_name": "社交偵探"
         },
         "c097d94c-9bcd-4dae-9377-8317a715350b": {
           "progression_name": "教學內容概覽"
@@ -1680,6 +1820,9 @@
         },
         "19d5e312-e51e-47f3-9d90-6d1a9c79245f": {
           "progression_name": "鏈接頁面"
+        },
+        "737a9d39-005b-43b5-bd74-4580674f8165": {
+          "progression_name": "項目指南"
         },
         "308a55cf-4781-4887-b674-69824882ad64": {
           "progression_name": "網站專案"
@@ -2379,6 +2522,9 @@
           "name": "小專案: 虛擬寵物",
           "progression_name": "小專案: 虛擬寵物"
         },
+        "ee1ed9bb-80d3-4f5c-abfb-431d175a74d5": {
+          "progression_name": "示例項目"
+        },
         "7ba3e3fc-9997-480c-86f7-54e100343b8a": {
           "progression_name": "Sprite Lab 專案"
         },
@@ -2590,12 +2736,18 @@
         "d62f3e22-901d-4b26-8eae-7c9af57ab4c4": {
           "progression_name": "練習"
         },
+        "4b262c27-3441-41bf-8fe3-2d469d5085a5": {
+          "progression_name": "示例項目"
+        },
         "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
           "progression_name": "Sprite Lab 專案"
         },
         "22ed3900-dd2a-4eec-99c1-69f131286de6": {
           "name": "藝術專案",
           "progression_name": "藝術專案"
+        },
+        "7ac41e7f-cc21-4e84-ba6c-28b74d5eb12a": {
+          "progression_name": "示例項目"
         },
         "f0d08173-4d56-4bdc-8bd0-173ba4445206": {
           "progression_name": "Sprite Lab 專案"
@@ -2616,6 +2768,9 @@
         "5d543b76-4be7-43c6-aeb3-6f25f7a70b88": {
           "progression_name": "練習"
         },
+        "cc218fb0-7d11-48bb-9a38-291b1490af29": {
+          "progression_name": "預測"
+        },
         "492875e4-c3a9-415e-b5c5-cb0204c5cc1a": {
           "progression_name": "練習"
         },
@@ -2627,6 +2782,9 @@
         },
         "dec15e5a-6919-45fb-b36a-b009ddc2ea0e": {
           "progression_name": "挑戰"
+        },
+        "8d3f24a1-e89b-4e93-92e1-508e62c2cd59": {
+          "progression_name": "預測"
         },
         "117d8739-d0c7-4f8e-8570-c634c8df1bf9": {
           "progression_name": "練習"
@@ -2642,6 +2800,9 @@
         },
         "750fda9f-f34c-416c-8546-93df47a97bc8": {
           "progression_name": "練習"
+        },
+        "de97577d-abdb-4694-871c-ff2385509306": {
+          "progression_name": "預測"
         },
         "7e03ff4b-5cbd-41ff-8ba9-a00de0867038": {
           "progression_name": "練習"
@@ -2662,11 +2823,17 @@
         "78350753-0d3c-45bc-b665-6045cacb85a0": {
           "progression_name": "練習"
         },
+        "3e30f7ff-21c6-4335-9ad3-0968ac7f5c57": {
+          "progression_name": "預測"
+        },
         "e0d3988c-bdb0-45b1-9512-354e87118d64": {
           "progression_name": "和 BB-8 與 Rey 一起寫程式"
         },
         "e49927e9-916d-461f-80e8-af55914d91cd": {
           "progression_name": "練習"
+        },
+        "7775acbe-f137-42d3-a464-bf991991b7c3": {
+          "progression_name": "預測"
         },
         "0772880f-6149-4c01-9cac-2006f2fdea5b": {
           "progression_name": "BB-8機器人的重複區塊"
@@ -2679,6 +2846,9 @@
         },
         "c7c39851-bad8-4bc1-afd6-423b251b55e7": {
           "progression_name": "練習"
+        },
+        "ccf2c532-cb53-4b32-a41e-7d34f999311d": {
+          "progression_name": "預測"
         },
         "0e8985cd-34d0-4ffe-b0f0-53fb0e9bd874": {
           "progression_name": "練習"
@@ -2694,6 +2864,9 @@
         },
         "447a0554-d6f0-4a53-9791-08282e24f988": {
           "progression_name": "練習"
+        },
+        "d1ee3790-11fa-4ef2-9d60-0ce3a3089e07": {
+          "progression_name": "預測"
         },
         "1e11ffae-8254-4f4f-b70b-a5f2cf1e4e66": {
           "progression_name": "練習"
@@ -2740,6 +2913,9 @@
         },
         "5b798399-282e-49fa-b6ff-49a267c2a88e": {
           "progression_name": "教學內容概覽"
+        },
+        "b13e1818-6495-44cb-97f3-69ea42c9ce0b": {
+          "progression_name": "在娛樂中探索電腦科學"
         },
         "68f4881c-e3a6-4fb1-bb42-6bfce254e6b9": {
           "name": "範例程式",
@@ -2913,6 +3089,9 @@
         "666f054a-0fd9-47a8-bd33-ce3ed2022fda": {
           "progression_name": "教學內容概覽"
         },
+        "8b445d6f-6129-4ee3-b696-45de248cb3c7": {
+          "progression_name": "預測"
+        },
         "cc18fe27-30a0-4964-8e5b-bd68143aa5db": {
           "progression_name": "影片：如果/否則 陳述式"
         },
@@ -2924,6 +3103,9 @@
         },
         "a1ea6e8e-5c0b-4ef8-ba2a-77e38b52ce42": {
           "progression_name": "教學內容概覽"
+        },
+        "12cfb2b1-1036-4f75-9896-eb93662fd7f7": {
+          "progression_name": "製作一個互動卡片"
         },
         "be6a36cd-6255-4efb-b208-849b62ee2427": {
           "progression_name": "專案: 工作"
@@ -2965,8 +3147,11 @@
         "b6e4bb5f-1e91-4775-b76e-a5ebc30d8cde": {
           "progression_name": "教學內容概覽"
         },
+        "4dae207c-ab84-4077-a714-96092ea7d538": {
+          "progression_name": "速度和計數器模式"
+        },
         "b9a8601e-e066-49db-8899-a492cede561d": {
-          "progression_name": "飛行遊戲"
+          "progression_name": "飛行者遊戲"
         },
         "ee04a576-ec75-46c7-b9ec-1c34503b7215": {
           "progression_name": "教學內容概覽"
@@ -2978,7 +3163,7 @@
           "progression_name": "碰撞"
         },
         "59df7a89-8955-425b-838a-884476c9218b": {
-          "progression_name": "飛行遊戲"
+          "progression_name": "飛行者遊戲"
         },
         "36340995-7f3c-4c0c-8cc9-25a4e255eff8": {
           "progression_name": "教學內容概覽"
@@ -2995,6 +3180,9 @@
         "4f152c63-7605-4029-97f4-d9c319f0ff73": {
           "progression_name": "教學內容概覽"
         },
+        "58eb3ec4-5481-4ed1-b5ca-42c555e2c823": {
+          "progression_name": "計劃你的項目"
+        },
         "d629a7bc-1321-4196-a016-a953dc0f8201": {
           "progression_name": "多視窗動畫"
         },
@@ -3004,6 +3192,9 @@
         },
         "2f8ac29c-474f-4fc2-bbbc-9df38f3c5bf9": {
           "progression_name": "教學內容概覽"
+        },
+        "35d19875-08f0-421b-8044-60f3264fb51c": {
+          "progression_name": "構建一個跳臺者"
         },
         "5046d996-d0fd-42f1-a168-2ad392ce30f7": {
           "progression_name": "平台跳跳人 - 背景與變數"
@@ -3020,6 +3211,9 @@
         "87acf7e3-8fa0-4952-a0e4-734aac023056": {
           "progression_name": "教學內容概覽"
         },
+        "08623cca-a2db-4167-8536-264afced0f82": {
+          "progression_name": "設計你的游戲"
+        },
         "1958e1d6-72f8-4f47-8ce6-70ec51ac3004": {
           "progression_name": "專案-背景以及變數"
         },
@@ -3032,6 +3226,10 @@
         },
         "f3b83c25-457b-49e0-97bb-b6cf01729b96": {
           "progression_name": "教學內容概覽"
+        },
+        "edb1b531-f884-4cdb-8763-205ccb5ccfb9": {
+          "name": "創新研究",
+          "progression_name": "創新研究"
         },
         "e8d8ba0c-067a-4b05-afac-49467b70d19a": {
           "progression_name": "教學內容概覽"
@@ -3132,6 +3330,9 @@
         "e38ff572-805c-4b0d-8cf6-103f7d71e9cd": {
           "progression_name": "範例程式"
         },
+        "d60814f2-fc93-4ef3-a999-07ce0fc4dea1": {
+          "progression_name": "計劃你的項目"
+        },
         "afd0e25a-5902-4b4a-87f9-d204f727c570": {
           "progression_name": "畫面設計"
         },
@@ -3146,6 +3347,9 @@
         },
         "c8b0b613-ef61-4298-bc04-a9c37482c193": {
           "progression_name": "演示 - 錯誤抓取"
+        },
+        "31886f50-3b56-4924-890d-239f39524bb2": {
+          "progression_name": "計劃你的項目"
         },
         "abe489d2-ece4-47a3-9851-fcc0dd70cbe6": {
           "progression_name": "畫面設計"
@@ -3270,6 +3474,9 @@
         "2a2384f0-4484-4c89-ab53-0ad76e3ea3d6": {
           "progression_name": "教學內容概覽"
         },
+        "3136b3b2-33f8-4a93-bd62-30de52ede84c": {
+          "progression_name": "設計你的原型"
+        },
         "db6e7fb0-c3b2-447c-87c2-9ae8aaf3bf3a": {
           "progression_name": "使用者介面"
         },
@@ -3325,6 +3532,9 @@
         "b1fd42fb-ce26-4f73-a86e-c28d04369c4e": {
           "progression_name": "教學內容概覽"
         },
+        "278a92f7-2ba4-4bb6-9cbd-0b1a1b1c7a51": {
+          "progression_name": "示例App類型"
+        },
         "b5785efd-9e8a-48d7-a5a4-8af4fb5cc2b1": {
           "name": "展示手機應用程式",
           "progression_name": "展示手機應用程式"
@@ -3344,6 +3554,13 @@
         },
         "1123a567-ee84-4a4b-b7b5-2f204c63df61": {
           "progression_name": "完成一個畫面"
+        },
+        "aeb5b7a3-d7e7-42e4-bc39-c447897cad40": {
+          "progression_name": "為你的應用設計一個螢幕"
+        },
+        "9271144d-1d13-473d-99ba-96efd4b022ea": {
+          "name": "App項目：螢幕設計",
+          "progression_name": "App項目：螢幕設計"
         },
         "99d617bc-9759-4d6d-928e-948f53a627f8": {
           "progression_name": "教學內容概覽"
@@ -3453,6 +3670,10 @@
         "7f64afe2-30a0-47d0-8c46-2a6451d392d7": {
           "progression_name": "教學內容概覽"
         },
+        "50c39425-3842-4145-a778-7b2c59de2164": {
+          "name": "蛋糕調查",
+          "progression_name": "蛋糕調查"
+        },
         "ed2725a9-55f8-4cc0-8004-c096461fd666": {
           "name": "教學內容概覽",
           "progression_name": "教學內容概覽"
@@ -3511,8 +3732,16 @@
         "ad55ae28-5794-4f0d-8970-dafde8dd2281": {
           "progression_name": "教學內容概覽"
         },
+        "1509e490-4f28-4bc4-9303-c5c156208213": {
+          "name": "頂級網站",
+          "progression_name": "頂級網站"
+        },
         "7d345d9c-3308-4a84-b288-512e51e57815": {
           "progression_name": "教學內容概覽"
+        },
+        "0cc1b631-05c8-4129-b2e9-65f02c303d16": {
+          "name": "範例個人網站",
+          "progression_name": "範例個人網站"
         },
         "f00dd0ff-7a04-4e7f-b6ca-3c7a96143f2c": {
           "progression_name": "教學內容概覽"
@@ -3545,12 +3774,19 @@
         "6c3bc892-7aba-43bd-a742-7d73bbf74ed3": {
           "progression_name": "標題"
         },
+        "73085527-63a6-4397-85ee-cd5351ba8bf0": {
+          "progression_name": "編程中的問題解決過程"
+        },
         "153d29d2-5ef0-416c-b01c-ddea76493073": {
           "name": "你的個人主頁",
           "progression_name": "你的個人主頁"
         },
         "4a6905c1-5b88-4beb-af1a-9b5d90235006": {
           "progression_name": "教學內容概覽"
+        },
+        "ed1c64a1-b450-4f4d-b509-3bc5dfe85c3a": {
+          "name": "社交偵探",
+          "progression_name": "社交偵探"
         },
         "b268b7d7-903b-4f3b-8ffc-fe89a1dceb48": {
           "progression_name": "教學內容概覽"
@@ -3599,6 +3835,9 @@
         },
         "90332559-0ced-42cf-b103-e30e0fc60e83": {
           "progression_name": "超連結"
+        },
+        "a64ebebb-2737-43a0-b4d8-f7971096b3e0": {
+          "progression_name": "項目指南"
         },
         "174b4817-ee38-47a4-be7c-dbf4c4d752ea": {
           "progression_name": "網站專案"
@@ -3684,6 +3923,41 @@
         "da39537c-01a9-4613-bc81-c20b9baf0747": {
           "progression_name": "課程項目結束"
         },
+        "357faa9a-f0a7-4f25-ad8e-44986113a58e": {
+          "progression_name": "InspirationalArtwork"
+        },
+        "373389ef-39f0-432b-a812-bf884b581644": {
+          "progression_name": "FoodFight"
+        },
+        "e864376e-6189-4e40-aeeb-cf14a6959773": {
+          "progression_name": "猜數字"
+        },
+        "2a4fff7a-2742-430a-a17d-971c6f2db713": {
+          "name": "選擇你自己的冒險",
+          "progression_name": "選擇你自己的冒險"
+        },
+        "a66e8ec0-572b-44e2-9069-dd3bdddcded2": {
+          "name": "開始計劃你的項目",
+          "progression_name": "開始計劃你的項目"
+        },
+        "3e46807c-bd15-43b1-937f-defdb5fd6c35": {
+          "progression_name": "課程F：藝術家項目"
+        },
+        "e4e7b917-90a1-41c2-80d6-8986855a99d3": {
+          "name": "課程F：劇本實驗室項目",
+          "progression_name": "課程F：劇本實驗室項目"
+        },
+        "e52dc608-4bbb-4074-95ea-73a135d6c7a3": {
+          "progression_name": "課程F：藝術家項目 - 修改"
+        },
+        "7097cfbe-a3c3-433d-9481-b9850fc6fb7f": {
+          "name": "課程F：劇本實驗室項目 - 修改",
+          "progression_name": "課程F：劇本實驗室項目 - 修改"
+        },
+        "e6e6a6fe-4dbd-4a8d-a42c-e9d7df871b50": {
+          "name": "準備你的演示",
+          "progression_name": "準備你的演示"
+        },
         "cf810bf2-e1cf-492f-bf3f-b7a337cfa8ff": {
           "progression_name": "課程項目結束"
         },
@@ -3696,15 +3970,68 @@
         "f147a0c8-7d8f-4acd-a8d7-feb39d52e0ab": {
           "progression_name": "外星人入侵"
         },
+        "32a51e92-3a93-420b-bd49-f21f36867c89": {
+          "name": "尋找巫師",
+          "progression_name": "尋找巫師"
+        },
+        "4db4c162-d334-4c10-99d1-cdd9aa2bdbb8": {
+          "name": "開始計劃你的項目",
+          "progression_name": "開始計劃你的項目"
+        },
+        "d3394e13-b9ef-4395-8873-711308f134d2": {
+          "progression_name": "課程E：劇本實驗室項目"
+        },
         "a78fef77-4dfa-4b0a-9034-948d959a70a9": {
           "name": "課程 E -小藝術家專案",
           "progression_name": "課程 E -小藝術家專案"
         },
+        "4d8a8f77-c0d4-42d9-ab75-9273ed99562c": {
+          "name": "準備你的演示",
+          "progression_name": "準備你的演示"
+        },
         "0d50aac7-6c49-46ce-b513-0f94f6b36024": {
           "progression_name": "課程項目結束"
         },
+        "53425b1d-2f48-4630-8200-e5b9e276dbe3": {
+          "progression_name": "InspirationalArtwork"
+        },
+        "02801c1c-0447-4bf9-b47f-d9deabdeab3d": {
+          "progression_name": "FoodFight"
+        },
+        "f95bf194-f262-4523-9260-a440078013b5": {
+          "progression_name": "猜數字"
+        },
+        "74f741d0-5df0-4813-a002-03d78ee8e56d": {
+          "name": "選擇你自己的冒險",
+          "progression_name": "選擇你自己的冒險"
+        },
+        "ed74084a-54be-443d-a9c8-d998da62ce9a": {
+          "name": "開始計劃你的項目",
+          "progression_name": "開始計劃你的項目"
+        },
+        "aaecdd68-26fd-47df-a470-f8519163ca38": {
+          "progression_name": "課程F：藝術家項目"
+        },
+        "24c9e448-a709-4d7f-9c00-8ec34ca7fd86": {
+          "name": "課程F：劇本實驗室項目",
+          "progression_name": "課程F：劇本實驗室項目"
+        },
+        "c1cc4a9a-7944-444f-8286-a57955c768b8": {
+          "progression_name": "課程F：藝術家項目 - 修改"
+        },
+        "2423f0a7-e415-4f4c-83d0-a6ff79c67ff3": {
+          "name": "課程F：劇本實驗室項目 - 修改",
+          "progression_name": "課程F：劇本實驗室項目 - 修改"
+        },
+        "5ccce1a2-deb4-444d-ae0b-2aab8d25f5d9": {
+          "name": "準備你的演示",
+          "progression_name": "準備你的演示"
+        },
         "ceaeda39-02d6-4007-83fb-f037c707389c": {
           "progression_name": "教學內容概覽"
+        },
+        "ab7d99c8-e849-41ff-a55b-b66d48e1f5d1": {
+          "progression_name": "在娛樂中探索電腦科學"
         },
         "9dbf54b0-360f-45d9-a44e-cee20a3765fb": {
           "name": "範例程式",
@@ -3923,6 +4250,9 @@
         "10190642-0377-4c55-8765-98079f117209": {
           "progression_name": "教學內容概覽"
         },
+        "f83be689-77ef-49ee-9088-630893d4d087": {
+          "progression_name": "CSD U3互動卡範例"
+        },
         "83a1fd2c-8a1e-470d-8036-d1cd88d0ef0f": {
           "progression_name": "專案: 工作"
         },
@@ -3971,8 +4301,11 @@
         "dd8f2058-1a14-401a-878a-f21f66f4a671": {
           "progression_name": "教學內容概覽"
         },
+        "9c2e2c70-1cf6-4c18-ae73-6d1092e1a07a": {
+          "progression_name": "速度和計數器模式"
+        },
         "973cffaa-e89d-411f-8df1-14665ba79ec9": {
-          "progression_name": "飛行遊戲"
+          "progression_name": "飛行者遊戲"
         },
         "fa0cb5a5-111c-4d06-ba91-66d4bf49daac": {
           "name": "自由發揮",
@@ -3988,7 +4321,7 @@
           "progression_name": "碰撞"
         },
         "66b65bec-5ac1-4e36-8c28-fb678e5c6340": {
-          "progression_name": "飛行遊戲"
+          "progression_name": "飛行者遊戲"
         },
         "744fd0ee-23fb-497a-a32e-edd8c31ffe13": {
           "name": "自由發揮",
@@ -4010,6 +4343,9 @@
         "c4785657-6ce2-4e51-9906-e0e59b4fe461": {
           "progression_name": "教學內容概覽"
         },
+        "d3c8806b-af64-4d22-bf9c-bb0833e8090a": {
+          "progression_name": "計劃你的項目"
+        },
         "875e0e8b-955a-4e86-b112-ec188da3f859": {
           "progression_name": "多視窗動畫"
         },
@@ -4019,6 +4355,9 @@
         },
         "1586b613-84ab-4c64-96cc-2f18a1228596": {
           "progression_name": "教學內容概覽"
+        },
+        "c0b2cd82-e34b-4bbb-8b26-75b03b5635c9": {
+          "progression_name": "CSD U3平臺簡介"
         },
         "576b2ab7-9aa4-4fe8-a151-12dbb21757d3": {
           "progression_name": "平台跳跳人 - 背景與變數"
@@ -4035,6 +4374,9 @@
         "16b79375-6e47-4ee4-8365-b12e696ff9ae": {
           "progression_name": "教學內容概覽"
         },
+        "f21f60a0-e07b-48b7-a2e9-78a0e2dd183d": {
+          "progression_name": "設計你的游戲"
+        },
         "3f841276-73d0-468e-9e93-873549d759db": {
           "progression_name": "專案-背景以及變數"
         },
@@ -4047,6 +4389,10 @@
         },
         "3e00297e-2875-4c9e-bbaa-0fea483933a1": {
           "progression_name": "教學內容概覽"
+        },
+        "82524fd8-6d75-46e4-9cb3-719ff43e17da": {
+          "name": "創新研究",
+          "progression_name": "創新研究"
         },
         "9788e225-92b9-4d11-8bc7-987573ba1b45": {
           "progression_name": "教學內容概覽"
@@ -4149,6 +4495,9 @@
         "a9308f2f-a6fb-4a3a-b4be-6beda7bd9bb9": {
           "progression_name": "範例程式"
         },
+        "4814cffc-6d24-4288-80fe-7747c340b1d0": {
+          "progression_name": "計劃你的項目"
+        },
         "38a9ebbc-121a-48e8-b924-09d0468fa8e2": {
           "progression_name": "畫面設計"
         },
@@ -4163,6 +4512,9 @@
         },
         "0d5acbc8-85f9-4394-b143-e814e96ccf19": {
           "progression_name": "演示 - 錯誤抓取"
+        },
+        "c1f0a8cd-135b-452f-9c9a-ac38cbe0bca0": {
+          "progression_name": "計劃你的項目"
         },
         "cd1e167a-ff9b-4183-aaaf-2fc3cb4ca719": {
           "progression_name": "畫面設計"
@@ -4220,6 +4572,9 @@
         },
         "ffe0d2ab-7af9-4415-8af0-48c88e6a0693": {
           "progression_name": "計次迴圈（For Loops）"
+        },
+        "e8c311fc-2914-40b2-92c0-d15195772399": {
+          "progression_name": "CSD：For迴圈"
         },
         "2b5209d7-f495-4e26-b2af-8b639c085bca": {
           "progression_name": "計次迴圈（For Loops）"
@@ -4279,6 +4634,9 @@
         "aed682ed-9861-4d1d-a9f5-21ee3c69d68d": {
           "progression_name": "教學內容概覽"
         },
+        "b1a2acc2-c14c-46e0-a26d-5a58d5771f98": {
+          "progression_name": "設計你的原型"
+        },
         "a7b965db-8b29-4d31-9094-5ddf16a16dc8": {
           "progression_name": "使用者介面"
         },
@@ -4295,8 +4653,16 @@
         "51ac2647-90fe-443e-a77b-48132f4b7680": {
           "progression_name": "教學內容概覽"
         },
+        "68e9b02b-4cbe-479b-a935-5dbe004f1e73": {
+          "name": "頂級網站",
+          "progression_name": "頂級網站"
+        },
         "812cc4f7-4fec-46e3-900b-807efdf05bda": {
           "progression_name": "教學內容概覽"
+        },
+        "114b3fc3-3b32-4fb0-808b-aa1649d75999": {
+          "name": "範例個人網站",
+          "progression_name": "範例個人網站"
         },
         "a35f53b0-111a-45f1-bfdb-73526ec7ffe5": {
           "progression_name": "教學內容概覽"
@@ -4329,12 +4695,19 @@
         "e504413d-b7a2-436c-b46d-c9235f899699": {
           "progression_name": "標題"
         },
+        "dc573c13-539d-4a16-a222-f64103330c3f": {
+          "progression_name": "編程中的問題解決過程"
+        },
         "d5facfa9-5ab2-48cc-bce2-07f35f1d3fba": {
           "name": "你的個人主頁",
           "progression_name": "你的個人主頁"
         },
         "79b3bea8-73e0-4378-badf-b239d4889c59": {
           "progression_name": "教學內容概覽"
+        },
+        "d710e35d-c4c2-4876-ad44-f97a105ab942": {
+          "name": "社交偵探",
+          "progression_name": "社交偵探"
         },
         "606fd2c3-61a9-4e80-aa77-f524f735061b": {
           "progression_name": "教學內容概覽"
@@ -4383,6 +4756,9 @@
         },
         "c5b718bd-fff4-43a3-b507-2d4584fd69e4": {
           "progression_name": "鏈接頁面"
+        },
+        "cb0106eb-31ae-4c7c-bb6c-00ae7a829cfa": {
+          "progression_name": "項目指南"
         },
         "5b3e0fbb-5198-4d7c-af25-62102d190e8c": {
           "progression_name": "網站專案"
@@ -4504,6 +4880,10 @@
           "name": "反思",
           "progression_name": "反思"
         },
+        "d6cca48b-d77f-47f8-b769-779bcf9b2874": {
+          "name": "第5單元第1課概覽",
+          "progression_name": "第5單元第1課概覽"
+        },
         "f27d38b3-9892-47dd-8bdb-e1442286128d": {
           "name": "教學內容概覽",
           "progression_name": "教學內容概覽"
@@ -4575,6 +4955,17 @@
         "6cbd55ba-116e-493c-8bea-b71096dd0a05": {
           "progression_name": "概覽"
         },
+        "6ac2bf23-0b34-4e13-8023-c8c436048d54": {
+          "name": "蛋糕調查",
+          "progression_name": "蛋糕調查"
+        },
+        "45dd29f0-3c44-4c1c-b881-ec8b1dc8e1cf": {
+          "name": "級別概覽",
+          "progression_name": "級別概覽"
+        },
+        "b62f56a9-77ac-4198-9f78-add3df2dc0c3": {
+          "progression_name": "級別概覽"
+        },
         "4f744a54-0d8b-49a1-8581-fc05cef356c6": {
           "name": "反思",
           "progression_name": "反思"
@@ -4621,6 +5012,9 @@
         "6f8f6475-93f8-4c8d-91e0-258ecf76ac6f": {
           "progression_name": "教學內容概覽"
         },
+        "7e52b764-7b7d-47c6-9291-8a61a9f5cd22": {
+          "progression_name": "示例App類型"
+        },
         "858107cb-9f3a-4a39-a845-057b8c45b744": {
           "name": "展示手機應用程式",
           "progression_name": "展示手機應用程式"
@@ -4640,6 +5034,13 @@
         },
         "ad8ad0ce-2019-4cf1-acca-0dde36b01d55": {
           "progression_name": "完成一個畫面"
+        },
+        "616b0860-b4f6-4565-a269-a1b7539a834b": {
+          "progression_name": "為你的應用設計一個螢幕"
+        },
+        "023b14b7-4298-426c-bbc3-2d60a52f08c1": {
+          "name": "App項目：螢幕設計",
+          "progression_name": "App項目：螢幕設計"
         },
         "8dcb2f89-a876-4734-ae35-72624eb8a806": {
           "progression_name": "教學內容概覽"
@@ -4701,24 +5102,48 @@
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "你可以使用2張便簽紙。在其中一張上面，寫下你今天所學到的一項程式設計內容。\n在另一張上面，寫下你今天所學到的一項詩歌內容。\n\n鼓勵學生們舉手回答問題，與全班同學分享：你希望在接下來的程式設計和電腦科學課程中學習哪些其他知識？"
         },
+        "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
+          "description": "#### 搭建舞臺\n\n歡迎學生來上課，簡單介紹今天的活動。\n\n說：_今天我們要花一個小時在網上玩一些智力遊戲，並學習電腦實驗室的行為規範。_\n這個討論的目的是教學生在進入電腦實驗室時應該期待什麼以及如何行事。"
+        },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            null
+            "-   在教室裏使用平靜的肢體動作\n-   不要嚼口香糖或糖果\n-   對你的手進行消毒\n-   與你的夥伴坐在一臺電腦前\n-   確保第一個 \"司機 \"可以拿到滑鼠\n-   當你感到煩躁時，不要拍打或搖晃電腦或螢幕。\n-   遵循[20/20/20Rule](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35)\n-   如何應對每20-30分鐘一次的[Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll)（需要免費登錄GoNoodle）。\n-   在問老師問題之前先問你的同學\n-   降低音量，以便其他人都能聽到他們的隔壁同學。\n-   用你的筆記來記錄感受和解決方案"
           ]
+        },
+        "aa328958-bd87-4dbb-8585-cb33f905051f": {
+          "description": "**討論：**\n圍繞電腦教室的期望進行良好的討論，以確保學生理解這些規則。一些討論的主題可能包括:\n\n-   在電腦教室裏跑步可以嗎？\n-   當我們在電腦教室裏時，我們應該多大聲地說話？\n-   如果你在某個關卡卡住了，你應該怎麽做？\n-   如果你感到煩躁，拍打電腦會有幫助嗎？\n-   當我們要去電腦教室的時候，我們應該如何準備？"
+        },
+        "95529f90-229b-4ce3-8f92-40528f8a7830": {
+          "description": "#### 預覽線上難題\n\n投影本課中的一個關卡。向全班展示如何點擊圖片並通過拖放將其放置在正確的位置。故意犯一些錯誤，如點擊背景或在圖片放到正確位置之前就把它放下。當你遇到這些問題時，請班上的志願者幫忙。"
         },
         "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
-          "name": "拼圖"
+          "name": "拼圖",
+          "description": "_目標：_這將教會學生如何使用Code.org來完成線上難題。\n\n這個階段的目的是讓學生有機會練習手眼協調、點擊和拖放技能。 學生們還會操練序列。\n\n考慮讓學生分解拖放的步驟，並在黑板上記錄下來。例如：\n\n1.  將箭頭移動到模組。\n2.  點擊並按住滑鼠按鈕。\n3.  移動滑鼠。\n4.  鬆開按鈕。\n\n這樣做將讓學生練習創建一個_演算法_，這是一個將在接下來的課程中探索的概念。"
+        },
+        "3e0ffbe7-276b-4951-8d84-fb5ee9c8092c": {
+          "description": "花一些時間明確地教學生如何點擊、拖放。向學生介紹在做題時將使用的設備語言。如果你有平板電腦，學生們將使用_觸控式螢幕_。如果你有筆記型電腦，他們可能會使用_觸控板_。你可能在機房發現的臺式電腦將依賴於_滑鼠_的使用。"
         },
         "6610529a-20b8-4b76-83d1-1215f72ed51b": {
+          "description": "教師在電腦科學教育中扮演著至關重要的角色，並營造協作和充滿活力的課堂環境。在線上難題中，教師的角色主要是鼓勵和支持。線上難題應該以學生為中心，因此當學生陷入困境時，老師應該避免介入。關於如何做到這一點的一些思路是：",
           "tips": [
-            null
+            "向學生展示幫助同學的正確方法：\n\n-   不要坐在同學的椅子上\n-   不要使用同學的鍵盤\n-   不要碰同學的滑鼠\n-   確保同學在你離開之前能描述出解決方案"
           ]
+        },
+        "66f2f042-aa67-41db-a756-4ab6e5623f77": {
+          "description": "挑戰你的學生完成[Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1)教程。\n\n-   鼓勵有問題/挑戰的學生從問他們的搭檔開始。\n-   未回答的問題可以升級到附近的團隊，他們可能已經知道解決方案。\n-   讓學生描述他們看到的問題。它應該做什麼？它會做什麼的？這說明了什麼？\n-   提醒沮喪的學生，挫折是學習道路上的一步，堅持會有回報。\n-   如果一個學生在所有這些之後仍然卡住，詢問一些引導性問題，讓學生自己發現錯誤。"
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "關卡"
         },
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
-          "name": "反思"
+          "name": "反思",
+          "description": "讓學生寫下或畫出他們所學到的東西或他們完成難題後的感受。\n\n**提示：**\n\n-   你能畫出準備去電腦實驗室的序列嗎?\n-   繪製出電腦實驗室中的“做”和“不做”\n-   繪製和標記你在難題期間點擊和拖動時使用的電腦部件的名稱。（滑鼠按鈕、觸控式螢幕、觸控板）"
+        },
+        "8f47b370-5569-4a34-b105-c765a39c8460": {
+          "description": "給每個學生一張[課堂回饋條](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，請他們總結今天的學習內容、感受或體驗。學生可以用自己喜歡的方式來畫、寫或表達。在學生離開教室時，向每位學生收取「課堂回饋條」。如果你願意，你可以把「課堂回饋條」貼在公告欄或學校的醒目位置，作為「一小時玩程式」的回憶。"
+        },
+        "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
+          "description": "#### 超越「一小時玩程式」活動\n\n在你的「一小時玩程式」結束後，有很多方法可以在你的 K-5 課堂上繼續教授電腦科學。以下是一些點子：\n\n-   講授[代碼工作室電腦科學基礎](http://code.org/educate/k5) 課程。這六門課程是為年輕的學習者設計的。學生們透過一系列的關卡來學習代碼，教育者們可以獲得引人入勝的教案，幫助學生們將學習變得生動起來。Code.org為這些課程提供免費的專業發展，可線上或面授。\n\n-   邀請一位電腦科學專家為您的班級講授他或她的工作。不認識當地的電腦科學家？請在我們的[志工地圖](https://code.org/volunteer/local)上聯繫志工"
         },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "電腦科學探索課後問卷調查",
@@ -4733,13 +5158,15 @@
           ]
         },
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
-          "name": "Sprite Lab 簡介"
+          "name": "Sprite Lab 簡介",
+          "progression_name": "視訊：精靈圖實驗室簡介"
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
           "name": "探索應用程式",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "探索：示例App"
         },
         "1fa1e4c0-3147-4057-8131-07b03520b95e": {
           "name": "反思"
@@ -4759,6 +5186,9 @@
           ],
           "progression_name": "預測"
         },
+        "3eb6f356-a55c-4c86-a056-e8af46058092": {
+          "progression_name": "視訊：如何製作精靈圖"
+        },
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
           "tips": [
             null
@@ -4771,7 +5201,8 @@
         "4e2fcf33-06aa-4650-913e-e2d763d86be7": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "自由發揮：製作一個場景"
         },
         "a594c37e-142d-44f1-93c9-e49ecce1e716": {
           "name": "反思"
@@ -4785,6 +5216,9 @@
           "name": "運行中的角色",
           "progression_name": "預測"
         },
+        "275316f1-8a17-411e-881a-0841ede9cd01": {
+          "progression_name": "視訊：行動的精靈圖"
+        },
         "e242a5f9-7c5a-4b76-b4cd-2ebfde711630": {
           "progression_name": "技能發展"
         },
@@ -4794,7 +5228,8 @@
         "cce54ba1-52f6-48fe-a069-63a50363ec5b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "自由發揮：製作一個互動場景"
         },
         "47bca048-39fb-4014-a480-e21d163469db": {
           "name": "反思"
@@ -4813,14 +5248,23 @@
         "a13d087d-2f1e-4ac7-ae0b-2123e880e772": {
           "progression_name": "探索"
         },
+        "7a07175e-ed69-46f8-a2c0-3f479f3966f8": {
+          "progression_name": "小項目：創建虛擬寵物"
+        },
         "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993": {
           "progression_name": "自由發揮"
         },
         "c2ac88a2-6e26-49e5-a893-c3915816141a": {
           "name": "反思"
         },
+        "06057973-b621-4a48-a991-4f99aafdedca": {
+          "progression_name": "語言的力量 - 離線活動"
+        },
         "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
           "name": "派對遊戲"
+        },
+        "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
+          "progression_name": "視訊：信封中的離線變數"
         },
         "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
           "tips": [
@@ -4839,12 +5283,14 @@
           "name": "檢視"
         },
         "05818b32-90cc-466a-b952-8fcf048e4e5c": {
+          "name": "文字與提示",
           "progression_name": "預測"
         },
         "aae21e24-4a0c-4d8c-aec0-67554766b38f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：文本和提示符"
         },
         "e64a2440-c243-4f49-8181-171a72e38c5c": {
           "tips": [
@@ -4871,7 +5317,8 @@
         "10bfa1b7-62ca-4bb1-93e8-05d661819ca2": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "探索：示例程式"
         },
         "fc1dcb70-576f-4a5e-8407-856ffa7d43a5": {
           "tips": [
@@ -4882,7 +5329,8 @@
         "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "小項目：用戶輸入程式"
         },
         "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3": {
           "name": "介紹"
@@ -4890,8 +5338,14 @@
         "1744b867-c4fe-43e6-9707-050abe0791c5": {
           "name": "以迴圈（Loop）繪畫"
         },
+        "0b7773fb-83ae-4dce-abc3-5cf15ae03aeb": {
+          "progression_name": "視訊：JR Hildebrande的藝術家簡介"
+        },
         "ef504f91-6fca-4859-a960-7e792de6223e": {
           "progression_name": "技能發展"
+        },
+        "4754f929-7c05-4e91-a7e8-39c23f4a7449": {
+          "progression_name": "視訊：藝術家循環"
         },
         "411a2b66-714e-40fe-9636-a184b62c44bf": {
           "progression_name": "技能發展"
@@ -4907,6 +5361,9 @@
         },
         "13122569-6e3b-4fd1-8cbe-226e6fc82d19": {
           "progression_name": "預測"
+        },
+        "114f0276-db5c-466e-ad8a-a6488a93f019": {
+          "progression_name": "視訊：藝術家中的變數"
         },
         "88c99bab-0045-4d56-a8ae-a12f32e2866e": {
           "progression_name": "技能發展"
@@ -4949,7 +5406,8 @@
           "name": "反思"
         },
         "0f9c9b1c-2d56-42f0-a8e5-76ed107c5210": {
-          "name": "有趣的計次迴圈"
+          "name": "有趣的計次迴圈",
+          "progression_name": "快樂For循環 - 離線活動"
         },
         "404887ef-1401-41a7-b88d-c07ab2d119cf": {
           "tips": [
@@ -4978,6 +5436,9 @@
         },
         "1668a313-16da-49db-9713-13d7ad33889e": {
           "progression_name": "檢視"
+        },
+        "aec92f2d-9b44-43b4-a418-3aebaf5af709": {
+          "progression_name": "探索：For循環"
         },
         "671c8e13-e78c-49f3-867b-45e7643d0026": {
           "progression_name": "影片：計次迴圈"
@@ -5036,8 +5497,12 @@
         "de52214d-6afd-4af7-90e5-3e85484e0877": {
           "name": "反思"
         },
+        "b69c8e63-7778-4a44-b127-e4c083af98c9": {
+          "progression_name": "自訂 "
+        },
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
-          "name": "介紹"
+          "name": "介紹",
+          "description": "**討論：**\n\n-   _我們對病毒如何傳播有什麼瞭解？_\n-   _什麼能使病毒在城鎮中傳播得更快？_\n-   _什麼可以説明減緩病毒的傳播？_\n\n此次討論的目的是讓學生有機會啟動之前的知識，並在黑板上看到他們的想法。這也是一個調查關於病毒如何傳播的一些誤解的機會。"
         },
         "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
           "name": "疫情爆發",
@@ -5045,7 +5510,14 @@
           "progression_name": "疫情爆發"
         },
         "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
+          "description": "**這樣做：** 全班閱讀 _歡迎來到怪物城鎮_。",
           "progression_name": "歡迎來到怪物鎮"
+        },
+        "6d584bed-5c82-499c-8ca5-8a02186cad6a": {
+          "description": "**這樣做：**在前一課的基礎上，與學生一起複習詞彙、模型和模擬。模擬是一個過程或系統的電腦模型。"
+        },
+        "8356c629-922b-49f4-937e-b2d471c87ca0": {
+          "description": "_今天，我們將通過編寫一些代碼讓像怪獸城鎮這樣的地方變得生動起來。在這個模擬中，你將使用精靈圖來代表不同的怪物。精靈圖會有不同的服裝，告訴我們他們是生病還是健康。你還將使用行為來讓怪物移動。最後，當兩個精靈圖在螢幕上觸碰時，你將使用事件去改變精靈的服裝。這代表一個怪物把病毒傳染給另一個怪物。你將預測怪物城鎮的鄰居將會發生什麼，並幫助他們恢復健康！_"
         },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "tips": [
@@ -5053,6 +5525,7 @@
           ]
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
+          "description": "**這樣做：**讓學生過渡到他們的電腦，並讓他們開始遵循技能建設部分的每個級別的指導。如果學生提前完成這個部分，他們可以繼續在級別6試驗他們的代碼，直到班級準備好繼續。",
           "progression_name": "技能發展"
         },
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
@@ -5060,29 +5533,46 @@
           "progression_name": "從模擬中學習"
         },
         "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
+          "description": "**這樣做：**讓學生回到電腦，完成剩下的級別。其中有些級別提供可選挑戰。鼓勵學生認真閱讀說明，並用模擬來試驗。",
           "progression_name": "小項目：疫情爆發模擬器"
         },
         "2085bbfe-07e4-4eb4-9830-520e979a04c8": {
           "description": "_模擬是學習現實世界中難以觀察的事物的好方法。模擬可以幫助科學家解決問題，預測如何解決問題，並安全有效地測試新想法。你的模擬是展示怪物城鎮病毒疫情爆發的一種方法。_"
         },
+        "915a5565-ed7e-4c02-812a-fa59ae6e5f4b": {
+          "description": "**討論：**\n\n-   模擬如何在現實世界中發揮作用？\n-   模擬如何幫助我們理解周圍的世界？\n-   類比如何改善我們測試想法的方式？ \n\n討論的目的是讓學生瞭解，模擬是一種以交互模式模擬複雜系統的方法。他們還應該看到模擬如何讓人們快速、廉價和安全地測試想法。"
+        },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
-          "name": "反思"
+          "name": "反思",
+          "description": "**提示：**\n\n-   這個模擬與現實世界有什麼相似之處？有什麼不同？\n-   你想對你的模擬做出什麼改變/添加什麼？"
         },
         "708bfaf4-4547-4c24-87d4-3822f97185b5": {
           "name": "在海洋中使用的 AI",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：人工智慧：什麼是機器學習？"
         },
         "fa4c81ae-8830-49d8-9de9-e5f80a38dac8": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "訓練人工智慧來清潔海洋"
+        },
+        "d717b4b4-f900-425a-9d8d-d2d5866b3470": {
+          "progression_name": "視訊：訓練數據和偏差"
         },
         "86495854-e877-4aea-b9d6-2669b1d2d43b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "訓練數據的使用"
+        },
+        "919543ed-3f8f-4a49-ba9e-c34d0d3cfaa3": {
+          "progression_name": "視訊：對社會的影響"
+        },
+        "833ae7ce-6703-495b-b010-224f0d32134f": {
+          "progression_name": "教人工智慧一個新詞"
         },
         "daee1c13-09e4-4f2f-88c8-d3841869bfcb": {
           "tips": [
@@ -5111,7 +5601,8 @@
           ]
         },
         "3c0ece8c-eca6-4340-9023-7a89cfad4090": {
-          "name": "網際網路"
+          "name": "網際網路",
+          "progression_name": "互聯網 - 離線活動"
         },
         "493a8e83-fba0-45f9-ba46-246524ec3712": {
           "tips": [
@@ -5151,6 +5642,9 @@
         "b240c1ca-bdb8-4b45-80da-5acf76d4ca7b": {
           "description": "如果你的學生已經習慣了編寫代碼概念，可以嘗試讓他們在其他平臺上建立他們的專案，比如 [Scratch](https://scratch.mit.edu/) 或 [Alice](http://www.alice.org/index.php)。"
         },
+        "4c778537-489f-4c5c-913b-38cbf385737c": {
+          "progression_name": "視訊：遵循數字足跡"
+        },
         "0747338b-f02e-459d-b669-3c0f11486ae1": {
           "tips": [
             null
@@ -5160,6 +5654,9 @@
           "tips": [
             null
           ]
+        },
+        "b87acbf5-a0a2-4c86-a344-3fbf143431f6": {
+          "progression_name": "移動它，移動它視訊 - 離線活動"
         },
         "0c64d280-12f6-4d9a-9329-dac1aa620ca5": {
           "name": "移動它，移動它"
@@ -5178,8 +5675,11 @@
         "07f0915c-fd00-4787-8a53-251613824cc8": {
           "name": "迷宮中的循序（Sequence）",
           "tips": [
-            null
+            "向學生展示幫助同學的正確方法：\n\n-   不要坐在同學的椅子上\n-   不要使用同學的鍵盤\n-   不要碰同學的滑鼠\n-   確保同學在你離開之前能描述出解決方案"
           ]
+        },
+        "52466cb4-0b52-4d09-aeb9-7db1a558001e": {
+          "progression_name": "視訊 - 迷宮簡介：使用模組編程"
         },
         "b43821ea-fcde-4389-a55f-285b77e61964": {
           "progression_name": "技能發展"
@@ -5194,6 +5694,9 @@
         },
         "8d4c8d73-6930-4a7f-a73d-3c3312a2705b": {
           "name": "與憤怒鳥一起編程"
+        },
+        "32a0cded-433b-4111-b1a5-8513247d783b": {
+          "progression_name": "視訊：結對編程"
         },
         "a60dc5a3-0c97-439c-86a4-628f733b0916": {
           "progression_name": "技能發展"
@@ -5229,8 +5732,14 @@
             null
           ]
         },
+        "0f52c6dc-5602-4905-a924-f7756676f53f": {
+          "progression_name": "視訊：收穫者"
+        },
         "a54a5ab7-02a5-461d-bdc2-49c946a369d7": {
           "progression_name": "技能發展"
+        },
+        "d02d999e-ab11-4eab-89cc-fc1a1360c3e5": {
+          "progression_name": "視訊：使用步進按鈕調試"
         },
         "9f24e731-b41f-4339-877d-314aa5813f01": {
           "progression_name": "技能發展"
@@ -5243,6 +5752,9 @@
         },
         "95894838-20b0-41ae-801a-5d3326e39e0b": {
           "name": "反思"
+        },
+        "c8fd8e69-c19d-4264-90f8-44bb6909902d": {
+          "progression_name": "視訊：學習循環"
         },
         "018fc5e4-ba55-4049-8faf-bfd0f596e796": {
           "name": "學習迴圈"
@@ -5267,6 +5779,9 @@
         "297c2fd4-5c7e-4e3a-961a-844203b345e4": {
           "progression_name": "技能發展"
         },
+        "a58a0e8a-e277-4309-92c4-990cc99c53b4": {
+          "progression_name": "視訊：重複模組"
+        },
         "67ec9493-9942-4f64-b3dc-8870f4e30fdc": {
           "progression_name": "技能發展"
         },
@@ -5282,8 +5797,14 @@
         "6367a0d2-714f-4845-ab8f-2a350d75a4a9": {
           "name": "介紹"
         },
+        "fe653971-9c18-44ee-adbc-727e8978b387": {
+          "progression_name": "視訊：收集者"
+        },
         "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91": {
           "progression_name": "技能發展"
+        },
+        "9bffbabf-f624-49e2-b54b-52317b420600": {
+          "progression_name": "視訊：使用重複模組"
         },
         "c96009cd-a4d7-491a-9ce5-433a04f9fd08": {
           "progression_name": "技能發展"
@@ -5308,8 +5829,14 @@
             null
           ]
         },
+        "6bf24dc0-0251-49fc-b9d2-04603cbb7a06": {
+          "progression_name": "視訊：代碼工作室中的藝術家"
+        },
         "c2a65792-3f2c-49f9-8cba-8b8f975f5f90": {
           "progression_name": "技能發展"
+        },
+        "efc2a144-0a89-4201-966f-4b4287b12177": {
+          "progression_name": "視訊：藝術家重複模組"
         },
         "c96a7cbe-674b-41b9-b829-a62377a97e1a": {
           "progression_name": "技能發展"
@@ -5329,6 +5856,9 @@
         "4ff7f892-7990-4917-9a54-92ad7d8c2335": {
           "name": "反思"
         },
+        "8c2a2318-b39e-4940-b04a-eb0319ed0d45": {
+          "progression_name": "正確的應用程式 - 離線活動"
+        },
         "804a67da-450d-4514-8c2e-2c9ed196e7c1": {
           "name": "反思"
         },
@@ -5336,7 +5866,8 @@
           "name": "介紹"
         },
         "8e55b7ee-6a8f-41e7-8d5d-9d1465d7fadb": {
-          "name": "大事件"
+          "name": "大事件",
+          "progression_name": "視訊：大事件 - 離線活動"
         },
         "27dbb342-eff9-45e6-b918-88663a10f8a6": {
           "tips": [
@@ -5359,6 +5890,9 @@
         },
         "707682de-e28a-4f30-8033-e5568bc30572": {
           "name": "以事件（Event）展開皇家大戰"
+        },
+        "dd9fba95-8daa-47d3-8c05-3429f3f25b77": {
+          "progression_name": "視訊：劇本實驗室簡介"
         },
         "40e7d1f1-3b7e-4a2f-abd8-43d076a34702": {
           "progression_name": "自由發揮"
@@ -5439,8 +5973,9 @@
           ]
         },
         "2f105d16-8751-4faa-a550-ae4dc2ef5078": {
+          "description": "教師在電腦科學教育中扮演著至關重要的角色，並營造協作和充滿活力的課堂環境。在線上難題中，教師的角色主要是鼓勵和支持。線上難題應該以學生為中心，因此當學生陷入困境時，老師應該避免介入。關於如何做到這一點的一些思路是：",
           "tips": [
-            null
+            "向學生展示幫助同學的正確方法：\n\n-   不要坐在同學的椅子上\n-   不要使用同學的鍵盤\n-   不要碰同學的滑鼠\n-   確保同學在你離開之前能描述出解決方案"
           ]
         },
         "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
@@ -5460,6 +5995,9 @@
             "如果全班開始喊叫，說明你一次只能聽到一個指令。如果有幫助的話，可以點名個別學生。"
           ]
         },
+        "7719a51a-42d9-41f0-bc30-c5475b18af7c": {
+          "progression_name": "視訊：快樂地圖 - 離線活動"
+        },
         "c3cfdbc4-82d5-4717-bf83-22860936a687": {
           "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**玩具地圖**\n\n-   用膠帶在地毯上製作一個跟實物一樣大小的格子，讓學生帶著毛絨動物到學校。\n-   現在，學生們可以按照程式中的指示，給朋友們做程式設計，讓他們把實際的東西搬到程式中去。\n\n**自由創作**\n\n-   讓學生自己製作地圖。\n-   讓其他學生用程式解決它們。\""
         },
@@ -5470,6 +6008,9 @@
         },
         "382f7ddc-c4e7-4674-80b2-e8b7dac7dcf6": {
           "name": "全班預習線上關卡"
+        },
+        "d639c3c7-2708-41eb-afae-cf5a65464fd8": {
+          "progression_name": "視訊：模組編程"
         },
         "30ab6f6d-deb2-4b1c-8974-136be2f6852e": {
           "tips": [
@@ -5487,8 +6028,14 @@
             null
           ]
         },
+        "97ccc4b6-92d5-4c46-94a4-3289d38f068d": {
+          "progression_name": "視訊：結對編程 "
+        },
         "487f446a-7245-403f-827c-e1e94663c256": {
           "progression_name": "技能發展"
+        },
+        "82e3c83d-e33d-4c0f-8767-ed3f153162e2": {
+          "progression_name": "視訊：使用步進按鈕調試"
         },
         "af0d64b6-9076-490e-96b8-b4d56d3dc5c5": {
           "progression_name": "技能發展"
@@ -5514,7 +6061,8 @@
           "name": "介紹"
         },
         "71cf3779-677d-4123-8feb-f4c503c32c3e": {
-          "name": "和 BB-8 與 Rey 一起寫程式"
+          "name": "和 BB-8 與 Rey 一起寫程式",
+          "progression_name": "視訊：與Rey和BB-8一起編程"
         },
         "c32e2a10-753e-4e64-b8b8-82d3f4f1a09c": {
           "progression_name": "技能發展"
@@ -5556,6 +6104,9 @@
         "595fbc1f-baf6-446c-97dd-c89fa67a6baf": {
           "progression_name": "技能發展"
         },
+        "c559cd76-a16e-4361-97c0-f4f4fcdb92b6": {
+          "progression_name": "視訊：冰河世紀循環"
+        },
         "c654e7af-7a96-4f1a-af67-5ee47829f1de": {
           "progression_name": "技能發展"
         },
@@ -5581,8 +6132,14 @@
             null
           ]
         },
+        "74314f07-5f4d-4cd4-8d82-8208d5ce529e": {
+          "progression_name": "視訊：收集者"
+        },
         "aa4a5c66-dcf9-40c9-9200-fa9cac74b945": {
           "progression_name": "技能發展"
+        },
+        "801526d2-4615-4e46-90c1-5e3c08dfe223": {
+          "progression_name": "視訊：使用重複模組"
         },
         "88d2b3e5-c082-46bc-8aad-915f42e9a2f1": {
           "progression_name": "技能發展"
@@ -5605,8 +6162,14 @@
         "13752711-384a-4249-bf95-632d8a8ad185": {
           "name": "海洋場景與迴圈（Loop）"
         },
+        "6d5074a8-2f60-46de-b974-532be01603c4": {
+          "progression_name": "視訊：代碼工作室中的藝術家"
+        },
         "d060bb00-33a3-4049-925e-56db3f7508f7": {
           "progression_name": "技能發展"
+        },
+        "52392151-808b-48cd-a76b-554587d200ec": {
+          "progression_name": "視訊：藝術家中的循環"
         },
         "665ce7fe-d6ac-4c94-ae9c-3e35402d1a36": {
           "progression_name": "技能發展"
@@ -5631,6 +6194,9 @@
         },
         "ac847e89-ccab-4f15-8585-b06d61723c4c": {
           "name": "介紹"
+        },
+        "14f82c4a-fa73-4426-adb6-b32b5f14f3be": {
+          "progression_name": "大事件 - 離線活動"
         },
         "6ffda847-c078-4edf-b7ca-4499b1d9249e": {
           "name": "大事件",
@@ -5663,6 +6229,9 @@
         },
         "d20df183-f25b-45af-ae7c-f80a4405f2d2": {
           "name": "讓事件活動起來"
+        },
+        "c37ca368-ea56-4b4d-a06c-1d2b94516bf8": {
+          "progression_name": "視訊：劇本實驗室簡介"
         },
         "4221ebcd-383b-44bf-a876-41e658bd8460": {
           "progression_name": "自由發揮"
@@ -5708,7 +6277,8 @@
           "description": "以下是你可以提供給學生以加強他們學習的額外資源:\n\n-   [Family Activity](https://drive.google.com/open?id=1tsYWY76Y9BJpl_mHcxb0-BiLIHL2PrGBt3GqeeBNAD8) \n-   [Family Tips](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)"
         },
         "8ca4dc30-75b2-408b-a475-bb57fd296c23": {
-          "name": "我的機器人朋友"
+          "name": "我的機器人朋友",
+          "progression_name": "我的機器人朋友 - 離線活動"
         },
         "92835cd7-aad8-4ff9-8fbb-cdd1ffb21c96": {
           "tips": [
@@ -5734,6 +6304,9 @@
           "tips": [
             null
           ]
+        },
+        "1141cba9-b65b-47c7-ac7d-59d2f06b5318": {
+          "progression_name": "視訊：迷宮簡介 - 使用模組編程 "
         },
         "1ebd42df-a302-418a-be1e-6bbca930cedf": {
           "progression_name": "技能發展"
@@ -5765,6 +6338,9 @@
         "7b8e1781-6014-4299-b635-4dfc5639acb7": {
           "name": "在迷宮中除錯"
         },
+        "572ba4a8-86d4-4aca-9398-b1d9c44ae669": {
+          "progression_name": "視訊：使用步進按鈕調試"
+        },
         "9b6832e5-f80f-4baa-9049-48d9526443ba": {
           "progression_name": "技能發展"
         },
@@ -5795,6 +6371,9 @@
         "e2aaa332-2426-4380-b14b-cd681477be54": {
           "name": "和 Laurel 一起收集寶石"
         },
+        "1cecd624-a69a-4e47-9a4b-066f9b8ff31d": {
+          "progression_name": "視訊：收集者"
+        },
         "e79bc3de-623c-4238-bdd7-6a6128f79ff8": {
           "progression_name": "技能發展"
         },
@@ -5822,6 +6401,9 @@
         "3861a12f-7e0f-43bf-8d29-1d526a2c90b2": {
           "name": "用代碼創作藝術"
         },
+        "e054a7d9-9c28-49d4-886f-e9fd771d378e": {
+          "progression_name": "視訊：JR Hildebrand的藝術家簡介"
+        },
         "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65": {
           "progression_name": "技能發展"
         },
@@ -5844,7 +6426,8 @@
           "name": "反思"
         },
         "8896c62b-c73c-43f8-89c3-3def6c89d7bf": {
-          "name": "我的愛迴圈機器人朋友"
+          "name": "我的愛迴圈機器人朋友",
+          "progression_name": "我的循環機器人朋友 - 離線活動"
         },
         "5e5453a7-f35f-458a-9831-b7c7b7f0fde1": {
           "tips": [
@@ -5861,13 +6444,17 @@
           "name": "全班預習線上關卡"
         },
         "16139473-0792-46d6-b8f8-77c79ceead5c": {
-          "name": "和 BB-8 與 Rey 一起練習迴圈（Loop）"
+          "name": "和 BB-8 與 Rey 一起練習迴圈（Loop）",
+          "progression_name": "視訊：與Rey和BB-8一起編程"
         },
         "aadcbed9-b15e-4fcb-b277-fd1c8156270e": {
           "progression_name": "技能發展"
         },
         "cc9ef036-2cca-4863-b922-284a995c38b7": {
           "progression_name": "預測"
+        },
+        "adc69f16-8ed9-4265-b368-4a8e99c56aa5": {
+          "progression_name": "視訊：BB-8重複模組"
         },
         "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
           "progression_name": "技能發展"
@@ -5897,7 +6484,8 @@
           "name": "介紹"
         },
         "61416522-3272-4f4f-9fa9-6ab21de140ad": {
-          "name": "使用迴圈（Loop）收割農作物"
+          "name": "使用迴圈（Loop）收割農作物",
+          "progression_name": "視訊：收穫者"
         },
         "2f87a826-1460-4d5c-9db3-47911c77a56a": {
           "progression_name": "技能發展"
@@ -5929,6 +6517,9 @@
             null
           ]
         },
+        "0e769463-817e-4432-be93-87047256d015": {
+          "progression_name": "小項目：貼紙藝術"
+        },
         "9af30f82-82cd-4807-9609-900519e17c43": {
           "progression_name": "自由發揮"
         },
@@ -5939,7 +6530,8 @@
           "name": "詞彙"
         },
         "3eb5f296-9713-4bdb-8dd8-a77dc07cb4e5": {
-          "name": "大事件"
+          "name": "大事件",
+          "progression_name": "大事件 - 離線活動"
         },
         "67fb7588-f699-4cf5-9a67-065456c6baee": {
           "tips": [
@@ -5964,7 +6556,8 @@
           "name": "介紹"
         },
         "64988ef3-1287-4486-9d41-cd475637575b": {
-          "name": "製作像素鳥遊戲"
+          "name": "製作像素鳥遊戲",
+          "progression_name": "視訊：製作你自己的像素鳥遊戲"
         },
         "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
           "progression_name": "技能發展"
@@ -5991,6 +6584,12 @@
           "tips": [
             null
           ]
+        },
+        "e8c36f82-146f-40bd-a83c-0f0d9fac33d0": {
+          "progression_name": "視訊：劇本實驗室簡介"
+        },
+        "55ade85d-fedf-4c9d-9046-4d1e6d813638": {
+          "progression_name": "技能發展"
         },
         "a0c869e7-3fa2-4bec-8fa4-56daf0261d2d": {
           "progression_name": "小專案: 西洋棋遊戲"
@@ -6023,7 +6622,8 @@
           "name": "介紹"
         },
         "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d": {
-          "name": "二進制手環"
+          "name": "二進制手環",
+          "progression_name": "二進制手鐲 - 離線活動"
         },
         "9ef02596-61a9-4eee-b8b5-db290a9721d0": {
           "tips": [
@@ -6054,6 +6654,9 @@
             null
           ]
         },
+        "1c65a4a2-b069-4b30-b733-a80c5081f8e3": {
+          "progression_name": "探索：示例項目"
+        },
         "8bc8bad1-8150-46ce-bf97-0d368dafd6ef": {
           "progression_name": "專案"
         },
@@ -6061,7 +6664,8 @@
           "name": "介紹"
         },
         "0cafd30f-53e4-45fb-96c0-767858add851": {
-          "name": "方格紙編程"
+          "name": "方格紙編程",
+          "progression_name": "方格紙編程 - 離線活動"
         },
         "60f32afa-e8e8-44c3-87d0-2aff20a74a1c": {
           "tips": [
@@ -6085,6 +6689,9 @@
             null
           ]
         },
+        "c54ece34-6ca8-4a97-a431-8513386bf6a7": {
+          "progression_name": "視訊：迷宮簡介：使用模組編程"
+        },
         "b76a05a9-cfc1-405a-a3f7-3a646200f34d": {
           "progression_name": "技能發展"
         },
@@ -6103,7 +6710,8 @@
           ]
         },
         "3b65cbfa-b176-412f-abd3-357bc1a825ab": {
-          "name": "接力編程"
+          "name": "接力編程",
+          "progression_name": "接力編程 - 離線活動"
         },
         "57f59aa8-2f36-4383-9997-f4a4aed29aea": {
           "tips": [
@@ -6118,6 +6726,9 @@
         },
         "2fb45914-1afa-4483-8fb0-e3e3503fa80b": {
           "name": "和 Laurel 學除錯（Debug）"
+        },
+        "a3c8ba66-a991-45a4-a743-59b4a41ebb24": {
+          "progression_name": "視訊：使用步進按鈕調試"
         },
         "0fee56da-4a47-490c-b500-a54be824f01c": {
           "progression_name": "技能發展"
@@ -6135,7 +6746,8 @@
           "name": "介紹"
         },
         "3fea7621-ed7a-4f12-852d-ccc7768ce6db": {
-          "name": "彈板遊戲中的事件（Event）"
+          "name": "彈板遊戲中的事件（Event）",
+          "progression_name": "技能發展"
         },
         "57c05fc2-b193-48bc-ac4e-a6ad469f6abb": {
           "progression_name": "自由發揮"
@@ -6160,7 +6772,8 @@
           ]
         },
         "3f3c741a-dfe0-4288-80b7-338162743216": {
-          "name": "創建一個星際大戰遊戲！"
+          "name": "創建一個星際大戰遊戲！",
+          "progression_name": "視訊：星球大戰項目"
         },
         "72b1888f-765e-42c0-bccc-0e32a5724f40": {
           "progression_name": "技能發展"
@@ -6179,14 +6792,26 @@
             null
           ]
         },
+        "07d81a89-c42f-4e92-90cf-a745cd0196d8": {
+          "progression_name": "視訊：熱身"
+        },
         "09a6a786-084e-4677-a2cf-3306ef1a6e83": {
           "progression_name": "練習"
+        },
+        "f88c59b4-e502-4301-9ec4-221b7a85b350": {
+          "progression_name": "視訊：事件"
         },
         "da9ffffb-f192-44c2-86e8-1fe7d4de71c9": {
           "progression_name": "事件"
         },
+        "3dbac671-c428-479f-8a2b-301d4a5578e5": {
+          "progression_name": "視訊：測量"
+        },
         "41bca090-a4b2-4019-b05e-3b3b3b0cca14": {
           "progression_name": "小節"
+        },
+        "1790551e-be1b-4e39-8725-ab4ed96c2743": {
+          "progression_name": "視訊：屬性"
         },
         "d3f08051-43ee-48aa-9154-f8b1f21a486f": {
           "progression_name": "屬性"
@@ -6195,6 +6820,9 @@
           "tips": [
             null
           ]
+        },
+        "19a261df-276b-4f57-98db-a694c8dc0b40": {
+          "progression_name": "視訊：總結"
         },
         "248f398f-18b7-4f09-a251-8d119f3c167d": {
           "progression_name": "自由發揮"
@@ -6218,6 +6846,9 @@
         "dad54c78-6c91-4ba8-bb15-eff5861db842": {
           "progression_name": "技能發展"
         },
+        "4c88ec45-b2cb-4b4d-88de-2d676d507722": {
+          "progression_name": "視訊：使用重複模組"
+        },
         "1d8def71-6e6f-417d-bf76-bf420f509e2b": {
           "progression_name": "技能發展"
         },
@@ -6239,10 +6870,14 @@
           "name": "介紹"
         },
         "2517dd9e-f281-4db3-9cc8-07dc533add33": {
-          "name": "以迴圈（Loop）繪畫藝術作品"
+          "name": "以迴圈（Loop）繪畫藝術作品",
+          "progression_name": "視訊：JR Hildebrand的藝術家簡介"
         },
         "1aa2fcd6-f059-4ee1-9d5b-03653ad98460": {
           "progression_name": "技能發展"
+        },
+        "7555f521-9ab5-4e7c-901a-4386914f5ae1": {
+          "progression_name": "視訊：藝術家循環"
         },
         "1d0954f1-dbad-49b1-b3f3-19b4273adeac": {
           "progression_name": "技能發展"
@@ -6264,6 +6899,9 @@
         },
         "7fe86b33-56e5-43a2-bbd8-760d477b6ee1": {
           "progression_name": "技能發展"
+        },
+        "77b85e56-dc72-45d6-8d17-cd2073e74560": {
+          "progression_name": "視訊：蜜蜂巢狀迴圈"
         },
         "8c793bd1-bbbf-415c-ab5b-12d502b5f39f": {
           "progression_name": "預測"
@@ -6290,7 +6928,8 @@
           "name": "介紹"
         },
         "721db2fe-1035-40b0-a9a6-e1fae1e2edbd": {
-          "name": "用撲克牌學習條件判斷（Conditionals）"
+          "name": "用撲克牌學習條件判斷（Conditionals）",
+          "progression_name": "使用卡片的條件語句 - 離線活動"
         },
         "4a483f91-af16-44dc-982f-c62424c8d5ec": {
           "name": "反思",
@@ -6326,11 +6965,17 @@
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
           "name": "與小蜜蜂一起嘗試 If/Else（如果/否則）"
         },
+        "ca607451-3bb5-4aea-bca0-efd3fed0c6be": {
+          "progression_name": "視訊：條件運算式：IF語句"
+        },
         "f1f109b3-a855-40c1-b062-66f433dee5e8": {
           "progression_name": "預測"
         },
         "39678b81-ac0a-4d3a-a2b9-f244e7de7eeb": {
           "progression_name": "技能發展"
+        },
+        "e50811f9-8d07-4737-841d-ae3ebf402649": {
+          "progression_name": "視訊：條件運算式：IF和If/Else語句"
         },
         "3f6678b5-e568-42f2-a629-56defb6374fe": {
           "progression_name": "技能發展"
@@ -6362,6 +7007,9 @@
         "05e52524-87c5-4ce3-92ce-5d351618bc3f": {
           "progression_name": "技能發展"
         },
+        "5b71ce88-2e79-4478-888a-796bed9dacb9": {
+          "progression_name": "視訊：農民While迴圈"
+        },
         "87c83177-38ac-4fc9-b6a7-ef90a1a4d321": {
           "progression_name": "預測"
         },
@@ -6389,6 +7037,9 @@
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
           "name": "迷宮裡的 until（直到）迴圈",
           "progression_name": "技能發展"
+        },
+        "b7917167-64a0-4090-b00a-1159a7235352": {
+          "progression_name": "視訊：“重複直到”語句"
         },
         "6ba7d996-6da1-49e6-a73a-924609f4e472": {
           "progression_name": "預測"
@@ -6438,7 +7089,8 @@
           "name": "與憤怒鳥一起編程",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：迷宮簡介 - 使用模組編程"
         },
         "65c4bba2-442b-4e0d-9264-aa5cb72e80e7": {
           "progression_name": "技能發展"
@@ -6473,6 +7125,9 @@
         "a253c018-c2ce-4147-a5a4-24db47788f78": {
           "name": "與鼠奎特一起除錯"
         },
+        "33b2c6a8-031f-4fc3-b4aa-d3712abcf111": {
+          "progression_name": "視訊：與鼠奎特調試"
+        },
         "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94": {
           "progression_name": "技能發展"
         },
@@ -6503,6 +7158,9 @@
         "44711c15-152c-4e84-9eca-d87c42edd4a8": {
           "name": "和 Laurel 一起收集寶石"
         },
+        "ea56a346-7c58-4d03-a5bc-aa4021627e22": {
+          "progression_name": "視訊：收集者"
+        },
         "0474e6b4-d8ed-450d-a6ac-49d35b6d8872": {
           "progression_name": "技能發展"
         },
@@ -6529,6 +7187,9 @@
         },
         "9594ae73-93bc-4660-aa85-9346451fdf4a": {
           "name": "用代碼創作藝術"
+        },
+        "c01e356b-bb48-45a6-bf67-5bcb3d959cc1": {
+          "progression_name": "視訊：JR Hildebrand的藝術家簡介"
         },
         "d9b1cf39-8041-44b2-a8f8-a2e396647ab2": {
           "progression_name": "技能發展"
@@ -6565,11 +7226,17 @@
             null
           ]
         },
+        "af6b778e-d5bf-4e72-bc11-ac8f839bf656": {
+          "progression_name": "視訊：精靈圖實驗室簡介"
+        },
         "cc4cf469-32ea-4a00-9080-7726f48f08c6": {
           "progression_name": "預測"
         },
         "90de173c-642d-4906-a7fe-c3d9ad3123ec": {
           "progression_name": "技能發展"
+        },
+        "d1a6e3d2-6cc4-4231-a51d-92291b64b2bb": {
+          "progression_name": "視訊：如何製作精靈圖"
         },
         "a8372901-5a6f-40c1-88ec-bf6c62c79c95": {
           "progression_name": "練習"
@@ -6590,11 +7257,17 @@
           ],
           "progression_name": "預測"
         },
+        "60d05bd8-d452-4ff7-8d42-afc78df62133": {
+          "progression_name": "視訊：如何製作精靈圖"
+        },
         "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
           "progression_name": "技能發展"
         },
         "8fd35c57-6015-4e9b-97cd-a8ade679fe05": {
           "progression_name": "練習"
+        },
+        "676dfae2-cb99-4395-a262-f61ed61a3d28": {
+          "progression_name": "自由發揮：製作一個場景"
         },
         "a35138b5-f6fc-4fac-9a73-991bed07f6d1": {
           "name": "反思"
@@ -6608,11 +7281,17 @@
           "name": "運行中的角色",
           "progression_name": "預測"
         },
+        "456f3d6e-f3ff-4217-9ff9-891d66f8f18f": {
+          "progression_name": "視訊：行動的精靈圖"
+        },
         "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
           "progression_name": "技能發展"
         },
         "25d274b2-36a3-49fc-8646-93275a5162a0": {
           "progression_name": "練習"
+        },
+        "482633ae-1c8c-4ca2-b44b-ba150352c610": {
+          "progression_name": "自由發揮：製作一個互動場景"
         },
         "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b": {
           "name": "反思"
@@ -6631,26 +7310,44 @@
         "6e424d72-bab8-46a2-8a4c-8e9b9bfa8e85": {
           "progression_name": "探索"
         },
+        "bee07420-6a4f-4f4f-9058-c651486b7b38": {
+          "progression_name": "小項目：創建虛擬寵物"
+        },
         "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4": {
           "progression_name": "自由發揮"
         },
         "8970ddea-49ba-429a-9607-6239c33e06be": {
           "name": "反思"
         },
+        "3784bbbc-0c26-4337-9d77-805b9a2bb6ae": {
+          "progression_name": "視訊：舞會派對熱身"
+        },
         "5283ba21-7c54-44c0-a4c2-00c1f5d240e6": {
           "progression_name": "練習"
+        },
+        "1a057037-bf26-4ab2-830f-80a5d94f87c7": {
+          "progression_name": "視訊：舞蹈派對事件"
         },
         "0200789e-428c-4393-84ee-6c7a48948c36": {
           "progression_name": "事件"
         },
+        "ec1bf1ca-d9d0-41e3-8234-638ae029834d": {
+          "progression_name": "視訊：舞會派對節拍"
+        },
         "1e1080ab-15de-4319-9e76-f6c99f8ebe60": {
           "progression_name": "小節"
+        },
+        "5d59e7e4-25f4-4278-b777-878c7df2681b": {
+          "progression_name": "視訊：舞會派對屬性"
         },
         "7e0f9f67-19cb-455a-bd75-d771183b8773": {
           "tips": [
             null
           ],
           "progression_name": "屬性"
+        },
+        "97583afa-79d7-487a-a962-9366e1d17bba": {
+          "progression_name": "視訊：舞會派對開啟！"
         },
         "86741327-b7d6-4dfb-b703-f23be6b2a7dc": {
           "progression_name": "自由發揮"
@@ -6665,13 +7362,17 @@
           "name": "介紹"
         },
         "2bb620b7-6107-4b46-b717-117c20503ef0": {
-          "name": "和 BB-8 與 Rey 一起練習迴圈（Loop）"
+          "name": "和 BB-8 與 Rey 一起練習迴圈（Loop）",
+          "progression_name": "視訊：與Rey和BB-8一起編程"
         },
         "0602dbde-3014-45cc-86b7-b36ec9ca04af": {
           "progression_name": "練習"
         },
         "63ea23b9-ceb6-4e5a-b795-000673bca7d9": {
           "progression_name": "預測"
+        },
+        "d7c1115e-9c85-40fc-a0f8-10f6c715a292": {
+          "progression_name": "視訊：BB-8重複模組"
         },
         "f62e3109-74fd-45b6-b335-059ef71dc3c3": {
           "progression_name": "技能發展"
@@ -6723,6 +7424,9 @@
         },
         "e2b26151-70bf-4a9d-b08a-28a0efffd9e0": {
           "progression_name": "練習"
+        },
+        "e7851e33-7e57-47f2-96c2-bfb177d83303": {
+          "progression_name": "視訊：蜜蜂巢狀迴圈"
         },
         "6d0c65ec-45f6-4665-a5a0-89e06fa22ca1": {
           "progression_name": "預測"
@@ -6780,11 +7484,17 @@
         "22580642-ad9a-48f6-9ad6-8693e42ed9d3": {
           "name": "與小蜜蜂一起嘗試 If/Else（如果/否則）"
         },
+        "c622f540-96a1-4448-9a80-18850f23abdd": {
+          "progression_name": "視訊：條件運算式：IF語句"
+        },
         "d8adccb1-7876-4c08-9ece-7fb8c7f9873f": {
           "progression_name": "預測"
         },
         "2c223051-9787-4ae5-afb2-c999300ee231": {
           "progression_name": "技能發展"
+        },
+        "de68c7d7-06ea-4aca-b533-5e0644760022": {
+          "progression_name": "視訊：條件運算式：IF和If/Else語句"
         },
         "431e814c-2fdb-4385-ac49-7a3ad70c8411": {
           "progression_name": "技能發展"
@@ -6816,6 +7526,9 @@
         "23b4fc9a-484e-482b-856b-cb48acb73dcb": {
           "progression_name": "技能發展"
         },
+        "2094fb7f-31a7-4639-be69-0baf39649007": {
+          "progression_name": "視訊：農民While迴圈"
+        },
         "3bcc5818-64c5-43b1-b0c3-44535e842497": {
           "progression_name": "預測"
         },
@@ -6841,16 +7554,26 @@
           "name": "介紹"
         },
         "59ec2b50-dbdf-4df1-9593-1bb961c5edd8": {
-          "name": "Minecraft 中的條件式：水上巡航 "
+          "name": "Minecraft 中的條件式：水上巡航 ",
+          "progression_name": "視訊：我的世界：水上航行簡介"
         },
         "0c1c356b-b51e-49e9-902a-9bb743c4acbc": {
           "progression_name": "技能發展"
         },
+        "662c896c-c495-45ba-9fdd-2b0f1f575804": {
+          "progression_name": "視訊：我的世界：水上航行“重複直到”"
+        },
         "ebbb5af1-a268-4256-a63b-a179d5813d8d": {
           "progression_name": "技能發展"
         },
+        "95865f7b-83c4-47e1-af6f-af1800541434": {
+          "progression_name": "視訊：我的世界：水上航行條件運算式"
+        },
         "e7ee7550-aa29-42ad-8be2-a126b7919fb4": {
           "progression_name": "技能發展"
+        },
+        "8b0a5467-42bc-4347-a75e-e9047751ce56": {
+          "progression_name": "視訊：我的世界：水上航行賀詞"
         },
         "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
           "progression_name": "自由發揮"
@@ -6864,6 +7587,9 @@
         "3fabd283-0831-412f-8a9f-76e9bf96206f": {
           "name": "迷宮裡的 until（直到）迴圈",
           "progression_name": "技能發展"
+        },
+        "2860b3ce-f715-47f5-87e7-dac20f46d6ca": {
+          "progression_name": "視訊：“重複直到”語句"
         },
         "a45d0ea2-26ce-41c6-9128-3833b39cb233": {
           "progression_name": "預測"
@@ -6887,7 +7613,8 @@
           "name": "介紹"
         },
         "26679730-3364-4598-abd8-b07e9d9f9ad9": {
-          "name": "使用條件式（Conditional）收割農作物"
+          "name": "使用條件式（Conditional）收割農作物",
+          "progression_name": "視訊：使用條件運算式收穫"
         },
         "38760d27-fbe5-48c9-bd46-2b7eeac81ca2": {
           "progression_name": "技能發展"
@@ -6920,16 +7647,26 @@
           "name": "Minecraft 中的函式",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：我的世界 - 吉祥物"
         },
         "b891b55a-2a7e-486c-ba28-957df49ac0e6": {
           "progression_name": "技能發展"
         },
+        "d6f5eb3b-e998-4865-88d4-35c8381a7739": {
+          "progression_name": "視訊：我的世界 - 重複循環"
+        },
         "08364a41-ef59-40a4-b3ec-e55ca40c2e6f": {
           "progression_name": "技能發展"
         },
+        "d76b4004-1ad8-425d-9748-b84512b06b9d": {
+          "progression_name": "視訊：我的世界 - 函數"
+        },
         "f05f4ec1-71a1-4e00-8d93-935c6f47e01d": {
           "progression_name": "技能發展"
+        },
+        "467dc80b-fcf1-48ff-8b74-74aa00c9ed26": {
+          "progression_name": "視訊：我的世界 - 賀詞"
         },
         "91e51520-32ea-4e43-bc6e-603cf76a7d22": {
           "progression_name": "自由發揮"
@@ -6975,6 +7712,9 @@
         "d505ce63-802f-4f28-bc12-8274cd540d14": {
           "progression_name": "練習"
         },
+        "71b53163-3232-430a-8938-6d5970ebab4b": {
+          "progression_name": "視訊：如何創建一個簡單的函數"
+        },
         "5619c140-6a05-4901-a98c-98b0ab9e1424": {
           "progression_name": "練習"
         },
@@ -6994,12 +7734,14 @@
           "name": "檢視"
         },
         "e7833677-6e13-40dc-9e36-56388378828d": {
+          "name": "文字與提示",
           "progression_name": "預測"
         },
         "79cc55bf-53a8-463c-b4dc-86cc8651587a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：文本和提示符"
         },
         "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
           "tips": [
@@ -7021,6 +7763,9 @@
         },
         "b270733d-2d48-4470-a0e4-7a805255d765": {
           "progression_name": "預測"
+        },
+        "536186e7-e25b-4cd2-b93e-27b935a8f69c": {
+          "progression_name": "視訊：藝術家中的變數"
         },
         "79a73c29-5877-4ffc-8570-fad97926f939": {
           "progression_name": "技能發展"
@@ -7049,6 +7794,9 @@
         },
         "50cc68cf-605b-42e3-a882-bc77e7933f8b": {
           "progression_name": "檢視"
+        },
+        "7d22dea9-9b88-47a4-a697-1c836bf6f2e5": {
+          "progression_name": "探索：For循環"
         },
         "387d8104-557d-4700-bdef-2c8ea2855b07": {
           "progression_name": "影片：計次迴圈"
@@ -7106,6 +7854,10 @@
             null
           ]
         },
+        "b4d55ac7-44a4-4551-89ca-9fce880121ac": {
+          "name": "示例項目",
+          "progression_name": "示例項目"
+        },
         "3d53701a-e90f-4938-977a-ca8ee2584163": {
           "name": "創建你的專案",
           "progression_name": "創建你的專案"
@@ -7130,8 +7882,9 @@
           ]
         },
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
+          "description": "教師在電腦科學教育中扮演著至關重要的角色，並營造協作和充滿活力的課堂環境。在線上難題中，教師的角色主要是鼓勵和支持。線上難題應該以學生為中心，因此當學生陷入困境時，老師應該避免介入。關於如何做到這一點的一些思路是：",
           "tips": [
-            null
+            "向學生展示幫助同學的正確方法：\n\n-   不要坐在同學的椅子上\n-   不要使用同學的鍵盤\n-   不要碰同學的滑鼠\n-   確保同學在你離開之前能描述出解決方案"
           ]
         },
         "bde027df-b2a3-4252-980a-7e8493d898e6": {
@@ -7152,8 +7905,11 @@
         },
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
           "tips": [
-            null
+            "向學生展示幫助同學的正確方法：\n\n-   不要坐在同學的椅子上\n-   不要使用同學的鍵盤\n-   不要碰同學的滑鼠\n-   確保同學在你離開之前能描述出解決方案"
           ]
+        },
+        "1ed021eb-9033-4d39-98d7-e9e245a7f785": {
+          "progression_name": "視訊：模組編程"
         },
         "0394c5d4-246e-42bc-aca2-97d7bd159173": {
           "progression_name": "技能發展"
@@ -7189,7 +7945,8 @@
           "name": "介紹"
         },
         "5ff6bd4a-2e05-4098-80a6-5e011fa70518": {
-          "name": "和 BB-8 與 Rey 一起寫程式"
+          "name": "和 BB-8 與 Rey 一起寫程式",
+          "progression_name": "視訊：與Rey和BB-8一起編程"
         },
         "3ea0d264-5395-49ba-8d4a-822734bcc3e2": {
           "progression_name": "技能發展"
@@ -7214,8 +7971,14 @@
             null
           ]
         },
+        "45d59019-4dd4-4a32-b08c-fd79528eab76": {
+          "progression_name": "視訊：收穫者"
+        },
         "7675abfe-e572-4b1b-9203-ac0c1e6c3407": {
           "progression_name": "技能發展"
+        },
+        "629aedef-bd99-44af-a6bc-9ee890a1c7c8": {
+          "progression_name": "視訊：使用步進按鈕調試"
         },
         "1dae474b-e6aa-4934-b8f8-e8521eadb593": {
           "progression_name": "技能發展"
@@ -7245,6 +8008,9 @@
         "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
           "progression_name": "技能發展"
         },
+        "eb340c7e-d71e-49fb-aaf8-73205f85d432": {
+          "progression_name": "視訊：冰河世紀循環"
+        },
         "ff9ff779-b617-4ae3-80c1-db23e1b9c27b": {
           "progression_name": "技能發展"
         },
@@ -7263,8 +8029,14 @@
         "96d62dea-f1ff-46d9-a889-5ef9848c0acf": {
           "name": "與 Laurel 一起學習迴圈"
         },
+        "c3e95f81-dafa-4791-9bf4-1cc0d418b4e3": {
+          "progression_name": "視訊：收集者"
+        },
         "9aa00264-eca7-4093-92fb-60d301554a5b": {
           "progression_name": "技能發展"
+        },
+        "dead7fa5-406d-419c-a084-3a913cbd2499": {
+          "progression_name": "視訊：使用重複模組"
         },
         "08049c61-d346-4c06-96f3-58775b4bf69d": {
           "progression_name": "技能發展"
@@ -7292,8 +8064,14 @@
             null
           ]
         },
+        "7ccc621e-43b3-4402-a0cc-c626dfa1ea79": {
+          "progression_name": "視訊：代碼工作室中的藝術家"
+        },
         "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab": {
           "progression_name": "技能發展"
+        },
+        "eabc47c6-9f94-4b32-aab1-4a138064532b": {
+          "progression_name": "視訊：藝術家中的循環"
         },
         "94271c9b-4000-4e8c-a99c-9a04d851549e": {
           "progression_name": "技能發展"
@@ -7352,6 +8130,9 @@
         "6c8d4815-0e66-45fd-980a-dacf20015a66": {
           "name": "讓事件活動起來"
         },
+        "dbb4fe5e-fe4d-40d4-8509-c11f826128ae": {
+          "progression_name": "視訊：劇本實驗室簡介"
+        },
         "708df6be-8599-4a1a-993b-13ca6e874d5c": {
           "progression_name": "自由發揮"
         },
@@ -7394,6 +8175,9 @@
         "716d5ed4-f198-4133-806e-dddeba48f571": {
           "name": "介紹"
         },
+        "9a413780-6d7b-4341-9041-e8a1e3f540b6": {
+          "progression_name": "遵循演算法 - 離線活動"
+        },
         "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
           "name": "反思",
           "tips": [
@@ -7416,11 +8200,17 @@
             null
           ]
         },
+        "331e6451-5472-4491-bf96-d630d7f902a4": {
+          "progression_name": "視訊：精靈圖實驗室簡介"
+        },
         "75de5d52-becb-4805-82d8-5be30d0dca7d": {
           "progression_name": "預測"
         },
         "56aebeea-5b5c-4acd-838c-2906fbf5700d": {
           "progression_name": "技能發展"
+        },
+        "d344a21b-2267-48e7-9b27-b3fe923209e9": {
+          "progression_name": "視訊：如何製作精靈圖"
         },
         "30997374-8929-4152-b55b-94e459e3ee58": {
           "progression_name": "練習"
@@ -7443,6 +8233,9 @@
         "96bbba0e-e5f3-443f-b2c6-f228953a7b98": {
           "progression_name": "預測"
         },
+        "1620d22b-10cf-4c91-bb52-cda64a75b666": {
+          "progression_name": "視訊：行動的精靈圖"
+        },
         "5661328f-256c-4f27-988b-ea102fde1cbd": {
           "progression_name": "技能發展"
         },
@@ -7455,6 +8248,9 @@
         "fd74ff7a-4b6f-42d4-99ea-63fdf9036656": {
           "name": "反思"
         },
+        "c350027b-7b9e-4782-af88-dc1015043bac": {
+          "progression_name": "做超級數字公民"
+        },
         "e8b26a8a-533e-40fc-820c-2c9b5269a1e1": {
           "name": "介紹"
         },
@@ -7462,6 +8258,9 @@
           "tips": [
             null
           ]
+        },
+        "0b71a326-8b01-4631-8781-efedc2cd6d07": {
+          "progression_name": "探索：Rikki的海報"
         },
         "2e6aa365-ef8d-4f04-8a5e-fcc6bb53bc1d": {
           "progression_name": "關於我"
@@ -7475,7 +8274,8 @@
           ]
         },
         "bba24018-1d90-4a18-b596-eaab2e50567e": {
-          "name": "數位分享"
+          "name": "數位分享",
+          "progression_name": "數字分享 - 離線活動"
         },
         "7d8c55c5-c431-4f24-8823-f9c8e13bc085": {
           "tips": [
@@ -7489,10 +8289,14 @@
           "name": "介紹"
         },
         "c0191294-55c5-47ec-a80d-76f9023bd84e": {
-          "name": "以迴圈（Loop）繪畫"
+          "name": "以迴圈（Loop）繪畫",
+          "progression_name": "視訊：JR Hildebrande的藝術家簡介"
         },
         "257e3a1f-5cc5-444e-94e3-ee18c5d7169e": {
           "progression_name": "技能發展"
+        },
+        "feae9d15-9fcd-46f6-a25e-7cb50d4a776c": {
+          "progression_name": "視訊：藝術家循環"
         },
         "6d3e5d46-a1c6-420d-a4ad-7d6af12d9dbb": {
           "progression_name": "技能發展"
@@ -7522,6 +8326,9 @@
         },
         "35342825-ca7b-4305-b02a-365e6095e8f6": {
           "progression_name": "技能發展"
+        },
+        "1768d4b3-853f-4f6a-ba24-6a174b345dbf": {
+          "progression_name": "視訊：巢狀迴圈"
         },
         "7f4ec132-6df2-4a23-abe3-853efe35701d": {
           "progression_name": "技能發展"
@@ -7571,7 +8378,8 @@
           ]
         },
         "567a28bf-ed4a-4d8d-8be2-2e196d37cb6d": {
-          "name": "歌曲創作"
+          "name": "歌曲創作",
+          "progression_name": "詞曲創作 - 離線活動"
         },
         "dfc4f2ab-d9c6-454e-b3a6-8696815b4fdc": {
           "tips": [
@@ -7599,16 +8407,26 @@
           "name": "Minecraft 中的函式",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：我的世界 - 吉祥物"
         },
         "cd4d43da-dace-4324-a934-618f8c5b6ec7": {
           "progression_name": "技能發展"
         },
+        "8497e55d-30f4-4d84-8c96-bf6caa210f48": {
+          "progression_name": "視訊：我的世界 - 重複循環"
+        },
         "4130a39a-0232-45ed-b6c7-1f2badada9ee": {
           "progression_name": "技能發展"
         },
+        "230ba1e9-746c-490f-8710-196cc273505e": {
+          "progression_name": "視訊：我的世界 - 函數"
+        },
         "8543e376-7910-45df-b486-372036c19fdc": {
           "progression_name": "技能發展"
+        },
+        "9619ba1f-8426-40fb-9699-41562c4721ac": {
+          "progression_name": "視訊：我的世界 - 賀詞"
         },
         "faa2f676-cf14-4bd7-b277-8e0a30245c0d": {
           "progression_name": "自由發揮"
@@ -7642,16 +8460,26 @@
           "name": "介紹"
         },
         "6e3ca289-2d9d-4ff7-b9c6-dd6d8fcad1bf": {
-          "name": "Minecraft 中的條件式：水上巡航 "
+          "name": "Minecraft 中的條件式：水上巡航 ",
+          "progression_name": "視訊：我的世界：水上航行簡介"
         },
         "ace06bbe-f40f-4333-806c-928527edede6": {
           "progression_name": "技能發展"
         },
+        "f51b34f8-e3c0-47f3-a4e6-b387df09189d": {
+          "progression_name": "視訊：我的世界：水上航行“重複直到”"
+        },
         "735452ce-870a-4728-8b1b-00a77c5bffbb": {
           "progression_name": "技能發展"
         },
+        "b20028da-bf4a-4238-a59f-a02ebdcf8488": {
+          "progression_name": "視訊：我的世界：水上航行條件運算式"
+        },
         "3b64705c-3a17-44b9-b688-4bbc029ba2ea": {
           "progression_name": "技能發展"
+        },
+        "df9a0219-fbb3-4a3a-9895-431aea978687": {
+          "progression_name": "視訊：我的世界：水上航行賀詞"
         },
         "dc8187ff-3bc9-4079-adda-93abea4abd16": {
           "progression_name": "自由發揮"
@@ -7669,14 +8497,23 @@
           ],
           "progression_name": "技能發展"
         },
+        "a63ac211-7ad4-4c28-af4a-cfa489ec8a77": {
+          "progression_name": "視訊：農民While迴圈"
+        },
         "22826fb5-5cdf-4918-970d-680d9ba82f88": {
           "progression_name": "預測"
         },
         "af239dc4-fc39-4765-a761-8d1979ef5e11": {
           "progression_name": "技能發展"
         },
+        "c978158c-f26f-4fe2-ac61-4f383a2fe748": {
+          "progression_name": "視訊：“重複直到”模組"
+        },
         "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643": {
           "progression_name": "技能發展"
+        },
+        "37929d1a-a0f2-4700-96e9-7d207a70dc1e": {
+          "progression_name": "視訊：“If/Else”"
         },
         "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17": {
           "progression_name": "挑戰"
@@ -7689,6 +8526,9 @@
         },
         "990891b6-d051-4117-8dd5-fc3346d69dc5": {
           "name": "介紹"
+        },
+        "24e49944-567b-4a1a-8f14-8e60585cb81f": {
+          "progression_name": "視訊：收穫者"
         },
         "6da14073-1ba0-4603-989b-5b9c9758c047": {
           "progression_name": "技能發展"
@@ -7714,6 +8554,9 @@
         },
         "66272c77-39c2-4816-9cef-6d3fa0468581": {
           "name": "第 1 天 - 探究專案點子"
+        },
+        "bc3611fe-1160-47c2-a928-c7c666478ecf": {
+          "progression_name": "示例項目"
         },
         "f8b211c2-4c26-4946-ab95-74efdb7ca40a": {
           "progression_name": "創建你的專案"
@@ -7745,15 +8588,24 @@
             null
           ]
         },
+        "42738b6d-fc16-4de9-b190-d6253f5e2c67": {
+          "progression_name": "認識魚"
+        },
         "aa866b7f-747f-49e4-9578-f937dbef61e4": {
           "tips": [
             null
           ]
         },
+        "0cd5acdb-155e-4161-aba7-610f3869ec29": {
+          "progression_name": "認識魚的特性"
+        },
         "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
           "tips": [
             null
           ]
+        },
+        "1ce2130f-e735-4060-811f-b8c87e6f74b0": {
+          "progression_name": "認識表達式"
         },
         "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
           "tips": [
@@ -7761,7 +8613,8 @@
           ]
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
-          "name": "反思"
+          "name": "反思",
+          "progression_name": "簽入調查"
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
           "tips": [
@@ -7771,7 +8624,11 @@
         "57d8014b-4da5-4981-b5aa-bd5feb656548": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "尋找規律"
+        },
+        "3b73e965-37ee-48c9-b346-0b2f05e5664d": {
+          "progression_name": "綠色玻璃門"
         },
         "14ad319c-b3ec-4f24-a9c7-5f80f29c9ba8": {
           "tips": [
@@ -7793,10 +8650,26 @@
             null
           ]
         },
+        "09d3ff6d-f87e-4309-b138-3ef66e33eab5": {
+          "name": "鞋推薦器"
+        },
+        "bf65cfae-cdec-4456-8acf-d475d2835417": {
+          "progression_name": "鞋推薦器"
+        },
         "48b299c7-bdd4-453e-aa47-d9d2c7622ee8": {
           "tips": [
             null
           ]
+        },
+        "4e1f64ea-a1bd-4509-b618-84f364384c9a": {
+          "name": "改進鞋推薦器"
+        },
+        "e2df5e33-a11a-4ad5-9607-4a67f1b95608": {
+          "progression_name": "改進鞋推薦器"
+        },
+        "a0725763-95c5-47e3-ad8f-ce01dba4cda3": {
+          "name": "鞋推薦調查",
+          "progression_name": "鞋推薦調查"
         },
         "aa9a6902-38d1-4613-8535-7b515b0f7e04": {
           "tips": [
@@ -7807,6 +8680,9 @@
           "tips": [
             null
           ]
+        },
+        "a5c8ac6d-bf15-4ce6-ae63-cc39ad9d23e4": {
+          "progression_name": "終極鞋推薦器"
         },
         "ec6a94fb-4529-40b5-bee7-42c5d06822e1": {
           "tips": [
@@ -7833,6 +8709,9 @@
             null
           ]
         },
+        "f2beead8-eebd-486b-8748-d31955df2c4d": {
+          "progression_name": "水果和蔬菜探索"
+        },
         "40e5d7a1-ae14-4585-bdab-1fc0036d91b2": {
           "tips": [
             null
@@ -7843,10 +8722,16 @@
             null
           ]
         },
+        "3b4dcf97-2764-4939-af16-c39d10ab214f": {
+          "name": "認識形狀"
+        },
         "187961bf-44e5-4407-81d7-a47884e32eb6": {
           "tips": [
             null
           ]
+        },
+        "d6f29378-22de-403d-955a-f8e77800dd27": {
+          "progression_name": "認識形狀"
         },
         "859c17eb-f742-4430-ab49-fe335f6dc3c0": {
           "tips": [
@@ -7863,6 +8748,9 @@
             null
           ]
         },
+        "040518cf-bdfa-4bea-a3c4-7e2a5b973097": {
+          "progression_name": "披薩推薦"
+        },
         "948494c6-f9ab-422f-a5e5-1ba0dd2bb690": {
           "tips": [
             null
@@ -7871,12 +8759,16 @@
         "bde096a8-755f-4d46-8e37-2b7c22c6112d": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "選擇：餐廳推薦器"
         },
         "bebc0942-fc14-4063-9feb-e47a4a62d9c8": {
           "tips": [
             null
           ]
+        },
+        "52e962a0-c40b-49c4-859e-bad1e64068ee": {
+          "progression_name": "書籍推薦器App"
         },
         "73ce1ded-8856-4156-bfc4-c114b2bae063": {
           "tips": [
@@ -7896,7 +8788,11 @@
         "d3990be6-8d37-475a-bb3e-5a4f4fc990ca": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "匯入模型"
+        },
+        "24852ddc-3470-46ba-b727-e205b2a6da3c": {
+          "progression_name": "自訂你的應用程式"
         },
         "a93eb670-a170-422f-b5cc-1bb0cba75be3": {
           "tips": [
@@ -7906,7 +8802,8 @@
         "35bd3261-9e58-490f-a4f7-6f6188cf278e": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "選擇級別：自訂你的App"
         },
         "7cc32c19-2a9a-423f-a8b7-90a739cd379c": {
           "tips": [
@@ -7917,6 +8814,12 @@
           "tips": [
             null
           ]
+        },
+        "5930841f-14d4-4405-915f-abebc0c094fe": {
+          "name": "醫療優先級應用程式"
+        },
+        "a19cc9c3-8670-48e8-bcea-dcddf2581cfa": {
+          "progression_name": "醫療優先級應用程式"
         },
         "189848b1-8798-4d6b-ba64-c7e43f6aa84a": {
           "tips": [
@@ -7938,15 +8841,26 @@
             null
           ]
         },
+        "2f337322-f504-4ba7-9714-1c178eba4ca9": {
+          "progression_name": "書籍推薦器模型卡"
+        },
+        "8a788853-2486-42f1-b0d0-572ad723f421": {
+          "progression_name": "醫療數據集模型卡"
+        },
         "db8f4d62-af34-4871-993d-281cacf5ff29": {
           "tips": [
             null
           ]
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "name": "AI Lab 的模型卡",
           "tips": [
             null
           ]
+        },
+        "d5f051bd-7a5c-464f-a830-e486187a0463": {
+          "name": "動物園預測",
+          "progression_name": "動物園預測"
         },
         "6dc2399a-dad6-46a3-8124-e6b3d100d4fe": {
           "tips": [
@@ -7954,14 +8868,25 @@
           ]
         },
         "0c250e92-85e3-4f85-8a99-44a79fb72c03": {
+          "name": "匯入你的模型",
           "tips": [
             null
           ]
         },
+        "7d040814-9039-4b26-b0ef-29cb28227d53": {
+          "progression_name": "匯入你的模型"
+        },
+        "1503235c-6a46-401d-85f0-1fa291901771": {
+          "progression_name": "自訂你的應用程式"
+        },
+        "42abdf12-61c8-48a4-8118-6f0b713e28dc": {
+          "progression_name": "示例App：動物分類"
+        },
         "527dacdb-36d1-4e9e-ad42-b28aab54a395": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "寵物推薦器"
         },
         "91d7768c-2c1c-4b4b-bb3d-b7646f8144d6": {
           "tips": [
@@ -7971,7 +8896,11 @@
         "aedb156c-9f9c-4214-94aa-a664ce875b23": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "寵物推薦器"
+        },
+        "757e3c3a-8354-4b41-9b54-ad138d99c341": {
+          "progression_name": "寵物推薦器"
         },
         "819a4c17-f05f-4298-9cfc-1cb2c0b00f5d": {
           "tips": [
@@ -7982,6 +8911,9 @@
           "tips": [
             null
           ]
+        },
+        "5c385108-484c-44cb-b688-858fc00e41df": {
+          "progression_name": "添加新螢幕"
         },
         "209eff96-d559-411e-b8cf-bd6a84923473": {
           "tips": [
@@ -8023,6 +8955,9 @@
             null
           ]
         },
+        "02eaa4ce-ab4c-485c-bb2d-08cebd8c5e17": {
+          "progression_name": "Safari模型"
+        },
         "221c0911-a3eb-4409-be91-e665b43e3fc9": {
           "tips": [
             null
@@ -8039,15 +8974,36 @@
             null
           ]
         },
+        "f0652a6f-7460-4715-90e1-1a022ca38631": {
+          "progression_name": "Safari應用"
+        },
+        "6837e50f-be66-4db0-a31a-fff75d03b12b": {
+          "name": "司機報警系統"
+        },
+        "87b65d20-bf70-4db3-ae6f-2333f970ad8c": {
+          "progression_name": "Raspado推薦器"
+        },
+        "1d2520a0-dcb3-41e9-b121-7bf0b221a87a": {
+          "progression_name": "司機報警系統"
+        },
+        "29dce9c5-577d-4e2c-9d4b-b8bf0e4b18e8": {
+          "progression_name": "司機報警系統"
+        },
         "4e10be5f-60ad-4bae-913d-7a157e519447": {
           "tips": [
             null
           ]
         },
+        "9749fdb5-91ad-41b8-9b83-5198ab37cc38": {
+          "progression_name": "選擇：優化你的應用"
+        },
         "c5595f82-fa56-4a48-a7f6-65b97947a7e9": {
           "tips": [
             null
           ]
+        },
+        "77b2cc22-6c49-4ad9-8a76-a3e5cf4502ec": {
+          "progression_name": "在人工智慧實驗室訓練模型"
         },
         "4efb646c-4ce2-45f5-bb76-f444af86a9b4": {
           "tips": [
@@ -8058,6 +9014,9 @@
           "tips": [
             null
           ]
+        },
+        "e046ddd1-110a-4a23-8f5a-76f6ac86fe48": {
+          "progression_name": "在App實驗室創建一個應用程式"
         },
         "489ed446-aa78-47e3-b9f2-30bc9164d6c3": {
           "name": "反思",
@@ -8083,6 +9042,9 @@
             null
           ]
         },
+        "8ae2778f-e311-4131-9116-8a2cb6ee5512": {
+          "progression_name": "創建Google表單"
+        },
         "0fac2a39-1a1e-4c53-a3eb-ef5ababb25f4": {
           "tips": [
             null
@@ -8095,17 +9057,25 @@
           ]
         },
         "bb917641-be8e-41f9-8ba5-bad758aeb8d5": {
-          "name": "問卷"
+          "name": "問卷",
+          "progression_name": "Kim的調查"
         },
         "9f17132f-2c2e-4f16-bead-88b852b9e33f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Kim的調查數據"
         },
         "3c4c7d3e-338a-4934-bc9c-b9e01d0f14cd": {
           "tips": [
             null
           ]
+        },
+        "1223d000-8832-4645-b9ec-3a7563068eb1": {
+          "progression_name": "AI實驗室和Kim的數據"
+        },
+        "4ca8fcb7-141b-4201-976c-2bafbae0f7a7": {
+          "progression_name": "Issac的調查數據"
         },
         "7f4a57cb-7221-40f4-a60a-2026a13bcba2": {
           "tips": [
@@ -8116,7 +9086,11 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "AI實驗室和Issac的數據"
+        },
+        "8bc19694-99fb-4360-a3ac-2f7b9ff83365": {
+          "progression_name": "俱樂部數據集"
         },
         "0644a5d2-d3ae-4dea-8777-47a522955b21": {
           "tips": [
@@ -8128,15 +9102,28 @@
             null
           ]
         },
+        "920cf048-b5d3-4033-8705-25e47ba99238": {
+          "progression_name": "備用數據集"
+        },
         "8da670fc-d91b-438b-af07-2227156fdbcd": {
           "tips": [
             null
           ]
         },
+        "373c20f4-965e-4cd1-9a60-6fbb186da8c9": {
+          "progression_name": "匯入你的模型"
+        },
+        "f2a40f03-0400-4522-b5d6-8349034c6ebb": {
+          "progression_name": "添加歡迎螢幕"
+        },
+        "dfa4b1ec-4f9f-4ec1-9c42-613c82405096": {
+          "progression_name": "自訂你的應用程式"
+        },
         "1b28522d-bf63-4f09-94a2-a80833819a38": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "評審你的應用程式"
         },
         "f1aefb0a-3a33-499b-9ea6-fc842ba895de": {
           "name": "熱身"
@@ -8174,7 +9161,8 @@
         "dc5dddbb-40bf-41e0-be7e-51b41edf1337": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "設計一個人工智慧應用 - 人工智慧實驗室"
         },
         "065f7419-b028-4610-b0c4-671f2ec86590": {
           "name": "總結"
@@ -8185,7 +9173,8 @@
         "4af3f898-21e4-4ed3-bbc6-ca4686c46f7a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "設計一個人工智慧應用 - App實驗室"
         },
         "2df922c9-a79a-4e9f-a4e5-003cee501451": {
           "name": "總結"
@@ -8463,7 +9452,8 @@
         "233defe7-9977-4539-8a42-7e146979db0e": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "好的應用程式示例"
         },
         "f5bad206-6147-4a6c-af88-bf15c41f6469": {
           "tips": [
@@ -8524,6 +9514,9 @@
           "tips": [
             null
           ]
+        },
+        "761b498b-6ec2-4956-bd8f-b23e497644a5": {
+          "progression_name": "示例應用"
         },
         "7fd85c65-ad1b-4f7d-a93d-eed09e89386c": {
           "tips": [
@@ -8591,9 +9584,13 @@
           ]
         },
         "2e5264db-0d1d-4fc1-adf1-c5bf13967af5": {
+          "name": "App Lab 的設計模式",
           "tips": [
             null
           ]
+        },
+        "5d7ed2d7-0498-45a5-8969-679ad3abcad6": {
+          "progression_name": "視訊：設計模式簡介"
         },
         "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8": {
           "progression_name": "建造一個畫面"
@@ -8616,10 +9613,14 @@
             null
           ]
         },
+        "0988f86b-260b-4279-a8c4-59b98cdbf5f1": {
+          "progression_name": "為你的應用設計一個螢幕"
+        },
         "cc78f5f7-002f-44ed-9f5f-2518a19953e7": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "App項目：螢幕設計"
         },
         "311288e0-9ddf-4681-a8f2-31ae7d196423": {
           "tips": [
@@ -8730,6 +9731,9 @@
             null
           ]
         },
+        "98d47c66-d1b6-4d05-bada-bd58b317813b": {
+          "progression_name": "更新你的原型"
+        },
         "2e7e6d2b-ce4c-48ee-ab67-a7002104dad7": {
           "tips": [
             null
@@ -8780,6 +9784,9 @@
         "9c23f514-e5e6-45f4-9038-c8c68e26c041": {
           "name": "獲得啟發"
         },
+        "ecaf188e-1d18-4418-9881-296b1f090f2e": {
+          "name": "創新研究"
+        },
         "9e9ce748-fed7-4391-a28d-6c9e5da3cf27": {
           "tips": [
             null
@@ -8788,7 +9795,8 @@
         "fe954bee-319a-49ec-a2d1-033dd539a59b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "創新研究"
         },
         "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
           "tips": [
@@ -8874,6 +9882,9 @@
         "15e99a5a-e49e-47de-8eb1-f01b08a46a42": {
           "progression_name": "蜂鳴器"
         },
+        "1184f2a5-021b-42e7-ba86-75ac8ffcc8ad": {
+          "progression_name": "附加挑戰：調音板"
+        },
         "7091d49a-c4ac-4c04-aaa4-290efb0ee705": {
           "tips": [
             null
@@ -8893,6 +9904,9 @@
         },
         "a7dd4853-b8c3-44d2-a03b-f5e5e23ff0ac": {
           "progression_name": "摩托車"
+        },
+        "c7ee1edc-3c31-4a6a-a814-1bc69360e6fe": {
+          "progression_name": "附加挑戰"
         },
         "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
           "tips": [
@@ -8916,6 +9930,9 @@
           ],
           "progression_name": "感測器到顏色"
         },
+        "1a668f58-e58e-4624-a911-fcfc3188df23": {
+          "progression_name": "附加挑戰"
+        },
         "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f": {
           "tips": [
             null,
@@ -8929,6 +9946,9 @@
         },
         "75c3755e-3860-4965-b2df-a459e020a7a8": {
           "progression_name": "範例程式"
+        },
+        "63168e8f-2bcc-445c-9dbc-96df54a86560": {
+          "progression_name": "計劃你的項目"
         },
         "5959a534-f372-4111-a8d2-4e94de572996": {
           "progression_name": "畫面設計"
@@ -8952,6 +9972,9 @@
         },
         "6d7c017d-88c7-4ed3-ac37-b2a3c8a741df": {
           "progression_name": "演示 - 錯誤抓取"
+        },
+        "b1e96083-0678-461f-9c8c-68145c384ab8": {
+          "progression_name": "計劃你的項目"
         },
         "2248f61c-7cfa-491e-87f6-fba7f80558b9": {
           "progression_name": "畫面設計"
@@ -9111,6 +10134,9 @@
             null
           ]
         },
+        "57a93004-eeaa-48a5-b81b-6f9b05aedf82": {
+          "progression_name": "視訊：循環和邏輯"
+        },
         "4d9d84e9-900f-4816-81fd-b70a1ca43b16": {
           "progression_name": "簡易電路"
         },
@@ -9148,6 +10174,9 @@
           "tips": [
             null
           ]
+        },
+        "cb822f4d-fa13-460e-ba94-c491e4763a13": {
+          "progression_name": "設計你的原型"
         },
         "1f452df6-46c4-4e9d-82b5-6efe4fd98928": {
           "progression_name": "使用者介面"
@@ -9310,6 +10339,9 @@
             null
           ]
         },
+        "b4133437-14b2-4221-8202-c411f147e13c": {
+          "progression_name": "二進制數小部件"
+        },
         "30ef889b-387b-4dbd-b6bc-96ca25489944": {
           "tips": [
             null
@@ -9340,6 +10372,9 @@
           "tips": [
             null
           ]
+        },
+        "5b070069-8e80-48a8-8a84-435906d67aef": {
+          "progression_name": "8位二進制數組件"
         },
         "38324708-63cb-4738-92c9-af06aed187f7": {
           "tips": [
@@ -9430,6 +10465,9 @@
           "tips": [
             null
           ]
+        },
+        "4668155e-befd-4113-bcad-1c7a7fa245be": {
+          "progression_name": "披薩派對數據"
         },
         "28dfd4cd-0d62-4c35-bed0-d6038adf4813": {
           "tips": [
@@ -9529,17 +10567,24 @@
         "e84d2260-141b-4899-971d-0e0e33eb12d2": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：Netflix和數據"
         },
         "caccc30a-07e9-465a-a077-65788e7b4f1b": {
           "tips": [
             null
           ]
         },
+        "2837e4be-02be-4d45-91a4-2a155bfbb322": {
+          "progression_name": "視訊：Waze和數據"
+        },
         "83b2e7f4-a01c-491f-a3e1-29ac12d01a13": {
           "tips": [
             null
           ]
+        },
+        "35b3c205-5ca5-43fa-b2ef-ee0f6d245722": {
+          "progression_name": "視訊：亞馬遜和數據"
         },
         "f6b744db-baed-4e9d-bdf4-1f1399bf716a": {
           "tips": [
@@ -9562,12 +10607,17 @@
         "7d58d643-efce-44e7-a3e4-7b3492c72250": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：什麽是機器學習？"
         },
         "f8f9a770-42a2-4c1d-9b51-52f46ff9360d": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "海洋AI：魚VS非魚"
+        },
+        "037d1080-4d96-41bc-93af-bef5eef2007a": {
+          "progression_name": "視訊：訓練數據和偏差"
         },
         "914c565c-fb6d-490c-a14a-b289ac56d720": {
           "tips": [
@@ -9579,10 +10629,16 @@
             null
           ]
         },
+        "0644d195-c0b2-4557-9f2c-116b259fe74a": {
+          "progression_name": "海洋AI：魚的種類"
+        },
         "92b13324-8ae5-4796-9071-694683704daa": {
           "tips": [
             null
           ]
+        },
+        "e67f18c9-668b-44fb-95aa-1908687d9f52": {
+          "progression_name": "視訊：對社會的影響"
         },
         "7c5c8f29-ab7a-4891-b135-182f4222a591": {
           "tips": [
@@ -9773,7 +10829,8 @@
         "df26b7e2-cb48-40b2-b360-d0e9770b8802": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：變數簡介"
         },
         "a14285ec-28bc-4b44-a63c-204c0034c19f": {
           "tips": [
@@ -9933,6 +10990,18 @@
             null
           ]
         },
+        "9a593b91-9cd2-48ff-a733-2943aa535ceb": {
+          "progression_name": "創建背景"
+        },
+        "853974f1-7e3b-4403-a475-5af28d960115": {
+          "progression_name": "添加精靈圖"
+        },
+        "c0fc532b-e6eb-4858-af5b-5032cd917616": {
+          "progression_name": "添加文本"
+        },
+        "53f44c86-807a-412c-a436-ed4235537ed4": {
+          "progression_name": "評審你的場景"
+        },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
             null
@@ -10033,6 +11102,27 @@
             null
           ]
         },
+        "d77db66e-6e3a-4e3a-82df-2499a5ad0efd": {
+          "progression_name": "示例動畫場景"
+        },
+        "3b4e9eb3-a29a-432e-b6dd-0c525bfaedf2": {
+          "progression_name": "計劃你的場景"
+        },
+        "2e883502-c179-45a9-a313-6ec995831ed2": {
+          "progression_name": "繪製背景"
+        },
+        "68f06aee-a50d-4b3e-9323-16f4812eb23a": {
+          "progression_name": "添加精靈圖"
+        },
+        "6e3a6230-12e7-4b7f-90a7-ec8574647b3b": {
+          "progression_name": "添加文本"
+        },
+        "08bedf45-b2d1-4147-8479-22a9c5f20d51": {
+          "progression_name": "添加運動"
+        },
+        "7de39108-1c8b-4602-9afe-cfde5d7f3ed4": {
+          "progression_name": "評審你的動畫場景"
+        },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
             null
@@ -10064,6 +11154,9 @@
             null
           ],
           "progression_name": "影片：布林值"
+        },
+        "6eac26fe-a47a-4dbc-b225-c006efd6c418": {
+          "progression_name": "快速檢查"
         },
         "ba88e2d6-49b9-4e4b-a34f-3a7804ea1ce5": {
           "progression_name": "技能發展"
@@ -10169,10 +11262,14 @@
             null
           ]
         },
+        "00e65ea4-8a6e-408e-bb09-2fcb9f1a27d6": {
+          "progression_name": "演示應用：互動卡片"
+        },
         "4b3c39d2-a62c-43c3-b5ae-048ef270624a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "製作一個互動卡片"
         },
         "1f6b91fb-f2a1-4585-bb33-4ede2232a20d": {
           "progression_name": "專案: 工作"
@@ -10264,8 +11361,29 @@
             null
           ]
         },
+        "0525516c-cd72-4700-9c7b-36644137ab93": {
+          "progression_name": "橫向卷軸簡介"
+        },
+        "c62c9fee-1e51-4d9d-b221-915d73af2cd2": {
+          "progression_name": "繪製你的背景"
+        },
+        "ef36eaf3-2930-44dd-a939-e0e614755352": {
+          "progression_name": "創建你的精靈圖"
+        },
+        "c8d03646-3696-4a48-9ae9-b54fce33300e": {
+          "progression_name": "玩家控制"
+        },
+        "b763e8fd-b51e-4a15-b9be-7d675958d51c": {
+          "progression_name": "迴圈"
+        },
         "3d9ddc58-7bda-43a0-8944-fd8c622b3d70": {
           "progression_name": "角色的互動"
+        },
+        "1ffc10cf-5883-4d6d-915c-2eb055ce8f84": {
+          "progression_name": "得分和記分板"
+        },
+        "8cdb45e9-b767-4246-b5bc-12648197665d": {
+          "progression_name": "評審你的游戲"
         },
         "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
           "tips": [
@@ -10303,6 +11421,9 @@
             null
           ]
         },
+        "da390762-bcc9-47c8-ab06-9bac895ebd00": {
+          "progression_name": "代碼預測"
+        },
         "29881c8e-82cb-4886-8e1f-7f101c91bae9": {
           "tips": [
             null
@@ -10338,11 +11459,23 @@
             null
           ]
         },
+        "05331f50-c576-42e0-91ce-00561faee05c": {
+          "progression_name": "飛行者遊戲簡介"
+        },
+        "b67bbd2c-2139-48e4-8002-a7f3f048052a": {
+          "progression_name": "製作你的精靈圖"
+        },
+        "91ab7cf4-19a7-4424-b59e-c806057dbb65": {
+          "progression_name": "玩家控制"
+        },
         "a7af5fa7-b9bc-4779-bf77-e349bd07d0f2": {
           "progression_name": "角色動作"
         },
         "93c86b2f-aeb2-48d2-b34d-8213761ae09c": {
           "progression_name": "角色的互動"
+        },
+        "a9203a76-f8c9-4a77-9c8e-0d329d1f9099": {
+          "progression_name": "評審你的游戲"
         },
         "40b22769-f206-4725-b2f4-fd3f71c15101": {
           "tips": [
@@ -10361,11 +11494,17 @@
           ],
           "progression_name": "技能發展"
         },
+        "4aa5af6f-34ee-4311-a7fb-c895f6154dd2": {
+          "progression_name": "預測"
+        },
         "e4283f2d-5933-4812-80df-341067426cc8": {
           "tips": [
             null
           ],
           "progression_name": "練習"
+        },
+        "46206978-44fa-44f3-a4b3-746a30a86dce": {
+          "progression_name": "快速檢查"
         },
         "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
           "tips": [
@@ -10391,6 +11530,18 @@
             null
           ]
         },
+        "655acab5-5605-4833-b201-7d4776773bb5": {
+          "progression_name": "同樣的遊戲"
+        },
+        "f2e6c88e-bc52-4073-b67d-69a0dda590a7": {
+          "progression_name": "計劃你的項目"
+        },
+        "4a1fbbc7-9baa-4d49-bad8-71ea306857af": {
+          "progression_name": "建立精靈圖"
+        },
+        "f860c052-f4a5-4925-bed9-78bf6c24605b": {
+          "progression_name": "控制你的玩家"
+        },
         "b38b9687-9ab2-490a-8306-5e0655d51863": {
           "progression_name": "角色的互動"
         },
@@ -10415,6 +11566,9 @@
             null
           ]
         },
+        "96fe06b7-2d5b-434f-bb02-bc5e4bb74eaf": {
+          "progression_name": "構建一個跳臺者"
+        },
         "b51fe24a-e404-4c6e-9fe1-8916f81f0e85": {
           "progression_name": "平台跳跳人 - 背景與變數"
         },
@@ -10430,7 +11584,8 @@
         "b29f40dd-4e28-4c22-8aa8-9e387819622c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "跳臺者評審"
         },
         "3732107f-02cf-4117-941b-725824574e50": {
           "progression_name": "挑戰"
@@ -10439,6 +11594,9 @@
           "tips": [
             null
           ]
+        },
+        "204d6831-54a0-4a74-bd1e-a81cfb74475a": {
+          "progression_name": "示例游戲"
         },
         "686b638e-1a29-49cc-8711-191165d251b9": {
           "tips": [
@@ -10450,6 +11608,9 @@
         },
         "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9": {
           "progression_name": "專案 - 小怪跟互動 "
+        },
+        "3cabd5bc-4a69-4067-abda-7200bf0de085": {
+          "progression_name": "評審你的游戲"
         },
         "59ca85ff-b7b0-450d-b354-1c9938c4a615": {
           "tips": [
@@ -10631,22 +11792,30 @@
         "a52b80a3-f6a7-4e24-8347-1eb0be4ccddf": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "App：寵物選擇器"
         },
         "e606d7d3-d552-4db3-91b7-c26f98da237c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "App：故事創建器"
         },
         "f1388388-8631-479b-bca9-ffe97206edf8": {
           "tips": [
             null
           ]
         },
+        "29f459d2-a640-4618-9829-6d5adb95cef9": {
+          "progression_name": "App：改善寵物App"
+        },
         "ce77f101-8880-4264-bf0e-b2d95e40c080": {
           "tips": [
             null
           ]
+        },
+        "658bb176-e81a-441b-9846-7f06edb26bcb": {
+          "progression_name": "App：這是你的生日嗎？"
         },
         "584f3a53-ab7b-421d-a8a4-bc8c106ead2a": {
           "tips": [
@@ -10658,10 +11827,16 @@
             null
           ]
         },
+        "3136eec5-7ffe-4b31-9cdd-7e988769c3d1": {
+          "progression_name": "App：國家公園"
+        },
         "fb64c101-5e75-4908-9b31-15d964b4ffa9": {
           "tips": [
             null
           ]
+        },
+        "59635fc9-85ee-4beb-8e84-3db4d473f7d5": {
+          "progression_name": "App：多少個國家"
         },
         "21e51178-7062-468a-b8e1-a9227a0ac5eb": {
           "tips": [
@@ -10672,6 +11847,21 @@
           "tips": [
             null
           ]
+        },
+        "7870b41a-67d4-4e4c-bac2-51df283c64a2": {
+          "progression_name": "App：我的著名生日"
+        },
+        "fe0df0f8-e6fb-42c2-82a5-7542d4a4fcde": {
+          "progression_name": "App：郵票筆記本"
+        },
+        "1bf0d6db-f0d5-4473-b861-ca00d265f8a9": {
+          "progression_name": "App：最快的手指"
+        },
+        "09785de0-de7c-40a7-afac-9a255151a45d": {
+          "progression_name": "App：猜數字"
+        },
+        "23734edc-d8f1-43ea-b0bc-63a9f745c6bb": {
+          "progression_name": "App：我應該居住在哪裏？"
         },
         "ed3fc57d-be54-4625-bae7-5cac4680d615": {
           "tips": [
@@ -10693,10 +11883,22 @@
             null
           ]
         },
+        "2000a800-9ea1-4dbd-bb6c-7af93735477d": {
+          "progression_name": "App：服裝選擇器"
+        },
+        "33b8468e-5c6c-4acb-b377-dd721dc0904a": {
+          "progression_name": "App：朋友尋找器"
+        },
+        "028c50a4-a63b-44aa-a686-55512682ee15": {
+          "progression_name": "App：選擇兒童電影"
+        },
         "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
           "tips": [
             null
           ]
+        },
+        "0e40d4c1-d45a-4209-989f-30553ca8de8a": {
+          "progression_name": "視訊：IOSP模型"
         },
         "4cefb9ba-ffbc-40ba-bc37-dae06e608b67": {
           "tips": [
@@ -10707,6 +11909,9 @@
           "tips": [
             null
           ]
+        },
+        "a5bc259a-2779-4488-b754-f6485a212933": {
+          "name": "項目指南"
         },
         "254a27b6-75fb-4f5f-bdf1-2ac909f01f75": {
           "tips": [
@@ -10931,6 +12136,9 @@
             null
           ]
         },
+        "aeb0ec32-aea0-4bfd-82de-d37b71b2075c": {
+          "progression_name": "示例個人網頁"
+        },
         "1265c20c-95ab-4c34-b8fc-b3532b088415": {
           "name": "探索不同網站",
           "tips": [
@@ -11031,7 +12239,8 @@
         "77578c68-97e0-4ef5-a4a5-75c5c0d5bcc1": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：結對編程"
         },
         "27e7e382-bef2-4576-94b2-15f081c1c260": {
           "tips": [
@@ -11042,12 +12251,14 @@
         "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "快速檢查"
         },
         "f5c13deb-a9a7-4f04-9daa-ec92ec261b02": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：調試"
         },
         "b9b617ce-f9b9-4d30-90ae-0ecb111821d7": {
           "progression_name": "練習"
@@ -11068,6 +12279,21 @@
             null
           ]
         },
+        "d30c88c0-ef5a-4b8a-9bd0-68123ecf6cb6": {
+          "progression_name": "評審：HTML"
+        },
+        "db6b9679-26c9-45e7-9f82-03b3a92d3abf": {
+          "progression_name": "挑戰：清單"
+        },
+        "f1f2db2f-90f0-454f-a438-ad0ef1d6f27a": {
+          "progression_name": "編碼你的頁面"
+        },
+        "b8b06d7c-cb56-4412-85ad-c68fb0953dc0": {
+          "progression_name": "評審你的頁面"
+        },
+        "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c": {
+          "name": "同伴反饋"
+        },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
           "tips": [
             null
@@ -11080,6 +12306,9 @@
           "tips": [
             null
           ]
+        },
+        "71a885a3-e705-4367-8d43-5711b5af7e8f": {
+          "progression_name": "社交偵探"
         },
         "e9ffa025-70b3-4fdf-a55e-b9324e0470f2": {
           "tips": [
@@ -11096,6 +12325,9 @@
             null
           ]
         },
+        "3da6f5d8-fc89-457f-9466-1f539cb9f55b": {
+          "progression_name": "示例網站"
+        },
         "0fb9d1d3-097c-4ce5-b276-aa71c839c82f": {
           "tips": [
             null
@@ -11106,7 +12338,8 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "視訊：CSS簡介 - 第1部分"
         },
         "8c1fda37-7107-43e8-92ad-60e7fc6d2d7d": {
           "progression_name": "技能發展"
@@ -11114,7 +12347,8 @@
         "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：CSS簡介 - 第2部分"
         },
         "d9a4b1da-84da-40b3-a256-bbd4223652cd": {
           "progression_name": "技能發展"
@@ -11153,6 +12387,21 @@
           "tips": [
             null
           ]
+        },
+        "58f32e0f-f519-4eae-9c0c-a5cd428869b2": {
+          "progression_name": "評審：CSS"
+        },
+        "f52e5e03-5b2f-4caf-8c69-868f7c2acdbc": {
+          "progression_name": "挑戰：RGB顔色"
+        },
+        "81ab793a-d696-4167-a9db-9258e5f476b4": {
+          "progression_name": "給你的頁面添加目錄和結構"
+        },
+        "5c1f865c-e956-43d3-aac9-e6cf1a18c1b9": {
+          "progression_name": "給你的頁面添加樣式"
+        },
+        "30535418-4101-4313-b0f2-fb2afdde6b62": {
+          "progression_name": "評審你的頁面"
         },
         "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
           "name": "同伴反饋"
@@ -11237,6 +12486,9 @@
             null
           ]
         },
+        "890f7764-695b-4258-acbb-9b7e29804fc5": {
+          "progression_name": "示例個人網站"
+        },
         "f694e569-1f2b-40ac-8e46-0439d6b12551": {
           "tips": [
             null
@@ -11256,6 +12508,9 @@
           "tips": [
             null
           ]
+        },
+        "5b7dc4f0-181c-44f8-af21-9dfd8a5edb26": {
+          "progression_name": "示例網站"
         },
         "cbb6abd1-911a-4ea4-b133-78742425ccbc": {
           "progression_name": "探索"
@@ -11303,7 +12558,8 @@
         "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "項目指南"
         },
         "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7": {
           "progression_name": "網站專案"
@@ -11311,7 +12567,8 @@
         "f82407b3-02da-446b-9c56-6e11c8f2df36": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：發佈你的網站"
         },
         "21f831a9-7123-4982-b5fb-d37eadd0df25": {
           "progression_name": "Publishing Your Website"
@@ -11336,6 +12593,9 @@
           "tips": [
             null
           ]
+        },
+        "4e4b8bec-4263-4163-9bad-dee99822db2a": {
+          "progression_name": "頂級網站"
         },
         "d2fbc09d-cec0-4514-ba77-b635cc9379d5": {
           "tips": [
@@ -11370,7 +12630,8 @@
         "4e9b0621-b725-4913-8938-757f111a9ce6": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：團隊合作"
         },
         "43da857d-e2ac-4797-b205-4bc8e5b274c8": {
           "tips": [
@@ -11380,7 +12641,8 @@
         "52a7434e-fca4-48af-9aa8-61086949bb98": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "視訊：管理分歧"
         },
         "4145fe6b-15f3-4528-91b5-726f4cffd9b5": {
           "tips": [
@@ -11402,6 +12664,9 @@
             null
           ]
         },
+        "6a799e5e-d77a-4c80-bdd4-713e6a4d9760": {
+          "progression_name": "視訊：研究如何運行"
+        },
         "136308c1-5aa0-4820-afe0-a16252ba6c74": {
           "tips": [
             null
@@ -11414,6 +12679,9 @@
         },
         "287a07a0-cdbc-4680-8733-69515c67c54b": {
           "name": "類別"
+        },
+        "8d36fb80-6b63-4f51-a57c-76712a9d5d7d": {
+          "progression_name": "示例網頁"
         },
         "39d43b4f-8e5c-4459-9592-b9a44cd41c4d": {
           "progression_name": "探索"
@@ -11446,6 +12714,9 @@
             null
           ]
         },
+        "28d6755d-32ea-439a-91b0-a36f90e3dc83": {
+          "progression_name": "上傳你的圖像"
+        },
         "754d0467-6e5e-45c8-8692-2fab52c45548": {
           "tips": [
             null
@@ -11471,7 +12742,8 @@
         "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "添加頁面"
         },
         "76186510-9804-44d1-8371-4aa2895fc16d": {
           "progression_name": "挑戰"
@@ -11494,6 +12766,24 @@
             null
           ]
         },
+        "88207ae8-3b7d-4b0d-a2b7-7aeb01525bed": {
+          "progression_name": "你的團隊項目"
+        },
+        "30c8efa1-9c2a-434b-8e72-474a8f38d93e": {
+          "progression_name": "添加目錄和HTML"
+        },
+        "3c67e494-744f-4bc3-8068-56698fcc6c42": {
+          "progression_name": "分享你的頁面"
+        },
+        "61b38059-437b-4b5b-a71d-e94ff04f6ae6": {
+          "progression_name": "添加樣式 "
+        },
+        "3db737c5-d81b-44fc-a3b1-6dd08594ce19": {
+          "progression_name": "分享你的樣式表"
+        },
+        "f6c5624d-14b2-4344-86e9-2a2da40edf31": {
+          "progression_name": "檢查你的工作"
+        },
         "35722166-2159-4038-8c7e-7a6cc0580812": {
           "tips": [
             null
@@ -11502,7 +12792,8 @@
         "aca795d4-18ad-434c-91f8-cc29e3d5a96c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "加入回饋"
         },
         "c11db9e7-9e8e-470f-854b-a56722d138f0": {
           "progression_name": "反思"
@@ -11512,6 +12803,9 @@
             null
           ],
           "progression_name": "課後問券指示"
+        },
+        "9b57ac7e-ffb4-413e-9289-0799156ef3ef": {
+          "progression_name": "示例項目"
         },
         "4430b310-61e8-44d7-9033-9b5f7099ddb1": {
           "name": "創建你的專案",
@@ -11849,6 +13143,9 @@
         "1302faa2-7837-408e-85a9-3d4e19240965": {
           "progression_name": "練習"
         },
+        "2945e71a-01e9-4825-97ee-a7bc221c298d": {
+          "progression_name": "預測"
+        },
         "36a8f1b8-257c-44f9-b619-315c2616da8d": {
           "progression_name": "練習"
         },
@@ -11860,6 +13157,9 @@
         },
         "c33df6ec-bd36-44de-9f41-dad3fb245d43": {
           "progression_name": "挑戰"
+        },
+        "c7af4532-75f2-4373-92b3-3066200678c2": {
+          "progression_name": "預測"
         },
         "c08b9c78-f30b-45b5-b7c8-fd478141bab5": {
           "progression_name": "練習"
@@ -11875,6 +13175,9 @@
         },
         "3054b94f-fb9a-4309-b858-a03e4ba08794": {
           "progression_name": "練習"
+        },
+        "311bc4a5-aa28-4aba-ad03-6459e8043725": {
+          "progression_name": "預測"
         },
         "9b5d6681-d83c-4027-89c9-2f403432197e": {
           "progression_name": "練習"
@@ -11895,11 +13198,17 @@
         "bc776bef-8ebc-4445-80dd-b5c3b691e4c4": {
           "progression_name": "練習"
         },
+        "8ea69448-dc83-4d3b-93b5-790d2f0b4f93": {
+          "progression_name": "預測"
+        },
         "61e56a64-227e-422a-9c65-62c927caed06": {
           "progression_name": "和 BB-8 與 Rey 一起寫程式"
         },
         "a631b9a1-b004-4bb5-8d70-b8d36a66bf47": {
           "progression_name": "練習"
+        },
+        "c176f0ae-08b0-4ba2-89b1-1aeded56737a": {
+          "progression_name": "預測"
         },
         "25e23bb3-435a-4f32-9ebb-b0648efb4bbd": {
           "progression_name": "BB-8機器人的重複區塊"
@@ -11912,6 +13221,9 @@
         },
         "3314e154-a569-4d1e-a3a0-ff5a733c7e58": {
           "progression_name": "練習"
+        },
+        "38e484f2-7e26-4222-9cfc-d64521837b23": {
+          "progression_name": "預測"
         },
         "02a6c863-7f2e-4e81-97fb-247b72930518": {
           "progression_name": "練習"
@@ -11927,6 +13239,9 @@
         },
         "184a2f0b-d74c-4483-9a50-6d7bb380e6a7": {
           "progression_name": "練習"
+        },
+        "71530eb0-018e-4092-a886-d1a6d984dab0": {
+          "progression_name": "預測"
         },
         "4b0517f8-3488-45d5-bbca-f865418a2979": {
           "progression_name": "練習"
@@ -12173,6 +13488,9 @@
         },
         "279bf9ee-e1f5-49fa-84be-bc065112aab6": {
           "progression_name": "練習"
+        },
+        "b1287ca9-6c21-4e7e-86aa-9ab5b4165d30": {
+          "progression_name": "示例項目"
         },
         "dc5d2770-baaa-4bd2-a210-0335bdb5a6b9": {
           "name": "創建你的專案",

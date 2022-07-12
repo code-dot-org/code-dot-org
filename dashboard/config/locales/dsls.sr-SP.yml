@@ -2165,3 +2165,76 @@ sr-SP:
         - {}
         questions:
         - {}
+      Choose 2 Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: плава
+        - text: зелена
+        - {}
+        - {}
+        - {}
+        - text: црвена
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        questions:
+        - text: Која стрелица ће одвести Флурба до блага?
+        title: Вишеструки избор
+      test questionless single multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}

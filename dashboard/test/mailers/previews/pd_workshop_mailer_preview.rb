@@ -1,5 +1,5 @@
 # This can be viewed on non-production environments at /rails/mailers/pd/workshop_mailer
-class Pd::WorkshopMailerPreview < ActionMailer::Preview
+class PdWorkshopMailerPreview < ActionMailer::Preview
   include FactoryGirl::Syntax::Methods
 
   DEFAULT_COURSE = Pd::Workshop::COURSE_ECS
@@ -507,18 +507,18 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     enrollment.assign_code
 
     case target
-      when :enrollment
-        if options
-          Pd::WorkshopMailer.send(method, enrollment, options)
-        else
-          Pd::WorkshopMailer.send(method, enrollment)
-        end
-      when :workshop
-        Pd::WorkshopMailer.send(method, workshop)
-      when :facilitator
-        Pd::WorkshopMailer.send(method, facilitator, workshop)
+    when :enrollment
+      if options
+        Pd::WorkshopMailer.send(method, enrollment, options)
       else
-        raise "unknown target"
+        Pd::WorkshopMailer.send(method, enrollment)
+      end
+    when :workshop
+      Pd::WorkshopMailer.send(method, workshop)
+    when :facilitator
+      Pd::WorkshopMailer.send(method, facilitator, workshop)
+    else
+      raise "unknown target"
     end
   end
 end

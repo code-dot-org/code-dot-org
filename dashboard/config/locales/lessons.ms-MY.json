@@ -12,12 +12,14 @@
           "student_overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup umur untuk membaca (umur 6+). Pelajar yang lebih muda mungkin tidak akan menghabiskan tutorial, tetapi akan berasa seronok mengerjakan teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada penghujungnya."
         },
         "hero/Minecraft Hour of Code": {
+          "name": "Minecraft: Hero's Journey",
           "overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup umur untuk membaca (umur 6+). Pelajar yang lebih muda mungkin tidak akan menghabiskan tutorial, tetapi akan berasa seronok mengerjakan teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada penghujungnya."
         },
         "poem-art-2021/Poem Art": {
           "name": "Seni Puisi",
           "overview": "Dalam pelajaran bersepadu SK dan ELA ini, pelajar akan menghidupkan sajak dengan kod untuk menggambarkan suasana sajak. Pelajar akan membaca dan mengesan suasana sesebuah puisi. Mereka kemudian akan mencari kesan dan imej yang sepadan untuk membantu menggambarkan suasana puisi. Akhir sekali, pelajar akan menggunakan peristiwa (kod) untuk menggambarkan perubahan suasana atau menghidupkan pengenalan imej baharu dalam puisi.\n\nPelajaran ini boleh diselesaikan sebagai pelajaran kendiri selama 1 jam. Terdapat juga pilihan untuk menggunakan pelajaran ini sebagai pelajaran pertama modul berbilang pelajaran yang dipanggil [Pengekodan dengan Puisi](http://studio.code.org/s/poetry-2021).",
-          "preparation": "-   -   Semak semula dan lengkapkan tutorial dalam talian anda sendiri: [Poem Art](http://studio.code.org/s/poem-art).\n\n-   Pastikan anda mencubanya terlebih dahulu sebelum meminta pelajar anda menyelesaikannya \n\n-   Semak teknologi anda dan tentukan sama ada anda perlu menyelesaikan apa-apa masalah anda terlebih dahulu.\n\n-   Sesetengah tahap memerlukan bunyi untuk dimainkan. Edarkan fon kepala lebih awal. \n\n-   [Optional] 2 nota pelekat setiap pelajar untuk Penilaian."
+          "preparation": "-   -   Semak semula dan lengkapkan tutorial dalam talian anda sendiri: [Poem Art](http://studio.code.org/s/poem-art).\n\n-   Pastikan anda mencubanya terlebih dahulu sebelum meminta pelajar anda menyelesaikannya \n\n-   Semak teknologi anda dan tentukan sama ada anda perlu menyelesaikan apa-apa masalah anda terlebih dahulu.\n\n-   Sesetengah tahap memerlukan bunyi untuk dimainkan. Edarkan fon kepala lebih awal. \n\n-   [Optional] 2 nota pelekat setiap pelajar untuk Penilaian.",
+          "student_overview": "Puisi adalah membuat seni dengan kata-kata. Tambahkan kesan visual dan imej pada puisi animasi anda sendiri."
         },
         "flappy/Flappy Code": {
           "name": "Kod Flappy",
@@ -39,7 +41,8 @@
         "hello-world-emoji-2021/Hello World": {
           "overview": "Dalam pelajaran ini, pelajar akan mempelajari asas-asas sains komputer dengan pengaturcaraan di Sprite Lab. Sprite Lab adalah alat yang boleh anda gunakan untuk membina projek khayalan dan menyeronokkan. Pelajar akan belajar membuat dan menghidupkan sprites dan menjadikannya interaktif menggunakan acara. \n\nTerdapat pelbagai versi pelajaran ini. Setiap versi mengajar konsep yang sama tetapi mempunyai imej yang berbeza untuk menarik minat pelajar yang berbeza. Untuk maklumat lanjut, lawati halaman pendaratan [Helo Dunia.](https://code.org/helloworld)",
           "preparation": "-   Main melalui teka-teki untuk menemukan daerah masalah potensial untuk kelas anda.\n-   Gunakan sumber di [Sambungan SK](https://code.org/educate/csc) untuk membuat rancangan untuk lebih banyak pembelajaran sains komputer selepas tutorial awal.",
-          "purpose": "Pelajaran ini bertujuan untuk menyediakan pelajar untuk membuat projek pengaturcaraan mudah di Makmal Sprite. Dengan kemahiran ini, pelajar kemudian dapat membuat projek mengenai topik apa pun, seperti topik sekolah lain atau sesuatu yang berkaitan secara peribadi dengan mereka. Lawati [Sambungan SK](https://code.org/educate/csc) untuk idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain."
+          "purpose": "Pelajaran ini bertujuan untuk menyediakan pelajar untuk membuat projek pengaturcaraan mudah di Makmal Sprite. Dengan kemahiran ini, pelajar kemudian dapat membuat projek mengenai topik apa pun, seperti topik sekolah lain atau sesuatu yang berkaitan secara peribadi dengan mereka. Lawati [Sambungan SK](https://code.org/educate/csc) untuk idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain.",
+          "student_overview": "Dalam pelajaran ini, anda akan mempelajari asas sains komputer dengan pengaturcaraan dalam Sprite Lab. Sprite Lab ialah alat yang boleh anda gunakan untuk membina projek yang imaginatif dan menyeronokkan. Anda akan belajar mencipta dan menghidupkan sprite dan menjadikannya interaktif menggunakan acara."
         },
         "artist/Artist": {
           "name": "Artis",
@@ -55,9 +58,11 @@
         "hello-world-food-2021/Hello World": {
           "overview": "Dalam pelajaran ini, pelajar akan mempelajari asas-asas sains komputer dengan pengaturcaraan di Sprite Lab. Sprite Lab adalah alat yang boleh anda gunakan untuk membina projek khayalan dan menyeronokkan. Pelajar akan belajar membuat dan menghidupkan sprites dan menjadikannya interaktif menggunakan acara. \n\nTerdapat pelbagai versi pelajaran ini. Setiap versi mengajar konsep yang sama tetapi mempunyai imej yang berbeza untuk menarik minat pelajar yang berbeza. Untuk maklumat lanjut, lawati halaman pendaratan [Helo Dunia.](https://code.org/helloworld)",
           "preparation": "-   Main melalui teka-teki untuk menemukan daerah masalah potensial untuk kelas anda.\n-   Gunakan sumber di [Sambungan SK](https://code.org/educate/csc) untuk membuat rancangan untuk lebih banyak pembelajaran sains komputer selepas tutorial awal.",
-          "purpose": "Pelajaran ini bertujuan untuk menyediakan pelajar untuk membuat projek pengaturcaraan mudah di Makmal Sprite. Dengan kemahiran ini, pelajar kemudian dapat membuat projek mengenai topik apa pun, seperti topik sekolah lain atau sesuatu yang berkaitan secara peribadi dengan mereka. Lawati [Sambungan SK](https://code.org/educate/csc) untuk idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain."
+          "purpose": "Pelajaran ini bertujuan untuk menyediakan pelajar untuk membuat projek pengaturcaraan mudah di Makmal Sprite. Dengan kemahiran ini, pelajar kemudian dapat membuat projek mengenai topik apa pun, seperti topik sekolah lain atau sesuatu yang berkaitan secara peribadi dengan mereka. Lawati [Sambungan SK](https://code.org/educate/csc) untuk idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain.",
+          "student_overview": "Dalam pelajaran ini, anda akan mempelajari asas sains komputer dengan pengaturcaraan dalam Sprite Lab. Sprite Lab ialah alat yang boleh anda gunakan untuk membina projek yang imaginatif dan menyeronokkan. Anda akan belajar mencipta dan menghidupkan sprite dan menjadikannya interaktif menggunakan acara."
         },
         "aquatic/Aquatic": {
+          "name": "Minecraft: Voyage Aquatic",
           "overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup umur untuk membaca (umur 6+). Pelajar yang lebih muda mungkin tidak akan menghabiskan tutorial, tetapi akan berasa seronok mengerjakan teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada penghujungnya."
         },
         "hoc-encryption/Simple Encryption": {
@@ -68,7 +73,8 @@
         "hello-world-animals-2021/Hello World": {
           "overview": "Dalam pelajaran ini, pelajar akan mempelajari asas-asas sains komputer dengan pengaturcaraan di Sprite Lab. Sprite Lab adalah alat yang boleh anda gunakan untuk membina projek khayalan dan menyeronokkan. Pelajar akan belajar membuat dan menghidupkan sprites dan menjadikannya interaktif menggunakan acara. \n\nTerdapat pelbagai versi pelajaran ini. Setiap versi mengajar konsep yang sama tetapi mempunyai imej yang berbeza untuk menarik minat pelajar yang berbeza. Untuk maklumat lanjut, lawati halaman pendaratan [Helo Dunia.](https://code.org/helloworld)",
           "preparation": "-   Main melalui teka-teki untuk menemukan daerah masalah potensial untuk kelas anda.\n-   Gunakan sumber di [Sambungan SK](https://code.org/educate/csc) untuk membuat rancangan untuk lebih banyak pembelajaran sains komputer selepas tutorial awal.",
-          "purpose": "Pelajaran ini bertujuan untuk menyediakan pelajar untuk membuat projek pengaturcaraan mudah di Makmal Sprite. Dengan kemahiran ini, pelajar kemudian dapat membuat projek mengenai topik apa pun, seperti topik sekolah lain atau sesuatu yang berkaitan secara peribadi dengan mereka. Lawati [Sambungan SK](https://code.org/educate/csc) untuk idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain."
+          "purpose": "Pelajaran ini bertujuan untuk menyediakan pelajar untuk membuat projek pengaturcaraan mudah di Makmal Sprite. Dengan kemahiran ini, pelajar kemudian dapat membuat projek mengenai topik apa pun, seperti topik sekolah lain atau sesuatu yang berkaitan secara peribadi dengan mereka. Lawati [Sambungan SK](https://code.org/educate/csc) untuk idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain.",
+          "student_overview": "Dalam pelajaran ini, anda akan mempelajari asas sains komputer dengan pengaturcaraan dalam Sprite Lab. Sprite Lab ialah alat yang boleh anda gunakan untuk membina projek yang imaginatif dan menyeronokkan. Anda akan belajar mencipta dan menghidupkan sprite dan menjadikannya interaktif menggunakan acara."
         },
         "starwars/Hour of Code 2015": {
           "name": "Star Wars: Membina Galaksi Dengan Menggunakan Kod (JavaScript)",
@@ -90,7 +96,8 @@
         "hello-world-retro-2021/Hello World": {
           "overview": "Dalam pelajaran ini, pelajar akan mempelajari asas-asas sains komputer dengan pengaturcaraan di Sprite Lab. Sprite Lab adalah alat yang boleh anda gunakan untuk membina projek khayalan dan menyeronokkan. Pelajar akan belajar membuat dan menghidupkan sprites dan menjadikannya interaktif menggunakan acara. \n\nTerdapat pelbagai versi pelajaran ini. Setiap versi mengajar konsep yang sama tetapi mempunyai imej yang berbeza untuk menarik minat pelajar yang berbeza. Untuk maklumat lanjut, lawati halaman pendaratan [Helo Dunia.](https://code.org/helloworld)",
           "preparation": "-   Main melalui teka-teki untuk menemukan daerah masalah potensial untuk kelas anda.\n-   Gunakan sumber di [Sambungan SK](https://code.org/educate/csc) untuk membuat rancangan untuk lebih banyak pembelajaran sains komputer selepas tutorial awal.",
-          "purpose": "Pelajaran ini bertujuan untuk menyediakan pelajar untuk membuat projek pengaturcaraan mudah di Makmal Sprite. Dengan kemahiran ini, pelajar kemudian dapat membuat projek mengenai topik apa pun, seperti topik sekolah lain atau sesuatu yang berkaitan secara peribadi dengan mereka. Lawati [Sambungan SK](https://code.org/educate/csc) untuk idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain."
+          "purpose": "Pelajaran ini bertujuan untuk menyediakan pelajar untuk membuat projek pengaturcaraan mudah di Makmal Sprite. Dengan kemahiran ini, pelajar kemudian dapat membuat projek mengenai topik apa pun, seperti topik sekolah lain atau sesuatu yang berkaitan secara peribadi dengan mereka. Lawati [Sambungan SK](https://code.org/educate/csc) untuk idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain.",
+          "student_overview": "Dalam pelajaran ini, anda akan mempelajari asas sains komputer dengan pengaturcaraan dalam Sprite Lab. Sprite Lab ialah alat yang boleh anda gunakan untuk membina projek yang imaginatif dan menyeronokkan. Anda akan belajar mencipta dan menghidupkan sprite dan menjadikannya interaktif menggunakan acara."
         },
         "starwarsblocks/Hour of Code 2015": {
           "purpose": "Pelajaran ini memperkenalkan konsep CS teras pengekodan dan pengaturcaraan termasuk penjujukan dan acara. Tutorial versi JavaScript juga membolehkan pelajar memperoleh pengalaman menaip kod.",
@@ -130,17 +137,56 @@
           "overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pertama, pelajar mengelaskan objek sama ada \"ikan\" atau \"bukan ikan\" untuk cuba membuang sampah dari lautan. Kemudian, pelajar perlu mengembangkan set data latihan mereka untuk memasukkan makhluk laut lain yang berada di dalam air. Dalam bahagian kedua aktiviti, pelajar akan memilih label mereka sendiri untuk digunakan pada imej ikan yang dijana secara rawak. Data latihan ini digunakan untuk model pembelajaran mesin yang kemudiannya boleh melabelkan imej baharu sendiri.",
           "student_overview": "Rumusan Tutorial: Pelajar pertama mengklasifikasikan objek sebagai sama ada \"ikan\" atau \"bukan ikan\" sebagai usaha untuk mengaut sampah keluar dari lautan. Kemudian, pelajar akan perlu mengembangkan kumpulan data latihan mereka untuk memasukkan hidupan laut lain yang terdapat di dalam air. Dalam bahagian kedua aktiviti itu, pelajar akan memilih label mereka sendiri untuk digunakan pada imej ikan yang dihasilkan secara rawak. Data latihan ini digunakan untuk model pembelajaran mesin yang sepatutnya boleh melabelkan imej baharu dengan sendirinya."
         },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Penjujukan"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Gelung"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Acara-acara"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Bersyarat"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Fungsi"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Pemboleh ubah"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Kajian Perasaan"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Asas Sains Komputer"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Merancang"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Asas Sains Komputer"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Merancang"
+        },
         "courseb-2018/Sequencing with Scrat": {
           "name": "Penjujukan dengan Scrat"
+        },
+        "courseb-2018/Your Digital Footprint": {
+          "name": "Your Digital Footprint"
         },
         "courseb-2018/Programming: My Robotic Friends": {
           "name": "Rakan Robotik Junior Saya"
         },
         "courseb-2018/Programming in Ice Age": {
           "name": "Pengaturcaraan dengan Scrat"
+        },
+        "courseb-2018/Copyright and Creativity": {
+          "name": "Sangat Hebat untuk Mencipta dan Bermain dengan Adil"
         },
         "courseb-2018/Programming with Rey and BB-8": {
           "name": "Pengaturcaraan dengan Rey dan BB-8"
@@ -177,6 +223,9 @@
         },
         "coursea-2018/Programming in Harvester": {
           "name": "Pengaturcaraan dengan Penuai"
+        },
+        "coursea-2018/Going Places Safely": {
+          "name": "Going Places Safely"
         },
         "coursea-2018/Loops: Happy Loops": {
           "name": "Gelung Bahagia"
@@ -226,20 +275,38 @@
         "coursed-2018/While Loops in Farmer": {
           "name": "Gelung Semasa di dalam Peladang"
         },
+        "coursed-2018/Conditionals with Cards": {
+          "name": "Bersyarat dengan Kad"
+        },
+        "coursed-2018/Digital Citizenship": {
+          "name": "Kewarganegaraan Digital"
+        },
         "coursed-2018/Build a Play Lab Game": {
           "name": "Permainan Ninja lwn. Lanun"
+        },
+        "coursed-2018/Unplugged: Binary": {
+          "name": "Imej Binari"
         },
         "coursed-2018/Artist Binary": {
           "name": "Imej Binari dengan Artis"
         },
+        "coursef-2018/Programming: My Robotic Friends": {
+          "name": "Rakan-rakan Robotik Saya"
+        },
         "coursef-2018/Sequence in Maze": {
           "name": "Mengekod dengan Komen"
+        },
+        "coursef-2018/Building a Foundation": {
+          "name": "Membina Asas"
         },
         "coursef-2018/Debugging with Scrat": {
           "name": "Penyahpepijatan dengan Scrat"
         },
         "coursef-2018/Programming in Artist": {
           "name": "Mencipta Seni dengan Kod"
+        },
+        "coursef-2018/Loops: My Loopy Robotic Friends": {
+          "name": "My Loopy Robotic Friends"
         },
         "coursef-2018/Loops in Artist": {
           "name": "Melukis Bentuk dengan Gelung"
@@ -250,17 +317,26 @@
         "coursef-2018/Nested Loops with Frozen": {
           "name": "Gelung Bersarang dengan Frozen"
         },
+        "coursef-2018/Conditionals with Cards": {
+          "name": "Bersyarat dengan Kad"
+        },
         "coursef-2018/Conditionals in Farmer": {
           "name": "Bersyarat dengan Peladang"
         },
         "coursef-2018/The Power of Words": {
           "name": "Kuasa Perkataan"
         },
+        "coursef-2018/Envelope Variables": {
+          "name": "Envelope Variables"
+        },
         "coursef-2018/Variables as Constant in Artist": {
           "name": "Pemboleh Ubah dengan Artis"
         },
         "coursef-2018/Variables that Change in Artist": {
           "name": "Menukar Pemboleh Ubah dengan Artis"
+        },
+        "coursef-2018/For Loop Fun": {
+          "name": "Gelung Untuk yang Menyeronokkan"
         },
         "coursef-2018/For Loops in Artist": {
           "name": "Untuk Gelung dengan Artis"
@@ -295,6 +371,9 @@
         "express-2018/Programming in Artist": {
           "name": "Mencipta Seni dengan Kod"
         },
+        "express-2018/Loops: Getting Loopy": {
+          "name": "Getting Loopy"
+        },
         "express-2018/Loops with Rey and BB-8": {
           "name": "Gelung dengan Rey dan BB-8"
         },
@@ -303,6 +382,15 @@
         },
         "express-2018/Nested Loops in Frozen": {
           "name": "Gelung Bersarang bersama Anna dan Elsa"
+        },
+        "express-2018/While Loops in Farmer": {
+          "name": "While Loops with the Farmer"
+        },
+        "express-2018/Conditionals with Cards": {
+          "name": "Bersyarat dengan Kad"
+        },
+        "express-2018/Functions: Songwriting": {
+          "name": "Songwriting"
         },
         "express-2018/Functions in Artist": {
           "name": "Fungsi di dalam Artis"
@@ -313,17 +401,26 @@
         "express-2018/Determine the Concept": {
           "name": "Tentukan Konsep"
         },
+        "express-2018/Events: The Big Event": {
+          "name": "The Big Event"
+        },
         "express-2018/Build a Flappy Game": {
           "name": "Membina Permainan Kibasan"
         },
         "express-2018/The Power of Words": {
           "name": "Kuasa Perkataan"
         },
+        "express-2018/Envelope Variables": {
+          "name": "Envelope Variables"
+        },
         "express-2018/Variables as Constant in Artist": {
           "name": "Pemboleh Ubah dengan Artis"
         },
         "express-2018/Variables that Change in Artist": {
           "name": "Menukar Pemboleh Ubah dengan Artis"
+        },
+        "express-2018/For Loop Fun": {
+          "name": "Gelung Untuk yang Menyeronokkan"
         },
         "express-2018/For Loops in Artist": {
           "name": "Untuk Gelung dengan Artis"
@@ -343,20 +440,38 @@
         "express-2018/Present Your Project": {
           "name": "Bentangkan Projek Anda"
         },
+        "express-2018/Binary Bracelets": {
+          "name": "Binary Bracelets"
+        },
+        "express-2018/Unplugged: Binary": {
+          "name": "Imej Binari"
+        },
         "express-2018/Artist Binary": {
           "name": "Imej Binari dengan Artis"
         },
         "express-2018/Internet": {
           "name": "Internet"
         },
+        "express-2018/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Rakan-rakan Robotik Saya"
+        },
         "coursee-2018/Sequence in Maze": {
           "name": "Mengekod dengan Komen"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Membina Asas"
         },
         "coursee-2018/Debugging with Scrat": {
           "name": "Penyahpepijatan dengan Scrat"
         },
         "coursee-2018/Programming in Artist": {
           "name": "Mencipta Seni dengan Kod"
+        },
+        "coursee-2018/Loops: My Loopy Robotic Friends": {
+          "name": "My Loopy Robotic Friends"
         },
         "coursee-2018/Loops in Artist": {
           "name": "Melukis Bentuk dengan Gelung"
@@ -367,17 +482,29 @@
         "coursee-2018/Nested Loops with Frozen": {
           "name": "Gelung Bersarang dengan Frozen"
         },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Bersyarat dengan Kad"
+        },
         "coursee-2018/Conditionals": {
           "name": "Bersyarat dengan Peladang"
         },
+        "coursee-2018/Private and Personal Information": {
+          "name": "Sulit dan Maklumat Peribadi"
+        },
         "coursee-2018/Build a Star Wars Game": {
           "name": "Membina Permainan Star Wars"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Songwriting"
         },
         "coursee-2018/Functions in Minecraft": {
           "name": "Fungsi dalam Minecraft"
         },
         "coursee-2018/Functions in Harvester": {
           "name": "Fungsi dengan Penuai"
+        },
+        "coursee-2018/Copyright and Creativity": {
+          "name": "Perkongsian Digital"
         },
         "coursee-2018/Functions in Artist": {
           "name": "Fungsi dengan Artis"
@@ -400,6 +527,12 @@
         "coursee-2018/Internet": {
           "name": "Internet"
         },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "Membina Asas"
+        },
         "coursec-2018/Programming in Maze": {
           "name": "Pengaturcaraan dengan Angry Birds"
         },
@@ -415,6 +548,9 @@
         "coursec-2018/Programming in Artist": {
           "name": "Mencipta Seni dengan Kod"
         },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Getting Loopy"
+        },
         "coursec-2018/Loops with Rey and BB-8": {
           "name": "Gelung dengan Rey dan BB-8"
         },
@@ -423,6 +559,9 @@
         },
         "coursec-2018/Loops in Harvester": {
           "name": "Menuai Tanaman dengan Gelung"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "The Big Event"
         },
         "coursec-2018/Build a Flappy Game": {
           "name": "Membina Permainan Kibasan"
@@ -433,14 +572,23 @@
         "coursec-2018/Events in Play Lab": {
           "name": "Permainan Mengejar dengan Peristiwa"
         },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Binary Bracelets"
+        },
         "pre-express-2018/Sequencing with Scrat": {
           "name": "Penjujukan dengan Scrat"
+        },
+        "pre-express-2018/Your Digital Footprint": {
+          "name": "Your Digital Footprint"
         },
         "pre-express-2018/Programming: My Robotic Friends": {
           "name": "Rakan Robotik Junior Saya"
         },
         "pre-express-2018/Programming in Ice Age": {
           "name": "Pengaturcaraan dengan Scrat"
+        },
+        "pre-express-2018/Copyright and Creativity": {
+          "name": "Sangat Hebat untuk Mencipta dan Bermain dengan Adil"
         },
         "pre-express-2018/Programming with Rey and BB-8": {
           "name": "Pengaturcaraan dengan Rey dan BB-8"
@@ -467,7 +615,7 @@
           "name": "Lebah Ejaan"
         },
         "csd3-2018/Variables": {
-          "name": "Pembolehubah"
+          "name": "Pemboleh ubah"
         },
         "csd3-2018/Sprites": {
           "name": "Jin"
@@ -475,14 +623,59 @@
         "csd3-2018/Conditionals": {
           "name": "Bersyarat"
         },
+        "csd3-2018/Keyboard Input": {
+          "name": "Input Papan Kekunci"
+        },
+        "csd3-2018/Collisions": {
+          "name": "Perlanggaran"
+        },
         "csd3-2018/Functions": {
           "name": "Fungsi"
+        },
+        "csd3-2018/CS Discoveries Post-Course Survey": {
+          "name": "Kajian Pasca Kursus CS Discoveries"
+        },
+        "csd6-2018/Board Events": {
+          "name": "Acara Papan"
+        },
+        "csd6-2018/Getting Properties": {
+          "name": "Mendapatkan Harta"
         },
         "csd6-2018/Functions with Parameters": {
           "name": "Fungsi-fungsi dengan parameter"
         },
+        "csd6-2018/CS Discoveries Post-Course Survey": {
+          "name": "Kajian Pasca Kursus CS Discoveries"
+        },
+        "csd5-2018/Representing Images": {
+          "name": "Mewakili Imej"
+        },
+        "csd5-2018/Keeping Data Secret": {
+          "name": "Menyimpan Rahsia Data"
+        },
+        "csd5-2018/Combining Representations": {
+          "name": "Menggabungkan Perwakilan"
+        },
+        "csd5-2018/CS Discoveries Post-Course Survey": {
+          "name": "Kajian Pasca Kursus CS Discoveries"
+        },
+        "csd4-2018/Linking Screens": {
+          "name": "Memautkan Skrin"
+        },
+        "csd4-2018/CS Discoveries Post-Course Survey": {
+          "name": "Kajian Pasca Kursus CS Discoveries"
+        },
+        "csd2-2018/Headings": {
+          "name": "Headings"
+        },
         "csd2-2018/Lists": {
           "name": "Senarai"
+        },
+        "csd2-2018/CS Discoveries Post-Course Survey": {
+          "name": "Kajian Pasca Kursus CS Discoveries"
+        },
+        "coursea-2019/Going Places Safely": {
+          "name": "Going Places Safely"
         },
         "coursea-2019/Learn to Drag and Drop": {
           "name": "Pelajari Tarik dan Lepas"
@@ -517,6 +710,9 @@
         "coursea-2019/Events in Play Lab": {
           "name": "Bergerak bersama Acara"
         },
+        "courseb-2019/Your Digital Footprint": {
+          "name": "Your Digital Footprint"
+        },
         "courseb-2019/Sequencing in Maze": {
           "name": "Penjujukan dengan Angry Birds"
         },
@@ -525,6 +721,9 @@
         },
         "courseb-2019/Programming in Harvester": {
           "name": "Pengaturcaraan dengan Penuai"
+        },
+        "courseb-2019/Loops: Getting Loopy": {
+          "name": "Getting Loopy"
         },
         "courseb-2019/Loops in Harvester": {
           "name": "Gelung dengan Penuai"
@@ -565,11 +764,20 @@
         "coursed-2019/Nested Loops in Bee": {
           "name": "Gelung Bersarang di dalam Pagar Sesat"
         },
+        "coursed-2019/Conditionals with Cards": {
+          "name": "Bersyarat dengan Kad"
+        },
         "coursed-2019/While Loops in Farmer": {
           "name": "Gelung Semasa di dalam Peladang"
         },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "Imej Binari"
+        },
         "coursed-2019/Artist Binary": {
           "name": "Imej Binari dengan Artis"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "Kewarganegaraan Digital"
         },
         "coursed-2019/Dance Party": {
           "name": "Majlis Tari-Menari"
@@ -589,6 +797,9 @@
         "coursef-2019/Nested Loops in the Maze": {
           "name": "Gelung Bersarang di dalam Pagar Sesat"
         },
+        "coursef-2019/Envelope Variables": {
+          "name": "Envelope Variables"
+        },
         "coursef-2019/Variables as Constant in Artist": {
           "name": "Pemboleh Ubah dengan Artis"
         },
@@ -597,6 +808,9 @@
         },
         "coursef-2019/Simulating Experiments": {
           "name": "Mensimulasikan Eksperimen"
+        },
+        "coursef-2019/For Loop Fun": {
+          "name": "Gelung Untuk yang Menyeronokkan"
         },
         "coursef-2019/For Loops in Artist": {
           "name": "Untuk Gelung dengan Artis"
@@ -613,6 +827,12 @@
         "coursef-2019/The Power of Words": {
           "name": "Kuasa Perkataan"
         },
+        "coursef-2019/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "coursef-2019/Digital Sharing": {
+          "name": "Perkongsian Digital"
+        },
         "coursef-2019/End of Course Project": {
           "name": "Akhir Projek Kursus"
         },
@@ -628,11 +848,17 @@
         "coursee-2019/Conditionals": {
           "name": "Bersyarat dengan Peladang"
         },
+        "coursee-2019/Simon Says": {
+          "name": "Simon Says"
+        },
         "coursee-2019/Learning Sprites with Sprite Lab": {
           "name": "Ikan Berenang dengan Makmal Peperi"
         },
         "coursee-2019/Alien Dance Party with Sprite Lab": {
           "name": "Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi"
+        },
+        "coursee-2019/Private and Personal Information": {
+          "name": "Sulit dan Maklumat Peribadi"
         },
         "coursee-2019/About Me": {
           "name": "Tentang Saya dengan Makmal Peperi"
@@ -648,6 +874,9 @@
         },
         "coursee-2019/Nested Loops in Frozen": {
           "name": "Gelung Bersarang dengan Frozen"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Songwriting"
         },
         "coursee-2019/Functions in Minecraft": {
           "name": "Fungsi dalam Minecraft"
@@ -688,6 +917,9 @@
         "express-2019/Nested Loops in Frozen": {
           "name": "Emping Salji dengan Anna dan Elsa"
         },
+        "express-2019/While Loops in Farmer": {
+          "name": "While Loops with the Farmer"
+        },
         "express-2019/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Bersyarat dalam Minecraft: Pelayaran Akuatik"
         },
@@ -721,6 +953,9 @@
         "coursec-2019/Screen Out the Mean": {
           "name": "Keluarkan Maksudnya"
         },
+        "coursec-2019/Powerful Passwords": {
+          "name": "Powerful Passwords"
+        },
         "coursec-2019/Programming: My Robotic Friends": {
           "name": "Rakan Robotik Junior Saya"
         },
@@ -736,6 +971,9 @@
         "coursec-2019/Programming in Artist": {
           "name": "Mencipta Seni dengan Kod"
         },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Binary Bracelets"
+        },
         "coursec-2019/Loops: My Loopy Robotic Friends": {
           "name": "Rakan Robotik Bergelung Junior Saya"
         },
@@ -748,11 +986,17 @@
         "coursec-2019/Sticker Art with Loops": {
           "name": "Seni Pelekat dengan Gelung"
         },
+        "coursec-2019/Events: The Big Event": {
+          "name": "The Big Event"
+        },
         "coursec-2019/Build a Flappy Game": {
           "name": "Membina Permainan Kibasan"
         },
         "coursec-2019/Events in Play Lab": {
           "name": "Permainan Mengejar dengan Peristiwa"
+        },
+        "coursec-2019/Picturing Data": {
+          "name": "Memotret Data"
         },
         "coursec-2019/End of Course Project: Create a Play Lab Game": {
           "name": "Akhir Projek Kursus"
@@ -794,7 +1038,7 @@
           "name": "Pertempuran Diraja bersama Acara"
         },
         "csd3-2019/Variables": {
-          "name": "Pembolehubah"
+          "name": "Pemboleh ubah"
         },
         "csd3-2019/Sprites": {
           "name": "Jin"
@@ -802,11 +1046,38 @@
         "csd3-2019/Conditionals": {
           "name": "Bersyarat"
         },
+        "csd3-2019/Keyboard Input": {
+          "name": "Input Papan Kekunci"
+        },
+        "csd3-2019/Collisions": {
+          "name": "Perlanggaran"
+        },
         "csd3-2019/Functions": {
           "name": "Fungsi"
         },
+        "csd6-2019/Board Events": {
+          "name": "Acara Papan"
+        },
+        "csd6-2019/Getting Properties": {
+          "name": "Mendapatkan Harta"
+        },
         "csd6-2019/Functions with Parameters": {
           "name": "Fungsi-fungsi dengan parameter"
+        },
+        "csd4-2019/Linking Screens": {
+          "name": "Memautkan Skrin"
+        },
+        "csd5-2019/Representing Images": {
+          "name": "Mewakili Imej"
+        },
+        "csd5-2019/Keeping Data Secret": {
+          "name": "Menyimpan Rahsia Data"
+        },
+        "csd5-2019/Combining Representations": {
+          "name": "Menggabungkan Perwakilan"
+        },
+        "csd2-2019/Headings": {
+          "name": "Headings"
         },
         "csd2-2019/Lists": {
           "name": "Senarai"
@@ -816,6 +1087,9 @@
         },
         "coursef-2017/Sequence in Maze": {
           "name": "Jujukan di dalam Pagar Sesat"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Membina Asas"
         },
         "coursef-2017/Debugging with Scrat": {
           "name": "Penyahpepijatan dengan Scrat"
@@ -901,6 +1175,9 @@
         "coursea-2017/Persistence & Frustration: Stevie and the Marbles": {
           "name": "Kegigihan: Stevie dan Projek Besar"
         },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritma kehidupan sebenar: Menanam Benih"
+        },
         "coursea-2017/Learn to Drag and Drop": {
           "name": "Penjujukan dengan Tarik dan Lepas"
         },
@@ -933,6 +1210,9 @@
         },
         "pre-express-2017/Persistence & Frustration: Stevie and the Marbles": {
           "name": "Kegigihan: Stevie dan Projek Besar"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritma kehidupan sebenar: Menanam Benih"
         },
         "pre-express-2017/Learn to Drag and Drop": {
           "name": "Penjujukan dengan Tarik dan Lepas"
@@ -969,6 +1249,9 @@
         },
         "coursee-2017/Sequence in Maze": {
           "name": "Jujukan di dalam Pagar Sesat"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Membina Asas"
         },
         "coursee-2017/Debugging with Scrat": {
           "name": "Penyahpepijatan dengan Scrat"
@@ -1048,6 +1331,9 @@
         "coursec-2017/Debugging in Maze": {
           "name": "Penyahpepijatan di dalam Pagar Sesat"
         },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Algoritma Kehidupan Sebenar: Paper Planes"
+        },
         "coursec-2017/Programming in Collector": {
           "name": "Pengaturcaraan di dalam Pengumpul"
         },
@@ -1083,6 +1369,9 @@
         },
         "courseb-2017/Persistence & Frustration: Stevie and the Marbles": {
           "name": "Kegigihan: Stevie dan Projek Besar"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritma kehidupan sebenar: Menanam Benih"
         },
         "courseb-2017/Learn to Drag and Drop": {
           "name": "Penjujukan dengan Tarik dan Lepas"
@@ -1168,6 +1457,9 @@
         "express-2017/Algorithms: Graph Paper Programming": {
           "name": "Pengaturcaraan: Pengaturcaraan Kertas Graf"
         },
+        "express-2017/Building a Foundation": {
+          "name": "Membina Asas"
+        },
         "express-2017/Loops: My Loopy Robotic Friends": {
           "name": "Gelung: Rakan Robotik Bergelung Saya"
         },
@@ -1250,7 +1542,7 @@
           "name": "Bentangkan Projek Anda"
         },
         "csd3-2017/Variables": {
-          "name": "Pembolehubah"
+          "name": "Pemboleh ubah"
         },
         "csd3-2017/Sprites": {
           "name": "Jin"
@@ -1258,14 +1550,41 @@
         "csd3-2017/Conditionals": {
           "name": "Bersyarat"
         },
+        "csd3-2017/Keyboard Input": {
+          "name": "Input Papan Kekunci"
+        },
+        "csd3-2017/Collisions": {
+          "name": "Perlanggaran"
+        },
         "csd3-2017/Functions": {
           "name": "Fungsi"
+        },
+        "csd6-2017/Board Events_": {
+          "name": "Acara Papan"
+        },
+        "csd6-2017/Getting Properties_": {
+          "name": "Mendapatkan Harta"
         },
         "csd6-2017/Functions with Parameters_": {
           "name": "Fungsi-fungsi dengan parameter"
         },
+        "csd2-2017/Headings": {
+          "name": "Headings"
+        },
         "csd2-2017/Lists": {
           "name": "Senarai"
+        },
+        "csd5-2017/Representing Images": {
+          "name": "Mewakili Imej"
+        },
+        "csd5-2017/Keeping Data Secret": {
+          "name": "Menyimpan Rahsia Data"
+        },
+        "csd5-2017/Combining Representations": {
+          "name": "Menggabungkan Perwakilan"
+        },
+        "csd4-2017/Linking Screens": {
+          "name": "Memautkan Skrin"
         },
         "course4/Artist": {
           "name": "Artis"
@@ -1285,11 +1604,77 @@
         "course4/Artist Binary": {
           "name": "Binari Artis"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Pengenalan kepada Sains komputer"
+        },
+        "20-hour/The Maze": {
+          "name": "Simpang Siur"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Pengiraan pemikiran"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Pengaturcaraan kertas graf"
+        },
+        "20-hour/The Artist": {
+          "name": "Pelukis"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritma"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Artis 2"
+        },
+        "20-hour/Functions": {
+          "name": "Fungsi"
+        },
+        "20-hour/The Farmer": {
+          "name": "Petani"
+        },
+        "20-hour/Conditionals": {
+          "name": "Bersyarat"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Artis 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Lagu"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Petani 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstraksi"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Artis 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Pengaturcaraan penyampai"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Petani 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Artis 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Wrap-up"
+        },
         "course2/Graph Paper Programming": {
           "name": "Pengaturcaraan kertas graf"
         },
+        "course2/Real-life Algorithms: Paper Planes": {
+          "name": "Algoritma Kehidupan Sebenar: Paper Planes"
+        },
         "course2/Maze: Sequence": {
           "name": "SImpang Siur: Turutan"
+        },
+        "course2/Getting Loopy": {
+          "name": "Getting Loopy"
         },
         "course2/Relay programming": {
           "name": "Pengaturcaraan penyampai"
@@ -1300,11 +1685,20 @@
         "course2/Conditionals": {
           "name": "Bersyarat"
         },
+        "course2/Binary Bracelets": {
+          "name": "Binary Bracelets"
+        },
+        "course2/The Big Event": {
+          "name": "The Big Event"
+        },
         "course2/Flappy": {
           "name": "Flappy"
         },
         "course2/Studio: Create a Story": {
           "name": "Studio: Reka Cerita"
+        },
+        "course2/Your Digital Footprint": {
+          "name": "Your Digital Footprint"
         },
         "course2/Artist: Nested Loops": {
           "name": "Artis: Gelung Bersarang"
@@ -1318,8 +1712,14 @@
         "course3/Artist": {
           "name": "Artis"
         },
+        "course3/Functional Suncatchers": {
+          "name": "Functional Suncatchers"
+        },
         "course3/Artist: Functions": {
           "name": "Artis: Fungsi"
+        },
+        "course3/Songwriting": {
+          "name": "Songwriting"
         },
         "course3/Dice Race": {
           "name": "Perlumbaan Dadu"
@@ -1336,11 +1736,20 @@
         "course3/Internet": {
           "name": "Internet"
         },
+        "course3/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "course3/Digital Citizenship": {
+          "name": "Kewarganegaraan Digital"
+        },
         "course3/Artist: Patterns": {
           "name": "Artis: Corak"
         },
         "course1/Happy Maps": {
           "name": "Peta-peta Gembira"
+        },
+        "course1/Move it, Move it": {
+          "name": "Move it, Move it"
         },
         "course1/Jigsaw: Learn to drag and drop": {
           "name": "Jigsaw: Belajar untuk drag and drop"
@@ -1351,17 +1760,68 @@
         "course1/Maze: Debugging": {
           "name": "Simpang Siur: Debugging"
         },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritma kehidupan sebenar: Menanam Benih"
+        },
+        "course1/Building a Foundation": {
+          "name": "Membina Asas"
+        },
         "course1/Spelling Bee": {
           "name": "Lebah Ejaan"
         },
+        "course1/Getting Loopy": {
+          "name": "Getting Loopy"
+        },
+        "course1/The Big Event": {
+          "name": "The Big Event"
+        },
         "course1/Studio: Create a Story": {
           "name": "Studio: Reka Cerita"
+        },
+        "course1/Going Places Safely": {
+          "name": "Going Places Safely"
         },
         "jigsaw/Jigsaw": {
           "overview": "Pelajaran ini akan memberikan idea kepada pelajar mengenai perkara yang dijangkakan apabila mereka menuju ke makmal komputer. Sesi ini dimulakan dengan perbincangan ringkas memperkenalkan mereka kepada peradaban ketika berada di dalam makmal komputer, kemudian mereka akan meneruskan sesi dengan menggunakan komputer untuk menyelesaikan teka-teki dalam talian.",
           "preparation": "-   Semak tapak web [Pelajaran Yang Munasabah](https://www.commonsense.org/education/digital-citizenship) untuk mendapatkan lebih banyak kandungan keselamatan dalam talian.",
           "purpose": "Matlamat utama pelajaran ini adalah untuk membina pengalaman pelajar dengan komputer. Dengan meliputi fungsi komputer yang paling asas seperti mengklik, menyeret, dan menjatuhkan, kami mencipta medan permainan yang lebih sama di dalam kelas untuk teka-teki masa depan. Pelajaran ini juga memberikan peluang yang baik untuk memperkenalkan istilah perkakasan komputer asas, yang berpotensi termasuk \"tetikus\", \"trackpad\" atau \"skrin sentuh\", bergantung pada peranti anda.",
           "student_overview": "Klik dan tarik untuk menyelesaikan teka-teki."
+        },
+        "allthethings/Maze": {
+          "name": "Maze"
+        },
+        "allthethings/Artist": {
+          "name": "Artis"
+        },
+        "allthethings/Farmer": {
+          "name": "Petani"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Lantunan"
+        },
+        "allthethings/Multi": {
+          "name": "Pelbagai"
+        },
+        "allthethings/Match": {
+          "name": "Suaikan"
+        },
+        "allthethings/Text Compression": {
+          "name": "Pemampatan Teks"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Web Lab": {
+          "name": "Makmal Web"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java Lab"
         },
         "coursef-2021/lesson-6": {
           "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan membincangkan peranan komputer dan teknologi dalam kehidupan mereka, dengan menumpukan kepada cara aplikasi dan alatan memberikan pengguna pilihan tentang cara menggunakannya. Pelajar juga akan meneroka aplikasi yang serupa dengan aplikasi yang akan mereka cipta sendiri nanti.",
@@ -1383,6 +1843,7 @@
           "student_overview": "Anda akan berusaha melalui tahap pengaturcaraan dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila anda dapat membina apa sahaja yang anda suka."
         },
         "coursef-2021/Virtual Pet": {
+          "name": "Projek Mini: Haiwan Peliharaan Maya",
           "overview": "Dalam pelajaran **projek mini**, pelajar akan mencipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang mereka inginkan. Pelajar akan menggunakan alat \"Kostum\" Makmal Peperi untuk menyesuaikan penampilan haiwan peliharaan mereka. Kemudian, mereka akan menggunakan peristiwa, tingkah laku dan konsep lain yang telah mereka pelajari untuk merealisasikan projek mereka.",
           "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "purpose": "Pelajaran ini me membolehkan pelajar menggunakan konsep pengaturcaraan daripada pelajaran sebelumnya dalam konteks kreatif yang lain. ",
@@ -1410,6 +1871,7 @@
           "student_overview": "Dalam pelajaran ini anda akan berlatih dengan pemboleh ubah di dalam Makmal Peperi."
         },
         "coursef-2021/lesson-11": {
+          "name": "Projek Mini: Program Input Pengguna",
           "overview": "Pelajar akan menggunakan kemahiran baharu mereka dengan pemboleh ubah kepada satu daripada tiga **projek mini** terbuka. Pelajar akan meneroka atur cara sampel, mencipta rancangan untuk projek mereka sendiri dan mengatur caranya tanpa apa-apa asas.",
           "preparation": "-   Cetak panduan perancangan atau edarkan salinan digital kepada setiap pelajar. Semaknya terlebih dahulu sekiranya anda ingin membuat pengubahsuaian agar sesuai dengan kelas anda.\n\n-   Semak pilihan dalam tahap 3 lebih awal untuk membiasakan diri dengan aliran yang perlu diikuti oleh pelajar.\n\n-   Pelajaran ini mempunyai potensi untuk dilanjutkan kepada tempoh kelas berbilang. Pertimbangkan implikasi penjadualan dengan lebih awal.",
           "purpose": "Pelajaran ini tidak memperkenalkan kemahiran atau konsep baharu, tetapi sebaliknya memberi peluang kepada pelajar menggunakan perkara yang telah mereka pelajari secara kreatif.",
@@ -1443,6 +1905,7 @@
           "student_overview": "Lebah ini menyukai pemboleh ubah!"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "Gelung Untuk yang Menyeronokkan",
           "preparation": "-   Tonton **\\*video**.\n-   Cetak satu **\\*lembaran kerja** setiap kumpulan.\n-   Cetak satu **\\*penilaian** untuk setiap pelajar.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "purpose": "Setakat ini, pelajar telah menjadi pakar gelung. Hari ini, mereka akan belajar tentang gelung lain yang biasa digunakan dalam pengaturcaraan. Gelung \"untuk\" mengulangi arahan beberapa kali, tetapi juga menjejaki nilai yang diulanginya. Sebagai contoh, gelung \"untuk\" yang bermula daripada 4, berakhir dengan 8 dan mempunyai nilai langkah 1 akan berulang 4 kali, tetapi nilai 4, 5, 6 dan 7 juga akan ditangkap untuk kegunaan di tempat lain. Menggunakan struktur ini dengan pemboleh ubah boleh mencipta beberapa atur cara yang cukup hebat. Hari ini, pelajar hanya akan mempelajari asas gelung \"untuk\" sebelum menyelami ke dalam pengaturcaraan dengan mereka nanti!",
           "student_overview": "Anda akan menikmati banyak keseronokan apabila mempelajari tentang gelung `untuk`!"
@@ -1467,8 +1930,10 @@
         },
         "coursef-2021/lesson-5": {
           "name": "Wabak",
+          "overview": "Pelajaran ini menggabungkan **pembinaan kemahiran** di sekitar acara dengan **projek mini** yang membolehkan pelajar membina simulasi komputer mereka sendiri dalam Sprite Lab. Pelajar akan mengkaji simulasi untuk memahami seberapa cepat virus boleh merebak dan apa yang boleh dilakukan untuk memperlahankannya.",
           "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
-          "purpose": "Dalam pelajaran lepas, pelajar mengumpul dan mentafsir data daripada simulasi mudah. Dalam pelajaran ini, pelajar akan mengikut arahan untuk mengekod model simulasi mereka sendiri. Pengetahuan sedia ada pelajar tentang wabak virus di dunia sebenar akan digunakan pada senario rekaan."
+          "purpose": "Dalam pelajaran lepas, pelajar mengumpul dan mentafsir data daripada simulasi mudah. Dalam pelajaran ini, pelajar akan mengikut arahan untuk mengekod model simulasi mereka sendiri. Pengetahuan sedia ada pelajar tentang wabak virus di dunia sebenar akan digunakan pada senario rekaan.",
+          "student_overview": "Virus telah datang ke Bandar Raksasa! Belajar untuk mencipta simulator virus dan bantu raksasa itu kembali sihat."
         },
         "coursef-2021/AI for Oceans": {
           "name": "Kecerdasan Buatan (AI) Untuk Lautan",
@@ -1519,6 +1984,7 @@
           "student_overview": "Bantu Penuai mengumpulkan sayuran di sepanjang laluan."
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Getting Loopy",
           "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan belajar menggunakan gelung untuk menyampaikan arahan dengan lebih mudah dengan melihat pada corak pergerakan berulang dalam tarian.",
           "preparation": "-   Sedia memaparkan **\\*Lembaran Kerja** kepada pelajar.\n-   Cetak satu **\\*Penilaian** untuk setiap pelajar.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "purpose": "Setakat ini sepanjang kursus yang dijalankan, pelajar sepatutnya sudah berasa yakin dan selesa dengan mengatur cara set arahan linear. Sering kali set arahan linear ini termasuk dengan corak yang diulangi beberapa kali dan apabila pelajar mahu menulis atur cara yang lebih kompleks dan menarik, menduplikasi kod itu secara manual menjadi agak membebankan dan tidak cekap. Untuk membolehkan pelajar menulis atur cara yang amat berkesan, kita perlu bergantung pada struktur yang bermula daripada senarai linear tunggal itu. Gelung membenarkan pelajar menstruktur kod mereka dengan cara yang berulang. Dalam pelajaran ini, kita akan menumpukan kepada mengenal pasti corak dalam pergerakan fizikal sebelum beralih semula kepada komputer untuk mencari corak dalam kod kita.",
@@ -1714,6 +2180,7 @@
           "student_overview": "Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "The Big Event",
           "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan belajar bahawa peristiwa ialah cara terbaik menambahkan fleksibiliti kepada algoritma prabertulis.",
           "preparation": "-   Cetak atau paparkan **\\*Pengawal Peristiwa**.\n-   Cetak satu **\\*penilaian** untuk setiap pelajar.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "purpose": "Hari ini, pelajar akan mempelajari cara membezakan peristiwa dan tindakan. Pelajar akan melihat aktiviti terganggu dengan menekan \"butang\" pada alat kawalan jauh kertas. Apabila melihat peristiwa ini, kelas akan memberikan reaksi dengan tindakan yang unik. Peristiwa digunakan secara meluas dalam pengaturcaraan dan seharusnya mudah dikenali selepas pelajaran ini.",
@@ -1731,10 +2198,12 @@
           "student_overview": "Sudah tiba masanya menjadi kreatif dan mencipta permainan di Makmal Mainan!"
         },
         "coursec-2021/Picturing Data": {
+          "name": "Memotret Data",
           "preparation": "-   Cetak satu **\\*lembaran kerja** untuk setiap pelajar.\n-   Cuba pelajaran hari ini mengenai Studio Kod. Ini bertujuan digunakan sebagai alat untuk aktiviti hari ini. Bersedia untuk menayangkannya kepada kelas, atau sebaliknya membenarkan pelajar melawatnya pada komputer mereka sendiri.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "purpose": "Komputer dicipta untuk bantu memproses data. Terdapat peningkatan jumlah data di dunia, oleh yang demikian dapat membaca dan menganalisisnya adalah penting. Pelajaran ini di sini untuk memastikan pelajar mempunyai pengalaman asas dalam mengumpul, menggambarkan dan menganalisis set data yang mudah."
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Binary Bracelets",
           "preparation": "-   (Pilihan) Tonton video **\\*Pelajaran sedang Berjalan**.\n-   Kumpulkan penanda untuk gelang. Hiasan lain seperti manik dan pencuci paip adalah pilihan.\n-   Cetak satu **\\*lembaran kerja** dan satu **\\*penilaian** untuk setiap pelajar.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.\n-   (Pilihan) Tulis pesanan ringkas pada papan tulis dalam binari.",
           "purpose": "Dalam pelajaran ini pelajar akan mempelajari cara maklumat diwakili dengan cara sedemikian komputer boleh mentafsir dan menyimpannya. Apabila mempelajari binari, pelajar akan berpeluang menulis kod dan berkongsi dengan rakan sebaya sebagai mesej rahsia. Kemudiannya, ini boleh dikaitkan kembali dengan cara komputer membaca atur cara, menterjemahkannya kepada binari, menggunakan maklumat dalam beberapa cara, kemudian membalas kembali dengan cara yang boleh difahami oleh manusia. Sebagai contoh, apabila kita menaip ayat ke dalam dokumen kemudian tekan simpan, komputer menterjemahkan ayat ke dalam binari, menyimpan maklumat, kemudian menyiarkan mesej yang menunjukkan dokumen itu telah disimpan.",
           "student_overview": "Cipta gelang binari anda sendiri dan ketahui cara komputer mengingati maklumat!"
@@ -1815,6 +2284,7 @@
           "purpose": "Dalam pengenalan kepada gelung bersarang ini, pelajar akan keluar daripada zon selesa mereka untuk mencipta penyelesaian teka-teki yang lebih cekap.  \n\nDalam teka-teki sebelum ini, gelung menggalakkan pelajar untuk mengenali ulangan. Di sini, pelajar akan mempelajari mengenali corak _dalam_ corak berulang untuk membangunkan gelung bersarang ini. Peringkat ini bermula dengan mendorong pelajar untuk cuba menyelesaikan teka-teki yang kodnya menjengkelkan dan terlalu kompleks kerana terpaksa ditulis dengan panjang. Selepas video memperkenalkan gelung bersarang, pelajar ditunjukkan dengan contoh dan diminta untuk meramalkan perkara yang akan berlaku apabila gelung dimasukkan ke dalam gelung lain. Perkembangan ini membawa kepada banyak latihan untuk pelajar mengukuhkan dan membina pemahaman mereka tentang penggelungan dalam pengaturcaraan."
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Bersyarat dengan Kad",
           "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan menulis _pernyataan (jika/lain) bersyarat_ untuk menyatakan peraturan permainan kad mudah.",
           "preparation": "-   Kumpulkan dek kad atau sesuatu yang serupa.\n-   Cetak atau paparkan **\\*atur cara sampel**.\n-   Cetak satu **\\*penilaian** untuk setiap pelajar.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "purpose": "Satu daripada bahagian terbaik mengajar bersyarat ialah pelajar sudah memahami konsep daripada kehidupan seharian mereka. \n\nPelajaran ini menggabungkan sains komputer ke dalam dunia nyata dengan membina keupayaan mereka untuk memberitahu jika suatu syarat itu benar atau palsu. Pelajar akan belajar menggunakan pernyataan jika untuk mengisytiharkan masa perintah tertentu perlu dijalankan, serta pernyataan jika / lain untuk mengisytiharkan masa perintah perlu dijalankan dan perkara yang perlu dijalankan sebaliknya. Pelajar mungkin tidak mengenali perkataan bersyarat, tetapi kebanyakan pelajar akan memahami idea menggunakan \"jika\" untuk memastikan bahawa beberapa tindakan hanya berlaku apabila ia sepatutnya berlaku.",
@@ -2120,17 +2590,20 @@
           "student_overview": "Pelajari cara anda boleh menjadi individu bertanggungjawab apabila anda melihat buli siber."
         },
         "coursee-2021/Private and Personal Information": {
+          "name": "Sulit dan Maklumat Peribadi",
           "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nPelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nSudah menjadi kebiasaan pelajar kami untuk berkongsi dan menyambungkan dengan individu lain. Tetapi berkongsi dalam talian mempunyai beberapa risiko. Bagaimanakah kita boleh membantu kanak-kanak membina hubungan yang kuat, positif dan selamat dalam talian? Bantu pelajar anda mengetahui perbezaan antara perkara peribadi dan paling baik dibiarkan sebagai perkara sulit.",
           "preparation": "-   Semak bahan pengajaran.\n-   Cetak kertas sebaran untuk setiap pelajar.",
           "purpose": "Pendidikan yang Munasabah mencipta pelajaran ini untuk mengajar pelajar jenis maklumat tentang mereka yang OK untuk dikongsi dalam talian.",
           "student_overview": "Internet ialah sesuatu yang menyeronokkan dan menarik, tetapi adalah penting untuk kekal selamat. Pelajaran ini mengajar anda perbezaan antara maklumat yang selamat untuk dikongsi dan maklumat yang bersifat sulit."
         },
         "coursee-2021/About Me": {
+          "name": "Projek Mini: Tentang Saya",
           "overview": "Pelajar akan menggunakan pemahaman mereka tentang perkongsian maklumat peribadi dan sulit pada laman web dengan mencipta poster berinteraktif dalam **projek mini** ini.",
           "preparation": "-   Cetak salinan **\\*panduan perancangan** untuk pelajar, atau edarkan salinan digital.\n-   Memberi pertimbangan daripada membuat projek contoh sendiri, lebih baik dikongsi dengan kelas. \n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "purpose": "Pelajaran ini bertujuan menjadikan pelajaran lalu tentang maklumat peribadi dan sulit yang secara peribadi berkaitan dengan pelajar. Dengan mengambil kira contoh SAFE (peribadi) dan UNSAFE (sulit), pelajar mengamalkan ungkapan diri yang selamat pada laman web, dengan menggunakan Makmal Peperi bagi menggayakan kostum peperi mereka sendiri dan menjana teks."
         },
         "coursee-2021/Digital Sharing": {
+          "name": "Perkongsian Digital",
           "preparation": "-   Cari **\\*video Perkongsian Hak Cipta** dalam \"Pautan\" di bawah\n-   Muat turun dan semak **\\*Rancangan Pelajaran Perkongsian Digital** yang lengkap daripada Hak Cipta dan Kreativiti\n-   Sebagai guru, cipta karya seni untuk pelajaran (gambar, lagu, tayangan slaid dan sebagainya) \n-   Pastikan setiap pelajar mempunyai jurnal renungan.\n-   Anda akan memerlukan tablet atau telefon pintar untuk mereplikasi perkongsian item itu",
           "purpose": "Pelajar akan mencipta projek untuk dikongsi tidak lama lagi dan kebanyakan projek ini akan mengandungi sama ada kod atau imejan yang pelajar tidak mencipta sendiri. Pelajaran ini berada di sini bertujuan menunjukkan kepada pelajar cara yang betul mengendalikan penggunaan kandungan yang bukan milik mereka.",
           "student_overview": "Dalam pelajaran ini, anda akan mempelajari tentang cabaran dan manfaat pemilikan dan hak cipta."
@@ -2153,6 +2626,7 @@
           "purpose": "Dalam pelajaran ini, pelajar akan dapat menggunakan kemahiran mereka dengan gelung bersarang bagi mencipta imej yang mereka akan teruja untuk berkongsi. "
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Songwriting",
           "preparation": "-   (Pilihan) Tonton video **\\*Pelajaran sedang Berjalan**.\n-   Cetak beberapa **\\*lembaran kerja** untuk setiap kumpulan.\n-   Cetak satu **\\*penilaian** untuk setiap pelajar.\n-   Akses selamat kepada lagu dan lirik untuk melakukan aktiviti.\n-   Pastikan setiap pelajar mempunyai jurnal.",
           "purpose": "Penggunaan fungsi membantu memudahkan kod dan membangunkan keupayaan pelajar mengatur atur cara mereka. Pelajar akan mengenali dengan pantas bahawa fungsi penulisan boleh menjadikan atur cara mereka yang panjang lebih mudah dibaca dan lebih mudah untuk dinyahpepijat jika berlaku masalah.",
           "student_overview": "Malah bintang lagu rock juga memerlukan kemahiran pengaturcaraan. Pelajaran ini akan mengajar anda tentang fungsi menggunakan lirik daripada lagu."
@@ -2196,11 +2670,38 @@
           "purpose": "Pelajar mungkin bersedia untuk terus membina projek mereka, tetapi pelajaran ini akan membantu membentuk idea mereka kepada rancangan. Struktur ini akan memastikan individu yang mempunyai impian tetap berpijak di bumi nyata dan menerangi laluan untuk mereka yang merasa ditinggalkan dalam kegelapan. Menyediakan pelajar masa yang mencukupi untuk membina dan menyemak semula projek mereka. Percubaan yang terpaksa dilakukan serta tidak dapat dielakkan dalam pelajaran ini akan mengajar pelajar mengenai penyelesaian masalah dan ketabahan.",
           "student_overview": "Projek sebesar ini memerlukan masa dan perancangan yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan kreativiti anda!"
         },
+        "csd7-2021/CS Discoveries Post-Course Survey": {
+          "name": "Kajian Pasca Kursus CS Discoveries"
+        },
+        "csd4-2021/CS Discoveries Post-Course Survey": {
+          "name": "Kajian Pasca Kursus CS Discoveries"
+        },
+        "csd6-2021/Board Events": {
+          "name": "Acara Papan"
+        },
+        "csd6-2021/Getting Properties": {
+          "name": "Mendapatkan Harta"
+        },
         "csd6-2021/Functions with Parameters": {
           "name": "Fungsi-fungsi dengan parameter"
         },
+        "csd6-2021/CS Discoveries Post-Course Survey": {
+          "name": "Kajian Pasca Kursus CS Discoveries"
+        },
+        "csd5-2021/Representing Images": {
+          "name": "Mewakili Imej"
+        },
+        "csd5-2021/Combining Representations": {
+          "name": "Menggabungkan Perwakilan"
+        },
+        "csd5-2021/Keeping Data Secret": {
+          "name": "Menyimpan Rahsia Data"
+        },
+        "csd5-2021/CS Discoveries Post-Course Survey": {
+          "name": "Kajian Pasca Kursus CS Discoveries"
+        },
         "csd3-2021/Variables": {
-          "name": "Pembolehubah"
+          "name": "Pemboleh ubah"
         },
         "csd3-2021/Sprites": {
           "name": "Jin"
@@ -2214,8 +2715,26 @@
         "csd3-2021/Conditionals": {
           "name": "Bersyarat"
         },
+        "csd3-2021/Keyboard Input": {
+          "name": "Input Papan Kekunci"
+        },
+        "csd3-2021/Collisions": {
+          "name": "Perlanggaran"
+        },
         "csd3-2021/Functions": {
           "name": "Fungsi"
+        },
+        "csd3-2021/lesson-1": {
+          "name": "Kajian Pasca Kursus CS Discoveries"
+        },
+        "csd2-2021/Headings": {
+          "name": "Headings"
+        },
+        "csd2-2021/Linking Pages": {
+          "name": "Memautkan Halaman"
+        },
+        "csd2-2021/lesson-1": {
+          "name": "Kajian Pasca Kursus CS Discoveries"
         },
         "pre-express-2020/Learn to Drag and Drop": {
           "name": "Pelajari Tarik dan Lepas"
@@ -2271,6 +2790,9 @@
         "express-2020/Snowflakes with Anna and Elsa": {
           "name": "Emping Salji dengan Anna dan Elsa"
         },
+        "express-2020/While Loops with the Farmer": {
+          "name": "While Loops with the Farmer"
+        },
         "express-2020/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Bersyarat dalam Minecraft: Pelayaran Akuatik"
         },
@@ -2312,6 +2834,9 @@
         },
         "courseb-2020/Programming in Harvester": {
           "name": "Pengaturcaraan dengan Penuai"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Getting Loopy"
         },
         "courseb-2020/Loops in Harvester": {
           "name": "Gelung dengan Penuai"
@@ -2355,8 +2880,14 @@
         "coursed-2020/Nested Loops in Bee": {
           "name": "Gelung Bersarang di dalam Pagar Sesat"
         },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Bersyarat dengan Kad"
+        },
         "coursed-2020/While Loops in Farmer": {
           "name": "Gelung Semasa di dalam Peladang"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Imej Binari"
         },
         "coursed-2020/Artist Binary": {
           "name": "Imej Binari dengan Artis"
@@ -2388,6 +2919,9 @@
         "coursec-2020/Programming in Artist": {
           "name": "Mencipta Seni dengan Kod"
         },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Binary Bracelets"
+        },
         "coursec-2020/Loops: My Loopy Robotic Friends": {
           "name": "Rakan Robotik Bergelung Junior Saya"
         },
@@ -2400,11 +2934,17 @@
         "coursec-2020/Sticker Art with Loops": {
           "name": "Seni Pelekat dengan Gelung"
         },
+        "coursec-2020/Events: The Big Event": {
+          "name": "The Big Event"
+        },
         "coursec-2020/Build a Flappy Game": {
           "name": "Membina Permainan Kibasan"
         },
         "coursec-2020/Events in Play Lab": {
           "name": "Permainan Mengejar dengan Peristiwa"
+        },
+        "coursec-2020/Picturing Data": {
+          "name": "Memotret Data"
         },
         "coursec-2020/End of Course Project: Create a Play Lab Game": {
           "name": "Akhir Projek Kursus"
@@ -2421,14 +2961,23 @@
         "coursee-2020/Conditionals": {
           "name": "Bersyarat dengan Peladang"
         },
+        "coursee-2020/Simon Says": {
+          "name": "Simon Says"
+        },
         "coursee-2020/Learning Sprites with Sprite Lab": {
           "name": "Ikan Berenang dengan Makmal Peperi"
         },
         "coursee-2020/Alien Dance Party with Sprite Lab": {
           "name": "Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi"
         },
+        "coursee-2020/Private and Personal Information": {
+          "name": "Sulit dan Maklumat Peribadi"
+        },
         "coursee-2020/About Me": {
           "name": "Tentang Saya dengan Makmal Peperi"
+        },
+        "coursee-2020/Digital Sharing": {
+          "name": "Perkongsian Digital"
         },
         "coursee-2020/Nested Loops in Bee": {
           "name": "Gelung Bersarang di dalam Pagar Sesat"
@@ -2438,6 +2987,9 @@
         },
         "coursee-2020/Nested Loops in Frozen": {
           "name": "Gelung Bersarang dengan Frozen"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Songwriting"
         },
         "coursee-2020/Functions in Minecraft": {
           "name": "Fungsi dalam Minecraft"
@@ -2508,6 +3060,9 @@
         "coursef-2020/The Power of Words": {
           "name": "Kuasa Perkataan"
         },
+        "coursef-2020/Envelope Variables": {
+          "name": "Envelope Variables"
+        },
         "coursef-2020/Variables as Constant in Artist": {
           "name": "Pemboleh Ubah dengan Artis"
         },
@@ -2522,6 +3077,9 @@
         },
         "coursef-2020/Internet": {
           "name": "Internet"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "Gelung Untuk yang Menyeronokkan"
         },
         "coursef-2020/For Loops in Artist": {
           "name": "Untuk Gelung dengan Artis"

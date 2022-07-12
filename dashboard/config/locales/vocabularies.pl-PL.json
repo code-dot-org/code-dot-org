@@ -870,6 +870,9 @@
         "ethics/csd/2021": {
           "word": "Etyka"
         },
+        "empathy/csd/2021": {
+          "word": "Empatia"
+        },
         "user/csd/2021": {
           "word": "Użytkownik",
           "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
@@ -880,6 +883,9 @@
         "bug/csd/2021": {
           "word": "Błąd",
           "definition": "Część programu, która nie działa poprawnie."
+        },
+        "innovation/csd/2021": {
+          "word": "Innowacja"
         },
         "for_loop/csd/2021": {
           "word": "Pętla \"dla\"",

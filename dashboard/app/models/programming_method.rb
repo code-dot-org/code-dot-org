@@ -25,7 +25,7 @@
 class ProgrammingMethod < ApplicationRecord
   include CurriculumHelper
 
-  belongs_to :programming_class
+  belongs_to :programming_class, optional: true
 
   before_validation :generate_key, on: :create
   validates_uniqueness_of :key, scope: :programming_class_id, case_sensitive: false
@@ -35,6 +35,7 @@ class ProgrammingMethod < ApplicationRecord
   # As this should run when the models are updated in levelbuilder,
   # just skip it for seeding.
   attr_accessor :seed_in_progress
+
   validate :validate_overload, unless: :seed_in_progress
 
   def generate_key
@@ -84,7 +85,7 @@ class ProgrammingMethod < ApplicationRecord
       examples: parsed_examples,
       syntax: syntax,
       externalLink: external_link,
-      overloads: ProgrammingMethod.where(programming_class_id: programming_class_id, overload_of: key).map(&:summarize_for_show)
+      overloads: get_overloads.map(&:summarize_for_show)
     }
   end
 
@@ -114,6 +115,12 @@ class ProgrammingMethod < ApplicationRecord
       errors.add(:overload_of, "Overloaded method cannot have overload_of be non-blank") unless overload.overload_of.blank?
     else
       errors.add(:overload_of, "Overload method must exist")
+    end
+  end
+
+  def get_overloads
+    Rails.cache.fetch("programming_methods/#{id}/get_overloads", force: !Script.should_cache?) do
+      ProgrammingMethod.where(programming_class_id: programming_class_id, overload_of: key).to_a
     end
   end
 end

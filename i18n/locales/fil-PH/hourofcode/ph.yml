@@ -639,307 +639,285 @@ ph:
     Are you? (Thanks %{random_donor} for supporting @codeorg)'
   twitter_default_text_donor: 'I''m participating in this year''s #HourOfCode, are
     you? (Thanks %{random_donor} for supporting @codeorg)'
-  hoc_faq_title: FAQs
+  hoc_faq_title: Mga FAQ
   hoc_faq_what_is_hoc_q: Ano ba ang Hour of Code?
-  hoc_faq_what_is_hoc_a: Ang Hour of Code ay nagsimula bilang isang oras na pagpapakilala
-    sa computer science, dinisenyo upang gawing simple ang "code", upang ipakita na
-    pwedeng matutunan ng kahit sino ang pangunahing kaalaman, at upang palawakin ang
-    partisipasyon sa larangan ng computer science. Ito ay naging isang pandaigdigang
-    pagsisikap upang ipagdiwang ang computer science, simula sa 1-oras na aktibidad
-    ng coding ngunit pinapalawak ang lahat ng uri ng mga pagsisikap ng komunidad.
-    Suriin ang<a href='%{tutorials}'>mga pagtuturo at mga aktibidad</a>. Itong kampanya
-    ng grassroots ay suportado ng higit<a href='%{partners}'> sa 400 na mga kasosyo</a>
-    at 200,000 na mga tagapagturo sa buong mundo.
-  hoc_faq_what_is_hoc_a_markdown: Ang Hour of Code ay nagsimula bilang isang oras
-    na pagpapakilala sa computer science, dinisenyo upang gawing simple ang "code",
-    upang ipakita na pwedeng matutunan ng kahit sino ang pangunahing kaalaman, at
-    upang palawakin ang partisipasyon sa larangan ng computer science. Ito ay naging
-    isang pandaigdigang pagsisikap upang ipagdiwang ang computer science, simula sa
-    1-oras na aktibidad ng coding ngunit pinapalawak ang lahat ng uri ng mga pagsisikap
-    ng komunidad. Suriin ang [tutorials and activities](%{tutorials}). Itong kampanya
-    ng grassroots ay suportado ng higit [400 partners](%{partners}) at 200,000 na
-    mga tagapagturo sa buong mundo.
-  hoc_faq_last_year: Subukan ang mga pagtuturo
-  hoc_faq_when_is_hoc_q: Kelan ba ang Hour of Code?
-  hoc_faq_when_is_hoc_a: Ang Hour of Code ay ginaganap bawat taon sa panahon ng <a
-    href='%{csedweek_url}'>Computer Science Education Week</a>. Ang %{campaign_date_year}
-    Computer Science Education Week ay magiging %{campaign_date_full}, ngunit pwede
-    kang mag-host ng Hour of Code sa buong taon. ang Computer Science Education Week
-    ay taunang ginaganap bilang pagkilala sa kaarawan ng computing pioneer <a href='%{grace_hopper}'>Si
-    Admiral Grace Murray Hopper</a> (Disyembre 9, 1906).
-  hoc_faq_when_is_hoc_a_markdown: 'Nagaganap ang Hour of Code bawat taon sa panahon
-    ng [Computer Science Education Week](%{csedweek_url}). Ang %{campaign_date_year}
-    Linggo ng Edukasyon sa Computer Science ay sa %{campaign_date_full}, ngunit pwede
-    kang mag-host ng isang Hour of Code sa buong taon. Idinadaos ang Linggo ng Edukasyon
-    sa Computer Science taon-taon bilang pagkilala sa kaarawan ng computing pioneer
-    [Admiral Grace Murray Hopper](%{grace_hopper}) (Disyembre 9, 1906).  '
+  hoc_faq_what_is_hoc_a: Nagsimula ang Hour of Code bilang isang oras na pagpapakilala
+    sa computer science, na idinisenyo upang gawing simple ang "code", upang ipakita
+    na maaaring matuto ang kahit sino ng mga pangunahing kaalaman, at upang palawakin
+    ang pakikilahok sa larangan ng computer science. Mula noon ay naging isang pandaigdigang
+    pagsisikap na ipagdiwang ang computer science, simula sa 1-oras na mga aktibidad
+    sa pag-coding ngunit pinalawak sa lahat ng uri ng pagsisikap sa komunidad. Tingnan
+    ang <a href='%{tutorials}'>mga tutorial at aktibidad</a>. Sinusuportahan ang grassroots
+    campaign na ito ng mahigit <a href='%{partners}'>400 partner</a> at 200,000 na
+    tagapagturo sa buong mundo.
+  hoc_faq_what_is_hoc_a_markdown: Nagsimula ang Hour of Code bilang isang oras na
+    pagpapakilala sa computer science, na idinisenyo upang gawing simple ang "code",
+    upang ipakita na maaaring matuto ang kahit sino ng mga pangunahing kaalaman, at
+    upang palawakin ang pakikilahok sa larangan ng computer science. Mula noon ay
+    naging isang pandaigdigang pagsisikap na ipagdiwang ang computer science, simula
+    sa 1-oras na mga aktibidad sa pag-coding ngunit pinalawak sa lahat ng uri ng pagsisikap
+    sa komunidad. Tingnan ang [mga tutorial at aktibidad](%{tutorials}). Sinusuportahan
+    ang grassroots campaign na ito ng mahigit [400 partner](%{partners}) at 200,000
+    na tagapagturo sa buong mundo.
+  hoc_faq_last_year: Subukan ang mga tutorial
+  hoc_faq_when_is_hoc_q: Kailan ang Hour of Code?
+  hoc_faq_when_is_hoc_a: Nagaganap ang Hour of Code bawat taon sa <a href='%{csedweek_url}'>Linggo
+    ng Edukasyon sa Computer Science</a>. Ang %{campaign_date_year} Linggo ng Edukasyon
+    sa Computer Science ay sa %{campaign_date_full}, ngunit maaari kang mag-host ng
+    Hour of Code sa buong taon. Ang Linggo ng Edukasyon sa Computer Science ay ginaganap
+    taun-taon bilang pagkilala sa kaarawan ng computing pioneer <a href='%{grace_hopper}'>Admiral
+    Grace Murray Hopper</a> (Disyembre 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: Nagaganap ang Hour of Code bawat taon sa [Linggo
+    ng Edukasyon sa Computer Science](%{csedweek_url}). Ang %{campaign_date_year}
+    Linggo ng Edukasyon sa Computer Science ay sa %{campaign_date_full}, ngunit maaari
+    kang mag-host ng Hour of Code sa buong taon. Ang Linggo ng Edukasyon sa Computer
+    Science ay ginaganap taun-taon bilang pagkilala sa kaarawan ng computing pioneer
+    [Admiral Grace Murray Hopper](%{grace_hopper}) (Disyembre 9, 1906).
   hoc_faq_why_cs_q: Bakit computer science?
-  hoc_faq_why_cs_a: "<i>Bawat</i> dapat na magkaroon ang estudyante ng pagkakataon
-    na matuto ng computer science. Nakakatulong itong pangalagaan ang kasanayan sa
-    problem-solving, lohika at pagkamalikhain. Sa pagsisimula ng maaga, magkakaroon
-    ng pundasyon ang mga estudyante para magtagumpay sa kahit ano mang karera sa ika-21
-    na siglo. Tignan ang higit pang stats <a href='%{stats_url}'>dito</a>."
-  hoc_faq_why_cs_a_markdown: _Bawat_ estudyante ay dapat magkaroon ng pagkakataong
-    matuto ng computer science. Nakakatulong din ito para mapayabong ang mga skill
-    sa paglutas ng problema, lohika at pagiging malikhain. Sa pamamagitan ng maagang
-    pagsisimula, magkakaroon ang mga estudyante ng pundasyon para sa tagumpay sa anumang
-    daanan ng karera sa ika-21 sigli. Tingnan ang mas maraming stat [here](%{stats_url}).
-  hoc_faq_how_participate_q: Paano ako makakalahok sa Hour of Code?
+  hoc_faq_why_cs_a: "<i>Bawat</i> mag-aaral ay dapat magkaroon ng pagkakataong matuto
+    ng computer science. Nakakatulong itong palakasin ang mga kasanayan sa paglutas
+    ng problema, lohika at pagkamalikhain. Sa pamamagitan ng pagsisimula nang maaga,
+    ang mga mag-aaral ay magkakaroon ng pundasyon sa tagumpay sa anumang 21st-century
+    na landas ng karera. Tumingin ng higit pang mga istatistika <a href='%{stats_url}'>dito</a>."
+  hoc_faq_why_cs_a_markdown: _Bawat_ mag-aaral ay dapat magkaroon ng pagkakataong
+    matuto ng computer science. Nakakatulong itong palakasin ang mga kasanayan sa
+    paglutas ng problema, lohika at pagkamalikhain. Sa pamamagitan ng pagsisimula
+    nang maaga, ang mga mag-aaral ay magkakaroon ng pundasyon sa tagumpay sa anumang
+    21st-century na landas ng karera. Tumingin ng higit pang mga istatistika [here](%{stats_url}).
+  hoc_faq_how_participate_q: Paano ako lalahok sa Hour of Code?
   hoc_faq_how_participate_a: "<a href='/how-to'>Simulan ang pagpaplano dito</a> sa
-    pagrerepaso ng aming paano-gawin na gabay. Maari kang mag-organisa ng isang kagamapan
-    ng Hour of Code sa iyong paaralan o sa iyong komunidad &mdash; tulad sa isang
-    ekstrakurikular na samahan, non-profit o sa trabaho. O, subukan ito sa sarili
-    kapag dumating ang %{campaign_date}."
-  hoc_faq_how_participate_a_markdown: "[Magsimula sa pagpaplano dito](%{howto}) sa
-    pamamagitan ng pagrebyu sa aming gabay kung-paano. Maaari mong i-organisa ang
-    isang event ng Hour of Code sa paaralan o sa komunidad mo — tulad ng isang extracurricular
-    club, non-profit o sa trabaho. O, subukan mo ito mismo kapag dumating ang %{campaign_date}.
-    \ "
+    pamamagitan ng pagsusuri sa aming paano-gawin na gabay. Maaari kang mag-organisa
+    ng isang Hour of Code na event sa paaralan mo o sa iyong komunidad &mdash; tulad
+    ng sa isang extracurricular club, non-profit o sa trabaho. O, subukan mo lang
+    ito kapag dumating na ang %{campaign_date}."
+  hoc_faq_how_participate_a_markdown: "[Simulan ang pagpaplano dito](%{howto}) sa
+    pamamagitan ng pagsusuri sa aming paano-gawin na gabay. Maaari kang mag-organisa
+    ng isang Hour of Code na event sa paaralan mo o sa iyong komunidad — tulad ng
+    sa isang extracurricular club, non-profit o sa trabaho. O, subukan mo lang ito
+    kapag dumating na ang %{campaign_date}."
   hoc_faq_behind_hoc_q: Sino ang nasa likod ng Hour of Code?
-  hoc_faq_behind_hoc_a: Ang Hour of Code ay hinimok sa pamamagitan ng Hour of Code
-    at Computer Science Education Week <a href='%{partner_url}'> Advisory at Review
-    committee</a> at isang walang uliran na koalisyon ng mga kasosyo na magsama-sama
-    para suportahan ang Hour of Code &mdash; kabilang ang Microsoft, Apple, Amazon,
-    samahan mga batang lalaki at mga batang babae ng Amerika at Board ng Kolehiyo.
-  hoc_faq_behind_hoc_a_markdown: 'Hinihimok ang Hour of Code ng Hour of Code at ng
-    Linggo ng Edukasyon sa Computer Science [Mga Komite ng Advisory at Pagrepaso](%{partner_url})
-    pati na rin ng isang  walang-katulad na koalisyon ng mga partner na nagsamasama
-    para suportahan ang Hour of Code — kabilang ang Microsoft, Apple, Amazon, Boys
-    and Girls Clubs ng  Amerika at ng College Board.  '
-  hoc_faq_host_q: Wala akong alam sa coding. Maaari parin ba akong mag-host ng event?
-  hoc_faq_host_a: Siyempre. Self-help ang mga aktibidad ng Hour of code. Ang kailangan
-    mo lang gawin ay <a href='%{codeorg_url}/learn'>subukan ang kasalukuyan naming
-    mga pagtuturo</a>, pumili ng pagtuturo na gusto mo, at pumili ng oras &mdash;
-    kami na ang bahala sa iba. Meron din tayong mga pagpipilian sa bawat edad at antas
-    ng karanasan, mula sa kindergarten pataas. Simulan ang pagpaplano ng iyong kaganapan
-    sa pamamagitan ng pagbabasa ng aming <a href='/how-to'> ng kung paano-gawin na
-    gabay</a>.
-  hoc_faq_host_a_markdown: 'Siyembre, Self-help ang mga aktibidad ng Hour of code.
-    Ang gagawin mo lang ay [subukan ang aming kasalukuyang mga tutorial](%{codeorg_url}/learn),
-    piliin ang tutorial na gusto mo, at piliin ang oras — kami na ang bahala sa iba
-    pa. Meron din kaming mga opsyon para sa bawat edad at antas ng karanasan, mula
-    sa kindergarten at pataas. Simulan nang planuhin ang event mo sa pamamagitan ng
-    pagbasa sa aming [gabay kung-paano](%{howto}).  '
-  hoc_faq_devices_q: Anong mga device ba ang dapat kung gamitin sa aking mga estudyante?
-  hoc_faq_devices_a: Ang pagtuturo ng Code.org ay gumagana s lahat ng mga device at
-    mga browser. Makikita mo ang higit pang mga impormasyon tungkol sa mga kailangan
-    ng tech na pagtuturo sa Code.org <a href='%{codeorg_url}/educate/it'>dito</a>.
-    Pwedeng mahanap ang mga kailangan ng tech na pagtuturo sa non-Code.org sa <a href='%{codeorg_url}/learn'>%{partner_url}/matuto</a>sa
-    mga pagtuturo partikular na paglalarawan. Huwag kalimutan na nag-aalok din kami
-    ng <a href='%{unplugged_url}'>mga aktibidad na unplugged</a> kung hindi mapaunlakan
-    ang mga pagtuturo ang paaralan mo!
-  hoc_faq_devices_a_markdown: "  Gumagana ang Code.org tutorials sa lahat ng device
-    at browser. Makikita mo ang mas maraming impormasyon tungkol sa mga pangangailangan
-    ng tutorial tech ng Code.org [dito](%{codeorg_url}/educate/it). Ang mga pangangailangan
-    ng tech para sa non-Code.org tutorials ay makikita sa [%{partner_url}/learn](%{codeorg_url}/learn)
-    sa partikular na deskripsyon ng tutorial. Huwag kalimutang nag-aalok din kami
-    ng [unplugged activities](%{unplugged_url}) kung hindi ma-accommodate ng inyong
-    paaralan ang mga tutorial!  "
-  hoc_faq_need_computers_q: Kelangan ko ba ng mga kompyuter sa bawat kasali?
-  hoc_faq_need_computers_a: Hindi. Mayroon tayong mga pagtuturo ng Hour of Code na
-    gumagana sa mga PC, smartphones, tablets, at ang ilan ay hindi na nangangailangan
-    ng computer! Pwede kang sumali kahit na saan ka pa, ng kung ano man ang mayroon
-    ka.<p> <i>Narito ng ilang mga pagpipilian:</i> <br> <ul> <li> <b>Magtrabaho ng
-    pares-pares.</b> <a href='%{pair_programming_research}'>Pinapakita sa pananaliksik</a>mas
-    natututo ng mga estudyante kapag<a href='%{pair_programming_video}'>pag-programming
-    ng pares</a>, pagbabahagi ng isang computer at nagtutulungan. Hikayatin ang iyong
-    mga estudyante na magbahagi. <li><b> Gumamit ng isang projected screen.</b> Kung
-    mayroon kang projector at screen para sa web-connected na computer, ang iyong
-    buong grupo ay pwdeng gawin ang Hour of Code ng sabay-sabay. Panoorin ang mga
-    bahagi ng video ng sabay-sabay at magsalitan sa paglutas ng mga puzzle o sa pagsagot
-    ng mga katanungan. <li><b> Mag-unplugged.</b> Nag-aalok kami ng <a href='%{unplugged_url}'>mga
-    pagtuturo na hindi nangangailangan ng computer</a>sa lahat. </ul>
+  hoc_faq_behind_hoc_a: Hinihimok ang Hour of Code ng Hour of Code at Linggo ng Edukasyon
+    sa Computer Science <a href='%{partner_url}'>Advisory and Review Committees</a>
+    pati na rin ang isang walang-katulad na koalisyon ng mga kasosyo na nagsama-sama
+    upang suportahan ang Hour of Code &mdash; kabilang ang Microsoft, Apple, Amazon,
+    Boys and Girls Clubs of America at ang College Board.
+  hoc_faq_behind_hoc_a_markdown: Hinihimok ang Hour of Code ng Hour of Code at Linggo
+    ng Edukasyon sa Computer Science [Advisory and Review Committees](%{partner_url})
+    pati na rin ang isang walang-katulad na koalisyon ng mga kasosyo na nagsama-sama
+    upang suportahan ang Hour of Code — kabilang ang Microsoft, Apple, Amazon, Boys
+    and Girls Clubs of America at ang College Board.
+  hoc_faq_host_q: Wala akong alam sa coding. Maaari pa rin ba akong mag-host ng event?
+  hoc_faq_host_a: Siyempre. Sariling gabay ang mga aktibidad ng Hour of Code. Ang
+    kailangan mo lang gawin ay <a href='%{codeorg_url}/learn'>subukan ang aming kasalukuyang
+    mga tutorial</a>, piliin ang tutorial na gusto mo, at pumili ng oras &mdash; kami
+    na ang bahala sa iba. Mayroon din kaming mga opsyon sa bawat edad at antas ng
+    karanasan, mula kindergarten at pataas. Simulan ang pagpaplano ng event mo sa
+    pamamagitan ng pagbabasa ng aming <a href='/how-to'>kung paano-gawin na gabay</a>.
+  hoc_faq_host_a_markdown: Siyempre. Sariling gabay ang mga aktibidad ng Hour of Code.
+    Ang kailangan mo lang gawin ay [subukan ang aming kasalukuyang mga tutorial](%{codeorg_url}/matuto),
+    piliin ang tutorial na gusto mo, at pumili ng oras — kami na ang bahala sa iba.
+    Mayroon din kaming mga opsyon sa bawat edad at antas ng karanasan, mula kindergarten
+    at pataas. Simulan ang pagpaplano ng event mo sa pamamagitan ng pagbabasa ng aming
+    [kung paano-gawin na gabay](%{howto}).
+  hoc_faq_devices_q: Anong mga device ang dapat kong gamitin para sa aking mga mag-aaral?
+  hoc_faq_devices_a: Gumagana ang mga tutorial ng Code.org sa lahat ng device at browser.
+    Makakita ka ng higit pang impormasyon tungkol sa mga pangangailangan sa tech na
+    tutorial ng Code.org <a href='%{codeorg_url}/educate/it'>dito</a>. Matatagpuan
+    ang mga pangangailangan sa tech ng mga tutorial na hindi Code.org sa <a href='%{codeorg_url}/learn'>%{partner_url}/matuto</a>
+    sa tukoy na paglalarawan ng tutorial. Huwag kalimutan na nag-aalok din kami ng
+    <a href='%{unplugged_url}'>mga unplugged na aktibidad</a> kung hindi ma-accommodate
+    ng paaralan mo ang mga tutorial!
+  hoc_faq_devices_a_markdown: Gumagana ang mga tutorial ng Code.org sa lahat ng device
+    at browser. Makakita ka ng higit pang impormasyon tungkol sa mga pangangailangan
+    sa tech na tutorial ng Code.org [here](%{codeorg_url}/turuan/ito). Matatagpuan
+    ang mga pangangailangan sa tech ng mga tutorial na hindi Code.org sa [%{partner_url}/matuto](%{codeorg_url}/matuto)
+    sa tukoy na paglalarawan ng tutorial. Huwag kalimutan na nag-aalok din kami ng
+    [mga unplugged na aktibidad](%{unplugged_url})kung hindi ma-accommodate ng paaralan
+    mo ang mga tutorial!
+  hoc_faq_need_computers_q: Kailangan ko ba ng mga computer sa bawat kalahok?
+  hoc_faq_need_computers_a: 'Hindi. Mayroon kaming Hour of Code tutorials na gumagana
+    sa mga PC, smartphone, tablet, at ilan na hindi nangangailangan ng computer! Pwede
+    kang sumali saan ka man, sa anumang mayroon ka. <p><i>_Narito ang ilang opsyon:</i>
+    <br> <ul> <li><b>Magtrabaho nang magkapares.</b> <a href=''%{pair_programming_research}''>Ipinapakita
+    ng pananaliksik na</a> pinakamahusay na natututo ang mga mag-aaral sa <a href=''%{pair_programming_video}''></a>pair
+    programming</a>, ginagamit ang computer ng magkasama at nagtutulungan. Hikayatin
+    ang mga mag-aaral mo na makisama. <li><b>Gumamit ng isang projected screen.</b>
+    Kung mayroon kang projector at screen para sa isang computer na nakakonekta sa
+    Web, ang iyong buong grupo ay makakagawa ng Hour of Code nang magkasama. Magkasamang
+    panoorin ang mga bahagi ng video at magsalitan sa paglutas ng mga puzzle o pagsagot
+    sa mga tanong. <li><b>Mag-unplugged.</b> Nag-aalok kami ng <a href=''%{unplugged_url}''></a>mga
+    tutorial na </a>hindi</ul>nangangailangan ng computer.  '
   hoc_faq_need_computers_a_markdown: "Hindi. Mayroon kaming Hour of Code tutorials
-    na gumagana sa mga PCs, smartphone, tablet, at ilan na hindi nangangailangan ng
-    computer! Pwede kang sumali nasaan ka man, anuman ang mayroon ka.     \n\n_Narito
+    na gumagana sa mga PC, smartphone, tablet, at ilan na hindi nangangailangan ng
+    computer! Pwede kang sumali saan ka man, sa anumang mayroon ka.     \n\n_Narito
     ang ilang opsyon:_      \n\n- **Magtrabaho nang magkapares.** [Ipinapakita ng
     pananaliksik na](%{pair_programming_research}) pinakamahusay na natututo ang mga
-    estudyante sa [pair programming](%{pair_programming_video}), pagsi-share ng computer
-    at magkasamang pagtatrabaho. Hikayatin ang inyong mga estudyante na mag-double
-    up.   \n- **Gumamit ng isang projected screen.** Kung mayroon kayong projector
-    at screen para sa Web-connected computer, magagawa ng inyong buong pangkat ang
-    isang Hour of Code nang magkasama. Magkasamang panoorin ang mga porsyon ng video
-    at magsalit-salitan sa paglutas ng mga palaisipan o pagsagot sa mga tanong.   \n-
-    **Mag-unplugged.** Nag-aalok kami ng [tutorials na hindi nangangailangan ng computer](%{unplugged_url}).
+    mag-aaral sa [pair programming](%{pair_programming_video}), ginagamit ang computer
+    ng magkasama at nagtutulungan. Hikayatin ang mga mag-aaral mo na makisama.   \n-
+    **Gumamit ng isang projected screen.** Kung mayroon kang projector at screen para
+    sa isang computer na nakakonekta sa Web, ang iyong buong grupo ay makakagawa ng
+    Hour of Code nang magkasama. Magkasamang panoorin ang mga bahagi ng video at magsalitan
+    sa paglutas ng mga puzzle o pagsagot sa mga tanong.   \n- **Mag-unplugged.** Nag-aalok
+    kami ng [mga tutorial na hindi nangangailangan ng computer](%{unplugged_url}).
     \ "
-  hoc_faq_international_q: Nasa <country> ako. Paano ako internasyonal na makakasali?
-  hoc_faq_international_a: Pwedeng mag-organisa ang kahit sino ng event ng Hour of
-    Code, kahit saan sa mundo. Nakaraang taon, nagkaisa ang mga estudyante sa buong
-    mundo para sa Hour of Code. Alamin ang higit pa <a href='/promote'>dito</a>.
-  hoc_faq_international_a_markdown: Pwedeng mag-organisa ang kahit sino ng event sa
-    Hour of Code, kahit saan sa mundo. Nakaraang taon, nagkaisa ang mga estudyante
-    sa buong mundo para sa Hour of Code. Alamin ang higit pa [here](%{promote}).
+  hoc_faq_international_q: Nasa <country> ako. Paano ako lalahok kahit nasa ibang
+    bansa?
+  hoc_faq_international_a: Pwedeng mag-organisa ng event sa Hour of Code ang kahit
+    sino, kahit saan sa mundo. Noong nakaraang taon, nagsama-sama ang mga mag-aaral
+    sa buong mundo para sa Hour of Code. Alamin ang higit pa  <a href='/promote'>dito</a>.
+  hoc_faq_international_a_markdown: Pwedeng mag-organisa ng event sa Hour of Code
+    ang kahit sino, kahit saan sa mundo. Noong nakaraang taon, nagsama-sama ang mga
+    mag-aaral sa buong mundo para sa Hour of Code. Alamin ang higit pa [here](%{promote}).
   hoc_faq_tutorial_q: Paano ako makakagawa ng Hour of Code tutorial?
-  hoc_faq_tutorial_a: Kung interesado kang maging partner sa mga pagtuturo, <a href='/tutorial-guidelines'>tignan
-    ang mga gabay at mga tagubilin namin</a>. Nais naming mag-host ng iba't ibang
-    nakakaakit na mga pagpipilian, ngunit ang ma-optimize ang karanasan ng mga estudyante
-    at mga guro na bago sa computer science pangunahing layunin.
-  hoc_faq_tutorial_a_markdown: " Kung interesado kang magiging partner sa tutorial,
-    [tingnan ang aming mga gabay at mga tagubilin](%{tutorial_guidelines}). Gusto
-    naming mag-host ng sari-saring kahali-halinang mga opsyon, ngunit ang pangunahing
-    layunin ay samantalahin ang karanasan para sa mga estudyante at guro na bago sa
-    computer science.  "
-  hoc_faq_account_q: Kailangan ba ng mga estudyante na mag-log on gamit ang isang
-    account?
-  hoc_faq_account_a: No. Talagang walang signup o login na kailangan upang ang mga
-    estudyante ay masubukan ang Hour of Code. Karamihan sa mga <a href='%{codeorg_url}/learn/beyond'>mga
-    hursong fllow-on</a>kailangan ng paggawa ng account para ma-save ang progreso
-    ng estudyante. At saka, ang pag-sign up para sa Hour of Code ay hindi awtimatikong
-    nakakagawa ng Code Studio Account. Kung nais mong gumawa ng account para sa iyong
-    mga estudyante, mangyaring sundin itong <a href='https://youtu.be/_smelV_KISE'>
-    mga tagubilin</a>.
-  hoc_faq_account_a_markdown: "  Hindi. Ganap na hindi kailangan ang pag-signup o
-    pag-login para sa mga estudyante para subukan ang Hour of Code. Karamihan sa [follow-on
-    courses](%{codeorg_url}/learn/beyond) ay mangangailangan ng paglikha ng account
-    para ma-save ang progreso ng estudyante. At, ang pag-sign up para sa Hour of Code
-    ay HINDI awtomatik na lumilikha ng Code Studio account. Kung gusto ninyong gumawa
-    ng mga account para sa inyong mga estudyante, pakisundin itong [mga tagubilin]
-    (https://youtu.be/_smelV_KISE).  "
+  hoc_faq_tutorial_a: Kung interesado kang maging isang tutorial partner, <a href='/tutorial-guidelines'>tingnan
+    ang aming mga alituntunin at tagubilin</a>. Gusto naming mag-host ng iba't ibang
+    nakakaengganyong opsyon, ngunit ang pangunahing layunin ay i-optimize ang karanasan
+    para sa mga mag-aaral at guro na bago sa computer science.
+  hoc_faq_tutorial_a_markdown: Kung interesado kang maging isang tutorial partner,
+    [tingnan ang aming mga alituntunin at tagubilin](%{tutorial_guidelines}). Gusto
+    naming mag-host ng iba't ibang nakakaengganyong opsyon, ngunit ang pangunahing
+    layunin ay i-optimize ang karanasan para sa mga mag-aaral at guro na bago sa computer
+    science.
+  hoc_faq_account_q: Kailangan ba ng mga mag-aaral na mag-log on gamit ang isang account?
+  hoc_faq_account_a: Hindi. Ganap na hindi kailangan ang pag-signup o pag-login sa
+    mga mag-aaral upang subukan ang Hour of Code. Mangangailangan ang karamihan sa
+    <a href='%{codeorg_url}/learn/beyond'>[mga follow-on na kurso]</a> ng paglikha
+    ng account upang ma-save ang progreso ng mag-aaral. Ang pag-sign up sa Hour of
+    Code ay HINDI rin awtomatik na lumilikha ng Code Studio account. Kung gusto ninyong
+    gumawa ng mga account para sa inyong mga mag-aaral, sundin itong <a href='https://youtu.be/_smelV_KISE'>mga
+    instruksiyon</a>.
+  hoc_faq_account_a_markdown: Hindi. Ganap na hindi kailangan ang pag-signup o pag-login
+    sa mga mag-aaral upang subukan ang Hour of Code. Mangangailangan ang karamihan
+    sa [mga follow-on na kurso](%{codeorg_url}/matuto/higit pa) ng paglikha ng account
+    upang ma-save ang progreso ng mag-aaral. Ang pag-sign up sa Hour of Code ay HINDI
+    rin awtomatik na lumilikha ng Code Studio account. Kung gusto ninyong gumawa ng
+    mga account para sa inyong mga mag-aaral, sundin itong [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Aling aktibidad ba ang dapat kung gawin sa mga estudyante
     ng high school?
-  hoc_faq_high_school_a: Ating mga tutorial sa Star Wars at Minecraft ay mahusay para
-    sa mga high schoolers, lalo na ang mga bersyon sa Star Wars JavaScript at ang
-    malayang Maglaro antas sa parehong tutorial. Halili, inirerekomenda namin na subukan
-    ang isa sa mga tutorial para sa baguhan sa <a href='%{codeorg_url}/learn'>%{partner_url}/malaman</a>
-    upang simulan, tulad ng tutorial sa Angry Birds o kasama si Anna at Elsa. Isang
-    estudyante ng high school ay dapat na tapusin ang isa sa mga ito sa loob ng 30
-    minuto at pagkatapos ay subukan ang isang mas advanced na tutorial sa JavaScript,
-    tulad ng mga Khan Academy o CodeHS.
-  hoc_faq_high_school_a_markdown: "  Ang aming Star Wars at Minecraft tutorials ay
-    maganda para sa mga estudyante sa high school, lalo na sa bersyon sa Javascript
-    ng Star Wars at ang libreng level ng laro sa kapwa tutorial. Sa ibang banda inirerekumenda
-    namin na subukan ang isa sa mga tutorial para sa nagsisimula sa [%{partner_url}/learn](%{codeorg_url}/learn)
-    para mag-umpisa, tulad ng tutorial sa Angry Birds o sa Anna at Elsa. Dapat magawang
-    matapos ng isang estudyante sa high school ang isa sa mga ito pagkalipas ng 30
-    minuto at pagkatapos ay pwedeng sumubok sa mas advanced na tutorial sa JavaScript,
-    tulad ng Khan Academy o CodeHS.  "
-  hoc_faq_scratch_q: Ginagawa ko ang Scratch para sa Hour of Code, ngunit paano kung
-    ang mga estudyante ko ay may Ipads sa halip na laptops?
-  hoc_faq_scratch_a: Ang scratch ay hindi gumagana sa tablets. Kung ang mga estudyante
-    mo ay mga bata pa, pwede nilang gamitin ang ScratchJR Pad app (para sa mga maaagang-mambabasa).
-    Kung titignan mo ang mga pagtuturo sa <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
-    makakahanap ka ng ibang mga pagtuturo na gumagana sa iPads - mula sa Code.org,
+  hoc_faq_high_school_a: Ang mga tutorial sa Star Wars at Minecraft namin ay mahusay
+    sa mga high school, lalo na ang bersiyon ng Star Wars JavaScript at ang antas
+    ng libreng paglalaro sa parehong mga tutorial. Bilang kahalili, inirerekumenda
+    namin na subukan ang isa sa mga beginner na tutorial sa <a href='%{codeorg_url}/learn'>%{partner_url}/matuto</a>
+    para mag-umpisa, gaya ng tutorial sa Angry Birds o kay Anna at Elsa. Dapat na
+    matapos ng isang mag-aaral sa high school ang isa sa mga ito sa loob ng 30 minuto
+    at pagkatapos ay maaari nang sumubok ng mas advanced na tutorial sa JavaScript,
+    gaya ng Khan Academy o CodeHS.
+  hoc_faq_high_school_a_markdown: Ang mga tutorial sa Star Wars at Minecraft namin
+    ay mahusay sa mga high school, lalo na ang bersiyon ng Star Wars JavaScript at
+    ang antas ng libreng paglalaro sa parehong mga tutorial. Bilang kahalili, inirerekumenda
+    namin na subukan ang isa sa mga beginner na tutorial sa [%{partner_url}/matuto](%{codeorg_url}/matuto)
+    para mag-umpisa, gaya ng tutorial sa Angry Birds o kay Anna at Elsa. Dapat na
+    matapos ng isang mag-aaral sa high school ang isa sa mga ito sa loob ng 30 minuto
+    at pagkatapos ay maaari nang sumubok ng mas advanced na tutorial sa JavaScript,
+    gaya ng Khan Academy o CodeHS.
+  hoc_faq_scratch_q: Ginagawa ko ang Scratch sa Hour of Code, ngunit paano kung ang
+    mga mag-aaral ko ay may mga iPad sa halip na laptop?
+  hoc_faq_scratch_a: Hindi gumagana ang scratch sa mga tablet. Kung mga bata pa ang
+    mga mag-aaral mo, pwede nilang gamitin ang ScratchJR Pad app (para sa mga maaagang-mambabasa).
+    Kung titignan mo ang mga tutorial sa <a href='%{codeorg_url}/learn'>%{partner_url}/matuto</a>,
+    makakahanap ka ng ibang mga tutorial na gumagana sa iPads - mula sa Code.org,
     Tynker, Lightbot, o CodeSpark.
-  hoc_faq_scratch_a_markdown: Hindi gumagana ang scratch sa tablets. Kung mga bata
-    pa ang mga estudyante mo, pwede nilang gamitin ang ScratchJR Pad app (para sa
-    mga maaagang-mambabasa). Kung titignan mo ang mga pagtuturo sa [%{partner_url}/learn](%{codeorg_url}/learn),
-    makakahanap ka ng ibang mga pagtuturo na gumagana sa iPads - mula sa Code.org,
+  hoc_faq_scratch_a_markdown: Hindi gumagana ang scratch sa mga tablet. Kung mga bata
+    pa ang mga mag-aaral mo, pwede nilang gamitin ang ScratchJR Pad app (para sa mga
+    maaagang-mambabasa). Kung titignan mo ang mga tutorial sa [%{partner_url}/matuto](%{codeorg_url}/matuto),
+    makakahanap ka ng ibang mga tutorial na gumagana sa iPads - mula sa Code.org,
     Tynker, Lightbot, o CodeSpark.
-  hoc_faq_count_hoc_q: Paano mo binibilang ang mga Hour of Code?
-  hoc_faq_map_q: Bakit hindi ko makita ang aking tuldok sa mapa?
-  hoc_faq_map_a: Humihingi kami ng paumanhin kung hindi mo makita ang iyong kaganapan
-    sa mapa ng Hour of Code. Dahil sa sampu-sampung libo na mga organiser ang nag-sign
-    up, binuo ng mapa ang mga datos at nagpakita ng iisang punto para sa ilang mga
-    kaganapan. Kung iki-click mo ang numerong nasa taas ng mapa ay idi-direkta ka
-    nito sa listahan ng lahat ng mga kaganapan ayun sa estado at makikita mong nakalista
-    ang kaganaoan mo doon. Bukod pa rito, sa libong mga taong nag-sign up sa Hour
-    of Code, ang mata at ang listahan ng mga kaganapan ay inaabot ng 48 na oras para
-    mag-update. Tignan mo ulit pagkatapos ng ilang araw!
-  hoc_faq_map_a_markdown: Humihingi kami ng paumanhin kung hindi mo makita ang iyong
-    kaganapan sa mapa ng Hour of Code. Dahil sa sampu-sampung libo na mga organiser
-    ang nag-sign up, binuo ng mapa ang mga datos at nagpakita ng iisang punto para
-    sa ilang mga kaganapan. Idi-direkta ka nito sa listahan ng lahat ng mga kaganapan
-    kung iki-click mo ang [events page](%{events_url}) link sa ibaba ng mapa ayun
-    sa estado at makikita mong nakalista ang kaganapan mo doon. Bukod pa rito, sa
-    libong mga taong nag-sign up sa Hour of Code, inaabot ng 48 na oras ang mapa at
-    ang listahan ng mga kaganapan para mag-update. Tignan mo ulit pagkatapos ng ilang
-    araw!
-  hoc_faq_count_hoc_a: "  Ang tracker ng Hour of Code ay hindi eksaktong sukat ng
-    paggamit. Hindi namin binibilang nang perpekto ang walang kaparehong mga ID ng
+  hoc_faq_count_hoc_q: Paano mo binibilang ang Hour of Code?
+  hoc_faq_map_q: Bakit hindi ko makita ang tuldok ko sa mapa?
+  hoc_faq_map_a: Humihingi kami ng paumanhin kung hindi mo makita ang event mo sa
+    mapa ng Hour of Code. Dahil sa libu-libong mga organiser ang nag-sign up, pinagsama-sama
+    ng mapa ang data at nagpapakita ng isang punto sa ilang mga event. Idi-direkta
+    ka nito sa listahan ng lahat ng mga kaganapan kung pipindutin mo ang <a href='%{events_url}'>events
+    page</a> link sa ibaba ng mapa ayun sa estado at makikita mong nakalista ang event
+    mo doon. Bukod pa rito, dahil sa libu-libong tao na nagsa-sign up sa Hour of Code,
+    ang mapa at listahan ng event ay karaniwang tumatagal ng 48 oras upang ma-update.
+    Bumalik sa loob ng ilang araw!
+  hoc_faq_map_a_markdown: Humihingi kami ng paumanhin kung hindi mo makita ang event
+    mo sa mapa ng Hour of Code. Dahil sa libu-libong mga organiser ang nag-sign up,
+    pinagsama-sama ng mapa ang data at nagpapakita ng isang punto sa ilang mga event.
+    Idi-direkta ka nito sa listahan ng lahat ng mga kaganapan kung pipindutin mo ang
+    [events page](%{events_url}) link sa ibaba ng mapa ayun sa estado at makikita
+    mong nakalista ang event mo doon. Bukod pa rito, dahil sa libu-libong tao na nagsa-sign
+    up sa Hour of Code, ang mapa at listahan ng event ay karaniwang tumatagal ng 48
+    oras upang ma-update. Bumalik sa loob ng ilang araw!
+  hoc_faq_count_hoc_a: Hindi isang eksaktong sukat ng paggamit ang tracker ng Hour
+    of Code. Hindi namin binibilang nang perpekto ang walang kaparehong mga ID ng
     estudyante kapag sinusubaybayan ang paglahok sa Hour of Code, lalo na dahil hindi
-    namin hinihingi sa mga estudyante na mag-log in o mag-register. Bilang bunga,
-    kapwa labis na nabibiling namin at kulang na nabibilang ang mga kalahok sa parehas
-    na oras. Basahin ang lahat ng detalye <a href='%{codeorg_url}/loc'>dito</a>."
-  hoc_faq_count_hoc_a_markdown: Ang tracker ng Hour of Code ay hindi eksaktong sukat
-    ng paggamit. Hindi namin binibilang nang perpekto ang walang kaparehong mga ID
-    ng estudyante kapag sinusubaybayan ang paglahok sa Hour of Code, lalo na dahil
-    hindi namin hinihingi sa mga estudyante na mag-log in o mag-register. Bilang bunga,
-    kapwa labis na nabibiling namin at kulang na nabibilang ang mga kalahok sa parehas
-    na oras. Basahin ang lahat ng detalye [dito](%{codeorg_url}/loc).
+    namin hinihingi sa mga estudyante na mag-log in o mag-register. Bilang resulta,
+    parehong sobra at kulang kami sa pagbibilang na mga kalahok sa parehong oras.
+    Basahin ang lahat ng detalye <a href='%{codeorg_url}/loc'>dito</a>.
+  hoc_faq_count_hoc_a_markdown: Hindi isang eksaktong sukat ng paggamit ang tracker
+    ng Hour of Code. Hindi namin binibilang nang perpekto ang walang kaparehong mga
+    ID ng estudyante kapag sinusubaybayan ang paglahok sa Hour of Code, lalo na dahil
+    hindi namin hinihingi sa mga estudyante na mag-log in o mag-register. Bilang resulta,
+    parehong sobra at kulang kami sa pagbibilang na mga kalahok sa parehong oras.
+    Basahin ang lahat ng detalye [dito](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Gaano kadami ang matutunan ng isang tao sa isang oras?
-  hoc_faq_one_hour_a: Ang layunin ng oras ng Hour of Code ay hindi turuan ang sino
-    man upang maging isang dalubhasang siyentipiko ng computer sa loob ng isang oras.
-    Ang isang oras ay sapat lamang upang matutuhan na ang computer science ay masaya
-    at malikhain, na ito ay naa-access ng lahat ng edad, para sa lahat ng mga estudyante,
-    anuman ang pinagmulan. Ang sukatan ng tagumpay ng kampanya na ito ay hindi sa
-    kung gaano karami ang natutunan mga estudyante sa CS - ang tagumpay ay masasalamin
-    sa malawak na pakikilahok sa iba 't ibang kasarian at ang mga grupo ng etniko
-    at Sosyo-ekonomiko, at ang resultang pagtaas sa pagpapatala at partisipasyon sa
-    mga kurso ng CS sa lahat ng  mga antas. Milyun-milyong kalahok na mga guro at
-    mga estudyante ay nagpasya na lumagpas sa isang oras - upang matuto ng isang buong
-    araw o isang buong linggo o mas matagal, at nagpasiya ang marami sa mga estudyante
-    na mag-enrol sa isang buong kurso (o maging isang pangunahing kolehiyo) bilang
-    isang resulta. <br/> <br/> Bukod sa mga estudyante, ang isa pang "estudyante"
-    ang mga tagapagturo na nagkamit ng tiwala sa sarili pagkatapos ng isang oras na
-    sila ay maaaring magturo ng computer science kahit na sila ay hindi magkaroon
-    ng degree sa kolehiyo bilang isang siyentipiko sa kompyuter. Sampung libong mga
-    guro ay magpasya upang ituloy pa ang computer science, alinman sa pagdalo sa mga
-    PD o nag-aalok ng mga follow-on online na mga kurso, o pareho. At ito ay angkop
-    din sa mga administrator ng paaralan, na natatanto na ang computer science ay
-    isang bagay na gusto ng kanilang mga estudyante at ang kanilang mga guro ay may
-    kakayahan. <br/> <br/> Higit sa lahat, ano ang matututuhan ng lahat ng mga kalahok
-    sa isang oras ay magagawa natin ito.
-  hoc_faq_one_hour_a_markdown: '  Ang layunin ng Hour of Code ay hindi para turuan
-    ang sinuman na maging isang ekspertong computer scientist sa iisang oras. Ang
-    isang oras ay sapat lamang para malaman na ang computer science ay nakakatuwa
-    at mapanlikha, na pwede itong ma-access sa lahat ng edad, para sa lahat ng estudyante,
-    anuman ang background. Ang sukatan ng tagumpay ng kampanyang ito ay kung gaano
-    kadami ang matutunan ng mga estudyante ng CS - ang tagumpay ay mailalarawan ng
-    malawak na paglahok ng lahat ng kasarian at pangkat-etniko at socio-ekonomiko,
-    at ang nagresultang dagdag sa pagpapatala at paglahok na nakikita namin sa mga
-    kurso ng CS sa lahat ng antas ng grado. Milyon-milyon ng kasaling mga guro at
-    estudyante ang nagpasyang magpatuloy ng higit sa isang oras -  para mag-aral sa
-    buong araw o buong linggo o mas mahaba pa, at maraming estudyante ang nagpasyang
-    magpatala sa isang buong kurso (o kahit na major sa kolehiyo) bilang bunga. Maliban
-    sa mga estudyante, ang iba pang "mag-aaral" ay ang tagaturo na nagkaroon ng tiwala
-    matapos ang isang oras nang makapagturo sila ng computer science kahit na sila
-    ay maaaring walang degree sa kolehiyo bilang isang computer scientist. Sampuang
-    libo-libong gusto ang nagpasyang ipagpatuloy pa ang computer science, alinman
-    sa dumalo sa PD o nag-aalok ng mga kasunod na online na kurso, o dalawa. At ito
-    ay mailalapat din sa mga administrador ng paaralan, na napagtanto na ang computer
-    science ay isang bagay na kaya na gusto ng kanilang mga estudyante at kaya ng
-    kanilang mga guro.  Higit sa lahat, ang natutunan ng lahat ng kalahok sa isang
-    oras ay magagawa natin ito.  '
-  hoc_faq_more_questions_q: May iba ka pa bang katanungan?
-  hoc_faq_more_questions_a: Subukan na makahanap ng sagot sa aming <a href='http://support.code.org'>support
+  hoc_faq_one_hour_a: Ang layunin ng Hour of Code ay hindi upang turuan ang sinuman
+    na maging isang dalubhasang computer scientist sa loob ng isang oras. Sapat lang
+    ang isang oras upang malaman na masaya at malikhain ang computer science, na naa-access
+    ito sa lahat ng edad, sa lahat ng mga mag-aaral, anuman ang pinagmulan. Ang sukatan
+    ng tagumpay ng kampanyang ito ay wala sa kung gaano karami ang natutunan ng mga
+    mag-aaral sa CS - makikita ang tagumpay sa malawak na pakikilahok sa buong kasarian,
+    lahi/etniko, at socioeconomic na grupo, at ang pagtaas sa pagpapatala at pakikilahok
+    na nakikita natin sa mga kursong CS sa lahat ng antas ng baitang. Milyun-milyong
+    mga kalahok na guro at mag-aaral ang nagpasya na hindi lang basta sa isang oras
+    - na matuto nang isang buong araw o isang buong linggo o mas matagal pa, at maraming
+    mga mag-aaral ang nagpasya na mag-enroll sa isang buong kurso (o kahit isang major
+    sa kolehiyo) bilang resulta. <br/><br/> Bukod sa mga mag-aaral, ang isa pang "tinuturuan"
+    ay ang tagapagturo na nakakuha ng kumpiyansa pagkatapos ng isang oras na pwede
+    silang magturo ng computer science kahit na wala silang degree sa kolehiyo bilang
+    isang computer scientist. Libu-libong guro ang nagpasya na ituloy ang computer
+    science, dumalo alinman sa PD o nag-aalok ng mga follow-on na online na kurso,
+    o pareho. At nalalapat din ito sa mga administrador ng paaralan, na napagtatanto
+    na ang computer science ay isang bagay na gusto ng kanilang mga mag-aaral at kaya
+    ng kanilang mga guro. <br/><br/> Higit sa lahat, ang matututunan ng lahat ng kalahok
+    sa loob ng isang oras ay na kaya natin ito.
+  hoc_faq_one_hour_a_markdown: |-
+    Ang layunin ng Hour of Code ay hindi upang turuan ang sinuman na maging isang dalubhasang computer scientist sa loob ng isang oras. Sapat lang ang isang oras upang malaman na masaya at malikhain ang computer science, na naa-access ito sa lahat ng edad, sa lahat ng mga mag-aaral, anuman ang pinagmulan. Ang sukatan ng tagumpay ng kampanyang ito ay wala sa kung gaano karami ang natutunan ng mga mag-aaral sa CS - makikita ang tagumpay sa malawak na pakikilahok sa buong kasarian, lahi/etniko, at socioeconomic na grupo, at ang pagtaas sa pagpapatala at pakikilahok na nakikita natin sa mga kursong CS sa lahat ng antas ng baitang. Milyun-milyong mga kalahok na guro at mag-aaral ang nagpasya na hindi lang basta sa isang oras - na matuto nang isang buong araw o isang buong linggo o mas matagal pa, at maraming mga mag-aaral ang nagpasya na mag-enroll sa isang buong kurso (o kahit isang major sa kolehiyo) bilang resulta.
+
+    Bukod sa mga mag-aaral, ang isa pang "tinuturuan" ay ang tagapagturo na nakakuha ng kumpiyansa pagkatapos ng isang oras na pwede silang magturo ng computer science kahit na wala silang degree sa kolehiyo bilang isang computer scientist. Libu-libong guro ang nagpasya na ituloy ang computer science, dumalo alinman sa PD o nag-aalok ng mga follow-on na online na kurso, o pareho. At nalalapat din ito sa mga administrador ng paaralan, na napagtatanto na ang computer science ay isang bagay na gusto ng kanilang mga mag-aaral at kaya ng kanilang mga guro.
+
+    Higit sa lahat, ang matututunan ng lahat ng kalahok sa loob ng isang oras ay na kaya natin ito.
+  hoc_faq_more_questions_q: May mga tanong ka pa ba?
+  hoc_faq_more_questions_a: Subukang makahanap ng sagot sa aming <a href='http://support.code.org'>support
     forum</a>.
   hoc_faq_more_questions_a_markdown: 'Subukang maghanap ng sagot sa aming [support
     forum](http://support.code.org).
 
 '
-  hoc_faq_keep_learning_q: Paano ba ako patuloy na matututo pagkatapos ng Hour of
-    Code?
-  hoc_faq_keep_learning_a: Kahit sino ay pwede mag-host ng Hour of Code sa anumang
-    oras. Ang mga pagtuturo itong ay magagamit buong taon. Maaasahan mong ang lahat
-    naming mga pagtuturo at kurikulum na maaring makuha sa aming site ay walang katapusan.
-    Mangyaring pumunta sa <a href='/promote'>sa mga pinagkukunan</a>para sa paano-gawin
-    na mga gabay sa kaganapan at ibang pinagkukunan para makatulong sa sa tagumpay
-    ng kaganapan ng Hour of Code.
-  hoc_faq_keep_learning_a_markdown: "  Ang sinuman ay pwedeng mag-host ng Hour of
-    Code anumang oras. Nananatili sa buong taon ang mga tutorial. Maaasahan mo na
-    ang lahat ng tutorial at kurikulum namin ay available sa aming site nang permanente.
-    Pakipunta sa [aming mga resource](%{promote}) para sa mga gabay kung-paano sa
-    event at ibang mga resource para makatulong na magtagumpay ang iyong Hour of Code.
-    \ "
-  hoc_faq_certificates_q: Saan ko ba pwedeng i-print ang mga sertipiko para sa aking
-    mga estudyante?
+  hoc_faq_keep_learning_q: Paano ako magpapatuloy sa pag-aaral pagkatapos ng Hour
+    of Code?
+  hoc_faq_keep_learning_a: Maaaring mag-host ang kahit sino ng Hour of Code anumang
+    oras. Nananatili sa buong taon ang mga tutorial. Maaasahan mo na ang lahat ng
+    tutorial at kurikulum namin ay available nang permanente sa site namin.  Pumunta
+    sa <a href='/promote'>aming mga mapagkukunan</a>para sa mga gabay sa kung-paano
+    ng event at ibang pang mapagkukunan upang makatulong na maging magtagumpay ang
+    Hour of Code na event mo.
+  hoc_faq_keep_learning_a_markdown: Maaaring mag-host ang kahit sino ng Hour of Code
+    anumang oras. Nananatili sa buong taon ang mga tutorial. Maaasahan mo na ang lahat
+    ng tutorial at kurikulum namin ay available nang permanente sa site namin. Pumunta
+    sa [mga mapagkukunan namin](%{promote}) para sa mga gabay sa kung-paano ng event
+    at ibang pang mapagkukunan upang makatulong na maging magtagumpay ang Hour of
+    Code na event mo.
+  hoc_faq_certificates_q: Saan ako makakapag-print ng mga sertipiko para sa mga mag-aaral
+    ko?
   hoc_faq_certificates_a: Pumunta sa aming <a href='%{codeorg_url}/certificates'>pahina
-    ng mga sertipiko</a>kung saan pwede ka mag-print ng mga sertipiko para sa buong
-    klase nang maaga. Pwede can din mag-print out ng <a href='%{codeorg_url}/certificates?course=mc'>
-    espesyal na sertipiko</a> para sa mga estudyanteng gumagawa ng pagtuturo sa Minecraft.
-  hoc_faq_certificates_a_markdown: "  Pumunta sa aming [certificates page](%{codeorg_url}/certificates)
-    kung saan pwede ninyong ma-print ang mga sertipiko para sa inyong buong klase
-    nang maaga. Pwede rin ninyong i-print out ang [special certificates](%{codeorg_url}/certificates?course=mc)
-    para sa mga estudyante na gumagawa ng Minecraft tutorial.  "
-  hoc_faq_logo_q: Mayroon bang mga limitasyon kung paano ko magagamit ang logo o pangalan
-    ng Hour of Code?
-  hoc_faq_logo_a: Trademark ang Hour of Code. Ayaw naming maiwasan ang paggamit, ngunit
-    gusto naming masiguro na ang paggamit ay aangkop sa ilang limit. Mangyaring tignan<a
-    href='%{logo_url}'>itong mga gabay para sa paggamit</a>.
-  hoc_faq_logo_a_markdown: " Ang Hour of Code ay naka-trademark. Ayaw naming pigilan
-    ang paggamit dito, ngunit gusto naming matiyak na ang paggamit dito ay umaakma
-    sa loob ng ilang limitasyon. Pakitingnan ang mga bagay na ito para sa paggamit](%{logo_url}).
-    \ "
+    ng mga sertipiko</a>kung saan pwede kang mag-print ng mga sertipiko ng maaga para
+    sa buong klase. Pwede ka ring mag-print ng <a href='%{codeorg_url}/certificates?course=mc'>
+    espesyal na sertipiko</a> para sa mga mag-aaral na gumagawa ng pagtuturo sa Minecraft.
+  hoc_faq_certificates_a_markdown: 'Pumunta sa aming [certificates page](%{codeorg_url}/certificates)
+    kung saan pwede ninyong ma-print ng maaga ang mga sertipikong para sa buong klase
+    ninyo. Pwede rin ninyong i-print ang [special certificates](%{codeorg_url}/certificates?course=mc)
+    para sa mga mag-aaral na gumagawa ng Minecraft tutorial.  '
+  hoc_faq_logo_q: Mayroon bang mga limitasyon sa kung paano ko magagamit ang logo
+    o pangalan ng Hour of Code?
+  hoc_faq_logo_a: Naka-trademark ang Hour of Code. Hindi namin nais na pigilan ang
+    paggamit nito, ngunit gusto naming matiyak na ang paggamit ay umaakma sa loob
+    ng ilang limitasyon. Tignan <a href='%{logo_url}'>itong mga gabay sa paggamit</a>.
+  hoc_faq_logo_a_markdown: 'Naka-trademark ang Hour of Code. Hindi namin nais na pigilan
+    ang paggamit nito, ngunit gusto naming matiyak na ang paggamit ay umaakma sa loob
+    ng ilang limitasyon. Pakitingnan ang [mga alituntuning ito sa paggamit](%{logo_url}).  '
   stats_hoc_2013_image_alt: Mga numero mula sa 2013 Hour of Code
   stats_growth: Ito ay ang pinakamabilis na maabot ang 15 milyong mga user.
   stats_i18n: Ang mga estudyante ay matututunan sa higit 45 na mga wika
@@ -983,7 +961,7 @@ ph:
   resources_stickers: Mga sticker
   resources_how_to_guides: Paano-gawin na mga gabay
   resources_promote: Ilunsad
-  resources_nav_tutorials: Subukan ang mga pagtuturo
+  resources_nav_tutorials: Subukan ang mga tutorial
   resources_nav_promote: Ipamalita ito
   resources_nav_spread_word: Paano maging kasangkot
   resources_banner_promote_text: Ilunsad

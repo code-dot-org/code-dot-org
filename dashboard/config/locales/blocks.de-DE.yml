@@ -1263,6 +1263,7 @@ de:
             '180': links
             '270': hoch
       gamelab_makeSpritesWithSize:
+        text: erzeuge {NUM} neue {SIZE} {COSTUME} Sprites
         options:
           SIZE:
             '30': klein
@@ -1487,6 +1488,51 @@ de:
         text: "{SPRITE} sagt {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}sagt{TEXT1}{NUM}Sekunden lang"
+      gamelab_spriteThink:
+        text: "{SPRITE} denkt {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}denkt{TEXT1}{NUM}Sekunden lang"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} denkt {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hm...
+            '"I am hungry, too."': Ich bin auch hungrig.
+            '"I only want the biggest goat."': Ich will nur die größte Ziege.
+            '"I''m a green troll."': Ich bin ein grüner Troll
+            '"No one will cross my bridge."': Niemand kommt über meine Brücke.
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} denkt {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hm...
+            '"Time to make friends with the sheep."': Freunden wir uns mit den Schafen
+              an.
+            '"She''ll never recognize me now."': Sie wird mich nicht mehr erkennen.
+            '"This costume keeps me warm."': Dieses Kostüm hält mich warm
+            '"I am actually a wolf."': Ich bin in Wirklichkeit ein Wolf.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} denkt {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hm...
+            '"I''m feeling sleepy."': Ich fühle mich schläfrig.
+            '"No one could ever beat me."': Niemand konnte mich jemals schlagen.
+            '"I''ve done this race before."': Ich habe an diesem Rennen schon einmal
+              teilgenommen.
+            '"My feet are bigger than Turtle''s feet."': Meine Füße sind größer als
+              die Füße von Turtle.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} denkt {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hm...
+            '"I''m so hungry."': Ich bin so hungrig!
+            '"I''m a visitor in this town."': Ich besuche diese Stadt.
+            '"If we share, we''ll all have something to eat. "': Wenn wir teilen,
+              haben wir etwas zu essen.
+            '"I''ll trick everyone into giving me their food."': Ich werde alle dazu
+              bringen, mir ihr Essen zu geben.
       gamelab_startAvoiding:
         text: "{SPRITE} beginnt, {TARGET} auszuweichen"
       gamelab_startFollowing:

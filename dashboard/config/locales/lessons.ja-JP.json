@@ -25,7 +25,8 @@
         "flappy/Flappy Code": {
           "name": "フラッピー コード",
           "overview": "このレッスンは、コンピュータ サイエンスの入門体験となるもので、生徒は基本ブロックコードを使用してゲームを作成します。このレッスンは、10〜16歳の中学年の学習者向けに設計されていますが、提供されている特別版を用いると、年齢の低い学習者にも応用できます。",
-          "preparation": "### Hour of Code（アワー オブ コード）の1週間前-   [Hour of Code（アワー オブ コード）教師向けガイド] [0]と[成功を収めた教師が伝えるベストプラクティス](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)を見直して、Hour of Code（アワー オブ コード）イベント計画を開始します。 -  スワッグや授業のサポートを受けたい場合は、[Hour of Code（アワー オブ コード）イベントを登録](http://hourofcode.com)します。-   [フラッピー ゲームを作る](https://studio.code.org/flappy/1)のオンラインチュートリアルを自習、完了します-   生徒に完成させるよう言う前に、必ず最初に試してみてください。技術的な面を確認し、Hour of Code（アワー オブ コード）を始める前に、トラブルシューティングを行う必要があるかどうか判断してください。 ###Hour of Code（アワー オブ コード）前日- 黒板に「コーディング」、「プログラミング」、「デバッグ」という単語を書くか、単語の壁がある場合はこれらの単語を追加します。- アクティビティを完了した生徒には、それぞれ証明書を渡す必要があります。 Hour of Code（アワー オブ コード）の最後に渡せるよう、前もって全員分の証明書を[1部印刷](http://code.org/certificates)しておきます。"
+          "preparation": "### Hour of Code（アワー オブ コード）の1週間前-   [Hour of Code（アワー オブ コード）教師向けガイド] [0]と[成功を収めた教師が伝えるベストプラクティス](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)を見直して、Hour of Code（アワー オブ コード）イベント計画を開始します。 -  スワッグや授業のサポートを受けたい場合は、[Hour of Code（アワー オブ コード）イベントを登録](http://hourofcode.com)します。-   [フラッピー ゲームを作る](https://studio.code.org/flappy/1)のオンラインチュートリアルを自習、完了します-   生徒に完成させるよう言う前に、必ず最初に試してみてください。技術的な面を確認し、Hour of Code（アワー オブ コード）を始める前に、トラブルシューティングを行う必要があるかどうか判断してください。 ###Hour of Code（アワー オブ コード）前日- 黒板に「コーディング」、「プログラミング」、「デバッグ」という単語を書くか、単語の壁がある場合はこれらの単語を追加します。- アクティビティを完了した生徒には、それぞれ証明書を渡す必要があります。 Hour of Code（アワー オブ コード）の最後に渡せるよう、前もって全員分の証明書を[1部印刷](http://code.org/certificates)しておきます。",
+          "student_overview": "このレッスンは、コンピュータ サイエンスの入門体験となるもので、生徒は基本ブロックコードを使用してゲームを作成します。このレッスンは、10〜16歳の中学年の学習者向けに設計されていますが、提供されている特別版を用いると、年齢の低い学習者にも応用できます。"
         },
         "hourofcode/Maze": {
           "name": "迷路",
@@ -39,12 +40,14 @@
         },
         "iceage/Ice Age Play Lab": {
           "name": "アイスエイジ プレイラボ",
+          "overview": "このレッスンは、コンピュータ サイエンスの入門体験となるもので、生徒は基本ブロックコードを使用してゲームを作成します。このレッスンは、10〜16歳の中学年の学習者向けに設計されていますが、提供されている特別版を用いると、年齢の低い学習者にも応用できます。",
           "student_overview": "このレッスンでは、学習者が、安全で支援的な環境でコンピュータ サイエンスの入門的な体験を積み、基本的なブロックコードを使ってゲームを作成します。 "
         },
         "hello-world-emoji-2021/Hello World": {
           "overview": "このレッスンでは、Sprite Labでプログラミングを実行するなど、コンピューターサイエンスの基本を学びます。Sprite Lab は、創造性豊かで楽しい作品をつくるために用いるツールです。生徒は、スプライトを作成、アニメーション化し、イベントでスプライトにインタラクティブ性をもたせる方法を学びます。 \n\nこのレッスンでは、複数のバージョンがあります。どのバージョンでも、生徒に同じコンセプトを教えますが、生徒の関心を引くさまざまな画像が使われています。詳しくは、 [ハローワールドのランディングページ](https://code.org/helloworld)をご覧ください。",
           "preparation": "-   パズルを通して、生徒にとって問題となる箇所を見つけます。\n-   [CS Connections](https://code.org/educate/csc) でリソースを使って、初回チュートリアルの後におけるコンピューターサイエンス学習拡大に向けての計画を作成します。",
-          "purpose": "このレッスンの目的は、生徒にSprite Labで簡単なプログラミングの作品を作成させることです。生徒はこのプログラミングのスキルを養って、学校の話題や個人的なことなどさまざまなトピックを基に作品をつくります。コンピューターサイエンスを他の題材に取り入れていく方法については [CS Connections](https://code.org/educate/csc) をご覧ください。"
+          "purpose": "このレッスンの目的は、生徒にSprite Labで簡単なプログラミングの作品を作成させることです。生徒はこのプログラミングのスキルを養って、学校の話題や個人的なことなどさまざまなトピックを基に作品をつくります。コンピューターサイエンスを他の題材に取り入れていく方法については [CS Connections](https://code.org/educate/csc) をご覧ください。",
+          "student_overview": "このレッスンでは、Sprite Labでプログラミングを実行するなど、コンピューターサイエンスの基本を学びます。Sprite Lab は、創造性豊かで楽しい作品をつくるために用いるツールです。生徒は、スプライトを作成、アニメーション化し、イベントでスプライトにインタラクティブ性をもたせる方法を学びます。 "
         },
         "artist/Artist": {
           "name": "アーティスト",
@@ -52,7 +55,9 @@
           "student_overview": "「アーティスト」をプログラミングして美しい画像を作成しましょう。"
         },
         "gumball/Gumball Play Lab": {
-          "name": "ガムボール プレイラボ"
+          "name": "ガムボール プレイラボ",
+          "overview": "このレッスンは、コンピュータ サイエンスの入門体験となるもので、生徒は基本ブロックコードを使用してゲームを作成します。このレッスンは、10〜16歳の中学年の学習者向けに設計されていますが、提供されている特別版を用いると、年齢の低い学習者にも応用できます。",
+          "student_overview": "このレッスンは、コンピュータ サイエンスの入門体験となるもので、生徒は基本ブロックコードを使用してゲームを作成します。このレッスンは、10〜16歳の中学年の学習者向けに設計されていますが、提供されている特別版を用いると、年齢の低い学習者にも応用できます。"
         },
         "dance/Dance Party": {
           "name": "ダンスパーティー",
@@ -63,7 +68,8 @@
         "hello-world-food-2021/Hello World": {
           "overview": "このレッスンでは、Sprite Labでプログラミングを実行するなど、コンピューターサイエンスの基本を学びます。Sprite Lab は、創造性豊かで楽しい作品をつくるために用いるツールです。生徒は、スプライトを作成、アニメーション化し、イベントでスプライトにインタラクティブ性をもたせる方法を学びます。 \n\nこのレッスンでは、複数のバージョンがあります。どのバージョンでも、生徒に同じコンセプトを教えますが、生徒の関心を引くさまざまな画像が使われています。詳しくは、 [ハローワールドのランディングページ](https://code.org/helloworld)をご覧ください。",
           "preparation": "-   パズルを通して、生徒にとって問題となる箇所を見つけます。\n-   [CS Connections](https://code.org/educate/csc) でリソースを使って、初回チュートリアルの後におけるコンピューターサイエンス学習拡大に向けての計画を作成します。",
-          "purpose": "このレッスンの目的は、生徒にSprite Labで簡単なプログラミングの作品を作成させることです。生徒はこのプログラミングのスキルを養って、学校の話題や個人的なことなどさまざまなトピックを基に作品をつくります。コンピューターサイエンスを他の題材に取り入れていく方法については [CS Connections](https://code.org/educate/csc) をご覧ください。"
+          "purpose": "このレッスンの目的は、生徒にSprite Labで簡単なプログラミングの作品を作成させることです。生徒はこのプログラミングのスキルを養って、学校の話題や個人的なことなどさまざまなトピックを基に作品をつくります。コンピューターサイエンスを他の題材に取り入れていく方法については [CS Connections](https://code.org/educate/csc) をご覧ください。",
+          "student_overview": "このレッスンでは、Sprite Labでプログラミングを実行するなど、コンピューターサイエンスの基本を学びます。Sprite Lab は、創造性豊かで楽しい作品をつくるために用いるツールです。生徒は、スプライトを作成、アニメーション化し、イベントでスプライトにインタラクティブ性をもたせる方法を学びます。 "
         },
         "aquatic/Aquatic": {
           "name": "マインクラフト: ボヤージュ アクアティック",
@@ -79,7 +85,8 @@
         "hello-world-animals-2021/Hello World": {
           "overview": "このレッスンでは、Sprite Labでプログラミングを実行するなど、コンピューターサイエンスの基本を学びます。Sprite Lab は、創造性豊かで楽しい作品をつくるために用いるツールです。生徒は、スプライトを作成、アニメーション化し、イベントでスプライトにインタラクティブ性をもたせる方法を学びます。 \n\nこのレッスンでは、複数のバージョンがあります。どのバージョンでも、生徒に同じコンセプトを教えますが、生徒の関心を引くさまざまな画像が使われています。詳しくは、 [ハローワールドのランディングページ](https://code.org/helloworld)をご覧ください。",
           "preparation": "-   パズルを通して、生徒にとって問題となる箇所を見つけます。\n-   [CS Connections](https://code.org/educate/csc) でリソースを使って、初回チュートリアルの後におけるコンピューターサイエンス学習拡大に向けての計画を作成します。",
-          "purpose": "このレッスンの目的は、生徒にSprite Labで簡単なプログラミングの作品を作成させることです。生徒はこのプログラミングのスキルを養って、学校の話題や個人的なことなどさまざまなトピックを基に作品をつくります。コンピューターサイエンスを他の題材に取り入れていく方法については [CS Connections](https://code.org/educate/csc) をご覧ください。"
+          "purpose": "このレッスンの目的は、生徒にSprite Labで簡単なプログラミングの作品を作成させることです。生徒はこのプログラミングのスキルを養って、学校の話題や個人的なことなどさまざまなトピックを基に作品をつくります。コンピューターサイエンスを他の題材に取り入れていく方法については [CS Connections](https://code.org/educate/csc) をご覧ください。",
+          "student_overview": "このレッスンでは、Sprite Labでプログラミングを実行するなど、コンピューターサイエンスの基本を学びます。Sprite Lab は、創造性豊かで楽しい作品をつくるために用いるツールです。生徒は、スプライトを作成、アニメーション化し、イベントでスプライトにインタラクティブ性をもたせる方法を学びます。 "
         },
         "starwars/Hour of Code 2015": {
           "name": "スター・ウォーズ: コードを書いて銀河をつくろう(JavaScript)",
@@ -93,6 +100,7 @@
         },
         "playlab/Play Lab": {
           "name": "プレイラボ",
+          "overview": "このレッスンは、コンピュータ サイエンスの入門体験となるもので、生徒は基本ブロックコードを使用してゲームを作成します。このレッスンは、10〜16歳の中学年の学習者向けに設計されていますが、提供されている特別版を用いると、年齢の低い学習者にも応用できます。",
           "student_overview": "このレッスンでは、学習者が、安全で支援的な環境でコンピュータ サイエンスの入門的な体験を積み、基本的なブロックコードを使ってゲームを作成します。 "
         },
         "applab-intro/Intro to App Lab": {
@@ -102,7 +110,8 @@
         "hello-world-retro-2021/Hello World": {
           "overview": "このレッスンでは、Sprite Labでプログラミングを実行するなど、コンピューターサイエンスの基本を学びます。Sprite Lab は、創造性豊かで楽しい作品をつくるために用いるツールです。生徒は、スプライトを作成、アニメーション化し、イベントでスプライトにインタラクティブ性をもたせる方法を学びます。 \n\nこのレッスンでは、複数のバージョンがあります。どのバージョンでも、生徒に同じコンセプトを教えますが、生徒の関心を引くさまざまな画像が使われています。詳しくは、 [ハローワールドのランディングページ](https://code.org/helloworld)をご覧ください。",
           "preparation": "-   パズルを通して、生徒にとって問題となる箇所を見つけます。\n-   [CS Connections](https://code.org/educate/csc) でリソースを使って、初回チュートリアルの後におけるコンピューターサイエンス学習拡大に向けての計画を作成します。",
-          "purpose": "このレッスンの目的は、生徒にSprite Labで簡単なプログラミングの作品を作成させることです。生徒はこのプログラミングのスキルを養って、学校の話題や個人的なことなどさまざまなトピックを基に作品をつくります。コンピューターサイエンスを他の題材に取り入れていく方法については [CS Connections](https://code.org/educate/csc) をご覧ください。"
+          "purpose": "このレッスンの目的は、生徒にSprite Labで簡単なプログラミングの作品を作成させることです。生徒はこのプログラミングのスキルを養って、学校の話題や個人的なことなどさまざまなトピックを基に作品をつくります。コンピューターサイエンスを他の題材に取り入れていく方法については [CS Connections](https://code.org/educate/csc) をご覧ください。",
+          "student_overview": "このレッスンでは、Sprite Labでプログラミングを実行するなど、コンピューターサイエンスの基本を学びます。Sprite Lab は、創造性豊かで楽しい作品をつくるために用いるツールです。生徒は、スプライトを作成、アニメーション化し、イベントでスプライトにインタラクティブ性をもたせる方法を学びます。 "
         },
         "starwarsblocks/Hour of Code 2015": {
           "purpose": "このレッスンでは、シーケンス処理やイベントなど、コーディングとプログラミングのCSの中枢概念を紹介します。チュートリアルのJavaScriptバージョンでは、生徒はコードの入力を体験することもできます。",
@@ -127,6 +136,7 @@
         },
         "infinity/Infinity": {
           "name": "ディズニー インフィニティ プレイラボ",
+          "overview": "このレッスンは、コンピュータ サイエンスの入門体験となるもので、生徒は基本ブロックコードを使用してゲームを作成します。このレッスンは、10〜16歳の中学年の学習者向けに設計されていますが、提供されている特別版を用いると、年齢の低い学習者にも応用できます。",
           "student_overview": "このレッスンでは、学習者が、安全で支援的な環境でコンピュータ サイエンスの入門的な体験を積み、基本的なブロックコードを使ってゲームを作成します。 "
         },
         "basketball/Bounce": {
@@ -136,6 +146,9 @@
         "dance-extras-2019/Dance Party - Go Further": {
           "name": "ダンスパーティー - さらに先へ",
           "purpose": "このレッスンでは、コーディングとイベントプログラミング（ブロックを使用）というCSのコアコンセプトを紹介します。"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
         },
         "dance-2019/Dance Party": {
           "name": "ダンスパーティー (2019)",
@@ -149,8 +162,170 @@
           "purpose": "このチュートリアルは、**人工知能**の一種である**機械学習**を生徒にざっと紹介することを目的としています。生徒は、**トレーニング データ**を使用して、機械学習モデルで新しいデータを分類できる方法を学びます。生徒は、チュートリアル中に前向きに取り組む必要があり、さらに重要なことに、コンピュータ サイエンスを学び続ける意欲がなくてはなりません。 ",
           "student_overview": "チュートリアルの概要：まず、生徒は、オブジェクトを「魚」または「魚ではない」に分類して、海からゴミを取り除く試みを行います。次に、トレーニング データセットを拡張して、水中に属するその他の海洋生物を含めなくてはなりません。アクティビティの後半では、生徒はランダムに生成された魚のイメージに適用する独自のラベルを選択します。このトレーニング データは、新しいイメージに自動的にラベルを付けることができる機械学習モデルに使用されます。"
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "「コンピュータ サイエンスを教える」へようこそ"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "コンピューター サイエンス入門コースを理解する"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "シークエンス"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "くりかえし"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "イベント"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "条件"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "コース最後のプロジェクト"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "関数(かんすう) "
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "変数（へんすう）"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "ループ用"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "スプライト ラボ"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "復習内容をレビューする"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "次の手順"
+        },
+        "vigenere/Vigenere": {
+          "name": "ヴィジュネル暗号"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "ムード研究"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "デジタルデザイン"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "イベント駆動型プログラミング"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "基本的なアプリの機能"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "ゲッターとセッター"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "使用開始"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "コンピュータ サイエンス入門"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "先を見る"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "基本をマスターする: シーケンス"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "基本をマスターする: ループ"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "基本をマスターする: 条件文"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "基本をマスターする: 関数"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "基本をマスターする: イベント"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "コンピューター サイエンスを教えるためのベストプラクティス"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "計画"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "次の手順"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "概要とセットアップ手順"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "ピアツーピア - 共有ワイヤーでビットを送信する"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "ピアツーピア - 番号の送信"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "ピアツーピア - Asciiの送信"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "メッセージのブロードキャスト"
+        },
+        "netsim/Routers and addresses": {
+          "name": "ルーターとアドレス"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "パケットと信頼性"
+        },
+        "netsim/Manual DNS": {
+          "name": "手動DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "自動DNSノード"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "インターネット シミュレーター フリープレイ"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "部屋から脱出"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "開始画面と終了画面"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "開始画面と終了画面2"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "使用開始"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "コンピュータ サイエンス入門"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "先を見る"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "基本をマスターする: シーケンス"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "基本をマスターする: ループ"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "基本をマスターする: 条件文"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "基本をマスターする: 関数"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "基本をマスターする: イベント"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "コンピューター サイエンスを教えるためのベストプラクティス"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "計画"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "次の手順"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "周波数分析"
         },
         "courseb-2018/Move It, Move It": {
           "name": "動かせ！動かせ！"
@@ -539,6 +714,9 @@
         "coursee-2018/Conditionals": {
           "name": "ファーマーと学ぶ条件文"
         },
+        "coursee-2018/Private and Personal Information": {
+          "name": "プライベートおよび個人情報を編集"
+        },
         "coursee-2018/Build a Star Wars Game": {
           "name": "スター・ウォーズゲームを構築する"
         },
@@ -684,7 +862,7 @@
           "name": "つづりみつばち"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "CS発見期末アンケート"
+          "name": "娯楽のためのプログラミング"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "形状のプロット"
@@ -1160,6 +1338,9 @@
         "coursee-2019/Alien Dance Party with Sprite Lab": {
           "name": "スプライトラボでのエイリアンダンスパーティー"
         },
+        "coursee-2019/Private and Personal Information": {
+          "name": "プライベートおよび個人情報を編集"
+        },
         "coursee-2019/About Me": {
           "name": "スプライトラボについて"
         },
@@ -1365,10 +1546,10 @@
           "name": "プレイ ラボのイベント"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "プロジェクト後のテスト"
+          "name": "娯楽のためのプログラミング"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "CS発見 コース後アンケート"
+          "name": "形状のプロット"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "ゲームラボでの描画"
@@ -1425,10 +1606,7 @@
           "name": "プロジェクト - ゲームの設計"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "プロジェクト後のテスト"
-        },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "CS発見 コース後アンケート"
+          "name": "コンピューティングにおける革新"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "サーキット プレイグラウンド"
@@ -1470,10 +1648,10 @@
           "name": "プロジェクト: イノベーションのプロトタイプ"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "プロジェクト後のテスト"
+          "name": "デザインの分析"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "CS発見 コース後アンケート"
+          "name": "ユーザーを理解する"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "ユーザー中心のデザインマイクロアクティビティ"
@@ -1518,10 +1696,10 @@
           "name": "プロジェクト - アプリのプレゼンテーション"
         },
         "csd5-2019/Representation Matters": {
-          "name": "プロジェクト後のテスト"
+          "name": "表現が重要"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "CS発見 コース後アンケート"
+          "name": "パターンと表現"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCIIとバイナリ表現"
@@ -1566,7 +1744,7 @@
           "name": "問題解決入門"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "プロジェクト後のテスト"
+          "name": "The Problem Solving Process"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "問題解決の探求"
@@ -1584,10 +1762,10 @@
           "name": "プロジェクト - アプリの提案"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "プロジェクト後のテスト"
+          "name": "ウェブサイトを探索する"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "CS発見 コース後アンケート"
+          "name": "表現のためのウェブサイト"
         },
         "csd2-2019/Intro to HTML": {
           "name": "HTML入門"
@@ -2109,10 +2287,10 @@
           "name": "プロジェクトの発表"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "CS発見期末アンケート"
+          "name": "娯楽のためのプログラミング"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "CSDコース後アンケート"
+          "name": "形状のプロット"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "ゲームラボでの描画"
@@ -2169,7 +2347,7 @@
           "name": "プロジェクト - ゲームの設計"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "CSDコース後アンケート"
+          "name": "コンピューティングにおける革新"
         },
         "csd6-2017/The Circuit Playground_": {
           "name": "サーキット プレイグラウンド"
@@ -2211,7 +2389,7 @@
           "name": "プロジェクト: イノベーションのプロトタイプ"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "CSDコース後アンケート"
+          "name": "ウェブサイトを探索する"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "表現のためのウェブサイト"
@@ -2277,7 +2455,7 @@
           "name": "プロジェクト - アプリの提案"
         },
         "csd5-2017/Representation Matters": {
-          "name": "CSDコース後アンケート"
+          "name": "表現が重要"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "パターンと表現"
@@ -2322,7 +2500,7 @@
           "name": "プロジェクト - データの問題を解決する"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "CSDコース後アンケート"
+          "name": "デザインの分析"
         },
         "csd4-2017/Understanding Your User": {
           "name": "ユーザーを理解する"
@@ -2368,6 +2546,27 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "プロジェクト - アプリのプレゼンテーション"
+        },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "AB教育者向けのデバッグ"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "CDEF教育者向けのデバッグ"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "白黒ピクセレーション チュートリアル"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "白黒ピクセレーション フリープレイ"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "カラーピクセレーション チュートリアル"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "カラーピクセレーションの例"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "カラーピクセレーション フリープレイ"
         },
         "course4/Unplugged: Tangrams": {
           "name": "アンプラグド: タングラム"
@@ -2434,6 +2633,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "エクストリーム チャレンジ - 総合"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "コンピューター・サイエンス入門"
+        },
+        "20-hour/The Maze": {
+          "name": "迷路"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "コンピュテーショナル・シンキング（コンピューターの様に考える）"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "グラフ用紙のプログラミング"
+        },
+        "20-hour/The Artist": {
+          "name": "アーティスト"
+        },
+        "20-hour/Algorithms": {
+          "name": "アルゴリズム"
+        },
+        "20-hour/The Artist 2": {
+          "name": "アーティスト 2"
+        },
+        "20-hour/Functions": {
+          "name": "関数(かんすう) "
+        },
+        "20-hour/The Farmer": {
+          "name": "農家"
+        },
+        "20-hour/Conditionals": {
+          "name": "条件"
+        },
+        "20-hour/The Artist 3": {
+          "name": "アーティスト 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "作曲する"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "農家 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "抽象化"
+        },
+        "20-hour/The Artist 4": {
+          "name": "アーティスト 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "プログラミングをリレーする"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "農家 3"
+        },
+        "20-hour/The Internet": {
+          "name": "インターネット"
+        },
+        "20-hour/The Artist 5": {
+          "name": "アーティスト 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "ラップアップ"
         },
         "course2/Graph Paper Programming": {
           "name": "グラフ用紙のプログラミング"
@@ -2612,7 +2871,129 @@
         "jigsaw/Jigsaw": {
           "name": "ジグソーパズル",
           "overview": "このレッスンでは、生徒がコンピューターラボに進むときに何が起こるかを理解します。まずはコンピューターラボのマナーを紹介する簡単なディスカッションから始まり、次にコンピューターを使ってオンラインパズルを完成させます。",
+          "preparation": "-   オンラインセーフティーコンテンツのため[良識教育](https://www.commonsense.org/education/digital-citizenship)のウェブサイトをおさらいしましょう。",
+          "purpose": "このレッスンの主な目標は、生徒のコンピュータ体験を構築することです。クリック、ドラッグ、ドロップなどの最も基本的なコンピュータ機能を網羅することで、今後、パズルに取り組むために、教室でより公平な遊びの場を生み出します。このレッスンは、また、デバイスに応じて、「マウス」、「トラックパッド」、「タッチスクリーン」など、基本的なコンピュータハードウェア用語を紹介する絶好の機会にもなっています。",
           "student_overview": "クリックしてドラッグし、パズルを完成させましょう。"
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "CSD生徒 コース後アンケート ('18～'19) "
+        },
+        "allthethings/Jigsaw": {
+          "name": "ジグソーパズル"
+        },
+        "allthethings/Maze": {
+          "name": "迷路"
+        },
+        "allthethings/Artist": {
+          "name": "アーティスト"
+        },
+        "allthethings/Bee": {
+          "name": "みつばち"
+        },
+        "allthethings/PlayLab": {
+          "name": "プレイラボ"
+        },
+        "allthethings/Farmer": {
+          "name": "農家"
+        },
+        "allthethings/Flappy": {
+          "name": "フラッピー"
+        },
+        "allthethings/Bounce": {
+          "name": "バウンド"
+        },
+        "allthethings/Multi": {
+          "name": "マルチ"
+        },
+        "allthethings/Multi2": {
+          "name": "マルチ2"
+        },
+        "allthethings/Match": {
+          "name": "一致"
+        },
+        "allthethings/Odometer": {
+          "name": "オドメーター"
+        },
+        "allthethings/Text Compression": {
+          "name": "テキスト圧縮"
+        },
+        "allthethings/AppLab": {
+          "name": "アプリラボ"
+        },
+        "allthethings/Gamelab": {
+          "name": "ゲームラボ"
+        },
+        "allthethings/Online PD": {
+          "name": "オンラインPD"
+        },
+        "allthethings/Markdown Details": {
+          "name": "マークダウンの詳細"
+        },
+        "allthethings/Studio": {
+          "name": "スタジオ"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "複数ページの評価"
+        },
+        "allthethings/Star wars": {
+          "name": "スター・ウォーズ"
+        },
+        "allthethings/Minecraft": {
+          "name": "マインクラフト"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "豊富な長期評価"
+        },
+        "allthethings/Free Response": {
+          "name": "無料回答"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "PLC評価例"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "スワップされたレベル"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "匿名の生徒アンケート"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "パブリックキー暗号"
+        },
+        "allthethings/Web Lab": {
+          "name": "ウェッブ ラボ"
+        },
+        "allthethings/Single page assessment": {
+          "name": "単一ページの評価"
+        },
+        "allthethings/Standalone video": {
+          "name": "スタンドアロン動画"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "カリキュラム参考資料"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "スプライト ラボ"
+        },
+        "allthethings/Dance Lab": {
+          "name": "ダンスラボ"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "ミニルーブリック"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "オプションでオフラインとして表示される外観"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "バブルチョイス"
+        },
+        "allthethings/Contained Levels": {
+          "name": "含まれるレベル"
+        },
+        "allthethings/ML Fish": {
+          "name": "MLフィッシュ"
+        },
+        "allthethings/Java Lab": {
+          "name": "Javaラボ"
         },
         "coursef-2021/lesson-6": {
           "name": "スプライトラボの紹介",
@@ -3457,6 +3838,7 @@
           "student_overview": "ネットいじめを見たときに、立派な態度がとれる方法を学びます。"
         },
         "coursee-2021/Private and Personal Information": {
+          "name": "プライベートおよび個人情報を編集",
           "overview": " [![コモンセンス・エデュケーション](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nこのレッスンは、コモンセンス・エデュケーションにより作成されました。[もっと見る](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\n他の人と共有し、つながることが生徒たちの本質です。ですが、オンラインでの共有にはいくつかのリスクが伴います。子どもたちがオンラインで力強い、前向き、安全な関係を築くのをどのように助けることができるでしょう？ 生徒が個人情報と非公開にするのがベストなものとの違いを学ぶのを手伝いましょう。",
           "preparation": "-   教材を確認します。\n-   各生徒のハンドアウトを印刷します。",
           "purpose": "コモンセンス・エデュケーションは、オンラインで共有してもよい情報を生徒に教えるために、このレッスンを作成しました。",
@@ -3558,9 +3940,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "CS発見 コース後アンケート"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "プロジェクト後のテスト"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "ユーザーを理解する"
         },
@@ -3595,7 +3974,7 @@
           "name": "CS発見 コース後アンケート"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "プロジェクト後のテスト",
+          "name": "コンピューティングにおける革新",
           "overview": "このコースの最後のユニットを開始するに当たり、生徒はコンピューティングの興味深い革新性について調査します。このレッスンでは、さまざまなコンピューティングフォームファクター (コンピューターはどのようなものか) と、コンピューティングの影響を受けるフィールドについて生徒に説明します。このユニットの後半では、生徒は自分の物理的なコンピューティングデバイスを開発しながら、このレッスンで触れたデバイスを振り返ります。"
         },
         "csd6-2021/The Circuit Playground": {
@@ -3647,7 +4026,7 @@
           "name": "CS発見 コース後アンケート"
         },
         "csd5-2021/Representation Matters": {
-          "name": "プロジェクト後のテスト"
+          "name": "表現が重要"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "パターンと表現"
@@ -3692,7 +4071,7 @@
           "name": "CS発見 コース後アンケート"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "プロジェクト後のテスト"
+          "name": "娯楽のためのプログラミング"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "形状のプロット"
@@ -3765,7 +4144,7 @@
           "name": "問題解決入門"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "プロジェクト後のテスト"
+          "name": "The Problem Solving Process"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "問題解決の探求"
@@ -3798,7 +4177,7 @@
           "name": "問題解決の探索 - ゲームのテーマ (代替レッスン3)"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "プロジェクト後のテスト"
+          "name": "ウェブページの探索"
         },
         "csd2-2021/Intro to HTML": {
           "name": "HTML入門"
@@ -4132,6 +4511,9 @@
         },
         "coursee-2020/Alien Dance Party with Sprite Lab": {
           "name": "スプライトラボでのエイリアンダンスパーティー"
+        },
+        "coursee-2020/Private and Personal Information": {
+          "name": "プライベートおよび個人情報を編集"
         },
         "coursee-2020/About Me": {
           "name": "スプライトラボについて"

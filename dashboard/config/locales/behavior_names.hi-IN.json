@@ -3244,6 +3244,32 @@
           "moving east and looping": "पूर्व की ओर मूव और लूप करना",
           "moving north and looping": "उत्तर की ओर मूव और लूप करना",
           "moving south and looping": "दक्षिण की ओर मूव और लूप करना"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "shrinking": "सिकुड़ना",
+          "patrolling": "गश्त लगाना",
+          "wandering": "घूमना",
+          "growing": "बढ़ना",
+          "jittering": "कलमलाना",
+          "moving east": "पूर्व की ओर मूव करना",
+          "moving north": "उत्तर की ओर मूव करना",
+          "moving south": "दक्षिण की ओर मूव करना",
+          "moving west": "पश्चिम की ओर मूव करना",
+          "spinning right": "दाएं घुमाना"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "shrinking": "सिकुड़ना",
+          "patrolling": "गश्त लगाना",
+          "wandering": "घूमना",
+          "growing": "बढ़ना",
+          "jittering": "कलमलाना",
+          "moving east": "पूर्व की ओर मूव करना",
+          "moving north": "उत्तर की ओर मूव करना",
+          "moving south": "दक्षिण की ओर मूव करना",
+          "moving west": "पश्चिम की ओर मूव करना",
+          "spinning right": "दाएं घुमाना"
         }
       }
     }

@@ -7384,3 +7384,83 @@ hi-IN:
           # मेरा ऑनलाइन पड़ोस
 
           ## आप सुरक्षित रूप से ऑनलाइन स्थानों पर कैसे जाएं?
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: नीला
+        - text: 'हरा '
+        - {}
+        - text: पीला
+        - correct: true
+        - text: लाल
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: १
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: यहां वर्णन करें
+      allthethings_external_not_displayed_as_unplugged:
+        content1: यहां वर्णन करें
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      ml-club app-choice parent:
+        display_name: अपनी ऐप को अनुकूलित करें
+      ml-intro app lab-book recommender 5-2021:
+        display_name: अपनी ऐप को अनुकूलित करें
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - text: उपरोक्त में से कोई नहीं।

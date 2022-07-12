@@ -2140,7 +2140,8 @@
           "courseA_collector_preLoops1_1": "Klik disini untuk melihat kodenya bekerja!"
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu."
+          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu.",
+          "make_sprite": "Gunakan blok di sini untuk membuat sprite!"
         }
       }
     }

@@ -64,7 +64,7 @@ title: 编程一小时公司指南
 
 如果你想走远一点，你的公司也可以举办编程一小时活动。 举办活动没有特定的模式，所以我们鼓励你发挥创意！ 由于我们的员工规模小（但强大），Code.org没有专门的团队来协调编程一小时活动。 然而，这里有一些如何开始的建议。
 
-### 1. 观看指导视频 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. 观看指导视频 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. 为你的活动确定日期、模式和地点
 
@@ -91,12 +91,12 @@ title: 编程一小时公司指南
 
 #### 设备：
 
-要获得编程一小时活动的最佳体验，需要一台联网的电脑。 But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! 对于不插电的活动，只需过滤课堂技术部分以显示“没有电脑或设备”选项。
+要获得编程一小时活动的最佳体验，需要一台联网的电脑。 But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! 对于离线活动，只需过滤课堂技术部分以显示“没有电脑或设备”选项。
 
 - 在电脑或设备上**测试活动**。确保活动能够在浏览器上正常运行，包括声音和视频两个方面。
 - **没有足够的设备？**使用结对编程。 学生之间搭档之后，他们会互相帮助并减少对老师的依赖。 他们将明白编程也是一种社交和协作。
 - 如果你的参与者将尝试最适合以声音进行的教程，为他们**提供耳机**或要求他们自带耳机。
-- **低带宽**？计划在活动前展示视频，这样就不会每个参与者都下载视频。或者尝试不插电/线下活动。
+- **低带宽**？计划在活动前展示视频，这样就不会每个参与者都下载视频。或者尝试离线/线下活动。
 
 #### 虚拟活动：
 

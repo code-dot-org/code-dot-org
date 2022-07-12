@@ -57,8 +57,71 @@
         "dance-extras-2019/Dance Party - Go Further": {
           "purpose": "Цей урок вводить основні концепції інформатики, пов'язані з кодуванням та програмуванням подій (з використанням блоків)."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Година коду 2013"
+        },
         "dance-2019/Dance Party": {
           "purpose": "Цей урок вводить основні концепції інформатики, пов'язані з кодуванням та програмуванням подій (з використанням блоків)."
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Послідовність дій"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Цикли"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Події"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Умови"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Функції"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Змінні"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Цикли For"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Наступні кроки"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Починаємо"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Основи інформатики"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Дивлячись вперед"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Успішні методики викладання інформатики"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Планування"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Наступні Кроки"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Починаємо"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Основи інформатики"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Дивлячись вперед"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Успішні методики викладання інформатики"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Планування"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Наступні Кроки"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Рухайся, рухайся"
@@ -201,9 +264,6 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Грамотна Бджілка"
         },
-        "csd3-2018/Programming for Entertainment": {
-          "name": "Опитування по закінченню курсу Відкриття інформатики"
-        },
         "csd3-2018/Variables": {
           "name": "Змінні"
         },
@@ -336,9 +396,6 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Грамотна Бджілка"
         },
-        "csd3-2019/Plotting Shapes": {
-          "name": "Опитування після курсу Відкриття інформатики"
-        },
         "csd3-2019/Variables": {
           "name": "Змінні"
         },
@@ -357,17 +414,11 @@
         "csd3-2019/Functions": {
           "name": "Функції"
         },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "Опитування після курсу Відкриття інформатики"
-        },
         "csd6-2019/Accelerometer": {
           "name": "Акселерометр"
         },
         "csd6-2019/Functions with Parameters": {
           "name": "Функції з параметрами"
-        },
-        "csd4-2019/Understanding Your User": {
-          "name": "Опитування після курсу Відкриття інформатики"
         },
         "csd4-2019/Identifying User Needs": {
           "name": "Визначення потреб користувачів"
@@ -381,17 +432,14 @@
         "csd4-2019/Prototype Testing": {
           "name": "Випробування прототипів"
         },
-        "csd5-2019/Patterns and Representation": {
-          "name": "Опитування після курсу Відкриття інформатики"
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Процес вирішення проблем"
         },
         "csd1-2019/What is a Computer?": {
           "name": "Що таке комп’ютер?"
         },
         "csd1-2019/Processing": {
           "name": "В обробці"
-        },
-        "csd2-2019/Websites for Expression ": {
-          "name": "Опитування після курсу Відкриття інформатики"
         },
         "csd2-2019/Intro to HTML": {
           "name": "Вступ до HTML"
@@ -485,9 +533,6 @@
         },
         "express-2017/Nested Loops": {
           "name": "Вкладені цикли"
-        },
-        "csd3-2017/Programming for Entertainment": {
-          "name": "Опитування по закінченню курсу Відкриття інформатики"
         },
         "csd3-2017/Variables": {
           "name": "Змінні"
@@ -608,6 +653,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Екстремальний виклик - комплексний"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Вступ до інформатики"
+        },
+        "20-hour/The Maze": {
+          "name": "Лабіринт"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Обчислювальне мислення"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Програмування по клітинках"
+        },
+        "20-hour/The Artist": {
+          "name": "Художник"
+        },
+        "20-hour/Algorithms": {
+          "name": "Алгоритми"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Художник 2"
+        },
+        "20-hour/Functions": {
+          "name": "Функції"
+        },
+        "20-hour/The Farmer": {
+          "name": "Фермерка"
+        },
+        "20-hour/Conditionals": {
+          "name": "Умови"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Художник 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Написання пісень"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Фермерка 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Абстракції"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Художник 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Естафетне програмування"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Фермерка 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Інтернет"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Художник 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Підведення підсумків"
         },
         "course2/Graph Paper Programming": {
           "name": "Програмування по клітинках"
@@ -786,6 +891,51 @@
         "jigsaw/Jigsaw": {
           "name": "Пазли"
         },
+        "allthethings/Jigsaw": {
+          "name": "Пазли"
+        },
+        "allthethings/Maze": {
+          "name": "Лабіринт"
+        },
+        "allthethings/Artist": {
+          "name": "Художник"
+        },
+        "allthethings/Bee": {
+          "name": "Бджілка"
+        },
+        "allthethings/Farmer": {
+          "name": "Фермер"
+        },
+        "allthethings/Flappy": {
+          "name": "Пурх"
+        },
+        "allthethings/Bounce": {
+          "name": "Арканоід"
+        },
+        "allthethings/Multi": {
+          "name": "Множинний вибір"
+        },
+        "allthethings/Match": {
+          "name": "Відповідність"
+        },
+        "allthethings/Odometer": {
+          "name": "Одометр"
+        },
+        "allthethings/Text Compression": {
+          "name": "Стиснення тексту"
+        },
+        "allthethings/Pixelation": {
+          "name": "Пікселізаціі"
+        },
+        "allthethings/AppLab": {
+          "name": "Програмна лабораторія"
+        },
+        "allthethings/Studio": {
+          "name": "Студія"
+        },
+        "allthethings/Minecraft": {
+          "name": "Майнкрафт"
+        },
         "coursef-2021/lesson-6": {
           "name": "Представляємо Лабораторію спрайтів"
         },
@@ -917,6 +1067,9 @@
         },
         "csd3-2021/lesson-1": {
           "name": "Опитування після курсу Відкриття інформатики"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Процес вирішення проблем"
         },
         "csd1-2021/What is a Computer?": {
           "name": "Що таке комп’ютер?"

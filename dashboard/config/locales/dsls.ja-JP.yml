@@ -7467,3 +7467,84 @@ ja-JP:
           # デジタル証跡（しょうせき）をたどる
 
           ## デジタル証跡（しょうせき）には、どのような情報が含まれていてもOKでしょうか？
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: 青
+        - text: みどり
+        - {}
+        - text: 黄色
+        - correct: true
+        - text: 赤
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: 説明
+      allthethings_external_not_displayed_as_unplugged:
+        content1: 説明
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: どの矢印を選べば、Flurbはお宝をゲットできますか？
+        title: 複数の選択肢
+      ml-club app-choice parent:
+        display_name: あなたのアプリをカスタマイズ
+      ml-intro app lab-book recommender 5-2021:
+        display_name: あなたのアプリをカスタマイズ
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - text: 上の回答のどれでもない

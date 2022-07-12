@@ -2526,3 +2526,79 @@ no-NO:
         - {}
       csd-pre-survey-levelgroup_21_22:
         title: CS Funns Før-Kurs' Studentundersøkelse
+      Choose 2 Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: blå
+        - text: grønn
+        - {}
+        - {}
+        - {}
+        - text: rød
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: beskrivelse her
+      allthethings_external_not_displayed_as_unplugged:
+        content1: beskrivelse her
+      contained_Choose_2_Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Hvilken pil får Flurb til skatten?
+        title: Flervalg
+      test questionless single multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}

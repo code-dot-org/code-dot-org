@@ -220,20 +220,25 @@
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "изпълнява нещо"
+          },
+          "patrol": {
+            "name": "патрул"
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
               "actor": "актьор"
-            }
+            },
+            "name": "патрул"
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
               "actor": "актьор"
-            }
+            },
+            "name": "патрул"
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -241,7 +246,8 @@
             "parameters": {
               "actor": "актьор",
               "speed": "скорост"
-            }
+            },
+            "name": "патрул"
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -249,7 +255,8 @@
             "parameters": {
               "actor": "актьор",
               "speed": "скорост"
-            }
+            },
+            "name": "патрул"
           }
         },
         "Course 4 Play Lab Params 9": {
@@ -482,7 +489,8 @@
               "length": "дължина",
               "repeat": "повтори",
               "sides": "страни"
-            }
+            },
+            "name": "нарисувай въртележка"
           },
           "draw a triangle": {
             "name": "чертае триъгълник",
@@ -604,13 +612,15 @@
             "parameters": {
               "height": "височина",
               "actor": "актьор"
-            }
+            },
+            "description": "функция за скок с параметър за височина и актьор"
           },
           "patrol": {
             "parameters": {
               "actor": "актьор",
               "speed": "скорост"
-            }
+            },
+            "name": "патрул"
           }
         },
         "New Artist Project": {
@@ -634,7 +644,8 @@
               "length": "дължина",
               "repeat": "повтори",
               "sides": "страни"
-            }
+            },
+            "name": "нарисувай въртележка"
           },
           "draw a triangle": {
             "name": "чертае триъгълник",
@@ -668,13 +679,16 @@
             "parameters": {
               "height": "височина",
               "actor": "актьор"
-            }
+            },
+            "description": "функция за скок с параметър за височина и актьор"
           },
           "patrol": {
             "parameters": {
               "actor": "актьор",
               "speed": "скорост"
-            }
+            },
+            "name": "патрул",
+            "description": "патрул функция, която има актьор и параметър за скорост"
           }
         },
         "Robot Doodle": {
@@ -1394,7 +1408,8 @@
               "length": "дължина",
               "repeat": "повтори",
               "sides": "страни"
-            }
+            },
+            "name": "нарисувай въртележка"
           },
           "draw a triangle": {
             "name": "чертае триъгълник",
@@ -1531,7 +1546,8 @@
               "length": "дължина",
               "repeat": "повтори",
               "sides": "страни"
-            }
+            },
+            "name": "нарисувай въртележка"
           },
           "draw a triangle": {
             "name": "чертае триъгълник",
@@ -1580,7 +1596,8 @@
               "length": "дължина",
               "repeat": "повтори",
               "sides": "страни"
-            }
+            },
+            "name": "нарисувай въртележка"
           },
           "draw a triangle": {
             "name": "чертае триъгълник",
@@ -1671,7 +1688,8 @@
               "length": "дължина",
               "repeat": "повтори",
               "sides": "страни"
-            }
+            },
+            "name": "нарисувай въртележка"
           },
           "draw a triangle": {
             "name": "чертае триъгълник",
@@ -1721,7 +1739,8 @@
               "length": "дължина",
               "repeat": "повтори",
               "sides": "страни"
-            }
+            },
+            "name": "нарисувай въртележка"
           },
           "draw a triangle": {
             "name": "чертае триъгълник",
@@ -1770,7 +1789,8 @@
               "length": "дължина",
               "repeat": "повтори",
               "sides": "страни"
-            }
+            },
+            "name": "нарисувай въртележка"
           },
           "draw a triangle": {
             "name": "чертае триъгълник",
@@ -2418,6 +2438,132 @@
         "Standalone_Artist_8": {
           "draw a shape": {
             "name": "нарисувай форма"
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "построй мост"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "построй мост"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "построй мост"
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "построй мост"
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "изчисти път"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "изчисти път"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "изчисти път"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "изчисти път"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "поправи дълга пътека"
+          },
+          "fix short path": {
+            "name": "поправи къса пътека"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "поправи дълга пътека"
+          },
+          "fix short path": {
+            "name": "поправи къса пътека"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "поправи дълга пътека"
+          },
+          "fix short path": {
+            "name": "поправи къса пътека"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "поправи дълга пътека"
+          },
+          "fix short path": {
+            "name": "поправи къса пътека"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "построй къс мост"
+          },
+          "build long bridge": {
+            "name": "построй дълъг мост"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "построй къс мост"
+          },
+          "build long bridge": {
+            "name": "построй дълъг мост"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "построй къс мост"
+          },
+          "build long bridge": {
+            "name": "построй дълъг мост"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "построй къс мост"
+          },
+          "build long bridge": {
+            "name": "построй дълъг мост"
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "чертае квадрат"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "нарисувай форма",
+            "parameters": {
+              "sides": "страни",
+              "length": "дължина"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "функция 1"
+          },
+          "function 2": {
+            "name": "функция 2"
           }
         }
       }

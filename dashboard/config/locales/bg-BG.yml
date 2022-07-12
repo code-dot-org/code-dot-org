@@ -393,7 +393,7 @@ bg:
           успешно. Сега можете да влезете в Code.org с вашия имейл и парола
   nav:
     header:
-      finished_hoc: Аз приключих моя 'Час на Кодирането'
+      finished_hoc: Приключих!
       sign_in_to_save: Впишете се, за да запазите напредъка си
       my_dashboard: Моето табло
       course_catalog: Каталог на курса
@@ -1208,6 +1208,8 @@ bg:
   no_course_access_teacher: Нямате достъп до този курс. Ако смятате, че трябва да
     имате достъп до курса, моля пишете до support@code.org, за да можем да оправим
     ситуацията.
+  no_script_access_student: Нямате достъп до този раздел. Моле питайте вашия учител
+    на кой раздел трябва да бъдете.
   no_script_access_teacher: Нямате достъп до това ниво. Ако смятате, че трябва да
     имате достъп до нивото, моля пишете до support@code.org, за да можем да оправим
     ситуацията.
@@ -1283,7 +1285,7 @@ bg:
         lightbot: Lightbot
         scratch: Scratch
         tynker: Tynker
-        other: 'Друго:'
+        other: Друго
       robotics:
         kodable: Kodable
         lego: LEGO Education
@@ -1291,7 +1293,7 @@ bg:
         ozobot: Ozobot
         sphero: Sphero
         raspberry: Raspberry Pi
-        other: 'Друго:'
+        other: Друго
       workshop_course:
         csp: '"15-" 16 CS принципи'
       email_opt_in:

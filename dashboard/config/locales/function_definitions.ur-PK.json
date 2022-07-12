@@ -1711,6 +1711,18 @@
           "collect": {
             "name": "جمع کریں"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "ایک مربع بنائیں"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "لمبائی"
+            }
+          }
         }
       }
     }

@@ -1040,6 +1040,15 @@ fil:
       gamelab_collectibleBehaviors:
         options:
           BEHAVIOR:
+            new Behavior(spinning_right, []): umiikot pakanan
+            new Behavior(spinning_left, []): umiikot pakaliwa
+            new Behavior(fluttering, []): pumapagaspas
+            new Behavior(jittering, []): nanginginig
+            new Behavior(wobbling, []): gumulong-gulong
+            new Behavior(wandering, []): gumagala
+            new Behavior(patrolling, []): nagpapatrolya
+            new Behavior(moving_west_and_looping, []): gumagalaw sa kanluran at umiikot
+            new Behavior(moving_east_and_looping, []): gumagalaw sa silangan at umiikot
             new Behavior(moving_north_and_looping, []): gumagalaw sa hilaga at umiikot
             new Behavior(moving_south_and_looping, []): gumagalaw sa timog at umiikot
       gamelab_comment:
@@ -1232,6 +1241,7 @@ fil:
             '180': kaliwa
             '270': paitaas
       gamelab_makeSpritesWithSize:
+        text: gumawa ng {NUM} bagong [{SIZE} {COSTUME} mga sprite
         options:
           SIZE:
             '30': maliit
@@ -1313,6 +1323,7 @@ fil:
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): gumagalaw gamit ang mga arrow key
+            new Behavior(driving_with_arrow_keys, []): pagmamaneho gamit ang mga arrow key
             draggable(): pagiging draggable
       gamelab_pointInDirection:
         text: punto {SPRITE} {DIRECTION}
@@ -1450,6 +1461,46 @@ fil:
         text: "{SPRITE} sabihin ang {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}sabihin{TEXT1}sa{NUM}segundo"
+      gamelab_spriteThink:
+        text: "{SPRITE} isipin {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}isipin{TEXT1}for{NUM}segundo"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} isipin {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I am hungry, too."': Nagugutom na rin ako.
+            '"I only want the biggest goat."': Gusto ko lang ang pinakamalaking kambing.
+            '"I''m a green troll."': Isa akong berdeng troll.
+            '"No one will cross my bridge."': Walang tatawid sa tulay ko.
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} isipin {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"Time to make friends with the sheep."': Oras na para makipagkaibigan sa mga tupa.
+            '"She''ll never recognize me now."': Hindi na niya ako makikilala ngayon.
+            '"This costume keeps me warm."': Pinapanatili akong mainit ng kasuotang ito.
+            '"I am actually a wolf."': Sa totoo lang isa akong lobo.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} isipin {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m feeling sleepy."': Inaantok na ako.
+            '"No one could ever beat me."': Walang makakatalo sa akin.
+            '"I''ve done this race before."': Nagawa ko na ang karerang ito dati.
+            '"My feet are bigger than Turtle''s feet."': Mas malaki ang paa ko sa paa ni Pagong.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} isipin {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m so hungry."': Gutom na gutom na ako.
+            '"I''m a visitor in this town."': Ako ay isang bisita sa bayang ito.
+            '"If we share, we''ll all have something to eat. "': Kung magsasalo tayo, lahat tayo ay may makakain.
+            '"I''ll trick everyone into giving me their food."': Lilinlangin ko ang lahat na bigyan ako ng kanilang pagkain.
       gamelab_startAvoiding:
         text: "{SPRITE} nagsisimulang umiwas sa {TARGET}"
       gamelab_startFollowing:
@@ -1997,12 +2048,28 @@ fil:
         text: Ang tiyanak {ANIMATION_NAME} ay nagsisimula sa {BEHAVIOR}
         options:
           BEHAVIOR:
+            '"fluttering"': pumapagaspas
+            '"growing"': lumalaki
+            '"jittering"': nanginginig
+            '"shrinking"': lumiliit
+            '"spinning_left"': umiikot pakaliwa
+            '"spinning_right"': umiikot pakanan
             '"swimming_left_and_right"': lumalangoy
+            '"wandering"': gumagala
+            '"wobbling"': gumulong-gulong
       Poetry_stopBehavior:
         text: huminto ang tiyanak {ANIMATION_NAME} sa {BEHAVIOR}
         options:
           BEHAVIOR:
+            '"fluttering"': pumapagaspas
+            '"growing"': lumalaki
+            '"jittering"': nanginginig
+            '"shrinking"': lumiliit
+            '"spinning_left"': umiikot pakaliwa
+            '"spinning_right"': umiikot pakanan
             '"swimming_left_and_right"': lumalangoy
+            '"wandering"': gumagala
+            '"wobbling"': gumulong-gulong
             '"all"': "--lahat ng ugali--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

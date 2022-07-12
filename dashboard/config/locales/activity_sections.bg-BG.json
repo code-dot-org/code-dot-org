@@ -13,6 +13,9 @@
         "473c0737-e82d-49ec-bffa-5b738ba06438": {
           "progression_name": "Продължавай да танцуваш!"
         },
+        "d6973268-2630-4056-8169-81c3d5a34041": {
+          "progression_name": "Къде Отидоха Те?"
+        },
         "b2879d66-a5c6-4127-afe0-c5df430b8f30": {
           "name": "Следващи стъпки"
         },
@@ -187,7 +190,7 @@
           ]
         },
         "c628ba28-35c2-4ded-a19d-74079377b309": {
-          "name": "Ледена епоха: игрална лаборатория"
+          "name": "Ледена епоха Play Lab"
         },
         "548dc37b-f338-4a52-a77e-7380794c64f2": {
           "tips": [
@@ -333,6 +336,9 @@
             null
           ]
         },
+        "87dc9b80-1d14-4b71-b281-d2c67bba67a4": {
+          "progression_name": "Разбиване на Цезар Код"
+        },
         "761cdcc6-546c-4a87-8f96-8555cdf01e99": {
           "progression_name": "Техника: Честотен Анализ"
         },
@@ -430,6 +436,9 @@
           "name": "Въведение",
           "progression_name": "Appl Lab Въведение - Видео"
         },
+        "11f7be58-02e1-4667-84e4-6310924c189d": {
+          "progression_name": "Задаване на Свойства"
+        },
         "5b40c5f2-78be-4c56-95b7-4da5703e2514": {
           "tips": [
             null
@@ -497,6 +506,10 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Въведение"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Епидемия",
+          "progression_name": "Епидемия"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
           "progression_name": "Добре Дошли в Града на Чудовищата"
@@ -590,6 +603,9 @@
         "ef4b8eed-a408-4dfa-919f-b5575e3cdea5": {
           "progression_name": "Продължавай да танцуваш!"
         },
+        "d3123d53-f986-4095-a3d7-b9db9ea32c36": {
+          "progression_name": "Къде Отидоха Те?"
+        },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
           "name": "Следващи стъпки"
         },
@@ -622,6 +638,7 @@
           "progression_name": "ИТ Машинно Самоубучение - Видео"
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
+          "name": "ИТ За Океани",
           "tips": [
             null
           ]
@@ -748,6 +765,9 @@
         "7cde2f9a-d424-43de-bb23-9301a3467204": {
           "progression_name": "Анимирайте Вашата Сцена"
         },
+        "4077416b-c478-4152-89f5-488e727c32fb": {
+          "progression_name": "Създай Своя Собствена Анимация"
+        },
         "841176fd-881b-49ca-81da-f09c83783aab": {
           "progression_name": "Направи Преположение"
         },
@@ -763,6 +783,9 @@
         "db02c79f-5245-42bc-aab9-460b3e732b45": {
           "progression_name": "Въвеждане от Клавиатурата"
         },
+        "ec298552-2cc0-4cda-a352-cfc0a6a28298": {
+          "progression_name": "Следвай Мишката"
+        },
         "98100ce0-2d79-4e10-816b-20a518c80030": {
           "progression_name": "Създаване на Интерактивна Картичка"
         },
@@ -772,6 +795,9 @@
         },
         "128361aa-1832-4581-a686-26ec8d72bc30": {
           "progression_name": "Скорост"
+        },
+        "c67c09eb-f947-4b9e-93df-740612cef3dc": {
+          "progression_name": "Side Scroller"
         },
         "75009fe6-06f3-4d0a-a68c-ef0f8c12e0e2": {
           "progression_name": "Сблъсъци в Игри"
@@ -788,6 +814,9 @@
         "0f38f023-d475-4389-bcce-150972b6e1b7": {
           "progression_name": "Планирайте Вашия Проект"
         },
+        "464831b9-b4dd-4ced-a50a-6b4204d3c843": {
+          "progression_name": "Анимации с Много Кадри"
+        },
         "5852ebde-c874-4120-8211-aa786ef26ea0": {
           "name": "Предпазител на Торти",
           "progression_name": "Предпазител на Торти"
@@ -795,9 +824,21 @@
         "d6752180-35a9-4d1f-b5f6-234cea717d67": {
           "progression_name": "Проектирай Играта Си"
         },
+        "d004ae7c-e575-44e3-903d-e65e7d543e9b": {
+          "progression_name": "Проект - Фон и Променливи"
+        },
+        "cb01dc48-0618-4d29-827e-26b3f0de9989": {
+          "progression_name": "Проект - Спрайтове и Взаимодействия"
+        },
         "d6ed872d-76c1-4f17-a785-1279a9ad0a59": {
           "name": "Отражение",
           "progression_name": "Отражение"
+        },
+        "0e2f3c45-54d9-4caa-8d46-34bd2164efe5": {
+          "progression_name": "Задаване на Свойства"
+        },
+        "dd2c6b75-07f5-41f6-b791-7d5fd972a30e": {
+          "progression_name": "Събития и Свойства"
         },
         "db8d9f01-122e-4e38-8b20-7ad2414b1086": {
           "name": "Създаване на Приложение",
@@ -809,6 +850,9 @@
         },
         "feb6a397-d810-4e80-ae9c-8edc75b7dcef": {
           "progression_name": "Получаване на Свойства"
+        },
+        "ef14f458-1a86-46f7-8dfe-3c54b8c7c610": {
+          "progression_name": "Плъзгачи"
         },
         "56a94d0e-564a-472e-9008-1438acf4966d": {
           "progression_name": "Промяна"
@@ -869,8 +913,14 @@
         "41e23ff2-c8b9-4a14-9f97-12d3740061a2": {
           "progression_name": "Играене с Ноти"
         },
+        "8e9f4322-d39c-41d9-b127-e6d662e25e6b": {
+          "progression_name": "Музикален Масив"
+        },
         "9888aaae-b04d-49fe-a398-d76af49b1472": {
           "progression_name": "Създаване на Песни"
+        },
+        "8963dfc5-df5f-4182-9776-c6e9c6b4340b": {
+          "progression_name": "Програми, които се Повтарят"
         },
         "bca84870-d563-4903-b1d9-51253cbbfc90": {
           "progression_name": "За циклите"
@@ -932,6 +982,10 @@
           "name": "Визуализиране на Данни",
           "progression_name": "Визуализиране на Данни"
         },
+        "9608412e-93a7-49c2-bb11-95906561502f": {
+          "name": "Анкета за Торта",
+          "progression_name": "Анкета за Торта"
+        },
         "5707e98f-8fcf-43b9-8354-de0f584c610f": {
           "name": "Отражение",
           "progression_name": "Отражение"
@@ -942,6 +996,10 @@
         },
         "c94f593e-4b76-4a2c-9e24-5b06f8c91a47": {
           "progression_name": "Примерни Типове Приложения"
+        },
+        "75c655ea-684c-41b8-a9a6-5004023d49a7": {
+          "name": "Демонстрационни Приложения",
+          "progression_name": "Демонстрационни Приложения"
         },
         "dad0e2b6-695d-4d58-bf2b-0c88f27f06ac": {
           "progression_name": "Създай Екран"
@@ -1041,6 +1099,9 @@
         },
         "ee50cbe2-2edd-4dd8-8b4c-21840459fd4b": {
           "progression_name": "Упражнение"
+        },
+        "647fb9ef-1f2f-4552-8785-1a3b2a5850cb": {
+          "progression_name": "Програмиране с Рей и BB-8"
         },
         "017790f4-dcf6-4771-8c24-ed20a07b6474": {
           "progression_name": "Упражнение"
@@ -1807,8 +1868,8 @@
           "progression_name": "Упражнение"
         },
         "7292a6ea-9eb1-4775-a680-ad1755ee4e59": {
-          "name": "Допълнителни екстри",
-          "progression_name": "Допълнителни екстри"
+          "name": "Екстри към Урока",
+          "progression_name": "Екстри към Урока"
         },
         "332b0ef0-2ab4-45f4-9894-cf6abe09e416": {
           "progression_name": "Упражнение"
@@ -1821,6 +1882,9 @@
         },
         "3e30f7ff-21c6-4335-9ad3-0968ac7f5c57": {
           "progression_name": "Предсказване"
+        },
+        "e0d3988c-bdb0-45b1-9512-354e87118d64": {
+          "progression_name": "Програмиране с Рей и BB-8"
         },
         "e49927e9-916d-461f-80e8-af55914d91cd": {
           "progression_name": "Упражнение"
@@ -1897,6 +1961,10 @@
         "a4dd80f8-6d8c-4475-af2e-762cc3b7c8ed": {
           "progression_name": "Свободна игра"
         },
+        "a7acf14f-0f67-4412-aa8b-f0167bc5a4e9": {
+          "name": "Проект",
+          "progression_name": "Проект"
+        },
         "68f4881c-e3a6-4fb1-bb42-6bfce254e6b9": {
           "name": "Примерни Програми",
           "progression_name": "Примерни Програми"
@@ -1946,6 +2014,9 @@
         "40b1875f-642b-41c8-b209-a80034c39f59": {
           "progression_name": "Анимирайте Вашата Сцена"
         },
+        "91f98c4f-fc3c-4c0a-bb2e-af9d7a1f9270": {
+          "progression_name": "Създай Своя Собствена Анимация"
+        },
         "3900daaf-015e-485c-84f9-bf0ec3fc3901": {
           "progression_name": "Направи Преположение"
         },
@@ -1974,6 +2045,9 @@
         "1c09bf04-72d5-4d17-8e27-cbc096099cb0": {
           "progression_name": "Скорост"
         },
+        "d763a5fd-9781-4a36-89f5-6afd6bd25929": {
+          "progression_name": "Side Scroller"
+        },
         "35b3d9b8-19bd-438a-bc1f-d7fe6f49aa33": {
           "progression_name": "Сблъсъци в Игри"
         },
@@ -1989,6 +2063,9 @@
         "58eb3ec4-5481-4ed1-b5ca-42c555e2c823": {
           "progression_name": "Планирайте Вашия Проект"
         },
+        "d629a7bc-1321-4196-a016-a953dc0f8201": {
+          "progression_name": "Анимации с Много Кадри"
+        },
         "d134b6a0-9d53-4050-9ed3-bdb03cecaa48": {
           "name": "Предпазител на Торти",
           "progression_name": "Предпазител на Торти"
@@ -1996,9 +2073,21 @@
         "08623cca-a2db-4167-8536-264afced0f82": {
           "progression_name": "Проектирай Играта Си"
         },
+        "1958e1d6-72f8-4f47-8ce6-70ec51ac3004": {
+          "progression_name": "Проект - Фон и Променливи"
+        },
+        "2f3428b4-8a68-4e82-b659-b6b2653ddf8b": {
+          "progression_name": "Проект - Спрайтове и Взаимодействия"
+        },
         "a93b675e-fb6a-430e-86e6-ffbe77fea72e": {
           "name": "Отражение",
           "progression_name": "Отражение"
+        },
+        "dc82808d-bac6-4e90-9047-694410f3090c": {
+          "progression_name": "Задаване на Свойства"
+        },
+        "9dda00cc-e51b-48f2-b2a2-d38f5175571b": {
+          "progression_name": "Събития и Свойства"
         },
         "e63385fd-2aa7-4253-9322-e5872437dac3": {
           "name": "Създаване на Приложение",
@@ -2010,6 +2099,9 @@
         },
         "3f1a9876-045e-401c-af27-2274e6611880": {
           "progression_name": "Получаване на Свойства"
+        },
+        "39d6184a-862d-45ef-a694-56f96bef7722": {
+          "progression_name": "Плъзгачи"
         },
         "c1741e76-fbd0-48fa-85d3-50beacd5a130": {
           "progression_name": "Промяна"
@@ -2067,8 +2159,14 @@
         "6326ded1-58cf-420b-8ac4-73634dd4a468": {
           "progression_name": "Пускане на Ноти"
         },
+        "b1c8622f-8afd-43b0-a703-4c71555e6fc0": {
+          "progression_name": "Музикален Масив"
+        },
         "da446a77-0458-4c4a-a4dc-f16345218f0f": {
           "progression_name": "Създаване на Песни"
+        },
+        "08c729fe-47a9-4501-ae1b-b90607c230d4": {
+          "progression_name": "Програми, които се Повтарят"
         },
         "d6edc1c1-8e4b-47d8-821a-718c5007dfc6": {
           "progression_name": "За циклите"
@@ -2109,6 +2207,10 @@
         },
         "278a92f7-2ba4-4bb6-9cbd-0b1a1b1c7a51": {
           "progression_name": "Примерни Типове Приложения"
+        },
+        "b5785efd-9e8a-48d7-a5a4-8af4fb5cc2b1": {
+          "name": "Демонстрационни Приложения",
+          "progression_name": "Демонстрационни Приложения"
         },
         "440973a7-6351-45b5-938f-17845fbd92c6": {
           "progression_name": "Създай Екран"
@@ -2160,6 +2262,10 @@
         "45e83139-e1a4-46af-96d6-493834c94076": {
           "name": "Визуализиране на Данни",
           "progression_name": "Визуализиране на Данни"
+        },
+        "50c39425-3842-4145-a778-7b2c59de2164": {
+          "name": "Анкета за Торта",
+          "progression_name": "Анкета за Торта"
         },
         "40a3f261-c8e8-4724-83fd-10c3f539083f": {
           "name": "Отражение",
@@ -2229,6 +2335,20 @@
           "name": "Започнете планирането на Вашия проект",
           "progression_name": "Започнете планирането на Вашия проект"
         },
+        "3e46807c-bd15-43b1-937f-defdb5fd6c35": {
+          "progression_name": "Курс F: Проект Художник"
+        },
+        "e4e7b917-90a1-41c2-80d6-8986855a99d3": {
+          "name": "Курс F: Play Lab Проект",
+          "progression_name": "Курс F: Play Lab Проект"
+        },
+        "e52dc608-4bbb-4074-95ea-73a135d6c7a3": {
+          "progression_name": "Курс F: Проект Художник - Преговор"
+        },
+        "7097cfbe-a3c3-433d-9481-b9850fc6fb7f": {
+          "name": "Курс F: Play Lab Проект - Преговор",
+          "progression_name": "Курс F: Play Lab Проект - Преговор"
+        },
         "e6e6a6fe-4dbd-4a8d-a42c-e9d7df871b50": {
           "name": "Пригответе се за вашата презентация",
           "progression_name": "Пригответе се за вашата презентация"
@@ -2240,6 +2360,9 @@
         "4db4c162-d334-4c10-99d1-cdd9aa2bdbb8": {
           "name": "Започнете планирането на Вашия проект",
           "progression_name": "Започнете планирането на Вашия проект"
+        },
+        "d3394e13-b9ef-4395-8873-711308f134d2": {
+          "progression_name": "Курс Е: Play Lab Проект"
         },
         "4d8a8f77-c0d4-42d9-ab75-9273ed99562c": {
           "name": "Пригответе се за вашата презентация",
@@ -2255,6 +2378,20 @@
         "ed74084a-54be-443d-a9c8-d998da62ce9a": {
           "name": "Започнете планирането на Вашия проект",
           "progression_name": "Започнете планирането на Вашия проект"
+        },
+        "aaecdd68-26fd-47df-a470-f8519163ca38": {
+          "progression_name": "Курс F: Проект Художник"
+        },
+        "24c9e448-a709-4d7f-9c00-8ec34ca7fd86": {
+          "name": "Курс F: Play Lab Проект",
+          "progression_name": "Курс F: Play Lab Проект"
+        },
+        "c1cc4a9a-7944-444f-8286-a57955c768b8": {
+          "progression_name": "Курс F: Проект Художник - Преговор"
+        },
+        "2423f0a7-e415-4f4c-83d0-a6ff79c67ff3": {
+          "name": "Курс F: Play Lab Проект - Преговор",
+          "progression_name": "Курс F: Play Lab Проект - Преговор"
         },
         "5ccce1a2-deb4-444d-ae0b-2aab8d25f5d9": {
           "name": "Пригответе се за вашата презентация",
@@ -2326,6 +2463,9 @@
           "name": "Свободна игра",
           "progression_name": "Свободна игра"
         },
+        "fbea8a90-b621-4189-8f2f-5b5338d7ae09": {
+          "progression_name": "Създай Своя Собствена Анимация"
+        },
         "76616c94-01ef-48fd-9d26-e0e33a34cd1f": {
           "progression_name": "Предизвикателства"
         },
@@ -2356,6 +2496,9 @@
           "name": "Свободна игра",
           "progression_name": "Свободна игра"
         },
+        "ac99a65f-1266-4232-bf0f-2bff2b585158": {
+          "progression_name": "Следвай Мишката"
+        },
         "af0c5a51-2804-4dd1-996f-de522aa7b283": {
           "name": "Свободна игра",
           "progression_name": "Свободна игра"
@@ -2366,6 +2509,9 @@
         },
         "4b4b246a-5a4e-40b0-9a98-f5bcd0b96d0c": {
           "progression_name": "Скорост"
+        },
+        "1cbdcce5-22a2-48dd-a2cd-28086ca9579b": {
+          "progression_name": "Side Scroller"
         },
         "3c2057a7-5065-43b6-9b53-bef50c2f9f3c": {
           "name": "Свободна игра",
@@ -2402,6 +2548,9 @@
         "d3c8806b-af64-4d22-bf9c-bb0833e8090a": {
           "progression_name": "Планирайте Вашия Проект"
         },
+        "875e0e8b-955a-4e86-b112-ec188da3f859": {
+          "progression_name": "Анимации с Много Кадри"
+        },
         "cafb2d84-1d56-4201-a96c-e7933aeaf73a": {
           "name": "Предпазител на Торти",
           "progression_name": "Предпазител на Торти"
@@ -2409,9 +2558,21 @@
         "f21f60a0-e07b-48b7-a2e9-78a0e2dd183d": {
           "progression_name": "Проектирай Играта Си"
         },
+        "3f841276-73d0-468e-9e93-873549d759db": {
+          "progression_name": "Проект - Фон и Променливи"
+        },
+        "48b320c6-951a-48ac-b70c-7adbd3e7581f": {
+          "progression_name": "Проект - Спрайтове и Взаимодействия"
+        },
         "4a3c9ed6-af53-4747-9298-b104980a8961": {
           "name": "Отражение",
           "progression_name": "Отражение"
+        },
+        "253d14d2-023c-4055-b6d8-180cd3312ddf": {
+          "progression_name": "Задаване на Свойства"
+        },
+        "a95228f9-b9fa-4c3e-beb6-aae6e6b1b82a": {
+          "progression_name": "Събития и Свойства"
         },
         "44e3ffdb-ef64-47a5-bdd5-1520778f694e": {
           "name": "Създаване на Приложение",
@@ -2423,6 +2584,9 @@
         },
         "cf9a02d2-bb5c-4ed7-be93-a8e40ec9eadd": {
           "progression_name": "Получаване на Свойства"
+        },
+        "e782fd7d-062e-4a02-b90b-161b1f00a05d": {
+          "progression_name": "Плъзгачи"
         },
         "acb37390-01f3-460c-a88c-24c6379925a1": {
           "progression_name": "Промяна"
@@ -2481,9 +2645,15 @@
         "8afceb9b-423c-4633-86cc-e4ed07622bb7": {
           "progression_name": "Играене с Ноти"
         },
+        "5ea7b453-c6f6-4e0b-a1a0-d1314f22de84": {
+          "progression_name": "Музикален Масив"
+        },
         "95ba2f08-53df-4209-ae9a-1600e23869d3": {
           "name": "Създаване на Песни",
           "progression_name": "Създаване на Песни"
+        },
+        "9b5478a3-2c7f-48c6-a38d-f7f40a2524ea": {
+          "progression_name": "Програми, които се Повтарят"
         },
         "ffe0d2ab-7af9-4415-8af0-48c88e6a0693": {
           "progression_name": "За циклите"
@@ -2611,6 +2781,10 @@
         "6cbd55ba-116e-493c-8bea-b71096dd0a05": {
           "progression_name": "Общ преглед"
         },
+        "6ac2bf23-0b34-4e13-8023-c8c436048d54": {
+          "name": "Анкета за Торта",
+          "progression_name": "Анкета за Торта"
+        },
         "45dd29f0-3c44-4c1c-b881-ec8b1dc8e1cf": {
           "name": "Преглед на Нивото",
           "progression_name": "Преглед на Нивото"
@@ -2628,6 +2802,10 @@
         },
         "7e52b764-7b7d-47c6-9291-8a61a9f5cd22": {
           "progression_name": "Примерни Типове Приложения"
+        },
+        "858107cb-9f3a-4a39-a845-057b8c45b744": {
+          "name": "Демонстрационни Приложения",
+          "progression_name": "Демонстрационни Приложения"
         },
         "9b0828bc-ccf8-466b-b351-5d9b0fcb4d9a": {
           "progression_name": "Създай Екран"
@@ -2677,7 +2855,8 @@
           "name": "Отражение"
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
-          "name": "Въведение"
+          "name": "Въведение",
+          "description": "В този курс ние ще се научим как да програмираме. Код е използван за създаване на приложения, игри, уеб страници, симулации, и всякакви видове неща, които използваме на компютър."
         },
         "bb2b2c3c-57d7-4ad1-aa3c-4f5f3fd37205": {
           "tips": [
@@ -2685,13 +2864,20 @@
           ]
         },
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
-          "name": "Въведение в Sprite Lab"
+          "name": "Въведение в Sprite Lab",
+          "progression_name": "Видео: Представяне на Sprite Lab"
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
           "tips": [
             null
           ],
           "progression_name": "Изследване: Примерни Приложения"
+        },
+        "f321b39c-8051-4fc9-9e40-24f25216f88c": {
+          "name": "Споделете Навън"
+        },
+        "efa336e3-b101-4300-9bce-45771a6e114d": {
+          "name": "Предложете Подобрение"
         },
         "1fa1e4c0-3147-4057-8131-07b03520b95e": {
           "name": "Отражение"
@@ -2727,6 +2913,9 @@
         "a594c37e-142d-44f1-93c9-e49ecce1e716": {
           "name": "Отражение"
         },
+        "18cec2c2-3023-4456-b199-32f93d8b5287": {
+          "description": "**Направете това:** Преговорете или въведете думата **алгоритъм**: поредица от стъпки, за да извършиш дадена цел."
+        },
         "9c5a2a2f-7a92-4928-a7c4-89d29765cb01": {
           "tips": [
             null
@@ -2735,6 +2924,9 @@
         "34bd73dd-0031-4051-86a2-8f6a86735b34": {
           "name": "Спрайтове в Действие",
           "progression_name": "Предсказание"
+        },
+        "275316f1-8a17-411e-881a-0841ede9cd01": {
+          "description": "#### Видео: Спрайтове в Действие (3 мин)\n\n**Направете това:** Пуснете видеото, \"Спрайтове в Действие\""
         },
         "e242a5f9-7c5a-4b76-b4cd-2ebfde711630": {
           "progression_name": "Изграждане на Умения"
@@ -2831,7 +3023,8 @@
         "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Мини-Проект: Програми за Вход от Потребител"
         },
         "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3": {
           "name": "Въведение"
@@ -2930,7 +3123,7 @@
           "progression_name": "Упражнение"
         },
         "7a256684-5f37-4780-b2d7-a75a079dfc95": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "05cdc09c-2fde-45f0-ba51-06b6dc94b8a3": {
           "name": "Отражение"
@@ -2948,7 +3141,7 @@
           "progression_name": "Свободна игра"
         },
         "6ea6e198-fa99-46cb-a234-0f2b60eaff4d": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "936c3852-feab-48df-824d-8b67ae8e9f90": {
           "tips": [
@@ -2972,6 +3165,10 @@
         },
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
           "name": "Въведение"
+        },
+        "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
+          "name": "Епидемия",
+          "progression_name": "Епидемия"
         },
         "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
           "progression_name": "Добре Дошли в Града на Чудовищата"
@@ -2997,6 +3194,7 @@
           "name": "Натрупайте Вълнение!"
         },
         "708bfaf4-4547-4c24-87d4-3822f97185b5": {
+          "name": "ИТ За Океани",
           "tips": [
             null
           ]
@@ -3125,7 +3323,7 @@
           "progression_name": "Упражнение"
         },
         "59a20536-707e-4328-88ab-71b1c533cd37": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "6a3d0163-b925-4e7a-933a-93f7d6432233": {
           "tips": [
@@ -3190,8 +3388,14 @@
         "6367a0d2-714f-4845-ab8f-2a350d75a4a9": {
           "name": "Въведение"
         },
+        "fe653971-9c18-44ee-adbc-727e8978b387": {
+          "progression_name": "Видео: Събирача"
+        },
         "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91": {
           "progression_name": "Изграждане на Умения"
+        },
+        "9bffbabf-f624-49e2-b54b-52317b420600": {
+          "progression_name": "Видео: Използвайки Блока Повтаряй"
         },
         "c96009cd-a4d7-491a-9ce5-433a04f9fd08": {
           "progression_name": "Изграждане на Умения"
@@ -3203,7 +3407,7 @@
           "progression_name": "Упражнение"
         },
         "eedc7420-83ed-420a-8bfe-db3e70719c14": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "b4e46590-0e84-4574-9230-c8fb9e768647": {
           "name": "Отражение"
@@ -3232,7 +3436,7 @@
           "progression_name": "Свободна игра"
         },
         "6c661991-bf9d-4271-a318-5878b3ef438c": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "4ff7f892-7990-4917-9a54-92ad7d8c2335": {
           "name": "Отражение"
@@ -3259,6 +3463,9 @@
             null
           ]
         },
+        "dd9fba95-8daa-47d3-8c05-3429f3f25b77": {
+          "progression_name": "Видео: Въведение в Play Lab"
+        },
         "40e7d1f1-3b7e-4a2f-abd8-43d076a34702": {
           "progression_name": "Свободна игра"
         },
@@ -3269,19 +3476,27 @@
           "progression_name": "Свободна игра"
         },
         "9e0be8b0-1cf0-479e-8b0a-e8bec10e796a": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "f7fafab8-5c1c-473a-901b-893eb23c491b": {
           "name": "Отражение"
         },
         "eeaa078b-cc45-4a32-9299-6fbb4967c502": {
-          "name": "Преглед"
+          "name": "Преглед",
+          "progression_name": "Проект"
+        },
+        "e69a4dc0-3f5e-4ddc-af82-12875c7cd32c": {
+          "progression_name": "Проект"
         },
         "3ee111dc-4361-4c19-a350-9690c819f49a": {
           "name": "Планиране",
           "tips": [
             null
           ]
+        },
+        "8156ceb4-111d-46a8-b3e6-60c27f4cd2d8": {
+          "name": "Проект",
+          "progression_name": "Проект"
         },
         "ec336597-2c69-4bfa-b542-abe5ccf06d5c": {
           "tips": [
@@ -3360,7 +3575,7 @@
           "progression_name": "Упражнение"
         },
         "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "3719811c-4fc2-4da5-94c7-989c91ef7d1e": {
           "tips": [
@@ -3372,6 +3587,9 @@
         },
         "2ded9602-0160-439c-8830-204047d30796": {
           "name": "Въведение"
+        },
+        "71cf3779-677d-4123-8feb-f4c503c32c3e": {
+          "name": "Програмиране с Рей и BB-8"
         },
         "c32e2a10-753e-4e64-b8b8-82d3f4f1a09c": {
           "progression_name": "Изграждане на Умения"
@@ -3404,6 +3622,9 @@
         "595fbc1f-baf6-446c-97dd-c89fa67a6baf": {
           "progression_name": "Изграждане на Умения"
         },
+        "c559cd76-a16e-4361-97c0-f4f4fcdb92b6": {
+          "progression_name": "Видео: Ледена Епоха Цикли"
+        },
         "c654e7af-7a96-4f1a-af67-5ee47829f1de": {
           "progression_name": "Изграждане на Умения"
         },
@@ -3429,8 +3650,14 @@
             null
           ]
         },
+        "74314f07-5f4d-4cd4-8d82-8208d5ce529e": {
+          "progression_name": "Видео: Събирача"
+        },
         "aa4a5c66-dcf9-40c9-9200-fa9cac74b945": {
           "progression_name": "Изграждане на Умения"
+        },
+        "801526d2-4615-4e46-90c1-5e3c08dfe223": {
+          "progression_name": "Видео: Използвайки Блока Повтаряй"
         },
         "88d2b3e5-c082-46bc-8aad-915f42e9a2f1": {
           "progression_name": "Изграждане на Умения"
@@ -3442,7 +3669,7 @@
           "progression_name": "Упражнение"
         },
         "5580045e-132a-4c17-8c3f-522b7f01f442": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "a79a0dff-fe81-486d-9961-8198b65bdb8c": {
           "name": "Отражение"
@@ -3469,7 +3696,7 @@
           "progression_name": "Свободна игра"
         },
         "cfcb405b-99fc-4686-bd02-4e37b3f5c337": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "75843546-1fa3-4171-b034-3c14d8d9d5a4": {
           "name": "Отражение"
@@ -3500,6 +3727,9 @@
             null
           ]
         },
+        "c37ca368-ea56-4b4d-a06c-1d2b94516bf8": {
+          "progression_name": "Видео: Въведение в Play Lab"
+        },
         "4221ebcd-383b-44bf-a876-41e658bd8460": {
           "progression_name": "Свободна игра"
         },
@@ -3510,19 +3740,27 @@
           "progression_name": "Мини-проект: Хорхе Кучето"
         },
         "40ddc694-3a85-4874-b3ad-71810e6a0474": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "bae8edf5-1fe0-4f2b-ae79-08f18b2c3001": {
           "name": "Отражение"
         },
         "4ae60932-ccb3-411c-bfb4-bc9e52149b27": {
-          "name": "Преглед"
+          "name": "Преглед",
+          "progression_name": "Проект"
+        },
+        "d07826c3-fe5d-4ffa-a4ff-6bd799a62342": {
+          "progression_name": "Проект"
         },
         "76119a2d-a3f8-4c17-b38a-c0194431de25": {
           "name": "Планиране",
           "tips": [
             null
           ]
+        },
+        "0ab5b62b-a464-4801-a963-d23d293ea5ff": {
+          "name": "Проект",
+          "progression_name": "Проект"
         },
         "16e34527-4efe-46f1-970b-f365858958a9": {
           "tips": [
@@ -3557,6 +3795,9 @@
             null
           ]
         },
+        "1141cba9-b65b-47c7-ac7d-59d2f06b5318": {
+          "progression_name": "Видео: Въведение в Лабиринт - Програмиране с Блокове "
+        },
         "1ebd42df-a302-418a-be1e-6bbca930cedf": {
           "progression_name": "Изграждане на Умения"
         },
@@ -3573,7 +3814,7 @@
           "progression_name": "Упражнение"
         },
         "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "1108a4f2-f4c2-48ca-be06-124b1270dfc5": {
           "name": "Отражение"
@@ -3594,13 +3835,16 @@
           "progression_name": "Упражнение"
         },
         "12488a0c-dc91-4ea4-bdc7-28e27145f721": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "13cf61a7-7e92-40c5-ba55-c4fa27c516a7": {
           "name": "Отражение"
         },
         "c1c33567-d81d-49d9-a399-e0ba461f0165": {
           "name": "Въведение"
+        },
+        "1cecd624-a69a-4e47-9a4b-066f9b8ff31d": {
+          "progression_name": "Видео: Събирача"
         },
         "e79bc3de-623c-4238-bdd7-6a6128f79ff8": {
           "progression_name": "Изграждане на Умения"
@@ -3618,7 +3862,7 @@
           "progression_name": "Упражнение"
         },
         "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "02bdc7bd-ae6d-426d-8e13-7f804e2292d4": {
           "name": "Отражение"
@@ -3642,7 +3886,7 @@
           "progression_name": "Предсказание"
         },
         "8d556f84-689c-4046-bd40-a955e56ef116": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "e7143536-5b4e-4594-b2ff-707b87e128c3": {
           "name": "Отражение"
@@ -3683,7 +3927,7 @@
           "progression_name": "Упражнение"
         },
         "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "b8bea90c-e431-4f96-846f-733476b53374": {
           "name": "Отражение"
@@ -3704,7 +3948,7 @@
           "progression_name": "Предсказание"
         },
         "f5cc9272-be27-471b-9cdd-f56920c56a34": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "809e449a-e392-48c2-9b9f-f53ce1d06366": {
           "name": "Отражение"
@@ -3754,6 +3998,9 @@
         "6cc5d299-00fd-477a-a654-60dc83031733": {
           "name": "Въведение"
         },
+        "64988ef3-1287-4486-9d41-cd475637575b": {
+          "progression_name": "Видео: Програмирай Своя Flappy Игра"
+        },
         "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
           "progression_name": "Изграждане на Умения"
         },
@@ -3776,6 +4023,12 @@
             null
           ]
         },
+        "e8c36f82-146f-40bd-a83c-0f0d9fac33d0": {
+          "progression_name": "Видео: Въведение в Play Lab"
+        },
+        "55ade85d-fedf-4c9d-9046-4d1e6d813638": {
+          "progression_name": "Изграждане на Умения"
+        },
         "a0c869e7-3fa2-4bec-8fa4-56daf0261d2d": {
           "progression_name": "Мини-проект: Игра на Гоненица"
         },
@@ -3783,7 +4036,7 @@
           "progression_name": "Свободна игра"
         },
         "9f2441ae-b524-455b-b43b-8c01d9458d0d": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "27d0103f-b003-4668-bab3-46e2517d375f": {
           "name": "Отражение"
@@ -3830,6 +4083,9 @@
         },
         "1c65a4a2-b069-4b30-b733-a80c5081f8e3": {
           "progression_name": "Изследване: Примерен Проект"
+        },
+        "8bc8bad1-8150-46ce-bf97-0d368dafd6ef": {
+          "progression_name": "Проект"
         },
         "2a466981-732c-4b6b-82da-7a5552e04294": {
           "name": "Въведение"
@@ -3902,6 +4158,9 @@
         "9d0e1d83-61ee-4d81-8524-8423a2ddc53f": {
           "name": "Въведение"
         },
+        "3fea7621-ed7a-4f12-852d-ccc7768ce6db": {
+          "progression_name": "Изграждане на Умения"
+        },
         "57c05fc2-b193-48bc-ac4e-a6ad469f6abb": {
           "progression_name": "Свободна игра"
         },
@@ -3965,7 +4224,7 @@
           "progression_name": "Свободна игра"
         },
         "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "a450ad93-b5c8-492e-98bc-84a719f014e2": {
           "name": "Отражение"
@@ -3981,6 +4240,9 @@
         },
         "dad54c78-6c91-4ba8-bb15-eff5861db842": {
           "progression_name": "Изграждане на Умения"
+        },
+        "4c88ec45-b2cb-4b4d-88de-2d676d507722": {
+          "progression_name": "Видео: Използвайки Блока Повтаряй"
         },
         "1d8def71-6e6f-417d-bf76-bf420f509e2b": {
           "progression_name": "Изграждане на Умения"
@@ -4039,7 +4301,7 @@
           "progression_name": "Предсказание"
         },
         "725a7d9a-35a3-483e-a83b-f88bf0033095": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "b014e946-ff8d-4740-9c42-51c8aa635252": {
           "name": "Отражение"
@@ -4097,7 +4359,7 @@
           "progression_name": "Упражнение"
         },
         "9326c58a-39b6-4f40-a2ba-5c19267c2a3f": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "fd68c153-b4d6-4729-a742-09f9ee9c25b1": {
           "name": "Отражение"
@@ -4223,13 +4485,16 @@
           "progression_name": "Упражнение"
         },
         "509f1df0-4e9b-454e-ae25-a6380f29ab57": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "0406b536-ef27-4e66-aebd-6163d05bcc36": {
           "name": "Отражение"
         },
         "b26f7849-9b0a-4cb8-a4c1-27ee2eaf3b08": {
           "name": "Въведение"
+        },
+        "ea56a346-7c58-4d03-a5bc-aa4021627e22": {
+          "progression_name": "Видео: Събирача"
         },
         "0474e6b4-d8ed-450d-a6ac-49d35b6d8872": {
           "progression_name": "Изграждане на Умения"
@@ -4247,7 +4512,7 @@
           "progression_name": "Упражнение"
         },
         "d14ea8ad-6eb8-4142-ad1c-a0f1d7024948": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "c1db98cf-ca82-4092-a167-fc450bf6fd0f": {
           "name": "Отражение"
@@ -4271,7 +4536,7 @@
           "progression_name": "Предсказание"
         },
         "35e7e7ca-ecb5-42bb-b3ca-5251508d3e89": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "6e2ecb9e-09e6-4af0-b1b4-7b704334ba6c": {
           "name": "Отражение"
@@ -4286,6 +4551,9 @@
           "tips": [
             null
           ]
+        },
+        "af6b778e-d5bf-4e72-bc11-ac8f839bf656": {
+          "progression_name": "Видео: Представяне на Sprite Lab"
         },
         "cc4cf469-32ea-4a00-9080-7726f48f08c6": {
           "progression_name": "Предсказание"
@@ -4328,6 +4596,9 @@
         "bc9a48f5-47d1-4044-89fc-a38283b796e2": {
           "name": "Спрайтове в Действие",
           "progression_name": "Предсказание"
+        },
+        "456f3d6e-f3ff-4217-9ff9-891d66f8f18f": {
+          "description": "#### Видео: Спрайтове в Действие (3 мин)\n\n**Направете това:** Пуснете видеото, \"Спрайтове в Действие\""
         },
         "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
           "progression_name": "Изграждане на Умения"
@@ -4377,7 +4648,7 @@
           "progression_name": "Свободна игра"
         },
         "436d2aa5-5369-462c-acdd-5ae81d6b0423": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "93b0085f-79bb-48eb-a786-f20c04016a31": {
           "name": "Отражение"
@@ -4407,7 +4678,7 @@
           "progression_name": "Упражнение"
         },
         "be8322ab-77e7-4f99-ad08-40a19edc5c00": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "8953de3d-a49f-4c4f-81e4-bcfbbc0baa3e": {
           "name": "Отражение"
@@ -4451,7 +4722,7 @@
           "progression_name": "Предсказание"
         },
         "20282149-72fa-4e24-aa15-5182f21bcf95": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "fc83d25f-9089-4795-9933-52f7372e3ae7": {
           "name": "Отражение"
@@ -4505,7 +4776,7 @@
           "progression_name": "Упражнение"
         },
         "fe26d5c2-ccdc-48cc-9678-793d2e491bf5": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "50020a45-10c5-4b0c-ba08-b54004bdcaa8": {
           "name": "Отражение"
@@ -4532,7 +4803,7 @@
           "progression_name": "Предсказание"
         },
         "c103e631-9559-4d34-9ff9-4227c8fb8baa": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "4860c6c5-d580-4865-a582-3c33cdb8e4da": {
           "name": "Отражение"
@@ -4598,7 +4869,7 @@
           "progression_name": "Предсказание"
         },
         "23df685c-9dd8-48af-9f9a-732ffa1de9c4": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "294fb9eb-4bd1-497a-8326-562ddd2671bf": {
           "name": "Отражение"
@@ -4651,7 +4922,7 @@
           "progression_name": "Свободна игра"
         },
         "8a16a242-40d2-407c-b2c2-92012cc69e3d": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "48eb2965-3a46-402c-9bcd-c38037adf810": {
           "name": "Отражение"
@@ -4752,7 +5023,7 @@
           "progression_name": "Упражнение"
         },
         "776538d2-aa5d-4210-9c54-cfd0f01db4b0": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "3dde779a-f373-47b8-b892-013f3898d438": {
           "name": "Отражение"
@@ -4775,7 +5046,7 @@
           "progression_name": "Свободна игра"
         },
         "ad447053-20d4-49cb-a771-7fd893973f54": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "4622563b-bc99-49ea-b1fb-b7a9916cf957": {
           "name": "Отражение"
@@ -4859,7 +5130,7 @@
           "progression_name": "Упражнение"
         },
         "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "179a6d3a-af19-4c62-85c7-82844964d06a": {
           "tips": [
@@ -4871,6 +5142,9 @@
         },
         "5990c610-f353-48fd-9d5f-a813486a237f": {
           "name": "Въведение"
+        },
+        "5ff6bd4a-2e05-4098-80a6-5e011fa70518": {
+          "name": "Програмиране с Рей и BB-8"
         },
         "3ea0d264-5395-49ba-8d4a-822734bcc3e2": {
           "progression_name": "Изграждане на Умения"
@@ -4923,6 +5197,9 @@
         "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
           "progression_name": "Изграждане на Умения"
         },
+        "eb340c7e-d71e-49fb-aaf8-73205f85d432": {
+          "progression_name": "Видео: Ледена Епоха Цикли"
+        },
         "ff9ff779-b617-4ae3-80c1-db23e1b9c27b": {
           "progression_name": "Изграждане на Умения"
         },
@@ -4938,8 +5215,14 @@
         "3948532c-fefc-466f-a7ff-7d95e6692b96": {
           "name": "Въведение"
         },
+        "c3e95f81-dafa-4791-9bf4-1cc0d418b4e3": {
+          "progression_name": "Видео: Събирача"
+        },
         "9aa00264-eca7-4093-92fb-60d301554a5b": {
           "progression_name": "Изграждане на Умения"
+        },
+        "dead7fa5-406d-419c-a084-3a913cbd2499": {
+          "progression_name": "Видео: Използвайки Блока Повтаряй"
         },
         "08049c61-d346-4c06-96f3-58775b4bf69d": {
           "progression_name": "Изграждане на Умения"
@@ -4951,7 +5234,7 @@
           "progression_name": "Упражнение"
         },
         "62dfefbf-589b-46c7-a6ae-2b80bb18b021": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "6397718f-1733-47e6-8ace-820b3f9d1701": {
           "name": "Отражение"
@@ -4980,7 +5263,7 @@
           "progression_name": "Свободна игра"
         },
         "71d66635-8ac0-46fa-94d5-1f574f1c7996": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "7043a915-b252-47d3-bb01-5975d613129c": {
           "name": "Отражение"
@@ -5006,7 +5289,7 @@
           "progression_name": "Свободна игра"
         },
         "b1227c60-2106-47a0-a2a0-d7fb4a460d44": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "e382cc47-35ef-4c10-80a1-4b9090d86856": {
           "name": "Отражение"
@@ -5016,6 +5299,9 @@
           "tips": [
             null
           ]
+        },
+        "dbb4fe5e-fe4d-40d4-8509-c11f826128ae": {
+          "progression_name": "Видео: Въведение в Play Lab"
         },
         "708df6be-8599-4a1a-993b-13ca6e874d5c": {
           "progression_name": "Свободна игра"
@@ -5027,7 +5313,7 @@
           "progression_name": "Мини-проект: Хорхе Кучето"
         },
         "0a6abf88-92c8-455d-8d64-e8f61ae227ad": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "9336ef6c-3ac8-4703-8f8d-98e88518e5e9": {
           "name": "Отражение"
@@ -5042,13 +5328,16 @@
           "progression_name": "Свободна игра"
         },
         "85076d8d-1ddf-45cc-b510-0eeddffaff85": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "00695f27-0eaf-43ef-bbd4-bd7879fbaa1c": {
           "name": "Отражение"
         },
         "716d5ed4-f198-4133-806e-dddeba48f571": {
           "name": "Въведение"
+        },
+        "9a413780-6d7b-4341-9041-e8a1e3f540b6": {
+          "progression_name": "Следвай Алгоритъма - Изключена Дейност"
         },
         "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
           "name": "Отражение",
@@ -5068,6 +5357,9 @@
           "tips": [
             null
           ]
+        },
+        "331e6451-5472-4491-bf96-d630d7f902a4": {
+          "progression_name": "Видео: Представяне на Sprite Lab"
         },
         "75de5d52-becb-4805-82d8-5be30d0dca7d": {
           "progression_name": "Предсказание"
@@ -5124,6 +5416,9 @@
         "2e6aa365-ef8d-4f04-8a5e-fcc6bb53bc1d": {
           "progression_name": "Мини-Проект: За Мен"
         },
+        "e7f9b4de-f4a4-401b-99ad-207a2fad7964": {
+          "name": "Споделете Навън"
+        },
         "abd54ca8-cb9c-46ad-be0a-814b9eb36162": {
           "name": "Отражение"
         },
@@ -5162,7 +5457,7 @@
           "progression_name": "Предизвикателство"
         },
         "1cbfaa5e-bd5f-4861-9152-5fd3e6a37d47": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "7f7b2c5d-fcd3-409a-9191-5e8ee587d2ea": {
           "name": "Отражение"
@@ -5194,7 +5489,7 @@
           "progression_name": "Свободна игра"
         },
         "0c0b60c9-9aee-43f0-9018-6f1d770ae014": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "9ad07175-6454-4905-9366-61b189a9ab7e": {
           "name": "Отражение"
@@ -5282,7 +5577,7 @@
           "progression_name": "Упражнение"
         },
         "761169d4-a60f-4c9d-b011-2e79adcf8b31": {
-          "progression_name": "Допълнителни екстри"
+          "progression_name": "Екстри към Урока"
         },
         "c8e5eb74-9ded-4c7c-bfbf-3fb3a144fe3a": {
           "name": "Отражение"
@@ -5387,6 +5682,7 @@
           ]
         },
         "42738b6d-fc16-4de9-b190-d6253f5e2c67": {
+          "name": "Ниво 1 - Разпознаване на Риби",
           "progression_name": "Разпознаване на Риби"
         },
         "aa866b7f-747f-49e4-9578-f937dbef61e4": {
@@ -5394,10 +5690,20 @@
             null
           ]
         },
+        "0cd5acdb-155e-4161-aba7-610f3869ec29": {
+          "name": "Ниво 2 - Разпознване на Характеристики на Риби"
+        },
         "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Направете Това:** Накарайте учениците да изберат дума която искат да обучат A.I. Bot да разпознава, и запишете тази информация в техните Ръководства за Дейността. Учениците трябва да напредват през нивото самостоятелно, записвайки информация в техните ръководтва за дейността.\n\n**Циркулирайте:** Проверете дали учениците попълват ръководството си за дейността, докато завършват етапите. След кратка проверка при всеки ученик, завършете етапа и вие пред класа и паузирайте на последния екран.",
           "tips": [
             null
           ]
+        },
+        "1ce2130f-e735-4060-811f-b8c87e6f74b0": {
+          "name": "Ниво 3 - Разпознаване на Изражения на Риби"
+        },
+        "5180cb85-e93a-4b5a-8c66-e1e81c775257": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Дискутирайте:** _Мислите ли че е редно да считам риби като \"ядосани\" по цвета им?_"
         },
         "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
           "tips": [
@@ -5624,6 +5930,9 @@
             null
           ]
         },
+        "9f4a3bce-7c21-4a40-b672-8c42296f90b2": {
+          "name": "Обратна Връзка за Урока"
+        },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
           "tips": [
             null
@@ -5754,6 +6063,9 @@
             null
           ]
         },
+        "77b2cc22-6c49-4ad9-8a76-a3e5cf4502ec": {
+          "progression_name": "Обучаване на Модел в AI Lab"
+        },
         "4efb646c-4ce2-45f5-bb76-f444af86a9b4": {
           "tips": [
             null
@@ -5770,6 +6082,9 @@
         "489ed446-aa78-47e3-b9f2-30bc9164d6c3": {
           "name": "Отражение",
           "progression_name": "Отражение"
+        },
+        "1c1ae803-a074-4e89-b4f4-8573c5602a39": {
+          "name": "Обратна Връзка за Урока"
         },
         "f2c599ed-2dc6-4fa2-8ebd-5123c77dd9c3": {
           "tips": [
@@ -5804,6 +6119,9 @@
             null,
             null
           ]
+        },
+        "416e3f4a-5465-4bc6-b5a7-865ad58e3b84": {
+          "name": "Обратна Връзка за Урока"
         },
         "bb917641-be8e-41f9-8ba5-bad758aeb8d5": {
           "name": "Проучване",
@@ -6471,12 +6789,14 @@
         "f14cc941-af61-4deb-8c16-be730ded1849": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Задаване на Свойства"
         },
         "fe4404fa-4e67-4c56-b117-6aa3dd7fd8ef": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Събития и Свойства"
         },
         "12af028a-bc38-49f4-8fda-8cd49963e102": {
           "progression_name": "Създаване на Приложение"
@@ -6539,11 +6859,17 @@
           ],
           "progression_name": "Получаване на Свойства"
         },
+        "bf62acfd-9cbc-4232-ba68-d86ced8e58bc": {
+          "progression_name": "Плъзгачи"
+        },
         "aa167cb8-d7fb-4c0f-8a8a-55ee234635da": {
           "progression_name": "Промяна"
         },
         "a7dd4853-b8c3-44d2-a03b-f5e5e23ff0ac": {
           "progression_name": "Мотоциклет"
+        },
+        "c7ee1edc-3c31-4a6a-a814-1bc69360e6fe": {
+          "progression_name": "Допълнително Предизвикателство"
         },
         "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
           "tips": [
@@ -6560,6 +6886,9 @@
             null
           ],
           "progression_name": "Сензори до Цветове"
+        },
+        "1a668f58-e58e-4624-a911-fcfc3188df23": {
+          "progression_name": "Допълнително Предизвикателство"
         },
         "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f": {
           "tips": [
@@ -6657,7 +6986,8 @@
         "4563c715-0a30-419a-9eca-d5b41089e165": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Музикален Масив"
         },
         "28fb99c8-886a-4ed6-859a-1fb1a813c484": {
           "tips": [
@@ -6674,6 +7004,9 @@
           "tips": [
             null
           ]
+        },
+        "d4f41f0f-3bd8-493c-b4c6-9ec09058247b": {
+          "progression_name": "Програми, които се Повтарят"
         },
         "d5b2ea3b-4370-4cf8-a9ed-670e789d812f": {
           "tips": [
@@ -6922,6 +7255,9 @@
           "tips": [
             null
           ]
+        },
+        "b4133437-14b2-4221-8202-c411f147e13c": {
+          "progression_name": "Widget Бинарни Числа"
         },
         "30ef889b-387b-4dbd-b6bc-96ca25489944": {
           "tips": [
@@ -7528,6 +7864,9 @@
             null
           ]
         },
+        "9a593b91-9cd2-48ff-a733-2943aa535ceb": {
+          "progression_name": "Създай Фон"
+        },
         "853974f1-7e3b-4403-a475-5af28d960115": {
           "progression_name": "Добавяне на Спрайт"
         },
@@ -7883,6 +8222,9 @@
         "c62c9fee-1e51-4d9d-b221-915d73af2cd2": {
           "progression_name": "Нарисувай Свой Фон"
         },
+        "ef36eaf3-2930-44dd-a939-e0e614755352": {
+          "progression_name": "Създай Свои Спрайтове"
+        },
         "c8d03646-3696-4a48-9ae9-b54fce33300e": {
           "progression_name": "Контроли на Играча"
         },
@@ -8081,6 +8423,12 @@
             null
           ]
         },
+        "c06da82f-6be2-49e8-8d8b-6579ef11f06d": {
+          "progression_name": "Проект - Фон и Променливи"
+        },
+        "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9": {
+          "progression_name": "Проект - Спрайтове и Взаимодействия"
+        },
         "3cabd5bc-4a69-4067-abda-7200bf0de085": {
           "progression_name": "Прегледай Своята Игра"
         },
@@ -8101,6 +8449,7 @@
           ]
         },
         "beb5adaf-44d3-48fe-bb2d-99a2f55caeff": {
+          "description": "През годината, за да виждате работата на ученик, и учениците да имат достъп до онлайн инструментите и ресурсите, всички ученици трябва да бъдата в същата секция на Code Studio. За да видите оценките и ключовете за отговори, които Code.org предоставя, вие трябва също да бъдете и \"потвърден учител\".",
           "tips": [
             null
           ]
@@ -8117,6 +8466,7 @@
           ]
         },
         "37d397d0-785f-4dc7-b172-2b51e5757ba3": {
+          "description": "**Дискутирайте:** Позволете на учениците да споделят отговори на масата оси или с партньр, после тези които им а комофртно да споделят с целия клас.",
           "tips": [
             null
           ]
@@ -8423,6 +8773,9 @@
           "name": "Отражение",
           "progression_name": "Отражение"
         },
+        "7693d6aa-abdb-4631-ae6c-d358e5d063e8": {
+          "description": "През годината, за да виждате работата на ученик, и учениците да имат достъп до онлайн инструментите и ресурсите, всички ученици трябва да бъдата в същата секция на Code Studio. За да видите оценките и ключовете за отговори, които Code.org предоставя, вие трябва също да бъдете и \"потвърден учител\"."
+        },
         "7d3700c3-08ad-41e8-bee3-19384d50e4c4": {
           "tips": [
             null
@@ -8435,6 +8788,7 @@
           ]
         },
         "f51c4e46-0b95-4035-bbef-921e12d33e3c": {
+          "description": "**Дискутирайте:** Позволете на учениците да споделят отговори на масата оси или с партньр, после тези които им а комофртно да споделят с целия клас.",
           "tips": [
             null
           ]
@@ -8476,6 +8830,9 @@
             null
           ]
         },
+        "805b87e8-c377-489d-84e2-8be6316309b1": {
+          "description": "През годината, за да виждате работата на ученик, и учениците да имат достъп до онлайн инструментите и ресурсите, всички ученици трябва да бъдата в същата секция на Code Studio. За да видите оценките и ключовете за отговори, които Code.org предоставя, вие трябва също да бъдете и \"потвърден учител\"."
+        },
         "c55fae38-7795-4027-b469-a3238f34efe5": {
           "tips": [
             null
@@ -8488,6 +8845,7 @@
           ]
         },
         "c941f0ac-38f6-4828-9ca4-e8b600868807": {
+          "description": "**Дискутирайте:** Позволете на учениците да споделят отговори на масата оси или с партньр, после тези които им а комофртно да споделят с целия клас.",
           "tips": [
             null
           ]
@@ -8529,6 +8887,9 @@
             null
           ]
         },
+        "7e2b0140-2517-4a48-89c6-2e51107ec2f2": {
+          "description": "През годината, за да виждате работата на ученик, и учениците да имат достъп до онлайн инструментите и ресурсите, всички ученици трябва да бъдата в същата секция на Code Studio. За да видите оценките и ключовете за отговори, които Code.org предоставя, вие трябва също да бъдете и \"потвърден учител\"."
+        },
         "163d7212-c083-4ba8-bb87-6150a37f8f0f": {
           "tips": [
             null
@@ -8541,6 +8902,7 @@
           ]
         },
         "77c22840-b9e9-4426-9894-30f101f2c00e": {
+          "description": "**Дискутирайте:** Позволете на учениците да споделят отговори на масата оси или с партньр, после тези които им а комофртно да споделят с целия клас.",
           "tips": [
             null
           ]
@@ -8795,6 +9157,9 @@
         },
         "b8b06d7c-cb56-4412-85ad-c68fb0953dc0": {
           "progression_name": "Прегледай Своята Страница"
+        },
+        "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c": {
+          "name": "Изпрати обратна връзка"
         },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
           "tips": [
@@ -9612,8 +9977,8 @@
           "progression_name": "Упражнение"
         },
         "69f7dde3-e970-464a-8255-fa5a68ff1d77": {
-          "name": "Допълнителни екстри",
-          "progression_name": "Допълнителни екстри"
+          "name": "Екстри към Урока",
+          "progression_name": "Екстри към Урока"
         },
         "86ab68e7-2ba2-4368-84d6-586615b42998": {
           "progression_name": "Упражнение"
@@ -9626,6 +9991,9 @@
         },
         "8ea69448-dc83-4d3b-93b5-790d2f0b4f93": {
           "progression_name": "Предсказване"
+        },
+        "61e56a64-227e-422a-9c65-62c927caed06": {
+          "progression_name": "Програмиране с Рей и BB-8"
         },
         "a631b9a1-b004-4bb5-8d70-b8d36a66bf47": {
           "progression_name": "Упражнение"
@@ -9701,6 +10069,10 @@
         },
         "08f9c234-1d3f-4d54-a1bf-878c064dd68d": {
           "progression_name": "Свободна игра"
+        },
+        "52633201-af13-45e4-9869-11411c3797e2": {
+          "name": "Проект",
+          "progression_name": "Проект"
         },
         "6c13ec78-aa02-40a3-97a4-362c2079c1c7": {
           "progression_name": "Въведение в Лабиринт: Програмиране с Блокчета"
@@ -9925,6 +10297,9 @@
         },
         "be6080de-1278-4a81-ac87-54429e2e7858": {
           "progression_name": "Упражнение"
+        },
+        "598993a6-e64b-48e3-8002-c617aae9cdab": {
+          "progression_name": "Програмиране с Рей и BB-8"
         },
         "7a7639f5-80d9-46ff-aa41-7210f2f5c2a2": {
           "progression_name": "Упражнение"

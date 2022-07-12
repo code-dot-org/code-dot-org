@@ -2326,7 +2326,8 @@
           "CSD_U3_variables": "Ändere die Zahl hier"
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "Klicke hier, um Kostüme zu deinem Projekt hinzuzufügen."
+          "costumes_tab": "Klicke hier, um Kostüme zu deinem Projekt hinzuzufügen.",
+          "make_sprite": "Erstelle mit Blöcken einen Sprite!"
         }
       }
     }

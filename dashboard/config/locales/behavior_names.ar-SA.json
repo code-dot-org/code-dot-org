@@ -3200,6 +3200,32 @@
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
           "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "wandering": "التحرك",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "wandering": "التحرك",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين"
         }
       }
     }

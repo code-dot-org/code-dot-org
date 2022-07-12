@@ -996,8 +996,7 @@
         },
         "class-section-video/courseb/2021": {
           "name": "Jak zrobić sekcję klasy na Code.org",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-          "type": "Wideo nauczyciela"
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "course-ab-blockly-blocks/courseb/2021": {
           "name": "Blockly Blocks w trybie \"unplugged\" - bez komputera (Klasy K-1)",
@@ -2480,13 +2479,16 @@
           "type": "Slajdy"
         },
         "pspe-image/csd/2021": {
-          "url": "https://code.org/curriculum/docs/csd/PSPE.png"
+          "url": "https://code.org/curriculum/docs/csd/PSPE.png",
+          "type": "Obraz"
         },
         "designing_with_empathy/csd/2021": {
+          "name": "Projektowanie z empatią",
           "url": "https://docs.google.com/document/d/10uAtyNYjzc91_hMTBRHRkSSxx7QJRZptkguzeH8Dwqg/view",
           "type": "Przewodnik po zajęciach"
         },
         "designing_with_empathy_1/csd/2021": {
+          "name": "Projektowanie z empatią",
           "url": "https://docs.google.com/document/d/1iwf4Y8AYLQFAuHSq-k-FnASFI7Wt8w7skZKFclggBcA/view",
           "type": "Wzór"
         },
@@ -2687,9 +2689,11 @@
         },
         "computing-innovations/csd/2021": {
           "name": "Innowacje informatyczne",
+          "url": "https://docs.google.com/document/d/1-fvLAoZcGopplA-0bwCFrCRoPFYPCPgSeb2ablNteCg/edit",
           "type": "Przewodnik po zajęciach"
         },
         "internet-of-things-video/csd/2021": {
+          "name": "Internet rzeczy",
           "url": "https://youtu.be/xQGsubJNbQw",
           "type": "Wideo"
         },
@@ -2900,10 +2904,6 @@
         "ascii-to-binary-table/csd/2021": {
           "type": "Referencja"
         },
-        "keeping-data-secret-exemplar-2019/csd/2021": {
-          "name": "Zachowywanie danych w tajemnicy",
-          "type": "Wzór"
-        },
         "keeping-data-secret/csd/2021": {
           "type": "Przewodnik po zajęciach"
         },
@@ -3041,9 +3041,11 @@
           "url": "/s/csd5-2021/vocab"
         },
         "cs-entertainment-activity/csd/2021": {
+          "url": "https://docs.google.com/document/d/110oPOgyPaeWt1_9_UEaw5T_7cCG_xgPDhwkTF2J47j8/edit",
           "type": "Przewodnik po zajęciach"
         },
         "cs_in_entertainment/csd/2021": {
+          "url": "https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit",
           "type": "Wzór"
         },
         "csd_unit_3_-_interactive_animations_and_games/csd/2021": {

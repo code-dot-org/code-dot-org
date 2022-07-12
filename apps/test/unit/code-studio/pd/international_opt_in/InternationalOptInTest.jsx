@@ -197,12 +197,17 @@ describe('InternationalOptInTest', () => {
         .find('select#schoolDepartment')
         .children()
         .map(option => option.prop('value'));
-      expect(departments).to.eql(['', 'department 1', 'department 2']);
+      expect(departments).to.eql([
+        '',
+        'Not applicable',
+        'department 1',
+        'department 2'
+      ]);
       expect(
         wrapper.find('select#schoolMunicipality').children()
-      ).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolCity').children()).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(1);
+      ).to.have.lengthOf(2);
+      expect(wrapper.find('select#schoolCity').children()).to.have.lengthOf(2);
+      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(2);
 
       // after selecting a department, municipality becomes available
       wrapper.setState({
@@ -214,6 +219,7 @@ describe('InternationalOptInTest', () => {
         .map(option => option.prop('value'));
       expect(municipalities).to.eql([
         '',
+        'Not applicable',
         'municipality 1-1',
         'municipality 1-2'
       ]);
@@ -228,23 +234,24 @@ describe('InternationalOptInTest', () => {
         .map(option => option.prop('value'));
       expect(municipalities).to.eql([
         '',
+        'Not applicable',
         'municipality 2-1',
         'municipality 2-2'
       ]);
 
       // likewise, municipality and city selections unlock in turn
-      expect(wrapper.find('select#schoolCity').children()).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(1);
+      expect(wrapper.find('select#schoolCity').children()).to.have.lengthOf(2);
+      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(2);
       wrapper.setState({
         data: {...wrapper.state().data, schoolMunicipality: 'municipality 2-1'}
       });
-      expect(wrapper.find('select#schoolCity').children()).to.have.lengthOf(3);
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(1);
+      expect(wrapper.find('select#schoolCity').children()).to.have.lengthOf(4);
+      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(2);
       wrapper.setState({
         data: {...wrapper.state().data, schoolCity: 'city 2-1-1'}
       });
-      expect(wrapper.find('select#schoolCity').children()).to.have.lengthOf(3);
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(3);
+      expect(wrapper.find('select#schoolCity').children()).to.have.lengthOf(4);
+      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(4);
     });
   });
 
@@ -364,12 +371,17 @@ describe('InternationalOptInTest', () => {
         .find('select#schoolDepartment')
         .children()
         .map(option => option.prop('value'));
-      expect(departments).to.eql(['', 'department 1', 'department 2']);
+      expect(departments).to.eql([
+        '',
+        'Not applicable',
+        'department 1',
+        'department 2'
+      ]);
       expect(wrapper.find('select#schoolCommune').children()).to.have.lengthOf(
-        1
+        2
       );
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolId').children()).to.have.lengthOf(1);
+      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(2);
+      expect(wrapper.find('select#schoolId').children()).to.have.lengthOf(2);
 
       // after selecting a department, municipality becomes available
       wrapper.setState({
@@ -379,9 +391,14 @@ describe('InternationalOptInTest', () => {
         .find('select#schoolCommune')
         .children()
         .map(option => option.prop('value'));
-      expect(commune).to.eql(['', 'commune 1-1', 'commune 1-2']);
+      expect(commune).to.eql([
+        '',
+        'Not applicable',
+        'commune 1-1',
+        'commune 1-2'
+      ]);
 
-      // selecting a different department will change the municipalities available
+      // selecting a different department will change the communes available
       wrapper.setState({
         data: {...wrapper.state().data, schoolDepartment: 'department 2'}
       });
@@ -389,21 +406,26 @@ describe('InternationalOptInTest', () => {
         .find('select#schoolCommune')
         .children()
         .map(option => option.prop('value'));
-      expect(commune).to.eql(['', 'commune 2-1', 'commune 2-2']);
+      expect(commune).to.eql([
+        '',
+        'Not applicable',
+        'commune 2-1',
+        'commune 2-2'
+      ]);
 
-      // likewise, municipality and city selections unlock in turn
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolId').children()).to.have.lengthOf(1);
+      // likewise, name and id selections unlock in turn
+      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(2);
+      expect(wrapper.find('select#schoolId').children()).to.have.lengthOf(2);
       wrapper.setState({
         data: {...wrapper.state().data, schoolCommune: 'commune 2-1'}
       });
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(3);
-      expect(wrapper.find('select#schoolId').children()).to.have.lengthOf(1);
+      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(4);
+      expect(wrapper.find('select#schoolId').children()).to.have.lengthOf(2);
       wrapper.setState({
         data: {...wrapper.state().data, schoolName: 'name 2-1-1'}
       });
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(3);
-      expect(wrapper.find('select#schoolId').children()).to.have.lengthOf(3);
+      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(4);
+      expect(wrapper.find('select#schoolId').children()).to.have.lengthOf(4);
     });
   });
 
@@ -503,11 +525,16 @@ describe('InternationalOptInTest', () => {
         .find('select#schoolDepartment')
         .children()
         .map(option => option.prop('value'));
-      expect(departments).to.eql(['', 'department 1', 'department 2']);
+      expect(departments).to.eql([
+        '',
+        'Not applicable',
+        'department 1',
+        'department 2'
+      ]);
       expect(
         wrapper.find('select#schoolMunicipality').children()
-      ).to.have.lengthOf(1);
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(1);
+      ).to.have.lengthOf(2);
+      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(2);
 
       // after selecting a department, district becomes available
       wrapper.setState({
@@ -517,7 +544,12 @@ describe('InternationalOptInTest', () => {
         .find('select#schoolMunicipality')
         .children()
         .map(option => option.prop('value'));
-      expect(commune).to.eql(['', 'district 1-1', 'district 1-2']);
+      expect(commune).to.eql([
+        '',
+        'Not applicable',
+        'district 1-1',
+        'district 1-2'
+      ]);
 
       // selecting a different department will change the districts available
       wrapper.setState({
@@ -527,14 +559,19 @@ describe('InternationalOptInTest', () => {
         .find('select#schoolMunicipality')
         .children()
         .map(option => option.prop('value'));
-      expect(commune).to.eql(['', 'district 2-1', 'district 2-2']);
+      expect(commune).to.eql([
+        '',
+        'Not applicable',
+        'district 2-1',
+        'district 2-2'
+      ]);
 
       // after selecting a district, school becomes available
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(1);
+      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(2);
       wrapper.setState({
         data: {...wrapper.state().data, schoolMunicipality: 'district 2-1'}
       });
-      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(3);
+      expect(wrapper.find('select#schoolName').children()).to.have.lengthOf(4);
     });
   });
 });

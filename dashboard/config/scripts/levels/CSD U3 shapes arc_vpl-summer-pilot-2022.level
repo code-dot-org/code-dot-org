@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-04-01T20:45:04.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -56,7 +52,7 @@
     "long_instructions": "# New Block: Arc\r\n\r\nThe `arc()` commands works just like `ellipse()` except it has two extra parameters. These parameters specify two different angles that are used to create the arc. \r\n\r\n# Do This\r\n\r\n* Read the code and see how the 'arc' block works. Pay close attention to the **last two parameters** in each `arc()` command.\r\n* Play around with the 'arc' block once you think you know how it works!\r\n\r\n**Hints:**\r\n* For both angles, 0 degrees is to the right. 90 degrees is down. 180 degrees is to the left. 270 degrees is up.\r\n* The arc is always drawn clockwise from wherever start falls to wherever stop falls on the ellipse. \r\n",
     "parent_level_id": 19164,
     "name_suffix": "_vpl-summer-pilot-2022",
-    "map_reference": " /docs/concepts/game-lab/shapes-and-parameters/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-2022/guides/shapes-and-parameters",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -66,12 +62,16 @@
     "display_name": "New Block: Arc",
     "thumbnail_url": "https://images.code.org/421171624df214967de2f5904371950e-image-1567031261141.PNG",
     "reference_links": [
-      "/docs/concepts/game-lab/drawing-shapes/"
+      "/courses/vpl-csd-summer-pilot-2022/guides/drawing-shapes"
     ],
     "libraries_enabled": "false",
     "bubble_choice_description": "Learn how to draw arcs.",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-04-01T20:45:04.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-01T20:45:04.619+00:00\",\"changed\":[\"cloned from \\\"CSD U3 shapes arc_2022\\\"\"],\"cloned_from\":\"CSD U3 shapes arc_2022\"}]"

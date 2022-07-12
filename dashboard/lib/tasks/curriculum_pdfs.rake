@@ -1,6 +1,8 @@
 namespace :curriculum_pdfs do
   def get_pdf_enabled_scripts
     Script.all.select do |script|
+      return false if [Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development].include?(script.published_state)
+      return false unless script.use_legacy_lesson_plans
       script.is_migrated && script.seeded_from.present?
     end
   end
@@ -47,13 +49,13 @@ namespace :curriculum_pdfs do
           any_pdf_generated = true
         end
 
-        unless Services::CurriculumPdfs.script_overview_pdf_exists_for?(script)
+        if !Services::CurriculumPdfs.script_overview_pdf_exists_for?(script) && should_generate_overview_pdf?(script)
           puts "Generating missing Script Overview PDF for #{script.name}"
           Services::CurriculumPdfs.generate_script_overview_pdf(script, dir)
           any_pdf_generated = true
         end
 
-        unless Services::CurriculumPdfs.script_resources_pdf_exists_for?(script)
+        if !Services::CurriculumPdfs.script_resources_pdf_exists_for?(script) && should_generate_resource_pdf?(script)
           puts "Generating missing Script Resources PDF for #{script.name}"
           Services::CurriculumPdfs.generate_script_resources_pdf(script, dir)
           any_pdf_generated = true

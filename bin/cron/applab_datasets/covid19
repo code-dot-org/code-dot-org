@@ -57,8 +57,8 @@ def get_us_covid19_data
 end
 
 def get_world_covid19_data
-  package = DataPackage::Package.new('https://datahub.io/core/covid-19/datapackage.json')
-  resource = package.resources.find {|r| r['name'] == "countries-aggregated_csv"}
+  package = JSON.parse(Net::HTTP.get_response(URI('https://datahub.io/core/covid-19/datapackage.json')).body)
+  resource = package['resources'].find {|r| r['name'] == "countries-aggregated_csv"}
   return unless resource
   response = Net::HTTP.get_response(URI(resource['path']))
   return unless response.code == '200'

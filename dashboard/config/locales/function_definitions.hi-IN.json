@@ -4079,6 +4079,28 @@
           "garden square": {
             "name": "बाग वर्ग"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "एक वर्ग खींचें"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "आकृति खींचें",
+            "parameters": {
+              "sides": "भुजाएं",
+              "length": "लंबाई"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "फंक्शन 1"
+          },
+          "function 2": {
+            "name": "फंक्शन 2"
+          }
         }
       }
     }

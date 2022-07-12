@@ -16,7 +16,7 @@ title: शाळेनंतरच्या अवर ऑफ कोडसाठ�
 
 * * *
 
-## 1. 'कसे करावे' चा हा व्हिडीओ पहा <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. 'कसे करावे' चा हा व्हिडीओ पहा <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. एक ट्युटोरीयल निवडा 
 

@@ -2194,6 +2194,26 @@
               "binary": "dénártha"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "tarraing cearnóg"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "fad"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "feidhm 1"
+          },
+          "function 2": {
+            "name": "feidhm 2"
+          }
         }
       }
     }

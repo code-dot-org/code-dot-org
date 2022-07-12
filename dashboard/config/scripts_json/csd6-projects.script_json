@@ -6,7 +6,6 @@
     "properties": {
       "include_student_lesson_plans": true,
       "is_course": true,
-      "is_maker_unit": true,
       "is_migrated": true,
       "version_year": "unversioned"
     },

@@ -2115,6 +2115,28 @@
           "function 2": {
             "name": "ශ්‍රිතය 2"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "හැඩයක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "ශ්‍රිතය 1"
+          },
+          "function 2": {
+            "name": "ශ්‍රිතය 2"
+          }
         }
       }
     }

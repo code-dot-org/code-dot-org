@@ -2792,6 +2792,28 @@
           "move and get nectar with counter": {
             "name": "நகர்ந்து, கவுண்டருடன் அமிர்தத்தைப் பெறுங்கள் "
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "ஒரு வடிவத்தை வரையவும் ",
+            "parameters": {
+              "sides": "பக்கங்களிலும் ",
+              "length": "நீளம்"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "ஃபங்ஷன் 1"
+          },
+          "function 2": {
+            "name": "ஃபங்ஷன் 2"
+          }
         }
       }
     }

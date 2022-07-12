@@ -374,6 +374,9 @@
   homepage_below_hero_announcement_link_text: "crwdns134767:0crwdne134767:0"
   homepage_higher_power_body: "crwdns2865696:0crwdne2865696:0"
   homepage_thebadguys_body: "crwdns2905990:0crwdne2905990:0"
+  homepage_csa_subhead: "crwdns2927714:0crwdne2927714:0"
+  homepage_csa_title: "crwdns2927716:0crwdne2927716:0"
+  homepage_csa_body: "crwdns2927718:0crwdne2927718:0"
   contact_form_topic_student: "crwdns4686:0crwdne4686:0"
   contact_form_topic_parent: "crwdns4687:0crwdne4687:0"
   contact_form_topic_teacher: "crwdns4688:0crwdne4688:0"
@@ -980,6 +983,12 @@
   coursed-2021_name: crwdns2688480:0crwdne2688480:0
   coursee-2021_name: crwdns2688482:0crwdne2688482:0
   coursef-2021_name: crwdns2688484:0crwdne2688484:0
+  coursea-2022_name: crwdns2927720:0crwdne2927720:0
+  courseb-2022_name: crwdns2927722:0crwdne2927722:0
+  coursec-2022_name: crwdns2927724:0crwdne2927724:0
+  coursed-2022_name: crwdns2927726:0crwdne2927726:0
+  coursee-2022_name: crwdns2927728:0crwdne2927728:0
+  coursef-2022_name: crwdns2927730:0crwdne2927730:0
   express-2018_name: crwdns135969:0crwdne135969:0
   pre-express-2018_name: crwdns135970:0crwdne135970:0
   express-2019_name: crwdns1625442:0crwdne1625442:0
@@ -988,6 +997,8 @@
   pre-express-2020_name: crwdns2370244:0crwdne2370244:0
   express-2021_name: crwdns2688486:0crwdne2688486:0
   pre-express-2021_name: crwdns2688488:0crwdne2688488:0
+  express-2022_name: crwdns2927732:0crwdne2927732:0
+  pre-express-2022_name: crwdns2927734:0crwdne2927734:0
   csd2_name: 'crwdns2066990:0crwdne2066990:0'
   csd3_name: 'crwdns2043992:0crwdne2043992:0'
   accelerated_name: "crwdns2041128:0crwdne2041128:0"
@@ -1102,6 +1113,12 @@
   coursed-2021_gradelevel: crwdns2710505:0crwdne2710505:0
   coursee-2021_gradelevel: crwdns2710507:0crwdne2710507:0
   coursef-2021_gradelevel: crwdns2710509:0crwdne2710509:0
+  coursea-2022_gradelevel: crwdns2927736:0crwdne2927736:0
+  courseb-2022_gradelevel: crwdns2927738:0crwdne2927738:0
+  coursec-2022_gradelevel: crwdns2927740:0crwdne2927740:0
+  coursed-2022_gradelevel: crwdns2927742:0crwdne2927742:0
+  coursee-2022_gradelevel: crwdns2927744:0crwdne2927744:0
+  coursef-2022_gradelevel: crwdns2927746:0crwdne2927746:0
   accelerated_gradelevel: "crwdns56094:0crwdne56094:0"
   codeorg_platformtext: "crwdns21807:0crwdne21807:0"
   codeintl_platformtext: "crwdns23749:0crwdne23749:0"
@@ -1240,6 +1257,12 @@
   coursed-2021_shortdescription_congrats: crwdns2688496:0crwdne2688496:0
   coursee-2021_shortdescription_congrats: crwdns2688498:0crwdne2688498:0
   coursef-2021_shortdescription_congrats: crwdns2688500:0crwdne2688500:0
+  coursea-2022_shortdescription_congrats: crwdns2927748:0crwdne2927748:0
+  courseb-2022_shortdescription_congrats: crwdns2927750:0crwdne2927750:0
+  coursec-2022_shortdescription_congrats: crwdns2927752:0crwdne2927752:0
+  coursed-2022_shortdescription_congrats: crwdns2927754:0crwdne2927754:0
+  coursee-2022_shortdescription_congrats: crwdns2927756:0crwdne2927756:0
+  coursef-2022_shortdescription_congrats: crwdns2927758:0crwdne2927758:0
   codeorg_longdescription: "crwdns21574:0crwdne21574:0"
   codeintl_longdescription: "crwdns23751:0crwdne23751:0"
   thinkersmithspanish_longdescription: "crwdns25939:0crwdne25939:0"

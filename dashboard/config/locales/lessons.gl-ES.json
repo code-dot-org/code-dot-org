@@ -29,6 +29,33 @@
         "infinity/Infinity": {
           "name": "Laboratorio de Xogo Disney Infinity"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hora de Código 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Bucles"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Eventos"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Condicionais"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funcións"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variables"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Bucles \"Para\" (For)"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fundamentos de Informática"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fundamentos de Informática"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Creando camiños"
         },
@@ -350,6 +377,66 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Desafío extremo - completo"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Introdución á informática"
+        },
+        "20-hour/The Maze": {
+          "name": "O Labirinto"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Pensamento computacional"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "20-hour/The Artist": {
+          "name": "O Artista"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmos"
+        },
+        "20-hour/The Artist 2": {
+          "name": "O Artista 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funcións"
+        },
+        "20-hour/The Farmer": {
+          "name": "O Agricultor"
+        },
+        "20-hour/Conditionals": {
+          "name": "Condicionais"
+        },
+        "20-hour/The Artist 3": {
+          "name": "O Artista 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Escribindo unha Canción"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "O Agricultor 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstracción"
+        },
+        "20-hour/The Artist 4": {
+          "name": "O Artista 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Programación por relevos"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "O Agricultor 3"
+        },
+        "20-hour/The Internet": {
+          "name": "A Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "O Artista 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Sumario"
+        },
         "course2/Graph Paper Programming": {
           "name": "Programación en Papel Cadriculado"
         },
@@ -526,6 +613,27 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Crebacabezas"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Crebacabezas"
+        },
+        "allthethings/Maze": {
+          "name": "Labirinto"
+        },
+        "allthethings/Artist": {
+          "name": "Artista"
+        },
+        "allthethings/Bee": {
+          "name": "Abella"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy bird"
+        },
+        "allthethings/Bounce": {
+          "name": "Rebote"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "coursef-2021/For Loop Fun": {
           "name": "Diversión con bucles \"para\" (for)"

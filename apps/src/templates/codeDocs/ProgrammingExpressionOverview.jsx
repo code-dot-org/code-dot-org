@@ -15,7 +15,11 @@ import {parseElement} from '@cdo/apps/xml';
 const VIDEO_WIDTH = 560;
 const VIDEO_HEIGHT = 315;
 
-export default function ProgrammingExpressionOverview({programmingExpression}) {
+export default function ProgrammingExpressionOverview({
+  programmingExpression,
+  programmingEnvironmentName,
+  programmingEnvironmentLanguage
+}) {
   const titleRef = React.createRef();
   const videoRef = createRef();
 
@@ -114,9 +118,7 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
             <Example
               key={idx}
               example={example}
-              programmingEnvironmentName={
-                programmingExpression.programmingEnvironmentName
-              }
+              programmingEnvironmentName={programmingEnvironmentName}
             />
           ))}
         </div>
@@ -133,7 +135,10 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
       {programmingExpression.parameters?.length > 0 && (
         <div>
           <h2>{i18n.parametersHeader()}</h2>
-          <ParametersTable parameters={programmingExpression.parameters} />
+          <ParametersTable
+            parameters={programmingExpression.parameters}
+            programmingEnvironmentLanguage={programmingEnvironmentLanguage}
+          />
         </div>
       )}
       {!!programmingExpression.returnValue && (
@@ -174,13 +179,14 @@ const programmingExpressionShape = PropTypes.shape({
   syntax: PropTypes.string,
   returnValue: PropTypes.string,
   tips: PropTypes.string,
-  programmingEnvironmentName: PropTypes.string,
   video: PropTypes.object,
   imageUrl: PropTypes.string
 });
 
 ProgrammingExpressionOverview.propTypes = {
-  programmingExpression: programmingExpressionShape.isRequired
+  programmingExpression: programmingExpressionShape.isRequired,
+  programmingEnvironmentName: PropTypes.string,
+  programmingEnvironmentLanguage: PropTypes.string
 };
 
 const styles = {

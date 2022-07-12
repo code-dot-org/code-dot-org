@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ko:
   errors:
     messages:
@@ -354,6 +360,7 @@ ko:
       educate_beyond: "Code.org 너머"
       educate_inspire: "학생들에게 영감을 주기"
       educate_community: "온라인 커뮤니티"
+      educate_requirements: "기술적 요구사항"
       educate_tools: "툴과 동영상"
       about_us: "우리 소개"
       about_leadership: "리더십"
@@ -421,6 +428,7 @@ ko:
       starwars: '스타워즈'
       starwarsblocks: '스타워즈 (블록)'
       starwarsblocks_hour: '스타워즈 (블록)'
+      thebadguys: '나쁜 사람들'
       loading: 'Loading...'
       weblab: '웹 랩'
       view_all: '모든 프로젝트 보기...'
@@ -667,8 +675,10 @@ ko:
       title: '댄스 파티'
     hello-world:
       title: '헬로우 월드'
+      body: '4개의 재미있는 주제를 골라 당신이 만든 세계에서 상호적인 캐릭터를 코딩하세요.'
     poem-art:
       title: '시학'
+      body: '자신을 표현해보세요! 코드를 사용해 움직이는 시를 만드세요.'
     hoc:
       title: '고전 미로게임'
       body: '컴퓨터과학(CS, 정보과학)의 기초/개념/원리들을 경험 해보세요. 수 백 만 가지를 가능하게 합니다.'
@@ -992,6 +1002,11 @@ ko:
   no_course_access_teacher: "이 과정에 들어 올 수 없습니다. 이 과정에 들어 올 수 있다고 믿으면, support@code.org에 편지를 써서 이 상황을 해결할 수 있게 해주세요. "
   no_script_access_student: "이 단원에 들어 올 수 없습니다. 선생님에게 어느 단원을 들어야 하는지 물어 보세요."
   no_script_access_teacher: "이 단원에 들어 올 수 없습니다. 이 단원에 들어 올 수 있다고 믿으면, support@code.org에 편지를 써서 이 상황을 해결할 수 있게 해주세요. "
+  no_level_access_student: "이 레벨에 들어 올 수 없습니다. 선생님에게 어느 레벨을 들어야 하는지 물어 보세요."
+  no_level_access_teacher: "이 단계에 들어 올 수 없습니다. 이 단계에 들어 올 수 있다고 믿으면, support@code.org에 편지를 써서 이 상황을 해결할 수 있게 해주세요. "
+  no_exemplar: "이 레벨에 모범 예시가 존재하지 않습니다."
+  no_exemplar_access_student: "학생은 예시 코드에 들어 올 수 없습니다. 선생님에게 어느 레벨을 들어야 하는지 물어 보세요."
+  no_exemplar_access_teacher: "검증된 교사만 예시 코드에 접속할 수 있습니다. 검증받기를 원하시면, support@code.org로 신청하세요."
   return_unit_overview: '단원 개요로 이동'
   return_course_overview: '과정 개요로 이동'
   view_all_units: '모든 단원 보기'
@@ -1061,6 +1076,7 @@ ko:
         music: '음악'
         art: '미술'
         other: "기타:"
+        na: '해당사항 없음'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1070,7 +1086,8 @@ ko:
         lightbot: '라이트봇'
         scratch: '스크래치'
         tynker: 'Tynker'
-        other: "기타:"
+        other: "기타"
+        na: '해당사항 없음'
       robotics:
         grok: '그록 러닝'
         kodable: 'Kodable'
@@ -1080,7 +1097,8 @@ ko:
         sphero: '스피로'
         raspberry: '라즈베리 파이'
         wonder: '원더 워크숍'
-        other: "기타:"
+        other: "기타"
+        na: '해당사항 없음'
       workshop_course:
         csf_af: 'CS 기초 (과정 A-F)'
         csf_express: 'CS 기초 (프리 익스프레스 또는 익스프레스)'

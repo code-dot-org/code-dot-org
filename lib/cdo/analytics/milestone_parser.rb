@@ -33,6 +33,7 @@ class MilestoneParser
   COMPARE_BYTE_LENGTH = 1024
 
   attr_accessor :cache, :s3_client, :s3_resource
+
   cattr_accessor :log_debug
 
   def debug(msg)

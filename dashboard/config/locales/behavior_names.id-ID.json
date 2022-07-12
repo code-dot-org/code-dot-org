@@ -3299,6 +3299,32 @@
           "moving west": "bergerak ke barat",
           "patrolling": "perondaan",
           "moving with arrow keys": "bergerak dengan tanda panah"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "berenang ke kiri dan kanan",
+          "shrinking": "penyusutan",
+          "patrolling": "perondaan",
+          "wandering": "pengembaraan",
+          "growing": "pertumbuhan",
+          "jittering": "gugup",
+          "moving east": "bergerak ke timur",
+          "moving north": "bergerak ke utara",
+          "moving south": "bergerak ke selatan",
+          "moving west": "bergerak ke barat",
+          "spinning right": "berputar ke kanan"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "berenang ke kiri dan kanan",
+          "shrinking": "penyusutan",
+          "patrolling": "perondaan",
+          "wandering": "pengembaraan",
+          "growing": "pertumbuhan",
+          "jittering": "gugup",
+          "moving east": "bergerak ke timur",
+          "moving north": "bergerak ke utara",
+          "moving south": "bergerak ke selatan",
+          "moving west": "bergerak ke barat",
+          "spinning right": "berputar ke kanan"
         }
       }
     }
