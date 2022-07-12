@@ -14,7 +14,6 @@ import {
   setActiveTabKey,
   setOrderedTabKeys,
   setFileMetadata,
-  getTabKey,
   setAllEditorMetadata
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
@@ -44,7 +43,7 @@ import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 import {hasQueryParam} from '@cdo/apps/code-studio/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
-import {getDefaultFileContents} from './JavalabFileHelper';
+import {getDefaultFileContents, getTabKey} from './JavalabFileHelper';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 
 const MIN_HEIGHT = 100;
