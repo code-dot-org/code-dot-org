@@ -41,7 +41,7 @@
 
   - if level.allow_user_uploads?
     %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.min.js')}
-    %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.js')}
+    %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.min.js')}
     %p#free-response-upload
     :ruby
       js_data[:attachments_props] = {
