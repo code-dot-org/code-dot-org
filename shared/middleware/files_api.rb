@@ -878,7 +878,7 @@ class FilesApi < Sinatra::Base
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
     not_found if manifest_result[:status] == 'NOT_FOUND'
-    manifest = JSON.parse manifest_result[:body]
+    manifest = JSON.parse(manifest_result[:body].read)
 
     # delete the manifest and all of the files it referenced
     bucket.delete_multiple(encrypted_channel_id, [FileBucket::MANIFEST_FILENAME].concat(manifest.map {|e| e['filename'].downcase})) unless manifest.empty?
