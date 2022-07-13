@@ -99,8 +99,8 @@ export default class MicroBitBoard extends EventEmitter {
       .then(() => this.openSerialPort())
       .then(serialPort => this.boardClient_.connectBoard(serialPort))
       .then(() => {
-        // Delay for 0.25 seconds to ensure we have time to determine the firmware version.
-        return delay(250);
+        // Delay for 0.25 seconds to ensure we have time to receive the firmware version.
+        return delayPromise(250);
       })
       .then(() => {
         if (
@@ -113,7 +113,7 @@ export default class MicroBitBoard extends EventEmitter {
             firehoseClient.putRecord({
               study: 'maker-toolkit',
               study_group: 'microbit',
-              event: 'firmwareVersionUnknown'
+              event: 'firmwareVersionTimeout'
             });
             console.warn(
               'Firmware version not detected in time. Try refreshing the page.'
@@ -269,4 +269,4 @@ export default class MicroBitBoard extends EventEmitter {
   }
 }
 
-const delay = t => new Promise(resolve => setTimeout(resolve, t));
+const delayPromise = t => new Promise(resolve => setTimeout(resolve, t));
