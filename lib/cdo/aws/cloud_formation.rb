@@ -174,7 +174,12 @@ module AWS
     end
 
     def parameters(template)
-      params = YAML.safe_load(template)['Parameters']
+      # These templates include complex classes like Dates that are not
+      # supported by safe_load
+      #
+      # rubocop:disable Security/YAMLLoad
+      params = YAML.load(template)['Parameters']
+      # rubocop:enable Security/YAMLLoad
       return [] unless params
       params.map do |key, properties|
         value = CDO[key.underscore] || ENV[key.underscore.upcase]
