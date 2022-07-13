@@ -1629,30 +1629,30 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-    assert_select 'a[href="http://test.host/pairing"]', false
+    assert_select 'a[href="http://test-studio.code.org/pairing"]', false
   end
 
   test 'api routing' do
     # /dashboardapi urls
     assert_routing(
-      {method: "get", path: "/dashboardapi/user_menu"},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/dashboardapi/user_menu"},
       {controller: "api", action: "user_menu"}
     )
 
     assert_routing(
-      {method: "get", path: "/dashboardapi/section_progress/2"},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/dashboardapi/section_progress/2"},
       {controller: "api", action: "section_progress", section_id: '2'}
     )
 
     # /api urls
     assert_recognizes(
       {controller: "api", action: "user_menu"},
-      {method: "get", path: "/api/user_menu"}
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/api/user_menu"}
     )
 
     assert_recognizes(
       {controller: "api", action: "section_progress", section_id: '2'},
-      {method: "get", path: "/api/section_progress/2"}
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/api/section_progress/2"}
     )
   end
 
