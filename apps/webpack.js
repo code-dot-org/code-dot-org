@@ -136,14 +136,7 @@ var baseConfig = {
         test: /\.scss$/,
         use: [
           {loader: 'style-loader'},
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                auto: true // enable CSS modules for all files matching \.module\.\w+$/i.test(filename)
-              }
-            }
-          },
+          {loader: 'css-loader'},
           {
             loader: 'sass-loader',
             options: {
