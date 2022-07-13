@@ -12,6 +12,7 @@ import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 import {isChromeOS, serialPortType} from '../../util/browserChecks';
 import {MICROBIT_FIRMWARE_VERSION} from './MicroBitConstants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -108,6 +109,12 @@ export default class MicroBitBoard extends EventEmitter {
           return Promise.resolve();
         } else {
           if (this.boardClient_.firmwareVersion === '') {
+            // Log if we were not able to determine the firmware version in time.
+            firehoseClient.putRecord({
+              study: 'maker-toolkit',
+              study_group: 'microbit',
+              event: 'firmwareVersionUnknown'
+            });
             console.warn(
               'Firmware version not detected in time. Try refreshing the page.'
             );
