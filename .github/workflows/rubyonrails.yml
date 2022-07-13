@@ -20,7 +20,6 @@ jobs:
           MYSQL_DB: dashboard_test
           MYSQL_USER: user
           MYSQL_PASSWORD: password
-          MYSQL_ALLOW_EMPTY_PASSWORD: yes
         ports:
           - 3306
         #options: --explicit_defaults_for_timestamp
@@ -43,11 +42,16 @@ jobs:
         run: bundle install --with test
           
       # Add or replace database setup steps here
-      - name: Install Dashboard
-        run: bundle exec rake install:dashboard --trace
-      # Add or replace test runners here
-      - name: Run tests
+      - name: Create db
         run: |
           cd dashboard/
-          bin/rake
+          bin/rake db:create
           cd ../
+      #- name: Install Dashboard
+      #  run: bundle exec rake install:dashboard --trace
+      # Add or replace test runners here
+      #- name: Run tests
+      #  run: |
+      #    cd dashboard/
+      #    bin/rake
+      #    cd ../
