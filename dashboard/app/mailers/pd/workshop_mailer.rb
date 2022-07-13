@@ -11,6 +11,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   # (views/pd/workshop_mailer/workshop_details/_<name>.html.haml)
   DETAILS_PARTIALS = {
     Pd::Workshop::COURSE_CSF => {
+      Pd::Workshop::SUBJECT_CSF_DISTRICT => 'csf_district',
       Pd::Workshop::SUBJECT_CSF_101 => 'csf_intro',
       Pd::Workshop::SUBJECT_CSF_201 => 'csf_deepdive'
     },
