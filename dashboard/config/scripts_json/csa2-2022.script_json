@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-27 19:35:04 UTC",
+    "serialized_at": "2022-07-08 12:36:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6277,7 +6277,7 @@
     },
     {
       "name": "Creating a Scanner Object",
-      "url": "https://youtu.be/2jJUc-FUuq8",
+      "url": "https://youtu.be/43PYFmSyupI",
       "key": "creating_a_scanner_object",
       "properties": {
         "audience": "Student",

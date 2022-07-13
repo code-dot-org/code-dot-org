@@ -409,7 +409,7 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_starter_assets?(project_type)
-    %w(javalab).include? project_type
+    %w(javalab applab).include? project_type
   end
 
   def export_create_channel
