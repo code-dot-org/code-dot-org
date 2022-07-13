@@ -1,7 +1,6 @@
 /** List item placeholder for adding a new item */
 import React from 'react';
 import color from '@cdo/apps/util/color';
-import Button from '@cdo/apps/templates/Button';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
@@ -26,17 +25,26 @@ class NewListItem extends React.Component {
       >
         <div style={styles.wrapper}>
           <div style={[styles.border, hovered && styles.borderHovered]}>
-            <i className="fa fa-plus-circle" style={styles.addButton} />
+            <i
+              className="fa fa-plus-circle"
+              style={[styles.addButton, hovered && styles.borderHovered_add]}
+            />
           </div>
         </div>
-        <div className="animation-name" style={styles.animationName}>
+        <div
+          className="animation-name"
+          style={[
+            styles.animationName,
+            hovered && styles.borderHovered_animationName
+          ]}
+        >
           {this.props.label}
         </div>
       </button>
     );
   }
 }
-
+const polar_blue = '#0094CA';
 const styles = {
   tile: {
     width: '100%',
@@ -63,15 +71,13 @@ const styles = {
     left: 0,
     right: 0,
     borderRadius: 10,
-    backgroundColor: Button.ButtonColor.blue,
+    backgroundColor: color.white,
+    border: 'solid 4px ' + polar_blue,
     textAlign: 'center',
     paddingTop: '50%'
   },
-  borderHovered: {
-    backgroundColor: color.twitter_blue
-  },
   addButton: {
-    color: color.white,
+    color: polar_blue,
     fontSize: 90,
     marginTop: '-47px'
   },
@@ -80,8 +86,18 @@ const styles = {
     textAlign: 'center',
     userSelect: 'none',
     fontWeight: 'bold',
-    color: Button.ButtonColor.blue,
+    color: color.oceans_deep_blue,
     fontSize: '13px'
+  },
+  borderHovered: {
+    backgroundColor: polar_blue,
+    border: 'solid 4px ' + polar_blue
+  },
+  borderHovered_add: {
+    color: color.white
+  },
+  borderHovered_animationName: {
+    color: polar_blue
   }
 };
 
