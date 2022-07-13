@@ -24,8 +24,11 @@ function initPage() {
   for (const name in sampleValidationCodeMap) {
     const sampleValidationCode = sampleValidationCodeMap[name];
     const element = $('#generateValidation' + name);
-    element.on('click', () =>
-      validationEditor.getDoc().setValue(sampleValidationCode)
+    element.on(
+      'click',
+      () =>
+        validationEditor &&
+        validationEditor.getDoc().setValue(sampleValidationCode)
     );
   }
 }
