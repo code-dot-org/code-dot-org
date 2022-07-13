@@ -45,6 +45,9 @@ jobs:
           bundle install
           cd ../
           
+      - name: Start MySQL
+        run: sudo /etc/init.d/mysql start 
+        
       # Add or replace database setup steps here
       - name: Create db
         run: |
