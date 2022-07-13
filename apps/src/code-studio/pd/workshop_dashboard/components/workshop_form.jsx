@@ -372,11 +372,12 @@ export class WorkshopForm extends React.Component {
       isCsf &&
       this.state.subject &&
       !HideOnWorkshopMapSubjects.includes(this.state.subject);
+    const isCsfSubjectWithHiddenFundedField =
+      isCsf &&
+      this.state.subject &&
+      HideFundedSubjects.includes(this.state.subject);
     const showFundedInput = !(
-      isAdminCounselor ||
-      (isCsf &&
-        this.state.subject &&
-        HideFundedSubjects.includes(this.state.subject))
+      isAdminCounselor || isCsfSubjectWithHiddenFundedField
     );
 
     return (
