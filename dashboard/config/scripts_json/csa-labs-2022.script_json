@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-07-12 04:05:36 UTC",
+    "serialized_at": "2022-07-13 00:31:11 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -143,15 +143,79 @@
     },
     {
       "key": "lesson-2",
-      "name": "Celebrity Lab First Activity",
+      "name": "Introduction to Celebrity",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "In this activity students are introduced to the game of Celebrity. Then students will\nbrainstorm different design options for creating a computer version of the game,\nincluding the Game class and the play method. Although students are encouraged\nto brainstorm the classes that make the most sense to them, because they will be\nutilizing a provided GUI, their focus will be narrowed as they progress through this\nactivity. Spending time talking about different design decisions that they might have\nmade, and how they would affect the GUI and other provided code is a worthwhile\ndiscussion that could be had at many points throughout this lab.",
+        "preparation": "* Small slips of paper - 5 per students (can also have students cut their own slips of paper if necessary)",
+        "purpose": "Once students have had a chance to play Celebrity, they will be working on program\ndesign. The goal of this activity is to determine appropriate attributes and behaviors,\nwithout worrying about code. Although answers might have similar responses, you\nshould encourage students to incorporate their own ideas into the design.",
+        "student_overview": "In this activity you’ll be introduced to and play the game of Celebrity. Then you’ll\nbrainstorm different design options for creating a computer version of the game,\nincluding the `Game` class which contains a `play` method."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "The Celebrity Class: A Simple Version",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Putting It All Together",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Extending the Celebrity Class",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Open-Ended Activity",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa-labs-2022"
       }
@@ -367,6 +431,48 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-labs-2022"
       }
+    },
+    {
+      "key": "c5521dde-e45d-469b-a4ab-742dc51df932",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c5521dde-e45d-469b-a4ab-742dc51df932",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "28d10d92-5767-4398-9915-8b8c880944bc",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "28d10d92-5767-4398-9915-8b8c880944bc",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "6e7acd56-d79a-4d64-bc0f-054e953d4e7f",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e7acd56-d79a-4d64-bc0f-054e953d4e7f",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-labs-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -492,7 +598,7 @@
       "key": "f29b07ba-ae81-4a80-b082-cc82fa3153a0",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Click through the animated slide to display the prompts.\n\n* *What programming concept(s) do you think may be involved in causing the chatbot to look for key words or phrases and respond accordingly?*\n\n**Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *What programming concept(s) do you think may be involved in causing the chatbot to look for key words or phrases and respond accordingly?*\n\n**Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt"
       },
       "seeding_key": {
         "activity_section.key": "f29b07ba-ae81-4a80-b082-cc82fa3153a0",
@@ -522,7 +628,7 @@
       "key": "08a60207-7743-4c62-82b3-5136f69b014d",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Direct students to the Magpie Lab Lesson 2 to complete levels 1-4. Bring the class back together after level 4 for a discussion before completing level 5. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Magpie Lab Lesson 2 to complete levels 1-4. Bring the class back together after level 4 for a discussion before completing level 5. ",
         "progression_name": "Exploration"
       },
       "seeding_key": {
@@ -534,7 +640,7 @@
       "key": "65c9e6ec-9d70-4683-a6f6-2f7e8ed46a9d",
       "position": 3,
       "properties": {
-        "description": "**Do This:** Use the slide to guide your discussion before moving on to the next levels. \n\n* *How could we check that a statement has at least one character?*\n\n* *If there are no characters, what would be a good output?* \n\nStudents will go through the next levels and have the code check that the statement has at least one character. They can do this by using the `trim()` method to remove spaces from the beginning and end, and then checking the length of\nthe trimmed string. If there are no characters, the response should tell the user to enter something. For example, a possible statement and response would be:\n\n**Statement:**\n\n**Response:** *Say something, please.*",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the slide to guide your discussion before moving on to the next levels. \n\n* *How could we check that a statement has at least one character?*\n\n* *If there are no characters, what would be a good output?* \n\nStudents will go through the next levels and have the code check that the statement has at least one character. They can do this by using the `trim()` method to remove spaces from the beginning and end, and then checking the length of\nthe trimmed string. If there are no characters, the response should tell the user to enter something. For example, a possible statement and response would be:\n\n***Statement:***\n\n***Response:*** *Say something, please.*",
         "name": "Checking for Characters",
         "progression_name": "More responses!"
       },
@@ -560,7 +666,7 @@
       "key": "f80e30aa-77bf-461f-bf9c-36623b5934c2",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Click through the animated slide to display the prompts\n* *What knowledge and skills did you use that you have already learned?*\n\n* *What were you confident about? What would you like to practice?*\n\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts\n* *What knowledge and skills did you use that you have already learned?*\n\n* *What were you confident about?* \n\n* *What would you like to practice?*\n\n* *What questions do you have about today?*\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "f80e30aa-77bf-461f-bf9c-36623b5934c2",
@@ -770,6 +876,17 @@
       }
     },
     {
+      "key": "b697654e-6ccb-49ac-b36f-99c8adf88295",
+      "position": 5,
+      "properties": {
+        "progression_name": "Conversing with the Bot"
+      },
+      "seeding_key": {
+        "activity_section.key": "b697654e-6ccb-49ac-b36f-99c8adf88295",
+        "lesson_activity.key": "d50e9b82-b867-41bb-b48b-e7370696fe96"
+      }
+    },
+    {
       "key": "51fd9eef-c950-464a-ac90-f6a1e8bba02d",
       "position": 1,
       "properties": {
@@ -852,8 +969,19 @@
       }
     },
     {
-      "key": "130603b1-3433-4120-aeea-53bc32d8155e",
+      "key": "7c30aa58-43f9-41b3-b03d-5a1042a58b72",
       "position": 7,
+      "properties": {
+        "progression_name": "Scanning for a Phrase"
+      },
+      "seeding_key": {
+        "activity_section.key": "7c30aa58-43f9-41b3-b03d-5a1042a58b72",
+        "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
+      }
+    },
+    {
+      "key": "130603b1-3433-4120-aeea-53bc32d8155e",
+      "position": 8,
       "properties": {
         "description": "Within the starter code, there is additional functionality that covers when a user inputs a common phrase that involves a combination of the words *you* & *me*, such as \"**you** *amaze* **me**\". \n\n**Group:** Continue to work with your partner from the previous activity.\n\n**Discuss:** What makes this type of statement different to interpret than the \"I want...\" type statements that we worked with previously?",
         "name": "Two Word Combinations"
@@ -865,7 +993,7 @@
     },
     {
       "key": "6354a819-4fab-446f-90d1-8e351a010bff",
-      "position": 8,
+      "position": 9,
       "properties": {
         "tips": [
           {
@@ -881,7 +1009,7 @@
     },
     {
       "key": "294e7df3-1d8e-4fff-aa53-ecaaa658a5be",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "**Do This:** Instruct students to create a new empty method called `transformIYouStatement()` that takes in the user statement as an argument. Model this method header after the one that we examined previously.\n\n**Do This:** Students should add a conditional statement that tests for the presence of both *I* and *you* within the user input. The conditional should check that *I* occurs before *you* in the statement.\n\n**Do This:** Direct students to code the `transformIYouStatement()` method using the same algorithmic flow as the `transformYouMeStatement()` method. Again, students should try to create this method from memory as much as possible. If they get stuck on how to recreate a step, refer back to the reference method for guidance.\n\n**Do This:** Students should have Magpie respond to statements of the form “I [*something*] you” with the restructuring “Why do you\n[*something*] me?”\n\n*  **Sample Statement:** I *like* you.\n* **Sample Response:** Why do you *like* me?\n\n**Discuss:** Is the output consistent with what you and your partner envisioned?"
       },
@@ -891,12 +1019,13 @@
       }
     },
     {
-      "key": "7c30aa58-43f9-41b3-b03d-5a1042a58b72",
-      "position": 10,
+      "key": "274d4e77-0afe-4711-8f97-8ed340b413d2",
+      "position": 11,
       "properties": {
+        "progression_name": "Two Word Combinations"
       },
       "seeding_key": {
-        "activity_section.key": "7c30aa58-43f9-41b3-b03d-5a1042a58b72",
+        "activity_section.key": "274d4e77-0afe-4711-8f97-8ed340b413d2",
         "lesson_activity.key": "6f91320b-4c5b-4722-b99a-2b828440ad14"
       }
     },
@@ -979,6 +1108,36 @@
       "seeding_key": {
         "activity_section.key": "aea23a5b-b7ac-4133-81d7-56de7965b316",
         "lesson_activity.key": "d247f206-bb36-4d8a-9129-881bb9b0c106"
+      }
+    },
+    {
+      "key": "28878e82-c5f0-4e47-aaf8-7a380093938c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "28878e82-c5f0-4e47-aaf8-7a380093938c",
+        "lesson_activity.key": "c5521dde-e45d-469b-a4ab-742dc51df932"
+      }
+    },
+    {
+      "key": "5953585c-a099-4068-9045-a6867fa54ecb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5953585c-a099-4068-9045-a6867fa54ecb",
+        "lesson_activity.key": "28d10d92-5767-4398-9915-8b8c880944bc"
+      }
+    },
+    {
+      "key": "55319368-f673-431b-b1b7-8ee6c1b2e41a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "55319368-f673-431b-b1b7-8ee6c1b2e41a",
+        "lesson_activity.key": "6e7acd56-d79a-4d64-bc0f-054e953d4e7f"
       }
     }
   ],
@@ -1214,6 +1373,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L3-L1_2022"
+        ],
         "progression": "Investigate indexOf() Method"
       },
       "bonus": false,
@@ -1236,6 +1398,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L3-L2_2022"
+        ],
         "progression": "Test indexOf() Method"
       },
       "bonus": false,
@@ -1258,6 +1423,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L3-L3_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1279,9 +1447,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA CB_Lab Magpie-L4-L1_2022"
-        ]
+        "progression": "Conversing with the Bot"
       },
       "bonus": false,
       "seeding_key": {
@@ -1291,10 +1457,98 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-labs-2022",
-        "activity_section.key": "7c30aa58-43f9-41b3-b03d-5a1042a58b72"
+        "activity_section.key": "b697654e-6ccb-49ac-b36f-99c8adf88295"
       },
       "level_keys": [
         "CSA CB_Lab Magpie-L4-L1_2022"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Scanning for a Phrase"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L4-L2_2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "7c30aa58-43f9-41b3-b03d-5a1042a58b72"
+      },
+      "level_keys": [
+        "CSA CB_Lab Magpie-L4-L2_2022"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Scanning for a Phrase"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L4-Match1_2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "7c30aa58-43f9-41b3-b03d-5a1042a58b72"
+      },
+      "level_keys": [
+        "CSA CB_Lab Magpie-L4-Match1_2022"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Scanning for a Phrase"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L4-L3_2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "7c30aa58-43f9-41b3-b03d-5a1042a58b72"
+      },
+      "level_keys": [
+        "CSA CB_Lab Magpie-L4-L3_2022"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Scanning for a Phrase"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L4-L4_2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "7c30aa58-43f9-41b3-b03d-5a1042a58b72"
+      },
+      "level_keys": [
+        "CSA CB_Lab Magpie-L4-L4_2022"
       ]
     }
   ],
@@ -1448,6 +1702,54 @@
         "level.key": "CSA CB_Lab Magpie-L4-L1_2022",
         "script_level.level_keys": [
           "CSA CB_Lab Magpie-L4-L1_2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "b697654e-6ccb-49ac-b36f-99c8adf88295"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Magpie-L4-L2_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L4-L2_2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "7c30aa58-43f9-41b3-b03d-5a1042a58b72"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Magpie-L4-Match1_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L4-Match1_2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "7c30aa58-43f9-41b3-b03d-5a1042a58b72"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Magpie-L4-L3_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L4-L3_2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "7c30aa58-43f9-41b3-b03d-5a1042a58b72"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Magpie-L4-L4_2022",
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L4-L4_2022"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -1708,6 +2010,27 @@
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.3"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
