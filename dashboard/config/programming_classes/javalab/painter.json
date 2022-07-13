@@ -63,8 +63,8 @@
       "key": "paint",
       "overload_of": null,
       "content": "Paints the space the `Painter` object is standing on.",
-      "parameters": "[{\"name\":\"color\",\"type\":\"String\",\"required\":true,\"description\":\"the color of the paint\"}]",
-      "examples": "[{\"code\":\"```\\nPainter myPainter = new Painter(2, 4, \\\"South\\\", 10);\\nmyPainter.paint(\\\"white\\\");\\n```\",\"image\":\"https://images.code.org/d66489311bf586df08f4b294621acc95-painter_paint.gif\"}]",
+      "parameters": "[{\"name\":\"color\",\"type\":\"String\",\"required\":true,\"description\":\"the color of the paint - can be a color name or a hex value\"}]",
+      "examples": "[{\"code\":\"```\\nPainter myPainter = new Painter(2, 4, \\\"South\\\", 10);\\nmyPainter.paint(\\\"white\\\");\\n```\",\"image\":\"https://images.code.org/d66489311bf586df08f4b294621acc95-painter_paint.gif\"},{\"name\":\"Color Options\",\"code\":\"![](https://images.code.org/5037b6d4b5d358dd1f26e55db004f7e2-colors.jpg)\"}]",
       "syntax": "`public void paint(String color)`",
       "external_link": null,
       "return_value": null
