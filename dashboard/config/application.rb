@@ -29,6 +29,7 @@ module Dashboard
     config.active_record.belongs_to_required_by_default = true
     config.action_dispatch.return_only_media_type_on_content_type = false
     config.autoloader = :zeitwerk
+    config.active_support.use_authenticated_message_encryption = true
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
