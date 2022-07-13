@@ -124,6 +124,8 @@ describe('LessonLockDataApi', () => {
           ]
         })
       });
+
+      window.fetch.restore();
     });
   });
 });
