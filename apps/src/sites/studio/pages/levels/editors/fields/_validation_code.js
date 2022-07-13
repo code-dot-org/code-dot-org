@@ -23,7 +23,7 @@ function initPage() {
   }
   for (const name in data) {
     const element = $('#generateValidation' + name);
-    element.on('click', () => validationEditor.getDoc().setValue(data[name]));
+    element.on('click', () => validationEditor && validationEditor.getDoc().setValue(data[name]));
   }
 }
 
