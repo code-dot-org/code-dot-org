@@ -278,7 +278,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     validate_summary(school, school_year, "MAYBE")
   end
 
-  test "High school lack of state data in a denylist state and non-denylist year does not override anything" do
+  test "High school lack of state data in a denylist state and non-denylist year does override previous years" do
     return if Census::StateCsOffering::INFERRED_NO_EXCLUSION_LIST.empty?
     school_year = 2020
     state = Census::StateCsOffering::INFERRED_NO_EXCLUSION_LIST.first.split(':').first
