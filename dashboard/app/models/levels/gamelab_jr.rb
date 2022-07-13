@@ -195,8 +195,8 @@ check();
   }, "noSprites");  // Failure message: "You need to make a sprite."
 
   // Additional calls to addCriteria(), in order of precedence
-  }
-  check();
+}
+check();
 ',
 
     clickSpriteForSpeechExample:
