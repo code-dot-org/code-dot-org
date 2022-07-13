@@ -22,7 +22,7 @@ jobs:
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
         ports:
           - 3306
-        options: --explicit_defaults_for_timestamp
+        #options: --explicit_defaults_for_timestamp
     env:
       CI: true
       RAILS_ENV: test
