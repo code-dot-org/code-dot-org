@@ -741,7 +741,7 @@ GEM
     retryable (2.0.4)
     rexml (3.2.5)
     rinku (2.0.4)
-    rmagick (3.2.0)
+    rmagick (4.2.5)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -1040,7 +1040,7 @@ DEPENDENCIES
   rest-client (~> 2.0.1)
   retryable
   rinku
-  rmagick (~> 3.2)
+  rmagick (~> 4.2.5)
   rspec
   rubocop (= 1.28)
   rubocop-performance
