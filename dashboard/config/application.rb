@@ -30,6 +30,13 @@ module Dashboard
     config.action_dispatch.return_only_media_type_on_content_type = false
     config.autoloader = :zeitwerk
 
+    # temporarily disable some default values that we aren't yet ready for
+    # TODO infra: remove this
+    # added in https://github.com/rails/rails/pull/28132
+    config.action_dispatch.use_authenticated_cookie_encryption = false
+    # added in https://github.com/rails/rails/pull/29263
+    config.active_support.use_authenticated_message_encryption = false
+
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
