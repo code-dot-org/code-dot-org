@@ -11,7 +11,7 @@ teacher_markdown <<MARKDOWN
 MARKDOWN
 
 markdown <<MARKDOWN
-The Flower class has been created and includes a no argument constructor.  Given variables declared and initalized below, which of the following will return `true`? 
+The Flower class has been created and includes a no argument constructor.  Given variables declared and initialized below, which of the following will return `true`? 
 
 ```
 Flower daisy = new Flower();
