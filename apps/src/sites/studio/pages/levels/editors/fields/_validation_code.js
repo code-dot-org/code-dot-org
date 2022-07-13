@@ -3,7 +3,7 @@ import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const data = getScriptData('map');
-console.log(data);
+let validationEditor;
 
 $(initPage);
 
@@ -16,10 +16,14 @@ function initPage() {
     widgetMode.on('click', () => syncValidateWithElements(embed, widgetMode));
   }
   if ($('#level_validation_code').length > 0) {
-    this.validationEditor = initializeCodeMirror(
+    validationEditor = initializeCodeMirror(
       'level_validation_code',
       'javascript'
     );
+  }
+  for (const name in data) {
+    const element = $('#generateValidation' + name);
+    element.on('click', () => validationEditor.getDoc().setValue(data[name]));
   }
 }
 
@@ -31,5 +35,5 @@ function syncValidateWithElements(element1, element2) {
 }
 
 window.levelbuilder.populateValidationEditor = function(string) {
-  document.validationEditor.getDoc().setValue(string);
+  validationEditor.getDoc().setValue(string);
 };

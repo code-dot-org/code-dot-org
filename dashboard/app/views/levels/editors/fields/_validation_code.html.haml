@@ -40,7 +40,7 @@
         :javascript
           var verificationFunction#{name} = '#{value.gsub('\n', "\\n' + '")}';
         %li
-          %a{style:"cursor: pointer", id:"#generateValidation#{name}", onclick: "levelbuilder.populateValidationEditor(verificationFunction#{name});"}= name
+          %a{style:"cursor: pointer", id:"generateValidation#{name}"}= name
     = f.text_area :validation_code
 
   = render partial: 'levels/editors/fields/applab_validations', locals: {f: f} if @level.is_a?(Applab)
