@@ -25,7 +25,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'enroll get route' do
     assert_routing(
-      {path: "/pd/workshops/#{@workshop.id}/enroll", method: :get},
+      {path: "http://#{CDO.dashboard_hostname}/pd/workshops/#{@workshop.id}/enroll", method: :get},
       {controller: 'pd/workshop_enrollment', action: 'new', workshop_id: @workshop.id.to_s}
     )
   end
@@ -117,7 +117,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'show route' do
     assert_routing(
-      {path: "/pd/workshop_enrollment/#{@existing_enrollment.code}", method: :get},
+      {path: "http://#{CDO.dashboard_hostname}/pd/workshop_enrollment/#{@existing_enrollment.code}", method: :get},
       {controller: 'pd/workshop_enrollment', action: 'show', code: @existing_enrollment.code}
     )
   end
@@ -134,7 +134,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'cancel route' do
     assert_routing(
-      {path: "/pd/workshop_enrollment/#{@existing_enrollment.code}/cancel", method: :get},
+      {path: "http://#{CDO.dashboard_hostname}/pd/workshop_enrollment/#{@existing_enrollment.code}/cancel", method: :get},
       {controller: 'pd/workshop_enrollment', action: 'cancel', code: @existing_enrollment.code}
     )
   end

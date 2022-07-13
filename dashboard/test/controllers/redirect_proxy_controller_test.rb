@@ -34,7 +34,7 @@ class RedirectProxyControllerTest < ActionController::TestCase
   end
 
   test 'should avoid redirect if host/port match this server' do
-    local_uri = "http://test.host:80/foobar"
+    local_uri = "http://test-studio.code.org:80/foobar"
     get :get, params: {u: local_uri}
 
     assert_response :success
