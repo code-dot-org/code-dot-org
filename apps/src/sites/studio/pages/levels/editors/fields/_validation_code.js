@@ -2,7 +2,7 @@ import $ from 'jquery';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
-const data = getScriptData('map');
+const sampleValidationCodeMap = getScriptData('map');
 let validationEditor;
 
 $(initPage);
@@ -21,9 +21,12 @@ function initPage() {
       'javascript'
     );
   }
-  for (const name in data) {
+  for (const name in sampleValidationCodeMap) {
+    const sampleValidationCode = sampleValidationCodeMap[name];
     const element = $('#generateValidation' + name);
-    element.on('click', () => validationEditor.getDoc().setValue(data[name]));
+    element.on('click', () =>
+      validationEditor.getDoc().setValue(sampleValidationCode)
+    );
   }
 }
 
