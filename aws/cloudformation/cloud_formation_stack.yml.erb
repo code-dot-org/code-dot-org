@@ -500,7 +500,8 @@ Resources:
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
       DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
-<% if database %>
+# We don't yet provision the production database cluster/instances via CloudFormation.
+<% if database && !rack_env?(:production) %>
     DependsOn: Aurora1
 <% end -%>
 <%end-%>
@@ -543,7 +544,8 @@ Resources:
         - DeviceIndex: 0
           SubnetId: <%=subnets[1].to_json%>
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
-<%   if database %>
+# We don't yet provision the production database cluster/instances via CloudFormation.
+<%   if database && !rack_env?(:production)%>
     DependsOn: Aurora1
 <%   end -%>
 <% end-%>

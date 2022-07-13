@@ -1,3 +1,18 @@
+# We don't yet provision the production database cluster/instances via CloudFormation, but we're incrementally
+# working towards that. Start with provisioning the DB Instance and Cluster ParameterGroups via this template.
+<%
+  YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb'))).each do |key, values|
+-%>
+  <%=key%>DBParameters:
+    Type: AWS::RDS::DB<%=key.match('Cluster')%>ParameterGroup
+    Properties:
+      Description: !Sub "<%=key.titleize%> DB Parameters for ${AWS::StackName}."
+      Family: aurora-mysql5.7
+      Parameters: <%=values.compact.to_json%>
+<%end -%>
+
+# We don't provision these in production via CloudFormation ... yet!
+<% !rack_env?(:production)%>
   AuroraCluster:
     Type: AWS::RDS::DBCluster
     Properties:
@@ -21,9 +36,9 @@
       DeletionProtection: <%= rack_env?(:adhoc) ? false : true %>
       BackupRetentionPeriod: !Ref DBBackupRetention
 <%
-  # Integer range identifying each of the DB Instances to provision in the cluster.
-  DB_INSTANCE_RANGE=(0..1)
-  DB_INSTANCE_RANGE.each do |i| %>
+    # Integer range identifying each of the DB Instances to provision in the cluster.
+    DB_INSTANCE_RANGE=(0..1)
+    DB_INSTANCE_RANGE.each do |i| %>
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance
     Properties:
@@ -36,20 +51,9 @@
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
       # We will usually do engine version updates manually, so don't specify an EngineVersion for the DBInstance.
-<% end -%>
+<%  end -%>
 
-<%
-  YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb'))).each do |key, values|
--%>
-  <%=key%>DBParameters:
-    Type: AWS::RDS::DB<%=key.match('Cluster')%>ParameterGroup
-    Properties:
-      Description: !Sub "<%=key.titleize%> DB Parameters for ${AWS::StackName}."
-      Family: aurora-mysql5.7
-      Parameters: <%=values.compact.to_json%>
-<%end -%>
-
-<% db_secrets = [nil, 'application-writer', 'readonly'].map do |user| -%>
+<%  db_secrets = [nil, 'application-writer', 'readonly'].map do |user| -%>
   DatabaseSecret<%=secret = user&.underscore&.camelcase%>:
     Type: AWS::SecretsManager::Secret
     Properties:
@@ -60,7 +64,7 @@
         PasswordLength: 10
         ExcludePunctuation: True
       Name: !Sub "CfnStack/${AWS::StackName}/database-<%=user || 'secret'%>"
-<% secret; end -%>
+<%  secret; end -%>
 
   DBProxy:
     Type: AWS::RDS::DBProxy
@@ -69,9 +73,9 @@
       EngineFamily: MYSQL
       RoleArn: !GetAtt DBProxyRole.Arn
       Auth:
-<% db_secrets.each do |secret| -%>
+<%  db_secrets.each do |secret| -%>
         - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%=secret%>, IAMAuth: DISABLED}
-<%end -%>
+<%  end -%>
       VpcSubnetIds: <%=subnets.to_json%>
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
   ReaderDBProxyEndpoint:
@@ -90,9 +94,9 @@
         - PolicyName: RDSProxy
           PolicyDocument:
             Statement:
-<% db_secrets.each do |secret| -%>
+<%  db_secrets.each do |secret| -%>
               - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecret<%=secret%>}
-<%end -%>
+<%  end -%>
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   DBProxyTargetGroup:
     Type: AWS::RDS::DBProxyTargetGroup
@@ -149,4 +153,4 @@
         # Ensure that connections to the reader database instances that are carrying out "reporting" queries do not
         # exceed 5% of the total database connection capacity of a reader instance.
         MaxConnectionsPercent: 5
-
+<%end -%>
