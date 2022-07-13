@@ -33,7 +33,3 @@ function syncValidateWithElements(element1, element2) {
   autoValidate.prop('checked', !eitherChecked);
   autoValidate.prop('disabled', eitherChecked);
 }
-
-window.levelbuilder.populateValidationEditor = function(string) {
-  validationEditor.getDoc().setValue(string);
-};
