@@ -52,7 +52,7 @@
       "overload_of": null,
       "content": "Returns a random value that is greater than or equal to `0.0` and less than `1.0`. ",
       "parameters": "[]",
-      "examples": "[{\"code\":\"\"}]",
+      "examples": "[{\"code\":\"```\\ndouble randomValue = Math.random();\\nSystem.out.println(randomValue);\\n```\\n\\n![](https://images.code.org/1d8b44796999067d2cacb3911cd75e62-math_random.gif)\"}]",
       "syntax": "`public static double random()`",
       "external_link": null,
       "return_value": null
@@ -64,7 +64,7 @@
       "overload_of": null,
       "content": "Returns the first argument raised to the power of the second argument.",
       "parameters": "[{\"name\":\"a\",\"type\":\"double\",\"required\":true,\"description\":\"the base\"},{\"name\":\"b\",\"type\":\"double\",\"required\":true,\"description\":\"the exponent\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\ndouble a = 30;\\ndouble b = 2;\\nSystem.out.println(Math.pow(a, b));\\n  \\na = 3;\\nb = 4;\\nSystem.out.println(Math.pow(a, b));\\n  \\na = 2;\\nb = 6;\\nSystem.out.println(Math.pow(a, b));\\n```\\n\\n**Output:**\\n\\n900.0\\n\\n81.0\\n\\n64.0\"}]",
       "syntax": "`public static double pow(double a, double b)`",
       "external_link": null,
       "return_value": null

@@ -1,0 +1,589 @@
+{
+  "script": {
+    "name": "csa-draft-pl",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "csa-draft-pl",
+    "serialized_at": "2022-07-13 00:35:12 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "csa-draft-pl"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "new-lesson-group",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Module 2 post-work: Understanding Unit 4 content",
+      "name": "Module 2 post-work: Understanding Unit 4 content",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "48855666-8b2e-45c8-8498-3cf978e84f50",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "48855666-8b2e-45c8-8498-3cf978e84f50",
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "d7684854-a52a-4e2e-9ac9-1e414e83b6fa",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 2 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7684854-a52a-4e2e-9ac9-1e414e83b6fa",
+        "lesson_activity.key": "48855666-8b2e-45c8-8498-3cf978e84f50"
+      }
+    },
+    {
+      "key": "15f26d4c-7f48-4be7-be14-acb3ed4ea4b4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Aliases in Java (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "15f26d4c-7f48-4be7-be14-acb3ed4ea4b4",
+        "lesson_activity.key": "48855666-8b2e-45c8-8498-3cf978e84f50"
+      }
+    },
+    {
+      "key": "9344386a-6934-434e-8892-1f894ff87bf5",
+      "position": 3,
+      "properties": {
+        "progression_name": "The equals() method (~25 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "9344386a-6934-434e-8892-1f894ff87bf5",
+        "lesson_activity.key": "48855666-8b2e-45c8-8498-3cf978e84f50"
+      }
+    },
+    {
+      "key": "9d4f4113-fbcc-40c8-8556-0eaaa0271f52",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice writing an equals() method (~15 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d4f4113-fbcc-40c8-8556-0eaaa0271f52",
+        "lesson_activity.key": "48855666-8b2e-45c8-8498-3cf978e84f50"
+      }
+    },
+    {
+      "key": "691cb33c-c3da-4330-8b2c-e425c7fcfddc",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap Up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "691cb33c-c3da-4330-8b2c-e425c7fcfddc",
+        "lesson_activity.key": "48855666-8b2e-45c8-8498-3cf978e84f50"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-overview_-m2"
+        ],
+        "progression": "Module 2 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-2-overview_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "d7684854-a52a-4e2e-9ac9-1e414e83b6fa"
+      },
+      "level_keys": [
+        "vpl-csa-module-2-overview_-m2"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Aliases in Java (~10 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-2-intro-to-equality-video"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "15f26d4c-7f48-4be7-be14-acb3ed4ea4b4"
+      },
+      "level_keys": [
+        "vpl-csa-module-2-intro-to-equality-video"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-alias-video_-m2"
+        ],
+        "progression": "Aliases in Java (~10 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-2-alias-video_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "15f26d4c-7f48-4be7-be14-acb3ed4ea4b4"
+      },
+      "level_keys": [
+        "vpl-csa-module-2-alias-video_-m2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-CFU-alias_-m2"
+        ],
+        "progression": "Aliases in Java (~10 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-2-CFU-alias_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "15f26d4c-7f48-4be7-be14-acb3ed4ea4b4"
+      },
+      "level_keys": [
+        "vpl-csa-module-2-CFU-alias_-m2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The equals() method (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-2-equals-video-intro"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "9344386a-6934-434e-8892-1f894ff87bf5"
+      },
+      "level_keys": [
+        "vpl-csa-module-2-equals-video-intro"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-equals-video_-m2"
+        ],
+        "progression": "The equals() method (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-2-equals-video_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "9344386a-6934-434e-8892-1f894ff87bf5"
+      },
+      "level_keys": [
+        "vpl-csa-module-2-equals-video_-m2"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The equals() method (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-2-CFU-equals-method"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "9344386a-6934-434e-8892-1f894ff87bf5"
+      },
+      "level_keys": [
+        "vpl-csa-module-2-CFU-equals-method"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-2022-m2-equality-reflection_-m2"
+        ],
+        "progression": "The equals() method (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-m2-equality-reflection_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "9344386a-6934-434e-8892-1f894ff87bf5"
+      },
+      "level_keys": [
+        "vpl-csa-2022-m2-equality-reflection_-m2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-2022-m2-equality-book-reflection_-m2"
+        ],
+        "progression": "The equals() method (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-m2-equality-book-reflection_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "9344386a-6934-434e-8892-1f894ff87bf5"
+      },
+      "level_keys": [
+        "vpl-csa-2022-m2-equality-book-reflection_-m2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-equals-book-video_-m2"
+        ],
+        "progression": "The equals() method (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-2-equals-book-video_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "9344386a-6934-434e-8892-1f894ff87bf5"
+      },
+      "level_keys": [
+        "vpl-csa-module-2-equals-book-video_-m2"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice writing an equals() method (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-2-equals-level-from-curriculum_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "9d4f4113-fbcc-40c8-8556-0eaaa0271f52"
+      },
+      "level_keys": [
+        "vpl-csa-module-2-equals-level-from-curriculum_-m2"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-wrap-up_-m2"
+        ],
+        "progression": "Wrap Up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-2-wrap-up_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "691cb33c-c3da-4330-8b2c-e425c7fcfddc"
+      },
+      "level_keys": [
+        "vpl-csa-module-2-wrap-up_-m2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-2-overview_-m2",
+        "script_level.level_keys": [
+          "vpl-csa-module-2-overview_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "d7684854-a52a-4e2e-9ac9-1e414e83b6fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-2-intro-to-equality-video",
+        "script_level.level_keys": [
+          "vpl-csa-module-2-intro-to-equality-video"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "15f26d4c-7f48-4be7-be14-acb3ed4ea4b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-2-alias-video_-m2",
+        "script_level.level_keys": [
+          "vpl-csa-module-2-alias-video_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "15f26d4c-7f48-4be7-be14-acb3ed4ea4b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-2-CFU-alias_-m2",
+        "script_level.level_keys": [
+          "vpl-csa-module-2-CFU-alias_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "15f26d4c-7f48-4be7-be14-acb3ed4ea4b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-2-equals-video-intro",
+        "script_level.level_keys": [
+          "vpl-csa-module-2-equals-video-intro"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "9344386a-6934-434e-8892-1f894ff87bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-2-equals-video_-m2",
+        "script_level.level_keys": [
+          "vpl-csa-module-2-equals-video_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "9344386a-6934-434e-8892-1f894ff87bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-2-CFU-equals-method",
+        "script_level.level_keys": [
+          "vpl-csa-module-2-CFU-equals-method"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "9344386a-6934-434e-8892-1f894ff87bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-m2-equality-reflection_-m2",
+        "script_level.level_keys": [
+          "vpl-csa-2022-m2-equality-reflection_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "9344386a-6934-434e-8892-1f894ff87bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-m2-equality-book-reflection_-m2",
+        "script_level.level_keys": [
+          "vpl-csa-2022-m2-equality-book-reflection_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "9344386a-6934-434e-8892-1f894ff87bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-2-equals-book-video_-m2",
+        "script_level.level_keys": [
+          "vpl-csa-module-2-equals-book-video_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "9344386a-6934-434e-8892-1f894ff87bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-2-equals-level-from-curriculum_-m2",
+        "script_level.level_keys": [
+          "vpl-csa-module-2-equals-level-from-curriculum_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "9d4f4113-fbcc-40c8-8556-0eaaa0271f52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-2-wrap-up_-m2",
+        "script_level.level_keys": [
+          "vpl-csa-module-2-wrap-up_-m2"
+        ],
+        "lesson.key": "Module 2 post-work: Understanding Unit 4 content",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "691cb33c-c3da-4330-8b2c-e425c7fcfddc"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}
