@@ -30,6 +30,7 @@ jobs:
       DISABLE_SPRING: 1
       MYSQL_USER: user
       MYSQL_PASSWORD: password
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
