@@ -7,14 +7,14 @@
   Hi
   = @enrollment.first_name + ','
 
-- if @workshop.local_summer? || @workshop.ayw?
+- if @workshop.local_summer?
   %p
     Thanks for enrolling in
     = "#{@workshop.organizer.name}’#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
     5-day Summer workshop on the Code.org
     = @workshop.course
     curriculum.
-- elsif [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
+- elsif @workshop.ayw? || ([Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course)
   %p
     Thanks for enrolling in
     = "#{@workshop.organizer.name}’#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
