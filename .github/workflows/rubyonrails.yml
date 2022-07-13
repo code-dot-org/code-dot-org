@@ -39,13 +39,17 @@ jobs:
           bundler-cache: true
           
       - name: Bundle Install
-        run: bundle install --with test
+        run: |
+          bundle install --with test
+          cd dashboard/
+          bundle install
+          cd ../
           
       # Add or replace database setup steps here
       - name: Create db
         run: |
           cd dashboard/
-          bin/rake db:create
+          bundle exec rake db:create
           cd ../
       #- name: Install Dashboard
       #  run: bundle exec rake install:dashboard --trace
