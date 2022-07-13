@@ -88,10 +88,10 @@ test:
     <<: *mysql_defaults
     database: dashboard_test<%= ENV['TEST_ENV_NUMBER'] %>
     host: <%= writer.host || 'localhost' %>
-    password: <%= ENV['CI'] ? 'password' : (writer.password || '') %>
+    password: <%= writer.password || '' %>
     pool: <%= ENV['CI'] ? 20 : 5 %>
     port: <%= writer.port || 3306 %>
-    username: <%= ENV['CI'] ? 'user' : (writer.user || 'root') %>
+    username: <%= writer.user || 'root' %>
 
 production:
   <<: *environment_defaults
