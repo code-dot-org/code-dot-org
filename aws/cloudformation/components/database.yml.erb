@@ -12,7 +12,7 @@
 <%end -%>
 
 # We don't provision these in production via CloudFormation ... yet!
-<% !rack_env?(:production)%>
+<% unless rack_env?(:production)%>
   AuroraCluster:
     Type: AWS::RDS::DBCluster
     Properties:
