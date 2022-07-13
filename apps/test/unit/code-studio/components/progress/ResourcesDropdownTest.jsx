@@ -7,10 +7,10 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 
 describe('ResourcesDropdown', () => {
-  it('renders migrated resources for teacher', () => {
+  it('renders resources for teacher', () => {
     const wrapper = shallow(
       <ResourcesDropdown
-        migratedResources={[
+        resources={[
           {
             key: 'key1',
             name: 'Curriculum',
@@ -39,10 +39,10 @@ describe('ResourcesDropdown', () => {
     ).to.be.true;
   });
 
-  it('renders migrated resources for student', () => {
+  it('renders resources for student', () => {
     const wrapper = shallow(
       <ResourcesDropdown
-        migratedResources={[
+        resources={[
           {
             key: 'key1',
             name: 'Curriculum',

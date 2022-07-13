@@ -1809,7 +1809,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.project_versions
+  # Table: dashboard.project_commits
   #
 
   test "clears 'comment' on any version of all of a purged user's projects" do
