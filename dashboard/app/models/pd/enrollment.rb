@@ -168,7 +168,7 @@ class Pd::Enrollment < ApplicationRecord
         enrollments.is_a?(Enumerable) && enrollments.all? {|e| e.is_a?(Pd::Enrollment)}
 
     # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion.
-    # CSF Deep Dive after 9/1 also uses Foorm
+    # CSF Deep Dive after 9/1 also uses Foorm. CSF District workshops will always use Foorm
     foorm_enrollments, other_enrollments = enrollments.partition do |enrollment|
       (enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
         (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) ||
