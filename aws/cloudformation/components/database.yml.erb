@@ -18,7 +18,7 @@
         - audit
         - error
         - slowquery
-      DeletionProtection: true
+      DeletionProtection: <%= rack_env?(:adhoc) ? false : true %>
       BackupRetentionPeriod: !Ref DBBackupRetention
 <%
   # Integer range identifying each of the DB Instances to provision in the cluster.
