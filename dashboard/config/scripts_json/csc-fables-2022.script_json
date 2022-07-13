@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2022-07-11 21:04:07 UTC",
+    "serialized_at": "2022-07-12 17:50:56 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -117,7 +117,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "In this lesson, students will have time to reflect on their projects and share them with their peers. Students should work with their peers to debug any errors in their code. They are encouraged to  make connections to peers who have similar problems in their code, how they solved those problems, or see different ways to program. ",
-        "preparation": "- Print Project Reflection handouts for each student\n- Review the activity prior to starting \n",
+        "preparation": "- Print [Project Reflection](https://docs.google.com/document/d/1ZA4EsDmNolOQDn0K-p1CzT4Mn9CnBigTGfE5ZijKu0g/template/preview) handouts for each student\n- Review the activity prior to starting \n",
         "purpose": "Students will take on varying roles to collaborate with peers during the review stage of programming their fable. Students will describe choices made during programming, offer feedback to students, and reflect upon what they learned in the module. "
       },
       "seeding_key": {
@@ -521,7 +521,7 @@
       "key": "1eae1f71-de3d-47ae-9fdf-6e4355d5c3a6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss**: What is an example of a story with a lesson?\n\n**Discussion Goal**: Encourage students to make connections to stories they’ve heard growing up or from family members and ask them to share with the group, or stories they’ve seen in movies or television. Use The Tortoise and the Hare as an example to help guide the discussion. As students share, connect their stories back to the ones they read as a class and compare how characters or morals/lessons can be similar between many different stories. Students should understand that short stories that are fairytales, fables, folklore, or myths explain or show a moral. Review examples of common fables students may be familiar with, like The Tortoise and the Hare, The Boy who Cried Wolf, or The Ugly Duckling. You can also ask students to share stories they’ve read with their family that may have a moral as well.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss**: _What is an example of a story with a lesson?_\n\n**Discussion Goal**: Encourage students to make connections to stories they’ve heard growing up or from family members or stories they’ve seen in movies or television. Ask students to share these stories with the group. Use **The Tortoise and the Hare** as an example to help guide the discussion. \n\nAs students share, connect their stories back to the ones they read as a class and compare how characters or morals/lessons can be similar between many different stories. Students should understand that short stories that are fairytales, fables, folklore, or myths explain or show a moral. Review examples of common fables students may be familiar with, like The Tortoise and the Hare, The Boy who Cried Wolf, or The Ugly Duckling. You can also ask students to share other stories they’ve read that may have a moral.",
         "duration": "5",
         "name": "Reflect"
       },
@@ -546,7 +546,7 @@
       "key": "d9c25cc5-67d5-4005-989b-906ca2a88a1e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**\n\n- **Fable** - A short story conveying a moral\n- **Moral** - A lesson learned\n- **Scene** - A small moment in a short story\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**\n\n- **Fable, Fairytale, Folklore, or Myth** - A short story conveying a moral\n- **Moral** - A lesson learned\n- **Key Detail** - An important moment in the story that adds meaning\n\n\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d9c25cc5-67d5-4005-989b-906ca2a88a1e",
@@ -586,7 +586,7 @@
       "key": "3fc4d6eb-9b3b-4cf8-851f-010b532427da",
       "position": 3,
       "properties": {
-        "description": "\n\n**Do This:** After completing the Venn Diagram for one story, instruct students that they will be placed into partnerships and as a group, they will be reading a story with a similar lesson/moral. Students will compare their stories, to the story they read aloud as a class.  \n\nAsk students to write any similarities between the two stories. These may have to do with the plot, like both stories involving an obstacle to overcome, or it may have to do with the setting, such as both stories being set in an outdoor space.\n\n**Do This:** Once students have finished filling in their Venn Diagram, students will jigsaw to share their work with other students. \n\n**Create a jigsaw:**\n1. Split the room into groups of 4-5.\n2. Give each person in the group a short story from the text set.\n3. Each person in the group will become an “expert” on their short story.\n4. Assign a number to each person in the group. This will be their “expert” group. \n5. Students move to “expert” groups and give the group their short story.\n6. Each group will read their story allowed and then discuss using the following guiding questions:\n7. In your own words, what is the moral?\n   - Where in the story did the characters learn the lesson?\n   - What events in the story contributed to making this lesson?\n   - How is this lesson similar, or different than the lesson of the short story we read as a class?\n8. Have students return to their original groups. There should be an “expert” for each number/short story.\n9. Students will share with their groups their findings/answers to the guiding questions which allows all students to hear examples of several different short stories. \n"
+        "description": "\n\n**Do This:** After completing the Venn Diagram for one story, instruct students that they will be placed into partnerships and as a group, they will be reading a story with a similar lesson/moral. Students will compare their stories, to the story they read aloud as a class.  \n\nAsk students to write any similarities between the two stories. These may have to do with the plot, like both stories involving an obstacle to overcome, or it may have to do with the setting, such as both stories being set in an outdoor space.\n\n**Do This:** Once students have finished filling in their Venn Diagram, students will jigsaw to share their work with other students. \n\n**Create a jigsaw:**\n1. Split the room into groups of 4-5.\n2. Give each person in the group a short story from the text set.\n3. Each person in the group will become an “expert” on their short story.\n4. Assign a number to each person in the group. This will be their “expert” group. \n5. Students move to “expert” groups and give the group their short story.\n6. Each group will read their story aloud and then discuss using the following guiding questions: \n   - In your own words, what is the moral?\n   - Where in the story did the characters learn the lesson?\n   - What events in the story contributed to making this lesson?\n   - How is this lesson similar, or different than the lesson of the short story we read as a class?\n8. Have students return to their original groups. There should be an “expert” for each number/short story.\n9. Students will share with their groups their findings/answers to the guiding questions which allows all students to hear examples of several different short stories. \n"
       },
       "seeding_key": {
         "activity_section.key": "3fc4d6eb-9b3b-4cf8-851f-010b532427da",
@@ -600,7 +600,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Benefits to using a jigsaw will allow students to get exposure to different stories. They will have a chance to act as both expert and researcher as they go around the classroom. This can be quicker and more effective than having each student read every story and analyze it as a class."
+            "markdown": "Using a jigsaw will allow students to get exposure to different stories. They will have a chance to act as both expert and researcher as they go around the classroom. This can be quicker and more effective than having each student read every story and analyze it as a class."
           }
         ]
       },
@@ -613,7 +613,7 @@
       "key": "dd838c02-ba76-41b5-8f4c-1b3d1bc16219",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n_How were the short stories we read similar? How were they different?_\n\n**Discussion Goal**: Encourage students to give specific examples about the story they read by using titles and specific details. All had a moral of ____________, One short story had a similar problem to another, et cetera. Students will gain an understanding, that all of these types of stories follow a similar pattern.  \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- _How were the short stories we read similar?_\n- _How were they different?_\n\n**Discussion Goal**: Encourage students to give specific examples about the story they read by using titles and specific details. All had a moral of ____________, One short story had a similar problem to another, et cetera. Students will gain an understanding, that all of these types of stories follow a similar pattern.  \n",
         "duration": "10",
         "name": "Review Anchor Chart"
       },
@@ -651,7 +651,7 @@
       "key": "ddfc79ff-62fb-49ba-8566-161d13056b85",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What are some examples of short stories we have read?_\n\n**Discussion Goal**: Students should recall from the previous lesson that short stories we have read are fables, fairy tales, or myths and they all end with a moral. Students may also remember certain characters and their traits from the earlier lesson."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What are some examples of short stories we have read?_\n- _What was the moral of those stories?_\n\n\n**Discussion Goal**: Students should recall from the previous lesson that short stories we have read are fables, fairy tales, or myths and they all end with a moral. Students may also remember certain characters and their traits from the earlier lesson."
       },
       "seeding_key": {
         "activity_section.key": "ddfc79ff-62fb-49ba-8566-161d13056b85",
@@ -662,7 +662,7 @@
       "key": "0892aece-69c5-4662-8aff-4778a049b91e",
       "position": 4,
       "properties": {
-        "description": "In most fables, it’s the characters actions that lead to the **moral**. When we create our own retell of a short story, we’ll also have to think carefully about scenes or key details that convey the moral.",
+        "description": "In most fables, it’s the characters actions that lead to the **moral**. When we create our own retelling of a short story, we will also have to think carefully about scenes or key details that convey the moral.",
         "duration": "5",
         "name": "What is a Moral",
         "remarks": true
@@ -687,7 +687,7 @@
       "key": "40e3df32-0c5e-4fd0-ad1a-3ccc8434bb3d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: _Think back to our previous class, what were the stories we read? And what were their morals?_\n\n**Discussion Goal**:  Students should recall the morals from the previous lessons and key details of those stories. They can also brainstorm other scenes in stories they are familiar with.\n\n**Do This:** As students reach the end of their brainstorm, remind them of the moral of a previous story they have read and help them see how the character’s traits directly relate to the moral of the story. This is because the reader learns the moral of the story through the character’s actions and growth.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: \n- _Think back to our previous class, what were the stories we read?_ \n- _What were their morals?_\n\n**Discussion Goal**:  Students should recall the morals from the previous lessons and key details of those stories. They can also brainstorm other scenes in stories they are familiar with.\n\n**Do This:** As students reach the end of their brainstorm, remind them of the moral of a previous story they have read and help them see how the character’s traits directly relate to the moral of the story. This is because the reader learns the moral of the story through the character’s actions and growth.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "40e3df32-0c5e-4fd0-ad1a-3ccc8434bb3d",
@@ -742,7 +742,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Retelling Your Own Short Story**: The Student Guide has been supplied with several existing short stories in the public domain. However, you may decide to add other stories to this list based on your students interests and cultures. In particular, if you heard examples of stories that students shared in the first lesson, you could add those to this reference that students can choose from."
+            "markdown": "**Retelling Your Own Short Story**: The Fables Guide has been supplied with several existing short stories in the public domain. However, you may decide to add other stories to this list based on your students' interests and cultures. In particular, if you heard examples of stories that students shared in the first lesson, you could add those to this reference guide for students to choose from."
           }
         ]
       },
@@ -766,7 +766,7 @@
       "key": "73d1a0a0-be49-4d18-8a4b-4bce13d31ba1",
       "position": 4,
       "properties": {
-        "description": "You are going to be retelling a short story that teaches us about [insert the theme of your choice: greed, kindness, hard work pays off, etc]. The retelling of the story is going to include key details in the story where the lesson/moral is shown. Let’s take a look at the rubric to see what your project will include. \n\nToday we’ll decide on the programs we are going to make, and tomorrow we’ll create it with code! When you are writing, think about the stories we read, and the scenes where the lesson is shown. \n\nIn Part 1, you are going to choose your fable. In Part 2, you are choosing your characters and describing them. In Part 3, you are going to choose three key details to create your scene. Make sure to include the moral at the end. Part 4 is a checklist for you to reflect on your project plan. In the checklist you should have: \n\n- My images match the story\n- I include dialogue for three or more characters\n- I use at least three events to have my characters interact\n- Each character says something that matches their description\n- The moral is clearly stated\n- There is a clear beginning, middle, and end\n- I have completely filled out my project plan\n",
+        "description": "You are going to be retelling a short story that teaches us about [insert the theme of your choice: greed, kindness, hard work pays off, etc]. The retelling of the story is going to include key details in the story where the lesson/moral is shown. Let’s take a look at the rubric to see what your project will include. \n\nToday we’ll decide on the programs we are going to make, and tomorrow we’ll create it with code! When you are writing, think about the stories we read, and the scenes where the lesson is shown. \n\nIn Part 1, you are going to choose your fable. In Part 2, you are choosing your characters and describing them. In Part 3, you are going to choose three key details to create your scene. Make sure to include the moral at the end. Part 4 is a checklist for you to reflect on your project plan. In the checklist you should have: \n\n- My images match the story\n- I include dialogue for three or more characters\n- I use at least three events to have my characters interact\n- Each character says something that matches their description\n- The moral is clearly stated\n- There is a clear beginning, middle, and end\n- I have completed my project plan\n\n",
         "remarks": true
       },
       "seeding_key": {
@@ -817,7 +817,7 @@
       "key": "eee612da-143d-4011-a845-f69b9dc0d57c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Check In” slide\n\n**Check In**: \n- My images match the story\n- I include dialogue for three or more characters\n- I use at least three events to have my characters interact\n- Each character says something that matches their description\n- The moral is clearly stated\n- There is a clear beginning, middle, and end\n- I have completely filled out my project plan\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Check In” slide\n\n**Check In**: \n- My images match the story\n- I include dialogue for three or more characters\n- I use at least three events to have my characters interact\n- Each character says something that matches their description\n- The moral is clearly stated\n- There is a clear beginning, middle, and end\n- I have completed my project plan\n"
       },
       "seeding_key": {
         "activity_section.key": "eee612da-143d-4011-a845-f69b9dc0d57c",
@@ -840,7 +840,7 @@
       "key": "1d4a8285-e54c-4853-a09b-1a578c51b91d",
       "position": 3,
       "properties": {
-        "description": "**Do This**: Circulate around the room to hear students’ ideas and provide them with feedback. By the end of this lesson, students should be ready to just into coding during the next class. "
+        "description": "**Do This**: Circulate around the room to hear students’ ideas and provide them with feedback. By the end of this lesson, students should be ready to jump into coding during the next class. "
       },
       "seeding_key": {
         "activity_section.key": "1d4a8285-e54c-4853-a09b-1a578c51b91d",
@@ -876,7 +876,7 @@
       "key": "3339de28-d1d4-47c2-acac-d21a60793c17",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What is the purpose of reading or telling fables?_\n- _Why are characters important in a fable?_\n\n**Discussion Goal**: Students should understand that the purpose of a fable is to teach a moral or lesson. They should be able to explain that a character and their traits directly relates to the moral of the story, and typically the reader learns the central lesson through the main character's traits and actions. Students can refer back to previous fables as examples, where they learned the moral through the actions of the characters."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What is the purpose of reading or telling fables?_\n- _Why are characters important in a fable?_\n\n**Discussion Goal**: Students should understand that the purpose of a fable is to teach a moral or lesson. They should be able to explain that a character and their traits directly relate to the moral of the story. They should also understand that the reader typically learns the central lesson through the main character's traits and actions. Students can refer back to previous fables as examples, where they learned the moral through the actions of the characters."
       },
       "seeding_key": {
         "activity_section.key": "3339de28-d1d4-47c2-acac-d21a60793c17",
@@ -926,7 +926,7 @@
       "key": "e5cd2cb7-0b2b-41b6-8f33-263e71b524a6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Choice Levels” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Sample Program” slide\n",
         "duration": "35",
         "name": "Code Your Fable"
       },
@@ -939,7 +939,7 @@
       "key": "1d0f61e0-2d11-4954-9f8c-c57c1f6fa66a",
       "position": 2,
       "properties": {
-        "description": "In Level 1, we are exploring an example program and looking at how it works. This program retells the story of “The Wizard of Oz”. Notice how this program has chosen the key details to be revealed with the event of Dorothy “touching” another sprite. \n\nYou can move the character with your arrow keys to start and move through the story's key details. At the end of the program, the moral is clearly displayed at the top of the screen. \n",
+        "description": "In Level 1, we are exploring an example program and looking at how it works. This program retells the story of “The Wizard of Oz”. Notice how this program has chosen the key details to be revealed with the event of Dorothy “touching” another sprite. \n\nMove the character with your arrow keys to start, then move through the story's key details. At the end of the program, the moral is clearly displayed at the top of the screen. \n",
         "remarks": true
       },
       "seeding_key": {
@@ -951,7 +951,7 @@
       "key": "48a28d14-eb09-48e9-8fa5-9aed3259b86d",
       "position": 3,
       "properties": {
-        "description": "**Do This**: Have students move to their computer and sign in. Students should begin exploring the example project by moving the character with the arrow keys and reading the key details. ",
+        "description": "**Do This**: Have students move to their computers and sign in. Students should begin exploring the example project by moving the character with the arrow keys and reading the key details. ",
         "progression_name": "Example"
       },
       "seeding_key": {
@@ -963,7 +963,7 @@
       "key": "257affb9-b2d9-4e3a-99df-5091da461bb8",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Discussion” slide\n\n**Discuss**: \n- _How did this coder set up the story?_ \n- _What happens when the main character touches another character?_ \n- _How does the story end?_\n\n**Discussion Goal**: Students should start to make the connection that each “when sprite touches” event includes a character’s dialogue that is a “key detail”. a key detail that moves the story forward to reveal more of the moral or lesson. At the end of the story, the moral is clearly displayed. \n\n**Do This**: Hand back the Fable Planning Sheet from yesterday’s lesson and make sure students have it available for the remainder of class. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Discussion” slide\n\n**Discuss**: \n- _How did this coder set up the story?_ \n- _What happens when the main character touches another character?_ \n- _How does the story end?_\n\n**Discussion Goal**: Students should start to make the connection that each `when sprite touches` event includes a character’s dialogue that is a “key detail”. A key detail moves the story forward to reveal more of the moral or lesson. At the end of the story, the moral is clearly displayed. \n\n**Do This**: Hand back the Story Planning Sheet from yesterday’s lesson and make sure students have it available for the remainder of class. "
       },
       "seeding_key": {
         "activity_section.key": "257affb9-b2d9-4e3a-99df-5091da461bb8",
@@ -977,7 +977,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "In the next level, students will begin to program their own fables. Point out to students that each of these examples features characters saying one of the \"key details\"."
+            "markdown": "In the next level, students will begin to program their own stories. Point out to students that each of these examples features characters saying one of the \"key details\"."
           }
         ]
       },
@@ -1001,7 +1001,7 @@
       "key": "8740863c-a188-42a7-8be8-2814f22a4b0d",
       "position": 7,
       "properties": {
-        "description": "In the next few lessons, you’ll be coding your own short story! Use the planning guide to help determine what you should include in your short story! Each level has specific instructions to help you code your short story - by the time you finish Level 9, your short story should be all done!",
+        "description": "In the next few lessons, you’ll be coding your own short story! Use the planning guide to help determine what you should include in your short story! Each level has specific instructions to help you code your short story - by the time you finish Level 10, your short story should be all done!",
         "remarks": true
       },
       "seeding_key": {
@@ -1013,7 +1013,7 @@
       "key": "b1e6c7c6-237f-4422-ad62-04225ce0fabd",
       "position": 8,
       "properties": {
-        "description": "**Do This**: Release students to begin working on Level 2. Circulate the room to support students and remind them to use their planning guide from yesterday. Once students have completed Level 2, they may move on to the other levels.  \n\n- In **Level 2**, students will add a narration and background.\n\n- In **Level 3**, students will add two new sprites.\n\n- In **Level 4**, students will add a say or think block for their sprites. \n\n- In **Level 5**, students will begin moving the sprite with arrow keys.\n\n- In **Level 6**, students will add an “when touches” events to add more say or think blocks. \n\n- In **Level 7**, students will add a new sprite.\n\n- In **Level 8**, students will add an “when touches” events to add more say or think blocks. \n\n- In **Level 9**, students will add a print block for the moral. \n\n- In **Level 10** students will have free play to add on to their projects. "
+        "description": "**Do This**: Release students to begin working on Level 2. Circulate the room to support students and remind them to use their planning guide from yesterday. Once students have completed Level 2, they may move on to the other levels.  \n\n- In **Level 2**, students will add a narration and background.\n\n- In **Level 3**, students will add two new sprites.\n\n- In **Level 4**, students will add a `say` or `think` block for their sprites. \n\n- In **Level 5**, students will begin moving the sprite with arrow keys.\n\n- In **Level 6**, students will add a `when touches` event block and add more `say` or `think` blocks. \n\n- In **Level 7**, students will add a new sprite.\n\n- In **Level 8**, students will add `when touches` event block and add more `say` or `think` blocks. \n\n- In **Level 9**, students will add a `print` block for the moral. \n\n- In **Level 10** students will have free play to add on to their projects. "
       },
       "seeding_key": {
         "activity_section.key": "b1e6c7c6-237f-4422-ad62-04225ce0fabd",
@@ -1027,7 +1027,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "For Levels 2-9, you may move students from level-to-level as a class, or students may work through these levels independently. "
+            "markdown": "For Levels 2-9, you may move students from level to level as a class, or students may work through these levels independently. "
           }
         ]
       },
@@ -1081,7 +1081,7 @@
       "key": "c2a32998-6d05-468d-9086-1971e87135dc",
       "position": 2,
       "properties": {
-        "description": "Work time is now over. Next class, we will reflect on our projects and share them with our classmates. To end our time today, I would like you all to think about what you learned. Flip your planning sheets over to the back. Use the blank space on your paper to write your answers to these questions… Once you are finished, we will share out as a class. ",
+        "description": "Work time is now over. Next class, we will reflect on our projects and share them with our classmates. To end our time today, I would like you all to think about what you learned. Flip your planning sheets over to the back. Use the blank space on your paper to write your answers to these questions. Once you are finished, we will share out as a class. ",
         "remarks": true
       },
       "seeding_key": {
@@ -1133,7 +1133,7 @@
       "key": "a173f4cb-2aa9-4b94-987e-dffee0aa88c0",
       "position": 2,
       "properties": {
-        "description": "Now that we have finished our projects, it is time to share! Before we share, we will think about how the project went. On your Project Reflection Sheet, fill in the questions and reflect on your project.\n- How is your adaptation similar to or different from the original fables? \n- How do the characters interact with each other?\n",
+        "description": "Now that we have finished our projects, it is time to share! Before we share, we will think about how the project went. On your Project Reflection Sheet, fill in the questions and reflect on your project.\n- _How is your adaptation similar to or different from the original stories?_ \n- _Do the characters interact with each other in a way that is similar to or different from the original stories?_\n",
         "remarks": true
       },
       "seeding_key": {
@@ -1181,7 +1181,7 @@
       "key": "f260c459-a8eb-45c0-8e73-bd41ef074254",
       "position": 3,
       "properties": {
-        "description": "**Do This**: Ask students to stand up, raise their hands and high-five a peer. Play “do the hustle” song while students find their partners. When students find a partner, they should lower their hands.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Do the Hustle!” slide\n\n**Do This**: When there are no hands left, prompt students to share their projects and the answers to the discussion questions. Once students are both finished sharing, then play “Do the Hustle” as a signal for students to raise their hands and high-five a different partner for the next question. (Source: Edutopia). \n\n**Do This**: Play “Do the hustle\" and have students find their first partner. Once everyone is partnered up, start the timer for a new 2 minute sharing. Repeat this process for 3-4 rounds, depending on how much time you have. Leave 5 minutes left at the end of class to wrap up as a whole class. "
+        "description": "**Do This**: Ask students to stand up, raise their hands and high-five a peer. Play “do the hustle” song while students find their partners. When students find a partner, they should lower their hands.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Do the Hustle!” slide\n\n**Do This**: When there are no hands left, prompt students to share their projects and the answers to the discussion questions:\n\n- _How is your adaptation similar to or different from your partner’s story?_\n- _Do the characters interact with each other in ways that are similar to or different from the characters in your partner’s story?_\n\nOnce students are both finished sharing, play “Do the Hustle” as a signal for students to raise their hands and high-five a different partner for the next question. (Source: Edutopia). \n\nOnce everyone is partnered up, start the timer for a new 2 minute sharing. Repeat this process for 3-4 rounds, depending on how much time you have. Leave 5 minutes left at the end of class to wrap up as a whole class. "
       },
       "seeding_key": {
         "activity_section.key": "f260c459-a8eb-45c0-8e73-bd41ef074254",
@@ -1192,7 +1192,7 @@
       "key": "29dd7fc3-2b04-45e8-9c5a-c06f4314c79b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How was your program similar to or different from your classmates' programs?_\n\n**Discussion Goal**: Students will discuss how the programs had similar morals, dialogue, character traits. Encourage students to think about the elements of a fable that they discussed in previous classes. Students may also discuss the similarities and differences in their code, such as in what order their characters were introduced.  \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How was your program similar to or different from your classmates' programs?_\n\n**Discussion Goal**: Students will discuss how the programs had similar morals, dialogue, and/or character traits. Encourage students to think about the elements of a fable that they discussed in previous classes. Students may also discuss the similarities and differences in their code, such as in what order their characters were introduced.  \n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -1204,7 +1204,7 @@
       "key": "b2329ede-5baa-4a59-a0b5-b2066f89edf2",
       "position": 2,
       "properties": {
-        "description": "Throughout this module, we have identified common patterns of a fable. We then used that knowledge of character traits to create your own fables. You were able to code a fable to teach readers a moral or lesson. Wonderful job! ",
+        "description": "Throughout this module, we have identified common patterns of a fable. You then used your knowledge of character traits to create your own stories. You were able to code a story to teach readers a moral or lesson. Wonderful job! ",
         "remarks": true
       },
       "seeding_key": {
@@ -2169,8 +2169,8 @@
       }
     },
     {
-      "name": "Fable Planning Sheet [Key]",
-      "url": "https://docs.google.com/document/d/1XaEpVZCudHOcKh0kOce4qX44bvCsEKiQB9ON5TSBj_M/template/preview",
+      "name": "Story Planning Sheet [Key]",
+      "url": "https://docs.google.com/document/d/1IGlbF-fBcVwZBtv7C1ZZMugDgI8FKPtpN5qH7nKGBT0/template/preview",
       "key": "fable_planning_sheet_key_",
       "properties": {
         "audience": "Teacher",
@@ -2351,16 +2351,6 @@
       "seeding_key": {
         "vocabulary.key": "moral"
       }
-    },
-    {
-      "key": "scene",
-      "word": "Scene",
-      "definition": "A small moment in a short story",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "scene"
-      }
     }
   ],
   "lessons_vocabularies": [
@@ -2403,13 +2393,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "vocabulary.key": "moral"
+        "vocabulary.key": "key_detail"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "vocabulary.key": "scene"
+        "vocabulary.key": "moral"
       }
     }
   ],

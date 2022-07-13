@@ -8083,6 +8083,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           name: vpl-csp-2022
+          lessons: {}
         self-paced-pl-csd1-2022:
           lesson_groups:
             lessonGroup-2:
@@ -8382,6 +8383,15 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons:
+            lesson-7:
+              name: 'The Celebrity Class: A Simple Version'
+            lesson-8:
+              name: Putting It All Together
+            lesson-9:
+              name: Extending the Celebrity Class
+            lesson-10:
+              name: Open-Ended Activity
         csa-draft-pl:
           lessons: {}
           lesson_groups: {}

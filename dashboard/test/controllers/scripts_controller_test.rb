@@ -424,6 +424,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test 'create' do
     unit_name = 'test-unit-create'
+    @request.host = CDO.dashboard_hostname
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && JSON.parse(contents)['script']['name'] == unit_name
@@ -449,6 +450,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test 'create: sets course type if provided' do
     unit_name = 'test-pl-unit-create'
+    @request.host = CDO.dashboard_hostname
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && JSON.parse(contents)['script']['name'] == unit_name

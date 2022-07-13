@@ -1,0 +1,24 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "map_reference": "/docs/ide/javalab/classes/String",
+    "project_template_level_name": "CSA CB_Lab Magpie L4 PBT2_2022",
+    "long_instructions": "## Scanning for a Phrase\r\n\r\nIn this next activity, we will practice adding functionality to our Magpie chatbot by expanding its ability to detect and respond to user input.\r\n\r\n&nbsp;\r\n1. Create a conditional statement that will utilize the `findKeyword()` method in order to determine if a user's input contains `I want`(#ffe3e3). This conditional, if *true*, should call a method named `transformIWantStatement()`. You should pass the user's input/statement as into the method as a String.\r\n\r\n2. Create a basic `transformIWantStatement()` method. When this method is run, it should simply write \"I want!\" into the console. Use this basic output in order to test that your conditional statement and method set up correctly.\r\n\r\n3. Analyze the existing method `transformIWantToStatement()`. This code will serve as a model that you will use when mod the `transformIWantStatement()` method.\r\n\r\n4. With your partner, practice decomposition in order to abstract the steps that are performed in the `transformIWantToStatement()` method. ",
+    "mini_rubric": "false",
+    "teacher_markdown": "A sample solution can be found here.",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-07-12T14:57:19.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "audit_log": "[{\"changed_at\":\"2022-07-12 14:57:28 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-12 19:07:23 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-12 19:44:51 +0000\",\"changed\":[\"encrypted_examples\",\"project_template_level_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-12 19:56:05 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-13 00:43:20 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Javalab>
