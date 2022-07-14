@@ -168,11 +168,11 @@ class Pd::Enrollment < ApplicationRecord
         enrollments.is_a?(Enumerable) && enrollments.all? {|e| e.is_a?(Pd::Enrollment)}
 
     # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion.
-    # CSF Deep Dive after 9/1 also uses Foorm
+    # CSF Deep Dive after 9/1 also uses Foorm. CSF District workshops will always use Foorm
     foorm_enrollments, other_enrollments = enrollments.partition do |enrollment|
       (enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
         (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) ||
-        (enrollment.workshop.workshop_ending_date >= Date.new(2020, 9, 1) && enrollment.workshop.csf_201?)
+        (enrollment.workshop.workshop_ending_date >= Date.new(2020, 9, 1) && enrollment.workshop.csf_201?) || enrollment.workshop.csf_district?
     end
 
     # Admin and Counselor still use Pegasus form
@@ -214,7 +214,7 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   def exit_survey_url
-    if workshop.course == Pd::Workshop::COURSE_CSF && workshop.subject == Pd::Workshop::SUBJECT_CSF_101
+    if workshop.course == Pd::Workshop::COURSE_CSF && (workshop.subject == Pd::Workshop::SUBJECT_CSF_101 || workshop.subject == Pd::Workshop::SUBJECT_CSF_DISTRICT)
       CDO.studio_url "pd/workshop_survey/csf/post101/#{code}", CDO.default_scheme
     elsif [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme

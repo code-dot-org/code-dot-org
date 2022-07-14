@@ -113,6 +113,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     csf_workshop = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 8)
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
 
+    csf_district_workshop = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 8), subject: SUBJECT_CSF_DISTRICT
+    csf_district_enrollment = create :pd_enrollment, workshop: csf_district_workshop
+
     csp_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP
     csp_enrollment = create :pd_enrollment, workshop: csp_workshop
 
@@ -134,6 +137,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
     assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_district_enrollment.code}"], csf_district_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_wfrt_enrollment.code}"], csp_wfrt_enrollment.exit_survey_url
