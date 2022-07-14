@@ -87,7 +87,7 @@ test:
   primary:
     <<: *mysql_defaults
     database: dashboard_test<%= ENV['TEST_ENV_NUMBER'] %>
-    host: <%= writer.host || 'localhost' %>
+    host: <%= writer.host || '127.0.0.1' %>
     password: <%= ENV['CI'] ? '' : (writer.password || '') %>
     pool: <%= ENV['CI'] ? 20 : 5 %>
     port: <%= writer.port || 3306 %>
