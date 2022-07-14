@@ -47,7 +47,7 @@ class NewListItem extends React.Component {
 const polar_blue = '#0094CA';
 const styles = {
   tile: {
-    width: '100%',
+    width: '95%',
     padding: '0 0 4px 0',
     marginBottom: 0,
     boxShadow: 'none',
@@ -55,9 +55,9 @@ const styles = {
       cursor: 'pointer'
     },
     background: 'none',
-    border: 0,
+    border: 20,
     marginRight: 0,
-    marginLeft: 0
+    marginLeft: 5
   },
   wrapper: {
     position: 'relative',
@@ -72,7 +72,7 @@ const styles = {
     right: 0,
     borderRadius: 10,
     backgroundColor: color.white,
-    border: 'solid 4px ' + polar_blue,
+    border: 'solid 2px ' + polar_blue,
     textAlign: 'center',
     paddingTop: '50%'
   },
@@ -85,9 +85,9 @@ const styles = {
     marginTop: 5,
     textAlign: 'center',
     userSelect: 'none',
-    fontWeight: 'bold',
+    fontWeight: 'normal',
     color: polar_blue,
-    fontSize: '13px'
+    fontSize: '14px'
   },
   borderHovered: {
     backgroundColor: polar_blue,
