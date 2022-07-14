@@ -129,6 +129,7 @@
   "submit": "Submit",
   "successfulTestResult": "{className} > {methodName} SUCCEEDED",
   "switchToDisplayTheme": "Switch to {displayTheme}",
+  "testsNotPassing": "You need to pass all tests before you can finish the level.",
   "timeoutWarning": "Warning: your project will stop running in 15 seconds.",
   "timeout": "Your project has stopped.",
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
