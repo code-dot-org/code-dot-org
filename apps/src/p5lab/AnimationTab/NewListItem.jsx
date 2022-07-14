@@ -29,16 +29,16 @@ class NewListItem extends React.Component {
               className="fa fa-plus-circle"
               style={[styles.addButton, hovered && styles.borderHovered_add]}
             />
+            <div
+              className="animation-name"
+              style={[
+                styles.animationName,
+                hovered && styles.borderHovered_animationName
+              ]}
+            >
+              {this.props.label}
+            </div>
           </div>
-        </div>
-        <div
-          className="animation-name"
-          style={[
-            styles.animationName,
-            hovered && styles.borderHovered_animationName
-          ]}
-        >
-          {this.props.label}
         </div>
       </button>
     );
@@ -78,15 +78,16 @@ const styles = {
   },
   addButton: {
     color: polar_blue,
-    fontSize: 90,
-    marginTop: '-47px'
+    fontSize: 76,
+    marginTop: '-45px'
   },
   animationName: {
-    marginTop: 4,
+    //marginTop: 4,
+    marginTop: 5,
     textAlign: 'center',
     userSelect: 'none',
     fontWeight: 'bold',
-    color: color.oceans_deep_blue,
+    color: polar_blue,
     fontSize: '13px'
   },
   borderHovered: {
@@ -97,7 +98,7 @@ const styles = {
     color: color.white
   },
   borderHovered_animationName: {
-    color: polar_blue
+    color: color.white
   }
 };
 
