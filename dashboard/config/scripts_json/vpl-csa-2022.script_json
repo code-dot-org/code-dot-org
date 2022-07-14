@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSA Virtual PL",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
