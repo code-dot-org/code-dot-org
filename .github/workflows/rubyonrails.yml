@@ -53,11 +53,11 @@ jobs:
         run: sudo /etc/init.d/mysql start 
         
       # Add or replace database setup steps here
-      #- name: Create db
-      #  run: |
-      #    cd dashboard/
-      #    bundle exec rake db:create
-      #    cd ../
+      - name: Create db
+        run: |
+          cd dashboard/
+          bundle exec rake db:create
+          cd ../
       - name: Install Dashboard
         run: bundle exec rake install:dashboard --trace
       # Add or replace test runners here
