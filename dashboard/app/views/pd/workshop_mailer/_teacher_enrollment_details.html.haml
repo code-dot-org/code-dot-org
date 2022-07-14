@@ -28,7 +28,7 @@
     School- or district-owned laptops may require administrator permission to download Maker App,
     so we encourage you to start this process soon.
 
-- if @workshop.local_summer? && @is_reminder
+- if (@workshop.local_summer? || @workshop.ayw?) && @is_reminder
   = render partial: 'pre_course_material'
 
 = render partial: 'accessibility'
