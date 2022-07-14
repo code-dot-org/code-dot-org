@@ -25,8 +25,7 @@ function isValidPin(pin) {
     'A4',
     'A5',
     'A6',
-    'A7',
-    'A8'
+    'A7'
   ];
   if (!validPins.includes(pin)) {
     outputError(`pin ${pin} is not a valid pinid - please use a valid pinid`);
