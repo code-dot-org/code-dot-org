@@ -46,10 +46,13 @@ class AnimationIterator
   rescue Aws::Errors::ServiceError => service_error
     warn service_error.inspect
     warn <<-EOS.unindent
+
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
+
         * aws_access_key and aws_secret_key in your locals.yml
         * ENV['AWS_ACCESS_KEY_ID'] and ENV['AWS_SECRET_ACCESS_KEY']
         * ~/.aws/credentials
+
       #{dim 'See http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html for more details.'}
     EOS
   end
@@ -91,8 +94,10 @@ cli_parser.parse!(ARGV)
 
 puts <<~NOTE
   This script is checked in for archival purposes.
+
   It was originally designed as a one-use update to all the animation library
   metadata on S3, to set "looping": true in every metadata file.
+
   If you'd like to use it, you'll need to open it up and re-enable its behavior.
 NOTE
 exit(0)
