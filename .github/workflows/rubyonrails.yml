@@ -23,7 +23,7 @@ jobs:
           MYSQL_ALLOW_EMPTY_PASSWORD: true
         ports:
           - 3306
-        #options: --explicit_defaults_for_timestamp
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=10s --health-retries=10
     env:
       CI: true
       RAILS_ENV: test
