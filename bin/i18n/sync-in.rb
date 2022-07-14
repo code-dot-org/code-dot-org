@@ -182,7 +182,7 @@ def get_i18n_strings(level)
 
   if level.is_a? LevelGroup
     i18n_strings["sublevels"] = {}
-    level.sublevels.map do |sublevel|
+    level.child_levels.map do |sublevel|
       i18n_strings["sublevels"][sublevel.name] = get_i18n_strings sublevel
     end
   end
