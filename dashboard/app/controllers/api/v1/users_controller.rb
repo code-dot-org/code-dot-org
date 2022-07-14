@@ -34,6 +34,24 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     end
   end
 
+  # GET /api/v1/users/netsim
+  def netsim
+    prevent_caching
+    if current_user
+      render json: {
+        id: current_user.id,
+        name: current_user.name,
+        is_admin: current_user.admin,
+        is_signed_in: true,
+        owned_sections: ['testing']
+      }
+    else
+      render json: {
+        is_signed_in: false
+      }
+    end
+  end
+
   # GET /api/v1/users/<user_id>/school_name
   def get_school_name
     render json: {
