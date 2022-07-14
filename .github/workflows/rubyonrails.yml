@@ -20,8 +20,8 @@ jobs:
           MYSQL_DATABASE: dashboard_test
           MYSQL_USER: user
           MYSQL_PASSWORD: password
+          MYSQL_ROOT_PASSWORD: ''
           MYSQL_ALLOW_EMPTY_PASSWORD: true
-          MYSQL_HOST: localhost
         ports:
           - 3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=10s --health-retries=10
@@ -34,7 +34,7 @@ jobs:
       MYSQL_USER: user
       MYSQL_PASSWORD: password
       MYSQL_ALLOW_EMPTY_PASSWORD: true
-      MYSQL_HOST: localhost
+      MYSQL_ROOT_PASSWORD: ''
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
