@@ -352,15 +352,11 @@ export default class AssetManager extends React.Component {
       const emptyText =
         this.props.allowedExtensions === '.mp3' ? (
           <div>
-            <div>
-              {i18n.audioLibraryMessage()}
-            </div>
-            <div>
-              {i18n.audioUploadMessage()}
-            </div>
+            <div>{i18n.audioLibraryMessage()}</div>
+            <div>{i18n.audioUploadMessage()}</div>
           </div>
         ) : (
-          <div>{i18n.assetManagerDefaultMessage()}</div>
+          <div>{i18n.manageAssetsDefaultMessage()}</div>
         );
       assetList = (
         <div>
