@@ -10,7 +10,6 @@ import loadSource from './util/loadSource';
 describe('setParamAtIndex', () => {
   let editor, parser, plainTree, arrayTree;
 
-  // do we need to update these?
   before(function() {
     // Load droplet sources.
     return loadSource('/base/lib/ace/src-noconflict/ace.js')
