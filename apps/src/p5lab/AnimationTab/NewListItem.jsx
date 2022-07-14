@@ -82,7 +82,6 @@ const styles = {
     marginTop: '-45px'
   },
   animationName: {
-    //marginTop: 4,
     marginTop: 5,
     textAlign: 'center',
     userSelect: 'none',
