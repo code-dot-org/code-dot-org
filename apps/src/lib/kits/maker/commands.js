@@ -9,6 +9,7 @@ import MicroBitBoard from './boards/microBit/MicroBitBoard';
 
 /** @private {CircuitPlaygroundBoard} */
 let board;
+
 function isValidPin(pin) {
   const validPins = [
     0,
@@ -60,7 +61,6 @@ export function pinMode(opts) {
     pwm: 3,
     servo: 4
   };
-
   board.pinMode(opts.pin, modeStringToConstant[opts.mode]);
 }
 
@@ -114,7 +114,6 @@ export function analogWrite(opts) {
   if (!isValidPin(opts.pin)) {
     return;
   }
-
   board.analogWrite(opts.pin, opts.value);
 }
 
@@ -126,7 +125,6 @@ export function analogRead(opts) {
   if (!isValidPin(opts.pin)) {
     return;
   }
-
   return board.analogRead(opts.pin, opts.callback);
 }
 
