@@ -21,7 +21,6 @@ jobs:
           MYSQL_USER: user
           MYSQL_PASSWORD: 'password'
           MYSQL_ROOT_PASSWORD: root
-          MYSQL_ALLOW_EMPTY_PASSWORD: true
         ports:
           - 3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=10s --health-retries=10
@@ -33,14 +32,13 @@ jobs:
       MYSQL_DATABASE: dashboard_test
       MYSQL_USER: user
       MYSQL_PASSWORD: 'password'
-      MYSQL_ALLOW_EMPTY_PASSWORD: true
       MYSQL_ROOT_PASSWORD: root
     steps:
       - name: Start MySQL
         run: sudo /etc/init.d/mysql start 
     
       - name: Set mysql root password
-        run: /usr/bin/mysqladmin -u root password ''
+        run: /usr/bin/mysqladmin -u root password 'root'
     
       - name: Checkout code
         uses: actions/checkout@v3
