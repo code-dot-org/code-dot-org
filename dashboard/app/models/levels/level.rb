@@ -411,14 +411,14 @@ class Level < ApplicationRecord
     end
   end
 
-  # Returns whether this level is backed by a channel, whose id may
+  # Returns whether this level is backed by a project, whose id may
   # be passed to the client, typically to save and load user progress
   # on that level.
-  def channel_backed?
+  def project_backed?
     return false if try(:is_project_level)
     free_response_upload = is_a?(FreeResponse) && allow_user_uploads
     dance_party_free_play = is_a?(Dancelab) && try(:free_play?)
-    project_template_level || free_response_upload || game.channel_backed? || dance_party_free_play
+    project_template_level || free_response_upload || game.project_backed? || dance_party_free_play
   end
 
   def key

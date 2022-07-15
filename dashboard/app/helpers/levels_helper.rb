@@ -87,6 +87,7 @@ module LevelsHelper
   # If given a user, find the channel associated with the given level/user.
   # Otherwise, gets the storage_id associated with the (potentially signed out)
   # current user, and either finds or creates a channel for the level
+  # TODO: maureen rename
   def get_channel_for(level, script_id = nil, user = nil)
     if user
       # "answers" are in the channel so instead of doing
@@ -107,18 +108,18 @@ module LevelsHelper
       )
     end
 
-    channel_token&.channel
+    channel_token&.encrypted_project_id
   end
 
   # If given a level, script and a user, returns whether the level
-  # has been started by the user. A channel-backed level is considered started when a
-  # channel is created for the level, which happens when the user first visits the level page.
+  # has been started by the user. A project-backed level is considered started when a
+  # project is created for the level, which happens when the user first visits the level page.
   # Other levels are considered started when progress has been saved for the level (for example
   # clicking the run button saves progress).
   def level_started?(level, script, user)
     return false unless user.present?
 
-    if level.channel_backed?
+    if level.project_backed?
       return get_channel_for(level, script.id, user).present?
     else
       user.last_attempt(level, script).present?
@@ -195,7 +196,7 @@ module LevelsHelper
     #   are channel-backed.)
     # - In edit_blocks mode, the source code is saved as a level property and
     #   is not written to the channel.
-    level_requires_channel = (@level.channel_backed? &&
+    level_requires_channel = (@level.project_backed? &&
           !@level.try(:contained_levels).present? &&
           params[:action] != 'edit_blocks')
     # Javalab requires a channel if Javabuilder needs to access project-specific assets,
@@ -292,7 +293,7 @@ module LevelsHelper
 
     if @user
       pairing_check_user = @user
-    elsif @level.channel_backed?
+    elsif @level.project_backed?
       pairing_check_user = current_user
     end
 
@@ -309,7 +310,7 @@ module LevelsHelper
         level_view_options(@level.id, pairing_driver: driver.name)
         if driver_level_source_id
           level_view_options(@level.id, pairing_attempt: edit_level_source_path(driver_level_source_id))
-        elsif @level.channel_backed?
+        elsif @level.project_backed?
           level_view_options(@level.id, pairing_channel_id: get_channel_for(@level, @script&.id, driver))
         end
       end

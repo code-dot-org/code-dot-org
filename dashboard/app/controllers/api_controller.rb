@@ -539,7 +539,8 @@ class ApiController < ApplicationController
         response[:pairingDriver] = driver.name
         if driver_level_source_id
           response[:pairingAttempt] = edit_level_source_path(driver_level_source_id)
-        elsif level.channel_backed?
+        elsif level.project_backed?
+          # TODO: maureen rename
           response[:pairingChannelId] = get_channel_for(level, script.id, driver)
         end
       end

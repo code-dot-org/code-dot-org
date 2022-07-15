@@ -245,7 +245,7 @@ class Game < ApplicationRecord
     [APPLAB, GAMELAB, SPRITELAB].include? app
   end
 
-  def channel_backed?
+  def project_backed?
     [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY].include? app
   end
 
