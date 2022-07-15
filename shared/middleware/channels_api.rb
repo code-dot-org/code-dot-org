@@ -193,8 +193,9 @@ class ChannelsApi < Sinatra::Base
   #
   # Marks the specified channel as published.
   #
+  # TODO: maureen what to do about these APIs
   post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
-    not_authorized unless owns_channel?(channel_id)
+    not_authorized unless owns_project?(channel_id)
     bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
     forbidden if sharing_disabled? && !ALWAYS_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
 
@@ -209,7 +210,7 @@ class ChannelsApi < Sinatra::Base
   # Marks the specified channel as no longer published.
   #
   post %r{/v3/channels/([^/]+)/unpublish} do |channel_id|
-    not_authorized unless owns_channel?(channel_id)
+    not_authorized unless owns_project?(channel_id)
     Projects.new(get_storage_id).unpublish(channel_id)
     {publishedAt: nil}.to_json
   end

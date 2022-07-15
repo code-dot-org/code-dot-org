@@ -155,8 +155,7 @@ def storage_id_from_cookie
   storage_id
 end
 
-# TODO: maureen rename
-def owns_channel?(encrypted_project_id)
+def owns_project?(encrypted_project_id)
   owner_storage_id, _ = storage_decrypt_project_id(encrypted_project_id)
   owner_storage_id == get_storage_id
 rescue ArgumentError, OpenSSL::Cipher::CipherError

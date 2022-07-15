@@ -43,7 +43,7 @@ class FilesApi < Sinatra::Base
   end
 
   def can_view_abusive_assets?(encrypted_project_id)
-    return true if owns_channel?(encrypted_project_id) || admin? || has_permission?('project_validator')
+    return true if owns_project?(encrypted_project_id) || admin? || has_permission?('project_validator')
 
     # teachers can see abusive assets of their students
     owner_storage_id, _ = storage_decrypt_project_id(encrypted_project_id)
@@ -68,7 +68,7 @@ class FilesApi < Sinatra::Base
   end
 
   def can_view_profane_or_pii_assets?(encrypted_project_id)
-    owns_channel?(encrypted_project_id) || admin? || has_permission?('project_validator')
+    owns_project?(encrypted_project_id) || admin? || has_permission?('project_validator')
   end
 
   def file_too_large(quota_type)
@@ -300,7 +300,7 @@ class FilesApi < Sinatra::Base
   # We should sanitize all sources created by under-13 users unless it is the
   # user themselves requesting to view the source
   def should_sanitize_for_under_13?(encrypted_project_id)
-    return false if owns_channel?(encrypted_project_id)
+    return false if owns_project?(encrypted_project_id)
 
     owner_storage_id, _ = storage_decrypt_project_id(encrypted_project_id)
     owner_id = user_id_for_storage_id(owner_storage_id)
@@ -410,7 +410,7 @@ class FilesApi < Sinatra::Base
   end
 
   def put_file(endpoint, encrypted_project_id, filename, body)
-    not_authorized unless owns_channel?(encrypted_project_id)
+    not_authorized unless owns_project?(encrypted_project_id)
     file_type = File.extname(filename)
     buckets = get_bucket_impl(endpoint).new
     if body.length >= max_file_size
@@ -520,7 +520,7 @@ class FilesApi < Sinatra::Base
   # @return [String] JSON containing details for new file
   #
   def copy_file(endpoint, encrypted_project_id, filename, source_filename)
-    not_authorized unless owns_channel?(encrypted_project_id)
+    not_authorized unless owns_project?(encrypted_project_id)
 
     buckets = get_bucket_impl(endpoint).new
     bad_request unless buckets.allowed_file_name? filename
@@ -673,7 +673,7 @@ class FilesApi < Sinatra::Base
   delete %r{/v3/(animations|assets|sources|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_project_id, filename|
     dont_cache
 
-    not_authorized unless owns_channel?(encrypted_project_id)
+    not_authorized unless owns_project?(encrypted_project_id)
 
     get_bucket_impl(endpoint).new.delete(encrypted_project_id, filename)
     no_content
@@ -702,7 +702,7 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    not_authorized unless owns_channel?(encrypted_project_id)
+    not_authorized unless owns_project?(encrypted_project_id)
 
     SourceBucket.new.restore_previous_version(encrypted_project_id, filename, request.GET['version'], current_user_id).to_json
   end
@@ -872,7 +872,7 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    not_authorized unless owns_channel?(encrypted_project_id)
+    not_authorized unless owns_project?(encrypted_project_id)
 
     # read the manifest
     bucket = FileBucket.new
@@ -896,7 +896,7 @@ class FilesApi < Sinatra::Base
 
     bad_request if filename.downcase == FileBucket::MANIFEST_FILENAME
 
-    not_authorized unless owns_channel?(encrypted_project_id)
+    not_authorized unless owns_project?(encrypted_project_id)
 
     # read the manifest
     bucket = FileBucket.new
@@ -941,7 +941,7 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    not_authorized unless owns_channel?(encrypted_project_id)
+    not_authorized unless owns_project?(encrypted_project_id)
 
     # read the manifest using the version-id specified
     bucket = FileBucket.new
@@ -1075,7 +1075,7 @@ class FilesApi < Sinatra::Base
     bad_request unless METADATA_FILENAMES.include? filename
     filename = "#{METADATA_PATH}/#{filename}"
 
-    not_authorized unless owns_channel?(encrypted_project_id)
+    not_authorized unless owns_project?(encrypted_project_id)
 
     FileBucket.new.delete(encrypted_project_id, filename)
     no_content
