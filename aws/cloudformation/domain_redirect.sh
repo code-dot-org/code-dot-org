@@ -30,7 +30,6 @@ echo "Redirecting $Domains to $Target"
 
 echo 🐝 Transforming...
 # erb domains=csedcon.com,csedcon.net,csedcon.org redirect_to=https://cvent.me/7VYB42 -T - domain_redirect.yml.erb > domain_redirect.yml
-# erb domains=csedcon.com redirect_to=https://cvent.me/7VYB42 -T - domain_redirect.yml.erb > domain_redirect.yml
 erb domains=$Domains redirect_to=$Target -T - domain_redirect.yml.erb > domain_redirect.yml
 (( verbose )) && cat domain_redirect.yml
 
