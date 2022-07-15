@@ -172,7 +172,7 @@ class FilesApi < Sinatra::Base
   # Deprecated in favor of the URL below
   #
   get %r{/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |encrypted_project_id, filename|
-    pass unless valid_encrypted_channel_id(encrypted_project_id)
+    pass unless valid_encrypted_project_id(encrypted_project_id)
 
     get_file('files', encrypted_project_id, filename, true)
   end
@@ -185,7 +185,7 @@ class FilesApi < Sinatra::Base
   #
   get %r{/projects/([a-z]+)/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |project_type, encrypted_project_id, filename|
     not_found unless project_type == 'weblab'
-    pass unless valid_encrypted_channel_id(encrypted_project_id)
+    pass unless valid_encrypted_project_id(encrypted_project_id)
 
     get_file('files', encrypted_project_id, filename, true)
   end
@@ -198,7 +198,7 @@ class FilesApi < Sinatra::Base
   # Deprecated in favor of the URL below
   #
   get %r{/([^/]+)$}, {code_projects_domain: true} do |encrypted_project_id|
-    pass unless valid_encrypted_channel_id(encrypted_project_id)
+    pass unless valid_encrypted_project_id(encrypted_project_id)
 
     redirect "#{request.path_info}/"
   end
@@ -211,7 +211,7 @@ class FilesApi < Sinatra::Base
   #
   get %r{/projects/([a-z]+)/([^/]+)$}, {code_projects_domain: true} do |project_type, encrypted_project_id|
     not_found unless project_type == 'weblab'
-    pass unless valid_encrypted_channel_id(encrypted_project_id)
+    pass unless valid_encrypted_project_id(encrypted_project_id)
 
     redirect "#{request.path_info}/"
   end
@@ -224,7 +224,7 @@ class FilesApi < Sinatra::Base
   # Deprecated in favor of the URL below
   #
   get %r{/([^/]+)/$}, {code_projects_domain: true} do |encrypted_project_id|
-    pass unless valid_encrypted_channel_id(encrypted_project_id)
+    pass unless valid_encrypted_project_id(encrypted_project_id)
 
     get_file('files', encrypted_project_id, 'index.html', true)
   end
@@ -238,7 +238,7 @@ class FilesApi < Sinatra::Base
   #
   get %r{/projects/([a-z]+)/([^/]+)/$}, {code_projects_domain: true} do |project_type, encrypted_project_id|
     not_found unless project_type == 'weblab'
-    pass unless valid_encrypted_channel_id(encrypted_project_id)
+    pass unless valid_encrypted_project_id(encrypted_project_id)
 
     get_file('files', encrypted_project_id, 'index.html', true)
   end
