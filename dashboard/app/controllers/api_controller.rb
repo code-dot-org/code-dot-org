@@ -502,8 +502,8 @@ class ApiController < ApplicationController
 
     if params[:get_channel_id] == "true"
       response[:channel] = viewing_other_user ?
-        get_channel_for(level, script.id, user) :
-        get_channel_for(level, script.id)
+        get_project_for(level, script.id, user) :
+        get_project_for(level, script.id)
       response[:reduceChannelUpdates] =
         !Gatekeeper.allows("updateChannelOnSave", where: {script_name: script.name}, default: true)
     end
@@ -540,8 +540,7 @@ class ApiController < ApplicationController
         if driver_level_source_id
           response[:pairingAttempt] = edit_level_source_path(driver_level_source_id)
         elsif level.project_backed?
-          # TODO: maureen rename
-          response[:pairingChannelId] = get_channel_for(level, script.id, driver)
+          response[:pairingChannelId] = get_project_for(level, script.id, driver)
         end
       end
     end

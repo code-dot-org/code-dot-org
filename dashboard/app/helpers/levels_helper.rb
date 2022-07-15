@@ -84,11 +84,10 @@ module LevelsHelper
     view_options(signed_replay_log_url: signed_url)
   end
 
-  # If given a user, find the channel associated with the given level/user.
+  # If given a user, find the encrypted project id associated with the given level/user.
   # Otherwise, gets the storage_id associated with the (potentially signed out)
-  # current user, and either finds or creates a channel for the level
-  # TODO: maureen rename
-  def get_channel_for(level, script_id = nil, user = nil)
+  # current user, and either finds or creates a channel token/project for the level
+  def get_project_for(level, script_id = nil, user = nil)
     if user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
@@ -120,7 +119,7 @@ module LevelsHelper
     return false unless user.present?
 
     if level.project_backed?
-      return get_channel_for(level, script.id, user).present?
+      return get_project_for(level, script.id, user).present?
     else
       user.last_attempt(level, script).present?
     end
@@ -188,46 +187,46 @@ module LevelsHelper
 
     view_options(public_caching: @public_caching)
 
-    # In general, we need to allocate a channel if a level is channel-backed.
-    # As an optimization, we can skip allocating the channel in the following
-    # two special cases where we know the channel will not be written to:
+    # In general, we need to allocate a project if a level is project-backed.
+    # As an optimization, we can skip allocating the project in the following
+    # two special cases where we know the project will not be written to:
     # - For levels with contained levels, the outer level is read-only and does
-    #   not write to the channel. (We currently do not support inner levels that
-    #   are channel-backed.)
+    #   not write to the project. (We currently do not support inner levels that
+    #   are project-backed.)
     # - In edit_blocks mode, the source code is saved as a level property and
-    #   is not written to the channel.
-    level_requires_channel = (@level.project_backed? &&
+    #   is not written to the project.
+    level_requires_project = (@level.project_backed? &&
           !@level.try(:contained_levels).present? &&
           params[:action] != 'edit_blocks')
-    # Javalab requires a channel if Javabuilder needs to access project-specific assets,
+    # Javalab requires a project if Javabuilder needs to access project-specific assets,
     # or if we want to access a project's code from S3.
     # Two special cases are when we edit and view Javalab exemplar code,
     # where we load the exemplar code from the level definition, edit it locally in Javalab,
     # and pass the edited code directly to Javabuilder.
-    level_requires_channel = !@is_editing_exemplar && !@is_viewing_exemplar if @level.is_a?(Javalab)
+    level_requires_project = !@is_editing_exemplar && !@is_viewing_exemplar if @level.is_a?(Javalab)
 
     # When viewing a peer during code review their name is displayed in a banner above the code editor
     view_options(code_owners_name: @user&.name || @current_user&.name)
 
     # If the level is cached, the channel is loaded client-side in loadApp.js
-    if level_requires_channel && !@public_caching
-      channel = get_channel_for(@level, @script&.id, @user)
+    if level_requires_project && !@public_caching
+      encrypted_project_id = get_project_for(@level, @script&.id, @user)
       view_options(
-        channel: channel,
+        channel: encrypted_project_id,
         reduce_channel_updates: @script ?
           !Gatekeeper.allows("updateChannelOnSave", where: {script_name: @script.name}, default: true) :
           false
       )
 
       viewing_another_user = !!@user
-      code_review_open = CodeReview.open_for_project?(channel: channel)
+      code_review_open = CodeReview.open_for_project?(channel: encrypted_project_id)
 
       view_options(is_viewing_own_project: !viewing_another_user, has_open_code_review: code_review_open)
       readonly_view_options if viewing_another_user || code_review_open
     end
 
     view_options(
-      level_requires_channel: level_requires_channel,
+      level_requires_channel: level_requires_project,
       server_project_level_id: @level.project_template_level.try(:id)
     )
 
@@ -311,7 +310,7 @@ module LevelsHelper
         if driver_level_source_id
           level_view_options(@level.id, pairing_attempt: edit_level_source_path(driver_level_source_id))
         elsif @level.project_backed?
-          level_view_options(@level.id, pairing_channel_id: get_channel_for(@level, @script&.id, driver))
+          level_view_options(@level.id, pairing_channel_id: get_project_for(@level, @script&.id, driver))
         end
       end
     end
@@ -896,7 +895,7 @@ module LevelsHelper
   def firebase_shared_auth_token
     return nil unless CDO.firebase_shared_secret
 
-    base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
+    base_channel = params[:channel_id] || get_project_for(@level, @script&.id, @user)
     payload = {
       uid: user_or_session_id,
       is_dashboard_user: !!current_user,
@@ -922,7 +921,7 @@ module LevelsHelper
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
-    base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
+    base_channel = params[:channel_id] || get_project_for(@level, @script&.id, @user)
     payload = {
       uid: user_or_session_id,
       is_dashboard_user: !!current_user,

@@ -334,7 +334,7 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal true, app_options['levelRequiresChannel']
   end
 
-  test 'get_channel_for sets a channel' do
+  test 'get_project_for sets an encrypted_project_id' do
     user = create :user
     sign_in user
 
@@ -342,13 +342,13 @@ class LevelsHelperTest < ActionView::TestCase
     level = create(:level, :blockly)
     create(:script_level, script: script, levels: [@level, level])
 
-    channel = get_channel_for(@level, script.id)
-    # Request it again, should get the same channel
-    assert_equal channel, get_channel_for(@level, script.id)
+    encrypted_project_id = get_project_for(@level, script.id)
+    # Request it again, should get the same encrypted_project_id
+    assert_equal encrypted_project_id, get_project_for(@level, script.id)
 
-    # Request it for a different level, should get a different channel
+    # Request it for a different level, should get a different encrypted_project_id
     level = create(:level, :blockly)
-    assert_not_equal channel, get_channel_for(level, script.id)
+    assert_not_equal encrypted_project_id, get_project_for(level, script.id)
   end
 
   test 'uses_google_blockly is false if not set' do
@@ -404,8 +404,8 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create :applab
     create(:script_level, script: script, levels: [@level])
 
-    # channel does not exist
-    assert_nil get_channel_for(@level, script.id, @user)
+    # channel does not exist to fetch project
+    assert_nil get_project_for(@level, script.id, @user)
   end
 
   test 'applab levels should load channel when viewing student solution of a student with a channel' do
@@ -418,9 +418,9 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create :applab
     create(:script_level, script: script, levels: [@level])
 
-    # channel exists
+    # channel exists to fetch project
     create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(@user.id)
-    assert_not_nil get_channel_for(@level, script.id, @user)
+    assert_not_nil get_project_for(@level, script.id, @user)
 
     # calling app_options should set readonly_workspace, since we're viewing for
     # different user
@@ -428,7 +428,7 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal true, view_options[:readonly_workspace]
   end
 
-  test 'readonly workspace should be set if the level is channel-backed and a code review is open for the project' do
+  test 'readonly workspace should be set if the level is project-backed and a code review is open for the project' do
     @user = create :user
     sign_in @user
     stub_storage_id_for_user_id(@user.id)
@@ -438,10 +438,10 @@ class LevelsHelperTest < ActionView::TestCase
     create(:script_level, script: script, levels: [@level])
 
     create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(@user.id)
-    @channel_id = get_channel_for(@level, script.id, @user)
-    assert_not_nil @channel_id
+    @encrypted_project_id = get_project_for(@level, script.id, @user)
+    assert_not_nil @encrypted_project_id
 
-    _,  @project_id = storage_decrypt_project_id(@channel_id)
+    _,  @project_id = storage_decrypt_project_id(@encrypted_project_id)
     create :code_review, user_id: @user.id, project_id: @project_id
 
     # calling app_options should set readonly_workspace, since a code review is open
