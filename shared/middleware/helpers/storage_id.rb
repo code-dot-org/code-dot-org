@@ -58,8 +58,7 @@ def storage_decrypt_project_id(encrypted)
   [storage_id, project_id]
 end
 
-# TODO: maureen rename this
-def valid_encrypted_channel_id(encrypted)
+def valid_encrypted_project_id(encrypted)
   begin
     storage_decrypt_project_id(encrypted)
   rescue ArgumentError, OpenSSL::Cipher::CipherError
