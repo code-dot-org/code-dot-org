@@ -34,8 +34,8 @@ module ProjectsList
       personal_projects_list = []
       storage_id = storage_id_for_user_id(user_id)
       Projects.new(storage_id).get_active_projects.each do |project|
-        channel_id = storage_encrypt_channel_id(storage_id, project[:id])
-        project_data = get_project_row_data(project, channel_id, nil, true)
+        encrypted_project_id = storage_encrypt_project_id(storage_id, project[:id])
+        project_data = get_project_row_data(project, encrypted_project_id, nil, true)
         personal_projects_list << project_data if project_data
       end
       personal_projects_list
@@ -53,8 +53,8 @@ module ProjectsList
       projects_query = Projects.new(storage_id).get_projects_with_state(state: state, order: Sequel.desc(:updated_at))
 
       projects_query.each do |project|
-        channel_id = storage_encrypt_channel_id(storage_id, project[:id])
-        project_data = get_project_row_data(project, channel_id, nil, true)
+        encrypted_project_id = storage_encrypt_project_id(storage_id, project[:id])
+        project_data = get_project_row_data(project, encrypted_project_id, nil, true)
         personal_projects_list << project_data if project_data
       end
 
@@ -74,8 +74,8 @@ module ProjectsList
           Projects.new(student_storage_id).get_active_projects.each do |project|
             # The channel id stored in the project's value field may not be reliable
             # when apps are remixed, so recompute the channel id.
-            channel_id = storage_encrypt_channel_id(student_storage_id, project[:id])
-            project_data = get_project_row_data(project, channel_id, student)
+            encrypted_project_id = storage_encrypt_project_id(student_storage_id, project[:id])
+            project_data = get_project_row_data(project, encrypted_project_id, student)
             projects_list_data << project_data if project_data
           end
         end
@@ -154,9 +154,9 @@ module ProjectsList
           each do |project|
             # The channel id stored in the project's value field may not be reliable
             # when apps are remixed, so recompute the channel id.
-            channel_id = storage_encrypt_channel_id(project[:storage_id], project[:id])
+            encrypted_project_id = storage_encrypt_project_id(project[:storage_id], project[:id])
             project_owner = section_users.find {|user| user.id == user_storage_ids[project[:storage_id]]}
-            project_data = get_library_row_data(project, channel_id, section.name, project_owner)
+            project_data = get_library_row_data(project, encrypted_project_id, section.name, project_owner)
             if project_data && (project_owner.id != section.user_id || project_data[:sharedWith].include?(section.id))
               projects_list_data << project_data
             end
@@ -235,9 +235,10 @@ module ProjectsList
       data_for_featured_project_cards = []
       project_featured_project_user_combo_data.each do |project_details|
         project_details_value = JSON.parse(project_details[:value])
-        channel = storage_encrypt_channel_id(project_details[:storage_id], project_details[:id])
+        encrypted_project_id = storage_encrypt_project_id(project_details[:storage_id], project_details[:id])
+        # TODO: maureen update data for featured project card
         data_for_featured_project_card = {
-          "channel" => channel,
+          "channel" => encrypted_project_id,
           "name" => project_details_value['name'],
           "thumbnailUrl" =>  Projects.make_thumbnail_url_cacheable(project_details_value['thumbnailUrl']),
           "type" => project_details[:project_type],
@@ -347,8 +348,8 @@ module ProjectsList
     def get_published_project_and_user_data(project_and_user)
       return nil if get_sharing_disabled_from_properties(project_and_user[:properties]) && ADVANCED_PROJECT_TYPES.include?(project_and_user[:project_type])
       return nil if project_and_user[:abuse_score] > 0
-      channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:id])
-      Projects.get_published_project_data(project_and_user, channel_id).merge(
+      encrypted_project_id = storage_encrypt_project_id(project_and_user[:storage_id], project_and_user[:id])
+      Projects.get_published_project_data(project_and_user, encrypted_project_id).merge(
         {
           # For privacy reasons, include only the first initial of the student's name.
           studentName: UserHelpers.initial(project_and_user[:name]),

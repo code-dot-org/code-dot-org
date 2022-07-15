@@ -36,9 +36,9 @@ class DeleteAccountsHelper
     @log.puts "Deleting project backed progress"
 
     project_ids = Projects.table.where(storage_id: user.user_storage_id).map(:id)
-    channel_count = project_ids.count
-    encrypted_channel_ids = project_ids.map do |project_id|
-      storage_encrypt_channel_id user.user_storage_id, project_id
+    project_count = project_ids.count
+    encrypted_project_ids = project_ids.map do |project_id|
+      storage_encrypt_project_id user.user_storage_id, project_id
     end
 
     # Clear potential PII from user's channels
@@ -54,17 +54,18 @@ class DeleteAccountsHelper
     @log.puts "Cleared #{project_commits.count} ProjectCommit comments" if project_commits.count > 0
 
     # Clear S3 contents for user's channels
-    @log.puts "Deleting S3 contents for #{channel_count} channels"
+    @log.puts "Deleting S3 contents for #{project_count} channels"
     buckets = [SourceBucket, AssetBucket, AnimationBucket, FileBucket].map(&:new)
-    buckets.product(encrypted_channel_ids).each do |bucket, encrypted_channel_id|
-      bucket.hard_delete_channel_content encrypted_channel_id
+    buckets.product(encrypted_project_ids).each do |bucket, encrypted_project_id|
+      bucket.hard_delete_channel_content encrypted_project_id
     end
 
     # Clear Firebase contents for user's channels
-    @log.puts "Deleting Firebase contents for #{channel_count} channels"
-    FirebaseHelper.delete_channels encrypted_channel_ids
+    # TODO: maureen do we want to keep logging as 'channels'?
+    @log.puts "Deleting Firebase contents for #{project_count} channels"
+    FirebaseHelper.delete_channels encrypted_project_ids
 
-    @log.puts "Deleted #{channel_count} channels" if channel_count > 0
+    @log.puts "Deleted #{project_count} channels" if project_count > 0
   end
 
   # Removes the link between the user's level-backed progress and the progress itself.

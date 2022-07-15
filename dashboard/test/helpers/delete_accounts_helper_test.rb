@@ -1970,10 +1970,10 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
         bucket.any_instance.
           expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, project_id_a))
+          with(storage_encrypt_project_id(storage_id, project_id_a))
         bucket.any_instance.
           expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, project_id_b))
+          with(storage_encrypt_project_id(storage_id, project_id_b))
 
         purge_user student
       end
@@ -1991,8 +1991,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       with_channel_for student do |project_id_b, storage_id|
         projects_table.where(id: project_id_a).update(state: 'deleted')
 
-        student_channels = [storage_encrypt_channel_id(storage_id, project_id_a),
-                            storage_encrypt_channel_id(storage_id, project_id_b)]
+        student_channels = [storage_encrypt_project_id(storage_id, project_id_a),
+                            storage_encrypt_project_id(storage_id, project_id_b)]
         FirebaseHelper.
           expects(:delete_channels).
           with(student_channels)

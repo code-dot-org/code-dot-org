@@ -41,8 +41,9 @@ class Project < ApplicationRecord
     Project.find(project_id)
   end
 
+  # TODO: maureen rename this to encrypted_project_id
   def channel_id
-    storage_encrypt_channel_id(storage_id, id)
+    storage_encrypt_project_id(storage_id, id)
   end
 
   # Returns the user_id of the owner of this project. Returns nil if the project

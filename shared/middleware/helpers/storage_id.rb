@@ -83,7 +83,7 @@ def storage_encrypt_id(id)
   storage_encrypt("#{SecureRandom.random_number(65536)}:#{id}:#{SecureRandom.random_number(65536)}")
 end
 
-def storage_encrypt_channel_id(storage_id, project_id)
+def storage_encrypt_project_id(storage_id, project_id)
   storage_id = storage_id.to_i
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
   project_id = project_id.to_i

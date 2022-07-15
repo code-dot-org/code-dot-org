@@ -4,7 +4,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   setup do
     @rsa_key_test = OpenSSL::PKey::RSA.new(2048)
     OpenSSL::PKey::RSA.stubs(:new).returns(@rsa_key_test)
-    @fake_channel_id = storage_encrypt_channel_id(1, 1)
+    @fake_encrypted_project_id = storage_encrypt_project_id(1, 1)
 
     JavalabFilesHelper.stubs(:get_project_files).returns({})
     JavalabFilesHelper.stubs(:get_project_files_with_override_sources).returns({})
@@ -17,11 +17,11 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     user: :student,
     response: :forbidden
   test_user_gets_response_for :get_access_token,
-    params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
+    params: {channelId: storage_encrypt_project_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
   test_user_gets_response_for :get_access_token,
-    params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
+    params: {channelId: storage_encrypt_project_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
     user: :authorized_teacher,
     response: :success
 
@@ -58,14 +58,15 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     response: :forbidden
   test_user_gets_response_for :access_token_with_override_validation,
     method: :post,
-    params: {channelId: storage_encrypt_channel_id(1, 1), overrideValidation: "{'MyClass.java': {}}", executionType: 'RUN', miniAppType: 'console'},
+    params: {channelId: storage_encrypt_project_id(1, 1), overrideValidation: "{'MyClass.java': {}}", executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
 
   test 'can decode jwt token' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
+    # TODO: maureen update param name
+    get :get_access_token, params: {channelId: @fake_encrypted_project_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
 
     response = JSON.parse(@response.body)
     token = response['token']
@@ -81,7 +82,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
     get :get_access_token, params: {
-      channelId: @fake_channel_id,
+      channelId: @fake_encrypted_project_id,
       executionType: 'RUN',
       options: {'useNeighborhood': true},
       miniAppType: 'console'
@@ -100,7 +101,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     section = create(:section, user: teacher, login_type: 'word')
     student_1 = create(:follower, section: section).student_user
     sign_in(student_1)
-    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_encrypted_project_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :forbidden
   end
 
@@ -111,7 +112,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     create(:section, user: teacher, login_type: 'word', script: csa_script)
     student_1 = create(:follower, section: section).student_user
     sign_in(student_1)
-    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_encrypted_project_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :forbidden
   end
 
@@ -121,7 +122,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     section = create(:section, user: teacher, login_type: 'word', script: csa_script)
     student_1 = create(:follower, section: section).student_user
     sign_in(student_1)
-    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_encrypted_project_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :success
   end
 
@@ -130,7 +131,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     section = create(:section, user: teacher, login_type: 'word')
     student_1 = create(:follower, section: section).student_user
     sign_in(student_1)
-    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_encrypted_project_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :forbidden
     section.destroy
   end
@@ -159,14 +160,14 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   test 'param for execution type is required' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_encrypted_project_id, miniAppType: 'console'}
     assert_response :bad_request
   end
 
   test 'param for mini-app type is required' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN'}
+    get :get_access_token, params: {channelId: @fake_encrypted_project_id, executionType: 'RUN'}
     assert_response :bad_request
   end
 
@@ -174,7 +175,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     JavalabFilesHelper.stubs(:upload_project_files).returns(nil)
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_encrypted_project_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
     assert_response :internal_server_error
   end
 
@@ -193,7 +194,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     create(:follower, section: section_2, student_user: student_1)
 
     sign_in(student_1)
-    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_encrypted_project_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :success
 
     response = JSON.parse(@response.body)
@@ -212,7 +213,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   test 'levelbuilder has correct verified_teachers parameter' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_encrypted_project_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
 
     response = JSON.parse(@response.body)
     token = response['token']

@@ -420,11 +420,11 @@ class ProjectsListTest < ActionController::TestCase
   end
 
   test 'fetch_updated_library_channels returns channel_ids of libraries that have been updated' do
-    updated_channel_id = storage_encrypt_channel_id(1, 1)
+    updated_encrypted_project_id = storage_encrypt_project_id(1, 1)
     libraries = [
-      {'channel_id' => updated_channel_id, 'version' => '1'},
-      {'channel_id' => storage_encrypt_channel_id(1, 2), 'version' => '1'},
-      {'channel_id' => storage_encrypt_channel_id(1, 3), 'version' => '1'}
+      {'channel_id' => updated_encrypted_project_id, 'version' => '1'},
+      {'channel_id' => storage_encrypt_project_id(1, 2), 'version' => '1'},
+      {'channel_id' => storage_encrypt_project_id(1, 3), 'version' => '1'}
     ]
     stub_projects = [
       {
@@ -443,8 +443,9 @@ class ProjectsListTest < ActionController::TestCase
 
     Projects.stubs(:table).returns(stub(where: stub_projects))
 
-    updated_channel_ids = ProjectsList.fetch_updated_library_channels(libraries)
-    assert_equal [updated_channel_id], updated_channel_ids
+    # TODO: maureen update ProjectsList method
+    updated_encrypted_project_ids = ProjectsList.fetch_updated_library_channels(libraries)
+    assert_equal [updated_encrypted_project_id], updated_encrypted_project_ids
   end
 
   test 'fetch_updated_library_channels returns empty array if no libraries given' do
