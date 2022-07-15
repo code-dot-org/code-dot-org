@@ -20,7 +20,7 @@ jobs:
           MYSQL_DATABASE: dashboard_test
           MYSQL_USER: user
           MYSQL_PASSWORD: password
-          MYSQL_ROOT_PASSWORD: ''
+          MYSQL_ROOT_PASSWORD: root
           MYSQL_ALLOW_EMPTY_PASSWORD: true
         ports:
           - 3306
@@ -34,7 +34,7 @@ jobs:
       MYSQL_USER: user
       MYSQL_PASSWORD: password
       MYSQL_ALLOW_EMPTY_PASSWORD: true
-      MYSQL_ROOT_PASSWORD: ''
+      MYSQL_ROOT_PASSWORD: root
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
