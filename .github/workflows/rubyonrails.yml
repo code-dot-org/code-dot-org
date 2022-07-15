@@ -36,6 +36,9 @@ jobs:
       MYSQL_ALLOW_EMPTY_PASSWORD: true
       MYSQL_ROOT_PASSWORD: root
     steps:
+      - name: Set mysql root password
+        run: /usr/bin/mysqladmin -u root password ''
+    
       - name: Checkout code
         uses: actions/checkout@v3
         
