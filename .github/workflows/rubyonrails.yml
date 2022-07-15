@@ -55,8 +55,8 @@ jobs:
           bundle install
           cd ../
         
-      - name: Setup MySql User
-        run: echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql
+      #- name: Setup MySql User
+      #  run: echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql
         
       # Add or replace database setup steps here
       - name: Create db
