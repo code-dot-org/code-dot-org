@@ -4605,16 +4605,17 @@ class UserTest < ActiveSupport::TestCase
   test 'find_channel_owner finds channel owner' do
     student = create :student
     with_channel_for student do |project_id, storage_id|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, project_id
-      result = User.find_channel_owner encrypted_channel_id
+      encrypted_project_id = storage_encrypt_project_id storage_id, project_id
+      result = User.find_channel_owner encrypted_project_id
       assert_equal student, result
     end
   end
 
   test 'find_channel_owner returns nil for channel with no owner' do
     with_anonymous_channel do |project_id, storage_id|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, project_id
-      result = User.find_channel_owner encrypted_channel_id
+      encrypted_project_id = storage_encrypt_project_id storage_id, project_id
+      # TODO: maureen update User method with channel reference
+      result = User.find_channel_owner encrypted_project_id
       assert_nil result
     end
   end

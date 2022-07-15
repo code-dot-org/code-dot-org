@@ -195,10 +195,10 @@ class ProjectsController < ApplicationController
     @featured_project_table_rows = []
     project_featured_project_combo_data.each do |project_details|
       project_details_value = JSON.parse(project_details[:value])
-      channel = storage_encrypt_channel_id(project_details[:storage_id], project_details[:id])
+      encrypted_project_id = storage_encrypt_project_id(project_details[:storage_id], project_details[:id])
       featured_project_row = {
         projectName: project_details_value['name'],
-        channel: channel,
+        channel: encrypted_project_id,
         type: project_details[:project_type],
         topic: project_details[:topic],
         publishedAt: project_details[:published_at],

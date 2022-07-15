@@ -32,7 +32,8 @@ class Backpack < ApplicationRecord
     backpack
   end
 
+  # TODO: maureen rename to encrypted_project_id
   def channel
-    storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id)
+    storage_encrypt_project_id(storage_id_for_user_id(user_id), project_id)
   end
 end

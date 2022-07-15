@@ -32,7 +32,7 @@ class Projects
     }
     row[:id] = @table.insert(row)
 
-    storage_encrypt_channel_id(row[:storage_id], row[:id])
+    storage_encrypt_project_id(row[:storage_id], row[:id])
   end
 
   def delete(channel_id)
@@ -294,11 +294,11 @@ class Projects
 
   def to_a
     @table.where(storage_id: @storage_id).exclude(state: 'deleted').map do |row|
-      channel_id = storage_encrypt_channel_id(row[:storage_id], row[:id])
+      encrypted_project_id = storage_encrypt_project_id(row[:storage_id], row[:id])
       begin
         Projects.merged_row_value(
           row,
-          channel_id: channel_id,
+          channel_id: encrypted_project_id,
           is_owner: row[:storage_id] == @storage_id
         )
       rescue JSON::ParserError
@@ -316,7 +316,7 @@ class Projects
       # Malformed channel, or missing level.
     end
 
-    storage_encrypt_channel_id(row[:storage_id], row[:id]) if row
+    storage_encrypt_project_id(row[:storage_id], row[:id]) if row
   end
 
   # Returns the row value with 'id' and 'isOwner' merged from input params, and
@@ -374,7 +374,7 @@ class Projects
       next_row = Projects.table.where(id: project_id).first
       while next_row&.[](:remix_parent_id)
         next_row = Projects.table.where(id: next_row[:remix_parent_id]).first
-        ancestors.push storage_encrypt_channel_id(next_row[:storage_id], next_row[:id]) if next_row
+        ancestors.push storage_encrypt_project_id(next_row[:storage_id], next_row[:id]) if next_row
         break if ancestors.size >= depth
       end
     end
