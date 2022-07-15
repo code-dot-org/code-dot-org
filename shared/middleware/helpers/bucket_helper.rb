@@ -52,9 +52,9 @@ class BucketHelper
     0
   end
 
-  def app_size(encrypted_channel_id)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-    prefix = s3_path owner_id, storage_app_id
+  def app_size(encrypted_project_id)
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
+    prefix = s3_path owner_id, project_id
     track_list_operation 'BucketHelper.app_size'
     s3.list_objects(bucket: @bucket, prefix: prefix).contents.map(&:size).reduce(:+).to_i
   end
@@ -63,15 +63,15 @@ class BucketHelper
   # Retrieve the total asset size of an app and the size of an individual object
   # within that app with a single S3 request.
   #
-  # @param [String] encrypted_channel_id - Token identifying app channel to read.
+  # @param [String] encrypted_project_id - Token identifying project to read.
   # @param [String] target_object - S3 key relative to channel of the single
   #                 object whose size we should return.
   # @return [[Int, Int]] size of target_object and size of entire app
-  def object_and_app_size(encrypted_channel_id, target_object)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+  def object_and_app_size(encrypted_project_id, target_object)
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
 
-    app_prefix = s3_path owner_id, storage_app_id
-    target_object_prefix = s3_path owner_id, storage_app_id, target_object
+    app_prefix = s3_path owner_id, project_id
+    target_object_prefix = s3_path owner_id, project_id, target_object
 
     track_list_operation 'BucketHelper.object_and_app_size'
     objects = s3.list_objects(bucket: @bucket, prefix: app_prefix).contents
@@ -83,9 +83,9 @@ class BucketHelper
     [object_size, app_size]
   end
 
-  def list(encrypted_channel_id)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-    prefix = s3_path owner_id, storage_app_id
+  def list(encrypted_project_id)
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
+    prefix = s3_path owner_id, project_id
     track_list_operation 'BucketHelper.list'
     s3.list_objects(bucket: @bucket, prefix: prefix).contents.map do |fileinfo|
       filename = %r{#{prefix}(.+)$}.match(fileinfo.key)[1]
@@ -95,14 +95,14 @@ class BucketHelper
     end
   end
 
-  def get(encrypted_channel_id, filename, if_modified_since = nil, version = nil)
+  def get(encrypted_project_id, filename, if_modified_since = nil, version = nil)
     if_modified_since = nil if if_modified_since == ''
     begin
-      owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+      owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return {status: 'NOT_FOUND'}
     end
-    key = s3_path owner_id, storage_app_id, filename
+    key = s3_path owner_id, project_id, filename
     begin
       s3_object = s3_get_object(key, if_modified_since, version)
       {status: 'FOUND', body: s3_object.body, version_id: s3_object.version_id, last_modified: s3_object.last_modified, metadata: s3_object.metadata}
@@ -118,8 +118,8 @@ class BucketHelper
     end
   end
 
-  def get_abuse_score(encrypted_channel_id, filename, version = nil)
-    response = get(encrypted_channel_id, filename, nil, version)
+  def get_abuse_score(encrypted_project_id, filename, version = nil)
+    response = get(encrypted_project_id, filename, nil, version)
     if response.nil? || response[:status] == 'NOT_FOUND'
       0
     else
@@ -129,8 +129,8 @@ class BucketHelper
   end
 
   def copy_files(src_channel, dest_channel, options={})
-    src_owner_id, src_storage_app_id = storage_decrypt_channel_id(src_channel)
-    dest_owner_id, dest_storage_app_id = storage_decrypt_channel_id(dest_channel)
+    src_owner_id, src_storage_app_id = storage_decrypt_project_id(src_channel)
+    dest_owner_id, dest_storage_app_id = storage_decrypt_project_id(dest_channel)
 
     src_prefix = s3_path src_owner_id, src_storage_app_id
     track_list_operation 'BucketHelper.copy_files'
@@ -161,24 +161,24 @@ class BucketHelper
     result.compact
   end
 
-  def restore_file_version(encrypted_channel_id, filename, version)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-    key = s3_path owner_id, storage_app_id, filename
+  def restore_file_version(encrypted_project_id, filename, version)
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
+    key = s3_path owner_id, project_id, filename
 
     s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}?versionId=#{version}"), key: key, metadata_directive: 'REPLACE')
   end
 
-  def replace_abuse_score(encrypted_channel_id, filename, abuse_score)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-    key = s3_path owner_id, storage_app_id, filename
+  def replace_abuse_score(encrypted_project_id, filename, abuse_score)
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
+    key = s3_path owner_id, project_id, filename
 
     s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}"), key: key, metadata: {abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
   end
 
-  def create_or_replace(encrypted_channel_id, filename, body, version = nil, abuse_score = 0)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+  def create_or_replace(encrypted_project_id, filename, body, version = nil, abuse_score = 0)
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
 
-    key = s3_path owner_id, storage_app_id, filename
+    key = s3_path owner_id, project_id, filename
     response = s3.put_object(bucket: @bucket, key: key, body: body, metadata: {abuse_score: abuse_score.to_s})
 
     # Delete the old version, if doing an in-place replace
@@ -204,11 +204,11 @@ class BucketHelper
   #
   # Therefore, a project will only ever replace a version that it created, and
   # we can say the client "owns" a particular version if that client created it.
-  def check_current_version(encrypted_channel_id, filename, current_version, should_replace, timestamp, tab_id, user_id)
+  def check_current_version(encrypted_project_id, filename, current_version, should_replace, timestamp, tab_id, user_id)
     return true unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && current_version
 
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-    key = s3_path owner_id, storage_app_id, filename
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
+    key = s3_path owner_id, project_id, filename
 
     begin
       latest = s3.head_object(bucket: @bucket, key: key).version_id
@@ -253,7 +253,7 @@ class BucketHelper
         study_group: 'v4',
         event: error_type,
 
-        project_id: encrypted_channel_id,
+        project_id: encrypted_project_id,
         user_id: user_id,
 
         data_json: {
@@ -277,16 +277,16 @@ class BucketHelper
   #
   # Copy an object within a channel, creating a new object in the channel.
   #
-  # @param [String] encrypted_channel_id - App-identifying token
+  # @param [String] encrypted_project_id - App-identifying token
   # @param [String] filename - Destination name for new object
   # @param [String] source_filename - Name of object to be copied
   # @param [String] version - Version of destination object to replace
   # @return [Hash] S3 response from copy operation
-  def copy(encrypted_channel_id, filename, source_filename, version = nil)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+  def copy(encrypted_project_id, filename, source_filename, version = nil)
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
 
-    key = s3_path owner_id, storage_app_id, filename
-    copy_source = @bucket + '/' + s3_path(owner_id, storage_app_id, source_filename)
+    key = s3_path owner_id, project_id, filename
+    copy_source = @bucket + '/' + s3_path(owner_id, project_id, source_filename)
     response = s3.copy_object(bucket: @bucket, key: key, copy_source: copy_source)
 
     # Delete the old version, if doing an in-place replace
@@ -295,16 +295,16 @@ class BucketHelper
     response
   end
 
-  def delete(encrypted_channel_id, filename)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-    key = s3_path owner_id, storage_app_id, filename
+  def delete(encrypted_project_id, filename)
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
+    key = s3_path owner_id, project_id, filename
 
     s3.delete_object(bucket: @bucket, key: key)
   end
 
-  def delete_multiple(encrypted_channel_id, filenames)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-    objects = filenames.map {|filename| {key: s3_path(owner_id, storage_app_id, filename)}}
+  def delete_multiple(encrypted_project_id, filenames)
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
+    objects = filenames.map {|filename| {key: s3_path(owner_id, project_id, filename)}}
 
     s3.delete_objects(bucket: @bucket, delete: {objects: objects, quiet: true})
   end
@@ -314,13 +314,13 @@ class BucketHelper
   # versioned, this includes all past versions of objects and all delete
   # markers, leaving no trace that the channel was ever used.
   #
-  # @param [String] encrypted_channel_id for the channel to hard-delete
+  # @param [String] encrypted_project_id for the channel to hard-delete
   # @return [Integer] the number of objects deleted
-  def hard_delete_channel_content(encrypted_channel_id)
+  def hard_delete_channel_content(encrypted_project_id)
     # TODO: Handle pagination in the S3 APIs
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
     # Find all versions of all objects
-    channel_prefix = s3_path owner_id, storage_app_id
+    channel_prefix = s3_path owner_id, project_id
     track_list_operation 'BucketHelper.hard_delete_channel_content'
     version_list = s3.list_object_versions(bucket: @bucket, prefix: channel_prefix)
     return 0 if version_list.versions.empty? && version_list.delete_markers.empty?
@@ -342,9 +342,9 @@ class BucketHelper
     result.deleted.count
   end
 
-  def list_versions(encrypted_channel_id, filename, with_comments: false)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-    key = s3_path owner_id, storage_app_id, filename
+  def list_versions(encrypted_project_id, filename, with_comments: false)
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
+    key = s3_path owner_id, project_id, filename
 
     track_list_operation 'BucketHelper.list_versions'
     s3.list_object_versions(bucket: @bucket, prefix: key).
@@ -353,7 +353,7 @@ class BucketHelper
         comment = with_comments ?
           DASHBOARD_DB[:project_commits].
           select(:comment).
-          where(storage_app_id: storage_app_id, object_version_id: version.version_id).
+          where(storage_app_id: project_id, object_version_id: version.version_id).
           first&.
           fetch(:comment) :
           nil
@@ -367,9 +367,9 @@ class BucketHelper
   end
 
   # Used for testing
-  def list_delete_markers(encrypted_channel_id, filename)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-    key = s3_path owner_id, storage_app_id, filename
+  def list_delete_markers(encrypted_project_id, filename)
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
+    key = s3_path owner_id, project_id, filename
 
     track_list_operation 'BucketHelper.list_delete_markers'
     s3.list_object_versions(bucket: @bucket, prefix: key).
@@ -385,9 +385,9 @@ class BucketHelper
 
   # Copies the given version of the file to make it the current revision.
   # (All intermediate versions are preserved.)
-  def restore_previous_version(encrypted_channel_id, filename, version_id, user_id)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-    key = s3_path owner_id, storage_app_id, filename
+  def restore_previous_version(encrypted_project_id, filename, version_id, user_id)
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
+    key = s3_path owner_id, project_id, filename
 
     version_restored = false
 
@@ -416,7 +416,7 @@ class BucketHelper
           copy_source: "#{@bucket}/#{key}",
           metadata_directive: 'REPLACE',
           metadata: {
-            abuse_score: get_abuse_score(encrypted_channel_id, filename).to_s,
+            abuse_score: get_abuse_score(encrypted_project_id, filename).to_s,
             failed_restore_at: Time.now.to_s,
             failed_restore_from_version: version_id || ''
           }
@@ -457,7 +457,7 @@ class BucketHelper
     if version_restored
       # If we get this far, the restore request has succeeded.
       log_restored_file(
-        project_id: encrypted_channel_id,
+        project_id: encrypted_project_id,
         user_id: user_id,
         filename: filename,
         source_version_id: version_id,
@@ -491,8 +491,8 @@ class BucketHelper
   end
 
   def log_restored_file(project_id:, user_id:, filename:, source_version_id:, new_version_id:)
-    owner_id, storage_app_id = storage_decrypt_channel_id(project_id)
-    key = s3_path owner_id, storage_app_id, filename
+    owner_id, project_id = storage_decrypt_project_id(project_id)
+    key = s3_path owner_id, project_id, filename
     FirehoseClient.instance.put_record(
       :analysis,
       {
@@ -523,8 +523,8 @@ class BucketHelper
     false
   end
 
-  def s3_path(owner_id, storage_app_id, filename = nil)
-    "#{@base_dir}/#{owner_id}/#{storage_app_id}/#{Addressable::URI.unencode(filename)}"
+  def s3_path(owner_id, project_id, filename = nil)
+    "#{@base_dir}/#{owner_id}/#{project_id}/#{Addressable::URI.unencode(filename)}"
   end
 
   # Extracted so we can override with special behavior in AnimationBucket.

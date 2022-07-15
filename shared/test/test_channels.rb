@@ -444,9 +444,9 @@ class ChannelsTest < Minitest::Test
 
   def test_remix_parent
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    encrypted_parent_channel_id = last_response.location.split('/').last
+    encrypted_parent_project_id = last_response.location.split('/').last
 
-    post "/v3/channels?parent=#{encrypted_parent_channel_id}", {def: 456}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    post "/v3/channels?parent=#{encrypted_parent_project_id}", {def: 456}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.redirection?
     follow_redirect!
 
@@ -454,18 +454,18 @@ class ChannelsTest < Minitest::Test
     assert last_request.url.end_with? "/#{response['id']}"
     assert_equal 456, response['def']
 
-    _, storage_app_id = storage_decrypt_channel_id(response['id'])
-    _, parent_storage_app_id = storage_decrypt_channel_id(encrypted_parent_channel_id)
+    _, storage_app_id = storage_decrypt_project_id(response['id'])
+    _, parent_storage_app_id = storage_decrypt_project_id(encrypted_parent_project_id)
     assert_equal parent_storage_app_id, Projects.table.where(id: storage_app_id).first[:remix_parent_id]
   end
 
   def test_update_project_type
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    encrypted_channel_id = last_response.location.split('/').last
-    _, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+    encrypted_project_id = last_response.location.split('/').last
+    _, storage_app_id = storage_decrypt_project_id(encrypted_project_id)
     assert_nil Projects.table.where(id: storage_app_id).first[:project_type]
 
-    post "/v3/channels/#{encrypted_channel_id}", {projectType: 'gamelab'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    post "/v3/channels/#{encrypted_project_id}", {projectType: 'gamelab'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.successful?
     assert_equal 'gamelab', Projects.table.where(id: storage_app_id).first[:project_type]
   end

@@ -57,7 +57,7 @@ class ChannelToken < ApplicationRecord
         create!(level: level.host_level, storage_id: user_storage_id, script_id: script_id) do |ct|
           # Get a new channel_id.
           channel = create_channel ip, project, data: data, standalone: false
-          _, ct.project_id = storage_decrypt_channel_id(channel)
+          _, ct.project_id = storage_decrypt_project_id(channel)
         end
       end
     end

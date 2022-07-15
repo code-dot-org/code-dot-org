@@ -37,8 +37,8 @@ class AssetBucket < BucketHelper
     3600
   end
 
-  def copy_level_starter_assets(src_channel, dest_channel)
-    src_owner_id, src_storage_app_id = storage_decrypt_channel_id(src_channel)
+  def copy_level_starter_assets(src_encrypted_project_id, dest_encrypted_project_id)
+    src_owner_id, src_storage_app_id = storage_decrypt_project_id(src_encrypted_project_id)
 
     channel = ChannelToken.find_by(storage_id: src_owner_id, storage_app_id: src_storage_app_id)
     return unless channel
@@ -46,7 +46,7 @@ class AssetBucket < BucketHelper
     level = Level.cache_find(channel.level_id)
     return unless level
 
-    dest_owner_id, dest_storage_app_id = storage_decrypt_channel_id(dest_channel)
+    dest_owner_id, dest_storage_app_id = storage_decrypt_project_id(dest_encrypted_project_id)
 
     (level&.project_template_level&.starter_assets || level.starter_assets || []).map do |friendly_name, uuid_name|
       src = "#{@bucket}/#{LevelStarterAssetsController::S3_PREFIX}#{uuid_name}"

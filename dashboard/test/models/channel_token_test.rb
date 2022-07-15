@@ -21,7 +21,7 @@ class ChannelTokenTest < ActiveSupport::TestCase
       @script.id
     )
 
-    storage_id, storage_app_id = storage_decrypt_channel_id(channel_token.channel)
+    storage_id, storage_app_id = storage_decrypt_project_id(channel_token.channel)
     assert_equal storage_id, channel_token.storage_id
     assert_equal storage_app_id, channel_token.storage_app_id
   end

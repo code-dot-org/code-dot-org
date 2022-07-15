@@ -36,28 +36,28 @@ class FilesApi < Sinatra::Base
     end
   end
 
-  def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
+  def can_update_abuse_score?(endpoint, encrypted_project_id, filename, new_score)
     return true if has_permission?('project_validator') || new_score.nil?
 
-    get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
+    get_bucket_impl(endpoint).new.get_abuse_score(encrypted_project_id, filename) <= new_score.to_i
   end
 
-  def can_view_abusive_assets?(encrypted_channel_id)
-    return true if owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
+  def can_view_abusive_assets?(encrypted_project_id)
+    return true if owns_channel?(encrypted_project_id) || admin? || has_permission?('project_validator')
 
     # teachers can see abusive assets of their students
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = storage_decrypt_project_id(encrypted_project_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
 
     teaches_student?(owner_user_id)
   end
 
-  def codeprojects_can_view?(encrypted_channel_id)
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+  def codeprojects_can_view?(encrypted_project_id)
+    owner_storage_id, _ = storage_decrypt_project_id(encrypted_project_id)
 
     # Attempt to find active project in database. This will raise Projects::NotFound if
     # no active project exists, which is handled below.
-    Projects.new(owner_storage_id).get(encrypted_channel_id)
+    Projects.new(owner_storage_id).get(encrypted_project_id)
 
     owner_user_id = user_id_for_storage_id(owner_storage_id)
     !get_user_sharing_disabled(owner_user_id)
@@ -67,8 +67,8 @@ class FilesApi < Sinatra::Base
     false
   end
 
-  def can_view_profane_or_pii_assets?(encrypted_channel_id)
-    owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
+  def can_view_profane_or_pii_assets?(encrypted_project_id)
+    owns_channel?(encrypted_project_id) || admin? || has_permission?('project_validator')
   end
 
   def file_too_large(quota_type)
@@ -81,16 +81,16 @@ class FilesApi < Sinatra::Base
     (app_size < max_app_size / 2) && (app_size + body_length >= max_app_size / 2)
   end
 
-  def quota_crossed_half_used(quota_type, encrypted_channel_id)
+  def quota_crossed_half_used(quota_type, encrypted_project_id)
     quota_event_type = 'QuotaCrossedHalfUsed'
     record_metric(quota_event_type, quota_type)
-    record_event(quota_event_type, quota_type, encrypted_channel_id)
+    record_event(quota_event_type, quota_type, encrypted_project_id)
   end
 
-  def quota_exceeded(quota_type, encrypted_channel_id)
+  def quota_exceeded(quota_type, encrypted_project_id)
     quota_event_type = 'QuotaExceeded'
     record_metric(quota_event_type, quota_type)
-    record_event(quota_event_type, quota_type, encrypted_channel_id)
+    record_event(quota_event_type, quota_type, encrypted_project_id)
     forbidden
   end
 
@@ -100,14 +100,14 @@ class FilesApi < Sinatra::Base
     NewRelic::Agent.record_metric("Custom/FilesApi/#{quota_event_type}_#{quota_type}", value)
   end
 
-  def record_event(quota_event_type, quota_type, encrypted_channel_id)
+  def record_event(quota_event_type, quota_type, encrypted_project_id)
     return unless CDO.newrelic_logging
 
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = storage_decrypt_project_id(encrypted_project_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
     event_details = {
       quota_type: quota_type,
-      encrypted_channel_id: encrypted_channel_id,
+      encrypted_channel_id: encrypted_project_id,
       owner_user_id: owner_user_id
     }
     NewRelic::Agent.record_custom_event("FilesApi#{quota_event_type}", event_details)
@@ -130,12 +130,12 @@ class FilesApi < Sinatra::Base
   #
   # List filenames and sizes.
   #
-  get %r{/v3/(animations|assets|sources|libraries)/([^/]+)$} do |endpoint, encrypted_channel_id|
+  get %r{/v3/(animations|assets|sources|libraries)/([^/]+)$} do |endpoint, encrypted_project_id|
     dont_cache
     content_type :json
 
     begin
-      get_bucket_impl(endpoint).new.list(encrypted_channel_id).to_json
+      get_bucket_impl(endpoint).new.list(encrypted_project_id).to_json
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
@@ -148,11 +148,11 @@ class FilesApi < Sinatra::Base
   # Note: we depend on this URL in Javabuilder
   # https://github.com/code-dot-org/javabuilder/blob/main/org-code-javabuilder/protocol/src/main/java/org/code/protocol/GlobalProtocol.java
   #
-  get %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  get %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_project_id, filename|
     if endpoint == 'libraries'
       dont_cache
     end
-    get_file(endpoint, encrypted_channel_id, filename)
+    get_file(endpoint, encrypted_project_id, filename)
   end
 
   #
@@ -160,8 +160,8 @@ class FilesApi < Sinatra::Base
   #
   # Read the latest version of a source file, and cache the response.
   #
-  get %r{/v3/sources-public/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
-    get_file('sources', encrypted_channel_id, filename, cache_duration: SOURCES_PUBLIC_CACHE_DURATION)
+  get %r{/v3/sources-public/([^/]+)/([^/]+)$} do |encrypted_project_id, filename|
+    get_file('sources', encrypted_project_id, filename, cache_duration: SOURCES_PUBLIC_CACHE_DURATION)
   end
 
   #
@@ -171,10 +171,10 @@ class FilesApi < Sinatra::Base
   # Only from codeprojects.org domain
   # Deprecated in favor of the URL below
   #
-  get %r{/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id, filename|
-    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+  get %r{/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |encrypted_project_id, filename|
+    pass unless valid_encrypted_channel_id(encrypted_project_id)
 
-    get_file('files', encrypted_channel_id, filename, true)
+    get_file('files', encrypted_project_id, filename, true)
   end
 
   #
@@ -183,11 +183,11 @@ class FilesApi < Sinatra::Base
   # Read a file. Optionally get a specific version instead of the most recent.
   # Only from codeprojects.org domain
   #
-  get %r{/projects/([a-z]+)/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |project_type, encrypted_channel_id, filename|
+  get %r{/projects/([a-z]+)/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |project_type, encrypted_project_id, filename|
     not_found unless project_type == 'weblab'
-    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+    pass unless valid_encrypted_channel_id(encrypted_project_id)
 
-    get_file('files', encrypted_channel_id, filename, true)
+    get_file('files', encrypted_project_id, filename, true)
   end
 
   #
@@ -197,8 +197,8 @@ class FilesApi < Sinatra::Base
   # Only from codeprojects.org domain
   # Deprecated in favor of the URL below
   #
-  get %r{/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id|
-    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+  get %r{/([^/]+)$}, {code_projects_domain: true} do |encrypted_project_id|
+    pass unless valid_encrypted_channel_id(encrypted_project_id)
 
     redirect "#{request.path_info}/"
   end
@@ -209,9 +209,9 @@ class FilesApi < Sinatra::Base
   # Redirect to /projects/<project-type>/<channel-id>/
   # Only from codeprojects.org domain
   #
-  get %r{/projects/([a-z]+)/([^/]+)$}, {code_projects_domain: true} do |project_type, encrypted_channel_id|
+  get %r{/projects/([a-z]+)/([^/]+)$}, {code_projects_domain: true} do |project_type, encrypted_project_id|
     not_found unless project_type == 'weblab'
-    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+    pass unless valid_encrypted_channel_id(encrypted_project_id)
 
     redirect "#{request.path_info}/"
   end
@@ -223,10 +223,10 @@ class FilesApi < Sinatra::Base
   # Only from codeprojects.org domain
   # Deprecated in favor of the URL below
   #
-  get %r{/([^/]+)/$}, {code_projects_domain: true} do |encrypted_channel_id|
-    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+  get %r{/([^/]+)/$}, {code_projects_domain: true} do |encrypted_project_id|
+    pass unless valid_encrypted_channel_id(encrypted_project_id)
 
-    get_file('files', encrypted_channel_id, 'index.html', true)
+    get_file('files', encrypted_project_id, 'index.html', true)
   end
 
   #
@@ -236,17 +236,17 @@ class FilesApi < Sinatra::Base
   # Only from codeprojects.org domain
   # Currently only supported for weblab
   #
-  get %r{/projects/([a-z]+)/([^/]+)/$}, {code_projects_domain: true} do |project_type, encrypted_channel_id|
+  get %r{/projects/([a-z]+)/([^/]+)/$}, {code_projects_domain: true} do |project_type, encrypted_project_id|
     not_found unless project_type == 'weblab'
-    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+    pass unless valid_encrypted_channel_id(encrypted_project_id)
 
-    get_file('files', encrypted_channel_id, 'index.html', true)
+    get_file('files', encrypted_project_id, 'index.html', true)
   end
 
   #
   # @return [IO] requested file body as an IO stream
   #
-  def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false, cache_duration: nil)
+  def get_file(endpoint, encrypted_project_id, filename, code_projects_domain_root_route = false, cache_duration: nil)
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
     NewRelic::Agent.ignore_enduser rescue nil
 
@@ -273,24 +273,24 @@ class FilesApi < Sinatra::Base
       response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\""
     end
 
-    result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
+    result = buckets.get(encrypted_project_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
 
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_abusive_assets?(encrypted_channel_id)
-    not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
-    not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
+    not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_abusive_assets?(encrypted_project_id)
+    not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_project_id)
+    not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_project_id)
 
     if code_projects_domain_root_route && html?(response.headers)
-      return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/scripts/hosted.js'></script>\n<link rel='stylesheet' href='/style.css'></head>\n" << result[:body].string
+      return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_project_id}';\n</script>\n<script async src='/scripts/hosted.js'></script>\n<link rel='stylesheet' href='/style.css'></head>\n" << result[:body].string
     end
 
     response.headers['S3-Version-Id'] = result[:version_id]
 
-    if endpoint == 'sources' && should_sanitize_for_under_13?(encrypted_channel_id)
+    if endpoint == 'sources' && should_sanitize_for_under_13?(encrypted_project_id)
       return StringIO.new sanitize_for_under_13 result[:body].string
     end
 
@@ -299,10 +299,10 @@ class FilesApi < Sinatra::Base
 
   # We should sanitize all sources created by under-13 users unless it is the
   # user themselves requesting to view the source
-  def should_sanitize_for_under_13?(encrypted_channel_id)
-    return false if owns_channel?(encrypted_channel_id)
+  def should_sanitize_for_under_13?(encrypted_project_id)
+    return false if owns_channel?(encrypted_project_id)
 
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = storage_decrypt_project_id(encrypted_project_id)
     owner_id = user_id_for_storage_id(owner_storage_id)
     under_13?(owner_id)
   end
@@ -385,12 +385,12 @@ class FilesApi < Sinatra::Base
   #   2. It belongs to a WebLab project and does not contain disallowed HTML tags.
   # Returns false if the file is not an HTML file, does not belong to a project, or
   # is a WebLab HTML file that contains disallowed HTML tags.
-  def valid_html_file?(encrypted_channel_id, filename, body)
+  def valid_html_file?(encrypted_project_id, filename, body)
     return false unless html_file?(filename)
 
     # Only validate WebLab HTML files. We need to get the project from the database
     # in order to check whether or not the file belongs to a WebLab project.
-    project = Projects.new(get_storage_id).get(encrypted_channel_id)
+    project = Projects.new(get_storage_id).get(encrypted_project_id)
     return false unless project
     return true unless project[:projectType]&.downcase == 'weblab'
 
@@ -409,8 +409,8 @@ class FilesApi < Sinatra::Base
     end
   end
 
-  def put_file(endpoint, encrypted_channel_id, filename, body)
-    not_authorized unless owns_channel?(encrypted_channel_id)
+  def put_file(endpoint, encrypted_project_id, filename, body)
+    not_authorized unless owns_channel?(encrypted_project_id)
     file_type = File.extname(filename)
     buckets = get_bucket_impl(endpoint).new
     if body.length >= max_file_size
@@ -429,9 +429,9 @@ class FilesApi < Sinatra::Base
     # sources only supports one file (main.json) and we checked max_file_size above,
     # so there's no need to check if we've exceeded the max total app size for the sources bucket.
     unless 'sources' == endpoint
-      app_size = buckets.app_size(encrypted_channel_id)
-      quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
-      quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
+      app_size = buckets.app_size(encrypted_project_id)
+      quota_exceeded(endpoint, encrypted_project_id) unless app_size + body.length < max_app_size
+      quota_crossed_half_used(endpoint, encrypted_project_id) if quota_crossed_half_used?(app_size, body.length)
     end
 
     # Block libraries with PII/profanity from being published.
@@ -475,11 +475,11 @@ class FilesApi < Sinatra::Base
 
     timestamp = params['firstSaveTimestamp']
     tab_id = params['tabId']
-    conflict unless buckets.check_current_version(encrypted_channel_id, filename, current_version, should_replace, timestamp, tab_id, current_user_id)
+    conflict unless buckets.check_current_version(encrypted_project_id, filename, current_version, should_replace, timestamp, tab_id, current_user_id)
 
-    abuse_score = Projects.get_abuse(encrypted_channel_id)
+    abuse_score = Projects.get_abuse(encrypted_project_id)
 
-    response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace, abuse_score)
+    response = buckets.create_or_replace(encrypted_project_id, filename, body, version_to_replace, abuse_score)
 
     {
       filename: filename,
@@ -514,13 +514,13 @@ class FilesApi < Sinatra::Base
   # Create a new file from an existing source file within the specified channel.
   #
   # @param [String] endpoint - One of sources/assets/animations
-  # @param [String] encrypted_channel_id - Token for app channel
+  # @param [String] encrypted_project_id - Token for app channel
   # @param [String] filename - Destination filename for file to be created
   # @param [String] source_filename - Filename of file to be copied
   # @return [String] JSON containing details for new file
   #
-  def copy_file(endpoint, encrypted_channel_id, filename, source_filename)
-    not_authorized unless owns_channel?(encrypted_channel_id)
+  def copy_file(endpoint, encrypted_project_id, filename, source_filename)
+    not_authorized unless owns_channel?(encrypted_project_id)
 
     buckets = get_bucket_impl(endpoint).new
     bad_request unless buckets.allowed_file_name? filename
@@ -532,14 +532,14 @@ class FilesApi < Sinatra::Base
     category = buckets.category_from_file_type(file_type)
 
     # Get the app size and size of the source object to check app quotas
-    source_size, app_size = buckets.object_and_app_size(encrypted_channel_id, source_filename)
+    source_size, app_size = buckets.object_and_app_size(encrypted_project_id, source_filename)
     # If the source object doesn't exist, reject the request
     not_found if source_size.nil?
 
-    quota_exceeded(endpoint, encrypted_channel_id) unless app_size + source_size < max_app_size
-    quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, source_size)
+    quota_exceeded(endpoint, encrypted_project_id) unless app_size + source_size < max_app_size
+    quota_crossed_half_used(endpoint, encrypted_project_id) if quota_crossed_half_used?(app_size, source_size)
 
-    response = buckets.copy(encrypted_channel_id, filename, source_filename)
+    response = buckets.copy(encrypted_project_id, filename, source_filename)
 
     {filename: filename, category: category, size: source_size, versionId: response.version_id}.to_json
   end
@@ -550,7 +550,7 @@ class FilesApi < Sinatra::Base
   #
   # Create or replace a file. For sources endpoint, optionally overwrite a specific version.
   #
-  put %r{/v3/(sources|assets|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  put %r{/v3/(sources|assets|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_project_id, filename|
     dont_cache
     content_type :json
 
@@ -560,7 +560,7 @@ class FilesApi < Sinatra::Base
     # header.
     body = request.body.read
 
-    put_file(endpoint, encrypted_channel_id, filename, body)
+    put_file(endpoint, encrypted_project_id, filename, body)
   end
 
   # POST /v3/assets/<channel-id>/
@@ -568,7 +568,7 @@ class FilesApi < Sinatra::Base
   # Upload a new file. We use this method so that IE9 can still upload by
   # posting to an iframe.
   #
-  post %r{/v3/assets/([^/]+)/$} do |encrypted_channel_id|
+  post %r{/v3/assets/([^/]+)/$} do |encrypted_project_id|
     dont_cache
     # though this is JSON data, we're making the POST request via iframe
     # form submission. IE9 will try to download the response if we have
@@ -582,7 +582,7 @@ class FilesApi < Sinatra::Base
     bad_request unless file[:filename] && file[:tempfile]
 
     filename = BucketHelper.replace_unsafe_chars(file[:filename])
-    put_file('assets', encrypted_channel_id, filename, file[:tempfile].read)
+    put_file('assets', encrypted_project_id, filename, file[:tempfile].read)
   end
 
   # POST /v3/copy-assets/<channel-id>?src_channel=<src-channel-id>&src_files=<src-filenames-json>
@@ -590,11 +590,11 @@ class FilesApi < Sinatra::Base
   # Copy assets from another channel. Note that when specifying the src files, you must
   # json encode it
   #
-  post %r{/v3/copy-assets/([^/]+)$} do |encrypted_channel_id|
+  post %r{/v3/copy-assets/([^/]+)$} do |encrypted_project_id|
     dont_cache
     AssetBucket.new.copy_files(
       request['src_channel'],
-      encrypted_channel_id,
+      encrypted_project_id,
       {filenames: JSON.parse(request['src_files'])}
     ).to_json
   end
@@ -604,7 +604,7 @@ class FilesApi < Sinatra::Base
   # Create or replace an animation. We use this method so that IE9 can still
   # upload by posting to an iframe.
   #
-  post %r{/v3/(animations)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  post %r{/v3/(animations)/([^/]+)/([^/]+)$} do |endpoint, encrypted_project_id, filename|
     dont_cache
     # though this is JSON data, we're making the POST request via iframe
     # form submission. IE9 will try to download the response if we have
@@ -617,22 +617,22 @@ class FilesApi < Sinatra::Base
 
     bad_request unless file[:filename] && file[:tempfile]
 
-    put_file(endpoint, encrypted_channel_id, filename, file[:tempfile].read)
+    put_file(endpoint, encrypted_project_id, filename, file[:tempfile].read)
   end
 
   # PUT /v3/animations/<channel-id>/<filename>?src=<source-filename>
   #
   # Create or replace an animation.
   #
-  put %r{/v3/(animations)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  put %r{/v3/(animations)/([^/]+)/([^/]+)$} do |endpoint, encrypted_project_id, filename|
     dont_cache
     content_type 'text/plain'
     if request.content_type == 'image/png'
       body = request.body.read
-      put_file(endpoint, encrypted_channel_id, filename, body)
+      put_file(endpoint, encrypted_project_id, filename, body)
     elsif !request.GET['src'].nil?
       # We use this method so that IE9 can still upload by posting to an iframe.
-      copy_file(endpoint, encrypted_channel_id, filename, request.GET['src'])
+      copy_file(endpoint, encrypted_project_id, filename, request.GET['src'])
     else
       bad_request
     end
@@ -643,7 +643,7 @@ class FilesApi < Sinatra::Base
   #
   # Update all assets for the given channelId to have the provided abuse score
   #
-  patch %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/$} do |endpoint, encrypted_channel_id|
+  patch %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/$} do |endpoint, encrypted_project_id|
     dont_cache
 
     abuse_score = request.GET['abuse_score']
@@ -652,13 +652,13 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
 
     begin
-      files = buckets.list(encrypted_channel_id)
+      files = buckets.list(encrypted_project_id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
     files.each do |file|
-      not_authorized unless can_update_abuse_score?(endpoint, encrypted_channel_id, file[:filename], abuse_score)
-      buckets.replace_abuse_score(encrypted_channel_id, file[:filename], abuse_score)
+      not_authorized unless can_update_abuse_score?(endpoint, encrypted_project_id, file[:filename], abuse_score)
+      buckets.replace_abuse_score(encrypted_project_id, file[:filename], abuse_score)
     end
 
     content_type :json
@@ -670,12 +670,12 @@ class FilesApi < Sinatra::Base
   #
   # Delete a file.
   #
-  delete %r{/v3/(animations|assets|sources|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  delete %r{/v3/(animations|assets|sources|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_project_id, filename|
     dont_cache
 
-    not_authorized unless owns_channel?(encrypted_channel_id)
+    not_authorized unless owns_channel?(encrypted_project_id)
 
-    get_bucket_impl(endpoint).new.delete(encrypted_channel_id, filename)
+    get_bucket_impl(endpoint).new.delete(encrypted_project_id, filename)
     no_content
   end
 
@@ -685,12 +685,12 @@ class FilesApi < Sinatra::Base
   # List versions of the given file.
   # NOTE: Not yet implemented for assets.
   #
-  get %r{/v3/(animations|sources|files|libraries)/([^/]+)/([^/]+)/versions$} do |endpoint, encrypted_channel_id, filename|
+  get %r{/v3/(animations|sources|files|libraries)/([^/]+)/([^/]+)/versions$} do |endpoint, encrypted_project_id, filename|
     dont_cache
     content_type :json
 
     filename.downcase! if endpoint == 'files'
-    get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments']).to_json
+    get_bucket_impl(endpoint).new.list_versions(encrypted_project_id, filename, with_comments: request.GET['with_comments']).to_json
   end
 
   #
@@ -698,13 +698,13 @@ class FilesApi < Sinatra::Base
   #
   # Copies the given version of the source to make it the current revision.
   #
-  put %r{/v3/sources/([^/]+)/([^/]+)/restore$} do |encrypted_channel_id, filename|
+  put %r{/v3/sources/([^/]+)/([^/]+)/restore$} do |encrypted_project_id, filename|
     dont_cache
     content_type :json
 
-    not_authorized unless owns_channel?(encrypted_channel_id)
+    not_authorized unless owns_channel?(encrypted_project_id)
 
-    SourceBucket.new.restore_previous_version(encrypted_channel_id, filename, request.GET['version'], current_user_id).to_json
+    SourceBucket.new.restore_previous_version(encrypted_project_id, filename, request.GET['version'], current_user_id).to_json
   end
 
   #
@@ -712,12 +712,12 @@ class FilesApi < Sinatra::Base
   #
   # List filenames and sizes.
   #
-  get %r{/v3/files/([^/]+)$} do |encrypted_channel_id|
+  get %r{/v3/files/([^/]+)$} do |encrypted_project_id|
     dont_cache
     content_type :json
 
     bucket = FileBucket.new
-    result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, env['HTTP_IF_MODIFIED_SINCE'], params['version'])
+    result = bucket.get(encrypted_project_id, FileBucket::MANIFEST_FILENAME, env['HTTP_IF_MODIFIED_SINCE'], params['version'])
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
@@ -741,7 +741,7 @@ class FilesApi < Sinatra::Base
   # result, we normalize s3 filenames to be downcased. That said, we maintain a case-sensitive
   # manifest.
   #
-  def files_put_file(encrypted_channel_id, filename, body)
+  def files_put_file(encrypted_project_id, filename, body)
     # Rename .jfif file extensions to .jpg because Sinatra does not support .jfif file types.
     # .jfif files use the same protocol as .jpg files, which is why rename-only is sufficient.
     filename.gsub!(/(.jfif|.JFIF)/, '.jpg') if File.extname(filename.downcase) == '.jfif'
@@ -750,10 +750,10 @@ class FilesApi < Sinatra::Base
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
     bad_request if unescaped_filename_downcased.length > FileBucket::MAXIMUM_FILENAME_LENGTH
-    bad_request if html_file?(unescaped_filename) && !valid_html_file?(encrypted_channel_id, unescaped_filename, body)
+    bad_request if html_file?(unescaped_filename) && !valid_html_file?(encrypted_project_id, unescaped_filename, body)
 
     bucket = FileBucket.new
-    manifest = get_manifest(bucket, encrypted_channel_id)
+    manifest = get_manifest(bucket, encrypted_project_id)
     manifest_is_unchanged = true
 
     unescaped_src_filename_downcased = params['src'] ? CGI.unescape(params['src']).downcase : nil
@@ -769,13 +769,13 @@ class FilesApi < Sinatra::Base
       else
         new_entry_json = copy_file(
           'files',
-          encrypted_channel_id,
+          encrypted_project_id,
           URI.encode(unescaped_filename_downcased),
           URI.encode(unescaped_src_filename_downcased)
         )
       end
     else
-      new_entry_json = put_file('files', encrypted_channel_id, URI.encode(unescaped_filename_downcased), body)
+      new_entry_json = put_file('files', encrypted_project_id, URI.encode(unescaped_filename_downcased), body)
     end
     new_entry_hash = JSON.parse new_entry_json
     # Replace downcased filename with original filename (to preserve case in the manifest)
@@ -800,10 +800,10 @@ class FilesApi < Sinatra::Base
 
     # write the manifest (assuming the entry changed)
     unless manifest_is_unchanged
-      abuse_score = Projects.get_abuse(encrypted_channel_id)
+      abuse_score = Projects.get_abuse(encrypted_project_id)
 
       response = bucket.create_or_replace(
-        encrypted_channel_id,
+        encrypted_project_id,
         FileBucket::MANIFEST_FILENAME,
         manifest.to_json,
         params['files-version'],
@@ -814,7 +814,7 @@ class FilesApi < Sinatra::Base
 
     # delete a file if requested (same as src file in a rename operation)
     if deleting_separate_file
-      bucket.delete(encrypted_channel_id, URI.encode(unescaped_delete_filename_downcased))
+      bucket.delete(encrypted_project_id, URI.encode(unescaped_delete_filename_downcased))
     end
 
     # return the new entry info
@@ -826,7 +826,7 @@ class FilesApi < Sinatra::Base
   # Create or replace a file. We use this method so that IE9 can still
   # upload by posting to an iframe.
   #
-  post %r{/v3/files/([^/]+)/$} do |encrypted_channel_id|
+  post %r{/v3/files/([^/]+)/$} do |encrypted_project_id|
     dont_cache
     # though this is JSON data, we're making the POST request via iframe
     # form submission. IE9 will try to download the response if we have
@@ -840,7 +840,7 @@ class FilesApi < Sinatra::Base
     bad_request unless file[:filename] && file[:tempfile]
 
     filename = BucketHelper.replace_unsafe_chars(file[:filename])
-    files_put_file(encrypted_channel_id, filename, file[:tempfile].read)
+    files_put_file(encrypted_project_id, filename, file[:tempfile].read)
   end
 
   #
@@ -848,7 +848,7 @@ class FilesApi < Sinatra::Base
   #
   # Create or replace a file. Optionally overwrite a specific version.
   #
-  put %r{/v3/files/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
+  put %r{/v3/files/([^/]+)/([^/]+)$} do |encrypted_project_id, filename|
     dont_cache
     content_type :json
 
@@ -860,7 +860,7 @@ class FilesApi < Sinatra::Base
       body = request.body.read
     end
 
-    files_put_file(encrypted_channel_id, filename, body)
+    files_put_file(encrypted_project_id, filename, body)
   end
 
   #
@@ -868,20 +868,20 @@ class FilesApi < Sinatra::Base
   #
   # Delete all files.
   #
-  delete %r{/v3/files/([^/]+)/\*$} do |encrypted_channel_id|
+  delete %r{/v3/files/([^/]+)/\*$} do |encrypted_project_id|
     dont_cache
     content_type :json
 
-    not_authorized unless owns_channel?(encrypted_channel_id)
+    not_authorized unless owns_channel?(encrypted_project_id)
 
     # read the manifest
     bucket = FileBucket.new
-    manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
+    manifest_result = bucket.get(encrypted_project_id, FileBucket::MANIFEST_FILENAME)
     not_found if manifest_result[:status] == 'NOT_FOUND'
     manifest = JSON.load manifest_result[:body]
 
     # delete the manifest and all of the files it referenced
-    bucket.delete_multiple(encrypted_channel_id, [FileBucket::MANIFEST_FILENAME].concat(manifest.map {|e| e['filename'].downcase})) unless manifest.empty?
+    bucket.delete_multiple(encrypted_project_id, [FileBucket::MANIFEST_FILENAME].concat(manifest.map {|e| e['filename'].downcase})) unless manifest.empty?
     no_content
   end
 
@@ -890,17 +890,17 @@ class FilesApi < Sinatra::Base
   #
   # Delete a file.
   #
-  delete %r{/v3/files/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
+  delete %r{/v3/files/([^/]+)/([^/]+)$} do |encrypted_project_id, filename|
     dont_cache
     content_type :json
 
     bad_request if filename.downcase == FileBucket::MANIFEST_FILENAME
 
-    not_authorized unless owns_channel?(encrypted_channel_id)
+    not_authorized unless owns_channel?(encrypted_project_id)
 
     # read the manifest
     bucket = FileBucket.new
-    manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
+    manifest_result = bucket.get(encrypted_project_id, FileBucket::MANIFEST_FILENAME)
     not_found if manifest_result[:status] == 'NOT_FOUND'
     manifest = JSON.load manifest_result[:body]
 
@@ -909,13 +909,13 @@ class FilesApi < Sinatra::Base
     reject_result = manifest.reject! {|e| e['filename'].downcase == manifest_delete_comparison_filename}
     not_found if reject_result.nil?
 
-    abuse_score = Projects.get_abuse(encrypted_channel_id)
+    abuse_score = Projects.get_abuse(encrypted_project_id)
 
     # write the manifest
-    response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest.to_json, params['files-version'], abuse_score)
+    response = bucket.create_or_replace(encrypted_project_id, FileBucket::MANIFEST_FILENAME, manifest.to_json, params['files-version'], abuse_score)
 
     # delete the file
-    bucket.delete(encrypted_channel_id, filename.downcase)
+    bucket.delete(encrypted_project_id, filename.downcase)
 
     {filesVersionId: response.version_id}.to_json
   end
@@ -925,11 +925,11 @@ class FilesApi < Sinatra::Base
   #
   # List versions of the project.
   #
-  get %r{/v3/files-version/([^/]+)$} do |encrypted_channel_id|
+  get %r{/v3/files-version/([^/]+)$} do |encrypted_project_id|
     dont_cache
     content_type :json
 
-    FileBucket.new.list_versions(encrypted_channel_id, FileBucket::MANIFEST_FILENAME).to_json
+    FileBucket.new.list_versions(encrypted_project_id, FileBucket::MANIFEST_FILENAME).to_json
   end
 
   #
@@ -937,30 +937,30 @@ class FilesApi < Sinatra::Base
   #
   # Restore project files to the state of a previous version id.
   #
-  put %r{/v3/files-version/([^/]+)$} do |encrypted_channel_id|
+  put %r{/v3/files-version/([^/]+)$} do |encrypted_project_id|
     dont_cache
     content_type :json
 
-    not_authorized unless owns_channel?(encrypted_channel_id)
+    not_authorized unless owns_channel?(encrypted_project_id)
 
     # read the manifest using the version-id specified
     bucket = FileBucket.new
-    manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, nil, params['version'])
+    manifest_result = bucket.get(encrypted_project_id, FileBucket::MANIFEST_FILENAME, nil, params['version'])
     bad_request if manifest_result[:status] == 'NOT_FOUND'
     manifest = JSON.load manifest_result[:body]
 
     # restore the files based on the versions stored in the manifest
     manifest.each do |entry|
       # TODO: (cpirich) optimization possible to avoid restoring if versionId matches current version
-      response = bucket.restore_file_version(encrypted_channel_id, entry['filename'].downcase, entry['versionId'])
+      response = bucket.restore_file_version(encrypted_project_id, entry['filename'].downcase, entry['versionId'])
       entry['versionId'] = response.version_id
     end
 
-    abuse_score = Projects.get_abuse(encrypted_channel_id)
+    abuse_score = Projects.get_abuse(encrypted_project_id)
 
     # save the new manifest
     manifest_json = manifest.to_json
-    result = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest_json, nil, abuse_score)
+    result = bucket.create_or_replace(encrypted_project_id, FileBucket::MANIFEST_FILENAME, manifest_json, nil, abuse_score)
 
     {"filesVersionId": result[:version_id], "files": manifest}.to_json
   end
@@ -991,7 +991,7 @@ class FilesApi < Sinatra::Base
   #
   # Create or replace a metadata file. Optionally overwrite a specific version.
   #
-  put %r{/v3/files/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
+  put %r{/v3/files/([^/]+)/.metadata/([^/]+)$} do |encrypted_project_id, filename|
     dont_cache
     content_type :json
 
@@ -1004,7 +1004,7 @@ class FilesApi < Sinatra::Base
     bad_request unless METADATA_FILENAMES.include?(filename)
     filename = "#{METADATA_PATH}/#{filename}"
 
-    put_file('files', encrypted_channel_id, filename, body)
+    put_file('files', encrypted_project_id, filename, body)
   end
 
   #
@@ -1012,8 +1012,8 @@ class FilesApi < Sinatra::Base
   #
   # Read a metadata file. Optionally get a specific version instead of the most recent.
   #
-  get %r{/v3/files/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
-    get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
+  get %r{/v3/files/([^/]+)/.metadata/([^/]+)$} do |encrypted_project_id, filename|
+    get_file('files', encrypted_project_id, "#{METADATA_PATH}/#{filename}")
   end
 
   MODERATE_THUMBNAILS_FOR_PROJECT_TYPES = %w(
@@ -1026,22 +1026,22 @@ class FilesApi < Sinatra::Base
   #
   # Read a metadata file, caching the result for 1 hour.
   #
-  get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
+  get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_project_id, filename|
     s3_prefix = "#{METADATA_PATH}/#{filename}"
-    file = get_file('files', encrypted_channel_id, s3_prefix)
+    file = get_file('files', encrypted_project_id, s3_prefix)
 
     if THUMBNAIL_FILENAME == filename
       project = Projects.new(get_storage_id)
-      project_type = project.project_type_from_channel_id(encrypted_channel_id)
-      if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)
+      project_type = project.project_type_from_channel_id(encrypted_project_id)
+      if moderate_type?(project_type) && moderate_channel?(encrypted_project_id)
         file_mime_type = mime_type(File.extname(filename.downcase))
         rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
 
         case rating
         when :adult, :racy
           # Incrementing abuse score by 15 to differentiate from manually reported projects
-          new_score = project.increment_abuse(encrypted_channel_id, 15)
-          FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
+          new_score = project.increment_abuse(encrypted_project_id, 15)
+          FileBucket.new.replace_abuse_score(encrypted_project_id, s3_prefix, new_score)
           response.headers['x-cdo-content-rating'] = rating.to_s
           cache_for 1.hour
           not_found
@@ -1069,33 +1069,33 @@ class FilesApi < Sinatra::Base
   #
   # Delete a metadata file.
   #
-  delete %r{/v3/files/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
+  delete %r{/v3/files/([^/]+)/.metadata/([^/]+)$} do |encrypted_project_id, filename|
     dont_cache
 
     bad_request unless METADATA_FILENAMES.include? filename
     filename = "#{METADATA_PATH}/#{filename}"
 
-    not_authorized unless owns_channel?(encrypted_channel_id)
+    not_authorized unless owns_channel?(encrypted_project_id)
 
-    FileBucket.new.delete(encrypted_channel_id, filename)
+    FileBucket.new.delete(encrypted_project_id, filename)
     no_content
   end
 
   private
 
   #
-  # Returns the (parsed) manifest associated with the given encrypted_channel_id.
+  # Returns the (parsed) manifest associated with the given encrypted_project_id.
   #
-  def get_manifest(bucket, encrypted_channel_id)
-    bucket.get_manifest(encrypted_channel_id)
+  def get_manifest(bucket, encrypted_project_id)
+    bucket.get_manifest(encrypted_project_id)
   end
 
   def moderate_type?(project_type)
     MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include?(project_type)
   end
 
-  def moderate_channel?(encrypted_channel_id)
+  def moderate_channel?(encrypted_project_id)
     project = Projects.new(get_storage_id)
-    !project.content_moderation_disabled?(encrypted_channel_id)
+    !project.content_moderation_disabled?(encrypted_project_id)
   end
 end

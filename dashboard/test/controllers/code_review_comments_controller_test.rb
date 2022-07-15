@@ -292,7 +292,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
   def stub_projects_calls
     CodeReviewCommentsController.
       any_instance.
-      expects(:storage_decrypt_channel_id).
+      expects(:storage_decrypt_project_id).
       with(@project_owner_channel_id).
       returns([@project_owner_storage_id, @project_id])
     CodeReviewCommentsController.

@@ -5,7 +5,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
     student = create :student
     sign_in student
 
-    @controller.expects(:storage_decrypt_channel_id).with("abcdef").returns([123, 654])
+    @controller.expects(:storage_decrypt_project_id).with("abcdef").returns([123, 654])
     assert_creates(ProjectCommit) do
       post :create, params: {storage_id: 'abcdef', version_id: 'fghj', comment: 'This is a comment'}
     end
@@ -20,15 +20,15 @@ class ProjectCommitsControllerTest < ActionController::TestCase
 
     fake_storage_id = 123
     fake_project_id = 654
-    fake_channel_id = 'abcdef'
+    fake_encrypted_project_id = 'abcdef'
     @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(student.id)
-    @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
+    @controller.expects(:storage_decrypt_project_id).with(fake_encrypted_project_id).returns([fake_storage_id, fake_project_id])
 
     create :project_commit, project_id: fake_project_id, comment: "First comment", created_at: 2.days.ago
     create :project_commit, project_id: fake_project_id, comment: "Second comment", created_at: 1.day.ago
     create :project_commit, project_id: fake_project_id, comment: "Third comment"
 
-    get :project_commits, params: {channel_id: fake_channel_id}
+    get :project_commits, params: {channel_id: fake_encrypted_project_id}
     assert_response :ok
 
     returned_commits = JSON.parse(@response.body)
@@ -42,15 +42,15 @@ class ProjectCommitsControllerTest < ActionController::TestCase
 
     fake_storage_id = 123
     fake_project_id = 654
-    fake_channel_id = 'abcdef'
+    fake_encrypted_project_id = 'abcdef'
     @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(student.id)
-    @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
+    @controller.expects(:storage_decrypt_project_id).with(fake_encrypted_project_id).returns([fake_storage_id, fake_project_id])
 
     create :project_commit, project_id: fake_project_id, comment: "First comment", created_at: 2.days.ago
     create :project_commit, project_id: fake_project_id, comment: "", created_at: 1.day.ago
     create :project_commit, project_id: fake_project_id, comment: "Third comment"
 
-    get :project_commits, params: {channel_id: fake_channel_id}
+    get :project_commits, params: {channel_id: fake_encrypted_project_id}
     assert_response :ok
 
     returned_commits = JSON.parse(@response.body)
@@ -66,13 +66,13 @@ class ProjectCommitsControllerTest < ActionController::TestCase
 
     fake_storage_id = 123
     fake_project_id = 654
-    fake_channel_id = 'abcdef'
+    fake_encrypted_project_id = 'abcdef'
     @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(student.id)
-    @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
+    @controller.expects(:storage_decrypt_project_id).with(fake_encrypted_project_id).returns([fake_storage_id, fake_project_id])
 
     create :project_commit, project_id: fake_project_id, comment: "Third comment"
 
-    get :project_commits, params: {channel_id: fake_channel_id}
+    get :project_commits, params: {channel_id: fake_encrypted_project_id}
     assert_response :ok
   end
 
@@ -91,14 +91,14 @@ class ProjectCommitsControllerTest < ActionController::TestCase
 
     fake_storage_id = 123
     fake_project_id = 654
-    fake_channel_id = 'abcdef'
+    fake_encrypted_project_id = 'abcdef'
     @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(project_owner_student.id)
-    @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
+    @controller.expects(:storage_decrypt_project_id).with(fake_encrypted_project_id).returns([fake_storage_id, fake_project_id])
     create :reviewable_project, user_id: project_owner_student.id, project_id: fake_project_id
 
     create :project_commit, project_id: fake_project_id, comment: "Third comment"
 
-    get :project_commits, params: {channel_id: fake_channel_id}
+    get :project_commits, params: {channel_id: fake_encrypted_project_id}
     assert_response :ok
   end
 
@@ -117,14 +117,14 @@ class ProjectCommitsControllerTest < ActionController::TestCase
 
     fake_storage_id = 123
     fake_project_id = 654
-    fake_channel_id = 'abcdef'
+    fake_encrypted_project_id = 'abcdef'
     @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(project_owner_student.id)
-    @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
+    @controller.expects(:storage_decrypt_project_id).with(fake_encrypted_project_id).returns([fake_storage_id, fake_project_id])
     create :reviewable_project, user_id: project_owner_student.id, project_id: fake_project_id
 
     create :project_commit, project_id: fake_project_id, comment: "Third comment"
 
-    get :project_commits, params: {channel_id: fake_channel_id}
+    get :project_commits, params: {channel_id: fake_encrypted_project_id}
     assert_response :not_found
   end
 end

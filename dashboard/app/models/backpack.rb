@@ -26,7 +26,7 @@ class Backpack < ApplicationRecord
       # Create a project for this user's backpack
       project = Projects.new(storage_id_for_user_id(user_id))
       encrypted_id = project.create({'hidden': true}, ip: ip, type: 'backpack')
-      _, project_id = storage_decrypt_channel_id(encrypted_id)
+      _, project_id = storage_decrypt_project_id(encrypted_id)
       backpack = create!(user_id: user_id, project_id: project_id)
     end
     backpack

@@ -342,7 +342,7 @@ class ProjectsController < ApplicationController
     end
 
     begin
-      _, project_id = storage_decrypt_channel_id(params[:channel_id]) if params[:channel_id]
+      _, project_id = storage_decrypt_project_id(params[:channel_id]) if params[:channel_id]
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       # continue as normal, as we only use this value for stats.
     end
@@ -374,25 +374,27 @@ class ProjectsController < ApplicationController
 
   def remix
     return if redirect_under_13_without_tos_teacher(@level)
-    src_channel_id = params[:channel_id]
+    # TODO: maureen rename this param
+    encrypted_project_id = params[:channel_id]
     begin
-      _, remix_parent_id = storage_decrypt_channel_id(src_channel_id)
+      _, remix_parent_id = storage_decrypt_project_id(encrypted_project_id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return head :bad_request
     end
     project_type = params[:key]
+    # TODO: maureen rename create_channel (misnamed method)
     new_channel_id = ChannelToken.create_channel(
       request.ip,
       Projects.new(get_storage_id),
-      src: src_channel_id,
+      src: encrypted_project_id,
       type: project_type,
       remix_parent_id: remix_parent_id,
     )
-    AssetBucket.new.copy_files src_channel_id, new_channel_id if uses_asset_bucket?(project_type)
-    AssetBucket.new.copy_level_starter_assets src_channel_id, new_channel_id if uses_starter_assets?(project_type)
-    animation_list = uses_animation_bucket?(project_type) ? AnimationBucket.new.copy_files(src_channel_id, new_channel_id) : []
-    SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
-    FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
+    AssetBucket.new.copy_files encrypted_project_id, new_channel_id if uses_asset_bucket?(project_type)
+    AssetBucket.new.copy_level_starter_assets encrypted_project_id, new_channel_id if uses_starter_assets?(project_type)
+    animation_list = uses_animation_bucket?(project_type) ? AnimationBucket.new.copy_files(encrypted_project_id, new_channel_id) : []
+    SourceBucket.new.remix_source encrypted_project_id, new_channel_id, animation_list
+    FileBucket.new.copy_files encrypted_project_id, new_channel_id if uses_file_bucket?(project_type)
     redirect_to action: 'edit', channel_id: new_channel_id
   end
 
@@ -414,14 +416,15 @@ class ProjectsController < ApplicationController
 
   def export_create_channel
     return if redirect_under_13_without_tos_teacher(@level)
-    src_channel_id = params[:channel_id]
+    # TODO: maureen rename param
+    encrypted_project_id = params[:channel_id]
     begin
-      _, remix_parent_id = storage_decrypt_channel_id(src_channel_id)
+      _, remix_parent_id = storage_decrypt_project_id(encrypted_project_id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return head :bad_request
     end
     project = Projects.new(get_storage_id)
-    src_data = project.get(src_channel_id)
+    src_data = project.get(encrypted_project_id)
     data = initial_data
     data['name'] = "Exported: #{src_data['name']}"
     data['hidden'] = true

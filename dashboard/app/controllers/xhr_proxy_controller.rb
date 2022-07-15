@@ -126,18 +126,18 @@ class XhrProxyController < ApplicationController
   # is an unforgeable token which identifies the app lab app which is generating the request,
   # and may be used to enforce a per-app rate-limit.
   def get
-    channel_id = params[:c]
+    encrypted_project_id = params[:c]
     url = params[:u]
 
     begin
-      owner_storage_id, _ = storage_decrypt_channel_id(channel_id)
+      owner_storage_id, _ = storage_decrypt_project_id(encrypted_project_id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError => e
-      render_error_response 403, "Invalid token: '#{channel_id}' for url: '#{url}' exception: #{e.message}"
+      render_error_response 403, "Invalid token: '#{encrypted_project_id}' for url: '#{url}' exception: #{e.message}"
       return
     end
 
     event_details = {
-      channel_id: channel_id,
+      channel_id: encrypted_project_id,
       owner_storage_id: owner_storage_id,
       url: url
     }

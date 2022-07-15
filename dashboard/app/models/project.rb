@@ -31,11 +31,13 @@ class Project < ApplicationRecord
   # Finds a project by channel id. Like `find`, this method raises an
   # ActiveRecord::RecordNotFound error if the corresponding project cannot
   # be found.
-  def self.find_by_channel_id(channel_id)
+  # TODO: maureen rename
+  def self.find_by_channel_id(encrypted_project_id)
     begin
-      _, project_id = storage_decrypt_channel_id(channel_id)
+      _, project_id = storage_decrypt_project_id(encrypted_project_id)
     rescue
-      raise ActiveRecord::RecordNotFound.new("Invalid channel_id: #{channel_id}")
+      # TODO: maureen, ok to rename error?
+      raise ActiveRecord::RecordNotFound.new("Invalid channel_id: #{encrypted_project_id}")
     end
 
     Project.find(project_id)

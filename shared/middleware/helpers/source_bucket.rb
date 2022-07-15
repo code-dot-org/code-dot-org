@@ -27,11 +27,11 @@ class SourceBucket < BucketHelper
   # Copies the given version of the file to make it the current revision.
   # (All intermediate versions are preserved.)
   # Copies the animations at the given version and makes them the current version.
-  def restore_previous_version(encrypted_channel_id, filename, version_id, user_id)
+  def restore_previous_version(encrypted_project_id, filename, version_id, user_id)
     # In most cases fall back on the generic restore behavior.
-    return super(encrypted_channel_id, filename, version_id, user_id) unless MAIN_JSON_FILENAME == filename
+    return super(encrypted_project_id, filename, version_id, user_id) unless MAIN_JSON_FILENAME == filename
 
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_id, storage_app_id = storage_decrypt_project_id(encrypted_project_id)
     key = s3_path owner_id, storage_app_id, filename
 
     source_object = s3.get_object(bucket: @bucket, key: key, version_id: version_id)
@@ -46,7 +46,7 @@ class SourceBucket < BucketHelper
       psj.each_animation do |a|
         next if library_animation? a
         anim_response = anim_bucket.restore_previous_version(
-          encrypted_channel_id,
+          encrypted_project_id,
           "#{a['key']}.png",
           a['version'],
           user_id
@@ -60,7 +60,7 @@ class SourceBucket < BucketHelper
 
     # If we get this far, the restore request has succeeded.
     log_restored_file(
-      project_id: encrypted_channel_id,
+      project_id: encrypted_project_id,
       user_id: user_id,
       filename: filename,
       source_version_id: version_id,
@@ -70,13 +70,13 @@ class SourceBucket < BucketHelper
     response.to_h
   end
 
-  # Copies the main.json in the src_channel to the dest_channel
+  # Copies the main.json in the src_encrypted_project_id to the dest_encrypted_project_id
   # Update the animation manifest to include the version ids of the animations
-  # in dest_channel
+  # in dest_encrypted_project_id
   # Note: this function assumes that the animations have already been copied
-  def remix_source(src_channel, dest_channel, animation_list)
-    src_owner_id, src_storage_app_id = storage_decrypt_channel_id(src_channel)
-    dest_owner_id, dest_storage_app_id = storage_decrypt_channel_id(dest_channel)
+  def remix_source(src_encrypted_project_id, dest_encrypted_project_id, animation_list)
+    src_owner_id, src_storage_app_id = storage_decrypt_project_id(src_encrypted_project_id)
+    dest_owner_id, dest_storage_app_id = storage_decrypt_project_id(dest_encrypted_project_id)
 
     src = s3_path src_owner_id, src_storage_app_id, MAIN_JSON_FILENAME
     dest = s3_path dest_owner_id, dest_storage_app_id, MAIN_JSON_FILENAME
@@ -112,8 +112,8 @@ class SourceBucket < BucketHelper
   # Special app_size implementation for Sources bucket that assumes the only file in this
   # bucket will be called main.json.
   # This avoids a potentially expensive LIST request to S3.
-  def app_size(encrypted_channel_id)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+  def app_size(encrypted_project_id)
+    owner_id, storage_app_id = storage_decrypt_project_id(encrypted_project_id)
     key = s3_path owner_id, storage_app_id, MAIN_JSON_FILENAME
     s3.head_object(bucket: @bucket, key: key).content_length.to_i
   rescue Aws::S3::Errors::NotFound

@@ -26,14 +26,15 @@ class FeaturedProject < ApplicationRecord
   end
 
   # Determines if a project is currently featured by decrypting the provided
-  # encrypted_channel_id, using the project_id to check for a
+  # encrypted_project_id, using the project_id to check for a
   # FeaturedProject with the corresponding project_id.  If there is a
   # FeaturedProject with that project_id, check if it is currently featured.
-  # @param encrypted_channel_id [string]
+  # @param encrypted_project_id [string]
   # @return [Boolean] whether the project associated with the given
-  # encrypted_channel_id is currently featured
-  def self.featured_channel_id?(encrypted_channel_id)
-    _, project_id = storage_decrypt_channel_id encrypted_channel_id
+  # encrypted_project_id is currently featured
+  # TODO: maureen rename
+  def self.featured_channel_id?(encrypted_project_id)
+    _, project_id = storage_decrypt_project_id encrypted_project_id
     find_by(project_id: project_id)&.featured?
   rescue ArgumentError
     false

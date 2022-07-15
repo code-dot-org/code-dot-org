@@ -23,8 +23,9 @@ class ReportAbuseController < ApplicationController
   # blocked from abuse reports because they are created internally and we know
   # they are safe. This reduces spamming of the report abuse feature.
   def protected_project?
+    # TODO: maureen rename param
     return false if params[:channel_id].blank?
-    owner_storage_id, _ = storage_decrypt_channel_id(params[:channel_id])
+    owner_storage_id, _ = storage_decrypt_project_id(params[:channel_id])
     owner_user_id = user_id_for_storage_id(owner_storage_id)
     return false unless owner_user_id
     project_owner = User.find(owner_user_id)
