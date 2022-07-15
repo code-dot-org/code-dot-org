@@ -36,14 +36,14 @@ jobs:
       MYSQL_ALLOW_EMPTY_PASSWORD: true
       MYSQL_ROOT_PASSWORD: root
     steps:
+      - name: Start MySQL
+        run: sudo /etc/init.d/mysql start 
+    
       - name: Set mysql root password
         run: /usr/bin/mysqladmin -u root password ''
     
       - name: Checkout code
         uses: actions/checkout@v3
-        
-      - name: Start MySQL
-        run: sudo /etc/init.d/mysql start 
         
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@8f312efe1262fb463d906e9bf040319394c18d3e # v1.92
