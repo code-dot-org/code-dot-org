@@ -38,7 +38,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      # Add or replace dependency steps here
+        
+      - name: Start MySQL
+        run: sudo /etc/init.d/mysql start 
+        
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@8f312efe1262fb463d906e9bf040319394c18d3e # v1.92
         with:
@@ -51,9 +54,9 @@ jobs:
           cd dashboard/
           bundle install
           cd ../
-          
-      - name: Start MySQL
-        run: sudo /etc/init.d/mysql start 
+        
+      - name: Setup MySql User
+        run: echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql
         
       # Add or replace database setup steps here
       - name: Create db
