@@ -430,7 +430,7 @@ end
 
 def redact_level_file(source_path)
   return unless File.exist? source_path
-  source_data = JSON.load(File.open(source_path))
+  source_data = JSON.parse(File.read(source_path))
   return if source_data.blank?
 
   redactable_data = source_data.map do |level_url, i18n_strings|
