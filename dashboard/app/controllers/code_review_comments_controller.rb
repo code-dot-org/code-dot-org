@@ -68,7 +68,7 @@ class CodeReviewCommentsController < ApplicationController
 
   def decrypt_channel_id
     # TO DO: handle errors in decrypting, or can't find user
-    @storage_id, @project_id = storage_decrypt_channel_id(params[:channel_id])
+    @storage_id, @project_id = storage_decrypt_project_id(params[:channel_id])
     @project_owner = User.find_by(id: user_id_for_storage_id(@storage_id))
   end
 

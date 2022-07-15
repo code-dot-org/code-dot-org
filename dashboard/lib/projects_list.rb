@@ -171,9 +171,10 @@ module ProjectsList
     #   [{channel_id: 'abc123', version: 'xyz987'}]
     #   where `version` corresponds to an S3 version of the library.
     # @return [Array<String>] The channel_ids of libraries that have been updated since the given version.
+    # TODO: maureen rename all channel references in this file
     def fetch_updated_library_channels(libraries)
       project_ids = libraries.map do |library|
-        _, id = storage_decrypt_channel_id(library['channel_id'])
+        _, id = storage_decrypt_project_id(library['channel_id'])
         library['project_id'] = id
         id
       rescue

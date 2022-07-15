@@ -11,7 +11,7 @@ class PopulateStorageId < ActiveRecord::Migration[5.0]
       ActiveRecord::Base.transaction do
         channel_tokens_batch.each do |channel_token|
           next unless channel_token.storage_id.nil?
-          storage_id, _storage_app_id = storage_decrypt_channel_id(channel_token.channel)
+          storage_id, _storage_app_id = storage_decrypt_project_id(channel_token.channel)
           channel_token.storage_id = storage_id
           save_result = channel_token.save(touch: false)
           raise "ERROR: ID #{channel_token.id}. STORAGE_ID: #{storage_id}." unless save_result

@@ -48,7 +48,7 @@ end
 # ArgumentError if encrypted is incorrectly formatted/padded for base64; or
 # OpenSSL::Cipher::CipherError if the base64-decoded value is not properly
 # encrypted or was encrypted using a different key (e.g. on localhost vs prod).
-def storage_decrypt_channel_id(encrypted)
+def storage_decrypt_project_id(encrypted)
   raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
   # pad to a multiple of 4 characters to make a valid base64 string.
   encrypted += '=' * ((4 - (encrypted.length % 4)) % 4)
@@ -58,9 +58,10 @@ def storage_decrypt_channel_id(encrypted)
   [storage_id, project_id]
 end
 
+# TODO: maureen rename this
 def valid_encrypted_channel_id(encrypted)
   begin
-    storage_decrypt_channel_id(encrypted)
+    storage_decrypt_project_id(encrypted)
   rescue ArgumentError, OpenSSL::Cipher::CipherError
     return false
   end
@@ -154,8 +155,9 @@ def storage_id_from_cookie
   storage_id
 end
 
-def owns_channel?(encrypted_channel_id)
-  owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+# TODO: maureen rename
+def owns_channel?(encrypted_project_id)
+  owner_storage_id, _ = storage_decrypt_project_id(encrypted_project_id)
   owner_storage_id == get_storage_id
 rescue ArgumentError, OpenSSL::Cipher::CipherError
   false

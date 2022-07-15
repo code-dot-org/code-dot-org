@@ -67,7 +67,7 @@ class ChannelsApi < Sinatra::Base
     project = Projects.new(get_storage_id)
 
     begin
-      _, remix_parent_id = storage_decrypt_channel_id(request.GET['parent']) if request.GET['parent']
+      _, remix_parent_id = storage_decrypt_project_id(request.GET['parent']) if request.GET['parent']
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end

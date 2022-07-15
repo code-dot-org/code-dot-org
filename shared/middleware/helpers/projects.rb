@@ -35,32 +35,32 @@ class Projects
     storage_encrypt_project_id(row[:storage_id], row[:id])
   end
 
-  def delete(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
-    raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
+  def delete(encrypted_project_id)
+    owner, project_id = storage_decrypt_project_id(encrypted_project_id)
+    raise NotFound, "channel `#{encrypted_project_id}` not found in your storage" unless owner == @storage_id
 
     delete_count = @table.where(id: project_id).update(state: 'deleted')
-    raise NotFound, "channel `#{channel_id}` not found" if delete_count == 0
+    raise NotFound, "channel `#{encrypted_project_id}` not found" if delete_count == 0
 
     # TODO: Delete all storage associated with this channel (e.g. properties and tables and assets)
 
     true
   end
 
-  def restore(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
-    raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
+  def restore(encrypted_project_id)
+    owner, project_id = storage_decrypt_project_id(encrypted_project_id)
+    raise NotFound, "channel `#{encrypted_project_id}` not found in your storage" unless owner == @storage_id
 
     update_count = @table.where(id: project_id).update(state: 'active')
-    raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
+    raise NotFound, "channel `#{encrypted_project_id}` not found" if update_count == 0
 
     true
   end
 
-  def get(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+  def get(encrypted_project_id)
+    owner, project_id = storage_decrypt_project_id(encrypted_project_id)
     row = @table.where(id: project_id).exclude(state: 'deleted').first
-    raise NotFound, "channel `#{channel_id}` not found" unless row
+    raise NotFound, "channel `#{encrypted_project_id}` not found" unless row
 
     # For some apps, if it was created by a signed out user, we don't want anyone
     # else to be able to access it (for privacy reasons)
@@ -73,15 +73,15 @@ class Projects
       rescue JSON::ParserError
         nil
       end
-      raise NotFound, "channel `#{channel_id}` not shareable" if anonymous_age_restricted_apps.include? project_type
+      raise NotFound, "channel `#{encrypted_project_id}` not shareable" if anonymous_age_restricted_apps.include? project_type
     end
 
-    Projects.merged_row_value(row, channel_id: channel_id, is_owner: owner == @storage_id)
+    Projects.merged_row_value(row, channel_id: encrypted_project_id, is_owner: owner == @storage_id)
   end
 
-  def update(channel_id, value, ip_address, project_type: nil, locale: 'en')
-    owner, project_id = storage_decrypt_channel_id(channel_id)
-    raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
+  def update(encrypted_project_id, value, ip_address, project_type: nil, locale: 'en')
+    owner, project_id = storage_decrypt_project_id(encrypted_project_id)
+    raise NotFound, "channel `#{encrypted_project_id}` not found in your storage" unless owner == @storage_id
 
     new_name = value['name']
     project = @table.where(id: project_id).first
@@ -99,24 +99,24 @@ class Projects
     }
     row[:project_type] = project_type if project_type
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update(row)
-    raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
+    raise NotFound, "channel `#{encrypted_project_id}` not found" if update_count == 0
 
     # We can't include :created_at here without an extra DB query. Most consumers won't need :created_at during updates, so omit it.
-    JSON.parse(row[:value]).merge(id: channel_id, isOwner: owner == @storage_id, updatedAt: row[:updated_at])
+    JSON.parse(row[:value]).merge(id: encrypted_project_id, isOwner: owner == @storage_id, updatedAt: row[:updated_at])
   end
 
-  def publish(channel_id, type, user)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
-    raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
+  def publish(encrypted_project_id, type, user)
+    owner, project_id = storage_decrypt_project_id(encrypted_project_id)
+    raise NotFound, "channel `#{encrypted_project_id}` not found in your storage" unless owner == @storage_id
     row = {
       project_type: type,
       published_at: DateTime.now,
     }
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update(row)
-    raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
+    raise NotFound, "channel `#{encrypted_project_id}` not found" if update_count == 0
 
     project = @table.where(id: project_id).first
-    Projects.get_published_project_data(project, channel_id).merge(
+    Projects.get_published_project_data(project, encrypted_project_id).merge(
       # For privacy reasons, include only the first initial of the student's name.
       studentName: user && UserHelpers.initial(user[:name]),
       studentAgeRange: user && UserHelpers.age_range_from_birthday(user[:birthday]),
@@ -161,10 +161,10 @@ class Projects
   end
 
   # extracts published project data from a project (aka projects table row).
-  def self.get_published_project_data(project, channel_id)
+  def self.get_published_project_data(project, encrypted_project_id)
     project_value = JSON.parse(project[:value])
     {
-      channel: channel_id,
+      channel: encrypted_project_id,
       name: project_value['name'],
       thumbnailUrl: Projects.make_thumbnail_url_cacheable(project_value['thumbnailUrl']),
       # Note that we are using the new :project_type field rather than extracting
@@ -179,19 +179,19 @@ class Projects
     url&.sub('/v3/files/', '/v3/files-public/')
   end
 
-  def unpublish(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
-    raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
+  def unpublish(encrypted_project_id)
+    owner, project_id = storage_decrypt_project_id(encrypted_project_id)
+    raise NotFound, "channel `#{encrypted_project_id}` not found in your storage" unless owner == @storage_id
     row = {
       published_at: nil,
     }
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update(row)
-    raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
+    raise NotFound, "channel `#{encrypted_project_id}` not found" if update_count == 0
   end
 
   # Determine if the current user can view the project
-  def get_sharing_disabled(channel_id, current_user_id)
-    owner_storage_id, project_id = storage_decrypt_channel_id(channel_id)
+  def get_sharing_disabled(encrypted_project_id, current_user_id)
+    owner_storage_id, project_id = storage_decrypt_project_id(encrypted_project_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
 
     # Sharing of a project is not disabled for the project owner
@@ -228,43 +228,43 @@ class Projects
     return true
   end
 
-  def increment_abuse(channel_id, amount = 10)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
+  def increment_abuse(encrypted_project_id, amount = 10)
+    _owner, project_id = storage_decrypt_project_id(encrypted_project_id)
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
-    raise NotFound, "channel `#{channel_id}` not found" unless row
+    raise NotFound, "channel `#{encrypted_project_id}` not found" unless row
 
     new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : amount)
 
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update({abuse_score: new_score})
-    raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
+    raise NotFound, "channel `#{encrypted_project_id}` not found" if update_count == 0
 
     new_score
   end
 
-  def reset_abuse(channel_id)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
+  def reset_abuse(encrypted_project_id)
+    _owner, project_id = storage_decrypt_project_id(encrypted_project_id)
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
-    raise NotFound, "channel `#{channel_id}` not found" unless row
+    raise NotFound, "channel `#{encrypted_project_id}` not found" unless row
 
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update({abuse_score: 0})
-    raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
+    raise NotFound, "channel `#{encrypted_project_id}` not found" if update_count == 0
 
     0
   end
 
-  def buffer_abuse_score(channel_id)
+  def buffer_abuse_score(encrypted_project_id)
     buffered_abuse_score = -50
     # Reset to 0 first so projects that are featured,
     # unfeatured, then re-featured don't have super low
     # abuse scores.
-    reset_abuse(channel_id)
-    increment_abuse(channel_id, buffered_abuse_score)
+    reset_abuse(encrypted_project_id)
+    increment_abuse(encrypted_project_id, buffered_abuse_score)
   end
 
-  def content_moderation_disabled?(channel_id)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
+  def content_moderation_disabled?(encrypted_project_id)
+    _owner, project_id = storage_decrypt_project_id(encrypted_project_id)
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     return false unless row
@@ -275,19 +275,19 @@ class Projects
   #
   # Disables or enables automated content moderation for this project by
   # altering the value for content_moderation_disabled.
-  # @param [String] channel_id - an encrypted channel id
+  # @param [String] encrypted_project_id - an encrypted project id
   # @param [Boolean] disable, whether the content moderation should be
   # skipped or not for this project.
   # @raise [NotFound] if the channel does not exist or already has the desired
   # value for content_moderation_disabled.
   #
-  def set_content_moderation(channel_id, disable)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
+  def set_content_moderation(encrypted_project_id, disable)
+    _owner, project_id = storage_decrypt_project_id(encrypted_project_id)
     rows_changed = @table.
       where(id: project_id).
       exclude(state: 'deleted').
       update({skip_content_moderation: disable})
-    raise NotFound, "channel `#{channel_id}` not found" unless rows_changed > 0
+    raise NotFound, "channel `#{encrypted_project_id}` not found" unless rows_changed > 0
 
     disable
   end
@@ -322,10 +322,10 @@ class Projects
   # Returns the row value with 'id' and 'isOwner' merged from input params, and
   # 'createdAt', 'updatedAt', 'publishedAt' and 'projectType' merged from the
   # corresponding database row values.
-  def self.merged_row_value(row, channel_id:, is_owner:)
+  def self.merged_row_value(row, encrypted_project_id:, is_owner:)
     JSON.parse(row[:value]).merge(
       {
-        id: channel_id,
+        id: encrypted_project_id,
         isOwner: is_owner,
         createdAt: row[:created_at],
         updatedAt: row[:updated_at],
@@ -341,13 +341,14 @@ class Projects
   # This isn't always possible - we aren't consistent about storing project
   # type information with the channel.
   #
-  # @param [String] channel_id - an encrypted channel id
+  # @param [String] encrypted_project_id - an encrypted project id
   # @return [String] The discovered project type, or 'unknown' if the type
   #   can't be determiend with given information.
   # @raise [NotFound] if the channel does not exist or is not shareable.
   #
-  def project_type_from_channel_id(channel_id)
-    project_type_from_merged_row(get(channel_id))
+  # TODO: maureen rename
+  def project_type_from_channel_id(encrypted_project_id)
+    project_type_from_merged_row(get(encrypted_project_id))
   end
 
   #
@@ -360,7 +361,7 @@ class Projects
   #   table against itself.  Worth investigating if we wanted to expose this
   #   to users.
   #
-  # @param [String] channel_id the child project channel id where we start
+  # @param [String] encrypted_project_id the child project encrypted project id where we start
   #   our search.
   # @param [Integer] depth (optional) how many ancestors to retrieve.  Default
   #   to just one - this could get expensive if a project has a very deep
@@ -368,9 +369,9 @@ class Projects
   # @return [Array<String>] list of channel IDs of ancestor projects in reverse
   #   chronological order, up to the provided limit.
   #
-  def self.remix_ancestry(channel_id, depth: 1)
+  def self.remix_ancestry(encrypted_project_id, depth: 1)
     [].tap do |ancestors|
-      _, project_id = storage_decrypt_channel_id(channel_id)
+      _, project_id = storage_decrypt_project_id(encrypted_project_id)
       next_row = Projects.table.where(id: project_id).first
       while next_row&.[](:remix_parent_id)
         next_row = Projects.table.where(id: next_row[:remix_parent_id]).first
@@ -382,8 +383,8 @@ class Projects
     []
   end
 
-  def self.get_abuse(channel_id)
-    _, project_id = storage_decrypt_channel_id(channel_id)
+  def self.get_abuse(encrypted_project_id)
+    _, project_id = storage_decrypt_project_id(encrypted_project_id)
     project_info = Projects.table.where(id: project_id).first
     project_info[:abuse_score]
   end

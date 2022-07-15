@@ -24,7 +24,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     stubs(:current_user).returns nil
     stub_get_storage_id(nil)
-    stubs(:storage_decrypt_channel_id).returns([123, 456])
+    stubs(:storage_decrypt_project_id).returns([123, 456])
   end
 
   test "blockly_options refuses to generate options for non-blockly levels" do
@@ -441,7 +441,7 @@ class LevelsHelperTest < ActionView::TestCase
     @channel_id = get_channel_for(@level, script.id, @user)
     assert_not_nil @channel_id
 
-    _,  @project_id = storage_decrypt_channel_id(@channel_id)
+    _,  @project_id = storage_decrypt_project_id(@channel_id)
     create :code_review, user_id: @user.id, project_id: @project_id
 
     # calling app_options should set readonly_workspace, since a code review is open

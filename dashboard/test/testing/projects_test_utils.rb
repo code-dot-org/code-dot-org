@@ -5,10 +5,11 @@ require_relative '../../../shared/middleware/helpers/storage_id'
 # To be included in any dashboard test that needs them.
 module ProjectsTestUtils
   # @param [User] owner - may be nil for anonymous channel
+  # TODO: maureen rename
   def with_channel_for(owner)
     with_storage_id_for owner do |storage_id|
-      encrypted_channel_id = Projects.new(storage_id).create({projectType: 'applab'}, ip: 123)
-      _, project_id = storage_decrypt_channel_id encrypted_channel_id
+      encrypted_project_id = Projects.new(storage_id).create({projectType: 'applab'}, ip: 123)
+      _, project_id = storage_decrypt_project_id encrypted_project_id
       yield project_id, storage_id
     ensure
       projects_table.where(id: project_id).delete if project_id

@@ -5,7 +5,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
 
   setup_all do
     @project_owner = create :student
-    @project_owner_channel_id = 'encrypted_channel_id'
+    @encrypted_project_id = 'encrypted_project_id'
     @project_level_id = 12
     @project_script_id = 34
     @project_owner_storage_id = 56
@@ -40,7 +40,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
 
     sign_in @project_owner
     post :create, params: {
-      channel_id: @project_owner_channel_id,
+      channel_id: @encrypted_project_id,
       level_id: @project_level_id,
       script_id: @project_script_id
     }
@@ -53,7 +53,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
 
     sign_in @teacher
     post :create, params: {
-      channel_id: @project_owner_channel_id,
+      channel_id: @encrypted_project_id,
       level_id: @project_level_id,
       script_id: @project_script_id
     }
@@ -66,7 +66,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
 
     sign_in @teacher
     post :create, params: {
-      channel_id: @project_owner_channel_id,
+      channel_id: @encrypted_project_id,
       level_id: @project_level_id,
       script_id: @project_script_id
     }
@@ -80,7 +80,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
     sign_in @project_owner
 
     get :reviewable_status, params: {
-      channel_id: @project_owner_channel_id,
+      channel_id: @encrypted_project_id,
       level_id: @project_level_id,
       script_id: @project_script_id
     }
@@ -106,7 +106,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
       script_id: @project_script_id
 
     get :reviewable_status, params: {
-      channel_id: @project_owner_channel_id,
+      channel_id: @encrypted_project_id,
       level_id: @project_level_id,
       script_id: @project_script_id
     }
@@ -127,7 +127,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
     sign_in @another_student
 
     get :reviewable_status, params: {
-      channel_id: @project_owner_channel_id,
+      channel_id: @encrypted_project_id,
       level_id: @project_level_id,
       script_id: @project_script_id
     }
@@ -154,7 +154,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
       script_id: @project_script_id
 
     get :reviewable_status, params: {
-      channel_id: @project_owner_channel_id,
+      channel_id: @encrypted_project_id,
       level_id: @project_level_id,
       script_id: @project_script_id
     }
@@ -242,8 +242,8 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   def stub_projects_calls
     ReviewableProjectsController.
       any_instance.
-      expects(:storage_decrypt_channel_id).
-      with(@project_owner_channel_id).
+      expects(:storage_decrypt_project_id).
+      with(@encrypted_project_id).
       returns([@project_owner_storage_id, @project_id])
     ReviewableProjectsController.
       any_instance.

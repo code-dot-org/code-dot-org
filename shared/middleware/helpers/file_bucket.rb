@@ -52,9 +52,9 @@ class FileBucket < BucketHelper
   # Generates a direct link to the requested file on s3, with a default 5-minute
   # expiration.
   #
-  def make_temporary_public_url(encrypted_channel_id, filename, expires_in = 5.minutes)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-    key = s3_path owner_id, storage_app_id, filename
+  def make_temporary_public_url(encrypted_project_id, filename, expires_in = 5.minutes)
+    owner_id, project_id = storage_decrypt_project_id(encrypted_project_id)
+    key = s3_path owner_id, project_id, filename
     Aws::S3::Presigner.new(client: s3).presigned_url(
       :get_object,
       {

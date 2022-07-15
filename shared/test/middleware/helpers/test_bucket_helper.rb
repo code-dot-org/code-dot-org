@@ -32,7 +32,7 @@ class BucketHelperTest < Minitest::Test
     mock_table = mock
     mock_table.expects(:select).returns(mock_select).once
     DASHBOARD_DB.expects(:[]).with(:project_commits).returns(mock_table).once
-    bucket_helper.expects(:storage_decrypt_channel_id).returns([1, 2])
+    bucket_helper.expects(:storage_decrypt_project_id).returns([1, 2])
 
     version_list = bucket_helper.list_versions('base64', 'main.json', with_comments: true)
     assert_equal [{versionId: '1234', lastModified: '0', comment: 'Comment', isLatest: false}], version_list
@@ -65,7 +65,7 @@ class BucketHelperTest < Minitest::Test
     mock_table = mock
     mock_table.expects(:select).returns(mock_select).once
     DASHBOARD_DB.expects(:[]).with(:project_commits).returns(mock_table).once
-    bucket_helper.expects(:storage_decrypt_channel_id).returns([1, 2])
+    bucket_helper.expects(:storage_decrypt_project_id).returns([1, 2])
 
     version_list = bucket_helper.list_versions('base64', 'main.json', with_comments: true)
     assert_equal [{versionId: '1234', lastModified: '0', isLatest: false}], version_list
