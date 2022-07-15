@@ -997,7 +997,7 @@ class ApiControllerTest < ActionController::TestCase
     ApiController.any_instance.stubs(:get_storage_id).returns(storage_id)
 
     channel_token = create :channel_token, level: @level, script_id: @script.id, storage_id: storage_id
-    expected_channel = channel_token.channel
+    expected_channel = channel_token.encrypted_project_id
 
     get :user_app_options, params: {
       script: @script.name,

@@ -200,7 +200,7 @@ class SampleData
             best_result: best_result
 
           # Create a backing channel for this level if it's a type that needs it
-          if script_level.levels.first.channel_backed?
+          if script_level.levels.first.project_backed?
             ChannelToken.find_or_create_channel_token(
               script_level.levels.first,
               '127.0.0.1',

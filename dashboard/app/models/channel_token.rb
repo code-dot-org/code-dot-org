@@ -28,8 +28,7 @@ class ChannelToken < ApplicationRecord
   # to reflect the new table name, so an alias is used to clarify which table this ID maps to.
   alias_attribute :project_id, :storage_app_id
 
-  # TODO: maureen name to encrypted_project_id
-  def channel
+  def encrypted_project_id
     storage_encrypt_project_id(storage_id, project_id)
   end
 
