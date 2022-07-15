@@ -3,7 +3,7 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current]
+  skip_before_action :load_user, only: [:current, :netsim]
 
   def load_user
     user_id = params[:user_id]
@@ -43,7 +43,8 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         name: current_user.name,
         is_admin: current_user.admin,
         is_signed_in: true,
-        owned_sections: ['testing']
+        owned_sections: ['testing'],
+        owned_sections2: current_user.owned_sections,
       }
     else
       render json: {
