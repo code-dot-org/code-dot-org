@@ -43,8 +43,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         name: current_user.name,
         is_admin: current_user.admin,
         is_signed_in: true,
-        owned_sections: ['testing'],
-        owned_sections2: current_user.owned_sections,
+        owned_sections: current_user.owned_sections,
       }
     else
       render json: {
