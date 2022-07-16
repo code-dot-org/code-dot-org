@@ -82,6 +82,31 @@ describe('Enroll Form', () => {
     });
   });
 
+  describe('CSF District Enroll Form', () => {
+    let enrollForm;
+    before(() => {
+      enrollForm = shallow(
+        <EnrollForm
+          workshop_id={props.workshop_id}
+          workshop_course="CS Fundamentals"
+          workshop_subject={SubjectNames.SUBJECT_CSF_DISTRICT}
+          first_name={props.first_name}
+          email={props.email}
+          previous_courses={props.previous_courses}
+          onSubmissionComplete={props.onSubmissionComplete}
+        />
+      );
+    });
+
+    it('displays intent question', () => {
+      assert(enrollForm.exists({groupName: 'csf_intro_intent'}));
+    });
+
+    it('displays other factors question', () => {
+      assert(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
+    });
+  });
+
   describe('CSF Deep Dive Enroll Form', () => {
     let enrollForm;
     before(() => {

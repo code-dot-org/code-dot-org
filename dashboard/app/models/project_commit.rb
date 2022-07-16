@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: project_versions
+# Table name: project_commits
 #
 #  id                :bigint           not null, primary key
 #  storage_app_id    :integer          not null
@@ -11,11 +11,10 @@
 #
 # Indexes
 #
-#  index_project_versions_on_storage_app_id                        (storage_app_id)
-#  index_project_versions_on_storage_app_id_and_object_version_id  (storage_app_id,object_version_id) UNIQUE
+#  index_project_commits_on_storage_app_id                        (storage_app_id)
+#  index_project_commits_on_storage_app_id_and_object_version_id  (storage_app_id,object_version_id) UNIQUE
 #
 class ProjectCommit < ApplicationRecord
-  self.table_name = :project_versions
   # The projects table used to be named storage_apps. This column has not been renamed
   # to reflect the new table name, so an alias is used to clarify which table this ID maps to.
   alias_attribute :project_id, :storage_app_id
