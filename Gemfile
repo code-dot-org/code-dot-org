@@ -182,7 +182,7 @@ gem 'redcarpet', '~> 3.3.4'
 gem 'geocoder'
 
 gem 'mini_magick', ">=4.9.4"
-gem 'rmagick', '~> 3.2'
+gem 'rmagick', '~> 4.2.5'
 
 gem 'acts_as_list'
 

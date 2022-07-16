@@ -172,4 +172,52 @@ class GamelabJr < Gamelab
   def age_13_required?
     false
   end
+
+  SAMPLE_VALIDATION_FUNCTIONS = {
+    template:
+'if (World.frameCount == 1) {
+  addCriteria(function() {
+    return minimumSprites(1); // Check whether or not the student created a sprite.
+  }, "noSprites");  // Failure message: "You need to make a sprite."
+
+  // Additional calls to addCriteria(), in order of precedence
+}
+check();
+',
+
+    advancedTemplate:
+'if (World.frameCount == 1) {
+  setFailTime(150); // Frames to wait before failing student
+  setDelayTime(90); // Frames to wait after success before stopping program
+
+  addCriteria(function() {
+    return minimumSprites(1); // Check whether or not the student created a sprite.
+  }, "noSprites");  // Failure message: "You need to make a sprite."
+
+  // Additional calls to addCriteria(), in order of precedence
+}
+check();
+',
+
+    clickSpriteForSpeechExample:
+'//Validate that a student created a sprite, then clicked a sprite to trigger a sprite to speak.
+if (World.frameCount == 1) {
+  addCriteria(function() {
+    return minimumSprites(1);
+  }, "noSprites");
+  addCriteria(function() {
+    return anySpriteClicked();
+  }, "clickAnySprite");
+  addCriteria(function(){
+    return clickEventFound();
+  }, "clickButNoEvent");
+  addCriteria(function(){
+    return clickEventFound() && anySpriteSpeaks();
+  }, "clickButNoSay");
+}
+
+check();
+'
+
+  }.freeze
 end
