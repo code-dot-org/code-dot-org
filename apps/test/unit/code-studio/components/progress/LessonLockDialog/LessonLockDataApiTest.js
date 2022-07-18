@@ -6,7 +6,7 @@ import {
   LockStatus,
   saveLockState,
   useGetLockState
-} from '@cdo/apps/code-studio/components/progress/LessonLockDialog/LessonLockDataApi';
+} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import * as useFetch from '@cdo/apps/util/useFetch';
 
 describe('LessonLockDataApi', () => {

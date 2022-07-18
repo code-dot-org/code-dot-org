@@ -14,9 +14,9 @@ import {
   LockStatus,
   useGetLockState,
   saveLockState
-} from '@cdo/apps/code-studio/components/progress/LessonLockDialog/LessonLockDataApi';
-import StudentRow from '@cdo/apps/code-studio/components/progress/LessonLockDialog/StudentRow';
-import SkeletonRows from '@cdo/apps/code-studio/components/progress/LessonLockDialog/SkeletonRows';
+} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
+import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
+import SkeletonRows from '@cdo/apps/code-studio/components/progress/lessonLockDialog/SkeletonRows';
 
 function LessonLockDialog({
   unitId,

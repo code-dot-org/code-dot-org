@@ -2,10 +2,10 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {UnconnectedLessonLockDialog as LessonLockDialog} from '@cdo/apps/code-studio/components/progress/LessonLockDialog/LessonLockDialog';
+import {UnconnectedLessonLockDialog as LessonLockDialog} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
 import {LockStatus} from '@cdo/apps/code-studio/lessonLockRedux';
-import StudentRow from '@cdo/apps/code-studio/components/progress/LessonLockDialog/StudentRow';
-import * as lessonLockDataApi from '@cdo/apps/code-studio/components/progress/LessonLockDialog/LessonLockDataApi';
+import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
+import * as lessonLockDataApi from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 
 // This * import allows us to stub out the SectionSelector component
 import * as SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
