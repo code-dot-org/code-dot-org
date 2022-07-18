@@ -56,7 +56,7 @@ jobs:
           cache-name: cache-dashboard-gems
         with:
           # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: vendor/bundle
+          path: dashboard/vendor/bundle
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('dashboard/Gemfile.lock') }}
           
       - name: Bundle Install
