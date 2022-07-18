@@ -59,8 +59,7 @@ jobs:
           path: vendor/bundle
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('dashboard/Gemfile.lock') }}
           
-      - if: ${{ steps.cache-dashboard-gems.outputs.cache-hit == 'false' }}
-        name: Bundle Install
+      - name: Bundle Install
         run: |
           bundle install --with test
           cd dashboard/
