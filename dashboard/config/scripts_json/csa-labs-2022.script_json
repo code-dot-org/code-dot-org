@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-07-13 00:31:11 UTC",
+    "serialized_at": "2022-07-16 14:49:24 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -436,7 +436,7 @@
       "key": "c5521dde-e45d-469b-a4ab-742dc51df932",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 15,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -450,7 +450,7 @@
       "key": "28d10d92-5767-4398-9915-8b8c880944bc",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 20,
         "name": "Activity"
       },
       "seeding_key": {
@@ -806,7 +806,8 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to follow the instructions in Level 3 where they will repeat the modifications made in Lesson 2, this time using this new method to detect keywords. ",
-        "name": "Implementation: Use the new method"
+        "name": "Implementation: Use the new method",
+        "progression_name": "Use findKeyword()"
       },
       "seeding_key": {
         "activity_section.key": "ee68fe21-01a3-4a3a-9bf4-53d2ebbf8a51",
@@ -1114,6 +1115,14 @@
       "key": "28878e82-c5f0-4e47-aaf8-7a380093938c",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out post-its to your students. Each student will need five post-its. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *Write down the name of five celebrities on the post its (one name per post-it).*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** For the sake of time, it’s best to try and split the class into groups of six (which will be three teams of two) to play a round of \"*Celebrity*\".\n",
+        "name": "Prepare for the Celebrity game",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Depending on numbers, it’s possible to have groups of different sizes, however the smallest size group must be four students to have two teams of two in each group. \n\nAny groups with an odd number will just have one team with more students, and the extra student will act as an additional guesser for their team. **Each student should write down five celebrity names**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "28878e82-c5f0-4e47-aaf8-7a380093938c",
@@ -1121,9 +1130,35 @@
       }
     },
     {
+      "key": "09958d25-2090-4c2e-a449-e431449313ce",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to help you explain how to play \"*Celebrity*\". \n\n**How to Play *Celebrity*:** \n* On each team one person is the designated reader and the other(s) the guesser. \n\n* Team 1 will go first, they have one minute. \n\n* The reader picks a paper at random and can say anything **but** the celebrity’s name to get the guesser(s) to say the name of the celebrity. \n\n* If the guesser(s) gets the name right a point is earned, and another paper is selected. \n\n* If the reader reveals any part of the celebrity’s name **or** passes, a point is lost, and another paper is selected. \n\n* This continues until the minute is up. \n\n* The papers are not added back to the pool.\n\n* At this point it’s Team 2's turn, and the process is repeated with a new reader and guesser(s). \n\n* Each team takes turns this way until all of the papers have been used.\n\n\n* The team with the highest total number of correct guesses wins.\n\n",
+        "name": "Play a round of Celebrity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As teams are playing, ask students to think about the information and behaviors that\nare taking place. \n\n**Encourage** them to write notes on the classes that will be needed as\nwell as the attributes and behaviors of these classes as they play, which will help with\nlater questions in the activity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "09958d25-2090-4c2e-a449-e431449313ce",
+        "lesson_activity.key": "c5521dde-e45d-469b-a4ab-742dc51df932"
+      }
+    },
+    {
       "key": "5953585c-a099-4068-9045-a6867fa54ecb",
       "position": 1,
       "properties": {
+        "description": "**Distribute:** Pass out the activity guide. \n\n\nOnce students have had a chance to play Celebrity, they will be working on program design. The goal of this activity is to determine appropriate attributes and behaviors,\nwithout worrying about code. \n\nAlthough answers might have similar responses, you should encourage students to incorporate their own ideas into the design.\n\n**Do This:** Direct students to work with a partner to complete Part 1 of their activity guide. ",
+        "name": "Celebrity Program Design",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a good time to reinforce meaningful naming conventions. Suppose there is a complicated process, it might make sense to place the code in a method with a meaningful name to clarify the purpose of the code, even if the code is not duplicated elsewhere."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5953585c-a099-4068-9045-a6867fa54ecb",
@@ -1131,9 +1166,34 @@
       }
     },
     {
+      "key": "dee9dbd4-b1f4-4b69-abe0-cda839fe91d1",
+      "position": 2,
+      "properties": {
+        "description": "**Note:** When describing the play method, students might add a lot of detail or very little. At this point either is fine. Encourage them to start thinking about what needs to happen and explain that the details will become clearer as they work through the remaining activities.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** When students have completed the questions, show them the UML diagram for the CelebrityGame class and discuss how the provided game is similar to and different from what they came up with.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "There are countless ways to create a program depending on the desired behavior, and different designs or implementations are not wrong."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dee9dbd4-b1f4-4b69-abe0-cda839fe91d1",
+        "lesson_activity.key": "28d10d92-5767-4398-9915-8b8c880944bc"
+      }
+    },
+    {
       "key": "55319368-f673-431b-b1b7-8ee6c1b2e41a",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part 3 of the activity guide. \n\nThe goal of Part 2 is to provide students with multiple opportunities to model real-world objects which will help them understand the type of data associated with the objects, and also what data is essential to store in instance variables. \n\n**Note:** Students are given no constraints on the objects that they can discuss, however variety is helpful for discussions. In order to ensure variety, one option would be to divide the class into 4 or 5 groups and give each group a distinct category of items. *If you do this, it would be helpful to have students partner up with someone from a different group.*",
+        "name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Walk around the room while partners are discussing. If time allows, have one or two groups share their objects with the class."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "55319368-f673-431b-b1b7-8ee6c1b2e41a",
@@ -1425,7 +1485,8 @@
       "properties": {
         "level_keys": [
           "CSA CB_Lab Magpie-L3-L3_2022"
-        ]
+        ],
+        "progression": "Use findKeyword()"
       },
       "bonus": false,
       "seeding_key": {
@@ -1447,6 +1508,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L4-L1_2022"
+        ],
         "progression": "Conversing with the Bot"
       },
       "bonus": false,
@@ -1469,6 +1533,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L4-L2_2022"
+        ],
         "progression": "Scanning for a Phrase"
       },
       "bonus": false,
@@ -1491,6 +1558,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L4-Match1_2022"
+        ],
         "progression": "Scanning for a Phrase"
       },
       "bonus": false,
@@ -1513,6 +1583,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L4-L3_2022"
+        ],
         "progression": "Scanning for a Phrase"
       },
       "bonus": false,
@@ -1535,6 +1608,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L4-L4_2022"
+        ],
         "progression": "Scanning for a Phrase"
       },
       "bonus": false,
@@ -1760,6 +1836,18 @@
   ],
   "resources": [
     {
+      "name": "[KEY] Introduction to Celebrity Lab",
+      "url": "https://docs.google.com/document/d/16K7PbWWEezWLjMQlETYqm5OVjlFph7lQSCnRGN9EJ98/edit?usp=sharing",
+      "key": "_key_introduction_to_celebrity_lab",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_introduction_to_celebrity_lab"
+      }
+    },
+    {
       "name": "Chatbot 2",
       "url": "To be determined",
       "key": "chatbot_2",
@@ -1793,6 +1881,18 @@
       },
       "seeding_key": {
         "resource.key": "findkeyword_trace_table_activity_guide"
+      }
+    },
+    {
+      "name": "Introduction to Celebrity Lab",
+      "url": "https://docs.google.com/document/d/1tg1ccbIT4s10aXUMjipDeqtmhBHaFqVPuc8UjOhGnCA/edit?usp=sharing",
+      "key": "introduction_to_celebrity_lab",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_celebrity_lab"
       }
     },
     {
@@ -1861,6 +1961,18 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "video_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_key_introduction_to_celebrity_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "introduction_to_celebrity_lab"
       }
     },
     {
