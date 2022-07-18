@@ -76,7 +76,7 @@
       "overload_of": null,
       "content": "The `size()` method returns the number of elements in an `ArrayList`.",
       "parameters": "[]",
-      "examples": "[{\"name\":\"\",\"code\":\"\"}]",
+      "examples": "[{\"name\":\"\",\"code\":\"```\\nArrayList\\u003cInteger\\u003e myNumbers = new ArrayList\\u003cInteger\\u003e();\\nmyNumbers.add(10);\\nmyNumbers.add(20);\\nmyNumbers.add(30);\\n\\nint totalNumbers = myNumbers.size();\\nSystem.out.println(\\\"Size of list is \\\" + totalNumbers);\\n```\\n\\n**Output:**\\n\\nSize of list is 3\"}]",
       "syntax": "`public int size()`",
       "external_link": null,
       "return_value": null

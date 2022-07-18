@@ -49,9 +49,9 @@ class DeleteAccountsHelper
     # Clear any comments associated with specific versions of projects.
     # At time of writing, this feature is in use only in Javalab when a student
     # commits their code.
-    project_versions = ProjectVersion.where(project_id: project_ids)
-    project_versions.each {|version| version.update!(comment: nil)}
-    @log.puts "Cleared #{project_versions.count} ProjectVersion comments" if project_versions.count > 0
+    project_commits = ProjectCommit.where(project_id: project_ids)
+    project_commits.each {|version| version.update!(comment: nil)}
+    @log.puts "Cleared #{project_commits.count} ProjectCommit comments" if project_commits.count > 0
 
     # Clear S3 contents for user's channels
     @log.puts "Deleting S3 contents for #{channel_count} channels"

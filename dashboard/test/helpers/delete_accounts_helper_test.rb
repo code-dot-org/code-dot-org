@@ -1809,7 +1809,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.project_versions
+  # Table: dashboard.project_commits
   #
 
   test "clears 'comment' on any version of all of a purged user's projects" do
@@ -1817,19 +1817,19 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     student = create :student
     with_channel_for student do |project_id|
       comment_text = 'a comment'
-      ProjectVersion.create(
+      ProjectCommit.create(
         project_id: project_id,
         object_version_id: 'xyz',
         comment: comment_text
       )
-      assert_equal 1, ProjectVersion.where(project_id: project_id).count
-      assert_equal comment_text, ProjectVersion.where(project_id: project_id).first.comment
+      assert_equal 1, ProjectCommit.where(project_id: project_id).count
+      assert_equal comment_text, ProjectCommit.where(project_id: project_id).first.comment
 
       purge_user student
 
-      assert_equal 1, ProjectVersion.where(project_id: project_id).count
-      assert_nil ProjectVersion.where(project_id: project_id).first.comment
-      assert_logged "Cleared 1 ProjectVersion comments"
+      assert_equal 1, ProjectCommit.where(project_id: project_id).count
+      assert_nil ProjectCommit.where(project_id: project_id).first.comment
+      assert_logged "Cleared 1 ProjectCommit comments"
     end
   end
 
@@ -1840,28 +1840,28 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     with_channel_for student_to_purge do |project_id_to_purge|
       with_channel_for other_student do |project_id_other|
         comment_text = 'a comment'
-        ProjectVersion.create(
+        ProjectCommit.create(
           project_id: project_id_to_purge,
           object_version_id: 'xyz',
           comment: comment_text
         )
-        ProjectVersion.create(
+        ProjectCommit.create(
           project_id: project_id_other,
           object_version_id: 'xyz',
           comment: comment_text
         )
 
-        assert_equal 1, ProjectVersion.where(project_id: project_id_to_purge).count
-        assert_equal comment_text, ProjectVersion.where(project_id: project_id_to_purge).first.comment
-        assert_equal 1, ProjectVersion.where(project_id: project_id_other).count
-        assert_equal comment_text, ProjectVersion.where(project_id: project_id_other).first.comment
+        assert_equal 1, ProjectCommit.where(project_id: project_id_to_purge).count
+        assert_equal comment_text, ProjectCommit.where(project_id: project_id_to_purge).first.comment
+        assert_equal 1, ProjectCommit.where(project_id: project_id_other).count
+        assert_equal comment_text, ProjectCommit.where(project_id: project_id_other).first.comment
 
         purge_user student_to_purge
 
-        assert_equal 1, ProjectVersion.where(project_id: project_id_to_purge).count
-        assert_nil ProjectVersion.where(project_id: project_id_to_purge).first.comment
-        assert_equal 1, ProjectVersion.where(project_id: project_id_other).count
-        assert_equal comment_text, ProjectVersion.where(project_id: project_id_other).first.comment
+        assert_equal 1, ProjectCommit.where(project_id: project_id_to_purge).count
+        assert_nil ProjectCommit.where(project_id: project_id_to_purge).first.comment
+        assert_equal 1, ProjectCommit.where(project_id: project_id_other).count
+        assert_equal comment_text, ProjectCommit.where(project_id: project_id_other).first.comment
       end
     end
   end
