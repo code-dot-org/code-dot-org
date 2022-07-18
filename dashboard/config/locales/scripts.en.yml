@@ -8370,7 +8370,9 @@ en:
           description_short: ''
           description: ''
           student_description: ''
-          lessons: {}
+          lessons:
+            lesson-2:
+              name: 'Module 2 post-work: Understanding Unit 4 content'
         csa-labs-2022:
           lesson_groups:
             lessonGroup-2:
