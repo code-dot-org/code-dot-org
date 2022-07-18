@@ -369,6 +369,7 @@ task test: ['test:changed']
 # should cause us to run all tests.
 GLOBS_AFFECTING_EVERYTHING = %w(
   .circleci/config.yml
+  .github/workflows/rubyonrails.yml
   lib/rake/test.rake
 )
 
