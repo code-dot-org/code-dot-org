@@ -232,15 +232,21 @@ if (envConstants.COVERAGE) {
 }
 
 function devtool(options) {
-  if (process.env.CI) {
-    return 'eval';
-  } else if (options && options.minify) {
-    return 'source-map';
-  } else if (process.env.DEV) {
-    return 'inline-cheap-source-map';
-  } else {
-    return 'inline-source-map';
-  }
+  console.log('DEVTOOL: returning source-map');
+  return 'eval-source-map';
+  // if (process.env.CI) {
+  //   console.log('DEVTOOL: in CI process');
+  //   return 'eval';
+  // } else if (options && options.minify) {
+  //   console.log('DEVTOOL: option was minify');
+  //   return 'source-map';
+  // } else if (process.env.DEV) {
+  //   console.log('DEVTOOL: in dev process');
+  //   return 'inline-cheap-source-map';
+  // } else {
+  //   console.log('DEVTOOL: in else');
+  //   return 'inline-source-map';
+  // }
 }
 
 var storybookConfig = _.extend({}, baseConfig, {
