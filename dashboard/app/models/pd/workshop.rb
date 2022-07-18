@@ -465,7 +465,7 @@ class Pd::Workshop < ApplicationRecord
         errors << "organizer workshop #{workshop.id} - #{e.message}"
       end
 
-      # send pre-workshop email for CSD and CSP facilitators 10 days before the workshop only
+      # send pre-workshop email for CSA, CSD, CSP facilitators 10 days before the workshop only
       next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP || workshop.course == COURSE_CSA)
       workshop.facilitators.each do |facilitator|
         next unless facilitator.email
@@ -707,6 +707,10 @@ class Pd::Workshop < ApplicationRecord
     attendance_count_by_teacher.select {|_, attendances| attendances == sessions.count}.keys
   end
 
+  def ayw?
+    ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(subject)
+  end
+
   def local_summer?
     subject == SUBJECT_SUMMER_WORKSHOP
   end
@@ -798,9 +802,8 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def pre_survey?
-    # CSP for returning teachers does not have a pre-survey. Academic year workshops have multiple pre-survey options,
-    # so we do not show any to teachers ourselves.
-    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS || ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(subject)
+    # CSP for returning teachers does not have a pre-survey.
+    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
     PRE_SURVEY_BY_COURSE.key? course
   end
 

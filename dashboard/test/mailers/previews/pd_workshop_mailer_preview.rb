@@ -145,6 +145,13 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
     mail :facilitator_enrollment_reminder, target: :facilitator
   end
 
+  def facilitator_pre_workshop_csa
+    mail :facilitator_pre_workshop,
+         Pd::Workshop::COURSE_CSA,
+         Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP,
+         target: :facilitator
+  end
+
   def facilitator_pre_workshop_csp
     mail :facilitator_pre_workshop,
       Pd::Workshop::COURSE_CSP,
