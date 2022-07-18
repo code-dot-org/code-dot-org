@@ -30,6 +30,7 @@ module Dashboard
     config.active_record.belongs_to_required_by_default = true
     config.assets.unknown_asset_fallback = false
     config.autoloader = :zeitwerk
+    config.active_record.collection_cache_versioning = true
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
