@@ -49,7 +49,18 @@ jobs:
           ruby-version: 2.5
           bundler-cache: true
           
-      - name: Bundle Install
+      - name: Cache dashboard gems
+        id: cache-dashboard-gems
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-dashboard-gems
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: vendor/bundle
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('dashboard/Gemfile.lock') }}
+          
+      - if: ${{ steps.cache-dashboard-gems.outputs.cache-hit == 'false' }}
+        name: Bundle Install
         run: |
           bundle install --with test
           cd dashboard/
