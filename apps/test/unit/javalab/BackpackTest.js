@@ -112,7 +112,7 @@ describe('Java Lab Backpack Test', () => {
   });
 
   it('no dialog shown if there are no duplicate file names', () => {
-    const wrapper = shallow(<Backpack {...{...defaultProps}} />);
+    const wrapper = shallow(<Backpack {...defaultProps} />);
     // set state to something that should be cleared by expandDropdown
     wrapper.instance().setState({
       dropdownOpen: true,
