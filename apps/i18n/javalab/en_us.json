@@ -115,6 +115,7 @@
   "onlyVisibleToYou": "teacher comments are only visible to you",
   "openedDate": "opened {date}",
   "programCompleted": "Program completed.",
+  "programStopped": "Program stopped.",
   "refresh": "Refresh",
   "rename": "Rename",
   "replace": "Replace",
