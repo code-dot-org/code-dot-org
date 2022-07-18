@@ -24,6 +24,11 @@ jobs:
 
       - uses: actions/checkout@v2
 
+      - name: Setup locals
+        run: |
+          chmod +x docker/setup_unit_tests_locals.sh
+          ./docker/setup_unit_tests_locals.sh
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.5 # Not needed with a .ruby-version file
@@ -41,5 +46,8 @@ jobs:
           node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
 
       - name: Build all
-        run: rake build
+        run: bundle exec rake build
+
+      - name: Run tests
+        run: bundle exec rake circle:run_tests --trace
 
