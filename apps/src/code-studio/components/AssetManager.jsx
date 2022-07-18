@@ -353,15 +353,22 @@ export default class AssetManager extends React.Component {
         this.props.allowedExtensions === '.mp3' ? (
           <div>
             <div>
-              Go to the "Sound library" to find sounds for your project.
+              {i18n.manageAssetsSoundLibraryMessage({
+                soundLibraryButtonText: i18n.soundLibrary()
+              })}
             </div>
             <div>
-              To upload your own sound, click "Upload File." Your uploaded
-              assets will appear here.
+              {i18n.manageAssetsSoundUploadMessage({
+                assetUploaderButtonText: i18n.uploadFile()
+              })}
             </div>
           </div>
         ) : (
-          'Your assets will appear here. Click "Upload File" to add a new asset for this project.'
+          <div>
+            {i18n.manageAssetsDefaultMessage({
+              assetUploaderButtonText: i18n.uploadFile()
+            })}
+          </div>
         );
       assetList = (
         <div>
