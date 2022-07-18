@@ -14624,7 +14624,7 @@ columns:
     default_function: 
     collation: utf8_unicode_ci
     comment: 
-  project_versions:
+  project_commits:
   - &967 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: id
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
@@ -24205,7 +24205,7 @@ columns_hash:
     updated_at: *964
     overload_of: *965
     return_value: *966
-  project_versions:
+  project_commits:
     id: *967
     storage_app_id: *968
     object_version_id: *969
@@ -24947,7 +24947,7 @@ primary_keys:
   programming_environments: id
   programming_expressions: id
   programming_methods: id
-  project_versions: id
+  project_commits: id
   projects: id
   puzzle_ratings: id
   queued_account_purges: id
@@ -25129,7 +25129,7 @@ data_sources:
   programming_environments: true
   programming_expressions: true
   programming_methods: true
-  project_versions: true
+  project_commits: true
   projects: true
   puzzle_ratings: true
   queued_account_purges: true
@@ -28451,10 +28451,10 @@ indexes:
     type: 
     using: :btree
     comment: 
-  project_versions:
+  project_commits:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: project_versions
-    name: index_project_versions_on_storage_app_id_and_object_version_id
+    table: project_commits
+    name: index_project_commits_on_storage_app_id_and_object_version_id
     unique: true
     columns:
     - storage_app_id
@@ -28467,8 +28467,8 @@ indexes:
     using: :btree
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: project_versions
-    name: index_project_versions_on_storage_app_id
+    table: project_commits
+    name: index_project_commits_on_storage_app_id
     unique: false
     columns:
     - storage_app_id
@@ -30045,7 +30045,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20220627214005
+version: 20220713165055
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5
