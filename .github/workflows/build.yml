@@ -16,6 +16,12 @@ jobs:
       DISABLE_SPRING: 1
       LD_LIBRARY_PATH: /usr/local/lib
     steps:
+      - name: Start MySQL
+        run: sudo /etc/init.d/mysql start
+
+      - name: Set mysql root password
+        run: echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql -uroot -proot
+
       - uses: actions/checkout@v2
 
       - uses: ruby/setup-ruby@v1
@@ -23,8 +29,6 @@ jobs:
           ruby-version: 2.5 # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-      - name: Bundle install
-        run: bundle install
       - run: bundle exec rake install
 
       # Infer node version from .nvmrc, courtesy of https://github.com/actions/setup-node/issues/32#issuecomment-539794249
