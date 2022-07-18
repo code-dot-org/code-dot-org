@@ -1359,3 +1359,16 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
     And I click selector ".toggle-input"
   }
 end
+
+When /^I create a student named "([^"]*)" in a CSA section$/ do |student_name|
+  steps %Q{
+    Given I create a teacher named "Dumbledore"
+    And I give user "Dumbledore" authorized teacher permission
+    And I create a new student section assigned to "ui-test-csa-family-script"
+    And I sign in as "Dumbledore" and go home
+    And I save the student section url
+    And I save the section id from row 0 of the section table
+    Given I create a student named "#{student_name}"
+    And I join the section
+  }
+end
