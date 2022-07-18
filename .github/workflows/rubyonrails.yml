@@ -28,6 +28,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         
+      - name: Setup locals
+        run: |
+          chmod +x docker/setup_unit_tests_locals.sh
+          ./docker/setup_unit_tests_locals.sh 
+        
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@8f312efe1262fb463d906e9bf040319394c18d3e # v1.92
         with:
