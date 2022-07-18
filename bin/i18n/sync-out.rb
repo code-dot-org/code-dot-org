@@ -85,7 +85,7 @@ def file_changed?(locale, file)
         sync down has been run on this machine, so there is nothing to sync out
       ERR
     end
-    JSON.load File.read(project_options[:files_to_sync_out_json])
+    JSON.parse File.read(project_options[:files_to_sync_out_json])
   end
 
   crowdin_code = Languages.get_code_by_locale(locale)
@@ -121,8 +121,7 @@ def find_malformed_links_images(locale, file_path)
   is_json = File.extname(file_path) == '.json'
   data =
     if is_json
-      file = File.open(file_path, 'r')
-      JSON.load(file)
+      JSON.parse(File.read(file_path, 'r'))
     else
       YAML.load_file(file_path)
     end
@@ -312,7 +311,7 @@ def distribute_course_content(locale)
     relative_path = course_strings_file.delete_prefix(locale_dir)
     next unless file_changed?(locale, relative_path)
 
-    course_strings = JSON.load(File.read(course_strings_file))
+    course_strings = JSON.parse(File.read(course_strings_file))
     next unless course_strings
 
     course_strings.each do |level_url, level_strings|
@@ -369,7 +368,7 @@ def distribute_translations(upload_manifests)
 
       if ext == ".json"
         # JSON files in this directory need the root key to be set to the locale
-        loc_data = JSON.load(File.read(loc_file))
+        loc_data = JSON.parse(File.read(loc_file))
         loc_data = wrap_with_locale(loc_data, locale, basename)
         sanitize_data_and_write(loc_data, destination)
       else
@@ -396,7 +395,7 @@ def distribute_translations(upload_manifests)
     if file_changed?(locale, spritelab_animation_translation_path)
       @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true, quiet: true})
       spritelab_animation_translation_file = File.join(locale_dir, spritelab_animation_translation_path)
-      translations = JSON.load(File.open(spritelab_animation_translation_file))
+      translations = JSON.parse(File.read(spritelab_animation_translation_file))
       # Use js_locale here as the animation library is used by apps
       @manifest_builder.upload_localized_manifest(js_locale, translations) if upload_manifests
     end
@@ -404,12 +403,12 @@ def distribute_translations(upload_manifests)
     ### Blockly Core
     # Blockly doesn't know how to fall back to English, so here we manually and
     # explicitly default all untranslated strings to English.
-    blockly_english = JSON.load(File.open("i18n/locales/source/blockly-core/core.json"))
+    blockly_english = JSON.parse(File.read("i18n/locales/source/blockly-core/core.json"))
     Dir.glob("#{locale_dir}/blockly-core/*.json") do |loc_file|
       relative_path = loc_file.delete_prefix(locale_dir)
       next unless file_changed?(locale, relative_path)
 
-      translations = JSON.load(File.open(loc_file))
+      translations = JSON.parse(File.read(loc_file))
       # Create a hash containing all translations, with English strings in
       # place of any missing translations. We do this as 'english merge
       # translations' rather than 'translations merge english' to ensure that
