@@ -33,33 +33,18 @@ jobs:
         with:
           ruby-version: 2.5
           bundler-cache: true
-          
-      #- name: Cache dashboard gems
-      #  id: cache-dashboard-gems
-      #  uses: actions/cache@v3
-      #  env:
-      #    cache-name: cache-dashboard-gems
-      #  with:
-      #    # npm cache files are stored in `~/.npm` on Linux/macOS
-      #    path: dashboard/vendor/bundle
-      #    key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('dashboard/Gemfile.lock') }}
-          
-      #- name: Bundle Install
-      #  run: |
-      #    bundle install --with test
-      #    cd dashboard/
-      #    bundle install
-      #    cd ../
         
-      #- name: Setup MySql User
-      #  run: echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql
-        
-      - name: Install Dashboard
+      - name: Rake Install
         run: bundle exec rake install
       
-      # Add or replace test runners here
-      #- name: Run tests
-      #  run: |
-      #    cd dashboard/
-      #    bin/rake
-      #    cd ../
+     # Infer node version from .nvmrc, courtesy of https://github.com/actions/setup-node/issues/32#issuecomment-539794249
+      - name: Read .nvmrc
+        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+        id: nvm
+      - name: Use Node.js ${{ steps.nvm.outputs.NODE_VERSION }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
+
+      - name: Rake Build
+        run: bundle exec rake build
