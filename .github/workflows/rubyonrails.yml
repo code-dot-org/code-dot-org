@@ -53,3 +53,6 @@ jobs:
 
       - name: Rake Build
         run: bundle exec rake build
+        
+      - name: Run tests
+        run: bundle exec rake circle:run_tests --trace
