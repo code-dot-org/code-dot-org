@@ -89,7 +89,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_info.school_district)
   end
 
-  test 'pre_workshop_survey_url' do
+  # test 'pre_workshop_survey_url' do
+  test 'test2' do
     csp_summer_workshop = build :csp_summer_workshop
     csp_summer_workshop_enrollment = build :pd_enrollment, workshop: csp_summer_workshop
 
@@ -104,7 +105,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_summer_workshop_enrollment.code}",
       URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).query
-    assert_nil csp_academic_year_workshop_enrollment.pre_workshop_survey_url
+    assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_academic_year_workshop_enrollment.code}",
+      URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).query
     assert_equal '/pd/workshop_survey/csf/pre201', URI(csf_201_workshop_enrollment.pre_workshop_survey_url).path
     assert_nil csf_intro_workshop_enrollment.pre_workshop_survey_url
   end
