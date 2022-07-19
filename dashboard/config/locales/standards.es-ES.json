@@ -359,6 +359,9 @@
         "csta/2-AP-18": {
           "description": "Distribuir las tareas y mantener un calendario del proyecto cuando se desarrollan artefactos computacionales en colaboración."
         },
+        "csta/2-AP-14": {
+          "description": "Crear procedimientos con parámetros para organizar el código y facilitar su reutilización."
+        },
         "csta/2-CS-03": {
           "description": "Identificar y solucionar sistemáticamente los problemas de los dispositivos informáticos y sus componentes."
         },

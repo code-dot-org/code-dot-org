@@ -1473,7 +1473,7 @@
         },
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Ejemplo 2: Uso de la visión de la Información para mejorar el modelo",
-          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
+          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n\\| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Calentamiento"
@@ -13216,7 +13216,7 @@
         },
         "020265fb-ab0b-4d77-8cf9-30fb0228a37b": {
           "name": "Diario",
-          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [[cinco prácticas de  Descubrimientos CS]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
+          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [\\[cinco prácticas de  Descubrimientos CS\\]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
         },
         "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
           "name": "¿Qué hace un sensor?",
@@ -15204,14 +15204,30 @@
         "768b3d78-4f96-4e9d-bb05-bcb9b3b7bff7": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
+        "af7747ff-b050-4db4-b2a2-d589a6f15e7b": {
+          "description": "**Monitor:** Muestra a la clase las dos imágenes de una rana saltando.\n\n![](https://curriculum.code.org/media/uploads/triangleJump.gif)  ![](https://curriculum.code.org/media/uploads/curveJump.gif)"
+        },
+        "f1f25133-0e7a-4bfe-b4f2-4280286c98be": {
+          "description": "**Sugerencia:** Aquí hay dos imágenes de una rana saltando.  La primera es de desplazamiento lateral.  ¿Tienes alguna idea de cómo hacer el segundo tipo de salto?"
+        },
         "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
+          "description": "**Pensar-Emparejar-Compartir** Permite que los estudiantes comenten sus ideas con un compañero antes de compartirlas con toda la clase.",
           "tips": [
-            null
+            "Es poco probable que los alumnos den con la solución por sí solos, pero anímales a pensar en todas las ideas posibles y a que sigan trabajando en el problema a lo largo de la clase."
           ]
+        },
+        "6779426a-0497-4eae-8f11-ef773a852324": {
+          "description": "Hemos aprendido un montón de bloques nuevos que nos han ayudado a crear algunas animaciones divertidas.  Hoy, vamos a ver cómo podemos utilizar los bloques que ya conocemos de nuevas formas para hacer tipos de movimientos más interesantes.  Al final de la clase, serás capaz de codificar el nuevo tipo de salto con los bloques que ya conoces."
+        },
+        "d2231aa3-a7d1-4843-aea6-1d68abe0dbcf": {
+          "description": "**Pregunta del Día: ¿Cómo se pueden combinar los bloques anteriores con nuevos patrones para hacer movimientos interesantes?**"
+        },
+        "59cd6d13-7d74-48c5-b0c1-a38feedfca70": {
+          "description": "**Transición:** Cambia los alumnos a Code Studio."
         },
         "c87f7c08-8f60-4810-9e6f-10ae69319288": {
           "tips": [
-            null
+            "Este nivel introduce el nuevo patrón de programación principal de esta lección, combinando el patrón de contador con las propiedades de velocidad de los sprites. Anima a los alumnos a tomar en serio sus predicciones antes de ejecutar el código."
           ],
           "progression_name": "Predicción"
         },
@@ -15230,37 +15246,62 @@
         "077d6880-3d7a-4c59-a63c-06ab77e3e0d8": {
           "progression_name": "Desafíos"
         },
+        "d39528c9-93b2-42e0-be34-acc0a7c58567": {
+          "description": "**Compartir:** Pide a los estudiantes que compartan con sus compañeros las modificaciones que han introducido en su juego final de aviadores. Haz que los estudiantes se centren no solo en cómo funciona el juego, sino en cómo es el código para crear ese tipo de funcionalidad."
+        },
         "443eb6ca-6406-4399-b140-a4d6ec3f0bca": {
+          "description": "**Sugerencia:** En tu papel haz dos listas. Primero, haz una lista de las cosas nuevas que puedes programar para los sprites después de la lección de hoy. En la segunda lista escribe todos los bloques nuevos que has aprendido hoy.",
           "tips": [
-            null
+            "\\*\\* Objetivo:\\*\\* Esta conversación debe poner de manifiesto que los alumnos no han aprendido ningún bloque nuevo en la lección de hoy, sino que sólo han aprendido nuevas formas de combinar bloques y patrones que ya habían aprendido anteriormente. El punto más amplio aquí es que la programación no siempre consiste en aprender nuevos bloques, sino en ser creativo al combinar las herramientas que ya sabes utilizar."
           ]
         },
+        "cfead828-2f8f-4e8e-b63a-23686054c171": {
+          "description": "**Debatir:** Pide a los alumnos que compartan sus listas con los compañeros de clase. A continuación, comparte las listas con toda la clase. Es de esperar que hayan enumerado muchos movimientos de sprites nuevos, pero los alumnos no han aprendido realmente ningún bloque nuevo en esta lección."
+        },
+        "f77a52f4-816e-4851-8401-b82a152197b7": {
+          "description": "**Sugerencia:** Hoy hemos construido un montón de nuevos movimientos de sprites como la gravedad y el salto, pero nada de esto ha requerido que aprendamos nuevos bloques. ¿Cómo has podido hacer cosas nuevas sin aprender ningún bloque nuevo?"
+        },
         "136ec817-6a58-41db-aae8-3238b015ce63": {
+          "description": "**Debatir:** Realiza un rápido seguimiento de tu conversación inicial sobre este punto.",
           "tips": [
-            null
+            " Comprueba que los alumnos pueden explicar las nuevas estructuras de programación y los algoritmos que han podido utilizar para obtener los nuevos comportamientos del programa."
           ]
+        },
+        "71669d41-5507-4ee9-a7bc-081fbdc67f5b": {
+          "description": "Vamos a seguir aprendiendo algunas herramientas más en el Laboratorio de Juegos, pero mientras lo hacemos, recuerda lo que hemos visto hoy. Para crear nuevos tipos de programas no siempre es necesario aprender nuevos bloques. La mayoría de las veces la creatividad de la programación proviene de aprender a combinar cosas que ya conoces de formas nuevas y creativas."
         },
         "4225cb9b-8e55-43c7-918e-1693bf239840": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
         "da390762-bcc9-47c8-ab06-9bac895ebd00": {
+          "description": "**Pantalla**: Muestra la imagen animada. También está disponible como nivel en code studio.\n\n![](https://curriculum.code.org/media/uploads/collision.gif)\n\n**Sugerencia:** Utilizando los bloques que ya sabemos utilizar, ¿cómo podríamos crear la interacción de los sprites que podemos ver en este programa?",
           "progression_name": "Predicción de Código"
         },
         "29881c8e-82cb-4886-8e1f-7f101c91bae9": {
           "description": "\\*\\* Compartir:\\*\\* Permite a los estudiantes compartir sus ideas.",
           "tips": [
-            null
+            "**Objetivo:** El objetivo de este debate es que los alumnos hagan una lluvia de ideas para resolver el problema de que un sprite empuje a otro por la pantalla. No es necesario que los alumnos lleguen a un consenso, porque cada uno tendrá la oportunidad de probar una solución en el siguiente nivel en Code Studio. Los alumnos deben entender que es posible utilizar bloques para producir el movimiento deseado sólo con los bloques que ya han aprendido."
           ]
+        },
+        "0372ae88-c110-4f23-9db0-f634f257bb14": {
+          "description": "La primera parte del problema es averiguar cuándo se tocan los dos sprites, pero ya hemos averiguado cómo hacerlo y ahora podemos utilizar el bloque [\\`isTouching\\`(#f78183)](/docs/gamelab/isTouching/). Eso significa que ya no tenemos que pensar en esos detalles.  Usar la abstracción para ocultar los detalles complicados en esa parte del problema significa que podemos centrarnos en la nueva zona."
         },
         "4c0ed738-4808-45b2-aaae-965d536ffc6a": {
           "tips": [
-            null
+            "Los alumnos ya han visto este vocabulario antes, pero dada su importancia para el capítulo, se introduce de nuevo aquí."
           ]
         },
+        "115e8fa4-da2f-49c9-921d-0c155e9bc474": {
+          "description": "**Repaso del Vocabulario:**\n\n-   **abstracción** - representación simplificada de algo más complejo\n\n**Pregunta del Día: ¿Cómo pueden los programadores basarse en las abstracciones para crear más abstracciones?**"
+        },
         "0d8cc1e7-4e01-4315-a98c-87fcc7031ca7": {
+          "description": "**Sugerencia**: Este fue un problema difícil, pero pudimos resolverlo.  ¿Qué nos ayudó a resolver este problema?",
           "tips": [
-            null
+            "Asegúrate de que los alumnos hablen de la importancia de los bloques de nivel superior, como `isTouching`, y de que, aunque estos bloques no proporcionan una nueva funcionalidad, ocultar la complejidad del código dentro de un solo bloque les permite abordar problemas más complejos.  \n\nEste es también un buen momento para destacar lo mucho que los alumnos han progresado en sus conocimientos desde el comienzo de la unidad.  Este problema habría parecido casi imposible a principios de año. Algunas cosas que facilitaron la resolución del problema fueron:\n\n-   Preparación: Los alumnos hicieron una lluvia de ideas y pensaron en las soluciones antes de probar su código.\n-   Cooperación: Los estudiantes trabajaron en grupo para llegar a una solución\n-   Abstracción: Los alumnos pudieron utilizar los bloques [\\`isTouching\\`(#f78183)](/docs/gamelab/isTouching/) y [\\`velocityY\\`(#f78183)](/docs/gamelab/velocityY/) para ocultar parte de la complejidad de la solución."
           ]
+        },
+        "c24af160-0ae9-421e-bea1-cff4b26e0c2e": {
+          "description": "Todas estas cosas son muy importantes, y aparecen mucho en Informática. Una cosa que fue especialmente útil es el bloque [\\`isTouching\\`(#f78183)](/docs/gamelab/isTouching/), que oculta el complicado código que nos dice si los dos sprites se están tocando. También hay un bloque [\\`displace\\`(#f78183)](/docs/gamelab/displace/) que oculta el código que acabamos de escribir, y otros bloques que ocultan el código para otros tipos de interacciones entre sprites.  Tendrás la oportunidad de probar estos bloques en los próximos niveles."
         },
         "c6e363e6-23a1-466a-9589-a4b871989618": {
           "progression_name": "Desarrollo de Habilidades"
@@ -15277,13 +15318,29 @@
         "e0a4583c-3ca6-4235-a457-774d3696a07d": {
           "progression_name": "Desafíos"
         },
+        "e8b820d4-a23a-4e51-bc59-a3eae3b48b0f": {
+          "description": "**Pregunta del Día: ¿Cómo pueden los programadores basarse en las abstracciones para crear más abstracciones?**\n\n**Repaso del Vocabulario:**\n\n-   **abstracción** - una representación simplificada de algo más complejo"
+        },
         "d2cc216a-b098-4754-bb18-087f42007b46": {
+          "description": "**Sugerencia:** ¿Cómo el hecho de tener el bloque [\\`isTouching\\`(#f78183)](/docs/gamelab/isTouching/) y el bloque [\\`velocityX\\`(#f78183)](/docs/gamelab/velocityX/) facilita la solución del problema de que un sprite empuje a otro?",
           "tips": [
-            null
+            "Los alumnos deben entender que estos dos bloques representan soluciones parciales al problema de que un sprite empuje al otro, y que al ocultar los detalles de esas soluciones parciales, pueden centrarse más fácilmente en cómo encajar esas soluciones parciales para resolver problemas más grandes y complejos. "
           ]
         },
         "8999374a-d5b5-44c6-9df7-766edef29ef4": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
+        },
+        "373fd729-b7fb-4a97-a247-9932f91115b8": {
+          "description": "**Repaso**\n\nPide a los alumnos que piensen en todas las cosas que han aprendido a hacer en la unidad hasta el momento y muestra sus respuestas a la clase. Este es un buen momento para revisar cualquier concepto que haya sido un poco complicado para los alumnos."
+        },
+        "900acfd9-62e0-47d0-a99e-686f8845b8ed": {
+          "description": "Ya has aprendido todas las interacciones de los sprites y los tipos de movimiento que trataremos en esta unidad. Hoy tendrás la oportunidad de juntarlos todos para hacer un juego de voladores."
+        },
+        "6ef7e63f-b5aa-4186-9d73-8cab4596cbf8": {
+          "description": "\\*\\*Pregunta del Día:  ¿Cómo se pueden utilizar los nuevos tipos de colisiones y la simulación del movimiento para crear un juego?"
+        },
+        "ed81acad-ac30-4dfa-b79e-613ef2850c38": {
+          "description": "**Distribuye:** (Opcional) reparte copias de la guía del proyecto. Los alumnos pueden utilizar esta hoja para planificar el Juego de Voladores que crearán al final de esta lección, pero la planificación también puede completarse en papel de borrador.\n\n**Transición** Envía a los estudiantes a Code Studio."
         },
         "05331f50-c576-42e0-91ce-00561faee05c": {
           "progression_name": "Introducción al Juego de Voladores"
@@ -15303,23 +15360,42 @@
         "a9203a76-f8c9-4a77-9c8e-0d329d1f9099": {
           "progression_name": "Revisa tu Juego"
         },
+        "136931c2-5be0-4503-904e-d498bfdd72e2": {
+          "name": "Compartir y Diario 3-2-1",
+          "description": "**Compartir:** Deja tiempo a los alumnos para que ejecuten los juegos de voladores de los demás. Pídeles que se centren no sólo en el nuevo comportamiento que han añadido, sino también en el código que han utilizado para crearlo.\n\n**Diario:** Pide a los alumnos que escriban y reflexionen sobre las siguientes indicaciones.\n\n-   ¿Cuáles son las tres cosas que has visto en el juego de otra persona que te han gustado mucho?\n-   ¿Qué dos mejoras harías en tu juego si tuvieras más tiempo?\n-   ¿Qué consejo le darías a alguien que esté haciendo este tipo de juego?\n\n\\*\\*Pregunta del Día: ¿Cómo se pueden utilizar los nuevos tipos de colisiones y la simulación del movimiento para crear un juego?"
+        },
         "b5208602-6e96-4de5-8eb0-bd174781ade8": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
+        "64cbcef1-8097-4f85-a451-3a993e485ed4": {
+          "name": "Tus Bloques Personales",
+          "description": "**Sugerencia:** ¿Cuál es el bloque que te gustaría tener en el Laboratorio de Juegos?  ¿Qué haría?  ¿Qué código utilizaría para funcionar?"
+        },
         "40b22769-f206-4725-b2f4-fd3f71c15101": {
+          "description": "**Pensar-Emparejar-Compartir:** Permita que los alumnos expliquen sus bloques a un compañero antes de compartir sus ideas.",
           "tips": [
-            null
+            "Cuando los alumnos compartan sus ideas, asegúrate de que tienen una idea clara del código que utilizarían para hacer el bloque, recordándoles que todos los bloques que han aprendido en este capítulo (por ejemplo, velocidad, colisiones) se han construido a partir de bloques que ya conocían."
           ]
         },
+        "b746d8d7-6d54-42ea-ab4c-3336c7012b87": {
+          "description": "Hoy vamos a aprender a crear nuestros propios bloques para decidir exactamente cómo van a funcionar. Estos bloques especiales se llaman funciones, y son una de las partes más poderosas de la programación."
+        },
+        "3a52ad10-05db-405a-acbd-2f62c7629e43": {
+          "description": "\\*\\*Pregunta del Día: ¿Cómo pueden los programadores utilizar las funciones para crear sus propias abstracciones?"
+        },
+        "d1233fef-e471-45e9-81a1-87acb866060b": {
+          "description": "**Transición:** Mueve a los estudiantes a Code Studio donde aprenderán a crear y llamar a funciones."
+        },
         "52d53651-705c-47ec-a68f-d014f3499a99": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   Piensa en una ocasión en la que una función te haya ayudado a escribir un programa.\n-   ¿Qué código iría en la **definición** de la función?\n-   ¿Cuándo **llamarías** a la función?\n-   ¿Qué nombre le darías?",
           "tips": [
-            null
+            "**Objetivo:**\n\n**Vocabulario Clave:**\n\n-   **Función** - un conjunto de instrucciones de programación con nombre\n\nAsegúrate de que los alumnos entienden el papel de los dos pasos en el uso de las funciones, así como que ven las funciones como una forma de \"fragmentación\" o abstracción. La definición de la función debe incluir todo el código que se quiere ejecutar, y el nombre de la función debe ser una breve descripción del propósito del código. La función debe ser llamada en cada lugar del programa en el que el alumno quiera que se ejecute ese bloque de código."
           ],
           "progression_name": "Video: funciones"
         },
         "085e06bd-a991-42ec-b8e2-2e27712cf7dd": {
           "tips": [
-            null
+            "**Introducción a las Funciones**\n\nEn estos primeros niveles a los alumnos sólo se les enseña la sintaxis de las funciones y no se les pide que escriban o creen las suyas propias. Puede ser útil explicar la creación de una función como, básicamente, \"la creación de un nuevo bloque\" al igual que otro programador creó los bloques \"isTouching\" o \"velocity\" que han visto que en realidad contienen otro código más complejo."
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -15328,7 +15404,7 @@
         },
         "e4283f2d-5933-4812-80df-341067426cc8": {
           "tips": [
-            null
+            "**Por qué usar Funciones**\n\nLos niveles 5a, 5b y 5c introducen tres usos de las funciones, a saber, eliminar la repetición en los programas, permitir que el código se modifique rápidamente en varios puntos y proporcionar organización en el código. Los alumnos tendrán que escribir más funciones propias en estos niveles."
           ],
           "progression_name": "Practica"
         },
@@ -15337,20 +15413,33 @@
         },
         "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
           "tips": [
-            null
+            "**Nivel 7: Funciones en Contexto**\n\nEn este nivel y en los dos siguientes, los alumnos utilizarán funciones para organizar el código dentro de un juego sencillo. Aunque no es idéntico al desplazamiento lateral, muchos de los conocimientos y usos de las funciones en estos niveles pueden y deben ser utilizados cuando completen su desplazamiento lateral."
           ],
           "progression_name": "Juego de Coleccionista"
         },
         "c3302e9a-4da1-4c1b-96ca-232b7026ea9c": {
           "progression_name": "Desafíos"
         },
+        "a35882d4-fd9e-4c8b-a3e0-31a764068440": {
+          "description": "**Vocabulario Clave:** \n\n-   **Función** - un conjunto de instrucciones de programación con nombre\n\n**Sugerencia:** ¿Por qué diríamos que las funciones nos permiten \"crear nuestros propios bloques\"? ¿Por qué es algo que nos gustaría hacer?  ¿Por qué una función cuenta como una abstracción?"
+        },
         "3dfe6414-c583-4af9-a55d-7da0d06783ef": {
+          "description": "**Debatir:** Pide a los alumnos que comenten en su mesa antes de hablar en conjunto.",
           "tips": [
-            null
+            "  **Objetivo:** Utiliza esta primera indicación para repasar lo que los alumnos han aprendido hoy. Cuando crean una función están creando su propio bloque que pueden llamar o utilizar cuando quieran. Hoy vieron al menos dos motivaciones principales para crear funciones, entre ellas:\n\n-   Simplificar el código dividiéndolo en bloques con nombres lógicos\n-   Permitir que un programador piense a un nivel superior ocultando los detalles o un fragmento particular de instrucciones de programación\n-   Evitar la repetición de código haciendo un bloque que se pueda utilizar varias veces\n\nLos alumnos deben repasar la definición de abstracción como \"una forma sencilla de representar algo complejo\". Observa que una función es una abstracción porque te permite crear un nombre simple para un bloque de código más complejo."
           ]
+        },
+        "3c9a4d37-8a16-4e62-a21e-7fe688c3905d": {
+          "description": "Las funciones son una herramienta útil para ayudarnos a escribir y organizar porciones de código más complejas. A medida que empezamos a mirar hacia el final de la unidad y tu proyecto final, ser capaz de mantener tu código organizado será una experiencia importante."
+        },
+        "050ea509-1c7f-4c70-95f0-27015941f570": {
+          "description": "\\*\\*Pregunta del Día: ¿Cómo pueden los programadores utilizar las funciones para crear sus propias abstracciones?"
         },
         "924cad07-d581-4fd3-b43e-bb1e8061a72a": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
+        },
+        "558eccfc-5a53-4d89-a0d1-ba9f57e5fe0e": {
+          "name": "Jugar al Defensor de la Tarta"
         },
         "9fba4c16-6103-4cb5-88a4-1a250ec8abdb": {
           "tips": [
