@@ -129,7 +129,7 @@ var baseConfig = {
   },
   module: {
     rules: [
-      {test: /\.exported_json$/, loader: 'raw-loader'},
+      {test: /\.exported_json$/, type: 'asset/source'},
       {
         test: /\.ejs$/,
         include: [
@@ -156,8 +156,8 @@ var baseConfig = {
           }
         ]
       },
-      {test: /\.interpreted.js$/, loader: 'raw-loader'},
-      {test: /\.exported_js$/, loader: 'raw-loader'},
+      {test: /\.interpreted.js$/, type: 'asset/source'},
+      {test: /\.exported_js$/, type: 'asset/source'},
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
         include: [
@@ -232,19 +232,15 @@ if (envConstants.COVERAGE) {
 }
 
 function devtool(options) {
-  console.log('DEVTOOL: returning source-map');
+  // TODO: fix this to only return eval-source-map for debug builds
   return 'eval-source-map';
   // if (process.env.CI) {
-  //   console.log('DEVTOOL: in CI process');
   //   return 'eval';
   // } else if (options && options.minify) {
-  //   console.log('DEVTOOL: option was minify');
   //   return 'source-map';
   // } else if (process.env.DEV) {
-  //   console.log('DEVTOOL: in dev process');
   //   return 'inline-cheap-source-map';
   // } else {
-  //   console.log('DEVTOOL: in else');
   //   return 'inline-source-map';
   // }
 }
