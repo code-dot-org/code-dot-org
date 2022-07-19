@@ -6968,6 +6968,7 @@ en:
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
           name: coursea-2022
+          lessons: {}
         express-2022:
           lesson_groups:
             csf_sequencing:
