@@ -1470,7 +1470,7 @@ export default class P5Lab {
       }
     }
 
-    if (this.JSInterpreter.executionError) {
+    if (this.JSInterpreter?.executionError) {
       this.reactToExecutionError(this.JSInterpreter.executionError.message);
     }
 

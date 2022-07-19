@@ -355,7 +355,7 @@ class FilesApi < Sinatra::Base
   TEXT_HTML = 'text/html'.freeze
 
   def html?(headers)
-    headers[CONTENT_TYPE] && headers[CONTENT_TYPE].include?(TEXT_HTML)
+    headers[CONTENT_TYPE]&.include?(TEXT_HTML)
   end
 
   def html_file?(filename)
@@ -501,7 +501,7 @@ class FilesApi < Sinatra::Base
       source.each_key do |key|
         # Multi-file source structure:
         # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
-        return false unless source[key]["text"] && source[key]["text"].force_encoding("UTF-8").valid_encoding?
+        return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?
       end
       return true
     end
@@ -733,7 +733,7 @@ class FilesApi < Sinatra::Base
     #     }
     #   ]
     # }
-    {"filesVersionId": result[:version_id], "files": JSON.load(result[:body])}.to_json
+    {"filesVersionId": result[:version_id], "files": JSON.parse(result[:body].read)}.to_json
   end
 
   #
@@ -878,7 +878,7 @@ class FilesApi < Sinatra::Base
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
     not_found if manifest_result[:status] == 'NOT_FOUND'
-    manifest = JSON.load manifest_result[:body]
+    manifest = JSON.parse(manifest_result[:body].read)
 
     # delete the manifest and all of the files it referenced
     bucket.delete_multiple(encrypted_channel_id, [FileBucket::MANIFEST_FILENAME].concat(manifest.map {|e| e['filename'].downcase})) unless manifest.empty?
@@ -902,7 +902,7 @@ class FilesApi < Sinatra::Base
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
     not_found if manifest_result[:status] == 'NOT_FOUND'
-    manifest = JSON.load manifest_result[:body]
+    manifest = JSON.parse(manifest_result[:body].read)
 
     # remove the file from the manifest
     manifest_delete_comparison_filename = CGI.unescape(filename).downcase
@@ -947,7 +947,7 @@ class FilesApi < Sinatra::Base
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, nil, params['version'])
     bad_request if manifest_result[:status] == 'NOT_FOUND'
-    manifest = JSON.load manifest_result[:body]
+    manifest = JSON.parse(manifest_result[:body].read)
 
     # restore the files based on the versions stored in the manifest
     manifest.each do |entry|
