@@ -544,6 +544,7 @@
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
           "name": "Introdução",
+          "description": "#### Construa Entusiasmo\n\n**Gere motivação:** Explique aos alunos os objetivos da atividade de hoje. Eles vão começar a usar uma nova ferramenta que os deixarão rapidamente fazer aplicativos que eles podem instantaneamente enviar para eles mesmos ou amigos usarem. \n\n**Vídeo:** O primeiro nível desta atividade é um vídeo que deve tanto motivar os alunos a completarem a atividade quanto explicando como vai funcionar. Considere assistí-lo como uma aula e rapidamente o analise para responder perguntas.",
           "progression_name": "Introdução ao App Lab - Vídeo"
         },
         "430134f0-2f85-4888-abd3-f55fbf0753da": {
@@ -566,6 +567,9 @@
         },
         "2113da19-595f-418e-be70-5219f0b47aa8": {
           "progression_name": "Compartilhe Seu App"
+        },
+        "1fd99689-e90c-478b-8ae2-ce8b5d489906": {
+          "name": "Comemore e vá em frente!"
         },
         "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
           "description": "_Nesta atividade, você vai se divertir criando um mundo interativo, com personagens divertidos chamados de fadas. Você poderá fazer com que as fadas digam coisas com balões de texto semelhantes aos das histórias em quadrinho, e vai aprender a fazê-las responder automaticamente quando alguém clicar nelas._\n\n_Hoje, vocês vão escrever um “código”, que nada mais é do que uma série de instruções que o computador pode entender. Quando você escreve uma história, é preciso pensar cuidadosamente sobre as palavras que vai utilizar. Quando você escreve um código, você precisa pensar cuidadosamente sobre as instruções que vai dar ao seu computador._",
