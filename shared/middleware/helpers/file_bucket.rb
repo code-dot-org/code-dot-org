@@ -36,7 +36,7 @@ class FileBucket < BucketHelper
     src_manifest.each do |src_entry|
       src_filename = src_entry['filename']
       dest_manifest.each do |dest_entry|
-        if dest_entry['filename'].downcase == src_filename.downcase
+        if dest_entry['filename'].casecmp?(src_filename)
           dest_entry['filename'] = src_filename
         end
       end
