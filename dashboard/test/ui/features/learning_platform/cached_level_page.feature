@@ -12,7 +12,7 @@ Feature: Cached level page
 
     # Teacher panel loads as expected on cached level page
     Given I sign in as "Teacher Monica"
-    Then I navigate to the script "dance-2019" lesson 1 level 10 for the section I saved
+    Then I navigate to the script "dance" lesson 1 level 13 for the section I saved
     And I wait until element "#teacher-panel-container" is visible
     And I wait until element "td:eq(1)" contains text "Joey"
     And I wait for 20 seconds
