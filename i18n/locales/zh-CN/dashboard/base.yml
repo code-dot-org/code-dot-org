@@ -435,7 +435,6 @@ zh-CN:
     popup:
       progress_for_user: "%{name}的进度"
       progress: '您的进度'
-      lines: '代码总行数：%{lines}'
       close: '关闭'
       mastery: '概念'
       puzzle_map: '阶段'
