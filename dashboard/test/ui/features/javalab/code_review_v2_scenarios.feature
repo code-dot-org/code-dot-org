@@ -34,13 +34,7 @@ Feature: Code review V2
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?enableExperiments=code_review_v2&noautoplay=true"
     And I load the review tab
     And I load the code review for peer number 1 in the list
-    And I wait to see ".editable-text-area"
-    And I press ".editable-text-area" using jQuery
-    And I wait for 2 seconds
-    And I press keys "Great work" for element ".editable-text-area"
-    And element ".editable-text-area" eventually contains text "Great work"
-    And I press ".code-review-comment-submit" using jQuery
-    And I wait until element ".code-review-comment-body" is visible
+    And I write a code review v2 comment with text "Great work!"
     Then I see no difference for "student code reviewing peer" using stitch mode "none"
     And I sign out using jquery
 
