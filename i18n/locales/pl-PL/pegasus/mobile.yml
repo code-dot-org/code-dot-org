@@ -382,11 +382,12 @@
   homepage_slot_text_link_administrators: "Wprowadź informatykę do swojej szkoły"
   homepage_gallery_header: "Utworzono ponad %{project_count} mln projektów w Code.org"
   homepage_header_donors: "Code.org dziękuje za wsparcie"
-  homepage_donors_seall: "Zobacz wszystkich"
+  homepage_donors_seall: "Zobacz więcej wspierających "
   homepage_donors_donate: "Podaruj"
   homepage_below_hero_announcement_text: "Dbamy o Twoją prywatność i dokonujemy kilku aktualizacji naszej Polityki prywatności, które wejdą w życie 25 maja."
   homepage_below_hero_announcement_link_text: "Dowiedz się więcej"
   homepage_higher_power_body: "Twórz z Potańcówką, zyskaj szansę zobaczenia zespołu na żywo."
+  homepage_thebadguys_body: "Zakoduj przygodę z panią Tarantulą, panem Wolf i resztą bohaterów filmu **The Bad Guys**!"
   homepage_csa_subhead: "Nowe podejście do"
   homepage_csa_title: "AP® Computer Science A"
   homepage_csa_body: "Zapewnij uczniom kreatywne projekty związane ze światem rzeczywistym w naszym programie nauczania opartym na równości."
@@ -1015,6 +1016,8 @@
   iceage_name: "Epoka lodowcowa"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (Bloki)"
+  hoc-impact-study_name: Klasyczny labirynt z ankietą
+  flappy-impact-study_name: Kod Flappiego z ankietą
   hoc-encryption_name: Proste szyfrowanie
   text-compression_name: Kompresja tekstu
   applab_name: "App Lab"
@@ -1247,22 +1250,22 @@
   coursef-2019_shortdescription_congrats: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
   coursea-2020_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
   courseb-2020_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
-  coursec-2020_shortdescription_congrats: Twórz programy przy pomocy tworzenia sekwencji, pętli i zdarzeń. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
+  coursec-2020_shortdescription_congrats: Twórz programy z sekwencjami, pętlami i zdarzeniami. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
   coursed-2020_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia zagadnień pętli, wyrażeń warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą się o obywatelstwie cyfrowym.
   coursee-2020_shortdescription_congrats: Zacznij kodować przy pomocy algorytmów, pętli, wyrażeń warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
-  coursef-2020_shortdescription_congrats: Naucz się używać różnych rodzajów pętli, wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
+  coursef-2020_shortdescription_congrats: Naucz się używać różnych rodzajów pętli, zdarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
   coursea-2021_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
   courseb-2021_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
-  coursec-2021_shortdescription_congrats: Twórz programy przy pomocy tworzenia sekwencji, pętli i zdarzeń. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
+  coursec-2021_shortdescription_congrats: Twórz programy z sekwencjami, pętlami i zdarzeniami. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
   coursed-2021_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia zagadnień pętli, wyrażeń warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą się o obywatelstwie cyfrowym.
   coursee-2021_shortdescription_congrats: Zacznij kodować przy pomocy algorytmów, pętli, wyrażeń warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
-  coursef-2021_shortdescription_congrats: Naucz się używać różnych rodzajów pętli, wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
+  coursef-2021_shortdescription_congrats: Naucz się używać różnych rodzajów pętli, zdarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
   coursea-2022_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
   courseb-2022_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
-  coursec-2022_shortdescription_congrats: Twórz programy przy pomocy tworzenia sekwencji, pętli i zdarzeń. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
+  coursec-2022_shortdescription_congrats: Twórz programy z sekwencjami, pętlami i zdarzeniami. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
   coursed-2022_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia zagadnień pętli, wyrażeń warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą się o obywatelstwie cyfrowym.
   coursee-2022_shortdescription_congrats: Zacznij kodować przy pomocy algorytmów, pętli, wyrażeń warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
-  coursef-2022_shortdescription_congrats: Naucz się używać różnych rodzajów pętli, wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
+  coursef-2022_shortdescription_congrats: Naucz się używać różnych rodzajów pętli, zdarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
   codeorg_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   codeintl_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
