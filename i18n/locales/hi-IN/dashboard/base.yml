@@ -429,7 +429,6 @@ hi:
     popup:
       progress_for_user: "%{Name} की प्रगति"
       progress: 'आपकी प्रगति'
-      lines: 'कोड की कुल लाइनें: %{lines}'
       close: 'बंद करें'
       mastery: 'धारणाएं'
       puzzle_map: 'चरण'
