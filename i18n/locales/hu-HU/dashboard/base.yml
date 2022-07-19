@@ -432,7 +432,6 @@ hu:
     popup:
       progress_for_user: "%{name} fejlődése"
       progress: 'Haladásod'
-      lines: 'A kód teljes hossza: %{lines} sor'
       close: 'BEZÁRÁS'
       mastery: 'Fogalmak'
       puzzle_map: 'Szakaszok'
