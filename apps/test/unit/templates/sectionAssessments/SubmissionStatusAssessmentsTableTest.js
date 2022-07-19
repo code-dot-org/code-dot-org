@@ -261,7 +261,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
         .find('.timestampCell')
         .first()
         .text()
-    ).to.equal('7/10/2018 20:52:05');
+    ).to.equal('7/10/2018, 20:52:05');
 
     // localeCode will undefined by default here, but it defaults to null in
     // redux; so, make sure we explicitly test that particular falsy value
