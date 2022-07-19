@@ -366,6 +366,9 @@ export default class JavabuilderConnection {
   closeConnection() {
     if (this.socket) {
       this.socket.close();
+      this.onOutputMessage(
+        `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programStopped()}`
+      );
     }
   }
 
