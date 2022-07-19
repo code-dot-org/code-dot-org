@@ -95,7 +95,7 @@ Resources:
       ValidationMethod: DNS
       DomainValidationOptions:
         <%- domains.each do |domain| -%>
-        - DomainName: <%= first_domain %>
+        - DomainName: <%= domain %>
           HostedZoneId: !Ref <%=camelize_domain(domain)%>HostedZone
         <%- end -%>
 
