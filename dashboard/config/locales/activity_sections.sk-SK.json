@@ -1577,8 +1577,8 @@
           "progression_name": "Prehľad lekcie"
         },
         "6e6ad22a-99d2-434c-abab-b6d4a6962027": {
-          "name": "Vzorové programy",
-          "progression_name": "Vzorové programy"
+          "name": "Ukážkové programy",
+          "progression_name": "Ukážkové programy"
         },
         "80638f32-a3e0-46c4-99fa-74d740d9ff1d": {
           "progression_name": "Prehľad lekcie"
@@ -1609,7 +1609,7 @@
           "progression_name": "Tvorba tvarov v Game Labe"
         },
         "e72a0445-ed69-4440-b9d7-e07e7895982d": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "30e26a1c-2b7f-4b80-994a-5e08ad6edd81": {
           "progression_name": "Prehľad lekcie"
@@ -1803,6 +1803,9 @@
         "84021691-71af-4214-b414-d85de602e92f": {
           "progression_name": "Prehľad lekcie"
         },
+        "595c8625-0286-43fd-8489-e968bbeb1f85": {
+          "progression_name": "Ukážková hra"
+        },
         "894e68de-6238-4607-90d8-47372189462a": {
           "progression_name": "Detekcia kolízie"
         },
@@ -1819,16 +1822,19 @@
           "progression_name": "Prehľad lekcie"
         },
         "388edd20-6e40-48c9-9b12-826b0ae27f1e": {
-          "progression_name": "Lietajúca hra"
+          "progression_name": "Lietacia hra"
         },
         "75a15f95-d9ab-486e-8ef5-7701fabe63a1": {
           "progression_name": "Prehľad lekcie"
         },
+        "e2e981d3-4478-498c-969b-631482c788ce": {
+          "progression_name": "Interakcie sprajtov"
+        },
         "39bb2754-5f8f-4a99-9de5-4d60ee128ae1": {
-          "progression_name": "Kolízie \"sprite\" objektov"
+          "progression_name": "Kolízie sprajtov"
         },
         "2c1a8a7a-4d36-4e64-afcc-c67cb7a2fcf2": {
-          "progression_name": "Lietajúca hra"
+          "progression_name": "Lietacia hra"
         },
         "bbaf2c50-a1db-4497-9238-aee27d5e8095": {
           "progression_name": "Prehľad lekcie"
@@ -1841,6 +1847,12 @@
         },
         "03859b57-0593-4ee9-8e02-bb71caba9c7f": {
           "progression_name": "Prehľad lekcie"
+        },
+        "74c2ffd9-d39f-40f6-b86a-b3b22f0430d3": {
+          "progression_name": "Ukážková hra"
+        },
+        "0f38f023-d475-4389-bcce-150972b6e1b7": {
+          "progression_name": "Naplánuj si projekt"
         },
         "464831b9-b4dd-4ced-a50a-6b4204d3c843": {
           "progression_name": "Viacsnímkové animácie"
@@ -1855,34 +1867,37 @@
         "f9b9ae9f-a4d1-4b3f-9b13-e7b489a2ae61": {
           "progression_name": "Príklad plošinovej skákacej hry"
         },
+        "7cee437f-0aa0-4131-9d81-d5cac21d1cab": {
+          "progression_name": "Vytvor si plošinovú skákaciu hru"
+        },
         "f0cc8898-9190-4844-9010-7229bb0a652a": {
-          "progression_name": "Plošinový skokan - Pozadie a premenné"
+          "progression_name": "Plošinová skákačka – Pozadie a premenné"
         },
         "d0a11f9d-ef36-4c35-9ec2-c6c36fb3a9b5": {
-          "progression_name": "Plošinový skokan - Plošiny"
+          "progression_name": "Plošinová skákačka – Plošiny"
         },
         "d81de5ed-ab06-457e-b872-5c6fd45fddeb": {
-          "progression_name": "Plošinový skokan - Prvky"
+          "progression_name": "Plošinová skákačka – Predmety"
         },
         "452226e4-77c6-49f2-9be3-4f9aceff053d": {
-          "progression_name": "Plošinový skokan - Hráč"
+          "progression_name": "Plošinová skákačka – Hráč"
         },
         "dc433b08-56bf-4f84-8a15-0646cf34b298": {
           "progression_name": "Prehľad lekcie"
         },
         "d004ae7c-e575-44e3-903d-e65e7d543e9b": {
-          "progression_name": "Projekt - Pozadie a premenné"
+          "progression_name": "Projekt – Pozadie a premenné"
         },
         "cb01dc48-0618-4d29-827e-26b3f0de9989": {
-          "progression_name": "Projekt - \"Sprite\" objekty a interakcie"
+          "progression_name": "Projekt – Sprajty a interakcie"
         },
         "d6ed872d-76c1-4f17-a785-1279a9ad0a59": {
           "name": "Reflexia",
           "progression_name": "Reflexia"
         },
         "d9cde143-823a-4202-993c-601ea9ad5506": {
-          "name": "Inštrukcie pre vypĺňanie dotazníka po kurze",
-          "progression_name": "Inštrukcie pre vypĺňanie dotazníka po kurze"
+          "name": "Pokyny na vyplnenie záverečného dotazníka",
+          "progression_name": "Pokyny na vyplnenie záverečného dotazníka"
         },
         "3713a54a-d7a0-43e5-9e78-6fd2938d98eb": {
           "progression_name": "Prehľad lekcie"
@@ -1953,6 +1968,9 @@
         "da4957f8-80b5-4343-9894-a34f3ec5e371": {
           "progression_name": "Prehľad lekcie"
         },
+        "3d7eccb7-d5a1-47bf-a9eb-44cefb698b4a": {
+          "progression_name": "Naplánuj si projekt"
+        },
         "7a41f30c-554f-4cb4-a10d-8aa3ddfd37d2": {
           "progression_name": "Dizajn obrazovky"
         },
@@ -1964,6 +1982,9 @@
         },
         "91f5dac9-f136-45ec-bdb7-885007431336": {
           "progression_name": "Prehľad lekcie"
+        },
+        "93ae73de-b840-4ca3-aa1d-72407d108a3f": {
+          "progression_name": "Naplánuj si projekt"
         },
         "a0fb0b5a-6467-404c-927d-a34a13cef6de": {
           "progression_name": "Dizajn obrazovky"
@@ -2080,8 +2101,8 @@
           "progression_name": "Reflexia"
         },
         "22710f07-1277-40f9-ba6f-b0c7abe8d493": {
-          "name": "Inštrukcie pre vypĺňanie dotazníka po kurze",
-          "progression_name": "Inštrukcie pre vypĺňanie dotazníka po kurze"
+          "name": "Pokyny na vyplnenie záverečného dotazníka",
+          "progression_name": "Pokyny na vyplnenie záverečného dotazníka"
         },
         "0f9b16a0-ff0f-4201-afb3-463ca1e88103": {
           "name": "Prehľad lekcie",
@@ -2154,8 +2175,8 @@
           "progression_name": "Reflexia"
         },
         "d9e59a15-48a1-4243-bcf9-ba78228428d8": {
-          "name": "Inštrukcie pre vypĺňanie dotazníka po kurze",
-          "progression_name": "Inštrukcie pre vypĺňanie dotazníka po kurze"
+          "name": "Pokyny na vyplnenie záverečného dotazníka",
+          "progression_name": "Pokyny na vyplnenie záverečného dotazníka"
         },
         "8667bd82-fed3-4fa1-8d54-bb13b22370e3": {
           "name": "Objavujeme informatiku: Záverečný dotazník",
@@ -2253,8 +2274,8 @@
           "progression_name": "Reflexia"
         },
         "abd6044f-bdc2-494c-b9f6-24e69667e3fd": {
-          "name": "Inštrukcie pre vypĺňanie dotazníka po kurze",
-          "progression_name": "Inštrukcie pre vypĺňanie dotazníka po kurze"
+          "name": "Pokyny na vyplnenie záverečného dotazníka",
+          "progression_name": "Pokyny na vyplnenie záverečného dotazníka"
         },
         "a8669b83-40c9-4ca2-b06a-c9c8a84d3ce6": {
           "progression_name": "Prehľad lekcie"
@@ -2406,8 +2427,8 @@
           "progression_name": "Reflexia"
         },
         "80663419-7bc5-4162-8898-ff990104114c": {
-          "name": "Inštrukcie pre vypĺňanie dotazníka po kurze",
-          "progression_name": "Inštrukcie pre vypĺňanie dotazníka po kurze"
+          "name": "Pokyny na vyplnenie záverečného dotazníka",
+          "progression_name": "Pokyny na vyplnenie záverečného dotazníka"
         },
         "9efcf40a-96ec-411f-a949-f7fe6c1625d2": {
           "name": "Prehľad lekcie",
@@ -3272,7 +3293,7 @@
           "progression_name": "Cvičenie"
         },
         "cc218fb0-7d11-48bb-9a38-291b1490af29": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "492875e4-c3a9-415e-b5c5-cb0204c5cc1a": {
           "progression_name": "Cvičenie"
@@ -3287,7 +3308,7 @@
           "progression_name": "Výzva"
         },
         "8d3f24a1-e89b-4e93-92e1-508e62c2cd59": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "117d8739-d0c7-4f8e-8570-c634c8df1bf9": {
           "progression_name": "Cvičenie"
@@ -3305,7 +3326,7 @@
           "progression_name": "Cvičenie"
         },
         "de97577d-abdb-4694-871c-ff2385509306": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "7e03ff4b-5cbd-41ff-8ba9-a00de0867038": {
           "progression_name": "Cvičenie"
@@ -3327,7 +3348,7 @@
           "progression_name": "Cvičenie"
         },
         "3e30f7ff-21c6-4335-9ad3-0968ac7f5c57": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "e0d3988c-bdb0-45b1-9512-354e87118d64": {
           "progression_name": "Programovanie s Rey a BB-8"
@@ -3336,7 +3357,7 @@
           "progression_name": "Cvičenie"
         },
         "7775acbe-f137-42d3-a464-bf991991b7c3": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "0772880f-6149-4c01-9cac-2006f2fdea5b": {
           "progression_name": "Opakujúce sa bloky s BB-8"
@@ -3351,7 +3372,7 @@
           "progression_name": "Cvičenie"
         },
         "ccf2c532-cb53-4b32-a41e-7d34f999311d": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "0e8985cd-34d0-4ffe-b0f0-53fb0e9bd874": {
           "progression_name": "Cvičenie"
@@ -3369,7 +3390,7 @@
           "progression_name": "Cvičenie"
         },
         "d1ee3790-11fa-4ef2-9d60-0ce3a3089e07": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "1e11ffae-8254-4f4f-b70b-a5f2cf1e4e66": {
           "progression_name": "Cvičenie"
@@ -3418,8 +3439,8 @@
           "progression_name": "Prehľad lekcie"
         },
         "68f4881c-e3a6-4fb1-bb42-6bfce254e6b9": {
-          "name": "Vzorové programy",
-          "progression_name": "Vzorové programy"
+          "name": "Ukážkové programy",
+          "progression_name": "Ukážkové programy"
         },
         "bb6a2b90-0730-48ab-b10d-325b0f37b6af": {
           "progression_name": "Prehľad lekcie"
@@ -3450,7 +3471,7 @@
           "progression_name": "Tvorba tvarov v Game Labe"
         },
         "d1036688-71f8-4075-be73-786b8f7b930f": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "aab19774-0354-4f84-a520-13001ae57f63": {
           "progression_name": "Prehľad lekcie"
@@ -3599,7 +3620,7 @@
           "progression_name": "Prehľad lekcie"
         },
         "8b445d6f-6129-4ee3-b696-45de248cb3c7": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "cc18fe27-30a0-4964-8e5b-bd68143aa5db": {
           "progression_name": "Video: Podmienkové výroky"
@@ -3647,6 +3668,9 @@
         "913cf6d5-1934-4e19-8cfd-c86e320bd941": {
           "progression_name": "Prehľad lekcie"
         },
+        "4cac98b5-f2cf-43ab-aff1-8ef692d29ca7": {
+          "progression_name": "Ukážková hra"
+        },
         "e6940894-5c4f-454c-b9f5-fe2b6a8e4cc8": {
           "progression_name": "Detekcia kolízie"
         },
@@ -3663,16 +3687,19 @@
           "progression_name": "Prehľad lekcie"
         },
         "b9a8601e-e066-49db-8899-a492cede561d": {
-          "progression_name": "Lietajúca hra"
+          "progression_name": "Lietacia hra"
         },
         "ee04a576-ec75-46c7-b9ec-1c34503b7215": {
           "progression_name": "Prehľad lekcie"
         },
+        "4c8ea5f8-8077-4f3b-adb4-b5f3f23ca61d": {
+          "progression_name": "Interakcie sprajtov"
+        },
         "760f3b31-7405-4e48-81a6-98a1ffc5eb31": {
-          "progression_name": "Kolízie \"sprite\" objektov"
+          "progression_name": "Kolízie sprajtov"
         },
         "59df7a89-8955-425b-838a-884476c9218b": {
-          "progression_name": "Lietajúca hra"
+          "progression_name": "Lietacia hra"
         },
         "36340995-7f3c-4c0c-8cc9-25a4e255eff8": {
           "progression_name": "Prehľad lekcie"
@@ -3689,6 +3716,12 @@
         "4f152c63-7605-4029-97f4-d9c319f0ff73": {
           "progression_name": "Prehľad lekcie"
         },
+        "2f731ea3-9491-42f0-aebe-4d8bfb9f8af4": {
+          "progression_name": "Ukážková hra"
+        },
+        "58eb3ec4-5481-4ed1-b5ca-42c555e2c823": {
+          "progression_name": "Naplánuj si projekt"
+        },
         "d629a7bc-1321-4196-a016-a953dc0f8201": {
           "progression_name": "Viacsnímkové animácie"
         },
@@ -3702,26 +3735,29 @@
         "4ce4928d-f456-4fad-b005-9b9c382a548a": {
           "progression_name": "Príklad plošinovej skákacej hry"
         },
+        "35d19875-08f0-421b-8044-60f3264fb51c": {
+          "progression_name": "Vytvor si plošinovú skákaciu hru"
+        },
         "5046d996-d0fd-42f1-a168-2ad392ce30f7": {
-          "progression_name": "Plošinový skokan - Pozadie a premenné"
+          "progression_name": "Plošinová skákačka – Pozadie a premenné"
         },
         "75d28e42-098a-4fad-a1c9-cc5badf8ead0": {
-          "progression_name": "Plošinový skokan - Plošiny"
+          "progression_name": "Plošinová skákačka – Plošiny"
         },
         "ee2b8ec6-4abb-4ed2-878e-fde67179cbdf": {
-          "progression_name": "Plošinový skokan - Prvky"
+          "progression_name": "Plošinová skákačka – Predmety"
         },
         "992a4d21-b6b9-4e62-8c08-267a7dc11778": {
-          "progression_name": "Plošinový skokan - Hráč"
+          "progression_name": "Plošinová skákačka – Hráč"
         },
         "87acf7e3-8fa0-4952-a0e4-734aac023056": {
           "progression_name": "Prehľad lekcie"
         },
         "1958e1d6-72f8-4f47-8ce6-70ec51ac3004": {
-          "progression_name": "Projekt - Pozadie a premenné"
+          "progression_name": "Projekt – Pozadie a premenné"
         },
         "2f3428b4-8a68-4e82-b659-b6b2653ddf8b": {
-          "progression_name": "Projekt - \"Sprite\" objekty a interakcie"
+          "progression_name": "Projekt – Sprajty a interakcie"
         },
         "a93b675e-fb6a-430e-86e6-ffbe77fea72e": {
           "name": "Reflexia",
@@ -3799,6 +3835,9 @@
         "9a5a3a6b-6da8-4507-bb3f-c4bbee06d427": {
           "progression_name": "Prehľad lekcie"
         },
+        "d60814f2-fc93-4ef3-a999-07ce0fc4dea1": {
+          "progression_name": "Naplánuj si projekt"
+        },
         "afd0e25a-5902-4b4a-87f9-d204f727c570": {
           "progression_name": "Dizajn obrazovky"
         },
@@ -3810,6 +3849,9 @@
         },
         "a5ed9361-2183-4cf1-b889-12dca09e8e45": {
           "progression_name": "Prehľad lekcie"
+        },
+        "31886f50-3b56-4924-890d-239f39524bb2": {
+          "progression_name": "Naplánuj si projekt"
         },
         "abe489d2-ece4-47a3-9851-fcc0dd70cbe6": {
           "progression_name": "Dizajn obrazovky"
@@ -4348,8 +4390,8 @@
           "progression_name": "Prehľad lekcie"
         },
         "9dbf54b0-360f-45d9-a44e-cee20a3765fb": {
-          "name": "Vzorové programy",
-          "progression_name": "Vzorové programy"
+          "name": "Ukážkové programy",
+          "progression_name": "Ukážkové programy"
         },
         "c6e24cc7-63f3-4893-95d6-7f4974b6214e": {
           "progression_name": "Prehľad lekcie"
@@ -4380,7 +4422,7 @@
           "progression_name": "Tvorba tvarov v Game Labe"
         },
         "cb684307-ce51-4674-9ce0-cf32e34f02c4": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "aaec28b5-6d69-44c7-a70d-37dcba2745b6": {
           "name": "Voľná hra",
@@ -4506,7 +4548,7 @@
           "progression_name": "Vytvor svoju vlastnú animáciu"
         },
         "76616c94-01ef-48fd-9d26-e0e33a34cd1f": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "7e89c3a6-7df0-4c79-95e0-c9d3bde52013": {
           "name": "Voľná hra",
@@ -4605,6 +4647,9 @@
         "f1bd014d-ca41-4c47-a35f-0fe4c780a9a4": {
           "progression_name": "Prehľad lekcie"
         },
+        "e83e02d2-126b-4a00-96df-ca09f4408ca2": {
+          "progression_name": "Ukážková hra"
+        },
         "fc1bc192-2615-4271-877b-98aa5925c937": {
           "progression_name": "Detekcia kolízie"
         },
@@ -4625,7 +4670,7 @@
           "progression_name": "Prehľad lekcie"
         },
         "973cffaa-e89d-411f-8df1-14665ba79ec9": {
-          "progression_name": "Lietajúca hra"
+          "progression_name": "Lietacia hra"
         },
         "fa0cb5a5-111c-4d06-ba91-66d4bf49daac": {
           "name": "Voľná hra",
@@ -4634,11 +4679,14 @@
         "a809028d-5066-4fd4-bad2-6a3c0abe979f": {
           "progression_name": "Prehľad lekcie"
         },
+        "58f5da81-795d-466d-99dd-9f0102089130": {
+          "progression_name": "Interakcie sprajtov"
+        },
         "3403945d-a572-4b10-b27d-49e00450b1f5": {
-          "progression_name": "Kolízie \"sprite\" objektov"
+          "progression_name": "Kolízie sprajtov"
         },
         "66b65bec-5ac1-4e36-8c28-fb678e5c6340": {
-          "progression_name": "Lietajúca hra"
+          "progression_name": "Lietacia hra"
         },
         "744fd0ee-23fb-497a-a32e-edd8c31ffe13": {
           "name": "Voľná hra",
@@ -4660,6 +4708,12 @@
         "c4785657-6ce2-4e51-9906-e0e59b4fe461": {
           "progression_name": "Prehľad lekcie"
         },
+        "46103cd2-4b16-40b6-8d34-4d6b489b0997": {
+          "progression_name": "Ukážková hra"
+        },
+        "d3c8806b-af64-4d22-bf9c-bb0833e8090a": {
+          "progression_name": "Naplánuj si projekt"
+        },
         "875e0e8b-955a-4e86-b112-ec188da3f859": {
           "progression_name": "Viacsnímkové animácie"
         },
@@ -4674,25 +4728,25 @@
           "progression_name": "Príklad plošinovej skákacej hry"
         },
         "576b2ab7-9aa4-4fe8-a151-12dbb21757d3": {
-          "progression_name": "Plošinový skokan - Pozadie a premenné"
+          "progression_name": "Plošinová skákačka – Pozadie a premenné"
         },
         "5a16ccaf-3555-4b50-8063-92345be9ff4a": {
-          "progression_name": "Plošinový skokan - Plošiny"
+          "progression_name": "Plošinová skákačka – Plošiny"
         },
         "f57decf5-0a2e-4379-9091-b0c170d89436": {
-          "progression_name": "Plošinový skokan - Prvky"
+          "progression_name": "Plošinová skákačka – Predmety"
         },
         "2ab96d39-10a5-426f-b1b6-18564af41e71": {
-          "progression_name": "Plošinový skokan - Hráč"
+          "progression_name": "Plošinová skákačka – Hráč"
         },
         "16b79375-6e47-4ee4-8365-b12e696ff9ae": {
           "progression_name": "Prehľad lekcie"
         },
         "3f841276-73d0-468e-9e93-873549d759db": {
-          "progression_name": "Projekt - Pozadie a premenné"
+          "progression_name": "Projekt – Pozadie a premenné"
         },
         "48b320c6-951a-48ac-b70c-7adbd3e7581f": {
-          "progression_name": "Projekt - \"Sprite\" objekty a interakcie"
+          "progression_name": "Projekt – Sprajty a interakcie"
         },
         "4a3c9ed6-af53-4747-9298-b104980a8961": {
           "name": "Reflexia",
@@ -4769,6 +4823,9 @@
         "789a4fe7-cd01-4903-bdd7-a617734ac389": {
           "progression_name": "Prehľad lekcie"
         },
+        "4814cffc-6d24-4288-80fe-7747c340b1d0": {
+          "progression_name": "Naplánuj si projekt"
+        },
         "38a9ebbc-121a-48e8-b924-09d0468fa8e2": {
           "progression_name": "Dizajn obrazovky"
         },
@@ -4780,6 +4837,9 @@
         },
         "568e51fc-e7d7-40ff-9d57-f347d05f8c65": {
           "progression_name": "Prehľad lekcie"
+        },
+        "c1f0a8cd-135b-452f-9c9a-ac38cbe0bca0": {
+          "progression_name": "Naplánuj si projekt"
         },
         "cd1e167a-ff9b-4183-aaaf-2fc3cb4ca719": {
           "progression_name": "Dizajn obrazovky"
@@ -10901,7 +10961,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Inštrukcie pre vypĺňanie dotazníka po kurze"
+          "progression_name": "Pokyny na vyplnenie záverečného dotazníka"
         },
         "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
           "tips": [
@@ -11557,7 +11617,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Inštrukcie pre vypĺňanie dotazníka po kurze"
+          "progression_name": "Pokyny na vyplnenie záverečného dotazníka"
         },
         "d34d3ef7-b3ad-41de-8b49-c7460f8b1450": {
           "tips": [
@@ -11706,6 +11766,9 @@
             null
           ]
         },
+        "63168e8f-2bcc-445c-9dbc-96df54a86560": {
+          "progression_name": "Naplánuj si projekt"
+        },
         "5959a534-f372-4111-a8d2-4e94de572996": {
           "progression_name": "Dizajn obrazovky"
         },
@@ -11725,6 +11788,9 @@
           "tips": [
             null
           ]
+        },
+        "b1e96083-0678-461f-9c8c-68145c384ab8": {
+          "progression_name": "Naplánuj si projekt"
         },
         "2248f61c-7cfa-491e-87f6-fba7f80558b9": {
           "progression_name": "Dizajn obrazovky"
@@ -11935,7 +12001,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Inštrukcie pre vypĺňanie dotazníka po kurze"
+          "progression_name": "Pokyny na vyplnenie záverečného dotazníka"
         },
         "322ad615-5d42-4b54-ab60-5d7b7d36e277": {
           "name": "Denník",
@@ -12441,7 +12507,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Inštrukcie pre vypĺňanie dotazníka po kurze"
+          "progression_name": "Pokyny na vyplnenie záverečného dotazníka"
         },
         "2e17eccc-2343-4bde-849c-eaf270f343f8": {
           "tips": [
@@ -12459,7 +12525,7 @@
           ]
         },
         "1d9fcb2e-5d45-47f4-b834-65c714a78452": {
-          "progression_name": "Vzorové programy"
+          "progression_name": "Ukážkové programy"
         },
         "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
           "tips": [
@@ -12539,7 +12605,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "1f66ca37-97c5-48be-9f14-d7f4938b2632": {
           "tips": [
@@ -12567,7 +12633,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "0e7890f7-6b15-4d74-9d06-39410d94914b": {
           "name": "Denník"
@@ -12607,7 +12673,7 @@
           "progression_name": "Hodnotenie"
         },
         "04d00beb-b2b6-4f05-8529-f018aef183c0": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "ad26b802-3d93-4e28-bf0c-2b04b8127c12": {
           "name": "Reflexia"
@@ -12638,7 +12704,7 @@
           "progression_name": "Hodnotenie"
         },
         "3acf7a09-7059-4259-b07f-d404e0c3f7da": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "e3a151f2-e5d3-4a66-9eed-6bc74f6adecb": {
           "tips": [
@@ -12684,11 +12750,11 @@
           "progression_name": "Hodnotenie"
         },
         "2057627a-c665-4a63-8aed-c1123ce9796a": {
-          "name": "Výzvy",
+          "name": "Náročnejšie úlohy",
           "tips": [
             null
           ],
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "7fe0e935-1853-4c68-a62c-332e86840c6d": {
           "name": "Denník"
@@ -12714,7 +12780,7 @@
           "progression_name": "Hodnotenie"
         },
         "9925febf-964d-468b-8ad0-b76a389d4498": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "f455bf72-f2c8-4bf2-970f-af533ef80342": {
           "tips": [
@@ -12740,7 +12806,7 @@
           "progression_name": "Hodnotenie"
         },
         "06559d3f-7ebd-4356-a06d-c16cdeaebde5": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "7e2e7a3e-fd91-4ab5-8b46-f8ae96c91169": {
           "tips": [
@@ -12827,7 +12893,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "4e97aa36-b285-40f3-83cb-383e83158dc5": {
           "tips": [
@@ -12858,7 +12924,7 @@
           "progression_name": "Hodnotenie"
         },
         "23d183b4-c898-41d3-b5c7-de7336534cd5": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "a8fccbf5-3042-489e-97eb-19fb589b606d": {
           "name": "Denník"
@@ -12960,7 +13026,7 @@
           "progression_name": "Hodnotenie"
         },
         "30bb6b07-5257-4a19-89a0-02be767443b5": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "2b5e9944-1e90-4362-98e9-ef74a8d1d48b": {
           "tips": [
@@ -12991,7 +13057,7 @@
           "progression_name": "Hodnotenie"
         },
         "d489f6eb-e7e8-45ba-ac13-a12a78c22a08": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "e016d4b6-9ebd-4c6c-9697-b368a0c90bd8": {
           "tips": [
@@ -13023,7 +13089,7 @@
           "progression_name": "Hodnotenie"
         },
         "8615ab59-fb2e-47e1-8f04-ab9d578fbc79": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "957a684d-5930-4823-99fa-0af6c5701b6f": {
           "name": "Zhrnutie"
@@ -13100,7 +13166,7 @@
           "progression_name": "Hodnotenie"
         },
         "c7ff9236-7fd7-41ce-968f-0261551fd3b5": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "864f7c7f-a19d-4470-8d53-52e790f5e783": {
           "name": "Denník",
@@ -13111,12 +13177,16 @@
         "28c72532-e347-4f43-81ea-7b83a4e336d1": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Ukážková hra"
         },
         "57411d29-c010-41c3-82bc-be6b7025c796": {
           "tips": [
             null
           ]
+        },
+        "da7336ee-33fe-4542-970c-9cf2e888859e": {
+          "progression_name": "Ukážková hra"
         },
         "49cfe240-7090-4fbd-9e61-ef725f8bddb1": {
           "tips": [
@@ -13134,12 +13204,36 @@
           "progression_name": "Hodnotenie"
         },
         "db772045-97b4-4f93-8e9d-8b9d015190a2": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "1e949591-d103-4f64-9c54-eeac71cc51d3": {
           "tips": [
             null
           ]
+        },
+        "0525516c-cd72-4700-9c7b-36644137ab93": {
+          "progression_name": "Úvod do side-scrollerov"
+        },
+        "c62c9fee-1e51-4d9d-b221-915d73af2cd2": {
+          "progression_name": "Nakresli si pozadie"
+        },
+        "ef36eaf3-2930-44dd-a939-e0e614755352": {
+          "progression_name": "Vytvor si sprajty"
+        },
+        "c8d03646-3696-4a48-9ae9-b54fce33300e": {
+          "progression_name": "Ovládanie hry"
+        },
+        "b763e8fd-b51e-4a15-b9be-7d675958d51c": {
+          "progression_name": "Cykly"
+        },
+        "3d9ddc58-7bda-43a0-8944-fd8c622b3d70": {
+          "progression_name": "Interakcie sprajtov"
+        },
+        "1ffc10cf-5883-4d6d-915c-2eb055ce8f84": {
+          "progression_name": "Body a ich zobrazenie"
+        },
+        "8cdb45e9-b767-4246-b5bc-12648197665d": {
+          "progression_name": "Skontroluj svoju hru"
         },
         "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
           "tips": [
@@ -13165,7 +13259,7 @@
           "progression_name": "Hodnotenie"
         },
         "077d6880-3d7a-4c59-a63c-06ab77e3e0d8": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "443eb6ca-6406-4399-b140-a4d6ec3f0bca": {
           "tips": [
@@ -13176,6 +13270,9 @@
           "tips": [
             null
           ]
+        },
+        "da390762-bcc9-47c8-ab06-9bac895ebd00": {
+          "progression_name": "Predpoveď kódu"
         },
         "29881c8e-82cb-4886-8e1f-7f101c91bae9": {
           "tips": [
@@ -13205,15 +13302,30 @@
           "progression_name": "Hodnotenie"
         },
         "e0a4583c-3ca6-4235-a457-774d3696a07d": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "d2cc216a-b098-4754-bb18-087f42007b46": {
           "tips": [
             null
           ]
         },
+        "05331f50-c576-42e0-91ce-00561faee05c": {
+          "progression_name": "Úvod do Lietacej hry"
+        },
+        "b67bbd2c-2139-48e4-8002-a7f3f048052a": {
+          "progression_name": "Vytvor si sprajty"
+        },
+        "91ab7cf4-19a7-4424-b59e-c806057dbb65": {
+          "progression_name": "Ovládanie hry"
+        },
         "a7af5fa7-b9bc-4779-bf77-e349bd07d0f2": {
           "progression_name": "Pohyb sprajtov"
+        },
+        "93c86b2f-aeb2-48d2-b34d-8213761ae09c": {
+          "progression_name": "Interakcie sprajtov"
+        },
+        "a9203a76-f8c9-4a77-9c8e-0d329d1f9099": {
+          "progression_name": "Skontroluj svoju hru"
         },
         "40b22769-f206-4725-b2f4-fd3f71c15101": {
           "tips": [
@@ -13233,7 +13345,7 @@
           "progression_name": "Budovanie zručností"
         },
         "4aa5af6f-34ee-4311-a7fb-c895f6154dd2": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "e4283f2d-5933-4812-80df-341067426cc8": {
           "tips": [
@@ -13251,7 +13363,7 @@
           "progression_name": "Hra Zberateľ"
         },
         "c3302e9a-4da1-4c1b-96ca-232b7026ea9c": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "3dfe6414-c583-4af9-a55d-7da0d06783ef": {
           "tips": [
@@ -13268,11 +13380,26 @@
             null
           ]
         },
+        "655acab5-5605-4833-b201-7d4776773bb5": {
+          "progression_name": "Ukážková hra"
+        },
+        "f2e6c88e-bc52-4073-b67d-69a0dda590a7": {
+          "progression_name": "Naplánuj si projekt"
+        },
+        "4a1fbbc7-9baa-4d49-bad8-71ea306857af": {
+          "progression_name": "Priprav sprajty"
+        },
+        "f860c052-f4a5-4925-bed9-78bf6c24605b": {
+          "progression_name": "Ovládaj hráča"
+        },
+        "b38b9687-9ab2-490a-8306-5e0655d51863": {
+          "progression_name": "Interakcie sprajtov"
+        },
         "d0d85465-a081-4c09-ae83-8b454e76c2ff": {
           "tips": [
             "Táto posledná úroveň povzbudzuje študentov, aby si hru vytvorili sami. Ak sa študenti dostali až k tomuto bodu, majú všetky zručnosti potrebné na to, aby prešli učivom, takže nie je vyvíjaný tlak na dokončenie akýchkoľvek úprav navrhovaných na tejto úrovni. Ak však máte čas, plánovanie cvičenia a implementácia nových funkcií bude užitočnou zručnosťou. Aj samotná úprava animácií hry je ľahký spôsob, ako si študenti môžu hru privlastniť."
           ],
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "4304b5c8-73c0-44c3-bd18-3ec32f1e947d": {
           "tips": [
@@ -13292,25 +13419,29 @@
         "dd4b1c89-f148-47f2-956f-8fe786a2accb": {
           "progression_name": "Príklad plošinovej skákacej hry"
         },
+        "96fe06b7-2d5b-434f-bb02-bc5e4bb74eaf": {
+          "progression_name": "Vytvor si plošinovú skákaciu hru"
+        },
         "b51fe24a-e404-4c6e-9fe1-8916f81f0e85": {
-          "progression_name": "Plošinový skokan - Pozadie a premenné"
+          "progression_name": "Plošinová skákačka – Pozadie a premenné"
         },
         "acfd2ab2-c569-4af6-b8c4-95bcf48e5f87": {
-          "progression_name": "Plošinový skokan - Plošiny"
+          "progression_name": "Plošinová skákačka – Plošiny"
         },
         "c8f33ef3-d45e-4cdc-9b94-b621dab81076": {
-          "progression_name": "Plošinový skokan - Prvky"
+          "progression_name": "Plošinová skákačka – Predmety"
         },
         "e41b90a3-20b1-45d9-9e3d-490c083587ea": {
-          "progression_name": "Plošinový skokan - Hráč"
+          "progression_name": "Plošinová skákačka – Hráč"
         },
         "b29f40dd-4e28-4c22-8aa8-9e387819622c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Kontrola plošinovej skákačky"
         },
         "3732107f-02cf-4117-941b-725824574e50": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "193dc0bf-c474-4454-bb43-8a430a12634d": {
           "name": "Denník"
@@ -13320,16 +13451,22 @@
             null
           ]
         },
+        "204d6831-54a0-4a74-bd1e-a81cfb74475a": {
+          "progression_name": "Ukážkové hry"
+        },
         "686b638e-1a29-49cc-8711-191165d251b9": {
           "tips": [
             null
           ]
         },
         "c06da82f-6be2-49e8-8d8b-6579ef11f06d": {
-          "progression_name": "Projekt - Pozadie a premenné"
+          "progression_name": "Projekt – Pozadie a premenné"
         },
         "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9": {
-          "progression_name": "Projekt - \"Sprite\" objekty a interakcie"
+          "progression_name": "Projekt – Sprajty a interakcie"
+        },
+        "3cabd5bc-4a69-4067-abda-7200bf0de085": {
+          "progression_name": "Skontroluj svoju hru"
         },
         "59ca85ff-b7b0-450d-b354-1c9938c4a615": {
           "tips": [
@@ -13350,7 +13487,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Inštrukcie pre vypĺňanie dotazníka po kurze"
+          "progression_name": "Pokyny na vyplnenie záverečného dotazníka"
         },
         "beb5adaf-44d3-48fe-bb2d-99a2f55caeff": {
           "description": "Na to, aby ste mohli počas roka kontrolovať prácu svojich žiakov a aby mali vaši žiaci prístup k online nástrojom a zdrojom, všetci musia byť v Code studiu zapísaní v rovnakej triede. Navyše platí, že na zobrazenie hodnotených úloh a kľúčov s odpoveďami musíte byť „overený učiteľ“.",
@@ -14489,7 +14626,7 @@
           "progression_name": "Hodnotenie"
         },
         "499a4b6c-eccd-4c51-a6db-17c2c9a0801a": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "86e13822-ef3f-4ec1-981a-e8b90ef192ab": {
           "name": "Denník"
@@ -14577,7 +14714,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "727aa204-0664-456f-b5fc-1f6409b65e88": {
           "tips": [
@@ -14670,7 +14807,7 @@
           "progression_name": "Hodnotenie"
         },
         "125e32e7-13c6-48a9-8fcb-b8635d079ecf": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "59343467-2b51-47a0-a2af-2f1357b5e3ba": {
           "tips": [
@@ -14718,7 +14855,7 @@
           "progression_name": "Hodnotenie"
         },
         "fa81a49c-8be7-43ac-92fe-cbc509b0970c": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "0bb5cdfb-1e6b-44df-9d3f-7a1f0bfcab33": {
           "tips": [
@@ -14877,7 +15014,7 @@
           "progression_name": "Hodnotenie"
         },
         "5aa91065-3f4e-409f-9f3e-14bd98649ef5": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "d2c208eb-49ed-4b4b-9a5f-5d51bda3d3f4": {
           "name": "Denník"
@@ -14926,7 +15063,7 @@
           ]
         },
         "76186510-9804-44d1-8371-4aa2895fc16d": {
-          "progression_name": "Výzvy"
+          "progression_name": "Náročnejšie úlohy"
         },
         "37b960c3-650e-4d91-9561-fea00f3a39c7": {
           "name": "Denník"
@@ -14966,7 +15103,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Inštrukcie pre vypĺňanie dotazníka po kurze"
+          "progression_name": "Pokyny na vyplnenie záverečného dotazníka"
         },
         "9b57ac7e-ffb4-413e-9289-0799156ef3ef": {
           "progression_name": "Vzorové projekty"
@@ -15308,7 +15445,7 @@
           "progression_name": "Cvičenie"
         },
         "2945e71a-01e9-4825-97ee-a7bc221c298d": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "36a8f1b8-257c-44f9-b619-315c2616da8d": {
           "progression_name": "Cvičenie"
@@ -15323,7 +15460,7 @@
           "progression_name": "Výzva"
         },
         "c7af4532-75f2-4373-92b3-3066200678c2": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "c08b9c78-f30b-45b5-b7c8-fd478141bab5": {
           "progression_name": "Cvičenie"
@@ -15341,7 +15478,7 @@
           "progression_name": "Cvičenie"
         },
         "311bc4a5-aa28-4aba-ad03-6459e8043725": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "9b5d6681-d83c-4027-89c9-2f403432197e": {
           "progression_name": "Cvičenie"
@@ -15363,7 +15500,7 @@
           "progression_name": "Cvičenie"
         },
         "8ea69448-dc83-4d3b-93b5-790d2f0b4f93": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "61e56a64-227e-422a-9c65-62c927caed06": {
           "progression_name": "Programovanie s Rey a BB-8"
@@ -15372,7 +15509,7 @@
           "progression_name": "Cvičenie"
         },
         "c176f0ae-08b0-4ba2-89b1-1aeded56737a": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "25e23bb3-435a-4f32-9ebb-b0648efb4bbd": {
           "progression_name": "Opakujúce sa bloky s BB-8"
@@ -15387,7 +15524,7 @@
           "progression_name": "Cvičenie"
         },
         "38e484f2-7e26-4222-9cfc-d64521837b23": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "02a6c863-7f2e-4e81-97fb-247b72930518": {
           "progression_name": "Cvičenie"
@@ -15405,7 +15542,7 @@
           "progression_name": "Cvičenie"
         },
         "71530eb0-018e-4092-a886-d1a6d984dab0": {
-          "progression_name": "Predvídať"
+          "progression_name": "Predpoveď"
         },
         "4b0517f8-3488-45d5-bbca-f865418a2979": {
           "progression_name": "Cvičenie"
