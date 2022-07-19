@@ -285,5 +285,8 @@
     "timers-browserify": "^2.0.12",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
+  },
+  "resolutions": {
+    "process-nextick-args": "2.0.1"
   }
 }
