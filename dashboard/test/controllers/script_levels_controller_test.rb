@@ -697,34 +697,34 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sl = ScriptLevel.find_by script: Script.twenty_hour_unit, chapter: 3
     assert_equal '/s/20-hour/lessons/2/levels/2', build_script_level_path(sl)
     assert_routing(
-      {method: "get", path: build_script_level_path(sl)},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}#{build_script_level_path(sl)}"},
       {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, lesson_position: sl.lesson.to_param, id: sl.to_param}
     )
   end
 
   test "chapter based routing" do
     assert_routing(
-      {method: "get", path: '/hoc/reset'},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/hoc/reset"},
       {controller: "script_levels", action: "reset", script_id: Script::HOC_NAME}
     )
 
     hoc_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::HOC_NAME).id, chapter: 1)
     assert_routing(
-      {method: "get", path: '/hoc/1'},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/hoc/1"},
       {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, chapter: "1"}
     )
     assert_equal '/hoc/1', build_script_level_path(hoc_level)
 
     flappy_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::FLAPPY_NAME).id, chapter: 5)
     assert_routing(
-      {method: "get", path: '/flappy/5'},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/flappy/5"},
       {controller: "script_levels", action: "show", script_id: Script::FLAPPY_NAME, chapter: "5"}
     )
     assert_equal "/flappy/5", build_script_level_path(flappy_level)
 
     jigsaw_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::JIGSAW_NAME).id, chapter: 3)
     assert_routing(
-      {method: "get", path: '/jigsaw/3'},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/jigsaw/3"},
       {controller: "script_levels", action: "show", script_id: Script::JIGSAW_NAME, chapter: "3"}
     )
     assert_equal "/s/jigsaw/lessons/1/levels/3", build_script_level_path(jigsaw_level)
@@ -732,19 +732,19 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "routing for custom scripts with lesson" do
     assert_routing(
-      {method: "get", path: "/s/laurel/lessons/1/levels/1"},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/s/laurel/lessons/1/levels/1"},
       {controller: "script_levels", action: "show", script_id: 'laurel', lesson_position: "1", id: "1"}
     )
     assert_equal "/s/laurel/lessons/1/levels/1", build_script_level_path(@custom_s1_l1)
 
     assert_routing(
-      {method: "get", path: "/s/laurel/lessons/2/levels/1"},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/s/laurel/lessons/2/levels/1"},
       {controller: "script_levels", action: "show", script_id: 'laurel', lesson_position: "2", id: "1"}
     )
     assert_equal "/s/laurel/lessons/2/levels/1", build_script_level_path(@custom_s2_l1)
 
     assert_routing(
-      {method: "get", path: "/s/laurel/lessons/2/levels/2"},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/s/laurel/lessons/2/levels/2"},
       {controller: "script_levels", action: "show", script_id: 'laurel', lesson_position: "2", id: "2"}
     )
     assert_equal "/s/laurel/lessons/2/levels/2", build_script_level_path(@custom_s2_l2)
@@ -757,7 +757,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "next routing for custom scripts" do
     assert_routing(
-      {method: "get", path: "/s/laurel/next"},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/s/laurel/next"},
       {controller: "script_levels", action: "next", script_id: 'laurel'}
     )
     assert_equal "/s/laurel/next", script_next_path(@custom_script)
@@ -961,7 +961,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "reset routing for custom scripts" do
     assert_routing(
-      {method: "get", path: "/s/laurel/reset"},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/s/laurel/reset"},
       {controller: "script_levels", action: "reset", script_id: 'laurel'}
     )
   end
@@ -1026,7 +1026,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       lesson_position: @custom_s2_l1.lesson,
       id: @custom_s2_l1.position
     }
-    assert_equal 'laurel-lesson-2 #1 | custom-script-laurel - Code.org [test]',
+    assert_equal 'Laurel Lesson 2 #1 | custom-script-laurel - Code.org [test]',
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 

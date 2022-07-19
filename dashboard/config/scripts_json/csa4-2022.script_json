@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-28 14:40:44 UTC",
+    "serialized_at": "2022-07-13 13:05:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6196,6 +6196,18 @@
       }
     },
     {
+      "name": "The equals() Method",
+      "url": "https://youtu.be/F1WhwH4abX4",
+      "key": "the_equals_method",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_equals_method"
+      }
+    },
+    {
       "name": "The Math Class",
       "url": "https://docs.google.com/document/d/1974ITAM6lklyjb0xEY6G1VP-X14WsrOa1G-r66OmB9g/edit?usp=sharing",
       "key": "the_math_class",
@@ -6615,6 +6627,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "aliasing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "the_equals_method"
       }
     },
     {

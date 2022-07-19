@@ -175,16 +175,7 @@ class Lesson < ApplicationRecord
   # user-facing rendering. Currently does localization and markdown
   # preprocessing, could in the future be expanded to do more.
   def render_property(property_name)
-    unless MARKDOWN_FIELDS.include?(property_name.to_s)
-      Honeybadger.notify(
-        error_message: "Rendering #{property_name} which is not in MARKDOWN_FIELDS",
-        error_class: "Lesson.render_property",
-        context: {
-          property_name: property_name,
-          markdown_fields: MARKDOWN_FIELDS
-        }
-      )
-    end
+    raise "Rendering #{property_name} which is not in MARKDOWN_FIELDS" unless MARKDOWN_FIELDS.include?(property_name.to_s)
     result = get_localized_property(property_name)
     result = Services::MarkdownPreprocessor.process(result || '')
     return result
@@ -230,14 +221,14 @@ class Lesson < ApplicationRecord
     # using legacy lesson plans, remove this condition and consolidate with
     # localized_name_for_lesson_show.
     if script.lessons.many? || (script.is_migrated && !script.use_legacy_lesson_plans)
-      I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
+      get_localized_property(:name) || ''
     else
       I18n.t "data.script.name.#{script.name}.title"
     end
   end
 
   def localized_name_for_lesson_show
-    I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
+    get_localized_property(:name) || ''
   end
 
   def localized_lesson_plan
@@ -551,21 +542,6 @@ class Lesson < ApplicationRecord
 
         level_json
       end
-    }
-  end
-
-  # Returns a hash representing i18n strings in scripts.en.yml which may need
-  # to be updated after this object was updated. Currently, this only updates
-  # the lesson name and overviews.
-  def i18n_hash
-    {
-      script.name => {
-        'lessons' => {
-          key => {
-            'name' => name
-          }
-        }
-      }
     }
   end
 
@@ -919,7 +895,6 @@ class Lesson < ApplicationRecord
     copied_lesson.standards = standards
     copied_lesson.opportunity_standards = opportunity_standards
 
-    Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_unit.name)
     destination_unit.fix_script_level_positions
     destination_unit.write_script_json
     copied_lesson
