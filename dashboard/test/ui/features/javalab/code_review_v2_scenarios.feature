@@ -36,6 +36,7 @@ Feature: Code review V2
     And I load the code review for peer number 1 in the list
     And I wait to see ".editable-text-area"
     And I press ".editable-text-area" using jQuery
+    And I wait for 2 seconds
     And I press keys "Great work" for element ".editable-text-area"
     And element ".editable-text-area" eventually contains text "Great work"
     And I press ".code-review-comment-submit" using jQuery
