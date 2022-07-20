@@ -218,9 +218,6 @@ gem 'user_agent_parser'
 gem 'paranoia', '~> 2.4.2'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
-# JSON model serializer for REST APIs.
-gem 'active_model_serializers', '~> 0.10.10'
-
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
 gem 'aws-sdk-cloudformation'

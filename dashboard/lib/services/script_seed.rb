@@ -1,4 +1,4 @@
-# Script serialization and seeding. Serializes to JSON using ActiveModelSerializers,
+# Script serialization and seeding. Serializes to JSON using ActiveModel::Serialization,
 # and bulk imports to the DB using ActiveRecord-Import.
 #
 # We use serialization and seeding to synchronize curriculum data from Levelbuilder to

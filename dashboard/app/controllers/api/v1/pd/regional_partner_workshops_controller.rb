@@ -18,8 +18,8 @@ class Api::V1::Pd::RegionalPartnerWorkshopsController < ::ApplicationController
 
     # Find the matching partner, even if it has no workshops
     partner = @partners.find_by_region(zip_code, state) || RegionalPartner.find_by_region(zip_code, state)
-    # To preserve existing behavior after upgrading to ActiveModelSerializers 10.x,
-    # initialize partner to an object with nil values if not found.
+    # To preserve existing behavior, initialize partner to an object
+    # with nil values if not found.
     partner ||= RegionalPartner.new
 
     render json: partner,
