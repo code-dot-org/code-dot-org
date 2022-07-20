@@ -7,8 +7,6 @@ Dashboard::Application.routes.draw do
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
     get '/weblab/footer', to: 'projects#weblab_footer'
-    get '/scripts/hosted.js', to: redirect('/weblab/footer.js')
-    get '/style.css', to: redirect('/weblab/footer.css')
   end
 
   constraints host: /.*code.org.*/ do
