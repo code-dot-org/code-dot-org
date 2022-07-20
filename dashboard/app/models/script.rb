@@ -905,7 +905,8 @@ class Script < ApplicationRecord
   end
 
   def requires_verified_instructor?
-    # as of now the only course that requires the instructor to be verified in order to run code is CSA.
+    # As of now the only course that requires the instructor to be verified in order to run code is CSA.
+    # TODO: determine if this should be replaced with has_verified_resources? instead.
     return csa?
   end
 
