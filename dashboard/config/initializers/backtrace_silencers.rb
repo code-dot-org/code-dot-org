@@ -13,7 +13,6 @@ silenced = [
   /The asset ".*" is not present in the asset pipeline.Falling back to an asset that may be in the public folder./,
   /NOT conditions will no longer behave as NOR in Rails 6.1. To continue using NOR conditions, NOT each condition individually/,
   /Rails 6.1 will return Content-Type header without modification/,
-  /update_attributes!? is deprecated and will be removed from Rails 6.1/,
   /Initialization autoloaded the constants/,
   /Class level methods will no longer inherit scoping/,
   /ActionView::Base instances should be constructed with a lookup context, assignments, and a controller/,
