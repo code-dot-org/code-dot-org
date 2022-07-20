@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2022-06-13 21:04:49 UTC",
+    "serialized_at": "2022-07-20 03:51:12 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -495,7 +495,7 @@
       "key": "78b2408e-bb94-49c6-932e-4872c43d5258",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 4 - Prediction” slide\n\n**Do This**: As soon as a few students have completed level 3, bring the whole class together to preview level 4. Make a prediction together and discuss the correct answer. "
+        "description": "**Do This**: As soon as a few students have completed Level 4, bring the whole class together to preview Level 5. Make a prediction together and discuss the correct answer. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5 - Prediction” slide\n"
       },
       "seeding_key": {
         "activity_section.key": "78b2408e-bb94-49c6-932e-4872c43d5258",
@@ -506,7 +506,7 @@
       "key": "a5df28b3-0fac-4e9b-9910-58660a5d0cd4",
       "position": 7,
       "properties": {
-        "description": "On Levels 4 and 6 you will need to read the code, out loud if possible, then choose the answer that best describes what will happen in the program. After choosing your answer, click the run button to see what happens. Were you correct? How did you know? What do you notice in the code now that you saw the program run? ",
+        "description": "On Levels 5 and 8 you will need to read the code, out loud if possible, then choose the answer that best describes what will happen in the program. After choosing your answer, click the run button to see what happens. Were you correct? How did you know? What do you notice in the code now that you saw the program run? ",
         "remarks": true
       },
       "seeding_key": {
@@ -515,8 +515,19 @@
       }
     },
     {
-      "key": "e5e17170-7668-45e1-8cb3-3c377de2832d",
+      "key": "669f0669-5939-42e4-8ead-00eff5b25dde",
       "position": 8,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "669f0669-5939-42e4-8ead-00eff5b25dde",
+        "lesson_activity.key": "46ddd20a-f597-4d2b-b61b-5afe63eed3d2"
+      }
+    },
+    {
+      "key": "e5e17170-7668-45e1-8cb3-3c377de2832d",
+      "position": 9,
       "properties": {
         "tips": [
           {
@@ -532,7 +543,7 @@
     },
     {
       "key": "b1cae75b-6cb7-45a0-89f1-3010ed60ab9f",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Key Concept” slide\n\n**Do This**: Introduce conditionals as a key concept. Show the anatomy of a conditional statement and then show the video on the following slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Conditional Statements” video\n\n**Discuss**: Computers are very good at using true or false statements to make decisions on what to do. For example: “If the volume+  key is pressed, then the sound will get louder. Or if the mute key is pressed then the sound will turn off. What other examples can you think of that computers check a condition to see if it’s true or false and then execute an action based on the answer? \n\n**Discussion Goal**: Students will understand that computers can check to see if something is true or false and ‘decide’ which action to execute based on the answer. \n\n* **Condition** - Something a program checks to see if it is true before allowing an action.\n* **Conditionals** - Statements that only run under certain conditions.\n"
       },
@@ -543,7 +554,7 @@
     },
     {
       "key": "d33ad704-9119-44a0-a5fe-f85663fdb988",
-      "position": 10,
+      "position": 11,
       "properties": {
         "tips": [
           {
@@ -559,9 +570,9 @@
     },
     {
       "key": "f86d7a17-7f7c-4b7a-a587-083155967e42",
-      "position": 11,
+      "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Review slides for Levels 5 - 6\n \n**Do This**: Point out the science of the cause and effect of fish being removed from the ecosystem and show the conditional statement blocks that will check if the number of algae is high (>8) or low (<8).  After discussing conditionals and previewing levels 5-7, send students to resume working at their own pace for the remainder of the lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6” and \"Level 7\" slides\n \n**Do This**: Point out the science of the cause and effect of fish being removed from the ecosystem and show the conditional statement blocks that will check if the number of algae is high (>8) or low (<8).  After discussing conditionals and previewing levels 6 and 7, send students to resume working at their own pace for the remainder of the lesson.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -570,23 +581,11 @@
       }
     },
     {
-      "key": "6c8d1ad3-ba75-4f60-9549-57880f843762",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7” slide\n",
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "6c8d1ad3-ba75-4f60-9549-57880f843762",
-        "lesson_activity.key": "46ddd20a-f597-4d2b-b61b-5afe63eed3d2"
-      }
-    },
-    {
       "key": "8681cfc2-5269-4338-9f7f-c9a9c8acabd9",
       "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8” slide",
-        "progression_name": "Skill Building"
+        "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "8681cfc2-5269-4338-9f7f-c9a9c8acabd9",
@@ -970,6 +969,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_introtosprites_2022"
+        ],
         "progression": "Video: Hello World: Welcome to Sprite Lab"
       },
       "bonus": false,
@@ -992,6 +994,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_say_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1014,6 +1019,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_location_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1036,6 +1044,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_multi_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1058,6 +1069,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_click_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1080,6 +1094,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_2022"
+        ],
         "progression": "Video: Hello World: Programming with Events"
       },
       "bonus": false,
@@ -1102,6 +1119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_events_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1124,6 +1144,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_backgrounds_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1146,6 +1169,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_costumes_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1168,6 +1194,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sizes_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1190,6 +1219,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_behaviors_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1212,6 +1244,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gray_csc_helloworld_choice_group_ecosystems_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1234,6 +1269,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sounds_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1256,6 +1294,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplayvideo_2022"
+        ],
         "progression": "Video: Hello World: Do What You Want"
       },
       "bonus": false,
@@ -1278,6 +1319,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplay_2022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1300,6 +1344,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_fish_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1322,6 +1369,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_boat_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1344,6 +1394,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_algae_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1366,6 +1419,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_algae_growth_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1388,7 +1444,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Prediction"
       },
       "bonus": false,
       "seeding_key": {
@@ -1398,7 +1454,7 @@
         "lesson.key": "Overfishing Simulation",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "f86d7a17-7f7c-4b7a-a587-083155967e42"
+        "activity_section.key": "669f0669-5939-42e4-8ead-00eff5b25dde"
       },
       "level_keys": [
         "csc_multiple_choice_1_2022"
@@ -1407,9 +1463,12 @@
     {
       "chapter": 21,
       "position": 6,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1429,10 +1488,10 @@
     {
       "chapter": 22,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Prediction"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1442,7 +1501,7 @@
         "lesson.key": "Overfishing Simulation",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "6c8d1ad3-ba75-4f60-9549-57880f843762"
+        "activity_section.key": "f86d7a17-7f7c-4b7a-a587-083155967e42"
       },
       "level_keys": [
         "csc_ecosystems_ocean_coral_health_2022"
@@ -1454,7 +1513,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "level_keys": [
+          "csc_multiple_choice_2_2022"
+        ],
+        "progression": "Prediction"
       },
       "bonus": false,
       "seeding_key": {
@@ -1476,6 +1538,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_multiple_choice_3_2022"
+        ],
         "progression": "Multiple Choice"
       },
       "bonus": false,
@@ -1498,6 +1563,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_algae_freeplay_2022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1520,6 +1588,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_giraffe_evo_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1542,6 +1613,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bunny_adapt_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1564,6 +1638,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bunny_explain_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1586,6 +1663,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_whale_movement_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1608,6 +1688,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_whale_explain_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1630,6 +1713,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bugs_selection_counters_one_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1652,6 +1738,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bugs_selection_counters_two_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1674,6 +1763,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bugs_selection_explain_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1696,6 +1788,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gray_csc_ecosystems_survival_choice_2022"
+        ],
         "progression": "Choice Level"
       },
       "bonus": false,
@@ -1718,6 +1813,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_freeplay_2022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1973,7 +2071,7 @@
         "lesson.key": "Overfishing Simulation",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "f86d7a17-7f7c-4b7a-a587-083155967e42"
+        "activity_section.key": "669f0669-5939-42e4-8ead-00eff5b25dde"
       }
     },
     {
@@ -1997,7 +2095,7 @@
         "lesson.key": "Overfishing Simulation",
         "lesson_group.key": "",
         "script.name": "csc-ecosystems-2022",
-        "activity_section.key": "6c8d1ad3-ba75-4f60-9549-57880f843762"
+        "activity_section.key": "f86d7a17-7f7c-4b7a-a587-083155967e42"
       }
     },
     {

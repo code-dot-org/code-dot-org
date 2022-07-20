@@ -340,7 +340,7 @@ class Documents < Sinatra::Base
       match = content.match(/\A\s*^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
       return [{}, content, 1] unless match
 
-      header = YAML.load(match[:yaml], path) || {}
+      header = YAML.safe_load(match[:yaml]) || {}
       raise "YAML header error: expected Hash, not #{header.class}" unless header.is_a?(Hash)
 
       remaining_content = match.post_match
