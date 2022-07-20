@@ -64,11 +64,32 @@
     font-family: 'Gotham 4r', sans-serif;
     font-size: 1.5em;
     text-align: center;
-    margin-top: 1em;
+    margin-top: .75em;
 
     @media screen and (max-width: $width-md) {
       font-size: 1.125em;
       margin: 1.5em auto 0;
+    }
+  }
+}
+
+.govs {
+  text-align: center;
+  margin: 2.5em auto 0;
+  max-width: 480px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  a {
+    color: white;
+    text-decoration: underline;
+    font-family: 'Gotham 5r', sans-serif;
+    font-size: 1.25em;
+
+    @media screen and (max-width: $width-sm) {
+      margin-top: 0.5em;
     }
   }
 }
