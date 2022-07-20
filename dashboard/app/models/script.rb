@@ -904,6 +904,11 @@ class Script < ApplicationRecord
     csd? || csp? || csa?
   end
 
+  def requires_verified_instructor?
+    # as of now the only course that requires the instructor to be verified in order to run code is CSA.
+    return csa?
+  end
+
   def get_script_level_by_id(script_level_id)
     script_levels.find(id: script_level_id.to_i)
   end
@@ -1868,7 +1873,8 @@ class Script < ApplicationRecord
         path: link,
         lesson_extras_available: lesson_extras_available?,
         text_to_speech_enabled: text_to_speech_enabled?,
-        position: unit_group_units&.first&.position
+        position: unit_group_units&.first&.position,
+        requires_verified_instructor: requires_verified_instructor?
       }
     ]
   end

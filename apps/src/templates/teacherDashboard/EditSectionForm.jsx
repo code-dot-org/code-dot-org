@@ -15,7 +15,8 @@ import {
   finishEditingSection,
   cancelEditingSection,
   reloadAfterEditingSection,
-  assignedUnitLessonExtrasAvailable
+  assignedUnitLessonExtrasAvailable,
+  assignedUnitRequiresVerifiedInstructor
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
@@ -28,6 +29,7 @@ import {
 } from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {ParticipantAudience} from '../../generated/curriculum/sharedCourseConstants';
+import GetVerifiedBanner from './GetVerifiedBanner';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -54,6 +56,8 @@ class EditSectionForm extends Component {
     assignedUnitTextToSpeechEnabled: PropTypes.bool.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     localeCode: PropTypes.string,
+    assignedUnitRequiresVerifiedInstructor: PropTypes.bool,
+    isVerifiedInstructor: PropTypes.bool,
     showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
   };
 
@@ -141,11 +145,18 @@ class EditSectionForm extends Component {
       handleClose,
       assignedUnitLessonExtrasAvailable,
       assignedUnitTextToSpeechEnabled,
+      assignedUnitRequiresVerifiedInstructor,
       assignedUnitName,
       localeCode,
       isNewSection,
-      showLockSectionField // DCDO Flag - show/hide Lock Section field
+      showLockSectionField,
+      isVerifiedInstructor // DCDO Flag - show/hide Lock Section field
     } = this.props;
+    console.log(courseOfferings[section.courseOfferingId]);
+    const courseDisplayName =
+      section && section.courseOfferingId
+        ? courseOfferings[section.courseOfferingId].display_name
+        : '';
 
     /**
     OAuth and personal email login types can not be changed.
@@ -215,6 +226,11 @@ class EditSectionForm extends Component {
             disabled={isSaveInProgress}
             isNewSection={isNewSection}
           />
+          {!isVerifiedInstructor &&
+            assignedUnitRequiresVerifiedInstructor &&
+            courseDisplayName && (
+              <GetVerifiedBanner courseName={courseDisplayName} />
+            )}
           {assignedUnitLessonExtrasAvailable && (
             <LessonExtrasField
               value={section.lessonExtras}
@@ -551,6 +567,10 @@ let defaultPropsFromState = state => ({
   assignedUnitName: assignedUnitName(state),
   assignedUnitTextToSpeechEnabled: assignedUnitTextToSpeechEnabled(state),
   localeCode: state.locales.localeCode,
+  assignedUnitRequiresVerifiedInstructor: assignedUnitRequiresVerifiedInstructor(
+    state
+  ),
+  isVerifiedInstructor: state.verifiedInstructor.isVerified,
 
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: state.teacherSections.showLockSectionField
