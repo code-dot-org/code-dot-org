@@ -289,7 +289,9 @@ class LessonsControllerTest < ActionController::TestCase
         }
       }
     }
+
     I18n.backend.store_translations 'en-US', custom_i18n
+    assert_equal @lesson_name, solo_lesson_in_script.localized_name
 
     get :show, params: {
       script_id: script.name,
