@@ -75,6 +75,10 @@ import {
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
+import {
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
@@ -3364,6 +3368,10 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
   );
 
   getStore().dispatch(setPageConstants(combined));
+
+  if (config.isInstructor) {
+    getStore().dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+  }
 
   const instructionsConstants = determineInstructionsConstants(config);
   getStore().dispatch(setInstructionsConstants(instructionsConstants));
