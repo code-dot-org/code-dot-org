@@ -30,8 +30,8 @@ def process_existing_batch_of_forms
 
   DB[:forms].where(kind: "ClassSubmission").limit(BATCH_SIZE).each do |form|
     kind = Object.const_get(form[:kind])
-    data = JSON.load(form[:data])
-    processed_data = JSON.load(form[:processed_data]) || {}
+    data = JSON.parse(form[:data])
+    processed_data = JSON.parse(form[:processed_data]) || {}
 
     begin
       if kind.respond_to?(:additional_data)
