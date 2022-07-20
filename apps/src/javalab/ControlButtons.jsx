@@ -19,7 +19,8 @@ export default function ControlButtons({
   disableTestButton,
   showTestButton,
   isSubmittable,
-  isSubmitted
+  isSubmitted,
+  finishButtonTooltipText
 }) {
   /* The ids of these buttons are relied on in other parts of the codebase.
    * All of them are relied on for UI tests
@@ -73,6 +74,7 @@ export default function ControlButtons({
             style={{...styles.button.all, ...styles.button.blue}}
             isDisabled={disableFinishButton}
             id={finishButtonId}
+            tooltipText={finishButtonTooltipText}
           />
         )}
       </div>
@@ -93,7 +95,8 @@ ControlButtons.propTypes = {
   disableTestButton: PropTypes.bool,
   showTestButton: PropTypes.bool,
   isSubmittable: PropTypes.bool,
-  isSubmitted: PropTypes.bool
+  isSubmitted: PropTypes.bool,
+  finishButtonTooltipText: PropTypes.string
 };
 
 const styles = {

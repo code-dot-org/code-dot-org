@@ -15,7 +15,7 @@ module Cdo
 
     def json_body
       return nil unless content_type.split(';').first == 'application/json'
-      return nil unless content_charset.downcase == 'utf-8'
+      return nil unless content_charset.casecmp?('utf-8')
       JSON.parse(body.read, symbolize_names: true)
     end
 

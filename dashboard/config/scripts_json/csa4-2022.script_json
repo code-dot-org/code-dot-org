@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-30 14:23:24 UTC",
+    "serialized_at": "2022-07-13 13:05:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6197,7 +6197,7 @@
     },
     {
       "name": "The equals() Method",
-      "url": "https://youtu.be/ryrczp_4OcE",
+      "url": "https://youtu.be/F1WhwH4abX4",
       "key": "the_equals_method",
       "properties": {
         "audience": "Student",

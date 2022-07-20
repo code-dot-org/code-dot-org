@@ -14,6 +14,7 @@ import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
 import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 class SettingsCog extends Component {
   static propTypes = {
@@ -53,6 +54,13 @@ class SettingsCog extends Component {
   toggleMakerToolkit = () => {
     this.close();
     if (!makerToolkitRedux.isEnabled(getStore().getState())) {
+      // Log that a user would like to enable the maker toolkit
+      firehoseClient.putRecord({
+        study: 'maker-toolkit',
+        study_group: 'maker-toolkit',
+        event: 'enable-maker-toolkit'
+      });
+
       // Pop a confirmation dialog when trying to enable maker,
       // because we've had several users do this accidentally.
       this.showConfirmation();
