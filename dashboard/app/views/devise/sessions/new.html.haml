@@ -15,7 +15,7 @@
       / Password
       .field#password_field
         = f.label :password
-        = f.password_field :password, autofocus: email != '', id: 'password_input'
+        = f.password_field :password, autofocus: email != ''
 
         / Forgot password?
       - if devise_mapping.recoverable?
