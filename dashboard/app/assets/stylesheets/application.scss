@@ -1701,12 +1701,8 @@ a.download-video {
     font-family: $gotham-extra-bold;
   }
 
-  #password_input, #new_user {
+  #password_field, #new_user {
     margin-bottom: 0;
-  }
-
-  #password_field {
-    margin-bottom: 7px;
   }
 
   .password_help_link {
