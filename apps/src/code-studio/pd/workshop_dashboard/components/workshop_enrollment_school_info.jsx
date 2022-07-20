@@ -314,7 +314,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     }
 
     return (
-      <Table condensed striped response>
+      <Table condensed striped responsive>
         {confirmationDialog}
         <thead>
           <tr>
