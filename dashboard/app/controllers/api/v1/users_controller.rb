@@ -40,14 +40,18 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     if current_user
       render json: {
         id: current_user.id,
-        name: current_user.name,
+        name: current_user.short_name,
         is_admin: current_user.admin,
         is_signed_in: true,
         owned_sections: current_user.owned_sections,
       }
     else
       render json: {
-        is_signed_in: false
+        id: nil,
+        name: "",
+        is_admin: false,
+        is_signed_in: false,
+        owned_sections: nil,
       }
     end
   end
