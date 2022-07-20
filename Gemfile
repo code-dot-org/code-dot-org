@@ -215,7 +215,7 @@ gem 'font-awesome-rails', '~> 4.7.0.5'
 gem 'sequel'
 gem 'user_agent_parser'
 
-gem 'paranoia', '~> 2.4.2'
+gem 'paranoia', '~> 2.5.0'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
