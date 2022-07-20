@@ -152,7 +152,7 @@ class EditSectionForm extends Component {
       showLockSectionField,
       isVerifiedInstructor // DCDO Flag - show/hide Lock Section field
     } = this.props;
-    console.log(courseOfferings[section.courseOfferingId]);
+
     const courseDisplayName =
       section && section.courseOfferingId
         ? courseOfferings[section.courseOfferingId].display_name
