@@ -77,9 +77,11 @@ DashboardUser.getCurrentUser = function() {
       type: 'get',
       dataType: 'json',
       success: function(data /*, textStatus, jqXHR*/) {
+        console.warn(data);
         DashboardUser.currentUser_.initialize(data);
       },
-      error: function(/*jqXHR, textStatus, errorThrown*/) {
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error(errorThrown);
         DashboardUser.currentUser_.initialize({
           isSignedIn: false
         });
