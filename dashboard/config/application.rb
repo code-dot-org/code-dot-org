@@ -26,9 +26,17 @@ module Dashboard
     # Explicitly load appropriate defaults for this version of Rails.
     config.load_defaults 6.0
 
-    # temporarily disable some default values that we aren't yet ready for
-    # TODO infra: remove this
-    config.assets.unknown_asset_fallback = true
+    # Temporarily disable some default values that we aren't yet ready for.
+    # Right now, these changes to cookie functionality break projects
+    #
+    # TODO infra: Figure out why, fix, and reenable.
+    #
+    # added in Rails 5.2 (https://github.com/rails/rails/pull/28132)
+    config.action_dispatch.use_authenticated_cookie_encryption = false
+    # added in Rails 5.2 (https://github.com/rails/rails/pull/29263)
+    config.active_support.use_authenticated_message_encryption = false
+    # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
+    config.action_dispatch.use_cookies_with_metadata = false
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
