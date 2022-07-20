@@ -6,7 +6,7 @@ import levels from '@cdo/apps/p5lab/levels';
 
 export default function loadGamelab(options) {
   options.skinsModule = skins;
-  const gamelab = new GameLab();
+  var gamelab = new GameLab();
 
   // Bind helper that provides project metadata for gamelab autosave
   options.getAnimationList = gamelab.getSerializedAnimationList.bind(gamelab);

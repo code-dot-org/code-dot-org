@@ -89,7 +89,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_info.school_district)
   end
 
-  test 'pre_workshop_survey_url' do
+  # test 'pre_workshop_survey_url' do
+  test 'test2' do
     csp_summer_workshop = build :csp_summer_workshop
     csp_summer_workshop_enrollment = build :pd_enrollment, workshop: csp_summer_workshop
 
@@ -104,7 +105,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_summer_workshop_enrollment.code}",
       URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).query
-    assert_nil csp_academic_year_workshop_enrollment.pre_workshop_survey_url
+    assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_academic_year_workshop_enrollment.code}",
+      URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).query
     assert_equal '/pd/workshop_survey/csf/pre201', URI(csf_201_workshop_enrollment.pre_workshop_survey_url).path
     assert_nil csf_intro_workshop_enrollment.pre_workshop_survey_url
   end
@@ -112,6 +114,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   test 'exit_survey_url' do
     csf_workshop = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 8)
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
+
+    csf_district_workshop = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 8), subject: SUBJECT_CSF_DISTRICT
+    csf_district_enrollment = create :pd_enrollment, workshop: csf_district_workshop
 
     csp_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP
     csp_enrollment = create :pd_enrollment, workshop: csp_workshop
@@ -134,6 +139,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
     assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_district_enrollment.code}"], csf_district_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_wfrt_enrollment.code}"], csp_wfrt_enrollment.exit_survey_url
