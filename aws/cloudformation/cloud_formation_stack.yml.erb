@@ -453,7 +453,7 @@ Resources:
 <% end -%>
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT2H
+        Timeout: PT4H
     Properties:
       ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref <%=frontends ? 'DaemonInstanceType' : 'InstanceType' %>
