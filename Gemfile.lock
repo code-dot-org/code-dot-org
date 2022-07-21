@@ -630,8 +630,8 @@ GEM
     parallel (1.12.1)
     parallel_tests (2.27.0)
       parallel
-    paranoia (2.4.2)
-      activerecord (>= 4.0, < 6.1)
+    paranoia (2.5.3)
+      activerecord (>= 5.1, < 7.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
     pdf-reader (2.9.2)
@@ -1014,7 +1014,7 @@ DEPENDENCIES
   os
   parallel
   parallel_tests
-  paranoia (~> 2.4.2)
+  paranoia (~> 2.5.0)
   pdf-reader
   petit!
   pg
