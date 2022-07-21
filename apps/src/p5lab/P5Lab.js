@@ -58,7 +58,6 @@ import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
-import defaultSprites from './spritelab/defaultSprites.json';
 import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -103,7 +102,8 @@ const DRAW_LOOP_MEASURE = 'drawLoop';
  * @implements LogTarget
  */
 export default class P5Lab {
-  constructor() {
+  constructor(defaultSprites = []) {
+    this.defaultAnimations = defaultSprites;
     this.skin = null;
     this.level = null;
     this.tickIntervalId = 0;
@@ -234,8 +234,9 @@ export default class P5Lab {
     this.level.helperLibraries = this.level.helperLibraries || [];
 
     this.level.softButtons = this.level.softButtons || [];
+
     if (this.level.useDefaultSprites) {
-      this.startAnimations = defaultSprites;
+      this.startAnimations = this.defaultAnimations;
     } else if (
       this.level.startAnimations &&
       this.level.startAnimations.length > 0
@@ -480,13 +481,14 @@ export default class P5Lab {
       ? config.initialAnimationList
       : this.startAnimations;
     initialAnimationList = this.loadAnyMissingDefaultAnimations(
-      initialAnimationList
+      initialAnimationList,
+      this.defaultAnimations
     );
 
     getStore().dispatch(
       setInitialAnimationList(
         initialAnimationList,
-        defaultSprites /* spritesForV3Migration */,
+        this.defaultAnimations /* spritesForV3Migration */,
         this.isBlockly
       )
     );
@@ -536,8 +538,12 @@ export default class P5Lab {
    * the "set background to" block, which needs to have backgrounds in the
    * animation list at the start in order to look not broken.
    * @param {Object} initialAnimationList
+   * @param {Object} defaultSprites
    */
-  loadAnyMissingDefaultAnimations(initialAnimationList) {
+  loadAnyMissingDefaultAnimations(
+    initialAnimationList,
+    defaultSprites = {orderedKeys: [], propsByKey: {}}
+  ) {
     if (!this.isBlockly) {
       return initialAnimationList;
     }
@@ -546,7 +552,7 @@ export default class P5Lab {
       const name = initialAnimationList.propsByKey[key].name;
       configDictionary[name] = key;
     });
-    // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.json.
+    // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.
     // This is primarily to handle pre existing levels that don't have animations in their list yet
     const categoryCheck = initialAnimationList.orderedKeys.filter(key => {
       const {categories} = initialAnimationList.propsByKey[key];
