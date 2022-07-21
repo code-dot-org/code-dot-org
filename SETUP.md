@@ -104,7 +104,7 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 
 1. Install **rbenv** via `brew install rbenv`
 
-9. Install **Ruby**
+1. Install **Ruby**
     1. For non-M1 systems, running `rbenv install` from the project root directory should be sufficient
     2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
 

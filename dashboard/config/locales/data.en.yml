@@ -707,6 +707,10 @@ en:
         CS_Changing_Everything: Computer Science is Changing Everything
         csa-alias-video: Equals and Aliases
         csa-equals-video: The equals() method
+        csa-user-stories: User Stories in Software Engineering
+        csa-pl-vpl-m1-unit-3: Software Engineering in Unit 3
+        csa-pl-intro-to-equality: Introduction to Equality
+        csa-pl-intro-to-equals-method: Introduction to the .equals() method
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

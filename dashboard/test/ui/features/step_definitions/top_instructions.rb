@@ -37,6 +37,7 @@ end
 
 Given /^I write a code review comment with text "([^"]*)"$/ do |text|
   steps <<-STEPS
+     And I wait to see ".code-review-comment-input"
      And I press keys "#{text}" for element ".code-review-comment-input"
      And element ".code-review-comment-input" contains text "#{text}"
      And I press "code-review-comment-submit"
@@ -65,7 +66,9 @@ end
 
 Given /^I write a code review v2 comment with text "([^"]*)"$/ do |text|
   steps <<-STEPS
+     And I wait to see ".editable-text-area"
      And I press ".editable-text-area" using jQuery
+     And I wait for 2 seconds
      And I press keys "#{text}" for element ".editable-text-area"
      And element ".editable-text-area" contains text "#{text}"
      And I press ".code-review-comment-submit" using jQuery
