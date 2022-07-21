@@ -30,6 +30,7 @@ services:
       - $HOME/.git-credentials:/home/circleci/.git-credentials-original:delegated
       - $HOME/gitcred.sh:/home/circleci/gitcred.sh:delegated
       - ../../droplet/:/home/circleci/droplet:delegated
+      - ../../blockly/:/home/circleci/blockly:delegated
 
     ports:
       - "3000:3000"
