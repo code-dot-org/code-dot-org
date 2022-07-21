@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_27_214005) do
+ActiveRecord::Schema.define(version: 2022_07_13_165055) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1470,14 +1470,14 @@ ActiveRecord::Schema.define(version: 2022_06_27_214005) do
     t.index ["programming_class_id", "overload_of"], name: "index_programming_methods_on_class_id_and_overload_of"
   end
 
-  create_table "project_versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+  create_table "project_commits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.integer "storage_app_id", null: false
     t.string "object_version_id", null: false
     t.text "comment", size: :medium
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["storage_app_id", "object_version_id"], name: "index_project_versions_on_storage_app_id_and_object_version_id", unique: true
-    t.index ["storage_app_id"], name: "index_project_versions_on_storage_app_id"
+    t.index ["storage_app_id", "object_version_id"], name: "index_project_commits_on_storage_app_id_and_object_version_id", unique: true
+    t.index ["storage_app_id"], name: "index_project_commits_on_storage_app_id"
   end
 
   create_table "projects", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
