@@ -46,6 +46,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         owned_sections: current_user.owned_sections,
       }
     else
+      raise "Hello"
       render json: {
         id: nil,
         name: "",
