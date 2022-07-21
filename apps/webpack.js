@@ -231,18 +231,11 @@ if (envConstants.COVERAGE) {
   });
 }
 
+// UPDATE BEFORE MERGING
+// Temporary hack to access sourcemaps
+// Also max_old_space_size in webpack (was updated temporarily to fix sourcemaps)
 function devtool(options) {
-  // TODO: fix this to only return eval-source-map for debug builds
   return 'eval-source-map';
-  // if (process.env.CI) {
-  //   return 'eval';
-  // } else if (options && options.minify) {
-  //   return 'source-map';
-  // } else if (process.env.DEV) {
-  //   return 'inline-cheap-source-map';
-  // } else {
-  //   return 'inline-source-map';
-  // }
 }
 
 var storybookConfig = _.extend({}, baseConfig, {

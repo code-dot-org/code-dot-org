@@ -1111,7 +1111,10 @@ describe('entry tests', () => {
               // Remove contenthash in manifest key from files generated via
               // copy-webpack-plugin. See:
               // https://github.com/webpack-contrib/copy-webpack-plugin/issues/104#issuecomment-370174211
-              file.name = file.name.replace(/wp[a-f0-9]{32}\./, '.');
+              // Also remove .min extension from manifest key, which started appearing after moving from webpack-manifest-plugin 2 -> 4
+              file.name = file.name
+                .replace(/wp[a-f0-9]{32}\./, '.')
+                .replace(/\.min/, '');
             }
             return file;
           }
