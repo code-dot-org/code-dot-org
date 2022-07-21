@@ -1,40 +1,13 @@
 /** @file Maker commands (invoked by Applab/Gamelab.executeCmd) */
 import {
   apiValidateType,
-  apiValidateTypeAndRange,
-  outputError
+  apiValidateTypeAndRange
 } from '../../util/javascriptMode';
 import {BOARD_EVENT_ALIASES} from './boards/circuitPlayground/PlaygroundConstants';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';
 
 /** @private {CircuitPlaygroundBoard} */
 let board;
-
-function isValidPin(pin) {
-  const validPins = [
-    0,
-    1,
-    2,
-    3,
-    6,
-    9,
-    10,
-    12,
-    'A0',
-    'A1',
-    'A2',
-    'A3',
-    'A4',
-    'A5',
-    'A6',
-    'A7'
-  ];
-  if (!validPins.includes(pin)) {
-    outputError(`pin ${pin} is not a valid pinid - please use a valid pinid`);
-    return false;
-  }
-  return true;
-}
 
 /**
  * Change which board controller handles Maker Toolkit commands.
@@ -51,7 +24,7 @@ export function injectBoardController(boardController) {
 export function pinMode(opts) {
   apiValidateType(opts, 'pinMode', 'pin', opts.pin, 'pinid');
   apiValidateType(opts, 'pinMode', 'mode', opts.mode, 'string');
-  if (!isValidPin(opts.pin)) {
+  if (!opts.validatedTypeKey) {
     return;
   }
   const modeStringToConstant = {
@@ -79,7 +52,7 @@ export function digitalWrite(opts) {
     0,
     1
   );
-  if (!isValidPin(opts.pin)) {
+  if (!opts.validatedTypeKey) {
     return;
   }
   board.digitalWrite(opts.pin, opts.value);
@@ -90,7 +63,7 @@ export function digitalWrite(opts) {
  */
 export function digitalRead(opts) {
   apiValidateType(opts, 'digitalRead', 'pin', opts.pin, 'pinid');
-  if (!isValidPin(opts.pin)) {
+  if (!opts.validatedTypeKey) {
     return;
   }
   return board.digitalRead(opts.pin, opts.callback);
@@ -111,7 +84,7 @@ export function analogWrite(opts) {
     0,
     255
   );
-  if (!isValidPin(opts.pin)) {
+  if (!opts.validatedTypeKey) {
     return;
   }
   board.analogWrite(opts.pin, opts.value);
@@ -122,7 +95,7 @@ export function analogWrite(opts) {
  */
 export function analogRead(opts) {
   apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid');
-  if (!isValidPin(opts.pin)) {
+  if (!opts.validatedTypeKey) {
     return;
   }
   return board.analogRead(opts.pin, opts.callback);
@@ -157,7 +130,7 @@ export function onBoardEvent(opts) {
  */
 export function createLed(opts) {
   apiValidateType(opts, 'createLed', 'pin', opts.pin, 'pinid');
-  if (!isValidPin(opts.pin)) {
+  if (!opts.validatedTypeKey) {
     return;
   }
   return board.createLed(opts.pin);
@@ -170,7 +143,7 @@ export function createLed(opts) {
  */
 export function createButton(opts) {
   apiValidateType(opts, 'createButton', 'pin', opts.pin, 'pinid');
-  if (!isValidPin(opts.pin)) {
+  if (!opts.validatedTypeKey) {
     return;
   }
   return board.createButton(opts.pin);
