@@ -3,13 +3,23 @@ import {NotificationType} from '@cdo/apps/templates/Notification';
 
 const ADD_ANNOUNCEMENT = 'announcements/ADD_ANNOUNCEMENT';
 
-export const addAnnouncement = (notice, details, link, type, visibility) => ({
+export const addAnnouncement = (
+  notice,
+  details,
+  link,
+  type,
+  visibility,
+  dismissible,
+  buttonText
+) => ({
   type: ADD_ANNOUNCEMENT,
   notice,
   details,
   link,
   announcementType: type,
-  visibilityType: visibility
+  visibilityType: visibility,
+  dismissible,
+  buttonText
 });
 
 export const VisibilityType = {
@@ -23,7 +33,9 @@ export const announcementShape = PropTypes.shape({
   details: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   type: PropTypes.oneOf(Object.values(NotificationType)).isRequired,
-  visibility: PropTypes.oneOf(Object.values(VisibilityType))
+  visibility: PropTypes.oneOf(Object.values(VisibilityType)),
+  dismissible: PropTypes.bool,
+  buttonText: PropTypes.string
 });
 
 export default function announcements(state = [], action) {
@@ -33,7 +45,9 @@ export default function announcements(state = [], action) {
       details: action.details,
       link: action.link,
       type: action.announcementType,
-      visibility: action.visibilityType
+      visibility: action.visibilityType,
+      dismissible: action.dismissible,
+      buttonText: action.buttonText
     });
   }
 

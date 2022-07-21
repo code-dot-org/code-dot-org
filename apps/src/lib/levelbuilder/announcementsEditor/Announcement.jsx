@@ -45,6 +45,20 @@ export default class Announcement extends Component {
           />
         </label>
         <label>
+          Button Text
+          <input
+            value={
+              announcement.buttonText === undefined
+                ? ''
+                : announcement.buttonText
+            }
+            style={inputStyle}
+            onChange={event =>
+              onChange(index, 'buttonText', event.target.value)
+            }
+          />
+        </label>
+        <label>
           Type
           <div>
             <select
@@ -78,6 +92,21 @@ export default class Announcement extends Component {
             </select>
           </div>
         </label>
+        <label>
+          Dismissible
+          <input
+            type="checkbox"
+            checked={
+              announcement.dismissible === undefined
+                ? true
+                : announcement.dismissible
+            }
+            style={styles.checkbox}
+            onChange={event =>
+              onChange(index, 'dismissible', event.target.checked)
+            }
+          />
+        </label>
         <button
           className="btn btn-danger"
           type="button"
@@ -95,5 +124,8 @@ const styles = {
     border: '1px solid #ccc',
     padding: 5,
     marginBottom: 10
+  },
+  checkbox: {
+    margin: '0 0 0 7px'
   }
 };
