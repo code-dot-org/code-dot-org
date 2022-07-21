@@ -72,16 +72,13 @@ DashboardUser.getCurrentUser = function() {
   if (!DashboardUser.currentUser_) {
     DashboardUser.currentUser_ = new DashboardUser();
     $.ajax({
-      //url: '/v2/user',
-      url: '/api/v1/users/netsim',
+      url: '/api/v1/users/netsim_signed_in',
       type: 'get',
       dataType: 'json',
       success: function(data /*, textStatus, jqXHR*/) {
-        console.warn(data);
         DashboardUser.currentUser_.initialize(data);
       },
       error: function(jqXHR, textStatus, errorThrown) {
-        console.error(errorThrown);
         DashboardUser.currentUser_.initialize({
           isSignedIn: false
         });
