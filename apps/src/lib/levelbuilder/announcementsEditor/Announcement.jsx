@@ -47,6 +47,7 @@ export default class Announcement extends Component {
         <label>
           Button Text
           <input
+            className="uitest-announcement-button-text"
             value={
               announcement.buttonText === undefined
                 ? ''
@@ -95,6 +96,7 @@ export default class Announcement extends Component {
         <label>
           Dismissible
           <input
+            className="uitest-announcement-dismissible"
             type="checkbox"
             checked={
               announcement.dismissible === undefined
