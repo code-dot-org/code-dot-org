@@ -1,0 +1,20 @@
+name 'CSA CB_Lab Magpie-L5-Assessment2'
+title 'End of Lesson Magpie Assessment'
+description 'Choose the best response from the multiple choice answers below'
+question ' '
+wrong 'Many digits will be printed due to an infinite loop.'
+wrong '2 4 11'
+wrong '1 3 10'
+wrong '2 2 7'
+right '1 1 6'
+
+markdown <<MARKDOWN
+>> String phrase = "**Here is the word**"; </br>
+int psn = phrase.indexOf("**e**"); </br>
+while (**psn >= 0**) </br>
+{ </br>
+&nbsp; &nbsp; System.out.print(**psn + " "**); </br>
+&nbsp; &nbsp; phrase = phrase.substring(**psn + 1**); </br>
+&nbsp; &nbsp; psn = phrase.indexOf(**"e"**); </br>
+}
+MARKDOWN
