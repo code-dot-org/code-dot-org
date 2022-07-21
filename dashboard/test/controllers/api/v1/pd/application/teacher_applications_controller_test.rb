@@ -48,6 +48,18 @@ module Api::V1::Pd::Application
       params: -> {{id: @application.id}},
       response: :success
 
+    test_user_gets_response_for :principal_approval_not_required,
+                                name: 'program managers can set principal_approval_not_required for applications they own',
+                                user: -> {@program_manager},
+                                params: -> {{id: @application.id}},
+                                response: :success
+
+    test_user_gets_response_for :principal_approval_not_required,
+                                name: 'program managers cannot set principal_approval_not_required for applications they do not own',
+                                user: :program_manager,
+                                params: -> {{id: @application.id}},
+                                response: :forbidden
+
     test_user_gets_response_for :send_principal_approval,
       name: 'program managers can send_principal_approval for applications they own',
       user: -> {@program_manager},
@@ -185,6 +197,14 @@ module Api::V1::Pd::Application
       assert_nil application.form_data_hash[:cs_total_course_hours]
       assert_equal original_school_info, @applicant.school_info
       assert_response :ok
+    end
+
+    test 'principal_approval_not_required changes principal_approval to not required' do
+      sign_in @program_manager
+      refute @application.principal_approval_not_required
+
+      post :principal_approval_not_required, params: {id: @application.id}
+      assert @application.reload.principal_approval_not_required
     end
 
     test 'send_principal_approval queues up an email if none exist' do
