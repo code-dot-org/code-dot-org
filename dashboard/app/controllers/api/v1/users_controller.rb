@@ -34,8 +34,8 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     end
   end
 
-  # GET /api/v1/users/netsim
-  def netsim
+  # GET /api/v1/users/netsim_signed_in
+  def netsim_signed_in
     prevent_caching
     if current_user
       render json: {
@@ -46,14 +46,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         owned_sections: current_user.owned_sections,
       }
     else
-      raise "Hello"
-      render json: {
-        id: nil,
-        name: "",
-        is_admin: false,
-        is_signed_in: false,
-        owned_sections: nil,
-      }
+      raise CanCan::AccessDenied
     end
   end
 
