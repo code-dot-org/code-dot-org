@@ -42,7 +42,7 @@ describe('maker/commands.js', () => {
     it('display warning when reserved pin 1 is used', () => {
       pinMode({pin: 1, mode: 'input'});
       expect(errorHandler.outputWarning).to.have.been.calledWith(
-        'pinMode() pin parameter value (1) is a reserved pinid. Please use a different pinid'
+        'pinMode() pin parameter value (1) is a reserved pinid. Please use a different pinid.'
       );
     });
 
