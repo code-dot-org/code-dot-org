@@ -865,7 +865,7 @@ GEM
     unicorn (5.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
-    user_agent_parser (2.3.0)
+    user_agent_parser (2.6.0)
     validate_email (0.1.6)
       activemodel (>= 3.0)
       mail (>= 2.2.5)
