@@ -30,7 +30,7 @@ jobs:
 
       - name: Checkout code
         run: |
-          git clone --branch ${{ github.head_ref }}  --depth 20
+          git clone --branch ${{ github.head_ref }}  --depth 20 ${{ github.repositoryUrl }}
           git remote set-branches --add origin staging
           git fetch --depth 10 origin staging
           git config user.name "Drone"
