@@ -358,7 +358,6 @@ km:
     popup:
       progress_for_user: "ដំណើរការរបស់%{name}"
       progress: 'ដំណើរការ​របស់​អ្នក'
-      lines: 'បន្ទាត់​កូដ​សរុប៖ %{lines}'
       close: 'បិទ'
       mastery: 'គោល​គំនិត'
       puzzle_map: 'ដំណាក់កាល'

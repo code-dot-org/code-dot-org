@@ -2157,6 +2157,30 @@
         "New Sprite Lab Project": {
           "costumes_tab": "Kliknij tutaj, aby dodać kostiumy do swojego projektu.",
           "make_sprite": "Użyj bloków tutaj, aby utworzyć duszka!"
+        },
+        "Big Game Vars 1": {
+          "big_game_finish": "Kliknij przycisk Zakończ, gdy będziesz gotowy przejść na następny poziom."
+        },
+        "Calc Circles of Eval .2": {
+          "calc_question_marks": "Wybierz właściwą liczbę z tego rozwijanego menu "
+        },
+        "Calc Vars 1": {
+          "Calc Vars 1_edit_option": "Kliknij edytuj, aby zmienić wartość tej zmiennej"
+        },
+        "Eval Booleans 2": {
+          "Eval Booleans 2 1": "Wybierz liczbę, która sprawi, że to wyrażenie zostanie ocenione jako prawda"
+        },
+        "Eval Define Funcs 3": {
+          "Eval Define Funcs 3": "Spraw, aby nasza funkcja używała parametru 'radius' zamiast zawsze mieć promień równy 50."
+        },
+        "Eval Define Funcs Test": {
+          "Eval Define Funcs 3": "Spraw, aby nasza funkcja używała parametru 'radius' zamiast zawsze mieć promień równy 50."
+        },
+        "Eval Strings Images .2": {
+          "": "Bloki w kolorze turkusowym, takie jak ten, wyświetlają wartości łańcucha znaków"
+        },
+        "Luigi's Pizza 1": {
+          "luigi's pizza 1": "Spróbuj zamówić pizzę pepperoni"
         }
       }
     }

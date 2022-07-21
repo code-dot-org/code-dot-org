@@ -1502,6 +1502,27 @@
         "d3aa02b0-9340-47ab-b258-5446686c77b4": {
           "description": "Describir cómo las abstracciones ayudan a gestionar la complejidad del código"
         },
+        "63135326-7d2f-4974-af73-f8d7a801cd04": {
+          "description": "Utiliza la velocidad del sprite con el patrón de contador para crear diferentes tipos de movimiento del sprite"
+        },
+        "6ed44bf4-19c7-4fd2-b72d-527e7c1ed3f3": {
+          "description": "Explica cómo se pueden combinar construcciones de programación individuales para crear un comportamiento más complejo"
+        },
+        "2a7e04b6-f408-4915-a8df-10a590d5b45a": {
+          "description": "Modelar diferentes tipos de interacciones entre sprites."
+        },
+        "ba90afe9-19b4-4a19-b7e7-9cc6dcc94b86": {
+          "description": "Describir cómo las abstracciones pueden construirse para desarrollar más abstracciones"
+        },
+        "3572828f-fdf1-4708-bfd1-1a021799e8fd": {
+          "description": "Crear y utilizar funciones para bloques de código que realicen una única tarea de alto nivel dentro de un programa"
+        },
+        "9d1d61de-4fa4-458f-b11f-aee208854019": {
+          "description": "Explicar las ventajas de utilizar funciones en un programa"
+        },
+        "dd877754-8fc0-4026-9205-385c6a3a2e4e": {
+          "description": "Explicar cómo las funciones permiten a los programadores razonar sobre un programa a un nivel superior"
+        },
         "74126a3c-61fa-40ac-aef5-ffe0bf68a549": {
           "description": " Comunicarse y colaborar con los compañeros para resolver un problema "
         },

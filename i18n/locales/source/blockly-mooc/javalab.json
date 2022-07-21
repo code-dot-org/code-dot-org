@@ -129,6 +129,7 @@
   "submit": "Submit",
   "successfulTestResult": "{className} > {methodName} SUCCEEDED",
   "switchToDisplayTheme": "Switch to {displayTheme}",
+  "testsNotPassing": "You need to pass all tests before you can finish the level.",
   "timeoutWarning": "Warning: your project will stop running in 15 seconds.",
   "timeout": "Your project has stopped.",
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
@@ -140,6 +141,8 @@
   "unauthorizedJavabuilderConnectionTeacher": "To run your code in Java Lab, you need to become \"verified\" or join a CSA section owned by a verified teacher. Please see [this article](https://support.code.org/hc/en-us/articles/115001550131) for details on how to become verified.",
   "unauthorizedJavabuilderConnectionStudent": "To run your code in Java Lab, you need to be assigned to a CSA section and your teacher needs to be \"verified.\" Ask your teacher for help and try again. Your teacher can find more details in [this article.](https://support.code.org/hc/en-us/articles/115001550131)",
   "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}",
+  "unsupportedNeighborhoodMessage": "[WARNING] Level type mismatch: Neighborhood projects are not supported on a non-Neighborhood level.",
+  "unsupportedTheaterMessage": "[WARNING] Level type mismatch: Theater projects are not supported on a non-Theater level.",
   "userBlocked": "You have run your code too many times and your account has been locked. Contact support@code.org to unlock your account.",
   "youHaveProjectsToReview": "You have projects to review...",
   "yourPeer": "your peer"

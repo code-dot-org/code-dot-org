@@ -417,7 +417,6 @@ uz:
     popup:
       progress_for_user: "%{name} progressi"
       progress: 'Progressingiz'
-      lines: 'Jami kod satrlari: %{lines}'
       close: 'YOPISH'
       mastery: 'Ma''ruza/Konseptsiya'
       puzzle_map: 'Pog`onalar'

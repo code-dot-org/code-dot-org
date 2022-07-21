@@ -733,7 +733,6 @@
   "toolboxHeaderDroplet": "Toolbox",
   "topCourseExplanation": "ချန်ခဲ့တဲ့နေရာဆီ ကျော်ဖို့ သို့မဟုတ် လုပ်ဆောင်ချက်ကို ခြုံငုံပြီး သင်တန်းတစ်ခုလုံးကို ကြည့်ဖို့ သင်ခန်းစာကို ဆက်လက်လုပ်ဆောင်ပါ.",
   "topCourseLessonIntro": "လက်ရှိ {lessonName} မှာ အလုပ်လုပ်နေပါတယ်.",
-  "totalNumLinesOfCodeWritten": "အချိန်အားလုံးပေါင်း : {numLines, plural, one {1 line} other {# lines}} of code.",
   "tryAgain": "ပြန်လည်ကြိုးစားပါ",
   "tryBlocksBelowFeedback": "အောက်ပါ blockတွေထဲကတစ်ခုကို ကြိုးစားသုံးကြည့်ပါ:",
   "tryHOC": "Hour of Code ကို စမ်းကြည့်ပါ",
