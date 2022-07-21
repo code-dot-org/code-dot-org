@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+# This script is only intended for development and adhoc environments.
+exit unless [:development, :adhoc].include? rack_env
+
 require_relative '../../dashboard/config/environment'
 require 'optparse'
 
