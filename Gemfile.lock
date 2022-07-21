@@ -215,9 +215,9 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
-    active_model_serializers (0.10.10)
-      actionpack (>= 4.1, < 6.1)
-      activemodel (>= 4.1, < 6.1)
+    active_model_serializers (0.10.13)
+      actionpack (>= 4.1, < 7.1)
+      activemodel (>= 4.1, < 7.1)
       case_transform (>= 0.2)
       jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
     active_record_query_trace (1.5.3)
@@ -438,8 +438,8 @@ GEM
       httpclient
       json
     firebase_token_generator (2.0.0)
-    font-awesome-rails (4.7.0.5)
-      railties (>= 3.2, < 6.1)
+    font-awesome-rails (4.7.0.8)
+      railties (>= 3.2, < 8.0)
     fspath (3.1.0)
     gemoji (2.1.0)
     geocoder (1.6.4)
@@ -630,8 +630,8 @@ GEM
     parallel (1.12.1)
     parallel_tests (2.27.0)
       parallel
-    paranoia (2.4.2)
-      activerecord (>= 4.0, < 6.1)
+    paranoia (2.5.3)
+      activerecord (>= 5.1, < 7.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
     pdf-reader (2.9.2)
@@ -741,7 +741,7 @@ GEM
     retryable (2.0.4)
     rexml (3.2.5)
     rinku (2.0.4)
-    rmagick (3.2.0)
+    rmagick (4.2.5)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -908,7 +908,7 @@ PLATFORMS
 
 DEPENDENCIES
   acmesmith (~> 2.3.1)
-  active_model_serializers (~> 0.10.10)
+  active_model_serializers (~> 0.10.13)
   active_record_query_trace
   active_record_union
   activerecord-import
@@ -958,7 +958,7 @@ DEPENDENCIES
   fakeredis
   firebase
   firebase_token_generator
-  font-awesome-rails (~> 4.7.0.5)
+  font-awesome-rails (~> 4.7.0.8)
   full-name-splitter!
   gctools!
   gemoji
@@ -1014,7 +1014,7 @@ DEPENDENCIES
   os
   parallel
   parallel_tests
-  paranoia (~> 2.4.2)
+  paranoia (~> 2.5.0)
   pdf-reader
   petit!
   pg
@@ -1040,7 +1040,7 @@ DEPENDENCIES
   rest-client (~> 2.0.1)
   retryable
   rinku
-  rmagick (~> 3.2)
+  rmagick (~> 4.2.5)
   rspec
   rubocop (= 1.28)
   rubocop-performance

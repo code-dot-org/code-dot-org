@@ -551,7 +551,7 @@
         "ramp_artist_loops4_2021": "Star",
         "scrat_loops_C-F_video_2021": "Cykly v Dobe ľadovej - Video",
         "CSD U2 publish video": "Publikovanie tvojej webstránky",
-        "CSD U3 if else predict": "Predvídať",
+        "CSD U3 if else predict": "Predpoveď",
         "CourseD_EOC_artist_example2021": "Plážová krajina (Umelec)",
         "CourseD_EOC_bounce1_example_2021": "Náhodná rýchlosť pri odraze",
         "CourseD_EOC_dance_examples_2021": "Tanečná párty",
@@ -694,7 +694,7 @@
         "CSD U3 Random free play_2021": "Voľná hra",
         "CSD U3 collisions build isTouching_2021": "Detekcia kolízie",
         "CSD U3 function video_2021": "Video: Funkcie",
-        "CSD U3 if else predict_2021": "Predvídať",
+        "CSD U3 if else predict_2021": "Predpoveď",
         "CSD U3 platform sample1_2021": "Príklad plošinovej skákacej hry",
         "CSD U5 Amazon Data Video_2021": "Ako Amazon používa dáta",
         "CSD U5 Netflix Data Video_2021": "Ako Netflix používa dáta",
@@ -760,7 +760,21 @@
         "CSD: Introduction to the Draw Loop": "Video: Predstavujeme cyklus draw()",
         "CSD: Introduction to the Draw Loop_2018": "Video: Predstavujeme cyklus draw()",
         "CSD: Introduction to the Draw Loop_2019": "Video: Predstavujeme cyklus draw()",
-        "CSD: Introduction to the Draw Loop_2021": "Video: Predstavujeme cyklus draw()"
+        "CSD: Introduction to the Draw Loop_2021": "Video: Predstavujeme cyklus draw()",
+        "CSD U3 AnimationsMulti Play Defender": "Ukážková hra",
+        "CSD U3 AnimationsMulti Play Defender_2018": "Ukážková hra",
+        "CSD U3 AnimationsMulti Play Defender_2019": "Ukážková hra",
+        "CSD U3 AnimationsMulti Play Defender_2021": "Ukážková hra",
+        "CSD U3 collisions car intro": "Ukážková hra",
+        "CSD U3 collisions car intro_2018": "Ukážková hra",
+        "CSD U3 collisions car intro_2019": "Ukážková hra",
+        "CSD U3 collisions car intro_2021": "Ukážková hra",
+        "CSD U3 collisions predict set velocity code": "Interakcie sprajtov",
+        "CSD U3 collisions predict set velocity code_2018": "Interakcie sprajtov",
+        "CSD U3 collisions predict set velocity code_2019": "Interakcie sprajtov",
+        "CSD U3 collisions predict set velocity code_2021": "Interakcie sprajtov",
+        "CSD games flyer demo_2021": "Ukážková hra",
+        "CSD games side scroller demo_2021": "Ukážková hra"
       }
     }
   }

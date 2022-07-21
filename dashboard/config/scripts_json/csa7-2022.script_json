@@ -14,8 +14,8 @@
         },
         {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7",
           "type": "feedback",
           "visibility": "Teacher-only"
         }
@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-27 19:40:49 UTC",
+    "serialized_at": "2022-07-20 17:43:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5677,6 +5677,18 @@
       }
     },
     {
+      "name": "Software Engineering: User Stories",
+      "url": "https://youtu.be/jN26YGTFOa4",
+      "key": "software_engineering_user_stories",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "software_engineering_user_stories"
+      }
+    },
+    {
       "name": "The Rise of Open Source Software",
       "url": "https://www.google.com/url?q=https://youtu.be/SpeDK1TPbew?t%3D570&sa=D&source=docs&ust=1652106086596672&usg=AOvVaw3915GNx-HeoQJLeFERGO7q",
       "key": "the_rise_of_open_source_software",
@@ -6060,6 +6072,12 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "_key_u7l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "software_engineering_user_stories"
       }
     },
     {

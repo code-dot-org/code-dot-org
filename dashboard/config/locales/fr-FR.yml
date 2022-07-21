@@ -516,7 +516,6 @@ fr:
     popup:
       progress_for_user: progrès de %{name}
       progress: Ton progrès
-      lines: 'Total de lignes de code: %{lines}'
       close: FERMER
       mastery: Concepts
       puzzle_map: Étapes
@@ -721,7 +720,7 @@ fr:
       équipe étendue</a>, notre casting vidéo et nos <a href="https://code.org/about/advisors">
       conseillers d'éducation</a> pour leur soutien à la création de Code Studio.
     help_from_html: Nous tenons particulièrement à remercier les ingénieurs d’Amazon,
-      de Google et de Microsoft,qui ont contribué à créer ce matériel.
+      de Google et de Microsoft, qui ont contribué à la création de ce matériel.
     help_from_html_old: Des ingénieurs de chez Google, Microsoft, Facebook et Twitter
       ont contribué à créer ces documents de formation.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits
@@ -744,7 +743,9 @@ fr:
     code_from_html: Code.org utilise p5.play, qui est distribué sous la licence <a
       href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
-    powered_by_aws: Fourni par Amazon Web Services
+    powered_by_aws: 'Amazon Web Services et le logo « Powered by AWS » sont des marques
+      déposées d''Amazon.com, Inc. ou ses filiales aux États-Unis et/ou dans d''autres
+      pays. '
     built_on_github: Construit sur GitHub de Microsoft
     google_copyright: "&copy; Google Inc. utilisé avec autorisation. Google Classroom
       est une marque déposée de Google Inc."
@@ -787,14 +788,14 @@ fr:
     label: 'Vidéo '
   compatibility:
     upgrade:
-      unsupported_message: Votre navigateur n'est pas supporté. Merci de mettre votre
-        navigateur à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}).
-        Vous pouvez essayer d’afficher la page mais la fonctionnalité risque d’être
-        rompue.
+      unsupported_message: 'Votre navigateur n''est pas compatible. Merci de mettre
+        votre navigateur à jour avec [un des navigateurs compatibles avec nos services](%{supported_browsers_url}).
+        Vous pouvez essayer d’afficher la page, mais les fonctionnalités risquent
+        d’être compromises. '
       link: En savoir plus
-      applab_unsupported_tablet: Le Labo des Applis fonctionne idéalement sur un ordinateur
-        portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez
-        des problèmes en utilisant cet outil sur votre appareil actuel.
+      applab_unsupported_tablet: Le Labo des Applis fonctionne au mieux sur un ordinateur
+        portable ou fixe équipé d'une souris et d'un clavier. Il se peut que vous
+        rencontriez des difficultés en utilisant cet outil avec votre appareil actuel.
       gamelab_unsupported_tablet: Le Labo des Jeux fonctionne idéalement sur un ordinateur
         portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez
         des problèmes en utilisant cet outil sur votre appareil actuel.
@@ -1292,8 +1293,8 @@ fr:
   locked_stage: Les contenus ne sont pas visibles car cette étape est verrouillée
     pour l'instant. Ton professeur la déverrouillera lorsqu'il sera temps de travailler
     dessus ou pour consulter tes réponses.
-  hidden_stage: Ton professeur n'avait pas prévu que tu travailles ici. Demande lui
-    quelle leçon tu dois suivre.
+  hidden_stage: 'Ton enseignant n''avait pas prévu que tu te retrouves ici. Demande-lui
+    sur quelle leçon tu devrais travailler. '
   hidden_script: Ton professeur n'avait pas prévu que tu travailles ici. Demande lui
     quelle unité tu dois suivre.
   no_course_access_student: Vous n'avez pas accès à ce cours. S'il vous plaît informez

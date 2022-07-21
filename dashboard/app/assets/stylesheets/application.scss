@@ -1698,7 +1698,15 @@ a.download-video {
   }
 
   #forgot-password {
-    font-family: $gotham-extra-bold-italics;
+    font-family: $gotham-extra-bold;
+  }
+
+  #password_field, #new_user {
+    margin-bottom: 0;
+  }
+
+  .password_help_link {
+    margin-bottom: 21px;
   }
 
   button {
@@ -1706,7 +1714,7 @@ a.download-video {
     background-color: $orange;
     border: 1px solid $orange;
     color: $white;
-    font-family: $gotham-extra-bold;
+    font-family: $gotham-bold;
     margin: 5px 0;
     width: $button-width;
   }
@@ -1715,6 +1723,10 @@ a.download-video {
     background-color: $blue;
     border: 1px solid $blue;
   }
+}
+
+#code_without_signing_in {
+  margin-top: 80px;
 }
 
 #signup, #school-info-modal {
@@ -2116,7 +2128,7 @@ a.download-video {
       background-color: $orange;
       border: 1px solid $orange;
       color: $white;
-      font-family: $gotham-extra-bold;
+      font-family: $gotham-bold;
       padding: 10px 20px;
       margin-right: 0;
     }
@@ -2124,7 +2136,7 @@ a.download-video {
 
   .oauth-sign-in {
     color: $white;
-    font-family: $gotham-extra-bold;
+    font-family: $gotham-bold;
     width: 100%;
     margin: 5px 0;
 
