@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-labs",
-    "serialized_at": "2022-07-20 03:27:25 UTC",
+    "serialized_at": "2022-07-20 16:08:20 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -128,7 +128,7 @@
     },
     {
       "key": "lesson-6",
-      "name": "Arrays within Magpie (Optional)",
+      "name": "Arrays within Magpie",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -144,12 +144,27 @@
       }
     },
     {
-      "key": "lesson-2",
-      "name": "Introduction to Celebrity",
+      "key": "lesson-11",
+      "name": "Multiple Choice / Free Response / Extensions",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Introduction to Celebrity",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
       "properties": {
         "overview": "In this activity students are introduced to the game of Celebrity. Then students will\nbrainstorm different design options for creating a computer version of the game,\nincluding the Game class and the play method. Although students are encouraged\nto brainstorm the classes that make the most sense to them, because they will be\nutilizing a provided GUI, their focus will be narrowed as they progress through this\nactivity. Spending time talking about different design decisions that they might have\nmade, and how they would affect the GUI and other provided code is a worthwhile\ndiscussion that could be had at many points throughout this lab.",
         "preparation": "* Small slips of paper - 5 per students (can also have students cut their own slips of paper if necessary)",
@@ -165,10 +180,10 @@
     {
       "key": "lesson-7",
       "name": "The Celebrity Class: A Simple Version",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "overview": "This activity focuses on creating a new class, the `Celebrity` class for the Celebrity Game. The new class will have constructor(s), instance variables and methods!",
         "student_overview": "In this lesson, you will creating the `Celebrity` class with constructor(s), instance variables and methods!"
@@ -182,10 +197,10 @@
     {
       "key": "lesson-8",
       "name": "Putting It All Together",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -197,10 +212,10 @@
     {
       "key": "lesson-9",
       "name": "Extending the Celebrity Class",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -212,10 +227,10 @@
     {
       "key": "lesson-10",
       "name": "Open-Ended Activity",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -432,6 +447,45 @@
       "seeding_key": {
         "lesson_activity.key": "d247f206-bb36-4d8a-9129-881bb9b0c106",
         "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "e03e9bc0-d7d2-4aff-a26d-745f39be56e9",
+      "position": 1,
+      "properties": {
+        "name": "Multiple Choice"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e03e9bc0-d7d2-4aff-a26d-745f39be56e9",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "bf099e75-7459-4edf-8b9c-1e19f905bbd7",
+      "position": 2,
+      "properties": {
+        "name": "Free Response"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf099e75-7459-4edf-8b9c-1e19f905bbd7",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022"
+      }
+    },
+    {
+      "key": "0d077504-6ef2-47fb-8929-9a8d17cc1370",
+      "position": 3,
+      "properties": {
+        "name": "Extensions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0d077504-6ef2-47fb-8929-9a8d17cc1370",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-labs-2022"
       }
@@ -1202,6 +1256,99 @@
       }
     },
     {
+      "key": "ffcd8970-2970-466c-8b3f-41bae3c62143",
+      "position": 1,
+      "properties": {
+        "description": "No questions will come directly from this material and it will not be provided as part of the Quick\nReference for the exam. Instead, this material will lead to two types of multiple-choice questions:\ncomplex conditional questions and string manipulation questions."
+      },
+      "seeding_key": {
+        "activity_section.key": "ffcd8970-2970-466c-8b3f-41bae3c62143",
+        "lesson_activity.key": "e03e9bc0-d7d2-4aff-a26d-745f39be56e9"
+      }
+    },
+    {
+      "key": "63d43b54-8bdd-41e7-b54d-2767744bb848",
+      "position": 2,
+      "properties": {
+        "progression_name": "Multiple Choice"
+      },
+      "seeding_key": {
+        "activity_section.key": "63d43b54-8bdd-41e7-b54d-2767744bb848",
+        "lesson_activity.key": "e03e9bc0-d7d2-4aff-a26d-745f39be56e9"
+      }
+    },
+    {
+      "key": "4d2bf3da-4a65-4833-8af3-9177aeb6c404",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "For more practice, teachers can also ask when “**two**,” “**three**,” or “**four**” would be printed for multiple choice question 1."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4d2bf3da-4a65-4833-8af3-9177aeb6c404",
+        "lesson_activity.key": "e03e9bc0-d7d2-4aff-a26d-745f39be56e9"
+      }
+    },
+    {
+      "key": "177895e7-87d9-400d-b3bf-04b288e3dce9",
+      "position": 1,
+      "properties": {
+        "description": "Free-response questions related to this lab will typically focus on text processing. One possible question\nis shown below.\n\n\nWhen Web developers want to convert plain text documents to HTML, they need to make changes to\nthe text to insert tags and replace certain characters. For this question, you will write part of the class to\nconvert text to HTML. You will write methods to replace underscores (\"_\") with tags indicating the\ntext should be in italics."
+      },
+      "seeding_key": {
+        "activity_section.key": "177895e7-87d9-400d-b3bf-04b288e3dce9",
+        "lesson_activity.key": "bf099e75-7459-4edf-8b9c-1e19f905bbd7"
+      }
+    },
+    {
+      "key": "66a28c32-eba9-454a-a7d0-134ca445db63",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The empty class definition for this problem is given. Students will need to write the associated methods, as well as to create the runner file. \n\nThere is an exemplar provided that shows one possible solution."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "66a28c32-eba9-454a-a7d0-134ca445db63",
+        "lesson_activity.key": "bf099e75-7459-4edf-8b9c-1e19f905bbd7"
+      }
+    },
+    {
+      "key": "a24f97f5-6918-4914-80fe-c4f34bf059e3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Free Response Question"
+      },
+      "seeding_key": {
+        "activity_section.key": "a24f97f5-6918-4914-80fe-c4f34bf059e3",
+        "lesson_activity.key": "bf099e75-7459-4edf-8b9c-1e19f905bbd7"
+      }
+    },
+    {
+      "key": "2b3b5ca0-e311-4cba-8a86-59cf9570c2ce",
+      "position": 1,
+      "properties": {
+        "progression_name": "Extensions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "These are possible extensions that will call on students to exercise greater depth of knowledge and/or to research additional functionalities within Java."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2b3b5ca0-e311-4cba-8a86-59cf9570c2ce",
+        "lesson_activity.key": "0d077504-6ef2-47fb-8929-9a8d17cc1370"
+      }
+    },
+    {
       "key": "28878e82-c5f0-4e47-aaf8-7a380093938c",
       "position": 1,
       "properties": {
@@ -1810,6 +1957,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L4-L8_2022"
+        ],
         "progression": "Two Word Combinations"
       },
       "bonus": false,
@@ -1832,6 +1982,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L4-L9_2022"
+        ],
         "progression": "Breaking the Bot"
       },
       "bonus": false,
@@ -1854,6 +2007,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L5-L1_2022"
+        ],
         "progression": "Refactoring the Randomness"
       },
       "bonus": false,
@@ -1876,6 +2032,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L5-Match_2022"
+        ],
         "progression": "Random Elements in Arrays"
       },
       "bonus": false,
@@ -1898,6 +2057,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Editing CSA CB_Lab Magpie-L5-L3-Bubble_2022"
+        ],
         "progression": "Random Elements in Arrays"
       },
       "bonus": false,
@@ -1920,6 +2082,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA CB_Lab Magpie-L5-FR_2022"
+        ],
         "progression": "Random Elements in Arrays"
       },
       "bonus": false,
@@ -1938,24 +2103,178 @@
     },
     {
       "chapter": 26,
-      "position": 5,
+      "position": 1,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "progression": "Optional Lab Assessments"
+        "progression": "Multiple Choice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSA CB_Lab Magpie-L5-Assessment1"
         ],
-        "lesson.key": "lesson-6",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-labs-2022",
-        "activity_section.key": "370c53ee-f4f5-4b37-9c59-5b714f357114"
+        "activity_section.key": "63d43b54-8bdd-41e7-b54d-2767744bb848"
       },
       "level_keys": [
         "CSA CB_Lab Magpie-L5-Assessment1"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Multiple Choice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "63d43b54-8bdd-41e7-b54d-2767744bb848"
+      },
+      "level_keys": [
+        "CSA CB_Lab Magpie-L5-Assessment2"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Response Question"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "a24f97f5-6918-4914-80fe-c4f34bf059e3"
+      },
+      "level_keys": [
+        "CSA CB_Lab Magpie-L5-Assessment3"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Response Question"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment4"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "a24f97f5-6918-4914-80fe-c4f34bf059e3"
+      },
+      "level_keys": [
+        "CSA CB_Lab Magpie-L5-Assessment4"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Response Question"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment5"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "a24f97f5-6918-4914-80fe-c4f34bf059e3"
+      },
+      "level_keys": [
+        "CSA CB_Lab Magpie-L5-Assessment5"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Extensions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment6"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "2b3b5ca0-e311-4cba-8a86-59cf9570c2ce"
+      },
+      "level_keys": [
+        "CSA CB_Lab Magpie-L5-Assessment6"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Extensions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment7"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "2b3b5ca0-e311-4cba-8a86-59cf9570c2ce"
+      },
+      "level_keys": [
+        "CSA CB_Lab Magpie-L5-Assessment7"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Extensions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment8"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "2b3b5ca0-e311-4cba-8a86-59cf9570c2ce"
+      },
+      "level_keys": [
+        "CSA CB_Lab Magpie-L5-Assessment8"
       ]
     }
   ],
@@ -2266,10 +2585,94 @@
         "script_level.level_keys": [
           "CSA CB_Lab Magpie-L5-Assessment1"
         ],
-        "lesson.key": "lesson-6",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-labs-2022",
-        "activity_section.key": "370c53ee-f4f5-4b37-9c59-5b714f357114"
+        "activity_section.key": "63d43b54-8bdd-41e7-b54d-2767744bb848"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Magpie-L5-Assessment2",
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "63d43b54-8bdd-41e7-b54d-2767744bb848"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Magpie-L5-Assessment3",
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "a24f97f5-6918-4914-80fe-c4f34bf059e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Magpie-L5-Assessment4",
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment4"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "a24f97f5-6918-4914-80fe-c4f34bf059e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Magpie-L5-Assessment5",
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment5"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "a24f97f5-6918-4914-80fe-c4f34bf059e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Magpie-L5-Assessment6",
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment6"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "2b3b5ca0-e311-4cba-8a86-59cf9570c2ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Magpie-L5-Assessment7",
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment7"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "2b3b5ca0-e311-4cba-8a86-59cf9570c2ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA CB_Lab Magpie-L5-Assessment8",
+        "script_level.level_keys": [
+          "CSA CB_Lab Magpie-L5-Assessment8"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-labs-2022",
+        "activity_section.key": "2b3b5ca0-e311-4cba-8a86-59cf9570c2ce"
       }
     }
   ],
