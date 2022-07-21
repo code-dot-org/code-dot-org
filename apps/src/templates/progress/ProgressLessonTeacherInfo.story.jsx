@@ -64,7 +64,6 @@ const createStore = ({
   ];
   store.dispatch(
     initProgress({
-      scriptId: 17,
       scriptName: 'csp1',
       lessons: lessons
     })

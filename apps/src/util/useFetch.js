@@ -3,11 +3,8 @@ import {useState, useEffect} from 'react';
 const baseFetchState = {
   loading: false,
   data: null,
-  response: null,
   error: null
 };
-
-const EMPTY_OPTIONS = {};
 
 /**
  * React hook for making a fetch request to a resource that returns a JSON
@@ -38,7 +35,7 @@ const EMPTY_OPTIONS = {};
  *    request will be sent if any of the values in the array change
  * @returns {{loading: boolean, data: Object, error: Object}}
  */
-export const useFetch = (url, options = EMPTY_OPTIONS) => {
+export const useFetch = (url, options) => {
   const [fetchState, setFetchState] = useState(baseFetchState);
 
   useEffect(() => {
@@ -75,7 +72,7 @@ export const useFetch = (url, options = EMPTY_OPTIONS) => {
 
         const data = await response.json();
         if (!canceled) {
-          setFetchState({...baseFetchState, data, response});
+          setFetchState({...baseFetchState, data: data});
         }
       } catch (e) {
         console.error(e);
@@ -96,7 +93,6 @@ export const useFetch = (url, options = EMPTY_OPTIONS) => {
   return {
     loading: fetchState.loading,
     data: fetchState.data,
-    response: fetchState.response,
     error: fetchState.error
   };
 };
