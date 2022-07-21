@@ -482,7 +482,6 @@ sk:
     popup:
       progress_for_user: Pokrok pre užívateľa %{name}
       progress: Váš pokrok
-      lines: 'Počet riadkov kódu: %{lines}'
       close: ZAVRIEŤ
       mastery: Koncept
       puzzle_map: Etapy

@@ -283,7 +283,6 @@ lt:
     popup:
       progress_for_user: "%{name} pažanga"
       progress: 'Jūsų pažanga'
-      lines: 'Iš viso kodo eilučių: %{lines}'
       close: 'UŽDARYTI'
       mastery: 'Laimėjimai'
       puzzle_map: 'Etapai'

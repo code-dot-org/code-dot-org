@@ -1292,6 +1292,111 @@
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Explicar el proceso de diseño y cómo ayudó a dar forma al resultado final del proyecto."
         },
+        "56d03b70-1f5b-408c-a3d4-bd8439cc372e": {
+          "description": " Aplicar el proceso de resolución de problemas para entrenar a una computadora en\\\n la resolución de un problema"
+        },
+        "3160fb3d-404e-41b2-b8dc-ad2f4baf630c": {
+          "description": "Describir las diferencias entre aprendizaje supervisado y no supervisado."
+        },
+        "5e9ca97a-3af9-4a06-bab7-09e6831a6070": {
+          "description": "Describir cómo la inteligencia artificial impacta en la sociedad"
+        },
+        "83f51427-8851-4311-b7d6-bc2dc72898f0": {
+          "description": "Describir cómo un modelo toma una decisión (por ejemplo: de forma aleatoria, con un árbol de decisiones, o utilizando datos)"
+        },
+        "554a2d22-308b-4e01-be9d-b8bd9287a065": {
+          "description": "Buscar patrones en los datos para ayudar a tomar una decisión"
+        },
+        "8870551e-1d9f-4c03-b78e-e1ac184cba86": {
+          "description": "Explicar cómo las computadoras pueden separar los datos para tomar una decisión"
+        },
+        "aa76cd8b-eb6b-48ee-92f9-e48af49997c0": {
+          "description": "Utilizar AI Lab en la selección de características para entrenar un modelo"
+        },
+        "7d06da51-46a7-4210-9366-091598d8f8cf": {
+          "description": "Utilizar las herramientas de visualización de datos para decidir qué características incluir al momento de entrenar un modelo"
+        },
+        "49f91ded-6e10-4292-81c0-bf90fdd0de99": {
+          "description": "Crear una aplicación que utilice aprendizaje automático"
+        },
+        "1d44b50f-9b7f-4fd8-819b-7f62f60fda8a": {
+          "description": "Añadir pantallas y eventos en App Lab"
+        },
+        "a22e4c3d-2f63-4fbc-972c-6bbec9d73c64": {
+          "description": "Leer una ficha de modelo y utilizarla para evaluar un modelo"
+        },
+        "02f51780-cf77-4ecd-874b-df34b3770de9": {
+          "description": "Utilizar visualizaciones de datos e iteración de características para entrenar modelos de aprendizaje automático"
+        },
+        "58409d45-e5cc-431d-9cfb-2a2f3ec482d5": {
+          "description": "Crear fichas modelo en AI Lab para guardar modelos de aprendizaje automático"
+        },
+        "b73d7232-626e-4e25-a777-fc943cff4870": {
+          "description": "Utilizar una ficha modelo para actualizar la interfaz de usuario de una aplicación"
+        },
+        "edb72a9b-c1d3-4e52-87bc-1c16a42fc404": {
+          "description": "Utilizar sentencias si para cambiar el comportamiento de una aplicación"
+        },
+        "102a6bad-2171-4d9c-b49b-56b0bca9fda1": {
+          "description": "Explicar cómo las computadoras pueden tomar decisiones comparando similitudes en los datos"
+        },
+        "8d138ce3-323a-4285-b76d-9fdc215610d4": {
+          "description": "Explicar cómo el cálculo de la precisión de los datos numéricos es diferente a la de datos categóricos"
+        },
+        "382925be-583d-4458-a749-9039780ebfed": {
+          "description": "Utilizar visualizaciones de datos para encontrar patrones en datos numéricos"
+        },
+        "5a207f71-9052-4460-810f-b0118f6067ea": {
+          "description": "Comparar y contrastar datos categóricos con datos numéricos"
+        },
+        "6d340248-8d1c-472f-8e0a-ceba9d233246": {
+          "description": "Utilización de la ficha modelo para crear nuevos elementos de entrada para una aplicación de aprendizaje automático"
+        },
+        "e7f59f67-a615-43b9-acc3-39dc2ebda34a": {
+          "description": "Actualizar el código preestablecido del modelo para utilizar nuevas entradas en una app de aprendizaje automático"
+        },
+        "1bc4557b-5ff1-4f9f-ae5f-1ff202f2084c": {
+          "description": "Definir la inteligencia artificial (IA) con sus propias palabras, utilizando como ejemplo las tecnologías presentes en su vida cotidiana."
+        },
+        "88f6eb6d-2837-4d90-be14-132d823a3ab1": {
+          "description": "Describir al menos un ejemplo de un problema ético relacionado con la IA, y su impacto en la sociedad."
+        },
+        "173089ae-6d54-457a-a391-0a8f5510aaca": {
+          "description": "Crear al menos un principio orientativo que aborde un problema de ética de la IA."
+        },
+        "516ee8d7-e5f6-41c3-a27e-a6a22c67e3e2": {
+          "description": "Crear un modelo de aprendizaje automático utilizando un conjunto de datos del mundo real"
+        },
+        "eca7e19d-20f2-41f4-a1eb-9d90257b7f24": {
+          "description": "Crear una aplicación que use un modelo de aprendizaje automático"
+        },
+        "105797c1-c68c-4ff9-af1f-4381a25459b0": {
+          "description": "Desarrollar la observación del problema en un tema principal utilizando estrategias de lluvia de ideas."
+        },
+        "3fef29ac-2dd7-4d6c-983d-b8f8c16fd7bd": {
+          "description": "Desarrollar preguntas de una encuesta que puedan utilizarse para crear una aplicación de aprendizaje automático."
+        },
+        "7c5f2ec7-d487-49a3-9db3-df016dfac686": {
+          "description": "Utilice una plantilla para crear una encuesta con Formularios de Google"
+        },
+        "1d298ad1-82f0-4e55-ad7b-62ccfa360119": {
+          "description": "Descargar un archivo csv desde Hojas de cálculo de Google"
+        },
+        "1598362d-3c6e-4a16-aa0e-ac3f3046f96e": {
+          "description": "Cargar un archivo csv al AI Lab"
+        },
+        "90487953-eb66-44f3-918e-2395a9fa6379": {
+          "description": "Analizar y limpiar datos en Hojas de cálculo de Google"
+        },
+        "bac73557-0d4b-4836-8b56-1d0d5b2257ef": {
+          "description": "Explicar cómo las decisiones en la recopilación de datos pueden ocasionar problemas al entrenar un modelo de aprendizaje automático"
+        },
+        "99cfd798-833c-40e9-8382-bce53c24ce78": {
+          "description": "Crear una aplicación que utilice aprendizaje automático"
+        },
+        "9bcee94b-4d0a-4a92-a6a7-142e0ecdc6fa": {
+          "description": "Aplicar el proceso de resolución de problemas para crear una aplicación de IA para el bien social"
+        },
         "ad6a4213-49c3-49e2-ace9-5a7d36daa458": {
           "description": " Evaluar de manera crítica un objeto en base a su diseño y considerar si este cumple con ciertos requerimientos."
         },

@@ -2501,7 +2501,9 @@ es-MX:
           repetir hasta completar conducto
           {STATEMENT}
       craft_repeatUntilGoal:
-        text: repetir hasta llegar a la meta
+        text: |-
+          repetir hasta llegar a la meta
+          {STATEMENT}
       craft_spawnEntity:
         text: generar {ENTITY}
         options:

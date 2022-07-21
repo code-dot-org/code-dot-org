@@ -12061,12 +12061,12 @@ es-MX:
         answers:
         - text: No sucederá nada.
           feedback: Incorrecto. El pez dorado comenzará a dar vueltas
-        - text: El pez dorado flotará hasta la parte superior de la pantalla
+        - text: La planta rodadora flotará hasta la parte superior de la pantalla
           feedback: Incorrecto. El pez dorado comenzará a dar vueltas
-        - text: " El pez dorado comenzará a dar vueltas"
+        - text: La planta rodadora comenzará a caer
           correct: true
           feedback: "¡Correcto!"
-        - text: El pez dorado se encenderá y apagará.
+        - text: La planta rodadora se encenderá y apagará.
           feedback: Incorrecto. El pez dorado comenzará a dar vueltas
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
@@ -12609,7 +12609,7 @@ es-MX:
             AM.png">
         title: dibujarSprites
       CSD U3 drawing practice choice_2021:
-        display_name: Practica
+        display_name: Práctica
         description: "¡Practica mucho!"
       CSD U3 game intro_2018_2019_pilot_2021:
         content1: descripción aquí
@@ -12760,13 +12760,13 @@ es-MX:
         display_name: Condicionales Practicar
         description: Practica el uso de booleanos y condicionales con estas actividades.
       CSD web draw loop practice choice_2021:
-        display_name: Practica
+        display_name: Práctica
         description: Prueba a utilizar el bucle de dibujo con estas actividades.
       CSD web movement practice choice_2021:
-        display_name: Practica
+        display_name: Práctica
         description: Prueba a utilizar el bucle de dibujo con estas actividades.
       CSD web text practice choice_2021:
-        display_name: Practica
+        display_name: Práctica
         description: Pon a prueba tus conocimientos de texto en estas actividades.
       CSDU6 Innovation_2021:
         teacher_markdown: |+
