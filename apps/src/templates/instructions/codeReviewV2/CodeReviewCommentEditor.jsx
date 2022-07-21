@@ -43,7 +43,7 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
       case 'code_block':
         return `\`\`\`\n${children}\n\`\`\`\n`;
       case 'paragraph':
-        return `${children}\n`;
+        return children.length ? `${children}\n` : '';
       default:
         return children;
     }
