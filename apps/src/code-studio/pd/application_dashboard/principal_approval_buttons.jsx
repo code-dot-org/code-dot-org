@@ -83,7 +83,7 @@ export default class PrincipalApprovalButtons extends React.Component {
       method: 'POST',
       url: `/api/v1/pd/application/teacher/${
         this.props.applicationId
-      }/principal_approval_not_required`
+      }/change_principal_approval_requirement`
     }).done(data => {
       this.props.onChange(this.props.applicationId, data.principal_approval);
 
