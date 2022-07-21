@@ -448,7 +448,7 @@ class NetSimApi < Sinatra::Base
   # @return [Boolean]
   def has_json_utf8_headers?(request)
     request.content_type.to_s.split(';').first == 'application/json' &&
-        request.content_charset.to_s.downcase == 'utf-8'
+        request.content_charset.to_s.casecmp?('utf-8')
   end
 
   # Perform delete operation, potentially on multiple rows at once,
