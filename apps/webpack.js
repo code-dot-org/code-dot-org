@@ -132,6 +132,11 @@ var baseConfig = {
         loader: 'ejs-webpack-loader'
       },
       {test: /\.css$/, loader: 'style-loader!css-loader'},
+
+      // Rules for global SCSS (*.scss) and modules (*.module.scss)
+      // are currently duplicated for Webpack 4. This can be simplified via
+      // css-loader's options.modules.auto option when we upgrade to Webpack 5:
+      // https://v4.webpack.js.org/loaders/css-loader/#auto
       {
         test: /\.scss$/,
         use: [
@@ -145,8 +150,26 @@ var baseConfig = {
               quietDeps: true
             }
           }
-        ]
+        ],
+        exclude: /\.module\.scss$/
       },
+      {
+        test: /\.scss$/,
+        use: [
+          {loader: 'style-loader'},
+          {loader: 'css-loader', options: {modules: {auto: true}}},
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: [scssIncludePath],
+              implementation: sass,
+              quietDeps: true
+            }
+          }
+        ],
+        include: /\.module\.scss$/
+      },
+
       {test: /\.interpreted.js$/, loader: 'raw-loader'},
       {test: /\.exported_js$/, loader: 'raw-loader'},
       {
