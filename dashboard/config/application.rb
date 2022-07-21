@@ -29,6 +29,7 @@ module Dashboard
     config.load_defaults 5.1
     config.action_dispatch.return_only_media_type_on_content_type = false
     config.autoloader = :zeitwerk
+    config.action_dispatch.use_authenticated_cookie_encryption = true
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
