@@ -90,7 +90,6 @@ describe('Level tests', function() {
 
   testUtils.setExternalGlobals();
 
-  // do we need to update these?
   before(function(done) {
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
