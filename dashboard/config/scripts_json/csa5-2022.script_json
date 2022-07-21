@@ -14,8 +14,8 @@
         },
         {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=5",
           "type": "feedback",
           "visibility": "Teacher-only"
         }
@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-30 14:28:04 UTC",
+    "serialized_at": "2022-07-20 17:40:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
