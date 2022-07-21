@@ -47,56 +47,56 @@ describe('maker/commands.js', () => {
     });
 
     it(`maps 'input' mode to 0`, () => {
-      pinMode({pin: 42, mode: 'input'});
-      expect(stubBoardController.pinMode).to.have.been.calledWith(42, 0);
+      pinMode({pin: 0, mode: 'input'});
+      expect(stubBoardController.pinMode).to.have.been.calledWith(0, 0);
     });
 
     it(`maps 'output' mode to 1`, () => {
-      pinMode({pin: 42, mode: 'output'});
-      expect(stubBoardController.pinMode).to.have.been.calledWith(42, 1);
+      pinMode({pin: 0, mode: 'output'});
+      expect(stubBoardController.pinMode).to.have.been.calledWith(0, 1);
     });
 
     it(`maps 'analog' mode to 2`, () => {
-      pinMode({pin: 42, mode: 'analog'});
-      expect(stubBoardController.pinMode).to.have.been.calledWith(42, 2);
+      pinMode({pin: 0, mode: 'analog'});
+      expect(stubBoardController.pinMode).to.have.been.calledWith(0, 2);
     });
 
     it(`maps 'pwm' mode to 3`, () => {
-      pinMode({pin: 42, mode: 'pwm'});
-      expect(stubBoardController.pinMode).to.have.been.calledWith(42, 3);
+      pinMode({pin: 0, mode: 'pwm'});
+      expect(stubBoardController.pinMode).to.have.been.calledWith(0, 3);
     });
 
     it(`maps 'servo' mode to 4`, () => {
-      pinMode({pin: 42, mode: 'servo'});
-      expect(stubBoardController.pinMode).to.have.been.calledWith(42, 4);
+      pinMode({pin: 0, mode: 'servo'});
+      expect(stubBoardController.pinMode).to.have.been.calledWith(0, 4);
     });
   });
 
   describe('digitalWrite(pin, value)', () => {
     it('delegates to makerBoard.digitalWrite', () => {
-      digitalWrite({pin: 22, value: 1});
-      expect(stubBoardController.digitalWrite).to.have.been.calledWith(22, 1);
+      digitalWrite({pin: 0, value: 1});
+      expect(stubBoardController.digitalWrite).to.have.been.calledWith(0, 1);
     });
   });
 
   describe('digitalRead(pin)', () => {
     it('delegates to makerBoard.digitalRead', () => {
-      digitalRead({pin: 18});
-      expect(stubBoardController.digitalRead).to.have.been.calledWith(18);
+      digitalRead({pin: 0});
+      expect(stubBoardController.digitalRead).to.have.been.calledWith(0);
     });
   });
 
   describe('analogWrite(pin, value)', () => {
     it('delegates to makerBoard.analogWrite', () => {
-      analogWrite({pin: 22, value: 33});
-      expect(stubBoardController.analogWrite).to.have.been.calledWith(22, 33);
+      analogWrite({pin: 0, value: 33});
+      expect(stubBoardController.analogWrite).to.have.been.calledWith(0, 33);
     });
   });
 
   describe('analogRead(pin)', () => {
     it('delegates to makerBoard.analogRead', () => {
-      analogRead({pin: 18});
-      expect(stubBoardController.analogRead).to.have.been.calledWith(18);
+      analogRead({pin: 0});
+      expect(stubBoardController.analogRead).to.have.been.calledWith(0);
     });
   });
 
@@ -123,8 +123,8 @@ describe('maker/commands.js', () => {
 
   describe('createButton(pin)', () => {
     it('delegates to makerBoard.createButton', () => {
-      createButton({pin: 4});
-      expect(stubBoardController.createButton).to.have.been.calledWith(4);
+      createButton({pin: 2});
+      expect(stubBoardController.createButton).to.have.been.calledWith(2);
     });
   });
 

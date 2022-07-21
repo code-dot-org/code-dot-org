@@ -48,7 +48,6 @@ export function apiValidateType(
   if (typeof opts[validatedTypeKey] === 'undefined') {
     var properType;
     var customWarning;
-    var isWarning = true;
     switch (expectedType) {
       case 'color':
         // Special handling for colors, must be a string and a valid RGBColor:
@@ -71,10 +70,10 @@ export function apiValidateType(
         if (reservedPins.includes(varValue)) {
           customWarning = `${funcName}() ${varName} parameter value (${varValue}) is a reserved ${expectedType}. Please use a different ${expectedType}.`;
         } else if (!validPins.includes(varValue)) {
-          isWarning = false;
           outputError(
-            `pin ${varValue} is not a valid pinid. Please use a valid pinid.`
+            `pin parameter value (${varValue}) is not a valid pinid. Please use a valid pinid.`
           );
+          return false;
         }
         break;
       case 'number':
@@ -113,7 +112,7 @@ export function apiValidateType(
     }
     properType =
       properType || (opt === OPTIONAL && typeof varValue === 'undefined');
-    if (!properType && isWarning) {
+    if (!properType) {
       const outputValue =
         typeof varValue === 'function' ? 'function' : varValue;
       // Use the default warning message if a custom one has not been set
