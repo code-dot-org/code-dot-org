@@ -153,10 +153,9 @@ class EditSectionForm extends Component {
       isVerifiedInstructor // DCDO Flag - show/hide Lock Section field
     } = this.props;
 
-    const courseDisplayName =
-      section && section.courseOfferingId
-        ? courseOfferings[section.courseOfferingId].display_name
-        : '';
+    const courseDisplayName = section.courseOfferingId
+      ? courseOfferings[section.courseOfferingId].display_name
+      : '';
 
     /**
     OAuth and personal email login types can not be changed.
