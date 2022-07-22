@@ -105,11 +105,11 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 1. Install **rbenv** via `brew install rbenv`
 
 1. Install **Ruby 2.5.0**
-    1. For non-M1 systems, `rbenv install 2.5.0` should be sufficient
+    1. For non-M1 systems, running `rbenv install` from the project root directory should be sufficient
     2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
 
       ```sh
-      optflags="-Wno-error=implicit-function-declaration" LDFLAGS="-L/opt/homebrew/opt/libffi/lib" CPPFLAGS="-I/opt/homebrew/opt/libffi/include" PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" rbenv install 2.5.0
+      optflags="-Wno-error=implicit-function-declaration" LDFLAGS="-L/opt/homebrew/opt/libffi/lib" CPPFLAGS="-I/opt/homebrew/opt/libffi/include" PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" rbenv install
       ```
 
 1. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
@@ -229,9 +229,8 @@ Note that there are additional steps for Apple Silicon (M1) when it comes to `bu
     1. Run `rbenv init`
     1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here](https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
     1. Pick up those changes: `source ~/.bash_profile`
-1. Install Ruby 2.5.0
-    1. `rbenv install 2.5.0`
-    1. Set the global version of Ruby: `rbenv global 2.5.0`
+1. Install Ruby
+    1. Execute `rbenv install --skip-existing` from the root directory
     1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
 1. Set up [nvm](https://github.com/creationix/nvm)
     1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
@@ -308,11 +307,10 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. If there are any errors (they appear red), follow the [`rbenv` installation instructions] (https://github.com/rbenv/rbenv#basic-github-checkout) to properly configure `rbenv`, following steps for **Ubuntu Desktop** so that config changes go into `.bashrc`.
     1. **Note:** Ubuntu 22.04 ships with versions of `libssl` and `openssl` that are incompatible with `ruby-build`; see https://github.com/rbenv/ruby-build/discussions/1940 for context
         1. As a result, attempts to run `rbenv install` will fail. To resolve, compile a valid version of `openssl` locally and direct `rbenv` to configure ruby to use it as described here: https://github.com/rbenv/ruby-build/discussions/1940#discussioncomment-2663209
-1. Install Ruby 2.5.0 with rbenv
-    1. `rbenv install 2.5.0`
+1. Install Ruby with rbenv
+    1. Execute `rbenv install --skip-existing` from the root directory
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
        `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
-    1. `rbenv global 2.5.0`
     1. `rbenv rehash`
 1. Install yarn
     1. `npm install -g yarn@1.22.5`.
