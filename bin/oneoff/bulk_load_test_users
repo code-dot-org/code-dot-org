@@ -41,55 +41,87 @@ puts "Options: #{options}"
 options.freeze
 
 $dry_run = options[:dry_run]
+$input_file = options[:filename]
+$dry_run_suffix = options[:dry_run] ? "[DRY_RUN] - " : ""
 
-def get_existing_user(params)
-  user = User.find_by(email: params[:email])
+# get the current user
+def get_existing_user(user_params)
+  user = User.find_by(email: user_params[:email])
   return user
 end
 
-def create_user(user_params)
-  puts "We will create user. Nothing found for " + user_params[:email]
-
-  User.transaction do
-    user = User.new(user_params)
-    user.validate_for_finish_sign_up
-    unless user.errors.blank?
-      raise "Issues found while creating user " + user.errors.to_json
+# Given the set of params, create or upsert a new user on the database
+def upsert_user(user_params)
+  ActiveRecord::Base.transaction do
+    user = get_existing_user(user_params)
+    if user.nil?
+      puts $dry_run_suffix + "Creating new user: " + user_params[:email]
+      user = User.new(user_params)
+      user.validate_for_finish_sign_up
+      unless user.errors.blank?
+        raise $dry_run_suffix + "Issues found while creating user " + user.errors.to_json
+      end
+    else
+      puts $dry_run_suffix + "Updating new existing user:" + user_params[:email]
+    end
+    unless $dry_run
+      user.update_without_password(user_params)
     end
   end
 end
 
-def parse_input_row(row)
-  email = 'testing_pablo_1' + row[0]
-  username = email.split('@')[0]
-  user_params = {
-    username: username,
-    password: username,
-    name: username,
-    email: email,
-    user_type: 'teacher'.freeze,
-  }
-  return user_params
-end
+class BugCrowdAccountInfo
+  def initialize(email)
+    @email = email
+  end
 
-def _commit_user
-  Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
-    if retries > 0
-      error_message = "retry ##{retries} failed with exception: #{exception}"
-      puts error_message
-    end
-    Devise::RegistrationsController.create
+  def get_code_org_user_params
+    user_params = {
+      username: username,
+      password: password,
+      name: name,
+      email: @email,
+      user_type: user_type,
+      age: age,
+    }
+    return user_params
+  end
+
+  private
+
+  def user_type
+    return 'teacher'.freeze
+  end
+
+  def username
+    email_name_tokens = get_email_name_tokens
+    return email_name_tokens.join("_")
+  end
+
+  def name
+    email_name_tokens = get_email_name_tokens
+    return email_name_tokens.join(" ")
+  end
+
+  #This is the current value for teachers' new accounts
+  def age
+    return 21
+  end
+
+  def password
+    return @email.split('@')[0]
+  end
+
+  def get_email_name_tokens
+    return @email.split('@')[0].split('-').slice(0, 2)
   end
 end
 
 def run
-  return CSV.foreach('test_user_input.csv', {headers: true}) do |row|
-    user_params = parse_input_row(row)
-    user = get_existing_user(row)
-    puts user_params
-    if user.nil?
-      create_user(user_params)
-    end
+  return CSV.foreach($input_file, {headers: true}) do |row|
+    bugcrowd_account_info = BugCrowdAccountInfo.new(row[0])
+    user_params = bugcrowd_account_info.get_code_org_user_params
+    upsert_user(user_params)
   end
 end
 
