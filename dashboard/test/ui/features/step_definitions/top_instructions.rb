@@ -69,6 +69,8 @@ Given /^I write a code review v2 comment with text "([^"]*)"$/ do |text|
      And I wait to see ".editable-text-area"
      And I write code review text "#{text}"
      And I wait for 5 seconds
+     And I press keys "#{text}" for element ".editable-text-area"
+     And I wait for 5 seconds
      And element ".editable-text-area" contains text "#{text}"
      And I press ".code-review-comment-submit" using jQuery
      And I wait until element ".code-review-comment-body" is visible
