@@ -303,7 +303,6 @@ fa:
     popup:
       progress_for_user: "درصد پیشرفت %{name}"
       progress: 'پیشرفت شما'
-      lines: 'تعداد خطوط کد: %{lines}'
       close: 'بستن'
       mastery: 'مفاهیم'
       puzzle_map: 'مراحل'

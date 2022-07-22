@@ -369,7 +369,7 @@
           "definition": "Bilgisayar ekranında kullanıcıdan giriş bekleyen bir ileti."
         },
         "input/coursef/2021": {
-          "word": "Girdi",
+          "word": "Giriş",
           "definition": "Bilgisayarların kullanıcılardan aldıkları bilgiler."
         },
         "loop/coursef/2021": {
@@ -909,7 +909,7 @@
           "word": "Fonksiyon"
         },
         "input/csd/2021": {
-          "word": "Girdi"
+          "word": "Giriş"
         },
         "processing/csd/2021": {
           "word": "İşleme"

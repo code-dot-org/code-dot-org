@@ -502,7 +502,6 @@ mr:
     popup:
       progress_for_user: "%{name} ची प्रगती"
       progress: तुमची प्रगती
-      lines: 'कोडच्या एकूण ओळी: %{lines}'
       close: बंद
       mastery: संकल्पना
       puzzle_map: टप्पे

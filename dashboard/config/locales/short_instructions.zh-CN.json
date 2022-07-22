@@ -3835,7 +3835,8 @@
         "Test embedded K1 Blockly in instructions": "用三个`向西移动`模块和一个`采摘玉米`模块来通过这关。",
         "U1L13 Text Compression": "在文本中找到规律（如重复的单词或词组）。在右侧的词典中输入你所发现的规律。当你将其输入到字典中时，以文本形式表现的规律就会用符号替代。",
         "U2L10 NetSim Automatic DNS": "此版本的互联网模拟器中，提供了域名服务器（DNS），并知道所有连接上的计算机。以 GET [hostname] 的格式来以 <yourRouterNumber>.15 作为地址，给域名服务器发送消息来获得学生的地址。",
-        "allthethings-anigif-instructions": "把我移到东边的猪那里！"
+        "allthethings-anigif-instructions": "把我移到东边的猪那里！",
+        "OPD-K5 whats your plan": "现在，花一些时间来思考你应当在什么时候以怎样的方式完成这些在线课程，确保能从这段经历里得到最大的收获。如果你已经设计好一个完美计划了，那么请继续深入到计算机科学的海洋中。"
       }
     }
   }
