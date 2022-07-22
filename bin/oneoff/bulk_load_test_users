@@ -1,0 +1,96 @@
+#!/usr/bin/env ruby
+
+# This script is only intended for development and adhoc environments.
+
+require_relative '../../dashboard/config/environment'
+require 'optparse'
+exit unless [:development, :adhoc].include? rack_env
+
+# To run: ruby bin/oneoff/bulk_load_test_users --filename=users.csv --dry-run=false
+# To revert: ruby bin/oneoff/move_user_storage_ids_to_dashboard.rb --revert
+
+# Parse options
+options = {
+  revert: false,
+}
+
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+    This moves the user_storage_ids table to the Dashboard DB and renames it to user_project_storage_ids
+    Options:
+  BANNER
+  opts.on('--filename=users.csv',
+          String,
+          'Name of CSV file with list of email addresses to bulk create users.'
+  ) do |filename|
+    options[:filename] = filename
+  end
+  opts.on('--dry-run',
+          'Enables read-only mode where no changes are written to the database'
+  ) do |dry_run|
+    options[:dry_run] = dry_run
+  end
+
+  opts.on('-h', '--help', 'Prints this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+puts "Options: #{options}"
+options.freeze
+
+$dry_run = options[:dry_run]
+
+def get_existing_user(params)
+  user = User.find_by(email: params[:email])
+  return user
+end
+
+def create_user(user_params)
+  puts "We will create user. Nothing found for " + user_params[:email]
+
+  User.transaction do
+    user = User.new(user_params)
+    user.validate_for_finish_sign_up
+    unless user.errors.blank?
+      raise "Issues found while creating user " + user.errors.to_json
+    end
+  end
+end
+
+def parse_input_row(row)
+  email = 'testing_pablo_1' + row[0]
+  username = email.split('@')[0]
+  user_params = {
+    username: username,
+    password: username,
+    name: username,
+    email: email,
+    user_type: 'teacher'.freeze,
+  }
+  return user_params
+end
+
+def _commit_user
+  Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
+    if retries > 0
+      error_message = "retry ##{retries} failed with exception: #{exception}"
+      puts error_message
+    end
+    Devise::RegistrationsController.create
+  end
+end
+
+def run
+  return CSV.foreach('test_user_input.csv', {headers: true}) do |row|
+    user_params = parse_input_row(row)
+    user = get_existing_user(row)
+    puts user_params
+    if user.nil?
+      create_user(user_params)
+    end
+  end
+end
+
+run
