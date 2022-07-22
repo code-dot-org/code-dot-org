@@ -1,4 +1,4 @@
-@no_mobile
+@no_mobile @no_safari @no_firefox
 # @eyes
 Feature: Code review V2
 
@@ -12,17 +12,17 @@ Feature: Code review V2
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?enableExperiments=code_review_v2&noautoplay=true"
 
     # Create a commit
-    And I wait to see "#javalab-editor-save"
-    Then I press "javalab-editor-save"
-    And I wait to see "#commit-notes"
-    And I press keys "my first commit" for element "#commit-notes"
-    And element "#commit-notes" contains text "my first commit"
-    Then I press "confirmationButton"
-    And I wait until element "#commit-notes" is not visible
+    # And I wait to see "#javalab-editor-save"
+    # Then I press "javalab-editor-save"
+    # And I wait to see "#commit-notes"
+    # And I press keys "my first commit" for element "#commit-notes"
+    # And element "#commit-notes" contains text "my first commit"
+    # Then I press "confirmationButton"
+    # And I wait until element "#commit-notes" is not visible
 
     # Check out review tab
     And I load the review tab
-    And I wait until element ".uitest-code-review-timeline-commit" is visible
+    # And I wait until element ".uitest-code-review-timeline-commit" is visible
 
     # Open a code review
     And I press ".uitest-open-code-review" using jQuery
@@ -35,7 +35,7 @@ Feature: Code review V2
     And I load the review tab
     And I load the code review for peer number 1 in the list
     # TODO: This test is flakey due to issues with writing text in slateJS editor, commenting out to unblock
-    # And I write a code review v2 comment with text "Great work!"
+    And I write a code review v2 comment with text "Great work!"
     # Then I see no difference for "student code reviewing peer" using stitch mode "none"
     And I sign out using jquery
 
