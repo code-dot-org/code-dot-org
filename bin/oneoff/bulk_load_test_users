@@ -70,6 +70,8 @@ def upsert_user(user_params)
   end
 end
 
+# Wrapper class that converts a bugcrowdninja account into a param bag
+# compatible with the new user APIs for code.org
 class BugCrowdAccountInfo
   def initialize(email)
     @email = email
@@ -117,6 +119,13 @@ class BugCrowdAccountInfo
   end
 end
 
+# This script gets a CVS file containing one column with bugcrowdninja accounts.
+#
+# Considerations:
+# The user name will be the email if available or a random one will be assigned
+# the password is the same as the email user (before the @)
+# Accounts are teacher type (21+ age)
+# if the account exists, they will be overwritten with the behavior explained above
 def run
   return CSV.foreach($input_file, {headers: true}) do |row|
     bugcrowd_account_info = BugCrowdAccountInfo.new(row[0])
