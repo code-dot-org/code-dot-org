@@ -119,7 +119,7 @@ cat <<JSON > $FIRST_BOOT
 <% end -%>
     "stack_name": "$STACK"
   },
-<% if database -%>
+<% if database && !rack_env?(:production) -%>
   "cdo-mysql": {
     "rds_proxy": "${DBProxy.Endpoint}"
   },
