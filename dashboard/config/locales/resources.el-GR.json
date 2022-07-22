@@ -44,6 +44,9 @@
         "lesson_plans/courseb/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/courseb/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/courseb/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -52,6 +55,9 @@
         },
         "lesson_plans/coursea/2018": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursea/2018": {
           "name": "Φόρουμ Καθηγητών"
@@ -62,6 +68,9 @@
         "lesson_plans/coursed/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursed/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursed/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -70,6 +79,9 @@
         },
         "lesson_plans/coursef/2018": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursef/2018": {
           "name": "Φόρουμ Καθηγητών"
@@ -80,6 +92,9 @@
         "lesson_plans/express/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/express/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/express/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -89,6 +104,9 @@
         "lesson_plans/coursee/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursee/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursee/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -97,6 +115,9 @@
         },
         "lesson_plans/coursec/2018": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursec/2018": {
           "name": "Φόρουμ Καθηγητών"
@@ -110,6 +131,9 @@
         "lesson_plans_2/csd/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_2/csd/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum_2/csd/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -122,6 +146,9 @@
         "lesson_plans_5/csd/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_5/csd/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum_5/csd/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -130,6 +157,9 @@
         },
         "lesson_plans_4/csd/2018": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum_4/csd/2018": {
           "name": "Φόρουμ Καθηγητών"
@@ -143,6 +173,9 @@
         "lesson_plans_3/csd/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_3/csd/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum_3/csd/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -155,6 +188,9 @@
         "lesson_plans_1/csd/2018": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_1/csd/2018": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum_1/csd/2018": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -163,6 +199,9 @@
         },
         "lesson_plans/csd/2018": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/csd/2018": {
           "name": "Φόρουμ Καθηγητών"
@@ -176,6 +215,9 @@
         "lesson_plans/coursea/2019": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursea/2019": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursea/2019": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -187,6 +229,9 @@
         },
         "lesson_plans/courseb/2019": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/courseb/2019": {
           "name": "Φόρουμ Καθηγητών"
@@ -200,6 +245,9 @@
         "lesson_plans/coursed/2019": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursed/2019": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursed/2019": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -211,6 +259,9 @@
         },
         "lesson_plans/coursef/2019": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursef/2019": {
           "name": "Φόρουμ Καθηγητών"
@@ -224,6 +275,9 @@
         "lesson_plans/coursee/2019": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursee/2019": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursee/2019": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -232,6 +286,9 @@
         },
         "lesson_plans/express/2019": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/express/2019": {
           "name": "Φόρουμ Καθηγητών"
@@ -244,6 +301,9 @@
         },
         "lesson_plans/coursec/2019": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursec/2019": {
           "name": "Φόρουμ Καθηγητών"
@@ -260,6 +320,9 @@
         "lesson_plans_2/csd/2019": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_2/csd/2019": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "vocabulary_2/csd/2019": {
           "name": "Λεξιλόγιο"
         },
@@ -268,6 +331,9 @@
         },
         "lesson_plans_5/csd/2019": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Τυπική Αποτύπωση"
         },
         "vocabulary_5/csd/2019": {
           "name": "Λεξιλόγιο"
@@ -278,17 +344,26 @@
         "lesson_plans_3/csd/2019": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_3/csd/2019": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "vocabulary_3/csd/2019": {
           "name": "Λεξιλόγιο"
         },
         "lesson_plans_4/csd/2019": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_4/csd/2019": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "vocabulary_4/csd/2019": {
           "name": "Λεξιλόγιο"
         },
         "lesson_plans/csd/2019": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Τυπική Αποτύπωση"
         },
         "vocabulary/csd/2019": {
           "name": "Λεξιλόγιο"
@@ -299,6 +374,9 @@
         "lesson_plans_1/csd/2019": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_1/csd/2019": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "vocabulary_1/csd/2019": {
           "name": "Λεξιλόγιο"
         },
@@ -307,6 +385,9 @@
         },
         "lesson_plans_2/csd/2017": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum_2/csd/2017": {
           "name": "Φόρουμ Καθηγητών"
@@ -320,6 +401,9 @@
         "lesson_plans_5/csd/2017": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_5/csd/2017": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum_5/csd/2017": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -332,6 +416,9 @@
         "lesson_plans_1/csd/2017": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_1/csd/2017": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum_1/csd/2017": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -341,6 +428,9 @@
         "lesson_plans/csd/2017": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/csd/2017": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/csd/2017": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -349,6 +439,9 @@
         },
         "lesson_plans_4/csd/2017": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum_4/csd/2017": {
           "name": "Φόρουμ Καθηγητών"
@@ -362,6 +455,9 @@
         "lesson_plans_3/csd/2017": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings_3/csd/2017": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum_3/csd/2017": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -370,6 +466,9 @@
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "type": "Βίντεο"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
         },
         "sprites_in_action/coursef/2021": {
           "name": "Χαρακτήρες σε Δράση"
@@ -426,6 +525,9 @@
         },
         "teacher_forum_1/coursef/2021": {
           "name": "Φόρουμ Καθηγητών"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
         },
         "mimi-activity/courseb/2021": {
           "name": "Μετακίνησέ το, Μετακίνησέ το"
@@ -675,6 +777,12 @@
         "turns_angles/express/2021": {
           "type": "Βίντεο"
         },
+        "sprite_lab_documentation/express/2021": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
+        },
         "sprites_in_action/express/2021": {
           "name": "Χαρακτήρες σε Δράση"
         },
@@ -714,6 +822,9 @@
         "teacher_forum_1/pre-express/2021": {
           "name": "Φόρουμ Καθηγητών"
         },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
+        },
         "common-sense-media-pause-think/coursee/2021": {
           "type": "Βίντεο"
         },
@@ -737,6 +848,9 @@
         },
         "teacher_forum_1/coursee/2021": {
           "name": "Φόρουμ Καθηγητών"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Βίντεο"
@@ -839,6 +953,9 @@
         },
         "introduction_to_arrays/csd/2021": {
           "type": "Βίντεο"
+        },
+        "playing_notes/csd/2021": {
+          "name": "Παίζοντας Νότες"
         },
         "loops_in_app_lab/csd/2021": {
           "name": "Βρόχοι Για",
@@ -981,10 +1098,15 @@
           "name": "Side Scroller",
           "type": "Οδηγός Προγράμματος"
         },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "Ταχύτητα και το μοτίβο αντίθετης φοράς"
+        },
         "flyer-game-1/csd/2021": {
+          "name": "Παιχνίδι δημιουργίας διαφημιστικού  εντύπου",
           "type": "Κατάλογος"
         },
         "flyer-game/csd/2021": {
+          "name": "Παιχνίδι δημιουργίας διαφημιστικού  εντύπου",
           "type": "Οδηγός Προγράμματος"
         },
         "calling_and_defining_functions/csd/2021": {
@@ -1035,6 +1157,7 @@
           "name": "Κεφαλίδες και Παράγραφοι"
         },
         "video_debugging/csd/2021": {
+          "name": "Βίντεο: Αποσφαλμάτωση",
           "type": "Βίντεο"
         },
         "html-web-page-1/csd/2021": {
@@ -1048,6 +1171,12 @@
         },
         "lists/csd/2021": {
           "name": "Λίστες"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Ανίχνευση στα μέσα κοινωνικής δικτύωσης"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "Ανίχνευση στα μέσα κοινωνικής δικτύωσης"
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "Εισαγωγή στην CSS - μέρος 1",
@@ -1118,6 +1247,9 @@
         "lesson_plans/pre-express/2020": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/pre-express/2020": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/pre-express/2020": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -1126,6 +1258,9 @@
         },
         "lesson_plans/express/2020": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/express/2020": {
           "name": "Φόρουμ Καθηγητών"
@@ -1139,6 +1274,9 @@
         "lesson_plans/courseb/2020": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/courseb/2020": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/courseb/2020": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -1150,6 +1288,9 @@
         },
         "lesson_plans/coursed/2020": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursed/2020": {
           "name": "Φόρουμ Καθηγητών"
@@ -1163,6 +1304,9 @@
         "lesson_plans/coursec/2020": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursec/2020": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursec/2020": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -1174,6 +1318,9 @@
         },
         "lesson_plans/coursee/2020": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursee/2020": {
           "name": "Φόρουμ Καθηγητών"
@@ -1187,6 +1334,9 @@
         "lesson_plans/coursea/2020": {
           "name": "Σχέδια μαθήματος"
         },
+        "standard_mappings/coursea/2020": {
+          "name": "Τυπική Αποτύπωση"
+        },
         "teacher_forum/coursea/2020": {
           "name": "Φόρουμ Καθηγητών"
         },
@@ -1198,6 +1348,9 @@
         },
         "lesson_plans/coursef/2020": {
           "name": "Σχέδια μαθήματος"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Τυπική Αποτύπωση"
         },
         "teacher_forum/coursef/2020": {
           "name": "Φόρουμ Καθηγητών"

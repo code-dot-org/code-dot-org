@@ -2,6 +2,18 @@
   "pl-PL": {
     "data": {
       "standards": {
+        "ccela/3.RL.4": {
+          "description": "Określ znaczenie słów i wyrażeń użytych w tekście, odróżniając język dosłowny od niedosłownego."
+        },
+        "ccela/4.RL.7": {
+          "description": "Twórz połączenia między tekstem opowiadania lub dramatu a wizualną lub ustną prezentacją tekstu, określając, gdzie każda wersja odzwierciedla konkretne opisy i wskazówki w tekście."
+        },
+        "ccela/5.RL.4": {
+          "description": "Określ znaczenie słów i fraz użytych w tekście, w tym w języku figuratywnym, takim jak metafory i porównania."
+        },
+        "ccela/5.RL.7": {
+          "description": "Przeanalizuj, w jaki sposób elementy wizualne i multimedialne wpływają na znaczenie, ton lub piękno tekstu (np. powieść graficzna, multimedialna prezentacja fikcji, bajki ludowej, mitu, wiersza)."
+        },
         "csta/1B-AP-10": {
           "description": "Twórz programy, które obejmują sekwencje, zdarzenia, pętle i wyrażenia warunkowe"
         },
@@ -90,10 +102,10 @@
           "description": "Uczestnicz we wspólnych rozmowach z różnymi partnerami na tematy z 2-giej klasy i tekstów, z rówieśnikami i dorosłymi w małych i większych grupach."
         },
         "ccela/3.L.6": {
-          "description": "Przyswajaj sobie i korzystaj w sposób właściwy z słów i zwrotów o charakterze konwersacyjnym, ogólnym akademickim oraz typowym dla domeny dostosowanych do klasy, z uwzględnieniem takich, które sygnalizują relacje przestrzenne i czasowe (np. Tego wieczoru, po kolacji, zaczęliśmy ich szukać)."
+          "description": "Przyswajaj sobie i korzystaj w sposób właściwy ze słów i zwrotów o charakterze konwersacyjnym, ogólno akademickim oraz typowym dla domeny dostosowanych do klasy, z uwzględnieniem takich, które sygnalizują relacje przestrzenne i czasowe (np. Tego wieczoru, po kolacji, zaczęliśmy ich szukać)."
         },
         "ccela/3.SL.1": {
-          "description": "Angażuj się skutecznie w szereg wspólnych rozmów (w trybie jeden do jednego, w grupach, w trybie prowadzenia przez nauczyciela) z różnymi partnerami na tematy i o tekstach na poziomie klasy 3, korzystając z pomysłów innych i wyrażać swoje własne w sposób jasny."
+          "description": "Angażuj się skutecznie we wspólne rozmowy (w trybie jeden do jednego, w grupach, w trybie prowadzenia przez nauczyciela) z różnymi partnerami na tematy i o tekstach na poziomie klasy 3, korzystając z pomysłów innych i wyrażając swoje własne w sposób jasny."
         },
         "ccmath/1.OA.1": {
           "description": "Korzystaj z dodawania i odejmowania w zakresie do 20, aby rozwiązywać zadania tekstowe dotyczące sytuacji dodawania, ujmowania, łączenia, rozdzielania i porównywania z niewiadomymi we wszystkich pozycjach np. poprzez korzystanie z obiektów, rysunków i równań z symbolem"
@@ -111,7 +123,7 @@
           "description": "Praktykuj odpowiedzialne obywatelstwo cyfrowe (zachowania zgodne z prawem i etyczne) w zakresie korzystania z systemów technologicznych i oprogramowania. "
         },
         "csta2011/CPP.L1:6-01": {
-          "description": "Korzystaj z zasobów technologicznych (np. kalkulatorów, próbek zbierania danych, urządzeń mobilnych, filmów wideo, oprogramowania edukacyjnego oraz narzędzi internetowych) do rozwiązywania problemów oraz nauki samodzielnej."
+          "description": "Korzystaj z zasobów technologicznych (np. kalkulatorów, próbek zbierania danych, urządzeń mobilnych, filmów wideo, oprogramowania edukacyjnego oraz narzędzi internetowych) do rozwiązywania problemów oraz samodzielnej nauki."
         },
         "ccela/11-12.L.6": {
           "description": "Przyswajaj sobie i korzystaj w sposób poprawny z słów i zwrotów o ogólnym charakterze naukowym albo typowych dla domeny, wystarczających do czytania, pisania, mówienia i słuchania w szkole wyższej i na poziomie gotowości do podjęcia pracy zawodowej; wykaż się niezależnością w gromadzeniu wiedzy słownikowej, gdy uznasz"
@@ -210,7 +222,7 @@
           "description": "Opracowuj programy zawierające sekwencje i proste pętle, aby wyrażać pomysły i rozwiązać problem."
         },
         "csta/1B-IC-18": {
-          "description": "Omów technologie informatyczne, które zmieniły świat i wyrażaj, w jaki sposób te technologie wpływają i jaki wpływ mają na nie praktyki kulturowe. "
+          "description": "Omów technologie informatyczne, które zmieniły świat i przedstaw, w jaki sposób te technologie wpływają i jaki wpływ mają na nie praktyki kulturowe. "
         },
         "csta/1B-AP-11": {
           "description": "Rozkładaj (podziel) zadania na mniejsze, możliwe do opanowania podzadania, aby ułatwić proces tworzenia programu."
@@ -238,6 +250,21 @@
         },
         "csta/2-AP-10": {
           "description": "Użyj schematów blokowych i/lub pseudokodu, aby rozwiązać złożone problemy w postaci algorytmów."
+        },
+        "csta/2-DA-07": {
+          "description": "Reprezentuj dane przy użyciu wielu schematów kodowania."
+        },
+        "csta/2-NI-05": {
+          "description": "Wyjaśnij, w jaki sposób fizyczne i cyfrowe środki bezpieczeństwa chronią informacje elektroniczne."
+        },
+        "csta/2-NI-06": {
+          "description": "Zastosuj wiele metod szyfrowania, aby modelować bezpieczną transmisję informacji."
+        },
+        "csta/2-IC-23": {
+          "description": "Opisz kompromisy między udostępnieniem informacji a zachowaniem ich prywatności i bezpieczeństwa."
+        },
+        "csta/3A-AP-20": {
+          "description": "Oceń licencje, które ograniczają użycie artefaktów obliczeniowych podczas korzystania z zasobów, takich jak biblioteki."
         }
       }
     }

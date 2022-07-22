@@ -435,7 +435,6 @@ ko:
     popup:
       progress_for_user: "%{name} 의 진도"
       progress: '내 진도'
-      lines: '총 %{lines} 라인'
       close: 'CLOSE'
       mastery: '개념'
       puzzle_map: '단계들'
