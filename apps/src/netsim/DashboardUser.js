@@ -78,7 +78,7 @@ DashboardUser.getCurrentUser = function() {
       success: function(data /*, textStatus, jqXHR*/) {
         DashboardUser.currentUser_.initialize(data);
       },
-      error: function(jqXHR, textStatus, errorThrown) {
+      error: function(/*jqXHR, textStatus, errorThrown*/) {
         DashboardUser.currentUser_.initialize({
           isSignedIn: false
         });
