@@ -425,7 +425,6 @@ zh-TW:
     popup:
       progress_for_user: "%{name} 的進度"
       progress: 你的學習進度
-      lines: 程式碼總計行數：%{lines}
       close: 關閉
       mastery: 觀念
       puzzle_map: 所有階段

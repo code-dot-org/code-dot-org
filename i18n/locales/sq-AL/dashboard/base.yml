@@ -298,7 +298,6 @@ sq:
     popup:
       progress_for_user: "Progresi i %{name}"
       progress: 'Progresi yt'
-      lines: 'Totali i rreshtave të kodit: %{lines}'
       close: 'MBYLL'
       mastery: 'Konceptet'
       puzzle_map: 'Fazat'

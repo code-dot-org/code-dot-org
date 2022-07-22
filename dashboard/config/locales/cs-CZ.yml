@@ -493,7 +493,6 @@ cs:
     popup:
       progress_for_user: Pokrok užívatele %{name}
       progress: Tvůj pokrok
-      lines: 'Celkem řádků kódu: %{lines}'
       close: ZAVŘÍT
       mastery: Pojmy
       puzzle_map: Úrovně
