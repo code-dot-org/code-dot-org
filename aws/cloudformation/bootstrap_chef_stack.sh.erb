@@ -64,7 +64,7 @@ CHAIN=$(aws s3 cp $CURRENT/chain.pem - | replace_newline)
 KEY=$(aws s3 cp $CURRENT/key.pem - | replace_newline)
 <% end -%>
 
-<% if database -%>
+<% if database && !rack_env?(:production) -%>
 apt-get install -y  jq
 DB_SECRET_NAME=${DatabaseSecret}
 DB_SECRET=$(aws --region $REGION secretsmanager get-secret-value --secret-id $DB_SECRET_NAME --version-stage AWSCURRENT | jq -r ".SecretString")
@@ -104,7 +104,7 @@ cat <<JSON > $FIRST_BOOT
     "redis_read_addresses": "${GeocoderGroup.ReadEndPoint.Addresses}",
     "redis_read_ports": "${GeocoderGroup.ReadEndPoint.Ports}",
 <% end -%>
-<% if database -%>
+<% if database && !rack_env?(:production) -%>
     "db_writer": "mysql://$DB_USERNAME:$DB_PASSWORD@${AuroraCluster.Endpoint.Address}:${AuroraCluster.Endpoint.Port}/",
     "db_reader": "mysql://$DB_USERNAME:$DB_PASSWORD@${AuroraCluster.ReadEndpoint.Address}:${AuroraCluster.Endpoint.Port}/",
     "db_cluster_id": "${AuroraCluster}",
