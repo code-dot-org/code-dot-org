@@ -86,6 +86,7 @@ export function saveLockState(previousLockState, newLockState, csrfToken) {
       'Content-Type': 'application/json',
       'X-CSRF-Token': csrfToken
     },
+    credentials: 'same-origin',
     body: JSON.stringify({updates: lockStateChanges})
   });
 }
