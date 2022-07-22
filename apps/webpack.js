@@ -36,8 +36,7 @@ var toTranspileWithinNodeModules = [
     'node_modules',
     'microsoft-cognitiveservices-speech-sdk'
   ),
-  path.resolve(__dirname, 'node_modules', 'slate'),
-  path.resolve(__dirname, 'node_modules', 'react-loading-skeleton')
+  path.resolve(__dirname, 'node_modules', 'slate')
 ];
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
