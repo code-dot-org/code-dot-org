@@ -45,8 +45,7 @@ const initialState = {
     focusAreaLessonIds: [],
     isSummaryView: false,
     professionalLearningCourse: false,
-    scriptName: 'script-name',
-    scriptId: 17
+    scriptName: 'script-name'
   },
   teacherSections: {
     sectionsAreLoaded: true,
