@@ -114,6 +114,7 @@ describe('LessonLockDataApi', () => {
           'Content-Type': 'application/json',
           'X-CSRF-Token': 'fake-csrf'
         },
+        credentials: 'same-origin',
         body: JSON.stringify({
           updates: [
             {
