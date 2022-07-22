@@ -33,7 +33,7 @@ Rails.application.config.active_job.skip_after_callbacks_if_terminated = true
 
 # Specify whether `ActiveSupport::TimeZone.utc_to_local` returns a time with an
 # UTC offset or a UTC time.
-ActiveSupport.utc_to_local_returns_utc_offset_times = true
+#ActiveSupport.utc_to_local_returns_utc_offset_times = true
 
 # Change the default HTTP status code to `308` when redirecting non-GET/HEAD
 # requests to HTTPS in `ActionDispatch::SSL` middleware.
@@ -64,4 +64,4 @@ Rails.application.config.action_mailer.deliver_later_queue_name = nil
 
 # Generate a `Link` header that gives a hint to modern browsers about
 # preloading assets when using `javascript_include_tag` and `stylesheet_link_tag`.
-Rails.application.config.action_view.preload_links_header = true
+#Rails.application.config.action_view.preload_links_header = true
