@@ -891,10 +891,10 @@
           "name": "Detekcia kolízie"
         },
         "csd3-2018/Complex Sprite Movement": {
-          "name": "Komplexný pohyb „sprite“ objektov"
+          "name": "Komplexný pohyb sprajtov"
         },
         "csd3-2018/Collisions": {
-          "name": "Kolízie \"sprite\" objektov"
+          "name": "Kolízie sprajtov"
         },
         "csd3-2018/Functions": {
           "name": "Funkcie"
@@ -1428,10 +1428,10 @@
           "name": "Detekcia kolízie"
         },
         "csd3-2019/Complex Sprite Movement": {
-          "name": "Komplexný pohyb „sprite“ objektov"
+          "name": "Komplexný pohyb sprajtov"
         },
         "csd3-2019/Collisions": {
-          "name": "Kolízie \"sprite\" objektov"
+          "name": "Kolízie sprajtov"
         },
         "csd3-2019/Functions": {
           "name": "Funkcie"
@@ -1986,10 +1986,10 @@
           "name": "Detekcia kolízie"
         },
         "csd3-2017/Complex Sprite Movement": {
-          "name": "Komplexný pohyb „sprite“ objektov"
+          "name": "Komplexný pohyb sprajtov"
         },
         "csd3-2017/Collisions": {
-          "name": "Kolízie \"sprite\" objektov"
+          "name": "Kolízie sprajtov"
         },
         "csd3-2017/Functions": {
           "name": "Funkcie"
@@ -3386,16 +3386,27 @@
           "student_overview": "**Otázka dňa:  Aké zručnosti a techniky sú dôležité pri vytváraní interaktívneho programu?**\n\nV tejto lekcii si pomocou všetkých programovacích konceptov a techník, ktoré sme si doteraz predstavili, naplánuješ a vytvoríš interaktívnu pohľadnicu."
         },
         "csd3-2021/Velocity": {
-          "name": "Rýchlosť"
+          "name": "Rýchlosť",
+          "student_overview": "**Otázka dňa: Ako dokážu programovacie jazyky ukryť komplikované vzory tak, aby zjednodušili programovanie?**\n\nV tejto lekcii sa naučíš nastavovať rýchlosť sprajtu, pričom na pohyb sprajtov budeš používať počítadlo. "
         },
         "csd3-2021/Collision Detection": {
-          "name": "Detekcia kolízie"
+          "name": "Detekcia kolízie",
+          "student_overview": "**Otázka dňa: Ako dokáže programovanie zjednodušiť komplikované problémy?**\n\nV tejto lekcii sa budeš učiť o detekcii kolízií tým, že sa pozrieš na to, ako dokáže počítač pomocou matematiky, polohy sprajtov a ich veľkosti určiť, či sa sprajty dotýkajú alebo nie. "
+        },
+        "csd3-2021/Mini-Project: Side Scroller": {
+          "name": "Miniprojekt – Side-scroller",
+          "student_overview": "**Otázka dňa: Ako dokážeme nové typy pohybu sprajtov a detekciu kolízií využiť na vytvorenie hry?**\n\nV tejto lekcii využiješ získané vedomosti o rýchlosti a detekcii kolízií na vytvorenie jednoduchej počítačovej hry typu side-scroller!"
         },
         "csd3-2021/Complex Sprite Movement": {
-          "name": "Komplexný pohyb „sprite“ objektov"
+          "name": "Komplexný pohyb sprajtov",
+          "student_overview": "**Otázka dňa: Ako sa dajú predchádzajúce bloky skombinovať do nových vzorov, aby vytvorili zaujímavé pohyby?**\n\nV tejto lekcii sa naučíš spojiť rýchlostné vlastnosti sprajtov s počítadlom, a nastaviť tak sprajtom zložitejšie pohyby. "
         },
         "csd3-2021/Collisions": {
-          "name": "Kolízie \"sprite\" objektov"
+          "name": "Kolízie sprajtov",
+          "student_overview": "**Otázka dňa: Ako dokážu programátori stavať na abstrakciách, a vytvárať tak ďalšie abstrakcie?**\n\nV tejto lekcii sa naučíš používať bloky kolízií („collide“, „displace“, „bounce“ a „bounceOff“), a prinútiť tak sprajty interagovať zaujímavými novými spôsobmi. "
+        },
+        "csd3-2021/Mini-Project: Flyer Game": {
+          "name": "Miniprojekt – Lietacia hra"
         },
         "csd3-2021/Functions": {
           "name": "Funkcie"
