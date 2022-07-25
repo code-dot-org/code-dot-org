@@ -9,12 +9,14 @@ wrong '2 2 7'
 right '1 1 6'
 
 markdown <<MARKDOWN
->> String phrase = "**Here is the word**"; </br>
-int psn = phrase.indexOf("**e**"); </br>
-while (**psn >= 0**) </br>
-{ </br>
-&nbsp; &nbsp; System.out.print(**psn + " "**); </br>
-&nbsp; &nbsp; phrase = phrase.substring(**psn + 1**); </br>
-&nbsp; &nbsp; psn = phrase.indexOf(**"e"**); </br>
+```
+String phrase = "Here is the word";
+int psn = phrase.indexOf("e");
+while (psn >= 0)
+{
+	System.out.print(psn + " ");
+	phrase = phrase.substring(psn + 1);
+	psn = phrase.indexOf("e");
 }
+```
 MARKDOWN
