@@ -8,26 +8,8 @@
         {
           "type": "panel",
           "name": "variable_panel",
-          "visible": "true",
+          "visible": "false",
           "elements": [
-            {
-              "type": "radiogroup",
-              "name": "unit_number",
-              "startWithNewLine": false,
-              "choices": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11
-              ]
-            },
             {
               "type": "radiogroup",
               "name": "unit_name",

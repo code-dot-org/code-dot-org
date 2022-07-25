@@ -38,8 +38,8 @@ class Pd::RegionalPartnerCohort < ApplicationRecord
 
   alias_attribute :members, :users
 
-  belongs_to :regional_partner
-  belongs_to :summer_workshop, class_name: 'Pd::Workshop'
+  belongs_to :regional_partner, optional: true
+  belongs_to :summer_workshop, class_name: 'Pd::Workshop', optional: true
 
   validates :course, presence: true, inclusion: {in: ALLOWED_COURSES, allow_blank: true}
 

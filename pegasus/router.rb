@@ -110,9 +110,12 @@ class Documents < Sinatra::Base
       settings.template_extnames +
       settings.exclude_extnames +
       ['.fetch']
+    # Note: shared_resources.rb has additional configuration for Sass::Plugin
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
-    Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
-    Sass::Plugin.options[:template_location] = shared_dir('css')
+    Sass::Plugin.add_template_location(
+      sites_v3_dir('code.org', 'public', 'css'),
+      sites_v3_dir('code.org', 'public', 'css', 'generated')
+    )
     set :mustermann_opts, check_anchors: false, ignore_unknown_options: true
 
     # Haml/Temple engine doesn't recognize the `path` option
@@ -337,7 +340,7 @@ class Documents < Sinatra::Base
       match = content.match(/\A\s*^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
       return [{}, content, 1] unless match
 
-      header = YAML.load(match[:yaml], path) || {}
+      header = YAML.safe_load(match[:yaml]) || {}
       raise "YAML header error: expected Hash, not #{header.class}" unless header.is_a?(Hash)
 
       remaining_content = match.post_match

@@ -226,7 +226,7 @@ class ProjectsController < ApplicationController
   # GET /projects/featured
   # Access is restricted to those with project_validator permission
   def featured
-    if current_user && current_user.project_validator?
+    if current_user&.project_validator?
       combine_projects_and_featured_projects_data
       render template: 'projects/featured'
     else
@@ -409,7 +409,7 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_starter_assets?(project_type)
-    %w(javalab).include? project_type
+    %w(javalab applab).include? project_type
   end
 
   def export_create_channel

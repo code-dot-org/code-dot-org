@@ -131,8 +131,6 @@ module AuroraBackup
     shared_snapshot_backup = find_shared_snapshot_on_backup(rds_client_backup, temp_snapshot_name)
     copy_shared_snapshot(shared_snapshot_backup, latest_snapshot.db_cluster_snapshot_identifier.sub('rds:', ''))
   ensure
-    if copied_snapshot
-      copied_snapshot.delete
-    end
+    copied_snapshot&.delete
   end
 end

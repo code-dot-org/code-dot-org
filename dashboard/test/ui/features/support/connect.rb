@@ -6,7 +6,7 @@ require 'active_support/core_ext/object/blank'
 require_relative '../../utils/selenium_browser'
 require 'retryable'
 
-$browser_config = JSON.load(open("browsers.json")).detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
+$browser_config = JSON.parse(File.read("browsers.json")).detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
 
 MAX_CONNECT_RETRIES = 3
 

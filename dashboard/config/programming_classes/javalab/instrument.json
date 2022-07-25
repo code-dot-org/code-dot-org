@@ -3,7 +3,7 @@
   "content": "",
   "examples": "[]",
   "external_documentation": "",
-  "fields": "[{\"name\":\"PIANO\",\"type\":\"int\",\"description\":\"Represents a piano sound.\"},{\"name\":\"BASS\",\"type\":\"int\",\"description\":\"Represents a lower bass guitar sound.\"}]",
+  "fields": "[{\"name\":\"PIANO\",\"type\":\"int\",\"description\":\"represents a piano sound\\n\\n**Example:**\\n```\\nmyScene.playNote(Instrument.PIANO, 60, 3);\\n```\"},{\"name\":\"BASS\",\"type\":\"int\",\"description\":\"represents a lower bass guitar sound\\n\\n**Example:**\\n```\\nmyScene.playNote(Instrument.BASS, 40, 1);\\n```\"}]",
   "key": "Instrument",
   "name": "Instrument",
   "syntax": "",

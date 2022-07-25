@@ -34,8 +34,8 @@
 # https://docs.google.com/document/d/10mqXBdkFo5nWhjGWJO6D_NMl4Qg74qb7P6Fdvb2P7sc/edit?usp=sharing
 #
 class ParentLevelsChildLevel < ApplicationRecord
-  belongs_to :parent_level, class_name: 'Level'
-  belongs_to :child_level, class_name: 'Level'
+  belongs_to :parent_level, class_name: 'Level', optional: true
+  belongs_to :child_level, class_name: 'Level', optional: true
   validates_uniqueness_of :child_level, scope: :parent_level, message: ->(plcl, _data) {"child_level #{plcl.child_level&.name&.dump} is already taken for parent_level #{plcl.parent_level&.name&.dump}"}
 
   default_scope {order(position: :asc)}

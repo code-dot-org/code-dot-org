@@ -38,7 +38,7 @@ class Pd::InternationalOptIn < ApplicationRecord
 
   belongs_to :user
 
-  validates_presence_of :user_id, :form_data
+  validates_presence_of :form_data
 
   def self.required_fields
     [
@@ -182,7 +182,7 @@ class Pd::InternationalOptIn < ApplicationRecord
   end
 
   def email_opt_in?
-    sanitize_form_data_hash[:email_opt_in].downcase == "yes"
+    sanitize_form_data_hash[:email_opt_in].casecmp?("yes")
   end
 
   def email

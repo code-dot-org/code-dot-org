@@ -26,7 +26,7 @@
 # access the data therein. This model should not be expanded without significant discussion, also
 # probably significant change, on the future of this data.
 class OverflowActivity < ApplicationRecord
-  belongs_to :level
-  belongs_to :user
-  belongs_to :level_source
+  belongs_to :level, optional: true
+  belongs_to :user, optional: true
+  belongs_to :level_source, optional: true
 end

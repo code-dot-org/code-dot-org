@@ -45,6 +45,11 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
         ```
 
     </details>
+    <details>
+      <summary>Troubleshoot: `FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError` </summary>
+
+      - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, see instructions for i) [AWS Account Login - Getting AWS access for a new user](https://docs.google.com/document/d/1dDfEOhyyNYI2zIv4LI--ErJj6OVEJopFLqPxcI0RXOA/edit#heading=h.nbv3dv2smmks) and ii) [Install AWS Command Line Interface v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)      
+    </details>
 
 1. `bundle exec rake install`
     - This can take a long time, ~30 minutes or more. The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, `seed:scripts`, can take > 10 minutes, but it should at least print out progress as it goes.
@@ -104,7 +109,7 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
     2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
 
       ```sh
-      export optflags="-Wno-error=implicit-function-declaration"; export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"; export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"; export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" | rbenv install
+      optflags="-Wno-error=implicit-function-declaration" LDFLAGS="-L/opt/homebrew/opt/libffi/lib" CPPFLAGS="-I/opt/homebrew/opt/libffi/include" PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" rbenv install
       ```
 
 1. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
@@ -145,7 +150,7 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-1. For Apple Silicon (M1), make these changes to your [Gemfile.lock](Gemfile.lock) file to switch from `libv8` to `libv8-node` and upgrade `mini_racer`. These changes should not be committed and will unfortunately clutter your `git status`.
+1. For Apple Silicon (M1), return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. After cloning, you will need to make the changes below to your [Gemfile.lock](Gemfile.lock) file to switch from `libv8` to `libv8-node` and upgrade `mini_racer`. These changes should not be committed and will unfortunately clutter your `git status`.
 
    ```text
    ...
@@ -156,8 +161,7 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
    ...
    ```
 
-
-Return to the [Overview](#overview) to continue installation. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
+Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
 
 ### OS X Catalina
 
@@ -304,7 +308,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. **Note:** Ubuntu 22.04 ships with versions of `libssl` and `openssl` that are incompatible with `ruby-build`; see https://github.com/rbenv/ruby-build/discussions/1940 for context
         1. As a result, attempts to run `rbenv install` will fail. To resolve, compile a valid version of `openssl` locally and direct `rbenv` to configure ruby to use it as described here: https://github.com/rbenv/ruby-build/discussions/1940#discussioncomment-2663209
 1. Install Ruby with rbenv
-    1. Run `rbenv install --skip-existing` from the project root directory.
+    1. Execute `rbenv install --skip-existing` from the root directory
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
        `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
     1. `rbenv rehash`

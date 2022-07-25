@@ -5,6 +5,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     @admin = create(:admin)
     @level_source = create(:level_source)
     @hidden_level_source = create(:level_source, hidden: true)
+    @request.host = CDO.dashboard_hostname
   end
 
   test "should get edit" do
@@ -82,19 +83,19 @@ class LevelSourcesControllerTest < ActionController::TestCase
 
   test 'routing' do
     assert_routing(
-      {path: '/c/1', method: :get},
+      {path: "http://#{CDO.dashboard_hostname}/c/1", method: :get},
       {controller: 'level_sources', action: 'show', id: '1'}
     )
     assert_routing(
-      {path: '/c/1/edit', method: :get},
+      {path: "http://#{CDO.dashboard_hostname}/c/1/edit", method: :get},
       {controller: 'level_sources', action: 'edit', id: '1'}
     )
     assert_routing(
-      {path: '/c/1/original_image', method: :get},
+      {path: "http://#{CDO.dashboard_hostname}/c/1/original_image", method: :get},
       {controller: 'level_sources', action: 'original_image', id: '1'}
     )
     assert_routing(
-      {path: '/c/1/generate_image', method: :get},
+      {path: "http://#{CDO.dashboard_hostname}/c/1/generate_image", method: :get},
       {controller: 'level_sources', action: 'generate_image', id: '1'}
     )
   end
@@ -167,14 +168,14 @@ class LevelSourcesControllerTest < ActionController::TestCase
   test 'artist levelsource has sharing meta tags' do
     level_source = create(:level_source, level: create(:artist))
 
-    LevelSourcesController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test.host/assets/sharing_drawing.png')
+    LevelSourcesController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test-studio.code.org/assets/sharing_drawing.png')
 
     get :show, params: {id: level_source.id}
 
     assert_response :success
     assert_sharing_meta_tags(
-      url: "http://test.host/c/#{level_source.id}",
-      image_url: 'http://test.host/assets/sharing_drawing.png',
+      url: "http://test-studio.code.org/c/#{level_source.id}",
+      image_url: 'http://test-studio.code.org/assets/sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       small_thumbnail: true
@@ -184,15 +185,15 @@ class LevelSourcesControllerTest < ActionController::TestCase
   test 'playlab levelsource has sharing meta tags' do
     level_source = create(:level_source, level: create(:playlab))
 
-    LevelSourcesController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test.host/assets/studio_sharing_drawing.png')
+    LevelSourcesController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test-studio.code.org/assets/studio_sharing_drawing.png')
 
     get :show, params: {id: level_source.id}
 
     assert_response :success
 
     assert_sharing_meta_tags(
-      url: "http://test.host/c/#{level_source.id}",
-      image_url: 'http://test.host/assets/studio_sharing_drawing.png',
+      url: "http://test-studio.code.org/c/#{level_source.id}",
+      image_url: 'http://test-studio.code.org/assets/studio_sharing_drawing.png',
       image_width: 400,
       image_height: 400,
       apple_mobile_web_app: true

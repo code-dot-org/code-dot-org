@@ -3,8 +3,8 @@ name 'CSA U1 Assessment 2022 q13'
 wrong 'II only'
 wrong 'III only'
 wrong 'I and IV'
-wrong 'II and III'
-right 'III and IV'
+right 'II and III'
+wrong 'III and IV'
 
 markdown <<MARKDOWN
 Which of the following evaluates to `false`?

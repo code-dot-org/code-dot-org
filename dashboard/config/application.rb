@@ -23,6 +23,21 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
+    # Explicitly load appropriate defaults for this version of Rails.
+    config.load_defaults 6.0
+
+    # Temporarily disable some default values that we aren't yet ready for.
+    # Right now, these changes to cookie functionality break projects
+    #
+    # TODO infra: Figure out why, fix, and reenable.
+    #
+    # added in Rails 5.2 (https://github.com/rails/rails/pull/28132)
+    config.action_dispatch.use_authenticated_cookie_encryption = false
+    # added in Rails 5.2 (https://github.com/rails/rails/pull/29263)
+    config.active_support.use_authenticated_message_encryption = false
+    # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
+    config.action_dispatch.use_cookies_with_metadata = false
+
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
@@ -150,6 +165,17 @@ module Dashboard
     # once a version of the gem is released which includes that change, we can get rid of
     # this line.
     config.autoload_paths.map!(&:to_s)
+
+    # Also make sure some of these directories are always loaded up front in production
+    # environments.
+    #
+    # These directories will also be treated as top-level directories by
+    # Zeitwerk, rather than as subdirectories which require namspacing.
+    config.eager_load_paths += [
+      Rails.root.join('app', 'models', 'experiments'),
+      Rails.root.join('app', 'models', 'levels'),
+      Rails.root.join('app', 'models', 'sections')
+    ].map(&:to_s)
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}

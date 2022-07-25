@@ -149,7 +149,7 @@ class User < ApplicationRecord
   ].freeze
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
-  belongs_to :studio_person
+  belongs_to :studio_person, optional: true
   has_many :hint_view_requests
 
   # courses a facilitator is able to teach
@@ -166,7 +166,7 @@ class User < ApplicationRecord
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
 
   has_many :authentication_options, dependent: :destroy
-  belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
+  belongs_to :primary_contact_info, class_name: 'AuthenticationOption', optional: true
 
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
@@ -195,7 +195,7 @@ class User < ApplicationRecord
 
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
 
-  belongs_to :school_info
+  belongs_to :school_info, optional: true
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
 
   has_many :user_school_infos
@@ -230,7 +230,7 @@ class User < ApplicationRecord
     if teacher?
       EmailPreference.upsert!(
         email: email,
-        opt_in: email_preference_opt_in.downcase == "yes",
+        opt_in: email_preference_opt_in.casecmp?("yes"),
         ip_address: email_preference_request_ip,
         source: email_preference_source,
         form_kind: email_preference_form_kind,
@@ -243,7 +243,7 @@ class User < ApplicationRecord
     if student? && parent_email.present?
       EmailPreference.upsert!(
         email: parent_email,
-        opt_in: parent_email_preference_opt_in.downcase == "yes",
+        opt_in: parent_email_preference_opt_in.casecmp?("yes"),
         ip_address: parent_email_preference_request_ip,
         source: parent_email_preference_source,
         form_kind: nil
@@ -254,7 +254,7 @@ class User < ApplicationRecord
   # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
   def save_email_reg_partner_preference
     user = User.find_by_email_or_hashed_email(email)
-    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.downcase == "yes"
+    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.casecmp?("yes")
       user.share_teacher_email_regional_partner_opt_in = DateTime.now
       user.save!
     end
@@ -316,7 +316,7 @@ class User < ApplicationRecord
     end
   end
 
-  belongs_to :invited_by, polymorphic: true
+  belongs_to :invited_by, polymorphic: true, optional: true
 
   validate :admins_must_be_teachers_without_followeds
 
@@ -430,7 +430,7 @@ class User < ApplicationRecord
   has_many :sections_as_student, through: :followeds, source: :section
   has_many :teachers, through: :sections_as_student, source: :user
 
-  belongs_to :secret_picture
+  belongs_to :secret_picture, optional: true
   before_create :generate_secret_picture
 
   before_create :generate_secret_words
@@ -575,7 +575,7 @@ class User < ApplicationRecord
       self.email = ''
       self.full_address = nil
       self.school_info = nil
-      studio_person.destroy! if studio_person
+      studio_person&.destroy!
       self.studio_person_id = nil
     end
 
@@ -890,7 +890,7 @@ class User < ApplicationRecord
     end
   end
 
-  def update_email_for(provider: nil, uid: nil, email:)
+  def update_email_for(email:, provider: nil, uid: nil)
     if migrated?
       # Provider and uid are required to update email on AuthenticationOption for migrated user.
       return unless provider.present? && uid.present?
@@ -1438,7 +1438,7 @@ class User < ApplicationRecord
 
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
-    return if name.blank? || name.utf8mb4? || (email && email.utf8mb4?)
+    return if name.blank? || name.utf8mb4? || (email&.utf8mb4?)
     self.username = UserHelpers.generate_username(User.with_deleted, name)
   end
 
@@ -2015,7 +2015,6 @@ class User < ApplicationRecord
       user_type: user_type,
       gender: gender,
       birthday: birthday,
-      total_lines: total_lines,
       secret_words: secret_words,
       secret_picture_name: secret_picture&.name,
       secret_picture_path: secret_picture&.path,
@@ -2469,7 +2468,7 @@ class User < ApplicationRecord
   end
 
   # The data returned by this method is set to cookies for the marketing team to
-  # use in Optimizely for segmenting teacher user experience.
+  # use in Google Optimize for segmenting teacher user experience.
   def marketing_segment_data
     return unless teacher?
 
