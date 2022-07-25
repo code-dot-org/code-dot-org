@@ -34,7 +34,7 @@ class Announcements
       end
       begin
         @@announcements_data = JSON.parse(
-          IO.read(@@json_path),
+          File.read(@@json_path),
           symbolize_names: true,
           object_class: HashWithIndifferentAccess
         )

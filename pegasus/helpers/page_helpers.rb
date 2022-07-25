@@ -66,7 +66,7 @@ def combine_css(*paths)
 
   files = paths.map {|path| Dir.glob(pegasus_dir('sites.v3', request_site, path, '*.css'))}.flatten
   css = files.sort_by(&File.method(:basename)).map do |i|
-    IO.read(i)
+    File.read(i)
   end.join("\n\n")
   css_min = Sass::Engine.new(css,
     syntax: :scss,
