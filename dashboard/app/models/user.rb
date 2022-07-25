@@ -1292,9 +1292,8 @@ class User < ApplicationRecord
   end
 
   #sections owned by the user AND not deleted
-  def owned_sections
-    owned_sections = sections.select(:id).where(user_id: id, deleted_at: nil).all
-    return owned_sections
+  def owned_section_ids
+    sections.select(:id).all
   end
 
   # Is the provided script_level hidden, on account of the section(s) that this
