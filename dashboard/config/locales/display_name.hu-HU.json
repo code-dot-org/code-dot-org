@@ -650,7 +650,9 @@
         "CSD U6 circuit button map": "Áramkörgomb",
         "CSD U6 circuit button map_2018": "Áramkörgomb",
         "CSD U6 circuit button map_2019": "Áramkörgomb",
-        "courseF_apps_collector": "Collector-játék"
+        "courseF_apps_collector": "Collector-játék",
+        "courseF_sprites_moreSprites": "Sprite elhelyezése",
+        "courseF_sprites_positioning": "Sprite elhelyezése"
       }
     }
   }

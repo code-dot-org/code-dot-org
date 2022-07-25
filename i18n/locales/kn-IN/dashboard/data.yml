@@ -55,15 +55,28 @@ kn:
       name:
         artist_intro: ಆರ್ಟಿಸ್ಟ್‌ ಪರಿಚಯ
         Unplug6: ಕಂಡೀಷನಲ್ಸ್‌
+        Unplug7: ಹಾಡು ಬರೆಯವುದು
+        Unplug10: ಇಂಟರ್ನೆಟ್
+        C1_happy_maps_unplugged: ಸಂತೋಷದ ನಕ್ಷೆಗಳು
+        C1_bigevent_unplugged: ದೊಡ್ಡ ಘಟನೆ
+        C1_getting_loopy: ಲೂಪಿ ಆಗುವುದು
         C1_artist_intro: ಆರ್ಟಿಸ್ಟ್‌ ಪರಿಚಯ
+        C1_building_foundation: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
+        C1_going_places_safely: ಸುರಕ್ಷಿತವಾಗಿ ಸ್ಥಳಗಳಿಗೆ ಹೋಗುವುದು
         C2_artist_intro: ಆರ್ಟಿಸ್ಟ್‌ ಪರಿಚಯ
         C2_artist_loops: ಆರ್ಟಿಸ್ಟ್‌ ಲೂಪ್‌ಗಳು
         C2_artist_debugging: ಆರ್ಟಿಸ್ಟ್ ಡಿಬಗ್ಗಿಂಗ್‌
         C2_conditionals_with_cards: ಕಂಡೀಷನಲ್ಸ್‌
+        C2_binary_bracelets: ಬೈನರಿ ಕಡಗಗಳು
+        C2_digital_footprint: ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಹೆಜ್ಜೆಗುರುತು
+        C2_digital_footprint_v2: ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಹೆಜ್ಜೆಗುರುತು
         C3_artist_intro: ಆರ್ಟಿಸ್ಟ್‌ ಪರಿಚಯ
         C3_artist_functions: ಆರ್ಟಿಸ್ಟ್ ಫಂಕ್ಷನ್‌ಗಳು
         C3_artist_nested_loops: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
         C3_bee_nested_loops: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+        C3_internet: ಇಂಟರ್ನೆಟ್
+        C3_crowdsourcing: ಕ್ರೌಡ್ಸೋರ್ಸಿಂಗ್
+        C3_functional_suncatchers: ಕ್ರಿಯಾತ್ಮಕ ಸನ್‌ಕ್ಯಾಚರ್‌ಗಳು
         C4_loops_zombie: ಲೂಪ್‌ಗಳು
         C4_variables_artist: ವೇರಿಯಬಲ್ಸ್‌ - ಆರ್ಟಿಸ್ಟ್
         C4_math_artist: ಗಣಿತದೊಂದಿಎಗ ಆರ್ಟಿಸ್ಟ್‌ ಪ್ರೋಗ್ರಾಮ್ ಮಾಡುವುದು
@@ -103,7 +116,10 @@ kn:
         mc_2017_puzzle_12: ಮೈನ್‌ಕ್ರಾಪ್ಟ್ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್‌ - ಫ್ರೀಪ್ಲೇ
         CSF_loops_AB: ಲೂಪ್‌ಗಳು
         CSF_StarWars_ProjectIntro: ಸ್ಟಾರ್ ವಾರ್ಸ್‌ ಪ್ರಾಜೆಕ್ಟ್‌ ಪರಿಚಯ
+        c_and_c_great_to_create: ಫೇರ್ ಅನ್ನು ರಚಿಸಲು ಮತ್ತು ಪ್ಲೇ ಮಾಡಲು ಇದು ಅದ್ಭುತವಾಗಿದೆ
+        c_and_c_digital_sharing: ಡಿಜಿಟಲ್ ಹಂಚಿಕೆ
         csd_debugging: ಡಿಬಗ್ ಮಾಡುವುದು
+        csf_private_and_personal_information: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
         outbreak_mike: ಮೈಕ್ - ಔಟ್‌ಬ್ರೇಕ್ ಸಿಮ್ಯುಲೇಟರ್ ಜೊತೆಗೆ ಕೋಡ್‌ಬೈಟ್ಸ್‌ ಎಪಿಸೋಡ್ 3
         PL_CSD_TeacherTips_Advise: ಶಿಕ್ಷಕರ ಸಲಹೆ - ಹೊಸ ಶಿಕ್ಷಕರಿಗೆ ಸಲಹೆ
         PL_CSD_TeacherTips_IntroToCSD: ಶಿಕ್ಷಕರ ಸಲಹೆ - ಸಿಎಸ್ ಡಿಸ್ಕವರಿಗಳಿಗೆ ಪರಿಚಯ
@@ -128,5 +144,21 @@ kn:
         poetry_module_conditionals: ಕಂಡೀಷನಲ್ಸ್ - ಕವಿತೆಯೊಂದಿಗೆ ಕೋಡಿಂಗ್
         poemart_intro: ಕವನ ಕಲೆ ಪರಿಚಯ
         CSA-PL-debugging-temp: ಜಾವಾ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಡಿಬಗ್ಗಿಂಗ್‌ಗೆ ಪರಿಚಯ - ತಾತ್ಕಾಲಿಕ
+        CSA-PL-for-loops: ಜಾವಾದಲ್ಲಿ ಲೂಪ್ಗಳಿಗಾಗಿ
+        CSA-PL-variables: ಜಾವಾದಲ್ಲಿ ವೇರಿಯೇಬಲ್‌ಗಳನ್ನು ರಚಿಸುವುದು
         PL_CS_Journeys_Overview: ಸಿಎಸ್ ಜರ್ನಿಗಳು
+        CSA-PL-intro-to-java-lab: ಜಾವಾ ಲ್ಯಾಬ್ ಬೇಸಿಕ್ಸ್
+        CSA-PL-first-program: ಜಾವಾದಲ್ಲಿ ಪ್ರೋಗ್ರಾಂ ಬರೆಯುವುದು
+        CSD_u6_variables_part1: 'CSD: ವೇರಿಯಬಲ್‌ಗಳು'
+        csd_u6_if_statements: 'CSD: ಇಫ್‌ ಹೇಳಿಕೆಗಳು'
+        csc-poem-art-intro: Intro Video
+        csc-poem-art-outro: ಕೊನೆಯ ವಿಡಿಯೋ
+        csd_u6_call_define_functions: 'CSD: ಕಾರ್ಯಗಳನ್ನು ಕರೆಯುವುದು ಮತ್ತು ವ್ಯಾಖ್ಯಾನಿಸುವುದು'
+        starquilts_intro_artist: ಸ್ಟಾರ್ ಕ್ವಿಲ್ಟ್ಸ್ ಪರಿಚಯ
         CSA-PL-intro-to-arrays: ಒಂದು ಆಯಾಮದ (1D) ಅರೇಗಳು
+        CSA-PL-1d-arrays-new-values: 1D ಅರೇಗಳಲ್ಲಿ ಮೌಲ್ಯಗಳನ್ನು ನಮೂದಿಸಲಾಗುತ್ತಿದೆ
+        CSA-PL-conditionals: ಜಾವಾದಲ್ಲಿ ಷರತ್ತುಬದ್ಧ ಹೇಳಿಕೆಗಳು
+        CSA-PL-two-way-selection: ದ್ವಿಮುಖ ಆಯ್ಕೆ
+        CSA-PL-Printing-in-Java: ಜಾವಾದಲ್ಲಿ ಮುದ್ರಣ
+        CSA-PL-multi-selection-statements: ಬಹು-ಆಯ್ಕೆ ಹೇಳಿಕೆಗಳು
+        CS_Changing_Everything: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಬದಲಾಗುತ್ತಿದೆ

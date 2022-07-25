@@ -11132,6 +11132,9 @@
         "a7dd4853-b8c3-44d2-a03b-f5e5e23ff0ac": {
           "progression_name": "Motocykl"
         },
+        "c7ee1edc-3c31-4a6a-a814-1bc69360e6fe": {
+          "progression_name": "Dodatkowe wyzwania"
+        },
         "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
           "tips": [
             null
@@ -11153,6 +11156,9 @@
             null
           ],
           "progression_name": "Czujniki do Kolorów"
+        },
+        "1a668f58-e58e-4624-a911-fcfc3188df23": {
+          "progression_name": "Dodatkowe wyzwania"
         },
         "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f": {
           "tips": [
@@ -13438,6 +13444,9 @@
           "tips": [
             null
           ]
+        },
+        "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c": {
+          "name": "Wzajemne opinie"
         },
         "a167e87b-c7c9-4adc-a70d-c49dcb309bc8": {
           "name": "Dziennik"

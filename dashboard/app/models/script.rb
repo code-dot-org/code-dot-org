@@ -59,8 +59,8 @@ class Script < ApplicationRecord
   has_many :user_scripts
   has_many :hint_view_requests
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
-  belongs_to :wrapup_video, class_name: 'Video'
-  belongs_to :user
+  belongs_to :wrapup_video, class_name: 'Video', optional: true
+  belongs_to :user, optional: true
   has_many :unit_group_units
   has_many :unit_groups, through: :unit_group_units
   has_one :course_version, as: :content_root, dependent: :destroy
@@ -287,7 +287,6 @@ class Script < ApplicationRecord
     student_detail_progress_view
     project_widget_visible
     project_widget_types
-    teacher_resources
     lesson_extras_available
     has_verified_resources
     curriculum_path
@@ -590,7 +589,7 @@ class Script < ApplicationRecord
   end
 
   def self.remove_from_cache(unit_name)
-    script_cache.delete(unit_name) if script_cache
+    script_cache&.delete(unit_name)
   end
 
   def self.get_unit_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
@@ -903,6 +902,12 @@ class Script < ApplicationRecord
   # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
   def middle_high?
     csd? || csp? || csa?
+  end
+
+  def requires_verified_instructor?
+    # As of now the only course that requires the instructor to be verified in order to run code is CSA.
+    # TODO: determine if this should be replaced with has_verified_resources? instead.
+    return csa?
   end
 
   def get_script_level_by_id(script_level_id)
@@ -1222,7 +1227,7 @@ class Script < ApplicationRecord
         if Rails.application.config.levelbuilder_mode
           copy_and_write_i18n(new_name, course_version)
           copied_unit.write_script_json
-          destination_unit_group.write_serialization if destination_unit_group
+          destination_unit_group&.write_serialization
         end
 
         copied_unit
@@ -1333,7 +1338,7 @@ class Script < ApplicationRecord
       errors.add(:base, e.to_s)
       return false
     end
-    update_migrated_teacher_resources(general_params[:resourceIds])
+    update_teacher_resources(general_params[:resourceIds])
     update_student_resources(general_params[:studentResourceIds])
     tts_update(true) if need_to_update_tts
     begin
@@ -1354,9 +1359,8 @@ class Script < ApplicationRecord
     File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
   end
 
-  def update_migrated_teacher_resources(resource_ids)
-    teacher_resources = (resource_ids || []).map {|id| Resource.find(id)}
-    self.resources = teacher_resources
+  def update_teacher_resources(resource_ids)
+    self.resources = (resource_ids || []).map {|id| Resource.find(id)}
   end
 
   def update_student_resources(resource_ids)
@@ -1514,8 +1518,7 @@ class Script < ApplicationRecord
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
-      teacher_resources: teacher_resources,
-      migrated_teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
@@ -1652,14 +1655,6 @@ class Script < ApplicationRecord
     Services::MarkdownPreprocessor.sub_resource_links!(data['description_audience'], resource_markdown_replacement_proc) if data['description_audience']
     Services::MarkdownPreprocessor.sub_vocab_definitions!(data['description_audience'], vocab_markdown_replacement_proc) if data['description_audience']
 
-    data['lessons'] = {}
-    lessons.each do |lesson|
-      lesson_data = {
-        'name' => lesson.name,
-      }
-      data['lessons'][lesson.key] = lesson_data
-    end
-
     {'en' => {'data' => {'script' => {'name' => {new_name => data}}}}}
   end
 
@@ -1774,17 +1769,12 @@ class Script < ApplicationRecord
       :use_legacy_lesson_plans,
       :is_maker_unit
     ]
-    not_defaulted_keys = [
-      :teacher_resources, # teacher_resources gets updated from the unit edit UI through its own code path
-    ]
 
     result = {}
     # If a non-boolean prop was missing from the input, it'll get populated in the result hash as nil.
     nonboolean_keys.each {|k| result[k] = unit_data[k]}
     # If a boolean prop was missing from the input, it'll get populated in the result hash as false.
     boolean_keys.each {|k| result[k] = !!unit_data[k]}
-    not_defaulted_keys.each {|k| result[k] = unit_data[k] if unit_data.keys.include?(k)}
-
     result
   end
 
@@ -1884,7 +1874,8 @@ class Script < ApplicationRecord
         path: link,
         lesson_extras_available: lesson_extras_available?,
         text_to_speech_enabled: text_to_speech_enabled?,
-        position: unit_group_units&.first&.position
+        position: unit_group_units&.first&.position,
+        requires_verified_instructor: requires_verified_instructor?
       }
     ]
   end

@@ -23,6 +23,30 @@
         "playlab/Play Lab": {
           "name": "Play Lab"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Zanke"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Dogodki"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Pogoji"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcije"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Spremenljivke"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Osnove Računalništva"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Osnove Računalništva"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Premakni se, premakni"
         },
@@ -299,6 +323,66 @@
         "course4/Artist Binary": {
           "name": "Umetnik Binarno"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Uvod v računalništvo"
+        },
+        "20-hour/The Maze": {
+          "name": "Labirint"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Računalniško razmišljanje"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "20-hour/The Artist": {
+          "name": "Umetnik"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmi"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Umetnik 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funkcije"
+        },
+        "20-hour/The Farmer": {
+          "name": "Kmetovanje"
+        },
+        "20-hour/Conditionals": {
+          "name": "Pogoji"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Umetnik 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Pisanje pesmi"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Kmetovanje 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstrakcija"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Umetnik 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Relejsko programiranje"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Kmetovanje 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Umetnik 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Povzetek"
+        },
         "course2/Graph Paper Programming": {
           "name": "Obarvajmo kvadratke"
         },
@@ -460,6 +544,24 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Sestavljanka"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Sestavljanka"
+        },
+        "allthethings/Maze": {
+          "name": "Labirint"
+        },
+        "allthethings/Artist": {
+          "name": "Umetnik"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Skokica"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "coursef-2021/For Loop Fun": {
           "name": "Zabava s \"for\" zankami"

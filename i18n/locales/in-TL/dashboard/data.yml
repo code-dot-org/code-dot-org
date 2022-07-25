@@ -701,6 +701,15 @@ in:
         PL_CSP_TeacherTips_APExam: 'crwdns2927708:0crwdne2927708:0'
         PL_CSP_TeacherTips_EIPM: 'crwdns2927710:0crwdne2927710:0'
         PL_CSD_CircuitPlayground_Overview: crwdns2927712:0crwdne2927712:0
+        CSA-PL-debugging-22: crwdns2929394:0crwdne2929394:0
+        CSD_Unit6_InteractiveArtExemplar: crwdns2929396:0crwdne2929396:0
+        CS_Changing_Everything: crwdns2929398:0crwdne2929398:0
+        csa-alias-video: crwdns2929942:0crwdne2929942:0
+        csa-equals-video: crwdns2929944:0crwdne2929944:0
+        csa-user-stories: crwdns2929946:0crwdne2929946:0
+        csa-pl-vpl-m1-unit-3: crwdns2929948:0crwdne2929948:0
+        csa-pl-intro-to-equality: crwdns2929950:0crwdne2929950:0
+        csa-pl-intro-to-equals-method: crwdns2929952:0crwdne2929952:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

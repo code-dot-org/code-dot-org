@@ -196,6 +196,9 @@
           "purpose": "crwdns2700545:0crwdne2700545:0",
           "student_overview": "crwdns2700547:0crwdne2700547:0"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "crwdns2927324:0crwdne2927324:0"
+        },
         "dance-2019/Dance Party": {
           "name": "crwdns2918752:0crwdne2918752:0",
           "overview": "crwdns2700639:0crwdne2700639:0",
@@ -210,8 +213,176 @@
           "purpose": "crwdns2700747:0crwdne2700747:0",
           "student_overview": "crwdns2700749:0crwdne2700749:0"
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "crwdns2918606:0crwdne2918606:0"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "crwdns2918608:0crwdne2918608:0"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "crwdns2918610:0crwdne2918610:0"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "crwdns2918612:0crwdne2918612:0"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "crwdns2918614:0crwdne2918614:0"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "crwdns2918616:0crwdne2918616:0"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "crwdns2918618:0crwdne2918618:0"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "crwdns2918620:0crwdne2918620:0"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "crwdns2918622:0crwdne2918622:0"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "crwdns2918624:0crwdne2918624:0"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "crwdns2918626:0crwdne2918626:0"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "crwdns2918628:0crwdne2918628:0"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "crwdns2918630:0crwdne2918630:0"
+        },
+        "vigenere/Vigenere": {
+          "name": "crwdns2919938:0crwdne2919938:0"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "crwdns2919560:0crwdne2919560:0"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "crwdns2919298:0crwdne2919298:0"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "crwdns2919300:0crwdne2919300:0"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "crwdns2919302:0crwdne2919302:0"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "crwdns2919304:0crwdne2919304:0"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "crwdns2920550:0crwdne2920550:0"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "crwdns2920552:0crwdne2920552:0"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "crwdns2920554:0crwdne2920554:0"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "crwdns2920556:0crwdne2920556:0"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "crwdns2920558:0crwdne2920558:0"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "crwdns2920560:0crwdne2920560:0"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "crwdns2920562:0crwdne2920562:0"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "crwdns2920564:0crwdne2920564:0"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "crwdns2920566:0crwdne2920566:0"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "crwdns2920568:0crwdne2920568:0"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "crwdns2920570:0crwdne2920570:0"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "crwdns2920616:0crwdne2920616:0"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "crwdns2920618:0crwdne2920618:0"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "crwdns2920620:0crwdne2920620:0"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "crwdns2920622:0crwdne2920622:0"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "crwdns2920624:0crwdne2920624:0"
+        },
+        "netsim/Routers and addresses": {
+          "name": "crwdns2920626:0crwdne2920626:0"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "crwdns2920628:0crwdne2920628:0"
+        },
+        "netsim/Manual DNS": {
+          "name": "crwdns2920630:0crwdne2920630:0"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "crwdns2920632:0crwdne2920632:0"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "crwdns2920634:0crwdne2920634:0"
+        },
+        "odometer/Odometer Widget": {
+          "name": "crwdns2920794:0crwdne2920794:0"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "crwdns2919640:0crwdne2919640:0"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "crwdns2920420:0crwdne2920420:0"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "crwdns2920422:0crwdne2920422:0"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "crwdns2920866:0crwdne2920866:0"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "crwdns2920868:0crwdne2920868:0"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "crwdns2920870:0crwdne2920870:0"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "crwdns2920872:0crwdne2920872:0"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "crwdns2920874:0crwdne2920874:0"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "crwdns2920876:0crwdne2920876:0"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "crwdns2920878:0crwdne2920878:0"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "crwdns2920880:0crwdne2920880:0"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "crwdns2920882:0crwdne2920882:0"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "crwdns2920884:0crwdne2920884:0"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "crwdns2920886:0crwdne2920886:0"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "crwdns2918502:0crwdne2918502:0"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "crwdns2919816:0crwdne2919816:0"
         },
         "courseb-2018/Move It, Move It": {
           "name": "crwdns2919818:0crwdne2919818:0"
@@ -2493,6 +2664,27 @@
         "csd4-2017/Project - App Presentation": {
           "name": "crwdns2921014:0crwdne2921014:0"
         },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "crwdns2920300:0crwdne2920300:0"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "crwdns2920302:0crwdne2920302:0"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "crwdns2920290:0crwdne2920290:0"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "crwdns2920292:0crwdne2920292:0"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "crwdns2920294:0crwdne2920294:0"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "crwdns2920296:0crwdne2920296:0"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "crwdns2920298:0crwdne2920298:0"
+        },
         "course4/Unplugged: Tangrams": {
           "name": "crwdns2920572:0crwdne2920572:0"
         },
@@ -2558,6 +2750,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "crwdns2920614:0crwdne2920614:0"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "crwdns2919674:0crwdne2919674:0"
+        },
+        "20-hour/The Maze": {
+          "name": "crwdns2919676:0crwdne2919676:0"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "crwdns2919678:0crwdne2919678:0"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "crwdns2919680:0crwdne2919680:0"
+        },
+        "20-hour/The Artist": {
+          "name": "crwdns2919682:0crwdne2919682:0"
+        },
+        "20-hour/Algorithms": {
+          "name": "crwdns2919684:0crwdne2919684:0"
+        },
+        "20-hour/The Artist 2": {
+          "name": "crwdns2919686:0crwdne2919686:0"
+        },
+        "20-hour/Functions": {
+          "name": "crwdns2919688:0crwdne2919688:0"
+        },
+        "20-hour/The Farmer": {
+          "name": "crwdns2919690:0crwdne2919690:0"
+        },
+        "20-hour/Conditionals": {
+          "name": "crwdns2919692:0crwdne2919692:0"
+        },
+        "20-hour/The Artist 3": {
+          "name": "crwdns2919694:0crwdne2919694:0"
+        },
+        "20-hour/Song Writing": {
+          "name": "crwdns2919696:0crwdne2919696:0"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "crwdns2919698:0crwdne2919698:0"
+        },
+        "20-hour/Abstraction": {
+          "name": "crwdns2919700:0crwdne2919700:0"
+        },
+        "20-hour/The Artist 4": {
+          "name": "crwdns2919702:0crwdne2919702:0"
+        },
+        "20-hour/Relay Programming": {
+          "name": "crwdns2919704:0crwdne2919704:0"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "crwdns2919706:0crwdne2919706:0"
+        },
+        "20-hour/The Internet": {
+          "name": "crwdns2919708:0crwdne2919708:0"
+        },
+        "20-hour/The Artist 5": {
+          "name": "crwdns2919710:0crwdne2919710:0"
+        },
+        "20-hour/Wrap-up": {
+          "name": "crwdns2919712:0crwdne2919712:0"
         },
         "course2/Graph Paper Programming": {
           "name": "crwdns2918568:0crwdne2918568:0"
@@ -2739,6 +2991,141 @@
           "preparation": "crwdns2700947:0[0]crwdne2700947:0",
           "purpose": "crwdns2700949:0crwdne2700949:0",
           "student_overview": "crwdns2700951:0crwdne2700951:0"
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "crwdns2918774:0crwdne2918774:0"
+        },
+        "allthethings/Jigsaw": {
+          "name": "crwdns2927952:0crwdne2927952:0"
+        },
+        "allthethings/Maze": {
+          "name": "crwdns2927958:0crwdne2927958:0"
+        },
+        "allthethings/Artist": {
+          "name": "crwdns2927964:0crwdne2927964:0"
+        },
+        "allthethings/Bee": {
+          "name": "crwdns2927968:0crwdne2927968:0"
+        },
+        "allthethings/PlayLab": {
+          "name": "crwdns2927972:0crwdne2927972:0"
+        },
+        "allthethings/Farmer": {
+          "name": "crwdns2927976:0crwdne2927976:0"
+        },
+        "allthethings/Flappy": {
+          "name": "crwdns2927980:0crwdne2927980:0"
+        },
+        "allthethings/Bounce": {
+          "name": "crwdns2927984:0crwdne2927984:0"
+        },
+        "allthethings/Multi": {
+          "name": "crwdns2927988:0crwdne2927988:0"
+        },
+        "allthethings/Multi2": {
+          "name": "crwdns2927992:0crwdne2927992:0"
+        },
+        "allthethings/Match": {
+          "name": "crwdns2927996:0crwdne2927996:0"
+        },
+        "allthethings/TextMatch": {
+          "name": "crwdns2928000:0crwdne2928000:0"
+        },
+        "allthethings/CSinA": {
+          "name": "crwdns2928004:0crwdne2928004:0"
+        },
+        "allthethings/Netsim": {
+          "name": "crwdns2928008:0crwdne2928008:0"
+        },
+        "allthethings/Odometer": {
+          "name": "crwdns2928012:0crwdne2928012:0"
+        },
+        "allthethings/Text Compression": {
+          "name": "crwdns2928016:0crwdne2928016:0"
+        },
+        "allthethings/Pixelation": {
+          "name": "crwdns2928020:0crwdne2928020:0"
+        },
+        "allthethings/AppLab": {
+          "name": "crwdns2928024:0crwdne2928024:0"
+        },
+        "allthethings/Gamelab": {
+          "name": "crwdns2928028:0crwdne2928028:0"
+        },
+        "allthethings/Online PD": {
+          "name": "crwdns2928032:0crwdne2928032:0"
+        },
+        "allthethings/Markdown Details": {
+          "name": "crwdns2928036:0crwdne2928036:0"
+        },
+        "allthethings/Studio": {
+          "name": "crwdns2928040:0crwdne2928040:0"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "crwdns2928044:0crwdne2928044:0"
+        },
+        "allthethings/Star wars": {
+          "name": "crwdns2928048:0crwdne2928048:0"
+        },
+        "allthethings/Minecraft": {
+          "name": "crwdns2928052:0crwdne2928052:0"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "crwdns2928056:0crwdne2928056:0"
+        },
+        "allthethings/Free Response": {
+          "name": "crwdns2928060:0crwdne2928060:0"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "crwdns2928064:0crwdne2928064:0"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "crwdns2928068:0crwdne2928068:0"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "crwdns2928072:0crwdne2928072:0"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "crwdns2928076:0crwdne2928076:0"
+        },
+        "allthethings/Web Lab": {
+          "name": "crwdns2928080:0crwdne2928080:0"
+        },
+        "allthethings/Single page assessment": {
+          "name": "crwdns2928084:0crwdne2928084:0"
+        },
+        "allthethings/Standalone video": {
+          "name": "crwdns2928088:0crwdne2928088:0"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "crwdns2928092:0crwdne2928092:0"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "crwdns2928096:0crwdne2928096:0"
+        },
+        "allthethings/Dance Lab": {
+          "name": "crwdns2928100:0crwdne2928100:0"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "crwdns2928104:0crwdne2928104:0"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "crwdns2928108:0crwdne2928108:0"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "crwdns2928112:0crwdne2928112:0"
+        },
+        "allthethings/Contained Levels": {
+          "name": "crwdns2928116:0crwdne2928116:0"
+        },
+        "allthethings/ML Fish": {
+          "name": "crwdns2928120:0crwdne2928120:0"
+        },
+        "allthethings/AI Lab": {
+          "name": "crwdns2928124:0crwdne2928124:0"
+        },
+        "allthethings/Java Lab": {
+          "name": "crwdns2928128:0crwdne2928128:0"
         },
         "coursef-2021/lesson-6": {
           "name": "crwdns2921078:0crwdne2921078:0",

@@ -29,6 +29,36 @@
         "infinity/Infinity": {
           "name": "Disney infinit Play Lab"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hora de codi 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Bucles"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Esdeveniments"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Condicionals"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funcions"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variables"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Per bucles"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laboratori de personatges"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fonaments de la informàtica"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fonaments de la informàtica"
+        },
         "courseb-2018/Move It, Move It": {
           "name": "Mou-lo, Mou-lo"
         },
@@ -332,6 +362,66 @@
         "course4/Super Challenge - Functions and Parameters": {
           "name": "Súper-repte - funcions i paràmetres"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Introducció a la informàtica"
+        },
+        "20-hour/The Maze": {
+          "name": "El Laberint"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Pensament computacional"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programació de paper quadriculat"
+        },
+        "20-hour/The Artist": {
+          "name": "L'artista"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algorismes"
+        },
+        "20-hour/The Artist 2": {
+          "name": "L'artista 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funcions"
+        },
+        "20-hour/The Farmer": {
+          "name": "La pagesa"
+        },
+        "20-hour/Conditionals": {
+          "name": "Condicionals"
+        },
+        "20-hour/The Artist 3": {
+          "name": "L'artista 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Escriptura de la cançó"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "La pagesa 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstracció"
+        },
+        "20-hour/The Artist 4": {
+          "name": "L'artista 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Programació en relleus"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "La pagesa 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "L'artista 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Recapitulació"
+        },
         "course2/Graph Paper Programming": {
           "name": "Programació de paper quadriculat"
         },
@@ -505,6 +595,42 @@
         },
         "jigsaw/Jigsaw": {
           "name": "Puzzle"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Puzzle"
+        },
+        "allthethings/Maze": {
+          "name": "Laberint"
+        },
+        "allthethings/Artist": {
+          "name": "Artista"
+        },
+        "allthethings/Bee": {
+          "name": "Abella"
+        },
+        "allthethings/Farmer": {
+          "name": "Pagès"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Rebota"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Match": {
+          "name": "Relacionar"
+        },
+        "allthethings/Odometer": {
+          "name": "odòmetre"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Laboratori de personatges"
         },
         "coursef-2021/Internet": {
           "name": "Internet"

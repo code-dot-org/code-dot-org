@@ -101,7 +101,7 @@ class AdminReportsController < ApplicationController
     page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').rows]
 
     data_array = output_data.map do |key, value|
-      {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
+      {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key]&.to_i)
     end
     require 'naturally'
     data_array = data_array.select {|x| x['TotalAttempt'].to_i > 10}.sort_by {|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}

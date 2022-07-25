@@ -300,6 +300,7 @@ it:
       blank_code: "Inserisci un codice-classe"
       cant_join_own_section: "Siamo spiacenti, non puoi far parte della tua classe."
       provider_managed_section: "Questa sezione è gestita da un altro provider e non può essere unita. Chiedi al tuo insegnante di aggiungerti via %{provider} e risincronizza la loro sezione."
+      restricted_section: "Non siamo riusciti ad aggiungerti alla sezione %{section_code} perché é bloccata. Perfavore contatta il / la tua insegnante per aiuto."
       not_participant_type: "Non siamo riusciti ad aggiungerti alla sezione %{section_code} perché non soddisfi la tipologia di partecipante per la sezione."
     mail:
       student_disassociated:
@@ -336,7 +337,7 @@ it:
       project_gallery: "Progetti"
       sections: "Classi"
       help_support: "Help and support"
-      report_bug: "Report a problem"
+      report_bug: "Segnala un errore"
       report_abuse: "Segnala abuso"
       teacher_community: "Teacher community"
       professional_learning: "Professional learning"
@@ -382,7 +383,7 @@ it:
       district_dashboard: 'Dashboard'
       label: 'Ciao %{username}'
       stats: 'Code Studio'
-      my_projects: 'Collezione Privata'
+      my_projects: 'I miei progetti'
       settings: 'Il mio account'
       logout: 'Esci'
       signin: 'Accedi'
@@ -431,7 +432,6 @@ it:
     popup:
       progress_for_user: "%{name} in corso"
       progress: 'I tuoi progressi'
-      lines: 'Totale delle linee di codice:  %{lines}'
       close: 'CHIUDI'
       mastery: 'Concetti'
       puzzle_map: 'Fasi'
@@ -562,7 +562,7 @@ it:
     not_correct_participant_type: "Non puoi spostare questi utenti perché non hanno le autorizzazioni a partecipare alla nuova sezione."
   share:
     title: "Impara su Code Studio"
-    description: "Chiunque può imparare l'informatica. Realizza giochi, app e lavori artistici con la programmazione."
+    description: "Chiunque può imparare l'informatica. Crea giochi, app e lavori artistici con la programmazione."
     try_hour_of_code: 'Prova l''Ora del Codice!'
   gender:
     male: 'Maschile'
@@ -574,14 +574,15 @@ it:
     student: 'Studente'
     teacher: 'Insegnante'
   footer:
-    thank_you: 'Ringraziamo i nostri <a href="https://code.org/about/donors"> donatori</a>, <a href="https://code.org/about/partners"> partner</a>, il nostro <a href="https://code.org/about/team"> team</a>, il nostro cast video e i nostri <a href="https://code.org/about/advisors"> consulenti di formazione</a> per il loro supporto nella creazione di Code Studio.'
+    thank_you: 'Ringraziamo i nostri <a href="https://code.org/about/donors"> donatori</a>, <a href="https://code.org/about/partners"> partner</a>, il nostro <a href="https://code.org/about/team"> team allargato</a>, il nostro cast video e i nostri <a href="https://code.org/about/advisors"> consulenti di formazione</a> per il loro contributo nella realizzazione di Code Studio.'
     help_from_html: 'Siamo particolarmente riconoscenti agli ingegneri di Amazon, Google e Microsoft che hanno aiutato a creare questi corsi.'
     help_from_html_old: 'Gli ingegneri di Amazon, Google e Microsoft hanno contribuito a creare questi materiali.'
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tutti i diritti riservati.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Tutti i diritti riservati.<br />Frozen&#8482; &copy; %{current_year} Disney. Tutti i diritti riservati.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tutti i diritti riservati.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati.<br />The Amazing World of Gumball è un marchio registrato e &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Tutti i diritti riservati. Frozen&#8482; &copy; %{current_year} Disney. Tutti i diritti riservati. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tutti i diritti riservati. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati. The Amazing World of Gumball è un marchio registrato e &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tutti i diritti riservati.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Tutti i diritti riservati.<br />Frozen&#8482; &copy; %{current_year} Disney. Tutti i diritti riservati.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tutti i diritti riservati.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati.<br />DreamWorks The Bad Guys &copy; %{current_year} DreamWorks Animation LLC. Tutti i diritti riservati.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tutti i diritti riservati. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Tutti i diritti riservati. Frozen&#8482; &copy; %{current_year} Disney. Tutti i diritti riservati. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tutti i diritti riservati. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati. DreamWorks The Bad Guys &copy; %{current_year} DreamWorks Animation LLC. Tutti i diritti riservati.'
     code_from_html: 'Code.org usa p5.play, il quale è sotto licenza <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
-    powered_by_aws: 'Eseguito su Amazon Web Services'
-    built_on_github: 'Costruito su GitHub di Microsoft'
+    powered_by_aws: 'Amazon Web Services e il logo “Powered by AWS” sono marchi registrati di Amazon.com, Inc. o delle sue consociate negli USA e/o in altri paesi.'
+    built_on_github: 'Progettato su GitHub da Microsoft'
+    google_copyright: '&copy; Google Inc. utilizzato previa autorizzazione. Google Classroom è un marchio registrato di Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, il logo CODE e Hour of Code&reg; sono marchi registrati di Code.org.'
     copyright: 'Copyright'
     more: 'Di più'
@@ -620,7 +621,7 @@ it:
     label: 'Video'
   compatibility:
     upgrade:
-      unsupported_message: "Il tuo browser non è supportato. Si prega di aggiornare il browser ad <a href='%{supported_browsers_url}', target='_blank'> uno dei nostri browser supportati</a>. Puoi provare a visualizzare la pagina, ma aspettati qualche malfunzionamento."
+      unsupported_message: "Il tuo browser non è supportato. Si prega di aggiornare il browser a [uno dei nostri browser supportati](%{supported_browsers_url}). Puoi provare a visualizzare la pagina, ma aspettati qualche malfunzionamento."
       link: "Ulteriori informazioni"
       applab_unsupported_tablet: "Sviluppo App funziona meglio su un PC o un portatile con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo dispositivo attuale."
       gamelab_unsupported_tablet: "Sviluppo Giochi funziona meglio su un PC o un portatile con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo dispositivo attuale."

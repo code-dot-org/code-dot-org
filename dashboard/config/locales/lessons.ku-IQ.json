@@ -2,6 +2,18 @@
   "ku-IQ": {
     "data": {
       "lessons": {
+        "k5-onlinepd-2019/Loops": {
+          "name": "گرێکان"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "مەرجیەکان"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "فرمانەکان"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "گۆڕاوەکان"
+        },
         "coursea-2018/Programming: Happy Maps": {
           "name": "نەخشەی دڵخۆش"
         },
@@ -80,6 +92,66 @@
         "csd2-2017/Lists": {
           "name": "لیستەکان"
         },
+        "20-hour/Introduction to Computer Science": {
+          "name": "پێشەكیەک بۆ زانستی کۆمپیوتەر"
+        },
+        "20-hour/The Maze": {
+          "name": "مەتەڵە ڕێگا"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "بیرکردنەوەی ژمارەیی"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
+        },
+        "20-hour/The Artist": {
+          "name": "هونەرمەندەکە"
+        },
+        "20-hour/Algorithms": {
+          "name": "خوارزمیەکان"
+        },
+        "20-hour/The Artist 2": {
+          "name": "هونەرمەندەکە 2"
+        },
+        "20-hour/Functions": {
+          "name": "فرمانەکان"
+        },
+        "20-hour/The Farmer": {
+          "name": "جووتیارەكە"
+        },
+        "20-hour/Conditionals": {
+          "name": "مەرجیەکان"
+        },
+        "20-hour/The Artist 3": {
+          "name": "هونەرمەندەكە ٣"
+        },
+        "20-hour/Song Writing": {
+          "name": "گۆرانی نووسین"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "جووتیارەكە 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "پوختە"
+        },
+        "20-hour/The Artist 4": {
+          "name": "هونەرمەندەکە 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "جووتیارەكە 3"
+        },
+        "20-hour/The Internet": {
+          "name": "ئینتەرنێت"
+        },
+        "20-hour/The Artist 5": {
+          "name": "هونەرمەندەکە 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "پوختەی بابەت"
+        },
         "course2/Graph Paper Programming": {
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
@@ -112,6 +184,12 @@
         },
         "jigsaw/Jigsaw": {
           "name": "مەتەڵە وێنە"
+        },
+        "allthethings/Jigsaw": {
+          "name": "مەتەڵە وێنە"
+        },
+        "allthethings/Bounce": {
+          "name": "هەڵبەزینەوە"
         },
         "coursef-2021/Internet": {
           "name": "ئینتەرنێت"

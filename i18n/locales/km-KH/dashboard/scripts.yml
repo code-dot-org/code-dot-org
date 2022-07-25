@@ -3,159 +3,23 @@ km:
   data:
     script:
       name:
-        course1:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-            The Big Event:
-              name: ព្រឹត្តិការណ៍ធំ
-        course2:
-          lessons:
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            The Big Event:
-              name: ព្រឹត្តិការណ៍ធំ
-            Your Digital Footprint:
-              name: Your Digital Footprint
-        course3:
-          lessons:
-            Bounce:
-              name: បាល់​លោត
-            Computational Thinking:
-              name: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         frozen:
           description_short: តោះប្រើកូដ ដើម្បីចូលរួមជាមួយ Anna និងElsa នៅពេលពួកគេស្វែងយល់ពីវេទមន្តនិងសម្រស់នៃទឹកកក។
-        usability:
-          lessons:
-            Variables:
-              name: អ​ថេរ
-        algebra:
-          lessons:
-            'Eval: Conditionals':
-              name: លក្ខខណ្ឌ
-        K5PD:
-          lessons:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសម្រាប់គ្រូបង្រៀន
-        20-hour:
-          lessons:
-            Computational Thinking:
-              name: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
-            Introduction to Computer Science:
-              name: សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
-            The Artist:
-              name: វិចិត្រករ
-            The Farmer:
-              name: កសិករ
-            The Internet:
-              name: អ៊ីនធឺណិត
-        edit-code:
-          lessons:
-            The Artist:
-              name: វិចិត្រករ
         events:
           title: ព្រឹត្តិការណ៍
           description: ព្រឹត្តិការណ៍
           description_short: ព្រឹត្តិការណ៍
-          lessons:
-            Bounce:
-              name: បាល់​លោត
           student_description: ព្រឹត្តិការណ៍
         flappy:
           title: Flappy កូដ
           description: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
-          lessons:
-            Flappy Code:
-              name: Flappy កូដ
           student_description: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
         step:
           title: ជំហាន
-          lessons:
-            Step:
-              name: ជំហាន
-        algebraPD:
-          lessons:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសម្រាប់គ្រូបង្រៀន
-        algebraPD3:
-          lessons:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសម្រាប់គ្រូបង្រៀន
-        algebraPD-NexTech:
-          lessons:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសម្រាប់គ្រូបង្រៀន
-        algebraPD-iZone:
-          lessons:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសម្រាប់គ្រូបង្រៀន
-        cspunit2:
-          lessons:
-            The Internet:
-              name: អ៊ីនធឺណិតគឺសម្រាប់គ្រប់គ្នា
-        algebraPD2a:
-          lessons:
-            Free Play:
-              name: លេងដោយសេរី
-        allthethings:
-          lessons:
-            Bounce:
-              name: បាល់​លោត
-            Web Lab:
-              name: បន្ទប់វេប
-            Sprite Lab:
-              name: Sprite Lab
-        algebraPD2b:
-          lessons:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសម្រាប់គ្រូបង្រៀន
-        K5-OnlinePD:
-          lessons:
-            Computer Science Fundamentals:
-              name: មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ
-        algebraPD2:
-          lessons:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសម្រាប់គ្រូបង្រៀន
-        asUnplugged:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-            The Big Event:
-              name: ព្រឹត្តិការណ៍ធំ
         mc:
           title: Minecraft Hour of Code
           description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព Minecraft នេះ។
-          lessons:
-            Hour of Code 2015:
-              name: Minecraft Hour of Code
           student_description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព Minecraft នេះ។
-        algebraPD1:
-          lessons:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសម្រាប់គ្រូបង្រៀន
-        csp1-2017:
-          lessons:
-            The Internet:
-              name: អ៊ីនធឺណិត
-        csp4-2017:
-          lessons:
-            Simple Encryption:
-              name: ការអ៉ីនគ្រីបធម្មតា
-        CSDU3-Draft:
-          lessons:
-            Collision Detection:
-              name: ការរកឃើញការប៉ះទង្គិច
-            Functions:
-              name: អនុ​គមន៍
-        algebraFacilitator:
-          lessons:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសម្រាប់គ្រូបង្រៀន
         cspunit1-support:
           lesson_groups:
             required:
@@ -168,62 +32,10 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        gradeKinder:
-          lessons:
-            Events:
-              name: ព្រឹត្តិការណ៍
-            Loops:
-              name: រង្វិល​ជុំ
-            'Real-life Algorithms: Plant a Seed':
-              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-        grade1:
-          lessons:
-            Events:
-              name: ព្រឹត្តិការណ៍
-            Loops:
-              name: រង្វិល​ជុំ
-            Unspotted Bugs:
-              name: កំហុសដែលមិនបានគ្រោងទុក
-        grade3:
-          lessons:
-            Bounce:
-              name: បាល់​លោត
         alltheplcthings:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        csd3-2017:
-          lessons:
-            Collision Detection:
-              name: ការរកឃើញការប៉ះទង្គិច
-            Functions:
-              name: អនុ​គមន៍
-            Variables:
-              name: អ​ថេរ
-            The Draw Loop:
-              name: ការគូររង្វិលជុំដដែលៗ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-        grade2:
-          lessons:
-            The Big Event:
-              name: ព្រឹត្តិការណ៍ធំ
-        k5concepts:
-          lessons:
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Events:
-              name: ព្រឹត្តិការណ៍
-            Functions:
-              name: អនុ​គមន៍
-            Loops:
-              name: រង្វិល​ជុំ
-            Variables:
-              name: អ​ថេរ
-        algebrapdnext:
-          lessons:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសម្រាប់គ្រូបង្រៀន
         csp-online-test:
           lesson_groups:
             required:
@@ -238,46 +50,10 @@ km:
           description: បង្កើតហ្គេមបោះបាល់
           student_description: បង្កើតហ្គេមបោះបាល់
           name: បាល់បោះ
-        hoc-encryption:
-          lessons:
-            Simple Encryption:
-              name: ការអ៉ីនគ្រីបធម្មតា
-        csd2-2017:
-          lessons:
-            Lists:
-              name: បញ្ជី
         csp2-support:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        flappy-impact-study:
-          lessons:
-            Flappy Code:
-              name: Flappy កូដ
-        coursea-draft:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-        courseb-draft:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-            Your Digital Footprint:
-              name: Your Digital Footprint
-        coursec-draft:
-          lessons:
-            Your Digital Footprint:
-              name: Your Digital Footprint
-        coursed-draft:
-          lessons:
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-            Debugging in Collector:
-              name: បំបាត់កំហុសនៅក្នុងអ្នកប្រមូល
-        coursee-draft:
-          lessons:
-            Conditionals:
-              name: លក្ខខណ្ឌ
         csp3-support:
           lesson_groups:
             required:
@@ -290,137 +66,25 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        csd6-draft:
-          lessons:
-            Lists:
-              name: បញ្ជី
-            Designing Screens with Code:
-              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
-        workshop-gamelab:
-          lessons:
-            Input:
-              name: ធាតុបញ្ចូល
-        coursee-ramp:
-          lessons:
-            Conditionals:
-              name: លក្ខខណ្ឌ
-        csd6-2017:
-          lessons:
-            Lists:
-              name: បញ្ជី
-            Designing Screens with Code:
-              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
-            Designing Screens with Code_:
-              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
-        csd3-draft:
-          lessons:
-            Variables:
-              name: អ​ថេរ
-            The Draw Loop:
-              name: ការគូររង្វិលជុំដដែលៗ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Collision Detection:
-              name: ការរកឃើញការប៉ះទង្គិច
-            Functions:
-              name: អនុ​គមន៍
-        csd3-old:
-          lessons:
-            Collision Detection:
-              name: ការរកឃើញការប៉ះទង្គិច
-            Functions:
-              name: អនុ​គមន៍
-        csd2-draft:
-          lessons:
-            Lists:
-              name: បញ្ជី
-        csd3-chapters:
-          lessons:
-            Variables:
-              name: អ​ថេរ
-            The Draw Loop:
-              name: ការគូររង្វិលជុំដដែលៗ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Collision Detection:
-              name: ការរកឃើញការប៉ះទង្គិច
-            Functions:
-              name: អនុ​គមន៍
-            'null':
-              name: ទទេ
-        artist-and-bb8:
-          lessons:
-            Bounce:
-              name: បាល់​លោត
         coursea-2017:
           title: វគ្គសិក្សា A
           assignment_family_title: វគ្គសិក្សា A
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
-          lessons:
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: ការតស៊ូ៖ ស្តាវីនិងគម្រោងធំមួយ
-            'Real-life Algorithms: Plant a Seed':
-              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-            Learn to Drag and Drop:
-              name: ការតម្រៀបតាមអូសនិងទម្លាក់
-            Going Places Safely:
-              name: ពលរដ្ឋឌីជីថល៖ ធ្វើដំណើរទៅកន្លែងដោយសុវត្ថិភាព
           name: វគ្គសិក្សាអា -២០១៧
         courseb-2017:
           title: វគ្គសិក្សា B
           assignment_family_title: វគ្គសិក្សា B
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។ (ស្រដៀងគ្នាទៅនឹង វគ្គសិក្សា A ប៉ុន្ដែមានភាពខុសគ្នាច្រើនសម្រាប់សិស្សថ្នាក់ធំ)។
-          lessons:
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: ការតស៊ូ៖ ស្តាវីនិងគម្រោងធំមួយ
-            'Real-life Algorithms: Plant a Seed':
-              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-            Learn to Drag and Drop:
-              name: ការតម្រៀបតាមអូសនិងទម្លាក់
-            Your Digital Footprint:
-              name: ពលរដ្ឋឌីជីថល៖ ស្នាមជើងឌីជីថលរបស់ខ្ញុំ
-            More Programming in Maze:
-              name: ការសរសេរកូដកម្មវិធិនៅក្នុងមេសន៍។
-            Programming with Rey and BB-8:
-              name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
           name: វគ្គសិក្សាប៊ី-2017
         coursec-2017:
           title: វគ្គសិក្សា C
           assignment_family_title: វគ្គសិក្សា C
-          lessons:
-            Building a Foundation:
-              name: ការជម្នះ ៖ ការកសាងគ្រឹះ
-            Screen Out the Mean:
-              name: ពលរដ្ឋឌីជីថល ៖ ដកស្រង់បង្ហាញនូវអត្ថន័យ
-            Binary Bracelets:
-              name: លើសពីការសរសេរកម្មវិធី៖ ខ្សែដៃគោលពីរ
-            Loops with Rey and BB-8:
-              name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
           name: វគ្គសិក្សាស៊ី-2017
         coursed-2017:
           title: វគ្គសិក្សា D
           assignment_family_title: វគ្គសិក្សា D
           description_short: ការណែនាំខ្លីៗពីវគ្គសិក្សា C បន្ទាប់មកទៅមុខទៀតជាមួយ ក្បួនដោះស្រាយ រង្វិលជុំជាន់គ្នា លក្ខខណ្ឌ និងច្រើនទៀត។
           description: ស្វែងយល់ពីគំនិតសរសេរកូដថ្មីរួមមានក្បួនដោះស្រាយរង្វិលជុំដែលដាក់ក្នុងខណៈពេលរង្វិលជុំលក្ខខណ្ឌនិងព្រឹត្តិការណ៍។ ទទួលបានការណែនាំអំពីសញ្ជាតិឌីជីថលមុនពេលបង្កើតហ្គេមឬរឿងផ្ទាល់ខ្លួនរបស់អ្នកដែលអ្នកអាចចែករំលែកបាន។
-          lessons:
-            Introduction:
-              name: សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត
-            'Algorithms: Graph Paper Programming':
-              name: 'ការសរសេរកម្មវិធី: កម្មវិធីក្រដាស់ក្រាហ្វិច'
-            'Algorithms: Relay Programming':
-              name: ការបំបាត់កំហុស៖ ការសរសេរកម្មវិធីបញ្ជូនបន្ត
-            Conditionals with Cards:
-              name: 'ប្រសិនបើ / ផ្សេងទៀត: លក្ខខណ្ឌជាមួយកាត'
-            Digital Citizenship:
-              name: សញ្ជាតិឌីជីថល៖ ការអនុវត្តសញ្ជាតិឌីជីថល
-            'Unplugged: Binary':
-              name: 'លើសពីការសរសេរកម្មវិធី: រូបភាពរបាប់គោលពីរ'
-            Artist Binary:
-              name: សិល្បកររបាប់គោលពីរ
-            Nested Loops Project in Artist:
-              name: សំបុករង្វិលជុំនៅទឹកកក
-            Debugging in Collector:
-              name: បំបាត់កំហុសនៅក្នុងអ្នកប្រមូល
           student_description: ស្វែងយល់ពីគំនិតសរសេរកូដថ្មីរួមមានក្បួនដោះស្រាយរង្វិលជុំដែលដាក់ក្នុងខណៈពេលរង្វិលជុំលក្ខខណ្ឌនិងព្រឹត្តិការណ៍។ ទទួលបានការណែនាំអំពីសញ្ជាតិឌីជីថលមុនពេលបង្កើតហ្គេមឬរឿងផ្ទាល់ខ្លួនរបស់អ្នកដែលអ្នកអាចចែករំលែកបាន។
           name: វគ្គសិក្សាឌី-2017
         coursee-2017:
@@ -432,29 +96,6 @@ km:
               display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
             csf_e_2:
               display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
-          lessons:
-            Introduction:
-              name: សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត
-            Presentation Your Project:
-              name: ធ្វើបទបង្ហាញគម្រោងរបស់អ្នក។
-            Conditionals:
-              name: លក្ខខណ្ឌនៅក្នុង Farmer
-            Private and Personal Information:
-              name: សញ្ជាតិឌីជីថល៖ ព័ត៌មានឯកជននិងផ្ទាល់ខ្លួន
-            Internet:
-              name: លើសពីការសរសេរកម្មវិធី៖ អ៊ីនធឺណិត
-            Crowdsourcing:
-              name: 'លើសពីការសរសេរកម្មវិធី: Crowdsourcing'
-            Sequence in Maze:
-              name: លំដាប់លំដោយនៅក្នុង Maze
-            Debugging with Scrat:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
-            Nested Loops in Bee/Zombie:
-              name: រង្វិលជុំសំបុកក្នុង សត្វឃ្មុំ/បីសាចហ្សីប៊ី
-            Nested Loops with Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
-            Functions in Harvester:
-              name: អនុគមន៍នៅក្នុង Harvester
           name: វគ្គសិក្សាអ៊ី៝​-២០១៧
         coursef-2017:
           title: វគ្គសិក្សា F
@@ -465,31 +106,6 @@ km:
               display_name: ដំឡើងទៅមេរៀន ច (ជាជម្រើសរបស់អ្នក)
             csf_f_2:
               display_name: មាតិកានៃមេរៀន ច
-          lessons:
-            Introduction:
-              name: សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត
-            The Power of Words:
-              name: 'ភាពជាឌីជីថល: អំណាចនៃពាក្យ'
-            Ice Age Play Lab:
-              name: ព្រឹត្តិការណ៍ក្នុងយុគសម័យទឹកកក
-            Envelope Variables:
-              name: 'កម្មវិធីអថេរ: កម្មវិធីសំបុត្រអថេរ '
-            For Loop Fun:
-              name: For Loop៖ For Loop កំសាន្ត
-            Songwriting with Parameters:
-              name: 'អនុគមន៍ ៖ ការនិពន្ធចម្រៀងជាមួយនឹងប៉ារ៉ាម៉ែត្រ '
-            Presentation Your Project:
-              name: ធ្វើបទបង្ហាញគម្រោងរបស់អ្នក។
-            Conditionals in Minecraft:
-              name: លក្ខខណ្ឌនៅក្នុង Minecraft
-            Sequence in Maze:
-              name: លំដាប់លំដោយនៅក្នុង Maze
-            Debugging with Scrat:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
-            Nested Loops in Bee/Zombie:
-              name: រង្វិលជុំសំបុកក្នុង សត្វឃ្មុំ/បីសាចហ្សីប៊ី
-            Nested Loops with Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
           name: វគ្គសិក្សាអេហ្វ-២០១៧
         cspnovice:
           lesson_groups:
@@ -542,153 +158,35 @@ km:
         express-2017:
           description_audience: 'អាយុ: ៩- ១៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
-          lessons:
-            'Programming Unplugged: My Robotic Friends':
-              name: មិត្តមនុស្សយន្តរបស់ខ្ញុំ
-            'Algorithms: Graph Paper Programming':
-              name: 'ការសរសេរកម្មវិធី: កម្មវិធីក្រដាស់ក្រាហ្វិច'
-            'Algorithms: Relay Programming':
-              name: ការបំបាត់កំហុស៖ ការសរសេរកម្មវិធីបញ្ជូនបន្ត
-            Debugging in Collector:
-              name: សេចក្តីផ្តើមពីការបំបាត់កំហុស
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-            Conditionals in Minecraft:
-              name: លក្ខខណ្ឌនៅក្នុង Minecraft
-            Nested Loops Project in Frozen:
-              name: សំបុករង្វិលជុំនៅទឹកកក
-            'How it Works: The Internet':
-              name: លើសពីការសរសេរកម្មវិធី៖ អ៊ីនធឺណិត
-            'Common Sense Education: Digital Citizenship':
-              name: សញ្ជាតិឌីជីថល៖ ការអនុវត្តសញ្ជាតិឌីជីថល
-            'Common Sense Education: Screen Out the Mean':
-              name: ពលរដ្ឋឌីជីថល ៖ ដកស្រង់បង្ហាញនូវអត្ថន័យ
-            Events in Star Wars:
-              name: ព្រឹត្តិការណ៍ក្នុងសង្គ្រាមភពផ្កាយ
-            Events with Flappy:
-              name: ព្រឹត្តិការណ៍ជាមួយហ្វ្លេបពី
-            'Conditionals: Conditionals with Cards':
-              name: 'លក្ខខណ្ឌ: លក្ខខណ្ឌជាមួយសន្លឹកកាត'
-            'Variables: Envelope Variables':
-              name: 'កម្មវិធីអថេរ: កម្មវិធីសំបុត្រអថេរ '
-            'For Loops: For Loop Fun':
-              name: For Loop៖ For Loop កំសាន្ត
-            'Functions: Songwriting with Parameters':
-              name: 'អនុគមន៍ ៖ ការនិពន្ធចម្រៀងជាមួយនឹងប៉ារ៉ាម៉ែត្រ '
-            Until Loops in Maze:
-              name: Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង
           name: អុិចប្រេស-2017
         pre-express-2017:
           title: វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
           assignment_family_title: វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
           description_audience: 'អាយុ: ៤-៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
-          lessons:
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: ការតស៊ូ៖ ស្តាវីនិងគម្រោងធំមួយ
-            'Real-life Algorithms: Plant a Seed':
-              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-            Learn to Drag and Drop:
-              name: ការតម្រៀបតាមអូសនិងទម្លាក់
-            'Online Safety: Your Digital Footprint':
-              name: ពលរដ្ឋឌីជីថល៖ ស្នាមជើងឌីជីថលរបស់ខ្ញុំ
-            'Programming: Star Wars':
-              name: 'ការសរសេរកូដ៖ សង្គ្រាមភពផ្កាយ '
           name: ព្រី-អុិចប្រេស-2017
-        subgoal-labels-opt-in:
-          lessons:
-            other:
-              name: ផ្សេងៗ
         e-f-ramp:
           lesson_groups:
             csf_e_1:
               display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
             csf_e_2:
               display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
-          lessons:
-            Debugging with Scrat:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
-            Nested Loops with Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Nested Loops in Bee/Zombie:
-              name: រង្វិលជុំសំបុកក្នុង សត្វឃ្មុំ/បីសាចហ្សីប៊ី
-            Sequence in Maze:
-              name: លំដាប់លំដោយនៅក្នុង Maze
-        new-d:
-          lessons:
-            Debugging in Collector:
-              name: បំបាត់កំហុសនៅក្នុងអ្នកប្រមូល
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-        new-express:
-          lessons:
-            Debugging in Collector:
-              name: បំបាត់កំហុសនៅក្នុងអ្នកប្រមូល
-            Events in Star Wars:
-              name: ព្រឹត្តិការណ៍ក្នុងសង្គ្រាមភពផ្កាយ
-            Events with Flappy:
-              name: ព្រឹត្តិការណ៍ជាមួយហ្វ្លេបពី
-            'Conditionals: Conditionals with Cards':
-              name: 'លក្ខខណ្ឌ: លក្ខខណ្ឌជាមួយសន្លឹកកាត'
-            Conditionals in Minecraft:
-              name: លក្ខខណ្ឌនៅក្នុង Minecraft
-            'Variables: Envelope Variables':
-              name: 'កម្មវិធីអថេរ: កម្មវិធីសំបុត្រអថេរ '
-            'For Loops: For Loop Fun':
-              name: For Loop៖ For Loop កំសាន្ត
-            'Functions: Songwriting with Parameters':
-              name: 'អនុគមន៍ ៖ ការនិពន្ធចម្រៀងជាមួយនឹងប៉ារ៉ាម៉ែត្រ '
-            Debugging with Scrat:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
         new-e:
           lesson_groups:
             csf_e_1:
               display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
             csf_e_2:
               display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
-          lessons:
-            Sequence in Maze:
-              name: លំដាប់លំដោយនៅក្នុង Maze
-            Debugging with Scrat:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
-            Nested Loops in Bee/Zombie:
-              name: រង្វិលជុំសំបុកក្នុង សត្វឃ្មុំ/បីសាចហ្សីប៊ី
-            Nested Loops with Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
-            Conditionals:
-              name: លក្ខខណ្ឌ
         new-f:
           lesson_groups:
             csf_f_1:
               display_name: ដំឡើងទៅមេរៀន ច (ជាជម្រើសរបស់អ្នក)
             csf_f_2:
               display_name: មាតិកានៃមេរៀន ច
-          lessons:
-            Sequence in Maze:
-              name: លំដាប់លំដោយនៅក្នុង Maze
-            Debugging with Scrat:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
-            Nested Loops in Bee/Zombie:
-              name: រង្វិលជុំសំបុកក្នុង សត្វឃ្មុំ/បីសាចហ្សីប៊ី
-            Nested Loops with Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
-            Conditionals in Minecraft:
-              name: លក្ខខណ្ឌនៅក្នុង Minecraft
-        pwc:
-          lessons:
-            Simple Encryption:
-              name: ការអ៉ីនគ្រីបធម្មតា
         hero:
           title: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
           description_short: Minecraft បានត្រលប់មកវិញជាមួយហ្នឹងសកម្មភាពថ្មីសំរាប់ Hour of Code!
           description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
-          lessons:
-            'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស Hour of Code'
-            Minecraft Hour of Code:
-              name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
           student_description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
         course-e-2018:
           lesson_groups:
@@ -696,139 +194,24 @@ km:
               display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
             csf_e_2:
               display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
-          lessons:
-            Sequence in Maze:
-              name: លំដាប់លំដោយនៅក្នុង Maze
-            Debugging with Scrat:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
-            Nested Loops with Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions in Harvester:
-              name: អនុគមន៍នៅក្នុង Harvester
         course-f-2018:
           lesson_groups:
             csf_f_1:
               display_name: ដំឡើងទៅមេរៀន ច (ជាជម្រើសរបស់អ្នក)
             csf_f_2:
               display_name: មាតិកានៃមេរៀន ច
-          lessons:
-            Sequence in Maze:
-              name: លំដាប់លំដោយនៅក្នុង Maze
-            Debugging with Scrat:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
-            Nested Loops in Bee/Zombie:
-              name: រង្វិលជុំសំបុកក្នុង សត្វឃ្មុំ/បីសាចហ្សីប៊ី
-            Nested Loops with Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
-            Conditionals in Minecraft:
-              name: លក្ខខណ្ឌនៅក្នុង Minecraft
-        csd6-old:
-          lessons:
-            Lists:
-              name: បញ្ជី
-        csd3-1819draft:
-          lessons:
-            Variables:
-              name: អ​ថេរ
-            The Draw Loop:
-              name: ការគូររង្វិលជុំដដែលៗ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Collision Detection:
-              name: ការរកឃើញការប៉ះទង្គិច
-            Functions:
-              name: អនុ​គមន៍
-        csd3-2018:
-          lessons:
-            Variables:
-              name: អ​ថេរ
-            The Draw Loop:
-              name: ការគូររង្វិលជុំដដែលៗ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Collision Detection:
-              name: ការរកឃើញការប៉ះទង្គិច
-            Functions:
-              name: អនុ​គមន៍
-        csd2-2018:
-          lessons:
-            Lists:
-              name: បញ្ជី
         coursea-2018:
           assignment_family_title: វគ្គសិក្សា A
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
-          lessons:
-            'Debugging: Unspotted Bugs':
-              name: កំហុសដែលមិនបានគ្រោងទុក
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: Stevie and the Big Project
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: Stevie and the Big Project
         express-2018:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
-          lessons:
-            Debugging in Collector:
-              name: បំបាត់កំហុសនៅក្នុងអ្នកប្រមូល
-            'Events: The Big Event':
-              name: ព្រឹត្តិការណ៍ធំ
-            Events in Star Wars:
-              name: ព្រឹត្តិការណ៍ក្នុងសង្គ្រាមភពផ្កាយ
-            Events with Flappy:
-              name: ព្រឹត្តិការណ៍ជាមួយហ្វ្លេបពី
-            'Conditionals: Conditionals with Cards':
-              name: 'លក្ខខណ្ឌ: លក្ខខណ្ឌជាមួយសន្លឹកកាត'
-            Conditionals in Minecraft:
-              name: លក្ខខណ្ឌនៅក្នុង Minecraft
-            'Variables: Envelope Variables':
-              name: 'កម្មវិធីអថេរ: កម្មវិធីសំបុត្រអថេរ '
-            'For Loops: For Loop Fun':
-              name: For Loop៖ For Loop កំសាន្ត
-            'Functions: Songwriting with Parameters':
-              name: 'អនុគមន៍ ៖ ការនិពន្ធចម្រៀងជាមួយនឹងប៉ារ៉ាម៉ែត្រ '
-            Until Loops in Maze:
-              name: Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង
-            Debugging in Maze:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
-            Loops with Rey and BB-8:
-              name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-            Internet:
-              name: អ៊ីនធឺណិត
         courseb-2018:
           assignment_family_title: វគ្គសិក្សា B
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-            Your Digital Footprint:
-              name: Your Digital Footprint
-            Programming with Rey and BB-8:
-              name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
         coursed-2018:
           assignment_family_title: វគ្គសិក្សា D
-          lessons:
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-            Until Loops in Maze:
-              name: Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង
-            Introduction to Online Puzzles:
-              name: សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត
         coursec-2018:
           assignment_family_title: វគ្គសិក្សា C
-          lessons:
-            Loops with Rey and BB-8:
-              name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
-            'Events: The Big Event':
-              name: ព្រឹត្តិការណ៍ធំ
-        csd6-2018:
-          lessons:
-            Designing Screens with Code_:
-              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ\_
-            Designing Screens with Code:
-              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
         coursee-2018:
           assignment_family_title: វគ្គសិក្សា E
           lesson_groups:
@@ -836,19 +219,6 @@ km:
               display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
             csf_e_2:
               display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
-          lessons:
-            'Programming: My Robotic Friends':
-              name: មិត្តរ៉ូបូតរបស់ខ្ញុំ
-            Debugging with Scrat:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
-            Nested Loops with Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
-            Internet:
-              name: អ៊ីនធឺណិត
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-            Minecraft Hour of Code:
-              name: Minecraft Hour of Code
         coursef-2018:
           assignment_family_title: វគ្គសិក្សា F
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
@@ -857,25 +227,6 @@ km:
               display_name: ដំឡើងទៅមេរៀន ច (ជាជម្រើសរបស់អ្នក)
             csf_f_2:
               display_name: មាតិកានៃមេរៀន ច
-          lessons:
-            'Programming: My Robotic Friends':
-              name: មិត្តរ៉ូបូតរបស់ខ្ញុំ
-            Debugging with Scrat:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
-            Nested Loops with Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
-            Conditionals in Minecraft:
-              name: លក្ខខណ្ឌនៅក្នុង Minecraft
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-        csp1-2018:
-          lessons:
-            The Internet:
-              name: អ៊ីនធឺណិត
-        csp4-2018:
-          lessons:
-            Simple Encryption:
-              name: ការអ៉ីនគ្រីបធម្មតា
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -948,37 +299,10 @@ km:
           assignment_family_title: វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
           description_audience: 'អាយុ: ៤-៨'
-          lessons:
-            'Debugging: Unspotted Bugs':
-              name: កំហុសដែលមិនបានគ្រោងទុក
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: Stevie and the Big Project
-            'Real-life Algorithms: Plant a Seed':
-              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-            'Programming: Star Wars':
-              name: 'ការសរសេរកូដ៖ សង្គ្រាមភពផ្កាយ '
-            Your Digital Footprint:
-              name: Your Digital Footprint
-            Programming with Rey and BB-8:
-              name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: Stevie and the Big Project
         fit-test:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        dance:
-          lessons:
-            Dance Party:
-              name: Dance Party
-        dance--draft:
-          lessons:
-            Dance Party:
-              name: Dance Party
-        dance-draft:
-          lessons:
-            Dance Party:
-              name: Dance Party
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -995,27 +319,6 @@ km:
           lesson_groups:
             csf_variables:
               display_name: អ​ថេរ
-          lessons:
-            Sequence in Maze:
-              name: លំដាប់លំដោយនៅក្នុង Maze
-            Debugging with Scrat:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
-            Nested Loops in Bee/Zombie:
-              name: រង្វិលជុំសំបុកក្នុង សត្វឃ្មុំ/បីសាចហ្សីប៊ី
-            Nested Loops with Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-            Conditionals in Farmer:
-              name: លក្ខខណ្ឌនៅក្នុង Farmer
-            The Artist:
-              name: វិចិត្រករ
-            Internet:
-              name: អ៊ីនធឺណិត
-        dance-low:
-          lessons:
-            Dance Party:
-              name: Dance Party
         coursed-2019:
           lesson_groups:
             csf_events:
@@ -1024,34 +327,10 @@ km:
               display_name: រង្វិល​ជុំ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
-          lessons:
-            Introduction to Online Puzzles:
-              name: សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត
-            Nested Loops in Frozen:
-              name: សំបុករង្វិលជុំនៅទឹកកក
-            Until Loops in Maze:
-              name: Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-            Dance Party:
-              name: Dance Party
         coursee-2019:
           lesson_groups:
             csf_functions:
               display_name: អនុ​គមន៍
-          lessons:
-            Sequence in Maze:
-              name: លំដាប់លំដោយនៅក្នុង Maze
-            Debugging with Scrat:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
-            Nested Loops with Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-            Nested Loops in Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
-            Conditionals in Minecraft:
-              name: លក្ខខណ្ឌនៅក្នុង Minecraft
         express-2019:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
@@ -1064,25 +343,11 @@ km:
               display_name: អនុ​គមន៍
             csf_variables:
               display_name: អ​ថេរ
-          lessons:
-            Debugging in Maze:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
-            Loops with Rey and BB-8:
-              name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
-            Until Loops in Maze:
-              name: Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-            Dance Party:
-              name: Dance Party
           name: អុិចប្រេស-2019
         andrea-test:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-          lessons:
-            'null':
-              name: ទទេ
         dance-extras-gallery:
           title: Keep On Dancing
           description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
@@ -1093,11 +358,6 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
-          lessons:
-            Loops with Rey and BB-8:
-              name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
-            'Events: The Big Event':
-              name: ព្រឹត្តិការណ៍ធំ
         coursea-2019:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lesson_groups:
@@ -1105,20 +365,12 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
-          lessons:
-            Programming with Rey and BB-8:
-              name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
         courseb-2019:
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
-          lessons:
-            Your Digital Footprint:
-              name: Your Digital Footprint
-            Programming with Rey and BB-8:
-              name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
         pre-express-2019:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
           description_audience: 'អាយុ: ៤-៨'
@@ -1127,36 +379,7 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
-          lessons:
-            Your Digital Footprint:
-              name: Your Digital Footprint
-            Programming with Rey and BB-8:
-              name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
           name: ព្រី-អុិចប្រេស-2019
-        removed19:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-        csd2-2019:
-          lessons:
-            Lists:
-              name: បញ្ជី
-        csd3-2019:
-          lessons:
-            Variables:
-              name: អ​ថេរ
-            The Draw Loop:
-              name: ការគូររង្វិលជុំដដែលៗ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Collision Detection:
-              name: ការរកឃើញការប៉ះទង្គិច
-            Functions:
-              name: អនុ​គមន៍
-        csd6-2019:
-          lessons:
-            Designing Screens with Code:
-              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -1167,35 +390,10 @@ km:
               display_name: អនុ​គមន៍
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-          lessons:
-            Surveys:
-              name: ការស្ទង់មតិ
-        csp1-2019:
-          lessons:
-            The Internet:
-              name: អ៊ីនធឺណិត
-        csp4-2019:
-          lessons:
-            Simple Encryption:
-              name: ការអ៉ីនគ្រីបធម្មតា
         csp1-pilot:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        time4csdemo:
-          lessons:
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-            Sequence in Maze:
-              name: លំដាប់លំដោយនៅក្នុង Maze
-            Debugging with Scrat:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
-            Nested Loops in Bee/Zombie:
-              name: រង្វិលជុំសំបុកក្នុង សត្វឃ្មុំ/បីសាចហ្សីប៊ី
-            Nested Loops with Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
-            Functions in Harvester:
-              name: អនុគមន៍នៅក្នុង Harvester
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -1258,10 +456,6 @@ km:
               display_name: លក្ខខណ្ឌ
             csp_functions:
               display_name: អនុ​គមន៍
-        express-2018-vn:
-          lessons:
-            Loops with Rey and BB-8:
-              name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -1278,32 +472,6 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        csd2-pilot:
-          lessons:
-            Lists:
-              name: បញ្ជី
-        csd3-pilot:
-          lessons:
-            Variables:
-              name: អ​ថេរ
-            The Draw Loop:
-              name: ការគូររង្វិលជុំដដែលៗ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Collision Detection:
-              name: ការរកឃើញការប៉ះទង្គិច
-            Functions:
-              name: អនុ​គមន៍
-            Shapes and Parameters:
-              name: រូបរាងនិងប៉ារ៉ាម៉ែត្រ
-            Random Numbers:
-              name: លេខចៃដន្យ
-            Sprite Properties:
-              name: លក្ខណៈសម្បត្តិនៃ sprite
-        maddie-test:
-          lessons:
-            stage 1:
-              name: ដំណាក់កាល 1
         csp3-pilot:
           lesson_groups:
             required:
@@ -1314,16 +482,10 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
-          lessons:
-            Programming with Rey and BB-8:
-              name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-          lessons:
-            Focus Area 1:
-              name: កម្មវិធីសិក្សា
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -1364,36 +526,10 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        peru-2019:
-          lessons:
-            Debugging in Collector:
-              name: បំបាត់កំហុសនៅក្នុងអ្នកប្រមូល
-            Events in Star Wars:
-              name: ព្រឹត្តិការណ៍ក្នុងសង្គ្រាមភពផ្កាយ
-            Introduction to Debugging:
-              name: សេចក្តីផ្តើមពីការបំបាត់កំហុស
-            Nested Loops in Frozen:
-              name: សំបុករង្វិលជុំនៅទឹកកក
         csp6-pilot:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        k5-onlinepd-2019:
-          lessons:
-            Computer Science Fundamentals:
-              name: មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ
-            Loops:
-              name: រង្វិល​ជុំ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Events:
-              name: ព្រឹត្តិការណ៍
-            Functions:
-              name: អនុ​គមន៍
-            Sprite Lab:
-              name: Sprite Lab
-            Variables:
-              name: អ​ថេរ
         dance-extras-2019:
           description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
           student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
@@ -1405,27 +541,12 @@ km:
               display_name: លក្ខខណ្ឌ
             csp_functions:
               display_name: អនុ​គមន៍
-        time4cs-original-unit-1:
-          lessons:
-            Conditionals:
-              name: លក្ខខណ្ឌ
         time4cs-control-unit-2:
           lesson_groups:
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
             csf_functions:
               display_name: អនុ​គមន៍
-          lessons:
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-            Nested Loops in Frozen:
-              name: សំបុករង្វិលជុំនៅទឹកកក
-            Functions in Harvester:
-              name: អនុគមន៍នៅក្នុង Harvester
-        time4cs-experiment-unit-2:
-          lessons:
-            Nested Loops with Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -1434,9 +555,6 @@ km:
               display_name: លក្ខខណ្ឌ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
-          lessons:
-            Conditionals:
-              name: លក្ខខណ្ឌ
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -1445,9 +563,6 @@ km:
               display_name: លក្ខខណ្ឌ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
-          lessons:
-            Conditionals:
-              name: លក្ខខណ្ឌ
         csp7-pilot:
           lesson_groups:
             required:
@@ -1466,30 +581,6 @@ km:
               display_name: បញ្ជី
             csp_loops:
               display_name: រង្វិល​ជុំ
-        csd6-2020:
-          lessons:
-            Designing Screens with Code:
-              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
-        csd3-2020:
-          lessons:
-            Shapes and Parameters:
-              name: រូបរាងនិងប៉ារ៉ាម៉ែត្រ
-            Variables:
-              name: អ​ថេរ
-            Random Numbers:
-              name: លេខចៃដន្យ
-            Sprite Properties:
-              name: លក្ខណៈសម្បត្តិនៃ sprite
-            The Draw Loop:
-              name: ការគូររង្វិលជុំដដែលៗ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Collision Detection:
-              name: ការរកឃើញការប៉ះទង្គិច
-            Functions:
-              name: អនុ​គមន៍
-            Text:
-              name: អត្ថ​​បទ
         coursea-2020:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lesson_groups:
@@ -1497,29 +588,18 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
-          lessons:
-            Programming with Rey and BB-8:
-              name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
         courseb-2020:
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
-          lessons:
-            Your Digital Footprint:
-              name: Your Digital Footprint
         coursec-2020:
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
-          lessons:
-            Loops with Rey and BB-8:
-              name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
-            'Events: The Big Event':
-              name: ព្រឹត្តិការណ៍ធំ
         coursed-2020:
           lesson_groups:
             csf_events:
@@ -1528,30 +608,15 @@ km:
               display_name: រង្វិល​ជុំ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
-          lessons:
-            Introduction to Online Puzzles:
-              name: សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-            Until Loops in Maze:
-              name: Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង
-            Dance Party:
-              name: Dance Party
         coursee-2020:
           lesson_groups:
             csf_functions:
               display_name: អនុ​គមន៍
-          lessons:
-            Nested Loops in Frozen:
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
         coursef-2020:
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
             csf_variables:
               display_name: អ​ថេរ
-          lessons:
-            Internet:
-              name: អ៊ីនធឺណិត
         express-2020:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
@@ -1564,19 +629,6 @@ km:
               display_name: អនុ​គមន៍
             csf_variables:
               display_name: អ​ថេរ
-          lessons:
-            Dance Party:
-              name: Dance Party
-            Loops with Rey and BB-8:
-              name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
-            Nested Loops in Frozen:
-              name: សំបុករង្វិលជុំនៅទឹកកក
-            Until Loops in Maze:
-              name: Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង
-            Functions in Harvester:
-              name: អនុគមន៍នៅក្នុង Harvester
-            Debugging with Scrat:
-              name: ការបំបាត់កំហុសជាមួយ Scrat
         pre-express-2020:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
           description_audience: 'អាយុ: ៤-៨'
@@ -1585,95 +637,10 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
-          lessons:
-            Programming with Rey and BB-8:
-              name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
-        csp5-virtual:
-          lessons:
-            Variables:
-              name: អ​ថេរ
-        virtual-holding-place:
-          lessons:
-            Collision Detection:
-              name: ការរកឃើញការប៉ះទង្គិច
-            Functions:
-              name: អនុ​គមន៍
-        code-break:
-          lessons:
-            Events:
-              name: ព្រឹត្តិការណ៍
-        k5-onlinepd-2020:
-          lessons:
-            Loops:
-              name: រង្វិល​ជុំ
-            Events:
-              name: ព្រឹត្តិការណ៍
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
-            Variables:
-              name: អ​ថេរ
-            Sprite Lab:
-              name: Sprite Lab
-        csd3-virtual:
-          lessons:
-            Shapes and Parameters:
-              name: រូបរាងនិងប៉ារ៉ាម៉ែត្រ
-            Variables:
-              name: អ​ថេរ
-            Random Numbers:
-              name: លេខចៃដន្យ
-            Sprite Properties:
-              name: លក្ខណៈសម្បត្តិនៃ sprite
-            Text:
-              name: អត្ថ​​បទ
-            The Draw Loop:
-              name: ការគូររង្វិលជុំដដែលៗ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Collision Detection:
-              name: ការរកឃើញការប៉ះទង្គិច
-            Functions:
-              name: អនុ​គមន៍
-        curriculum-sandbox-levels:
-          lessons:
-            Course A:
-              name: វគ្គសិក្សា A
-            Course B:
-              name: វគ្គសិក្សា B
-            Course E:
-              name: វគ្គសិក្សា E
-            Course F:
-              name: វគ្គសិក្សា F
         2021drafting:
           lesson_groups:
             lessonGroup-3:
               display_name: អ​ថេរ
-        csd3-2021:
-          lessons:
-            Shapes and Parameters:
-              name: រូបរាងនិងប៉ារ៉ាម៉ែត្រ
-            Variables:
-              name: អ​ថេរ
-            Random Numbers:
-              name: លេខចៃដន្យ
-            Sprite Properties:
-              name: លក្ខណៈសម្បត្តិនៃ sprite
-            Text:
-              name: អត្ថ​​បទ
-            The Draw Loop:
-              name: ការគូររង្វិលជុំដដែលៗ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Collision Detection:
-              name: ការរកឃើញការប៉ះទង្គិច
-            Functions:
-              name: អនុ​គមន៍
-        csd6-2021:
-          lessons:
-            Designing Screens with Code:
-              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -1690,9 +657,6 @@ km:
               display_name: រង្វិល​ជុំ
         coursea-2021:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
-          lessons:
-            Programming with Rey and BB-8:
-              name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
@@ -1705,11 +669,6 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         coursec-2021:
-          lessons:
-            Loops with Rey and BB-8:
-              name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
-            'Events: The Big Event':
-              name: ព្រឹត្តិការណ៍ធំ
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
@@ -1717,15 +676,6 @@ km:
               display_name: ព្រឹត្តិការណ៍
           name: វគ្គសិក្សាស៊ី-2021
         coursed-2021:
-          lessons:
-            Introduction to Online Puzzles:
-              name: សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត
-            Dance Party:
-              name: Dance Party
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-            Until Loops in Maze:
-              name: Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង
           lesson_groups:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
@@ -1741,9 +691,6 @@ km:
               display_name: អនុ​គមន៍
         coursef-2021:
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
-          lessons:
-            Internet:
-              name: អ៊ីនធឺណិត
           lesson_groups:
             lessonGroup-8:
               display_name: អ​ថេរ
@@ -1752,15 +699,6 @@ km:
         express-2021:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
-          lessons:
-            Dance Party:
-              name: Dance Party
-            Loops with Rey and BB-8:
-              name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
-            Until Loops in Maze:
-              name: Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង
-            lesson-1:
-              name: Dance Party
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
@@ -1775,9 +713,6 @@ km:
         pre-express-2021:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
           description_audience: 'អាយុ: ៤-៨'
-          lessons:
-            Programming with Rey and BB-8:
-              name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
@@ -1789,26 +724,6 @@ km:
               display_name: អ​ថេរ
             variables:
               display_name: អ​ថេរ
-        k5-onlinepd-2021:
-          lessons:
-            Loops:
-              name: រង្វិល​ជុំ
-            Events:
-              name: ព្រឹត្តិការណ៍
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
-            Variables:
-              name: អ​ថេរ
-        kodea-pd-2021:
-          lessons:
-            Computer Science Fundamentals:
-              name: មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ
-        self-paced-pl-csd2-2021:
-          lessons:
-            lesson-9:
-              name: គ្រូបង្រៀនសហគមន៍
         csa-videos:
           lesson_groups:
             lessonGroup-3:
@@ -1823,14 +738,6 @@ km:
           lesson_groups:
             lessonGroup-2:
               description: សាក​ល្បង
-        dlp21-csd-overview:
-          lessons:
-            lesson-1:
-              name: ទិដ្ឋភាពទូទៅ
-        dlp21-csp-overview:
-          lessons:
-            lesson-1:
-              name: ទិដ្ឋភាពទូទៅ
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -1839,14 +746,7 @@ km:
           lesson_groups:
             lessonGroup-3:
               display_name: អ​ថេរ
-        csd6-pilot-2022:
-          lessons:
-            Functions with Parameters:
-              name: អនុ​គមន៍
         coursea-2022:
-          lessons:
-            Programming with Rey and BB-8:
-              name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
@@ -1854,15 +754,6 @@ km:
               display_name: ព្រឹត្តិការណ៍
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
         express-2022:
-          lessons:
-            Dance Party:
-              name: Dance Party
-            Loops with Rey and BB-8:
-              name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
-            Until Loops in Maze:
-              name: Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង
-            lesson-1:
-              name: Dance Party
           lesson_groups:
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
@@ -1897,28 +788,12 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         coursec-2022:
-          lessons:
-            Loops with Rey and BB-8:
-              name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
-            The Big Event:
-              name: ព្រឹត្តិការណ៍ធំ
-            'Events: The Big Event':
-              name: ព្រឹត្តិការណ៍ធំ
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         coursed-2022:
-          lessons:
-            Introduction to Online Puzzles:
-              name: សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត
-            Dance Party:
-              name: Dance Party
-            Conditionals with Cards:
-              name: ការប្រើលក្ខខណ្ឌជាមួយកាត
-            Until Loops in Maze:
-              name: Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង
           lesson_groups:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
@@ -1933,23 +808,11 @@ km:
             csf_nested_loops:
               display_name: លក្ខខណ្ឌ
         coursef-2022:
-          lessons:
-            The Internet:
-              name: អ៊ីនធឺណិត
-            Internet:
-              name: អ៊ីនធឺណិត
           lesson_groups:
             lessonGroup-8:
               display_name: អ​ថេរ
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
-        csa1-2022:
-          lessons:
-            lesson-9:
-              name: រង្វិល​ជុំ
         pre-express-2022:
-          lessons:
-            Programming with Rey and BB-8:
-              name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
@@ -1957,77 +820,8 @@ km:
               display_name: ព្រឹត្តិការណ៍
           description_audience: 'អាយុ: ៤-៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
-        csa2-2022:
-          lessons:
-            lesson-6:
-              name: អ​ថេរ
-        cs4all-invasive-species:
-          lessons:
-            lesson-12:
-              name: លក្ខខណ្ឌ
-            lesson-14:
-              name: លក្ខខណ្ឌនៅក្នុង Minecraft
-        csa1-2022-exemplars:
-          lessons:
-            lesson-9:
-              name: រង្វិល​ជុំ
         coursef-2022-pilot:
-          lessons:
-            The Internet:
-              name: អ៊ីនធឺណិត
           lesson_groups:
             lessonGroup-8:
               display_name: អ​ថេរ
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
-        csa2-2022-exemplars:
-          lessons:
-            lesson-1:
-              name: អ​ថេរ
-        k5-onlinepd-2022:
-          lessons:
-            Loops:
-              name: រង្វិល​ជុំ
-            Events:
-              name: ព្រឹត្តិការណ៍
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
-            Variables:
-              name: អ​ថេរ
-        csd3-2022:
-          lessons:
-            Shapes and Parameters:
-              name: រូបរាងនិងប៉ារ៉ាម៉ែត្រ
-            Variables:
-              name: អ​ថេរ
-            Random Numbers:
-              name: លេខចៃដន្យ
-            Sprite Properties:
-              name: លក្ខណៈសម្បត្តិនៃ sprite
-            Text:
-              name: អត្ថ​​បទ
-            The Draw Loop:
-              name: ការគូររង្វិលជុំដដែលៗ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Collision Detection:
-              name: ការរកឃើញការប៉ះទង្គិច
-            Functions:
-              name: អនុ​គមន៍
-        csd6-2022:
-          lessons:
-            Functions:
-              name: អនុ​គមន៍
-        dlp-csd-overview-2022:
-          lessons:
-            Overview:
-              name: ទិដ្ឋភាពទូទៅ
-            lesson-1:
-              name: ទិដ្ឋភាពទូទៅ
-        dlp-csp-overview-2022:
-          lessons:
-            Overview:
-              name: ទិដ្ឋភាពទូទៅ
-            lesson-1:
-              name: ទិដ្ឋភាពទូទៅ

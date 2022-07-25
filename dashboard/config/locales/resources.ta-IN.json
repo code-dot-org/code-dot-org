@@ -73,6 +73,9 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "காணொளி"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings/courseb/2018": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -81,6 +84,9 @@
         },
         "vocabulary/courseb/2018": {
           "name": "சொல்லகராதி"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings/coursea/2018": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -91,6 +97,9 @@
         "vocabulary/coursea/2018": {
           "name": "சொல்லகராதி"
         },
+        "lesson_plans/coursed/2018": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings/coursed/2018": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -99,6 +108,9 @@
         },
         "vocabulary/coursed/2018": {
           "name": "சொல்லகராதி"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings/coursef/2018": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -109,6 +121,9 @@
         "vocabulary/coursef/2018": {
           "name": "சொல்லகராதி"
         },
+        "lesson_plans/express/2018": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings/express/2018": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -118,6 +133,9 @@
         "vocabulary/express/2018": {
           "name": "சொல்லகராதி"
         },
+        "lesson_plans/coursee/2018": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings/coursee/2018": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -126,6 +144,9 @@
         },
         "vocabulary/coursee/2018": {
           "name": "சொல்லகராதி"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings/coursec/2018": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -139,6 +160,9 @@
         "code_introduced_1/csd/2018": {
           "name": "குறியீடு அறிமுகப்படுத்தப்பட்டது"
         },
+        "lesson_plans_2/csd/2018": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings_2/csd/2018": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -151,6 +175,9 @@
         "code_introduced_3/csd/2018": {
           "name": "குறியீடு அறிமுகப்படுத்தப்பட்டது"
         },
+        "lesson_plans_5/csd/2018": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings_5/csd/2018": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -159,6 +186,9 @@
         },
         "vocabulary_5/csd/2018": {
           "name": "சொல்லகராதி"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings_4/csd/2018": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -172,6 +202,9 @@
         "code_introduced_2/csd/2018": {
           "name": "குறியீடு அறிமுகப்படுத்தப்பட்டது"
         },
+        "lesson_plans_3/csd/2018": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings_3/csd/2018": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -184,6 +217,9 @@
         "code_introduced/csd/2018": {
           "name": "குறியீடு அறிமுகப்படுத்தப்பட்டது"
         },
+        "lesson_plans_1/csd/2018": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings_1/csd/2018": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -192,6 +228,9 @@
         },
         "vocabulary_1/csd/2018": {
           "name": "சொல்லகராதி"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings/csd/2018": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -205,6 +244,9 @@
         "curriculum_guide/coursea/2019": {
           "name": "பாடத்திட்ட வழிகாட்டி "
         },
+        "lesson_plans/coursea/2019": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings/coursea/2019": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -216,6 +258,9 @@
         },
         "curriculum_guide/courseb/2019": {
           "name": "பாடத்திட்ட வழிகாட்டி "
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings/courseb/2019": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -229,6 +274,9 @@
         "curriculum_guide/coursed/2019": {
           "name": "பாடத்திட்ட வழிகாட்டி "
         },
+        "lesson_plans/coursed/2019": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings/coursed/2019": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -240,6 +288,9 @@
         },
         "curriculum_guide/coursef/2019": {
           "name": "பாடத்திட்ட வழிகாட்டி "
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings/coursef/2019": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -253,6 +304,9 @@
         "curriculum_guide/coursee/2019": {
           "name": "பாடத்திட்ட வழிகாட்டி "
         },
+        "lesson_plans/coursee/2019": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings/coursee/2019": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -261,6 +315,9 @@
         },
         "vocabulary/coursee/2019": {
           "name": "சொல்லகராதி"
+        },
+        "lesson_plans/express/2019": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings/express/2019": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -273,6 +330,9 @@
         },
         "curriculum_guide/coursec/2019": {
           "name": "பாடத்திட்ட வழிகாட்டி "
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings/coursec/2019": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -289,6 +349,9 @@
         "code_introduced_1/csd/2019": {
           "name": "குறியீடு அறிமுகப்படுத்தப்பட்டது"
         },
+        "lesson_plans_2/csd/2019": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings_2/csd/2019": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -297,6 +360,9 @@
         },
         "code_introduced_3/csd/2019": {
           "name": "குறியீடு அறிமுகப்படுத்தப்பட்டது"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings_5/csd/2019": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -307,17 +373,26 @@
         "code_introduced_2/csd/2019": {
           "name": "குறியீடு அறிமுகப்படுத்தப்பட்டது"
         },
+        "lesson_plans_3/csd/2019": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings_3/csd/2019": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
         "vocabulary_3/csd/2019": {
           "name": "சொல்லகராதி"
         },
+        "lesson_plans_4/csd/2019": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings_4/csd/2019": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
         "vocabulary_4/csd/2019": {
           "name": "சொல்லகராதி"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings/csd/2019": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -328,6 +403,9 @@
         "code_introduced/csd/2019": {
           "name": "குறியீடு அறிமுகப்படுத்தப்பட்டது"
         },
+        "lesson_plans_1/csd/2019": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings_1/csd/2019": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -336,6 +414,9 @@
         },
         "code_introduced_1/csd/2017": {
           "name": "குறியீடு அறிமுகப்படுத்தப்பட்டது"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings_2/csd/2017": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -349,6 +430,9 @@
         "code_introduced_3/csd/2017": {
           "name": "குறியீடு அறிமுகப்படுத்தப்பட்டது"
         },
+        "lesson_plans_5/csd/2017": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings_5/csd/2017": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -361,6 +445,9 @@
         "code_introduced/csd/2017": {
           "name": "குறியீடு அறிமுகப்படுத்தப்பட்டது"
         },
+        "lesson_plans_1/csd/2017": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings_1/csd/2017": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -370,6 +457,9 @@
         "vocabulary_1/csd/2017": {
           "name": "சொல்லகராதி"
         },
+        "lesson_plans/csd/2017": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings/csd/2017": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -378,6 +468,9 @@
         },
         "vocabulary/csd/2017": {
           "name": "சொல்லகராதி"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings_4/csd/2017": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -390,6 +483,9 @@
         },
         "code_introduced_2/csd/2017": {
           "name": "குறியீடு அறிமுகப்படுத்தப்பட்டது"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings_3/csd/2017": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -424,6 +520,7 @@
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
+          "name": "ஸ்பிரைட் ஆய்வக ஆவணம்",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/coursef/2021": {
@@ -488,6 +585,7 @@
           "type": "காணொளி"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "லூப் வேடிக்கைக்காக",
           "url": "https://youtu.be/mX857v5B4gE"
         },
         "flf-assessment-teacher-key/coursef/2021": {
@@ -495,15 +593,19 @@
           "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "லூப் வேடிக்கைக்காக",
           "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "லூப் வேடிக்கைக்காக",
           "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "லூப் வேடிக்கைக்காக",
           "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "லூப் வேடிக்கைக்காக",
           "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
           "type": "மதிப்பீடு"
         },
@@ -1007,18 +1109,23 @@
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "என் ரோபோடிக் நண்பர்கள்",
           "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
         },
         "csf-mrf-symbol-key/coursec/2021": {
+          "name": "என் ரோபோடிக் நண்பர்கள்",
           "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "என் ரோபோடிக் நண்பர்கள்",
           "url": "https://youtu.be/xaW3PAzHxCU"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "என் ரோபோடிக் நண்பர்கள்",
           "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "என் ரோபோடிக் நண்பர்கள்",
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
         },
         "c2-maze-bridge/coursec/2021": {
@@ -1293,9 +1400,11 @@
           "type": "காணொளி"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "அட்டைகளுடன் நிபந்தனைகள்",
           "url": "https://youtu.be/UymN4lTL50s"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "அட்டைகளுடன் நிபந்தனைகள்",
           "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
@@ -1303,13 +1412,16 @@
           "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "அட்டைகளுடன் நிபந்தனைகள்",
           "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
           "type": "மதிப்பீடு"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "அட்டைகளுடன் நிபந்தனைகள்",
           "url": "https://youtu.be/TbUaEnAYPjI"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "அட்டைகளுடன் நிபந்தனைகள்",
           "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
@@ -1392,6 +1504,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/express/2021": {
+          "name": "ஸ்பிரைட் ஆய்வக ஆவணம்",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
@@ -1399,6 +1512,7 @@
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
+          "name": "ஸ்பிரைட் ஆய்வக ஆவணம்",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
@@ -1531,6 +1645,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/coursee/2021": {
+          "name": "ஸ்பிரைட் ஆய்வக ஆவணம்",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
@@ -1690,6 +1805,7 @@
           "type": "காணொளி"
         },
         "seeing_ai/csd/2021": {
+          "name": "AI ஐப் பார்ப்பது",
           "type": "காணொளி"
         },
         "finding_patterns_in_data/csd/2021": {
@@ -1834,6 +1950,9 @@
           "name": "வீடியோ: பயிற்சி தரவு மற்றும் சார்பு",
           "type": "காணொளி"
         },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
+        },
         "make-a-recommendation-1/csd/2021": {
           "type": "ருபிரிக்"
         },
@@ -1888,6 +2007,9 @@
         "interactive-card-project-guide-2019/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
         },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
+        },
         "interactive_card/csd/2021": {
           "type": "ருபிரிக்"
         },
@@ -1923,6 +2045,9 @@
         "make-your-own-game/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
         },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
+        },
         "make_your_own_game/csd/2021": {
           "type": "ருபிரிக்"
         },
@@ -1937,6 +2062,9 @@
         },
         "what-do-computers-do/csd/2021": {
           "type": "காணொளி"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
         },
         "apps_and_problem_solving/csd/2021": {
           "type": "ருபிரிக்"
@@ -1957,6 +2085,9 @@
         },
         "html-web-page-1/csd/2021": {
           "type": "ருபிரிக்"
+        },
+        "html-web-page/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
         },
         "html-page/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
@@ -1979,6 +2110,9 @@
         "your-personal-style-1-2-3/csd/2021": {
           "type": "ருபிரிக்"
         },
+        "your-personal-style-1/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
+        },
         "your-personal-style/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
         },
@@ -1987,6 +2121,9 @@
         },
         "person-web-page-prepare/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
         },
         "person-web-page-reflect/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
@@ -2016,8 +2153,14 @@
         "plan-a-multi-page-website/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
         },
+        "website-for-a-purpose/csd/2021": {
+          "type": "சக மதிப்பாய்வு"
+        },
         "website-for-a-purpose-reflect/csd/2021": {
           "type": "திட்ட வழிகாட்டி"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings/pre-express/2020": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -2027,6 +2170,9 @@
         },
         "vocabulary/pre-express/2020": {
           "name": "சொல்லகராதி"
+        },
+        "lesson_plans/express/2020": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings/express/2020": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -2040,6 +2186,9 @@
         "curriculum_guide/courseb/2020": {
           "name": "பாடத்திட்ட வழிகாட்டி "
         },
+        "lesson_plans/courseb/2020": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings/courseb/2020": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -2051,6 +2200,9 @@
         },
         "curriculum_guide/coursed/2020": {
           "name": "பாடத்திட்ட வழிகாட்டி "
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings/coursed/2020": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -2064,6 +2216,9 @@
         "curriculum_guide/coursec/2020": {
           "name": "பாடத்திட்ட வழிகாட்டி "
         },
+        "lesson_plans/coursec/2020": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings/coursec/2020": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -2075,6 +2230,9 @@
         },
         "curriculum_guide/coursee/2020": {
           "name": "பாடத்திட்ட வழிகாட்டி "
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings/coursee/2020": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
@@ -2088,6 +2246,9 @@
         "curriculum_guide/coursea/2020": {
           "name": "பாடத்திட்ட வழிகாட்டி "
         },
+        "lesson_plans/coursea/2020": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
+        },
         "standard_mappings/coursea/2020": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"
         },
@@ -2099,6 +2260,9 @@
         },
         "curriculum_guide/coursef/2020": {
           "name": "பாடத்திட்ட வழிகாட்டி "
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "பாடத்திற்கான திட்டங்கள்"
         },
         "standard_mappings/coursef/2020": {
           "name": "தரநிலைபடுத்தப்பட்ட மேப்பிங்குகள்"

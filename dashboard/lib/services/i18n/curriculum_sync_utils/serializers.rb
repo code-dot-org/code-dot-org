@@ -130,9 +130,9 @@ module Services::I18n::CurriculumSyncUtils
     class StandardCrowdinSerializer < CrowdinSerializer
       attributes :description
 
-      belongs_to :framework, serializer: FrameworkCrowdinSerializer
-      belongs_to :parent_category, serializer: StandardCategoryCrowdinSerializer
-      belongs_to :category, serializer: StandardCategoryCrowdinSerializer
+      belongs_to :framework, serializer: FrameworkCrowdinSerializer, optional: true
+      belongs_to :parent_category, serializer: StandardCategoryCrowdinSerializer, optional: true
+      belongs_to :category, serializer: StandardCategoryCrowdinSerializer, optional: true
 
       delegate :crowdin_key, to: :object
     end
@@ -161,7 +161,10 @@ module Services::I18n::CurriculumSyncUtils
     end
 
     class ScriptCrowdinSerializer < CrowdinSerializer
-      has_many :lessons, serializer: LessonCrowdinSerializer
+      # Optional `only_numbered_lessons` scope to avoid `relative_position` conflicts between Lessons
+      has_many :lessons, serializer: LessonCrowdinSerializer do
+        scope[:only_numbered_lessons] ? object.lessons.select(&:numbered_lesson?) : object.lessons
+      end
       has_many :resources, serializer: ResourceCrowdinSerializer
       has_many :student_resources, serializer: ResourceCrowdinSerializer
 

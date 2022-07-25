@@ -53,11 +53,12 @@
           "name": "Witaj świecie",
           "overview": "Na tej lekcji uczniowie poznają podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Uczniowie nauczą się tworzyć i animować duszki oraz uczynić je interaktywnymi za pomocą zdarzeń.\n\nIstnieje wiele wersji tej lekcji. Każda wersja uczy tych samych pojęć, ale zawiera różne obrazy, które przemawiają do różnych uczniów. Aby uzyskać więcej informacji, odwiedź [stronę docelową Hello World.](https://code.org/helloworld)",
           "preparation": "-   Zabawa poprzez łamigłówki służąca wynajdywaniu jakichkolwiek obszarów potencjalnych problemów dla swojej klasy.\n-   Użyj zasobów na [Powiązania informatyki](https://code.org/educate/csc), aby sporządzić plan dalszej nauki informatyki po wstępnym samouczku.",
-          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty."
+          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty.",
+          "student_overview": "Na tej lekcji poznasz podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Nauczysz się tworzyć i animować duszki oraz uczynić je interaktywnymi stosując zdarzenia."
         },
         "artist/Artist": {
           "name": "Artysta",
-          "overview": "Na wej lekcji uczniowie przejmą sterowania Artystą, aby dokończyć rysunki na ekranie. Ta scena Artysty pozwoli uczniom tworzyć obrazy o coraz wyższym stopniu złożoności, korzystając z nowych bloków takich jak \"idź do przodu o 100 pikseli\" oraz \"skręć w prawo o 90 stopni\".",
+          "overview": "Na tej lekcji uczniowie przejmą sterowanie Artystą, aby dokończyć rysunki na ekranie. Ta scena Artysty pozwoli uczniom tworzyć obrazy o coraz wyższym stopniu złożoności, korzystając z nowych bloków, takich jak \"idź do przodu o 100 pikseli\" oraz \"skręć w prawo o 90 stopni\".",
           "student_overview": "Twórz piękne obrazki programując Artystę."
         },
         "gumball/Gumball Play Lab": {
@@ -76,7 +77,8 @@
           "name": "Witaj świecie",
           "overview": "Na tej lekcji uczniowie poznają podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Uczniowie nauczą się tworzyć i animować duszki oraz uczynić je interaktywnymi za pomocą zdarzeń.\n\nIstnieje wiele wersji tej lekcji. Każda wersja uczy tych samych pojęć, ale zawiera różne obrazy, które przemawiają do różnych uczniów. Aby uzyskać więcej informacji, odwiedź [stronę docelową Hello World.](https://code.org/helloworld)",
           "preparation": "-   Zabawa poprzez łamigłówki służąca wynajdywaniu jakichkolwiek obszarów potencjalnych problemów dla swojej klasy.\n-   Użyj zasobów na [Powiązania informatyki](https://code.org/educate/csc), aby sporządzić plan dalszej nauki informatyki po wstępnym samouczku.",
-          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty."
+          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty.",
+          "student_overview": "Na tej lekcji poznasz podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Nauczysz się tworzyć i animować duszki oraz uczynić je interaktywnymi stosując zdarzenia."
         },
         "aquatic/Aquatic": {
           "name": "Minecraft: Wodna podróż",
@@ -93,7 +95,8 @@
           "name": "Witaj świecie",
           "overview": "Na tej lekcji uczniowie poznają podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Uczniowie nauczą się tworzyć i animować duszki oraz uczynić je interaktywnymi za pomocą zdarzeń.\n\nIstnieje wiele wersji tej lekcji. Każda wersja uczy tych samych pojęć, ale zawiera różne obrazy, które przemawiają do różnych uczniów. Aby uzyskać więcej informacji, odwiedź [stronę docelową Hello World.](https://code.org/helloworld)",
           "preparation": "-   Zabawa poprzez łamigłówki służąca wynajdywaniu jakichkolwiek obszarów potencjalnych problemów dla swojej klasy.\n-   Użyj zasobów na [Powiązania informatyki](https://code.org/educate/csc), aby sporządzić plan dalszej nauki informatyki po wstępnym samouczku.",
-          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty."
+          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty.",
+          "student_overview": "Na tej lekcji poznasz podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Nauczysz się tworzyć i animować duszki oraz uczynić je interaktywnymi stosując zdarzenia."
         },
         "starwars/Hour of Code 2015": {
           "name": "Star Wars: Budowanie Galaktyki za pomocą kodu (JavaScript)",
@@ -120,7 +123,8 @@
           "name": "Witaj świecie",
           "overview": "Na tej lekcji uczniowie poznają podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Uczniowie nauczą się tworzyć i animować duszki oraz uczynić je interaktywnymi za pomocą zdarzeń.\n\nIstnieje wiele wersji tej lekcji. Każda wersja uczy tych samych pojęć, ale zawiera różne obrazy, które przemawiają do różnych uczniów. Aby uzyskać więcej informacji, odwiedź [stronę docelową Hello World.](https://code.org/helloworld)",
           "preparation": "-   Zabawa poprzez łamigłówki służąca wynajdywaniu jakichkolwiek obszarów potencjalnych problemów dla swojej klasy.\n-   Użyj zasobów na [Powiązania informatyki](https://code.org/educate/csc), aby sporządzić plan dalszej nauki informatyki po wstępnym samouczku.",
-          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty."
+          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty.",
+          "student_overview": "Na tej lekcji poznasz podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Nauczysz się tworzyć i animować duszki oraz uczynić je interaktywnymi stosując zdarzenia."
         },
         "starwarsblocks/Hour of Code 2015": {
           "name": "Star Wars: Tworzenie Galaktyki za pomocą kodu (Blockly)",
@@ -158,6 +162,9 @@
           "name": "Potańcówka - Przejdź dalej",
           "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia informatyczne związane z programowaniem i programowaniem zdarzeń (za pomocą bloków)."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Godzina Kodowania 2013"
+        },
         "dance-2019/Dance Party": {
           "name": "Potańcówka (2019)",
           "overview": "Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.",
@@ -170,8 +177,173 @@
           "purpose": "Ten samouczek jest przeznaczony do szybkiego wprowadzenia uczniów w **naukę maszynową**, rodzaj **sztucznej inteligencji**. Uczniowie będą badać, jak wykorzystuje się **dane szkoleniowe**, aby aktywować model nauki maszynowej do klasyfikacji nowych danych. Uczniowie powinni zdobywać pozytywne doświadczenia w trakcie samouczka, a, co ważniejsze, powinni być zmotywowani do dalszej nauki informatyki. ",
           "student_overview": "Podsumowanie samouczka: Najpierw uczniowie klasyfikują przedmioty jako \"ryba\" lub \"nie ryba\" próbując zebrać śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie."
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Witamy na \"Podstawach Nauczania Informatyki\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Rozumienie kursów Podstaw Informatyki"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sekwencjonowanie"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Pętle"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Zdarzenia"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Zdania z warunkami"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Projekty na koniec kursu"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcje"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Zmienne"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Pętle dla (for)"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Przeglądanie Twoich refleksji"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Następne kroki"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Badanie nastroju"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Projekt cyfrowy"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Programowanie sterowane zdarzeniami"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Podstawowa funkcjonalność aplikacji"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Gettery I settery"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Pierwsze kroki"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Podstawy Informatyki"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Patrząc w przyszłość"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Doskonalenie podstaw: Sekwencje"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Doskonalenie podstaw: Pętle"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Doskonalenie podstaw: Warunki"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Doskonalenie podstaw: Funkcje"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Doskonalenie podstaw: Zdarzenia"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Najlepsze praktyki w nauczaniu informatyki"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planowanie"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Następne Kroki"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Omówienie i instrukcje instalacji"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Przesłanie bitów na współdzielonym połączeniu"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Wysyłanie liczb"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Wysyłanie ASCII"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Nadawanie komunikatów"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routery i adresy"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pakiety i niezawodność"
+        },
+        "netsim/Manual DNS": {
+          "name": "Ręczny DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Automatyczny węzeł DNS"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Czas na zabawę z symulatorem internetowym"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Ucieczka z sali"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Ekran początkowy i ekran końcowy"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Ekran początkowy i ekran końcowy2"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Pierwsze kroki"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Podstawy Informatyki"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Patrząc w przyszłość"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Doskonalenie podstaw: Sekwencje"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Doskonalenie podstaw: Pętle"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Doskonalenie podstaw: Warunki"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Doskonalenie podstaw: Funkcje"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Doskonalenie podstaw: Zdarzenia"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Najlepsze praktyki w nauczaniu informatyki"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planowanie"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Następne Kroki"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Godzina Kodowania Kolekcjonera 2017"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Analiza częstotliwości"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Przenieść go, przenieść go"
@@ -390,7 +562,7 @@
           "name": "Zbuduj swój projekt"
         },
         "coursef-2018/Revise Your Project": {
-          "name": "Zweryfikuj swój projekt"
+          "name": "Popraw swój projekt"
         },
         "coursef-2018/Present Your Project": {
           "name": "Zaprezentuj swój projekt"
@@ -516,7 +688,7 @@
           "name": "Zbuduj swój projekt"
         },
         "express-2018/Revise Your Project": {
-          "name": "Zweryfikuj swój projekt"
+          "name": "Popraw swój projekt"
         },
         "express-2018/Present Your Project": {
           "name": "Zaprezentuj swój projekt"
@@ -714,10 +886,10 @@
           "name": "Królewska bitwa ze zdarzeniami"
         },
         "pre-express-2018/Spelling Bee": {
-          "name": "Literująca Pszczółka"
+          "name": "CSC - Literująca pszczółka"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "Ankieta pod koniec semestru Odkrycia informatyki"
+          "name": "Programowanie dla rozrywki"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Rysowanie kształtów"
@@ -1395,7 +1567,7 @@
           "name": "Programowanie przy pomocy interfejsu Harvester"
         },
         "pre-express-2019/Spelling Bee": {
-          "name": "Literująca Pszczółka"
+          "name": "CSC - Literująca pszczółka"
         },
         "pre-express-2019/Loops in Ice Age": {
           "name": "Pętle ze Scratem"
@@ -1416,10 +1588,10 @@
           "name": "Królewska bitwa ze zdarzeniami"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Testy po realizacji projektu"
+          "name": "Programowanie dla rozrywki"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Rysowanie kształtów"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Rysowanie w laboratorium gier"
@@ -1479,10 +1651,7 @@
           "name": "Projekt - Zaprojektuj grę"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Testy po realizacji projektu"
-        },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Innowacje w informatyce"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "Circuit Playground"
@@ -1527,10 +1696,10 @@
           "name": "Projekt - Zbuduj prototyp rozwiązania innowacyjnego"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Testy po realizacji projektu"
+          "name": "Analiza projektu"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Zrozumienie twojego użytkownika"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Mikrozajęcia poświęcone projektowaniu ukierunkowanemu na użytkownika"
@@ -1575,10 +1744,10 @@
           "name": "Projekt - Prezentacja aplikacji"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Testy po realizacji projektu"
+          "name": "Reprezentacja ma znaczenie"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Wzorce i reprezentacje"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII i reprezentacja binarna"
@@ -1623,7 +1792,7 @@
           "name": "Wprowadzenie do rozwiązywania problemów"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Testy po realizacji projektu"
+          "name": "Proces rozwiązywania problemów"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Zgłębianie rozwiązywania problemów"
@@ -1644,10 +1813,10 @@
           "name": "Projekt - Zaproponuj aplikację"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Testy po realizacji projektu"
+          "name": "Odkrywanie stron"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Strony internetowe służące wyrażeniu się"
         },
         "csd2-2019/Intro to HTML": {
           "name": "Wprowadzenie do HTML"
@@ -1737,7 +1906,7 @@
           "name": "Zmienne w Play Lab"
         },
         "coursef-2017/For Loop Fun": {
-          "name": "Pętle \"for\": Zabawa z pętlami \"for\""
+          "name": "Pętle for: Zabawa z pętlami for"
         },
         "coursef-2017/For Loops in Bee": {
           "name": "Pętle for z Pszczółką"
@@ -1767,7 +1936,7 @@
           "name": "Zbuduj swój projekt"
         },
         "coursef-2017/Revise Your Project": {
-          "name": "Zweryfikuj swój projekt"
+          "name": "Popraw swój projekt"
         },
         "coursef-2017/Present Your Project": {
           "name": "Zaprezentuj swój projekt"
@@ -1848,7 +2017,7 @@
           "name": "Zdarzenia w Play Lab"
         },
         "pre-express-2017/Spelling Bee": {
-          "name": "Literująca Pszczółka"
+          "name": "CSC - Literująca pszczółka"
         },
         "coursee-2017/Programming: My Robotic Friends": {
           "name": "Programowanie: Moi robotyczni przyjaciele"
@@ -1902,13 +2071,13 @@
           "name": "Funkcje z Pszczółką"
         },
         "coursee-2017/Functions in Harvester": {
-          "name": "Funkcje w interfejsie Harvester"
+          "name": "Funkcje ze Żniwiarką "
         },
         "coursee-2017/Determine the Concept": {
           "name": "Określ pomysł"
         },
         "coursee-2017/Build a Play Lab Game": {
-          "name": "Zbuduj grę Play Lab"
+          "name": "Zbuduj grę w Play Lab"
         },
         "coursee-2017/Explore Project Ideas": {
           "name": "Zbadaj pomysły na projekt"
@@ -2031,7 +2200,7 @@
           "name": "Zagnieżdżone pętle w Krainie Lodu"
         },
         "coursed-2017/Algorithms: Relay Programming": {
-          "name": "Debugowanie: Programowanie sztafetowe"
+          "name": "Debugowanie: Programowanie w sztafecie"
         },
         "coursed-2017/Debugging in Collector": {
           "name": "Debugowanie w interfejsie Collector"
@@ -2049,13 +2218,13 @@
           "name": "Pętle warunkowe w Labiryncie"
         },
         "coursed-2017/Conditionals & Loops in Farmer": {
-          "name": "Instrukcje warunkowe i pętle ze żniwiarką"
+          "name": "Instrukcje warunkowe i pętle ze Żniwiarką"
         },
         "coursed-2017/Digital Citizenship": {
           "name": "Cyfrowe obywatelstwo: Ćwiczenie obywatelstwa cyfrowego"
         },
         "coursed-2017/Build a Play Lab Game": {
-          "name": "Zbuduj grę Play Lab"
+          "name": "Zbuduj grę w Play Lab"
         },
         "coursed-2017/Unplugged: Binary": {
           "name": "Poza programowaniem: Binarne obrazki"
@@ -2121,7 +2290,7 @@
           "name": "Wyrażenia warunkowe w Minecrafcie"
         },
         "express-2017/Conditionals & Loops in Harvester": {
-          "name": "Instrukcje warunkowe i pętle ze żniwiarką"
+          "name": "Instrukcje warunkowe i pętle ze Żniwiarką"
         },
         "express-2017/Variables: Envelope Variables": {
           "name": "Zmienne: Koperty jako zmienne"
@@ -2133,7 +2302,7 @@
           "name": "Zmienne w Play Lab"
         },
         "express-2017/For Loops: For Loop Fun": {
-          "name": "Pętle \"for\": Zabawa z pętlami \"for\""
+          "name": "Pętle for: Zabawa z pętlami for"
         },
         "express-2017/For Loops in Bee": {
           "name": "Pętle for z Pszczółką"
@@ -2163,16 +2332,16 @@
           "name": "Zbuduj swój projekt"
         },
         "express-2017/Revise Your Project": {
-          "name": "Zweryfikuj swój projekt"
+          "name": "Popraw swój projekt"
         },
         "express-2017/Present Your Project": {
           "name": "Zaprezentuj swój projekt"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "Ankieta pod koniec semestru Odkrycia informatyki"
+          "name": "Programowanie dla rozrywki"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Rysowanie kształtów"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Rysowanie w laboratorium gier"
@@ -2232,7 +2401,7 @@
           "name": "Projekt - Zaprojektuj grę"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Innowacje w informatyce"
         },
         "csd6-2017/The Circuit Playground_": {
           "name": "Circuit Playground"
@@ -2277,7 +2446,7 @@
           "name": "Projekt - Zbuduj prototyp rozwiązania innowacyjnego"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Odkrywanie stron"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Strony internetowe służące wyrażeniu się"
@@ -2346,7 +2515,7 @@
           "name": "Projekt - Zaproponuj aplikację"
         },
         "csd5-2017/Representation Matters": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Reprezentacja ma znaczenie"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Wzorce i reprezentacje"
@@ -2391,7 +2560,7 @@
           "name": "Projekt - Rozwiąż problem z danymi"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Analiza projektu"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Zrozumienie twojego użytkownika"
@@ -2437,6 +2606,27 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "Projekt - Prezentacja aplikacji"
+        },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "Debubowanie dla edukatorów AB"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "Debubowanie dla edukatorów CDEF"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Samouczek czarno-białej pikselizacji"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Czas na zabawę z czarno-białą pikselizacją"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Samouczek pikselizacji kolorów"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Przykłady pikselizacji kolorów"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Czas na zabawę z pikselizacją kolorową"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Bez komputera: Tangramy"
@@ -2503,6 +2693,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ekstremalne Wyzwanie - Wszechstronne"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Wprowadzenie do informatyki"
+        },
+        "20-hour/The Maze": {
+          "name": "Labirynt"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Myślenie komputacyjne"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programowanie na papierze milimetrowym"
+        },
+        "20-hour/The Artist": {
+          "name": "Artysta/Postać"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algorytmy"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Artysta 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funkcje"
+        },
+        "20-hour/The Farmer": {
+          "name": "Rolnik"
+        },
+        "20-hour/Conditionals": {
+          "name": "Zdania z warunkami"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Artysta 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Pisanie piosenek"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Rolnik 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstrakcja"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Artysta 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Sztafeta programowania"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Rolnik 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Artysta 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Podsumowanie"
         },
         "course2/Graph Paper Programming": {
           "name": "Programowanie na papierze milimetrowym"
@@ -2655,7 +2905,7 @@
           "name": "Artysta: Kształty"
         },
         "course1/Spelling Bee": {
-          "name": "Literująca Pszczółka"
+          "name": "CSC - Literująca pszczółka"
         },
         "course1/Getting Loopy": {
           "name": "Poznając pętle"
@@ -2682,6 +2932,138 @@
           "name": "Układanka",
           "overview": "Ta lekcja da uczniom wyobrażenie, czego się spodziewać po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej dyskusji wprowadzającej ich do zachowania się w laboratorium komputerowym, a następnie przechodzą oni do korzystania z komputera, aby ukończyć łamigłówki online.",
           "student_overview": "Kliknij i przeciągnij, by ukończyć łamigłówki."
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Układanka"
+        },
+        "allthethings/Maze": {
+          "name": "Labirynt"
+        },
+        "allthethings/Artist": {
+          "name": "Artysta"
+        },
+        "allthethings/Bee": {
+          "name": "Pszczółka"
+        },
+        "allthethings/PlayLab": {
+          "name": "PlayLab"
+        },
+        "allthethings/Farmer": {
+          "name": "Rolnik"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Odbicie"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Dopasuj"
+        },
+        "allthethings/TextMatch": {
+          "name": "TextMatch"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "Licznik kilometrów"
+        },
+        "allthethings/Text Compression": {
+          "name": "Kompresja tekstu"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Gamelab": {
+          "name": "GameLab"
+        },
+        "allthethings/Online PD": {
+          "name": "Online PD"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Szczegóły Markdown"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Sprawdzian wielostronicowy"
+        },
+        "allthethings/Star wars": {
+          "name": "Gwiezdne Wojny"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "Bogaty długi sprawdzian"
+        },
+        "allthethings/Free Response": {
+          "name": "Jakakolwiek odpowiedź"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "Przykładowa sprawdzian PLC"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Zamienione poziomy"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Anonimowa ankieta uczniów"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Kryptografia klucza publicznego"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
+        },
+        "allthethings/Single page assessment": {
+          "name": "Sprawdzian jednostronicowy"
+        },
+        "allthethings/Standalone video": {
+          "name": "Samodzielny film wideo"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Odwołanie do curriculum"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Dance Lab"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Minikategoria"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "Elementy zewnętrzne opcjonalne wyświetlone jako bez komputera"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "Wybór bańki"
+        },
+        "allthethings/Contained Levels": {
+          "name": "Zawarte poziomy"
+        },
+        "allthethings/ML Fish": {
+          "name": "Ryba ML"
+        },
+        "allthethings/AI Lab": {
+          "name": "AI Lab"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java Lab"
         },
         "coursef-2021/lesson-6": {
           "name": "Wprowadzenie Sprite Lab",
@@ -3645,7 +4027,7 @@
           "name": "Ankieta po kursie Odkrycia Informatyki"
         },
         "csd4-2021/Analysis of Design": {
-          "name": "Testy po realizacji projektu"
+          "name": "Projektowanie z empatią"
         },
         "csd4-2021/Understanding Your User": {
           "name": "Zrozumienie twojego użytkownika"
@@ -3702,7 +4084,7 @@
           "name": "Ankieta po kursie Odkrycia Informatyki"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Testy po realizacji projektu",
+          "name": "Innowacje w informatyce",
           "overview": "Celem rozpoczęcia przerabiania ostatniego działu tego kursu, uczniowie wykonają pewne badania w zakresie ciekawych innowacji w informatyce. Na tej lekcji uczniowie skonfrontują się z szerszym zakresem informatycznych czynników kształtujących (jak wygląda komputer) oraz pól, na które oddziałuje informatyka. W dalszej części tego działu, będą znów oglądać urządzenia, które poznali na tej lekcji, w trakcie tworzenia swoich własnych urządzeń informatycznych."
         },
         "csd6-2021/The Circuit Playground": {
@@ -3757,7 +4139,7 @@
           "name": "Ankieta po kursie Odkrycia Informatyki"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Testy po realizacji projektu"
+          "name": "Reprezentacja ma znaczenie"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Wzorce i reprezentacje"
@@ -3805,7 +4187,7 @@
           "name": "Ankieta po kursie Odkrycia Informatyki"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Testy po realizacji projektu"
+          "name": "Programowanie dla rozrywki"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Rysowanie kształtów"
@@ -3875,7 +4257,7 @@
           "name": "Wprowadzenie do rozwiązywania problemów"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Testy po realizacji projektu"
+          "name": "Proces rozwiązywania problemów"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Zgłębianie rozwiązywania problemów"
@@ -3911,7 +4293,7 @@
           "name": "Wprowadzenie do rozwiązywania problemów - Motywy gier (Alternatywna lekcja 3)"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Testy po realizacji projektu"
+          "name": "Badanie stron internetowych"
         },
         "csd2-2021/Intro to HTML": {
           "name": "Wprowadzenie do HTML"

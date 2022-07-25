@@ -821,6 +821,9 @@
           "word": "Uživatel",
           "definition": "Někdo, kdo používá nějaký objekt, včetně softwaru a hardwaru."
         },
+        "user_interface/csd/2021": {
+          "word": "Uživatelské rozhraní"
+        },
         "bug/csd/2021": {
           "word": "Chyba",
           "definition": "Část programu, která nefunguje správně."

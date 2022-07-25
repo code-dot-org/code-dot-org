@@ -155,6 +155,9 @@
           "name": "舞会 - 继续",
           "purpose": "本课介绍了编写代码和事件编程（使用模块）的核心 CS 概念。"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "《编程一小时 2013》"
+        },
         "dance-2019/Dance Party": {
           "name": "舞蹈派对 (2019)",
           "overview": "在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课是为所有需要阅读的年龄段学习者而设计的。本活动需要有声音，因为这个工具是为响应音乐而构建的。",
@@ -167,8 +170,173 @@
           "purpose": "本教程旨在快速向学生介绍 **机器学习**：一种 **人工智能**。学生们将探索如何使用**训练数据**来启用机器学习模型对新数据进行分类。学生们应该在学习期间有一个快乐的体验，更重要的是应该激励他们继续学习计算机科学。 ",
           "student_overview": "教程摘要：第一批学生将物体分类为“鱼”或“非鱼”，试图清除海洋中的垃圾。然后，学生们将需要扩展他们的训练数据集，以覆盖水中的其它海洋生物。在活动的第二部分，学生们将选择他们自己的标签应用于随机生成的鱼的图像。该训练数据用于能够自行标记新图像的机器学习模型。"
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "欢迎来到 \"教师的计算机科学基础\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "理解计算机科学基础课程"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "序列"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "循环"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "事件"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "条件语句"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "结课项目"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "函数"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "变量"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "计数循环"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "精灵图实验室"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "评审反思"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "下一步"
+        },
+        "vigenere/Vigenere": {
+          "name": "维吉尼亚"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "情绪学习"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "数字设计"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "事件驱动编程"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "基本应用程序功能"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "取值器和设置器"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "开始"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "计算机科学基础"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "展望未来"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "掌握基本知识: 序列"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "掌握基本知识： 循环"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "掌握基本知识： 条件语句"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "掌握基本知识： 函数"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "掌握基本知识： 事件"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "计算机科学教学的最佳实践"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "规划"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "下一步"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "概述和安装说明"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "点对点 - 在共享的线路上发送比特位"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "点对点 - 发送数字"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "点对点 - 发送Ascii码"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "广播消息"
+        },
+        "netsim/Routers and addresses": {
+          "name": "路由和地址"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "数据包和可靠性"
+        },
+        "netsim/Manual DNS": {
+          "name": "手动域名解析服务器"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "自动域名解析服务器节点"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "网络模拟器自由游戏"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "逃出房间"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "开始和结束屏幕"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "开始和结束屏幕2"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "开始"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "计算机科学基础"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "展望未来"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "掌握基本知识: 序列"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "掌握基本知识： 循环"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "掌握基本知识： 条件语句"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "掌握基本知识： 函数"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "掌握基本知识： 事件"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "计算机科学教学的最佳实践"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "规划"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "下一步"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "编程一小时2017 收集器"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "频率分析"
         },
         "courseb-2018/Move It, Move It": {
           "name": "移动它，移动它！"
@@ -666,7 +834,7 @@
           "name": "拼字比赛"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "计算机科学发现期末调查"
+          "name": "娱乐编程"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "绘制形状"
@@ -1353,10 +1521,10 @@
           "name": "游戏实验室中的事件"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "项目后测试"
+          "name": "娱乐编程"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "计算机科学发现课后问卷"
+          "name": "绘制形状"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "在游戏实验室绘画"
@@ -1419,10 +1587,10 @@
           "name": "项目 - 设计一个游戏"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "项目后测试"
+          "name": "计算中的创新"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "计算机科学发现课后问卷"
+          "name": "使用代码设计屏幕"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "电路游乐场"
@@ -1467,10 +1635,10 @@
           "name": "项目：创新原型"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "项目后测试"
+          "name": "设计分析"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "计算机科学发现课后问卷"
+          "name": "了解您的用户"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "以用户为中心的设计微活动"
@@ -1515,10 +1683,10 @@
           "name": "项目 - 应用程序演示"
         },
         "csd5-2019/Representation Matters": {
-          "name": "项目后测试"
+          "name": "表示事项"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "计算机科学发现课后问卷"
+          "name": "模式和表示法"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII 和二进制表示形式"
@@ -1563,7 +1731,7 @@
           "name": "解决问题入门"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "项目后测试"
+          "name": "解决问题的过程"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "探索解决问题"
@@ -1584,10 +1752,10 @@
           "name": "项目- 提议一个应用程序"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "项目后测试"
+          "name": "探索网站"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "计算机科学发现课后问卷"
+          "name": "网址表达式 "
         },
         "csd2-2019/Intro to HTML": {
           "name": "HTML介绍"
@@ -2109,10 +2277,10 @@
           "name": "介绍您的项目"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "计算机科学发现期末调查"
+          "name": "娱乐编程"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "计算机科学发现课后问卷"
+          "name": "绘制形状"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "在游戏实验室绘画"
@@ -2175,7 +2343,7 @@
           "name": "项目 - 设计一个游戏"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "计算机科学发现课后问卷"
+          "name": "计算中的创新"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "使用代码设计屏幕"
@@ -2223,7 +2391,7 @@
           "name": "项目：创新原型"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "计算机科学发现课后问卷"
+          "name": "探索网站"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "网址表达式 "
@@ -2292,7 +2460,7 @@
           "name": "项目- 提议一个应用程序"
         },
         "csd5-2017/Representation Matters": {
-          "name": "计算机科学发现课后问卷"
+          "name": "表示事项"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "模式和表示法"
@@ -2337,7 +2505,7 @@
           "name": "项目- 解决数据问题"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "计算机科学发现课后问卷"
+          "name": "设计分析"
         },
         "csd4-2017/Understanding Your User": {
           "name": "了解您的用户"
@@ -2383,6 +2551,27 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "项目 - 应用程序演示"
+        },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "为 AB 教育者的调试"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "为 CDEF 教育者的调试"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "黑白像素教程"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "黑白像素自由游戏"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "彩色像素教程"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "彩色像素例子"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "彩色像素自由游戏"
         },
         "course4/Unplugged: Tangrams": {
           "name": "离线：七巧板"
@@ -2449,6 +2638,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "极限挑战：综合的"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "计算机概论"
+        },
+        "20-hour/The Maze": {
+          "name": "迷宫"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "计算式思维技巧"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "方格纸编程"
+        },
+        "20-hour/The Artist": {
+          "name": "小艺术家"
+        },
+        "20-hour/Algorithms": {
+          "name": "算法"
+        },
+        "20-hour/The Artist 2": {
+          "name": "小艺术家 2"
+        },
+        "20-hour/Functions": {
+          "name": "函数"
+        },
+        "20-hour/The Farmer": {
+          "name": "农夫"
+        },
+        "20-hour/Conditionals": {
+          "name": "条件语句"
+        },
+        "20-hour/The Artist 3": {
+          "name": "小艺术家 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "歌曲写作"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "农民 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "抽象化"
+        },
+        "20-hour/The Artist 4": {
+          "name": "小艺术家 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "编程接力"
+        },
+        "20-hour/The Farmer 3": {
+          "name": " 农夫3"
+        },
+        "20-hour/The Internet": {
+          "name": "互联网"
+        },
+        "20-hour/The Artist 5": {
+          "name": "小艺术家 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "总结"
         },
         "course2/Graph Paper Programming": {
           "name": "方格纸编程"
@@ -2630,6 +2879,138 @@
           "preparation": "-   回顾[常识教育](https://www.commonsense.org/education/digital-citizenship)网站，了解更多网上安全方面的内容。",
           "purpose": "本课的主要目标是让学生积累计算机的使用经验。课程涵盖最基本的计算机功能，如点击、拖动和拖放，我们正在为将来的习题创造一个更加平等的竞争环境。本课程还提供了一个介绍基本计算机硬件术语（可能包括“鼠标”、“触控板”或“触摸屏”，取决于你的设备）的好机会。",
           "student_overview": "点击并拖拽来完成难题。"
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "计算机科学发现学生课程后调查"
+        },
+        "allthethings/Jigsaw": {
+          "name": "拼图"
+        },
+        "allthethings/Maze": {
+          "name": "迷宫"
+        },
+        "allthethings/Artist": {
+          "name": "小艺术家"
+        },
+        "allthethings/Bee": {
+          "name": "蜜蜂"
+        },
+        "allthethings/PlayLab": {
+          "name": "游戏实验室"
+        },
+        "allthethings/Farmer": {
+          "name": "农夫"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy Bird"
+        },
+        "allthethings/Bounce": {
+          "name": "跳"
+        },
+        "allthethings/Multi": {
+          "name": "多个"
+        },
+        "allthethings/Multi2": {
+          "name": "多媒体2"
+        },
+        "allthethings/Match": {
+          "name": "匹配"
+        },
+        "allthethings/TextMatch": {
+          "name": "匹配的文本"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "模拟软件"
+        },
+        "allthethings/Odometer": {
+          "name": "里程表"
+        },
+        "allthethings/Text Compression": {
+          "name": "文本压缩"
+        },
+        "allthethings/AppLab": {
+          "name": "应用实验室"
+        },
+        "allthethings/Gamelab": {
+          "name": "游戏实验室"
+        },
+        "allthethings/Online PD": {
+          "name": "在线进修"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Markdown的详细内容"
+        },
+        "allthethings/Studio": {
+          "name": "工作室"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "多页评估"
+        },
+        "allthethings/Star wars": {
+          "name": "星球大战"
+        },
+        "allthethings/Minecraft": {
+          "name": "我的世界"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "丰富的较长的评估"
+        },
+        "allthethings/Free Response": {
+          "name": "自由响应"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "示例可编程控制器评估"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "交换的级别"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "匿名学生调查"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "公钥密码学"
+        },
+        "allthethings/Web Lab": {
+          "name": "网络实验室"
+        },
+        "allthethings/Single page assessment": {
+          "name": "单页评估"
+        },
+        "allthethings/Standalone video": {
+          "name": "独立视频"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "教案参考"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "精灵图实验室"
+        },
+        "allthethings/Dance Lab": {
+          "name": "舞蹈实验室"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "迷你注释"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "其它可选展示为线下"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "选择泡泡"
+        },
+        "allthethings/Contained Levels": {
+          "name": "包含的级别"
+        },
+        "allthethings/ML Fish": {
+          "name": "机器学习和鱼"
+        },
+        "allthethings/AI Lab": {
+          "name": "人工智能实验室"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java实验室"
         },
         "coursef-2021/lesson-6": {
           "name": "向你介绍精灵图实验室",
@@ -3538,9 +3919,6 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "计算机科学发现课后调查"
         },
-        "csd4-2021/Analysis of Design": {
-          "name": "项目后测试"
-        },
         "csd4-2021/Understanding Your User": {
           "name": "了解您的用户"
         },
@@ -3575,7 +3953,7 @@
           "name": "计算机科学发现课后调查"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "项目后测试",
+          "name": "计算中的创新",
           "overview": "为了开始这门课程的最后一个单元, 学生们将对计算中有趣的创新做一些研究。本课将向学生展示各种计算形式的因素 (计算机的外观是什么样的) 和受计算影响的领域。在本单元的后面课程中, 学生在开发自己的物理计算设备时, 他们会回顾在本课中学习到的设备。"
         },
         "csd6-2021/Designing Screens with Code": {
@@ -3633,7 +4011,7 @@
           "name": "计算机科学发现课后调查"
         },
         "csd5-2021/Representation Matters": {
-          "name": "项目后测试"
+          "name": "表示事项"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "模式和表示法"
@@ -3675,7 +4053,7 @@
           "name": "计算机科学发现课后调查"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "项目后测试"
+          "name": "娱乐编程"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "绘制形状"
@@ -3752,7 +4130,7 @@
           "preparation": "**小组须知**\n\n-   2张5X5英寸的铝箔\n-   1个能储存3-5英寸水的容器\n-   几张能够放在容器下面的纸巾或废纸 \n-   15个便士（硬币）\n-   一份活动介绍的拷贝\n\n**教师须知**\n\n-   一个可以储存3-5英寸水的容器 \n-   50个便士（硬币） \n-   更多纸巾或废纸"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "项目后测试"
+          "name": "解决问题的过程"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "探索解决问题"
@@ -3773,7 +4151,7 @@
           "name": "项目- 提议一个应用程序"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "项目后测试"
+          "name": "探索网页"
         },
         "csd2-2021/Intro to HTML": {
           "name": "HTML介绍"

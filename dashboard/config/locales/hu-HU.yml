@@ -39,6 +39,7 @@ hu:
           e-mail címmel)](%{url})
         username: felhasználónév
         password: Jelszó
+        verified_teacher: Igazolt tanár
         password_confirmation: Jelszó megerősítése
         current_password: Jelenlegi jelszó
         locale: Nyelv
@@ -359,8 +360,8 @@ hu:
         az le van zárva. Kérj segítséget a tanárodtól!
       full_section: Nem tudtunk hozzáadni a %{section_code} kurzushoz, mert már %{section_capacity}
         diák benne van. Kérj segítséget a tanárodtól!
-      not_participant_type: Nem tudtunk felvenni a %{section_code} szekcióba, mert
-        nem felelsz meg a szekcióhoz tartozó résztvevők típusának.
+      not_participant_type: Nem tudtunk felvenni a %{section_code} csoportba, mert
+        nem felelsz meg a csoporthoz tartozó résztvevők típusának.
     mail:
       student_disassociated:
         subject: 'Code.org figyelmeztetés: %{student_name} már nem a diákod a rendszerben.'
@@ -496,7 +497,6 @@ hu:
     popup:
       progress_for_user: "%{name} fejlődése"
       progress: Haladásod
-      lines: 'A kód teljes hossza: %{lines} sor'
       close: BEZÁRÁS
       mastery: Fogalmak
       puzzle_map: Szakaszok
@@ -677,10 +677,10 @@ hu:
       a kurzusodba.
     already_enrolled_in_new_section: 'Nem tudod áthelyezni ezeket a diákokat, mert
       már benne vannak az új kurzusban. '
-    third_party_login: Nem helyezhet át diákokat olyan részbe, amely egy harmadik
+    third_party_login: Nem helyezhetsz át diákokat olyan csoportba, amely egy harmadik
       fél eszközével van szinkronizálva.
     not_correct_participant_type: Ezeket a felhasználókat azért nem tudod áthelyezni,
-      mert nincs engedélyük az új szekció munkájában részt venni.
+      mert nincs engedélyük az új csoport munkájában részt venni.
   share:
     title: Tanulj a Kód Stúdióban
     description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat,
@@ -747,6 +747,7 @@ hu:
     try_hour_of_code: Próbáld ki a Kódolás Óráját!
     store: Store
     cookie_notice: Sütikre vonatkozó figyelmeztetés
+    view_code: Kódok megtekintése
   reference_area:
     title: Segítségre van szükséged?
     subtitle: Nézd meg ezeket a videókat és tippeket
@@ -896,15 +897,13 @@ hu:
       body: Készíts egy kosárlabda-játékot, vagy kombináld a különböző sportágakat.
     text-compression:
       title: Szöveg tömörítése
-      body: 'Ebben a leckében a tanulók a szövegtömörítő widget segítségével tömörítik
+      body: Ebben a leckében a tanulók a szövegtömörítő widget segítségével tömörítik
         a szöveget, a mintákat szimbólumokkal helyettesítik.
-
-'
     unplugged:
       title: Offline tanórák
       audience: 4 éven felettieknek
       body: Összeállítottunk egy listát a számítógép nélküli leckékről, ezeket lehet
-        használni az osztályteremben. Mostantól taníthatod az informatika alapjait,
+        használni az osztályteremben. Mostantól taníthatod a számítástechnika alapjait,
         akár van számítógép az osztályteremben, akár nincs! Próbáld ki ezeket a leckéket
         önálló tananyagként vagy más számítógépes tanfolyam kiegészítő leckéjeként
         használni.
@@ -917,7 +916,7 @@ hu:
     widgets:
       title: Widgetek
       body: Ezeknek a digitális eszközöknek a segítségével a diákok gyakorlatokon
-        keresztül fedezhetik fel az Számítástechnika alapjai kurzusunkban szereplő
+        keresztül fedezhetik fel a Számítástechnika alapjai kurzusunkban szereplő
         fogalmakat. Használd a widgeteket önállóan, vagy készíts egy, egy fogalom
         köré épült leckét az osztálynak.
       audience: 14 éves kortól
@@ -950,11 +949,11 @@ hu:
     correct_title: Köszönöm
     correct_body: Köszönjük az elküldött válaszokat.
     hide_survey_last_answer: Ez a felmérés anoním.  Az összesített eredmények megtekinthetők
-      a tanári vezérlőpulton. Vedd figyelembe, hogy az eredmények csak akkor láthatók,
+      a tanári irányítópulton. Vedd figyelembe, hogy az eredmények csak akkor láthatók,
       ha legalább öt diák beküldte a kérdőívet.
     survey_submission_thankyou: Köszönjük, hogy beküldted ezt a kérdőívet! A felmérést
       töröltük, így a válaszok névtelenek maradnak. Ne feledd, a tanár továbbra is
-      láthatja az egész osztály válaszát, de nevek nélkül.
+      láthatja az egész osztály adott válaszokat, de nevek nélkül.
   level_group-submittable:
     wrong_title: Köszönöm
     wrong_body: Köszönjük az elküldött válaszokat.
@@ -1010,25 +1009,21 @@ hu:
       arra van szükségünk, hogy a jelenlegi felhasználók megadják az életkorukat itt.
     disclaimer: A korábbiakhoz hasonlóan a code.org soha sem adja ki, nem adja el
       és nem osztja meg ezeket az információkat harmadik felekkel.
-    sign_out_markdown: Ha nem kívánja megadni az életkorát, akkor [kijelentkezhet](%{url}).
+    sign_out_markdown: Ha nem kívánod megadni az életkorod, akkor [kijelentkezhetsz](%{url}).
   terms_interstitial:
     title: Frissített szolgáltatási feltételek és adatvédelmi irányelvek
-    intro_desc: 'Frissítettük a szolgáltatási feltételeket és az adatvédelmi irányelveket,
+    intro_desc: 'Frissítettük a szolgáltatási feltételeket és az adatvédelmi irányelveket
       az alábbiak szerint. A változások 2016. augusztus 24-én lépnek hatályba.  A
-      legnagyobb változás: a diákfiókok e-mail címeit <i>többé nem tároljuk a Code
+      legnagyobb változás: a diákfiókok e-mail-címeit <i>többé nem tároljuk a Code
       Studio-ban.</i> Ez nagy dolog számunkra, és reméljük, hogy az oktatási technológiákban
-      ez egy új standard lesz a diákok adatvédelmável kapcsolatban. A többi változásról
-      e-mailben küldtünk egy összefoglalót.
-
-'
+      ez egy új standard lesz a diákok adatvédelmével kapcsolatban. A többi változásról
+      e-mailben küldtünk egy összefoglalót.'
     intro_desc_markdown: 'Frissítettük a szolgáltatási feltételeket és az adatvédelmi
       irányelveket, az alábbiak szerint. A változások 2016. augusztus 24-én lépnek
-      hatályba.  A legnagyobb változás: a diákfiókok e-mail címeit *többé nem tároljuk
+      hatályba.  A legnagyobb változás: a diákfiókok e-mail-címeit *többé nem tároljuk
       a Code Studio-ban*. Ez nagy dolog számunkra, és reméljük, hogy az oktatási technológiákban
-      ez egy új standard lesz a diákok adatvédelmável kapcsolatban. A többi változásról
-      e-mailben küldtünk egy összefoglalót.
-
-'
+      ez egy új standard lesz a diákok adatvédelmével kapcsolatban. A többi változásról
+      e-mailben küldtünk egy összefoglalót.'
     intro_instructions: Az osztályodban tanuló 13 év alatti diákok számára el kell
       fogadnod ezeket az új feltételeket ahhoz, hogy teljes körű hozzáférést kapj
       a Code Studio legújabb funkcióihoz.  A 13 év alatti diák fiókjának regisztrálásakor
@@ -1113,7 +1108,7 @@ hu:
     unpublish: Közzététel visszavonása
     share_title: A projekt megosztása
     share_copy_link: 'A hivatkozás másolása:'
-    share_embed_description: A projekt egy weboldalon történő megjelenítése érdekében
+    share_embed_description: Ha a projektet az egyik weboldalon akarod megjeleníteni,
       a beágyazott kódot beillesztheted egy HTML-oldalba.
     share_u13_warning: A megosztás előtt kérdezd meg a tanárodat. Csak az iskoládban
       tanulókkal oszd meg.
@@ -1181,12 +1176,12 @@ hu:
       description_markdown: "**Nem**, ez a beadvány **nem felel meg** a követelményeknek."
     escalated:
       name: Eszkalálódott
-      description: Szeretném, ha egy oktató átnézné ezt a beadványt
-    instructor_feedback: Oktató visszajelzése
-    peer_feedback: Társ visszajelzést
-    outdated: Ez a visszajelzést hozzáadták egy korábban benyújtott verzióhoz
+      description: Szeretném, ha egy tanár átnézné ezt a beadványt
+    instructor_feedback: Tanári visszajelzés
+    peer_feedback: Társ visszajelzése
+    outdated: Ezt a visszajelzést hozzáadták egy korábban benyújtott verzióhoz
     review_count: Ehhez az egységhez %{review_count} értékelést kell készíteni
-    peer_review: Társértékelés
+    peer_review: Társ értékelése
   external_links:
     disclaimer: Felelősséget kizáró nyilatkozat
     leaving_domain: Most kilépsz ebből a tartományból egy olyan webhelyre, amelyet
@@ -1259,8 +1254,8 @@ hu:
     windows: Windows (64 bit)
     mac: Mac OS X
   locked_stage: A lecke tartalma nem látható, mivel ez a lecke jelenleg zárolva van.
-    A tanárod feloldhatja ezt a leckét akkor, amikor foglalkozni kell vele rajta,
-    vagy amikor ellenőrizze a válaszaid.
+    A tanárod feloldhatja ezt a leckét akkor, amikor foglalkozni kell vele, vagy amikor
+    ellenőrzi a válaszaid.
   hidden_stage: A tanárod nem számított rá, hogy itt leszel. Kérdezd meg a tanárodat,
     hogy melyik leckével kellene foglalkoznod.
   hidden_script: A tanárod nem számított rá, hogy itt leszel. Kérdezd meg a tanárodat,
@@ -1271,7 +1266,7 @@ hu:
     hogy neked hozzá kellene férned ehhez a tanfolyamhoz, írj a support@code.org címre,
     és korrigáljuk a helyzetet.
   no_script_access_student: Nincs hozzáférésed ehhez az egységhez. Kérjük, kérdezd
-    meg a tanárodat, hogy melyik egységen kellene foglalkoznod.
+    meg a tanárodat, hogy melyik egységgel kellene foglalkoznod.
   no_script_access_teacher: Nincs hozzáférésed ehhez az egységhez. Ha úgy gondolod,
     hogy neked hozzá kellene férned ehhez az egységhez, írj a support@code.org címre,
     és korrigáljuk a helyzetet.
@@ -1343,6 +1338,7 @@ hu:
         israel: Izrael
         malaysia: Malajzia
         mexico: Mexikó
+        paraguay: Paraguay
         thailand: Thaiföld
         uzbekistan: Üzbegisztán
       ages:
@@ -1404,7 +1400,7 @@ hu:
       instructions: Kérjük, töltsd ki az alábbi űrlapot, jelezd, hogy 1) részt vettél
         a Code.org egyik nemzetközi partnere által szervezett workshopon, és 2) beleegyezel,
         hogy az adataidat megosszuk az országodban működő nemzetközi partnerünkkel,
-        így ők támogatni tudnak a számítástechnikai tanári munkákban.
+        így ők támogatni tudnak a számítástechnikai tanári munkádban.
       thanks_markdown: Köszönjük a jelentkezést! Alig várjuk, hogy megismertessük
         veled a Code.org tantervét és eszközeit. Kérjük, továbbra is oszd meg velünk
         kérdéseid és visszajelzéseid, írj nekünk a [support@code.org](%{support_email_url})
@@ -1430,7 +1426,7 @@ hu:
         és az űrlap kitöltése előtt add meg az e-mail-címed.
   courses_category: Komplett tanfolyamok
   cookie_banner:
-    message: A weboldalunk további böngészésével vagy az "Elfogadom" gombra kattintással
+    message: A weboldalunk további böngészésével vagy az Elfogadom gombra kattintással
       hozzájárulsz a sütik számítógépen vagy más eszközön történő tárolásához.
     more_information: Lásd a Code.org adatvédelmi irányelveit.
     accept: Egyetértek
@@ -1454,10 +1450,8 @@ hu:
       error_invalid_user: Érvénytelen felhasználói azonosító. Kérjük, jelentkezz be
         újra.
       error_no_code: Kérjük, add meg a bejelentkezési kódod.
-      confirm_login: 'A Google-fiókoddal történő bejelentkezéshez válaszd a "Megerősítés"
+      confirm_login: A Google-fiókoddal történő bejelentkezéshez válaszd a Megerősítés
         lehetőséget.
-
-'
   parent_email_banner:
     text: "**Ön szülő vagy gondviselő?** Kapcsolja az e-mail címét ehhez a fiókhoz,
       így friss információkat kaphat gyermeke fejlődéséről és projektjeiről!"

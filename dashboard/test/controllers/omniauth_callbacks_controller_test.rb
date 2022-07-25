@@ -7,6 +7,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
+    @request.host = CDO.dashboard_hostname
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
   end
 
@@ -41,7 +42,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :facebook
     end
 
-    assert_redirected_to 'http://test.host/users/sign_up'
+    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
     partial_user = User.new_from_partial_registration(session)
     assert_empty partial_user.email
     assert_nil partial_user.age
@@ -154,7 +155,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :clever
     end
 
-    assert_redirected_to 'http://test.host/users/sign_up'
+    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
     partial_user = User.new_from_partial_registration(session)
     assert_empty partial_user.email
   end
@@ -297,7 +298,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :google_oauth2
     end
-    assert_redirected_to 'http://test.host/home?open=rosterDialog'
+    assert_redirected_to 'http://test-studio.code.org/home?open=rosterDialog'
     google_ao = user.authentication_options.find_by_credential_type('google_oauth2')
     assert_equal 'my-new-token', google_ao.data_hash[:oauth_token]
     assert_equal 'my-new-refresh-token', google_ao.data_hash[:oauth_refresh_token]
@@ -359,7 +360,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :facebook
     end
-    assert_redirected_to 'http://test.host/users/existing_account?email=duplicate%40email.com&provider=facebook'
+    assert_redirected_to 'http://test-studio.code.org/users/existing_account?email=duplicate%40email.com&provider=facebook'
     assert_nil signed_in_user_id
   end
 
@@ -374,7 +375,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :facebook
     end
-    assert_redirected_to 'http://test.host/users/existing_account?email=duplicate%40email.com&provider=facebook'
+    assert_redirected_to 'http://test-studio.code.org/users/existing_account?email=duplicate%40email.com&provider=facebook'
     assert_nil signed_in_user_id
   end
 
@@ -389,7 +390,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :facebook
     end
-    assert_redirected_to 'http://test.host/users/existing_account?email=duplicate%40email.com&provider=facebook'
+    assert_redirected_to 'http://test-studio.code.org/users/existing_account?email=duplicate%40email.com&provider=facebook'
     assert_nil signed_in_user_id
   end
 
@@ -486,7 +487,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       type: AuthenticationOption::CLEVER,
       id: uid
     )
-    assert_redirected_to 'http://test.host/home'
+    assert_redirected_to 'http://test-studio.code.org/home'
     assert_equal user.id, signed_in_user_id
   end
 
@@ -513,7 +514,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       type: AuthenticationOption::CLEVER,
       id: uid
     )
-    assert_redirected_to 'http://test.host/home'
+    assert_redirected_to 'http://test-studio.code.org/home'
     assert_equal user.id, signed_in_user_id
   end
 
@@ -739,7 +740,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I go to the registration page to finish signing up
-    assert_redirected_to 'http://test.host/users/sign_up'
+    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
     partial_user = User.new_from_partial_registration(session)
     assert_equal AuthenticationOption::GOOGLE, partial_user.provider
     assert_equal uid, partial_user.uid
@@ -762,7 +763,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I go to the registration page to finish signing up
-    assert_redirected_to 'http://test.host/users/sign_up'
+    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
     assert PartialRegistration.in_progress? session
     partial_user = User.new_with_session({}, session)
 
@@ -791,7 +792,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I go to the registration page to finish signing up
-    assert_redirected_to 'http://test.host/users/sign_up'
+    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
     assert PartialRegistration.in_progress? session
     partial_user = User.new_with_session({}, session)
 
@@ -812,7 +813,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :google_oauth2
     end
-    assert_redirected_to 'http://test.host/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
+    assert_redirected_to 'http://test-studio.code.org/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
     user.reload
     assert_not_equal 'google_oauth2', user.provider
   end
@@ -918,7 +919,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :google_oauth2
     end
-    assert_redirected_to 'http://test.host/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
+    assert_redirected_to 'http://test-studio.code.org/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
     user.reload
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
     assert_not found_google
@@ -1177,7 +1178,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     user.reload
-    assert_redirected_to 'http://test.host/users/edit'
+    assert_redirected_to 'http://test-studio.code.org/users/edit'
     assert_equal 3, user.authentication_options.length
   end
 
@@ -1206,7 +1207,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :facebook
     end
 
-    assert_redirected_to 'http://test.host/users/edit'
+    assert_redirected_to 'http://test-studio.code.org/users/edit'
     assert_equal 'Email has already been taken', flash.alert
 
     user_a.reload
@@ -1222,7 +1223,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(AuthenticationOption) do
       get :facebook
     end
-    assert_redirected_to 'http://test.host/users/edit'
+    assert_redirected_to 'http://test-studio.code.org/users/edit'
     assert_equal 'Sorry, we cannot connect or disconnect accounts that are still using the old account experience. Please update to the new account experience.', flash.alert
   end
 
@@ -1236,7 +1237,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     user.reload
-    assert_redirected_to 'http://test.host/users/edit'
+    assert_redirected_to 'http://test-studio.code.org/users/edit'
     assert_auth_option(user, auth)
   end
 
@@ -1250,7 +1251,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     user.reload
-    assert_redirected_to 'http://test.host/users/edit'
+    assert_redirected_to 'http://test-studio.code.org/users/edit'
     assert_auth_option(user, auth)
   end
 
@@ -1264,7 +1265,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     user.reload
-    assert_redirected_to 'http://test.host/users/edit'
+    assert_redirected_to 'http://test-studio.code.org/users/edit'
     assert_auth_option(user, auth)
   end
 
@@ -1278,7 +1279,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     user.reload
-    assert_redirected_to 'http://test.host/users/edit'
+    assert_redirected_to 'http://test-studio.code.org/users/edit'
     assert_auth_option(user, auth)
   end
 
@@ -1292,7 +1293,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     user.reload
-    assert_redirected_to 'http://test.host/users/edit'
+    assert_redirected_to 'http://test-studio.code.org/users/edit'
     assert_auth_option(user, auth)
   end
 
@@ -1306,7 +1307,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :google_oauth2
     end
 
-    assert_redirected_to 'http://test.host/users/edit'
+    assert_redirected_to 'http://test-studio.code.org/users/edit'
     expected_error = I18n.t('auth.unable_to_connect_provider', provider: I18n.t("auth.google_oauth2"))
     assert_equal expected_error, flash.alert
   end
@@ -1328,7 +1329,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     # Then I should successfully add credential X
     user.reload
-    assert_redirected_to 'http://test.host/users/edit'
+    assert_redirected_to 'http://test-studio.code.org/users/edit'
     assert_auth_option(user, auth)
 
     # And the other user should be destroyed
@@ -1434,7 +1435,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 1, user.authentication_options.count
 
     # And receive a helpful error message about the credential already being in use.
-    assert_redirected_to 'http://test.host/users/edit'
+    assert_redirected_to 'http://test-studio.code.org/users/edit'
     expected_error = I18n.t('auth.already_in_use', provider: I18n.t("auth.google_oauth2"))
     assert_equal expected_error, flash.alert
   end
@@ -1464,7 +1465,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 1, user.authentication_options.count
 
     # And receive a helpful error message about the credential already being in use.
-    assert_redirected_to 'http://test.host/users/edit'
+    assert_redirected_to 'http://test-studio.code.org/users/edit'
     expected_error = I18n.t('auth.already_in_use', provider: I18n.t("auth.google_oauth2"))
     assert_equal expected_error, flash.alert
   end
@@ -1485,7 +1486,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 2, user.authentication_options.count
 
     # And receive a friendly notice about already having the credential
-    assert_redirected_to 'http://test.host/users/edit'
+    assert_redirected_to 'http://test-studio.code.org/users/edit'
     expected_notice = I18n.t('auth.already_linked', provider: I18n.t("auth.google_oauth2"))
     assert_equal expected_notice, flash.notice
   end
@@ -1503,7 +1504,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       setup_should_connect_provider(user, auth)
       get provider
 
-      assert_redirected_to 'http://test.host/users/edit'
+      assert_redirected_to 'http://test-studio.code.org/users/edit'
 
       provider_name = I18n.t(provider, scope: :auth)
       expected_notice = user.teacher? ?

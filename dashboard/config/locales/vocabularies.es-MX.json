@@ -867,8 +867,49 @@
           "word": "Aprendizaje automático",
           "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
         },
+        "features/csd/2021": {
+          "word": "Características",
+          "definition": "Entradas que un modelo utiliza para tomar decisiones"
+        },
+        "label/csd/2021": {
+          "word": "Etiqueta",
+          "definition": "Salida que se intenta decidir o predecir a través de un modelo"
+        },
+        "model/csd/2021": {
+          "word": "Modelo",
+          "definition": "Programa computacional diseñado para tomar decisiones"
+        },
+        "supervised_learning/csd/2021": {
+          "word": "Aprendizaje Supervisado",
+          "definition": "Proceso en el que un humano entrena un modelo para que aprenda mediante ejemplos"
+        },
+        "training/csd/2021": {
+          "word": "Entrenamiento",
+          "definition": "Presentación de ejemplos a un modelo para que éste aprenda"
+        },
+        "unsupervised_learning/csd/2021": {
+          "word": "Aprendizaje No Supervisado",
+          "definition": "Detección de patrones en datos que no tienen etiquetas"
+        },
+        "categorical_data/csd/2021": {
+          "word": "Datos categóricos",
+          "definition": "Datos que pueden separarse en grupos"
+        },
+        "classification/csd/2021": {
+          "word": "Clasificación",
+          "definition": "Predicción de una categoría basada en otras características"
+        },
+        "bias/csd/2021": {
+          "word": "Sesgo",
+          "definition": "Cuando una decisión favorece algunas cosas y quita prioridad o excluye otras"
+        },
+        "numerical_data/csd/2021": {
+          "word": "Datos Numéricos",
+          "definition": "Datos que se pueden contar o medir"
+        },
         "ethics/csd/2021": {
-          "word": "Ética"
+          "word": "Ética",
+          "definition": "Normas para un buen comportamiento."
         },
         "empathy/csd/2021": {
           "word": "Empatía",
@@ -903,16 +944,16 @@
           "definition": "Una nueva o mejorada idea de aparato, producto, etc, o el desarrollo de este"
         },
         "analog/csd/2021": {
-          "word": "Analógico",
-          "definition": "Cualquier señal que cambia continuamente y que no está restringida a un conjunto finito de valores. Por ejemplo, las formas de onda de las palabras cuando hablamos son una señal analógica."
+          "word": "Análogo",
+          "definition": "Una señal que cambia continuamente y que no está restringida a un conjunto de valores limitados. Por ejemplo, la forma ondulada de las palabras habladas son una señal análoga."
         },
         "digital/csd/2021": {
           "word": "Digital",
-          "definition": "Datos o señales representados por un número finito de valores. Las señales analógicas (que pueden tener infinitos valores) deben ser convertidas a digitales para poder ser computadas."
+          "definition": "Datos o señales representadas por un número limitado de valores. Señales análogas (que pueden tener valores limitados) deben convertirse a digital para ser computadas."
         },
         "array/csd/2021": {
-          "word": "Array",
-          "definition": "Una estructura de datos en JavaScript utilizada para representar una lista."
+          "word": "Arreglo",
+          "definition": "Una estructura de datos en JavaScript que se utiliza para representar una lista."
         },
         "for_loop/csd/2021": {
           "word": "Bucle desde",
@@ -924,7 +965,7 @@
         },
         "circuit/csd/2021": {
           "word": "Circuito",
-          "definition": "Dispositivo que proporciona un camino para que fluya una corriente eléctrica, a menudo modificando esa corriente. En los ordenadores, los circuitos permiten realizar operaciones lógicas y matemáticas sencillas utilizando la electricidad."
+          "definition": "Un dispositivo que proporciona el trayecto para una corriente eléctrica, usualmente modificando esa corriente. En las computadoras, los circuitos permiten operaciones lógicas y matemáticas utilizando electricidad."
         },
         "decode/csd/2021": {
           "word": "Decodificar",

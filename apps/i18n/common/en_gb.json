@@ -346,7 +346,6 @@
   "tooMuchWork": "You made me do a lot of work!  Could you try repeating fewer times?",
   "toolboxHeader": "Blocks",
   "toolboxHeaderDroplet": "Toolbox",
-  "totalNumLinesOfCodeWritten": "All-time total: {numLines, plural, one {1 line} other {# lines}} of code.",
   "tryAgain": "Try again",
   "tryBlocksBelowFeedback": "Try using one of the blocks below:",
   "tryHOC": "Try the Hour of Code",

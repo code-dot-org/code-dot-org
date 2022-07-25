@@ -6,26 +6,19 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# Offense count: 1126
+# Offense count: 1133
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: EnforcedStyle, IndentationWidth.
 # SupportedStyles: with_first_argument, with_fixed_indentation
 Layout/ArgumentAlignment:
   Enabled: false
 
-# Offense count: 1007
+# Offense count: 1005
 # This cop supports safe auto-correction (--auto-correct).
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 
-# Offense count: 3
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle, IndentationWidth.
-# SupportedStyles: consistent, consistent_relative_to_receiver, special_for_inner_method_call, special_for_inner_method_call_in_parentheses
-Layout/FirstArgumentIndentation:
-  Enabled: false
-
-# Offense count: 859
+# Offense count: 906
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: AllowMultipleStyles, EnforcedHashRocketStyle, EnforcedColonStyle, EnforcedLastArgumentHashStyle.
 # SupportedHashRocketStyles: key, separator, table
@@ -48,39 +41,31 @@ Layout/LineEndStringConcatenationIndentation:
 Layout/MultilineMethodCallIndentation:
   Enabled: false
 
-# Offense count: 200
+# Offense count: 197
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: EnforcedStyle, IndentationWidth.
 # SupportedStyles: aligned, indented
 Layout/MultilineOperationIndentation:
   Enabled: false
 
-# Offense count: 295
+# Offense count: 293
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: space, no_space
 Layout/SpaceAroundEqualsInParameterDefault:
   Enabled: false
 
-# Offense count: 3
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
-# SupportedStyles: space, no_space
-# SupportedStylesForEmptyBraces: space, no_space
-Layout/SpaceInsideBlockBraces:
-  Enabled: false
-
-# Offense count: 111
+# Offense count: 113
 # Configuration parameters: IgnoredMethods.
 Lint/AmbiguousBlockAssociation:
   Enabled: false
 
-# Offense count: 853
+# Offense count: 859
 # This cop supports safe auto-correction (--auto-correct).
 Lint/AmbiguousRegexpLiteral:
   Enabled: false
 
-# Offense count: 57
+# Offense count: 60
 # Configuration parameters: AllowedMethods.
 # AllowedMethods: enums
 Lint/ConstantDefinitionInBlock:
@@ -97,11 +82,6 @@ Lint/DuplicateElsifCondition:
 
 # Offense count: 5
 Lint/DuplicateMethods:
-  Enabled: false
-
-# Offense count: 1
-# This cop supports safe auto-correction (--auto-correct).
-Lint/DuplicateRequire:
   Enabled: false
 
 # Offense count: 120
@@ -152,19 +132,14 @@ Lint/OrAssignmentToConstant:
 Lint/RaiseException:
   Enabled: false
 
-# Offense count: 1
-# This cop supports safe auto-correction (--auto-correct).
-Lint/RedundantCopDisableDirective:
-  Enabled: false
-
-# Offense count: 4
+# Offense count: 5
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: AllowedMethods.
 # AllowedMethods: instance_of?, kind_of?, is_a?, eql?, respond_to?, equal?
 Lint/RedundantSafeNavigation:
   Enabled: false
 
-# Offense count: 53
+# Offense count: 54
 Lint/RescueException:
   Enabled: false
 
@@ -202,16 +177,7 @@ Lint/UnusedMethodArgument:
 Lint/UriEscapeUnescape:
   Enabled: false
 
-# Offense count: 4
-Lint/UselessAssignment:
-  Enabled: false
-
-# Offense count: 3
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Lint/UselessMethodDefinition:
-  Enabled: false
-
-# Offense count: 41
+# Offense count: 42
 # Configuration parameters: ForbiddenDelimiters.
 # ForbiddenDelimiters: (?-mix:(^|\s)(EO[A-Z]{1}|END)(\s|$))
 Naming/HeredocDelimiterNaming:
@@ -223,7 +189,7 @@ Naming/HeredocDelimiterNaming:
 Naming/MemoizedInstanceVariableName:
   Enabled: false
 
-# Offense count: 67
+# Offense count: 64
 # Configuration parameters: MinNameLength, AllowNamesEndingInNumbers, AllowedNames, ForbiddenNames.
 # AllowedNames: at, by, db, id, in, io, ip, of, on, os, pp, to
 Naming/MethodParameterName:
@@ -235,16 +201,11 @@ Naming/MethodParameterName:
 Naming/RescuedExceptionsVariableName:
   Enabled: false
 
-# Offense count: 715
+# Offense count: 719
 # Configuration parameters: EnforcedStyle, CheckMethodNames, CheckSymbols, AllowedIdentifiers.
 # SupportedStyles: snake_case, normalcase, non_integer
 # AllowedIdentifiers: capture3, iso8601, rfc1123_date, rfc822, rfc2822, rfc3339
 Naming/VariableNumber:
-  Enabled: false
-
-# Offense count: 20
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Performance/Casecmp:
   Enabled: false
 
 # Offense count: 42
@@ -252,17 +213,12 @@ Performance/Casecmp:
 Performance/CollectionLiteralInLoop:
   Enabled: false
 
-# Offense count: 5
-# This cop supports safe auto-correction (--auto-correct).
-Performance/Count:
-  Enabled: false
-
 # Offense count: 61
 # This cop supports safe auto-correction (--auto-correct).
 Performance/Detect:
   Enabled: false
 
-# Offense count: 10
+# Offense count: 9
 # This cop supports unsafe auto-correction (--auto-correct-all).
 Performance/InefficientHashSearch:
   Enabled: false
@@ -281,7 +237,7 @@ Performance/RedundantEqualityComparisonBlock:
 Performance/RegexpMatch:
   Enabled: false
 
-# Offense count: 31
+# Offense count: 29
 # This cop supports safe auto-correction (--auto-correct).
 Performance/StringInclude:
   Enabled: false
@@ -292,7 +248,7 @@ Performance/StringInclude:
 Performance/Sum:
   Enabled: false
 
-# Offense count: 19
+# Offense count: 20
 # This cop supports safe auto-correction (--auto-correct).
 Performance/TimesMap:
   Enabled: false
@@ -309,12 +265,7 @@ Rails/ApplicationMailer:
 Rails/AssertNot:
   Enabled: false
 
-# Offense count: 11
-# This cop supports safe auto-correction (--auto-correct).
-Rails/BelongsTo:
-  Enabled: false
-
-# Offense count: 50
+# Offense count: 49
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: NilOrEmpty, NotPresent, UnlessPresent.
 Rails/Blank:
@@ -335,7 +286,7 @@ Rails/DeprecatedActiveModelErrorsMethods:
 Rails/DurationArithmetic:
   Enabled: false
 
-# Offense count: 479
+# Offense count: 478
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: Whitelist, AllowedMethods, AllowedReceivers.
 # Whitelist: find_by_sql
@@ -344,7 +295,7 @@ Rails/DurationArithmetic:
 Rails/DynamicFindBy:
   Enabled: false
 
-# Offense count: 38
+# Offense count: 41
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: slashes, arguments
 Rails/FilePath:
@@ -371,7 +322,7 @@ Rails/IndexWith:
 Rails/NegateInclude:
   Enabled: false
 
-# Offense count: 39
+# Offense count: 37
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: Include.
 # Include: app/**/*.rb, config/**/*.rb, db/**/*.rb, lib/**/*.rb
@@ -405,12 +356,7 @@ Rails/Present:
 Rails/RakeEnvironment:
   Enabled: false
 
-# Offense count: 16
-# This cop supports safe auto-correction (--auto-correct).
-Rails/RedundantPresenceValidationOnBelongsTo:
-  Enabled: false
-
-# Offense count: 2073
+# Offense count: 2077
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: EnforcedStyle, Include.
 # SupportedStyles: assert_not, refute
@@ -424,7 +370,7 @@ Rails/RefuteMethods:
 Rails/SkipsModelValidations:
   Enabled: false
 
-# Offense count: 30
+# Offense count: 32
 # This cop supports safe auto-correction (--auto-correct).
 Rails/SquishedSQLHeredocs:
   Enabled: false
@@ -448,14 +394,9 @@ Rails/WhereEquals:
 Rails/WhereExists:
   Enabled: false
 
-# Offense count: 57
+# Offense count: 56
 # This cop supports unsafe auto-correction (--auto-correct-all).
 Security/IoMethods:
-  Enabled: false
-
-# Offense count: 39
-# This cop supports safe auto-correction (--auto-correct).
-Security/JSONLoad:
   Enabled: false
 
 # Offense count: 2
@@ -464,11 +405,6 @@ Security/MarshalLoad:
 
 # Offense count: 21
 Security/Open:
-  Enabled: false
-
-# Offense count: 14
-# This cop supports safe auto-correction (--auto-correct).
-Security/YAMLLoad:
   Enabled: false
 
 # Offense count: 52
@@ -502,7 +438,7 @@ Style/CaseLikeIf:
 Style/ClassEqualityComparison:
   Enabled: false
 
-# Offense count: 152
+# Offense count: 150
 Style/ClassVars:
   Enabled: false
 
@@ -511,7 +447,7 @@ Style/ClassVars:
 Style/CollectionCompact:
   Enabled: false
 
-# Offense count: 184
+# Offense count: 183
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: PreferredMethods, MethodsAcceptingSymbol.
 # MethodsAcceptingSymbol: inject, reduce
@@ -522,7 +458,7 @@ Style/CollectionMethods:
 Style/CombinableLoops:
   Enabled: false
 
-# Offense count: 40
+# Offense count: 41
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: Keywords, RequireColon.
 # Keywords: TODO, FIXME, OPTIMIZE, HACK, REVIEW, NOTE
@@ -564,12 +500,12 @@ Style/FetchEnvVar:
 Style/FileRead:
   Enabled: false
 
-# Offense count: 26
+# Offense count: 27
 # This cop supports safe auto-correction (--auto-correct).
 Style/FileWrite:
   Enabled: false
 
-# Offense count: 3
+# Offense count: 2
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: left_coerce, right_coerce, single_coerce, fdiv
@@ -582,19 +518,19 @@ Style/FloatDivision:
 Style/FormatStringToken:
   Enabled: false
 
-# Offense count: 3119
+# Offense count: 3124
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: always, always_true, never
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-# Offense count: 59
+# Offense count: 61
 # This cop supports safe auto-correction (--auto-correct).
 Style/GlobalStdStream:
   Enabled: false
 
-# Offense count: 318
+# Offense count: 309
 # Configuration parameters: AllowedVariables.
 Style/GlobalVars:
   Enabled: false
@@ -612,7 +548,7 @@ Style/HashAsLastArrayItem:
 Style/HashConversion:
   Enabled: false
 
-# Offense count: 30
+# Offense count: 29
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: AllowedReceivers.
 Style/HashEachMethods:
@@ -646,7 +582,7 @@ Style/IfWithBooleanLiteralBranches:
 Style/InverseMethods:
   Enabled: false
 
-# Offense count: 4
+# Offense count: 2
 # This cop supports safe auto-correction (--auto-correct).
 Style/KeywordParametersOrder:
   Enabled: false
@@ -676,13 +612,7 @@ Style/MixinUsage:
 Style/MultilineTernaryOperator:
   Enabled: false
 
-# Offense count: 3
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: AllowMethodComparison.
-Style/MultipleComparison:
-  Enabled: false
-
-# Offense count: 432
+# Offense count: 436
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: literals, strict
@@ -698,7 +628,7 @@ Style/NegatedIfElseCondition:
 Style/OpenStructUse:
   Enabled: false
 
-# Offense count: 101
+# Offense count: 102
 # Configuration parameters: AllowedMethods.
 # AllowedMethods: respond_to_missing?
 Style/OptionalBooleanParameter:
@@ -711,7 +641,7 @@ Style/OptionalBooleanParameter:
 Style/QuotedSymbols:
   Enabled: false
 
-# Offense count: 18
+# Offense count: 17
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: Methods.
 Style/RedundantArgument:
@@ -722,7 +652,7 @@ Style/RedundantArgument:
 Style/RedundantAssignment:
   Enabled: false
 
-# Offense count: 4
+# Offense count: 5
 # This cop supports safe auto-correction (--auto-correct).
 Style/RedundantBegin:
   Enabled: false
@@ -732,7 +662,7 @@ Style/RedundantBegin:
 Style/RedundantCondition:
   Enabled: false
 
-# Offense count: 40
+# Offense count: 42
 # This cop supports safe auto-correction (--auto-correct).
 Style/RedundantFileExtensionInRequire:
   Enabled: false
@@ -743,7 +673,7 @@ Style/RedundantFileExtensionInRequire:
 Style/RedundantInitialize:
   Enabled: false
 
-# Offense count: 61
+# Offense count: 63
 # This cop supports safe auto-correction (--auto-correct).
 Style/RedundantParentheses:
   Enabled: false
@@ -768,17 +698,12 @@ Style/RedundantRegexpEscape:
 Style/RedundantSelfAssignment:
   Enabled: false
 
-# Offense count: 2
-# This cop supports safe auto-correction (--auto-correct).
-Style/RedundantSelfAssignmentBranch:
-  Enabled: false
-
 # Offense count: 8
 # This cop supports unsafe auto-correction (--auto-correct-all).
 Style/RedundantSort:
   Enabled: false
 
-# Offense count: 124
+# Offense count: 122
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: EnforcedStyle, AllowInnerSlashes.
 # SupportedStyles: slashes, percent_r, mixed
@@ -790,23 +715,11 @@ Style/RegexpLiteral:
 Style/RescueModifier:
   Enabled: false
 
-# Offense count: 169
+# Offense count: 170
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: implicit, explicit
 Style/RescueStandardError:
-  Enabled: false
-
-# Offense count: 126
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: ConvertCodeThatCanStartToReturnNil, AllowedMethods, MaxChainLength.
-# AllowedMethods: present?, blank?, presence, try, try!
-Style/SafeNavigation:
-  Enabled: false
-
-# Offense count: 3
-# This cop supports safe auto-correction (--auto-correct).
-Style/SelectByRegexp:
   Enabled: false
 
 # Offense count: 17
@@ -825,17 +738,12 @@ Style/SlicingWithRange:
 Style/SoleNestedConditional:
   Enabled: false
 
-# Offense count: 28
+# Offense count: 29
 # This cop supports safe auto-correction (--auto-correct).
 Style/StderrPuts:
   Enabled: false
 
-# Offense count: 2
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/StringChars:
-  Enabled: false
-
-# Offense count: 316
+# Offense count: 314
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: Mode.
 Style/StringConcatenation:
@@ -852,23 +760,6 @@ Style/TernaryParentheses:
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: AllowNamedUnderscoreVariables.
 Style/TrailingUnderscoreVariable:
-  Enabled: false
-
-# Offense count: 2
-# This cop supports safe auto-correction (--auto-correct).
-Style/UnpackFirst:
-  Enabled: false
-
-# Offense count: 2
-# This cop supports safe auto-correction (--auto-correct).
-Style/WhileUntilModifier:
-  Enabled: false
-
-# Offense count: 9
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle, MinSize, WordRegex.
-# SupportedStyles: percent, brackets
-Style/WordArray:
   Enabled: false
 
 # Offense count: 13

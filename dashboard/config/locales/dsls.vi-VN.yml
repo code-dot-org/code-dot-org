@@ -836,6 +836,7 @@ vi-VN:
         - correct: true
         questions:
         - {}
+        title: Dự đoán
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -844,6 +845,7 @@ vi-VN:
         - correct: true
         questions:
         - {}
+        title: Dự đoán
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -852,6 +854,7 @@ vi-VN:
         - correct: true
         questions:
         - {}
+        title: Dự đoán
       Dance_Party_extras_intro:
         markdown: "\"# Tiếp tục khiêu vũ!\n \nTrong phần 2, bạn sẽ tạo ra dự án của
           riêng mình. Không còn những câu đố - thay vào đó là nhiều dự án thể hiện
@@ -1359,7 +1362,7 @@ vi-VN:
         - correct: true
           feedback: Chính xác!
         - {}
-        - feedback: Không đúng
+        - feedback: Không chính xác
         questions:
         - {}
       behaviors 1 predict_2020:
@@ -1368,7 +1371,7 @@ vi-VN:
         - correct: true
           feedback: Chính xác!
         - {}
-        - feedback: Không đúng
+        - feedback: Không chính xác
         questions:
         - {}
       behaviors 4 predict:
@@ -1377,7 +1380,7 @@ vi-VN:
         - correct: true
           feedback: Chính xác!
         - {}
-        - feedback: Không đúng
+        - feedback: Không chính xác
         questions:
         - {}
       behaviors 4 predict_2020:
@@ -1386,7 +1389,7 @@ vi-VN:
         - correct: true
           feedback: Chính xác!
         - {}
-        - feedback: Không đúng
+        - feedback: Không chính xác
         questions:
         - {}
       courseC_multi_artist_prog6_predict1:
@@ -4364,6 +4367,7 @@ vi-VN:
         - correct: true
         questions:
         - {}
+        title: Dự đoán
       BigEvent-Unplugged:
         markdown: |
           # Sự kiện lớn
@@ -4635,3 +4639,23 @@ vi-VN:
         - {}
         - {}
         - text: Không mục nào ở trên
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Thêm hình ảnh
+      CSD U2 Image practice_pilot_2021:
+        display_name: Thêm hình ảnh
+      CSD U3 drawing practice choice_2021:
+        display_name: Thực tiễn
+      CSD games cake challenge choice_2021:
+        display_name: Thử thách
+      CSD games platform challenge choice_2021:
+        display_name: Thử thách
+      CSD web draw loop practice choice_2021:
+        display_name: Thực tiễn
+      CSD web movement practice choice_2021:
+        display_name: Thực tiễn
+      CSD web text practice choice_2021:
+        display_name: Thực tiễn
+      ml-club app-choice parent:
+        display_name: Tùy chỉnh ứng dụng
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Tùy chỉnh ứng dụng

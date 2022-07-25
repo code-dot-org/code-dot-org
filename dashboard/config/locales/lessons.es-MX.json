@@ -189,7 +189,11 @@
           "name": "Fiesta de baile - Ir más allá",
           "overview": "En esta lección, alumnos de todas las edades continúan su experiencia con la codificación y la informática en un entorno seguro y de apoyo. Esta lección ha sido diseñada para alumnos de todas las edades, pero requiere saber leer. Esta actividad necesita sonido, ya que la herramienta fue construida para responder a la música.",
           "preparation": "-   Revisa y completa tú mismo el tutorial online: [Dancy Party](https://hourofcode.com/us/how-to)\n\n-   Asegúrate de probarlo primero antes de pedir a tus alumnos que lo completen. \n\n-   Comprueba tu tecnología y decide si necesitas solucionar algún problema antes de la Hora del Código.",
-          "purpose": "Esta lección presenta los conceptos básicos de las ciencias de la computación para la codificación y la programación de eventos (con bloques)."
+          "purpose": "Esta lección presenta los conceptos básicos de las ciencias de la computación para la codificación y la programación de eventos (con bloques).",
+          "student_overview": "Estudiantes de todas las edades continúan con una experiencia introductoria a la codificación y la informática en un entorno seguro y de apoyo. "
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "La hora del código 2013"
         },
         "dance-2019/Dance Party": {
           "name": "Fiesta de baile (remix 2019)",
@@ -205,8 +209,176 @@
           "purpose": "Esta lección está diseñada para iniciar rápidamente a los estudiantes en el **aprendizaje automático**, un tipo de **inteligencia artificial**. Los alumnos analizarán cómo se utilizan los **datos de entrenamiento** para que un modelo de aprendizaje automático pueda clasificar nuevos datos. Los estudiantes deben tener una experiencia positiva durante el ejercicio y lo que es más importante, deben estar motivados para seguir aprendiendo informática. ",
           "student_overview": "Resumen de la tutoría: En primer lugar, los alumnos clasifican los objetos como \"peces\" o \"no peces\" para intentar eliminar la basura del océano. A continuación, los alumnos deberán ampliar su conjunto de datos de entrenamiento para incluir otras criaturas marinas que pertenecen al agua. En la segunda parte de la actividad, los alumnos elegirán sus propias etiquetas para aplicarlas a imágenes de peces generadas al azar. Estos datos de entrenamiento se utilizan para un modelo de aprendizaje automático que luego debería ser capaz de etiquetar nuevas imágenes por sí mismo."
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Bienvenido a \"Cómo enseñar los Fundamentos de Ciencias de la Computación\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Cursos de comprensión de los Fundamentos de Ciencias de la Computación"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Secuencias"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Bucles"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Eventos"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Condicionales"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Proyectos de fin de curso"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funciones"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variables"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Bucles Para"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laboratorio de sprites"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Revisión de tus reflexiones"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Próximos pasos"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Estudio de Humor"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Diseño digital"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Programación orientada por eventos"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Funcionalidad básica de la aplicación"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getters y setters"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Primeros pasos"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fundamentos de la informática"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Mirar hacia adelante"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Dominio de los conceptos básicos: secuencias"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Dominio de los conceptos básicos: bucles"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Dominio de los conceptos básicos: condicionales"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Dominio de los conceptos básicos: funciones"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Dominio de los conceptos básicos: eventos"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Mejores prácticas para la enseñanza de ciencias de la computación"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planificación"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Próximos pasos"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Instrucciones generales y de configuración"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Red de compañeros - Envío de bits en un cable compartido"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Red de compañeros - Envío de números"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Red de compañeros - Envío de Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Difusión de mensajes"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Enrutadores y direcciones"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Paquetes y confiabilidad"
+        },
+        "netsim/Manual DNS": {
+          "name": "DNS manual"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Nodo DNS automático"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Juego libre de simulador de Internet"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget de cuentakilómetros"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Sala de escape"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Pantallas de inicio y fin"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Pantallas de inicio y fin2"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Primeros pasos"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fundamentos de la informática"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Mirar hacia adelante"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Dominio de los conceptos básicos: secuencias"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Dominio de los conceptos básicos: bucles"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Dominio de los conceptos básicos: condicionales"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Dominio de los conceptos básicos: funciones"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Dominio de los conceptos básicos: eventos"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Mejores prácticas para la enseñanza de ciencias de la computación"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planificación"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Próximos pasos"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Hora del Código de la Recolectora 2017"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Análisis de frecuencia"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Muévelo, muévelo"
@@ -752,7 +924,7 @@
           "name": "Concurso de Ortografía"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "Encuesta de fin de semestre de Descubrimientos de Ciencias de la Computación"
+          "name": "Programación para entretenimiento"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Trazar formas"
@@ -1457,10 +1629,10 @@
           "name": "Una batalla real con eventos"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Programación para entretenimiento"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Trazar formas"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Dibujar en el Laboratorio de juegos"
@@ -1523,10 +1695,10 @@
           "name": "Proyecto - Diseñar un juego"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Innovaciones en computación"
         },
         "csd6-2019/Designing Screens with Code": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Diseñar pantallas a través del código"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "The Circuit Playground"
@@ -1571,10 +1743,10 @@
           "name": "Proyecto: crear el prototipo de una innovación"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Análisis de diseño"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Entender a tu usuario"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Microactividad de diseño centrada en el usuario"
@@ -1619,10 +1791,10 @@
           "name": "Proyecto - Presentación de la aplicación"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Asuntos de representación"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Patrones y representación"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII y representación binaria"
@@ -1667,7 +1839,7 @@
           "name": "Introducción a la resolución de problemas"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Prueba posterior al proyecto"
+          "name": "El proceso de resolución de problemas"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Exploración de la resolución de problemas"
@@ -1688,10 +1860,10 @@
           "name": "Proyecto - Propuesta de aplicación"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Exploración de sitios web"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Sitios web para la expresión "
         },
         "csd2-2019/Intro to HTML": {
           "name": "Introducción al HTML"
@@ -2213,10 +2385,10 @@
           "name": "Presenta tu proyecto"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "Encuesta de fin de semestre de Descubrimientos de Ciencias de la Computación"
+          "name": "Programación para entretenimiento"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Trazar formas"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Dibujar en el Laboratorio de juegos"
@@ -2279,7 +2451,7 @@
           "name": "Proyecto - Diseñar un juego"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Innovaciones en computación"
         },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Diseñar pantallas a través del código"
@@ -2327,7 +2499,7 @@
           "name": "Proyecto: crear el prototipo de una innovación"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Exploración de sitios web"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Sitios web para la expresión "
@@ -2396,7 +2568,7 @@
           "name": "Proyecto - Propuesta de aplicación"
         },
         "csd5-2017/Representation Matters": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Asuntos de representación"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Patrones y representación"
@@ -2441,7 +2613,7 @@
           "name": "Proyecto - Solucionar un problema de datos"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "Encuesta de fin de curso de CSP"
+          "name": "Análisis de diseño"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Entender a tu usuario"
@@ -2487,6 +2659,27 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "Proyecto - Presentación de la aplicación"
+        },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "Depuración para educadores de AB"
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "Depuración para educadores de CDEF"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Tutorial de pixelación en blanco y negro"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Juego libre de pixelación en blanco y negro"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Tutorial de pixelación en color"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Ejemplos de pixelación en color"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Juego libre de pixelación en color"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Desconectado: Tangrams"
@@ -2553,6 +2746,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Desafío extremo: integral"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Introducción a Ciencias de la Computación"
+        },
+        "20-hour/The Maze": {
+          "name": "El Laberinto"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Pensamiento computacional"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programación con Papel Cuadriculado"
+        },
+        "20-hour/The Artist": {
+          "name": "El Artista"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmos"
+        },
+        "20-hour/The Artist 2": {
+          "name": "El artista 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funciones"
+        },
+        "20-hour/The Farmer": {
+          "name": "La Granjera"
+        },
+        "20-hour/Conditionals": {
+          "name": "Condicionales"
+        },
+        "20-hour/The Artist 3": {
+          "name": "El Artista 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Composición de canciones"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "La granjera 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstracción"
+        },
+        "20-hour/The Artist 4": {
+          "name": "El Artista 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Programación de relevos"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "La Granjera 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "El Artista 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Cierre"
         },
         "course2/Graph Paper Programming": {
           "name": "Programación con Papel Cuadriculado"
@@ -2735,6 +2988,141 @@
           "purpose": "El objetivo principal de esta lección es que los alumnos adquieran experiencia con los ordenadores. Al cubrir las funciones informáticas más básicas, como hacer clic, arrastrar y soltar, estamos creando un campo de juego más igualitario en la clase para futuros rompecabezas. Esta lección también ofrece una gran oportunidad para introducir la terminología básica del hardware del ordenador, incluyendo potencialmente \"ratón\", \"trackpad\" o \"pantalla táctil\", dependiendo de sus dispositivos.",
           "student_overview": "Haz clic y arrastra para terminar los desafíos."
         },
+        "csd-post-survey/CSD post-course survey": {
+          "name": "Encuesta de fin de curso para estudiantes de CSD ('18-'19)"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Rompecabezas"
+        },
+        "allthethings/Maze": {
+          "name": "Laberinto"
+        },
+        "allthethings/Artist": {
+          "name": "Artista"
+        },
+        "allthethings/Bee": {
+          "name": "Abeja"
+        },
+        "allthethings/PlayLab": {
+          "name": "Laboratorio de juegos"
+        },
+        "allthethings/Farmer": {
+          "name": "Cultivador"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Rebotar"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Combinar"
+        },
+        "allthethings/TextMatch": {
+          "name": "TextMatch"
+        },
+        "allthethings/CSinA": {
+          "name": "CCenA"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "Odómetro"
+        },
+        "allthethings/Text Compression": {
+          "name": "Compresión de texto"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pixelación"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Gamelab": {
+          "name": "Laboratorio de juegos"
+        },
+        "allthethings/Online PD": {
+          "name": "PD en línea"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Detalles de Markdown"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Evaluación de varias páginas"
+        },
+        "allthethings/Star wars": {
+          "name": "Star Wars"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "Evaluación larga completa"
+        },
+        "allthethings/Free Response": {
+          "name": "Respuesta libre"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "Muestra de la evaluación de PLC"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Intercambio de niveles"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Encuesta anónima de estudiantes"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Criptografía de claves públicas"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
+        },
+        "allthethings/Single page assessment": {
+          "name": "Evaluación de una sola página"
+        },
+        "allthethings/Standalone video": {
+          "name": "Video independiente"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Referencia del plan de estudios"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Laboratorio de sprites"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Laboratorio de baile"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Mini rúbrica"
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": "Externos opcionalmente mostrados como sin conexión"
+        },
+        "allthethings/Bubble Choice": {
+          "name": "Bubble Choice"
+        },
+        "allthethings/Contained Levels": {
+          "name": "Niveles contenidos"
+        },
+        "allthethings/ML Fish": {
+          "name": "Pez ML"
+        },
+        "allthethings/AI Lab": {
+          "name": "Laboratorio de Inteligencia Artificial"
+        },
+        "allthethings/Java Lab": {
+          "name": "Laboratorio Java"
+        },
         "coursef-2021/lesson-6": {
           "name": "Presentamos el Laboratorio de sprites",
           "overview": "En esta lección **definida por el contexto**, los estudiantes debatirán sobre el rol de las computadores y la tecnología en sus vidas, centrándose en cómo las aplicaciones y las herramientas ofrecen a los usuarios la posibilidad de elegir cómo utilizarlas. Los estudiantes explorarán apps similares a las que crearán más adelante.",
@@ -2822,7 +3210,7 @@
         "coursef-2021/For Loop Fun": {
           "name": "Diversión con bucles Para",
           "overview": "Sabemos que los bucles nos permiten hacer cosas una y otra vez, pero ahora vamos a aprender cómo usarlos con otras estructuras integradas. A través de estas nuevas estructuras, los estudiantes podrán crear un código más potente y dinámico. ",
-          "preparation": "-   Mira el \\*_\\\\video_.\n-   Imprime una **\\*guía de trabajo** para cada grupo.\n-   Imprime una **\\*evaluación** para cada estudiante.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
+          "preparation": "-   Mira el vídeo\\*\\*\\\\ \\*.\n-   Imprimir una **\\\\ \\*hoja de trabajo** por grupo.\n-   Imprime una **\\\\ \\*evaluación** para cada alumno.\n-   Asegúrese de que cada alumno tenga un diario de reflexión.",
           "purpose": "A estas alturas, los estudiantes ya dominan los bucles. Hoy aprenderán sobre otro bucle usado comúnmente en la programación. Los bucles “desde” repiten comandos un cierto número de veces, pero además llevan registro de los valores por los que pasa. Por ejemplo, un bucle “desde” que comienza en el número 4, termina en el 8 y tiene un valor de intervalo de paso de 1, se repetirá cuatro veces, pero los valores 4, 5, 6 y 7 serán registrados por si quieren usarlos en algo más. El uso de esta estructura, combinado con variables, puede resultar en programas realmente fantásticos. En la lección de hoy, los estudiantes aprenderán lo básico de los bucles “desde”, antes de sumergirse a programar con ellos en la lecciones futuras.",
           "student_overview": "¡Te vas a divertir mucho mientras aprendes sobre los bucles `desde`!"
         },
@@ -2863,7 +3251,7 @@
         "coursef-2021/Internet": {
           "name": "Internet",
           "overview": "A pesar de que muchas personas utilizan Internet todos los días, no muchos saben cómo funciona. En esta lección, los estudiantes viajarán a través de Internet y aprenderán acerca de conexiones, URL, direcciones IP y el DNS.",
-          "preparation": "-   Mira el video **\\*Internet**.\n-   Imprime suficientes Manipulativos de **\\*Tarjetas de dirección IP y tarjetas de tipos de entrega** para cada grupo.\n-   Imprime una Evaluación de **\\*Internet** para cada estudiante.\n-   Accede a Internet (a algún sitio como **\\*get-site-ip.com**).\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
+          "preparation": "-   Vea el video del profesor**\\\\ \\*Internet**.\n-   Imprimir lo suficiente **\\\\ \\*Tarjetas de dirección IP y tarjetas de tipo de entrega** - Manipulativos para cada grupo.\n-   Imprima una evaluación **\\\\ \\*Internet** para cada estudiante.\n-   Acceso a Internet (por ejemplo, **\\\\ \\*get-site-ip.com**.\n-   Asegúrese de que cada alumno tenga un diario de reflexión.",
           "purpose": "Si has realizado cada una de las actividades de este curso, entonces los estudiantes ya han usado Internet. Pero… ¿cuántos saben cómo funciona? Aprender sobre Internet ayudará a los estudiantes a desarrollar una mejor comprensión de sus infinitas posibilidades. ",
           "student_overview": "¿Alguna vez te preguntaste cómo viaja la información a través de Internet? ¡No es magia! Esta lección te enseñará los conceptos básicos de cómo funciona Internet."
         },
@@ -3297,7 +3685,7 @@
         "express-2021/Debugging with Scrat": {
           "name": "Depuración en el laberinto",
           "overview": "La depuración es un elemento esencial a la hora de aprender a programar. Los estudiantes encontrarán desafíos que no se resolvieron correctamente. Deberán revisar el código existente para identificar los errores, tales como bucles incorrectos, bloques que faltan, bloques de más y bloques que no funcionan.",
-          "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para los estudiantes.\n-   (Opcional) Elige un par de desafíos para hacer en conjunto con la clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
+          "preparation": "-   Juega la lección para encontrar posibles áreas problemáticas para tu clase.\n-   (Opcional) Elige un par de rompecabezas para hacer en grupo con tu clase. \n-   Asegúrese de que todos los alumnos tengan un diario de reflexión.",
           "purpose": "Tus estudiantes podrían llegar a sentirse frustrados con esta lección, dada la naturaleza de la depuración. Depurar es un concepto muy importante en la programación. Los programadores deben trabajar para ser muy buenos encontrando los errores en sus propios programas. La depuración fuerza a los estudiantes a reconocer problemas y superarlos, mientras desarrollan un pensamiento crítico y habilidades de resolución de problemas.",
           "student_overview": "Encuentra problemas en los desafíos y practica tus habilidades de depuración."
         },
@@ -3684,105 +4072,132 @@
           "student_overview": "Los proyectos así de grandes toman tiempo y mucha planificación. ¡Encuentra tu inspiración, desarrolla un plan y libera tu creatividad!"
         },
         "csd7-2021/Introduction to Machine Learning": {
-          "name": "Introducción al aprendizaje automático (Machine Learning)",
-          "overview": "Los alumnos conocen una forma de inteligencia artificial llamada aprendizaje automático y cómo pueden utilizar el Proceso de Resolución de Problemas ayudando a entrenar a un robot para que resuelva problemas. Participan en tres actividades de aprendizaje automático en las que un robot  \"A.I. Bot\" aprende a detectar patrones en los peces. En el primer nivel, los alumnos entrenan al robot para que detecte \"peces\" frente a \"no peces\" y descubren que un mayor número de datos conduce a una mayor precisión. En el segundo nivel, los alumnos entrenan al \"I.A. Bot\" para que detecte peces de cierto color o con una forma determinada y descubren que el \"I.A. Bot\" podría estar basando su decisión en factores no previstos. En el último nivel, los alumnos entrenan al \"I.A. Bot\" para que detecte expresiones y descubren que el \"I.A. Bot\" puede estar utilizando características no relacionadas para tomar decisiones de una manera que no es justa. La lección termina reafirmando cómo se utiliza el proceso de resolución de problemas en el aprendizaje automático.\n\n**Pregunta del día:** ¿Cómo podemos utilizar el Proceso de Resolución de Problemas para resolver un problema con el aprendizaje automático?",
-          "preparation": "-   Revisa los niveles de Code Studio antes de la lección\n-   Imprime copias de la guía de actividades para cada estudiante",
-          "student_overview": "Los alumnos conocen una forma de inteligencia artificial llamada aprendizaje automático y cómo pueden utilizar el Proceso de Resolución de Problemas ayudando a entrenar a un robot para que resuelva problemas. Participan en tres actividades de aprendizaje automático en las que un robot  \"A.I. Bot\" aprende a detectar patrones en los peces. En el primer nivel, los alumnos entrenan al robot para que detecte \"peces\" frente a \"no peces\" y descubren que un mayor número de datos conduce a una mayor precisión. En el segundo nivel, los alumnos entrenan al \"I.A. Bot\" para que detecte peces de cierto color o con una forma determinada y descubren que el \"I.A. Bot\" podría estar basando su decisión en factores no previstos. En el último nivel, los alumnos entrenan al \"I.A. Bot\" para que detecte expresiones y descubren que el \"I.A. Bot\" puede estar utilizando características no relacionadas para tomar decisiones de una manera que no es justa. La lección termina reafirmando cómo se utiliza el proceso de resolución de problemas en el aprendizaje automático."
+          "name": "Introducción al Aprendizaje Automático",
+          "overview": "En esta lección, los estudiantes aprenderán acerca de un tipo de inteligencia artificial llamado aprendizaje automático, y cómo pueden utilizar el proceso de resolución de problemas para entrenar a un robot que sea capaz de solucionar problemas. Los estudiantes participarán en tres actividades de aprendizaje automático en las que un robot (bot con inteligencia artificial) aprenderá a detectar patrones en peces.\n\n**Pregunta del día:** ¿Cómo podemos utilizar el proceso de resolución de problemas para resolver un problema relacionado con el aprendizaje automático?",
+          "preparation": "-   Revise los niveles de Code Studio antes de la lección\n-   Imprima copias de la guía de actividades para cada estudiante",
+          "student_overview": "Aprenda los conceptos básicos del aprendizaje automático ayudando a AI Bot a reconocer peces para limpiar el océano"
         },
         "csd7-2021/Types of Machine Learning": {
-          "name": "Tipos de Aprendizaje Automático",
-          "overview": "Los alumnos primero se plantean cómo crear modelos \"mentales\" cuando aprenden nuevos conceptos, y cómo éstos pueden ser similares a un modelo de \"aprendizaje automático\". Participan en una actividad de patrones de colores para simular la construcción de un modelo de aprendizaje automático sin ayuda, similar al de un niño pequeño, como un tipo de aprendizaje no supervisado. A continuación, juegan a un juego llamado \"Puerta con Cristal Verde\" como ejemplo de aprendizaje supervisado, en el que aprenden qué palabras siguen un determinado patrón para atravesar una puerta en el juego. A lo largo de la lección, los alumnos también conocen los términos característica, etiqueta y formación, que aparecen a lo largo de la unidad. Por último, los alumnos clasifican varios escenarios en aprendizaje \"supervisado\" o \"no supervisado\", y luego ven un vídeo sobre cómo las redes neuronales pueden simular aún más el aprendizaje humano.\\\\r\n\\\\r\n**Pregunta del día:** ¿En qué se parece el aprendizaje automático al humano?",
-          "student_overview": "Los alumnos primero se plantean cómo crear modelos \"mentales\" cuando aprenden nuevos conceptos, y cómo éstos pueden ser similares a un modelo de \"aprendizaje automático\". Participan en una actividad de patrones de colores para simular la construcción de un modelo de aprendizaje automático sin ayuda, similar al de un niño pequeño, como un tipo de aprendizaje no supervisado. A continuación, juegan a un juego llamado \"Puerta con Cristal Verde\" como ejemplo de aprendizaje supervisado, en el que aprenden qué palabras siguen un determinado patrón para atravesar una puerta en el juego. A lo largo de la lección, los alumnos también conocen los términos característica, etiqueta y formación, que aparecen a lo largo de la unidad. Por último, los alumnos clasifican varios escenarios en aprendizaje \"supervisado\" o \"no supervisado\", y luego ven un vídeo sobre cómo las redes neuronales pueden simular aún más el aprendizaje humano."
+          "name": "Tipos de aprendizaje automático",
+          "overview": "En esta lección, los estudiantes pensarán en cómo pueden crear modelos “mentales” al aprender conceptos nuevos, y cómo éstos pueden ser similares a un modelo de “aprendizaje automático”. Los estudiantes realizarán una actividad sobre patrones de colores, sin la ayuda del docente, con el objetivo de simular la creación de un modelo de aprendizaje automático. Luego, jugarán a “Green Glass Door” como ejemplo de aprendizaje supervisado. Para finalizar, clasificarán diversos escenarios entre aprendizaje “supervisado” y “no supervisado”. \n\n**Pregunta del día:** ¿Cuáles son los diferentes tipos de aprendizaje automático?",
+          "preparation": "-   Revise todo el material de la lección del día.",
+          "purpose": "-   Revise los niveles de Code Studio antes de la lección, de esta forma sabrá cómo funciona el juego llamado “the Green Glass Door”\n-   Imprima o prepare copias en línea de la guía de actividades para cada estudiante",
+          "student_overview": "Aprenda dos tipos diferentes de aprendizaje automático: aprendizaje supervisado y no supervisado. Luego compare cómo el aprendizaje automático puede ser similar o diferente a cómo aprenden los humanos."
         },
         "csd7-2021/Innovations in AI": {
-          "name": "Innovaciones en Inteligencia Artificial",
-          "overview": "En esta lección, los estudiantes exploran una aplicación de la Inteligencia Artificial llamada Seeing AI y examinan cómo está ayudando a las personas con discapacidades visuales. A continuación, los alumnos investigan otros ejemplos de cómo la Inteligencia Artificial está afectando a la sociedad, centrándose en los usuarios que se ven afectados por los ejemplos que encuentran. Por último, los alumnos comparten sus conclusiones entre ellos.\n\n**Pregunta del día:** ¿Cómo ayuda la Inteligencia Artificial a resolver problemas en todo el mundo?"
+          "name": "Innovaciones en IA (Inteligencia Artificial)",
+          "overview": "En esta lección, los estudiantes explorarán una aplicación de inteligencia artificial llamada Seeing Al y estudiarán cómo ofrece ayuda a personas con discapacidad visual. Luego, los estudiantes investigarán otros ejemplos del impacto que la inteligencia artificial genera en la sociedad, enfocándose en los usuarios que se ven afectados. Para finalizar, los estudiantes compartirán sus hallazgos con los demás.\n\n**Pregunta del día:** ¿Cómo la inteligencia artificial está ayudando a resolver problemas en el mundo?",
+          "preparation": "-   Imprima una copia de la guía de actividades para cada estudiante\n-   Prepare el envío del recurso digital sobre áreas de investigación de la inteligencia artificial. ",
+          "student_overview": "Investiga diferentes ejemplos de cómo se está utilizando la Inteligencia Artificial para resolver problemas en el mundo."
         },
         "csd7-2021/Patterns in Data": {
-          "name": "Patrones en los Datos",
-          "overview": "Los alumnos examinan varias aplicaciones que toman decisiones sobre qué zapatos ponerse, hasta llegar a comprender cómo el aprendizaje automático puede ayudar a tomar esta decisión. La primera aplicación toma decisiones de forma aleatoria, lo que constituye un modelo pobre para ayudar a alguien a decidir qué zapatos ponerse. La segunda aplicación toma decisiones siguiendo un patrón establecido llamado árbol de decisiones, que es mejor pero no responde a sus usuarios. Se guía a los alumnos para que lleguen a la conclusión de que encuestar a sus usuarios puede ayudarles a tomar la mejor decisión buscando patrones en los datos y basando sus decisiones en estos patrones. La lección concluye motivando la necesidad de que un ordenador realice este análisis y busque patrones en grandes cantidades de datos, que será el tema de la siguiente lección.\\\\r\n\\\\r\n**Pregunta del día:** ¿Qué estrategias utilizan los modelos informáticos para tomar decisiones?",
-          "preparation": "-   Revisa los niveles de Code Studio antes de la lección\n-   Imprime copias de la guía de actividades para cada estudiante",
-          "student_overview": "Los alumnos examinan varias aplicaciones que toman decisiones sobre qué zapatos ponerse, hasta llegar a comprender cómo el aprendizaje automático puede ayudar a tomar esta decisión. La primera aplicación toma decisiones de forma aleatoria, lo que constituye un modelo pobre para ayudar a alguien a decidir qué zapatos ponerse. La segunda aplicación toma decisiones siguiendo un patrón establecido llamado árbol de decisiones, que es mejor pero no responde a sus usuarios. Se guía a los alumnos para que lleguen a la conclusión de que encuestar a sus usuarios puede ayudarles a tomar la mejor decisión buscando patrones en los datos y basando sus decisiones en estos patrones. La lección concluye motivando la necesidad de que un ordenador realice este análisis y busque patrones en grandes cantidades de datos, que será el tema de la siguiente lección."
+          "name": "Patrones en Datos",
+          "overview": "En esta lección, los estudiantes examinarán varias aplicaciones que toman decisiones sobre qué calzado usar para llegar a comprender cómo el aprendizaje automático puede ayudar a tomar esta decisión. Se guiará a los estudiantes para que lleguen a la conclusión de que encuestar a los usuarios puede contribuir a tomar la mejor decisión mediante la búsqueda de patrones en los datos y basando dichas decisiones en los patrones encontrados.\n\n**Pregunta del día:** ¿Qué estrategias utilizan los modelos de computadora para tomar decisiones?",
+          "preparation": "-   Revise los niveles de Code Studio antes de la lección\n-   Imprima copias de la guía de actividades para cada estudiante",
+          "student_overview": "Explore tres formas diferentes en que las computadoras pueden hacer recomendaciones y cuán importantes pueden ser los datos para tomar decisiones precisas."
         },
         "csd7-2021/Classification Models": {
           "name": "Modelos de Clasificación",
-          "overview": "Los alumnos participan en una actividad desconectada que simula uno de los algoritmos de aprendizaje automático que los ordenadores utilizan para separar los datos en grupos y ayudar a tomar decisiones. Los alumnos tienen que ayudar a un ordenador a clasificar los alimentos como frutas o verduras. Empiezan por representar gráficamente 20 frutas diferentes en dos ejes, comparando la \"dulzura\" con la \"facilidad de comer\". Cuando terminan, intentan separar los datos en grupos: un área de frutas y un área de verduras. A continuación, ponemos a prueba su división ofreciéndoles nuevas frutas y verduras para que las clasifiquen, ofreciéndoles a propósito ejemplos que pongan a prueba su clasificación. Al final de la clase, los alumnos reflexionan sobre cómo este proceso les ha ayudado a tomar decisiones y lo difícil que resulta cuando hay más datos en juego.\\\\r\n\\\\r\n**Pregunta del día:** ¿Cómo aprenden los ordenadores a clasificar los datos?",
-          "student_overview": "**Pregunta del día:** ¿Cómo aprenden los ordenadores a clasificar los datos?"
+          "overview": "En esta lección, los estudiantes participarán en una actividad que no requiere computadora, la cual simulará uno de los algoritmos de aprendizaje automático utilizados por las computadoras con el objetivo de separar los datos en grupos para ayudar en la toma de decisiones. Los estudiantes tendrán que ayudar a una computadora a aprender a clasificar alimentos en frutas o vegetales. También, tendrán que graficar 20 frutas en dos ejes diferentes comparando su “dulzor” con su “facilidad para comer”. Luego, tendrán que separar los datos en grupos: un área de frutas y otra de vegetales.\n\n**Pregunta del día:** ¿Cómo aprenden las computadoras a clasificar datos?",
+          "preparation": "-   Revise todos los materiales de la lección de hoy.\n-   Recorte las tarjetas de frutas y vegetales. Entregue un set de tarjetas por cada grupo\n-   Una regla por estudiante",
+          "student_overview": "Aprenda a crear un modelo de aprendizaje automático ayudando a una computadora a clasificar los alimentos en frutas o vegetales"
         },
         "csd7-2021/Introduction to AI Lab": {
           "name": "Introducción al Laboratorio de Inteligencia Artificial",
-          "overview": "Los alumnos se introducen por primera vez en la herramienta Laboratorio de Inteligencia Artificial (AI Lab), donde seleccionan características para entrenar un modelo que predice una etiqueta determinada. Los alumnos fingen que han sido contratados por varios restaurantes que quieren hacer recomendaciones a nuevos clientes basándose en los datos de las encuestas que han recogido. Los alumnos recorren cada conjunto de datos, identificando las características de los datos que les gustaría utilizar para sus recomendaciones. Los alumnos también utilizan herramientas de visualización de datos para identificar las características con altas relaciones en los datos, ya que no todas las características pueden ser útiles o predictivas para el entrenamiento de un modelo. Al final de la lección, los alumnos crean un nuevo modelo para un restaurante de su elección y escriben una carta al propietario explicando cómo pueden utilizar su modelo para aumentar su negocio de restauración.\n\n**Pregunta del día:** ¿Cómo podemos utilizar el aprendizaje automático para hacer recomendaciones?",
-          "student_overview": "Los alumnos se introducen por primera vez en la herramienta Laboratorio de Inteligencia Artificial (AI Lab), donde seleccionan características para entrenar un modelo que predice una etiqueta determinada. Los alumnos fingen que han sido contratados por varios restaurantes que quieren hacer recomendaciones a nuevos clientes basándose en los datos de las encuestas que han recogido. Los alumnos recorren cada conjunto de datos, identificando las características de los datos que les gustaría utilizar para sus recomendaciones. Los alumnos también utilizan herramientas de visualización de datos para identificar las características con altas relaciones en los datos, ya que no todas las características pueden ser útiles o predictivas para el entrenamiento de un modelo. Al final de la lección, los alumnos crean un nuevo modelo para un restaurante de su elección y escriben una carta al propietario explicando cómo pueden utilizar su modelo para aumentar su negocio de restauración."
+          "overview": "En esta lección, los estudiantes trabajarán por primera vez con la herramienta AI Lab, donde seleccionarán características para entrenar un modelo que predice una etiqueta determinada. Los estudiantes comenzarán explorando AI Lab y entrenando un modelo para reconocer formas. A continuación, ellos simularán haber sido contratados por varios restaurantes que quieren hacer recomendaciones a nuevos clientes basándose en datos recopilados por encuestas, recorrerán cada conjunto de datos, y utilizarán las herramientas de visualización de datos para identificar las características con altas relaciones en los datos.\n\n**Pregunta del día:** ¿Cómo podemos utilizar el aprendizaje automático para hacer recomendaciones?",
+          "preparation": "-   Revise los niveles de Code Studio antes de la lección\n-   Mirar los dos videos de esta lección y familiarizarse con AI Lab\n-   Imprimir o prepararse para compartir copias en línea de la guía de actividades con cada estudiante",
+          "student_overview": "Aprenda a usar AI Lab para entrenar modelos de aprendizaje automático, por ejemplo, cómo reconocer formas o cómo hacer recomendaciones de comida para un restaurante."
         },
         "csd7-2021/Importing Models in App Lab": {
-          "name": "Importación de Modelos en Laboratorio de Aplicaciones",
-          "overview": "Los alumnos se inician en la importación de sus modelos en App Lab y en la vinculación de su modelo con sus pantallas. La lección comienza pidiéndoles que prueben una aplicación de preguntas al estilo de \"Buzzfeed\" que, a lo largo de la lección, recrean: ¿Cuál es tu lugar ideal de vacaciones? Los alumnos comienzan importando el modelo desde App Lab, luego añaden una pantalla que falta en el modo de diseño, después añaden declaraciones \"if\" para cambiar las pantallas y, finalmente, vinculan todas las pantallas en función del resultado de la predicción. A continuación, pueden elegir otro cuestionario del estilo de \"Buzzfeed\" para utilizarlo como modelo y diseñar una aplicación, utilizando las habilidades que han aprendido en esta lección.\\\\r\n\\\\r\n**Pregunta del día:** ¿Cómo puedo crear una aplicación utilizando el aprendizaje automático?",
-          "student_overview": "Los alumnos se inician en la importación de sus modelos en App Lab y en la vinculación de su modelo con sus pantallas. La lección comienza pidiéndoles que prueben una aplicación de preguntas al estilo de \"Buzzfeed\" que, a lo largo de la lección, recrean: ¿Cuál es tu lugar ideal de vacaciones? Los alumnos comienzan importando el modelo desde App Lab, luego añaden una pantalla que falta en el modo de diseño, después añaden declaraciones \"if\" para cambiar las pantallas y, finalmente, vinculan todas las pantallas en función del resultado de la predicción. A continuación, pueden elegir otro cuestionario del estilo de \"Buzzfeed\" para utilizarlo como modelo y diseñar una aplicación, utilizando las habilidades que han aprendido en esta lección."
+          "name": "Importación de modelos en App Lab",
+          "overview": "En esta lección los estudiantes aprenderán a importar sus modelos a App Lab y a vincularlos con sus pantallas. Los estudiantes contribuirán a crear una aplicación de recomendación de libros y aprenderán a añadir una pantalla de bienvenida, así como eventos a su código. En esta lección se asume que los estudiantes ya están familiarizados con App Lab, de no ser así, considere la posibilidad de ampliar esta lección e incluir los videos o actividades adicionales que se recomiendan en la planificación.\n\n**Pregunta del día:** ¿Cómo puedo crear una aplicación utilizando el aprendizaje automático?",
+          "preparation": "-   Revise los niveles de Code Studio antes de la lección para estar familiarizado con la importación de un modelo en App Lab\n-   Decida si desea proporcionar recursos adicionales para que los estudiantes se familiaricen con App Lab, como se indica en la planificación de la lección.",
+          "student_overview": "Aprenda a importar un modelo en App Lab para ayudar a crear una aplicación de recomendación de libros para un aula de escuela secundaria."
         },
         "csd7-2021/Model Cards": {
-          "name": "Tarjetas Modelo",
-          "overview": "En esta lección, los alumnos investigan un modelo en busca de sesgos y se les presenta una Tarjeta de Modelo, que es una forma de representar información importante sobre un modelo entrenado que podría ayudar a descubrir los sesgos. La lección comienza con la investigación por parte de los alumnos de una aplicación de Prioridad Médica, que ayuda a un hospital a decidir cuándo ver a los pacientes en función de sus síntomas. Los alumnos son guiados a través de una actividad para ayudarles a darse cuenta de que la aplicación está sesgada sobre la base de información personal como la edad, la raza y el género. Los alumnos examinan cómo podría ocurrir esto basándose en los datos iniciales utilizados para entrenar el modelo, y luego exploran cómo una tarjeta modelo es una herramienta que puede ayudar a descubrir el posible sesgo. Exploran varios ejemplos de tarjetas modelo, haciendo recomendaciones sobre si el modelo podría estar sesgado o no en base a los datos.\\\\r\n\\\\r\n**Pregunta del día:** ¿Cómo aparece el sesgo humano en el aprendizaje automático?",
-          "student_overview": "En esta lección, los alumnos investigan un modelo en busca de sesgos y se les presenta una Tarjeta de Modelo, que es una forma de representar información importante sobre un modelo entrenado que podría ayudar a descubrir los sesgos. La lección comienza con la investigación por parte de los alumnos de una aplicación de Prioridad Médica, que ayuda a un hospital a decidir cuándo ver a los pacientes en función de sus síntomas. Los alumnos son guiados a través de una actividad para ayudarles a darse cuenta de que la aplicación está sesgada sobre la base de información personal como la edad, la raza y el género. Los alumnos examinan cómo podría ocurrir esto basándose en los datos iniciales utilizados para entrenar el modelo, y luego exploran cómo una tarjeta modelo es una herramienta que puede ayudar a descubrir el posible sesgo. Exploran varios ejemplos de tarjetas modelo, haciendo recomendaciones sobre si el modelo podría estar sesgado o no en base a los datos."
+          "name": "Fichas modelo",
+          "overview": "En esta lección, los estudiantes investigarán un modelo para detectar prejuicios y se les presentará una ficha de Modelo, que es una forma de representar información importante sobre un modelo entrenado que podría ayudar a revelar sesgos o prejuicios. Investigarán una aplicación de Prioridad Médica, que ayuda a un hospital a decidir a qué paciente deben dar prioridad en función de sus síntomas. Al realizar la actividad, los estudiantes se darán cuenta de que la aplicación está sesgada en función de la información personal y analizarán por qué ocurre esto.\n\n**Pregunta del día:** ¿Cómo podemos evaluar los modelos de aprendizaje automático una vez que han sido entrenados?",
+          "preparation": "-   Revise los niveles de Code Studio antes de la lección\n-   Anticipe la forma en la que guiará el análisis acerca de los prejuicios raciales y de género, teniendo en cuenta que algunos estudiantes pueden tener experiencias similares a las que se tratan en esta lección.",
+          "student_overview": "Ayude a decidir qué modelo debe usar un hospital para su sistema de priorización de salas de emergencia, y determine qué modelos incluyen sesgos no deseados. También aprenderá cómo las fichas modelo pueden ayudar a evaluar y analizar modelos de aprendizaje automático."
         },
         "csd7-2021/Saving Models in AI Lab": {
-          "name": "Guardar Modelos en el Laboratorio de Inteligencia Artificial",
-          "overview": "Los alumnos completan el proceso de entrenamiento y guardado de un modelo, y luego lo importan a \"Laboratorio de Aplicaciones\". Por primera vez, los alumnos pueden elegir la etiqueta que les gustaría predecir y dedicar tiempo a decidir las características que utilizarán para ayudar a predecir la etiqueta elegida. Los alumnos también guardan su modelo por primera vez y lo importan a \"Laboratorio de Aplicaciones\", para luego personalizar la aplicación basándose en su modelo.\\\\r\n\\\\r\n**Pregunta del día:** ¿Cómo puedo elegir una etiqueta que cree un modelo de aprendizaje automático preciso?",
-          "student_overview": "Los alumnos completan el proceso de entrenamiento y guardado de un modelo, y luego lo importan a \"Laboratorio de Aplicaciones\". Por primera vez, los alumnos pueden elegir la etiqueta que les gustaría predecir y dedicar tiempo a decidir las características que utilizarán para ayudar a predecir la etiqueta elegida. Los alumnos también guardan su modelo por primera vez y lo importan a \"Laboratorio de Aplicaciones\", para luego personalizar la aplicación basándose en su modelo."
+          "name": "Guardar modelos en AI Lab",
+          "overview": "Los estudiantes completarán el proceso completo de entrenamiento y guardado de un modelo, y luego lo importarán a App Lab. Por primera vez, los estudiantes podrán elegir la etiqueta que les gustaría predecir y podrán dedicar tiempo a decidir las características que utilizarán como ayuda a predecir la etiqueta que eligieron. Los estudiantes también crearán una ficha para sus modelos con el fin de guardarlos e importarlos a App Lab\n\n**Pregunta del día:** ¿Cómo puedo utilizar las fichas modelo para documentar mis decisiones al entrenar un modelo de aprendizaje automático?",
+          "preparation": "-   Revisar los niveles de Code Studio antes de la lección para familiarizarse con la investigación de las columnas en AI Lab y el entrenamiento de su modelo\n-   Imprima copias de la guía de actividades para cada estudiante",
+          "student_overview": "Ayude a entrenar a varios modelos para ayudar a un zoológico a crear aplicaciones educativas para sus clientes. Creará tarjetas modelo para cada uno de sus modelos, luego importará una de ellas a App Lab para crear una aplicación."
         },
         "csd7-2021/Model Cards in App Lab": {
-          "name": "Tarjetas Modelo en el Laboratorio de Aplicaciones",
-          "overview": "Los alumnos practican la importación de sus modelos en \"Laboratorio de Aplicaciones\", esta vez incluyendo modelos que tienen datos numéricos y utilizando tarjetas de modelo para ayudar a mejorar la experiencia del usuario al rellenar su formulario. Los alumnos aprenden a ver la tarjeta de modelo dentro de \"Laboratorio de Aplicaciones\" y la utilizan para añadir más elementos descriptivos a una aplicación. A continuación, se centran en mejorar la experiencia del usuario añadiendo texto informativo para ayudar a guiar a los usuarios a la hora de rellenar el formulario y añadiendo un estilo a su aplicación para mejorar la experiencia del usuario. Al final de la lección, los alumnos habrán aprendido a utilizar un modelo de tarjeta para facilitar la comprensión de la aplicación, así como estrategias de diseño y a crear una interfaz de usuario más atractiva en lugar de una aplicación de una sola pantalla.\n\n**Pregunta del día:** ¿Cómo puedo mejorar la forma en que un usuario interactúa con una aplicación de aprendizaje automático?",
-          "student_overview": "Los alumnos practican la importación de sus modelos en \"Laboratorio de Aplicaciones\", esta vez incluyendo modelos que tienen datos numéricos y utilizando tarjetas de modelo para ayudar a mejorar la experiencia del usuario al rellenar su formulario. Los alumnos aprenden a ver la tarjeta de modelo dentro de \"Laboratorio de Aplicaciones\" y la utilizan para añadir más elementos descriptivos a una aplicación. A continuación, se centran en mejorar la experiencia del usuario añadiendo texto informativo para ayudar a guiar a los usuarios a la hora de rellenar el formulario y añadiendo un estilo a su aplicación para mejorar la experiencia del usuario. Al final de la lección, los alumnos habrán aprendido a utilizar un modelo de tarjeta para facilitar la comprensión de la aplicación, así como estrategias de diseño y a crear una interfaz de usuario más atractiva en lugar de una aplicación de una sola pantalla."
+          "name": "Fichas modelos en App Lab",
+          "overview": "En esta lección, los estudiantes practican la importación de sus modelos en App Lab, esta vez incluirán los modelos que contienen datos numéricos y utilizarán fichas de modelos para ayudar a mejorar la experiencia del usuario al rellenar su formulario. Aprenderán a ver la ficha modelo dentro de App Lab y a utilizarla para añadir más elementos descriptivos a una aplicación. A continuación, los estudiantes se concentrarán en mejorar la experiencia del usuario, añadiendo texto informativo que guíe a los usuarios a la hora de rellenar el formulario y agregando un estilo a su aplicación para mejorar la experiencia del usuario.\n\n**Pregunta del día:** ¿Cómo puedo utilizar una ficha modelo para mejorar mi aplicación?",
+          "preparation": "-   Revise los niveles de Code Studio antes de la lección",
+          "student_overview": "Aprenda a usar tarjetas de modelos para mejorar una aplicación de aprendizaje automático, y cómo actualizar la pantalla final en función de la predicción del modelo."
         },
         "csd7-2021/Similarity Models": {
-          "name": "Modelos Numéricos",
-          "overview": "En esta lección, los alumnos asumen el papel de un alumno de secundaria moderno que sobrevive a una pandemia sin precedentes. Un día se les otorga la responsabilidad de entregar la fórmula de una vacuna a un laboratorio en algún lugar de su localidad. Para ello, deberán utilizar un asistente personal inteligente (API) llamado \"Tom\" para predecir la ruta más segura hacia el laboratorio, lo que requerirá entrenar a Tom con un algoritmo de regresión.\\\\r\n\\\\r\n**Pregunta del día:** ¿Cómo aprenden los ordenadores a hacer predicciones con datos numéricos?",
-          "student_overview": "En esta lección, los alumnos asumen el papel de un alumno de secundaria moderno que sobrevive a una pandemia sin precedentes. Un día se les otorga la responsabilidad de entregar la fórmula de una vacuna a un laboratorio en algún lugar de su localidad. Para ello, deberán utilizar un asistente personal inteligente (API) llamado \"Tom\" para predecir la ruta más segura hacia el laboratorio, lo que requerirá entrenar a Tom con un algoritmo de regresión."
+          "name": "Modelos numéricos",
+          "overview": "En esta lección, los estudiantes participan en una actividad sin conexión que simula un brote de zombis. Los estudiantes tendrán que predecir qué partes de la ciudad tiene la menor cantidad de zombis utilizando los datos de una ciudad vecina. Los estudiantes utilizarán grados de similitud y promedios para hacer predicciones sobre el número de zombis en un lugar determinado. Más tarde, serán rescatados y deberán comparar sus predicciones con los números reales para analizar las diferencias entre las predicciones con datos numéricos y con datos categóricos. \n\n**Pregunta del día:** ¿Cómo aprenden las computadoras a hacer predicciones con datos numéricos?",
+          "preparation": "-   Revise todos los materiales de la lección de hoy.\n-   Imprima o comparta la guía de actividades, una para cada estudiante o grupo.",
+          "student_overview": "Los zombis han invadido tu ciudad y necesitas usar datos para predecir qué partes de la ciudad tienen la menor cantidad de zombis para que puedas guiar a las personas a un lugar seguro."
         },
         "csd7-2021/Numerical Data in AI Lab": {
           "name": "Datos Numéricos en el Laboratorio de Inteligencia Artificial",
-          "overview": "Hasta ahora, los alumnos sólo han creado modelos de aprendizaje automático a partir de datos categóricos; en esta lección, se introduce a los alumnos en los datos numéricos que representan un rango de valores. Se presenta a los alumnos un escenario en el que cada característica y etiqueta se representa con datos numéricos, y aprenden a utilizar las nuevas herramientas de visualización de datos de AI Lab para ayudar a encontrar patrones.\n\n**Pregunta del día:** ¿Cómo podemos utilizar AI Lab para predecir datos numéricos?",
-          "student_overview": "Hasta ahora, los alumnos sólo han creado modelos de aprendizaje automático a partir de datos categóricos; en esta lección, se introduce a los alumnos en los datos numéricos que representan un rango de valores. Se presenta a los alumnos un escenario en el que cada característica y etiqueta se representa con datos numéricos, y aprenden a utilizar las nuevas herramientas de visualización de datos de AI Lab para ayudar a encontrar patrones."
+          "overview": "En esta lección, los estudiantes aprenderán acerca de los datos numéricos que representan un rango de valores. Se les presentará a los estudiantes un escenario en el que cada característica y etiqueta está representada con datos numéricos, y aprenderán a utilizar las nuevas herramientas de visualización de datos del AI Lab como ayuda para encontrar patrones.\n\n**Pregunta del día:** ¿Cómo podemos utilizar AI Lab para predecir datos numéricos?",
+          "student_overview": "Use AI Lab y datos numéricos para hacer predicciones sobre escenarios del mundo real"
         },
         "csd7-2021/Customizing Apps": {
-          "name": "Personalización de las Aplicaciones",
-          "overview": "Los alumnos exploran cómo personalizar el código de su aplicación para realizar cambios adicionales en el diseño de la misma. Los alumnos comienzan analizando una aplicación de una sola pantalla que está abarrotada de demasiadas funciones. Practican la ampliación de la aplicación a dos pantallas y la actualización del código para utilizar los nuevos elementos del modo de diseño. Después de esto, los alumnos ayudan a crear una aplicación de Alerta de Conductor que requiere cambios en el código utilizando los nuevos elementos del modo de diseño. Utilizando los conocimientos de esta lección, los alumnos podrán crear aplicaciones multipantalla en las que las preguntas puedan aparecer en varias pantallas en lugar de en una sola.\n\n**Pregunta del día:** ¿Cómo puedo personalizar el código de una aplicación de aprendizaje automático?",
-          "student_overview": "Los alumnos exploran cómo personalizar el código de su aplicación para realizar cambios adicionales en el diseño de la misma. Los alumnos comienzan analizando una aplicación de una sola pantalla que está abarrotada de demasiadas funciones. Practican la ampliación de la aplicación a dos pantallas y la actualización del código para utilizar los nuevos elementos del modo de diseño. Después de esto, los alumnos ayudan a crear una aplicación de Alerta de Conductor que requiere cambios en el código utilizando los nuevos elementos del modo de diseño. Utilizando los conocimientos de esta lección, los alumnos podrán crear aplicaciones multipantalla en las que las preguntas puedan aparecer en varias pantallas en lugar de en una sola."
+          "name": "Personalización de Aplicaciones",
+          "overview": "En esta lección, los estudiantes aprenderán a personalizar el código de su aplicación para realizar cambios adicionales en el diseño de la misma. Comenzarán explorando una aplicación de una sola pantalla y luego practicarán su ampliación a dos pantallas y actualizando el código, lo que les permitirá utilizar los nuevos elementos del modo de diseño. Más tarde, utilizando los nuevos elementos del modo de diseño, los estudiantes ayudarán a crear una aplicación de Alerta al Conductor que requiere cambios en el código. Los conocimientos adquiridos en esta lección permitirán a los estudiantes crear aplicaciones multipantalla en las que las preguntas puedan aparecer en varias pantallas en lugar de en una sola.\n\n**Pregunta del día:** ¿Cómo puedo personalizar el código de una aplicación de aprendizaje automático?",
+          "preparation": "-   Revise los niveles de Code Studio antes de la lección para familiarizarse con el cambio de elementos de entrada ",
+          "student_overview": "Aprenda a editar el código de una aplicación de aprendizaje automático ayudando a crear un sistema de alerta al conductor, donde cada sensor se encuentra en una pantalla diferente de la aplicación."
         },
         "csd7-2021/AI Code of Ethics": {
-          "name": "Código Ético de la Inteligencia Artificial",
-          "overview": "En pequeños grupos, los alumnos realizan una investigación a partir de artículos y vídeos que exponen los problemas éticos en un área de la Inteligencia Artificial (IA) de su elección. Después, cada grupo desarrolla al menos un principio orientado a la solución que aborda su área elegida. A continuación, estos principios se reúnen en un recurso (por ejemplo, una presentación de diapositivas, un documento o una página web) para los creadores de Inteligencia Artificial y los legisladores de todo el mundo.",
-          "student_overview": "En pequeños grupos, los alumnos realizan una investigación a partir de artículos y vídeos que exponen los problemas éticos en un área de la Inteligencia Artificial (IA) de su elección. Después, cada grupo desarrolla al menos un principio orientado a la solución que aborda su área elegida. A continuación, estos principios se reúnen en un recurso (por ejemplo, una presentación de diapositivas, un documento o una página web) para los creadores de Inteligencia Artificial y los legisladores de todo el mundo."
+          "name": "Códigos de Ética de la Inteligencia Artificial",
+          "overview": "Los estudiantes conformarán grupos para llevar a cabo una investigación utilizando artículos y videos que exponen los problemas éticos en un área de la Inteligencia Artificial (IA) de su elección.  Luego, cada grupo desarrollará al menos un principio orientado a la solución que aborde el área escogida. A continuación se reunirán los principios de cada grupo en un recurso llamado \"Nuestro código de ética de la IA” (cuyo formato puede ser una presentación de diapositivas, un documento, o una página web) que estará disponible para todos los creadores de IA y legisladores que quieran leerlo.\n\n**Pregunta del día:** ¿Cuáles son las pautas que podemos utilizar para crear aplicaciones de aprendizaje automático éticas?",
+          "preparation": "-   Prepárese para compartir en línea y con cada grupo la guía **Áreas de investigación de la Inteligencia Artificial**. \n-   Imprima o prepárese para compartir en línea y con cada grupo la guía **Reflexión de investigación de la Inteligencia Artificial**.\n-   Prepare un documento que pueda compartir con los estudiantes en línea, como, por ejemplo, una presentación, una plantilla de video, u otro tipo de recurso que pueda ayudar a los estudiantes a elaborar el recurso “Nuestro código de ética de la Inteligencia artificial”.",
+          "student_overview": "¿Qué significa que la inteligencia artificial se use éticamente? En esta lección, ayudará a crear un código de ética de IA e investigará ejemplos de inteligencia artificial que siguen o no su código de ética."
         },
         "csd7-2021/Mini-Project: Make a Machine Learning App": {
-          "name": "Miniproyecto: Hacer una Aplicación con Aprendizaje Automático",
-          "preparation": "-   Revisa los niveles de Code Studio antes de la lección\n-   Imprime copias de la guía de actividades para cada estudiante"
+          "name": "Miniproyecto: Hacer una Aplicación de Aprendizaje Automático",
+          "overview": "En este mini proyecto de una o dos sesiones, los estudiantes pondrán en práctica todas las habilidades que han aprendido en esta unidad y crearán una aplicación de aprendizaje automático utilizando datos del mundo real. Los estudiantes tendrán a disposición varios conjuntos de datos con distintos contextos del mundo real, y elegirán uno de ellos para realizar su investigación. Entrenarán y almacenarán un modelo que luego utilizarán para hacer una aplicación en el App Lab. Este mini proyecto es una oportunidad para evaluar la forma en que los estudiantes pueden usar características para crear modelos de aprendizaje automático precisos, y sus capacidades para crear aplicaciones que usen el aprendizaje automático.\n\n**Pregunta del día:** ¿Puedo utilizar datos del mundo real para crear una aplicación que utilice el aprendizaje automático?",
+          "preparation": "-   Revise los niveles de Code Studio antes de la lección\n-   Imprima copias de la guía de actividades para cada estudiante",
+          "student_overview": "Elija entre varios conjuntos de datos del mundo real para entrenar un modelo y crear una aplicación que utilice el aprendizaje automático"
         },
         "csd7-2021/Issue Statements": {
-          "name": "Planificación de un Proyecto de Aprendizaje Automático"
+          "name": "Planificación de un Proyecto de Aprendizaje Automático",
+          "overview": "Esta es la primera de cinco lecciones que preparan a los estudiantes para el proyecto final. En esta lección, los estudiantes se reúnen con un equipo de estudiantes ficticios que quieren utilizar el aprendizaje automático para abordar un problema en su comunidad. Los estudiantes participan en una lluvia de ideas acerca de un problema utilizando la estrategia de los” 5 Por qué”, y luego ayudan a evaluar las ideas que el otro equipo ha presentado. Los pasos que los estudiantes siguen en esta lección son idénticos a los que deberán seguir en su proyecto final.\n\n**Pregunta del día:** ¿Cómo puede utilizarse el aprendizaje automático para abordar un problema en tu comunidad?",
+          "student_overview": "En conjunto con un equipo de estudiantes de otra escuela, desarrolle ideas sobre cómo se puede usar el aprendizaje automático para abordar un problema en su comunidad."
         },
         "csd7-2021/Survey Planning": {
-          "name": "Diseño de recolección de datos"
+          "name": "Diseño de recolección de datos",
+          "overview": "Esta es la segunda de cinco lecciones que preparan a los estudiantes para el proyecto final. En esta lección, los estudiantes se enteran de que el otro equipo de estudiantes quiere crear una aplicación de recomendación de clubes basada en los clubes que hay en su escuela. Los estudiantes imaginan qué preguntas podría ayudar a hacer esta recomendación, y luego aprenden a utilizar una plantilla de formulario de Google para crear una encuesta. Los pasos que los estudiantes siguen en esta lección son idénticos a los que deberán seguir en su proyecto final.\n\n**Pregunta del día:** ¿Cómo puedo crear una encuesta para recolectar datos para una aplicación de aprendizaje automático?",
+          "preparation": "-   Imprima copias de la guía de actividades para cada estudiante\n-   Revise el vídeo acerca de cómo utilizar una plantilla para crear un formulario de Google",
+          "student_overview": "Ayude al otro equipo de estudiantes a desarrollar preguntas que serían útiles para crear una aplicación de aprendizaje automático, luego aprenda a usar Formularios de Google para crear una encuesta para recopilar datos."
         },
         "csd7-2021/Survey Data in AI Lab": {
-          "name": "Entrenar el Modelo a partir de Datos Buenos"
+          "name": "Entrenar el Modelo a partir de Datos Buenos",
+          "overview": "Esta es la tercera de cinco lecciones que preparan a los estudiantes para el proyecto final. En esta lección, los estudiantes aprenderán cómo ver los datos de una encuesta en las hojas de cálculo de Google. Luego, cargarán los datos guardados en ell AI Lab y examinarán los resultados de la encuesta de uno de los estudiantes para posteriormente entrenar a un modelo utilizando sus datos. Más tarde, los estudiantes usarán hojas de cálculo de Google para examinar los datos con errores de otro estudiante y posteriormente repararán estos errores. Los pasos que los estudiantes den en esta lección son idénticos a los que deberán seguir en su proyecto final. Las estrategias de resolución de problemas que desarrollen los ayudarán a superar los desafíos que se enfrenten en su proyecto final.\n\n**Pregunta del día**: ¿Cómo podemos importar datos al AI Lab para entrenar un modelo de aprendizaje automático?",
+          "student_overview": "Aprenda a descargar datos de encuestas y utilícelos en AI Lab para entrenar un modelo. Las habilidades de esta lección son importantes para completar la lección final de esta unidad."
         },
         "csd7-2021/Troubleshooting Models": {
-          "name": "Entrenar el Modelo a partir de Datos Erróneos"
+          "name": "Entrenar el Modelo a partir de Datos Erróneos",
+          "overview": "Esta es la cuarta de cinco lecciones que preparan a los estudiantes para el proyecto final. En esta lección, los estudiantes examinan los datos de las encuestas de otros miembros del equipo de estudiantes y analizan por qué sus modelos no funcionan correctamente. Al examinar los datos, los estudiantes desarrollan estrategias para evitar estos problemas en el futuro y enfrentar a estos problemas si se repiten. Los estudiantes utilizarán estas habilidades en el proyecto final, cuando deban crear sus propias encuestas y recolectar datos.\n\n**Pregunta del día**: ¿Qué estrategias podemos utilizar para garantizar que nuestros datos generarán un modelo preciso?",
+          "student_overview": "Ayude a los estudiantes del otro equipo a analizar los datos de su encuesta y determinar por qué no pueden obtener modelos precisos _o_ no pueden crear modelos utilizables cuando se prueban."
         },
         "csd7-2021/Creating an App": {
-          "name": "Crear Aplicación"
+          "name": "Crear Aplicación",
+          "overview": "Esta es la última de cinco lecciones que preparan a los estudiantes para el proyecto final. En esta lección, los estudiantes importarán la aplicación de recomendación del club al App Lab y comenzarán a personalizar la aplicación. Los estudiantes añadirán una pantalla de bienvenida y actualizarán las descripciones de cada una de las funciones, luego podrán decidir cómo les gustaría personalizar aún más la aplicación. Los pasos que los estudiantes siguen en esta lección son idénticos a los que deberán seguir en su proyecto final.\n\n**Pregunta del día**: ¿Cómo puedo crear una aplicación de aprendizaje automático que sea fácil de utilizar?",
+          "student_overview": "¡El modelo finalmente está listo! ¡Ahora es el momento de importar el modelo a App Lab y crear la aplicación final de Club Recommender!"
         },
         "csd7-2021/Design an AI App": {
           "name": "Hacer una aplicación de \" Inteligencia Artificial para el Bienestar Social\".",
           "overview": "Para concluir esta unidad, los alumnos desarrollan una aplicación de Inteligencia Artificial que aborda el problema social que han retomado a lo largo de la unidad. Después de ver una aplicación de ejemplo, los alumnos siguen una guía de proyecto para completar esta actividad de varios días. En el primer paso, los alumnos preparan los datos que utilizarán para entrenar su modelo en Laboratorio de Inteligencia Artificial. Después de entrenar, probar y generar una tarjeta de modelo, exportan su modelo a Laboratorio de Aplicaciones para su desarrollo. Aquí utilizan su modelo para crear una aplicación fácil de usar basada en su maqueta de la lección anterior, \"Planificación de la aplicación\". Los alumnos realizan una revisión por parte de sus compañeros y hacen las actualizaciones necesarias a sus proyectos antes de preparar una presentación a la clase.\\\\r\n\\\\r\n**Pregunta del día:** ¿Cómo puedo utilizar el Proceso de Resolución de Problemas para crear una aplicación de \"Inteligencia Artificial para el Bienestar Social\"?",
+          "preparation": "-   Asegúrese de que los estudiantes tengan copias de los folletos: \"Lección 2: IA para un bien social”, “Lección 19: Planificando tu aplicación”. \n-   Imprima copias de la guía de proyecto.\n-   Imprima copias de la rúbrica.\n-   Imprima copias de la guía de revisión por pares.",
           "student_overview": "Para concluir esta unidad, los alumnos desarrollan una aplicación de Inteligencia Artificial que aborda el problema social que han retomado a lo largo de la unidad. Después de ver una aplicación de ejemplo, los alumnos siguen una guía de proyecto para completar esta actividad de varios días. En el primer paso, los alumnos preparan los datos que utilizarán para entrenar su modelo en Laboratorio de Inteligencia Artificial. Después de entrenar, probar y generar una tarjeta de modelo, exportan su modelo a Laboratorio de Aplicaciones para su desarrollo. Aquí utilizan su modelo para crear una aplicación fácil de usar basada en su maqueta de la lección anterior, \"Planificación de la aplicación\". Los alumnos realizan una revisión por parte de sus compañeros y hacen las actualizaciones necesarias a sus proyectos antes de preparar una presentación a la clase."
         },
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
         },
         "csd4-2021/Analysis of Design": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Diseñando con Empatía",
           "overview": "**Pregunta del día:** ¿Cómo podemos elegir productos en base a las necesidades del usuario?\n\nPara comenzar esta unidad, dedicada a la resolución de problemas en grupo y al desarrollo de productos, los estudiantes explorarán el diseño de distintos zapatos. Los estudiantes analizarán una variedad de zapatos y luego intentarán decidir qué zapato correspondería a un usuario potencial. También deberán brindar retroalimentación acerca de los diseños utilizando las siguientes estructuras que usarán a lo largo de esta unidad: “me gusta…”, “desearía…”, “que tal si…”. Al finalizar esta actividad, los estudiantes deberán proponer cambios al diseño de un par de zapatos con el fin de mejorar su utilidad o usabilidad.",
           "preparation": "-   Imprima una copia de la guía de actividades para cada estudiante o envíe una copia digital.",
           "purpose": "Los estudiantes inician esta unidad con una comprensión del proceso de resolución de problemas que estudiaron en las unidades anteriores del curso.\n\nEl proceso de resolución de problemas que se usa a lo largo de Descubrimientos CS está conformado por los siguientes pasos:\n\n-   Definir\n-   Preparar\n-   Intentar\n-   Reflexionar\n\nEn esta lección, los estudiantes analizarán objetos de la vida cotidiana para comprender cómo el proceso de resolución de problemas puede utilizarse para ayudar a otros. A partir de esta lección, se añadirá un nuevo componente al proceso de resolución de problemas: la empatía. Esto motivará a los estudiantes a reflexionar acerca de la experiencia y el uso que otras personas harán de los productos que ellos hayan creado.\n\nPara comenzar, y antes de hablar de los aspectos específicos del diseño de un software, analizaremos objetos no técnicos, con el objetivo de que los estudiantes puedan comprender un poco más acerca de lo que significa tomar en consideración a los usuarios finales del producto.",
@@ -3930,7 +4345,7 @@
           "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Innovaciones en computación",
           "overview": "Para iniciar la unidad final de este curso, los estudiantes investigarán acerca de las innovaciones en computación. En esta lección los estudiantes estarán expuestos a una mayor variedad de factores de formas de la computación (cómo se ve una computadora) y analizarán aquellas áreas que han sido impactadas por la computación. Más adelante, en esta unidad, y a medida que desarrollen sus propios artefactos computacionales, los estudiantes volverán a analizar los dispositivos que vieron en esta lección.",
           "preparation": "-   Revise los enlaces de las páginas de recursos en Code Studio\n-   Prepare el video [El Internet de las cosas](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) o [Las ciencias de la computación están cambiando todo](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n-   Imprima una copia de la guía de actividades para cada estudiante",
           "purpose": "Esta lección sienta las bases para que los estudiantes comprendan de qué formas podría utilizarse su tablero de circuitos para modelar un artefacto computacional innovador. El objetivo es lograr que los estudiantes reflexionen acerca de cómo las computadoras pueden ser incorporadas en la mayoría de las áreas y procesos, y también que tengan presente los impactos potenciales de este tipo de aplicación.",
@@ -3970,74 +4385,74 @@
         },
         "csd6-2021/Analog Input": {
           "name": "Entrada analógica",
-          "overview": "En esta lección, los estudiantes exploran cómo se pueden utilizar los tres sensores analógicos (sonido, luz y temperatura) para escribir programas que respondan a los cambios en el ambiente. El uso de estos sensores marca una transición en términos de cómo los usuarios interactúan con un programa. Al usar sensores como entrada, el usuario de una aplicación no tiene que interactuar directamente con ella, o puede interactuar sin darse cuenta de que lo está haciendo.",
-          "preparation": "-   Poner en marcha el [r analog-digital-video/csd/2021]\n-   Si tu habitación no es muy luminosa, es útil tener a mano algunas linternas u otras fuentes de luz para probar el sensor de luz",
-          "purpose": "Esta lección se basa en la anterior introduciendo los sensores analógicos como una nueva forma de entrada. Todos estos sensores realizan una conversión analógico-digital, permitiendo que los programas perciban cosas representadas por un número de 10 bits (0-1023).",
-          "student_overview": "En esta lección, podrás explorar las entradas analógicas en el Circuit Playground, escribiendo programas que respondan al entorno a través de sensores."
+          "overview": "En esta lección, los estudiantes explorarán cómo tres sensores análogos (sonido, luz y temperatura) se pueden utilizar para escribir programas que respondan a los cambios en el ambiente. El uso de estos sensores marcará un hito en la forma en la que los usuarios interactúan con un programa. Al usar estos sensores como una entrada, no será necesario que el usuario interactúe directamente con la aplicación, y si lo hace será más bien de manera indirecta y sin darse cuenta.",
+          "preparation": "-   Prepare el video [r analog-digital-video/csd/2021]\n-   Si su salón de clases no cuenta con mucha luz, será necesario tener a su alcance linternas u otras fuentes de iluminación para probar los sensores de luz",
+          "purpose": "Esta lección se basa en la lección anterior al introducir sensores análogos. Estos sensores efectúan una conversión de lo análogo a lo digital, y permiten a los programas detectar cosas representadas por un número de 10 bits (0-1023).",
+          "student_overview": "En esta lección, podrás explorar las entradas análogas en el Circuit Playground, escribiendo programas que respondan al entorno a través de sensores."
         },
         "csd6-2021/The Program Design Process": {
           "name": "El proceso de diseño de programas",
-          "overview": "Esta lección presenta a los estudiantes el proceso que usarán para diseñar programas propios a lo largo de esta unidad. Este proceso se centra en una guía de proyecto que pide a los estudiantes que esbocen sus pantallas, identifiquen elementos del Circuit Playground a utilizar, definan variables y describan eventos antes de que empiecen a programar. Este proceso es similar al proceso de diseño de juegos que utilizamos en la Unidad 3. En esta lección, los estudiantes comienzan por un \"juego de la cuerda\" donde se oculta el código. Debaten sobre cómo tendrían que ser los componentes del tablero, los eventos y las variables para crear el programa. Luego, se les da una guía de proyecto terminado que muestra una forma de implementar el proyecto. Los estudiantes realizan este proceso a través de una serie de niveles. Al final de la lección, tienen la oportunidad de hacer mejoras al programa para personalizarlo.",
-          "preparation": "-   Entrega a los estudiantes copias de la guía del proyecto",
-          "purpose": "Esta lección permite a los alumnos practicar el desarrollo de un programa a mayor escala con el fin de prepararlos para hacerlo de forma independiente. Mientras que las lecciones anteriores se han centrado en la construcción de habilidades en torno al uso de elementos específicos del Circuit Playground y conceptos de programación relacionados, esta lección se centra en la combinación de todo lo aprendido hasta ahora en un programa más complejo. La lección fomenta en gran medida el proceso de desarrollo de software proporcionando a los estudiantes una guía de proyecto completa, proporcionando el código de inicio, y guiando a los alumnos a través de su implementación. En las lecciones siguientes los estudiantes tendrán que completar una mayor parte de esta guía de forma independiente, y para el proyecto final seguirán este proceso en gran medida de forma independiente.",
-          "student_overview": "En esta lección, conocerás el proceso que utilizarás para diseñar tus propios programas a lo largo de esta unidad. "
+          "overview": "Esta lección presenta a los estudiantes el proceso que usarán para diseñar programas propios a lo largo de esta unidad. Este proceso se centra en una guía de proyecto que pide a los estudiantes que esbocen sus pantallas, identifiquen elementos del Circuit Playground a utilizar, definan variables, y describan eventos antes de que empiecen a programar. Este proceso es similar al proceso de diseño de juegos que utilizamos en la Unidad 3. En esta lección, los estudiantes comienzan por un \"juego de la cuerda\" donde se oculta el código. Debaten sobre cómo tendrían que ser los componentes del tablero, los eventos y las variables para crear el programa. Luego, se les da una guía de proyecto terminado que muestra una forma de implementar el proyecto. Los estudiantes realizan este proceso a través de una serie de niveles. Al final de la lección, tienen la oportunidad de hacer mejoras al programa para personalizarlo.",
+          "preparation": "-   Entregue a los estudiantes copias de la guía de proyecto",
+          "purpose": "Esta lección permite que los estudiantes practiquen el desarrollo de un programa a gran escala, preparándolos para que más adelante puedan hacerlo de manera independiente. Mientras que las lecciones anteriores se enfocaban en el desarrollo de habilidades para utilizar elementos específicos del Circuit Playground y conceptos de programación relacionados con este, esta lección se enfoca en combinar todo lo aprendido hasta ahora para crear un programa más complejo. Esta lección muestra el proceso de desarrollo de un software, entregando a los estudiantes una guía de proyecto previamente completada, el código inicial, y guiándolos en todos los pasos para la implementación de su proyecto. En las próximas lecciones, los estudiantes deberán completar gran parte de esta guía por si solos, y para el proyecto final, seguirán todo este proceso de forma independiente.",
+          "student_overview": "En esta lección, aprenderás sobre el proceso que usarás para diseñar tus propios programas a lo largo de esta unidad. "
         },
         "csd6-2021/Project: Make a Game": {
           "name": "Proyecto - Crear un Juego",
-          "overview": "Para este proyecto, los estudiantes diseñan y crean un juego que aprovecha las nuevas entradas y salidas que tienen a su disposición. Este proyecto se ha dejado intencionadamente muy abierto para que los estudiantes puedan pensar en términos generales sobre la utilidad de los resultados físicos en una aplicación, a la vez que se les da la oportunidad de revisar el proceso de desarrollo del programa y probar las nuevas funciones disponibles en el Circuit Playground.",
-          "preparation": "-   Imprime una copia de la guía del proyecto para cada grupo de alumnos\n-   Imprime una copia de la rúbrica para cada alumno",
-          "purpose": "Esta evaluación de fin de capítulo es un buen lugar para que los estudiantes reúnan todas las piezas que han aprendido (controladores de eventos, uso de la placa como salida, etc.) en un solo lugar. Este proyecto se deja a propósito muy abierto para permitir a los alumnos pensar ampliamente sobre cómo la salida física podría ser útil en una aplicación, esta es una gran oportunidad para animar a los estudiantes a revisar los programas que han escrito anteriormente en esta unidad o en la Unidad 4 y que podrían beneficiarse del uso de la placa para la salida de información.",
-          "student_overview": "En esta lección, utilizarás lo que has aprendido en el capítulo uno y desarrollarás una aplicación de tu propio diseño que utilice la pizarra para emitir información."
+          "overview": "En este proyecto, los estudiantes diseñarán y elaborarán un juego que utilice las nuevas entradas y salidas que ahora tienen a su disposición. Este es un proyecto de carácter abierto, que empodera a los estudiantes a analizar más a fondo la utilización de salidas físicas en una aplicación, mientras tienen la oportunidad de revisar el proceso de desarrollo de un programa y prueban las nuevas características disponibles con la ayuda del Circuit Playground.",
+          "preparation": "-   Imprima una copia de la guía del proyecto para cada grupo de estudiante\n-   Imprima una copia de la rúbrica para cada estudiante",
+          "purpose": "Esta evaluación de final de capítulo es un buen momento para que los estudiantes apliquen todo lo aprendido en una sola actividad (controladores de eventos, usar el tablero como una salida, etc.). El proyecto es de carácter abierto y permite que los estudiantes analicen más a fondo el uso de salidas físicas en una aplicación. Esta es una buena oportunidad para motivar a los estudiantes a revisar los programas escribieron anteriormente en esta unidad o en la unidad 4 y analizar cómo se beneficiarían al usar el tablero para la salida de información.",
+          "student_overview": "En esta lección, tomarás lo que aprendiste en el capítulo uno y desarrollarás una aplicación de tu propio diseño que usa la pizarra para generar información."
         },
         "csd6-2021/Arrays and Color LEDs": {
           "name": "Arreglos y LED de colores",
-          "overview": "Un arreglo es una colección ordenada de elementos, generalmente del mismo tipo. En esta lección, los estudiantes aprenden maneras de acceder a un valor específico o aleatorio de una lista mediante su índice. Luego, aprenden a acceder al arreglo colorLED que controla el comportamiento de los LED de colores en Circuit Playground. Los estudiantes controlarán el color y la intensidad de cada LED, y luego usarán lo que han aprendido para programar patrones luminosos y crear un espectáculo de luces en el Circuit Playground.",
-          "purpose": "Los arrays son una estructura de datos habitual en informática, que se utiliza para facilitar el almacenamiento y el acceso a la información. La lección prepara a los estudiantes para acceder a los elementos dentro de un array, pero aún no cubre la creación y modificación de arrays, que se abordará en la siguiente lección. También se presenta a los alumnos el anillo de LEDs de color, que se expone como un array llamado [\\`colorLeds\\`(#f78183)](/docs/applab/colorLeds/). Los estudiantes aprenden cómo acceder y controlar cada LED en el array individualmente, preparándolos para acceder a múltiples LEDs a través de la iteración más adelante en el capítulo.",
-          "student_overview": "En esta lección, aprenderás a acceder a la matriz colorLEDs que controla el comportamiento de los LEDs de color en el Circuit Playground. "
+          "overview": "Un arreglo es una colección ordenada de elementos, generalmente del mismo tipo. En esta lección, los estudiantes aprenden maneras de acceder a un valor específico o aleatorio de una lista mediante su índice. Luego, aprenden a acceder al arreglo colorLEDs que controla el comportamiento de los LED de colores en Circuit Playground. Los estudiantes controlarán el color y la intensidad de cada LED, y luego usarán lo que han aprendido para programar patrones luminosos y crear un espectáculo de luces en el Circuit Playground.",
+          "purpose": "Los arreglos son estructuras de datos comunes en las ciencias de la computación, y se utilizan para almacenar y acceder a la información de forma más fácil. Esta lección prepara a los estudiantes para acceder a elementos dentro de estos conjuntos, sin embargo, aún no se presenta la creación y modificación de arreglos, los estudiantes aprenderán acerca de esto en la próxima lección. Los estudiantes conocerán el anillo de LED de colores, el cual será presentado como un arreglo llamado [\\`colorLeds\\`(#f78183)](/docs/applab/colorLeds/). Los estudiantes aprenden cómo acceder y controlar cada LED en el arreglo de manera independiente, preparándolos para acceder a varios LEDs en la iteración del próximo capítulo.",
+          "student_overview": "En esta lección, aprenderás cómo acceder al arreglo colorLEDs que controla el comportamiento de los LED de color en el Circuit Playground. "
         },
         "csd6-2021/Making Music": {
           "name": "Crear música",
-          "overview": "En esta lección los alumnos utilizarán el zumbador en toda su extensión produciendo sonidos, notas y canciones con el zumbador. Los alumnos comienzan con un breve repaso de los parámetros de frecuencia y duración del zumbador, para pasar después al concepto de notas.  Las notas permiten a los alumnos limitarse a las frecuencias que se utilizan en la \"música country\" y proporcionan una capa de abstracción que les ayuda a comprender qué frecuencias pueden sonar bien juntas.  Una vez que los alumnos son capaces de tocar notas en el zumbador, utilizan matrices (arrays) para mantener y reproducir secuencias de notas, formando canciones sencillas.",
-          "purpose": "Esta lección permite a los alumnos ser más creativos con el zumbador introduciendo el concepto de \"nota\" y utilizando arrays para contener colecciones secuenciales de notas.  El uso de notas en lugar de frecuencias proporciona una capa de abstracción que facilita a los alumnos la identificación de sonidos que pueden utilizarse para hacer música.  Los arrays ofrecen una forma de agrupar los sonidos en secuencia, para que puedan ser reproducidos como música.  El uso del bloque `playNotes` para iterar sobre un array de notas proporciona una base conceptual para trabajar con los bucles `for` en la siguiente lección.",
-          "student_overview": "En esta lección, utilizarás al máximo la función de zumbador del Circuit Playground produciendo sonidos, notas y canciones. "
+          "overview": "En esta lección, los estudiantes utilizarán el timbre para crear sonidos, notas y canciones. Esta lección comienza con una breve reseña de los parámetros de frecuencia y duración del timbre para continuar con el concepto de las notas. Las notas permiten a los estudiantes restringirse a las frecuencias que se usan en la música occidental (Western) y les brindan una capa de abstracción que los ayuda a entender cuáles frecuencias pueden sonar bien juntas. Cuando los estudiantes ya sean capaces de tocar notas en el timbre, utilizarán arreglos para mantener y tocar secuencias de notas, formando canciones simples.",
+          "purpose": "En esta lección, los estudiantes podrán expresar su creatividad al utilizar el timbre, al presentar el concepto de “nota” y al utilizar arreglos para mantener colecciones secuenciales de notas. Al utilizar notas en lugar de frecuencias, los estudiantes contarán con una capa de abstracción que les facilitará identificar los sonidos que pueden ser utilizados para crear música. Los arreglos proporcionarán una forma de agrupar sonidos en una secuencia, para que se puedan reproducir como música. Usar el bloque `playNotes` para repetir un conjunto de notas establecerá bases conceptuales para que los estudiantes puedan trabajar con ciclos `for` en la próxima lección.",
+          "student_overview": "En esta lección, utilizarás la función de timbre de Circuit Playground en toda su extensión al producir sonidos, notas y canciones. "
         },
         "csd6-2021/Arrays and For Loops": {
           "name": "Arreglos y bucles 'desde'",
-          "overview": "Utilizar un _bucle desde_ para repetir todos los elementos de un arreglo es un recurso realmente útil en la mayoría de los lenguajes de programación. En esta lección, los estudiantes aprenden los aspectos básicos de cómo se puede usar un _bucle desde_ para repetir código, y luego lo combinan con lo que han aprendido sobre arreglos para escribir programas que procesen todos los elementos de un arreglo. Los estudiantes utilizan bucles 'desde' para pasar por un elemento de la lista a la vez sin tener que escribir código para cada elemento. Hacia el final de la lección, los estudiantes aplicarán esto con la lista `colorLed` en el tablero para crear una aplicación que cambie todos los LED cada vez que se hace clic en un botón.",
-          "purpose": "A medida que los alumnos empiezan a utilizar arrays con más frecuencia, surge un patrón común en el que se quiere ejecutar algún código en cada elemento de un array. Aunque los _bucles for_ son una estructura generalmente útil para repetir código, son particularmente útiles para iterar sobre un array. En esta lección nos basamos en el entendimiento de los arrays que los estudiantes han desarrollado en las dos últimas lecciones introduciendo el bucle _for_, que combina una variable, el patrón de contador y una condicional, todo en una sola construcción",
-          "student_overview": "En esta lección, aprenderás a combinar listas y bucles \"for\" para escribir código que afecte a cada elemento de una lista, independientemente de su longitud. "
+          "overview": "Utilizar un _ciclo for_ para repetir todos los elementos de un arreglo es un recurso realmente útil en la mayoría de los lenguajes de programación. En esta lección, los estudiantes aprenden los aspectos básicos de cómo se puede usar un _ciclo for_ para repetir código, y luego lo combinan con lo que han aprendido sobre arreglos para escribir programas que procesen todos los elementos de un arreglo. Los estudiantes utilizan ciclos for para pasar por un elemento de la lista a la vez sin tener que escribir código para cada elemento. Hacia el final de la lección, los estudiantes aplicarán esto con la lista `colorLed` en el tablero para crear una aplicación que cambie todos los LED cada vez que se hace clic en un botón.",
+          "purpose": "A medida que los estudiantes comienzan a usar arreglos de forma más frecuente, surge un patrón común en el que desean ejecutar código en cada uno de los elementos de un arreglo. Si bien los ciclos for son estructuras generalmente útiles para repetir código, son particularmente útiles para iterar sobre un arreglo. En esta lección nos basamos en la comprensión de arreglos que los estudiantes han desarrollado en las dos últimas lecciones, al introducir el ciclo for, el cual combina una variable, el patrón contador, y una condicional, todo en una misma estructura.",
+          "student_overview": "En esta lección, aprenderás a combinar listas y ciclos for para escribir código que afecte a todos los elementos de una lista, independientemente de su longitud. "
         },
         "csd6-2021/Accelerometer": {
           "name": "Acelerómetro",
-          "overview": "En esta lección, los estudiantes explorarán el acelerómetro y sus capacidades. Se familiarizarán con sus eventos y propiedades, y crearán varios programas que utilicen el acelerómetro, similares a los que se encuentran en aplicaciones del mundo real.",
-          "purpose": "Esta lección ofrece a los alumnos la oportunidad de trabajar con el sensor del acelerómetro y explorar sus propiedades de orientación y los eventos de la placa específicos del acelerómetro. Los estudiantes verán el propósito y los usos de un acelerómetro en dispositivos y programas del mundo real y crearán sus propias versiones de algunas de estas aplicaciones. Para ello, los alumnos tendrán que recurrir a sus conocimientos anteriores sobre el patrón de contador para crear aplicaciones funcionales basadas en el acelerómetro. ",
-          "student_overview": "En esta lección, explorarás el acelerómetro y sus posibilidades. "
+          "overview": "En esta lección los estudiantes explorarán el acelerómetro y sus funciones. Se familiarizan con sus eventos y propiedades, y crearán una serie de programas utilizando el acelerómetro de forma similar a como se utiliza en otras aplicaciones reales.",
+          "purpose": "Esta lección da a los estudiantes una oportunidad para trabajar con el sensor del acelerómetro y explorar sus propiedades de orientación y eventos de tablero específicos. Los estudiantes conocerán los propósitos y usos del acelerómetro en dispositivos y programas reales, y crearán sus propias versiones de algunas de estas aplicaciones. Para hacer esto, los estudiantes deberán recordar lo que aprendieron acerca del patrón contador para crear aplicaciones funcionales basadas en acelerómetros. ",
+          "student_overview": "En esta lección, explorarás el acelerómetro y sus capacidades. "
         },
         "csd6-2021/Functions with Parameters": {
           "name": "Funciones con parámetros",
-          "overview": "La lección comienza con una revisión rápida de los parámetros, en el contexto de los bloques del Laboratorio de aplicaciones que han visto recientemente los estudiantes. Luego, \nverán ejemplos de parámetros dentro de las funciones creadas por el usuario en el Laboratorio de aplicaciones, y crearán y llamarán funciones con parámetros por sí mismos, y las utilizarán para controlar varios elementos en una pantalla. Después, los estudiantes usarán los bucles 'desde' para repetir un arreglo y pasar cada elemento a una función. Por último, emplearán lo que han aprendido para crear un juego de capturar la estrella.",
-          "purpose": "En las lecciones anteriores, los alumnos han utilizado las funciones para definir bloques de código que pueden utilizarse en varios lugares de un programa.  En esta lección, los alumnos aprenden a utilizar parámetros para generalizar el propósito de una función.  Los parámetros permiten que un programa especifique los detalles de cómo funciona una función cuando se llama, en lugar de cuando se define el programa.  Aunque los alumnos han visto funciones con parámetros anteriormente en la unidad, esta es la primera vez que se espera que definan y llamen a las suyas propias.  Los alumnos también aprenden a utilizar un bucle `for` para pasar de forma iterativa los elementos de una matriz como parámetros de una función, lo que les permite utilizar la misma función en varios elementos de la pantalla.",
-          "student_overview": "En esta lección, crearás y llamarás a funciones con parámetros, utilizarás bucles `for` para recorrer un array y finalmente, utilizarás lo que has aprendido para crear un juego de atrapar estrellas."
+          "overview": "Esta lección comienza con un repaso rápido de los parámetros, en el contexto de los bloques del App Lab que los estudiantes han visto en las últimas lecciones. A continuación, los estudiantes observarán ejemplos de parámetros que se encuentran dentro de funciones creadas por usuarios en el App Lab e intentarán utilizar parámetros para crear y llamar a funciones por sí solos con el fin de poder utilizarlas para controlar varios elementos de una misma pantalla. Más tarde, los estudiantes utilizarán ciclos for para iterar sobre un arreglo, pasando cada elemento a una función. Al concluir esta lección, los estudiantes aplicarán sus conocimientos en la creación de un juego que consiste en capturar estrellas.",
+          "purpose": "En las lecciones anteriores, los estudiantes utilizaron funciones para definir bloques de código que pueden utilizarse en distintos lugares dentro de un programa. En esta lección los estudiantes aprenderán a utilizar parámetros para generalizar el propósito de una función. Los parámetros permiten que el programa pueda especificar los detalles del desempeño de una función cuando se le llama, en lugar de cuando se define el programa. Si bien en las unidades anteriores los estudiantes ya habían aprendido acerca de las funciones con parámetros, esta es la primera vez que se les pedirá definir o llamar sus propias funciones. Los estudiantes también aprenderán a utilizar el ciclo for iterativamente para pasar los elementos de un arreglo a una función como parámetros, permitiéndoles usar la misma función en varios elementos en la pantalla.",
+          "student_overview": "En esta lección, crearás y llamarás a funciones con parámetros, usará ciclos for para iterar sobre una arreglo, y finalmente usará lo que has aprendido para crear un juego de captura de estrellas."
         },
         "csd6-2021/Circuits and Physical Prototypes": {
           "name": "Circuitos y prototipos físicos",
-          "overview": "A la hora de preparar el proyecto final de este capítulo, los estudiantes aprenderán cómo desarrollar un prototipo de un objeto físico que incluya un Circuit Playground. Mediante una guía de planificación de proyectos modelados y materiales baratos fáciles de conseguir, como cartulina y cinta adhesiva, los estudiantes aprenderán a conectar un par de circuitos simples y crear prototipos que puedan comunicar el diseño previsto de un producto.",
-          "preparation": "-   Reúne los materiales para la creación de prototipos, como por ejemplo:\n    -   Material estructural (cartón, papel de construcción, etc.)\n    -   Material de conexión (cinta adhesiva, pegamento, cola caliente, etc.)\n    -   Herramientas de construcción (tijeras, grapadoras, etc.)\n    -   Otros materiales (vasos, clips, platos de papel, etc.)\n-   Prepara los materiales para el cableado del circuito, como por ejemplo:\n    -   Cables con pinzas de cocodrilo (incluidos en el kit para el aula del Circuit Playground)\n    -   LEDs (incluidos en el kit para el aula del Circuit Playground)\n    -   Otros materiales conductores (cables, clips, láminas, etc.)\n    -   (opcional) Botones o interruptores\n-   Imprime una copia de la guía del proyecto para cada grupo de 2-3 alumnos\n-   Prepara un modelo de botón para mostrar a la clase",
-          "purpose": "El objetivo de esta lección es tanto demostrar a los alumnos cómo influye en el proceso de creación de prototipos el hecho de pensar en el diseño físico de un producto, como introducir un puñado de conocimientos prácticos que facilitarán la creación de sus proyectos finales.",
-          "student_overview": "En esta lección, cablearás circuitos sencillos para crear un prototipo físico utilizando materiales de bajo coste y fáciles de encontrar."
+          "overview": "Como preparación para el capítulo final de este proyecto, los estudiantes aprenderán a desarrollar el prototipo de un objeto físico que incluya al Circuit Playground, Utilizando un modelo de la guía de planificación del proyecto, los estudiantes aprenderán a conectar circuitos simples que sean capaces comunicar el diseño deseado de un producto, utilizando materiales económicos y fáciles de encontrar como el cartón y la cinta para ductos.",
+          "preparation": "-   Reúna los materiales para la construcción del prototipo:\n    -   Materiales para la estructura (cartón, cartulinas, etc.)\n    -   Material para las conexiones (cinta adhesiva, pegamento, silicona caliente, etc.) \n    -   Herramientas de construcción (tijeras, corcheteras, etc.)\n    -   Otros materiales (vasos, apretadores, platos de papel, etc.)\n-   Prepare los materiales para el cableado:\n    -   Cable con pinzas (incluidos en el kit del circuit Playground)\n    -   LED (incluidos en el kit del Circuit Playground)\n    -   Otros materiales conductores (cables, clips para papel, papel aluminio, etc)\n    -   Botones e interruptores (opcional)\n-   Imprima una copia de la guía del proyecto para cada grupo de 2 ó 3 estudiantes\n-   Prepare un botón de ejemplo para mostrarlo a la clase",
+          "purpose": "El objetivo de esta lección es mostrar a los estudiantes cómo sus ideas acerca del diseño físico de un producto pueden impactar el proceso de un prototipo y presentar nuevas habilidades prácticas que facilitarán la elaboración de sus proyectos finales.",
+          "student_overview": "En esta lección, cablearás circuitos simples para crear un prototipo físico utilizando materiales de bajo costo y fáciles de encontrar."
         },
         "csd6-2021/Project: Prototype an Innovation": {
           "name": "Proyecto - Prototipo de una Innovación",
-          "overview": "En este proyecto final del curso, los estudiantes se reúnen en grupos para desarrollar y probar un prototipo de un dispositivo informático innovador basado en el Circuit Playground. Mediante las entradas y salidas disponibles en el tablero, los grupos crearán programas que generan interacciones interesantes y únicas con los usuarios. ",
-          "preparation": "-   Reunir materiales para la creación de prototipos físicos, por ejemplo:\n    -   Cartón\n    -   Tijeras\n    -   Cinta adhesiva\n    -   Pegamento\n    -   Papel de aluminio\n-   Imprime una copia de la guía del proyecto para cada pareja de estudiantes\n-   Imprime una copia de la hoja de revisión por pares para cada estudiante\n-   Imprime una copia de la rúbrica para cada estudiante",
-          "purpose": "Esta lección es la culminación de la Unidad 6 y ofrece a los estudiantes la oportunidad de construir un proyecto propio del Maker Toolkit desde cero. Este proyecto es una oportunidad para mostrar las habilidades técnicas, pero también tendrán que demostrar la colaboración, la retroalimentación constructiva de los compañeros y la resolución de problemas iterativos, ya que se encuentran con obstáculos en el camino. Este proyecto debe ser dirigido por los alumnos siempre que sea posible y proporcionar una conclusión memorable y motivadora para la unidad final de Descubrimientos CS.",
-          "student_overview": "En este proyecto final, te enfrentarás al reto de desarrollar y probar un prototipo para un dispositivo que interactúe con el mundo físico a través de varios tipos de entrada y salida y que permita interacciones de usuario interesantes y únicas. "
+          "overview": "En este proyecto de finalización de curso, los estudiantes trabajarán en equipos para desarrollar y probar el prototipo de un dispositivo computacional innovador basado en el Circuit Playground. Los grupos crearán programas que permitan interacciones de usuario únicas e interesantes utilizando las entradas y salidas disponibles en el tablero. ",
+          "preparation": "-   Recolecte los materiales para la construcción del prototipo físico, como:\n    -   Cartón\n    -   Tijeras\n    -   Cinta adhesiva\n    -   Pegamento\n    -   Papel aluminio\n-   Imprima una copia de la guía del proyecto para cada pareja\n-   Imprima una copia de la revisión por pares para cada estudiante\n-   Imprima una copia de la rúbrica para cada estudiante",
+          "purpose": "Esta lección es la culminación de la unidad 6 y brinda a los estudiantes la oportunidad de construir un proyecto por sí solos y a partir de cero, utilizando las herramientas del fabricante (Maker Toolkit). Si bien este proyecto es una buena oportunidad para que los estudiantes demuestren sus habilidades técnicas, también deberán demostrar otras capacidades como: la colaboración con sus compañeros, la entrega de retroalimentación constructiva y la resolución de problemas iterativos de los obstáculos que se presenten. Este proyecto debería ser en su mayoría dirigido por el estudiante, y proporcionar una conclusión inspiradora y memorable a la última unidad de Descubrimientos de las Ciencias de la Computación.",
+          "student_overview": "En este proyecto final, tendrás el desafío de desarrollar y probar un prototipo de un dispositivo que interactúe con el mundo físico a través de varios tipos de entrada y salida y permita interacciones de usuario únicas e interesantes. "
         },
         "csd6-2021/CS Discoveries Post-Course Survey": {
           "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Asuntos de representación",
           "overview": "**Pregunta del día: ¿Cómo afectan los datos en las decisiones que tomamos cada día?**\n\nEn la primera lección de la unidad de datos, los estudiantes obtienen una visión general de lo que son los datos y de cómo se utilizan para resolver problemas. Los estudiantes comenzarán la lección con un breve análisis y luego realizarán una reflexión común para comprender qué son los datos. A continuación, se dividen en grupos y utilizan un conjunto de datos para recomendar varios tipos de comidas a personas con diversos criterios. Cada grupo tiene las opciones de comidas representadas de distintas maneras (imágenes, recetas, menú, información nutricional), algunas representaciones tienen más ventajas que otras. Finalmente, los grupos comparan sus respuestas y analizan de qué manera el tener distintas representaciones de los datos de las comidas influyó en la forma en la que resolvieron los distintos problemas.",
           "preparation": "-   Imprima copias de los Datos de Comidas para que cada grupo pueda tener una de las cuatro páginas\n-   Imprima una copia de la guía de actividades para cada grupo",
           "purpose": "Esta lección presenta un número importante de ideas que los estudiantes explorarán a lo largo de este capítulo. Podrán ver cómo los mismos objetos pueden ser representados de distintas formas. En el capítulo 1, aprenderán los distintos sistemas de representación que las computadoras utilizan para representar la información. También descubrirán la importancia de la representación cuando utilizamos datos para tomar decisiones. En el segundo capítulo de esta unidad, los estudiantes estudiarán más detenidamente las formas en las que los humanos y las computadoras pueden hacer uso de estos datos para tomar decisiones.",
@@ -4145,7 +4560,7 @@
           "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Programación para entretenimiento",
           "overview": "**Pregunta del día: ¿Cómo se usan las ciencias de la computación en el entretenimiento?**\n\nLos estudiantes analizan los “problemas” causados por el aburrimiento y la autoexpresión, y reflexionan acerca de cómo enfrentan estas situaciones en su vida personal. Luego, exploran el rol que tienen las ciencias de la computación, específicamente la programación, en algunas formas específicas de entretenimiento o como un medio para la autoexpresión.",
           "preparation": "-   Revise los enlaces de recursos de investigación en Code Studio\n-   Imprima una copia de la guía de actividades para cada grupo de tres estudiantes",
           "purpose": "El propósito de esta lección es iniciar esta unidad de programación captando la atención de todos los estudiantes independientemente de sus intereses o experiencias. Si bien en las últimas lecciones los estudiantes deberán desarrollar un videojuego, recomendamos no dar tanta relevancia a _este_ tema. La intención de esta lección es ampliar la perspectiva de los estudiantes acerca de la relevancia de la programación en las distintas formas de entretenimiento y autoexpresión. Esta nueva perspectiva ayudará a los estudiantes durante toda la unidad, en especial cuando deban decidir cómo aplicar las distintas habilidades de programación que aprenden.",
@@ -4329,7 +4744,7 @@
           "student_overview": "**Pregunta del día: ¿Qué puede ayudarnos a trabajar juntos y a resolver problemas en equipo?**\n\nTrabajarás con un grupo para diseñar y probar un barco de papel de aluminio que soporte el mayor número posible de monedas de un céntimo. "
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Prueba posterior al proyecto",
+          "name": "El proceso de resolución de problemas",
           "overview": "**Pregunta del día: ¿Qué pasos podemos utilizar para resolver distintos problemas?**\n\nEsta lección es una introducción al proceso de resolución de problemas formal, que los estudiantes utilizarán durante todo el curso, Definir - Preparar - Intentar - Reflexionar. Los estudiantes comenzarán esta lección realizando una lluvia de ideas de los distintos tipos de problemas a los que se enfrentan día a día. Luego, conocerán los cuatro pasos del proceso de resolución de problemas y trabajarán en conjunto para relacionar estos conceptos con sus propias experiencias resolviendo problemas. Primero, los estudiantes relacionan estos cuatro pasos con las actividades realizadas en la clase anterior, luego con un problema que son hábiles resolviendo, y finalmente con uno que les gustaría resolver mejor. Al final de la lección, la clase recopila una lista de estrategias útiles para cada paso del proceso y con esta información realizan un póster que les será útil durante la unidad y el curso.",
           "preparation": "Para cada estudiante \n\n-   Imprima copias de la guía de actividades\n\nPara la clase\n\n-   Cartulina\n-   Marcadores o lápices de color",
           "purpose": "El objetivo de esta lección es relacionar el proceso de resolución de problemas con las experiencias que los estudiantes tengan en solucionar problemas cotidianos. En las siguientes unidades de Descubrimientos de las ciencias de la computación se presentarán problemas en contextos conocidos y desconocidos. Un proceso de solución de problemas estructurado será una herramienta importante para ayudar a los estudiantes en la superación de desafíos nuevos y complejos.",
@@ -4412,7 +4827,7 @@
           "student_overview": "**Pregunta del día: ¿Cómo podemos aplicar el proceso de resolución de problemas en diferentes tipos de problemas?**\n\nCon el objetivo de comprender mejor la importancia de cada paso, en esta lección, los estudiantes trabajarán con el proceso de resolución de problemas para solucionar tres problemas distintos. "
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Prueba posterior al proyecto",
+          "name": "Exploración de páginas web",
           "overview": "**Pregunta del día: ¿Por qué las personas crean páginas web?**  \n\nCada sitio web tiene un propósito, una razón por la que existe y por la que las personas lo usan. En esta lección, los estudiantes reflexionarán acerca de los propósitos de un sitio web, tanto para los creadores como para los usuarios. Los estudiantes verán ejemplos de algunos sitios web y analizarán cuál es el propósito de sus creadores. Luego, reflexionarán acerca de las razones por las que las personas crean sitios web.",
           "preparation": "-   Imprima una copia de la guía de actividades para cada estudiante.",
           "purpose": "En toda esta unidad se hablará acerca de la World Wide Web (red informática mundial), con el propósito de mostrar la creación de sitios web como una forma de expresión. Para que los estudiantes comiencen a pensar en las razones por las que les gustaría crear un sitio web, primero deben considerar que los sitios web son herramientas útiles tanto para los usuarios como para los creadores. En esta lección, se mostrarán ejemplos de sitios web populares que los estudiantes ya conocen, sin embargo, se les pedirá que presten atención a páginas web más simples, ya que estas se encuentran en el rango de lo que podrán lograr con este curso.",
@@ -4501,7 +4916,7 @@
           "student_overview": "**Pregunta del día: ¿Qué habilidades y prácticas ayudan cuando codificamos páginas web?**\n\nEn esta lección, trabajarás en la creación de las páginas web que has planificado en las lecciones anteriores. "
         },
         "csd2-2021/Websites for a Purpose": {
-          "name": "Sitios Web por un Propósito",
+          "name": "Sitios web con un propósito",
           "overview": "**Pregunta del día: ¿Qué motiva a las personas a crear sitios web?**\n\nEn esta lección, los estudiantes explorarán las distintas razones que motivan a las personas a crear sitios web. Primero, pensarán en las distintas razones por las que visitan sitios web, luego, analizarán aquellos sitios web que fueron creados para abordar un problema en particular. Luego de decidir los distintos propósitos que estos sitios web cumplen para sus creadores, los estudiantes comienzan a pensar en el problema que quieren solucionar con su sitio web. Al final de la lección, los estudiantes eligen a los grupos con los que trabajarán en los proyectos de este capítulo.",
           "purpose": "Esta lección posiciona a los estudiantes en una etapa de transición que va desde ver a sus sitios web como una forma de expresión personal a cuestionarse cómo estos sitios web pueden tener un propósito para sus creadores. La lección también sirve de introducción al proyecto de este capítulo, en el cual los estudiantes trabajarán en grupos para crear sitios web capaces de resolver un problema.",
           "student_overview": "**Pregunta del día: ¿Qué motiva a las personas a crear sitios web?**\n\nEn esta lección, los estudiantes explorarán las distintas razones que motivan a las personas a crear sitios web y los problemas que pueden ser resueltos con su propio sitio web.  "

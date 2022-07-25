@@ -867,12 +867,40 @@
           "word": "Aprendizaje automático",
           "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
         },
+        "features/csd/2021": {
+          "word": "Características"
+        },
+        "label/csd/2021": {
+          "word": "Etiquetas"
+        },
+        "model/csd/2021": {
+          "word": "Modelo"
+        },
+        "supervised_learning/csd/2021": {
+          "word": "Aprendizaje Supervisado"
+        },
+        "training/csd/2021": {
+          "word": "Entrenamiento"
+        },
+        "categorical_data/csd/2021": {
+          "word": "Datos Categóricos"
+        },
+        "classification/csd/2021": {
+          "word": "Clasificación"
+        },
         "ethics/csd/2021": {
           "word": "Ética"
+        },
+        "empathy/csd/2021": {
+          "word": "Empatía",
+          "definition": "En diseño, prestar atención a los sentimientos y necesidades del usuario al diseñar un producto."
         },
         "user/csd/2021": {
           "word": "Usuario",
           "definition": "Alguien que utiliza un objeto, incluido software y hardware."
+        },
+        "usability/csd/2021": {
+          "word": "Usabilidad"
         },
         "user_interface/csd/2021": {
           "word": "Pantalla de Usuario"
@@ -901,9 +929,31 @@
           "word": "Bucles desde",
           "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
         },
+        "parameter/csd/2021": {
+          "word": "Parámetro",
+          "definition": "Información adicional proporcionada como entrada a un bloque para personalizar su funcionalidad"
+        },
         "circuit/csd/2021": {
           "word": "Circuito",
           "definition": "Dispositivo que proporciona un camino para que fluya una corriente eléctrica, a menudo modificando esa corriente. En los ordenadores, los circuitos permiten realizar operaciones lógicas y matemáticas sencillas utilizando la electricidad."
+        },
+        "decode/csd/2021": {
+          "word": "Decodificar"
+        },
+        "encode/csd/2021": {
+          "word": "Codificar"
+        },
+        "binary_system/csd/2021": {
+          "word": "Sistema Binario"
+        },
+        "bit/csd/2021": {
+          "word": "Bit"
+        },
+        "decrypt/csd/2021": {
+          "word": "Desencriptar"
+        },
+        "encrypt/csd/2021": {
+          "word": "Encriptar"
         },
         "debugging/csd/2021": {
           "word": "Depuración",
@@ -917,20 +967,37 @@
           "word": "Variable",
           "definition": "un marcador de posición para una información que puede cambiar."
         },
+        "property/csd/2021": {
+          "word": "Propiedad",
+          "definition": "Una etiqueta para definir las características de un sprite, como su ubicación y apariencia"
+        },
         "sprite/csd/2021": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Un personaje en la pantalla con propiedades que describen su ubicación, movimiento y apariencia."
+        },
+        "dot_notation/csd/2021": {
+          "word": "Notación de Punto",
+          "definition": "la forma en que se utilizan las propiedades de los sprites en el Laboratorio de Juegos, conectando el sprite y la propiedad con un punto."
         },
         "condition/csd/2021": {
-          "word": "Condición"
+          "word": "Condición",
+          "definition": "Algo que un programa comprueba para ver si es cierto antes de decidir ejecutar una acción."
         },
         "conditionals/csd/2021": {
-          "word": "Condicionales"
+          "word": "Condicionales",
+          "definition": "Sentencias que sólo se ejecutan cuando ciertas condiciones son verdaderas."
+        },
+        "boolean_expression/csd/2021": {
+          "word": "Expresión Booleana",
+          "definition": "en programación, una expresión que se evalúa como Verdadero o Falso. "
         },
         "abstraction/csd/2021": {
-          "word": "Abstracción"
+          "word": "Abstracción",
+          "definition": "una representación simplificada de algo más complejo. Las abstracciones permiten ocultar los detalles para ayudar a gestionar la complejidad, centrarse en los conceptos relevantes y razonar sobre los problemas a un nivel superior."
         },
         "function/csd/2021": {
-          "word": "Función"
+          "word": "Función",
+          "definition": "Un grupo de instrucciones de programación con nombre."
         },
         "computer/csd/2021": {
           "word": "Ordenador",
@@ -991,6 +1058,22 @@
         "copyright/csd/2021": {
           "word": "Derechos de autor",
           "definition": "el derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
+        },
+        "relevant/csd/2021": {
+          "word": "Relevante",
+          "definition": "estrechamente relacionado con un tema"
+        },
+        "trustworthy/csd/2021": {
+          "word": "De confianza",
+          "definition": "fiable, honesto y veraz "
+        },
+        "search_engine/csd/2021": {
+          "word": "Motor de Búsqueda",
+          "definition": "Un programa que busca elementos en la World Wide Web."
+        },
+        "css_class/csd/2021": {
+          "word": "Clase CSS",
+          "definition": "Un identificador que permite dar estilo a varios elementos de un documento HTML de la misma manera"
         }
       }
     }

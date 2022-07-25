@@ -66,7 +66,7 @@ hu:
       Build a Platform Jumper: Jumper platform építése
       Build a Screen: Képernyő építése
       Building a UI with Design Mode: Felhasználói felület építése tervezési móddal
-      Building an App: Alkalmazás éítése
+      Building an App: Alkalmazás építése
       Bunny Jumper: Ugró nyuszi
       Button Circuits: Áramkörgomb
       Buttons and Switch: Gombok és kapcsolók
@@ -74,7 +74,7 @@ hu:
       CS Discoveries Post-course Survey: Számítástechnika felfedezése c. tanfolyam utáni felmérés
       CSD U3 Interactive Card Exemplar: Számítástechnika felfedezése U3 példa interaktív kártyára
       CSD U3 platform intro: Számítástechnika felfedezése U3 bevezetés a platformokba
-      'CSD: For Loop': 'Számítástechnika felfedezése: For ciklus'
+      'CSD: For Loop': 'Számítástechnika felfedezése: For hurok'
       CSS Classes: CSS osztályok
       CSS Text Properties: CSS szöveg tulajdonságok
       CSS and Style Sheets: CSS és stílus lapok
@@ -82,7 +82,7 @@ hu:
       Cake Survey: Cake felmérés
       Challenge: Kihívás
       Challenge Levels: Feladatszintek
-      'Challenge: Lists': 'Feladat: Lista'
+      'Challenge: Lists': 'Feladat: Listák'
       'Challenge: RGB Colors': 'Feladat: RGB-színek'
       Challenges: Feladatok
       Change: Módosítás
@@ -103,7 +103,7 @@ hu:
       Collisions in Games: Ütközések játékokban
       Color LEDs: Színes LED-ek
       Combining Projects: Projektek egyesítése
-      Combining Representations: Reprezentációk egyesítése
+      Combining Representations: Ábrázolások kombinálása
       Conditionals with Cards - Unplugged Activity: Feltételek kártyákkal - számítógép nélküli tevékenység
       'Conditionals: If Statements': 'Feltételek: If utasítások'
       'Conditionals: If and If/Else Statements': 'Feltételek: If és If/Else utasítások'
@@ -142,14 +142,14 @@ hu:
       Design Your Prototype: Prototípus tervezése
       Design a Screen for your App: Képernyő tervezése az alkalmazáshoz
       Design an AI App - AI Lab: MI alkalmazás - MI labor tervezése
-      Design an AI App - App Lab: MI alkalmazás - alkalmazáslabor tervezése
+      Design an AI App - App Lab: MI alkalmazás - App Lab tervezése
       Designing for Accessibility: Hozzáférhetőség tervezése
       Digital Sharing - Unplugged Activity: Digitális megosztás - számítógép nélküli tevékenység
       Draw Your Background: Saját háttér megrajzolása
       Draw a Background: Háttér megrajzolása
       Drawing: Rajz
       Drawing Shapes: Síkidomok rajzolása
-      Driver Alert System: Riasztórendszer autóvezetőknek
+      Driver Alert System: Riasztórendszer vezetőknek
       Editing Images: Képek szerkesztése
       End of Course Projects: Tanfolyam végi projektek
       Escape Room Example: Példa szabadulószobára
@@ -169,14 +169,14 @@ hu:
       Experiment with Web Lab: Kísérletezés a weblaborral
       Exploration: Felfedezés
       'Exploration: Adding Style': 'Felfedezés: stílus hozzáadása'
-      'Exploration: For Loops': 'Felfedezés: For ciklusok'
+      'Exploration: For Loops': 'Felfedezés: For hurkok'
       'Exploration: Rikki''s Poster': 'Felfedezés: Rikki plakátja'
       'Exploration: Sample Apps': 'Felfedezés: Alkalmazásminták'
       'Exploration: Sample Programs': 'Felfedezés: Mintaprogramok'
       'Exploration: Sample Project': 'Felfedezés: Mintaprojek'
       Explore HTML: Fedezd fel a HTML-t
       Exploring CS in Entertainment: 'Felfedezés: Számítástechnika a szórakoztatóiparban'
-      Exploring more CSS: 'Felfedezés: még több számítástechnika'
+      Exploring more CSS: Még több számítástechnika felfedezése
       Extra Challenge: Extra feladat
       'Extra Challenge: Sound Board': 'Extra feladat: Hangfal'
       Final Room Escape App: Utolsó szabadulószoba alkalmazás
@@ -190,9 +190,9 @@ hu:
       Follow the Mouse: Egér követése
       Fonts and Style: Betűtípusok és stílusok
       FoodFight: FoodFight
-      For Loop Fun - Unplugged Activity: Mókázás for ciklussal - számítógép nélküli tevékenység
+      For Loop Fun - Unplugged Activity: Mókázás for hurokkal - számítógép nélküli tevékenység
       For Loops: For ciklusok
-      For Loops and Color LEDs: For ciklusok és színes LED-ek
+      For Loops and Color LEDs: For hurkok és színes LED-ek
       For Loops and Repeat Blocks: For ciklusok és blokkok ismétlése
       Formatting HTML: HTML formázás
       Free Play: Ingyenes Játék
@@ -233,7 +233,7 @@ hu:
       Intro to Flyer Game: Bevezetés a Flyer-játékba
       Intro to For Loops: Bevezetés a for ciklusokba
       Intro to Side Scrollers: Bevezetés az oldalsó görgetőkbe
-      Intro to Sprites: Bevezetés a Sprite-okba
+      Intro to Sprites: Bevezetés a sprite-okba
       Intro to Variables: Bevezetés a változókba
       Introduction to Game Lab: Bevezetés a játéklaborba
       Isaac's Survey Data: Isaac-felmérés adatai
@@ -258,7 +258,7 @@ hu:
       Looking for Patterns: Mintázatok keresése
       Looping: Hurkolás
       Loops with the Artist: Hurkok a művésszel
-      Make Your Sprites: Saját Sprite-ok készítése
+      Make Your Sprites: Saját sprite-ok készítése
       Make a Prediction: Előrejelzés készítése
       Make an Interactive Card: Interaktív kártya készítése
       Make it Interactive: Tedd interaktívvá
@@ -345,7 +345,7 @@ hu:
       Publishing Your Website: Webhelyének közzététele
       Quarter Notes: Negyedek
       Quick Check: Gyors ellenőrzés
-      RGB Exploration: RGB színek felfedezése
+      RGB Exploration: RGB-színek felfedezése
       RGB Widget: RGB widget
       Random Numbers: Véletlen számok
       Raspado Recommender: Raspado ajánló
@@ -435,7 +435,7 @@ hu:
       Train an AI to Clean the Ocean: MI betanítása az óceán megtisztítására
       UI Element Properties: A felhasználói felület elemeinek tulajdonságai
       Ultimate Shoe Recommender: A legjobb cipőajánló
-      Unit 5 Lesson 1 Overview: 5. egység 1. lecke Összefoglalás
+      Unit 5 Lesson 1 Overview: '5. egység, 1. lecke: Összefoglalás'
       Upload Your Images: Képek feltöltése
       User Interface: Felhasználói felület
       Using Getters and Setters: Lekérdezők és beállítók használata
@@ -462,11 +462,11 @@ hu:
       'Video: Conditionals': 'Video: feltételes utasítások'
       'Video: Conditionals: If Statements': 'Videó: Feltételek: If utasítások'
       'Video: Conditionals: If and If/Else Statements': 'Videó: Feltételek: If és If/Else utasítások'
-      'Video: Dance Party Events': 'Videó: Táncparti események'
-      'Video: Dance Party Measures': 'Videó: Táncparti ütemek'
-      'Video: Dance Party Party On!': 'Videó: Táncparti indul a táncparti!'
-      'Video: Dance Party Properties': 'Videó: Táncparti tulajdonságok'
-      'Video: Dance Party Warm Up': 'Videó: Táncparti bemelegítés'
+      'Video: Dance Party Events': 'Videó: Táncos buli események'
+      'Video: Dance Party Measures': 'Videó: Táncos buli ütemek'
+      'Video: Dance Party Party On!': 'Videó: Táncos buli indul a táncos buli!'
+      'Video: Dance Party Properties': 'Videó: Táncos buli tulajdonságok'
+      'Video: Dance Party Warm Up': 'Videó: Táncos buli bemelegítés'
       'Video: De-bugging with the Step Button': 'Videó: Hibaelhárítás a Lépés gombbal'
       'Video: Debugging': 'Videó: Hibaelhárítás'
       'Video: Debugging with Scrat ': 'Videó: Hibaelhárítás Scrattel'
@@ -474,7 +474,7 @@ hu:
       'Video: Events': 'Videó: Események'
       'Video: Follow The Digital Trail': 'Videó: Digitális nyomok követése'
       'Video: For Loops': 'Videó: For ciklusok'
-      'Video: Getting Loopy': 'Videó: Ciklikusság'
+      'Video: Getting Loopy': 'Videó: Elszabadul a pörgés'
       'Video: Happy Maps - Unplugged Activity': 'Videó: Boldog térképek - számítógép nélküli tevékenység'
       'Video: Harvesting with Conditionals': 'Videó: Aratás feltételekkel'
       'Video: How Search Works': 'Videó: Hogyan működik a keresés?'
@@ -490,12 +490,12 @@ hu:
       'Video: Intro to CSS - Part 2': 'Videó: Bevezetés a CSS-be - 2. rész'
       'Video: Intro to CSS Part 2': 'Videó: bevezetés a CSS-be, 2. rész'
       'Video: Intro to Design Mode': 'Videó: Bevezetés a tervezési módba'
-      'Video: Introducing Sprite Lab': 'Videó: Bevezetés a Sprite-laborba'
+      'Video: Introducing Sprite Lab': 'Videó: Bevezetés a Sprite laborba'
       'Video: Introduction to Arrays': 'Videó: bevezető a Tömbök-höz'
-      'Video: Introduction to Play Lab': 'Videó: Bevezetés a játéklaborba'
+      'Video: Introduction to Play Lab': 'Videó: Bevezetés a Play laborba'
       'Video: Introduction to Sprites': 'Videó: bevezető a sprite-okhoz'
       'Video: Introduction to Variables': 'Videó: Bevezetés a változókba'
-      'Video: Loops in Artist': 'Videó: Hurok a művészben'
+      'Video: Loops in Artist': 'Videó: Hurkok a művészben'
       'Video: Loops with the Artist': 'Videó: Hurkok a művésszel'
       'Video: Managing Disagreement': 'Videó: Nézeteltérés kezelése'
       'Video: Maze Intro - Programming with Blocks': 'Videó: Bevezetés a labirintusba - Programozás blokkokkal'
@@ -504,7 +504,7 @@ hu:
       'Video: Measures': 'Videó: Ütemek'
       'Video: Minecraft - Congratulations': 'Videó: Minecraft - gratulációk'
       'Video: Minecraft - Functions': 'Videó: Minecraft - függvények'
-      'Video: Minecraft - Repeat Loops': 'Videó: Minecraft - Hurkok megismétlése'
+      'Video: Minecraft - Repeat Loops': 'Videó: Minecraft - hurkok megismétlése'
       'Video: Minecraft - The Agent': 'Videó: Minecraft - Az ügynök'
       'Video: Minecraft: Voyage Aquatic Conditionals': 'Videó: Minecraft: Utazás vízi körülmények között'
       'Video: Minecraft: Voyage Aquatic Congratulations': 'Videó: Minecraft: Utazás vízi gratulációk'
@@ -537,7 +537,7 @@ hu:
       'Video: Training Data & Bias': 'Videó: Képzési adatok és torzítások'
       'Video: Training Data and Bias': 'Videó: Képzési adatok és torzítások'
       'Video: Unplugged Variables in Envelopes': 'Videó: Számítógép nélküli változók a borítékokban'
-      'Video: Using the Repeat Block': 'Video: Az ismétlő blokk használata'
+      'Video: Using the Repeat Block': 'Video: Az ismétlés blokk használata'
       'Video: Variables in Artist': 'Videó: Változók a művészben'
       'Video: Velocity': 'Videó: sebesség'
       'Video: Warm Up': 'Videó: Bemelegítés'

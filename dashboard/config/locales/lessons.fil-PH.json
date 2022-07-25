@@ -121,6 +121,9 @@
         "dance-extras-2019/Dance Party - Go Further": {
           "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block)."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
+        },
         "dance-2019/Dance Party": {
           "overview": "Sa araling ito, nakakakuha ng panimulang karanasan sa coding at computer science ang mga mag-aaral sa lahat ng edad sa isang ligtas at sumusuportang kapaligiran. Idinisenyo ang araling ito sa mga mag-aaral sa lahat ng edad ngunit nangangailangan ng pagbabasa. Nangangailangan ang aktibidad na ito ng tunog dahil ginawa ang tool upang tumugon sa musika.",
           "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block).",
@@ -130,8 +133,149 @@
           "name": "AI para sa mga Karagatan  ",
           "overview": "Sa araling ito, nakakakuha ang mga mag-aaral sa lahat ng edad ng panimulang karanasan sa coding at computer science sa isang ligtas at sumusuportang kapaligiran. Una, inuuri ng mga mag-aaral ang mga bagay bilang alinman sa \"isda\" o \"hindi isda\" upang subukang alisin ang mga basura mula sa karagatan. Pagkatapos, kakailanganin ng mga mag-aaral na palawakin ang kanilang set ng data ng pagsasanay upang maisama ang iba pang nilalang sa dagat. Sa ikalawang bahagi ng aktibidad, pipili ang mga mag-aaral ng kanilang sariling mga label na ilalapat sa mga larawan ng random na nabuong isda. Ginagamit ang data ng pagsasanay na ito sa isang modelo ng machine learning na makapag-label ng mga bagong larawan nang mag-isa."
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Mga loop"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Mga event"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Mga conditional"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Mga function"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Mga variable"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For Loops"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Mood Study"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Digital na Disenyo"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Pag-Program na Pinapatakbo ng mga Events"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Pangunahing Functionality ng App"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Tagakuha at Taga-takda"
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Pagsisimula"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Mga Batayan ng Computer Science"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Masdan ang Hinaharap"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Pagsunod-sunod"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Loop"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Kondisyonal"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Function"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Kaganapan"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Mga Magandang Gawi sa Pagtuturo ng Computer Science"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Pagpaplano"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Mga susunod na Hakbang"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Buod at mga Tagubilin sa Pag-Setup"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Pagpapadala ng mga Bits sa isang Nakabahaging Wire"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Pagpapadala ng mga Numero"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Pagpapadala ng Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Pag-broadcast ng mga mensahe"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Mga router at mga address"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Mga Packets at ang Pagiging Maasahan"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manwal na DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Awtomatikong DNS na node"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Internet na Simulator ng Freeplay"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Pagtakas sa Kuwarto"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Pagsisimula"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Mga Batayan ng Computer Science"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Masdan ang Hinaharap"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Pagsunod-sunod"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Loop"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Kondisyonal"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Function"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Kaganapan"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Mga Magandang Gawi sa Pagtuturo ng Computer Science"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Pagpaplano"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Mga susunod na Hakbang"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Kolektor Oras ng Code 2017"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Kadalasan na Pagsusuri"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Galawin ito, Galawin ito"
@@ -470,7 +614,7 @@
           "name": "Spelling Bee"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "Pangkatapusan ng Semestre na Pagsisiyasat sa Mga Natuklasan sa CS"
+          "name": "Pag-program para sa Libangan"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Pag-plot ng mga Hugis"
@@ -961,6 +1105,12 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Spelling Bee"
         },
+        "csd3-2019/Programming for Entertainment": {
+          "name": "Pag-program para sa Libangan"
+        },
+        "csd3-2019/Plotting Shapes": {
+          "name": "Pag-plot ng mga Hugis"
+        },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Pagguhit sa Game Lab"
         },
@@ -1021,6 +1171,12 @@
         "csd3-2019/Project - Design a Game": {
           "name": "Proyekto - Pagdisenyo ng Laro"
         },
+        "csd6-2019/Innovations in Computing": {
+          "name": "Mga Pagbabago sa Pag-Compute"
+        },
+        "csd6-2019/Designing Screens with Code": {
+          "name": "Pagdidisenyo ng mga Screen gamit ang Code"
+        },
         "csd6-2019/The Circuit Playground": {
           "name": "Ang Circuit na Playground"
         },
@@ -1062,6 +1218,12 @@
         },
         "csd6-2019/Project: Prototype an Innovation": {
           "name": "Proyekto: Mag-Prototype ng isang Pagbabago"
+        },
+        "csd4-2019/Analysis of Design": {
+          "name": "Pagsusuri ng Disenyo"
+        },
+        "csd4-2019/Understanding Your User": {
+          "name": "Pag-uunawa sa Iyong Gumagamit"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Maliit na Gawain para sa Disenyo na Naka-Sentro sa Gumagamit"
@@ -1105,6 +1267,12 @@
         "csd4-2019/Project - App Presentation": {
           "name": "Proyekto - Pagpapakita ng App"
         },
+        "csd5-2019/Representation Matters": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
+        "csd5-2019/Patterns and Representation": {
+          "name": "Mga Pattern at Representasyon"
+        },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII at Binary na Representasyon"
         },
@@ -1147,6 +1315,9 @@
         "csd1-2019/Intro to Problem Solving": {
           "name": "Panimula sa Paglutas ng Problema"
         },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Ang Proseso ng Pagtuklas ng Problema"
+        },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Pagtuklas sa Paglutas ng Problema"
         },
@@ -1161,6 +1332,12 @@
         },
         "csd1-2019/Project - Propose an App": {
           "name": "Proyekto - Pagmungkahi ng App"
+        },
+        "csd2-2019/Exploring Websites": {
+          "name": "Paggalugad sa mga Website"
+        },
+        "csd2-2019/Websites for Expression ": {
+          "name": "Mga Website para sa Pagpapahayag "
         },
         "csd2-2019/Intro to HTML": {
           "name": "Panimula sa HTML"
@@ -1676,7 +1853,10 @@
           "name": "Ipakita ang Iyong Proyekto"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "Pangkatapusan ng Semestre na Pagsisiyasat sa Mga Natuklasan sa CS"
+          "name": "Pag-program para sa Libangan"
+        },
+        "csd3-2017/Plotting Shapes": {
+          "name": "Pag-plot ng mga Hugis"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Pagguhit sa Game Lab"
@@ -1738,6 +1918,9 @@
         "csd3-2017/Project - Design a Game": {
           "name": "Proyekto - Pagdisenyo ng Laro"
         },
+        "csd6-2017/Innovations in Computing_": {
+          "name": "Mga Pagbabago sa Pag-Compute"
+        },
         "csd6-2017/Designing Screens with Code_": {
           "name": "Pagdidisenyo ng mga Screen gamit ang Code"
         },
@@ -1782,6 +1965,9 @@
         },
         "csd6-2017/Project: Prototype an Innovation_": {
           "name": "Proyekto: Mag-Prototype ng isang Pagbabago"
+        },
+        "csd2-2017/Exploring Websites": {
+          "name": "Paggalugad sa mga Website"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Mga Website para sa Pagpapahayag "
@@ -1849,6 +2035,9 @@
         "csd1-2017/Project - Propose an App": {
           "name": "Proyekto - Pagmungkahi ng App"
         },
+        "csd5-2017/Representation Matters": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
         "csd5-2017/Patterns and Representation": {
           "name": "Mga Pattern at Representasyon"
         },
@@ -1890,6 +2079,9 @@
         },
         "csd5-2017/Project - Solve a Data Problem": {
           "name": "Proyekto - Paglutas ang Problema sa mga Datos"
+        },
+        "csd4-2017/Analysis of Design": {
+          "name": "Pagsusuri ng Disenyo"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Pag-uunawa sa Iyong Gumagamit"
@@ -1935,6 +2127,21 @@
         },
         "csd4-2017/Project - App Presentation": {
           "name": "Proyekto - Pagpapakita ng App"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Itim & Puti na Tutoryal sa Pixelasyon"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Itim & Puti na Freeplay sa Pixelasyon"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Pixelasyon ng Kulay na Tutoryal"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Mga Halimbawa ng Kulay na Pixelasyon"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Kulay ng Pixelasyon na Freeplay"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Unplugged: Mga Tangram"
@@ -2001,6 +2208,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Matinding Hamon - Pag-uunawa"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Panimula sa Computer Science"
+        },
+        "20-hour/The Maze": {
+          "name": "The Maze"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Computational Thinking"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Graph Paper Programming"
+        },
+        "20-hour/The Artist": {
+          "name": "The Artist"
+        },
+        "20-hour/Algorithms": {
+          "name": "Mga algorithm"
+        },
+        "20-hour/The Artist 2": {
+          "name": "The Artist 2"
+        },
+        "20-hour/Functions": {
+          "name": "Mga function"
+        },
+        "20-hour/The Farmer": {
+          "name": "The Farmer"
+        },
+        "20-hour/Conditionals": {
+          "name": "Mga conditional"
+        },
+        "20-hour/The Artist 3": {
+          "name": "The Artist 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Song Writing"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "The Farmer 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstraction"
+        },
+        "20-hour/The Artist 4": {
+          "name": "The Artist 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Relay Programming"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "The Farmer 3"
+        },
+        "20-hour/The Internet": {
+          "name": "The Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "The Artist 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Wrap-up"
         },
         "course2/Graph Paper Programming": {
           "name": "Graph Paper Programming"
@@ -2182,6 +2449,117 @@
           "preparation": "-   Suriin ang website ng [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) para sa higit pang nilalamang pangkaligtasan sa online.",
           "purpose": "Ang pangunahing layunin ng araling ito ay bumuo ng karanasan ng mag-aaral sa mga computer. Sa pamamagitan ng pagsakop sa pinakapangunahing mga function ng computer tulad ng pag-click, pag-drag, at pag-drop, lumilikha kami ng mas pantay na larangan ng paglalaro sa klase para sa mga puzzle sa hinaharap. Ang araling ito ay nagbibigay din ng magandang pagkakataon upang ipakilala ang mga pangunahing terminolohiya ng computer hardware, na posibleng kasama ang \"mouse\", \"trackpad\" o \"touchscreen\", depende sa iyong mga device.",
           "student_overview": "I-click at i-drag para tapusin ang mga puzzle."
+        },
+        "allthethings/Jigsaw": {
+          "name": "Jigsaw"
+        },
+        "allthethings/Maze": {
+          "name": "Maze"
+        },
+        "allthethings/Artist": {
+          "name": "Artista"
+        },
+        "allthethings/Bee": {
+          "name": "Bubuyog"
+        },
+        "allthethings/PlayLab": {
+          "name": "Play Lab"
+        },
+        "allthethings/Farmer": {
+          "name": "Magsasaka"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Bounce"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Match"
+        },
+        "allthethings/TextMatch": {
+          "name": "TextMatch"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "Odometro"
+        },
+        "allthethings/Text Compression": {
+          "name": "Compression ng Text"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Gamelab": {
+          "name": "Gamelab"
+        },
+        "allthethings/Online PD": {
+          "name": "Online na PD"
+        },
+        "allthethings/Markdown Details": {
+          "name": "Mga Detalye ng Markdown"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Multi page assessment": {
+          "name": "Multi-page na pagtatasa"
+        },
+        "allthethings/Star wars": {
+          "name": "Star wars"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Rich long assessment": {
+          "name": "Mayaman at mahabang pagsusuri"
+        },
+        "allthethings/Free Response": {
+          "name": "Libreng Tugon"
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": "Sampol ng Pagtatasa sa PLC"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Pinagpalit na mga Antas"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Walang pangalan na surbey ng estudyante"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Pambublikong Key ng Cryptography"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
+        },
+        "allthethings/Single page assessment": {
+          "name": "Isang pahinang pagtatasa"
+        },
+        "allthethings/Standalone video": {
+          "name": "Standalone na video"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Pagtukoy sa Kurikulum"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "allthethings/Contained Levels": {
+          "name": "Nilalaman na mga Antas"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java Lab"
         },
         "coursef-2021/Virtual Pet": {
           "name": "Mini-Project: Virtual na Alaga",
@@ -2540,6 +2918,7 @@
           "name": "Survey ng CS Discoveries Post-Course"
         },
         "csd6-2021/Innovations in Computing": {
+          "name": "Mga Pagbabago sa Pag-Compute",
           "overview": "Para simulan ang huling yunit ng kursong ito, ang mga estudyante ay gagawa ng isang pananaliksik sa kawili-wiling makabagong likha sa pag-compute. Ang araling ito ay magpapakita sa mga estudyante sa iba-bang mga mas malawak na kaibahan ng mga maaaring makakaapekto sa mga anyo ng pag-compute (ano ang hitsura ng kompyuter) at ang mga puwang na makakaapekto sa pag-compute. Mamaya sa yunit na ito, ang mga estudyante ay titingin pabalik sa mga kagawamitan na kanilang natagpuan sa araling ito habang sila ay gumagawa ng sarili nilang pisikal na mga pag-compute na mga kagamitan."
         },
         "csd6-2021/Designing Screens with Code": {
@@ -2596,6 +2975,9 @@
         "csd6-2021/CS Discoveries Post-Course Survey": {
           "name": "Survey ng CS Discoveries Post-Course"
         },
+        "csd5-2021/Representation Matters": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
         "csd5-2021/Patterns and Representation": {
           "name": "Mga Pattern at Representasyon"
         },
@@ -2634,6 +3016,9 @@
         },
         "csd5-2021/CS Discoveries Post-Course Survey": {
           "name": "Survey ng CS Discoveries Post-Course"
+        },
+        "csd3-2021/Programming for Entertainment": {
+          "name": "Pag-program para sa Libangan"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Pag-plot ng mga Hugis"
@@ -2694,6 +3079,9 @@
         },
         "csd1-2021/Intro to Problem Solving": {
           "name": "Panimula sa Paglutas ng Problema"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Ang Proseso ng Pagtuklas ng Problema"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Pagtuklas sa Paglutas ng Problema"

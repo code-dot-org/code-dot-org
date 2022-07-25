@@ -182,7 +182,7 @@ gem 'redcarpet', '~> 3.3.4'
 gem 'geocoder'
 
 gem 'mini_magick', ">=4.9.4"
-gem 'rmagick'
+gem 'rmagick', '~> 4.2.5'
 
 gem 'acts_as_list'
 
@@ -210,16 +210,16 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 # - /dashboard/public/fonts/
 # - /pegasus/sites.v3/code.org/public/fonts/
 # - /pegasus/sites.v3/hourofcode/public/fonts/
-gem 'font-awesome-rails', '~> 4.7.0.5'
+gem 'font-awesome-rails', '~> 4.7.0.8'
 
 gem 'sequel'
 gem 'user_agent_parser'
 
-gem 'paranoia', '~> 2.4.2'
+gem 'paranoia', '~> 2.5.0'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', '~> 0.10.10'
+gem 'active_model_serializers', '~> 0.10.13'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
@@ -310,8 +310,6 @@ gem 'auto_strip_attributes', '~> 2.1'
 
 # Used to sort UTF8 strings properly
 gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
-
-gem 'StreetAddress', require: "street_address"
 
 gem 'recaptcha', require: 'recaptcha/rails'
 

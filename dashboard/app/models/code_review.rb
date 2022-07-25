@@ -14,29 +14,34 @@
 #  deleted_at       :datetime
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  active           :boolean
+#  open             :boolean
 #
 # Indexes
 #
 #  index_code_reviews_for_peer_lookup               (user_id,script_id,project_level_id,closed_at,deleted_at)
 #  index_code_reviews_on_project_id_and_deleted_at  (project_id,deleted_at)
-#  index_code_reviews_unique                        (user_id,project_id,closed_at,deleted_at) UNIQUE
+#  index_code_reviews_unique                        (user_id,project_id,open,active) UNIQUE
 #
 class CodeReview < ApplicationRecord
   acts_as_paranoid
 
-  belongs_to :owner, class_name: 'User', foreign_key: :user_id
+  belongs_to :owner, class_name: 'User', foreign_key: :user_id, optional: true
   # TODO: Once all the renaming has settled, the following association should be:
   # has_many :comments, class_name: 'CodeReviewComment', dependent:  :destroy
   has_many :comments, class_name: 'CodeReviewNote', foreign_key: 'code_review_request_id', dependent:  :destroy, inverse_of: 'code_review'
 
   # Enforce that each student can only have one open code review per script and
   # level. (This is also enforced at the database level with a unique index.)
+  #
+  # See migration 20220627214005_add_active_to_code_reviews.rb for more information
+  # about this unique index and the active and open virtual columns
   validates_uniqueness_of :user_id, scope: [:project_id],
     conditions: -> {where(closed_at: nil)},
     message: 'already has an open code review for this project'
 
   # Scope that includes only open code reviews
-  scope :open_reviews, -> { where(closed_at: nil) }
+  scope :open_reviews, -> {where(closed_at: nil)}
 
   def self.open_for_project?(channel:)
     return false unless channel

@@ -562,7 +562,7 @@
           "progression_name": "Ingyenes Játék"
         },
         "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": "_Szimulációk segítségével könnyen meg lehet ismerni olyan dolgokat, amelyek a való világban nehezen megfigyelhetőek. Segítenek a tudósoknak a problémákat megoldani, a problémamegoldás módját megtalálni, és új ötleteket biztonságosan és hatékonyan letesztelni. A szimulációtok segítségével megmutathatjátok, hogyan néz ki egy víruskitörés a Szörnyvárosban._"
+          "description": "_Szimulációk segítségével könnyen meg lehet ismerni olyan dolgokat, amelyek a való világban nehezen megfigyelhetőek. Segítenek a tudósoknak problémákat megoldani, a problémamegoldás módját megtalálni, és új ötleteket biztonságosan és hatékonyan letesztelni. A szimulációtok segítségével megmutathatjátok, hogyan néz ki egy víruskitörés a Szörnyvárosban._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
           "description": "**Beszéljétek meg:**\n\n-   Miért hasznosak a szimulációk a való világban? \n-   Hogyan segítenek a szimulációk megérteni a körülöttünk lévő világot? \n-   Hogyan lehet ötletek tesztelését szimulációk segítségével javítani? \n\nA megbeszélés célja a diákokkal megértetni, hogy szimulációk segítségével komplex rendszereket lehet modellezni interaktív módon. Azt is látniuk kell, hogy szimulációk segítségével az emberek gyorsan, olcsón és biztonságosan tesztelhetik ötleteiket. "
@@ -892,7 +892,7 @@
           "progression_name": "Sprite-ok létrehozása"
         },
         "ac9962af-c594-428a-8aca-016b794e0c00": {
-          "progression_name": "Bevezetés a Sprite-okba"
+          "progression_name": "Bevezetés a sprite-okba"
         },
         "b3155f3f-f1d8-49d2-8fb9-32f7caf2de13": {
           "progression_name": "Képek hozzáadása"
@@ -1140,8 +1140,8 @@
           "progression_name": "Események és tulajdonságok"
         },
         "db8d9f01-122e-4e38-8b20-7ad2414b1086": {
-          "name": "Alkalmazás éítése",
-          "progression_name": "Alkalmazás éítése"
+          "name": "Alkalmazás építése",
+          "progression_name": "Alkalmazás építése"
         },
         "c26ef3cd-6946-42be-9cbb-abb4cc3db2a2": {
           "progression_name": "Lecke áttekintése"
@@ -1286,7 +1286,7 @@
           "progression_name": "Számláló ciklusok"
         },
         "18ead11c-bea7-41a3-84ac-be932e91d480": {
-          "progression_name": "For ciklusok és színes LED-ek"
+          "progression_name": "For hurkok és színes LED-ek"
         },
         "724e3555-1cae-4fbf-9ee2-2a36f04c4784": {
           "progression_name": "Lecke áttekintése"
@@ -1389,8 +1389,8 @@
           "progression_name": "Lecke áttekintése"
         },
         "f8979fd0-4649-466a-8e5f-f5f4a70eb355": {
-          "name": "Reprezentációk egyesítése",
-          "progression_name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása",
+          "progression_name": "Ábrázolások kombinálása"
         },
         "54ac0f9e-97de-400c-9e06-30225b854909": {
           "progression_name": "Lecke áttekintése"
@@ -1698,7 +1698,7 @@
           "progression_name": "Lecke áttekintése"
         },
         "e8c8dd22-c895-4763-8b30-9b98ec9d0b7f": {
-          "progression_name": "Felfedezés: még több számítástechnika"
+          "progression_name": "Még több számítástechnika felfedezése"
         },
         "65b57600-4bde-45dc-8ca6-e808c1a1a13e": {
           "progression_name": "Elrendezés CSS-stíluslapokkal"
@@ -1718,7 +1718,7 @@
           "progression_name": "RGB widget"
         },
         "4ef97c54-d0a0-43c8-86b2-fe33ddfb7bfb": {
-          "progression_name": "RGB színek felfedezése"
+          "progression_name": "RGB-színek felfedezése"
         },
         "a718ba21-525e-4e71-9152-8a72012f2c2f": {
           "progression_name": "CSS osztályok"
@@ -2781,7 +2781,7 @@
           "progression_name": "Sprite-ok létrehozása"
         },
         "5136ca8d-00e2-4fa2-8563-f2edd7bc46d6": {
-          "progression_name": "Bevezetés a Sprite-okba"
+          "progression_name": "Bevezetés a sprite-okba"
         },
         "aae905a1-38d5-48ad-aed9-4de0921bd1ec": {
           "progression_name": "Képek hozzáadása"
@@ -3024,8 +3024,8 @@
           "progression_name": "Események és tulajdonságok"
         },
         "e63385fd-2aa7-4253-9322-e5872437dac3": {
-          "name": "Alkalmazás éítése",
-          "progression_name": "Alkalmazás éítése"
+          "name": "Alkalmazás építése",
+          "progression_name": "Alkalmazás építése"
         },
         "5dd1bd9a-be39-46a3-aea2-9ec7b6961490": {
           "progression_name": "Lecke áttekintése"
@@ -3173,8 +3173,8 @@
           "progression_name": "Számláló ciklusok"
         },
         "e6e515ed-5cc0-4db3-8b4e-4f416a208e55": {
-          "name": "For ciklusok és színes LED-ek",
-          "progression_name": "For ciklusok és színes LED-ek"
+          "name": "For hurkok és színes LED-ek",
+          "progression_name": "For hurkok és színes LED-ek"
         },
         "85366b36-d42b-4f82-a1e1-9a84f36ac7ea": {
           "progression_name": "Lecke áttekintése"
@@ -3372,8 +3372,8 @@
           "progression_name": "Lecke áttekintése"
         },
         "2dcdc80f-1e16-4654-9660-acc51f191356": {
-          "name": "Reprezentációk egyesítése",
-          "progression_name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása",
+          "progression_name": "Ábrázolások kombinálása"
         },
         "74a6211b-44bb-4dfa-8c12-1d20eb6c07ab": {
           "progression_name": "Lecke áttekintése"
@@ -3611,7 +3611,7 @@
           "progression_name": "Lecke áttekintése"
         },
         "a5f399ab-d90b-47c1-81a8-330c0b7ec280": {
-          "progression_name": "Felfedezés: még több számítástechnika"
+          "progression_name": "Még több számítástechnika felfedezése"
         },
         "990479e4-56db-453b-9ea2-3505c8c6d180": {
           "progression_name": "Elrendezés CSS-stíluslapokkal"
@@ -3631,7 +3631,7 @@
           "progression_name": "RGB widget"
         },
         "ff300b87-d5fc-4e61-986c-e5915e272a81": {
-          "progression_name": "RGB színek felfedezése"
+          "progression_name": "RGB-színek felfedezése"
         },
         "011ef4d6-4373-4beb-ab13-e77d1fa25dc5": {
           "progression_name": "CSS osztályok"
@@ -3829,7 +3829,7 @@
           "progression_name": "Sprite-ok létrehozása"
         },
         "e9c923af-0bf2-42f6-8330-02d063158fa5": {
-          "progression_name": "Bevezetés a Sprite-okba"
+          "progression_name": "Bevezetés a sprite-okba"
         },
         "1893f672-0984-4956-a657-90f4a8a4ecb2": {
           "progression_name": "Képek hozzáadása"
@@ -4117,8 +4117,8 @@
           "progression_name": "Események és tulajdonságok"
         },
         "44e3ffdb-ef64-47a5-bdd5-1520778f694e": {
-          "name": "Alkalmazás éítése",
-          "progression_name": "Alkalmazás éítése"
+          "name": "Alkalmazás építése",
+          "progression_name": "Alkalmazás építése"
         },
         "38c450dd-db4d-4662-b493-c40b418d561a": {
           "progression_name": "Lecke áttekintése"
@@ -4263,14 +4263,14 @@
           "progression_name": "Számláló ciklusok"
         },
         "e8c311fc-2914-40b2-92c0-d15195772399": {
-          "progression_name": "Számítástechnika felfedezése: For ciklus"
+          "progression_name": "Számítástechnika felfedezése: For hurok"
         },
         "2b5209d7-f495-4e26-b2af-8b639c085bca": {
           "progression_name": "Számláló ciklusok"
         },
         "09d72bde-4b77-4508-ab36-596d06ec9d72": {
-          "name": "For ciklusok és színes LED-ek",
-          "progression_name": "For ciklusok és színes LED-ek"
+          "name": "For hurkok és színes LED-ek",
+          "progression_name": "For hurkok és színes LED-ek"
         },
         "a024a232-f555-4c1d-8b3c-86b766246686": {
           "progression_name": "Lecke áttekintése"
@@ -4482,7 +4482,7 @@
           "progression_name": "Lecke áttekintése"
         },
         "527a9eba-5ea9-4bf0-953e-4bef060c01b3": {
-          "progression_name": "Felfedezés: még több számítástechnika"
+          "progression_name": "Még több számítástechnika felfedezése"
         },
         "fc232eba-d171-43e6-89a0-ff0269e72b41": {
           "progression_name": "Elrendezés CSS-stíluslapokkal"
@@ -4502,7 +4502,7 @@
           "progression_name": "RGB widget"
         },
         "e3affa6d-525a-4a8d-aa60-a9f0c6afa499": {
-          "progression_name": "RGB színek felfedezése"
+          "progression_name": "RGB-színek felfedezése"
         },
         "0b5bd0f5-7877-44d7-a983-b44ce18b5507": {
           "progression_name": "CSS osztályok"
@@ -4557,8 +4557,8 @@
           "progression_name": "Tükrözés"
         },
         "d6cca48b-d77f-47f8-b769-779bcf9b2874": {
-          "name": "5.  egység 1. lecke Összefoglalás",
-          "progression_name": "5.  egység 1. lecke Összefoglalás"
+          "name": "5.  egység, 1. lecke: Összefoglalás",
+          "progression_name": "5.  egység, 1. lecke: Összefoglalás"
         },
         "f27d38b3-9892-47dd-8bdb-e1442286128d": {
           "name": "Lecke áttekintése",
@@ -4592,8 +4592,8 @@
           "progression_name": "Lecke áttekintése"
         },
         "90bc96dd-c98e-4ad8-a361-a51e2f1e060c": {
-          "name": "Reprezentációk egyesítése",
-          "progression_name": "Reprezentációk egyesítése"
+          "name": "Ábrázolások kombinálása",
+          "progression_name": "Ábrázolások kombinálása"
         },
         "85e6dc1d-2751-4551-9624-c0e8c5b44984": {
           "progression_name": "Lecke áttekintése"
@@ -4775,15 +4775,15 @@
           "description": "Két öntapadós jegyzetlapotok van. Az egyikre írjatok egy dolgot, amit ma tanultatok a kódolásról. \nA másikra írjatok egy dolgot, amit ma a költészetről tanultatok. \n\nKézfelemeléssel, osszátok meg az egész osztállyal: Mit szeretnétek a legközelebb tanulni a kódolásról és az informatikáról?"
         },
         "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
-          "description": "Előkészítés\n\nÜdvözöld a diákokat az osztályban, és ismertesd nagyon röviden a napi tevékenységet.\n\nMondd a következőt: _A mai napon egy órát fogunk online rejtvényekkel foglalkozni, és megtanuljuk, hogy a számítógépes laborban hogyan kell viselkedni._.\nA beszélgetés célja, hogy a tanulók megtanulják, mire számíthatnak és hogyan viselkedjenek, amikor belépnek a számítógépes laborba."
+          "description": "#### Előkészítés\n\nÜdvözöld a diákokat az osztályban, és ismertesd nagyon röviden a napi tevékenységet.\n\nMondd a következőt: _A mai napon egy órát fogunk online feladványokkal foglalkozni, és megtanuljuk, hogy a számítógépes laborban hogyan kell viselkedni._.\nA beszélgetés célja, hogy a tanulók megtanulják, mire számíthatnak és hogyan viselkedjenek, amikor belépnek a számítógépes laborba."
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            "-   Viselkedj nyugodtan a laboratóriumban\n-   Ne feledd, nem szabad rágózni vagy cukorkát szopogatni!\n-   Fertőtlenítsd a kezed\n-   A partnereddel üljetek egy számítógéphez\n-   Ellenőrizd, hogy az első \"játékos\" eléri az egeret\n-   Ha frusztrált vagy, ne üsd meg, és ne rázd meg a számítógépet, se a monitort!\n-   Tartsd be a [20/20/20szabály](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35) szabályt.\n-   Mit kell tenni a [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) csatornával 20-30 percenként (ingyenes bejelentkezést igényel a GoNoodle-on).\n-   Mielőtt a tanárt megkérdeznéd, kérdezd meg a társadat\n-   Legyetek halkak, hogy mindenki más is hallja a partnerét\n-   Használd a naplódat, írd le az érzéseid és a megoldásokat"
+            "-   Viselkedj nyugodtan a laboratóriumban\n-   Ne feledd, nem szabad rágózni vagy cukorkát szopogatni!\n-   Fertőtlenítsd a kezed\n-   A partnereddel üljetek egy számítógéphez\n-   Ellenőrizd, hogy a \"vezető\" eléri az egeret\n-   Ha frusztrált vagy, ne üsd meg, és ne rázd meg a számítógépet, se a monitort!\n-   Tartsd be a [20/20/20szabály](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35) szabályt.\n-   Mit kell tenni a [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) csatornával 20-30 percenként (ingyenes bejelentkezést igényel a GoNoodle-on).\n-   Mielőtt a tanárt megkérdeznéd, kérdezd meg a társadat\n-   Beszélj halkan, hogy mindenki más is hallja a partnerét\n-   Használd a naplódat, írd le az érzéseid és a megoldásokat"
           ]
         },
         "aa328958-bd87-4dbb-8585-cb33f905051f": {
-          "description": "**Megbeszélés:**\nBeszéljétek meg a diákokkal, hogy milyen elvárásokat kell teljesíteniük, ha számítógépes laborban akarnak dolgozni. Fontos, hogy a diákok értsék a szabályokat. A megbeszélés témái lehet például a következők:\n\n-   Szabad-e futni a számítógépes laborban?\n-   Szabad-e zajosan sétálni a számítógépes laborban?\n-   Mit kell tenni, ha elakadnak egy feladvánnyal?\n-   Segít-e megütitni a számítógépet, ha frusztráltak?\n-   Hogyan készüljenek elő, ha számítógépes laborban akarnak dolgozni?"
+          "description": "**Megbeszélés:**\nBeszéljétek meg a diákokkal, hogy milyen elvárásokat kell teljesíteniük, ha számítógépes laborban akarnak dolgozni. Fontos, hogy a diákok értsék a szabályokat. A megbeszélés témái lehetnek például a következők:\n\n-   Szabad-e futni a számítógépes laborban?\n-   Szabad-e zajosan közlekedni a számítógépes laborban?\n-   Mit kell tenni, ha elakadnak egy feladvánnyal?\n-   Csökkenti-e a frusztrációt, ha megütik a számítógépet?\n-   Hogyan készüljenek elő, ha számítógépes laborban akarnak dolgozni?"
         },
         "95529f90-229b-4ce3-8f92-40528f8a7830": {
           "description": "#### Online feladványok előnézete\n\nVetíts ki egy feladványt a leckéből. Mutasd meg az osztálynak, hogyan kell a képre kattintani, és a megfelelő helyre helyezni a húzd és dobd művelettel. Kövess el hibát, szándékosan, például kattints a háttérre vagy dobd le a képet, mielőtt még az a megfelelő helyre kerülne. Kérj segítséget a diákoktól, amikor ilyen problémába ütközöl."
@@ -4793,16 +4793,16 @@
           "description": "_Cél:_ A tanulók megtanulnak online feladványokat megoldani a Code.org segítségével.\n\nEnnek a résznek a célja a szem-kéz koordináció gyakorlása, valamint a kattintás, a húzás és dobás készségek fejlesztése.  A tanulók a lépések sorrendjével is játszanak majd.\n\nA diákok feladatul kaphatják a húzás és dobás lépéseinek a lebontását, és felírhatják azokat a táblára. Például: \n\n1.  Mozgasd a nyilat a blokkhoz. \n2.  Kattints és tartsd lenyomva az egérgombot. \n3.  Mozgasd az egeret. \n4.  Engedd el a gombot.\n\nÍly módon a diákok gyakorolhatják az _algoritmus_ létrehozását, amellyel a következő leckékben fogunk foglalkozni."
         },
         "3e0ffbe7-276b-4951-8d84-fb5ee9c8092c": {
-          "description": "Szánj egy kis időt arra, hogy a diákok megtanuljanak, kattintani, húzni és dobni. Tanítsd meg nekik azon eszközökkel kapcsolatos nyelvezetet, amit a diákok a feladványok megoldása során használnak. Ha táblagép van, a diákok _érintőképernyőt_ fognak használni. Ha laptop van, akkor valószínűleg _érintőpadot_ fognak használni. A laborok általában asztali számítógépekkel vannak felszerelve, így ott _egeret_ használnak."
+          "description": "Szánj egy kis időt arra, hogy a diákok megtanuljanak, kattintani, húzni és dobni. Tanítsd meg nekik azoknak az eszközöknek a nyelvezetét, amelyeket a diákok a feladványok megoldásakor használnak. Ha táblagép van, a diákok _érintőképernyőt_ fognak használni. Ha laptop van, akkor valószínűleg _érintőpadot_ fognak használni. A laborok általában asztali számítógépekkel vannak felszerelve, így ott _egeret_ használnak."
         },
         "6610529a-20b8-4b76-83d1-1215f72ed51b": {
-          "description": "A tanárok fontos szerepet játszanak az informatika oktatásában, és abban hogy a tantermi környezet  támogató és izgalmas legyen. Online feladványok megoldásakor a tanár szerepe elsősorban a bátorítás és a támogatás. Az online feladványok diákközpontúak, ezért amikor a diákok elakadnak a tanárok lehetőleg ne lépjenek közbe. Néhány ötlet, hogy mit lehet tenni ilyenkor:",
+          "description": "A tanárok fontos szerepet játszanak az informatika oktatásában, és abban, hogy a tantermi környezet  támogató és izgalmas legyen. Online feladványok megoldásakor a tanár szerepe elsősorban a bátorítás és a támogatás. Az online feladványok diákközpontúak, ezért amikor a diákok elakadnak a tanárok lehetőleg ne lépjenek közbe. Néhány ötlet, hogy mit lehet tenni ilyenkor:",
           "tips": [
-            "Mutasd meg a diákok, hogy hogyan segítsenek az osztálytársaiknak:\n\n-   Ne ülj az osztálytársad székébe\n-   Ne használd az osztálytársad billentyűzetét\n-   Ne nyúlj az osztálytársad egeréhez\n-   Ügyelj arra, hogy mielőtt elmész az osztálytárs hangosan el tudja mondani neked a megoldást."
+            "Mutasd meg a diákok, hogy hogyan segítsenek az osztálytársaiknak:\n\n-   Ne ülj az osztálytársad székébe\n-   Ne használd az osztálytársad billentyűzetét\n-   Ne nyúlj az osztálytársad egeréhez\n-   Ügyelj arra, hogy mielőtt elmész az osztálytárs hangosan el tudja mondani neked a megoldást"
           ]
         },
         "66f2f042-aa67-41db-a756-4ab6e5623f77": {
-          "description": "A diákok végezzenek el egy [Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1) gyakorlatot.\n\n-   Bátorítsd a kérdésekkel/problémákkal küzdő diákokat, hogy először a társukat kérdezzék meg.\n-   A megválaszolatlan kérdéseket fel lehet tenni egy közeli csoportnak, akik esetleg már tudják a megoldást.\n-   Kérd meg a diákokat, mondják el, mi a probléma. Mi kellene hogy történjen? Mit történik? Mit árul el ez a probléma?\n-   Emlékeztesd a frusztrált diákokat, hogy a frusztráció egy lépés a tanulás útján, és hogy a kitartás kifizetődik.\n-   Ha a diák mindezek után még mindig el van akadva, tégy fel irányító kérdéseket, hogy magától vegye észre a hibát."
+          "description": "A diákok végezzenek el egy [Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1) gyakorlatot.\n\n-   Bátorítsd a kérdésekkel/problémákkal küzdő diákokat, hogy először a társukat kérdezzék meg.\n-   A megválaszolatlan kérdéseket fel lehet tenni egy közeli csoportnak, akik esetleg már tudják a megoldást.\n-   Kérd meg a diákokat, mondják el, mi a probléma. Mi kellene hogy történjen? Mit történik? Mit árul el ez a probléma?\n-   Emlékeztesd a frusztrált diákokat, hogy a frusztráció egy lépés a tanulás útján, és hogy a kitartás kifizetődik.\n-   Ha egy diák mindezek után még mindig el van akadva, tégy fel irányító kérdéseket, hogy magától vegye észre a hibát."
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "Szintek"
@@ -4815,7 +4815,7 @@
           "description": "Az óra végén adj minden diáknak egy [visszajelzés](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) lapot, és kérd meg őket, foglalják össze, mit tanultak, hogyan érezték magukat, mit tapasztaltak. A diákok rajzolhatnak, írhatnak vagy bármilyen más, számukra kényelmes módon kifejezhetik magukat. A teremből kifelé menet kérd el a diákoktól a visszajelzésüket tartalmazó lapot. Ha szeretnéd, kiteheted ezeket egy hirdetőtáblára vagy más jól látható helyen az iskolában, emlékeztetőül a Kódolás órájára."
         },
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
-          "description": "#### A Kódolás órája után\n\nA Kódolás órája után még számos módon lehet az informatika oktatását folytatni az 5. osztályban. Íme néhány ötlet:\n\n-   Végezzék el a diákok a [Code Studio számítástechnika alapok](http://code.org/educate/k5) tanfolyamokat. Ez a hat tanfolyam fiatal diákoknak készült. A diákok egy sor feladvánnyal dolgoznak, amelyek során megtanulnak kódolni, a pedagógusok pedig hozzáférnek hasznos óravázlatokhoz, amelyek segítségével a tanulást izgalmassá tudják tenni. A Code.org ingyenes szakmai továbbképzést kínál ezekhez a tanfolyamokhoz, akár online, akár személyes fromában.\n\n-   Hívj meg egy informatikust, hogy beszéljen az osztálynak a munkájáról. Nem ismersz helyi informatikusokat? Keress egy önkéntest az [önkéntes térképünkön](https://code.org/volunteer/local)."
+          "description": "#### A Kódolás órája után\n\nA Kódolás órája után még számos módon lehet a számítástechnika oktatását folytatni az 5. osztályban. Íme néhány ötlet:\n\n-   Végezzék el a diákok a [Code Studio A számítástechnika alapjai](http://code.org/educate/k5) tanfolyamokat. Ez a hat tanfolyam fiatal diákoknak készült. A diákok egy sor feladvánnyal dolgoznak, amelyek során megtanulnak kódolni, a pedagógusok pedig hozzáférnek hasznos óravázlatokhoz, amelyek segítségével a tanulást izgalmassá tudják tenni. A Code.org ingyenes szakmai továbbképzést kínál ezekhez a tanfolyamokhoz, akár online, akár személyes fromában.\n\n-   Hívj meg egy informatikust, hogy beszéljen az osztálynak a munkájáról. Nem ismersz helyi informatikusokat? Keress egy önkéntest az [önkéntes térképünkön](https://code.org/volunteer/local)."
         },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés",
@@ -4830,7 +4830,7 @@
           ]
         },
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
-          "progression_name": "Videó: Bevezetés a Sprite-laborba"
+          "progression_name": "Videó: Bevezetés a Sprite laborba"
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
           "tips": [
@@ -5063,7 +5063,7 @@
         },
         "0f9c9b1c-2d56-42f0-a8e5-76ed107c5210": {
           "name": "Szórakozás a For ciklussal",
-          "progression_name": "Mókázás for ciklussal - számítógép nélküli tevékenység"
+          "progression_name": "Mókázás for hurokkal - számítógép nélküli tevékenység"
         },
         "404887ef-1401-41a7-b88d-c07ab2d119cf": {
           "tips": [
@@ -5088,7 +5088,7 @@
           "progression_name": "Felülvizsgálat"
         },
         "aec92f2d-9b44-43b4-a418-3aebaf5af709": {
-          "progression_name": "Felfedezés: For ciklusok"
+          "progression_name": "Felfedezés: For hurkok"
         },
         "671c8e13-e78c-49f3-867b-45e7643d0026": {
           "progression_name": "Videó: Ciklusok"
@@ -5183,7 +5183,7 @@
           "progression_name": "Miniprojekt: Járványszimulátor"
         },
         "2085bbfe-07e4-4eb4-9830-520e979a04c8": {
-          "description": "_Szimulációk segítségével könnyen meg lehet ismerni olyan dolgokat, amelyek a való világban nehezen megfigyelhetőek. Segítenek a tudósoknak a problémákat megoldani, a problémamegoldás módját megtalálni, és új ötleteket biztonságosan és hatékonyan letesztelni. A szimulációtok segítségével megmutathatjátok, hogyan néz ki egy víruskitörés a Szörnyvárosban._"
+          "description": "_Szimulációk segítségével könnyen meg lehet ismerni olyan dolgokat, amelyek a való világban nehezen megfigyelhetőek. Segítenek a tudósoknak problémákat megoldani, a problémamegoldás módját megtalálni, és új ötleteket biztonságosan és hatékonyan letesztelni. A szimulációtok segítségével megmutathatjátok, hogyan néz ki egy víruskitörés a Szörnyvárosban._"
         },
         "915a5565-ed7e-4c02-812a-fa59ae6e5f4b": {
           "description": "**Beszéljétek meg:**\n\n-   Miért hasznosak a szimulációk a való világban? \n-   Hogyan segítenek a szimulációk megérteni a körülöttünk lévő világot? \n-   Hogyan lehet ötletek tesztelését szimulációk segítségével javítani? \n\nA megbeszélés célja a diákokkal megértetni, hogy szimulációk segítségével komplex rendszereket lehet modellezni interaktív módon. Azt is látniuk kell, hogy szimulációk segítségével az emberek gyorsan, olcsón és biztonságosan tesztelhetik ötleteiket. "
@@ -5313,7 +5313,7 @@
         },
         "07f0915c-fd00-4787-8a53-251613824cc8": {
           "tips": [
-            "Mutasd meg a diákok, hogy hogyan segítsenek az osztálytársaiknak:\n\n-   Ne ülj az osztálytársad székébe\n-   Ne használd az osztálytársad billentyűzetét\n-   Ne nyúlj az osztálytársad egeréhez\n-   Ügyelj arra, hogy mielőtt elmész az osztálytárs hangosan el tudja mondani neked a megoldást."
+            "Mutasd meg a diákok, hogy hogyan segítsenek az osztálytársaiknak:\n\n-   Ne ülj az osztálytársad székébe\n-   Ne használd az osztálytársad billentyűzetét\n-   Ne nyúlj az osztálytársad egeréhez\n-   Ügyelj arra, hogy mielőtt elmész az osztálytárs hangosan el tudja mondani neked a megoldást"
           ]
         },
         "52466cb4-0b52-4d09-aeb9-7db1a558001e": {
@@ -5383,7 +5383,7 @@
           "name": "Tükrözés"
         },
         "c8fd8e69-c19d-4264-90f8-44bb6909902d": {
-          "progression_name": "Videó: Ciklikusság"
+          "progression_name": "Videó: Elszabadul a pörgés"
         },
         "018fc5e4-ba55-4049-8faf-bfd0f596e796": {
           "name": "Ciklikusság"
@@ -5427,7 +5427,7 @@
           "progression_name": "Készségfejlesztés"
         },
         "9bffbabf-f624-49e2-b54b-52317b420600": {
-          "progression_name": "Video: Az ismétlő blokk használata"
+          "progression_name": "Video: Az ismétlés blokk használata"
         },
         "c96009cd-a4d7-491a-9ce5-433a04f9fd08": {
           "progression_name": "Készségfejlesztés"
@@ -5506,7 +5506,7 @@
           ]
         },
         "dd9fba95-8daa-47d3-8c05-3429f3f25b77": {
-          "progression_name": "Videó: Bevezetés a játéklaborba"
+          "progression_name": "Videó: Bevezetés a Play laborba"
         },
         "40e7d1f1-3b7e-4a2f-abd8-43d076a34702": {
           "progression_name": "Ingyenes Játék"
@@ -5559,9 +5559,9 @@
           ]
         },
         "2f105d16-8751-4faa-a550-ae4dc2ef5078": {
-          "description": "A tanárok fontos szerepet játszanak az informatika oktatásában, és abban hogy a tantermi környezet  támogató és izgalmas legyen. Online feladványok megoldásakor a tanár szerepe elsősorban a bátorítás és a támogatás. Az online feladványok diákközpontúak, ezért amikor a diákok elakadnak a tanárok lehetőleg ne lépjenek közbe. Néhány ötlet, hogy mit lehet tenni ilyenkor:",
+          "description": "A tanárok fontos szerepet játszanak az informatika oktatásában, és abban, hogy a tantermi környezet  támogató és izgalmas legyen. Online feladványok megoldásakor a tanár szerepe elsősorban a bátorítás és a támogatás. Az online feladványok diákközpontúak, ezért amikor a diákok elakadnak a tanárok lehetőleg ne lépjenek közbe. Néhány ötlet, hogy mit lehet tenni ilyenkor:",
           "tips": [
-            "Mutasd meg a diákok, hogy hogyan segítsenek az osztálytársaiknak:\n\n-   Ne ülj az osztálytársad székébe\n-   Ne használd az osztálytársad billentyűzetét\n-   Ne nyúlj az osztálytársad egeréhez\n-   Ügyelj arra, hogy mielőtt elmész az osztálytárs hangosan el tudja mondani neked a megoldást."
+            "Mutasd meg a diákok, hogy hogyan segítsenek az osztálytársaiknak:\n\n-   Ne ülj az osztálytársad székébe\n-   Ne használd az osztálytársad billentyűzetét\n-   Ne nyúlj az osztálytársad egeréhez\n-   Ügyelj arra, hogy mielőtt elmész az osztálytárs hangosan el tudja mondani neked a megoldást"
           ]
         },
         "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
@@ -5710,7 +5710,7 @@
           "progression_name": "Készségfejlesztés"
         },
         "801526d2-4615-4e46-90c1-5e3c08dfe223": {
-          "progression_name": "Video: Az ismétlő blokk használata"
+          "progression_name": "Video: Az ismétlés blokk használata"
         },
         "88d2b3e5-c082-46bc-8aad-915f42e9a2f1": {
           "progression_name": "Készségfejlesztés"
@@ -5737,7 +5737,7 @@
           "progression_name": "Készségfejlesztés"
         },
         "52392151-808b-48cd-a76b-554587d200ec": {
-          "progression_name": "Videó: Hurok a művészben"
+          "progression_name": "Videó: Hurkok a művészben"
         },
         "665ce7fe-d6ac-4c94-ae9c-3e35402d1a36": {
           "progression_name": "Készségfejlesztés"
@@ -5790,7 +5790,7 @@
           ]
         },
         "c37ca368-ea56-4b4d-a06c-1d2b94516bf8": {
-          "progression_name": "Videó: Bevezetés a játéklaborba"
+          "progression_name": "Videó: Bevezetés a Play laborba"
         },
         "4221ebcd-383b-44bf-a876-41e658bd8460": {
           "progression_name": "Ingyenes Játék"
@@ -6104,7 +6104,7 @@
           ]
         },
         "e8c36f82-146f-40bd-a83c-0f0d9fac33d0": {
-          "progression_name": "Videó: Bevezetés a játéklaborba"
+          "progression_name": "Videó: Bevezetés a Play laborba"
         },
         "55ade85d-fedf-4c9d-9046-4d1e6d813638": {
           "progression_name": "Készségfejlesztés"
@@ -6348,7 +6348,7 @@
           "progression_name": "Készségfejlesztés"
         },
         "4c88ec45-b2cb-4b4d-88de-2d676d507722": {
-          "progression_name": "Video: Az ismétlő blokk használata"
+          "progression_name": "Video: Az ismétlés blokk használata"
         },
         "1d8def71-6e6f-417d-bf76-bf420f509e2b": {
           "progression_name": "Készségfejlesztés"
@@ -6688,7 +6688,7 @@
           ]
         },
         "af6b778e-d5bf-4e72-bc11-ac8f839bf656": {
-          "progression_name": "Videó: Bevezetés a Sprite-laborba"
+          "progression_name": "Videó: Bevezetés a Sprite laborba"
         },
         "cc4cf469-32ea-4a00-9080-7726f48f08c6": {
           "progression_name": "Előrejelzés"
@@ -6776,25 +6776,25 @@
           "name": "Tükrözés"
         },
         "3784bbbc-0c26-4337-9d77-805b9a2bb6ae": {
-          "progression_name": "Videó: Táncparti bemelegítés"
+          "progression_name": "Videó: Táncos buli bemelegítés"
         },
         "5283ba21-7c54-44c0-a4c2-00c1f5d240e6": {
           "progression_name": "Gyakorlás"
         },
         "1a057037-bf26-4ab2-830f-80a5d94f87c7": {
-          "progression_name": "Videó: Táncparti események"
+          "progression_name": "Videó: Táncos buli események"
         },
         "0200789e-428c-4393-84ee-6c7a48948c36": {
           "progression_name": "Események"
         },
         "ec1bf1ca-d9d0-41e3-8234-638ae029834d": {
-          "progression_name": "Videó: Táncparti ütemek"
+          "progression_name": "Videó: Táncos buli ütemek"
         },
         "1e1080ab-15de-4319-9e76-f6c99f8ebe60": {
           "progression_name": "Ütem"
         },
         "5d59e7e4-25f4-4278-b777-878c7df2681b": {
-          "progression_name": "Videó: Táncparti tulajdonságok"
+          "progression_name": "Videó: Táncos buli tulajdonságok"
         },
         "7e0f9f67-19cb-455a-bd75-d771183b8773": {
           "tips": [
@@ -6803,7 +6803,7 @@
           "progression_name": "Tulajdonságok"
         },
         "97583afa-79d7-487a-a962-9366e1d17bba": {
-          "progression_name": "Videó: Táncparti indul a táncparti!"
+          "progression_name": "Videó: Táncos buli indul a táncos buli!"
         },
         "86741327-b7d6-4dfb-b703-f23be6b2a7dc": {
           "progression_name": "Ingyenes Játék"
@@ -7088,7 +7088,7 @@
           "progression_name": "Készségfejlesztés"
         },
         "d6f5eb3b-e998-4865-88d4-35c8381a7739": {
-          "progression_name": "Videó: Minecraft - Hurkok megismétlése"
+          "progression_name": "Videó: Minecraft - hurkok megismétlése"
         },
         "08364a41-ef59-40a4-b3ec-e55ca40c2e6f": {
           "progression_name": "Készségfejlesztés"
@@ -7223,7 +7223,7 @@
           "progression_name": "Felülvizsgálat"
         },
         "7d22dea9-9b88-47a4-a697-1c836bf6f2e5": {
-          "progression_name": "Felfedezés: For ciklusok"
+          "progression_name": "Felfedezés: For hurkok"
         },
         "387d8104-557d-4700-bdef-2c8ea2855b07": {
           "progression_name": "Videó: Ciklusok"
@@ -7305,9 +7305,9 @@
           ]
         },
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
-          "description": "A tanárok fontos szerepet játszanak az informatika oktatásában, és abban hogy a tantermi környezet  támogató és izgalmas legyen. Online feladványok megoldásakor a tanár szerepe elsősorban a bátorítás és a támogatás. Az online feladványok diákközpontúak, ezért amikor a diákok elakadnak a tanárok lehetőleg ne lépjenek közbe. Néhány ötlet, hogy mit lehet tenni ilyenkor:",
+          "description": "A tanárok fontos szerepet játszanak az informatika oktatásában, és abban, hogy a tantermi környezet  támogató és izgalmas legyen. Online feladványok megoldásakor a tanár szerepe elsősorban a bátorítás és a támogatás. Az online feladványok diákközpontúak, ezért amikor a diákok elakadnak a tanárok lehetőleg ne lépjenek közbe. Néhány ötlet, hogy mit lehet tenni ilyenkor:",
           "tips": [
-            "Mutasd meg a diákok, hogy hogyan segítsenek az osztálytársaiknak:\n\n-   Ne ülj az osztálytársad székébe\n-   Ne használd az osztálytársad billentyűzetét\n-   Ne nyúlj az osztálytársad egeréhez\n-   Ügyelj arra, hogy mielőtt elmész az osztálytárs hangosan el tudja mondani neked a megoldást."
+            "Mutasd meg a diákok, hogy hogyan segítsenek az osztálytársaiknak:\n\n-   Ne ülj az osztálytársad székébe\n-   Ne használd az osztálytársad billentyűzetét\n-   Ne nyúlj az osztálytársad egeréhez\n-   Ügyelj arra, hogy mielőtt elmész az osztálytárs hangosan el tudja mondani neked a megoldást"
           ]
         },
         "bde027df-b2a3-4252-980a-7e8493d898e6": {
@@ -7328,7 +7328,7 @@
         },
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
           "tips": [
-            "Mutasd meg a diákok, hogy hogyan segítsenek az osztálytársaiknak:\n\n-   Ne ülj az osztálytársad székébe\n-   Ne használd az osztálytársad billentyűzetét\n-   Ne nyúlj az osztálytársad egeréhez\n-   Ügyelj arra, hogy mielőtt elmész az osztálytárs hangosan el tudja mondani neked a megoldást."
+            "Mutasd meg a diákok, hogy hogyan segítsenek az osztálytársaiknak:\n\n-   Ne ülj az osztálytársad székébe\n-   Ne használd az osztálytársad billentyűzetét\n-   Ne nyúlj az osztálytársad egeréhez\n-   Ügyelj arra, hogy mielőtt elmész az osztálytárs hangosan el tudja mondani neked a megoldást"
           ]
         },
         "1ed021eb-9033-4d39-98d7-e9e245a7f785": {
@@ -7449,7 +7449,7 @@
           "progression_name": "Készségfejlesztés"
         },
         "dead7fa5-406d-419c-a084-3a913cbd2499": {
-          "progression_name": "Video: Az ismétlő blokk használata"
+          "progression_name": "Video: Az ismétlés blokk használata"
         },
         "08049c61-d346-4c06-96f3-58775b4bf69d": {
           "progression_name": "Készségfejlesztés"
@@ -7481,7 +7481,7 @@
           "progression_name": "Készségfejlesztés"
         },
         "eabc47c6-9f94-4b32-aab1-4a138064532b": {
-          "progression_name": "Videó: Hurok a művészben"
+          "progression_name": "Videó: Hurkok a művészben"
         },
         "94271c9b-4000-4e8c-a99c-9a04d851549e": {
           "progression_name": "Készségfejlesztés"
@@ -7534,7 +7534,7 @@
           ]
         },
         "dbb4fe5e-fe4d-40d4-8509-c11f826128ae": {
-          "progression_name": "Videó: Bevezetés a játéklaborba"
+          "progression_name": "Videó: Bevezetés a Play laborba"
         },
         "708df6be-8599-4a1a-993b-13ca6e874d5c": {
           "progression_name": "Ingyenes Játék"
@@ -7592,7 +7592,7 @@
           ]
         },
         "331e6451-5472-4491-bf96-d630d7f902a4": {
-          "progression_name": "Videó: Bevezetés a Sprite-laborba"
+          "progression_name": "Videó: Bevezetés a Sprite laborba"
         },
         "75de5d52-becb-4805-82d8-5be30d0dca7d": {
           "progression_name": "Előrejelzés"
@@ -7798,7 +7798,7 @@
           "progression_name": "Készségfejlesztés"
         },
         "8497e55d-30f4-4d84-8c96-bf6caa210f48": {
-          "progression_name": "Videó: Minecraft - Hurkok megismétlése"
+          "progression_name": "Videó: Minecraft - hurkok megismétlése"
         },
         "4130a39a-0232-45ed-b6c7-1f2badada9ee": {
           "progression_name": "Készségfejlesztés"
@@ -8348,16 +8348,16 @@
           "progression_name": "Safari alkalmazás"
         },
         "6837e50f-be66-4db0-a31a-fff75d03b12b": {
-          "name": "Riasztórendszer autóvezetőknek"
+          "name": "Riasztórendszer vezetőknek"
         },
         "87b65d20-bf70-4db3-ae6f-2333f970ad8c": {
           "progression_name": "Raspado ajánló"
         },
         "1d2520a0-dcb3-41e9-b121-7bf0b221a87a": {
-          "progression_name": "Riasztórendszer autóvezetőknek"
+          "progression_name": "Riasztórendszer vezetőknek"
         },
         "29dce9c5-577d-4e2c-9d4b-b8bf0e4b18e8": {
-          "progression_name": "Riasztórendszer autóvezetőknek"
+          "progression_name": "Riasztórendszer vezetőknek"
         },
         "4e10be5f-60ad-4bae-913d-7a157e519447": {
           "tips": [
@@ -8535,7 +8535,7 @@
           "tips": [
             null
           ],
-          "progression_name": "MI alkalmazás - alkalmazáslabor tervezése"
+          "progression_name": "MI alkalmazás - App Lab tervezése"
         },
         "73c0c357-7096-42d6-b457-e88276905578": {
           "name": "Bemelegítés"
@@ -9143,7 +9143,7 @@
           "progression_name": "Események és tulajdonságok"
         },
         "12af028a-bc38-49f4-8fda-8cd49963e102": {
-          "progression_name": "Alkalmazás éítése"
+          "progression_name": "Alkalmazás építése"
         },
         "053cf5c9-1dd1-4da7-8fca-82dd5780c4b0": {
           "tips": [
@@ -9390,7 +9390,7 @@
           "tips": [
             null
           ],
-          "progression_name": "For ciklusok és színes LED-ek"
+          "progression_name": "For hurkok és színes LED-ek"
         },
         "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
           "tips": [
@@ -10555,7 +10555,7 @@
           "progression_name": "Projektmunka"
         },
         "187ab288-8997-4b05-90b2-993b1d29c6ba": {
-          "name": "Társértékelés"
+          "name": "Társ értékelése"
         },
         "4bfb9e2c-557b-464a-9a07-7190bc4dce87": {
           "tips": [
@@ -10744,7 +10744,7 @@
           "progression_name": "Bevezetés a Flyer-játékba"
         },
         "b67bbd2c-2139-48e4-8002-a7f3f048052a": {
-          "progression_name": "Saját Sprite-ok készítése"
+          "progression_name": "Saját sprite-ok készítése"
         },
         "91ab7cf4-19a7-4424-b59e-c806057dbb65": {
           "progression_name": "Játékosvezérlők"
@@ -11537,13 +11537,16 @@
           "progression_name": "Felülvizsgálat: HTML"
         },
         "db6b9679-26c9-45e7-9f82-03b3a92d3abf": {
-          "progression_name": "Feladat: Lista"
+          "progression_name": "Feladat: Listák"
         },
         "f1f2db2f-90f0-454f-a438-ad0ef1d6f27a": {
           "progression_name": "Saját oldal kódolása"
         },
         "b8b06d7c-cb56-4412-85ad-c68fb0953dc0": {
           "progression_name": "Saját oldal felülvizsgálata"
+        },
+        "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c": {
+          "name": "Társ visszajelzése"
         },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
           "tips": [
@@ -11655,7 +11658,7 @@
           "progression_name": "Saját oldal felülvizsgálata"
         },
         "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
-          "name": "Társ visszajelzést"
+          "name": "Társ visszajelzése"
         },
         "8c10515f-4ba5-4629-b5e0-e44975336298": {
           "tips": [
@@ -11819,7 +11822,7 @@
           "progression_name": "Webhelyének közzététele"
         },
         "ff09ae02-5fc8-4ac3-9e08-18a25ffd0d76": {
-          "name": "Társértékelés"
+          "name": "Társ értékelése"
         },
         "10b08619-0a72-442e-a75e-13b6cead2e90": {
           "tips": [
