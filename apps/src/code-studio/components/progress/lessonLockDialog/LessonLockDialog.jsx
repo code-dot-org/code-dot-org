@@ -33,6 +33,7 @@ function LessonLockDialog({
 
   const [clientLockState, setClientLockState] = useState([]);
   const [saving, setSaving] = useState(false);
+  const [error, setError] = useState(null);
 
   // The data returned from useGetLockState is the state that's currently saved
   // on the server associated with the given unit, lesson, and section. We also
@@ -77,10 +78,19 @@ function LessonLockDialog({
   const handleSave = async () => {
     setSaving(true);
     const csrfToken = $('meta[name="csrf-token"]').attr('content');
-    await saveLockState(serverLockState, clientLockState, csrfToken);
-    // Refresh the lock information on the script overview page and teacher panel
-    await refetchSectionLockStatus(selectedSectionId, unitId);
-    handleClose();
+    const saveLockStateResponse = await saveLockState(
+      serverLockState,
+      clientLockState,
+      csrfToken
+    );
+    if (saveLockStateResponse.ok) {
+      // Refresh the lock information on the script overview page and teacher panel
+      await refetchSectionLockStatus(selectedSectionId, unitId);
+      handleClose();
+    } else {
+      setSaving(false);
+      setError(commonMsg.errorSavingLockStatus());
+    }
   };
 
   //
@@ -221,6 +231,7 @@ function LessonLockDialog({
         {renderStudentTable()}
       </div>
       <div style={styles.buttonContainer}>
+        {error && <span style={styles.error}>{error}</span>}
         <button
           type="button"
           style={progressStyles.baseButton}
@@ -296,6 +307,10 @@ const styles = {
   },
   hidden: {
     display: 'none'
+  },
+  error: {
+    color: color.red,
+    fontStyle: 'italic'
   }
 };
 
