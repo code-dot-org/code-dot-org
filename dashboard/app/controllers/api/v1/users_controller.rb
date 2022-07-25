@@ -43,7 +43,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         name: current_user.short_name,
         is_admin: current_user.admin,
         is_signed_in: true,
-        owned_sections: current_user.owned_sections,
+        owned_sections: current_user.owned_section_ids,
       }
     else
       raise CanCan::AccessDenied
