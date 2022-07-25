@@ -99,11 +99,6 @@ Lint/EmptyClass:
 Lint/EmptyFile:
   Enabled: false
 
-# Offense count: 4
-# This cop supports safe auto-correction (--auto-correct).
-Lint/ErbNewArguments:
-  Enabled: false
-
 # Offense count: 2
 Lint/FloatComparison:
   Enabled: false
@@ -589,11 +584,6 @@ Style/KeywordParametersOrder:
 Style/Lambda:
   Enabled: false
 
-# Offense count: 49
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/MapToHash:
-  Enabled: false
-
 # Offense count: 7
 Style/MissingRespondToMissing:
   Enabled: false
@@ -720,11 +710,6 @@ Style/RescueStandardError:
 # Offense count: 17
 # This cop supports unsafe auto-correction (--auto-correct-all).
 Style/SingleArgumentDig:
-  Enabled: false
-
-# Offense count: 38
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/SlicingWithRange:
   Enabled: false
 
 # Offense count: 38
