@@ -12,14 +12,14 @@ Background:
     Then I wait until element "#finishButton" is enabled
 
   Scenario: Finish button does not become enabled if tests fail
-    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/12?noautoplay=true"
+    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/11?noautoplay=true"
     And I wait to see "#finishButton"
     Then I press "testButton"
     And I wait until element ".javalab-console" contains text "[JAVALAB] Program completed."
     Then element "#finishButton" is disabled
 
   Scenario: Finish button becomes enabled if tests succeed
-    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/13?noautoplay=true"
+    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/12?noautoplay=true"
     And I wait to see "#finishButton"
     Then I press "testButton"
     And I wait until element ".javalab-console" contains text "[JAVALAB] Program completed."
