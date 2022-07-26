@@ -97,7 +97,7 @@ class Video < ApplicationRecord
 
     path = dashboard_dir('public', 'c', 'video_thumbnails', "#{key}.jpg")
     url = "http://img.youtube.com/vi/#{youtube_code}/mqdefault.jpg"
-    IO.copy_stream(URI.open(url), path)
+    IO.copy_stream(URI.parse(url).open, path)
   end
 
   def youtube_url(args={})
