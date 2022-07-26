@@ -71,7 +71,7 @@ export function apiValidateType(
           customWarning = `${funcName}() ${varName} parameter value (${varValue}) is a reserved ${expectedType}. Please use a different ${expectedType}.`;
         } else if (!validPins.includes(varValue)) {
           outputError(
-            `pin parameter value (${varValue}) is not a valid pinid. Please use a valid pinid.`
+            `${funcName}() ${varName} parameter value (${varValue}) is not a valid pinid. Please use a valid pinid.`
           );
           return false;
         }
