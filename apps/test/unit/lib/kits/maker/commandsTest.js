@@ -23,7 +23,8 @@ describe('maker/commands.js', () => {
     stubBoardController = sinon.createStubInstance(FakeBoard);
     injectBoardController(stubBoardController);
     errorHandler = {
-      outputWarning: sinon.spy()
+      outputWarning: sinon.spy(),
+      outputError: sinon.spy()
     };
     injectErrorHandler(errorHandler);
   });
@@ -45,7 +46,14 @@ describe('maker/commands.js', () => {
         'pinMode() pin parameter value (1) is a reserved pinid. Please use a different pinid.'
       );
     });
-
+    
+    it('display error when invalid pin 13 is used', () => {
+      pinMode({pin: 13, mode: 'input'});
+      expect(
+        'pinMode() pin parameter value (13) is not a valid pinid. Please use a different pinid.'
+      );
+    });
+    
     it(`maps 'input' mode to 0`, () => {
       pinMode({pin: 0, mode: 'input'});
       expect(stubBoardController.pinMode).to.have.been.calledWith(0, 0);
