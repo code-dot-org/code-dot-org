@@ -19,13 +19,11 @@ export function injectErrorHandler(handler) {
 
 /** @see JavaScriptModeErrorHandler#outputError */
 export function outputError(...args) {
-  console.log('calling outputError  ' + args);
   errorHandler.outputError(...args);
 }
 
 /** @see JavaScriptModeErrorHandler#outputWarning */
 export function outputWarning(...args) {
-  console.log('calling outputWarning  ' + args);
   errorHandler.outputWarning(...args);
 }
 
