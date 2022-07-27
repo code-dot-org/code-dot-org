@@ -22,7 +22,6 @@ export function injectBoardController(boardController) {
  * @param {string} opts.mode
  */
 export function pinMode(opts) {
-  apiValidateType(opts, 'pinMode', 'mode', opts.mode, 'string');
   if (!apiValidateType(opts, 'pinMode', 'pin', opts.pin, 'pinid')) {
     return;
   }
