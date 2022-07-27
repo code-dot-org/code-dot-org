@@ -19,11 +19,13 @@ export function injectErrorHandler(handler) {
 
 /** @see JavaScriptModeErrorHandler#outputError */
 export function outputError(...args) {
+  console.log('calling outputError  ' + args);
   errorHandler.outputError(...args);
 }
 
 /** @see JavaScriptModeErrorHandler#outputWarning */
 export function outputWarning(...args) {
+  console.log('calling outputWarning  ' + args);
   errorHandler.outputWarning(...args);
 }
 
@@ -64,16 +66,34 @@ export function apiValidateType(
           typeof varValue === 'boolean';
         break;
       case 'pinid':
+        var validPins = [
+          'A0',
+          'A1',
+          'A2',
+          'A3',
+          'A4',
+          'A5',
+          'A6',
+          'A7',
+          0,
+          1,
+          2,
+          3,
+          6,
+          9,
+          10,
+          12
+        ];
         var reservedPins = ['A2', 'A3', 'A7', 1, 9, 10];
-        var validPins = [0, 2, 3, 6, 12, 'A0', 'A1', 'A4', 'A5', 'A6'];
-        properType = validPins.includes(varValue);
-        if (reservedPins.includes(varValue)) {
-          customWarning = `${funcName}() ${varName} parameter value (${varValue}) is a reserved ${expectedType}. Please use a different ${expectedType}.`;
-        } else if (!validPins.includes(varValue)) {
+        properType =
+          validPins.includes(varValue) && !reservedPins.includes(varValue);
+        if (!validPins.includes(varValue)) {
           outputError(
-            `${funcName}() ${varName} parameter value (${varValue}) is not a valid pinid. Please use a valid pinid.`
+            `${funcName}() ${varName} parameter value (${varValue}) is not a valid ${expectedType}. Please use a different ${expectedType}.`
           );
           return false;
+        } else if (reservedPins.includes(varValue)) {
+          customWarning = `${funcName}() ${varName} parameter value (${varValue}) is a reserved ${expectedType}. Please use a different ${expectedType}.`;
         }
         break;
       case 'number':
