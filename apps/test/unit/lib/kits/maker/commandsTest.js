@@ -49,7 +49,7 @@ describe('maker/commands.js', () => {
 
     it('display error when invalid pin 13 is used', () => {
       pinMode({pin: 13, mode: 'input'});
-      expect(
+      expect(errorHandler.outputError).to.have.been.calledWith(
         'pinMode() pin parameter value (13) is not a valid pinid. Please use a different pinid.'
       );
     });
