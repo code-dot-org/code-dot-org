@@ -6285,7 +6285,7 @@ en:
         hello-world-draft:
           lesson_groups: {}
           name: hello-world-draft
-          title: '"Hello, World!"'
+          title: Hello, World!
           description_audience: ''
           description_short: ''
           description: ''
