@@ -177,10 +177,9 @@ class FilesApi < Sinatra::Base
   # Only from codeprojects.org domain
   # Deprecated in favor of the URL below
   #
-  get %r{/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id, filename|
+  get %r{/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id|
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
-
-    get_file('files', encrypted_channel_id, filename, true)
+    redirect "/projects/weblab#{request.path_info}"
   end
 
   #
@@ -206,7 +205,7 @@ class FilesApi < Sinatra::Base
   get %r{/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id|
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
 
-    redirect "#{request.path_info}/"
+    redirect "/projects/weblab#{request.path_info}/"
   end
 
   #
