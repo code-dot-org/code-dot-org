@@ -17,7 +17,6 @@ import {highlightSelectionMatches, searchKeymap} from '@codemirror/search';
 import {commentKeymap} from '@codemirror/comment';
 import {rectangularSelection} from '@codemirror/rectangular-selection';
 import {defaultHighlightStyle} from '@codemirror/highlight';
-import {java} from '@codemirror/lang-java';
 
 // Extensions for codemirror. Based on @codemirror/basic-setup, with javascript-specific
 // extensions removed (lint, autocomplete).
@@ -44,7 +43,7 @@ const editorSetup = [
     ...commentKeymap,
     indentWithTab
   ]),
-  java(),
+  //java(),
   EditorState.tabSize.of(2)
 ];
 
