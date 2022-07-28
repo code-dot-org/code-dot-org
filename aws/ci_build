@@ -71,7 +71,7 @@ def build
     count = [1, count].max
 
     log = `git log --pretty=format:"%h %s (%an)" -n #{count}`
-    IO.write(deploy_dir('rebuild'), log)
+    File.write(deploy_dir('rebuild'), log)
 
     git_revision = RakeUtils.git_revision
     git_revision_short = GitUtils.git_revision_short
