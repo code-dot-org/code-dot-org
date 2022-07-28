@@ -38,6 +38,7 @@ import {hasQueryParam} from '@cdo/apps/code-studio/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import {getDefaultFileContents} from './JavalabFileHelper';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
+import {java} from '@codemirror/lang-java';
 
 const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
@@ -140,6 +141,8 @@ class JavalabEditor extends React.Component {
     this.editorEditableCompartment = new Compartment();
     this.editorReadOnlyCompartment = new Compartment();
 
+    this.languageCompartment = new Compartment();
+
     // fileMetadata is a dictionary of file key -> filename.
     let fileMetadata = {};
     // tab order is an ordered list of file keys.
@@ -221,15 +224,17 @@ class JavalabEditor extends React.Component {
       for (const tabKey in fileMetadata) {
         if (!this.editors[tabKey]) {
           // create an editor if it doesn't exist yet
+          console.log(tabKey);
+          const isJava = tabKey.endsWith('.java');
           const source = this.props.sources[fileMetadata[tabKey]];
           const doc = (source && source.text) || '';
-          this.createEditor(tabKey, doc);
+          this.createEditor(tabKey, doc, isJava);
         }
       }
     }
   }
 
-  createEditor(key, doc) {
+  createEditor(key, doc, isJava) {
     const {displayTheme, isReadOnlyWorkspace} = this.props;
     const extensions = [...editorSetup];
 
@@ -255,6 +260,12 @@ class JavalabEditor extends React.Component {
         EditorState.readOnly.of(isReadOnlyWorkspace)
       )
     );
+
+    if (isJava) {
+      this.languageCompartment.of(java);
+    }
+
+    extensions.push(this.languageCompartment);
 
     this.editors[key] = new EditorView({
       state: EditorState.create({
