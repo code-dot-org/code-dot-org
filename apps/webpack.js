@@ -260,7 +260,17 @@ if (envConstants.COVERAGE) {
 // Temporary hack to access sourcemaps
 // Also max_old_space_size in webpack (was updated temporarily to fix sourcemaps)
 function devtool(options) {
-  return 'eval-source-map';
+  if (process.env.CI) {
+    return 'eval';
+  } else if (options && options.minify) {
+    return 'source-map';
+  } else if (process.env.DEBUG_MINIFIED) {
+    return 'eval-source-map';
+  } else if (process.env.DEV) {
+    return 'cheap-inline-source-map';
+  } else {
+    return 'inline-source-map';
+  }
 }
 
 var storybookConfig = _.extend({}, baseConfig, {
@@ -436,7 +446,8 @@ function create(options) {
         'process.env.NODE_ENV': JSON.stringify(
           envConstants.NODE_ENV || 'development'
         ),
-        PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode)
+        PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
+        DEBUG_MINIFIED: envConstants.DEBUG_MINIFIED || 0
       }),
       new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
     ].concat(plugins),
