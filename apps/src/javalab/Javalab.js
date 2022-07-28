@@ -25,7 +25,6 @@ import javalab, {
   setValidationPassed,
   setHasRunOrTestedCode
 } from './javalabRedux';
-import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './JavabuilderConnection';
@@ -44,8 +43,6 @@ import {
 } from '../containedLevels';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
-import Playground from './playground/Playground';
-import PlaygroundVisualizationColumn from './playground/PlaygroundVisualizationColumn';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -147,16 +144,6 @@ Javalab.prototype.init = function(config) {
       );
       this.visualization = <TheaterVisualizationColumn />;
       break;
-    case CsaViewMode.PLAYGROUND:
-      this.miniApp = new Playground(
-        this.onOutputMessage,
-        this.onNewlineMessage,
-        onJavabuilderMessage,
-        this.level.name,
-        this.setIsRunning
-      );
-      this.visualization = <PlaygroundVisualizationColumn />;
-      break;
   }
 
   const onMount = () => {
@@ -203,7 +190,7 @@ Javalab.prototype.init = function(config) {
     isSubmitted: !!config.level.submitted
   });
 
-  registerReducers({javalab, playground});
+  registerReducers({javalab});
   // If we're in editBlock mode (for editing start_sources) we set up the save button to save
   // the project file information into start_sources on the level.
   if (config.level.editBlocks) {
