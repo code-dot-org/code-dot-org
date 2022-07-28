@@ -9,15 +9,18 @@ apt_repository 'brightbox-ruby-ng' do
   retries 3
 end
 
-ruby_version = node['cdo-ruby']['version']
-packages = %W(
-  build-essential
-  ruby#{ruby_version}
-  ruby#{ruby_version}-dev
-)
-packages.each do |name|
-  apt_package name do
-    action :upgrade
+ruby_versions = [node['cdo-ruby']['version']]
+ruby_versions << node['cdo-ruby']['new_version'] if node['cdo-ruby']['new_version']&.present?
+ruby_versions.each do |ruby_version|
+  packages = %W(
+    build-essential
+    ruby#{ruby_version}
+    ruby#{ruby_version}-dev
+  )
+  packages.each do |name|
+    apt_package name do
+      action :upgrade
+    end
   end
 end
 
