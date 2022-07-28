@@ -41,6 +41,10 @@ const SET_ORDERED_TAB_KEYS = 'javalab/SET_ORDERED_TAB_KEYS';
 const SET_ALL_EDITOR_METADATA = 'javalab/SET_EDITOR_METADATA';
 const OPEN_EDITOR_DIALOG = 'javalab/OPEN_EDITOR_DIALOG';
 const CLOSE_EDITOR_DIALOG = 'javalab/CLOSE_EDITOR_DIALOG';
+const SET_NEW_FILE_ERROR = 'javalab/SET_NEW_FILE_ERROR';
+const CLEAR_NEW_FILE_ERROR = 'javalab/CLEAR_NEW_FILE_ERROR';
+const SET_RENAME_FILE_ERROR = 'javalab/SET_RENAME_FILE_ERROR';
+const CLEAR_RENAME_FILE_ERROR = 'javalab/CLEAR_RENAME_FILE_ERROR';
 
 export const getTabKey = index => `file-${index}`;
 
@@ -98,7 +102,9 @@ export const initialState = {
   hasOpenCodeReview: false,
   isCommitSaveInProgress: false,
   hasCommitSaveError: false,
-  editorOpenDialogName: null
+  editorOpenDialogName: null,
+  newFileError: null,
+  renameFileError: null
 };
 
 // Action Creators
@@ -378,6 +384,24 @@ export const setAllEditorMetadata = (
   };
 };
 
+export const setNewFileError = error => ({
+  type: SET_NEW_FILE_ERROR,
+  error: error
+});
+
+export const clearNewFileError = () => ({
+  type: CLEAR_NEW_FILE_ERROR
+});
+
+export const setRenameFileError = error => ({
+  type: SET_RENAME_FILE_ERROR,
+  error: error
+});
+
+export const clearRenameFileError = () => ({
+  type: CLEAR_RENAME_FILE_ERROR
+});
+
 // Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
@@ -640,5 +664,34 @@ export default function reducer(state = initialState, action) {
       editorOpenDialogName: null
     };
   }
+
+  if (action.type === SET_NEW_FILE_ERROR) {
+    return {
+      ...state,
+      newFileError: action.error
+    };
+  }
+
+  if (action.type === CLEAR_NEW_FILE_ERROR) {
+    return {
+      ...state,
+      newFileError: null
+    };
+  }
+
+  if (action.type === SET_RENAME_FILE_ERROR) {
+    return {
+      ...state,
+      renameFileError: action.error
+    };
+  }
+
+  if (action.type === CLEAR_RENAME_FILE_ERROR) {
+    return {
+      ...state,
+      renameFileError: null
+    };
+  }
+
   return state;
 }
