@@ -17,14 +17,14 @@ import {
   getTabKey,
   setAllEditorMetadata,
   openEditorDialog,
-  closeEditorDialog
+  closeEditorDialog,
+  clearRenameFileError,
+  setNewFileError,
+  clearNewFileError,
+  setRenameFileError
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
-import PaneHeader, {
-  PaneSection,
-  PaneButton
-} from '@cdo/apps/templates/PaneHeader';
 import {EditorView} from '@codemirror/view';
 import {editorSetup, lightMode} from './editorSetup';
 import {EditorState, Compartment} from '@codemirror/state';
@@ -32,26 +32,22 @@ import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
 import {oneDark} from '@codemirror/theme-one-dark';
 import color from '@cdo/apps/util/color';
 import {Tab, Nav, NavItem} from 'react-bootstrap';
-import NameFileDialog from './NameFileDialog';
-import JavalabDialog from './JavalabDialog';
-import CommitDialog from './CommitDialog';
 import JavalabEditorTabMenu from './JavalabEditorTabMenu';
 import JavalabFileExplorer from './JavalabFileExplorer';
-import Backpack from './Backpack';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {hasQueryParam} from '@cdo/apps/code-studio/utils';
-import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import {getDefaultFileContents} from './JavalabFileHelper';
-import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
-import {JavalabEditorDialog} from './JavalabEditorDialogManager';
+import JavalabEditorDialogManager, {
+  JavalabEditorDialog
+} from './JavalabEditorDialogManager';
+import JavalabEditorHeader from './JavalabEditorHeader';
 
 const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
 const HEADER_OFFSET = 63;
-const DEFAULT_FILE_NAME = '.java';
 const EDITOR_LOAD_PAUSE_MS = 100;
 
 // Custom theme overrides (exported for tests)
@@ -109,8 +105,6 @@ class JavalabEditor extends React.Component {
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
     hasOpenCodeReview: PropTypes.bool,
     isViewingOwnProject: PropTypes.bool,
-    backpackEnabled: PropTypes.bool,
-    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     codeOwnersName: PropTypes.string,
     fileMetadata: PropTypes.object.isRequired,
     setFileMetadata: PropTypes.func.isRequired,
@@ -122,9 +116,12 @@ class JavalabEditor extends React.Component {
     editTabKey: PropTypes.string,
     setEditTabKey: PropTypes.func.isRequired,
     setAllEditorMetadata: PropTypes.func.isRequired,
-    editorOpenDialogName: PropTypes.oneOf(Object.values(JavalabEditorDialog)),
     openEditorDialog: PropTypes.func.isRequired,
-    closeEditorDialog: PropTypes.func.isRequired
+    closeEditorDialog: PropTypes.func.isRequired,
+    setNewFileError: PropTypes.func.isRequired,
+    clearNewFileError: PropTypes.func.isRequired,
+    setRenameFileError: PropTypes.func.isRequired,
+    clearRenameFileError: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -140,7 +137,6 @@ class JavalabEditor extends React.Component {
     this.onCreateFile = this.onCreateFile.bind(this);
     this.onDeleteFile = this.onDeleteFile.bind(this);
     this.onOpenFile = this.onOpenFile.bind(this);
-    this.onOpenCommitDialog = this.onOpenCommitDialog.bind(this);
     this.updateVisibility = this.updateVisibility.bind(this);
     this.updateValidation = this.updateValidation.bind(this);
     this.updateFileType = this.updateFileType.bind(this);
@@ -159,8 +155,6 @@ class JavalabEditor extends React.Component {
       showMenu: false,
       contextTarget: null,
       menuPosition: {},
-      newFileError: null,
-      renameFileError: null,
       fileToDelete: null
     };
   }
@@ -382,10 +376,9 @@ class JavalabEditor extends React.Component {
     });
   }
 
-  // Checks if the given file name is valid and if not,
-  // updates the state with the appropriate error message.
-  // Returns whether or not the file name is valid.
-  validateFileName(filename, errorStateKey) {
+  // Checks if the given file name is valid and if not, calls the given setErrorMessage
+  // callback with the appropriate error message. Returns whether or not the file name is valid.
+  validateFileName(filename, setErrorMessage) {
     let errorMessage;
 
     if (!filename) {
@@ -403,26 +396,30 @@ class JavalabEditor extends React.Component {
     }
 
     if (errorMessage) {
-      this.setState({
-        [errorStateKey]: errorMessage
-      });
+      setErrorMessage(errorMessage);
     }
 
     return !errorMessage;
   }
 
   onRenameFile(newFilename) {
+    const {
+      fileMetadata,
+      setFileMetadata,
+      editTabKey,
+      renameFile,
+      closeEditorDialog,
+      setRenameFileError,
+      clearRenameFileError
+    } = this.props;
     newFilename = newFilename.trim();
-    if (!this.validateFileName(newFilename, 'renameFileError')) {
+    if (!this.validateFileName(newFilename, setRenameFileError)) {
       return;
     }
-    const {fileMetadata, setFileMetadata, editTabKey, renameFile} = this.props;
     // check for duplicate filename
     const duplicateFileError = this.checkDuplicateFileName(newFilename);
     if (duplicateFileError) {
-      this.setState({
-        renameFileError: duplicateFileError
-      });
+      setRenameFileError(duplicateFileError);
       return;
     }
 
@@ -435,32 +432,31 @@ class JavalabEditor extends React.Component {
     renameFile(oldFilename, newFilename);
     setFileMetadata(newFileMetadata);
     projectChanged();
-    this.props.closeEditorDialog();
-    this.setState({
-      renameFileError: null
-    });
+    closeEditorDialog();
+    clearRenameFileError();
   }
 
   onCreateFile(filename, fileContents) {
-    filename = filename.trim();
-    if (!this.validateFileName(filename, 'newFileError')) {
-      return;
-    }
-    const duplicateFileError = this.checkDuplicateFileName(filename);
-    if (duplicateFileError) {
-      this.setState({
-        newFileError: duplicateFileError
-      });
-      return;
-    }
-
     const {
       lastTabKeyIndex,
       fileMetadata,
       orderedTabKeys,
       setSource,
-      setAllEditorMetadata
+      setAllEditorMetadata,
+      closeEditorDialog,
+      setNewFileError,
+      clearNewFileError
     } = this.props;
+    filename = filename.trim();
+    if (!this.validateFileName(filename, setNewFileError)) {
+      return;
+    }
+    const duplicateFileError = this.checkDuplicateFileName(filename);
+    if (duplicateFileError) {
+      setNewFileError(duplicateFileError);
+      return;
+    }
+
     const newTabIndex = lastTabKeyIndex + 1;
     const newTabKey = getTabKey(newTabIndex);
 
@@ -481,10 +477,8 @@ class JavalabEditor extends React.Component {
     setAllEditorMetadata(newFileMetadata, newTabs, newTabKey, newTabIndex);
 
     // add new tab and set it as the active tab
-    this.props.closeEditorDialog();
-    this.setState({
-      newFileError: null
-    });
+    closeEditorDialog();
+    clearNewFileError();
   }
 
   onDeleteFile() {
@@ -595,22 +589,13 @@ class JavalabEditor extends React.Component {
     });
   }
 
-  onOpenCommitDialog() {
-    this.props.openEditorDialog(JavalabEditorDialog.COMMIT_FILES);
-  }
-
   editorHeaderText = () =>
     this.props.isReadOnlyWorkspace
       ? msg.readonlyWorkspaceHeader()
       : javalabMsg.editor();
 
   render() {
-    const {
-      fileToDelete,
-      contextTarget,
-      renameFileError,
-      newFileError
-    } = this.state;
+    const {fileToDelete, contextTarget} = this.state;
     const {
       onCommitCode,
       displayTheme,
@@ -619,19 +604,14 @@ class JavalabEditor extends React.Component {
       isReadOnlyWorkspace,
       hasOpenCodeReview,
       isViewingOwnProject,
-      showProjectTemplateWorkspaceIcon,
       height,
       isProjectTemplateLevel,
       handleClearPuzzle,
-      backpackEnabled,
       orderedTabKeys,
       fileMetadata,
       activeTabKey,
       editTabKey,
-      codeOwnersName,
-      editorOpenDialogName,
-      openEditorDialog,
-      closeEditorDialog
+      codeOwnersName
     } = this.props;
 
     const showOpenCodeReviewWarning =
@@ -647,54 +627,7 @@ class JavalabEditor extends React.Component {
     };
     return (
       <div style={this.props.style}>
-        <PaneHeader hasFocus>
-          <PaneButton
-            id="javalab-editor-create-file"
-            iconClass="fa fa-plus-circle"
-            onClick={() => openEditorDialog(JavalabEditorDialog.CREATE_FILE)}
-            headerHasFocus
-            isRtl={false}
-            label={javalabMsg.newFile()}
-            leftJustified
-            isDisabled={isReadOnlyWorkspace}
-          />
-          {backpackEnabled && (
-            <PaneSection style={styles.backpackSection}>
-              <Backpack
-                id={'javalab-editor-backpack'}
-                displayTheme={displayTheme}
-                isButtonDisabled={isReadOnlyWorkspace}
-                onImport={this.onImportFile}
-              />
-            </PaneSection>
-          )}
-          <PaneButton
-            id="data-mode-versions-header"
-            iconClass="fa fa-clock-o"
-            label={msg.showVersionsHeader()}
-            headerHasFocus
-            isRtl={false}
-            onClick={() =>
-              openEditorDialog(JavalabEditorDialog.VERSION_HISTORY)
-            }
-            isDisabled={isReadOnlyWorkspace}
-          />
-          <PaneButton
-            id="javalab-editor-save"
-            iconClass="fa fa-check-circle"
-            onClick={this.onOpenCommitDialog}
-            headerHasFocus
-            isRtl={false}
-            label={javalabMsg.commitCode()}
-            isDisabled={isReadOnlyWorkspace}
-          />
-          <PaneSection>
-            {showProjectTemplateWorkspaceIcon && (
-              <ProjectTemplateWorkspaceIcon />
-            )}
-            {this.editorHeaderText()}
-          </PaneSection>
-        </PaneHeader>
+        <JavalabEditorHeader onBackpackImportFile={this.onImportFile} />
         <Tab.Container
           activeKey={activeTabKey}
           onSelect={key => this.onChangeTabs(key)}
@@ -807,61 +740,17 @@ class JavalabEditor extends React.Component {
             </Tab.Content>
           </div>
         </Tab.Container>
-        <JavalabDialog
-          isOpen={editorOpenDialogName === JavalabEditorDialog.DELETE_FILE}
-          handleConfirm={this.onDeleteFile}
-          handleClose={() => closeEditorDialog()}
-          message={javalabMsg.deleteFileConfirmation({
-            filename: fileMetadata[fileToDelete]
-          })}
-          displayTheme={displayTheme}
-          confirmButtonText={javalabMsg.delete()}
-          closeButtonText={javalabMsg.cancel()}
+        <JavalabEditorDialogManager
+          onDeleteFile={this.onDeleteFile}
+          filenameToDelete={fileMetadata[fileToDelete]}
+          onRenameFile={this.onRenameFile}
+          filenameToRename={fileMetadata[editTabKey]}
+          onCreateFile={this.onCreateFile}
+          commitDialogFileNames={Object.keys(sources)}
+          onCommitCode={onCommitCode}
+          handleClearPuzzle={handleClearPuzzle}
+          isProjectTemplateLevel={isProjectTemplateLevel}
         />
-        <NameFileDialog
-          isOpen={editorOpenDialogName === JavalabEditorDialog.RENAME_FILE}
-          handleClose={() => {
-            closeEditorDialog();
-            this.setState({renameFileError: null});
-          }}
-          filename={fileMetadata[editTabKey]}
-          handleSave={this.onRenameFile}
-          displayTheme={displayTheme}
-          inputLabel="Rename the file"
-          saveButtonText="Rename"
-          errorMessage={renameFileError}
-        />
-        <NameFileDialog
-          isOpen={editorOpenDialogName === JavalabEditorDialog.CREATE_FILE}
-          handleClose={() => {
-            closeEditorDialog();
-            this.setState({newFileError: null});
-          }}
-          handleSave={this.onCreateFile}
-          displayTheme={displayTheme}
-          inputLabel="Create new file"
-          saveButtonText="Create"
-          errorMessage={newFileError}
-          filename={DEFAULT_FILE_NAME}
-        />
-        <CommitDialog
-          isOpen={editorOpenDialogName === JavalabEditorDialog.COMMIT_FILES}
-          files={Object.keys(sources)}
-          handleClose={() => {
-            closeEditorDialog();
-          }}
-          handleCommit={onCommitCode}
-        />
-        {editorOpenDialogName === JavalabEditorDialog.VERSION_HISTORY && (
-          <VersionHistoryWithCommitsDialog
-            handleClearPuzzle={handleClearPuzzle}
-            isProjectTemplateLevel={isProjectTemplateLevel}
-            onClose={() => closeEditorDialog()}
-            isOpen={
-              editorOpenDialogName === JavalabEditorDialog.VERSION_HISTORY
-            }
-          />
-        )}
       </div>
     );
   }
@@ -925,17 +814,12 @@ export default connect(
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
     hasOpenCodeReview: state.javalab.hasOpenCodeReview,
     isViewingOwnProject: state.pageConstants.isViewingOwnProject,
-    backpackEnabled: state.javalab.backpackEnabled,
-    showProjectTemplateWorkspaceIcon:
-      !!state.pageConstants.isProjectTemplateLevel &&
-      state.javalab.isReadOnlyWorkspace,
     codeOwnersName: state.pageConstants.codeOwnersName,
     fileMetadata: state.javalab.fileMetadata,
     orderedTabKeys: state.javalab.orderedTabKeys,
     activeTabKey: state.javalab.activeTabKey,
     lastTabKeyIndex: state.javalab.lastTabKeyIndex,
-    editTabKey: state.javalab.editTabKey,
-    editorOpenDialogName: state.javalab.editorOpenDialogName
+    editTabKey: state.javalab.editTabKey
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),
@@ -970,6 +854,10 @@ export default connect(
         )
       ),
     openEditorDialog: dialogName => dispatch(openEditorDialog(dialogName)),
-    closeEditorDialog: () => dispatch(closeEditorDialog())
+    closeEditorDialog: () => dispatch(closeEditorDialog()),
+    setNewFileError: error => dispatch(setNewFileError(error)),
+    clearNewFileError: () => dispatch(clearNewFileError()),
+    setRenameFileError: error => dispatch(setRenameFileError(error)),
+    clearRenameFileError: () => dispatch(clearRenameFileError())
   })
 )(Radium(JavalabEditor));
