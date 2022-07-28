@@ -8,7 +8,11 @@ import JavalabDialog from './JavalabDialog';
 import NameFileDialog from './NameFileDialog';
 import CommitDialog from './CommitDialog';
 import {DisplayTheme} from './DisplayTheme';
-import {closeEditorDialog} from './javalabRedux';
+import {
+  clearNewFileError,
+  clearRenameFileError,
+  closeEditorDialog
+} from './javalabRedux';
 
 export const JavalabEditorDialog = makeEnum(
   'RENAME_FILE',
@@ -29,15 +33,16 @@ function JavalabEditorDialogManager({
   filenameToDelete,
   onRenameFile,
   filenameToRename,
-  renameFileError,
-  clearRenameFileError,
   onCreateFile,
-  newFileError,
-  clearNewFileError,
   commitDialogFileNames,
   onCommitCode,
   handleClearPuzzle,
   isProjectTemplateLevel,
+  // populated by Redux
+  newFileError,
+  clearNewFileError,
+  renameFileError,
+  clearRenameFileError,
   editorOpenDialogName,
   closeEditorDialog,
   displayTheme
@@ -104,16 +109,16 @@ JavalabEditorDialogManager.propTypes = {
   filenameToDelete: PropTypes.string,
   onRenameFile: PropTypes.func.isRequired,
   filenameToRename: PropTypes.string,
-  renameFileError: PropTypes.string,
-  clearRenameFileError: PropTypes.func.isRequired,
   onCreateFile: PropTypes.func.isRequired,
-  newFileError: PropTypes.string,
-  clearNewFileError: PropTypes.func.isRequired,
   commitDialogFileNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   onCommitCode: PropTypes.func.isRequired,
   handleClearPuzzle: PropTypes.func.isRequired,
   isProjectTemplateLevel: PropTypes.bool.isRequired,
   // populated by Redux
+  newFileError: PropTypes.string,
+  clearNewFileError: PropTypes.func.isRequired,
+  renameFileError: PropTypes.string,
+  clearRenameFileError: PropTypes.func.isRequired,
   editorOpenDialogName: PropTypes.oneOf(Object.values(JavalabEditorDialog)),
   closeEditorDialog: PropTypes.func.isRequired,
   displayTheme: PropTypes.oneOf(Object.values(DisplayTheme))
@@ -122,7 +127,13 @@ JavalabEditorDialogManager.propTypes = {
 export default connect(
   state => ({
     editorOpenDialogName: state.javalab.editorOpenDialogName,
-    displayTheme: state.javalab.displayTheme
+    displayTheme: state.javalab.displayTheme,
+    newFileError: state.javalab.newFileError,
+    renameFileError: state.javalab.renameFileError
   }),
-  dispatch => ({closeEditorDialog: () => dispatch(closeEditorDialog())})
+  dispatch => ({
+    closeEditorDialog: () => dispatch(closeEditorDialog()),
+    clearNewFileError: () => dispatch(clearNewFileError()),
+    clearRenameFileError: () => dispatch(clearRenameFileError())
+  })
 )(JavalabEditorDialogManager);
