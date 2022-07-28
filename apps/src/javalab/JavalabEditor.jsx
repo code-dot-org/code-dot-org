@@ -17,7 +17,11 @@ import {
   getTabKey,
   setAllEditorMetadata,
   openEditorDialog,
-  closeEditorDialog
+  closeEditorDialog,
+  clearRenameFileError,
+  setNewFileError,
+  clearNewFileError,
+  setRenameFileError
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
@@ -113,7 +117,11 @@ class JavalabEditor extends React.Component {
     setEditTabKey: PropTypes.func.isRequired,
     setAllEditorMetadata: PropTypes.func.isRequired,
     openEditorDialog: PropTypes.func.isRequired,
-    closeEditorDialog: PropTypes.func.isRequired
+    closeEditorDialog: PropTypes.func.isRequired,
+    setNewFileError: PropTypes.func.isRequired,
+    clearNewFileError: PropTypes.func.isRequired,
+    setRenameFileError: PropTypes.func.isRequired,
+    clearRenameFileError: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -147,8 +155,6 @@ class JavalabEditor extends React.Component {
       showMenu: false,
       contextTarget: null,
       menuPosition: {},
-      newFileError: null,
-      renameFileError: null,
       fileToDelete: null
     };
   }
@@ -370,10 +376,9 @@ class JavalabEditor extends React.Component {
     });
   }
 
-  // Checks if the given file name is valid and if not,
-  // updates the state with the appropriate error message.
-  // Returns whether or not the file name is valid.
-  validateFileName(filename, errorStateKey) {
+  // Checks if the given file name is valid and if not, calls the given setErrorMessage
+  // callback with the appropriate error message. Returns whether or not the file name is valid.
+  validateFileName(filename, setErrorMessage) {
     let errorMessage;
 
     if (!filename) {
@@ -391,26 +396,30 @@ class JavalabEditor extends React.Component {
     }
 
     if (errorMessage) {
-      this.setState({
-        [errorStateKey]: errorMessage
-      });
+      setErrorMessage(errorMessage);
     }
 
     return !errorMessage;
   }
 
   onRenameFile(newFilename) {
+    const {
+      fileMetadata,
+      setFileMetadata,
+      editTabKey,
+      renameFile,
+      closeEditorDialog,
+      setRenameFileError,
+      clearRenameFileError
+    } = this.props;
     newFilename = newFilename.trim();
-    if (!this.validateFileName(newFilename, 'renameFileError')) {
+    if (!this.validateFileName(newFilename, setRenameFileError)) {
       return;
     }
-    const {fileMetadata, setFileMetadata, editTabKey, renameFile} = this.props;
     // check for duplicate filename
     const duplicateFileError = this.checkDuplicateFileName(newFilename);
     if (duplicateFileError) {
-      this.setState({
-        renameFileError: duplicateFileError
-      });
+      setRenameFileError(duplicateFileError);
       return;
     }
 
@@ -423,32 +432,31 @@ class JavalabEditor extends React.Component {
     renameFile(oldFilename, newFilename);
     setFileMetadata(newFileMetadata);
     projectChanged();
-    this.props.closeEditorDialog();
-    this.setState({
-      renameFileError: null
-    });
+    closeEditorDialog();
+    clearRenameFileError();
   }
 
   onCreateFile(filename, fileContents) {
-    filename = filename.trim();
-    if (!this.validateFileName(filename, 'newFileError')) {
-      return;
-    }
-    const duplicateFileError = this.checkDuplicateFileName(filename);
-    if (duplicateFileError) {
-      this.setState({
-        newFileError: duplicateFileError
-      });
-      return;
-    }
-
     const {
       lastTabKeyIndex,
       fileMetadata,
       orderedTabKeys,
       setSource,
-      setAllEditorMetadata
+      setAllEditorMetadata,
+      closeEditorDialog,
+      setNewFileError,
+      clearNewFileError
     } = this.props;
+    filename = filename.trim();
+    if (!this.validateFileName(filename, setNewFileError)) {
+      return;
+    }
+    const duplicateFileError = this.checkDuplicateFileName(filename);
+    if (duplicateFileError) {
+      setNewFileError(duplicateFileError);
+      return;
+    }
+
     const newTabIndex = lastTabKeyIndex + 1;
     const newTabKey = getTabKey(newTabIndex);
 
@@ -469,10 +477,8 @@ class JavalabEditor extends React.Component {
     setAllEditorMetadata(newFileMetadata, newTabs, newTabKey, newTabIndex);
 
     // add new tab and set it as the active tab
-    this.props.closeEditorDialog();
-    this.setState({
-      newFileError: null
-    });
+    closeEditorDialog();
+    clearNewFileError();
   }
 
   onDeleteFile() {
@@ -589,12 +595,7 @@ class JavalabEditor extends React.Component {
       : javalabMsg.editor();
 
   render() {
-    const {
-      fileToDelete,
-      contextTarget,
-      renameFileError,
-      newFileError
-    } = this.state;
+    const {fileToDelete, contextTarget} = this.state;
     const {
       onCommitCode,
       displayTheme,
@@ -744,11 +745,7 @@ class JavalabEditor extends React.Component {
           filenameToDelete={fileMetadata[fileToDelete]}
           onRenameFile={this.onRenameFile}
           filenameToRename={fileMetadata[editTabKey]}
-          renameFileError={renameFileError}
-          clearRenameFileError={() => this.setState({renameFileError: null})}
           onCreateFile={this.onCreateFile}
-          newFileError={newFileError}
-          clearNewFileError={() => this.setState({newFileError: null})}
           commitDialogFileNames={Object.keys(sources)}
           onCommitCode={onCommitCode}
           handleClearPuzzle={handleClearPuzzle}
@@ -857,6 +854,10 @@ export default connect(
         )
       ),
     openEditorDialog: dialogName => dispatch(openEditorDialog(dialogName)),
-    closeEditorDialog: () => dispatch(closeEditorDialog())
+    closeEditorDialog: () => dispatch(closeEditorDialog()),
+    setNewFileError: error => dispatch(setNewFileError(error)),
+    clearNewFileError: () => dispatch(clearNewFileError()),
+    setRenameFileError: error => dispatch(setRenameFileError(error)),
+    clearRenameFileError: () => dispatch(clearRenameFileError())
   })
 )(Radium(JavalabEditor));
