@@ -1,6 +1,7 @@
 import UserPreferences from '../lib/util/UserPreferences';
 import {DisplayTheme} from './DisplayTheme';
 import {JavalabEditorDialog} from './JavalabEditorDialogManager';
+import {fileMetadataForEditor} from './JavalabFileHelper';
 
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const CLEAR_CONSOLE_LOGS = 'javalab/CLEAR_CONSOLE_LOGS';
@@ -45,30 +46,6 @@ const SET_NEW_FILE_ERROR = 'javalab/SET_NEW_FILE_ERROR';
 const CLEAR_NEW_FILE_ERROR = 'javalab/CLEAR_NEW_FILE_ERROR';
 const SET_RENAME_FILE_ERROR = 'javalab/SET_RENAME_FILE_ERROR';
 const CLEAR_RENAME_FILE_ERROR = 'javalab/CLEAR_RENAME_FILE_ERROR';
-
-export const getTabKey = index => `file-${index}`;
-
-const fileMetadataForEditor = (sources, isEditingStartSources) => {
-  let fileMetadata = {};
-  let orderedTabKeys = [];
-
-  Object.keys(sources).forEach((file, index) => {
-    if (sources[file].isVisible || isEditingStartSources) {
-      let tabKey = getTabKey(index);
-      fileMetadata[tabKey] = file;
-      orderedTabKeys.push(tabKey);
-    }
-  });
-
-  const firstTabKey = orderedTabKeys.length > 0 ? orderedTabKeys[0] : null;
-
-  return {
-    fileMetadata,
-    orderedTabKeys,
-    activeTabKey: firstTabKey,
-    lastTabKeyIndex: orderedTabKeys.length - 1
-  };
-};
 
 const initialSources = {
   'MyClass.java': {text: '', isVisible: true, isValidation: false}
