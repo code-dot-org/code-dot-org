@@ -224,17 +224,17 @@ class JavalabEditor extends React.Component {
       for (const tabKey in fileMetadata) {
         if (!this.editors[tabKey]) {
           // create an editor if it doesn't exist yet
-          console.log(tabKey);
-          const isJava = tabKey.endsWith('.java');
           const source = this.props.sources[fileMetadata[tabKey]];
           const doc = (source && source.text) || '';
-          this.createEditor(tabKey, doc, isJava);
+          this.createEditor(tabKey, doc);
         }
       }
     }
   }
 
-  createEditor(key, doc, isJava) {
+  createEditor(key, doc) {
+    const fileName = this.state.fileMetadata[key];
+    const isJava = fileName.endsWith('.java');
     const {displayTheme, isReadOnlyWorkspace} = this.props;
     const extensions = [...editorSetup];
 
@@ -260,9 +260,10 @@ class JavalabEditor extends React.Component {
         EditorState.readOnly.of(isReadOnlyWorkspace)
       )
     );
-
+    console.log(`fileName is ${fileName}`);
+    console.log(`isJava is ${isJava}`);
     if (isJava) {
-      this.languageCompartment.of(java);
+      this.languageCompartment.of(java());
     }
 
     extensions.push(this.languageCompartment);
