@@ -77,6 +77,7 @@ function LessonLockDialog({
 
   const handleSave = async () => {
     setSaving(true);
+    setError(null);
     const csrfToken = $('meta[name="csrf-token"]').attr('content');
     const saveLockStateResponse = await saveLockState(
       serverLockState,
