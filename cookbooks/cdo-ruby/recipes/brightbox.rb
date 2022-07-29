@@ -10,7 +10,7 @@ apt_repository 'brightbox-ruby-ng' do
 end
 
 ruby_versions = [node['cdo-ruby']['version']]
-ruby_versions << node['cdo-ruby']['new_version'] if node['cdo-ruby']['new_version']&.present?
+ruby_versions << node['cdo-ruby']['new_version'] if node['cdo-ruby'].key?('new_version')
 ruby_versions.each do |ruby_version|
   packages = %W(
     build-essential
