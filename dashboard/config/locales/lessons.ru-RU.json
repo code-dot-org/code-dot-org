@@ -889,6 +889,9 @@
         "pre-express-2019/Loops in Artist": {
           "name": "Циклы в исполнителе Художник"
         },
+        "csd3-2019/Plotting Shapes": {
+          "name": "Рисование фигур"
+        },
         "csd3-2019/Variables": {
           "name": "Переменные"
         },
@@ -951,6 +954,9 @@
         },
         "csd5-2019/Making Decisions with Data": {
           "name": "Использование данных для принятия решений"
+        },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Процесс решения проблем"
         },
         "csd1-2019/What is a Computer?": {
           "name": "Что такое компьютер?"
@@ -1269,6 +1275,9 @@
         },
         "express-2017/Present Your Project": {
           "name": "Представь свой проект"
+        },
+        "csd3-2017/Plotting Shapes": {
+          "name": "Рисование фигур"
         },
         "csd3-2017/Variables": {
           "name": "Переменные"
@@ -1654,7 +1663,13 @@
           "student_overview": "Щелкните и перетащите, чтобы закончить головоломки."
         },
         "allthethings/Jigsaw": {
-          "name": "Анонимный опрос учащихся 2"
+          "name": "Головоломки"
+        },
+        "allthethings/Maze": {
+          "name": "Лабиринт"
+        },
+        "allthethings/Artist": {
+          "name": "Художник"
         },
         "allthethings/Bee": {
           "name": "Пчела"
@@ -2405,6 +2420,9 @@
         },
         "csd3-2021/lesson-1": {
           "name": "Занимательная информатика: опрос по окончании курса"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Процесс решения проблем"
         },
         "csd1-2021/What is a Computer?": {
           "name": "Что такое компьютер?"

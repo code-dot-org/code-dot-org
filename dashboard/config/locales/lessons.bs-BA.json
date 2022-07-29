@@ -666,6 +666,15 @@
           "name": "Slagalica",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
+        "allthethings/Jigsaw": {
+          "name": "Slagalica"
+        },
+        "allthethings/Maze": {
+          "name": "Labirint"
+        },
+        "allthethings/Artist": {
+          "name": "Umjetnik"
+        },
         "allthethings/Bee": {
           "name": "Pčela"
         },

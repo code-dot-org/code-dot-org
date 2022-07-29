@@ -4,7 +4,7 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Unit 4 - Lesson 5:  User Interfaces  
+#The Design Process - Lesson 5:  User Interfaces
 
 
 ## Investigation Goals
@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 
 ## Investigation Tasks
 
-* Review the lesson plan, <a href="https://studio.code.org/s/csd4-2021/lessons/5" target="_blank">Lesson 5: User Interfaces</a>
+* Review the lesson plan, <a href="https://studio.code.org/s/csd4-2022/lessons/5" target="_blank">Lesson 5: User Interfaces</a>
 
 * Become familiar with the concepts of iteration and decomposition
 

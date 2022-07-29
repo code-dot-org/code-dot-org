@@ -209,7 +209,12 @@
         "Allthethings Java Lab submittable": "Nauczyciele powinni zobaczyć te dodatkowe informacje.",
         "PS predictive Applab level test": "Obniżka oceny przez nauczyciela za oryginalny poziom",
         "Test GameLab Predictive": "Obniżka oceny przez nauczyciela za oryginalny poziom",
-        "Test GameLab Submittable Free Response": "Obniżka oceny przez nauczyciela za oryginalny poziom"
+        "Test GameLab Submittable Free Response": "Obniżka oceny przez nauczyciela za oryginalny poziom",
+        "Applab AllTheThings ResourcesTab AllResources": "Ważne jest ograniczenie pracy tylko z 4 poleceniami. (Zobacz: „O co chodzi?” poniżej.) Jeśli uczniowie przychodzą na zajęcia z wcześniejszą umiejętnością programowania, mogą próbować wyjść poza te ograniczenia, aby zmniejszyć liczbę wierszy kodu.\n\n                                        Jeśli zobaczysz uczniów używających poleceń wykraczających poza podane 4 lub używających parametrów z takimi poleceniami jak: `moveForward(150)`, powinieneś powiedzieć im, że nie rozwiązują problemu; problem polega na tym, aby worzyć obrazy przy użyciu tylko 4 dostarczonych poleceń.",
+        "Applab AllTheThings ResourcesTab MapReference": "Ważne jest ograniczenie pracy tylko z 4 poleceniami. (Zobacz: „O co chodzi?” poniżej.) Jeśli uczniowie przychodzą na zajęcia z wcześniejszą umiejętnością programowania, mogą próbować wyjść poza te ograniczenia, aby zmniejszyć liczbę wierszy kodu.\n\n             Jeśli zobaczysz uczniów używających poleceń wykraczających poza podane 4 lub używających parametrów z takimi poleceniami jak: `moveForward(150)`, powinieneś powiedzieć im, że nie rozwiązują problemu; problem polega na tym, aby worzyć obrazy przy użyciu tylko 4 dostarczonych poleceń.",
+        "Applab AllTheThings ResourcesTab ReferenceLinks": "Ważne jest ograniczenie pracy tylko z 4 poleceniami. (Zobacz: „O co chodzi?” poniżej.) Jeśli uczniowie przychodzą na zajęcia z wcześniejszą umiejętnością programowania, mogą próbować wyjść poza te ograniczenia, aby zmniejszyć liczbę wierszy kodu.\n\n                      Jeśli zobaczysz uczniów używających poleceń wykraczających poza podane 4 lub używających parametrów z takimi poleceniami jak: `moveForward(150)`, powinieneś powiedzieć im, że nie rozwiązują problemu; problem polega na tym, aby worzyć obrazy przy użyciu tylko 4 dostarczonych poleceń.",
+        "contained_csf_free_response": "Oznaczenia nauczyciela poziomu oryginalnego",
+        "contained_single_multi": "Obniżka oceny przez nauczyciela za oryginalny poziom."
       }
     }
   }

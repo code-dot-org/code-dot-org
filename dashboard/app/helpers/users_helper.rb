@@ -108,8 +108,6 @@ module UsersHelper
   # Summarize a user and their progress within a certain unit.
   # Example return value:
   # {
-  #   "linesOfCode": 34,
-  #   "linesOfCodeText": "Total lines of code: 34",
   #   "disableSocialShare": true,
   #   "lockableAuthorized": true,
   #   "levels": {
@@ -126,8 +124,6 @@ module UsersHelper
       user_data[:isTeacher] = true if user.teacher?
       user_data[:isInstructor] = is_instructor
       user_data[:isVerifiedInstructor] = true if user.verified_instructor?
-      user_data[:linesOfCode] = user.total_lines
-      user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     end
 
     merge_unit_progress(user_data, user, unit, exclude_level_progress)
@@ -417,7 +413,7 @@ module UsersHelper
         level_id = embedded_level.id
 
         # Do we have a valid result for this level in the LevelGroup last_attempt?
-        if last_attempt && last_attempt.key?(level_id.to_s) && last_attempt[level_id.to_s]["valid"]
+        if last_attempt&.key?(level_id.to_s) && last_attempt[level_id.to_s]["valid"]
           page_valid_result_count += 1
         end
       end

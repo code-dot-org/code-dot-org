@@ -3945,6 +3945,7 @@
           "description": "#### Untuk Satu dan Semua\n\n-   Tunjukkan bahawa terdapat gelung tertentu yang berlaku dengan kerap, sebagai contohnya, gelung yang anda perlu terus menjejaki bilangan kekerapan anda telah melaluinya\n    -   Kadang-kadang, anda tidak mahu bermula dengan satu\n    -   Kadang-kadang, anda tidak mahu mengira dengan satu\n    -   \"Gelung untuk\" memberikan anda cara berkuasa menyimpan pembilang yang bermula apabila anda mahukan, tamat apabila anda mahukan dan meningkat mengikut apa-apa langkah saiz yang anda mahukan\n\nDi sini, anda boleh terus masuk ke dalam contoh permainan.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-07-18-11.42.47.png\" style=\"max-width: 600px;\">"
         },
         "0f9c9b1c-2d56-42f0-a8e5-76ed107c5210": {
+          "name": "Gelung Untuk yang Menyeronokkan",
           "progression_name": "Gelung Untuk yang Menyeronokkan - Aktiviti Nirplag"
         },
         "95417529-72b3-4c15-95d1-7bd479743269": {
@@ -5523,6 +5524,7 @@
           "description": "**Matlamat:** Semakan ini akan menyegarkan semula fikiran pelajar tentang betapa pantasnya atur cara untuk aktiviti \"Rakan Robotik Saya\" boleh menjadi sengit. \n\n**Paparkan:** Tunjukkan **\\*Kunci Simbol** yang kita gunakan dalam \"Rakan Robotik Saya\". Bagi setiap daripada empat simbol, minta pelajar tunjukkan kepada anda rupa robot yang mengikuti arahan.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png\" style=\"max-width: 300px;\">\n\n**Model:** Bersama dengan kelas sebagai satu kumpulan, tarik teka-teki mudah daripada **\\*Idea Menyusun Cawan** dan atur cara antara satu sama lain sebagai peringatan peraturan dan istilah.\n\nSeterusnya, tarik teka-teki yang agak lebih sukar sedikit, tetapi masih juga memerlukan banyak langkah seperti yang di bawah.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-18.17.12.png\" style=\"max-width: 300px;\">\n\n**Sukarelawan:** Minta sukarelawan (atau sekumpulan sukarelawan) untuk menampilkan diri ke hadapan untuk membantu mengatur cara yang ini pada papan tulis. Jika anda membuatkannya berpegang teguh kepada peraturan \"tiada simbol selain yang terdapat pada kunci\", ia mungkin akan mengambil sedikit masa!\n\n**Paparkan:** Sekarang, timbulkan imej ini\n\n<img src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-17.59.02.png\" style=\"max-width: 300px;\">\n\nApakah reaksi kelas itu?\n\n**Prom:** Memberi peluang kepada pelajar melakukan sumbang saran cara yang lebih pendek menyampaikan kod yang sedang mereka cipta. (Hal kecil ini boleh dilangkau jika pelajar anda mula menyebut perkara seperti: “Bergerak ke hadapan 6 kali.” Oleh kerana itu akan membuka perbincangan tentang cara untuk menunjukkan “enam kali” dengan simbol.)\n\nSebaik sahaja pelajar telah menggabungkan idea mengulangi kod, berikan mereka perbendaharaan kata di sekelilingnya. Pastikan anda berkongsi dengan mereka setiap kali istilah “ulangi sesuatu” dan “gelung sesuatu” akan digunakan secara berselang-seli."
         },
         "8896c62b-c73c-43f8-89c3-3def6c89d7bf": {
+          "name": "My Loopy Robotic Friends",
           "progression_name": "My Loopy Robotic Friends - Aktiviti Nirplag"
         },
         "76533bba-6245-4429-b8ef-a406d2dd250b": {
@@ -8021,6 +8023,7 @@
           ]
         },
         "bba24018-1d90-4a18-b596-eaab2e50567e": {
+          "name": "Perkongsian Digital",
           "progression_name": "Perkongsian Digital - Aktiviti Nirplag"
         },
         "a0c0c4ee-7e5a-4f4f-a085-49ea2a791169": {

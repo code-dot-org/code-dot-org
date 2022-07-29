@@ -337,9 +337,9 @@ it:
       project_gallery: "Progetti"
       sections: "Classi"
       help_support: "Help and support"
-      report_bug: "Report a problem"
+      report_bug: "Segnala un errore"
       report_abuse: "Segnala abuso"
-      teacher_community: "Comunità di insegnanti"
+      teacher_community: "Teacher community"
       professional_learning: "Professional learning"
       documentation: "Documentazione"
       tutorials: "Corsi"
@@ -383,7 +383,7 @@ it:
       district_dashboard: 'Dashboard'
       label: 'Ciao %{username}'
       stats: 'Code Studio'
-      my_projects: 'Collezione Privata'
+      my_projects: 'I miei progetti'
       settings: 'Il mio account'
       logout: 'Esci'
       signin: 'Accedi'
@@ -432,7 +432,6 @@ it:
     popup:
       progress_for_user: "%{name} in corso"
       progress: 'I tuoi progressi'
-      lines: 'Totale delle linee di codice:  %{lines}'
       close: 'CHIUDI'
       mastery: 'Concetti'
       puzzle_map: 'Fasi'

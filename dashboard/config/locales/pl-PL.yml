@@ -37,6 +37,7 @@ pl:
           masz adresu e-mail)](%{url})
         username: Nazwa użytkownika
         password: Hasło
+        verified_teacher: Zweryfikowany nauczyciel
         password_confirmation: Potwierdzenie hasła
         current_password: Aktualne hasło
         locale: Język
@@ -506,7 +507,6 @@ pl:
     popup:
       progress_for_user: "%{name} w toku"
       progress: Twoje postępy
-      lines: 'Łączna ilość linii kodu: %{lines}'
       close: ZAMKNIJ
       mastery: Pojęcia
       puzzle_map: Etapy

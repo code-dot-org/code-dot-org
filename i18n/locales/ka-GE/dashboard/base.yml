@@ -370,7 +370,6 @@ ka:
     popup:
       progress_for_user: "%{name}-ს პროგრესი"
       progress: 'თქვენი პროგრესი'
-      lines: 'სულ კოდის ხაზი: %{lines}'
       close: 'დახურვა'
       mastery: 'ძირითადი ცნებები'
       puzzle_map: 'ეტაპები'

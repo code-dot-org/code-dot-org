@@ -3,74 +3,6 @@ mk:
   data:
     script:
       name:
-        usability:
-          lessons:
-            Variables:
-              name: Променливи
-        allthehiddenthings:
-          lessons:
-            Game Lab:
-              name: Работилница за апликации
-        gradeKinder:
-          lessons:
-            Loops:
-              name: Лупови
-        grade1:
-          lessons:
-            Loops:
-              name: Лупови
-        csd3-2017:
-          lessons:
-            Variables:
-              name: Променливи
-        k5concepts:
-          lessons:
-            Loops:
-              name: Лупови
-            Variables:
-              name: Променливи
-        csd2-2017:
-          lessons:
-            Lists:
-              name: Листи
-        csd6-draft:
-          lessons:
-            Lists:
-              name: Листи
-        csd6-2017:
-          lessons:
-            Lists:
-              name: Листи
-        csd3-draft:
-          lessons:
-            Variables:
-              name: Променливи
-        csd2-draft:
-          lessons:
-            Lists:
-              name: Листи
-        csd3-chapters:
-          lessons:
-            Variables:
-              name: Променливи
-            'null':
-              name: нула
-        csd6-old:
-          lessons:
-            Lists:
-              name: Листи
-        csd3-1819draft:
-          lessons:
-            Variables:
-              name: Променливи
-        csd3-2018:
-          lessons:
-            Variables:
-              name: Променливи
-        csd2-2018:
-          lessons:
-            Lists:
-              name: Листи
         aquatic:
           name: водно
         cspplayground:
@@ -91,10 +23,6 @@ mk:
               display_name: Лупови
             csf_variables:
               display_name: Променливи
-        andrea-test:
-          lessons:
-            'null':
-              name: нула
         coursec-2019:
           lesson_groups:
             csf_loops:
@@ -113,14 +41,6 @@ mk:
           lesson_groups:
             csf_loops:
               display_name: Лупови
-        csd2-2019:
-          lessons:
-            Lists:
-              name: Листи
-        csd3-2019:
-          lessons:
-            Variables:
-              name: Променливи
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -165,24 +85,10 @@ mk:
               display_name: Листи
             csp_loops:
               display_name: Лупови
-        csd2-pilot:
-          lessons:
-            Lists:
-              name: Листи
-        csd3-pilot:
-          lessons:
-            Variables:
-              name: Променливи
         csl-vn:
           lesson_groups:
             csf_loops:
               display_name: Лупови
-        k5-onlinepd-2019:
-          lessons:
-            Loops:
-              name: Лупови
-            Variables:
-              name: Променливи
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -205,12 +111,6 @@ mk:
               display_name: Листи
             csp_loops:
               display_name: Лупови
-        csd3-2020:
-          lessons:
-            Variables:
-              name: Променливи
-            Text:
-              name: Текст
         coursea-2020:
           lesson_groups:
             csf_loops:
@@ -241,32 +141,10 @@ mk:
           lesson_groups:
             csf_loops:
               display_name: Лупови
-        csp5-virtual:
-          lessons:
-            Variables:
-              name: Променливи
-        k5-onlinepd-2020:
-          lessons:
-            Loops:
-              name: Лупови
-            Variables:
-              name: Променливи
-        csd3-virtual:
-          lessons:
-            Variables:
-              name: Променливи
-            Text:
-              name: Текст
         2021drafting:
           lesson_groups:
             lessonGroup-3:
               display_name: Променливи
-        csd3-2021:
-          lessons:
-            Variables:
-              name: Променливи
-            Text:
-              name: Текст
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -315,12 +193,6 @@ mk:
               display_name: Променливи
             variables:
               display_name: Променливи
-        k5-onlinepd-2021:
-          lessons:
-            Loops:
-              name: Лупови
-            Variables:
-              name: Променливи
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -365,39 +237,11 @@ mk:
           lesson_groups:
             lessonGroup-8:
               display_name: Променливи
-        csa1-2022:
-          lessons:
-            lesson-9:
-              name: Лупови
         pre-express-2022:
           lesson_groups:
             csf_loops:
               display_name: Лупови
-        csa2-2022:
-          lessons:
-            lesson-6:
-              name: Променливи
-        csa1-2022-exemplars:
-          lessons:
-            lesson-9:
-              name: Лупови
         coursef-2022-pilot:
           lesson_groups:
             lessonGroup-8:
               display_name: Променливи
-        csa2-2022-exemplars:
-          lessons:
-            lesson-1:
-              name: Променливи
-        k5-onlinepd-2022:
-          lessons:
-            Loops:
-              name: Лупови
-            Variables:
-              name: Променливи
-        csd3-2022:
-          lessons:
-            Variables:
-              name: Променливи
-            Text:
-              name: Текст

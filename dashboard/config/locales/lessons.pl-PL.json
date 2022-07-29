@@ -53,11 +53,12 @@
           "name": "Witaj świecie",
           "overview": "Na tej lekcji uczniowie poznają podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Uczniowie nauczą się tworzyć i animować duszki oraz uczynić je interaktywnymi za pomocą zdarzeń.\n\nIstnieje wiele wersji tej lekcji. Każda wersja uczy tych samych pojęć, ale zawiera różne obrazy, które przemawiają do różnych uczniów. Aby uzyskać więcej informacji, odwiedź [stronę docelową Hello World.](https://code.org/helloworld)",
           "preparation": "-   Zabawa poprzez łamigłówki służąca wynajdywaniu jakichkolwiek obszarów potencjalnych problemów dla swojej klasy.\n-   Użyj zasobów na [Powiązania informatyki](https://code.org/educate/csc), aby sporządzić plan dalszej nauki informatyki po wstępnym samouczku.",
-          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty."
+          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty.",
+          "student_overview": "Na tej lekcji poznasz podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Nauczysz się tworzyć i animować duszki oraz uczynić je interaktywnymi stosując zdarzenia."
         },
         "artist/Artist": {
           "name": "Artysta",
-          "overview": "Na wej lekcji uczniowie przejmą sterowania Artystą, aby dokończyć rysunki na ekranie. Ta scena Artysty pozwoli uczniom tworzyć obrazy o coraz wyższym stopniu złożoności, korzystając z nowych bloków takich jak \"idź do przodu o 100 pikseli\" oraz \"skręć w prawo o 90 stopni\".",
+          "overview": "Na tej lekcji uczniowie przejmą sterowanie Artystą, aby dokończyć rysunki na ekranie. Ta scena Artysty pozwoli uczniom tworzyć obrazy o coraz wyższym stopniu złożoności, korzystając z nowych bloków, takich jak \"idź do przodu o 100 pikseli\" oraz \"skręć w prawo o 90 stopni\".",
           "student_overview": "Twórz piękne obrazki programując Artystę."
         },
         "gumball/Gumball Play Lab": {
@@ -76,7 +77,8 @@
           "name": "Witaj świecie",
           "overview": "Na tej lekcji uczniowie poznają podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Uczniowie nauczą się tworzyć i animować duszki oraz uczynić je interaktywnymi za pomocą zdarzeń.\n\nIstnieje wiele wersji tej lekcji. Każda wersja uczy tych samych pojęć, ale zawiera różne obrazy, które przemawiają do różnych uczniów. Aby uzyskać więcej informacji, odwiedź [stronę docelową Hello World.](https://code.org/helloworld)",
           "preparation": "-   Zabawa poprzez łamigłówki służąca wynajdywaniu jakichkolwiek obszarów potencjalnych problemów dla swojej klasy.\n-   Użyj zasobów na [Powiązania informatyki](https://code.org/educate/csc), aby sporządzić plan dalszej nauki informatyki po wstępnym samouczku.",
-          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty."
+          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty.",
+          "student_overview": "Na tej lekcji poznasz podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Nauczysz się tworzyć i animować duszki oraz uczynić je interaktywnymi stosując zdarzenia."
         },
         "aquatic/Aquatic": {
           "name": "Minecraft: Wodna podróż",
@@ -93,7 +95,8 @@
           "name": "Witaj świecie",
           "overview": "Na tej lekcji uczniowie poznają podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Uczniowie nauczą się tworzyć i animować duszki oraz uczynić je interaktywnymi za pomocą zdarzeń.\n\nIstnieje wiele wersji tej lekcji. Każda wersja uczy tych samych pojęć, ale zawiera różne obrazy, które przemawiają do różnych uczniów. Aby uzyskać więcej informacji, odwiedź [stronę docelową Hello World.](https://code.org/helloworld)",
           "preparation": "-   Zabawa poprzez łamigłówki służąca wynajdywaniu jakichkolwiek obszarów potencjalnych problemów dla swojej klasy.\n-   Użyj zasobów na [Powiązania informatyki](https://code.org/educate/csc), aby sporządzić plan dalszej nauki informatyki po wstępnym samouczku.",
-          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty."
+          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty.",
+          "student_overview": "Na tej lekcji poznasz podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Nauczysz się tworzyć i animować duszki oraz uczynić je interaktywnymi stosując zdarzenia."
         },
         "starwars/Hour of Code 2015": {
           "name": "Star Wars: Budowanie Galaktyki za pomocą kodu (JavaScript)",
@@ -120,7 +123,8 @@
           "name": "Witaj świecie",
           "overview": "Na tej lekcji uczniowie poznają podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Uczniowie nauczą się tworzyć i animować duszki oraz uczynić je interaktywnymi za pomocą zdarzeń.\n\nIstnieje wiele wersji tej lekcji. Każda wersja uczy tych samych pojęć, ale zawiera różne obrazy, które przemawiają do różnych uczniów. Aby uzyskać więcej informacji, odwiedź [stronę docelową Hello World.](https://code.org/helloworld)",
           "preparation": "-   Zabawa poprzez łamigłówki służąca wynajdywaniu jakichkolwiek obszarów potencjalnych problemów dla swojej klasy.\n-   Użyj zasobów na [Powiązania informatyki](https://code.org/educate/csc), aby sporządzić plan dalszej nauki informatyki po wstępnym samouczku.",
-          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty."
+          "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty.",
+          "student_overview": "Na tej lekcji poznasz podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Nauczysz się tworzyć i animować duszki oraz uczynić je interaktywnymi stosując zdarzenia."
         },
         "starwarsblocks/Hour of Code 2015": {
           "name": "Star Wars: Tworzenie Galaktyki za pomocą kodu (Blockly)",
@@ -558,7 +562,7 @@
           "name": "Zbuduj swój projekt"
         },
         "coursef-2018/Revise Your Project": {
-          "name": "Zweryfikuj swój projekt"
+          "name": "Popraw swój projekt"
         },
         "coursef-2018/Present Your Project": {
           "name": "Zaprezentuj swój projekt"
@@ -684,7 +688,7 @@
           "name": "Zbuduj swój projekt"
         },
         "express-2018/Revise Your Project": {
-          "name": "Zweryfikuj swój projekt"
+          "name": "Popraw swój projekt"
         },
         "express-2018/Present Your Project": {
           "name": "Zaprezentuj swój projekt"
@@ -882,10 +886,10 @@
           "name": "Królewska bitwa ze zdarzeniami"
         },
         "pre-express-2018/Spelling Bee": {
-          "name": "Literująca Pszczółka"
+          "name": "CSC - Literująca pszczółka"
         },
         "csd3-2018/Programming for Entertainment": {
-          "name": "Ankieta pod koniec semestru Odkrycia informatyki"
+          "name": "Programowanie dla rozrywki"
         },
         "csd3-2018/Plotting Shapes": {
           "name": "Rysowanie kształtów"
@@ -1563,7 +1567,7 @@
           "name": "Programowanie przy pomocy interfejsu Harvester"
         },
         "pre-express-2019/Spelling Bee": {
-          "name": "Literująca Pszczółka"
+          "name": "CSC - Literująca pszczółka"
         },
         "pre-express-2019/Loops in Ice Age": {
           "name": "Pętle ze Scratem"
@@ -1584,10 +1588,10 @@
           "name": "Królewska bitwa ze zdarzeniami"
         },
         "csd3-2019/Programming for Entertainment": {
-          "name": "Testy po realizacji projektu"
+          "name": "Programowanie dla rozrywki"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Rysowanie kształtów"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Rysowanie w laboratorium gier"
@@ -1647,10 +1651,7 @@
           "name": "Projekt - Zaprojektuj grę"
         },
         "csd6-2019/Innovations in Computing": {
-          "name": "Testy po realizacji projektu"
-        },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Innowacje w informatyce"
         },
         "csd6-2019/The Circuit Playground": {
           "name": "Circuit Playground"
@@ -1695,10 +1696,10 @@
           "name": "Projekt - Zbuduj prototyp rozwiązania innowacyjnego"
         },
         "csd4-2019/Analysis of Design": {
-          "name": "Testy po realizacji projektu"
+          "name": "Analiza projektu"
         },
         "csd4-2019/Understanding Your User": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Zrozumienie twojego użytkownika"
         },
         "csd4-2019/User-Centered Design Micro Activity": {
           "name": "Mikrozajęcia poświęcone projektowaniu ukierunkowanemu na użytkownika"
@@ -1743,10 +1744,10 @@
           "name": "Projekt - Prezentacja aplikacji"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Testy po realizacji projektu"
+          "name": "Reprezentacja ma znaczenie"
         },
         "csd5-2019/Patterns and Representation": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Wzorce i reprezentacje"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII i reprezentacja binarna"
@@ -1791,7 +1792,7 @@
           "name": "Wprowadzenie do rozwiązywania problemów"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Testy po realizacji projektu"
+          "name": "Proces rozwiązywania problemów"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Zgłębianie rozwiązywania problemów"
@@ -1812,10 +1813,10 @@
           "name": "Projekt - Zaproponuj aplikację"
         },
         "csd2-2019/Exploring Websites": {
-          "name": "Testy po realizacji projektu"
+          "name": "Odkrywanie stron"
         },
         "csd2-2019/Websites for Expression ": {
-          "name": "Odkrycia informatyki Ankieta po kursie"
+          "name": "Strony internetowe służące wyrażeniu się"
         },
         "csd2-2019/Intro to HTML": {
           "name": "Wprowadzenie do HTML"
@@ -1905,7 +1906,7 @@
           "name": "Zmienne w Play Lab"
         },
         "coursef-2017/For Loop Fun": {
-          "name": "Pętle \"for\": Zabawa z pętlami \"for\""
+          "name": "Pętle for: Zabawa z pętlami for"
         },
         "coursef-2017/For Loops in Bee": {
           "name": "Pętle for z Pszczółką"
@@ -1935,7 +1936,7 @@
           "name": "Zbuduj swój projekt"
         },
         "coursef-2017/Revise Your Project": {
-          "name": "Zweryfikuj swój projekt"
+          "name": "Popraw swój projekt"
         },
         "coursef-2017/Present Your Project": {
           "name": "Zaprezentuj swój projekt"
@@ -2016,7 +2017,7 @@
           "name": "Zdarzenia w Play Lab"
         },
         "pre-express-2017/Spelling Bee": {
-          "name": "Literująca Pszczółka"
+          "name": "CSC - Literująca pszczółka"
         },
         "coursee-2017/Programming: My Robotic Friends": {
           "name": "Programowanie: Moi robotyczni przyjaciele"
@@ -2070,13 +2071,13 @@
           "name": "Funkcje z Pszczółką"
         },
         "coursee-2017/Functions in Harvester": {
-          "name": "Funkcje w interfejsie Harvester"
+          "name": "Funkcje ze Żniwiarką "
         },
         "coursee-2017/Determine the Concept": {
           "name": "Określ pomysł"
         },
         "coursee-2017/Build a Play Lab Game": {
-          "name": "Zbuduj grę Play Lab"
+          "name": "Zbuduj grę w Play Lab"
         },
         "coursee-2017/Explore Project Ideas": {
           "name": "Zbadaj pomysły na projekt"
@@ -2199,7 +2200,7 @@
           "name": "Zagnieżdżone pętle w Krainie Lodu"
         },
         "coursed-2017/Algorithms: Relay Programming": {
-          "name": "Debugowanie: Programowanie sztafetowe"
+          "name": "Debugowanie: Programowanie w sztafecie"
         },
         "coursed-2017/Debugging in Collector": {
           "name": "Debugowanie w interfejsie Collector"
@@ -2217,13 +2218,13 @@
           "name": "Pętle warunkowe w Labiryncie"
         },
         "coursed-2017/Conditionals & Loops in Farmer": {
-          "name": "Instrukcje warunkowe i pętle ze żniwiarką"
+          "name": "Instrukcje warunkowe i pętle ze Żniwiarką"
         },
         "coursed-2017/Digital Citizenship": {
           "name": "Cyfrowe obywatelstwo: Ćwiczenie obywatelstwa cyfrowego"
         },
         "coursed-2017/Build a Play Lab Game": {
-          "name": "Zbuduj grę Play Lab"
+          "name": "Zbuduj grę w Play Lab"
         },
         "coursed-2017/Unplugged: Binary": {
           "name": "Poza programowaniem: Binarne obrazki"
@@ -2289,7 +2290,7 @@
           "name": "Wyrażenia warunkowe w Minecrafcie"
         },
         "express-2017/Conditionals & Loops in Harvester": {
-          "name": "Instrukcje warunkowe i pętle ze żniwiarką"
+          "name": "Instrukcje warunkowe i pętle ze Żniwiarką"
         },
         "express-2017/Variables: Envelope Variables": {
           "name": "Zmienne: Koperty jako zmienne"
@@ -2301,7 +2302,7 @@
           "name": "Zmienne w Play Lab"
         },
         "express-2017/For Loops: For Loop Fun": {
-          "name": "Pętle \"for\": Zabawa z pętlami \"for\""
+          "name": "Pętle for: Zabawa z pętlami for"
         },
         "express-2017/For Loops in Bee": {
           "name": "Pętle for z Pszczółką"
@@ -2331,16 +2332,16 @@
           "name": "Zbuduj swój projekt"
         },
         "express-2017/Revise Your Project": {
-          "name": "Zweryfikuj swój projekt"
+          "name": "Popraw swój projekt"
         },
         "express-2017/Present Your Project": {
           "name": "Zaprezentuj swój projekt"
         },
         "csd3-2017/Programming for Entertainment": {
-          "name": "Ankieta pod koniec semestru Odkrycia informatyki"
+          "name": "Programowanie dla rozrywki"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Rysowanie kształtów"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Rysowanie w laboratorium gier"
@@ -2400,7 +2401,7 @@
           "name": "Projekt - Zaprojektuj grę"
         },
         "csd6-2017/Innovations in Computing_": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Innowacje w informatyce"
         },
         "csd6-2017/The Circuit Playground_": {
           "name": "Circuit Playground"
@@ -2445,7 +2446,7 @@
           "name": "Projekt - Zbuduj prototyp rozwiązania innowacyjnego"
         },
         "csd2-2017/Exploring Websites": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Odkrywanie stron"
         },
         "csd2-2017/Websites for Expression ": {
           "name": "Strony internetowe służące wyrażeniu się"
@@ -2514,7 +2515,7 @@
           "name": "Projekt - Zaproponuj aplikację"
         },
         "csd5-2017/Representation Matters": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Reprezentacja ma znaczenie"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Wzorce i reprezentacje"
@@ -2559,7 +2560,7 @@
           "name": "Projekt - Rozwiąż problem z danymi"
         },
         "csd4-2017/Analysis of Design": {
-          "name": "Ankieta po zakończeniu kursu  CSP "
+          "name": "Analiza projektu"
         },
         "csd4-2017/Understanding Your User": {
           "name": "Zrozumienie twojego użytkownika"
@@ -2904,7 +2905,7 @@
           "name": "Artysta: Kształty"
         },
         "course1/Spelling Bee": {
-          "name": "Literująca Pszczółka"
+          "name": "CSC - Literująca pszczółka"
         },
         "course1/Getting Loopy": {
           "name": "Poznając pętle"
@@ -2936,13 +2937,13 @@
           "name": "Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)"
         },
         "allthethings/Jigsaw": {
-          "name": "Anonimowa ankieta uczniów 2"
+          "name": "Układanka"
         },
         "allthethings/Maze": {
-          "name": "Test Pluralsight"
+          "name": "Labirynt"
         },
         "allthethings/Artist": {
-          "name": "Przykład sprawdzianu CSP"
+          "name": "Artysta"
         },
         "allthethings/Bee": {
           "name": "Pszczółka"
@@ -4026,7 +4027,7 @@
           "name": "Ankieta po kursie Odkrycia Informatyki"
         },
         "csd4-2021/Analysis of Design": {
-          "name": "Testy po realizacji projektu"
+          "name": "Projektowanie z empatią"
         },
         "csd4-2021/Understanding Your User": {
           "name": "Zrozumienie twojego użytkownika"
@@ -4083,7 +4084,7 @@
           "name": "Ankieta po kursie Odkrycia Informatyki"
         },
         "csd6-2021/Innovations in Computing": {
-          "name": "Testy po realizacji projektu",
+          "name": "Innowacje w informatyce",
           "overview": "Celem rozpoczęcia przerabiania ostatniego działu tego kursu, uczniowie wykonają pewne badania w zakresie ciekawych innowacji w informatyce. Na tej lekcji uczniowie skonfrontują się z szerszym zakresem informatycznych czynników kształtujących (jak wygląda komputer) oraz pól, na które oddziałuje informatyka. W dalszej części tego działu, będą znów oglądać urządzenia, które poznali na tej lekcji, w trakcie tworzenia swoich własnych urządzeń informatycznych."
         },
         "csd6-2021/The Circuit Playground": {
@@ -4138,7 +4139,7 @@
           "name": "Ankieta po kursie Odkrycia Informatyki"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Testy po realizacji projektu"
+          "name": "Reprezentacja ma znaczenie"
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Wzorce i reprezentacje"
@@ -4186,7 +4187,7 @@
           "name": "Ankieta po kursie Odkrycia Informatyki"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "Testy po realizacji projektu"
+          "name": "Programowanie dla rozrywki"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Rysowanie kształtów"
@@ -4256,7 +4257,7 @@
           "name": "Wprowadzenie do rozwiązywania problemów"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Testy po realizacji projektu"
+          "name": "Proces rozwiązywania problemów"
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Zgłębianie rozwiązywania problemów"
@@ -4292,7 +4293,7 @@
           "name": "Wprowadzenie do rozwiązywania problemów - Motywy gier (Alternatywna lekcja 3)"
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Testy po realizacji projektu"
+          "name": "Badanie stron internetowych"
         },
         "csd2-2021/Intro to HTML": {
           "name": "Wprowadzenie do HTML"

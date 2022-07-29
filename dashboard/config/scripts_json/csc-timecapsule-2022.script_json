@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2022-06-13 21:01:53 UTC",
+    "serialized_at": "2022-07-11 18:38:42 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -458,6 +458,7 @@
       "position": 1,
       "properties": {
         "description": "If you enjoyed learning to code today, you can continue learning by visiting code.org/learn. If you want to share what you made with your friends and family, click the “Share” button and send the link to whoever you like!",
+        "progression_name": "Video",
         "remarks": true
       },
       "seeding_key": {
@@ -862,6 +863,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-poem-art-intro-video-level_2022"
+        ],
         "progression": "Video"
       },
       "bonus": false,
@@ -884,6 +888,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_backgroundEffects_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -906,6 +913,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar1_2022"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -928,6 +938,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_sounds_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -950,6 +963,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_events1_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -972,6 +988,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar2_2022"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -994,6 +1013,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_addSprites_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1016,6 +1038,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteBehaviors_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1038,6 +1063,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteSizes_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1060,6 +1088,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_freeplay_2022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1082,6 +1113,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-poem-art-outro-video-level_2022"
+        ],
+        "progression": "Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -1103,6 +1138,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "timecapsule_freeplay_2022"
+        ],
         "progression": "My Time Capsule"
       },
       "bonus": false,

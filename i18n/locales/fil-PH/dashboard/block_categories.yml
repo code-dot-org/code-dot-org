@@ -4,6 +4,7 @@ fil:
       Actions: Mga aksyon
       Advanced: Advanced
       Behaviors: Pag-uugali
+      Boolean: Boolean
       Brushes: Brushes
       Category: Kategorya
       Color: Kulay
@@ -24,10 +25,15 @@ fil:
       Logic: Lohika
       Loops: Mga loop
       Math: Math
+      Number: Bilang
       Numbers: Mga numero
+      Picker: Tagapili
+      Prebuilt: Mga tapos na
       Properties: Mga katangian
       Sprites: Mga Sprites
+      String: String
       Text: Text
       Variables: Mga variable
       'Variables ': 'Pagkakaiba '
+      'Variables  ': 'Mga variable  '
       World: Mundo

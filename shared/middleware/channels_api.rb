@@ -62,7 +62,7 @@ class ChannelsApi < Sinatra::Base
   #
   post '/v3/channels' do
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
-    unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
+    unsupported_media_type unless request.content_charset.to_s.casecmp?('utf-8')
 
     project = Projects.new(get_storage_id)
 
@@ -146,7 +146,7 @@ class ChannelsApi < Sinatra::Base
   #
   post %r{/v3/channels/([^/]+)$} do |id|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
-    unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
+    unsupported_media_type unless request.content_charset.to_s.casecmp?('utf-8')
 
     begin
       value = JSON.parse(request.body.read)

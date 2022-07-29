@@ -31,7 +31,7 @@ class CoursesController < ApplicationController
 
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
-    @is_teacher = (current_user && current_user.teacher?) || params[:view] == 'teacher'
+    @is_teacher = (current_user&.teacher?) || params[:view] == 'teacher'
     @is_english = request.language == 'en'
     @is_signed_out = current_user.nil?
     @force_race_interstitial = params[:forceRaceInterstitial]
@@ -83,7 +83,6 @@ class CoursesController < ApplicationController
     CourseOffering.add_course_offering(@unit_group)
     @unit_group.reload
 
-    @unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks]) unless @unit_group.has_migrated_unit?
     if @unit_group.has_migrated_unit? && @unit_group.course_version
       @unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
       @unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)

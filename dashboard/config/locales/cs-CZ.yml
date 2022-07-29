@@ -35,6 +35,7 @@ cs:
           e-mailovou adresu)](%{url})
         username: Uživatelské jméno
         password: Heslo
+        verified_teacher: Ověřený učitel
         password_confirmation: Potvrzení hesla
         current_password: Současné heslo
         locale: Jazyk
@@ -492,7 +493,6 @@ cs:
     popup:
       progress_for_user: Pokrok užívatele %{name}
       progress: Tvůj pokrok
-      lines: 'Celkem řádků kódu: %{lines}'
       close: ZAVŘÍT
       mastery: Pojmy
       puzzle_map: Úrovně
@@ -734,6 +734,7 @@ cs:
     try_hour_of_code: Vyzkoušejte Hodinu kódu!
     store: Obchod
     cookie_notice: Oznámení o souborech cookie
+    view_code: Zobrazit kód
   reference_area:
     title: Potřebuješ pomoc?
     subtitle: Podívej se na tato videa a tipy

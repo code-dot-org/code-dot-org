@@ -611,6 +611,15 @@
         "jigsaw/Jigsaw": {
           "name": "Бас қатырғыш"
         },
+        "allthethings/Jigsaw": {
+          "name": "Бас қатырғыш"
+        },
+        "allthethings/Maze": {
+          "name": "Лабиринт"
+        },
+        "allthethings/Artist": {
+          "name": "Кейіпкер"
+        },
         "allthethings/Bee": {
           "name": "Ара"
         },

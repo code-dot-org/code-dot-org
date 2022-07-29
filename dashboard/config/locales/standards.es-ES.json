@@ -344,8 +344,23 @@
         "csta/2-AP-11": {
           "description": "Crear variables con nombres claros que representen diferentes tipos de datos y realizar operaciones con sus valores."
         },
+        "csta/2-AP-12": {
+          "description": "Diseñar y desarrollar repetidamente programas que combinen estructuras de control, incluyendo bucles anidados y condicionales compuestas."
+        },
+        "csta/2-AP-15": {
+          "description": "Buscar e incorporar los comentarios de los miembros del equipo y de los usuarios para perfeccionar una solución que satisfaga las necesidades de los usuarios."
+        },
         "csta/2-AP-10": {
           "description": "Utilizar diagramas de flujo y/o pseudocódigo para abordar problemas complejos como algoritmos."
+        },
+        "csta/2-AP-16": {
+          "description": "Incorpora el código, los medios y las bibliotecas existentes en los programas originales, y concede la autorización."
+        },
+        "csta/2-AP-18": {
+          "description": "Distribuir las tareas y mantener un calendario del proyecto cuando se desarrollan artefactos computacionales en colaboración."
+        },
+        "csta/2-AP-14": {
+          "description": "Crear procedimientos con parámetros para organizar el código y facilitar su reutilización."
         },
         "csta/2-CS-03": {
           "description": "Identificar y solucionar sistemáticamente los problemas de los dispositivos informáticos y sus componentes."
