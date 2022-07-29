@@ -284,7 +284,6 @@ sl:
     popup:
       progress_for_user: "Napredek od %{name}"
       progress: 'Tvoj napredek'
-      lines: 'Skupno število vrstic kode: %{lines}'
       close: 'ZAPRI'
       mastery: 'Koncepti'
       puzzle_map: 'Stopnje'

@@ -10,22 +10,22 @@ class Pd::WorkshopMailer < ActionMailer::Base
   # Name of partial view for workshop details organized by course, then subject.
   # (views/pd/workshop_mailer/workshop_details/_<name>.html.haml)
   DETAILS_PARTIALS = {
-    Pd::Workshop::COURSE_CS_IN_S => {
-      Pd::Workshop::SUBJECT_CS_IN_S_PHASE_2 => 'phase_2',
-      Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 => 'cs_in_s_phase_3_semester_1',
-      Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 => 'cs_in_s_phase_3_semester_2'
+    Pd::Workshop::COURSE_CSF => {
+      Pd::Workshop::SUBJECT_CSF_DISTRICT => 'csf_district',
+      Pd::Workshop::SUBJECT_CSF_101 => 'csf_intro',
+      Pd::Workshop::SUBJECT_CSF_201 => 'csf_deepdive'
     },
-    Pd::Workshop::COURSE_CS_IN_A => {
-      Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2 => 'phase_2',
-      Pd::Workshop::SUBJECT_CS_IN_A_PHASE_3 => 'cs_in_a_phase_3'
+    Pd::Workshop::COURSE_CSA => {
+      Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP => 'csa_summer_workshop',
+      Pd::Workshop::SUBJECT_CSA_WORKSHOP_1 => 'csa_ayw1'
     },
-    Pd::Workshop::COURSE_ECS => {
-      Pd::Workshop::SUBJECT_ECS_PHASE_2 => 'phase_2',
-      Pd::Workshop::SUBJECT_ECS_UNIT_3 => 'ecs_unit_3',
-      Pd::Workshop::SUBJECT_ECS_UNIT_4 => 'ecs_unit_4',
-      Pd::Workshop::SUBJECT_ECS_UNIT_5 => 'ecs_unit_5',
-      Pd::Workshop::SUBJECT_ECS_UNIT_6 => 'ecs_unit_6',
-      Pd::Workshop::SUBJECT_ECS_PHASE_4 => 'ecs_phase_4'
+    Pd::Workshop::COURSE_CSD => {
+      Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP => 'csd_summer_workshop',
+      Pd::Workshop::SUBJECT_CSD_WORKSHOP_1 => 'csd_ayw1'
+    },
+    Pd::Workshop::COURSE_CSP => {
+      Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP => 'csp_summer_workshop',
+      Pd::Workshop::SUBJECT_CSP_WORKSHOP_1 => 'csp_ayw1'
     }
   }
 
@@ -278,7 +278,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   private
 
   def save_timestamp
-    return unless @enrollment && @enrollment.persisted?
+    return unless @enrollment&.persisted?
     Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
   end
 

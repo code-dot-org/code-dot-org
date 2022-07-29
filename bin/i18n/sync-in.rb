@@ -180,6 +180,13 @@ def get_i18n_strings(level)
     end
   end
 
+  if level.is_a? LevelGroup
+    i18n_strings["sublevels"] = {}
+    level.child_levels.map do |sublevel|
+      i18n_strings["sublevels"][sublevel.name] = get_i18n_strings sublevel
+    end
+  end
+
   i18n_strings["contained levels"] = level.contained_levels.map do |contained_level|
     get_i18n_strings(contained_level)
   end
@@ -423,7 +430,7 @@ end
 
 def redact_level_file(source_path)
   return unless File.exist? source_path
-  source_data = JSON.load(File.open(source_path))
+  source_data = JSON.parse(File.read(source_path))
   return if source_data.blank?
 
   redactable_data = source_data.map do |level_url, i18n_strings|
@@ -498,7 +505,6 @@ def localize_markdown_content
     educate/csc.md.partial
     educate/curriculum/csf-transition-guide.md
     educate/it.md
-    farsi.md
     helloworld.md.partial
     hourofcode/artist.md.partial
     hourofcode/flappy.md.partial

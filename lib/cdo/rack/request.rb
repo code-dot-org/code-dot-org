@@ -5,7 +5,7 @@ require 'country_codes'
 
 module Cdo
   module RequestExtension
-    TRUSTED_PROXIES = JSON.parse(IO.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
+    TRUSTED_PROXIES = JSON.parse(File.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
       IPAddr.new(proxy)
     end
 
@@ -15,7 +15,7 @@ module Cdo
 
     def json_body
       return nil unless content_type.split(';').first == 'application/json'
-      return nil unless content_charset.downcase == 'utf-8'
+      return nil unless content_charset.casecmp?('utf-8')
       JSON.parse(body.read, symbolize_names: true)
     end
 

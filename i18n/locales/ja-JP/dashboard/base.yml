@@ -435,7 +435,6 @@ ja:
     popup:
       progress_for_user: "%{name} の進捗状況"
       progress: 'あなたの進捗状況'
-      lines: 'コードの行の合計:  %{lines}'
       close: '閉じる'
       mastery: 'アイデア'
       puzzle_map: 'ステージ'

@@ -1440,7 +1440,7 @@ es-MX:
       gamelab_setPrompt:
         text: solicitar usuario {QUESTION} para la variable {VAR}
       gamelab_setPromptWithChoices:
-        text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}{C}
+        text: solicitar usuario {QUESTION} para la variable {VAR} opciones {A}{B}{C}
       gamelab_setProp:
         text: establecer {SPRITE} {PROPERTY} a {VAL}
         options:
@@ -1575,7 +1575,7 @@ es-MX:
       gamelab_updateTitleWithColor:
         text: mostrar pantalla de título {BREAK} título {TITLE} color {COLOR}
       gamelab_whenAllPromptsAnswered:
-        text: cuando se responda a todas las preguntas
+        text: cuando se respondan todas las solicitudes
       gamelab_whenDownArrow:
         text: cuando se presiona la flecha abajo
       gamelab_whenKey:
@@ -1661,7 +1661,7 @@ es-MX:
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       Mikelab_beginDataCollection:
-        text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}{C}
+        text: solicitar usuario {QUESTION} para la variable {VAR} opciones {A}{B}{C}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -2174,9 +2174,9 @@ es-MX:
             '"glass"': Rompiendo vidrio
             '"twinkling"': Parpadeante
       Poetry_setPrompt:
-        text: haz que el usuario {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} por el variable {VAR}
+        text: solicitar usuario {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} para la variable {VAR}
       Poetry_setPromptWithChoices:
-        text: haz que el usuario {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} por el variable {VAR}
+        text: solicitar usuario {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} para la variable {VAR}
           con estas opciones {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A}{LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}{LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
       Poetry_setSize:
         text: establecer el tamaño de {SPRITE} a {VAL}
@@ -2501,7 +2501,9 @@ es-MX:
           repetir hasta completar conducto
           {STATEMENT}
       craft_repeatUntilGoal:
-        text: repetir hasta llegar a la meta
+        text: |-
+          repetir hasta llegar a la meta
+          {STATEMENT}
       craft_spawnEntity:
         text: generar {ENTITY}
         options:

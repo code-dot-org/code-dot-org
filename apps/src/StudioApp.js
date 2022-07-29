@@ -75,6 +75,10 @@ import {
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
+import {
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
@@ -1395,17 +1399,17 @@ function resizePinnedBelowVisualizationArea() {
 }
 
 /**
- * Debounced onResize operations that update the layout to support sizing
+ * Throttled onResize operations that update the layout to support sizing
  * to viewport height and using the small footer.
  * @type {Function}
  */
-var onResizeSmallFooter = _.debounce(function() {
+var onResizeSmallFooter = _.throttle(function() {
   resizePinnedBelowVisualizationArea();
-}, 10);
+}, 1000 / 60);
 
 /**
  * Passthrough to local static resizePinnedBelowVisualizationArea, which needs
- * to be static so it can be statically debounced as onResizeSmallFooter
+ * to be static so it can be statically throttled as onResizeSmallFooter.
  */
 StudioApp.prototype.resizePinnedBelowVisualizationArea = function() {
   resizePinnedBelowVisualizationArea();
@@ -3364,6 +3368,10 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
   );
 
   getStore().dispatch(setPageConstants(combined));
+
+  if (config.isInstructor) {
+    getStore().dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+  }
 
   const instructionsConstants = determineInstructionsConstants(config);
   getStore().dispatch(setInstructionsConstants(instructionsConstants));

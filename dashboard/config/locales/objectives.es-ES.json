@@ -1439,6 +1439,90 @@
         "71209fa9-4d56-4ced-bb42-b3cf73f523f1": {
           "description": "Actualiza un valor almacenado en una variable"
         },
+        "40bde7b5-fc47-455e-9d21-5dc53330e8e8": {
+          "description": "Creación y uso de un sprite"
+        },
+        "99befbcc-2654-44cc-a2f9-fe0cde1ab146": {
+          "description": "Utiliza la notación de punto para actualizar las propiedades de un sprite"
+        },
+        "c61f1e5d-d728-499d-9729-a1ff2db8de64": {
+          "description": "Coloca el texto en la pantalla utilizando un plano de coordenadas."
+        },
+        "b40e994c-3d1e-4ba8-9cf1-8674567bb26c": {
+          "description": "Utiliza argumentos para controlar cómo se muestra el texto en una pantalla."
+        },
+        "d6709c2c-76b3-495d-bb07-af8a4c772363": {
+          "description": "Utiliza un proceso estructurado para planificar y desarrollar un programa."
+        },
+        "6828e8c6-bde7-4e8f-842d-04bd41a46eb4": {
+          "description": "Explica cómo el bucle de dibujo permite la creación de animaciones en el Laboratorio de Juegos"
+        },
+        "9ed14237-271b-4890-b05c-04bde1c706fc": {
+          "description": "Utiliza el bucle de dibujo en combinación con el comando randomNumber(), las figuras y los sprites para realizar animaciones sencillas"
+        },
+        "ef9e41ae-04ee-4b48-a59e-06f87ff5c9d9": {
+          "description": "Utiliza el patrón de contador para aumentar o disminuir las propiedades de los sprites"
+        },
+        "32725306-4405-48d1-871c-ce44cd180b0c": {
+          "description": "Identificar qué propiedades de los sprites hay que cambiar, y de qué manera, para conseguir un movimiento específico"
+        },
+        "ac9b5e0b-ce84-48f1-8d9e-3957b6d3ac16": {
+          "description": "Utiliza las condicionales para reaccionar a los cambios en las variables y en las propiedades de los sprites"
+        },
+        "1bd55841-3a6b-45b8-9a2c-7ad9b9df5102": {
+          "description": "Utiliza las condicionales para reaccionar a la entrada del teclado"
+        },
+        "aee02da5-9e5d-4c9b-b43d-7576a405fd5d": {
+          "description": "Mover los sprites en respuesta a la entrada del teclado"
+        },
+        "6c2364e6-a17c-4b0c-856e-71ba8ec2b4c7": {
+          "description": "Utiliza una sentencia if-else para controlar el flujo de un programa."
+        },
+        "317b8134-0316-46e4-b56c-4adba284eab6": {
+          "description": "Responder a una variedad de tipos de entrada del usuario."
+        },
+        "58e13b51-2fb9-4de3-a547-dfe7bb9e71b0": {
+          "description": "Utiliza condicionales para reaccionar a las entradas del teclado o a los cambios en las variables/propiedades"
+        },
+        "286ec7b0-0776-4049-9174-3deeb1d80c14": {
+          "description": "Secuencia de comandos para dibujar en el orden correcto"
+        },
+        "899e51b2-2cb8-4948-9987-aaada64c6a85": {
+          "description": "Aplica un patrón de iteración a variables o propiedades en un bucle"
+        },
+        "ebf0954f-2190-4e20-8420-f0275aceee0a": {
+          "description": "Utiliza los bloques `velocity` y `rotationSpeed` para crear y modificar los movimientos de los sprites"
+        },
+        "01426fc9-55b3-41ec-92ec-fb871a4739b1": {
+          "description": "Describe las ventajas de simplificar el código utilizando bloques de nivel superior"
+        },
+        "bb7bce08-c20e-4a8b-8b3e-def24447e33f": {
+          "description": "Detecta cuando los sprites se tocan o se superponen, y cambia el programa en respuesta. "
+        },
+        "d3aa02b0-9340-47ab-b258-5446686c77b4": {
+          "description": "Describir cómo las abstracciones ayudan a gestionar la complejidad del código"
+        },
+        "63135326-7d2f-4974-af73-f8d7a801cd04": {
+          "description": "Utiliza la velocidad del sprite con el patrón de contador para crear diferentes tipos de movimiento del sprite"
+        },
+        "6ed44bf4-19c7-4fd2-b72d-527e7c1ed3f3": {
+          "description": "Explica cómo se pueden combinar construcciones de programación individuales para crear un comportamiento más complejo"
+        },
+        "2a7e04b6-f408-4915-a8df-10a590d5b45a": {
+          "description": "Modelar diferentes tipos de interacciones entre sprites."
+        },
+        "ba90afe9-19b4-4a19-b7e7-9cc6dcc94b86": {
+          "description": "Describir cómo las abstracciones pueden construirse para desarrollar más abstracciones"
+        },
+        "3572828f-fdf1-4708-bfd1-1a021799e8fd": {
+          "description": "Crear y utilizar funciones para bloques de código que realicen una única tarea de alto nivel dentro de un programa"
+        },
+        "9d1d61de-4fa4-458f-b11f-aee208854019": {
+          "description": "Explicar las ventajas de utilizar funciones en un programa"
+        },
+        "dd877754-8fc0-4026-9205-385c6a3a2e4e": {
+          "description": "Explicar cómo las funciones permiten a los programadores razonar sobre un programa a un nivel superior"
+        },
         "74126a3c-61fa-40ac-aef5-ffe0bf68a549": {
           "description": " Comunicarse y colaborar con los compañeros para resolver un problema "
         },

@@ -3791,7 +3791,25 @@
         "allthethings-anigif-instructions": "Przenieś mnie na wschód (E - East), aby doprowadzić mnie do świnki!",
         "2-3 Artist Loops 2": "Teraz użyj bloku \"powtórz\", aby z komórki utworzyć powłokę.",
         "PS predictive Applab level test": "Oto kilka instrukcji.",
-        "allthethings AI Lab 1": "Oto kilka krótkich instrukcji dla tego poziomu testowego AI Lab."
+        "allthethings AI Lab 1": "Oto kilka krótkich instrukcji dla tego poziomu testowego AI Lab.",
+        "Auto Open Function Editor": "Możesz wywoływać funkcje z wnętrza innych funkcji! Za pomocą swojej funkcji \"kształt\", utwórz 3 sylwetki domów, każdy o 20 pikseli większy niż poprzedni, zaczynając od 50 pikseli. Pomocne może być użycie pętli licznikowej. ",
+        "Bee Recommended Blocks test": "Fioletowe kwiaty mogą mieć 1 lub 0 nektary, ale nie wiesz który. Uważaj, by nie zbierać nektaru z fioletowego kwiatka, jeśli go nie ma. Sprawdzaj, czy nektar jest równy 1 przy użyciu bloku \"jeśli\".",
+        "Calc Circles of Eval .2": "Ten blok obliczeń wykonuje mnożenie dwóch liczb i zwraca ich iloczyn. Edytuj ten blok tak, aby mnożył 2 \\* 5",
+        "Calc Vars 1": "Zmienne służą do nazywania wartości, dzięki czemu możemy łatwo odwoływać się do nich wielokrotnie w naszych programach. Oto zmienna zwana 'age'. Ustaw jego wartość na swój wiek i kliknij Uruchom.",
+        "Eval Booleans 2": "Czy możesz tak ustawić wartości, aby to wyrażenie było prawdziwe?",
+        "Eval Contracts A": "Użyj funkcji gwiazdy, aby uzyskać pełną czerwoną gwiazdę o promieniu 60 pikseli",
+        "Eval Define Funcs 3": "Oto początek kolejnej nowej funkcji zwanej 'purple-circle' z jedną liczbą jako domeną (promień) i obrazem jako typem wyniku. Treść funkcji jest jednak popsuta - napraw ją, a następnie utwórz fioletowe kółko o promieniu 150 pikseli",
+        "Eval Define Funcs Test": "Oto początek kolejnej nowej funkcji zwanej 'purple-circle' z jedną liczbą jako domeną (promień) i obrazem jako typem wyniku. Treść funkcji jest jednak popsuta - napraw ją, a następnie utwórz fioletowe kółko o promieniu 150 pikseli",
+        "Eval Strings Images .2": "Funkcja string-append pobiera dwa łńcuchy i zwraca jeden połączony łańcuch. Dodaj łańcuch \"Universe\" jako drugi argument tej funkcji.",
+        "Farmer for Authored Hint testing": "Wow, znalazłem naprawdę głęboki otwór! Nie wiem, ile szufelek śmieci potrzeba.  Czy potrafisz napisać program, który wypełni go do poziomu ziemi?  Wskazówka: Spróbuj użyć pętli \"dopóki\".",
+        "Farmer for TTS testing": "Wow, znalazłem naprawdę głęboki otwór! Nie wiem, ile szufelek śmieci potrzeba.  Czy potrafisz napisać program, który wypełni go do poziomu ziemi?  Wskazówka: Spróbuj użyć pętli \"dopóki\".",
+        "AllTheThings: Pixelation - Lesson 14 - Make the Letter A": "Utwórz literę \"A\" o wielkości 3x5. Widżet ma ustawione niepoprawne wymiary. Twoim pierwszym zadaniem jest ustawienie drugiego bajtu na 5 w kodzie binarnym: 0000 0101. Potem zacznij wprowadzać dane o pikselach.",
+        "U3L03 Define and use turnAround": "Zdefiniuj funkcję o nazwie turnAround. Wywołaj tę funkcję, a następnie przesuń żółwia do przodu. (Kliknij, aby zobaczyć pełne instrukcje)",
+        "U3L07 - Starry Night Starter Code": "Użyjesz pętli i liczb losowych, aby wygenerować obraz gwiaździstego nocnego nieba podobny do pokazanego tutaj. Daliśmy Ci fragment kodu startowego do wygenerowania ziemi i nieba (tylko dwie gigantyczne kropki), dodasz kod do tego projektu, aby stworzyć gwiazdy, trawę i księżyc. Wszystkie efekty są sprytnymi aplikacjami kropek, linii i kolorów żółwia. Aby rozpocząć, wykonaj serię kroków sugerowanych w załączonym arkuszu.",
+        "2-3 Artist 3": "Czy chcesz zobaczyć, co się stanie, kiedy będziemy powtarzać ten kształt wiele razy za pomocą pętli?",
+        "Applab test": "Ten poziom można zgłosić. Tylko do testów!",
+        "Test embedded Blockly in instructions": "Jako element blokowy powinniśmy być w stanie dołączyć XML reprezentujący prawidłowy blok Blockly lub bloki.\n\n<xml>\n  <block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\nObsługujemy również Blockly XML jako element wbudowany, taki jak: <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>. Różnica w formacie wejściowym polega na tym, że ten jest osadzony w akapicie, podczas gdy poprzedni znajduje się we własnym bloku tekstowym. Różnica w wydajności jest porównywalna.",
+        "U1L4 NetSim SendAB": "Opracuj, udokumentuj i przetestuj protokół, który umożliwia używanie Internet Simulator do przekazywania wiadomości. Zobacz arkusz, aby uzyskać bardziej szczegółowe instrukcje."
       }
     }
   }

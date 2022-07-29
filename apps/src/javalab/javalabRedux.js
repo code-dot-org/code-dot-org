@@ -27,13 +27,14 @@ const SET_BACKPACK_API = 'javalab/SET_BACKPACK_API';
 const SET_BACKPACK_ENABLED = 'javalab/SET_BACKPACK_ENABLED';
 const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
-const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
 const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
 const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
 const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
 const SET_IS_READONLY_WORKSPACE = 'javalab/SET_IS_READONLY_WORKSPACE';
 const SET_HAS_OPEN_CODE_REVIEW = 'javalab/SET_HAS_OPEN_CODE_REVIEW';
 const SET_COMMIT_SAVE_STATUS = 'javalab/SET_COMMIT_SAVE_STATUS';
+const SET_VALIDATION_PASSED = 'javalab/SET_VALIDATION_PASSED';
+const SET_HAS_RUN_OR_TESTED = 'javalab/SET_HAS_RUN_OR_TESTED';
 const SET_EDIT_TAB_KEY = 'javalab/SET_EDIT_TAB_KEY';
 const SET_ACTIVE_TAB_KEY = 'javalab/SET_ACTIVE_TAB_KEY';
 const SET_FILE_METADATA = 'javalab/SET_FILE_METADATA';
@@ -94,7 +95,6 @@ export const initialState = {
   backpackEnabled: false,
   isStartMode: false,
   levelName: undefined,
-  disableFinishButton: false,
   isVisualizationCollapsed: false,
   isPhotoPrompterOpen: false,
   photoPrompterPromptText: '',
@@ -104,7 +104,9 @@ export const initialState = {
   hasCommitSaveError: false,
   editorOpenDialogName: null,
   newFileError: null,
-  renameFileError: null
+  renameFileError: null,
+  validationPassed: false,
+  hasRunOrTestedCode: false
 };
 
 // Action Creators
@@ -237,13 +239,6 @@ export const setLevelName = levelName => ({
   type: SET_LEVEL_NAME,
   levelName
 });
-
-export const setDisableFinishButton = disableFinishButton => {
-  return {
-    type: SET_DISABLE_FINISH_BUTTON,
-    disableFinishButton
-  };
-};
 
 export const openPhotoPrompter = promptText => ({
   type: OPEN_PHOTO_PROMPTER,
@@ -400,6 +395,16 @@ export const setRenameFileError = error => ({
 
 export const clearRenameFileError = () => ({
   type: CLEAR_RENAME_FILE_ERROR
+});
+
+export const setValidationPassed = validationPassed => ({
+  type: SET_VALIDATION_PASSED,
+  validationPassed
+});
+
+export const setHasRunOrTestedCode = hasRunOrTestedCode => ({
+  type: SET_HAS_RUN_OR_TESTED,
+  hasRunOrTestedCode
 });
 
 // Reducer
@@ -572,12 +577,6 @@ export default function reducer(state = initialState, action) {
       levelName: action.levelName
     };
   }
-  if (action.type === SET_DISABLE_FINISH_BUTTON) {
-    return {
-      ...state,
-      disableFinishButton: action.disableFinishButton
-    };
-  }
   if (action.type === TOGGLE_VISUALIZATION_COLLAPSED) {
     return {
       ...state,
@@ -693,5 +692,17 @@ export default function reducer(state = initialState, action) {
     };
   }
 
+  if (action.type === SET_VALIDATION_PASSED) {
+    return {
+      ...state,
+      validationPassed: action.validationPassed
+    };
+  }
+  if (action.type === SET_HAS_RUN_OR_TESTED) {
+    return {
+      ...state,
+      hasRunOrTestedCode: action.hasRunOrTestedCode
+    };
+  }
   return state;
 }

@@ -8,13 +8,13 @@ title: Activity Guidelines
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# Guia per crear i enviar tutorials i lliçons de Hour of Code i la setmana Computer Science Education
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org allotja una varietat de videos, lliçons i activitats de la website Hour of Code. La llista actual es a [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+Vols enviar el teu propi tutorial autoguiat, una lliçó dirigida, o una activitat de robòtica/maker on s'expliqui el principi informatic? Uneix-te a aquest moviment global i ajuda els participants de tot el món a començar amb una hora de codi o anar més enllà amb activitats amb multi- lliçons, d'un dia o d'una setmana.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2022, will not be listed for 2022's Hour of Code.)** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+Després de llegir les directrius, podeu enviar la vostra activitat a través de la nostra pàgina d'enviament d'activitats d'Hour of Code™. Podeu enviar una activitat en qualsevol moment, però la data límit per incloure-la en un any natural determinat és l'1 d'octubre. (Per exemple, les activitats rebudes després de l'1 d'octubre de 2022 no apareixeran a l'Hora del Codi de 2022.) Si teniu cap pregunta sobre l'enviament de l'activitat, poseu-vos en contacte amb nosaltres a support@code.org.
 
 A few tips:
 

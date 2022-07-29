@@ -45,6 +45,7 @@ es-MX:
         personal_email_markdown: "Correo electrónico personal [(haz clic aquí si no tienes correo electrónico)](%{url})"
         username: 'Nombre de usuario'
         password: 'Contraseña'
+        verified_teacher: 'Profesor Verificado'
         password_confirmation: 'Confirmación de la contraseña'
         current_password: 'Contraseña actual'
         locale: 'Idioma'
@@ -429,7 +430,6 @@ es-MX:
     popup:
       progress_for_user: "progreso de %{name}"
       progress: 'Tu progreso'
-      lines: 'Total de líneas de código: %{lines}'
       close: 'CERRAR'
       mastery: 'Conceptos'
       puzzle_map: 'Etapas'

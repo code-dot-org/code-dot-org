@@ -200,7 +200,7 @@ Certificate.propTypes = {
   under13: PropTypes.bool,
   children: PropTypes.node,
   showStudioCertificate: PropTypes.bool,
-  initialCertificateImageUrl: PropTypes.string,
+  initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool
 };
 
