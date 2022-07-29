@@ -30,7 +30,7 @@ class LessonGroup < ApplicationRecord
 
   validates :position, numericality: {greater_than: 0}
 
-  validates_uniqueness_of :key, scope: :script_id
+  validates_uniqueness_of :key, scope: :script_id, case_sensitive: true
 
   validates :key,
     presence: {

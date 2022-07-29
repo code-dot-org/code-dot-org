@@ -245,6 +245,7 @@ Scenario: Lock settings for retake after submit scenario
   # initially locked for student in summary view
 
   When I am on "http://studio.code.org/s/allthethings"
+  And I wait until element ".uitest-summary-progress-row:contains(1. Jigsaw)" is visible
   Then I verify the lesson named "Anonymous student survey 2" is locked
 
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1"
@@ -265,6 +266,7 @@ Scenario: Lock settings for retake after submit scenario
 
   When I sign in as "frank"
   And I am on "http://studio.code.org/s/allthethings"
+  And I wait until element ".uitest-summary-progress-row:contains(1. Jigsaw)" is visible
   Then I verify the lesson named "Anonymous student survey 2" is unlocked
   Then I verify progress for lesson 31 level 1 is "not_tried" without waiting
   Then I verify progress for lesson 31 level 2 is "not_tried" without waiting
@@ -279,6 +281,7 @@ Scenario: Lock settings for retake after submit scenario
   # now locked for student
 
   When I am on "http://studio.code.org/s/allthethings"
+  And I wait until element ".uitest-summary-progress-row:contains(1. Jigsaw)" is visible
   Then I verify the lesson named "Anonymous student survey 2" is locked
 
   # now teacher allows for retake
@@ -295,6 +298,7 @@ Scenario: Lock settings for retake after submit scenario
 
   When I sign in as "frank"
   And I am on "http://studio.code.org/s/allthethings"
+  And I wait until element ".uitest-summary-progress-row:contains(1. Jigsaw)" is visible
   Then I verify the lesson named "Anonymous student survey 2" is unlocked
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/4"
   Then element ".unsubmitButton" is visible
