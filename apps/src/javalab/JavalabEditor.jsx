@@ -22,7 +22,6 @@ import {
   setNewFileError,
   clearNewFileError,
   setRenameFileError
-  setAllEditorMetadata
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
@@ -45,9 +44,6 @@ import JavalabEditorDialogManager, {
   JavalabEditorDialog
 } from './JavalabEditorDialogManager';
 import JavalabEditorHeader from './JavalabEditorHeader';
-import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
-import {getDefaultFileContents, getTabKey} from './JavalabFileHelper';
-import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 
 const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
