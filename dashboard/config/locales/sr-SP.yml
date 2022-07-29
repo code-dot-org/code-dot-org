@@ -293,7 +293,6 @@ sr:
     popup:
       progress_for_user: Напредак %{name}
       progress: Напредак
-      lines: 'Укупно линија кода: %{lines}'
       close: ЗАТВОРИ
       mastery: Концепти
       puzzle_map: Нивои

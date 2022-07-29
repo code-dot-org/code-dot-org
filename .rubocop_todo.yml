@@ -389,11 +389,6 @@ Rails/WhereEquals:
 Rails/WhereExists:
   Enabled: false
 
-# Offense count: 56
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Security/IoMethods:
-  Enabled: false
-
 # Offense count: 2
 Security/MarshalLoad:
   Enabled: false

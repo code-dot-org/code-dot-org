@@ -51,7 +51,8 @@
         "hello-world-emoji-2021/Hello World": {
           "overview": "Bu derste öğrenciler, Sprite Lab'da programlama yaparak bilgisayar biliminin temellerini öğrenecekler.Sprite Lab, yaratıcı ve eğlenceli projeler oluşturmak için kullanabileceğiniz bir araçtır. Öğrenciler, olayları kullanarak hareketli grafikler oluşturmayı ve canlandırmayı ve onları etkileşimli hale getirmeyi öğrenecekler.\n\nBu dersin birden fazla versiyonu var. Her versiyonda aynı kavramlar öğretiliyor ancak farklı öğrencilere hitap etmek için farklı görseller kullanılıyor. Daha fazla bilgi için [Merhaba Dünya açılış sayfasını](https://code.org/helloworld) ziyaret edin.",
           "preparation": "-   Sınıfınız için sorunlu olabilecek alanları bulmak için bulmacaları yapın.\n-   İlk eğitimden sonra bilgisayar bilimini daha fazla öğrenmek için bir plan yapmak üzere [CS Connections](https://code.org/educate/csc) adresindeki kaynakları kullanın.",
-          "purpose": "Bu dersin amacı, öğrencileri Hareketli Nesne Laboratuvarı'nda basit programlama projeleri oluşturmaya hazırlamaktadır. Bu beceriyle öğrenciler daha sonra, başka bir okul konusu veya kişisel olarak ilgilerini çeken alanlar gibi herhangi bir konuda projeler oluşturabilirler. Bilgisayar biliminin diğer konulara nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin."
+          "purpose": "Bu dersin amacı, öğrencileri Hareketli Nesne Laboratuvarı'nda basit programlama projeleri oluşturmaya hazırlamaktadır. Bu beceriyle öğrenciler daha sonra, başka bir okul konusu veya kişisel olarak ilgilerini çeken alanlar gibi herhangi bir konuda projeler oluşturabilirler. Bilgisayar biliminin diğer konulara nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin.",
+          "student_overview": "Bu derste, Sprite Lab'de programlama yaparak bilgisayar biliminin temellerini öğreneceksiniz. Sprite Lab, yaratıcı ve eğlenceli projeler oluşturmak için kullanabileceğiniz bir araçtır. Sprite oluşturmayı ve canlandırmayı ve olayları kullanarak onları etkileşimli hale getirmeyi öğreneceksiniz."
         },
         "artist/Artist": {
           "name": "Sanatçı",
@@ -73,7 +74,8 @@
         "hello-world-food-2021/Hello World": {
           "overview": "Bu derste öğrenciler, Sprite Lab'da programlama yaparak bilgisayar biliminin temellerini öğrenecekler.Sprite Lab, yaratıcı ve eğlenceli projeler oluşturmak için kullanabileceğiniz bir araçtır. Öğrenciler, olayları kullanarak hareketli grafikler oluşturmayı ve canlandırmayı ve onları etkileşimli hale getirmeyi öğrenecekler.\n\nBu dersin birden fazla versiyonu var. Her versiyonda aynı kavramlar öğretiliyor ancak farklı öğrencilere hitap etmek için farklı görseller kullanılıyor. Daha fazla bilgi için [Merhaba Dünya açılış sayfasını](https://code.org/helloworld) ziyaret edin.",
           "preparation": "-   Sınıfınız için sorunlu olabilecek alanları bulmak için bulmacaları yapın.\n-   İlk eğitimden sonra bilgisayar bilimini daha fazla öğrenmek için bir plan yapmak üzere [CS Connections](https://code.org/educate/csc) adresindeki kaynakları kullanın.",
-          "purpose": "Bu dersin amacı, öğrencileri Hareketli Nesne Laboratuvarı'nda basit programlama projeleri oluşturmaya hazırlamaktadır. Bu beceriyle öğrenciler daha sonra, başka bir okul konusu veya kişisel olarak ilgilerini çeken alanlar gibi herhangi bir konuda projeler oluşturabilirler. Bilgisayar biliminin diğer konulara nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin."
+          "purpose": "Bu dersin amacı, öğrencileri Hareketli Nesne Laboratuvarı'nda basit programlama projeleri oluşturmaya hazırlamaktadır. Bu beceriyle öğrenciler daha sonra, başka bir okul konusu veya kişisel olarak ilgilerini çeken alanlar gibi herhangi bir konuda projeler oluşturabilirler. Bilgisayar biliminin diğer konulara nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin.",
+          "student_overview": "Bu derste, Sprite Lab'de programlama yaparak bilgisayar biliminin temellerini öğreneceksiniz. Sprite Lab, yaratıcı ve eğlenceli projeler oluşturmak için kullanabileceğiniz bir araçtır. Sprite oluşturmayı ve canlandırmayı ve olayları kullanarak onları etkileşimli hale getirmeyi öğreneceksiniz."
         },
         "aquatic/Aquatic": {
           "name": "Minecraft: Su Yolculuğu",
@@ -89,7 +91,8 @@
         "hello-world-animals-2021/Hello World": {
           "overview": "Bu derste öğrenciler, Sprite Lab'da programlama yaparak bilgisayar biliminin temellerini öğrenecekler.Sprite Lab, yaratıcı ve eğlenceli projeler oluşturmak için kullanabileceğiniz bir araçtır. Öğrenciler, olayları kullanarak hareketli grafikler oluşturmayı ve canlandırmayı ve onları etkileşimli hale getirmeyi öğrenecekler.\n\nBu dersin birden fazla versiyonu var. Her versiyonda aynı kavramlar öğretiliyor ancak farklı öğrencilere hitap etmek için farklı görseller kullanılıyor. Daha fazla bilgi için [Merhaba Dünya açılış sayfasını](https://code.org/helloworld) ziyaret edin.",
           "preparation": "-   Sınıfınız için sorunlu olabilecek alanları bulmak için bulmacaları yapın.\n-   İlk eğitimden sonra bilgisayar bilimini daha fazla öğrenmek için bir plan yapmak üzere [CS Connections](https://code.org/educate/csc) adresindeki kaynakları kullanın.",
-          "purpose": "Bu dersin amacı, öğrencileri Hareketli Nesne Laboratuvarı'nda basit programlama projeleri oluşturmaya hazırlamaktadır. Bu beceriyle öğrenciler daha sonra, başka bir okul konusu veya kişisel olarak ilgilerini çeken alanlar gibi herhangi bir konuda projeler oluşturabilirler. Bilgisayar biliminin diğer konulara nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin."
+          "purpose": "Bu dersin amacı, öğrencileri Hareketli Nesne Laboratuvarı'nda basit programlama projeleri oluşturmaya hazırlamaktadır. Bu beceriyle öğrenciler daha sonra, başka bir okul konusu veya kişisel olarak ilgilerini çeken alanlar gibi herhangi bir konuda projeler oluşturabilirler. Bilgisayar biliminin diğer konulara nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin.",
+          "student_overview": "Bu derste, Sprite Lab'de programlama yaparak bilgisayar biliminin temellerini öğreneceksiniz. Sprite Lab, yaratıcı ve eğlenceli projeler oluşturmak için kullanabileceğiniz bir araçtır. Sprite oluşturmayı ve canlandırmayı ve olayları kullanarak onları etkileşimli hale getirmeyi öğreneceksiniz."
         },
         "starwars/Hour of Code 2015": {
           "name": "Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek (Blocks)",
@@ -115,7 +118,8 @@
         "hello-world-retro-2021/Hello World": {
           "overview": "Bu derste öğrenciler, Sprite Lab'da programlama yaparak bilgisayar biliminin temellerini öğrenecekler.Sprite Lab, yaratıcı ve eğlenceli projeler oluşturmak için kullanabileceğiniz bir araçtır. Öğrenciler, olayları kullanarak hareketli grafikler oluşturmayı ve canlandırmayı ve onları etkileşimli hale getirmeyi öğrenecekler.\n\nBu dersin birden fazla versiyonu var. Her versiyonda aynı kavramlar öğretiliyor ancak farklı öğrencilere hitap etmek için farklı görseller kullanılıyor. Daha fazla bilgi için [Merhaba Dünya açılış sayfasını](https://code.org/helloworld) ziyaret edin.",
           "preparation": "-   Sınıfınız için sorunlu olabilecek alanları bulmak için bulmacaları yapın.\n-   İlk eğitimden sonra bilgisayar bilimini daha fazla öğrenmek için bir plan yapmak üzere [CS Connections](https://code.org/educate/csc) adresindeki kaynakları kullanın.",
-          "purpose": "Bu dersin amacı, öğrencileri Hareketli Nesne Laboratuvarı'nda basit programlama projeleri oluşturmaya hazırlamaktadır. Bu beceriyle öğrenciler daha sonra, başka bir okul konusu veya kişisel olarak ilgilerini çeken alanlar gibi herhangi bir konuda projeler oluşturabilirler. Bilgisayar biliminin diğer konulara nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin."
+          "purpose": "Bu dersin amacı, öğrencileri Hareketli Nesne Laboratuvarı'nda basit programlama projeleri oluşturmaya hazırlamaktadır. Bu beceriyle öğrenciler daha sonra, başka bir okul konusu veya kişisel olarak ilgilerini çeken alanlar gibi herhangi bir konuda projeler oluşturabilirler. Bilgisayar biliminin diğer konulara nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin.",
+          "student_overview": "Bu derste, Sprite Lab'de programlama yaparak bilgisayar biliminin temellerini öğreneceksiniz. Sprite Lab, yaratıcı ve eğlenceli projeler oluşturmak için kullanabileceğiniz bir araçtır. Sprite oluşturmayı ve canlandırmayı ve olayları kullanarak onları etkileşimli hale getirmeyi öğreneceksiniz."
         },
         "starwarsblocks/Hour of Code 2015": {
           "purpose": "Bu ders, sıralama ve olaylar da dahil olmak üzere kodlama ve programlamaya dair temel Bilgisayar Bilimi kavramlarını tanıtır. Eğitimin JavaScript versiyonu, öğrencilerin kod yazmayı deneyimlemesini sağlar.",
@@ -3055,17 +3059,22 @@
           "name": "Hareketli Nesne Laboratuvarı Tanıtımı",
           "overview": "Bu **bağlam ayarı** dersinde öğrenciler, uygulamaların ve araçların kullanıcılara bunları nasıl kullanacakları konusunda nasıl seçenekler sunduğuna odaklanarak bilgisayarların ve teknolojinin hayatlarındaki rolünü tartışacaklar. Öğrenciler daha sonra kendilerini oluşturacaklarına benzer uygulamaları da keşfedecekler.",
           "preparation": "-   Öğrencilerin Code.org'a nasıl giriş yapacağını belirleyin.\n-   Gerekirse öğrenciler için Code.org hesapları oluşturun.\n-   Öğrencilere Sprite Lab Tanıtımı atayın.\n-   **\\\\ \\*Exploring Apps** çalışma sayfasının kopyalarını yazdırın (veya dijital sürümü LMS'nize gönderin).",
-          "purpose": "İlk ders öğrencileri kurs hakkında heyecanlandırmak ve kendi kişisel ilgi alanlarını bilgisayar bilimlerine bağlamaktır. "
+          "purpose": "İlk ders öğrencileri kurs hakkında heyecanlandırmak ve kendi kişisel ilgi alanlarını bilgisayar bilimlerine bağlamaktır. ",
+          "student_overview": "Uygulamaların ve araçların kullanıcılara bunları nasıl kullanacakları konusunda nasıl seçenekler sunduğuna odaklanarak bilgisayarların ve teknolojinin yaşamınızdaki rolünü tartışacaksınız."
         },
         "coursef-2021/lesson-7": {
           "name": "Hareketli Nesne Oluşturma",
+          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler bilgisayarda bir dizi programlama seviyesi üzerinde çalışacaklar ve istediklerini inşa edebilecekleri açık uçlu bir \"serbest oyun\" görevi ile bitirecekler. Öğrenciler programlar yazacak ve Sprite Lab'ın kalbinde yer alan iki kavram hakkında bilgi edinecekler: sprite ve davranışlar.",
           "preparation": "Seviyeleri oynayın ve **\\\\ \\*ders slaytları** gözden geçirin.",
-          "purpose": "Bu ders, öğrencileri Sprite Lab'da programlama ile tanıştırmak üzere tasarlanmıştır. Öğrenciler bu aracın programlama modelini anlamaya başlayacak ve kendilerini ifade etmek için kullanabilecekleri yolları keşfedeceklerdir."
+          "purpose": "Bu ders, öğrencileri Sprite Lab'da programlama ile tanıştırmak üzere tasarlanmıştır. Öğrenciler bu aracın programlama modelini anlamaya başlayacak ve kendilerini ifade etmek için kullanabilecekleri yolları keşfedeceklerdir.",
+          "student_overview": "Bu derste programlar yazacak, sprite ve davranışlar hakkında bilgi edineceksiniz."
         },
         "coursef-2021/lesson-8": {
           "name": "Eylem halindeki Hareketli Nesneler",
+          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler bilgisayarda bir dizi programlama seviyesi üzerinde çalışacaklar ve istediklerini inşa edebilecekleri açık uçlu bir \"serbest oyun\" görevi ile bitirecekler. Öğrenciler, zamanlanmış olaylara ve kullanıcı girdilerine yanıt veren programlar yazacaklar.",
           "preparation": "Seviyeleri ile oynayın ve ders slaytlarını gözden geçirin.",
-          "purpose": "Bu ders, önceki dersten alınan becerileri pekiştirmek ve öğrencileri etkinliklerle programlamaya tanıtmak için tasarlanmıştır. Bu ders boyunca etkinlikler, öğrencilerin programlarının zamanla veya kullanıcıya yanıt olarak nasıl çalıştıklarını değiştirmesi birincil yolu olacaktır."
+          "purpose": "Bu ders, önceki dersten alınan becerileri pekiştirmek ve öğrencileri etkinliklerle programlamaya tanıtmak için tasarlanmıştır. Bu ders boyunca etkinlikler, öğrencilerin programlarının zamanla veya kullanıcıya yanıt olarak nasıl çalıştıklarını değiştirmesi birincil yolu olacaktır.",
+          "student_overview": "Programlama seviyelerinde çalışacak ve istediğinizi inşa edebileceğiniz açık uçlu bir \"ücretsiz oyun\" görevi ile bitireceksiniz."
         },
         "coursef-2021/Virtual Pet": {
           "name": "Mini Proje: Sanal Hayvan",
@@ -3082,6 +3091,7 @@
           "student_overview": "Zorbalık hiçbir zaman iyi değildir. Bu ders, size, çevrimiçi ortamda neyi söylemenin doğru ve neyi söylemenin yanlış olduğunu öğretecektir."
         },
         "coursef-2021/lesson-9": {
+          "overview": "Bu **bağlam belirleme** dersinde öğrenciler, bilgisayarların bir kullanıcıdan gelen girdileri nasıl alıp depoladığını anlamak için dolgu hikayelerini (Mad Libs®'e benzer) kullanacak ve daha sonra bunu programda nasıl çalıştığına bağlı olarak kullanacaktır.",
           "preparation": "6 zarf elde edin (aynı zamanda uygun: kağıt veya indeks kartları, ikiye katlanmış). \n\n-   Her zarfın önünü büyük harflerle etiketleyin: nesne, sıvı, sayı, sıfat, gövde parçası, sayı\n-   Öğrencinin kopyalarını yazdırın **\\\\ \\*çalışma sayfası** (veya dijital sürümü LMS'nize gönderin).",
           "purpose": "Bu ders, öğrenciler programlamaya geri döndüğünde değişkenlerin nasıl çalıştığını anlamaya yardımcı olacak ortak bir bağlam sağlar."
         },
@@ -3261,8 +3271,10 @@
         },
         "courseb-2021/lesson-1": {
           "name": "Ders Projesinin Sonu",
+          "overview": "Bu **proje** dersinde öğrenciler, Play Lab ile açık uçlu bir projede sıralama ve olaylar hakkında öğrendiklerini uygularlar.",
           "preparation": "-   Öğrencilere ilham vermek için kendi Play Lab projelerinizi önceden kodlayın!",
-          "purpose": "Bu ders öğrencilere yeni bilgisayar bilimleri becerilerini yaratıcı bir şekilde kullanmaları için son bir fırsat verir."
+          "purpose": "Bu ders öğrencilere yeni bilgisayar bilimleri becerilerini yaratıcı bir şekilde kullanmaları için son bir fırsat verir.",
+          "student_overview": "Kendi hikayenizi veya oyununuzu oluşturun."
         },
         "coursea-2021/Safety in My Online Neighborhood": {
           "name": "Çevrimiçi Mahallemde Güvenlik",
@@ -3349,8 +3361,10 @@
         },
         "coursea-2021/lesson-1": {
           "name": "Ders Projesinin Sonu",
+          "overview": "Bu **proje** dersinde öğrenciler sıralama ve döngüler hakkında öğrendiklerini Sanatçı ile birlikte uygularlar.",
           "preparation": "-   Öğrencilere ilham vermek için Sanatçı için kendi hikayenizi önceden yazın ve kodlayın!",
-          "purpose": "Bu ders öğrencilere yeni bilgisayar bilimleri becerilerini yaratıcı bir şekilde kullanmaları için son bir fırsat verir."
+          "purpose": "Bu ders öğrencilere yeni bilgisayar bilimleri becerilerini yaratıcı bir şekilde kullanmaları için son bir fırsat verir.",
+          "student_overview": "Sanatçı ile bir hikaye anlatın!"
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
           "name": "Çevrimiçi Kötülüğe bir DUR deme",
@@ -3408,6 +3422,7 @@
         },
         "coursec-2021/Loops in Harvester": {
           "name": "Döngüler ile Ürünleri Hasat Etme",
+          "overview": "Öğrenciler, bu **beceri geliştirme** dersinde hasat makinesinin büyük demetler halinde yetişen birden fazla sebzeyi toplamasına yardımcı olacak yeni eylemleri döngüye alıyor.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Bu derste öğrenciler kabak hasat gibi eylemleri tekrarlamak için döngüler kullanacaklardır. Yeni desenler ortaya çıkacak ve öğrenciler hangi kodun tekrarlanması gerektiğini ve kaç kez belirlemek için yaratıcılık ve mantıksal düşünmeyi kullanacaklar.",
           "student_overview": "Hasatçının biraz sebze toplamasına yardım etmek için döngüleri kullanalım!"
@@ -3482,6 +3497,7 @@
         },
         "coursed-2021/Relay Programming": {
           "name": "Röle Programlama",
+          "overview": "Bu **bağlam belirleme** dersi, hata ayıklama ve kalıcılık üzerine kısa bir dersle başlayacak, ardından öğrenciler takımlara ayrılıp her seferinde bir talimat yazmak için birlikte çalışırken hızla zamana karşı bir yarışa geçecektir.",
           "preparation": "-   **\\\\ \\*Öğretmen Video** izleyin.\n-   Spor salonu veya açık alan gibi bu etkinlik için geniş bir açık alan bulun.\n-   Her grup için bir **\\\\ \\*Etkinlik Paketi** yazdırın.\n-   Her gruba bol kağıt ve kalem/kalem ile tedarik edin.\n-   Her öğrenci için bir **\\\\ \\*Çalışma Sayfası** yazdırın.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.",
           "purpose": "Bilgisayar bilimlerinde takım çalışması çok önemlidir. Takımlar birey olarak çalışmak yerine birbirleriyle kod yazıp hata ayıklarlar. Bu derste öğrenciler mümkün olduğunca verimli olmakla birlikte çalışmayı öğreneceklerdir. \n\nBu etkinlik aynı zamanda öğrencilere zamanlarını dikkatli bir şekilde dengelemeyi ve çok geride kalmadan hataları önlemeyi öğretecek bir aciliyet duygusu da sağlar. Bu deneyim stresli olabilir (beklenen!) Öğrencilere potansiyel hayal kırıklığı ile başa çıkmaları için gerekli araçları sağladığınızdan emin olun.",
           "student_overview": "Kod ile çizimler yaptığınız kursun başını hatırlayın. Bu derste, çok benzer bir şey yapmak için bir takımla birlikte çalışacaksınız!"
@@ -3558,6 +3574,7 @@
         },
         "coursed-2021/While Loops in Farmer": {
           "name": "Çiftçi Döngüleri",
+          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler Farmer'da çukurları doldurmak ve toprak kazmak için çalışacaklar, ancak deliklerin boyutunu veya toprak yığınlarının yüksekliğini bilemeyecekler. Bu bulmacaları çözmek için öğrenciler yeni bir tür döngü kullanacaklar.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Öğrencileriniz döngü bilgilerini derinleştirmeye devam ettikçe, bir komutun tekrarlanması gereken sorunlarla karşılaşacaklardır, ancak kaç kez tekrarlanması gerektiği bilinmemektedir. Bu sırada döngüler devreye giriyor. Bugünün dersinde, öğrenciler, yeni başlayanların koşullara dayalı döngüler anlayışını geliştirecek ve genel olarak döngüler bilgisini genişletecektir. ",
           "student_overview": "Döngüler kodlama için oldukça kullanışlıdır. Bu ders size yeni bir döngüyü öğretecek: süresince (while) döngüleri!"
@@ -3613,13 +3630,17 @@
         },
         "express-2021/lesson-2": {
           "name": "Hareketli Nesne Oluşturma",
+          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler bilgisayarda bir dizi programlama seviyesi üzerinde çalışacaklar ve istediklerini inşa edebilecekleri açık uçlu bir \"serbest oyun\" görevi ile bitirecekler. Öğrenciler programlar yazacak ve Sprite Lab'ın kalbinde yer alan iki kavram hakkında bilgi edinecekler: sprite ve davranışlar.",
           "preparation": "Seviyeleri oynayın ve **\\\\ \\*ders slaytları** gözden geçirin.",
-          "purpose": "Bu ders, öğrencileri Sprite Lab'da programlama ile tanıştırmak üzere tasarlanmıştır. Öğrenciler bu aracın programlama modelini anlamaya başlayacak ve kendilerini ifade etmek için kullanabilecekleri yolları keşfedeceklerdir."
+          "purpose": "Bu ders, öğrencileri Sprite Lab'da programlama ile tanıştırmak üzere tasarlanmıştır. Öğrenciler bu aracın programlama modelini anlamaya başlayacak ve kendilerini ifade etmek için kullanabilecekleri yolları keşfedeceklerdir.",
+          "student_overview": "Bu derste programlar yazacak, sprite ve davranışlar hakkında bilgi edineceksiniz."
         },
         "express-2021/lesson-3": {
           "name": "Eylem halindeki Hareketli Nesneler",
+          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler bilgisayarda bir dizi programlama seviyesi üzerinde çalışacaklar ve istediklerini inşa edebilecekleri açık uçlu bir \"serbest oyun\" görevi ile bitirecekler. Öğrenciler, zamanlanmış olaylara ve kullanıcı girdilerine yanıt veren programlar yazacaklar.",
           "preparation": "Seviyeleri ile oynayın ve ders slaytlarını gözden geçirin.",
-          "purpose": "Bu ders öğrencileri etkinliklerle programlamayı tanıtmak için tasarlanmıştır. Bu ders boyunca etkinlikler, öğrencilerin programlarının zamanla veya kullanıcıya yanıt olarak nasıl çalıştıklarını değiştirmesi birincil yolu olacaktır."
+          "purpose": "Bu ders öğrencileri etkinliklerle programlamayı tanıtmak için tasarlanmıştır. Bu ders boyunca etkinlikler, öğrencilerin programlarının zamanla veya kullanıcıya yanıt olarak nasıl çalıştıklarını değiştirmesi birincil yolu olacaktır.",
+          "student_overview": "Programlama seviyelerinde çalışacak ve istediğinizi inşa edebileceğiniz açık uçlu bir \"ücretsiz oyun\" görevi ile bitireceksiniz."
         },
         "express-2021/Virtual Pet with Sprite Lab": {
           "name": "Hareketli Nesne Laboratuvarı ile Sanal Evcil Hayvan",
@@ -3678,6 +3699,7 @@
         },
         "express-2021/While Loops with the Farmer": {
           "name": "Çiftçi Döngüleri",
+          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler Farmer'da çukurları doldurmak ve toprak kazmak için çalışacaklar, ancak deliklerin boyutunu veya toprak yığınlarının yüksekliğini bilemeyecekler. Bu bulmacaları çözmek için öğrenciler yeni bir tür döngü kullanacaklar.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Öğrencileriniz döngü bilgilerini derinleştirmeye devam ettikçe, bir komutun tekrarlanması gereken sorunlarla karşılaşacaklardır, ancak kaç kez tekrarlanması gerektiği bilinmemektedir. Bu sırada döngüler devreye giriyor. Bugünün dersinde, öğrenciler, yeni başlayanların koşullara dayalı döngüler anlayışını geliştirecek ve genel olarak döngüler bilgisini genişletecektir. ",
           "student_overview": "Döngüler kodlama için oldukça kullanışlıdır. Bu ders size yeni bir döngüyü öğretecek: süresince (while) döngüleri!"
@@ -3797,6 +3819,7 @@
         },
         "pre-express-2021/Loops with Scrat": {
           "name": "Scrat ile Döngüler",
+          "overview": "Bu \\*\\* Beceri Geliştirme \\*\\* dersinde, sincapların meşe palamutlarına ulaşmasına yardımcı olmak amacıyla programlamada döngü kavramını uygulamaya koyacaksınız.",
           "preparation": "-   (İsteğe bağlı) Sınıfınızla bir grup olarak yapmak için birkaç bulmaca seçin.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.",
           "purpose": "Bu derste öğrenciler, döngüler ve bunların Blockly kodunda nasıl uygulanacağı hakkında daha fazla şey öğrenecektir. _Döngüleri_ kullanmak, programlamada önemli bir beceridir çünkü komutları manüel olarak tekrarlama sıkıcı ve etkisizdir. Bu Code.org bulmacaları ile öğrenciler, mevcut döngülere talimatlar eklemeyi, tekrarlanan kodları döngülerde bir araya getirmeyi ve tekrarlanması gereken desenleri tanımayı öğrenir.",
           "student_overview": "Döngüleri kullanarak Scrat'in daha fazla yol katetmesine yardım edin."
@@ -3878,6 +3901,7 @@
         },
         "coursee-2021/Digital Sharing": {
           "name": "Dijital Paylaşım",
+          "overview": "Bu **keşif** dersi, öğrencilerin özellikle dijital ortamlarda sahiplik ve telif haklarına saygı duymanın zorluklarını ve faydalarını anlamalarına yardımcı olur.",
           "preparation": "-   Aşağıdaki \"Bağlantılar\"da **\\*Telif Hakkı Paylaşımı videosunu** bulun\n-   Telif Hakkı ve Yaratıcılık'tan **\\*Dijital Paylaşım Ders Planı**'nın tamamını indirin ve inceleyin\n-   Öğretmen olarak ders için bir eser yaratın (resim, şarkı, slayt gösterisi vb.)\n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.\n-   Bu öğenin paylaşımını çoğaltmak için bir tablete veya akıllı telefona ihtiyacınız olacak",
           "purpose": "Öğrenciler yakında paylaşmak için projeler oluşturacaklar ve bu projelerin çoğu, öğrencilerin kendilerinin oluşturmadığı kod veya görüntüleri içerecek. Bu ders, öğrencilere kendilerine ait olmayan içeriği kullanmanın doğru yolunu gösterme amacını taşıyor.",
           "student_overview": "Bu derste, sahiplik ve telif hakkına dair zorlukları ve faydaları öğreneceksiniz. "
@@ -3891,6 +3915,7 @@
         },
         "coursee-2021/Nested Loops in Artist": {
           "name": "İç İçe Döngüleri kullanarak Süslü Şekiller",
+          "overview": "Bu **beceri geliştirme** dersinde öğrenciler Sanatçıyı kullanarak karmaşık tasarımlar oluşturacaklar. Ders, öğrencilerin kendi tasarımlarını yaratmaları için bir fırsatla sona erer.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak üzere bulmacalarla oynayın.\n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.\n-   Dönüşler ve açılarla ilgili olarak öğrencilerinizin ne tür desteklere ihtiyaç duyabileceğini düşünün.",
           "purpose": "Bu çevrimiçi aktivitede öğrenciler, Oyuncuda, sevdikleri ile gururla paylaşabilecekleri tasarımlar oluşturacaklar. \n\nBu aktivitenin amacı, sanatsal zihinleri olan öğrencilere kodlamayı başka bir yaratıcı çıkış noktası olarak görmeleri için ilham vermenin bir yolu olarak iç içe geçmiş döngüleri kullanmaktır. Bu bulmaca dizisi, tamamı iç içe döngüler kapsamında olan eleştirel düşünme becerileri, temel geometriyi anlama ve yaratıcılığı geliştirmek üzere oluşturulmuştur.",
           "student_overview": "Daha iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız."
@@ -3947,7 +3972,8 @@
           "name": "Erişilebilirlik için Tasarlama",
           "overview": "Bu derste öğrenciler, varsayımsal uygulamalar üzerinden erişilebilir çözümler hakkında beyin fırtınası yaparak ve bunları tasarlayarak erişilebilirliği ve empatinin değerini öğrenecek.",
           "preparation": "-   Bağlam için **\\*engel türleri** hakkında bilgi edinin.\n-   **\\*slayt bölümündeki** konuşmacı notlarını okuyun.\n-   Tüm öğrenciler için yeterli eskiz/çizim malzemesi hazırlayın.",
-          "purpose": "Erişilebilirlik hakkında bilgi edinerek öğrenciler, bilgi işlemin kendi hayatlarının ötesindeki etkilerini fark ederler. Erişilebilirlik, alakalı bir CS konusu gibi görünmeyebilir ancak yetersiz hizmet alan kullanıcılar için erişilebilir bir teknoloji oluşturmak, teknolojinin herkes için daha iyi hale getirilmesine yardımcı olur."
+          "purpose": "Erişilebilirlik hakkında bilgi edinerek öğrenciler, bilgi işlemin kendi hayatlarının ötesindeki etkilerini fark ederler. Erişilebilirlik, alakalı bir CS konusu gibi görünmeyebilir ancak yetersiz hizmet alan kullanıcılar için erişilebilir bir teknoloji oluşturmak, teknolojinin herkes için daha iyi hale getirilmesine yardımcı olur.",
+          "student_overview": "Varsayımsal uygulamalar için beyin fırtınası yaparak ve erişilebilir çözümler tasarlayarak erişilebilirlik ve empatinin değeri hakkında bilgi edinin."
         },
         "coursee-2021/End of Course Project": {
           "name": "Ders Projesinin Sonu",

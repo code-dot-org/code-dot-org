@@ -60,7 +60,7 @@ class Pd::Enrollment < ApplicationRecord
   validates_presence_of :email, unless: :deleted?
   validates_confirmation_of :email, unless: :deleted?
   validates_email_format_of :email, allow_blank: true
-  validates :email, uniqueness: {scope: :pd_workshop_id, message: 'already enrolled in workshop'}, unless: :deleted?
+  validates :email, uniqueness: {scope: :pd_workshop_id, message: 'already enrolled in workshop', case_sensitive: false}, unless: :deleted?
 
   validate :school_forbidden, if: -> {new_record? || school_changed?}
   validates_presence_of :school_info, unless: -> {deleted? || created_before_school_info?}

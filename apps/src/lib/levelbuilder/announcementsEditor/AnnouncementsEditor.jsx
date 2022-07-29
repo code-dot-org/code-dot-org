@@ -24,7 +24,9 @@ export default class AnnouncementsEditor extends Component {
         details: '',
         link: '',
         type: NotificationType.information,
-        visibility: VisibilityType.teacher
+        visibility: VisibilityType.teacher,
+        dismissible: true,
+        buttonText: ''
       })
     );
   };
