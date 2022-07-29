@@ -1,0 +1,9 @@
+<%
+  extname = File.extname(request.splat_path_info)
+  if ['.doc','.docx','.pdf'].include?(extname)
+    redirect "/files/#{File.basename(request.splat_path_info)}"
+  elsif ['.gif','.jpg','.jpeg','.png'].include?(extname)
+    redirect "/images/#{File.basename(request.splat_path_info)}"
+  end
+  pass
+%>
