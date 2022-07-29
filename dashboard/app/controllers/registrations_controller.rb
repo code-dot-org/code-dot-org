@@ -21,7 +21,6 @@ class RegistrationsController < Devise::RegistrationsController
       @user = User.new_with_session(user_params.permit(:user_type), session)
     else
       save_default_sign_up_user_type
-      @already_hoc_registered = params[:already_hoc_registered]
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
       super
     end
@@ -111,7 +110,7 @@ class RegistrationsController < Devise::RegistrationsController
       super
     end
 
-    should_send_new_teacher_email = current_user && current_user.teacher?
+    should_send_new_teacher_email = current_user&.teacher?
     TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now if should_send_new_teacher_email
     should_send_parent_email = current_user && current_user.parent_email.present?
     ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if should_send_parent_email

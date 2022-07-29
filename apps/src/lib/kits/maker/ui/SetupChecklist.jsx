@@ -71,7 +71,9 @@ export default class SetupChecklist extends Component {
 
   detect() {
     const {webSerialPort} = this.props;
-    const wrappedSerialPort = new WebSerialPortWrapper(webSerialPort);
+    const wrappedSerialPort = webSerialPort
+      ? new WebSerialPortWrapper(webSerialPort)
+      : null;
     const setupChecker = new SetupChecker(wrappedSerialPort);
     this.setState({...initialState, isDetecting: true});
 

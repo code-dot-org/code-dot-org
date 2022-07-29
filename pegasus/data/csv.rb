@@ -129,8 +129,8 @@ class GSheetToCsv
   @@gdrive = nil
 
   def initialize(path)
-    @gsheet_path, settings_yml = IO.read(path).strip.split("\n", 2)
-    settings = YAML.load(settings_yml.to_s) || {}
+    @gsheet_path, settings_yml = File.read(path).strip.split("\n", 2)
+    settings = YAML.safe_load(settings_yml.to_s) || {}
     @include_columns = settings['include_columns'] || []
     @exclude_columns = settings['exclude_columns'] || []
     @csv_path = File.join(File.dirname(path), File.basename(path, File.extname(path)) + '.csv')

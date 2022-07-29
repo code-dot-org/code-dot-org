@@ -262,9 +262,10 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     validate_summary(school, school_year, "NO")
   end
 
-  test "High school lack of state data in a denylist state does not override anything" do
+  test "High school lack of state data in a denylist state and year does not override anything" do
     return if Census::StateCsOffering::INFERRED_NO_EXCLUSION_LIST.empty?
-    school_year = 2020
+    school_year = 2021
+    state = Census::StateCsOffering::INFERRED_NO_EXCLUSION_LIST.first.split(':').first
     school = create :census_school,
       :with_teaches_no_teacher_census_submission,
       :with_teaches_yes_teacher_census_submission,
@@ -272,9 +273,25 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_one_year_ago_teaches_yes,
       :with_two_years_ago_teaches_yes,
       :with_three_years_ago_teaches_yes,
-      state: Census::StateCsOffering::INFERRED_NO_EXCLUSION_LIST.first,
+      state: state,
       school_year: school_year
     validate_summary(school, school_year, "MAYBE")
+  end
+
+  test "High school lack of state data in a denylist state and non-denylist year does override previous years" do
+    return if Census::StateCsOffering::INFERRED_NO_EXCLUSION_LIST.empty?
+    school_year = 2020
+    state = Census::StateCsOffering::INFERRED_NO_EXCLUSION_LIST.first.split(':').first
+    school = create :census_school,
+      :with_teaches_no_teacher_census_submission,
+      :with_teaches_yes_teacher_census_submission,
+      :with_teaches_yes_parent_census_submission,
+      :with_one_year_ago_teaches_yes,
+      :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_yes,
+      state: state,
+      school_year: school_year
+    validate_summary(school, school_year, "NO")
   end
 
   test "Inconsistent teacher surveys override other surveys" do
