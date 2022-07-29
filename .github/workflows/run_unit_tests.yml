@@ -1,0 +1,19 @@
+name: Run UI tests composite actions
+on:
+  workflow_dispatch:
+jobs:
+  run-ui-tests:
+    runs-on: ubuntu-latest
+    steps:    
+      - name: Get actions code
+        uses: actions/checkout@v3    
+      - name: say-hello
+        uses: ./.github/actions/hello_word        
+      - name: Install mysql
+        uses: ./.github/actions/install-mysql
+      - name: Install Ruby
+        uses: ./.github/actions/install-ruby
+      - name: Install test variables
+        uses: ./.github/actions/test-variables-installer
+      - name: Install node
+        uses: ./.github/actions/install-node
