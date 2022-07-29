@@ -14,8 +14,8 @@
         },
         {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=6",
           "type": "feedback",
           "visibility": "Teacher-only"
         }
@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-27 19:40:03 UTC",
+    "serialized_at": "2022-07-22 12:42:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1374,7 +1374,7 @@
       "key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes - Part 1*."
       },
       "seeding_key": {
         "activity_section.key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
@@ -1399,7 +1399,7 @@
       "key": "d6e8606b-4d5c-4ced-b83f-8707efd352d9",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Integer` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Double` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the Integer and Double constructors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *parsing*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Integer` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Double` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the Integer and Double constructors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes - Part 2*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *parsing*."
       },
       "seeding_key": {
         "activity_section.key": "d6e8606b-4d5c-4ced-b83f-8707efd352d9",
@@ -5996,6 +5996,18 @@
       }
     },
     {
+      "name": "The ArrayList Class",
+      "url": "https://youtu.be/Wqk9PrPIkXs",
+      "key": "the_arraylist_class",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_arraylist_class"
+      }
+    },
+    {
       "name": "U6L10 Extra Practice",
       "url": "https://docs.google.com/document/d/1eEN0Y46G0H8hOQpwJWtgBbB9WT3VAcsTSyIhcygS9pc/edit?usp=sharing",
       "key": "u6l10_extra_practice",
@@ -6186,6 +6198,42 @@
       "seeding_key": {
         "resource.key": "unlocking_assessments"
       }
+    },
+    {
+      "name": "Working with ArrayList Data",
+      "url": "https://youtu.be/C8i8q-07OUI",
+      "key": "working_with_arraylist_data",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "working_with_arraylist_data"
+      }
+    },
+    {
+      "name": "Wrapper Classes - Part 1",
+      "url": "https://youtu.be/PrhYsHlqxMs",
+      "key": "wrapper_classes_-_part_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "wrapper_classes_-_part_1"
+      }
+    },
+    {
+      "name": "Wrapper Classes - Part 2",
+      "url": "https://youtu.be/kog78g2fvqU",
+      "key": "wrapper_classes_-_part_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "wrapper_classes_-_part_2"
+      }
     }
   ],
   "lessons_resources": [
@@ -6335,8 +6383,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "wrapper_classes_-_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "wrapper_classes_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "_key_u6l3_extra_practice_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "the_arraylist_class"
       }
     },
     {
@@ -6379,6 +6445,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "working_with_arraylist_data"
       }
     },
     {

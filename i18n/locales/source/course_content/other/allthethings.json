@@ -1014,5 +1014,8 @@
   },
   "https://studio.code.org/s/allthethings/lessons/44/levels/12": {
     "long_instructions": "This is a sample Java Lab level with validation tests."
+  },
+  "https://studio.code.org/s/allthethings/lessons/44/levels/13": {
+    "long_instructions": "This is a Java Lab level with passing validation."
   }
 }

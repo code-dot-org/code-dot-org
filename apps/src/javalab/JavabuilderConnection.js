@@ -276,9 +276,6 @@ export default class JavabuilderConnection {
           this.onUnsupportedTheaterMessage();
         }
         break;
-      case WebSocketMessageType.PLAYGROUND:
-        this.miniApp.handleSignal(data);
-        break;
       case WebSocketMessageType.EXCEPTION:
         this.onNewlineMessage();
         handleException(data, this.onOutputMessage);

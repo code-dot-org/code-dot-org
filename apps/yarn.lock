@@ -1592,10 +1592,10 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@4.0.4":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-4.0.4.tgz#21f536ecc5d246b2b64024d8223e05a768af2d93"
-  integrity sha512-mErd2a+vn0Dzcw93g3Pvs8flstgq+UnvB5AbxEo3XDsup9knNoyzgBJgm4oMPgc95OsARtTNzkK5nUCqUkyPtQ==
+"@code-dot-org/blockly@4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-4.0.5.tgz#6e083239936db32d63531c484b6accc79b95e2c5"
+  integrity sha512-VGj8OfMDVgLr20DiarlZpftnAhvDNQ78TNQ9zSH8t1Z+2Q9oY91I9a9wvfuBFgv+mXlS3rZOIBDNKKbdBPx0KA==
 
 "@code-dot-org/craft@0.2.2":
   version "0.2.2"
@@ -13000,6 +13000,11 @@ react-load-script@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/react-load-script/-/react-load-script-0.0.6.tgz#db6851236aaa25bb622677a2eb51dad4f8d2c258"
   integrity sha512-aRGxDGP9VoLxcsaYvKWIW+LRrMOzz2eEcubTS4NvQPPugjk2VvMhow0wWTkSl7RxookomD1MwcP4l5UStg5ShQ==
+
+react-loading-skeleton@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-loading-skeleton/-/react-loading-skeleton-3.1.0.tgz#ce22942f1af77bfd60854417075792367f54f41e"
+  integrity sha512-j1U1CWWs68nBPOg7tkQqnlFcAMFF6oEK6MgqAo15f8A5p7mjH6xyKn2gHbkcimpwfO0VQXqxAswnSYVr8lWzjw==
 
 react-modal@^3.6.1:
   version "3.8.1"
