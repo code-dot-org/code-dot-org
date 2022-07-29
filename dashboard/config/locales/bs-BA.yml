@@ -252,7 +252,6 @@ bs:
     popup:
       progress_for_user: Napredak za %{name}
       progress: Tvoj napredak
-      lines: 'Ukupno linija kôda: %{lines}'
       close: ZATVORI
       mastery: Pojmovi
       puzzle_map: Faze
