@@ -6,11 +6,12 @@
     "properties": {
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-25 19:58:30 UTC",
+    "serialized_at": "2022-06-23 17:41:56 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -258,6 +259,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-CSP-mod1-NewTeacherAdvice"
+        ],
         "progression": "Welcome to CS Principles"
       },
       "bonus": false,

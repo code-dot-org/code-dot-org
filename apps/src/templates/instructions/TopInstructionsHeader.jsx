@@ -21,7 +21,6 @@ function TopInstructionsHeader(props) {
     levelHasRubric,
     displayDocumentationTab,
     displayReviewTab,
-    displayReviewV2Tab,
     isViewingAsTeacher,
     hasBackgroundMusic,
     fetchingData,
@@ -31,7 +30,6 @@ function TopInstructionsHeader(props) {
     handleCommentTabClick,
     handleDocumentationTabClick,
     handleReviewTabClick,
-    handleReviewV2TabClick,
     handleTeacherOnlyTabClick,
     handleClickCollapser,
     isMinecraft,
@@ -132,6 +130,7 @@ function TopInstructionsHeader(props) {
               onClick={handleDocumentationTabClick}
               selected={tabSelected === TabType.DOCUMENTATION}
               text={i18n.documentation()}
+              teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
             />
@@ -141,16 +140,6 @@ function TopInstructionsHeader(props) {
               className="uitest-reviewTab"
               onClick={handleReviewTabClick}
               selected={tabSelected === TabType.REVIEW}
-              text={i18n.review()}
-              isMinecraft={isMinecraft}
-              isRtl={isRtl}
-            />
-          )}
-          {displayReviewV2Tab && (
-            <InstructionsTab
-              className="uitest-reviewV2Tab"
-              onClick={handleReviewV2TabClick}
-              selected={tabSelected === TabType.REVIEW_V2}
               text={i18n.review()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
@@ -281,7 +270,6 @@ TopInstructionsHeader.propTypes = {
   levelHasRubric: PropTypes.bool,
   displayDocumentationTab: PropTypes.bool,
   displayReviewTab: PropTypes.bool,
-  displayReviewV2Tab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
   hasBackgroundMusic: PropTypes.bool.isRequired,
   fetchingData: PropTypes.bool,
@@ -291,7 +279,6 @@ TopInstructionsHeader.propTypes = {
   handleCommentTabClick: PropTypes.func.isRequired,
   handleDocumentationTabClick: PropTypes.func.isRequired,
   handleReviewTabClick: PropTypes.func.isRequired,
-  handleReviewV2TabClick: PropTypes.func.isRequired,
   handleTeacherOnlyTabClick: PropTypes.func.isRequired,
   handleClickCollapser: PropTypes.func.isRequired,
   isMinecraft: PropTypes.bool.isRequired,

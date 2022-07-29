@@ -7,6 +7,7 @@ import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/Peti
 import styleConstants from '../../styleConstants';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '../../util/color';
+import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 
 export default function Congrats(props) {
   /**
@@ -71,8 +72,12 @@ export default function Congrats(props) {
     hideDancePartyFollowUp,
     showStudioCertificate,
     initialCertificateImageUrl,
-    isHocTutorial
+    isHocTutorial,
+    nextCourseScriptName,
+    nextCourseTitle,
+    nextCourseDesc
   } = props;
+
   const isEnglish = language === 'en';
   const tutorialType = getTutorialType(tutorial);
 
@@ -91,14 +96,23 @@ export default function Congrats(props) {
         {renderExtraCertificateLinks(language, tutorial)}
       </Certificate>
       {userType === 'teacher' && isEnglish && <TeachersBeyondHoc />}
-      <StudentsBeyondHoc
-        completedTutorialType={tutorialType}
-        MCShareLink={MCShareLink}
-        userType={userType}
-        under13={under13}
-        isEnglish={isEnglish}
-        hideDancePartyFollowUp={hideDancePartyFollowUp}
-      />
+      {isHocTutorial && (
+        <StudentsBeyondHoc
+          completedTutorialType={tutorialType}
+          MCShareLink={MCShareLink}
+          userType={userType}
+          under13={under13}
+          isEnglish={isEnglish}
+          hideDancePartyFollowUp={hideDancePartyFollowUp}
+        />
+      )}
+      {!isHocTutorial && (
+        <GraduateToNextLevel
+          scriptName={nextCourseScriptName}
+          courseTitle={nextCourseTitle}
+          courseDesc={nextCourseDesc}
+        />
+      )}
       {userType === 'signedOut' && isEnglish && <TeachersBeyondHoc />}
       <hr style={styles.divider} />
       <PetitionCallToAction tutorial={tutorial} />
@@ -117,8 +131,11 @@ Congrats.propTypes = {
   randomDonorName: PropTypes.string,
   hideDancePartyFollowUp: PropTypes.bool,
   showStudioCertificate: PropTypes.bool,
-  initialCertificateImageUrl: PropTypes.string,
-  isHocTutorial: PropTypes.bool
+  initialCertificateImageUrl: PropTypes.string.isRequired,
+  isHocTutorial: PropTypes.bool,
+  nextCourseScriptName: PropTypes.string,
+  nextCourseTitle: PropTypes.string,
+  nextCourseDesc: PropTypes.string
 };
 
 const styles = {

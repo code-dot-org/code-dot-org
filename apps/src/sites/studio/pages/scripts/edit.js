@@ -29,17 +29,8 @@ export default function initPage(unitEditorData) {
   });
   const store = getStore();
   store.dispatch(init(lessonGroups));
-  const teacherResources = (scriptData.teacher_resources || []).map(
-    ([type, link]) => ({
-      type,
-      link
-    })
-  );
   store.dispatch(
-    initResources(
-      'teacherResource',
-      scriptData.migrated_teacher_resources || []
-    ),
+    initResources('teacherResource', scriptData.teacher_resources || []),
     initResources('studentResource', scriptData.student_resources || [])
   );
 
@@ -72,7 +63,6 @@ export default function initPage(unitEditorData) {
         initialWrapupVideo={scriptData.wrapupVideo || ''}
         initialProjectWidgetVisible={scriptData.project_widget_visible}
         initialProjectWidgetTypes={scriptData.project_widget_types || []}
-        initialTeacherResources={teacherResources}
         initialLastUpdatedAt={scriptData.updated_at}
         initialLessonExtrasAvailable={!!scriptData.lesson_extras_available}
         initialHasVerifiedResources={scriptData.has_verified_resources}

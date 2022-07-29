@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-14 21:44:56 UTC",
+    "serialized_at": "2022-07-22 18:24:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5598,30 +5598,6 @@
     {
       "chapter": 155,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Allthethings Java Lab Playground"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Allthethings Java Lab Playground"
-        ],
-        "lesson.key": "Java Lab",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "0ee3a474-4b22-4c52-874a-32bb0ff17112"
-      },
-      "level_keys": [
-        "Allthethings Java Lab Playground"
-      ]
-    },
-    {
-      "chapter": 156,
-      "position": 10,
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
@@ -5644,8 +5620,8 @@
       ]
     },
     {
-      "chapter": 157,
-      "position": 11,
+      "chapter": 156,
+      "position": 10,
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
@@ -5668,11 +5644,14 @@
       ]
     },
     {
-      "chapter": 158,
-      "position": 12,
+      "chapter": 157,
+      "position": 11,
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab Validation"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5686,6 +5665,30 @@
       },
       "level_keys": [
         "Allthethings Java Lab Validation"
+      ]
+    },
+    {
+      "chapter": 158,
+      "position": 12,
+      "activity_section_position": 13,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Allthethings Java Lab Passing Validation"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab Passing Validation"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "0ee3a474-4b22-4c52-874a-32bb0ff17112"
+      },
+      "level_keys": [
+        "Allthethings Java Lab Passing Validation"
       ]
     },
     {
@@ -7690,18 +7693,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "Allthethings Java Lab Playground",
-        "script_level.level_keys": [
-          "Allthethings Java Lab Playground"
-        ],
-        "lesson.key": "Java Lab",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "0ee3a474-4b22-4c52-874a-32bb0ff17112"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "Allthethings Java Lab submittable",
         "script_level.level_keys": [
           "Allthethings Java Lab submittable"
@@ -7729,6 +7720,18 @@
         "level.key": "Allthethings Java Lab Validation",
         "script_level.level_keys": [
           "Allthethings Java Lab Validation"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "0ee3a474-4b22-4c52-874a-32bb0ff17112"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab Passing Validation",
+        "script_level.level_keys": [
+          "Allthethings Java Lab Passing Validation"
         ],
         "lesson.key": "Java Lab",
         "lesson_group.key": "",

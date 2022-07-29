@@ -358,7 +358,7 @@ class Watchers extends React.Component {
               style={styles.autocompleteDropdown}
             >
               <input
-                placeholder="Variable / Property"
+                placeholder={i18n.debugWatchersPlaceholder()}
                 ref="debugInput"
                 onKeyDown={this.onKeyDown}
                 onChange={this.onChange}

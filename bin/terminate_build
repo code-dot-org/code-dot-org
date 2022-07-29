@@ -50,6 +50,9 @@ raise "The aws/ci_build process is not currently running" unless build_process_i
 process_id, process_group_id = build_process_info.delete_suffix(BUILD_COMMAND + "\n").split(' ')
 raise "Process ID of the parent build process - #(process_id} - should be the same as the Process Group ID - #{process_group_id}" unless process_id == process_group_id
 
+CDO.log.info 'Killing the following aws/ci_build process and all of its child processes:'
+execute_system_command("pgrep -g #{process_group_id} -a")
+
 # The hyphen ('-') in front of the Process Group ID specifies we want to kill all processes with that Process Group ID.
 execute_system_command("kill -9 -#{process_group_id}")
 CDO.log.info 'Done killing the current build and its child processes!'

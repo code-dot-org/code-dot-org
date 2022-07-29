@@ -494,6 +494,7 @@ class ApiController < ApplicationController
       # need to be sent down.  See LP-2086 for a list of potential values.
 
       response[:disableSocialShare] = user.under_13?
+      response[:isInstructor] = script.can_be_instructor?(current_user)
       response.merge!(progress_app_options(script, level, user))
     else
       response[:signedIn] = false
