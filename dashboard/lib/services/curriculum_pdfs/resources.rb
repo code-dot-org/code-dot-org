@@ -172,7 +172,7 @@ module Services
             file.download_to_file(path)
             return path
           elsif url.end_with?(".pdf")
-            IO.copy_stream(URI.parse(url).open, path)
+            IO.copy_stream(URI.parse(url)&.open, path)
             return path
           end
         rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
