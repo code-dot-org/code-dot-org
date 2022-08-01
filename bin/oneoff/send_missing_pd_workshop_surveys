@@ -34,15 +34,6 @@ def main
   puts "#{count} enrollments updated with survey times."
   puts
 
-  # Update enrollments with completed_survey_ids for all completed surveys
-  DB[:forms].where(kind: 'PdWorkshopSurvey').each do |survey|
-    data = JSON.parse(survey[:data])
-    enrollment_id = data['enrollment_id_i']
-
-    enrollment = Pd::Enrollment.find(enrollment_id)
-    enrollment.update!(completed_survey_id: survey[:id])
-  end
-
   # Update processed_at for workshops where surveys have been sent already,
   # and collect workshop ids that still need to be processed.
   unprocessed_workshop_ids = []
