@@ -141,11 +141,7 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   def completed_survey?
-    return true if completed_survey_id.present?
-
-    # Until the survey is processed (via process_forms cron job), it won't show up in the enrollment model.
-    # Check pegasus forms directly to be sure.
-    PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: id).any?
+    completed_survey_id.present?
   end
 
   def survey_class
