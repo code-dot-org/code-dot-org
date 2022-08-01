@@ -215,8 +215,6 @@ class Pd::Enrollment < ApplicationRecord
   def exit_survey_url
     if workshop.course == Pd::Workshop::COURSE_CSF && (workshop.subject == Pd::Workshop::SUBJECT_CSF_101 || workshop.subject == Pd::Workshop::SUBJECT_CSF_DISTRICT)
       CDO.studio_url "pd/workshop_survey/csf/post101/#{code}", CDO.default_scheme
-    elsif [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
-      CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
     elsif workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
       CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme
     # any other non-academic year workshop uses foorm. We don't automatically provide survey urls for AYW
