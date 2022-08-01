@@ -56,13 +56,10 @@ end
 # Add Honeybadger::Rack::ErrorNotifier to Rack middleware directly.
 use Honeybadger::Rack::ErrorNotifier
 
-require 'files_api'
-use FilesApi
-
-require 'channels_api'
-use ChannelsApi
-
 require 'shared_resources'
 use SharedResources
 
 run Documents
+
+require_relative '../shared/middleware/helpers/core.rb'
+require_relative '../shared/middleware/helpers/auth_helpers.rb'
