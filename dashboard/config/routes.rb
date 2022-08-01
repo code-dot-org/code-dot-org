@@ -886,7 +886,9 @@ Dashboard::Application.routes.draw do
         resources :teacher_feedbacks, only: [:index, :create] do
           collection do
             get 'get_feedback_from_teacher'
+            get 'get_all_feedback_from_teacher'
             get 'get_feedbacks'
+            get 'get_all_feedbacks'
             get 'count'
           end
           member do

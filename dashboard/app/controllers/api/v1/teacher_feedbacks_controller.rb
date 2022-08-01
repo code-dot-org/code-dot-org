@@ -24,6 +24,17 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
     end
   end
 
+  def get_all_feedback_from_teacher
+    feedbacks = TeacherFeedback.get_all_feedbacks_given(
+      params.require(:student_id),
+      params.require(:level_id),
+      params.require(:teacher_id),
+      params.require(:script_id)
+    ).map {|feedback| feedback.summarize(false)}
+
+    render json: feedbacks
+  end
+
   use_reader_connection_for_route(:get_feedbacks)
 
   # Use student_id and level_id to lookup the most recent feedback from each teacher who has provided feedback to that
@@ -39,6 +50,17 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
     ).map {|feedback| feedback.summarize(true)}
 
     render json: @level_feedbacks
+  end
+
+  # Will return all feedback on a level for a student
+  def get_all_feedbacks
+    all_level_feedbacks = TeacherFeedback.get_all_feedback_received(
+       params.require(:student_id),
+      params.require(:level_id),
+      params.require(:script_id)
+    ).map {|feedback| feedback.summarize(false)}
+
+    render json: all_level_feedbacks
   end
 
   # Determine how many not yet seen feedback entries from any verified teacher

@@ -158,7 +158,7 @@ class Ability
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
-      can [:get_feedbacks, :count, :increment_visit_count, :index], TeacherFeedback, student_id: user.id
+      can [:get_feedbacks, :get_all_feedbacks, :count, :increment_visit_count, :index], TeacherFeedback, student_id: user.id
       can :create, UserMlModel, user_id: user.id
 
       can :list_projects, Section do |section|
@@ -204,7 +204,7 @@ class Ability
         can :manage, User do |u|
           user.students.include?(u)
         end
-        can [:create, :get_feedback_from_teacher], TeacherFeedback, student_sections: {user_id: user.id}
+        can [:create, :get_feedback_from_teacher, :get_all_feedback_from_teacher], TeacherFeedback, student_sections: {user_id: user.id}
         can :manage, Follower
         can :manage, UserLevel do |user_level|
           !user.students.where(id: user_level.user_id).empty?

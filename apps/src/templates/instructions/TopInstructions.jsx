@@ -204,6 +204,19 @@ class TopInstructions extends Component {
             }
           })
       );
+
+      promises.push(
+        topInstructionsDataApi
+          .getAllTeacherFeedbackForStudent(user, serverLevelId, serverScriptId)
+          .done((data, _, request) => {
+            // If student has feedback make their default tab the feedback tab instead of instructions
+            if (data[0]) {
+              this.setState({
+                allFeedbackForStudent: data
+              });
+            }
+          })
+      );
     }
 
     if (serverLevelId) {
@@ -233,6 +246,21 @@ class TopInstructions extends Component {
             this.setState({
               latestFeedback: request.status === 204 ? null : data,
               token: request.getResponseHeader('csrf-token')
+            });
+          })
+      );
+
+      promises.push(
+        topInstructionsDataApi
+          .getAllTeacherFeedbackForTeacher(
+            studentId,
+            serverLevelId,
+            user,
+            serverScriptId
+          )
+          .done(data => {
+            this.setState({
+              allTeacherFeedback: data
             });
           })
       );
@@ -714,6 +742,8 @@ class TopInstructions extends Component {
                 serverScriptId={this.props.serverScriptId}
                 serverLevelId={this.props.serverLevelId}
                 teacher={user}
+                allFeedbackForStudent={this.state.allFeedbackForStudent}
+                allFeedbackForTeacher={this.state.allTeacherFeedback}
               />
             )}
             {tabSelected === TabType.DOCUMENTATION && (
