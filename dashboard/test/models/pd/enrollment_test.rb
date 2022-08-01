@@ -133,16 +133,14 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     csp_wfrt = create :csp_wfrt, :ended
     csp_wfrt_enrollment = create :pd_enrollment, workshop: csp_wfrt
 
-    code_org_url = ->(path) {CDO.code_org_url(path, CDO.default_scheme)}
-    assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}"], counselor_enrollment.exit_survey_url
-    assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}"], admin_enrollment.exit_survey_url
-
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
     assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_district_enrollment.code}"], csf_district_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_wfrt_enrollment.code}"], csp_wfrt_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{counselor_enrollment.code}"], counselor_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{admin_enrollment.code}"], admin_enrollment.exit_survey_url
   end
 
   test 'should_send_exit_survey' do
