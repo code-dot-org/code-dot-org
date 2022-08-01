@@ -23,7 +23,12 @@ import javalab, {
   sourceValidationUpdated,
   setBackpackApi,
   setIsReadOnlyWorkspace,
-  setHasOpenCodeReview
+  setHasOpenCodeReview,
+  setEditTabKey,
+  setOrderedTabKeys,
+  setFileMetadata,
+  setActiveTabKey,
+  setAllEditorMetadata
 } from '@cdo/apps/javalab/javalabRedux';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import {
@@ -188,25 +193,27 @@ describe('Java Lab Editor Test', () => {
         javalabEditor.setState({
           showMenu: false,
           contextTarget: null,
-          editTabKey: 'file-0',
-          editTabFilename: oldFilename,
-          openDialog: 'renameFile',
-          orderedTabKeys: ['file-0', 'file-1'],
-          fileMetadata: {
+          openDialog: 'renameFile'
+        });
+        store.dispatch(setEditTabKey('file-0'));
+        store.dispatch(setOrderedTabKeys(['file-0', 'file-1']));
+        store.dispatch(
+          setFileMetadata({
             'file-0': oldFilename,
             'file-1': 'AnotherClass.java'
-          }
-        });
+          })
+        );
+
         javalabEditor.onRenameFile(newFilename);
         expect(store.getState().javalab.sources[newFilename]).to.not.be
           .undefined;
         expect(store.getState().javalab.sources[oldFilename]).to.be.undefined;
         expect(javalabEditor.state.openDialog).to.be.null;
-        expect(javalabEditor.state.orderedTabKeys).to.deep.equal([
+        expect(javalabEditor.props['orderedTabKeys']).to.deep.equal([
           'file-0',
           'file-1'
         ]);
-        expect(javalabEditor.state.fileMetadata).to.deep.equal({
+        expect(javalabEditor.props['fileMetadata']).to.deep.equal({
           'file-0': newFilename,
           'file-1': 'AnotherClass.java'
         });
@@ -447,18 +454,21 @@ describe('Java Lab Editor Test', () => {
         const editor = createWrapper();
         const javalabEditor = editor.find('JavalabEditor').instance();
         javalabEditor.setState({
-          activeTabKey: 'file-0',
-          orderedTabKeys: ['file-0', 'file-1'],
-          fileMetadata: {
-            'file-0': 'file1.java',
-            'file-1': 'file2.java'
-          },
           showMenu: true,
           contextTarget: 'file-0'
         });
+        store.dispatch(setActiveTabKey('file-0'));
+        store.dispatch(setOrderedTabKeys(['file-0', 'file-1']));
+        store.dispatch(
+          setFileMetadata({
+            'file-0': 'file1.java',
+            'file-1': 'file2.java'
+          })
+        );
+
         javalabEditor.onOpenFile('file-1');
-        expect(javalabEditor.state.activeTabKey).to.equal('file-1');
-        expect(javalabEditor.state.orderedTabKeys).to.deep.equal([
+        expect(javalabEditor.props['activeTabKey']).to.equal('file-1');
+        expect(javalabEditor.props['orderedTabKeys']).to.deep.equal([
           'file-1',
           'file-0'
         ]);
@@ -475,25 +485,36 @@ describe('Java Lab Editor Test', () => {
         javalabEditor.setState({
           showMenu: false,
           contextTarget: null,
-          openDialog: 'createFile',
-          orderedTabKeys: ['file-0', 'file-1'],
-          lastTabKeyIndex: 1,
-          fileMetadata: {
-            'file-0': 'Class1.java',
-            'file-1': 'Class2.java'
-          }
+          openDialog: 'createFile'
         });
+
+        const fileMetadata = {
+          'file-0': 'Class1.java',
+          'file-1': 'Class2.java'
+        };
+        const orderedTabKeys = ['file-0', 'file-1'];
+        const activeTabKey = 'file-0';
+        const lastTabKeyIndex = 1;
+        store.dispatch(
+          setAllEditorMetadata(
+            fileMetadata,
+            orderedTabKeys,
+            activeTabKey,
+            lastTabKeyIndex
+          )
+        );
+
         const newFilename = 'Class3.java';
         javalabEditor.onCreateFile(newFilename);
         expect(store.getState().javalab.sources[newFilename]).to.not.be
           .undefined;
         expect(javalabEditor.state.openDialog).to.be.null;
-        expect(javalabEditor.state.orderedTabKeys).to.deep.equal([
+        expect(javalabEditor.props['orderedTabKeys']).to.deep.equal([
           'file-0',
           'file-1',
           'file-2'
         ]);
-        expect(javalabEditor.state.fileMetadata).to.deep.equal({
+        expect(javalabEditor.props['fileMetadata']).to.deep.equal({
           'file-0': 'Class1.java',
           'file-1': 'Class2.java',
           'file-2': newFilename
@@ -642,21 +663,31 @@ describe('Java Lab Editor Test', () => {
         javalabEditor.setState({
           showMenu: false,
           contextTarget: null,
-          openDialog: 'createFile',
-          orderedTabKeys: ['file-0', 'file-1'],
-          lastTabKeyIndex: 1,
-          fileMetadata: {
-            'file-0': 'Class1.java',
-            'file-1': 'Class2.java'
-          },
-          activeTabKey: 'file-0',
+          openDialog: 'deleteFile',
           fileToDelete: 'file-0'
         });
+
+        const fileMetadata = {
+          'file-0': 'Class1.java',
+          'file-1': 'Class2.java'
+        };
+        const orderedTabKeys = ['file-0', 'file-1'];
+        const activeTabKey = 'file-0';
+        const lastTabKeyIndex = 1;
+        store.dispatch(
+          setAllEditorMetadata(
+            fileMetadata,
+            orderedTabKeys,
+            activeTabKey,
+            lastTabKeyIndex
+          )
+        );
+
         javalabEditor.onDeleteFile();
         expect(store.getState().javalab.sources['Class1.java']).to.be.undefined;
         expect(javalabEditor.state.openDialog).to.be.null;
-        expect(javalabEditor.state.orderedTabKeys).to.deep.equal(['file-1']);
-        expect(javalabEditor.state.fileMetadata).to.deep.equal({
+        expect(javalabEditor.props['orderedTabKeys']).to.deep.equal(['file-1']);
+        expect(javalabEditor.props['fileMetadata']).to.deep.equal({
           'file-1': 'Class2.java'
         });
       });
@@ -668,21 +699,31 @@ describe('Java Lab Editor Test', () => {
         javalabEditor.setState({
           showMenu: false,
           contextTarget: null,
-          openDialog: 'createFile',
-          orderedTabKeys: ['file-0'],
-          lastTabKeyIndex: 1,
-          fileMetadata: {
-            'file-0': 'Class1.java'
-          },
-          activeTabKey: 'file-0',
+          openDialog: 'deleteFile',
           fileToDelete: 'file-0'
         });
+
+        const fileMetadata = {
+          'file-0': 'Class1.java'
+        };
+        const orderedTabKeys = ['file-0'];
+        const activeTabKey = 'file-0';
+        const lastTabKeyIndex = 0;
+        store.dispatch(
+          setAllEditorMetadata(
+            fileMetadata,
+            orderedTabKeys,
+            activeTabKey,
+            lastTabKeyIndex
+          )
+        );
+
         javalabEditor.onDeleteFile();
         expect(store.getState().javalab.sources['Class1.java']).to.be.undefined;
         expect(javalabEditor.state.openDialog).to.be.null;
-        expect(javalabEditor.state.activeTabKey).to.be.null;
-        expect(javalabEditor.state.orderedTabKeys).to.deep.equal([]);
-        expect(javalabEditor.state.fileMetadata).to.deep.equal({});
+        expect(javalabEditor.props['activeTabKey']).to.be.null;
+        expect(javalabEditor.props['orderedTabKeys']).to.deep.equal([]);
+        expect(javalabEditor.props['fileMetadata']).to.deep.equal({});
       });
     });
 
@@ -737,20 +778,14 @@ describe('Java Lab Editor Test', () => {
         );
         javalabEditor.setState({
           showMenu: false,
-          contextTarget: null,
-          orderedTabKeys: ['file-0', 'file-1'],
-          lastTabKeyIndex: 1,
-          fileMetadata: {
-            'file-0': 'Class1.java',
-            'file-1': 'Class2.java'
-          },
-          activeTabKey: 'file-0'
+          contextTarget: null
         });
+
         javalabEditor.onImportFile('Class3.java', 'hello');
         expect(store.getState().javalab.sources['Class3.java'].text).to.equal(
           'hello'
         );
-        expect(javalabEditor.state.orderedTabKeys.length).to.equal(3);
+        expect(javalabEditor.props['orderedTabKeys'].length).to.equal(3);
       });
     });
 
