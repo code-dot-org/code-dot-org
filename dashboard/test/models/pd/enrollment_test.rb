@@ -268,22 +268,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert create :pd_enrollment, email: 'valid@example.net'
   end
 
-  test 'completed_survey?' do
-    # no survey
-    PEGASUS_DB.expects('[]').with(:forms).returns(mock(where: mock(any?: false)))
-    enrollment = create :pd_enrollment
-    refute enrollment.completed_survey?
-
-    # survey just completed, not yet processed
-    PEGASUS_DB.expects('[]').with(:forms).returns(mock(where: mock(any?: true)))
-    assert enrollment.completed_survey?
-
-    # survey processed, model up to date. Pegasus should not be contacted.
-    PEGASUS_DB.expects('[]').with(:forms).never
-    enrollment.update!(completed_survey_id: 1234)
-    assert enrollment.completed_survey?
-  end
-
   test 'filter_for_survey_completion argument check' do
     e = assert_raises do
       # not an enumerable
