@@ -78,6 +78,17 @@ class TeacherFeedback < ApplicationRecord
       order(created_at: :desc)
   end
 
+  def self.get_all_feedback_received(student_id, level_id, script_id)
+    query = {
+      student_id: student_id,
+      level_id: level_id,
+      script_id: script_id
+    }.compact
+
+    where(query).
+      order(created_at: :asc)
+  end
+
   # Returns the latest feedback for each student on every level in a script given by the teacher
   # Get number of passed levels per user for the given set of user IDs
   # @param [Array<Integer>|Integer] student_ids: (optional) one or a list of student_ids. If nil student_id is excluded from the query
@@ -102,6 +113,19 @@ class TeacherFeedback < ApplicationRecord
         Arel.sql('MAX(teacher_feedbacks.id)')
       )
     )
+  end
+
+  def self.get_all_feedbacks_given(student_ids, level_ids, teacher_id, script_id)
+    query = {
+      student_id: student_ids,
+      level_id: level_ids,
+      script_id: script_id,
+      teacher_id: teacher_id
+    }.compact
+
+    where(
+      query
+    ).order(created_at: :asc)
   end
 
   def self.latest_per_teacher

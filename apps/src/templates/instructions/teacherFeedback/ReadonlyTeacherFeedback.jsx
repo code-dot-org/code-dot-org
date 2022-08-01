@@ -12,12 +12,14 @@ import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 import moment from 'moment/moment';
 import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
+import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
 
 export class ReadonlyTeacherFeedback extends Component {
   static propTypes = {
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
-    latestFeedback: teacherFeedbackShape
+    latestFeedback: teacherFeedbackShape,
+    allFeedbackForStudent: PropTypes.array
   };
 
   getLatestReviewState() {
@@ -44,7 +46,8 @@ export class ReadonlyTeacherFeedback extends Component {
   }
 
   render() {
-    const {rubric, visible, latestFeedback} = this.props;
+    const {rubric, visible, latestFeedback, allFeedbackForStudent} = this.props;
+    const olderFeedback = allFeedbackForStudent.slice(0, -1);
 
     if (!visible) {
       return null;
@@ -60,23 +63,30 @@ export class ReadonlyTeacherFeedback extends Component {
           />
         )}
         {!!latestFeedback && (
-          <div style={teacherFeedbackStyles.commentAndFooter}>
-            <div style={teacherFeedbackStyles.header}>
-              <h1 style={teacherFeedbackStyles.h1}>
-                {' '}
-                {i18n.feedbackCommentAreaHeader()}{' '}
-              </h1>
-              <ReadOnlyReviewState
-                latestReviewState={this.getLatestReviewState()}
-              />
+          <>
+            <div style={teacherFeedbackStyles.commentAndFooter}>
+              <div style={teacherFeedbackStyles.header}>
+                <h1 style={teacherFeedbackStyles.h1}>
+                  {' '}
+                  {i18n.feedbackCommentAreaHeader()}{' '}
+                </h1>
+                <ReadOnlyReviewState
+                  latestReviewState={this.getLatestReviewState()}
+                />
+              </div>
+              <div style={{width: '90%'}}>
+                {olderFeedback.map(feedback => (
+                  <LevelFeedbackEntry key={feedback.id} feedback={feedback} />
+                ))}
+              </div>
+              {!!latestFeedback.comment && (
+                <Comment isEditable={false} comment={latestFeedback.comment} />
+              )}
+              <div style={teacherFeedbackStyles.footer}>
+                {this.renderLastUpdated()}
+              </div>
             </div>
-            {!!latestFeedback.comment && (
-              <Comment isEditable={false} comment={latestFeedback.comment} />
-            )}
-            <div style={teacherFeedbackStyles.footer}>
-              {this.renderLastUpdated()}
-            </div>
-          </div>
+          </>
         )}
       </div>
     );

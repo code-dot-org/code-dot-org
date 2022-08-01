@@ -18,6 +18,7 @@ import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
 import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
+import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -219,7 +220,12 @@ export class EditableTeacherFeedback extends Component {
   }
 
   render() {
-    const {verifiedInstructor, rubric, visible} = this.props;
+    const {
+      verifiedInstructor,
+      rubric,
+      visible,
+      allFeedbackForTeacher
+    } = this.props;
 
     const {comment, performance, latestFeedback, errorState} = this.state;
 
@@ -259,6 +265,11 @@ export class EditableTeacherFeedback extends Component {
                 onReviewStateChange={this.onReviewStateChange}
               />
             )}
+          </div>
+          <div style={{width: '90%'}}>
+            {allFeedbackForTeacher.map(feedback => (
+              <LevelFeedbackEntry key={feedback.id} feedback={feedback} />
+            ))}
           </div>
           <Comment
             isEditable={true}
