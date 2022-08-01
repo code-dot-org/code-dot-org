@@ -121,7 +121,7 @@ class JavalabEditor extends React.Component {
     setFileMetadata: PropTypes.func.isRequired,
     orderedTabKeys: PropTypes.array.isRequired,
     setOrderedTabKeys: PropTypes.func.isRequired,
-    activeTabKey: PropTypes.string.isRequired,
+    activeTabKey: PropTypes.string,
     setActiveTabKey: PropTypes.func.isRequired,
     lastTabKeyIndex: PropTypes.number.isRequired,
     editTabKey: PropTypes.string,
@@ -482,9 +482,9 @@ class JavalabEditor extends React.Component {
     // add new file to sources
     setSource(filename, fileContents);
     projectChanged();
-    setAllEditorMetadata(newFileMetadata, newTabs, newTabKey, newTabIndex);
 
     // add new tab and set it as the active tab
+    setAllEditorMetadata(newFileMetadata, newTabs, newTabKey, newTabIndex);
     this.setState({
       openDialog: null,
       newFileError: null
