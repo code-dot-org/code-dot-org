@@ -37,7 +37,7 @@ namespace :curriculum_pdfs do
   end
 
   # In order to run this in development, you may first need to install puppeteer via:
-  #   bin/generate-pdf
+  #   cd bin/generate-pdf
   #   yarn install
   # on the staging machine, this is taken care of in cookbooks/cdo-apps/recipes/generate_pdf.rb
   desc 'Generate any PDFs that we would expect to have been generated automatically but for whatever reason haven\'t been.'
