@@ -189,10 +189,10 @@ class AnimationListItem extends React.Component {
       animationName = <div style={styles.nameLabel}>{name}</div>;
     }
 
-    const selectedStyle = this.props.isSelected && styles.selectedTile;
+    const selectedStyle = this.props.isSelected ? styles.selectedTile : {};
     const tileStyle = {...styles.tile, ...selectedStyle, ...this.props.style};
 
-    const arrowStyle = [this.props.isSelected && styles.rightArrow];
+    const arrowStyle = this.props.isSelected ? styles.rightArrow : {};
 
     return (
       <button style={tileStyle} onClick={this.onSelect} type="button">
