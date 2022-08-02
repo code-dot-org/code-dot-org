@@ -216,7 +216,7 @@
     "video.js": "7.6.6",
     "vmsg": "^0.3.6",
     "web-streams-polyfill": "^3.1.0",
-    "webpack": "^5.47.1",
+    "webpack": "^5.74.0",
     "webpack-bundle-analyzer": "^4.4.2",
     "webpack-dev-server": "^3.11.2",
     "webpack-hot-middleware": "^2.25.0",
@@ -285,8 +285,5 @@
     "timers-browserify": "^2.0.12",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
-  },
-  "resolutions": {
-    "process-nextick-args": "2.0.1"
   }
 }
