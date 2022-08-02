@@ -829,7 +829,7 @@
   "enrollmentDescription": "Rejoignez la salle de classe de votre enseignant en tapant son code section ci-dessous. Enseignants pourront voir votre progression, vos projets et de réinitialiser votre mot de passe si vous l’oubliez.",
   "equalTo": "Égal à",
   "errorEmptyFunctionBlockModal": "Il faut des blocs à l'intérieur de ta définition de fonction. Clique sur « Modifier », puis fais glisser les blocs dans le bloc vert.",
-  "errorExceededLimitedBlocks": "Tu as réussi ! Maintenant, vas trouver le modèle dans ton code et retire les blocs inutiles. Tu ne peux utiliser que {limit} de ces blocs :",
+  "errorExceededLimitedBlocks": "Tu as réussi ! Maintenant, va trouver le modèle dans ton code et retire les blocs inutiles. Tu ne peux utiliser que {limit} de ces blocs :",
   "errorFindingClassLibraries": "Impossible de charger vos librairies de classe pour le moment. Veuillez vérifier votre connexion internet et réessayer.",
   "errorIncompleteBlockInFunction": "Clique sur « Modifier » pour t’assurer qu'il ne manque aucun bloc dans ta définition de fonction.",
   "errorGenericLintError": "Ton programme contient une erreur qui doit être corrigée. Avec le curseur, survole les icônes, près des numéros de ligne dans l'éditeur, pour en savoir plus.",
