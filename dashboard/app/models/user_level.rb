@@ -32,10 +32,10 @@ class UserLevel < ApplicationRecord
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
-  belongs_to :user
-  belongs_to :level
-  belongs_to :script
-  belongs_to :level_source
+  belongs_to :user, optional: true
+  belongs_to :level, optional: true
+  belongs_to :script, optional: true
+  belongs_to :level_source, optional: true
 
   after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}

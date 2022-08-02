@@ -702,6 +702,16 @@ en:
         PL_CSP_TeacherTips_APExam: 'Teacher Tips: Preparing for the AP Exam'
         PL_CSP_TeacherTips_EIPM: 'Teacher Tips: The EIPM Process'
         PL_CSD_CircuitPlayground_Overview: Circuit Playground Overview
+        CSA-PL-debugging-22: Debugging in Java Lab
+        CSD_Unit6_InteractiveArtExemplar: Interactive Art Exemplar
+        CS_Changing_Everything: Computer Science is Changing Everything
+        csa-alias-video: Equals and Aliases
+        csa-equals-video: The equals() method
+        csa-user-stories: User Stories in Software Engineering
+        csa-pl-vpl-m1-unit-3: Software Engineering in Unit 3
+        csa-pl-intro-to-equality: Introduction to Equality
+        csa-pl-intro-to-equals-method: Introduction to the .equals() method
+        csa-pl-equals-book: Writing the equals() method for the Book class
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

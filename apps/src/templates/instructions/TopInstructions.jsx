@@ -12,7 +12,6 @@ import ContainedLevel from '../ContainedLevel';
 import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import HelpTabContents from './HelpTabContents';
 import DocumentationTab from './DocumentationTab';
-import ReviewTab from './ReviewTab';
 import CommitsAndReviewTab from './CommitsAndReviewTab';
 import {
   toggleInstructionsCollapsed,
@@ -37,7 +36,6 @@ import TopInstructionsHeader from './TopInstructionsHeader';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import Button from '../Button';
 import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -50,8 +48,7 @@ export const TabType = {
   COMMENTS: 'comments',
   DOCUMENTATION: 'documentation',
   REVIEW: 'review',
-  TEACHER_ONLY: 'teacher-only',
-  COMMITS_AND_REVIEW: 'commits-and-review'
+  TEACHER_ONLY: 'teacher-only'
 };
 
 // Minecraft-specific styles
@@ -74,6 +71,7 @@ class TopInstructions extends Component {
     isViewingAsInstructorInTraining: PropTypes.bool,
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number,
+    maxNeededHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
     dynamicInstructions: PropTypes.object,
@@ -137,16 +135,12 @@ class TopInstructions extends Component {
       this.props.readOnlyWorkspace &&
       window.location.search.includes('user_id');
 
-    const teacherViewingStudentTab = this.props.displayReviewTab
-      ? TabType.REVIEW
-      : TabType.COMMENTS;
-
     this.state = {
       // We don't want to start in the comments tab for CSF since its hidden
       tabSelected:
         this.props.initialSelectedTab ||
         (teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
-          ? teacherViewingStudentTab
+          ? TabType.COMMENTS
           : TabType.INSTRUCTIONS),
       latestFeedback: null,
       rubric: null,
@@ -345,7 +339,7 @@ class TopInstructions extends Component {
       shortInstructions,
       longInstructions,
       hasContainedLevels,
-      maxHeight,
+      maxNeededHeight,
       setInstructionsMaxHeightNeeded
     } = this.props;
 
@@ -357,15 +351,21 @@ class TopInstructions extends Component {
       return 0;
     }
 
-    const maxNeededHeight =
-      $(ReactDOM.findDOMNode(this.refForSelectedTab())).outerHeight(true) +
-      HEADER_HEIGHT +
-      RESIZER_HEIGHT;
+    const refForSelectedTab = this.refForSelectedTab();
 
-    if (maxHeight !== maxNeededHeight) {
-      setInstructionsMaxHeightNeeded(maxNeededHeight);
+    if (refForSelectedTab) {
+      const maxNeededHeightMeasured =
+        $(ReactDOM.findDOMNode(refForSelectedTab)).outerHeight(true) +
+        HEADER_HEIGHT +
+        RESIZER_HEIGHT;
+
+      if (maxNeededHeight !== maxNeededHeightMeasured) {
+        setInstructionsMaxHeightNeeded(maxNeededHeightMeasured);
+      }
+      return maxNeededHeightMeasured;
+    } else {
+      return 0;
     }
-    return maxNeededHeight;
   };
 
   /**
@@ -481,9 +481,7 @@ class TopInstructions extends Component {
   );
 
   setInstructionsRef(ref) {
-    if (ref) {
-      this.instructions = ref;
-    }
+    this.instructions = ref;
   }
 
   renderInstructions(isCSF) {
@@ -611,7 +609,7 @@ class TopInstructions extends Component {
         ? styles.csfBody
         : containerStyle || styles.body,
       isMinecraft && craftStyles.instructionsBody,
-      tabSelected === TabType.COMMITS_AND_REVIEW && styles.commitAndReview
+      tabSelected === TabType.REVIEW && styles.commitAndReview
     ];
 
     // Only display the help tab when there are one or more videos or
@@ -622,16 +620,10 @@ class TopInstructions extends Component {
     const displayHelpTab =
       (levelVideos && levelVideos.length > 0) || levelResourcesAvailable;
 
-    // If we're displaying the review tab (for CSA peer review) the teacher can leave feedback in that tab,
-    // in that case we hide the feedback tab (unless there's a rubric) to avoid confusion about
-    // where the teacher should leave feedback
     const displayFeedbackTab =
       !!rubric ||
-      (!displayReviewTab && teacherViewingStudentWork) ||
+      teacherViewingStudentWork ||
       (this.isViewingAsStudent && !!latestFeedback);
-
-    const displayCommitsAndReviewTab =
-      displayReviewTab && experiments.isEnabled('code_review_v2');
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
@@ -679,7 +671,6 @@ class TopInstructions extends Component {
           levelHasRubric={!!rubric}
           displayDocumentationTab={displayDocumentationTab}
           displayReviewTab={displayReviewTab}
-          displayCommitsAndReviewTab={displayCommitsAndReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
           hasBackgroundMusic={hasBackgroundMusic}
           fetchingData={fetchingData}
@@ -693,9 +684,6 @@ class TopInstructions extends Component {
             this.handleTabClick(TabType.DOCUMENTATION)
           }
           handleReviewTabClick={() => this.handleTabClick(TabType.REVIEW)}
-          handleCommitsAndReviewTabClick={() =>
-            this.handleTabClick(TabType.COMMITS_AND_REVIEW)
-          }
           handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
           collapsible={this.props.collapsible}
           handleClickCollapser={this.handleClickCollapser}
@@ -718,7 +706,6 @@ class TopInstructions extends Component {
             {!fetchingData && (
               <TeacherFeedbackTab
                 teacherViewingStudentWork={teacherViewingStudentWork}
-                displayReviewTab={displayReviewTab}
                 visible={tabSelected === TabType.COMMENTS}
                 rubric={rubric}
                 innerRef={ref => (this.commentTab = ref)}
@@ -733,11 +720,8 @@ class TopInstructions extends Component {
               <DocumentationTab ref={ref => (this.documentationTab = ref)} />
             )}
             {tabSelected === TabType.REVIEW && (
-              <ReviewTab ref={ref => (this.reviewTab = ref)} />
-            )}
-            {tabSelected === TabType.COMMITS_AND_REVIEW && (
               <CommitsAndReviewTab
-                ref={ref => (this.commitsAndReviewTab = ref)}
+                ref={ref => (this.reviewTab = ref)}
                 onLoadComplete={this.forceTabResizeToMaxOrAvailableHeight}
               />
             )}
@@ -870,6 +854,7 @@ export default connect(
     isBlockly: !!state.pageConstants.isBlockly,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
+    maxNeededHeight: state.instructions.maxNeededHeight,
     maxHeight: Math.min(
       state.instructions.maxAvailableHeight,
       state.instructions.maxNeededHeight

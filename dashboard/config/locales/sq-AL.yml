@@ -316,7 +316,6 @@ sq:
     popup:
       progress_for_user: Progresi i %{name}
       progress: Progresi yt
-      lines: 'Totali i rreshtave të kodit: %{lines}'
       close: MBYLL
       mastery: Konceptet
       puzzle_map: Fazat
@@ -897,11 +896,14 @@ sq:
         math: Matematikë
         science: Shkencë
         la: Gjuha e arteve
+        other: Të tjera/ë
       resources:
         kodable: Kodable
         lightbot: Lightbot
+        other: Të tjera/ë
       robotics:
         kodable: Kodable
+        other: Të tjera/ë
       email_opt_in:
         opt_in_yes: Po
         opt_in_no: Jo

@@ -426,13 +426,13 @@ id:
       starwars: 'Star Wars'
       starwarsblocks: 'Star wars(blok)'
       starwarsblocks_hour: 'Star wars(blok)'
+      thebadguys: 'The Bad Guys'
       loading: 'Memuat...'
       weblab: 'Web lab'
       view_all: 'Lihat semua proyek...'
     popup:
       progress_for_user: "kemajuan %{name}"
       progress: 'Kemajuan Anda'
-      lines: 'Jumlah baris kode: %{lines}'
       close: 'TUTUP'
       mastery: 'Konsep'
       puzzle_map: 'Tahap'
@@ -995,6 +995,11 @@ id:
   no_course_access_teacher: "Anda tidak memiliki akses ke kursus ini. Jika Anda yakin seharusnya memiliki akses ke kursus ini, silakan menulis ke support@code.org agar kami dapat mengatasi masalahnya."
   no_script_access_student: "Anda tidak punya akses ke unit ini. Silakan bertanya pada guru unit mana yang harus Anda ikuti."
   no_script_access_teacher: "Anda tidak punya akses ke unit ini. Jika Anda yakin seharusnya memiliki akses ke unit ini, silakan menulis ke support@code.org agar kami dapat mengatasi masalahnya."
+  no_level_access_student: "Anda tidak memiliki akses ke level ini. Silakan bertanya pada guru Anda terkait level yang harus Anda ikuti."
+  no_level_access_teacher: "Anda tidak memiliki akses ke level ini. Jika Anda merasa yakin berhak mengakses level ini, kirimkan email ke support@code.org agar kami dapat memperbaikinya."
+  no_exemplar: "Tidak ada contoh untuk level ini."
+  no_exemplar_access_student: "Siswa tidak dapat mengakses kode contoh. Silakan bertanya pada guru Anda terkait level yang harus Anda ikuti."
+  no_exemplar_access_teacher: "Hanya guru terverifikasi yang dapat mengakses kode contoh. Jika Anda ingin menjadi guru terverifikasi, silakan kirim email ke support@code.org."
   return_unit_overview: 'Buka ikhtisar unit'
   return_course_overview: 'Buka ikhtisar kursus'
   view_all_units: 'Tampilkan semua unit'
@@ -1064,6 +1069,7 @@ id:
         music: 'Musik'
         art: 'Seni'
         other: "Lainnya:"
+        na: 'Tidak dapat diterapkan'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1073,7 +1079,8 @@ id:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Lainnya:"
+        other: "Lain"
+        na: 'Tidak dapat diterapkan'
       robotics:
         grok: 'Pembelajaran Grok'
         kodable: 'Kodable'
@@ -1083,7 +1090,8 @@ id:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Lainnya:"
+        other: "Lain"
+        na: 'Tidak dapat diterapkan'
       workshop_course:
         csf_af: 'CS Fundamentals (Kursus A-F)'
         csf_express: 'CS Fundamentals (Praekspres atau Ekspres)'

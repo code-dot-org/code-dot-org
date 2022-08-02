@@ -24,7 +24,7 @@
 #  storage_apps_storage_id_index    (storage_id)
 #
 class Project < ApplicationRecord
-  belongs_to :project_storage, foreign_key: 'storage_id'
+  belongs_to :project_storage, foreign_key: 'storage_id', optional: true
   # Note: owner is nil for projects that are owned by users without an account
   has_one :owner, class_name: 'User', through: :project_storage, source: :user
 

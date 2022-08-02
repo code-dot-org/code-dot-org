@@ -1,6 +1,6 @@
 require 'cdo/firehose'
 
-class Api::V1::UsersController < Api::V1::JsonApiController
+class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
   skip_before_action :load_user, only: [:current]

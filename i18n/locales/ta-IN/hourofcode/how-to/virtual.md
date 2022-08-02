@@ -65,7 +65,8 @@ title: விர்ச்சுவல் நிகழ்வுகளுக்க
 - உங்கள் பங்கேற்பாளர்களுக்கு<a href="https://code.org/certificates">சான்றிதழ்களை உருவாக்கி பகிர்ந்து கொள்ளுங்கள்</a>
 - உங்கள் மெய்நிகர் மணிநேர குறியீட்டின் புகைப்படங்கள் மற்றும் வீடியோக்களை சமூக ஊடகங்களில் பகிரவும். #HourOfCode மற்றும் @codeorg ஐப் பயன்படுத்துங்கள், இதன்மூலம் உங்கள் வெற்றியை நாங்கள் முன்னிலைப்படுத்த முடியும்!
 
-[<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
+[<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg
+" />]({{ urls/learn }})
 
 கடைசியாக, நீங்கள் ஒரு நிகழ்வைத் தொடங்கவில்லை என்றால்<a href="https://code.org/volunteer/local">சிறப்பு பேச்சாளர்</a>,<a href="https://hourofcode.com/us/promote/resources#">உத்வேகம் தரும் வீடியோ</a>,அல்லது <a href="https://code.org/csforgood#prompts">கலந்துரையாடல் கேள்விகள்</a>,அந்த அனுபவங்களில் ஒன்றை இணைக்க இது மற்றொரு சிறந்த வாய்ப்பாக இருக்கும்.
 

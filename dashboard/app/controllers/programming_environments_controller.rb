@@ -1,7 +1,4 @@
 class ProgrammingEnvironmentsController < ApplicationController
-  include ProxyHelper
-  EXPIRY_TIME = 30.minutes
-
   before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :docs_show, :docs_index, :get_summary_by_name]
   before_action :set_programming_environment, only: [:edit, :update, :destroy]
   authorize_resource
@@ -11,18 +8,8 @@ class ProgrammingEnvironmentsController < ApplicationController
   end
 
   def docs_index
-    if DCDO.get('use-studio-code-docs', false)
-      @programming_environments = ProgrammingEnvironment.all.order(:name).map(&:summarize_for_index)
-      render :index
-    else
-      render_proxied_url(
-        'https://curriculum.code.org/docs/',
-        allowed_content_types: nil,
-        allowed_hostname_suffixes: %w(curriculum.code.org),
-        expiry_time: EXPIRY_TIME,
-        infer_content_type: true
-      )
-    end
+    @programming_environments = ProgrammingEnvironment.all.order(:name).map(&:summarize_for_index)
+    render :index
   end
 
   def new
@@ -75,19 +62,9 @@ class ProgrammingEnvironmentsController < ApplicationController
   end
 
   def docs_show
-    if DCDO.get('use-studio-code-docs', false)
-      @programming_environment = ProgrammingEnvironment.get_from_cache(params[:programming_environment_name])
-      return render :not_found unless @programming_environment
-      redirect_to(programming_environment_path(@programming_environment.name))
-    else
-      render_proxied_url(
-        "https://curriculum.code.org/docs/#{params[:programming_environment_name]}/",
-        allowed_content_types: nil,
-        allowed_hostname_suffixes: %w(curriculum.code.org),
-        expiry_time: EXPIRY_TIME,
-        infer_content_type: true
-      )
-    end
+    @programming_environment = ProgrammingEnvironment.get_from_cache(params[:programming_environment_name])
+    return render :not_found unless @programming_environment
+    redirect_to(programming_environment_path(@programming_environment.name))
   end
 
   def destroy

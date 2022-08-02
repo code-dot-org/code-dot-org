@@ -3972,13 +3972,13 @@ es:
     algoritmos para dibujar la naturaleza. Los algoritmos son recursivos, es decir,
     describen un paso y luego te dicen simplemente que dibujes el siguiente paso de
     la misma manera, siguiendo el algoritmo desde el principio.
-  tutorial_tlcpunch_longdescription: Demuestra cómo las primeras computadoras pudieron
-    encontrar datos almacenados en tarjetas perforadas y muestra que es el mismo algoritmo
-    que se usa en el truco de magia de la actividad "El sueño del mago australiano".
-    Su objetivo es mostrar de forma visual cómo funciona un algoritmo de búsqueda.
-    Al hacerlo, demuestras un uso práctico de los números binarios, un algoritmo de
-    división y conquista para buscar y explorar el truco de pensamiento computacional
-    para traducir soluciones entre áreas problemáticas.
+  tutorial_tlcpunch_longdescription: Demuestra cómo los primeros ordenadores eran
+    capaces de encontrar datos almacenados en tarjetas perforadas y demuestra que
+    es el mismo algoritmo que el truco de magia de la actividad "El Sueño del Mago
+    Australiano". Pretende mostrar de forma visual cómo funciona un algoritmo de búsqueda.
+    Para ello, demuestra un uso práctico de los números binarios, un algoritmo de
+    "divide y vencerás" para la búsqueda y explora el truco de pensamiento informático
+    de trasladar las soluciones entre áreas de problemas.
   tutorial_finchfract_longdescription: Esta actividad usa recursividad para dibujar
     fractales de Koch con el robot Finch. Asume que a los estudiantes se les ha presentado
     la idea de recursividad, pero completar esta actividad los ayudará a desarrollar
@@ -11249,37 +11249,37 @@ es:
     mn: Mongol
     mr: Maratí
     ms: Malayo
-    mt: Maltese
-    my: Burmese
-    ne: Nepali
-    nl: Dutch
-    nn: Norwegian (Nynorsk)
-    false: Norwegian (Bokmål)
-    pl: Polish
-    ps: Pashto
-    pt: Portuguese
-    ro: Romanian
-    ru: Russian
-    se: Northern Sami
-    si: Sinhalese
-    sk: Slovak
-    sl: Slovenian
-    sq: Albanian
-    sr: Serbian
-    sv: Swedish
-    sw: Kiswahili
+    mt: Maltés
+    my: Birmano
+    ne: Nepalí
+    nl: Holandés
+    nn: Noruego (Nynorsk)
+    false: Noruego (Bokmål)
+    pl: Polaco
+    ps: Pastún
+    pt: Portugués
+    ro: Rumano
+    ru: Ruso
+    se: Sami del Norte
+    si: Cingalés
+    sk: Eslovaco
+    sl: Esloveno
+    sq: Albanés
+    sr: Serbio
+    sv: Sueco
+    sw: Swahili
     ta: Tamil
-    te: Telugu
-    tg: Tajik
-    th: Thai
-    tl: Tagalog
-    tr: Turkish
-    uk: Ukrainian
+    te: Télugu
+    tg: Tayiko
+    th: Tailandés
+    tl: Tagalo
+    tr: Turco
+    uk: Ucraniano
     ur: Urdu
-    uz: Uzbek
-    vi: Vietnamese
-    zh: Chinese (Simplified)
-    zu: Zulu
+    uz: Uzbeko
+    vi: Vietnamita
+    zh: Chino (Simplificado)
+    zu: Zulú
   locale_code:
     ar-sa: Árabe
     az-az: Azerí
@@ -11293,13 +11293,13 @@ es:
     de-de: Alemán
     dv-mv: Dhivehi
     el-gr: Griego
-    en-gb: English (United Kingdom)
+    en-gb: Inglés (Reino Unido)
     en-us: Español (España)
-    es-es: Spanish (Spain)
+    es-es: Español (España)
     es-mx: Español (México)
     et-ee: Estonio
     eu-es: Vasco
-    fa-af: Dari
+    fa-af: Darí
     fa-ir: Persa
     fi-fi: Finlandés
     fil-ph: Tagalo
@@ -11330,37 +11330,37 @@ es:
     mn-mn: Mongol
     mr-in: Maratí
     ms-my: Malayo
-    mt-mt: Maltese
-    my-mm: Burmese
-    ne-np: Nepali
-    nl-nl: Dutch
-    nn-no: Norwegian (Nynorsk)
-    no-no: Norwegian (Bokmål)
-    pl-pl: Polish
-    ps-af: Pashto
-    pt-br: Portuguese (Brazil)
-    pt-pt: Portuguese (Portugal)
-    ro-ro: Romanian
-    ru-ru: Russian
-    se-fi: Northern Sami
-    si-lk: Sinhalese
-    sk-sk: Slovak
-    sl-si: Slovenian
-    sq-al: Albanian
-    sr-sp: Serbian
-    sv-se: Swedish
+    mt-mt: Maltés
+    my-mm: Birmano
+    ne-np: Nepalí
+    nl-nl: Holandés
+    nn-no: Noruego (Nynorsk)
+    no-no: Noruego (Bokmål)
+    pl-pl: Polaco
+    ps-af: Pastún
+    pt-br: Portugués (Brasil)
+    pt-pt: Portugués (Portugal)
+    ro-ro: Rumano
+    ru-ru: Ruso
+    se-fi: Sami del Norte
+    si-lk: Cingalés
+    sk-sk: Eslovaco
+    sl-si: Esloveno
+    sq-al: Albanés
+    sr-sp: Serbio
+    sv-se: Sueco
     ta-in: Tamil
-    te-in: Telugu
-    tg-tj: Tajik
-    th-th: Thai
-    tr-tr: Turkish
-    uk-ua: Ukrainian
-    ur-in: Urdu (India)
-    ur-pk: Urdu (Pakistan)
-    uz-uz: Uzbek
-    vi-vn: Vietnamese
-    zh-cn: Chinese (Simplified)
-    zh-hans: Chinese (Simplified)
-    zh-hant: Chinese (Traditional)
-    zh-tw: Chinese (Traditional)
-    zu-za: Zulu
+    te-in: Télugu
+    tg-tj: Tayiko
+    th-th: Tailandés
+    tr-tr: Turco
+    uk-ua: Ucraniano
+    ur-in: Urdú (India)
+    ur-pk: Urdú (Pakistán)
+    uz-uz: Uzbeko
+    vi-vn: Vietnamita
+    zh-cn: Chino (Simplificado)
+    zh-hans: Chino (Simplificado)
+    zh-hant: Chino (Tradicional)
+    zh-tw: Chino (Tradicional)
+    zu-za: Zulú

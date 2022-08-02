@@ -376,6 +376,7 @@
   homepage_slot_text_link_buy: "加入进来"
   homepage_slot_text_link_donate: "捐赠"
   homepage_slot_text_link_shop: "T 恤，帽子，还有更多的东西"
+  homepage_slot_text_link_thebadguys: "《坏蛋联盟》编程"
   homepage_slot_text_link_administrators: "带到您的学校或地区"
   homepage_gallery_header: "已创建了 %{project_count} 万个 Code.org 项目"
   homepage_header_donors: "Code.org 感谢各位支持者"
@@ -385,6 +386,9 @@
   homepage_below_hero_announcement_link_text: "了解详情"
   homepage_higher_power_body: "与舞蹈派对一起创作，获得观看乐队现场表演的机会。"
   homepage_thebadguys_body: "与狼蛛女士、沃尔夫先生和其他坏家伙一起编写一段冒险故事！"
+  homepage_csa_subhead: "一个新方法-"
+  homepage_csa_title: "AP®计算机科学A"
+  homepage_csa_body: "在我们以公平为导向的课程中，为学生提供与现实世界相连的创意项目。"
   contact_form_topic_student: "我是学生"
   contact_form_topic_parent: "我是家长"
   contact_form_topic_teacher: "我的老师或教育家"
@@ -516,6 +520,8 @@
   video_title_marco_belinelli: "和 Marco Belinelli 一起编程一小时"
   video_title_chris_bosh: "Chris Bosh 和计算机科学"
   video_title_my_name_is_aracely: "我叫阿拉丝莉"
+  video_title_change_face_of_cs: "改变计算机科学的面貌"
+  video_title_latam_hoc: "Lo Que Falta En Nuestras Escuelas"
   video_1min: "1分钟"
   video_2min: "2分钟"
   video_3min: "3分钟"
@@ -983,6 +989,7 @@
   express-2020_name: 速学课程 (2019)
   pre-express-2020_name: 学前儿童的速学课程（2020）
   pre-express-2021_name: 学前儿童的速学课程（2021）
+  pre-express-2022_name: 学前儿童快捷课程（2022）
   csd2_name: '单元 2：网页开发'
   csd3_name: '单元 3：动画和游戏'
   accelerated_name: "加速课程"
@@ -1476,6 +1483,7 @@
   header_educate_beyond: "Code.org 意外的内容"
   header_educate_inspire: "鼓舞学生"
   header_educate_community: "在线社区"
+  header_educate_requirements: "技术要求"
   header_educate_tools: "工具和视频"
   header_about_us: "关于我们"
   header_about_leadership: "管理团队"
@@ -1795,3 +1803,5 @@
   outbreak_tile_subtitle: "有病毒感染了怪物城！编写一个爆发模拟器，并预测怪物城的邻居会发生什么。"
   outbreak_tile_alt: "模拟病毒如何通过一群紫色怪物传播。"
   footer_cookie_notice: "Cookie通知"
+  top_hoc_tutorial_applab_alt_text: "一只用食指触碰触屏平板电脑的棕色手，在蓝色背景下发射星星和光线"
+  minecraft_tile_alt: "《我的世界》中的两个角色：史蒂夫和亚历克斯，背景是一个带珊瑚、海豚和海带的水生我的世界场景"

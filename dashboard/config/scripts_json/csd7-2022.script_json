@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-23 23:42:18 UTC",
+    "serialized_at": "2022-07-15 15:17:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2747,7 +2747,7 @@
       "key": "14f8ba48-f942-44d3-b108-46ab84f9823d",
       "position": 17,
       "properties": {
-        "description": " **Distribute:** pass out the [r patterns_in_data/csd/2022] Activity Guide to each student.\n\n**Do This:** Have students complete the activity by finding patterns and trends in the data using the Cross Tab charts. An answer key is provided for you to check answers.\n\n**Circulate:** Monitor students as they complete this activity guide. The sentence starters for each table should correlate with the hot spots in the data, while the final two answers can be more open ended and depend more on how well students justify their answers.",
+        "description": " **Distribute:** pass out the [r patterns_in_data_1/csd/2022] Activity Guide to each student.\n\n**Do This:** Have students complete the activity by finding patterns and trends in the data using the Cross Tab charts. An answer key is provided for you to check answers.\n\n**Circulate:** Monitor students as they complete this activity guide. The sentence starters for each table should correlate with the hot spots in the data, while the final two answers can be more open ended and depend more on how well students justify their answers.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -5759,10 +5759,23 @@
       "key": "2ec19797-3426-461d-aac6-3e9af661f97b",
       "position": 1,
       "properties": {
-        "description": "Ethics in AI is a large, complex topic that is invaluable for students to experience, discuss, and wrestle with their own understandings of artificial intelligence. In fact, this topic may overflow beyond just a single lesson and require more time and attention with students.\n\nIf you would like to extend the focus on ethics in AI, consider adapting some of the resources from the [MIT AI + Ethics curriculum](https://www.media.mit.edu/projects/ai-ethics-for-middle-school/overview/), which is an ethical AI curriculum specifically designed for middle school and many of the activities can be done without a computer if needed."
+        "description": "Ethics in AI is a large, complex topic that is invaluable for students to experience, discuss, and wrestle with their own understandings of artificial intelligence. In fact, this topic may overflow beyond just a single lesson and require more time and attention with students.\n\nIf you would like to extend the focus on ethics in AI, consider adapting some of the resources from the [MIT AI + Ethics curriculum](https://www.media.mit.edu/projects/ai-ethics-for-middle-school/overview/), which is an ethical AI curriculum specifically designed for middle school and many of the activities can be done without a computer if needed.",
+        "name": "Ethics in AI"
       },
       "seeding_key": {
         "activity_section.key": "2ec19797-3426-461d-aac6-3e9af661f97b",
+        "lesson_activity.key": "49145ed8-ab17-41b0-9502-807c1f24845a"
+      }
+    },
+    {
+      "key": "93f00dad-64f7-4871-889d-44ea834beff4",
+      "position": 2,
+      "properties": {
+        "description": "This lesson provides an opportunity for students to be critical of existing AI programs, developing a Code of Ethics as a potential solution to existing issues in the industry. This critical lens can be extended to additional learning objectives and activities as outlined in the [Artificial Intelligence](https://criticallyconsciouscomputing.org/ai) chapter of the [Critically Conscious Computing: Methods for Secondary Education](https://criticallyconsciouscomputing.org/) online textbook from Dr. Amy Ko.\n\nThis chapter provides an overview of additional concepts related to AI and Machine Learning, and ends with a \"unit sketch\" which outlines additional lessons and activities that could be introduces in a unit on AI and Machine Learning from a critical lens. These activities could be appropriate if you would like to continue exploring artificial intelligence from a critical lens with your students.",
+        "name": "Critically Conscious AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "93f00dad-64f7-4871-889d-44ea834beff4",
         "lesson_activity.key": "49145ed8-ab17-41b0-9502-807c1f24845a"
       }
     },

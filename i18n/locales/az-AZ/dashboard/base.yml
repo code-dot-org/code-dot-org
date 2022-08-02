@@ -432,7 +432,6 @@ az:
     popup:
       progress_for_user: "%{name} adlı şagirdin nəticələri"
       progress: 'Sizin nəticələriniz'
-      lines: 'Yekun kod sətiri: %{lines}'
       close: 'BAĞLA'
       mastery: 'Anlayışlar'
       puzzle_map: 'Mərhələlər'
@@ -1060,6 +1059,7 @@ az:
         music: 'Musiqi'
         art: 'İncəsənət'
         other: "Başqa:"
+        na: 'Tətbiq olunmağa uyğun deyil'
       resources:
         bootstrap: 'ilkin yükləmə'
         codecademy: 'Kod Akademiyası'
@@ -1068,7 +1068,8 @@ az:
         kodable: 'Kodlanabilər'
         scratch: 'Cızıq'
         tynker: '"Tynker"'
-        other: "Başqa:"
+        other: "Digər"
+        na: 'Tətbiq olunmağa uyğun deyil'
       robotics:
         grok: 'Anlayaraq öyrənmək'
         kodable: 'Kodlanabilər'
@@ -1078,7 +1079,8 @@ az:
         sphero: 'Kürə'
         raspberry: 'Moruq Pi'
         wonder: 'Əla emalatxana'
-        other: "Başqa:"
+        other: "Digər"
+        na: 'Tətbiq olunmağa uyğun deyil'
       workshop_course:
         csf_af: 'Kompüter Elmləri əsasları (A-F kursları)'
         csf_express: 'CS (Əvvəldən ifadə etmək və ya ifadə etmək)'

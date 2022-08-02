@@ -467,7 +467,6 @@ uk:
     popup:
       progress_for_user: Прогрес %{name}
       progress: Ваш прогрес
-      lines: 'Усього рядків коду: %{lines}'
       close: ЗАКРИТИ
       mastery: Поняття
       puzzle_map: Етапи
@@ -1271,6 +1270,7 @@ uk:
         music: Музика
         art: Мистецтво
         other: 'Інше:'
+        na: Не застосовується
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1280,7 +1280,8 @@ uk:
         lightbot: Світлячок
         scratch: Scratch
         tynker: Tynker
-        other: 'Інше:'
+        other: Інше
+        na: Не застосовується
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1290,7 +1291,8 @@ uk:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Інше:'
+        other: Інше
+        na: Не застосовується
       workshop_course:
         csf_af: Основи інформатики (Курси A-F)
         csf_express: Основи інформатики (Вступ до прискорених та Прискорені)

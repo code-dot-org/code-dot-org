@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-26T18:56:22.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -81,7 +77,7 @@
     "encrypted": "false",
     "start_blocks": "randomGreeting(\"Benjamin\");\r\nrandomCompliment(\"Benjamin\");\r\n\r\nrandomGreeting(\"Raji\");\r\nrandomCompliment(\"Raji\");\r\n\r\nrandomGreeting(\"Esmerelda\");\r\nrandomCompliment(\"Esmerelda\");\r\n\r\nfunction randomGreeting(name){\r\n  var greetings = [\"Good day, \", \"Bonne journée, \", \"Buenos dias, \", \"Magandang araw, \", \"美好的一天, \"];\r\n  console.log(greetings[randomNumber(0, greetings.length-1)] + name);\r\n}\r\n\r\nfunction randomCompliment(name){\r\n  var compliments = [\", you have incredible hair!\", \", you are astonishingly smart!\", \", your fashion sense is unmatched!\", \", your smile lights up the room!\", \", you are uncommonly talented!\", \", you are ridiculously funny!\"];\r\n  \r\n  // Add code so that the function console.logs the person's\r\n  // name followed by random compliment from the list above.\r\n                     \r\n}",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
-    "map_reference": "/docs/concepts/patterns/random-list-access/",
+    "map_reference": "/courses/vpl-csp-2022/guides/random-list-access",
     "encrypted_examples": "gztD1XfxC+U15e/qrAZNKDkmaYhvmz8VdYwG0kiTEtPkt9QlSBOyB1S5aoIE\nP58ETcJAxp39Fjpt1Wh6K0M2TA==\n",
     "widget_mode": "false",
     "libraries_enabled": "false",
@@ -89,6 +85,10 @@
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-26T18:56:22.000Z",
+  "user_id": 832,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-26T18:56:22.693+00:00\",\"changed\":[\"cloned from \\\"PL U7 Param Return Practice Part 2\\\"\"],\"cloned_from\":\"PL U7 Param Return Practice Part 2\"}]"

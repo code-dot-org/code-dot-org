@@ -637,6 +637,7 @@ ja:
         CSA-PL-two-way-selection: 双方向選択
         CSA-PL-Printing-in-Java: Javaでプリント
         CSA-PL-multi-selection-statements: 複数選択文
+        CS_Changing_Everything: コンピューター サイエンスはすべてを変えています
     callout:
       text:
         drag_blocks: "「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。"

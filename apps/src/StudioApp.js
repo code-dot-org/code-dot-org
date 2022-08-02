@@ -75,6 +75,10 @@ import {
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
+import {
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
@@ -1046,7 +1050,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
 
   if (showRun) {
     if (this.editDuringRunAlert !== undefined) {
-      ReactDOM.unmountComponentAtNode(this.editDuringRunAlert);
+      this.closeAlert(this.editDuringRunAlert);
       this.editDuringRunAlert = undefined;
     }
     getStore().dispatch(setIsEditWhileRun(false));
@@ -3117,7 +3121,7 @@ StudioApp.prototype.displayWorkspaceAlert = function(
       type: type,
       onClose: () => {
         onClose();
-        ReactDOM.unmountComponentAtNode(container[0]);
+        this.closeAlert(container[0]);
       },
       isBlockly: this.usingBlockly_,
       displayBottom: bottom
@@ -3151,9 +3155,7 @@ StudioApp.prototype.displayPlayspaceAlert = function(type, alertContents) {
   var renderElement = container[0];
 
   let alertProps = {
-    onClose: () => {
-      ReactDOM.unmountComponentAtNode(renderElement);
-    },
+    onClose: () => this.closeAlert(renderElement),
     type: type
   };
 
@@ -3166,6 +3168,14 @@ StudioApp.prototype.displayPlayspaceAlert = function(type, alertContents) {
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
   ReactDOM.render(playspaceAlert, renderElement);
+};
+
+/**
+ * Remove an alert from the DOM. This is just an alias for ReactDOM.unmountComponentAtNode.
+ * @param {Node} alert
+ */
+StudioApp.prototype.closeAlert = function(alert) {
+  ReactDOM.unmountComponentAtNode(alert);
 };
 
 /**
@@ -3351,12 +3361,17 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
         !config.readonlyWorkspace,
       serverScriptId: config.serverScriptId,
       serverLevelId: config.serverLevelId,
-      serverProjectLevelId: config.serverProjectLevelId
+      serverProjectLevelId: config.serverProjectLevelId,
+      codeOwnersName: config.codeOwnersName
     },
     appSpecificConstants
   );
 
   getStore().dispatch(setPageConstants(combined));
+
+  if (config.isInstructor) {
+    getStore().dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+  }
 
   const instructionsConstants = determineInstructionsConstants(config);
   getStore().dispatch(setInstructionsConstants(instructionsConstants));

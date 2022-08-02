@@ -1,6 +1,6 @@
 # empty model included here for future compatibility, since the actual
 # model has since been removed
-class ProfessionalLearningPartner < ActiveRecord::Base
+class ProfessionalLearningPartner < ApplicationRecord
 end
 
 class MergeProfessionalLearningPartnerIntoRegionalPartner < ActiveRecord::Migration[5.0]

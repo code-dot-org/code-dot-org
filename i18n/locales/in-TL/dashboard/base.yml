@@ -45,6 +45,7 @@ in:
         personal_email_markdown: "crwdns2067358:0%{url}crwdne2067358:0"
         username: 'crwdns2550:0crwdne2550:0'
         password: 'crwdns2551:0crwdne2551:0'
+        verified_teacher: 'crwdns2929400:0crwdne2929400:0'
         password_confirmation: 'crwdns2552:0crwdne2552:0'
         current_password: 'crwdns2553:0crwdne2553:0'
         locale: 'crwdns2554:0crwdne2554:0'
@@ -429,7 +430,6 @@ in:
     popup:
       progress_for_user: "crwdns38277:0%{name}crwdne38277:0"
       progress: 'crwdns2599:0crwdne2599:0'
-      lines: 'crwdns2966:0%{lines}crwdne2966:0'
       close: 'crwdns2600:0crwdne2600:0'
       mastery: 'crwdns2967:0crwdne2967:0'
       puzzle_map: 'crwdns2968:0crwdne2968:0'
@@ -601,6 +601,7 @@ in:
     try_hour_of_code: 'crwdns55879:0crwdne55879:0'
     store: 'crwdns2689313:0crwdne2689313:0'
     cookie_notice: 'crwdns2864053:0crwdne2864053:0'
+    view_code: 'crwdns2929402:0crwdne2929402:0'
   reference_area:
     title: 'crwdns2625:0crwdne2625:0'
     subtitle: 'crwdns3090:0crwdne3090:0'
@@ -1092,6 +1093,7 @@ in:
         israel: 'crwdns136860:0crwdne136860:0'
         malaysia: 'crwdns136861:0crwdne136861:0'
         mexico: 'crwdns136862:0crwdne136862:0'
+        paraguay: 'crwdns2929302:0crwdne2929302:0'
         thailand: 'crwdns136863:0crwdne136863:0'
         uzbekistan: 'crwdns2486286:0crwdne2486286:0'
       ages:
@@ -1114,6 +1116,7 @@ in:
         music: 'crwdns136879:0crwdne136879:0'
         art: 'crwdns136880:0crwdne136880:0'
         other: "crwdns136881:0crwdne136881:0"
+        na: 'crwdns2929304:0crwdne2929304:0'
       resources:
         bootstrap: 'crwdns136882:0crwdne136882:0'
         codecademy: 'crwdns136883:0crwdne136883:0'
@@ -1124,6 +1127,7 @@ in:
         scratch: 'crwdns136888:0crwdne136888:0'
         tynker: 'crwdns136889:0crwdne136889:0'
         other: "crwdns136890:0crwdne136890:0"
+        na: 'crwdns2929306:0crwdne2929306:0'
       robotics:
         grok: 'crwdns136891:0crwdne136891:0'
         kodable: 'crwdns136892:0crwdne136892:0'
@@ -1134,6 +1138,7 @@ in:
         raspberry: 'crwdns136897:0crwdne136897:0'
         wonder: 'crwdns136898:0crwdne136898:0'
         other: "crwdns136899:0crwdne136899:0"
+        na: 'crwdns2929308:0crwdne2929308:0'
       workshop_course:
         csf_af: 'crwdns136900:0crwdne136900:0'
         csf_express: 'crwdns136901:0crwdne136901:0'

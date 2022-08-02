@@ -234,7 +234,6 @@ lv:
     popup:
       progress_for_user: "%{name} panākumi"
       progress: Jūsu progress
-      lines: 'Kopējais koda līniju skaits: %{lines}'
       close: AIZVĒRT
       mastery: Jēdzieni
       puzzle_map: Stadijas
@@ -551,10 +550,13 @@ lv:
       subjects:
         cs: Datorzinātne
         math: Matemātika
+        other: Citi
       resources:
         kodable: Kodable
+        other: Citi
       robotics:
         kodable: Kodable
+        other: Citi
       email_opt_in:
         opt_in_yes: Jā
         opt_in_no: Nē

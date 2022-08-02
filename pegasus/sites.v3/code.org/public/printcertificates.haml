@@ -76,4 +76,3 @@ theme: none
     -encoded = Base64.urlsafe_encode64(name)
     %img{:src=>"/api/hour/certificate64/#{script}/#{encoded}.jpg", :width=>"100%"}
     -count += 1
-  -slog(tag: 'print_certificates', course: script, count: count)

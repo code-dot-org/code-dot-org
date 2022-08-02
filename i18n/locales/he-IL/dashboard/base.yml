@@ -371,7 +371,6 @@ he:
     popup:
       progress_for_user: "ההתקדמות של %{name}"
       progress: 'ההתקדמות שלך'
-      lines: 'סה כ שורות קוד: %{lines}'
       close: 'קרוב'
       mastery: 'עקרונות'
       puzzle_map: 'שלבים'
@@ -943,10 +942,10 @@ he:
         other: "אחר:"
       resources:
         kodable: 'Kodable'
-        other: "אחר:"
+        other: "אחר"
       robotics:
         kodable: 'Kodable'
-        other: "אחר:"
+        other: "אחר"
       email_opt_in:
         opt_in_yes: 'כן'
         opt_in_no: 'לא'

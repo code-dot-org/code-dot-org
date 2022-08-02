@@ -163,6 +163,7 @@
           "student_overview": "Un virus a pătruns în Orașul Monștrilor! Învață să creezi un simulator de viruși și ajută-i pe monștri să se însănătoșească."
         },
         "sports/Sports": {
+          "name": "Programează-ți propriul joc sportiv",
           "overview": "În această activitate online, elevii vor învăța ce sunt evenimentele și cum sunt acestea folosite de computere în programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze jocul, adăugând viteze și sunete diferite.",
           "preparation": "### Cu o săptămână înainte de Ora dvs. de Codare\n\n-   Consultați [Ghidul pentru profesor Ora de Codare](http://hourofcode.com/resources/how-to/) și [Cele mai bune practici de la profesorii de succes](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) pentru a începe să vă planificați evenimentul Ora de Codare.\n-   [Înregistrați evenimentul Ora de Codare](http://hourofcode.com) dacă doriți să primiți asistență în clasă.\n-   Examinați și finalizați singur tutorialul online: [Code Your Own Sports Game](https://studio.code.org/s/sports/lessons/1/levels/1) \n-   Asigurați-vă că îl testați înainte de a le cere elevilor să-l completeze. Verificați-vă echipamentul sau echipamentele pe care veți lucra și decideți dacă va trebuie ceva suplimentar înainte de Ora de Codare.\n\n### Cu o zi înainte de Ora de Codare\n\n-   Imprimați unul sau mai multe dintre [Exemple de biletele de ieșire](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) la sfârșitul acestui plan de lecție sau creați-vă propriul bilet.\n\n-   Fiecare student care finalizează activitatea trebuie să primească un [certificat](https://code.org/certificates) sau Diplomă. Imprimați câte un exemplar pentru fiecare elev în avans, pentru a facilita acordarea lor la sfârșitul Orei de Codare.\n\n-   Citiți prezentarea cu slide-uri „Evenimente în Bounce – Cum se întâmplă?” (care va fi oferită elevilor la sfârșitul orei).",
           "purpose": "Această lecție prezintă conceptele de bază pentru codare și programare (folosind blocuri), precum și tehnici simple de depanare. Elevii vor afla că evenimentele sunt foarte frecvente în programele de calculator, în special în jocurile video.\n\nEvenimentele sunt foarte frecvente în programele de calculator, în special în jocurile video.\n\nElevii își vor dezvolta înțelegerea evenimentelor făcând un joc sportiv. Ei vor învăța să facă un obiect de echipament sportiv să se miște conform tastelor săgeți și să facă zgomote atunci când obiectele se ciocnesc. La sfârșit, vor ajunge să-și personalizeze jocul pentru a-l face mai deosebit!",
@@ -185,6 +186,9 @@
           "preparation": "-   Examinați și finalizați singur tutorialul online: [Dancy Party](https://hourofcode.com/us/how-to)\n\n-   Asigurați-vă că îl testați mai întâi înainte de a le cere elevilor să-l completeze.\n\n-   Faceți o verificare în avans a Resurselor necesare și asigurați-vă că aveți tot ceea ce este necesar ceva înainte de a începe Ora de codare.",
           "purpose": "Această lecție prezintă conceptele de bază de codare și programare de evenimente (folosind blocuri)."
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Ora de Programare 2013"
+        },
         "dance-2019/Dance Party": {
           "overview": "În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codare și informatică, într-un mediu sigur și încurajator. Această lecție a fost concepută pentru elevii de toate vârstele, dar necesită abilități de citire. Această activitate necesită activarea sunetului, deoarece instrumentul a fost construit pentru a răspunde muzicii.",
           "preparation": "### Cu o săptămână înainte de ora dvs. de codare.\n\n-   Consultați [Ghidul profesorului Ora de codare](http://hourofcode.com/resources/how-to/) și [Cele mai bune practici de la profesorii de succes](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) pentru a începe să vă planificați evenimentul Ora de codare.\n-   [Înregistrați-vă evenimentul Hour of Code](http://hourofcode.com) dacă doriți să obțineți asistență în clasă, postere cu reduceri sau să participați la concursul de robotică (numai în SUA).\n-   Examinați și finalizați singur tutorialul online: [Dance Party](https://studio.code.org/s/dance-2019)\n-   Asigurați-vă că îl testați mai întâi înainte de a le cere elevilor să-l completeze. Verificați-vă echipamentul sau echipamentele pe care veti lucra și decideți dacă va trebuie ceva suplimentar  înainte de Ora de Codare.\n-   Examinați planul de lecție suplimentar, [„The Big Dance Party”](https://studio.code.org/s/dance-unplugged/lessons/1) pentru a determina dacă doriți sau nu să parcurgeți această lecție înainte de ora dvs. de codare.\n\n### Cu o zi înainte de ora dvs. de codare\n\n-   Fiecare elev care finalizează activitatea trebuie să primească un certificat/ diplomă. [Tipărește unul](http://code.org/certificates) pentru toată lumea în avans, pentru a face acest lucru mai ușor la sfârșitul orei de codare.\n-   (opțional) Încurajați elevii să aducă căști pentru a le folosi în timpul activității.",
@@ -197,8 +201,113 @@
           "purpose": "Acest tutorial este conceput pentru a introduce rapid elevii în **învățare automată**, un tip de **inteligență artificială**. Elevii vor explora modul în care **datele de antrenament** sunt utilizate pentru a permite unui model de învățare automată să clasifice date noi. Elevii ar trebui să aibă o experiență pozitivă în timpul tutorialului și, mai important, ar trebui să fie motivați să continue să învețe informatica.",
           "student_overview": "În primul rând, elevii clasifică obiectele în 2 categorii, fie „pește” fie „nu pește” pentru a încerca să scoată gunoiul din ocean. Apoi, elevii vor trebui să-și extindă setul de date de antrenament pentru a include alte creaturi marine care aparțin apei. În a doua parte a activității, elevii își vor alege propriile etichete pentru a le aplica imaginilor cu pești generați aleatoriu. Aceste date de antrenament sunt folosite pentru un model de învățare automată care ar trebui apoi să poată eticheta noi imagini într-un mod cât mai exact."
         },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Secvențiere"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Bucle"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Evenimente"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Condiţionale"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funcţii"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variabile"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Bucle Pentru"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laborator Sprite"
+        },
         "poetry-hoc3/lesson-1": {
           "name": "Studiu de Stare"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fundamentele informaticii"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Cum să stăpâniți elementele de bază: Secvențiere"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Cum să stăpâniți elementele de bază: Bucle"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Cum să stăpâniți elementele de bază: Condiționale"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Cum să stăpâniți elementele de bază: Funcții"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Cum să stăpâniți elementele de bază: Evenimente"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Cele mai bune practici în predarea informaticii"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planificare"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Pașii următori"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Privire de ansamblu şi instrucţiuni de configurare"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Transmiterea de biţi pe un cablu comun"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Transmiterea de numere"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Difuzarea mesajelor"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routere și adrese"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pachete şi fiabilitate"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manual DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Nod automat DNS"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Joc liber cu simulator de internet"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fundamentele informaticii"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Cum să stăpâniți elementele de bază: Secvențiere"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Cum să stăpâniți elementele de bază: Bucle"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Cum să stăpâniți elementele de bază: Condiționale"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Cum să stăpâniți elementele de bază: Funcții"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Cum să stăpâniți elementele de bază: Evenimente"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Cele mai bune practici în predarea informaticii"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planificare"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Pașii următori"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Mutaţi-l, mutați-l"
@@ -956,6 +1065,9 @@
         "csd6-2019/Functions with Parameters": {
           "name": "Funcții cu Parametrii"
         },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Procesul de Rezolvare a Problemei"
+        },
         "csd1-2019/What is a Computer?": {
           "name": "Ce Este un Computer?"
         },
@@ -1463,6 +1575,21 @@
         "csd1-2017/What is a Computer?": {
           "name": "Ce Este un Computer?"
         },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Tutorial de pixelare în alb și negru"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Joc liber de pixelare în alb și negru"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Tutorial de pixelare color"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Exemple de pixelare color"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Joc liber cu pixelare color"
+        },
         "course4/Unplugged: Tangrams": {
           "name": "Fără calculator: Tangrame"
         },
@@ -1528,6 +1655,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Provocare extrema - Cuprinzatoare"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Introducere în Informatică"
+        },
+        "20-hour/The Maze": {
+          "name": "Labirintul"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Gândire Computațională"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Programare pe Hârtie Milimetrică"
+        },
+        "20-hour/The Artist": {
+          "name": "Artistul"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmi"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Artistul 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funcţii"
+        },
+        "20-hour/The Farmer": {
+          "name": "Fermierul"
+        },
+        "20-hour/Conditionals": {
+          "name": "Condiţionale"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Artistul 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Compunere muzicală"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Fermierul 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstractizare"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Artistul 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Programare de releu"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Fermierul 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internetul"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Artistul 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Încheiere"
         },
         "course2/Graph Paper Programming": {
           "name": "Programare pe Hârtie Milimetrică"
@@ -1709,6 +1896,78 @@
           "preparation": "-   Consultați site-ul web [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) pentru mai mult conținut legat de siguranța online.",
           "purpose": "Scopul principal al acestei lecții este de a construi experiența elevilor cu computerele. Prin acoperirea celor mai de bază funcții ale computerului, cum ar fi click, glisare și plasare, creăm un teren de joc propice la clasă pentru puzzle-urile viitoare. Această lecție oferă, de asemenea, o oportunitate excelentă de a introduce terminologia de bază a hardware-ului computerului, inclusiv „mouse”, „trackpad” sau „touchscreen”, în funcție de dispozitivele dvs.",
           "student_overview": "Dă click și glisează  pentru a rezolva puzzle-urile."
+        },
+        "allthethings/Jigsaw": {
+          "name": "Puzzle"
+        },
+        "allthethings/Maze": {
+          "name": "Labirint"
+        },
+        "allthethings/Artist": {
+          "name": "Artist"
+        },
+        "allthethings/Bee": {
+          "name": "Albină"
+        },
+        "allthethings/PlayLab": {
+          "name": "Laborator de joacă"
+        },
+        "allthethings/Farmer": {
+          "name": "Fermier"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Săritură"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Match": {
+          "name": "Meci"
+        },
+        "allthethings/Odometer": {
+          "name": "Kilometraj"
+        },
+        "allthethings/Text Compression": {
+          "name": "Comprimare de text"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pixelare"
+        },
+        "allthethings/AppLab": {
+          "name": "Laborator de Aplicații"
+        },
+        "allthethings/Gamelab": {
+          "name": "Laborator de joc"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Star wars": {
+          "name": "Războiul stelelor"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Free Response": {
+          "name": "Răspuns gratuit"
+        },
+        "allthethings/Web Lab": {
+          "name": "Laboratorul de web"
+        },
+        "allthethings/Standalone video": {
+          "name": "Videoclip independent"
+        },
+        "allthethings/Curriculum Reference": {
+          "name": "Referință curriculum"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Laborator Sprite"
+        },
+        "allthethings/Java Lab": {
+          "name": "Laboratorul Java"
         },
         "coursef-2021/lesson-6": {
           "name": "Prezentând Laboratorul de Desen",
@@ -2574,6 +2833,9 @@
         },
         "csd3-2021/Functions": {
           "name": "Funcţii"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Procesul de Rezolvare a Problemei"
         },
         "csd1-2021/What is a Computer?": {
           "name": "Ce Este un Computer?"

@@ -783,7 +783,7 @@
   dashboard_overview: "Panoramica"
   dashboard_sequence: "Sequenza"
   dashboard_framework: "Framework"
-  dashboard_standards: "Livelli di riferimento"
+  dashboard_standards: "Mappatura delle competenze"
   dashboard_implementation_guide: "Implementation Guide"
   dashboard_glossary: "Glossary"
   dashboard_classroom_strategies: "Classroom strategies for teachers"
@@ -979,19 +979,31 @@
   coursed-2020_name: Corso D (2020)
   coursee-2020_name: Corso E (2020)
   coursef-2020_name: Corso F (2020)
+  coursea-2021_name: Corso A (2021)
+  courseb-2021_name: Corso B (2021)
+  coursec-2021_name: Corso C (2021)
   coursed-2021_name: Corso D (2021)
-  coursed-2022_name: Corso D (2021)
+  coursee-2021_name: Corso E (2021)
+  coursef-2021_name: Corso F (2021)
+  coursea-2022_name: Corso A (2022)
+  courseb-2022_name: Corso B (2022)
+  coursec-2022_name: Corso C (2022)
+  coursed-2022_name: Corso D (2022)
+  coursee-2022_name: Corso E (2022)
+  coursef-2022_name: Corso F (2022)
   express-2018_name: Corso Rapido (2018)
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
-  express-2019_name: Corso Rapido (2017)
+  express-2019_name: Corso Rapido (2019)
   pre-express-2019_name: Corso Rapido pre-scolare (2019)
-  express-2020_name: Corso Rapido (2017)
+  express-2020_name: Corso Rapido (2020)
   pre-express-2020_name: Corso Express Pre-lettore (2020)
+  express-2021_name: Corso Rapido (2021)
   pre-express-2021_name: Corso Rapido pre-scolare (2021)
+  express-2022_name: Corso Rapido (2022)
   csd2_name: 'Unità 2: Sviluppo Web'
   csd3_name: 'Unità 3: Animazioni e Giochi'
   accelerated_name: "Corso rapido"
-  express_name: "Corso Rapido (2018)"
+  express_name: "Corso Rapido"
   pre-express_name: Corso Rapido pre-scolare
   20-hour_name: Corso rapido
   algebra_name: "L'informatica in algebra"
@@ -1500,7 +1512,7 @@
   header_about: "Informazioni"
   header_teacher_community: "Teacher community"
   header_help_support: 'Help and support'
-  header_report_bug: "Report a problem"
+  header_report_bug: "Segnala un errore"
   header_report_abuse: "Segnala abuso"
   header_legal: "Privacy & Legale"
   header_legal_privacy: "Informativa sulla privacy"
@@ -1517,7 +1529,7 @@
   header_documentation: "Documentazione"
   user_header_label: "Ciao %{username}"
   user_header_team: "Squadra"
-  user_header_my_projects: "Collezione Privata"
+  user_header_my_projects: "I miei progetti"
   user_header_settings: "Il mio account"
   user_header_logout: "Esci"
   user_header_signin: "Accedi"
@@ -1733,8 +1745,8 @@
   hoc2021_mc_mee_villages_description: 'Impara le basi del coding ed esplora la diversità e l''inclusione con i tuoi studenti in Minecraft: Education Edition.'
   hoc2021_mc_mee_ai_title: "AI per sempre"
   hoc2021_mc_mee_ai_description: 'Esplora l''AI con i tuoi studenti e impara a codificare in Minecraft: Education Edition.'
-  footer_powered_by_aws: "Eseguito su Amazon Web Services"
-  footer_built_on_github: "Costruito su GitHub di Microsoft"
+  footer_powered_by_aws: "Amazon Web Services e il logo “Powered by AWS” sono marchi registrati di Amazon.com, Inc. o delle sue consociate negli USA e/o in altri paesi."
+  footer_built_on_github: "Progettato su GitHub da Microsoft"
   codebytes_skinny_banner_title: "Unisciti a noi dal 7 all'11 dicembre per le nostre mini-lezioni dal vivo CodeBytes!"
   codebytes_skinny_banner_description: 'Unisciti a noi ogni giorno della CS Education Week for CodeBytes, lezioni interattive di informatica di 20 minuti. Streaming live due volte al giorno, CodeBytes è un ottimo modo per gli studenti di partecipare a un #HourOfCode virtuale!'
   codebytes_skinny_banner_english_only: "Solo in inglese"

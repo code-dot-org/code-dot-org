@@ -103,7 +103,6 @@ tg:
       create: 'Сохтан'
     popup:
       progress: 'Муваффақияти шумо'
-      lines: 'Хатҳои умумии рамз: %{lines}'
       close: 'ПӮШИДАН'
       puzzle_map: 'Давраҳо'
       prizes_link: 'маълумоти бештар'
@@ -168,5 +167,11 @@ tg:
       gender:
         male: 'Мард'
         female: 'Зан'
+      subjects:
+        other: "Дигар"
+      resources:
+        other: "Дигар"
+      robotics:
+        other: "Дигар"
   cookie_banner:
     accept: 'Ман розӣ ҳастам'

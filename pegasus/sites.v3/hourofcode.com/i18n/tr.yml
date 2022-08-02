@@ -29,8 +29,8 @@ tr:
   africa_campaign_date_full: 1-31 Ekim
   africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: 1-31 Ekim 2020
-  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
-    the connections!'
+  social_hoc2021_cse: "#HourOfCode sırasında #CSEverywhere'i kutluyoruz. Bağlantıları
+    keşfedin!"
   hoc2020_header: Bugün öğrenin, daha parlak bir gelecek inşa edin
   hoc2020_header_with_line_break_markdown: |-
     Bugün öğrenin,
@@ -65,7 +65,7 @@ tr:
     bilimi temeldir ve her öğrencinin öğrenmesi gerekir.'
   social_hoc2019_dance: Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X,
     Jonas Brothers, Nicki Minaj ve 34 ünlü daha!
-  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
+  social_hoc_anybody: 'Kodlama Saati: Herkes Öğrenebilir'
   oceans_landing_title: Okyanuslar için Yapay Zeka
   oceans_landing_description: Makine öğrenimi ve yapay zekanın etik kullanımı ile
     ilgili bilgi edinin.
@@ -144,36 +144,36 @@ tr:
     verileri ve yanlılık hakkında bilgi sahibi olun. Bilgisayar bilimi kodlamadan
     çok daha fazlasıdır! Müfredatımız boyunca yapay zeka ile ilgili daha fazla şey
     öğretme yolculuğunda Code.org'un ilk adımının keyfini çıkarın.
-  social_coldplay_title: Create with Coldplay & Code.org
-  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
-    and you could win.
+  social_coldplay_title: Coldplay ve Code.org ile oluşturun
+  social_coldplay_desc: Bize en iyi hareketlerini göster! Kodla, dans et, dünyayla
+    paylaş ve kazan.
   hoc_live: Kodlama Saati Canlı Yayın
   hoc_live_sign_up_title: Kodlama Saati Canlı Yayın için kayıt ol
-  hoc_live_learn_title: Learn with Hour of Code Live
+  hoc_live_learn_title: Canlı Kodlama Saati ile öğrenin
   hoc_live_sign_up_message: "Özel misafirle birlikte gerçek zamanlı olarak öğrenin!
     Tüm yaştaki ve yetenekteki hatta bilgisayarı olmayan öğrenciler de davetlidir.
     \nEvde öğrenmeye devam etmek için bölümlerin ve kaynakların kayıtlarını almak
     için posta listemize katılın.  Geçmiş bölümlere göz atın [here](%{episodes_url})."
-  hoc_live_learn_message: Learn basic concepts of computer science alongside special
-    guests! Students of all ages and abilities, including those without computers,
-    are welcome to our virtual workshop. Continue learning at home through our Hour
-    of Code Live episodes.
+  hoc_live_learn_message: Özel konuklarla birlikte bilgisayar biliminin temel kavramlarını
+    öğrenin! Bilgisayarı olmayanlar da dahil olmak üzere her yaştan ve yetenekten
+    öğrenci sanal atölyemize davetlidir. Canlı Kodlama Saati bölümlerimizle evde öğrenmeye
+    devam edin.
   hoc_live_join_us: Bize katılın
   hoc_live_learn_more: Daha fazla bilgi edinin
   hoc_overview_oceans_tutorial_header: Okyanuslar için Yapay Zeka
   hoc_overview_oceans_tutorial_desc: Etik meseleleri ve dünya problemlerini ele almada
     yapay zekanın nasıl kullanılabildiğini keşfederken, yapay zeka, makine öğrenimi,
     eğitim verileri ve yanlılık hakkında bilgi sahibi olun.
-  hoc_overview_csc_header: Introducing CS Connections
-  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
-    computer science and other subjects like math, language arts, science, and social
-    studies. Through these modules, projects, and lessons, classrooms can explore
-    their usual subjects in exciting new ways!
-  hoc_overview_csc_learn_more: Learn more about CS Connections
-  hoc_danceparty_alt_text: Animated characters dancing to music underneath the text
-    'Code your own dance party'
-  hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
-    a scanner on the bottom, and an LED face
+  hoc_overview_csc_header: Bilgisayar Bağlantılarına Genel Bakış
+  hoc_overview_csc_desc: En yeni müfredatımız bilgisayar bilimi ile matematik, dil
+    sanatları, bilim ve sosyal bilgiler gibi diğer dersler arasındaki bağlantıları
+    vurgulamaktadır. Bu modüller, projeler ve dersler sayesinde sınıflar olağan konularını
+    heyecan verici yeni yollarla keşfedebilir!
+  hoc_overview_csc_learn_more: Bilgisayar Bağlantıları hakkında daha fazla bilgi edinin
+  hoc_danceparty_alt_text: "'Kendi dans partinizi kodlayın' metninin altında müzik
+    eşliğinde dans eden animasyonlu karakterler"
+  hoc_ai_alt_text: Anteni, altta tarayıcısı ve LED yüzü olan yüzen beyaz bir yapay
+    zeka karakteri
   hoc_banner_alt_text: Hour of Code banner
   ai_video_title_what_is_ai: Yapay zeka nedir?
   ai_video_title_algorithm_bias: Algoritmalarda yanlılık ile mücadele
@@ -687,21 +687,21 @@ tr:
   hoc_faq_behind_hoc_a_markdown: Hour of Code; Hour of Code ve Bilgisayar Bilimi Eğitim
     Haftası [Danışma ve Değerlendirme Komiteleri](%{partner_url}) ile aralarında Microsoft,
     Apple, Amazon, Boys and Girls Clubs of America and the College Board gibi kuruluşların
-    da olduğu, Kodlama Saati'ne destek olmak için bir araya gelen eşsiz ortakların
-    güç birliği ile yürütülmektedir.
+    da olduğu, Hour of Code'a destek olmak için bir araya gelen eşsiz ortakların güç
+    birliği ile yürütülmektedir.
   hoc_faq_host_q: Kodlama hakkında hiçbir şey bilmiyorum. Yine de bir aktiviteye ev
     sahipliği yapabilir miyim?
   hoc_faq_host_a: Elbette. Hour of Code aktiviteleri kendi kendine yönlendirmelidir.
-    Yapmanız gereken tek şey <a href='%{codeorg_url}/learn'>mevcut öğreticilerimizi
-    denemek</a>, istediğiniz birini seçmek ve bir saat belirlemek. Gerisini biz hallederiyoruz.
-    Ayrıca anaokulundan başlayarak her yaş ve her seviyeye uygun seçeneklerimiz de
-    mevcuttur. <a href='/how-to'>Nasıl yapılır rehberimizi</a> okuyarak etkinliğinizi
-    planlamaya başlayabilirsiniz.
-  hoc_faq_host_a_markdown: Elbette. Hour of Code aktiviteleri, kendi kendine yönlendirmelidir.
+    Tek yapmanız gereken <a href='%{codeorg_url}/learn'>güncel öğretici materyallerimizi
+    denemek</a>, istediğiniz materyali seçmek ve bir saat belirlemek. Gerisini biz
+    hallediyoruz. Anaokulundan başlayarak her yaş ve deneyim seviyesine göre de seçeneklerimiz
+    var. <a href='/how-to'>Nasıl yapılır?</a> rehberimizi okuyarak etkinliğinizi planlamaya
+    başlayın.
+  hoc_faq_host_a_markdown: Elbette. Hour of Code aktiviteleri kendi kendine yönlendirmelidir.
     Tek yapmanız gereken [güncel öğretici materyallerimizi denemek](%{codeorg_url}/learn),
     istediğiniz materyali seçmek ve bir saat belirlemek. Gerisini biz hallediyoruz.
     Anaokulundan başlayarak her yaş ve deneyim seviyesine göre de seçeneklerimiz var.
-    [Nasıl yapılır?](%{howto}) rehberimizi koruyarak etkinliğinizi planlamaya başlayın.
+    [Nasıl yapılır?](%{howto}) rehberimizi okuyarak etkinliğinizi planlamaya başlayın.
   hoc_faq_devices_q: Öğrencilerim için hangi aygıtları kullanmalıyım?
   hoc_faq_devices_a: Code.org dersleri tüm aygıtlar ve tarayıcılar üzerinde çalışmaktadır.
     Code.org'un öğretici teknoloji ihtiyaçları ile ilgili daha fazla bilgiyi <a href='%{codeorg_url}/educate/it'>burada</a>
@@ -719,23 +719,23 @@ tr:
   hoc_faq_need_computers_q: Her katılımcı için bilgisayara ihtiyaç var mı?
   hoc_faq_need_computers_a: Hayır. Bilgisayar, akıllı telefon, tabletlerde çalışan
     ve bazıları da hiç bilgisayar gerektirmeyen Hour of Code öğretici materyallerimiz
-    var! İstediğiniz yerden, elinizdekilerle katılabilirsiniz. <p><i>İşte birkaç seçenek:</i><br><ul><li><b>İkili
-    gruplar halinde çalışın.</b><a href='%{pair_programming_research}'>Araştırmalara
-    göre</a> öğrencilerin en iki öğrendiği düzen, <a href='%{pair_programming_video}'>çiftli
-    programlama</a>; yani bir bilgisayarı paylaşarak birlikte çalışma düzeni. Öğrencilerinizi
+    var! İstediğiniz yerden, elinizdekilerle katılabilirsiniz. <p><i>İşte birkaç seçenek:</i>
+    <br> <ul> <li><b>İkili gruplar halinde çalışın.</b> <a href='%{pair_programming_research}'>Araştırmalara
+    göre</a> öğrencilerin en iyi öğrendiği düzen, <a href='%{pair_programming_video}'>eşli
+    programlama</a>; yani bir bilgisayarı paylaşıp birlikte çalışma düzeni. Öğrencilerinizi
     ikili gruplar oluşturmaya teşvik edin. <li><b>Yansıtmalı bir ekran kullanın.</b>
     İnternete bağlı bir bilgisayar için hem projektör hem de ekranınız varsa grubunuz
     birlikte bir Hour of Code yapabilir. Videoları birlikte izleyin ve sırayla bulmacaları
-    çözün veya soruları yanıtlayın. <li><b>Bağımsız olun.</b> Hiç <a href='%{unplugged_url}'>bilgisayar
-    gerektirmeyen öğretici materyaller de sunuyoruz</a>.
+    çözün veya soruları yanıtlayın. <li><b>Bağlantısız olun.</b> Hiç <a href='%{unplugged_url}'>bilgisayar
+    gerektirmeyen öğretici materyaller de sunuyoruz</a>.</ul>
   hoc_faq_need_computers_a_markdown: |-
     Hayır. Bilgisayar, akıllı telefon, tabletlerde çalışan ve bazıları da hiç bilgisayar gerektirmeyen Hour of Code öğretici materyallerimiz var! İstediğiniz yerden, elinizdekilerle katılabilirsiniz.
 
     _İşte birkaç seçenek:_
 
-    - **İkili gruplar halinde çalışın.** [Araştırmalara göre](%{pair_programming_research}) öğrencilerin en iki öğrendiği düzen, [iki programlama](%{pair_programming_video}); yani bir bilgisayarı paylaşıp birlikte çalışma düzeni. Öğrencilerinizi ikili gruplar oluşturmaya teşvik edin.
+    - **İkili gruplar halinde çalışın.** [Araştırmalara göre](%{pair_programming_research}) öğrencilerin en iyi öğrendiği düzen, [eşli programlama](%{pair_programming_video}); yani bir bilgisayarı paylaşıp birlikte çalışma düzeni. Öğrencilerinizi ikili gruplar oluşturmaya teşvik edin.
     - **Yansıtmalı bir ekran kullanın.** İnternete bağlı bir bilgisayar için hem projektör hem de ekranınız varsa grubunuz birlikte bir Hour of Code yapabilir. Videoları birlikte izleyin ve sırayla bulmacaları çözün veya soruları yanıtlayın.
-    - **Bağımsız olun.** Hiç [bilgisayar gerektirmeyen öğretici materyaller de sunuyoruz](%{unplugged_url}).
+    - **Bağlantısız olun.** Hiç [bilgisayar gerektirmeyen öğretici materyaller de sunuyoruz](%{unplugged_url}).
   hoc_faq_international_q: 'Benim yaşadığım ülke: <country>. Uluslararası olarak nasıl
     katılabilirim?'
   hoc_faq_international_a: Herkes, dünyanın her yerinde bir Hour of Code etkinliği
@@ -746,7 +746,7 @@ tr:
     Hour of Code için bir araya geldiler. [Buradan](%{promote}) daha fazlasını öğrenebilirsiniz.
   hoc_faq_tutorial_q: Nasıl bir Hour of Code öğreticisi hazırlayabilirim?
   hoc_faq_tutorial_a: Eğer bir öğretici ortağı olmak isterseniz, <a href='target-tutorial-guidelines'>rehberimizi
-    ve yönlendirmelerimizi inceleyin</a>. Bir çok bağlantılı ve farklı seçeneği bünyemizde
+    ve yönlendirmelerimizi inceleyin</a>. Birçok bağlantılı ve farklı seçeneği bünyemizde
     bulundurmak istiyoruz, ancak birincil amacımız bilgisayar bilimine yeni olan öğrenci
     ve öğretmenler için ilk tecrübelerini en iyi hale getirmek.
   hoc_faq_tutorial_a_markdown: Eğer bir öğretici ortağı olmaya niyetliyseniz [kurallar
@@ -767,20 +767,22 @@ tr:
     OLUŞTURULMAZ. Öğrencileriniz için hesap oluşturmak isterseniz lütfen şu [instructions](%{section_instructions_url})
     adımlarını izleyin.
   hoc_faq_high_school_q: Lise öğrencileriyle hangi aktiviteyi yapmamı önerirsiniz?
-  hoc_faq_high_school_a: Tüm yaşlar için, ilk aşamada <a href='http://code.org/learn'>Code.org/learn</a>
-    adresindeki başlangıç öğreticilerinden herhangi birini denemenizi öneririz, örneğin
-    Angry Birds'lü veya Anna ve Elsa'nın olduğu öğretici gibi. Bir lise öğrencisi
-    bunlardan birini 30 dakika içinde bitirebilecek seviyede olmalıdır, ancak bundan
-    sonra Khan Academy ya da CodeHS gibi daha ileri seviye JavaScript öğreticileri
-    deneyebilir.
+  hoc_faq_high_school_a: Star Wars ve Minecraft öğretici materyallerimiz özellikle
+    lise seviyesi için çok iyidir; özellikle de Star Wars JavaScript sürümü ile iki
+    öğreticideki ücretsiz oyun seviyesi.  Alternatif olarak, başlangıçta Angry Birds
+    veya Anna ve Elsa karakterlerini içeren öğretici materyalleri gibi başlangıç seviyesinde
+    olanlardan birini <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> üzerinden
+    denemelerini öneririz. Lise öğrencilerinin bunlardan birini 30 dakikada bitirebilmeleri
+    gerekir. Ardından JavaScript üzerinde Khan Academy veya CodeHS gibi daha ileri
+    düzeyde öğretici materyalleri deneyebilirler.
   hoc_faq_high_school_a_markdown: Star Wars ve Minecraft öğretici materyallerimiz
     özellikle lise seviyesi için çok iyidir; özellikle de Star Wars JavaScript sürümü
     ile iki öğreticideki ücretsiz oyun seviyesi.  Alternatif olarak, başlangıçta Angry
     Birds veya Anna ve Elsa karakterlerini içeren öğretici materyalleri gibi başlangıç
     seviyesinde olanlardan birini [%{partner_url}/learn](%{codeorg_url}/learn) üzerinden
-    denemenizi öneririz. Lise öğrencilerinin bunlardan birini 30 dakikada bitiriip
-    ardından JavaScript üzerinde Khan Academy veya CodeHS gibi daha ileri düzeyde
-    öğretici materyalleri deneyebilmeleri gerekir.
+    denemelerini öneririz. Lise öğrencilerinin bunlardan birini 30 dakikada bitirebilmeleri
+    gerekir. Ardından JavaScript üzerinde Khan Academy veya CodeHS gibi daha ileri
+    düzeyde öğretici materyalleri deneyebilirler.
   hoc_faq_scratch_q: Hour of Code için Scratch kullanıyorum, öğrencilerimde dizüstü
     bilgisayar yerine iPad varsa ne yapmalıyım?
   hoc_faq_scratch_a: Scratch tabletlerde çalışmaz. Eğer öğrencilerinizin yaşları küçükse,
@@ -822,21 +824,21 @@ tr:
     bir bilgisayar bilimcisine dönüştürmek değildir. Bir saat ancak bilgisayar biliminin
     eğlenceli ve yaratıcı olduğunu, temeli ne olursa olsun her yaşa ve her öğrenciye
     hitap edebileceğini görmeye yeter. Bu kampanyanın başarı ölçütü, öğrencilerin
-    bilgisayar biliminden ne kadar çok şey öğrendiği değildir. Başarı; farklı cinsiyet,
-    etnik ve sosyoekonomik grupların geniş katılımı ve bunun sonucunda tüm sınıf düzeylerinde
-    bilgisayar bilimi derslerinde gördüğümüz kayıt ve katılım artışı olarak yansır.
-    Katılan öğrenci ve öğretmenlerden milyonlarcası bu bir saatin ötesine geçip tüm
-    gün veya bir hafta ya da daha uzun süre öğrenmeye karar verdiler. Sonuç olarak
-    tam bir ders almaya ve hatta üniversitede bölüm olarak seçmeye karar veren öğrenci
-    sayısı da çok oldu. <br/><br/>Öğrencilerin yanı sıra, diğer bir "öğrenci", bilgisayar
-    bilimcisi olarak kolej diplomasına sahip olmamasına rağmen, bir saatlik eğitimden
-    sonra bilgisayar bilimi öğretebilecekleri konusunda güven kazanan eğitimcilerdir.
-    On binlerce öğretmen, Profesyonel Gelişim Eğitimlerine (PD) katılarak ya da devam
-    niteliğindeki çevrimiçi dersleri sunarak bilgisayar bilimine devam etmeye veya
-    her ikisini birden yapmaya karar veriyor. Bu, bilgisayar biliminin öğrencilerin
-    istediği ve öğretmenlerin yapabileceği bir alan olduğunu fark eden okul yöneticileri
-    için de geçerli. <br/><br/>Hepsinden önemlisi, tüm katılımcıların bir saatte öğrendiği
-    şu oluyor: Bunu yapabiliriz.'
+    bilgisayar biliminden ne kadar çok şey öğrendiği değildir. Başarı; farklı cinsiyetlerden,
+    etnik ve sosyoekonomik gruplardan kişilerin geniş katılımı ve bunun sonucunda
+    tüm sınıf düzeylerinde bilgisayar bilimi derslerinde gördüğümüz kayıt ve katılım
+    artışı olarak yansır. Katılan öğrenci ve öğretmenlerden milyonlarcası bu bir saatin
+    ötesine geçip tüm gün veya bir hafta ya da daha uzun süre öğrenmeye karar verdiler.
+    Sonuç olarak tam bir ders almaya ve hatta üniversitede bölüm olarak seçmeye karar
+    veren öğrenci sayısı da çok oldu. <br/><br/>Öğrencilerin yanı sıra, diğer bir
+    "öğrenci", bilgisayar bilimcisi olarak üniversite diplomasına sahip olmamasına
+    rağmen, bir saatlik eğitimden sonra bilgisayar bilimi öğretebilecekleri konusunda
+    güven kazanan eğitimcilerdir. On binlerce öğretmen, Profesyonel Gelişim Eğitimlerine
+    (PD) katılarak ya da devam niteliğindeki çevrimiçi dersleri sunarak bilgisayar
+    bilimine devam etmeye veya her ikisini birden yapmaya karar veriyor. Bu, bilgisayar
+    biliminin öğrencilerin istediği ve öğretmenlerin yapabileceği bir alan olduğunu
+    fark eden okul yöneticileri için de geçerli. <br/><br/>Hepsinden önemlisi, tüm
+    katılımcıların bir saatte öğrendiği şu oluyor: Bunu yapabiliriz.'
   hoc_faq_one_hour_a_markdown: "Hour of Code'un amacı, herhangi birini alıp bir saatte
     uzman bir bilgisayar bilimcisine dönüştürmek değildir. Bir saat ancak bilgisayar
     biliminin eğlenceli ve yaratıcı olduğunu, temeli ne olursa olsun her yaşa ve her

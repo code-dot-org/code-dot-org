@@ -138,6 +138,7 @@ export const lessonType = PropTypes.shape({
   lockable: PropTypes.bool.isRequired,
   lessonNumber: PropTypes.number,
   lesson_plan_html_url: PropTypes.string,
+  lesson_feedback_url: PropTypes.string,
   isFocusArea: PropTypes.bool.isRequired,
   description_student: PropTypes.string,
   description_teacher: PropTypes.string

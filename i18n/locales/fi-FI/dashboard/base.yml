@@ -389,7 +389,6 @@ fi:
     popup:
       progress_for_user: "Käyttäjän %{name} edistyminen"
       progress: 'Sinun edistymisesi'
-      lines: 'Koodirivien yhteismäärä: %{lines}'
       close: 'SULJE'
       mastery: 'Käsitteitä'
       puzzle_map: 'Tasot'
@@ -864,10 +863,13 @@ fi:
         math: 'Matematiikka'
         science: 'Tiede'
         la: 'Kielet'
+        other: "Muut"
       resources:
         kodable: 'Kodable'
+        other: "Muut"
       robotics:
         kodable: 'Kodable'
+        other: "Muut"
       email_opt_in:
         opt_in_yes: 'Kyllä'
         opt_in_no: 'Ei'

@@ -456,7 +456,6 @@ ko:
     popup:
       progress_for_user: "%{name} 의 진도"
       progress: 내 진도
-      lines: 총 %{lines} 라인
       close: CLOSE
       mastery: 개념
       puzzle_map: 단계들
@@ -1186,6 +1185,7 @@ ko:
         music: 음악
         art: 미술
         other: '기타:'
+        na: 해당사항 없음
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1195,7 +1195,8 @@ ko:
         lightbot: 라이트봇
         scratch: 스크래치
         tynker: Tynker
-        other: '기타:'
+        other: 기타
+        na: 해당사항 없음
       robotics:
         grok: 그록 러닝
         kodable: Kodable
@@ -1205,7 +1206,8 @@ ko:
         sphero: 스피로
         raspberry: 라즈베리 파이
         wonder: 원더 워크숍
-        other: '기타:'
+        other: 기타
+        na: 해당사항 없음
       workshop_course:
         csf_af: CS 기초 (과정 A-F)
         csf_express: CS 기초 (프리 익스프레스 또는 익스프레스)

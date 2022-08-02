@@ -1497,7 +1497,8 @@
           "express_maze_debugging9_2019_1": "Seret blok dari kotak alatan ke dalam ruang kerja anda."
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "Klik di sini untuk menambah pakaian pada projek anda."
+          "costumes_tab": "Klik di sini untuk menambah pakaian pada projek anda.",
+          "make_sprite": "Gunakan blok di sini untuk membuat sprite!"
         }
       }
     }

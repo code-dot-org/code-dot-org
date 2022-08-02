@@ -352,7 +352,6 @@ gl:
     popup:
       progress_for_user: "progreso de %{name}'s"
       progress: 'O teu progreso'
-      lines: 'Total de liñas de código: %{lines}'
       close: 'PECHAR'
       mastery: 'Conceptos'
       puzzle_map: 'Etapas'
@@ -701,10 +700,13 @@ gl:
         math: 'Matemáticas'
         science: 'Ciencia'
         la: 'Lingua'
+        other: "Outros"
       resources:
         kodable: 'Kodable'
+        other: "Outros"
       robotics:
         kodable: 'Kodable'
+        other: "Outros"
       email_opt_in:
         opt_in_yes: 'Si'
         opt_in_no: 'Non'

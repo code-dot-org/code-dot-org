@@ -19,7 +19,6 @@ jsconfig.json
 npm-debug.log
 /.dropbox.cache
 /.gdrive_session
-.ruby-version
 /apps/.babel-cache
 /apps/build
 /apps/build-times.log
@@ -64,6 +63,7 @@ npm-debug.log
 /log
 /pegasus/config/newrelic.yml
 /pegasus/.sass-cache
+/pegasus/sites.v3/code.org/public/css/generated
 /rebuild
 /rebuild-apps
 /rebuild-shared

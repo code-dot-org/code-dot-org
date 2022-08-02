@@ -1,40 +1,40 @@
 ---
-title: Panduan Hour of Code untuk Sukarelawan
+title: Panduan Hour of Code untuk Relawan
 layout: wide
 nav: how_to_nav
 ---
 
-# Cara menjadi sukarelawan di sekolah atau di kelas
+# Cara menjadi relawan di sekolah atau di kelas
 
 ### Ribuan guru mencari relawan untuk menginspirasi siswa mereka. Buat perbedaan hari ini!
 
-[<button>Daftar sebagai sukarelawan</button>]({{ urls/volunteer }})
+[<button>Mendaftar sebagai relawan</button>]({{ urls/volunteer }})
 
 * * *
 
 Pemikirian komputasional membantu pengembangan keahlian memecahkan masalah, logika, dan kreativitas. Dan teknologi berhasil merombak setiap industri di planet ini. Siswa di masa ini harus belajar cara menciptakan teknologi, bukan hanya menggunakannya.
 
-Hour of Code adalah pengantar ilmu komputer berdurasi satu jam, dan dirancang untuk mengungkap rahasia "kode", yang menunjukkan bahwa siapa pun dapat mempelajari dasar-dasarnya, dan untuk memperluas partisipasi dalam bidang ilmu komputer. Anda dapat membantu meningkatkan kesadaran tentang gerakan ilmu komputer dan menjadi sukarelawan untuk menginspirasi lebih banyak siswa untuk mencoba ilmu komputer, khususnya remaja putri dan siswa-siswa dari kelompok ras dan etnis yang terpinggirkan.
+Hour of Code adalah pengantar ilmu komputer berdurasi satu jam, dan dirancang untuk mengungkap rahasia "kode", yang menunjukkan bahwa siapa pun dapat mempelajari dasar-dasarnya, dan untuk memperluas partisipasi dalam bidang ilmu komputer. Anda dapat membantu meningkatkan kesadaran tentang gerakan ilmu komputer dan menjadi relawan untuk menginspirasi lebih banyak siswa dalam mencoba ilmu komputer, khususnya remaja putri dan siswa-siswa dari kelompok ras dan etnis yang terpinggirkan.
 
-- [Siapa yang bisa menjadi sukarelawan?](#who-can-volunteer)
+- [Siapa yang bisa menjadi relawan?](#who-can-volunteer)
 - [Mengapa menjadi relawan?](#why-volunteer)
-- [Bagaimana proses pemilihan sukarelawan?](#selection)
-- [Bagaimana jika saya ingin menjadi sukarelawan di sekolah tertentu?](#choose-a-school)
+- [Bagaimana proses pemilihan relawan?](#selection)
+- [Bagaimana jika saya ingin menjadi relawan di sekolah tertentu?](#choose-a-school)
 - [Bagaimana cara mempersiapkannya](#how-to-prepare)
 - [Saat Anda mengadakan acara](#hosting-an-event)
 - [Sebarkan informasi tentang Hour of Code](#promote-hour-of-code)
 - [Cara lainnya untuk mendukung Hour of Code](#support-hour-of-code)
-- [T&J Sukarelawan](#faq)
+- [T&J tentang Relawan](#faq)
 
-Baik menjadi sukarelawan secara virtual, secara langsung, atau dengan perusahaan Anda, upaya Anda dapat memberi dampak besar terhadap cara siswa dalam memandang ilmu komputer dan potensi mereka sendiri. Lihat [toolkit sukarelawan kami jika Anda masih memiliki pertanyaan]({{ localized_files/hoc_volunteer_toolkit }}).
+Baik menjadi relawan secara virtual, secara langsung, atau dengan perusahaan Anda, upaya Anda dapat memberi dampak besar terhadap cara siswa dalam memandang ilmu komputer dan potensi mereka sendiri. Lihat [toolkit relawan kami jika Anda masih memiliki pertanyaan]({{ localized_files/hoc_volunteer_toolkit }}).
 
 * * *
 
 <a id="who-can-volunteer"></a>
 
-## Siapa yang bisa menjadi sukarelawan?
+## Siapa yang bisa menjadi relawan?
 
-Siapa pun yang tertarik dengan pendidikan ilmu komputer dan meningkatkan keragaman dalam teknologi dapat menjadi sukarelawan! Kami ingin melihat partisipasi relawan dari semua latar belakang. Hour of Code menghadirkan berbagai kegiatan untuk segala usia dan tingkat keahlian, jadi Anda tidak harus menjadi ahli pemrograman untuk menjadi sukarelawan!
+Siapa pun yang tertarik dengan pendidikan ilmu komputer dan meningkatkan keragaman dalam teknologi dapat menjadi relawan! Kami ingin melihat partisipasi relawan dari semua latar belakang. Hour of Code menghadirkan berbagai kegiatan untuk segala usia dan tingkat keahlian, jadi Anda tidak harus menjadi ahli pemrograman untuk menjadi relawan!
 
 Anda bisa menjadi pembicara tamu di kelas, atau membantu guru menjalankan acara. [Daftar sekarang](https://code.org/volunteer) untuk menginspirasi siswa agar terus belajar ilmu komputer.
 
@@ -44,29 +44,29 @@ Anda bisa menjadi pembicara tamu di kelas, atau membantu guru menjalankan acara.
 
 ## Mengapa menjadi relawan?
 
-Ilmu komputer adalah bidang yang menentukan di abad ke-21, namun sebagian besar sekolah masih belum mengajarkannya. One Hour of Code (Satu Jam Coding) mungkin merupakan akses paling besar ke ilmu komputer yang diterima oleh siswa ini pada tahun tertentu. Dengan menjadi sukarelawan, Anda dapat semakin mempermudah guru untuk menghadirkan Ilmu Komputer ke dalam kelas mereka.
+Ilmu komputer adalah bidang yang menentukan di abad ke-21, namun sebagian besar sekolah masih belum mengajarkannya. One Hour of Code (Satu Jam Coding) mungkin merupakan akses paling besar ke ilmu komputer yang diterima oleh siswa ini pada tahun tertentu. Dengan menjadi relawan, Anda dapat semakin mempermudah guru untuk menghadirkan Ilmu Komputer ke dalam kelas mereka.
 
 [![](/images/fit-600/Marketing/HoC-2015-ACE-HS--42.jpg)]({{ urls/learn }})
 
-Simak beberapa testimoni dari para sukarelawan kami:
+Simak beberapa testimoni dari para relawan kami:
 
 - "Bagian terbaik dari pengalaman saya adalah bahwa isi kelasnya semuanya wanita dan orang kulit berwarna. Ini menjadi pertanda baik bagi masa depan industri kita untuk berkesempatan untuk menjangkau dan menyemangati anak-anak ini. " 
 - "Senang sekali bisa mendorong remaja putri dalam teknologi. Saya merasa seperti membantu generasi berikutnya di daerah saya. " 
-- "SAYA SENANG melihat betapa senangnya anak-anak itu. Satu hal yang menarik yang dijumpai para guru adalah ada sejumlah siswa yang tidak berprestasi secara akademis namun mampu berpikir seperti seorang pengembang dan membantu orang lain - sehingga memberi mereka tempat untuk merasa percaya diri.” 
+- "SAYA SENANG melihat betapa senangnya anak-anak itu. Satu hal yang menarik yang dijumpai para guru adalah ada sejumlah siswa yang tidak berprestasi secara akademis namun mampu berpikir seperti seorang pemrogram dan membantu orang lain - sehingga memberi mereka tempat untuk merasa percaya diri.” 
 
-[<button>Daftar sebagai sukarelawan</button>]({{ urls/volunteer }})
+[<button>Mendaftar sebagai relawan</button>]({{ urls/volunteer }})
 
 * * *
 
 <a id="selection"></a>
 
-## Bagaimana proses pemilihan sukarelawan?
+## Bagaimana proses pemilihan relawan?
 
-Guru dapat mencari sukarelawan di [peta relawan](http://code.org/volunteer/local) kami. Jika Anda berada di dekat sekolah mereka, guru akan memeriksa profil Anda di peta, jadi cobalah untuk melengkapi info Anda sebanyak mungkin agar Anda berpeluang besar untuk dihubungi oleh guru.
+Guru dapat mencari relawan di [peta relawan](http://code.org/volunteer/local) kami. Jika Anda berada di dekat sekolah mereka, guru akan memeriksa profil Anda di peta, jadi cobalah untuk melengkapi info Anda sebanyak mungkin agar Anda berpeluang besar untuk dihubungi oleh guru.
 
 [![](/images/fit-600/Marketing/2018_HoC-489-resized.jpg)]({{ urls/learn }})
 
-Jika terpilih, guru tersebut akan menghubungi Anda melalui platform sukarelawan (kami tidak akan pernah memberikan alamat email Anda dengan guru tersebut). Bekerja samalah dengan mereka untuk menentukan kontribusi terbaik yang dapat Anda berikan untuk acara mereka, dan apakah Anda akan hadir secara langsung atau menjadi sukarelawan virtual.
+Jika terpilih, guru tersebut akan menghubungi Anda melalui platform relawan (kami tidak akan pernah memberikan alamat email Anda dengan guru tersebut). Bekerjasamalah dengan mereka untuk menentukan kontribusi terbaik yang dapat Anda berikan untuk acara mereka, dan apakah Anda akan hadir secara langsung atau menjadi relawan virtual.
 
 Jika Anda menerima terlalu banyak permintaan dari guru, Anda dapat memperbarui preferensi Anda atau berhenti berlangganan dengan mengklik tautan yang disediakan di bagian bawah email permintaan apa pun dari guru.
 
@@ -74,9 +74,9 @@ Jika Anda menerima terlalu banyak permintaan dari guru, Anda dapat memperbarui p
 
 <a id="choose-a-school"></a>
 
-## Bagaimana jika saya ingin menjadi sukarelawan di sekolah tertentu?
+## Bagaimana jika saya ingin menjadi relawan di sekolah tertentu?
 
-Anda tidak perlu menggunakan peta sukarelawan kami untuk menjadi sukarelawan! Kami justru menyarankan Anda untuk menghubungi guru dan administrator secara langsung jika ada kelas yang ingin Anda masuki.
+Anda tidak harus menggunakan peta relawan kami untuk menjadi relawan! Kami justru menyarankan Anda untuk menghubungi guru dan pengelola sekolah secara langsung jika ada kelas yang ingin Anda masuki.
 
 Cara memulai: - Jika Anda adalah orang tua atau wali, kirim [email ini](https://hourofcode.com/us/promote/resources#help-schools) ke guru anak Anda dengan menawarkan diri untuk membantu mereka menggelar Hour of Code - Jika Anda mempertimbangkan sekolah lain, kunjungi situs web mereka untuk menemukan kontak yang dapat dihubungi seperti kepala sekolah atau wakil kepala sekolah, guru mata pelajaran TI atau ilmu komputer, atau bahkan komite sekolah. Anda juga dapat bermitra dengan organisasi seperti Boys & Girls Clubs of America, Junior Achievement, cabang YMCA, dan lainnya untuk menggelar acara bersama. - Jika Anda tidak dapat menemukan sekolah yang menyelenggarakan Hour of Code, Anda dapat secara sukarela membantu menjalankan acara Anda sendiri dengan perusahaan Anda. Lihat [Panduan untuk Perusahaan](https://hourofcode.com/us/how-to/companies) kami untuk mengetahui selengkapnya dan mendapatkan inspirasi.
 
@@ -92,21 +92,21 @@ Baik menghadiri acara Hour of Code secara jarak jauh atau langsung, pengalaman A
 
 ### Bertemu dengan Penyelenggara
 
-Jika Anda menjadi sukarelawan di kelas, diskusikan persiapan ini sebelumnya dengan guru tersebut:
+Jika Anda menjadi relawan di kelas, diskusikan persiapan ini sebelumnya dengan guru tersebut:
 
 - Tugas Anda di acara tersebut. Jika Anda bekerja di bidang teknologi, Anda mungkin akan diminta untuk menceritakan pengalaman atau kisah pribadi Anda: Bagaimana Anda mendapatkan karier di bidang teknologi? Mengapa ilmu komputer penting bagi Anda? Apa saja yang Anda lakukan dalam pekerjaan Anda dan apa hubungannya dengan teknologi? 
-- Jika Anda akan menjadi sukarelawan secara langsung, pastikan Anda berdua memahami pedoman kesehatan dan keselamatan lokal dan sekolah. Anda mungkin harus datang lebih awal jika prosedur mereka mengharuskannya. 
-- Jika Anda akan menjadi sukarelawan secara virtual atau secara langsung, karena ini dapat menentukan di jam berapa Anda harus hadir dan dalam kapasitas seperti apa. 
-- Jika Anda menjadi sukarelawan secara virtual, diskusikan bersama guru untuk menentukan platform konferensi video terbaik yang akan digunakan dan lakukan uji coba acara tersebut bersama-sama. 
+- Jika Anda akan menjadi relawan secara langsung, pastikan Anda berdua memahami pedoman kesehatan dan keselamatan lokal dan sekolah. Anda mungkin harus datang lebih awal jika prosedur mereka mengharuskannya. 
+- Jika Anda akan menjadi relawan secara virtual atau secara langsung, karena ini dapat menentukan di jam berapa Anda harus hadir dan dalam kapasitas seperti apa. 
+- Jika Anda menjadi relawan secara virtual, diskusikan bersama guru untuk menentukan platform konferensi video terbaik yang akan digunakan dan lakukan uji coba acara tersebut bersama-sama. 
 - Apabila guru telah menentukan kegiatan Hour of Code untuk acara tersebut, pastikan agar Anda dapat [mengeksplorasinya](https://hourofcode.com/us/learn) terlebih dahulu. 
 
 ### Pikirkan peserta Anda
 
-- Pertimbangkan siswa yang akan Anda ajak bicara dan apa yang mungkin bersinggungan dengan mereka. Sebagai sukarelawan, Anda dapat membantu mereka menyadari bahwa komputasi ada di mana-mana dan mereka juga bisa menjadi ilmuwan komputer. Pertimbangkan usia, latar belakang, dan identitas gender mereka dan bersiaplah dengan topik yang mungkin menarik minat mereka. Berikut panduan tambahan tentang cara menginspirasi [remaja putri](http://code.org/girls) untuk berpartisipasi. 
+- Pertimbangkan siswa yang akan Anda ajak bicara dan apa yang mungkin bersinggungan dengan mereka. Sebagai relawan, Anda dapat membantu mereka menyadari bahwa komputasi ada di mana-mana dan mereka juga bisa menjadi ilmuwan komputer. Pertimbangkan usia, latar belakang, dan identitas gender mereka dan bersiaplah dengan topik yang mungkin menarik minat mereka. Berikut panduan tambahan tentang cara menginspirasi [remaja putri](http://code.org/girls) untuk berpartisipasi. 
 - Buat siswa-siswa senang! Bekerjasamalah dengan guru untuk memilih [video inspiratif](https://hourofcode.com/us/promote/resources#videos) yang dapat membantu memfokuskan kelas dan membuat mereka bersemangat untuk melakukan Hour of Code. 
-- Jika Anda seorang sukarelawan virtual, pertimbangkan untuk membuat beberapa slide presentasi agar siswa tetap aktif.
+- Jika Anda seorang relawan virtual, pertimbangkan untuk membuat beberapa slide presentasi agar siswa tetap aktif.
 
-Butuh bahan lainnya? [Lihat kiat lain berikut](https://code.org/files/CSTT_Volunteers.pdf).
+Butuh materi lainnya? [Lihat kiat lain berikut](https://code.org/files/CSTT_Volunteers.pdf).
 
 * * *
 
@@ -130,14 +130,14 @@ Diskusikan dengan sekolah atau guru untuk membahas apa yang paling cocok. Kami s
 
 |Waktu | Rincian Agenda | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 menit | Menampilkan [video inspiratif](https://hourofcode.com/us/promote/resources#videos)|  
 |5-10 menit | Perkenalkan diri Anda dan kenali siswa lebih jauh: Di mana kamu bekerja, apa yang kamu lakukan, dan apa yang paling kamu sukai dari pekerjaanmu? Apa atau siapa yang menginspirasimu? Bagaimana kamu tertarik dengan ilmu komputer? Apakah kamu memiliki mentor? Ajukan pertanyaan kepada siswa dan berikan waktu untuk tanya jawab. |  
-|30-60 menit | Buat Kode! Jika acara Anda diadakan secara tatap muka, inilah saatnya untuk menjawab pertanyaan dan membimbing siswa melalui teka-teki yang sulit. Cobalah untuk tidak memberi solusi secara langsung kepada siswa. Sebaliknya, cobalah mengajukan pertanyaan sehingga mereka dapat menjawab sendiri apa yang salah, dan dorong siswa untuk bertanya satu sama lain jika memiliki pertanyaan. Jika Anda menjadi sukarelawan secara virtual, diskusikan dengan guru tentang pendekatan terbaik yang dapat diambil. Mungkin lebih cocok jika kembali pada akhir sesi untuk melihat kemajuan yang telah dicapai oleh siswa. | | |1-3 menit | Berterimakasih kepada semua dan berikan kata-kata perpisahan yang menginspirasi. Bagikan cendera mata dari perusahaan Anda ([stiker](#celebrate) juga boleh)! | | <br />
+|30-60 menit | Buat Kode! Jika acara Anda diadakan secara tatap muka, inilah saatnya untuk menjawab pertanyaan dan membimbing siswa melalui puzzle yang sulit. Cobalah untuk tidak memberi solusi secara langsung kepada siswa. Sebaliknya, cobalah mengajukan pertanyaan sehingga mereka dapat menjawab sendiri apa yang salah, dan dorong siswa untuk bertanya satu sama lain jika memiliki pertanyaan. Jika Anda menjadi relawan secara virtual, diskusikan dengan guru tentang pendekatan terbaik yang dapat diambil. Mungkin lebih cocok jika kembali pada akhir sesi untuk melihat kemajuan yang telah dicapai oleh siswa. | | |1-3 menit | Berterimakasih kepada semua dan berikan kata-kata perpisahan yang menginspirasi. Bagikan cendera mata dari perusahaan Anda ([stiker](#celebrate) juga boleh)! | | <br />
 
 #### Ide lain yang bisa ditambahkan ke acara Anda
 
 - Jelaskan dampak teknologi terhadap kehidupan kita, dengan contoh yang akan diperhatikan oleh siswa dari semua latar belakang - bicarakan tentang teknologi yang menyelamatkan nyawa, membantu orang, menghubungkan orang. 
 - Jika Anda adalah perusahaan teknologi, demonstrasikan produk inovatif dan seru yang sedang dikembangkan oleh perusahaan Anda. Jika Anda bukan perusahaan teknologi, ceritakan cara perusahaan Anda dalam menggunakan teknologi untuk memecahkan masalah dan mencapai tujuan.
 - Undang software engineer dari perusahaan Anda untuk berbicara mengenai alasan mereka memutuskan untuk belajar ilmu komputer dan proyek-proyek yang sedang mereka kerjakan.
-- Jika Anda memiliki beberapa staf yang akan memfasilitasi acara atau menjadi sukarelawan di sekolah lokal, pertimbangkan untuk memesan [kaos khusus](http://blog.code.org/post/132608499493/hour-of-code-shirts-and -more) untuk mereka.
+- Jika Anda memiliki beberapa staf yang akan memfasilitasi acara atau menjadi relawan di sekolah lokal, pertimbangkan untuk memesan [kaos khusus](http://blog.code.org/post/132608499493/hour-of-code-shirts-and -more) untuk mereka.
 
 ### 3. Rencanakan kebutuhan teknologi Anda
 
@@ -240,9 +240,9 @@ Untuk saran lebih lanjut tentang cara mendukung Code.org dan Hour of Code, kunju
 
 <a id="faq"></a>
 
-## T&J tentang Menjadi Sukarelawan
+## T&J tentang Menjadi Relawan
 
-### Saya belum dihubungi oleh seorang guru. Bagaimana cara agar saya tetap bisa menjadi sukarelawan?
+### Saya belum dihubungi oleh seorang guru. Bagaimana cara agar saya tetap bisa menjadi relawan?
 
 Cobalah mencari sekolah lokal dan hubungi kepala sekolah / guru / bagian umum dan tanyakan cara untuk membantu.  
 
@@ -257,12 +257,12 @@ Kunjungan kelas secara langsung biasanya berlangsung selama 60-90 menit, sementa
 Code.org dan mitra kami merancang semua kegiatan Hour of Code untuk melibatkan siswa dari semua tingkatan kelas (K-12) dengan berbagai latar belakang. Semua orang - bahkan orang dewasa - bisa bersenang-senang!  
 
 
-### Bagaimana cara saya dipilih sebagai sukarelawan teknis atau pembicara tamu?
+### Bagaimana cara agar saya dipilih sebagai relawan teknis atau pembicara tamu?
 
-Guru akan mencari relawan pada [peta relawan ](https://code.org/volunteer/local) kami. Cobalah untuk membuat profil Anda selengkap mungkin agar peluang Anda untuk dipilih oleh guru lebih besar. Jika Anda memiliki preferensi cara untuk menjadi sukarelawan, misalnya sebagai pembicara tamu atau sebagai timteknis, harap nyatakan hal tersebut dalam deskripsi profil Anda.   
-
-
-Jika terpilih, guru tersebut akan menghubungi Anda melalui platform sukarelawan (kami tidak akan pernah memberikan alamat email Anda kepada guru tersebut). Jika Anda menerima terlalu banyak permintaan dari guru, Anda dapat memperbarui preferensi Anda dengan mengklik tautan untuk mengedit informasi Anda atau berhenti berlangganan yang disediakan di bagian bawah email apa pun dari guru.   
+Guru akan mencari relawan pada [peta relawan ](https://code.org/volunteer/local) kami. Cobalah untuk membuat profil Anda selengkap mungkin agar peluang Anda untuk dipilih oleh guru lebih besar. Jika Anda memiliki preferensi cara untuk menjadi relawan, misalnya sebagai pembicara tamu atau sebagai tim teknis, harap sebutkan hal tersebut dalam deskripsi profil Anda.   
 
 
-[<button>Daftar sebagai sukarelawan</button>]({{ urls/volunteer }})
+Jika terpilih, guru tersebut akan menghubungi Anda melalui platform relawan (kami tidak akan pernah memberikan alamat email Anda kepada guru tersebut). Jika Anda menerima terlalu banyak permintaan dari guru, Anda dapat memperbarui preferensi Anda dengan mengklik tautan untuk mengedit informasi Anda atau berhenti berlangganan yang disediakan di bagian bawah email apa pun dari guru.   
+
+
+[<button>Mendaftar sebagai relawan</button>]({{ urls/volunteer }})

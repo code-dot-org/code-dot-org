@@ -142,16 +142,22 @@ ja:
       Designing for Accessibility: アクセシビリティのための設計
       Digital Sharing - Unplugged Activity: "「デジタルシェアリング」 - アンプラグドアクティビティ"
       Dogger Example: Dogger Example
+      Draw Your Background: 背景を描画
+      Draw a Background: 背景を描画
       Drawing: 'グラフィック
 
 '
+      Driver Alert System: ドライバー警告システム
       End of Course Projects: 付録
       Escape Room Example: "「部屋から抜け出そう」の例"
       Events: イベント
       Events and Linking Screens: イベントおよびリンク画面
       Events and Properties: イベントとプロパティ
       Example: 例
+      Example Animated Scene: アニメーションシーンの例
       Example App Types: アプリタイプの例
+      'Example App: Zoo Classification': 'アプリケーションの例: 動物園の動物分類'
+      Example Apps: アプリ例
       Example Projects: プロジェクトの例
       Example projects: プロジェクトの例
       Exemplar Personal Websites: 個人ウェブサイトの例
@@ -167,6 +173,8 @@ ja:
       Exploring CS in Entertainment: エンターテイメントにおけるCSを探究する
       Exploring more CSS: さらにCSSを探究する
       Extra: 追加
+      Extra Challenge: 追加の課題
+      'Extra Challenge: Sound Board': '追加の課題: Sound Board'
       Final Room Escape App: 最終的な「部屋から抜け出そう」のアプリ
       Find the Wizard: ウィザードを見つけましょう
       Finish a Screen: 画面を閉じる
@@ -185,6 +193,7 @@ ja:
       Free Play: じゆうあそび
       'Free Play: Make a Scene': じゆうあそび：シーンを作る
       'Free Play: Make an Interactive Scene': じゆうあそび：インタラクティブなシーンを作る
+      Fruit and Veggie Explorer: フルーツと野菜のエクスプローラ
       Functions: 関数(かんすう)
       Functions with Parameters: パラメーター付き関数
       Geometric Sun: Geometric Sun
@@ -192,6 +201,7 @@ ja:
       Getters and Setters: ゲッターとセッター
       Getting Properties: プロパティの取得
       Graph Paper Programming - Unplugged Activity: "「グラフ用紙プログラミング」- アンプラグドアクティビティ"
+      Green Glass Door: 緑のガラスドア
       Guess The Number: 数を推測する
       Headings: 見出し
       Hello World: ハローワールド
@@ -199,20 +209,30 @@ ja:
       How to Make a Sprite: スプライトの作り方
       Ice Age Loops: アイスエイジのループ
       Images and Sounds: 画像と音
+      Import Your Model: モデルをインポート
+      Import a Model: モデルをインポート
+      Importing Your Model: モデルをインポート中
+      Improved Shoe Recommender: 改善された靴リコメンダー
+      Incorporate Feedback: フィードバックを取り入れる
       Innovation Research: イノベーション研究
       Input Examples: 例を入力する
       Input with If-Else: "「If/Else」を入力する"
       Inspiration!: インスピレーション！
       InspirationalArtwork: インスピレーションあふれるアートワーク
+      Intro to Flyer Game: フライヤーゲーム入門
       Intro to For Loops: Forループ入門
+      Intro to Side Scrollers: サイドスクローラ入門
       Intro to Sprites: スプライト入門
       Intro to Variables: 変数入門
       Introducing Sprite Lab: スプライトラボの紹介
       Introduction to Arrays: Introduction to Arrays
+      Isaac's Survey Data: Isaacの調査データ
       Iteration and Parameters: イテレーションとパラメータ
       Keep On Dancing!: ダンスを続けましょう！
       Keeping Data Secret: データの秘密を守る
       Keyboard Input: キーボード入力
+      Kim's Survey: Kimの調査
+      Kim's Survey Data: Kimの調査データ
       LED Apps: LEDアプリ
       Layout with CSS: CSSを使用したレイアウト
       Learning from Simulations: シミュレーションから学習する
@@ -227,8 +247,12 @@ ja:
       Linking Pages: ページのリンク
       Linking Screens: 画面のリンク
       Lists: リスト
+      Looking for Patterns: パターンを探す
+      Looping: ループ中
       Loops with the Artist: アーティストで学ぶループ
+      Make Your Sprites: あなたのSpritesを作成
       Make a Prediction: 予測する
+      Make an Interactive Card: インタラクティブなカードを作る
       Make it Interactive: インタラクティブにする
       Making Scenes: シーンを作る
       Making Songs: 歌を作る
@@ -236,6 +260,8 @@ ja:
       Making an Interactive Card: インタラクティブなカードを作る
       'Maze Intro: Programming with Blocks': 迷路イントロ：ブロックを使うプログラミング
       Measures: 小節
+      Medical Dataset Model Cards: 医療用データセットモデルカード
+      Medical Priority App: 医療優先順位アプリ
       'Minecraft: Hero''s Journey': 'マインクラフト: ヒーローの旅'
       'Mini-Project: About Me': スプライトラボについて
       'Mini-Project: Alien Dance Moves': " ミニプロジェクト：エイリアンダンスの動き　\n"
@@ -279,13 +305,19 @@ ja:
       'Overview: onEvent': イベントの概要
       'Overview: setPosition': 位置設定の概要
       Pair Programming: ペアプログラミング
+      Pet Recommender: ペットリコメンダー
       Picturing Data: データで予測
+      Pizza Party Data: ピザパーティデータ
+      Pizza Recommendations: ピザのおすすめ
       Plan Your Project: プロジェクトの計画
+      Plan Your Scene: あなたのシーンを計画
       Planning: 計画
       Platform Jumper - Background and Variables: プラットフォームジャンパー - 背景（はいけい）と変数（へんすう）
       Platform Jumper - Items: プラットフォームジャンパー - アイテム
       Platform Jumper - Platforms: プラットフォームジャンパー - プラットフォーム
       Platform Jumper - Player: プラットフォームジャンパー - プレイヤー
+      Platform Jumper Review: プラットフォームジャンパーレビュー
+      Player Controls: プレーヤーコントロール
       Playing Notes: 音符で遊ぶ
       Playing with Notes: 音符で遊ぶ
       Post-Course Survey Instructions: コース後アンケートの説明
@@ -306,8 +338,14 @@ ja:
       Properties: プロパティ
       Publishing Your Website: ウェブサイトの公開
       Quarter Notes: 四分音符
+      Quick Check: クイックチェック
       RGB Exploration: RGB（赤、緑、青）の探究
+      Raspado Recommender: ラスパ―ド酒リコメンダー
       Reading Sensors: 読み取りセンサー
+      Recognizing Expressions: 式を認識中
+      Recognizing Fish: 魚を認識中
+      Recognizing Fish Features: 魚の特徴を認識中
+      Recognizing Shapes: 形状を認識中
       Reflection: 復習
       Relay Programming - Unplugged Activity: "「リレープログラミング」 - アンプラグドアクティビティ"
       Repeat Blocks: 繰り返しブロック
@@ -318,10 +356,22 @@ ja:
       Representing Images: 画像の表現
       Responding to User Input: ユーザー情報に返答
       Review: 確認する
+      Review Your Animated Scene: アニメ化したシーンのレビュー
+      Review Your App: アプリをレビュー
+      Review Your Game: ゲームをレビュー
+      Review Your Page: ページをレビュー
+      Review Your Scene: シーンをレビュー
+      'Review: CSS': 'レビュー: CSS'
+      'Review: HTML': 'レビュー: HTML'
       Revise Artist Project: アーティストの復習
       Revise Sprite Lab Project: スプライト ラボの復習
       Robot Doodle: Robot Doodle
       Run a simulation: シミュレーションの実行
+      Safari App: Safariアプリ
+      Safari Model: Safariモデル
+      Same Game: 同じゲーム
+      Sample Apps for Good: 最終盤サンプルアプリ
+      Sample Games: サンプルゲーム
       Sample Personal Web Pages: 個人用ウェブページ例
       Sample Personal Websites: 個人用ウェブサイト例
       Sample Programs: サンプルプログラム

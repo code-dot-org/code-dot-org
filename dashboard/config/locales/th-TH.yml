@@ -329,7 +329,6 @@ th:
     popup:
       progress_for_user: ความคืบหน้าของ %{name}
       progress: ความคืบหน้าของคุณ
-      lines: 'จำนวนบรรทัดของโค้ด: %{lines}'
       close: ปิด
       mastery: แนวคิด
       puzzle_map: ขั้นตอน
@@ -686,10 +685,13 @@ th:
         math: คณิตศาสตร์
         science: วิทยาศาสตร์
         la: ศิลปะการใช้ภาษา
+        other: อาชีพอื่น ๆ
       resources:
         kodable: Kodable
+        other: อาชีพอื่น ๆ
       robotics:
         kodable: Kodable
+        other: อาชีพอื่น ๆ
       workshop_course:
         csf_express: CS พื้นฐาน (Pre-Express หรือ Express)
       email_opt_in:

@@ -481,7 +481,6 @@ bg:
     popup:
       progress_for_user: на %{name} в прогрес
       progress: Вашият напредък
-      lines: 'Общо реда код: %{lines}'
       close: ЗАТВОРИ
       mastery: Концепции
       puzzle_map: Етапи
@@ -1285,7 +1284,7 @@ bg:
         lightbot: Lightbot
         scratch: Scratch
         tynker: Tynker
-        other: 'Друго:'
+        other: Друго
       robotics:
         kodable: Kodable
         lego: LEGO Education
@@ -1293,7 +1292,7 @@ bg:
         ozobot: Ozobot
         sphero: Sphero
         raspberry: Raspberry Pi
-        other: 'Друго:'
+        other: Друго
       workshop_course:
         csp: '"15-" 16 CS принципи'
       email_opt_in:

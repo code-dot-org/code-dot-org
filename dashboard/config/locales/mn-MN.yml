@@ -449,7 +449,6 @@ mn:
     popup:
       progress_for_user: "%{name}-н ахиц дэвшил"
       progress: Таны ахиц дэвшил
-      lines: 'Кодын нийт мөр: %{lines}'
       close: ХААХ
       mastery: Үзэл баримтлал
       puzzle_map: Үеүд
@@ -1255,7 +1254,7 @@ mn:
         kodable: Kodable
         scratch: Ноорог
         tynker: Tynker
-        other: 'Бусад:'
+        other: Бусад
       robotics:
         grok: Grok сурах
         kodable: Kodable
@@ -1265,7 +1264,7 @@ mn:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Гайхалтай семинар
-        other: 'Бусад:'
+        other: Бусад
       workshop_course:
         csf_af: КШУ-ны үндэс (А-F хичээл)
         csf_express: КШУ-ны үндэс (шуурхай сургалтын өмнөх ба шуурхай сургалт)

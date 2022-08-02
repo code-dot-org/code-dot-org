@@ -455,8 +455,22 @@ hu:
         title: Gyerünk, gyerünk!
       courseB_unplugged_CnC_2018:
         title: Remek dolog tisztességesen alkotni és játszani
+        desc: Ezt a leckét a Copyright and Creativity (Szerzői jog és kreativitás)
+          csapata adta kölcsön a Computer Science Fundamentals (Számítástechnikai
+          alapismeretek) számára, azzal a céllal, hogy a lecke segítségével a diákok
+          megértsék a megosztás és az inspirálás kreatív folyamatát. További cél a
+          diákok bátorítása a kreatív kifejezésmód használatára, és hogy megértsék
+          a kreatív munkához tisztességesen kell viszonyulni.
       courseE_unplugged_CnC_2018:
         title: Digitális megosztás
+        desc: Ezt a leckét a Copyright and Creativity (Szerzői jog és kreativitás)
+          csapata adta kölcsön az Computer Science Fundamentals (Számítástechnikai
+          alapismeretek) számára, azzal a célla, hogy a lecke segítségével a diákok
+          megértsék, miért fontos tiszteletben tartani a tulajdonjogot és a szerzői
+          jogokat, és hogy milyen feladatok és előnyök járnak ezekkel együtt, különösen
+          digitális környezetben. A diákokat arra kell bátorítani, hogy tartsák tiszteletben
+          a művészek jogait, ami fontos része annak, hogy etikus digitális polgárként
+          tudjanak viselkedni.
       RelayProgramming_2018:
         title: Váltó programozás
         desc: Ez a tevékenység egy rövid leckével kezdődik a hibakeresésről és a kitartásról,
@@ -513,6 +527,14 @@ hu:
         desc: 'hiányzó fordítás: en-US.data.unplugged.SongwritingParameters_2018.desc'
       courseE_unplugged_CnC_2019:
         title: Digitális megosztás
+        desc: Ezt a leckét a Copyright and Creativity (Szerzői jog és kreativitás)
+          csapata adta kölcsön az Computer Science Fundamentals (Számítástechnikai
+          alapismeretek) számára, azzal a célla, hogy a lecke segítségével a diákok
+          megértsék, miért fontos tiszteletben tartani a tulajdonjogot és a szerzői
+          jogokat, és hogy milyen feladatok és előnyök járnak ezekkel együtt, különösen
+          digitális környezetben. A diákokat arra kell bátorítani, hogy tartsák tiszteletben
+          a művészek jogait, ami fontos része annak, hogy etikus digitális polgárként
+          tudjanak viselkedni.
       Internet_2019:
         title: 'hiányzó fordítás: en-US.data.unplugged.Internet_2018.title'
         desc: 'hiányzó fordítás: en-US.data.unplugged.Internet_2018.desc'
@@ -568,6 +590,12 @@ hu:
           online az digitális lábnyomot, nyomot hagy, ami az következményekkel járhat.
       courseB_unplugged_CnC_2019:
         title: Remek dolog tisztességesen alkotni és játszani
+        desc: Ezt a leckét a Copyright and Creativity (Szerzői jog és kreativitás)
+          csapata adta kölcsön a Computer Science Fundamentals (Számítástechnikai
+          alapismeretek) számára, azzal a céllal, hogy a lecke segítségével a diákok
+          megértsék a megosztás és az inspirálás kreatív folyamatát. További cél a
+          diákok bátorítása a kreatív kifejezésmód használatára, és hogy megértsék
+          a kreatív munkához tisztességesen kell viszonyulni.
       GraphingData_2019:
         title: Az adatok leképezése
         desc: Ebben a leckében a hallgatók Play Lab projektből vagy a valóságból gyűjtenek

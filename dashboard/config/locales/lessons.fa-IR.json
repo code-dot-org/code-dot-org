@@ -196,6 +196,9 @@
           "purpose": "",
           "student_overview": ""
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "ساعت کد نویسی سال 2013"
+        },
         "dance-2019/Dance Party": {
           "name": "",
           "overview": "",
@@ -210,7 +213,175 @@
           "purpose": "",
           "student_overview": ""
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": ""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": ""
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": ""
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "حلقه‌ها"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "رویدادها"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "شرطی ها"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": ""
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "توابع"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "متغیرها"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "حلقه های \"برای\""
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": ""
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": ""
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": ""
+        },
+        "vigenere/Vigenere": {
+          "name": ""
+        },
         "poetry-hoc3/lesson-1": {
+          "name": ""
+        },
+        "applab-2hour/Digital Design": {
+          "name": ""
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": ""
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": ""
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": ""
+        },
+        "K5-OnlinePD/Getting Started": {
+          "name": ""
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "مقدمات علم کامپیوتر"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": ""
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": ""
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": ""
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": ""
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": ""
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": ""
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": ""
+        },
+        "K5-OnlinePD/Planning": {
+          "name": ""
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": ""
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": ""
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": ""
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": ""
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": ""
+        },
+        "netsim/Broadcasting messages": {
+          "name": ""
+        },
+        "netsim/Routers and addresses": {
+          "name": ""
+        },
+        "netsim/Packets and Reliability": {
+          "name": ""
+        },
+        "netsim/Manual DNS": {
+          "name": ""
+        },
+        "netsim/Automatic DNS node": {
+          "name": ""
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": ""
+        },
+        "odometer/Odometer Widget": {
+          "name": ""
+        },
+        "applab-1hour/Room Escape": {
+          "name": ""
+        },
+        "gamelab/Start and End Screens": {
+          "name": ""
+        },
+        "gamelab/Start and End Screens2": {
+          "name": ""
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": ""
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "مقدمات علم کامپیوتر"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": ""
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": ""
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": ""
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": ""
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": ""
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": ""
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": ""
+        },
+        "kodea-pd-2021/Planning": {
+          "name": ""
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": ""
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": ""
+        },
+        "frequency_analysis/Frequency Analysis": {
           "name": ""
         },
         "courseb-2018/Move It, Move It": {
@@ -2493,6 +2664,27 @@
         "csd4-2017/Project - App Presentation": {
           "name": ""
         },
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": ""
+        },
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": ""
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": ""
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": ""
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": ""
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": ""
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": ""
+        },
         "course4/Unplugged: Tangrams": {
           "name": "بدون دستگاه: تنگرام"
         },
@@ -2558,6 +2750,66 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "چالش شدید - جامع"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "آشنایی با علوم کامپیوتر"
+        },
+        "20-hour/The Maze": {
+          "name": "مارپیچ"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "تفکر محاسباتی"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "برنامه نویسی روی کاغذ رسم شطرنجی"
+        },
+        "20-hour/The Artist": {
+          "name": "هنرمند"
+        },
+        "20-hour/Algorithms": {
+          "name": "الگوریتم ها"
+        },
+        "20-hour/The Artist 2": {
+          "name": "هنرمند 2"
+        },
+        "20-hour/Functions": {
+          "name": "توابع"
+        },
+        "20-hour/The Farmer": {
+          "name": "کشاورز"
+        },
+        "20-hour/Conditionals": {
+          "name": "شرطی ها"
+        },
+        "20-hour/The Artist 3": {
+          "name": "هنرمند 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "آهنگ سازی"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "کشاورز 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "انتزاع"
+        },
+        "20-hour/The Artist 4": {
+          "name": "هنرمند 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "برنامه نویسی دست به دست"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "کشاورز 3"
+        },
+        "20-hour/The Internet": {
+          "name": "اینترنت"
+        },
+        "20-hour/The Artist 5": {
+          "name": "هنرمند 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "خلاصه"
         },
         "course2/Graph Paper Programming": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی"
@@ -2739,6 +2991,141 @@
           "preparation": "",
           "purpose": "",
           "student_overview": ""
+        },
+        "csd-post-survey/CSD post-course survey": {
+          "name": ""
+        },
+        "allthethings/Jigsaw": {
+          "name": "جورچین"
+        },
+        "allthethings/Maze": {
+          "name": "پیچ و خم"
+        },
+        "allthethings/Artist": {
+          "name": "هنرمند"
+        },
+        "allthethings/Bee": {
+          "name": "زنبور عسل"
+        },
+        "allthethings/PlayLab": {
+          "name": ""
+        },
+        "allthethings/Farmer": {
+          "name": "کشاورز"
+        },
+        "allthethings/Flappy": {
+          "name": "فلاپی"
+        },
+        "allthethings/Bounce": {
+          "name": "پریدن"
+        },
+        "allthethings/Multi": {
+          "name": "چند"
+        },
+        "allthethings/Multi2": {
+          "name": ""
+        },
+        "allthethings/Match": {
+          "name": "مسابقه"
+        },
+        "allthethings/TextMatch": {
+          "name": ""
+        },
+        "allthethings/CSinA": {
+          "name": ""
+        },
+        "allthethings/Netsim": {
+          "name": ""
+        },
+        "allthethings/Odometer": {
+          "name": ""
+        },
+        "allthethings/Text Compression": {
+          "name": ""
+        },
+        "allthethings/Pixelation": {
+          "name": ""
+        },
+        "allthethings/AppLab": {
+          "name": ""
+        },
+        "allthethings/Gamelab": {
+          "name": ""
+        },
+        "allthethings/Online PD": {
+          "name": ""
+        },
+        "allthethings/Markdown Details": {
+          "name": ""
+        },
+        "allthethings/Studio": {
+          "name": "استودیو"
+        },
+        "allthethings/Multi page assessment": {
+          "name": ""
+        },
+        "allthethings/Star wars": {
+          "name": ""
+        },
+        "allthethings/Minecraft": {
+          "name": "ماینکرفت"
+        },
+        "allthethings/Rich long assessment": {
+          "name": ""
+        },
+        "allthethings/Free Response": {
+          "name": ""
+        },
+        "allthethings/Sample PLC Assessment": {
+          "name": ""
+        },
+        "allthethings/Swapped Levels": {
+          "name": ""
+        },
+        "allthethings/Anonymous student survey": {
+          "name": ""
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": ""
+        },
+        "allthethings/Web Lab": {
+          "name": ""
+        },
+        "allthethings/Single page assessment": {
+          "name": ""
+        },
+        "allthethings/Standalone video": {
+          "name": ""
+        },
+        "allthethings/Curriculum Reference": {
+          "name": ""
+        },
+        "allthethings/Sprite Lab": {
+          "name": ""
+        },
+        "allthethings/Dance Lab": {
+          "name": ""
+        },
+        "allthethings/Mini Rubric": {
+          "name": ""
+        },
+        "allthethings/Externals Optionally Displayed as Unplugged": {
+          "name": ""
+        },
+        "allthethings/Bubble Choice": {
+          "name": ""
+        },
+        "allthethings/Contained Levels": {
+          "name": ""
+        },
+        "allthethings/ML Fish": {
+          "name": ""
+        },
+        "allthethings/AI Lab": {
+          "name": ""
+        },
+        "allthethings/Java Lab": {
+          "name": ""
         },
         "coursef-2021/lesson-6": {
           "name": "",

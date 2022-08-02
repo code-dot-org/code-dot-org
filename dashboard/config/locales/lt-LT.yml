@@ -290,7 +290,6 @@ lt:
     popup:
       progress_for_user: "%{name} pažanga"
       progress: Jūsų pažanga
-      lines: 'Iš viso kodo eilučių: %{lines}'
       close: UŽDARYTI
       mastery: Laimėjimai
       puzzle_map: Etapai
@@ -744,8 +743,12 @@ lt:
         math: Matematika
         science: Gamtos mokslai
         la: Literatūra
+        other: Kita
       resources:
         khan: Khan Akademija
+        other: Kita
+      robotics:
+        other: Kita
       email_opt_in:
         opt_in_yes: Taip
         opt_in_no: Ne
