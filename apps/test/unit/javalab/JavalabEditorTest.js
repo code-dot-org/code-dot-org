@@ -28,14 +28,12 @@ import javalab, {
   setOrderedTabKeys,
   setFileMetadata,
   setActiveTabKey,
-  setAllEditorMetadata
-} from '@cdo/apps/javalab/javalabRedux';
-import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
-import {
+  setAllEditorMetadata,
   setAllSourcesAndFileMetadata,
   setAllValidation,
   setBackpackEnabled
-} from '../../../src/javalab/javalabRedux';
+} from '@cdo/apps/javalab/javalabRedux';
+import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import {allowConsoleWarnings} from '../../util/throwOnConsole';
@@ -537,23 +535,21 @@ describe('Java Lab Editor Test', () => {
             'Validation.java': {text: '', isVisible: false, isValidation: true}
           })
         );
-
-        // still need to fix
+        store.dispatch(setAllEditorMetadata({}, [], null, 0));
         javalabEditor.setState({
           showMenu: false,
           contextTarget: null,
-          openDialog: 'createFile',
-          orderedTabKeys: [],
-          lastTabKeyIndex: 0,
-          fileMetadata: {}
+          openDialog: 'createFile'
         });
+
         javalabEditor.onCreateFile('Validation.java');
+
         // after create with existing filename, dialog should not close and
         // error message should be populated
         expect(javalabEditor.state.newFileError).to.exist;
         expect(javalabEditor.state.openDialog).to.equal('createFile');
-        expect(javalabEditor.state.orderedTabKeys).to.deep.equal([]);
-        expect(javalabEditor.state.fileMetadata).to.deep.equal({});
+        expect(javalabEditor.props.orderedTabKeys).to.deep.equal([]);
+        expect(javalabEditor.props.fileMetadata).to.deep.equal({});
       });
 
       it('displays error message if file name is blank', () => {
