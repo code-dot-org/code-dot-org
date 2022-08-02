@@ -167,18 +167,15 @@ class Pd::Enrollment < ApplicationRecord
         (enrollment.workshop.workshop_ending_date >= Date.new(2020, 9, 1) && enrollment.workshop.csf_201?) || enrollment.workshop.csf_district?
     end
 
-    # Admin and Counselor still use Pegasus form
-    pegasus_enrollments, _ = other_enrollments.partition do |enrollment|
+    # Admin and Counselor now use foorm for enrollments.
+    admin_counselor_enrollments = other_enrollments.select do |enrollment|
       enrollment.workshop.course == COURSE_ADMIN || enrollment.workshop.course == COURSE_COUNSELOR
     end
 
     # We do not want to check survey completion for the following workshop types: Legacy (non-Foorm) summer,
     # CSF Intro, and CSF Deep Dive (surveys would be too out of date), teachercon (deprecated), or any academic year workshop
     # (there are multiple post-survey options, therefore the facilitators must provide a link themselves).
-    (
-      filter_for_pegasus_survey_completion(pegasus_enrollments, select_completed) +
-      filter_for_foorm_survey_completion(foorm_enrollments, select_completed)
-    )
+    filter_for_foorm_survey_completion(foorm_enrollments + admin_counselor_enrollments, select_completed)
   end
 
   before_create :assign_code
@@ -369,24 +366,6 @@ class Pd::Enrollment < ApplicationRecord
 
   def authorize_teacher_account
     user.permission = UserPermission::AUTHORIZED_TEACHER if user&.teacher? && [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(workshop.course)
-  end
-
-  private_class_method def self.filter_for_pegasus_survey_completion(enrollments, select_completed)
-    ids_with_processed_surveys, ids_without_processed_surveys =
-      enrollments.partition {|e| e.completed_survey_id.present?}.map {|list| list.map(&:id)}
-
-    ids_with_unprocessed_surveys = PEGASUS_DB[:forms].where(
-      kind: 'PdWorkshopSurvey',
-      source_id: ids_without_processed_surveys
-    ).map do |survey|
-      survey[:source_id].to_i
-    end
-
-    filtered_ids = select_completed ?
-                     ids_with_processed_surveys + ids_with_unprocessed_surveys :
-                     ids_without_processed_surveys - ids_with_unprocessed_surveys
-
-    enrollments.select {|e| filtered_ids.include? e.id}
   end
 
   private_class_method def self.filter_for_foorm_survey_completion(enrollments, select_completed)
