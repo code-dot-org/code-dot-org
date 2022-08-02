@@ -1,7 +1,7 @@
 import React from 'react';
 import color from '../util/color';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import dom from '../dom';
 
 const style = {
