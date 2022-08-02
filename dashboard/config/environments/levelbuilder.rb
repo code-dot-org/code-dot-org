@@ -13,4 +13,5 @@ Dashboard::Application.configure do
 
   # Disable Rails.cache on levelbuilder (until code-dot-org/code-dot-org#8844 is merged)
   config.cache_store = :null_store
+  ActiveRecord::SchemaDumper.ignore_tables = ['google_sheets_shared_.*']
 end
