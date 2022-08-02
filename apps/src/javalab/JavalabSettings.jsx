@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
@@ -94,7 +93,7 @@ export class JavalabSettings extends Component {
   }
 }
 
-export default onClickOutside(Radium(JavalabSettings));
+export default onClickOutside(JavalabSettings);
 
 const styles = {
   main: {
