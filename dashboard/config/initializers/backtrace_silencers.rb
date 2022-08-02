@@ -8,9 +8,7 @@
 
 # In addition to backtrace silencing, we also want to silence annoying deprecations:
 silenced = [
-  # Added in Rails 6.0
-  /ActionView::Base instances should be constructed with a lookup context, assignments, and a controller/,
-  /ActionView::Base instances must implement `compiled_method_container`/,
+  # No deprecations being silenced right now!
 ]
 
 silenced_expr = Regexp.new(silenced.join('|'))
