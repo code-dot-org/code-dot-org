@@ -23,7 +23,8 @@ import javalab, {
   setIsReadOnlyWorkspace,
   setHasOpenCodeReview,
   setValidationPassed,
-  setHasRunOrTestedCode
+  setHasRunOrTestedCode,
+  setIsJavabuilderConnecting
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -354,6 +355,7 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
   }
 
   getStore().dispatch(setHasRunOrTestedCode(true));
+  getStore().dispatch(setIsJavabuilderConnecting(true));
 
   this.studioApp_.attempts++;
 
@@ -377,7 +379,8 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     this.onMarkdownMessage,
     this.csrf_token,
     () => this.onValidationPassed(this.studioApp_),
-    () => this.onValidationFailed(this.studioApp_)
+    () => this.onValidationFailed(this.studioApp_),
+    () => getStore().dispatch(setIsJavabuilderConnecting(false))
   );
 
   let connectToJavabuilder;

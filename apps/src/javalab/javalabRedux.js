@@ -33,6 +33,7 @@ const SET_HAS_OPEN_CODE_REVIEW = 'javalab/SET_HAS_OPEN_CODE_REVIEW';
 const SET_COMMIT_SAVE_STATUS = 'javalab/SET_COMMIT_SAVE_STATUS';
 const SET_VALIDATION_PASSED = 'javalab/SET_VALIDATION_PASSED';
 const SET_HAS_RUN_OR_TESTED = 'javalab/SET_HAS_RUN_OR_TESTED';
+const SET_IS_JAVABUILDER_CONNECTING = 'javalab/SET_IS_JAVABUILDER_CONNECTING';
 
 // Exported for test
 export const initialState = {
@@ -67,7 +68,8 @@ export const initialState = {
   isCommitSaveInProgress: false,
   hasCommitSaveError: false,
   validationPassed: false,
-  hasRunOrTestedCode: false
+  hasRunOrTestedCode: false,
+  isJavabuilderConnecting: false
 };
 
 // Action Creators
@@ -204,6 +206,11 @@ export const openPhotoPrompter = promptText => ({
 
 export const closePhotoPrompter = () => ({
   type: CLOSE_PHOTO_PROMPTER
+});
+
+export const setIsJavabuilderConnecting = isJavabuilderConnecting => ({
+  type: SET_IS_JAVABUILDER_CONNECTING,
+  isJavabuilderConnecting
 });
 
 // Selectors
@@ -512,6 +519,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       hasRunOrTestedCode: action.hasRunOrTestedCode
+    };
+  }
+  if (action.type === SET_IS_JAVABUILDER_CONNECTING) {
+    return {
+      ...state,
+      isJavabuilderConnecting: action.isJavabuilderConnecting
     };
   }
   return state;
