@@ -79,4 +79,5 @@ Dashboard::Application.configure do
   config.skip_script_preload = false
 
   config.experiment_cache_time_seconds = 0
+  ActiveRecord::SchemaDumper.ignore_tables = ['google_sheets_shared_.*']
 end

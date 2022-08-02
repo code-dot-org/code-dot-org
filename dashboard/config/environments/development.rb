@@ -78,4 +78,5 @@ Dashboard::Application.configure do
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 
   config.experiment_cache_time_seconds = 0
+  ActiveRecord::SchemaDumper.ignore_tables = ['google_sheets_shared_.*']
 end
