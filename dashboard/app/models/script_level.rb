@@ -39,12 +39,12 @@ class ScriptLevel < ApplicationRecord
   include SharedConstants
   include Rails.application.routes.url_helpers
 
-  belongs_to :script
-  belongs_to :lesson, foreign_key: 'stage_id'
+  belongs_to :script, optional: true
+  belongs_to :lesson, foreign_key: 'stage_id', optional: true
 
   # This field will only be present in scripts which are being edited in the
   # new script / lesson edit GUI.
-  belongs_to :activity_section
+  belongs_to :activity_section, optional: true
 
   has_and_belongs_to_many :levels
   has_many :callouts, inverse_of: :script_level
@@ -219,7 +219,7 @@ class ScriptLevel < ApplicationRecord
 
   def valid_progression_level?(user=nil)
     return false if level.unplugged?
-    return false if lesson && lesson.unplugged_lesson?
+    return false if lesson&.unplugged_lesson?
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && lesson && lesson.spelling_bee?
     return false if locked_or_hidden?(user)

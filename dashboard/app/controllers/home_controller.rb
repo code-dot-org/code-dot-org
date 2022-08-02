@@ -129,7 +129,7 @@ class HomeController < ApplicationController
     exclude_primary_script = true
     @homepage_data[:courses] = current_user.recent_student_courses_and_units(exclude_primary_script)
 
-    @homepage_data[:hasFeedback] = current_user.student? && TeacherFeedback.has_feedback?(current_user.id)
+    @homepage_data[:hasFeedback] = TeacherFeedback.has_feedback?(current_user.id)
 
     script = Queries::ScriptActivity.primary_student_unit(current_user)
     if script
@@ -184,7 +184,7 @@ class HomeController < ApplicationController
       @homepage_data[:joined_student_sections] = current_user&.sections_as_student_participant&.map(&:summarize_without_students)
       @homepage_data[:joined_pl_sections] = current_user&.sections_as_pl_participant&.map(&:summarize_without_students)
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)
-      @homepage_data[:hiddenScripts] = current_user.get_hidden_script_ids
+      @homepage_data[:hiddenScripts] = current_user.get_hidden_unit_ids
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
       @homepage_data[:showFinishTeacherApplication] = has_incomplete_application?

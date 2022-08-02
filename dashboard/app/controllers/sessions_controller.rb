@@ -11,7 +11,6 @@ class SessionsController < Devise::SessionsController
       redirect_to maker_google_oauth_confirm_login_path
       return
     end
-    @already_hoc_registered = params[:already_hoc_registered]
     @hide_sign_in_option = true
     @is_english = request.language == 'en'
     if params[:providerNotLinked]
@@ -62,7 +61,7 @@ class SessionsController < Devise::SessionsController
   # Override default Devise sign_out path method
   def after_sign_out_path_for(resource_or_scope)
     user = resource_or_scope && send(:"current_#{resource_or_scope}")
-    if user && user.oauth?
+    if user&.oauth?
       return oauth_sign_out_path(user.provider)
     end
 

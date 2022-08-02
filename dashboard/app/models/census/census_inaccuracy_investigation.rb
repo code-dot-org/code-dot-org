@@ -19,10 +19,8 @@
 
 class Census::CensusInaccuracyInvestigation < ApplicationRecord
   belongs_to :census_submission, class_name: 'Census::CensusSubmission'
-  belongs_to :census_override, class_name: 'Census::CensusOverride'
+  belongs_to :census_override, class_name: 'Census::CensusOverride', optional: true
   belongs_to :user
 
-  validates_presence_of :census_submission
-  validates_presence_of :user
   validates_presence_of :notes
 end

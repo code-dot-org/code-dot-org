@@ -24,7 +24,7 @@ You can go through lessons in Part II using one of two options:
 
 
 ## Option A
-Use the table below to know which lessons and computer science concepts are part of the course you plan to teach.  For example, if you plan on teaching Course E, then begin by clicking on Lesson 8:  Sequencing with Sprites listed in the table and continue on with Lessons 9, 11, 12, and 15.  
+Use the table below to know which lessons and computer science concepts are part of the course you plan to teach.  For example, if you plan on teaching Course E, then begin by clicking on Lesson 8:  Sequencing with Sprites listed in the table and continue on with Lessons 9, 11, 12, and 14.  
 
 <table style="width:100%; border-style:none;">
   <tr>
@@ -62,7 +62,7 @@ Use the table below to know which lessons and computer science concepts are part
         <li> <a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a> </li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects</a> </li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/14/levels/1" target="blank" >Lesson 14: End of Course Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;"">
@@ -70,7 +70,7 @@ Use the table below to know which lessons and computer science concepts are part
         <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects</a> </li>
+       <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/14/levels/1" target="blank" >Lesson 14: End of Course Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;"">
@@ -78,7 +78,7 @@ Use the table below to know which lessons and computer science concepts are part
         <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects</a> </li>
+       <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/14/levels/1" target="blank" >Lesson 14: End of Course Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;"">
@@ -87,7 +87,7 @@ Use the table below to know which lessons and computer science concepts are part
         <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/11/levels/1" target="blank" >Lesson 11: Conditionals</a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects </a> </li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/14/levels/1" target="blank" >Lesson 14: End of Course Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">
@@ -97,15 +97,14 @@ Use the table below to know which lessons and computer science concepts are part
          <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/11/levels/1" target="blank" >Lesson 11: Conditionals </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/12/levels/1" target="blank" >Lesson 12: Functions  </a></li>
        
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects</a> </li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/14/levels/1" target="blank" >Lesson 14: End of Course Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
          <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/8/levels/1" target="blank" >Lesson 8: Sequencing with Sprites </a></li>
         <li> <a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/13/levels/1" target="blank" >Lesson 13: Variables</a> </li>
-        <li> <a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/14/levels/1" target="blank" >Lesson 14: For Loops</a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects </a> </li>
+        <li> <a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/14/levels/1" target="blank" >Lesson 14: End of Course Projects</a></li>
         </ul>
     </td>
 </table>
@@ -131,8 +130,6 @@ Go lesson by lesson for all concepts included in Computer Science Fundamentals c
 
 * Lesson 13: Variables
 
-* Lesson 14: For Loops
-
-* Lesson 15: End of Course Projects
+* Lesson 14: End of Course Projects
 
 MARKDOWN

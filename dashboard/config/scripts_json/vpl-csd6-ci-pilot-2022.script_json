@@ -5,15 +5,14 @@
     "login_required": true,
     "properties": {
       "has_verified_resources": true,
-      "is_maker_unit": true,
       "is_migrated": true,
       "pilot_experiment": "vpl-csd-summer-pilot-ci-2022",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-01 18:41:23 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-06-09 03:04:11 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -43,6 +42,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to code.org's Physical Computing unit.\n* Get a preview of the first week of the Physical Computing unit content.\n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to code.org's Physical Computing unit.\n* Get a preview of the first week of the Physical Computing unit content.\n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -58,6 +59,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
+        "overview": "**You will:**\n\n* Install the Maker App and set up your Circuit Playground . \n* Test Circuit Playground features. \n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Install the Maker App and set up your Circuit Playground . \n* Test Circuit Playground features. \n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -73,6 +76,8 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
+        "overview": "**You will:**\n\n* Use board inputs such as buttons and toggle switches to control app events and board outputs. \n* Program apps to control board outputs such as the buzzer and LED lights. \n\n**Suggested time:** 30 minutes",
+        "student_overview": "**You will:**\n\n* Use board inputs such as buttons and toggle switches to control app events and board outputs. \n* Program apps to control board outputs such as the buzzer and LED lights. \n\n**Suggested time:** 30 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -82,12 +87,14 @@
     },
     {
       "key": "lesson-4",
-      "name": "Engage with maker-based prototypes",
+      "name": "Engage with prototypes",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
+        "overview": "**You will:**\n\n* Explore sample apps and prototypes. \n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Explore sample apps and prototypes. \n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -103,6 +110,7 @@
       "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
+        "overview": "**You will:**\n\n* Explore end of chapter projects.\n* Make a plan for implementing the unit with your students.\n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -251,9 +259,21 @@
       }
     },
     {
-      "key": "f5597545-d3e5-4d50-ba88-593612403623",
+      "key": "25a1acd0-48f5-4d9b-a0f0-de215248d00c",
       "position": 1,
       "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "25a1acd0-48f5-4d9b-a0f0-de215248d00c",
+        "lesson_activity.key": "6daf7b38-02fb-4d33-b5b3-ff7de0fc187f"
+      }
+    },
+    {
+      "key": "f5597545-d3e5-4d50-ba88-593612403623",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to inputs and outputs"
       },
       "seeding_key": {
         "activity_section.key": "f5597545-d3e5-4d50-ba88-593612403623",
@@ -262,8 +282,9 @@
     },
     {
       "key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1",
-      "position": 2,
+      "position": 3,
       "properties": {
+        "progression_name": "Add complexity to your app"
       },
       "seeding_key": {
         "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1",
@@ -271,12 +292,46 @@
       }
     },
     {
-      "key": "938b767c-bd36-4f81-92c2-9203672b987f",
+      "key": "c3b0f745-a18f-4f5b-97de-2b2748508027",
+      "position": 4,
+      "properties": {
+        "progression_name": "Explore additional board events"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3b0f745-a18f-4f5b-97de-2b2748508027",
+        "lesson_activity.key": "6daf7b38-02fb-4d33-b5b3-ff7de0fc187f"
+      }
+    },
+    {
+      "key": "143869be-31ef-4906-937b-8ec64c920253",
       "position": 1,
       "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "143869be-31ef-4906-937b-8ec64c920253",
+        "lesson_activity.key": "b78a42f1-6f2d-45bc-ab8b-0ccb0a6c1fc6"
+      }
+    },
+    {
+      "key": "938b767c-bd36-4f81-92c2-9203672b987f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Use sensors "
       },
       "seeding_key": {
         "activity_section.key": "938b767c-bd36-4f81-92c2-9203672b987f",
+        "lesson_activity.key": "b78a42f1-6f2d-45bc-ab8b-0ccb0a6c1fc6"
+      }
+    },
+    {
+      "key": "3230e497-46a9-427d-b65e-2910644d6760",
+      "position": 3,
+      "properties": {
+        "progression_name": "Interact with apps and prototypes "
+      },
+      "seeding_key": {
+        "activity_section.key": "3230e497-46a9-427d-b65e-2910644d6760",
         "lesson_activity.key": "b78a42f1-6f2d-45bc-ab8b-0ccb0a6c1fc6"
       }
     },
@@ -299,6 +354,17 @@
       },
       "seeding_key": {
         "activity_section.key": "9f68f330-73b2-4d96-9b11-e40a33c84dce",
+        "lesson_activity.key": "8cd3cf03-3d8e-4e0c-b9ae-25400028b523"
+      }
+    },
+    {
+      "key": "de8dfffc-2312-42cf-ba91-e2620feff34a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "de8dfffc-2312-42cf-ba91-e2620feff34a",
         "lesson_activity.key": "8cd3cf03-3d8e-4e0c-b9ae-25400028b523"
       }
     }
@@ -385,29 +451,26 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-pilot-S22-CI-Unit_tools-U6"
-        ],
-        "progression": "Learning tools"
+        "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-pilot-S22-CI-Unit_tools-U6"
+          "VPL-CSD-PILOT-S22-CI-CS is Changing Everything"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "b758bbf0-6b72-408b-b273-ed3ae245e884"
+        "activity_section.key": "65872066-60ae-4ecd-9848-15cc298fa7a0"
       },
       "level_keys": [
-        "VPL-CSD-pilot-S22-CI-Unit_tools-U6"
+        "VPL-CSD-PILOT-S22-CI-CS is Changing Everything"
       ]
     },
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -431,35 +494,35 @@
     },
     {
       "chapter": 6,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U6L6"
-        ],
-        "progression": "Explore the first week of curriculum"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U6L6"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "65872066-60ae-4ecd-9848-15cc298fa7a0"
-      },
-      "level_keys": [
-        "VPL-CSD-PILOT-S22-CI-vocab-c4u-U6L6"
-      ]
-    },
-    {
-      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "4b550e22-fff5-44d0-9002-963c868ff57e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Overview-U6L2"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -478,7 +541,7 @@
     },
     {
       "chapter": 8,
-      "position": 2,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -503,7 +566,7 @@
     },
     {
       "chapter": 9,
-      "position": 3,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -528,7 +591,7 @@
     },
     {
       "chapter": 10,
-      "position": 4,
+      "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -554,10 +617,13 @@
     },
     {
       "chapter": 11,
-      "position": 5,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab"
+        ],
         "progression": "Use the Circuit Playground with App Lab"
       },
       "bonus": false,
@@ -576,11 +642,14 @@
     },
     {
       "chapter": 12,
-      "position": 6,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_2222"
+        ],
         "progression": "Use the Circuit Playground with App Lab"
       },
       "bonus": false,
@@ -599,11 +668,14 @@
     },
     {
       "chapter": 13,
-      "position": 7,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Screen Outputs - SB1_2222"
+        ],
         "progression": "Use the Circuit Playground with App Lab"
       },
       "bonus": false,
@@ -626,6 +698,54 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "25a1acd0-48f5-4d9b-a0f0-de215248d00c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Overview-U6L3"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI6-CSD circuit video"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "25a1acd0-48f5-4d9b-a0f0-de215248d00c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI6-CSD circuit video"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Overview"
+        ],
+        "progression": "Introduction to inputs and outputs"
       },
       "bonus": false,
       "seeding_key": {
@@ -642,12 +762,16 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 2,
+      "chapter": 17,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_2222"
+        ],
+        "progression": "Introduction to inputs and outputs"
       },
       "bonus": false,
       "seeding_key": {
@@ -664,38 +788,67 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 3,
-      "activity_section_position": 1,
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid_2222"
-        ]
+          "VPL-PILOT-CSD U6 - Board Inputs - SB1_2222"
+        ],
+        "progression": "Introduction to inputs and outputs"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid_2222"
+          "VPL-PILOT-CSD U6 - Board Inputs - SB1_2222"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+        "activity_section.key": "f5597545-d3e5-4d50-ba88-593612403623"
       },
       "level_keys": [
-        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid_2222"
+        "VPL-PILOT-CSD U6 - Board Inputs - SB1_2222"
       ]
     },
     {
-      "chapter": 17,
-      "position": 4,
-      "activity_section_position": 2,
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB3_2222"
+        ],
+        "progression": "Introduction to inputs and outputs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB3_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "f5597545-d3e5-4d50-ba88-593612403623"
+      },
+      "level_keys": [
+        "VPL-PILOT-CSD U6 - Board Inputs - SB3_2222"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_2222"
-        ]
+        ],
+        "progression": "Add complexity to your app"
       },
       "bonus": false,
       "seeding_key": {
@@ -712,38 +865,15 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 5,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid2_2222"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid2_2222"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
-      },
-      "level_keys": [
-        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid2_2222"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 6,
-      "activity_section_position": 4,
+      "chapter": 21,
+      "position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_2222"
-        ]
+        ],
+        "progression": "Add complexity to your app"
       },
       "bonus": false,
       "seeding_key": {
@@ -760,38 +890,15 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 7,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid3_2222"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid3_2222"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
-      },
-      "level_keys": [
-        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid3_2222"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 8,
-      "activity_section_position": 6,
+      "chapter": 22,
+      "position": 9,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_2222"
-        ]
+        ],
+        "progression": "Add complexity to your app"
       },
       "bonus": false,
       "seeding_key": {
@@ -808,14 +915,15 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 9,
-      "activity_section_position": 7,
+      "chapter": 23,
+      "position": 10,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_2222"
-        ]
+        ],
+        "progression": "Explore additional board events"
       },
       "bonus": false,
       "seeding_key": {
@@ -825,21 +933,22 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+        "activity_section.key": "c3b0f745-a18f-4f5b-97de-2b2748508027"
       },
       "level_keys": [
         "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_2222"
       ]
     },
     {
-      "chapter": 23,
-      "position": 10,
-      "activity_section_position": 8,
+      "chapter": 24,
+      "position": 11,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_2222"
-        ]
+        ],
+        "progression": "Explore additional board events"
       },
       "bonus": false,
       "seeding_key": {
@@ -849,21 +958,22 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+        "activity_section.key": "c3b0f745-a18f-4f5b-97de-2b2748508027"
       },
       "level_keys": [
         "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_2222"
       ]
     },
     {
-      "chapter": 24,
-      "position": 11,
-      "activity_section_position": 9,
+      "chapter": 25,
+      "position": 12,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_2222"
-        ]
+        ],
+        "progression": "Explore additional board events"
       },
       "bonus": false,
       "seeding_key": {
@@ -873,14 +983,184 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+        "activity_section.key": "c3b0f745-a18f-4f5b-97de-2b2748508027"
       },
       "level_keys": [
         "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_2222"
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "143869be-31ef-4906-937b-8ec64c920253"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Overview-U6L4"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_2222"
+        ],
+        "progression": "Use sensors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_2222"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "938b767c-bd36-4f81-92c2-9203672b987f"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_2222"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_2222"
+        ],
+        "progression": "Use sensors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_2222"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "938b767c-bd36-4f81-92c2-9203672b987f"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_2222"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_2222"
+        ],
+        "progression": "Interact with apps and prototypes "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_2222"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "3230e497-46a9-427d-b65e-2910644d6760"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_2222"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_2222"
+        ],
+        "progression": "Interact with apps and prototypes "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_2222"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "3230e497-46a9-427d-b65e-2910644d6760"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_2222"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Interact with apps and prototypes "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Review_2222"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "3230e497-46a9-427d-b65e-2910644d6760"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Review_2222"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Interact with apps and prototypes "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "3230e497-46a9-427d-b65e-2910644d6760"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview"
+      ]
+    },
+    {
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -905,9 +1185,34 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C1"
+        ],
+        "progression": "Unit Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "9f68f330-73b2-4d96-9b11-e40a33c84dce"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C1"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -930,28 +1235,25 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 3,
-      "activity_section_position": 2,
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C1"
-        ],
-        "progression": "Unit Projects"
+        "progression": "Wrap Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C1"
+          "-VPL-CSD-PILOT-summer22-navigation"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "9f68f330-73b2-4d96-9b11-e40a33c84dce"
+        "activity_section.key": "de8dfffc-2312-42cf-ba91-e2620feff34a"
       },
       "level_keys": [
-        "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C1"
+        "-VPL-CSD-PILOT-summer22-navigation"
       ]
     }
   ],
@@ -994,14 +1296,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-pilot-S22-CI-Unit_tools-U6",
+        "level.key": "VPL-CSD-PILOT-S22-CI-CS is Changing Everything",
         "script_level.level_keys": [
-          "VPL-CSD-pilot-S22-CI-Unit_tools-U6"
+          "VPL-CSD-PILOT-S22-CI-CS is Changing Everything"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "b758bbf0-6b72-408b-b273-ed3ae245e884"
+        "activity_section.key": "65872066-60ae-4ecd-9848-15cc298fa7a0"
       }
     },
     {
@@ -1018,14 +1320,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-CI-vocab-c4u-U6L6",
+        "level.key": "VPL-CSD-PILOT-S22-CI-Overview-U6L2",
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U6L6"
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L2"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "65872066-60ae-4ecd-9848-15cc298fa7a0"
+        "activity_section.key": "4b550e22-fff5-44d0-9002-963c868ff57e"
       }
     },
     {
@@ -1114,6 +1416,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Overview-U6L3",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "25a1acd0-48f5-4d9b-a0f0-de215248d00c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI6-CSD circuit video",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI6-CSD circuit video"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "25a1acd0-48f5-4d9b-a0f0-de215248d00c"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Overview",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Overview"
@@ -1138,14 +1464,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid_2222",
+        "level.key": "VPL-PILOT-CSD U6 - Board Inputs - SB1_2222",
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid_2222"
+          "VPL-PILOT-CSD U6 - Board Inputs - SB1_2222"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+        "activity_section.key": "f5597545-d3e5-4d50-ba88-593612403623"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-PILOT-CSD U6 - Board Inputs - SB3_2222",
+        "script_level.level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB3_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "f5597545-d3e5-4d50-ba88-593612403623"
       }
     },
     {
@@ -1162,33 +1500,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid2_2222",
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid2_2222"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_2222",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_2222"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid3_2222",
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid3_2222"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -1217,7 +1531,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+        "activity_section.key": "c3b0f745-a18f-4f5b-97de-2b2748508027"
       }
     },
     {
@@ -1229,7 +1543,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+        "activity_section.key": "c3b0f745-a18f-4f5b-97de-2b2748508027"
       }
     },
     {
@@ -1241,7 +1555,91 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+        "activity_section.key": "c3b0f745-a18f-4f5b-97de-2b2748508027"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Overview-U6L4",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "143869be-31ef-4906-937b-8ec64c920253"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_2222"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "938b767c-bd36-4f81-92c2-9203672b987f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_2222"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "938b767c-bd36-4f81-92c2-9203672b987f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_2222"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "3230e497-46a9-427d-b65e-2910644d6760"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_2222"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "3230e497-46a9-427d-b65e-2910644d6760"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Review_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Review_2222"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "3230e497-46a9-427d-b65e-2910644d6760"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "3230e497-46a9-427d-b65e-2910644d6760"
       }
     },
     {
@@ -1258,6 +1656,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C1",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "9f68f330-73b2-4d96-9b11-e40a33c84dce"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C2",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C2"
@@ -1270,14 +1680,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C1",
+        "level.key": "-VPL-CSD-PILOT-summer22-navigation",
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C1"
+          "-VPL-CSD-PILOT-summer22-navigation"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "9f68f330-73b2-4d96-9b11-e40a33c84dce"
+        "activity_section.key": "de8dfffc-2312-42cf-ba91-e2620feff34a"
       }
     }
   ],

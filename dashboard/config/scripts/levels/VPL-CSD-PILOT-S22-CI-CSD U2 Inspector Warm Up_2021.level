@@ -14,16 +14,13 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_enabled": "false",
-    "map_reference": "/docs/concepts/html/html-tags/",
-    "encrypted_examples": [
-
-    ]
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/html-tags"
   },
-  "game_id": 58,
-  "published": true,
-  "created_at": "2022-03-20T18:53:58.000Z",
   "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-20T18:53:58.000Z",
   "user_id": 155,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-20T18:53:57.987+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Inspector Warm Up_2021\\\"\"],\"cloned_from\":\"CSD U2 Inspector Warm Up_2021\"},{\"changed_at\":\"2022-03-23 00:34:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-23 00:35:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>

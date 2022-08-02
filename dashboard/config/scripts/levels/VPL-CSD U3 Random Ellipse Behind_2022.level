@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-04-26T18:52:15.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -50,9 +46,9 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "reference_links": [
-      "/docs/concepts/game-lab/drawing-shapes/"
+      "/courses/vpl-csd-2022/guides/drawing-shapes"
     ],
-    "map_reference": " /docs/concepts/game-lab/shapes-and-parameters/",
+    "map_reference": "/courses/vpl-csd-2022/guides/shapes-and-parameters",
     "parent_level_id": 20652,
     "name_suffix": "_2022",
     "encrypted": "false",
@@ -62,6 +58,10 @@
     "thumbnail_url": "https://images.code.org/dd73760e7129225b1e9f53a542960b9a-image-1520402430622.59.19 PM.png",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-04-26T18:52:15.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-26T18:52:15.352+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD U3 Random Ellipse Behind_2018_2020\\\"\"],\"cloned_from\":\"VPL-CSD U3 Random Ellipse Behind_2018_2020\"}]"

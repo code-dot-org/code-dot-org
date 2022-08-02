@@ -21,7 +21,7 @@ const DEFAULT_PROPS = {
   fetchingData: false,
   handleDocumentationClick: () => {},
   handleInstructionTabClick: () => {},
-  handleCommitsAndReviewTabClick: () => {},
+  handleReviewV2TabClick: () => {},
   handleHelpTabClick: () => {},
   handleCommentTabClick: () => {},
   handleDocumentationTabClick: () => {},

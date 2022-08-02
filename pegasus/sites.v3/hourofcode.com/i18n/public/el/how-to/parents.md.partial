@@ -14,7 +14,7 @@ nav: how_to_nav
 
 <h3>Τι χρειαζόμαστε για να ξεκινήσουμε;</h3>
 
-Η Ώρα του Προγραμματισμού είναι απλή σε εκτέλεση - ακόμα και για αρχάριους. Δε χρειάζεστε εμπειρία στη επιστήμη των υπολογιστών ή στη διδασκαλία προκειμένου να προσφέρετε μια διασκεδαστική δραστηριότητα στα παιδιά σας που θα τα κάνει και να μαθαίνουν και να γελάνε ταυτόχρονα.
+Η Ώρα του Προγραμματισμού είναι απλή σε εκτέλεση - ακόμα και για αρχάριους. Δε χρειάζεστε εμπειρία στην επιστήμη της Πληροφορικής ή στην διδασκαλία προκειμένου να προσφέρετε μια διασκεδαστική δραστηριότητα στα παιδιά σας που θα τα κάνει και να μαθαίνουν και να γελάνε ταυτόχρονα.
 
 You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
 
@@ -64,7 +64,7 @@ This is a great opportunity to add a new type of activity to your child’s day.
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-## 3)Κολπάκια για να φέρετε σε επαφή το παιδί σας με την Επιστήμη των Υπολογιστών
+## 3) Κολπάκια για να φέρετε σε επαφή το παιδί σας με την Επιστήμη της Πληροφορικής
 
 It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity and get you both thinking about CS:
 
@@ -75,7 +75,7 @@ It’s okay if both you and your child are brand new to computer science. Here a
 
 <h3>Have young women at home?</h3>
 
-<a href="https://code.org/girls">Σας παραθέτουμε εδώ τις προτάσεις μας</a>για να κινήσουμε το ενδιαφέρον τους στην επιστήμη των υπολογιστών. **Pro-tip**: You can start just by telling them they’d be great at it!
+<a href="https://code.org/girls">Σας παραθέτουμε εδώ τις προτάσεις μας </a>για να κινήσετε το ενδιαφέρον τους στην επιστήμη των υπολογιστών. **Pro-tip**: You can start just by telling them they’d be great at it!
 
 <h3>Επιλύστε προβλήματα μαζί</h3>
 
@@ -95,6 +95,6 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 <h2>Τι γίνεται μετά την Ώρα του Κώδικα;</h2>
 
-Computer science doesn’t have to end with the Hour of Code! Ενώ 90% των γονέων θέλουν το παιδί τους να μάθει επιστήμη υπολογιστών, μολαταύτα τα περισσότερα σχολεία δεν την διδάσκουν ακόμη. Tο σχολικό πρόγραμμα είναι βασισμένο πάνω στον Παγκόσμιο Ιστό (Web) και η χρήση του είναι δωρεάν, για πάντα, ως μια βοήθεια. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
+Computer science doesn’t have to end with the Hour of Code! Ενώ 90% των γονέων θέλουν το παιδί τους να μάθει επιστήμη υπολογιστών, μολαταύτα τα περισσότερα σχολεία δεν την διδάσκουν ακόμη. Το σχολικό πρόγραμμα είναι βασισμένο πάνω στον Παγκόσμιο Ιστό (Web) και η χρήση του είναι δωρεάν, για πάντα, ως μια βοήθεια. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
 
 [<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
