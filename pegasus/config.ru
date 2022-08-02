@@ -60,6 +60,3 @@ require 'shared_resources'
 use SharedResources
 
 run Documents
-
-require_relative '../shared/middleware/helpers/core.rb'
-require_relative '../shared/middleware/helpers/auth_helpers.rb'
