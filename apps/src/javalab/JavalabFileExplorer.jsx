@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -11,7 +10,7 @@ import {DisplayTheme} from './DisplayTheme';
  * A button that drops down to a set of clickable file names, and closes itself if
  * you click on the buttons or outside of the dropdown.
  */
-class JavalabFileExplorerComponent extends Component {
+class JavalabFileExplorer extends Component {
   static propTypes = {
     fileMetadata: PropTypes.object,
     onSelectFile: PropTypes.func.isRequired,
@@ -119,4 +118,4 @@ const styles = {
   }
 };
 
-export default onClickOutside(Radium(JavalabFileExplorerComponent));
+export default onClickOutside(JavalabFileExplorer);
