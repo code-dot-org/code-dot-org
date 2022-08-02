@@ -112,7 +112,10 @@ export const commands = {
     }
   },
 
-  // Used in levels to override default validation timing.
+  // Used in levels to override default validation settings.
+  setSuccessMessage(message) {
+    this.successMessage = message;
+  },
   setEarlyTime(frames) {
     this.validationFrames.early = frames;
   },
