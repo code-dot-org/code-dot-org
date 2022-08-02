@@ -91,6 +91,23 @@ def get_i18n_strings(level)
       end
     end
 
+    # rubric
+    if level.mini_rubric&.to_bool
+      rubric_properties = Hash.new
+      %w(
+        rubric_key_concept
+        rubric_performance_level_1
+        rubric_performance_level_2
+        rubric_performance_level_3
+        rubric_performance_level_4
+      ).each do |prop|
+        prop_value = level.try(prop)
+        rubric_properties[prop] = prop_value unless prop_value.nil?
+      end
+      i18n_strings['mini_rubric'] = Hash.new unless rubric_properties.empty?
+      i18n_strings['mini_rubric'].merge! rubric_properties
+    end
+
     # parse markdown properties for potential placeholder texts
     documents = []
     %w(
