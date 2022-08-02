@@ -79,7 +79,7 @@ class S3Packaging
   private def target_commit_hash(location)
     filename = "#{location}/commit_hash"
     return nil unless File.exist?(filename)
-    IO.read(filename)
+    File.read(filename)
   end
 
   # Creates a zipped package of the provided assets folder
@@ -101,7 +101,7 @@ class S3Packaging
     @logger.info "Creating #{package.path}"
     Dir.chdir(@source_location + '/' + sub_path) do
       # add a commit_hash file whose contents represent the key for this package
-      IO.write('commit_hash', @commit_hash)
+      File.write('commit_hash', @commit_hash)
       RakeUtils.system "tar -cz --exclude='*.cache.json' --file #{package.path} *"
     end
     @logger.info 'Created'

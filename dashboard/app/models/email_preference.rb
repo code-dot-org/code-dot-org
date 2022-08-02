@@ -27,7 +27,7 @@ class EmailPreference < ApplicationRecord
 
   validates_presence_of :email, :ip_address, :source
   validates_inclusion_of :opt_in, {in: [true, false]}
-  validates_uniqueness_of :email
+  validates_uniqueness_of :email, case_sensitive: true
   validates_email_format_of :email
 
   validates_inclusion_of :source, in: EmailPreference::SOURCE_TYPES

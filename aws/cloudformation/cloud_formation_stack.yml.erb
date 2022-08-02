@@ -8,7 +8,7 @@ Parameters:
   Branch:
     Type: String
     Default: <%=branch%>
-<% if database -%>
+<% if database && !rack_env?(:production) -%>
   DatabaseUsername:
     Type: String
     Default: master
@@ -46,7 +46,7 @@ Resources:
             Resource:
               - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:<%=environment%>/cdo/*"
               - !Ref ChefConfig
-<% if database -%>
+<% if database && !rack_env?(:production) -%>
               - !Ref DatabaseSecret
 <% end -%>
             Condition:
