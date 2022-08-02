@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
@@ -13,7 +12,6 @@ import JavalabDropdown from './components/JavalabDropdown';
  */
 export class JavalabSettings extends Component {
   static propTypes = {
-    style: PropTypes.object,
     children: props => {
       React.Children.map(props.children, child => {
         if (child.type !== 'button') {
@@ -58,12 +56,10 @@ export class JavalabSettings extends Component {
   };
 
   render() {
-    const {style} = this.props;
     const {dropdownOpen} = this.state;
     const btnStyle = {
       ...styles.button,
-      ...(dropdownOpen && styles.button.selected),
-      ...style
+      ...(dropdownOpen && styles.button.selected)
     };
 
     return (
