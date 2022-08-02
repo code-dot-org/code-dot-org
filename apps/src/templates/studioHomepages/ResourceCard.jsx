@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import Button from '../Button';
 import color from '../../util/color';
+import {merge} from 'lodash';
 import {connect} from 'react-redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
@@ -38,23 +38,27 @@ class ResourceCard extends Component {
     } = this.props;
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
 
-    const buttonStyles = [styles.button];
-    const cardStyles = [styles.card, localeStyle];
-    const titleStyles = [styles.title, localeStyle];
-    const descriptionStyles = [styles.text, styles.description, localeStyle];
+    const buttonStyles = styles.button;
+    const cardStyles = {...styles.card, ...localeStyle};
+    const titleStyles = {...styles.title, ...localeStyle};
+    const descriptionStyles = {
+      ...styles.text,
+      ...styles.description,
+      ...localeStyle
+    };
 
     if (['sm', 'xs'].includes(responsiveSize)) {
-      cardStyles.push(styles.cardSmall);
-      titleStyles.push(styles.titleSmall);
-      descriptionStyles.push(styles.descriptionSmall);
+      merge(cardStyles, styles.cardSmall);
+      merge(titleStyles, styles.titleSmall);
+      merge(descriptionStyles, styles.descriptionSmall);
     }
 
     if (allowWrap) {
-      buttonStyles.push(styles.buttonAllowWrap);
-      cardStyles.push(styles.cardAllowWrap);
-      titleStyles.push(styles.titleAllowWrap);
+      merge(buttonStyles, styles.buttonAllowWrap);
+      merge(cardStyles, styles.cardAllowWrap);
+      merge(titleStyles, styles.titleAllowWrap);
     } else {
-      titleStyles.push(styles.titleNoWrap);
+      merge(titleStyles, styles.titleNoWrap);
     }
 
     let descriptionContent = description;
@@ -167,4 +171,4 @@ const styles = {
 export default connect(state => ({
   isRtl: state.isRtl,
   responsiveSize: state.responsive.responsiveSize
-}))(Radium(ResourceCard));
+}))(ResourceCard);
