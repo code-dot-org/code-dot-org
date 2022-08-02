@@ -6,6 +6,7 @@ import {UnconnectedLessonLockDialog as LessonLockDialog} from '@cdo/apps/code-st
 import {LockStatus} from '@cdo/apps/code-studio/lessonLockRedux';
 import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
 import * as lessonLockDataApi from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
+import commonMsg from '@cdo/locale';
 
 // This * import allows us to stub out the SectionSelector component
 import * as SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
@@ -169,7 +170,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
     });
     const lessonLockSaveStub = sinon
       .stub(lessonLockDataApi, 'saveLockState')
-      .returns(new Promise(resolve => resolve()));
+      .returns(new Promise(resolve => resolve({ok: true})));
     const refetchStub = sinon.stub().returns(new Promise(resolve => resolve()));
     const handleCloseSpy = sinon.spy();
 
@@ -199,5 +200,50 @@ describe('LessonLockDialog with stubbed section selector', () => {
     expect(handleCloseSpy).to.have.been.called;
 
     lessonLockDataApi.useGetLockState.restore();
+    lessonLockDataApi.saveLockState.restore();
+  });
+
+  it('handleSave shows error if failed', async () => {
+    const initialLockStatus = [
+      {name: 'fakeName1', lockStatus: LockStatus.Editable},
+      {name: 'fakeName2', lockStatus: LockStatus.Editable}
+    ];
+    sinon.stub(lessonLockDataApi, 'useGetLockState').returns({
+      loading: false,
+      serverLockState: initialLockStatus
+    });
+    const lessonLockSaveStub = sinon
+      .stub(lessonLockDataApi, 'saveLockState')
+      .returns(new Promise(resolve => resolve({ok: false})));
+    const refetchStub = sinon.stub().returns(new Promise(resolve => resolve()));
+    const handleCloseSpy = sinon.spy();
+
+    const wrapper = mount(
+      <LessonLockDialog
+        {...MINIMUM_PROPS}
+        refetchSectionLockStatus={refetchStub}
+        handleClose={handleCloseSpy}
+      />
+    );
+
+    const lockLessonButton = wrapper.find('button').at(1);
+    expect(lockLessonButton.text() === 'Lock lesson');
+    lockLessonButton.simulate('click');
+    wrapper.update();
+
+    const saveButton = wrapper.find('button').at(6);
+    expect(saveButton.text() === 'Save');
+    saveButton.simulate('click');
+    wrapper.update();
+
+    await setTimeout(() => {}, 50);
+    expect(lessonLockSaveStub).to.have.been.called;
+
+    expect(wrapper.text().includes(commonMsg.errorSavingLockStatus())).to.be
+      .true;
+    expect(handleCloseSpy).to.not.be.called;
+
+    lessonLockDataApi.useGetLockState.restore();
+    lessonLockDataApi.saveLockState.restore();
   });
 });
