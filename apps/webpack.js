@@ -267,7 +267,7 @@ function devtool(options) {
   } else if (process.env.DEBUG_MINIFIED) {
     return 'eval-source-map';
   } else if (process.env.DEV) {
-    return 'cheap-inline-source-map';
+    return 'inline-cheap-source-map';
   } else {
     return 'inline-source-map';
   }
