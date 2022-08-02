@@ -85,7 +85,7 @@ class ApplabVisualizationColumn extends React.Component {
       widgetMode
     } = this.props;
 
-    const maxWidth = !isResponsive && {maxWidth: nonResponsiveWidth};
+    const maxWidth = !isResponsive ? {maxWidth: nonResponsiveWidth} : {};
 
     let visualization = [
       <Visualization key="1" />,
